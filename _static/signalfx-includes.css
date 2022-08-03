@@ -1,0 +1,927 @@
+.header {
+  height: 50px;
+  background-color: lightgrey;
+}
+
+/* ROLES: Usage is :role:NO SPACE `text` */
+/* e.g. this is :not-ok:`red` */
+/* 
+Specify role in rst_prolog section of conf.py
+guilabel and menuselection are native to sphinx so don't need to be in conf.py
+--brs
+ */
+ 
+span.not-ok {
+   color: red;
+}
+
+span.note {
+   color: purple;
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   font-weight: bold;
+}
+
+span.ok, span.correct {
+   color: green;
+}
+
+
+.guilabel, .menuselection {
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   font-weight: bold;
+}
+
+span.strong {
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   font-weight: bold;
+}
+
+span.monospace {
+  font-family: "Lucida Console", "Courier", monospace;
+}
+
+span.strike {
+   text-decoration: line-through;
+}
+
+
+span.title {
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+/*    font-weight: bold; */
+   text-decoration: underline;
+}
+a.image-reference {
+    border-bottom: none;
+}
+
+/* Don't remove the .monitor-table CSS! */
+
+.monitor-table tr td:nth-child(2) {
+    text-align:center;
+}
+
+.monitor-table tr td:nth-child(3) {
+    text-align:center;
+}
+
+.monitor-table tr td:nth-child(4) {
+    text-align:center;
+}
+
+/* Making heading levels more different
+Originals are in signalfx-alabaster.css */
+
+
+div.body h1 { margin-top: 0; padding-top: 0; font-size: 30px; } /*  title in html file */
+div.body h2 { font-size: 24px; }   /*  h1 in html file */
+div.body h3 { font-size: 18px; }   /*  h2 in html file*/
+div.body h4 { /*  h3 in html file */
+   font-size: 15px; 
+   font-weight: bold;
+}    
+div.body h5 { /*  h4 in html file */
+   font-size: 13px; 
+   font-weight: bold;
+}    
+
+div.body h6 { font-size: 11px; }    /*  h5 in html file */
+
+
+
+div.body li {
+    padding-bottom: 7px;
+}
+
+
+/****** STUFF FROM CAL ******/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* independent scrolling columns */
+html, body {
+   overflow-x:hidden;
+   /* height:100%; */
+}
+
+.body {
+  padding:0 2% 0 !important;
+}
+
+.body p, .body dd, .body li, .body blockquote {
+  line-height:1.7em !important;
+}
+
+.document {
+   width: 100% !important;
+   height:100%;
+   margin: 0px !important;
+
+}
+
+.documentwrapper {
+   height:100%;
+   overflow:auto;
+   margin-left:30px;
+   padding-bottom:50px;
+   padding-top: 21px; /* was 40, this keeps it in line with sidebar, below  -brs*/
+   min-height: 100%;
+}
+
+.sphinxsidebar {
+   height: 100%;
+   overflow:auto;
+   position: fixed;
+   margin: 0 !important;
+   width:320px !important;
+   padding: 10px 0 0px; /* 10 was 40   -brs */
+}
+
+/* end of independent scrolling columns */
+
+/* For subsection headings */
+
+div.sphinxsidebar p.caption {
+    font-size: 140%;
+}
+
+
+/* commenting this stuff out since I removed the search from the sidebar
+*/
+
+
+/* 
+#searchbox h3 {
+  display:none;
+}
+*/
+div.sphinxsidebar #searchbox input[type='text'] {
+border: none;
+background: #f5f5f5;
+height: 32px;
+padding-left:10px;
+width:196px;
+}
+
+div.sphinxsidebar #searchbox input[type='text']:focus {
+outline:none;
+box-shadow:inset 0 0 0 1px #0B599D;
+}
+
+div.sphinxsidebar #searchbox input[type='submit'] {
+background: #0B599D;
+color: #fff;
+text-transform: uppercase;
+font-size: 12px !important;
+border:none !important;
+padding:5px 10px;
+height:32px;
+width:38px !important;
+margin-left: -1px;
+}
+
+div.sphinxsidebar #searchbox input[type='submit']:hover {
+background: #1a6eb9;
+}
+
+div.sphinxsidebar #searchbox input[type='submit']:active {
+background:#000;
+}
+
+
+hr {
+clear:both;
+border: none !important;
+height: 0;
+border-top: 1px solid #ddd !important;
+}
+
+a {
+border:none !important;
+color:#0B599D !important;
+text-decoration:none;
+}
+
+a:hover {
+opacity:0.5;
+text-decoration:none;
+}
+
+a:active {
+color:#000;
+text-decoration:none;
+}
+
+li.toctree-l2 {
+
+margin: 10px 3px 0px 0px; /* top/bottom was 0 */
+list-style-type: disc;
+color: #999;
+}
+
+li.toctree-l1 {
+/* 
+border-bottom: 1px solid #eee;
+ */
+padding-bottom: 1 px; /*changed from 10 brs */
+}
+
+div.sphinxsidebar h3 {
+font-size: 16px;
+line-height: 1;
+margin:30px 0 20px;
+}
+
+/* For subsection headings */
+
+div.sphinxsidebar p.caption {
+    font-size: 140%;
+}
+
+
+div.sphinxsidebarwrapper h1.logo {
+line-height: 32px;
+margin-bottom: 20px !important;
+display:none;
+}
+
+div.sphinxsidebarwrapper h1.logo a {
+color:#59a200 !important;
+}
+
+/* Following chunk is for putting search box in the banner 
+Increasing from -230 to -250 for swiftype box size
+*/
+ #searchbox {
+/* position: absolute; */
+margin: 2px 0 0 0px;
+}
+
+#searchbox .search input[type="submit"] {
+  background: #0B599D;
+border: 0;
+color: #fff;
+font-size: 12px;
+text-transform: uppercase;
+padding: 3px 15px;
+border-radius: 0 50px 50px 0;
+  height:26px;
+  float:right;
+}
+
+#searchbox .search input[type="text"] {
+  padding: 0 0 0 30px;
+border: 0;
+border-radius: 50px 0 0 50px;
+margin: 0 -6px 0 0;
+  height:26px;
+  float:left;
+}
+
+#searchbox .highlight-link {
+margin: -25px 0 0 -150px;
+}
+
+div.sphinxsidebar form {
+margin-top:0;
+}
+
+div.sphinxsidebarwrapper {
+  position: absolute;
+  top: 0px;
+padding: 0 30px 18px;
+float: left;
+}
+
+::-webkit-input-placeholder {
+font-size:14px;
+font-style:italic;
+color:#999;
+}
+
+input {
+font-family: "Open Sans", sans-serif !important;
+line-height:20px;
+}
+
+#signalfx-documentation .reference.external.image-reference img {
+  width:300px;
+float: left;
+margin:0 40px 40px 0;
+}
+
+#new-to-signalfx img {
+    width:300px;
+float: left;
+margin:0 40px 40px 0;
+}
+
+.toctree-wrapper.compound {
+  clear:both;
+    display: none;
+}
+
+.toctree-l3 {
+  list-style-type: circle;
+color: #999;
+}
+
+.current.reference.internal {
+color: #000 !important;
+pointer-events: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display:block;
+  font-weight:bold;
+letter-spacing: -0.3px;
+line-height: 18px;
+}
+
+/* Gets permalinks to show up (was none)
+inline doesn't work
+block shows it on the next line 
+See also conf.py  and signalfx-alabaster.css (search for permalink or headerlink)
+*/
+
+a.headerlink {
+   display:inline-block;
+}
+
+
+.admonition.note, .admonition.tip {
+   padding: 15px 20px;
+}
+
+.admonition.tip {
+   /*background:#e5ffe5;*/
+}
+
+.footer {
+   text-align: center !important;
+width: 100% !important;
+margin: 0 0 0 !important;
+padding: 10px 0;
+background: #fff;
+border-top:1px solid #ddd;
+position: fixed;
+bottom:0;
+clear: both;
+}
+
+/* .header {
+  height: 72px;
+background-color: #333;
+padding:0 40px;
+position: fixed;
+width: 100%;
+z-index:20000;
+    overflow-y: hidden;
+}
+
+.header span {
+  line-height:72px;
+} */
+
+br {
+  clear:both;
+}
+
+.landingmain {
+}
+
+.logoimage {
+    position: absolute;
+    left: 0;
+    top: -7px;
+    width: auto;
+    max-height: calc(15px + 100%);
+}
+
+.navbar .container-fluid{
+    position:relative;
+}
+.navi {
+  float:right;
+}
+
+.support.btn {
+text-transform: uppercase;
+color: #fff !important;
+font-size: 14px;
+margin: 16px 20px 0 0;
+height: 38px;
+padding: 0 20px 40px;
+float: left;
+}
+
+.support.btn span {
+  line-height: 40px;
+}
+
+.freetrial.btn {
+  font-size: 12px;
+background: #218eee;
+border-radius: 50px;
+letter-spacing: 1px;
+padding:10px 30px;
+  text-transform: uppercase;
+color:#fff !important;
+white-space: nowrap;
+}
+
+.dropdown {
+background: #fff;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+padding: 5px 0;
+border: 1px solid #ddd;
+position: absolute;
+z-index: 99999;
+margin: 0 0 0 -83px;
+display: none;
+opacity: 0;
+}
+
+.dropdown li {
+  list-style-type: none;
+}
+
+.dropdown li a {
+  display:block;
+  padding: 5px 15px;
+  text-transform: none;
+}
+
+.dropdown li a:hover {
+  opacity:1;
+}
+
+.dropdown li:hover {
+  background:#f5f5f5;
+}
+
+.dropdown li:active {
+  background:#000;
+}
+
+.support.btn:hover{
+  opacity:1;
+  background:#222;
+}
+
+.support.btn:hover .dropdown {
+  display:block;
+  opacity:1;
+  transition:all .2s ease-in;
+}
+
+.bodywrapper {
+margin:0 0px 0 0 !important;
+}
+
+.documentwrapper {
+border-left:1px solid #eee;
+margin-left: 320px;
+max-width:1280px;
+}
+
+#new-to-signalfx h2 {
+  margin-top:10px;
+  margin-bottom: 20px;
+}
+
+#analytics-reference-guide h2 {
+  font-size:16px;
+  font-weight:bold;
+}
+
+div.body p, div.body dd, div.body li, div.body blockquote {
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+}
+
+.rst-versions.rst-badge {
+  display:none !important;
+}
+
+.feedbackbtn {
+font-size: 12px;
+background: #0B599D;
+color: #fff !important;
+font-weight: bold;
+padding: 6px 14px;
+height: 30px;
+display: inline-block;
+border-radius: 4px 4px 4px 4px;
+z-index: 3000;
+position: fixed;
+bottom: 0;
+right: 200px;
+margin-bottom: 5px;
+text-decoration: none;
+}
+
+.fbbtn {
+  font-size: 12px;
+background: #0B599D;
+color: #fff !important;
+font-weight: bold;
+padding: 11px 24px;
+height: 40px;
+display: inline-block;
+border-radius: 4px;
+cursor: pointer;
+text-decoration: none;
+    margin-left:10px;
+}
+.fbclnbtn {
+  font-size: 12px;
+background: #cbd2d8;
+color: rgb(20, 20, 20) !important;
+font-weight: bold;
+padding: 11px 24px;
+height: 40px;
+display: inline-block;
+border-radius: 4px;
+cursor: pointer;
+text-decoration: none;
+}
+
+.button-set-submit{
+    text-align:right;
+}
+
+#fby-form img[alt*="Logo"] {
+width: 120px !important;
+height: auto !important;
+}
+
+#feedbackify .dlg-content {
+padding: 0 15px !important;
+}
+
+#feedbackify .main-content {
+background: transparent !important;
+border: 0 !important;
+border-top: 1px solid #eee !important;
+padding-top: 14px !important;
+}
+
+#feedbackify .select {
+border-spacing: 0 !important;
+}
+
+#feedbackify .score-tbl td {
+border-right: 1px solid #eee !important;
+}
+
+#feedbackify .score-tbl td:last-child {
+border:0 !important;
+}
+
+#feedbackify .dlg-ftr {
+border-top: 1px solid #eee !important;
+margin-top:10px !important;
+}
+
+#feedbackify .select-hdr {
+margin-top: 20px !important;
+}
+
+/***** IPAD *****/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+body {
+padding:0;
+}
+
+.sphinxsidebar {
+height: calc(100% - 112px);
+position: relative;
+float: none !important;
+top: 100px;
+padding: 10px 20px;
+width: 100% !important;
+background: #fff !important;
+zoom: 90%;
+max-height: 100%;
+}
+
+div.documentwrapper {
+    float: none !important;
+    margin: 0;
+}
+
+.sphinxsidebarwrapper {
+padding: 20px 0 !important;
+}
+
+.body {
+padding:0 3% 0 !important;
+}
+
+.bodywrapper {
+margin: 0 0 0 0px !important;
+border-left: 1px solid #eee;
+}
+
+#welcome .section {
+  width: 100%;
+  float: left;
+  margin: 0 0 10px 0px;
+  }
+
+  #welcome .section .section{
+    width:100%;
+  }
+
+  .feedbackbtn {
+    font-size: 12px;
+  background: #0B599D;
+  color: #fff !important;
+  font-weight: bold;
+  padding: 6px 14px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 4px 4px 4px 4px;
+  z-index: 3000;
+   /* position: fixed; */
+  bottom: 0;
+  /* right: 312px; */
+  }
+
+  }
+  
+/***** IPHONE *****/
+@media screen and (max-width: 767px) {
+    body {
+padding:0;
+}
+
+.sphinxsidebar {
+  height: calc(100% - 112px);
+position: relative;
+top: 0px;
+width:100% !important;
+background: #fff !important;
+zoom: 90%;
+}
+
+.sphinxsidebarwrapper {
+padding: 20px 0 !important;
+}
+
+.body {
+padding:0 3% 0 !important;
+}
+
+.bodywrapper {
+margin: 0 0 0 0px !important;
+border-left: 1px solid #eee;
+}
+#welcome .section {
+  width: 100%;
+  float: left;
+  margin: 0 0 10px 0px;
+  }
+
+  #welcome .section .section{
+    width:100%;
+  }
+}
+
+#welcome .section {
+margin-bottom: 50px;
+}
+
+#welcome .reference.internalegacy {
+border: 1px solid #ddd !important;
+padding: 15px 20px 17px 65px;
+border-radius: 5px;
+display: block;
+width: intrinsic;
+box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+background-image: url('graduation-cap.png');
+background-repeat: no-repeat;
+background-size: 35px;
+background-position: 15px 10px;
+}
+
+#welcome .reference.internalegacy:active {
+background: #444;
+color: #fff !important;
+}
+
+#welcome .reference.internalegacy img {
+width: 40px;
+display: inline-block;
+vertical-align: middle;
+margin-right: 10px;
+}
+
+div.sphinxsidebar ul {
+border-bottom: 1px solid #eee;
+padding: 5px 0;
+margin: 0;
+}
+
+div.sphinxsidebar ul.current ul{
+border:none;
+}
+
+div.sphinxsidebar p {
+  margin:24px 0 5px;
+}
+
+#welcome {
+  width:100%;
+}
+
+#welcome .section {
+  width: 100%;
+  float: left;
+  margin: 0 0 10px 0px;
+    display: none;
+  }
+
+  #welcome .section .section{
+    width:100%;
+  }
+
+#welcome h3{
+  margin:10px 0 0;
+}
+
+#welcome h2{
+  font-size:18px;
+  font-weight:400;
+  letter-spacing:-0.5pt;
+}
+
+#welcome .reference.internalegacy {
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .footer {
+    text-align: center !important;
+ width: 100% !important;
+ margin: 0 0 0 !important;
+ padding: 10px 0;
+ background: #fff;
+ border-top:1px solid #ddd;
+ /* position: relative; */
+ bottom:0;
+ clear: both;
+ }
+
+ .feedbackbtn {
+  font-size: 12px;
+  background: #0B599D;
+  color: #fff !important;
+  font-weight: bold;
+  padding: 6px 14px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 4px 4px 0px 0px;
+  z-index: 3000;
+  /* position: relative; */
+  bottom: 35px;
+  right: auto;
+}
+}
+.signalfxmodal {
+  display: none; 
+  position: fixed; 
+  z-index: 99999; 
+  left: 0;
+  top: 65px;
+  width: 100%; 
+  height: 90%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.signalfx-feedback-comment{
+    resize: vertical;
+    display: block;
+    width: 100%;
+    height: 75px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.signalfxmodal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; 
+}
+.ajaxcallon {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 700px) {
+  .signalfxmodal-content {
+    width: 90%;
+  }
+
+}
+.clipboard{
+  float: right;
+  cursor: pointer;
+  font-size: 11px;
+  margin-bottom: -14px;
+  margin-left: -40px;
+  z-index: 1;
+  position: relative;
+    padding:3px;
+}
+div[class*="highlight-"] {
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 7px 12px -13px rgb(0 0 0 / 75%);
+    margin-bottom: 10px !important;
+}
+
+.highlight pre {
+    margin: 0px !important;
+    background: white !important;
+    padding: 7px 30px 7px 40px;
+}
+
+div[class*="highlight-"] .highlight{
+    position: relative;
+}
+
+.line-numbers{
+    min-width: 28px;
+    display: inline-grid;
+    position: absolute;
+    top: 0;
+    line-height: 1.2em;
+    text-align: right;
+    font-size: .9em;
+    padding: 6px 5px 7px 3px;
+    color: #555;
+    box-shadow: 7px 3px 9px -9px rgb(0 0 0 / 75%);
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+.highlight .nt{
+    color: #0B599D !important;
+}
+.highlight .kc{
+    color:#0B599D !important;
+}
+
+.highlight .s2{
+    color:#7863B6 !important;
+}
+
+.highlight .k{
+    color:#1EAEFF !important;
+}
+
+.highlight .nb{
+    color:#0B599D !important;
+}
+
+.highlight .mf{
+    color:#0B599D !important;
+}
+
+a.st-ui-result .st-ui-type-detail{
+    color: #4F4F4F !important;
+}
+
+a.st-ui-result .st-ui-type-detail em{
+    color: black !important;
+}
+
+.highlight .c1{
+    color: #0091C6 !important;
+}
+
+.highlight .mi{
+    color: #00C8D2 !important;
+}

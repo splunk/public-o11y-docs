@@ -1,0 +1,16 @@
+{% if next or prev %}
+  <hr>
+  <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+    {% if prev %}
+    <div style="float: left; width:50%;">
+      <a href="{{ prev.link|e }}" class="btn btn-neutral" title="{{ prev.title|striptags|e }}"><span class="fa fa-arrow-circle-left"></span> Previous ({{ prev.title|striptags|e }})</a>
+    </div>
+    {% endif %}
+    {% if next %}
+    <div style="float: right; width:50%; text-align: right;">
+      <a href="{{ next.link|e }}" class="btn btn-neutral float-right" title="{{ next.title|striptags|e }}">Next ({{ next.title|striptags|e }}) <span class="fa fa-arrow-circle-right"></span></a>
+    </div>
+    {% endif %}
+
+  </div>
+{% endif %}

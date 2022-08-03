@@ -1,0 +1,130 @@
+
+(haproxy)= 
+
+# HAProxy
+<meta name="Description" content="Documentation on haproxy monitor">
+
+## Description
+
+The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `haproxy` monitor via the [Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+
+
+This monitors an [HAProxy](http://www.haproxy.org/) instance. This monitor requires HAProxy 1.5+.
+
+
+<!--- SETUP --->
+## Socket configuration
+The location of the HAProxy socket file is defined in the HAProxy config file, as shown in the following example:
+
+```
+global
+    daemon
+    stats socket /var/run/haproxy.sock
+    stats timeout 2m
+```
+
+**Note:** You can use a TCP socket for stats in HAProxy. In your `haproxy` plugin config file, 
+specify the TCP address for the socket. For example, you can use `https://www.example.com/socket:9000`. 
+In the haproxy.cfg file, change the stats socket to use the same TCP address and port, as 
+shown in the following example:
+```
+global
+    daemon
+    stats socket localhost:9000
+    stats timeout 2m
+```
+To use a more restricted TCP socket, follow these steps:
+
+1. Define a backend server that listens to stats on localhost.
+2. Define a frontend proxy server that communicates with the backend server on a different port.
+3. Use ACLs on both servers to control access. Depending on how restrictive your socket is, you might need to 
+add the signalfx-agent user to the haproxy group as follows: `sudo usermod -a -G haproxy signalfx-agent`
+
+The following configuration file demonstrates how to define a backend server and a frontend proxy:
+
+```
+global
+    daemon
+    stats socket localhost:9000
+    stats timeout 2m
+
+backend stats-backend
+    mode tcp
+    server stats-localhost localhost:9000
+
+frontend stats-frontend
+    bind *:9001
+    default_backend stats-backend
+    acl ...
+    acl ...
+```
+
+<!--- SETUP --->
+## SELinux setup
+
+If you have SELinux enabled, create a SELinux policy package by downloading
+the [type enforcement
+file](https://github.com/signalfx/collectd-haproxy/blob/master/selinux/collectd-haproxy.te)
+to some place on your server.  Run the follwing commands to create and install
+the policy package:
+```
+    $ checkmodule -M -m -o haproxy.mod haproxy.te
+    checkmodule:  loading policy configuration from haproxy.te
+    checkmodule:  policy configuration loaded
+    checkmodule:  writing binary representation (version 17) to haproxy.mod
+    $ semodule_package -o haproxy.pp -m haproxy.mod
+    $ sudo semodule -i haproxy.pp
+    $ sudo reboot
+```
+<!--- changed all above instances of collectd-haproxy to haproxy per updated guidance-->
+
+## Installation
+
+This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
+
+To install this integration:
+
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
+2. Configure the monitor, as described in the next section.
+
+
+## Configuration
+
+The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+
+**Note:** Providing a `monitor` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+
+To activate this monitor in the Smart Agent, add the following to your agent configuration:
+
+```
+monitors:  # All monitor config goes under this key
+ - type: haproxy
+   ...  # Additional config
+```
+
+To activate this monitor in the OpenTelemetry Collector, add the following to your agent configuration:
+
+```
+receivers:
+    smartagent/haproxy:
+        type: haproxy
+        ...  # Additional config
+```
+
+The following table shows the configuration options for this monitor:
+
+| Config option | Required | Type | Description |
+| --- | --- | --- | --- |
+| `pythonBinary` | no | `string` | Path to a python binary that should be used to execute the Python code. If not set, a built-in runtime will be used.  Can include arguments to the binary as well. |
+| `host` | **yes** | `string` |  |
+| `port` | no | `integer` |  (**default:** `0`) |
+| `proxiesToMonitor` | no | `list of strings` | A list of all the pxname(s) or svname(s) that you want to monitor (e.g. `["http-in", "server1", "backend"]`) |
+| `excludedMetrics` | no | `list of strings` | Deprecated.  Please use `datapointsToExclude` on the monitor config block instead. |
+| `enhancedMetrics` | no | `bool` |  (**default:** `false`) |
+
+
+## Metrics
+
+The monitor sends the following metrics to Splunk Observability Cloud:
+
+<div class="metrics-table" type="haproxy" include="markdown"></div>

@@ -1,0 +1,290 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %}
+
+<!-- Google Search Console 2/1/18 -->
+
+<meta name="google-site-verification" content="7xRL6H9xjnHYrs6GifZI9OKNUz0JCYVYNTRrkl_y5ro" />
+
+<!-- Google Webmaster Console 7/2/18 -->
+
+<meta name="google-site-verification" content="l0O8pc86XMAkFYJ9j6L4t7Fny44AfdQqKms5AahSLKs" />
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        try{
+
+            //Add dynamic lines to the code snippets
+            $('.highlight').each(function(){
+                var lines = $(this).text().split("\n").length;
+                var lineNumbers = '<div class="line-numbers">';
+                for(var i = 1; i < lines; i++){
+                    lineNumbers += '<span class="line" >' + i + '</span>';
+                }
+                lineNumbers += '</div>';
+                $(this).append(lineNumbers);
+            });
+
+            //Menu build for navigation
+            $('.sphinxsidebarwrapper a').each(function(){
+
+                let hash = "nav-" + $(this).text().replaceAll(' ','-').replaceAll(',','');
+                let url = $(this).attr('href');
+
+                if(url.charAt(0) != '#' || url == "#"){
+                    $(this).attr('id', hash);
+                    let finalUrl = (url == "#") ? "#" + hash : (url + "#" + hash);
+                    $(this).attr('href', finalUrl);
+                }
+
+            });
+
+            //Adjust left nav
+            $('.sphinxsidebar').animate({
+                scrollTop: ($(location.hash).offset().top - 78)
+            }, 0.1);
+
+        }catch(err){
+            console.log(err);
+        }
+
+
+        //Card system dynamic url generation
+        $('.card, .cardlong').click(function () {
+            let url = $(this).find('.reference').attr('href');
+            try {
+                if (url.length) {
+                    window.location.href = url;
+                }
+            } catch (err) {}
+        });
+    });
+
+
+    $(document).on('click','a[href^="#"]',function(event){
+      event.preventDefault();
+
+      $('html, body').animate({
+        scrollTop: $($.attr(this,'href')).offset().top - 100
+      }, 0.1);
+    });
+
+
+</script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39475411-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+{% endblock %}
+
+{%- block content %}
+  <div class="">
+  {% include "banner.html" %}
+  </div>
+  {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+    <div class="document">
+  {%- block document %}
+      <div class="documentwrapper">
+      {%- if render_sidebar %}
+        <div class="bodywrapper">
+      {%- endif %}
+          <div class="body" role="main">
+            {% include "breadcrumbs.html" %}
+            {% block body %} {% endblock %}
+            {% include "page-nav.html" %}
+          </div>
+      {%- if render_sidebar %}
+        </div>
+      {%- endif %}
+      </div>
+  {%- endblock %}
+
+  {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
+      <div class="clearer"></div>
+    </div>
+      <div class="footer" role="contentinfo">
+      {%- if show_copyright %}
+        {%- if hasdoc('copyright') %}
+          {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+        {%- else %}
+          {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+        {%- endif %}
+      {%- endif %}
+      {%- if last_updated %}
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+      {%- endif %}
+      {%- if show_sphinx %}
+        {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+      {%- endif %}
+      </div>
+      <div id="signalfxModalID" class="signalfxmodal">
+        <!-- Modal content -->
+        <div class="signalfxmodal-content">
+          <p>
+                                  Was this documentation topic helpful?
+                                  <select id="signalfx_splunk_feedback_yesno" onchange="help_decission(this.value);">
+                                    <option value="">Please select</option>
+                                    <option	value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                  </select>
+                                </p>
+        
+                                <p id="signalfx_splunk_feedback_no_reason" style="display:none">
+                                  Please specify the reason
+                                  <select id="signalfx_splunk_feedback_no_reasonlist">
+                                    <option value="">Please select</option>
+                                    <option	value="didnt_answer">The topic did not answer my question(s)</option>
+                                    <option value="found_error">I found an error</option>
+                                    <option value="didnt_like">I did not like the topic organization</option>
+                                    <option value="other">Other</option>
+                                  </select>
+                                </p>
+                                <p>
+                                  <label for="signalfx_splunk_feedback_email">Enter your email address, and someone from the documentation team will respond to you:</label>
+                                                            </p>  <p>	<input  name="signalfx_splunk_feedback_email" id="signalfx_splunk_feedback_email" type="text" maxlength="255" size="30" value="" required/>
+                                </p>
+        
+                                <label for="signalfx_splunk_feedback_send_copy_of_email" class="signalfx_splunk-checkbox control control--checkbox">
+                                  <input type="checkbox" name="signalfx_splunk_feedback_send_copy_of_email" id="signalfx_splunk_feedback_send_copy_of_email"  value="yes" >
+                                  <span>Send me a copy of this feedback</span>
+                                </label>
+        
+                                <p>
+                                                            <label for="signalfx_splunk_feedback_comment">Please provide your comments here. Ask a question or make a suggestion.</label>
+                                </p>
+        
+                                <textarea name="signalfx_splunk_feedback_comment" placeholder='' class="form-control signalfx-feedback-comment" id="signalfx_splunk_feedback_comment" rows="5" required></textarea>
+                                <p></p><p class="button-set-submit">
+                                <a style="float:right;" class="fbbtn" type="button" id="signalfx_splunk_feedback_submit" name="signalfx_submit" onclick="submit_feedback()">Submit</a>
+                                <a  class="fbclnbtn" type="button" id="signalfx_splunk_feedback_submit_cancel" name="signalfx_cancel">Cancel</a>
+                                </p>
+        </div>
+        </div>
+        <script>
+        function help_decission(value){
+         if(value=='No'){
+            document.getElementById("signalfx_splunk_feedback_no_reason").style.display = "block";
+         }else{
+            document.getElementById("signalfx_splunk_feedback_no_reason").style.display = "none";
+         }
+        }
+        function validateform(fyesorno,reanson,email,sendcopy,comment){
+         
+            if(fyesorno==''){alert('Please specify whether the topic was helpful.');return false;}
+            if(fyesorno=='No' && reanson==''){alert('Please specify the reason for topic not helpful.');return false;}
+            if(email==''){alert('Please provide email address.');return false;}
+            if(email!='' && !(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))){
+              alert('Please input a valid email address.');return false
+            }
+            if (sendcopy=='Yes' && email==''){alert('You have not entered an email address. Please include a valid email address to receive a copy of your feedback.');return false}
+            if(comment=='' || comment.length<5 || comment.length>500){alert('Comment should have minimum 5 characters and maximum of 500 characters.');return false}
+            return true;
+        }
+        function submit_feedback(){
+          var url = window.location.href;
+          var fyne = document.getElementById("signalfx_splunk_feedback_yesno");
+          var fyne_value = fyne.options[fyne.selectedIndex].value;
+          fryne_value = '';
+          if(fyne_value=='No'){
+          var fryne = document.getElementById("signalfx_splunk_feedback_no_reasonlist");
+          var fryne_value = fryne.options[fryne.selectedIndex].value;
+          }
+          var fe_value = document.getElementById("signalfx_splunk_feedback_email").value;
+          var fsce_value = 'No';
+          if(document.getElementById("signalfx_splunk_feedback_send_copy_of_email").checked){
+            fsce_value = 'Yes';
+          };
+          var fce_value = document.getElementById("signalfx_splunk_feedback_comment").value;
+          var validate = validateform(fyne_value,fryne_value,fe_value,fsce_value,fce_value);
+          
+          if(validate){
+            $('#signalfx_splunk_feedback_submit').addClass('ajaxcallon');
+            $('#signalfx_splunk_feedback_submit_cancel').addClass('ajaxcallon');
+            $('#signalfx_splunk_feedback_submit').html('Processing...');
+                
+                var feedbackApiUrl =  'https://docs.splunk.com/api/userutility/addfeedback';
+                var uname = fe_value.split("@");
+                var urlSubject = url.replace("https://docs.splunk.com/","");
+                urlSubject = urlSubject.replace("https://docs.signalfx.com/","");
+                $.post( feedbackApiUrl, 
+                { url: url, username:uname[0], subject:'Feedback from Splunk Observability Documentation: ' + urlSubject,email:fe_value,sendmecopy:fsce_value,isuseful:fyne_value,reason:fryne_value,comment:fce_value})
+               .done(function( data ) {
+                var data = JSON.parse(data);
+                alert(data.message);
+                $('.signalfxmodal').hide();
+                $('#signalfx_splunk_feedback_submit').removeClass('ajaxcallon');
+                $('#signalfx_splunk_feedback_submit_cancel').removeClass('ajaxcallon');
+                $('#signalfx_splunk_feedback_submit').html('Submit');
+                $('#signalfx_splunk_feedback_email').val("");
+                $('#signalfx_splunk_feedback_comment').val("");
+                $("#signalfx_splunk_feedback_send_copy_of_email").prop("checked", false);
+                $("#signalfx_splunk_feedback_yesno").prop("selectedIndex", 0).change();
+                $("#signalfx_splunk_feedback_no_reason").prop("selectedIndex", 0).change();
+                $("#signalfx_splunk_feedback_no_reason").hide();
+                console.log(data);
+               }).fail(function() {
+                  alert( "Something went wrong please try after sometime!" );
+                  $('.signalfxmodal').hide();
+                  $('#signalfx_splunk_feedback_submit').removeClass('ajaxcallon');
+                  $('#signalfx_splunk_feedback_submit_cancel').removeClass('ajaxcallon');
+                  $('#signalfx_splunk_feedback_submit').html('Submit');
+                  $('#signalfx_splunk_feedback_email').val("");
+                  $('#signalfx_splunk_feedback_comment').val("");
+                  $("#signalfx_splunk_feedback_send_copy_of_email").prop("checked", false);
+                  $("#signalfx_splunk_feedback_yesno").prop("selectedIndex", 0).change();
+                  $("#signalfx_splunk_feedback_no_reason").prop("selectedIndex", 0).change();
+                  $("#signalfx_splunk_feedback_no_reason").hide();
+                });
+                
+          }
+        
+        }
+        $('.highlight').prepend('<a class="clipboard">Copy</a>');
+
+        $(document).on('click', '.clipboard', function () {
+            var clip = $(this).parent().text();
+            const text = clip.slice(4);
+// first version - document.execCommand('copy');
+            var element = document.createElement('textarea');
+            document.body.appendChild(element);
+            element.value = text;
+            element.select();
+            document.execCommand('copy');
+            document.body.removeChild(element);
+            $(this).text('Copied');
+            setTimeout(() => {
+                $(this).text('Copy');
+            }, 1000);
+        });
+        console.log('copied');
+
+
+       </script>
+        
+<a href="javascript:void(0)" class="feedbackbtn">Feedback</a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<!-- Swiftype -- commenting out as it's in the searchbox section in banner.html>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','x-qccQ3CyZ361gjF6Ksg','2.0.0');
+</script>
+ -->
+
+{%- endblock %}
+
+{% block footer %}{% endblock footer %}

@@ -1,0 +1,851 @@
+
+@import url("basic.css");
+
+/* Font Script*/
+
+/* latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('icomoon.eot');
+    src:  url('icomoon.eot') format('embedded-opentype'),
+    url('icomoon.ttf') format('truetype'),
+    url('icomoon.woff') format('woff'),
+    url('icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: transparent;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    color:#555;
+}
+
+/* Minified icomoon */
+.icon-cie-communications:before{content:"\e942"}.icon-cie-healthcare:before{content:"\e943"}.icon-cie-online-services:before{content:"\e944"}.icon-cie-others:before{content:"\e945"}.icon-finance:before{content:"\e933"}.icon-jp-yen:before{content:"\e934"}.icon-manufacturing:before{content:"\e935"}.icon-users-medium:before{content:"\e936"}.icon-public-sector:before{content:"\e937"}.icon-retail:before{content:"\e938"}.icon-users-small:before{content:"\e939"}.icon-transportation:before{content:"\e93a"}.icon-uk-pound:before{content:"\e93b"}.icon-us-dollar:before{content:"\e93c"}.icon-euro:before{content:"\e93d"}.icon-commercial:before{content:"\e93e"}.icon-users-big:before{content:"\e93f"}.icon-expanded-splunk-facebook:before{content:"\e929"}.icon-expanded-splunk-googleplus:before{content:"\e92a"}.icon-expanded-splunk-instagram:before{content:"\e92b"}.icon-expanded-splunk-linkedIn:before{content:"\e92c"}.icon-expanded-splunk-twitter:before{content:"\e92d"}.icon-expanded-splunk-youtube:before{content:"\e92e"}.icon-toggle-close:before{content:"\e940"}.icon-toggle-open:before{content:"\e941"}.icon-expanded-splunktv:before{content:"\e932"}.icon-expanded-splunkcom:before{content:"\e92f"}.icon-expanded-support:before{content:"\e930"}.icon-expanded-training:before{content:"\e931"}.icon-splunkcom-hamburger:before{content:"\e928";color:#fff}.icon-expanded-close-btn:before{content:"\e922"}.icon-expanded-languages-globe:before{content:"\e923"}.icon-expanded-search-icon:before{content:"\e924"}.icon-expanded-splunk-logo:before{content:"\e925";font-size: 1.3pc;}.icon-expanded-splunk-sites-launchpad:before{content:"\e926"}.icon-expanded-user-icon:before{content:"\e927"}.icon-expanded-answers:before{content:"\e919"}.icon-expanded-blogs:before{content:"\e91a"}.icon-expanded-community:before{content:"\e91b"}.icon-expanded-conf:before{content:"\e91c"}.icon-expanded-dev:before{content:"\e91d"}.icon-expanded-docs:before{content:"\e91e"}.icon-expanded-splunkbase:before{content:"\e91f"}.icon-expanded-splunklive:before{content:"\e920"}.icon-expanded-usergroups:before{content:"\e921"}.icon-splunk-events-icon:before{content:"\e917"}.icon-splunk-blogs-icon:before{content:"\e918"}.icon-splunk-bookmark:before{content:"\e903"}.icon-splunk-newspaper:before{content:"\e904";font-size: 3pc;}.icon-splunk-pdf:before{content:"\e905";margin-left: 10%;}.icon-splunk-video:before{content:"\e906";font-size: 3.5pc;}.icon-arrow-right:before{content:"\e907";margin-left: 15%;}.icon-arrow-left:before{content:"\e908";margin-left:10%;}.icon-plus-circle:before{content:"\e909"}.icon-minus-circle:before{content:"\e90a"}.icon-check:before{content:"\e90b"}.icon-question-circle:before{content:"\e90c"}.icon-chevron-down:before{content:"\e90d"}.icon-chevron-up:before{content:"\e90e"}.icon-check-circle:before{content:"\e90f"}.icon-cloud:before{content:"\e910";font-size:4pc;}.icon-download:before{content:"\e911"}.icon-envelope:before{content:"\e912"}.icon-splunk-home:before{content:"\e913"}.icon-print:before{content:"\e914"}.icon-close:before{content:"\e915"}.icon-film:before{content:"\e916"}.icon-social-facebook-circular:before{content:"\e900"}.icon-social-twitter-circular:before{content:"\e901"}.icon-social-linkedin-circular:before{content:"\e902"}.icon-expanded-languages-globe-hd:before{content:"\e946"}.icon-expanded-user-icon-hd:before{content:"\e947"}
+.icon-wrench:before {
+    content: "\e991";
+  }
+  .icon-cog:before {
+    content: "\e994";
+  }
+  .icon-cogs:before {
+    content: "\e995";
+  }
+  .icon-bug:before {
+    content: "\e999";
+  }
+  .icon-shield:before {
+    content: "\e9b4";
+  }
+  .icon-display:before {
+    content: "\e956";
+  }
+  .icon-users:before {
+    content: "\e972";
+  }
+  .icon-user-tie:before {
+    content: "\e976";
+  }
+  .icon-tree:before {
+    content: "\e9bc";
+  }
+  .icon-cloud-upload:before {
+    content: "\e9c3";
+  }
+
+/* -- page layout ----------------------------------------------------------- */
+
+body {
+    font-family: 'Open Sans' !important;
+    font-size: 14px !important;
+    background-color: white !important;
+    color: #000 !important;
+    margin: 0 !important;
+    padding: 0!important;
+}
+
+div.document {
+    width: 1000px; 
+/*     default is 940 --brs*/
+    margin: 70px auto 0 auto !important;    
+}
+
+div.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
+div.bodywrapper {
+    margin: 0 0 0 220px;
+/*     margin: 0 0 0 300px; I had made it this wide before --brs */
+}
+
+div.sphinxsidebar {
+    width: 250px;
+/*     default is 220 --brs */
+}
+
+hr {
+    border: 1px solid #B1B4B6;
+}
+
+div.body {
+    background-color: #ffffff;
+    color: #3E4349;
+    padding: 0 30px 0 30px;
+}
+
+div.footer {
+/*     width: 940px; */
+    width: 1600px;
+    margin: 20px auto 30px auto;
+    font-size: 14px;
+    color: #888;
+    text-align: right;
+    z-index: 2;
+}
+
+div.footer a {
+    color: #888;
+}
+
+
+div.relations {
+    display: none;
+}
+
+
+div.sphinxsidebar a {
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+div.sphinxsidebar a:hover {
+    border-bottom: 1px solid #999;
+}
+
+div.sphinxsidebar {
+    font-size: 12px;  /* default was 14 --brs */
+    line-height: 1.5;
+}
+
+div.sphinxsidebarwrapper {
+/*     padding: 18px 10px;  brs*/
+    padding: 18px 15px;
+    margin: -12px 0 120px 0px;
+    position:relative !important;
+}
+
+div.sphinxsidebarwrapper p.logo {
+    padding: 0;
+    margin: -10px 0 0 0px;
+    text-align: center;
+}
+
+div.sphinxsidebarwrapper h1.logo {
+    margin-top: 10px;/*  default is -10 --brs */
+    text-align: center;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+div.sphinxsidebarwrapper h1.logo-name {
+    margin-top: 0px;
+}
+
+div.sphinxsidebarwrapper p.blurb {
+    margin-top: 0;
+    font-style: normal;
+}
+
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+    font-family: 'Open Sans';
+    color: #444;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+div.sphinxsidebar h4 {
+    font-size: 20px;
+}
+
+div.sphinxsidebar h3 a {
+    color: #444;
+}
+
+div.sphinxsidebar p.logo a,
+div.sphinxsidebar h3 a,
+div.sphinxsidebar p.logo a:hover,
+div.sphinxsidebar h3 a:hover {
+    border: none;
+}
+
+div.sphinxsidebar p {
+    color: #555;
+    margin: 10px 0;
+}
+
+div.sphinxsidebar ul {
+    margin: 10px 0;
+    padding: 0;
+    color: #000;
+}
+
+div.sphinxsidebar ul li.toctree-l1 > a {
+    font-size: 120%;
+}
+
+div.sphinxsidebar ul li.toctree-l2 > a {
+    font-size: 110%;
+}
+
+div.sphinxsidebar input {
+    border: 1px solid #CCC;
+    font-family: 'goudy old style', 'minion pro', 'bell mt', Georgia, 'Hiragino Mincho Pro', serif;
+    font-size: 1em;
+}
+
+div.sphinxsidebar hr {
+    border: none;
+    height: 1px;
+    color: #999;
+    background: #999;
+
+    text-align: left;
+    margin-left: 0;
+    width: 50%;
+}
+
+/* -- body styles ----------------------------------------------------------- */
+
+a {
+    color: #004B6B;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #6D4100;
+    text-decoration: underline;
+}
+
+
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-family: 'Open Sans';
+    font-weight: normal;
+    margin: 30px 0px 10px 0px;
+    padding: 0;
+}
+
+/*   brs
+div.body h1 { margin-top: 0; padding-top: 0; font-size: 240%; }
+div.body h2 { font-size: 180%; }
+div.body h3 { font-size: 150%; }
+div.body h4 { font-size: 130%; }
+div.body h5 { font-size: 100%; }
+div.body h6 { font-size: 100%; }
+ */
+
+div.body h1 { margin-top: 0; padding-top: 0; font-size: 30px; } /* document title */
+div.body h2 { font-size: 24px; }   /* document h1 */
+div.body h3 { font-size: 18px; }   /* document h2 */
+div.body h4 { /* document h3 */
+   font-size: 16px; 
+   font-weight: bold;
+}    
+div.body h5 { /* document h4 */
+   font-size: 14px; 
+   font-weight: bold;
+}    
+
+div.body h6 { font-size: 14px; }    /* document h5 */
+
+/* Settings for permalinks 
+See also signalfx-includes.css and conf.py (search for permalink or headerlink)
+*/
+
+a.headerlink {
+    color: #DDD;
+    padding: 0 4px;
+    text-decoration: none;
+    font-size: smaller;
+}
+
+a.headerlink:hover {
+    color: #444;
+    background: #EAEAEA;
+}
+
+div.body p, div.body dd, div.body li {
+    line-height: 1.4em;
+}
+
+div.admonition {
+    margin: 20px 0px;
+    padding: 10px 30px;
+/*     background-color: #FCC; brs */
+/*     background-color: #fefee6; light yellow */
+    background-color: #F1FAFE; /* light blue */
+/*     border: 1px solid #FAA; */
+/*     border: 1px solid #0B599D; blue */
+    border: 1px solid #59A200;  /* green */
+}
+
+
+div.admonition tt.xref, div.admonition a tt {
+    border-bottom: 1px solid #fafafa;
+}
+
+/* 
+dd div.admonition {   brs
+    margin-left: -60px;
+    padding-left: 60px;
+}
+ */
+
+dd div.admonition {
+    margin-left: -60px;
+    padding-left: 60px;
+    font-family: 'Open Sans';
+}
+
+/* 
+div.admonition p.admonition-title  brs{
+    font-family: 'Garamond', 'Georgia', serif;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1;
+}
+
+ */
+div.admonition p.admonition-title {
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    line-height: 1;
+}
+
+div.admonition p.last {
+    margin-bottom: 0;
+}
+
+div.highlight {
+    background-color: white;
+}
+
+dt:target, .highlight {
+    background: #FAF3E8;
+}
+
+div.note {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+div.seealso {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+}
+
+div.topic {
+    background-color: #eee;
+}
+
+p.admonition-title {
+    display: inline;
+}
+
+/* Remove colon (somehow it came back after an earlier removal) */
+p.admonition-title:after {
+    content: "";
+}
+
+pre, tt, code {
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 0.9em;
+}
+
+.hll {
+    background-color: #FFC;
+    margin: 0 -12px;
+    padding: 0 12px;
+    display: block;
+}
+
+img.screenshot {
+}
+
+tt.descname, tt.descclassname, code.descname, code.descclassname {
+    font-size: 0.95em;
+}
+
+tt.descname, code.descname {
+    padding-right: 0.08em;
+}
+
+img.screenshot {
+    -moz-box-shadow: 2px 2px 4px #eee;
+    -webkit-box-shadow: 2px 2px 4px #eee;
+    box-shadow: 2px 2px 4px #eee;
+}
+
+table.docutils {
+    border: 1px solid #888;
+    -moz-box-shadow: 2px 2px 4px #eee;
+    -webkit-box-shadow: 2px 2px 4px #eee;
+    box-shadow: 2px 2px 4px #eee;
+}
+
+/* Added line height for consistency --brs */
+
+table.docutils td, table.docutils th {
+    border: 1px solid #888;
+    padding: 0.25em 0.7em;
+    line-height:1.7em ;
+}
+
+
+
+table.field-list, table.footnote {
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+table.footnote {
+    margin: 15px 0;
+    width: 100%;
+    border: 1px solid #EEE;
+    background: #FDFDFD;
+    font-size: 0.9em;
+}
+
+table.footnote + table.footnote {
+    margin-top: -15px;
+    border-top: none;
+}
+
+table.field-list th {
+    padding: 0 0.8em 0 0;
+}
+
+table.field-list td {
+    padding: 0;
+}
+
+table.footnote td.label {
+    width: 0px;
+    padding: 0.3em 0 0.3em 0.5em;
+}
+
+table.footnote td {
+    padding: 0.3em 0.5em;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dl dd {
+    margin-left: 30px;
+}
+
+blockquote {
+    margin: 0 0 0 30px;
+    padding: 0;
+}
+
+ul, ol {
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+}
+
+pre {
+    background: #EEE;
+    padding: 7px 30px;
+    margin: 15px 0px;
+    line-height: 1.3em;
+}
+
+dl pre, blockquote pre, li pre {
+    margin-left: 0;
+    padding-left: 30px;
+}
+
+dl dl pre {
+    margin-left: -90px;
+    padding-left: 90px;
+}
+
+tt, code {
+    background-color: #ecf0f3;
+    color: #222;
+    /* padding: 1px 2px; */
+}
+
+tt.xref, code.xref, a tt {
+    background-color: #FBFBFB;
+    border-bottom: 1px solid white;
+}
+
+a.reference {
+    text-decoration: none;
+    border-bottom: 1px dotted #004B6B;
+}
+
+a.reference:hover {
+    border-bottom: 1px solid #6D4100;
+}
+
+a.footnote-reference {
+    text-decoration: none;
+    font-size: 0.7em;
+    vertical-align: top;
+    border-bottom: 1px dotted #004B6B;
+}
+
+a.footnote-reference:hover {
+    border-bottom: 1px solid #6D4100;
+}
+
+a:hover tt, a:hover code {
+    background: #EEE;
+}
+
+
+@media screen and (max-width: 870px) {
+
+    div.sphinxsidebar {
+    	display: none;
+    }
+
+    div.document {
+       width: 100%;
+
+    }
+
+    div.documentwrapper {
+    	margin-left: 0;
+    	margin-top: 0;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    }
+
+    div.bodywrapper {
+    	margin-top: 0;
+    	margin-right: 0;
+    	margin-bottom: 0;
+    	margin-left: 0;
+    }
+
+    ul {
+    	margin-left: 0;
+    }
+
+    .document {
+    	width: auto;
+    }
+
+    .footer {
+    	width: auto;
+    }
+
+    .bodywrapper {
+    	margin: 0;
+    }
+
+    .footer {
+    	width: auto;
+    }
+
+    .github {
+        display: none;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 875px) {
+
+    body {
+        margin: 0;
+        padding: 20px 30px;
+    }
+
+    div.documentwrapper {
+        float: none;
+        background: white;
+    }
+
+    div.sphinxsidebar {
+        display: block;
+        float: none;
+        width: 102.5%;
+        margin: 50px -30px -20px -30px;
+        padding: 10px 20px;
+        background: #333;
+        color: #FFF;
+    }
+
+    div.sphinxsidebar h3, div.sphinxsidebar h4, div.sphinxsidebar p,
+    div.sphinxsidebar h3 a {
+        color:#555;
+    }
+
+    div.sphinxsidebar a {
+        color: #AAA;
+    }
+
+    div.sphinxsidebar p.logo {
+        display: none;
+    }
+
+    div.document {
+        width: 100%;
+        margin: 0;
+    }
+
+    div.footer {
+        display: block;
+    }
+
+    div.bodywrapper {
+        margin: 0;
+    }
+
+    div.body {
+        min-height: 0;
+        padding: 0;
+    }
+
+    .rtd_doc_footer {
+        display: none;
+    }
+
+    .document {
+        width: auto;
+    }
+
+    .footer {
+        width: auto;
+    }
+
+    .footer {
+        width: auto;
+    }
+
+    .github {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .card, .cardlong{
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+/* misc. */
+
+.revsys-inline {
+    display: none!important;
+}
+
+/* Make nested-list/multi-paragraph items look better in Releases changelog
+ * pages. Without this, docutils' magical list fuckery causes inconsistent
+ * formatting between different release sub-lists.
+ */
+div#changelog > div.section > ul > li > p:only-child {
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+/* Hide fugly table cell borders in ..bibliography:: directive output */
+table.docutils.citation, table.docutils.citation td, table.docutils.citation th {
+  border: none;
+  /* Below needed in some edge cases; if not applied, bottom shadows appear */
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+.card, .cardlong{
+    display: inline-table !important;
+    width: 50%;
+    border: 1px solid #eee;
+    padding: 10px 88px 10px 10px;
+    max-width: 48%;
+    min-height: 117px;
+    border-radius: 5px;
+    position: relative;
+    cursor:pointer;
+    height:117px;
+}
+
+.cardlong{
+    width: calc(100% - 25px);
+    max-width: 100%;
+}
+
+.card .reference, .cardlong .reference{
+    display: none;
+}
+
+#welcome .card [class^="icon-"], #welcome .card [class*=" icon-"],
+#welcome .cardlong [class^="icon-"], #welcome .cardlong [class*=" icon-"]{
+    font-size: 67px;
+    position: absolute;
+    max-width: 70px;
+    overflow: hidden;
+    right: 10px;
+    top: 50%;
+    margin-top: -35px;
+}
+
+.card .strong, .cardlong .strong{
+    display: block;
+}
+
+.iconset-show{
+    width: 100%;
+}
+
+.iconset-show [class^="icon-"], .iconset-show [class*=" icon-"]{
+    font-size: 70px;
+    width: 77px;
+    overflow: hidden;
+    max-width: 80px;
+    background: #eee;
+    padding: 5px;
+    display: inline-block;
+}
+
+.card:hover .strong, .cardlong:hover .strong,
+.card:hover [class^="icon-"]:before,  .card:hover[class*=" icon-"]:before,
+.cardlong:hover [class^="icon-"]:before,  .cardlong:hover[class*=" icon-"]:before{
+    color: #0B599D !important;
+}
+.card:hover, .cardlong:hover{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.observability-label{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 152px;
+}
+
+.nav-item{
+    white-space: nowrap;
+}
+
+@media (max-width: 1199px){
+    .logoimage{
+        max-height: 65px !important;
+    }
+    .observability-label{
+        margin-left: 150px !important;
+    }
+
+    #searchbox{
+        margin-top:20px !important;
+    }
+}
+
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #0B599D;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+

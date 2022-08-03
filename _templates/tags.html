@@ -1,0 +1,9 @@
+{% if related %}
+<h3> Related Pages </h3>
+{% for page in related %}
+<li>
+<a href="{{ pathto(page) }}">{{ page }}</a>
+</li>
+{% endfor %}
+{% endif %}
+
