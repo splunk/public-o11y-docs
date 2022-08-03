@@ -1,0 +1,8 @@
+<div role="navigation" aria-label="breadcrumbs navigation"  data-swiftype-index='false'>
+    <a href="{{ pathto(master_doc) }}">Docs</a> &raquo;
+      {% for doc in parents %}
+          <a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;
+      {% endfor %}
+    {{ title }}
+  <hr/>
+</div>

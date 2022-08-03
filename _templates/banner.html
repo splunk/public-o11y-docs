@@ -1,0 +1,95 @@
+<nav class="navbar fixed-top navbar-expand-xl navbar-dark bg-dark" aria-label="Third navbar example">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://docs.splunk.com/Observability/">
+      <img class="logoimage" src="{{ pathto('_static/splunk_logo_observability.png', 1) }}" />
+      <span class="observability-label">Observability</span>
+    </a>
+    <button class="navbar-toggler collapsed" style="margin-bottom: 10px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExample03" >
+      <div id="searchbox"  role="search">
+        <div class="searchformwrapper">
+        <form id="searchbox" class="d-flex search" action="{{ pathto('search') }}" method="get">
+          <!-- Keep name=q line to prevent scrolling issue -->
+          <input type="hidden" name="q" placeholder="Search">
+          <input class="form-control st-default-search-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" style="width: 100% !important;">
+          <input class="btn" type="submit" value="{{ _('Go') }}" style="color:#3E4349;background-color:#DDDDDD;" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+        </div>
+      </div>
+
+
+      <script type="text/javascript">
+        $("#searchbox").show(0);
+        var modal = document.getElementById("signalfxModalID");
+   $(document).on('click', '.feedbackbtn', function() {
+    $('.signalfxmodal').show();
+  });
+$(document).on('click', '#signalfx_splunk_feedback_submit_cancel', function() {
+  $('.signalfxmodal').hide();
+  $('#signalfx_splunk_feedback_email').val("");
+  $('#signalfx_splunk_feedback_comment').val("");
+  $("#signalfx_splunk_feedback_send_copy_of_email").prop("checked", false);
+  $("#signalfx_splunk_feedback_yesno").prop("selectedIndex", 0).change();
+  $("#signalfx_splunk_feedback_no_reason").prop("selectedIndex", 0).change();
+  $("#signalfx_splunk_feedback_no_reason").hide();
+  
+});
+      </script>
+      <!-- Swiftype -->
+      <script type="text/javascript">
+        (function (w, d, t, u, n, s, e) {
+          w["SwiftypeObject"] = n;
+          w[n] =
+            w[n] ||
+            function () {
+              (w[n].q = w[n].q || []).push(arguments);
+            };
+          s = d.createElement(t);
+          e = d.getElementsByTagName(t)[0];
+          s.async = 1;
+          s.src = u;
+          e.parentNode.insertBefore(s, e);
+        })(
+          window,
+          document,
+          "script",
+          "//s.swiftypecdn.com/install/v2/st.js",
+          "_st"
+        );
+
+        _st('install','kTM1u6Eg1DoTRAzEiSh_','2.0.0');
+      </script>
+      <ul class="navbar-nav mb-2 mb-sm-0" style="margin-left: auto !important;">
+        <li class="nav-item">
+          <a href="https://dev.splunk.com/observability/" class="nav-link newnavbar active" aria-current="page" target="_blank" style="margin-top:10px;">API docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link newnavbar" href="https://www.splunk.com/blog" target="_blank">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/training/learning-path/courses-for-signalfx/overview.html" target="_blank">Training</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/download/infrastructure-monitoring.html" target="_blank" style="
+          font-size: 12px;
+          border-radius: 50px;
+          letter-spacing: 1px;
+          padding: 10px 35px;
+          text-transform: uppercase;
+          color:#3E4349 !important;background-color:#DDDDDD;
+          white-space: nowrap;
+          margin-left: 0px;
+          ">Free Trial</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+

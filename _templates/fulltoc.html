@@ -1,0 +1,27 @@
+
+<!-- books function not used in this implementation 
+{# Build specific sidebar toc tree for book pages. #}
+{% if show_local_toc %}
+<!~~ 
+{{ get_local_toc(pagename, maxdepth=4, includehidden=True) }}
+ ~~>
+{% else %}
+{{ toctree(maxdepth=4, includehidden=theme_sidebar_includehidden) }}
+{% endif %}
+ -->
+
+{{ toctree(includehidden=theme_sidebar_includehidden) }}
+
+{% if theme_extra_nav_links %}
+<hr />
+<ul>
+    {% for text, uri in theme_extra_nav_links.items() %}
+<!-- 
+    <li class="toctree-l1"><a href="{{ uri }}">{{ text }}</a></li>
+ -->
+    <li class="toctree-l3"><a href="{{ uri }}">{{ text }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% include "tags.html" %}

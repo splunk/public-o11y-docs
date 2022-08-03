@@ -1,0 +1,58 @@
+.. _get-started-o11y:
+
+*************************
+Monitor your applications
+*************************
+
+.. meta::
+   :description: Learn about how you can monitor your infrastructure, applications, user experiences, and troubleshoot with logs in the Obersvability Cloud.
+
+.. toctree::
+   :hidden:
+
+   infrastructure
+   logs
+   apm
+   rum
+   use-case
+
+The following sections describe how to start exporting and monitoring metrics, 
+logs, and spans from your infrastructure and services in Splunk Observability Cloud. 
+
+:strong:`Step 1. Export metrics, logs, and spans`
+
+Check out the :ref:`get-started-get-data-in` guide to start sending data 
+from your infrastructure and services to Observability Cloud.
+
+Export data with supported integrations. 
+Configure integrations directly in your Observability Cloud environment. 
+You have to be an Observability Cloud administrator to configure integrations. 
+
+:strong:`Step 2. Monitor your infrastructure and services`
+
+After you get data in, 
+start monitoring your infrastructure and 
+services and investigate the root cause of any incidents. 
+
+There are a few ways to monitor and investigate issues in Observability Cloud, 
+depending on which data types and sources you are exporting and what you want to monitor. 
+See the following table for use cases in Observability Cloud:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 70
+
+   * - :strong:`Use case`
+     - :strong:`Description`
+
+   * - :ref:`get-started-infrastructure`
+     - Analyze the performance of cloud services, hosts, and containers. View the health of your infrastructure at a glance.
+
+   * - :ref:`get-started-apm`
+     - Analyze the performance of applications down to the micro-service level. Monitor inbound and outbound dependencies for each service. Break down service performance by metadata associated with spans. 
+
+   * - :ref:`get-started-rum`
+     - Analyze the performance of web applications. Keep track of how users are interacting with your front-end services, including page load times and responsiveness.
+
+   * - :ref:`get-started-logs` 
+     - Troubleshoot incidents with your infrastructure and cloud services.
