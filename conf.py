@@ -336,12 +336,12 @@ def determine_local_toc(app, pagename, templatename, context, doctree):
     
 
 def setup(app):
-    app.add_stylesheet('custom.css')
-    app.add_stylesheet('signalfx-alabaster.css')
-    app.add_stylesheet('signalfx-includes.css')
-    app.add_javascript('signalfx-includes.js')
-    app.add_javascript('jsonpull-splunk.js')
-    app.add_javascript('showdown.min.js')
+    app.add_css_file('custom.css')
+    app.add_css_file('signalfx-alabaster.css')
+    app.add_css_file('signalfx-includes.css')
+    app.add_js_file('signalfx-includes.js')
+    app.add_js_file('jsonpull-splunk.js')
+    app.add_js_file('showdown.min.js')
     app.connect('html-page-context', on_page_context)
     app.connect('html-page-context', determine_local_toc)
 
@@ -349,3 +349,4 @@ def setup(app):
 #   app.add_stylesheet('signalfx-fonts.css')
 
 html_baseurl = "https://docs.splunk.com/Observability/"
+

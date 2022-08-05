@@ -273,4 +273,3 @@ the following:
     gdi/generic-monitor-configuration/generic-monitor-configuration
     gdi/other-ingestion-methods/ingest-rest-api
     gdi/other-ingestion-methods/ingest-wrapper
-
