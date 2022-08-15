@@ -5,7 +5,7 @@ support
 env
 venv
 _image-source-files
-
+*.yml
 *.ignoreme
 *.rstignoreme
 *.pyc
