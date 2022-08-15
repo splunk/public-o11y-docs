@@ -2,6 +2,8 @@ name: Repo Sync
 
 on:
   workflow_dispatch:
+  schedule: 
+    - cron: "*/5 * * * *"
 
 jobs:
   repo-sync:
