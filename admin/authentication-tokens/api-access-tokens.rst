@@ -1,43 +1,71 @@
 .. _admin-api-access-tokens:
 
-***********************************
-Create and manage API access tokens
-***********************************
+****************************************************************************
+Retrieve and manage user API access tokens using Splunk Observability Cloud
+****************************************************************************
 
 .. meta::
-   :description: Learn how to how to create and manage API access tokens.
+  :description: Learn how to how to see and manage user API access tokens.
 
-This topic describes how to obtain a user API access token. You can authenticate API requests with a user API access token (session token). User API access tokens expire after 30 days.
+This topic describes how to retrieve a :strong:`user API access token` that you can use to authenticate API requests.
 
-Some API requests require a user API access token associated with an organization user who has administrative access. These users are known as administrators.
+Keep in mind you might also need the following access tokens:
 
-If you're sending data to Infrastructure Monitoring, you can't use a user API access token in your API request. Instead, you need to use an :ref:`access token<admin-org-tokens>`.
+- Some API requests :ref:`require a user API access token created by an administrator <apis-require-admin-token>`.
+- To authenticate API requests that send data to Splunk Observability Cloud, you must use an :ref:`organization access token<admin-org-tokens>`, not a user API access token.
 
-Administrator User API access tokens
-========================================
-The following API requests require a user API access token associated with an administrator:
+
+Retrieve you user API access token (session token)
+=========================================================
+
+Observability Cloud automatically generates a user API access token every time you log in.
+
+To retrieve it:
+
+#. On the Left Nav menu, go to :strong:`Settings`.
+#. Select your profile name.
+#. Select :strong:`Show API Access Token` on the top right corner.
+#. If you need it, :strong:`Copy` the token to your clipboard.
+#. If you are going to keep your Account Settings screen open, select :strong:`Hide` to prevent others from seeing your token.
+
+You don't need to delete your user API access tokens. Instead, you can let them expire.
+
+User API access token expiration
+---------------------------------------
+
+A user API access token you create on the Account Settings page expires when you log out of Splunk Observability Cloud, or after 30 days, whichever comes first.
+
+To create a user API access token that doesn't expire when you log out of Splunk Observability Cloud but still expires after 30 days, use the :code:`v2/session` endpoint. For more information, see :new-page:`Sessions Tokens <https://dev.splunk.com/observability/reference/api/sessiontokens/latest>`.
+
+
+.. _apis-require-admin-token:
+
+API requests that require a user API access token created by an administrator
+================================================================================
+
+These API requests require a user API access token created by an administrator.
 
 .. list-table::
-   :header-rows: 1
-   :widths: 25 75
+  :header-rows: 1
+  :widths: 25 75
 
-   * - :strong:`API`
-     - :strong:`Task`
+  * - :strong:`API`
+    - :strong:`Task`
 
-   * - Integration
-     - Create, update, delete, or validate an integration
+  * - Integration
+    - Create, update, delete, or validate an integration
 
-   * - Org token
-     - Create, update, or delete an org (access) token, or rotate an org token secret
+  * - Org token
+    - Create, update, or delete an org (access) token, or rotate an org token secret
 
-   * - Dashboards and dashboard groups
-     - Change or remove write permissions for a user other than yourself
+  * - Dashboards and dashboard groups
+    - Change or remove write permissions for a user other than yourself
 
-   * - Detectors
-     - Change or remove write permissions for a user other than yourself
+  * - Detectors
+    - Change or remove write permissions for a user other than yourself
 
-   * - Organizations
-     - The following API requests require a User API access token associated with an administrator:
+  * - Organizations
+    - The following API requests require a User API access token associated with an administrator:
 
        * Retrieve information for your organization
        * Retrieve information for one or more organization users
@@ -47,28 +75,13 @@ The following API requests require a user API access token associated with an ad
        * Grant administrative access to a user
        * Delete a user from your organization
 
-   * - Teams
-     - Create, update, or delete a team, or remove a team member other than yourself.
+  * - Teams
+    - Create, update, or delete a team, or remove a team member other than yourself.
 
 You can manage permissions on items for which you already have permissions, even if you're not an administrator.
 
-If you're an administrator, you can see how a user created or updated an object using a particular user API access token by selecting :guilabel:`Info` from the object's :guilabel:`Actions` menu.
+If you're an administrator, you can see how a user created or updated an object using a particular user API access token by selecting :strong:`Info` from the object's :strong:`Actions` menu.
 
-For example, to see information for a dashboard, select :menuselection:`Dashboard > Info` from the dashboard's :guilabel:`Actions` menu.
+For example, to see information for a dashboard, select :menuselection:`Dashboard > Info` from the dashboard's :strong:`Actions` menu.
 
-To track API calls by user, ask your users to obtain and use their own user API access token. If the token expires, your users can generate another one.
-
-Create a User API access token
-=================================
-
-To create a user API access token:
-
-#. Open the :guilabel:`Settings` menu.
-#. Select :menuselection:`My Profile`, then click :guilabel:`Generate User API Access Token`.
-#. Click :guilabel:`Show User API Access Token`.
-#. To copy the token, click :guilabel:`Copy`.
-#. After you copy the token, click :guilabel:`Hide` to prevent others from seeing the token.
-
-After you generate and copy the user API access token, you can't see it again in your profile. Instead, generate a new token. You can generate as many as you want.
-
-You don't need to delete your user API access tokens. Instead, you can let them expire.
+To track API calls by user, ask your users to obtain and use their own user API access tokens.

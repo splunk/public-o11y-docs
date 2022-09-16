@@ -1,11 +1,12 @@
 _build
+_download
 support
 
 .vscode/
 env
 venv
 _image-source-files
-*.yml
+
 *.ignoreme
 *.rstignoreme
 *.pyc
@@ -13,7 +14,7 @@ _image-source-files
 *.worksheet
 *.bbprojectdata
 *.bbprojectsettings
-
+vale
 .idea
 .DS_Store
 product-docs.iml

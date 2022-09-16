@@ -9,4 +9,4 @@ Third-party software
 
 Some of the components included in Splunk RUM are licensed under free or open source licenses. We wish to thank the contributors to those projects.
 
-Credits available as a compressed CSV file for download: :download:`Splunk RUM third-party software<Splunk_RUM_Third_Party_Credits.zip>`.
+Credits available as a compressed CSV file for download: :download:`Splunk RUM third-party software<SplunkRUMThirdPartyCredits2022.zip>`. 

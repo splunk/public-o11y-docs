@@ -1,36 +1,34 @@
 .. _admin-org-tokens:
 
-********************************************
-Create and manage organization access tokens
-********************************************
+********************************************************************************
+Create and manage organization access tokens using Splunk Observability Cloud
+********************************************************************************
 
 .. meta::
    :description: Learn how to how to create and manage organization access tokens
 
 Access tokens, also known as org tokens, are long-lived organization-level tokens.
-By default, these tokens persist for five years so that you can use them in API
-calls that continually send data points to Infrastructure Monitoring. You can also
-use them in any continually-running scripts that call the API.
 
-You can also use access tokens to track usage for different groups of users. This
-feature helps you track and manage your resource usage. For example, if you have
-users in the U.S. and Canada sending data to Infrastructure Monitoring gives each
-group its specific access token. You can then compare the amount of data coming
-from each country.
+Use access tokens to:
 
-You can't use access tokens for API requests that are associated with an administrator. See :ref:`admin-api-access-tokens` for more information.
+- Send data points to Infrastructure Monitoring with API calls.
+- Run scripts that call the API.
+- Manage your resource by tracking usage for different groups of users, services, teams, and so on. For example, you have users in the U.S. and Canada sending data to Infrastructure Monitoring. You can give each group its specific access token to compare the amount of data coming from each country.
 
-.. note:: All access tokens are available to any user in your organization, so
-   you can't restrict access to specific tokens. Instead, use your company's
-   security and management procedures to let users know which token you want
-   them to use.
+You can't use access tokens for API requests associated with an administrator. See :ref:`admin-api-access-tokens` for more information.
+
+Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date.
+
+.. note:: By default, only users who are administrators can search for and view all access tokens. You can change this default when you create or update an access token.
 
 The default access token
 ===========================
+
 By default, every organization has one organization-level access token. If you don't
 create any additional tokens, every API request that sends data to Infrastructure
 Monitoring must use this access token.
 
+.. _manage-access-token:
 
 Manage access tokens
 =======================
@@ -38,24 +36,49 @@ Manage access tokens
 To manage your access (org) tokens:
 
 #. Open the :guilabel:`Settings` menu.
-
-#. Hover over :menuselection:`Organization Settings`, then select :menuselection:`Access Tokens`.
-
-#. To find an access token in a large list, start entering its name in the search box. Infrastructure Monitoring returns matching results.
-
-#. To look at the details for an access token, click the expand icon to the left of the token name.
+#. Select :menuselection:`Access Tokens`.
+#. To find the access token in a large list, start entering its name in the search box. Infrastructure Monitoring returns matching results.
+#. To look at the details for an access token, select the expand icon to the left of the token name.
 
    For information about the access token permissions enabled by the :guilabel:`Authorization Scopes` field value, see the permissions step in :ref:`create-access-token`.
+#. If you're an organization administrator, the actions menu (|more| icon) appears on the right side of the token listing. You can select token actions from this menu.
 
-#. If you're an organization administrator, the :guilabel:`Actions` menu appears on the right side of the token listing. You can select token actions from this menu.
+#. To change the token visibility, follow these steps:
+
+   #. To display the available permissions, select the right arrow in the :guilabel:`Access Token Permissions` box. The following
+      permission options appear:
+
+      * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
+      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new
+        token. The token isn't visible to anyone else.
+      * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
+   #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
+   #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
+
+      #. Select :guilabel:`Add Team or User`. Observability Cloud displays a list of teams and users in your organization.
+      #. To find the team or username in a large list, start entering the name in the search box. Infrastructure Monitoring returns matching results.
+         Select the user or team.
+      #. If you need to add more teams or users, select :guilabel:`Add Team or User` again.
+
+         .. note::
+
+            You might see the following message in the middle of the dialog:
+
+            You are currently giving permissions to a team with Restrict Access disabled. This means any user may join this team and will be able to access this Access Token.
+
+            This message means that all users are able to join the team and then view or read the access token.
+
+      #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
+   #. To update the token, select :guilabel:`Update`.
+
 
 View and copy access tokens
 ==============================
 
-To view the value of an access token, click the token name and then click
+To view the value of an access token, select the token name and then select
 :guilabel:`Show Token`.
 
-To copy the token value, click :guilabel:`Copy`. You don't need to be an administrator to
+To copy the token value, select :guilabel:`Copy`. You don't need to be an administrator to
 view or copy an access token.
 
 
@@ -66,39 +89,65 @@ Create an access token
 
 .. note::
 
-   To perform the following tasks, you must be an organization administrator.
+   To do the following tasks, you must be an organization administrator.
 
 To create an access token:
 
 #. Open the Observability Cloud main menu.
+#. Select :menuselection:`Settings` and select :menuselection:`Access Tokens`.
+#. Select :guilabel:`New Token`. If your organization has a long list of access tokens, you might need to scroll down to the bottom of the list to access this button.
+#. Enter a unique token name. If you enter a token name that is already in use, even if the token is disabled, Infrastructure Monitoring doesn't accept the name.
+#. Select an authorization scope for the token from one of the following values:    
+   
+   .. tip:: Assign only one authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
 
-#. Hover over :guilabel:`Organization Settings` and select :guilabel:`Access Tokens`.
+   - :strong:`RUM Token`: Select this authorization scope to use the token to authenticate with RUM ingest endpoints. These endpoints use the following base URL: :code:`https://rum-ingest.<REALM>.signalfx.com/v1/rum`.
+      
+      .. caution::
+         RUM displays the RUM token in URIs that are visible in a browser. To preserve security, you can't assign the :strong:`Ingest` or :strong:`API` authorization scope to a RUM token.
 
-#. Click :guilabel:`New Token`. If your organization has a long list of access tokens, you might need to scroll down to the bottom of the list to access this button.
+   - :strong:`Ingest Token`: Select this authorization scope to use the token to authenticate with data ingestion endpoints. These endpoints use the following base URLs:
 
-#. Provide a unique token name. If you enter a token name that is already in use, even if the token is disabled, Infrastructure Monitoring won't accept the name.
+        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint`
+        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint/otlp`
+        - POST :code:`https://ingest.<REALM>.signalfx.com/v2/event`
+        - POST :code:`https://ingest.<REALM>.signalfx.com/v1/trace`
 
-#. Select the permissions you want to set for the token. Use the principle of "least privilege". Select options that create a token with the most restrictive permissions needed for the operations that use the token. Select from the following values:
+      For information about these endpoints, see :new-page:`Send Monitoring Metrics and Custom Events <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
+   - :strong:`API Token`: Select this authorization scope to use the token to authenticate with Infrastructure Monitoring endpoints. Example use cases are Terraform, programmatic usage of the API for business objects, and so on. These endpoints use the following base URLs: 
+        
+        - :code:`https://api.<REALM>.signalfx.com`
+        - :code:`wss://stream.<REALM>.signalfx.com`
 
-   * :guilabel:`RUM Token`: Select this option to use the token to authentication with RUM ingestion endpoints that use the following base URL: :code:`https://rum-ingest.<REALM>.signalfx.com/v1/rum`
+      For information about these endpoints, see :new-page:`Summary of Splunk Infrastructure Monitoring API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list/>`.
 
-      .. caution:: RUM functionality displays the RUM token in URIs that are visible in a browser. For this reason, we preserve security by not allowing you to assign the :guilabel:`Ingest Token` or :guilabel:`API Token` permission to a RUM token.
+#. Edit the visibility permissions:
 
-   * :guilabel:`Ingest Token`: Select this option to use the token to authenticate with ingestion-related endpoints only. Here are the endpoints that accept an Ingest Token as authentication:
+   #. To display the available permissions, select the right arrow in the :guilabel:`Access Token Permissions` box. The following
+      permission options appear:
 
-        * POST :code:`https://ingest.<REALM>.signalfx.com/v2/datapoint`
+      * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
+      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new
+        token. The token isn't visible to anyone else.
+      * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
+   #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
+#. If you selected :guilabel:`Admins and Select Users or Teams can Read`, specify the users or teams to whom you want to give access:
 
-        * POST :code:`https://ingest.<REALM>.signalfx.com/v2/event`
+   #. Select :guilabel:`Add Team or User`. Observability Cloud displays a list of teams and users in your organization.
+   #. To find the team or username in a large list, start entering the name in the search box. Infrastructure Monitoring returns matching results.
+      Select the user or team.
+   #. To add more teams or users, select :guilabel:`Add Team or User` again.
 
-        * POST :code:`https://ingest.<REALM>.signalfx.com/v1/trace`
+      .. note::
 
-        For information about these endpoints, see :new-page:`Send Monitoring Metrics and Custom Events <https://dev.splunk.com/observability/docs/datamodel/ingest/>`
+         You might see the following message in the middle of the dialog:
 
-   * :guilabel:`API Token`: Select this option to use the token to authenticate with Infrastructure Monitoring endpoints that don’t do ingestion. These endpoints have base URLs with the formats :code:`https://api.<REALM>.signalfx.com` and :code:`wss://stream.<REALM>.signalfx.com`.
+         You are currently giving permissions to a team with Restrict Access disabled. This means any user may join this team and will be able to access this Access Token.
 
-      For information about these endpoints, see :new-page:`Summary of Splunk Infrastructure Monitoring API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list>`
+         This message means that all users are able to join the team and then view or read the access token.
 
-#. Click :guilabel:`OK`.
+   #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
+#. To create the new token, select :guilabel:`Create`.
 
 
 Rename an access token
@@ -106,9 +155,9 @@ Rename an access token
 
 To rename a token:
 
-#. Select :menuselection:`Rename Token` from the token's :guilabel:`Actions` menu.
+#. Select :menuselection:`Edit Token` from the token's actions menu (|more| icon).
 #. Enter a new name for the token.
-#. Click :guilabel:`OK`.
+#. Select :guilabel:`OK`.
 
  Renaming a token does not affect the value of the token.
 
@@ -119,11 +168,11 @@ Disable or enable an access token
 
     You can't delete tokens; you can only disable them.
 
-To disable a token, select :menuselection:`Disable` from the token's Actions menu.
+To disable a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
 The line that displays the token has a shaded background, which indicates that the
 token is disabled. The UI displays disabled tokens at the end of the tokens list,
 after the enabled tokens.
 
-To re-enable a disabled token, select :menuselection:`Enable` from the disabled
-token's Actions menu. The line that displays the token has a light background,
+To enable a disabled token, select :menuselection:`Enable` from the disabled
+token's actions menu (|more| icon). The line that displays the token has a light background,
 which indicates that the token is enabled.

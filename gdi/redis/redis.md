@@ -1,116 +1,92 @@
 (redis)=
 
 # Redis
-
 <meta name="description" content="Documentation on the redis monitor">
 
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) deploys this integration as the `redis` monitor  via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the Redis monitor type using the Smart Agent Receiver.
 
-The `redis` monitor accepts endpoints and allows multiple instances. It monitors a Redis instance using the [Python Redis plugin](https://github.com/signalfx/redis-collectd-plugin). This monitor supports Redis 2.8 and later.
-
-With this monitor, you can capture Redis metrics, such as the following:
+Using the Redis monitor, you can capture the following metrics:
 
  * Memory used
  * Commands processed per second
- * Number of connected clients and slaves
+ * Number of connected clients and followers
  * Number of blocked clients
- * Number of keys stored (per database)
+ * Number of keys stored per database
  * Uptime
  * Changes since last save
- * Replication delay (per slave)
+ * Replication delay per follower
 
-See [redis](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/redis) for the monitor source.
+This monitor is available on Kubernetes, Windows, and Linux. It accepts endpoints and allows multiple instances.
 
+### Requirements
+
+The monitor supports Redis 2.8 and higher.
+
+### Benefits
+
+```{include} /_includes/benefits.md
+```
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-To install this integration:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation.md
+```
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `redis` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
+```{include} /_includes/configuration.md
 ```
-monitors:  # All monitor config goes under this key
- - type: redis
-   ...  # Additional config
+
+```{note}
+Provide a Redis monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
 ```
+
+### Splunk Distribution of OpenTelemetry Collector
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
 
-```
+```yaml
 receivers:
   smartagent/redis:
-    type: redis
+    type: collectd/redis
     ...  # Additional config
 ```
 
-The following table shows the configuration options for the `redis` monitor:
+To complete the monitor activation, you must also include the `smartagent/redis` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
 
-| Config option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `pythonBinary` | no | `string` | Path to a python binary that should be used to execute the Python code. If not set, a built-in runtime will be used.  Can include arguments to the binary as well. |
-| `host` | **yes** | `string` |  |
-| `port` | **yes** | `integer` |  |
-| `name` | no | `string` | The name for the node is a canonical identifier which is used as plugin instance. It is limited to 64 characters in length.  (**default**: "{host}:{port}") |
-| `auth` | no | `string` | Password to use for authentication. |
-| `sendListLengths` | no | `list of objects (see below)` | Specify a pattern of keys to lists for which to send their length as a metric. See below for more details. |
-| `verbose` | no | `bool` | If `true`, verbose logging from the plugin will be enabled. (**default:** `false`) |
+```yaml
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/redis]
+```
 
+### Smart Agent
 
-The **nested** `sendListLengths` config object has the following fields:
+To activate this monitor in the Smart Agent, add the following to your agent configuration:
 
-| Config option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `databaseIndex` | **yes** | `integer` | The database index. |
-| `keyPattern` | **yes** | `string` | Can be a globbed pattern (only * is supported), in which case all keys matching that glob will be processed.  The pattern should be placed in single quotes (').  Ex. `'mylist*'` |
+```yaml
+monitors:  # All monitor config goes under this key
+  - type: collectd/redis
+    ...  # Additional config
+```
 
-
-### Monitor the length of Redis lists
-
-To monitor the length of list keys, the key and database index must be
-specified in the config. Specify keys in the config file in the form
-`sendListLengths: [{databaseIndex: $db_index, keyPattern: "$key_name"}]`.
-`$key_name` can be a globbed pattern (only `*` is supported), in which case
-all keys matching that glob will be processed.  Surround
-the pattern with double quotes so that the asterisks are correctly interpreted.  If any keys match the glob that are not lists, an error
-will be sent to the logs.
-
-Lengths will be reported under the metric `gauge.key_llen`, a
-separate time series for each list.
-
-**Warning**: The `KEYS` command matches the globs. Don't attempt to
-match something that is very big because this command is not highly optimized and can block other commands from executing.
-
-**Note**: To avoid duplication reporting, this should only be reported in one node.
-Keys can be defined in either the master or slave config.
-
-
-### Example `redis` Smart Agent monitor configurations
+The following example shows you a YAML configuration file for the Smart Agent:
 
 ```yaml
 monitors:
-- type: redis
+- type: collectd/redis
   host: 127.0.0.1
   port: 9100
 ```
 
-Here is a sample YAML configuration with list lengths:
+The next example shows you a YAML configuration file that includes list length monitoring:
 
 ```yaml
 monitors:
-- type: redis
+- type: collectd/redis
   host: 127.0.0.1
   port: 9100
   sendListLengths:
@@ -118,9 +94,57 @@ monitors:
     keyPattern: 'mylist*'
 ```
 
+See {ref}`smart-agent` for an autogenerated example of a YAML configuration file, with default values where applicable.
+
+### Configuration settings
+
+The following table shows the configuration options for the Redis monitor:
+
+| Option | Required | Type | Description |
+| --- | --- | --- | --- |
+| `host`            | Yes      | `string`                      |                                                                                                                                                              |
+| `port`            | Yes      | `integer`                     |                                                                                                                                                              |
+| `pythonBinary`    | No           | `string`                      | Path to the Python binary. If you don't provide a path, the monitor uses its built-in runtime. The string can include arguments to the binary. |
+| `name`            | No           | `string`                      | Name for the Redis instance. The maximum length is 64 characters. The default value is "{host}:{port}".                                       |
+| `auth`            | No           | `string`                      | Authentication password.                                                                                                                                     |
+| `sendListLengths` | No           | `list of objects (see below)` | List of keys that you want to monitor for length. To learn more, see the section **Monitor the length of Redis lists**.                                      |
+| `verbose`         | No           | `bool`                        | Flag that controls verbose logging for the plugin. If `true`, verbose logging is enabled. The default value is`false`.                                             |
+
+The following table shows you the configuration options for the `sendListLengths` configuration object:
+
+| Option | Required | Type | Description |
+| --- | --- | --- | --- |
+| `databaseIndex` | Yes      | `integer` | The database index                                                                                                                                                                                                                             |
+| `keyPattern`    | Yes      | `string`  | A string or pattern to use for selecting keys. A string selects a single key. A pattern that uses `*` as a `glob` style wildcard processes all keys that match the pattern. Surround a pattern with single quotes ('), for example `'mylist*'` |
+
+
+### Monitor the length of Redis lists
+
+To monitor the length of list keys, you must specify the key and database index in the configuration.
+
+Specify keys using the following syntax:
+
+`sendListLengths: [{databaseIndex: $db_index, keyPattern: "$key_name"}]`
+
+You can specify `$key_name` as a glob-style pattern. The only supported wildcard is `*` . When you use a pattern, the configuration processes all keys that match the pattern. 
+
+To ensure that the `*` is interpreted correctly, surround the pattern with double quotes (`""`). When a non-list key matches the pattern, the Redis monitor writes an error to the agent logs.
+
+In Observability Cloud, `gauge.key_llen` is the metric name for Redis list key lengths. Observability Cloud creates a separate MTS
+for each Redis list.
+
+**Notes**:
+
+1. The Redis monitor uses the `KEYS` command to match patterns. Because this command isn't optimized, you need to keep your match patterns small. Otherwise, the command can block other commands from executing.
+2. To avoid duplicate reporting, choose a single node in which to monitor list lengths. You can use the main node configuration or a follower node configuration.
 
 ## Metrics
 
-These are the metrics available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="redis" include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/redis/metrics.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

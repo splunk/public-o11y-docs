@@ -9,25 +9,25 @@ Example APM root cause investigation
 
 The following example illustrates how Splunk APM helps you quickly narrow in on the root cause of an incident. These are some characteristics of the example:
 
-- There is a high error rate on an endpoint
+- There is a high error rate on an endpoint  
 - The endpoint is in a service with inbound and outbound dependent services
-- Services run in a containerized infrastructure
+- Services run in a containerized infrastructure   
  
 Step 1. Identify a service with a high error rate
 =================================================
 
-You just received a high error rate alert on the ``/checkout`` endpoint for the ``api`` service. From the alert notification, select :strong:`Troubleshoot` to navigate directly to troubleshooting in Splunk APM. The time, service, endpoint, and environment context carries over.
+You just received a high error rate alert from the ``/checkout`` endpoint for the ``api`` service. From the alert notification, select :strong:`Troubleshoot` to navigate directly to troubleshooting in Splunk APM. The time, service, endpoint, and environment context carries over.
 
-In the service map, the circle inside the ``api:/checkout`` endpoint has hashed lines, which indicates that the error is rooted in another service.
+In the service map, the circle within the ``api:/checkout`` endpoint has hashed lines, which indicates that the error is rooted in another service.
 
-Since you are investigating a high error rate issue, click the :strong:`Requests and Errors` card to get more insights. View information about error sources in an error stack. An error stack identifies the full path of the error. In this example, there is one error stack, identified by the name of the service the error is rooted in: ``payment``. 
+Since you are investigating a high error rate issue, click :strong:`Requests and Errors`  to get more insights. View information about error sources in an error stack. An error stack identifies the full path of the error. In this example, there is one error stack, identified by the name of the service the error is rooted in: ``payment``. 
 
 Step 2. View inbound and outbound dependencies
 ==============================================
 	
 Click the ``payment`` error stack to see the full error path. The errors originate in the ``payment`` service and affect the ``api`` service.
 
-Filter on the whole path. To do so, double-click the ``checkout`` service and then on the ``payment`` service. The circle inside the ``payment`` service is solid, which indicates that the error originates with that service. This is also known as a root-cause error. 
+Filter on the whole path. To do so, double-click the ``checkout`` service and then on the ``payment`` service. The circle inside the ``payment`` service is solid, which indicates that the error originates with the service. This is also known as a root cause error. 
 
 Step 3. Use span tags to pinpoint an issue
 ===========================================

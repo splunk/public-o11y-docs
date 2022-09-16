@@ -1,8 +1,8 @@
 .. _admin-configure-page:
 
-**********************************
-Team landing pages
-**********************************
+********************************************************************
+Manage team landing pages in Splunk Observability Cloud
+********************************************************************
 
 .. meta::
    :description: Learn how to view and configure a team landing page.
@@ -12,37 +12,40 @@ to team members. A landing page brings together dashboard groups and alerts
 triggered by detectors that are linked to the team. The landing page has the
 following sections:
 
-* A customizable text section to provide helpful information to team members.
-  In this section, you can use Markdown-formatted text.
+* A customizable text section to provide helpful information to team members. In this section, you can use Markdown-formatted text.
+
 * A count of active alerts from detectors linked to the team, grouped by severity.
+
 * Links to one or more dashboard groups linked to the team.
 
 Anyone can view the landing page for any team.
+
 
 .. _view-team-landing-page:
 
 View a team landing page
 ============================================================================
 
-You can view team landing pages in different ways:
+You can view team landing pages in different ways.
 
-* To see the landing page for any team, follow these steps:
+To see the landing page for any team, follow these steps:
 
-  #. From the main menu, select :menuselection:`Organization Settings > Teams`.
-  #. Click the name of a team to see its landing page.
+#. Log in to Splunk Observability Cloud.
 
-* To see the landing page for your team if you belong to only one team, follow these steps:
+#. In the left navigation menu, select :menuselection:`Settings > Teams`.
 
-  #. From the main menu, select :menuselection:`Organization Settings > Dashboards`.
-  #. Your team landing page appears.
+#. A table of current teams appears in the main panel.
 
-* To see the landing pages for your teams if you belong to more than one team, follow these steps:
+#. Click a team name to see its landing page.
 
-  #. From the main menu, select :menuselection:`Organization Settings > Dashboards`.
-     Observability Cloud displays all the dashboards to which you have access.
-  #. On the navigation bar, a tab appears for each team you belong to.
-  #. For the team landing page you want to see, click the tab that has the team name.
-  #. The team landing page for that team appears.
+To see the landing page for your team, follow these steps:
+
+#. Log in to Splunk Observability Cloud.
+
+#. In the left navigation menu, select :menuselection:`Dashboards`.
+
+#. In the :guilabel:`My Teams` area, click a team name to see its team landing page.
+
 
 .. _use-team-landing-page:
 
@@ -53,35 +56,32 @@ Use a team landing page as your starting point for monitoring important data.
 
 To review alerts associated with a detector linked to the team, follow these steps:
 
-#. To see all active alerts, click :guilabel:`Team Alerts`. The Alerts page for the team appears.
-   You see all active alerts for detectors that are linked to the team.
-#. To see all active alerts for a specific severity level , click the severity.
-   The Alert page for the team appears. You see active alerts for detectors that are linked to
-   the team, filtered by the severity level you selected.
-#. To see a list of active alerts for each detector linked to the team,
-   click :guilabel:`Team Detectors`. The Alert page for the team appears,
-   listing the name of the detector that issued each alert.
+#. To see all active alerts, click :guilabel:`Team Alerts`. The Alerts page for the team appears. You see all active alerts for detectors that are linked to the team.
 
-To learn more about linking content and teams, see Link Detectors and Dashboard Groups to a Team.
+#. To see all active alerts for a specific severity level, click the severity. The Alert page for the team appears. You see active alerts for detectors that are linked to the team, filtered by the severity level you selected.
+
+#. To see a list of active alerts for each detector linked to the team, click :guilabel:`Team Detectors`. The Alert page for the team appears, listing the name of the detector that issued each alert.
+
+To learn more about linking teams to detectors and dashboard groups, see :ref:`admin-associate-team`,
+
 
 .. _edit-landing-page-text:
 
 Edit the landing page text
 ============================================================================
 
-The text area identified by the team name contains text and links that provide
-documentation for the team and its links. One way to use it is to
-describe the team’s purpose and provide links to relevant wiki pages or runbooks.
+A team landing page provides a text area where you can provide team documentation and useful links. For example, you can use this area to describe the team’s purpose and provide links to relevant wiki pages or runbooks.
 
-The descriptive text supports standard Markdown, including links that use the
-following format:
+The text area supports standard Markdown, including links that use the following format:
 
 ``[link](url)``.
 
-If you're a team member, you can edit the text by following these steps:
+To learn about which roles can edit landing page text, see :ref:`about-team-roles`.
+
+To edit landing page text, follow these steps:
 
 #. Click :guilabel:`Edit Description`.
-#. Enter your changes in the edit box.
-#. Click :guilabel:`Save`.
 
-A user with administrative access can edit the text of any team landing page.
+#. Enter your changes in the edit box.
+
+#. Click :guilabel:`Save`.

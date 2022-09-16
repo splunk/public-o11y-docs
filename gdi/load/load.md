@@ -4,62 +4,59 @@
 
 <meta name="description" content="Documentation on the load monitor">
 
-
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `load` monitor via the Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `load` monitor type by using the SignalFx Smart Agent Receiver. If you want to collect CPU load metrics, use the {ref}`host-metrics-receiver` instead of this monitor type.
 
-`load` monitors process load on the host. Process load is the average number of running or waiting processes over a certain time period (1, 5, and 15 minutes).
+Use this integration to monitor process load on the host. The process load is defined as the number of runnable tasks in the run queue and is provided by many operating systems as a 1, 5, or 15 minute average.
 
-This monitor is only available on Linux.
+This integration is only available on Linux.
 
-See [signalfx-agent/pkg/monitors/load/](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/load) for the monitor source.
+## Benefits
 
-
+```{include} /_includes/benefits.md
+```
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-To install this integration:
-
-1. Deploy the OpenTelemetry Collector to your host or container platform.
-
-2. Configure the monitor, as described in the next section.
-
-
+```{include} /_includes/collector-installation-linux-only.md
+```
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `load` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
-```
-monitors:  # All monitor config goes under this key
-  - type: load
-    ...  # Additional config
+```{include} /_includes/configuration.md
 ```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
-
-```
+```yaml
 receivers:
   smartagent/load:
-    type: load
+    type: collectd/load
     ...  # Additional config
 ```
 
-The following table shows the configuration options for this monitor:
+To complete the integration, include the monitor type in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
-| Config option | Required | Type | Description |
+```
+service:
+ pipelines:
+   metrics:
+     receivers: [smartagent/load]
+```
+
+### Configuration options
+
+The following table shows the configuration options for this monitor type:
+
+| Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `perCPU` | no | `bool` |  (**default:** `false`) |
+| `perCPU` | no | `bool` | The default value is `false`. |
 
 
 ## Metrics
 
-These are the metrics available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="collectd-load" include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/load/metadata.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

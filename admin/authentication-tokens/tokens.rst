@@ -1,8 +1,8 @@
 .. _admin-tokens:
 
-********************************
-Administer authentication tokens
-********************************
+****************************************************************************
+Create and manage authentication tokens using Splunk Observability Cloud
+****************************************************************************
 
 .. meta::
    :description: Learn how to how to administer authentication tokens.
@@ -10,9 +10,9 @@ Administer authentication tokens
 .. toctree::
    :hidden:
 
-   api-access-tokens
-   org-tokens
-   manage-usage
+   Retrieve and manage user API access tokens <api-access-tokens>
+   Create and manage organization access tokens <org-tokens>
+   Manage resource usage with access tokens <manage-usage>
 
 Use authentication tokens to authenticate Splunk Infrastructure Monitoring API requests, track API usage, and control your use of resources.
 

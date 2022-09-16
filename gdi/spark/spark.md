@@ -1,62 +1,78 @@
 (spark)=
 
-# Spark Cluster
-
-<meta name="description" content="Documentation for the spark monitor">
+# Apache Spark
+<meta name="description" content="Documentation for the Apache Spark monitor">
 
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `spark` monitor via the [Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache Spark monitor by using the SignalFx Smart Agent receiver(https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
-The integration monitors Spark clusters.
+The integration monitors Apache Spark clusters.
 
-The following cluster modes are supported only through HTTP endpoints:
+For the following cluster modes, the integration only supports HTTP endpoints:
 
 - Standalone
 - Mesos
 - Hadoop YARN
 
-You have to specify distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, set `isMaster` to true.
+You need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, set `isMaster` to `true`.
 
-When running Spark on Hadoop YARN, the integration capable of reporting only application metrics from the master node.
+When you run Apache Spark on Hadoop YARN, this integration can only report application metrics from the master node.
 
-To see the monitor source, view the [signalfx-agent project](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/spark) on GitHub.
+## Benefits
+
+```{include} /_includes/benefits.md
+```
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-To install this integration:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation.md
+```
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `spark` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
-```
-monitors:  # All monitor config goes under this key
-  - type: spark
-    ...  # Additional config
+```{include} /_includes/configuration.md
 ```
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
 
-```
+```yaml
 receivers:
   smartagent/spark:
     type: spark
     ...  # Additional config
 ```
 
+To complete the integration, include the monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+
+```yaml
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/spark]
+```
+
+## Configuration settings
+
+The following table shows the configuration options for this monitor:
+
+| Option | Required | Type | Description                                                                                                                                                                                                                                       |
+| -------| -------- | ---- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `pythonBinary` | no | `string` | This option specifies the path to a Python binary that executes the Python code. If you don't set this option, the system uses a built-in runtime. You can also include arguments to the binary.                                                  |
+| `host` | **yes** | `string` |                                                                                                                                                                                                                                                   |
+| `port` | **yes** | `integer` |                                                                                                                                                                                                                                                   |
+| `isMaster` | no | `bool` | Set this option to `true` when you want to monitor a master Spark node. The default is `false`.                                                                                                                                                   |
+| `clusterType` | **yes** | `string` | Set this option to the type of cluster you're monitoring. The allowed values are `Standalone`, `Mesos` or `Yarn`. The system doesn't collect cluster metrics for Yarn. Use the collectd/hadoop monitor to gain insights to your cluster's health. |
+| `collectApplicationMetrics` | no | `bool` | The default is `false`.                                                                                                                                                                                                                           |
+| `enhancedMetrics` | no | `bool` | The default is `false`.                                                                                                                                                                                                                           |
+
 ## Metrics
 
-These metrics are available for this integration.
+These are the metrics available for this integration:
 
-<div class="metrics-table" type="spark"  include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/spark/metrics.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

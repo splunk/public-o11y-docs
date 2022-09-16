@@ -1,43 +1,64 @@
 (memory)=
-# Memory
+
+# Memory usage
 <meta name="description" content="Documentation on the memory monitor">
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `memory` monitor via the Smart Agent Receiver. It sends memory usage stats for the underlying host.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `memory` monitor type by using the SignalFx Smart Agent Receiver. This monitor type sends memory usage stats for the underlying host. This monitor type is available on Kubernetes, Linux, and Windows.
+
+On Linux hosts, this monitor type relies on the `/proc` filesystem. If the underlying host's `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top-level configuration `procPath`, as shown in the following example:
+
+```
+procPath: /proc
+monitors:
+ - type: memory
+```
+
+## Benefits
+
+```{include} /_includes/benefits.md
+```
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-To install this integration:
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation.md
+```
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `memory` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-```
-monitors:  # All monitor config goes under this key
- - type: memory
-   ...  # Additional config
+```{include} /_includes/configuration.md
 ```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+```
+monitors:
+  smartagent/collectd/memory: 
+    type: collectd/memory
+    ... # Additional config
+```
+
+To complete the integration, include the monitor type in a metrics pipeline. Add the monitor type to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
-receivers:
-  smartagent/memory:
-    type: memory
-    ...  # Additional config
-```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/memory]
+ ```     
+
+To collect memory utilization metrics only, use the {ref}`host-metrics-receiver`.
 
 ## Metrics
 
-These are the metrics available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="memory" include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/memory/metadata.yaml"></div>
+
+To emit metrics that are not default, you can add those metrics in the generic monitor-level `extraMetrics` configuration option. Metrics that are derived from specific configuration options that do not appear in the above list of metrics do not need to be added to `extraMetrics.`
+
+To see a list of metrics that will be emitted, you can run `agent-status monitors` after configuring this monitor type in a running agent instance.
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

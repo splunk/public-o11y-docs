@@ -1,0 +1,1049 @@
+.. _supported-data-sources:
+
+********************************************************************************
+Supported integrations
+********************************************************************************
+
+.. meta::
+  :description: This page provides a listing of integrations and services supported by Splunk Observability Cloud.
+
+This page provides the list of integrations supported by Splunk Observability Cloud.
+
+
+.. _aws-integrations:
+
+Amazon Web Services
+----------------------------------
+
+* For details about how to get data from these Amazon Web Services into Observability Cloud, see :ref:`get-started-aws`.
+* Learn about :ref:`our AWS Infrastructure Monitoring options <infrastructure-aws>`. You'll find instructions on how to import AWS metrics and metadata, or AWS tag and log information using namespaces and filters. 
+* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata we provide <aws-infra-metadata>`.
+
+.. list-table::
+  :header-rows: 1
+  :widths: 40 40 15 15 15 15
+  :width: 100%
+  :class: monitor-table
+
+  * - :strong:`Namespace`
+    - :strong:`Service`
+    - :strong:`Provides metrics`
+    - :strong:`Provides traces`
+    - :strong:`Provides logs`
+    - :strong:`Provides metadata`
+
+  * - AWS/ACMPrivateCA
+    - ACM Private CA
+    - :strong:`X`
+    -
+    - 
+    - 
+
+  * - AWS/AmazonMQ
+    - Amazon Managed Message Broker (MQ)
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - 
+
+  * - AWS/ApiGateway
+    - Amazon API Gateway
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/ApplicationELB
+    - AWS Elastic Load Balancing (Application Load Balancers)
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/AppStream
+    - AppStream 2.0  
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/Athena
+    - Amazon Athena
+    - :strong:`X`
+    -
+    - 
+    - 
+
+  * - AWS/AutoScaling
+    - AWS Auto Scaling
+    - :strong:`X`
+    - 
+    - :strong:`X` (1)
+    - :strong:`X`
+
+  * - AWS/Backup
+    - Amazon Backup
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/Billing
+    - AWS Billing
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/CertificateManager
+    - AWS Certificate Manager
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/CloudFront
+    - AWS CloudFront
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/CloudHSM
+    - AWS CloudHSM
+    - :strong:`X`
+    - 
+    - :strong:`X` (1)
+    -
+  
+  * - AWS/CloudSearch
+    - Amazon CloudSearch
+    - :strong:`X`
+    - 
+    - 
+    -
+
+  * - AWS/CodeBuild
+    - AWS CodeBuild
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - 
+
+  * - AWS/Cognito
+    - Amazon Cognito
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    -
+
+  * - AWS/Connect
+    - Amazon Connect
+    - :strong:`X`
+    -
+    -
+    -
+
+  * - AWS/DDoSProtection
+    - AWS Shield Advanced
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/DMS
+    - AWS Database Migration Service
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/DocDB
+    - Amazon DocumentDB
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/DX
+    - AWS Direct Connect
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/DynamoDB
+    - Amazon DynamoDB
+    - :strong:`X`
+    - :strong:`X`
+    - 
+    - :strong:`X`
+
+  * - AWS/EBS
+    - Amazon Elastic Block Store (EBS)
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/EC2
+    - Amazon Elastic Compute Cloud (EC2)
+    - :strong:`X`
+    - :strong:`X`
+    - :strong:`X` (3)
+    - :strong:`X`
+
+  * - AWS/EC2Spot
+    - Amazon EC2 Spot Instances
+    - :strong:`X`
+    - 
+    - :strong:`X` (3)
+    - 
+
+  * - AWS/ECS
+    - Amazon EC2 Container Service (ECS)
+    - :strong:`X`
+    - :strong:`X`
+    - :strong:`X` (1)
+    - :strong:`X`
+
+  * - AWS/EFS
+    - Amazon Elastic File System
+    - :strong:`X`
+    - 
+    -
+    - :strong:`X`
+
+  * - AWS/EKS
+    - Amazon Elastic Kubernetes Service (EKS)
+    - :strong:`X`
+    - :strong:`X`
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/ElastiCache
+    - Amazon ElastiCache
+    - :strong:`X`
+    - :strong:`X`
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/ElasticBeanstalk
+    - AWS Elastic Beanstalk
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/ElasticInterface
+    - Amazon Elastic Interface
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/ElasticMapReduce
+    - Amazon Elastic MapReduce (EMR)
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/ElasticTranscoder
+    - Amazon Elastic Transcoder
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/ELB
+    - AWS Elastic Load Balancing (Classic Load Balancers)
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/ES
+    - Amazon Elasticsearch Service
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/Events
+    - Amazon CloudWatch Events
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - 
+
+  * - AWS/Firehose
+    - Amazon Kinesis Firehose
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/FSx
+    - Amazon FSx for Lustre or Windows File Server
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/GameLift
+    - Amazon GameLift
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/Inspector
+    - Amazon Inspector
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/IoT
+    - AWS IoT
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    -
+
+  * - AWS/IoTAnalytics
+    - AWS IoT Analytics
+    - :strong:`X`
+    -
+    -
+    - 
+
+  * - AWS/Kafka
+    - Amazon Managed Streaming for Kafka (MSK)
+    - :strong:`X`
+    -
+    - :strong:`X`
+    - 
+
+  * - AWS/Kinesis
+    - Amazon Kinesis Streams
+    - :strong:`X`
+    - :strong:`X`
+    - 
+    - :strong:`X`
+
+  * - AWS/KinesisAnalytics
+    - Amazon Kinesis Analytics
+    - :strong:`X`
+    - :strong:`X`
+    - 
+    - :strong:`X`
+
+  * - AWS/KinesisVideo
+    - Amazon Kinesis Video Streams
+    - :strong:`X`
+    -
+    - 
+    - 
+
+  * - AWS/KMS
+    - AWS Key Management Service
+    - :strong:`X`
+    -
+    - 
+    - 
+
+  * - AWS/Lambda
+    - AWS Lambda
+    - :strong:`X`
+    - :strong:`X`
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/Lex
+    - Amazon Lex
+    - :strong:`X`
+    - 
+    - :strong:`X` (1)
+    -
+
+  * - AWS/Logs
+    - Amazon CloudWatch Logs
+    - :strong:`X`
+    - 
+    -
+    -
+
+  * - AWS/MediaConnect
+    - AWS Elemental MediaConnect
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/MediaConvert
+    - AWS Elemental MediaConvert
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/MediaPackage
+    - AWS Elemental MediaPackage
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/MediaTailor
+    - AWS Elemental MediaTailor
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/ML
+    - Amazon Machine Learning
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/NATGateway
+    - Amazon VPC (NAT gateway)
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/Neptune
+    - Amazon Neptune
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/NetworkELB
+    - AWS Elastic Load Balancing (Network Load Balancers)
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/OpsWorks
+    - AWS OpsWorks
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - 
+
+  * - AWS/Polly
+    - Amazon Polly
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/RDS
+    - Amazon Relational Database Service
+    - :strong:`X`
+    - :strong:`X`
+    - 
+    - :strong:`X`
+
+  * - AWS/Redshift
+    - Amazon Redshift
+    - :strong:`X`
+    - :strong:`X`
+    - 
+    - :strong:`X`
+
+  * - AWS/Robomaker
+    - AWS RoboMaker
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - 
+
+  * - AWS/Route53
+    - Amazon Route 53
+    - :strong:`X`
+    -
+    - 
+    - :strong:`X`
+
+  * - AWS/S3
+    - Amazon Simple Storage Service
+    - :strong:`X`
+    - 
+    - :strong:`X`
+    - :strong:`X`
+
+  * - AWS/S3/Storage-Lens
+    - Amazon S3 Storage Lens
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/SageMaker
+    - Amazon SageMaker
+    - :strong:`X`
+    -
+    - :strong:`X`
+    - 
+
+  * - AWS/sagemaker/Endpoints
+    - Amazon SageMaker Endpoints
+    - :strong:`X`
+    -
+    - :strong:`X`
+    - 
+
+  * - AWS/sagemaker/TrainingJobs
+    - Amazon SageMaker Training Jobs
+    - :strong:`X`
+    -
+    - :strong:`X`
+    - 
+
+  * - AWS/sagemaker/TransformJobs
+    - Amazon SageMaker Transform Jobs
+    - :strong:`X`
+    -
+    - :strong:`X`
+    - 
+
+  * - AWS/SDKMetrics
+    - AWS SDK Metrics for Enterprise Support
+    - :strong:`X`
+    -
+    - 
+    - 
+
+  * - AWS/SES
+    - Amazon Simple Email Service
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/SNS
+    - Amazon Simple Notification Service
+    - :strong:`X`
+    - :strong:`X`
+    -
+    - :strong:`X`
+
+  * - AWS/SQS
+    - Amazon Simple Queue Service
+    - :strong:`X`
+    - :strong:`X`
+    -
+    - :strong:`X`
+
+  * - AWS/States
+    - AWS Step Functions
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - AWS/StorageGateway
+    - AWS Storage Gateway
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/SWF
+    - Amazon Simple Workflow Service
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/Textract
+    - Amazon Textract
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/ThingsGraph
+    - AWS IoT Things Graph
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/Translate
+    - Amazon Translate
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/TrustedAdvisor
+    - AWS Trusted Advisor
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/VPN
+    - Amazon VPC VPN
+    - :strong:`X`
+    -
+    - 
+    - :strong:`X`
+
+  * - AWS/WAFV2
+    - AWS Web Application Firewall (WAF) V2
+    - :strong:`X`
+    - 
+    - :strong:`X` (1)
+    - 
+
+  * - AWS/WorkMail
+    - Amazon WorkMail
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - AWS/WorkSpaces
+    - Amazon WorkSpaces
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X`
+
+  * - CWAgent
+    - Amazon CloudWatch Agent
+    - :strong:`X`
+    - 
+    - 
+    - :strong:`X` (2)
+
+  * - Glue
+    - AWS Glue
+    - :strong:`X`
+    -
+    - :strong:`X`
+    - 
+
+  * - MediaLive
+    - Amazon MediaLive
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - System/Linux
+    - Amazon Linux 2
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+  * - WAF
+    - AWS WAF Classic
+    - :strong:`X`
+    - 
+    - 
+    - 
+
+
+The following applies to the collected logs and metadata listed in the table:
+
+#. CloudWatch Logs only
+#. EC2 tags & properties only
+#. Logs collected by the CloudWatch agent stored in CloudWatch Logs
+
+.. _gcp-integrations:
+
+Google Cloud Platform services
+-----------------------------------------------
+
+* For details about how to get metrics from these Google Cloud Platform (GCP)  services into Splunk Observability Cloud, see :ref:`get-started-gcp`.
+* For details about the metrics provided by a GCP integration, see :ref:`gcp-metrics`.
+* To send logs from GCP to Observability Cloud, follow the instructions in :ref:`gcp-logs`.
+* Learn about :ref:`our GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
+
+The following GCP services send metrics to Infrastructure Monitoring:
+
+.. list-table::
+  :header-rows: 1
+  :widths: 40 40 
+  :width: 100%  
+
+  * - :strong:`Service name (to use in the API)`
+    - :strong:`Product name (as displayed in the GUI)`
+
+  * - appengine
+    - App Engine
+
+  * - bigquery
+    - BigQuery
+
+  * - bigtable
+    - Cloud Bigtable
+
+  * - cloudfunctions
+    - Cloud Functions
+
+  * - cloudiot
+    - Cloud Internet of Things Core
+
+  * - cloudsql
+    - Cloud SQL
+
+  * - cloudtasks
+    - Cloud Tasks
+
+  * - composer
+    - Cloud Composer
+
+  * - compute
+    - Compute Engine
+
+  * - container
+    - Container Engine
+
+  * - dataflow
+    - Cloud Dataflow
+
+  * - dataproc
+    - Cloud Dataproc
+
+  * - datastore
+    - Cloud Datastore
+
+  * - file
+    - Cloud Filestore
+
+  * - firebasedatabase
+    - Firebase Database
+
+  * - firebasehosting
+    - Firebase Hosting
+
+  * - interconnect
+    - Cloud Interconnect Dedicated
+
+  * - knative
+    - Knative
+
+  * - kubernetes
+    - Kubernetes (GKE)
+
+  * - loadbalancing
+    - Compute Engine HTTP(S) Load Balancing
+
+  * - logging
+    - Stackdriver Logging
+
+  * - ml
+    - Cloud Machine Learning
+  
+  * - monitoring
+    - Stackdriver Monitoring
+
+  * - pubsub
+    - Cloud Pub/Sub
+
+  * - redis
+    - Memorystore for Redis
+
+  * - router
+    - Cloud Router
+
+  * - run
+    - Cloud Run
+
+  * - serviceruntime
+    - Google Cloud Endpoints APIs
+
+  * - spanner
+    - Cloud Spanner
+
+  * - storage
+    - Cloud Storage
+
+  * - vpn
+    - Cloud VPN
+
+
+.. _azure-integrations:
+
+Microsoft Azure services
+----------------------------------
+
+For details about how to get data from these Microsoft Azure services into Observability Cloud, see :ref:`get-started-azure`.
+
+For details about the metrics provided by a Microsoft Azure integration, see :ref:`azure-metrics`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 16 16
+   :width: 100%
+   :class: monitor-table
+
+   * - :strong:`Service`
+     - :strong:`Provides metrics`
+     - :strong:`Provides traces`
+
+   * - :ref:`Azure App Service <get-started-azure>`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Azure Batch <get-started-azure>`
+     - :strong:`X`
+     -
+
+   * - :ref:`Azure Event Hubs <get-started-azure>`
+     - :strong:`X`
+     -
+
+   * - :ref:`Azure Functions <get-started-azure>`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Azure Kubernetes Service <get-started-azure>`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Azure Logic apps <get-started-azure>`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Azure Redis Cache <get-started-azure>`
+     - :strong:`X`
+     -
+
+   * - :ref:`Azure Storage <get-started-azure>`
+     - :strong:`X`
+     -
+
+   * - :ref:`Azure SQL Database <get-started-azure>`
+     - :strong:`X`
+     -
+
+   * - :ref:`Azure SQL Elastic Pools <get-started-azure>`
+     - :strong:`X`
+     -
+
+   * - :ref:`Azure Virtual Machines <get-started-azure>`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Azure Virtual Machine Scale Sets <get-started-azure>`
+     - :strong:`X`
+     -
+
+
+Platforms
+----------------------------------
+
+Install the Splunk Distribution of OpenTelemetry Collector on your infrastructure to start sending data to Splunk Observability Cloud.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 16 16 16
+   :width: 100%
+   :class: monitor-table
+
+   * - :strong:`Data source`
+     - :strong:`Provides metrics`
+     - :strong:`Provides traces`
+     - :strong:`Provides logs`
+
+   * - :ref:`Kubernetes <get-started-k8s>`
+     - :strong:`X`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Linux <get-started-linux>`
+     - :strong:`X`
+     - :strong:`X`
+     -
+
+   * - :ref:`Microsoft Windows <get-started-windows>`
+     - :strong:`X`
+     - :strong:`X`
+     -
+
+
+APM instrumentation
+--------------------------------------------
+
+Instrument your applications to send metrics and traces to Observability Cloud.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 16 16 16
+   :width: 100%
+   :class: monitor-table
+
+   * - :strong:`Language`
+     - :strong:`Provides metrics`
+     - :strong:`Provides traces`
+     - :strong:`Provides logs`
+
+   * - :new-page:`C++ <https://github.com/signalfx/splunk-otel-cpp>`
+     -
+     - :strong:`X`
+     -
+
+   * - :ref:`Java <get-started-java>`
+     - :strong:`X`
+     - :strong:`X`
+     -
+
+   * - :ref:`Microsoft .NET <dotnet>`
+     -
+     - :strong:`X`
+     -
+
+   * - :ref:`Node.js <get-started-nodejs>`
+     -
+     - :strong:`X`
+     -
+
+   * - :ref:`PHP <get-started-php>`
+     -
+     - :strong:`X`
+     -
+
+   * - :ref:`Python <get-started-python>`
+     -
+     - :strong:`X`
+     -
+
+   * - :ref:`Ruby <get-started-ruby>`
+     -
+     - :strong:`X`
+     -
+
+
+Metric instrumentation
+--------------------------------------------
+
+Instrument your applications to send metrics to Infrastructure Monitoring.
+
+- :new-page:`Go <https://github.com/signalfx/signalfx-go>`
+
+- :new-page:`Java <https://github.com/signalfx/signalfx-java>`
+
+- :new-page:`Node.js <https://github.com/signalfx/signalfx-nodejs>`
+
+- :new-page:`Python <https://github.com/signalfx/signalfx-python>`
+
+- :new-page:`Ruby <https://github.com/signalfx/signalfx-ruby>`
+
+
+RUM instrumentation
+--------------------------------------------
+
+Instrument your web and mobile front-end applications to send metrics, web vitals, errors, and other forms of data to Splunk Real User Monitoring.
+
+* :ref:`browser-rum-gdi`
+* :ref:`rum-mobile-ios`
+* :ref:`rum-mobile-android`
+
+For more information, see :ref:`get-started-rum`.
+
+
+Application receivers
+--------------------------------------------
+
+An application receiver gathers metrics from its associated application and the host the application is running on and sends them to Infrastructure Monitoring.
+
+.. using an include for this table because it also appears on gdi/index.rst
+
+.. include:: /_includes/application-receiver-table.rst
+
+
+Community integrations
+---------------------------------------------------------------------------------
+
+- Istio
+- Jaeger
+- Linkerd
+- Micrometer
+- Prometheus
+- Spring Boot
+- Telegraf Agent
+- Zipkin
+
+For information about these integrations:
+
+#. Log in to Splunk Observability Cloud
+#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+#. In the integration filter menu, select :guilabel:`All`.
+#. In the :guilabel:`Search` field, search for the name of the community integration.
+#. Select the community integration's tile to display its details.
+
+
+Notification services
+--------------------------------------------
+
+These integrations enable you to send Observability Cloud alert notifications to the following third-party notification services:
+
+- Amazon EventBridge
+- BigPanda
+- Jira
+- Microsoft Teams
+- Opsgenie
+- PagerDuty
+- ServiceNow
+- Slack
+- Splunk On-Call
+- Webhook
+- xMatters
+
+For more information about integrating with notification services, see :ref:`admin-notifs-index`.
+
+
+Login services
+--------------------------------------------
+
+These login service integrations enable your users to single sign-on (SSO) to Observability Cloud using a third-party identity provider (IdP) that uses SAML SSO or a custom URL that you specify.
+
+- Active Directory FS
+- Azure Active Directory
+- Google Cloud Identity
+- Google Sign-In
+- Okta
+- OneLogin
+- PingOne
+- SAML
+
+For more information about configuring an SSO integration, see :ref:`sso-label`.
+
+
+Data link destinations
+--------------------------------------------
+
+Data links enable you to link metadata to the following destinations outside of Observability Cloud:
+
+- Splunk Cloud Platform
+- Splunk Enterprise
+- Kibana
+
+For more information about creating data links, see :ref:`link-metadata-to-content`.
+
+
+Other integrations
+----------------------------------------------------------------------------------------------
+
+- :new-page:`Grafana <https://grafana.com/grafana/plugins/grafana-splunk-monitoring-datasource/>`
+
+- :new-page:`LaunchDarkly <https://docs.launchdarkly.com/integrations/signalfx>`
+
+- :new-page:`Pulumi <https://www.pulumi.com/docs/intro/cloud-providers/signalfx/>`
+
+- :new-page:`Terraform <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs>`

@@ -115,6 +115,7 @@ div.body {
     background-color: #ffffff;
     color: #3E4349;
     padding: 0 30px 0 30px;
+    max-width: 75%;
 }
 
 div.footer {
@@ -299,11 +300,13 @@ a.headerlink {
     padding: 0 4px;
     text-decoration: none;
     font-size: smaller;
+    position: absolute !important;
 }
 
 a.headerlink:hover {
     color: #444;
     background: #EAEAEA;
+    position: absolute !important;
 }
 
 div.body p, div.body dd, div.body li {
@@ -367,6 +370,38 @@ div.highlight {
     background-color: white;
 }
 
+div.highlight span.linenos {
+   user-select: none;
+   pointer-events: none;
+   color: #AAA;
+}
+
+span.linenos {
+   display: inline-block;
+   border-right: 1px solid #CCC;
+   margin-right: 10px;
+   padding-left: 0px;
+}
+
+.sphinx-tabs-tab {
+   font-family: 'Open Sans' !important; 
+   font-size: 14px !important;
+}
+
+.sphinx-tabs-panel.code-tab div[class*="highlight-"] {
+   border-radius: 0px !important;
+   border: none !important;
+   box-shadow: none !important;
+}
+
+.sphinx-tabs-panel.code-tab .highlight pre {
+   padding: 10px 20px 10px 20px !important;
+}
+
+.sphinx-tabs-tab[aria-selected="true"] {
+   font-weight: bold;
+}
+
 dt:target, .highlight {
     background: #FAF3E8;
 }
@@ -406,7 +441,8 @@ pre, tt, code {
     display: block;
 }
 
-img.screenshot {
+img {
+    margin-bottom: 20px !important;
 }
 
 tt.descname, tt.descclassname, code.descname, code.descclassname {
@@ -428,6 +464,8 @@ table.docutils {
     -moz-box-shadow: 2px 2px 4px #eee;
     -webkit-box-shadow: 2px 2px 4px #eee;
     box-shadow: 2px 2px 4px #eee;
+    /*word-break: break-word;*/
+    /*margin-bottom: 20px;*/
 }
 
 /* Added line height for consistency --brs */
@@ -437,8 +475,6 @@ table.docutils td, table.docutils th {
     padding: 0.25em 0.7em;
     line-height:1.7em ;
 }
-
-
 
 table.field-list, table.footnote {
     border: none;
@@ -613,6 +649,7 @@ a:hover tt, a:hover code {
     div.documentwrapper {
         float: none;
         background: white;
+        max-width: 98%;
     }
 
     div.sphinxsidebar {
@@ -654,6 +691,7 @@ a:hover tt, a:hover code {
     div.body {
         min-height: 0;
         padding: 0;
+        max-width: 100%;
     }
 
     .rtd_doc_footer {
@@ -679,6 +717,20 @@ a:hover tt, a:hover code {
 
 @media screen and (max-width: 875px) {
     .card, .cardlong{
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .newcard{
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .newparawithicon{
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .homebannerlong{
         width: 100% !important;
         max-width: 100% !important;
     }
@@ -721,14 +773,101 @@ table.docutils.citation, table.docutils.citation td, table.docutils.citation th 
     height:117px;
 }
 
+.homebannerlong{
+    display: inline-table !important;
+    width: 100%;
+    border: 2px solid black;
+    /* padding: 20px 1px 2px 16px; */
+    max-width: 100%;
+    min-height: 200px;
+    border-radius: 5px;
+    position: relative;
+    cursor:pointer;
+    margin:15px;
+    
+    font-size: 26px;
+    margin-left: 1px;
+    padding-right: 10px;
+    padding-left: 15px;
+    padding-top: 1%;
+}
+
+
+
+.homebannerlong .bannerimage {
+   display: inline;
+}
+
+.newcard{
+    display: inline-table !important;
+    width: 31%;
+    border: 1px solid #3E4349;
+    /* padding: 20px 1px 2px 16px; */
+    max-width: 31%;
+    min-height: 80px;
+    border-radius: 5px;
+    position: relative;
+    cursor:pointer;
+    margin:15px;
+    /* height:45px; */
+    font-size: 13px;
+    margin-left: 1px;
+    padding-right: 10px;
+    padding-left: 15px;
+    padding-top: 1%;
+
+}
+
+.newparawithicon{
+    display: inline-table !important;
+    position: relative;
+    width: calc(100% - 25px);
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    
+}
+
+#welcome p.newcard {
+    line-height: 1.2em !important;
+}
+
 .cardlong{
     width: calc(100% - 25px);
     max-width: 100%;
 }
 
-.card .reference, .cardlong .reference{
+.homebannerlong{
+    width: calc(100% - 25px);
+    max-width: 100%;
+}
+
+.card .reference, .cardlong .reference, .newcard .reference{
     display: none;
 }
+
+.newcard .reference span{
+    font-size: 15px;
+    font-family: 'Open Sans';
+    color: #0b599d !important;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.4em;
+    text-shadow: 0 0 #0b599d;
+
+}
+
+#welcome .image-reference img {
+    margin-bottom: 16px !important;
+    border: 1px solid #3E4349;
+    border-radius: 7px;
+}
+
+a.image-reference:hover
+{
+    opacity: unset;
+}
+
 
 #welcome .card [class^="icon-"], #welcome .card [class*=" icon-"],
 #welcome .cardlong [class^="icon-"], #welcome .cardlong [class*=" icon-"]{
@@ -741,8 +880,53 @@ table.docutils.citation, table.docutils.citation td, table.docutils.citation th 
     margin-top: -35px;
 }
 
+#welcome .homebannerlong [class^="icon-"], #welcome .homebannerlong [class*=" icon-"]{
+    font-size: 67px;
+    position: absolute;
+    max-width: 70px;
+    overflow: hidden;
+    right: 10px;
+    top: 50%;
+    margin-top: -35px;
+}
+
+#welcome .newcard [class^="icon-"], #welcome .newcard [class*=" icon-"]{
+    font-size: 67px;
+    position: absolute;
+    max-width: 70px;
+    overflow: hidden;
+    right: 10px;
+    top: 50%;
+    margin-top: -35px;
+}
+
+#welcome .newparawithicon [class^="icon-"], #welcome .newparawithicon [class*=" icon-"]{
+    font-size: 28px;
+    position: absolute;
+    overflow: hidden;
+    float: left;
+}
+
 .card .strong, .cardlong .strong{
     display: block;
+}
+
+.newcard .strong{
+    display: block;
+    color: #0A599C;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    margin-bottom: 0.4em;
+    text-shadow: 0 0 #0a599c;
+}
+
+.newparawithicon .strong{
+    display: block;
+    font-size: 22px;
+    margin-left: 45px;
+    font-weight: 100;
+    font-family: 'Open Sans';
+    margin-bottom: 16px;
 }
 
 .iconset-show{
@@ -765,6 +949,14 @@ table.docutils.citation, table.docutils.citation td, table.docutils.citation th 
     color: #0B599D !important;
 }
 .card:hover, .cardlong:hover{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.newcard:hover .strong
+.newcard:hover [class^="icon-"]:before,  .newcard:hover[class*=" icon-"]:before{
+    color: #0B599D !important;
+}
+.newcard:hover{
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%);
 }
 

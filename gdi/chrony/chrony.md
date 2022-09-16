@@ -1,51 +1,59 @@
 (chrony)=
 
 # Chrony NTP
-
 <meta name="description" content="Documentation for the chrony monitor">
 
 ## Description
 
-The [Splunk OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `chrony` monitor with the [SignalFx Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). The integration monitors NTP data from a chrony instance.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Chrony NTP monitor type by using the SignalFx Smart Agent receiver. The integration monitors NTP data from a chrony server, such as clock skew and per-peer stratum. For talking to chronyd, this monitor type mimics what the chronyc control program does on the wire.
 
-To see the monitor source, view the [signalfx-agent project](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/chrony) on GitHub.
+This integration is available for Kubernetes, Linux, and Windows.
+
+## Benefits
+
+```{include} /_includes/benefits.md
+```
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-Follow these steps to deploy the integration:
-
-1. Deploy the Splunk OpenTelemetry Collector to your host or container platform.
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation.md
+```
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `chrony` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
+```{include} /_includes/configuration.md
 ```
-monitors:  # All monitor config goes under this key
- - type: chrony
-   ...  # Additional config
-```
-
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
 
 ```
 receivers:
   smartagent/chrony:
-    type: chrony
+    type: collectd/chrony
     ...  # Additional config
 ```
 
+To complete the integration, include the monitor type in a metrics pipeline. Add the monitor type to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+
+```
+service:
+ pipelines:
+   metrics:
+     receivers: [smartagent/chrony]
+```
+### Configuration options
+
+The following table shows the configuration options for this monitor type:
+
+ Option | Required | Type | Description |
+| --- | --- | --- | --- |
+| `host` | **yes** | `string` | The hostname of the chronyd instance. |
+| `port` | no | `integer` | The UDP port number of the chronyd instance.  Defaults to 323 in collectd if unspecified. |
+| `timeout` | no | `unsigned integer` | How long to wait for a response from chronyd before considering it down. Defaults to 2 seconds in the collectd plugin if not specified. |
 
 ## Metrics
 
-There are no metrics available for this integration.
+The Splunk Distribution of OpenTelemetry Collector does not do any built-in filtering of metrics coming out of this monitor type.
 
+## Get help
 
-<!--- <div class="metrics-table" type="collectd-chrony"  include="markdown"></div> --> 
+```{include} /_includes/troubleshooting.md
+```

@@ -11,21 +11,532 @@
 <meta name="google-site-verification" content="l0O8pc86XMAkFYJ9j6L4t7Fny44AfdQqKms5AahSLKs" />
 
 
+
+<style>
+
+  /* Circle */
+
+  .gg-chevron-right-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 26px;
+    height: 26px;
+    border: 2px solid;   
+    border-radius: 100px;
+    opacity: 0.2;
+    margin-left:7px;
+    
+}
+.gg-chevron-right-o::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(-45deg);
+    left: 6px;
+    top: 7px;
+}
+
+.gg-chevron-left-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 26px;
+    height: 26px;
+    border: 2px solid;
+    border-radius: 100px;
+    opacity: 0.2;
+    float:right;
+}
+.gg-chevron-left-o::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 8px;
+    top: 7px
+}
+
+.gg-chevron-left-o:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+.gg-chevron-right-o:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+  /* End Circle */
+
+
+  .gg-chevron-up {
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+      transform: scale(var(--ggs,1));
+      width: 8px;
+      height: 24px;
+      border: 2px solid transparent;
+      border-radius: 100px;
+      float: right;
+      /* margin-right: -18px; */
+  }
+  .gg-chevron-up::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid;
+      border-right: 2px solid;
+      transform: rotate(-45deg);
+      left: 4px;
+      bottom: 2px
+  }
+
+  .gg-chevron-down {
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+      transform: scale(var(--ggs,1));
+      width: 8px;
+      height: 22px;
+      border: 2px solid transparent;
+      border-radius: 100px;
+      float: right;
+      /* margin-right: -18px; */
+  }
+  .gg-chevron-down::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid;
+      border-right: 2px solid;
+      transform: rotate(45deg);
+      left: 4px;
+      top: 2px
+  }
+
+  #rightSideH1 {
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  /* .bodywrapper {
+		height: 480px;
+		width: 50%;
+		margin-left: 35%;
+		margin-top: 5%;
+		padding: 3em;
+    background: linear-gradient(45deg, #43cea2 10%, #185a9d 90%);
+		color: white;
+		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+} */
+
+/* .rightSideTOC {
+  	position: fixed;
+		width: 30%;
+		margin-left: 2%;
+  	background-color: #999;
+  	color: #fff;
+} */
+  	.TOCL2 {
+			font-weight: 400;
+     }
+			/* .TOCL2:hover {
+				background-color: #aaa;
+			} */
+
+		   .TOCL2 .active {
+		   	color: white;
+				 background-color: rgba(0,0,0,0.1);
+         font-weight: bold;
+         border-bottom: 1px solid lightgrey;
+         border-bottom-style: dashed;
+
+		   }
+
+  </style>
+
+<script type="text/javascript">
+
+$(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+      //console.log("scrollDistance: " + scrollDistance);
+		// Show/hide menu on scroll
+		//if (scrollDistance >= 850) {
+		//		$('nav').fadeIn("fast");
+		//} else {
+		//		$('nav').fadeOut("fast");
+		//}
+
+		// Assign active class to nav links while scolling
+		$('.bodywrapper .section a.headerlink').each(function(i) {
+        //console.log("$(this).position().top: " + $(this).position().top);
+				if ($(this).position().top <= scrollDistance) {
+          //console.log("aaaa");
+						$('.TOCL2 a.active').removeClass('active');
+						$('.TOCL2 a').eq(i).addClass('active');
+				}
+		});
+}).scroll();
+
+
+  $(document).ready(function(){
+
+
+    if($('meta[name=viewport]').length > 0)
+      {
+          console.log("A");
+      }
+      else
+      {
+          $("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+      }
+
+      // Left Side TOC  ====>>START
+      $("#welcome h1").hide();
+
+      $("p.caption").css({"cursor": "pointer","width":"calc(100% - 10px);"});
+      $("span.caption-text ").after('<span class="gg-chevron-down"></span>');
+      //$("p.caption").nextUntil("p.caption").css({"display": "none"});
+      $("p.caption").nextUntil("p.caption").hide();
+
+      $(".toctree-l2").not(".current").each(function(){
+          $(this).hide();
+      });
+
+
+      $("ul.current > li.toctree-l2").each(function(){
+          $("li.toctree-l2").show();
+      });
+
+          var h2textNew = $("div.bodywrapper h2:first").text();
+          h2textNew = h2textNew.slice(0, -3);
+          h2textNew = h2textNew.trim();
+          console.log("AB: " + h2textNew);
+
+          var firstval = $("#mainTOC li.current").find("li.toctree-l3:first").text();
+          console.log("B: " + firstval);
+
+          if($("#mainTOC li.toctree-l2.current").find('ul.current').find('li.toctree-l3').length >= 1 && h2textNew == firstval)
+          {
+            console.log('zz');
+            $("#mainTOC li.toctree-l2.current").find('ul.current').find('li.toctree-l3').show();
+
+          }
+          else if($("#mainTOC li.toctree-l2.current").find('ul').find('li.toctree-l3').length >= 1 && h2textNew == firstval)
+          {
+            console.log('ss');
+
+            $("#mainTOC li.toctree-l2.current").find('ul').find('li.toctree-l3').hide()
+          }
+
+
+
+      $("div.relations").hide();
+
+      $(".feedbackbtn").show();
+
+      $(".navbar-toggler").on("click",function(){
+          if(!$(this).hasClass('collapsed'))
+          {
+            $(".feedbackbtn").hide();
+          }
+          else
+          {
+            $(".feedbackbtn").show();
+          }
+      });
+
+      var leftSidebarIcon ='<div id="leftSidebar" style="width: 100%; margin-bottom:0px; margin-top:8px"><span id="leftSidebarIcon" data-toggle="tooltip" title="Collapse"  class="gg-chevron-left-o"></span></div>';
+      $(leftSidebarIcon).insertBefore("div.sphinxsidebarwrapper");
+
+      $("div#leftSidebar").find('span#leftSidebarIcon').on("click", function(){
+          $("div#leftSidebar").find('span#leftSidebarIcon').removeClass(function(i,class_name){
+                console.log("class:",class_name);
+                if(class_name == 'gg-chevron-left-o')
+                {
+                  console.log("AAA");
+                  $("div.sphinxsidebarwrapper").css("display","none");
+                  $("div.documentwrapper").css("max-width","75%");
+                  $("div.documentwrapper").css("margin-left","20px");
+                  $("div.documentwrapper").css("border-left","none");
+                  $(this).removeClass("gg-chevron-left-o").addClass('gg-chevron-right-o');
+                  $("span#leftSidebarIcon").attr("title","Expand");
+                }
+                if(class_name == 'gg-chevron-right-o')
+                {
+                  console.log("BBB");
+                  $("div.sphinxsidebarwrapper").css("display","block");
+                  $("div.documentwrapper").css("max-width","56%");
+                  $("div.documentwrapper").css("margin-left","20%");
+                  $("div.documentwrapper").css("border-left","1px solid #eee");
+                  $(this).removeClass("gg-chevron-right-o").addClass('gg-chevron-left-o');
+                  $("span#leftSidebarIcon").attr("title","Collapse");
+                }
+            });
+
+      });
+
+
+      // if($('ul.current').css('display') == 'none')
+      // {
+      //     $('ul.current').css("display","block");
+      //     $('ul.current').nextUntil('p.caption').css("display","block");
+      //     $('ul.current').prevUntil('p.caption').css("display","block");
+      //     console.log("Inside current class");
+      // }
+
+      $("p.caption").each(function(){
+          if($(this).nextUntil('p.caption').hasClass('current')){
+              $(this).find('span.gg-chevron-down').removeClass("gg-chevron-down").addClass('gg-chevron-up');
+              $(this).nextUntil("p.caption").show();
+      }
+      });
+
+      $("p.caption").on("click", function(){
+        //$(this).css({"cursor": "pointer","width":"260px"});
+        $(this).nextUntil("p.caption").toggle('fast');
+
+        $(this).find('span.caption-text, span').removeClass(function(i,class_name){
+            console.log("class:",class_name);
+            if(class_name == 'gg-chevron-down')
+            {
+              $(this).removeClass("gg-chevron-down").addClass('gg-chevron-up');
+            }
+            if(class_name == 'gg-chevron-up')
+            {
+              $(this).removeClass("gg-chevron-up").addClass('gg-chevron-down');
+            }
+        });
+
+        $("div.relations").hide();
+      });
+      // left Side TOC  ====>>END
+
+
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      //var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      // btn.onclick = function() {
+      //     modal.style.display = "block";
+      // }
+
+      // When the user clicks on <span> (x), close the modal
+      // span.onclick = function() {
+      //     modal.style.display = "none";
+      // }
+
+
+    $(".close").on("click", function(){
+      //$("#myModal").css("display","none");
+      $("#myModal").fadeOut("5000");
+
+      $("#searchQuery").val('');
+    });
+
+    $("#searchQuery").keyup(function(event) {
+        if (event.which === 13) {
+          $("#modal-search-text").val('');
+            var searchQueryVAL = $("#searchQuery").val();
+            $("#modal-search-text").val(searchQueryVAL);
+            $(".new-modal-header").css("border-bottom","2px solid #33AAFF");
+
+            $("#searchbtn").click();
+        }
+    });
+
+    $("#modal-search-text").keyup(function(event){
+        if (event.which === 13) {
+            var modal_search_text_val = $("#modal-search-text").val();
+
+            $("#searchQuery").val(modal_search_text_val);
+            $("#searchbtn").click();
+        }
+    });
+
+    $("#searchbtn").click(function(){
+        //$(".popup-overlay, .popup-content").addClass("active");
+       // $("#myModal").css("display","block");
+        $("#myModal").fadeIn("5000");
+
+        var searchQuery = $("#searchQuery").val();
+
+
+
+        $("#modal-search-text").focus();
+
+        if (searchQuery) {
+            var query = searchQuery;
+
+            //var docssearchApiUrl =  'https://docs.staging.splunk.com/api/userutility/observabilitysearch';
+            var docssearchApiUrl = 'https://docs.splunk.com/api/userutility/observabilitysearch?query='+query+'&offset=0&limit=100';
+            console.info("URL:", docssearchApiUrl);
+            $('#search-progress').text(_('Preparing search...'));
+            $(".new-modal-header").css("display","none");
+            $(".new-modal-footer").css("display","none");
+            $("#search-results").empty();
+            $('.page_navigation').empty();
+
+            $.post( docssearchApiUrl,{ query:query})
+            .done(function( data ) {
+            var items = [];
+            var jsonResult = JSON.parse(data);
+            var jsonResultCount = jsonResult.data[0].message.results.length;
+            var jsonResultSet = jsonResult.data[0].message.results;
+
+            // var items = '<div class="searchSummary"><h2>Search Results</h2><p class="search-summary">Search finished, found '+jsonResultCount+' page(s) matching the search query.</p></div>';
+            // items += '<ul class="search" style="overflow-y:scroll; height:376px">';
+            var show_search_result_count = 'Showing '+jsonResultCount+' result(s) for "' +query+'"';
+            $(".search-result-count").html(show_search_result_count);
+
+            var items = '<ul class="search">  ';
+
+            $.each( jsonResult.data[0].message.results, function( key, val ) {
+                items += '<li class="search-li" style="text-align: left; margin-right: 25px;"><a class="search-title-link" href='+val['link']+'>'+val['title']+'</a><div class="context search-context" style="text-align:justify; margin-left:0px;">'+val['description']+'</div></li>';
+
+            });
+
+            items += '</ul></div>';
+            // const sample = jsonResult[0]['message'][0]['results'][0]['title'];
+            console.info("sample: ", items);
+            $('#search-progress').empty();
+            $(".new-modal-header").css("display","block");
+            $(".new-modal-footer").css("display","block");
+            $("#search-results").html(items);
+
+            var maxLength = 180;
+            $(".search-context").each(function(){
+                var myStr = $(this).text();
+
+                if($.trim(myStr).length > maxLength){
+                  var newStr = myStr.substring(0, maxLength) + "...";
+                  var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+                  $(this).empty().html(newStr);
+                }
+            });
+            showPage(1);
+            // console.info("DATAAAA: ", jsonResult.data[0].message.results);
+          }).fail(function() {
+            $('#search-progress').empty();
+            var noResult = "<h2>No Result Found</h2>";
+            $("#search-results").html(noResult);
+              console.info("NO DATA");
+            });
+        }
+        else
+        {
+          var noResult = "<div style='text-align:center;'><h2>No Result Found</h2></div>";
+            $("#modal-search-text").val('');
+            $("#search-results").html(noResult);
+            $(".search-result-count").empty();
+            $('.page_navigation').empty();
+              console.info("NO DATA");
+        }
+
+    return false;
+
+  });
+
+                  makePager = function(page){
+                  var show_per_page = 10;
+                  var number_of_items = $('#search-results ul li').length;
+                  var number_of_pages = Math.ceil(number_of_items / show_per_page);
+                  var number_of_pages_todisplay = 5;
+                  var navigation_html = '';
+                  var current_page = page;
+                  var current_link = (number_of_pages_todisplay >= current_page ? 1 : number_of_pages_todisplay + 1);
+                  if (current_page > 1)
+                      current_link = current_page;
+                  //if (current_link != 1) navigation_html += "<a class='nextbutton' href=\"javascript:first();\">« Start&nbsp;</a>&nbsp;<a class='nextbutton' href=\"javascript:previous();\">« Prev&nbsp;</a>&nbsp;";
+                  if (current_link != 1) navigation_html += "<a class='nextbutton' href=\"javascript:previous();\">« Prev&nbsp;</a>&nbsp;";
+                  if (current_link == number_of_pages - 1) current_link = current_link - 3;
+                  else if (current_link == number_of_pages) current_link = current_link - 4;
+                  else if (current_link > 2) current_link = current_link - 2;
+                  else current_link = 1;
+                  var pages = number_of_pages_todisplay;
+                  while (pages != 0) {
+                      if (number_of_pages < current_link) { break; }
+                      if (current_link >= 1)
+                          navigation_html += "<a class='" + ((current_link == current_page) ? "currentPageButton" : "numericButton") + "' href=\"javascript:showPage(" + current_link + ")\" longdesc='" + current_link + "'>" + (current_link) + "</a>&nbsp;";
+                      current_link++;
+                      pages--;
+                  }
+                  if (number_of_pages > current_page){
+                      //navigation_html += "<a class='nextbutton' href=\"javascript:next()\">Next »</a>&nbsp;<a class='nextbutton' href=\"javascript:last(" + number_of_pages + ");\">Last »</a>";
+                      navigation_html += "<a class='nextbutton' href=\"javascript:next()\">Next »</a>";
+                  }
+                          $('.page_navigation').html(navigation_html);
+            }
+                    var pageSize = 10;
+                    showPage = function (page) {
+                      console.info("page: ", page);
+                          $("#search-results ul li").hide();
+                          $('#current_page').val(page);
+                          $("#search-results ul li").each(function (n) {
+                            console.info("NUM: ", n);
+                              if (n >= pageSize * (page - 1) && n < pageSize * page)
+                                  $(this).show();
+                          });
+                      makePager(page);
+                    }
+
+                    next = function () {
+                          new_page = parseInt($('#current_page').val()) + 1;
+                          showPage(new_page);
+                      }
+                      last = function (number_of_pages) {
+                          new_page = number_of_pages;
+                          $('#current_page').val(new_page);
+                          showPage(new_page);
+                      }
+                      first = function () {
+                          var new_page = "1";
+                          $('#current_page').val(new_page);
+                          showPage(new_page);
+                    }
+                      previous = function () {
+                          new_page = parseInt($('#current_page').val()) - 1;
+                          $('#current_page').val(new_page);
+                          showPage(new_page);
+                    }
+
+   });
+</script>
 <script type="text/javascript">
     $(document).ready(function(){
         try{
-
-            //Add dynamic lines to the code snippets
-            $('.highlight').each(function(){
-                var lines = $(this).text().split("\n").length;
-                var lineNumbers = '<div class="line-numbers">';
-                for(var i = 1; i < lines; i++){
-                    lineNumbers += '<span class="line" >' + i + '</span>';
-                }
-                lineNumbers += '</div>';
-                $(this).append(lineNumbers);
-            });
-
             //Menu build for navigation
             $('.sphinxsidebarwrapper a').each(function(){
 
@@ -38,12 +549,34 @@
                     $(this).attr('href', finalUrl);
                 }
 
+                $("div.relations").hide();
+
             });
 
             //Adjust left nav
-            $('.sphinxsidebar').animate({
-                scrollTop: ($(location.hash).offset().top - 78)
-            }, 0.1);
+            // $('.sphinxsidebar').animate({
+            //     scrollTop: ($(location.hash).offset().top - 100)
+            // }, 0.1);
+
+            var getCurrOrigin = $(location).attr('origin');
+            var getCurrPathName = $(location).attr('pathname');
+            var newurllocation = getCurrOrigin + getCurrPathName;
+            console.log('newCurrLocation:'+newurllocation);
+            var getCurrentLocation = $("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top;
+
+            if (getCurrentLocation < 700) {
+                  console.log("Step2.1");
+                    $('.sphinxsidebar').animate({
+                      scrollTop: ($("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top - 200)
+                  }, 0.1);
+              }
+              else
+              {
+                console.log("Step2.2");
+                $('.sphinxsidebar').animate({
+                  scrollTop: ($("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top - 200)
+                }, 0.1);
+              }
 
         }catch(err){
             console.log(err);
@@ -59,16 +592,71 @@
                 }
             } catch (err) {}
         });
+
+        $('.newcard').click(function () {
+            let url = $(this).find('.reference').attr('href');
+            try {
+                if (url.length) {
+                    window.location.href = url;
+                }
+            } catch (err) {}
+        });
+        
+        if($('.sphinxsidebarwrapper ul.current').length > 0) {
+          var liTOC = "";
+            //console.log("aaaaa");
+
+            if($('a.headerlink').parent().length <= 1)
+            {
+              $(".toctree-l2").each(function(){
+                  $(".toctree-l2").show();
+
+                });
+
+              return false;
+            }
+
+
+              $('a.headerlink').each(function(){
+                    var headingTagArray = $(this).parent();
+                    var headingTAGS = headingTagArray[0].tagName;
+                    // var headingText = $(this).parent().text();
+                    // headingText = headingText.slice(0, -3);
+                    var headingText = headingTagArray[0].innerText;
+                    headingText = headingText.trim();
+                    var headingLink = $(this).attr('href');
+
+                    if(headingTAGS == "H1")
+                    {
+                      liTOC += "<li class='toctree-l1' style='font-size:17px;font-weight:bold;color:black; margin-top:68px;'>On this page</li>";
+                    }
+
+                    if(headingTAGS == "H2")
+                    {
+                        liTOC += "<li class='toctree-l2 TOCL2' style='margin-left:20px;'><a class='reference internal' href="+headingLink+" >"+headingText+" </a></li>";
+                    }
+                    if(headingTAGS == "H3")
+                    {
+                        liTOC += "<li class='toctree-l3 TOCL2' style='margin-left:36px;'><a class='reference internal' href="+headingLink+" >"+headingText+" </a></li>";
+                    }
+                    if(headingTAGS == "H4")
+                    {
+                      liTOC += "<li class='toctree-l4 TOCL2' style='margin-left:52px;list-style-type: square;color: lightgrey;'><a class='reference internal' href="+headingLink+" >"+headingText+" </a></li>";
+                    }
+
+              });
+              console.log(liTOC);
+              $('#rightSideTOC').append(liTOC);
+
+
+
+
+            }
+
     });
 
 
-    $(document).on('click','a[href^="#"]',function(event){
-      event.preventDefault();
 
-      $('html, body').animate({
-        scrollTop: $($.attr(this,'href')).offset().top - 100
-      }, 0.1);
-    });
 
 
 </script>
@@ -81,10 +669,27 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-39475411-2', 'auto');
+  ga('create', 'UA-399680-1', 'auto');
   ga('send', 'pageview');
 </script>
 
+<!-- Hotjar Tracking Code for https://docs.splunk.com/observability/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2659668,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<script>
+  if(window.location.toString().includes("docs.signalfx")){
+    window.location.href = "https://docs.splunk.com/Observability/";
+  }
+</script>
 {% endblock %}
 
 {%- block content %}
@@ -106,30 +711,10 @@
       {%- if render_sidebar %}
         </div>
       {%- endif %}
-      </div>
-  {%- endblock %}
-
-  {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
-      <div class="clearer"></div>
-    </div>
-      <div class="footer" role="contentinfo">
-      {%- if show_copyright %}
-        {%- if hasdoc('copyright') %}
-          {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-        {%- else %}
-          {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
-        {%- endif %}
-      {%- endif %}
-      {%- if last_updated %}
-        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-      {%- endif %}
-      {%- if show_sphinx %}
-        {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-      {%- endif %}
-      </div>
-      <div id="signalfxModalID" class="signalfxmodal">
-        <!-- Modal content -->
-        <div class="signalfxmodal-content">
+      <div id="feedbackModal">
+        <!-- feedback form content -->
+      <div class="signalfxmodal-content">
+      <h2 style="font-size:21px;font-family: 'Open Sans'; font-weight: bold;">Was this topic useful?</h2>
           <p>
                                   Was this documentation topic helpful?
                                   <select id="signalfx_splunk_feedback_yesno" onchange="help_decission(this.value);">
@@ -138,7 +723,7 @@
                                     <option value="No">No</option>
                                   </select>
                                 </p>
-        
+
                                 <p id="signalfx_splunk_feedback_no_reason" style="display:none">
                                   Please specify the reason
                                   <select id="signalfx_splunk_feedback_no_reasonlist">
@@ -153,23 +738,59 @@
                                   <label for="signalfx_splunk_feedback_email">Enter your email address, and someone from the documentation team will respond to you:</label>
                                                             </p>  <p>	<input  name="signalfx_splunk_feedback_email" id="signalfx_splunk_feedback_email" type="text" maxlength="255" size="30" value="" required/>
                                 </p>
-        
-                                <label for="signalfx_splunk_feedback_send_copy_of_email" class="signalfx_splunk-checkbox control control--checkbox">
-                                  <input type="checkbox" name="signalfx_splunk_feedback_send_copy_of_email" id="signalfx_splunk_feedback_send_copy_of_email"  value="yes" >
-                                  <span>Send me a copy of this feedback</span>
-                                </label>
-        
                                 <p>
                                                             <label for="signalfx_splunk_feedback_comment">Please provide your comments here. Ask a question or make a suggestion.</label>
                                 </p>
-        
-                                <textarea name="signalfx_splunk_feedback_comment" placeholder='' class="form-control signalfx-feedback-comment" id="signalfx_splunk_feedback_comment" rows="5" required></textarea>
+
+                                <textarea name="signalfx_splunk_feedback_comment" placeholder='' class="form-control signalfx-feedback-comment" id="signalfx_splunk_feedback_comment" rows="5" maxlength="1000" required></textarea>
+                                <div id="commenttxt" style="font-size: 9px;color: grey;">Comment should have minimum 5 characters and maximum of 1000 characters.</div>
+                                <br>
+                                <div id="captcha_element"></div>
                                 <p></p><p class="button-set-submit">
                                 <a style="float:right;" class="fbbtn" type="button" id="signalfx_splunk_feedback_submit" name="signalfx_submit" onclick="submit_feedback()">Submit</a>
-                                <a  class="fbclnbtn" type="button" id="signalfx_splunk_feedback_submit_cancel" name="signalfx_cancel">Cancel</a>
                                 </p>
         </div>
+        <p id="splunk_oly_helpful_completed" class="well">    
+          <em>Feedback submitted, thanks!</em>
+        </p>
         </div>
+      </div>
+      <div id="sticky-right-nav">
+        <div class="right-nav" style="margin-top: 0px; position: fixed; display: inline-block; padding-left: 10px; overflow: scroll;word-break: break-word; height: calc(100% - 100px); margin-bottom: 200px;">
+
+          <ul id="rightSideTOC" class="list-unstyled" style="margin-bottom: 150px;">
+
+          </ul>
+        </div>
+      </div>
+{%- endblock %}
+ <div id="mainTOC">
+  {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
+</div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo" style="font-size:11px;">   
+      <div class="footerinner" style="width: 72%;">  
+      <a href="https://www.splunk.com/en_us/legal/privacy/privacy-policy.html" target="_blank">Privacy</a> | 
+      <a href="https://www.splunk.com/en_us/legal/terms/terms-of-use.html" target="_blank">Terms</a> | 
+      <a href="https://www.splunk.com/en_us/legal/export-controls.html" target="_blank">Export Control</a> | 
+      <span style="color:black">&copy; 2005 - 2022 Splunk Inc. All rights reserved.</span>
+      <div class="newfootertxt" style="color:black">Splunk, Splunk>, Turn Data Into Doing, and Data-to-Everything are trademarks or registered trademarks of Splunk Inc. in the United States and other countries. All other brand names, product names, or trademarks belong to their respective owners.</div>
+      </div>
+      <div style="width: 28%;">
+        <a href="#feedbackModal" class="feedbackbtn">Feedback</a>
+      </div>
+      
+        <script type="text/javascript">
+          var onloadCallback = function() {
+            grecaptcha.render('captcha_element', {
+              'sitekey' : '6LeDbQgTAAAAAPBwuGnm-MajO6ODpcctENWBFfbN',
+            });
+          };
+        </script>
+                                <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+        </script>
         <script>
         function help_decission(value){
          if(value=='No'){
@@ -178,17 +799,23 @@
             document.getElementById("signalfx_splunk_feedback_no_reason").style.display = "none";
          }
         }
-        function validateform(fyesorno,reanson,email,sendcopy,comment){
-         
+        function validateform(fyesorno,reanson,email,comment,token){
+
             if(fyesorno==''){alert('Please specify whether the topic was helpful.');return false;}
             if(fyesorno=='No' && reanson==''){alert('Please specify the reason for topic not helpful.');return false;}
-            if(email==''){alert('Please provide email address.');return false;}
-            if(email!='' && !(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email))){
-              alert('Please input a valid email address.');return false
+            // if(email==''){alert('Please provide email address.');return false;}
+            // var emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/gm;
+            // if(email!='' && !(emailRegex.test(email))){
+            //   alert('Please input a valid email address.');return false
+            // }
+
+            if(comment=='' || comment.length<5 || comment.length>1000){alert('Comment should have minimum 5 characters and maximum of 1000 characters.');return false}
+
+            if(token==''){
+                alert('Please select Captcha.');
+                return false;
             }
-            if (sendcopy=='Yes' && email==''){alert('You have not entered an email address. Please include a valid email address to receive a copy of your feedback.');return false}
-            if(comment=='' || comment.length<5 || comment.length>500){alert('Comment should have minimum 5 characters and maximum of 500 characters.');return false}
-            return true;
+              return true;
         }
         function submit_feedback(){
           var url = window.location.href;
@@ -200,78 +827,62 @@
           var fryne_value = fryne.options[fryne.selectedIndex].value;
           }
           var fe_value = document.getElementById("signalfx_splunk_feedback_email").value;
-          var fsce_value = 'No';
-          if(document.getElementById("signalfx_splunk_feedback_send_copy_of_email").checked){
-            fsce_value = 'Yes';
-          };
+
           var fce_value = document.getElementById("signalfx_splunk_feedback_comment").value;
-          var validate = validateform(fyne_value,fryne_value,fe_value,fsce_value,fce_value);
-          
+          var token = grecaptcha.getResponse();
+          var validate = validateform(fyne_value,fryne_value,fe_value,fce_value,token);
+
           if(validate){
             $('#signalfx_splunk_feedback_submit').addClass('ajaxcallon');
             $('#signalfx_splunk_feedback_submit_cancel').addClass('ajaxcallon');
             $('#signalfx_splunk_feedback_submit').html('Processing...');
-                
+
                 var feedbackApiUrl =  'https://docs.splunk.com/api/userutility/addfeedback';
+
                 var uname = fe_value.split("@");
                 var urlSubject = url.replace("https://docs.splunk.com/","");
                 urlSubject = urlSubject.replace("https://docs.signalfx.com/","");
-                $.post( feedbackApiUrl, 
-                { url: url, username:uname[0], subject:'Feedback from Splunk Observability Documentation: ' + urlSubject,email:fe_value,sendmecopy:fsce_value,isuseful:fyne_value,reason:fryne_value,comment:fce_value})
+                $.post( {url:feedbackApiUrl,
+                data:JSON.stringify({ url: url, username:uname[0], subject:'Feedback from Splunk Observability Documentation: ' + urlSubject,email:fe_value,isuseful:fyne_value,reason:fryne_value,comment:fce_value,token:token})
+               })
                .done(function( data ) {
                 var data = JSON.parse(data);
-                alert(data.message);
-                $('.signalfxmodal').hide();
+                //alert(data.message);
+                $('.signalfxmodal-content').hide();
+                $('#splunk_oly_helpful_completed').show();
+                //$('.signalfxmodal').hide();
                 $('#signalfx_splunk_feedback_submit').removeClass('ajaxcallon');
                 $('#signalfx_splunk_feedback_submit_cancel').removeClass('ajaxcallon');
                 $('#signalfx_splunk_feedback_submit').html('Submit');
                 $('#signalfx_splunk_feedback_email').val("");
                 $('#signalfx_splunk_feedback_comment').val("");
-                $("#signalfx_splunk_feedback_send_copy_of_email").prop("checked", false);
+
                 $("#signalfx_splunk_feedback_yesno").prop("selectedIndex", 0).change();
                 $("#signalfx_splunk_feedback_no_reason").prop("selectedIndex", 0).change();
                 $("#signalfx_splunk_feedback_no_reason").hide();
                 console.log(data);
                }).fail(function() {
+                  $('.signalfxmodal-content').show();
+                  $('#splunk_oly_helpful_completed').hide();
                   alert( "Something went wrong please try after sometime!" );
-                  $('.signalfxmodal').hide();
+                  //$('.signalfxmodal').hide();
                   $('#signalfx_splunk_feedback_submit').removeClass('ajaxcallon');
                   $('#signalfx_splunk_feedback_submit_cancel').removeClass('ajaxcallon');
                   $('#signalfx_splunk_feedback_submit').html('Submit');
                   $('#signalfx_splunk_feedback_email').val("");
                   $('#signalfx_splunk_feedback_comment').val("");
-                  $("#signalfx_splunk_feedback_send_copy_of_email").prop("checked", false);
+
                   $("#signalfx_splunk_feedback_yesno").prop("selectedIndex", 0).change();
                   $("#signalfx_splunk_feedback_no_reason").prop("selectedIndex", 0).change();
                   $("#signalfx_splunk_feedback_no_reason").hide();
                 });
-                
+
           }
-        
+
         }
-        $('.highlight').prepend('<a class="clipboard">Copy</a>');
-
-        $(document).on('click', '.clipboard', function () {
-            var clip = $(this).parent().text();
-            const text = clip.slice(4);
-// first version - document.execCommand('copy');
-            var element = document.createElement('textarea');
-            document.body.appendChild(element);
-            element.value = text;
-            element.select();
-            document.execCommand('copy');
-            document.body.removeChild(element);
-            $(this).text('Copied');
-            setTimeout(() => {
-                $(this).text('Copy');
-            }, 1000);
-        });
-        console.log('copied');
-
-
        </script>
-        
-<a href="javascript:void(0)" class="feedbackbtn">Feedback</a>
+
+<!-- <a href="#feedbackModal" class="feedbackbtn">Feedback</a> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <!-- Swiftype -- commenting out as it's in the searchbox section in banner.html>
 
@@ -280,10 +891,26 @@
   (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
   e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
   })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-  
+
   _st('install','x-qccQ3CyZ361gjF6Ksg','2.0.0');
 </script>
  -->
+
+ <!--Google Analytics-->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TPV7TP');</script>
+  <!-- End Google Analytics -->
+  
+  
+  <!--Google Analytics (no script) -->
+  <noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPV7TP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Analytics (noscript) -->
 
 {%- endblock %}
 

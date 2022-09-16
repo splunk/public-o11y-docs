@@ -1,12 +1,13 @@
 (mysql)=
 # MySQL
-<meta name="description" content="Documentation on the mysql monitor">
+<meta name="description" content="Documentation on the MySQL monitor">
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `mysql` via the Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the MySQL monitor type using the Smart Agent Receiver. 
+Use this integration to retrieve metrics and logs from MySQL.
 
-This monitor connects to a MySQL instance and reports on the values returned by a `SHOW STATUS` command. This includes the following:
+This monitor connects to a MySQL instance and reports on the values returned by a `SHOW STATUS` command, which include the following:
 
   - Number of commands processed
   - Table and row operations (handlers)
@@ -14,22 +15,25 @@ This monitor connects to a MySQL instance and reports on the values returned by 
   - Status of MySQL threads
   - Network traffic
 
+```{note}
+This monitor is not available on Windows.
+```
+
+### Benefits
+
+```{include} /_includes/benefits.md
+```
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
+```{include} /_includes/collector-installation-linux.md
+```
 
-To install this integration:
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. Configure the monitor, as described in the next section.
-
-
-<!--- notes from source file: -->
 ### Creating a MySQL user for this monitor
 
-To create a MySQL user for this monitor:
+To create a MySQL user for this monitor, run the following commands:
 
-```
+```sql
  CREATE USER '<username>'@'localhost' IDENTIFIED BY '<password>';
  -- Give appropriate permissions
  -- ("GRANT USAGE" is synonymous to "no privileges")
@@ -38,108 +42,137 @@ To create a MySQL user for this monitor:
  GRANT REPLICATION CLIENT ON *.* TO '<username>'@'localhost';
 ```
 
-The new user will only have privileges to connect to the database. Additional privileges are not required.
+The new user only has enough privileges to connect to the database. Additional privileges are not required.
 
-### Note on localhost
-On Unix, MySQL programs treat the host name `localhost` specially, in a way
-that is likely different from what is expected compared to other
-network-based programs. For connections to `localhost`, MySQL programs
-attempt to connect to the local server by using a Unix socket file. To ensure
-that the client makes a TCP/IP connection to the local server specify a host
-name value of `127.0.0.1`, or the IP address or name of the local server.
+### Considerations on localhost
 
-### Databases
-You have to specify each database you want to monitor individually under
-the `databases` config option.  If you have a common authentication to all
-databases being monitored, you can specify that in the top-level
-`username`/`password` options, otherwise they can be specified at the
-database level.
-
-### InnoDB metrics
-If you want to enable InnoDB metrics (`innodbStats` to `true`), be sure that
-you granted to your user the `PROCESS` privilege.
+For connections to `localhost`, MySQL programs attempt to connect to the local server by using a Unix socket file. To ensure that the client makes a TCP/IP connection to the local server specify a host name value of `127.0.0.1`, or the IP address or name of the local server.
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+```{include} /_includes/configuration.md
+```
 
-**Note:** Providing a `mysql` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+```{note}
+Provide a MySQL monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+```
+
+### Splunk Distribution of OpenTelemetry Collector
+
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration. For example:
+
+```yaml
+receivers:
+  smartagent/mysql:
+    type: collectd/mysql
+    host: 127.0.0.1
+    port: 3306
+    username: <global-username-for-all-db>
+    password: <global-password-for-all-db>
+    databases:
+      - name: <name-of-db>
+        username: <username> #Overrides global username
+        password: <password> #Overrides global password
+```
+
+The following is a sample YAML configuration that shows how to connect multiple MySQL databases:
+
+```yaml
+receivers:
+  smartagent/mysql:
+    type: collectd/mysql
+    host: 127.0.0.1
+    port: 3306
+    databases:
+      - name: <name>
+        username: <username>
+        password: <password>
+      - name: <name>
+        username: <username>
+        password: <password>
+```
+
+To complete the monitor activation, you must also include the `smartagent/mysql` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+
+```yaml
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/mysql]
+    logs:
+      receivers: [smartagent/mysql]
+```
+
+### Smart Agent
 
 To activate this monitor in the Smart Agent, add the following to your agent configuration:
 
-```
+```yaml
 monitors:  # All monitor config goes under this key
- - type: mysql
+ - type: collectd/mysql
    ...  # Additional config
 ```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+The following is a sample YAML configuration that shows how to connect multiple MySQL databases:
 
-```
-receivers:
-  smartagent/mysql:
-    type: mysql
-    ...  # Additional config
-```
-
-
-Sample YAML configuration to connect multiple MySQL databases:
-
-```
+```yaml
 monitors:
- - type: mysql
+ - type: collectd/mysql
    host: 127.0.0.1
    port: 3306
    databases:
-     - name: dbname
-     - name: securedb
-       username: admin
-       password: s3cr3t
-   username: dbuser
-   password: passwd
+     - name: <name-of-db>
+     - name: <name-of-db>
+       username: <username>
+       password: <password>
+   username: <global-username>
+   password: <global-password>
 ```
 
+The following is a sample YAML configuration that shows how to connect a single MySQL database:
 
-Sample YAML configuration to connect a single MySQL database:
-
-```
+```yaml
 monitors:
- - type: mysql
+ - type: collectd/mysql
     host: 127.0.0.1
     port: 3306
     databases:
       - name:
-    username: YOURUSERNAMEHERE
-    password: YOURPASSWORDHERE
+    username: <username>
+    password: <password>
 ```
 
+See {ref}`smart-agent` for an autogenerated example of a YAML configuration file, with default values where applicable.
 
-The following table shows the configuration options for the `mysql` monitor:
+### Configuration settings
 
-| Config option | Required | Type | Description |
+The following table shows the configuration options for this monitor:
+
+| Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `host` | **yes** | `string` |  |
-| `port` | **yes** | `integer` |  |
-| `name` | no | `string` |  |
-| `databases` | **yes** | `list of objects (see below)` | A list of databases along with optional authentication credentials. |
-| `username` | no | `string` | These credentials serve as defaults for all databases if not overridden |
-| `password` | no | `string` |  |
-| `reportHost` | no | `bool` | A SignalFx extension to the plugin that allows us to disable the normal behavior of the MySQL plugin where the `host` dimension is set to the hostname of the MySQL database server.  When `false` (the recommended and default setting), the globally configured `hostname` config is used instead. (**default:** `false`) |
-| `innodbStats` | no | `bool` |  (**default:** `false`) |
+| `host` | Yes | `string` | Hostname or IP address of the MySQL instance. For example, `127.0.0.1`. |
+| `port` | Yes | `integer` | The port of the MySQL instance. For example, `3306`. |
+| `databases` | Yes | `list of objects` | A list of databases along with optional authentication credentials. |
+| `username` | No | `string` | Username for all databases. You can override it by defining each username in the `databases` object. |
+| `password` | No | `string` | Password for all databases. You can override it by defining each username in the `databases` object. |
+| `reportHost` | No | `bool` | When set to `true`, the `host` dimension is set to the name of the MySQL database host. When `false`, the monitor uses the global `hostname` configuration instead. The default value is `false`. When `disableHostDimensions` is set to `true`, the host name in which the agent or monitor is running is not used for the `host` metric dimension value.  |
+| `innodbStats` | No | `bool` | Collects InnoDB statistics. Before enabling InnoDB metrics make sure that you granted the `PROCESS` privilege to your user. The default value is `false`. |
 
+The nested `databases` configuration object has the following fields:
 
-The **nested** `databases` config object has the following fields:
-
-| Config option | Required | Type | Description |
+| Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `name` | **yes** | `string` |  |
-| `username` | no | `string` |  |
-| `password` | no | `string` |  |
-
-<!--- skipped some content in source file under "Built in content" -->
+| `name` | Yes | `string` | Name of the database. |
+| `username` | No | `string` | Username of the database. |
+| `password` | No | `string` | Password of the database. |
 
 ## Metrics
 
-These are the metrics available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="mysql" include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/mysql/metrics.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```
