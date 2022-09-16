@@ -7,33 +7,30 @@
 
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) deploys this integration as the `disk` monitor  via the Smart Agent Receiver. This plugin tracks the space available on disks. Use alerts and thresholds based on the plugin metrics to avoid filling disks to capacity.  The [Smart Agent plugin](https://github.com/signalfx/integrations/tree/master/signalfx-metadata) computes aggregated utilization metrics based on the output of this plugin.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the disk and partition monitor using the Smart Agent Receiver. This plugin provides disk metrics for Splunk Observability Cloud. 
 
-The `disk` plugin collects performance statistics of hard-disks and, where supported, partitions. While the “octets” and “operations” are quite straightforward, the other two datasets need a little explanation:
+Use alerts and thresholds based on the plugin metrics to avoid filling disks to capacity. The Smart Agent plugin computes aggregated utilization metrics based on the output of this plugin.
 
- * `merged` - the number of operations that could be merged into other, already queued operations. For example, one physical disk access served two or more logical operations. Of course, the higher that number, the better.
- * `time` - the average time an I/O-operation took to complete. It is approximate.
- 
- Since 5.5, there are additional metrics on the Linux platform:
- * `io_time` - the time spent doing I/Os (ms). You can treat this metric as a device load percentage. The value of 1 sec time spent matches 100% of load.
- * `weighted_io_time` - the measure of both I/O completion time and the backlog that may be accumulating.
- * `pending_operations` - the queue size of pending I/O operations.
-For details about these metrics, you can also read [kernel documentation](https://www.kernel.org/doc/Documentation/iostats.txt), which includes explanations of "Field 9", "Field 10" and "Field 11".
+The disk and partition plugin collects performance statistics of hard disks and, where supported, partitions. Two of the provided metrics are calculated as follows:
 
-See [signalfx-agent/pkg/monitors/collectd/disk/](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/disk) for the monitor source.
+ * `merged`: Number of operations that can be merged into other, already queued operations. For example, one physical disk access served two or more logical operations.
+ * `time`: Average time an I/O operation took to complete.
 
-<!--- 
-This plugin requires:
+ Since version 5.5, there are additional metrics on the Linux platform:
 
-| Software  | Version        |
-|-----------|----------------|
-| collectd  | 1.5+ |
+ * `io_time`: Time spent doing I/Os, in milliseconds. You can treat this metric as a device load percentage. The value of 1 second spent matches 100% of load.
+ * `weighted_io_time`: Measure of both I/O completion time and the backlog that might be accumulating.
+ * `pending_operations`: Queue size of pending I/O operations.
 
---> 
+For details about these metrics, see the kernel documentation at https://www.kernel.org/doc/Documentation/iostats.txt, which includes explanations of "Field 9", "Field 10", and "Field 11".
+
+<!---
+This plugin requires collectd version 1.5+.
+--->
 
 ## Installation
 
-This monitor is provided by the Smart Agent and is available by using the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver) in the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector). 
+This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -44,33 +41,39 @@ To install this integration:
 
 The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
-**Note:** Providing a `disk` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+**Note:** Providing a disk and partition monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
 
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
+### Smart Agent
+
+To activate this monitor in the Smart Agent, add the following to your agent configuration:  
 ```
 monitors:  # All monitor config goes under this key
- - type: disk
+ - type: collectd/disk
    ...  # Additional config
 ```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+See <a href="https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#configure-the-smart-agent" target="_blank">Smart Agent example configuration</a> for an autogenerated example of a YAML configuration file, with default values where applicable.
 
-```
-receivers:
-  smartagent/disk:
-    type: disk
-    ...  # Additional config
-```
+### Splunk Distribution of OpenTelemetry Collector
+
+If you are using the Splunk Distribution of OpenTelemetry Collector and want to collect disk I/O metrics, use the {ref}`host-metrics-receiver`.
+
+### Configuration settings
 
 The following table shows the configuration options for this monitor:
 
-| configuration option | definition | default value |
+| Option | Definition | Default value |
 | ---------------------|------------|---------------|
 | Disk | Include specific Disk(s) | "sda" "/^hd/" |
-| IgnoreSelected  | Ignore the designation of specific Disks | false |
+| IgnoreSelected  | Ignore the designation of specific Disks | `false` |
 
 
 ## Metrics
-These are the metrics available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="collectd-disk"  include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/disk/metadata.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

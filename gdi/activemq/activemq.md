@@ -2,12 +2,12 @@
 
 # Apache ActiveMQ
 
-<meta name="description" content="Documentation on the activemq monitor">
+<meta name="description" content="Documentation about the activemq monitor">
 
 
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `activemq` monitor via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache ActiveMQ monitor by using the Smart Agent Receiver.
 
 This integration with ActiveMQ wraps the GenericJMX monitor to monitor ActiveMQ. This integration works with ActiveMQ 5.8.0 and higher.
 
@@ -20,29 +20,24 @@ Use this monitor to gather the following types of information from ActiveMQ:
 * Topic (Topic status)
 
 
+```{note}
+C-based collectd plugins like this one are not available on Windows.
+```
+
+## Benefits
+
+```{include} /_includes/benefits.md
+```
+
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-To install this integration:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation-linux.md
+```
 
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `activemq` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
-```
-monitors:  # All monitor config goes under this key
-  - type: activemq
-    ...  # Additional config
+```{include} /_includes/configuration.md
 ```
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
@@ -50,13 +45,25 @@ To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, 
 ```
 receivers:
   smartagent/activemq:
-    type: activemq
+    type: collectd/activemq
     ...  # Additional config
 ```
 
-The following table shows the configuration options for the `activemq` monitor:
+To complete monitor activation, include the monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
-| Config option | Required | Type | Description |
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/activemq]
+```
+
+
+### Configuration settings
+
+The following table shows the configuration options for this monitor:
+
+| Option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `host` | **yes** | `string` | Host to connect to. JMX must be configured for remote access and accessible from the agent. |
 | `port` | **yes** | `integer` | JMX connection port (NOT the RMI port) on the application. This corresponds to the `com.sun.management.jmxremote.port` Java property that should be set on the JVM when running the application. |
@@ -72,9 +79,9 @@ The following table shows the configuration options for the `activemq` monitor:
 | `mBeanDefinitions` | no | `map of objects (see below)` | Specifies how to map JMX MBean values to metrics. If using a specific service monitor such as cassandra, kafka, or activemq, they come pre-loaded with a set of mappings, and any that you add in this option will be merged with those. |
 
 
-The **nested** `mBeanDefinitions` config object has the following fields:
+The **nested** `mBeanDefinitions` configuration object has the following fields:
 
-| Config option | Required | Type | Description |
+| Option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `objectName` | no | `string` | Sets the pattern that is used to retrieve MBeans from the MBeanServer. If more than one MBean is returned, you should use the `instanceFrom` option to make the identifiers unique. |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. |
@@ -83,20 +90,25 @@ The **nested** `mBeanDefinitions` config object has the following fields:
 | `dimensions` | no | `list of strings` |  |
 
 
-The **nested** `values` config object has the following fields:
+The **nested** `values` configuration object has the following fields:
 
-| Config option | Required | Type | Description |
+| Option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `type` | no | `string` | Sets the data set used within the agent to handle the values of the MBean attribute. |
-| `table` | no | `bool` | Set this to true if the returned attribute is a composite type. If set to true, the keys within the composite type are appended to the type instance. (**default:** `false`) |
+| `table` | no | `bool` | Set this to `true` if the returned attribute is a composite type. If set to `true`, the keys within the composite type are appended to the type instance. (**default:** `false`) |
 | `instancePrefix` | no | `string` | Works like the option of the same name directly beneath the MBean block, but sets the type instance instead. |
 | `instanceFrom` | no | `list of strings` | Works like the option of the same name directly beneath the MBean block, but sets the type instance instead. |
-| `attribute` | no | `string` | Sets the name of the attribute to read the value from. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example: “attrib0.key42”. If `table` is set to true, path must point to a composite type, otherwise it must point to a numeric type. |
+| `attribute` | no | `string` | Sets the name of the attribute to read the value from. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example: “attrib0.key42”. If `table` is set to `true`, path must point to a composite type, otherwise it must point to a numeric type. |
 | `attributes` | no | `list of strings` | The plural form of the `attribute` config above. Used to derive multiple metrics from a single MBean. |
 
 
 ## Metrics
 
-These are the metrics available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="activemq" include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/activemq/metrics.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

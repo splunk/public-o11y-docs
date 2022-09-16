@@ -6,46 +6,52 @@
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jmx` monitor via the Smart Agent Receiver.
 
-This monitor allows you to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx datapoints. This is a much more powerful and flexible alternative to the [genericjmx](genericjmx) monitor.
+Use this integration to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points. This is a more flexible alternative to the [genericjmx](genericjmx) monitor.
 
 The following utility helpers are available to use in the Groovy script within the `util` variable that will be set in the script's context:
 
 - `util.queryJMX(String objectName)`: This helper will
-  query the pre-configured JMX application for the given `objectName`, which can include wildcards.  In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object.  You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
-- `util.makeGauge(String name, double val, Map<String, String> dimensions)`: 
-	A convenience function to create a SignalFx gauge datapoint. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`.  This **does not send** the datapoint, only creates it.
+  query the pre-configured JMX application for the given `objectName`, which can include wildcards. In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object. You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
+- `util.makeGauge(String name, double val, Map<String, String> dimensions)`:
+	A convenience function to create a SignalFx gauge data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`.  This does not send the data point, only creates it.
 
 - `util.makeCumulative(String name, double val, Map<String, String> dimensions)`:
-  A convenience function to create a SignalFx cumulative counter datapoint.  This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`.  This **does not send** the datapoint, only creates it.
+  A convenience function to create a SignalFx cumulative counter data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`. This does not send the data point, only creates it.
 
-The `output` instance available in the script context is what is used to send data to SignalFx.  It contains the following methods:
+The `output` instance available in the script context is what is used to send data to SignalFx. It contains the following methods:
 
 - `output.sendDatapoint(DataPoint dp)`:
-	Emit the given datapoint to SignalFx.  We recommend using the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance.
+	Emit the given data point to SignalFx.  Use the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance.
 
 - `output.sendDatapoints(List<DataPoint> dp)`:
-	Emit the given datapoints to SignalFx. We recommend using the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance. It is slightly more efficient to send multiple datapoints at once, but this doesn't matter that much unless you're sending very high volumes of data.
+	Emit the given data points to SignalFx. We recommend using the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance. It is slightly more efficient to send multiple data points at once, but this doesn't matter that much unless you're sending very high volumes of data.
+## Benefits
+
+```{include} /_includes/benefits.md
+```
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-To install this integration:
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. Configure the monitor, as described in the next section.
-
+```{include} /_includes/collector-installation.md
+```
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+```{include} /_includes/configuration.md
+```
 
-**Note:** Providing a `jmx` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+### Smart Agent
 
-To activate this monitor in the Smart Agent, add the following to your agent config:
+To activate this monitor in the Smart Agent, add the following to your agent configuration:
+
 ```
 monitors:  # All monitor config goes under this key
  - type: jmx
    ...  # Additional config
 ```
+
+See <a href="https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#configure-the-smart-agent" target="_blank">Smart Agent example configuration</a> for an autogenerated example of a YAML configuration file, with default values where applicable.
+
+### Splunk Distribution of OpenTelemetry Collector
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
 
@@ -56,16 +62,27 @@ receivers:
     ...  # Additional config
 ```
 
+To complete the monitor activation, you must also include the `smartagent/jmx` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/jmx]
+```
+
+See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
+
+### Configuration settings
 
 The following table shows the configuration options for this monitor:
 
-
-| Config option | Required | Type | Description |
+| Option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `host` | no | `string` | Host will be filled in by auto-discovery if this monitor has a discovery rule. |
 | `port` | no | `integer` | Port will be filled in by auto-discovery if this monitor has a discovery rule. (**default:** `0`) |
 | `serviceURL` | no | `string` | The service URL for the JMX RMI/JMXMP endpoint. If empty it will be filled in with values from `host` and `port` using a standard JMX RMI template: `service:jmx:rmi:///jndi/rmi://<host>:<port>/jmxrmi`. If overridden, `host` and `port` will have no effect. For JMXMP endpoint the service URL must be specified. The JMXMP endpoint URL format is `service:jmx:jmxmp://<host>:<port>`. |
-| `groovyScript` | **yes** | `string` | A literal Groovy script that generates datapoints from JMX MBeans. See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it here with the [remote config reference](https://docs.signalfx.com/en/latest/integrations/agent/remote-config.html) `{"#from": "/path/to/file.groovy", raw: true}`, or you can put it straight in YAML by using the `|` heredoc syntax. |
+| `groovyScript` | **yes** | `string` | A literal Groovy script that generates data points from JMX MBeans. See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it here with the [remote config reference](https://github.com/signalfx/signalfx-agent/blob/main/docs/remote-config.md) `{"#from": "/path/to/file.groovy", raw: true}`, or you can put it straight in YAML by using the `|` heredoc syntax. |
 | `username` | no | `string` | Username for JMX authentication, if applicable. |
 | `password` | no | `string` | Password for JMX authentication, if applicable. |
 | `keyStorePath` | no | `string` | The key store path is required if client authentication is enabled on the target JVM. |
@@ -77,7 +94,7 @@ The following table shows the configuration options for this monitor:
 | `realm` | no | `string` | The realm is required by profile SASL/DIGEST-MD5. |
 
 
-Here is an example Groovy script that replicates some of the data presented by the Cassandra `nodetool status` utility:
+The following is an example Groovy script that replicates some of the data presented by the Cassandra `nodetool status` utility:
 
 ```groovy
 // Query the JMX endpoint for a single MBean.
@@ -138,9 +155,13 @@ output.sendDatapoints([
 
 ```
 
-Be careful that your script is carefully tested before using it to monitor a production JMX service.  The script can do anything exposed via JMX, including writing attributes and running methods via JMX. In general, scripts should only read attributes, but nothing enforces that.
-
+Make sure that your script is carefully tested before using it to monitor a production JMX service. The script can do anything exposed via JMX, including writing attributes and running methods via JMX. In general, scripts should only read attributes, but nothing enforces that.
 
 ## Metrics
 
 There are no metrics available for this integration.
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

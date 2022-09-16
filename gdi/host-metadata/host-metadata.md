@@ -6,17 +6,16 @@
 
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `host-metadata` monitor  via the Smart Agent Receiver.
+**Note:** This monitor is deprecated in favor of the `host-metrics-receiver` monitor. Switch to that receiver as the Smart Agent is deprecated. To learn more, see {ref}`host-metrics-receiver`.
 
-The host-metadata monitor collects metadata properties about a host.  It is required for some views in Splunk Observability Cloud to operate. This monitor accepts endpoints. This monitor does not allow multiple instances.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `host-metadata` monitor by using the SignalFx Smart Agent Receiver.
 
-```yaml
-monitors:
-  - type: host-metadata
-```
+Use this integration to collect metadata properties about a host.
 
-In containerized environments host `/etc` and `/proc` may not be located
-directly under the root path.  You can specify the path to `proc` and `etc` using the top level agent configurations `procPath` and `etcPath`
+This integration is required for some views in Splunk Observability Cloud to operate. This monitor accepts endpoints. This monitor does not allow multiple instances.
+
+In containerized environments, host `/etc` and `/proc` might not be located
+directly under the root path. You can specify the path to `proc` and `etc` using the top level agent configurations `procPath` and `etcPath`, as shown in the following example:
 
 ```yaml
 procPath: /proc
@@ -26,68 +25,61 @@ monitors:
 ```
 
 Metadata updates occur on a sparse interval of approximately
-1m, 1m, 1h, 1d and continue repeating once per day.
+1m, 1m, 1h, and 1d, and continue repeating once per day.
 Setting the `Interval` configuration for this monitor does not affect the
 sparse interval on which metadata is collected.
 
+## Benefits
+
+```{include} /_includes/benefits.md
+```
 ## Installation
 
-This monitor is provided by the Smart Agent and is available by using the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver) in the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector). 
-
-To install this integration:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation.md
+```
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `host-metadata` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
+```{include} /_includes/configuration.md
 ```
-monitors:  # All monitor config goes under this key
- - type: host-metadata
-   ...  # Additional config
-```
+
+### Configuration example
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
 
 ```
 receivers:
   smartagent/host-metadata:
-    type: collectd/host-metadata
+    type: host-metadata
     ... # Additional config
 ```
 
+To complete the monitor activation, you must also include the `smartagent/host-metadata` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/host-metadata]
+```
+
+See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
+
 ## Metrics
 
-These are the metrics available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="host-metadata"  include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/metadata/hostmetadata/metadata.yaml"></div>
 
 ### Non-default metrics (version 4.7.0+)
 
-To emit metrics that are not _default_, you can add those metrics in the
-generic monitor-level `extraMetrics` config option.  Metrics that are derived from specific configuration options that do not appear in the above list of metrics do not need to be added to `extraMetrics`.
+To emit metrics that are not default, you can add those metrics in the
+generic monitor-level `extraMetrics` configuration option. Metrics derived from specific configuration options that do not appear in the above list of metrics do not need to be added to `extraMetrics`.
 
-To see a list of metrics that will be emitted you can run `agent-status
+To see a list of metrics that will be emitted, you can run `agent-status
 monitors` after configuring this monitor in a running agent instance.
 
-## Dimensions
+## Get help
 
-The following dimensions may occur on metrics emitted by this monitor.  Some dimensions may be specific to certain metrics.
-
-| Name | Description |
-| ---  | ---         |
-| `collectd` | The version of collectd in the signalfx-agent |
-| `kernel_name` | The name of the host kernel |
-| `kernel_release` | The release of the host kernel |
-| `kernel_version` | The version of the host kernel |
-| `os_version` | The version of the os on the host |
-| `signalfx_agent` | The version of the signalfx-agent |
-
-
-
+```{include} /_includes/troubleshooting.md
+```

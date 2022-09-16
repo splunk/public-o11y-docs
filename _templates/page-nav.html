@@ -1,16 +1,56 @@
 {% if next or prev %}
-  <hr>
-  <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+  <hr style="margin-top: 130px;">
+  <div class="" role="navigation" aria-label="footer navigation" style="margin-top: -14px;">
     {% if prev %}
     <div style="float: left; width:50%;">
-      <a href="{{ prev.link|e }}" class="btn btn-neutral" title="{{ prev.title|striptags|e }}"><span class="fa fa-arrow-circle-left"></span> Previous ({{ prev.title|striptags|e }})</a>
+      <!-- <a href="{{ prev.link|e }}" class="btn btn-neutral" title="{{ prev.title|striptags|e }}"><span class="fa fa-arrow-circle-left"></span> Previous ({{ prev.title|striptags|e }})</a> -->
+      <a href="{{ prev.link|e }}" class="" title="{{ prev.title|striptags|e }}" style="text-decoration: none;">
+        <div style="font-size: 34px;display: inline-block;">&#10094;</div>
+        <div  style="vertical-align: 14px;display: inline-block;margin-left: 3px;text-transform: uppercase;color:gray;font-size: 11px;"> Previous</div>  
+        <div id="pag_left_text" style="float: left;vertical-align: top;margin-left: 24px;margin-top: -24px;width: 95%;font-size: 11px;">{{ prev.title|striptags|e }}</div>
+      </a>
     </div>
     {% endif %}
     {% if next %}
     <div style="float: right; width:50%; text-align: right;">
-      <a href="{{ next.link|e }}" class="btn btn-neutral float-right" title="{{ next.title|striptags|e }}">Next ({{ next.title|striptags|e }}) <span class="fa fa-arrow-circle-right"></span></a>
+      <!-- <a href="{{ next.link|e }}" class="float-right" title="{{ next.title|striptags|e }}">Next ({{ next.title|striptags|e }}) <span class="fa fa-arrow-circle-right"></span></a> -->
+      <a href="{{ next.link|e }}" style="text-decoration: none;" title="{{ next.title|striptags|e }}">
+        <div style="vertical-align: 14px;display: inline-block;margin-right: 3px;text-transform: uppercase;color: gray;font-weight: bolder;font-size: 11px;">Next </div>
+        <div id="pag_right_text" style="float: left;vertical-align: top;margin-top: -24px;width: 97%;font-size: 11px;margin-left:-4px;">{{ next.title|striptags|e }}</div>
+        <div style="font-size: 34px;display: inline-block;">&#10095;</div>
+      </a>
     </div>
     {% endif %}
 
   </div>
 {% endif %}
+<br><br>
+<hr>
+
+<div id="mobiletopnavbar">
+  <ul class="navbar-nav mb-2 mb-sm-0" style="margin-left: auto !important;">
+        <li class="nav-item">
+          <a href="https://dev.splunk.com/observability/" class="nav-link newnavbar active" aria-current="page" target="_blank" style="margin-top:10px;">API docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link newnavbar" href="https://www.splunk.com/blog" target="_blank">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/training/learning-path/courses-for-signalfx/overview.html" target="_blank">Training</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/download/infrastructure-monitoring.html" target="_blank" style="
+          font-size: 12px;
+          border-radius: 50px;
+          letter-spacing: 1px;
+          padding: 10px 35px;
+          text-transform: uppercase;
+          color:#3E4349 !important;background-color:#DDDDDD;
+          white-space: nowrap;
+          margin-left: 28px;
+          margin-bottom: 50px;
+          ">Free Trial</a> 
+        </li>
+
+      </ul>
+</div>

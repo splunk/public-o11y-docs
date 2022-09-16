@@ -10,6 +10,8 @@ Verify changes to monitored systems with Live Tail
 .. meta::
   :description: Use Live Tail to verify the changes to the systems you're monitoring.
 
+.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can monitor systems with Live Tail. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+
 Live Tail displays a streaming view of log messages. Use Live Tail to do the following:
 
 - Verify that an integration is sending data to Splunk Observability Cloud.
@@ -21,7 +23,7 @@ View the Live Tail time range
 ================================================================================
 
 The Log Observer TimeLine time picker offers Live Tail as one of the time ranges.
-In all other time ranges, the logs are already indexed by Splunk Cloud Services.
+In all other time ranges, the logs are already indexed by Splunk Cloud Platform services.
 The logs displayed by Live Tail aren't indexed.
 
 Exit Live Tail
@@ -47,8 +49,8 @@ You can adjust the incoming log speed in the following ways:
 
 - Scroll the table. Scrolling freezes the table view, letting you read a portion of
   the incoming log lines.
-- Click :guilabel:`Stop` or :guilabel:`Start` in the navigation bar.
-- Adjust the log speed using the :guilabel:`Logs/Second` slider.
+- Click :guilabel:`Stop` or :guilabel:`Play` in the navigation bar.
+- Adjust the log speed using the :guilabel:`Logs/Second` slider. Next to the slider, you can see what percentage of logs are visible at the selected rate. As you increase the rate of logs per second, the :guilabel:`Showing 100% of logs` callout adjusts accordingly.
 
 When you are not viewing the most recent events, you can view the most recent incoming event
 by clicking :guilabel:`Jump to recent` at the end of the display.
@@ -75,12 +77,12 @@ To use Live Tail filtering to verify your Kubernetes integration worked, follow 
 #. In Log Observer, click the navigation bar menu, select the :menuselection:`time picker`, then select
    :menuselection:`Live Tail` from the time picker drop-down list.
 
-#. To add a filter, in the navigation bar click :guilabel:`+`.
+#. To add a filter, in the navigation bar click :guilabel:`Add Filter`.
 
 #. Select the filter type you want to use:
 
    - To filter by keywords, click the :guilabel:`Keywords` tab.
-   
+
    - To filter by fields in the log records, click the :guilabel:`Fields` tab.
 
 #. In the :guilabel:`Find` text box, type the keyword or field that you want to filter on,

@@ -1,49 +1,162 @@
 (kong)=
 
-# Kong
+# Kong Gateway
 
 <meta name="description" content="Documentation for the kong monitor">
 
 ## Description
 
-The [Splunk OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `kong` monitor with the [SignalFx Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). This monitor requires Version 0.11.2+ of Kong and version 0.0.1+ of [kong-plugin-signalfx](https://github.com/signalfx/kong-plugin-signalfx).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `kong` monitor type with the SignalFx Smart Agent receiver. This monitor requires version 0.11.2+ of Kong and version 0.0.1+ of kong-plugin-signalfx.
 
-To see the monitor source, view the [signalfx-agent project](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kong) on GitHub.
+The Kong integration provides service traffic metrics using `kong-plugin-signalfx`, which emits metrics for configurable request and response lifecycle groups, including:
 
+* Counters for response counts
+* Counters for cumulative response and request sizes
+* Counters for cumulative request, upstream, and Kong latencies
+
+You can partition request and response lifecycle groups by:
+
+* API or Service Name/ID
+* Route ID
+* Request HTTP Method
+* Response HTTP Status Code
+
+In addition, the integration provides system-wide connection statistics, including:
+
+* A counter for total fielded requests
+* Gauges for active connections and their various states
+* A gauge for database connectivity
+
+This integration is only supported for Kong Gateway Community Edition (CE). 
+
+### Benefits
+
+```{include} /_includes/benefits.md
+```
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
+This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to enable this integration.
 
 Follow these steps to deploy the integration:
 
-1. Install the Lua module on all Kong servers. For more information, see [SignalFx Kong Plugin](https://github.com/signalfx/kong-plugin-signalfx/blob/master/README.md).
-2. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-3. Configure the monitor, as described in the next section.
+1. Run the following commands on each Kong server with a configured `LUA_PATH`:
+    ```sh
+    luarocks install kong-plugin-signalfx
+    # Or directly from the source repo
+    git clone git@github.com:signalfx/kong-plugin-signalfx.git
+    cd kong-plugin-signalfx
+    luarocks make
+    # Then notify Kong of the plugin or add to your existing configuration file
+    echo 'custom_plugins = signalfx' > /etc/kong/signalfx.conf
+    ```
+2. Add the following `lua_shared_dict` memory declarations to the NGINX configuration file of Kong, or add them directly to `/usr/local/share/lua/5.1/kong/templates/nginx_kong.lua` if you are using Kong's default setup:
+    ```
+    lua_shared_dict kong_signalfx_aggregation 10m;
+    lua_shared_dict kong_signalfx_locks 100k;
+    ```
+3. Reload Kong to make the plugin available and install it globally:
+    ```sh
+    kong reload -c /etc/kong/signalfx.conf  # Or specify your modified configuration file
+    curl -X POST -d "name=signalfx" http://localhost:8001/plugins
+    ```
+4. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
+5. Configure the monitor, as described in the next section.
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your configuration:
 
-**Note:** Providing a `kong` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-```
-monitors:  # All monitor config goes under this key
- - type: kong
-   ...  # Additional config
+```yaml
+receivers:
+  smartagent/kong:
+    type: collectd/kong
+    ...  # Additional config
 ```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To complete the monitor activation, you must also include the `smartagent/kong` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/kong]
+```
+
+### Configuration settings
+
+The following is a sample configuration:
+
+```yaml
+receivers:
+  smartagent/kong:
+   type: collectd/kong
+   host: 127.0.0.1
+   port: 8001
+   metrics:
+    - metric: request_latency
+      report: true
+    - metric: connections_accepted
+      report: false
+```
+
+The following is a sample configuration with custom `/signalfx` route and filter lists:
 
 ```
 receivers:
   smartagent/kong:
-    type: kong
-    ...  # Additional config
+    type: collectd/kong
+    host: 127.0.0.1
+    port: 8443
+    url: https://127.0.0.1:8443/routed_signalfx
+    authHeader:
+      header: Authorization
+      value: HeaderValue
+    metrics:
+      - metric: request_latency
+        report: true
+    reportStatusCodeGroups: true
+    statusCodes:
+      - 202
+      - 403
+      - 405
+      - 419
+      - "5*"
+    serviceNamesBlacklist:
+      - "*SomeService*"
 ```
+
+### Kong configuration
+
+Like most Kong plugins, you can configure the SignalFx `kong` integration globally or by specific service, route, API, or
+consumer object contexts by making `POST` requests to each `plugins` endpoint. For example:
+
+```sh
+curl -X POST -d "name=signalfx" http://localhost:8001/services/<my_service>/plugins
+curl -X POST -d "name=signalfx" http://localhost:8001/routes/<my_route_id>/plugins
+```
+
+For each request made to the respective registered object context, the `kong` integration obtains metric content 
+and aggregates it for automated retrieval at the `/signalfx` endpoint of the Admin API. Although you can enable request 
+contexts for specific Consumer objects, consumer IDs or unique visitor metrics are not calculated.
+
+By default, the `kong` integration aggregates metrics by a context determined by the HTTP method of the request and by 
+the status code of the response. If you're monitoring a large infrastructure with hundreds of routes, grouping by HTTP 
+method might be too granular. You can disable context grouping by setting `aggregate_by_http_method` to `false`:
+
+```sh
+curl -X POST -d "name=signalfx" -d "config.aggregate_by_http_method=false" http://localhost:8001/plugins
+# or to edit an existing plugin
+curl -X PATCH -d "config.aggregate_by_http_method=false" http://localhost:8001/plugins/<sfx_plugin_id>
+```
+
 ## Metrics
 
 These metrics are available for this integration.
 
-<div class="metrics-table" type="kong"  include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/kong/metadata.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

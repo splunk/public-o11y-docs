@@ -1,0 +1,51 @@
+.. _get-started-k8s:
+
+****************************
+Collect Kubernetes data
+****************************
+
+.. meta::
+   :description: Start sending metrics and logs from Kubernetes to Splunk Observability Cloud.
+
+The Splunk Distribution of OpenTelemetry Collector provides integrated collection and forwarding for all Kubernetes telemetry. Deploy the Collector to gather telemetry for Splunk Infrastructure Monitoring, Splunk APM, or Splunk Log Observer.
+
+The Collector is deployed using a Helm chart for the Splunk Distribution of OpenTelemetry Collector for Kubernetes. In a Kubernetes cluster, the chart creates a Kubernetes DaemonSet as well as other Kubernetes objects. These objects collect the following for the cluster:
+
+- Metrics for Infrastructure Monitoring
+- Traces for APM
+- Logs for Log Observer
+
+Supported versions
+=====================
+
+This Kubernetes solution has been validated in Kubernetes environments that use Minikube, Amazon Elastic Kubernetes Service (Amazon EKS), and Google Kubernetes Engine.
+
+Start the integration
+=========================
+
+To start a Kubernetes integration, follow these steps:
+
+1. Log in to Splunk Observability Cloud.
+
+2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+
+3. Select :guilabel:`Kubernetes`.
+
+4. Select :guilabel:`Add Connection`. The integration guided setup appears.
+
+5. Follow the steps in the guided setup.
+
+For advanced installation instructions, see :ref:`otel-install-k8s`.
+
+Next steps
+=================
+
+Access tokens are organization-level tokens that, by default, are valid for five years. You must use an org token to authenticate emitters that send data points to Observability Cloud. You can use an org token in long-running scripts that call the API. For more information, see :ref:`admin-org-tokens`.
+
+Next steps
+=================
+
+- Configure the Collector. See :ref:`otel-kubernetes-config`.
+- Learn about the Collector commands. See :ref:`otel-commands`.
+- Troubleshoot Collector issues. See :ref:`otel-troubleshooting`.
+- Troubleshoot Kubernetes and container issues. See :ref:`tshoot-k8s-container-runtimes`.

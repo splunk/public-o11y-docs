@@ -10,9 +10,7 @@ View overall system health using Timeline
 .. meta::
   :description: See an overview of logs with Timeline
 
-The Timeline displays a histogram of logged events over time, grouped by
-values of the message field ``severity``. Change to a different grouping by
-aggregating the log messages using a different field. To learn more,
+The Log Observer Timeline displays a histogram of logged events over time, grouped by values of the message field ``severity``. Note that Log Observer Connect has no default aggregation. You can change Log Observer's default aggregation by changing the value in the :strong:`Group by` field. To learn more,
 see :new-page-ref:`logs-aggregations`.
 
 The following screenshot shows you a count of events grouped by the event field called :strong:`name`:
@@ -28,8 +26,7 @@ These features help you use the Timeline to review the health of your systems:
 
    * The histogram displays severity values in time intervals (histogram buckets).
      The logs processor service extracts these severity values from the
-     incoming data. Each histogram interval shows a stacked column of severity values, and each
-     value has a unique color. To identify each value in a column by color, use the Timeline legend.
+     incoming data. Each histogram interval shows a stacked column of severity values, and each value has a unique color. To identify each value in a column by color, use the Timeline legend.
 
 *  Adjust the time picker in the top left.
 

@@ -1,14 +1,14 @@
 (apache)=
 
-# Apache web server
+# Apache HTTP Server
 
 <meta name="description" content="Documentation for the apache monitor">
 
 ## Description
 
-The [Splunk OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `apache` monitor with the [SignalFx Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). The integration monitors Apache web servers using information `mod_status` provides.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache HTTP Server monitor with the SignalFx Smart Agent receiver. The integration monitors Apache web servers using information `mod_status` provides.
 
-To see the monitor source, view the [signalfx-agent project](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/apache) on GitHub.
+This monitor is available on Kubernetes, Linux, and Windows.
 
 Apache worker threads can be in one of the following states:
 
@@ -25,51 +25,72 @@ Apache worker threads can be in one of the following states:
 | Finishing    | Finishing as part of graceful shutdown  |
 | Starting     | Starting up to serve                    |
 
+### Benefits
+
+```{include} /_includes/benefits.md
+```
+
 ## Installation
 
-**Note:** Providing an `apache` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+```{include} /_includes/collector-installation.md
+```
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
+## Configuration
 
-Follow these steps to deploy the integration:
 
-1. Deploy the Splunk OpenTelemetry Collector to your host or container platform.
-2. Complete the [Splunk OpenTelemetry Collector configuration](#splunk-opentelemetry-collector-configuration).
-3. Complete the [Apache configuration](#apache-configuration).
+```{include} /_includes/configuration.md
+```
 
-## Splunk OpenTelemetry Collector configuration
+```
+receivers:
+  smartagent/apache
+    type: collectd/apache
+    ... # Additional config
+```
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+To complete the integration, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
 
-After you deploy the Splunk OpenTelemetry Collector, follow these steps to activate the monitor in the Splunk OpenTelemetry Collector:
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/apache]
+```  
 
-1. Add the following monitor to your agent configuration:
+### Configuration settings
 
-   ```
-   monitors:  # All monitor config goes under this key
-    - type: apache
-      ...  # Additional config
-   ```
+The following configuration options are available for this monitor:
 
-2. Restart the Splunk OpenTelemetry Collector.
+| Options | Required | Type | Description |
+| --- | --- | --- | --- |
+| `host` | **yes** | `string` | The hostname of the Apache server |
+| `port` | **yes** | `integer` | The port number of the Apache server |
+| `name` | no | `string` | This will be sent as the `plugin_instance` dimension and can be any name you like. |
+| `url` | no | `string` | The URL, either a final URL or a Go template that will be populated with the host and port values. (**default:** `http://{{.Host}}:{{.Port}}/mod_status?auto`) |
+| `username` | no | `string` |  |
+| `password` | no | `string` |  |
 
 ## Apache configuration
 
-After you deploy the monitor in the Splunk OpenTelemetry Collector, follow these steps to configure the Apache web server to expose status metrics:
+After you deploy the monitor in the Splunk Distribution of OpenTelemetry Collector, follow these steps to configure the Apache web server to expose status metrics:
 
 1. Enable the `mod_status` module in your Apache server. Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which the monitor requires.
 2. Add the following configuration to your Apache server:
-
    ```
     ExtendedStatus on
     <Location /mod_status>
     SetHandler server-status
     </Location>
-   ```
+    ```
 3. Restart the Apache web server.
 
 ## Metrics
 
 These metrics are available for this integration.
 
-<div class="metrics-table" type="apache"  include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/apache/metadata.yaml"></div>  
+
+## Troubleshooting
+```{include} /_includes/troubleshooting.md
+```
+  

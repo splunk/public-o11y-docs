@@ -1,0 +1,34 @@
+:orphan:
+
+.. include:: /_includes/network-explorer/network-explorer-preview-header.rst
+
+
+.. _network-explorer-metrics:
+
+
+********************************************
+Network telemetry metrics
+********************************************
+
+.. meta::
+    :description: Metrics available to collect with Network Explorer.
+
+The following tables show metrics you can collect with Network Explorer and their dimensions.
+
+Metrics
+=============
+
+The following metrics are available to collect with Network Explorer.
+
+.. raw:: html
+
+    <div class="metrics-yaml" url="https://raw.githubusercontent.com/Flowmill/support/main/metrics.yaml"></div>
+
+Dimensions
+=============
+
+The following dimensions are available for network telemetry metrics.
+
+.. raw:: html
+
+    <div class="metrics-yaml" url="https://raw.githubusercontent.com/Flowmill/support/main/dimensions.yaml"></div>

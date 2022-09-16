@@ -1,8 +1,8 @@
 .. _admin-manage-usage:
 
-*****************************************
-Manage resource usage with access tokens
-*****************************************
+****************************************************************************
+Manage resource usage with access tokens using Splunk Observability Cloud
+****************************************************************************
 
 .. meta::
    :description: Learn how to how to manage resource usage with  access tokens.
@@ -155,12 +155,29 @@ Set up access token limits and alerts
 To set token limits:
 
 #. Select :menuselection:`Manage Token Limit` from the token's actions menu. The Manage Token Limits options appear. Depending on your pricing model, you see up to four cost-related token limits you can set. You can also set the :guilabel:`Job Start Rate` and :guilabel:`Event Search Rate` rate-related limits.
+
 #. Enter a value for the limit or limits you want to set.
 
    * For cost-related limits, to remove an existing limit, click :guilabel:`Remove Limit`.
    * For rate-related limits, to remove an existing limit, delete everything from the text box.
+
 #. To send a notification to recipients when a cost-related usage exceeds one of the limits, click :guilabel:`Add Recipient` and select the recipient or notification method you want to use.
-#. Click :guilabel:`Update`.
+
+#. Click :guilabel:`Update`. This creates a detector based on the access token limits you set. When a limit condition is met, the detector displays an alert on the Alerts page and sends a notification to any designated recipients.
+
+#. If you chose a team as a notification recipient and you want to have alerts display on the team's Dashboards page, you must link the detector you created in the previous step to the team. To do this:
+
+    #. Access the left navigation panel and select :menuselection:`Alerts`.
+    #. Select the :guilabel:`Detectors` tab.
+    #. Search for the detector you just created. By default, the detector's name includes the name of the access token it was created for. So, an easy way to find the detector is to search for the name of the access token.
+    #. Open the detector's action menu (|more|) and select :guilabel:`Links to Teams`. Select a team.
+    #. Click :guilabel:`Done`.
+    #. When the detector issues a notification about the access token, an alert displays on the team's Dashboards page.
+
+    For more information about linking detectors to teams, see :ref:`create-link-detector-teams`.
+
+    For more information about Dashboards pages for teams, also known as team landing pages, see :ref:`admin-configure-page`.
+
 
 Set up custom alerts for use with access tokens
 ==================================================

@@ -15,8 +15,7 @@ The Smart Agent collects infrastructure monitoring, APM, and Kubernetes
 data.
 
 For other installation options, including bulk deployments to
-production, see `Install and Configure the Smart
-Agent <https://docs.signalfx.com/en/latest/integrations/agent/agent-install-methods.html>`__.
+production, see :ref:`smart-agent`.
 
 Installation
 ------------
@@ -117,7 +116,7 @@ When this command finishes, it displays the following:
 
    The SignalFx Agent has been successfully installed.
 
-   Make sure that your system's time is relatively accurate or else datapoints may not be accepted.
+   Make sure that your system's time is relatively accurate or else data points may not be accepted.
 
    The agent's main configuration file is located at /etc/signalfx/agent.yaml.
 
@@ -176,7 +175,7 @@ The command displays output that is similar to the following:
    Discovered Endpoint Count:        6
    Bad Monitor Config:               None
    Global Dimensions:                {host: my-host-1}
-   Datapoints sent (last minute):    1614
+   Data points sent (last minute):    1614
    Events Sent (last minute):        0
    Trace Spans Sent (last minute):   0
 
@@ -211,8 +210,7 @@ gather troubleshooting information.
 General troubleshooting
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-To learn how to review signalfx-agent logs, see `Frequently Asked
-Questions <https://docs.signalfx.com/en/latest/integrations/agent/./faq.html>`__.
+To learn how to review signalfx-agent logs, see :ref:`smart-agent`.
 
 Linux troubleshooting
 ^^^^^^^^^^^^^^^^^^^^^
@@ -220,13 +218,13 @@ Linux troubleshooting
 To view recent error logs, run the following command in terminal or a
 similar application:
 
--  For sysv/upstart hosts, run:
+-  For sysv/upstart hosts, enter the following command:
 
 .. code:: sh
 
    tail -f /var/log/signalfx-agent.log
 
--  For systemd hosts, run:
+-  For systemd hosts, enter the following command:
 
 .. code:: sh
 

@@ -6,42 +6,33 @@
 
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `kube-controller-manager` monitor via the [Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+**Note:** This monitor is deprecated in favor of the `prometheus-exporter` monitor. Switch to the Prometheus Exporter as the Smart Agent is deprecated. All Prometheus labels are converted directly to Infrastructure Monitoring dimensions. To learn more, see {ref}`prometheus-exporter`.
 
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `kube-controller-manager` monitor by using the SignalFx Smart Agent Receiver.
 
-This monitor exports Prometheus metrics from the [kube-controller-manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/).
+Use this integration to export Prometheus metrics from the [kube-controller-manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/).
+
 The monitor queries path `/metrics` by default when no path is configured. The monitor converts
 the Prometheus metric types to Splunk Observability Cloud metric types as described in the documentation for [prometheus-exporter](../prometheus-exporter/prometheus-exporter.md).
 
+**Note:** All metrics of this monitor are non-default and are only emitted if specified explicitly.
 
-Note that all metrics of this monitor are non-default and are only emitted if specified explicitly.
+## Benefits
 
-
+```{include} /_includes/benefits.md
+```
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-To install this integration:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation.md
+```
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `kube-controller-manager` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
+```{include} /_includes/configuration.md
 ```
-monitors:  # All monitor config goes under this key
- - type: kube-controller-manager
-   ...  # Additional config
-```
+### Configuration example
 
-To activate this monitor in the OpenTelemetry Collector, add the following to your agent configuration:
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
 
 ```
 receivers:
@@ -50,28 +41,41 @@ receivers:
     ... # Additional config
 ```
 
+To complete the monitor activation, you must also include the `smartagent/kube-controller-manager` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/kube-controller-manager]
+```
+
+See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
+
+### Configuration settings
+
 The following table shows the configuration options for this monitor:
 
-| Config option | Required | Type | Description |
+| Option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `httpTimeout` | no | `int64` | HTTP timeout duration for both read and writes. This should be a duration string that is accepted by https://golang.org/pkg/time/#ParseDuration (**default:** `10s`) |
 | `username` | no | `string` | Basic Auth username to use on each request, if any. |
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
-| `useHTTPS` | no | `bool` | If true, the agent will connect to the server using HTTPS instead of plain HTTP. (**default:** `false`) |
+| `useHTTPS` | no | `bool` | If `true`, the agent will connect to the server using HTTPS instead of plain HTTP. (**default:** `false`) |
 | `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
-| `skipVerify` | no | `bool` | If useHTTPS is true and this option is also true, the exporter's TLS cert will not be verified. (**default:** `false`) |
-| `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to false. |
+| `skipVerify` | no | `bool` | If useHTTPS is `true` and this option is also `true`, the exporter's TLS cert will not be verified. (**default:** `false`) |
+| `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to `false`. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use for TLS required connections |
 | `host` | **yes** | `string` | Host of the exporter |
 | `port` | **yes** | `integer` | Port of the exporter |
 | `useServiceAccount` | no | `bool` | Use pod service account to authenticate. (**default:** `false`) |
 | `metricPath` | no | `string` | Path to the metrics endpoint on the exporter server, usually `/metrics` (the default). (**default:** `/metrics`) |
-| `sendAllMetrics` | no | `bool` | Send all the metrics that come out of the Prometheus exporter without any filtering.  This option has no effect when using the prometheus exporter monitor directly since there is no built-in filtering, only when embedding it in other monitors. (**default:** `false`) |
+| `sendAllMetrics` | no | `bool` | Send all the metrics that come out of the Prometheus exporter without any filtering. This option has no effect when using the Prometheus exporter monitor directly since there is no built-in filtering, only when embedding it in other monitors. (**default:** `false`) |
 
-## Example configurations
+### Sample YAML configurations
 
-This is an example configuration of this monitor:
+The following is an example configuration of this monitor:
 
 ```yaml
 monitors:
@@ -79,11 +83,16 @@ monitors:
   discoveryRule: kubernetes_pod_name =~ "kube-controller-manager" && target == "pod"
   port: 10252
   extraDimensions:
-    metric_source: kube-controller-manager
+    metric_source: kubernetes-controller-manager
 ```
 
 ## Metrics
 
-The monitor sends the following metrics to Splunk Observability Cloud:
+These metrics are available for this integration.
 
-<div class="metrics-table" type="kube-controller-manager" include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/controllermanager/metadata.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

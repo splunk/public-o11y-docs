@@ -1,88 +1,102 @@
-(cassandra)= 
+(cassandra)=
 
 # Cassandra
-
 <meta name="description" content="Documentation on the cassandra monitor">
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `cassandra` monitor via the Smart Agent Receiver. It monitors Cassandra using the GenericJMX plugin. It serves as a wrapper around the [genericjmx](https://github.com/signalfx/signalfx-agent/tree/main/docs/monitors/./collectd-genericjmx.md) monitor that comes with a set of predefined MBean definitions that a standard Cassandra deployment
-will expose.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Cassandra monitor by using 
+the SignalFx Smart Agent Receiver.
 
-See [signalfx-agent/pkg/monitors/collectd/cassandra/](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/cassandra) for the monitor source. 
+Use this integration to monitor Cassandra using the GenericJMX plugin. This plugin wraps the genericjmx monitor, which comes with a set of predefined
+MBean definitions that a standard Cassandra deployment exposes.
+
+This monitor is available on Kubernetes, Linux, and Windows.
+
+## Benefits
+
+```{include} /_includes/benefits.md
+```
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
-
-To install this integration:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation.md
+```
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `cassandra` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-```
-monitors:  # All monitor config goes under this key
- - type: cassandra
-   ...  # Additional config
+```{include} /_includes/configuration.md
 ```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+### Configuration example
 
 ```
 receivers:
   smartagent/cassandra:
-    type: cassandra
+    type: collectd/cassandra
     ...  # Additional config
 ```
 
+To complete the integration, include the monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file.
+For example:
+
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/cassandra]
+```
+
+### Configuration settings
+
 The following table shows the configuration options for this monitor:
 
-| Config option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `host` | **yes** | `string` | Host to connect to -- JMX must be configured for remote access and accessible from the agent |
-| `port` | **yes** | `integer` | JMX connection port (NOT the RMI port) on the application.  This corresponds to the `com.sun.management.jmxremote.port` Java property that should be set on the JVM when running the application. |
-| `name` | no | `string` |  |
-| `serviceName` | no | `string` | This is how the service type is identified in the Splunk Observability Cloud UI so that you can get built-in content for it.  For custom JMX integrations, it can be set to whatever you like and metrics will get the special property `sf_hostHasService` set to this value. |
-| `serviceURL` | no | `string` | The JMX connection string.  This is rendered as a Go template and has access to the other values in this config. NOTE: under normal circumstances it is not advised to set this string directly - setting the host and port as specified above is preferred. (**default:** `service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi`) |
-| `instancePrefix` | no | `string` | Adds a prefix to the generated plugin instance with. If a second `instancePrefix` is specified in a referenced MBean block, the prefix specified in the Connection block will appear at the beginning of the plugin instance, and the prefix specified in the MBean block will be appended to it |
-| `username` | no | `string` | Username to authenticate to the server |
-| `password` | no | `string` | User password to authenticate to the server |
-| `customDimensions` | no | `map of strings` | Takes in key-value pairs of custom dimensions at the connection level. |
-| `mBeansToCollect` | no | `list of strings` | A list of the MBeans defined in `mBeanDefinitions` to collect. If not provided, then all defined MBeans will be collected. |
-| `mBeansToOmit` | no | `list of strings` | A list of the MBeans to omit. This will come in handy in cases where only a few MBeans need to be omitted from the default list. |
-| `mBeanDefinitions` | no | `map of objects (see below)` | Specifies how to map JMX MBean values to metrics.  If using a specific service monitor such as cassandra, kafka, or activemq, they come pre-loaded with a set of mappings, and any that you add in this option will be merged with those.  See [GenericJMX](https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin) for more details. |
+| Option             | Required | Type                                                   | Description                                                                                                                                                                                                                                                                                                                                                                                   |
+|--------------------|----------|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `host`             | **yes**  | `string`                                               | Use this string to specify the host to connect to.                                                                                                                                                                                                                                                                                                                                            |
+| `port`             | **yes**  | `integer`                                              | Use this number to specify the JMX connection port (not the RMI port) for the application.  This value corresponds to the `com.sun.management.jmxremote.port` Java property that you need to set for the JVM when you run the application.                                                                                                                                                    |
+| `name`             | no       | `string`                                               |                                                                                                                                                                                                                                                                                                                                                                                               |
+| `serviceName`      | no       | `string`                                               | This value appears as the service type in the Splunk Observability Cloud UI, which lets you retrieve built-in content for the service.  For custom JMX integrations, you can set it to any value. For Cassandra metrics, the system sets the `sf_hostHasService` dimension to this value.                                                                                                     |
+| `serviceURL`       | no       | `string`                                               | Use this value to define the JMX connection string.  The system interprets it as a Go template, so you can specify the value using replaceable variables that map to your configuration options. Note: Avoid setting this string directly. Instead, set the `host` and `port` options. (**default:** `service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi`)                              |
+| `instancePrefix`   | no       | `string`                                               | The system adds this value as a prefix to the generated plugin instance name. If you specify a second `instancePrefix` in a referenced MBean block, the prefix specified in the Connection block will appear at the beginning of the plugin instance, and the prefix specified in the MBean block will be appended to it.                                                                     |
+| `username`         | no       | `string`                                               | Use this value to specify the user name you want to send to the server for authentication.                                                                                                                                                                                                                                                                                                    |
+| `password`         | no       | `string`                                               | Use this value to specify the password for the user name.                                                                                                                                                                                                                                                                                             |
+| `customDimensions` | no       | `map of strings`                                       | This object specifies custom dimensions to add at the connection level.                                                                                                                                                                                                                                                                                                                       |
+| `mBeansToCollect`  | no       | `list of strings`                                      | This array specifies a list of the MBeans defined in `mBeanDefinitions` that you want to collect. If you don't provide the array, the monitor collects all defined MBeans.                                                                                                                                                                                                                    |
+| `mBeansToOmit`     | no       | `list of strings`                                      | This array specifies a list of the MBeans defined in `mBeanDefinitions` that you want to omit. Use this list when you want to omit only a few MBeans from the default list.                                                                                                                                                                                                                   |
+| `mBeanDefinitions` | no       | `map of objects` (see the following table for details) | This object specifies how to map JMX MBean values to metrics.  Cassandra comes pre-loaded with a set of mappings. Any mappings that you add in this option are merged with the pre-loaded ones. To learn more, see [https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin](https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin). |
 
 
-The **nested** `mBeanDefinitions` config object has the following fields:
-| Config option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `objectName` | no | `string` | Sets the pattern used to retrieve MBeans from the MBeanServer. If more than one MBean is returned, you should use the `instanceFrom` option to make the identifiers unique. |
-| `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix |
-| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so-called "properties" which are basically key-value pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This option is optional and may be repeated to generate the plugin instance from multiple property values. |
-| `values` | no | `list of objects (see below)` | The `value` blocks map one or more attributes of an MBean to a value list in collectd. There must be at least one `value` block within each MBean block |
-| `dimensions` | no | `list of strings` |  |
+The `mBeanDefinitions` configuration option has the following fields:
+
+| Option| Required | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| --- | --- | --- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `objectName` | no | `string` | This name sets a pattern that the monitor uses to retrieve MBeans from the MBeanServer. If the server returns more than one MBean, use the `instanceFrom` option to make the MBean identifiers unique.                                                                                                                                                                                                                                                                                              |
+| `instancePrefix` | no | `string` | This value prefixes the generated plugin instance.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `instanceFrom` | no | `list of strings` | This array specifies a list of object names used by JMX to identify MBeans, including properties that are key-value pairs. If the given object name is not unique and the server returns multiple MBeans, the values of these properties usually differ. Use the `instanceFrom` option to build the plugin instance from the appropriate property values. You can have multiple values of this option in your configuration, so you can generate the plugin instance from multiple property values. |
+| `values` | no | `list of objects` (see the following table for details) | This array specifies a list of objects corresponding to blocks in the `values` option. Each block maps the attributes of an MBean to a value list in `collectd`. You need to specify at least one `value` object for each MBean.                                                                                                                                                                                                                                                                    |
+| `dimensions` | no | `list of strings` |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 
-The **nested** `values` config object has the following fields:
-| Config option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `type` | no | `string` | Sets the data set used within collectd to handle the values of the MBean attribute |
-| `table` | no | `bool` | Set this to true if the returned attribute is a composite type. If set to true, the keys within the composite type are appended to the type instance. (**default:** `false`) |
-| `instancePrefix` | no | `string` | Works like the option of the same name directly beneath the MBean block, but sets the type instance instead |
-| `instanceFrom` | no | `list of strings` | Works like the option of the same name directly beneath the MBean block, but sets the type instance instead |
-| `attribute` | no | `string` | Sets the name of the attribute from which to read the value. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example: “attrib0.key42”. If `table` is set to true, path must point to a composite type, otherwise it must point to a numeric type. |
-| `attributes` | no | `list of strings` | The plural form of the `attribute` config above.  Used to derive multiple metrics from a single MBean. |
+The `values` configuration option has the following fields:
+
+| Option | Required | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --- | --- | --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `type` | no | `string` | Use this value to set the data set used within `collectd` to handle the values of the MBean attribute                                                                                                                                                                                                                                                                                                         |
+| `table` | no | `bool` | Set this flag to `true` if the returned attribute is a composite type. If you set it to `true`, the server appends keys within the composite type to the type instance. (**default:** `false`)                                                                                                                                                                                                               |
+| `instancePrefix` | no | `string` | See the definition of `instancePrefix` in the description of `mBeanDefinitions`. This option is similar, but it sets the type instance instead.                                                                                                                                                                                                                                                               |
+| `instanceFrom` | no | `list of strings` | See the definition of `instancePrefix` in the description of `mBeanDefinitions`. This option is similar, but it sets the type instance instead.                                                                                                                                                                                                                                                               |
+| `attribute` | no | `string` | Use this value to set the name of the attribute from which to read the value. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example, `attrib0.key42` specifies the `key42` attribute in the `attrib0` object. If you set the `table` option to `true`, the path must point to a composite type, otherwise it must point to a numeric type. |
+| `attributes` | no | `list of strings` | Use this option to derive multiple metrics from a single MBean.                                                                                                                                                                                                                                                                                                                                               |
 
 
 ## Metrics
 
-These are the metrics available for this integration: 
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="cassandra" include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/cassandra/metrics.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```

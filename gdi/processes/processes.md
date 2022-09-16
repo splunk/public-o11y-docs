@@ -2,81 +2,95 @@
 
 # Host process
 
-<meta name="description" content="Documentation on the processes monitor">
+<meta name="description" content="Documentation on the Host process monitor">
 
 
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector) provides this integration as the `processes` monitor via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Host process monitor type by using the SignalFx Smart Agent Receiver.
 
 This monitor gathers information about processes running on the host.
 
-See [processes](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/processes) for the monitor source.
+```{note}
+To collect metrics about processes running on a host, use the {ref}`Host metrics receiver <host-metrics-receiver>`. 
+```
+
+```{note}
+Metrics produced by this receiver count towards the custom metric ingestion limit. See {ref}`System limits for Splunk Infrastructure Monitoring <sys-limits>`.
+```
+
+## Benefits
+
+```{include} /_includes/benefits.md
+
+```
 
 
 ## Installation
 
-This monitor is available in the [SignalFx Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver), which is part of the [Splunk Distribution of OpenTelemetry Collector](https://github.com/signalfx/splunk-otel-collector).
+```{include} /_includes/collector-installation.md
 
-To install this integration:
+```
+```{note}
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
+This monitor is not available on Windows.
 
-2. Configure the monitor, as described in the next section.
-
+```
 
 ## Configuration
+This monitor type is available in the Smart Agent Receiver, which is part of the Splunk Distribution of OpenTelemetry Collector. You can use existing Smart Agent monitors as OpenTelemetry Collector metric receivers with the Smart Agent Receiver. This monitor type requires a properly configured environment on your system, in which you’ve installed a functional Smart Agent release bundle. The Splunk Distribution of OpenTelemetry Collector provides this bundle in the installation paths for ``x86_64/amd64``. 
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
-
-**Note:** Providing a `processes` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
-```
-monitors:  # All monitor config goes under this key
-  - type: processes
-    ...  # Additional config
-```
-
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following lines to your <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector" target="_blank">configuration (YAML) file</a>:
 
 ```
 receivers:
   smartagent/processes:
-    type: processes
+    type: collectd/processes  
     ...  # Additional config
 ```
 
-The following table shows the configuration options for the `processes` monitor:
+To complete the integration, include the monitor type in a metrics pipeline. Add the monitor item to the ``service/pipelines/metrics/receivers`` section of your configuration file. For example:
 
-| Config option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `processes` | no | `list of strings` | A list of process names to match |
-| `processMatch` | no | `map of strings` | A map with keys specifying the `plugin_instance` value to send for regex values that match process names. See the example configuration. |
-| `collectContextSwitch` | no | `bool` | Collects metrics on the number of context switches made by the process (**default:** `false`) |
-| `procFSPath` | no | `string` | (Deprecated) Set the agent configuration `procPath` instead of this monitor configuration option. This option is useful for overriding the path to the `proc` filesystem if the agent is running in a container. |
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/processes] 
+```
 
+The following example configuration shows how to send process metrics for processes named ``mysql`` and ``myapp``, along with additional metrics on the number of context switches the process has made. In this example, all processes that start with ``docker`` will have their process metrics aggregated together and sent with a ``plugin_instance`` value of ``docker``.
 
-### Example `processes` Smart Agent monitor configuration
-
-This configuration will process metrics for processes named *mysql* and *myapp*, along with additional metrics on the number of context switches the process has made. Also, all processes that start with `docker` will have their process metrics aggregated together and sent with a `plugin_instance` value of `docker`.
-
-```yaml
- procPath: /proc
+```
+procPath: /proc
  monitors:
-  - type: processes
+  - type: collectd/processes
     processes:
       - mysql
       - myapp
     processMatch:
       docker: "docker.*"
     collectContextSwitch: true
-```
+  ``` 
+
+### Configuration settings
+
+The following table shows the configuration options for the host process monitor:
+
+| Option | Required | Type | Description |
+| --- | --- | --- | --- |
+| `processes` | no | `list of strings` | A list of process names to match. |
+| `processMatch` | no | `map of strings` | A map with keys specifying the `plugin_instance` value to send for regex values that match process names. See the example configuration. |
+| `collectContextSwitch` | no | `bool` | Collects metrics on the number of context switches made by the process. The default value is `false`. |
+| `procFSPath` | no | `string` | (Deprecated) Set the agent configuration `procPath` instead of this monitor configuration option. This option is useful for overriding the path to the `proc` file system if the agent is running in a container. |
 
 
 ## Metrics
 
-These are the metrics available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-table" type="collectd/processes" include="markdown"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/processes/metadata.yaml"></div>
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```
