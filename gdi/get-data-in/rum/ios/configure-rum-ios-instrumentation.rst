@@ -57,6 +57,8 @@ Use the following settings to configure the iOS RUM agent:
      - Regular expression pattern that matches URLs you want to ignore when reporting HTTP activity.
    * - :code:`spanFilter`
      - Closure of type ``((SpanData) -> SpanData?)?`` to modify or ignore spans. See :ref:`ios-rum-span-filtering`.
+   * - :code:`sessionSamplingRatio`
+     - Percentage of sessions to sample. Expressed as a proportion in the range ``0.0`` to ``1.0``. The default value is ``1.0``.
    * - :code:`allowInsecureBeacon`
      - If set to ``true``, this setting allows beacon URLs that use the HTTP protocol. The default value is ``false``.
    * - :code:`enableDiskCache`
