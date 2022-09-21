@@ -126,6 +126,18 @@ The following example shows how to retrieve an instance of ``HurlStack`` from yo
    
    HurlStack hurlStack = volleyTracing.newHurlStack();
 
-You can then us1e the ``hurlStack`` instance to create your request queue and send requests as usual.
+You can then use the ``hurlStack`` instance to create your request queue and send requests as usual.
 
-.. note:: You can also extra request and response headers, which appear with the ``http.request.header.`` and ``http.response.header.`` prefixes.
+Capture additional request and response headers
+-------------------------------------------
+
+You can capture additional request and response headers using the HTTP instrumentations. Additional headers appear with the ``http.request.header.`` and ``http.response.header.`` prefixes.
+
+To capture additional headers, provide a list of headers that you want to capture to the builder, as in the following example:
+
+.. code-block:: java
+  
+   builder.setCapturedRequestHeaders(asList("X-My-Custom-Request-Header"))
+   builder.setCapturedResponseHeaders(asList("X-My-Custom-Response-Header"))
+
+The resulting span contains an ``http.request.header.x_my_custom_header`` attribute with one or more header values.
