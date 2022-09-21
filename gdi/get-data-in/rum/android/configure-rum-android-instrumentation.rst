@@ -101,11 +101,31 @@ Instrument OkHttp using the ``Call.Factory`` wrapper, as in the following exampl
       return splunkRum.createRumOkHttpCallFactory(new OkHttpClient());
    }
 
-Volley HTTP
+Volley HTTP (Experimental)
 -------------------------------------------------
 
-Instrument Volley HTTP using the ``VolleyTracing`` class to create a ``HurlStack``, as in the following example:
+To instrument Volley HTTP, add the ``splunk-otel-android-volley`` dependency to the ``build.gradle.kts`` file:
+
+.. code-block:: gradle
+
+   dependencies {
+      ...
+      implementation("com.splunk:splunk-otel-android-volley:0.16.0")
+      ...
+   }   
+
+Use the ``VolleyTracing`` class to create an instance of ``VolleyTracing``, as in the following example:
 
 .. code-block:: java
 
-   HurlStack stack = VolleyTracing.create(SplunkRum.getInstance()).newHurlStack();
+   VolleyTracing volleyTracing = VolleyTracing.builder(splunkRum).build();
+
+The following example shows how to retrieve an instance of ``HurlStack`` from your ``volleyTracing`` instance:
+
+.. code-block:: java
+   
+   HurlStack hurlStack = volleyTracing.newHurlStack();
+
+You can then us1e the ``hurlStack`` instance to create your request queue and send requests as usual.
+
+.. note:: You can also extra request and response headers, which appear with the ``http.request.header.`` and ``http.response.header.`` prefixes.
