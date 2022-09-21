@@ -280,12 +280,6 @@ Web app limits
    * - :ref:`organization-invitations-per-day`
      - 5,000
 
-   * - :ref:`dashboard-group-links-per-team`
-     - 50
-
-   * - :ref:`detector-links-per-team`
-     - 700
-
    * - :ref:`maximum-number-of-dashboards-you-can-retrieve`
      - 20,000
 
@@ -343,22 +337,6 @@ Maximum number of dashboards you can retrieve
    * :strong:`Customer impact`: When you exceed this limit, the user interface displays the error message "Unexpected error has occurred". After you exceed the limit, the dashboards page stops displaying dashboards.
 
 .. _dashboard-group-links-per-team:
-
-Dashboard group links per team
-------------------------------------------------
-
-   * :strong:`Default limit value`: 50
-   * :strong:`Notes`: Maximum number of dashboard groups you can link to a team.
-   * :strong:`Customer impact`: You can't link additional dashboard groups.
-
-.. _detector-links-per-team:
-
-Detector links per team
-------------------------------------------------
-
-   * :strong:`Default limit value`: 700
-   * :strong:`Notes`: Number of detectors you can link to a team.
-   * :strong:`Customer impact`: You can't link additional detectors.
 
 .. _number-of-input-mts-per-job:
 

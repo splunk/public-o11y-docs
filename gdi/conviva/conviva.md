@@ -92,7 +92,7 @@ monitors:
 ```
 
 Individual metrics are configured as a list of metricConfigs, as shown in the following sample configuration. The
-metrics are fetched using the specified metricParameter. See the list of metric parameters in the [Metrics](#metrics) section.
+metrics are fetched using the specified metricParameter. See the list of metric parameters in the [metrics](#metrics) section.
 
 The Conviva metrics reported to Observability Cloud are prefixed by `conviva.`, `conviva.quality_metriclens.` and
 `conviva.audience_metriclens.` accordingly. The metric names are the `titles` of the metrics, which correspond to the Conviva

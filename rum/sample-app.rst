@@ -14,12 +14,12 @@ The splunk-otel-android library includes a demo application called sample-app th
 
 To access the sample app, see the :new-page:`sample-app <https://github.com/signalfx/splunk-otel-android/tree/main/sample-app>` in the splunk-otel-android project on GitHub.  
 
-To use the sample app, configure the following two properties in the :code:`local.properties file` :
+To use the sample app, configure the following two properties in the :code:`local.properties file`. The Splunk RUM access token needs to be for the realm you selected. 
 
-.. code-block:: 
+.. code-block:: java
 
+    rum.realm=<realm>
     rum.access.token=<Splunk RUM access token>
-    rum.beacon.url=https://rum-ingest.<realm>.signalfx.com/v1/rum
 
 iOS demo app 
 ===================

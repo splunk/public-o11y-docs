@@ -86,8 +86,8 @@ Configure the following options to change the behavior of the request done on th
 * Configure the `httpHeaders` option to define request headers. Use this option to override the `host` header.
 * Configure the `requestBody` option to provide a body to the request. The form of this body depends on the `Content-Type` header. For example, `{"foo":"bar"}` with `Content-Type: application/json`.
 * Configure the `noRedirects:false` option to stop the URL from following redirects. The default value is `true`.
- 
-The [Configuration examples](#configuration-examples) section shows you request behaviors for different configurations.
+
+See [configuration examples](#examples) for different request behaviors.
 
 The following configuration options change the resulting values:
 
@@ -101,7 +101,7 @@ The following HTTP headers let the client and the server pass additional informa
 * `Host` to change the request, that is, to bypass CDN or load balancer requesting directly the backend. 
 * `Content-Type` to indicate the media type of the resource. For example, `json`, `xml`, or `octet-stream`.
 
-### Configuration examples
+### Examples
 
 This section provides `curl` commands with their corresponding configuration.
 

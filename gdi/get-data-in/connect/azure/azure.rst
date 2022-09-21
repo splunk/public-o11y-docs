@@ -50,10 +50,9 @@ To prepare Microsoft Azure for connection to Splunk Observability Cloud, do the 
 
 #. Create an Azure Active Directory application by following these steps:
 
-   #. Open a new tab in your web browser.
-   #. Login to your Azure portal.
+   #. Log into your Azure portal.
    #. Navigate to :menuselection:`Azure Active Directory` and select :menuselection:`App registrations`. Then select :guilabel:`New registration` at the top of the page.
-   #. Enter the name, indicate access type, select :menuselection:`Web`, enter your sign-on URL, and then select :guilabel:`Register`.
+   #. Enter the name, indicate access type, and then select :guilabel:`Register`.
 
       Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
    #. The Azure portal displays summary information about the application. Save the following information to use when you create
