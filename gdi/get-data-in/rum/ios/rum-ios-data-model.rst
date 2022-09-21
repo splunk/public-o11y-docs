@@ -232,9 +232,7 @@ Slow rendering detection spans have the following attribute:
      - Description
    * - ``count``
      - Integer
-     - Number of observed slow or frozen frames during a single interval. Intervals last 1 second by default. To change the polling interval duration, pass a positive duration, in milliseconds, to the ``slowFrameDetectionThresholdMs``
-     and ``frozenFrameDetectionThresholdMs`` settings.
-
+     - Number of observed slow or frozen frames during a single interval. Intervals last 1 second by default. To change the polling interval duration, pass a positive duration, in milliseconds, to the ``slowFrameDetectionThresholdMs`` and ``frozenFrameDetectionThresholdMs`` settings.
 
 HTTP clients
 ------------------------------------
