@@ -255,6 +255,6 @@ If your changes aren't ready for review, click the `Mark as Draft` button; that 
 
 Copy a link to your merge request or MR and paste it in the #o11y-docs channel in Slack. A doc team member will reach out to you to triage the request and review the merge request.
 
-## Note on developer docs
+## Note on developer docs *
 
 For information on the Observability Cloud developer documentation, see [How to author Splunk Observability Cloud developer documentation](https://signalfuse.atlassian.net/wiki/spaces/DOCS/pages/130876682/How+to+author+for+the+Splunk+Observability+Cloud+developer+documentation).
