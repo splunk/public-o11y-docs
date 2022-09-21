@@ -66,7 +66,7 @@ Use the following settings to configure the iOS RUM agent:
    * - :code:`spanDiskCacheMaxSize`
      - Threshold, in megabytes, from which spans start to be dropped from the disk cache. The oldest spans are dropped first. Only applicable when disk caching is enabled. The default value is ``25`` megabytes.
    * - :code:`slowRenderingDetectionEnabled`
-     -Enable the slow rendering detection feature. The default value is ``false``. See :ref:`ios-slow-rendering-data`.
+     - Enable the slow rendering detection feature. The default value is ``false``. See :ref:`ios-slow-rendering-data`.
    * - :code:`slowFrameDetectionThresholdMs`
      - Optional setting that tags as slow all frames that took more than the specified time, in milliseconds. The default value is ``16.7`` milliseconds.
    * - :code:`frozenFrameDetectionThresholdMs`
