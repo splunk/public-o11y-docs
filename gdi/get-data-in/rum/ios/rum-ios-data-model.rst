@@ -50,9 +50,6 @@ The following properties are common to all applications instrumented for Splunk 
    * - ``tags``
      - Object
      - Additional context, allowing to search and analyze spans based on specific tags.
-   * - ``annotations``
-     - Array
-     - Associates events that explain latency with the time they happened.
    * - ``TraceFlags``
      - Struct
      - Represents global trace options. Options are propagated to all child spans and determine features such as whether a span is traced.
@@ -214,9 +211,6 @@ Network monitoring produces spans with the name ``network.change`` and the follo
    * - ``net.host.connection.type``
      - String
      - Connection type. Possible values are: ``unavailable``, ``cell``, ``wifi``, ``unknown``, ``vpn``.
-   * - ``net.host.connection.subtype``
-     - String
-     - Detailed information about the connection type. For example, the type of ``cell`` connection, like ``GSM`` or ``LTE``.
 
 .. _ios-slow-rendering-data:
 
