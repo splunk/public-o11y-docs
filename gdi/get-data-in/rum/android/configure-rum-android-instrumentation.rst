@@ -106,12 +106,12 @@ Volley HTTP (Experimental)
 
 To instrument Volley HTTP, add the ``splunk-otel-android-volley`` dependency to the ``build.gradle.kts`` file:
 
-.. code-block:: gradle
+.. code-block:: java
 
    dependencies {
-      ...
+      //...
       implementation("com.splunk:splunk-otel-android-volley:0.16.0")
-      ...
+      //...
    }   
 
 Use the ``VolleyTracing`` class to create an instance of ``VolleyTracing``, as in the following example:
@@ -129,7 +129,7 @@ The following example shows how to retrieve an instance of ``HurlStack`` from yo
 You can then use the ``hurlStack`` instance to create your request queue and send requests as usual.
 
 Capture additional request and response headers
--------------------------------------------
+-------------------------------------------------
 
 You can capture additional request and response headers using the HTTP instrumentations. Additional headers appear with the ``http.request.header.`` and ``http.response.header.`` prefixes.
 
