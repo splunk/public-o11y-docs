@@ -34,7 +34,7 @@ To filter unwanted metrics, see the filter processor documentation on GitHub: [h
 
 ## Configuration
 
-Set the collection interval and categories of metrics to scrape in the `hostmetrics` section of the configuration YAML file, as shown in the following example:
+The collection interval and the categories of metrics to be scraped can be [configured](#scraper-configuration), as shown in the following example.
 
 ```yaml
 hostmetrics:
@@ -45,7 +45,6 @@ hostmetrics:
     ...
 ```
 
-To learn about scraper configuration, see the [Scraper configuration](#scraper-configuration) section.
 The following table shows the available scrapers:
 
 | Scraper    | Supported OS                                                            | Description                                            |

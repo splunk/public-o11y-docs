@@ -85,10 +85,8 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/docker/metrics.yaml"></div>
 
-## Get help
 
-```{include} /_includes/troubleshooting.md
-```
+## Troubleshooting
 
 ### Protocol not available error
 
@@ -99,3 +97,8 @@ Error: Error initializing Docker client: protocol not available
 ```
 
 edit the configuration and replace `unix:///var/run/docker.sock` with `npipe:////.//pipe//docker_engine`.
+
+## Get help
+
+```{include} /_includes/troubleshooting.md
+```
