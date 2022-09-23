@@ -19,8 +19,7 @@ Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS L
 
 4. In the :guilabel:`Search` field, search for :guilabel:`AWS Lambda`.
 
-5. Click the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
-
+5. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
 .. _otel-lambda-layer-requirements:
 
@@ -45,15 +44,22 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. In the AWS Lambda console, select the function that you want to instrument.
 
-#. In the :guilabel:`Layers` section, click :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
+#. In the :guilabel:`Layers` section, select :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
 
-#. Copy the Amazon Resource Name (ARN) that matches the region of your Lambda function from the following list:
+#. Copy the Amazon Resource Name (ARN) for the region of your Lambda function from the list matching your architecture:
 
-   https://github.com/signalfx/lambda-layer-versions/blob/master/splunk-apm/splunk-apm.md
+   - Standard x86_64: https://github.com/signalfx/lambda-layer-versions/blob/master/splunk-apm/splunk-apm.md
+   - Graviton2 ARM64: https://github.com/signalfx/lambda-layer-versions/blob/master/splunk-apm/splunk-apm-arm.md
 
-#. Paste the selected ARN in the :guilabel:`Specify an ARN` field and click :guilabel:`Add`.
+#. Paste the selected ARN in the :guilabel:`Specify an ARN` field and select :guilabel:`Add`.
 
 #. Check that the Splunk layer appears in the :guilabel:`Layers` table.
+
+.. tip:: You can automate the update of the Lambda layer using the AWS CLI. The following command, for example, retrieves the latest version of the Splunk layer for x86_64 and the ``us-east-1`` region:
+
+   .. code-block:: bash
+
+      aws lambda list-layer-versions --layer-name splunk-apm --region us-east-1 --query 'LayerVersions[0].LayerVersionArn'
 
 .. _set-env-vars-otel-lambda:
 
@@ -116,6 +122,8 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
                .. code-tab:: shell Ruby
 
                   /opt/ruby-otel-handler
+
+                  .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
 
       * - (Optional) ``OTEL_SERVICE_NAME``
         - The name of your service. If you don't provide a value, the agent uses the name of your function as the service name.

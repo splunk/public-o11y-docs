@@ -21,6 +21,10 @@ To generate all the basic installation commands for your environment and applica
 #. Select the :guilabel:`APM` product.
 #. Select the :guilabel:`Java` tile to open the Java guided setup.
 
+.. raw:: html
+
+   <script id="asciicast-455413" src="https://asciinema.org/a/455413.js" async></script>
+
 .. _install-enable-jvm-agent:
 
 Install and enable the Java agent
