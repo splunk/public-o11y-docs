@@ -1,0 +1,10 @@
+# Author: Peng Yan(pyan@splunk.com)
+# Repo: https://cd.splunkdev.com/it-engineering/it-docs/product-docs
+# The pipeline will generate static content in branches.
+# --- deploying non-master branch to private network nginx server (only VPN user can have access)
+# --- deploying master/main branch to cloudfront 
+include:
+  - project: 'it-engineering/it-cicd/templates/it-docs'
+    file: 'cicd.yml'
+  - project: 'it-engineering/it-cicd/templates/it-docs'
+    file: 'build.yml'
