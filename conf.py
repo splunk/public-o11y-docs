@@ -8,12 +8,11 @@
 # Modified by fferribenedetti 2021-07-05
 # Modified by jmalin 2022-09-22: Cleanup for use in GitHub documentation system
 #
-# Values that are commented out describe the assumed default.
 
 # -- General configuration ------------------------------------------------
 
 #
-# Add modules that support adding modules within the repository 
+# Add modules that support adding local modules 
 import sys
 import os
 
