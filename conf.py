@@ -8,6 +8,7 @@
 # Modified by fferribenedetti 2021-07-05
 # Modified by jmalin 2022-09-22: Cleanup for use in GitHub documentation system
 #
+# Hack: Add a line to force a commit/push
 
 # -- General configuration ------------------------------------------------
 
