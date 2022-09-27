@@ -57,20 +57,8 @@ Use the following settings to configure the iOS RUM agent:
      - Regular expression pattern that matches URLs you want to ignore when reporting HTTP activity.
    * - :code:`spanFilter`
      - Closure of type ``((SpanData) -> SpanData?)?`` to modify or ignore spans. See :ref:`ios-rum-span-filtering`.
-   * - :code:`sessionSamplingRatio`
-     - Percentage of sessions to sample. Expressed as a proportion in the range ``0.0`` to ``1.0``. The default value is ``1.0``.
    * - :code:`allowInsecureBeacon`
      - If set to ``true``, this setting allows beacon URLs that use the HTTP protocol. The default value is ``false``.
-   * - :code:`enableDiskCache`
-     - Enables caching of exported spans. All spans are written to local storage and deleted after a successful export. The default value is ``false``.
-   * - :code:`spanDiskCacheMaxSize`
-     - Threshold, in megabytes, from which spans start to be dropped from the disk cache. The oldest spans are dropped first. Only applicable when disk caching is enabled. The default value is ``25`` megabytes.
-   * - :code:`slowRenderingDetectionEnabled`
-     - Enable the slow rendering detection feature. The default value is ``false``. See :ref:`ios-slow-rendering-data`.
-   * - :code:`slowFrameDetectionThresholdMs`
-     - Optional setting that tags as slow all frames that took more than the specified time, in milliseconds. The default value is ``16.7`` milliseconds.
-   * - :code:`frozenFrameDetectionThresholdMs`
-     - Optional setting that tags as frozen all frames that took more than the specified time, in milliseconds. The default value is ``700`` milliseconds.
    * - :code:`debug`
      - Enables debug logging. The default value is ``false``.
 
