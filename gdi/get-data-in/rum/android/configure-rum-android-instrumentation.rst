@@ -133,7 +133,7 @@ Capture additional request and response headers
 
 You can capture additional request and response headers using the HTTP instrumentations. Additional headers appear with the ``http.request.header.`` and ``http.response.header.`` prefixes.
 
-To capture additional headers, provide a list of headers that you want to capture to the builder, as in the following example:
+To capture additional headers, provide the builder with a list of headers to catch. For example:
 
 .. code-block:: java
   
