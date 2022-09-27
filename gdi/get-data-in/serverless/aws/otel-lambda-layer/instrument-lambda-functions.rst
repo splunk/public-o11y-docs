@@ -130,8 +130,8 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable. See :ref:`go-serverless-instrumentation`.
 
-      * - (Optional) ``OTEL_SERVICE_NAME``
-        - The name of your service. If you don't provide a value, the agent uses the name of your function as the service name.
+      * - ``OTEL_SERVICE_NAME``
+        - The name of your service.
 
       * - (Optional) ``OTEL_RESOURCE_ATTRIBUTES``
         - Define the name of the deployment environment of your function by setting this environment variable to ``deployment.environment=<name-of-your-environment>``.
