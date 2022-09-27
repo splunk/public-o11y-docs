@@ -147,7 +147,7 @@ Instrument Go functions in AWS Lambda
 
 To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
 
-#. Run the following command to install the ``otellambda`` and the Splunk OTel Go distribution:
+#. Run the following commands to install the ``otellambda`` and the Splunk OTel Go distribution:
 
    .. code-block:: bash
 
