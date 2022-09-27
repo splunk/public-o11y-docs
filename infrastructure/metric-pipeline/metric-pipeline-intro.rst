@@ -5,20 +5,20 @@
 .. _metric-pipeline-intro:
 
 ******************************************************
-Introduction to metrics pipeline management
+Introduction to metric pipeline management
 ******************************************************
 
 .. meta::
-    :description: Introduction to metrics pipeline management in Splunk Infrastructure Monitoring
+    :description: Introduction to metric pipeline management in Splunk Infrastructure Monitoring
 
-Metrics pipeline management is an evolution on Splunk Observability Cloud metrics platform that offers you greater storage flexibility and processing options with enhanced data filtering and aggregation. 
+Metric pipeline management is an evolution on Splunk Observability Cloud metrics platform that offers you greater storage flexibility and processing options with enhanced data filtering and aggregation. 
 
-With metrics pipeline management, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without making any changes to your instrumentation.
+With metric pipeline management, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without making any changes to your instrumentation.
 
-How does metrics pipeline management work?
+How does metric pipeline management work?
 ========================================================
 
-The driving mechanism behind metrics pipeline management are aggregation and data dropping. For each metric you send to Observability Cloud, you can control the ingestion volume with a set of aggregation and data dropping rules.
+The driving mechanism behind metric pipeline management are aggregation and data dropping. For each metric you send to Observability Cloud, you can control the ingestion volume with a set of aggregation and data dropping rules.
 
 * Aggregation lets you roll up your selected metric data into new metric time series (MTS) that take up less storage and increase computational performance. To learn more, see :ref:`aggregation`.
 * Data dropping lets you discard any data you don't want to keep after aggregation rules are applied. To learn more, see :ref:`data-dropping`.
@@ -54,7 +54,7 @@ Example
 ++++++++
 
 
-Use cases for metrics pipeline management
+Use cases for metric pipeline management
 ==================================================
 
 
