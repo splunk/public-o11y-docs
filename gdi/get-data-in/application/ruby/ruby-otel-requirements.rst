@@ -14,7 +14,7 @@ Meet these requirements to instrument Ruby applications for Splunk Observability
 Supported libraries and frameworks
 =================================================
 
-The Splunk Distribution of OpenTelemetry Ruby instruments numerous libraries and packages. For a complete list, see :new-page:`Supported libraries <https://github.com/open-telemetry/opentelemetry-ruby/blob/main/instrumentation/README.md>` in the OpenTelemetry documentation.
+The Splunk Distribution of OpenTelemetry Ruby instruments numerous libraries and packages. For a complete list, see :new-page:`Supported libraries <https://github.com/open-telemetry/opentelemetry-ruby-contrib/tree/main/instrumentation>` in the OpenTelemetry documentation.
 
 .. _ruby-requirements:
 
