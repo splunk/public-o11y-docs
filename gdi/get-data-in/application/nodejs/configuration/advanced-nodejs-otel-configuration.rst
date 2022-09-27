@@ -188,7 +188,7 @@ The following settings enable runtime metrics collection:
    :header-rows: 1
 
    * - Environment variable
-     - Argument to ``startTracing()``
+     - Argument to ``startMetrics()``
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
      - Enabled by calling ``startMetrics``.

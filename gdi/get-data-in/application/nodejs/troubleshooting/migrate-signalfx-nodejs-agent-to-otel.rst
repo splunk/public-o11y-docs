@@ -174,6 +174,11 @@ By default, the Splunk Distribution of OpenTelemetry JS uses the OTLP exporter i
 - If the receiver endpoint you were using with the SignalFx Tracing Library supports OTLP, set ``OTEL_EXPORTER_OTLP_ENDPOINT`` instead of ``SIGNALFX_ENDPOINT_URL``. The OTel Collector supports OTLP. 
 - If you have the exporter set to Jaeger, use ``OTEL_EXPORTER_JAEGER_ENDPOINT`` instead of ``SIGNALFX_ENDPOINT_URL`` and configure the Jaeger Exporter (see :ref:`trace-exporters-settings-nodejs`).
 
+Migrate custom metric collection
+--------------------------------------------------
+
+To migrate your custom metric instrumentation from the SignalFx client library, see :ref:`nodejs-otel-metrics-migration`.`
+
 .. _considerations-nodejs-migration:
 
 Considerations for migrating to Splunk Distribution of OpenTelemetry JS

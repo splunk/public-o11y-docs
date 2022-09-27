@@ -11,19 +11,30 @@ The Splunk Distribution of OpenTelemetry JS collects runtime and custom metrics.
 
 To learn about the different metric types, see :ref:`metric-types`.
 
+.. note:: Runtime and trace metrics collection is an experimental feature subject to future changes.
+
 .. _enable-nodejs-metrics:
 
 Enable metrics collection
 ====================================================
 
-To collect Node.js runtime metrics, see :ref:`metrics-configuration-nodejs`.
-
-.. note:: Application metrics collection is an experimental feature subject to future changes.
+To collect Node.js metrics, see :ref:`metrics-configuration-nodejs`.
 
 .. _nodejs-otel-runtime-metrics:
 
 Runtime metrics
 ================================================
+
+To enable runtime metrics, see :ref:`metrics-configuration-nodejs`. The following example shows how to enable runtime metrics by passing the ``runtimeMetricsEnabled`` argument to the ``startMetrics`` method:
+
+.. code-block:: javascript
+
+   const { startMetrics } = require('@splunk/otel');
+
+   startMetrics({
+      serviceName: 'my-service',
+      runtimeMetricsEnabled: true,
+   });
 
 The following runtime metrics are automatically collected and exported:
 
@@ -35,28 +46,28 @@ The following runtime metrics are automatically collected and exported:
    * - Metric
      - Type
      - Description
-   * - ``nodejs.memory.heap.total``
+   * - ``process.runtime.nodejs.memory.heap.total ``
      - Gauge
      - Heap total, in bytes. Extracted from ``process.memoryUsage().heapTotal``.
-   * - ``nodejs.memory.heap.used``
+   * - ``process.runtime.nodejs.memory.heap.used``
      - Gauge
      - Heap used, in bytes. Extracted from ``process.memoryUsage().heapUsed``.
-   * - ``nodejs.memory.rss``
+   * - ``process.runtime.nodejs.memory.rss``
      - Gauge
      - Resident set size, in bytes. Extracted from ``process.memoryUsage().rss``.
-   * - ``nodejs.memory.gc.size``
+   * - ``process.runtime.nodejs.memory.gc.size``
      - Cumulative counter
      - Total collected by the garbage collector, in bytes.
-   * - ``nodejs.memory.gc.pause``
+   * - ``process.runtime.nodejs.memory.gc.pause``
      - Cumulative counter
      - Time spent by the garbage collector, in nanoseconds.
-   * - ``nodejs.memory.gc.count``
+   * - ``process.runtime.nodejs.memory.gc.count``
      - Cumulative counter
      - Number of garbage collector executions.
-   * - ``nodejs.event_loop.lag.max``
+   * - ``process.runtime.nodejs.event_loop.lag.max``
      - Gauge
      - Maximum event loop lag within the collection interval, in nanoseconds.
-   * - ``nodejs.event_loop.lag.min``
+   * - ``process.runtime.nodejs.event_loop.lag.min``
      - Gauge
      - Minimum event loop lag within the collection interval, in nanoseconds.
 
@@ -65,12 +76,128 @@ The following runtime metrics are automatically collected and exported:
 Custom metrics
 =====================================
 
-The following snippet shows how you can send custom metrics through the internal SignalFx client:
+To send custom application metrics to Observability Cloud, add ``@opentelemetry/api-metrics`` to your dependencies:
 
 .. code-block:: javascript
 
    const { startMetrics } = require('@splunk/otel');
-   const { getSignalFxClient } = startMetrics();
-   getSignalFxClient().send({
-   gauges: [{ metric: 'my.app.foo', value: 42, timestamp: 1442960607000}]
-   })
+   const { Resource } = require('@opentelemetry/resources');
+   const { metrics } = require('@opentelemetry/api-metrics');
+
+   // All fields are optional.
+   startMetrics({
+      // Takes preference over OTEL_SERVICE_NAME environment variable
+      serviceName: '<my-service>',
+      // The suggested resource is filled in using OTEL_RESOURCE_ATTRIBUTES
+      resourceFactory: (suggestedResource: Resource) => {
+         return suggestedResource.merge(new Resource({
+            'my.property': 'xyz',
+            'build': 42,
+         }));
+      },
+      exportIntervalMillis: 1000, // default: 5000
+      // The default exporter is OTLP over gRPC
+      endpoint: 'http://collector:4317',
+   });
+
+   const meter = metrics.getMeter('my-meter');
+   const counter = meter.createCounter('clicks');
+   counter.add(3);
+   
+Set up custom metric readers and exporters
+----------------------------------------------------
+
+You can provide custom exporters and readers using the ``metricReaderFactory`` setting.
+
+.. warning:: Usage of ``metricReaderFactory`` invalidates the ``exportInterval`` and ``endpoint`` settings.
+
+The following example shows how to provide a custom exporter:
+
+.. code-block:: javascript
+
+   const { startMetrics } = require('@splunk/otel');
+   const { PrometheusExporter } = require('@opentelemetry/exporter-prometheus');
+   const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-http');
+   const { PeriodicExportingMetricReader } = require('@opentelemetry/sdk-metrics-base');
+
+   startMetrics({
+      serviceName: 'my-service',
+      metricReaderFactory: () => {
+         return [
+            new PrometheusExporter(),
+            new PeriodicExportingMetricReader({
+               exportIntervalMillis: 1000,
+               exporter: new OTLPMetricExporter({ url: 'http://localhost:4318' })
+            })
+         ]
+      }
+   });
+
+Select the type of aggregation temporality
+-----------------------------------------
+
+Aggregation temporality describes how data is reported over time.
+
+To configure aggregation temporality in your custom metrics, use ``AggregationTemporality`` as in the example:
+
+.. code-block:: javascript
+
+   const { startMetrics } = require('@splunk/otel');
+   const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-grpc');
+   const { AggregationTemporality, PeriodicExportingMetricReader } = require('@opentelemetry/sdk-metrics-base');
+
+   startMetrics({
+      serviceName: 'my-service',
+      metricReaderFactory: () => {
+         return [
+            new PeriodicExportingMetricReader({
+               exporter: new OTLPMetricExporter({
+                  temporalityPreference: AggregationTemporality.DELTA
+               })
+            })
+         ]
+      }
+   });
+
+.. _nodejs-otel-metrics-migration:
+
+Migrate from SignalFx metrics for NodeJS
+===========================================
+
+To migrate your custom metric instrumentation from the SignalFx client library, follow these steps:
+
+#. Replace the ``getSignalFxClient`` dependency with ``opentelemetry/api-metrics``, and initialize metrics collection using ``startMetrics()``. For example:
+
+   .. tabs::
+
+      .. code-tab:: javascript SignalFx (Deprecated)
+
+         const { startMetrics } = require('@splunk/otel');
+         const { getSignalFxClient } = startMetrics({ serviceName: 'my-service' });
+
+      .. code-tab:: javascript OpenTelemetry (Supported)
+
+         const { startMetrics } = require('@splunk/otel');
+         const { metrics } = require('@opentelemetry/api-metrics');
+
+         startMetrics({ serviceName: 'my-service' });
+
+#. Replace calls to ``getSignalFxClient()`` with metrics instances. For example:
+
+      .. tabs::
+
+         .. code-tab:: javascript SignalFx (Deprecated)
+
+            getSignalFxClient().send({
+               gauges: [{ metric: 'cpu', value: 42, timestamp: 1442960607000}],
+               cumulative_counters: [{ metric: 'clicks', value: 99, timestamp: 1442960607000}],
+            })
+
+         .. code-tab:: javascript OpenTelemetry (Supported)
+
+            const meter = metrics.getMeter('my-meter');
+            meter.createObservableGauge('cpu', result => {
+               result.observe(42);
+            });
+            const counter = meter.createCounter('clicks');
+            counter.add(99);
