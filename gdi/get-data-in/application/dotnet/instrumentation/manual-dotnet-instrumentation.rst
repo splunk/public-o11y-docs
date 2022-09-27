@@ -9,7 +9,7 @@ Manually instrument .NET applications for Splunk Observability Cloud
 
 The SignalFx Instrumentation for .NET provides and registers an OpenTracing-compatible global tracer that you can use to instrument your applications manually for Splunk Observability Cloud. Custom or manual instrumentation can be helpful when you need to add custom attributes to spans, or need to generate spans manually.
 
-.. note:: The SignalFx Instrumentation for .NET supports OpenTracing version 0.12.1 and higher.
+.. note:: The SignalFx Instrumentation for .NET supports OpenTracing version 0.12.1.
 
 To instrument your .NET application manually, follow these steps:
 
