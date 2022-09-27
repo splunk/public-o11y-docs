@@ -70,6 +70,11 @@ The following properties are common to all applications instrumented for Splunk 
 
 The following table describes each value of ``SpanKind``:
 
+.. list-table:: 
+   :widths: 30 70
+   :header-rows: 1
+   :width: 100%
+
    * - Name
      - Description
    * - ``Internal``
@@ -91,6 +96,7 @@ By default, the iOS RUM agent adds the following attributes to all spans:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -125,6 +131,7 @@ By default, the iOS RUM agent adds the following resource attributes to all span
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -161,6 +168,7 @@ The iOS RUM agent adds the following crash reporting attributes to spans that re
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -201,6 +209,7 @@ Network monitoring produces spans with the name ``network.change`` and the follo
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -226,6 +235,7 @@ Slow rendering detection spans have the following attribute:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -244,6 +254,7 @@ The HTTP client instrumentation collects the following OpenTelemetry HTTP attrib
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -266,6 +277,7 @@ The HTTP instrumentation also collects the following attributes:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -288,7 +300,8 @@ UIAction monitoring collects the following attributes:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
-
+   :width: 100%
+   
    * - Name
      - Type
      - Description
