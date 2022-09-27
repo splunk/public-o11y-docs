@@ -85,6 +85,9 @@ The following settings control tracing limits and attributes:
    * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
      - Not applicable
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
+   * - ``SPLUNK_REDIS_INCLUDE_COMMAND_ARGS``
+     - Not applicable
+     - Whether to include the full Redis query in ``db.statement`` span attributes when using the Redis instrumentation. Default value is ``false``.
 
 .. _trace-exporters-settings-nodejs:
 
@@ -155,8 +158,11 @@ The following settings control the AlwaysOn Profiling feature for the Node.js ag
      - Argument to ``startProfiling()``
      - Description
    * - ``SPLUNK_PROFILER_ENABLED``
-     - 
+     - ``profilingEnabled``
      - Enables AlwaysOn Profiling. The default value is ``false``.
+   * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
+     - ``memoryProfilingEnabled``
+     - Enables memory profiling for AlwaysOn Profiling. The default value is ``false``.
    * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
      - ``endpoint``
      - The collector endpoint for profiler logs. The default value is ``localhost:4317``.
