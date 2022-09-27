@@ -191,14 +191,23 @@ The following settings enable runtime metrics collection:
      - Argument to ``startTracing()``
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
-     - 
-     - Enables runtime metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
-   * - ``SPLUNK_METRICS_ENDPOINT``
+     - Enabled by calling ``startMetrics``.
+     - Enables metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
+   * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
      - ``endpoint``
-     - The metrics endpoint. The default value is ``http://localhost:9943``.
-   * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
-     - ``exportInterval``
-     - The interval, in milliseconds, of metrics collection and exporting. The default value is ``5000``.
+     - The metrics endpoint. The default value is ``http://localhost:4317``.
+   * - ``OTEL_METRIC_EXPORT_INTERVAL``
+     - ``exportIntervalMillis``
+     - The interval, in milliseconds, of metrics collection and exporting. The default value is ``30000``.
+   * - ``SPLUNK_RUNTIME_METRICS_ENABLED``
+     - ``runtimeMetricsEnabled``
+     - Enable collecting and exporting of runtime metrics. The default value is ``false``.
+   * - ``SPLUNK_RUNTIME_METRICS_COLLECTION_INTERVAL``
+     - ``runtimeMetricsCollectionIntervalMillis``
+     - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
+   * - 
+     - ``resourceFactory``
+     - Callback that lets you filter the default resource or provide a custom one. The function takes one argument of type ``Resource``, which is prefilled by the SDK using the service name, environment, host, and process attributes.
 
 .. note:: To pass settings as arguments, use the ``startMetrics()`` function.
 

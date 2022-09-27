@@ -30,6 +30,7 @@ The following runtime metrics are automatically collected and exported:
 .. list-table:: 
    :header-rows: 1
    :widths: 40 10 50
+   :width: 100%
 
    * - Metric
      - Type
