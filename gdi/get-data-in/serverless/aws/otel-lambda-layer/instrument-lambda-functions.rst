@@ -67,8 +67,6 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 Configure the Splunk OpenTelemetry Lambda Layer
 ===============================================
 
-.. note:: This step is not required for Go functions. See :ref:`go-serverless-instrumentation`.
-
 Follow these steps to add the required configuration for the Splunk OpenTelemetry Lambda Layer:
 
 1. In the AWS Lambda console, open the function that you are instrumenting.
@@ -128,6 +126,10 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
 
+               .. code-tab:: shell Go
+
+                  Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable. See :ref:`go-serverless-instrumentation`.
+
       * - (Optional) ``OTEL_SERVICE_NAME``
         - The name of your service. If you don't provide a value, the agent uses the name of your function as the service name.
 
@@ -145,11 +147,12 @@ Instrument Go functions in AWS Lambda
 
 To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
 
-#. Run the following command to install the ``otellambda`` module:
+#. Run the following command to install the ``otellambda`` and the Splunk OTel Go distribution:
 
    .. code-block:: bash
 
       go get -u go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda
+      go get github.com/signalfx/splunk-otel-go/distro
 
 #. Create a wrapper for the OpenTelemetry instrumentation in your function's code. For example:
 
@@ -160,34 +163,28 @@ To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
       import (
          "context"
          "fmt"
+
          "github.com/aws/aws-lambda-go/lambda"
+         "github.com/signalfx/splunk-otel-go/distro"
+         "go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda"
+         "go.opentelemetry.io/otel"
       )
+
+      func main() {
+         distro.Run()
+         flusher := otel.GetTracerProvider().(otellambda.Flusher)
+         lambda.Start(otellambda.InstrumentHandler(HandleRequest, otellambda.WithFlusher(flusher)))
+      }
 
       type MyEvent struct {
          Name string `json:"name"`
       }
 
       func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
-         return fmt.Sprintf("Hello %s!", name.Name ), nil
+         return fmt.Sprintf("Hello %s!", name.Name), nil
       }
 
-      func main() {
-         lambda.Start(HandleRequest)
-      }
-
-#. Use the wrapper to instrument your function. For example:
-
-   .. code-block:: go
-
-      // Add import
-      import "go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda"
-
-      // wrap lambda handler function
-      func main() {
-         lambda.Start(otellambda.InstrumentHandler(HandleRequest))
-      }
-
-.. note:: For a full example, see https://github.com/open-telemetry/opentelemetry-go-contrib/tree/main/instrumentation/github.com/aws/aws-lambda-go/otellambda/example on GitHub.
+.. note:: For a full example, see :new-page:`https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go <https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go>` on GitHub.
 
 .. _serverless-framework-support-aws:
 
