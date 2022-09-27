@@ -1,23 +1,13 @@
 .. _rum-android-data:
 
 ****************************************
-Data collected by the Android RUM agent
+Android data model
 ****************************************
 
 .. meta::
    :description: Understand which RUM data you collect from Android applications when using Splunk Real User Monitoring (RUM).
 
 The Android agent for Splunk Real User Monitoring (RUM) collects the following types of data about your Android application: 
-
-
-Location data  
-=============
-If you choose to set the latitude and longitude for location data by using the Splunk RUM for Android APIs, then Splunk Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
-
-.. note::
-   Splunk Observability Cloud calculates geographical metadata from the latitude and longitude, and then drops the latitude and longitude after processing the data. 
-
-
 
 Common data types
 ==============================================
@@ -34,6 +24,7 @@ The following properties are common to all applications instrumented for Splunk 
 .. list-table:: 
    :widths: 10 10 80
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -71,6 +62,7 @@ By default, the Android RUM agent adds the following attributes to all spans:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -108,6 +100,7 @@ By default, the Android RUM agent adds the following resource attributes to all 
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -144,6 +137,7 @@ The Android RUM agent adds the following crash reporting attributes to spans tha
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -181,6 +175,7 @@ Network monitoring produces spans with the name ``network.change`` and the follo
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -205,6 +200,7 @@ ANR produces spans with the name ``ANR`` and the following attributes:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -231,6 +227,7 @@ Slow rendering detection spans have the following attribute:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -249,6 +246,7 @@ The HTTP client instrumentation collects the following OpenTelemetry HTTP attrib
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -286,6 +284,7 @@ The HTTP instrumentation also collects the following attributes:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -382,3 +381,10 @@ App start monitoring produces spans with the name ``AppStart`` and the following
      - The type of start. Can be ``cold``, ``warm``, or ``hot``.
 
 
+Location data  
+=============
+
+If you choose to set the latitude and longitude for location data by using the Splunk RUM for Android APIs, Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
+
+.. note::
+   Splunk Observability Cloud calculates geographical metadata from the latitude and longitude, and drops the latitude and longitude after processing the data. 
