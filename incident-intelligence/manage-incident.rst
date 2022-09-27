@@ -33,8 +33,8 @@ If your services have an incident workflow, responders are automatically added t
 #. Select the incident from the incident list.
 #. Select :guilabel:`Add Responders`.
 #. You can add responders by selecting a schedule or you can add a specific responder by name.
-   #. To add a responder by schedule, select a schedule in the :guilabel:`By schedule` list. When you select a schedule, the responder in the schedule who is currently on call is notified. 
-   #. To add a responder by name, Enter user names in the :guilabel:`By name` field and select the desired user when they appear. You can add multiple responders by name. 
+    #. To add a responder by schedule, select a schedule in the :guilabel:`By schedule` list. When you select a schedule, the responder in the schedule who is currently on call is notified. 
+    #. To add a responder by name, enter user names in the :guilabel:`By name` field and select the desired user when they appear. You can add multiple responders by name. 
 #. If you need to remove a responder, hover over the responders you want to remove, select the menu, and then select :guilabel:`Remove`.
 #. Select :guilabel:`Save`.
 
