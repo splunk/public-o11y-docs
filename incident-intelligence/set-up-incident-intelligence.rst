@@ -182,18 +182,21 @@ You can also view who's on all in :guilabel:`Incident Response Configuration`. T
 Sync your on-call schedule to your personal calendar
 =======================================================
 
-If you want to sync your on-call schedule to your personal calendar follow the steps for your calendar app.
+To access your personal on-call schedule follow these steps: 
+
+#. On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident Intelligence, select either :guilabel:`You are currently on call` or :guilabel:`On-call schedules`. (If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. If you are not on call, :guilabel:`On-call schedules` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs.)
+#. Select :guilabel:`Sync to calendar`.
+#. Copy the link.
+
+You can paste this link in a browser to download the calendar. If you want to sync your on-call schedule to your personal calendar follow the steps for your calendar app.
 
 .. _sync-to-google-calendar:
 
 Sync your on-call schedule to your Google Calendar
 ------------------------------------------------------
 
-To sync an on-call schedule to your Google Calendar, follow these steps:
+To sync your on-call schedule to your Google Calendar, follow these steps:
 
-#. On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident Intelligence, select either :guilabel:`You are currently on call` or :guilabel:`On-call schedules`. (If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. If you are not on call, :guilabel:`On-call schedules` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs.)
-#. Select :guilabel:`Sync to calendar`.
-#. Copy the link.
 #. Go to your Google Calendar.
 #. Select the plus icon next to :guilabel:`Other calendars`.
 #. Select :guilabel:`From URL`.
@@ -211,10 +214,8 @@ The calendar is added to your other calendars. The default calendar name is the 
 Sync your on-call schedule to your Microsoft Outlook Calendar
 ----------------------------------------------------------------
 
-To sync an on-call schedule to your Microsoft Outlook Calendar, follow these steps:
+To sync your on-call schedule to your Microsoft Outlook Calendar, follow these steps:
 
-#. On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident Intelligence, select either :guilabel:`You are currently on call` or :guilabel:`On-call schedules`. (If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. If you are not on call, :guilabel:`On-call schedules` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs.)
-#. Select :guilabel:`Sync to calendar`.
 #. Go to your Microsoft Outlook Calendar.
 #. Select :guilabel:`Add calendar` > :guilabel:`Subscribe from web`.
 #. Paste your copied Incident Intelligence calendar URL.
