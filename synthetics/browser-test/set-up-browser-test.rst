@@ -53,3 +53,49 @@ To edit your Browser test, do the following:
 #. Select :guilabel:`Edit test` to edit your test configuration.
 
 If you change the name of your test or the name of a synthetic transaction, it may take up to 20 minutes for the updated name to appear in your charts and detectors.
+
+
+
+.. _browser-adv-setting:
+
+Advanced settings for Browser tests 
+============================================================
+There are many reasons why you might want to configure advanced settings for your synthetics tests. Here are a few: 
+
+* Accessing a site with a modal that appears randomly and interrupts the flow of the test. For example, a marketing modal might prompt a user to sign up for a rewards program. To circumvent this issue you can set a cookie to stop the popup modal from appearing and interfering with your test.  
+* Running a test on a site that requires users to login to access the site. 
+* Specifying the type of device on which you want to run your test by setting the ``User-Agent`` header on requests.
+* Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
+* Ability to filter out requests from analytics on the back-end by sending a specific header in the requests.
+* Running a test on a pre-production site that has a self-signed certificate.
+
+
+.. _browser-cookies:
+
+Set cookies
+-------------
+
+Set cookies in the browser before the test starts. For example, to circumvent a popup modal from randomly appearing and interfering with your test you can set cookies. Any cookies that are set will apply to the domain of the starting URL of the check. Splunk Synthetics Monitoring uses the :new-page:`public suffix list <https://publicsuffix.org/>` to determine the domain. 
+
+.. _browser-headers:
+
+Set custom headers
+--------------------------
+
+Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back-end by sending a specific header in the requests. You can also use custom headers to set cookies. 
+
+
+.. _browser-auth:
+
+Authentication
+--------------------------
+
+Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using Concealed Global Variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
+
+The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
+
+* Basic Authentication
+* NTLM
+* Kerberos
+* Digest
+ 
