@@ -208,14 +208,14 @@ The calendar is added to your other calendars. The default calendar name is the 
 
 .. _sync-to-microsoft-outlook:
 
-Sync your on-call schedule to your Microsoft Outlook calendar
+Sync your on-call schedule to your Microsoft Outlook Calendar
 ----------------------------------------------------------------
 
-To sync an on-call schedule to your Microsoft Outlook calendar, follow these steps:
+To sync an on-call schedule to your Microsoft Outlook Calendar, follow these steps:
 
 #. On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident Intelligence, select either :guilabel:`You are currently on call` or :guilabel:`On-call schedules`. (If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. If you are not on call, :guilabel:`On-call schedules` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs.)
 #. Select :guilabel:`Sync to calendar`.
-#. Go to your Microsoft Outlook calendar.
+#. Go to your Microsoft Outlook Calendar.
 #. Select :guilabel:`Add calendar` > :guilabel:`Subscribe from web`.
 #. Paste your copied Incident Intelligence calendar URL.
 #. Enter a calendar name and customize any other settings you want.
