@@ -22,6 +22,56 @@ Common data types
 
 .. include:: /_includes/rum-data-model.rst
 
+
+
+
+
+.. _rum-ios-metrics:
+
+Metrics 
+=============================================
+The following tables list all of the metrics available in Splunk RUM for iOS. All errors in Splunk RUM have the dimension ``sf_error=true``. 
+Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+
+.. list-table:: 
+   :widths: 5 15 15 65
+   :header-rows: 1
+
+   * - :strong:`Metric name`
+     - :strong:`UI name`
+     - :strong:`Page level metric`
+     - :strong:`Description`
+   * - ``rum.workflow.count``
+     - Custom Event Count
+     - ``rum.node.workflow.count``
+     - The total number of spans with the selected custom event in the given time range. 
+   * - ``rum.workflow.time.ns.p75``
+     - Custom Event Duration
+     - ``rum.node.workflow.time.ns.p75``
+     - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
+   * - ``rum.crash.count``
+     - Mobile crash
+     -  ``rum.node.crash.count``
+     - A crash is when a user encounters an error and has to exit the app.
+   * - ``rum.app_error.count``
+     - App error.
+     - ``rum.node.app_error.count``
+     - App error by page. 
+   * - ``rum.resource_request.count``
+     -  Network or back-end requests/errors
+     - ``rum.node.resource_request.count``
+     - The total number of network requests in a given time range. 
+   * - ``rum.resource_request.time.ns.p75``
+     - Network back-end latency
+     - ``rum.node.resource_request.time.ns.p75``
+     - The p75 time in nanoseconds for the network request latency in the given time range. 
+   
+
+
+
+
+
+
 .. _ios-rum-basic-properties:
  
 Application data

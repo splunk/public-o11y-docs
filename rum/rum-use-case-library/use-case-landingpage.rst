@@ -24,3 +24,4 @@ The following use cases feature examples from Buttercup Industries, a fictitious
 * :ref:`spa-custom-event`
 * :ref:`rum-identify-span-problems`
 * :ref:`rum-mobile-usecase`
+* :ref:`rum-built-in-dashboards`

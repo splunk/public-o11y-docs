@@ -48,7 +48,13 @@ Alerts are triggered based on Infrastructure Monitoring metrics. Metrics are sto
 Types of metrics you can alert on 
 =======================================
 
-You can create alerts on the following kind of metrics. For a comprehensive list of all Splunk RUM metrics, see :ref:`RUM-metrics`.
+You can create alerts on the following kind of metrics. For a comprehensive list of all Splunk RUM metrics, see:
+
+* :ref:`rum-browser-data`
+* :ref:`rum-ios-data`
+* :ref:`manual-android-instrumentation` 
+
+
 To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation.
 
 .. list-table:: 
@@ -122,7 +128,12 @@ Follow these steps to create a detector in RUM:
 
 Create dashboards for your RUM alerts 
 ================================================
-You can create dashboards for both web and mobile metrics. To see a list of the metrics available in Splunk RUM, see :ref:`RUM-metrics`.
+You can create dashboards for both web and mobile metrics. To see a list of the metrics available in Splunk RUM, see:
+
+* :ref:`rum-browser-data`
+* :ref:`rum-ios-data`
+* :ref:`manual-android-instrumentation` 
+
 
 To create charts and dashboard for your RUM alerts and detectors, see:   
 

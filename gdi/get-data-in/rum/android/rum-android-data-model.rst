@@ -100,6 +100,72 @@ By default, the Android RUM agent adds the following attributes to all spans:
      - String
      - Details of the connection. For example, the type of ``cell`` connection, like ``gprs``, ``edge``, or ``umts``.
 
+
+.. _rum-android-metrics:
+
+Metrics 
+=============================================
+The following tables list all of the metrics available in Splunk RUM for Android. All errors in Splunk RUM have the dimension ``sf_error=true``. Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+
+For more information on app startup metrics as defined by Android, see :new-page:`App startup time <https://developer.android.com/topic/performance/vitals/launch-time>` in the Android Developers documentation. 
+
+
+.. list-table:: 
+   :widths: 5 10 10 75
+   :header-rows: 1
+
+   * - :strong:`App level metric name`
+     - :strong:`UI name` 
+     - :strong:`Page level metric`
+     - :strong:`Description`
+   * - ``rum.workflow.count``
+     - Custom Event Count
+     - ``rum.node.workflow.count``
+     - The total number of spans with the selected custom event in the given time range. 
+   * - ``rum.workflow.time.ns.p75``
+     - Custom Event Duration
+     - ``rum.node.workflow.time.ns.p75``
+     - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
+   * - ``rum.crash.count``
+     - Mobile crash
+     - ``rum.node.rum.crash.count``
+     - 
+   * - ``rum.app_error.count``
+     - App error
+     - ``rum.node.rum.app_error.count``
+     -
+   * - ``rum.cold_start.time.ns.p75``
+     -  Cold start time
+     - ``rum.cold_start.time.ns.p75``
+     - 
+   * - ``rum.warm_start.count``
+     - Warm start count
+     - ``rum.node.warm_start.count``
+     - 
+   * - ``rum.warm_start.time.ns.p75``
+     - Warm start time
+     - ``rum.node.warm_start.time.ns.p75``
+     - 
+   * - ``rum.hot_start.count``
+     - Hot start count 
+     - ``rum.node.hot_start.count``
+     - 
+   * - ``rum.hot_start.time.ns.p75``
+     - Hot start time
+     - ``rum.node.hot_start.time.ns.p75``
+     -
+   * - ``rum.resource_request.count``
+     - Network or back-end requests/errors
+     - ``rum.node.resource_request.count``
+     - 
+   * - ``rum.resource_request.time.ns.p75``
+     - Network back-end latency
+     - ``rum.node.resource_request.time.ns.p75``
+     -
+
+
+
+
 Resource attributes
 ==============================================
 
