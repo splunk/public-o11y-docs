@@ -32,6 +32,7 @@ The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lam
 - Python 3.8 and 3.9
 - Node.js 10, 12, and 14
 - Ruby 2.7
+- Go 1.18
 
 For more information, search for "Lambda runtimes" on the AWS documentation website.
 
@@ -65,6 +66,8 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 Configure the Splunk OpenTelemetry Lambda Layer
 ===============================================
+
+.. note:: This step is not required for Go functions. See :ref:`go-serverless-instrumentation`.
 
 Follow these steps to add the required configuration for the Splunk OpenTelemetry Lambda Layer:
 
@@ -134,6 +137,57 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 4. Click :guilabel:`Save` and check that the environment variables appear in the table.
 
 .. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to Observability Cloud ingest endpoints.
+
+.. _go-serverless-instrumentation:
+
+Instrument Go functions in AWS Lambda
+====================================================
+
+To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
+
+#. Run the following command to install the ``otellambda`` module:
+
+   .. code-block:: bash
+
+      go get -u go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda
+
+#. Create a wrapper for the OpenTelemetry instrumentation in your function's code. For example:
+
+   .. code-block:: go
+
+      package main
+
+      import (
+         "context"
+         "fmt"
+         "github.com/aws/aws-lambda-go/lambda"
+      )
+
+      type MyEvent struct {
+         Name string `json:"name"`
+      }
+
+      func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
+         return fmt.Sprintf("Hello %s!", name.Name ), nil
+      }
+
+      func main() {
+         lambda.Start(HandleRequest)
+      }
+
+#. Use the wrapper to instrument your function. For example:
+
+   .. code-block:: go
+
+      // Add import
+      import "go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda"
+
+      // wrap lambda handler function
+      func main() {
+         lambda.Start(otellambda.InstrumentHandler(HandleRequest))
+      }
+
+.. note:: For a full example, see https://github.com/open-telemetry/opentelemetry-go-contrib/tree/main/instrumentation/github.com/aws/aws-lambda-go/otellambda/example on GitHub.
 
 .. _serverless-framework-support-aws:
 
