@@ -67,7 +67,7 @@ Use alert routing to associate alerts with a service. If an alert matches your a
 #. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
 #. Select a filter value. 
 #. Select enter to save your condition. 
-#. Repeat steps 4-8 for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``AND`` operator. To switch an ``AND`` operator to ``OR``, select the ``AND`` operator and select ``OR``.
+#. Repeat steps 4-8 for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the service to confirm your filter conditions are correct. 
 #. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
 
@@ -81,7 +81,7 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 #. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
 #. Select :guilabel:`Services` and then the service you want to add alert grouping conditions to. Each service can have one alert grouping rule.
 #. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
-#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 1 hour and 24 hours, from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
+#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours, from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
 #. Select :guilabel:`Save alert grouping`.
 
 .. _configure-incident-workflows:
@@ -177,21 +177,65 @@ You can also view who's on all in :guilabel:`Incident Response Configuration`. T
    * - Search schedule 
      - Use this tab to view one year of upcoming on-call shifts. Use the date picker to view schedule on a specific date. 
 
-Download an on-call schedule
--------------------------------
-After you create an on-call schedule, you can download the schedule to import into your preferred calendar app. To download an on-call schedule, follow these steps:
+.. _sync-on-call-schedule:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
-#. Select the :guilabel:`On-call schedules` tab. 
-#. Select the :guilabel:`Actions` menu for the schedule you want to download and select :guilabel:`Download`.
-#. Select :guilabel:`Download`. 
+Sync your on-call schedule to your personal calendar
+=======================================================
 
-An .ics file downloads. Import the .ics file to the calendar app of your choice. Changes to your on-call schedule won’t be automatically updated in your personal calendar. You need to download the file again to get schedule updates.  
+To access your personal on-call schedule follow these steps: 
 
-The download includes the next 4 months of your on-call schedule to add to your personal calendar. To see additional future schedule dates past the 4 months that are included in the download, follow these steps:
+#. On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident Intelligence, select either :guilabel:`You are currently on call` or :guilabel:`On-call schedules`. (If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. If you are not on call, :guilabel:`On-call schedules` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs.)
+#. Select :guilabel:`Sync to calendar`.
+#. Copy the link.
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
-#. Select the :guilabel:`On-call schedules` tab. 
-#. Select the :guilabel:`Actions` menu for the schedule you want to download and select :guilabel:`Edit`.
+You can paste this link in a browser to download the calendar. If you want to sync your on-call schedule to your personal calendar follow the steps for your calendar app.
 
-The schedule preview includes schedule information for up to 1 year.
+.. _sync-to-google-calendar:
+
+Sync your on-call schedule to your Google Calendar
+------------------------------------------------------
+
+To sync your on-call schedule to your Google Calendar, follow these steps:
+
+#. Go to your Google Calendar.
+#. Select the plus icon next to :guilabel:`Other calendars`.
+#. Select :guilabel:`From URL`.
+#. Paste your copied Incident Intelligence calendar URL.
+#. Select :guilabel:`Add calendar`.
+
+The calendar is added to your other calendars. The default calendar name is the URL. To change the calendar name follow these steps:
+
+#. Select the options icon next to the calendar. 
+#. Select :guilabel:`Settings`.
+#. Edit the calendar name and any other settings you want to change.
+
+.. _sync-to-microsoft-outlook:
+
+Sync your on-call schedule to your Microsoft Outlook Calendar
+----------------------------------------------------------------
+
+To sync your on-call schedule to your Microsoft Outlook Calendar, follow these steps:
+
+#. Go to your Microsoft Outlook Calendar.
+#. Select :guilabel:`Add calendar` > :guilabel:`Subscribe from web`.
+#. Paste your copied Incident Intelligence calendar URL.
+#. Enter a calendar name and customize any other settings you want.
+#. Select :guilabel:`Import`.
+
+The calendar is added to your other calendars. 
+
+.. _sync-to-iOS-calendar:
+
+Sync your on-call schedule to Calendar for iOS
+--------------------------------------------------
+
+To sync an on-call schedule to your Calendar for iOS, follow these steps:
+
+#. Go to your iOS Calendar.
+#. Select :guilabel:`File` > :guilabel:`New Calendar Subscription...`.
+#. Paste your copied Incident Intelligence calendar URL.
+#. Select :guilabel:`Subscribe`.
+#. Enter a name and customize any other settings you want.
+#. Select :guilabel:`OK`.
+
+The calendar is added to your other calendars. 

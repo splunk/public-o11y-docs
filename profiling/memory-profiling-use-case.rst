@@ -39,7 +39,7 @@ The charts before the memory flame graph confirm that while the game had been ac
 .. image:: /_images/apm/profiling/memprofusecase3.png
    :alt: Garbage collection activity and application activity charts
 
-Sasha selects a specific time period using the chart and examines the flame graph. Each frame shows the amount of memory allocated by each method. One of the methods is allocating an unusually high amount of memory:
+Sasha selects a specific time period using the chart and examines the flame graph. The flame graph shows memory allocation as it happened during the selected time period. Each frame of the flame graph shows the amount of memory allocated for each method during the same time.
 
 .. image:: /_images/apm/profiling/memprofusecase4.png
    :alt: Detail of a stack trace showing high memory usage of a method
