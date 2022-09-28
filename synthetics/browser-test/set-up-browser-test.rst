@@ -63,10 +63,10 @@ Advanced settings for Browser tests
 There are many reasons why you might want to configure advanced settings for your synthetics tests. Here are a few: 
 
 * Accessing a site with a modal that appears randomly and interrupts the flow of the test. For example, a marketing modal might prompt a user to sign up for a rewards program. To circumvent this issue you can set a cookie to stop the popup modal from appearing and interfering with your test.  
-* Running a test on a site that requires users to login to access the site. 
+* Running a test on a site that requires users to log in to access the site. 
 * Specifying the type of device on which you want to run your test by setting the ``User-Agent`` header on requests.
 * Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
-* Filtering out requests from analytics on the back-end by sending a specific header in the requests.
+* Filtering out requests from analytics on the back end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
 
 
@@ -75,14 +75,14 @@ There are many reasons why you might want to configure advanced settings for you
 Set cookies
 -------------
 
-Set cookies in the browser before the test starts. For example, to circumvent a popup modal from randomly appearing and interfering with your test you can set cookies. Any cookies that are set will apply to the domain of the starting URL of the check. Splunk Synthetics Monitoring uses the :new-page:`public suffix list <https://publicsuffix.org/>` to determine the domain. 
+Set cookies in the browser before the test starts. For example, to circumvent a popup modal from randomly appearing and interfering with your test, you can set cookies. Any cookies that are set will apply to the domain of the starting URL of the check. Splunk Synthetics Monitoring uses the :new-page:`public suffix list <https://publicsuffix.org/>` to determine the domain. 
 
 .. _browser-headers:
 
 Set custom headers
 --------------------------
 
-Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back-end by sending a specific header in the requests. You can also use custom headers to set cookies. 
+Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back end by sending a specific header in the requests. You can also use custom headers to set cookies. 
 
 
 .. _browser-auth:
