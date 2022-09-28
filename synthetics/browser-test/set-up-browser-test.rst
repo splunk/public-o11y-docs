@@ -66,7 +66,7 @@ There are many reasons why you might want to configure advanced settings for you
 * Running a test on a site that requires users to login to access the site. 
 * Specifying the type of device on which you want to run your test by setting the ``User-Agent`` header on requests.
 * Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
-* Ability to filter out requests from analytics on the back-end by sending a specific header in the requests.
+* Filtering out requests from analytics on the back-end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
 
 
@@ -87,15 +87,16 @@ Specify custom headers to send with each request. For example, you can add a hea
 
 .. _browser-auth:
 
-Authentication
---------------------------
+..
+    Authentication
+    --------------------------
 
-Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using Concealed Global Variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
+    Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using Concealed Global Variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
 
-The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
+    The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
 
-* Basic Authentication
-* NTLM
-* Kerberos
-* Digest
+    * Basic Authentication
+    * NTLM
+    * Kerberos
+    * Digest
  
