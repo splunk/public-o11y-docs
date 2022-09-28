@@ -8,7 +8,7 @@ Built-in dashboards offer charts, metrics, and aggregations about your applicati
 
 To access the built-in dashboards: 
 
-#. :guilabel:`Dashboards` >  :guilabel:`RUM Applications` > select  :guilabel:`Mobile App Health` or  :guilabel:`Browser App Health`.
+#. Select :guilabel:`Dashboards` >  :guilabel:`RUM Applications` > then select either Mobile App Health or Browser App Health.
 
 * You can also navigate to the dashboards from RUM with the :guilabel:`...` settings button. 
 

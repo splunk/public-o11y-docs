@@ -15,7 +15,7 @@ The following metrics are available in Splunk RUM. All errors in Splunk RUM have
 
 Aggregates versus page level metrics 
 ==================================================================
-Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are aggregations of multiple pages. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are aggregations of multiple pages. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
 
 .. _rum-custom-event-metrics:
 
