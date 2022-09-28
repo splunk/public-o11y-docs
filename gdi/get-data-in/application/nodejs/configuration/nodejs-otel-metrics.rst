@@ -46,58 +46,7 @@ The following runtime metrics are automatically collected and exported:
    * - Metric
      - Type
      - Description
-   * - ``process.runtime.nodejs.memory.heap.total ``
-     - Gauge
-     - Heap total, in bytes. Extracted from ``process.memoryUsage().heapTotal``.
-   * - ``process.runtime.nodejs.memory.heap.used``
-     - Gauge
-     - Heap used, in bytes. Extracted from ``process.memoryUsage().heapUsed``.
-   * - ``process.runtime.nodejs.memory.rss``
-     - Gauge
-     - Resident set size, in bytes. Extracted from ``process.memoryUsage().rss``.
-   * - ``process.runtime.nodejs.memory.gc.size``
-     - Cumulative counter
-     - Total collected by the garbage collector, in bytes.
-   * - ``process.runtime.nodejs.memory.gc.pause``
-     - Cumulative counter
-     - Time spent by the garbage collector, in nanoseconds.
-   * - ``process.runtime.nodejs.memory.gc.count``
-     - Cumulative counter
-     - Number of garbage collector executions.
-   * - ``process.runtime.nodejs.event_loop.lag.max``
-     - Gauge
-     - Maximum event loop lag within the collection interval, in nanoseconds.
-   * - ``process.runtime.nodejs.event_loop.lag.min``
-     - Gauge
-     - Minimum event loop lag within the collection interval, in nanoseconds.
-
-.. _nodejs-otel-runtime-metrics:
-
-Runtime metrics
-================================================
-
-To enable runtime metrics, see :ref:`metrics-configuration-nodejs`. The following example shows how to enable runtime metrics by passing the ``runtimeMetricsEnabled`` argument to the ``startMetrics`` method:
-
-.. code-block:: javascript
-
-   const { startMetrics } = require('@splunk/otel');
-
-   startMetrics({
-      serviceName: 'my-service',
-      runtimeMetricsEnabled: true,
-   });
-
-The following runtime metrics are automatically collected and exported:
-
-.. list-table:: 
-   :header-rows: 1
-   :widths: 40 10 50
-   :width: 100%
-
-   * - Metric
-     - Type
-     - Description
-   * - ``process.runtime.nodejs.memory.heap.total ``
+   * - ``process.runtime.nodejs.memory.heap.total``
      - Gauge
      - Heap total, in bytes. Extracted from ``process.memoryUsage().heapTotal``.
    * - ``process.runtime.nodejs.memory.heap.used``
@@ -185,7 +134,7 @@ The following example shows how to provide a custom exporter:
    });
 
 Select the type of aggregation temporality
------------------------------------------
+--------------------------------------------
 
 Aggregation temporality describes how data is reported over time.
 
