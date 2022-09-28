@@ -213,7 +213,7 @@ The following settings enable runtime metrics collection:
      - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
    * - 
      - ``resourceFactory``
-     - Callback that lets you filter the default resource or provide a custom one. The function takes one argument of type ``Resource``, which is prefilled by the SDK using the service name, environment, host, and process attributes.
+     - Callback that lets you filter the default resource or provide a custom one. The function takes one argument of type ``Resource``, which contains the service name, environment, host, and process attributes by default.
 
 .. note:: To pass settings as arguments, use the ``startMetrics()`` function.
 

@@ -71,6 +71,57 @@ The following runtime metrics are automatically collected and exported:
      - Gauge
      - Minimum event loop lag within the collection interval, in nanoseconds.
 
+.. _nodejs-otel-runtime-metrics:
+
+Runtime metrics
+================================================
+
+To enable runtime metrics, see :ref:`metrics-configuration-nodejs`. The following example shows how to enable runtime metrics by passing the ``runtimeMetricsEnabled`` argument to the ``startMetrics`` method:
+
+.. code-block:: javascript
+
+   const { startMetrics } = require('@splunk/otel');
+
+   startMetrics({
+      serviceName: 'my-service',
+      runtimeMetricsEnabled: true,
+   });
+
+The following runtime metrics are automatically collected and exported:
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 50
+   :width: 100%
+
+   * - Metric
+     - Type
+     - Description
+   * - ``process.runtime.nodejs.memory.heap.total ``
+     - Gauge
+     - Heap total, in bytes. Extracted from ``process.memoryUsage().heapTotal``.
+   * - ``process.runtime.nodejs.memory.heap.used``
+     - Gauge
+     - Heap used, in bytes. Extracted from ``process.memoryUsage().heapUsed``.
+   * - ``process.runtime.nodejs.memory.rss``
+     - Gauge
+     - Resident set size, in bytes. Extracted from ``process.memoryUsage().rss``.
+   * - ``process.runtime.nodejs.memory.gc.size``
+     - Cumulative counter
+     - Total collected by the garbage collector, in bytes.
+   * - ``process.runtime.nodejs.memory.gc.pause``
+     - Cumulative counter
+     - Time spent by the garbage collector, in nanoseconds.
+   * - ``process.runtime.nodejs.memory.gc.count``
+     - Cumulative counter
+     - Number of garbage collector executions.
+   * - ``process.runtime.nodejs.event_loop.lag.max``
+     - Gauge
+     - Maximum event loop lag within the collection interval, in nanoseconds.
+   * - ``process.runtime.nodejs.event_loop.lag.min``
+     - Gauge
+     - Minimum event loop lag within the collection interval, in nanoseconds.
+
 .. _nodejs-otel-custom-metrics:
 
 Custom metrics
@@ -138,6 +189,11 @@ Select the type of aggregation temporality
 
 Aggregation temporality describes how data is reported over time.
 
+You can define two different aggregation temporalities:
+
+- ``AggregationTemporality.CUMULATIVE``: Cumulative metrics, such as counters and histograms, are continuously summed together from a given starting point, which in this case is set with the call to ``startMetrics``. This is the default temporality.
+- ``AggregationTemporality.DELTA``: Metrics are summed together relative to the last metric collection step, which is set by the export interval.
+
 To configure aggregation temporality in your custom metrics, use ``AggregationTemporality`` as in the example:
 
 .. code-block:: javascript
@@ -158,6 +214,8 @@ To configure aggregation temporality in your custom metrics, use ``AggregationTe
          ]
       }
    });
+
+For more information on aggregation temporality, see :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/metrics/data-model.md#sums <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/metrics/data-model.md#sums>` on GitHub.
 
 .. _nodejs-otel-metrics-migration:
 
