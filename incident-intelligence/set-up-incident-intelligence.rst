@@ -231,8 +231,6 @@ Sync your on-call schedule to Calendar for iOS
 
 To sync an on-call schedule to your Calendar for iOS, follow these steps:
 
-#. On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident Intelligence, select either :guilabel:`You are currently on call` or :guilabel:`On-call schedules`. (If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. If you are not on call, :guilabel:`On-call schedules` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs.)
-#. Select :guilabel:`Sync to calendar`.
 #. Go to your iOS Calendar.
 #. Select :guilabel:`File` > :guilabel:`New Calendar Subscription...`.
 #. Paste your copied Incident Intelligence calendar URL.
