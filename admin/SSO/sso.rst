@@ -8,21 +8,22 @@ Configure SSO integrations for Splunk Observability Cloud
    :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. Login service integration supports both Identity Provider-initiated SSO and Observability Cloud-initiated SSO. The latter lets your users log in to Observability Cloud using your organization's custom URL.
 
 .. toctree::
+   :hidden:
 
-   <sso/sso-ADSF>`
-   <sso/sso-AzureAD>
-   <sso/sso-Google>
-   <sso/sso-GoogleCloudIDP>
-   <sso/sso-Okta>
-   <sso/sso-OneLogin>
-   <sso/sso-PingOne>
-   <sso/sso-GeneralSAML>
+   sso-ADSF
+   sso-AzureAD
+   sso-Google
+   sso-GoogleCloudIDP
+   sso-Okta
+   sso-OneLogin
+   sso-PingOne
+   sso-GeneralSAML
 
 
 Splunk Observability Cloud provides SSO login service integrations that let your users log in using a third-party
 identity provider (IdP) that uses SAML SSO. Observability Cloud supports SSO initiated by the IdP.
 
-Observability Cloud also supports SSO initiated by Observability Cloud, and this option lets your users log in to Infrastructure Monitoring using a :ref:`custom URL<custom-url>` you specify.
+Observability Cloud also supports SSO initiated by Observability Cloud, and this option lets your users log in to Infrastructure Monitoring using a custom URL you specify.
 
 Observability Cloud supports the following SSO integrations:
 
@@ -40,10 +41,14 @@ Observability Cloud supports the following SSO integrations:
 .. include:: /_includes/realm-note.rst
 
 
-.. _custom-url:
-
 Provide a custom URL for accessing Observability Cloud
-======================================================================
+
+.. raw:: html
+
+  <embed>
+    <h2>Provide a custom URL for accessing Observability Cloud</h2>
+  </embed>
+
 
 A custom URL is required to allow users to log in to Observability Cloud from your organization's login page. If no custom URL is provided, users can still log in through the identity provider to access Observability Cloud.
 
@@ -55,20 +60,22 @@ You can allow users to log in to Observability Cloud using a custom URL that you
 - The organization for which you want to use the custom url.
 - An organization administrator's email address.
 
+.. raw:: html
 
-.. _naming-note-sso:
+  <embed>
+    <h2>Name an SSO integration</h2>
+  </embed>
 
-Name an SSO integration
-=================================
 
 Give your login service integration a name that your users recognize. On your custom login page,
 this name appears in the button your users select to sign in. For example, use the name "Log in with Okta"
 for an Okta login service integration.
 
-.. _multiple-integrations-sso:
+.. raw:: html
 
-Integrate an identity provider with multiple organizations
-============================================================================
+  <embed>
+    <h2>Integrate an identity provider with multiple organizations</h2>
+  </embed>
 
 When you integrate a login service with Observability Cloud, you need to
 provide information about the integration to the login service. Infrastructure
@@ -90,7 +97,13 @@ The Google SSO integration doesn't support integration-specific entity IDs.
 .. note:: You only need an integration-specific entity ID if you want to use the same IdP for multiple organizations.
 
 General integration-specific entity ID steps
--------------------------------------------------
+
+.. raw:: html
+
+  <embed>
+    <h2>Integrate an identity provider with multiple organizations</h2>
+  </embed>
+
 
 To get an integration-specific entity ID for an integration, do the following when you create the integration:
 

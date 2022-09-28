@@ -946,7 +946,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Configure SSO integrations <admin/sso>
+   admin/SSO/sso
 
 .. toctree::
    :hidden:
