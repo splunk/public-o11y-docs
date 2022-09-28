@@ -67,7 +67,7 @@ Use alert routing to associate alerts with a service. If an alert matches your a
 #. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
 #. Select a filter value. 
 #. Select enter to save your condition. 
-#. Repeat steps 4-8 for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``AND`` operator. To switch an ``AND`` operator to ``OR``, select the ``AND`` operator and select ``OR``.
+#. Repeat steps 4-8 for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the service to confirm your filter conditions are correct. 
 #. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
 
@@ -81,7 +81,7 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 #. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
 #. Select :guilabel:`Services` and then the service you want to add alert grouping conditions to. Each service can have one alert grouping rule.
 #. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
-#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 1 hour and 24 hours, from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
+#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours, from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
 #. Select :guilabel:`Save alert grouping`.
 
 .. _configure-incident-workflows:
