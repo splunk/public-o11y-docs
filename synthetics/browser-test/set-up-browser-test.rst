@@ -116,3 +116,8 @@ When activated, this feature is used to enforce the validation of expired, inval
 
 .. note::
  When testing pre-production environments that have self-signed or invalid certificates, it's best to leave SSL/TLS validation feature deactivated. 
+
+.. _browser-exclude:
+
+Exclude files
+----------------
