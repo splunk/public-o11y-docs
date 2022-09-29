@@ -50,21 +50,21 @@ The URL has one of the following formats:
    * If your organization uses the ``us0`` realm: ``https://api.signalfx.com/v1/saml/acs/<INTEGRATION_ID>``
    * If your organization uses a realm other than ``us0``: ``https://api.<YOUR_REALM>.signalfx.com/v1/saml/acs/<INTEGRATION_ID>``
 
-:strong:```<ENTITY-ID>```, which is the entity ID displayed when you start creating a new integration.
+:strong:`<ENTITY-ID>`, which is the entity ID displayed when you start creating a new integration.
 
 * If you have a single organization, enter the following entity ID:
    * If your organization uses the ``us0`` realm, enter the following: ``https://api.signalfx.com/v1/saml/metadata/<ENTITY-ID>``
    * If your organization uses a realm other than ``us0``, enter the following: ``https://api.<YOUR_REALM>.signalfx.com/v1/saml/metadata<ENTITY-ID>``
 
 * If you have multiple organizations that you want to integrate with a single IdP, do the following:
-   #.Select :guilabel:`Integration-specific Entity ID`. Next to the option, the integration-specific entity ID appears in the form of a URI.
+   #. Select :guilabel:`Integration-specific Entity ID`. Next to the option, the integration-specific entity ID appears in the form of a URI.
    #. Copy the entity ID and provide it when you configure the login service to communicate with Observability Cloud.
 
 :strong:`Assertion Signature`
 
 The SSO provider must put the assertion signature in the assertion message, not in the request itself. The assertion must be signed with the SHA256 algorithm or better.
 
-:strong:`RelayState``
+:strong:`RelayState`
 
 Observability Cloud sends a dynamic RelayState, so the SSO provider must accept and pass back the dynamic RelayState.
 

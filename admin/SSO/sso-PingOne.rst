@@ -36,9 +36,9 @@ In PingOne, do the following:
    #. If the :guilabel:`Setup` is active, click it. A setup screen appears.
 
       If the :guilabel:`Setup` button is disabled, and you see the tooltip "You need to setup a connection first," then you might need to connect to an Identity Repository. To connect to an Identity Repository:
-      #. At the top of the PingOne page, click :guilabel:`Setup`.
-      #. Click :guilabel:`Connect to an Identity Repository`.
-      #. Select the Identity Repository you want to use, click :guilabel:`Next` twice, then click :guilabel:`Finished`.
+         #. At the top of the PingOne page, click :guilabel:`Setup`.
+         #. Click :guilabel:`Connect to an Identity Repository`.
+         #. Select the Identity Repository you want to use, click :guilabel:`Next` twice, then click :guilabel:`Finished`.
 
    #. Click :guilabel:`SignalFx`, then click :guilabel:`Setup`.
    #. Optional: Copy the configuration parameters to keep as a reference.
@@ -50,26 +50,26 @@ Still in PingOne, continue the configuration:
    #. Confirm that the :guilabel:`ACS URL` and :guilabel:`Entity ID` URLs refer to your Observability Cloud realm.
    
       If your Observability Cloud organization uses the ``us0`` :ref:`realm <about-realms>`, enter the following:
-      * ACS URL: ``https://api.signalfx.com/v1/saml/acs/<INTEGRATION_ID>``
-      * Entity ID: ``https://api.signalfx.com/v1/saml/metadata``
+         - ACS URL: ``https://api.signalfx.com/v1/saml/acs/<INTEGRATION_ID>``
+         - Entity ID: ``https://api.signalfx.com/v1/saml/metadata``
 
       If your Observability Cloud organization uses another realm, enter the following:
-      * ACS URL: ``https://api.<YOUR_REALM>.signalfx.com/v1/saml/acs/<INTEGRATION_ID>``
-      * Entity ID: ``https://api.<YOUR_REALM>.signalfx.com/v1/saml/metadata``
+        - ACS URL: ``https://api.<YOUR_REALM>.signalfx.com/v1/saml/acs/<INTEGRATION_ID>``
+        - Entity ID: ``https://api.<YOUR_REALM>.signalfx.com/v1/saml/metadata``
 
 In PingOne, select :guilabel:`Continue to Next Step`. The :guilabel:`Attribute Mapping` screen appears.
    #. For :guilabel:`SAML_SUBJECT`:
-      #. Select :guilabel:`Advanced`.
-      #. In the :guilabel:`Name ID Format to send to SP` dropdown list, select :menuselection:`urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`, then :guilabel:`Save`.
+       #. Select :guilabel:`Advanced`.
+       #. In the :guilabel:`Name ID Format to send to SP` dropdown list, select :menuselection:`urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`, then :guilabel:`Save`.
    #. Select other attributes as needed.
 
 Select :guilabel:`Continue to Next Step`. The Group Access screen appears.
    #. Select the users who should have access to Observability Cloud. Click :guilabel:`Continue to Next Step`. The customization screen appears.
    #. Configure the :guilabel:`SignalFx` application, then click :guilabel:`Continue to Next Step`. The review screen appears.
    #. In the review screen that appears, do the following:
-      #. Locate the :guilabel:`Certificate` field, then click :guilabel:`Download` to download the pingone-signing.crt file to your computer.
-      #. Locate the :guilabel:`SAML Metadata` field, and then click the :guilabel:`Download` link to download the saml2-metadata-idp.xml file to your computer.
-      #. :guilabel:`Finish`. The PingOne Applications list appears. In the list, :guilabel:`SignalFx` appears as an active application.
+       #. Locate the :guilabel:`Certificate` field, then click :guilabel:`Download` to download the pingone-signing.crt file to your computer.
+       #. Locate the :guilabel:`SAML Metadata` field, and then click the :guilabel:`Download` link to download the saml2-metadata-idp.xml file to your computer.
+       #. :guilabel:`Finish`. The PingOne Applications list appears. In the list, :guilabel:`SignalFx` appears as an active application.
 
 In Observability Cloud, do the following:
    #. Locate the :guilabel:`Certificate` text box.
