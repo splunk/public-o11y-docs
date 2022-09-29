@@ -19,8 +19,7 @@ Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS L
 
 4. In the :guilabel:`Search` field, search for :guilabel:`AWS Lambda`.
 
-5. Click the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
-
+5. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
 .. _otel-lambda-layer-requirements:
 
@@ -33,6 +32,7 @@ The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lam
 - Python 3.8 and 3.9
 - Node.js 10, 12, and 14
 - Ruby 2.7
+- Go 1.18
 
 For more information, search for "Lambda runtimes" on the AWS documentation website.
 
@@ -45,15 +45,22 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. In the AWS Lambda console, select the function that you want to instrument.
 
-#. In the :guilabel:`Layers` section, click :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
+#. In the :guilabel:`Layers` section, select :guilabel:`Add a layer`, then select :guilabel:`Specify an ARN`.
 
-#. Copy the Amazon Resource Name (ARN) that matches the region of your Lambda function from the following list:
+#. Copy the Amazon Resource Name (ARN) for the region of your Lambda function from the list matching your architecture:
 
-   https://github.com/signalfx/lambda-layer-versions/blob/master/splunk-apm/splunk-apm.md
+   - Standard x86_64: https://github.com/signalfx/lambda-layer-versions/blob/master/splunk-apm/splunk-apm.md
+   - Graviton2 ARM64: https://github.com/signalfx/lambda-layer-versions/blob/master/splunk-apm/splunk-apm-arm.md
 
-#. Paste the selected ARN in the :guilabel:`Specify an ARN` field and click :guilabel:`Add`.
+#. Paste the selected ARN in the :guilabel:`Specify an ARN` field and select :guilabel:`Add`.
 
 #. Check that the Splunk layer appears in the :guilabel:`Layers` table.
+
+.. tip:: You can automate the update of the Lambda layer using the AWS CLI. The following command, for example, retrieves the latest version of the Splunk layer for x86_64 and the ``us-east-1`` region:
+
+   .. code-block:: bash
+
+      aws lambda list-layer-versions --layer-name splunk-apm --region us-east-1 --query 'LayerVersions[0].LayerVersionArn'
 
 .. _set-env-vars-otel-lambda:
 
@@ -117,8 +124,14 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   /opt/ruby-otel-handler
 
-      * - (Optional) ``OTEL_SERVICE_NAME``
-        - The name of your service. If you don't provide a value, the agent uses the name of your function as the service name.
+                  .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
+
+               .. code-tab:: shell Go
+
+                  Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable. See :ref:`go-serverless-instrumentation`.
+
+      * - ``OTEL_SERVICE_NAME``
+        - The name of your service.
 
       * - (Optional) ``OTEL_RESOURCE_ATTRIBUTES``
         - Define the name of the deployment environment of your function by setting this environment variable to ``deployment.environment=<name-of-your-environment>``.
@@ -126,6 +139,52 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 4. Click :guilabel:`Save` and check that the environment variables appear in the table.
 
 .. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to Observability Cloud ingest endpoints.
+
+.. _go-serverless-instrumentation:
+
+Instrument Go functions in AWS Lambda
+====================================================
+
+To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
+
+#. Run the following commands to install the ``otellambda`` and the Splunk OTel Go distribution:
+
+   .. code-block:: bash
+
+      go get -u go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda
+      go get -u github.com/signalfx/splunk-otel-go/distro
+
+#. Create a wrapper for the OpenTelemetry instrumentation in your function's code. For example:
+
+   .. code-block:: go
+
+      package main
+
+      import (
+         "context"
+         "fmt"
+
+         "github.com/aws/aws-lambda-go/lambda"
+         "github.com/signalfx/splunk-otel-go/distro"
+         "go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda"
+         "go.opentelemetry.io/otel"
+      )
+
+      func main() {
+         distro.Run()
+         flusher := otel.GetTracerProvider().(otellambda.Flusher)
+         lambda.Start(otellambda.InstrumentHandler(HandleRequest, otellambda.WithFlusher(flusher)))
+      }
+
+      type MyEvent struct {
+         Name string `json:"name"`
+      }
+
+      func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
+         return fmt.Sprintf("Hello %s!", name.Name), nil
+      }
+
+.. note:: For a full example, see :new-page:`https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go <https://github.com/signalfx/tracing-examples/blob/main/opentelemetry-tracing/opentelemetry-lambda/go/example.go>` on GitHub.
 
 .. _serverless-framework-support-aws:
 
