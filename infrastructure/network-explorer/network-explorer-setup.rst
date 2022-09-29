@@ -21,7 +21,24 @@ In summary, you need to install two main components:
 Prerequisites
 ==============================
 
-- Environment: Network Explorer is only supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
+You need to have the following requirements to use Network Explorer.
+
+ .. list-table::
+    :header-rows: 1
+    :widths: 30 70
+
+    * - :strong:`Prerequisite`
+      - :strong:`Description`
+        
+    * - Environment
+      - Network Explorer is only supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
+      
+    * - Operating system
+      - RedHat Linux: 7.6+, Ubuntu 16.04+, Debian Stretch+, Amazon Linux 2, Google COS
+
+    * - Kubernetes version
+      - Network Explorer is supported on all active releases of Kubernetes. 
+
 
 .. _network-explorer-otel-collector:
 
