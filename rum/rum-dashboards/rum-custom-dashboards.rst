@@ -45,6 +45,20 @@ Kai uses custom dashboards to get a high level assessment of the health of the B
     :alt: This image shows two charts. The first chart shows a line chart of custom events and the second chart shows a line chart for page views represented by page. 
 
 
+..
+    View average HTTP response rate at an app level.
+    ------------------------------------------------
 
 
+    Plot a conversion rate
+    ------------------------------
 
+
+    Plot slowest page loads
+    ------------------------------
+
+    AppDex
+    ------------------------------
+
+    View version adoption for an app
+    ------------------------------
