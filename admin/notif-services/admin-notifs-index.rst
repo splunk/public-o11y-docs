@@ -31,9 +31,9 @@ In addition to sending alert notifications by email (see :ref:`manage-notificati
 
 .. list-table::
    :header-rows: 1
-   :widths: 40, 30
+   :widths: 30, 40
 
-   * - :strong:`third-party`
+   * - :strong:`Third-party`
      - :strong:`Link to documentation`
 
    * - Amazon EventBridge
