@@ -10,7 +10,7 @@ Configure an Okta SSO integration
 
 The Okta SSO integration allows you to log into Observability Cloud using Okta.
 
-Before you begin to configure the Google Cloud Identity integration, ensure you have completed the steps in :new-page-ref:'sso-label', including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin to configure the Google Cloud Identity integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 .. note:: To use this procedure, you must be an administrator of your Okta organization **and** your Observability Cloud organization.
 

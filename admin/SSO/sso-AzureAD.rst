@@ -1,5 +1,3 @@
-.. _sso-label:
-
 .. _sso-azure:
 
 *********************************************************************
@@ -12,7 +10,7 @@ Configure an Azure Active Directory (Azure AD) SSO integration
 
 The Microsoft Azure Active Directory (Azure AD) integration lets users log in to Observability Cloud using their Azure AD account.
 
-Before you begin configuring the Azure AD integration, ensure you have completed the steps in :new-page-ref:'sso-label', including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring the Azure AD integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 To configure an Azure AD SSO integration, you must be an administrator for your organization.
 To learn more, see :new-page-ref:`manage_admin-access`.

@@ -8,9 +8,9 @@ Configure SSO using a generic SAML SSO integration
    :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. Login service integration supports both Identity Provider-initiated SSO and Observability Cloud-initiated SSO. The latter lets your users log in to Observability Cloud using your organization's custom URL.
 
 
-If you use an SSO login service other than the ones listed in :ref:'sso-label', you can create a generic SAML SSO integration for your organization. 
+If you use an SSO login service other than the ones listed in :ref:`sso-label`, you can create a generic SAML SSO integration for your organization. 
 
-Before you begin configuring the generic SAML SSO integration, ensure you have completed the steps in :new-page-ref:'sso-label', including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring the generic SAML SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 If you already have a SAML SSO integration for your organization, follow the steps in:ref:`saml-install` to install it in Observability Cloud.
 
@@ -102,7 +102,7 @@ To install a generic SAML SSO integration, follow these steps:
    #. Select :guilabel:`Add Integration`.
    #. In the integration filter menu, select :guilabel:`All`.
    #. In the :guilabel:`Search` field, search for :guilabel:`SAML`, and select it.
-   #. In the :guilabel:`Name` field, enter the name for this integration. If your organization has a :ref:`custom URL<custom-url>`, this name appears as the text for the button users click to sign in (see the section :ref:`naming-note-sso`).
+   #. In the :guilabel:`Name` field, enter the name for this integration. If your organization has a :ref:`custom URL<custom-url>`, this name appears as the text for the button users click to sign in (see the section :ref:`Name an SSO integration<naming-note-sso>`).
    #. In the remaining fields, enter the information you gathered in the :ref:`generic-sso-prerequisites` section.
    #. :guilabel:`Save`. The message :strong:`Validated!` appears.
 

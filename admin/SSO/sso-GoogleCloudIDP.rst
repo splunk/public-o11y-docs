@@ -10,7 +10,7 @@ Configure a Google Cloud Identity SSO integration
 The Google Cloud Identity (GCI) SSO integration lets users log in to Observability Cloud
 using their Google Cloud credentials.
 
-Before you begin to configure the Google Cloud Identity integration, ensure you have completed the steps in :new-page-ref:'sso-label', including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin to configure the Google Cloud Identity integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 To configure GCI as an IdP using an Observability Cloud SSO integration,
 you must be an administrator for your organization and a super-administrator of your Google domain.

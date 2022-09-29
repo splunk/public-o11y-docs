@@ -13,7 +13,7 @@ Configure a Google SSO integration
 The Google SSO integration lets users in your Google domain log in to the application
 using their Google credentials.
 
-Before you begin configuring the Google SSO integration, ensure you have completed the steps in :new-page-ref:'sso-label', including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring the Google SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 To configure a Google SSO integration, you must be an administrator for your organization.
 To learn more, see :new-page-ref:`manage_admin-access`.

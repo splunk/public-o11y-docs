@@ -11,7 +11,7 @@ Configure a PingOne SSO integration
 
 The PingOne SSO integration allows you to log into Observability Cloud using PingOne.
 
-Before you start, review the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring the OneLogin SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 .. note:: To use this procedure, you must be an administrator of your PingOne
    organization and your Observability Cloud organization.

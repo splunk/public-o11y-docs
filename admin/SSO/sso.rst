@@ -41,7 +41,6 @@ Observability Cloud supports the following SSO integrations:
 .. include:: /_includes/realm-note.rst
 
 .. _custom-url:
-Provide a custom URL for accessing Observability Cloud
 
 .. raw:: html
 

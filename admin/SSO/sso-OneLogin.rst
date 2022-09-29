@@ -11,7 +11,7 @@ Configure a OneLogin SSO integration
 
 The OneLogin SSO integration lets your users log in to Observability Cloud using OneLogin.
 
-Before you begin configuring the OneLogin SSO integration, ensure you have completed the steps in :new-page-ref:'sso-label', including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Before you begin configuring the OneLogin SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 .. note:: To use this procedure, you must be an administrator of your OneLogin organization and your Observability Cloud organization.
 
