@@ -20,6 +20,8 @@ Use the following links to navigate the documentation set for the preview of Net
         
         * :ref:`find-network-error`
         * :ref:`cross-zone-traffic-cost`
+        
+    * Troubleshoot: :ref:`network-explorer-troubleshoot`
 
 
 
