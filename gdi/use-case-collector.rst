@@ -24,8 +24,8 @@ Kai enables EKS monitoring using custom Helm charts
 
 Since their migration to the cloud, the PonyBank application has been running in EKS. Kai starts by setting up the cloud integration from Observability Cloud using the guided setup, which they access from the home page. Guided setups allow to select the relevant ingest token, and generate installation commands and configuration snippets from the selected options, which Kai can use to quickly deploy instrumentation.
 
-.. image:: /_images/apm/profiling/memprofusecase1.png
-   :alt: Memory usage chart
+.. image:: /_images/collector/image1.png
+   :alt: Guided setup for Kubernetes in Data Management
 
 As the cluster contains hundreds of containers in a virtual private cloud (VPC) with no direct access to the cloud, Kai uses the guided setup to add a cluster of Splunk OTel Collector instances in Gateway mode, so that they can receive and forward data while preserving the safety of the original configuration. In the next step, the guided setup provides the following commands for Helm:
 
@@ -39,8 +39,8 @@ As the cluster contains hundreds of containers in a virtual private cloud (VPC) 
 
 At the end of the guided setup, Kai enters the Kubernetes map of Infrastructure Monitoring and sees the cluster status. They select the nodes on the Kubernetes map, which appear as colored cubes in a grid, to learn more about the status of each element, including workloads and system metrics.
 
-.. image:: /_images/apm/profiling/memprofusecase1.png
-   :alt: Memory usage chart
+.. image:: /_images/collector/image2.png
+   :alt: Cluster view of the Kubernetes infrastructure in Infrastructure Monitoring
 
 .. _instrument-ec2-instances:
 
@@ -52,7 +52,7 @@ For the hosts managed by IT as Elastic Compute Cloud (EC2) instances, Kai decide
 #. Install the Splunk OTel Collector module from Puppet Forge.
 #. Include a new class in the manifest file:
 
-   .. code-block:: puppets
+   .. code-block:: puppet
 
       class { splunk_otel_collector:
       splunk_access_token => '<kai_token>',
@@ -70,13 +70,13 @@ Kai also uses the Linux guided setup for the few stray EC2 instances in the orga
 
 Now, Kai can see data from each host is flowing into Infrastructure Monitoring. For each host, Kai can see metadata, system metrics, and processes, among other data points.
 
-.. image:: /_images/apm/profiling/memprofusecase1.png
-   :alt: Memory usage chart
+.. image:: /_images/collector/image3.png
+   :alt: Dashboard with host metrics in Infrastructure Monitoring
 
 At the same time, Kai can also see logs coming from each host and node in Splunk Log Observer: 
 
-.. image:: /_images/apm/profiling/memprofusecase1.png
-   :alt: Memory usage chart
+.. image:: /_images/collector/image4.png
+   :alt: Log Observer showing host logs
 
 .. _instrument-java-svc:
 
@@ -87,18 +87,18 @@ Kai's final goal is to instrument the corporate Java service of PonyBank for Spl
 
 Thanks to the Related content feature, Kai discovers that the application running on EKS is already instrumented thanks to the Zero Config instrumentation of the Splunk OTel Collector. When Kai selects the node running the checkout service of the application, the service appears as a link to Splunk APM in the related content bar.
 
-.. image:: /_images/apm/profiling/memprofusecase1.png
-   :alt: Memory usage chart
+.. image:: /_images/collector/image5.png
+   :alt: Infrastructure Monitoring showing the related content bar
 
 The same happens when Kai opens Splunk APM and selects the checkout service in the service map, shown in the following image. The EKS cluster for checkoutservice appears in the Related content bar following the map. Observability Cloud suggests both links thanks to the APM and Infrastructure mapping that Observability Cloud performs using OpenTelemetry attributes and data.
 
-.. image:: /_images/apm/profiling/memprofusecase1.png
-   :alt: Memory usage chart
+.. image:: /_images/collector/image6.png
+   :alt: Application Monitoring showing the related content bar
 
 For all the other EC2 machines, Kai also wants to deploy Splunk APM and selects the Java guided setup for that purpose, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. For each deployment, Kai defines an environment and service name, which are essential to enable the Related content feature between APM and Infrastructure Monitoring.
 
-.. image:: /_images/apm/profiling/memprofusecase1.png
-   :alt: Memory usage chart
+.. image:: /_images/collector/image7.png
+   :alt: Guided setup for the Java tracing instrumentation
 
 Summary
 ==================
