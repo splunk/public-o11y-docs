@@ -126,7 +126,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
                   .. note:: The Graviton2 ARM64 architecture is not supported for Ruby Lambda functions.
 
-               .. code-tab:: shell Go
+               .. tab:: Go
 
                   Don't set the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable. See :ref:`go-serverless-instrumentation`.
 
@@ -145,7 +145,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 Instrument Go functions in AWS Lambda
 ====================================================
 
-To instrument a Go function in AWS Lambda for Splunk APM, follow these steps:
+To instrument a Go function in AWS Lambda for Splunk APM, follow these additional steps:
 
 #. Run the following commands to install the ``otellambda`` and the Splunk OTel Go distribution:
 
