@@ -46,7 +46,7 @@ Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics wi
      -  ``rum.node.crash.count``
      - A crash is when a user encounters an error and has to exit the app.
    * - ``rum.app_error.count``
-     - App error.
+     - App error
      - ``rum.node.app_error.count``
      - App error by page. 
    * - ``rum.resource_request.count``
@@ -57,9 +57,18 @@ Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics wi
      - Network back-end latency
      - ``rum.node.resource_request.time.ns.p75``
      - The p75 time in nanoseconds for the network request latency in the given time range. 
-   
-
-
+   * - ``rum.cold_start.time.ns.p75``
+     -  Cold start time
+     - ``rum.cold_start.time.ns.p75``
+     -  Total number of cold starts in the given time range.  
+   * - ``rum.hot_start.count``
+     - Hot start count 
+     - ``rum.node.hot_start.count``
+     - Total number of hot starts in the given time range. 
+   * - ``rum.hot_start.time.ns.p75``
+     - Hot start time.
+     - ``rum.node.hot_start.time.ns.p75``
+     - The p75 time in nanoseconds for a hot start. 
 
 
 
@@ -399,7 +408,6 @@ App start monitoring feature generates spans whenever the app performs a cold, w
 
 - Cold_Start: Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
 - Hot_Start:- Hot starts happen when the system brings ann app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
-- Warm_Start:- Warm starts happen when some of the operations that take place in a cold start are still happening. Warm starts are faster than cold starts, but slower than hot starts.
 
 App start monitoring produces spans with the name ``AppStart`` and the following attributes:
 
@@ -416,7 +424,7 @@ App start monitoring produces spans with the name ``AppStart`` and the following
      - Always ``appstart``.
    * - ``start.type``
      - String
-     - The type of start. Can be ``cold``, ``warm``, or ``hot``.
+     - The type of start. Can be ``cold``, or ``hot``.
 
 Location data  
 =============

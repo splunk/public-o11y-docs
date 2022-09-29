@@ -121,39 +121,39 @@ For more information on app startup metrics as defined by Android, see :new-page
    * - ``rum.crash.count``
      - Mobile crash
      - ``rum.node.rum.crash.count``
-     - 
+     -  Total number of crashes the given time range. 
    * - ``rum.app_error.count``
      - App error
      - ``rum.node.rum.app_error.count``
-     -
+     - Total number of crashes the given time range. 
    * - ``rum.cold_start.time.ns.p75``
      -  Cold start time
      - ``rum.cold_start.time.ns.p75``
-     - 
+     -  Total number of cold starts in the given time range. 
    * - ``rum.warm_start.count``
      - Warm start count
      - ``rum.node.warm_start.count``
-     - 
+     - Total number of warm starts in the given time range. 
    * - ``rum.warm_start.time.ns.p75``
      - Warm start time
      - ``rum.node.warm_start.time.ns.p75``
-     - 
+     - The p75 time in nanoseconds for a warm start. 
    * - ``rum.hot_start.count``
      - Hot start count 
      - ``rum.node.hot_start.count``
-     - 
+     - Total number of hot starts in the given time range. 
    * - ``rum.hot_start.time.ns.p75``
-     - Hot start time
+     - Hot start time.
      - ``rum.node.hot_start.time.ns.p75``
-     -
+     - The p75 time in nanoseconds for a hot start. 
    * - ``rum.resource_request.count``
      - Network or back-end requests/errors
      - ``rum.node.resource_request.count``
-     - 
+     - The total number of network requests in a given time range. 
    * - ``rum.resource_request.time.ns.p75``
-     - Network back-end latency
+     - Network or back-end latency
      - ``rum.node.resource_request.time.ns.p75``
-     -
+     - The p75 time in nanoseconds for back-end latency in the given time range. 
 
 
 
@@ -428,6 +428,10 @@ App start monitoring
 ------------------------------------
 
 App start monitoring feature generates spans whenever the app performs a cold, warm, or hot start.
+
+- Cold_Start: Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
+- Hot_Start:- Hot starts happen when the system brings ann app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
+- Warm_Start:- Warm starts happen when some of the operations that take place in a cold start are still happening. Warm starts are faster than cold starts, but slower than hot starts.
 
 App start monitoring produces spans with the name ``AppStart`` and the following attributes:
 
