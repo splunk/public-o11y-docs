@@ -70,13 +70,8 @@ To submit a support ticket, follow these steps:
 
    c. Your instance name
 
-   d. Request:
-
-      i. Securely open our Splunk Cloud Platform instance management port (8089) and add Splunk Observability Cloud IPs to our allow list.
-
-      ii. Provide us with the SSL certificate chain in this ticket so that we can enable Log Observer Connect.
+   d. Request: Please securely open our Splunk Cloud Platform instance management port (8089) and add Splunk Observability Cloud IPs to our allow list.
    
-
 When you receive the SSL certificate from Splunk Support in your support ticket, do the following:
 
 1. Paste the first certificate stanza in the final section of the Log Observer Connect guided setup, :guilabel:`Set up Observability Cloud`.
