@@ -40,7 +40,7 @@ Observability Cloud supports the following SSO integrations:
 
 .. include:: /_includes/realm-note.rst
 
-
+.. _custom-url:
 Provide a custom URL for accessing Observability Cloud
 
 .. raw:: html
@@ -60,6 +60,8 @@ You can allow users to log in to Observability Cloud using a custom URL that you
 - The organization for which you want to use the custom url.
 - An organization administrator's email address.
 
+.. _naming-note-sso:
+
 .. raw:: html
 
   <embed>
@@ -70,6 +72,8 @@ You can allow users to log in to Observability Cloud using a custom URL that you
 Give your login service integration a name that your users recognize. On your custom login page,
 this name appears in the button your users select to sign in. For example, use the name "Log in with Okta"
 for an Okta login service integration.
+
+.. _multiple-integrations-sso:
 
 .. raw:: html
 
