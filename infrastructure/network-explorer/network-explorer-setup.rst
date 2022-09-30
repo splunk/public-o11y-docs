@@ -37,7 +37,7 @@ You need to have the following requirements to use Network Explorer.
       - RedHat Linux: 7.6+, Ubuntu 16.04+, Debian Stretch+, Amazon Linux 2, Google COS
 
     * - Kubernetes version
-      - Network Explorer is supported on all active releases of Kubernetes. 
+      - Network Explorer is supported on all active releases of Kubernetes.
 
 
 .. _network-explorer-otel-collector:
@@ -184,6 +184,19 @@ Follow these steps to install Network Explorer:
     .. code-block:: bash
 
         helm --namespace=<NAMESPACE> install network-explorer splunk-otel-network-explorer-chart/splunk-otel-network-explorer --set="clusterName=<CLUSTER_NAME>,otlp.receiver.host=my-splunk-otel-collector"
+
+#. The Network Explorer kernel collector requires kernel headers to run kernel in each Kubernetes node. Run the following command to install the required packages.
+
+    .. tabs::
+
+      .. code-tab:: bash Debian
+
+        sudo apt-get install --yes linux-headers-$(uname -r)
+
+      .. code-tab:: bash RedHat Linux/Amazon Linux
+
+        sudo yum install -y kernel-devel-$(uname -r)
+
 
 .. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
 
