@@ -80,7 +80,7 @@ After selecting all the features and options they need, Kai obtains a YAML snipp
 .. image:: /_images/collector/image8.png
    :alt: Guided setup for the Java tracing instrumentation
 
-For the EC2 instances that also contain Java services, Kai uses the same guided setup, running the customized commands in the console. Instrumeting the application takes a few seconds.
+For the EC2 instances that also contain Java services, Kai uses the same guided setup, running the customized commands in the console. Instrumenting the application takes a few seconds.
 
 .. image:: /_images/collector/install-java-agent.gif
    :alt: Console output of the Java agent install
