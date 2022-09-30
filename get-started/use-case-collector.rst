@@ -25,22 +25,14 @@ Enable EKS monitoring using custom Helm charts
 
 Since their migration to the cloud, the PonyBank application has been running in EKS. Kai starts by setting up the cloud integration from Observability Cloud using the guided setup, which they access from the home page. Guided setups allow to select the relevant ingest token, and generate installation commands and configuration snippets from the selected options, which Kai can use to quickly deploy instrumentation.
 
-.. image:: /_images/collector/image1.png
+.. image:: /_images/collector/aws-eks-setup.gif
    :alt: Guided setup for Kubernetes in Data Management
 
-As the cluster contains hundreds of containers in a virtual private cloud (VPC) with no direct access to the cloud, Kai uses the guided setup to add a cluster of Splunk OTel Collector instances in Gateway mode, so that they can receive and forward data while preserving the safety of the original configuration. In the next step, the guided setup provides the following commands for Helm:
-
-.. code-block:: bash
-
-   helm repo add splunk-otel-collector-chart https://signalfx.github.io/splunk-otel-collector-chart
-
-   helm repo update
-
-   helm install --set cloudProvider='aws' --set distribution='eks' --set splunkObservability.accessToken='<kai_token>' --set clusterName='ponycluster' --set splunkObservability.realm='us0' --set gateway.enabled='true' --set splunkObservability.logsEnabled='true' --generate-name splunk-otel-collector-chart/splunk-otel-collector --set splunkObservability.profilingEnabled='true' 
+As the cluster contains hundreds of containers in a virtual private cloud (VPC) with no direct access to the cloud, Kai uses the guided setup to add a cluster of Splunk OTel Collector instances in Gateway mode, so that they can receive and forward data while preserving the safety of the original configuration. In the next step, the guided setup provides customized commands for Helm.
 
 At the end of the guided setup, Kai enters the Kubernetes map of Infrastructure Monitoring and sees the cluster status. They select the nodes on the Kubernetes map, which appear as colored cubes in a grid, to learn more about the status of each element, including workloads and system metrics.
 
-.. image:: /_images/collector/image2.png
+.. image:: /_images/collector/image1.png
    :alt: Cluster view of the Kubernetes infrastructure in Infrastructure Monitoring
 
 .. _instrument-ec2-instances:
@@ -71,12 +63,12 @@ Kai also uses the Linux guided setup for the few stray EC2 instances in the orga
 
 Now, Kai can see data from each host is flowing into Infrastructure Monitoring. For each host, Kai can see metadata, system metrics, and processes, among other data points.
 
-.. image:: /_images/collector/image3.png
+.. image:: /_images/collector/image7.png
    :alt: Dashboard with host metrics in Infrastructure Monitoring
 
 At the same time, Kai can also see logs coming from each host and node in Splunk Log Observer: 
 
-.. image:: /_images/collector/image4.png
+.. image:: /_images/collector/image6.png
    :alt: Log Observer showing host logs
 
 .. _instrument-java-svc:
@@ -86,29 +78,24 @@ Instrument the Java service for Splunk APM
 
 Kai's final goal is to instrument the corporate Java service of PonyBank for Splunk APM, so that the team can analyze spans and traces in Observability Cloud, as well as use AlwaysOn Profiling to quickly identify inefficient code that's using too much CPU or memory. 
 
-To do that, Kai selects the Java guided setup, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. Kai defines an environment and service name, which are essential to enable the Related Content feature between APM and Infrastructure Monitoring.
-
-.. image:: /_images/collector/java-guided-setup.gif
-   :alt: Using the Java guided setup
-
-After selecting all the features and options they need, Kai obtains a YAML snippet they can add to the current Kubernetes configuration, as well as a customized runtime command.
+To do that, Kai selects the Java guided setup, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. Kai defines an environment and service name, which are essential to enable the Related Content feature between APM and Infrastructure Monitoring. After selecting all the features and options they need, Kai obtains a YAML snippet they can add to the current Kubernetes configuration, as well as a customized runtime command.
 
 .. image:: /_images/collector/image8.png
    :alt: Guided setup for the Java tracing instrumentation
 
 .. _related-content-use-case:
 
-Explore data links using Related Content
+Explore links between telemetry using Related Content
 =====================================================================================
 
 Thanks to the Related Content feature, when Kai selects the node running the checkout service of the application, the service appears as a link to Splunk APM in the related content bar.
 
-.. image:: /_images/collector/image5.png
+.. image:: /_images/collector/image2.png
    :alt: Infrastructure Monitoring showing the Related Content bar
 
 The same happens when Kai opens Splunk APM and selects the checkout service in the service map, shown in the following image. The EKS cluster for checkoutservice appears in the Related Content bar following the map. Observability Cloud suggests both links thanks to the APM and Infrastructure mapping that Observability Cloud performs using OpenTelemetry attributes and data.
 
-.. image:: /_images/collector/image6.png
+.. image:: /_images/collector/image4.png
    :alt: Application Monitoring showing the Related Content bar
 
 Summary
