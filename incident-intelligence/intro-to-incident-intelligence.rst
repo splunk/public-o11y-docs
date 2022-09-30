@@ -50,7 +50,7 @@ The following table provides an overview of what you can do with Incident Intell
 
    * - Create services to automatically organize incidents depending on the impacted service.
      - Services
-     - See :ref:`define-service`.
+     - See :ref:`create-service`.
 
    * - Route alerts to associate them with a service.
      - Service-based alert routing
@@ -62,11 +62,11 @@ The following table provides an overview of what you can do with Incident Intell
 
    * - Create incident workflows with a series of escalating steps to determine who is notified to respond when a new incident is triggered.
      - Incident workflows
-     - See :ref:`configure-incident-workflows`.
+     - See :ref:`configure-incident-workflow`.
 
    * - Create on-call schedules and shifts to use as a step in your service incident workflows.
      - On-call schedules and shifts
-     - See :ref:`on-call-schedules`.
+     - See :ref:`create-on-call-schedule`.
 
    * - Use incident management tools to respond to incidents as they are triggered.
      - Incident response
