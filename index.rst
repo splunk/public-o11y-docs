@@ -1052,12 +1052,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Configure SSO integrations <admin/sso>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
    Send alert notifications to third-party services <admin/notif-services/admin-notifs-index>
 
 .. toctree::
