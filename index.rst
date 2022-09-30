@@ -893,7 +893,37 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/set-up/set-up-incident-intelligence
+   /incident-intelligence/set-up-incident-intelligence
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/ingest-alerts
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/create-service
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/configure-alert-routing
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/configure-alert-grouping
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/configure-incident-workflow
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/create-on-call-schedule
 
 .. toctree::
    :maxdepth:   3
@@ -909,11 +939,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    /incident-intelligence/whos-on-call
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/reassign-shift
 
 .. toctree::
    :maxdepth:   3
