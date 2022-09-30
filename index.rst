@@ -307,7 +307,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Support <get-started/support>
 
 .. toctree::
-   :caption: DATA MANAGEMENT
+   :caption: DATA SETUP
    :maxdepth:   3
 
    gdi/get-data-in/get-data-in
@@ -361,7 +361,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth: 3
 
-   gdi/other-ingestion-methods/other-data-ingestion-methods
+   gdi/other-ingestion-methods/send-custom-metrics
 
 .. toctree::
    :maxdepth: 3
@@ -648,12 +648,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
+   logs/intro-to-logs
+
+.. toctree::
+   :maxdepth:   3
+
    logs/intro-logconnect.rst
 
 .. toctree::
    :maxdepth:   3
 
-   logs/scp
+   logs/logs
 
 .. toctree::
    :maxdepth:   3
@@ -663,17 +668,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   logs/scp
+
+.. toctree::
+   :maxdepth:   3
+
    logs/LOconnect-troubleshoot
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/intro-to-logs
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/logs
 
 .. toctree::
    :maxdepth:   3
@@ -885,6 +885,87 @@ View a list of all supported integrations :ref:`supported-data-sources`
    synthetics/test-config/test-config
 
 .. toctree::
+   :caption: INCIDENT INTELLIGENCE
+   :maxdepth:   3
+
+   /incident-intelligence/intro-to-incident-intelligence
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/set-up/set-up-incident-intelligence
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/service-maintenance
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/sync-on-call-schedule
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/whos-on-call
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/reassign-shift
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/respond-to-incident
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/add-responders
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/add-collaboration-tool
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/add-resources
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/manage-incident
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/manual-incident
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/notification-preferences
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/notification-phone-numbers
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/view-incidents-mobile
+
+.. toctree::
+   :maxdepth:   3
+
+   /incident-intelligence/key-concepts
+
+.. toctree::
    :caption: METRICS
    :maxdepth:   3
 
@@ -946,7 +1027,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   admin/SSO/sso
+   Configure SSO integrations <admin/sso>
 
 .. toctree::
    :hidden:
