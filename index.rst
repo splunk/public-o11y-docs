@@ -1070,10 +1070,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Create and manage teams <admin/teams/manage-teams>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 .. toctree::
    :hidden:
    :maxdepth:   3
