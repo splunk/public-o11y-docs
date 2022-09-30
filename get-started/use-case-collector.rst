@@ -54,12 +54,7 @@ For the hosts managed by IT as Elastic Compute Cloud (EC2) instances, Kai decide
       collector_config_dest => '/etc/otel/collector/agent_config.yaml',
       }
 
-Kai also uses the Linux guided setup for the few stray EC2 instances in the organization that are not managed through Puppet, following the steps from the Installer script tab. The customized installer script command downloads and runs the collector with the desired configuration:
-
-.. code-block:: bash
-
-   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-   sudo sh /tmp/splunk-otel-collector.sh --realm us0 -- <kai_token> --mode agent
+Kai also uses the Linux guided setup for the few stray EC2 instances in the organization that are not managed through Puppet, following the steps from the Installer script tab. The customized installer script command downloads and runs the collector with the desired configuration. 
 
 Now, Kai can see data from each host is flowing into Infrastructure Monitoring. For each host, Kai can see metadata, system metrics, and processes, among other data points.
 
