@@ -5,7 +5,7 @@ Use case: Monitor infrastructure and apps in a cloud environment using the Splun
 *****************************************************************************************************
 
 .. meta:: 
-   :description: Learn how you can use the Splunk OTel Collector to get data in from your cloud infrastructure.
+   :description: Learn how you can use the Splunk OTel Collector to get data in from your cloud infrastructure and services.
 
 Kai is the lead site reliability engineer in a large fintech company, PonyBank. Their task is to monitor their AWS infrastructure, which consists of several hundred containers running Java applications on Amazon Elastic Kubernetes Service (EKS). Kai also wants to instrument tens of Linux and Windows Elastic Compute Cloud (EC2) instances managed by IT. Kai's primary goal is to extract reliability and performance metrics and logs from each asset, as well as instrumenting the Java application to monitor its performance using Splunk APM.
 
@@ -16,10 +16,11 @@ To instrument their infrastructure using the Splunk OTel Collector, Kai takes th
 #. :ref:`set-up-eks-monitoring`
 #. :ref:`instrument-ec2-instances`
 #. :ref:`instrument-java-svc`
+#. :ref:`related-content-use-case`
 
 .. _set-up-eks-monitoring:
 
-Kai enables EKS monitoring using custom Helm charts
+Enable EKS monitoring using custom Helm charts
 =============================================================
 
 Since their migration to the cloud, the PonyBank application has been running in EKS. Kai starts by setting up the cloud integration from Observability Cloud using the guided setup, which they access from the home page. Guided setups allow to select the relevant ingest token, and generate installation commands and configuration snippets from the selected options, which Kai can use to quickly deploy instrumentation.
@@ -44,7 +45,7 @@ At the end of the guided setup, Kai enters the Kubernetes map of Infrastructure 
 
 .. _instrument-ec2-instances:
 
-Kai uses the Collector to instrument all EC2 instances
+Use the Collector to instrument all EC2 instances
 ============================================================
 
 For the hosts managed by IT as Elastic Compute Cloud (EC2) instances, Kai decides to deploy the Splunk OTel Collector using the existing Puppet setup at PonyBank. They open the guided setup for Linux monitoring in Observability Cloud and select the Puppet tab. After filling out the required information, Kai only has to follow two steps:
@@ -80,34 +81,44 @@ At the same time, Kai can also see logs coming from each host and node in Splunk
 
 .. _instrument-java-svc:
 
-Kai automatically instruments the Java service for Splunk APM
+Instrument the Java service for Splunk APM
 ======================================================================================
 
-Kai's final goal is to instrument the corporate Java service of PonyBank for Splunk APM, so that the team can analyze spans and traces in Observability Cloud, as well as use AlwaysOn Profiling to quickly identify inefficient code that's using too much CPU or memory.
+Kai's final goal is to instrument the corporate Java service of PonyBank for Splunk APM, so that the team can analyze spans and traces in Observability Cloud, as well as use AlwaysOn Profiling to quickly identify inefficient code that's using too much CPU or memory. 
 
-Thanks to the Related content feature, Kai discovers that the application running on EKS is already instrumented thanks to the Zero Config instrumentation of the Splunk OTel Collector. When Kai selects the node running the checkout service of the application, the service appears as a link to Splunk APM in the related content bar.
+To do that, Kai selects the Java guided setup, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. Kai defines an environment and service name, which are essential to enable the Related Content feature between APM and Infrastructure Monitoring.
+
+.. image:: /_images/collector/java-guided-setup.gif
+   :alt: Using the Java guided setup
+
+After selecting all the features and options they need, Kai obtains a YAML snippet they can add to the current Kubernetes configuration, as well as a customized runtime command.
+
+.. image:: /_images/collector/image8.png
+   :alt: Guided setup for the Java tracing instrumentation
+
+.. _related-content-use-case:
+
+Explore data links using Related Content
+=====================================================================================
+
+Thanks to the Related Content feature, when Kai selects the node running the checkout service of the application, the service appears as a link to Splunk APM in the related content bar.
 
 .. image:: /_images/collector/image5.png
-   :alt: Infrastructure Monitoring showing the related content bar
+   :alt: Infrastructure Monitoring showing the Related Content bar
 
-The same happens when Kai opens Splunk APM and selects the checkout service in the service map, shown in the following image. The EKS cluster for checkoutservice appears in the Related content bar following the map. Observability Cloud suggests both links thanks to the APM and Infrastructure mapping that Observability Cloud performs using OpenTelemetry attributes and data.
+The same happens when Kai opens Splunk APM and selects the checkout service in the service map, shown in the following image. The EKS cluster for checkoutservice appears in the Related Content bar following the map. Observability Cloud suggests both links thanks to the APM and Infrastructure mapping that Observability Cloud performs using OpenTelemetry attributes and data.
 
 .. image:: /_images/collector/image6.png
-   :alt: Application Monitoring showing the related content bar
-
-For all the other EC2 machines, Kai also wants to deploy Splunk APM and selects the Java guided setup for that purpose, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. For each deployment, Kai defines an environment and service name, which are essential to enable the Related content feature between APM and Infrastructure Monitoring.
-
-.. image:: /_images/collector/image7.png
-   :alt: Guided setup for the Java tracing instrumentation
+   :alt: Application Monitoring showing the Related Content bar
 
 Summary
 ==================
 
-Kai used Splunk OTel Collector to instrument PonyBank's entire cloud infrastructure, quickly obtaining configuration files and commands for each environment and situation. Through the Zero Config instrumentation for APM, they also retrieved traces from the Java services running on the EKS clusters with related content available to access.
+Kai used Splunk OTel Collector to instrument PonyBank's entire cloud infrastructure, quickly obtaining configuration files and commands for each environment and situation. Through the Java instrumentation for APM, they also retrieved traces from the Java services running on the EKS clusters with related content available to access.
 
 Learn more
 =================
 
 - To collect infrastructure metrics and logs from multiple platforms, see :ref:`otel-intro`.
-- To automatically instrument Java services for Splunk APM, see :ref:`auto-instrumentation-java`.
-- For more information on Related content in Observability Cloud, see :ref:`get-started-enablerelatedcontent`.
+- To instrument Java services for Splunk APM, see :ref:`get-started-java`.
+- For more information on Related Content in Observability Cloud, see :ref:`get-started-enablerelatedcontent`.
