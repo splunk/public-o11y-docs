@@ -7,7 +7,7 @@ Migrate from the SignalFx Tracing Library for Ruby
 .. meta:: 
    :description: The agent of the Splunk Distribution of OpenTelemetry Ruby replaces the deprecated SignalFx Ruby Tracing Library. To migrate to the Splunk Ruby OTel agent, follow these instructions.
 
-The SignalFx Tracing Library for Ruby is deprecated. Replace it with the agent from the Splunk Distribution of OpenTelemetry Ruby.
+The SignalFx Ruby tracing library is deprecated and will reach End of Support on December 17th, 2022. Replace it with the agent from the Splunk Distribution of OpenTelemetry Ruby.
 
 The agent of the Splunk Distribution of OpenTelemetry Ruby is based on the OpenTelemetry Instrumentation for Ruby, an open-source project that uses the OpenTelemetry API.
 
