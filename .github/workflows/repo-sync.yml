@@ -1,0 +1,29 @@
+name: Repo Sync
+
+on:
+  workflow_dispatch:
+  schedule: 
+    - cron: "*/5 * * * *"
+
+jobs:
+  repo-sync:
+    name: Repo Sync
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: repo-sync/github-sync@v2
+      name: Sync repo to branch
+      with:
+        source_repo: ${{ secrets.SOURCE_REPO }}
+        source_branch: main
+        destination_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
+        github_token: ${{ secrets.MY_TOKEN }}
+    - uses: repo-sync/pull-request@v2
+      name: Create pull request
+      with:
+        source_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
+        destination_branch: main
+        pr_title: "Pulling ${{ github.ref }} into main"
+        pr_reviewer: "vpolasa2-splunk,jmalin-splunk"                         # Comma-separated list (no spaces)
+        pr_assignee: "vpolasa2-splunk,jmalin-splunk"
+        github_token: ${{ secrets.MY_TOKEN }}
