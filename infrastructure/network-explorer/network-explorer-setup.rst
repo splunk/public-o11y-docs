@@ -185,7 +185,9 @@ Follow these steps to install Network Explorer:
 
         helm --namespace=<NAMESPACE> install network-explorer splunk-otel-network-explorer-chart/splunk-otel-network-explorer --set="clusterName=<CLUSTER_NAME>,otlp.receiver.host=my-splunk-otel-collector"
 
-#. The Network Explorer kernel collector requires kernel headers to run kernel in each Kubernetes node. Run the following command to install the required packages.
+#. (Optional) The Network Explorer kernel collector requires kernel headers to run kernel in each Kubernetes node. The kernel collector installs the headers automatically unless it fails to start, or if your nodes don't have access to the internet.
+
+    If you need to install the required packages manually, run the following command.
 
     .. tabs::
 
