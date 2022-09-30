@@ -298,6 +298,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   get-started/use-case-collector
+
+.. toctree::
+   :maxdepth:   3
+
    Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
 
 .. toctree::
@@ -310,11 +315,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    gdi/get-data-in/get-data-in
-
-.. toctree::
-   :maxdepth:   3
-
-   gdi/use-case-collector
 
 .. toctree::
    :maxdepth:   3
