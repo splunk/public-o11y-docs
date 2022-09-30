@@ -78,10 +78,17 @@ Instrument the Java service for Splunk APM
 
 Kai's final goal is to instrument the corporate Java service of PonyBank for Splunk APM, so that the team can analyze spans and traces in Observability Cloud, as well as use AlwaysOn Profiling to quickly identify inefficient code that's using too much CPU or memory. 
 
-To do that, Kai selects the Java guided setup, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. Kai defines an environment and service name, which are essential to enable the Related Content feature between APM and Infrastructure Monitoring. After selecting all the features and options they need, Kai obtains a YAML snippet they can add to the current Kubernetes configuration, as well as a customized runtime command.
+To do that, Kai selects the Java guided setup, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. Kai defines an environment and service name, which are essential to enable the Related Content feature between APM and Infrastructure Monitoring. 
+
+After selecting all the features and options they need, Kai obtains a YAML snippet they can add to the current Kubernetes configuration, as well as a customized runtime command.
 
 .. image:: /_images/collector/image8.png
    :alt: Guided setup for the Java tracing instrumentation
+
+For the EC2 instances that also contain Java services, Kai uses the same guided setup, running the customized commands in the console. Instrumeting the application takes a few seconds.
+
+.. image:: /_images/collector/install-java-agent.gif
+   :alt: Console output of the Java agent install
 
 .. _related-content-use-case:
 
