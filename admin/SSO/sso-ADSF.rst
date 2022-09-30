@@ -55,8 +55,8 @@ To create a new ADFS integration in Observability Cloud:
 #. In the :guilabel:`Name` field, enter a name for your ADFS SSO integration.
 #. Save the :guilabel:`Integration ID` field value to a file. You'll need this value in a subsequent step.
 #. If you want to set up ADFS to integrate with multiple organizations:
-   #. Select :guilabel:`Integration-specific Entity ID`.
-   #. Save the URI displayed next to the check box. You'll need it in a subsequent step to configure ADFS. To learn more, see :ref:`Integrate an identity provider with multiple organizations<multiple-integrations-sso>`.
+     #. Select :guilabel:`Integration-specific Entity ID`.
+     #. Save the URI displayed next to the check box. You'll need it in a subsequent step to configure ADFS. To learn more, see :ref:`Integrate an identity provider with multiple organizations<multiple-integrations-sso>`.
 #. Keep this page open. You'll upload the :strong:`Certificate` and :strong:`Metadata` files in a subsequent step.
 
 

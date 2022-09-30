@@ -347,9 +347,9 @@ App start monitoring
 
 App start monitoring feature generates spans whenever the app performs a cold, warm, or hot start.
 
-- Cold_Start: Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
-- Hot_Start:- Hot starts happen when the system brings ann app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
-- Warm_Start:- Warm starts happen when some of the operations that take place in a cold start are still happening. Warm starts are faster than cold starts, but slower than hot starts.
+- ``cold``: Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
+- ``hot``: Hot starts happen when the system brings ann app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
+- ``warm``: Warm starts happen when some of the operations that take place in a cold start are still happening. Warm starts are faster than cold starts, but slower than hot starts.
 
 App start monitoring produces spans with the name ``AppStart`` and the following attributes:
 
@@ -381,7 +381,7 @@ If you choose to set the latitude and longitude for location data by using the S
    * - Optional method
      - Type
      - Description
-   * - ``setLoxation``
+   * - ``setLocation``
      - Double
      - Latitude and longitude are appended to every span and event.
 
