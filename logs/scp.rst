@@ -14,6 +14,10 @@ Splunk Log Observer Connect is available in the AWS regions us0, us1, and eu0. S
 
 .. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the universal forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
 
+Prerequisites
+==============================================================
+Enable token authentication in your Splunk Enterprise instance. See Securing Splunk Enterprise: Enable or disable token authentication token to learn how.
+
 Set up Log Observer Connect
 ==============================================================
 To set up Log Observer Connect for Splunk Cloud Platform, follow these steps:
@@ -62,16 +66,16 @@ To submit a support ticket, follow these steps:
 
 3. Select :guilabel:`Support Portal` from the drop-down list to submit a case ticket.
 
-4. In the description of your ticket, paste the following for your Observability Cloud instance:
+4. In the description of your ticket, paste the following for your Observability Cloud instance and enter the relevant values for your organization:
 
-   a. Your organization name
+   .. code-block:: bash
+
+      OrgID: <enter-orgid>
+      Realm: <enter-realm>
+      Instance Name: <instance-name>
+      Request: Please securely open our Splunk Cloud Platform instance management port (8089) and add the IP addresses of the above realm to our allow list. Also, please provide us with the SSL certificate chain in this ticket so that we can enable Log Observer Connect.
    
-   b. Your region
 
-   c. Your instance name
-
-   d. Send the following request in your ticket to the Support team: Please securely open our Splunk Cloud Platform instance management port (8089) and add Splunk Observability Cloud IPs to our allow list. Also, please provide us with the SSL certificate chain in this ticket so that we can enable Log Observer Connect.
-   
 When you receive the SSL certificate from Splunk Support in your support ticket, do the following:
 
 1. Paste the first certificate stanza in the final section of the Log Observer Connect guided setup, :guilabel:`Set up Observability Cloud`.
