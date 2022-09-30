@@ -21,7 +21,7 @@ To instrument their infrastructure using the Splunk OTel Collector, Kai takes th
 .. _set-up-eks-monitoring:
 
 Enable EKS monitoring using custom Helm charts
-=============================================================
+============================================================
 
 Since their migration to the cloud, the PonyBank application has been running in EKS. Kai starts by setting up the cloud integration from Observability Cloud using the guided setup, which they access from the home page. Guided setups allow to select the relevant ingest token, and generate installation commands and configuration snippets from the selected options, which Kai can use to quickly deploy instrumentation.
 
