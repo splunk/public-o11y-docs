@@ -202,7 +202,7 @@ Follow these steps to install Network Explorer:
 
 .. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
 
-For additional configuration, see :new-page:`Network Explorer for Kubernetes <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/README.md>` on GitHub.
+For additional configurations, see :new-page:`Network Explorer for Kubernetes <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/README.md>` on GitHub.
 
 
 Next steps
