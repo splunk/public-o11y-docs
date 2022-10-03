@@ -311,7 +311,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Support <get-started/support>
 
 .. toctree::
-   :caption: DATA SETUP
+   :caption: DATA MANAGEMENT
    :maxdepth:   3
 
    gdi/get-data-in/get-data-in
@@ -365,7 +365,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth: 3
 
-   gdi/other-ingestion-methods/send-custom-metrics
+   gdi/other-ingestion-methods/other-data-ingestion-methods
 
 .. toctree::
    :maxdepth: 3
@@ -652,22 +652,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/intro-to-logs
-
-.. toctree::
-   :maxdepth:   3
-
    logs/intro-logconnect.rst
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/logs
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/set-up-logconnect
 
 .. toctree::
    :maxdepth:   3
@@ -677,7 +662,22 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   logs/set-up-logconnect
+
+.. toctree::
+   :maxdepth:   3
+
    logs/LOconnect-troubleshoot
+
+.. toctree::
+   :maxdepth:   3
+
+   logs/intro-to-logs
+
+.. toctree::
+   :maxdepth:   3
+
+   logs/logs
 
 .. toctree::
    :maxdepth:   3
@@ -1073,6 +1073,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Create and manage teams <admin/teams/manage-teams>
+
 
 .. toctree::
    :hidden:
