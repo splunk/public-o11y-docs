@@ -37,7 +37,7 @@ You need to have the following requirements to use Network Explorer.
       - RedHat Linux: 7.6+, Ubuntu 16.04+, Debian Stretch+, Amazon Linux 2, Google COS
 
     * - Kubernetes version
-      - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases in the Kubernetes documentation <https://kubernetes.io/releases/>`. 
+      - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation. 
 
 
 .. _network-explorer-otel-collector:
