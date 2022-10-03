@@ -74,7 +74,7 @@ The following table shows the configuration options:
 
 ## Metrics
 
-These are the metrics available for this integration. All metrics are emitted by default.
+These are the metrics available for this integration. 
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/open-telemetry/opentelemetry-collector-contrib/main/receiver/mongodbatlasreceiver/metadata.yaml"></div>
 
