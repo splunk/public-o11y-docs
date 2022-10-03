@@ -432,7 +432,7 @@ If you choose to set the latitude and longitude for location data by using the S
    * - Optional method
      - Type
      - Description
-   * - ``setLoxation``
+   * - ``setLocation``
      - Double
      - Latitude and longitude are appended to every span and event.
 

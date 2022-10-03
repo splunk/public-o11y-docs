@@ -935,6 +935,28 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
+
+.. toctree::
+   :hidden:
+   :maxdepth:   3
+
+   admin/SSO/sso
+
+.. toctree::
+   :maxdepth:   3
+
+   Create and manage authentication tokens <admin/authentication-tokens/tokens>
+
+.. toctree::
+   :hidden:
+   :maxdepth:   3
+
+   admin/allow-services
+
+.. toctree::
+   :maxdepth:   3
+
    Create and manage users <admin/users/manage-users>
 
 .. toctree::
@@ -942,11 +964,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Create and manage teams <admin/teams/manage-teams>
 
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Configure SSO integrations <admin/sso>
 
 .. toctree::
    :hidden:
@@ -958,19 +975,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   admin/allow-services
-
-.. toctree::
-   :maxdepth:   3
-
-   Create and manage authentication tokens <admin/authentication-tokens/tokens>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
    Link metadata to related resources using global data links <admin/link-metadata-to-content>
 
+.. toctree::
+   :maxdepth:   3
+
+   View organization metrics <admin/org-metrics>
 .. toctree::
    :hidden:
    :maxdepth:   3
@@ -989,15 +999,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    admin/imm-billing-usage/dpm-usage
 
-.. toctree::
-   :maxdepth:   3
 
-   View organization metrics <admin/org-metrics>
-
-.. toctree::
-   :maxdepth:   3
-
-   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
 
 .. toctree::
    :caption: SETTINGS AND REFERENCE
