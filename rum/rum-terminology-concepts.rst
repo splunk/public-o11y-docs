@@ -170,7 +170,7 @@ A tag is a field name that is an attribute of your span that you can use to filt
 
 RUM metrics for mobile applications
 ====================================
-Splunk RUM for Mobile uses a set of metrics to measure the health of your application, such as app startup times, error rates, and crash rates. For more, see :ref:`rum-mobile-metric` in the Splunk RUM metrics reference.
+Splunk RUM for Mobile uses a set of metrics to measure the health of your application, such as app startup times, error rates, and crash rates. For more, see :ref:`rum-metrics` in the Splunk RUM metrics reference.
 
 
 App start
@@ -197,7 +197,7 @@ Presentation transitions are screen transitions and screen changes, such as when
 
 RUM metrics for browser applications
 ====================================
-Splunk RUM for Browser uses these metrics to measure the health of your application. For more, see :ref:`rum-browser-metric` in the Splunk RUM metrics reference.
+Splunk RUM for Browser uses these metrics to measure the health of your application. For more, see :ref:`rum-metrics` in the Splunk RUM metrics reference.
 
 .. _rum-web-vitals:
 
