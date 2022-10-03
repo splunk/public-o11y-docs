@@ -29,6 +29,6 @@ With the help of :strong:`Metric pipeline management`, Kai has successfully summ
 Learn more
 ===============
 
-To learn more about aggregation, see :ref:`metric-pipeline-intro`
+To learn more about aggregation, see :ref:`metric-pipeline-intro`.
 
 For more information on how to create metric rules, see :ref:`use-metric-pipeline`. 
