@@ -10,32 +10,30 @@ Control your metrics ingestion volume with rules
 *********************************************************************
 
 .. meta::
-    :description: Learn how to create a metric ruleset
+    :description: Learn how to create metric rules
 
-A metric ruleset lets you select one metric to set filtering and aggregation rules.
+For each metric you send to Splunk Observability Cloud, you can create various aggregation and data dropping rules to control ingestion and storage volume.
 
-Create a metric ruleset
+Create rules for a metric
 =================================
 
-Follow these steps to create a metric ruleset.
+Follow these steps to create rules for a metric
 
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Settings > Metric pipeline management`.
-#. Select :guilabel:`Create new ruleset`
-#. In the search bar, enter the name of the metric for which you want to create a ruleset.
-#. Select :guilabel:`Next`.
+#. Select :guilabel:`Create new rules`
+#. In the search bar, enter the name of the metric for which you want to create rules.
+#. Select :guilabel:`OK`.
 #. Add aggregation rules:
 
-    #. Select :guilabel:`Add aggregation rules`.
-    #. In the :strong:`Aggregate by` field, search for dimensions associated with your selected metric. The dimensions you select to aggregate by are retained in the aggregated metric. Other dimensions are dropped.
-    #. In the :strong:`New aggregated metric name` field, rename your aggregated metric or select :guilabel:`Generate name` to use a metric name set by the system.
-    #. (Optional) If you want to diable your rule, switch :guilabel:`Rule status` to :strong:`Inactive`. By default, a new ggregation rule is active. 
-    #. (Optional) Select :guilabel:`Add new rule` and repeat steps 6b-6d to add another aggregation rule.
-#. (Optional) In the :strong:`Drop metrics data`, select :guilabel:`Enabled` to discard all metric time series (MTS) that matches your metric selection criteria in step 3. If you enable data dropping, only the new aggregated MTS are retained. By default, :strong:`Drop metrics data` is disabled.
+    #. Select :guilabel:`Add aggregation rule`.
+    #. (Optional) In the :strong:`Filter population` field, search for dimension key or value to narrow down the associated MTSs.
+    #. In the :strong:`Aggregate by` field, search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTSs. All other dimensions are removed.
+    #. In the :strong:`New aggregated metric name` field, select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric. 
+    #. (Optional) If you want to diable your rule, switch :guilabel:`Rule status` to :strong:`Inactive`. By default, a new aggregation rule is active. 
+    #. (Optional) Select :guilabel:`Add new aggregation rule` and repeat steps 6b-6e to add another aggregation rule.
+#. (Optional) In the :strong:`Drop unaggregated raw metrics data`, select :guilabel:`Drop data` to discard all metric time series (MTS) that matches your metric selection criteria in step 3. If you drop raw data, only the new aggregated MTSs are retained. By default, unaggregated data is kept.
 
     To learn more, see :ref:`drop-metrics-data`.
-#. Select :strong:`Next`.
+#. Select :guilabel:`Save`.
 #. Review the new MTS volume.
 #. Select :strong:`Confirm`.
-#. Review your ruleset configurations and impact.
-#. Select :guilabel:`Save`.
-
