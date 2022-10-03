@@ -13,5 +13,7 @@ Contents: Metric pipeline management preview documentation
 
 Use the following links to navigate the documentation set for the preview of metric pipeline management:
 
-* :ref:`metric-pipeline-intro`
+    * :ref:`metric-pipeline-intro`
+    * :ref:`use-metric-pipeline`
+    * :ref:`drop-metrics-data`
 

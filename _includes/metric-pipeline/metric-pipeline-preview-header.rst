@@ -4,4 +4,6 @@
 
     See :ref:`metric-pipeline-preview-sitemap` for the complete list of topics, or use these links to navigate to the high-level topics for metric pipeline management: 
 
-    * :ref:`metric-pipeline-intro`
+        * :ref:`metric-pipeline-intro`
+        * :ref:`use-metric-pipeline`
+        * :ref:`drop-metrics-data`
