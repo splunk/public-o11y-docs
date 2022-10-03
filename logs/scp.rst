@@ -66,7 +66,7 @@ To submit a support ticket, follow these steps:
 
 3. Select :guilabel:`Support Portal` from the drop-down list to submit a case ticket.
 
-4. In the description of your ticket, paste the following for your Observability Cloud instance and enter the relevant values for your organization:
+4. In the description of your ticket, paste the following and enter the relevant values for your organization:
 
    .. code-block:: bash
 
