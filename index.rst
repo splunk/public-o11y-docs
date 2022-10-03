@@ -298,8 +298,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
+   Use case: Monitor infrastructure and apps using the Collector <get-started/use-case-collector>
 
+.. toctree::
+   :maxdepth:   3
+
+   Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
 
 .. toctree::
    :maxdepth:   3
