@@ -55,6 +55,8 @@ The following table lists all the commands and their usage in context of the Spl
     - Restart the collector on the host
   * - :ref:`otel-start`
     - Start the collector on the host
+  * - :ref:`otel-status`
+    - Check the collector status on the host (Linux only)   
   * - :ref:`otel-stop`
     - Stop the collector on the host
 
@@ -542,6 +544,24 @@ Syntax
 .. code-block:: bash
 
    sudo systemctl start splunk-otel-collector
+
+.. _otel-status:
+
+status 
+============================================
+Description
+--------------
+
+Check the status of the collector on the host. Only available for :new-page:`Linux <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/linux-installer.md>`.
+
+Additionaly, you might use the :new-page:`Health Check extension <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/healthcheckextension/README.md>`, which enables to probe an HTTP url to check the status of the OpenTelemetry Collector.
+
+Syntax
+---------------
+
+.. code-block:: bash
+
+   sudo systemctl status splunk-otel-collector
 
 .. _otel-stop:
 
