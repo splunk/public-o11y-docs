@@ -5,19 +5,29 @@ List of available AutoDetect detectors
 ******************************************************
 
 .. meta::
-   :description: AutoDetect reference list
-
-AutoDetect detectors and their arguments are driven by SignalFlow functions in the SignalFlow library.
+   :description: The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the GitHub link in each AutoDetect detector section.
 
 The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the GitHub link in each AutoDetect detector section.
+
+.. _apm-autodetectors:
+
+Application Monitoring
+===================================
+
+Service latency detector
+
+.. _infrastructure-autodetectors:
+
+Infrastructure Monitoring
+===================================
 
 .. _autodetect-aws:
 
 AWS
-==========================================================
+------------
 
 AWS/RDS free disk space is going to run out
------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when RDS free disk space is expected to run out in the next 48 hours.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/rds.flow#L6>` repository on GitHub.
@@ -48,10 +58,10 @@ The following table shows customizable arguments for this detector:
 .. _autodetect-kafka:
 
 Kafka
-==========================================================
+-----------
 
 Kafka - Partition is under-replicated
-----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when at least one Kafka partition is under replicated for at least 5 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/kafka/broker.flow#L18>` repository on GitHub.
@@ -77,7 +87,7 @@ The following table shows customizable arguments for this detector:
      - None
    
 Kafka - No Active Controller
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when there is no active controller in a cluster.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/kafka/broker.flow#L5>` repository on GitHub.
@@ -96,7 +106,7 @@ The following table shows customizable arguments for this detector:
      - None
 
 Kafka - Offline partitions on a broker
-------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when there is no active leader for a partition, and the partition cannot be read from or written to.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/kafka/broker.flow#L39>` repository on GitHub.
@@ -118,7 +128,7 @@ The following table shows customizable arguments for this detector:
      - None
 
 Kafka - Consumer Group lag
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when a consumer group has been lagging behind the latest offset by 100 for 2 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/kafka/consumer.flow#L5>` repository on GitHub.
@@ -152,10 +162,10 @@ The following table shows customizable arguments for this detector:
 .. _autodetect-k8s:
 
 Kubernetes
-==========================================================
+---------------------------------------------------
 
 K8s Cluster DaemonSet ready vs scheduled
----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when number of ready and scheduled DaemonSets have diverged.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/daemonsets.flow#L5>` repository on GitHub.
@@ -180,7 +190,7 @@ The following table shows customizable arguments for this detector:
      - None
 
 K8s Cluster Deployment is not at spec
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when the numbers of ready and available pods in Cluster Deployments have diverged.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/deployments.flow#L5>` repository on GitHub.
@@ -206,7 +216,7 @@ The following table shows customizable arguments for this detector:
      - None
 
 K8s Container Restart Count is > 0
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when container restart count in the last 5 minutes is greater than 0.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/containers.flow#L5>` repository on GitHub.
@@ -226,7 +236,7 @@ The following table shows customizable arguments for this detector:
      - None
 
 K8s Node Memory Utilization is high
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when a Kubernetes Node has been using more than 90% memory for 5 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/nodes.flow#L21>` repository on GitHub.
@@ -252,7 +262,7 @@ The following table shows customizable arguments for this detector:
      - None
 
 K8s Nodes are not ready
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when Kubernetes Nodes are not in a ready state after 30 seconds.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/nodes.flow#L5>` repository on GitHub.
@@ -277,10 +287,10 @@ The following table shows customizable arguments for this detector:
 .. _autodetect-splunk:
 
 Splunk operational
-==========================================================
+---------------------------------------------------
 
 Splunk Operational - Container usage is expected to reach the limit
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: alerts when the container usage percentage is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L185>` repository on GitHub.
@@ -316,7 +326,7 @@ The following table shows customizable arguments for this detector:
      - ``No``
 
 Splunk Operational - Datapoints are throttled 
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when the number of throttled data points is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L235>` repository on GitHub.
@@ -345,7 +355,7 @@ The following table shows customizable arguments for this detector:
 
 
 Splunk Operational - Detectors aborted
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when at least one detector has been aborted for the last 5 hours.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L4>` repository on GitHub.
@@ -371,7 +381,7 @@ The following table shows customizable arguments for this detector:
      - None
 
 Splunk Operational - The number of detectors is expected to reach the limit
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when number of detectors about to reach the organization system limit. This limit includes customized detectors created from AutoDetect detectors.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L23>` repository on GitHub.
@@ -393,7 +403,7 @@ The following table shows customizable arguments for this detector:
      - ``100% of 3h``
 
 Splunk Operational - Host usage percentage is expected to reach the limit
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when the host usage percentage is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L89>` repository on GitHub.
@@ -429,7 +439,7 @@ The following table shows customizable arguments for this detector:
      - ``No``
 
 Splunk Operational - Active MTS is expected to reach the limit 
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when the number of active MTS is projected to reach the organization system limit.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L49>` repository on GitHub.
@@ -437,7 +447,7 @@ Splunk Operational - Active MTS is expected to reach the limit
 This detector does not have any customizable arguments.
 
 Splunk Operational - Custom MTS usage is expected to reach the limit
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when the custom MTS usage percentage is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L137>` repository on GitHub.
