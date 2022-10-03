@@ -907,22 +907,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/create-service
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/configure-alert-routing
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/configure-alert-grouping
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/configure-incident-workflow
+   /incident-intelligence/create-configure-services
 
 .. toctree::
    :maxdepth:   3
