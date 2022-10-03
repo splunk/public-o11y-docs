@@ -1,7 +1,7 @@
 .. _rum-browser-data:
 
 **************************************************
-Data collected by the Browser RUM agent
+RUM Browser data model 
 **************************************************
 
 .. meta::
