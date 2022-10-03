@@ -31,7 +31,7 @@ Follow these steps to create rules for a metric
     #. In the :strong:`New aggregated metric name` field, select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric. 
     #. (Optional) If you want to diable your rule, switch :guilabel:`Rule status` to :strong:`Inactive`. By default, a new aggregation rule is active. 
     #. (Optional) Select :guilabel:`Add new aggregation rule` and repeat steps 6b-6e to add another aggregation rule.
-#. (Optional) In the :strong:`Drop unaggregated raw metrics data`, select :guilabel:`Drop data` to discard all metric time series (MTS) that matches your metric selection criteria in step 3. If you drop raw data, only the new aggregated MTSs are retained. By default, unaggregated data is kept.
+#. (Optional) In the :strong:`Drop unaggregated raw metrics data` section, select :guilabel:`Drop data` to discard all metric time series (MTS) that matches your metric selection criteria in step 3. If you drop raw data, only the new aggregated MTSs are retained. By default, unaggregated data is kept.
 
     To learn more, see :ref:`drop-metrics-data`.
 #. Select :guilabel:`Save`.
