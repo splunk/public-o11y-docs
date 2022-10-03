@@ -11,7 +11,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. To add responders, select :guilabel:`Configure invite` under :guilabel:`Immediately`. 
 #. In the :guilabel:`Configure invite` window add responders or schedules.
     #. Enter user names in the :guilabel:`Search people` field and select the user when they appear. Repeat these steps until you have all the responders you want to invite to incidents for this service.
-    #. Enter a schedule name in the :guilabel:`Search schedules` field and select the schedule when it appears. You can only select one schedule in a given incident workflow step. If you haven't already created an on-call schedule, see :ref:`create-on-call-schedules`.
+    #. Enter a schedule name in the :guilabel:`Search schedules` field and select the schedule when it appears. You can only select one schedule in a given incident workflow step. If you haven't already created an on-call schedule, see :ref:`create-on-call-schedule`.
 #. Select :guilabel:`Add responders`.
 #. Select :guilabel:`Add New Step` to add additional escalating steps with additional responders to your incident workflow.
 #. Select an elapsed time period in the drop-down list next to :guilabel:`If unacknowledged after`.

@@ -1,4 +1,4 @@
-.. _create-on-call-schedules:
+.. _create-on-call-schedule:
 
 Create your on-call schedules
 ************************************************************************

@@ -66,7 +66,7 @@ The following table provides an overview of what you can do with Incident Intell
 
    * - Create on-call schedules and shifts to use as a step in your service incident workflows.
      - On-call schedules and shifts
-     - See :ref:`create-on-call-schedules`.
+     - See :ref:`create-on-call-schedule`.
 
    * - Use incident management tools to respond to incidents as they are triggered.
      - Incident response
