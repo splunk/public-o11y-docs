@@ -5,7 +5,7 @@
 .. _drop-metrics-data:
 
 *********************************************************************
-Drop unaggregated raw data to reduce storage
+Data dropping impact
 *********************************************************************
 
 .. meta::
