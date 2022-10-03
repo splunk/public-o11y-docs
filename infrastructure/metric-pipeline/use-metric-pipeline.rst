@@ -6,7 +6,7 @@
 .. _use-metric-pipeline:
 
 *********************************************************************
-Control your metrics ingestion volume with aggregation rules
+Control your metrics ingestion volume with rules
 *********************************************************************
 
 .. meta::
