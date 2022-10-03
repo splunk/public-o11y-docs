@@ -907,17 +907,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/create-configure-services
+   /incident-intelligence/create-configure-services/create-configure-services
 
 .. toctree::
    :maxdepth:   3
 
    /incident-intelligence/create-on-call-schedule
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/service-maintenance
 
 .. toctree::
    :maxdepth:   3
