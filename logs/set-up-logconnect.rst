@@ -16,7 +16,7 @@ Splunk Log Observer Connect is available in the AWS regions us0, us1, and eu0. S
 
 Prerequisites
 ==============================================================
-Ensure that token authentication is enabled in your Splunk Enterprise instance. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication token <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth> to learn how.
+Ensure that token authentication is enabled in your Splunk Enterprise instance. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication token <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
 
 Set up Log Observer Connect
 ==============================================================
