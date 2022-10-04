@@ -9,27 +9,15 @@ Data dropping impact
 *********************************************************************
 
 .. meta::
-    :description: Learn about data dropping and the impact of data dropping
+    :description: Learn about the impact of data dropping
 
-When you create or update rules for your metric, you can drop unaggregated raw data to discard metric time series (MTSs) you don't want to ingest or monitor in Splunk Observability Cloud.
-
-How data dropping works
-=================================
-
-When you drop raw data, all unaggregated raw MTSs are not ingested into Splunk Observability Cloud. Only the aggregated MTSs yielded by the metric ruleset are retained.
-
-Example
---------------
-
-You select the metric ``cpu.utilization``, filter the metric by the top 100 hosts on the dimension ``host_id``, and aggregate the metric by the dimension ``host_region``. You have a new aggregated metric based on your aggregation rules.
-
-The new aggregated metric contains only the ``host_region`` dimension. If you enable data dropping, only this new aggregated metric is ingested and the original ``cpu.utilization`` MTSs for the top 100 hosts are discarded.
+When you create or update rules for your metric, you can drop unaggregated raw data to discard metric time series (MTSs) you don't want to ingest or monitor in Splunk Observability Cloud. To learn more, see :ref:`data-dropping`.
 
 
 Impact of dropping data
 =================================
 
-Before you enable data dropping for your metric, consider the following impacts:
+Before you decide to drop unaggregated raw data for your metric, consider the following impacts:
 
 - You can't recover dropped data
 - Detectors using the metric you drop will misfire alerts or stop alerting
