@@ -48,7 +48,7 @@ Before digging into Database Query Performance, Jax wants to make sure that ther
    :width: 65%
    :alt: The MySQL host for the mysql-prod-1 database appears in the Related Content bar.
 
-After they select the host, Jax is able to verify that the infrastructure is not the cause behind the latency, as the infrastructure metrics appear normal. The Related Content bar for the host contains a tile that links to Database Query Performance, as well as others for APM and Log Observer.
+After they select the host, Jax can verify that the infrastructure is not the cause behind the latency, as the infrastructure metrics appear normal. The Related Content bar for the host contains a tile that links to Database Query Performance, as well as others for APM and Log Observer.
 
 .. image:: /_images/apm/apm-use-cases/db-rel-infra.png
    :width: 65%
@@ -77,7 +77,7 @@ Jax selects the query with the highest latency to get more details. The :guilabe
    :width: 65%
    :alt: This screenshot shows the Database Query Performance sidebar, showing the full text of the top query and charts of latency and requests and errors specific to the top query. 
 
-Based on this evidence, Jax identifies this query as the possible culprit of the high service latency. Jax selects the copy button to copy the text of the statement so they can give it to their team's DBA.
+Based on this evidence, Jax identifies this query as the possible culprit of the high service latency. Jax selects the copy button to copy the text of the statement so they can give it to their team's database administrator.
 
 .. _find-sample-traces:
 
@@ -86,13 +86,13 @@ Finding example traces
 
 To determine whether the high latency is coming from multiple spans with many executions of a particular query, or from a single, long span with one execution of a slow query, Jax decides to look for example traces containing this problematic query. 
 
-Jax selects within the latency chart to isolate a time on the x-axis and load a table of example traces from that time. They confirm that each of the loaded traces contains ``mysql:mysql-prod-1`` as a span tag. They also notice that these traces all have unusually long durations, probably due to the slow database query they have identified: 
+Jax clicks within the latency chart to isolate a time on the x-axis and load a table of example traces from that time. They confirm that each of the loaded traces contains ``mysql:mysql-prod-1`` as a span tag. They also notice that these traces all have unusually long durations, probably due to the slow database query they have identified: 
 
 .. image:: /_images/apm/db-query-perf/db-traces.png
    :width: 100%
    :alt: This screenshot shows a list of example traces from a time selected in the latency chart for the specified database. Span tags containing the database name, as well as the trace durations, are highlighted to show they are associated with the slow database query. 
 
-From the table of traces, Jax selects the trace in the table with the longest duration to open its Trace View page and waterfall chart. They could also select specifically on a span tag containing the database name to open the span with the problematic query to see the exact query in context. 
+From the table of traces, Jax selects the trace in the table with the longest duration to open its Trace View page and waterfall chart. They could also select a span tag containing the database name to open the span with the problematic query to see the exact query in context. 
 
 In Trace View, Jax scrolls to find a span that references the ``mysql:mysql-prod-1`` database, which is identified as an inferred service in the Trace Waterfall. They select this span to open it and view the query under the ``db.statement`` span tag, confirming that it's the same SQL statement that raised their suspicions in Database Query Performance view. 
 
