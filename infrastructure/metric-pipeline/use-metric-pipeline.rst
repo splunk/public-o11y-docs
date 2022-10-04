@@ -27,7 +27,7 @@ Follow these steps to create rules for a metric
 
     #. Select :guilabel:`Add aggregation rule`.
     #. (Optional) In the :strong:`Filter population` field, search for dimension key or value to narrow down the associated MTSs.
-    #. In the :strong:`Aggregate by` field, search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTSs. All other dimensions are removed.
+    #. In the :strong:`Select dimensions to keep` field, search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTSs. All other dimensions are removed.
     #. In the :strong:`New aggregated metric name` field, select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric. 
     #. (Optional) If you want to diable your rule, switch :guilabel:`Rule status` to :strong:`Inactive`. By default, a new aggregation rule is active. 
     #. (Optional) Select :guilabel:`Add new aggregation rule` and repeat steps 6b-6e to add another aggregation rule.
