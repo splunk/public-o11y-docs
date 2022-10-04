@@ -119,5 +119,8 @@ When activated, this feature is used to enforce the validation of expired, inval
 
 .. _browser-exclude:
 
-Exclude files
-----------------
+..
+    Exclude files
+    ----------------
+
+
