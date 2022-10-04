@@ -400,7 +400,7 @@ App start monitoring
 App start monitoring feature generates spans whenever the app performs a cold, warm, or hot start.
 
 - Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
-- Hot starts happen when the system brings nn app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
+- Hot starts happen when the system brings an app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
 
 App start monitoring produces spans with the name ``AppStart`` and the following attributes:
 

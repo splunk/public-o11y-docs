@@ -44,7 +44,7 @@ Kai uses custom dashboards to get a high level assessment of the health of the B
     :width: 90%
     :alt: This image shows two charts. The first chart shows a line chart of custom events and the second chart shows a line chart for page views represented by page. 
 
-With this dashboard kai can monitor custom events and page level metrics. 
+With this dashboard Kai can monitor custom events and page level metrics. 
 
 
 
