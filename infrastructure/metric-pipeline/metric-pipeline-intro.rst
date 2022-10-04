@@ -9,11 +9,11 @@ Introduction to metric pipeline management
 ******************************************************
 
 .. meta::
-    :description: Introduction to metric pipeline management in Splunk Infrastructure Monitoring
+    :description: Introduction to metric pipeline management in Splunk Observability Cloud
 
 Metric pipeline management is an evolution on Splunk Observability Cloud metrics platform that offers you greater storage flexibility and processing options with enhanced data filtering and aggregation. 
 
-With metric pipeline management, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without making any changes to your instrumentation.
+With metric pipeline management, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without changing your Splunk Distribution of OpenTelemetry Collector configurations.
 
 How does metric pipeline management work?
 ========================================================
@@ -29,9 +29,19 @@ The driving mechanism behind metric pipeline management are aggregation and data
 Aggregation
 ----------------------
 
-When you send data from your services to Observability Cloud, your data can have high cardinality due to high numbers of dimensions and possible values. Instead of adjusting how you are sending in your data, aggregation lets you summarize your data based on selected dimensions. 
+When you send data from your services to Observability Cloud, your data can have high cardinality due to high numbers of dimensions and possible values. Instead of adjusting how you are sending in your data at the collection point, aggregation lets you summarize your data based on dimensions you consider important.
 
-By selecting specific dimensions to retain, you can aggregate your data points into a new MTS with fewer dimensions, creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view of your data when you don't need to view metrics across all dimensions.
+By selecting specific dimensions to retain, you can aggregate your data points into a new metric with fewer dimensions, creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view of your data when you don’t need to view metrics across all dimensions.
+
+When you choose specific dimensions, metric pipeline management generates a new metric that is rolled up based on your selected dimensions. By default, aggregation rules roll up the data points into the new metric using ``sum``, ``min``, ``max``, and ``count`` functions. The new aggregated metric can be queried in the same way as any other metrics in Observability Cloud. 
+
+How is this different from post-ingestion aggregation at query-time?
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+When you configure charts or detectors, you can aggregate your data using analytic functions such as ``sum``, and then group your data by specific dimensions, such as ``sum by region``. This is post-ingest aggregation at query time. You need to store all your data in Observability Cloud if you want to do this, which is cost-prohibitive.
+
+With metric pipeline management, you can aggregate your data as you are ingesting your data into Observability Cloud, and choose to retain only aggregated metrics. 
+
 
 Example
 ++++++++
@@ -40,7 +50,6 @@ You send a metric called ``service.latency`` for a containerized workload to Spl
 Before you apply any aggregation rule, your data comes in at the container ID level, generating 100 MTS for 100 containers.
 
 However, since you are more interested in the source region of your data, you create an aggregation rule that groups your data by the ``host_region`` dimension key. The aggregated metric drops all other dimension keys, such as ``container_id`` or ``host_id``, and retains only the ``host_region`` dimension key based on your configuration. There are only 20 different host region values for your data, so only 20 MTS are ingested.
-
 
 .. _data-dropping:
 
@@ -52,6 +61,10 @@ When you have a new aggregated metric, you might no longer have any use case for
 
 Example
 ++++++++
+
+As an admin, you realize the high cardinality ``system.capacity`` metric is ingested into Observability Cloud, but your team is not using the metric to monitor your system.
+
+You can decide to drop ``system.capacity`` by creating a rule for the metric.
 
 
 Use cases for metric pipeline management
