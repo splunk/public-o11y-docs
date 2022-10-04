@@ -77,11 +77,13 @@ Set request time
 ---------------------------
 
 
+
 .. _uptime-custom-headers:
 
 Set custom headers 
 ---------------------------
 
+Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back end by sending a specific header in the requests. You can also use custom headers to set cookies. 
 
 
 .. _uptime-success-critera:
