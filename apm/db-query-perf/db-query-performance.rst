@@ -5,7 +5,7 @@ Monitor Database Query Performance
 ************************************************************************
 
 .. meta::
-   :description: Slow database queries are sometimes the culprit of wider service availability issues. With Database Query Performance, you can monitor the impact of your database queries on service availability directly in Splunk APM. 
+   :description: Slow database queries might be the culprit of wider service availability issues. With Database Query Performance, you can monitor the impact of your database queries on service availability directly in Splunk APM. 
 
 .. toctree::
    :hidden:
@@ -15,7 +15,7 @@ Monitor Database Query Performance
    db-perf-troubleshooting
    db-perf-reference
 
-Slow database queries can be the culprit of wider service availability issues. With Database Query Performance, you can monitor the impact of your database queries on service availability directly in Splunk APM. This way, you can quickly identify long-running, unoptimized, or heavy queries and mitigate issues they might be causing,  without having to instrument your databases.
+Slow database queries might be the culprit of wider service availability issues. With Database Query Performance, you can monitor the impact of your database queries on service availability directly in Splunk APM. This way, you can quickly identify long-running, unoptimized, or heavy queries and mitigate issues they might be causing, without having to instrument your databases.
 
 .. raw:: html
 
@@ -33,7 +33,7 @@ With Database Query Performance, Splunk APM provides additional analytics for a 
     <h3>Database query normalization</h3>
   </embed>
 
-To provide analytics for database queries, Splunk APM captures SQL statements (or queries) from the span in which each call is made. Then APM normalizes each query by replacing dynamic elements with static placeholders to minimize cardinality, and records the following metrics about the query’s performance: 
+To provide analytics for database queries, Splunk APM captures SQL statements, or queries, from the span in which each call has been made. Then APM normalizes each query by replacing dynamic elements with static placeholders to minimize cardinality, and records the following metrics about the query's performance: 
 
     - Total response time
     - 90th percentile (P90) of latency
@@ -58,7 +58,8 @@ You can use insights from Database Query Performance to address the following us
 
 You can use Database Query Performance to address the following use cases related to service availability:
 
-    * :strong:`Isolate database issues:` Determine whether an increase in the latency or error rate of a service is related to problems with a database. If it is, you can quickly identify which database and which specific query is contributing the most latency, so you can resolve it by involving the DBA or the owner of the service that’s making the slow database call. 
+    * :strong:`Isolate database issues:` Determine whether an increase in the latency or error rate of a service is related to problems with a database. If it is, you can quickly identify which database and which specific query is contributing the most latency, so you can resolve it by involving the DBA or the owner of the service that's making the slow database call. 
+    * :strong:`Identify underlying infrastructure:` Thanks to Related Content, see which host is running the database service, or get to the database service from Infrastructure Monitoring. For more information, see :ref:`get-started-relatedcontent`.
     * :strong:`Respond to alerts:` When you receive alerts about service availability, you can quickly eliminate databases as a root cause of the issue by seeing at a glance whether database latency or error rate increased, or whether a particular query is slow or bottlenecked.
     * :strong:`Dashboard with databases:` Use a dashboard to determine whether a new release to a service had an impact on database interactions by examining the average query response time, the number of query executions, and the change in these values over time. 
     * :strong:`Assess impact:` When you receive an alert related to database latency, quickly assess the radius of impact to determine whether customer-facing services were impacted.  
