@@ -13,6 +13,7 @@ Data dropping impact
 
 When you create or update rules for your metric, you can drop unaggregated raw data to discard metric time series (MTSs) you don't want to ingest or monitor in Splunk Observability Cloud. To learn more, see :ref:`data-dropping`.
 
+.. note:: You need to be an admin to drop data.
 
 Impact of dropping data
 =================================
