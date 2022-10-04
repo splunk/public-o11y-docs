@@ -9,4 +9,4 @@ Data dropping impact
 *********************************************************************
 
 .. meta::
-    :description: Learn about data dropping and the impact of data dropping
+    :description: Learn about the impact of data dropping
