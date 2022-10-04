@@ -45,13 +45,13 @@ Checking the database infrastructure
 Before digging into Database Query Performance, Jax wants to make sure that there are no issues in the infrastructure of the ``mysql:mysql-prod-1`` database. Using the Related Content feature, Jax is able to immediately identify the MySQL host, which appears in the Related Content bar after they click on the inferred database.
 
 .. image:: /_images/apm/apm-use-cases/db-rel-content.png
-   :width: 65%
+   :width: 95%
    :alt: The MySQL host for the mysql-prod-1 database appears in the Related Content bar.
 
 After they select the host, Jax can verify that the infrastructure is not the cause behind the latency, as the infrastructure metrics appear normal. The Related Content bar for the host contains a tile that links to Database Query Performance, as well as others for APM and Log Observer.
 
 .. image:: /_images/apm/apm-use-cases/db-rel-infra.png
-   :width: 65%
+   :width: 95%
    :alt: The MySQL host for the mysql-prod-1 database appears in the Related Content bar.
 
 .. _db_query_perf_check:
@@ -114,5 +114,6 @@ See the following links for more information about Database Query Performance:
 
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.
 * To enable Database Query Performance, see :ref:`enable-db-perf`. 
+* To learn more about Related Content, see :ref:`get-started-relatedcontent`.
 * To troubleshoot issues with Database Query Performance, see :ref:`db-perf-troubleshooting`. 
 * For reference material about Database Query Performance, see :ref:`db-perf-reference`.
