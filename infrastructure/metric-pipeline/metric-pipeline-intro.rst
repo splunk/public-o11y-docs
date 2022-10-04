@@ -82,7 +82,10 @@ You can decide to drop ``system.capacity`` by creating a rule for the metric.
 Use cases for metric pipeline management
 ==================================================
 
+See the following use cases for metric pipeline management:
 
+* :ref:`aggregate-use-case`
+* :ref:`drop-data-use-case`
 
 Create your first metric rules
 ==========================================
