@@ -33,6 +33,7 @@ Follow these steps to create rules for a metric
     #. (Optional) Select :guilabel:`Add new aggregation rule` and repeat steps 6b-6e to add another aggregation rule.
 #. (Optional) In the :strong:`Drop unaggregated raw metrics data` section, select :guilabel:`Drop data` to discard all metric time series (MTS) that matches your metric selection criteria in step 3. If you drop raw data, only the new aggregated MTSs are retained. By default, unaggregated data is kept.
 
+    :strong:`Note:` You need to be an admin to drop data.
     To learn more, see :ref:`drop-metrics-data`.
 #. Select :guilabel:`Save`.
 #. Review the new MTS volume.
