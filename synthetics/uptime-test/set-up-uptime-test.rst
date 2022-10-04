@@ -56,3 +56,37 @@ See :ref:`uptime-test-results` for an overview of run-level Uptime test results.
 
 
 
+.. _uptime-advanced-settings:
+
+Advanced settings for uptime tests 
+================================================
+
+There are many reasons why you might want to configure advanced settings for your synthetics tests. Here are a few: 
+
+* Accessing a site with a modal that appears randomly and interrupts the flow of the test. For example, a marketing modal might prompt a user to sign up for a rewards program. To circumvent this issue you can set a cookie to stop the popup modal from appearing and interfering with your test.  
+* Running a test on a site that requires users to log in to access the site. 
+* Specifying the type of device on which you want to run your test by setting the ``User-Agent`` header on requests.
+* Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
+* Filtering out requests from analytics on the back end by sending a specific header in the requests.
+* Running a test on a pre-production site that has a self-signed certificate.
+
+
+.. _uptime-request-time:
+
+Set request time 
+---------------------------
+
+
+.. _uptime-custom-headers:
+
+Set custom headers 
+---------------------------
+
+
+
+.. _uptime-success-critera:
+
+Add success criteria 
+----------------------------
+
+
