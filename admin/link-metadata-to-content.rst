@@ -122,7 +122,7 @@ For information about how to create a global data link specifically for Splunk A
 
     -  ``{{end_time}}``: Use this variable to populate the end time of the time window from the context where the link displays. The timestamp is inserted using the format you specify in the :strong:`Time Format` field.
 
-    -  ``{{properties.<property_name>}}``: Use this variable to populate other metadata from the context where the link displays. For example, ``properties`` contains a map of the metadata key names and values that display in the context where the global data link will display. To insert a name and value from this map, use ``{{properties.<your_property_name>}}``.
+    -  ``{{properties.<property_name>}}``: Use this variable to populate other metadata from the context where the link displays. For example, ``properties`` contains a map of the metadata key names and values that display in the context where the global data link will display. To insert a name and value from this map, use ``{{properties.<your_property_name>}}``. If your property name has a period in it, you may need to use square brackets around the value. For example, ``{{properties.[<property.name>]}}``.
 
 #. If you selected a :strong:`Link to` value of :strong:`Custom URL` or :strong:`Kibana`, the :strong:`Time Format` field displays. Set this field value to specify the timestamp format used for the global data link's starting and ending timestamps. Setting this field value also helps ensure compatibility with the external system you are linking to. Select one of the following time formats:
 
