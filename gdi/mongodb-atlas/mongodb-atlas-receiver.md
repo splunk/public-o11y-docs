@@ -77,7 +77,7 @@ The following table shows the configuration options:
 These are the metrics available for this integration. All metrics are emitted by default.
 
 | Name | Category | Description | Unit | Type | Attributes |
-| ---- | ---- | ----------- | ---- | ---- | ---------- |
+| ---- | ---------- | ----------- | ---- | ---- | ---------- |
 | **mongodbatlas.db.counts** |  | Database feature size aggregate of MongoDB metrics ``DATABASE_EXTENT_COUNT``, ``DATABASE_VIEW_COUNT``, ``DATABASE_COLLECTION_COUNT``, ``DATABASE_OBJECT_COUNT``, ``DATABASE_INDEX_COUNT`` | ``{objects}`` | Gauge (Double) | ``object_type`` |
 | **mongodbatlas.db.size** |  | Database feature size aggregate of MongoDB metrics ``DATABASE_DATA_SIZE``, ``DATABASE_STORAGE_SIZE``, ``DATABASE_INDEX_SIZE``, ``DATABASE_AVERAGE_OBJECT_SIZE`` | ``By`` | Gauge (Double) | ``object_type``|
 | **mongodbatlas.disk.partition.IOPS.average** |  | Disk partition IOPS aggregate of MongoDB metrics ``DISK_PARTITION_IOPS_READ``, ``DISK_PARTITION_IOPS_WRITE``, ``DISK_PARTITION_IOPS_TOTAL`` | ``{ops}/s``| Gauge (Double) | ``disk_direction`` |
