@@ -9,7 +9,7 @@ Create a custom dashboard for any Splunk RUM metric.
 
 1. In the left navigation menu, select :menuselection:`Dashboards`> :strong:`+`> :strong:`Dashboard`
 2. Select the charts you want to create with the metrics of interest to you. For more information, see :ref:`dashboard-create-customize`.
-3. Save your work. 
+3. Save your dashboard. 
 
 Metrics
 ==========
@@ -37,12 +37,15 @@ The following use case features an example from Kai, a site reliability engineer
 Monitor custom events and page level metrics
 ---------------------------------------------
 
-Kai uses custom dashboards to get a high level assessment of the health of the Buttercup Industries applications. They go to :menuselection:`Dashboards` to create a new dashboard. Kai wants to look at custom events and page level metrics for page views. The first chart utilizes the metric ``rum.node.workflow.count``. The second chart shows the metric ``rum.node.page_view.count`` uses to show the  Kai wants to look at custom events and page level metrics for page views. The following image shows how Kai set up their dashboard: 
+Kai uses custom dashboards to get a high level assessment of the health of the Buttercup Industries applications. They go to :menuselection:`Dashboards` to create a new dashboard. Kai wants to look at custom events and page level metrics for page views. The first chart utilizes the metric ``rum.node.workflow.count``. The second chart shows the metric ``rum.node.page_view.count`` uses to show the  Kai wants to look at custom events and page level metrics for page views. Kai set up their dashboard: 
 
 
 ..  image:: /_images/rum/use-case-custom-dashboard.png
     :width: 90%
     :alt: This image shows two charts. The first chart shows a line chart of custom events and the second chart shows a line chart for page views represented by page. 
+
+With this dashboard kai can monitor custom events and page level metrics. 
+
 
 
 ..

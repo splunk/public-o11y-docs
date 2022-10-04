@@ -31,7 +31,7 @@ This topic introduces important terminology and concepts in Splunk RUM for Brows
     * - :ref:`example-session`
       - A session that contains a certain behavior you want to analyze.
     * - :ref:`rum-app-launch`
-      - A crash is when a user encounters an error and has to exit the app.
+      - A crash happens when a user encounters an error and has to exit the app.
     * - :ref:`rum-web-vitals`
       - Web Vitals are made up of three metrics that measure user experience:
             * LCP (largest contentful paint)
@@ -185,7 +185,7 @@ In Splunk RUM for Mobile, app start is when the app is responsive and the user c
 App crashes and errors
 -----------------------
 
-A crash is when a user encounters an error and has to exit the app. App errors are all other types of errors that occur but don't result in the user having to exit the app. For example ANR (application not responding).
+A crash happens when a user encounters an error and has to exit the app. App errors are all other types of errors that occur but don't result in the user having to exit the app. For example ANR (application not responding).
 
 
 Presentation transition

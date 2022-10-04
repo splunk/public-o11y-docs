@@ -40,7 +40,7 @@ Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics wi
      - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
    * - ``rum.crash.count``
      - Mobile crash
-     - A crash is when a user encounters an error and has to exit the app.
+     - A crash happens when a user encounters an error and has to exit the app.
    * - ``rum.app_error.count``
      - App error
      - App error by page. 
@@ -399,8 +399,8 @@ App start monitoring
 
 App start monitoring feature generates spans whenever the app performs a cold, warm, or hot start.
 
-- Cold_Start: Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
-- Hot_Start:- Hot starts happen when the system brings ann app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
+- Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
+- Hot starts happen when the system brings nn app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
 
 App start monitoring produces spans with the name ``AppStart`` and the following attributes:
 
