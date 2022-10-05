@@ -28,6 +28,8 @@ The driving mechanism behind metric pipeline management are aggregation and data
 * Aggregation rules let you roll up your selected metric data into new metric time series (MTSs) that take up less storage and increase computational performance. To learn more, see :ref:`aggregation`.
 * Data dropping rules let you discard any metrics you don't want to retain for monitoring. To learn more, see :ref:`data-dropping`.
 
+By aggregating combinations of dimensions that provide useful insights while dropping a large amount of the unaggregated raw data, you can significantly reduce your organization’s data footprint.
+
 .. _aggregation:
 
 Aggregation rules
@@ -69,6 +71,15 @@ Data dropping rules
 --------------------
 
 When you have a new aggregated metric, you might no longer have any use case for the original unaggregated data. Data dropping rules let you discard any data you don't want to monitor, so you can save storage space and reduce cardinality.
+
+.. caution::
+    - You can only drop new incoming data. Existing data can't be dropped.
+    - Dropped data can't be recovered. Before you drop data, see :ref:`data-dropping-impact`.
+    
+Prerequisite
++++++++++++++++++
+
+You must be an admin to drop data.
 
 
 Example

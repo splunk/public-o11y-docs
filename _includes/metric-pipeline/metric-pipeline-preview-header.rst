@@ -6,4 +6,4 @@
 
         * :ref:`metric-pipeline-intro`
         * :ref:`use-metric-pipeline`
-        * :ref:`drop-metrics-data`
+        * :ref:`data-dropping-impact`

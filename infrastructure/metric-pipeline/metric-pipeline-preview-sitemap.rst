@@ -15,5 +15,5 @@ Use the following links to navigate the documentation set for the preview of met
 
     * :ref:`metric-pipeline-intro`
     * :ref:`use-metric-pipeline`
-    * :ref:`drop-metrics-data`
+    * :ref:`data-dropping-impact`
 

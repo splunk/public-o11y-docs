@@ -2,7 +2,7 @@
 
 .. include:: /_includes/metric-pipeline/metric-pipeline-preview-header.rst
 
-.. _drop-metrics-data:
+.. _data-dropping-impact:
 
 *********************************************************************
 Data dropping impact
