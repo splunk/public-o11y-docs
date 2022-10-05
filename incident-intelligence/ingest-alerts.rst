@@ -1,12 +1,16 @@
-.. _ingest-alerts:
+.. _generate-alerts:
 
-Ingest alerts
+Generate alerts in Incident Intelligence
 ************************************************************************
 
-Incident Intelligence ingests alerts from the following Observability Cloud event sources.
+To generate alerts in Incident Intelligence, you can define a detector for the one of the available event sources or ingest alerts using an ingest endpoint.  See :ref:`get-started-detectoralert` for more information about configuring detectors. 
+
+**Available event sources**
 
 - Splunk APM
 - Splunk Infrastructure Monitoring
 - Splunk NPM
 
-To ingest alerts into Incident Intelligence, you have to define a detector for the available event sources and route that detector to a service in Incident Intelligence. See :ref:`get-started-detectoralert` for more information about configuring detectors. See :ref:`create-service` and :ref:`configure-alert-routing` for steps to create a service and route alerts to the service. 
+**Available ingest endpoints**
+- Cloudwatch
+- Prometheus
