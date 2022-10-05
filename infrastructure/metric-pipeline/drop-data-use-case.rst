@@ -31,4 +31,4 @@ Learn more
 
 To learn more about data dropping, see :ref:`data-dropping`.
 
-For more information on the impact of dropping data, see :ref:`drop-metrics-data`. 
+For more information on the impact of dropping data, see :ref:`data-dropping-impact`. 
