@@ -11,6 +11,7 @@ Learn about the following special cases for spans and traces that you might enco
 
 * :ref:`apm-ongoing-traces`
 * :ref:`apm-inferred-spans`
+* :ref:`apm-span-latency`
 * :ref:`apm-missing-spans`
 
 .. _apm-ongoing-traces:
