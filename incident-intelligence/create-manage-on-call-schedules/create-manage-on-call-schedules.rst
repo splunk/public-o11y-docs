@@ -17,8 +17,7 @@ Use services to organize incidents depending on the impacted environmental compo
    sync-on-call-schedule
    whos-on-call
    
-#. :ref:`Create your service.<create-service>`
-#. :ref:`Configure the alerts that are routed to your service.<configure-alert-routing>`
-#. :ref:`Configure how alerts are grouped.<configure-alert-grouping>`
-#. :ref:`Configure incident workflows for your service.<configure-incident-workflow>`
-#. :ref:`Create your on-call schedules.<service-maintenance>`
+- :ref:`create-on-call-schedule`
+- :ref:`sync-on-call-schedule`
+- :ref:`whos-on-call`
+
