@@ -24,6 +24,7 @@ Before you decide to drop unaggregated raw data for your metric, consider the fo
 - You can't recover dropped data.
 - Detectors using the metric you drop will misfire alerts or stop alerting.
 - Charts using the metric you drop will stop reporting new data.
+- If you drop data for metrics associated with built-in charts and AutoDetect detectors, these charts and detectors will be empty and not function correctly. Avoid dropping data for metrics use in built-in charts and AutoDetect detectors.
 
 Avoid empty charts and detectors when dropping data
 ======================================================
