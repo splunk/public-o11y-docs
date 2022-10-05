@@ -5,19 +5,31 @@ Create and manage on-call schedules
 ************************************************************************
 
 .. meta::
-   :description: Use services to organize incidents depending on the impacted environmental component.
-
-Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. Then, route alerts to the service. Next, specify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered.
-
+   :description: 
 
 .. toctree::
    :hidden:
 
-   create-on-call-schedule
    sync-on-call-schedule
    whos-on-call
    
-- :ref:`create-on-call-schedule`
-- :ref:`sync-on-call-schedule`
-- :ref:`whos-on-call`
+An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your service incident workflows.
+
+Example schedule scenario
+-----------------------------
+Consider this example schedule scenario and use it in the following schedule-creation steps. 
+
+- You create a web application service that you configure to route alerts from your web application. See :ref:`Create your service<create-service>` and :ref:`Configure your service’s alert routing<configure-alert-routing>` for steps to define a service and configure a service’s alert routing.
+- You need coverage for your web application service from 9 AM to 5 PM on Monday through Friday of each week, with each person on the team being on call for a whole week at a time.
+- You also need coverage for your web application service on the weekends. The weekend coverage is one person who is on call from Friday at 5 PM to Monday at 9 AM.
+
+Steps
+-------------
+
+.. raw:: html
+    :file: on-call_schedule_steps.html
+
+After you save your shift, review the schedule details in the :guilabel:`Schedule Preview` to confirm that you've configured your schedule shifts as intended. The schedule preview includes schedule info for up to one year. Select :guilabel:`Next Month` and :guilabel:`Previous Month` to navigate the schedule preview. Select :guilabel:`Back to all schedules` when you are finished adding shifts to your on-call schedule.
+
+Now that you've created an on-call schedule, add it to the incident workflow for your web application service. See :ref:`configure-incident-workflow`.
 

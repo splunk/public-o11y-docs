@@ -16,3 +16,5 @@ Use alert routing to associate alerts with a service. If an alert matches your a
 #. Repeat steps 4-8 for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``AND`` operator. To switch an ``AND`` operator to ``OR``, select the ``AND`` operator and select ``OR``.
 #. Review the list of alerts that are currently routed to the service to confirm your filter conditions are correct. 
 #. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
+
+After you  manage which alerts create an incident and how alerts are grouped into incidents, use incident workflows to determine who is notified when a new incident is triggered. See :ref:`configure-incident-workflows`.
