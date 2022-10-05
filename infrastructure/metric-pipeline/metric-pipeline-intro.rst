@@ -74,7 +74,7 @@ When you have a new aggregated metric, you might no longer have any use case for
 
 .. caution::
     - You can only drop new incoming data. Existing data can't be dropped.
-    - Dropped data can't be recovered. Before you drop data, see :ref:`data-dropping-impact`.
+    - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
     
 Prerequisite
 +++++++++++++++++
