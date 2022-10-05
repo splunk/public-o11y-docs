@@ -95,7 +95,7 @@ Use case for metric pipeline management
 
 See the following use case for metric pipeline management:
 
-* :ref:`aggregate-use-case`
+* :ref:`aggregate-drop-use-case`
 
 Create your first metric rules
 ==========================================
