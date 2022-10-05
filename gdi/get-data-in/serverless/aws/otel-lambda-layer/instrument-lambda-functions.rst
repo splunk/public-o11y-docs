@@ -84,10 +84,12 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
         - Description
 
       * - ``SPLUNK_REALM``
-        - To find the realm of your Splunk Observability Cloud account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - To find the realm of your Splunk Observability Cloud account, open the navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
 
       * - ``SPLUNK_ACCESS_TOKEN``
         - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. See :ref:`Authentication token <admin-tokens>`.
+
+        To send data to a Splunk OTel Collector in EC2, see :ref:`ec2-otel-collector-serverless`.
 
       * - ``AWS_LAMBDA_EXEC_WRAPPER``
         - Set the value for the ``AWS_LAMBDA_EXEC_WRAPPER`` environment variable:
@@ -138,7 +140,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
 4. Click :guilabel:`Save` and check that the environment variables appear in the table.
 
-.. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to Observability Cloud ingest endpoints.
+.. note:: By default, the layer sends telemetry directly to Observability Cloud ingest endpoints. To send data to a Splunk OTel Collector in EC2, see :ref:`ec2-otel-collector-serverless`.
 
 .. _go-serverless-instrumentation:
 
