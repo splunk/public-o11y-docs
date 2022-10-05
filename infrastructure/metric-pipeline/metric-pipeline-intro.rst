@@ -90,13 +90,12 @@ As an admin, you realize the high cardinality ``system.capacity`` metric is inge
 You can decide to drop ``system.capacity`` by creating a rule for the metric.
 
 
-Use cases for metric pipeline management
+Use case for metric pipeline management
 ==================================================
 
-See the following use cases for metric pipeline management:
+See the following use case for metric pipeline management:
 
 * :ref:`aggregate-use-case`
-* :ref:`drop-data-use-case`
 
 Create your first metric rules
 ==========================================
