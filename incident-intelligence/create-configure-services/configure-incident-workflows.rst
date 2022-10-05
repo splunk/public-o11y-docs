@@ -1,4 +1,4 @@
-.. _configure-incident-workflow:
+.. _configure-incident-workflows:
 
 Configure incident workflows for your service
 ************************************************************************
