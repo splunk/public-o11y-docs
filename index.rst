@@ -912,17 +912,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/create-on-call-schedule
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/sync-on-call-schedule
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/whos-on-call
+   /incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules
 
 .. toctree::
    :maxdepth:   3
