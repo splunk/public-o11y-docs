@@ -1,9 +1,12 @@
-.. _create-service:
+.. _create-manage-services:
 
-Create a service
+Create and manage services
 ************************************************************************
 
 Use services to automatically organize incidents depending on the impacted service. To create a service, complete the following steps:
+
+Create a service
+=====================
 
 #. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
 #. Select :guilabel:`Services` > :guilabel:`Create service`.
@@ -11,3 +14,7 @@ Use services to automatically organize incidents depending on the impacted servi
 #. Select :guilabel:`Create service`.
 
 After you create your service, you are directed to configure which alerts are routed to your service. See :ref:`configure-alert-routing`.
+
+Put a service in maintenance
+================================
+
