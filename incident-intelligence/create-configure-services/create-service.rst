@@ -1,6 +1,6 @@
 .. _create-service:
 
-Create your service
+Create a service
 ************************************************************************
 
 Use services to automatically organize incidents depending on the impacted service. To create a service, complete the following steps:
