@@ -1,7 +1,7 @@
 .. _respond-manage-incidents:
 
 Respond to and manage incidents
-***************************
+************************************
 
 .. meta::
    :description: After you configure your services, you can respond to incidents incidents as they are triggered.
