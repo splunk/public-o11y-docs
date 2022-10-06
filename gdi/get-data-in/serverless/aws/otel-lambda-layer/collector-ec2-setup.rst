@@ -1,7 +1,7 @@
 .. _ec2-otel-collector-serverless:
 
 ******************************************************************
-Send serverless spans to the Splunk OpenTelemetry Collector
+Send serverless spans through the Splunk OpenTelemetry Collector
 ******************************************************************
 
 .. meta::
