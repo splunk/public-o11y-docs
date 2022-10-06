@@ -11,48 +11,20 @@ After you configure your services, go to the :guilabel:`Incidents` tab in Incide
 .. toctree::
    :hidden:
 
-   manual-incident
+   respond-to-incident
    add-responders-roles
    add-incident-resources
    add-collaboration-tool
    view-incidents-mobile
 
 
-Incidents begin in the triggered status. The default status lifecycle for incidents is triggered, and then acknowledged, and then resolved.
+.. _manual-incident:
 
 .. raw:: html
 
    <embed>
-      <h2>Acknowledge an incident</h2>
+      <h2>Manually create an incident</h2>
    </embed>
-
-To acknowledge an incident, go to the :guilabel:`Incidents` tab in Incident Intelligence. You can acknowledge incidents in two places:
-
-* Select :guilabel:`Acknowledge` on a triggered incident in the lists of incidents. You can also skip the incident status lifecycle by selecting resolve or reject from the :guilabel:`Actions` menu for the incident.
-* Select the triggered incident you want to acknowledge from the list of incidents. On the incident detail page, select :guilabel:`Acknowledge`. You can also select resolve or reject from the :guilabel:`Actions` menu next to the :guilabel:`Acknowledge` button for the incident.
-
-.. raw:: html
-
-   <embed>
-      <h2>Resolve an incident</h2>
-   </embed>
-
-To resolve an incident, go to the :guilabel:`Incidents` tab in Incident Intelligence. You can resolve incidents in two places:
-
-* Select :guilabel:`Resolve` on acknowledged incidents in the lists of incidents. You can also skip the incident status lifecycle by selecting a status from the :guilabel:`Actions` menu on the incident.
-* Select an acknowledged incident you want to resolve from the list of incidents. On the incident detail page, select :guilabel:`Resolve`. You can also select a status from the :guilabel:`Actions` menu next to the :guilabel:`Resolve` button to resolve or reject the incident.
-
-.. raw:: html
-
-   <embed>
-      <h2>Reject an incident</h2>
-   </embed>
-
-To reject an incident, go to the :guilabel:`Incidents` tab in Incident Intelligence. You can reject incidents in two places:
-
-* Select the :guilabel:`Actions` menu on the incident and select :guilabel:`Reject` from the list.
-* Select the incident you want to reject from the list of incidents. On the incident detail page, select the :guilabel:`Actions` menu next to the :guilabel:`Acknowledge` button, and select :guilabel:`Reject` from the list. (This button might say :guilabel:`Resolve` if the incident was previously acknowledged.)
-
 .. _edit-incident:
 
 .. raw:: html

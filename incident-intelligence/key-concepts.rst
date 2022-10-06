@@ -1,7 +1,3 @@
-:orphan:
-
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _key-concepts:
 
 Key concepts in Splunk Incident Intelligence 

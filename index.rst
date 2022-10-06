@@ -892,47 +892,47 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: INCIDENT INTELLIGENCE
    :maxdepth:   3
 
-   /incident-intelligence/intro-to-incident-intelligence
+   Introduction to Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
 
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/set-up-incident-intelligence
+   Set up Incident Intelligence <incident-intelligence/set-up-incident-intelligence>
 
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/generate-alerts
+   incident-intelligence/generate-alerts
 
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/create-configure-services/create-configure-services
+   incident-intelligence/create-configure-services/create-configure-services
 
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules
+   incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules
 
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/respond-manage-incidents/respond-manage-incidents
+   incident-intelligence/respond-manage-incidents/respond-manage-incidents
 
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/notification-preferences
+   incident-intelligence/notification-preferences
 
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/notification-phone-numbers
+   incident-intelligence/notification-phone-numbers
 
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/key-concepts
+   incident-intelligence/key-concepts
 
 .. toctree::
    :caption: METRICS
