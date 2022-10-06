@@ -102,6 +102,10 @@ Follow these steps to install the Splunk Distribution of OpenTelemetry Collector
 
         helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,gateway.enabled=true,agent.enabled=false" splunk-otel-collector-chart/splunk-otel-collector
 
+#. (Optional) Each Kubernetes has a Splunk Distribution of OpenTelemetry Collector, so your resource requirements vary depending on the number of Kubernetes nodes you have.
+    
+    If you want to change the resource footprint of Splunk Distribution of OpenTelemetry Collector, you can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/5bf6a008070338060c1e19c261017e950ab9e71a/helm-charts/splunk-otel-collector/values.yaml#L398>` file.
+
 .. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
 
 For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.
@@ -160,6 +164,7 @@ The following table shows required parameters for this installation:
        * - ``otlp.receiver.host``
          - Name of the Splunk Distribution of OpenTelemetry Collector service.
          
+
 Example
 --------------------------
 
@@ -203,6 +208,110 @@ Follow these steps to install Network Explorer:
 .. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
 
 For additional configurations, see :new-page:`Network Explorer for Kubernetes <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/README.md>` on GitHub.
+
+.. _resize-installation:
+
+Step 3 (Optional): Resize your installation
+======================================================================================
+
+Depending on the number of Kubernetes nodes you have, your resource needs might vary. You can make the following adjustments to your installation.
+
+Change the resource footprint of the reducer
+------------------------------------------------
+
+The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the number of CPU cores allocated to it.
+ 
+Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` file to increase or decrease the number of CPU cores. Values can be set between 1-32 cores.
+
+The following example shows you how to change increase the number of CPU cores.
+
+    .. code-block:: yaml
+
+        reducer:
+          ingestShards: 4
+          matchingShards: 4
+          aggregationShards: 4
+
+.. _customize-network-explorer-metrics:
+
+Customize metrics Network Explorer generates
+------------------------------------------------------------------------
+
+If you want to collect fewer or more Network Explorer metrics, you can update the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L92>` file.
+
+The following examples show you how to disable or enable different metrics.
+
+Enable all metrics, including metrics turned off by default
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    .. code-block:: yaml 
+
+      disableMetrics: []
+        - tcp.all 
+        - udp.all
+        - dns.all
+        - http.all
+
+Disable entire metric categories
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    .. code-block:: yaml 
+
+      disableMetrics: []
+        - tcp.all 
+        - udp.all
+        - dns.all
+        - http.all
+
+Disable an individual TCP metric
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    .. code-block:: yaml 
+
+      disableMetrics: []
+        - tcp.bytes
+        - tcp.rtt.num_measurements
+        - tcp.active
+        - tcp.rtt.average
+        - tcp.packets
+        - tcp.retrans
+        - tcp.syn_timeouts
+        - tcp.new_sockets
+        - tcp.resets
+
+Disable an individual UDP metric
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    .. code-block:: yaml 
+
+      disableMetrics: []
+        - udp.bytes
+        - udp.packets
+        - udp.active
+        - udp.drops
+
+Disable an individual DNS metric
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    .. code-block:: yaml 
+
+      disableMetrics: []
+        - dns.client.duration.average
+        - dns.server.duration.average
+        - dns.active_sockets
+        - dns.responses
+        - dns.timeouts
+
+Disable an individual HTTP metric
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    .. code-block:: yaml
+
+      disableMetrics: []
+        - http.client.duration.average
+        - http.server.duration.average
+        - http.active_sockets
+        - http.status_code
 
 
 Next steps
