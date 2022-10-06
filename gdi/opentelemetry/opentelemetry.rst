@@ -35,11 +35,12 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
    Splunk only provides best-effort support for the upstream OpenTelemetry Collector.
 
 
-..raw:: html
+.. raw:: html
 
-    <embed>
-     <h2>Use the Collector
-     </embed>
+  <embed>
+    <h2>Use the Collector</h2>
+  </embed>
+
 
 To use the Collector:
 
@@ -56,16 +57,18 @@ See also the following resources for the Collector:
 
 For a complete list of resources, refer to :ref:`opentelemetry-resources`. 
 
+
+.. raw:: html
+
+  <embed>
+    <h2>Guided install for the Collector</h2>
+  </embed>
+
+
+
 .. _collector-guided-install:
 
-..raw:: html
-
-    <embed>
-     <h3>Guided install for the Collector
-     </embed>
-
-
-:new-page:`Splunk Observability Cloud <https://docs.splunk.com/Observability/get-started/welcome.html>` offers a guided setup to install the Collector:
+Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
 #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
