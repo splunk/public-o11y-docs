@@ -112,7 +112,7 @@ Dimension names have the following requirements:
 * Must not start with the prefix :code:`sf_`, except for dimensions defined by Observability Cloud such as :code:`sf_hires`.
 * Must not start with the prefix :code:`aws_`, :code:`gcp_`, or :code:`azure_`.
 *  Dimension values are UTF-8 strings with a maximum length of 256 UTF-8 characters (1024 bytes). Numbers are represented as numeric strings.
-* You can have up to 36 dimensions per MTS.
+* You can have up to 36 dimensions per MTS. If this limit is exceeded, the datapoint is dropped, and a message is logged.
 * To ensure readability, keep names and values to 40 characters or less.
 
 Length limits for metric name, dimension name, and dimension value 
