@@ -536,13 +536,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    apm/apm-alert-visualize/alert-visualize
 
 .. toctree::
-   :caption: PROFILING
    :maxdepth:   3
 
    AlwaysOn Profiling <apm/profiling/intro-profiling>
 
 .. toctree::
-   :caption: DB Query Performance
    :maxdepth:   3
 
    apm/db-query-perf/db-query-performance
