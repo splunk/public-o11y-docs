@@ -70,7 +70,7 @@ The following tables show the configuration options for this monitor:
 | -------| -------- | ---- | ----------- |
 | `queries` | Yes | `list of objects (see below)` | A list of queries that generate data points. |                                             
 | `host` | No | `string`|  Host or address of the SQL instance. |                             
-| `port` -| No  | `integer` | Port of the SQL instance. The default value is `0`.    |
+| `port` | No  | `integer` | Port of the SQL instance. The default value is `0`.    |
 | `params`   | No | `map of strings` | Replaceable parameters, in the form of key-value pairs. The system inserts the values into `connectionString` for a specified key, using Go template syntax. For example, `{{.key}}`.   |
 | `dbDriver` | No | `string`  | The database driver to use. Valid values are `postgres`, `mysql`, `sqlserver`, and `snowflake`. |
 | `connectionString` | No    | `string`  | Connection string and replaceable parameters used to connect to the database. To learn more, see the list of connection string parameters for the Go `pq` package. |
