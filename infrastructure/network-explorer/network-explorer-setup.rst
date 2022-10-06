@@ -221,7 +221,7 @@ Change the resource footprint of the reducer
 
 The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the number of CPU cores allocated to it.
  
-Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of CPU cores. Values can be set between 1-32 cores.
+Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of CPU cores. You can set between 1-32 cores.
 
 The following example shows you how to change increase the number of CPU cores.
 
