@@ -11,13 +11,14 @@ By default, the Splunk OpenTelemetry Lambda Layer sends telemetry to Splunk Obse
 
 To send spans to the Splunk OTel Collector from an AWS Lambda function instrumented using the Splunk Lambda layer, follow these steps:
 
+#. Deploy the Collector in Gateway mode in a service your Lambda can reach, for example EC2. See :ref:`collector-gateway-mode`.
 #. Install the Splunk OTel Lambda layer. See :ref:`instrument-aws-lambda-functions`.
-#. Install the Collector in Gateway mode in EC2 within the same VPC of your function. See :ref:`collector-gateway-mode`.
 #. Navigate to :guilabel:`Configuration` > :guilabel:`Environment variables`, then select :guilabel:`Edit`.
-#. Delete the ``SPLUNK_REALM`` environment variable.
+#. As you're sending telemetry to the Collector, delete the ``SPLUNK_REALM`` environment variable.
+#. If you've already set the access token in the Collector configuration, delete the ``SPLUNK_ACCESS_TOKEN`` environment variable.
 #. Add the following environment variables:
 
    -  ``OTEL_TRACES_EXPORTER`` with the value ``otlp_proto_http``
-   -  ``OTEL_EXPORTER_OTLP_ENDPOINT`` with the value ``<ec2-instance-address>:4318``
+   -  ``OTEL_EXPORTER_OTLP_ENDPOINT`` with the value ``<collector-gateway-ip-or-dns-name>:4318``
 
 
