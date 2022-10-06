@@ -12,5 +12,6 @@ To generate alerts in Incident Intelligence, you can define a detector for the o
 - Splunk NPM
 
 **Available ingest endpoints**
+
 - Cloudwatch
 - Prometheus

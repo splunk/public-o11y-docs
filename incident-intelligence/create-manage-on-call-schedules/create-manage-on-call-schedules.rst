@@ -1,6 +1,5 @@
 .. _create-manage-on-call-schedules:
 
-************************************************************************
 Create and manage on-call schedules
 ************************************************************************
 
@@ -12,7 +11,8 @@ Create and manage on-call schedules
 
    sync-on-call-schedule
    whos-on-call
-   
+
+
 An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your service incident workflows.
 
 Example schedule scenario
