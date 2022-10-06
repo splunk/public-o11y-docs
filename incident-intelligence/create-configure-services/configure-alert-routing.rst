@@ -3,9 +3,6 @@
 Configure the alerts that are routed to your service
 ************************************************************************
 
-Configure your service’s alert routing
------------------------------------------
-
 Use alert routing to associate alerts with a service. If an alert matches your alert filter conditions, it is routed to the service. To set up your alert routing for the service, follow these steps:
 
 #. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.

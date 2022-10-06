@@ -1,7 +1,3 @@
-:orphan:
-
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _respond-to-incident:
 
 Respond to an incident
@@ -11,6 +7,16 @@ Respond to an incident
    :description: After you configure your services, you can respond to incidents incidents as they are triggered.
 
 After you configure your services, go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered. You can also view incidents in Splunk Observability Cloud for Mobile. See :ref:`incidents-in-mobile` for more information.
+
+.. toctree::
+   :hidden:
+
+   manual-incident
+   add-responders-roles
+   add-resources
+   add-collaboration-tool
+   view-incidents-mobile
+
 
 Incidents begin in the triggered status. The default status lifecycle for incidents is triggered, and then acknowledged, and then resolved.
 
@@ -36,18 +42,15 @@ To reject an incident, go to the :guilabel:`Incidents` tab in Incident Intellige
 * Select the :guilabel:`Actions` menu on the incident and select :guilabel:`Reject` from the list.
 * Select the incident you want to reject from the list of incidents. On the incident detail page, select the :guilabel:`Actions` menu next to the :guilabel:`Acknowledge` button, and select :guilabel:`Reject` from the list. (This button might say :guilabel:`Resolve` if the incident was previously acknowledged.)
 
-.. _incidents-in-mobile:
+.. _edit-incident:
 
-View incidents in Splunk Observability Cloud for Mobile
-==========================================================
+Edit an incident
+===================
 
-You can view incidents within Splunk Observability Cloud for Mobile as well. See :ref:`intro-to-mobile` to get started wth Splunk Observability Cloud for Mobile.
+Incidents automatically inherit the title and description of the first alert that triggers the incident. To edit the incident title, description, or severity, follow these steps:
 
-To view incidents in Splunk Observability Cloud for Mobile, go to the :guilabel:`Incidents` tab. 
-
-What can I do with incidents in Splunk Observability Cloud for Mobile?
--------------------------------------------------------------------------
-
-* Filter incidents - The list of incidents is filtered to incidents with a triggered status and critical severity by default. Select the triggered status or critical severity to change the filters. 
-* Search for incidents - Use the search field to search for a specific incident. 
-* View incident details - Select the incident to view the incident details and list of alerts that are grouped within the incident.
+#. Go to the :guilabel:`Incidents` tab in Incident Intelligence. 
+#. Select the incident from the incident list.
+#. Select the :guilabel:`pencil` icon.
+#. Edit the title, description, or severity. 
+#. Select :guilabel:`Save`.

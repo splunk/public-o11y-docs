@@ -31,5 +31,5 @@ Steps
 
 After you save your shift, review the schedule details in the :guilabel:`Schedule Preview` to confirm that you've configured your schedule shifts as intended. The schedule preview includes schedule info for up to one year. Select :guilabel:`Next Month` and :guilabel:`Previous Month` to navigate the schedule preview. Select :guilabel:`Back to all schedules` when you are finished adding shifts to your on-call schedule.
 
-Now that you've created an on-call schedule, add it to the incident workflow for your web application service. See :ref:`configure-incident-workflow`.
+Now that you've created an on-call schedule, add it to the incident workflow for your web application service. See :ref:`configure-incident-workflows`.
 
