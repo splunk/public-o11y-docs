@@ -181,7 +181,7 @@ The following list shows you the currently-supported drivers:
 - `snowflake`
 - `hana`
 
-#### Example
+See the following example:
 
 ```yaml
 smartagent/sql:
@@ -189,11 +189,11 @@ smartagent/sql:
       host: localhost
       port: 1433
       dbDriver: sqlserver
-      connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=s3cr3t;'
-      queries:
-  - query: 'SELECT COUNT(*) as count FROM Sales.Orders'
-      metrics:
-    metricName: "orders"
+      connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=123456;'
+    queries: 
+      query: 'SELECT COUNT(*) as count FROM Sales.Orders'
+    metrics:
+      metricName: "orders"
       valueColumn: "count"
 ```
 
