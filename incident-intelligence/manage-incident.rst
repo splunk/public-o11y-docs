@@ -41,7 +41,8 @@ If your services have an incident workflow, responders are automatically added t
 Add responder roles
 =========================
 
-#. To add responder roles to incident responders, follow these steps:
+To add responder roles to incident responders, follow these steps:
+
 #. Go to the :guilabel:`Incidents` tab in Incident Intelligence. 
 #. Select the incident from the incident list.
 #. Hover over the responder you want to add a role to and select the menu, and then select :guilabel:`Edit Role`.
