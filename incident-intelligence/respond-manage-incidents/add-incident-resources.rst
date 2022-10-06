@@ -1,4 +1,4 @@
-.. _add-resources:
+.. _add-incident-resources:
 
 Add resources to an incident
 ********************************

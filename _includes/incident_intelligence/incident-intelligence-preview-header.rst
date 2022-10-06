@@ -6,8 +6,7 @@
 
     * :ref:`get-started-incident-intelligence`
     * :ref:`set-up-incident-intelligence`
-    * :ref:`respond-to-incident`
-    * :ref:`manage-incident`
+    * :ref:`respond-manage-incidents`
     * :ref:`key-concepts`
 
 

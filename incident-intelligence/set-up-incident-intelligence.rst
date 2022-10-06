@@ -13,5 +13,5 @@ Splunk Incident Intelligence is added to your Observability Cloud environment on
 #. :ref:`Create your service.<create-configure-services>`
 #. :ref:`Configure the alerts that are routed to your service.<configure-alert-routing>`
 #. :ref:`Configure how alerts are grouped.<configure-alert-grouping>`
-
+#. :ref:`Configure incident workflows for your service.<configure-incident-workflows>`
 #. :ref:`Create your on-call schedules.<create-manage-on-call-schedules>`
