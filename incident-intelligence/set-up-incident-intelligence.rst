@@ -9,9 +9,9 @@ Set up Splunk Incident Intelligence
 
 Splunk Incident Intelligence is added to your Observability Cloud environment on your behalf. To route incidents to the necessary teams and people, you need to first ingest alerts and then complete your incident response configuration. Incident response configuration is where you create and configure services, and create on-call schedules. After you complete your incident response configuration, users can begin responding to incidents. Follow these steps to get started with Incident Intelligence:
 
-#. :ref:`Ingest alerts.<generate-alerts>`
-#. :ref:`Create your service.<create-configure-services>`
-#. :ref:`Configure the alerts that are routed to your service.<configure-alert-routing>`
-#. :ref:`Configure how alerts are grouped.<configure-alert-grouping>`
-#. :ref:`Configure incident workflows for your service.<configure-incident-workflows>`
-#. :ref:`Create your on-call schedules.<create-manage-on-call-schedules>`
+#. :ref:`generate-alerts`
+#. :ref:`create-configure-services`
+#. :ref:`configure-alert-routing`
+#. :ref:`configure-alert-grouping`
+#. :ref:`configure-incident-workflows`
+#. :ref:`create-manage-on-call-schedules`
