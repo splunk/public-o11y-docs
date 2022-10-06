@@ -1,4 +1,4 @@
-.. _view-incident-mobile:
+.. _view-incidents-mobile:
 
 View incidents in Splunk Observability Cloud for Mobile
 **************************************************************

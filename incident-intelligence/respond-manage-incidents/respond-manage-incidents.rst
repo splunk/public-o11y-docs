@@ -1,6 +1,6 @@
-.. _respond-to-incident:
+.. _respond-manage-incidents:
 
-Respond to an incident
+Respond to and manage incidents
 ***************************
 
 .. meta::
