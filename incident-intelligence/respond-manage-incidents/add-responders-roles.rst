@@ -15,7 +15,7 @@ If your services have an incident workflow, responders are automatically added t
 #. Select :guilabel:`Save`.
 
 Add and assign responder roles
-=========================
+==================================
 
 To add responder roles to incident responders, follow these steps:
 
