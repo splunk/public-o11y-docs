@@ -51,3 +51,15 @@ Get AlwaysOn Profiling data into Splunk APM
 To get started, instrument your application or service for Splunk APM and enable AlwaysOn Profiling.
 
 See :ref:`get-data-in-profiling` for instructions.
+
+.. toctree::
+   :hidden:
+
+   profiling-use-case-library
+   get-data-in-profiling
+   spans-stack-traces
+   using-the-flamegraph
+   profiling-memory-metrics
+   concepts-terms-profiling
+   profiling-troubleshooting
+   profiling-third-party-credits

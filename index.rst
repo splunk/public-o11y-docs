@@ -523,7 +523,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Analyze services with span tags and MetricSets<apm/span-tags/span-tags>
+   Analyze services with span tags and MetricSets <apm/span-tags/span-tags>
 
 .. toctree::
    :maxdepth:   3
@@ -536,6 +536,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
    apm/apm-alert-visualize/alert-visualize
 
 .. toctree::
+   :caption: PROFILING
+   :maxdepth:   3
+
+   AlwaysOn Profiling <apm/profiling/intro-profiling>
+
+.. toctree::
+   :caption: DB Query Performance
    :maxdepth:   3
 
    apm/db-query-perf/db-query-performance
@@ -544,52 +551,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    apm/apm-data-links/data-links-landing
-
-.. toctree::
-   :caption: PROFILING
-   :maxdepth:   3
-
-   Introduction to AlwaysOn Profiling <profiling/intro-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-use-case-library
-
-.. toctree::
-   :maxdepth:   3
-
-   Get AlwaysOn Profiling data in <profiling/get-data-in-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   Browse stack traces linked to spans <profiling/spans-stack-traces>
-
-.. toctree::
-   :maxdepth:   3
-
-   Understand and use the flame graph <profiling/using-the-flamegraph>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-memory-metrics
-
-.. toctree::
-   :maxdepth:   3
-
-   Profiling terms and concepts <profiling/concepts-terms-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-troubleshooting
-
-.. toctree::
-   :maxdepth:   3
-
-   Third-party acknowledgements <profiling/profiling-third-party-credits>
 
 .. toctree::
    :caption: INFRASTRUCTURE
