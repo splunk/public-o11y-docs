@@ -26,7 +26,7 @@ After you get profiling data into Observability Cloud, you can explore stack tra
 .. raw:: html
 
   <embed>
-    <h2>What you can do with AlwaysOn Profiling<a name="what-can-do-profiling" class="headerlink" href="#what-can-do-profiling" title="Permalink to this headline">¶</a></h2>
+    <h2>What you can do with AlwaysOn Profiling</h2>
   </embed>
 
 Here are some of the things you can do with AlwaysOn Profiling for Splunk APM:
@@ -52,7 +52,7 @@ For sample use cases, see :ref:`profiling-use-case-landingpage`.
 .. raw:: html
 
   <embed>
-    <h2>Memory profiling<a name="mem-profiling-intro" class="headerlink" href="#mem-profiling-intro" title="Permalink to this headline">¶</a></h2>
+    <h2>Memory profiling</h2>
   </embed>
 
 Memory profiling adds memory allocation data to stack traces and exposes JVM memory metrics, so that you can discover leaks and unusual consumption patterns in your instrumented services and applications. See :ref:`memory-profiling-use-case`.
@@ -64,7 +64,7 @@ Memory profiling also exposes memory metrics for your application, which you can
 .. raw:: html
 
   <embed>
-    <h2>Get AlwaysOn Profiling data into Splunk APM<a name="gdi-profiling" class="headerlink" href="#gdi-profiling" title="Permalink to this headline">¶</a></h2>
+    <h2>Get AlwaysOn Profiling data into Splunk APM</h2>
   </embed>
 
 To get started, instrument your application or service for Splunk APM and enable AlwaysOn Profiling.
