@@ -17,4 +17,10 @@ Use alert routing to associate alerts with a service. If an alert matches your a
 #. Review the list of alerts that are currently routed to the service to confirm your filter conditions are correct. 
 #. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
 
+.. raw:: html
+
+   <embed>
+      <h2>Next step</h2>
+   </embed>
+
 After you configure which alerts are routed to your service, use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents. See :ref:`configure-alert-grouping`.

@@ -16,12 +16,24 @@ Use services to organize incidents depending on the impacted environmental compo
    configure-alert-grouping
    configure-incident-workflows
 
-Create a service
-=====================
+
+.. _create-service:
+
+.. raw:: html
+
+   <embed>
+      <h2>Create a service</h2>
+   </embed>
 
 #. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
 #. Select :guilabel:`Services` > :guilabel:`Create service`.
 #. Give your service a unique name and a description. 
 #. Select :guilabel:`Create service`.
+
+.. raw:: html
+
+   <embed>
+      <h2>Next step</h2>
+   </embed>
 
 After you create your service, you are directed to configure which alerts are routed to your service. See :ref:`configure-alert-routing`.

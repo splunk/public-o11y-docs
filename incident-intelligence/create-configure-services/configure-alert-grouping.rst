@@ -11,4 +11,10 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 #. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours, from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
 #. Select :guilabel:`Save alert grouping`.
 
+.. raw:: html
+
+   <embed>
+      <h2>Next step</h2>
+   </embed>
+
 After you manage which alerts create an incident and how alerts are grouped into incidents, use incident workflows to determine who is notified when a new incident is triggered. See :ref:`configure-incident-workflows`.

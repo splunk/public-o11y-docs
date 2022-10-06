@@ -15,16 +15,23 @@ Create and manage on-call schedules
 
 An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your service incident workflows.
 
-Example schedule scenario
------------------------------
+.. raw:: html
+
+   <embed>
+      <h2>Example schedule scenario</h2>
+   </embed>
+
 Consider this example schedule scenario and use it in the following schedule-creation steps. 
 
-- You create a web application service that you configure to route alerts from your web application. See :ref:`create-configure-services` and :ref:`configure-alert-routing` for steps to define a service and configure a service’s alert routing.
+- You create a web application service that you configure to route alerts from your web application. See :ref:`Create a service<create-service>` and :ref:`configure-alert-routing` for steps to define a service and configure a service’s alert routing.
 - You need coverage for your web application service from 9 AM to 5 PM on Monday through Friday of each week, with each person on the team being on call for a whole week at a time.
 - You also need coverage for your web application service on the weekends. The weekend coverage is one person who is on call from Friday at 5 PM to Monday at 9 AM.
 
-Steps
--------------
+.. raw:: html
+
+   <embed>
+      <h2>Steps to create an on-call schedule</h2>
+   </embed>
 
 .. raw:: html
     :file: on-call_schedule_steps.html
