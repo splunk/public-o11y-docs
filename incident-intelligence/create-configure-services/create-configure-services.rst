@@ -7,14 +7,14 @@ Create and configure services
 .. meta::
    :description: Use services to organize incidents depending on the impacted environmental component.
 
-Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. Then, route alerts to the service, see :ref:`configure-alert-routing`. Next, specify which alerts create an incident and how alerts are grouped into incidents, see :ref:`configure-alert-grouping`. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered, see :ref:`configure-incident-workflow`.
+Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. Then, route alerts to the service, see :ref:`configure-alert-routing`. Next, specify which alerts create an incident and how alerts are grouped into incidents, see :ref:`configure-alert-grouping`. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered, see :ref:`configure-incident-workflows`.
 
 .. toctree::
    :hidden:
 
    configure-alert-routing
    configure-alert-grouping
-   configure-incident-workflow
+   configure-incident-workflows
 
 Create a service
 =====================
