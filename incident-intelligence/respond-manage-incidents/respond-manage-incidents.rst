@@ -13,7 +13,7 @@ After you configure your services, go to the :guilabel:`Incidents` tab in Incide
 
    manual-incident
    add-responders-roles
-   add-resources
+   add-incident-resources
    add-collaboration-tool
    view-incidents-mobile
 

@@ -50,7 +50,7 @@ The following table provides an overview of what you can do with Incident Intell
 
    * - Create services to automatically organize incidents depending on the impacted service.
      - Services
-     - See :ref:`create-configure-service`.
+     - See :ref:`create-configure-services`.
 
    * - Route alerts to associate them with a service.
      - Service-based alert routing
@@ -70,7 +70,7 @@ The following table provides an overview of what you can do with Incident Intell
 
    * - Use incident management tools to respond to incidents as they are triggered.
      - Incident response
-     - See :ref:`manage-incident` and :ref:`respond-to-incident`.
+     - See :ref:`respond-manage-incidents`.
      
 
 How Incident Intelligence works 

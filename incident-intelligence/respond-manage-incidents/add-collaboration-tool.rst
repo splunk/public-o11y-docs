@@ -1,4 +1,4 @@
-.. _incident-collaboration:
+.. _add-collaboration-tool:
 
 Add collaboration tools to an incident
 *********************************************
