@@ -917,32 +917,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   /incident-intelligence/respond-to-incident
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/add-responders
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/add-collaboration-tool
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/add-resources
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/manage-incident
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/manual-incident
+   /incident-intelligence/respond-manage-incidents/respond-manage-incidents
 
 .. toctree::
    :maxdepth:   3
@@ -953,11 +928,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    /incident-intelligence/notification-phone-numbers
-
-.. toctree::
-   :maxdepth:   3
-
-   /incident-intelligence/view-incidents-mobile
 
 .. toctree::
    :maxdepth:   3

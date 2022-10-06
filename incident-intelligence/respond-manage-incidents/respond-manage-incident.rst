@@ -6,7 +6,7 @@ Respond to an incident
 .. meta::
    :description: After you configure your services, you can respond to incidents incidents as they are triggered.
 
-After you configure your services, go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered. You can also view incidents in Splunk Observability Cloud for Mobile. See :ref:`incidents-in-mobile` for more information.
+After you configure your services, go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered. You can also view incidents in Splunk Observability Cloud for Mobile. See :ref:`view-incidents-mobile` for more information.
 
 .. toctree::
    :hidden:
