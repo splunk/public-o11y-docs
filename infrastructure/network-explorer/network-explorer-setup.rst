@@ -223,7 +223,7 @@ The reducer is a single pod per Kubernetes cluster. If your cluster contains a l
  
 Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of CPU cores. You can set between 1-32 cores.
 
-The following example shows you how to change increase the number of CPU cores.
+The following example shows you how to increase the number of CPU cores.
 
     .. code-block:: yaml
 
