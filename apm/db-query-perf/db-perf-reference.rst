@@ -11,16 +11,36 @@ Reference for Database Query Performance
 
 Supported databases
 --------------------------
-Database Query Performance provides insights for the following types of SQL databases:
 
-    - Oracle
-    - MySQL
-    - Microsoft SQL Server
-    - PostgreSQL
-    - Aurora
-    - MariaDB
-    - Db2
-    - Presto
+Database Query Performance provides insights for the following database software:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50,50
+   :width: 100%
+
+   * - :strong:`Database`
+     - :strong:`Related Content`
+   * - Oracle
+     - Yes
+   * - MySQL
+     - Yes
+   * - Microsoft SQL Server
+     - Yes
+   * - PostgreSQL
+     - No
+   * - MongoDB
+     - Yes
+   * - Redis
+     - Yes
+   * - Aurora
+     - No
+   * - MariaDB
+     - No
+   * - Db2
+     - No
+   * - Presto
+     - No
 
 Database Query Performance works with all versions supported by the instrumented applications.
 

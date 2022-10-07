@@ -18,6 +18,7 @@ Prerequisites
 
 To use Database Query Performance, you need an instrumented back-end service that connects to at least one database. See :ref:`get-started-application`.
 
+
 .. _db-perf-enable:
 
 Enable Database Query Performance
