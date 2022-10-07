@@ -13,8 +13,7 @@ Incidents are automatically triggered after you configure your services to route
 
    respond-to-incident
    add-responders-roles
-   add-incident-resources
-   add-collaboration-tool
+   add-incident-tools-resources
 
 
 .. _manual-incident:
