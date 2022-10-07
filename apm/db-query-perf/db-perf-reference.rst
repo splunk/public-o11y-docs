@@ -29,8 +29,6 @@ Database Query Performance provides insights for the following database software
      - Yes
    * - PostgreSQL
      - No
-   * - MongoDB
-     - Yes
    * - Redis
      - Yes
    * - Aurora
