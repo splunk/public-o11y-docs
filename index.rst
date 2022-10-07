@@ -902,12 +902,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   incident-intelligence/generate-alerts
+   Generate alerts in Incident Intelligence <incident-intelligence/generate-alerts>
 
 .. toctree::
    :maxdepth:   3
 
-   incident-intelligence/create-configure-services/create-configure-services
+   incident-intelligence/create-configure-services
 
 .. toctree::
    :maxdepth:   3
