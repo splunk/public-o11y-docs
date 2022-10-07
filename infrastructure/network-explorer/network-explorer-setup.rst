@@ -211,7 +211,7 @@ For additional configurations, see :new-page:`Network Explorer for Kubernetes <h
 
 .. _resize-installation:
 
-Step 3 (Optional): Resize your installation
+Step 3 (Optional): Resize your installation with additional configurations
 ======================================================================================
 
 Depending on the number of Kubernetes nodes you have, your resource needs might vary. You can make the following adjustments to your installation.
