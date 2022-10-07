@@ -173,13 +173,18 @@ Use this configuration to generate a single gauge data point for each row in the
 
 You must specify the `dbDriver` option that contains the name of the database driver to use. These names are the same as the name of the Golang SQL driver used in the agent. The monitor formats the `connectionString` according to the driver you specify. 
 
-The following list shows you the currently-supported drivers:
+```{note}
+Please be sure to use the correct connection string syntax based on the driver you're using. For example, if you use the `mysql` driver, you must use the connection string syntax for the `mysql` driver.
+````
 
-- `postgres`
-- `mysql`
-- `sqlserver`
-- `snowflake`
-- `hana`
+This is the list of the drivers currently supported:
+
+- [`hana`](https://github.com/SAP/go-hdb)
+- [`sqlserver`](https://pkg.go.dev/github.com/denisenkom/go-mssqldb)
+- [`mysql`](https://pkg.go.dev/github.com/go-sql-driver/mysql)
+- [`postgres`](https://pkg.go.dev/github.com/jackc/pgx)
+- [`pq`](https://pkg.go.dev/github.com/lib/pq)
+- [`snowflake`](https://pkg.go.dev/github.com/snowflakedb/gosnowflake)
 
 See the following example:
 
