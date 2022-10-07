@@ -71,7 +71,7 @@ To configure the package to send log events to a custom HEC endpoint URL, you ca
 * ``hec-url = "<URL>"``
 * ``hec-token = "<TOKEN>"``
 
-The main Fluentd configuration file is installed to ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the driver where fluentd is installed. Custom Fluentd source configuration files can be added to the ``<drive>\opt\td-agent\etc\td-agent\conf.d`` directory after installation.
+The main Fluentd configuration file is installed to ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the driver where Fluentd is installed. Custom Fluentd source configuration files can be added to the ``<drive>\opt\td-agent\etc\td-agent\conf.d`` directory after installation.
 
 Note the following:
 
