@@ -94,7 +94,10 @@ The following table describes when and where in Observability Cloud you can see 
      - Related Kubernetes clusters filtered by service, AWS EC2s, GCP GCEs, Azure VMs, all log lines for the service
 
    * - Database service
-     - Related database host
+     - Related database host or instance
+
+   * - Database instance
+     - Related Database Query Performance, related APM services
 
    * - Cloud compute instance (AWS EC2, GCP GCE, Azure VM)
      - Related APM services, log lines for the specific instance
