@@ -16,10 +16,10 @@ Database Query Performance provides insights for the following database software
 
 .. list-table::
    :header-rows: 1
-   :widths: 50,50
+   :widths: 70,30
    :width: 100%
 
-   * - :strong:`Database`
+   * - :strong:`Supported database`
      - :strong:`Related Content`
    * - Oracle
      - Yes
@@ -42,7 +42,7 @@ Database Query Performance provides insights for the following database software
    * - Presto
      - No
 
-Database Query Performance works with all versions supported by the instrumented applications.
+Database Query Performance works with all versions supported by the instrumented applications. For more information on related content, see :ref:`get-started-relatedcontent`.
 
 .. _db-tags:
 
