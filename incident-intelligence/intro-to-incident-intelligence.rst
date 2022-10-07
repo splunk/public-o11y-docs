@@ -81,7 +81,6 @@ Required Incident Intelligence prerequisites and permissions
 
 .. _event-sources-incident-intelligence:
 
-
 Types of event sources 
 ---------------------------
 Splunk Incident Intelligence ingests alerts from the following Observability Cloud event sources. You have to define a detector for these event sources and route that detector to a service in Incident Intelligence for alerts to be ingested into Incident Intelligence. 

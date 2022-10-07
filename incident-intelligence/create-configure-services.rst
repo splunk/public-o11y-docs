@@ -19,9 +19,9 @@ Create a service
 #. Give your service a unique name and a description. 
 #. Select :guilabel:`Create service`.
 
-.. tip:: If you have more than one service, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one service even if they match multiple services. The service alerts are routed to is based on your service’s alert routing conditions and service rank order.  
-
 After you create your service, you are directed to configure which alerts are routed to your service. 
+
+.. note:: If you have more than one service, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one service even if they match multiple services. The service alerts are routed to is based on your service’s alert routing conditions and service rank order.  
 
 .. _configure-alert-routing:
 
