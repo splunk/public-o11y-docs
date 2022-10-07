@@ -6,7 +6,7 @@ Respond to and manage incidents
 .. meta::
    :description: After you configure your services, you can respond to incidents incidents as they are triggered.
 
-After you configure your services, go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered. You can also view incidents in Splunk Observability Cloud for Mobile. See :ref:`view-incidents-mobile` for more information.
+Incidents are automatically triggered after you configure your services to route and group alerts and add an incident workflow to your service. To view trigger incidents, go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered.
 
 .. toctree::
    :hidden:
@@ -15,7 +15,6 @@ After you configure your services, go to the :guilabel:`Incidents` tab in Incide
    add-responders-roles
    add-incident-resources
    add-collaboration-tool
-   view-incidents-mobile
 
 
 .. _manual-incident:
@@ -25,6 +24,9 @@ After you configure your services, go to the :guilabel:`Incidents` tab in Incide
    <embed>
       <h2>Manually create an incident</h2>
    </embed>
+
+You can manually create an incident for testing purposes using the :guilabel:`Create incident` button on the :guilabel:`Incidents` tab.
+
 .. _edit-incident:
 
 .. raw:: html
@@ -40,3 +42,13 @@ Incidents automatically inherit the title and description of the first alert tha
 #. Select the :guilabel:`pencil` icon.
 #. Edit the title, description, or severity. 
 #. Select :guilabel:`Save`.
+
+.. raw:: html
+
+   <embed>
+      <h2>See also</h2>
+   </embed>
+
+- :ref:`respond-to-incident`
+- :ref:`add-responders-roles`
+- :ref:`add-incident-tools-resources`
