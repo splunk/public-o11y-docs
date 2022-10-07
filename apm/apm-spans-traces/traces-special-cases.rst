@@ -59,12 +59,12 @@ To learn more about inferred services and inferred spans, see :ref:`apm-inferred
 
 .. _apm-span-latency:
 
-Traces appearing late
+Trace ingestion
 ===========================================
 
-Traces can take up to 3 minutes to assemble from existing spans. The delay allows Splunk APM to provide full observability through the service map. Metrics, on the other hand, don't experience delays, so you can get alerted instantaneously. By the time you get to an alert and start troubleshooting, traces are already available.
+Traces can take a few minutes to assemble from existing spans. The delay allows Splunk APM to provide full observability through the service map. Metrics, on the other hand, don't experience delays, so you can get alerted instantaneously. By the time you get to an alert and start troubleshooting, traces are already available.
 
-.. note:: With ongoing traces, you can search for a trace using its traceID and start seeing spans in the waterfall chart without having to wait for the trace to complete. In this case the delay is lower than 1 minute.
+.. note:: With ongoing traces, you can search for a trace using its traceID and start seeing spans in the waterfall chart without having to wait for the trace to complete. In this case the delay is lower than one minute.
 
 .. _apm-missing-spans:
 
