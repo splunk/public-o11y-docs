@@ -40,33 +40,49 @@ To learn more about these privileges, see the Azure documentation for registerin
     <h2>Prepare Azure for the integration<a name="prep-azure-integration" class="headerlink" href="#prep-azure-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To prepare Microsoft Azure to connect with Splunk Observability Cloud, do the following:
+To prepare Microsoft Azure to connect with Splunk Observability Cloud: 
 
-#. Create an Azure Active Directory application by following these steps:
-  
+#. Create an Azure Active Directory application.
+#. Specify subscriptions and set subscription permissions.
+
+You also have the option of connecting to Azure through the Observability Cloud API. For details, see :new-page:`Integrate Microsoft Azure Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/>` in the Splunk developer documentation.
+
+.. raw:: html
+
+  <embed>
+    <h3>Create an Azure Active Directory application<a name="prep-ms-app" class="headerlink" href="#prep-ms-app" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+Follow these steps to create a new Azure Active Directory application:
+
   #. In your Azure portal, navigate to :menuselection:`Azure Active Directory`, and register your new app. Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
-  
   #. The Azure portal displays a summary about the application. Save the following information to use when you create your Azure integration in Observability Cloud:
-    * :guilabel:`Display name`
-    * :guilabel:`Application (client) ID`
-    * :guilabel:`Directory (tenant) ID`
-    * :guilabel:`Object ID`
-
+      * :guilabel:`Display name`
+      * :guilabel:`Application (client) ID`
+      * :guilabel:`Directory (tenant) ID`
+      * :guilabel:`Object ID`
   #. Select :guilabel:`Certificates & settings`. The Certificate is your public key, and the client secret is your password.
   #. Create a client secret by providing a description and setting the duration to the longest possible interval, then select :guilabel:`Save`. Save the client secret, you need it to create your Azure integration in Observability Cloud.
 
-#. Specify subscriptions and set subscription permissions:
+Repeat these steps for each subscription you want to monitor.
+
+.. raw:: html
+
+  <embed>
+    <h3>Specify subscriptions and set subscription permissions<a name="prep-ms-subs" class="headerlink" href="#prep-ms-subs" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+Set your subscription permissions:
+
   #. In the Azure portal, look for your :guilabel:`Subscriptions`.
   #. Find a subscription you want to monitor, and select the subscription name.
   #. Navigate to :menuselection:`Access control (IAM)`, select :menuselection:`Add`, then select :menuselection:`Add role assignment`.
   #. On the :guilabel:`Add role assignment page`, perform the following steps:
-      #. From the :guilabel:`Role` drop-down list, select :menuselection:`Monitoring Reader`.
-      #. Leave the :guilabel:`Assign access to` drop-down list unchanged.
-      #. In the :guilabel:`Select` text box, start entering the name of the Azure application you just created. The Azure portal automatically suggests names as you type. Enter the application name, and :guilabel:`Save`.
+      * From the :guilabel:`Role` drop-down list, select :menuselection:`Monitoring Reader`.
+      * Leave the :guilabel:`Assign access to` drop-down list unchanged.
+      * In the :guilabel:`Select` text box, start entering the name of the Azure application you just created. The Azure portal automatically suggests names as you type. Enter the application name, and :guilabel:`Save`.
 
 Repeat these steps for each subscription you want to monitor.
-
-You also have the option of connecting to Azure through the Observability Cloud API. For details, see :new-page:`Integrate Microsoft Azure Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/>` in the Splunk developer documentation.
 
 .. raw:: html
 
