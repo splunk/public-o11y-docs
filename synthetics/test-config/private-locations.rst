@@ -8,9 +8,9 @@ Private locations
     :description: Learn about private locations in Splunk Synthetic Monitoring.
 
 
-A private location is a software package that enables quick and easy deployment of Splunk Synthetic Monitoring solutions beyond Rigor's public network so you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. This allows Rigor users to test earlier in the development cycle and against internal sites or applications that are not available to the public.
+A private location is a software package that enables quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. This allows Splunk Synthetics Monitoring users to test earlier in the development cycle and against internal sites or applications that are not available to the public.
 
-Customers can, through our web interface, create new Private Locations and launch a runner to perform any checks that are assigned to them.
+Customers can, through the Splunk Synthetics Monitoring web interface, create new Private Locations and launch a runner to perform any checks that are assigned to them.
 
 What is a runner?
 ===================
@@ -19,13 +19,13 @@ A runner is a Docker container set up to run tests from a particular private loc
 
 A location consists of a queue of tests assigned to a particular private location. Runners pick up runs from the queue, so the more active runners you have, the faster the queue of tests is processed. 
 
-Splunk Synthetic Monitoring doesn't track how many runners there are for a given location -- you must manage your own fleet of runners. 
+Splunk Synthetic Monitoring doesn't track how many runners there are for a given location. It is up to you to manage your own fleet of runners. 
 
 
 Use cases for private locations
 =================================
 
-* Test private applications that are not exposed to the public
+* Test private applications that aren't exposed to the public
 * Test pre-production applications which don't have public staging sites
 * Gain a higher level of flexibility in giving Splunk Synthetic Monitoring access to applications
 * Test from locations not currently supported by Splunk Synthetic Monitoring's public locations
@@ -51,7 +51,8 @@ Set up a new private location
 
 Follow these steps to set up a new private location:
 
-<add steps once UI is built> 
+..
+  add steps once UI is built
 
 Assess the health of your private location
 ==============================================
@@ -75,7 +76,7 @@ A private location's health is based on three factors:
      - Add the private location to one or more tests. 
 
    * - Clear queue
-     - The queue for a given location is being cleared perioically and is not backed up.
+     - The queue for a given location is being cleared periodically and is not backed up.
      - If the queue is backed up, add new runner(s) to the private location.
 
 
