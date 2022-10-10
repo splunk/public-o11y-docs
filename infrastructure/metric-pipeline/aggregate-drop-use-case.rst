@@ -18,7 +18,7 @@ Skyler is an admin for the central observability team at Buttercup Games. Skyler
 
 Lately, Skyler notices a spike in their metric usage. With the help of Splunk Observability Cloud account team, Skyler obtains a detailed metric usage analytics report. The report gives Skyler insights into their metrics volume, high cardinality dimensions, usage of those metrics in charts and detectors, and distribution of metrics across different teams.
 
-Skyler realizes that one team in particular is approaching their allocated usage limit. Skyler reaches out to Kai, a site reliability engineer (SRE) on that team, and asks them to optimize their team's usage. Skyler shares with Kai the high cardinality metrics and their team's usage. 
+Skyler realizes that one team in particular is approaching their allocated usage limit. Skyler reaches out to Kai, the site reliability engineer (SRE) lead on that team, and asks them to optimize their team's usage. Skyler shares with Kai the high cardinality metrics and their team's usage. 
  
 Based on the information Kai receives from Skyler, Kai decides to use metric pipeline management to control how Observability Cloud ingests their team's data.
 
