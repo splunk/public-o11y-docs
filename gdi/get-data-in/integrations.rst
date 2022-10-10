@@ -777,6 +777,7 @@ The following GCP services send metrics to Infrastructure Monitoring:
 
 
 .. _azure-integrations:
+.. _supported-azure-services:
 
 Microsoft Azure services
 ----------------------------------
@@ -786,65 +787,23 @@ Microsoft Azure services
 * To send logs from GCP to Observability Cloud, follow the instructions in :ref:`ingest-azure-log-data`.
 * Learn about :ref:`our Azure Infrastructure Monitoring options <infrastructure-azure>`. 
 
-The following Azure services send metrics and/or traces to Infrastructure Monitoring:
+The following Azure services send metrics to Infrastructure Monitoring:
 
 .. list-table::
-   :header-rows: 1
-   :widths: 50 16 16
-   :width: 100%
-   :class: monitor-table
+  :header-rows: 1
+  :widths: 42 42 16
+  :width: 100%
+  :class: monitor-table
 
-   * - :strong:`Service`
-     - :strong:`Provides metrics`
-     - :strong:`Provides traces`
+  * - :strong:`Resource type`
+    - :strong:`Resource name`
+    - :strong:`Provides traces`
 
-   * - :ref:`Azure App Service <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
+  * - API Management	
+    - microsoft.apimanagement/service
+    - :strong:`X`
 
-   * - :ref:`Azure Batch <get-started-azure>`
-     - :strong:`X`
-     -
 
-   * - :ref:`Azure Event Hubs <get-started-azure>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Azure Functions <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
-
-   * - :ref:`Azure Kubernetes Service <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
-
-   * - :ref:`Azure Logic apps <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
-
-   * - :ref:`Azure Redis Cache <get-started-azure>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Azure Storage <get-started-azure>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Azure SQL Database <get-started-azure>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Azure SQL Elastic Pools <get-started-azure>`
-     - :strong:`X`
-     -
-
-   * - :ref:`Azure Virtual Machines <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
-
-   * - :ref:`Azure Virtual Machine Scale Sets <get-started-azure>`
-     - :strong:`X`
-     -
 
 
 Platforms
