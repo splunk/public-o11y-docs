@@ -17,7 +17,7 @@ Splunk Observability Cloud provides an integration with Microsoft Azure, lets yo
 
 After you connect your Azure account to Observability Cloud, you can do the following:
 
-- Import Azure metadata.
+- Import Azure metrics, traces, and metadata.
 - Use Observability Cloud tools to monitor your Azure services.
 - Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``.
 
@@ -26,7 +26,6 @@ After you connect your Azure account to Observability Cloud, you can do the foll
   <embed>
     <h2>Azure integration prerequisites<a name="azure-integration-prereqs" class="headerlink" href="#azure-integration-prereqs" title="Permalink to this headline">¶</a></h2>
   </embed>
-
 
 Successful integration requires administrator privileges for the following:
 
@@ -38,43 +37,34 @@ To learn more about these privileges, see the Azure documentation for registerin
 .. raw:: html
 
   <embed>
-    <h2>Prepare for Azure integration<a name="prep-azure-integration" class="headerlink" href="#prep-azure-integration" title="Permalink to this headline">¶</a></h2>
+    <h2>Prepare Azure for the integration<a name="prep-azure-integration" class="headerlink" href="#prep-azure-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To prepare Microsoft Azure for connection to Splunk Observability Cloud, do the following:
+To prepare Microsoft Azure to connect with Splunk Observability Cloud, do the following:
 
 #. Create an Azure Active Directory application by following these steps:
+  
+  #. In your Azure portal, navigate to :menuselection:`Azure Active Directory`, and register your new app. Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
+  
+  #. The Azure portal displays a summary about the application. Save the following information to use when you create your Azure integration in Observability Cloud:
+    * :guilabel:`Display name`
+    * :guilabel:`Application (client) ID`
+    * :guilabel:`Directory (tenant) ID`
+    * :guilabel:`Object ID`
 
-   #. Log into your Azure portal.
-   #. Navigate to :menuselection:`Azure Active Directory` and select :menuselection:`App registrations`. Then select :guilabel:`New registration` at the top of the page.
-   #. Enter the name, indicate access type, and then select :guilabel:`Register`.
-
-      Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
-   #. The Azure portal displays summary information about the application. Save the following information to use when you create
-      your Azure integration in Observability Cloud:
-
-      * :guilabel:`Display name`
-      * :guilabel:`Application (client) ID`
-      * :guilabel:`Directory (tenant) ID`
-      * :guilabel:`Object ID`
-
-   #. Select :guilabel:`Certificates & settings`. The Certificate is your public key, and the client secret is your password.
-   #. Create a client secret by providing a description and setting the duration to the longest possible interval, then select :guilabel:`Save`.
-   #. The Azure portal displays the client secret. Save this value; you need the client secret to create your Azure integration in Observability Cloud.
+  #. Select :guilabel:`Certificates & settings`. The Certificate is your public key, and the client secret is your password.
+  #. Create a client secret by providing a description and setting the duration to the longest possible interval, then select :guilabel:`Save`. Save the client secret, you need it to create your Azure integration in Observability Cloud.
 
 #. Specify subscriptions and set subscription permissions:
-
-   #. In the Azure portal, navigate to :menuselection:`All services`, select :menuselection:`Everything`, then select :guilabel:`Subscriptions`.
-   #. Find a subscription you want to monitor, and select the subscription name.
-   #. Navigate to :menuselection:`Access control (IAM)`, select :menuselection:`Add`, then select :menuselection:`Add role assignment`.
-   #. On the :guilabel:`Add role assignment page`, perform the following steps:
-
+  #. In the Azure portal, look for your :guilabel:`Subscriptions`.
+  #. Find a subscription you want to monitor, and select the subscription name.
+  #. Navigate to :menuselection:`Access control (IAM)`, select :menuselection:`Add`, then select :menuselection:`Add role assignment`.
+  #. On the :guilabel:`Add role assignment page`, perform the following steps:
       #. From the :guilabel:`Role` drop-down list, select :menuselection:`Monitoring Reader`.
       #. Leave the :guilabel:`Assign access to` drop-down list unchanged.
-      #. In the :guilabel:`Select` text box, start entering the name of the Azure application you just created.
-         The Azure portal automatically suggests names as you type. Enter the application name, and :guilabel:`Save`.
+      #. In the :guilabel:`Select` text box, start entering the name of the Azure application you just created. The Azure portal automatically suggests names as you type. Enter the application name, and :guilabel:`Save`.
 
-   Repeat these steps for each subscription you want to monitor.
+Repeat these steps for each subscription you want to monitor.
 
 You also have the option of connecting to Azure through the Observability Cloud API. For details, see :new-page:`Integrate Microsoft Azure Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/>` in the Splunk developer documentation.
 
@@ -126,12 +116,11 @@ For instructions on how to connect to Azure through the API, see :new-page:`Inte
 
 If you installed Azure while going through the Quick Start guide, continue by installing the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/resources.html>`.
 
-The Azure integration provides an Azure mode for the :new-page:`navigator <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`, and includes :new-page:`default dashboards <https://docs.splunk.com/Observability/infrastructure/navigators/azure.html#use-default-dashboards-to-monitor-azure-services>` to help you
-monitor Microsoft Azure services.
+The Azure integration provides an Azure mode for the :new-page:`navigator <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`, and includes :new-page:`default dashboards <https://docs.splunk.com/Observability/infrastructure/navigators/azure.html#use-default-dashboards-to-monitor-azure-services>` to help you monitor Microsoft Azure services.
 
 You can also connect to Azure and the subscriptions and services running on it by using the Splunk Distribution of OpenTelemetry Collector. To learn more, see :ref:`otel-intro`.
 
-OTel Collector offers a higher degree of customization than the Azure integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.
+The Collector offers a higher degree of customization than the Azure integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.
 
 .. raw:: html
 
