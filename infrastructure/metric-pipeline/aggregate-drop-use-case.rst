@@ -22,15 +22,16 @@ Skyler realizes that one team in particular is approaching their allocated usage
  
 Based on the information Kai receives from Skyler, Kai decides to use metric pipeline management to control how Observability Cloud ingests their team's data.
 
-Kai notices that their team sends about 50,000 metric time series (MTSs) for the ``service.latency`` metric to Observability Cloud, but not all the data is essential. Kai concludes that reducing cardinality for ``service.latency`` is beneficial for their team.
+Kai notices that their team sends about 50,000 metric time series (MTSs) for the ``service.latency`` metric to Observability Cloud, but not all the data at full granularity is essential. Kai looks at the metric usage analytics report to understand the cardinality of different dimensions. They notice that dimensions such as ``instance_id`` or  ``host_name`` are the highest cardinality dimensions for ``service.latency``. However, Kai knows their team cares most about different regions when it comes to service latency, so they only want to keep the ``region`` dimension in the aggregation rule. Other dimensions such as ``instance_id`` or ``host_name`` are not information they need to monitor.
 
-#. Kai decides to create an aggregation rule for ``service.latency``. 
-#. Kai knows their team cares most about different regions when it comes to service latency, so they keep only the ``region`` dimension in the aggregation rule. Other dimensions such as ``instance_id`` or  ``service`` are not information they need to monitor.
+#. Kai creates an aggregation rule that reduces the cardinality of ``service.latency`` by keeping the ``region`` dimension and discarding ``instance_id`` and ``host_name``.
 #. Kai has a new aggregated ``service.latency_by_region`` metric that yields only 1,623 MTSs.
-#. Kai lets Skyler know that they have created an aggregated metric, so the unaggregated raw metric can be dropped.
+#. Kai downloads the list of charts and detectors that use the ``service.latency`` metric.
+#. For each associated chart and detector, Kai replaces ``service.latency`` with ``service.latency_by_region``.
+#. Kai lets Skyler know that they have created an aggregated metric and updated all the associated charts and detectors, so the unaggregated raw metric can be dropped.
 #. Skyler selects ``service.latency`` on the :strong:`Metric pipeline management` page to view current rules for the metric.
-#. For each associated chart and detector, Skyler replaces ``service.latency`` with ``service.latency_by_region``.
-#. Once they have confirmed that no chart and detector still uses the unaggregated raw metric, Skyler changes :guilabel:`Keep data` to :guilabel:`Drop data`.
+#. Skyler changes :guilabel:`Keep data` to :guilabel:`Drop data`.
+#. Skyler verifies the new metric volume after dropping data and saves the rules.
 
 By combining aggregation and data dropping rules, Kai and Skyler have successfully summarized a high cardinality metric, creating a more focused monitoring experience for their team while minimizing storage costs for Buttercup Games.
 
