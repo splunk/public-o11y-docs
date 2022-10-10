@@ -667,7 +667,7 @@ The following applies to the collected logs and metadata listed in the table:
 Google Cloud Platform services
 -----------------------------------------------
 
-* For details about how to get metrics from these Google Cloud Platform (GCP)  services into Splunk Observability Cloud, see :ref:`get-started-gcp`.
+* For details about how to get metrics from these Google Cloud Platform (GCP) services into Splunk Observability Cloud, see :ref:`get-started-gcp`.
 * For details about the metrics provided by a GCP integration, see :ref:`gcp-metrics`.
 * To send logs from GCP to Observability Cloud, follow the instructions in :ref:`gcp-logs`.
 * Learn about :ref:`our GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
@@ -781,9 +781,12 @@ The following GCP services send metrics to Infrastructure Monitoring:
 Microsoft Azure services
 ----------------------------------
 
-For details about how to get data from these Microsoft Azure services into Observability Cloud, see :ref:`get-started-azure`.
+* For details about how to get metrics from these Microsoft Azure services into Splunk Observability Cloud, see :ref:`get-started-azure`.
+* For details about the metrics provided by a GCP integration, see :ref:`azure-metrics`.
+* To send logs from GCP to Observability Cloud, follow the instructions in :ref:`ingest-azure-log-data`.
+* Learn about :ref:`our Azure Infrastructure Monitoring options <infrastructure-azure>`. 
 
-For details about the metrics provided by a Microsoft Azure integration, see :ref:`azure-metrics`.
+The following Azure services send metrics and/or traces to Infrastructure Monitoring:
 
 .. list-table::
    :header-rows: 1
