@@ -13,7 +13,7 @@ Splunk Log Observer Connect is an integration that allows you to query your Splu
 
 Region and version availability
 ==============================================================
-Splunk Log Observer Connect is available in the AWS regions us0, us1, and eu0. Splunk Log Observer Connect is compatible with Splunk Enterprise and Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
+Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, and jp0. Splunk Log Observer Connect is compatible with Splunk Enterprise and Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
 
 What can I do with Log Observer Connect?
 ==============================================================
