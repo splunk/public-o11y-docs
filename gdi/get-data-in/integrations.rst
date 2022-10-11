@@ -794,8 +794,8 @@ The following Azure services send metrics to Infrastructure Monitoring:
   :widths: 40 40 
   :width: 100%  
 
-  * - :strong:`Resource type`
-    - :strong:`Resource name`
+  * - :strong:`Resource name`
+    - :strong:`Resource type`
 
   * - API Management	
     - microsoft.apimanagement/service
@@ -815,8 +815,8 @@ The following Azure services send metrics to Infrastructure Monitoring:
   * - App Service	
     - microsoft.web/hostingenvironments/workerpools 
 
-  * - Application 
-    - Gateway	microsoft.network/applicationgateways
+  * - Application Gateway
+    - microsoft.network/applicationgateways
 
   * - Automation	
     - microsoft.automation/automationaccounts
