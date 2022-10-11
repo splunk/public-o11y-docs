@@ -298,8 +298,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
+   Use case: Monitor infrastructure and apps using the Collector <get-started/use-case-collector>
 
+.. toctree::
+   :maxdepth:   3
+
+   Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
 
 .. toctree::
    :maxdepth:   3
@@ -519,7 +523,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Analyze services with span tags and MetricSets<apm/span-tags/span-tags>
+   Analyze services with span tags and MetricSets <apm/span-tags/span-tags>
 
 .. toctree::
    :maxdepth:   3
@@ -534,58 +538,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   AlwaysOn Profiling <apm/profiling/intro-profiling>
+
+.. toctree::
+   :maxdepth:   3
+
    apm/db-query-perf/db-query-performance
 
 .. toctree::
    :maxdepth:   3
 
    apm/apm-data-links/data-links-landing
-
-.. toctree::
-   :caption: PROFILING
-   :maxdepth:   3
-
-   Introduction to AlwaysOn Profiling <profiling/intro-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-use-case-library
-
-.. toctree::
-   :maxdepth:   3
-
-   Get AlwaysOn Profiling data in <profiling/get-data-in-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   Browse stack traces linked to spans <profiling/spans-stack-traces>
-
-.. toctree::
-   :maxdepth:   3
-
-   Understand and use the flame graph <profiling/using-the-flamegraph>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-memory-metrics
-
-.. toctree::
-   :maxdepth:   3
-
-   Profiling terms and concepts <profiling/concepts-terms-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-troubleshooting
-
-.. toctree::
-   :maxdepth:   3
-
-   Third-party acknowledgements <profiling/profiling-third-party-credits>
 
 .. toctree::
    :caption: INFRASTRUCTURE
@@ -648,12 +611,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
+   logs/intro-to-logs
+
+.. toctree::
+   :maxdepth:   3
+
    logs/intro-logconnect.rst
 
 .. toctree::
    :maxdepth:   3
 
-   logs/scp
+   logs/logs
 
 .. toctree::
    :maxdepth:   3
@@ -663,17 +631,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   logs/scp
+
+.. toctree::
+   :maxdepth:   3
+
    logs/LOconnect-troubleshoot
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/intro-to-logs
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/logs
 
 .. toctree::
    :maxdepth:   3
@@ -821,13 +784,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-dashboards 
-
+   rum/rum-dashboards/rum-dashboards
 
 .. toctree::
    :maxdepth:   3
 
    rum/RUM-metrics
+
 
 .. toctree::
    :maxdepth:   3
@@ -935,6 +898,28 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
+
+.. toctree::
+   :hidden:
+   :maxdepth:   3
+
+   admin/SSO/sso
+
+.. toctree::
+   :maxdepth:   3
+
+   Create and manage authentication tokens <admin/authentication-tokens/tokens>
+
+.. toctree::
+   :hidden:
+   :maxdepth:   3
+
+   admin/allow-services
+
+.. toctree::
+   :maxdepth:   3
+
    Create and manage users <admin/users/manage-users>
 
 .. toctree::
@@ -942,11 +927,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Create and manage teams <admin/teams/manage-teams>
 
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Configure SSO integrations <admin/sso>
 
 .. toctree::
    :hidden:
@@ -958,19 +938,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   admin/allow-services
-
-.. toctree::
-   :maxdepth:   3
-
-   Create and manage authentication tokens <admin/authentication-tokens/tokens>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
    Link metadata to related resources using global data links <admin/link-metadata-to-content>
 
+.. toctree::
+   :maxdepth:   3
+
+   View organization metrics <admin/org-metrics>
 .. toctree::
    :hidden:
    :maxdepth:   3
@@ -989,15 +962,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    admin/imm-billing-usage/dpm-usage
 
-.. toctree::
-   :maxdepth:   3
 
-   View organization metrics <admin/org-metrics>
-
-.. toctree::
-   :maxdepth:   3
-
-   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
 
 .. toctree::
    :caption: SETTINGS AND REFERENCE
