@@ -12,4 +12,3 @@
             * :ref:`find-network-error`
             * :ref:`cross-zone-traffic-cost`
         
-        * Troubleshoot: :ref:`network-explorer-troubleshoot`            
