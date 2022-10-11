@@ -33,7 +33,7 @@ How does metric pipeline management work?
 
 The driving mechanism behind metric pipeline management are aggregation and data dropping. For each metric you send to Observability Cloud, you can control the metric volume with a set of aggregation and data dropping rules.
 
-* Aggregation rules let you roll up your selected metric data into new metric time series (MTSs) that take up less storage and increase computational performance. To learn more, see :ref:`aggregation`.
+* Aggregation rules let you roll up your selected metric data into new metrics that take up less storage and increase computational performance. To learn more, see :ref:`aggregation`.
 * Data dropping rules let you discard any metrics you don't want to retain for monitoring. To learn more, see :ref:`data-dropping`.
 
 By aggregating combinations of dimensions that provide useful insights while dropping a large amount of the unaggregated raw data, you can significantly reduce your organization’s data footprint.
