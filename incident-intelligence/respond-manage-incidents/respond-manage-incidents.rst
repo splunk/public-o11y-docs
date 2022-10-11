@@ -51,3 +51,4 @@ Incidents automatically inherit the title and description of the first alert tha
 - :ref:`respond-to-incident`
 - :ref:`add-responders-roles`
 - :ref:`add-incident-tools-resources`
+- :ref:`mtta-mttr`
