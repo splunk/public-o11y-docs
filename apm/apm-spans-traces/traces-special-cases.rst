@@ -62,9 +62,9 @@ To learn more about inferred services and inferred spans, see :ref:`apm-inferred
 Trace ingestion
 ===========================================
 
-Traces can take a few minutes to be available for troubleshooting, depending on the time taken to ingest and assemble  incoming spans. When you start diagnosing issues from real-time alerts, all relevant traces are available by the time you get to the alert and investigate in Splunk APM.
+Traces can take a few minutes to be available for troubleshooting, depending on the time taken to ingest and assemble incoming spans. As troubleshooting starts from real-time alerts, all relevant traces are available by the time you get to the alert and start investigating the issue.
 
-.. note:: You can search for specific trace IDs from other data sources, for example logs, to see incoming spans in the waterfall view, without having to wait for the trace to assemble. 
+You can search for specific trace IDs gathered from other data sources, such as logs or Jenkins jobs, to see incoming spans for that trace in the trace view without having to wait for the trace to complete.
 
 .. _apm-missing-spans:
 
