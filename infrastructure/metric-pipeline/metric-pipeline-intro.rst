@@ -11,7 +11,7 @@ Introduction to metric pipeline management
 .. meta::
     :description: Introduction to metric pipeline management in Splunk Observability Cloud
 
-Metric pipeline management is an evolution on Splunk Observability Cloud metrics platform that offers you solution to centrally manage metric cardinality within the UI.
+Metric pipeline management is an evolution of Splunk Observability Cloud metrics platform that offers you solutions to centrally manage metric cardinality within the UI.
 
 With metric pipeline management, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without updating your Splunk Distribution of OpenTelemetry Collector configurations.
 
@@ -23,7 +23,7 @@ Metric cardinality is the number of unique metric time series produced by a comb
 How does metric pipeline management work?
 ========================================================
 
-The driving mechanism behind metric pipeline management are aggregation and data dropping. For each metric you send to Observability Cloud, you can control the ingestion volume with a set of aggregation and data dropping rules.
+The driving mechanism behind metric pipeline management are aggregation and data dropping. For each metric you send to Observability Cloud, you can control the metric volume with a set of aggregation and data dropping rules.
 
 * Aggregation rules let you roll up your selected metric data into new metric time series (MTSs) that take up less storage and increase computational performance. To learn more, see :ref:`aggregation`.
 * Data dropping rules let you discard any metrics you don't want to retain for monitoring. To learn more, see :ref:`data-dropping`.
@@ -52,18 +52,27 @@ With metric pipeline management, you can aggregate your data as you are ingestin
 Example
 ++++++++
 
-
 You send a metric called ``service.latency`` for a containerized workload to Splunk Infrastructure Monitoring.
 
-Your workload has 10 endpoints, 5 services, and 10,000 containers.
+Your workload has 10 endpoints, 20 regions, 5 services, and 10,000 containers.
 
-Your data comes in at the container ID level, generating 10 (endpoints) * 5 (services) * 10,000 (containers) = 500,000 MTSs.
+Your data is coming in at the container ID level, generating 10 (endpoints) * 5 (services) * 20 (regions) * 10,000 (containers) = 1,000,000 MTSs.
 
-However, since you are more interested in the source region of your data rather than the source container, you create an aggregation rule that groups your data by the ``host_region`` dimension.
+You can reduce your metric cardinality by aggregating one or multiple dimensions.
 
-The aggregated metric drops all other dimension keys, such as ``container_id`` or ``host_id``, and retains only the ``host_region`` dimension key based on your configuration.
+Aggregate using one dimension
+**********************************
 
-There are only 20 different host region values for ``host_region``, so only 10 (endpoints) * 5 (services) * 20 (regions) = 1,000 MTSs are ingested.
+You are only interested in the source region of your data, so you create an aggregation rule that groups your data by the ``region`` dimension.
+
+The aggregated metric drops all other dimensions and retains only the ``region`` dimension based on your rule. There are only 20 different values for ``region``, so only 20 MTSs are ingested.
+
+Aggregate using multiple dimensions
+****************************************
+
+You want to continue monitoring endpoints, regions, and services for your data, but don't need to monitor container IDs. You create aggregation rules that group your data by the dimensions you want to keep.
+
+The aggregated metric drops the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service`` based on your rules. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTSs.
 
 .. _data-dropping:
 
@@ -85,10 +94,7 @@ You must be an admin to drop data.
 Example
 ++++++++
 
-As an admin, you realize the high cardinality ``system.capacity`` metric is ingested into Observability Cloud, but your team is not using the metric to monitor your system.
-
-You can decide to drop ``system.capacity`` by creating a rule for the metric.
-
+Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for ``service.latency``. 
 
 Use case for metric pipeline management
 ==================================================
