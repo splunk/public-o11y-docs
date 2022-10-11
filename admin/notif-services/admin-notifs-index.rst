@@ -28,45 +28,45 @@ Send alert notifications to third-party services using Splunk Observability Clou
 
 In addition to sending alert notifications by email (see :ref:`manage-notifications`), you can configure Splunk Observability Cloud to send alert notifications to the following third-party services:
 
-* Amazon EventBridge
 
-  See :ref:`amazoneventbridge`.
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
 
-* BigPanda
+   * - :strong:`Third-party`
+     - :strong:`Link to documentation`
 
-  See :ref:`bigpanda`.
+   * - Amazon EventBridge
+     - See :ref:`amazoneventbridge`
 
-* Jira
+   * - BigPanda
+     - See :ref:`bigpanda`.
 
-  See :ref:`jira`.
+   * - Jira
+     - See :ref:`jira`.
 
-* Microsoft Teams
+   * - Microsoft Teams
+     - See :ref:`microsoftteams`.
 
-  See :ref:`microsoftteams`.
+   * - Opsgenie
+     - See :ref:`opsgenie`.
 
-* Opsgenie
+   * - PagerDuty
+     - See :ref:`pagerduty`.
 
-  See :ref:`opsgenie`.
+   * - ServiceNow
+     - See :ref:`servicenow`.
 
-* PagerDuty
+   * - Slack
+     - See :ref:`slack`.
 
-  See :ref:`pagerduty`.
+   * - Splunk On-Call (VictorOps)
+     - See :ref:`splunkoncall`.
 
-* ServiceNow
+   * - xMatters
+     - See :ref:`xmatters`.
 
-  See :ref:`servicenow`.
 
-* Slack
-
-  See :ref:`slack`.
-
-* Splunk On-Call (VictorOps)
-
-  See :ref:`splunkoncall`.
-
-* xMatters
-
-  See :ref:`xmatters`.
 
 You can also configure Observability Cloud to send alert notifications to a webhook. See :ref:`webhook`.
 

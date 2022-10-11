@@ -101,11 +101,43 @@ Instrument OkHttp using the ``Call.Factory`` wrapper, as in the following exampl
       return splunkRum.createRumOkHttpCallFactory(new OkHttpClient());
    }
 
-Volley HTTP
+Volley HTTP (Experimental)
 -------------------------------------------------
 
-Instrument Volley HTTP using the ``VolleyTracing`` class to create a ``HurlStack``, as in the following example:
+To instrument Volley HTTP, add the ``splunk-otel-android-volley`` dependency to the ``build.gradle.kts`` file:
 
 .. code-block:: java
 
-   HurlStack stack = VolleyTracing.create(SplunkRum.getInstance()).newHurlStack();
+   dependencies {
+      //...
+      implementation("com.splunk:splunk-otel-android-volley:0.16.0")
+      //...
+   }   
+
+Use the ``VolleyTracing`` class to create an instance of ``VolleyTracing``, as in the following example:
+
+.. code-block:: java
+
+   VolleyTracing volleyTracing = VolleyTracing.builder(splunkRum).build();
+
+The following example shows how to retrieve an instance of ``HurlStack`` from your ``volleyTracing`` instance:
+
+.. code-block:: java
+   
+   HurlStack hurlStack = volleyTracing.newHurlStack();
+
+You can then use the ``hurlStack`` instance to create your request queue and send requests as usual.
+
+Capture additional request and response headers
+-------------------------------------------------
+
+You can capture additional request and response headers using the HTTP instrumentations. Additional headers appear with the ``http.request.header.`` and ``http.response.header.`` prefixes.
+
+To capture additional headers, provide the builder with a list of headers to catch. For example:
+
+.. code-block:: java
+  
+   builder.setCapturedRequestHeaders(asList("X-My-Custom-Request-Header"))
+   builder.setCapturedResponseHeaders(asList("X-My-Custom-Response-Header"))
+
+The resulting span contains an ``http.request.header.x_my_custom_header`` attribute with one or more header values.
