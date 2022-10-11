@@ -16,4 +16,5 @@ Use the following links to navigate the documentation set for the preview of met
     * :ref:`metric-pipeline-intro`
     * :ref:`use-metric-pipeline`
     * :ref:`data-dropping-impact`
+    * :ref:`aggregate-drop-use-case`
 

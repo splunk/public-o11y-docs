@@ -7,3 +7,4 @@
         * :ref:`metric-pipeline-intro`
         * :ref:`use-metric-pipeline`
         * :ref:`data-dropping-impact`
+        * :ref:`aggregate-drop-use-case`
