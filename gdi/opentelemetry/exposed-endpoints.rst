@@ -24,7 +24,7 @@ See the table for a complete list of exposed ports and endpoints:
   :width: 100
   :header-rows: 1
 
-  * - <endpoint>:<port>
+  * - <protocol>:<address>:<port>:<endpoint>
     - Description
   * - ``http(s)://0.0.0.0:13133/``
     - Health endpoint useful for load balancer monitoring
