@@ -7,12 +7,12 @@ Introduction to Splunk Incident Intelligence
 .. meta::
    :description: Get started collaboratively diagnosing and remediating issues across your environment using Incident Intelligence. 
 
-Collaboratively diagnose and remediate issues across your environment using Incident Intelligence. Incident Intelligence lets site reliability engineers (SREs) in IT and DevOps resolve outages with event correlation, incident response, and on-call routing, paired with automation and collaboration. 
+Collaboratively diagnose and remediate issues across your environment using Incident Intelligence. Incident Intelligence lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing, paired with automation and collaboration. 
 
 How Incident Intelligence fits into Splunk Observability Cloud 
 =================================================================
 
-Splunk Observability Cloud provides a unified experience for collecting and monitoring metrics, logs, and traces from common data sources. Incident Intelligence is integrated into Observability Cloud to provide event analytics and on-call management in one place. With Incident Intelligence, you can reduce alert noise, automate actions, and accelerate incident response. Incident Intelligence is an add-on for Splunk Observability Cloud. 
+Splunk Observability Cloud provides a unified experience for collecting and monitoring metrics, logs, and traces from common data sources. Incident Intelligence is integrated into Observability Cloud to provide alert analytics and on-call management in one place. With Incident Intelligence, you can reduce alert noise, automate actions, and accelerate incident response. Incident Intelligence is an add-on for Splunk Observability Cloud. 
 
 | For more information about Observability Cloud, see :ref:`welcome`. 
 
@@ -72,21 +72,20 @@ The following table provides an overview of what you can do with Incident Intell
 How Incident Intelligence works 
 ===================================
 
-Incident Intelligence ingests alerts and groups alerts to create incidents. Upon ingestion, alerts and events pass through a series of data preparations such as filters and enrichments. Alerts are then grouped based on detectors that you configure. An incident is automatically triggered and escalated to the corresponding team if an alert or set of alerts meets the criteria for a critical incident. 
+Incident Intelligence generates alerts and groups alerts to create incidents. Alerts then pass through a series of data preparations such as filters and enrichments. Alerts are then grouped based on detectors that you configure. An incident is automatically triggered and escalated to the corresponding team if an alert or set of alerts meets the criteria for a critical incident. 
 
 Required Incident Intelligence prerequisites and permissions
 ---------------------------------------------------------------------
 - Before you start, sign the pre-release terms and have Incident Intelligence enabled in your Observability Cloud account. For more information, contact your sales representative.
 - You must be an Observability Cloud administrator to configure and set up Incident Intelligence.
 
-.. _event-sources-incident-intelligence:
+.. _alert-sources-incident-intelligence:
 
-Types of event sources 
+Types of alert sources 
 ---------------------------
-Splunk Incident Intelligence ingests alerts from the following Observability Cloud event sources. You have to define a detector for these event sources and route that detector to a service in Incident Intelligence for alerts to be ingested into Incident Intelligence. 
+Splunk Incident Intelligence generates alerts from the following Observability Cloud sources. You have to define a detector for these sources and route that detector to a service in Incident Intelligence for alerts to be generated in Incident Intelligence. 
 
 - Splunk APM
 - Splunk Infrastructure Monitoring
-- Splunk NPM
 
  See :ref:`get-started-detectoralert` for more information about configuring detectors. See :ref:`set-up-incident-intelligence` for steps to configure services. 
