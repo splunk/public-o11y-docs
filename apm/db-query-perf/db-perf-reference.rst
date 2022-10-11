@@ -14,31 +14,19 @@ Supported databases
 
 Database Query Performance provides insights for the following database software:
 
-.. list-table::
-   :header-rows: 1
-   :widths: 70,30
-   :width: 100%
-
-   * - :strong:`Supported database`
-     - :strong:`Additional features`
-   * - Oracle
-     - Related Content
-   * - MySQL
-     - Related Content
-   * - Microsoft SQL Server
-     - Related Content
-   * - PostgreSQL
-     - 
-   * - Aurora
-     - 
-   * - MariaDB
-     - 
-   * - Db2
-     - 
-   * - Presto
-     - 
-
+- Oracle
+- MySQL
+- Microsoft SQL Server
+- PostgreSQL
+- Aurora
+- MariaDB
+- OceanBase
+- Db2
+- Presto 
+     
 Database Query Performance works with all versions supported by the instrumented applications. For more information on related content, see :ref:`get-started-relatedcontent`.
+
+.. note:: Related Content is available for Oracle, MySQL, and MS SQL.
 
 .. _db-tags:
 
