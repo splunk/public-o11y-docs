@@ -26,11 +26,27 @@ Follow these steps to create rules for a metric.
 #. Add aggregation rules:
 
     #. Select :guilabel:`Add aggregation rule`.
-    #. (Optional) In the :strong:`Filter population` field, search for dimension key or value to narrow down the associated MTSs.
-    #. In the :strong:`Select dimensions to keep` field, search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTSs. All other dimensions are removed.
-    #. In the :strong:`New aggregated metric name` field, select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric. 
+    #. Enter the following fields to create an aggregation rule.
+
+       .. list-table::
+        :header-rows: 1
+        :widths: 30 40 30
+
+        * - :strong:`Field name`
+          - :strong:`Description`
+          - :strong:`Required?`
+        * - Filter population
+          - Search for dimension key or value to narrow down the associated MTSs
+          - No
+        * - Select dimensions to keep
+          - Search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTSs. All other dimensions are removed.
+          - Yes
+        * - New aggregated metric name
+          - Select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric.
+          - Yes                 
+
     #. (Optional) If you want to disable your rule, switch :guilabel:`Rule status` to :strong:`Inactive`. By default, a new aggregation rule is active. 
-    #. (Optional) Select :guilabel:`Add new aggregation rule` and repeat steps 6b-6e to add another aggregation rule.
+    #. (Optional) Select :guilabel:`Add new aggregation rule` and repeat steps 6b-6c to add another aggregation rule.
 #. (Optional) Add dropping rule:
 
     :strong:`Note:` You need to be an admin to drop data.
