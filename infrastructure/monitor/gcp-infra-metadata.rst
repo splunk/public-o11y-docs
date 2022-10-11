@@ -7,7 +7,7 @@ Google Cloud Platform metadata
 .. meta::
   :description: GCP infrastructure metadata in Splunk Observability Cloud.
 
-The GCP integration queries the GCP API for metadata about the monitored resources. You can filter and group metrics by this metadata in :ref:`charts.rst`` and in the Infrastructure Navigator.
+The GCP integration queries the GCP API for metadata about the monitored resources. You can filter and group metrics by this metadata in :ref:`charts <data-visualization-charts>`, or in the Infrastructure Navigator.
 
 -  Metadata that are common to all services within a project (project-level metadata) are put on properties of ``project_id`` dimension.
 -  Metadata that are service-specific (service-level metadata) are put on properties of the ``gcp_id`` dimension.
@@ -21,6 +21,7 @@ Here's the metadata that is currently synced at a project level:
 
 .. list-table::
     :header-rows: 1
+    :width: 100
 
     * - :strong:`GCP name`
       - :strong:`Custom property`
@@ -69,6 +70,7 @@ For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring ge
 
 .. list-table::
     :header-rows: 1
+    :width: 100
 
     * - :strong:`GCP name`
       - :strong:`Custom property`
@@ -173,6 +175,7 @@ Storage buckets currently sync the following properties:
 
 .. list-table::
     :header-rows: 1
+    :width: 100
 
     * -   :strong:`GCP name`
       -   :strong:`Custom property`

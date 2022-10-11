@@ -18,6 +18,6 @@ Infrastructure Monitoring imports data for the following :ref:`GCP services <gcp
 
 To monitor GCP resources:
 
-1. Set up the Infrastructure Monitoring GCP integration. To learn more see :new-page:`get-started-gcp`.
+1. Set up the Infrastructure Monitoring GCP integration. To learn more see :ref:`get-started-gcp`.
 2. Next, check how to :ref:`monitor GCP with Infrastructure Monitoring <gcp-infra-monitor>`.
 3. By default, all :ref:`metrics <gcp-metrics>` are imported. Check also :ref:`the metadatada Observability Cloud provides <gcp-infra-metadata>`.

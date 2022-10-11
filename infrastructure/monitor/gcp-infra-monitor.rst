@@ -45,31 +45,22 @@ Follow these steps to analyze problems with GCP services from the Infrastructure
 
   2. Select the specific service you want to analyze. For example, select :strong:`Cloud Storage` to view metrics for a specific bucket. If you see “No Data Found,” you need to first configure an integration.
 
-  3. Compare instances of the service along the following metrics with the :strong:`Color by` drop-down list. In the heat map, colors represent the health of instances based on the metrics you select. For example, a heat map that shows green and red, uses green to denote healthy and red to denote unhealthy instances. If your heat map has multiple colors, then the lighter gradient represents less activity, and the darker gradient represents more activity. To apply visually accessible color palettes on custom dashboards and charts and throughout Infrastructure Monitoring, select :strong:`Account Settings > Color Accessibility.`
+  3. Compare instances of the service along the following metrics with the :strong:`Color by` drop-down list. In the heat map, colors represent the health of instances based on the metrics you select. For example, a heat map that shows green and red, uses green to denote healthy and red to denote unhealthy instances. If your heat map has multiple colors, then the lighter gradient represents less activity, and the darker gradient represents more activity. 
   
-  You can color by metrics like CPU utilization and filter by dimensions like geographic region.
-
-  4. Group instances based on metadata about each instance with the :strong:`Group by` drop-down list. You can group instances according to the region or resource group they are running in or the environment tag. Use this to see correlations between different parts of your infrastructure and its performance.
-
-  5. Find outliers for your metrics with the :strong:`Find Outliers` setting. Specify the :strong:`Scope` and :strong:`Strategy`.
+  4. Optionally, you might apply visually accessible color palettes on custom dashboards and charts and throughout Infrastructure Monitoring, select :strong:`Account Settings > Color Accessibility.` You can color by metrics like CPU utilization and filter by dimensions like geographic region.
   
-  Set the :strong:`Scope` to analyze outliers from across the entire visible population of instances, or only within groups defined by the dimension or property you grouped instances by.
+  5. Group instances based on metadata about each instance with the :strong:`Group by` drop-down list. You can group instances according to the region or resource group they are running in or the environment tag. Use this to see correlations between different parts of your infrastructure and its performance.
+
+  6. Find outliers for your metrics with the :strong:`Find Outliers` setting. Specify the :strong:`Scope` and :strong:`Strategy`.
   
-  You can select one of two :strong:`Strategies` to find outliers, as described in the following table.
+    - Set the :strong:`Scope` to analyze outliers from across the entire visible population of instances, or only within groups defined by the dimension or property you grouped instances by.
+  
+    - Select one of two :strong:`Strategies` to find outliers:
+      
+      - ``Deviation from Mean``: Instances appear as red that exceed the mean value of the metric by at least three standard deviations. Use this setting to find the most extreme outliers.
+      - ``Deviation from Median``: Instances appear as red that exceed the median absolute deviation value by at least three absolute deviations. This setting does not weigh extreme outliers as heavily as the standard deviation.
 
-  .. list-table::
-      :header-rows: 1
-      :widths: 30, 70
-
-      * - :strong:`Strategy`
-        - :strong:`Description`
-
-      * - ``Deviation from Mean``
-        - Instances appear as red that exceed the mean value of the metric by at least three standard deviations. Use this setting to find the most extreme outliers.
-      * - ``Deviation from Median``
-        - Instances appear as red that exceed the median absolute deviation value by at least three absolute deviations. This setting does not weigh extreme outliers as heavily as the standard deviation.
-
-  6. Select a specific instance you want to investigate further to view all the metadata and key metrics for the instance. For every instance, Observability Cloud provides a default dashboard. Analyze all the available metadata about the cloud service the instance is running in, the instance itself, and any custom tags associated with the instance. The default dashboard provides metric time series (MTS) for key metrics.
+  7. Select a specific instance you want to investigate further to view all the metadata and key metrics for the instance. For every instance, Observability Cloud provides a default dashboard. Analyze all the available metadata about the cloud service the instance is running in, the instance itself, and any custom tags associated with the instance. The default dashboard provides metric time series (MTS) for key metrics.
 
 .. _gcp-dashboards:
 
