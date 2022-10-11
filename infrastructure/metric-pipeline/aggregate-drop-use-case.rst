@@ -20,7 +20,9 @@ Lately, Skyler notices a spike in their metric usage. With the help of Splunk Ob
 
 Skyler realizes that one team in particular is approaching their allocated usage limit. Skyler reaches out to Kai, the site reliability engineer (SRE) lead on that team, and asks them to optimize their team's usage. Skyler shares with Kai the high cardinality metrics and their team's usage. 
  
-Kai's team sends about 50,000 metric time series (MTSs) for the ``service.latency`` metric to Observability Cloud, but not all the data at full granularity is essential. Kai looks at the metric usage analytics report to understand more about the cardinality of different dimensions. They notice that dimensions such as ``instance_id`` or ``host_name`` are the highest cardinality dimensions for ``service.latency``. However, Kai knows their team cares most about different regions when it comes to service latency, so they only want to monitor the ``region`` dimension. Other dimensions such as ``instance_id`` or ``host_name`` are not information they need to monitor.
+Kai's team sends about 50,000 metric time series (MTSs) for the ``service.latency`` metric to Observability Cloud, but not all the data at full granularity is essential. Kai looks at the metric usage analytics report to understand more about the cardinality of different dimensions. They notice that dimensions such as ``instance_id`` or ``host_name`` are the highest cardinality dimensions for ``service.latency``.
+
+However, Kai knows their team cares most about different regions when it comes to service latency, so they only want to monitor the ``region`` dimension. Other dimensions such as ``instance_id`` or ``host_name`` are not information they need to monitor.
 
 Kai decides to use metric pipeline management to control how Observability Cloud ingests their team's data.
 
@@ -32,6 +34,10 @@ Kai decides to use metric pipeline management to control how Observability Cloud
 #. Skyler selects ``service.latency`` on the :strong:`Metric pipeline management` page to view current rules for the metric.
 #. Skyler changes :guilabel:`Keep data` to :guilabel:`Drop data`.
 #. Skyler verifies the new metric volume after dropping data and saves the rules.
+
+
+Conclusion
+===============
 
 By combining aggregation and data dropping rules, Kai and Skyler have successfully summarized a high cardinality metric, creating a more focused monitoring experience for their team while minimizing storage costs for Buttercup Games.
 
