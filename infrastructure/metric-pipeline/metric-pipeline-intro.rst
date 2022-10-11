@@ -80,7 +80,7 @@ Aggregate using multiple dimensions
 
 You want to continue monitoring endpoints, regions, and services for your data, but don't need to monitor container IDs. You create an aggregation rule that groups your data by the dimensions you want to keep.
 
-The aggregated metric drops the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service`` based on your rules. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTSs.
+The aggregated metric drops the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service`` based on your rule. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTSs.
 
 .. _data-dropping:
 
