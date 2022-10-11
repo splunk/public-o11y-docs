@@ -104,10 +104,12 @@ Example
 
 Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for ``service.latency``. 
 
-Use cases for metric pipeline management
+Use case for metric pipeline management
 ==================================================
 
+See the following use case for metric pipeline management:
 
+* :ref:`aggregate-drop-use-case`
 
 Create your first metric rules
 ==========================================
