@@ -20,23 +20,23 @@ Database Query Performance provides insights for the following database software
    :width: 100%
 
    * - :strong:`Supported database`
-     - :strong:`Related Content`
+     - :strong:`Additional features`
    * - Oracle
-     - Yes
+     - Related Content
    * - MySQL
-     - Yes
+     - Related Content
    * - Microsoft SQL Server
-     - Yes
+     - Related Content
    * - PostgreSQL
-     - No
+     - 
    * - Aurora
-     - No
+     - 
    * - MariaDB
-     - No
+     - 
    * - Db2
-     - No
+     - 
    * - Presto
-     - No
+     - 
 
 Database Query Performance works with all versions supported by the instrumented applications. For more information on related content, see :ref:`get-started-relatedcontent`.
 
