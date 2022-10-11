@@ -43,7 +43,7 @@ By aggregating combinations of dimensions that provide useful insights while dro
 Aggregation rules
 ----------------------
 
-Data you send from your services to Observability Cloud can have high cardinality. Instead of adjusting how you are sending in your data at the collection point, aggregation lets you summarize your data based on dimensions you consider important.
+Data you send from your services to Observability Cloud can have high cardinality. Instead of adjusting how you are sending in your data at the collection point, aggregation lets you summarize your data at the ingestion point based on dimensions you consider important.
 
 By selecting specific dimensions to keep, you can aggregate your data points into a new metric with fewer dimensions, creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view of your data when you don’t need to view metrics across all dimensions.
 
