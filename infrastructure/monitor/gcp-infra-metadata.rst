@@ -1,0 +1,158 @@
+.. _gcp-infra-metadata:
+
+**********************************
+Google Cloud Platform metadata
+**********************************
+
+.. meta::
+  :description: Learn how to monitor GCP infrastructure resources with Splunk Observability Cloud.
+
+.. note::
+  To start monitoring Google Cloud Platform resources, you must first connect to GCP, and log in with your administrator credentials. See :ref:`get-started-gcp` for details.
+
+Monitor Google Cloud Platform (GCP) service metrics with Splunk Observability Cloud. Observability Cloud provides infrastructure monitoring features using Google Cloud Operations. See the Google Cloud documentation for more information.
+
+
+Service-level metadata
+------------------------------
+
+Here is the metadata that is synced at a service level for the services listed below.
+
+
+.. _compute-engine-properties:
+
+Compute Engine instance
+++++++++++++++++++++++++++++
+
+For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring gets a subset of metadata about the instance, as well as custom metadata specified by the user at an instance level.
+
+.. note::
+  The Compute Engine instance metadata table includes two custom properties that are now deprecated, as well as information about which properties replace the deprecated properties.
+
+:strong:`Compute Engine instance metadata`
+
+.. list-table::
+    :header-rows: 1
+
+    * - :strong:`GCP name`
+      - :strong:`Custom property`
+      - :strong:`Description`
+
+    * - ``scheduling.automaticRestart``
+      - ``gcp_auto_restart``
+      - Whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user)
+
+    * - ``scheduling.onHostMaintenance``
+      - ``gcp_behavior_on_maintenance``
+      - Maintenance behavior for the instance
+
+    * - ``scheduling.preemptible``
+      - ``gcp_preemptibility``
+      - True if the instance is preemptible; otherwise false
+
+    * - ``cpuPlatform``
+      - ``gcp_cpu_platform``
+      - CPU platform used by this instance
+
+    * - ``CPU``
+      - ``gcp_cpus``
+      - Number of virtual CPUs that are available to the instance
+
+    * - ``creationTimestamp``
+      - ``gcp_creation_time``
+      - Time when the instance was created,  (e.g. ``Thu Oct 19 18:16:25 UTC 2017``)
+
+    * - ``description``
+      - ``gcp_description``
+      - Description of this instance
+
+    * - ``disks[].licenses[]`` \*
+      - ``gcp_image_license``
+      - License corresponding to the disks used by the instance
+
+    * - ``canIpForward``
+      - ``gcp_ip_forward``
+      - Whether to allow this instance to send and receive packets with non-matching destination or source IPs
+
+    * - ``machineType``
+      - ``gcp_machine_type``
+      - Type of gcp machine to which this instance corresponds
+
+    * - ``memory``
+      - ``gcp_memory``
+      - Amount of physical memory available to the instance, defined in MB
+
+    * - ``metadata`` \*\*
+      - ``gcp_metadata_<metadata-key>``
+      - Custom metadata key for the instance (generated based on includelisted properties specified when :ref:`completing the integration in Splunk Infrastructure Monitoringx<gcp-three>`)
+
+    * - ``status``
+      - ``gcp_status``
+      - String containing instance status and status code, for example ``Code=2, Status=RUNNING``. This property is now deprecated, and won't contain new statuses introduced by GCP such as ``REPAIRING`` or ``SUSPENDING``. Use ``gcp_instance_status`` instead.
+
+    * - ``status``
+      - ``gcp_instance_status``
+      - Status of the instance, for example ``RUNNING`` or ``STAGING``.
+
+    * - ``self_link``
+      - ``gcp_self_link``
+      - Instance self link as reported by GCP
+
+    * - ``standard_id``
+      - ``gcp_standard_id``
+      - Instance ID in a format enforced by Splunk Observability Cloud, for example ``https://compute.googleapis.com/compute/v1/projects/testProject/zones/us-central1-a/instances/testInstance``. This property is now deprecated. Use ``gcp_self_link`` instead.
+
+\* There is not a one-to-one mapping between the gcp_image_license property to one in GCP because the property value is derived from the licenses of the disks associated with the compute instance.
+
+\*\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:val1``, ``key2:val2``] as the metadata property, we will have two properties: ``gcp_metadata_key1`` and ``gcp_metadata_key2``.)
+
+For detailed information on properties, see Google Cloud documentation.
+
+Cloud Spanner instance
+++++++++++++++++++++++++++++++++
+
+Spanner instances currently sync the following properties:
+
+.. list-table::
+    :header-rows: 1
+
+    * - :strong:`GCP name`
+      - :strong:`Custom property`
+      - :strong:`Description`
+
+    * - ``state``
+      - ``gcp_state``
+      - state of the spanner instance (e.g. ``CREATING``, ``READY``)
+
+    * - Labels \*
+      - ``gcp_label_<name-of-label>`` (if user has labels)
+      - user |hyph| specified labels
+
+\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
+
+Cloud Storage Bucket
++++++++++++++++++++++++++++++++++++++
+
+Storage buckets currently sync the following properties:
+
+.. list-table::
+    :header-rows: 1
+
+    * -   :strong:`GCP name`
+      -   :strong:`Custom property`
+      -   :strong:`Description`
+
+    * -   ``creationTimestamp``
+      -   ``gcp_creation_time``
+      -   time at which the bucket was created,  (e.g. ``Thu Oct 19 18:16:25 UTC 2017``)
+
+    * -  Labels \*
+      -   ``gcp_label_<name-of-label>`` (if user has labels)
+      -   user |hyph| specified labels
+
+    * -   Storage class
+      -   ``gcp_storage_class``
+      -   bucket's storage class, such as ``coldline``
+
+\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
+

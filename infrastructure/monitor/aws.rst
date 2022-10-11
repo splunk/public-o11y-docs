@@ -18,9 +18,9 @@ Infrastructure Monitoring imports data, logs, and metadata, including tags and o
 
 To monitor AWS resources:
 
-1. Set up the Infrastructure Monitoring AWS integration. To learn more see AWS :ref:`get-started-aws`.
+1. Set up the Infrastructure Monitoring AWS integration. To learn more see :new-page:`get-started-aws`.
 2. Next, check how to :ref:`monitor AWS with Infrastructure Monitoring <aws-infra-monitor>`.
-3. Refer to the AWS official documentation for a list of the available AWS metrics and other data, or check :ref:`the metadatada we provide <aws-infra-metadata>`.
+3. Refer to the AWS official documentation for a list of the available AWS metrics and other data, or check :ref:`the metadatada Observablity Cloud provides <aws-infra-metadata>`.
 
 .. _aws-infra-otel:
 
