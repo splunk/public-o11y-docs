@@ -31,7 +31,7 @@ This topic introduces important terminology and concepts in Splunk RUM for Brows
     * - :ref:`example-session`
       - A session that contains a certain behavior you want to analyze.
     * - :ref:`rum-app-launch`
-      - A crash is when a user encounters an error and has to exit the app.
+      - A crash happens when a user encounters an error and has to exit the app.
     * - :ref:`rum-web-vitals`
       - Web Vitals are made up of three metrics that measure user experience:
             * LCP (largest contentful paint)
@@ -170,7 +170,7 @@ A tag is a field name that is an attribute of your span that you can use to filt
 
 RUM metrics for mobile applications
 ====================================
-Splunk RUM for Mobile uses a set of metrics to measure the health of your application, such as app startup times, error rates, and crash rates. For more, see :ref:`rum-mobile-metric` in the Splunk RUM metrics reference.
+Splunk RUM for Mobile uses a set of metrics to measure the health of your application, such as app startup times, error rates, and crash rates. For more, see :ref:`rum-metrics` in the Splunk RUM metrics reference.
 
 
 App start
@@ -185,7 +185,7 @@ In Splunk RUM for Mobile, app start is when the app is responsive and the user c
 App crashes and errors
 -----------------------
 
-A crash is when a user encounters an error and has to exit the app. App errors are all other types of errors that occur but don't result in the user having to exit the app. For example ANR (application not responding).
+A crash happens when a user encounters an error and has to exit the app. App errors are all other types of errors that occur but don't result in the user having to exit the app. For example ANR (application not responding).
 
 
 Presentation transition
@@ -197,7 +197,7 @@ Presentation transitions are screen transitions and screen changes, such as when
 
 RUM metrics for browser applications
 ====================================
-Splunk RUM for Browser uses these metrics to measure the health of your application. For more, see :ref:`rum-browser-metric` in the Splunk RUM metrics reference.
+Splunk RUM for Browser uses these metrics to measure the health of your application. For more, see :ref:`rum-metrics` in the Splunk RUM metrics reference.
 
 .. _rum-web-vitals:
 

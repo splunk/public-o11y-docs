@@ -8,8 +8,7 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
     :description: Install and configure the Splunk Distribution of OpenTelemetry Collector to receive, process, and export metric, trace, and log data for Splunk Observability Cloud. Splunk Observability Cloud offers a guided setup to install the Splunk Distribution of OpenTelemetry Collector. This guide provides information to install the Splunk Distribution of OpenTelemetry Collector without using the guided setup.
 
 .. toctree::
-    :maxdepth: 4
-    :titlesonly:
+    :maxdepth: 5
     :hidden:
 
     smart-agent-migration-to-otel-collector.rst
@@ -18,7 +17,7 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
     configure-the-collector.rst
     use-the-collector.rst
     troubleshooting.rst
-    Resources <resources.rst>
+    resources.rst
 
 The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
 
@@ -36,8 +35,12 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
    Splunk only provides best-effort support for the upstream OpenTelemetry Collector.
 
 
-Use the Collector
-===========================
+.. raw:: html
+
+  <embed>
+    <h2>Use the Collector</h2>
+  </embed>
+
 
 To use the Collector:
 
@@ -54,12 +57,18 @@ See also the following resources for the Collector:
 
 For a complete list of resources, refer to :ref:`opentelemetry-resources`. 
 
+
+.. raw:: html
+
+  <embed>
+    <h2>Guided install for the Collector</h2>
+  </embed>
+
+
+
 .. _collector-guided-install:
 
-Guided install for the Collector
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-:new-page:`Splunk Observability Cloud <https://docs.splunk.com/Observability/get-started/welcome.html>` offers a guided setup to install the Collector:
+Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
 #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.

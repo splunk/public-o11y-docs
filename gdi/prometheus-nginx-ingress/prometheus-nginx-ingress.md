@@ -43,7 +43,7 @@ To complete the receiver activation, you must also include the receiver in a `me
 service:
   pipelines:
     metrics:
-      receivers: [smartagent/prometheus-nginx-ingress]
+      receivers: [smartagent/prometheus/nginx-ingress]
 ```
 
 ### Ingress NGINX configuration
