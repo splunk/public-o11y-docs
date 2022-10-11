@@ -35,8 +35,7 @@ Kai decides to use metric pipeline management to control how Observability Cloud
 #. Skyler changes :guilabel:`Keep data` to :guilabel:`Drop data`.
 #. Skyler verifies the new metric volume after dropping data and saves the rules.
 
-
-Conclusion
+Summary
 ===============
 
 By combining aggregation and data dropping rules, Kai and Skyler have successfully summarized a high cardinality metric, creating a more focused monitoring experience for their team while minimizing storage costs for Buttercup Games.
