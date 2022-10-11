@@ -88,10 +88,12 @@ If you know that a specific span tag for a service may contain sensitive informa
 
 For instance, imagine that Moira has manually instrumented a checkout service in Splunk APM and forgot to block the tags that use the span tags ``user.email`` and ``credit.card.number`` in her instrumentation of the service. The following example API call would block just those two span tags from all operations (“*”) in ``checkoutService``.
 
+.. include:: /_includes/realm-note.rst
+
 Request: 
 ::
 
-    POST api-url/v2/apm/visibility-filter
+    POST https://api.<SPLUNK_REALM>.signalfx.com/v2/apm/visibility-filter
 
 
 Request JSON: 
@@ -116,11 +118,12 @@ If you know that a specific service might be the source of leaked information, y
 
 For example, imagine that a new service, ``loginService``, has been instrumented in Moira’s Splunk APM instance. This service didn’t know about the latest customer protection regulations, and started leaking customer information. Moira doesn’t know which tags are likely to contain customer information, but she does know the list of tags that she needs for her analysis, which include ``sf_environment``, ``sf_service``, and ``sf_endpoint``. She knows these tags are not associated with sensitive information. To prevent sensitive information from appearing in Splunk APM, Moira could use the following API call to block all spans from the service, except for those that she knows she needs.
 
+.. include:: /_includes/realm-note.rst
 
 Request: 
 ::
 
-   POST api-url/v2/apm/visibility-filter
+   POST https://api.<SPLUNK_REALM>.signalfx.com/v2/apm/visibility-filter
 
 
 Request JSON: 
@@ -146,11 +149,12 @@ If you know that sensitive information might be leaked from instances of a parti
 
 For example, imagine that Moira’s ``checkoutService`` recently introduced a new operation, ``readCartDetails``, which has the potential to leak customer information. She could make the following API call to hide custom span tags associated with that operation only in the given service. She can also specify the start and end time of the possible leak, to perform the blocking only during the period between the release of the operation and the service’s scheduled deployment of a security patch. This granular data hiding allows Moira to be very specific about what she wants to hide, so as to minimally impact her team’s monitoring and troubleshooting experience. 
 
+.. include:: /_includes/realm-note.rst
 
 Request: 
 ::
 
-   POST api-url/v2/apm/visibility-filter
+   POST https://api.<SPLUNK_REALM>.signalfx.com/v2/apm/visibility-filter
 
 
 Request JSON: 

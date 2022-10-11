@@ -41,4 +41,4 @@ The endpoints exposed depends on which mode the Collector is configured in, as d
    * - ``http(s)://0.0.0.0:9411/api/[v1|v2]/spans``
      - Zipkin JSON receiver, can be set to proto
    * - ``http(s)://0.0.0.0:9943/v2/trace``
-     - Splunk APM receiver
+     - Metrics and logs

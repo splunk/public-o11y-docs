@@ -32,4 +32,4 @@ For more information, see :ref:`splunk-ruby-otel-dist`.
 
 To migrate to the Splunk Distribution of OpenTelemetry Ruby, see :ref:`migrate-signalfx-ruby-agent-to-otel`.
 
-.. note:: The Splunk Distribution of OpenTelemetry Ruby is a beta feature subject to future changes. To use the previous SignalFX Tracing Library for Ruby, see https://github.com/signalfx/signalfx-ruby-tracing.
+.. note:: The SignalFx Ruby tracing library is deprecated and will reach End of Support on September 30th, 2023. To migrate to the Splunk Distribution of OpenTelemetry Java, see :ref:`migrate-signalfx-java-agent-to-otel`.
