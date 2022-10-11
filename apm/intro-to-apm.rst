@@ -7,18 +7,16 @@ Introduction to Splunk APM
 .. meta::
   :description: Get started monitoring applications with Splunk Observability Cloud.
 
-
-=========================================
 What is Splunk APM?
 =========================================
+
 Collect :ref:`traces and spans<apm-traces-spans>` to monitor your distributed applications with Splunk Application Performance Monitoring (APM). A trace is a collection of actions, or spans, that occur to complete a transaction. Splunk APM collects and analyzes every span and trace from each of the services that you have connected to Splunk Observability Cloud to give you full-fidelity access to all of your application data.
 
 | For an interactive walkthrough of Splunk APM, see :new-page:`APM Scenarios <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-walkthrough&version=current>`.
 
-
-======================================
 Get your data into Splunk APM
 ======================================
+
 To start using APM, see :ref:`Set up Splunk APM <apm>`.
 
 If you have already instrumented your applications but are not seeing your data coming into APM as you expect, see :ref:`Troubleshoot your instrumentation <instr-troubleshooting>`.
@@ -29,7 +27,6 @@ To see an example of using Splunk Observability Cloud components together, see :
 
 .. _wcidw-apm:
 
-=========================================
 What can I do with Splunk APM?
 =========================================
 
@@ -45,11 +42,11 @@ The following table provides an overview of what you can do with Splunk APM:
 
   * -  Start to gain insights from your data in minutes using default landing page and service dashboards.
     - Landing page
-    - :ref:`Understand the landing page<apm-landing-page>`
+    - :ref:`Understand the landing page <apm-landing-page>`
 
   * - View all of your services and their dependency relationships in the service map.
     - Service map
-    - :ref:`Explore the service map<apm-service-map>`
+    - :ref:`Explore the service map <apm-service-map>`
 
   * - Get a top-down view of your services that provides the request and error rate or latency by each of your indexed span tags in Tag Spotlight. For instance, you can see at a glance how your services are performing by ``endpoint``, ``environment``, or ``span.kind``. You can filter this view by environments, services, Business Workflows, or span tags for a finer-grained look.
     - Tag Spotlight

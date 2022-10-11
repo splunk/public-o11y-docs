@@ -92,6 +92,63 @@ By default, the Android RUM agent adds the following attributes to all spans:
      - String
      - Details of the connection. For example, the type of ``cell`` connection, like ``gprs``, ``edge``, or ``umts``.
 
+
+.. _rum-android-metrics:
+
+Metrics 
+=============================================
+The following tables list all of the metrics available in Splunk RUM for Android. All errors in Splunk RUM have the dimension ``sf_error=true``. Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+
+For more information on app startup metrics as defined by Android, see :new-page:`App startup time <https://developer.android.com/topic/performance/vitals/launch-time>` in the Android Developers documentation. 
+
+
+.. list-table:: 
+   :widths: 20 15 65
+   :header-rows: 1
+
+   * - :strong:`Metric name`
+     - :strong:`UI name` 
+     - :strong:`Description`
+   * - ``rum.workflow.count``
+     - Custom Event Count
+     - The total number of spans with the selected custom event in the given time range. 
+   * - ``rum.workflow.time.ns.p75``
+     - Custom Event Duration
+     - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
+   * - ``rum.crash.count``
+     - Mobile crash
+     - Total number of crashes in the given time range. 
+   * - ``rum.app_error.count``
+     - App error
+     - Total number of crashes in the given time range. 
+   * - ``rum.cold_start.time.ns.p75``
+     - Cold start time
+     - The p75 time in nanoseconds of cold starts in the given time range. 
+   * - ``rum.cold_start.count`` 
+     - Cold start count 
+     - Total number of cold starts in the given time range. 
+   * - ``rum.warm_start.count``
+     - Warm start count
+     - Total number of warm starts in the given time range. 
+   * - ``rum.warm_start.time.ns.p75``
+     - Warm start time
+     - The p75 time in nanoseconds for a warm start. 
+   * - ``rum.hot_start.count``
+     - Hot start count 
+     - Total number of hot starts in the given time range. 
+   * - ``rum.hot_start.time.ns.p75``
+     - Hot start time
+     - The p75 time in nanoseconds for a hot start. 
+   * - ``rum.resource_request.count``
+     - Network or back-end requests/errors
+     - The total number of network requests in a given time range. 
+   * - ``rum.resource_request.time.ns.p75``
+     - Network or back-end latency
+     - The p75 time in nanoseconds for back-end latency in the given time range. 
+
+
+
+
 Resource attributes
 ==============================================
 
@@ -362,6 +419,10 @@ App start monitoring
 ------------------------------------
 
 App start monitoring feature generates spans whenever the app performs a cold, warm, or hot start.
+
+- Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
+- Hot starts happen when the system brings an app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
+- Warm starts happen when some of the operations that take place in a cold start are still happening. Warm starts are faster than cold starts, but slower than hot starts.
 
 App start monitoring produces spans with the name ``AppStart`` and the following attributes:
 

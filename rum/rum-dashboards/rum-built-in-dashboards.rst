@@ -1,25 +1,16 @@
-.. _rum-dashboards:
+.. _rum-built-in-dashboards:
 
-******************************************************************************
-Splunk RUM dashboards 
-******************************************************************************
+************************************************************
+Splunk RUM built-in dashboards 
+************************************************************
 
-
-Splunk RUM offers the ability to create dashboards for both web and mobile metrics. Splunk RUM also has two built-in dashboards: one for browser and one for mobile. You can link to charts and dashboards from the alerts and detectors you create in Splunk RUM. To see a list of the metrics available in Splunk RUM, see :ref:`RUM-metrics`.
-
-Built-in dashboards
-========================
 Built-in dashboards offer charts, metrics, and aggregations about your applications. 
 
 To access the built-in dashboards: 
 
-#. Log in to Splunk Observability Cloud. 
+#. Select :guilabel:`Dashboards` >  :guilabel:`RUM Applications` > then select either Mobile App Health or Browser App Health.
 
-#. Select RUM. 
-
-#. In the Source menu, select Mobile or Browser. 
-
-#. Select the settings symbol, then :guilabel:`View dashboard`. 
+* You can also navigate to the dashboards from RUM with the :guilabel:`...` settings button. 
 
 #. To switch between the Mobile versus Browser view, select:
 
@@ -54,7 +45,6 @@ Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Mo
 ..  image:: /_images/rum/mobile-rum-view-dashboard.png
     :width: 70%
     :alt: This image shows how to open a chart in RUM so that you can troubleshoot in greater detail. 
-
 
 
 Dashboards for alerts and detectors
