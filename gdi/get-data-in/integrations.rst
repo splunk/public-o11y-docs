@@ -15,9 +15,14 @@ This page provides the list of integrations supported by Splunk Observability Cl
 Amazon Web Services
 ----------------------------------
 
-* For details about how to get data from these Amazon Web Services into Observability Cloud, see :ref:`get-started-aws`.
-* Learn about :ref:`our AWS Infrastructure Monitoring options <infrastructure-aws>`. You'll find instructions on how to import AWS metrics and metadata, or AWS tag and log information using namespaces and filters. 
-* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata we provide <aws-infra-metadata>`.
+To learn about AWS and Splunk Observability Cloud, read the following: 
+
+* :ref:`get-started-aws`
+* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata Observability Cloud provides <aws-infra-metadata>`
+* :ref:`aws-logs`
+* :ref:`infrastructure-aws`
+
+The following AWS services send data to Infrastructure Monitoring:
 
 .. list-table::
   :header-rows: 1
@@ -667,10 +672,12 @@ The following applies to the collected logs and metadata listed in the table:
 Google Cloud Platform services
 -----------------------------------------------
 
-* For details about how to get metrics from these Google Cloud Platform (GCP) services into Splunk Observability Cloud, see :ref:`get-started-gcp`.
-* For details about the metrics provided by a GCP integration, see :ref:`gcp-metrics`.
-* To send logs from GCP to Observability Cloud, follow the instructions in :ref:`gcp-logs`.
-* Learn about :ref:`our GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
+To learn about GCP and Splunk Observability Cloud, read the following: 
+
+* :ref:`get-started-gcp`
+* :ref:`gcp-metrics`
+* :ref:`gcp-logs`
+* :ref:`infrastructure-gcp`
 
 The following GCP services send metrics to Infrastructure Monitoring:
 
@@ -782,10 +789,12 @@ The following GCP services send metrics to Infrastructure Monitoring:
 Microsoft Azure services
 ----------------------------------
 
-* For details about how to get metrics from these Microsoft Azure services into Splunk Observability Cloud, see :ref:`get-started-azure`.
-* For details about the metrics provided by a GCP integration, see :ref:`azure-metrics`.
-* To send logs from GCP to Observability Cloud, follow the instructions in :ref:`ingest-azure-log-data`.
-* Learn about :ref:`our Azure Infrastructure Monitoring options <infrastructure-azure>`. 
+To learn about Azure and Splunk Observability Cloud, read the following: 
+
+* :ref:`get-started-azure`
+* :ref:`azure-metrics`
+* :ref:`ingest-azure-log-data`
+* :ref:`infrastructure-azure`
 
 The following Azure services send metrics to Infrastructure Monitoring:
 
