@@ -861,7 +861,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Generate alerts in Incident Intelligence <incident-intelligence/generate-alerts>
+   Generate alerts in Incident Intelligence <incident-intelligence/generate-alerts/generate-alerts>
 
 .. toctree::
    :maxdepth:   3

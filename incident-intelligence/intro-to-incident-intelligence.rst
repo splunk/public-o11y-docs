@@ -72,20 +72,9 @@ The following table provides an overview of what you can do with Incident Intell
 How Incident Intelligence works 
 ===================================
 
-Incident Intelligence generates alerts and groups alerts to create incidents. Alerts then pass through a series of data preparations such as filters and enrichments. Alerts are then grouped based on detectors that you configure. An incident is automatically triggered and escalated to the corresponding team if an alert or set of alerts meets the criteria for a critical incident. 
+Incident Intelligence generates alerts and groups alerts to create incidents. Alerts then pass through a series of data preparations such as filters and enrichments. Alerts are then grouped based on the grouping rules that you configure. An incident is automatically triggered and escalated to the corresponding team if an alert or set of alerts meets the criteria for a critical incident. 
 
 Required Incident Intelligence prerequisites and permissions
 ---------------------------------------------------------------------
 - Before you start, sign the pre-release terms and have Incident Intelligence enabled in your Observability Cloud account. For more information, contact your sales representative.
 - You must be an Observability Cloud administrator to configure and set up Incident Intelligence.
-
-.. _alert-sources-incident-intelligence:
-
-Types of alert sources 
----------------------------
-Splunk Incident Intelligence generates alerts from the following Observability Cloud sources. You have to define a detector for these sources and route that detector to a service in Incident Intelligence for alerts to be generated in Incident Intelligence. 
-
-- Splunk APM
-- Splunk Infrastructure Monitoring
-
- See :ref:`get-started-detectoralert` for more information about configuring detectors. See :ref:`set-up-incident-intelligence` for steps to configure services. 
