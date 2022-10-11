@@ -19,6 +19,8 @@ By default, the Collector exposes several endpoints. Endpoints are either expose
 
 The endpoints exposed depends on which mode the Collector is configured in, as described in the following table. You can disable components, especially receivers, if they are not required for an environment.
 
+For more information, see the :new-page:`agent <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>`` and :new-page:`gateway <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` configuration files.
+
 .. list-table::
   :widths: 50 50
   :width: 100
@@ -46,7 +48,7 @@ The endpoints exposed depends on which mode the Collector is configured in, as d
     - Splunk forwarder receiver
   * - ``http(s)://0.0.0.0:9411/api/[v1|v2]/spans``
     - Zipkin JSON receiver, can be set to proto
-  * - ``http(s)://0.0.0.0:9943/v2/trace``
+  * - ``http(s)://0.0.0.0:9943``
     - Metrics and logs
 
 
