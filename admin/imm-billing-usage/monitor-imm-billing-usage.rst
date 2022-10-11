@@ -145,6 +145,16 @@ To view usage reports available for download:
 
 .. tip:: If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics that Infrastructure Monitoring monitors for you, older reports on the :guilabel:`Billed Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
 
+.. _summary-by-hour:
+
+Hourly usage detail report
+==============================
+
+Available on the :strong:`Usage Breakdown`` tab, the hourly usage report shows the information on MTS associated with data points sent from hosts or containers in a given hour. This report contains the MTS category keys and values, along with associated cloud provider metadata. This lets you see all of the categories that are in use within a given hour period.
+
+
+
+
 .. _summary-by-month:
 
 Monthly usage report
