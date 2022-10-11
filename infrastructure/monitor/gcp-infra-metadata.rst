@@ -5,24 +5,60 @@ Google Cloud Platform metadata
 **********************************
 
 .. meta::
-  :description: Learn how to monitor GCP infrastructure resources with Splunk Observability Cloud.
+  :description: GCP infrastructure metadata in Splunk Observability Cloud.
 
-.. note::
-  To start monitoring Google Cloud Platform resources, you must first connect to GCP, and log in with your administrator credentials. See :ref:`get-started-gcp` for details.
+The GCP integration queries the GCP API for metadata about the monitored resources. You can filter and group metrics by this metadata in :ref:`charts.rst`` and in the Infrastructure Navigator.
 
-Monitor Google Cloud Platform (GCP) service metrics with Splunk Observability Cloud. Observability Cloud provides infrastructure monitoring features using Google Cloud Operations. See the Google Cloud documentation for more information.
+-  Metadata that are common to all services within a project (project-level metadata) are put on properties of ``project_id`` dimension.
+-  Metadata that are service-specific (service-level metadata) are put on properties of the ``gcp_id`` dimension.
 
+.. _metadata-project-level:
+
+Project-level metadata
+=============================================================================
+
+Here's the metadata that is currently synced at a project level:
+
+.. list-table::
+    :header-rows: 1
+
+    * - :strong:`GCP name`
+      - :strong:`Custom property`
+      - :strong:`Description`
+
+    * - ``creationTimestamp``
+      - ``gcp_project_creation_time``
+      - time project was created (e.g. ``Thu Oct 19 18:16:25 UTC 2017``)
+
+    * - Labels \*
+      - ``gcp_project_label_<name-of-label>`` (if user has labels)
+      - all project-wide labels except for ``signalfx-id``
+
+    * - ``name``
+      - ``gcp_project_name``
+      - human readable project name
+
+    * - ``project_number``
+      - ``gcp_project_number``
+      - project_number given by GCP
+
+    * - ``status``
+      - ``gcp_project_status``
+      - project status (e.g. ``ACTIVE``, ``DELETE_IN_PROGRESS``, ``DELETE_REQUESTED``)
+
+\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.)
+
+.. _metadata-service-level:
 
 Service-level metadata
-------------------------------
+=============================================================================
 
-Here is the metadata that is synced at a service level for the services listed below.
-
+Here's the metadata that is synced at a service level for the services listed below.
 
 .. _compute-engine-properties:
 
 Compute Engine instance
-++++++++++++++++++++++++++++
+------------------------------
 
 For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring gets a subset of metadata about the instance, as well as custom metadata specified by the user at an instance level.
 
@@ -109,7 +145,7 @@ For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring ge
 For detailed information on properties, see Google Cloud documentation.
 
 Cloud Spanner instance
-++++++++++++++++++++++++++++++++
+------------------------------
 
 Spanner instances currently sync the following properties:
 
@@ -131,7 +167,7 @@ Spanner instances currently sync the following properties:
 \* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
 
 Cloud Storage Bucket
-+++++++++++++++++++++++++++++++++++++
+------------------------------
 
 Storage buckets currently sync the following properties:
 
