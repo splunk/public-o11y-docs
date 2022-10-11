@@ -20,6 +20,14 @@ What is metric cardinality?
 
 Metric cardinality is the number of unique metric time series produced by a combination of metric name and its associated dimensions. Therefore, a metric has high cardinality when it has a high number of dimension keys, and a high number of possible unique values for those dimension keys.
 
+For example, you send in data for a metric ``trans.latency``.
+
+* If ``trans.latency`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then ``trans.latency`` generates 3 metric time series (MTSs).
+* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then ``trans.latency`` generates 3 (endpoints) * 3 (regions) = 9 MTSs.
+
+Even though ``trans.latency`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
+
+
 How does metric pipeline management work?
 ========================================================
 
