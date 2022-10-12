@@ -931,6 +931,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    View dashboards and alerts <mobile/use-mobile>
 
 .. toctree::
+   :maxdepth:   3
+
+   mobile/notification-preferences-mobile
+
+.. toctree::
    :caption: ADMINISTER OBSERVABILITY CLOUD
    :maxdepth:   3
 
