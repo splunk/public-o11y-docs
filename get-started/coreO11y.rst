@@ -1,8 +1,8 @@
 .. _get-started-core-to-o11y:
 
-******************************************************
-Expand your Splunk platform into observability
-******************************************************
+****************************************************************
+Expand the Splunk platform into Splunk Observability Cloud
+****************************************************************
 
 .. meta::
     :description: Learn to use your Splunk core platform logs in the observability space.

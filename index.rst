@@ -298,6 +298,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Expand the Splunk platform into observability <get-started/coreO11y>
+
+.. toctree::
+   :maxdepth:   3
+
    Use case: Monitor infrastructure and apps using the Collector <get-started/use-case-collector>
 
 .. toctree::
