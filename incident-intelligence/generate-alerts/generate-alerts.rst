@@ -23,5 +23,5 @@ See :ref:`get-started-detectoralert` for more information about configuring dete
 
 :strong:`Available ingest endpoints for cloud alerts`
 
-- Cloudwatch, see :ref:`ingest-cloudwatch-alerts`
-- Prometheus, see :ref:`ingest-prometheus-alerts`
+- Amazon CloudWatch, see :ref:`ingest-cloudwatch-alerts`.
+- Prometheus, see :ref:`ingest-prometheus-alerts`.

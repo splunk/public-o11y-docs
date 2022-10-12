@@ -1,4 +1,4 @@
-.. _ingest-cloudwatch:
+.. _ingest-cloudwatch-alerts:
 
-Ingest Cloudwatch
+Ingest Amazon CloudWatch alerts
 ************************************************************************

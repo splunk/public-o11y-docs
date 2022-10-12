@@ -851,7 +851,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: INCIDENT INTELLIGENCE
    :maxdepth:   3
 
-   Introduction to Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
+   Introduction to Splunk Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
 
 .. toctree::
    :maxdepth:   3
@@ -877,11 +877,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    incident-intelligence/respond-manage-incidents/respond-manage-incidents
-
-.. toctree::
-   :maxdepth:   3
-
-   incident-intelligence/notification-preferences
 
 .. toctree::
    :maxdepth:   3
