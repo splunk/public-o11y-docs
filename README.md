@@ -257,4 +257,4 @@ Copy a link to your merge request or MR and paste it in the #o11y-docs channel i
 
 ## Note on developer docs
 
-For information on the Observability Cloud developer documentation, see [How to author Splunk Observability Cloud developer documentation](https://signalfuse.atlassian.net/wiki/spaces/DOCS/pages/130876682/How+to+author+for+the+Splunk+Observability+Cloud+developer+documentation)..
+For information on the Observability Cloud developer documentation, see [How to author Splunk Observability Cloud developer documentation](https://signalfuse.atlassian.net/wiki/spaces/DOCS/pages/130876682/How+to+author+for+the+Splunk+Observability+Cloud+developer+documentation).
