@@ -9,19 +9,14 @@ Expand the Splunk platform into Splunk Observability Cloud
 
 Testing out the collapse module.
 
-.. collapse:: Details
+.. collapse:: What are my SLIs?
 
-    Something small enough to escape casual notice.
+    You can see your SLI's in the service map and on built-in dashboards.
+    ---ADD links---
 
 
-.. collapse:: A Different Label
-    :class: custom-summary
-    :name: summary0
-
-    Something else that might escape notice.
-
-.. collapse:: A long code block
+.. collapse:: Example of a long code block
 
     .. code-block:: python
 
-        print("Not really")
+        print("Here is a long code block in Python.")
