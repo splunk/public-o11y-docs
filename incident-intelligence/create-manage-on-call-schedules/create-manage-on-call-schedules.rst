@@ -40,3 +40,11 @@ After you save your shift, review the schedule details in the :guilabel:`Schedul
 
 Now that you've created an on-call schedule, add it to the incident workflow for your web application service. See :ref:`configure-incident-workflows`.
 
+.. raw:: html
+   
+   <embed>
+   <h2>See also
+   </embed>
+
+- :ref:`sync-on-call-schedule`
+- :ref:`whos-on-call`

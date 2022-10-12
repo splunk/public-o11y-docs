@@ -6,7 +6,7 @@ Respond to and manage incidents
 .. meta::
    :description: After you configure your services, you can respond to incidents incidents as they are triggered.
 
-Incidents are automatically triggered after you configure your services to route and group alerts and add an incident workflow to your service. To view trigger incidents, go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered.
+Incidents are automatically triggered after you configure your services to route and group alerts and add an incident workflow to your service. To view triggered incidents, go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered.
 
 You can manually create an incident for testing purposes using the :guilabel:`Create incident` button on the :guilabel:`Incidents` tab.
 
