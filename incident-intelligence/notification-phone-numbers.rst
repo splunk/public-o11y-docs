@@ -1,4 +1,4 @@
-.. _notification-phone-numbers:
+.. _sms-phone-numbers:
 
-Notification phone numbers
+SMS notification phone numbers
 **************************************************
