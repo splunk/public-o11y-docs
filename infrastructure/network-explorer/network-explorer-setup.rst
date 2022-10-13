@@ -79,6 +79,7 @@ The following table shows required parameters for this installation:
        * - ``agent.enabled``
          - Set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in Agent mode on each Kubernetes node.
 
+
 Example
 --------------------------
 
@@ -102,9 +103,16 @@ Follow these steps to install the Splunk Distribution of OpenTelemetry Collector
 
         helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,gateway.enabled=true,agent.enabled=false" splunk-otel-collector-chart/splunk-otel-collector
 
-#. (Optional) Each Kubernetes has a Splunk Distribution of OpenTelemetry Collector, so your resource requirements vary depending on the number of Kubernetes nodes you have.
+For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.     
+
+.. _resize-otel-installation:
+
+Change the resource footprint of Splunk Distribution of OpenTelemetry Collector
+-------------------------------------------------------------------------------------------------------------------
+
+Each Kubernetes has a Splunk Distribution of OpenTelemetry Collector, so you might want to adjust your resources depending on the number of Kubernetes nodes you have.
     
-    If you want to change the resource footprint of Splunk Distribution of OpenTelemetry Collector, you can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml#L972>`, or specify different values during installation.
+    You can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml#L972>`, or specify different values during installation.
     
     These are the default resource configurations.
 
@@ -117,54 +125,64 @@ Follow these steps to install the Splunk Distribution of OpenTelemetry Collector
 
     You can use the following approximations to determine your resource needs.
 
-    * For up to 500 nodes/5,000 data points per second. 
+      * For up to 500 nodes/5,000 data points per second. 
 
-        .. tabs::
+          .. tabs::
 
-          .. code-tab:: yaml Update the value file
+            .. code-tab:: yaml Update the value file
 
-            resources:
-              limits:
-                cpu: 500m
-                memory: 1Gi
+              resources:
+                limits:
+                  cpu: 500m
+                  memory: 1Gi
 
-          .. code-tab:: bash Pass arguments during installation
+            .. code-tab:: bash Pass arguments during installation
 
-            helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
+              helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
 
-    * For up to 1,000 nodes/10,000 data points per second. 
+      * For up to 1,000 nodes/10,000 data points per second. 
 
-        .. tabs::
+          .. tabs::
 
-          .. code-tab:: yaml Update the value file
+            .. code-tab:: yaml Update the value file
 
-            resources:
-              limits:
-                cpu: 1
-                memory: 2Gi
+              resources:
+                limits:
+                  cpu: 1
+                  memory: 2Gi
 
-          .. code-tab:: bash Pass arguments during installation
+            .. code-tab:: bash Pass arguments during installation
 
-            helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=1,gateway.resources.limits.memory=2Gi" splunk-otel-collector-chart/splunk-otel-collector
+              helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=1,gateway.resources.limits.memory=2Gi" splunk-otel-collector-chart/splunk-otel-collector
   
-    * For up to 1,000 nodes/20,000 data points per second. 
+      * For up to 1,000 nodes/20,000 data points per second. 
 
-        .. tabs::
+          .. tabs::
 
-          .. code-tab:: yaml Update the value file
+            .. code-tab:: yaml Update the value file
 
-            resources:
-              limits:
-                cpu: 2
-                memory: 4Gi
+              resources:
+                limits:
+                  cpu: 2
+                  memory: 4Gi
 
-          .. code-tab:: bash Pass arguments during installation
+            .. code-tab:: bash Pass arguments during installation
 
-            helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=2,gateway.resources.limits.memory=4Gi" splunk-otel-collector-chart/splunk-otel-collector
+              helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=2,gateway.resources.limits.memory=4Gi" splunk-otel-collector-chart/splunk-otel-collector
+  
+    Additionally, you can change the following parameters during installation to reduce excess resources.
 
-.. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
+      .. list-table::
+        :header-rows: 1
+        :widths: 50 50
 
-For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.
+        * - :strong:`Parameter`
+          - :strong:`Description`
+        * - ``clusterReceiver.enabled``
+          - Set this to ``false`` since Network Explorer doesn't use ``splunk-otel-collector-k8s-cluster-receiver``.
+        * - ``gateway.replicaCount``
+          - By default, the value is ``3``. Set this to ``1`` because Network Explorer doesn't use multiple cores.
+
 
 .. _install-network-explorer:
 
@@ -261,19 +279,17 @@ Follow these steps to install Network Explorer:
         sudo yum install -y kernel-devel-$(uname -r)
 
 
-.. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
-
 For additional configurations, see :new-page:`Network Explorer for Kubernetes <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/README.md>` on GitHub.
 
 .. _resize-installation:
 
-Step 3 (Optional): Resize your installation with additional configurations
-======================================================================================
+Resize your Network Explorer installation
+--------------------------------------------------
 
 Depending on the number of Kubernetes nodes you have, your resource needs might vary. You can make the following adjustments to your installation.
 
 Change the resource footprint of the reducer
-------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the number of CPU cores allocated to it.
  
@@ -300,14 +316,14 @@ The following example shows you how to increase the number of CPU cores.
 .. _customize-network-explorer-metrics:
 
 Customize network telemetry generated by Network Explorer
-------------------------------------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 If you want to collect fewer or more network telemetry metrics, you can update the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L92>`.
 
 The following sections show you how to disable or enable different metrics.
 
 Enable all metrics, including metrics turned off by default
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+***************************************************************************
 
     .. code-block:: yaml 
 
@@ -315,7 +331,7 @@ Enable all metrics, including metrics turned off by default
         - none
 
 Disable entire metric categories
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+***************************************************************************
 
     .. code-block:: yaml 
 
@@ -327,7 +343,7 @@ Disable entire metric categories
 
 
 Disable an individual TCP metric
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+***************************************************************************
     
     .. code-block:: yaml 
 
@@ -344,7 +360,7 @@ Disable an individual TCP metric
 
 
 Disable an individual UDP metric
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+***************************************************************************
     
     .. code-block:: yaml 
 
@@ -355,7 +371,7 @@ Disable an individual UDP metric
         - udp.drops
 
 Disable an individual DNS metric
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+***************************************************************************
     
     .. code-block:: yaml 
 
@@ -367,7 +383,7 @@ Disable an individual DNS metric
         - dns.timeouts
 
 Disable an individual HTTP metric
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+***************************************************************************
     
     .. code-block:: yaml
 
@@ -379,7 +395,7 @@ Disable an individual HTTP metric
 
 
 Example
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+***************************************************************************
 
 In the following example, all HTTP metrics along with certain individual TCP and UDP metrics are disabled. All DNS metrics are collected.
 
