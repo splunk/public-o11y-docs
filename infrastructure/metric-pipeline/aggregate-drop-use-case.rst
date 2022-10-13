@@ -12,28 +12,37 @@ Use case: Combine aggregation and dropping rules to control your metric cardinal
 .. meta::
     :description: Aggregation and dropping use case
 
-The following use cases feature examples from Buttercup Games, a fictitious e-commerce company.
+The following use case features an example from Buttercup Games, a fictitious e-commerce company.
+
+Background
+===============
 
 Skyler is an admin for the central observability team at Buttercup Games. Skyler is in charge of monitoring observability usage across different teams to make sure they stay within the company's budget.
 
-Lately, Skyler notices a spike in their metric usage. With the help of Splunk Observability Cloud account team, Skyler obtains a detailed metric usage analytics report. The report gives Skyler insights into their metrics volume, high cardinality dimensions, usage of those metrics in charts and detectors, and distribution of metrics across different teams.
+Lately, Skyler notices a spike in their metric usage. With the help of the Splunk Observability Cloud account team, Skyler obtains a detailed metric usage analytics report. The report gives Skyler insights into their metrics volume, high cardinality dimensions, usage of those metrics in charts and detectors, and distribution of metrics across different teams.
 
 Skyler realizes that one team in particular is approaching their allocated usage limit. Skyler reaches out to Kai, the site reliability engineer (SRE) lead on that team, and asks them to optimize their team's usage. Skyler shares with Kai the high cardinality metrics and their team's usage. 
+
+Background
+===============
  
-Kai's team sends about 50,000 metric time series (MTSs) for the ``service.latency`` metric to Observability Cloud, but not all the data at full granularity is essential. Kai looks at the metric usage analytics report to understand more about the cardinality of different dimensions. They notice that dimensions such as ``instance_id`` or ``host_name`` are the highest cardinality dimensions for ``service.latency``.
+The metrics usage analytics report shows that Kai's team sends about 50,000 metric time series (MTSs) for the ``service.latency`` metric to Observability Cloud, but not all the data at full granularity is essential. Kai looks at the report to understand more about the cardinality of different dimensions. They notice that the ``instance_id`` and ``host_name`` dimensions are the highest cardinality dimensions for ``service.latency``.
 
-However, Kai knows their team cares most about different regions when it comes to service latency, so they only want to monitor the ``region`` dimension. Other dimensions such as ``instance_id`` or ``host_name`` are not information they need to monitor.
+However, Kai knows their team cares most about different regions when it comes to service latency, so they only want to monitor the ``region`` dimension. The ``instance_id`` or ``host_name`` dimensions are not information they need to monitor.
 
+Actions
+===============
+ 
 Kai decides to use metric pipeline management to control how Observability Cloud ingests their team's data.
 
-#. Kai creates an aggregation rule that reduces the cardinality of ``service.latency`` by keeping the ``region`` dimension and discarding ``instance_id`` and ``host_name``.
+#. In Observability Cloud, Kai creates an aggregation rule that reduces the cardinality of ``service.latency`` by keeping the ``region`` dimension and discarding ``instance_id`` and ``host_name``.
 #. Kai has a new aggregated ``service.latency_by_region`` metric that yields only 1,623 MTSs.
 #. Kai downloads the list of charts and detectors that use the ``service.latency`` metric.
 #. For each associated chart and detector, Kai replaces ``service.latency`` with ``service.latency_by_region``.
-#. Kai lets Skyler know that they have created an aggregated metric and updated all the associated charts and detectors, so the unaggregated raw metric can be dropped.
+#. Kai lets Skyler know that they have created an aggregated metric and updated all the associated charts and detectors, so Skyler can drop the unaggregated raw metric that the team no longer needs to monitor.
 #. Skyler selects ``service.latency`` on the :strong:`Metric pipeline management` page to view current rules for the metric.
 #. Skyler changes :guilabel:`Keep data` to :guilabel:`Drop data`.
-#. Skyler verifies the new metric volume after dropping data and saves the rules.
+#. Skyler verifies the new metric volume after dropping the data they don't need, and saves the rules.
 
 Summary
 ===============
