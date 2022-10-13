@@ -104,7 +104,63 @@ Follow these steps to install the Splunk Distribution of OpenTelemetry Collector
 
 #. (Optional) Each Kubernetes has a Splunk Distribution of OpenTelemetry Collector, so your resource requirements vary depending on the number of Kubernetes nodes you have.
     
-    If you want to change the resource footprint of Splunk Distribution of OpenTelemetry Collector, you can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/5bf6a008070338060c1e19c261017e950ab9e71a/helm-charts/splunk-otel-collector/values.yaml#L398>`.
+    If you want to change the resource footprint of Splunk Distribution of OpenTelemetry Collector, you can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml#L972>`, or specify different values during installation.
+    
+    These are the default resource configurations.
+
+    .. code-block:: yaml
+
+      resources:
+        limits:
+          cpu: 4
+          memory: 8Gi
+
+    You can use the following approximations to determine your resource needs.
+
+    * For up to 500 nodes/5,000 data points per second. 
+
+        .. tabs::
+
+          .. code-tab:: yaml Update the value file
+
+            resources:
+              limits:
+                cpu: 500m
+                memory: 1Gi
+
+          .. code-tab:: bash Pass arguments during installation
+
+            helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
+
+    * For up to 1,000 nodes/10,000 data points per second. 
+
+        .. tabs::
+
+          .. code-tab:: yaml Update the value file
+
+            resources:
+              limits:
+                cpu: 1
+                memory: 2Gi
+
+          .. code-tab:: bash Pass arguments during installation
+
+            helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=1,gateway.resources.limits.memory=2Gi" splunk-otel-collector-chart/splunk-otel-collector
+  
+    * For up to 1,000 nodes/20,000 data points per second. 
+
+        .. tabs::
+
+          .. code-tab:: yaml Update the value file
+
+            resources:
+              limits:
+                cpu: 2
+                memory: 4Gi
+
+          .. code-tab:: bash Pass arguments during installation
+
+            helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=2,gateway.resources.limits.memory=4Gi" splunk-otel-collector-chart/splunk-otel-collector
 
 .. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
 
@@ -222,6 +278,15 @@ Change the resource footprint of the reducer
 The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the number of CPU cores allocated to it.
  
 Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of CPU cores. You can set between 1-32 cores.
+
+The default configuration is 1 CPU core.
+
+    .. code-block:: yaml
+
+        reducer:
+          ingestShards: 1
+          matchingShards: 1
+          aggregationShards: 1
 
 The following example shows you how to increase the number of CPU cores.
 
