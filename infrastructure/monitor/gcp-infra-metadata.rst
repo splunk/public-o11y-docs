@@ -153,6 +153,7 @@ Spanner instances currently sync the following properties:
 
 .. list-table::
     :header-rows: 1
+    :width: 100
 
     * - :strong:`GCP name`
       - :strong:`Custom property`

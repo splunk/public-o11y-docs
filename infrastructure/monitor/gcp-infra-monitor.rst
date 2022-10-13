@@ -7,9 +7,9 @@ Monitor Google Cloud Platform services
 .. meta::
   :description: Get started monitoring GCP infrastructure resources with Splunk Observability Cloud.
 
-You can monitor the following :ref:`Google Cloud Platform (GCP) services <gcp-integrations>` in Splunk Observability Cloud. Observability Cloud provides infrastructure monitoring features using Google Cloud Operations. See the Google Cloud documentation for more information.
+You can monitor the following :ref:`Google Cloud Platform (GCP) services <gcp-integrations>` in Splunk Observability Cloud, which provides infrastructure monitoring features using Google Cloud Operations. See the Google Cloud documentation for more information.
 
-You can also export and monitor data from these sources running in your GCP environment, as described in the following table.
+You can also export and monitor data from these sources running in your GCP environment, as described in the table.
 
 .. list-table::
   :header-rows: 1
