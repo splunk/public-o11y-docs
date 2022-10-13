@@ -23,7 +23,7 @@ Lately, Skyler notices a spike in their metric usage. With the help of the Splun
 
 Skyler realizes that one team in particular is approaching their allocated usage limit. Skyler reaches out to Kai, the site reliability engineer (SRE) lead on that team, and asks them to optimize their team's usage. Skyler shares with Kai the high cardinality metrics and their team's usage. 
 
-Background
+Findings
 ===============
  
 The metrics usage analytics report shows that Kai's team sends about 50,000 metric time series (MTSs) for the ``service.latency`` metric to Observability Cloud, but not all the data at full granularity is essential. Kai looks at the report to understand more about the cardinality of different dimensions. They notice that the ``instance_id`` and ``host_name`` dimensions are the highest cardinality dimensions for ``service.latency``.
