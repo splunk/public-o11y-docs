@@ -17,7 +17,7 @@ The GCP integration queries the GCP API for metadata about the monitored resourc
 Project-level metadata
 =============================================================================
 
-Here's the metadata that is currently synced at a project level:
+See the metadata synced at a project level:
 
 .. list-table::
     :header-rows: 1
@@ -54,7 +54,7 @@ Here's the metadata that is currently synced at a project level:
 Service-level metadata
 =============================================================================
 
-Here's the metadata that is synced at a service level for the services listed below.
+See the metadata synced at a service level:
 
 .. _compute-engine-properties:
 
@@ -167,12 +167,12 @@ Spanner instances currently sync the following properties:
       - ``gcp_label_<name-of-label>`` (if user has labels)
       - user |hyph| specified labels
 
-\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
+\* The labels property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
 
 Cloud Storage Bucket
 ------------------------------
 
-Storage buckets currently sync the following properties:
+Storage buckets sync the following properties:
 
 .. list-table::
     :header-rows: 1
@@ -194,5 +194,5 @@ Storage buckets currently sync the following properties:
       -   ``gcp_storage_class``
       -   bucket's storage class, such as ``coldline``
 
-\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
+\* The labels property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
 
