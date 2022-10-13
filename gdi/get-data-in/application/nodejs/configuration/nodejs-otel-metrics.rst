@@ -25,15 +25,17 @@ To collect Node.js metrics, see :ref:`metrics-configuration-nodejs`.
 Runtime metrics
 ================================================
 
-To enable runtime metrics, see :ref:`metrics-configuration-nodejs`. The following example shows how to enable runtime metrics by passing the ``runtimeMetricsEnabled`` argument to the ``startMetrics`` method:
+To enable runtime metrics, see :ref:`metrics-configuration-nodejs`. The following example shows how to enable runtime metrics by passing the ``runtimeMetricsEnabled`` argument to the ``start`` method:
 
 .. code-block:: javascript
 
-   const { startMetrics } = require('@splunk/otel');
+   const { start } = require('@splunk/otel');
 
-   startMetrics({
+   start({
       serviceName: 'my-service',
-      runtimeMetricsEnabled: true,
+      metrics: {
+        runtimeMetricsEnabled: true,
+      }
    });
 
 The following runtime metrics are automatically collected and exported:
@@ -80,30 +82,32 @@ To send custom application metrics to Observability Cloud, add ``@opentelemetry/
 
 .. code-block:: javascript
 
-   const { startMetrics } = require('@splunk/otel');
+   const { start } = require('@splunk/otel');
    const { Resource } = require('@opentelemetry/resources');
    const { metrics } = require('@opentelemetry/api-metrics');
 
    // All fields are optional.
-   startMetrics({
-      // Takes preference over OTEL_SERVICE_NAME environment variable
-      serviceName: '<my-service>',
-      // The suggested resource is filled in using OTEL_RESOURCE_ATTRIBUTES
-      resourceFactory: (suggestedResource: Resource) => {
+   start({
+     // Takes preference over OTEL_SERVICE_NAME environment variable
+     serviceName: 'my-service',
+     metrics: {
+       // The suggested resource is filled in via OTEL_RESOURCE_ATTRIBUTES
+       resourceFactory: (suggestedResource: Resource) => {
          return suggestedResource.merge(new Resource({
-            'my.property': 'xyz',
-            'build': 42,
+           'my.property': 'xyz',
+           'build': 42,
          }));
-      },
-      exportIntervalMillis: 1000, // default: 5000
-      // The default exporter is OTLP over gRPC
-      endpoint: 'http://collector:4317',
+       },
+       exportIntervalMillis: 1000, // default: 5000
+       // The default exporter used is OTLP over gRPC
+       endpoint: 'http://collector:4317',
+     },
    });
 
    const meter = metrics.getMeter('my-meter');
    const counter = meter.createCounter('clicks');
    counter.add(3);
-   
+
 Set up custom metric readers and exporters
 ----------------------------------------------------
 
@@ -115,22 +119,24 @@ The following example shows how to provide a custom exporter:
 
 .. code-block:: javascript
 
-   const { startMetrics } = require('@splunk/otel');
+   const { start } = require('@splunk/otel');
    const { PrometheusExporter } = require('@opentelemetry/exporter-prometheus');
    const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-http');
    const { PeriodicExportingMetricReader } = require('@opentelemetry/sdk-metrics-base');
 
-   startMetrics({
-      serviceName: 'my-service',
-      metricReaderFactory: () => {
+   start({
+     serviceName: 'my-service',
+     metrics: {
+       metricReaderFactory: () => {
          return [
-            new PrometheusExporter(),
-            new PeriodicExportingMetricReader({
-               exportIntervalMillis: 1000,
-               exporter: new OTLPMetricExporter({ url: 'http://localhost:4318' })
-            })
+           new PrometheusExporter(),
+           new PeriodicExportingMetricReader({
+             exportIntervalMillis: 1000,
+             exporter: new OTLPMetricExporter({ url: 'http://localhost:4318' })
+           })
          ]
-      }
+       },
+     },
    });
 
 Select the type of aggregation temporality
@@ -140,28 +146,30 @@ Aggregation temporality describes how data is reported over time.
 
 You can define two different aggregation temporalities:
 
-- ``AggregationTemporality.CUMULATIVE``: Cumulative metrics, such as counters and histograms, are continuously summed together from a given starting point, which in this case is set with the call to ``startMetrics``. This is the default temporality.
+- ``AggregationTemporality.CUMULATIVE``: Cumulative metrics, such as counters and histograms, are continuously summed together from a given starting point, which in this case is set with the call to ``start``. This is the default temporality.
 - ``AggregationTemporality.DELTA``: Metrics are summed together relative to the last metric collection step, which is set by the export interval.
 
 To configure aggregation temporality in your custom metrics, use ``AggregationTemporality`` as in the example:
 
 .. code-block:: javascript
 
-   const { startMetrics } = require('@splunk/otel');
+   const { start } = require('@splunk/otel');
    const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-grpc');
    const { AggregationTemporality, PeriodicExportingMetricReader } = require('@opentelemetry/sdk-metrics-base');
 
-   startMetrics({
-      serviceName: 'my-service',
-      metricReaderFactory: () => {
+   start({
+     serviceName: 'my-service',
+     metrics: {
+       metricReaderFactory: () => {
          return [
-            new PeriodicExportingMetricReader({
-               exporter: new OTLPMetricExporter({
-                  temporalityPreference: AggregationTemporality.DELTA
-               })
-            })
+           new PeriodicExportingMetricReader({
+             exporter: new OTLPMetricExporter({
+               temporalityPreference: AggregationTemporality.DELTA
+             })
+           })
          ]
-      }
+       },
+     },
    });
 
 For more information on aggregation temporality, see :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/metrics/data-model.md#sums <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/metrics/data-model.md#sums>` on GitHub.
@@ -173,21 +181,24 @@ Migrate from SignalFx metrics for NodeJS
 
 To migrate your custom metric instrumentation from the SignalFx client library, follow these steps:
 
-#. Replace the ``getSignalFxClient`` dependency with ``opentelemetry/api-metrics``, and initialize metrics collection using ``startMetrics()``. For example:
+#. Replace the ``getSignalFxClient`` dependency with ``opentelemetry/api-metrics``, and initialize metrics collection using ``start()``. For example:
 
    .. tabs::
 
       .. code-tab:: javascript SignalFx (Deprecated)
 
-         const { startMetrics } = require('@splunk/otel');
-         const { getSignalFxClient } = startMetrics({ serviceName: 'my-service' });
+         const { start } = require('@splunk/otel');
+         const { getSignalFxClient } = start({ serviceName: 'my-service' });
 
       .. code-tab:: javascript OpenTelemetry (Supported)
 
-         const { startMetrics } = require('@splunk/otel');
+         const { start } = require('@splunk/otel');
          const { metrics } = require('@opentelemetry/api-metrics');
 
-         startMetrics({ serviceName: 'my-service' });
+         start({
+           serviceName: 'my-service',
+           metrics: true, // enable metrics with default configuration
+         });
 
 #. Replace calls to ``getSignalFxClient()`` with metrics instances. For example:
 

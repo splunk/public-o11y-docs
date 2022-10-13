@@ -74,13 +74,13 @@ In your code, the instrumentation entry point for SignalFx tracing is similar to
 
 You have two options to update your instrumentation entry point:
 
-1. Update the entry point to use ``@splunk/otel`` and ``startTracing()``, as shown in the following code:
+1. Update the entry point to use ``@splunk/otel`` and ``start()``, as shown in the following code:
 
 .. code-block:: javascript
 
-  const { startTracing } = require('@splunk/otel');
+  const { start } = require('@splunk/otel');
 
-  startTracing({
+  start({
    // your new options here
   });
 
@@ -125,7 +125,7 @@ To migrate settings from the SignalFx tracing library to the Splunk Distribution
    * - ``SIGNALFX_TRACING_ENABLED``
      - ``OTEL_TRACE_ENABLED``
 
-If you're using the passing configuration options as arguments to ``startTracing()``, update them as well:
+If you're using the passing configuration options as arguments to ``start()``, update them as well:
 
 .. list-table:: 
    :header-rows: 1

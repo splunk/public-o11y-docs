@@ -100,6 +100,7 @@ Enable AlwaysOn Profiling
 
 To enable AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
+For more settings, see :ref:`profiling-configuration-nodejs`.
 
 .. _enable_automatic_metric_collection_nodejs:
 
@@ -127,39 +128,41 @@ To instrument your application programmatically, add the following lines at the 
 
 .. code-block:: javascript
 
-   const { startTracing } = require('@splunk/otel');
+   const { start } = require('@splunk/otel');
 
-   startTracing();
+   start();
 
    // Rest of your main module
 
-The ``startTracing()`` function accepts :ref:`configuration settings <advanced-java-otel-configuration>` as arguments. For example:
+The ``start()`` function accepts :ref:`configuration settings <advanced-java-otel-configuration>` as arguments. For example:
 
 .. code-block:: javascript
 
-   startTracing({
+   start({
       serviceName: 'my-node-service',
    });
 
-After you add the ``startTracing()`` function to your entry point script, run your application by passing the instrumented entry point script using the ``-r`` flag:
+After you add the ``start()`` function to your entry point script, run your application by passing the instrumented entry point script using the ``-r`` flag:
 
 .. code-block:: bash
 
    node -r <entry-point.js> <your-app.js>
 
-To add custom or third-party instrumentations that implement the OpenTelemetry JS Instrumentation interface, pass them to ``startTracing()`` using the following code:
+To add custom or third-party instrumentations that implement the OpenTelemetry JS Instrumentation interface, pass them to ``start()`` using the following code:
 
 .. code-block:: javascript
 
-   const { startTracing } = require('@splunk/otel');
+   const { start } = require('@splunk/otel');
    const { getInstrumentations } = require('@splunk/otel/lib/instrumentations');
 
-   startTracing({
-   instrumentations: [
-      ...getInstrumentations(), // Adds default instrumentations
-      new MyCustomInstrumentation(),
-      new AnotherInstrumentation(),
-   ]
+   start({
+      tracing: {
+         instrumentations: [
+            ...getInstrumentations(), // Adds default instrumentations
+            new MyCustomInstrumentation(),
+            new AnotherInstrumentation(),
+         ],
+      },
    });
 
 .. tip:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
