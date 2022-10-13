@@ -99,21 +99,21 @@ Impact of exceeding a cost-related limit example
 When API requests using an access token meet or exceed a particular token limit, Infrastructure Monitoring rejects new metrics associated with the limit.
 
 For example, suppose you're on the host-based pricing plan. You set the custom metrics
-limit for your access token to 10. You use the token to send data from host ``host1``,
+limit for your access token to 10. You use the token to send data from ``host1``,
 including seven custom metrics. Infrastructure Monitoring ingests the data because sending
 custom metrics using the token hasn't exceeded the token limit.
 
-At some point, you use the token to send data from host ``host2``, including five
+At some point, you use the token to send data from ``host2``, including five
 different custom metrics. Infrastructure Monitoring rejects the request because
 it exceeds the custom metrics limit in the token. Infrastructure Monitoring
-continues to ingest data from host ``host1``.
+continues to ingest data from ``host1``.
 
 Rate-related token limits
 ============================
 You can manage your rate of resource use by setting rate-related limits in an access token.
 Each limit is the rate at which you can make an API request for a resource using
 the access token. When you exceed the rate, the API request fails with HTTP
-response code ``429 Too Many Requests`` .
+response code: ``429 Too Many Requests`` .
 
 You can't set up alerts or notifications for rate-related token limits.
 
