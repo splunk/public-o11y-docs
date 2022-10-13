@@ -29,21 +29,21 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://0.0.0.0:13133/``
     - Health check extension useful for collector status reporting
   * - ``http(s)://0.0.0.0:[6831|6832|14250|14268]/api/traces``
-    - The :ref:`Jaeger receiver <https://docs.splunk.com/Observability/gdi/jaeger-grpc/jaeger-grpc.html>` supporting Thrift and gRPC protocols
+    - The :new-page:`Jaeger receiver <https://docs.splunk.com/Observability/gdi/jaeger-grpc/jaeger-grpc.html>` supporting Thrift and gRPC protocols
   * - ``http(s)://localhost:55679/debug/[tracez|pipelinez]``
     - zPages extension for component diagnostics
   * - ``http(s)://0.0.0.0:[4317|4318]``
     - OTLP receiver via gRPC and http
   * - ``http(s)://0.0.0.0:6060``
-    - HTTP forwarder used to receive Smart Agent ``apiUrl`` data
+    - :new-page:`HTTP forwarder <https://docs.splunk.com/Observability/gdi/http/http.html>`used to receive Smart Agent ``apiUrl`` data
   * - ``http(s)://0.0.0.0:7276``
     - SAPM trace receiver
   * - ``http://localhost:8888/metrics``
-    - Internal Prometheus metrics
+    - Internal :new-page:`Prometheus <https://docs.splunk.com/Observability/gdi/prometheus-receiver/prometheus-receiver.html#prometheus-receiver>` metrics
   * - ``http(s)://localhost:8006``
     - Fluent forward receiver
   * - ``http(s)://0.0.0.0:9080``
-    - Smart Agent receiver with SignalFx Forwarder monitor type
+    - Smart Agent receiver with :new-page:`SignalFx Forwarder <https://docs.splunk.com/Observability/gdi/signalfx-forwarder/signalfx-forwarder.html>` monitor type
   * - ``http(s)://0.0.0.0:9411/api/[v1|v2]/spans``
     - Zipkin receiver supporting V1 and V2
   * - ``http(s)://0.0.0.0:9943``
