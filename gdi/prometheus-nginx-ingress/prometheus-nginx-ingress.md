@@ -33,7 +33,7 @@ To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, 
 ```yaml 
 receivers:
   smartagent/prometheus-nginx-ingress:
-    type: prometheus-nginx-ingress
+    type: prometheus/nginx-ingress
     ... # Additional config
 ```
 
