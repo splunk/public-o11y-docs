@@ -48,8 +48,8 @@ Causes
 
         .. code-block:: bash
 
-            kubectl logs network-explorer-splunk-otel-network-explorer-k8s-collectokrm4k -c k8s-watcher
-            kubectl logs network-explorer-splunk-otel-network-explorer-k8s-collectokrm4k -c k8s-relay 
+            kubectl logs <POD NAME> -c k8s-watcher
+            kubectl logs <POD NAME> -c k8s-relay 
 
     This is an example error message from the logs. In this case, the service account token is not available.
         
