@@ -13,6 +13,7 @@ Troubleshoot Network Explorer
 .. meta::
     :description: Troubleshooting guide for Network Explorer
 
+
 Network Explorer isn't showing metrics as expected
 ====================================================================================
 
@@ -30,3 +31,7 @@ Solution
 ----------------
 
 Check the cgroup drivers of your ``kubelet`` and ``containerd`` to make sure that they match. Both of them have to be either ``cgroupfs`` or ``systemd``.
+
+
+You don't see Kubernetes metadata in Network Explorer metrics
+====================================================================================

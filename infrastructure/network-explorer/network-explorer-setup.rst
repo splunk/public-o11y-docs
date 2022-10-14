@@ -63,21 +63,20 @@ The following table shows required parameters for this installation:
           
        * - ``namespace``
          - The Kubernetes namespace to install into. This value must match the value for the namespace of the Network Explorer.
-        
        * - ``splunkObservability.realm``
-         - Splunk realm to send telemetry data to. For example, ``us0``.
-        
+         - Splunk realm to send telemetry data to. For example, ``us0``.   
        * - ``splunkObservability.accessToken``
-         - The access token for your organization. An access token with ingest scope is sufficient. For more information, see :ref:`admin-org-tokens`.
-        
+         - The access token for your organization. An access token with ingest scope is sufficient. For more information, see :ref:`admin-org-tokens`.        
        * - ``clusterName``
          - An arbitrary value that identifies your Kubernetes cluster.
-        
        * - ``gateway.enabled``
          - Set this to ``true`` to enable Gateway mode.
-
        * - ``agent.enabled``
          - Set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in Agent mode on each Kubernetes node.
+       * - ``clusterReceiver.enabled``
+         - Set this to ``false`` since Network Explorer doesn't use ``splunk-otel-collector-k8s-cluster-receiver``.
+       * - ``gateway.replicaCount``
+         - Set this to ``1`` since Network Explorer doesn't support communication to multiple gateway replicas.
 
 
 Example
@@ -123,66 +122,41 @@ Each Kubernetes has a Splunk Distribution of OpenTelemetry Collector, so you mig
           cpu: 4
           memory: 8Gi
 
-    You can use the following approximations to determine your resource needs.
-
-      * For up to 500 nodes/5,000 data points per second. 
-
-          .. tabs::
-
-            .. code-tab:: yaml Update the value file
-
-              resources:
-                limits:
-                  cpu: 500m
-                  memory: 1Gi
-
-            .. code-tab:: bash Pass arguments during installation
-
-              helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
-
-      * For up to 1,000 nodes/10,000 data points per second. 
-
-          .. tabs::
-
-            .. code-tab:: yaml Update the value file
-
-              resources:
-                limits:
-                  cpu: 1
-                  memory: 2Gi
-
-            .. code-tab:: bash Pass arguments during installation
-
-              helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=1,gateway.resources.limits.memory=2Gi" splunk-otel-collector-chart/splunk-otel-collector
-  
-      * For up to 1,000 nodes/20,000 data points per second. 
-
-          .. tabs::
-
-            .. code-tab:: yaml Update the value file
-
-              resources:
-                limits:
-                  cpu: 2
-                  memory: 4Gi
-
-            .. code-tab:: bash Pass arguments during installation
-
-              helm install stg-otelcol --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=2,gateway.resources.limits.memory=4Gi" splunk-otel-collector-chart/splunk-otel-collector
-  
-    Additionally, you can change the following parameters during installation to reduce excess resources.
+    Use the following approximations to determine your resource needs.
 
       .. list-table::
-        :header-rows: 1
-        :widths: 50 50
+       :header-rows: 1
+       :widths: 50 50
 
-        * - :strong:`Parameter`
-          - :strong:`Description`
-        * - ``clusterReceiver.enabled``
-          - Set this to ``false`` since Network Explorer doesn't use ``splunk-otel-collector-k8s-cluster-receiver``.
-        * - ``gateway.replicaCount``
-          - By default, the value is ``3``. Set this to ``1`` because Network Explorer doesn't use multiple cores.
+       * - :strong:`Approximation`
+         - :strong:`Resource needs`
+          
+       * - Up to 500 nodes/5,000 data points per second
+         - CPU: 500m, memory: 1 Gi
+       * - Up to 1,000 nodes/10,000 data points per second
+         - CPU: 1, memory: 2 Gi
+       * - Up to 2,000 nodes/20,000 data points per second
+         - CPU: 2, memory: 4 Gi
 
+
+Example
++++++++++++++++++++++++
+
+In the following example, CPU is set to :strong:`500m`, and memory is set to :strong:`1 Gi`.
+
+  .. tabs::
+
+    .. code-tab:: yaml Update the value file
+ 
+      resources:
+        limits:
+          cpu: 500m
+          memory: 1Gi
+
+    .. code-tab:: bash Pass arguments during installation
+
+      helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
+  
 
 .. _install-network-explorer:
 
@@ -264,7 +238,7 @@ Follow these steps to install Network Explorer:
 
         helm --namespace=<NAMESPACE> install network-explorer splunk-otel-network-explorer-chart/splunk-otel-network-explorer --set="clusterName=<CLUSTER_NAME>,otlp.receiver.host=my-splunk-otel-collector"
 
-#. (Optional) The Network Explorer kernel collector requires kernel headers to run kernel in each Kubernetes node. The kernel collector installs the headers automatically unless it fails to start, or your nodes don't have access to the internet.
+#. (Optional) The Network Explorer kernel collector requires kernel headers to run kernel in each Kubernetes node. The kernel collector installs the headers automatically unless your nodes don't have access to the internet.
 
     If you need to install the required packages manually, run the following command.
 
@@ -293,9 +267,9 @@ Change the resource footprint of the reducer
 
 The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the number of CPU cores allocated to it.
  
-Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of CPU cores. You can set between 1-32 cores.
+Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of CPU cores per reducer stage. You can set between 1-32 cores.
 
-The default configuration is 1 CPU core.
+The default configuration is 1 CPU core per reducer stage.
 
     .. code-block:: yaml
 
