@@ -266,10 +266,12 @@ Change the resource footprint of the reducer
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the number of CPU cores allocated to it.
- 
-Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of CPU cores per reducer stage. You can set between 1-32 cores.
 
-The default configuration is 1 CPU core per reducer stage.
+The reducer processes telemetry in multiple stages, with each stage partitioned into one or more shards, where each shard is a separate thread.
+ 
+Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of shards per reducer stage. You can set between 1-32 shards.
+
+The default configuration is 1 shard per reducer stage.
 
     .. code-block:: yaml
 
@@ -278,7 +280,10 @@ The default configuration is 1 CPU core per reducer stage.
           matchingShards: 1
           aggregationShards: 1
 
-The following example shows you how to increase the number of CPU cores.
+Example
+***************************************************************************      
+
+The following example uses 4 shards per reducer stage.
 
     .. code-block:: yaml
 
