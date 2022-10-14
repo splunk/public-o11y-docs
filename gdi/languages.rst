@@ -14,7 +14,6 @@ Configure application receivers for languages
    dotnet/dotnet
    java-monitor/java-monitor
    jmx/jmx
-   sql/sql
 
 These application receivers gather metrics from their associated language-related applications and the hosts the applications are running on.
 
@@ -24,4 +23,3 @@ These application receivers gather metrics from their associated language-relate
 * :ref:`dotnet`
 * :ref:`java-monitor`
 * :ref:`jmx`
-* :ref:`sql`

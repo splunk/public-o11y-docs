@@ -15,9 +15,14 @@ This page provides the list of integrations supported by Splunk Observability Cl
 Amazon Web Services
 ----------------------------------
 
-* For details about how to get data from these Amazon Web Services into Observability Cloud, see :ref:`get-started-aws`.
-* Learn about :ref:`our AWS Infrastructure Monitoring options <infrastructure-aws>`. You'll find instructions on how to import AWS metrics and metadata, or AWS tag and log information using namespaces and filters. 
-* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata we provide <aws-infra-metadata>`.
+To learn about AWS and Splunk Observability Cloud, read the following: 
+
+* :ref:`get-started-aws`
+* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata Observability Cloud provides <aws-infra-metadata>`
+* :ref:`aws-logs`
+* :ref:`infrastructure-aws`
+
+The following AWS services send data to Infrastructure Monitoring:
 
 .. list-table::
   :header-rows: 1
@@ -667,10 +672,12 @@ The following applies to the collected logs and metadata listed in the table:
 Google Cloud Platform services
 -----------------------------------------------
 
-* For details about how to get metrics from these Google Cloud Platform (GCP)  services into Splunk Observability Cloud, see :ref:`get-started-gcp`.
-* For details about the metrics provided by a GCP integration, see :ref:`gcp-metrics`.
-* To send logs from GCP to Observability Cloud, follow the instructions in :ref:`gcp-logs`.
-* Learn about :ref:`our GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
+To learn about GCP and Splunk Observability Cloud, read the following: 
+
+* :ref:`get-started-gcp`
+* :ref:`gcp-metrics`
+* :ref:`gcp-logs`
+* :ref:`infrastructure-gcp`
 
 The following GCP services send metrics to Infrastructure Monitoring:
 
@@ -777,71 +784,246 @@ The following GCP services send metrics to Infrastructure Monitoring:
 
 
 .. _azure-integrations:
+.. _supported-azure-services:
 
 Microsoft Azure services
 ----------------------------------
 
-For details about how to get data from these Microsoft Azure services into Observability Cloud, see :ref:`get-started-azure`.
+To learn about Azure and Splunk Observability Cloud, read the following: 
 
-For details about the metrics provided by a Microsoft Azure integration, see :ref:`azure-metrics`.
+* :ref:`get-started-azure`
+* :ref:`azure-metrics`
+* :ref:`ingest-azure-log-data`
+* :ref:`infrastructure-azure`
+
+The following Azure services send metrics to Infrastructure Monitoring:
 
 .. list-table::
-   :header-rows: 1
-   :widths: 50 16 16
-   :width: 100%
-   :class: monitor-table
+  :header-rows: 1
+  :widths: 40 40 
+  :width: 100%  
 
-   * - :strong:`Service`
-     - :strong:`Provides metrics`
-     - :strong:`Provides traces`
+  * - :strong:`Resource name`
+    - :strong:`Resource type`
 
-   * - :ref:`Azure App Service <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
+  * - API Management	
+    - microsoft.apimanagement/service
 
-   * - :ref:`Azure Batch <get-started-azure>`
-     - :strong:`X`
-     -
+  * - App Service	
+    - microsoft.web/sites  
 
-   * - :ref:`Azure Event Hubs <get-started-azure>`
-     - :strong:`X`
-     -
+  * - App Service	
+    - microsoft.web/serverfarms
 
-   * - :ref:`Azure Functions <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
+  * - App Service	
+    - microsoft.web/sites/slots
 
-   * - :ref:`Azure Kubernetes Service <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
+  * - App Service	
+    - microsoft.web/hostingenvironments/multirolepools
 
-   * - :ref:`Azure Logic apps <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
+  * - App Service	
+    - microsoft.web/hostingenvironments/workerpools 
 
-   * - :ref:`Azure Redis Cache <get-started-azure>`
-     - :strong:`X`
-     -
+  * - Application Gateway
+    - microsoft.network/applicationgateways
 
-   * - :ref:`Azure Storage <get-started-azure>`
-     - :strong:`X`
-     -
+  * - Automation	
+    - microsoft.automation/automationaccounts
 
-   * - :ref:`Azure SQL Database <get-started-azure>`
-     - :strong:`X`
-     -
+  * - Azure Analysis Services	
+    - microsoft.analysisservices/servers
 
-   * - :ref:`Azure SQL Elastic Pools <get-started-azure>`
-     - :strong:`X`
-     -
+  * - Azure Autoscale	
+    - microsoft.insights/autoscalesettings
 
-   * - :ref:`Azure Virtual Machines <get-started-azure>`
-     - :strong:`X`
-     - :strong:`X`
+  * - Azure Cosmos DB	
+    - microsoft.documentdb/databaseaccounts
 
-   * - :ref:`Azure Virtual Machine Scale Sets <get-started-azure>`
-     - :strong:`X`
-     -
+  * - Azure Data Explorer	
+    - microsoft.kusto/clusters
+
+  * - Azure Database for MariaDB	
+    - microsoft.dbformariadb/servers
+
+  * - Azure Database for MySQL	
+    - microsoft.dbformysql/servers
+
+  * - Azure Database for PostgreSQL	
+    - microsoft.dbforpostgresql/servers
+
+  * - Azure DDoS Protection	
+    - microsoft.network/publicipaddresses
+
+  * - Azure DNS	
+    - microsoft.network/dnszones
+
+  * - Azure Firewall	
+    - microsoft.network/azurefirewalls
+
+  * - Azure Front Door	
+    - microsoft.network/frontdoors
+
+  * - Azure Kubernetes Service	
+    - microsoft.containerservice/managedclusters
+
+  * - Azure Location Based Services	
+    - microsoft.locationbasedservices/accounts
+
+  * - Azure Machine Learning	
+    - microsoft.machinelearningservices/workspaces
+
+  * - Azure Maps	
+    - microsoft.maps/accounts
+
+  * - Azure SignalR Service	
+    - microsoft.signalrservice/signalr
+
+  * - Azure SQL Managed Instances	
+    - microsoft.sql/managedinstances
+
+  * - Azure Web PubSub	
+    - microsoft.signalrservice/webpubsub
+
+  * - Batch	
+    - microsoft.batch/batchaccounts
+
+  * - Container Instances	
+    - microsoft.containerinstance/containergroups
+
+  * - Cognitive Services	
+    - microsoft.cognitiveservices/accounts
+
+  * - Container Registry	
+    - microsoft.containerregistry/registries
+
+  * - Content Delivery Network (CDN)	
+    - microsoft.cdn/cdnwebapplicationfirewallpolicies
+
+  * - Customer Insights	
+    - microsoft.customerinsights/hubs
+
+  * - Event Grid (domains)	
+    - microsoft.eventgrid/domains
+
+  * - Event Grid (Event Subscriptions)	
+    - microsoft.eventgrid/eventsubscriptions
+
+  * - Event Grid (Extension Topics)	
+    - microsoft.eventgrid/extensiontopics
+
+  * - Event Grid (System Topics)	
+    - microsoft.eventgrid/systemtopics
+
+  * - Event Grid (Topics)	
+    - microsoft.eventgrid/topics
+
+  * - Event Hubs	
+    - microsoft.eventhub/namespaces
+
+  * - Data Factory	
+    - microsoft.datafactory/datafactories
+
+  * - Data Factory	
+    - microsoft.datafactory/factories
+
+  * - Data Lake Analytics	
+    - microsoft.datalakeanalytics/accounts
+
+  * - Data Lake Store	
+    - microsoft.datalakestore/accounts
+
+  * - ExpressRoute	
+    - microsoft.network/expressroutecircuits
+
+  * - HDInsight	
+    - microsoft.hdinsight/clusters
+
+  * - Iot Hub	
+    - microsoft.devices/iothubs
+
+  * - Iot Hub	
+    - microsoft.devices/provisioningservices
+
+  * - Iot Hub	
+    - microsoft.devices/elasticpools
+
+  * - Iot Hub	
+    - microsoft.devices/elasticpools/iothubtenants
+
+  * - Key Vault	
+    - microsoft.keyvault/vaults
+
+  * - Load Balancer	
+    - microsoft.network/loadbalancers
+
+  * - Logic apps	
+    - microsoft.logic/workflows
+
+  * - Network Interfaces	
+    - microsoft.network/networkinterfaces, Network Interfaces
+
+  * - Notification Hubs	
+    - microsoft.notificationhubs/namespaces/notificationhubs
+
+  * - Power BI	
+    - microsoft.powerbidedicated/capacities
+
+  * - Redis Cache	
+    - microsoft.cache/redis
+
+  * - Relays	
+    - microsoft.relay/namespaces
+
+  * - Search Services	
+    - microsoft.search/searchservices
+
+  * - Service Bus	
+    - microsoft.servicebus/namespaces
+
+  * - Storage	
+    - microsoft.storage/storageaccounts
+
+  * - Storage	
+    - microsoft.storage/storageaccounts/tableservices
+
+  * - Storage	
+    - microsoft.storage/storageaccounts/blobservices
+
+  * - Storage	
+    - microsoft.storage/storageaccounts/queueservices
+
+  * - Storage	
+    - microsoft.storage/storageaccounts/fileservices
+
+  * - Stream Analytics	
+    - microsoft.streamanalytics/streamingjobs
+
+  * - SQL Database	
+    - microsoft.sql/servers/databases
+
+  * - SQL Elastic Pools	
+    - microsoft.sql/servers/elasticpools
+
+  * - SQL Servers	
+    - microsoft.sql/servers
+
+  * - Traffic Manager	
+    - microsoft.network/trafficmanagerprofiles
+
+  * - Virtual Machines	
+    - microsoft.compute/virtualmachines
+
+  * - Virtual Machines (Classic)	
+    - microsoft.classiccompute/virtualmachines
+
+  * - Virtual Machine Scale Sets	
+    - microsoft.compute/virtualmachinescalesets
+
+  * - Virtual Machine Scale Sets	
+    - microsoft.compute/virtualmachinescalesets/virtualmachines
+
+  * - VPN Gateway	
+    - microsoft.network/virtualnetworkgateways
 
 
 Platforms
