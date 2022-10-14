@@ -791,6 +791,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    rum/RUM-metrics
 
+.. toctree::
+   :maxdepth:   3
+   
+   rum/rum-session-replay
 
 .. toctree::
    :maxdepth:   3
