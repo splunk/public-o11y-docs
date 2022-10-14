@@ -69,7 +69,7 @@ Causes
 
                 Error: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:8712: connect: connection refused"
 
-            These messages are expected and can be disregarded.
+            These messages are expected and you can ignore them.
 
 
 Solution
