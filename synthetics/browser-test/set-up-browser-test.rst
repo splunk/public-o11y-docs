@@ -103,9 +103,9 @@ The Authentication field is available for Browser tests in Chrome only. Firefox 
 
 .. _browser-overrides:
 
-DNS Overrides and host rewrites
+Host overrides
 ---------------------------------------
-Add DNS override rules to reroute requests from one host to another. For example, if you want to test an existing production site against page resources loaded from a development site or a specific CDN edge node.
+Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or a specific CDN edge node.
 
 
 .. _browser-validation:
