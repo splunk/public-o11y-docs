@@ -50,7 +50,7 @@ Before digging into Database Query Performance, Jax wants to make sure that ther
 
 After they select the host, Jax can verify that the infrastructure is not the cause behind the latency, as the infrastructure metrics appear normal. The Related Content bar for the host contains a tile that links to Database Query Performance, as well as others for APM and Log Observer.
 
-.. image:: /_images/apm/apm-use-cases/db-rel-infra.png
+.. image:: /_images/apm/apm-use-cases/db-rel-imm.png
    :width: 95%
    :alt: The MySQL host for the mysql-prod-1 database appears in the Related Content bar.
 

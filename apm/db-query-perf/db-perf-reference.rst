@@ -26,7 +26,7 @@ Database Query Performance provides insights for the following database software
      
 Database Query Performance works with all versions supported by the instrumented applications. For more information on related content, see :ref:`get-started-relatedcontent`.
 
-.. note:: Related Content is available for Oracle, MySQL, and MS SQL.
+.. note:: Related Content is available for Oracle, MySQL, Redis, and Microsoft SQL Server.
 
 .. _db-tags:
 
