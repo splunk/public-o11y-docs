@@ -36,26 +36,44 @@ Check the cgroup drivers of your ``kubelet`` and ``containerd`` to make sure tha
 You don't see Kubernetes metadata in Network Explorer metrics
 ====================================================================================
 
-Your Network Explorer metrics are not generated with Kubernetes metadata, even though the Kubernetes collector isn't disabled.
+Your Network Explorer metrics are not generated with Kubernetes metadata.
 
 Causes
 ----------------
 
-- The service account token might not be available.
+* The Kubernetes collector is disabled.
+* If the Kubernetes collector is enabled, you can determine the root cause based on the logs for the ``k8s-watcher`` and ``k8s-relay`` containers in the ``k8s-collector`` pod.
+
+    Run the following commands to retrieve the logs for the containers.
+
+        .. code-block:: bash
+
+            kubectl logs network-explorer-splunk-otel-network-explorer-k8s-collectokrm4k -c k8s-watcher
+            kubectl logs network-explorer-splunk-otel-network-explorer-k8s-collectokrm4k -c k8s-relay 
+
+    This is an example error message. In this case, the service account token is not available.
+        
+        .. code-block:: bash
+            
+            Error: open /var/run/secrets/kubernetes.io/serviceaccount/token: no such file or directory
+     
+    .. note:: On initial startup, the ``k8s-watcher`` tries to connect to the ``k8s-relay``. If the ``k8s-relay`` has not yet come up, you might see the following set of error messages.
+            
+            .. code-block:: bash
+
+                Error: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp [::1]:8712: connect: connection refused"
+
+            These messages are expected and can be disregarded.
 
 
 Solution
 ----------------
 
-Follow these steps to troubleshoot this problem.
+* If the Kubernetes collector is disabled, you need to enable it.
+* If the Kubernetes collector is already enabled, see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server>` for more information on configuring the service account for the pod to enable communication with the API server.
 
-#. Run the following commands to retrieve the logs for the ``k8s-watcher`` and ``k8s-relay`` containers in the ``k8s-collector`` pod.
 
-    .. code-block:: bash
 
-        kubectl logs network-explorer-splunk-otel-network-explorer-k8s-collectokrm4k -c k8s-watcher
-        kubectl logs network-explorer-splunk-otel-network-explorer-k8s-collectokrm4k -c k8s-relay
 
-#. Determine errors based on the logs.
 
 
