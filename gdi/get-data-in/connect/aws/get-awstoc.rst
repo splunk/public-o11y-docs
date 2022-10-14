@@ -47,8 +47,8 @@ To connect AWS to Observability Cloud and integrate those platforms, you must me
 
 - Administrator privileges in Observability Cloud and your AWS accounts
 - One of the following authentication methods:
-  - An AWS IAM role and an external ID from Observability Cloud
-  - A secure token, which combines an access key ID and a secret access key
+   - An AWS IAM role and an external ID from Observability Cloud
+   - A secure token, which combines an access key ID and a secret access key
 
 The AWS GovCloud and China regions require a secure token for access. 
 
