@@ -100,7 +100,7 @@ Follow these steps to install the Splunk Distribution of OpenTelemetry Collector
 
     .. code-block:: bash
 
-        helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,gateway.enabled=true,agent.enabled=false" splunk-otel-collector-chart/splunk-otel-collector
+        helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,gateway.enabled=true,agent.enabled=false,clusterReceiver.enabled=false,gateway.replicaCount=1" splunk-otel-collector-chart/splunk-otel-collector
 
 For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.     
 
