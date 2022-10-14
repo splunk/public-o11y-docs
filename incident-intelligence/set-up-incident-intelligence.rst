@@ -11,25 +11,24 @@ Set up Splunk Incident Intelligence
 .. meta::
    :description: To route incidents to the necessary teams and people, you need to complete your incident response configuration.
 
-Splunk Incident Intelligence is added to your Observability Cloud environment on your behalf. To route incidents to the necessary teams and people, you need to first ingest alerts and then complete your incident response configuration. Incident response configuration is where you define and configure services, and create on-call schedules. After you complete your incident response configuration, users can begin responding to incidents. Follow these steps to get started with Incident Intelligence:
+Splunk Incident Intelligence is added to your Observability Cloud environment on your behalf. To route incidents to the necessary teams and people, you need to first generate alerts and then complete your incident response configuration. Incident response configuration is where you define and configure services, and create on-call schedules. After you complete your incident response configuration, users can begin responding to incidents. Follow these steps to get started with Incident Intelligence:
 
-#. :ref:`Ingest alerts.<ingest-alerts>`
+#. :ref:`Generate alerts.<generate-alerts>`
 #. :ref:`Define your service.<define-service>`
 #. :ref:`Configure your service.<configure-service>`
 #. :ref:`Create your on-call schedules.<on-call-schedules>`
 
-.. _ingest-alerts:
+.. _generate-alerts:
 
-Ingest alerts
+Generate alerts
 ================
 
-Incident Intelligence ingests alerts from the following Observability Cloud event sources.
+Incident Intelligence generates alerts from the following Observability Cloud sources.
 
 - Splunk APM
 - Splunk Infrastructure Monitoring
-- Splunk NPM
 
-To ingest alerts into Incident Intelligence, you have to define a detector for the available event sources and route that detector to a service in Incident Intelligence. See :ref:`get-started-detectoralert` for more information about configuring detectors. See :ref:`define-service` and :ref:`configure-alert-routing` for steps to define a service and route alerts to the service. 
+To generate alerts in Incident Intelligence, you have to define a detector for the available alert sources and route that detector to a service in Incident Intelligence. See :ref:`get-started-detectoralert` for more information about configuring detectors. See :ref:`define-service` and :ref:`configure-alert-routing` for steps to define a service and route alerts to the service. 
 
 .. _define-service:
 
