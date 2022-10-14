@@ -51,7 +51,7 @@ Causes
             kubectl logs network-explorer-splunk-otel-network-explorer-k8s-collectokrm4k -c k8s-watcher
             kubectl logs network-explorer-splunk-otel-network-explorer-k8s-collectokrm4k -c k8s-relay 
 
-    This is an example error message. In this case, the service account token is not available.
+    This is an example error message from the logs. In this case, the service account token is not available.
         
         .. code-block:: bash
             
