@@ -134,7 +134,7 @@ To instrument your application programmatically, add the following lines at the 
 
    // Rest of your main module
 
-The ``start()`` function accepts :ref:`configuration settings <advanced-java-otel-configuration>` as arguments. For example:
+The ``start()`` function accepts :ref:`configuration settings <advanced-nodejs-otel-configuration>` as arguments. For example:
 
 .. code-block:: javascript
 

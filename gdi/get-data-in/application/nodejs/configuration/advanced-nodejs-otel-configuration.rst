@@ -202,10 +202,8 @@ To configure AlwaysOn Profiling programmatically, pass the arguments to the ``st
 .. code-block:: javascript
 
    start({
-      profiling: {
-         serviceName: '<service-name>',
-         endpoint: '<endpoint>'
-      },
+      serviceName: '<service-name>',
+      profiling: true,
       tracing: {
          // configuration passed to tracing signal
       },
