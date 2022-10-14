@@ -44,18 +44,24 @@ Causes
 * The Kubernetes collector is disabled.
 * If the Kubernetes collector is enabled, you can determine the root cause based on the logs for the ``k8s-watcher`` and ``k8s-relay`` containers in the ``k8s-collector`` pod.
 
-    Run the following commands to retrieve the logs for the containers.
+    #. Run the following command to find your Kubernetes pod name.
+        
+        .. code-block:: bash            
+            
+            kubectl get pods
+
+    #. Run the following commands to retrieve the logs for the containers.
 
         .. code-block:: bash
 
             kubectl logs <POD NAME> -c k8s-watcher
             kubectl logs <POD NAME> -c k8s-relay 
 
-    This is an example error message from the logs. In this case, the service account token is not available.
-        
-        .. code-block:: bash
+        This is an example error message from the logs. In this case, the service account token is not available.
             
-            Error: open /var/run/secrets/kubernetes.io/serviceaccount/token: no such file or directory
+            .. code-block:: bash
+                
+                Error: open /var/run/secrets/kubernetes.io/serviceaccount/token: no such file or directory
      
     .. note:: On initial startup, the ``k8s-watcher`` tries to connect to the ``k8s-relay``. If the ``k8s-relay`` has not yet come up, you might see the following set of error messages.
             
@@ -70,7 +76,7 @@ Solution
 ----------------
 
 * If the Kubernetes collector is disabled, you need to enable it.
-* If the Kubernetes collector is already enabled, see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server>` for more information on configuring the service account for the pod to enable communication with the API server.
+* For other errors, see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server>` for more information on configuring the service account for the pod to enable communication with the API server.
 
 
 
