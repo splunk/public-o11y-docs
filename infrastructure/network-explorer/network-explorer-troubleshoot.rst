@@ -41,10 +41,10 @@ Your Network Explorer metrics are not generated with Kubernetes metadata.
 Causes
 ----------------
 
-* The Kubernetes collector is disabled.
-* If the Kubernetes collector is enabled, you can determine the root cause based on the logs for the ``k8s-watcher`` and ``k8s-relay`` containers in the ``k8s-collector`` pod.
+* Your Kubernetes collector is disabled.
+* If your Kubernetes collector is enabled, you can determine the root cause based on the logs for the ``k8s-watcher`` and ``k8s-relay`` containers in the ``k8s-collector`` pod.
 
-    #. Run the following command to find your Kubernetes pod name.
+    #. Run the following command to find your ``k8s-collector`` pod name.
         
         .. code-block:: bash            
             
@@ -75,7 +75,7 @@ Causes
 Solution
 ----------------
 
-* If the Kubernetes collector is disabled, you need to enable it.
+* If your Kubernetes collector is disabled, you need to enable it.
 * For other errors, see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server>` for more information on configuring the service account for the pod to enable communication with the API server.
 
 
