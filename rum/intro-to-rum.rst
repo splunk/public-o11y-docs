@@ -18,9 +18,9 @@ With Splunk Real User Monitoring (RUM), you can gain insight about the performan
    * - :strong:`Product`
      - :strong:`Description`
    * - Splunk RUM for Browser
-     - Splunk RUM for Browser collects performance metrics, web vitals, errors, and other forms of data to enable you to detect and troubleshoot problems in your application. For a complete view of your application from browser to back-end, integrate with Splunk APM.
+     - Splunk RUM for Browser collects performance metrics, web vitals, errors, and other forms of data for every user session to enable you to detect and troubleshoot problems in your application. For a complete view of your application from browser to back-end, integrate with Splunk APM.
    * - Splunk RUM for Mobile
-     - Splunk Real User Monitoring (RUM) for Mobile provides visibility into your native iOS and Android mobile applications by equipping you with comprehensive performance monitoring, directed troubleshooting, and full-stack observability.
+     - Splunk Real User Monitoring (RUM) for Mobile provides visibility into every user session of your native iOS and Android mobile applications by equipping you with comprehensive performance monitoring, directed troubleshooting, and full-stack observability.
 
 
 .. _wcidw-rum:
