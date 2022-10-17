@@ -93,9 +93,63 @@ The **nested** `values` configuration object has the following fields:
 | `attribute` | no | `string` | Sets the name of the attribute from which to read the value. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example,  “attrib0.key42”. If `table` is set to `true`, path must point to a composite type, otherwise it must point to a numeric type. |
 | `attributes` | no | `list of strings` | The plural form of the `attribute` config above. Used to derive multiple metrics from a single MBean. |
 
+### Example Configuration
+This example configuration gets the thread count from a standard JMX MBean available on all Java JMX-enabled applications:
+
+```
+monitors:
+ - type: collectd/genericjmx
+   host: my-java-app
+   port: 7099
+   mBeanDefinitions:
+     threading:
+       objectName: java.lang:type=Threading
+       values:
+       - type: gauge
+         table: false
+         instancePrefix: jvm.threads.count
+         attribute: ThreadCount
+```
+
 ## Metrics
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/genericjmx/metadata.yaml"></div>
+
+## Troubleshooting
+
+Exposing JMX in your Java application can be a tricky process. Oracle has a helpful guide for Java 8 that explains how to expose JMX metrics automatically by setting Java properties on your application. For details, see [Monitoring and Management Using JMX Technology] (https://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html). Here are a set of Java properties that are known to work with Java 7+:
+
+```
+java \
+  -Dcom.sun.management.jmxremote.port=5000 \
+  -Dcom.sun.management.jmxremote.authenticate=false \
+  -Dcom.sun.management.jmxremote.ssl=false \
+  -Dcom.sun.management.jmxremote.rmi.port=5000 \
+  ...
+```
+This should work as long as the agent is allowed to access port 5000 on the Java app's host. That is, there is no firewall blocking it. Note that this does not enable authentication or encryption, but these can be added.
+
+The following error messages assume the host config is set to 172.17.0.3 and the port set to 5000. Your host config and port settings may be different. Here are some errors you might receive and their meanings:
+
+### Connection Refused
+
+```
+java \
+  -Dcom.sun.management.jmxremote.port=5000 \
+  -Dcom.sun.management.jmxremote.authenticate=false \
+  -Dcom.sun.management.jmxremote.ssl=false \
+  -Dcom.sun.management.jmxremote.rmi.port=5000 \
+  ...
+```
+This error indicates that the JMX connect port is not open on the specified host. Confirm, using netstat/ss or some other tool, that this port is indeed open on the configured host and is listening on an appropriate address. That is, if the agent is running on a remote server then JMX should not be listening on localhost only.
+
+### RMI Connection Issues
+
+```
+Creating MBean server connection failed: java.rmi.ConnectException: Connection refused to host: 172.17.0.3; nested exception is:
+     java.net.ConnectException: Connection timed out (Connection timed out)
+```
+This indicates that the JMX connect port was reached successfully, but the RMI port that it was directed to is being blocked, probably by a firewall. The easiest thing to do here is to make sure the `com.sun.management.jmxremote.rmi.port` property in your Java app is set to the same port as the JMX connect port. There may be other variations of this that say Connection reset or Connection refused but they all generally indicate a similar cause.
 
 ## Get help
 
