@@ -45,10 +45,10 @@ To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, 
 receivers:
   oracledb:
     # Refer to Oracle Go Driver go_ora documentation for full connection string options
-    datasource: "oracle://<user>:<password>@<host>:51521/XE"
+    datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
 ```
 
-To complete the monitor activation, you must also include the `sqlquery` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+To complete the monitor activation, you must also include the `oracledb` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
 
 ```yaml
 service:
@@ -68,16 +68,16 @@ The following metrics are available for this integration:
 
 You can enable or disable specific metrics by setting the value of the `enabled` option to `true` or `false`.
 
-The following example disables the `oracledb.query.cpu_time` metric and enabled the `oracledb.query.physical_read_requests` metric:
+The following example disables the `oracledb.executions` metric and enabled the `oracledb.sessions.usage` metric:
 
 ```yaml
 receivers:
   oracledb:
     datasource: "oracle://otel:password@localhost:51521/XE"
     metrics:
-      oracledb.query.cpu_time:
+      oracledb.executions:
         enabled: false
-      oracledb.query.physical_read_requests:
+      oracledb.sessions.usage:
         enabled: true
 ```
 
