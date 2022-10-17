@@ -43,7 +43,7 @@ Recommended for running Browser Tests:
 
 * Linux
 * 2.3 GHz Dual-Core Intel Xeon (or equivalent) processor
-* 8 GB RAM
+* 8 GB RAM, 2 cores
 
 
 Set up a new private location
