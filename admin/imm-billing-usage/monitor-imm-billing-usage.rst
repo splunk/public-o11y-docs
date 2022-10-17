@@ -145,6 +145,49 @@ To view usage reports available for download:
 
 .. tip:: If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics that Infrastructure Monitoring monitors for you, older reports on the :guilabel:`Billed Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
 
+.. _summary-by-month:
+
+Monthly usage report
+====================
+
+This report is available on the :guilabel:`Billed Usage` tab. For each hour within the month (or month to date, for the current month), this report shows the number of hosts and containers monitored and the number of custom metrics and high-resolution metrics sent to Infrastructure Monitoring. This report follows your usage period and uses the month when a usage period starts as the label in the report link. For example, if your usage period begins on the 10th of the month, then a link for 'March 2021' covers March 10 through April 9, 2021.
+
+You can use the monthly usage report to determine whether your usage is in line with your subscription plan. You can use the data to calculate your average usage, how many hours in the month you have been over or under your plan, and by how much.
+
+The report has six columns:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - :strong:`Column`
+     - :strong:`Description`
+
+   * - Date
+     - Follows the mm/dd/yy format.
+
+   * - Hour Ending
+     - Follows the 24 hour hh:mm UTC format. For example, 01:00 indicates the hour from midnight to 1:00 AM UTC.
+
+   * - # Hosts
+     - The number of hosts that sent data during the specified hour.
+
+   * - # Containers
+     - The number of containers that Infrastructure Monitoring monitored during the specified hour.
+
+   * - # Custom Metrics
+     - The number of non-high-resolution custom metrics (MTS) that were sent to Infrastructure Monitoring during the specified hour.
+
+   * - # High Res Metrics
+     - The number of high-resolution metrics (MTS) that were sent to Infrastructure Monitoring during the specified hour.
+
+.. _summary-including-children:
+
+Monthly usage report (multiple organizations)
+=============================================
+
+If you have multiple organizations associated with your Infrastructure Monitoring subscription, an option for a summary report that includes information on multiple organizations is also available. Similar to the :ref:`summary-by-month`, this report shows hourly information for hosts, containers, custom metrics, and high-resolution custom metrics. However, this report also includes this data for each organization associated with your subscription.
+
 .. _summary-by-hour:
 
 Hourly usage detail report
@@ -201,49 +244,6 @@ The following table explains the different columns in an hourly usage detail rep
    * - Subscription
      - Subscription associated with the category, if available
 
-
-.. _summary-by-month:
-
-Monthly usage report
-====================
-
-This report is available on the :guilabel:`Billed Usage` tab. For each hour within the month (or month to date, for the current month), this report shows the number of hosts and containers monitored and the number of custom metrics and high-resolution metrics sent to Infrastructure Monitoring. This report follows your usage period and uses the month when a usage period starts as the label in the report link. For example, if your usage period begins on the 10th of the month, then a link for 'March 2021' covers March 10 through April 9, 2021.
-
-You can use the monthly usage report to determine whether your usage is in line with your subscription plan. You can use the data to calculate your average usage, how many hours in the month you have been over or under your plan, and by how much.
-
-The report has six columns:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 80
-
-   * - :strong:`Column`
-     - :strong:`Description`
-
-   * - Date
-     - Follows the mm/dd/yy format.
-
-   * - Hour Ending
-     - Follows the 24 hour hh:mm UTC format. For example, 01:00 indicates the hour from midnight to 1:00 AM UTC.
-
-   * - # Hosts
-     - The number of hosts that sent data during the specified hour.
-
-   * - # Containers
-     - The number of containers that Infrastructure Monitoring monitored during the specified hour.
-
-   * - # Custom Metrics
-     - The number of non-high-resolution custom metrics (MTS) that were sent to Infrastructure Monitoring during the specified hour.
-
-   * - # High Res Metrics
-     - The number of high-resolution metrics (MTS) that were sent to Infrastructure Monitoring during the specified hour.
-
-.. _summary-including-children:
-
-Monthly usage report (multiple organizations)
-=============================================
-
-If you have multiple organizations associated with your Infrastructure Monitoring subscription, an option for a summary report that includes information on multiple organizations is also available. Similar to the :ref:`summary-by-month`, this report shows hourly information for hosts, containers, custom metrics, and high-resolution custom metrics. However, this report also includes this data for each organization associated with your subscription.
 
 .. _dimension-report:
 
