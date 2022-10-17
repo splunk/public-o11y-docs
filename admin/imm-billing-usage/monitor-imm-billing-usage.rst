@@ -150,7 +150,7 @@ To view usage reports available for download:
 Hourly usage detail report
 ==============================
 
-Available on the :strong:`Usage Breakdown`` tab, the hourly usage report shows the information on MTS associated with data points sent from hosts or containers in a given hour. This report contains the MTS category keys and values, along with associated cloud provider metadata.
+Available on the :strong:`Usage Breakdown` tab, the hourly usage report shows the information on MTS associated with data points sent from hosts or containers in a given hour. This report contains the MTS category keys and values, along with associated cloud provider metadata.
 
 With this report, you can see all of the MTS categories used within a given hour period.
 
