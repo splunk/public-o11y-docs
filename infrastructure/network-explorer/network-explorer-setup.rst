@@ -109,7 +109,7 @@ For additional Splunk Distribution of OpenTelemetry Collector configuration, see
 Change the resource footprint of Splunk Distribution of OpenTelemetry Collector
 -------------------------------------------------------------------------------------------------------------------
 
-Each Kubernetes has a Splunk Distribution of OpenTelemetry Collector, so you might want to adjust your resources depending on the number of Kubernetes nodes you have.
+Each Kubernetes node has a Splunk Distribution of OpenTelemetry Collector, so you might want to adjust your resources depending on the number of Kubernetes nodes you have.
     
     You can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml#L972>`, or specify different values during installation.
     
