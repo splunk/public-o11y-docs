@@ -30,7 +30,7 @@ Your ``kubelet`` and ``containerd`` cgroup drivers might be not be the same valu
 Solution
 ----------------
 
-Check the cgroup drivers of your ``kubelet`` and ``containerd`` to make sure that they match. Both of them have to be either ``cgroupfs`` or ``systemd``.
+Check the cgroup drivers of your ``kubelet`` and ``containerd`` to make sure that they match. Both of them have to be either ``cgroupfs`` or ``systemd``. For more information, see the see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/setup/production-environment/container-runtimes/#cgroup-drivers>` on cgroup drivers.
 
 
 You don't see Kubernetes metadata in Network Explorer metrics
@@ -41,7 +41,15 @@ Your Network Explorer metrics are not generated with Kubernetes metadata.
 Causes
 ----------------
 
-* Your Kubernetes collector is disabled.
+* Your Kubernetes collector is disabled. You can check this in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L71>`.
+    
+    The Kubernetes collector is disabled if you see the following.
+
+        .. code-block:: yaml            
+            
+            k8sCollector:
+              enabled: false
+
 * If your Kubernetes collector is enabled, you can determine the root cause based on the logs for the ``k8s-watcher`` and ``k8s-relay`` containers in the ``k8s-collector`` pod.
 
     #. Run the following command to find your ``k8s-collector`` pod name.
@@ -75,7 +83,13 @@ Causes
 Solution
 ----------------
 
-* If your Kubernetes collector is disabled, you need to enable it.
+* If your Kubernetes collector is disabled, you need to enable it by setting ``k8sCollector.enabled`` to ``true`` in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L71>`.
+
+    .. code-block:: yaml            
+    
+        k8sCollector:
+            enabled: true
+
 * For other errors, see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#use-the-default-service-account-to-access-the-api-server>` for more information on configuring the service account for the pod to enable communication with the API server.
 
 

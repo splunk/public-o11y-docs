@@ -265,9 +265,9 @@ Depending on the number of Kubernetes nodes you have, your resource needs might 
 Change the resource footprint of the reducer
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the number of CPU cores allocated to it.
+The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the resources allocated to it.
 
-The reducer processes telemetry in multiple stages, with each stage partitioned into one or more shards, where each shard is a separate thread.
+The reducer processes telemetry in multiple stages, with each stage partitioned into one or more shards, where each shard is a separate thread. Increasing the number of shards in each stage expands the capacity of the reducer.
  
 Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of shards per reducer stage. You can set between 1-32 shards.
 
