@@ -42,7 +42,7 @@ The following tables list all of the metrics available in Splunk RUM for iOS.
      - A crash happens when a user encounters an error and has to exit the app.
    * - ``rum.app_error.count``
      - App error
-     - App error by page. 
+     - App error by screen. 
    * - ``rum.resource_request.count``
      - Network or back-end requests/errors
      - The total number of network requests in a given time range. 
@@ -164,12 +164,6 @@ By default, the iOS RUM agent adds the following attributes to all spans:
    * - ``splunk.rum.version``
      - String
      - Version of the Splunk RUM SDK instrumenting the application.
-   * - ``screen.name``
-     - String
-     - Name of the screen or fragment from which the span is generated. To customize the screen name, see :ref:`ios-rum-change-screen-names`.
-   * - ``last.screen.name``
-     - String
-     - Name of the screen or fragment preceding the current screen. Set only if there is a change in the active ``screen.name`` attribute.
    * - ``net.host.connection.type``
      - String
      - Connection type used by the device. Possible values include ``wifi``, ``cell``, ``unavailable``, and ``unknown``.

@@ -79,12 +79,6 @@ By default, the Android RUM agent adds the following attributes to all spans:
    * - ``splunk.rum.version``
      - String
      - Version of the Splunk RUM SDK instrumenting the application.
-   * - ``screen.name``
-     - String
-     - Name of the screen or fragment from which the span is generated. To customize the screen name, see :ref:`android-rum-customize-screen-names`.
-   * - ``last.screen.name``
-     - String
-     - Name of the screen or fragment preceding the current screen. Set only if there is a change in the active ``screen.name`` attribute. To customize the screen name, see :ref:`android-rum-customize-screen-names`.
    * - ``net.host.connection.type``
      - String
      - Connection type used by the device. Possible values include ``wifi``, ``cell``, ``unavailable``, and ``unknown``.
@@ -97,7 +91,7 @@ By default, the Android RUM agent adds the following attributes to all spans:
 
 Metrics 
 =============================================
-The following tables list all of the metrics available in Splunk RUM for Android. All errors in Splunk RUM have the dimension ``sf_error=true``.
+The following tables list all of the metrics available in Splunk RUM for Android. All errors in Splunk RUM have the dimension ``sf_error=true``. 
 
 For more information on app startup metrics as defined by Android, see :new-page:`App startup time <https://developer.android.com/topic/performance/vitals/launch-time>` in the Android Developers documentation. 
 
@@ -117,10 +111,10 @@ For more information on app startup metrics as defined by Android, see :new-page
      - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
    * - ``rum.crash.count``
      - Mobile crash
-     - Total number of crashes in the given time range. 
+     - Total number of ANRs, handled exceptions, reported errors in the given time range. 
    * - ``rum.app_error.count``
      - App error
-     - Total number of crashes in the given time range. 
+     - Total number of errors in the given time range. 
    * - ``rum.cold_start.time.ns.p75``
      - Cold start time
      - The p75 time in nanoseconds of cold starts in the given time range. 
