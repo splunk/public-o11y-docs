@@ -11,14 +11,22 @@ Session replay in Splunk RUM
 
 
 
-intro 
-what is Session replay
+Session replay ... 
 
-Setup 
+Setup session replay 
 =====================
-words
+Follow these steps to setup session replay in your environment: 
 
-deactivate session replay 
+Prerequisites
+----------------------
+
+
+Activate session replay 
+--------------------------------------------
+
+
+Deactivate session replay 
+--------------------------------------------
 
 
 
