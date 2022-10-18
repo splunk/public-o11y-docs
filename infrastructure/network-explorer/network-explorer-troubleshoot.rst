@@ -30,7 +30,7 @@ Your ``kubelet`` and ``containerd`` cgroup drivers might be not be the same valu
 Solution
 ----------------
 
-Check the cgroup drivers of your ``kubelet`` and ``containerd`` to make sure that they match. Both of them have to be either ``cgroupfs`` or ``systemd``. For more information, see the see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/setup/production-environment/container-runtimes/#cgroup-drivers>` on cgroup drivers.
+Check the cgroup drivers of your ``kubelet`` and ``containerd`` to make sure that they match. Both of them have to be either ``cgroupfs`` or ``systemd``. For more information, see the :new-page:`Kubernetes documentation <https://kubernetes.io/docs/setup/production-environment/container-runtimes/#cgroup-drivers>` on cgroup drivers.
 
 
 You don't see Kubernetes metadata in Network Explorer metrics
