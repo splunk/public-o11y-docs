@@ -8,7 +8,7 @@ Install and configure the SignalFx Smart Agent
    :description: The SignalFx Smart Agent provides automatic service discovery, configuration, and metrics collection for a variety of environments. The Smart Agent is deprecated as part of the release of Splunk Observability Cloud.
 
 .. note::
-   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. After that date, this repository will be archived and no longer receive updates. Until then, only critical security fixes and bug fixes will be provided. Note, only the agent is deprecated; Smart Agent receivers are not deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
+   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note, only the agent is deprecated; Smart Agent receivers are not deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
 
 The SignalFx Smart Agent gathers host performance, application, and service-level metrics from both containerized and non-container environments. This page provides a complete list of Smart Agent resources. Use your browser's search function to quickly find what you're looking for.
 
