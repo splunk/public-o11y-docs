@@ -11,7 +11,7 @@ Troubleshoot Network Explorer
 *******************************************************
 
 .. meta::
-    :description: Troubleshooting guide for Network Explorer
+    :description: Troubleshooting guide for metrics and metadata issues in Network Explorer
 
 
 Network Explorer isn't showing metrics as expected
