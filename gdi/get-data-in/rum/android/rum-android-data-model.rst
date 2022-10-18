@@ -111,10 +111,10 @@ For more information on app startup metrics as defined by Android, see :new-page
      - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
    * - ``rum.crash.count``
      - Mobile crash
-     - Total number of ANRs, handled exceptions, reported errors in the given time range. 
+     - Total number of crashes in the given time range. 
    * - ``rum.app_error.count``
      - App error
-     - Total number of errors in the given time range. 
+     - Total number of ANRs, handled exceptions, and reported errors in the given time range. 
    * - ``rum.cold_start.time.ns.p75``
      - Cold start time
      - The p75 time in nanoseconds of cold starts in the given time range. 

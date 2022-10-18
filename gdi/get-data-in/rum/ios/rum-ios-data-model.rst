@@ -42,7 +42,7 @@ The following tables list all of the metrics available in Splunk RUM for iOS.
      - A crash happens when a user encounters an error and has to exit the app.
    * - ``rum.app_error.count``
      - App error
-     - App error by screen. 
+     - Total number of reported errors in the given time range. 
    * - ``rum.resource_request.count``
      - Network or back-end requests/errors
      - The total number of network requests in a given time range. 
