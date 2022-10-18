@@ -117,7 +117,7 @@ monitors:
 
 ## Troubleshooting
 
-Exposing JMX in your Java application can be a tricky process. Oracle has a helpful guide for Java 8 that explains how to expose JMX metrics automatically by setting Java properties on your application. For details, see [Monitoring and Management Using JMX Technology](https://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html). Here are a set of Java properties that are known to work with Java 7+:
+The following Java properties show how to expose JMX ports to inbound connections. For more information, see Monitoring and Management Using JMX Technology in the Java documentation.
 
 ```
 java \
