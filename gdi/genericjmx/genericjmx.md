@@ -96,7 +96,7 @@ The **nested** `values` configuration object has the following fields:
 ### Example Configuration
 This example configuration gets the thread count from a standard JMX MBean available on all Java JMX-enabled applications:
 
-```
+```yaml
 monitors:
  - type: collectd/genericjmx
    host: my-java-app
