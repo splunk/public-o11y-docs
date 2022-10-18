@@ -22,8 +22,7 @@ Common data types
 
 Metrics 
 =============================================
-The following tables list all of the metrics available in Splunk RUM for iOS. All errors in Splunk RUM have the dimension ``sf_error=true``. 
-Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+The following tables list all of the metrics available in Splunk RUM for iOS. 
 
 .. list-table:: 
    :widths: 20 15 65

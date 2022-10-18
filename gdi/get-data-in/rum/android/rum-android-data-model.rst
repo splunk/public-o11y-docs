@@ -97,7 +97,7 @@ By default, the Android RUM agent adds the following attributes to all spans:
 
 Metrics 
 =============================================
-The following tables list all of the metrics available in Splunk RUM for Android. All errors in Splunk RUM have the dimension ``sf_error=true``. Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+The following tables list all of the metrics available in Splunk RUM for Android. All errors in Splunk RUM have the dimension ``sf_error=true``.
 
 For more information on app startup metrics as defined by Android, see :new-page:`App startup time <https://developer.android.com/topic/performance/vitals/launch-time>` in the Android Developers documentation. 
 
