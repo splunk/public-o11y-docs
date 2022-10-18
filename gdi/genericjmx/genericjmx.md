@@ -149,7 +149,7 @@ This error indicates that the JMX connect port is not open on the specified host
 Creating MBean server connection failed: java.rmi.ConnectException: Connection refused to host: 172.17.0.3; nested exception is:
      java.net.ConnectException: Connection timed out (Connection timed out)
 ```
-This indicates that the JMX connect port was reached successfully, but the RMI port that it was directed to is being blocked, probably by a firewall. The easiest thing to do here is to make sure the `com.sun.management.jmxremote.rmi.port` property in your Java app is set to the same port as the JMX connect port. There may be other variations of this that say Connection reset or Connection refused but they all generally indicate a similar cause.
+This indicates that the JMX connect port was reached successfully, but the RMI port that it was directed to is being blocked, probably by a firewall. Make sure the `com.sun.management.jmxremote.rmi.port` property in your Java app is set to the same port as the JMX connect port. There might be other variations of the error message that say Connection reset or Connection refused which indicate a similar cause.
 
 ## Get help
 
