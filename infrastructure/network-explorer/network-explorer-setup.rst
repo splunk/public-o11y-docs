@@ -155,7 +155,7 @@ In the following example, CPU is set to :strong:`500m`, and memory is set to :st
 
     .. code-tab:: bash Pass arguments during installation
 
-      helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
+      helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
   
 
 .. _install-network-explorer:
