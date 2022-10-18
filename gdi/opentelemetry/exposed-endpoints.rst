@@ -12,7 +12,7 @@ By default, the Collector exposes several endpoints. The components providing th
 
 The endpoints exposed depend on which mode the Collector is configured in. You can disable components, especially receivers, if they are not required for an environment.
 
-Check ports to make sure your environment doesn't have conflicts and that firewalls are configured properly. Ports can be changed in the configuration YAML file.
+Check ports to make sure your environment doesn't have conflicts and that firewalls are configured properly. Ports can be changed in the YAML configuration file.
 
 See the table for a complete list of exposed ports and endpoints:
 
