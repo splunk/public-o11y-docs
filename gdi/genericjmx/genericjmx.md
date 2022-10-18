@@ -127,7 +127,7 @@ java \
   -Dcom.sun.management.jmxremote.rmi.port=5000 \
   ...
 ```
-This should work as long as the agent is allowed to access port 5000 on the Java app's host. That is, there is no firewall blocking it. Note that this does not enable authentication or encryption, but these can be added.
+This works as long as the agent is allowed to access port 5000 on the Java app's host. Note that this does not enable authentication or encryption, but these can be added.
 
 The following error messages assume the host config is set to 172.17.0.3 and the port set to 5000. Your host config and port settings might be different. The following sections show errors you might receive and their meanings:
 
