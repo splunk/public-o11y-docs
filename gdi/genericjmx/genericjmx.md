@@ -141,7 +141,7 @@ java \
   -Dcom.sun.management.jmxremote.rmi.port=5000 \
   ...
 ```
-This error indicates that the JMX connect port is not open on the specified host. Confirm, using netstat/ss or some other tool, that this port is indeed open on the configured host and is listening on an appropriate address. That is, if the agent is running on a remote server then JMX should not be listening on localhost only.
+This error indicates that the JMX connect port is not open on the specified host. Confirm, using netstat/ss or some other tool, that this port is indeed open on the configured host and is listening on an appropriate address. If the agent is running on a remote server, JMX might not be listening on localhost only.
 
 ### RMI Connection Issues
 
