@@ -161,6 +161,8 @@ Do the following to install the package from a PowerShell terminal:
 
 The package is installed to ``\Program Files\Splunk\OpenTelemetry Collector``, and the ``splunk-otel-collector`` service is created, but not started. A default configuration file is copied to ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml``, if it does not already exist. This file is required to start the ``splunk-otel-collector`` service.
 
+.. note:: The ``ProgramData`` folder is hidden by default on Windows.
+
 .. _windows-installer:
 
 Windows Installer
