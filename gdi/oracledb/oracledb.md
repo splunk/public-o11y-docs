@@ -62,10 +62,6 @@ service:
 
 The following metrics are available for this integration:
 
-## Metrics
-
-These are the metrics available for this scraper.
-
 | Name | Description | Unit | Type | Attributes |
 | ---- | ----------- | ---- | ---- | ---------- |
 | `oracledb.cpu_time` | Cumulative CPU time, in seconds. | Seconds | Sum(Double) |  |
