@@ -18,6 +18,8 @@ To generate alerts in Incident Intelligence, you can define a detector for the o
 
 - Splunk APM
 - Splunk Infrastructure Monitoring
+- Splunk RUM
+- Splunk Synthetic Monitoring
 
 See :ref:`get-started-detectoralert` for more information about configuring detectors. 
 
