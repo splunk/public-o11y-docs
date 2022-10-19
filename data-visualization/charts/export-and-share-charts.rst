@@ -14,7 +14,9 @@ Infrastructure Monitoring provides a number of ways to `share a chart <sharing-a
 Export chart contents
 ==========================
 
-You can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them. To export a chart, select :strong:`Export Chart as CSV` from the chart’s Actions menu.
+For line charts, area charts, and column charts, you can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them.
+
+To export a chart, select :strong:`Export Chart as CSV` from the chart’s :guilable:`Actions` menu.
 
 .. _sharing-a-chart:
 
