@@ -170,7 +170,7 @@ The nested `databases` configuration object has the following fields:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/mysql/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/mysql/metrics.yaml"></div>
 
 ## Get help
 

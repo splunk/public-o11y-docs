@@ -88,7 +88,7 @@ monitors:
 The following metrics are available for this integration:
 
 <!--- using type="marathon" adds a duplicate, non-table-formatted list of metrics at the bottom -->
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/marathon/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/marathon/metrics.yaml"></div>
 
 ## Get help
 

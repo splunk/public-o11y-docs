@@ -134,7 +134,7 @@ In some Windows-based SQL Server instances, TCP/IP has been disabled by default.
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/microsoft-sql-server/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/microsoft-sql-server/metrics.yaml"></div>
 
 ## Get help
 
