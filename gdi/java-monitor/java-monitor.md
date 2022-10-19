@@ -64,7 +64,7 @@ The following table shows the configuration options for the java-monitor receive
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/java/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/java/metrics.yaml"></div>
 
 The agent doesn't do any built-in filtering of metrics coming out of this receiver.
 
