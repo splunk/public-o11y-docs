@@ -191,7 +191,7 @@ collects `logins.count` and `process_time.<timer_field>`.
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/logstash/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/logstash/metrics.yaml"></div>
 
 ## Get help
 
