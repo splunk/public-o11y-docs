@@ -188,6 +188,63 @@ Monthly usage report (multiple organizations)
 
 If you have multiple organizations associated with your Infrastructure Monitoring subscription, an option for a summary report that includes information on multiple organizations is also available. Similar to the :ref:`summary-by-month`, this report shows hourly information for hosts, containers, custom metrics, and high-resolution custom metrics. However, this report also includes this data for each organization associated with your subscription.
 
+.. _summary-by-hour:
+
+Hourly usage detail report
+==============================
+
+Available on the :strong:`Usage Breakdown` tab, the hourly usage report shows the information on MTS associated with data points sent from hosts or containers in a given hour. This report contains the MTS category keys and values, along with associated cloud provider metadata.
+
+With this report, you can see all of the MTS categories used within a given hour period.
+
+The following table explains the different columns in an hourly usage detail report.
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 80
+
+   * - :strong:`Column`
+     - :strong:`Description`
+
+
+   * - Category Type
+     - Type of the MTS category: ``1`` (host) or ``2`` (container)
+
+   * - Category name
+     - Name of the MTS category: host or container
+
+   * - Token Id
+     - ID of the token associated with the category, if any
+  
+   * - Token Name
+     - Name of the token associated with the category, if any
+   
+   * - Category Key
+     - Key of the category. For example, ``AWSUniqueId``
+
+   * - Category Value
+     - Value of the category
+  
+   * - Cloud Provider
+     - Name of the cloud provider for the category
+  
+   * - Cloud Region
+     - Cloud region associated with the category, if available
+
+   * - Availability Zone
+     - Availability zone associated with the category, if available
+  
+   * - Project Name
+     - Name of the project associated with the category, if available
+
+   * - Project Number
+     - Number of the project associated with the category, if available
+
+   * - Subscription
+     - Subscription associated with the category, if available
+
+
 .. _dimension-report:
 
 Dimension report
