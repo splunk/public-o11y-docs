@@ -52,7 +52,7 @@ Note the following:
 
 * The navigation structure is defined by the `index.rst` file.
 * Each first-level folder contains the files and folders for each major section of the documentation.
-* Images are PNG or GIF files inside the `_images` directory, which is structured according to O11y areas.
+* Images are PNG or GIF files in the `_images` directory, which is structured according to O11y areas.
 * The `_build` folder contains the local build of the docs, produced by `make html`. To erase the contents of `_build`, enter `make clean`.
 
 > **NOTE:** Ignore all other files and folders, as they contain configuration settings and template files that you must not edit.
@@ -213,7 +213,7 @@ After you've saved your changes, you can test the docs using the Docker containe
 
 When testing the docs:
 
-- Make sure that Sphinx is not emitting warnings in the terminal. You must solve all build errors and warnings before opening a merge request.
+- Make sure that Sphinx is not sending warnings to the terminal. You must solve all build errors and warnings before opening a merge request.
 - Check that the documentation shows as intended.
 
 ## Create a merge request
@@ -225,4 +225,4 @@ To get your edits reviewed, open a merge request with the following features:
 - Add relevant labels.
 - Add a description for your changes.
 
-If your changes aren't ready for review, set the pull request as draft.
+If your changes aren't ready for review, set the pull request as draft. To do so, click "Convert to draft" at the bottom of the "Reviewers" section.
