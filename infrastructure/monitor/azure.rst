@@ -5,10 +5,10 @@ Monitor Azure
 **********************************
 
 .. meta::
-   :description: Learn how to monitor Microsoft Azure infrastructure resources with Splunk Observability Cloud.
+  :description: Learn how to monitor Microsoft Azure infrastructure resources with Splunk Observability Cloud.
 
 .. note::
-   Before you can start monitoring any Microsoft Azure resources, :ref:`get-started-azure`, and log in with your administrator credentials.
+  Before you can start monitoring any Microsoft Azure resources, :ref:`get-started-azure`, and log in with your administrator credentials.
 
 Splunk Observability Cloud can automatically import metrics and metadata about your services from Microsoft Azure. Observability Cloud provides infrastructure monitoring capabilities powered by Azure Monitor. See :new-page:`https://docs.microsoft.com/en-us/azure/azure-monitor/overview <https://docs.microsoft.com/en-us/azure/azure-monitor/overview>` on the Microsoft site for more information.
 
@@ -75,15 +75,18 @@ Follow these steps to analyze problem Azure services from the Infrastructure pag
 
    Analyze all the available metadata about the cloud service the instance is running in, the instance itself, and any custom tags associated with the instance. The default dashboard provides metric time series (MTS) for key metrics.
 
+.. _azure-dashboards: 
+
 Use default dashboards to monitor Azure services
-================================================
+================================================================
 
 Observability Cloud provides default dashboards for supported Azure services. Default dashboards are available in dashboard groups based on the Azure service a dashboard represents data for.
 
 To find default dashboards for Azure services, select :strong:`Navigation menu > Dashboards` and search for the Azure service you want to view dashboards for.
 
 Explore built-in content
-========================
+-------------------------------------------------------------------
+
 Observability Cloud collects data from many cloud services. To see all of the navigators provided for data collected in your organization, go to the Infrastructure page. To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`.
 
 .. note::
@@ -94,16 +97,23 @@ Observability Cloud collects data from many cloud services. To see all of the na
   - If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for Azure Virtual Machines instances display no data.
   - If you have only Smart Agent configured, Azure Virtual Machines instance navigator isn't available.
 
+.. _azure-id-metadata: 
+
 Identify Azure resources using metadata
 ================================================================================
 
-Regardless of the mechanism by which you collect and send your metrics,
-you can also use the Azure metadata that Observability Cloud imports.
-This feature is available for the relevant Azure Services as well as
-metrics collected by the collectd agent.
+Regardless of the mechanism by which you collect and send your metrics, you can also use the Azure metadata that Observability Cloud imports. This feature is available for the relevant Azure Services as well as metrics collected by the collectd agent.
 
-Azure metadata helps you analyze metrics by custom tags, region, host names,
-and other dimensions.
+Azure metadata helps you analyze metrics by custom tags, region, host names, and other dimensions.
+
+.. _azure-tag-char: 
+
+Unsupported characters in tags
+-------------------------------------------------------------------
+
+While Azure supports alphanumeric and other special characters, Infrastructure Monitoring has limitations, and certain characters within a dimension key are converted to underscores, so be careful when choosing tag names.
+
+Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, and ``@``. 
 
 The azure_resource_id dimension
 --------------------------------------------------------------------------------

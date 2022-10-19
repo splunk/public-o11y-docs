@@ -331,9 +331,9 @@ For supported AWS services, Infrastructure Monitoring imports AWS tags and adds 
 Unsupported characters 
 -------------------------------------------------------------------
 
-While AWS supports alphanumeric and other special characters, Infrastructure Monitoring has limitations, and certain characters within a dimension key are converted to underscores. 
+While AWS supports alphanumeric and other special characters, Infrastructure Monitoring has limitations, and certain characters within a dimension key are converted to underscores, so be careful when choosing tag names.
 
-Unsupported characters include ``_``, ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and ``-``. 
+Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, and ``@``. 
 
 .. _using-cloudwatch-metrics:
 
