@@ -61,7 +61,7 @@ livehtml:
 	@echo
 	@echo "Starting the live server..."
 	@echo
-	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --port 8888
 
 .PHONY: linkcheck
 linkcheck:

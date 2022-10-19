@@ -19,6 +19,8 @@ services:
       dockerfile: ./Dockerfile
     container_name: sphinx
     tty: true
+    ports:
+      - "8888:8888"
     volumes:
       - ./:/docs
     networks:
