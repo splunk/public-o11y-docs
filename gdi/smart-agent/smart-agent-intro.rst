@@ -15,7 +15,7 @@ SignalFx Smart Agent
    Migrate to OpenTelemetry Collector <../opentelemetry/smart-agent-migration-to-otel-collector>
 
 .. note::
-   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note, only the agent is deprecated; Smart Agent receivers are not deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
+   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note, only the agent is deprecated; Smart Agent receivers bundled in the Splunk Open Telemetry Collector are not deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
 
 See the following topics to learn more about the Smart Agent:
 
