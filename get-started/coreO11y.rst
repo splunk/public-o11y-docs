@@ -37,9 +37,11 @@ Splunk Infrastructure Monitoring
 
 Splunk Synthetic Monitoring
 ---------------------------------------------------------------------------------
-Splunk Synthetic Monitoring lets you test your SLOs before users do. When you proactively monitor the performance of your web application, you can remediate problems before they impact your users. Technical and business teams use Synthetic Monitoring to create detailed tests that proactively monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle.  See :ref:`intro-synthetics` to learn more. 
+Splunk Synthetic Monitoring lets you test your SLOs before users do. When you proactively monitor the performance of your web application, you can remediate problems before they impact your users. Technical and business teams use Synthetic Monitoring to create detailed tests that proactively monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle.  See :ref:`intro-synthetics` to learn what you can do with Synthetics Monitoring. 
 
-Alerting on synthetics tests makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To learn how to monitor with Synthetic Monitoring, see :ref:`uptime-test-use-case`. To set up alerts that notify you when tests fail, see :ref:`synthetics-test-config-synth-alerts`.
+Learn more about when to use Synthetic Monitoring in the use case, :ref:`uptime-test-use-case`. 
+
+Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`.
 
 
 .. _get-started-incident-response:
