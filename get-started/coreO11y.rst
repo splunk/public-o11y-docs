@@ -33,7 +33,12 @@ Splunk APM automatically generates a service map displaying all of your instrume
 
 Splunk Infrastructure Monitoring
 ---------------------------------------------------------------------------------
+Infrastructure Monitoring is a custom metrics platform for real-time monitoring across infrastructure, applications, and business metrics. It collects health and performance data from servers, virtual machines, containers, databases, public cloud services, container orchestration, serverless and other backend components in a tech stack. 
+  .. image:: /_images/infrastructure/elb-navigator-chart.gif
+    :width: 100%
+    :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
 
+  |
 
 Splunk Synthetic Monitoring
 ---------------------------------------------------------------------------------
