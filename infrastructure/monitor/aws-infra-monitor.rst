@@ -297,7 +297,7 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 Filter AWS data using tags
 =============================================================================
 
-You can filter AWS data using AWS tags, but only with namespaces for which Infrastructure Monitoring syncs tags. For more information, see :ref:`aws-namespaces`. For example, if you use Detailed Monitoring for EC2 instances in AWS Infrastructure Monitoring imports the following dimensions:
+You can filter AWS data using AWS tags, but only with namespaces for which Infrastructure Monitoring syncs tags. For more information, see :ref:`aws-namespaces`. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
 
 * ``AutoScalingGroupName``
 * ``ImageId``
