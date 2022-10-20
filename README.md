@@ -207,7 +207,7 @@ After you've saved your changes, you can test the docs using the Docker containe
 
 - Run `./start.sh` from the terminal. Make sure to run `chmod u+x start.sh` to grant execution permissions.
 - Enter `make html` or `make clean html` from within the container to build the documentation.
-- Browse `http://localhost:9000` to see the local build of the docs.
+- Browse `http://localhost:9000` to see the local build of the docs. If you're using the `make livehtml` option, access `http://localhost:8888`.
 
 > **NOTE:** Don't run git commands from the container. Exit the container first or use a separate terminal window or tab.
 

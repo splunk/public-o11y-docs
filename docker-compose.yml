@@ -20,7 +20,7 @@ services:
     container_name: sphinx
     tty: true
     ports:
-      - "8888:8888"
+      - "8888:8888" # Needed for sphinx-autobuild
     volumes:
       - ./:/docs
     networks:
