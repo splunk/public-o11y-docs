@@ -7,10 +7,10 @@ Expand the Splunk platform into Splunk Observability Cloud
 .. meta::
     :description: Learn to use your Splunk core platform logs in the observability space.
 
-* :ref:`Monitor SLIs, manage SLOs, and meet SLAs <_slis>`
-* :ref:`Respond to incidents and write postmortems <_incident-response>`
-* :ref:`Reduce toil: Automated solutions for interacting with the infrastructure <_toil-reduction>`
-* :ref:`Collaborate on reliability across teams <_collaboration>`
+* :ref:`Monitor SLIs, manage SLOs, and meet SLAs <get-started-slis>`
+* :ref:`Respond to incidents and write postmortems <get-started-incident-response>`
+* :ref:`Reduce toil: Automated solutions for interacting with the infrastructure <get-started-toil-reduction>`
+* :ref:`Collaborate on reliability across teams <get-started-collaboration>`
 
 .. _get-started-slis:
 
