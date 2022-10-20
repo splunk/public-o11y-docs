@@ -133,7 +133,7 @@ service:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/vsphere/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/vsphere/metrics.yaml"></div>
 
 ## Get help
 

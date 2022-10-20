@@ -127,7 +127,7 @@ A `num` metric reports the total number of data points the system receives after
 
 ## Metric Details
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/signalfx-org-metrics/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/signalfx-org-metrics/metrics.yaml"></div>
 
 ## Get help
 

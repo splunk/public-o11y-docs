@@ -100,7 +100,7 @@ You must enable each of the five `collect*` options to gather metrics pertaining
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/rabbitmq/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/rabbitmq/metrics.yaml"></div>
 
 ## Get help
 
