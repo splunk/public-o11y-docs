@@ -71,12 +71,12 @@ To configure the package to send log events to a custom HEC endpoint URL, you ca
 * ``hec-url = "<URL>"``
 * ``hec-token = "<TOKEN>"``
 
-The main Fluentd configuration file is installed to ``\opt\td-agent\etc\td-agent\td-agent.conf``. Custom Fluentd source configuration files can be added to the ``\opt\td-agent\etc\td-agent\conf.d`` directory after installation.
+The main Fluentd configuration file is installed to ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the driver where Fluentd is installed. Custom Fluentd source configuration files can be added to the ``<drive>\opt\td-agent\etc\td-agent\conf.d`` directory after installation.
 
 Note the following:
 
 * In this directory, all files with the .conf extension are automatically included by Fluentd.
-* By default, Fluentd is configured to collect from the Windows Event Log. See ``\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
+* By default, Fluentd is configured to collect from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
 
 After any configuration modification, apply the changes by restarting the system or running the following PowerShell commands:
 
@@ -160,6 +160,8 @@ Do the following to install the package from a PowerShell terminal:
     PS> Start-Service splunk-otel-collector
 
 The package is installed to ``\Program Files\Splunk\OpenTelemetry Collector``, and the ``splunk-otel-collector`` service is created, but not started. A default configuration file is copied to ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml``, if it does not already exist. This file is required to start the ``splunk-otel-collector`` service.
+
+.. note:: The ``ProgramData`` folder is hidden by default on Windows.
 
 .. _windows-installer:
 

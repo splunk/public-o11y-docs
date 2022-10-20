@@ -31,7 +31,7 @@ Use the Splunk Distribution of OpenTelemetry Collector
 
 Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in gateway mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector and it will serve as your local store-and-forward service for telemetry.
 
-Ensure that you give the Splunk Distribution of OpenTelemetry Collector the ability to resolve the network names and make outbound HTTPS network connections to the URLs listed in :ref:`allow-urls` or the domains listed in :ref:`allow-domains`.
+Ensure that you give the Splunk Distribution of OpenTelemetry Collector the ability to resolve the network names and make outbound HTTPS network connections to the URLs listed in :ref:`allow-urls` or the domains listed in :ref:`allow-domains`. Verify also the list of :ref:`exposed ports and endpoints <otel-exposed-endpoints>`.
 
 
 Replace the SignalFx Gateway with the Splunk Distribution of OpenTelemetry Collector

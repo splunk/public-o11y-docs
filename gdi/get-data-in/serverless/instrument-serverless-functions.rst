@@ -14,6 +14,6 @@ Instrument serverless functions for Splunk Observability Cloud
 
 Instrument your serverless functions to send metrics and traces to Splunk Observability Cloud, so that you can explore your function data using dashboards, set up alerts, and more.
 
-You can instrument functions on each of these cloud platforms:
+You can instrument functions on each of the following cloud platforms:
 
 - :ref:`AWS <splunk-otel-lambda-layer>`

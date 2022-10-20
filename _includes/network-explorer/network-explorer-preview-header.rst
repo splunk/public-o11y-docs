@@ -6,8 +6,10 @@
 
         * Introduction: :ref:`network-explorer-intro`
         * Installation and configuration: :ref:`network-explorer-setup`
-        * Metrics reference: :ref:`network-explorer-metrics`.
+        * Metrics reference: :ref:`network-explorer-metrics`
         * Use cases:
 
             * :ref:`find-network-error`
             * :ref:`cross-zone-traffic-cost`
+        
+        * Troubleshoot: :ref:`network-explorer-troubleshoot`            
