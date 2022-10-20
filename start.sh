@@ -53,9 +53,11 @@ echo "the testing container, open a separate terminal window or tab."
 echo ""
 printf "${bold}Instructions:\n${normal}"
 echo ""
-echo " 1. Run 'make html' to build the docs."
+echo " 1. Run 'make clean html' or 'make html' to build the docs."
 echo " 2. Browse http://localhost:9999 to see the local build of the docs."
 echo " 3. Enter 'exit' when you're done."
+echo ""
+printf "${bold}Note:${normal} When running 'make livehtml', browse http://localhost:6666 instead.\n"
 echo ""
 
 docker exec -it  sphinx bash
