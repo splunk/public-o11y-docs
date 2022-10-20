@@ -16,10 +16,8 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  clean      to remove previous builds (cleans cache)"
-	@echo "  install    to install/update Python modules"
 	@echo "  html       to make standalone HTML files"
 	@echo "  livehtml   to load the docs in a local server"
-	@echo "  linkcheck  to check all external links for integrity"
 
 .PHONY: clean
 clean:
@@ -29,15 +27,6 @@ clean:
 	@rm -f $(BUILDDIR)/html/.DS_Store
 	@rm -rf $(BUILDDIR)/*
 	@echo "Old files removed..."
-
-.PHONY: install
-install:
-	@echo
-	@echo "*****************************************************"
-	@echo "Installing requirements for Splunk Observability Docs"
-	@echo "*****************************************************"
-	@echo
-	pip3 install -Ur requirements.txt
 
 .PHONY: html
 html:
@@ -61,11 +50,4 @@ livehtml:
 	@echo
 	@echo "Starting the live server..."
 	@echo
-	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-
-.PHONY: linkcheck
-linkcheck:
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
-	@echo
-	@echo "Link check complete; look for any errors in the above output " \
-			"or in $(BUILDDIR)/linkcheck/output.txt."
+	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --host 0.0.0.0 --port 8888
