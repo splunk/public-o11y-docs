@@ -26,7 +26,13 @@ The following sections detail the multiple views in Observability Cloud that you
 
 Splunk APM
 ---------------------------------------------------------------------------------
-Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. Defining and managing SLOs for services with dependencies, some of which have their own SLOs, is tricky. A dynamically generated service map showing all integrated services and dependencies helps you decide if and how to combine SLOs for multiple dependencies.
+Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency.
+
+  .. image:: /_images/get-started/APMservicemapsample.png 
+    :width: 100%
+    :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data
+
+Defining and managing SLOs for services with dependencies, some of which have their own SLOs, is tricky. A dynamically generated service map showing all integrated services, critical SLIs, and dependencies helps you with critical decisions, such as whether to combine SLOs for multiple dependencies.
 
 :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services. See :ref:`dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
 
@@ -34,6 +40,9 @@ Splunk APM automatically generates a service map displaying all of your instrume
 Splunk Infrastructure Monitoring
 ---------------------------------------------------------------------------------
 Infrastructure Monitoring is a custom metrics platform for real-time monitoring across infrastructure, applications, and business metrics. It collects health and performance data from servers, virtual machines, containers, databases, public cloud services, container orchestration, serverless and other backend components in a tech stack. 
+
+Monitor your SLIs in out of the box navigators, such as the following navigator showing latency over the last minute for AWS ELB instances:
+
   .. image:: /_images/infrastructure/elb-navigator-chart.gif
     :width: 100%
     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
