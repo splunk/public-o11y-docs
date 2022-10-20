@@ -28,7 +28,7 @@ Splunk APM
 ---------------------------------------------------------------------------------
 Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. Defining and managing SLOs for services with dependencies, some of which have their own SLOs, is tricky. A dynamically generated service map showing all integrated services and dependencies helps you decide if and how to combine SLOs for multiple dependencies.
 
-:ref:`data-visualization-built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services. See :ref:`data-visualization-dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-apm-alert-visualization-apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. 
+:ref:`data-visualization-dashboards-built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services. See :ref:`data-visualization-dashboards-dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-apm-alert-visualize-apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. 
 
 
 Splunk Infrastructure Monitoring
