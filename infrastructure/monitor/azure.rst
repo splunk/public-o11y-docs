@@ -111,9 +111,7 @@ Azure metadata helps you analyze metrics by custom tags, region, host names, and
 Unsupported characters in tags
 -------------------------------------------------------------------
 
-While Azure supports alphanumeric and other special characters, Infrastructure Monitoring has limitations, and certain characters within a dimension key are converted to underscores, so be careful when choosing tag names.
-
-Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, and ``@``. 
+Be careful when choosing tag names, since Splunk Observability Cloud has limitations supporting characters. Alphanumerics, underscore and minus are allowed, while unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.
 
 The azure_resource_id dimension
 --------------------------------------------------------------------------------

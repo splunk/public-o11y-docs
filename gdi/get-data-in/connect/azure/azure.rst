@@ -19,7 +19,7 @@ After you connect your Azure account to Observability Cloud, you can do the foll
 
 - Import Azure metrics, traces, and metadata.
 - Use Observability Cloud tools to monitor your Azure services.
-- Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. Keep in mind that Observability Cloud does not support the following characters in tags: ``.``, ``:``, ``/``, ``=``, ``+``, and ``@``. 
+- Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. Splunk Observability Cloud has limitations supporting characters. Alphanumerics, underscore and minus are allowed in tags, while unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.
 
 .. raw:: html
 
