@@ -15,9 +15,7 @@ The following use cases feature examples from Buttercup Industries, a fictitious
    spa-custom-event
    identify-span-problems
    rum-mobile-usecase
-
-
-
+   rum-use-case-session-replay
 
 
 * :ref:`use-case-monitoring`
