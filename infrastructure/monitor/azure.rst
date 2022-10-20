@@ -102,7 +102,7 @@ Observability Cloud collects data from many cloud services. To see all of the na
 Identify Azure resources using metadata
 ================================================================================
 
-Regardless of the mechanism by which you collect and send your metrics, you can also use the Azure metadata that Observability Cloud imports. This feature is available for the relevant Azure Services as well as metrics collected by the collectd agent.
+You can use all the Azure metadata imported into Observability Cloud, regardless of the mechanism by which you collect and send metrics. This feature is available for the relevant Azure Services as well as metrics collected by the collectd agent.
 
 Azure metadata helps you analyze metrics by custom tags, region, host names, and other dimensions.
 
