@@ -79,3 +79,19 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. Select an elapsed time period in the drop-down list next to :guilabel:`If unacknowledged after`.
 #. Select :guilabel:`Configure invite` to add responders.
 #. Repeat these steps until you have a complete incident workflow for the service. 
+
+Use service maintenance to mute notifications 
+==================================================
+
+Use service maintenance to mute notifications while you are making change to the service. 
+
+To put your service in maintenance, select the :guilabel:`Actions` menu on the service you want to put in maintenance and select :guilabel:`Maintenance`. 
+
+The service status will show as :guilabel:`Maintenance`. All incidents that are associated with the service that are triggered while the service is in maintenance are created in a muted state. Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
+
+Take a service out of maintenance
+-------------------------------------
+
+To take a service out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the service you want to put in maintenance and select :guilabel:`Enable`. 
+
+The service status will show as :guilabel:`Enabled`. This resumes triggering incidents associated with the service.   
