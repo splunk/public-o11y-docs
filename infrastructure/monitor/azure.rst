@@ -111,7 +111,7 @@ Azure metadata helps you analyze metrics by custom tags, region, host names, and
 Unsupported characters in tags
 -------------------------------------------------------------------
 
-Be careful when choosing tag names, since Splunk Observability Cloud has limitations supporting characters. Alphanumerics, underscore and minus are allowed, while unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.
+Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 The azure_resource_id dimension
 --------------------------------------------------------------------------------

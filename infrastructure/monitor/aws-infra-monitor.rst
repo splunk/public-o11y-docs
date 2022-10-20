@@ -331,7 +331,7 @@ For supported AWS services, Infrastructure Monitoring imports AWS tags and adds 
 Unsupported characters 
 -------------------------------------------------------------------
 
-Be careful when choosing tag names, since Splunk Observability Cloud has limitations supporting characters. Alphanumerics, underscore and minus are allowed, while unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.
+Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _using-cloudwatch-metrics:
 

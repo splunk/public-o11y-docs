@@ -151,7 +151,7 @@ You can disable this check by setting the ``enableCheckLargeVolume`` field in th
 
 CloudWatch Metric Streams do not support filtering based on resource tags. Configuration applies to individual services, and all resources that report metrics from a configured service stream those metrics. If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might increase.
 
-Be careful when choosing tag names, since Splunk Observability Cloud has limitations supporting characters. Alphanumerics, underscore and minus are allowed, while unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
+Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _after-aws-integration:
 
