@@ -1,5 +1,7 @@
 .. _set-up-incident-intelligence:
 
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 Set up Splunk Incident Intelligence
 ************************************************************************
 
