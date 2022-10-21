@@ -20,9 +20,9 @@ Splunk Observability Cloud provides out of the box solutions for monitoring your
 
 SLIs are Service Level Indicators, the metrics used to measure your system's availability. SLOs, Service Level Objectives, are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements, SLAs, are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
 
-Observability Cloud takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. 
+Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. 
 
-The following sections detail the multiple views in Observability Cloud that you can use to track reliability.
+The following sections detail the components in Observability Cloud that you can use to track reliability.
 
 Splunk APM
 ---------------------------------------------------------------------------------
@@ -57,6 +57,13 @@ Learn more about when to use Synthetic Monitoring in the use case, :ref:`uptime-
 
 Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`.
 
+Splunk Log Observer Connect
+---------------------------------------------------------------------------------
+Splunk Log Observer Connect defaults to displaying a count of all of your logs by severity, highlighting the percentage of logs with errors at any given time.
+
+  .. image:: /_images/get-started/LOsample-core.png 
+    :width: 100%
+    :alt: This image shows Log Observer Connect with a timeline displaying a count of logs by severity.
 
 .. _get-started-incident-response:
 
