@@ -407,8 +407,13 @@ dt:target, .highlight {
 }
 
 div.note {
-    background-color: #EEE;
-    border: 1px solid #CCC;
+    background-color: #c7eafb;
+    border: 1px solid #53648d;
+}
+
+div.caution {
+    background-color: #fefbe8;
+    border-color: #f8e8c7;
 }
 
 div.seealso {
