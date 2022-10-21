@@ -651,6 +651,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   logs/queries
+
+.. toctree::
+   :maxdepth:   3
+
    logs/raw-logs-display
 
 .. toctree::
