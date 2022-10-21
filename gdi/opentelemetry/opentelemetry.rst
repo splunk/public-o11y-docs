@@ -11,13 +11,14 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
     :maxdepth: 5
     :hidden:
 
-    smart-agent-migration-to-otel-collector.rst
+    Collector overview <resources.rst>
+    Migrate from the SignalFx Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     collector-architecture.rst
     install-the-collector.rst
     configure-the-collector.rst
     use-the-collector.rst
     troubleshooting.rst
-    resources.rst
+    
 
 The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
 
