@@ -131,7 +131,7 @@ Note the following regarding this feature.
 
 - The time zone is always represented as GMT (marked on the chart as UTC).
 
-.. admonition:: Troubleshooting
+.. note:: Troubleshooting
 
    If you don’t see the preview image in Slack, possible reasons are:
 

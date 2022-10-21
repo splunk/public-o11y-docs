@@ -617,7 +617,7 @@ If you have previously :ref:`integrated your alerts with another system <admin-n
 Adding recipients is optional, but often useful.
 
 
-.. admonition:: Tips
+.. note:: Tips
 
    - If you want to add the same subscriber(s) to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option in the Detectors tab on the Alerts page after you save the detector.
 
