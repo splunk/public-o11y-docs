@@ -1,16 +1,20 @@
 .. _get-started-core-to-o11y:
 
 ****************************************************************
-Expand the Splunk platform into Splunk Observability Cloud
+Expand the Splunk platform into observability
 ****************************************************************
 
 .. meta::
     :description: Learn to use your Splunk core platform logs in the observability space.
 
 * :ref:`Monitor SLIs, manage SLOs, and meet SLAs <get-started-slis>`
+
 * :ref:`Respond to incidents and write postmortems <get-started-incident-response>`
+
 * :ref:`Reduce toil: Automated solutions for interacting with the infrastructure <get-started-toil-reduction>`
+
 * :ref:`Collaborate on reliability across teams <get-started-collaboration>`
+
 
 .. _get-started-slis:
 
@@ -47,7 +51,7 @@ Monitor your SLIs in out of the box navigators, such as the following navigator 
     :width: 100%
     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
 
-  |
+:ref:`virtualmetrics` help you more accurately and thoroughly measure SLIs by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options.
 
 Splunk Synthetic Monitoring
 ---------------------------------------------------------------------------------
