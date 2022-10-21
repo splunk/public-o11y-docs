@@ -69,7 +69,7 @@ The following table shows the configuration options for the Memcached monitor:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/memcached/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/memcached/metrics.yaml"></div>
 
 ## Get help
 

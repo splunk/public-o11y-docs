@@ -205,7 +205,7 @@ monitors:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/elasticsearch/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/elasticsearch/metrics.yaml"></div>
 
 ## Get help
 

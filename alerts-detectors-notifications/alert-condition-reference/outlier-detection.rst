@@ -101,7 +101,7 @@ The ``Trigger duration`` and ``Clear duration`` options are used to trigger or c
 
 -  Specifying |nbsp| 100% means that all expected data points arrived (there were no delayed or missing data points) and all met the threshold. In other words, if you specify 100% |nbsp| of a time range, an alert isn't triggered if any data points are delayed or do not arrive at all during that time range, even if all the data points that are received :strong:`do` meet the threshold.  (For more information about delayed or missing data points, see :ref:`delayed-missing`.)
 
-   .. tip:: To specify that an alert triggers immediately, specify 100% |nbsp| of 1 |nbsp| second for infrastructure detectors, and 100% |nbsp| of 10 |nbsp| seconds for µAPM |nbsp| detectors. If the signal resolution is greater than the value you enter, a message indicates that you need to change it to at least the value of the signal resolution.
+   .. note:: To specify that an alert triggers immediately, specify 100% |nbsp| of 1 |nbsp| second for infrastructure detectors, and 100% |nbsp| of 10 |nbsp| seconds for µAPM |nbsp| detectors. If the signal resolution is greater than the value you enter, a message indicates that you need to change it to at least the value of the signal resolution.
 
 -  Specifying a percentage below |nbsp| 100 has a few effects:
 

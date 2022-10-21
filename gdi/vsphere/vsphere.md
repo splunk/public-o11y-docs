@@ -104,11 +104,36 @@ After the initial sweep, the monitor queries the vCenter for performance data an
 
 The monitor also refreshes, at a configurable interval, the cache of hosts, virtual machines, and metrics. By default, this refresh takes place every 60 seconds; however, this interval can be changed by updating the configuration field `InventoryRefreshInterval`.
 
+### Example
+
+See the following configuration example:
+
+```yaml
+receivers:
+  smartagent/vsphere:
+    type: vsphere
+    host: hostname
+    username: user
+    password: pass
+    insecureSkipVerify: true
+exporters:
+  signalfx:
+    access_token: abc123
+    realm: us2
+service:
+  pipelines:
+    metrics:
+      receivers:
+        - smartagent/vsphere
+      exporters:
+        - signalfx
+```
+
 ## Metrics
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/vsphere/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/vsphere/metrics.yaml"></div>
 
 ## Get help
 

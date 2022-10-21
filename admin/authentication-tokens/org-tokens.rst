@@ -99,7 +99,7 @@ To create an access token:
 #. Enter a unique token name. If you enter a token name that is already in use, even if the token is disabled, Infrastructure Monitoring doesn't accept the name.
 #. Select an authorization scope for the token from one of the following values:    
    
-   .. tip:: Assign only one authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
+   .. note:: Assign only one authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
 
    - :strong:`RUM Token`: Select this authorization scope to use the token to authenticate with RUM ingest endpoints. These endpoints use the following base URL: :code:`https://rum-ingest.<REALM>.signalfx.com/v1/rum`.
       
