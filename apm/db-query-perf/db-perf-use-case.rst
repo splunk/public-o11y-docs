@@ -71,7 +71,7 @@ Jax notices that the span containing the database call is much longer than all o
    :width: 100%
    :alt: This screenshot shows Trace View for a particular trace associated with the database latency issue. A specific span within the trace is expanded, and the ``db.statement`` span tag is highlighted to show that the span contains the same database query that Jax identified in Database Query Performance view. The Performance Summary and name of the database are also highlighted. 
 
-.. tip:: If the database query is long and has been truncated in the span, you can click on the :strong:`Related Content` tile at the bottom of the page to pivot into Log Observer and view the full query in logs.
+.. note:: If the database query is long and has been truncated in the span, you can click on the :strong:`Related Content` tile at the bottom of the page to pivot into Log Observer and view the full query in logs.
 
 Armed with this knowledge, Jax contacts the DBA who supports this database and provides the exact text of the query that’s causing problems. Jax asks them to investigate the source of this latency and optimize the database call to prevent further issues with service latency.
 

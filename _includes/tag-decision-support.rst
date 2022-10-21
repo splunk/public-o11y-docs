@@ -1,4 +1,4 @@
-.. admonition:: Deciding where to add a span tag    
+.. note:: Deciding where to add a span tag    
 
    When you add span tags to spans via application instrumentation, you have the most control at the per-application level. The tradeoff is that it can be more time-consuming to add an attribute via instrumentation for each of your applications. 
 

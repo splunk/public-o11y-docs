@@ -22,7 +22,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Python, lik
 
 The agent of the Splunk Distribution of OpenTelemetry Python is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories.
 
-.. warning:: Use the Splunk Distribution of OpenTelemetry Python instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports upstream OTel components as part of the Splunk Distribution of OpenTelemetry Python.
+.. caution:: Use the Splunk Distribution of OpenTelemetry Python instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports upstream OTel components as part of the Splunk Distribution of OpenTelemetry Python.
 
 Defaults of the Splunk Distribution of OpenTelemetry Python
 ==============================================================
