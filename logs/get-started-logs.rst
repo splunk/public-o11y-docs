@@ -1,4 +1,4 @@
-.. _logs-get-started-logs:
+.. _get-started-logs:
 
 *************************************
 Introduction to Splunk Log Observer
