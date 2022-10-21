@@ -28,7 +28,7 @@ The first step toward observability is getting relevant data into Observability 
 
 .. rst-class:: newcard
 
-:strong:`Start bla bla`
+:strong:`Get data in`
 Learn how to get data in from each layer in your stack :ref:`get-started-get-data-in`
 
 
