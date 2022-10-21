@@ -321,7 +321,7 @@ div.admonition {
     background-color: #F1FAFE; /* light blue */
 /*     border: 1px solid #FAA; */
 /*     border: 1px solid #0B599D; blue */
-    border: 1px solid #59A200;  /* green */
+/*    border: 1px solid #59A200;  /* green */
 }
 
 
@@ -356,7 +356,7 @@ div.admonition p.admonition-title  brs{
 div.admonition p.admonition-title {
     font-family: 'Open Sans';
     font-weight: normal;
-    font-size: 24px;
+    font-size: 18px;
     margin: 0 0 10px 0;
     padding: 0;
     line-height: 1;
@@ -407,8 +407,23 @@ dt:target, .highlight {
 }
 
 div.note {
-    background-color: #EEE;
-    border: 1px solid #CCC;
+    background-color: #f2faff !important;
+    border-color: 1px solid #c7eafb !important;
+}
+
+div.admonition.note > p.admonition-title::before {
+    content: "ⓘ ";
+    color: navy;
+}
+
+div.caution {
+    background-color: #fefbe8 !important;
+    border-color: 1px solid #f8e8c7 !important;
+}
+
+div.caution > p.admonition-title::before {
+    content: "⚠ ";
+    color: orange;
 }
 
 div.seealso {
@@ -1040,4 +1055,3 @@ a.image-reference:hover
         transform: translate(24px, 0);
     }
 }
-

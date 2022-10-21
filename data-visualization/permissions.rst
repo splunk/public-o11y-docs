@@ -121,7 +121,7 @@ Write permissions work in the following way:
 * Anyone who has write permission for an item also has read permission for the same item.
 * Administrators can grant and revoke write permissions for any item.
 
-.. admonition:: Important
+.. note:: Important
 
    Permissions help prevent accidental changes, but they don't
    disable changes. Consider the following:
