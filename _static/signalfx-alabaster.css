@@ -356,7 +356,7 @@ div.admonition p.admonition-title  brs{
 div.admonition p.admonition-title {
     font-family: 'Open Sans';
     font-weight: normal;
-    font-size: 24px;
+    font-size: 18px;
     margin: 0 0 10px 0;
     padding: 0;
     line-height: 1;
@@ -1055,4 +1055,3 @@ a.image-reference:hover
         transform: translate(24px, 0);
     }
 }
-
