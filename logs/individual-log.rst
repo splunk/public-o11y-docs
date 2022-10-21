@@ -11,7 +11,7 @@ View individual log details and create a field extraction processor
   :description: View problem details in an individual log
 
 The previous topic, Filter by fields from logs, filtered logs to find the error that appeared with the greatest frequency. Clicking the most frequent
-error value helps you focus on logs that contained the :strong:`could not retrieve product`error.
+error value helps you focus on logs that contained the :strong:`could not retrieve product` error.
 
 After you find log records that contain a specific area, view the
 contents of an individual record to get a precise view of the data related to
