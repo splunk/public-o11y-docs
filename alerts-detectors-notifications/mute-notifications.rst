@@ -56,7 +56,7 @@ To mute a specific detector or alert:
 
 #. :ref:`Configure and save the muting rule <rule-configure>`.
 
-.. tip:: To mute a detector while you're :ref:`editing it <create-detectors>`, select :menuselection:`Mute` from the detector's action menu (|more|).
+.. note:: To mute a detector while you're :ref:`editing it <create-detectors>`, select :menuselection:`Mute` from the detector's action menu (|more|).
 
 .. _rule-from-group-by:
 

@@ -67,7 +67,7 @@ A similar option is available for histogram charts. To learn more, see :ref:`col
 Use with a secondary visualization option
 -------------------------------------------------------------------
 
-.. important:: If you use the Fixed color threshold option on a heatmap chart, this section doesn't apply. See :ref:`specify-color-values` instead.
+.. caution:: If you use the Fixed color threshold option on a heatmap chart, this section doesn't apply. See :ref:`specify-color-values` instead.
 
 #. Select the secondary visualization type you want to use. To learn more, see :ref:`secondary`.
 #. If necessary, select :guilabel:`Value` from the Color by dropdown menu to display the threshold selector. If you have already specified a |sv| of Radial or Linear, Color by value is the only option available.
@@ -165,7 +165,7 @@ Use this option to specify which columns you want to display in the data table. 
 
 By default, all dimensions relevant to the plots on the chart are displayed, along with one or more other fields. To specify which fields are displayed, click :guilabel:`Custom`. Toggle items on and off as desired.
 
-.. tip:: To learn more about editing the plot names displayed, see :ref:`plot-name`.
+.. note:: To learn more about editing the plot names displayed, see :ref:`plot-name`.
 
 To re-order the fields, click and drag the icon that appears when you hover over the items on the list.
 
@@ -186,7 +186,7 @@ Time range and heatmap charts
 
 By default, a heatmap chart reflects the data point received when the chart last refreshes; charts refresh every 5  |nbsp| minutes. You can specify an absolute time range to see values representing the last data point received at an earlier time. For example, if it is now 3  |nbsp| PM, you could specify a time range ending at 1 |nbsp| PM to see what the heatmap values were approximately 2  |nbsp| hours ago. To learn more, see :ref:`absolute-time-range`.
 
-.. tip:: If you want to see past values, don't choose a relative time range from the Time Range Selector. Choosing a relative time range only continues to display the most recently received data point. Instead, specify an absolute time range.
+.. note:: If you want to see past values, don't choose a relative time range from the Time Range Selector. Choosing a relative time range only continues to display the most recently received data point. Instead, specify an absolute time range.
 
 .. _description:
 

@@ -21,7 +21,7 @@ Ongoing traces
 
 Splunk APM assembles incoming spans into traces and analyzes them to give you full fidelity access to your application data. With ongoing traces, you can view incoming spans of a trace being assembled, without having to wait for the entire trace to complete. 
 
-.. tip:: If you have a Log Observer license, make it easier to find ongoing traces in APM, by making sure the ``trace_id`` field is showing up in your logs.
+.. note:: If you have a Log Observer license, make it easier to find ongoing traces in APM, by making sure the ``trace_id`` field is showing up in your logs.
 
 To view an ongoing trace, do the following:
 

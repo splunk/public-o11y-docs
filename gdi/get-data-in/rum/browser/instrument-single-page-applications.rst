@@ -171,7 +171,7 @@ To instrument a Nuxt.js v2 SPA using the Browser RUM agent, follow these steps:
          ],
       }
 
-   .. tip:: This step is not required when using Nuxt.js v3, as it registers plugins automatically.
+   .. note:: This step is not required when using Nuxt.js v3, as it registers plugins automatically.
 
 Angular Universal
 --------------------------------------------------------

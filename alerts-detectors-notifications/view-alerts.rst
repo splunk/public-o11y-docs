@@ -31,7 +31,7 @@ To see more details about the alert, click its rule name and source in the table
    :width: 99%
    :alt: Details of an alert
 
-.. tip:: If you can't find an alert, :ref:`apply a filter <alerts-filter>` to reduce the number of matching alerts.
+.. note:: If you can't find an alert, :ref:`apply a filter <alerts-filter>` to reduce the number of matching alerts.
 
 .. _alerts-filter:
 

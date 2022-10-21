@@ -17,4 +17,4 @@ The SignalFx Lambda wrappers instrument your AWS Lambda functions to send metric
 - Ruby. See :new-page:`SignalFx Ruby Wrapper <https://github.com/signalfx/lambda-ruby>` on GitHub.
 - C#. See :new-page:`SignalFx C# Wrapper <https://github.com/signalfx/lambda-csharp>` on GitHub.
 
-.. tip:: The SignalFx Lambda wrappers are deprecated. Use the :ref:`Splunk OpenTelemetry Lambda Layer <splunk-otel-lambda-layer>` to instrument your lambdas on AWS to send traces and metrics to Splunk Observability Cloud. To learn how to migrate to the Splunk OpenTelemetry Lambda Layer, see :ref:`migrate-signalfx-lambda-wrappers`.
+.. note:: The SignalFx Lambda wrappers are deprecated. Use the :ref:`Splunk OpenTelemetry Lambda Layer <splunk-otel-lambda-layer>` to instrument your lambdas on AWS to send traces and metrics to Splunk Observability Cloud. To learn how to migrate to the Splunk OpenTelemetry Lambda Layer, see :ref:`migrate-signalfx-lambda-wrappers`.

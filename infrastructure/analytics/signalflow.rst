@@ -123,7 +123,7 @@ In the following example, hiding partial values (magenta bars) provides a better
 
 The value at the start of each cycle represents the final value for the previous cycle. The magenta column at 12:00 AM February 15 represents the mean of the values seen over February 14. The column at 12:00 AM February 16 represents the mean of the values for February 15, and so on.
 
-.. tip:: Single value charts can be useful for visualizing calculations such as the maximum latency reported in the current day so far. To properly display these numbers, deselect :guilabel:`Hide partial values`.
+.. note:: Single value charts can be useful for visualizing calculations such as the maximum latency reported in the current day so far. To properly display these numbers, deselect :guilabel:`Hide partial values`.
 
 .. _cal-window-timeshift:
 
