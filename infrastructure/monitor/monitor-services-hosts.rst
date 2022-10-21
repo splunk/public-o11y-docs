@@ -33,4 +33,5 @@ See the following pages for more information about using navigators to monitor e
   
   - :ref:`infrastructure-hosts`
 
-Splunk Observability Cloud also provides metrics and other data :ref:`for the following application receivers <monitor-data-sources>`.
+Splunk Observability Cloud also provides metrics and other data :ref:`for the following host and application monitors <monitor-data-sources>`.
+

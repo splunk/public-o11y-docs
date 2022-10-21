@@ -1,8 +1,8 @@
 .. _infrastructure-infrastructure:
 
-********************************
+*********************************************
 Set up Infrastructure Monitoring
-********************************
+*********************************************
 
 .. meta::
    :description: Learn how to configure Infrastructure Monitoring in Splunk Observability Cloud.
@@ -58,7 +58,7 @@ In steps 1 and 2, you sent data into Observability Cloud from supported cloud se
 
 To view the Infrastructure Overview, select :strong:`Navigation menu > Infrastructure`. From this page, you can view your infrastructure, as described in the following table.
 
-Splunk Observability Cloud also provides metrics and other data :ref:`for the following application receivers <monitor-data-sources>`.
+Splunk Observability Cloud also provides metrics and other data :ref:`for the following host and application monitors <monitor-data-sources>`.
 
 .. list-table::
    :header-rows: 1
