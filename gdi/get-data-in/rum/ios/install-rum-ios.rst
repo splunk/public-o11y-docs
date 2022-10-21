@@ -95,7 +95,7 @@ Enable crash reporting
 
 The Splunk iOS Crash Reporting module adds crash reporting to the iOS RUM agent using PLCrashReporter.
 
-.. warning:: Before enabling crash reporting in the iOS RUM agent, disable any other crash reporting package or library in your application. Existing crash reporting functionality might produce unexpected results, including build failures.
+.. caution:: Before enabling crash reporting in the iOS RUM agent, disable any other crash reporting package or library in your application. Existing crash reporting functionality might produce unexpected results, including build failures.
 
 To enable crash reporting in the iOS RUM agent, follow these steps:
 

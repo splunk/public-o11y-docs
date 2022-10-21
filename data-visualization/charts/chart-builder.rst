@@ -71,7 +71,7 @@ For example, suppose you want to display the percentage of cache hits for a syst
 
 Click :strong:`Enter Formula` to enter a formula in the :strong:`Signal` field.
 
-.. tip:: To see only the composite metric (in this case, C, the percentage value) on the chart, click the eye icon to the left of plots A and B to hide them from the display.
+.. note:: To see only the composite metric (in this case, C, the percentage value) on the chart, click the eye icon to the left of plots A and B to hide them from the display.
 
 
 Determine the kind of entry a plot is displaying
@@ -115,7 +115,7 @@ As filters are applied, the data shown in the chart updates in real-time, as a w
 
 As you filter a signal, tokens representing the filter options are added to the :strong:`Plot Editor` tab. If the token is grey instead of the default blue, this indicates that the filter option is being overridden by a dashboard variable or filter that has propagated down to the chart. For example, this can happen when you set a :strong:`Filter` value in the :strong:`Overrides` section that conflicts with a filter you added to a plot line.
 
-.. tip:: If you add or edit any of the Override values, the values are applied to every chart in this chart's dashboard when you close the chart. For more information, see :ref:`view-charts-dashboards`.
+.. note:: If you add or edit any of the Override values, the values are applied to every chart in this chart's dashboard when you close the chart. For more information, see :ref:`view-charts-dashboards`.
 
 
 .. _choosing-rollup:
@@ -135,7 +135,7 @@ Apply analytics to a plot
 
 You can apply :term:`analytics` to the time series on this plot. When you click :strong:`Add Analytics`, a list of available functions displays. Splunk Observability Cloud supports not only basic function, such as :ref:`Sum<sum>`, :ref:`Count<count>`, and :ref:`Mean<mean>`, but also more powerful functions like :ref:`Percentile<percentile>`, :ref:`Timeshift<timeshift>`, :ref:`Top/Bottom<top-bottom>`, and :ref:`Exclude<exclude>`. Hover over a function to see a brief description.
 
-.. tip:: Some analytics functions have the same name as certain rollup types, but they work in very different ways. For information on how rollups and analytics work together, see :ref:`rollups-analytics-interactions`.
+.. note:: Some analytics functions have the same name as certain rollup types, but they work in very different ways. For information on how rollups and analytics work together, see :ref:`rollups-analytics-interactions`.
 
 If you know the name of the analytics function you want to apply, type it into the :strong:`Analytics` field. Splunk Observability Cloud provides type-ahead search to show you a list of terms that match. Alternatively, scroll and choose a function from the list. If you apply a function, it displays as a token.
 
@@ -163,7 +163,7 @@ When you hover over a chart, the plot line for the time series you are focused o
 
 To see detailed information about data points in a chart, select the :strong:`Data Table` tab. If you haven't pinned a point on the chart, values for the most recent data in the chart display. Alternatively, you can click in the chart to pin a point in time and display the :strong:`Data Table` tab.
 
-.. tip:: If you edited a :ref:`plot name <plot-name>` or specified :ref:`display units<plot-display-units>` in the Chart Builder, this information displays when you hover over the chart and in the :strong:`Data Table`. For example, instead of seeing ``250`` as a value, you might see ``250 ms`` (where you specified :strong:`ms` as a suffix) or ``$250/millisecond`` (where you specified :strong:`$` as a prefix and :strong:`/millisecond` as a suffix).
+.. note:: If you edited a :ref:`plot name <plot-name>` or specified :ref:`display units<plot-display-units>` in the Chart Builder, this information displays when you hover over the chart and in the :strong:`Data Table`. For example, instead of seeing ``250`` as a value, you might see ``250 ms`` (where you specified :strong:`ms` as a suffix) or ``$250/millisecond`` (where you specified :strong:`$` as a prefix and :strong:`/millisecond` as a suffix).
 
 When you move the cursor through different areas on a chart, the plot line under the cursor is highlighted, and the detail line for that plot line is highlighted. You might have to scroll through the :strong:`Data Table` tab to find the highlighted information. If you have pinned a value, that value displays in the first column of the table, and you can compare other values to it as you move the cursor.
 
@@ -218,7 +218,7 @@ Click near an event marker to see a list of events for that time interval on the
 
 To make it easier to spot correlations between events and metric values, you can display a vertical line along with the event marker. This line is color-coded just like the event marker at the bottom of the chart. To add vertical lines to the markers on the chart, select :ref:`Show events as lines<event-lines>` on the :strong:`Chart Options` tab.
 
-.. tip:: You can also :ref:`overlay event markers<dashboard-event-overlay>` onto charts that are displayed on a dashboard.
+.. note:: You can also :ref:`overlay event markers<dashboard-event-overlay>` onto charts that are displayed on a dashboard.
 
 
 .. _chart-manual-events:
@@ -294,7 +294,7 @@ Left and right Y-axes
 
 By default, all plots in a chart use the Y-axis values displayed on the left side of a chart. If you have multiple plots, it might be useful to use a second Y-axis, with values displayed on the right side of the chart. Click the axis selector for the plot, then select :strong:`left` or :strong:`right`. For line charts, a plot that uses the left Y-axis displays with solid lines, and the right Y-axis displays with dotted lines.
 
-.. tip:: If you are using the :ref:`Stack chart<stacked-chart>` option for an area or column chart, all plots should use the same Y-axis.
+.. note:: If you are using the :ref:`Stack chart<stacked-chart>` option for an area or column chart, all plots should use the same Y-axis.
 
 Specifying two Y-axes can make chart data look very different. Splunk Observability Cloud adjusts axis values of both axes to enhance the display of the data.
 
@@ -376,7 +376,7 @@ Specify the metric unit
 
 Size and time metrics; such as kb, Gb, ms, and w; are available from the :strong:`Display Units` drop-down menu. In addition to displaying on the :strong:`Data Table` tab or when hovering over a chart, the unit you specify display on the y-axis associated with the metric and is automatically scaled as appropriate. For example, if you are measuring a value in seconds and the values range from 10 seconds to 2 minutes, the y-axis might show increments such as 20s, 40s, 1m, 1.5m, and 2m.
 
-.. tip:: For auto-scaling to work as expected, metrics in all plots that share the same y-axis should be of the same unit. For more information on using multiple y-axes, see :ref:`axes-tab`.
+.. note:: For auto-scaling to work as expected, metrics in all plots that share the same y-axis should be of the same unit. For more information on using multiple y-axes, see :ref:`axes-tab`.
 
 
 .. _prefix-suffix:
@@ -681,7 +681,7 @@ When the Graphite wildcard option is selected, the ability to filter plots by di
 Node aliasing for Graphite-style metrics
 -------------------------------------------------------------------
 
-.. tip:: The information in this section also applies to New Relic style metrics.
+.. note:: The information in this section also applies to New Relic style metrics.
 
 One of the most powerful features in Splunk Observability Cloud is its use of dimensions to filter metrics or perform group |hyph| by aggregations. For example, you can filter in or out time series that match :code:`datacenter:snc`, or calculate the average value of the metric :code:`cpu.total.user` across multiple hosts, grouped by role.
 

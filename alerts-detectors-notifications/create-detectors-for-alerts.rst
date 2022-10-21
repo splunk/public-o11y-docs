@@ -214,7 +214,7 @@ The following table summarizes the available built-in alert conditions for Infra
      - Example 1 - The value for ``cache_misses`` is above ``cache_hits``. Example 2 - The value for ``cache_misses`` is above ``cache_hits`` OR the value for ``cache_misses_percent`` is above 10.
 
 
-.. tip:: If you want to create compound conditions using AND or OR operators on the Alert Settings tab, you must use the Custom Threshold condition. This limitation applies whether you are monitoring a single signal or multiple signals.
+.. note:: If you want to create compound conditions using AND or OR operators on the Alert Settings tab, you must use the Custom Threshold condition. This limitation applies whether you are monitoring a single signal or multiple signals.
 
 After you have selected the alert condition, continue to the next tab to specify the settings that will trigger alerts.
 
@@ -229,7 +229,7 @@ In the :strong:`Alert settings` tab, you specify the settings that will trigger 
 
 The available settings vary depending on the alert condition you selected.
 
-.. tip:: If you are using the Custom Threshold condition, you can click :guilabel:`Add another condition` to create compound conditions using AND and OR operators. For more information about compound conditions, see :ref:`custom-threshold`.
+.. note:: If you are using the Custom Threshold condition, you can click :guilabel:`Add another condition` to create compound conditions using AND and OR operators. For more information about compound conditions, see :ref:`custom-threshold`.
 
 In the chart, you see a preview of the alerts that would have been triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
 

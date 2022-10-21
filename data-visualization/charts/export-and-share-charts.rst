@@ -77,7 +77,7 @@ The techniques available for sharing a chart depend on where you are viewing the
      - Provides a graphic representation of the chart
      - Can be viewed by anyone
 
-.. important:: 
+.. caution:: 
 
    
    Provide a browser’s URL for a chart with caution; any changes someone makes to the chart are visible to everyone viewing the chart, and can overwrite changes others have made to the chart.

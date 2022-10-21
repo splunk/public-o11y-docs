@@ -22,7 +22,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Go, like bu
 
 The Splunk Distribution of OpenTelemetry Go is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they're integrated in the upstream OTel repositories.
 
-.. warning:: Use the Splunk Distribution of OpenTelemetry Go instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Go.
+.. caution:: Use the Splunk Distribution of OpenTelemetry Go instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Go.
 
 Defaults of the Splunk Distribution of OpenTelemetry Go
 ===========================================================
