@@ -354,13 +354,12 @@ div.admonition p.admonition-title  brs{
 
  */
 div.admonition p.admonition-title {
-    /*font-family: 'Open Sans';
+    font-family: 'Open Sans';
     font-weight: normal;
     font-size: 24px;
     margin: 0 0 10px 0;
     padding: 0;
-    line-height: 1;*/
-    display: none;
+    line-height: 1;
 }
 
 div.admonition p.last {
@@ -412,18 +411,18 @@ div.note {
     border-color: 1px solid #c7eafb !important;
 }
 
-div.info > div::before {
-    content: "ⓘ";
+div.admonition.note > p.admonition-title::before {
+    content: "ⓘ ";
     color: navy;
 }
 
-div.caution > div {
+div.caution {
     background-color: #fefbe8 !important;
     border-color: 1px solid #f8e8c7 !important;
 }
 
-div.caution > div::before {
-    content: "⚠";
+div.caution > p.admonition-title::before {
+    content: "⚠ ";
     color: orange;
 }
 
