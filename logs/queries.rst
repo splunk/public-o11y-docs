@@ -1,7 +1,7 @@
 .. _logs-queries:
 
 *****************************************************************************
-Query Log Observer
+Query logs in Log Observer Connect or Log Observer
 *****************************************************************************
 
 .. meta created 2022-07-12
