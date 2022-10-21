@@ -631,7 +631,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   logs/get-started-logs
+   logs/intro-to-logs
 
 .. toctree::
    :maxdepth:   3
