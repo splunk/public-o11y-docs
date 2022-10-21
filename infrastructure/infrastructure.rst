@@ -58,6 +58,8 @@ In steps 1 and 2, you sent data into Observability Cloud from supported cloud se
 
 To view the Infrastructure Overview, select :strong:`Navigation menu > Infrastructure`. From this page, you can view your infrastructure, as described in the following table.
 
+Splunk Observability Cloud also provides metrics and other data :ref:`for the following application receivers <monitor-data-sources>`.
+
 .. list-table::
    :header-rows: 1
    :widths: 20, 25, 55
