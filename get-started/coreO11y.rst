@@ -51,7 +51,7 @@ Monitor your SLIs in out of the box navigators, such as the following navigator 
     :width: 100%
     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
 
-:ref:`virtualmetrics` help you more accurately and thoroughly measure SLIs by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options.
+:ref:`infrastructure-virtual-metrics` help you more accurately and thoroughly measure SLIs by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options.
 
 Splunk Synthetic Monitoring
 ---------------------------------------------------------------------------------
