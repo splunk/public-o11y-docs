@@ -1,20 +1,10 @@
-:orphan:
-
-.. admonition:: Preview: Metric pipeline management
+.. admonition:: Preview: Metrics pipeline management
 
     Preview features described in this document are provided by Splunk to you "as is" without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. These documents are not yet publicly available and we ask that you keep such information confidential. Use of preview features is subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
 
+    See :ref:`metrics-pipeline-preview-sitemap` for the complete list of topics, or use these links to navigate to the high-level topics for metrics pipeline management: 
 
-.. _metric-pipeline-preview-sitemap:
-
-**************************************************************************
-Contents: Metric pipeline management preview documentation
-**************************************************************************
-
-Use the following links to navigate the documentation set for the preview of metric pipeline management:
-
-    * :ref:`metric-pipeline-intro`
-    * :ref:`use-metric-pipeline`
-    * :ref:`data-dropping-impact`
-    * :ref:`aggregate-drop-use-case`
-
+        * :ref:`metrics-pipeline-intro`
+        * :ref:`use-metrics-pipeline`
+        * :ref:`data-dropping-impact`
+        * :ref:`aggregate-drop-use-case`
