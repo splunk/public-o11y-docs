@@ -611,22 +611,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/intro-to-logs
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/intro-logconnect.rst
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/logs
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/set-up-logconnect
+   logs/intro-logconnect
 
 .. toctree::
    :maxdepth:   3
@@ -636,17 +621,32 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   logs/set-up-logconnect 
+
+.. toctree::
+   :maxdepth:   3
+
    logs/LOconnect-troubleshoot
 
 .. toctree::
    :maxdepth:   3
 
-   logs/live-tail
+   logs/get-started-logs
+
+.. toctree::
+   :maxdepth:   3
+
+   logs/logs
 
 .. toctree::
    :maxdepth:   3
 
    logs/timeline
+
+.. toctree::
+   :maxdepth:   3
+
+   logs/live-tail
 
 .. toctree::
    :maxdepth:   3
@@ -672,7 +672,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    logs/individual-log
-
 
 .. toctree::
    :maxdepth:   3
@@ -707,7 +706,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   logs/processors
+   logs/processors 
 
 .. toctree::
    :maxdepth:   3
