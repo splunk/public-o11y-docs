@@ -321,7 +321,7 @@ div.admonition {
     background-color: #F1FAFE; /* light blue */
 /*     border: 1px solid #FAA; */
 /*     border: 1px solid #0B599D; blue */
-    border: 1px solid #59A200;  /* green */
+/*    border: 1px solid #59A200;  /* green */
 }
 
 
@@ -407,13 +407,13 @@ dt:target, .highlight {
 }
 
 div.note {
-    background-color: #f2faff;
-    border-color: 1px solid #c7eafb;
+    background-color: #f2faff !important;
+    border-color: 1px solid #c7eafb !important;
 }
 
-div.caution {
-    background-color: #fefbe8;
-    border-color: 1px solid #f8e8c7;
+#features-of-the-splunk-distribution-of-opentelemetry-java > div {
+    background-color: #fefbe8 !important;
+    border-color: 1px solid #f8e8c7 !important;
 }
 
 div.seealso {
