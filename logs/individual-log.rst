@@ -1,8 +1,8 @@
 .. _logs-individual-log:
 
-*****************************************************************
-View problem details in an individual log
-*****************************************************************
+***********************************************************************
+View individual log details and create a field extraction processor
+***********************************************************************
 
 .. meta created 2021-02-17
 .. meta DOCS-1962
@@ -10,16 +10,14 @@ View problem details in an individual log
 .. meta::
   :description: View problem details in an individual log
 
-The previous topic, Filter by fields from logs, filtered logs to find the error that
-appeared with the greatest frequency. Clicking the most frequent
-error value helps you focus on logs that contained the :strong:`could not retrieve product`
-error.
+The previous topic, Filter by fields from logs, filtered logs to find the error that appeared with the greatest frequency. Clicking the most frequent
+error value helps you focus on logs that contained the :strong:`could not retrieve product`error.
 
 After you find log records that contain a specific area, view the
 contents of an individual record to get a precise view of the data related to
-the problem.
+the problem. Once you have identified an interesting field, you can perform a field extraction and :ref:`transform your data <logs-processors>` with it.
 
-To view the contents of an individual log record, follow these steps:
+To view the contents of an individual log record and create a field extraction rule, follow these steps:
 
 #. Click a log record line in the Logs table to display the Log Details panel.
    This panel displays the entire record in JSON format as well as a table
