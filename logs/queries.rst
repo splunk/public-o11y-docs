@@ -25,4 +25,4 @@ Click any of the following documents to learn more about each way you can explor
 * :ref:`logs-aggregations`
 
 
-If your query might be useful in the future, save it, then return to it in Saved Queries to run the query again. See :ref:`save-share` to learn how.
+If your query might be useful in the future, save it, then return to it in Saved Queries to run the query again. See :ref:`logs-save-share` to learn how.
