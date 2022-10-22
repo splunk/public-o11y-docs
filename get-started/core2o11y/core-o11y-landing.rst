@@ -18,6 +18,7 @@ Expand the Splunk platform into observability
 With Splunk Observability Cloud, you can quickly find, analyze, and resolve incidents anywhere in your stack from multicloud to microservices to serverless. Increase reliability and lower your mean time to resolution.
 
 Regular links below this line
+
 * :ref:`Monitor SLIs, manage SLOs, and meet SLAs <core2o11y-slis>`
 
 * :ref:`Respond to incidents and write postmortems <core2o11y-incident-response>`
