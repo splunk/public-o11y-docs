@@ -1,25 +1,12 @@
-.. _get-started-core-to-o11y:
+.. _core2o11y-slis:
 
-****************************************************************
-Expand the Splunk platform into observability
-****************************************************************
+*********************************************************************************
+Monitor SLIs, manage SLOs, and meet SLAs
+*********************************************************************************
 
 .. meta::
-    :description: Learn to use your Splunk core platform logs in the observability space.
+   :description: SLIs, SLOs, and SLAs in Observability Cloud
 
-* :ref:`Monitor SLIs, manage SLOs, and meet SLAs <get-started-slis>`
-
-* :ref:`Respond to incidents and write postmortems <get-started-incident-response>`
-
-* :ref:`Reduce toil: Automated solutions for interacting with the infrastructure <get-started-toil-reduction>`
-
-* :ref:`Collaborate on reliability across teams <get-started-collaboration>`
-
-
-.. _get-started-slis:
-
-Monitor SLIs, manage SLOs, and meet SLAs
-=================================================================================
 Splunk Observability Cloud provides out of the box solutions for monitoring your SLIs, and for setting and meeting your SLOs and SLAs. 
 
 SLIs are Service Level Indicators, the metrics used to measure your system's availability. SLOs, Service Level Objectives, are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements, SLAs, are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
