@@ -56,26 +56,6 @@ Splunk Log Observer Connect defaults to displaying a count of all of your logs b
     :width: 100%
     :alt: This image shows Log Observer Connect with a timeline displaying a count of logs by severity.
 
-.. _get-started-incident-response:
-
-Respond to incidents and write postmortems
-=================================================================================
-blah blah
-
-.. _get-started-toil-reduction:
-
-Reduce toil: Automated solutions for interacting with the infrastructure 
-=================================================================================
-blah blah
-
-
-.. _get-started-collaboration:
-
-Collaborate on reliability across teams
-=================================================================================
-blah blah
-
-
 
 ------------------
 
