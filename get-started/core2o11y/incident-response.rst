@@ -7,7 +7,7 @@ Respond to incidents and write postmortems
 .. meta::
    :description: This page provides an overview of the many ways you can drill down to root cause problems and decrease MTTR using the components of Observability Cloud.
 
-Splunk Observability Cloud provides several tools for drilling down to find the cause of incidents. In the sections below, see how each component of Observability Cloud is an effective incident response tool, as well as boost for writing postmortems. Then find out how you can prevent and prepare for future incidents in :ref:`toil-reduction`.
+Splunk Observability Cloud provides several tools for drilling down to find the cause of incidents. In the sections below, see how each component of Observability Cloud is an effective incident response tool, as well as boost for writing postmortems. Then find out how you can prevent and prepare for future incidents in :ref:`core2o11y-Gtoil-reduction`.
 
 Splunk Log Observer Connect
 ---------------------------------------------------------------------------------
@@ -22,5 +22,9 @@ The following GIF shows an incident responder selecting a critical alert in Infr
 .. image:: /_images/get-started/IncidentResponse-InfraMon.gif
    :width: 100%
    :alt: This animated GIF shows user clicking into Infrastructure Monitoring host on heat map, then going to an alert to find an outlier in CPU utilization.
+
+
 Splunk APM
 ---------------------------------------------------------------------------------
+
+
