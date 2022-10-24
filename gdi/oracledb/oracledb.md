@@ -4,7 +4,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Oracle Database receiver. The receiver connects to an Oracle Database instance and runs custom SQL queries to generate metrics from a database connection.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Oracle Database receiver. The receiver connects to an Oracle Database instance and obtains metrics such as physical reads, cpu time, and others.
 
 ### Benefits
 
