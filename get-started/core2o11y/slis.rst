@@ -19,9 +19,9 @@ The following sections detail the components in Observability Cloud that you can
 
    Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency.
 
-  .. image:: /_images/get-started/core2o11y-apm-pt1.png
-    :width: 100%
-    :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data
+   .. image:: /_images/get-started/core2o11y-apm-pt1.png
+     :width: 100%
+     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data
 
    Defining and managing SLOs for services with dependencies, some of which have their own SLOs, is tricky. A dynamically generated service map showing all integrated services, critical SLIs, and dependencies helps you with critical decisions, such as whether to combine SLOs for multiple dependencies.
 
