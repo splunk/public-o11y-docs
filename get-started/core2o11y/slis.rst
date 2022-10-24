@@ -15,17 +15,17 @@ Observability Cloud immediately monitors and analyzes your SLIs, takes the guess
 
 The following sections detail the components in Observability Cloud that you can use to track your SLOs and ensure that you meet your SLAs.
 
-.. collapse:: Splunk APM
+Splunk APM
+---------------------------------------------------------------------------------
+Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency.
 
-   Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency.
+.. image:: /_images/get-started/core2o11y-apm-pt1.png
+  :width: 100%
+  :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data
 
-   .. image:: /_images/get-started/core2o11y-apm-pt1.png
-     :width: 100%
-     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data
+Defining and managing SLOs for services with dependencies, some of which have their own SLOs, is tricky. A dynamically generated service map showing all integrated services, critical SLIs, and dependencies helps you with critical decisions, such as whether to combine SLOs for multiple dependencies.
 
-   Defining and managing SLOs for services with dependencies, some of which have their own SLOs, is tricky. A dynamically generated service map showing all integrated services, critical SLIs, and dependencies helps you with critical decisions, such as whether to combine SLOs for multiple dependencies.
-
-   :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services. See :ref:`dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
+:ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services. See :ref:`dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
 
 
 Splunk Infrastructure Monitoring
