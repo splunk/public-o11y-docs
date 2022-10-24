@@ -1,7 +1,7 @@
 .. _otel-intro:
 
 *******************************************************************************************
-Install and configure the Splunk Distribution of OpenTelemetry Collector
+Get started with the Splunk Distribution of OpenTelemetry Collector
 *******************************************************************************************
 
 .. meta::
