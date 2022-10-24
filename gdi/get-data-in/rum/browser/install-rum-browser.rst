@@ -179,9 +179,8 @@ To avoid gaps in your data, load and initialize the Browser RUM agent synchronou
 
 Use one the following methods to load and initialize the Browser RUM agent, in order of effectiveness:
 
-* Synchronously load the Browser RUM agent as the first resource in the head section. This ensures that the instrumentation collects all user interactions, resources, and errors.
+* Synchronously load the Browser RUM agent as the first resource, or at least the first JS resource, in the head section. This ensures that the instrumentation collects all user interactions, resources, and errors.
 * Bundle the Browser RUM agent with other application scripts. Place the Browser RUM agent at the top of the bundle and make sure the bundle loads synchronously.
-* Synchronously load the Browser RUM agent as the first JS resource in the head section.
 
 If you defer the loading of the Browser RUM agent, make sure other scripts are also deferred to preserve the initialization order. Note that asynchronously loaded scripts are not supported.
 
