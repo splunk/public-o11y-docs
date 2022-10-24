@@ -1,8 +1,8 @@
 .. _opentelemetry-resources:
 
-*****************************************************************
-Use the Splunk Distribution of OpenTelemetry Collector
-*****************************************************************
+*********************************************************************************
+Overview of the Splunk Distribution of OpenTelemetry Collector
+*********************************************************************************
 
 .. meta::
    :description: Resources for using the Splunk Distribution of OpenTelemetry Collector.
@@ -12,9 +12,6 @@ This page provides a list of resources for using the Splunk Distribution of Open
 .. note::
 
    This project is currently in **Beta**. See :new-page:`Beta Definition <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/beta-definition.md>` for more information.
-
-Overview
-====================
 
 Refer to the following topics for an overview of the Collector:
 
