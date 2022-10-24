@@ -67,7 +67,7 @@ To revoke write permissions for a detector, follow these steps:
 #. To remove a user or team, click the :guilabel:`x` next to the user or team name.
 #. Click :guilabel:`Save`
 
-.. admonition:: Important
+.. note:: Important
 
    You can remove your own write permission from a detector.
    If you do this deliberately or by accident, and you're not an administrator,

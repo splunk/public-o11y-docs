@@ -25,7 +25,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Java, like 
 
 The agent of the Splunk Distribution of OpenTelemetry Java is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories.
 
-.. warning:: Use the Splunk Distribution of OpenTelemetry Java instead of the upstream OpenTelemetry instrumentation and OpenTelemetry SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Java.
+.. caution:: Use the Splunk Distribution of OpenTelemetry Java instead of the upstream OpenTelemetry instrumentation and OpenTelemetry SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Java.
 
 Release types
 =========================================================

@@ -78,6 +78,6 @@ For information about how to use detectors, events, alerts, and notifications, s
 
 .. _naming-note:
 
-.. admonition:: About naming your integrations
+.. note:: About naming your integrations
 
    When a user adds an alert recipient to a detector, they choose from the notification service integration names you create when configuring these integrations. For this reason, provide descriptive and unique names for the integrations you create. This helps ensure that users get enough information from an integration name to be able to select the correct recipient for the alert notifications.
