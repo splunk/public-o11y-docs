@@ -49,8 +49,7 @@ To manage your access (org) tokens:
       permission options appear:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
-      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new
-        token. The token isn't visible to anyone else.
+      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
    #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
    #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
@@ -127,8 +126,7 @@ To create an access token:
       permission options appear:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
-      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new
-        token. The token isn't visible to anyone else.
+      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
    #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
 #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, specify the users or teams to whom you want to give access:
@@ -159,14 +157,18 @@ To rename a token:
 #. Enter a new name for the token.
 #. Select :guilabel:`OK`.
 
- Renaming a token does not affect the value of the token.
+Renaming a token does not affect the value of the token.
+
+.. note::
+
+   If you rename an access token, you need to choose a new token name in your AWS integration. You can do that :ref:`in the UI <aws-wizardconfig>`.
 
 Disable or enable an access token
 =====================================
 
- .. note::
+.. note::
 
-    You can't delete tokens; you can only disable them.
+   You can't delete tokens; you can only disable them.
 
 To disable a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
 The line that displays the token has a shaded background, which indicates that the
