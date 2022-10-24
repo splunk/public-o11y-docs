@@ -13,13 +13,13 @@ SLIs are Service Level Indicators, the metrics used to measure your system's ava
 
 Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. 
 
-The following sections detail the components in Observability Cloud that you can use to track reliability.
+The following sections detail the components in Observability Cloud that you can use to track your SLOs and ensure that you meet your SLAs.
 
 Splunk APM
 ---------------------------------------------------------------------------------
 Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency.
 
-  .. image:: /_images/get-started/APMservicemapsample.png 
+  .. image:: /_images/get-started/core2o11y-apm-pt1.png
     :width: 100%
     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data
 
