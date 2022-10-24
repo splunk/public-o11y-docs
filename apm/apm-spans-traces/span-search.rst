@@ -12,7 +12,7 @@ In the :guilabel:`Trace Waterfall`, you can search within a trace to highlight o
 
 .. image:: /_images/apm/terms-concepts/span-search.gif
   :width: 100%
-  :alt: This animation shows a span search in which the user searches for Service = checkoutservice, and then further refines the search to error=true. The user also demonstrates the use of the Matches only switch to show only spans that match your search.
+  :alt: This animation shows a span search in which the user searches for Service = checkoutservice, and then further refines the search to error=true. The user also demonstrates that using the Matches switch shows only the spans that match your search.
 
 Follow these steps to search for a span within a trace: 
 
@@ -44,7 +44,7 @@ Trace waterfall reference
 When viewing spans in the trace waterfall, note the following:
 
 * When a trace contains multiple repeated spans, the spans are typically collapsed into one row. Open the row to see the repeated span's tags and select the number (x3, x7, and so on) to expand the row and view the individual spans and durations.
-* The colors of spans in the waterfall help differentiate the services contributing spans to a trace. If every span in the trace is from the same service, all spans appear in the same color. If there are four different services involved, the spans are in four different colors, corresponding to the service they're from.
+* The colors of spans in the waterfall help differentiate the services contributing spans to a trace. If every span in the trace is from the same service, all spans appear in the same color. If there are four different services involved, the spans are in four different colors, indicating the service they're from.
 
 Explore logs for each span
 ------------------------------
