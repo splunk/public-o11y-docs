@@ -15,9 +15,9 @@ Observability Cloud immediately monitors and analyzes your SLIs, takes the guess
 
 The following sections detail the components in Observability Cloud that you can use to track your SLOs and ensure that you meet your SLAs.
 
-Splunk APM
+.. collapse:: Splunk APM
 ---------------------------------------------------------------------------------
-Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency.
+Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency.
 
   .. image:: /_images/get-started/core2o11y-apm-pt1.png
     :width: 100%
@@ -57,9 +57,11 @@ Splunk Log Observer Connect defaults to displaying a count of all of your logs b
     :alt: This image shows Log Observer Connect with a timeline displaying a count of logs by severity.
 
 
-------------------
 
 
+
+
+Collapsible sections below here 
 .. collapse:: Monitor SLIs, manage SLOs, and meet SLAs
 
     Blah blah blah SLIs
