@@ -47,6 +47,10 @@ The following dimensions are automatically added to all metrics exported by the 
     - Value of the ``process.runtime.name`` resource attribute, for example ``OpenJDK Runtime Environment``.
   * - ``process.pid``
     - The Java process identifier (PID).
+  * - ``container.id``
+    - Identifier of the container, if applicable.
+  * - ``host.name``
+    - Name of the host.
   * - ``service``
     - Value of the ``service.name`` resource attribute.
 
