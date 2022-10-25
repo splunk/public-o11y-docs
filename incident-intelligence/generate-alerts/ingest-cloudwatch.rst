@@ -11,7 +11,7 @@ Make a POST call to this endpoint to ingest Amazon Cloudwatch alerts.
 
 .. code:: 
 
-    https://ingest..signalfx.com/v1/incidentintelligence/cloudwatch
+    https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/cloudwatch
 
 Request header
 =================
@@ -57,9 +57,9 @@ Examples
 
 Example cURL call:
 
-.. code:: 
+.. code-block:: javascript 
 
-    curl -i -X POST https://ingest.lab0.signalfx.com/v1/incidentintelligence/cloudwatch --header "X-SF-TOKEN: YBY5m6t8ibBCx-N5kNb9SQ" --header "Content-Type: application/json" -d '{ "version": "0", "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", "detail-type": "Glue Data Catalog Database State Change", "source": "aws.glue", "account": "123456789012", "time": "2019-01-16T18:08:48Z", "region": "eu-west-1", "resources": [ "arn:aws:glue:eu-west-1:123456789012:table/d1/t1" ], "detail": { "databaseName": "d1", "typeOfChange": "CreateTable", "changedTables": [ "t1" ] } }'
+    curl -i -X POST https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/cloudwatch --header "X-SF-TOKEN: YBY5m6t8ibBCx-N5kNb9SQ" --header "Content-Type: application/json" -d '{ "version": "0", "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", "detail-type": "Glue Data Catalog Database State Change", "source": "aws.glue", "account": "123456789012", "time": "2019-01-16T18:08:48Z", "region": "eu-west-1", "resources": [ "arn:aws:glue:eu-west-1:123456789012:table/d1/t1" ], "detail": { "databaseName": "d1", "typeOfChange": "CreateTable", "changedTables": [ "t1" ] } }'
 
 Transformed JSON  data for the example call that is processed and saved in Incident Intelligence:
 
