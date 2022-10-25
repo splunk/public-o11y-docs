@@ -436,8 +436,8 @@ Infrastructure Monitoring AWS Optimizer helps you find cost-saving opportunities
 
 AWS Optimizer generates metrics from usage and cost data imported by calls to the AWS API. These generated metrics let you visualize and analyze EC2 usage and costs, as shown in built-in dashboards. You can also create detectors based on AWS Optimizer metrics. These detectors send real-time alerts for unexpected changes in cost or usage patterns.
 
-* To learn more about visualizing and analyzing the metrics, see :ref:`Built-in dashboards <built-in-dashboards>`.
-* To learn more about creating detectors, see :ref:`Set Up Detectors to Trigger Alerts <create-detectors>`.
+* To learn more about visualizing and analyzing the metrics, see :ref:`built-in-dashboards`.
+* To learn more about creating detectors, see :ref:`create-detectors`.
 
 To import the usage and cost data to be imported, make sure the following lines are in your AWS Policy Document. To learn how to view and modify your AWS Policy Document, see :ref:`get-started-aws`:
 
