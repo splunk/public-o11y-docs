@@ -3,4 +3,5 @@
 Set your on-call notification preferences
 **************************************************
 
-.. include:: /_includes/incident_intelligence/notification-preferences.rst
+If you are receiving on-call notifications via mobile push or SMS and want to change these preferences you can set your on-call notification preferences in Splunk Observability Cloud. See :ref:`notification`
+

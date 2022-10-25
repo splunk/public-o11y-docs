@@ -1,5 +1,7 @@
 .. _respond-manage-incidents:
 
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 Respond to and manage incidents
 ************************************
 
