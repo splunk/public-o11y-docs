@@ -33,11 +33,11 @@ See :ref:`Monitor services and hosts <monitor-services-hosts>` to learn more abo
 
 Splunk Log Observer Connect
 ===================================================================================
-Log Observer Connect is purpose built to drill down to find the root cause of incidents in the lowest mean time to resolution. While users of Splunk core platform already have access to a powerful logging tool, Log Observer Connect provides a codeless, point-and-click query tool that anyone can use without the need to know a query language. Additionally, Log Observer Connect does not require importing logs into Observability Cloud. Logs remain securely in your Splunk Cloud Platform or Splunk Enterprise instance, while you can observe them from Observability Cloud and correlate your Splunk platform logs with metrics, traces, and user experience to drill down to problems faster. 
+Log Observer Connect is purpose built to drill down to find the root cause of incidents in the lowest mean time to resolution. While users of Splunk core platform already have access to a powerful logging tool, Log Observer Connect provides a codeless, point-and-click query tool that anyone can use without the need to know a query language. Additionally, Log Observer Connect does not require importing logs into Observability Cloud. Logs remain securely in your Splunk Cloud Platform or Splunk Enterprise instance, while you can observe them from Observability Cloud and correlate your Splunk platform logs with metrics, traces, and user experience to drill down to root cause problems faster. 
 
 With Log Observer Connect, you can :ref:`aggregate logs <logs-aggregations>` to group by interesting fields. You can also :ref:`filter logs by field <logs-filter-logs-by-field>`, :ref:`view individual log details <logs-individual-log>`, and :ref:`create field aliases <logs-alias>` to drill down to the root cause of an incident. You can also select correlated infrastructure resources, metrics, or traces in the Related Content bar to :ref:`view related content <get-started-relatedcontent>` in a single pane of glass. Seeing your logs data correlated with metrics and traces in Observability Cloud helps your team to locate and resolve problems exponentially faster.
 
-The following GIF shows user selecting an error log in Log Observer Connect, then selecting related content to see the problematic host. This takes the user to the service map in Infrastructure Monitoring where the problematic  host is already automatically selected. The service map right panel shows service requests and errors, as well as service and dependency latency for the selected host.
+The following GIF shows user selecting an error log in Log Observer Connect, then selecting related content to see a problematic host. This takes the user to the service map in Infrastructure Monitoring where the problematic  host is already automatically selected. The service map right panel shows service requests and errors, as well as service and dependency latency for the selected host.
 
  .. image:: /_images/get-started/core2o11y-LOConnect-incidentresp.gif
    :width: 100%
@@ -49,7 +49,7 @@ When your team discovers that code in your application is the cause of the incid
 
 Real User Monitoring (RUM)
 ===================================================================================
-RUM monitors the front-end user experience of your application by analyzing user sessions. In RUM, you can monitor and drill down on the Endpoints Errors metric. You can look for JavaScript errors and back-end errors, as well as see resource errors and resource response times. See :ref:`rum-identify-span-problems` to walk through a use case and learn how.
+RUM monitors the front-end user experience of your application by analyzing user sessions. In RUM, you can monitor and drill down on the Endpoints Errors metric. You can look for front-end and back-end errors, as well as see resource errors and resource response times. See :ref:`rum-identify-span-problems` to walk through a use case that shows you how to find JavaScript errors, back-end errors, and long resource response times.
 
 RUM is particularly helpful when investigating the root cause of an error reported by a user. See :ref:`rum-mobile-usecase` to learn more.
 
