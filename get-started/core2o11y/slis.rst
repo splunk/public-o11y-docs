@@ -29,7 +29,7 @@ Defining and managing SLOs for services with dependencies, some of which have th
 
 Splunk Infrastructure Monitoring
 ===================================================================================
-Infrastructure Monitoring is a custom metrics platform for real-time monitoring across infrastructure, applications, and business metrics. It collects health and performance data from servers, virtual machines, containers, databases, public cloud services, container orchestration, serverless and other backend components in a tech stack. 
+Infrastructure Monitoring is a custom metrics platform for real-time monitoring across infrastructure, applications, and business metrics. It collects health and performance data from servers, virtual machines, containers, databases, public cloud services, container orchestration, serverless and other backend components in a tech stack. With over 200 out of the box integrations and dashboards, you can monitor your entire infrastructure on a single pane of glass and significantly speed your cloud migration journey.
 
 Monitor your SLIs in out of the box navigators, such as the following navigator chart showing latency over the last minute for AWS ELB instances:
 
