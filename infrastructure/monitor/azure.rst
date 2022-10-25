@@ -265,9 +265,6 @@ For autoscale settings, Observability Cloud syncs the following properties:
    * - ``autoscaleEnabled``
      - ``azure_autoscale_enabled``
      - Indicates whether automatic scaling is enabled
-   * - ``key``
-     - ``azure_key``
-     - The index key
    * - ``targetResourceId``
      - ``azure_target_resource_id``
      - Resource identifier of the resource that the autoscale settings are added to

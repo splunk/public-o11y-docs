@@ -22,7 +22,7 @@ In addition to all the features of the OpenTelemetry Instrumentation for Ruby, l
 
 The agent of the Splunk Distribution of OpenTelemetry Ruby is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories.
 
-.. warning:: Use the Splunk Distribution of OpenTelemetry Ruby instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Ruby.
+.. caution:: Use the Splunk Distribution of OpenTelemetry Ruby instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Ruby.
 
 Defaults of the Splunk Distribution of OpenTelemetry Ruby
 ===========================================================
