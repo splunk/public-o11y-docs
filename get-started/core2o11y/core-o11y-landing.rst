@@ -22,8 +22,8 @@ There are four underlying principles that underpin system reliability. See each 
 
 * :ref:`Respond to incidents and write postmortems <core2o11y-incident-response>`
 
-* :ref:`Reduce toil: Automated solutions for interacting with the infrastructure <core2o11y-toil-reduction>`
+* :ref:`Reduce toil: Automated solutions for interacting with the infrastructure <toil-reduction>`
 
-* :ref:`Collaborate on reliability across teams <core2o11y-collaboration>`
+* :ref:`Collaborate on reliability across teams <toil-reduction>`
 
 To learn more about the components of Observability Cloud, see :ref:`welcome`.

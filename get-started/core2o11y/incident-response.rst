@@ -7,13 +7,15 @@ Respond to incidents and write postmortems
 .. meta::
    :description: This page provides an overview of the many ways you can drill down to root cause problems and decrease MTTR using the components of Observability Cloud.
 
-Splunk Observability Cloud provides several tools for drilling down to find the root cause of incidents. In the sections below, see how each component of Observability Cloud is an effective incident response tool, as well as a boost for writing postmortems. Then find out how you can prevent and prepare for future incidents in :ref:`toil-reduction`.
+Splunk Observability Cloud provides several tools for drilling down to find the root cause of incidents. In the followoing sections, see how each component of Observability Cloud is an effective incident response tool, as well as a boost for writing postmortems. Then find out how you can prevent and prepare for future incidents in :ref:`toil-reduction`.
 
 Alerts and detectors
 ===================================================================================
-Observability Cloud uses alerts, detectors, events, and notifications to inform you when certain criteria are met. Alerts and detectors are often your first knowledge that an incident has occurred. Use alerts and detectors to notify your teams when your systems are nearing a limit you set in an SLO, such as approaching a server latency that is too high. For information on alerts, detectors, threshholds, and how they interact, see :ref:`get-started-detectoralert`. Observavility Cloud has built-in alerts and detectors for supported integrations. Additionally, your team can create detectors to alert on threshholds that matter most to you. 
+Observability Cloud uses alerts, detectors, events, and notifications to inform you when certain criteria are met. Alerts and detectors are often your first awareness that an incident has occurred. Observavility Cloud has AutoDetect, or built-in alerts and detectors for supported integrations. Additionally, your team can create detectors to alert on performance and threshholds that matter most to you. For example, you can use alerts and detectors to notify your teams when your systems are nearing a limit you set in an SLO, such as approaching a server latency that is too high. For information on alerts, detectors, threshholds, and how they interact, see :ref:`get-started-detectoralert`. 
 
-You can see all alerts, including AutoDetect alerts and alerts you created on the Alerts homepage in Observability Cloud. 
+When you proactively use alerts and detectors to stay informed on changes in your systems, you can decrease the number of incidents your users experience by updating your systems when events surpass a threshhold you set. For more on prevention, see :ref:`toil-reduction`. 
+
+You can see all alerts, including AutoDetect alerts and custom alerts on the Alerts homepage in Observability Cloud. 
 
  .. image:: /_images/get-started/core-2-o11y-alerts.png
    :width: 100%
