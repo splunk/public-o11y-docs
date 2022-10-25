@@ -53,7 +53,7 @@ Real User Monitoring (RUM)
 ===================================================================================
 Splunk RUM shows SLIs and SLOs from the perspective of what your users experience. In the following example, a RUM dashboard in the Tag Spotlight view starts with a chart displaying the total count of network requests and errors over a 15 minute period. The following charts display the count of requests and errors by URL name, by HTTP method, and by HTTP status code. 
 
-  .. image:: /_images/get-started/Core-to-o11y-RUM-SLIs
+  .. image:: /_images/get-started/Core-to-o11y-RUM-SLIs.png
     :width: 100%
     :alt: This image shows a RUM dashboard displaying a count of requests and errors by URL name, by HTTP method, and by HTTP status code. 
     

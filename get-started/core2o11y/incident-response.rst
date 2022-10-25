@@ -47,10 +47,11 @@ See :ref:`logs-queries` to learn more about how Log Observer Connect queries can
 
 When your team discovers that code in your application is the cause of the incident, you can use Log Observer Live Tail to find out whether your fix has solved the problem that caused the incident. Live Tail is available only to customers who have a full Log Observer entitlement. Reach out to your Splunk representative if you are interested in Log Observer. See :ref:`get-started-logs` to learn what you can do with a full Log Observer entitlement, including confirming that a code fix solved a problem.
 
-
 Real User Monitoring (RUM)
 ===================================================================================
+RUM monitors the front-end user experience of your application by analyzing user sessions. In RUM, you can monitor and drill down on the Endpoints Errors metric. You can look for JavaScript errors and back-end errors, as well as see resource errors and resource response times. See :ref:`rum-identify-span-problems` to walk through a use case and learn how.
 
+RUM is particularly helpful when investigating the root cause of an error reported by a user. See :ref:`rum-mobile-usecase` to learn more.
 
 
 
