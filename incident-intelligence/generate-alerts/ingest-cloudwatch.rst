@@ -82,6 +82,32 @@ Example cURL call:
 
 Transformed JSON  data for the example call that is processed and saved in Incident Intelligence:
 
-.. code:: 
+.. code-block:: json 
 
-    { "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", "eventId": "60e7ddc2-a588-5328-220a-21c060f6c3f4", "title": "Glue Data Catalog Database State Change", "source": "aws.glue", "description": "Glue Data Catalog Database State Change", "severity": "WARNING", "sourceType": "cloudwatch", "orgId": "FBMqy06AIA0", "triggeredAt": 1547662128000, "properties": { "version": "0", "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", "detail-type": "Glue Data Catalog Database State Change", "source": "aws.glue", "account": "123456789012", "time": "2019-01-16T18:08:48Z", "region": "eu-west-1", "resources": [ "arn:aws:glue:eu-west-1:123456789012:table/d1/t1" ], "detail": { "databaseName": "d1", "typeOfChange": "CreateTable", "changedTables": [ "t1" ] } } }
+    { "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+      "eventId": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+      "title": "Glue Data Catalog Database State Change", 
+      "source": "aws.glue", 
+      "description": "Glue Data Catalog Database State Change", 
+      "severity": "WARNING", 
+      "sourceType": "cloudwatch", 
+      "orgId": "FBMqy06AIA0", 
+      "triggeredAt": 1547662128000, 
+      "properties": { 
+          "version": "0", 
+          "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+          "detail-type": "Glue Data Catalog Database State Change", 
+          "source": "aws.glue", 
+          "account": "123456789012", 
+          "time": "2019-01-16T18:08:48Z", 
+          "region": "eu-west-1", 
+          "resources": [ 
+              "arn:aws:glue:eu-west-1:123456789012:table/d1/t1" 
+          ], 
+          "detail": { 
+              "databaseName": "d1", 
+              "typeOfChange": "CreateTable", 
+              "changedTables": [ "t1" ] 
+          } 
+       } 
+    }
