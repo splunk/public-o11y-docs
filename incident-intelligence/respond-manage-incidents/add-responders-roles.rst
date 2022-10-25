@@ -1,5 +1,7 @@
 .. _add-responders-roles:
 
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 Add responders and assign roles
 ***********************************
 

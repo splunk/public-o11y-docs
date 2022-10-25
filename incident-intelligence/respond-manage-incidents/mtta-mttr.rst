@@ -1,5 +1,7 @@
 .. _mtta-mttr:
 
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 Review mean time to acknowledge and respond and other incident response stats
 ***********************************************************************************************
 

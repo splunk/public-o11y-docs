@@ -1,5 +1,7 @@
 .. _whos-on-call:
 
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 Check who's on call
 ************************************************************************
 

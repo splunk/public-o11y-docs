@@ -1,5 +1,3 @@
-When you are on call, triggered incidents notify you by email by default. You can also choose to receive notifications via SMS or mobile push. To set your on-call notification preferences follow these steps:
-
 #. Go to :guilabel:`Settings` > :guilabel:`Users` in the main menu.
 #. Search for your user and select it when it appears.
 #. Go to :guilabel:`Notification Preferences`.

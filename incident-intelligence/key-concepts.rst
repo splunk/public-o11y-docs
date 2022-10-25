@@ -1,5 +1,7 @@
 .. _key-concepts:
 
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 Key concepts in Splunk Incident Intelligence 
 **************************************************
 

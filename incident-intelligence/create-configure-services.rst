@@ -1,5 +1,7 @@
 .. _create-configure-services:
 
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 ************************************************************************
 Create and configure services
 ************************************************************************
