@@ -5,6 +5,29 @@
 Snooze an incident
 *********************
 
+You can snooze an incident to silence paging on unactionable or less-urgent incidents for a specified period of time. At the end of the specified time, the incident workflow with which the incident is associated, is triggered again starting with the first step. To snooze an incident, follow these steps:
+
+#. Go to the :guilabel:`Incidents` tab in Incident Intelligence.
+#. Locate the incident and select the :guilabel:`Actions` menu.
+#. Select :guilabel:`Snooze`.
+#. Next to :guilabel:`Snooze until` select the date and time when you want to re-trigger the incident workflow.
+#. Select :guilabel:`Snooze`.
+
+Unsnooze an incident
+=======================
+
+If you need to unsnooze and incident before the specified period of time follow these steps:
+
+#. Go to the :guilabel:`Incidents` tab in Incident Intelligence.
+#. Locate the incident.
+#. Select :guilabel:`Resume`.
+
+When a snoozed incident resumes, the incident workflow is triggered again starting with the first step. 
+
+
+See also
+===============
+
 * :ref:`ii-respond-to-incident`
 * :ref:`ii-snooze-incident`
 * :ref:`ii-add-responders-roles`
