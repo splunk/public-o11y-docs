@@ -19,13 +19,11 @@ SLO: Your system should be available 99.99% of the time.
 
 SLA: If your system is not available 99.99% of the time during a customer's first year from purchase, you will give them a 10% discount on your services in the following year's contract.
 
-To meet your SLAs, you have to set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. 
-
-The following sections detail the components in Observability Cloud that you can use to track your SLOs and ensure that you meet your SLAs.
+To meet your SLAs, you must set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. The following sections detail the components in Observability Cloud that you can use to track your SLOs and ensure that you meet your SLAs.
 
 Splunk APM
 ===================================================================================
-Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency.
+Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you select a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency.
 
 .. image:: /_images/get-started/core2o11y-apm-pt1.png
   :width: 100%
