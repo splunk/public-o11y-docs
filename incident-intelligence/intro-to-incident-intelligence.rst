@@ -1,6 +1,6 @@
-.. _ii-get-started-incident-intelligence:
-
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
+.. _ii-get-started-incident-intelligence:
 
 Introduction to Splunk Incident Intelligence
 ************************************************************************

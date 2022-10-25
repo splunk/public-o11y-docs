@@ -1,6 +1,6 @@
-.. _ii-sync-on-call-schedule:
-
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
+.. _ii-sync-on-call-schedule:
 
 Sync your on-call schedule to your personal calendar
 ************************************************************************

@@ -1,6 +1,6 @@
-.. _ii-respond-to-incident:
-
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
+.. _ii-respond-to-incident:
 
 Respond to an incident
 *****************************

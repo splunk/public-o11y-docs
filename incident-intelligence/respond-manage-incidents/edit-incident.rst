@@ -1,6 +1,6 @@
-.. _ii-edit-incident:
-
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
+.. _ii-edit-incident:
 
 Edit an incident
 *********************
