@@ -9,6 +9,12 @@ Instrument a .NET application for Splunk Observability Cloud
 
 The SignalFx Instrumentation for .NET automatically instruments .NET applications, Windows services running .NET applications, ASP.NET applications deployed on IIS, and Azure App Service applications.
 
+- :ref:`install-dotnet-instrumentation`
+- :ref:`instrument-windows-service`
+- :ref:`instrument-aspnet-iis`
+- :ref:`instrument-azure-app`
+- :ref:`instrument-azure-webjobs`
+
 To get started, use the guided setup or follow the instructions manually.
 
 Generate customized instructions using the guided setup
