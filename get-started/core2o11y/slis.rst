@@ -11,7 +11,12 @@ Splunk Observability Cloud provides out of the box solutions for monitoring your
 
 SLIs are Service Level Indicators, the metrics used to measure your system's availability. SLOs, Service Level Objectives, are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements, SLAs, are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
 
-Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. 
+:strong:`Example`
+SLI: Percentage of the time your system is available
+SLO: Your system should be available 99.99% of the time. 
+SLA: If your system is not available 99.99% of the time during a customer's first year from purchase, you will give them a 10% discount on your services in the following year's contract.
+
+To meet your SLAs, you have to set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. 
 
 The following sections detail the components in Observability Cloud that you can use to track your SLOs and ensure that you meet your SLAs.
 
