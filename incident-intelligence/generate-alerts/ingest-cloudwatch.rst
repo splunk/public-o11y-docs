@@ -57,7 +57,7 @@ Examples
 
 Example cURL call:
 
-.. code-block:: json
+.. code-block:: curl
 
     curl -i -X POST https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/cloudwatch 
        -H "X-SF-TOKEN: <value>" 
