@@ -11,10 +11,11 @@ Splunk Observability Cloud provides out of the box solutions for monitoring your
 
 SLIs are Service Level Indicators, the metrics used to measure your system's availability. SLOs, Service Level Objectives, are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements, SLAs, are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
 
-:strong:`Example`
-SLI: Percentage of the time your system is available
-SLO: Your system should be available 99.99% of the time. 
-SLA: If your system is not available 99.99% of the time during a customer's first year from purchase, you will give them a 10% discount on your services in the following year's contract.
+:strong:`Example`:
+
+An SLI might be the percentage of the time your system is available.
+An SLO might be that your system should be available 99.99% of the time. 
+The SLA for this scenario is "If your system is not available 99.99% of the time during a customer's first year from purchase, you will give them a 10% discount on your services in the following year's contract.""
 
 To meet your SLAs, you have to set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. 
 
@@ -52,7 +53,7 @@ Splunk Log Observer Connect defaults to displaying a count of all of your logs b
     :width: 100%
     :alt: This image shows Log Observer Connect with a timeline displaying a count of logs by severity.
 
-You can change the default log aggregation to see other SLI measurements using logs data. For example, to see the average request latency in logs data, change count to average and group by request latency rather than severity. See :ref:`logs-aggregations` for guidance on adjusting aggregations so that you can view the SLIs that are important to you.
+You can change the default log aggregation to see other SLI measurements using logs data. For example, to see the average request latency in logs data, change :strong:`Count` to :strong:`AVG` and group by :strong:`Request latency` rather than :strong:`severity`. See :ref:`logs-aggregations` for guidance on adjusting aggregations so that you can view the SLIs that are important to you.
 
 Real User Monitoring (RUM)
 ===================================================================================
