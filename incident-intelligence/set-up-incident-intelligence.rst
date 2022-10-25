@@ -24,7 +24,7 @@ Complete these tasks to get started with Incident Intelligence:
 Generate alerts
 =====================
 
-To begin using Incident Intelligence you need to generate alerts in Incident Intelligence. You can define a detector to automatically generate alerts in Incident Intellgence or ingest alerts using an ingest endpoint. See :ref:`ii-generate-alerts` go get started generating alerts in Incident Intelligence.
+To begin using Incident Intelligence you need to generate alerts in Incident Intelligence. You can create a detector for the one of the available alert sources to automatically generate alerts in Incident Intelligence or ingest alerts using an ingest endpoint. See :ref:`ii-generate-alerts` to get started generating alerts in Incident Intelligence.
 
 .. _ii-setup-service:
 
