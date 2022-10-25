@@ -13,7 +13,6 @@ Expand the Splunk platform into observability
    slis
    incident-response
    toil-reduction
-   collaboration
 
 With Splunk Observability Cloud, you can quickly find, analyze, and resolve incidents anywhere in your stack from multicloud to microservices to serverless. Increase reliability and lower your mean time to resolution for all integrated systems. Observability Cloud has over 250 out of the box integrations, allowing you to start monitoring, troubleshooting, automating, and collaborating immediately.
 

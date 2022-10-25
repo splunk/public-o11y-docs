@@ -7,15 +7,50 @@ Respond to incidents and write postmortems
 .. meta::
    :description: This page provides an overview of the many ways you can drill down to root cause problems and decrease MTTR using the components of Observability Cloud.
 
-Splunk Observability Cloud provides several tools for drilling down to find the root cause of incidents. In the sections below, see how each component of Observability Cloud is an effective incident response tool, as well as a boost for writing postmortems. Then find out how you can prevent and prepare for future incidents in :ref:`core2o11y-toil-reduction`.
+Splunk Observability Cloud provides several tools for drilling down to find the root cause of incidents. In the sections below, see how each component of Observability Cloud is an effective incident response tool, as well as a boost for writing postmortems. Then find out how you can prevent and prepare for future incidents in :ref:`toil-reduction`.
 
+Alerts and detectors
+===================================================================================
+Observability Cloud uses alerts, detectors, events, and notifications to inform you when certain criteria are met. Alerts and detectors are often your first knowledge that an incident has occurred. Use alerts and detectors to notify your teams when your systems are nearing a limit you set in an SLO, such as approaching a server latency that is too high. For information on alerts, detectors, threshholds, and how they interact, see :ref:`get-started-detectoralert`. Observavility Cloud has built-in alerts and detectors for supported integrations. Additionally, your team can create detectors to alert on threshholds that matter most to you. 
+
+You can see all alerts, including AutoDetect alerts and alerts you created on the Alerts homepage in Observability Cloud. 
+
+ .. image:: /_images/get-started/core-2-o11y-alerts.png
+   :width: 100%
+   :alt: This screenshot shows a sample Alerts homepage in Observability Cloud.
+
+To go to your organization's Alerts homepage, log in to Splunk Observability Cloud, then select :strong:`Alerts` in the left navigation menu.
+
+
+AutoDetect enables Observability Cloud's automatic detectors for supported integrations. You can subscribe to notifications for all integrations once you have connected your systems and sent in data for supported integrations. See :ref:`autodetect` to learn more. See also :ref:`autodetect-list`.
+
+Dashboards
+===================================================================================
+Observability Cloud components all contribute to the data analytics in Observability Cloud Dashboards. You can see charts and dashboards in APM, Infrastructure Monitoring, and RUM. You can also go to the homepage for all Observability Cloud dashboards to see dashboards and charts created in each component, including Log views, or logs data displayed in a chart. 
+
+Observability Cloud has :ref:`built-in dashboards <built-in-dashboards>`, custom, and user dashboards and dashboard groups. See :ref:`dashboard-basics` for more information. Dashboards contain important information that can provide useful and actionable insight into your system at a glance. You can create custom, complex dashboards and charts that help you monitor your SLOs, or simple dashboards containing just a few charts that drill down into only the data that you want to see. The following example shows a dashboard for an organization with dozens of built-in dashboards reporting on their many supported integrations. When a user selects a dashboard, they see all charts saved to this dashboard and can quickly drill down on a chart showing interesting trends or unexpected variation.
+
+ .. image:: /_images/get-started/core2o11y-dashboard-incidentresp.gif
+   :width: 100%
+   :alt: This screenshot shows a sample dashboard homepage in Observability Cloud.
+
+To see your dashboards, log in to Splunk Observability Cloud and select :strong:`Dashboards` in the left navigation menu.
 
 Splunk APM
 ===================================================================================
-APM collects traces and spans to monitor your distributed applications. You can :ref:`investigate the root cause of an error with the service map <service-map>` or :ref:`find the root cause of an error using Tag Spotlight <troubleshoot-tag-spotlight>`. For more examples of APM troubleshooting use cases, see :ref:`apm-use-cases-intro`.
+APM collects traces and spans to monitor your distributed applications. You can :ref:`investigate the root cause of an error with the service map <service-map>` or :ref:`find the root cause of an error using Tag Spotlight <troubleshoot-tag-spotlight>`. For more examples of APM troubleshooting use cases, see :ref:`apm-use-cases-intro`. 
 
 For a walkthrough of the APM UI and guidance on drilling down to the root cause of an incident, see :new-page:`APM troubleshooting scenario <https://bossofopsando11y.com/apm/troubleshooting.html>`.
 
+Database Query Performance
+-------------------------------------------------------------------------------------
+One culprit of wider service availability issues can be slow database queries. Respond to incidents faster by assessing whether database query time is contributing to availability or latency incidents. See :ref:`db-query-performance` to learn how.
+
+ .. image:: /_images/get-started/core-2-o11y-dbqueryperf.png
+   :width: 100%
+   :alt: This screenshot shows a sample Alerts homepage in Observability Cloud.
+
+You can check the performance of your database queries in Splunk APM. Log in to Observability Cloud, select :strong:`APM` in the left navigation menu, then select DB Query Performance on the right panel.
 
 Splunk Infrastructure Monitoring
 ===================================================================================

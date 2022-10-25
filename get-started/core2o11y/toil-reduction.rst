@@ -1,4 +1,4 @@
-.. _core2o11y-toil-reduction:
+.. _toil-reduction:
 
 ***********************************************************************************
 Reduce toil with automated solutions for interacting with the infrastructure
