@@ -1,4 +1,4 @@
-.. _create-configure-services:
+.. _ii-create-configure-services:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 
@@ -11,7 +11,7 @@ Create and configure services
 
 Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. Then, route alerts to the service, see :ref:`configure-alert-routing`. Next, specify which alerts create an incident and how alerts are grouped into incidents, see :ref:`configure-alert-grouping`. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered, see :ref:`configure-incident-workflows`.
 
-.. _create-service:
+.. _ii-create-service:
 
 Create a service
 ====================
@@ -25,7 +25,7 @@ After you create your service, you are directed to configure which alerts are ro
 
 .. note:: If you have more than one service, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one service even if they match multiple services. The service alerts are routed to is based on your service’s alert routing conditions and service rank order. To rank your services go to :guilabel:`Response Configuration` > :guilabel:`Services` > :guilabel:`Service ranking`. 
 
-.. _configure-alert-routing:
+.. _ii-configure-alert-routing:
 
 Configure the alerts that are routed to your service
 ============================================================
@@ -46,7 +46,7 @@ Use alert routing to associate alerts with a service. If an alert matches your a
 
 After you configure which alerts are routed to your service, use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents.
 
-.. _configure-alert-grouping:
+.. _ii-configure-alert-grouping:
 
 Configure how alerts are grouped
 ====================================
@@ -61,7 +61,7 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 
 After you manage which alerts create an incident and how alerts are grouped into incidents, use incident workflows to determine who is notified when a new incident is triggered. 
 
-.. _configure-incident-workflows:
+.. _ii-configure-incident-workflows:
 
 Configure incident workflows for your service
 ==================================================
@@ -72,7 +72,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. Select :guilabel:`Services` and then the service where you want to create an incident workflow.
 #. Select the :guilabel:`Incident workflows` tab. 
 #. To add responders, select :guilabel:`Configure invite` under :guilabel:`Immediately`. 
-#. In the :guilabel:`Configure invite` window, add responders by name or by schedule. If you don't have an on-call schedule, see :ref:`create-manage-on-call-schedules`.
+#. In the :guilabel:`Configure invite` window, add responders by name or by schedule. If you don't have an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
     #. To add responders by name, enter user names in the :guilabel:`Search people` field and select the user when they appear. 
     #. To add responders by schedule, enter a schedule name in the :guilabel:`Search schedules` field and select the schedule when it appears. Adding a schedule to a workflow step notifies the user that is on call when that workflow step is triggered. 
     #. Repeat these steps until you have all the responders you want to invite to incidents for this step in the workflow. 
@@ -81,6 +81,8 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. Select an elapsed time period in the drop-down list next to :guilabel:`If unacknowledged after`.
 #. Select :guilabel:`Configure invite` to add responders.
 #. Repeat these steps until you have a complete incident workflow for the service. 
+
+.. _ii-service-maintenance:
 
 Use service maintenance to mute notifications 
 ==================================================

@@ -1,4 +1,4 @@
-.. _notification-preferences:
+.. _ii-notification-preferences:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 

@@ -1,4 +1,4 @@
-.. _add-incident-tools-resources:
+.. _ii-add-incident-tools-resources:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 

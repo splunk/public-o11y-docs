@@ -1,4 +1,4 @@
-.. _sync-on-call-schedule:
+.. _ii-sync-on-call-schedule:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 

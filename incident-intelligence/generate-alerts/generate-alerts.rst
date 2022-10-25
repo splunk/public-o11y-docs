@@ -1,4 +1,4 @@
-.. _generate-alerts:
+.. _ii-generate-alerts:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 
@@ -27,5 +27,5 @@ See :ref:`get-started-detectoralert` for more information about configuring dete
 
 :strong:`Available ingest endpoints for cloud alerts`
 
-- Amazon CloudWatch, see :ref:`ingest-cloudwatch-alerts`.
-- Prometheus, see :ref:`ingest-prometheus-alerts`.
+- Amazon CloudWatch, see :ref:`ii-ingest-cloudwatch-alerts`.
+- Prometheus, see :ref:`ii-ingest-prometheus-alerts`.

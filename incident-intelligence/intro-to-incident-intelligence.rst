@@ -1,4 +1,4 @@
-.. _get-started-incident-intelligence:
+.. _ii-get-started-incident-intelligence:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 
@@ -31,7 +31,7 @@ Feedback about your experience with Incident Intelligence is valuable. Use the f
 Get started with Incident Intelligence
 =====================================================
 
-For a step-by-step tutorial on how to set up Incident Intelligence, see :ref:`set-up-incident-intelligence`.
+For a step-by-step tutorial on how to set up Incident Intelligence, see :ref:`ii-set-up-incident-intelligence`.
 
 What can I do with Incident Intelligence?
 ===================================================
@@ -47,27 +47,27 @@ The following table provides an overview of what you can do with Incident Intell
 
    * - Create services to automatically organize incidents depending on the impacted service.
      - Services
-     - See :ref:`create-configure-services`.
+     - See :ref:`ii-create-configure-services`.
 
    * - Route alerts to associate them with a service.
      - Service-based alert routing
-     - See :ref:`configure-alert-routing`.
+     - See :ref:`ii-configure-alert-routing`.
 
    * - Manage which alerts create an incident and how alerts are grouped into incidents. Use alert severity to determine if an incident is created and also group alerts by time period.
      - Alert grouping
-     - See :ref:`configure-alert-grouping`.
+     - See :ref:`ii-configure-alert-grouping`.
 
    * - Create incident workflows with a series of escalating steps to determine who is notified to respond when a new incident is triggered.
      - Incident workflows
-     - See :ref:`configure-incident-workflows`.
+     - See :ref:`ii-configure-incident-workflows`.
 
    * - Create on-call schedules and shifts to use as a step in your service incident workflows.
      - On-call schedules and shifts
-     - See :ref:`create-manage-on-call-schedules`.
+     - See :ref:`ii-create-manage-on-call-schedules`.
 
    * - Use incident management tools to respond to incidents as they are triggered.
      - Incident response
-     - See :ref:`respond-manage-incidents`.
+     - See :ref:`ii-respond-manage-incidents`.
      
 
 How Incident Intelligence works 

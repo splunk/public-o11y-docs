@@ -1,4 +1,4 @@
-.. _respond-manage-incidents:
+.. _ii-respond-manage-incidents:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 
@@ -26,9 +26,10 @@ Use the following topics to learn about incident management and response:
 
 
 
-- :ref:`respond-to-incident`
-- :ref:`add-responders-roles`
-- :ref:`add-incident-tools-resources`
-- :ref:`edit-incident`
-- :ref:`mtta-mttr`
-- :ref:`notification-preferences`
+
+* :ref:`ii-respond-to-incident`
+* :ref:`add-responders-roles`
+* :ref:`add-incident-tools-resources`
+* :ref:`edit-incident`
+* :ref:`mtta-mttr`
+* :ref:`notification-preferences`

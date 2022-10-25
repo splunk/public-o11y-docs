@@ -1,4 +1,4 @@
-.. _mtta-mttr:
+.. _ii-mtta-mttr:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 

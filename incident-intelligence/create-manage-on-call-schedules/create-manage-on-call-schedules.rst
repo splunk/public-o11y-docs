@@ -1,4 +1,4 @@
-.. _create-manage-on-call-schedules:
+.. _ii-create-manage-on-call-schedules:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 
@@ -40,7 +40,7 @@ Consider this example schedule scenario and use it in the following schedule-cre
 
 After you save your shift, review the schedule details in the :guilabel:`Schedule Preview` to confirm that you've configured your schedule shifts as intended. The schedule preview includes schedule info for up to one year. Select :guilabel:`Next Month` and :guilabel:`Previous Month` to navigate the schedule preview. Select :guilabel:`Back to all schedules` when you are finished adding shifts to your on-call schedule.
 
-Now that you've created an on-call schedule, add it to the incident workflow for your web application service. See :ref:`configure-incident-workflows`.
+Now that you've created an on-call schedule, add it to the incident workflow for your web application service. See :ref:`ii-configure-incident-workflows`.
 
 .. raw:: html
    
@@ -48,5 +48,5 @@ Now that you've created an on-call schedule, add it to the incident workflow for
    <h2>See also
    </embed>
 
-- :ref:`sync-on-call-schedule`
-- :ref:`whos-on-call`
+- :ref:`ii-sync-on-call-schedule`
+- :ref:`ii-whos-on-call`
