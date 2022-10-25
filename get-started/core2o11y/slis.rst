@@ -27,7 +27,6 @@ Defining and managing SLOs for services with dependencies, some of which have th
 
 :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services. See :ref:`dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
 
-
 Splunk Infrastructure Monitoring
 ===================================================================================
 Infrastructure Monitoring is a custom metrics platform for real-time monitoring across infrastructure, applications, and business metrics. It collects health and performance data from servers, virtual machines, containers, databases, public cloud services, container orchestration, serverless and other backend components in a tech stack. 
@@ -40,15 +39,15 @@ Monitor your SLIs in out of the box navigators, such as the following navigator 
 
 :ref:`infrastructure-virtual-metrics` help you more accurately and thoroughly measure SLIs by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options.
 
-
 Splunk Log Observer Connect
 ===================================================================================
-Splunk Log Observer Connect defaults to displaying a count of all of your logs by severity, highlighting the percentage of logs with errors at any given time.
+Splunk Log Observer Connect defaults to displaying a count of all of your logs by severity, highlighting the percentage of logs with errors at any given time. 
 
   .. image:: /_images/get-started/LOsample-core.png 
     :width: 100%
     :alt: This image shows Log Observer Connect with a timeline displaying a count of logs by severity.
 
+You can change the default log aggregation to see other SLI measurements using logs data. For example, to see the average request latency in logs data, change count to average and group by request latency rather than severity. See :ref:`logs-aggregations` for guidance on adjusting aggregations so that you can view the SLIs that are important to you.
 
 Splunk Synthetic Monitoring
 ===================================================================================
