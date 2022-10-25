@@ -2,8 +2,8 @@
 
 .. _ii-respond-to-incident:
 
-Respond to an incident
-*****************************
+Respond to an incident: Acknowledge, resolve, and reject an incident
+****************************************************************************
 
 Incidents begin in the triggered status. The default status lifecycle for incidents is triggered, and then acknowledged, and then resolved.
 
@@ -34,6 +34,7 @@ To reject an incident, go to the :guilabel:`Incidents` tab in Incident Intellige
 See also
 ============
 
+* :ref:`ii-snooze-incident`
 * :ref:`ii-add-responders-roles`
 * :ref:`ii-add-incident-tools-resources`
 * :ref:`ii-edit-incident`

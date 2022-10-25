@@ -12,6 +12,7 @@ See also
 ============
 
 * :ref:`ii-respond-to-incident`
+* :ref:`ii-snooze-incident`
 * :ref:`ii-add-responders-roles`
 * :ref:`ii-add-incident-tools-resources`
 * :ref:`ii-edit-incident`

@@ -18,6 +18,7 @@ Use the following topics to learn about incident management and response:
    :hidden:
 
    respond-to-incident
+   snooze-incident
    add-responders-roles
    add-incident-tools-resources
    edit-incident
@@ -26,6 +27,7 @@ Use the following topics to learn about incident management and response:
 
 
 * :ref:`ii-respond-to-incident`
+* :ref:`ii-snooze-incident`
 * :ref:`ii-add-responders-roles`
 * :ref:`ii-add-incident-tools-resources`
 * :ref:`ii-edit-incident`
