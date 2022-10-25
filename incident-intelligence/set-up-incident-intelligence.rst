@@ -24,39 +24,41 @@ Complete these tasks to get started with Incident Intelligence:
 Generate alerts
 =====================
 
-To generate alerts in Incident Intelligence, you can define a detector or ingest alerts using an ingest endpoint. See :ref:`ii-generate-alerts`.
+To begin using Incident Intelligence you need to generate alerts in Incident Intelligence. You can define a detector to automatically generate alerts in Incident Intellgence or ingest alerts using an ingest endpoint. See :ref:`ii-generate-alerts` go get started generating alerts in Incident Intelligence.
 
 .. _ii-setup-service:
 
 Create a service
 =====================
 
-Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. See :ref:`ii-create-configure-services`.
+Next, you need to create services to organize your alerts and incidents based on the impacted environmental component. Begin by creating a service. See :ref:`ii-create-configure-services` for steps to create a service.
 
 .. _ii-setup-alert-routing:
 
 Configure the alerts that are routed to your service
 =======================================================
 
-Next, use alert routing to associate alerts with a service. If an alert matches your alert filter conditions, it is routed to the service. See :ref:`ii-configure-alert-routing`.
+Next, use alert routing to associate alerts with a service. If an alert matches your alert filter conditions, it is routed to the service. See :ref:`ii-configure-alert-routing` for step to create alert routing rules.
 
 .. _ii-setup-alert-grouping:
 
 Configure how alerts are grouped
 =====================================
 
-After you configure which alerts are routed to your service, use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents.
+After you configure which alerts are routed to your service, use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents. See :ref:`ii-configure-alert-grouping` for steps to create your alert grouping rules.
 
 .. _ii-setup-incident-workflows:
 
 Configure incident workflows for your service
 ===============================================
 
-After you manage which alerts create an incident and how alerts are grouped into incidents, use incident workflows to determine who is notified when a new incident is triggered. See :ref:`ii-configure-incident-workflows`.
+After you manage which alerts create an incident and how alerts are grouped into incidents, use incident workflows to determine who is notified when a new incident is triggered. See :ref:`ii-configure-incident-workflows`. 
 
 .. _ii-setup-manage-on-call-schedules:
 
 Create your on-call schedules
 ===============================
 
-Use an on-call schedule as a step in your service incident workflows. See :ref:`ii-create-manage-on-call-schedules`.
+You can use on-call schedules as a step in your incident workflow. See :ref:`ii-create-manage-on-call-schedules` for steps to create an on-call schedule.
+
+This completes the setup for Incident Intelligence and you are ready to begin responding to incidents. See :ref:`ii-respond-manage-incidents`.
