@@ -13,9 +13,11 @@ SLIs are Service Level Indicators, the metrics used to measure your system's ava
 
 :strong:`Example`:
 
-An SLI might be the percentage of the time your system is available.
-An SLO might be that your system should be available 99.99% of the time. 
-The SLA for this scenario is "If your system is not available 99.99% of the time during a customer's first year from purchase, you will give them a 10% discount on your services in the following year's contract.""
+SLI: the percentage of the time your system is available
+
+SLO: Your system should be available 99.99% of the time. 
+
+SLA: If your system is not available 99.99% of the time during a customer's first year from purchase, you will give them a 10% discount on your services in the following year's contract.
 
 To meet your SLAs, you have to set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. 
 
