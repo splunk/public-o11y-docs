@@ -8,3 +8,12 @@ Set your on-call notification preferences
 When you are on call, triggered incidents notify you by email by default. You can also choose to receive notifications via SMS or mobile push. To set your on-call notification preferences follow these steps:
 
 .. include:: /_includes/incident_intelligence/notification-preferences.rst
+
+See also
+============
+
+* :ref:`ii-respond-to-incident`
+* :ref:`ii-add-responders-roles`
+* :ref:`ii-add-incident-tools-resources`
+* :ref:`ii-edit-incident`
+* :ref:`ii-mtta-mttr`

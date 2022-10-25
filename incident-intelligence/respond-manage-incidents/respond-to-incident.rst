@@ -30,3 +30,12 @@ To reject an incident, go to the :guilabel:`Incidents` tab in Incident Intellige
 
 * Select the :guilabel:`Actions` menu on the incident and select :guilabel:`Reject` from the list.
 * Select the incident you want to reject from the list of incidents. On the incident detail page, select the :guilabel:`Actions` menu next to the :guilabel:`Acknowledge` button, and select :guilabel:`Reject` from the list. (This button might say :guilabel:`Resolve` if the incident was previously acknowledged.)
+
+See also
+============
+
+* :ref:`ii-add-responders-roles`
+* :ref:`ii-add-incident-tools-resources`
+* :ref:`ii-edit-incident`
+* :ref:`ii-mtta-mttr`
+* :ref:`ii-notification-preferences`

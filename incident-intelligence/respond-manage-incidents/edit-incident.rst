@@ -12,3 +12,12 @@ Incidents automatically inherit the title and description of the first alert tha
 #. Select the :guilabel:`pencil` icon.
 #. Edit the title, description, or severity. 
 #. Select :guilabel:`Save`.
+
+See also
+============
+
+* :ref:`ii-respond-to-incident`
+* :ref:`ii-add-responders-roles`
+* :ref:`ii-add-incident-tools-resources`
+* :ref:`ii-mtta-mttr`
+* :ref:`ii-notification-preferences`
