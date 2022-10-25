@@ -7,7 +7,7 @@ Create and manage organization access tokens using Splunk Observability Cloud
 .. meta::
    :description: Learn how to how to create and manage organization access tokens
 
-Access tokens, also known as org tokens, are long-lived organization-level tokens.
+Access tokens, also known as org tokens, are long-lived organization-level tokens. You can use access tokens in all API requests except those that require a token associated with a user who has administrative access. See :ref:`admin-api-access-tokens` for more information.
 
 Use access tokens to:
 
@@ -15,18 +15,14 @@ Use access tokens to:
 - Run scripts that call the API.
 - Manage your resource by tracking usage for different groups of users, services, teams, and so on. For example, you have users in the U.S. and Canada sending data to Infrastructure Monitoring. You can give each group its specific access token to compare the amount of data coming from each country.
 
-You can't use access tokens for API requests associated with an administrator. See :ref:`admin-api-access-tokens` for more information.
+.. note:: By default, only users who are administrators can search for and view all access tokens. You can change this default when you create or update an access token.
 
 Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date.
-
-.. note:: By default, only users who are administrators can search for and view all access tokens. You can change this default when you create or update an access token.
 
 The default access token
 ===========================
 
-By default, every organization has one organization-level access token. If you don't
-create any additional tokens, every API request that sends data to Infrastructure
-Monitoring must use this access token.
+By default, every organization has one organization-level access token. If you don't create any additional tokens, every API request that sends data to Infrastructure Monitoring must use this access token.
 
 .. _manage-access-token:
 
@@ -74,11 +70,9 @@ To manage your access (org) tokens:
 View and copy access tokens
 ==============================
 
-To view the value of an access token, select the token name and then select
-:guilabel:`Show Token`.
+To view the value of an access token, select the token name and then select :guilabel:`Show Token`.
 
-To copy the token value, select :guilabel:`Copy`. You don't need to be an administrator to
-view or copy an access token.
+To copy the token value, select :guilabel:`Copy`. You don't need to be an administrator to view or copy an access token.
 
 
 .. _create-access-token:
@@ -161,7 +155,7 @@ Renaming a token does not affect the value of the token.
 
 .. note::
 
-   If you rename an access token, you need to choose a new token name in your AWS integration. You can do that :ref:`in the UI <aws-wizardconfig>`.
+   For :ref:`Cloud integrations (AWS, GCP, or Azure) <get-started-connect>`, after renaming an access token you'll need to choose a new token name via the API. For AWS, you can also set up a new token :ref:`in the UI <aws-wizardconfig>`.
 
 Disable or enable an access token
 =====================================
