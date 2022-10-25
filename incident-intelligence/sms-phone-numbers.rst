@@ -1,4 +1,4 @@
-.. _sms-phone-numbers:
+.. _ii-sms-phone-numbers:
 
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 

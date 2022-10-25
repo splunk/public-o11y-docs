@@ -25,7 +25,7 @@ An on-call schedule consists of one or more shifts, with members who rotate thro
 
 Consider this example schedule scenario and use it in the following schedule-creation steps. 
 
-- You create a web application service that you configure to route alerts from your web application. See :ref:`Create a service<create-service>` and :ref:`configure-alert-routing` for steps to define a service and configure a service’s alert routing.
+- You create a web application service that you configure to route alerts from your web application. See :ref:`Create a service<ii-create-service>` and :ref:`ii-configure-alert-routing` for steps to define a service and configure a service’s alert routing.
 - You need coverage for your web application service from 9 AM to 5 PM on Monday through Friday of each week, with each person on the team being on call for a whole week at a time.
 - You also need coverage for your web application service on the weekends. The weekend coverage is one person who is on call from Friday at 5 PM to Monday at 9 AM.
 
