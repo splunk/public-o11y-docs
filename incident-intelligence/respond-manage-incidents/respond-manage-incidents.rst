@@ -25,8 +25,6 @@ Use the following topics to learn about incident management and response:
    notification-preferences
 
 
-Test 
-
 * :ref:`ii-respond-to-incident`
 * :ref:`ii-add-responders-roles`
 * :ref:`ii-add-incident-tools-resources`

@@ -36,3 +36,12 @@ To add a collaboration tool to an incident, follow these steps:
 #. Enter a :guilabel:`URL` for the collaboration tool.
 #. (Optional) Enter notes about the collaboration tool.
 #. Select :guilabel:`Add`. 
+
+See also
+============
+
+* :ref:`ii-respond-to-incident`
+* :ref:`ii-add-responders-roles`
+* :ref:`ii-edit-incident`
+* :ref:`ii-mtta-mttr`
+* :ref:`ii-notification-preferences`

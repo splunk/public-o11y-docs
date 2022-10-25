@@ -31,7 +31,7 @@ To generate alerts in Incident Intelligence, you can define a detector or ingest
 Create a service
 =====================
 
-Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. See :ref:`ii-create-configure-service`.
+Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. See :ref:`ii-create-configure-services`.
 
 .. _ii-setup-alert-routing:
 
