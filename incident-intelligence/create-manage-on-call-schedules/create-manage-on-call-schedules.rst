@@ -45,7 +45,7 @@ Now that you've created an on-call schedule, add it to the incident workflow for
 .. raw:: html
    
    <embed>
-   <h2>See also
+   <h2>See also</h2>
    </embed>
 
 
