@@ -7,7 +7,6 @@ System limits for Splunk Infrastructure Monitoring
 .. meta::
    :description: This topic describes the Splunk Infrastructure Monitoring limits for incoming data,
     number of charts or detectors, and other features.
-   :keywords: reference limits constraints infrastructure monitoring charts detectors ingest
 
 Splunk Infrastructure Monitoring has system limits that help ensure good performance, stability, and reliability. These limits also protect the Infrastructure Monitoring multi-tenant environment. Exceeding these limits might degrade your Infrastructure Monitoring experience. 
 
