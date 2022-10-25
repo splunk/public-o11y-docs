@@ -49,6 +49,17 @@ Splunk Log Observer Connect defaults to displaying a count of all of your logs b
 
 You can change the default log aggregation to see other SLI measurements using logs data. For example, to see the average request latency in logs data, change count to average and group by request latency rather than severity. See :ref:`logs-aggregations` for guidance on adjusting aggregations so that you can view the SLIs that are important to you.
 
+Real User Monitoring (RUM)
+===================================================================================
+Splunk RUM shows SLIs and SLOs from the perspective of what your users experience. In the following example, a RUM dashboard in the Tag Spotlight view starts with a chart displaying the total count of network requests and errors over a 15 minute period. The following charts display the count of requests and errors by URL name, by HTTP method, and by HTTP status code. 
+
+  .. image:: /_images/get-started/Core-to-o11y-RUM-SLIs
+    :width: 100%
+    :alt: This image shows a RUM dashboard displaying a count of requests and errors by URL name, by HTTP method, and by HTTP status code. 
+    
+To learn more about what you can do with RUM, see :ref:`get-started-rum`. The :ref:`use-case-landingpage` has multiple examples of how you can use RUM. 
+
+
 Splunk Synthetic Monitoring
 ===================================================================================
 Splunk Synthetic Monitoring lets you test your SLOs before users do. When you proactively monitor the performance of your web application, you can remediate problems before they impact your users. Technical and business teams use Synthetic Monitoring to create detailed tests that proactively monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle.  See :ref:`intro-synthetics` to learn what you can do with Synthetics Monitoring. 
