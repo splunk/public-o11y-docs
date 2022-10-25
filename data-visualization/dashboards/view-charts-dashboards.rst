@@ -145,7 +145,7 @@ This feature is especially useful when different users are comparing two views o
 
 If there are no overrides in place, each chart on a dashboard is displayed in a default resolution; the resolution depends on a number of factors for any particular chart.
 
-.. admonition:: Notes
+.. note:: Notes
 
 	- Setting a high resolution doesn't guarantee that all of the charts on the dashboard have the same resolution. Some charts might already be at the finest possible resolution, in which case increasing the chart resolution setting for the dashboard has no effect on those charts. 
 	

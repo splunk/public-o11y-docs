@@ -178,7 +178,7 @@ Choose this chart type when you want to see a single number in a large font that
   .. image:: /_images/data-visualization/charts/single-value-chart.png
      :alt: This screenshot shows a single value chart illustrating the number of hosts with the Splunk Distribution of OpenTelemetry Collector installed.
 
-.. important::
+.. caution::
 
    To display an accurate value, the plot must use an aggregate analytics function that generates a single value for each data point on the chart, such as Mean, Sum, Max, etc. If the plot line always reflects only a single time series, no analytics function is needed. However, this is uncommon.
 

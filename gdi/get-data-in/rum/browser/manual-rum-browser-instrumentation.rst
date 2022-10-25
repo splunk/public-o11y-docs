@@ -58,7 +58,7 @@ Create a custom event
    // time passes
    span.end();
 
-.. tip:: To avoid load problems due to content blockers when using the CDN version of the Browser RUM agent, add ``if (window.SplunkRum)`` checks around ``SplunkRum`` API calls. 
+.. note:: To avoid load problems due to content blockers when using the CDN version of the Browser RUM agent, add ``if (window.SplunkRum)`` checks around ``SplunkRum`` API calls. 
 
 .. _rum-browser-redact-pii:
 

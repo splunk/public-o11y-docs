@@ -103,7 +103,7 @@ For Gateway mode, download the :new-page:`gateway-only manifest directory on Git
 The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator (Alpha)
 ============================================================================================
 
-.. warning::
+.. caution::
 
    This project is Alpha. Do not use in production.
 

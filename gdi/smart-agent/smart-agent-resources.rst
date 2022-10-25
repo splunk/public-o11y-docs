@@ -69,7 +69,7 @@ There are several options available to install the Smart Agent. Select the optio
 
 The Smart Agent is incompatible on Linux systems with SELinux enabled. Check the documentation for your distribution to learn how to disable SELinux.
 
-.. tip:: To uninstall the Smart Agent, see :ref:`uninstall-smart-agent`.
+.. note:: To uninstall the Smart Agent, see :ref:`uninstall-smart-agent`.
 
 Configure the Smart Agent
 ==============================
