@@ -16,7 +16,7 @@ Observability Cloud immediately monitors and analyzes your SLIs, takes the guess
 The following sections detail the components in Observability Cloud that you can use to track your SLOs and ensure that you meet your SLAs.
 
 Splunk APM
----------------------------------------------------------------------------------
+===================================================================================
 Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you click into a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency.
 
 .. image:: /_images/get-started/core2o11y-apm-pt1.png
@@ -29,10 +29,10 @@ Defining and managing SLOs for services with dependencies, some of which have th
 
 
 Splunk Infrastructure Monitoring
----------------------------------------------------------------------------------
+===================================================================================
 Infrastructure Monitoring is a custom metrics platform for real-time monitoring across infrastructure, applications, and business metrics. It collects health and performance data from servers, virtual machines, containers, databases, public cloud services, container orchestration, serverless and other backend components in a tech stack. 
 
-Monitor your SLIs in out of the box navigators, such as the following navigator showing latency over the last minute for AWS ELB instances:
+Monitor your SLIs in out of the box navigators, such as the following navigator chart showing latency over the last minute for AWS ELB instances:
 
   .. image:: /_images/infrastructure/elb-navigator-chart.gif
     :width: 100%
@@ -40,16 +40,9 @@ Monitor your SLIs in out of the box navigators, such as the following navigator 
 
 :ref:`infrastructure-virtual-metrics` help you more accurately and thoroughly measure SLIs by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options.
 
-Splunk Synthetic Monitoring
----------------------------------------------------------------------------------
-Splunk Synthetic Monitoring lets you test your SLOs before users do. When you proactively monitor the performance of your web application, you can remediate problems before they impact your users. Technical and business teams use Synthetic Monitoring to create detailed tests that proactively monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle.  See :ref:`intro-synthetics` to learn what you can do with Synthetics Monitoring. 
-
-Learn more about when to use Synthetic Monitoring in the use case, :ref:`uptime-test-use-case`. 
-
-Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`.
 
 Splunk Log Observer Connect
----------------------------------------------------------------------------------
+===================================================================================
 Splunk Log Observer Connect defaults to displaying a count of all of your logs by severity, highlighting the percentage of logs with errors at any given time.
 
   .. image:: /_images/get-started/LOsample-core.png 
@@ -57,6 +50,13 @@ Splunk Log Observer Connect defaults to displaying a count of all of your logs b
     :alt: This image shows Log Observer Connect with a timeline displaying a count of logs by severity.
 
 
+Splunk Synthetic Monitoring
+===================================================================================
+Splunk Synthetic Monitoring lets you test your SLOs before users do. When you proactively monitor the performance of your web application, you can remediate problems before they impact your users. Technical and business teams use Synthetic Monitoring to create detailed tests that proactively monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle.  See :ref:`intro-synthetics` to learn what you can do with Synthetics Monitoring. 
+
+Learn more about when to use Synthetic Monitoring in the use case, :ref:`uptime-test-use-case`. 
+
+Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`.
 
 
 
