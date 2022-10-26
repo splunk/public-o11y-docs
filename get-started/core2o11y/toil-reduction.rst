@@ -20,16 +20,7 @@ Your organization's Alerts homepage displays a list of all current alerts, To se
    :width: 100%
    :alt: This screenshot shows a sample Alerts homepage in Observability Cloud.
 
-Some detectors are built-in, including AutoDetect detectors and APM built-in alert conditions, while others follow the logic that you configure to alert your team or others on what matters most to you.
-
-You can alert on the following:
-
-- Supported integrations via AutoDetect
-
-- Dashboards and charts
-
-- Built-in APM alert conditions
-
+Some detectors are built-in, including AutoDetect detectors and APM built-in alert conditions, while others follow the logic that you configure to alert your team or others on what matters most to you. See :ref:`get-started-detectoralert` to learn about alerts, detectors, and notifications.
 
 See :ref:`use-cases-alerts-detectors` for examples of how you can use alerts to notify teams about increased server latency, high CPU usage, approaching system limits, and other conditions that negatively impact user experience.
 
@@ -39,7 +30,7 @@ AutoDetect enables Observability Cloud's automatic detectors for supported integ
 
 Dashboards and charts
 -----------------------------------------------------------------------------------
-You can automate monitoring dashboards and charts by linking a detector to a chart.
+You can automate monitoring dashboards and charts by linking a detector to a chart. Then you can notify team members 
 
  .. image:: /_images/get-started/core2o11y-chartDetector.png
    :width: 100%
