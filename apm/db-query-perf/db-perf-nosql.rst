@@ -2,7 +2,7 @@
 .. _db-perf-nosql:
 
 ************************************************************************
-Database Query Performance for NoSQL databases
+Database Query Performance for NoSQL
 ************************************************************************
 
 .. meta::
