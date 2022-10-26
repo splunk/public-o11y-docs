@@ -5,7 +5,9 @@
 Ingest Amazon CloudWatch alarms
 ************************************************************************
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the AWS Cloudwatch endpoint to forward AWS Cloudwatch alarms into Incident Intelligence where you can create on-call schedules and incident workflows to route AWS alerts to responders.
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the AWS Cloudwatch endpoint to forward AWS Cloudwatch alarms into Incident Intelligence where you can create on-call schedules and incident workflows to route AWS alarms to responders.
+
+.. note:: Cloudwatch alarms are ingested as alerts in Incident Intelligence.
 
 Send AWS Cloudwatch alarms directly to the ingest endpoint
 =================================================================
@@ -48,22 +50,22 @@ Alarm fields
      - Description
    * -  | id  
         | ``Required``
-     -  (string) Alert ID.
+     -  (string) Alarm ID.
    * -  | detail-type 
         | ``Required``
-     -  (string) Alert title.
+     -  (string) Alarm title.
    * -  | source 
         | ``Required``
-     -  (string) The alert source.
+     -  (string) The alarm source.
    * -  | time 
         | ``Required``
      -  (string) Date-time string.
    * -  region
      -  (string) AWS region.
    * -  resources
-     -  (array) Alert resources you want to include with the alert in Incident Intelligence.
+     -  (array) Alarm resources you want to include with the alert in Incident Intelligence.
    * -  detail
-     -  (object) Alert details you want to include with the alert in Incident Intelligence.
+     -  (object) Alarm details you want to include with the alert in Incident Intelligence.
 
 Examples
 ------------
