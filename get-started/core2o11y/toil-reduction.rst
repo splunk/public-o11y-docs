@@ -38,11 +38,11 @@ Dashboards and charts
 -----------------------------------------------------------------------------------
 Link a chart to a detector to make it easier for team members to know which charts they should examine when a detector is tripped and they are notified. 
 
-Then you can notify team members 
-
  .. image:: /_images/get-started/core2o11y-chartDetector.png
    :width: 100%
    :alt: This screenshot shows how to link a chart to a detector in Observability Cloud.
+
+See :ref:`linking-detectors` to learn more.
 
 Splunk APM
 -----------------------------------------------------------------------------------
@@ -50,17 +50,15 @@ You can automatically notify teams of worrisome trends or surpassing threshholds
 
 You can also create custom alerts and detectors to automatically alert on conditions that are most important to your teams. See :ref:`apm-alerts` to learn how.
 
-Splunk Infrastructure Monitoring
-===================================================================================
-generate reliability reports
-
-Splunk Log Observer Connect
-===================================================================================
-
-
 Splunk Real User Monitoring (RUM)
 ===================================================================================
+:ref:`rum-built-in-dashboards` are out of the box dashboards that show the health of your mobile app or browser app. You can link detectors to RUM dashboards to automatically alert your team when the front-end user experience for your mobile or browser app reach certain conditions that you specify. See See :ref:`linking-detectors` to learn how.
 
+To view your RUM built-in dashboards, log in to Splunk Observability Cloud, then select :strong:`Dashboards` in the left navigation menu, then select the :strong:`RUM Application` dashboard.
+
+ .. image:: /_images/get-started/core2o11yRUMdashboard.gif
+   :width: 100%
+   :alt: This screenshot shows out of the box Real User Monitoring dashboards in Observability Cloud.
 
 Splunk Synthetic Monitoring
 ===================================================================================
