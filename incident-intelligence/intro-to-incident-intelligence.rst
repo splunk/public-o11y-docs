@@ -21,7 +21,7 @@ Splunk Observability Cloud provides a unified experience for collecting and moni
 
 How to provide feedback
 ===========================
-Feedback about your experience with Incident Intelligence is valuable. Use the following forms to share feedback or ask questions about Incident Intelligence :
+Feedback about your experience with Incident Intelligence is valuable. Use the following forms to share feedback or ask questions about Incident Intelligence:
 
 - To share feedback about Incident Intelligence, see :new-page:`Incident Intelligence Ideas in Splunk Ideas <https://quickdraw.splunk.com/redirect/?product=Observability&location=beta.ideas&version=beta>`.
 - To ask questions about Incident Intelligence, see :new-page:`Ask Questions about Incident Intelligence in the Splunk Community <https://quickdraw.splunk.com/redirect/?product=Observability&location=beta.questions&version=beta>`.
@@ -44,6 +44,10 @@ The following table provides an overview of what you can do with Incident Intell
    * - :strong:`Do this`
      - :strong:`With this tool`
      - :strong:`Link to documentation`
+
+   * - Generate alerts from Observability Cloud or ingest third-party alerts. 
+     - Alert generation and ingestion
+     - See :ref:`ii-generate-alerts`.
 
    * - Create services to automatically organize incidents depending on the impacted service.
      - Services

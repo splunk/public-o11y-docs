@@ -36,7 +36,7 @@ Request header
      - (string) Authentication token. See :ref:`api-access-token`.
 
 
-Alarm fields
+Alert fields
 ----------------
 
 .. list-table:: 
@@ -129,7 +129,7 @@ Example JSON payload:
     "truncatedAlerts": 0
     }
 
-Example transformed JSON data for the example alarm that is processed and saved as an alert in Incident Intelligence:
+Example transformed JSON data for the example alert that is processed and saved as an alert in Incident Intelligence:
 
 .. code-block:: json 
 

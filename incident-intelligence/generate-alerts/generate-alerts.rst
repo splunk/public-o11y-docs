@@ -23,7 +23,7 @@ To generate alerts in Incident Intelligence, you can create a detector for the o
 - Splunk RUM
 - Splunk Synthetic Monitoring
 
-See :ref:`get-started-detectoralert` for more information about configuring detectors. 
+See :ref:`create-detectors` for more information about configuring detectors. 
 
 :strong:`Available ingest endpoints for cloud alerts`
 
