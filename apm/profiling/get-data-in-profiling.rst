@@ -95,6 +95,8 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
       AlwaysOn Profiling requires Node 16 and higher.
 
       - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` before running the instrumentation from the terminal.
+      - Enable Memory profiling by setting the ``splunk.profiler.memory.enabled`` environment variable to ``true``.
+      - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable point to ``http://localhost:4317``.
       - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317`` or to the Splunk Distribution of OpenTelemetry Collector.
 
       The following example shows how to enable the profiler from your application's code:
