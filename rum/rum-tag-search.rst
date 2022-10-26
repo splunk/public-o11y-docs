@@ -7,7 +7,6 @@ Filter your data by tags in Splunk RUM
 
 .. meta::
       :description: Learn how to filter your data by tags in Splunk RUM.  
-      :keywords:  Tag value undefined filter tags splunk rum tags 
 
 Filtering your data by tags helps you refine the scope of your search results and glean meaningful insights. In Splunk RUM, you can filter both indexed and unindexed tags by two operators :strong:`=` and :strong:`!=`.
 

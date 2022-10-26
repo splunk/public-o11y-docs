@@ -1,8 +1,8 @@
 .. _infrastructure-hosts:
 
-*************
+**************************
 Monitor hosts
-*************
+**************************
 
 .. meta::
    :description: Learn how to monitor hosts with Splunk Observability Cloud.
@@ -17,24 +17,26 @@ Observability Cloud provides infrastructure monitoring capabilities powered by t
 You can also export and monitor data related to hosts, as described in the following table.
 
 .. list-table::
-   :header-rows: 1
-   :widths: 30, 30, 40
+  :header-rows: 1
+  :widths: 30, 30, 40
 
-   * - :strong:`Get data in`
-     - :strong:`Monitor`
-     - :strong:`Description`
+  * - :strong:`Get data in`
+    - :strong:`Monitor`
+    - :strong:`Description`
 
-   * - - :ref:`get-started-aws`
-       - :ref:`get-started-gcp`
-       - :ref:`get-started-azure`
-     - - :ref:`infrastructure-aws`
-       - :ref:`infrastructure-gcp`
-       - :ref:`infrastructure-azure`
-     - Connect to the cloud service provider your hosts run in, if any.
+  * - - :ref:`get-started-aws`
+      - :ref:`get-started-gcp`
+      - :ref:`get-started-azure`
+    - - :ref:`infrastructure-aws`
+      - :ref:`infrastructure-gcp`
+      - :ref:`infrastructure-azure`
+    - Connect to the cloud service provider your hosts run in, if any.
 
-   * - :ref:`get-started-application`
-     - :ref:`get-started-apm`
-     - Collect metrics and spans from applications running on hosts.
+  * - :ref:`get-started-application`
+    - :ref:`get-started-apm`
+    - Collect metrics and spans from applications running on hosts. 
+  
+Splunk Observability Cloud also provides metrics and other data :ref:`for the following host and application monitors <monitor-data-sources>`.
 
 .. _monitor-hosts:
 

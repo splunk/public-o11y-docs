@@ -90,7 +90,7 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: Node.js
 
-      .. warning:: CPU profiling for Node.js is an experimental feature subject to future changes. 
+      .. caution:: CPU profiling for Node.js is an experimental feature subject to future changes. 
 
       AlwaysOn Profiling requires Node 16 and higher.
 
@@ -110,7 +110,7 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: .NET
 
-      .. warning:: CPU profiling for .NET is an experimental feature subject to future changes.
+      .. caution:: CPU profiling for .NET is an experimental feature subject to future changes.
 
       AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher.
 
