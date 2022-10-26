@@ -14,6 +14,7 @@ Monitor Database Query Performance
    db-perf-use-case
    db-perf-troubleshooting
    db-perf-reference
+   db-perf-nosql
 
 Slow database queries might be the culprit of wider service availability issues. With Database Query Performance, you can monitor the impact of your database queries on service availability directly in Splunk APM. This way, you can quickly identify long-running, unoptimized, or heavy queries and mitigate issues they might be causing, without having to instrument your databases.
 

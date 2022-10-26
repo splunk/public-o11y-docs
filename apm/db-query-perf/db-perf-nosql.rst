@@ -23,7 +23,7 @@ The MetricSet for Redis databases include the following properties:
 
 To instrument Redis for infrastructure metrics and see related Infrastructure Monitoring content, see :ref:`redis`. The following screenshot shows a sample Redis service with related infrastructure content.
 
-.. image:: /_images/apm/apm-use-cases/db-perf-redis.png
+.. image:: /_images/apm/db-query-perf/db-perf-redis.png
    :width: 95%
    :alt: Related content for an instrumented Redis service.
 
