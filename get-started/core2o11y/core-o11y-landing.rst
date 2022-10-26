@@ -25,7 +25,7 @@ The Splunk platform is built around an advanced query language, SPL, that allows
 
 A second difference is in alerting.
 
-A third difference between Observability Cloud and the Splunk platform is in how you must send data to them. Splunk Enterprise Cloud and Splunk Observability Cloud currently use different data collection agents:
+A third difference between Observability Cloud and the Splunk platform is in how you must send data to them. The Splunk platform and Splunk Observability Cloud currently use different data collection agents:
 
 - The Splunk platform uses the Universal Forwarder (UF) to capture logs and some metrics (stored as logs).
 
