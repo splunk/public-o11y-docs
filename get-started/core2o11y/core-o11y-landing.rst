@@ -32,7 +32,7 @@ For more information about each component of Observability Cloud, see :ref:`welc
 
 For each other Observability Cloud component, see the following pages to send your data to Observability Cloud:
 
-- :ref:`_apm`
+- :ref:`apm`
 
 - :ref:`infrastructure-infrastructure`
 
