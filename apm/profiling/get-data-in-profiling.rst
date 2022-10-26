@@ -90,6 +90,8 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: Node.js
 
+      .. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. 
+
       AlwaysOn Profiling requires Node 16 and higher.
 
       - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` before running the instrumentation from the terminal.
