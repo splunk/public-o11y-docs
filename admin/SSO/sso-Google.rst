@@ -50,8 +50,6 @@ To remove a Google domain's login access:
 #. Click the "x" for the domain you want to remove.
 
 
-.. _sso-google-cloud-identity:
-
 .. TO-DO: Need a test account in order to figure out how to document integration-specific entity ID.
 
 Configure a Google Cloud Identity SSO integration

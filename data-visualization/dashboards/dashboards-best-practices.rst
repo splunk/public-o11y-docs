@@ -6,7 +6,6 @@ Best practices for creating dashboards in Splunk Observability Cloud
 
 .. meta::
       :description: Learn about best practices for creating useful dashboards in Splunk Observability Cloud.
-      :keywords:   dashboard best practices charts metrics clutter style guide
 
 Splunk Observability Cloud provides a range of visualization and organizational options for dashboards. This section provides guidance for using these options.
 

@@ -83,7 +83,7 @@ To disable instrumentation for a class, set the ``otel.javaagent.exclude-classes
 
 You can enter multiple classes. For example, ``my.package.MyClass,my.package2.*``.
 
-.. warning:: Disabling instrumentation for specific classes can have unintended side effects. Use this feature with caution.
+.. caution:: Disabling instrumentation for specific classes can have unintended side effects. Use this feature with caution.
 
 .. _java-trace-exporter-issues:
 

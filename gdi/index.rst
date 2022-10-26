@@ -1,7 +1,7 @@
 .. _monitor-data-sources:
 
 ********************************************************************************
-Configure application receivers
+Available host and application monitors
 ********************************************************************************
 
 .. meta::
