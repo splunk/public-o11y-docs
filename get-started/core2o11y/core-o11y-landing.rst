@@ -32,13 +32,15 @@ Select each of the previous categories to learn how you can execute each major r
 
 Set up Observability Cloud components
 =============================================================================================
-For more information about each component of Observability Cloud, see :ref:`welcome`. With the exception of Log Observer Connect, you must send data from your systems to each Observability Cloud component. You do not need to send your Splunk Cloud Platform or Splunk Enterprise logs to Observability Cloud to analyze them in Log Observer Connect. Instead, you see :ref:`logs-scp` or :ref:`logs-set-up-logconnect` to execute the native integration that allows you to analyze your Splunk platform logs in Log Observer Connect without sending them outside of your Splunk platform instance.
+See :ref:`welcome` for a description of each component of Observability Cloud. With the exception of Log Observer Connect, you must send data from your systems to each Observability Cloud component. You do not need to send your Splunk Cloud Platform or Splunk Enterprise logs to Observability Cloud to analyze them in Log Observer Connect. Instead, see :ref:`logs-scp` or :ref:`logs-set-up-logconnect` to execute the native integration that allows you to analyze your Splunk platform logs in Log Observer Connect without sending them outside of your Splunk platform instance.
 
 For each other Observability Cloud component, see the following pages to send your data to Observability Cloud:
 
 - :ref:`apm`
 
 - :ref:`infrastructure-infrastructure`
+
+- :ref:`logs-set-up-logconnect` (Setup is required, but your logs do not leave your Splunk platform instance.)
 
 - :ref:`rum-setup`
 
