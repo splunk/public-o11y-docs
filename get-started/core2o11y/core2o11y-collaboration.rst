@@ -13,6 +13,7 @@ SREs and developers can use Splunk Observability Cloud components to reduce toil
 Splunk APM
 ===================================================================================
 Set up alerts, share dashboards, 
+"Correlate traces to track business workflows"
 
 Splunk Infrastructure Monitoring
 ===================================================================================
