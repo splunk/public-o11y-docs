@@ -20,6 +20,12 @@ Your organization's Alerts homepage displays a list of all current alerts, To se
    :width: 100%
    :alt: This screenshot shows a sample Alerts homepage in Observability Cloud.
 
+Select any alert to see details and links to Observability Cloud components that you can use to troubleshoot the error. The following critical alert showing a high API error rate. The :strong:`Explore Further` section on the right panel shows a link that takes you to APM where you can troubleshoot the issue.
+
+ .. image:: /_images/get-started/alert-details.png
+   :width: 100%
+   :alt: This screenshot shows the detail view of an individual critical alert in Observability Cloud.
+
 Some detectors are built-in, including AutoDetect detectors and APM built-in alert conditions, while others follow the logic that you configure to alert your team or others on what matters most to you. See :ref:`get-started-detectoralert` to learn about alerts, detectors, and notifications.
 
 See :ref:`use-cases-alerts-detectors` for examples of how you can use alerts to notify teams about increased server latency, high CPU usage, approaching system limits, and other conditions that negatively impact user experience.

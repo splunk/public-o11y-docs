@@ -31,7 +31,7 @@ The general principles and practices of reliability fall into four primary categ
 
 * :ref:`Collaborate on reliability across teams <toil-reduction>`
 
-Select each of the previous categories to learn how you can execute each major reliability duty in Observability Cloud.
+Select each of the previous categories to learn how you can execute each major reliability duty in Observability Cloud. The following section explains how to send your data to Observability Cloud.
 
 Set up Observability Cloud components
 =============================================================================================
@@ -69,7 +69,7 @@ A third difference between Observability Cloud and the Splunk platform is in how
 
 See :ref:`collector-with-the-uf` to learn more about the differences between these two collection agents and how you can use them together. 
 
-The following section explains how to send your data to Observability Cloud.
+
 
 
 
