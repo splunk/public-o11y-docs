@@ -1,4 +1,4 @@
-.. _core-collaboration:
+.. _core2o11y-collaboration:
 
 ***********************************************************************************
 Reduce toil with automated solutions for interacting with the infrastructure

@@ -1,7 +1,7 @@
    .. _core-o11y-landing:
 
 ****************************************************************
-Expand the Splunk platform into observability
+The Splunk platform and Splunk Observability Cloud
 ****************************************************************
 
 .. meta::
@@ -13,7 +13,7 @@ Expand the Splunk platform into observability
    slis
    incident-response
    toil-reduction
-   core-collaboration
+   core2o11y-collaboration
 
 With over two hundred out of the box integrations and dashboards on hybrid cloud infrastructure and infrastructure services, Splunk Observability Cloud lets you to start monitoring, troubleshooting, automating, and collaborating immediately. Speed your cloud journey with a single pain of glass for hybrid coverage. Observability Cloud's cloud-native data and analytics scale is ideal for Kubernetes and highly ephemeral environments. With Splunk Observability Cloud, you can quickly find, analyze, and resolve incidents anywhere in your stack from multicloud to microservices to serverless. Increase reliability and lower your mean time to resolution for all integrated systems. Observability Cloud is the purpose built tool for monitoring, maintaining, and improving system reliability.
 
@@ -49,5 +49,5 @@ The general principles and practices of reliability fall into four primary categ
 
 * :ref:`Collaborate on reliability across teams <toil-reduction>`
 
-Select each of the previous categories to learn how you can execute each major reliability duty efficiently in Observability Cloud.
+Select each of the previous categories to learn how you can execute each major reliability duty in Observability Cloud.
 
