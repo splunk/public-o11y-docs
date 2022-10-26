@@ -36,7 +36,17 @@ For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`
 Monitoring MetricSets
 =====================
 
-Monitoring MetricSets (MMS) are a collection of 12 of the :ref:`metric time series <metric-time-series>` used in Splunk Infrastructure Monitoring. Use MMS to monitor and alert on the performance of your services in real time. MMS power the real-time APM Landing Page and the dashboard view, and they are the metrics that detectors monitor and use to generate alerts. Observability Cloud stores MMS for 13 months by default.
+Monitoring MetricSets (MMS) are a collection of :ref:`metric time series <metric-time-series>` used in Splunk Infrastructure Monitoring. Use MMS to monitor and alert on the performance of your services in real time. You can also alert on TMS.  MMS power the real-time APM Landing Page and the dashboard view, and they are the metrics that detectors monitor and use to generate alerts. Observability Cloud stores MMS for 13 months by default.
+
+Each MMS includes six metrics. For each metric there is one MTS with responses ``sf_error: true`` or ``sf_error:false``.
+
+* ``count``
+* ``duration.min``
+* ``duration.median``
+* ``duration.p90``
+* ``duration.p99``
+* ``duration.max``
+
 
 While Observability Cloud generates TMS for every identity in APM, MMS are available only for a specific endpoint, for the aggregate of all endpoints in a service, or for a specific Business Workflow.
 
@@ -174,34 +184,34 @@ Splunk APM creates the following identities and MetricSets:
 
    *  -  Service
       -  Identities for all services
-      -  Service |hyph| 1
+      -  Service,  1
       -  Yes
       -  Yes
 
    *  -  Endpoint
       -  Identities for all endpoints
-      -  Service |hyph| 1.Endpoint |hyph| 1.HTTPMethod
+      -  Service,  1.Endpoint,  1.HTTPMethod
 
-         Service |hyph| 1.InitEndpoint |hyph| 1 `if HTTPMethod is absent`
+         Service,  1.InitEndpoint,  1 `if HTTPMethod is absent`
       -  Yes
       -  Yes
 
    *  -  Workflow
       -  Identities for all initiating endpoints
-      -  Service |hyph| 1.InitEndpoint |hyph| 1.HTTPMethod
+      -  Service,  1.InitEndpoint, 1.HTTPMethod
 
-         Service |hyph| 1.InitEndpoint |hyph| 1 `if HTTPMethod is absent`
+         Service,  1.InitEndpoint, 1 `if HTTPMethod is absent`
       -  Yes
       -  Yes
 
    *  -  Edge
       -  Identities for all edges between services
-      -  Service |hyph| 1.Endpoint |hyph| 1.HTTPMethod |hyph| >Service |hyph| 2.Endpoint |hyph| 2.HTTPMethod
+      -  Service, 1.Endpoint, 1.HTTPMethod,  >Service,  2.Endpoint,  2.HTTPMethod
       -  Yes
       -  No
 
    *  -  Operation
       -  Identities for all spans within services
-      -  Service |hyph| 1.Operation |hyph| 1
+      -  Service,  1.Operation,  1
       -  No
       -  No
