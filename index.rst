@@ -298,7 +298,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Expand the Splunk platform into observability <get-started/core2o11y/core-o11y-landing>
+   The Splunk platform and Splunk Observability Cloud <get-started/core2o11y/core-o11y-landing>
 
 .. toctree::
    :maxdepth:   3
