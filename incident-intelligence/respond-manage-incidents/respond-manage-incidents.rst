@@ -10,6 +10,8 @@ Respond to and manage incidents
 
 Incidents are automatically triggered after you configure your services to route and group alerts and add an incident workflow to your service. To view triggered incidents, go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered.
 
+You can search for incidents by ID or title. Search by ID supports partial matching. Searching by title requires whole word matching. 
+
 You can manually create an incident for testing purposes using the :guilabel:`Create incident` button on the :guilabel:`Incidents` tab.
 
 Use the following topics to learn about incident management and response:
