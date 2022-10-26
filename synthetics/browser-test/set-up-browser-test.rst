@@ -36,7 +36,7 @@ View your Browser test
 
 Now that you created and saved a test, check whether it’s collecting data as expected: 
 
-#. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Run` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
+#. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
 #. Select the test you’re interested in to open the :guilabel:`Test History` view, where you can view visualizations of recent test results and metrics.
 
 Interpret your Browser test results
@@ -87,16 +87,40 @@ Specify custom headers to send with each request. For example, you can add a hea
 
 .. _browser-auth:
 
-..
-    Authentication
-    --------------------------
 
-    Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using Concealed Global Variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
+Authentication
+--------------------------
 
-    The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
+Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using Concealed Global Variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
 
-    * Basic Authentication
-    * NTLM
-    * Kerberos
-    * Digest
+The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
+
+* Basic Authentication
+* NTLM
+* Kerberos
+* Digest
  
+
+.. _browser-overrides:
+
+Host overrides
+---------------------------------------
+Add host override rules to reroute requests from one host to another. For example, you can create a host override to test an existing production site against page resources loaded from a development site or a specific CDN edge node.
+
+
+.. _browser-validation:
+
+Enforce SSL/TLS validation 
+--------------------------
+When activated, this feature is used to enforce the validation of expired, invalid hostname, or untrusted issuer on SSL/TLS certificates.
+
+.. note::
+ When testing pre-production environments that have self-signed or invalid certificates, it's best to leave SSL/TLS validation feature deactivated. 
+
+.. _browser-exclude:
+
+..
+    Exclude files
+    ----------------
+
+

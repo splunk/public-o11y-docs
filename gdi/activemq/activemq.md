@@ -106,7 +106,7 @@ The **nested** `values` configuration object has the following fields:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/activemq/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/activemq/metrics.yaml"></div>
 
 ## Get help
 

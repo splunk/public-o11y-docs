@@ -29,63 +29,63 @@ Google App Engine metrics
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-appengine/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-appengine/metrics.yaml"></div>
 
 Google BigQuery metrics
 =======================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-bigquery/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-bigquery/metrics.yaml"></div>
 
 Google Cloud Bigtable metrics
 =============================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-cloud-bigtable/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-cloud-bigtable/metrics.yaml"></div>
 
 Google Cloud Datastore metrics
 ==============================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-cloud-datastore/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-cloud-datastore/metrics.yaml"></div>
 
 Google Cloud Functions metrics
 ==============================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-cloud-functions/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-cloud-functions/metrics.yaml"></div>
 
 Google Cloud Pub/Sub metrics
 ============================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-cloud-pubsub/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-cloud-pubsub/metrics.yaml"></div>
 
 Google Cloud Router metrics
 ===========================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-cloud-router/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-cloud-router/metrics.yaml"></div>
 
 Google Cloud Spanner metrics
 ============================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-cloud-spanner/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-cloud-spanner/metrics.yaml"></div>
 
 Google Cloud Storage metrics
 ============================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-cloud-storage/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-cloud-storage/metrics.yaml"></div>
 
 .. _gce-metrics:
 
@@ -94,19 +94,19 @@ Google Compute Engine metrics
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-compute-engine/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-compute-engine/metrics.yaml"></div>
 
 Google Container Engine metrics
 ===============================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-container-engine/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-container-engine/metrics.yaml"></div>
 
 Google Kubernetes Engine metrics
 ================================
 
 .. raw:: html
 
-   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/master/google-kubernetes-engine/metrics.yaml"></div>
+   <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/integrations/main/google-kubernetes-engine/metrics.yaml"></div>
 

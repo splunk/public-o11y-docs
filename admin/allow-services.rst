@@ -5,8 +5,7 @@ Allow Splunk Observability Cloud services in your network
 *****************************************************************
 
 .. meta::
-      :description: There are several options for securing your implementation, including proxies and allow lists.
-      :keywords:  security proxy allow list
+      :description: There are several options for securing your implementation, including proxies and allow lists.    
 
 Splunk Observability Cloud is composed of a number of different services. If your organization has stringent networking security policies that apply to sending data to third parties, use one of the following methods to ensure network access to Splunk Observability Cloud services:
 
@@ -31,7 +30,7 @@ Use the Splunk Distribution of OpenTelemetry Collector
 
 Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in gateway mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector and it will serve as your local store-and-forward service for telemetry.
 
-Ensure that you give the Splunk Distribution of OpenTelemetry Collector the ability to resolve the network names and make outbound HTTPS network connections to the URLs listed in :ref:`allow-urls` or the domains listed in :ref:`allow-domains`.
+Ensure that you give the Splunk Distribution of OpenTelemetry Collector the ability to resolve the network names and make outbound HTTPS network connections to the URLs listed in :ref:`allow-urls` or the domains listed in :ref:`allow-domains`. Verify also the list of :ref:`exposed ports and endpoints <otel-exposed-endpoints>`.
 
 
 Replace the SignalFx Gateway with the Splunk Distribution of OpenTelemetry Collector

@@ -116,7 +116,7 @@ The following settings control trace exporters and their endpoints:
 
 The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent, use the Jaeger exporter. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
 
-.. warning:: Support for the `jaeger-thrift-splunk` exporter will be removed after December 17th, 2022.
+.. caution:: Support for the `jaeger-thrift-splunk` exporter will be removed after December 17th, 2022.
 
 .. _trace-sampling-settings-java:
 
