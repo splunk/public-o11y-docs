@@ -7,7 +7,6 @@ View Splunk APM usage reports for your subscription plan
 .. meta::
    :description: View detailed APM billing information and download usage reports to monitor your organization.
 
-   :keywords: Splunk, APM, billing, usage, usage reports
 
 .. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 

@@ -7,8 +7,6 @@ Use Data Links to connect APM properties to relevant resources
 .. meta::
    :description: Use global data links for services, traces, and spans to transfer APM context to other resources.
 
-   :keywords: Splunk, APM, data links, traces, services, spans, monitoring, dashboards
-
 .. toctree::
    :hidden:
    :maxdepth:  3
