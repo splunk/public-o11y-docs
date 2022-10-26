@@ -16,6 +16,7 @@ Database Query Performance provides insights for the following database software
 
 - Oracle
 - MySQL
+- Redis
 - Microsoft SQL Server
 - PostgreSQL
 - Aurora
@@ -24,14 +25,15 @@ Database Query Performance provides insights for the following database software
 - Db2
 - Presto 
      
-Database Query Performance works with all versions supported by the instrumented applications. For more information on related content, see :ref:`get-started-relatedcontent`.
+Database Query Performance works with all versions supported by the instrumented applications.
 
-.. note:: Related Content is available for Oracle, MySQL, Redis, and Microsoft SQL Server.
+.. note:: Related Content is available for Oracle, MySQL, Redis, and Microsoft SQL Server. For more information on related content, see :ref:`get-started-relatedcontent`. 
 
 .. _db-tags:
 
 Database-related span tags
 --------------------------
+
 Enabling Database Query Performance enables indexing for the following database-related span tags: 
 
 .. list-table::
@@ -56,7 +58,7 @@ Enabling Database Query Performance enables indexing for the following database-
 
    * - ``db.sql.table``
      - string
-     - Table in the database
+     - Table in the database (SQL only)
 
    * - ``db.system`` 
      - string

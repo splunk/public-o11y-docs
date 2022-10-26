@@ -44,10 +44,12 @@ If you're having persistent cardinality issues, try turning off indexing for oth
 
 Database issues are not originating with problematic queries
 --------------------------------------------------------------
+
 If you are seeing database latency, but the query itself is not causing the issue, the problem might be a slow connection or a bottleneck waiting for a queue of database queries. To identify these kinds of issues, you need to instrument the database itself. For instructions on instrumenting a SQL database, see the following links:
 
 * :ref:`sql`
 * :ref:`mysql`
+* :ref:`redis`
 * :ref:`microsoft-sql-server`
 * :ref:`postgresql`
 
