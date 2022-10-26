@@ -33,7 +33,7 @@ Defining and managing SLOs for services with dependencies, some of which have th
 
 :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services, as seen in the following sample APM dashboard.
 
-  .. image:: /_images/get-started/core2o11y-apmDashboard-SLIs.gif
+  .. image:: /_images/get-started/core2o11y-apmDashboard-SLIs.png
     :width: 100%
     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
 
