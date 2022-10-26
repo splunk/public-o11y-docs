@@ -18,7 +18,7 @@ With over two hundred out of the box integrations and dashboards on hybrid cloud
 
 Set up Observability Cloud components
 =============================================================================================
-See :ref:`welcome` for a description of each component of Observability Cloud. With the exception of Log Observer Connect, you must send data from your systems to each Observability Cloud component. You do not need to send your Splunk Cloud Platform or Splunk Enterprise logs to Observability Cloud to analyze them in Log Observer Connect. Instead, see :ref:`logs-scp` or :ref:`logs-set-up-logconnect` to execute the native integration that allows you to analyze your Splunk platform logs in Log Observer Connect without sending them outside of your Splunk platform instance.
+See :ref:`welcome` for a description of each component in Observability Cloud. With the exception of Log Observer Connect, you must send data from your systems to each Observability Cloud component. You do not need to send your Splunk Cloud Platform or Splunk Enterprise logs to Observability Cloud to analyze them in Log Observer Connect. Instead, see :ref:`logs-scp` or :ref:`logs-set-up-logconnect` to execute the native integration that allows you to analyze your Splunk platform logs in Log Observer Connect without sending them outside of your Splunk platform instance.
 
 For each other Observability Cloud component, see the following pages to send your data to Observability Cloud:
 
