@@ -23,7 +23,7 @@ Observability Cloud and the Splunk platform serve different needs and are concep
 
 The Splunk platform is built around an advanced query language, SPL, that allows users to drill down into their logs in complex and nuanced ways. Observability Cloud, on the other hand, does not require a query language. Instead, Observability Cloud lets novice users analyze their Splunk platform logs along with correlated metrics, traces, and user sessions with point-and-click technology. There is no need to learn SPL or any other query language in Observability Cloud.
 
-A second difference is in alerting.
+A second difference is in alerting. Alerting for the Splunk Platform and alerting for Observability Cloud remain separate. When you set alerts and detectors in the Splunk platform, only users in the Splunk platform instance can receive notifications. Likewise, only Observability Cloud users can receive notifications for alerts and detectors set in Observability Cloud.
 
 A third difference between Observability Cloud and the Splunk platform is in how you must send data to them. The Splunk platform and Splunk Observability Cloud currently use different data collection agents:
 
