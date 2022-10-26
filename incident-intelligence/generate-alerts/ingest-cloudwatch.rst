@@ -55,30 +55,27 @@ Alert fields
 Examples
 ===========
 
-Example cURL call:
+Example JSON payload :
 
-.. code-block:: curl
+.. code-block:: json
 
-    curl -i -X POST https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/cloudwatch 
-       -H "X-SF-TOKEN: <value>" 
-       -H "Content-Type: application/json" 
-       -d '{ 
-              "version": "0", 
-              "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
-              "detail-type": "Glue Data Catalog Database State Change", 
-              "source": "aws.glue", 
-              "account": "123456789012", 
-              "time": "2019-01-16T18:08:48Z", 
-              "region": "eu-west-1", 
-              "resources": [ 
-              	"arn:aws:glue:eu-west-1:123456789012:table/d1/t1" 
-              ], 
-              "detail": { 
-              	"databaseName": "d1", 
-              	"typeOfChange": "CreateTable", 
-              	"changedTables": [ "t1" ] 
-              }
-            }
+    { 
+        "version": "0", 
+        "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+        "detail-type": "Glue Data Catalog Database State Change", 
+        "source": "aws.glue", 
+        "account": "123456789012", 
+        "time": "2019-01-16T18:08:48Z", 
+        "region": "eu-west-1", 
+        "resources": [ 
+        "arn:aws:glue:eu-west-1:123456789012:table/d1/t1" 
+        ], 
+        "detail": { 
+            "databaseName": "d1", 
+            "typeOfChange": "CreateTable", 
+            "changedTables": [ "t1" ] 
+        }
+    }
 
 Transformed JSON  data for the example call that is processed and saved in Incident Intelligence:
 
