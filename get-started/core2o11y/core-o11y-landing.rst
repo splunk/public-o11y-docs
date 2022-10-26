@@ -13,6 +13,7 @@ Expand the Splunk platform into observability
    slis
    incident-response
    toil-reduction
+   core-collaboration
 
 With over two hundred out of the box integrations and dashboards on hybrid cloud infrastructure and infrastructure services, Splunk Observability Cloud lets you to start monitoring, troubleshooting, automating, and collaborating immediately. Speed your cloud journey with a single pain of glass for hybrid coverage. Observability Cloud's cloud-native data and analytics scale is ideal for Kubernetes and highly ephemeral environments. With Splunk Observability Cloud, you can quickly find, analyze, and resolve incidents anywhere in your stack from multicloud to microservices to serverless. Increase reliability and lower your mean time to resolution for all integrated systems. Observability Cloud is the purpose built tool for monitoring, maintaining, and improving system reliability.
 
