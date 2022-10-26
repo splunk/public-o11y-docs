@@ -2,19 +2,27 @@
 
 .. _ii-ingest-cloudwatch-alerts:
 
-Ingest Amazon CloudWatch alerts
+Ingest Amazon CloudWatch alarms
 ************************************************************************
 
-You can use Incident Intelligence ingest endpoints to ingesting alerts from various third-party sources. 
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the AWS Cloudwatch endpoint to forward AWS Cloudwatch alarms into Incident Intelligence where you can create on-call schedules and incident workflows to route AWS alerts to responders.
 
-Make a POST call to this endpoint to ingest Amazon Cloudwatch alerts.
+Send AWS Cloudwatch alarms directly to the ingest endpoint
+=================================================================
+
+You can send AWS Cloudwatch alarms directly to the ingest endpoint. To do so, make a POST call to the endpoint to ingest Amazon Cloudwatch alarms.
+
+AWS Cloudwatch ingest endpoint
+---------------------------------
+
+For steps to obtain your realm see :ref:`organizations`.
 
 .. code:: 
 
     https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/cloudwatch
 
 Request header
-=================
+------------------
 
 .. list-table:: 
    :widths: 30 70
@@ -23,12 +31,13 @@ Request header
 
    * - Header
      - Description
-   * -  X-SF-Token  ``Required``
+   * - | X-SF-Token  
+       | ``Required``
      - (string) Authentication token. See :ref:`api-access-token`.
 
 
-Alert fields
-=================
+Alarm fields
+----------------
 
 .. list-table:: 
    :widths: 30 70
@@ -37,13 +46,17 @@ Alert fields
 
    * - Field
      - Description
-   * -  id  ``Required``
+   * -  | id  
+        | ``Required``
      -  (string) Alert ID.
-   * -  detail-type ``Required``
+   * -  | detail-type 
+        | ``Required``
      -  (string) Alert title.
-   * -  source ``Required``
+   * -  | source 
+        | ``Required``
      -  (string) The alert source.
-   * -  time ``Required``
+   * -  | time 
+        | ``Required``
      -  (string) Date-time string.
    * -  region
      -  (string) AWS region.
@@ -53,9 +66,9 @@ Alert fields
      -  (object) Alert details you want to include with the alert in Incident Intelligence.
 
 Examples
-===========
+------------
 
-Example JSON payload :
+Example JSON payload:
 
 .. code-block:: json
 
@@ -77,7 +90,7 @@ Example JSON payload :
         }
     }
 
-Transformed JSON  data for the example call that is processed and saved in Incident Intelligence:
+Example transformed JSON data for the example alarm that is processed and saved as an alert in Incident Intelligence:
 
 .. code-block:: json 
 
@@ -108,3 +121,9 @@ Transformed JSON  data for the example call that is processed and saved in Incid
           } 
        } 
     }
+
+Send alarms to Incident Intelligence using the  AWS Cloudwatch Simple Notification Service (SNS)
+=====================================================================================================
+
+You can also send alarms to Incident Intelligence using AWS Cloudwatch SNS. To do so, you need your Cloudwatch ingest endpoint and the JSON payload. See :new-page:`https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/US_SetupSNS.html`.
+
