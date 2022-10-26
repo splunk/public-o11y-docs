@@ -28,9 +28,11 @@ AutoDetect
 -----------------------------------------------------------------------------------
 AutoDetect enables Observability Cloud's automatic detectors for supported integrations. You can subscribe to notifications for all integrations once you have connected your systems and sent in data for supported integrations. See :ref:`autodetect` to learn more. See :ref:`autodetect-list` for a comprehensive list of AutoDetect detectors for AWS, Kafka, Kubernetes, and Splunk operations.
 
-Dashboards and charts
+Dashboards and charts 
 -----------------------------------------------------------------------------------
-You can automate monitoring dashboards and charts by linking a detector to a chart. Then you can notify team members 
+Link a chart to a detector to make it easier for team members to know which charts they should examine when a detector is tripped and they are notified. 
+
+Then you can notify team members 
 
  .. image:: /_images/get-started/core2o11y-chartDetector.png
    :width: 100%
