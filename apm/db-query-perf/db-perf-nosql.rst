@@ -15,12 +15,6 @@ Redis
 
 Database Query performance shows the top commands for Redis databases called by your application. You can sort commands by total time, P90 latency, or requests.
 
-The MetricSet for Redis databases include the following properties:
-
-- Database type: ``db.type``
-- Redis command: ``db.operation``
-- Database system: ``db.system``
-
 To instrument Redis for infrastructure metrics and see related Infrastructure Monitoring content, see :ref:`redis`. The following screenshot shows a sample Redis service with related infrastructure content.
 
 .. image:: /_images/apm/db-query-perf/db-perf-redis.png

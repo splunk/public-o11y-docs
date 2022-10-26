@@ -51,6 +51,10 @@ Enabling Database Query Performance enables indexing for the following database-
    * - ``db.name``
      - string
      - Name of the database
+
+   * - ``db.type``
+     - string
+     - Type of database
     
    * - ``db.operation``
      - string
@@ -63,7 +67,6 @@ Enabling Database Query Performance enables indexing for the following database-
    * - ``db.system`` 
      - string
      - System of the database
-
 
 Learn more
 -------------
