@@ -6,9 +6,9 @@ Database Query Performance for NoSQL databases
 ************************************************************************
 
 .. meta::
-   :description: Database Query Performance is compatible with the following NoSQL databases.
+   :description: Database Query Performance can help you troubleshoot performance issues the following NoSQL databases.
 
-Database Query Performance can help you troubleshoot performance issues with NoSQL databases.
+Database Query Performance can help you troubleshoot performance issues the following NoSQL databases.
 
 Redis
 ================
