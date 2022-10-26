@@ -32,9 +32,6 @@ Here are some important concepts you need to know to successfully use Splunk Inc
    * - Incident action
      - Any status-changing event taken by a user or the system on an incident. Incident responders can acknowledge, resolve, or reject an incident. These actions update the incident status to reflect the most recent action. 
 
-   * - Incident response
-     - 
-
    * - Incident status
      - Where an incident is in its lifecycle. The status of an incident changes based on alert grouping conditions, as well as actions from a user. Throughout the lifecycle of an incident, the incident status can go from triggered, to acknowledged, to resolved or rejected. 
 
@@ -45,13 +42,16 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - The primary mechanism of Incident Intelligence. It is the process by which alerts and events are ingested at scale and grouped to create incidents. As alerts and events are ingested into Incident Intelligence, they pass through a series of data transformations, such as alert routing and alert grouping. 
 
    * - Maintenance
-     - 
+     - A service status that mutes all associated incidents. Use service maintenance for planned outages.
+
    * - Mean time to acknowledge (MTTA)
+     - The average time it takes from when an incident is triggered to when the incident is acknowledged.
 
    * - Mean time to respond (MTTR)
+     - The average time it takes from when an incident is triggered to when the incident is resolved.
 
    * - Muted
-     - 
+     - An incident status that is set when the associated service is put into maintenance. 
 
    * - On-call schedules
      - An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your services' incident workflows.
@@ -61,22 +61,15 @@ Here are some important concepts you need to know to successfully use Splunk Inc
 
    * - Resolved
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.
-     - 
-   * - Responder
-     - 
 
    * - Service-based routing
      - Incident Intelligence relies on a service-based routing scheme. Service-based routing automatically organizes and routes incidents depending on the service that it’s impacting. Rather than routing to a combination of teams and policies, the service an incident is associated with determines who is notified of the incident. 
 
-   * - Shift
-     - 
-
    * - Splunk Incident Intelligence
      - Splunk Incident Intelligence lets IT and DevOps SREs resolve outages with event correlation, incident response, on-call routing, collaboration, and automation. Incident Intelligence provides organizations with a way to manage both their ITOps and DevOps environments by providing a collaborative ChatOps interface. This interface lets SREs and IT Operations teams collaborate to diagnose and remediate issues and across their environment. Incident Intelligence uses event, incident, and diagnosis data to provide insights and recommendations to the SREs and operators to address similar issues in the future.
 
-   * - Snooze
-     - 
+   * - Snoozed
+     - An incident status that is set when responders snooze the incident.
 
    * - Triggered
      - The initial stage of an incident is triggered. Incidents are triggered based on the alert grouping conditions you configured for the service.
-   
