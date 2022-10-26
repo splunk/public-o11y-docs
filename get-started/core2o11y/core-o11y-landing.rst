@@ -15,7 +15,25 @@ The Splunk platform and Splunk Observability Cloud
    toil-reduction
    core2o11y-collaboration
 
-With over two hundred out of the box integrations and dashboards on hybrid cloud infrastructure and infrastructure services, Splunk Observability Cloud lets you to start monitoring, troubleshooting, automating, and collaborating immediately. Speed your cloud journey with a single pain of glass for hybrid coverage. Observability Cloud's cloud-native data and analytics scale is ideal for Kubernetes and highly ephemeral environments. With Splunk Observability Cloud, you can quickly find, analyze, and resolve incidents anywhere in your stack from multicloud to microservices to serverless. Increase reliability and lower your mean time to resolution for all integrated systems. Observability Cloud is the purpose built tool for monitoring, maintaining, and improving system reliability.
+The Splunk platform is the most thorough logging solution for security, and Splunk Observability Cloud provides comprehensive observability across your stack. With over two hundred out of the box integrations and dashboards on hybrid cloud infrastructure and infrastructure services, Splunk Observability Cloud lets you to start monitoring, troubleshooting, automating, and collaborating immediately. Speed your cloud journey with a single pain of glass for hybrid coverage. Observability Cloud's cloud-native data and analytics scale is ideal for Kubernetes and highly ephemeral environments. With Splunk Observability Cloud, you can quickly find, analyze, and resolve incidents anywhere in your stack from multicloud to microservices to serverless. Increase reliability and lower your mean time to resolution for all integrated systems. Observability Cloud is the purpose built tool for monitoring, maintaining, and improving system reliability.
+
+Differences between Observability Cloud and the Splunk platform
+=============================================================================================
+Observability Cloud and the Splunk platform serve different needs and are conceptually unique. There are three primary ways that the two differ.
+
+The Splunk platform is built around an advanced query language, SPL, that allows users to drill down into their logs in complex and nuanced ways. Observability Cloud, on the other hand, does not require a query language. Instead, Observability Cloud lets novice users analyze their Splunk platform logs along with correlated metrics, traces, and user sessions with point-and-click technology. There is no need to learn SPL or any other query language in Observability Cloud.
+
+A second difference is in alerting.
+
+A third difference between Observability Cloud and the Splunk platform is in how you must send data to them. Splunk Enterprise Cloud and Splunk Observability Cloud currently use different data collection agents:
+
+- The Splunk platform uses the Universal Forwarder (UF) to capture logs and some metrics (stored as logs).
+
+- Observability Cloud uses OpenTelemetry to capture metrics, traces, and logs. 
+
+See :ref:`collector-with-the-uf` to learn more about the differences between these two collection agents and how you can use them together. 
+
+The following section explains how to send your data to Observability Cloud.
 
 Set up Observability Cloud components
 =============================================================================================
