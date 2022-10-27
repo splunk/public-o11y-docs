@@ -15,6 +15,59 @@ Application Monitoring
 ===================================
 
 Service latency detector
+------------------------------------
+
+- Description: Alerts when there is a sudden change in service latency.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/latency.flow>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Trigger threshold for space running out (in hours)
+     - ``48``
+   * - Sensitivity
+     - Sensitivity of the alerting
+     - ``80% of 10m``
+   * - Clear threshold
+     - Clear threshold for space running out (in hours)
+     - ``96``
+   * - Filters
+     - Dimensions you want to add to the detector
+     - None
+   
+Error rate
+------------------
+
+- Description: Alerts when a sudden change in service error rate occurs.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/errors.flow>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Duration
+     - Duration of the change, in minutes
+     - ``10m``
+   * - Clear threshold
+     - Clear threshold for space running out, in hours
+     - ``0.1``
+   * - Filters
+     - Dimensions you want to add to the detector
+     - None
 
 .. _infrastructure-autodetectors:
 
