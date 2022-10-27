@@ -16,7 +16,7 @@ The Splunk Distribution of OpenTelemetry JS is based on the OpenTelemetry Instru
 Compatibility and requirements
 ==========================================================
 
-The Splunk Distribution of OpenTelemetry JS requires Node.js 12.13 and higher. See :ref:`nodejs-otel-requirements`.
+The Splunk Distribution of OpenTelemetry JS requires Node.js 14 and higher. See :ref:`nodejs-otel-requirements`.
 
 See :ref:`considerations-nodejs-migration` for considerations about migrating from the SignalFx Tracing Library for Node.js to the Splunk Distribution of OpenTelemetry JS.
 
