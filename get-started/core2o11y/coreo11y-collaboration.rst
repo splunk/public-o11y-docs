@@ -1,4 +1,4 @@
-.. _coreo11y-collaboration:
+.. _core2o11y-collaboration:
 
 ***********************************************************************************
 Collaborate within and across teams
