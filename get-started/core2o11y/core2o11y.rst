@@ -21,13 +21,13 @@ Splunk Observability Cloud is a comprehensive observability solution that helps 
 
 The general principles and practices of reliability fall into four primary categories of tasks. Observability Cloud lets you deliver on each:
 
-* :ref:`core2o11y-slis`
+* :ref:`slis-slis`
 
-* :ref:`core2o11y-incident-response`
+* :ref:`incident-response-incident-response`
 
-* :ref:`toil-reduction`
+* :ref:`toil-reduction-toil-reduction`
 
-* :ref:`core2o11y-collaboration`
+* :ref:`collaboration-collaboration`
 
 Select each of the previous categories to learn how you can execute each major reliability duty in Observability Cloud. 
 

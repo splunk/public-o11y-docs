@@ -10,7 +10,6 @@ Practice reliability with Splunk Observability Cloud
 .. toctree::
    :hidden:
 
-   
    SLIs, SLOs, and SLAs <slis/slis>
    Incident response <incident-response/incident-response>
    Toil reduction <toil-reduction/toil-reduction>
