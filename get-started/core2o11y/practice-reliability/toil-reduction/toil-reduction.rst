@@ -64,4 +64,4 @@ Easily switch from mobile to browser monitoring by selecting the :strong:`MOBILE
 
 Splunk Synthetic Monitoring
 ===================================================================================
-Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`.
+Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up Browser tests and Uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`.

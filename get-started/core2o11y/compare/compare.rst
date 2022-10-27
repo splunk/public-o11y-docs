@@ -11,7 +11,19 @@ The Splunk platform and Observability Cloud have different purposes and somewhat
 
 Compare purpose
 ==========================================================================================
-The Splunk platform, a Security Information and Event Management (SEIM) tool, is the most thorough logging solution for security. Observability Cloud provides comprehensive observability across your stack. With your Splunk platform instance, you can analyze and prevent security breaches. With Splunk Observability Cloud, you can prevent site downtime, find and fix code when applications fail, or properly balance your system when parts of your infrastructure have performance issues, and otherwise maintain reliability throughout your stack and deliver great customer experiences.
+The Splunk platform, a Security Information and Event Management (SEIM) tool, is the most thorough logging solution for security. Observability Cloud provides comprehensive observability across your stack. With your Splunk platform instance, you can analyze and prevent security breaches. 
+
+With Splunk Observability Cloud, you can:
+
+- Prevent site downtime
+
+- Find and fix problematic code when applications fail
+
+- Properly balance your infrastructure when parts of your infrastructure have performance issues
+
+- Maintain reliability throughout your stack
+
+- Deliver great customer experiences
 
 
 .. _core-o11y-differences:
