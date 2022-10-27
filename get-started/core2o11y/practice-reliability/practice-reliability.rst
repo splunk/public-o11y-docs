@@ -19,7 +19,7 @@ With over two hundred out of the box integrations and dashboards on hybrid cloud
 
 Five core principles and practices underpin system reliability: availability, performance, monitoring, incident response, and preparation. See :new-page:`What is site reliability engineering? <https://www.splunk.com/en_us/data-insider/what-is-site-reliability-engineering.html#:~:text=Site%20reliability%20engineering%20(SRE)%20is,production%20systems%20and%20solve%20problems.>` for a deeper understanding of what it takes to achieve reliability in your systems and why Splunk Observability Cloud is the optimal toolset for the job. 
 
-The general principles and practices of reliability fall into four primary categories of tasks:
+The general principles of reliability fall into four main categories of practice. Select each of the following categories to learn how you can execute on each major observability practice and maintain reliability with Observability Cloud:
 
 * :ref:`Monitor SLIs, manage SLOs, and meet SLAs <slis-slis>`
 
@@ -29,5 +29,4 @@ The general principles and practices of reliability fall into four primary categ
 
 * :ref:`Collaborate on observability within and across teams <collaboration-collaboration>`
 
-Select each of the previous categories to learn how you can execute each major reliability duty in Observability Cloud. 
 
