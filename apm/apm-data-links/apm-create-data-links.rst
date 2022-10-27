@@ -7,8 +7,6 @@ Link APM services, traces, and spans to relevant resources
 .. meta::
    :description: Use global data links to create links for services, traces, and spans to other resources.
 
-   :keywords: Splunk, APM, global data links, traces, services, spans, monitoring, dashboards
-
 Create global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring dashboards, Splunk instances, Kibana logs, or custom URLs.
 
 Global data links are also useful because they can dynamically transfer contextual information about the property you're viewing to the linked resource, helping you get to relevant information faster.

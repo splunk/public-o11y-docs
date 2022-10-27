@@ -6,7 +6,6 @@ Monitor Splunk Infrastructure Monitoring subscription usage
 
 .. meta::
       :description: Splunk Infrastructure Monitoring administrators can view the billing and usage information for the organization. The application provides a summary and detailed reports. In addition to counts for hosts and containers, the reports also contain counts for custom metrics and high-resolution metrics.
-      :keywords:  billing usage metrics host container custom metric high-resolution
 
 
 .. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
