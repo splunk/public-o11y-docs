@@ -8,11 +8,11 @@ Collaborate on observability within and across teams
    :description: This page provides an overview of how Observability Cloud helps team members collaborate with each other and other teams by sharing dashboards, queries, business workflows, and through alerting.
 
 
-SREs, developers, operations, and other teams efficiently collaborate in Splunk Observability Cloud by sharing dashboards, charts, queries, and by sending notifications. For more on notifications and alerting, see :ref:`toil-reduction`.  
+SREs, developers, operations, and other teams efficiently collaborate in Splunk Observability Cloud by sharing dashboards, charts, queries, and by sending notifications. For more on notifications and alerting, see :ref:`toil-reduction-toil-reduction`.  
 
 Splunk Observability Cloud teams and alerting
 ===================================================================================
-
+The primary means of collaborating across teams is by setting up Observability Cloud teams, which serve as a security management tool because access and permissions in Observability Cloud are controlled by teams. Observability Cloud offers enterprise-grade management with token and access control. See :ref:`admin-manage-teams`
 
 Splunk APM 
 ===================================================================================

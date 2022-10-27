@@ -14,7 +14,7 @@ For each other Observability Cloud component, see the following to send your dat
 
 - :ref:`apm` to send traces to Splunk APM.
 
-- :ref:`infrastructure-infrastructure` to send infrastructure data to Splunk Infrastructure Monitoring
+- :ref:`infrastructure-infrastructure` to send infrastructure data to Splunk Infrastructure Monitoring.
 
 - :ref:`logs-scp` to view and analyze your Splunk Cloud Platform logs in Log Observer Connect. (Setup is required, but your logs do not leave your Splunk Cloud Platform instance.)
 

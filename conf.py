@@ -33,7 +33,6 @@ extensions = [
     'toggle',
     'newpage',
     'myst_parser',
-    'sphinx_toolbox.collapse',
     'sphinx_tabs.tabs'
 ]
 
