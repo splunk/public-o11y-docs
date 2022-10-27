@@ -21,13 +21,13 @@ Five core principles and practices underpin system reliability: availability, pe
 
 The general principles and practices of reliability fall into four primary categories of tasks:
 
-* :ref:`core2o11y-slis`
+* :ref:`Monitor SLIs, manage SLOs, and meet SLAs <slis-slis>`
 
-* :ref:`core2o11y-incident-response`
+* :ref:`Respond to incidents and write postmortems <incident-response-incident-response>`
 
-* :ref:`toil-reduction`
+* :ref:`Reduce toil with automated solutions for interacting with the infrastructure <toil-reduction-toil-reduction>`
 
-* :ref:`core2o11y-collaboration`
+* :ref:`Collaborate on observability within and across teams <collaboration-collaboration>`
 
 Select each of the previous categories to learn how you can execute each major reliability duty in Observability Cloud. 
 
