@@ -18,7 +18,7 @@ Follow the steps in the following sections to troubleshoot Database Query Perfor
 
 Database Query Performance is not enabled
 ------------------------------------------------
-If you open Database Query Performance and notice the feature is not enabled, go to MetricSets Configuration and check if indexing for Database Query Performance tags is ``ACTIVE``. If it's not, see :ref:`enable-db-perf` for instructions to enable indexing for Database Query Performance tags. 
+If you open Database Query Performance and notice the feature is not enabled, go to APM MetricSets and check if indexing for Database Query Performance tags is ``ACTIVE``. If it's not, see :ref:`enable-db-perf` for instructions to enable indexing for Database Query Performance tags. 
 
 .. _no-dbs-avail: 
 

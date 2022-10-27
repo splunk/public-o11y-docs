@@ -22,3 +22,8 @@ To instrument Redis for infrastructure metrics and see related Infrastructure Mo
    :alt: Related content for an instrumented Redis service.
 
 .. note:: Redis databases appear as "Redis" in the :guilabel:`Services` menu.
+
+Manage NoSQL database monitoring
+=======================================
+
+You can refresh APM :ref:`manage-TMS`
