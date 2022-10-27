@@ -1,4 +1,4 @@
-.. _core2o11y-landing:
+.. _core2o11y:
 
 ****************************************************************
 The Splunk platform and Splunk Observability Cloud
