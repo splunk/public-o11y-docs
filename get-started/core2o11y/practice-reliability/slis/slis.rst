@@ -80,25 +80,3 @@ Learn more about when to use Synthetic Monitoring in the use case, :ref:`uptime-
 
 Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`.
 
-
-
-
-Collapsible sections below here 
-.. collapse:: Monitor SLIs, manage SLOs, and meet SLAs
-
-    Blah blah blah SLIs
-
-
-.. collapse:: Respond to incidents and write postmortems
-
-    Blah blah blah incident response
-
-
-.. collapse:: Reduce toil: Automated solutions for interacting with the infrastructure
-
-    Blah blah blah toil reduction
-
-
-.. collapse:: Collaborate on reliability across teams
-
-    Blah blah blah collaboration across teams
