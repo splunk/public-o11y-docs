@@ -25,20 +25,27 @@ The following table shows customizable arguments for this detector:
 .. list-table::
    :header-rows: 1
    :widths: 33 33 33
+   :width: 100%
 
    * - Argument
      - Description
      - Default value
    
+   * - Current window
+     - Current windows for the alert, in minutes
+     - ``10m``
+   * - Historical window
+     - Current windows for the alert, in hours
+     - ``1h``
    * - Trigger threshold
-     - Trigger threshold for space running out (in hours)
-     - ``48``
-   * - Sensitivity
      - Sensitivity of the alerting
-     - ``80% of 10m``
+     - ``0.5``
    * - Clear threshold
-     - Clear threshold for space running out (in hours)
-     - ``96``
+     - Clear threshold for space running out
+     - ``0.1``
+   * - Minimum request per second
+     - Threshold on number of requests per second
+     - 0
    * - Filters
      - Dimensions you want to add to the detector
      - None
@@ -54,17 +61,27 @@ The following table shows customizable arguments for this detector:
 .. list-table::
    :header-rows: 1
    :widths: 33 33 33
+   :width: 100%
 
    * - Argument
      - Description
      - Default value
    
-   * - Duration
-     - Duration of the change, in minutes
+   * - Current window
+     - Current windows for the alert, in minutes
      - ``10m``
+   * - Historical window
+     - Current windows for the alert, in hours
+     - ``1h``
+   * - Trigger threshold
+     - Sensitivity of the alerting
+     - ``0.5``
    * - Clear threshold
-     - Clear threshold for space running out, in hours
+     - Clear threshold for space running out
      - ``0.1``
+   * - Minimum request volume
+     - Threshold on number of attempts
+     - 1
    * - Filters
      - Dimensions you want to add to the detector
      - None
