@@ -13,7 +13,7 @@ Incidents are automatically triggered after you configure your services to route
 .. raw:: html
 
    <embed>
-      <h2>Searching for incidents</h2>
+      <h2>Search for incidents</h2>
    </embed>
 
 You can search for incidents by ID or title. Searching by ID supports partial matching. Searching by title requires whole-word matching. 
