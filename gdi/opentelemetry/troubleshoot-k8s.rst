@@ -290,7 +290,7 @@ For reference, the following table shows the mappings for the container stat nam
 Reported incompatible Kubernetes and container runtime issues
 =======================================================================
 
-.. admonition:: Note
+.. note:: Note
 
    Managed Kubernetes services might use a modified container runtime, and the service provider might have applied custom patches or bug fixes that are not present within an unmodified container runtime.
 

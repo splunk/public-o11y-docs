@@ -10,9 +10,6 @@ Monitor Splunk APM subscription usage
 .. meta::
    :description: View APM subscription usage information and download usage reports to monitor your organization.
 
-   :keywords: Splunk, APM, usage, usage reports
-
-
 
 .. toctree::
    :hidden:

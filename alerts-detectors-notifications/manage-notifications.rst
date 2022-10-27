@@ -19,7 +19,7 @@ To manage the notification recipients of existing detectors:
 - :ref:`Subscribe to a detector using the bell icon <subscribe>`.
 - :ref:`Edit the detector and change its rules <build-rules>`.
 
-.. tip:: If you're not receiving notifications as expected, see if any detector rules have been disabled (see :ref:`manage-rules`). Also check the |mtab| to make sure notifications haven't been :ref:`temporarily suspended <mute-notifications>`.
+.. note:: If you're not receiving notifications as expected, see if any detector rules have been disabled (see :ref:`manage-rules`). Also check the |mtab| to make sure notifications haven't been :ref:`temporarily suspended <mute-notifications>`.
 
 .. _manage-subs:
 

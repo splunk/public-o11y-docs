@@ -22,8 +22,7 @@ Common data types
 
 Metrics 
 =============================================
-The following tables list all of the metrics available in Splunk RUM for iOS. All errors in Splunk RUM have the dimension ``sf_error=true``. 
-Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are application level metrics. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+The following tables list all of the metrics available in Splunk RUM for iOS. 
 
 .. list-table:: 
    :widths: 20 15 65
@@ -43,7 +42,7 @@ Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics wi
      - A crash happens when a user encounters an error and has to exit the app.
    * - ``rum.app_error.count``
      - App error
-     - App error by page. 
+     - Total number of reported errors in the given time range. 
    * - ``rum.resource_request.count``
      - Network or back-end requests/errors
      - The total number of network requests in a given time range. 
@@ -165,12 +164,6 @@ By default, the iOS RUM agent adds the following attributes to all spans:
    * - ``splunk.rum.version``
      - String
      - Version of the Splunk RUM SDK instrumenting the application.
-   * - ``screen.name``
-     - String
-     - Name of the screen or fragment from which the span is generated. To customize the screen name, see :ref:`ios-rum-change-screen-names`.
-   * - ``last.screen.name``
-     - String
-     - Name of the screen or fragment preceding the current screen. Set only if there is a change in the active ``screen.name`` attribute.
    * - ``net.host.connection.type``
      - String
      - Connection type used by the device. Possible values include ``wifi``, ``cell``, ``unavailable``, and ``unknown``.

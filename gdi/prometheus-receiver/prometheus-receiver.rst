@@ -14,7 +14,7 @@ Description
 
 The Prometheus Receiver is added to your configuration :new-page:`by default < https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L73>`. Do not remove this receiver from your configuration, as the internal metrics that are scraped power the Splunk Distribution of OpenTelemetry Collector default dashboard. See :ref:`dashboard-basics` for more information on the types of dashboards and dashboard groups available in Splunk Observability Cloud. 
 
-.. warning::
+.. caution::
    The Prometheus receiver is currently in :new-page:`beta <https://github.com/open-telemetry/opentelemetry-collector#beta>`. The following limitations should be considered before using this receiver:
 
    * The Splunk Distribution of OpenTelemetry Collector cannot autoscale scraping when multiple replicas of the Collector are run.

@@ -309,7 +309,7 @@ as an example.
 
 The following metrics are available for this integration: This monitor will also emit by default any metrics that are not listed in the following table.
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/expvar/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/expvar/metrics.yaml"></div>
 
 ## Get help
 

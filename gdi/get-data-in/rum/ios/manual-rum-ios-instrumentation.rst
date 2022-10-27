@@ -73,7 +73,7 @@ The following example shows how to customize the name of an account settings scr
 
 When calling the :code:`setScreenName` function, automatic screen name instrumentation is disabled to avoid overwriting custom names.
 
-.. tip:: Use ``setScreenName`` in all the views of your application to avoid inconsistent names in your data.
+.. note:: Use ``setScreenName`` in all the views of your application to avoid inconsistent names in your data.
 
 .. _ios-rum-identify-users:
 

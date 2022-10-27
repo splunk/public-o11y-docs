@@ -118,7 +118,7 @@ When using TLS authentication, SCRAM-SHA-256 is not supported. Use SCRAM-SHA-1 a
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/mongodb/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/mongodb/metrics.yaml"></div>
 
 ## Get help
 
