@@ -36,40 +36,35 @@ When you run Apache Spark on Hadoop YARN, this integration can only report appli
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add one of the following to your agent configuration:
 
-.. tabs::
-
-   .. code-tab:: yaml Master
-
-      receivers:
-        smartagent/collectd_spark_master:
-          type: collectd/spark
-          ...  # Additional config
-
-   .. code-tab:: yaml Worker
-
-      receivers:
-        smartagent/collectd_spark_worker:
-          type: collectd/spark
-          ...  # Additional config
+```yaml
+receivers:
+  smartagent/collectd_spark_master:
+    type: collectd/spark
+    ...  # Additional config
+```
+```yaml
+receivers:
+  smartagent/collectd_spark_worker:
+    type: collectd/spark
+    ...  # Additional config
+```
 
 To complete the integration, include the monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 
-.. tabs::
+```yaml
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/collectd_spark_master]
+```
 
-   .. code-tab:: yaml Master
-
-      service:
-        pipelines:
-          metrics:
-            receivers: [smartagent/collectd_spark_master]
-
-   .. code-tab:: yaml Worker
-
-      service:
-        pipelines:
-          metrics:
-            receivers: [smartagent/collectd_spark_worker]
+```yaml
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/collectd_spark_worker]
+```
 
 
 ## Configuration settings
