@@ -35,15 +35,8 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
    .. code-block:: bash
 
       npm install @splunk/otel
-
-#. Install the instrumentation packages for your library or framework:
-
-   .. code-block:: bash
-
-      # Sample command for instrumenting the http library
-      npm install @opentelemetry/instrumentation-http
-
-   For a list of supported instrumentation packages, see :new-page:`Default Instrumentation Packages <https://github.com/signalfx/splunk-otel-js#default-instrumentation-packages>` on GitHub.
+   
+   To add custom instrumentation, see :ref:`add-custom-instrumentation`.
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
 
@@ -146,6 +139,11 @@ After you add the ``startTracing()`` function to your entry point script, run yo
 .. code-block:: bash
 
    node -r <entry-point.js> <your-app.js>
+
+.. _add-custom-instrumentation:
+
+Add custom instrumentation
+-----------------------------------
 
 To add custom or third-party instrumentations that implement the OpenTelemetry JS Instrumentation interface, pass them to ``startTracing()`` using the following code:
 
