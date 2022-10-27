@@ -28,8 +28,6 @@ do
     sleep .1
 done
 
-echo ""
-echo "Cleaning up files..."
 rm -f _build/.DS_Store
 rm -f _build/html/.DS_Store
 rm -rf _build/*
@@ -51,7 +49,7 @@ sleep .5
 # Show instructions and enter the container's shell
 echo ""
 echo ""
-echo "This Docker container lets you build and test the docs locally."
+echo "This Docker container lets you build and test the docs locally. Do not build the docs outside of the container."
 echo ""
 printf "${bold}Instructions:\n${normal}"
 echo ""
