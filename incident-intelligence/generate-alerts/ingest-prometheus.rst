@@ -68,8 +68,10 @@ Alert fields
         | ``Required``
      -  (string) Alert start date and time. 
 
-Examples
+JSON payload
 ------------
+
+Prometheus alerts sent to the Prometheus endpoint with this JSON payload will be transformed to alerts in Incident Intelligence.
 
 Example JSON payload:
 

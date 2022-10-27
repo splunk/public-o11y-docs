@@ -5,14 +5,21 @@
 Ingest Amazon CloudWatch alarms
 ************************************************************************
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms into Incident Intelligence where you can create on-call schedules and incident workflows to route AWS alarms to responders.
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms into Incident Intelligence where you can create on-call schedules and incident workflows to route AWS alarms to responders. You can send AWS CloudWatch alarms directly to the ingest endpoint or use AWS CloudWatch SNS.
+
 
 .. note:: CloudWatch alarms are ingested as alerts in Incident Intelligence.
+
+Prerequisite
+================
+
+You have set up CloudWatch to send alarms to a queue in SNS.
+
 
 Send AWS CloudWatch alarms directly to the ingest endpoint
 =================================================================
 
-You can send AWS CloudWatch alarms directly to the ingest endpoint. To do so, make a POST call to the endpoint to ingest Amazon CloudWatch alarms.
+To send AWS CloudWatch alarms directly to the ingest endpoint, make a POST call to the endpoint to ingest Amazon CloudWatch alarms.
 
 AWS CloudWatch ingest endpoint
 ---------------------------------
@@ -67,8 +74,10 @@ Alarm fields
    * -  detail
      -  (object) Alarm details you want to include with the alert in Incident Intelligence.
 
-Examples
-------------
+JSON payload
+---------------
+
+CloudWatch alarms sent to the CloudWatch endpoint with this JSON payload will be transformed to alerts in Incident Intelligence.
 
 Example JSON payload:
 
@@ -92,7 +101,7 @@ Example JSON payload:
         }
     }
 
-Example transformed JSON data for the example alarm that is processed and saved as an alert in Incident Intelligence:
+Example transformed JSON data for the alert that is saved in Incident Intelligence:
 
 .. code-block:: json 
 
