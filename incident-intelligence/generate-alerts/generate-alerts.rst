@@ -14,7 +14,7 @@ Generate alerts in Splunk Incident Intelligence
 
 
 
-To generate alerts in Incident Intelligence, you can create a detector for the one of the available alert sources to automatically generate alerts in Incident Intelligence or you can ingest alerts using an ingest endpoint.
+To generate alerts in Incident Intelligence, you can create a detector for the one of the available alert sources to automatically generate alerts in Incident Intelligence or you can ingest alerts using an ingest endpoint. Once alerts have been generated you can view them on the :guilabel:`Alerts` tab of Incident Intelligence.
 
 :strong:`Available alert sources in Splunk Observability Cloud`
 
