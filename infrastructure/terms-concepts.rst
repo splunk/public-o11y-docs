@@ -58,7 +58,7 @@ To learn how to work with data links, see :ref:`navigate-with-data-links`.
 Navigator
 ==================
 
-A navigator is a set of screens that lets you monitor instances of your integrations. Each card on the Splunk Infrastructure Monitoring landing page represents a navigator, corresponding to the service you integrate with Splunk Observability Cloud.
+A navigator is a collection of resources that lets you monitor metrics and logs across various instances of your services and detect outliers in the instance population based on key performance indicators. Resources in a navigator include, but are not limited to, a full list of entities, dashboards, related alerts and detectors, and service dependencies.
 
 For more detail on how to work with navigators, see :ref:`use-navigators-imm`.
 
