@@ -10,9 +10,13 @@ When you set up Log Observer Connect, your logs data remains strictly in your Sp
 
 Region and version availability
 ==============================================================
-Splunk Log Observer Connect is available in the AWS regions us0, us1, and eu0. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
+Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
 
 .. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the universal forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
+
+Prerequisites
+==============================================================
+Ensure that token authentication is enabled in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
 
 Set up Log Observer Connect
 ==============================================================
@@ -62,16 +66,16 @@ To submit a support ticket, follow these steps:
 
 3. Select :guilabel:`Support Portal` from the drop-down list to submit a case ticket.
 
-4. In the description of your ticket, paste the following for your Observability Cloud instance:
+4. In the description of your ticket, paste the following and enter the relevant values for your organization:
 
-   a. Your organization name
+   .. code-block:: bash
+
+      OrgID: <enter-orgid>
+      Realm: <enter-realm>
+      Instance Name: <instance-name>
+      Request: Please securely open our Splunk Cloud Platform instance management port (8089) and add the IP addresses of the above realm to our allow list. Also, please provide us with the SSL certificate chain in this ticket so that we can enable Log Observer Connect.
    
-   b. Your region
 
-   c. Your instance name
-
-   d. Send the following request in your ticket to the Support team: Please securely open our Splunk Cloud Platform instance management port (8089) and add Splunk Observability Cloud IPs to our allow list. Also, please provide us with the SSL certificate chain in this ticket so that we can enable Log Observer Connect.
-   
 When you receive the SSL certificate from Splunk Support in your support ticket, do the following:
 
 1. Paste the first certificate stanza in the final section of the Log Observer Connect guided setup, :guilabel:`Set up Observability Cloud`.

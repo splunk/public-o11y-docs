@@ -214,9 +214,10 @@ Add the following line to your configuration to use OpenTelemetry logs collectio
 
 The following are known limitations of native OpenTelemetry logs collection:
 
-* The ``service.name`` attribute is not automatically constructed in an Istio environment, which means that correlation between logs and traces does not work in Splunk Observability Cloud. Use Fluentd for logs collection if you deply the Helm chart with ``autodetect.istio=true``.
+* The ``service.name`` attribute is not automatically constructed in an Istio environment, which means that correlation between logs and traces does not work in Splunk Observability Cloud. Use Fluentd for logs collection if you deploy the Helm chart with ``autodetect.istio=true``.
 * Journald logs cannot be natively collected by the Collector at this time.
 * Logs collection is not supported in GKE Autopilot at this time.
+* See also :ref:`other rules and limitations for metrics and dimensions <metric-dimension-names>`. For instance, you can have up to 36 dimensions per MTS, otherwise the data point is dropped.
 
 Add log files from Kubernetes host machines or volumes
 ----------------------------------------------------------

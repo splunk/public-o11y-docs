@@ -46,7 +46,7 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
      - :strong:`Documentation`
    * - Java
      - Splunk Distribution of OpenTelemetry Java v1.14.2 or higher
-     - :ref:`instrument-java-applications`
+     - :ref:`instrument-java-applications`, :ref:`profiling-configuration-java`
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS
      - :ref:`instrument-nodejs-applications`
@@ -90,8 +90,6 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: Node.js
 
-      .. warning:: CPU profiling for Node.js is an experimental feature subject to future changes. 
-
       AlwaysOn Profiling requires Node 16 and higher.
 
       - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` before running the instrumentation from the terminal.
@@ -109,8 +107,6 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-nodejs`.
 
    .. group-tab:: .NET
-
-      .. warning:: CPU profiling for .NET is an experimental feature subject to future changes.
 
       AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher.
 

@@ -1,7 +1,7 @@
 .. _rum-browser-data:
 
 **************************************************
-Data collected by the Browser RUM agent
+RUM Browser data model 
 **************************************************
 
 .. meta::
@@ -15,6 +15,9 @@ Common data types
 .. include:: /_includes/rum-data-model.rst
 
 .. _browser-rum-basic-properties:
+
+
+
 
 Basic properties
 ==============================================
@@ -53,69 +56,75 @@ The following properties are common to all web applications instrumented for Spl
      - Array
      - Associates events that explain latency with the time they happened.
 
-.. _browser-rum-default-tags:
+.. _browser-rum-metrics:
 
 Metrics 
 =================================
-By default, the following front-end metrics are available in Splunk RUM: 
+The following tables list all of the metrics available in Splunk RUM for Browser. All errors in Splunk RUM have the dimension ``sf_error=true``. Metrics with the prefix ``rum.node.`` are page level metrics, whereas metrics with the prefix ``rum.`` are aggregations of multiple pages. Page level metrics also have a dimension ``sf_node_name``, which you can use to filter on specific pages.
+
 
 .. list-table:: 
-   :widths: 5 25 70
+   :widths: 5 10 10 75
    :header-rows: 1
 
-   * - Front-end metric name  
-     - UI name 
-     - Description 
+   * - :strong:`App level metric name`
+     - :strong:`UI name` 
+     - :strong:`Page level metric`
+     - :strong:`Description`
    * - ``rum.workflow.count``
      - Custom Event Count
+     - ``rum.node.workflow.count``
      - The total number of spans with the selected custom event in the given time range. 
    * - ``rum.workflow.time.ns.p75``
      - Custom Event Duration
+     - ``rum.node.workflow.time.ns.p75``
      - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
    * - ``rum.page_view.count``
      - Page Views and Route Changes  
+     - ``rum.node.page_view.count``
      - The total number of page views and route changes sorted by page for the given time range.
    * - ``rum.page_view.time.ns.p75``
      - Page Views and Route Change Duration
+     - ``rum.node.rum.page_view.time.ns.p75``
      - The p75 time in nanoseconds of the page load and route change time for the given time range. Route changes in Splunk RUM are events with zero second durations.
    * - ``rum.client_error.count``
      - JavaScript Errors
+     - ``rum.node.client_error.count``
      - The total number of spans with Javascript errors in the given time range. 
-
-By default, the following back-end metrics are available in Splunk RUM: 
-
-.. list-table:: 
-   :widths: 5 25 70
-   :header-rows: 1
-
-   * - Back-end metric name 
-     - UI name 
-     - Description 
-
    * - ``rum.webvitals_lcp.time.ns.p75``
      - LCP (Largest Contentful Paint) Time 
+     - ``rum.node.webvitals_lcp.time.ns.p75``
      - The p75 time of the LCP (Largest Contentful Paint) in nanoseconds for the given time range.
    * - ``rum.webvitals_fid.time.ns.p75``
      - FID (First Input Delay) Time 
+     - ``rum.node.rum.webvitals_fid.time.ns.p75``
      - The p75 time of the FID (First Input Delay) in nanoseconds for the given time range. 
    * - ``rum.webvitals_cls.score.p75``
      - CLS (Cumulative Layout Shift) 
+     -  ``rum.node.rum.webvitals_cls.score.p75``
      - The p75 time of the CLS (Cumulative Layout Shift) in nanoseconds for the given time range. 
    * - ``rum.long_task.count``
      - Long Task Count 
+     - ``rum.node.long_task.count``
      - The total number of long tasks in the given time range. 
    * - ``rum.long_task.time.ns.p75``
      - Long Task Duration
+     - ``rum.node.long_task.time.ns.p75``
      - The p75 time for long task duration in nanoseconds. 
    * - ``rum.resource_request.count``
-     - Network Requests (HTTPS, XHR, AJAX) 
+     - Network Requests (HTTPS, XHR, AJAX)
+     - ``rum.node.resource_request.count``
      - The total number of network requests such as https, XHR, AJAX, and retrieve events in a given time range. 
    * - ``rum.resource_request.time.ns.p75``
      - Back-end and Resource request Duration  
+     - ``rum.node.resource_request.time.ns.p75``
      - The p75 time in nanoseconds for AJAX and back-end latency in the given time range. 
    * - ``rum.resource_request.ttfb.time.ns.p75``
      - TTFB (Time to First Byte)
+     - ``rum.node.resource_request.time.ns.p75``
      - The p75 time in nanoseconds for TTFB for the given time range. 
+
+.. _browser-rum-default-tags:
 
 Default tags
 ==============================================

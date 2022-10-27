@@ -28,7 +28,7 @@ The first step toward observability is getting relevant data into Observability 
 
 .. rst-class:: newcard
 
-:strong:`Start getting data in`
+:strong:`Get data in`
 Learn how to get data in from each layer in your stack :ref:`get-started-get-data-in`
 
 
@@ -523,7 +523,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Analyze services with span tags and MetricSets<apm/span-tags/span-tags>
+   Analyze services with span tags and MetricSets <apm/span-tags/span-tags>
 
 .. toctree::
    :maxdepth:   3
@@ -538,58 +538,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   AlwaysOn Profiling <apm/profiling/intro-profiling>
+
+.. toctree::
+   :maxdepth:   3
+
    apm/db-query-perf/db-query-performance
 
 .. toctree::
    :maxdepth:   3
 
    apm/apm-data-links/data-links-landing
-
-.. toctree::
-   :caption: PROFILING
-   :maxdepth:   3
-
-   Introduction to AlwaysOn Profiling <profiling/intro-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-use-case-library
-
-.. toctree::
-   :maxdepth:   3
-
-   Get AlwaysOn Profiling data in <profiling/get-data-in-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   Browse stack traces linked to spans <profiling/spans-stack-traces>
-
-.. toctree::
-   :maxdepth:   3
-
-   Understand and use the flame graph <profiling/using-the-flamegraph>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-memory-metrics
-
-.. toctree::
-   :maxdepth:   3
-
-   Profiling terms and concepts <profiling/concepts-terms-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-troubleshooting
-
-.. toctree::
-   :maxdepth:   3
-
-   Third-party acknowledgements <profiling/profiling-third-party-credits>
 
 .. toctree::
    :caption: INFRASTRUCTURE
@@ -652,7 +611,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/intro-logconnect.rst
+   logs/intro-logconnect
 
 .. toctree::
    :maxdepth:   3
@@ -662,7 +621,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   logs/set-up-logconnect
+   logs/set-up-logconnect 
 
 .. toctree::
    :maxdepth:   3
@@ -672,7 +631,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   logs/intro-to-logs
+   logs/get-started-logs
 
 .. toctree::
    :maxdepth:   3
@@ -682,12 +641,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   logs/timeline
+
+.. toctree::
+   :maxdepth:   3
+
    logs/live-tail
 
 .. toctree::
    :maxdepth:   3
 
-   logs/timeline
+   logs/queries
 
 .. toctree::
    :maxdepth:   3
@@ -713,7 +677,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    logs/individual-log
-
 
 .. toctree::
    :maxdepth:   3
@@ -748,7 +711,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   logs/processors
+   logs/processors 
 
 .. toctree::
    :maxdepth:   3
@@ -825,13 +788,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-dashboards 
-
+   rum/rum-dashboards/rum-dashboards
 
 .. toctree::
    :maxdepth:   3
 
    rum/RUM-metrics
+
 
 .. toctree::
    :maxdepth:   3

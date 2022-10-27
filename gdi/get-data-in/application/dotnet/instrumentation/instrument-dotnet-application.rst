@@ -9,6 +9,12 @@ Instrument a .NET application for Splunk Observability Cloud
 
 The SignalFx Instrumentation for .NET automatically instruments .NET applications, Windows services running .NET applications, ASP.NET applications deployed on IIS, and Azure App Service applications.
 
+- :ref:`install-dotnet-instrumentation`
+- :ref:`instrument-windows-service`
+- :ref:`instrument-aspnet-iis`
+- :ref:`instrument-azure-app`
+- :ref:`instrument-azure-webjobs`
+
 To get started, use the guided setup or follow the instructions manually.
 
 Generate customized instructions using the guided setup
@@ -113,7 +119,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. warning:: CPU profiling for .NET is an experimental feature subject to future changes. See :ref:`profiling-intro`.
+.. caution:: CPU profiling for .NET is an experimental feature subject to future changes. See :ref:`profiling-intro`.
 
 To enable AlwaysOn Profiling, set the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``.
 
@@ -210,7 +216,7 @@ To instrument an application or service in Azure App Service, follow these steps
 
 #. Restart the application in App Service.
 
-.. tip:: To reduce latency and benefit from OTel Collector features, set the endpoint URL to a Collector instance running in Azure VM over an Azure VNet.
+.. note:: To reduce latency and benefit from OTel Collector features, set the endpoint URL to a Collector instance running in Azure VM over an Azure VNet.
 
 .. _instrument-azure-webjobs:
 
@@ -261,7 +267,7 @@ When instrumenting an Azure WebJob in App Service, add the following settings. R
       * - ``SIGNALFX_AZURE_APP_SERVICES``
         - ``0``
 
-.. warning:: Set ``SIGNALFX_AZURE_APP_SERVICES`` to ``0`` when instrumenting WebJobs. Keep a separate App Service for the WebJob, so that you can use separate settings for your application and for the background service.
+.. caution:: Set ``SIGNALFX_AZURE_APP_SERVICES`` to ``0`` when instrumenting WebJobs. Keep a separate App Service for the WebJob, so that you can use separate settings for your application and for the background service.
 
 .. _kubernetes_dotnet:
 

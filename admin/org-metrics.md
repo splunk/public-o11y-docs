@@ -2,31 +2,31 @@
 
 # View organization metrics for Splunk Observability Cloud
 
-Splunk Infrastructure Monitoring provides the following data for measuring your usage:
+Splunk Infrastructure Monitoring provides the following metrics to measure your usage:
 
-* **Ingest metrics**: Measure the data you're sending to Infrastructure Monitoring, such as the number of data points you've sent
+* **Ingest metrics**: Measure the data you're sending to Infrastructure Monitoring, such as the number of data points you've sent.
 
-* **App usage metrics**: Measure your use of application features, such as the number of dashboards in your organization
+* **App usage metrics**: Measure your use of application features, such as the number of dashboards in your organization.
 
-* **Integration metrics**: Measure your use of cloud services integrated with your organization, such as the number of calls to the AWS CloudWatch API
+* **Integration metrics**: Measure your use of cloud services integrated with your organization, such as the number of calls to the AWS CloudWatch API.
 
-* **Resource metrics**: Measure your use of resources that you can specify limits for, such as the number of custom metric time series (MTS) you've created
+* **Resource metrics**: Measure your use of resources that you can specify limits for, such as the number of custom metric time series (MTS) you've created.
 
 You're not charged for these metrics, and they don't count against any limits.
 
-## View organization metrics
+## Access organization metrics
 
-If you're an admin, you can view some of these metrics in built-in charts on the Organization Overview page.
+If you're an admin, you can view some of these metrics in built-in charts on the Organization Overview page. Any user can view these metrics in custom charts.
 
 To access the Organization Overview page, follow these steps:
 
-1. Open the Observability Cloud main menu.
+1. Log into **Observability Cloud**.
 
-2. Hover over **Organization Settings** and select **Organization Overview**.
+2. On the left nav, select **Settings**, then select **Organization Overview**.
 
-3. Click the **DATA INGEST** tab to view metrics about the volume and nature of data being processed and stored, such as the number of data points or events received per minute.
+3. Select the **DATA INGEST** tab to view metrics about the volume and nature of data being processed and stored, such as the number of data points or events received per minute.
 
-4. Click the **ENGAGEMENT** tab to view metrics about users and the entities they've created. Observability Cloud displays metrics for the following entities:
+4. Select the **ENGAGEMENT** tab to view metrics about users and the entities they've created. Observability Cloud displays metrics for the following entities:
 
     - Charts
 
@@ -38,13 +38,9 @@ To access the Organization Overview page, follow these steps:
 
     - Teams
 
-To view these metrics in custom charts, you don't have to be an admin.
-
-
-## Interpret and work with usage metrics
+## Interpret and work with org metrics
 
 This section provides tips that can help you interpret and work with usage metrics.
-
 
 ### Metrics for values by token
 
@@ -120,14 +116,16 @@ You can use these errors in {ref}`dashboards <dashboards>` to detect whether you
 
 Some metrics report a `gross` value and a `num` value. Compare the `gross` and `num` values of a metric to learn about how the system limits or filters data for whatever the metric represents.
 
-A `gross` metric reports the total number of data points the system receives before any throttling or filtering kicks in.
+* A `gross` metric reports the total number of data points the system receives before any throttling or filtering kicks in.
 
-A `num` metric reports the total number of data points the system receives after it completes any throttling or filtering.
+* A `num` metric reports the total number of data points the system receives after it completes any throttling or filtering.
 
 
-## Metric Details
+## Metric details
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/signalfx-org-metrics/metrics.yaml"></div>
+These are the integration org metrics provided by Observability Cloud:
+
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/signalfx-org-metrics/metrics.yaml"></div>
 
 ## Get help
 

@@ -96,7 +96,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-nodejs-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. warning:: CPU profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
+.. caution:: CPU profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
 
 To enable AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
@@ -162,7 +162,7 @@ To add custom or third-party instrumentations that implement the OpenTelemetry J
    ]
    });
 
-.. tip:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
+.. note:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
 
 .. _kubernetes_nodejs_agent:
 

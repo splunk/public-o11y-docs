@@ -218,7 +218,7 @@ The following table shows the configuration options for this monitor:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/gitlab/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/gitlab/metrics.yaml"></div>
 
 ## Get help
 

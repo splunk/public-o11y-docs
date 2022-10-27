@@ -32,3 +32,8 @@ The following dimensions are available for network telemetry metrics.
 .. raw:: html
 
     <div class="metrics-yaml" url="https://raw.githubusercontent.com/Flowmill/support/main/dimensions.yaml"></div>
+
+Customize metrics to collect
+================================
+
+You can choose to collect or drop specific network telemetry metrics. For more information, see :ref:`customize-network-explorer-metrics`.

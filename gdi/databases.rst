@@ -23,9 +23,11 @@ Configure application receivers for databases
    mongodb-atlas/mongodb-atlas
    mongodb-atlas/mongodb-atlas-receiver
    mysql/mysql
+   oracledb/oracledb
    postgresql/postgresql
    redis/redis
    sap-hana/hana
+   sql/sql
 
 These application receivers gather metrics from their associated database-related applications and the hosts the applications are running on.
 
@@ -43,6 +45,8 @@ These application receivers gather metrics from their associated database-relate
 * :ref:`mongodb`
 * :ref:`mongodb-atlas-receiver`
 * :ref:`mysql`
+* :ref:`oracledb`
 * :ref:`postgresql`
 * :ref:`redis`
 * :ref:`hana`
+* :ref:`sql`

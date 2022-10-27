@@ -115,7 +115,7 @@ Don't install the Smart Agent directly on a compute instance, as a compute insta
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/openstack/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/openstack/metrics.yaml"></div>
 
 ## Get help
 

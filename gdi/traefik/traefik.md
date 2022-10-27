@@ -111,7 +111,7 @@ Traefik exports Prometheus metrics which can be categorized into Traefik, entryp
 
 The following table shows the metrics that are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/traefik/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/traefik/metrics.yaml"></div>
 
 ## Get help
 
