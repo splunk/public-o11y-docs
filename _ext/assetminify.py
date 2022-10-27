@@ -1,6 +1,6 @@
-import cssmin, glob,re
+import  glob,re
 from jsmin import jsmin 
-
+from cssmin import cssmin
 def setup(app):
     return
 jsmin_files = []
