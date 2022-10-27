@@ -14,7 +14,7 @@ echo ""
 bold=$(tput bold)
 normal=$(tput sgr0)
 spin='-\|/'
-cleanmsg='Cleaning up... '
+cleanmsg='Cleaning up Docker... '
 buildmsg='Starting Docker container... '
 
 # Run Docker commands to build the container with no CLI noise
@@ -27,6 +27,12 @@ do
     printf "\r${cleanmsg}${spin:$i:1}"
     sleep .1
 done
+
+echo ""
+echo "Cleaning up files..."
+rm -f _build/.DS_Store
+rm -f _build/html/.DS_Store
+rm -rf _build/*
 
 docker-compose build > /dev/null 2> /dev/null &
 pid=$! # Process Id of the previous running command
