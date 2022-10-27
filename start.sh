@@ -49,7 +49,8 @@ sleep .5
 # Show instructions and enter the container's shell
 echo ""
 echo ""
-echo "This Docker container lets you build and test the docs locally. Do not build the docs outside of the container."
+echo "This Docker container lets you build and test the docs locally."
+echo "Do not build the docs outside of the container."
 echo ""
 printf "${bold}Instructions:\n${normal}"
 echo ""
