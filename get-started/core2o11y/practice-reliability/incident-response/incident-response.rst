@@ -1,4 +1,4 @@
-.. _core2o11y-incident-response:
+.. _incident-response-incident-response:
 
 ***********************************************************************************
 Respond to incidents and write postmortems 

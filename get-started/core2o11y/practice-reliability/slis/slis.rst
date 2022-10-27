@@ -1,4 +1,4 @@
-.. _core2o11y-slis:
+.. _slis-slis:
 
 *********************************************************************************
 Monitor SLIs, manage SLOs, and meet SLAs

@@ -1,7 +1,7 @@
-.. _core2o11y-collaboration:
+.. _collaboration-collaboration:
 
 ***********************************************************************************
-Collaborate within and across teams
+Collaborate on observability within and across teams
 ***********************************************************************************
 
 .. meta::
