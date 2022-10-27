@@ -1,4 +1,4 @@
-.. _core-o11y-landing:
+.. _core2o11y-landing:
 
 ****************************************************************
 The Splunk platform and Splunk Observability Cloud
@@ -10,10 +10,10 @@ The Splunk platform and Splunk Observability Cloud
 .. toctree::
    :hidden:
 
-   SLIs, SLOs, and SLAs <core2o11y/slis>
-   Incident response <core2o11y/incident-response>
-   Toil reduction <core2o11y/toil-reduction>
-   Collaboration <core2o11y/collaboration>
+   SLIs, SLOs, and SLAs <get-started/core2o11y/slis>
+   Incident response <get-started/core2o11y/incident-response>
+   Toil reduction <get-started/core2o11y/toil-reduction>
+   Collaboration <get-started/core2o11y/collaboration>
 
 
 The Splunk platform is the most thorough logging solution for security, and Splunk Observability Cloud provides comprehensive observability across your stack. With over two hundred out of the box integrations and dashboards on hybrid cloud infrastructure and infrastructure services, Splunk Observability Cloud lets you to start monitoring, troubleshooting, automating, and collaborating immediately. Speed your cloud journey with a single pain of glass for hybrid coverage. Observability Cloud's cloud-native data and analytics scale is ideal for Kubernetes and highly ephemeral environments. With Splunk Observability Cloud, you can quickly find, analyze, and resolve incidents anywhere in your stack from multicloud to microservices to serverless. Increase reliability and lower your mean time to resolution for all integrated systems. Observability Cloud is the purpose built tool for monitoring, maintaining, and improving system reliability.
