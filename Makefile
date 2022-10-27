@@ -30,6 +30,9 @@ clean:
 
 .PHONY: html
 html:
+	@echo "Building the MINIFY Files..."
+	@echo 
+	python3 _ext/assetminify.py
 	@echo
 	@echo "*****************************************************"
 	@echo "        Building Splunk Observability Docs"
