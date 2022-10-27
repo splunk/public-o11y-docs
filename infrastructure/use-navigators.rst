@@ -16,7 +16,9 @@ To see all navigators, select :guilabel:`Infrastructure` from the Splunk Observa
 
 On the Infrastructure Monitoring landing page, each card represents a navigator, corresponding to the services you monitor in Splunk Observability Cloud. A navigator card shows a count of instances in the population and highlights critical alerts linked to that population.
 
-
+    .. image:: /_images/infrastructure/imm-landing-page.png
+        :width: 70%
+        :alt: This image shows the Splunk Infrastructure Monitoring landing page with all available navigator cards.
 
 Monitor all instances in a navigator
 ---------------------------------------
