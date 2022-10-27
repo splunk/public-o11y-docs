@@ -32,6 +32,8 @@ clean:
 html:
 	@echo "Building the MINIFY Files..."
 	@echo 
+	pip3 install cssmin
+	pip3 install jsmin
 	python3 _ext/assetminify.py
 	@echo
 	@echo "*****************************************************"

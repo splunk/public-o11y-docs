@@ -1,6 +1,6 @@
-import  glob,re
+import cssmin, glob,re
 from jsmin import jsmin 
-from cssmin import cssmin
+
 def setup(app):
     return
 jsmin_files = []
@@ -24,8 +24,8 @@ def pushassets():
    asset_includes('signalfx-includes.css',"yes")
    asset_includes('signalfx-includes.js',"yes")
    asset_includes('jsonpull-splunk.js',"yes")
-   sset_includes('toggle-section.js',"yes")
-   sset_includes('toggle-section.css',"yes")
+   asset_includes('toggle-sections.js',"yes")
+   asset_includes('toggle-sections.css',"yes")
    asset_includes('yaml-splunk.js',"yes")
    asset_includes('showdown.min.js',"yes")
    return final_conf_includes
