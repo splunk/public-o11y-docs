@@ -10,6 +10,8 @@ Reduce toil with automated solutions for interacting with the infrastructure
 
 SREs and developers can use Splunk Observability Cloud components to reduce toil by relying on out of the box and custom automation for interacting with your organization's infrastructure. The following sections detail ways you can automate reliability tasks and reduce toil for teams.
 
+.. _toil-reduction-alerts:
+
 Alerts and detectors
 ===================================================================================
 Alerting in Observability Cloud is a primary way to reduce toil for your teams. Configure alerts and detectors to notify team members when threshholds you set are surpassed, or when trends begin to veer off course based on rules you create. Alerting helps your teams stay ahead of potential problems and prevent incidents from occuring. 
@@ -61,6 +63,8 @@ To view your RUM built-in dashboards, log in to Splunk Observability Cloud, then
    :alt: This screenshot shows out of the box Real User Monitoring dashboards in Observability Cloud.
 
 Easily switch from mobile to browser monitoring by selecting the :strong:`MOBILE APP`` HEALTH or :strong:`BROWSER APP HEALTH` tabs. See :ref:`get-started-rum` to learn more.
+
+You can also :ref:`alert directly on RUM data <rum-alerts>` when you set up alerts to monitor RUM browser data, iOS RUM data, or manually instrumented Android applications.
 
 Splunk Synthetic Monitoring
 ===================================================================================
