@@ -52,4 +52,4 @@ Run support bundle scripts to collect information:
 
 * Kubernetes: Run ``kubectl-splunk``
 * Linux (if installer script was used): Run ``/etc/otel/collector/splunk-support-bundle.sh``
-* Windows (if MSI installer was used v0.34.0+): Run ``C:\Program Files\Splunk\OpenTelemetry Collector\splunk-support-bundle.ps1``
+* Windows (if MSI installer version 0.34.0 or higher was used): Run ``C:\Program Files\Splunk\OpenTelemetry Collector\splunk-support-bundle.ps1``
