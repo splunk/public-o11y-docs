@@ -25,7 +25,7 @@ To learn how to set up APM to correlate with business KPIs, see :ref:`apm-workfl
 Splunk Log Observer Connect
 ===================================================================================
 You can 
-:ref:`Save and share Log Observer Connect queries <logs-save-share>` across observability teams when you create a valuable query that might be useful for other team members or other teams. See :ref:`logs-queries` to learn the many different ways you can query logs without a query language in Log Observer Connect.
+:ref:`sSave and share Log Observer Connect queries <logs-save-share>` across observability teams when you create a valuable query that might be useful for other team members or other teams. See :ref:`logs-queries` to learn the many different ways you can query logs without a query language in Log Observer Connect.
 
 Splunk Real User Monitoring (RUM)
 ===================================================================================
