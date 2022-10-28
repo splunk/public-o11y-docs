@@ -12,7 +12,9 @@ SREs, developers, operations, and other teams efficiently collaborate in Splunk 
 
 Splunk Observability Cloud teams and alerting
 ===================================================================================
-The primary means of collaborating across teams is by setting up Observability Cloud teams, which serve as a security management tool because access and permissions in Observability Cloud are controlled by teams. Observability Cloud offers enterprise-grade management with token and access control. See :ref:`admin-manage-teams`
+The primary means of collaborating on observability and reliability across teams is by setting up Observability Cloud teams. Teams serve as a secure way to organize users by functional area. Teams also let you control access and permissions to all objects, dashboards, and queries in Observability Cloud. Observability Cloud offers enterprise-grade management with :ref:`token and access control <admin-tokens>`. 
+
+Once you have organized users into teams, you can connect users in a particular area to detectors and dashboard groups that they are most interested in. See :ref:`admin-manage-teams` to learn more about how you can use teams to facilitate collaboration among functional teams.
 
 Splunk APM 
 ===================================================================================

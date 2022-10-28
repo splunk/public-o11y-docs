@@ -78,5 +78,5 @@ Splunk Synthetic Monitoring lets you test your SLOs before users do. When you pr
 
 Learn more about when to use Synthetic Monitoring in the use case, :ref:`uptime-test-use-case`. 
 
-Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`.
+Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`. 
 
