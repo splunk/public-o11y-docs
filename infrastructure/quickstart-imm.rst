@@ -82,7 +82,7 @@ Prerequisites
 
 - If you want to monitor Kubernetes, you must be an administrator of the cluster and have the Helm 3.0 client installed and configured.
 
-.. tip:: To help ensure a seamless flow from this task to :ref:`navigators-imqs`, make sure that your infrastructure host or cluster is generating data that can be received by Splunk Observability Cloud. For example, even if a guided setup you use in this task provides a confirmation of a valid connection, the navigators won't display unless your infrastructure is actively sending data to Splunk Infrastructure Monitoring.
+.. note:: To help ensure a seamless flow from this task to :ref:`navigators-imqs`, make sure that your infrastructure host or cluster is generating data that can be received by Splunk Observability Cloud. For example, even if a guided setup you use in this task provides a confirmation of a valid connection, the navigators won't display unless your infrastructure is actively sending data to Splunk Infrastructure Monitoring.
 
 
 To get platform infrastructure data into Splunk Observability Cloud:
@@ -227,7 +227,7 @@ Prerequisites
 
 - If you are connecting to Amazon Web Services, you must have an access token for the Splunk Observability Cloud organization you want to get data into. If you are using a free trial account, an access token named :strong:`Default` has already been created for you and you can use it to complete this task. For more details about creating organization access tokens, see :new-page-ref:`admin-org-tokens`.
 
-.. tip:: To help ensure a seamless flow from this task to :ref:`navigators-imqs`, make sure that your cloud provider service is generating data that can be received by Splunk Observability Cloud. For example, even if a guided setup you use in this task provides a confirmation of a valid connection, the navigators won't display unless your cloud provider service is actively sending data to Splunk Infrastructure Monitoring.
+.. note:: To help ensure a seamless flow from this task to :ref:`navigators-imqs`, make sure that your cloud provider service is generating data that can be received by Splunk Observability Cloud. For example, even if a guided setup you use in this task provides a confirmation of a valid connection, the navigators won't display unless your cloud provider service is actively sending data to Splunk Infrastructure Monitoring.
 
 To get cloud infrastructure data into Splunk Observability Cloud:
 ------------------------------------------------------------------------------

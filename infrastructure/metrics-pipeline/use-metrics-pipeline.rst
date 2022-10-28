@@ -1,9 +1,9 @@
 :orphan:
 
-.. include:: /_includes/metric-pipeline/metric-pipeline-preview-header.rst
+.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
 
 
-.. _use-metric-pipeline:
+.. _use-metrics-pipeline:
 
 *********************************************************************
 Control your metric ingestion volume with rules
@@ -19,7 +19,7 @@ Create rules for a metric
 
 Follow these steps to create rules for a metric.
 
-#. From the landing page of Splunk Observability Cloud, go to :strong:`Settings > Metric pipeline management`.
+#. From the landing page of Splunk Observability Cloud, go to :strong:`Settings > Metrics pipeline management`.
 #. Select :guilabel:`Create new rules`.
 #. In the search bar, enter the name of the metric for which you want to create rules.
 #. Select :guilabel:`OK`.

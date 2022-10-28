@@ -19,7 +19,7 @@ Before you begin the setup process, consider the following:
 
 * If you want to start sending traces to Splunk APM with Splunk Distribution of OpenTelemetry Collector using the guided setup wizards in Splunk APM, follow the steps in the sections below. To set it up yourself without the guided process, see :ref:`otel-intro`.
 
-.. admonition:: Add span tags to your spans
+.. note:: Add span tags to your spans
 
   Span tags, known as "attributes" in OpenTelemetry, add crucial context to your spans to enable troubleshooting and analysis. You can add tags to your spans either during instrumentation or in a processor added to the YAML configuration file of the OpenTelemetry Collector you're using to aggregate data from multiple services. 
   
@@ -40,7 +40,7 @@ Deploy the Splunk Distribution of OpenTelemetry Collector on your hosts
 --------------------------------------------------------------------------------------------------
 To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTelemetry Collector on the hosts in which your applications are running. Splunk Observability Cloud offers OpenTelemetry Collector distributions for Kubernetes, Linux, and Windows. These distributions integrate the collection of data from hosts and data forwarding to Observability Cloud.
 
-.. admonition:: Benefits of the Splunk Distribution of OpenTelemetry Collector 
+.. note:: Benefits of the Splunk Distribution of OpenTelemetry Collector 
 
   Although you're not required to install the Splunk Distribution of OpenTelemetry Collector, doing so gets you the following benefits:
 

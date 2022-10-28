@@ -1,6 +1,6 @@
 :orphan:
 
-.. include:: /_includes/metric-pipeline/metric-pipeline-preview-header.rst
+.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
 
 .. _data-dropping-impact:
 

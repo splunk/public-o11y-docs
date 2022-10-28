@@ -6,7 +6,6 @@ Monitor Splunk Infrastructure Monitoring subscription usage
 
 .. meta::
       :description: Splunk Infrastructure Monitoring administrators can view the billing and usage information for the organization. The application provides a summary and detailed reports. In addition to counts for hosts and containers, the reports also contain counts for custom metrics and high-resolution metrics.
-      :keywords:  billing usage metrics host container custom metric high-resolution
 
 
 .. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
@@ -143,7 +142,7 @@ To view usage reports available for download:
 
 5. Click a report link on the :guilabel:`Billed Usage` tab or :guilabel:`Usage Breakdown` tab to download it as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
 
-.. tip:: If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics that Infrastructure Monitoring monitors for you, older reports on the :guilabel:`Billed Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
+.. note:: If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics that Infrastructure Monitoring monitors for you, older reports on the :guilabel:`Billed Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
 
 .. _summary-by-month:
 

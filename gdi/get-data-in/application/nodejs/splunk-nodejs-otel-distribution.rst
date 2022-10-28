@@ -23,7 +23,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Node.js, li
 
 The Splunk Distribution of OpenTelemetry JS is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories.
 
-.. warning:: Use the Splunk Distribution of OpenTelemetry JS instead of the upstream OpenTelemetry JavaScript Client. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry JS.
+.. caution:: Use the Splunk Distribution of OpenTelemetry JS instead of the upstream OpenTelemetry JavaScript Client. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry JS.
 
 Defaults of the Splunk Distribution of OpenTelemetry JS
 ===========================================================
