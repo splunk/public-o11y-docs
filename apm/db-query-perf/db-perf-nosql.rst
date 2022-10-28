@@ -10,7 +10,7 @@ Database Query Performance for NoSQL
 
 Database Query Performance can help you troubleshoot performance issues the following NoSQL databases. Indexing of NoSQL metrics can be managed separately. For a sample use case, see :ref:`redis-use-case`.
 
-.. _redis-db-query-performance::
+.. _redis-db-query-performance:
 
 Redis
 ================
@@ -30,6 +30,6 @@ For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-
 Manage NoSQL database monitoring
 =======================================
 
-You can pause and restart the indexing of NoSQL metrics at any time and separately from SQL metrics.
+You can pause and restart the indexing of NoSQL metrics at any time and separately from SQL metrics. Pausing NoSQL indexing can help optimize cardinality when focusing on other types of databases.
 
-See :ref:`manage-TMS` for more information.
+See :ref:`manage-TMS` for more information on how to pause or restart NoSQL metrics indexing.
