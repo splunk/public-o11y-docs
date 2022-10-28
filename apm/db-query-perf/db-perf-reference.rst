@@ -14,17 +14,17 @@ Supported databases
 
 Database Query Performance provides insights for the following database software:
 
-- Oracle
 - MySQL
 - Redis
 - Microsoft SQL Server
 - PostgreSQL
+- Oracle
 - Aurora
 - MariaDB
 - OceanBase
 - Db2
 - Presto 
-     
+
 Database Query Performance works with all versions supported by the instrumented applications.
 
 .. note:: Related Content is available for Oracle, MySQL, Redis, and Microsoft SQL Server. For more information on related content, see :ref:`get-started-relatedcontent`. 
@@ -75,4 +75,5 @@ See the following links for more information about Database Query Performance:
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.
 * To enable Database Query Performance, see :ref:`enable-db-perf`. 
 * For a detailed use case using Database Query Performance, see :ref:`db-perf-use-case`. 
+* For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
 * To troubleshoot issues with Database Query Performance, see :ref:`db-perf-troubleshooting`. 
