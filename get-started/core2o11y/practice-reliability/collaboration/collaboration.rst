@@ -18,14 +18,14 @@ Once you have organized users into teams by funcitonal area, you can connect use
 
 Splunk APM 
 ===================================================================================
-You can facilitate collaboration across product, strategy, and sales teams with Splunk APM. when you :ref:`configure Business Workflow rules <apm-create-workflow-rule>`, APM tracks business Key Performance Indicators (KPIs) as well as Service Level Indicators (SLIs) . See :ref:`monitor-business-workflows` for an example of how to use APM to track business KPIs and collaborate across departments.
+You can facilitate collaboration across product, strategy, and sales teams with Splunk APM. When you :ref:`configure Business Workflow rules <apm-create-workflow-rule>`, APM tracks business Key Performance Indicators (KPIs) as well as Service Level Indicators (SLIs) . See :ref:`monitor-business-workflows` for an example of how to use APM to track business KPIs and collaborate across departments.
 
 To learn how to set up APM to correlate with business KPIs, see :ref:`apm-workflows`
 
 Splunk Log Observer Connect
 ===================================================================================
 You can 
-:ref:`Save and share Log Observer Connect queries <logs-save-share>` across observability teams when you create a valuable query that might be useful for other team members or other teams.
+:ref:`Save and share Log Observer Connect queries <logs-save-share>` across observability teams when you create a valuable query that might be useful for other team members or other teams. See :ref:`logs-queries` to learn the many different ways you can query logs without a query language in Log Observer Connect.
 
 Splunk Real User Monitoring (RUM)
 ===================================================================================
