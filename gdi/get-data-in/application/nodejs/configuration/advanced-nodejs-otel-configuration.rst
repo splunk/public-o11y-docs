@@ -255,7 +255,7 @@ The following settings enable runtime metrics collection:
      - The interval, in milliseconds, of metrics collection and exporting. The default value is ``30000``.
    * - ``SPLUNK_RUNTIME_METRICS_ENABLED``
      - ``metrics.runtimeMetricsEnabled``
-     - Enable collecting and exporting of runtime metrics. The default value is ``false``.
+     - Enable collecting and exporting of runtime metrics. The default value is ``true``. Runtime metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true`` or if memory profiling is enabled.
    * - ``SPLUNK_RUNTIME_METRICS_COLLECTION_INTERVAL``
      - ``metrics.runtimeMetricsCollectionIntervalMillis``
      - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
