@@ -113,7 +113,7 @@ To enable automatic runtime metric collection, enable the metrics feature using 
       $env:SPLUNK_METRICS_ENABLED='true'
 
 Instrument your application programmatically
--------------------------------------------------------
+========================================================
 
 To have even finer control over the tracing pipeline, instrument your Node application programmatically.
 
@@ -123,16 +123,21 @@ To instrument your application programmatically, add the following lines at the 
 
    const { start } = require('@splunk/otel');
 
-   start();
+   start({
+      serviceName: 'my-node-service',
+      endpoint: 'http://localhost:4317'
+   });
 
    // Rest of your main module
 
-The ``start()`` function accepts :ref:`configuration settings <advanced-nodejs-otel-configuration>` as arguments. For example:
+The ``start()`` function accepts :ref:`configuration settings <advanced-nodejs-otel-configuration>` as arguments. For example, you can use it to enable runtime metrics and memory profiling:
 
 .. code-block:: javascript
 
    start({
       serviceName: 'my-node-service',
+      metrics: { runtimeMetricsEnabled: true },
+      profiling: { memoryProfilingEnabled: true }
    });
 
 After you add the ``start()`` function to your entry point script, run your application by passing the instrumented entry point script using the ``-r`` flag:
