@@ -29,4 +29,4 @@ You can
 
 Splunk Real User Monitoring (RUM)
 ===================================================================================
-When you set up alerts to monitor RUM browser data, iOS RUM data, or manually instrumented Android applications, you can :ref:`alert directly on RUM data <rum-alerts>`. Use Observability Cloud teams to send notifications to .
+When you set up alerts to monitor RUM browser data, iOS RUM data, or manually instrumented Android applications, you can :ref:`alert directly on RUM data <rum-alerts>`. Use Observability Cloud teams to send notifications to relevant teams. See :ref:`admin-team-notifications` to learn how.
