@@ -135,11 +135,31 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
      - ``endpoint``
      - The OTLP endpoint. The default value is ``http://localhost:4317``.
-   * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
-     - ``endpoint``
-     - The Jaeger endpoint. This setting is deprecated. The default value is ``http://localhost:9080/v1/trace``.
 
-To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
+.. _jaeger-exporter-nodejs:
+
+Jaeger exporter
+-------------------
+
+To use the Jaeger exporter, add the ``@opentelemetry/exporter-jaeger`` package as in the following example:
+
+.. code-block:: js
+
+   const { start } = require('@splunk/otel');
+   const { JaegerExporter } = require('@opentelemetry/exporter-jaeger');
+   start({
+      serviceName: 'my-node-service',
+      tracing: {
+         spanExporterFactory: (options) => {
+         return new JaegerExporter({
+            serviceName: options.serviceName,
+            // Additional config
+         })
+         }
+      },
+   });
+
+.. note:: To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
 
 .. _trace-propagation-configuration-nodejs:
 

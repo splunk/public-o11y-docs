@@ -219,3 +219,32 @@ To migrate your custom metric instrumentation from the SignalFx client library, 
             });
             const counter = meter.createCounter('clicks');
             counter.add(99);
+
+Previous metric names
+================================================
+
+With the release of version 2.0 of the Splunk Distribution of OpenTelemetry JS, metric names changed to conform with OpenTelemetry conventions. The following table shows the equivalence between the current and previous metric names.
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 50 50
+   :width: 100%
+
+   * - Current metric name
+     - Previous metric name
+   * - ``process.runtime.nodejs.memory.heap.total``
+     - ``nodejs.memory.heap.total``
+   * - ``process.runtime.nodejs.memory.heap.used``
+     - ``nodejs.memory.heap.used``
+   * - ``process.runtime.nodejs.memory.rss``
+     - ``nodejs.memory.rss``
+   * - ``process.runtime.nodejs.memory.gc.size``
+     - ``nodejs.memory.gc.size``
+   * - ``process.runtime.nodejs.memory.gc.pause``
+     - ``nodejs.memory.gc.pause``
+   * - ``process.runtime.nodejs.memory.gc.count``
+     - ``nodejs.memory.gc.count``
+   * - ``process.runtime.nodejs.event_loop.lag.max``
+     - ``nodejs.event_loop.lag.max``
+   * - ``process.runtime.nodejs.event_loop.lag.min``
+     - ``nodejs.event_loop.lag.min``
