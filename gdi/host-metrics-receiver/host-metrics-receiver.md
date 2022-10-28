@@ -74,8 +74,9 @@ disk:
 
 #### File system
 
-.. note:: 
+```{note}
     The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in :new-page:`GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters>`. See the complete list of file system metrics in :new-page:`GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/documentation.md>`. 
+```
 
 ```yaml
 filesystem:
