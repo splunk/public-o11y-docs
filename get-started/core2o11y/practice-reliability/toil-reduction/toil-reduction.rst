@@ -56,13 +56,13 @@ Splunk Real User Monitoring (RUM)
 ===================================================================================
 :ref:`rum-built-in-dashboards` are out of the box dashboards that show the health of your mobile app or browser app. You can link detectors to RUM dashboards to automatically alert your team when your mobile or browser app front-end user experience reaches certain conditions that you specify. See See :ref:`linking-detectors` to learn how.
 
-To view your RUM built-in dashboards, log in to Splunk Observability Cloud, then select :strong:`Dashboards` in the left navigation menu, then select the :strong:`RUM Application` dashboard.
+To view your RUM built-in dashboards, log in to Splunk Observability Cloud and select :strong:`Dashboards` in the left navigation menu, then select the :strong:`RUM Application` dashboard.
 
  .. image:: /_images/get-started/core2o11yRUMdashboard.gif
    :width: 100%
    :alt: This screenshot shows out of the box Real User Monitoring dashboards in Observability Cloud.
 
-Easily switch from mobile to browser monitoring by selecting the :strong:`MOBILE APP`` HEALTH or :strong:`BROWSER APP HEALTH` tabs. See :ref:`get-started-rum` to learn more.
+Easily switch from mobile to browser monitoring by selecting the :strong:`MOBILE APP HEALTH` or :strong:`BROWSER APP HEALTH` tabs. See :ref:`get-started-rum` to learn more.
 
 You can also :ref:`alert directly on RUM data <rum-alerts>` when you set up alerts to monitor RUM browser data, iOS RUM data, or manually instrumented Android applications.
 

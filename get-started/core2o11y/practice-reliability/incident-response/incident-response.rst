@@ -7,7 +7,7 @@ Respond to incidents and write postmortems
 .. meta::
    :description: This page provides an overview of the many ways you can drill down to root cause problems and decrease MTTR using the components of Observability Cloud.
 
-Splunk Observability Cloud provides several tools for drilling down to find the root cause of incidents. In the followoing sections, see how each component of Observability Cloud is an effective incident response tool, as well as a boost for writing postmortems. Then find out how you can prevent and prepare for future incidents in :ref:`toil-reduction-toil-reduction`.
+Splunk Observability Cloud provides several tools for drilling down to find the root cause of incidents. In the followoing sections, see how each component of Observability Cloud is an effective incident response tool, as well as a boost for writing postmortems. Then find out how you can prepare for and prevent future incidents in :ref:`toil-reduction-toil-reduction`.
 
 Alerts and detectors
 ===================================================================================
@@ -52,7 +52,7 @@ One culprit of wider service availability issues can be slow database queries. R
    :width: 100%
    :alt: This screenshot shows a sample Alerts homepage in Observability Cloud.
 
-You can check the performance of your database queries in Splunk APM. Log in to Observability Cloud, select :strong:`APM` in the left navigation menu, then select DB Query Performance on the right panel.
+You can check the performance of your database queries in Splunk APM. Log in to Observability Cloud, select :strong:`APM` in the left navigation menu, then select :strong:`DB Query Performance` on the right panel.
 
 Splunk Infrastructure Monitoring
 ===================================================================================
@@ -64,7 +64,7 @@ The following GIF shows an incident responder selecting a critical alert in Infr
 
  .. image:: /_images/get-started/IncidentResponse-InfraMon.gif
    :width: 100%
-   :alt: This animated GIF shows user clicking into Infrastructure Monitoring host on heat map, then going to an alert to find an outlier in CPU utilization.
+   :alt: This animated GIF shows a user clicking into Infrastructure Monitoring host on heat map, then going to an alert to find an outlier in CPU utilization.
 
 See :ref:`Monitor services and hosts <monitor-services-hosts>` to learn more about using Infrastructure Monitoring navigators to monitor public clouds, containers, or hosts.
 
@@ -74,13 +74,13 @@ Log Observer Connect is purpose built to drill down to find the root cause of in
 
 With Log Observer Connect, you can :ref:`aggregate logs <logs-aggregations>` to group by interesting fields. You can also :ref:`filter logs by field <logs-filter-logs-by-field>`, :ref:`view individual log details <logs-individual-log>`, and :ref:`create field aliases <logs-alias>` to drill down to the root cause of an incident. You can also select correlated infrastructure resources, metrics, or traces in the Related Content bar to :ref:`view related content <get-started-relatedcontent>` in a single pane of glass. Seeing your logs data correlated with metrics and traces in Observability Cloud helps your team to locate and resolve problems exponentially faster.
 
-The following GIF shows user selecting an error log in Log Observer Connect, then selecting related content to see a problematic host. This takes the user to the service map in Infrastructure Monitoring where the problematic  host is already automatically selected. The service map right panel shows service requests and errors, as well as service and dependency latency for the selected host.
+The following GIF shows an incident responder selecting an error log in Log Observer Connect, then selecting related content to see a problematic host. This takes the user to the service map in Infrastructure Monitoring where the problematic  host is already automatically selected. The service map right panel shows service requests and errors, as well as service and dependency latency for the selected host.
 
  .. image:: /_images/get-started/core2o11y-LOConnect-incidentresp.gif
    :width: 100%
    :alt: This animated GIF shows user selecting an error log then selecting related content to see the problematic host on the service map.
 
-See :ref:`logs-queries` to learn more about how Log Observer Connect queries can drill down to root causes of incidents.
+See :ref:`logs-queries` to learn all of the ways Log Observer Connect queries can drill down to root causes of incidents.
 
 When your team discovers that code in your application is the cause of the incident, you can use Log Observer Live Tail to find out whether your fix has solved the problem that caused the incident. Live Tail is available only to customers who have a full Log Observer entitlement. Reach out to your Splunk representative if you are interested in Log Observer. See :ref:`get-started-logs` to learn what you can do with a full Log Observer entitlement, including confirming that a code fix solved a problem.
 
