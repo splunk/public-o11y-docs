@@ -18,7 +18,7 @@ For each other Observability Cloud component, see the following to send your dat
 
 - :ref:`logs-scp` to view and analyze your Splunk Cloud Platform logs in Log Observer Connect. (Setup is required, but your logs do not leave your Splunk Cloud Platform instance.)
 
-- :ref:`logs-set-up-logconnect` to view and analyze your Splunk Enterprise logs from Log Observer Connect. (Setup is required, but your logs do not leave your Splunk Enterprise instance.)
+- :ref:`logs-set-up-logconnect` to view and analyze your Splunk Enterprise logs in Log Observer Connect. (Setup is required, but your logs do not leave your Splunk Enterprise instance.)
 
 - :ref:`rum-setup` to send front-end traces and spans, as well as user session data to RUM. (By default, RUM does not collect identity data.)
 

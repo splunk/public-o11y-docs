@@ -30,7 +30,7 @@ Observability Cloud, on the other hand, provides comprehensive observability acr
 
 Compare functionality
 ==========================================================================================
-Because Observability Cloud and the Splunk platform serve different purposes and are conceptually and logically unique, they have some functionality differences. There are three primary ways that the two differ, as explained in the following sections.
+Observability Cloud and the Splunk platform have a few functionality differences. There are three primary ways that the two platforms differ, as explained in the following sections.
 
 Query language
 ------------------------------------------------------------------------------------------
