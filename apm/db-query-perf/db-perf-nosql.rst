@@ -26,4 +26,6 @@ To instrument Redis for infrastructure metrics and see related Infrastructure Mo
 Manage NoSQL database monitoring
 =======================================
 
-You can refresh APM :ref:`manage-TMS`
+You can pause and restart the indexing of NoSQL metrics at any time.
+
+See :ref:`manage-TMS` for more information.
