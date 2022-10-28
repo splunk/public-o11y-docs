@@ -30,7 +30,7 @@ The general principles of reliability fall into four main categories of practice
 * :ref:`Collaborate on observability within and across teams and departments <collaboration-collaboration>`
 
 
-See :ref:`setup-o11y-setup-o11y` to learn how to set up Observability Cloud.
+See :ref:`setup-o11y-setup-o11y` to learn how to set up each component of Observability Cloud.
 
 
 

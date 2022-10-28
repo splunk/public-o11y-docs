@@ -7,13 +7,13 @@ Compare the Splunk platform and Splunk Observability Cloud
 .. meta::
    :description: This page explains the purpose and functionality differences between the Splunk platform and Splunk Observability Cloud.
 
-The Splunk platform and Observability Cloud have different purposes and somewhat different functionality. The two combine in a native integration to simultaneously meet your security and observability needs. 
+The Splunk platform and Observability Cloud are different platforms that work together for an end-to-end solution that meets your security and observability needs. 
 
 Compare purpose
 ==========================================================================================
-The Splunk platform, a Security Information and Event Management (SEIM) tool, is the most thorough logging solution for security. With your Splunk platform instance, you can analyze and prevent security breaches, while Observability Cloud provides comprehensive observability across your stack.  
+The Splunk platform enables you to collect, search, monitor, report, and analyze all of your real-time and historical machine data, making it the most thorough logging solution for security. With your Splunk platform instance, you can prevent security breaches and do some observability and IT operations work. 
 
-With Splunk Observability Cloud, you can:
+Observability Cloud, on the other hand, provides comprehensive observability across your stack. With Splunk Observability Cloud, you can:
 
 - Prevent site downtime
 
@@ -44,8 +44,8 @@ Get Data In
 ------------------------------------------------------------------------------------------
 A third difference between Observability Cloud and the Splunk platform is in how you must send data to each. The Splunk platform and Splunk Observability Cloud currently use different data collection agents:
 
-- The Splunk platform uses the Universal Forwarder (UF) to capture logs and some metrics (stored as logs).
+- The Splunk platform primarily uses the Universal Forwarder (UF) to capture logs and some metrics (stored as logs). It also uses other methods. See :new-page:`Splunk Cloud Platform: Getting Data In <https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/WhatSplunkcanmonitor>` or :new-page:`Splunk Enterprise: Getting Data In <https://docs.splunk.com/Documentation/Splunk/latest/Data/WhatSplunkcanmonitor>` to learn other methods.
 
 - Observability Cloud uses OpenTelemetry to capture metrics, traces, and logs. 
 
-See :ref:`collector-with-the-uf` to learn more about the differences between these two collection agents and how you can use them together. 
+See :ref:`collector-with-the-uf` to learn more about the differences between the Universal Forwarder and OptenTelemetry collection agents and how you can use them together. 
