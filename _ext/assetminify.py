@@ -27,7 +27,7 @@ def pushassets():
    asset_includes('toggle-sections.js',"yes")
    asset_includes('toggle-sections.css',"yes")
    asset_includes('yaml-splunk.js',"yes")
-   asset_includes('showdown.min.js',"yes")
+   asset_includes('showdown.min.js',"no")
    return final_conf_includes
 
 #calling static push assets and same method will be called in conf.py for non minify css & js files.
