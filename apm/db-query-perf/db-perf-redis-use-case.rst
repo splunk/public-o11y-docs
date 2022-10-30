@@ -1,5 +1,7 @@
 .. _redis-use-case:
 
+.. THIS IS STILL RAW AND IN PROGRESS -- DON'T REVIEW YET
+
 **************************************************************************
 Use case: Identify slow database queries using Database Query Performance
 **************************************************************************
@@ -30,6 +32,12 @@ Review redis RED metrics over the time period to look for latency spikes & patte
 Look at the ‘command performance’ of Redis to notice if any of the commands are poorly performing
 If everything looks good on client metrics, you can deep dive into the server side metrics by clicking on the related content tile at the bottom
 
+"If everything looks good on client metrics"
+
+I don't think this makes sense - if everything looks good from the clients perspective, everything is good.
+
+You might notice that there are significantly more requests today than there were yesterday. Or you notice one type of query is slow. Or you just generally see a problem. Then you can dive deeper into the service side metrics to root cause the issue
+
 Since MGET command has high latency, compare how MGET command performs compared to rest of the database. 
 
 
@@ -45,7 +53,7 @@ As investigate if underlying infrastructure resources are sufficiently provision
 CPU Utilization is high and that has been causing performance degradation
 Cache hit rate has been low and can be caused by a number of factors, including data expiration and insufficient memory allocated to Redis (which could cause key eviction). Low hit rates increase latency of applications as they have to fetch data from a slower, alternative resource.
 
-You immediately go ahead and ramp up resources 
+You immediately go ahead and scale up resources 
 
 Flow 2
 =========

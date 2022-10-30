@@ -15,7 +15,7 @@ Database Query Performance can help you troubleshoot performance issues the foll
 Redis
 ================
 
-Database Query performance shows the top commands for Redis databases called by your application. You can sort commands by total time, P90 latency, or requests. All versions of Redis supported by your application are compatible.
+Database Query performance shows the top commands for Redis databases called by your application. You can sort commands by total time, P90 latency, or number of requests. All versions of Redis supported by your instrumented application are compatible.
 
 To instrument Redis for infrastructure metrics and see related Infrastructure Monitoring content, see :ref:`redis`. The following screenshot shows a sample Redis service with related infrastructure content.
 

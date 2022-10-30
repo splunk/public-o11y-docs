@@ -15,10 +15,10 @@ Supported databases
 Database Query Performance provides insights for the following database software:
 
 - MySQL
-- Redis
 - Microsoft SQL Server
 - PostgreSQL
 - Oracle
+- Redis
 - Aurora
 - MariaDB
 - OceanBase
@@ -34,15 +34,15 @@ Database Query Performance works with all versions supported by the instrumented
 Database-related span tags
 --------------------------
 
-Enabling Database Query Performance enables indexing for the following database-related span tags: 
+Database Query Performance indexes the following span tags for SQL databases:
 
 .. list-table::
    :header-rows: 1
    :widths: 30 20 50
 
    * - :strong:`Key`
-     - :strong:`Value type`
-     - :strong:`Value description`
+     - :strong:`Type`
+     - :strong:`Description`
 
    * - Normalized db.statement (``_sf_normalized_db_statement``)
      - string
