@@ -45,7 +45,7 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
      - :strong:`Available instrumentation`
      - :strong:`Documentation`
    * - Java
-     - Splunk Distribution of OpenTelemetry Java v1.14.2 or higher
+     - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
      - :ref:`instrument-java-applications`, :ref:`profiling-configuration-java`
    * - Node.js
      - Splunk Distribution of OpenTelemetry JS
@@ -90,18 +90,24 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: Node.js
 
+      .. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. 
+
       AlwaysOn Profiling requires Node 16 and higher.
 
-      - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true`` before running the instrumentation from the terminal.
-      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317`` or to the Splunk Distribution of OpenTelemetry Collector.
+      - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+      - Enable Memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable point to ``http://localhost:4317``.
 
       The following example shows how to enable the profiler from your application's code:
 
       .. code-block:: javascript
 
-         const { startProfiling } = require('@splunk/otel');
-         startProfiling({
+         start({
             serviceName: '<service-name>',
+            endpoint: 'collectorhost:port',
+            profiling: {                       // Enables CPU profiling
+               memoryProfilingEnabled: true,   // Enables Memory profiling
+            }
          });
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-nodejs`.

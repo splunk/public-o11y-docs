@@ -14,11 +14,11 @@ Meet these requirements to instrument Node.js applications for Splunk Observabil
 Ensure you have supported Node.js and library versions
 ==============================================================
 
-The Splunk Distribution of OpenTelemetry JS requires Node.js 12.13 and higher.
+The Splunk Distribution of OpenTelemetry JS requires Node.js 14 and higher.
 
 The Splunk Distribution of OpenTelemetry JS instruments numerous libraries and packages. For a complete list, see :new-page:`the plugins folder <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/plugins/node>` in the OpenTelemetry upstream repository on GitHub. To use any additional instrumentation, install it using npm before running your application.
 
-.. note:: If you're using a Node.js version lower than 12.13, use the :new-page:`SignalFx Tracing Library for Node.js <https://github.com/signalfx/signalfx-nodejs-tracing>`.
+.. note:: If you're using a Node.js version lower than 14, use the :new-page:`SignalFx Tracing Library for Node.js <https://github.com/signalfx/signalfx-nodejs-tracing>`.
 
 .. _nodejs-otel-connector-requirement:
 

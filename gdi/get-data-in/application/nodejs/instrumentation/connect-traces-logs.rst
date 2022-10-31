@@ -14,7 +14,7 @@ You can configure Node logging libraries to include tracing attributes provided 
 Supported logging libraries
 =====================================================
 
-The Splunk Distribution of OpenTelemetry JS supports the following logging libraries:
+The Splunk Distribution of OpenTelemetry JS automatically supports the following logging libraries:
 
 - Bunyan
 - Pino
@@ -25,15 +25,7 @@ The Splunk Distribution of OpenTelemetry JS supports the following logging libra
 Enable logs injection
 =====================================================
 
-To enable log injection, install the instrumentation package for your logging library:
-
-.. code-block:: bash
-
-   npm install @opentelemetry/instrumentation-bunyan
-   npm install @opentelemetry/instrumentation-pino
-   npm install @opentelemetry/instrumentation-winston
-
-To inject trace data into formatted logs, see the documentation for each library.
+Log injection is already enabled for the supported libraries. To inject trace data into formatted logs, see the documentation for each library.
 
 .. _nodejs-include-trace-data:
 
@@ -57,3 +49,10 @@ Explore application logs in Log Observer
 ==================================================
 
 You can send Node.js application logs to Observability Cloud in the same way you send any other type of log data. To learn more about logs in Observability Cloud, see :ref:`logs-logs`.
+
+.. _disable-logs-injection:
+
+Disable logs injection
+===================================================
+
+To disable automatic logs injection
