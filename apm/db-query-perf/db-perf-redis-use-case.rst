@@ -76,7 +76,7 @@ Learn more
 ============
 See the following links for more information about Database Query Performance: 
 
-* For an overview of Database Query Performance, see :ref:`redisormance`.
+* For an overview of Database Query Performance, see :ref:`db-query-performance`.
 * To enable Database Query Performance, see :ref:`enable-db-perf`. 
 * To learn more about Related Content, see :ref:`get-started-relatedcontent`.
 * To troubleshoot issues with Database Query Performance, see :ref:`db-perf-troubleshooting`. 
