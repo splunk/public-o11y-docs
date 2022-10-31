@@ -21,7 +21,24 @@ In summary, you need to install two main components:
 Prerequisites
 ==============================
 
-- Environment: Network Explorer is only supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
+To use Network Explorer, you must meet the following requirements.
+
+ .. list-table::
+    :header-rows: 1
+    :widths: 30 70
+
+    * - :strong:`Prerequisite`
+      - :strong:`Description`
+        
+    * - Environment
+      - Network Explorer is only supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
+      
+    * - Operating system
+      - RedHat Linux: 7.6+, Ubuntu 16.04+, Debian Stretch+, Amazon Linux 2, Google COS
+
+    * - Kubernetes version
+      - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation. 
+
 
 .. _network-explorer-otel-collector:
 
@@ -46,21 +63,21 @@ The following table shows required parameters for this installation:
           
        * - ``namespace``
          - The Kubernetes namespace to install into. This value must match the value for the namespace of the Network Explorer.
-        
        * - ``splunkObservability.realm``
-         - Splunk realm to send telemetry data to. For example, ``us0``.
-        
+         - Splunk realm to send telemetry data to. For example, ``us0``.   
        * - ``splunkObservability.accessToken``
-         - The access token for your organization. An access token with ingest scope is sufficient. For more information, see :ref:`admin-org-tokens`.
-        
+         - The access token for your organization. An access token with ingest scope is sufficient. For more information, see :ref:`admin-org-tokens`.        
        * - ``clusterName``
          - An arbitrary value that identifies your Kubernetes cluster.
-        
        * - ``gateway.enabled``
          - Set this to ``true`` to enable Gateway mode.
-
        * - ``agent.enabled``
          - Set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in Agent mode on each Kubernetes node.
+       * - ``clusterReceiver.enabled``
+         - Set this to ``false`` since Network Explorer doesn't use ``splunk-otel-collector-k8s-cluster-receiver``.
+       * - ``gateway.replicaCount``
+         - Set this to ``1`` since Network Explorer doesn't support communication to multiple gateway replicas.
+
 
 Example
 --------------------------
@@ -83,11 +100,63 @@ Follow these steps to install the Splunk Distribution of OpenTelemetry Collector
 
     .. code-block:: bash
 
-        helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,gateway.enabled=true,agent.enabled=false" splunk-otel-collector-chart/splunk-otel-collector
+        helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,gateway.enabled=true,agent.enabled=false,clusterReceiver.enabled=false,gateway.replicaCount=1" splunk-otel-collector-chart/splunk-otel-collector
 
-.. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
+For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.     
 
-For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.
+.. _resize-otel-installation:
+
+Change the resource footprint of Splunk Distribution of OpenTelemetry Collector
+-------------------------------------------------------------------------------------------------------------------
+
+Each Kubernetes node has a Splunk Distribution of OpenTelemetry Collector, so you might want to adjust your resources depending on the number of Kubernetes nodes you have.
+    
+    You can update the :new-page:`Splunk Distribution of OpenTelemetry Collector values file <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml#L972>`, or specify different values during installation.
+    
+    These are the default resource configurations.
+
+    .. code-block:: yaml
+
+      resources:
+        limits:
+          cpu: 4
+          memory: 8Gi
+
+    Use the following approximations to determine your resource needs.
+
+      .. list-table::
+       :header-rows: 1
+       :widths: 50 50
+
+       * - :strong:`Approximation`
+         - :strong:`Resource needs`
+          
+       * - Up to 500 nodes/5,000 data points per second
+         - CPU: 500m, memory: 1 Gi
+       * - Up to 1,000 nodes/10,000 data points per second
+         - CPU: 1, memory: 2 Gi
+       * - Up to 2,000 nodes/20,000 data points per second
+         - CPU: 2, memory: 4 Gi
+
+
+Example
++++++++++++++++++++++++
+
+In the following example, CPU is set to :strong:`500m`, and memory is set to :strong:`1 Gi`.
+
+  .. tabs::
+
+    .. code-tab:: yaml Update the value file
+ 
+      resources:
+        limits:
+          cpu: 500m
+          memory: 1Gi
+
+    .. code-tab:: bash Pass arguments during installation
+
+      helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,gateway.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
+  
 
 .. _install-network-explorer:
 
@@ -143,6 +212,7 @@ The following table shows required parameters for this installation:
        * - ``otlp.receiver.host``
          - Name of the Splunk Distribution of OpenTelemetry Collector service.
          
+
 Example
 --------------------------
 
@@ -168,9 +238,155 @@ Follow these steps to install Network Explorer:
 
         helm --namespace=<NAMESPACE> install network-explorer splunk-otel-network-explorer-chart/splunk-otel-network-explorer --set="clusterName=<CLUSTER_NAME>,otlp.receiver.host=my-splunk-otel-collector"
 
-.. note:: This example shows an installation using only the required parameters. You might need to specify additional configurations for your environment.
+#. (Optional) The Network Explorer kernel collector requires kernel headers to run the kernel in each Kubernetes node. The kernel collector installs the headers automatically unless your nodes don't have access to the internet.
 
-For additional configuration, see :new-page:`Network Explorer for Kubernetes <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/README.md>` on GitHub.
+    If you need to install the required packages manually, run the following command:
+
+    .. tabs::
+
+      .. code-tab:: bash Debian
+
+        sudo apt-get install --yes linux-headers-$(uname -r)
+
+      .. code-tab:: bash RedHat Linux/Amazon Linux
+
+        sudo yum install -y kernel-devel-$(uname -r)
+
+
+For additional configurations, see :new-page:`Network Explorer for Kubernetes <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/README.md>` on GitHub.
+
+.. _resize-installation:
+
+Resize your Network Explorer installation
+--------------------------------------------------
+
+Depending on the number of Kubernetes nodes you have, your resource needs might vary. You can make the following adjustments to your installation.
+
+Change the resource footprint of the reducer
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the resources allocated to it.
+
+The reducer processes telemetry in multiple stages, with each stage partitioned into one or more shards, where each shard is a separate thread. Increasing the number of shards in each stage expands the capacity of the reducer.
+ 
+Change the following parameters in the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L87>` to increase or decrease the number of shards per reducer stage. You can set between 1-32 shards.
+
+The default configuration is 1 shard per reducer stage.
+
+    .. code-block:: yaml
+
+        reducer:
+          ingestShards: 1
+          matchingShards: 1
+          aggregationShards: 1
+
+Example
+***************************************************************************      
+
+The following example uses 4 shards per reducer stage.
+
+    .. code-block:: yaml
+
+        reducer:
+          ingestShards: 4
+          matchingShards: 4
+          aggregationShards: 4
+
+.. _customize-network-explorer-metrics:
+
+Customize network telemetry generated by Network Explorer
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+If you want to collect fewer or more network telemetry metrics, you can update the :new-page:`Network Explorer values file <https://github.com/Flowmill/splunk-otel-network-explorer-chart/blob/master/values.yaml#L92>`.
+
+The following sections show you how to disable or enable different metrics.
+
+Enable all metrics, including metrics turned off by default
+***************************************************************************
+
+    .. code-block:: yaml 
+
+      disableMetrics:
+        - none
+
+Disable entire metric categories
+***************************************************************************
+
+    .. code-block:: yaml 
+
+      disableMetrics:
+        - tcp.all 
+        - udp.all
+        - dns.all
+        - http.all
+
+
+Disable an individual TCP metric
+***************************************************************************
+    
+    .. code-block:: yaml 
+
+      disableMetrics:
+        - tcp.bytes
+        - tcp.rtt.num_measurements
+        - tcp.active
+        - tcp.rtt.average
+        - tcp.packets
+        - tcp.retrans
+        - tcp.syn_timeouts
+        - tcp.new_sockets
+        - tcp.resets
+
+
+Disable an individual UDP metric
+***************************************************************************
+    
+    .. code-block:: yaml 
+
+      disableMetrics:
+        - udp.bytes
+        - udp.packets
+        - udp.active
+        - udp.drops
+
+Disable an individual DNS metric
+***************************************************************************
+    
+    .. code-block:: yaml 
+
+      disableMetrics:
+        - dns.client.duration.average
+        - dns.server.duration.average
+        - dns.active_sockets
+        - dns.responses
+        - dns.timeouts
+
+Disable an individual HTTP metric
+***************************************************************************
+    
+    .. code-block:: yaml
+
+      disableMetrics:
+        - http.client.duration.average
+        - http.server.duration.average
+        - http.active_sockets
+        - http.status_code
+
+
+Example
+***************************************************************************
+
+In the following example, all HTTP metrics along with certain individual TCP and UDP metrics are disabled. All DNS metrics are collected.
+
+    .. code-block:: yaml
+
+      disableMetrics:
+        - http.all
+        - tcp.syn_timeouts
+        - tcp.new_sockets
+        - tcp.resets
+        - udp.bytes
+        - udp.packets        
 
 
 Next steps

@@ -70,7 +70,7 @@ To include additional attributes in the metadata for all traces produced by the 
 
    export OTEL_RESOURCE_ATTRIBUTES="ab-test-value=red,owner=Lisa"
 
-.. warning:: Setting the name of the service is required. If you don't set a service name using the ``OTEL_SERVICE_NAME`` environment variable, trace data might be unidentifiable.
+.. caution:: Setting the name of the service is required. If you don't set a service name using the ``OTEL_SERVICE_NAME`` environment variable, trace data might be unidentifiable.
 
 .. _go-migration-set-span-limits:
 

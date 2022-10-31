@@ -7,7 +7,23 @@ Use navigators in Splunk Infrastructure Monitoring
 .. meta::
     :description: Use a navigator in Splunk Infrastructure Monitoring
 
-In navigators, you have two options to monitor your instances: table view and heat map view.
+In Splunk Infrastructure Monitoring, a navigator is a collection of resources that lets you monitor metrics and logs across various instances of your services and detect outliers in the instance population based on key performance indicators. Resources in a navigator include, but are not limited to, a full list of entities, dashboards, related alerts and detectors, and service dependencies.
+
+View all navigators
+----------------------
+
+To see all navigators, select :guilabel:`Infrastructure` from the Splunk Observability Cloud home page.
+
+On the Infrastructure Monitoring landing page, each card represents a navigator, corresponding to the services you monitor in Splunk Observability Cloud. A navigator card shows a count of instances in the population and highlights critical alerts linked to that population.
+
+    .. image:: /_images/infrastructure/imm-landing-page.png
+        :width: 70%
+        :alt: This image shows the Splunk Infrastructure Monitoring landing page with all available navigator cards.
+
+Monitor all instances in a navigator
+---------------------------------------
+
+In each navigator, you have two options to monitor your instances: table view and heat map view.
 
 By default, for AWS, Azure, and select GCP navigators (Google Compute Engine, Google Kubernetes Engine, and Google Cloud Storage), if the region property is available on your data, your instances are grouped by region. Default grouping is applied to both table and heat map views.
 
@@ -54,7 +70,7 @@ For interactive walkthroughs of how to use navigators in Infrastructure Monitori
 .. _drill-down:
 
 Drill down
-----------
+-------------
 
 In heat map view, when you hover over a square in a navigator, you can see the information about the instance represented by the square. Click a square to drill down into that instance.
 

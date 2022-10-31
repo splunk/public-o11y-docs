@@ -9,7 +9,7 @@ About the Splunk Distribution of OpenTelemetry JS
 
 The Splunk Distribution of OpenTelemetry JS is a wrapper for the OpenTelemetry Instrumentation for Node.js, an open source Node framework that automatically instruments Node applications and libraries so that they capture telemetry data at runtime.
 
-You can automatically instrument any application written in Node.js 12.13 and higher. See :ref:`nodejs-otel-requirements`. To instrument applications that use Node versions lower than 12.13, use the :new-page:`SignalFx Tracing Library for Node.js <https://github.com/signalfx/signalfx-nodejs-tracing>`.
+You can automatically instrument any application written in Node.js 14 and higher. See :ref:`nodejs-otel-requirements`. To instrument applications that use Node versions lower than 14, use the :new-page:`SignalFx Tracing Library for Node.js <https://github.com/signalfx/signalfx-nodejs-tracing>`.
 
 Features of the Splunk Distribution of OpenTelemetry JS
 ===========================================================
@@ -23,7 +23,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Node.js, li
 
 The Splunk Distribution of OpenTelemetry JS is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they are integrated in the upstream OTel repositories.
 
-.. warning:: Use the Splunk Distribution of OpenTelemetry JS instead of the upstream OpenTelemetry JavaScript Client. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry JS.
+.. caution:: Use the Splunk Distribution of OpenTelemetry JS instead of the upstream OpenTelemetry JavaScript Client. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry JS.
 
 Defaults of the Splunk Distribution of OpenTelemetry JS
 ===========================================================
