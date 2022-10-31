@@ -11,11 +11,11 @@ The following tables show available AutoDetect detectors and their customizable 
 
 .. _apm-autodetectors:
 
-Application Monitoring
+Splunk APM
 ===================================
 
-Service latency detector
-------------------------------------
+Service latency
+----------------------------
 
 - Description: Alerts when there is a sudden change in service latency.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/latency.flow>` repository on GitHub.
@@ -32,26 +32,26 @@ The following table shows customizable arguments for this detector:
      - Default value
    
    * - Current window
-     - Current windows for the alert, in minutes
+     - Time window to test for anomalous values, in minutes.
      - ``10m``
    * - Historical window
-     - Current windows for the alert, in hours
+     - Time window to use for historical normal values, in hours.
      - ``1h``
    * - Trigger threshold
-     - Sensitivity of the alerting
-     - ``0.5``
-   * - Clear threshold
-     - Clear threshold for space running out
-     - ``0.1``
+     - Triggers the alert when the current value is greater than the specified number of deviations above historical data.
+     - ``5``
+   * - Clear growth threshold
+     - Clear the alert when the current value is less than the specified number of deviations above historical data.
+     - ``4``
    * - Minimum request per second
-     - Threshold on number of requests per second
-     - 0
+     - Minimum number of requests per second.
+     - ``0``
    * - Filters
-     - Dimensions you want to add to the detector
+     - Dimensions you want to add to the detector.
      - None
-   
-Error rate
-------------------
+
+Service error rate
+--------------------
 
 - Description: Alerts when a sudden change in service error rate occurs.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/errors.flow>` repository on GitHub.
@@ -68,27 +68,63 @@ The following table shows customizable arguments for this detector:
      - Default value
    
    * - Current window
-     - Current windows for the alert, in minutes
+     - Time window to test for anomalous values, in minutes.
      - ``10m``
    * - Historical window
-     - Current windows for the alert, in hours
+     - Time window to use for historical normal values, in hours.
      - ``1h``
    * - Trigger threshold
-     - Sensitivity of the alerting
+     - Triggers the alert when the current value is greater than the specified number of deviations above historical data.
      - ``0.5``
    * - Clear threshold
-     - Clear threshold for space running out
+     - Clear the alert when the current value is less than the specified number of deviations above historical data.
      - ``0.1``
    * - Minimum request volume
-     - Threshold on number of attempts
+     - Minimum number of requests in the current window. This prevents alerts for sparse data.
+     - ``1``
+   * - Filters
+     - Dimensions you want to add to the detector.
+     - None
+
+Request rate changes
+-----------------------
+
+- Description: Alerts when a sudden change in request rate occurs.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/requests.flow>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+   :width: 100%
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Current window
+     - Time window to test for anomalous values, in minutes.
+     - ``10m``
+   * - Historical window
+     - Time window to use for historical normal values, in hours.
+     - ``1h``
+   * - Trigger threshold
+     - Triggers the alert when the current value is greater than the specified number of deviations above historical data.
+     - ``0.5``
+   * - Clear growth threshold
+     - Clear the alert when the current value is less than the specified number of deviations above historical data.
+     - ``0.1``
+   * - Minimum request volume
+     - Minimum number of requests in the current window. This prevents alerts for sparse data.
      - 1
    * - Filters
-     - Dimensions you want to add to the detector
+     - Dimensions you want to add to the detector.
      - None
 
 .. _infrastructure-autodetectors:
 
-Infrastructure Monitoring
+Splunk Infrastructure Monitoring
 ===================================
 
 .. _autodetect-aws:
