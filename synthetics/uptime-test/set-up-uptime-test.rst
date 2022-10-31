@@ -73,9 +73,9 @@ There are many reasons why you might want to configure advanced settings for you
 
 .. _uptime-request-time:
 
-Set request time 
+Select an HTTP method
 ---------------------------
-
+Select an HTTP method and add a payload. 
 
 
 .. _uptime-custom-headers:
@@ -88,7 +88,19 @@ Specify custom headers to send with each request. For example, you can add a hea
 
 .. _uptime-success-critera:
 
-Add success criteria 
+Activate SSL/TLS validation
 ----------------------------
+When activated, this feature is used to enforce the validation of expired, invalid hostname, or untrusted issuer on SSL/TLS certificates. When testing pre-production environments that have self-signed or invalid certificates, it's best to leave this feature deactivated.
+
+
+.. _uptime- assertions:
+
+Add assertions
+----------------
+
+You can make an assertion on two values. Add two parameters along with the comparison that you would like to perform between the two. There are three types of comparisons: string, numeric, and regular expression. For string and numeric comparisons, values are coerced to the comparison type before the comparison is made. For a regular expression comparison, the first parameter is a string and the second parameter is a regular expression. An assertion step fails if the assertion is false when the step runs.
+
+
+
 
 
