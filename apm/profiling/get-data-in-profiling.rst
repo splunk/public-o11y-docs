@@ -96,7 +96,7 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
       - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Enable Memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
-      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable point to ``http://localhost:4317``.
+      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
 
       The following example shows how to enable the profiler from your application's code:
 
