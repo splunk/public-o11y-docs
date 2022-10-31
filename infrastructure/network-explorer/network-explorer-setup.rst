@@ -461,8 +461,7 @@ In the following example, all HTTP metrics along with certain individual TCP and
         - udp.bytes
         - udp.packets        
 
-In the following example, all HTTP metrics along with certain individual internal metrics are enabled. Please note enableMetrics flag is evaluated after 
-disableMetrics has been evaluated.
+In the following example, all HTTP metrics along with certain individual internal metrics are enabled. Please note enableMetrics flag is evaluated after disableMetrics has been evaluated.
 
     .. code-block:: yaml
 
