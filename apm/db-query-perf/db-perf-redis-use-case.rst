@@ -1,8 +1,8 @@
 .. _redis-use-case:
 
-**************************************************************************
-Use case: Identify slow database queries using Database Query Performance
-**************************************************************************
+********************************************************************************
+Use case: Investigate Redis performance issues using Database Query Performance
+********************************************************************************
 
 .. meta::
    :description: Skyler, the lead site reliability engineer at Buttercup Games, has to troubleshoot high latencies reported by customers in the new advertisement service, which uses a Redis database.
