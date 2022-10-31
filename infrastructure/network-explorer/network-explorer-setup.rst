@@ -308,7 +308,7 @@ Enable all metrics, including metrics turned off by default
 
       disableMetrics:
         - none
-
+              
 Disable entire metric categories
 ***************************************************************************
 
@@ -372,6 +372,79 @@ Disable an individual HTTP metric
         - http.active_sockets
         - http.status_code
 
+Enable entire metric categories
+*********************************
+
+    .. code-block:: yaml 
+
+      enableMetrics:
+        - tcp.all 
+        - udp.all
+        - dns.all
+        - http.all
+        - ebpf_net.all
+
+Enable an individual TCP metric, including metrics turned off by default
+***************************************************************************
+
+    .. code-block:: yaml 
+
+      enableMetrics:
+        - tcp.bytes
+        - tcp.rtt.num_measurements
+        - tcp.active
+        - tcp.rtt.average
+        - tcp.packets
+        - tcp.retrans
+        - tcp.syn_timeouts
+        - tcp.new_sockets
+        - tcp.resets
+
+Enable an individual UDP metric
+***************************************************************************
+    
+    .. code-block:: yaml 
+
+      enableMetrics:
+        - udp.bytes
+        - udp.packets
+        - udp.active
+        - udp.drops
+
+Enable an individual DNS metric
+***************************************************************************
+    
+    .. code-block:: yaml 
+
+      enableMetrics:
+        - dns.client.duration.average
+        - dns.server.duration.average
+        - dns.active_sockets
+        - dns.responses
+        - dns.timeouts
+
+Enable an individual HTTP metric
+***************************************************************************
+    
+    .. code-block:: yaml
+
+      enableMetrics:
+        - http.client.duration.average
+        - http.server.duration.average
+        - http.active_sockets
+        - http.status_code
+
+Enable an internal metric, this list does not represent the entire set of internal metrics
+********************************************************************************************
+    
+    .. code-block:: yaml
+
+      enableMetrics:
+        - ebpf_net.span_utilization_fraction 
+        - ebpf_net.pipeline_metric_bytes_discarded
+        - ebpf_net.codetiming_min_ns
+        - ebpf_net.entrypoint_info
+        - ebpf_net.otlp_grpc.requests_sent
 
 Example
 ***************************************************************************
