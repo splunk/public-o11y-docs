@@ -26,10 +26,3 @@ To instrument Redis for infrastructure metrics and see related Infrastructure Mo
 For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
 
 .. note:: Redis databases appear as "Redis" in the :guilabel:`Services` menu.
-
-Manage NoSQL database monitoring
-=======================================
-
-You can pause and restart the indexing of NoSQL metrics at any time and separately from SQL metrics. Pausing NoSQL indexing can help optimize cardinality when focusing on other types of databases.
-
-See :ref:`manage-TMS` for more information on how to pause or restart NoSQL metrics indexing.
