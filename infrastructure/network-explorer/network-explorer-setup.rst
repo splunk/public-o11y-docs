@@ -384,7 +384,7 @@ Enable entire metric categories
         - http.all
         - ebpf_net.all
 
-Enable an individual TCP metric, including metrics turned off by default
+Enable an individual TCP metric
 ***************************************************************************
 
     .. code-block:: yaml 
@@ -461,6 +461,15 @@ In the following example, all HTTP metrics along with certain individual TCP and
         - udp.bytes
         - udp.packets        
 
+In the following example, all HTTP metrics along with certain individual internal metrics are enabled. Please note enableMetrics flag is evaluated after 
+disableMetrics has been evaluated.
+
+    .. code-block:: yaml
+
+      enableMetrics:
+        - http.all
+        - ebpf_net.codetiming_min_ns
+        - ebpf_net.entrypoint_info
 
 Next steps
 ====================================
