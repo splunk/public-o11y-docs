@@ -231,6 +231,7 @@ def determine_local_toc(app, pagename, templatename, context, doctree):
 
 
 def setup(app):
+    # don't include any js or css file here or any other .py files , instead use only _ext/assetminify.py file 
     app.add_css_file('main.min.css')
     app.add_js_file('main.min.js')
     massets = pushassets()
