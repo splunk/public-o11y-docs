@@ -111,7 +111,7 @@ To enable automatic metric collection, enable the metrics feature using a system
 Enable AlwaysOn Profiling
 --------------------------------------
 
-To enable AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
+To enable AlwaysOn CPU Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
 
 .. code-block:: bash
    :emphasize-lines: 2
@@ -119,6 +119,8 @@ To enable AlwaysOn Profiling, use the following system property argument. You ca
    java -javaagent:./splunk-otel-javaagent.jar \
    -Dsplunk.profiler.enabled=true \
    -jar <myapp>.jar
+
+To enable memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling CPU profiling.
 
 .. _ignore_endpoints_java:
 
