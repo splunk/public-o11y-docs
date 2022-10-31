@@ -49,10 +49,3 @@ Explore application logs in Log Observer
 ==================================================
 
 You can send Node.js application logs to Observability Cloud in the same way you send any other type of log data. To learn more about logs in Observability Cloud, see :ref:`logs-logs`.
-
-.. _disable-logs-injection:
-
-Disable logs injection
-===================================================
-
-To disable automatic logs injection
