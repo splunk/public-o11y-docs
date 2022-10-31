@@ -1,58 +1,76 @@
 .. _redis-use-case:
 
-.. THIS IS STILL RAW AND IN PROGRESS -- DON'T REVIEW YET
-
 **************************************************************************
 Use case: Identify slow database queries using Database Query Performance
 **************************************************************************
 
 .. meta::
-   :description: Skyler, the lead site reliability engineer at Buttercup Games, has been tasked with troubleshooting high latencies that have been reported by customers in the new advertisement service, which uses a Redis database.
+   :description: Skyler, the lead site reliability engineer at Buttercup Games, has to troubleshoot high latencies reported by customers in the new advertisement service, which uses a Redis database.
 
-Skyler, the lead site reliability engineer at Buttercup Games, has been tasked with troubleshooting high latencies that have been reported by customers in the new advertisement service, which uses a Redis database.
+Skyler, the lead site reliability engineer at Buttercup Games, has to troubleshoot high latencies reported by customers in the new advertisement service, which uses a Redis database.
 
-- :ref:`use-case-check-infrastructure-redis`
-- :ref:`use-case-check-service-latency`
-- :ref:`use-case-check-command-latency`
-- :ref:`use-case-dig-into-spans`
+#. :ref:`use-case-check-infrastructure-redis`
+#. :ref:`use-case-check-service-latency`
+#. :ref:`use-case-check-command-latency`
+#. :ref:`use-case-dig-into-spans`
 
 .. _use-case-check-infrastructure-redis:
 
-As an SRE you notice high latency issue for a specific redis instance. 
+1. Check the Redis infrastructure
+==============================================
 
-You review performance metrics for that instance and notice that your commands processing rate has drastically dropped
-Total number of commands processed by the server has been low
+Skyler starts by checking the Redis infrastructure in Splunk Infrastructure Monitoring. They notice that the commands processing rate has drastically dropped, and that the total number of commands processed by the server diminished.
 
-.. image:: /_images/apm/redis/high-latency.png
-   :width: 70%
-   :alt: This screenshot shows a closeup of the Top Services by Latency section of the APM landing page, where the ``order-processor`` has a latency of 1.2 minutes.
+.. image:: /_images/apm/redis/infrastructure-redis.png
+   :width: 90%
+   :alt: Infrastructure view of a Redis service in Splunk Observability Cloud, with related content highlighted.
+
+This might mean that one or more commands are causing the latency issues. To further investigate this, Skyler selects the Related Content tile at the bottom of the screen to jump to Splunk APM.
 
 .. _use-case-check-service-latency:
 
-This might mean that one or more slow commands are causing the latency issues as you can see that number of commands per second drop or stall completely.
-You also want to understand which commands are performing poorly. Click on the tile below.
+2. Jump to the service in Splunk APM
+==============================================
+
+The service map of Splunk APM appears. Skyler is able to immediately select the Redis database and see at a glance which commands are the slowest. The latency and request & errors charts provide a view of the performance trend. 
+
+.. image:: /_images/apm/redis/apm-service-map-redis.png
+   :width: 90%
+   :alt: View of a Redis service in the Splunk APM service map.
+
+Skyler selectes Database Query Performance to get to the root of the issue.
 
 .. _use-case-check-command-latency:
 
-.. image:: /_images/apm/redis/high-latency.png
-   :width: 70%
-   :alt: This screenshot shows a closeup of the Top Services by Latency section of the APM landing page, where the ``order-processor`` has a latency of 1.2 minutes.
+3. Examine the latency of Redis commands
+==============================================
 
-You want to learn which backend services have been impacted by this redis latency issue. Click on the tile below
+After opening Database Query Performance from the service map, Skyler sees the list of Redis commands, sorted by total time. For each command, they can see the requests and latency, as well as tag spotlight data.
 
-You will navigate to our service map view to understand backend service dependencies on this redis cache. 
+.. image:: /_images/apm/redis/explore-command-redis.gif
+   :width: 90%
+   :alt: Animation of Redis commands in Database Query Performance.
 
-You are able to assess the bottleneck impact on the upstream services
+Skyler knows that commands operating on many elements, like SORT, LREM, and SUNION can be slow. They identify a command with a problematic latency, and click on the latency chart to load example traces.
+
+.. image:: /_images/apm/redis/span-detail-redis.png
+   :width: 90%
+   :alt: Sample traces for a Redis command, as loaded from Database Query Performance.
+
+Skyler click on the example trace to find out more about the latency of that particular span.
 
 .. _use-case-dig-into-spans:
 
-.. image:: /_images/apm/redis/high-latency.png
-   :width: 70%
-   :alt: This screenshot shows a closeup of the Top Services by Latency section of the APM landing page, where the ``order-processor`` has a latency of 1.2 minutes.
+4. Dig into spans and related commands
+==============================================
 
-You can jump to command insights. You notice here that you are seeing ‘MGET’ commands and their high latency values. 
+From the trace view, Skyler is able to select the Redis span and verify which database statements compose the command. The performance summary points at the database spans being the main source of overhead.
 
-Note: Usually commands operating on many elements, like SORT, LREM, SUNION can be slow
+.. image:: /_images/apm/redis/redis-commands-span.png
+   :width: 90%
+   :alt: Details of Redis command in a trace, with database statements highlighted.
+
+With information from this and other traces, Skyler has enough information to optimize the Redis commands, which results in a noticeable performance improvement.
 
 Learn more
 ============
