@@ -18,6 +18,8 @@ For line charts, area charts, and column charts, you can export the chart conten
 
 To export a chart, select :strong:`Export Chart as CSV` from the chart’s :guilabel:`Actions` menu.
 
+.. note:: List charts and table charts can't be exported because they don't have a data table.
+
 .. _sharing-a-chart:
 
 Share a chart
