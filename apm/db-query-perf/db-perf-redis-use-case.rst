@@ -16,7 +16,7 @@ Skyler, the lead site reliability engineer at Buttercup Games, has to troublesho
 
 .. _use-case-check-infrastructure-redis:
 
-1. Check the Redis infrastructure
+Check the Redis infrastructure
 ==============================================
 
 Skyler starts by checking the Redis infrastructure in Splunk Infrastructure Monitoring. They notice that the commands processing rate has drastically dropped, and that the total number of commands processed by the server diminished.
@@ -29,7 +29,7 @@ This might mean that one or more commands are causing the latency issues. To fur
 
 .. _use-case-check-service-latency:
 
-2. Jump to the service in Splunk APM
+Jump to the service in Splunk APM
 ==============================================
 
 The service map of Splunk APM appears. Skyler is able to immediately select the Redis database and see at a glance which commands are the slowest. The latency and request & errors charts provide a view of the performance trend. 
@@ -42,7 +42,7 @@ Skyler selectes Database Query Performance to get to the root of the issue.
 
 .. _use-case-check-command-latency:
 
-3. Examine the latency of Redis commands
+Examine the latency of Redis commands
 ==============================================
 
 After opening Database Query Performance from the service map, Skyler sees the list of Redis commands, sorted by total time. For each command, they can see the requests and latency, as well as tag spotlight data.
@@ -61,7 +61,7 @@ Skyler click on the example trace to find out more about the latency of that par
 
 .. _use-case-dig-into-spans:
 
-4. Dig into spans and related commands
+Dig into spans and related commands
 ==============================================
 
 From the trace view, Skyler is able to select the Redis span and verify which database statements compose the command. The performance summary points at the database spans being the main source of overhead.
