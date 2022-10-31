@@ -41,8 +41,13 @@ Logs and debug logs
 
 * Docker: Run ``docker logs my-container >my-container.log`` to retrieve the logs.
 * Journald: Run ``journalctl -u my-service >my-service.log`` to retrieve the logs.
-* Kubernetes: Run ``kubectl describe pod my-pod kubectl logs my-pod otel-collector >my-pod-otel.log kubectl logs my-pod fluentd >my-pod-fluentd.log`` to retrieve the logs.
-* Support bundle scripts are provided to make it easier to collect Linux information,if installer script was used. Run ``/etc/otel/collector/splunk-support-bundle.sh`` to run the script.
+* Kubernetes: Run the following commands to retrieve the logs.
+    
+    .. code-block:: bash
+      
+        kubectl describe pod my-pod
+        kubectl logs my-pod otel-collector >my-pod-otel.log
+        kubectl logs my-pod fluentd >my-pod-fluentd.log
 
 
 Support bundle scripts
