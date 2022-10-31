@@ -50,6 +50,7 @@ The following table shows customizable arguments for this detector:
      - Dimensions you want to add to the detector.
      - None
 
+
 Service error rate
 --------------------
 
@@ -74,14 +75,14 @@ The following table shows customizable arguments for this detector:
      - Time window to use for historical normal values, in hours.
      - ``1h``
    * - Trigger threshold
-     - Triggers the alert when the current value is greater than the specified number of deviations above historical data.
-     - ``0.5``
+     - Triggers the alert when the current value is greater than the specified percentage above historical data.
+     - ``100``
    * - Clear threshold
-     - Clear the alert when the current value is less than the specified number of deviations above historical data.
-     - ``0.1``
+     - Clear the alert when the current value is less than the specified percentage above historical data.
+     - ``80``
    * - Minimum request volume
      - Minimum number of requests in the current window. This prevents alerts for sparse data.
-     - ``1``
+     - ``10``
    * - Filters
      - Dimensions you want to add to the detector.
      - None
@@ -111,13 +112,10 @@ The following table shows customizable arguments for this detector:
      - ``1h``
    * - Trigger threshold
      - Triggers the alert when the current value is greater than the specified number of deviations above historical data.
-     - ``0.5``
+     - ``3.0``
    * - Clear growth threshold
      - Clear the alert when the current value is less than the specified number of deviations above historical data.
-     - ``0.1``
-   * - Minimum request volume
-     - Minimum number of requests in the current window. This prevents alerts for sparse data.
-     - 1
+     - ``2.5``
    * - Filters
      - Dimensions you want to add to the detector.
      - None
