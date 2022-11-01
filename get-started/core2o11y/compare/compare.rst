@@ -11,7 +11,7 @@ The Splunk platform and Observability Cloud are different platforms that work to
 
 Compare purpose
 ==========================================================================================
-The Splunk platform enables you to collect, search, monitor, report, and analyze all of your real-time and historical machine data, making it the most thorough logging solution for security. With your Splunk platform instance, you can prevent security breaches and do some observability and IT operations work. 
+The Splunk platform enables you to collect, search, monitor, report, and analyze all of your real-time and historical machine data, making it the most thorough logging solution for security. With your Splunk platform instance, you can prevent security breaches and conduct IT and some observability investigations. 
 
 Observability Cloud, on the other hand, provides comprehensive observability across your stack. Observability Cloud is the ideal toolset for SREs, developers, and DevOps engineers. With Splunk Observability Cloud, you can:
 
