@@ -48,4 +48,4 @@ A third difference between Observability Cloud and the Splunk platform is in how
 
 - Observability Cloud uses OpenTelemetry to capture metrics, traces, and logs. See :ref:`otel-intro` to learn more.
 
-See :ref:`collector-with-the-uf` to learn more about the differences between the Universal Forwarder and OptenTelemetry collection agents and how you can use them together. 
+See :ref:`collector-with-the-uf` to learn more about the differences between the Universal Forwarder and OpenTelemetry collection agents and how you can use them together. 
