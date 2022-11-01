@@ -38,7 +38,7 @@ The service map of Splunk APM appears. Skyler is able to immediately select the 
    :width: 90%
    :alt: View of a Redis service in the Splunk APM service map.
 
-Skyler selectes Database Query Performance to get to the root of the issue.
+Skyler selects Database Query Performance to get to the root of the issue.
 
 .. _use-case-check-command-latency:
 
