@@ -11,7 +11,7 @@ Analyze Splunk APM subscription usage data for your subscription plan
 
 Use the APM subscription usage page to view charts that track your organization's APM usage against its entitlements. You have to be an administrator to view the Subscription Usage page for your organization.
 
-You can also use the Subscription Usage page to get detailed reports for each usage period. For more information, see :ref:`view-apm-billing-reports`. Depending on your org subscription model, this might be :guilabel:`Settings > Subscription Usage`.
+You can also use the Subscription Usage page to get detailed reports for each usage period. For more information, see :ref:`view-apm-billing-reports`. 
 
 To view your organization's APM subscription usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Subscription Usage`.
 
