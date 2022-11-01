@@ -372,6 +372,22 @@ Disable an individual HTTP metric
         - http.active_sockets
         - http.status_code
 
+Disable an internal metric
+********************************************************************************************
+
+    .. code-block:: yaml
+
+      disableMetrics:
+      - ebpf_net.bpf_log
+      - ebpf_net.otlp_grpc.bytes_sent
+      - ebpf_net.otlp_grpc.failed_requests
+      - ebpf_net.otlp_grpc.metrics_sent
+      - ebpf_net.otlp_grpc.requests_sent
+      - ebpf_net.otlp_grpc.successful_requests
+      - ebpf_net.otlp_grpc.unknown_response_tags
+
+.. note:: This list represents the set of internal metrics which are enabled by default.
+
 Enable entire metric categories
 *********************************
 
@@ -434,8 +450,8 @@ Enable an individual HTTP metric
         - http.active_sockets
         - http.status_code
 
-Enable an internal metric, this list does not represent the entire set of internal metrics
-********************************************************************************************
+Enable an internal metric
+****************************************************************************
     
     .. code-block:: yaml
 
@@ -445,6 +461,8 @@ Enable an internal metric, this list does not represent the entire set of intern
         - ebpf_net.codetiming_min_ns
         - ebpf_net.entrypoint_info
         - ebpf_net.otlp_grpc.requests_sent
+
+.. note:: This list does not include the entire set of internal metrics.
 
 Example
 ***************************************************************************
@@ -461,7 +479,9 @@ In the following example, all HTTP metrics along with certain individual TCP and
         - udp.bytes
         - udp.packets        
 
-In the following example, all HTTP metrics along with certain individual internal metrics are enabled. Please note enableMetrics flag is evaluated after disableMetrics has been evaluated.
+In the following example, all HTTP metrics along with certain individual internal metrics are enabled.
+
+.. note:: The ``disableMetrics`` flag is evaluated before the ``enableMetrics`` flag.
 
     .. code-block:: yaml
 
