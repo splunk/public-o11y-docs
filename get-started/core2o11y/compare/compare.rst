@@ -46,6 +46,6 @@ A third difference between Observability Cloud and the Splunk platform is in how
 
 - The Splunk platform primarily uses the Universal Forwarder (UF) to capture logs and some metrics (stored as logs). It also uses other methods. See :new-page:`Splunk Cloud Platform: Getting Data In <https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/WhatSplunkcanmonitor>` or :new-page:`Splunk Enterprise: Getting Data In <https://docs.splunk.com/Documentation/Splunk/latest/Data/WhatSplunkcanmonitor>` to learn other methods.
 
-- Observability Cloud uses OpenTelemetry to capture metrics, traces, and logs. 
+- Observability Cloud uses OpenTelemetry to capture metrics, traces, and logs. See :ref:`otel-intro` to learn more.
 
 See :ref:`collector-with-the-uf` to learn more about the differences between the Universal Forwarder and OptenTelemetry collection agents and how you can use them together. 
