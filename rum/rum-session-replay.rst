@@ -13,9 +13,7 @@ Session replay in Splunk RUM
 :strong:`Description`
 
 
-..
-    add feature description here 
-
+Replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next.    
 
 Prerequisite
 =================
@@ -95,15 +93,35 @@ Follow these steps to deactivate session replay:
 2. 
 3. 
 
-Redact PII
-===============
-There are two ways to redact PII with session replay in Splunk RUM: 
-* text redaction 
-* image redaction
+Redact information
+==============================
+You can redact text and images.
 
-For example, if you have .... you might want to redact ....
 
-For more, see the Privacy section of the:new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/master/guide.md#privacy>` on GitHub. 
+Text redaction
+--------------
+
+..  
+    code snippet 
+
+Image redaction 
+----------------
+
+..  
+    code snippet 
+
+
+For more information on how to customize your instrumentation, see the Privacy section of the :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/master/guide.md#privacy>` on GitHub. 
+
+
+Replay a session
+================
+Follow these steps: 
+
+1. 
+2. 
+3. 
+
 
 Use case 
 ===================
