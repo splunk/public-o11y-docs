@@ -10,7 +10,7 @@ Reference for Database Query Performance
 .. _supported-dbs:
 
 Supported databases
---------------------------
+=======================
 
 Database Query Performance provides insights for the following database software:
 
@@ -32,9 +32,12 @@ Database Query Performance works with all versions supported by the instrumented
 .. _db-tags:
 
 Database-related span tags
---------------------------
+=============================
 
-Database Query Performance indexes the following span tags for SQL databases:
+Database Query Performance indexes the following span tags.
+
+SQL databases
+---------------------------
 
 .. list-table::
    :header-rows: 1
@@ -68,8 +71,28 @@ Database Query Performance indexes the following span tags for SQL databases:
      - string
      - System of the database
 
+Redis
+---------------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 20 50
+
+   * - :strong:`Key`
+     - :strong:`Type`
+     - :strong:`Description`
+
+   * - Database operation (``_sf_db_operation``)
+     - string
+     - Operation in the database, derived from ``db.statement`` or ``db.operation``
+
+   * - ``db.system`` 
+     - string
+     - System of the database
+
 Learn more
--------------
+==============
+
 See the following links for more information about Database Query Performance: 
 
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.

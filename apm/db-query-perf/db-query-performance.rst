@@ -25,7 +25,7 @@ Slow database queries might be the culprit of wider service availability issues.
     <h2>How Database Query Performance works</h2>
   </embed>
 
-Splunk APM identifies databases as inferred services in your system using automatically generated span tags such as ``db.type``, ``db.instance`` and ``db.statement``. Databases appear throughout APM, such as in their inferred locations in the service map, in the service filter list, and in trace view. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
+Splunk APM identifies databases as inferred services in your system using automatically generated span tags. Databases appear throughout APM, such as in their inferred locations in the service map, in the service filter list, and in trace view. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
 
 With Database Query Performance, Splunk APM provides additional analytics for a set of supported SQL and NoSQL databases. See :ref:`supported-dbs` for the full list.
 

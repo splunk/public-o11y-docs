@@ -6,9 +6,9 @@ Database Query Performance for NoSQL
 ************************************************************************
 
 .. meta::
-   :description: Database Query Performance can help you troubleshoot performance issues the following NoSQL databases.
+   :description: Database Query Performance can help you troubleshoot performance issues in the following NoSQL databases.
 
-Database Query Performance can help you troubleshoot performance issues the following NoSQL databases. Indexing of NoSQL metrics can be managed separately. For a sample use case, see :ref:`redis-use-case`.
+Database Query Performance can help you troubleshoot performance issues in the following NoSQL databases. For a sample use case, see :ref:`redis-use-case`.
 
 .. _redis-db-query-performance:
 
