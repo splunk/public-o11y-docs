@@ -7,7 +7,7 @@ Monitor SLIs, manage SLOs, and meet SLAs
 .. meta::
    :description: SLIs, SLOs, and SLAs in Observability Cloud
 
-Splunk Observability Cloud provides out of the box solutions for monitoring your SLIs, and for setting and meeting your SLOs and SLAs. 
+Splunk Observability Cloud provides out of the box solutions for monitoring your SLIs, and for setting and meeting your SLOs and SLAs. You can also define your own SLIs with custom detectors, and alert on the data most important to your teams.
 
 SLIs are Service Level Indicators, the metrics used to measure your system's availability. SLOs, Service Level Objectives, are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements, SLAs, are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
 
@@ -49,17 +49,23 @@ Monitor your SLIs in out of the box navigators, such as the following navigator 
     :width: 100%
     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
 
+In addition to out of the box navigators, you can set up alerts and detectors on any custom Infrastructure Monitoring data that matters to you. See :ref:`get-started-detectoralert`.
+
 :ref:`infrastructure-virtual-metrics` help you more accurately and thoroughly measure SLIs by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options.
 
 Splunk Log Observer Connect
 ===================================================================================
-Splunk Log Observer Connect defaults to displaying a count of all of your logs by severity, highlighting the percentage of logs with errors at any given time. 
+Log Observer Connect exposes analytic functions on logs that you can to use to generate SLIs from logs. For example, the following Log Observer Connect aggregation displays a count of all of your logs by severity, highlighting the percentage of logs with errors at any given time. 
 
   .. image:: /_images/get-started/LOsample-core.png 
     :width: 100%
     :alt: This image shows Log Observer Connect with a timeline displaying a count of logs by severity.
 
-You can change the default log aggregation to see other SLI measurements using logs data. For example, to see the average request latency in logs data, change :strong:`Count` to :strong:`AVG` and group by :strong:`Request latency` rather than :strong:`severity`. See :ref:`logs-aggregations` for guidance on adjusting aggregations so that you can view the SLIs that are important to you.
+The Log Observer UI does not automatically generate SLIs, but you can use log aggregations to create SLI measurements using logs data. For example, in the preceding screenshot, if you change :strong:`Count` to :strong:`AVG`and group by :strong:`Request latency` rather than :strong:`severity`, Log Observer shows the average request latency in logs data. See :ref:`logs-aggregations` for guidance on adjusting aggregations so that you can view the SLIs that are important to you.
+
+Observability Cloud Alerts and detectors
+===================================================================================
+In addition to the many out of the box methods of monitoring SLIs in Observability Cloud (e.g. navigators, SLIs on your service map, AutoDetect detectors), you can also set up custom  detectors. This lets you define your own SLIs and alert on any data that matters to you. See :ref:`get-started-detectoralert`.
 
 Real User Monitoring (RUM)
 ===================================================================================
