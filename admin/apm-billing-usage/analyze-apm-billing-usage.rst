@@ -13,7 +13,7 @@ Use the APM subscription usage page to view charts that track your organization'
 
 You can also use the Subscription Usage page to get detailed reports for each usage period. For more information, see :ref:`view-apm-billing-reports`. Depending on your org subscription model, this might be :guilabel:`Settings > Subscription Usage`.
 
-To view your organization's APM subscription usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`APM` tab.
+To view your organization's APM subscription usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Subscription Usage`.
 
 
 How APM calculates usage
