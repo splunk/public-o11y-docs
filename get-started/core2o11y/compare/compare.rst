@@ -13,7 +13,7 @@ Compare purpose
 ==========================================================================================
 The Splunk platform enables you to collect, search, monitor, report, and analyze all of your real-time and historical machine data, making it the most thorough logging solution for security. With your Splunk platform instance, you can prevent security breaches and do some observability and IT operations work. 
 
-Observability Cloud, on the other hand, provides comprehensive observability across your stack. With Splunk Observability Cloud, you can:
+Observability Cloud, on the other hand, provides comprehensive observability across your stack. Observability Cloud is the ideal toolset for SREs, developers, and DevOps engineers. With Splunk Observability Cloud, you can:
 
 - Prevent site downtime
 
@@ -34,7 +34,9 @@ Observability Cloud and the Splunk platform have a few functionality differences
 
 Query language
 ------------------------------------------------------------------------------------------
-The Splunk platform is built around an advanced query language, SPL, that allows users to drill down into their logs in complex and nuanced ways. Observability Cloud, on the other hand, does not require a query language. Instead, Observability Cloud lets novice users analyze their Splunk platform logs along with correlated metrics, traces, and user sessions with point-and-click technology. There is no need to learn SPL or any other query language to use Observability Cloud.
+The Splunk platform is built around an advanced query language, SPL, that allows users to drill down into their logs in complex and nuanced ways. On the other hand, Log Observer Connect, a component of Observability Cloud, lets novice users analyze their Splunk platform logs along with correlated metrics, traces, and user sessions with point-and-click technology. There is no need to learn SPL or any other query language to use Log Observer Connect.
+
+Infrastructure Monitoring, another component of Observability Cloud, uses SignalFlow, a query language for metrics. To learn more see :ref:`signalflow-analytics-intro`.
 
 Alerting
 ------------------------------------------------------------------------------------------
@@ -49,3 +51,5 @@ A third difference between Observability Cloud and the Splunk platform is in how
 - Observability Cloud uses OpenTelemetry to capture metrics, traces, and logs. See :ref:`otel-intro` to learn more.
 
 See :ref:`collector-with-the-uf` to learn more about the differences between the Universal Forwarder and OpenTelemetry collection agents and how you can use them together. 
+
+When you use Log Observer Connect component of Observability Cloud, you do not need to import your data into Observability Cloud. Instead, you can see your Splunk platform logs in the Log Observer Connect UI without importing or storing logs outside your Splunk platform instance.
