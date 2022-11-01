@@ -1,0 +1,83 @@
+.. _apm-system-limits:
+
+*******************************************************
+Splunk APM system limits 
+*******************************************************
+
+.. meta:: 
+  :description: Splunk APM has system limits that help ensure good performance, stability, and reliability. These limits also protect the Splunk APM multi-tenant environment. Exceeding these limits might degrade your Splunk APM experience.
+
+Splunk APM has system limits that help ensure good performance, stability, and reliability. These limits also protect the Splunk APM multi-tenant environment. Exceeding these limits might degrade your Splunk APM experience.
+
+.. _subscription-apm:
+
+Subscriptions 
+==========================
+
+There are two types of subscriptions: enterprise and standard. For more information on each type of subscription, see :new-page:`Splunk APM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>`.
+
+
+Span and trace limits 
+========================
+.. list-table::
+   :header-rows: 1
+   :widths: 15, 15, 70
+
+   * - :strong:`Limit name`
+     - :strong:`Default limit value`
+     - :strong:`Notes`
+   * - Bytes per Minute (BPM)
+     - Determined by your :ref:`subscription <subscription-apm>`. 
+     - Also known as trace volume. Spans are dropped after you reach the limit. 
+   * - Spans Per Minute (SPM)
+     - Determined by your :ref:`subscription <subscription-apm>`. 
+     - Maximum number of spans per minute that Splunk APM ingests and analyzes. Spans are dropped after you reach the limit. 
+   * - Span size 
+     - 64kB
+     - The maximum volume of an individual span in kB. Spans, and the contents of each span, are dropped and not analyzed by Splunk APM after you reach the limit.  
+   * - Number of spans in a trace
+     - 100,000 spans per trace
+     - Spans are dropped after you reach the limit. 
+   * - Trace size 
+     - 16 MB
+     - Traces are dropped and not analyzed by Splunk APM after you reach the limit.  
+   * - Span accumulation duration
+     - 10 minutes
+     - When a specific trace ID reaches this limit, subsequent spans are grouped into another trace segment. Exceeding the limit leads to suboptimal trace-based analysis for inferred services, failure root cause metrics and workflow metrics, but no spans or traces exceeding this limit are dropped. 
+
+
+
+MetricSet limits 
+==================================
+
+.. list-table::
+  :header-rows: 1
+  :widths: 15, 15, 70
+
+  * - :strong:`Limit name`
+    - :strong:`Default limit value`
+    - :strong:`Notes`
+  * - Troubleshooting MetricSets (TMS)
+    - Determined by your :ref:`subscription <subscription-apm>`. 
+    - Spans and traces aren't dropped. Span tag analysis views, service graph breakdowns and trace visibility might be affected.
+  * - Monitoring MetricSets (MMS) 
+    - Determined by your :ref:`subscription <subscription-apm>`. 
+    - Spans and traces aren't dropped. Alerting and charting on new MMS might be affected.
+
+
+Additional limits
+==================================
+
+.. list-table::
+  :header-rows: 1
+  :widths: 15, 15, 70
+
+  * - :strong:`Limit name`
+    - :strong:`Default limit value`
+    - :strong:`Notes`
+  * - Trace assembly delay
+    - 60s 
+    - Time from last span arrival for a traceId to trace assembly completed.
+  * - Splunk APM API requests
+    - 10 requests per min 
+    -  ... 
