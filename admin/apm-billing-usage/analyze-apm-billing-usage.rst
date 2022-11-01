@@ -25,7 +25,7 @@ As a result, the metrics for calculating usage depend on the subscription plan t
 
 To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
 
-To see the usage charts and metrics for your subscription plan, go to :guilabel:`Data Configuration > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Subscription Usage`.  The following sections detail the metrics for TAPM and host subscription plans respectively.
+To see the usage charts and metrics for your subscription plan, go to :guilabel:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Subscription Usage`.  The following sections detail the metrics for TAPM and host subscription plans respectively.
 
 .. _tapm_subscription_plans:
 
