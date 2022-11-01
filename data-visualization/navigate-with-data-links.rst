@@ -168,7 +168,7 @@ If data links are available in your organization, you have access to them from a
     .. note:: To navigate to targets other than dashboards, you must use the :strong:`Actions` menu.
 
 - To view all the local data links for a dashboard, select :guilabel:`Data Links` from the :strong:`Dashboard actions` menu.
-- To view all the global data links for an organization, go to :guilabel:`Navigation menu > Organization Settings`, then select :guilabel:`Global Data Links`. Alternately, you can click :guilabel:`Global Data links` when viewing the list of local data links.
+- To view all the global data links for an organization, go to :guilabel:`Navigation menu > Data Configuration`, then select :guilabel:`Global Data Links`. Alternately, you can click :guilabel:`Global Data links` when viewing the list of local data links.
 
 .. _about-links:
 

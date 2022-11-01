@@ -118,13 +118,13 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
 
 Manage existing indexed span tags and Troubleshooting MetricSets
 =================================================================
-After you successfully index a span tag, Splunk APM saves the configuration in the :strong:`MetricSets Configuration` page in your :strong:`Organization Settings`. Visit this page to view the indexing scope of the span tag and its current status.
+After you successfully index a span tag, Splunk APM saves the configuration in the :strong:`MetricSets Configuration` page in your :strong:`Data Configuration`. Visit this page to view the indexing scope of the span tag and its current status.
 
 You can modify the configuration for existing indexed tags, including adding and removing services for specific indexed tags and modifying the scope. You can also pause or stop indexing span tags without deleting their configuration. This is useful when you want to temporarily stop indexing a span tag, but don't want to remove the configuration.
 
 To review or modify existing indexed span tags, do the following:
 
-1. Go to :strong:`Settings > Organization Settings > MetricSets Configuration` 
+1. Go to :strong:`Settings > Data Configuration > MetricSets Configuration` 
 2. Find the indexed span tag you want to view under the :strong:`Custom MetricSets` section of the configuration table.
 3.  Refer to :ref:`tms-status` below to interpret the status of each indexed span tag.
 4. Make any desired changes using the buttons in the :guilabel:`Actions` column:

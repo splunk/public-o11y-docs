@@ -78,7 +78,7 @@ For information about how to create a global data link specifically for Splunk A
 
 #. Open the Observability Cloud navigation :strong:`Menu`.
 
-#. Hover over :strong:`Organization Settings` and select :strong:`Global Data Links`.
+#. Hover over :strong:`Data Configuration` and select :strong:`Global Data Links`.
 
 #. Click :strong:`New Link`.
 
