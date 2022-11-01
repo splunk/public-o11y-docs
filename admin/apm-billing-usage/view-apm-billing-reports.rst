@@ -19,7 +19,7 @@ Download an APM usage report
 APM usage reports are available as tab-delimited text files. They include metrics and billed usage for the entire usage period and break down usage for each minute in the usage period. Follow these steps to view and download a usage report:
 
 1. Go to :guilabel:`Settings > Billing and Usage` and select the :strong:`APM` tab.
-   Depending on your org subscription model, this might be:guilabel:`Settings > Subscription Usage`.
+   Depending on your org subscription model, this might be :guilabel:`Settings > Subscription Usage`.
 
 2. Click :guilabel:`View Detailed Usage Reports`.
 
