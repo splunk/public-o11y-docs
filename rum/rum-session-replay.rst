@@ -13,7 +13,7 @@ Session replay in Splunk RUM
 :strong:`Description`
 
 
-Replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next.    
+Replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next. Click into... in the waterfall. Session replay videos are segmented into chunks, which ... A session replay has a maximum of ...       
 
 Prerequisite
 =================
@@ -95,14 +95,8 @@ Follow these steps to deactivate session replay:
 
 Redact information
 ==============================
-You can redact text and images.
+Text is redacted by default, you can optionally configure image redaction as well. 
 
-
-Text redaction
---------------
-
-..  
-    code snippet 
 
 Image redaction 
 ----------------
@@ -118,9 +112,12 @@ Replay a session
 ================
 Follow these steps: 
 
-1. 
-2. 
-3. 
+1. Open the session you're interested in session waterfall.
+
+2. If there's a replay option available, click :strong:`Replay`. 
+
+3. ...
+
 
 
 Use case 
