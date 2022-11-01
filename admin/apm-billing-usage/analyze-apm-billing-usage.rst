@@ -13,7 +13,7 @@ Use the APM subscription usage page to view charts that track your organization'
 
 You can also use the Subscription Usage page to get detailed reports for each usage period. For more information, see :ref:`view-apm-billing-reports`.
 
-To view your organization's APM subscription usage, go to :guilabel:`Organization Settings > Subscription Usage` and select the :guilabel:`APM` tab.
+To view your organization's APM subscription usage, go to :guilabel:`Data Configuration > Subscription Usage` and select the :guilabel:`APM` tab.
 
 
 How APM calculates usage
@@ -25,7 +25,7 @@ As a result, the metrics for calculating usage depend on the subscription plan t
 
 To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
 
-To see the usage charts and metrics for your subscription plan, go to :guilabel:`Organization Settings > Subscription Usage` and select the :strong:`APM` tab. The following sections detail the metrics for TAPM and host subscription plans respectively.
+To see the usage charts and metrics for your subscription plan, go to :guilabel:`Data Configuration > Subscription Usage` and select the :strong:`APM` tab. The following sections detail the metrics for TAPM and host subscription plans respectively.
 
 .. _tapm_subscription_plans:
 

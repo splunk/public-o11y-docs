@@ -36,7 +36,7 @@ The following table compares search-time rules and index-time rules.
      - Is part of the logs pipeline
 
    * - Activate or deactivate in :guilabel:`Saved Queries` or :guilabel:`Active search-time rules` in Log Observer
-     - Activate or deactivate in :guilabel:`Organization Settings > Logs Pipeline Management`
+     - Activate or deactivate in :guilabel:`Data Configuration > Logs Pipeline Management`
 
 
 Do not activate search-time rules except when you are intentionally applying index-time rules to historical data. Search-time rules do not impact the subscription usage, but do impact performance. Search-time rules are transformations that increase the time it takes to complete a search. Applying index-time rules does not impact either the subscription usage or performance.

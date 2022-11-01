@@ -59,7 +59,7 @@ Create an Infinite Logging rule
 
 To create an Infinite Logging rule, follow these steps:
 
-1. From the navigation menu, go to :guilabel:`Organization Settings > Logs Pipeline Management`.
+1. From the navigation menu, go to :guilabel:`Data Configuration > Logs Pipeline Management`.
 
 2. Click :guilabel:`New Infinite Logging Rule`.
 
