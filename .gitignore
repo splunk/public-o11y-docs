@@ -18,3 +18,5 @@ vale
 .idea
 .DS_Store
 product-docs.iml
+_static/main.min.css
+_static/main.min.js
