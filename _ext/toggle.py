@@ -53,5 +53,5 @@ class ToggleDirective(Directive):
 
 def setup(app):
     app.add_directive('toggle', ToggleDirective)
-    app.add_js_file('toggle-sections.js')
-    app.add_css_file('toggle-sections.css')
+    #app.add_js_file('toggle-sections.js')
+    #app.add_css_file('toggle-sections.css')
