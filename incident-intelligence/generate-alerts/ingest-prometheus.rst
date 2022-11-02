@@ -5,9 +5,7 @@
 Ingest Prometheus alerts
 ************************************************************************
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the Prometheus endpoint to forward Prometheus alerts to Incident Intelligence where you can create on-call schedules and incident workflows to route Prometheus alerts to responders. You can send Prometheus alerts directly to the ingest endpoint. To do so, make a POST call to the endpoint to ingest Prometheus alerts.
-
-To send Prometheus alerts directly to the ingest endpoint, make a POST call to the endpoint to ingest Prometheus alerts. 
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the Prometheus endpoint to forward Prometheus alerts to Incident Intelligence where you can create on-call schedules and incident workflows to route Prometheus alerts to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. See :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`.
 
 Prometheus ingest endpoint
 ---------------------------------
