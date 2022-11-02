@@ -23,7 +23,7 @@ If sensitive data has been sent to Splunk Observability Cloud during manual inst
 
 You can add processors to your build of the Splunk Distribution of OpenTelemetry Collector to delete, redact, or hash specific attributes, or span tags, from spans during the pre-processing step.
 
-.. admonition:: A note about dropping spans   
+.. note:: A note about dropping spans   
 
     Concealing specific values in spans is the best way to hide sensitive information in spans. It is not possible to drop entire spans from your OpenTelemetry pipeline, and attempting to do so is not recommended because excluding spans risks creating traces with missing spans. See :ref:`apm-missing-spans` for more information about traces with missing spans.  
     

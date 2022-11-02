@@ -458,6 +458,11 @@
      -
      -
 
+   * - :ref:`Oracle Database <oracledb>`
+     - :strong:`X`
+     -
+     -  
+
    * - :ref:`PostgreSQL <postgresql>`
      - :strong:`X`
      -

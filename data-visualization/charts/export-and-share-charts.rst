@@ -18,6 +18,8 @@ For line charts, area charts, and column charts, you can export the chart conten
 
 To export a chart, select :strong:`Export Chart as CSV` from the chart’s :guilabel:`Actions` menu.
 
+.. note:: List charts and table charts can't be exported because they don't have a data table.
+
 .. _sharing-a-chart:
 
 Share a chart
@@ -77,7 +79,7 @@ The techniques available for sharing a chart depend on where you are viewing the
      - Provides a graphic representation of the chart
      - Can be viewed by anyone
 
-.. important:: 
+.. caution:: 
 
    
    Provide a browser’s URL for a chart with caution; any changes someone makes to the chart are visible to everyone viewing the chart, and can overwrite changes others have made to the chart.
@@ -131,7 +133,7 @@ Note the following regarding this feature.
 
 - The time zone is always represented as GMT (marked on the chart as UTC).
 
-.. admonition:: Troubleshooting
+.. note:: Troubleshooting
 
    If you don’t see the preview image in Slack, possible reasons are:
 

@@ -29,7 +29,7 @@ Use the upstream OpenTelemetry Collector
 
 You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector. For more information on the differences between the Splunk distribution and the upstream version, see :ref:`using-upstream-otel`.
 
-.. warning::
+.. caution::
 
    Splunk only provides best-effort support for the upstream OpenTelemetry Collector. Only Splunk OpenTelemetry distributions are in scope for official Splunk support and support-related service-level agreements (SLAs).
    
