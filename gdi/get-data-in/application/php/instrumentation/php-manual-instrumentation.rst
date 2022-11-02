@@ -9,8 +9,6 @@ Manually instrument PHP applications for Splunk Observability Cloud
 
 The SignalFx Tracing Library for PHP provides and registers an OpenTracing-compatible global tracer that you can use to instrument your applications manually for Splunk Observability Cloud. Custom or manual instrumentation can be helpful when you need to add custom attributes to spans, or need to generate spans manually.
 
-.. note:: The SignalFx Tracing Library for PHP supports OpenTracing version 0.12.1 and higher.
-
 The following example shows how to create a custom span and attach a tag to it:
 
 .. code-block:: php
