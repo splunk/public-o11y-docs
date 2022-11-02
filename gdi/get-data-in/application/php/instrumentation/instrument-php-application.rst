@@ -36,7 +36,7 @@ Follow these steps to automatically instrument your application:
    
    .. code-block:: shell
 
-      curl -LO https://github.com/signalfx/signalfx-php-tracing/releases/latest/signalfx-php-tracing/signalfx-setup.php
+      curl -LO  https://github.com/signalfx/signalfx-php-tracing/releases/latest/download/signalfx-setup.php
 
 #. Install by running the installation script:
 
