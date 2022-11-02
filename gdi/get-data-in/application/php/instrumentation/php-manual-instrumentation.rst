@@ -1,4 +1,4 @@
-.. _dotnet-manual-instrumentation:
+.. _php-manual-instrumentation:
 
 ********************************************************************
 Manually instrument PHP applications for Splunk Observability Cloud

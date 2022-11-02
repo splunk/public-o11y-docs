@@ -1,5 +1,5 @@
 
-.. _advanced-php-otel-configuration:
+.. _advanced-php-configuration:
 
 ********************************************************************
 Configure the PHP instrumentation for Splunk Observability Cloud
