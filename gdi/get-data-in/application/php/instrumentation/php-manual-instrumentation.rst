@@ -31,14 +31,3 @@ The following example shows how to create a custom span and attach a tag to it:
          $span->finish();
       }
    }
-
-The Signalfx-Tracing library for PHP wraps the ``spl_autoload_register`` function to allow the automatic tracing of supported functions. When autoloader classes aren't used, you need a manual invocation to create a tracer and invoke autoinstrumentation as the first action for your application:
-
-.. code-block:: php
-
-   // Note: this must occur before any other library is imported and used!
-   use SignalFx\Tracing;
-
-   $tracer = Tracing::autoInstrument();
-   // or if you only prefer a tracer instance without enabling auto-instrumentation:
-   $tracer = Tracing::createTracer();

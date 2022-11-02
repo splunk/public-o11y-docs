@@ -37,7 +37,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SIGNALFX_RECORDED_VALUE_MAX_LENGTH``
      - Maximum length an attribute value can have. Values longer than this are truncated.	The default value is ``1200``.
    * - ``SIGNALFX_CAPTURE_ENV_VARS``
-     - Comma-separated list of environment variables to attach to the root span.	
+     - List of environment variables to attach to the root span, separated by commas.
    * - ``SIGNALFX_CAPTURE_REQUEST_HEADERS``
      - Comma-separated list of incoming request headers to turn into spans. For example, ``User-Agent`` is captured as ``http.request.headers.user_agent``.
    * - ``SIGNALFX_ACCESS_TOKEN``

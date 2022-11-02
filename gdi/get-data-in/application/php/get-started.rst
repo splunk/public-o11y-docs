@@ -17,8 +17,8 @@ Instrument PHP applications for Splunk Observability Cloud
 
 The SignalFx Tracing Library for PHP provides automatic instrumentations for many popular PHP libraries and frameworks. The library is a native extension that supports PHP versions 5.4 or higher running on the Zend Engine.
 
-To instrument your .NET application, follow these steps:
+To instrument your PHP application, follow these steps:
 
 #. Check compatibility and requirements. See :ref:`php-requirements`.
-#. Instrument your .NET application. See :ref:`instrument-php-applications`.
+#. Instrument your PHP application. See :ref:`instrument-php-applications`.
 #. Configure your instrumentation. See :ref:`advanced-php-configuration`.

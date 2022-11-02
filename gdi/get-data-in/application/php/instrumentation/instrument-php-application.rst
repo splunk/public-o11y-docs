@@ -79,7 +79,7 @@ Follow these steps to automatically instrument your application:
 INI file settings
 -------------------------------------------
 
-If you don't set environment variables, the library extracts default values from the INI file. The prefix for settings defined using environment variables that start with ``SIGNALFX_TRACE_`` is ``signalfx.trace.``. For all other environment variables that start with ``SIGNALFX_`` the prefix is ``signalfx.``.
+If you don't set any environment variable, the library extracts default values from the INI file. The prefix for settings defined using environment variables that start with ``SIGNALFX_TRACE_`` is ``signalfx.trace.``. For all other environment variables that start with ``SIGNALFX_`` the prefix is ``signalfx.``.
 
 You can use the ``signalfx-setup.php`` script to set INI file options without having to manually locate each file. For example:
 
@@ -87,7 +87,7 @@ You can use the ``signalfx-setup.php`` script to set INI file options without ha
 
    php signalfx-setup.php --update-config --signalfx.endpoint_url=http://172.17.0.1:9080/v1/trace
    
-This is useful for options which can be the same for all PHP services running in the system, like the endpoint.
+This is useful for options common to all PHP services running in the system, like endpoints.
 
 .. _kubernetes_php:
 
