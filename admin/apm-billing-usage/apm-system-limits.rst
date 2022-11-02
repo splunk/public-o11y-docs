@@ -7,6 +7,9 @@ Splunk APM system limits
 .. meta:: 
   :description: Splunk APM has system limits that help ensure good performance, stability, and reliability. These limits also protect the Splunk APM multi-tenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
+
+.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
+
 Splunk APM has system limits that help ensure good performance, stability, and reliability. These limits also protect the Splunk APM multi-tenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
 .. _subscription-apm:
@@ -44,7 +47,15 @@ Span and trace limits
    * - Span accumulation duration
      - 10 minutes
      - When a specific trace ID reaches this limit, subsequent spans are grouped into another trace segment. Exceeding the limit leads to suboptimal trace-based analysis for inferred services, failure root cause metrics and workflow metrics, but no spans or traces exceeding this limit are dropped. 
-
+   * - Max trace duration 
+     - 3 mins 
+     - Spans/traces aren't dropped. 
+   * - Trace assembly delay
+     - 60s 
+     - Time from last span arrival for a traceId to trace assembly completed.
+   * - Splunk APM API requests
+     - 10 requests per min 
+     -  ... 
 
 
 MetricSet limits 
@@ -58,26 +69,40 @@ MetricSet limits
     - :strong:`Default limit value`
     - :strong:`Notes`
   * - Troubleshooting MetricSets (TMS)
-    - Determined by your :ref:`subscription <subscription-apm>`. 
+    - Determined by your :ref:`subscription <subscription-apm>`. Total maximum of two TMS per 10-second interval.
     - Spans and traces aren't dropped. Span tag analysis views, service graph breakdowns and trace visibility might be affected.
   * - Monitoring MetricSets (MMS) 
     - Determined by your :ref:`subscription <subscription-apm>`. 
     - Spans and traces aren't dropped. Alerting and charting on new MMS might be affected.
 
 
-Additional limits
+UI limits 
 ==================================
-
-.. list-table::
-  :header-rows: 1
-  :widths: 15, 15, 70
 
   * - :strong:`Limit name`
     - :strong:`Default limit value`
     - :strong:`Notes`
-  * - Trace assembly delay
-    - 60s 
-    - Time from last span arrival for a traceId to trace assembly completed.
-  * - Splunk APM API requests
-    - 10 requests per min 
-    -  ... 
+  * - Number of nodes in the service map
+    - 500
+    -
+  * - Number of traces in trace search 
+    - 1000
+    -
+  * -  Number of spans per trace in trace view
+    - 100k
+    -
+  * - Length of service name
+    - 1024 characters
+    - 
+  * - Length of operation name 
+    - 1024 characters
+    -
+  * - “Yellow” threshold for error rate
+    - 5%
+    -
+  * - “Red” threshold for error rate
+    - 20%
+    -
+  * - “Red” threshold for p90 latency
+    - 1s
+    -
