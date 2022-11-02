@@ -194,7 +194,7 @@ in addition to your current system, follow these steps:
 
 4. In the new ``<store>`` section for splunk_hec, provide at least the following fields:
 
-   - ``Instructions hec_host`` - Set the HEC ingest host (for example, ``ingest.us1.signalfx.com hec_port``) to 443.
+   - ``hec_host`` - Set the HEC ingest host (for example, ``ingest.us1.signalfx.com hec_port``) to 443.
 
    - ``hec_token`` - Provide the SignalFx access token.
 
