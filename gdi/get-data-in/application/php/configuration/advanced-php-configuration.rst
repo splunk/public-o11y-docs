@@ -23,9 +23,9 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - Environment variable
      - Description
    * - ``SIGNALFX_SERVICE_NAME``
-     - BBB
+     - Service name in Observability Cloud. The default value is ``unnamed-php-service``.
    * - ``SIGNALFX_ENDPOINT_URL``
-     - BBB
+     - Endpoint URL. The default value is ``http://localhost:9080/v1/trace``.
    * - ``SIGNALFX_TRACING_ENABLED``
      - Whether to enable automatic tracer creation and instrumentation. The default value is ``true``.
    * - ``SIGNALFX_TRACE_CLI_ENABLED``
