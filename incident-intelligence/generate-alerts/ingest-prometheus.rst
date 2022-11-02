@@ -68,7 +68,7 @@ Alert fields
 JSON payload
 ------------
 
-Prometheus alerts sent to the Prometheus endpoint with this JSON payload will be transformed to alerts in Incident Intelligence.
+Use the Prometheus alertmanager webhook config to send Prometheus alerts sent to the Prometheus endpoint with this JSON payload will be transformed to alerts in Incident Intelligence. See :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`.
 
 Example JSON payload:
 
