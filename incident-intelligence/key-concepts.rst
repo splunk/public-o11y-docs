@@ -17,17 +17,23 @@ Here are some important concepts you need to know to successfully use Splunk Inc
    * - Acknowledged
      - Incident responders select this status to indicate that they are aware of the incident. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Acknowledging an incident prevents the escalation to the next step in an incident workflow.
 
+   * - Alert 
+     - An alert is an event that meets a defined threshold or criteria. 
+
    * - Alert grouping
      - Use alert grouping to automate incident trigger conditions and group alerts. Alert grouping conditions are set up at the service level to let you customize the grouping rules for each service. 
 
    * - Alert routing
      - Alert routing associates alerts with a service. If an alert matches your configured alert routing conditions, it is routed to the service.
 
+   * - Detector
+     - Use a detector to specify the events for which you want to create an alert that is ingested into Incident Intelligence.
+
    * - Incident response configuration
      - The entire configuration process for a service in Incident Intelligence. This is where you create a service and configure alert routing, alert grouping, and incident workflows for incidents associated with a service. 
 
    * - Incidents
-     - An unplanned interruption to a service or reduction in the quality of a service. Not all alerts are incidents. Each incident is made up of alerts or events that are ingested into Incident Intelligence.
+     - An unplanned interruption to a service or reduction in the quality of a service that needs to be resolved. Each incident is made up of alerts that are ingested into Incident Intelligence.
 
    * - Incident action
      - Any status-changing event taken by a user or the system on an incident. Incident responders can acknowledge, resolve, or reject an incident. These actions update the incident status to reflect the most recent action. 
@@ -61,6 +67,9 @@ Here are some important concepts you need to know to successfully use Splunk Inc
 
    * - Resolved
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.
+
+   * - Service
+     - Services let you organize incidents depending on the impacted environmental component. Services include alert-routing and alert-grouping rules and an incident workflow. 
 
    * - Service-based routing
      - Incident Intelligence relies on a service-based routing scheme. Service-based routing automatically organizes and routes incidents depending on the service that it’s impacting. Rather than routing to a combination of teams and policies, the service an incident is associated with determines who is notified of the incident. 
