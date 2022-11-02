@@ -128,7 +128,7 @@ The following example shows how to update a deployment to expose environment var
                   - name: SIGNALFX_TRACE_GLOBAL_TAGS
                     value: "deployment.environment:<my_environment>"
 
-.. _export-directly-to-olly-cloud-dotnet:
+.. _export-directly-to-olly-cloud-php:
 
 Send data directly to Observability Cloud
 ==============================================================
