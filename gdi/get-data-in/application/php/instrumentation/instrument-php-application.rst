@@ -9,12 +9,6 @@ Instrument a PHP application for Splunk Observability Cloud
 
 The SignalFx Tracing Library for PHP automatically instruments PHP applications.
 
-- :ref:`install-dotnet-instrumentation`
-- :ref:`instrument-windows-service`
-- :ref:`instrument-aspnet-iis`
-- :ref:`instrument-azure-app`
-- :ref:`instrument-azure-webjobs`
-
 To get started, use the guided setup or follow the instructions manually.
 
 Generate customized instructions using the guided setup
