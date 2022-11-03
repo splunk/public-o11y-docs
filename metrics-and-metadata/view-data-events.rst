@@ -9,22 +9,27 @@ Add context to metrics using events
 
 An :term:`event <Event>` is a periodic occurrence that can be represented in Splunk Observability Cloud outside of the flow of streaming :term:`metrics <Metric>`. Events provide context to metric data. 
 
-Each event is an instance of an event type. An event type is a reusable event name that groups together events that you want to show as a stream or series, such as code pushes. 
-
-By reusing event types, you can add an event type to a chart, then view all events that occurred for that event type. You can also create custom events to record specific actions.
-
 .. _how-events-created:
 
-How events are created
+Create events
 =============================================================================
 
-In Splunk Observability Cloud, events are created in several ways.
+In Splunk Observability Cloud, you can create events in several ways.
 
 -  Events are created whenever a :ref:`detector <create-detectors>` triggers an alert. A second event is created when the alert clears, is manually resolved, or is stopped due to the detector being edited or deleted.
 
 -  A SessionLog event is created when a user logs into or out of your organization. The SessionLog event notes the action, either "session created" or "session deleted", and the ID of the user who created the session.
 
 -  A custom event is created when you capture and send an event to Splunk Observability Cloud. For example, you might send a custom "code push" event each time your development team deploys new code, so that you can correlate it with the resource consumption profiles of your infrastructure before and after the event.
+
+.. _event-type:
+
+Event types
+-----------------------------
+
+Each event is an instance of an :term:`event type`. An event type is a reusable event name that groups together events that you want to show as a stream or series, such as code pushes. 
+
+By reusing event types, you can add an event type to a chart, then view all events that occurred for that event type. You can also create custom events to record specific actions.
 
 .. _display-events:
 
