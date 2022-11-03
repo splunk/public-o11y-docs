@@ -10,39 +10,15 @@ echo "*                                                                    *"
 echo "**********************************************************************"
 echo ""
 
-# Variables for showing CLI output and spinner animation
-bold=$(tput bold)
-normal=$(tput sgr0)
-spin='-\|/'
-cleanmsg='Cleaning up Docker... '
-buildmsg='Starting Docker container... '
-
-# Run Docker commands to build the container with no CLI noise
-docker-compose down > /dev/null 2> /dev/null &
-pid=$! # Process Id of the previous running command
-i=0
-while kill -0 $pid 2>/dev/null
-do
-    i=$(( (i+1) %4 ))
-    printf "\r${cleanmsg}${spin:$i:1}"
-    sleep .1
-done
+docker-compose down 
 
 rm -f _build/.DS_Store
 rm -f _build/html/.DS_Store
 rm -rf _build/*
 
-docker-compose build > /dev/null 2> /dev/null &
-pid=$! # Process Id of the previous running command
-i=0
-while kill -0 $pid 2>/dev/null
-do
-    i=$(( (i+1) %4 ))
-    printf "\r${buildmsg}${spin:$i:1}"
-    sleep .1
-done
+docker-compose build
 
-docker-compose up -d > /dev/null 2> /dev/null
+docker-compose up -d
 
 printf "\rDocker container built.              "
 sleep .5
