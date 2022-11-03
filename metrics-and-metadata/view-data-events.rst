@@ -63,7 +63,7 @@ When you click an event in the Event Feed sidebar, you can see details about the
 Create custom events
 =============================================================================
 
-Custom events are usually generated through an integration with another service, or :ref:`through the REST API <rest-api-ingest>`, and are sent to Splunk Observability Cloud when specific events happen outside Observability Cloud.
+Custom events are usually generated through an integration with another service, or :ref:`through the REST API <rest-api-ingest>`, and are sent to Splunk Observability Cloud when specific events happen outside Observability Cloud. Read more on :new-page:`custom events in our developer portal <https://dev.splunk.com/observability/docs/datamodel/custom_events/>`.
 
 You can also create custom events manually, which you can display on charts alongside other events. To create custom events, select :guilabel:`New event` in the :ref:`Events sidebar <events-sidebar>` or add custom events while using the Chart Builder. To learn more, see :ref:`chart-manual-events`.
 
