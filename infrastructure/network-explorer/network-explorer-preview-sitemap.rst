@@ -15,6 +15,7 @@ Use the following links to navigate the documentation set for the preview of Net
 
     * Introduction: :ref:`network-explorer-intro`
     * Installation and configuration: :ref:`network-explorer-setup`
+    * Service map: :ref:`network-explorer-service-map`
     * Metrics reference: :ref:`network-explorer-metrics`
     * Use cases:
         

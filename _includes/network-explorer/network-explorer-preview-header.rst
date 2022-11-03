@@ -6,6 +6,7 @@
 
         * Introduction: :ref:`network-explorer-intro`
         * Installation and configuration: :ref:`network-explorer-setup`
+        * Service map: :ref:`network-explorer-service-map`
         * Metrics reference: :ref:`network-explorer-metrics`
         * Use cases:
 
