@@ -19,7 +19,7 @@ To generate alerts in Incident Intelligence, you can create a detector for the o
 :strong:`Available alert sources in Splunk Observability Cloud`
 
 - Splunk APM, see :ref:`create-detectors` for more information about configuring detectors for APM. 
-- Splunk Infrastructure Monitoring, see :ref:`create-detectors` for more information about configuring detectors for APM. 
+- Splunk Infrastructure Monitoring, see :ref:`create-detectors` for more information about configuring detectors for Infrastructure Monitoring. 
 - Splunk RUM
 - Splunk Synthetic Monitoring
 
