@@ -18,12 +18,6 @@ Configure the Collector
 
 This document describes the different default configuration options available for the Collector. 
 
-To define multiple config files simultaneously, use:
-
-.. code-block::
-
-  ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
-
 .. _otel-config-options:
 
 Configuration options
@@ -46,7 +40,7 @@ Fluentd
 
 :new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>` to collect logs. Fluentd is applicable to Helm or installer script installations only. Common sources including filelog, journald, and Windows Event Viewer are included in the installation. See the Fluentd configuration documentation for more information.
 
-FluentD artifacts
+Fluentd artifacts
 ^^^^^^^^^^^^^^^^^^^^^^
 
 The following table describes the artifacts in the Fluentd directory:
@@ -79,6 +73,16 @@ The following is a sample configuration to collect custom logs:
     tag my-custom-logs
   </source>
 
+.. _otel-config-multiple-files:
+
+Configure the Collector using multiple files
+----------------------------------------------------
+
+To define multiple config files simultaneously use:
+
+.. code-block::
+
+  ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
 
 .. _otel-config-additional-components:
 
