@@ -79,6 +79,11 @@ MetricSet limits
 UI limits 
 ==================================
 
+
+.. list-table::
+  :header-rows: 1
+  :widths: 15, 15, 70
+
   * - :strong:`Limit name`
     - :strong:`Default limit value`
     - :strong:`Notes`
