@@ -308,7 +308,7 @@ Enable all metrics, including metrics turned off by default
 
       disableMetrics:
         - none
-
+              
 Disable entire metric categories
 ***************************************************************************
 
@@ -372,6 +372,97 @@ Disable an individual HTTP metric
         - http.active_sockets
         - http.status_code
 
+Disable an internal metric
+********************************************************************************************
+
+    .. code-block:: yaml
+
+      disableMetrics:
+      - ebpf_net.bpf_log
+      - ebpf_net.otlp_grpc.bytes_sent
+      - ebpf_net.otlp_grpc.failed_requests
+      - ebpf_net.otlp_grpc.metrics_sent
+      - ebpf_net.otlp_grpc.requests_sent
+      - ebpf_net.otlp_grpc.successful_requests
+      - ebpf_net.otlp_grpc.unknown_response_tags
+
+.. note:: This list represents the set of internal metrics which are enabled by default.
+
+Enable entire metric categories
+*********************************
+
+    .. code-block:: yaml 
+
+      enableMetrics:
+        - tcp.all 
+        - udp.all
+        - dns.all
+        - http.all
+        - ebpf_net.all
+
+Enable an individual TCP metric
+***************************************************************************
+
+    .. code-block:: yaml 
+
+      enableMetrics:
+        - tcp.bytes
+        - tcp.rtt.num_measurements
+        - tcp.active
+        - tcp.rtt.average
+        - tcp.packets
+        - tcp.retrans
+        - tcp.syn_timeouts
+        - tcp.new_sockets
+        - tcp.resets
+
+Enable an individual UDP metric
+***************************************************************************
+    
+    .. code-block:: yaml 
+
+      enableMetrics:
+        - udp.bytes
+        - udp.packets
+        - udp.active
+        - udp.drops
+
+Enable an individual DNS metric
+***************************************************************************
+    
+    .. code-block:: yaml 
+
+      enableMetrics:
+        - dns.client.duration.average
+        - dns.server.duration.average
+        - dns.active_sockets
+        - dns.responses
+        - dns.timeouts
+
+Enable an individual HTTP metric
+***************************************************************************
+    
+    .. code-block:: yaml
+
+      enableMetrics:
+        - http.client.duration.average
+        - http.server.duration.average
+        - http.active_sockets
+        - http.status_code
+
+Enable an internal metric
+****************************************************************************
+    
+    .. code-block:: yaml
+
+      enableMetrics:
+        - ebpf_net.span_utilization_fraction 
+        - ebpf_net.pipeline_metric_bytes_discarded
+        - ebpf_net.codetiming_min_ns
+        - ebpf_net.entrypoint_info
+        - ebpf_net.otlp_grpc.requests_sent
+
+.. note:: This list does not include the entire set of internal metrics.
 
 Example
 ***************************************************************************
@@ -388,6 +479,16 @@ In the following example, all HTTP metrics along with certain individual TCP and
         - udp.bytes
         - udp.packets        
 
+In the following example, all HTTP metrics along with certain individual internal metrics are enabled.
+
+  .. note:: The ``disableMetrics`` flag is evaluated before the ``enableMetrics`` flag.
+
+  .. code-block:: yaml
+
+    enableMetrics:
+      - http.all
+      - ebpf_net.codetiming_min_ns
+      - ebpf_net.entrypoint_info
 
 Next steps
 ====================================

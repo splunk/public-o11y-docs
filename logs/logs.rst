@@ -54,7 +54,7 @@ To send logs from your hosts and containers to Log Observer, follow these instru
 
 3. On the :strong:`Integrate Your Data` page in Observability Cloud, select the tile for the platform you want to import logs from. You can select Windows, Kubernetes, or Linux. The guided setup for your platform appears.
 
-3. Follow the instructions in the guided setup then see :ref:`work-with-data`.
+4. Follow the instructions in the guided setup then see :ref:`work-with-data`.
 
 After you see data coming into Log Observer from your data source, you can send logs from another data source or continue analyzing logs from the platform you have just set up.
 
@@ -71,9 +71,13 @@ To send logs from Amazon Web Services to Log Observer, follow these instructions
 
 2. In the left navigation menu, select :menuselection:`Data Management` to display the Integrate Your Data page.
 
-3. In the :guilabel:`Cloud Integrations` section, select the the Amazon Web Services tile.
+3. Select :guilabel:`Add Integration`. 
+   
+4. In the :guilabel:`Cloud Integrations` section, select the the Amazon Web Services tile.
 
-4. Follow the instructions in the guided setup then see :ref:`work-with-data`.
+5. Follow the instructions in the guided setup then see :ref:`work-with-data`.
+
+For more information about setting up an AWS connection, see :ref:`aws-logs` and :ref:`aws-cloudformation`.
 
 Google Cloud Platform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -194,7 +198,7 @@ in addition to your current system, follow these steps:
 
 4. In the new ``<store>`` section for splunk_hec, provide at least the following fields:
 
-   - ``Instructions hec_host`` - Set the HEC ingest host (for example, ``ingest.us1.signalfx.com hec_port``) to 443.
+   - ``hec_host`` - Set the HEC ingest host (for example, ``ingest.us1.signalfx.com hec_port``) to 443.
 
    - ``hec_token`` - Provide the SignalFx access token.
 

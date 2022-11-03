@@ -21,3 +21,5 @@ Sphinx==5.1.1
 sphinx-copybutton==0.5.0
 sphinx-tabs==3.4.1
 urllib3==1.26.12
+cssmin==0.2.0
+jsmin==3.0.1
