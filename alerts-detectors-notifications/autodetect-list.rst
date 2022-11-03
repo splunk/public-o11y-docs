@@ -87,7 +87,7 @@ The following table shows customizable arguments for this detector:
      - Dimensions you want to add to the detector.
      - None
 
-Request rate changes
+Service request rate
 -----------------------
 
 - Description: Alerts when a sudden change in request rate occurs.
