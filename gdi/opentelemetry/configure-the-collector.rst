@@ -20,22 +20,22 @@ This document describes the different default configuration options available fo
 
 .. _otel-config-options:
 
-Configuration options
+Configuration files
 ===================================
 
 Select the configuration file to set up the Collector based on your needs.
 
-Default
+Default configuration
 ----------------------------------------------------
 
 :new-page:`agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` is the recommended starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
 
-Full (Linux)
+Full configuration (Linux)
 ----------------------------------------------------
 
 :new-page:`full_config_linux.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/full_config_linux.yaml>` is an extended configuration. This configuration requires using :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` or a similar distribution.
 
-Fluentd
+Fluentd configuration
 ----------------------------------------------------
 
 :new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>` to collect logs. Fluentd is applicable to Helm or installer script installations only. Common sources including filelog, journald, and Windows Event Viewer are included in the installation. See the Fluentd configuration documentation for more information.
