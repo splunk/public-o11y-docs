@@ -71,9 +71,13 @@ To send logs from Amazon Web Services to Log Observer, follow these instructions
 
 2. In the left navigation menu, select :menuselection:`Data Management` to display the Integrate Your Data page.
 
-3. In the :guilabel:`Cloud Integrations` section, select the the Amazon Web Services tile.
+3. Select :guilabel:`Add Integration. 
+   
+4. In the :guilabel:`Cloud Integrations` section, select the the Amazon Web Services tile.
 
-4. Follow the instructions in the guided setup then see :ref:`work-with-data`.
+5. Follow the instructions in the guided setup then see :ref:`work-with-data`.
+
+For more information about setting up an AWS connection, see :ref:`aws-logs` and :ref:`aws-cloudformation`.
 
 Google Cloud Platform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
