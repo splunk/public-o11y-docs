@@ -62,7 +62,7 @@ Follow these steps to automatically instrument your application:
          dpkg -i signalfx-dotnet-tracing-<version-here>.deb
          ./opt/signalfx/createLogPath.sh # Optional
 
-      .. code-tab:: bash tar (qlibc)
+      .. code-tab:: bash tar (glibc)
 
          tar -xf signalfx-dotnet-tracing-<version-here>.tar.gz -C /opt/signalfx
          ./opt/signalfx/createLogPath.sh # Optional
