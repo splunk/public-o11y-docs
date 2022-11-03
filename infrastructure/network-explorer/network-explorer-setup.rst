@@ -481,14 +481,14 @@ In the following example, all HTTP metrics along with certain individual TCP and
 
 In the following example, all HTTP metrics along with certain individual internal metrics are enabled.
 
-.. note:: The ``disableMetrics`` flag is evaluated before the ``enableMetrics`` flag.
+  .. note:: The ``disableMetrics`` flag is evaluated before the ``enableMetrics`` flag.
 
-    .. code-block:: yaml
+  .. code-block:: yaml
 
-      enableMetrics:
-        - http.all
-        - ebpf_net.codetiming_min_ns
-        - ebpf_net.entrypoint_info
+    enableMetrics:
+      - http.all
+      - ebpf_net.codetiming_min_ns
+      - ebpf_net.entrypoint_info
 
 Next steps
 ====================================
