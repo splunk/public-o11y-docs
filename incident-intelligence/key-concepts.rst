@@ -32,7 +32,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
    * - Incident response configuration
      - The entire configuration process for a service in Incident Intelligence. This is where you create a service and configure alert routing, alert grouping, and incident workflows for incidents associated with a service. 
 
-   * - Incidents
+   * - Incident
      - An unplanned interruption to a service or reduction in the quality of a service that needs to be resolved. Each incident is made up of alerts that are ingested into Incident Intelligence.
 
    * - Incident action
@@ -69,7 +69,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.
 
    * - Service
-     - Services let you organize incidents depending on the impacted environmental component. Services include alert-routing and alert-grouping rules and an incident workflow. 
+     - Services let you organize incidents depending on the impacted component in your environment. Services include alert-routing and alert-grouping rules and an incident workflow. 
 
    * - Service-based routing
      - Incident Intelligence relies on a service-based routing scheme. Service-based routing automatically organizes and routes incidents depending on the service that it’s impacting. Rather than routing to a combination of teams and policies, the service an incident is associated with determines who is notified of the incident. 
