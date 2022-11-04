@@ -33,12 +33,18 @@ With Database Query Performance, Splunk APM provides additional analytics for a 
     <h3>Database query normalization</h3>
   </embed>
 
-To provide analytics for database queries, Splunk APM captures SQL statements (or queries) from the span in which each call is made. Then APM normalizes each query by replacing dynamic elements with static placeholders to minimize cardinality, and records the following metrics about the query’s performance: 
+To provide analytics for database queries, Splunk APM captures SQL statements, or queries,  from the span in which each call happens. Then APM replaces dynamic elements in each raw query with static placeholders to minimize cardinality, and records the following metrics about the query's performance: 
 
     - Total response time
     - 90th percentile (P90) of latency
     - Total number of requests
     - Requests per second 
+
+Normalized queries have all dynamic elements replaced by the ``?`` character. The following screenshot shows database queries in Database Query Performance with replaced dynamic elements:
+
+.. image:: /_images/apm/db-query-perf/normalized-queries.png
+   :width: 100%
+   :alt: Highlighted ? characters in normalized queries, which replace dynamic elements to reduce cardinality and sanitize data from sensitive information.
 
 .. raw:: html
 

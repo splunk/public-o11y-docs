@@ -67,7 +67,7 @@ The following table shows the configuration options for the `mongodb-atlas` moni
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/mongodb-atlas/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/mongodb-atlas/metrics.yaml"></div>
 
 ## Get help
 

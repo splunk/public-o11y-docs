@@ -10,7 +10,7 @@ When you set up Log Observer Connect, your logs data remains strictly in your Sp
 
 Region and version availability
 ==============================================================
-Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, and jp0. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
+Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
 
 .. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the universal forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
 
@@ -20,7 +20,7 @@ Ensure that token authentication is enabled in your Splunk Cloud Platform instan
 
 Set up Log Observer Connect
 ==============================================================
-To set up Log Observer Connect for Splunk Cloud Platform, follow these steps:
+To set up Log Observer Connect for Splunk Cloud Platform without help from the Support team, follow these steps:
 
 1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Observability Cloud. Contact your organization's Observability Cloud administrator to perform this integration.
 
@@ -52,7 +52,7 @@ To set up Log Observer Connect for Splunk Cloud Platform, follow these steps:
 
 Submit a support ticket
 ===================================================================
-Submit a ticket to Splunk Support to configure your Splunk Cloud Platform instance’s IP allow list. Configuring your allow list properly opens your Splunk Cloud Platform instance management port to Log Observer Connect, which can then search your Splunk Cloud Platform instance log data. After Splunk Support prepares your Splunk Cloud Platform instance, you can securely create a connection to Log Observer Connect.
+If you were not able to run the script in step 3d in the preceeding section, you may submit a support ticket to do this on your behalf. Submit a ticket to Splunk Support to configure your Splunk Cloud Platform instance’s IP allow list. Configuring your allow list properly opens your Splunk Cloud Platform instance management port to Log Observer Connect, which can then search your Splunk Cloud Platform instance log data. After Splunk Support prepares your Splunk Cloud Platform instance, you can securely create a connection to Log Observer Connect.
 
 To submit a support ticket, follow these steps:
 

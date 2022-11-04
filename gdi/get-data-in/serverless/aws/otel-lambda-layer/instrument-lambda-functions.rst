@@ -56,7 +56,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. Check that the Splunk layer appears in the :guilabel:`Layers` table.
 
-.. tip:: You can automate the update of the Lambda layer using the AWS CLI. The following command, for example, retrieves the latest version of the Splunk layer for x86_64 and the ``us-east-1`` region:
+.. note:: You can automate the update of the Lambda layer using the AWS CLI. The following command, for example, retrieves the latest version of the Splunk layer for x86_64 and the ``us-east-1`` region:
 
    .. code-block:: bash
 

@@ -40,7 +40,7 @@ There are two types of data links for a property, local and global. See the foll
        | - Example: If you create the link described in the previous example as a global instead of local link, the link is available for every appearance of ``InstanceId`` in Splunk Infrastructure Monitoring, including dashboards created after the link is created.
    
 
-.. important::  If you want your link to be available for properties that appear in alert messages, you must create a global data link.
+.. caution::  If you want your link to be available for properties that appear in alert messages, you must create a global data link.
 
 
 .. _local-links:
@@ -117,7 +117,7 @@ Click on a property value to follow a link
 
 If a link target is an Infrastructure Monitoring dashboard, you can follow a link by clicking on the property value. When multiple links to dashboards are available for a property, the application selects which link to follow based on the following order of operations.
 
-.. tip:: In any dashboard, all local and global data links are available via a property's :strong:`Actions` menu. You don't have to click on a property value to navigate to a link.
+.. note:: In any dashboard, all local and global data links are available via a property's :strong:`Actions` menu. You don't have to click on a property value to navigate to a link.
 
 More specific data links override less specific data links
 ----------------------------------------------------------------------------------
@@ -168,7 +168,7 @@ If data links are available in your organization, you have access to them from a
     .. note:: To navigate to targets other than dashboards, you must use the :strong:`Actions` menu.
 
 - To view all the local data links for a dashboard, select :guilabel:`Data Links` from the :strong:`Dashboard actions` menu.
-- To view all the global data links for an organization, go to :guilabel:`Navigation menu > Organization Settings`, then select :guilabel:`Global Data Links`. Alternately, you can click :guilabel:`Global Data links` when viewing the list of local data links.
+- To view all the global data links for an organization, go to :guilabel:`Navigation menu > Data Configuration`, then select :guilabel:`Global Data Links`. Alternately, you can click :guilabel:`Global Data links` when viewing the list of local data links.
 
 .. _about-links:
 

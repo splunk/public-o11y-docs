@@ -107,7 +107,7 @@ monitors:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/postgresql/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/postgresql/metrics.yaml"></div>
 
 
 ### Metrics about replication

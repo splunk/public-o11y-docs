@@ -149,4 +149,4 @@ Other settings
    * - ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS``
      - Comma-separated list of Python instrumentations you want to disable. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
 
-.. warning:: Enabling ``DEBUG`` logging might increase AWS CloudWatch costs.
+.. caution:: Enabling ``DEBUG`` logging might increase AWS CloudWatch costs.

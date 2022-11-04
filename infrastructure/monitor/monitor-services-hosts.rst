@@ -4,8 +4,6 @@
 Monitor services and hosts in Splunk Infrastructure Monitoring
 *****************************************************************
 
-
-
 .. meta::
     :description: Learn about navigators in Splunk Infrastructure Monitoring 
 
@@ -18,8 +16,6 @@ Monitor services and hosts in Splunk Infrastructure Monitoring
     gcp
     k8s
     hosts
-
-
 
 See the following pages for more information about using navigators to monitor each public cloud, container, or host integration:
 
@@ -36,3 +32,6 @@ See the following pages for more information about using navigators to monitor e
 * My Data Center
   
   - :ref:`infrastructure-hosts`
+
+Splunk Observability Cloud also provides metrics and other data :ref:`for the following host and application monitors <monitor-data-sources>`.
+

@@ -1,7 +1,7 @@
 .. _otel-intro:
 
 *******************************************************************************************
-Install and configure the Splunk Distribution of OpenTelemetry Collector
+Get started with the Splunk Distribution of OpenTelemetry Collector
 *******************************************************************************************
 
 .. meta::
@@ -11,13 +11,15 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
     :maxdepth: 5
     :hidden:
 
-    smart-agent-migration-to-otel-collector.rst
-    collector-architecture.rst
+    Migrate from the SignalFx Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
+    Collector overview <resources.rst>
     install-the-collector.rst
     configure-the-collector.rst
+    collector-architecture.rst
+    components.rst
     use-the-collector.rst
     troubleshooting.rst
-    resources.rst
+    
 
 The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
 
@@ -29,10 +31,12 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 * Fluentd for log capture
 * Tools to support migration from SignalFx products
 
+Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent to the Collector.
+
 .. caution::
 
-   Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
-   Splunk only provides best-effort support for the upstream OpenTelemetry Collector.
+  Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
+  Splunk only provides best-effort support for the upstream OpenTelemetry Collector.
 
 
 .. raw:: html
@@ -49,22 +53,17 @@ To use the Collector:
 #. :ref:`otel-using`. Determine your access token, realm, and deployment mode to start using the Collector.
 #. :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
 
-See also the following resources for the Collector:
+For a complete overview of the Collector resources, refer to :ref:`opentelemetry-resources`. 
 
-- Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent to the Collector.
 - See :ref:`collector-architecture` for a description of the Collector architecture.
+- See :ref:`otel-components` for a description of the components the Collector supports.
 - Use :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
-
-For a complete list of resources, refer to :ref:`opentelemetry-resources`. 
-
 
 .. raw:: html
 
   <embed>
     <h2>Guided install for the Collector</h2>
   </embed>
-
-
 
 .. _collector-guided-install:
 

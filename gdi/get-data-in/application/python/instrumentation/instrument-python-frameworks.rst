@@ -54,7 +54,7 @@ Customize and use the following snippet to run the application:
 
 Place the snippet in the main Python script that uWSGI imports and loads.
 
-.. warning:: Do not run your uWSGI application using ``splunk-py-trace``, as it could have unintended consequences.
+.. caution:: Do not run your uWSGI application using ``splunk-py-trace``, as it could have unintended consequences.
 
 uWSGI and Flask
 -------------------------------------------

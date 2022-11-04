@@ -21,7 +21,7 @@ APM dashboards present request, error, and duration (RED) metrics based on :ref:
 
 To view host and Kubernetes metrics in your dashboards, you need to have a Splunk Distribution of OpenTelemetry Collector instance installed on your hosts and clusters. See :ref:`deploy-connector` to learn how. 
 
-.. tip::
+.. note::
   See :ref:`monitor-services` for a use case involving built-in dashboards in Splunk APM. 
 
 You can customize built-in dashboards to present the information you’re most interested in, or build your own from scratch. To learn more, see :ref:`apm-custom-dashboards` below.
@@ -75,7 +75,7 @@ Use SignalFlow to create charts
 
 The dashboard editor provides a lot of customization options for your charts, but if you need even more flexibility, you can use SignalFlow to run calculations and create charts from your data. See :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` in our Developer Guide to learn more. 
 
-.. tip:: See :ref:`dashboards-best-practices` for more tips on building informative dashboards.
+.. note:: See :ref:`dashboards-best-practices` for more tips on building informative dashboards.
 
 .. _apm-detector-from-dashboard:
 

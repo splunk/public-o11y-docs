@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache Spark monitor by using the SignalFx Smart Agent receiver(https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache Spark monitor by using the [SignalFx Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
 The integration monitors Apache Spark clusters.
 
@@ -34,23 +34,40 @@ When you run Apache Spark on Hadoop YARN, this integration can only report appli
 ```{include} /_includes/configuration.md
 ```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add one of the following to your agent configuration:
 
 ```yaml
 receivers:
-  smartagent/spark:
-    type: spark
+  smartagent/collectd_spark_master:
+    type: collectd/spark
+    ...  # Additional config
+```
+```yaml
+receivers:
+  smartagent/collectd_spark_worker:
+    type: collectd/spark
     ...  # Additional config
 ```
 
 To complete the integration, include the monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
+
 ```yaml
 service:
   pipelines:
     metrics:
-      receivers: [smartagent/spark]
+      receivers: [smartagent/collectd_spark_master]
 ```
+
+```yaml
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/collectd_spark_worker]
+```
+
+**Note:** The names of the monitor, `collectd_spark_master` and `collectd_spark_worker`, are for identification purposes and don't affect functionality. You can use either name in your configuration, but you need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, see the `isMaster` field in the [Configuration settings](#configuration-settings) section.
+
 
 ## Configuration settings
 
@@ -70,7 +87,7 @@ The following table shows the configuration options for this monitor:
 
 These are the metrics available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/spark/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/spark/metrics.yaml"></div>
 
 ## Get help
 

@@ -61,7 +61,7 @@ Create a new detector based on a recent alert
 
 Suppose a signal spiked in the past couple of hours, and you are :ref:`creating a new detector<create-detector-from-scratch>` to monitor for that spike. You would add the signal that spiked on the Signals tab, then choose an appropriate condition on the Alert Conditions tab.
 
-.. tip:: If you already have a chart that includes the signal as a plot line, you can :ref:`create a detector from the chart<create-detector-from-chart>` instead of creating a new detector from scratch. Simply choose that signal when you begin creating the rule in the Alert Conditions tab.
+.. note:: If you already have a chart that includes the signal as a plot line, you can :ref:`create a detector from the chart<create-detector-from-chart>` instead of creating a new detector from scratch. Simply choose that signal when you begin creating the rule in the Alert Conditions tab.
 
 In this example, we set the time range of the detector to -2h, named the detector and the new rule, and chose the :ref:`sudden-change` condition, which compares recent values with earlier values. Based on the trigger sensitivity (the default is Low), the preview chart shows event markers for times when the alert would have been triggered during the past week; you should see an event marker for the time the spike occurred. You might also see markers for other times the signal spiked in the past week, as well as markers indicating the alert condition cleared.
 
