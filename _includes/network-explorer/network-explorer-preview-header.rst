@@ -4,9 +4,9 @@
 
     See :ref:`network-explorer-preview-sitemap` for the complete list of topics, or use these links to navigate to the high-level topics for Network Explorer: 
 
-        * Introduction: :ref:`network-explorer-intro`
-        * Installation and configuration: :ref:`network-explorer-setup`
-        * Service map: :ref:`network-explorer-service-map`
-        * Metrics reference: :ref:`network-explorer-metrics`
-        * Use cases: :ref:`network-explorer-use-cases`
-        * Troubleshoot: :ref:`network-explorer-troubleshoot`            
+        * :ref:`network-explorer-intro`
+        * :ref:`network-explorer-setup`
+        * :ref:`network-explorer-service-map`
+        * :ref:`network-explorer-metrics`
+        * :ref:`network-explorer-use-cases`
+        * :ref:`network-explorer-troubleshoot`            

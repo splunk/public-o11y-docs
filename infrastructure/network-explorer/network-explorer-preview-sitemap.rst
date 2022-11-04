@@ -13,12 +13,12 @@ Contents: Network Explorer preview documentation
 
 Use the following links to navigate the documentation set for the preview of Network Explorer in Splunk Infrastructure Monitoring: 
 
-    * Introduction: :ref:`network-explorer-intro`
-    * Installation and configuration: :ref:`network-explorer-setup`
-    * Service map: :ref:`network-explorer-service-map`
-    * Metrics reference: :ref:`network-explorer-metrics`
-    * Use cases: :ref:`network-explorer-use-cases`
-    * Troubleshoot: :ref:`network-explorer-troubleshoot`
+    * :ref:`network-explorer-intro`
+    * :ref:`network-explorer-setup`
+    * :ref:`network-explorer-service-map`
+    * :ref:`network-explorer-metrics`
+    * :ref:`network-explorer-use-cases`
+    * :ref:`network-explorer-troubleshoot`
 
 
 
