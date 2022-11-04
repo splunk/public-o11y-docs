@@ -8,9 +8,5 @@
         * Installation and configuration: :ref:`network-explorer-setup`
         * Service map: :ref:`network-explorer-service-map`
         * Metrics reference: :ref:`network-explorer-metrics`
-        * Use cases:
-
-            * :ref:`find-network-error`
-            * :ref:`cross-zone-traffic-cost`
-        
+        * Use cases: :ref:`network-explorer-use-cases`
         * Troubleshoot: :ref:`network-explorer-troubleshoot`            

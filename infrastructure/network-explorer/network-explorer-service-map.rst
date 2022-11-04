@@ -6,7 +6,7 @@
 .. _network-explorer-service-map:
 
 ************************************************************
-Use service map to monitor service dependencies
+Monitor service dependencies with service map
 ************************************************************
 
 .. meta::
@@ -28,7 +28,7 @@ The service map consists of the following components.
       - :strong:`Description`
         
     * - Network load
-      - A network load can be a service, 
+      - A network load is a service in your network.
       - Network loads are represented as circles.
       
     * - Network edge
@@ -46,16 +46,20 @@ Drill down into specific connections
 
 You can view connections related to a network load or network edge by selecting it on the service map.
 
-* When you select a network load, you get a drilldown map that shows only network edges and network loads connected to the selected network load. For example, the following drilldown map shows the selected ``productcatalogservice`` network load along with its connected network loads, and all network edges coming to and from ``productcatalogservice``.
+* When you select a network load, you get a drilldown map that shows only network edges and network loads connected to the selected network load.
+
+For example, the following drilldown map shows the selected ``productcatalogservice`` network load along with its connected network loads, and all network edges coming to and from ``productcatalogservice``.
 
     .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-load.png
         :alt: Drilldown map showing all network loads and edges connected to the selected ``productcatalogservice`` network load.
         :width: 80%
 
-* When you select a network edge, you get a drilldown map that shows only two network loads connected by the selected network edge. For example, the following drilldown map shows the selected network edge along with the source network load ``prometheus-node-exporter`` and the destination network load ``kubelet``.
+* When you select a network edge, you get a drilldown map that shows only two network loads connected by the selected network edge.
+
+For example, the following drilldown map shows the selected network edge along with the source network load ``prometheus-node-exporter`` and the destination network load ``kubelet``.
 
     .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-edge.png
         :alt: Drilldown map showing network edge connecting the ``prometheus-node-exporter`` and ``kubelet`` network loads. Traffic comes from ``prometheus-node-exporter`` to ``kubelet``.
         :width: 80%
 
-.. note:: If you are in the :strong:`Network edge` navigator, selecting a network load takes you to the :strong:`Network load` navigator. If you are in the :strong:`Network load` navigator, selecting a network edge takes you to the :strong:`Network edge` navigator.
+.. note:: If you are in the :strong:`Network edge` navigator, selecting a network load opens the :strong:`Network load` navigator. If you are in the :strong:`Network load` navigator, selecting a network edge opens the :strong:`Network edge` navigator.
