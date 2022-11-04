@@ -45,9 +45,9 @@ The following table provides an overview of what you can do with Incident Intell
      - :strong:`With this tool`
      - :strong:`Link to documentation`
 
-   * - Generate alerts from Observability Cloud or ingest third-party alerts. 
+   * - Ingest alerts from Observability Cloud or third-parties. 
      - Alert generation and ingestion
-     - See :ref:`ii-generate-alerts`.
+     - See :ref:`ii-ingest-alerts`.
 
    * - Create services to automatically organize incidents depending on the impacted service.
      - Services
