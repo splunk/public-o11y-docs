@@ -830,6 +830,12 @@ function OptanonWrapper() { }
         }
         function submit_feedback(){
           var url = window.location.href;
+          var urlsplit = url.split("?");
+          url = urlsplit[0].substr(0,250);
+          url = url.replace("#feedbackModal","");
+          url = url.trim();
+          console.log("URL: " + url);
+          
           var fyne = document.getElementById("signalfx_splunk_feedback_yesno");
           var fyne_value = fyne.options[fyne.selectedIndex].value;
           fryne_value = '';
