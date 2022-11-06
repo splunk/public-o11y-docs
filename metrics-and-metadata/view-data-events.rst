@@ -29,7 +29,7 @@ In Splunk Observability Cloud, you can create events in several ways.
 Event types
 -----------------------------
 
-Each event is an instance of an :term:`event type`. An event type is a reusable event name that groups together events that you want to show as a stream or series, such as code pushes. 
+Each event is an instance of an :strong:`event type`. An event type is a reusable event name that groups together events that you want to show as a stream or series, such as code pushes. 
 
 By reusing event types, you can add an event type to a chart, then view all events that occurred for that event type. You can also create custom events to record specific actions.
 
