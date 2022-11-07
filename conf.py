@@ -20,7 +20,7 @@ import os
 # Add the private-o11y-docs/_ext directory to sys.path, so that Sphinx can find extensions ins _ext.
 sys.path.insert(0, os.path.join(os.path.abspath('.'), '_ext'))
 
-from assetminify import pushassets
+from assetminify import final_conf_includes
 
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -234,7 +234,7 @@ def setup(app):
     # don't include any js or css file here or any other .py files , instead use only _ext/assetminify.py file 
     app.add_css_file('main.min.css')
     app.add_js_file('main.min.js')
-    massets = pushassets()
+    massets = final_conf_includes
     for asstname in massets:
         if asstname.endswith('.js'):
             app.add_js_file(asstname)
