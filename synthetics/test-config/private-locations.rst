@@ -55,7 +55,13 @@ Recommended for running Browser Tests:
 Set up a new private location
 ================================
 
-Each private location has a corresponding Private location ID. With this ID, you can... 
+Each private location has a corresponding Private location ID. With this ID, you can:
+
+* build charts or dashboards
+* search for metrics by Private location
+* use in the API 
+
+
 
 Follow these steps to set up a new private location:
 
