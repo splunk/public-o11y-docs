@@ -2,7 +2,7 @@
 
 # View organization metrics for Splunk Observability Cloud
 
-Splunk Infrastructure Monitoring provides the following metrics to measure your usage:
+Splunk Observability Cloud provides the following metrics to measure your organization's usage of the platform:
 
 * **Ingest metrics**: Measure the data you're sending to Infrastructure Monitoring, such as the number of data points you've sent.
 
