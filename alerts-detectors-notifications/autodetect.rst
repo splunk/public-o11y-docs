@@ -46,7 +46,7 @@ To view a complete list of all available AutoDetect alerts and detectors in your
 To view AutoDetect alerts and detectors specific to a service, do the following:
 
 #. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page.
-#. Click the navigator you want to view.
+#. Select the navigator you want to view.
 #. On the navigator page, click :guilabel:`Alerts` or :guilabel:`Active Detectors` in the Filter bar.
     
     A sidebar with all alerts related to the content on the page appears, as shown in the following image. AutoDetect components are indicated by the :strong:`Auto` badge.
