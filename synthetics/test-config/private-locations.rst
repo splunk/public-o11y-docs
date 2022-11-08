@@ -31,10 +31,10 @@ Splunk Synthetic Monitoring doesn't track how many runners there are for a given
 Use cases for private locations
 =================================
 
-* Test private applications that aren't exposed to the public
-* Test pre-production applications which don't have public staging sites
-* Gain a higher level of flexibility in giving Splunk Synthetic Monitoring access to applications
-* Test from locations not currently supported by Splunk Synthetic Monitoring's public locations
+* Test private applications that aren't exposed to the public.
+* Test pre-production applications which don't have public staging sites.
+* Gain a higher level of flexibility in giving Splunk Synthetic Monitoring access to applications.
+* Test from locations not currently supported by Splunk Synthetic Monitoring's public locations.
 
 
 Requirements 
@@ -55,10 +55,13 @@ Recommended for running Browser Tests:
 Set up a new private location
 ================================
 
+Each private location has a corresponding Private location ID. With this ID, you can... 
+
 Follow these steps to set up a new private location:
 
-..
-  add steps once UI is built
+1. Select the settings gear icon > :guilabel:`Private locations`.  
+2. Select :guilabl:`+ Add`> and add a name. 
+
 
 Assess the health of your private location
 ==============================================
