@@ -32,6 +32,8 @@ Once you set up the supported integrations, AutoDetect alerts and detectors auto
 View AutoDetect alerts and detectors
 ----------------------------------------
 
+You can view AutoDetect detectors on the :strong:`Alerts` page, in a navigator for a service, or in a chart.
+
 To view a complete list of all available AutoDetect alerts and detectors in your organization, do the following:
 
 #. From the Splunk Observability Cloud home page, go to the :strong:`Alerts` page.
@@ -41,10 +43,10 @@ To view a complete list of all available AutoDetect alerts and detectors in your
       :width: 90%
       :alt: This screenshot shows what an AutoDetect component looks like on the Alerts page.
 
-To view AutoDetect alerts and detectors specific to an integration, do the following:
+To view AutoDetect alerts and detectors specific to a service, do the following:
 
 #. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page.
-#. Click the navigator for the integration you want to view.
+#. Click the navigator you want to view.
 #. On the navigator page, click :guilabel:`Alerts` or :guilabel:`Active Detectors` in the Filter bar.
     
     A sidebar with all alerts related to the content on the page appears, as shown in the following image. AutoDetect components are indicated by the :strong:`Auto` badge.
@@ -53,8 +55,13 @@ To view AutoDetect alerts and detectors specific to an integration, do the follo
       :width: 60%
       :alt: This screenshot shows what an AutoDetect component looks like in the Alerts sidebar for a navigator.
 
+To view AutoDetect alerts and detectors related to a chart, do the following:
+
+#. From the Splunk Observability Cloud home page, go to the ...
+#. 
+
 .. note:: 
-   In either view, if there is no component with the :strong:`Auto` badge, then you don’t have any integration supported by AutoDetect.
+   In all views, if there is no component with the :strong:`Auto` badge, then you don’t have any integration supported by AutoDetect.
 
 .. _autodetect-subscribe:
 
