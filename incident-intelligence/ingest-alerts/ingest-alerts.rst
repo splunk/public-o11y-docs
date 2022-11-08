@@ -20,7 +20,7 @@ To ingest alerts in Incident Intelligence, you can create a detector for the one
 
 - Splunk APM, to create a detector for APM, see :ref:`create-detectors`. 
 - Splunk Infrastructure Monitoring, to create a detector for Infrastructure Monitoring, see :ref:`create-detectors`. 
-- Splunk RUM, to create a detector for RUM, see
+- Splunk RUM, to create a detector for RUM, see :ref:`rum-detectors`.
 - Splunk Synthetic Monitoring
     - To create a detector for an API test, see :ref:`api-detector`.
     - To create a detector for a browser test, see :ref:`detector-browser-test`.
