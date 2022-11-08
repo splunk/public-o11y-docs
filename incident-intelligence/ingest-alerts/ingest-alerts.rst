@@ -22,6 +22,9 @@ To ingest alerts in Incident Intelligence, you can create a detector for the one
 - Splunk Infrastructure Monitoring, see :ref:`create-detectors` for more information about configuring detectors for Infrastructure Monitoring. 
 - Splunk RUM
 - Splunk Synthetic Monitoring
+    - To create a detector for an API test, see :ref:`api-detector`.
+    - To create a detector for a browser test, see :ref:`detector-browser-test`.
+    - To create a detector for a uptime test, see :ref:`uptime-detector`.
 
 :strong:`Available ingest endpoints for cloud alerts`
 
