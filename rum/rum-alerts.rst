@@ -102,6 +102,8 @@ Increase the sensitivity of your alerts
 If you want an alert that is more sensitive to smaller changes, you can reduce the percentage. For example, if you set your sensitivity to 10%, then you'd be alerted when only 10% of the data in the given time frame crosses the threshold you set. 
 
 
+.. _rum-detectors:
+
 Create a detector 
 ==================
 
