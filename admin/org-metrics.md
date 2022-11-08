@@ -2,7 +2,7 @@
 
 # View organization metrics for Splunk Observability Cloud
 
-Splunk Infrastructure Monitoring provides the following metrics to measure your usage:
+Splunk Observability Cloud provides the following metrics to measure your organization's usage of the platform:
 
 * **Ingest metrics**: Measure the data you're sending to Infrastructure Monitoring, such as the number of data points you've sent.
 
@@ -123,7 +123,9 @@ Some metrics report a `gross` value and a `num` value. Compare the `gross` and `
 
 ## Metric details
 
-These are the integration org metrics provided by Observability Cloud:
+Use the {ref}`Metric Finder <metrics-finder-and-metadata-catalog>` to find all org metrics.
+
+These are the main organization metrics provided by Observability Cloud:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/signalfx-org-metrics/metrics.yaml"></div>
 
