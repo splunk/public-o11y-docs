@@ -62,7 +62,6 @@ Each private location has a corresponding Private location ID. With this ID, you
 * use in the API 
 
 
-
 Follow these steps to set up a new private location:
 
 1. Select the settings gear icon > :guilabel:`Private locations`.  
