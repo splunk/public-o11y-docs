@@ -27,39 +27,39 @@ The service map consists of the following components.
       - :strong:`Definition`
       - :strong:`Description`
         
-    * - Network load
-      - A network load is a service in your network.
-      - Network loads are represented as circles.
+    * - Network workload
+      - A network workload is a service in your network. The names for these services come from your Kubernetes environment, Docker metadata, Linux service managers such as systemd, DNS, and IP address data.
+      - Network workloads are represented as circles.
       
     * - Network edge
-      - A network edge is ...
-      - Network edges are represented as broken arrows connecting the circles. The arrow direction corresponds to the network traffic direction. Each arrow has a number indicating the amount of data coming from a source network load to a destination network load in the past <time duration>.
+      - A network edge captures the amount of TCP network traffic from a source to destination workload.
+      - Network edges are represented as broken arrows connecting the circles. The arrow direction corresponds to the network traffic direction. Each arrow has a number indicating the amount of data coming from a source network workload to a destination network workload in a certain time period. By default, the time period is the past 3 hours.
 
-For example, the following service map shows traffic between the ``emailservice`` network load and ``checkoutservice`` network load, in both directions. The ``emailservice`` network load sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past <time duration>.  
+For example, the following service map shows traffic between the ``emailservice`` network workload and ``checkoutservice`` network workload, in both directions. The ``emailservice`` network workload sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past 3 hours.  
 
 .. image:: /_images/images-network-explorer/network-explorer-service-map.png
-  :alt: Network Explorer service map showing two network loads connected by two network edges. Traffic flows in both directions. The ``emailservice`` network load sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past <time duration>.  
+  :alt: Network Explorer service map showing two network workloads connected by two network edges. Traffic flows in both directions. The ``emailservice`` network workload sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past 3 hours.  
   :width: 80%
 
 Drill down into specific connections
 ------------------------------------------
 
-You can view connections related to a network load or network edge by selecting it on the service map.
+You can view connections related to a network workload or network edge by selecting it on the service map.
 
-* When you select a network load, you get a drilldown map that shows only network edges and network loads connected to the selected network load.
+* When you select a network workload, you get a drilldown map that shows only network edges and network workloads connected to the selected network workload.
 
-For example, the following drilldown map shows the selected ``productcatalogservice`` network load along with its connected network loads, and all network edges coming to and from ``productcatalogservice``.
+For example, the following drilldown map shows the selected ``productcatalogservice`` network workload along with its connected network workloads, and all network edges coming to and from ``productcatalogservice``.
 
     .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-load.png
-        :alt: Drilldown map showing all network loads and edges connected to the selected ``productcatalogservice`` network load.
+        :alt: Drilldown map showing all network workloads and edges connected to the selected ``productcatalogservice`` network workload.
         :width: 80%
 
-* When you select a network edge, you get a drilldown map that shows only two network loads connected by the selected network edge.
+* When you select a network edge, you get a drilldown map that shows only two network workloads connected by the selected network edge.
 
-For example, the following drilldown map shows the selected network edge along with the source network load ``prometheus-node-exporter`` and the destination network load ``kubelet``.
+For example, the following drilldown map shows the selected network edge along with the source network workload ``prometheus-node-exporter`` and the destination network workload ``kubelet``.
 
     .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-edge.png
-        :alt: Drilldown map showing network edge connecting the ``prometheus-node-exporter`` and ``kubelet`` network loads. Traffic comes from ``prometheus-node-exporter`` to ``kubelet``.
+        :alt: Drilldown map showing network edge connecting the ``prometheus-node-exporter`` and ``kubelet`` network workloads. Traffic comes from ``prometheus-node-exporter`` to ``kubelet``.
         :width: 80%
 
-.. note:: If you are in the :strong:`Network edge` navigator, selecting a network load opens the :strong:`Network load` navigator. If you are in the :strong:`Network load` navigator, selecting a network edge opens the :strong:`Network edge` navigator.
+.. note:: If you are in the :strong:`Network edge` navigator, selecting a network workload opens the :strong:`Network workload` navigator. If you are in the :strong:`Network workload` navigator, selecting a network edge opens the :strong:`Network edge` navigator.
