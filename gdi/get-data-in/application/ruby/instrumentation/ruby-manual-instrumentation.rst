@@ -16,7 +16,7 @@ With manual instrumentation, you can install and enable instrumentation librarie
 
 To install and enable an instrumentation library manually:
 
-#. Install the instrumentation library using ``gem install`` or by including it in the project's Gemfile. For example, to install the Sinatra instrumentation, run the following command:
+#. Install the instrumentation library using ``gem install`` or by including it in the project's Gemfile. For example, to install the Sinatra instrumentation, add the following to your Gemfile:
 
    .. code-block:: bash
       
