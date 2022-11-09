@@ -88,6 +88,13 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-ruby-troub
 
 If you want to manually install and enable instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
 
+.. _ruby-enable-server-timing:
+
+Enable server timing for RUM
+========================================================
+
+You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby`.
+
 .. _kubernetes_ruby_agent:
 
 Deploy the Ruby agent in Kubernetes

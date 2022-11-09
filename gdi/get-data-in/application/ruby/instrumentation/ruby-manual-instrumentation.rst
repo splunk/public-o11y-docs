@@ -12,7 +12,7 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 Libraries installation
 =========================================
 
-With manual instrumentation, you can install and enable instrumentation libraries separately. This lets you control which gems are fetched when building your project.
+With manual instrumentation, you can install and enable instrumentation libraries separately. This lets you control which gems Ruby retrieves when building your project.
 
 To install and enable an instrumentation library manually:
 
@@ -20,7 +20,7 @@ To install and enable an instrumentation library manually:
 
    .. code-block:: bash
       
-      gem install opentelemetry-instrumentation-sinatra
+      gem "opentelemetry-instrumentation-sinatra", "~> 0.21"
 
 #. In a block passed to the ``Splunk::Otel.configure`` method, configure the SDK to use each of the instrumentation libraries. In the case of the Sinatra instrumentation, the block would look like the following example:
 
