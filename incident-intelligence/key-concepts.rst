@@ -63,7 +63,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your services' incident workflows.
 
    * - Rejected
-     - An incident status that incident responders can set to indicate that the incident is rejected. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to rejected prevents the escalation to the next step in an incident workflow.
+     - An incident status that incident responders can set to indicate that the incident is rejected. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to rejected prevents the escalation to the next step in an incident workflow. When you reject an incident it is considered invalid and closed; you will no longer be able to make updates to the incident.
 
    * - Resolved
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.

@@ -26,7 +26,7 @@ To resolve an incident, go to the :guilabel:`Incidents` tab in Incident Intellig
 Reject an incident
 ====================================
 
-To reject an incident, go to the :guilabel:`Incidents` tab in Incident Intelligence. You can reject incidents in two places:
+To reject an incident, go to the :guilabel:`Incidents` tab in Incident Intelligence. Rejected incidents are You can reject incidents in two places:
 
 * Select the :guilabel:`Actions` menu on the incident and select :guilabel:`Reject` from the list.
 * Select the incident you want to reject from the list of incidents. On the incident detail page, select the :guilabel:`Actions` menu next to the :guilabel:`Acknowledge` button, and select :guilabel:`Reject` from the list. (This button might say :guilabel:`Resolve` if the incident was previously acknowledged.)
