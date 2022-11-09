@@ -1,19 +1,21 @@
 .. _compare-compare:
 
 ******************************************************************************************
-Compare the Splunk platform and Splunk Observability Cloud 
+ the Splunk platform and Splunk Observability Cloud 
 ******************************************************************************************
 
 .. meta::
    :description: This page explains the purpose and functionality differences between the Splunk platform and Splunk Observability Cloud.
 
-The Splunk platform and Observability Cloud are different platforms that work together for an end-to-end solution that meets your security and observability needs. 
+The Splunk platform and Splunk Observability Cloud platforms work together for an end-to-end solution that meets your security and observability needs. 
 
-Compare purpose
+Extend the power of Splunk into automated observability
 ==========================================================================================
-The Splunk platform enables you to collect, search, monitor, report, and analyze all of your real-time and historical machine data, making it the most thorough logging solution for security. With your Splunk platform instance, you can prevent security breaches and conduct IT and some observability investigations. 
+The Splunk platform enables you to collect, search, monitor, report, and analyze all of your real-time and historical machine data, making it the most thorough logging solution for security and ITOps. With your Splunk platform instance, you can prevent security breaches and conduct IT and observability investigations with custom made tools created by in-house experts. 
 
-Observability Cloud, on the other hand, provides comprehensive observability across your stack. Observability Cloud is the ideal toolset for SREs, developers, and DevOps engineers. With Splunk Observability Cloud, you can:
+With Splunk Observability Cloud, on the other hand, you have access to automated, out of the box, comprehensive observability across your stack. From day one, reliability engineers have an automatically generated service map showing dependencies and SLIs. Observability Cloud is the ideal toolset for SREs, developers, and DevOps engineers who need automated observability solutions that stream data in near-real time, allowing optimal reliability in an ephemeral, containerized environment. 
+
+With Splunk Observability Cloud, you can:
 
 - Prevent site downtime
 
@@ -28,7 +30,7 @@ Observability Cloud, on the other hand, provides comprehensive observability acr
 
 .. _core-o11y-differences:
 
-Compare functionality
+Functionality differences
 ==========================================================================================
 Observability Cloud and the Splunk platform have a few functionality differences. There are three primary ways that the two platforms differ, as explained in the following sections.
 

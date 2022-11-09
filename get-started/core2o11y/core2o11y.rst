@@ -11,11 +11,11 @@ The Splunk platform and Splunk Observability Cloud
 .. toctree::
    :hidden:
 
-   Compare the Splunk platform and Splunk Observability Cloud <compare/compare>
+   Extend the Splunk platform into observability with Splunk Observability Cloud <compare/compare>
    Practice reliability with Splunk Observability Cloud <practice-reliability/practice-reliability>
    Set up Splunk Observability Cloud <setup-o11y/setup-o11y>
 
-The Splunk platform and Splunk Observability Cloud serve different purposes. See :ref:`compare-compare` to understand how they differ in purpose and function.
+The Splunk platform and Splunk Observability Cloud adds the power of automated observability to your Splunk platform . See :ref:`compare-compare` to understand how they differ in purpose and function.
 
 Splunk Observability Cloud is a comprehensive observability solution that helps you achieve optimal reliability in your systems. Five core principles underpin system reliability: availability, performance, monitoring, incident response, and preparation. See :new-page:`What is site reliability engineering? <https://www.splunk.com/en_us/data-insider/what-is-site-reliability-engineering.html#:~:text=Site%20reliability%20engineering%20(SRE)%20is,production%20systems%20and%20solve%20problems.>` for a deeper understanding of what it takes to achieve reliability in your systems and why Splunk Observability Cloud is the optimal toolset for the job. 
 
