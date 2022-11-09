@@ -93,7 +93,10 @@ Install the CDN package for session replay
 
 Deactivate session replay 
 --------------------------------------------
-To deactivate session replay you can either 
+To deactivate session replay you can either:
+
+* Turn it off for the particular session replay. 
+* Remove the instrumentation if you want to deactivate it completely. 
 
 Redact information
 ==============================
