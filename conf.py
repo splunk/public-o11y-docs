@@ -20,6 +20,8 @@ import os
 # Add the private-o11y-docs/_ext directory to sys.path, so that Sphinx can find extensions ins _ext.
 sys.path.insert(0, os.path.join(os.path.abspath('.'), '_ext'))
 
+from assetminify import final_conf_includes
+
 
 # If your documentation needs a minimal Sphinx version, state it here.
 # needs_sphinx = '1.0'
@@ -229,13 +231,16 @@ def determine_local_toc(app, pagename, templatename, context, doctree):
 
 
 def setup(app):
-    app.add_css_file('custom.css')
-    app.add_css_file('signalfx-alabaster.css')
-    app.add_css_file('signalfx-includes.css')
-    app.add_js_file('signalfx-includes.js')
-    app.add_js_file('jsonpull-splunk.js')
-    app.add_js_file('yaml-splunk.js')
-    app.add_js_file('showdown.min.js')
+    # don't include any js or css file here or any other .py files , instead use only _ext/assetminify.py file 
+    app.add_css_file('main.min.css')
+    app.add_js_file('main.min.js')
+    massets = final_conf_includes
+    for asstname in massets:
+        if asstname.endswith('.js'):
+            app.add_js_file(asstname)
+        if asstname.endswith('.css'):
+            app.add_css_file(asstname)
+            
     app.connect('html-page-context', on_page_context)
     app.connect('html-page-context', determine_local_toc)
 

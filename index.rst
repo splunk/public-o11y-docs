@@ -470,11 +470,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    View detectors <alerts-detectors-notifications/view-detectors>
 
 .. toctree::
-   :maxdepth:   3
-
-   Add context to metrics using events <alerts-detectors-notifications/view-data-events>
-
-.. toctree::
    :maxdepth:  3
 
    Built-in alert conditions <alerts-detectors-notifications/alert-condition-reference/index>
@@ -856,7 +851,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    synthetics/test-config/test-config
 
 .. toctree::
-   :caption: METRICS
+   :caption: UNDERSTAND YOUR DATA
    :maxdepth:   3
 
    Metrics, data points, and metric time series <metrics-and-metadata/metrics>
@@ -875,6 +870,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    metrics-and-metadata/metric-names
+
+.. toctree::
+   :maxdepth:   3
+
+   Add context to metrics using events <metrics-and-metadata/view-data-events>
 
 .. toctree::
    :maxdepth:   3

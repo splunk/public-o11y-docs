@@ -19,7 +19,7 @@ After you connect your Azure account to Observability Cloud, you can do the foll
 
 - Import Azure metrics, traces, and metadata.
 - Use Observability Cloud tools to monitor your Azure services.
-- Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``.
+- Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. raw:: html
 
@@ -146,6 +146,6 @@ The Collector offers a higher degree of customization than the Azure integration
 
 To validate your setup, examine the details of your Azure integration as displayed in the list at the end of the setup page.
 
-* For details about the metrics provided by a GCP integration, see :ref:`azure-metrics`.
-* To send logs from GCP to Observability Cloud, follow the instructions in :ref:`ingest-azure-log-data`.
+* For details about the metrics provided by an Azure integration, see :ref:`azure-metrics`.
+* To send logs from Azure to Observability Cloud, follow the instructions in :ref:`ingest-azure-log-data`.
 * Learn about :ref:`our Azure Infrastructure Monitoring options <infrastructure-azure>`. 
