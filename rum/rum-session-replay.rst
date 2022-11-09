@@ -10,10 +10,16 @@ Session replay in Splunk RUM
     Preview features described in this document are provided by Splunk to you "as is" without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. These documents are not yet publicly available and we ask that you keep such information confidential. Use of preview features is subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
 
 
-:strong:`Description`
+Replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next. Sessions have a maximum duration of four hours. 
 
+Use cases
+===================
+There are many reasons why you might want to replay sessions. Here are a few: 
 
-Replay a session to take a look at exactly what the user experienced and make informed decisions about what to do next. Click into... in the waterfall. Session replay videos are segmented into chunks, which ... A session replay has a maximum of ...       
+* Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend time a long time investigating a variety of possible causes based off of an incomplete description of the problem. 
+* Introduce fast fixes to your applications by honing in on errors and seeing what events precipitate the error.   
+* Improve UX by seeing how users interact with your applications and following their navigation path. For example, if customers aren't adding promo codes from a targeted ad campaign, review the checkout workflow to see if customers can even find the dropdown to add a promo code. 
+
 
 Prerequisite
 =================
@@ -87,11 +93,7 @@ Install the CDN package for session replay
 
 Deactivate session replay 
 --------------------------------------------
-Follow these steps to deactivate session replay: 
-
-1. 
-2. 
-3. 
+To deactivate session replay you can either 
 
 Redact information
 ==============================
@@ -115,10 +117,6 @@ Follow these steps:
 2. If there's a replay option available, click :strong:`Replay`. 
 
 
-Use case 
-===================
-
-For more, see :ref:`rum-use-case-session-replay` in the Splunk RUM use case library. 
 
 
 
