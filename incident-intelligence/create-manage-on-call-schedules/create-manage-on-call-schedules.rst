@@ -42,6 +42,6 @@ Now that you've created an on-call schedule, add it to the incident workflow for
    </embed>
 
 * :ref:`ii-example-schedule-scenarios`
-* :ref:`ii-sync-on-call-schedule`
 * :ref:`ii-whos-on-call`
 * :ref:`ii-my-on-call-schedule`
+* :ref:`ii-sync-on-call-schedule`

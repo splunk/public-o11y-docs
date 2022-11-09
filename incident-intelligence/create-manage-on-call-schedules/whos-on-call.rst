@@ -2,7 +2,7 @@
 
 .. _ii-whos-on-call:
 
-Check who's on call
+Check who's currently on call
 ************************************************************************
 
 You can view who's on call from the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligence.
@@ -54,4 +54,5 @@ See also
 ============
 
 * :ref:`ii-example-schedule-scenarios`
+* :ref:`ii-my-on-call-schedule`
 * :ref:`ii-sync-on-call-schedule`

@@ -2,7 +2,7 @@
 
 .. _ii-example-schedule-scenarios:
 
-Example on-call schedule scenarios
+WIP Example on-call schedule scenarios
 ************************************************************************
 
 .. meta::
@@ -16,7 +16,7 @@ Example schedule scenario one: Week-by-week coverage
 Week-by-week shifts let you define coverage that is consistent week after week. For example, one responder that covers weekends from 5 PM Friday to 8 AM Monday for 4 weeks. Follow these steps to set up this example scenario.
 
 #. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
-#. Select the :guilabel:`On-call schedules`` tab.
+#. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service". Select the :guilabel:`checkmark` icon to save your schedule name.  
 #. Enter a shift name. For this example scenario, enter "Weekend coverage".
@@ -46,5 +46,6 @@ Example schedule scenario four: Limit notifications during business hours
 See also
 ============
 
-* :ref:`ii-sync-on-call-schedule`
 * :ref:`ii-whos-on-call`
+* :ref:`ii-my-on-call-schedule`
+* :ref:`ii-sync-on-call-schedule`

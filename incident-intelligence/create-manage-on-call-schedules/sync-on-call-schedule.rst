@@ -70,6 +70,7 @@ See also
 
 * :ref:`ii-example-schedule-scenarios`
 * :ref:`ii-whos-on-call`
+* :ref:`ii-my-on-call-schedule`
 
 
 
