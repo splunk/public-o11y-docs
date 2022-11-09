@@ -66,13 +66,13 @@ To ensure full functionality of Related Content, do not change any of the metada
 
 The Splunk Distribution of OpenTelemetry Collector provides the following Infrastructure Monitoring metadata keys that enable Related Content:
 
-- host.name
-- k8s.cluster.name
-- k8s.node.name
-- k8s.pod.name
-- container.id
-- k8s.namespace.name
-- kubernetes.workload.name
+- ``host.name``
+- ``k8s.cluster.name``
+- ``k8s.node.name``
+- ``k8s.pod.name``
+- ``container.id``
+- ``k8s.namespace.name``
+- ``kubernetes.workload.name``
 
 .. _relatedcontent-log-observer:
 
@@ -83,11 +83,11 @@ Infrastructure Monitoring functionality, and enable fast searches as well as the
 
 The following key names are required to enable Related Content for Log Observer:
 
-- service.name
-- deployment.environment
-- host.name
-- trace_id
-- span_id
+- ``service.name``
+- ``deployment.environment``
+- ``host.name``
+- ``trace_id``
+- ``span_id``
 
 If the key names in the preceding list use different names in your log fields, remap them to the key names listed here. For example, if you do not see values for :strong:`host.name` in the Log Observer UI, check to see whether your logs use a different field name, such as :strong:`host_name`. If your logs do not contain the default field names exactly as they appear in the preceding list, remap your logs using one of the methods in the following section. 
 
@@ -122,6 +122,7 @@ The following table describes the four methods for remapping log fields:
 
 When to use Log Field Aliasing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Use Log Field Aliasing to remap fields in Observability Cloud when you cannot or do not want to create a copy processor because any of the following are true:
 
 - You use Log Observer Connect to get logs data and do not have access to Log Observer Pipeline Management
@@ -133,17 +134,16 @@ Use Log Field Aliasing to remap fields in Observability Cloud when you cannot or
 - You want the new alias to affect every log message, even those that came in from a time before you created the alias.
 
 
-
 Kubernetes log fields
 --------------------------------------------------------------------------
 Do not change the following fields, which Splunk Distribution of OpenTelemetry Collector injects into your Kubernetes logs:
 
-- k8s.cluster.name
-- k8s.node.name
-- k8s.pod.name
-- container.id
-- k8s.namespace.name
-- kubernetes.workload.name
+- ``k8s.cluster.name``
+- ``k8s.node.name``
+- ``k8s.pod.name``
+- ``container.id``
+- ``k8s.namespace.name``
+- ``kubernetes.workload.name``
 
 
 Using Observability Collector for Kubernetes

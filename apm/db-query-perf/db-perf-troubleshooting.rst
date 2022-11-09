@@ -18,7 +18,7 @@ Follow the steps in the following sections to troubleshoot Database Query Perfor
 
 Database Query Performance is not enabled
 ------------------------------------------------
-If you open Database Query Performance and notice the feature is not enabled, go to MetricSets Configuration and check if indexing for Database Query Performance tags is ``ACTIVE``. If it's not, see :ref:`enable-db-perf` for instructions to enable indexing for Database Query Performance tags. 
+If you open Database Query Performance and notice the feature is not enabled, go to APM MetricSets and check if indexing for Database Query Performance tags is ``ACTIVE``. If it's not, see :ref:`enable-db-perf` for instructions to enable indexing for Database Query Performance tags. 
 
 .. _no-dbs-avail: 
 
@@ -44,10 +44,12 @@ If you're having persistent cardinality issues, try turning off indexing for oth
 
 Database issues are not originating with problematic queries
 --------------------------------------------------------------
+
 If you are seeing database latency, but the query itself is not causing the issue, the problem might be a slow connection or a bottleneck waiting for a queue of database queries. To identify these kinds of issues, you need to instrument the database itself. For instructions on instrumenting a SQL database, see the following links:
 
 * :ref:`sql`
 * :ref:`mysql`
+* :ref:`redis`
 * :ref:`microsoft-sql-server`
 * :ref:`postgresql`
 
@@ -59,5 +61,6 @@ See the following links for more information about Database Query Performance:
 
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.
 * To enable Database Query Performance, see :ref:`enable-db-perf`. 
-* For a detailed use case using Database Query Performance, see :ref:`db-perf-use-case`. 
+* For a use case focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-use-case`.
+* For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
 * For reference material about Database Query Performance, see :ref:`db-perf-reference`.
