@@ -101,9 +101,7 @@ Text is redacted by default, you can optionally configure image redaction as wel
 Image redaction 
 ----------------
 
-..  
-    code snippet 
-
+To redact images, set ``inlineImages = true`` in  the``splunksessionrecorder.init`` function. 
 
 For more information on how to customize your instrumentation, see the Privacy section of the :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/master/guide.md#privacy>` on GitHub. 
 
@@ -115,9 +113,6 @@ Follow these steps:
 1. Open the session you're interested in session waterfall.
 
 2. If there's a replay option available, click :strong:`Replay`. 
-
-3. ...
-
 
 
 Use case 
