@@ -31,4 +31,9 @@ To install and enable an instrumentation library manually:
       c.use "OpenTelemetry::Instrumentation::Sinatra", { opt: "value" }
       end
 
+Manual instrumentation
+===========================================
+
+For examples of manual instrumentation for Ruby, see the official OpenTelemetry documentation at :new-page:`https://opentelemetry.io/docs/instrumentation/ruby/manual/ <https://opentelemetry.io/docs/instrumentation/ruby/manual/>`.
+
 .. note:: Manual OTel instrumentation is fully compatible with Splunk automatic Ruby instrumentation and is fully supported by Splunk.
