@@ -7,7 +7,7 @@
 .. meta::
    :description: This page explains the purpose and functionality differences between the Splunk platform and Splunk Observability Cloud.
 
-The Splunk platform and Splunk Observability Cloud platforms work together for an end-to-end solution that meets your security and observability needs. 
+The Splunk platform and Splunk Observability Cloud work together for an end-to-end solution that meets your security and observability needs. 
 
 Extend the power of Splunk into automated observability
 ==========================================================================================
