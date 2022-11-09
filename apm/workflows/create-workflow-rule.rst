@@ -11,14 +11,14 @@ Business Workflow rules use span tags to make trace behavior in transaction proc
 
 You can create rules that correlate traces from a specific service or from multiple services that include the same global span tag. You must be an administrator to configure Business Workflow rules.
 
-The Business Workflow Configuration page includes the following system-generated rule by default: “All traces will be associated with workflows that are identified by the initiating operations of those traces.” This is the only default rule. You cannot edit the default rule, but you can disable it.
+The Business Workflow page includes the following system-generated rule by default: “All traces will be associated with workflows that are identified by the initiating operations of those traces.” This is the only default rule. You cannot edit the default rule, but you can disable it.
 
 Configure a rule
 ================
 
 To configure a new rule from Splunk APM, follow these steps. There is a difference between enabling a rule and applying it. The enable/disable switch affects an individual rule by turning it on or off. After you modify one or more rules, you then use buttons that act on the entire rule set to save or discard those changes. Changes are not applied unless you save them.
 
-1. Go to :strong:`Data Configuration > Business Workflow Configuration`.
+1. Go to :strong:`Data Configuration > Business Workflow`.
 
 2. Click :strong:`New Rule`.
 
