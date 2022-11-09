@@ -1,7 +1,7 @@
 .. _compare-compare:
 
 ******************************************************************************************
- the Splunk platform and Splunk Observability Cloud 
+ Extend the Splunk platform into observability with Splunk Observability Cloud 
 ******************************************************************************************
 
 .. meta::
