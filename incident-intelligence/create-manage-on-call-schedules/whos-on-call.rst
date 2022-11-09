@@ -7,8 +7,8 @@ Check who's on call
 
 You can view who's on call from the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligence.
 
-* If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. To view on-call schedule details select :guilabel:`You are currently on call`. 
-* If you are not on call, :guilabel:`On-call schedules` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. To view  on-call schedule details select :guilabel:`On-call schedules`.  
+* If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. To view on-call schedule details, select :guilabel:`You are currently on call`. 
+* If you are not on call, :guilabel:`On-call schedules` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. To view on-call schedule details, select :guilabel:`On-call schedules`.  
 
 Use the following tools in the :guilabel:`My on-call schedule` drawer:
 
@@ -49,3 +49,9 @@ You can also view who's on all in :guilabel:`Incident Response Configuration`. T
      - Use this tab to view the team members who are currently on call and next on call and when the shifts start and end. 
    * - Search schedule 
      - Use this tab to view one year of upcoming on-call shifts. Use the date picker to view schedule on a specific date. 
+
+See also
+============
+
+* :ref:`ii-example-schedule-scenarios`
+* :ref:`ii-sync-on-call-schedule`

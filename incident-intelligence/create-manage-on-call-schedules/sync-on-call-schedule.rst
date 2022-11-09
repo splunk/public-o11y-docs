@@ -65,6 +65,12 @@ To sync an on-call schedule to your Calendar for iOS, follow these steps:
 
 The calendar is added to your other calendars. 
 
+See also
+============
+
+* :ref:`ii-example-schedule-scenarios`
+* :ref:`ii-whos-on-call`
+
 
 
 
