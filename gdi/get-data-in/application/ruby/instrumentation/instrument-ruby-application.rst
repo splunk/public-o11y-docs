@@ -36,8 +36,8 @@ Follow these steps to automatically instrument your application using the Ruby a
 
       .. code-block:: text
 
-         gem "splunk-otel", "~> 0.1"
-         gem "opentelemetry-instrumentation-all", "~> 0.23.0"
+         gem "splunk-otel", "~> 1.0"
+         gem "opentelemetry-instrumentation-all", "~> 0.27"
 
    Run ``bundle install`` to install the gems.
 
