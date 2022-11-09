@@ -151,8 +151,6 @@ Using Observability Collector for Kubernetes
 
 For Kubernetes environments, instead of changing existing fluentd configuration, you can install a pre-configured agent provided as a helm chart. It goes with a pre-configured Fluentd agent and OpenTelemetry collector for collecting logs, metrics, and traces with all metadata relevant to Kubernetes.
 
-To view the :new-page:`Observability Collector for Kubernetes helm chart <https://github.com/signalfx/o11y-collector-for-kubernetes>`,
-request access from support.
-
+To learn more about Observability Collector for Kubernetes, see :new-page:`Observability Collector for Kubernetes helm chart <https://github.com/signalfx/o11y-collector-for-kubernetes>` on GitHub.
 
 
