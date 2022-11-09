@@ -31,7 +31,7 @@ To install and enable an instrumentation library manually:
       c.use "OpenTelemetry::Instrumentation::Sinatra", { opt: "value" }
       end
 
-Manual instrumentation
+Manual instrumentation for spans and events
 ===========================================
 
 For examples of manual instrumentation for Ruby, see the official OpenTelemetry documentation at :new-page:`https://opentelemetry.io/docs/instrumentation/ruby/manual/ <https://opentelemetry.io/docs/instrumentation/ruby/manual/>`.
