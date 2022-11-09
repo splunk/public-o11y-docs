@@ -23,7 +23,7 @@ When an incident occurs, it is important to contact a responder who understands 
       <h2>Steps to create an on-call schedule</h2>
    </embed>
 
-Follow these steps to create a schedule. See :ref:`ii-example-scenarios` for steps to create specific schedule scenarios.
+Follow these steps to create a schedule. See for steps to create specific schedule scenarios.
 
 .. raw:: html
     :file: on-call_schedule_steps.html
