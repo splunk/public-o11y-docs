@@ -16,7 +16,7 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a .NET application <dotnet/get-started>
    Instrument a Go application <go/get-started>
    Instrument a Ruby application <ruby/get-started>
-   Instrument a PHP application <php>
+   Instrument a PHP application <php/get-started>
    Spans in Splunk Observability Cloud <span-attributes>
 
 Instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.

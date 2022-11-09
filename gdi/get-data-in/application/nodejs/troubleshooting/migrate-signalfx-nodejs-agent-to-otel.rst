@@ -16,7 +16,7 @@ The Splunk Distribution of OpenTelemetry JS is based on the OpenTelemetry Instru
 Compatibility and requirements
 ==========================================================
 
-The Splunk Distribution of OpenTelemetry JS requires Node.js 12.13 and higher. See :ref:`nodejs-otel-requirements`.
+The Splunk Distribution of OpenTelemetry JS requires Node.js 14 and higher. See :ref:`nodejs-otel-requirements`.
 
 See :ref:`considerations-nodejs-migration` for considerations about migrating from the SignalFx Tracing Library for Node.js to the Splunk Distribution of OpenTelemetry JS.
 
@@ -74,13 +74,13 @@ In your code, the instrumentation entry point for SignalFx tracing is similar to
 
 You have two options to update your instrumentation entry point:
 
-1. Update the entry point to use ``@splunk/otel`` and ``startTracing()``, as shown in the following code:
+1. Update the entry point to use ``@splunk/otel`` and ``start()``, as shown in the following code:
 
 .. code-block:: javascript
 
-  const { startTracing } = require('@splunk/otel');
+  const { start } = require('@splunk/otel');
 
-  startTracing({
+  start({
    // your new options here
   });
 
@@ -125,7 +125,7 @@ To migrate settings from the SignalFx tracing library to the Splunk Distribution
    * - ``SIGNALFX_TRACING_ENABLED``
      - ``OTEL_TRACE_ENABLED``
 
-If you're using the passing configuration options as arguments to ``startTracing()``, update them as well:
+If you're using the passing configuration options as arguments to ``start()``, update them as well:
 
 .. list-table:: 
    :header-rows: 1
@@ -171,8 +171,12 @@ Update the endpoint URL
 
 By default, the Splunk Distribution of OpenTelemetry JS uses the OTLP exporter instead of Jaeger.
 
-- If the receiver endpoint you were using with the SignalFx Tracing Library supports OTLP, set ``OTEL_EXPORTER_OTLP_ENDPOINT`` instead of ``SIGNALFX_ENDPOINT_URL``. The OTel Collector supports OTLP. 
-- If you have the exporter set to Jaeger, use ``OTEL_EXPORTER_JAEGER_ENDPOINT`` instead of ``SIGNALFX_ENDPOINT_URL`` and configure the Jaeger Exporter (see :ref:`trace-exporters-settings-nodejs`).
+If the receiver endpoint you were using with the SignalFx Tracing Library supports OTLP, set ``OTEL_EXPORTER_OTLP_ENDPOINT`` instead of ``SIGNALFX_ENDPOINT_URL``. The OTel Collector supports OTLP. 
+
+Migrate custom metric collection
+--------------------------------------------------
+
+To migrate your custom metric instrumentation from the SignalFx client library, see :ref:`nodejs-otel-metrics-migration`.`
 
 .. _considerations-nodejs-migration:
 

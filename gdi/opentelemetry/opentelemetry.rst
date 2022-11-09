@@ -12,9 +12,9 @@ Get started with the Splunk Distribution of OpenTelemetry Collector
     :hidden:
 
     Migrate from the SignalFx Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
+    Collector overview <resources.rst>
     install-the-collector.rst
     configure-the-collector.rst
-    Resources overview <resources.rst>
     collector-architecture.rst
     components.rst
     use-the-collector.rst

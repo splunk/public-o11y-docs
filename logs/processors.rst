@@ -104,7 +104,7 @@ There are three types of field extraction. These are:
 
 To start creating a field extraction, follow these steps:
 
-#. From the navigation menu, go to :guilabel:`Organization Settings > Logs Pipeline Management`.
+#. From the navigation menu, go to :guilabel:`Data Configuration > Logs Pipeline Management`.
    A list of existing processors is displayed with the prepackaged processors displaying first.
 
 #. Click :guilabel:`New Processing Rule`.
@@ -155,7 +155,7 @@ To create a Regex Processor, follow these steps:
    The new rule will apply only to logs matching this filter.
 #. In step 3 of the processor wizard entitled :guilabel:`Name, Save, and Review`, give your new rule a name and description.
 #. Review your configuration choices, then click :guilabel:`Save`. Your processor defaults to :guilabel:`Active` and immediately begins processing incoming logs. 
-#. To see your new processor, go to :guilabel:`Organization Settings > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`.
+#. To see your new processor, go to :guilabel:`Data Configuration > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`.
 
 .. _json-processor:
 
@@ -168,7 +168,7 @@ To create a JSON Processor, follow these steps:
 #. Preview your rule to ensure that Pipeline Management is extracting the correct field values.
 #. If you see the correct field values in the results table, click :guilabel:`Next`. Otherwise, adjust your filter.
 #. Add a name and description for your new rule, then click :guilabel:`Save`. Your processor defaults to :guilabel:`Active` and immediately begins processing incoming logs. 
-#. To see your new processor, go to :guilabel:`Organization Settings > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`.
+#. To see your new processor, go to :guilabel:`Data Configuration > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`.
 
 .. _event-time-processor:
 
@@ -184,7 +184,7 @@ To create an Event Time Processor, follow these steps:
    Pipeline Management only applies the new processor to log events that match this filter.
 #. Give your new rule a name and description.
 #. Review your configuration choices, then click :guilabel:`Save`. Your processor defaults to :guilabel:`Active` and immediately begins processing incoming logs. 
-#. To see your new processor, go to :guilabel:`Organization Settings > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
+#. To see your new processor, go to :guilabel:`Data Configuration > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
 
 .. _kv-processor:
 
@@ -197,7 +197,7 @@ A KV Parser Processor is a rule that parses key-value (KV) pairs. To create a KV
 #. Preview your rule to ensure that Pipeline Management is extracting the correct field values.
 #. If you see the correct field values in the results table, click :guilabel:`Next`. Otherwise, adjust your filter.
 #. Add a name and description for your new rule, then click :guilabel:`Save`. Your processor defaults to :guilabel:`Active` and immediately begins processing incoming logs. 
-#. To see your new processor, go to :guilabel:`Organization Settings > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
+#. To see your new processor, go to :guilabel:`Data Configuration > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
 
 
 .. _field-copy-processors:
@@ -209,7 +209,7 @@ Field Copy Processors let you define a new relationship between new or existing 
 
 To create a Field Copy Processor, follow these steps:
 
-#. From the navigation menu, go to :menuselection:`Organization Settings > Logs Pipeline Management`.
+#. From the navigation menu, go to :menuselection:`Data Configuration > Logs Pipeline Management`.
 #. Click :guilabel:`New Processing Rule`.
 #. Select :menuselection:`Field Copy`, then click :guilabel:`Continue`.
 #. Enter a target field in the first text box.
@@ -223,7 +223,7 @@ To create a Field Copy Processor, follow these steps:
    the rule is applied to all incoming log events.
 #. Preview your rule to ensure that Pipeline Management is extracting the correct field values, then click :guilabel:`Next`.
 #. Give your new rule a name and description, then click :guilabel:`Save`. Your processor defaults to :guilabel:`Active` and immediately begins processing incoming logs. 
-#. To see your new processor, go to :guilabel:`Organization Settings > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
+#. To see your new processor, go to :guilabel:`Data Configuration > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
 
 .. _field-redaction-processors:
 
@@ -234,7 +234,7 @@ Field redaction lets you mask data, including personally identifiable informatio
 
 To create a Field Redaction Processor, follow these steps:
 
-#. From the navigation menu, go to :menuselection:`Organization Settings > Logs Pipeline Management`.
+#. From the navigation menu, go to :menuselection:`Data Configuration > Logs Pipeline Management`.
 #. Click :guilabel:`New Processing Rule`.
 #. Select :menuselection:`Field Redaction`, then click :guilabel:`Continue`. This takes you to the first step in the processor wizard, Select Sample.
 #. To find a log that contains the field you want to redact, add filters to the content control bar until the Logs table displays a log with the desired field.
@@ -244,6 +244,6 @@ To create a Field Redaction Processor, follow these steps:
 #. Define a matching condition. To apply your new rule to only a subset of incoming logs, add filters to the content control bar. The new rule will apply only to logs matching this filter.
 #. Give your new rule a name and description.
 #. Review your configuration choices, then click :guilabel:`Save`. Your processor defaults to :guilabel:`Active` and immediately begins processing incoming logs. 
-#. To see your new processor, go to :guilabel:`Organization Settings > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
+#. To see your new processor, go to :guilabel:`Data Configuration > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
 
 .. note:: If the field you redacted also appears in ``_raw``, it is still available in ``_raw``. Redact the field in ``_raw`` in addition to redacting the field itself.

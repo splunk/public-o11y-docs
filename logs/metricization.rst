@@ -40,7 +40,7 @@ Create a log metricization rule from the logs pipeline
 
 To create a new log metricization rule from scratch in the logs pipeline, follow these steps:
 
-1. From the navigation menu, go to :guilabel:`Organization Settings > Logs Pipeline Management`.
+1. From the navigation menu, go to :guilabel:`Data Configuration > Logs Pipeline Management`.
 
 2. Click :guilabel:`New Metricization Rule`.
 
