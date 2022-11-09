@@ -14,10 +14,12 @@ The following tables show available AutoDetect detectors and their customizable 
 Splunk APM
 ===================================
 
+.. _apm-autodetector-service-latency:
+
 Service latency
 ----------------------------
 
-- Description: Alerts when there is a sudden change in service latency.
+- Description:  Alerts when there is a sudden change in service latency. By default, the alert is triggered when the latency in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 5 deviations. The alert clears when the latency goes back to less than 4 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/latency.flow>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
@@ -43,18 +45,19 @@ The following table shows customizable arguments for this detector:
    * - Clear growth threshold
      - Clear the alert when the current value is less than the specified number of deviations above historical data.
      - ``4``
-   * - Minimum request per second
-     - Minimum number of requests per second.
-     - ``0``
+   * - Minimum request per second (% of history)
+     - Minimum request rate, as a percentage of historical request rate, required in the current window to trigger the alert. This prevents alerts for sparse data.
+     - ``20``
    * - Filters
      - Dimensions you want to add to the detector.
      - None
 
+.. _apm-autodetector-error-rate:
 
 Service error rate
 --------------------
 
-- Description: Alerts when a sudden change in service error rate occurs.
+- Description: Alerts when a sudden change in service error rate occurs. By default, the alert is triggered when the error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 100%. The alert clears when the latency goes back to less than 80% above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/errors.flow>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
@@ -87,10 +90,12 @@ The following table shows customizable arguments for this detector:
      - Dimensions you want to add to the detector.
      - None
 
+.. _apm-autodetector-service-request-rate:
+
 Service request rate
 -----------------------
 
-- Description: Alerts when a sudden change in request rate occurs.
+- Description: Alerts when a sudden change in request rate occurs. . By default, the alert is triggered when the request rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3 deviations. The alert clears when the latency goes back to less than 2.5 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/requests.flow>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
