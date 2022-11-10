@@ -55,13 +55,17 @@ To view AutoDetect alerts and detectors specific to a service, do the following:
       :width: 60%
       :alt: This screenshot shows what an AutoDetect component looks like in the Alerts sidebar for a navigator.
 
-To view AutoDetect alerts and detectors related to a chart, do the following:
+If available, AutoDetect detectors are connected to a chart by default. To view AutoDetect detectors related to a chart, do the following:
 
-#. From the Splunk Observability Cloud home page, go to the ...
-#. 
+#. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page or the :strong:`Dashboards` page.
+#. Select the navigator or dashboard you want to view.
+#. On the navigator or dashboard page, select the bell icon on a chart to see AutoDetect detectors linked to that chart. 
 
-.. note:: 
-   In all views, if there is no component with the :strong:`Auto` badge, then you don’t have any integration supported by AutoDetect.
+    A green dot indicates that there is no alert for the detector. A red dot indicates that the detector has an active alert.
+
+    .. image:: /_images/images-detectors-alerts/autodetect/autodetect-linked-chart.png
+      :width: 60%
+      :alt: This screenshot shows where linked AutoDetect detectors are listed for a chart. In this example, there is one AutoDetect detector with a green dot, meaning there is no active alert.
 
 .. _autodetect-subscribe:
 
