@@ -84,7 +84,13 @@ See :ref:`logs-queries` to learn all of the ways Log Observer Connect queries ca
 
 Real User Monitoring (RUM)
 ===================================================================================
-RUM monitors the front-end user experience of your application by analyzing user sessions. In RUM, you can monitor and drill down on the Endpoints Errors metric. You can look for front-end and back-end errors, as well as see resource errors and resource response times. See :ref:`rum-identify-span-problems` to walk through a use case that shows you how to find JavaScript errors, back-end errors, and long resource response times.
+RUM monitors the front-end user experience of your application by analyzing user sessions. In RUM, you can monitor and drill down on the front-end JavaScript errors and network errors. 
+
+ .. image:: /_images/get-started/core2o11y-RUM-inc-response.png
+   :width: 100%
+   :alt: This png shows a Real User Monitoring dashboard displaying JavaScript errors.
+
+You can look for front-end and back-end errors, as well as see resource errors and resource response times. See :ref:`rum-identify-span-problems` to walk through a use case that shows you how to find JavaScript errors, back-end errors, and long resource response times.
 
 RUM is particularly helpful when investigating the root cause of an error reported by a user. See :ref:`rum-mobile-usecase` to learn more.
 
