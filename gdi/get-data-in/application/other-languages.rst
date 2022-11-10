@@ -9,6 +9,8 @@ Instrument applications written in other programming languages
 
 You can send traces to Splunk Observabilty Cloud from applications or services written in programming languages for which a Splunk distribution isn't available yet, such as Rust or Erlang. Follow these steps to manually instrument an application to send traces to Splunk Observability Cloud.
 
+.. _other-add-dependencies:
+
 Add the required dependencies or packages
 ==================================================
 
@@ -59,19 +61,49 @@ To instrument your application for Observability Cloud, you need to generate tra
              opentelemetry_exporter
             ]},
 
-Generate spans for your application
-==================================================
+.. _other-init-tracer:
 
-In your application's code, initialize the OpenTelemetry tracer and create spans for the operations you want to track. How spans are created differs depending on the target programming language. 
+Initialize the OpenTelemetry tracer
+=================================================
 
-The following examples show how to create spans that have attributes or tags attached:
+In your application's code, initialize the OpenTelemetry library and tracer like in the following examples:
 
 .. tabs::
 
    .. code-tab:: rust Rust
 
-      let tracer = opentelemetry_otlp::new_pipeline()
-          .install_batch(opentelemetry::runtime::AsyncStd)?;
+      use opentelemetry::global::shutdown_tracer_provider;
+      use opentelemetry::runtime;
+      use opentelemetry::sdk::Resource;
+      use opentelemetry::trace::TraceError;
+      use opentelemetry::{global, sdk::trace as sdktrace};
+      use opentelemetry::{
+         trace::{TraceContextExt, Tracer},
+         Context, Key, KeyValue,
+      };
+      use opentelemetry_otlp::{ExportConfig, WithExportConfig};
+      use std::error::Error;
+      use std::time::Duration;
+
+      let o11y_endpoint = env!("OTEL_EXPORTER_OTLP_ENDPOINT", "$OTEL_EXPORTER_OTLP_ENDPOINT is not set.");
+      let o11y_token = env!("OTEL_EXPORTER_OTLP_TRACES_HEADERS", "$OTEL_EXPORTER_OTLP_TRACES_HEADERS is not set.");
+
+      fn init_tracer() -> Result<sdktrace::Tracer, TraceError> {
+         opentelemetry_otlp::new_pipeline()
+            .tracing()
+            .with_exporter(
+                  opentelemetry_otlp::new_exporter()
+                     .tonic()
+                     .with_endpoint(o11y_endpoint),
+            )
+            .with_trace_config(
+                  sdktrace::config().with_resource(Resource::new(vec![KeyValue::new(
+                     opentelemetry_semantic_conventions::resource::SERVICE_NAME,
+                     "trace-demo",
+                  )])),
+            )
+            .install_batch(opentelemetry::runtime::Tokio)
+      }
 
    .. code-tab:: erlang Erlang
 
@@ -80,6 +112,54 @@ The following examples show how to create spans that have attributes or tags att
       -export([hello/0]).
 
       -include_lib("opentelemetry_api/include/otel_tracer.hrl").
+
+.. _other-generate-spans:
+
+Generate spans for your application
+==================================================
+
+In your application's code, initialize the OpenTelemetry tracer and create spans for the operations you want to track. How you create spans differs depending on the target programming language. 
+
+The following examples show how to create spans that have attributes or tags:
+
+.. tabs::
+
+   .. code-tab:: rust Rust
+
+      const LEMONS_KEY: Key = Key::from_static_str("lemons");
+      const ANOTHER_KEY: Key = Key::from_static_str("ex.com/another");
+
+      async fn main() -> Result<(), Box<dyn Error + Send + Sync + 'static>> {
+         let _ = init_tracer()?;
+         let cx = Context::new();
+
+         let tracer = global::tracer("ex.com/basic");
+
+         tracer.in_span("operation", |cx| {
+            let span = cx.span();
+            span.add_event(
+                  "Nice operation!".to_string(),
+                  vec![Key::new("bogons").i64(100)],
+            );
+            span.set_attribute(ANOTHER_KEY.string("yes"));
+
+            tracer.in_span("Sub operation...", |cx| {
+                  let span = cx.span();
+                  span.set_attribute(LEMONS_KEY.string("five"));
+
+                  span.add_event("Sub span event", vec![]);
+
+                  histogram.record(&cx, 1.3, &[]);
+            });
+         });
+
+         tokio::time::sleep(Duration::from_secs(60)).await;
+         shutdown_tracer_provider();
+
+         Ok(())
+      }
+
+   .. code-tab:: erlang Erlang
 
       hello() ->
          %% start an active span and run a local function
@@ -95,6 +175,8 @@ The following examples show how to create spans that have attributes or tags att
                            ?set_attributes([{lemons_key, <<"five">>}]),
                            ?add_event(<<"Sub span event!">>, [])
                      end).
+
+.. _other-set-env-vars:
 
 Set the required environment variables
 ==================================================
@@ -120,14 +202,3 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 The realm name appears in the :guilabel:`Organizations` section.
 
 .. note:: For more information on the ingest API endpoints, see :ref:`allow-domains`.
-
-Run your instrumented application
-=============================================
-
-Erlang
-rebar3 shell --sname test@chommers
-
-More information
-====================
-
-Erlang: https://github.com/tsloughter/otel_getting_started
