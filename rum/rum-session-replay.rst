@@ -17,7 +17,7 @@ Use cases
 There are many reasons why you might want to replay sessions. Here are a few: 
 
 * Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend time a long time investigating a variety of possible causes based off of an incomplete description of the problem. 
-* Introduce fast fixes to your applications by honing in on errors and seeing what events precipitate the error.   
+* Introduce fast fixes to your applications by honing in on errors and seeing what errors what impact users. 
 * Improve UX by seeing how users interact with your applications and following their navigation path. For example, if customers aren't adding promo codes from a targeted ad campaign, review the checkout workflow to see if customers can even find the dropdown to add a promo code. 
 
 
@@ -113,12 +113,19 @@ For more information on how to customize your instrumentation, see the Privacy s
 
 Replay a session
 ================
-Follow these steps: 
+To replay a session,  open the session you're interested in session waterfall, and if there's a replay option available, click :strong:`Replay`. Here are a few controls you can configure:
 
-1. Open the session you're interested in session waterfall.
+* Adjust the speed of the session and the size of the window. 
+* Toggle the timeline to see multiple replay segments if the user had multiple instances of the application open at the same time. 
 
-2. If there's a replay option available, click :strong:`Replay`. 
 
+
+Troubleshooting  
+===================
+If you're stuck, try these steps: 
+
+* If a session is incomplete, it might be because the network bandwidth isn't strong enough, which can cause part of a session to drop off. 
+* If a user has multiple tabs of the same application open, then there is a session replay available for each tab. Make sure to open the tab below session replay and navigate to the tab you're interested in. 
 
 
 
