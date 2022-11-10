@@ -1,16 +1,10 @@
 .. _docs-home-page:
 
-.. to learn how to update this page, see https://splunk.atlassian.net/wiki/spaces/BIZAPPS/pages/1078120167037/Observability+New+Home+Page+Layout+and+Documentation
-
-.. this heading below doesn't display on the page, but it needs to be here to provide the browser tab name and for the page to render correctly
-
 **********
 Welcome
 **********
 
-.. hero image - editable file is here: https://www.figma.com/file/niuvKhPm3kgtyHILyL08wY/?node-id=407%3A3027
-
-.. image:: _images/get-started/o11y-user-doc-hero-banner.svg
+.. image:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
