@@ -43,7 +43,7 @@ The following table describes common types of inferred services:
 
        | (dotted cylinder in the service map) 
 
-     - mySQL, AWS S3, Redis, MongoDB
+     - MySQL, AWS S3, Redis, MongoDB
      - In addition to the details described in :ref:`inf-service-info`, Splunk APM provides additional analytics for inferred SQL databases. See :ref:`db-query-performance` to learn more about database insights in Splunk APM. 
 
 

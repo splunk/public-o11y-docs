@@ -233,8 +233,6 @@ The available settings vary depending on the alert condition you selected.
 
 In the chart, you see a preview of the alerts that would have been triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
 
-.. removed for https://signalfuse.atlassian.net/browse/POR-314
-
 After you have specified settings for triggering alerts, continue to the next tab to create a message that will be sent when the alert is triggered.
 
 .. _alert-message:
