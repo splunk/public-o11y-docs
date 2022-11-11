@@ -65,8 +65,12 @@ Each private location has a corresponding Private location ID. With this ID, you
 Follow these steps to set up a new private location:
 
 1. Select the settings gear icon > :guilabel:`Private locations`.  
-2. Select :guilabl:`+ Add`> and add a name. 
+2. Select :guilabl:`+ Add` > and add a name. 
+3. Follow the steps in the wizard to set up your runner.  
 
+Manage tokens
+--------------------
+It is your responsibility to update and manage your token. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
 
 Assess the health of your private location
 ==============================================
