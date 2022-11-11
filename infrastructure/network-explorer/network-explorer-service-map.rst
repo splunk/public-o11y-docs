@@ -48,19 +48,19 @@ You can view connections related to a network workload or network edge by select
 
 * When you select a network workload, you get a drilldown map that shows only network edges and network workloads connected to the selected network workload.
 
-For example, the following drilldown map shows the selected ``productcatalogservice`` network workload along with its connected network workloads, and all network edges coming to and from ``productcatalogservice``.
+  For example, the following drilldown map shows the selected ``productcatalogservice`` network workload along with its connected network workloads, and all network edges coming to and from ``productcatalogservice``.
 
-    .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-load.png
-        :alt: Drilldown map showing all network workloads and edges connected to the selected ``productcatalogservice`` network workload.
-        :width: 80%
+      .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-load.png
+          :alt: Drilldown map showing all network workloads and edges connected to the selected ``productcatalogservice`` network workload.
+          :width: 80%
 
 * When you select a network edge, you get a drilldown map that shows only two network workloads connected by the selected network edge.
 
-For example, the following drilldown map shows the selected network edge along with the source network workload ``prometheus-node-exporter`` and the destination network workload ``kubelet``.
+  For example, the following drilldown map shows the selected network edge along with the source network workload ``prometheus-node-exporter`` and the destination network workload ``kubelet``.
 
-    .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-edge.png
-        :alt: Drilldown map showing network edge connecting the ``prometheus-node-exporter`` and ``kubelet`` network workloads. Traffic comes from ``prometheus-node-exporter`` to ``kubelet``.
-        :width: 80%
+      .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-edge.png
+          :alt: Drilldown map showing network edge connecting the ``prometheus-node-exporter`` and ``kubelet`` network workloads. Traffic comes from ``prometheus-node-exporter`` to ``kubelet``.
+          :width: 80%
 
 .. note:: If you are in the :strong:`Network edge` navigator, selecting a network workload opens the :strong:`Network workload` navigator. If you are in the :strong:`Network workload` navigator, selecting a network edge opens the :strong:`Network edge` navigator.
 
