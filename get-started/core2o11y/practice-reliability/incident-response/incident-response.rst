@@ -84,7 +84,7 @@ See :ref:`logs-queries` to learn all of the ways Log Observer Connect queries ca
 
 Real User Monitoring (RUM)
 ===================================================================================
-RUM monitors the front-end user experience of your application by analyzing user sessions. In RUM, you can monitor and drill down on the front-end JavaScript errors and network errors. 
+RUM monitors the front-end user experience of your application by analyzing user sessions. In RUM, you can monitor and drill down on front-end JavaScript errors and network errors. 
 
  .. image:: /_images/get-started/core2o11y-RUM-inc-response.png
    :width: 100%
