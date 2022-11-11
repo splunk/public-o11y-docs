@@ -45,7 +45,7 @@ The following table provides an overview of what you can do with Incident Intell
      - :strong:`With this tool`
      - :strong:`Link to documentation`
 
-   * - Ingest alerts from Observability Cloud or third-parties. 
+   * - Ingest alerts from Observability Cloud or third parties. 
      - Alert generation and ingestion
      - See :ref:`ii-ingest-alerts`.
 
@@ -77,7 +77,7 @@ The following table provides an overview of what you can do with Incident Intell
 How Incident Intelligence works 
 ===================================
 
-Incident Intelligence generates alerts and groups alerts to create incidents. Alerts then pass through a series of data preparations such as filters and enrichments. Alerts are then grouped based on the grouping rules that you configure. An incident is automatically triggered and escalated to the corresponding team if an alert or set of alerts meets the criteria for a critical incident. 
+Incident Intelligence ingests, routes, and groups alerts to create incidents. Alerts are routed and grouped based on rules that you configure. if an alert or set of alerts meets the criteria for a critical incident an incident is automatically triggered and escalated to the corresponding responder based on the incident workflow and on-call schedules you configure.
 
 Required Incident Intelligence prerequisites and permissions
 ---------------------------------------------------------------------
