@@ -65,6 +65,10 @@ For example, the following drilldown map shows the selected network edge along w
 .. note:: If you are in the :strong:`Network edge` navigator, selecting a network workload opens the :strong:`Network workload` navigator. If you are in the :strong:`Network workload` navigator, selecting a network edge opens the :strong:`Network edge` navigator.
 
 Change time period for network edge data
-------------------------------------------
+--------------------------------------------
 
-By default, a network edge shows the amount of data coming from a source network workload to a network destination workload in the past 3 hours. You can change the time period by...
+By default, a network edge shows the amount of data coming from a source network workload to a network destination workload in the past 3 hours. You can change the time period by selecting a different option, or enter a custom time in the time dropdown menu.
+
+  .. image:: /_images/images-network-explorer/change-time.png
+      :alt: Dropdown menu to change time period for network edge data.
+      :width: 80%
