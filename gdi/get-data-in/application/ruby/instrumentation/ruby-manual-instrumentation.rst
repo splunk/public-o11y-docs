@@ -12,7 +12,9 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 Libraries installation
 =========================================
 
-With manual instrumentation, you can install and enable instrumentation libraries separately. This lets you control which gems Ruby retrieves when building your project.
+With manual instrumentation, you can install and enable instrumentation libraries separately. This lets you control which gems Ruby retrieves when building your project. 
+
+To learn how to manually instrument a Ruby application, see  :new-page:`https://opentelemetry.io/docs/instrumentation/ruby/manual/` at OpenTelemetry.io.
 
 To install and enable an instrumentation library manually:
 
