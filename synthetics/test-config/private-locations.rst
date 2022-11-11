@@ -65,8 +65,9 @@ Each private location has a corresponding Private location ID. With this ID, you
 Follow these steps to set up a new private location:
 
 1. Select the settings gear icon > :guilabel:`Private locations`.  
-2. Select :guilabl:`+ Add` > and add a name. 
-3. Follow the steps in the wizard to set up your runner.  
+2. Select :guilabel:`+ Add` > and add a name. 
+3. Follow the steps in the wizard to set up your runner using Docker. 
+4. Save your private location. 
 
 Manage tokens
 --------------------
