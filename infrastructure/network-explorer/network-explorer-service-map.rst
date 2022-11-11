@@ -39,7 +39,7 @@ For example, the following service map shows traffic between the ``emailservice`
 
 .. image:: /_images/images-network-explorer/network-explorer-service-map.png
   :alt: Network Explorer service map showing two network workloads connected by two network edges. Traffic flows in both directions. The ``emailservice`` network workload sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past 3 hours.  
-  :width: 80%
+  :width: 60%
 
 Drill down into specific connections
 ------------------------------------------
@@ -52,7 +52,7 @@ You can view connections related to a network workload or network edge by select
 
       .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-load.png
           :alt: Drilldown map showing all network workloads and edges connected to the selected ``productcatalogservice`` network workload.
-          :width: 80%
+          :width: 60%
 
 * When you select a network edge, you get a drilldown map that shows only two network workloads connected by the selected network edge.
 
@@ -60,7 +60,7 @@ You can view connections related to a network workload or network edge by select
 
       .. image:: /_images/images-network-explorer/network-explorer-service-map-drilldown-edge.png
           :alt: Drilldown map showing network edge connecting the ``prometheus-node-exporter`` and ``kubelet`` network workloads. Traffic comes from ``prometheus-node-exporter`` to ``kubelet``.
-          :width: 80%
+          :width: 60%
 
 .. note:: If you are in the :strong:`Network edge` navigator, selecting a network workload opens the :strong:`Network workload` navigator. If you are in the :strong:`Network workload` navigator, selecting a network edge opens the :strong:`Network edge` navigator.
 
@@ -71,4 +71,4 @@ By default, a network edge shows the amount of data coming from a source network
 
   .. image:: /_images/images-network-explorer/change-time.png
       :alt: Dropdown menu to change time period for network edge data.
-      :width: 80%
+      :width: 50%
