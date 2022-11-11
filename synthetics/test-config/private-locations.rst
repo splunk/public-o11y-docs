@@ -36,6 +36,13 @@ Use cases for private locations
 * Gain a higher level of flexibility in giving Splunk Synthetic Monitoring access to applications.
 * Test from locations not currently supported by Splunk Synthetic Monitoring's public locations.
 
+Each private location has a corresponding Private location ID. With this ID, you can:
+
+* Build charts or dashboards
+* Search for metrics by Private location
+* se in the API 
+
+
 
 Requirements 
 =============
@@ -53,25 +60,28 @@ Recommended for running Browser Tests:
 
 
 Set up a new private location
-================================
-
-Each private location has a corresponding Private location ID. With this ID, you can:
-
-* build charts or dashboards
-* search for metrics by Private location
-* use in the API 
-
+===============================
 
 Follow these steps to set up a new private location:
 
 1. Select the settings gear icon > :guilabel:`Private locations`.  
 2. Select :guilabel:`+ Add` > and add a name. 
-3. Follow the steps in the wizard to set up your runner using Docker. 
+3. Follow the steps in the wizard to set up your runner. 
 4. Save your private location. 
 
-Manage tokens
+
+What you can do with your Private location ID 
+------------------------------------------------------------
+
+Each private location has a corresponding Private location ID. With this ID, you can:
+
+* Build charts or dashboards
+* Search for metrics by Private location
+* Refer to your Private location ID if you're interacting with the Splunk Synthetics Monitoring APIs. 
+
+Manage your tokens
 --------------------
-It is your responsibility to update and manage your token. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
+It is your responsibility to update and manage your tokens. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
 
 Assess the health of your private location
 ==============================================
