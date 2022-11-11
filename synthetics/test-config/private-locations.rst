@@ -14,9 +14,9 @@ Private locations
 
 
 
-A private location is a software package that enables quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. This allows Splunk Synthetics Monitoring users to test earlier in the development cycle and against internal sites or applications that are not available to the public.
+A Private location is a software package that enables quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test earlier in the development cycle and against internal sites or applications that aren't available to the public.
 
-Customers can, through the Splunk Synthetics Monitoring web interface, create new Private Locations and launch a runner to perform any checks that are assigned to them.
+Customers can, through the Splunk Synthetics Monitoring web interface, create new Private locations and launch a runner to perform any checks that are assigned to them.
 
 What is a runner?
 ===================
@@ -35,13 +35,6 @@ Use cases for private locations
 * Test pre-production applications which don't have public staging sites.
 * Gain a higher level of flexibility in giving Splunk Synthetic Monitoring access to applications.
 * Test from locations not currently supported by Splunk Synthetic Monitoring's public locations.
-
-Each private location has a corresponding Private location ID. With this ID, you can:
-
-* Build charts or dashboards
-* Search for metrics by Private location
-* se in the API 
-
 
 
 Requirements 
