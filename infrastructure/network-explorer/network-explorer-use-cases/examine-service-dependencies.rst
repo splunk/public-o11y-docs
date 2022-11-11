@@ -16,13 +16,23 @@ Use case: Examine upstream and downstream dependencies for a service update
 
 The following use case features examples from Buttercup Games, a fictitious e-commerce company.
 
-Kai, a site reliability engineer (SRE) at Buttercup Games, is responsible for rolling out an update to an important application service in their Kubernetes environment. They want to make sure they know all the upstream and downstream dependencies of the service so they can notify the dependent teams.
+Kai, a site reliability engineer (SRE) at Buttercup Games, is responsible for rolling out an update to the ``checkoutservice`` application service in their Kubernetes environment. They want to make sure they know all the upstream and downstream dependencies of ``checkoutservice`` so they can notify the dependent teams.
 
-Kai first checks their team's architecture diagram, but soon realizes it has been outdated. Additionally, distributed tracing has only been rolled out for a fraction of services.
+Kai first checks their team's architecture diagram, but soon realizes it has been outdated. 
+
+    .. image:: /_images/images-network-explorer/outdated-diagram.png
+        :alt: This image shows the outdated architecture diagram for Kai's team. The map is a combination of printed and illegible hand rawn elements on a stained piece of paper.
+        :width: 80%
+
+Additionally, distributed tracing has only been rolled out for a fraction of services.
 
 Kai then attempts to investigate service dependencies using the Network Explorer service map, which provides a complete graphical view of all services based on their network traffic, regardless of the languages and frameworks used in each service.
 
-In particular, Kai selects the service that is about to receive the update, and immediately gets a drilldown view of all upstream and downstream dependencies for that service.
+    .. image:: /_images/images-network-explorer/service-map-diagram.png
+        :alt: This image shows the up-to-date architecture diagram for Kai's team. The diagram is an interactive service map in Network Explorer, which shows all upstream and downstream dependencies for ``checkoutservice``.
+        :width: 80%
+
+In particular, Kai selects ``checkoutservice`` to receive the update, and immediately gets a drilldown view of all upstream and downstream dependencies for ``checkoutservice``.
 
 By exploring the Network Explorer service map, Kai successfully obtained the context they need to understand all the dependencies of the service being updated. 
 
