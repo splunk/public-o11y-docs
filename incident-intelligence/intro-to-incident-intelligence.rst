@@ -8,7 +8,7 @@ Introduction to Splunk Incident Intelligence
 .. meta::
    :description: Get started collaboratively diagnosing and remediating issues across your environment using Incident Intelligence. 
 
-Collaboratively diagnose and remediate issues across your environment using Incident Intelligence. Incident Intelligence lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing, paired with automation and collaboration. 
+Use Incident Intelligence to collaboratively diagnose and remediate issues across your environment. Incident Intelligence lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing. 
 
 How Incident Intelligence fits into Splunk Observability Cloud 
 =================================================================
@@ -46,7 +46,7 @@ The following table provides an overview of what you can do with Incident Intell
      - :strong:`Link to documentation`
 
    * - Ingest alerts from Observability Cloud or third parties. 
-     - Alert generation and ingestion
+     - Alert ingestion
      - See :ref:`ii-ingest-alerts`.
 
    * - Create services to automatically organize incidents depending on the impacted service.
@@ -57,7 +57,7 @@ The following table provides an overview of what you can do with Incident Intell
      - Service-based alert routing
      - See :ref:`ii-configure-alert-routing`.
 
-   * - Manage which alerts create an incident and how alerts are grouped into incidents. Use alert severity to determine if an incident is created and also group alerts by time period.
+   * - Manage which alerts create an incident and how alerts are grouped into incidents. Use alert severity to determine if an incident is created and group alerts by time period.
      - Alert grouping
      - See :ref:`ii-configure-alert-grouping`.
 
@@ -65,7 +65,7 @@ The following table provides an overview of what you can do with Incident Intell
      - Incident workflows
      - See :ref:`ii-configure-incident-workflows`.
 
-   * - Create on-call schedules and shifts to use as a step in your service incident workflows.
+   * - Create on-call schedules and shifts to use as a step in your incident workflows.
      - On-call schedules and shifts
      - See :ref:`ii-create-manage-on-call-schedules`.
 

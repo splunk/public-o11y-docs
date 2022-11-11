@@ -38,7 +38,7 @@ Next, you need to create services to organize your alerts and incidents based on
 Configure the alerts that are routed to your service
 =======================================================
 
-Next, use alert routing to associate alerts with a service. If an alert matches your alert filter conditions, it is routed to the service. See :ref:`ii-configure-alert-routing` for step to create alert routing rules.
+Next, use alert routing to associate alerts with a service. If an alert matches your alert routing filter conditions, it is routed to the service. See :ref:`ii-configure-alert-routing` for steps to create alert routing rules.
 
 .. _ii-setup-alert-grouping:
 
