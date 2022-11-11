@@ -9,7 +9,7 @@ Example Business Workflow configuration
 
 Suppose you want to identify every trace that goes through ``service.example``. To do this, create a Business Workflow. The following example creates a service rule for ``service.example`` that creates workflows based on endpoints for the service. To follow along in the app, you must be an administrator.
 
-1. Go to :strong:`Data Configuration > Business Workflow Configuration`.
+1. Go to :strong:`Data Configuration > Business Workflow`.
 
 2. Click :strong:`New Rule`.
 
