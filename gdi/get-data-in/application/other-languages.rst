@@ -14,7 +14,7 @@ You can send traces to Splunk Observabilty Cloud from applications or services w
 Add the required dependencies or packages
 ==================================================
 
-To instrument your application for Observability Cloud, you need to generate traces and spans that follow the OpenTelemetry format and semantic conventions. Add the required OpenTelemetry dependencies to your project, including gRPC communication libraries.
+To instrument your application for Observability Cloud, you need to generate traces and spans that follow the OpenTelemetry format and semantic conventions. Add the required OpenTelemetry dependencies to your project, including gRPC communication libraries for communicating with the Splunk OpenTelemetry Collector.
 
 .. tabs::
 
@@ -37,14 +37,9 @@ To instrument your application for Observability Cloud, you need to generate tra
 
          %% rebar.config file
 
-         {deps, [grpcbox,
-               {opentelemetry_api,
-                  {git_subdir, "http://github.com/open-telemetry/opentelemetry-erlang", {branch, "main"}, "apps/opentelemetry_api"}},
-               {opentelemetry,
-                  {git_subdir, "http://github.com/open-telemetry/opentelemetry-erlang", {branch, "main"}, "apps/opentelemetry"}},
-               {opentelemetry_exporter,
-                  {git_subdir, "http://github.com/open-telemetry/opentelemetry-erlang", {branch, "main"}, "apps/opentelemetry_exporter"}}
-               ]}.
+         {deps, [opentelemetry_api
+                 opentelemetry,
+                 opentelemetry_exporter]}.
 
       You also must add them to the ``Applications`` section, together with gRPC libraries:
 
@@ -52,14 +47,13 @@ To instrument your application for Observability Cloud, you need to generate tra
 
          %% app.src file
 
-           {applications,
-            [kernel,
-             stdlib,
-             grpcbox,
-             opentelemetry_api,
-             opentelemetry,
-             opentelemetry_exporter
-            ]},
+         {applications,
+          [kernel,
+          stdlib,
+          opentelemetry_api,
+          opentelemetry,
+          opentelemetry_exporter
+         ]},
 
 .. _other-init-tracer:
 
@@ -70,48 +64,53 @@ In your application's code, initialize the OpenTelemetry library and tracer like
 
 .. tabs::
 
-   .. code-tab:: rust Rust
+   .. tab:: Rust
 
-      use opentelemetry::global::shutdown_tracer_provider;
-      use opentelemetry::runtime;
-      use opentelemetry::sdk::Resource;
-      use opentelemetry::trace::TraceError;
-      use opentelemetry::{global, sdk::trace as sdktrace};
-      use opentelemetry::{
-         trace::{TraceContextExt, Tracer},
-         Context, Key, KeyValue,
-      };
-      use opentelemetry_otlp::{ExportConfig, WithExportConfig};
-      use std::error::Error;
-      use std::time::Duration;
+      .. code-block:: rust
 
-      let o11y_endpoint = env!("OTEL_EXPORTER_OTLP_ENDPOINT", "$OTEL_EXPORTER_OTLP_ENDPOINT is not set.");
-      let o11y_token = env!("OTEL_EXPORTER_OTLP_TRACES_HEADERS", "$OTEL_EXPORTER_OTLP_TRACES_HEADERS is not set.");
+         use opentelemetry::global::shutdown_tracer_provider;
+         use opentelemetry::runtime;
+         use opentelemetry::sdk::Resource;
+         use opentelemetry::trace::TraceError;
+         use opentelemetry::{global, sdk::trace as sdktrace};
+         use opentelemetry::{
+            trace::{TraceContextExt, Tracer},
+            Context, Key, KeyValue,
+         };
+         use opentelemetry_otlp::{ExportConfig, WithExportConfig};
+         use std::error::Error;
+         use std::time::Duration;
 
-      fn init_tracer() -> Result<sdktrace::Tracer, TraceError> {
-         opentelemetry_otlp::new_pipeline()
-            .tracing()
-            .with_exporter(
-                  opentelemetry_otlp::new_exporter()
-                     .tonic()
-                     .with_endpoint(o11y_endpoint),
-            )
-            .with_trace_config(
-                  sdktrace::config().with_resource(Resource::new(vec![KeyValue::new(
-                     opentelemetry_semantic_conventions::resource::SERVICE_NAME,
-                     "trace-demo",
-                  )])),
-            )
-            .install_batch(opentelemetry::runtime::Tokio)
-      }
+         fn init_tracer() -> Result<sdktrace::Tracer, TraceError> {
+            opentelemetry_otlp::new_pipeline()
+               .tracing()
+               .with_exporter(
+                     opentelemetry_otlp::new_exporter()
+                        .tonic()
+                        .with_endpoint("http://localhost:4317"),
+               )
+               .with_trace_config(
+                     sdktrace::config().with_resource(Resource::new(vec![KeyValue::new(
+                        opentelemetry_semantic_conventions::resource::SERVICE_NAME,
+                        "trace-demo",
+                     )])),
+               )
+               .install_batch(opentelemetry::runtime::Tokio)
+         }
 
-   .. code-tab:: erlang Erlang
+   .. tab:: Erlang
 
-      -module(otel_getting_started).
+      Include the OpenTelemetry tracer in your application's code.
 
-      -export([hello/0]).
+      .. code-block:: erlang
 
-      -include_lib("opentelemetry_api/include/otel_tracer.hrl").
+         -module(otel_getting_started).
+
+         -export([hello/0]).
+
+         -include_lib("opentelemetry_api/include/otel_tracer.hrl").
+
+      Erlang automatically initializes the tracer.
 
 .. _other-generate-spans:
 
