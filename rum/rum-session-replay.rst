@@ -17,7 +17,7 @@ Use cases
 There are many reasons why you might want to replay sessions. Here are a few: 
 
 * Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend time a long time investigating a variety of possible causes based off of an incomplete description of the problem. 
-* Introduce fast fixes to your applications by honing in on errors and seeing what errors what impact users. 
+* Introduce fast fixes to your applications by honing in on errors and seeing what errors impact users. 
 * Improve UX by seeing how users interact with your applications and following their navigation path. For example, if customers aren't adding promo codes from a targeted ad campaign, review the checkout workflow to see if customers can even find the dropdown to add a promo code. 
 
 
@@ -31,7 +31,7 @@ Setup session replay
 =====================
 There are two ways to setup session replay: CDN, or NPM. 
 
-.. admonition:: Important
+.. admonition:: Note
     
     Initialize Splunk Browser RUM before you initialize the session recorder package. 
 
@@ -55,14 +55,30 @@ This example shows the order in which to initialize the scripts:
     });
     </script>
 
-
-Install the NPM package for session replay 
+Use session replay through Splunk CDN
 --------------------------------------------
-Use the following command to install a NPM package named ``@splunk/otel-web-session-recorder``.
+
+Initialize this code snippet to set up session replay through Splunk CDN. 
+
+.. code-block:: html
+
+    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
+    <script>
+    SplunkSessionRecorder.init({
+        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/ ...',
+        rumAuth: '<auth token>'
+    });
+    </script>
+
+
+
+Use session replay through Splunk NPM
+--------------------------------------------
+Use the following command to set up session replay with NPM through a package named ``@splunk/otel-web-session-recorder``.
 
 ``npm install @splunk/otel-web-session-recorder``
 
-Next, 
+Next, initialize this code snippet: 
 
 .. code-block:: html
 
@@ -75,22 +91,6 @@ Next,
     });
 
 
-
-Install the CDN package for session replay 
---------------------------------------------
-
-.. code-block:: html
-
-    <script src="https://cdn.signalfx.com/o11y-gdi-rum/packags/otel-web-session-recorder/latest/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
-    <script>
-    SplunkSessionRecorder.init({
-        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/ ...',
-        rumAuth: '<auth token>'
-    });
-    </script>
-
-
-
 Deactivate session replay 
 --------------------------------------------
 To deactivate session replay you can either:
@@ -98,15 +98,26 @@ To deactivate session replay you can either:
 * Turn it off for the particular session replay. 
 * Remove the instrumentation if you want to deactivate it completely. 
 
+
+Additional instrumentation settings
+------------------------------------
+
+For more information on configuration options, see :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/master/guide.md#guide>` on GitHub. 
+
 Redact information
 ==============================
-Text is redacted by default, you can optionally configure image redaction as well. 
+Text is redacted by default, you can optionally configure image redaction as well. The following image shows how the Splunk RUM homepage looks with text redaction enabled. All text is replaced by * symbols. 
+
+.. image:: /_images/rum/SR-text-redaction.png
+   :alt: Example home screen of a website with the text replaced by the star symbol to show redacted text. 
+   :width: 70%
+
 
 
 Image redaction 
 ----------------
 
-To redact images, set ``inlineImages = true`` in  the``splunksessionrecorder.init`` function. 
+To redact images, set ``inlineImages: false`` in  the ``splunksessionrecorder.init`` function. 
 
 For more information on how to customize your instrumentation, see the Privacy section of the :new-page:`rrweb guide <https://github.com/rrweb-io/rrweb/blob/master/guide.md#privacy>` on GitHub. 
 
@@ -122,11 +133,10 @@ To replay a session,  open the session you're interested in session waterfall, a
 
 Troubleshooting  
 ===================
-If you're stuck, try these steps: 
+Try these steps: 
 
 * If a session is incomplete, it might be because the network bandwidth isn't strong enough, which can cause part of a session to drop off. 
 * If a user has multiple tabs of the same application open, then there is a session replay available for each tab. Make sure to open the tab below session replay and navigate to the tab you're interested in. 
-
 
 
 
