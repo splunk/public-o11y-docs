@@ -76,30 +76,32 @@ Manage your tokens
 --------------------
 It is your responsibility to update and manage your tokens. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
 
-Assess the health of your private location
-==============================================
 
-A private location's health is based on three factors:
+.. 
+  Assess the health of your private location
+  ==============================================
 
-.. list-table::
-   :header-rows: 1
-   :widths: 20 40 40 
+  A private location's health is based on three factors:
 
-   * - :strong:`Factor`
-     - :strong:`Description`
-     - :strong:`Solution`
+  .. list-table::
+    :header-rows: 1
+    :widths: 20 40 40 
 
-   * - Active runner
-     - At least one runner is actively checking in.
-     - If no runners are checking in, set up new runners for the private location. 
+    * - :strong:`Factor`
+      - :strong:`Description`
+      - :strong:`Solution`
 
-   * - Used in tests
-     - The private location is currently being used in one or more tests.
-     - Add the private location to one or more tests. 
+    * - Active runner
+      - At least one runner is actively checking in.
+      - If no runners are checking in, set up new runners for the private location. 
 
-   * - Clear queue
-     - The queue for a given location is being cleared periodically and is not backed up.
-     - If the queue is backed up, add new runner(s) to the private location.
+    * - Used in tests
+      - The private location is currently being used in one or more tests.
+      - Add the private location to one or more tests. 
+
+    * - Clear queue
+      - The queue for a given location is being cleared periodically and is not backed up.
+      - If the queue is backed up, add new runner(s) to the private location.
 
 
 
