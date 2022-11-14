@@ -21,7 +21,7 @@ Kai, a site reliability engineer (SRE) at Buttercup Games, is responsible for ro
 Kai first checks their team's architecture diagram, but soon realizes it has been outdated. 
 
     .. image:: /_images/images-network-explorer/outdated-diagram.png
-        :alt: This image shows the outdated architecture diagram for Kai's team. The map is a combination of printed and illegible hand rawn elements on a stained piece of paper.
+        :alt: This image shows the outdated architecture diagram for Kai's team. The map is a combination of printed and illegible hand drawn elements on a stained piece of paper.
         :width: 80%
 
 Kai then attempts to investigate service dependencies using the Network Explorer service map, which provides a complete graphical view of all services based on their network traffic, regardless of the languages and frameworks used in each service.
