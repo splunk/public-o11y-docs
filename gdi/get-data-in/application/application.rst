@@ -31,6 +31,7 @@ You can instrument applications in each of these languages:
 - :ref:`Go <get-started-go>`
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`
+- :ref:`Erlang <apm-instrumentation-other-langs>`
 
 To learn more about the data we collect:
 

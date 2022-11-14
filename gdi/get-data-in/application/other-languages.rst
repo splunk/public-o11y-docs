@@ -7,7 +7,7 @@ Instrument applications written in other programming languages
 .. meta::
    :description: You can send traces to Splunk Observabilty Cloud from applications or services written in programming languages for which a Splunk distribution isn't available.
 
-You can send traces to Splunk Observabilty Cloud from applications or services written in programming languages for which a Splunk distribution isn't available yet, such as Rust or Erlang. Follow these steps to manually instrument an application to send traces to Splunk Observability Cloud.
+You can send traces to Splunk Observabilty Cloud from applications or services written in programming languages for which a Splunk distribution isn't available. Follow these steps to manually instrument an application to send traces to Splunk Observability Cloud.
 
 .. _other-add-dependencies:
 
@@ -17,17 +17,6 @@ Add the required dependencies or packages
 To instrument your application for Observability Cloud, you need to generate traces and spans that follow the OpenTelemetry format and semantic conventions. Add the required OpenTelemetry dependencies to your project, including gRPC communication libraries for communicating with the Splunk OpenTelemetry Collector.
 
 .. tabs::
-
-   .. tab:: Rust
-
-      Add the following dependencies to your ``cargo.toml`` file:
-
-      .. code-block:: toml
-
-         [dependencies]
-         opentelemetry = { path = "../../opentelemetry", features = ["rt-tokio", "metrics", "trace"] }
-         opentelemetry-otlp = { path = "../../opentelemetry-otlp", features = ["trace", "metrics"] }
-         opentelemetry-semantic-conventions = { path = "../../opentelemetry-semantic-conventions" }
 
    .. tab:: Erlang
 
@@ -64,40 +53,6 @@ In your application's code, initialize the OpenTelemetry library and tracer like
 
 .. tabs::
 
-   .. tab:: Rust
-
-      .. code-block:: rust
-
-         use opentelemetry::global::shutdown_tracer_provider;
-         use opentelemetry::runtime;
-         use opentelemetry::sdk::Resource;
-         use opentelemetry::trace::TraceError;
-         use opentelemetry::{global, sdk::trace as sdktrace};
-         use opentelemetry::{
-            trace::{TraceContextExt, Tracer},
-            Context, Key, KeyValue,
-         };
-         use opentelemetry_otlp::{ExportConfig, WithExportConfig};
-         use std::error::Error;
-         use std::time::Duration;
-
-         fn init_tracer() -> Result<sdktrace::Tracer, TraceError> {
-            opentelemetry_otlp::new_pipeline()
-               .tracing()
-               .with_exporter(
-                     opentelemetry_otlp::new_exporter()
-                        .tonic()
-                        .with_endpoint("http://localhost:4317"),
-               )
-               .with_trace_config(
-                     sdktrace::config().with_resource(Resource::new(vec![KeyValue::new(
-                        opentelemetry_semantic_conventions::resource::SERVICE_NAME,
-                        "trace-demo",
-                     )])),
-               )
-               .install_batch(opentelemetry::runtime::Tokio)
-         }
-
    .. tab:: Erlang
 
       Include the OpenTelemetry tracer in your application's code.
@@ -123,41 +78,6 @@ The following examples show how to create spans that have attributes or tags:
 
 .. tabs::
 
-   .. code-tab:: rust Rust
-
-      const LEMONS_KEY: Key = Key::from_static_str("lemons");
-      const ANOTHER_KEY: Key = Key::from_static_str("ex.com/another");
-
-      async fn main() -> Result<(), Box<dyn Error + Send + Sync + 'static>> {
-         let _ = init_tracer()?;
-         let cx = Context::new();
-
-         let tracer = global::tracer("ex.com/basic");
-
-         tracer.in_span("operation", |cx| {
-            let span = cx.span();
-            span.add_event(
-                  "Nice operation!".to_string(),
-                  vec![Key::new("bogons").i64(100)],
-            );
-            span.set_attribute(ANOTHER_KEY.string("yes"));
-
-            tracer.in_span("Sub operation...", |cx| {
-                  let span = cx.span();
-                  span.set_attribute(LEMONS_KEY.string("five"));
-
-                  span.add_event("Sub span event", vec![]);
-
-                  histogram.record(&cx, 1.3, &[]);
-            });
-         });
-
-         tokio::time::sleep(Duration::from_secs(60)).await;
-         shutdown_tracer_provider();
-
-         Ok(())
-      }
-
    .. code-tab:: erlang Erlang
 
       hello() ->
@@ -175,14 +95,14 @@ The following examples show how to create spans that have attributes or tags:
                            ?add_event(<<"Sub span event!">>, [])
                      end).
 
-.. _other-set-env-vars:
+.. _export-directly-to-olly-cloud-others:
 
-Set the required environment variables
+Send data directly to Observability Cloud
 ==================================================
 
-To send data to Observability Cloud, the instrumentation sends requests to several ingest API endpoints using the OTLP protocol over a gRPC connection. You must authenticate calls using a valid token and Splunk realm.
+By default, all telemetry goes to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-Set the following environment variables before running your instrumented application:
+If you need to send data directly to Observability Cloud, set the following environment variables:
 
 .. code-block:: shell
 
