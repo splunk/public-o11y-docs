@@ -505,7 +505,7 @@ Once you set up Network Explorer, you can start monitoring network telemetry met
 
   For more information, see :ref:`use-navigators-imm`.
 
-- Custom dashboards. For more information, see :ref:`dashboard-create-customize`.
+- Service map. For more information, see :ref:`network-explorer-service-map`.
 - Alerts and detectors. For more information, see :ref:`get-started-detectoralert`.
 
 For more information on metrics available to collect with Network Explorer, see :ref:`network-explorer-metrics`.
