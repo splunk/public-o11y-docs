@@ -18,6 +18,7 @@ Network Explorer lets you ingest and analyze network telemetry, which you can us
 
 - Identify network anomalies in real time.
 - Discover sources of high network cost in your environment.
+- Examine service topology with visualizations.
 
 
 How does Network Explorer work?
