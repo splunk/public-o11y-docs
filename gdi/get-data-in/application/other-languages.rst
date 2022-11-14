@@ -11,7 +11,7 @@ You can send traces to Splunk Observabilty Cloud from applications or services w
 
 .. _other-add-dependencies:
 
-Add the required dependencies or packages
+1. Add the required dependencies or packages
 ==================================================
 
 To instrument your application for Observability Cloud, you need to generate traces and spans that follow the OpenTelemetry format and semantic conventions. Add the required OpenTelemetry dependencies to your project, including gRPC communication libraries for communicating with the Splunk OpenTelemetry Collector.
@@ -46,7 +46,7 @@ To instrument your application for Observability Cloud, you need to generate tra
 
 .. _other-init-tracer:
 
-Initialize the OpenTelemetry tracer
+2. Initialize the OpenTelemetry tracer
 =================================================
 
 In your application's code, initialize the OpenTelemetry library and tracer like in the following examples:
@@ -69,10 +69,10 @@ In your application's code, initialize the OpenTelemetry library and tracer like
 
 .. _other-generate-spans:
 
-Generate spans for your application
+3. Generate spans for your application
 ==================================================
 
-In your application's code, initialize the OpenTelemetry tracer and create spans for the operations you want to track. How you create spans differs depending on the target programming language. 
+In your application's code, create spans for the operations you want to track. How you create spans differs depending on the target programming language. 
 
 The following examples show how to create spans that have attributes or tags:
 
