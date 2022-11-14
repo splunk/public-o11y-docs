@@ -17,6 +17,7 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a Go application <go/get-started>
    Instrument a Ruby application <ruby/get-started>
    Instrument a PHP application <php/get-started>
+   Instrument applications written in other programming languages <other-languages>
    Spans in Splunk Observability Cloud <span-attributes>
 
 Instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
@@ -30,8 +31,11 @@ You can instrument applications in each of these languages:
 - :ref:`Go <get-started-go>`
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`
+- :ref:`Erlang <apm-instrumentation-other-langs>`
 
 To learn more about the data we collect:
 
 - Browse our docs on :ref:`metrics <get-started-metrics>`.
 - See our docs about :ref:`semantic conventions and common attributes for spans <span-attributes>`.
+
+.. note:: To instrument applications or services written in languages other than the ones listed here, see :ref:`apm-instrumentation-other-langs`.
