@@ -43,7 +43,7 @@ Note that the ``deployment.environment`` span tag is particularly useful because
 
 Instrument your application code to add tags to spans
 ----------------------------------------------------------
-When you add span tags via instrumentation, you can specify tags on a per-application basis. For detailed instructions on how to manually instrument a Node.js application, see :ref:`instrument-nodejs-applications`. For more detail and examples of creating a tracer and a span, see :new-page:`Acquiring a tracer <https://opentelemetry.io/docs/instrumentation/js/instrumentation/#acquiring-a-tracer>` at https://opentelemetry.io/.
+When you add span tags via instrumentation, you can specify tags on a per-application basis. For detailed instructions on how to manually instrument a Node.js application, see :ref:`instrument-nodejs-applications`. For more detail and examples of creating a tracer and a span, see :new-page:`Acquiring a tracer <https://opentelemetry.io/docs/instrumentation/js/instrumentation/#acquiring-a-tracer>` at https://opentelemetry.io.
 
 How you instrument code to create span tags (attributes) depends on the programming language and instrumentation library you're using. 
 
