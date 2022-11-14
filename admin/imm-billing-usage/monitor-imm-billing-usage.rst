@@ -10,9 +10,7 @@ Monitor Splunk Infrastructure Monitoring subscription usage
 
 .. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
-.. note::
-
-      The information in this topic applies to organizations whose subscription plan is based on the number of hosts or metrics that Splunk Infrastructure Monitoring is monitoring for you. If your organization's usage is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`.
+.. caution:: The information in this topic applies to organizations whose subscription plan is based on the number of hosts or metrics that Splunk Infrastructure Monitoring is monitoring for you. If your organization's usage is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`.
 
 Overview
 ========
@@ -196,8 +194,9 @@ Available on the :strong:`Usage Breakdown` tab, the hourly usage report shows th
 
 With this report, you can see all of the MTS categories used within a given hour period.
 
-The following table explains the different columns in an hourly usage detail report.
+.. note:: Hourly reports are only available for host-based subscriptions.
 
+The following table explains the different columns in an hourly usage detail report.
 
 .. list-table::
    :header-rows: 1
