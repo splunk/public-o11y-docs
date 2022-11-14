@@ -46,11 +46,12 @@ service:
 
 ### Example
 
-See a configuration example used in integration testing:
+See a configuration example used in integration testing, including how to set intervals checking with `intervalSeconds`:
 
 ```yaml
 monitors:
   - type: telegraf/exec
+    intervalSeconds: 3600
     command: /usr/local/bin/script.sh
     signalFxCumulativeMetrics:
       - weather.lightning_strikes
