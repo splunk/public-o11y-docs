@@ -38,4 +38,4 @@ To learn more about the data we collect:
 - Browse our docs on :ref:`metrics <get-started-metrics>`.
 - See our docs about :ref:`semantic conventions and common attributes for spans <span-attributes>`.
 
-.. note:: To instrument applications or services written in languages other than the ones listed here, see :ref:`apm-instrumentation-other-langs`, which contains examples for Rust and Erlang.
+.. note:: To instrument applications or services written in languages other than the ones listed here, see :ref:`apm-instrumentation-other-langs`.

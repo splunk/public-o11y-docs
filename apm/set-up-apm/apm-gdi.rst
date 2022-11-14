@@ -124,7 +124,7 @@ In the following table, follow the instrumentation steps for the language that e
 
 After you instrument your applications, you're ready to verify that your data is coming in.
 
-.. note:: To instrument applications or services written in languages other than the ones listed here, see :ref:`apm-instrumentation-other-langs`, which contains examples for Rust and Erlang.
+.. note:: To instrument applications or services written in languages other than the ones listed here, see :ref:`apm-instrumentation-other-langs`.
 
 .. _verify-apm-data:
 
