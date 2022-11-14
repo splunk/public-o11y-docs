@@ -570,6 +570,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Use navigators <infrastructure/use-navigators>
 
+.. toctree::
+   :maxdepth:   3
+
+   Network Explorer <infrastructure/network-explorer/network-explorer>
 
 .. toctree::
    :maxdepth:   3

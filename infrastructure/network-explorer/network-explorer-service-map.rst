@@ -1,7 +1,3 @@
-:orphan:
-
-.. include:: /_includes/network-explorer/network-explorer-preview-header.rst
-
 
 .. _network-explorer-service-map:
 
