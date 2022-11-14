@@ -28,12 +28,15 @@ The service map consists of the following components.
       - :strong:`Description`
         
     * - Network workload
-      - A network workload is a service in your network. The names for these services come from your Kubernetes environment, Docker metadata, Linux service managers such as systemd, DNS, and IP address data.
-      - Network workloads are represented as circles.
+      - A network workload is a service in your network.
+      - | - Network workloads are represented as circles.
+        | - The names for these services come from your Kubernetes environment, Docker metadata, Linux service managers such as systemd, DNS, and IP address data.
       
     * - Network edge
       - A network edge captures the amount of TCP network traffic from a source to destination workload.
-      - Network edges are represented as broken arrows connecting the circles. The arrow direction corresponds to the network traffic direction. Each arrow has a number indicating the amount of data coming from a source network workload to a destination network workload in a certain time period. By default, the time period is the past 3 hours.
+      - | - Network edges are represented as broken arrows connecting the circles.
+        | - The arrow direction corresponds to the network traffic direction.
+        | - Each arrow has a number indicating the amount of data coming from a source network workload to a destination network workload in a certain time period. By default, the time period is the past 3 hours.
 
 For example, the following service map shows traffic between the ``emailservice`` network workload and ``checkoutservice`` network workload, in both directions. The ``emailservice`` network workload sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past 3 hours.  
 
@@ -71,4 +74,4 @@ By default, a network edge shows the amount of data coming from a source network
 
   .. image:: /_images/images-network-explorer/change-time.png
       :alt: Dropdown menu to change time period for network edge data.
-      :width: 50%
+      :width: 30%
