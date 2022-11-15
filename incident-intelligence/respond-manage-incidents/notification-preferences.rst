@@ -21,7 +21,7 @@ You are now ready to be notified of triggered incidents.
 SMS notification phone numbers
 ======================================
 
-If you choose to receive notifications via SMS notifications will be sent from the following phone numbers. For steps to change your notification preferences, see :ref:`ii-notification-preferences`.
+If you choose to receive notifications via SMS notifications, the sending phone number is dependent on the device country location. numbers. 
 
 See also
 ============
