@@ -32,7 +32,7 @@ Be prepared to provide the domain for the ID/email address that your users provi
 
 Information required for generic SAML SSO integrations
 ----------------------------------------------------------------
-:strong:`User information``
+:strong:`User information`
 
 * One of:
    * ``User.FirstName`` and ``User.LastName``: User's first and last name
