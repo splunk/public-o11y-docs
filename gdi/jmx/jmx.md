@@ -1,6 +1,6 @@
 (jmx)=
 # JMX
-<meta name="description" content="Documentation on the jmx monitor">
+<meta name="description" content="JMX monitor install and config details to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points">
 
 ## Description
 
