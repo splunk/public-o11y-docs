@@ -136,7 +136,7 @@ The monitor treats the value of `connectionString` as a Golang template with a c
 
 To configure the agents to collect Snowflake performance and usage metrics, do the following:
 
-1. Copy the `pkg/sql/snowflake-metrics.yaml` file from the `sql` monitor repo into the same location as your `agent.yaml` file. For example, `/etc/splunk`.
+1. Copy the `pkg/sql/snowflake-metrics.yaml` file from the `sql` monitor repo into the same location as your `agent.yaml` file. For example, `/etc/splunk`. Find the latest version of `snowflake-metrics.yaml` [in our GitHub repo](https://github.com/splunk/observability-content-contrib/blob/main/dashboards-and-dashboard-groups/snowflakedb/Configuration/snowflake-metrics.yaml).
 2. Configure the SQL monitor as follows:
 
 ```yaml
