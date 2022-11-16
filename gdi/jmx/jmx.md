@@ -83,9 +83,6 @@ The following table shows the configuration options for this monitor:
 | `serviceURL` | no | `string` | The service URL for the JMX RMI/JMXMP endpoint. If empty it will be filled in with values from `host` and `port` using a standard JMX RMI template: `service:jmx:rmi:///jndi/rmi://<host>:<port>/jmxrmi`. If overridden, `host` and `port` will have no effect. For JMXMP endpoint the service URL must be specified. The JMXMP endpoint URL format is `service:jmx:jmxmp://<host>:<port>`. |
 <<<<<<< HEAD
 | `groovyScript` | **yes** | `string` | A literal Groovy script that generates data points from JMX MBeans. See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it here with `${include:/<my_path>/jmx.groovy}`. For more information on using the `include` config, see <a href=" https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource">. Or, you can put it straight in YAML by using the `\|` block indicator.  |
-=======
-| `groovyScript` | **yes** | `string` | A literal Groovy script that generates data points from JMX MBeans. See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it with `${include:/home/centos/jmx.groovy}`, or you can put it straight in YAML by using the `|` heredoc syntax. For more information on using the `include` config, see <a href=" https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource">. |
->>>>>>> df61f62eb81e857a49b3c0bcca76177ca90a64c2
 | `username` | no | `string` | Username for JMX authentication, if applicable. |
 | `password` | no | `string` | Password for JMX authentication, if applicable. |
 | `keyStorePath` | no | `string` | The key store path is required if client authentication is enabled on the target JVM. |
