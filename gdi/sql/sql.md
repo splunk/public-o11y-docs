@@ -95,7 +95,71 @@ The nested `metrics` configuration object has the following fields:
 | `isCumulative`   | No    | `bool` | Whether the value is a cumulative counters (true) or gauge (false). If you set this to the wrong value and send in your first data point for the metric name with the wrong type, you have to manually change the type, as it is set in the system based on the first type seen. The default value is `false`. |
 | `dimensionPropertyColumns` | No    | `map of lists`  | Mapping between dimensions and the columns to be used to attach corresponding properties.    |
 
-### Using the monitor
+### Supported drivers
+
+You must specify the `dbDriver` option that contains the name of the database driver to use. These names are the same as the name of the Golang SQL driver used in the agent. The monitor formats the `connectionString` according to the driver you specify. 
+
+```{note}
+Please be sure to use the correct connection string syntax based on the driver you're using. For example, if you use the `mysql` driver, you must use the connection string syntax for the `mysql` driver.
+````
+
+This is the list of the drivers currently supported:
+
+- [`hana`](https://github.com/SAP/go-hdb)
+- [`sqlserver`](https://pkg.go.dev/github.com/denisenkom/go-mssqldb)
+- [`mysql`](https://pkg.go.dev/github.com/go-sql-driver/mysql)
+- [`postgres`](https://pkg.go.dev/github.com/jackc/pgx)
+- [`pq`](https://pkg.go.dev/github.com/lib/pq)
+- [`snowflake`](https://pkg.go.dev/github.com/snowflakedb/gosnowflake)
+
+See the following example:
+
+```yaml
+smartagent/sql:
+  - type: sql
+      host: localhost
+      port: 1433
+      dbDriver: sqlserver
+      connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=123456;'
+    queries: 
+      query: 'SELECT COUNT(*) as count FROM Sales.Orders'
+    metrics:
+      metricName: "orders"
+      valueColumn: "count"
+```
+
+### Parameterized connection string
+
+The monitor treats the value of `connectionString` as a Golang template with a context consisting of the variables `host` and `port` and all the parameters from the `params` option. To add a variable to the template, use the Golang `{{.varname}}` template syntax.
+
+### Collect Snowflake performance and usage metrics
+
+To configure the agents to collect Snowflake performance and usage metrics, do the following:
+
+1. Copy the `pkg/sql/snowflake-metrics.yaml` file from the `sql` monitor repo into the same location as your `agent.yaml` file. For example, `/etc/splunk`.
+2. Configure the SQL monitor as follows:
+
+```yaml
+receivers:
+  smartagent/sql:
+    type: sql
+    intervalSeconds: 3600
+    dbDriver: snowflake
+    params:
+      account: "account.region"
+      database: "SNOWFLAKE"
+      schema: "ACCOUNT_USAGE"
+      role: "ACCOUNTADMIN"
+      user: "user"
+      password: "password"
+    connectionString: "{{.user}}:{{.password}}@{{.account}}/{{.database}}/{{.schema}}?role={{.role}}"
+    queries:
+      {"#from": "/etc/signalfx/snowflake-metrics.yaml"}
+```
+
+You can also copy the contents of `snowflake-metrics.yaml` into `agent.yaml` under `queries`. Edit `snowflake-metrics.yaml` to only include the metrics you want to monitor.
+
+## Using the monitor
 
 Consider the following `customers` database table:
 
@@ -168,69 +232,6 @@ but you can convert the `Replica_IO_Running` column (a string `Yes/No` value) to
 ```
 
 Use this configuration to generate a single gauge data point for each row in the `replica status` output, with two dimension, `main_uuid` and `channel`, and with a value of `0` or `1`, depending on if the SQL thread for the replica is running.
-
-### Supported drivers
-
-You must specify the `dbDriver` option that contains the name of the database driver to use. These names are the same as the name of the Golang SQL driver used in the agent. The monitor formats the `connectionString` according to the driver you specify. 
-
-```{note}
-Please be sure to use the correct connection string syntax based on the driver you're using. For example, if you use the `mysql` driver, you must use the connection string syntax for the `mysql` driver.
-````
-
-This is the list of the drivers currently supported:
-
-- [`hana`](https://github.com/SAP/go-hdb)
-- [`sqlserver`](https://pkg.go.dev/github.com/denisenkom/go-mssqldb)
-- [`mysql`](https://pkg.go.dev/github.com/go-sql-driver/mysql)
-- [`postgres`](https://pkg.go.dev/github.com/jackc/pgx)
-- [`pq`](https://pkg.go.dev/github.com/lib/pq)
-- [`snowflake`](https://pkg.go.dev/github.com/snowflakedb/gosnowflake)
-
-See the following example:
-
-```yaml
-smartagent/sql:
-  - type: sql
-      host: localhost
-      port: 1433
-      dbDriver: sqlserver
-      connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=123456;'
-    queries: 
-      query: 'SELECT COUNT(*) as count FROM Sales.Orders'
-    metrics:
-      metricName: "orders"
-      valueColumn: "count"
-```
-
-### Parameterized connection string
-
-The monitor treats the value of `connectionString` as a Golang template with a context consisting of the variables `host` and `port` and all the parameters from the `params` option. To add a variable to the template, use the Golang `{{.varname}}` template syntax.
-
-### Collect Snowflake performance and usage metrics
-
-To configure the agents to collect Snowflake performance and usage metrics, do the following:
-
-1. Copy the `pkg/sql/snowflake-metrics.yaml` file from the `sql` monitor repo into the same location as your `agent.yaml` file. For example, `/etc/splunk`.
-2. Configure the SQL monitor as follows:
-
-```yaml
-monitors:
-  - type: sql
-    intervalSeconds: 3600
-    dbDriver: snowflake
-    params:
-      account: "account.region"
-      database: "SNOWFLAKE"
-      schema: "ACCOUNT_USAGE"
-      role: "ACCOUNTADMIN"
-      user: "user"
-      password: "password"
-    connectionString: "{{.user}}:{{.password}}@{{.account}}/{{.database}}/{{.schema}}?role={{.role}}"
-    queries:
-      {"#from": "/etc/signalfx/snowflake-metrics.yaml"}
-```
-
-You can also copy the contents of `snowflake-metrics.yaml` into `agent.yaml` under `queries`. Edit `snowflake-metrics.yaml` to only include the metrics you want to monitor.
 
 ## Metrics filtering
 
