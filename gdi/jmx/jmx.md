@@ -81,7 +81,6 @@ The following table shows the configuration options for this monitor:
 | `host` | no | `string` | Host will be filled in by auto-discovery if this monitor has a discovery rule. |
 | `port` | no | `integer` | Port will be filled in by auto-discovery if this monitor has a discovery rule. (**default:** `0`) |
 | `serviceURL` | no | `string` | The service URL for the JMX RMI/JMXMP endpoint. If empty it will be filled in with values from `host` and `port` using a standard JMX RMI template: `service:jmx:rmi:///jndi/rmi://<host>:<port>/jmxrmi`. If overridden, `host` and `port` will have no effect. For JMXMP endpoint the service URL must be specified. The JMXMP endpoint URL format is `service:jmx:jmxmp://<host>:<port>`. |
-<<<<<<< HEAD
 | `groovyScript` | **yes** | `string` | A literal Groovy script that generates data points from JMX MBeans. See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it here with `${include:/<my_path>/jmx.groovy}`. For more information on using the `include` config, see <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource">https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource</a>. Or, you can put it straight in YAML by using the \| block indicator.  |
 | `username` | no | `string` | Username for JMX authentication, if applicable. |
 | `password` | no | `string` | Password for JMX authentication, if applicable. |
