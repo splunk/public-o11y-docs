@@ -902,7 +902,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   admin/SSO/sso
+   admin/SSO/sso-about
 
 .. toctree::
    :maxdepth:   3
