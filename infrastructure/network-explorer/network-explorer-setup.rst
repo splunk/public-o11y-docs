@@ -205,9 +205,6 @@ The following table shows required parameters for this installation:
 
        * - ``clusterName``
          - An arbitrary value that identifies your Kubernetes cluster.
-        
-       * - ``otlp.receiver.host``
-         - Name of the Splunk Distribution of OpenTelemetry Collector service.
          
 
 Example
@@ -233,7 +230,7 @@ Follow these steps to install Network Explorer:
 
     .. code-block:: bash
 
-        helm --namespace=<NAMESPACE> install network-explorer splunk-otel-network-explorer-chart/splunk-otel-network-explorer --set="clusterName=<CLUSTER_NAME>,otlp.receiver.host=my-splunk-otel-collector"
+        helm --namespace=<NAMESPACE> install network-explorer splunk-otel-network-explorer-chart/splunk-otel-network-explorer --set="clusterName=<CLUSTER_NAME>"
 
 #. (Optional) The Network Explorer kernel collector requires kernel headers to run the kernel in each Kubernetes node. The kernel collector installs the headers automatically unless your nodes don't have access to the internet.
 
