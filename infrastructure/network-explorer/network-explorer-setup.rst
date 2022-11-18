@@ -108,7 +108,9 @@ The following table shows required parameters for this installation:
 Example
 --------------------------
 
-Follow these steps to install Network Explorer. In this example, the reducer, the kernel collector, and the Kubernetes collector are configured. The cloud collector isn't enabled.
+In this example, the reducer, the kernel collector, and the Kubernetes collector are configured. The cloud collector isn't enabled.
+
+Follow these steps to install Network Explorer using the Helm chart method:
 
 #. Run the following command to deploy the Helm chart.
 
