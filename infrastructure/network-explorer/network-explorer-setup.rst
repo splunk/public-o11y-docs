@@ -10,6 +10,8 @@ Set up Network Explorer
 .. meta::
     :description: Install and configure Network Explorer
 
+You can install and configure Network Explorer as part of the Splunk Distribution of OpenTelemetry Collector Helm chart.
+
 Prerequisites
 ==============================
 
