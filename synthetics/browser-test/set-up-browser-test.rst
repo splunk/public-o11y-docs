@@ -60,7 +60,6 @@ If you change the name of your test or the name of a synthetic transaction, it m
 
 Advanced settings for Browser tests 
 ============================================================
-================
 
 There are many reasons why you might want to configure advanced settings for your synthetics tests. Here are a few: 
 
