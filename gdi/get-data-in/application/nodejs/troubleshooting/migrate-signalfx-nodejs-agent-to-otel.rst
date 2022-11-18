@@ -84,11 +84,13 @@ You have two options to update your instrumentation entry point:
    // your new options here
   });
 
-2. Automatically update your application to use Splunk Distribution of OpenTelemetry JS instead of SignalFx Tracing Library. To do so, launch Node using the following command:
+2. Automatically update your application to use Splunk Distribution of OpenTelemetry JS instead of SignalFx Tracing Library. To do so, run Node using the following command:
 
 .. code-block:: bash
 
   node -r @splunk/otel/instrument <your-app.js>
+
+.. note:: To export traces directly to Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
 
 .. _migrate-settings-nodejs-agent:
 
@@ -119,7 +121,7 @@ To migrate settings from the SignalFx tracing library to the Splunk Distribution
    * - ``SIGNALFX_LOGS_INJECTION_TAGS``
      - Not applicable See :ref:`correlate-traces-with-logs-nodejs`.
    * - ``SIGNALFX_ENABLED_PLUGINS``
-     - Not applicable. To install instrumentation packages, see :ref:`instrument-nodejs-applications`.
+     - Not applicable. To install instrumentation packages, see :ref:`add-custom-instrumentation`.
    * - ``SIGNALFX_SERVER_TIMING_CONTEXT``
      - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
    * - ``SIGNALFX_TRACING_ENABLED``
@@ -149,9 +151,9 @@ If you're using the passing configuration options as arguments to ``start()``, u
    * - ``logInjectionTags``
      - No equivalent. Use ``tracerConfig.resource`` instead.
    * - ``flushInterval``
-     - No equivalent. Contact Splunk support if you customized this value.
+     - No equivalent. Set the ``OTEL_BSP_SCHEDULE_DELAY`` environment variable instead.
    * - ``plugins``
-     - Not applicable. To install instrumentation packages, see :ref:`instrument-nodejs-applications`.
+     - Not applicable. To install instrumentation packages, see :ref:`add-custom-instrumentation`.
    * - ``recordedValueMaxLength``
      - Not applicable. Set the ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT`` environment variable instead.
    * - ``enableServerTiming``
@@ -178,6 +180,13 @@ Migrate custom metric collection
 
 To migrate your custom metric instrumentation from the SignalFx client library, see :ref:`nodejs-otel-metrics-migration`.`
 
+Migrate instrumentations
+----------------------------------------------------
+
+All libraries supported by the SignalFx Tracing Library for NodeJS are support by the Splunk Distribution of OpenTelemetry JS. The only exceptions are listed in :ref:`considerations-nodejs-migration`.
+
+To find equivalent instrumentation, search for each instrumentation in the OpenTelemetry registry. If an instrumentation is not bundled, you can use custom instrumentation packages. See :ref:`add-custom-instrumentation`.
+
 .. _considerations-nodejs-migration:
 
 Considerations for migrating to Splunk Distribution of OpenTelemetry JS
@@ -186,14 +195,12 @@ Considerations for migrating to Splunk Distribution of OpenTelemetry JS
 The following limitations apply when migrating from the SignalFx Tracing Library for Node.js:
 
 - The set of Node.js versions that Splunk Distribution of OpenTelemetry JS supports is different from the set that SignalFx Tracing Library supports. See :ref:``nodejs-otel-requirements``.
-- The default flush interval, which defines how frequently captured telemetry data is sent to the backend, is now 30 seconds instead of 2 seconds, and can't be modified.
+- The default flush interval, which defines how frequently captured telemetry data is sent to the backend, is now 500 milliseconds instead of 2 seconds, and can't be modified.
 - Autoinstrumentation is not available for the following libraries:
    - ``AdonisJS``
    - ``amqp10``
    - ``mongodb-core``
    - ``sails``
-- Only limited instrumentation for:
-   - ``nest`` (only manual instrumentation helpers are available)
 - Some instrumentations have specific requirements:
    - ``express``, ``koa``, and ``hapi`` instrumentations require active ``http`` or ``https`` instrumentation to produce spans.
    - ``bluebird``, ``q``, and ``when`` are supported through ``AsyncLocalStorageContextManager`` (or ``AsyncHooksContextManager`` when the Node version is lower than 14.8).
