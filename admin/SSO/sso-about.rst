@@ -143,7 +143,7 @@ If you are still encountering configuration errors, review the following trouble
   
   :strong:`Symptom`
     .. image:: /_images/admin/sso-troubleshoot1.png
-      :width: 90%
+      :width: 50%
       :alt: A 404 error message stating "Could not find credentials".
 
   :strong:`Cause`
@@ -155,7 +155,7 @@ If you are still encountering configuration errors, review the following trouble
   
   :strong:`Symptom`
     .. image:: /_images/admin/sso-troubleshoot401.png
-      :width: 90%
+      :width: 50%
       :alt: A 401 error message stating "Authentication required".
 
   :strong:`Cause`
@@ -167,7 +167,7 @@ If you are still encountering configuration errors, review the following trouble
   
   :strong:`Symptom`
     .. image:: /_images/admin/sso-troubleshoot-unsupported.png
-      :width: 90%
+      :width: 50%
       :alt: A 500 error message stating "Unsupported SAML provider".
 
   :strong:`Cause`
