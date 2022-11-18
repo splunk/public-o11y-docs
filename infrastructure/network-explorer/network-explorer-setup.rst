@@ -26,7 +26,7 @@ To use Network Explorer, you must meet the following requirements.
       - Network Explorer is only supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
       
     * - Operating system
-      - RedHat Linux: 7.6+, Ubuntu 16.04+, Debian Stretch+, Amazon Linux 2, Google COS
+      - RedHat Linux versions 7.6 or higher, Ubuntu versions 16.04 or higher, Debian Stretch+, Amazon Linux 2, Google COS
 
     * - Kubernetes version
       - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation. 
