@@ -28,7 +28,7 @@ You can see the general SSO SAML flow in the following image:
 
 
 .. image:: /_images/admin/sso-samlflow.png
-      :width: 99%
+      :width: 90%
       :alt: Diagram showing the back and forth flow of an IdP-initiated authentication request
 
 Splunk Observability Cloud adds an additional security with email verification to guard against attacks between different organizations.
@@ -45,7 +45,7 @@ When setting up SSO integration you need to provide information which will enabl
 The following image shows Okta configuration information however, all IdPs require similar information.
 
 .. image:: /_images/admin/sso-oktaexample.png
-      :width: 90%
+      :width: 80%
       :alt: The Okta SSO integration screen in Splunk Observability Cloud with text indicating the purpose of each field.
 
 The IdP requires the following information:
@@ -69,22 +69,22 @@ The following table uses Azure Active Directory as an example and shows the corr
    * - :strong:`Splunk Observability Cloud field name`
      - :strong:`Azure Active Directory field name`
 
-   * - :guilabel: `Integration ID` (EPAMIDfalsg)
+   * - :guilabel:`Integration ID` (EPAMIDfalsg)
      - :guilabel:`Reply URL`` (Assertion Consumer Service URL (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
   
-   * - :guilabel: `Integration-specific Entity ID`` (EPAMIDfalsg)
+   * - :guilabel:`Integration-specific Entity ID`` (EPAMIDfalsg)
      - :guilabel:`Identifier (Entity ID)` (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
 
-   * - :guilabel: `Certificate (Base64)`  (upload file to replace)
+   * - :guilabel:`Certificate (Base64)`  (upload file to replace)
      - :guilabel:`Certificate (Base64)` (download file)`
   
-   * - :guilabel: `Integration ID` (EPAMIDfalsg)
+   * - :guilabel:`Integration ID` (EPAMIDfalsg)
      - :guilabel:`Reply URL (Assertion Consumer Service URL` (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
    
-   * - :guilabel: `Azure AD Identifier` (https://<domain>/081aaa5f-fsec-m01c-03dfalke45n)
+   * - :guilabel:`Azure AD Identifier` (https://<domain>/081aaa5f-fsec-m01c-03dfalke45n)
      - :guilabel:`Azure AD Identifier`  (https://<domain>/081aaa5f-fsec-m01c-03dfalke45n)
      
-   * - For the user attributes and claims, User.FullName or User.FirstName + User.LastName are required, in addition to PersonImmutableID and User.email.
+   * - For the user attributes and claims, :code:`FullName` or :code:`User.FirstName` and :code:`User.LastName` are required, in addition to :code:`PersonImmutableID` and :code:`User.email`
      - :guilabel:`User.FirstName`  (user.givenname), :guilabel:`LastName` (user.surname), PersonImmutableID (user.userprincipal name), :guilabel:`FullName` (user.displayname), :guilabel:`email` (user.othermail)
      
 
@@ -116,7 +116,7 @@ If you are still encountering configuration errors, review the following trouble
   * After the first redirect to the IdP, the IdP does not recognize the application.
   
     :strong:`Symptoms`
-    This example is from AzureAD:
+      This example is from AzureAD:
 
       :code:`AADSTS700016: Application with identifier 'https://api.signalfx.com/v1/saml/metadata/EiObDvcAYAA' was not found in the directory 'fa80159f-****-****-****-************'.`
 
@@ -132,9 +132,47 @@ If you are still encountering configuration errors, review the following trouble
 * After login, the user ends up in a different organization than expected.
   
   :strong:`Symptom`
-  The user ends up in a different organization than expected.
+    The user ends up in a different organization than expected.
 
   :strong:`Cause`
     The likely cause is having more than one Splunk Observability Cloud integration configured your IdP and the IdP cannot distinguish between them. The user is sent to the wrong one, usually the first one configured.
   :strong:`Solution`
     Make sure that all of your SSO integrations have the :guilabel:`Entity ID` checked. Ensure that in the IdP, the Splunk Observability Cloud connection is configured to accept the new format of the Entity ID, which is displayed next to the checkbox and contains Integration ID in it.
+
+* You receive a 404 error from Observability Cloud after you log in to the IdP.
+  
+  :strong:`Symptom`
+    .. image:: /_images/admin/sso-troubleshoot1.png
+      :width: 90%
+      :alt: A 404 error message stating "Could not find credentials".
+
+  :strong:`Cause`
+    The likely cause is that your configuration is pointing to the incorrect realm.
+  :strong:`Solution`
+    Verify that the :code:`ACS URL` contains the correct realm and :code:`Integration ID`.
+
+* You receive a 401 error after you log in to the IdP.
+  
+  :strong:`Symptom`
+    .. image:: /_images/admin/sso-troubleshoot401.png
+      :width: 90%
+      :alt: A 401 error message stating "Authentication required".
+
+  :strong:`Cause`
+    Most likely the :code:`Subject` attribute in the assertion has a format other than :code:`Persistent`. :code:`Subject` identifies the subject of a SAML assertion, which is typically the user who is being authenticated. A :code:`Persistent` subject means that IdP guarantees that this attribute will always stay the same for a given user. Observability Cloud requires the subject to be in persistent format.
+  :strong:`Solution`
+    Change the subject format to persistent in the IdP settings.
+
+* You see an error message that your SAML provider is unsupported.
+  
+  :strong:`Symptom`
+    .. image:: /_images/admin/sso-troubleshoot-unsupported.png
+      :width: 90%
+      :alt: A 500 error message stating "Unsupported SAML provider".
+
+  :strong:`Cause`
+    For IdP specific integrations for example, PingOne, Okta, OneLogin,  Observability Cloud expects that the requests will be coming from particular domains or URLs.
+  :strong:`Solution`
+    Use the Generic SAML integration instead of the integration dedicated to your IdP. Most IdPs have built-in generic SAML 2.0 plugins which should be used for this purpose. Enabling generic SAML requires additional actions :ref:`sso-generic`.
+ 
+    
