@@ -163,13 +163,21 @@ GKE syncs properties for the following resources:
       - :strong:`Custom property`
       - :strong:`Description`
 
-    * - ``scheduling.automaticRestart``
-      - ``gcp_auto_restart``
-      - 
+    * - ``cluster_name``
+      - ``gcp_cluster_name``
+      - cluster name
 
-    * - ``scheduling.automaticRestart``
-      - ``gcp_auto_restart``
-      - 
+    * - ``namespace_name``
+      - ``gcp_namespace_name``
+      - name of the pod's namespace
+
+    * - ``pod_name``
+      - ``gcp_pod_name``
+      - pod name
+
+    * - ``container_name``
+      - ``gcp_container_name``
+      - container name
 
 :strong:`k8s_node`
 
@@ -181,13 +189,13 @@ GKE syncs properties for the following resources:
       - :strong:`Custom property`
       - :strong:`Description`
 
-    * - ``scheduling.automaticRestart``
-      - ``gcp_auto_restart``
-      - 
+    * - ``cluster_name``
+      - ``gcp_cluster_name``
+      - cluster name
 
-    * - ``scheduling.automaticRestart``
-      - ``gcp_auto_restart``
-      - 
+    * - ``node_name``
+      - ``gcp_node_name``
+      - node name
 
 :strong:`k8s_pod`
 
@@ -199,13 +207,17 @@ GKE syncs properties for the following resources:
       - :strong:`Custom property`
       - :strong:`Description`
 
-    * - ``scheduling.automaticRestart``
-      - ``gcp_auto_restart``
-      - 
+    * - ``cluster_name``
+      - ``gcp_cluster_name``
+      - cluster name
 
-    * - ``scheduling.automaticRestart``
-      - ``gcp_auto_restart``
-      - 
+    * - ``namespace_name``
+      - ``gcp_namespace_name``
+      - name of the pod's namespace
+
+    * - ``pod_name``
+      - ``gcp_pod_name``
+      - pod name
 
 .. _storage-bucket-properties:
 
