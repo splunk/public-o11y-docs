@@ -29,25 +29,25 @@ See the metadata synced at a project level:
 
     * - ``creationTimestamp``
       - ``gcp_project_creation_time``
-      - time project was created (for example, ``Thu Oct 19 18:16:25 UTC 2017``)
+      - Time project was created (for example, ``Thu Oct 19 18:16:25 UTC 2017``)
 
     * - Labels \*
       - ``gcp_project_label_<name-of-label>`` (if user has labels)
-      - all project-wide labels except for ``signalfx-id``
+      - All project-wide labels except for ``signalfx-id``
 
     * - ``name``
       - ``gcp_project_name``
-      - human readable project name
+      - Human readable project name
 
     * - ``project_number``
       - ``gcp_project_number``
-      - project_number given by GCP
+      - ``Project_number`` given by GCP
 
     * - ``status``
       - ``gcp_project_status``
-      - project status (e.g. ``ACTIVE``, ``DELETE_IN_PROGRESS``, ``DELETE_REQUESTED``)
+      - Project status (e.g. ``ACTIVE``, ``DELETE_IN_PROGRESS``, ``DELETE_REQUESTED``)
 
-\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.
+\* Labels is a list of key value pairs in GCP. Therefore, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, Infrastructure Monitoring has two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.
 
 .. _metadata-service-level:
 
@@ -142,7 +142,7 @@ For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring ge
 
 \* There is not a one-to-one mapping between the gcp_image_license property to one in GCP because the property value is derived from the licenses of the disks associated with the compute instance.
 
-\*\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:val1``, ``key2:val2``] as the metadata property, we will have two properties: ``gcp_metadata_key1`` and ``gcp_metadata_key2``.
+\*\* Labels is a list of key value pairs in GCP. Therefore, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, Infrastructure Monitoring has two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.
 
 For detailed information on properties, see Google Cloud documentation.
 
@@ -165,19 +165,19 @@ GKE syncs properties for the following resources:
 
     * - ``cluster_name``
       - ``gcp_cluster_name``
-      - cluster name
+      - Cluster name
 
     * - ``namespace_name``
       - ``gcp_namespace_name``
-      - name of the pod's namespace
+      - Name of the pod's namespace
 
     * - ``pod_name``
       - ``gcp_pod_name``
-      - pod name
+      - Pod name
 
     * - ``container_name``
       - ``gcp_container_name``
-      - container name
+      - Container name
 
 :strong:`k8s_node`
 
@@ -191,11 +191,11 @@ GKE syncs properties for the following resources:
 
     * - ``cluster_name``
       - ``gcp_cluster_name``
-      - cluster name
+      - Cluster name
 
     * - ``node_name``
       - ``gcp_node_name``
-      - node name
+      - Node name
 
 :strong:`k8s_pod`
 
@@ -209,15 +209,15 @@ GKE syncs properties for the following resources:
 
     * - ``cluster_name``
       - ``gcp_cluster_name``
-      - cluster name
+      - Cluster name
 
     * - ``namespace_name``
       - ``gcp_namespace_name``
-      - name of the pod's namespace
+      - Name of the pod's namespace
 
     * - ``pod_name``
       - ``gcp_pod_name``
-      - pod name
+      - Pod name
 
 .. _storage-bucket-properties:
 
@@ -236,17 +236,17 @@ Storage buckets sync the following properties:
 
     * -   ``creationTimestamp``
       -   ``gcp_creation_time``
-      -   time at which the bucket was created,  (for example, ``Thu Oct 19 18:16:25 UTC 2017``)
+      -   Time at which the bucket was created,  (for example, ``Thu Oct 19 18:16:25 UTC 2017``)
 
     * -  Labels \*
       -   ``gcp_label_<name-of-label>`` (if user has labels)
-      -   user |hyph| specified labels
+      -   User |hyph| specified labels
 
     * -   Storage class
       -   ``gcp_storage_class``
-      -   bucket's storage class, such as ``coldline``
+      -   Bucket's storage class, such as ``coldline``
 
-\* The labels property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.
+\* Labels is a list of key value pairs in GCP. Therefore, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, Infrastructure Monitoring has two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.
 
 .. _spanner-instance-properties:
 
@@ -265,11 +265,11 @@ Spanner instances currently sync the following properties:
 
     * - ``state``
       - ``gcp_state``
-      - state of the spanner instance (e.g. ``CREATING``, ``READY``)
+      - State of the spanner instance (e.g. ``CREATING``, ``READY``)
 
     * - Labels \*
       - ``gcp_label_<name-of-label>`` (if user has labels)
-      - user |hyph| specified labels
+      - User |hyph| specified labels
 
-\* The labels property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.
+\* Labels is a list of key value pairs in GCP. Therefore, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, Infrastructure Monitoring has two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.
 
