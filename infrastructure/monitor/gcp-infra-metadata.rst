@@ -29,7 +29,7 @@ See the metadata synced at a project level:
 
     * - ``creationTimestamp``
       - ``gcp_project_creation_time``
-      - time project was created (e.g. ``Thu Oct 19 18:16:25 UTC 2017``)
+      - time project was created (for example, ``Thu Oct 19 18:16:25 UTC 2017``)
 
     * - Labels \*
       - ``gcp_project_label_<name-of-label>`` (if user has labels)
@@ -47,7 +47,7 @@ See the metadata synced at a project level:
       - ``gcp_project_status``
       - project status (e.g. ``ACTIVE``, ``DELETE_IN_PROGRESS``, ``DELETE_REQUESTED``)
 
-\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.)
+\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.
 
 .. _metadata-service-level:
 
@@ -58,7 +58,7 @@ See the metadata synced at a service level:
 
 .. _compute-engine-properties:
 
-Compute Engine instance
+Compute Engine
 ------------------------------
 
 For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring gets a subset of metadata about the instance, as well as custom metadata specified by the user at an instance level.
@@ -70,7 +70,7 @@ For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring ge
 
 .. list-table::
     :header-rows: 1
-    :width: 100
+    :width: 100%
 
     * - :strong:`GCP name`
       - :strong:`Custom property`
@@ -98,7 +98,7 @@ For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring ge
 
     * - ``creationTimestamp``
       - ``gcp_creation_time``
-      - Time when the instance was created,  (e.g. ``Thu Oct 19 18:16:25 UTC 2017``)
+      - Time when the instance was created,  (for example, ``Thu Oct 19 18:16:25 UTC 2017``)
 
     * - ``description``
       - ``gcp_description``
@@ -122,7 +122,7 @@ For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring ge
 
     * - ``metadata`` \*\*
       - ``gcp_metadata_<metadata-key>``
-      - Custom metadata key for the instance (generated based on includelisted properties specified when :ref:`completing the integration in Splunk Infrastructure Monitoringx<gcp-three>`)
+      - Custom metadata key for the instance (generated based on includelisted properties specified when :ref:`completing the integration in Splunk Infrastructure Monitoringx <gcp-three>`)
 
     * - ``status``
       - ``gcp_status``
@@ -142,18 +142,110 @@ For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring ge
 
 \* There is not a one-to-one mapping between the gcp_image_license property to one in GCP because the property value is derived from the licenses of the disks associated with the compute instance.
 
-\*\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:val1``, ``key2:val2``] as the metadata property, we will have two properties: ``gcp_metadata_key1`` and ``gcp_metadata_key2``.)
+\*\* This property is a list of key value pairs in GCP. For example, if GCP has [``key1:val1``, ``key2:val2``] as the metadata property, we will have two properties: ``gcp_metadata_key1`` and ``gcp_metadata_key2``.
 
 For detailed information on properties, see Google Cloud documentation.
 
-Cloud Spanner instance
+.. _k8-engine-properties:
+
+Kubernetes Engine
+------------------------------
+
+GKE syncs properties for the following resources:
+
+:strong:`k8s_container`
+
+.. list-table::
+    :header-rows: 1
+    :width: 100%
+
+    * - :strong:`GCP name`
+      - :strong:`Custom property`
+      - :strong:`Description`
+
+    * - ``scheduling.automaticRestart``
+      - ``gcp_auto_restart``
+      - 
+
+    * - ``scheduling.automaticRestart``
+      - ``gcp_auto_restart``
+      - 
+
+:strong:`k8s_node`
+
+.. list-table::
+    :header-rows: 1
+    :width: 100%
+
+    * - :strong:`GCP name`
+      - :strong:`Custom property`
+      - :strong:`Description`
+
+    * - ``scheduling.automaticRestart``
+      - ``gcp_auto_restart``
+      - 
+
+    * - ``scheduling.automaticRestart``
+      - ``gcp_auto_restart``
+      - 
+
+:strong:`k8s_pod`
+
+.. list-table::
+    :header-rows: 1
+    :width: 100%
+
+    * - :strong:`GCP name`
+      - :strong:`Custom property`
+      - :strong:`Description`
+
+    * - ``scheduling.automaticRestart``
+      - ``gcp_auto_restart``
+      - 
+
+    * - ``scheduling.automaticRestart``
+      - ``gcp_auto_restart``
+      - 
+
+.. _storage-bucket-properties:
+
+Storage Bucket
+------------------------------
+
+Storage buckets sync the following properties:
+
+.. list-table::
+    :header-rows: 1
+    :width: 100%
+
+    * -   :strong:`GCP name`
+      -   :strong:`Custom property`
+      -   :strong:`Description`
+
+    * -   ``creationTimestamp``
+      -   ``gcp_creation_time``
+      -   time at which the bucket was created,  (for example, ``Thu Oct 19 18:16:25 UTC 2017``)
+
+    * -  Labels \*
+      -   ``gcp_label_<name-of-label>`` (if user has labels)
+      -   user |hyph| specified labels
+
+    * -   Storage class
+      -   ``gcp_storage_class``
+      -   bucket's storage class, such as ``coldline``
+
+\* The labels property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.
+
+.. _spanner-instance-properties:
+
+Spanner 
 ------------------------------
 
 Spanner instances currently sync the following properties:
 
 .. list-table::
     :header-rows: 1
-    :width: 100
+    :width: 100%
 
     * - :strong:`GCP name`
       - :strong:`Custom property`
@@ -167,32 +259,5 @@ Spanner instances currently sync the following properties:
       - ``gcp_label_<name-of-label>`` (if user has labels)
       - user |hyph| specified labels
 
-\* The labels property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
-
-Cloud Storage Bucket
-------------------------------
-
-Storage buckets sync the following properties:
-
-.. list-table::
-    :header-rows: 1
-    :width: 100
-
-    * -   :strong:`GCP name`
-      -   :strong:`Custom property`
-      -   :strong:`Description`
-
-    * -   ``creationTimestamp``
-      -   ``gcp_creation_time``
-      -   time at which the bucket was created,  (e.g. ``Thu Oct 19 18:16:25 UTC 2017``)
-
-    * -  Labels \*
-      -   ``gcp_label_<name-of-label>`` (if user has labels)
-      -   user |hyph| specified labels
-
-    * -   Storage class
-      -   ``gcp_storage_class``
-      -   bucket's storage class, such as ``coldline``
-
-\* The labels property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.)
+\* The labels property is a list of key value pairs in GCP. For example, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, we will have two properties: ``gcp_label_key1`` and ``gcp_label_key2``.
 
