@@ -140,7 +140,7 @@ For Google Cloud Platform Compute Engine instances, Infrastructure Monitoring ge
       - ``gcp_standard_id``
       - Instance ID in a format enforced by Splunk Observability Cloud, for example ``https://compute.googleapis.com/compute/v1/projects/testProject/zones/us-central1-a/instances/testInstance``. This property is now deprecated. Use ``gcp_self_link`` instead.
 
-\* There is not a one-to-one mapping between the gcp_image_license property to one in GCP because the property value is derived from the licenses of the disks associated with the compute instance.
+\* There is not a one-to-one mapping between the ``gcp_image_license`` property to one in GCP because the property value is derived from the licenses of the disks associated with the compute instance.
 
 \*\* Labels is a list of key value pairs in GCP. Therefore, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, Infrastructure Monitoring has two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.
 
@@ -240,7 +240,7 @@ Storage buckets sync the following properties:
 
     * -  Labels \*
       -   ``gcp_label_<name-of-label>`` (if user has labels)
-      -   User |hyph| specified labels
+      -   User-specified labels
 
     * -   Storage class
       -   ``gcp_storage_class``
@@ -269,7 +269,7 @@ Spanner instances currently sync the following properties:
 
     * - Labels \*
       - ``gcp_label_<name-of-label>`` (if user has labels)
-      - User |hyph| specified labels
+      - User-specified labels
 
 \* Labels is a list of key value pairs in GCP. Therefore, if GCP has [``key1:label01``, ``key2:label02``] as the labels property, Infrastructure Monitoring has two properties: ``gcp_project_label_key1`` and ``gcp_project_label_key2``.
 
