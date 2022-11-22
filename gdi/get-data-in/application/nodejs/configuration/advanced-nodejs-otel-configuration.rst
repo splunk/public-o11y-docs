@@ -258,10 +258,10 @@ The following settings enable runtime metrics collection:
      - Enables metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
    * - ``SPLUNK_METRICS_ENDPOINT``
      - ``metrics.endpoint``
-     - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint`` or ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp`` depending on the value of ``OTEL_EXPORTER_OTLP_METRICS_PROTOCOL``.
+     - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
    * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
      - ``metrics.endpoint``
-     - The metrics endpoint. Takes precedence over the value set in ``OTEL_EXPORTER_OTLP_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint`` or ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp`` depending on the value of ``OTEL_EXPORTER_OTLP_METRICS_PROTOCOL``.The default value is ``http://localhost:4317``.
+     - The metrics endpoint. Takes precedence over the value set in ``OTEL_EXPORTER_OTLP_ENDPOINT``. The default value is ``http://localhost:4317``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
    * - ``OTEL_METRIC_EXPORT_INTERVAL``
      - ``metrics.exportIntervalMillis``
      - The interval, in milliseconds, of metrics collection and exporting. The default value is ``30000``.
