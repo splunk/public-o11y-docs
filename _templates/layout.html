@@ -179,9 +179,9 @@ function OptanonWrapper() { }
         }
         function submit_feedback(){
           var url = window.location.href;
+          url = url.replace("#feedbackModal","");
           var urlsplit = url.split("?");
           url = urlsplit[0].substr(0,200);
-          url = url.replace("#feedbackModal","");
           url = url.trim();
 
           var fyne = document.getElementById("signalfx_splunk_feedback_yesno");
