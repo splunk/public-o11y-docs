@@ -12,6 +12,7 @@ If you have a problem connecting Splunk Observability Cloud to your Amazon Web S
 
 .. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
+.. _aws-ts-valid-connection:
 
 Error validating AWS connection
 ================================
@@ -53,6 +54,7 @@ To ensure that your AWS integration works as expected, revisit your configuratio
 
 A match ensures that conflicting permissions do not cause your AWS environment to block integrations. See the "Amazon CloudWatch permissions reference" in the Amazon documentation for details about the available permissions.
 
+.. _aws-ts-cloud:
 
 Splunk Observability Cloud doesn't work as expected
 ====================================================
@@ -82,6 +84,7 @@ To ensure that Observability Cloud works correctly, look through your AWS IAM po
 
 Once integrated with your Amazon Web Services account, Splunk Observability Cloud can gather CloudWatch metrics, CloudWatch logs, CloudWatch Metric Streams, service logs stored in Amazon S3 buckets, and service tag and property information. But leveraging the full power of the integration requires all included permissions.
 
+.. _aws-ts-namespace-metrics:
 
 Metrics for a particular namespace are not displayed
 =====================================================
@@ -101,3 +104,17 @@ To ensure that you can see the metrics you expect to monitor, perform the follow
 1. Review the default IAM policy shown in :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>` to find the entry for the namespace you want.
 
 2. Add the missing entry to your AWS IAM file. For more information, search for "Editing IAM policies" in the AWS Identity and Access Management documentation.
+
+
+.. _aws-ts-legacy-check-status:
+
+Status check metrics are missing (Legacy)
+=====================================================
+
+For legacy AWS integrations (for example, EC2), status check metrics are not enabled by default. 
+
+
+Solution
+^^^^^^^^^
+
+To ensure 
