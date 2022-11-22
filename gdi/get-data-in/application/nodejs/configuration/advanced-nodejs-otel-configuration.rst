@@ -77,6 +77,9 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - ``tracing.serverTimingEnabled``
      - Enables the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-nodejs`. The default value is ``true``.
+   * - ``OTEL_LOG_LEVEL``
+     - ``logLevel`` 
+     - Log level for the OpenTelemetry diagnostic console logger. To enable debug logging, set the ``debug`` value. Available values are ``error``, ``info``, ``debug``, and ``verbose``. The default value is ``none``.
 
 .. _trace-configuration-nodejs:
 

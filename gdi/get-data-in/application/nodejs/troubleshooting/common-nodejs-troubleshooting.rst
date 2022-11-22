@@ -25,21 +25,14 @@ Enable diagnostic logging
 
 Diagnostic logs can help you troubleshoot instrumentation issues.
 
-To output instrumentation logs to the console, add ``DiagConsoleLogger`` and ``DiagLogLevel``:
+To output instrumentation logs to the console, set the ``OTEL_LOG_LEVEL`` environment variable or the ``logLevel`` argument for ``start()`` to ``debug``.
 
-.. code-block:: javascript
+To disable debug logging in your code, call ``setLogger()`` as in the following example:
 
-   const { diag, DiagConsoleLogger, DiagLogLevel } = require("@opentelemetry/api");
+.. code-block:: js
 
-   diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.ALL);
-
-Logging level is controlled by the ``OTEL_LOG_LEVEL`` environment variable. The following list shows you the possible values, ordered from least to most detailed:
-
-- ``ERROR``: Identifies errors.
-- ``WARN``: Identifies warnings.
-- ``INFO``: Informational messages. This is the default level.
-- ``DEBUG``: Debug log messages.
-- ``VERBOSE``: Detailed trace level logging.
+   const { diag } = require('@opentelemetry/api');
+   diag.setLogger();
 
 .. note:: Enable debug logging only when needed. Debug mode requires more resources.
 
