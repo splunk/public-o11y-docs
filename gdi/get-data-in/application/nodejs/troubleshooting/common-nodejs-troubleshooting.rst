@@ -25,7 +25,25 @@ Enable diagnostic logging
 
 Diagnostic logs can help you troubleshoot instrumentation issues.
 
-To output instrumentation logs to the console, set the ``OTEL_LOG_LEVEL`` environment variable or the ``logLevel`` argument for ``start()`` to ``debug``.
+To output instrumentation logs to the console, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``. 
+
+You can also enable debug logging programmatically by setting the ``logLevel`` argument. For example:
+
+.. code-block:: js
+   :emphasize-lines: 2
+   
+   start({
+      logLevel: 'debug',
+      metrics: {
+         // configuration passed to metrics signal
+      },
+      profiling: {
+         // configuration passed to profiling signal
+      },
+      tracing: {
+         // configuration passed to tracing signal
+      },
+   });
 
 To disable debug logging in your code, call ``setLogger()`` as in the following example:
 
