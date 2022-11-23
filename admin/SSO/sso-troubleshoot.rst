@@ -22,7 +22,7 @@ If you experience configuration issues, use this checklist of common misconfigur
 
 
 Troubleshooting
--------------------
+=================
 
 If you are still encountering configuration errors, review the following troubleshooting information for symptoms and potential solutions.
 

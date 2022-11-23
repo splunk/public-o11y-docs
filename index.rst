@@ -900,9 +900,9 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :hidden:
-   :maxdepth:   4
+   :maxdepth:   3
 
-   About SSO integrations for Splunk Observability Cloud <admin/SSO/sso-about>
+   admin/SSO/sso-about
 
 .. toctree::
    :maxdepth:   3
