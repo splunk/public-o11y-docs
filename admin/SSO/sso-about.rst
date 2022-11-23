@@ -5,7 +5,7 @@ About SSO integrations for Splunk Observability Cloud
 *********************************************************************
 
 .. meta::
-   :description: An overview of key SSO configuration parameters.
+   :description: An overview of key SSO configuration parameters and common troubleshooting solutions.
 
 .. toctree::
    :hidden:
@@ -29,7 +29,7 @@ You can see the general SSO SAML flow in the following image:
 
 
 .. image:: /_images/admin/sso-samlflow.png
-      :width: 70%
+      :width: 90%
       :alt: Diagram showing the back and forth flow of an IdP-initiated authentication request
 
 Splunk Observability Cloud adds an additional security with email verification to guard against attacks between different organizations.
