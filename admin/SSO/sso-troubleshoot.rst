@@ -5,7 +5,7 @@ Troubleshoot SSO integrations
 *********************************************************************
 
 .. meta::
-   :description: An overview of SSO common troubleshooting solutions.
+   :description: An overview of key SSO configuration parameters and common troubleshooting solutions.
 
 
 
