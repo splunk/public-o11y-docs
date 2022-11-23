@@ -37,7 +37,7 @@ Splunk Observability Cloud adds an additional security with email verification t
 .. raw:: html
 
   <embed>
-    <h2>Information required</h2>
+    <h1>Information required</h1>
   </embed>
 
 
