@@ -106,6 +106,8 @@ To enable automatic metric collection, enable the metrics feature using a system
    -Dsplunk.metrics.enabled=true \
    -jar <myapp>.jar
 
+If your metrics endpoint is different than the default value, set the ``SPLUNK_METRICS_ENDPOINT`` environment variable. See :ref:`metrics-configuration-java` for more information.
+
 .. _enable_profiling_java:
 
 Enable AlwaysOn Profiling
