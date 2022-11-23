@@ -111,6 +111,9 @@ For basic HTTP authentication, use the `username` and `password` options.
 
 On Kubernetes, if the monitored service requires authentication, use the `useServiceAccount` option to use the service account of the agent when connecting. Make sure that the Smart Agent service account has sufficient permissions for the monitored service.
 
+## Metrics
+
+There are no metrics available for this integration.
 
 ## Troubleshooting
 
@@ -123,11 +126,6 @@ Solution: Enable HTTPS with `useHTTPS`.
 ### Log contains the error `forbidden: User \"system:anonymous\" cannot get path \"/metrics\"`
 
 Solution: Enable `useServiceAccount` and make sure the service account that the Splunk Distribution of OpenTelemetry Collector is running with has the necessary permissions.
-
-
-## Metrics
-
-There are no metrics available for this integration.
 
 ## Get help
 
