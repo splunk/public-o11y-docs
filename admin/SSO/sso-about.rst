@@ -19,6 +19,7 @@ About SSO integrations for Splunk Observability Cloud
    sso-OneLogin
    sso-PingOne
    sso-GeneralSAML
+   sso-troubleshoot
 
 
 SSO integrations implement SAML 2.0 which is a standard for exchanging authentication and authorization information between an Identity Provider (IdP) such as Ping, Okta, AzureAD, OneLogin and a Service Provider (SP) such as Splunk Observability Cloud.  
