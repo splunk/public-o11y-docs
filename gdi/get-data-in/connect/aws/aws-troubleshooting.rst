@@ -111,10 +111,17 @@ To ensure that you can see the metrics you expect to monitor, perform the follow
 Status check metrics are missing (Legacy)
 =====================================================
 
-For legacy AWS integrations (for example, EC2), status check metrics are not enabled by default. 
+Status check metrics are not displayed.
 
+Cause
+^^^^^^
+
+For legacy individual AWS integrations (for example, EC2), status check metrics are not enabled by default.
 
 Solution
 ^^^^^^^^^
 
-To ensure 
+Enable the metrics for your integration. Read more in our :ref:`developer portal <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/>`.
+
+
+ 
