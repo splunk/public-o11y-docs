@@ -5,7 +5,7 @@ About SSO integrations for Splunk Observability Cloud
 *********************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. Login service integration supports both Identity Provider-initiated SSO and Observability Cloud-initiated SSO. The latter lets your users log in to Observability Cloud using your organization's custom URL.
+   :description: An overview of key SSO configuration parameters and common troubleshooting solutions.
 
 .. toctree::
    :hidden:
@@ -175,4 +175,13 @@ If you are still encountering configuration errors, review the following trouble
   :strong:`Solution`
     Use the Generic SAML integration instead of the integration dedicated to your IdP. Most IdPs have built-in generic SAML 2.0 plugins which should be used for this purpose. Enabling generic SAML requires additional actions :ref:`sso-generic`.
  
-    
+* You don't see a login button on the login page.
+  
+  :strong:`Symptom`
+    As stated, the login button is not visible.
+
+  :strong:`Cause`
+    Splunk Observability Clound can render a login button only for orgs with a custom subdomain.
+  :strong:`Solution`
+    Contact your CSM to request a custom URL.
+     
