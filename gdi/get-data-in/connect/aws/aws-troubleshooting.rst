@@ -121,7 +121,7 @@ For legacy individual AWS integrations (for example, EC2), status check metrics 
 Solution
 ^^^^^^^^^
 
-Enable the metrics for your integration. Read more in our :ref:`developer portal <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/>`.
+Enable the metrics for your integration. Read more in our :new-page:`developer portal <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/>`.
 
 
  
