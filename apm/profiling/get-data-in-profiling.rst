@@ -114,9 +114,13 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: .NET
 
-      AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher.
+      .. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. 
+
+      AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
 
       - Enable the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
+      - Enable Memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
       - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4318/v1/logs``, or to the Splunk Distribution of OpenTelemetry Collector.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
