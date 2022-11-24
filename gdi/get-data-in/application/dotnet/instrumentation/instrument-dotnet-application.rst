@@ -106,7 +106,7 @@ Follow these steps to automatically instrument your application:
 
          cat /proc/<pid>/environ # where <pid> is the process ID
 
-#. (Optional) To enable automatic metric collection, see :ref:`dotnet-metric-settings`.
+#. (Optional) To enable automatic metric collection, see :ref:`enable_automatic_metric_collection_dotnet`.
 
 #. Run your application.
 
@@ -137,6 +137,8 @@ To enable automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLED`
 To enable runtime metrics, set the ``SIGNALFX_RUNTIME_METRICS_ENABLED`` environment variable to true.
 
 See :ref:`dotnet-metrics-attributes` for more information about the metrics collected by the instrumentation. For more metric settings, see :ref:`dotnet-metric-settings`. 
+
+.. note:: Runtime metrics are always collected if AlwaysOn Profiling is enabled.
 
 .. _instrument-windows-service:
 
