@@ -131,10 +131,12 @@ The following settings control the AlwaysOn Profiling feature for the .NET instr
      - Description
    * - ``SIGNALFX_PROFILER_ENABLED``
      - Enables AlwaysOn Profiling. The default value is ``false``.
+   * - ``SIGNALFX_PROFILER_MEMORY_ENABLED``
+     - Enables memory profiling. The default value is ``false``.
    * - ``SIGNALFX_PROFILER_LOGS_ENDPOINT``
      - The collector endpoint for profiler logs. The default value is ``http://localhost:4318/v1/logs``.
    * - ``SIGNALFX_PROFILER_CALL_STACK_INTERVAL``
-     - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds.
+     - Frequency with which call stacks are sampled, in milliseconds. The default value is ``10000`` milliseconds.
 
 .. note:: For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 
