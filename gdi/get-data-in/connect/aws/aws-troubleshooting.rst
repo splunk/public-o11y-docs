@@ -149,10 +149,8 @@ To do so, follow these steps:
 4. Update the integration object via the API:
 
 .. code-block:: none
-   
+
    curl --request PUT https://api..signalfx.com/v2/integration/ \
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" \
    --data "@integration.json" 
-
-Read more in our :new-page:`developer portal <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/>`. 
