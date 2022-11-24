@@ -116,12 +116,40 @@ Status check metrics are not displayed.
 Cause
 ^^^^^^
 
-For legacy individual AWS integrations (for example, EC2), status check metrics are not enabled by default.
+For legacy individual AWS integrations, status check metrics are not enabled by default.
 
 Solution
 ^^^^^^^^^
 
-Enable the metrics for your integration. Read more in our :new-page:`developer portal <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/>`.
+Enable the metrics for your integration. 
 
+To do so, follow these steps:
 
- 
+1. Get the integration object from the API:
+
+   .. code-block:: none
+      curl --request GET https://api..signalfx.com/v2/integration/ \
+      --header "X-SF-TOKEN:" \
+      --header "Content-Type:application/json" > integration.json
+
+2. Modify the file to include ``ignoreAllStatusMetrics``, and set it to ``false``.
+   
+3. Remove the following fields from the call as these will be populated automatically:
+
+.. code-block:: none 
+   ``created``   
+   ``createdByName``
+   ``creator``
+   ``lastUpdated``
+   ``lastUpdatedBy``
+   ``lastUpdatedByName``
+
+4. Update the integration object via the API:
+
+.. code-block:: none
+   curl --request PUT https://api..signalfx.com/v2/integration/ \
+   --header "X-SF-TOKEN:" \
+   --header "Content-Type:application/json" \
+   --data "@integration.json" 
+
+Read more in our :new-page:`developer portal <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/>`. 
