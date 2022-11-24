@@ -119,9 +119,14 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. caution:: CPU profiling for .NET is an experimental feature subject to future changes. See :ref:`profiling-intro`.
+.. caution:: Memory profiling for .NET is an experimental feature subject to future changes. See :ref:`profiling-intro`.
 
 To enable AlwaysOn Profiling, set the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``.
+
+To enable memory profiling, set the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-dotnet`.
+
 
 .. _instrument-windows-service:
 
