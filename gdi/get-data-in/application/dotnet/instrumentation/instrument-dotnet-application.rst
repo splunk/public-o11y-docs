@@ -127,6 +127,16 @@ To enable memory profiling, set the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environ
 
 See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-dotnet`.
 
+.. _enable_automatic_metric_collection_dotnet:
+
+Enable metrics collection
+--------------------------------------
+
+To enable automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLED`` environment variable to true.
+
+To enable runtime metrics, set the ``SIGNALFX_RUNTIME_METRICS_ENABLED`` environment variable to true.
+
+See :ref:`dotnet-metrics-attributes` for more information about the metrics collected by the instrumentation. For more metric settings, see :ref:`dotnet-metric-settings`. 
 
 .. _instrument-windows-service:
 
