@@ -127,16 +127,18 @@ To do so, follow these steps:
 
 1. Get the integration object from the API:
 
-   .. code-block:: none
-      curl --request GET https://api..signalfx.com/v2/integration/ \
-      --header "X-SF-TOKEN:" \
-      --header "Content-Type:application/json" > integration.json
+.. code-block:: none
+
+   curl --request GET https://api..signalfx.com/v2/integration/ \
+   --header "X-SF-TOKEN:" \
+   --header "Content-Type:application/json" > integration.json
 
 2. Modify the file to include ``ignoreAllStatusMetrics``, and set it to ``false``.
    
 3. Remove the following fields from the call as these will be populated automatically:
 
 .. code-block:: none 
+
    ``created``   
    ``createdByName``
    ``creator``
@@ -147,6 +149,7 @@ To do so, follow these steps:
 4. Update the integration object via the API:
 
 .. code-block:: none
+   
    curl --request PUT https://api..signalfx.com/v2/integration/ \
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" \
