@@ -18,8 +18,6 @@ To enable the collection of .NET runtime and trace metrics, see :ref:`dotnet-met
 
 Runtime metrics are always collected if AlwaysOn Profiling is enabled.
 
-.. note:: Runtime and trace metrics collection is an experimental feature subject to future changes.
-
 .. _dotnet-runtime-metrics:
 
 .NET runtime metrics
