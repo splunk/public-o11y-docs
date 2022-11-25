@@ -12,14 +12,14 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET provides a
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET provides the following benefits:
 
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
-- You don't need to configure or instrument your Java back-end services or applications before deployment.
+- You don't need to configure or instrument your .NET back-end services or applications before deployment.
 
 .. _install-the-package-dotnet:
 
 Install the package
 =========================================================
 
-By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the SignalFX Instrumentation for .NET. 
+By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the SignalFx Instrumentation for .NET. 
 
 Run the PowerShell script with the ``with_dotnet_instrumentation`` parameter, as shown in the following example:
 
@@ -50,6 +50,6 @@ To configure the instrumentation, see :ref:`advanced-dotnet-configuration`.
 Upgrade the package
 ==========================
 
-You can upgrade the package by installing a new version of the SignalFX Instrumentation for .NET. See :ref:`instrument-dotnet-applications`.
+You can upgrade the package by installing a new version of the SignalFx Instrumentation for .NET. See :ref:`instrument-dotnet-applications`.
 
 .. include:: /_includes/troubleshooting-steps.rst
