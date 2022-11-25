@@ -115,7 +115,7 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: .NET
 
-      .. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. 
+      .. caution:: Memory profiling for .NET is an experimental feature subject to future changes.
 
       AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
 
