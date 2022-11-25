@@ -19,7 +19,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET provides t
 Install the package
 =========================================================
 
-By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the SignalFX Instrumentation for .NET. 
+By default, the installer script only installs the Collector. If you add the ``with_dotnet_instrumentation`` parameter, the script also downloads and installs the SignalFx Instrumentation for .NET.
 
 Run the PowerShell script with the ``with_dotnet_instrumentation`` parameter, as shown in the following example:
 
