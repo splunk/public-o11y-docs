@@ -16,7 +16,7 @@ Enable metrics collection
 
 To enable the collection of .NET runtime and trace metrics, see :ref:`dotnet-metric-settings`.
 
-Runtime metrics are always collected if AlwaysOn Profiling is enabled.
+.. note:: NetRuntime metrics are always collected if memory profiling is enabled.
 
 .. _dotnet-runtime-metrics:
 
@@ -84,7 +84,7 @@ The SignalFx Instrumentation for .NET can collect the following ASP.NET Core met
      - Total CPU seconds broken down by different states, such as user and system.	
    * - ``process.cpu.utilization``
      - Gauge
-     - Difference in process.cpu.time since the last measurement, divided by the elapsed time and number of CPUs available to the process.
+     - Difference in ``process.cpu.time`` since the last measurement, divided by the elapsed time and number of CPUs available to the process.
    * - ``process.threads``
      - Gauge
      - Process threads count.	

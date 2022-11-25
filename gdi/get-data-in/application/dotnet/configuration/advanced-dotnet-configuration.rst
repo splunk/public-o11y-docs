@@ -157,7 +157,7 @@ The following settings control metric collection:
    * - ``SIGNALFX_TRACE_METRICS_ENABLED``
      - Set to ``true`` to enable trace metrics collection. The default value is ``false``. See :ref:`dotnet-metrics-attributes` for more information.
 
-.. note:: Runtime metrics are always collected if AlwaysOn Profiling is enabled.
+.. note:: NetRuntime metrics are always collected if memory profiling is enabled.
 
 .. _dotnet-instrumentation-settings:
 
