@@ -87,7 +87,7 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-java`.
 
-      .. note:: Port 9943 is the default port for the SignalFX receiver in the collector distribution. If you change this port in your collector config, you need to pass the custom port to the JVM.
+      .. note:: Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your collector config, you need to pass the custom port to the JVM.
 
    .. group-tab:: Node.js
 
