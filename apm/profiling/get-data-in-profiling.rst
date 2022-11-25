@@ -51,7 +51,7 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
      - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
      - :ref:`instrument-nodejs-applications`
    * - .NET
-     - SignalFx Instrumentation for .NET version 0.2.10 or higher
+     - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - :ref:`instrument-dotnet-applications`
 
 .. note:: See :ref:`apm-data-retention` for information on Profiling data retention.
