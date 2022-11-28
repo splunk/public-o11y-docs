@@ -4,6 +4,9 @@
 Monitor Splunk APM subscription usage
 *************************************************
 
+.. meta::
+      :description: Monitor Splunk APM subscription usage. 
+
 .. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
 

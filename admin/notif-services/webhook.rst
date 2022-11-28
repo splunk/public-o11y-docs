@@ -4,6 +4,9 @@
 Send alert notifications to a webhook using Splunk Observability Cloud
 *************************************************************************
 
+.. meta::
+      :description: Configure Observability Cloud to send alerts to a webhook when a detector alert condition is met and when the condition clears.
+
 You can configure Splunk Observability Cloud to automatically send alert notifications to a webhook when a detector alert condition is met and when the alert clears.
 
 To send Observability Cloud alert notifications to a webhook, complete the following configuration tasks:

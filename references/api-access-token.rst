@@ -5,7 +5,7 @@ Find and copy your API access token
 *********************************************************************************
 
 .. meta::
-   :description: You can find and copy your API access token on your user profile page in Splunk Observability Cloud.
+   :description: Find and copy your API access token on your user profile page in Splunk Observability Cloud.
 
 
 To find and copy your User API access token, follow these steps:

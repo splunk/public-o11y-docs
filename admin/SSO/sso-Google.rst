@@ -5,7 +5,7 @@ Configure a Google SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. The Google SSO integration lets users in your Google domain log in to the application using their Google credentials. 
+   :description: Configure the Google SSO integration to allow users in your Google domain to log in to the application using their Google credentials. 
 
 
 .. note:: The Google SSO integration doesn't support integration-specific entity IDs.
