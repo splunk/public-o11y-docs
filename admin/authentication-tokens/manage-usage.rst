@@ -5,7 +5,7 @@ Manage resource usage with access tokens using Splunk Observability Cloud
 ****************************************************************************
 
 .. meta::
-   :description: Learn how to how to manage resource usage with  access tokens.
+   :description: Cost-related token limits, pricing plan token limits, rate-related token limits, set up custom alerts for access tokens, and monitor token usage.
 
 If you have Infrastructure Monitoring Enterprise Edition, you can manage costs
 associated with sending in data by setting limits on access tokens.
