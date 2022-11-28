@@ -5,7 +5,7 @@ Allow Splunk Observability Cloud services in your network
 *****************************************************************
 
 .. meta::
-      :description: Options for securing your implementation, including proxies, allow lists for URLs and domains.    
+      :description: Options for securing your implementation, including proxies and allow lists for URLs and domains.    
 
 Splunk Observability Cloud is composed of a number of different services. If your organization has stringent networking security policies that apply to sending data to third parties, use one of the following methods to ensure network access to Splunk Observability Cloud services:
 

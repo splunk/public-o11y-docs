@@ -5,7 +5,7 @@ Retrieve and manage user API access tokens using Splunk Observability Cloud
 ****************************************************************************
 
 .. meta::
-  :description: How to view and manage user API access (session) tokens. API requests that require a user API access token created by an admin.
+  :description: How to view and manage user API access (session) tokens. List of API requests that require a user API access token that was created by an admin.
 
 Learn how to retrieve :strong:`user API access tokens` to authenticate all API requests, including those that send data. 
 
