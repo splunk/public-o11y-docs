@@ -5,7 +5,7 @@ Configure SSO using a generic SAML SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Prerequisites and k\installation steps prerequisites to configure SSO using a generic SAML SSO integration. 
+   :description: Prerequisites and installation steps prerequisites to configure SSO using a generic SAML SSO integration. 
 
 
 If you use an SSO login service other than the ones listed in :ref:`sso-label`, you can create a generic SAML SSO integration for your organization. 
