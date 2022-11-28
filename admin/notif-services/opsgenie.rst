@@ -4,6 +4,9 @@
 Send alert notifications to Opsgenie using Splunk Observability Cloud
 ************************************************************************
 
+.. meta::
+      :description: Configure Observability Cloud to send alerts to Opsgenie when a detector alert condition is met and when the condition clears.
+
 You can configure Splunk Observability Cloud to automatically send alert notifications to one or more Opsgenie teams when a detector alert condition is met and when the alert clears.
 
 To send Observability Cloud alert notifications to Opsgenie, complete the following configuration tasks:

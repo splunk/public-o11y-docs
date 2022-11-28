@@ -5,7 +5,7 @@ Create and manage users in Splunk Observability Cloud
 ********************************************************
 
 .. meta::
-   :description: Learn how to how to manage users.
+   :description:  Manage users: add, remove, grant admin access, view login details, and unlock an account.
 
 .. toctree::
    :hidden:
