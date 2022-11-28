@@ -4,6 +4,9 @@
 Send alert notifications to Splunk On-Call using Splunk Observability Cloud
 ******************************************************************************
 
+.. meta::
+      :description: Configure Observability Cloud to send alerts to Splunk On-Call when a detector alert condition is met and when the condition clears.
+
 You can configure Splunk Observability Cloud to automatically send alert notifications to Splunk On-Call (formerly VictorOps) when a detector alert condition is met and when the alert clears.
 
 To send Observability Cloud alert notifications to Splunk On-Call, complete the following configuration tasks:

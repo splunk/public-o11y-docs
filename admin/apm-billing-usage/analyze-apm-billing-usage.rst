@@ -5,7 +5,7 @@ Analyze Splunk APM subscription usage data for your subscription plan
 *********************************************************************
 
 .. meta::
-   :description: View APM subscription usage information and download usage reports to monitor your organization.
+   :description: How APM calculates subscription usage information and download usage reports to monitor your organization.
 
 .. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 

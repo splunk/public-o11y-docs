@@ -7,7 +7,7 @@ Configure an ADFS SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. The Microsoft Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
+   :description: Configure the Microsoft Active Directory Federation Services (ADFS) SSO integration to let your users log in to Observability Cloud using your Microsoft ADFS portal.
 
 The Microsoft Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
 
