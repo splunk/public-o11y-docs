@@ -50,7 +50,7 @@ To instrument your application for Observability Cloud, you need to generate tra
 
       Add the required dependencies to the ``cargo.toml`` file:
 
-      .. code-block:: Rust
+      .. code-block:: toml
 
          [package]
          name = "demorust"
@@ -114,12 +114,12 @@ In your application's code, initialize the OpenTelemetry library and tracer like
                         // Splunk OTel Collector default endpoint
                         .with_endpoint("http://localhost:4317"),
                )
-               // Define the service name
+               // Define the service name and deployment environment
                .with_trace_config(
-                     sdktrace::config().with_resource(Resource::new(vec![KeyValue::new(
-                        opentelemetry_semantic_conventions::resource::SERVICE_NAME,
-                        "trace-demo",
-                     )])),
+                     sdktrace::config().with_resource(Resource::new(vec![
+                        KeyValue::new(opentelemetry_semantic_conventions::resource::SERVICE_NAME,"trace-demo",),
+                        KeyValue::new(opentelemetry_semantic_conventions::resource::DEPLOYMENT_ENVIRONMENT,"production-rust",)
+                     ])),
                )
                .install_batch(opentelemetry::runtime::Tokio)
          }
