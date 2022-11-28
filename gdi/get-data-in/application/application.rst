@@ -31,7 +31,11 @@ You can instrument applications in each of these languages:
 - :ref:`Go <get-started-go>`
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`
+
+You can also send traces to Splunk Observabilty Cloud from applications or services written in programming languages for which a Splunk distribution isn't available:
+
 - :ref:`Erlang <apm-instrumentation-other-langs>`
+- :ref:`Rust <apm-instrumentation-other-langs>`
 
 To learn more about the data we collect:
 
