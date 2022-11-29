@@ -19,6 +19,7 @@ Week-by-week shifts let you define coverage that is consistent week after week. 
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service". Select the :guilabel:`checkmark` icon to save your schedule name.  
+#. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears.
 #. Enter a shift name. For this example scenario, enter "Weekend coverage".
 #. Select a shift start date.
 #. Use the timezone picker to select the timezone for the coverage.
@@ -41,7 +42,8 @@ Day-by-day shifts let you define coverage for specific days of the week. For exa
 #. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
-#. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service". Select the :guilabel:`checkmark` icon to save your schedule name.  
+#. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service". Select the :guilabel:`checkmark` icon to save your schedule name. 
+#. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears. 
 #. Enter a shift name. For this example scenario, enter "Weekday coverage, business hours".
 #. Select a shift start date.
 #. Use the timezone picker to select the timezone for the coverage.
@@ -79,6 +81,7 @@ Follow these steps to create your primary schedule:
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application, service primary". Select the :guilabel:`checkmark` icon to save your schedule name.  
+#. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears.
 
 Create a business-hours shift
 -------------------------------
@@ -142,7 +145,8 @@ Follow these steps to create your secondary schedule:
 #. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
-#. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service, secondary". Select the :guilabel:`checkmark` icon to save your schedule name.  
+#. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service, secondary". Select the :guilabel:`checkmark` icon to save your schedule name. 
+#. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears. 
 
 Create a 24x7 shift
 ------------------------------------
@@ -195,6 +199,7 @@ Follow these steps to create your primary schedule:
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Victors team, checkout service". Select the :guilabel:`checkmark` icon to save your schedule name.  
+#. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears.
 
 Create a business-hours shift
 -------------------------------
