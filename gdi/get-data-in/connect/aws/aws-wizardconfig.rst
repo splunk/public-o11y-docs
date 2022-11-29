@@ -26,9 +26,10 @@ Access the guided setup for AWS integration
 To access the guided setup for AWS integration, perform the following steps:
 
 #. Log in to Splunk Observability Cloud.
-#. On the left navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. On the Integrate Your Data page, select the tile for :strong:`Amazon Web Services`.
+#. Open the :new-page:`Amazon Web Services guided setup <https://login.signalfx.com/#/gdi/aws?category=all&gdiState=%7B%22integrationId%22:%22FfhrrZoAYAA%22%7D>`. Optionally, you can navigate to the guided setup on your own:
+   #. On the left navigation menu, select :menuselection:`Data Management`. 
+   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. On the Integrate Your Data page, select the tile for :strong:`Amazon Web Services`.
 #. Follow the steps provided in the guided setup. 
 #. For the authentication step of establishing a connection between your AWS account and Splunk Observability Cloud, do one of the following:
     - In most AWS regions, use the Identity and Access Management (IAM) policy created through the guided setup.
