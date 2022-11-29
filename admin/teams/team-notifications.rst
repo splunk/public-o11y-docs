@@ -5,7 +5,7 @@ Manage team notifications in Splunk Observability Cloud
 *****************************************************************
 
 .. meta::
-      :description: Configure a team notification policy to help your team stay aware of alerts from detectors.
+      :description: Configure a general team notification policy, or notification by alert severity, to help your team stay aware of alerts from detectors.
 
 
 Configure a team notification policy to help your team stay aware of alerts from detectors.

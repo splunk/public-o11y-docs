@@ -22,7 +22,7 @@ Instrument back-end applications to send spans to Splunk APM
 
 Instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
 
-You can instrument applications in each of these languages:
+You can instrument applications in each of these languages using official Splunk instrumentation:
 
 - :ref:`Java <get-started-java>`
 - :ref:`Python <get-started-python>`
@@ -31,7 +31,11 @@ You can instrument applications in each of these languages:
 - :ref:`Go <get-started-go>`
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`
+
+You can also send traces from applications written in languages for which Splunk instrumentation isn't available:
+
 - :ref:`Erlang <apm-instrumentation-other-langs>`
+- :ref:`Rust <apm-instrumentation-other-langs>`
 
 To learn more about the data we collect:
 

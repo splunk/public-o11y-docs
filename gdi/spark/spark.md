@@ -9,6 +9,8 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 The integration monitors Apache Spark clusters.
 
+**Note**: This integration does not support fetching metrics from Spark Structured Streaming.
+
 For the following cluster modes, the integration only supports HTTP endpoints:
 
 - Standalone

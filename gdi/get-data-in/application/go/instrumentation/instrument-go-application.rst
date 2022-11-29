@@ -5,7 +5,7 @@ Instrument a Go application for Splunk Observability Cloud
 ***************************************************************
 
 .. meta::
-   :description: The Splunk Distribution of OpenTelemetry Go can automatically instrument your Go application or service. Follow these steps to get started.
+   :description: The Splunk Distribution of OpenTelemetry Go can instrument your Go application or service. Follow these steps to get started.
 
 The Splunk Distribution of OpenTelemetry Go can instrument your Go application or service. To get started, use the guided setup or follow the instructions manually.
 
@@ -26,7 +26,7 @@ To generate all the basic installation commands for your environment and applica
 Install and enable the Go instrumentation
 ===================================================================
 
-Follow these steps to automatically instrument your application using the Go instrumentation:
+Follow these steps to instrument your application using the Go instrumentation:
 
 #. Check that you meet the requirements. See :ref:`go-otel-requirements`.
 
