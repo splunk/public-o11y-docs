@@ -11,15 +11,16 @@ Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS L
 
 :strong:`Tip:` To generate a template that instruments your Lambda function using the Splunk OpenTelemetry Lambda Layer, use the AWS Lambda guided setup. To access the AWS Lambda guided setup, follow these steps:
 
-1. Log in to Splunk Observability Cloud
+#. Log in to Splunk Observability Cloud
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+#. Open the :new-page:`PHP guided setup <https://login.signalfx.com/#/gdi/scripted/php-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"php-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
+   #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
-3. In the integration filter menu, select :guilabel:`All`.
+   #. In the integration filter menu, select :guilabel:`All`.
 
-4. In the :guilabel:`Search` field, search for :guilabel:`AWS Lambda`.
+   #. In the :guilabel:`Search` field, search for :guilabel:`AWS Lambda`.
 
-5. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
+   6#. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
 .. _otel-lambda-layer-requirements:
 
