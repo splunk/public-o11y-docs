@@ -49,6 +49,8 @@ Start learning about how the following Observability Cloud products work to prov
 
 - :ref:`welcome-oncall`
 
+- :ref:`welcome-incident-intelligence`
+
 - :ref:`welcome-mobile`
 
 
