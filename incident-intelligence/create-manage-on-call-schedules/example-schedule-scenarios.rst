@@ -235,6 +235,7 @@ Your last step to achieve this schedule scenario is to add your schedule to the 
 See also
 ============
 
+* :ref:`ii-create-manage-on-call-schedules`
 * :ref:`ii-whos-on-call`
 * :ref:`ii-my-on-call-schedule`
 * :ref:`ii-sync-on-call-schedule`

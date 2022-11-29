@@ -10,6 +10,7 @@ You can quickly access your on-call schedule on the :guilabel:`Incidents` and :g
 See also
 =============
 
+* :ref:`ii-create-manage-on-call-schedules`
 * :ref:`ii-example-schedule-scenarios`
 * :ref:`ii-sync-on-call-schedule`
 * :ref:`ii-whos-on-call`
