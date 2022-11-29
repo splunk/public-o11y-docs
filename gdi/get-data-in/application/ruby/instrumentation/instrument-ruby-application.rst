@@ -18,10 +18,15 @@ To generate all the basic installation commands for your environment and applica
 
 #. Log in to Observability Cloud.
 #. Open the :new-page:`Ruby guided setup <https://login.signalfx.com/#/gdi/scripted/ruby-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"ruby-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
+
    #. In the left navigation menu, select :menuselection:`Data Management`. 
+
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+
    #. In the integration filter menu, select :guilabel:`By Product`.
+
    #. Select the :guilabel:`APM` product.
+
    #. Select the :guilabel:`Ruby` tile to open the Ruby guided setup.
 
 .. _install-enable-ruby-agent:

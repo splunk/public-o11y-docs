@@ -93,10 +93,15 @@ Repeat these steps for each subscription you want to monitor.
 From Splunk Observability Cloud, connect to Azure by following these steps:
 
   #. Open the :new-page:`Microsoft Azure guided setup <https://login.signalfx.com/#/integrations/azure>`. Optionally, you can navigate to the guided setup on your own:
+
      #. In the left navigation menu, select :menuselection:`Data Management`, and select :guilabel:`Add Integration` to open the Integrate Your Data page.
+
      #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
+
      #. Select the :guilabel:`Microsoft Azure` tile to open the Microsoft Azure guided setup.
+
      #. To start configuring the connection to Azure, select :guilabel:`New Integration`.
+
   #. In the text boxes for Splunk Infrastructure Monitoring setup, enter the following information:
       * :guilabel:`Name`: Unique name for this connection to Azure. The name field helps you create multiple connections to Azure, each with its own name.
       * :guilabel:`Directory ID`: Azure Directory ID you saved in a previous step.
