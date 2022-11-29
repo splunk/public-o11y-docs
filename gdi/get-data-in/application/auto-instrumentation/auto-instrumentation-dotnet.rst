@@ -9,7 +9,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET provides a package that automatically instruments your local ASP.NET applications to capture and report distributed traces to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 
-Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET provides the following benefits:
+Zero Configuration Auto Instrumentation for .NET provides the following benefits:
 
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 - You don't need to configure or instrument your .NET back-end services or applications before deployment.
