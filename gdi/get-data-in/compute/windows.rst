@@ -5,7 +5,7 @@ Collect Windows data
 *************************
 
 .. meta::
-   :description: Start sending metrics and logs from Windows hosts to Splunk Observability Cloud.
+   :description: Start sending metrics and log telemetry from Windows hosts to Splunk Observability Cloud.
 
 The Splunk Distribution of OpenTelemetry Collector is a package that provides integrated collection and forwarding for all telemetry types for Windows. You can deploy the Collector to gather telemetry for Splunk Infrastructure Monitoring, Splunk APM, or Splunk Log Observer.
 
