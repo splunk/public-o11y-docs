@@ -53,6 +53,7 @@ You can also view who's on all in :guilabel:`Incident Management`. To do so, fol
 See also
 ============
 
+* :ref:`ii-create-manage-on-call-schedules`
 * :ref:`ii-example-schedule-scenarios`
 * :ref:`ii-my-on-call-schedule`
 * :ref:`ii-sync-on-call-schedule`
