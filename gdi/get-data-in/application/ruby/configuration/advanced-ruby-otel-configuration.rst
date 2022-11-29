@@ -112,7 +112,32 @@ For backward compatibility with the SignalFx Ruby Tracing Library, use the b3mul
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, enable Splunk trace response headers by setting the following environment variable: 
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, enable the Rack instrumentation in the configuration:
+
+.. code-block:: ruby
+
+   Splunk::Otel.configure do |c|
+      c.use "OpenTelemetry::Instrumentation::Rack"
+   end
+   
+   # Add the middleware in Rack::Builder
+   Rack::Builder.app do
+      use OpenTelemetry::Instrumentation::Rack::Middlewares::TracerMiddleware
+      use Splunk::Otel::Rack::RumMiddleware
+      run ->(_env) { [200, { "content-type" => "text/plain" }, ["OK"]] }
+   end
+
+When using ActionPack, the middleware is added automatically if the instrumentation ActionPack is enabled:
+
+.. code-block:: ruby
+
+   # Rails use ActionPack
+   Splunk::Otel.configure do |c|
+      c.use "OpenTelemetry::Instrumentation::ActionPack"
+      c.use "Splunk::Otel::Instrumentation::ActionPack"
+   end
+
+After you've enabled the Rack instrumentation, set the following environment variable: 
 
 .. tabs::
 
@@ -124,7 +149,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
       $env:SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true
 
-When you set this environment variable, your application instrumentation adds the following response headers to HTTP responses.
+When you set this environment variable, the instrumentation adds the following response headers to HTTP responses:
 
 .. code-block::
 

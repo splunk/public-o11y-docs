@@ -4,6 +4,9 @@
 Send alert notifications to Amazon EventBridge using Splunk Observability Cloud
 *******************************************************************************************
 
+.. meta::
+      :description: Configure Observability Cloud to send alerts to Amazon EventBridge when a detector alert condition is met and when the condition clears.
+
 You can configure Splunk Observability Cloud to automatically send alert notifications to Amazon EventBridge when a detector alert condition is met and when the condition clears.
 
 To send Observability Cloud alert notifications to Amazon EventBridge, perform the following configuration tasks:

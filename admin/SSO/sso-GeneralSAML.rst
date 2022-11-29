@@ -5,7 +5,7 @@ Configure SSO using a generic SAML SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. Login service integration supports both Identity Provider-initiated SSO and Observability Cloud-initiated SSO. The latter lets your users log in to Observability Cloud using your organization's custom URL.
+   :description: Prerequisites and installation steps to configure SSO using a generic SAML SSO integration. 
 
 
 If you use an SSO login service other than the ones listed in :ref:`sso-label`, you can create a generic SAML SSO integration for your organization. 
@@ -32,7 +32,7 @@ Be prepared to provide the domain for the ID/email address that your users provi
 
 Information required for generic SAML SSO integrations
 ----------------------------------------------------------------
-:strong:`User information``
+:strong:`User information`
 
 * One of:
    * ``User.FirstName`` and ``User.LastName``: User's first and last name

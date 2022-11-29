@@ -4,6 +4,9 @@
 Monitor Splunk Infrastructure Monitoring billing and usage (DPM plans only)
 **********************************************************************************
 
+.. meta::
+      :description: Monitor Splunk Infrastructure Monitoring subscription usage for DPM plans. 
+
 .. note:: 
 
    This topic applies to organizations whose subscription plan is based on the rate at which you are sending data points to Splunk Infrastructure Monitoring (DPM). If your organization's usage is based on the number of hosts or metrics that Splunk Infrastructure Monitoring is monitoring for you, see :ref:`monitor-imm-billing-usage`.

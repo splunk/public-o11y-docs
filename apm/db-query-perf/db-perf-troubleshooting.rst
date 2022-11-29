@@ -18,12 +18,14 @@ Follow the steps in the following sections to troubleshoot Database Query Perfor
 
 Database Query Performance is not enabled
 ------------------------------------------------
+
 If you open Database Query Performance and notice the feature is not enabled, go to MetricSets Configuration and check if indexing for Database Query Performance tags is ``ACTIVE``. If it's not, see :ref:`enable-db-perf` for instructions to enable indexing for Database Query Performance tags. 
 
 .. _no-dbs-avail: 
 
 No supported databases available
 ----------------------------------------
+
 If you open Database Query Performance and notice there are no supported databases available, check the following:
 
 - Ensure you have one or more of the types of SQL databases listed in :ref:`supported-dbs` in your system.
@@ -32,8 +34,9 @@ If you open Database Query Performance and notice there are no supported databas
 
 .. _tms-limits-exceeded:
 
-New query data is not being processed because cardinality limits have been exceeded
+New query data not processed because cardinality limits have been exceeded
 ------------------------------------------------------------------------------------
+
 Enabling Database Query Performance turns on indexing for a set of 5 database-related span tags. These tags count toward cardinality limits for indexing span tags. 
 
 When the limit is exceeded across all indexed tags in your account, Splunk APM temporarily pauses indexing all Database Query Performance tags to allow for transient spikes in cardinality and manage billing in your account.  After 15 minutes, Splunk APM attempts to restart indexing Database Query Performance tags automatically. 
@@ -44,6 +47,7 @@ If you're having persistent cardinality issues, try turning off indexing for oth
 
 Database issues are not originating with problematic queries
 --------------------------------------------------------------
+
 If you are seeing database latency, but the query itself is not causing the issue, the problem might be a slow connection or a bottleneck waiting for a queue of database queries. To identify these kinds of issues, you need to instrument the database itself. For instructions on instrumenting a SQL database, see the following links:
 
 * :ref:`sql`
@@ -52,6 +56,20 @@ If you are seeing database latency, but the query itself is not causing the issu
 * :ref:`postgresql`
 
 You can also use the Related Content tiles to pivot to Infrastructure Monitoring or Log Observer and further analyze database issues. See :ref:`get-started-relatedcontent` to learn more about Related Content.
+
+.. _disable-db-normalization:
+
+Disable database query normalization
+-----------------------------------------------------------
+
+By default, Splunk APM instrumentation sanitizes database queries to remove or mask sensible data, such as secrets or personal identifiable information (PII).
+
+If you want to disable database query normalization, follow these steps:
+
+- Java: Set the ``otel.instrumentation.common.db-statement-sanitizer.enabled`` property to ``false``. 
+- Ruby: Set the ``db_statement`` setting to ``:include``.
+
+.. warning:: Disabling normalization might result in personal identifiable information (PII) and secrets appearing in Observability Cloud.
 
 Learn more
 --------------

@@ -36,7 +36,7 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
 
       npm install @splunk/otel
    
-   To add custom instrumentation, see :ref:`add-custom-instrumentation`.
+   To add custom instrumentations, see :ref:`add-custom-instrumentation`.
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
 
