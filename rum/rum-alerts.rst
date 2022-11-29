@@ -74,7 +74,8 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
 
 Alert configuration examples
 =============================
-Here are a few examples of how you can configure alerts. Set the scope of your alert to either the page/URl level, or the app level which is an aggregate. 
+Here are a few examples of how you can configure alerts. Set the scope of your alert to either the page/URl level, or the app level which is an aggregate. The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company. 
+
 
 Alert trigger conditions
 ---------------------------
@@ -85,9 +86,11 @@ RUM alert conditions are designed to reduce noise and provide clear, actionable 
 Page level metrics 
 ------------------
 
-To create a page level metric, first create a custom rule to map to the page you want to monitor. For example, if you want to For more information, see :ref:`rum-rules`. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule by selecting the rule from the list.  The following image shows ... 
+To create a page level metric, first create a custom rule to map to the page you want to monitor. For example, if you want to For more information, see :ref:`rum-rules`. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule by selecting the rule from the list.  The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``.
 
-
+.. image:: /_images/rum/product-page-rum-example.png
+   :alt: product page 
+   :width: 97.3%
 
 
 App level metrics 
@@ -102,9 +105,9 @@ Web vitals have a standard range that denotes good performance. For example, a L
 URL level metrics 
 -----------------
 
-The following image shows an example configuration for the fictitious Buttercup Industries that sends an alert if 50% of the data points in a five minute window are longer than 200 ms. 
+The following image shows an example configuration for a URL level metric for long task duration that triggers if 50% of the data points in a five minute window are longer than 1000 ms. 
 
-.. image:: /_images/rum/alert-example-rum.png
+.. image:: /_images/rum/url-level-alert-rum.png
    :alt: LCP
    :width: 97.3%
 
