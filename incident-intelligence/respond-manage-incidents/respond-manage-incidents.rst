@@ -24,7 +24,7 @@ You can search for incidents by ID or title. Searching by ID supports partial ma
       <h2>Manually create an incident</h2>
    </embed>
 
-You can manually create an incident for testing purposes using the :guilabel:`Create incident` button on the :guilabel:`Incidents` tab. Manually created incidents will trigger the incident workflow for the service you select. 
+You can manually create an incident using the :guilabel:`Create incident` button on the :guilabel:`Incidents` tab. Manually created incidents will trigger the incident workflow for the service you select. 
 
 .. raw:: html
 
