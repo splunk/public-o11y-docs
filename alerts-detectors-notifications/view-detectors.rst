@@ -40,3 +40,20 @@ As with charts, the resolution of data displayed is determined by the chart's ti
 .. note:: If a detector contains a SignalFlow tab, you are viewing a detector that was created using the API.
 
    If you are familiar with the API, you can use this tab to view and edit the detector code and make changes to the detector rules. For more information, see :ref:`v2-detector-signalflow`.
+
+
+View a detector's properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+You can see a detector's properties, such as its description and creator, by following these steps:
+
+#. Open the detector.
+#. Select the detector's actions menu (|more|), then select :menuselection:`Info`.
+
+This will display the detector's properties as show in the illustration below.
+
+
+.. image:: /_images/images-detectors-alerts/detector-info.png
+  :width: 90%
+  :alt: Detector info panel showing description, creator, and other properties.
+
+
