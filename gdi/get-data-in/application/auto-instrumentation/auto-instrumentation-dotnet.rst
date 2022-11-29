@@ -24,10 +24,11 @@ By default, the installer script only installs the Collector. If you add the ``w
 Run the PowerShell script with the ``with_dotnet_instrumentation`` parameter, as shown in the following example:
 
 .. code-block:: powershell
-& {Set-ExecutionPolicy Bypass -Scope Process -Force; `
-$script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); `
-$params = @{access_token = "<access_token>"; realm = "<realm>"; mode = "agent"; with_dotnet_instrumentation = "`$true"; `
-deployment_env = "<environment_name>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+   & {Set-ExecutionPolicy Bypass -Scope Process -Force; `
+   $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); `
+   $params = @{access_token = "<access_token>"; realm = "<realm>"; mode = "agent"; with_dotnet_instrumentation = "`$true"; `
+   deployment_env = "<environment_name>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 Do the following to customize the command:
 
