@@ -91,7 +91,7 @@ Use service maintenance to mute notifications while you are making change to the
 
 To put your service in maintenance, select the :guilabel:`Actions` menu on the service you want to put in maintenance and select :guilabel:`Maintenance`. 
 
-The service status will show as :guilabel:`Maintenance`. All incidents that are associated with the service that are triggered while the service is in maintenance are created in a muted state. Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
+The service status will show as :guilabel:`Maintenance`. All incidents that are associated with the service that are triggered while the service is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
 
 Take a service out of maintenance
 -------------------------------------
