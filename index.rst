@@ -885,11 +885,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   incident-intelligence/sms-phone-numbers
-
-.. toctree::
-   :maxdepth:   3
-
    incident-intelligence/key-concepts
 
 .. toctree::

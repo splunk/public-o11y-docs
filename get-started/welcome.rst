@@ -123,6 +123,15 @@ Splunk On-Call incident response software aligns log management, monitoring, cha
 
 For more information, see the :new-page:`Splunk On-Call documentation <https://help.victorops.com/>`.
 
+.. _welcome-incident-intelligence:
+
+Splunk Incident Intelligence
+===============================
+
+Splunk Incident Intelligence incident response software lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing. 
+
+For more information, see the :ref:`ii-get-started-incident-intelligence`.
+
 
 .. _welcome-mobile:
 
