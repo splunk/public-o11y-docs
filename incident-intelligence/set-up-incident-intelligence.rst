@@ -6,9 +6,9 @@ Set up Splunk Incident Intelligence
 ************************************************************************
 
 .. meta::
-   :description: To route incidents to the necessary teams and people, you need to complete your incident response configuration.
+   :description: To route incidents to the necessary teams and people, you need to complete your incident management.
 
-To route incidents to the necessary teams and people, you need to first generate alerts and then complete your incident response configuration. Incident response configuration is where you create and configure services, and create on-call schedules. After you complete your incident response configuration, users can begin responding to incidents. 
+To route incidents to the necessary teams and people, you need to first generate alerts and then complete your incident management. Incident Management is where you create and configure services, and create on-call schedules. After you complete your incident management, users can begin responding to incidents. 
 
 Complete these tasks to get started with Incident Intelligence:
 

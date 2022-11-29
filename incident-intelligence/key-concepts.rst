@@ -29,7 +29,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
    * - Detector
      - Use a detector to specify the events for which you want to create an alert that is ingested into Incident Intelligence.
 
-   * - Incident response configuration
+   * - Incident Management
      - The entire configuration process for a service in Incident Intelligence. This is where you create a service and configure alert routing, alert grouping, and incident workflows for incidents associated with a service. 
 
    * - Incident

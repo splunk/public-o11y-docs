@@ -16,7 +16,7 @@ Use services to organize incidents depending on the impacted environmental compo
 Create a service
 ====================
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select :guilabel:`Services` > :guilabel:`Create service`.
 #. Give your service a unique name and a description. 
 #. Select :guilabel:`Create service`.
@@ -32,7 +32,7 @@ Configure the alerts that are routed to your service
 
 Use alert routing to associate alerts with a service. If an alert matches your alert filter conditions, it is routed to the service. To set up your alert routing for the service, follow these steps:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select :guilabel:`Services` and then the service you want to add alert routing conditions to.
 #. On the :guilabel:`Alert Routing` tab, the list of alerts that are currently routed to the service display.
 #. To filter the alerts routed to the service, select :guilabel:`Add Filters`. 
@@ -53,7 +53,7 @@ Configure how alerts are grouped
 
 Use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents. Alert grouping is specific to each service and you can customize it to create the workflow that works for you. You can use alert severity to determine if an incident is created and also group alerts by time period. To configure alert grouping, follow these steps:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select :guilabel:`Services` and then the service you want to add alert grouping conditions to. Each service can have one alert grouping rule.
 #. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
 #. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours, from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
@@ -68,7 +68,7 @@ Configure incident workflows for your service
 
 Use incident workflows to determine who is notified when a new incident is triggered. To create an automatic incident workflow, add escalating steps to notify responders of the incident. To add an incident workflow, follow these steps:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select :guilabel:`Services` and then the service where you want to create an incident workflow.
 #. Select the :guilabel:`Incident workflows` tab. 
 #. To add responders, select :guilabel:`Configure invite` under :guilabel:`Immediately`. 

@@ -15,7 +15,7 @@ Example schedule scenario one: Week-by-week coverage
 
 Week-by-week shifts let you define coverage that is consistent week after week. For example, one responder covers weekends from 5 PM Friday to 8 AM Monday for 4 weeks. Follow these steps to set up this example scenario.
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service". Select the :guilabel:`checkmark` icon to save your schedule name.  
@@ -38,7 +38,7 @@ Example schedule scenario two: Day-by-day coverage
 
 Day-by-day shifts let you define coverage for specific days of the week. For example, one responder covers Monday-Friday from 8 AM to 5 PM for 1 week. Follow these steps to set up this example scenario.
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service". Select the :guilabel:`checkmark` icon to save your schedule name.  
@@ -75,7 +75,7 @@ Create a schedule for primary coverage
 
 Follow these steps to create your primary schedule:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application, service primary". Select the :guilabel:`checkmark` icon to save your schedule name.  
@@ -139,7 +139,7 @@ Create a schedule for secondary coverage
 
 Follow these steps to create your secondary schedule:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Heroes team, web application service, secondary". Select the :guilabel:`checkmark` icon to save your schedule name.  
@@ -166,7 +166,7 @@ Add your primary and secondary schedules to the incident workflow for the web ap
 
 Your last step to achieve this schedule scenario is to add your primary and secondary schedules to the incident workflow for your web application service. To do so, follow these steps:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`Services` tab.
 #. Locate your web application service and select :guilabel:`Edit` from the :guilabel:`Actions` menu.
 #. Select the :guilabel:`Incident workflows` tab.
@@ -191,7 +191,7 @@ Create a schedule
 
 Follow these steps to create your primary schedule:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
 #. Select the :guilabel:`pencil` icon to edit the schedule name. For this example scenario, name the schedule "Victors team, checkout service". Select the :guilabel:`checkmark` icon to save your schedule name.  
@@ -220,7 +220,7 @@ Add your schedule to the incident workflow for the checkout service
 
 Your last step to achieve this schedule scenario is to add your schedule to the incident workflow for your checkout service. To do so, follow these steps:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Response Configuration`.
+#. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select the :guilabel:`Services` tab.
 #. Locate your checkout service and select :guilabel:`Edit` from the :guilabel:`Actions` menu.
 #. Select the :guilabel:`Incident workflows` tab.
