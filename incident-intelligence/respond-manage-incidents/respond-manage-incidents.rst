@@ -42,6 +42,7 @@ Use the following topics to learn about incident management and response:
    add-responders-roles
    add-incident-tools-resources
    edit-incident
+   muted-incidents
    mtta-mttr
    notification-preferences
 
