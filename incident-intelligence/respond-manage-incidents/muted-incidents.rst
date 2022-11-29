@@ -10,4 +10,4 @@ What is a muted incident?
 
 Incidents are triggered in a muted state when a service is in maintenance. See :ref:`ii-service-maintenance`.
 
-Muted incidents don't show in your in your incident list by default. To see your muted incidents go the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter. No responders are notified when a muted incident is triggered. Muted incidents are read-only and can't be acknowledged, resolved, or rejected.
+Muted incidents don't show in your in your incident list by default. To see your muted incidents, go the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter. No responders are notified when a muted incident is triggered. Muted incidents are read-only and can't be acknowledged, resolved, or rejected.
