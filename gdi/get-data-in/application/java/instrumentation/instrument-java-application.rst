@@ -108,6 +108,8 @@ To enable automatic metric collection, enable the metrics feature using a system
 
 If your metrics endpoint is different than the default value, set the ``SPLUNK_METRICS_ENDPOINT`` environment variable. See :ref:`metrics-configuration-java` for more information.
 
+.. note:: If you enable memory profiling, metrics collection is enabled automatically and cannot be disabled.
+
 .. _enable_profiling_java:
 
 Enable AlwaysOn Profiling
