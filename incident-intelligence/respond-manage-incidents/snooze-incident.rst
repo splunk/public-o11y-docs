@@ -33,5 +33,6 @@ See also
 * :ref:`ii-add-responders-roles`
 * :ref:`ii-add-incident-tools-resources`
 * :ref:`ii-edit-incident`
+* :ref:`ii-muted-incidents`
 * :ref:`ii-mtta-mttr`
 * :ref:`ii-notification-preferences`
