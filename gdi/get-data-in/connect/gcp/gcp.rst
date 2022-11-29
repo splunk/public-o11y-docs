@@ -134,10 +134,12 @@ To configure your GCP service, follow these steps:
 By default, all available services are monitored, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
 
 #. Log in to Splunk Observability Cloud. 
-#. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
-#. In the :guilabel:`Cloud Integrations` section, select the :guilabel:`Google Cloud Platform` tile to open the Google Cloud Platform guided setup.
-#. Go to :guilabel:`New Integration`, enter a name for this GCP integration, then :guilabel:`Add Project`. 
+#. Open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
+   #. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
+   #. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
+   #. In the :guilabel:`Cloud Integrations` section, select the :guilabel:`Google Cloud Platform` tile to open the Google Cloud Platform guided setup.
+   #. Go to :guilabel:`New Integration`.
+#. Enter a name for this GCP integration, then :guilabel:`Add Project`. 
 #. Next, select :guilabel:`Import Service Account Key`, and select one or more of the JSON key files that you downloaded from GCP in :ref:`Configure GCP <gcp-two>`.
 #. Select :guilabel:`Open`. You can then see the project IDs corresponding to the service account keys you selected.
 #. To import :ref:`metrics <gcp-metrics>` from only some of the available services, follow these steps:

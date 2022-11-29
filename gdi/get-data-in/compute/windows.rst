@@ -30,14 +30,14 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
 
-#. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
+#. Open the :new-page:`Windows guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-windows/step-1?category=all&gdiState=%7B"integrationId":"otel-connector-windows"%7D>`. Optionally, you can navigate to the guided setup on your own:
+   #. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
 
-#. In the integration filter menu, select :guilabel:`All`.
+   #. In the integration filter menu, select :guilabel:`All`.
 
+   #. Select :guilabel:`Windows`.
 
-#. #. Select :guilabel:`Windows`.
-
-#. Select :guilabel:`Add Connection`. The integration guided setup appears.
+   #. Select :guilabel:`Add Connection`. The integration guided setup appears.
 
 #. Follow the steps in the guided setup.
 
