@@ -9,7 +9,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET provides a package that automatically instruments your local ASP.NET applications to capture and report distributed traces to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 
-Zero Configuration Auto Instrumentation for .NET provides the following benefits:
+The Zero Configuration package provides the following benefits:
 
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 - You don't need to configure or instrument your .NET back-end services or applications before deployment.
@@ -24,11 +24,12 @@ By default, the installer script only installs the Collector. If you add the ``w
 Run the PowerShell script with the ``with_dotnet_instrumentation`` parameter, as shown in the following example:
 
 .. code-block:: powershell
+   :emphasize-lines: 3
 
    & {Set-ExecutionPolicy Bypass -Scope Process -Force; `
    $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); `
-   $params = @{access_token = "<access_token>"; realm = "<realm>"; mode = "agent"; with_dotnet_instrumentation = "`$true"; `
-   deployment_env = "<environment_name>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+   $params = @{access_token = "<access_token>"; realm = "<realm>"; mode = "agent"; with_dotnet_instrumentation = "`$true"; deployment_env = "<environment_name>"}; `
+   Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 Do the following to customize the command:
 
