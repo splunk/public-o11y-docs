@@ -5,7 +5,7 @@ Splunk RUM use case library
 *****************************
 
 
-The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company. Each use case features Kai, a site reliability engineer at the Buttercup e-commerce company, and shares the stories of how they use Splunk RUM and Splunk Observability Cloud to monitor and take action on their applications and services. 
+The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company. Each use case features Kai, a site reliability engineer at the Buttercup Industries e-commerce company, and shares the stories of how they use Splunk RUM and Splunk Observability Cloud to monitor and take action on their applications and services. 
 
 
 .. toctree::
