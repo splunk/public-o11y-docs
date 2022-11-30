@@ -2,11 +2,11 @@
 
 .. _ii-muted-incidents:
 
-.. meta::
-   :description: Incidents are triggered in a muted state when a service is in maintenance. No responders are notified when a muted incident is triggered. Muted incidents are read-only and can't be acknowledged, resolved, or rejected.
-
 What is a muted incident?
 ************************************
+
+.. meta::
+   :description: Incidents are triggered in a muted state when a service is in maintenance. No responders are notified when a muted incident is triggered. Muted incidents are read-only and can't be acknowledged, resolved, or rejected.
 
 Incidents are triggered in a muted state when a service is in maintenance. See :ref:`ii-service-maintenance`.
 
