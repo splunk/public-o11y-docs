@@ -44,12 +44,13 @@ As with charts, the resolution of data displayed is determined by the chart's ti
 
 View a detector's properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 You can see a detector's properties, such as its description and creator, by following these steps:
 
 #. Open the detector.
 #. Select the detector's actions menu (|more|), then select :menuselection:`Info`.
 
-This will display the detector's properties as show in the illustration below.
+This displays the detector's properties as show in the illustration.
 
 
 .. image:: /_images/images-detectors-alerts/detector-info.png
