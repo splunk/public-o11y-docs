@@ -23,10 +23,16 @@ Switch to Okta, then follow these steps to add Observability Cloud as an Okta ap
 
 Switch to Observability Cloud:
    #. Log in to Splunk Observability Cloud.
-   #. In the left navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration`.
-   #. In the integration filter menu, select :guilabel:`All`.
-   #. In the :guilabel:`Search` field, search for :guilabel:`Okta`, and select it.
+   #. Open the :new-page:`Okta guided setup <https://login.signalfx.com/#/integrations/okta/description>`. Optionally, you can navigate to the guided setup on your own:
+ 
+      #. In the left navigation menu, select :menuselection:`Data Management`.
+   
+      #. Select :guilabel:`Add Integration`.
+   
+      #. In the integration filter menu, select :guilabel:`All`.
+   
+      #. In the :guilabel:`Search` field, search for :guilabel:`Okta`, and select it.
+   
    #. In the :guilabel:`Name` text box, enter the name of your integration.
    #. Copy the :guilabel:`Integration ID` value. Even if you have multiple organizations that you want to integrate with Okta SSO, leave :guilabel:`Integration-specific Entity ID` deselected. The Observability Cloud Okta integration provides this automatically for multiple organizations.
 

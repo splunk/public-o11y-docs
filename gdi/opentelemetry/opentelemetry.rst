@@ -70,8 +70,14 @@ For a complete overview of the Collector resources, refer to :ref:`opentelemetry
 Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Splunk Distribution of OpenTelemetry Collector`, and select it.
+#. Open the :new-page:`Android Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/android/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"android"%7D>`. Optionally, you can navigate to the guided setup on your own:
+
+  #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`Splunk Distribution of OpenTelemetry Collector`, and select it.
+
 #. Choose your platform.
+
 #. Follow the step-by-step process provided in the platform's guided setup.
