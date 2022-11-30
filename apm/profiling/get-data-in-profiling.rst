@@ -19,7 +19,7 @@ To get data into Splunk AlwaysOn Profiling, you need the following:
 
 If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
-.. note:: By default, AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
+.. note:: AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
 
 .. _profiling-setup:
 
