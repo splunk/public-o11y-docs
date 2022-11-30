@@ -104,14 +104,12 @@ UI limits
     - 1s
 
 
-Monitor your usage with dashboards 
-======================================
+APM dashboards for throttling and entitlements 
+============================================================================
 
-There are two dashboards you can use to monitor your APM usage.
+.. note:: These dashboards are for troubleshooting purposes only. For more information, refer to the Subscription Usage page and reports for your organization.
 
-1. From the left nav, select :guilabel:`Dashboards> Built-in dashboard groups > Organizational metrics` 
-2. Select the APM dashboard you want to monitor. 
-
+To navigate to the APM usage dashboards, you can either go to :guilabel:`Settings > Organization overview`. 
 
 .. list-table::
   :header-rows: 1
