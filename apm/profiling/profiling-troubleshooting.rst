@@ -84,7 +84,7 @@ AlwaysOn Profiling is not accessible in Observability Cloud
 
 If you're sending profiling data to Observability Cloud but can't see AlwaysOn Profiling in Splunk APM, your organization might be lacking the profiler entitlement.
 
-By default, AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, AlwaysOn Profiling might be disabled depending on the contract.
+AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, AlwaysOn Profiling might be disabled depending on the contract.
 
 To solve this issue, reach out to Splunk Support to request they enable the AlwaysOn Profiling feature.
 
