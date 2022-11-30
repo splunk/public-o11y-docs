@@ -50,7 +50,7 @@ You can see a detector's properties, such as its description and creator, by fol
 #. Open the detector.
 #. Select the detector's actions menu (|more|), then select :menuselection:`Info`.
 
-This displays the detector's properties as show in the illustration.
+This displays the detector's properties, as shown in the illustration.
 
 
 .. image:: /_images/images-detectors-alerts/detector-info.png
