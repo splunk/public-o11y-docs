@@ -98,7 +98,7 @@ Steps
 To install a generic SAML SSO integration, follow these steps:
 
    #. Log in to Splunk Observability Cloud.
-   #. Open the :new-page:`SAML guided setup <https://login.signalfx.com/#/integrations//saml/description>`. Optionally, you can navigate to the guided setup on your own:
+   #. Open the :new-page:`SAML guided setup <https://login.signalfx.com/#/integrations/saml/description>`. Optionally, you can navigate to the guided setup on your own:
   
      #. In the left navigation menu, select :menuselection:`Data Management`.
    
