@@ -5,19 +5,19 @@ Splunk APM system limits
 *******************************************************
 
 .. meta:: 
-  :description: Splunk APM has system limits that help ensure good performance, stability, and reliability. These limits also protect the Splunk APM multi-tenant environment. Exceeding these limits might degrade your Splunk APM experience.
+  :description: Splunk APM has system limits that help ensure performance, stability, and reliability. These limits also protect the Splunk APM multitenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
 
 .. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
-Splunk APM has system limits that help ensure good performance, stability, and reliability. These limits also protect the Splunk APM multi-tenant environment. Exceeding these limits might degrade your Splunk APM experience.
+Splunk APM has system limits that help ensure performance, stability, and reliability. These limits also protect the Splunk APM multitenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
 .. _subscription-apm:
 
 Subscriptions 
 ==========================
 
-There are two types of subscriptions: enterprise and standard. For more information on each type of subscription, see :new-page:`Splunk APM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>`.
+There are two types of subscriptions: Enterprise and Standard. For more information on each type of subscription, see :new-page:`Splunk APM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-apm>`.
 
 
 Span and trace limits 
@@ -55,7 +55,7 @@ Span and trace limits
      - Time from last span arrival for a traceId to trace assembly completed.
    * - Splunk APM API requests
      - 10 requests per min 
-     -  ... 
+     -  
 
 
 MetricSet limits 
@@ -82,32 +82,52 @@ UI limits
 
 .. list-table::
   :header-rows: 1
-  :widths: 15, 15, 70
+  :widths: 70,30
 
   * - :strong:`Limit name`
     - :strong:`Default limit value`
-    - :strong:`Notes`
   * - Number of nodes in the service map
     - 500
-    -
   * - Number of traces in trace search 
     - 1000
-    -
   * -  Number of spans per trace in trace view
     - 100k
-    -
   * - Length of service name
     - 1024 characters
-    - 
   * - Length of operation name 
     - 1024 characters
-    -
   * - “Yellow” threshold for error rate
     - 5%
-    -
   * - “Red” threshold for error rate
     - 20%
-    -
   * - “Red” threshold for p90 latency
     - 1s
-    -
+
+
+Monitor your usage with dashboards 
+======================================
+
+There are two dashboards you can use to monitor your APM usage.
+
+1. From the left nav, select :guilabel:`Dashboards> Built-in dashboard groups > Organizational metrics` 
+2. Select the APM dashboard you want to monitor. 
+
+
+.. list-table::
+  :header-rows: 1
+  :widths: 30, 70
+
+  * - :strong:`Dashboard`
+    - :strong:`Description`
+  
+  * - APM Entitlements
+    - Shows metrics related to your usage subscription like the number of containers, hosts, trace volume, and more. 
+
+  * - APM Throttling
+    - Shows metrics related to data dropped because of limit throttling. 
+    
+
+
+
+
+
