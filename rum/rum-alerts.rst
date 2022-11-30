@@ -97,7 +97,7 @@ App level metrics
 -----------------
 Web vitals have a standard range that denotes good performance. For example, a Largest Contentful Paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps on how to remedy the slow LCP.
 
-.. image:: /_images/rum/alert-modal-example.png
+.. image:: /_images/rum/alert-modal-lcp.png
    :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 
    :width: 97.3%
 
