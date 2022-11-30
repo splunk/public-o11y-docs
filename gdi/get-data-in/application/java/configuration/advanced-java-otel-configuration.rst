@@ -202,7 +202,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds. |br| |br| System property: ``splunk.profiler.call.stack.interval``
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
-     - Enables memory profiling with all the options. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be enabled. To enable or disable specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
+     - Enables memory profiling with all the options. Enabling memory profiling overrides the value of ``splunk.metrics.enabled``. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be set to ``true``. To enable or disable specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
    * - ``SPLUNK_PROFILER_MEMORY_SAMPLER_INTERVAL``
      - Defines the sampling interval. The default value is 1. Set the value to 2 and higher to sample data every nth allocation event. |br| |br| System property: ``splunk.profiler.memory.sampler.interval``
    * - ``SPLUNK_PROFILER_TLAB_ENABLED``
@@ -229,7 +229,7 @@ The following settings control metrics collection for the Java agent:
    * - Environment variable
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
-     - Enables exporting metrics. See :ref:`java-otel-metrics-attributes` for more information. Default is ``false``. |br| |br| System property: ``splunk.metrics.enabled``
+     - Enables exporting metrics. If you enable memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is ignored. See :ref:`java-otel-metrics-attributes` for more information. Default is ``false``. |br| |br| System property: ``splunk.metrics.enabled``
    * - ``SPLUNK_METRICS_ENDPOINT``
      - The OTel collector metrics endpoint. Default is ``http://localhost:9943``. |br| |br| System property: ``splunk.metrics.endpoint``
    * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
