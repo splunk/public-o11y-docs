@@ -8,7 +8,7 @@ View Splunk APM usage reports for your subscription plan
    :description: View detailed APM billing information and download usage reports with metrics for your subscription plan.
 
 
-.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
+.. note:: The following information describes aspects of your usage and consumption.For more detailed billing-related queries, contact your Splunk Account Team.
 
 
 Get detailed APM usage reports for recent usage periods to analyze billed usage values and per-minute usage. You have to be an administrator to view the :guilabel:`Subscription Usage` page for your organization.

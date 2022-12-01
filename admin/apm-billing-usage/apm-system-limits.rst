@@ -8,7 +8,7 @@ Splunk APM system limits
   :description: Splunk APM has system limits that help ensure performance, stability, and reliability. These limits also protect the Splunk APM multitenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
 
-.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
+.. note:: The following information describes aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
 Splunk APM has system limits that help ensure performance, stability, and reliability. These limits also protect the Splunk APM multitenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
@@ -55,7 +55,7 @@ Span and trace limits
      - Time from last span arrival for a traceId to trace assembly completed.
    * - Splunk APM API requests
      - 10 requests per min 
-     -  
+     - Requests return a 429 HTTP error status code when limits are throttled. 
 
 
 MetricSet limits 
