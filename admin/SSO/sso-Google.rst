@@ -46,7 +46,7 @@ To remove a Google domain's login access:
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for :guilabel:`Google Sign-In`.
-#. #. Click the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.
+#. Click the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.
 #. Click the "x" for the domain you want to remove.
 
 

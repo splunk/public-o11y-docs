@@ -22,7 +22,7 @@ Open a browser tab or window for Observability Cloud, and another for PingOne.
 
 In Observability Cloud, do the following:
    #. Log in to Splunk Observability Cloud.
-   #. Open the :new-page:`PingOne guided setup <https://login.signalfx.com/#/integrations//pingone/description>`. Optionally, you can navigate to the guided setup on your own:
+   #. Open the :new-page:`PingOne guided setup <https://login.signalfx.com/#/integrations/pingone/description>`. Optionally, you can navigate to the guided setup on your own:
  
       #. In the left navigation menu, select :menuselection:`Data Management`.
    
