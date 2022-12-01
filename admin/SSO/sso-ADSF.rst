@@ -48,10 +48,17 @@ Create a new ADFS SSO integration in Observability Cloud
 To create a new ADFS integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Active Directory FS`, and select it.
+#. Open the :new-page:`Active Directory FS guided setup <https://login.signalfx.com/#/integrations/adfs/description>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`.
+
+   #. Select :guilabel:`Add Integration`.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`Active Directory FS`, and select it.
+
+   
 #. In the :guilabel:`Name` field, enter a name for your ADFS SSO integration.
 #. Save the :guilabel:`Integration ID` field value to a file. You'll need this value in a subsequent step.
 #. If you want to set up ADFS to integrate with multiple organizations:

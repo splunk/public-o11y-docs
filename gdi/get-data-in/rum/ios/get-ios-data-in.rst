@@ -27,13 +27,15 @@ To generate all the basic installation commands for your environment and applica
 
 1. Log in to Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. Open the :new-page:`iOS Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/ios/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"ios"%7D>`. Optionally, you can navigate to the guided setup on your own:
+   
+   3. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
-3. In the integration filter menu, select :guilabel:`By Use Case`.
+   4. In the integration filter menu, select :guilabel:`By Use Case`.
 
-4. Select the :guilabel:`Monitor user experience` use case.
+   5. Select the :guilabel:`Monitor user experience` use case.
 
-5. Click the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
+   6. Click the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
 
 For detailed installation instructions and requirements, see :ref:`ios-rum-install`.
 
