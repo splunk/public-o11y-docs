@@ -70,8 +70,11 @@ For a complete overview of the Collector resources, refer to :ref:`opentelemetry
 Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
+
 #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Splunk Distribution of OpenTelemetry Collector`, and select it.
-#. Choose your platform.
+  
+#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+
+#. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
+
 #. Follow the step-by-step process provided in the platform's guided setup.
