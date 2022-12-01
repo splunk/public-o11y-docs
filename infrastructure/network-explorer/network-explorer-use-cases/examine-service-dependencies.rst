@@ -24,18 +24,18 @@ Kai first checks their team's architecture diagram, but soon realizes it's outda
         :alt: This image shows the outdated architecture diagram for Kai's team. The map is a combination of printed and illegible hand drawn elements on a stained piece of paper.
         :width: 80%
 
-Kai then attempts to investigate service dependencies using the Network Explorer service map, which provides a complete graphical view of all services based on their network traffic, regardless of the languages and frameworks used in each service.
+Kai then attempts to investigate service dependencies using the Network Explorer network map, which provides a complete graphical view of all services based on their network traffic, regardless of the languages and frameworks used in each service.
 
-    .. image:: /_images/images-network-explorer/service-map-diagram.png
-        :alt: This image shows the up-to-date architecture diagram for Kai's team. The diagram is an interactive service map in Network Explorer, which shows all upstream and downstream dependencies for ``checkoutservice``.
+    .. image:: /_images/images-network-explorer/network-map-diagram.png
+        :alt: This image shows the up-to-date architecture diagram for Kai's team. The diagram is an interactive network map in Network Explorer, which shows all upstream and downstream dependencies for ``checkoutservice``.
         :width: 80%
 
 In particular, Kai selects ``checkoutservice`` to receive the update, and immediately gets a drilldown view of all upstream and downstream dependencies for ``checkoutservice``.
 
-By exploring the Network Explorer service map, Kai successfully obtained the context they need to understand all the dependencies of the service being updated. 
+By exploring the Network Explorer network map, Kai successfully obtained the context they need to understand all the dependencies of the service being updated. 
 
 Learn more
 ======================================
 
-For information on the Network Explorer service map, see :ref:`network-explorer-service-map`.
+For information on the Network Explorer network map, see :ref:`network-explorer-network-map`.
 
