@@ -75,7 +75,7 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
 Alert configuration examples
 =============================
 
-Here are a few examples of how you can configure alerts. Set the scope of your alert to either the page/URl level, or the app level which is an aggregate. The following use cases feature examples from Buttercup Industries, a fictitious ecommerce company. 
+Here are a few examples of how you can configure alerts. Set the scope of your alert to either the page or URL level, or the app level which is an aggregate. The following use cases feature examples from Buttercup Industries, a fictitious ecommerce company. 
 
 
 Alert trigger conditions
