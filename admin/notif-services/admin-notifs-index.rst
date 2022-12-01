@@ -5,8 +5,7 @@ Send alert notifications to third-party services using Splunk Observability Clou
 ************************************************************************************
 
 .. meta::
-      :description: In addition to sending alert notifications via email, you can send alert notifications to various other services, such as PagerDuty, Slack, and BigPanda.
-      :keywords: alert detector notification bigpanda slack pagerduty servicenow victorops outlook Microsoft teams Jira
+      :description: In addition to sending alert notifications via email, send alert notifications to other services, such as PagerDuty, Slack, and BigPanda.
 
 .. toctree::
    :hidden:
@@ -28,45 +27,45 @@ Send alert notifications to third-party services using Splunk Observability Clou
 
 In addition to sending alert notifications by email (see :ref:`manage-notifications`), you can configure Splunk Observability Cloud to send alert notifications to the following third-party services:
 
-* Amazon EventBridge
 
-  See :ref:`amazoneventbridge`.
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 40
 
-* BigPanda
+   * - :strong:`Third-party`
+     - :strong:`Link to documentation`
 
-  See :ref:`bigpanda`.
+   * - Amazon EventBridge
+     - See :ref:`amazoneventbridge`
 
-* Jira
+   * - BigPanda
+     - See :ref:`bigpanda`.
 
-  See :ref:`jira`.
+   * - Jira
+     - See :ref:`jira`.
 
-* Microsoft Teams
+   * - Microsoft Teams
+     - See :ref:`microsoftteams`.
 
-  See :ref:`microsoftteams`.
+   * - Opsgenie
+     - See :ref:`opsgenie`.
 
-* Opsgenie
+   * - PagerDuty
+     - See :ref:`pagerduty`.
 
-  See :ref:`opsgenie`.
+   * - ServiceNow
+     - See :ref:`servicenow`.
 
-* PagerDuty
+   * - Slack
+     - See :ref:`slack`.
 
-  See :ref:`pagerduty`.
+   * - Splunk On-Call (VictorOps)
+     - See :ref:`splunkoncall`.
 
-* ServiceNow
+   * - xMatters
+     - See :ref:`xmatters`.
 
-  See :ref:`servicenow`.
 
-* Slack
-
-  See :ref:`slack`.
-
-* Splunk On-Call (VictorOps)
-
-  See :ref:`splunkoncall`.
-
-* xMatters
-
-  See :ref:`xmatters`.
 
 You can also configure Observability Cloud to send alert notifications to a webhook. See :ref:`webhook`.
 
@@ -78,6 +77,6 @@ For information about how to use detectors, events, alerts, and notifications, s
 
 .. _naming-note:
 
-.. admonition:: About naming your integrations
+.. note:: About naming your integrations
 
    When a user adds an alert recipient to a detector, they choose from the notification service integration names you create when configuring these integrations. For this reason, provide descriptive and unique names for the integrations you create. This helps ensure that users get enough information from an integration name to be able to select the correct recipient for the alert notifications.

@@ -74,6 +74,10 @@ disk:
 
 #### File system
 
+```{note}
+The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in [GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters). See the complete list of file system metrics in [GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/documentation.md). 
+```
+
 ```yaml
 filesystem:
   <include_devices|exclude_devices>:
@@ -120,10 +124,11 @@ network:
 
 ```yaml
 process:
-  disk:
-    <include|exclude>:
-      names: [ <process name>, ... ]
-      match_type: <strict|regexp>
+  <include|exclude>:
+    names: [ <process name>, ... ]
+    match_type: <strict|regexp>
+  mute_process_name_error: <true|false>
+  scrape_process_delay: <time>
 ```
 
 ### Advanced configurations

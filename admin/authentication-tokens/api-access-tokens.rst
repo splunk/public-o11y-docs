@@ -5,9 +5,9 @@ Retrieve and manage user API access tokens using Splunk Observability Cloud
 ****************************************************************************
 
 .. meta::
-  :description: Learn how to how to see and manage user API access tokens.
+  :description: How to view and manage user API access (session) tokens. List of API requests that require a user API access token that was created by an admin.
 
-This topic describes how to retrieve a :strong:`user API access token` that you can use to authenticate API requests.
+Learn how to retrieve :strong:`user API access tokens` to authenticate all API requests, including those that send data. 
 
 Keep in mind you might also need the following access tokens:
 
@@ -33,10 +33,9 @@ You don't need to delete your user API access tokens. Instead, you can let them 
 User API access token expiration
 ---------------------------------------
 
-A user API access token you create on the Account Settings page expires when you log out of Splunk Observability Cloud, or after 30 days, whichever comes first.
+A user API access token you create on the Account Settings page expires when you log out of Splunk Observability Cloud, or after 30 days, whichever comes first. As a result, they aren't the best choice for continual data transmission.
 
 To create a user API access token that doesn't expire when you log out of Splunk Observability Cloud but still expires after 30 days, use the :code:`v2/session` endpoint. For more information, see :new-page:`Sessions Tokens <https://dev.splunk.com/observability/reference/api/sessiontokens/latest>`.
-
 
 .. _apis-require-admin-token:
 

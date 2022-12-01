@@ -28,7 +28,7 @@ Display a detector permissions list
 To display the permissions list for a detector, follow these steps:
 
 #. Open the detector.
-#. Click the :guilabel:`Actions` menu icon, then select :menuselection:`Permissions`.
+#. Select the detector's actions menu (|more|), then select :menuselection:`Permissions`.
 
 .. note:: You can open a detector from the :guilabel:`Detectors` tab on the :guilabel:`Alerts` page.
 
@@ -48,7 +48,7 @@ Grant write permissions for detectors
 
 To grant write permissions for a detector, follow these steps:
 
-#. Display the permissions for the item by clicking the :guilabel:`Actions` menu and selecting :guilabel:`Permissions`.
+#. Display the permissions for the item by selecting the detector's actions menu (|more|) and selecting :guilabel:`Permissions`.
 #. To start using specific write permissions for a detector,
    uncheck :guilabel:`Anyone in this organization can edit`. You are now the
    only user who can edit the item.
@@ -63,11 +63,11 @@ Revoke write permissions for detectors
 
 To revoke write permissions for a detector, follow these steps:
 
-#. Display the permissions for the item by clicking the :guilabel:`Actions` menu and selecting :guilabel:`Permissions`.
+#. Display the permissions for the item by selecting the detector's actions menu (|more|) and selecting :guilabel:`Permissions`.
 #. To remove a user or team, click the :guilabel:`x` next to the user or team name.
 #. Click :guilabel:`Save`
 
-.. admonition:: Important
+.. note:: Important
 
    You can remove your own write permission from a detector.
    If you do this deliberately or by accident, and you're not an administrator,

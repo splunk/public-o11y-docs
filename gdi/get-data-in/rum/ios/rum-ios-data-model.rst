@@ -1,7 +1,7 @@
 .. _rum-ios-data:
 
 ***********************************
-Data collected by the iOS RUM agent
+iOS RUM data model 
 ***********************************
 
 .. meta::
@@ -9,42 +9,425 @@ Data collected by the iOS RUM agent
 
 The iOS RUM agent includes a package that collects the following types of data about your iOS application.
 
-Location data  
-=============
-If you choose to set the latitude and longitude for location data by using the Splunk RUM for iOS APIs, then Splunk Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
-
-.. note::
-   Splunk Observability Cloud calculates geographical metadata from the latitude and longitude, and then drops the latitude and longitude after processing the data. 
-
-
 Common data types
 ==============================================
 
 .. include:: /_includes/rum-data-model.rst
 
-.. _ios-rum-basic-properties:
- 
-Application data
-==============================================
 
-The following properties are common to all iOS applications instrumented for Splunk RUM:
+
+
+
+.. _rum-ios-metrics:
+
+Metrics 
+=============================================
+The following tables list all of the metrics available in Splunk RUM for iOS. 
 
 .. list-table:: 
-   :widths: 20 40 
+   :widths: 20 15 65
    :header-rows: 1
 
-   * - :strong:`Data type`
+   * - :strong:`Metric name`
+     - :strong:`UI name`
      - :strong:`Description`
-   * - App life cycle events
-     - Events that signal that the app starts up and goes to background.
-   * - UI level events
-     - Screen transitions and clicks on components.
-   * - Network related events
-     - Network changes, connection information. For example:
-        * HTTP requests
-        * Latency
-        * Errors
-   * - Errors
-     - Crashes and exceptions.
-   * - Custom events 
-     - Events not collected by the RUM instrumentation and any events that need manual coding. See :ref:`manual-rum-ios-instrumentation`.
+   * - ``rum.workflow.count``
+     - Custom Event Count
+     - The total number of spans with the selected custom event in the given time range. 
+   * - ``rum.workflow.time.ns.p75``
+     - Custom Event Duration
+     - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
+   * - ``rum.crash.count``
+     - Mobile crash
+     - A crash happens when a user encounters an error and has to exit the app.
+   * - ``rum.app_error.count``
+     - App error
+     - Total number of reported errors in the given time range. 
+   * - ``rum.resource_request.count``
+     - Network or back-end requests/errors
+     - The total number of network requests in a given time range. 
+   * - ``rum.resource_request.time.ns.p75``
+     - Network back-end latency
+     - The p75 time in nanoseconds for the network request latency in the given time range. 
+   * - ``rum.cold_start.time.ns.p75``
+     -  Cold start time
+     -  The p75 time in nanoseconds of cold starts in the given time range.  
+   * - ``rum.cold_start.count`` 
+     - Cold start count
+     - Total number of cold starts in the given time range.   
+   * - ``rum.hot_start.count``
+     - Hot start count 
+     - Total number of hot starts in the given time range. 
+   * - ``rum.hot_start.time.ns.p75``
+     - Hot start time
+     - The p75 time in nanoseconds for a hot start. 
+
+
+
+
+.. _ios-rum-basic-properties:
+
+Basic properties
+===================
+
+The following properties are common to all applications instrumented for Splunk RUM:
+
+.. list-table:: 
+   :widths: 10 10 80
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Description
+   * - ``SpanId``
+     - String
+     - Unique 64-bit identifier generated for the span within the trace.
+   * - ``ParentSpanId``
+     - String
+     - Parent span ID. Absent if the span is the root span in a trace.
+   * - ``name``
+     - String
+     - Logical operation the span represents.
+   * - ``duration``
+     - Number
+     - Duration in microseconds.
+   * - ``traceId``
+     - String
+     - Unique 128-bit identifier, set on all spans belonging to the trace.
+   * - ``timestamp``
+     - Number
+     - Epoch microseconds of the start of the span. Can be absent if incomplete.
+   * - ``tags``
+     - Object
+     - Additional context, allowing to search and analyze spans based on specific tags.
+   * - ``TraceFlags``
+     - Struct
+     - Represents global trace options. Options are propagated to all child spans and determine features such as whether a span is traced.
+   * - ``TraceState``
+     - Struct
+     - Carries tracing-system specific context in a list of key-value pairs.
+   * - ``SpanKind``
+     - Enum
+     - Type of span. Use it to set additional relationships between spans. The default value is ``Internal``. 
+
+       Supported values are:
+
+        - Internal
+        - Server
+        - Client
+        - Producer
+        - consumer
+
+The following table describes each value of ``SpanKind``:
+
+.. list-table:: 
+   :widths: 30 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Description
+   * - ``Internal``
+     - Default value. Indicates that the span is used internally.
+   * - ``Server``
+     - Indicates that the span covers server-side handling of an RPC or other remote request.
+   * - ``Client``
+     - Indicates that the span covers the client-side wrapper around an RPC or other remote request.
+   * - ``Producer``
+     - Indicates that the span describes producer sending a message to a broker.
+   * - ``Consumer``
+     - Indicates that the span describes consumer receiving a message from a broker.
+
+Default attributes
+===================
+
+By default, the iOS RUM agent adds the following attributes to all spans:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Description
+   * - ``app``
+     - String
+     - Application name, as defined by :code:`using(Bundle.main.infoDictionary)`.
+   * - ``splunk.rumSessionId``
+     - String
+     - Session identifier, randomly generated by Splunk RUM. It doesn't contain personally identifiable information.
+   * - ``splunk.rum.previous_session_id``
+     - String
+     - Identifier of the session preceding the current session. Set only if there is a change in the ``splunk.rumSessionId`` attribute.
+   * - ``splunk.rum.version``
+     - String
+     - Version of the Splunk RUM SDK instrumenting the application.
+   * - ``net.host.connection.type``
+     - String
+     - Connection type used by the device. Possible values include ``wifi``, ``cell``, ``unavailable``, and ``unknown``.
+
+Resource attributes
+==============================================
+
+By default, the iOS RUM agent adds the following resource attributes to all spans:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Description
+   * - ``environment``
+     - String
+     - Name of the deployment environment. For example, ``dev``. Defined using :code:`deploymentEnvironment(String)`.
+   * - ``device.model.name``
+     - String
+     - The model name for the device.
+   * - ``os.name``
+     - String
+     - Always set to ``iOS``.
+   * - ``os.version``
+     - String
+     - Version of the operating system.
+   * - ``component``
+     - String
+     - Components of the span. For example, ``appstart``.
+   * - ``thread.name``
+     - String
+     - Name of the thread. ``SplunkRum.initialize`` only applies to the main thread.
+
+Instrumentation attributes
+==============================================
+
+The iOS RUM agent collects the following data using its instrumentations. To enable or disable specific instrumentations, see :ref:`ios-rum-instrumentation-settings`.
+
+Crash reporting
+----------------------------------------------------
+
+The iOS RUM agent adds the following crash reporting attributes to spans that represent uncaught exceptions:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Description
+   * - ``thread.id``
+     - Integer
+     - ID of the current managed thread, as opposed to the operating system thread ID.
+   * - ``thread.name``
+     - String
+     - Name of the thread.
+   * - ``exception.message``
+     - String
+     - The message of the exception.
+   * - ``exception.type``
+     - String
+     - The type of the exception.
+   * - ``exception.stacktrace``
+     - String
+     - The stack trace for the exception.
+   * - ``component``
+     - String
+     - Always ``crash``.
+   * - ``status``
+     - String
+     - Always ``Error``.
+   * - ``crash.timestamp``
+     - NSDate
+     - Date and time when the crash report is generated.
+   * - ``crash.address``
+     - Integer
+     - Address of the faulty instruction.
+
+Network monitoring
+----------------------------------------------------
+
+Network monitoring produces spans with the name ``network.change`` and the following attributes:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Description
+   * - ``network.status``
+     - String
+     - Network status. Either ``lost`` or ``available``.
+   * - ``net.host.connection.type``
+     - String
+     - Connection type. Possible values are: ``unavailable``, ``cell``, ``wifi``, ``unknown``, ``vpn``.
+
+.. _ios-slow-rendering-data:
+
+Slow rendering detection
+----------------------------------------------------
+
+Slow rendering detection generates spans whenever it detects a slow or frozen frame render. Frame rendering is slow if its duration exceeds 16 milliseconds, and frozen if it exceeds 700 milliseconds.
+
+Slow rendering detection generates up to two spans on every interval: a span named ``slowRenders`` which counts slow frames, and a span named ``frozenRenders`` which counts frozen frames.
+
+Slow rendering detection spans have the following attribute:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Description
+   * - ``count``
+     - Integer
+     - Number of observed slow or frozen frames during a single interval. Intervals last 1 second by default. To change the polling interval duration, pass a positive duration, in milliseconds, to the ``slowFrameDetectionThresholdMs`` and ``frozenFrameDetectionThresholdMs`` settings.
+
+HTTP clients
+------------------------------------
+
+The iOS RUM agent includes instrumentation for the NSURLConnection clients. To enable the instrumentation, see :ref:`ios-rum-instrumentation-settings`.
+
+The HTTP client instrumentation collects the following OpenTelemetry HTTP attributes:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Examples
+   * - ``http.method``
+     - String
+     - ``GET``, ``POST``, ``HEAD``
+   * - ``http.url``
+     - String
+     - ``https://foo.bar/address?q=value#hash``
+   * - ``http.status_code``
+     - Integer
+     - ``200``, ``404``, ``418``
+   * - ``http.response_content_length``
+     - Integer
+     - ``3495`` (bytes)
+
+The HTTP instrumentation also collects the following attributes:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Description
+   * - ``component``
+     - String
+     - Always ``http``.
+   * - ``link.traceId``
+     - String
+     - The trace ID of the corresponding backend (APM) span, extracted from the ``Server-Timing`` header. See :ref:`integrate-ios-apm-traces` for more information.
+   * - ``link.spanId``
+     - String
+     - The span ID of the corresponding backend (APM) span, extracted from the ``Server-Timing`` header. See :ref:`integrate-ios-apm-traces` for more information.
+
+UI actions monitoring
+------------------------------------
+
+UIAction monitoring collects the following attributes:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+   
+   * - Name
+     - Type
+     - Description
+   * - ``action.name``
+     - String
+     - Name of the UI element as defined by the end user.
+   * - ``target.type``
+     - String
+     - Name of screen on which the event happens.
+   * - ``sender.type``
+     - 
+     - UI element that calls the method.
+   * - ``event.type``
+     - Enum
+     - The type of the event.
+
+Screen transitions monitoring
+------------------------------------
+
+Screen transitions monitoring generates spans whenever a screen changes its state. A screen transition span can have one the following names depending on its state:
+
+- ``ResignActive``: Tells the delegate that the app is about to become inactive.
+- ``EnterForeground``: Tells the delegate that the app is about to enter the foreground.
+- ``AppTerminating``: Tells the delegate when the app is about to terminate.
+- ``PresentationTransition``: Tells the delegate that the app has become active for the first time only.
+
+Screen transition spans contain the following attribute:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+
+   * - Name
+     - Type
+     - Description
+   * - ``component``
+     - String
+     - Always ``app-lifecycle``.
+
+App start monitoring
+------------------------------------
+
+App start monitoring feature generates spans whenever the app performs a cold, warm, or hot start.
+
+- Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
+- Hot starts happen when the system brings an app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
+
+App start monitoring produces spans with the name ``AppStart`` and the following attributes:
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+   
+   * - Name
+     - Type
+     - Description
+   * - ``component``
+     - String
+     - Always ``appstart``.
+   * - ``start.type``
+     - String
+     - The type of start. Can be ``cold``, or ``hot``.
+
+Location data  
+=============
+
+If you choose to set the latitude and longitude for location data by using the Splunk RUM for iOS APIs, Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
+
+.. list-table:: 
+   :widths: 20 10 70
+   :header-rows: 1
+   :width: 100%
+   
+   * - Optional method
+     - Type
+     - Description
+   * - ``setLocation``
+     - Double
+     - Latitude and longitude are appended to every span and event.
+
+.. note::
+   Splunk Observability Cloud calculates geographical metadata from the latitude and longitude, and then drops the latitude and longitude after processing the data.

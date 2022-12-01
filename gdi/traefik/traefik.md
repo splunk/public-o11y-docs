@@ -84,15 +84,6 @@ The following table shows the configuration options for the `traefik` monitor:
 | `sendAllMetrics` | No | `bool` | Send all the metrics that come out of the Prometheus exporter without any filtering. This option has No effect when using the Prometheus exporter monitor directly, since there is No built-in filtering. Default value is `false`. |
 The Collector or Smart Agent must have network access to Traefik.
 
-The following is a sample configuration that shows how to configure the `traefik` monitor to scrape Prometheus metrics in the default `/metrics` path on port 8080, and how to add the `metric_source=traefik` dimension to the metrics:
-
-```yaml
-monitors:
-- type: traefik
-  discoveryRule: port == 8080
-  extraDimensions:
-    metric_source: traefik
-```
 
 ### Traefik configuration
 
@@ -111,7 +102,7 @@ Traefik exports Prometheus metrics which can be categorized into Traefik, entryp
 
 The following table shows the metrics that are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/traefik/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/traefik/metrics.yaml"></div>
 
 ## Get help
 

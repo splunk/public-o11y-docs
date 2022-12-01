@@ -36,8 +36,8 @@ Follow these steps to automatically instrument your application using the Ruby a
 
       .. code-block:: text
 
-         gem "splunk-otel", "~> 0.1"
-         gem "opentelemetry-instrumentation-all", "~> 0.23.0"
+         gem "splunk-otel", "~> 1.0"
+         gem "opentelemetry-instrumentation-all", "~> 0.27"
 
    Run ``bundle install`` to install the gems.
 
@@ -87,6 +87,13 @@ Follow these steps to automatically instrument your application using the Ruby a
 If no data appears in :strong:`Observability > APM`, see :ref:`common-ruby-troubleshooting`.
 
 If you want to manually install and enable instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
+
+.. _ruby-enable-server-timing:
+
+Enable server timing for RUM
+========================================================
+
+You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby`.
 
 .. _kubernetes_ruby_agent:
 

@@ -57,7 +57,6 @@ Only SCRAM-SHA-1 authentication is supported.
 ```{note}
 OnlyProviding a MongoDB monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type. SCRAM-SHA-1 authentication is supported.
 ```
-
 ### Splunk Distribution of OpenTelemetry Collector
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
@@ -118,7 +117,7 @@ When using TLS authentication, SCRAM-SHA-256 is not supported. Use SCRAM-SHA-1 a
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/master/mongodb/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/mongodb/metrics.yaml"></div>
 
 ## Get help
 

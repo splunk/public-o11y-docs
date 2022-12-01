@@ -14,7 +14,11 @@ Infrastructure Monitoring provides a number of ways to `share a chart <sharing-a
 Export chart contents
 ==========================
 
-You can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them. To export a chart, select :strong:`Export Chart as CSV` from the chart’s Actions menu.
+For line charts, area charts, and column charts, you can export the chart contents to a CSV file. The most recent 100 data points will be exported, along with the values of the dimensions associated with them.
+
+To export a chart, select :strong:`Export Chart as CSV` from the chart’s :guilabel:`Actions` menu.
+
+.. note:: List charts and table charts can't be exported because they don't have a data table.
 
 .. _sharing-a-chart:
 
@@ -75,7 +79,7 @@ The techniques available for sharing a chart depend on where you are viewing the
      - Provides a graphic representation of the chart
      - Can be viewed by anyone
 
-.. important:: 
+.. caution:: 
 
    
    Provide a browser’s URL for a chart with caution; any changes someone makes to the chart are visible to everyone viewing the chart, and can overwrite changes others have made to the chart.
@@ -129,7 +133,7 @@ Note the following regarding this feature.
 
 - The time zone is always represented as GMT (marked on the chart as UTC).
 
-.. admonition:: Troubleshooting
+.. note:: Troubleshooting
 
    If you don’t see the preview image in Slack, possible reasons are:
 

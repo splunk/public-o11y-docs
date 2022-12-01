@@ -1,23 +1,13 @@
 .. _rum-android-data:
 
 ****************************************
-Data collected by the Android RUM agent
+Android data model
 ****************************************
 
 .. meta::
    :description: Understand which RUM data you collect from Android applications when using Splunk Real User Monitoring (RUM).
 
 The Android agent for Splunk Real User Monitoring (RUM) collects the following types of data about your Android application: 
-
-
-Location data  
-=============
-If you choose to set the latitude and longitude for location data by using the Splunk RUM for Android APIs, then Splunk Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
-
-.. note::
-   Splunk Observability Cloud calculates geographical metadata from the latitude and longitude, and then drops the latitude and longitude after processing the data. 
-
-
 
 Common data types
 ==============================================
@@ -34,6 +24,7 @@ The following properties are common to all applications instrumented for Splunk 
 .. list-table:: 
    :widths: 10 10 80
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -71,6 +62,7 @@ By default, the Android RUM agent adds the following attributes to all spans:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -87,18 +79,69 @@ By default, the Android RUM agent adds the following attributes to all spans:
    * - ``splunk.rum.version``
      - String
      - Version of the Splunk RUM SDK instrumenting the application.
-   * - ``screen.name``
-     - String
-     - Name of the screen or fragment from which the span is generated. To customize the screen name, see :ref:`android-rum-customize-screen-names`.
-   * - ``last.screen.name``
-     - String
-     - Name of the screen or fragment preceding the current screen. Set only if there is a change in the active ``screen.name`` attribute. To customize the screen name, see :ref:`android-rum-customize-screen-names`.
    * - ``net.host.connection.type``
      - String
      - Connection type used by the device. Possible values include ``wifi``, ``cell``, ``unavailable``, and ``unknown``.
    * - ``net.host.connection.subtype``
      - String
      - Details of the connection. For example, the type of ``cell`` connection, like ``gprs``, ``edge``, or ``umts``.
+
+
+.. _rum-android-metrics:
+
+Metrics 
+=============================================
+The following tables list all of the metrics available in Splunk RUM for Android. All errors in Splunk RUM have the dimension ``sf_error=true``. 
+
+For more information on app startup metrics as defined by Android, see :new-page:`App startup time <https://developer.android.com/topic/performance/vitals/launch-time>` in the Android Developers documentation. 
+
+
+.. list-table:: 
+   :widths: 20 15 65
+   :header-rows: 1
+
+   * - :strong:`Metric name`
+     - :strong:`UI name` 
+     - :strong:`Description`
+   * - ``rum.workflow.count``
+     - Custom Event Count
+     - The total number of spans with the selected custom event in the given time range. 
+   * - ``rum.workflow.time.ns.p75``
+     - Custom Event Duration
+     - The p75 time in nanoseconds of spans with the selected custom event in the given time range.
+   * - ``rum.crash.count``
+     - Mobile crash
+     - Total number of crashes in the given time range. 
+   * - ``rum.app_error.count``
+     - App error
+     - Total number of ANRs, handled exceptions, and reported errors in the given time range. 
+   * - ``rum.cold_start.time.ns.p75``
+     - Cold start time
+     - The p75 time in nanoseconds of cold starts in the given time range. 
+   * - ``rum.cold_start.count`` 
+     - Cold start count 
+     - Total number of cold starts in the given time range. 
+   * - ``rum.warm_start.count``
+     - Warm start count
+     - Total number of warm starts in the given time range. 
+   * - ``rum.warm_start.time.ns.p75``
+     - Warm start time
+     - The p75 time in nanoseconds for a warm start. 
+   * - ``rum.hot_start.count``
+     - Hot start count 
+     - Total number of hot starts in the given time range. 
+   * - ``rum.hot_start.time.ns.p75``
+     - Hot start time
+     - The p75 time in nanoseconds for a hot start. 
+   * - ``rum.resource_request.count``
+     - Network or back-end requests/errors
+     - The total number of network requests in a given time range. 
+   * - ``rum.resource_request.time.ns.p75``
+     - Network or back-end latency
+     - The p75 time in nanoseconds for back-end latency in the given time range. 
+
+
+
 
 Resource attributes
 ==============================================
@@ -108,6 +151,7 @@ By default, the Android RUM agent adds the following resource attributes to all 
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -144,6 +188,7 @@ The Android RUM agent adds the following crash reporting attributes to spans tha
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -181,6 +226,7 @@ Network monitoring produces spans with the name ``network.change`` and the follo
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -205,6 +251,7 @@ ANR produces spans with the name ``ANR`` and the following attributes:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -231,6 +278,7 @@ Slow rendering detection spans have the following attribute:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -249,6 +297,7 @@ The HTTP client instrumentation collects the following OpenTelemetry HTTP attrib
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -286,6 +335,7 @@ The HTTP instrumentation also collects the following attributes:
 .. list-table:: 
    :widths: 20 10 70
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Type
@@ -364,6 +414,10 @@ App start monitoring
 
 App start monitoring feature generates spans whenever the app performs a cold, warm, or hot start.
 
+- Cold starts happen when users open the app for the first time since booting the phone, or after the user has terminated the app.
+- Hot starts happen when the system brings an app to the foreground. Hot starts are faster than cold starts because the app is already loaded.
+- Warm starts happen when some of the operations that take place in a cold start are still happening. Warm starts are faster than cold starts, but slower than hot starts.
+
 App start monitoring produces spans with the name ``AppStart`` and the following attributes:
 
 .. list-table:: 
@@ -382,3 +436,10 @@ App start monitoring produces spans with the name ``AppStart`` and the following
      - The type of start. Can be ``cold``, ``warm``, or ``hot``.
 
 
+Location data  
+=============
+
+If you choose to set the latitude and longitude for location data by using the Splunk RUM for Android APIs, Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
+
+.. note::
+   Splunk Observability Cloud calculates geographical metadata from the latitude and longitude, and drops the latitude and longitude after processing the data. 

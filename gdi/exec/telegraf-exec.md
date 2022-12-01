@@ -44,6 +44,23 @@ service:
         - signalfx
 ```
 
+### Example
+
+See a configuration example used in integration testing, including how to set intervals checking with `intervalSeconds`:
+
+```yaml
+monitors:
+  - type: telegraf/exec
+    intervalSeconds: 3600
+    command: /usr/local/bin/script.sh
+    signalFxCumulativeMetrics:
+      - weather.lightning_strikes
+    telegrafParser:
+      dataFormat: influx    
+```
+
+Find a [shell script](https://github.com/signalfx/signalfx-agent/blob/main/tests/monitors/telegraf_exec/script.sh) in our GitHib repo.
+
 ### Configuration settings
 
 The following tables show the configuration options for this monitor type:
@@ -100,6 +117,7 @@ The **nested** `telegrafParser` configuration object has the following fields:
 | `CSVSkipColumns` | no | `integer` | The number of columns to ignore before parsing data on a given row. (`csv` only) The default value is `0`.  |
 
 ## Metrics
+
 By default, all metrics are emitted as gauges. If you have cumulative counter metrics that you want properly typed in Splunk Observability Cloud, use one of the following options:
 
 - Set the configuration option `signalFxCumulativeCounters` to the list of metric names to be considered as counters. Note that these names are the full names that are sent to Observability Cloud (for example, `<metric>.<field>`).

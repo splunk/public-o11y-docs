@@ -47,8 +47,8 @@ To connect AWS to Observability Cloud and integrate those platforms, you must me
 
 - Administrator privileges in Observability Cloud and your AWS accounts
 - One of the following authentication methods:
-  - An AWS IAM role and an external ID from Observability Cloud
-  - A secure token, which combines an access key ID and a secret access key
+   - An AWS IAM role and an external ID from Observability Cloud. An external ID is a random string used to establish a trust relationship between Observability Cloud and your AWS account. An external ID is automatically generated for you when you create a new AWS integration in Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
+   - A secure token, which combines an access key ID and a secret access key
 
 The AWS GovCloud and China regions require a secure token for access. 
 
@@ -149,9 +149,9 @@ You can disable this check by setting the ``enableCheckLargeVolume`` field in th
     <h3>Tag filtering<a name="tag-filtering-aws" class="headerlink" href="#tag-filtering-aws" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-CloudWatch Metric Streams do not support filtering based on resource tags. Configuration applies to individual services, and all resources that report metrics from a configured service stream those metrics.
+CloudWatch Metric Streams do not support filtering based on resource tags. Configuration applies to individual services, and all resources that report metrics from a configured service stream those metrics. If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might increase.
 
-If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might increase.
+Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _after-aws-integration:
 

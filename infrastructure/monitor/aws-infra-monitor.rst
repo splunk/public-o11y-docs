@@ -297,15 +297,12 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 Filter AWS data using tags
 =============================================================================
 
-You can filter AWS data using AWS tags, but only with namespaces for which Infrastructure Monitoring syncs tags. For more information, see :ref:`aws-namespaces`. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following
-dimensions:
+You can filter AWS data using AWS tags, but only with namespaces for which Infrastructure Monitoring syncs tags. For more information, see :ref:`aws-namespaces`. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
 
 * ``AutoScalingGroupName``
 * ``ImageId``
 * ``InstanceId``
 * ``InstanceType``.
-
-.. note:: Unsupported characters within a dimension key are converted to underscores.
 
 You can use the following AWS metadata to filter metrics:
 
@@ -328,6 +325,13 @@ You can use the following AWS metadata to filter metrics:
 Use aws_account_id to differentiate between metrics you import from multiple AWS accounts. Infrastructure Monitoring adds aws_account_id as a dimension of the MTS for the metric.
 
 For supported AWS services, Infrastructure Monitoring imports AWS tags and adds them as custom properties to the MTS for the metric. For example, if AWS tag has the value named Production, it will be shown in Infrastructure Monitoring as `aws_tag_Production`.
+
+.. _aws-filter-char: 
+
+Unsupported characters 
+-------------------------------------------------------------------
+
+Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _using-cloudwatch-metrics:
 

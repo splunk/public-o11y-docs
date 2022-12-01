@@ -1,16 +1,10 @@
 .. _docs-home-page:
 
-.. to learn how to update this page, see https://splunk.atlassian.net/wiki/spaces/BIZAPPS/pages/1078120167037/Observability+New+Home+Page+Layout+and+Documentation
-
-.. this heading below doesn't display on the page, but it needs to be here to provide the browser tab name and for the page to render correctly
-
 **********
 Welcome
 **********
 
-.. hero image - editable file is here: https://www.figma.com/file/niuvKhPm3kgtyHILyL08wY/?node-id=407%3A3027
-
-.. image:: _images/get-started/o11y-user-doc-hero-banner.svg
+.. image:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
@@ -28,7 +22,7 @@ The first step toward observability is getting relevant data into Observability 
 
 .. rst-class:: newcard
 
-:strong:`Start getting data in`
+:strong:`Get data in`
 Learn how to get data in from each layer in your stack :ref:`get-started-get-data-in`
 
 
@@ -298,8 +292,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
+   Use case: Monitor infrastructure and apps using the Collector <get-started/use-case-collector>
 
+.. toctree::
+   :maxdepth:   3
+
+   Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
 
 .. toctree::
    :maxdepth:   3
@@ -466,11 +464,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    View detectors <alerts-detectors-notifications/view-detectors>
 
 .. toctree::
-   :maxdepth:   3
-
-   Add context to metrics using events <alerts-detectors-notifications/view-data-events>
-
-.. toctree::
    :maxdepth:  3
 
    Built-in alert conditions <alerts-detectors-notifications/alert-condition-reference/index>
@@ -519,7 +512,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Analyze services with span tags and MetricSets<apm/span-tags/span-tags>
+   Analyze services with span tags and MetricSets <apm/span-tags/span-tags>
 
 .. toctree::
    :maxdepth:   3
@@ -534,58 +527,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   AlwaysOn Profiling <apm/profiling/intro-profiling>
+
+.. toctree::
+   :maxdepth:   3
+
    apm/db-query-perf/db-query-performance
 
 .. toctree::
    :maxdepth:   3
 
    apm/apm-data-links/data-links-landing
-
-.. toctree::
-   :caption: PROFILING
-   :maxdepth:   3
-
-   Introduction to AlwaysOn Profiling <profiling/intro-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-use-case-library
-
-.. toctree::
-   :maxdepth:   3
-
-   Get AlwaysOn Profiling data in <profiling/get-data-in-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   Browse stack traces linked to spans <profiling/spans-stack-traces>
-
-.. toctree::
-   :maxdepth:   3
-
-   Understand and use the flame graph <profiling/using-the-flamegraph>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-memory-metrics
-
-.. toctree::
-   :maxdepth:   3
-
-   Profiling terms and concepts <profiling/concepts-terms-profiling>
-
-.. toctree::
-   :maxdepth:   3
-
-   profiling/profiling-troubleshooting
-
-.. toctree::
-   :maxdepth:   3
-
-   Third-party acknowledgements <profiling/profiling-third-party-credits>
 
 .. toctree::
    :caption: INFRASTRUCTURE
@@ -648,7 +600,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/intro-logconnect.rst
+   logs/intro-logconnect
 
 .. toctree::
    :maxdepth:   3
@@ -658,7 +610,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   logs/set-up-logconnect
+   logs/set-up-logconnect 
 
 .. toctree::
    :maxdepth:   3
@@ -668,7 +620,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   logs/intro-to-logs
+   logs/get-started-logs
 
 .. toctree::
    :maxdepth:   3
@@ -678,12 +630,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   logs/timeline
+
+.. toctree::
+   :maxdepth:   3
+
    logs/live-tail
 
 .. toctree::
    :maxdepth:   3
 
-   logs/timeline
+   logs/queries
 
 .. toctree::
    :maxdepth:   3
@@ -709,7 +666,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    logs/individual-log
-
 
 .. toctree::
    :maxdepth:   3
@@ -744,7 +700,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   logs/processors
+   logs/processors 
 
 .. toctree::
    :maxdepth:   3
@@ -826,13 +782,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-dashboards 
-
+   rum/rum-dashboards/rum-dashboards
 
 .. toctree::
    :maxdepth:   3
 
    rum/RUM-metrics
+
 
 .. toctree::
    :maxdepth:   3
@@ -890,7 +846,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    synthetics/test-config/test-config
 
 .. toctree::
-   :caption: METRICS
+   :caption: UNDERSTAND YOUR DATA
    :maxdepth:   3
 
    Metrics, data points, and metric time series <metrics-and-metadata/metrics>
@@ -909,6 +865,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    metrics-and-metadata/metric-names
+
+.. toctree::
+   :maxdepth:   3
+
+   Add context to metrics using events <metrics-and-metadata/view-data-events>
 
 .. toctree::
    :maxdepth:   3
@@ -940,6 +901,28 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
+
+.. toctree::
+   :hidden:
+   :maxdepth:   3
+
+   admin/SSO/sso
+
+.. toctree::
+   :maxdepth:   3
+
+   Create and manage authentication tokens <admin/authentication-tokens/tokens>
+
+.. toctree::
+   :hidden:
+   :maxdepth:   3
+
+   admin/allow-services
+
+.. toctree::
+   :maxdepth:   3
+
    Create and manage users <admin/users/manage-users>
 
 .. toctree::
@@ -947,11 +930,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Create and manage teams <admin/teams/manage-teams>
 
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Configure SSO integrations <admin/sso>
 
 .. toctree::
    :hidden:
@@ -963,19 +941,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   admin/allow-services
-
-.. toctree::
-   :maxdepth:   3
-
-   Create and manage authentication tokens <admin/authentication-tokens/tokens>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
    Link metadata to related resources using global data links <admin/link-metadata-to-content>
 
+.. toctree::
+   :maxdepth:   3
+
+   View organization metrics <admin/org-metrics>
 .. toctree::
    :hidden:
    :maxdepth:   3
@@ -994,15 +965,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    admin/imm-billing-usage/dpm-usage
 
-.. toctree::
-   :maxdepth:   3
 
-   View organization metrics <admin/org-metrics>
-
-.. toctree::
-   :maxdepth:   3
-
-   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
 
 .. toctree::
    :caption: SETTINGS AND REFERENCE

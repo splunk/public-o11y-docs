@@ -9,7 +9,7 @@ About the Splunk Distribution of OpenTelemetry Go
 
 The Splunk Distribution of OpenTelemetry Go extends the OpenTelemetry Instrumentation for Go, a set of open source Go packages that provides APIs to directly measure the performance and behavior of your software.
 
-With the distribution you can automatically instrument any application written in Go 1.16 and higher. See :ref:`go-otel-requirements`.
+With the distribution you can instrument any application written in Go 1.16 and higher. See :ref:`go-otel-requirements`.
 
 Features of the Splunk Distribution of OpenTelemetry Go
 ===========================================================
@@ -22,7 +22,7 @@ In addition to the features of the OpenTelemetry Instrumentation for Go, like bu
 
 The Splunk Distribution of OpenTelemetry Go is supported by Splunk and is updated frequently, bringing bug fixes and new features to you before they're integrated in the upstream OTel repositories.
 
-.. warning:: Use the Splunk Distribution of OpenTelemetry Go instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Go.
+.. caution:: Use the Splunk Distribution of OpenTelemetry Go instead of the upstream OpenTelemetry instrumentation and SDK. Splunk supports only upstream OTel components as part of the Splunk Distribution of OpenTelemetry Go.
 
 Defaults of the Splunk Distribution of OpenTelemetry Go
 ===========================================================

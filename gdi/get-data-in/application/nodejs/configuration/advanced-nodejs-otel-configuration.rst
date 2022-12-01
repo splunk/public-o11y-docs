@@ -16,15 +16,42 @@ The following sections describe all available settings for configuring OpenTelem
 Configuration methods
 ===========================================================
 
-To configure the Splunk Distribution of OpenTelemetry JS, you can use a combination of environment variables and arguments passed to the ``startTracing()`` and ``startMetrics()`` functions:
+To configure the Splunk Distribution of OpenTelemetry JS, you can use a combination of environment variables and arguments passed to the ``start()`` function:
 
 - Environment variables
 
    For example: ``export OTEL_SERVICE_NAME='test-service'``
 
-- Arguments passed to the ``startTracing()`` and ``startMetrics()`` functions
+- Arguments passed to the ``start()`` function
 
-   For example: ``startTracing({ serviceName: 'my-node-service', });``
+   For example: ``start({ serviceName: 'my-node-service', });``
+
+Configuration for each of the supported data type, such as metrics or tracing, is set using additional properties on the configuration object:
+
+.. code-block:: javascript
+
+   start({
+      // general options like `serviceName` and `endpoint`
+      metrics: {
+         // configuration passed to metrics signal
+      },
+      profiling: {
+         // configuration passed to profiling signal
+      },
+      tracing: {
+         // configuration passed to tracing signal
+      },
+   });
+
+You can also enable the collection of a specific data type by passing a boolean value instead of an object. For example:
+
+.. code-block:: javascript
+
+   start({
+      // general options like `serviceName` and `endpoint`
+      metrics: true, // turn metrics on with default options
+      profiling: true, // turn profiling on with default options
+   });
 
 .. note:: Function arguments take precedence over the corresponding environment variables.
 
@@ -39,7 +66,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    :header-rows: 1
 
    * - Environment variable
-     - Argument to ``startTracing()``
+     - Argument to ``start()``
      - Description
    * - ``SPLUNK_REALM``
      - ``realm``
@@ -48,8 +75,11 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
      - ``accessToken``
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - ``serverTimingEnabled``
+     - ``tracing.serverTimingEnabled``
      - Enables the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-nodejs`. The default value is ``true``.
+   * - ``OTEL_LOG_LEVEL``
+     - ``logLevel`` 
+     - Log level for the OpenTelemetry diagnostic console logger. To enable debug logging, set the ``debug`` value. Available values are ``error``, ``info``, ``debug``, and ``verbose``. The default value is ``none``.
 
 .. _trace-configuration-nodejs:
 
@@ -62,7 +92,7 @@ The following settings control tracing limits and attributes:
    :header-rows: 1
 
    * - Environment variable
-     - Argument to ``startTracing()``
+     - Argument to ``start()``
      - Description
    * - ``OTEL_TRACE_ENABLED``
      -  Not applicable
@@ -85,6 +115,9 @@ The following settings control tracing limits and attributes:
    * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
      - Not applicable
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
+   * - ``SPLUNK_REDIS_INCLUDE_COMMAND_ARGS``
+     - Not applicable
+     - Whether to include the full Redis query in ``db.statement`` span attributes when using the Redis instrumentation. Default value is ``false``.
 
 .. _trace-exporters-settings-nodejs:
 
@@ -97,19 +130,45 @@ The following settings control trace exporters and their endpoints:
    :header-rows: 1
 
    * - Environment variable
-     - Argument to ``startTracing()``
+     - Argument to ``start()``
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - ``tracesExporter``
-     - Trace exporter to use. The default value is ``otlp``. To select the Jaeger exporter, use ``jaeger-thrift-splunk``.
+     - ``traces.tracesExporter``
+     - Comma-separated list of trace exporters to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
+   * - ``OTEL_METRICS_EXPORTER``
+     - ``metrics.metricReaderFactory`` 
+     - Comma-separated list of metrics exporter to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
+   * - ``OTEL_EXPORTER_OTLP_METRICS_PROTOCOL``
+     - ``metrics.metricReaderFactory``
+     - Procotol for exporting metrics. Accepted values are ``grpc`` and ``http/protobuf``. The default value is ``grpc``.
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
      - ``endpoint``
      - The OTLP endpoint. The default value is ``http://localhost:4317``.
-   * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
-     - ``endpoint``
-     - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``.
 
-To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
+.. _jaeger-exporter-nodejs:
+
+Jaeger exporter
+-------------------
+
+To use the Jaeger exporter, add the ``@opentelemetry/exporter-jaeger`` package as in the following example:
+
+.. code-block:: js
+
+   const { start } = require('@splunk/otel');
+   const { JaegerExporter } = require('@opentelemetry/exporter-jaeger');
+   start({
+      serviceName: 'my-node-service',
+      tracing: {
+         spanExporterFactory: (options) => {
+         return new JaegerExporter({
+            serviceName: options.serviceName,
+            // Additional config
+         })
+         }
+      },
+   });
+
+.. note:: To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
 
 .. _trace-propagation-configuration-nodejs:
 
@@ -122,10 +181,10 @@ The following settings control trace propagation:
    :header-rows: 1
 
    * - Environment variable
-     - Argument to ``startTracing()``
+     - Argument to ``start()``
      - Description
    * - ``OTEL_PROPAGATORS``
-     - ``propagators``
+     - ``tracing.propagators``
      - Comma-separated list of propagators you want to use. The default value is ``tracecontext,baggage``. You can find the list of supported propagators in the OpenTelemetry documentation.
 
 For backward compatibility with the SignalFx Tracing Library for Node.js, use the b3multi trace propagator:
@@ -152,27 +211,31 @@ The following settings control the AlwaysOn Profiling feature for the Node.js ag
    :width: 100%
 
    * - Environment variable
-     - Argument to ``startProfiling()``
+     - Argument to ``start()``
      - Description
    * - ``SPLUNK_PROFILER_ENABLED``
-     - 
+     - ``profilingEnabled``
      - Enables AlwaysOn Profiling. The default value is ``false``.
+   * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
+     - ``profiling.memoryProfilingEnabled``
+     - Enables memory profiling for AlwaysOn Profiling. The default value is ``false``.
    * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
-     - ``endpoint``
+     - ``profiling.endpoint``
      - The collector endpoint for profiler logs. The default value is ``localhost:4317``.
    * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
-     - ``callstackInterval``
+     - ``profiling.callstackInterval``
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 1000 milliseconds.
 
-To configure AlwaysOn Profiling programmatically, pass the arguments to the ``startProfiling`` function, as in the following example:
+To configure AlwaysOn Profiling programmatically, pass the arguments to the ``start`` function, as in the following example:
 
 .. code-block:: javascript
 
-   const { startProfiling } = require('@splunk/otel');
-
-   startProfiling({
+   start({
       serviceName: '<service-name>',
-      endpoint: '<endpoint>'
+      profiling: true,
+      tracing: {
+         // configuration passed to tracing signal
+      },
    });
 
 .. note:: For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
@@ -188,26 +251,38 @@ The following settings enable runtime metrics collection:
    :header-rows: 1
 
    * - Environment variable
-     - Argument to ``startTracing()``
+     - Argument to ``start()``
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
-     - 
-     - Enables runtime metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
+     - Enabled by calling ``start``.
+     - Enables metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
    * - ``SPLUNK_METRICS_ENDPOINT``
-     - ``endpoint``
-     - The metrics endpoint. The default value is ``http://localhost:9943``.
-   * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
-     - ``exportInterval``
-     - The interval, in milliseconds, of metrics collection and exporting. The default value is ``5000``.
+     - ``metrics.endpoint``
+     - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
+   * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
+     - ``metrics.endpoint``
+     - The metrics endpoint. Takes precedence over the value set in ``OTEL_EXPORTER_OTLP_ENDPOINT``. The default value is ``http://localhost:4317``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
+   * - ``OTEL_METRIC_EXPORT_INTERVAL``
+     - ``metrics.exportIntervalMillis``
+     - The interval, in milliseconds, of metrics collection and exporting. The default value is ``30000``.
+   * - ``SPLUNK_RUNTIME_METRICS_ENABLED``
+     - ``metrics.runtimeMetricsEnabled``
+     - Enable collecting and exporting of runtime metrics. The default value is ``true``. Runtime metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true`` or if memory profiling is enabled.
+   * - ``SPLUNK_RUNTIME_METRICS_COLLECTION_INTERVAL``
+     - ``metrics.runtimeMetricsCollectionIntervalMillis``
+     - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
+   * - 
+     - ``metrics.resourceFactory``
+     - Callback that lets you filter the default resource or provide a custom one. The function takes one argument of type ``Resource``, which contains the service name, environment, host, and process attributes by default.
 
-.. note:: To pass settings as arguments, use the ``startMetrics()`` function.
+.. note:: To pass settings as arguments, use the ``start()`` function.
 
 Configuring an existing metrics client to send custom metrics
 ---------------------------------------------------------------------
 
 You can use an existing SignalFx client for sending custom metrics instead of creating and configuring a new one.
 
-To configure an existing client, pass the following data to the ``startMetrics()`` function:
+To configure an existing client, pass the following data to the ``start()`` function:
 
 - ``signalfx``: A JavaScript object with optional ``client`` and ``dimensions`` fields. The ``dimensions`` object adds a predefined dimension for each data point. The format for ``dimensions`` is ``{key: value, ...}``.
 

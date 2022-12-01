@@ -5,7 +5,7 @@ View your Observability Cloud teams and administrator status
 *********************************************************************************
 
 .. meta::
-   :description: You can see your Splunk Observability Cloud teams and administrator status on your user profile page.
+   :description: View your Splunk Observability Cloud teams and administrator status on your user profile page.
 
 
 To see what teams you are on and whether you are an administrator on each, follow these steps:

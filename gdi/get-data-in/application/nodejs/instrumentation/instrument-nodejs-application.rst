@@ -35,15 +35,8 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
    .. code-block:: bash
 
       npm install @splunk/otel
-
-#. Install the instrumentation packages for your library or framework:
-
-   .. code-block:: bash
-
-      # Sample command for instrumenting the http library
-      npm install @opentelemetry/instrumentation-http
-
-   For a list of supported instrumentation packages, see :new-page:`Default Instrumentation Packages <https://github.com/signalfx/splunk-otel-js#default-instrumentation-packages>` on GitHub.
+   
+   To add custom instrumentations, see :ref:`add-custom-instrumentation`.
 
 #. Set the ``OTEL_SERVICE_NAME`` environment variable:
 
@@ -96,10 +89,11 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-nodejs-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. warning:: CPU profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
+.. caution:: CPU profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
 
 To enable AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
+For more settings, see :ref:`profiling-configuration-nodejs`.
 
 .. _enable_automatic_metric_collection_nodejs:
 
@@ -119,7 +113,7 @@ To enable automatic runtime metric collection, enable the metrics feature using 
       $env:SPLUNK_METRICS_ENABLED='true'
 
 Instrument your application programmatically
--------------------------------------------------------
+========================================================
 
 To have even finer control over the tracing pipeline, instrument your Node application programmatically.
 
@@ -127,42 +121,54 @@ To instrument your application programmatically, add the following lines at the 
 
 .. code-block:: javascript
 
-   const { startTracing } = require('@splunk/otel');
+   const { start } = require('@splunk/otel');
 
-   startTracing();
+   start({
+      serviceName: 'my-node-service',
+      endpoint: 'http://localhost:4317'
+   });
 
    // Rest of your main module
 
-The ``startTracing()`` function accepts :ref:`configuration settings <advanced-java-otel-configuration>` as arguments. For example:
+The ``start()`` function accepts :ref:`configuration settings <advanced-nodejs-otel-configuration>` as arguments. For example, you can use it to enable runtime metrics and memory profiling:
 
 .. code-block:: javascript
 
-   startTracing({
+   start({
       serviceName: 'my-node-service',
+      metrics: { runtimeMetricsEnabled: true },
+      profiling: { memoryProfilingEnabled: true }
    });
 
-After you add the ``startTracing()`` function to your entry point script, run your application by passing the instrumented entry point script using the ``-r`` flag:
+After you add the ``start()`` function to your entry point script, run your application by passing the instrumented entry point script using the ``-r`` flag:
 
 .. code-block:: bash
 
    node -r <entry-point.js> <your-app.js>
 
+.. _add-custom-instrumentation:
+
+Add custom instrumentation
+-----------------------------------
+
 To add custom or third-party instrumentations that implement the OpenTelemetry JS Instrumentation interface, pass them to ``startTracing()`` using the following code:
 
 .. code-block:: javascript
 
-   const { startTracing } = require('@splunk/otel');
+   const { start } = require('@splunk/otel');
    const { getInstrumentations } = require('@splunk/otel/lib/instrumentations');
 
-   startTracing({
-   instrumentations: [
-      ...getInstrumentations(), // Adds default instrumentations
-      new MyCustomInstrumentation(),
-      new AnotherInstrumentation(),
-   ]
+   start({
+      tracing: {
+         instrumentations: [
+            ...getInstrumentations(), // Adds default instrumentations
+            new MyCustomInstrumentation(),
+            new AnotherInstrumentation(),
+         ],
+      },
    });
 
-.. tip:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
+.. note:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
 
 .. _kubernetes_nodejs_agent:
 

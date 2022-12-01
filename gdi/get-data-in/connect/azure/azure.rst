@@ -13,16 +13,13 @@ Connect to Azure and send data to Splunk Observability Cloud
   azure-metrics
   azure-logs-ingestion
 
-Splunk Observability Cloud provides an integration with Microsoft Azure, lets you travel through Azure entities, and includes built-in dashboards to help you monitor Azure services.
+Splunk Observability Cloud provides an integration with Microsoft Azure, lets you travel through Azure entities, and includes built-in dashboards to help you monitor Azure services. See the list of :ref:`available Azure services <azure-integrations>`.
 
 After you connect your Azure account to Observability Cloud, you can do the following:
 
-- Import Azure metadata
-
-- Use Observability Cloud tools to monitor your Azure services
-
-- Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``
-
+- Import Azure metrics, traces, and metadata.
+- Use Observability Cloud tools to monitor your Azure services.
+- Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. raw:: html
 
@@ -30,58 +27,62 @@ After you connect your Azure account to Observability Cloud, you can do the foll
     <h2>Azure integration prerequisites<a name="azure-integration-prereqs" class="headerlink" href="#azure-integration-prereqs" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-
 Successful integration requires administrator privileges for the following:
 
 - Your organization in Splunk Observability Cloud.
-
 - Creating a new Azure Active Directory application.
 
 To learn more about these privileges, see the Azure documentation for registering a new app.
 
+.. raw:: html
+
+  <embed>
+    <h2>Prepare Azure for the integration<a name="prep-azure-integration" class="headerlink" href="#prep-azure-integration" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+To prepare Microsoft Azure to connect with Splunk Observability Cloud: 
+
+#. Create an Azure Active Directory application.
+#. Specify subscriptions and set subscription permissions.
+
+You also have the option of connecting to Azure through the Observability Cloud API. For details, see :new-page:`Integrate Microsoft Azure Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/>` in the Splunk developer documentation.
 
 .. raw:: html
 
   <embed>
-    <h2>Prepare for Azure integration<a name="prep-azure-integration" class="headerlink" href="#prep-azure-integration" title="Permalink to this headline">¶</a></h2>
+    <h3>Create an Azure Active Directory application<a name="prep-ms-app" class="headerlink" href="#prep-ms-app" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-To prepare Microsoft Azure for connection to Splunk Observability Cloud, do the following:
+Follow these steps to create a new Azure Active Directory application:
 
-#. Create an Azure Active Directory application by following these steps:
-
-   #. Log into your Azure portal.
-   #. Navigate to :menuselection:`Azure Active Directory` and select :menuselection:`App registrations`. Then select :guilabel:`New registration` at the top of the page.
-   #. Enter the name, indicate access type, and then select :guilabel:`Register`.
-
-      Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
-   #. The Azure portal displays summary information about the application. Save the following information to use when you create
-      your Azure integration in Observability Cloud:
-
+  #. In your Azure portal, navigate to :menuselection:`Azure Active Directory`, and register your new app. Observability Cloud does not use this information, but you need to provide it in order to create an app on Azure.
+  #. The Azure portal displays a summary about the application. Save the following information to use when you create your Azure integration in Observability Cloud:
       * :guilabel:`Display name`
       * :guilabel:`Application (client) ID`
       * :guilabel:`Directory (tenant) ID`
       * :guilabel:`Object ID`
+  #. Select :guilabel:`Certificates & settings`. The Certificate is your public key, and the client secret is your password.
+  #. Create a client secret by providing a description and setting the duration to the longest possible interval, then select :guilabel:`Save`. Save the client secret, you need it to create your Azure integration in Observability Cloud.
 
-   #. Select :guilabel:`Certificates & settings`. The Certificate is your public key, and the client secret is your password.
-   #. Create a client secret by providing a description and setting the duration to the longest possible interval, then select :guilabel:`Save`.
-   #. The Azure portal displays the client secret. Save this value; you need the client secret to create your Azure integration in Observability Cloud.
+Repeat these steps for each subscription you want to monitor.
 
-#. Specify subscriptions and set subscription permissions:
+.. raw:: html
 
-   #. In the Azure portal, navigate to :menuselection:`All services`, select :menuselection:`Everything`, then select :guilabel:`Subscriptions`.
-   #. Find a subscription you want to monitor, and select the subscription name.
-   #. Navigate to :menuselection:`Access control (IAM)`, select :menuselection:`Add`, then select :menuselection:`Add role assignment`.
-   #. On the :guilabel:`Add role assignment page`, perform the following steps:
+  <embed>
+    <h3>Specify subscriptions and set subscription permissions<a name="prep-ms-subs" class="headerlink" href="#prep-ms-subs" title="Permalink to this headline">¶</a></h3>
+  </embed>
 
-      #. From the :guilabel:`Role` drop-down list, select :menuselection:`Monitoring Reader`.
-      #. Leave the :guilabel:`Assign access to` drop-down list unchanged.
-      #. In the :guilabel:`Select` text box, start entering the name of the Azure application you just created.
-         The Azure portal automatically suggests names as you type. Enter the application name, and :guilabel:`Save`.
+Set your subscription permissions:
 
-   Repeat these steps for each subscription you want to monitor.
+  #. In the Azure portal, look for your :guilabel:`Subscriptions`.
+  #. Find a subscription you want to monitor, and select the subscription name.
+  #. Navigate to :menuselection:`Access control (IAM)`, select :menuselection:`Add`, then select :menuselection:`Add role assignment`.
+  #. On the :guilabel:`Add role assignment page`, perform the following steps:
+      * From the :guilabel:`Role` drop-down list, select :menuselection:`Monitoring Reader`.
+      * Leave the :guilabel:`Assign access to` drop-down list unchanged.
+      * In the :guilabel:`Select` text box, start entering the name of the Azure application you just created. The Azure portal automatically suggests names as you type. Enter the application name, and :guilabel:`Save`.
 
-You also have the option of connecting to Azure through the Observability Cloud API. For details, see :new-page:`Integrate Microsoft Azure Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview/>` in the Splunk developer documentation.
+Repeat these steps for each subscription you want to monitor.
 
 .. raw:: html
 
@@ -91,8 +92,7 @@ You also have the option of connecting to Azure through the Observability Cloud 
 
 From Splunk Observability Cloud, connect to Azure by following these steps:
 
-  #. In the left navigation menu, select :menuselection:`Data Management`.
-  #. Select :guilabel:`Add Integration` to open the Integrate Your Data page.
+  #. In the left navigation menu, select :menuselection:`Data Management`, and select :guilabel:`Add Integration` to open the Integrate Your Data page.
   #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
   #. Select the :guilabel:`Microsoft Azure` tile to open the Microsoft Azure guided setup.
   #. To start configuring the connection to Azure, select :guilabel:`New Integration`.
@@ -132,88 +132,11 @@ For instructions on how to connect to Azure through the API, see :new-page:`Inte
 
 If you installed Azure while going through the Quick Start guide, continue by installing the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/resources.html>`.
 
-The Azure integration provides an Azure mode for the :new-page:`navigator <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`, and includes :new-page:`default dashboards <https://docs.splunk.com/Observability/infrastructure/navigators/azure.html#use-default-dashboards-to-monitor-azure-services>` to help you
-monitor Microsoft Azure services.
+The Azure integration provides an Azure mode for the :new-page:`navigator <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`, and includes :new-page:`default dashboards <https://docs.splunk.com/Observability/infrastructure/navigators/azure.html#use-default-dashboards-to-monitor-azure-services>` to help you monitor Microsoft Azure services.
 
 You can also connect to Azure and the subscriptions and services running on it by using the Splunk Distribution of OpenTelemetry Collector. To learn more, see :ref:`otel-intro`.
 
-OTel Collector offers a higher
-degree of customization than the Azure integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.
-
-.. raw:: html
-
-  <embed>
-    <h2>Supported Azure services<a name="supported-azure-services" class="headerlink" href="#supported-azure-services" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-Splunk Observability Cloud syncs with a subset of Azure services. During your Azure setup, if
-you select :guilabel:`All Services` when you specify subscriptions, Observability Cloud syncs with the following services:
-
-* API Management: Used to publish APIs
-* App Service: Creates cloud apps for web and mobile
-* Application Gateway: Builds web front ends in Azure
-* Automation: Process automation for cloud management
-* Azure Analysis Services: Analytics engine as a service
-* Azure Autoscale: Dynamically scales apps to meet changing demand
-* Azure Cosmos DB: NoSQL database with open APIs
-* Azure Data Explorer: Scalable data exploration service
-* Azure Database for Maria DB: Managed MariaDB database service for app developers
-* Azure Database for MySQL: Managed and scalable MySQL database
-* Azure Database for PostgreSQL: Intelligent and scalable PostgreSQL
-* Azure DDoS Protection: Protection against Distributed Denial of Service attacks
-* Azure DNS: Support for hosting your DNS domain in Azure
-
-* Azure Firewall: Cloud-native protection for Azure Virtual Network resources
-* Azure Front Door: Cloud content delivery service
-* Azure Kubernetes Service: Managed Kubernetes
-* Azure Location Based Services: APIs for mapping, search, routing, traffic, and time zones
-* Azure Machine Learning: Machine learning to build and deploy models
-* Azure Maps: Secure location APIs that provide geospatial context for data
-* Azure SignalR Service: Add real-time web functionalities
-* Azure SQL Managed Instances: Managed SQL instance in the cloud
-* Azure Web PubSub: build real-time messaging web apps using WebSockets and the publish-subscribe pattern
-
-* Batch: Job scheduling and compute management
-* Container Instances: Run containers without managing servers
-* Cognitive Services: Deploy AI models as APIs
-* Container Registry: Store and manage container images across deployments
-* Content Delivery Network (CDN): Content delivery
-* Customer Insights: Map, match, merge, and enrich customer-based data
-
-* Data Factory: Hybrid data integration
-* Data Lake Analytics: Distributed analytics
-* Data Lake Store: Secure data lake for high-performance analytics
-* Event Grid (Domains): Event delivery at scale
-* Event Grid (Event Subscriptions): Event delivery at scale
-* Event Grid (Extension Topics): Event delivery at scale
-* Event Grid (System Topics): Event delivery at scale
-* Event Grid (Topics): Event delivery at scale
-* Event Hubs: Receive telemetry from millions of devices
-* ExpressRoute: Dedicated private network fiber connections to Azure
-* HDInsight: Provision cloud Hadoop, Spark, R Server, HBase, and Storm clusters
-
-* Key Vault: Safeguard and maintain control of keys and other secrets
-* Load Balancer: Supports high availability and network performance for apps
-* Logic apps: Automate the access and use of data across clouds
-* Network Interfaces: Adds network interface to Azure VMs
-* Notification Hubs: Send push notifications to any platform from any back end
-* Power BI: Customer-facing dashboards and analytics
-* Redis Cache: High-throughput, low-latency data caching for apps
-* Relays: Securely expose services that run in your corporate network to the public cloud
-* Search Services: Enterprise-scale search for app development
-* Service Bus: Connect across private and public cloud environments
-* Storage: Support for storage endpoints
-* Stream Analytics: Real-time analytics on streaming data
-
-* SQL Database: Managed SQL in the cloud
-* SQL Elastic Pools: Manage multiple databases with varying and unpredictable usage demands
-* SQL Servers: Host enterprise SQL Server apps in the cloud
-* Traffic Manager: Route incoming traffic for high performance and availability
-* Virtual Machines: Provision Windows and Linux VMs
-* Virtual Machines (Classic): Older deployment model for Azure VMs
-* Virtual Machine Scale Sets: Manage and scale up to thousands of Linux and Windows VMs
-* VPN Gateway: Secure cross-premises connectivity
-
+The Collector offers a higher degree of customization than the Azure integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.
 
 .. raw:: html
 
@@ -223,6 +146,6 @@ you select :guilabel:`All Services` when you specify subscriptions, Observabilit
 
 To validate your setup, examine the details of your Azure integration as displayed in the list at the end of the setup page.
 
-See :ref:`azure-metrics` for a list of the available Azure resources.
-
-For instructions on how to monitor your Azure services, see :new-page:`Monitor Azure <https://docs.splunk.com/Observability/infrastructure/navigators/azure.html#infrastructure-azure>`.
+* For details about the metrics provided by an Azure integration, see :ref:`azure-metrics`.
+* To send logs from Azure to Observability Cloud, follow the instructions in :ref:`ingest-azure-log-data`.
+* Learn about :ref:`our Azure Infrastructure Monitoring options <infrastructure-azure>`. 

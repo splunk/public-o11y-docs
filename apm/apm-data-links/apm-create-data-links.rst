@@ -7,8 +7,6 @@ Link APM services, traces, and spans to relevant resources
 .. meta::
    :description: Use global data links to create links for services, traces, and spans to other resources.
 
-   :keywords: Splunk, APM, global data links, traces, services, spans, monitoring, dashboards
-
 Create global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring dashboards, Splunk instances, Kibana logs, or custom URLs.
 
 Global data links are also useful because they can dynamically transfer contextual information about the property you're viewing to the linked resource, helping you get to relevant information faster.
@@ -67,7 +65,7 @@ You can create a global data link that passes information about APM services, tr
 The following task describes how to create a global data link for a service that links to an Infrastructure Monitoring dashboard. You can set up a global data link for any service, or a specific service.
 
 #. Open the Observability Cloud main menu.
-#. Hover over :guilabel:`Organization Settings` and select :guilabel:`Global Data Links`.
+#. Hover over :guilabel:`Data Configuration` and select :guilabel:`Global Data Links`.
 #. Click :strong:`New Link`.
 #. Enter a :strong:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific service. For example, you could enter :strong:`Trace Ingest Dashboard`.
 #. For :strong:`Show On`, select :strong:`Any Value of` and enter :strong:`sf_service` to associate the global data link with every service. If you want to create the global data link for a specific service, select :strong:`Property:Value Pair` instead and enter :strong:`sf_service:<yourServiceName>` for the service you want to create the global data link for.
@@ -88,7 +86,7 @@ Create a global data link for each APM property that you want to connect to logs
 The following task describes how to create a global data link for a trace ID. The global data link runs a Splunk search query for log events that include a specific trace ID in a Splunk instance. The process is the same for creating a global data link for a service, span ID, or span tag: use a :strong:`Show On` value for the property you want to create a global data link for.
 
 #. Open the Observability Cloud main menu.
-#. Hover over :guilabel:`Organization Settings` and select :guilabel:`Global Data Links`.
+#. Hover over :guilabel:`Data Configuration` and select :guilabel:`Global Data Links`.
 #. Click :strong:`New Link`.
 #. Enter a :strong:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific trace ID. For example, you could enter :strong:`Splunk Cloud Platform Search`.
 #. For :strong:`Link to`, select :strong:`Splunk`.
@@ -110,7 +108,7 @@ You can create a global data link that passes information about an APM service, 
 The following task describes how to create a global data link for a log filter in Kibana for a selected trace ID. You can also filter on other APM properties: use a :strong:`Show On` value for the property you want to create a global data link for.
 
 #. Open the Observability Cloud main menu.
-#. Hover over :guilabel:`Organization Settings` and select :guilabel:`Global Data Links`.
+#. Hover over :guilabel:`Data Configuration` and select :guilabel:`Global Data Links`.
 #. Click :strong:`New Link`.
 #. Enter a :strong:`Link Label`. This is what you select when you want to use the global data link to drill down into a specific trace ID. For example, you could enter :strong:`Kibana filter`.
 #. For :strong:`Link to`, select :strong:`Kibana`.

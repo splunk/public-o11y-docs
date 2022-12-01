@@ -78,6 +78,24 @@ The following examples show how to add Splunk OTel Java metadata to the logger c
          service: %property{otel.resource.service.name}, env: %property{otel.resource.deployment.environment}: %m%n
       </pattern>
 
+If you're instrumenting a serverless service or application, use environment variables instead:
+
+.. tabs::
+
+   .. code-tab:: xml Log4j
+
+      <PatternLayout>
+         <pattern>
+            service.name=${OTEL_SERVICE_NAME}, deployment.environment=${OTEL_ENV_NAME} %m%n
+         </pattern>
+      </PatternLayout>
+
+   .. code-tab:: xml Logback
+
+      <pattern>
+         service: ${OTEL_SERVICE_NAME}, env: ${OTEL_ENV_NAME}: %m%n
+      </pattern>
+
 .. _explore-log-observer-java:
 
 Explore application logs in Log Observer

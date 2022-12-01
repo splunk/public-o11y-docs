@@ -5,9 +5,9 @@ Create and manage organization access tokens using Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
-   :description: Learn how to how to create and manage organization access tokens
+   :description: Create and manage organization access tokens: defaults, manage, visibility, change a token, rename, or disable.
 
-Access tokens, also known as org tokens, are long-lived organization-level tokens.
+Access tokens, also known as org tokens, are long-lived organization-level tokens. You can use access tokens in all API requests except those that require a token associated with a user who has administrative access. See :ref:`admin-api-access-tokens` for more information.
 
 Use access tokens to:
 
@@ -15,18 +15,14 @@ Use access tokens to:
 - Run scripts that call the API.
 - Manage your resource by tracking usage for different groups of users, services, teams, and so on. For example, you have users in the U.S. and Canada sending data to Infrastructure Monitoring. You can give each group its specific access token to compare the amount of data coming from each country.
 
-You can't use access tokens for API requests associated with an administrator. See :ref:`admin-api-access-tokens` for more information.
+.. note:: By default, only users who are administrators can search for and view all access tokens. You can change this default when you create or update an access token.
 
 Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date.
-
-.. note:: By default, only users who are administrators can search for and view all access tokens. You can change this default when you create or update an access token.
 
 The default access token
 ===========================
 
-By default, every organization has one organization-level access token. If you don't
-create any additional tokens, every API request that sends data to Infrastructure
-Monitoring must use this access token.
+By default, every organization has one organization-level access token. If you don't create any additional tokens, every API request that sends data to Infrastructure Monitoring must use this access token.
 
 .. _manage-access-token:
 
@@ -49,8 +45,7 @@ To manage your access (org) tokens:
       permission options appear:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
-      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new
-        token. The token isn't visible to anyone else.
+      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
    #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
    #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
@@ -75,11 +70,9 @@ To manage your access (org) tokens:
 View and copy access tokens
 ==============================
 
-To view the value of an access token, select the token name and then select
-:guilabel:`Show Token`.
+To view the value of an access token, select the token name and then select :guilabel:`Show Token`.
 
-To copy the token value, select :guilabel:`Copy`. You don't need to be an administrator to
-view or copy an access token.
+To copy the token value, select :guilabel:`Copy`. You don't need to be an administrator to view or copy an access token.
 
 
 .. _create-access-token:
@@ -99,7 +92,7 @@ To create an access token:
 #. Enter a unique token name. If you enter a token name that is already in use, even if the token is disabled, Infrastructure Monitoring doesn't accept the name.
 #. Select an authorization scope for the token from one of the following values:    
    
-   .. tip:: Assign only one authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
+   .. note:: Assign only one authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
 
    - :strong:`RUM Token`: Select this authorization scope to use the token to authenticate with RUM ingest endpoints. These endpoints use the following base URL: :code:`https://rum-ingest.<REALM>.signalfx.com/v1/rum`.
       
@@ -127,8 +120,7 @@ To create an access token:
       permission options appear:
 
       * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
-      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new
-        token. The token isn't visible to anyone else.
+      * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
    #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
 #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, specify the users or teams to whom you want to give access:
@@ -159,14 +151,18 @@ To rename a token:
 #. Enter a new name for the token.
 #. Select :guilabel:`OK`.
 
- Renaming a token does not affect the value of the token.
+Renaming a token does not affect the value of the token.
+
+.. note::
+
+   For :ref:`Cloud integrations (AWS, GCP, or Azure) <get-started-connect>`, after renaming an access token you'll need to choose a new token name via the API. For AWS, you can also set up a new token :ref:`in the UI <aws-wizardconfig>`.
 
 Disable or enable an access token
 =====================================
 
- .. note::
+.. note::
 
-    You can't delete tokens; you can only disable them.
+   You can't delete tokens; you can only disable them.
 
 To disable a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
 The line that displays the token has a shaded background, which indicates that the
