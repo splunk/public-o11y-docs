@@ -21,7 +21,7 @@ Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS L
 
    #. In the :guilabel:`Search` field, search for :guilabel:`AWS Lambda`.
 
-   6#. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
+   #. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
 .. _otel-lambda-layer-requirements:
 

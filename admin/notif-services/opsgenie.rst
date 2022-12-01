@@ -13,7 +13,7 @@ To send Observability Cloud alert notifications to Opsgenie, complete the follow
 
 * :ref:`opsgenie1`
 
-   You must be an Opsgenie account owner or administrator to perform this task. Opsg
+   You must be an Opsgenie account owner or administrator to perform this task. 
 
 * :ref:`opsgenie2`
 

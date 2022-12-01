@@ -15,7 +15,7 @@ Generate customized instructions using the guided setup
 To generate all the basic installation commands for your environment and application, use the Java guided setup. To access the Java guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
-#. Open the :new-page:`Java guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-windows/step-1?category=all&gdiState=%7B"integrationId":"otel-connector-windows"%7D>`. Optionally, you can navigate to the guided setup on your own:
+#. Open the :new-page:`Java guided setup <https://login.signalfx.com/#/gdi/scripted/java-tracing/step-1?gdiState=%7B"integrationId":"java-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the left navigation menu, select :menuselection:`Data Management`. 
 
