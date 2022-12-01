@@ -42,18 +42,11 @@ the custom URL login page.
 To remove a Google domain's login access:
 
 #. Log in to Splunk Observability Cloud.
-#. Open the :new-page:`Google Sign-In guided setup <https://login.signalfx.com/#/integrations/googleauth>`. Optionally, you can navigate to the guided setup on your own:
- 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
-
-   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-
-   #. In the integration filter menu, select :guilabel:`All`.
-
-   #. In the :guilabel:`Search` field, search for :guilabel:`Google Sign-In`.
-
-   #. Click the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.
-
+#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+#. In the integration filter menu, select :guilabel:`All`.
+#. In the :guilabel:`Search` field, search for :guilabel:`Google Sign-In`.
+#. #. Click the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.
 #. Click the "x" for the domain you want to remove.
 
 
