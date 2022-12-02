@@ -108,3 +108,23 @@ To remove attributes before your data is ingested by Splunk RUM, see:
 
 For more, see :new-page:`onAttributesSerializing <https://github.com/signalfx/splunk-otel-js-web/blob/0ac1df52b2c22f37eeb74f8e4104ccdf0e8fe99e/examples/todolist/public/index.html#L47>`.
 
+
+
+Examples
+==============================
+This example walks through how to apply ``ignoreUrls`` to each offering of Splunk RUM. 
+
+Browser 
+----------
+
+Description and ignoreUrls copy/pastable code snippet
+
+Android 
+-----------
+
+Description and ignoreUrls copy/pastable code snippet
+
+iOS
+----
+
+Description and ignoreUrls copy/pastable code snippet
