@@ -1,75 +1,12 @@
 # Contributing Guidelines
 
-Thank you for your interest in contributing to our repository! Whether it's a bug
-report, new feature, or question, we greatly value feedback and contributions from
-our community. Read through this document before submitting any issues or pull 
-requests to ensure we have all the necessary information to effectively respond
-to your bug report or contribution.
+Thank you for your interest in contributing to Splunk Observability Cloud documentation. Read through this document before submitting any pull request.
 
-In addition to this document, review our [Code of Conduct](CODE_OF_CONDUCT.md). 
-For any code of conduct questions or comments, send an email to oss@splunk.com.
+In addition to this document, review the [Code of Conduct](CODE_OF_CONDUCT.md). For any code of conduct questions or comments, send an email to oss@splunk.com.
 
-Use the table of contents icon <img src="./assets/images/table-of-contents.png" width="25" height="25" /> on the top left corner of this document to get to a specific section of this guide quickly.
-
-# Contributor License Agreement
+## Contributor License Agreement
 
 Before contributing, you must sign the [Splunk Contributor License Agreement (CLA)](https://www.splunk.com/en_us/form/contributions.html).
-
-
-
-Welcome
-
-Presentation
-
-ToC
-
-Resources
-- Style guide
-
-How to build the docs
-
-How to submit changes
-
-How to report an issue
-
-Thank you
-
-Read on to learn how to edit and build the docs, and how to follow the workflow for getting your contributions reviewed and merged.
-
-- [Contributing Guidelines](#contributing-guidelines)
-- [Contributor License Agreement](#contributor-license-agreement)
-  - [Requirements](#requirements)
-  - [Install the docs on your machine](#install-the-docs-on-your-machine)
-    - [Folder structure](#folder-structure)
-    - [Find a document in the repository](#find-a-document-in-the-repository)
-  - [Edit or add documentation](#edit-or-add-documentation)
-    - [Decide the type of edit](#decide-the-type-of-edit)
-    - [Create a branch for your work](#create-a-branch-for-your-work)
-    - [Edit content](#edit-content)
-      - [Create directories and files](#create-directories-and-files)
-      - [Edit the content](#edit-the-content)
-      - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
-      - [Add an image and alt text](#add-an-image-and-alt-text)
-    - [Test the docs locally](#test-the-docs-locally)
-  - [Create a merge request](#create-a-merge-request)
-
-## Requirements
-
-To edit, build, and publish changes to this documentation, you need the following:
-
-- A text or code editor, such as Visual Studio Code.
-- Docker Desktop (https://www.docker.com/products/docker-desktop/) installed.
-- git or a graphical user interface for git, necessary for pushing documentation changes to GitHub.
-
-The following instructions assume that you're familiar with basic git commands and workflows.
-
-## Install the docs on your machine
-
-Follow these steps to clone and install the docs to your local machine:
-
-1. Clone this repository using `git clone`.
-2. Navigate to the cloned repository in your file system.
-3. Change the permissions of `start.sh` by entering `chmod +x start.sh` in the terminal.
 
 ### Folder structure
 
@@ -140,9 +77,9 @@ The following table contains guidance on which type of edit is best depending on
 | Add or update a section | Expand reference documentation |
 | Update or add links | Create new troubleshooting guides |
 
-Create small merge requests with incremental improvements rather than large merge requests with tons of changes. 
+Create small pull requests with incremental improvements rather than large pull requests with tons of changes. 
 
-> Keep your merge requests small and focused on the changes you want to apply: That makes both the reviewer's and your job easier.
+> Keep your pull requests small and focused on the changes you want to apply: That makes both the reviewer's and your job easier.
 
 ### Create a branch for your work
 
@@ -263,12 +200,12 @@ After you've saved your changes, you can test the docs using the Docker containe
 
 When testing the docs:
 
-- Make sure that Sphinx is not sending warnings to the terminal. Solve all build errors and warnings before opening a merge request.
+- Make sure that Sphinx is not sending warnings to the terminal. Solve all build errors and warnings before opening a pull request.
 - Check that the documentation shows as intended.
 
-## Create a merge request
+## Create a pull request
 
-To get your edits reviewed, open a merge request with the following features:
+To get your edits reviewed, open a pull request with the following features:
 
 - Source branch must be your newly created branch.
 - Target branch must be `main`.
