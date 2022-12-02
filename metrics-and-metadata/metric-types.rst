@@ -18,8 +18,8 @@ every second, each point in the line represents the average of 10 data points. T
 
 Types of metrics in Splunk Observability Cloud:
 
-* :ref:`Gauge metrics <gauges>` represent data that has a specific value at each point in time.
-* :ref:`Counter metrics <counters>` represent a count of occurrences in a time interval.
+* :ref:`Gauge metrics <gauges>` represent data that has a specific value at each point in time. Gauge metrics can increase or decrease.
+* :ref:`Counter metrics <counters>` represent a count of occurrences in a time interval. Counter metrics can only increase during the time interval.
 * :ref:`Cumulative counter metrics <cumulative-counters>` represent a running count of occurrences.
 
 
