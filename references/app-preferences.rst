@@ -5,7 +5,12 @@ View, copy, or update your user settings
 **********************************************************************************
 
 .. meta::
-   :description: You can see your Splunk Observability Cloud time zone, color accessibility settings, and User API access token on your user profile page.
+   :description: To help you understand time values, have Splunk Observability Cloud display the values based on your local time zone. To help you understand information that uses color to convey meaning, adjust Observability Cloud to use colors that account for your color vision deficiencies.
+
+* To help you understand time values, adjust Splunk Observability Cloud to display the values based on your local time zone.
+* To help you understand information that uses color to convey meaning, adjust Observability Cloud to use colors that account for your color vision deficiencies.
+
+Make these adjustments in your user profile.
 
 .. _change_time_zone_color_accessibility:
 
