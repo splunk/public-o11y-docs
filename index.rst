@@ -888,7 +888,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    incident-intelligence/key-concepts
 
 .. toctree::
-   :caption: METRICS
+   :caption: UNDERSTAND YOUR DATA
    :maxdepth:   3
 
    Metrics, data points, and metric time series <metrics-and-metadata/metrics>
