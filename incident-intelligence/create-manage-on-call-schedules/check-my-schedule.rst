@@ -11,6 +11,6 @@ See also
 =============
 
 * :ref:`ii-create-manage-on-call-schedules`
-* :ref:`ii-example-schedule-scenarios`
+* :ref:`ii-schedule-scenarios`
 * :ref:`ii-whos-on-call`
 * :ref:`ii-sync-on-call-schedule`
