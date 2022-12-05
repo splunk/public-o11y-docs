@@ -4,7 +4,7 @@
           <a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;
       {% endfor %}
     {{ title }}
-    {% if display_github %}
+    {% if display_github and pagename!="index" %}
     <section class="css-button-border">
       <a variant="outline" class="css-github-link" 
       href="https://github.com/{{ github_repo }}/blob/{{ github_version }}/{{ pagename }}.rst" target="_blank" rel="noopener noreferrer">
