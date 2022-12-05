@@ -4,5 +4,14 @@
           <a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;
       {% endfor %}
     {{ title }}
+    {% if display_github %}
+    <section class="css-button-border">
+      <a variant="outline" class="css-github-link" 
+      href="https://github.com/{{ github_repo }}/blob/{{ github_version }}/{{ pagename }}.rst" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" class="css-icon" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg><span class="githublinktext">Edit this page</span></a>
+      </section>
+{% endif %}
   <hr/>
 </div>

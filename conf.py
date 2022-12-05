@@ -130,7 +130,13 @@ html_theme_options = {
     'logo_name': True,
     'github_button': False,
 }
-
+html_context = {
+    "display_github": True, 
+    "github_user": "splunk/vpolasa2-splunk", 
+    "github_repo": "splunk/public-o11y-docs", 
+    "github_version": "main", 
+    "conf_py_path": "/", 
+}
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
 copybutton_copy_empty_lines = False
