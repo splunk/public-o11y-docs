@@ -75,7 +75,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. In the :guilabel:`Configure invite` window, add responders by name or by schedule. If you don't have an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
     #. To add responders by name, enter user names in the :guilabel:`Search people` field and select the user when they appear. 
     #. To add responders by schedule, enter a schedule name in the :guilabel:`Search schedules` field and select the schedule when it appears. Adding a schedule to a workflow step notifies the user that is on call when that workflow step is triggered. 
-    #. Repeat these steps until you have all the responders you want to invite to incidents for this step in the workflow. 
+#. Repeat these steps until you have all the responders you want to invite to incidents for this step in the workflow. 
 #. Select :guilabel:`Add responders`.
 #. Select :guilabel:`Add New Step` to add additional escalating steps with additional responders to your incident workflow.
 #. Select an elapsed time period in the drop-down list next to :guilabel:`If unacknowledged after`.
@@ -84,21 +84,19 @@ Use incident workflows to determine who is notified when a new incident is trigg
 
 .. _ii-service-maintenance:
 
-Use service maintenance to mute notifications 
+Mute notifications using service maintenance
 ==================================================
 
-Use service maintenance to mute notifications while you are making change to the service. 
+Use service maintenance to mute notifications while you are making changes to the service. 
 
-To put your service in maintenance, select the :guilabel:`Actions` menu on the service you want to put in maintenance and select :guilabel:`Maintenance`. 
+To put your service in maintenance, select the :guilabel:`Actions` menu on the service you want to put in maintenance and select :guilabel:`Maintenance`. The service status will show as :guilabel:`Maintenance`. 
 
-The service status will show as :guilabel:`Maintenance`. All incidents that are associated with the service that are triggered while the service is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your in your incident list by default. To see your muted incidents, go the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
+All incidents that are associated with the service that are triggered while the service is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
 
 Take a service out of maintenance
 -------------------------------------
 
-To take a service out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the service you want to put in maintenance and select :guilabel:`Enable`. 
-
-The service status will show as :guilabel:`Enabled`. This resumes triggering incidents associated with the service.   
+To take a service out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the service you want to take out ofmaintenance and select :guilabel:`Enable`. The service status shows as :guilabel:`Enabled`. This resumes triggering incidents associated with the service.   
 
 Next step
 ============
