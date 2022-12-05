@@ -12,11 +12,11 @@ To route incidents to the necessary teams and people, you need to first generate
 
 Complete these tasks to get started with Incident Intelligence:
 
-#. To begin using Incident Intelligence you need to ingest alerts in Incident Intelligence. See :ref:`ii-ingest-alerts`.
-#. Next, you need to create services to organize your alerts and incidents based on the impacted environmental component. See :ref:`ii-create-configure-services`.
-#. Next, use alert routing to associate alerts with a service. See :ref:`ii-configure-alert-routing`.
-#. After you configure which alerts are routed to your service, use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents. See :ref:`ii-configure-alert-grouping`.
-#. After you manage which alerts create an incident and how alerts are grouped into incidents, use incident workflows to determine who is notified when a new incident is triggered. See :ref:`ii-configure-incident-workflows`. 
-#. You can use on-call schedules as a step in your incident workflow. See :ref:`ii-create-manage-on-call-schedules` for steps to create an on-call schedule.
+#. Ingest alerts in Incident Intelligence. See :ref:`ii-ingest-alerts`.
+#. Create services to organize your alerts and incidents based on the impacted environmental component. See :ref:`ii-create-configure-services`.
+#. Configure the alert routing within the service to associate alerts with a service. See :ref:`ii-configure-alert-routing`.
+#. Configure alert grouping within the service to manage which alerts create an incident and how alerts are grouped into incidents. See :ref:`ii-configure-alert-grouping`.
+#. Configure the incident workflow within the service to determine who is notified when a new incident is triggered. See :ref:`ii-configure-incident-workflows`. 
+#. Create an on-call schedules and add them as a step in your incident workflows. See :ref:`ii-create-manage-on-call-schedules`.
 
 This completes the setup for Incident Intelligence and you are ready to begin responding to incidents. See :ref:`ii-respond-manage-incidents`.

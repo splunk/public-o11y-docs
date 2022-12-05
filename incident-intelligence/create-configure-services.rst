@@ -9,21 +9,21 @@ Create and configure services
 .. meta::
    :description: Use services to organize incidents depending on the impacted environmental component.
 
-Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. Then, route alerts to the service, see :ref:`ii-configure-alert-routing`. Next, specify which alerts create an incident and how alerts are grouped into incidents, see :ref:`ii-configure-alert-grouping`. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered, see :ref:`ii-configure-incident-workflows`.
+Use services to organize incidents depending on the impacted environmental component. Begin by creating a service. Then, route alerts to the service. Next, specify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered.
 
 .. _ii-create-service:
 
 Create a service
 ====================
 
-#. In Incident Intelligence, go to :guilabel:`Incident Management`.
+#. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Services` > :guilabel:`Create service`.
 #. Give your service a unique name and a description. 
 #. Select :guilabel:`Create service`.
 
 After you create your service, you are directed to configure which alerts are routed to your service. 
 
-.. note:: If you have more than one service, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one service even if they match multiple services. The service alerts are routed to is based on your service’s alert routing conditions and service rank order. To rank your services go to :guilabel:`Incident Management` > :guilabel:`Services` > :guilabel:`Service ranking`. 
+.. note:: If you have more than one service, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one service even if they match multiple services. The service that alerts are routed to is based on your service’s alert routing conditions and service rank order. To rank your services go to :guilabel:`Incident Management` > :guilabel:`Services` > :guilabel:`Service ranking`. 
 
 .. _ii-configure-alert-routing:
 
@@ -34,17 +34,17 @@ Use alert routing to associate alerts with a service. If an alert matches your a
 
 #. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select :guilabel:`Services` and then the service you want to add alert routing conditions to.
-#. On the :guilabel:`Alert Routing` tab, the list of alerts that are currently routed to the service display.
+#. Select the :guilabel:`Alert Routing` tab to see the list of alerts that are currently routed to the service.
 #. To filter the alerts routed to the service, select :guilabel:`Add Filters`. 
 #. Select a filter field. Use :guilabel:`source` to route alerts based on a detector name. 
 #. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
 #. Select a filter value. 
-#. Select enter to save your condition. 
+#. Select :guilabel:`Enter`` to save your condition. 
 #. Repeat steps 4-8 for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the service to confirm your filter conditions are correct. 
 #. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
 
-After you configure which alerts are routed to your service, use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents.
+After you configure which alerts are routed to your service, configure how alerts are grouped into incidents.
 
 .. _ii-configure-alert-grouping:
 
@@ -56,10 +56,10 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 #. In Incident Intelligence, go to :guilabel:`Incident Management`.
 #. Select :guilabel:`Services` and then the service you want to add alert grouping conditions to. Each service can have one alert grouping rule.
 #. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
-#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours, from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
+#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
 #. Select :guilabel:`Save alert grouping`.
 
-After you manage which alerts create an incident and how alerts are grouped into incidents, use incident workflows to determine who is notified when a new incident is triggered. 
+After you manage which alerts create an incident and how alerts are grouped into incidents, configure incident workflows for your service.  
 
 .. _ii-configure-incident-workflows:
 
@@ -99,3 +99,8 @@ Take a service out of maintenance
 To take a service out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the service you want to put in maintenance and select :guilabel:`Enable`. 
 
 The service status will show as :guilabel:`Enabled`. This resumes triggering incidents associated with the service.   
+
+Next step
+============
+
+If you are setting up Incident Intelligence for the first time, next you need to create an on-call schedule. See :ref:`ii-create-manage-on-call-schedules`.

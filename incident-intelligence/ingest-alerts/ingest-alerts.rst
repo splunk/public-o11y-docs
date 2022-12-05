@@ -30,3 +30,8 @@ To ingest alerts in Incident Intelligence, you can create a detector for the one
 
 - Amazon CloudWatch, see :ref:`ii-ingest-cloudwatch-alerts`.
 - Prometheus, see :ref:`ii-ingest-prometheus-alerts`.
+
+Next step
+============
+
+If you are setting up Incident Intelligence for the first time, next you need to create and configure a service. See :ref:`ii-create-configure-services`.
