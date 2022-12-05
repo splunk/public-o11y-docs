@@ -18,7 +18,7 @@ The following use case features examples from Buttercup Games, a fictitious e-co
 
 Kai, a site reliability engineer (SRE) at Buttercup Games, is responsible for rolling out an update to the ``checkoutservice`` application service in their Kubernetes environment. They want to make sure they know all the upstream and downstream dependencies of ``checkoutservice`` so they can notify the dependent teams.
 
-Kai first checks their team's architecture diagram, but realizes it's outdated. 
+Kai first checks their team's architecture diagram, but realizes it's outdated. Not only does the diagram lack some services that Kai's team recently added, but it also doesn't show the languages and frameworks used in the older services.
 
     .. image:: /_images/images-network-explorer/outdated-diagram.png
         :alt: This image shows the outdated architecture diagram for Kai's team. The map is a combination of printed and illegible hand drawn elements on a stained piece of paper.
