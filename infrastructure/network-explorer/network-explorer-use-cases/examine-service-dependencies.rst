@@ -30,7 +30,12 @@ Kai then attempts to investigate service dependencies using the Network Explorer
         :alt: This image shows the up-to-date architecture diagram for Kai's team. The diagram is an interactive network map in Network Explorer, which shows all upstream and downstream dependencies for ``checkoutservice``.
         :width: 80%
 
-Kai selects ``checkoutservice`` to receive the update, and immediately gets a drilldown view of all upstream and downstream dependencies for ``checkoutservice``.
+Kai selects the ``checkoutservice`` service and immediately gets a drilldown view of all upstream and downstream dependencies for ``checkoutservice``.
+
+    .. image:: /_images/images-network-explorer/checkoutservice-network-map.png
+        :alt: This image shows the up-to-date architecture diagram for Kai's team. The diagram is an interactive network map in Network Explorer, which shows all upstream and downstream dependencies for ``checkoutservice``.
+        :width: 80%
+
 
 By exploring the Network Explorer network map, Kai successfully obtained the context they need to understand all the dependencies of the service being updated. With this knowledge, Kai can now notify the dependent teams of the imminent update.
 
