@@ -49,7 +49,7 @@ There are several ways to create a detector.
 Clone an existing detector
 -------------------------------------------------------------------
 
-You can see a list of existing detectors in the Detectors tab on the Alerts page. If you see one that represents a good starting point for a detector you want to create, you can open it and then select :menuselection:`Clone` from the detector's Actions menu to save it as a new detector.
+You can see a list of existing detectors in the Detectors tab on the Alerts page. If you see one that represents a good starting point for a detector you want to create, you can open it and then select :menuselection:`Clone` from the detector's actions menu (|more|) to save it as a new detector.
 
 After cloning and saving the new detector, see :ref:`build-rules`.
 
@@ -233,8 +233,6 @@ The available settings vary depending on the alert condition you selected.
 
 In the chart, you see a preview of the alerts that would have been triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
 
-.. removed for https://signalfuse.atlassian.net/browse/POR-314
-
 After you have specified settings for triggering alerts, continue to the next tab to create a message that will be sent when the alert is triggered.
 
 .. _alert-message:
@@ -263,7 +261,7 @@ Another example might be:
 -  Major alert for the same condition set at 30 minutes
 -  Minor alert for same the condition set at 15 minutes
 
-The easiest way to do this is to create a rule at one severity, select :menuselection:`Clone` from the rule's Actions menu on the right side of the screen, and then edit the settings and severity.
+The easiest way to do this is to create a rule at one severity, select :menuselection:`Clone` from the rule's actions menu (|more|) on the right side of the screen, and then edit the settings and severity.
 
 Runbook
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -725,7 +723,7 @@ If you don't enter a name while creating a detector, you will be prompted to add
 Manage detector rules
 =============================================================================
 
-In the Alert Rules tab of a detector, you can use the Actions menu for a rule (at far right, next to the :guilabel:`Edit` option) to perform any of the following actions.
+In the Alert Rules tab of a detector, you can use the actions menu (|more|) menu for a rule (at far right, next to the :guilabel:`Edit` option) to perform any of the following actions.
 
 -  Disable/enable
 

@@ -5,7 +5,7 @@ Supported browsers for Splunk Observability Cloud
 ********************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud works as expected when using the latest and next-to-latest official releases of the following browsers: Chrome (recommended) and Safari.
+   :description: Supported browsers for Splunk Observability Cloud. Use the latest and next-to-latest official releases of the following browsers: Chrome (recommended) and Safari.
 
 Splunk Observability Cloud works as expected when using the latest and next-to-latest official releases of the following browsers:
 

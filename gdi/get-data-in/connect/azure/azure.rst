@@ -92,10 +92,16 @@ Repeat these steps for each subscription you want to monitor.
 
 From Splunk Observability Cloud, connect to Azure by following these steps:
 
-  #. In the left navigation menu, select :menuselection:`Data Management`, and select :guilabel:`Add Integration` to open the Integrate Your Data page.
-  #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
-  #. Select the :guilabel:`Microsoft Azure` tile to open the Microsoft Azure guided setup.
-  #. To start configuring the connection to Azure, select :guilabel:`New Integration`.
+  #. Open the :new-page:`Microsoft Azure guided setup <https://login.signalfx.com/#/integrations/azure>`. Optionally, you can navigate to the guided setup on your own:
+
+     #. In the left navigation menu, select :menuselection:`Data Management`, and select :guilabel:`Add Integration` to open the Integrate Your Data page.
+
+     #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
+
+     #. Select the :guilabel:`Microsoft Azure` tile to open the Microsoft Azure guided setup.
+
+     #. To start configuring the connection to Azure, select :guilabel:`New Integration`.
+
   #. In the text boxes for Splunk Infrastructure Monitoring setup, enter the following information:
       * :guilabel:`Name`: Unique name for this connection to Azure. The name field helps you create multiple connections to Azure, each with its own name.
       * :guilabel:`Directory ID`: Azure Directory ID you saved in a previous step.
@@ -146,6 +152,6 @@ The Collector offers a higher degree of customization than the Azure integration
 
 To validate your setup, examine the details of your Azure integration as displayed in the list at the end of the setup page.
 
-* For details about the metrics provided by a GCP integration, see :ref:`azure-metrics`.
-* To send logs from GCP to Observability Cloud, follow the instructions in :ref:`ingest-azure-log-data`.
+* For details about the metrics provided by an Azure integration, see :ref:`azure-metrics`.
+* To send logs from Azure to Observability Cloud, follow the instructions in :ref:`ingest-azure-log-data`.
 * Learn about :ref:`our Azure Infrastructure Monitoring options <infrastructure-azure>`. 

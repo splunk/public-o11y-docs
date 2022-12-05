@@ -12,8 +12,6 @@ The Splunk OpenTelemetry Connector for Heroku is a buildpack for the Splunk Dist
 
 To learn more about the Splunk Distribution of OpenTelemetry Collector, see [Install and configure the Splunk Distribution of OpenTelemetry Collector](../opentelemetry/opentelemetry.rst)
 
-
-
 ## Installation
 
 ### Prerequisites
