@@ -39,7 +39,7 @@ Use alert routing to associate alerts with a service. If an alert matches your a
 #. Select a filter field. Use :guilabel:`source` to route alerts based on a detector name. 
 #. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
 #. Select a filter value. 
-#. Select :guilabel:`Enter`` to save your condition. 
+#. Select :guilabel:`Enter` to save your condition. 
 #. Repeat steps 4-8 for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the service to confirm your filter conditions are correct. 
 #. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
@@ -73,8 +73,20 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. Select the :guilabel:`Incident workflows` tab. 
 #. To add responders, select :guilabel:`Configure invite` under :guilabel:`Immediately`. 
 #. In the :guilabel:`Configure invite` window, add responders by name or by schedule. If you don't have an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
-    #. To add responders by name, enter user names in the :guilabel:`Search people` field and select the user when they appear. 
-    #. To add responders by schedule, enter a schedule name in the :guilabel:`Search schedules` field and select the schedule when it appears. Adding a schedule to a workflow step notifies the user that is on call when that workflow step is triggered. 
+   
+    .. list-table::
+        :header-rows: 1
+        :widths: 25, 75
+
+        * - :strong:`Add responder option`
+          - :strong:`Steps`
+
+        * - Add responders by name
+          - Enter user names in the :guilabel:`Search people` field and select the user when they appear. 
+  
+        * - Add responders by schedule
+          - Enter a schedule name in the :guilabel:`Search schedules` field and select the schedule when it appears. Adding a schedule to a workflow step notifies the user that is on call when that workflow step is triggered. 
+
 #. Repeat these steps until you have all the responders you want to invite to incidents for this step in the workflow. 
 #. Select :guilabel:`Add responders`.
 #. Select :guilabel:`Add New Step` to add additional escalating steps with additional responders to your incident workflow.
