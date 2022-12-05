@@ -8,7 +8,7 @@ On-call schedule scenarios
 .. meta::
    :description:
 
-Find the scenario that fits your situation to learn how to create your on-call schedule.
+Find the scenario that fits your situation to learn how to create your on-call schedule. For basic on-call schedule creation steps see :ref:`ii-create-manage-on-call-schedules`.
 
 Scenario 1: Week-by-week coverage
 ==========================================================
