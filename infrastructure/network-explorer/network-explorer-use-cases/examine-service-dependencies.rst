@@ -18,7 +18,7 @@ The following use case features examples from Buttercup Games, a fictitious e-co
 
 Kai, a site reliability engineer (SRE) at Buttercup Games, is responsible for rolling out an update to the ``checkoutservice`` application service in their Kubernetes environment. They want to make sure they know all the upstream and downstream dependencies of ``checkoutservice`` so they can notify the dependent teams.
 
-Kai first checks their team's architecture diagram, but soon realizes it's outdated. 
+Kai first checks their team's architecture diagram, but realizes it's outdated. 
 
     .. image:: /_images/images-network-explorer/outdated-diagram.png
         :alt: This image shows the outdated architecture diagram for Kai's team. The map is a combination of printed and illegible hand drawn elements on a stained piece of paper.
@@ -30,9 +30,9 @@ Kai then attempts to investigate service dependencies using the Network Explorer
         :alt: This image shows the up-to-date architecture diagram for Kai's team. The diagram is an interactive network map in Network Explorer, which shows all upstream and downstream dependencies for ``checkoutservice``.
         :width: 80%
 
-In particular, Kai selects ``checkoutservice`` to receive the update, and immediately gets a drilldown view of all upstream and downstream dependencies for ``checkoutservice``.
+Kai selects ``checkoutservice`` to receive the update, and immediately gets a drilldown view of all upstream and downstream dependencies for ``checkoutservice``.
 
-By exploring the Network Explorer network map, Kai successfully obtained the context they need to understand all the dependencies of the service being updated. 
+By exploring the Network Explorer network map, Kai successfully obtained the context they need to understand all the dependencies of the service being updated. With this knowledge, Kai can now notify the dependent teams of the imminent update.
 
 Learn more
 ======================================
