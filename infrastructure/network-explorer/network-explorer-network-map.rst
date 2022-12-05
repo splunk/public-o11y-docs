@@ -29,14 +29,14 @@ The network map consists of the following components.
         
     * - Network workload
       - A service in your network.
-      - | * Network workloads are represented as circles.
-        | * The names for these services come from your Kubernetes environment, Docker metadata, Linux service managers, such as systemd, DNS, and IP address data.
+      - * Network workloads are represented as circles.
+        * The names for these services come from your Kubernetes environment, Docker metadata, Linux service managers, such as systemd, DNS, and IP address data.
       
     * - Network edge
       - The amount of TCP network traffic from a source to a destination workload.
-      - | * Network edges are represented as broken arrows connecting the circles.
-        | * The arrow direction corresponds to the network traffic direction.
-        | * Each arrow has a number indicating the amount of data coming from a source network workload to a destination network workload in a certain time period. By default, the time period is the past 3 hours.
+      - * Network edges are represented as broken arrows connecting the circles.
+        * The arrow direction corresponds to the network traffic direction.
+        * Each arrow has a number indicating the amount of data coming from a source network workload to a destination network workload in a certain time period. By default, the time period is the past 3 hours.
 
 For example, the following network map shows traffic between the ``emailservice`` network workload and the ``checkoutservice`` network workload in both directions. The ``emailservice`` network workload sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past 3 hours.  
 
