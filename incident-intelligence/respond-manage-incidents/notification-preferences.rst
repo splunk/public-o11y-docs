@@ -7,7 +7,7 @@ Set your on-call notification preferences
 
 When you are on call, triggered incidents notify you by email by default. You can also choose to receive notifications via SMS or mobile push. To set your on-call notification preferences follow these steps:
 
-#. Go to :guilabel:`Settings` > :guilabel:`Users` in the main menu.
+#. In Splunk Observability Cloud, select :guilabel:`Settings` > :guilabel:`Users` in the main menu.
 #. Search for your user and select it when it appears.
 #. Go to :guilabel:`Notification Preferences`.
 #. Under :guilabel:`Intelligence notifications` > :guilabel:`Receive notifications by` select the notification methods you want to be notified by. :guilabel:`Email` is selected by default. If you want to uncheck :guilabel:`Email`, select another notification method first, then uncheck :guilabel:`Email`.
