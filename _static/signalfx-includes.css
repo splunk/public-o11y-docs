@@ -1443,9 +1443,7 @@ right:72px;
 position: fixed;
 z-index: 1;
 }
-.githublinktext{
-display:block;
-}
+
 @media screen and (min-width: 1024px) and (max-width: 1024px) {
   .css-button-border {
   border-radius: 4px;
@@ -1468,8 +1466,6 @@ margin-top: -25px;
 right:-12px;
 position: fixed;
 z-index: 1;
-}
-.githublinktext{
 display: none;
 }
 }
