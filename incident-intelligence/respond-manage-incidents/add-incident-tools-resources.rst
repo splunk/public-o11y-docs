@@ -14,7 +14,7 @@ Add resources to an incident
 
 To add a resource to an incident, follow these steps:
 
-#. Go to the :guilabel:`Incidents` tab in Incident Intelligence. 
+#. In Incident Intelligence, select the :guilabel:`Incidents` tab. 
 #. Select the incident from the incident list.
 #. Select :guilabel:`Add Resource`.
 #. Enter a :guilabel:`Title` for the resource.
@@ -29,7 +29,7 @@ Add collaboration tools to an incident
 
 To add a collaboration tool to an incident, follow these steps:
 
-#. Go to the :guilabel:`Incidents` tab in Incident Intelligence. 
+#. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 
 #. Select the incident from the incident list.
 #. Select :guilabel:`Add Collaboration Tool`.
 #. Enter a :guilabel:`Title` for the collaboration tool.

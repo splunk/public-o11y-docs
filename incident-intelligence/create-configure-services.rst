@@ -68,7 +68,7 @@ Configure incident workflows for your service
 
 Use incident workflows to determine who is notified when a new incident is triggered. To create an automatic incident workflow, add escalating steps to notify responders of the incident. To add an incident workflow, follow these steps:
 
-#. In Incident Intelligence, go to :guilabel:`Incident Management`.
+#. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Services` and then the service where you want to create an incident workflow.
 #. Select the :guilabel:`Incident workflows` tab. 
 #. To add responders, select :guilabel:`Configure invite` under :guilabel:`Immediately`. 

@@ -7,7 +7,7 @@ Add responders and assign roles
 
 If your services have an incident workflow, responders are automatically added to incidents. To add or remove incident responders, follow these steps:
 
-#. Go to the :guilabel:`Incidents` tab in Incident Intelligence. 
+#. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 
 #. Select the incident from the incident list.
 #. Select :guilabel:`Add Responders`.
 #. You can add responders by selecting a schedule and you can add a specific responder by name.
@@ -21,7 +21,7 @@ Add and assign responder roles
 
 To add responder roles to incident responders, follow these steps:
 
-#. Go to the :guilabel:`Incidents` tab in Incident Intelligence. 
+#. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 
 #. Select the incident from the incident list.
 #. Hover over the responder you want to add a role to and select the menu, and then select :guilabel:`Edit Role`.
 #. Select roles you want to assign to the responder. The list of roles shows default roles (:guilabel:`Incident Commander`, :guilabel:`Communications Owner`, :guilabel:`Task Manager`, :guilabel:`Customer Liason`) and any previously-created custom roles. To add a new custom role, enter the custom role name you want to use and select enter.
