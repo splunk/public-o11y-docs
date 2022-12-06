@@ -13,16 +13,6 @@ How alerts work in Splunk RUM
 In Splunk RUM for Browser, alerts are triggered on aggregate metrics for the entire application. If you want to create an alert for a page level metric, first create a custom event for the metric, then create an alert for the custom event. To learn more, see :ref:`Create custom events <rum-custom-event>`. If you are new to alerts and detectors, see :ref:`Introduction to alerts and detectors in Splunk Observability Cloud <get-started-detectoralert>`. 
 
 
-Example
-----------
-
-Web vitals have a standard range that denotes good performance. For example, a Largest Contentful Paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps on how to remedy the slow LCP.
-
-..  image:: /_images/rum/alert-modal-example.png
-    :width: 90%
-    :alt: This image shows the detector modal in Splunk RUM. To create the detector click :guilabel:`Activate`. 
-
-
 
 Integrations 
 -----------------------------
@@ -37,7 +27,7 @@ You can use the following methods and integrations to receive alerts from Splunk
 * VictorOps
 * XMatters 
 
-You can also add a link in your message such as a link to a run book or other troubleshooting information in your organization.  
+You can also add a link in your message such as a link to a runbook or other troubleshooting information in your organization.  
 
 Data retention
 ---------------------
@@ -82,24 +72,47 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
 
 
 
+Alert configuration examples
+=============================
+
+Here are a few examples of how you can configure alerts. Set the scope of your alert to either the page or URL level, or the app level which is an aggregate. The following use cases feature examples from Buttercup Industries, a fictitious ecommerce company. 
+
+
 Alert trigger conditions
-=======================================
+---------------------------
 
-RUM alert conditions are designed to reduce noise and provide clear, actionable insights on your data. You can configure the sensitivity of the alert to suit your needs.
-
-Configuration example
----------------------------------------------------
-
-The following image shows an example configuration for the fictitious Buttercup Industries that sends an alert if 50% of the data points in a five minute window are longer than 200 ms.
-
-..  image:: /_images/rum/alert-example-rum.png
-    :width: 80%
-    :alt: This image shows the detector modal in Splunk RUM. The trigger threshold is 200 ms and the sensitivity is set to 50% of 5 minutes. 
+RUM alert conditions are designed to reduce noise and provide clear, actionable insights on your data. You can configure the sensitivity of the alert to suit your needs. If you want an alert that is more sensitive to smaller changes, you can reduce the percentage. For example, if you set your sensitivity to 10%, then you'd be alerted when only 10% of the data in the given time frame crosses the threshold you set. 
 
 
-Increase the sensitivity of your alerts 
-------------------------------------------
-If you want an alert that is more sensitive to smaller changes, you can reduce the percentage. For example, if you set your sensitivity to 10%, then you'd be alerted when only 10% of the data in the given time frame crosses the threshold you set. 
+Page level metrics 
+------------------
+
+To create a page level metric, first create a custom rule to map to the page you want to monitor. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule by selecting the rule from the list. The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``. 
+
+.. image:: /_images/rum/product-page-rum-example.png
+   :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 
+   :width: 97.3%
+
+
+App level metrics 
+-----------------
+
+Web vitals have a standard range that denotes good performance. For example, a Largest Contentful Paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps on how to remedy the slow LCP.
+
+.. image:: /_images/rum/alert-modal-lcp.png
+   :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 
+   :width: 97.3%
+
+
+URL level metrics 
+-----------------
+
+The following image shows an example configuration for a URL level metric for long task duration that triggers if 50% of the data points in a five minute window are longer than 1000 milliseconds. 
+
+.. image:: /_images/rum/url-level-alert-rum.png
+   :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 
+   :width: 97.3%
+
 
 
 Create a detector 
@@ -115,11 +128,12 @@ Follow these steps to create a detector in RUM:
 
 3. Configure your detector:
 
-    * Name your detector 
-    * Select the metric that is of interest to you and the type of data 
-    * Set the static threshold for your alert 
-    * Select the scope of your alert
-    * Select the severity of the alert 
+    * Name your detector. 
+    * Select the metric that is of interest to you and the type of data. 
+    * Set the static threshold for your alert. 
+    * Select the scope of your alert.
+    * Select the severity of the alert. 
+    * Apply a custom rule by selecting the rule from the list under "Scope the alerts I get to URL/Page".
 
 4. Share your alert with others by integrating with the tool your team uses to communicate and adding a link to your runbook.  
 

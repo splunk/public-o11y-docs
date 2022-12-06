@@ -8,7 +8,7 @@
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache HTTP Server monitor with the SignalFx Smart Agent receiver. The integration monitors Apache web servers using information `mod_status` provides.
 
-This monitor is available on Kubernetes, Linux, and Windows.
+This monitor is available on Kubernetes and Linux.
 
 Apache worker threads can be in one of the following states:
 

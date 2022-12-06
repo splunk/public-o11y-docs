@@ -19,6 +19,8 @@ To get data into Splunk AlwaysOn Profiling, you need the following:
 
 If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
+.. note:: AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
+
 .. _profiling-setup:
 
 Get profiling data in
@@ -72,7 +74,7 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
       - To use CPU profiling, enable the ``splunk.profiler.enabled`` system property, or set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Enable Memory profiling by setting the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``. To enable memory profiling, the ``splunk.profiler.enabled`` property must be set to ``true``.
       - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable point to ``http://localhost:4317``.
-      - Port 9943 is the default port for the SignalFX receiver in the collector distribution. If you change this port in your collector config, you need to pass the custom port to the JVM.
+      - Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your collector config, you need to pass the custom port to the JVM.
       
       The following example shows how to enable the profiler using the system property:
 
