@@ -491,7 +491,7 @@ The impact of delayed data points on a streaming analytics system can be illustr
 You have a chart that displays the average of the CPU utilization metrics from 10 servers, and 9 of the servers report every 10 seconds and are on time. One laggard, backed up for whatever reason, submits data with a gap between wall time and logical time that is 10 minutes long. Even though that machine sends one data point every 10 seconds, those data points all arrive after a 10 |hyph| minute delay.
 
 Max delay
-++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The :strong:`Max Delay` parameter specifies the maximum time that the Splunk Observability Cloud analytics engine waits for data to arrive for a specific chart. For example, if :strong:`Max Delay` is set to 5 minutes, the computation waits for no more than 5 minutes after time *t*, for data that timestamped with time *t*. The leading edge of the CPU utilization chart is no more than 5 minutes behind the current time, and the laggard isn't considered for the purpose of calculating the average in the streaming chart. When it does arrive, it will be stored properly, such that any re-calculation of the average takes it into account. As such, :strong:`Max Delay` lets you prioritize timeliness over correctness.
 
@@ -500,7 +500,7 @@ When :strong:`Max Delay` is set to the default, :strong:`Auto`, the timeliness o
 You can permanently override the default setting for a chart by choosing a :ref:`Max Delay value<max-delay>` in the :strong:`Chart Options` tab. You can temporarily override the default by setting a :ref:`max delay override<dashboard-max-delay>` on the dashboard that contains the chart. The upper limit is 15 |nbsp| minutes.
 
 Min delay
-++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The :strong:`Min Delay` parameter specifies the minimum time that the Splunk Observability Cloud analytics engine waits for data to arrive for a specific chart. 
 
