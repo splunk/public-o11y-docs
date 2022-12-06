@@ -5,7 +5,7 @@ Use case: Troubleshoot an issue from the browser to the back end using Splunk Ob
 ******************************************************************************************************
 
 .. meta::
-   :description: This use case-based documentation describes how a site reliability engineer (SRE) can use Splunk Observability Cloud products and features to troubleshoot a site issue starting with the end user's browser-based experience all the way to microservices on the backend.
+   :description: Use case describing how an SRE can use Splunk Observability Cloud products and features to troubleshoot a site issue starting with the end user's browser-based experience all the way to microservices on the backend.
 
 Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure.
 
@@ -29,7 +29,7 @@ This use case describes how Kai, an SRE, and Deepu, a service owner, performed t
 
 :ref:`take-preventative-action-xpuc`
 
-For a video version of this use case, see :new-page:`Splunk’s Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
+For a video version of this use case, see :new-page:`Splunk's Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
 
 
 .. _receive-alerts-xpuc:
@@ -66,7 +66,7 @@ Kai opens Splunk Real User Monitoring (RUM) to look for clues about the issue ba
 
   .. image:: /_images/get-started/fe-errors.png
     :width: 35%
-    :alt: This screenshot shows the FE (frontend) Errors module in Splunk Real User Monitoring. The module shows the error rate for the last 15 minutes. The error rate is 74 errors per second.
+    :alt: This screenshot shows the frontend Errors module in Splunk Real User Monitoring. The module shows the error rate for the last 15 minutes. The error rate is 74 errors per second.
 
 * High backend endpoint latency
 
@@ -74,17 +74,17 @@ Kai opens Splunk Real User Monitoring (RUM) to look for clues about the issue ba
     :width: 75%
     :alt: This screenshot shows the Endpoint Latency module in Splunk Real User Monitoring. The module shows a latency of 8 seconds for the /cart/checkout endpoint.
 
-Kai isn’t sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :code:`/cart/checkout` endpoint because the page load time and largest contentful paint for :code:`cart/checkout` are also high.
+Kai isn't sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :code:`/cart/checkout` endpoint because the page load time and largest contentful paint for :code:`cart/checkout` are also high.
 
-Kai clicks the :strong:`/cart/checkout` endpoint link and sees multiple errors in the Tag Spotlight view in Splunk RUM. The errors don’t seem to be related to any one tag in particular, so they click the :strong:`` tab to look at User sessions.
+Kai clicks the :strong:`/cart/checkout` endpoint link and sees multiple errors in the Tag Spotlight view in Splunk RUM. The errors don't seem to be related to any one tag in particular, so they click the :strong:`User Sessions` tab to look at User sessions.
 
-Kai sees one session that seems to be taking longer than the others. They click it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn’t a front end problem and that they need to follow the trace through to the back end.
+Kai sees one session that seems to be taking longer than the others. They click it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn't a front end problem and that they need to follow the trace through to the back end.
 
 .. image:: /_images/get-started/session-details.png
   :width: 100%
   :alt: This screenshot shows the Session Details page in Splunk RUM displaying the session timeline from the front end through to the back end, where the /cart/checkout endpoint is taking longer than expected to complete.
 
-Kai clicks the :strong:`APM` link to get a performance summary, as well as access to the session’s trace and workflow details.
+Kai clicks the :strong:`APM` link to get a performance summary, as well as access to the session's trace and workflow details.
 
 .. image:: /_images/get-started/performance-summary.png
   :width: 80%
