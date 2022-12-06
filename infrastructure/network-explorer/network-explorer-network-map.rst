@@ -2,7 +2,7 @@
 .. _network-explorer-network-map:
 
 ************************************************************
-Monitor service dependencies with network map
+Monitoring service dependencies with network map
 ************************************************************
 
 .. meta::
@@ -24,17 +24,17 @@ The network map consists of the following components.
       - :strong:`Description`
         
     * - Network workload
-      - A network workload is a service in your network.
-      - | - Network workloads are represented as circles.
-        | - The names for these services come from your Kubernetes environment, Docker metadata, Linux service managers such as systemd, DNS, and IP address data.
+      - A service in your network.
+      - * Network workloads are represented as circles.
+        * The names for these services come from your Kubernetes environment, Docker metadata, Linux service managers, such as systemd, DNS, and IP address data.
       
     * - Network edge
-      - A network edge captures the amount of TCP network traffic from a source to destination workload.
-      - | - Network edges are represented as broken arrows connecting the circles.
-        | - The arrow direction corresponds to the network traffic direction.
-        | - Each arrow has a number indicating the amount of data coming from a source network workload to a destination network workload in a certain time period. By default, the time period is the past 3 hours.
+      - The amount of TCP network traffic from a source to a destination workload.
+      - * Network edges are represented as broken arrows connecting the circles.
+        * The arrow direction corresponds to the network traffic direction.
+        * Each arrow has a number indicating the amount of data coming from a source network workload to a destination network workload in a certain time period. By default, the time period is the past 3 hours.
 
-For example, the following network map shows traffic between the ``emailservice`` network workload and ``checkoutservice`` network workload, in both directions. The ``emailservice`` network workload sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past 3 hours.  
+For example, the following network map shows traffic between the ``emailservice`` network workload and the ``checkoutservice`` network workload in both directions. The ``emailservice`` network workload sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past 3 hours.  
 
 .. image:: /_images/images-network-explorer/network-explorer-network-map.png
   :alt: Network Explorer network map showing two network workloads connected by two network edges. Traffic flows in both directions. The ``emailservice`` network workload sends 245 KiB of data to ``checkoutservice``, and receives 495 KiB of data from ``checkoutservice`` for the past 3 hours.  
@@ -66,8 +66,8 @@ You can view connections related to a network workload or network edge by select
 Change time period for network edge data
 --------------------------------------------
 
-By default, a network edge shows the amount of data coming from a source network workload to a network destination workload in the past 3 hours. You can change the time period by selecting a different option, or enter a custom time in the time dropdown menu.
+By default, a network edge shows the amount of data coming from a source network workload to a network destination workload in the past 3 hours. You can change the time period by selecting a different option, or enter a custom time in the time drop-down menu.
 
   .. image:: /_images/images-network-explorer/change-time.png
-      :alt: Dropdown menu to change time period for network edge data.
+      :alt: Drop-down menu to change time period for network edge data.
       :width: 30%
