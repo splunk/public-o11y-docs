@@ -484,16 +484,29 @@ Data points being sent to Splunk Observability Cloud can be delayed, or not arri
 Delayed data points
 -------------------------------------------------------------------
 
-As a general rule, when using a streaming analytics system, the more "on time" data points are, the better. In other words, the delta between logical time (the time stamp that accompanies the data points, such as when the measurements are actually taken) and wall time (the time at which the data points actually arrive in Splunk Observability Cloud) should be as low as possible.
+As a general rule, when using a streaming analytics system, the more "on time" data points are, the better. In other words, the delta between logical time (the time stamp that accompanies the data points, such as when the measurements are taken) and wall time (the time at which the data points arrive in Splunk Observability Cloud) needs to be as low as possible.
 
-The impact of delayed data points on a streaming analytics system can be illustrated using the following example. Let's say you have a chart that displays the average of the CPU utilization metrics from 10 servers, and that 9 of the servers report every 10 seconds and are on time. One laggard, backed up for whatever reason, submits data with a gap between wall time and logical time that is 10 minutes long. So even though that machine sends one data point every 10 seconds, those data points all arrive after a 10 |hyph| minute delay.
+The impact of delayed data points on a streaming analytics system can be illustrated using the following example:
 
-The :strong:`Max Delay` parameter specifies the maximum time that the Splunk Observability Cloud analytics engine waits for data to arrive for a specific chart. For example, if :strong:`Max Delay` is set to 5 minutes, the computation waits for no more than 5 minutes after time *t*, for data that has been timestamped with time *t*. The leading edge of the CPU utilization chart will be no more than 5 minutes behind the current time, and the laggard will not be considered for the purpose of calculating the average in the streaming chart. When it does arrive, it will be stored properly, such that any re-calculation of the average takes it into account. As such, :strong:`Max Delay` allows users to control the trade-off between correctness and timeliness.
+You have a chart that displays the average of the CPU utilization metrics from 10 servers, and 9 of the servers report every 10 seconds and are on time. One laggard, backed up for whatever reason, submits data with a gap between wall time and logical time that is 10 minutes long. Even though that machine sends one data point every 10 seconds, those data points all arrive after a 10 |hyph| minute delay.
+
+Max delay
+++++++++++++++++++++++++++++
+
+The :strong:`Max Delay` parameter specifies the maximum time that the Splunk Observability Cloud analytics engine waits for data to arrive for a specific chart. For example, if :strong:`Max Delay` is set to 5 minutes, the computation waits for no more than 5 minutes after time *t*, for data that timestamped with time *t*. The leading edge of the CPU utilization chart is no more than 5 minutes behind the current time, and the laggard isn't considered for the purpose of calculating the average in the streaming chart. When it does arrive, it will be stored properly, such that any re-calculation of the average takes it into account. As such, :strong:`Max Delay` lets you prioritize timeliness over correctness.
 
 When :strong:`Max Delay` is set to the default, :strong:`Auto`, the timeliness of the reporting time series are sampled to determine an appropriate value. The value is chosen to accommodate most, if not all, data by adopting the maximum observed lag after discarding substantial laggards.
 
 You can permanently override the default setting for a chart by choosing a :ref:`Max Delay value<max-delay>` in the :strong:`Chart Options` tab. You can temporarily override the default by setting a :ref:`max delay override<dashboard-max-delay>` on the dashboard that contains the chart. The upper limit is 15 |nbsp| minutes.
 
+Min delay
+++++++++++++++++++++++++++++
+
+The :strong:`Min Delay` parameter specifies the minimum time that the Splunk Observability Cloud analytics engine waits for data to arrive for a specific chart. 
+
+For example, if :strong:`Min Delay` is set to 10 minutes, the computation waits for at least 10 minutes after time *t*, for data timestamped with time *t*, even if all the data points arrive on time for time *t*. With :strong:`Min Delay` set to 10 minutes, the laggard from the example is considered for the purpose of calculating the average in the streaming chart. As such, :strong:`Min Delay` lets you prioritize correctness over timeliness.
+
+When :strong:`Min Delay` is set to the default, :strong:`Auto`, the timeliness of the reporting time series are sampled to determine an appropriate value. 
 
 .. _missing-datapoints:
 
