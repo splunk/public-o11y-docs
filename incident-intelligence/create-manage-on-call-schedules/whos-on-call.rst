@@ -32,7 +32,7 @@ Use the following tools in the :guilabel:`My on-call schedule` drawer:
 
 You can also view who's on all in :guilabel:`Incident Management`. To do so, follow these steps: 
 
-#. In Incident Intelligence, go to :guilabel:`Incident Management`.
+#. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`On-call schedules`. 
 #. Select the schedule for which you want to view who’s on call.
 #. The :guilabel:`Who’s on call` widget displays the following information:
