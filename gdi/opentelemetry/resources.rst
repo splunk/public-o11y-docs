@@ -70,7 +70,7 @@ available:
 - Configuration management using Ansible or Puppet
 - Configuration sources
 - Several Smart Agent capabilities
-- Visualizations and correlations that are prepackaged in the Splunk Distribution of OpenTelemetry Collector.
+- Visualizations and correlations that are prepackaged in the Splunk Distribution of OpenTelemetry Collector
 
 .. note::
 
