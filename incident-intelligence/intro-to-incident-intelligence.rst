@@ -77,7 +77,7 @@ The following table provides an overview of what you can do with Incident Intell
 How Incident Intelligence works 
 ===================================
 
-Incident Intelligence ingests, routes, and groups alerts to create incidents. Alerts are routed and grouped based on rules that you configure. if an alert or set of alerts meets the criteria for a critical incident an incident is automatically triggered and escalated to the corresponding responder based on the incident workflow and on-call schedules you configure.
+Incident Intelligence ingests, routes, and groups alerts to create incidents. Alerts are routed and grouped based on rules that you configure. If an alert or set of alerts meets the criteria for a critical incident an incident is automatically triggered and escalated to the corresponding responder based on the incident workflow and on-call schedules you configure.
 
 Required Incident Intelligence prerequisites and permissions
 ---------------------------------------------------------------------
