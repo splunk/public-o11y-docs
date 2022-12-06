@@ -36,11 +36,11 @@ Use alert routing to associate alerts with a service. If an alert matches your a
 #. Select :guilabel:`Services` and then the service you want to add alert routing conditions to.
 #. Select the :guilabel:`Alert Routing` tab to see the list of alerts that are currently routed to the service.
 #. To filter the alerts routed to the service, select :guilabel:`Add Filters`. 
-#. Select a filter field. Use :guilabel:`source` to route alerts based on a detector name. 
-#. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
-#. Select a filter value. 
-#. Select :guilabel:`Enter` to save your condition. 
-#. Repeat steps 4-8 for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
+    #. Select a filter field. Use :guilabel:`source` to route alerts based on a detector name. 
+    #. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
+    #. Select a filter value. 
+    #. Select :guilabel:`Enter` to save your condition. 
+#. Repeat these steps for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the service to confirm your filter conditions are correct. 
 #. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
 
