@@ -506,7 +506,7 @@ The :strong:`Min Delay` parameter specifies the minimum time that the Splunk Obs
 
 For example, if :strong:`Min Delay` is set to 10 minutes, the computation waits for at least 10 minutes after time *t*, for data timestamped with time *t*, even if all the data points arrive on time for time *t*. With :strong:`Min Delay` set to 10 minutes, the laggard from the example is considered for the purpose of calculating the average in the streaming chart. As such, :strong:`Min Delay` lets you prioritize correctness over timeliness.
 
-When :strong:`Min Delay` is set to the default, :strong:`Auto`, the timeliness of the reporting time series are sampled to determine an appropriate value. 
+When :strong:`Min Delay` is set to the default, :strong:`Auto`, the timeliness of the reporting time series are sampled to determine an appropriate value.
 
 .. _missing-datapoints:
 
