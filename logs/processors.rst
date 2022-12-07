@@ -31,10 +31,10 @@ Cassandra.
 
 Observability Cloud provides three types of log processors:
 
-* :ref:`Field Extraction Processors <field-extraction-processors>` create a subset of log data by extracting fields and values.
-* :ref:`Field Copy Processors <field-copy-processors>` create a set of log data by moving field values from one field
+* :ref:`Field extraction processors <field-extraction-processors>` create a subset of log data by extracting fields and values.
+* :ref:`Field copy processors <field-copy-processors>` create a set of log data by moving field values from one field
   in the log record to a different field name in a new record.
-* :ref:`Field Redaction Processors <field-redaction-processors>` redact data to mask personally identifiable information.
+* :ref:`Field redaction processors <field-redaction-processors>` redact data to mask personally identifiable information.
 
 Order of execution of logs pipeline rules
 =============================================================================
@@ -44,16 +44,15 @@ Logs pipeline rules execute in the following order:
 
 2. All log metricization rules
 
-3. All Infinite Logging rules
+3. All infinite logging rules
 
-Because log processing rules execute first, you can create field extraction rules, then use the resulting fields in log metricization rules or Infinite Logging rules or both. For more information, see :ref:`logs-pipeline-sequence`.
+Because log processing rules execute first, you can create field extraction rules, then use the resulting fields in log metricization rules or infinite logging rules or both. For more information, see :ref:`logs-pipeline-sequence`.
 
 
 .. _field-extraction-processors:
 
-Field Extraction Processors
+Field extraction processors
 ================================================================================
-
 Field extraction lets you find an existing field in your incoming logs and
 create a processor based on the format of the field's value.
 
@@ -88,19 +87,19 @@ which searches the ``_raw`` field. The following table shows how you can extract
    * - /metrics
      - path
 
-Creating Regex and Event Time field extractions allows you to filter and aggregate on the fields:
+Creating Regex and event time field extractions allows you to filter and aggregate on the fields:
 IP, time, method, and path. This enables you to create the query "Display a Visual Analysis of the number of
 requests from {IP} broken down by {method}".
 
-Additionally, the extracted fields begin appearing in the Fields summary panel along with their
+Additionally, the extracted fields begin appearing in the fields summary panel along with their
 top values and other statistics.
 
 There are three types of field extraction. These are:
 
-* Regex Processors
-* JSON Processors
-* Event Time Processors
-* KV Parser Processors
+* Regex processors
+* JSON processors
+* Event time processors
+* KV parser processors
 
 To start creating a field extraction, follow these steps:
 
@@ -130,22 +129,21 @@ To start creating a field extraction, follow these steps:
 
 #. From here, follow the steps to create the extraction processor type you selected:
 
-   * :ref:`Regex Processor <regex-processor>`
-   * :ref:`JSON Processor <json-processor>`
-   * :ref:`Event Time Processor <event-time-processor>`
-   * :ref:`KV Parser Processor<kv-processor>`
+   * :ref:`Regex processor <regex-processor>`
+   * :ref:`JSON processor <json-processor>`
+   * :ref:`Event time processor <event-time-processor>`
+   * :ref:`KV parser processor<kv-processor>`
    
 .. _regex-processor:
 
-Create a Regex Processor
+Create a Regex processor
 --------------------------------------------------------------------------------
-
 The regular expression workspace lets you to extract fields from your data
 and then create a new processor using regex. Pipeline Management makes
 suggestions to help you write the appropriate regex for your processor.
 You can modify the regex within the processor wizard.
 
-To create a Regex Processor, follow these steps:
+To create a regex processor, follow these steps:
 
 #. Highlight the value of the field you want to extract in your sample and select :menuselection:`Extract field` from the drop-down menu.
 #. Click into the field name box and enter a name for the field you selected. The default name is ``Field1``. Results display in a table.
@@ -159,10 +157,9 @@ To create a Regex Processor, follow these steps:
 
 .. _json-processor:
 
-Create a JSON Processor
+Create a JSON processor
 --------------------------------------------------------------------------------
-
-To create a JSON Processor, follow these steps:
+To create a JSON processor, follow these steps:
 
 #. To apply your new rule to only a subset of incoming logs, click :guilabel:`Add Filter` and add a keyword or field. The new rule will apply only to logs matching this filter. Pipeline Management only applies the new processor to log events that match this filter.
 #. Preview your rule to ensure that Pipeline Management is extracting the correct field values.
@@ -172,13 +169,11 @@ To create a JSON Processor, follow these steps:
 
 .. _event-time-processor:
 
-Create an Event Time Processor
+Create an event time processor
 --------------------------------------------------------------------------------
+To create an event time processor, follow these steps:
 
-To create an Event Time Processor, follow these steps:
-
-#. Select a time format from the drop-down list. The wizard looks for the selected format
-   within your sample.
+#. Select a time format from the drop-down list. The wizard looks for the selected format within your sample.
 #. From the matches you see, select the time when the sample event occurred, then click :guilabel:`Next`.
 #. Add filters to the content control bar to define a matching condition, then click :guilabel:`Next`.
    Pipeline Management only applies the new processor to log events that match this filter.
@@ -188,10 +183,9 @@ To create an Event Time Processor, follow these steps:
 
 .. _kv-processor:
 
-Create a KV Parser Processor
+Create a KV parser processor
 --------------------------------------------------------------------------------
-
-A KV Parser Processor is a rule that parses key-value (KV) pairs. To create a KV Parser Processor, follow these steps:
+A KV parser processor is a rule that parses key-value (KV) pairs. To create a KV parser processor, follow these steps:
 
 #. To apply your new rule to only a subset of incoming logs, click :guilabel:`Add Filter` then add a keyword or field. The new rule will apply only to logs matching this filter.
 #. Preview your rule to ensure that Pipeline Management is extracting the correct field values.
@@ -202,12 +196,11 @@ A KV Parser Processor is a rule that parses key-value (KV) pairs. To create a KV
 
 .. _field-copy-processors:
 
-Field Copy Processors
+Field copy processors
 ================================================================================
+Field copy processors let you define a new relationship between new or existing fields. One way to use Field Copy Processors is to use OpenTelemetry mappings to help power your :ref:`Related Content <get-started-relatedcontent>` suggestions.
 
-Field Copy Processors let you define a new relationship between new or existing fields. One way to use Field Copy Processors is to use OpenTelemetry mappings to help power your :ref:`Related Content <get-started-relatedcontent>` suggestions.
-
-To create a Field Copy Processor, follow these steps:
+To create a field copy processor, follow these steps:
 
 #. From the navigation menu, go to :menuselection:`Data Configuration > Logs Pipeline Management`.
 #. Click :guilabel:`New Processing Rule`.
@@ -227,16 +220,15 @@ To create a Field Copy Processor, follow these steps:
 
 .. _field-redaction-processors:
 
-Field Redaction Processors
+Field redaction processors
 ================================================================================
-
 Field redaction lets you mask data, including personally identifiable information.
 
-To create a Field Redaction Processor, follow these steps:
+To create a field redaction processor, follow these steps:
 
 #. From the navigation menu, go to :menuselection:`Data Configuration > Logs Pipeline Management`.
 #. Click :guilabel:`New Processing Rule`.
-#. Select :menuselection:`Field Redaction`, then click :guilabel:`Continue`. This takes you to the first step in the processor wizard, Select Sample.
+#. Select :menuselection:`Field Redaction`, then click :guilabel:`Continue`. This takes you to the first step in the processor wizard, Select :guilabel:`Sample`.
 #. To find a log that contains the field you want to redact, add filters to the content control bar until the Logs table displays a log with the desired field.
 #. Click the log containing the field you want. A list of fields and values appears below the log line.
 #. Click :guilabel:`Use as sample` next to the field you want to redact, then click :guilabel:`Next`. This takes you to :guilabel:`Define Processor`, the second step of the processor wizard.
@@ -247,3 +239,7 @@ To create a Field Redaction Processor, follow these steps:
 #. To see your new processor, go to :guilabel:`Data Configuration > Logs Pipeline Management`, expand the :guilabel:`Processing Rules` section, and find it in the list. You can reorder, edit, or delete all processors except those that are prepackaged (shown with a lock). To disable your processor, click :guilabel:`Inactive`. 
 
 .. note:: If the field you redacted also appears in ``_raw``, it is still available in ``_raw``. Redact the field in ``_raw`` in addition to redacting the field itself.
+
+Log processing rules limit
+================================================================================
+An organization can create a total of 128 log processing rules. The 128 rule limit includes the combined sum of field extraction processors, field copy processors, and field redaction processors.

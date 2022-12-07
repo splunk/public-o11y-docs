@@ -82,3 +82,7 @@ To create a new log metricization rule in the context of an existing search quer
 3. In the upper right corner, click the three-dot :guilabel:`More` menu and select :guilabel:`Save as Metric`. This takes you to the Configure Metric page in Logs Pipeline Management.
 
 4. Go to step 3 in :ref:`Create a log metricization rule from the logs pipeline <metricization-rule-from-pipeline>` and complete the instructions.
+
+Log metricization rule limit
+--------------------------------------------------------------------------------
+An organization can create a total of 128 log metricization rules.
