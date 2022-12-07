@@ -13,11 +13,16 @@ Use Incident Intelligence to collaboratively diagnose and remediate issues acros
 How Incident Intelligence fits into Splunk Observability Cloud 
 =================================================================
 
-Splunk Observability Cloud provides a unified experience for collecting and monitoring metrics, logs, and traces from common data sources. Incident Intelligence is integrated into Observability Cloud to provide alert analytics and on-call management in one place. With Incident Intelligence, you can reduce alert noise, automate actions, and accelerate incident response. Incident Intelligence is an add-on for Splunk Observability Cloud. 
+Splunk Observability Cloud provides a unified experience for collecting and monitoring metrics, logs, and traces from common data sources. Incident Intelligence is integrated into Observability Cloud to provide alert analytics and on-call management in one place. With Incident Intelligence, you can reduce alert noise, automate actions, and accelerate incident response. 
 
 | For more information about Observability Cloud, see :ref:`welcome`. 
 
 .. _feedback-incident-intelligence:
+
+Sign up for the Incident Intelligence public preview
+=======================================================
+
+To sign up for Incident Intelligence public preview, see :new-page:`https://www.splunk.com/en_us/form/splunk-incident-intelligence.html`.
 
 How to provide feedback
 ===========================
@@ -81,5 +86,6 @@ Incident Intelligence ingests, routes, and groups alerts to create incidents. Al
 
 Required Incident Intelligence prerequisites and permissions
 ---------------------------------------------------------------------
-- Before you start, sign the pre-release terms and have Incident Intelligence enabled in your Observability Cloud account. For more information, contact your sales representative.
+- Sign up for Incident Intelligence public preview. See :new-page:`https://www.splunk.com/en_us/form/splunk-incident-intelligence.html`.
+- Sign the pre-release terms. 
 - You must be an Observability Cloud administrator to configure and set up Incident Intelligence.
