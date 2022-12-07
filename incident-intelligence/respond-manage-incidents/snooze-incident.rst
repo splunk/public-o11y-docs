@@ -10,7 +10,7 @@ You can snooze an incident to silence paging on unactionable or less-urgent inci
 #. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 
 #. Locate the incident and select the :guilabel:`Actions` menu.
 #. Select :guilabel:`Snooze`.
-#. Next to :guilabel:`Snooze until` select the date and time when you want to re-trigger the incident workflow.
+#. Next to :guilabel:`Snooze until`, select the date and time when you want to re-trigger the incident workflow.
 #. Select :guilabel:`Snooze`.
 
 Unsnooze an incident

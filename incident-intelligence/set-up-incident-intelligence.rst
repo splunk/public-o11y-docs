@@ -6,17 +6,17 @@ Set up Splunk Incident Intelligence
 ************************************************************************
 
 .. meta::
-   :description: To route incidents to the necessary teams and people, you need to complete your incident management.
+   :description: To route incidents to the necessary teams and people, you need to configure your incident management.
 
 To route incidents to the necessary teams and people, you need to first generate alerts. Next, you'll complete your incident response configuration which includes creating and configuring services, and creating on-call schedules. After you configure your services and schedules, users can begin responding to incidents. 
 
 Complete these tasks to get started with Incident Intelligence:
 
 #. Ingest alerts in Incident Intelligence. See :ref:`ii-ingest-alerts`.
-#. Create services to organize your alerts and incidents based on the impacted environmental component. See :ref:`ii-create-configure-services`.
+#. Create services to organize your alerts and incidents based on the impacted environmental component, for example, your web application or checkout service. See :ref:`ii-create-configure-services`.
 #. Configure the alert routing within the service to associate alerts with a service. See :ref:`ii-configure-alert-routing`.
 #. Configure alert grouping within the service to manage which alerts create an incident and how alerts are grouped into incidents. See :ref:`ii-configure-alert-grouping`.
 #. Configure the incident workflow within the service to determine who is notified when a new incident is triggered. See :ref:`ii-configure-incident-workflows`. 
 #. Create an on-call schedules and add them as a step in your incident workflows. See :ref:`ii-create-manage-on-call-schedules`.
 
-This completes the setup for Incident Intelligence and you are ready to begin responding to incidents. See :ref:`ii-respond-manage-incidents`.
+This completes the setup for Incident Intelligence. You are ready to begin responding to incidents. See :ref:`ii-respond-manage-incidents`.

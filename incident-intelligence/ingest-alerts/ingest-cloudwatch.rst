@@ -5,7 +5,7 @@
 Ingest Amazon CloudWatch alarms
 ************************************************************************
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms into Incident Intelligence where you can create on-call schedules and incident workflows to route AWS alarms to responders. You can send AWS CloudWatch alarms directly to the ingest endpoint or use AWS CloudWatch SNS.
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms into Incident Intelligence where you can create on-call schedules and incident workflows to route AWS alarms to responders. You can send AWS CloudWatch alarms directly to the ingest endpoint or use AWS CloudWatch Simple Notification Service (SNS).
 
 
 .. note:: CloudWatch alarms are ingested as alerts in Incident Intelligence.
@@ -77,7 +77,7 @@ Alarm fields
 JSON payload
 ---------------
 
-CloudWatch alarms sent to the CloudWatch endpoint with this JSON payload will be transformed to alerts in Incident Intelligence.
+Send AWS Cloudwatch alarm sent to the AWS Cloudwatch endpoint. Use this JSON payload. 
 
 Example JSON payload:
 
@@ -101,7 +101,7 @@ Example JSON payload:
         }
     }
 
-Example transformed JSON data for the alert that is saved in Incident Intelligence:
+Using this endpoint, your alarm is ingested and transformed into a consistent format for AWS Cloudwatch alerts in Incident Intelligence. This is an example of the transformed alert data that saved as an alert in Incident Intelligence:
 
 .. code-block:: json 
 

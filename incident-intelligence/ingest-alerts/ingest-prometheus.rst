@@ -5,7 +5,7 @@
 Ingest Prometheus alerts
 ************************************************************************
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. Use the Prometheus endpoint to forward Prometheus alerts to Incident Intelligence where you can create on-call schedules and incident workflows to route Prometheus alerts to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. See :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`.
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route Prometheus incidents to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. See :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`.
 
 Prometheus ingest endpoint
 ---------------------------------
@@ -66,7 +66,7 @@ Alert fields
 JSON payload
 ------------
 
-Use the Prometheus alertmanager webhook config to send Prometheus alerts sent to the Prometheus endpoint with this JSON payload will be transformed to alerts in Incident Intelligence. See :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`.
+Use the Prometheus alertmanager webhook config to send Prometheus alerts sent to the Prometheus endpoint. Use this JSON payload. See :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`.
 
 Example JSON payload:
 
@@ -126,7 +126,7 @@ Example JSON payload:
     "truncatedAlerts": 0
     }
 
-Example transformed JSON data for the example alert that is processed and saved as an alert in Incident Intelligence:
+Using this endpoint, your alert is ingested and transformed into a consistent format for Prometheus alerts in Incident Intelligence. This is an example of the transformed alert data that saved as an alert in Incident Intelligence:
 
 .. code-block:: json 
 
