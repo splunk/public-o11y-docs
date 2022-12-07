@@ -13,6 +13,15 @@ What are custom rules in Splunk RUM?
 Write custom rules to group together URLs with common components based on your specifications. Customizing rules allows you to streamline the organization of your data in Splunk RUM in a way that makes the most sense to you and your organization. You can group URLs by both path and domain. 
 
 
+Write a custom rule
+=======================
+
+1. Learn about your URLs. Identify the components and tokens.
+2. Figure out what kind of results you want to see. 
+3. Review the pattern syntax and examples to better understand how to formulate rules that work for your data. 
+4. Reference the default rules and see if you need to deactivate any for your rule to work. 
+
+
 How to identify components of a URL 
 ===================================
 
@@ -26,7 +35,9 @@ Within the scope of Splunk RUM, there are the following components in a URL:
 Example
 -------------
 Consider the following URL: 
-``https://example.com/path/page#title``
+``https://example.com/path/page#title``.
+
+Here is how to break down this URL into components:
 
 .. list-table:: 
    :widths: 20 40 
@@ -185,6 +196,15 @@ The following syntax is invalid:
      - 	The <??> wildcard must be the last token in a pattern. 
    * - ``/A/B<?>/C``
      - The <?> wildcard must be separated by ``/`` delimiters. 
+
+
+Default rules 
+===========================
+
+RUM has the following default rules: 
+
+You can deactivate any of the rules. 
+
 
 
 Use cases   
