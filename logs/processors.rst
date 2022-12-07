@@ -240,6 +240,6 @@ To create a field redaction processor, follow these steps:
 
 .. note:: If the field you redacted also appears in ``_raw``, it is still available in ``_raw``. Redact the field in ``_raw`` in addition to redacting the field itself.
 
-Log processing rules limit
+Log processing rules limits
 ================================================================================
 An organization can create a total of 128 log processing rules. The 128 rule limit includes the combined sum of field extraction processors, field copy processors, and field redaction processors.

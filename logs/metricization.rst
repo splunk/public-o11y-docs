@@ -83,6 +83,6 @@ To create a new log metricization rule in the context of an existing search quer
 
 4. Go to step 3 in :ref:`Create a log metricization rule from the logs pipeline <metricization-rule-from-pipeline>` and complete the instructions.
 
-Log metricization rule limit
+Log metricization rules limits
 --------------------------------------------------------------------------------
 An organization can create a total of 128 log metricization rules.

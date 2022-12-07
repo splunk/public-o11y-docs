@@ -102,7 +102,7 @@ To create an infinite logging rule, follow these steps:
 
 Your infinite logging setup is now complete. Depending on your selections, your logs will be archived, indexed in Observability Cloud for analysis, or both.
 
-Infinite logging rule limit
+Infinite logging rules limits
 ================================================================================
 An organization can create a total of 128 infinite logging rules.
 
