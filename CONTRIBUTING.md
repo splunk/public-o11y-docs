@@ -4,11 +4,25 @@ Thank you for your interest in contributing to Splunk Observability Cloud docume
 
 In addition to this document, review the [Code of Conduct](CODE_OF_CONDUCT.md). For any code of conduct questions or comments, send an email to oss@splunk.com.
 
+- [Contributing Guidelines](#contributing-guidelines)
+  - [Contributor License Agreement](#contributor-license-agreement)
+  - [Folder structure](#folder-structure)
+    - [Find a document in the repository](#find-a-document-in-the-repository)
+  - [Edit or add documentation](#edit-or-add-documentation)
+    - [Create a branch for your work](#create-a-branch-for-your-work)
+    - [Edit content](#edit-content)
+    - [Create directories and files](#create-directories-and-files)
+    - [Edit the content](#edit-the-content)
+      - [Add an image and alt text](#add-an-image-and-alt-text)
+      - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
+    - [Test the docs locally](#test-the-docs-locally)
+    - [Create a pull request](#create-a-pull-request)
+
 ## Contributor License Agreement
 
 Before contributing, you must sign the [Splunk Contributor License Agreement (CLA)](https://www.splunk.com/en_us/form/contributions.html).
 
-### Folder structure
+## Folder structure
 
 Before you add new documents, or edit existing documents, familiarize yourself with the structure of this repository. 
 
@@ -57,29 +71,14 @@ grep -inro --include \*.rst "OpenTelemetry" .
 
 The main steps for adding or editing documentation are the following:
 
-0. Decide the type of edit.
 1. Create a branch for your work.
 2. Edit the content in your branch.
 3. Test the docs locally.
 4. Create a pull request.
 
-### Decide the type of edit
+Create small pull requests with incremental improvements rather than pull requests that contain a large number of changes. 
 
-Before editing the docs, ask yourself what do you want to accomplish, or what the learning objective is. 
-
-The following table contains guidance on which type of edit is best depending on the goal:
-
-| Modify existing docs |  Add new docs    |
-| ---                  | ---              |
-| Fix a typo or error  | Document a whole new feature |
-| Add a note or warning | Split docs into sub-pages |
-| Update a screenshot | Add a use case for a feature |
-| Add or update a section | Expand reference documentation |
-| Update or add links | Create new troubleshooting guides |
-
-Create small pull requests with incremental improvements rather than large pull requests with tons of changes. 
-
-> Keep your pull requests small and focused on the changes you want to apply: That makes both the reviewer's and your job easier.
+> Keep your pull requests small and focused on the changes you want to apply. That makes both the reviewer's and your job easier.
 
 ### Create a branch for your work
 
@@ -87,11 +86,13 @@ The main branch is `main`. Merging edits to the `main` branch triggers an update
 
 The `main` branch is protected, which means that any edit must be in the form of a pull request and approved by at least one member of the Splunk docs team.
 
+When naming branches, use the following pattern: `<github-handle>-description`.
+
 ### Edit content 
 
 Follow these instructions to add or edit content:
 
-#### Create directories and files
+### Create directories and files
 
 Create directories and files that adhere to the following naming rules:
 
@@ -100,7 +101,7 @@ Create directories and files that adhere to the following naming rules:
 * Keep names as short as possible.
 * Create directories for groups of files at the same level.
 
-The following is the basic template for all new documents in product-docs:
+The following is the basic template for all new documents:
 
 ```rst
 .. _label-for-the-page:
@@ -115,7 +116,7 @@ Title of the page
 Content goes here.
 ```
 
-#### Edit the content
+### Edit the content
 
 This repository uses reStructuredText (rST), a feature-rich, lightweight markup language similar to Markdown.
 
@@ -128,8 +129,8 @@ Title of the page
 
 Paragraphs are written as text in separate lines.
 
-- Unordered lists use - as bullet points
-- :strong:`String formatted as bold`
+- Unordered lists use ``-`` as bullet points
+- :strong:`String formatted as bold`.
 - ``In-line code snippets are wrapped in double-ticks``
 
 Heading 1
@@ -167,12 +168,6 @@ The following snippet shows an image, with a path relative to the _images folder
    :alt: This image shows an example APM service dashboard.
 ```
 
-#### Write with the Splunk style guide in mind
-
-The Splunk Style Guide provides guidance on how to write straightforward, user-focused, example-rich content that inspires confidence in the user. See [A word about Splunk docs](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs) for an orientation to the [Splunk Style Guide](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs).
-
-You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against our style guide. See https://github.com/splunk/vale-splunk-style-guide.
-
 #### Add an image and alt text 
 
 Use the following syntax to add images uploaded to the `_images` folder:
@@ -186,6 +181,12 @@ Use the following syntax to add images uploaded to the `_images` folder:
 Add images that enhance existing material, instead of replacing text. Don't include a screenshot of the UI if the user can follow your written instructions without it. 
 
 > **NOTE:** Make sure to add alternative text. Writing alt text for an image is a helpful way to confirm that it adds something, for example, "This animation illustrates the pathway to create a dashboard" instead of something like "This is a screenshot of Tag Spotlight". For further guidance, see [Include alt text in images](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/Graphicsalttext) in the Splunk Style Guide. 
+
+#### Write with the Splunk style guide in mind
+
+The Splunk Style Guide provides guidance on how to write straightforward, user-focused, example-rich content that inspires confidence in the user. See [A word about Splunk docs](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs) for an orientation to the [Splunk Style Guide](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs).
+
+You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against Splunk's style guide. See https://github.com/splunk/vale-splunk-style-guide.
 
 ### Test the docs locally
 
@@ -203,12 +204,12 @@ When testing the docs:
 - Make sure that Sphinx is not sending warnings to the terminal. Solve all build errors and warnings before opening a pull request.
 - Check that the documentation shows as intended.
 
-## Create a pull request
+### Create a pull request
 
 To get your edits reviewed, open a pull request with the following features:
 
-- Source branch must be your newly created branch.
-- Target branch must be `main`.
+- Source branch must be a branch from your own fork of `splunk/public-o11y-docs`.
+- Target branch must be `main` in `splunk/public-o11y-docs`.
 - Add relevant labels.
 - Add a description for your changes.
 
