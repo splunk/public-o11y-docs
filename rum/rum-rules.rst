@@ -16,6 +16,8 @@ Write custom rules to group together URLs with common components based on your s
 Write a custom rule
 =======================
 
+Follow these steps to write a custom rule:
+
 1. Learn about your URLs. Identify the components and tokens.
 2. Figure out what kind of results you want to see. 
 3. Review the pattern syntax and examples to better understand how to formulate rules that work for your data. 
@@ -201,7 +203,7 @@ The following syntax is invalid:
 Default rules 
 ===========================
 
-RUM has several default rules that you can find in the :guilabel:`RUM URL grouping` tab under :guilabel:`Data Management`. There are some situations when you might want to deactivate a default rule. For example... 
+RUM has several default rules that you can find in the :guilabel:`RUM URL grouping` tab under :guilabel:`Data Management`. If you want to create a rule that conflicts with a default rule, you can deactivate the default rule globally, or by application. 
 
 
 Use cases   
