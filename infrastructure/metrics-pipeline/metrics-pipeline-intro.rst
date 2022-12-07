@@ -22,8 +22,8 @@ Metric cardinality is the number of unique metric time series produced by a comb
 
 For example, you send in data for a metric ``trans.latency``.
 
-* If ``trans.latency`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then ``trans.latency`` generates 3 metric time series (MTSs).
-* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then ``trans.latency`` generates 3 (endpoints) * 3 (regions) = 9 MTSs.
+* If ``trans.latency`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then ``trans.latency`` generates 3 metric time series (MTS).
+* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then ``trans.latency`` generates 3 (endpoints) * 3 (regions) = 9 MTS.
 
 Even though ``trans.latency`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
 
@@ -64,7 +64,7 @@ You send a metric called ``service.latency`` for a containerized workload to Spl
 
 Your workload has 10 endpoints, 20 regions, 5 services, and 10,000 containers.
 
-Your data is coming in at the container ID level, generating 10 (endpoints) * 5 (services) * 20 (regions) * 10,000 (containers) = 1,000,000 MTSs.
+Your data is coming in at the container ID level, generating 10 (endpoints) * 5 (services) * 20 (regions) * 10,000 (containers) = 1,000,000 MTS.
 
 You can reduce your metric cardinality by aggregating one or multiple dimensions.
 
@@ -73,14 +73,14 @@ Aggregate using one dimension
 
 You are only interested in the source region of your data, so you create an aggregation rule that groups your data by the ``region`` dimension.
 
-The aggregated metric drops all other dimensions and retains only the ``region`` dimension based on your rule. There are only 20 different values for ``region``, so only 20 MTSs are ingested.
+The aggregated metric drops all other dimensions and retains only the ``region`` dimension based on your rule. There are only 20 different values for ``region``, so only 20 MTS are ingested.
 
 Aggregate using multiple dimensions
 ****************************************
 
 You want to continue monitoring endpoints, regions, and services for your data, but don't need to monitor container IDs. You create an aggregation rule that groups your data by the dimensions you want to keep.
 
-The aggregated metric drops the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service`` based on your rule. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTSs.
+The aggregated metric drops the ``container_id`` dimension and retains ``endpoint``, ``region``, and ``service`` based on your rule. Your new metric volume is: 10 (endpoints) * 20 (regions) * 5 (services) = 1,000 MTS.
 
 .. _data-dropping:
 

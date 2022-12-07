@@ -36,7 +36,7 @@ For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`
 Monitoring MetricSets
 =====================
 
-Monitoring MetricSets (MMS) are a collection of :ref:`metric time series <metric-time-series>` used in Splunk Infrastructure Monitoring. Use MMS to monitor and alert on the performance of your services in real time. You can also alert on TMS.  MMS power the real-time APM Landing Page and the dashboard view, and they are the metrics that detectors monitor and use to generate alerts. Observability Cloud stores MMS for 13 months by default.
+Monitoring MetricSets (MMS) are a collection of :ref:`metric time series (MTS) <metric-time-series>` used in Splunk Infrastructure Monitoring. Use MMS to monitor and alert on the performance of your services in real time. You can also alert on TMS.  MMS power the real-time APM Landing Page and the dashboard view, and they are the metrics that detectors monitor and use to generate alerts. Observability Cloud stores MMS for 13 months by default.
 
 Each MMS includes six metrics. For each metric there is one MTS with responses ``sf_error: true`` or ``sf_error:false``.
 

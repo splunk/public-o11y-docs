@@ -15,25 +15,27 @@ Monitor Splunk Infrastructure Monitoring subscription usage
 Overview
 ========
 
-Admin users in your Infrastructure Monitoring organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. In addition to counts for hosts and containers, the reports also contain counts for custom, bundled, and high-resolution metrics.
+Admin users in your organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. In addition to counts for hosts and containers, the reports also contain counts for custom, bundled, and high-resolution metrics.
 
 .. _about-custom-high-res:
 
 About custom, bundled, and high-resolution metrics
 ==================================================
 
-The following sections provide descriptions about different types of metrics collected by Infrastructure Monitoring.
+The following sections describe the different categories of metrics in the metric time series (MTS) that Infrastructure Monitoring collects.
 
 .. _about-custom:
 
 Differences between host, container, bundled, and custom metrics
 ----------------------------------------------------------------
 
+
+
 .. list-table::
    :header-rows: 1
    :widths: 20, 80
 
-   * - :strong:`Metrics type`
+   * - :strong:`Metrics category`
      - :strong:`Description`
 
    * - Host and container metrics
@@ -45,8 +47,6 @@ Differences between host, container, bundled, and custom metrics
    * - Custom metrics
      - Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics. Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. They might also include system or service metrics that you configure the Smart Agent to send outside of its default set of metrics. Your Infrastructure Monitoring subscription allows you to send a certain number of custom metrics.
 
-.. note:: In this context, the term "metric" refers to what is called a metric time series (MTS).
-
 .. _about-high-res:
 
 Differences between high-resolution metrics and standard-resolution metrics
@@ -56,7 +56,7 @@ Differences between high-resolution metrics and standard-resolution metrics
    :header-rows: 1
    :widths: 20, 80
 
-   * - :strong:`Metrics type`
+   * - :strong:`Metrics category`
      - :strong:`Description`
 
    * - Standard-resolution metrics
@@ -64,8 +64,6 @@ Differences between high-resolution metrics and standard-resolution metrics
 
    * - High-resolution metrics
      - Metrics processed by Infrastructure Monitoring at their native resolution or at 1-second resolution (whichever is coarser). High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. Your Infrastructure Monitoring subscription allows you to send a certain number of high-resolution metrics.
-
-.. note:: In this context, the term "metric" refers to what is generally called a metric time series (MTS).
 
 ..
     _how-counted:
@@ -76,9 +74,9 @@ Differences between high-resolution metrics and standard-resolution metrics
    How are high-resolution metrics counted?
    ----------------------------------------------------------------------------------
 
-   If you have a hi res metric that is coming from a container or host (ie in the Host plan) it will still contribute to those host/container counts plus hi res counts (edited)
+   If you have a high-resolution metric that comes from a container or host (ie in the Host plan) it still contributes to those host/container counts and high-resolution counts (edited)
 
-   if you have a custom metric that is hi-res it will only be included in the hi res count
+   if you have a custom metric that is high-resolution it will only be included in the high-resolution count
 
 ..    usage-about:
 
@@ -94,30 +92,29 @@ Differences between high-resolution metrics and standard-resolution metrics
    ref:`dimension-report`:
 ..
 ..
-.. - The :ref:`dimension-report`, available on the Usage Breakdown tab, shows on a daily basis the number of data points and time series for a given dimension value, as well as its average reporting frequency. It is useful for understanding the nature of the data your organization is sending so you can tune it accordingly. For example, you might notice that there are some metrics that you do not want to send at all, and conversely, you might see that there are some metrics that you want to send at a higher resolution.
-
-
+.. - The :ref:`dimension-report`, available on the Usage Breakdown tab, shows, on a daily basis, the number of data points and MTS for a given dimension value, as well as its average reporting frequency. Use this report to help you understand the volume of data you're sending. For example, you might notice that there are some metrics that you do not want to send at all, and conversely, you might see that there are some metrics that you want to send at a higher resolution.
 
 .. _using-page:
 
 
-View and download an Infrastructure Monitoring usage report
-=============================================================
+Viewing and downloading Infrastructure Monitoring usage reports
+====================================================================
 
-Follow these steps to view and download a usage report for your Infrastructure Monitoring subscription.
+Infrastructure Monitoring usage reports help you understand the amount of data you're sending. Use these reports to manage your costs
+and ensure you're collecting the correct data.
 
 Prerequisites
 -------------
 
-You have to be an admin to view and download usage reports.
+To view and download usage reports, you must be an organization admin.
 
 
-View a usage report
+View usage reports
 ---------------------
 
-To view available usage reports:
+To view the available usage reports:
 
-1. Log in to Splunk Observability Cloud.
+1. Log in to Observability Cloud.
 
 2. In the left navigation menu, select :menuselection:`Settings > Subscription Usage`.
 

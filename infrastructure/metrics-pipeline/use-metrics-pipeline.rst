@@ -36,10 +36,10 @@ Follow these steps to create rules for a metric.
           - :strong:`Description`
           - :strong:`Required?`
         * - Filter population
-          - Search for dimension key or value to narrow down the associated MTSs
+          - Search for dimension key or value to narrow down the associated metric time series (MTS)
           - No
         * - Select dimensions to keep
-          - Search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTSs. All other dimensions are removed.
+          - Search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTS. All other dimensions are removed.
           - Yes
         * - New aggregated metric name
           - Select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric.
@@ -55,5 +55,5 @@ Follow these steps to create rules for a metric.
    
     To learn more, see :ref:`data-dropping-impact`.
 #. Select :guilabel:`Save`.
-#. Review the new MTS volume.
+#. Review the resulting volume of MTS.
 #. Select :strong:`Confirm`.

@@ -557,7 +557,7 @@ For more information about these properties, including acceptable values and con
       -  Cluster and node
 
 
-CacheClusterId is a dimension that is already in ElastiCache MTS that Infrastructure Monitoring imports from AWS Cloudwatch.
+CacheClusterId is a dimension that is already in the ElastiCache metric time series (MTS) that Infrastructure Monitoring imports from AWS Cloudwatch.
 
 .. _beanstalk-metadata:
 
