@@ -36,7 +36,7 @@ If you are still encountering configuration errors, review the following trouble
     :strong:`Causes`
       * This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. 
       * You might have sent your authentication request to the wrong tenant. 
-      * The IdP doesn't recognize the SignalFx identifier, which also called Metadata URL or Entity Id or Issuer URL.
+      * The IdP doesn't recognize the identifier, which also called Metadata URL or Entity Id or Issuer URL.
     
     :strong:`Solutions`
       * Verify that the identifier (Metadata URL) points to the correct realm. 

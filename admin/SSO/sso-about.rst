@@ -23,7 +23,7 @@ About SSO integrations for Splunk Observability Cloud
 
 
 SSO integrations implement SAML 2.0 which is a standard for exchanging authentication and authorization information between an Identity Provider (IdP) such as Ping, Okta, AzureAD, OneLogin and a Service Provider (SP) such as Splunk Observability Cloud.  
-When you setup a new SSO integration in Splunk Observability Cloud, you tell Splunk Observability Cloud that it can trust information from a particular IdP and use it for logging in users in an organization. After that trust is set up, users can login from the IdP in an IdP-initiated flow, which starts with a portal or an app page within the IdP, or using an SP-initiated flow from a Splunk Observability Cloud login page.
+When you setup a new SSO integration in Splunk Observability Cloud, you tell Splunk Observability Cloud that it can trust information from a particular IdP and use it for logging in users in an organization. After that trust is set up, users can login from the IdP in an IdP-initiated flow, which starts with a portal or an app page within the IdP, or using an SP-initiated flow from a Splunk Observability Cloud login page (only available if your org has a custom domain configured).
 
 You can see the general SSO SAML flow in the following image:
 
@@ -50,7 +50,7 @@ The following image shows Okta configuration information however, all IdPs requi
       :alt: The Okta SSO integration screen in Splunk Observability Cloud with text indicating the purpose of each field.
 
 The IdP requires the following information:
-  - Application ACS URL: Where to send the assertion. 
+  - Application ACS (Assertion Consumer Service) URL: Where to send the assertion. 
   - Application SAML audience: How Splunk Observability Cloud will identify itself.
 
 Additionally, the IdP will need to know what parameters to sent to Splunk Observability Cloud.
@@ -71,7 +71,7 @@ The following table uses Azure Active Directory as an example and shows the corr
      - :strong:`Azure Active Directory field name`
 
    * - :guilabel:`Integration ID` (EPAMIDfalsg)
-     - :guilabel:`Reply URL`` (Assertion Consumer Service URL (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
+     - :guilabel:`Reply URL` (Assertion Consumer Service URL) (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
   
    * - :guilabel:`Integration-specific Entity ID`` (EPAMIDfalsg)
      - :guilabel:`Identifier (Entity ID)` (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
@@ -80,7 +80,7 @@ The following table uses Azure Active Directory as an example and shows the corr
      - :guilabel:`Certificate (Base64)` (download file)`
   
    * - :guilabel:`Integration ID` (EPAMIDfalsg)
-     - :guilabel:`Reply URL (Assertion Consumer Service URL` (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
+     - :guilabel:`Reply URL (Assertion Consumer Service URL)` (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
    
    * - :guilabel:`Azure AD Identifier` (https://<domain>/081aaa5f-fsec-m01c-03dfalke45n)
      - :guilabel:`Azure AD Identifier`  (https://<domain>/081aaa5f-fsec-m01c-03dfalke45n)
