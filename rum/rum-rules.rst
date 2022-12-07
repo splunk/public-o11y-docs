@@ -201,10 +201,7 @@ The following syntax is invalid:
 Default rules 
 ===========================
 
-RUM has the following default rules: 
-
-You can deactivate any of the rules. 
-
+RUM has several default rules that you can find in the :guilabel:`RUM URL grouping` tab under :guilabel:`Data Management`. There are some situations when you might want to deactivate a default rule. For example... 
 
 
 Use cases   
