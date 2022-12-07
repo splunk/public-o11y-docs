@@ -40,7 +40,7 @@ MTS creations per minute per product limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 6,000 or determined by your subscription.
-   * :strong:`Notes`: Maximum number of MTS you can create per minute. For example, if you create 5,500 MTS in the first minute, you can still create 5,500 more in the next minute. If you exceed your MTS limit per minute for more than 30 minutes of any hour, you can't create any more MTS for the remainder of the hour.
+   * :strong:`Notes`: Maximum number of MTS you can create per minute for each product. For example, if you create 5,500 MTS in the first minute for Infrastructure Monitoring, you can still create 5,500 more in the next minute. You can also create another 6,000 more MTS in the first minute for each APM, RUM, and so on. If you exceed your MTS limit per minute for more than 30 minutes of any hour, you can't create any more MTS for the remainder of the hour.
    * :strong:`Related metrics`:
 
      - ``sf.org.numMetricTimeSeriesCreated``
