@@ -12,21 +12,21 @@ Introduction to Splunk Log Observer Connect
 .. toctree::
    :hidden:
 
-   <logs-scp>
-   <logs-set-up-logconnect>
-   <logs-timeline>
-   <logs-queries>
-   <logs-raw-logs-display>
-   <logs-keyword>
-   <logs-filter-logs-by-field>
-   <logs-alias>
-   <logs-individual-log-connect>
-   <logs-message-field>
-   <logs-aggregations>
-   <logs-save-share>
-   <logs-logviews>
-   <logs-timestamp>
-   <logs-limits>
+   <scp>
+   <set-up-logconnect>
+   <timeline>
+   <queries>
+   <raw-logs-display>
+   <keyword>
+   <filter-logs-by-field>
+   <alias>
+   <individual-log-connect>
+   <message-field>
+   <aggregations>
+   <save-share>
+   <logviews>
+   <timestamp>
+   <limits>
 
 If you have a Log Observer entitlement rather than Log Observer Connect, see :ref:`get-started-logs`. 
 
