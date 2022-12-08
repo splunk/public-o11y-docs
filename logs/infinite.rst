@@ -1,18 +1,18 @@
 .. _logs-infinite:
 
 *****************************************************************
-Archive your logs with Infinite Logging rules
+Archive your logs with infinite logging rules
 *****************************************************************
 
 .. meta created 2021-04-28
 .. meta DOCS-2247
 
 .. meta::
-  :description: Manage the logs pipeline with Infinite Logging rules.
+  :description: Manage the logs pipeline with infinite logging rules.
 
-.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create Infinite Logging rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create infinite logging rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 
-Create Infinite Logging rules to archive all or any subset of logs in Amazon S3 buckets for compliance or possible future use while not paying to index them unless and until you want to analyze them in Splunk Log Observer. 
+Create infinite logging rules to archive all or any subset of logs in Amazon S3 buckets for compliance or possible future use while not paying to index them unless and until you want to analyze them in Splunk Log Observer. 
 
 Use cases for archiving your logs
 =============================================================================
@@ -26,9 +26,9 @@ There are two primary use cases to archive your logs:
 
 Reduce the amount of data you indexed
 -----------------------------------------------------------------------------
-Some logs may not be useful on a day-to-day basis but may still be important in case of a future incident. For example, you might not always want to index logs from a non-production environment, or index every debug message. In either case, you can create an Infinite Logging rule to archive those logs in S3 buckets that your team owns in AWS. 
+Some logs may not be useful on a day-to-day basis but may still be important in case of a future incident. For example, you might not always want to index logs from a non-production environment, or index every debug message. In either case, you can create an infinite logging rule to archive those logs in S3 buckets that your team owns in AWS. 
 
-If you want to keep a sample of your archived logs to analyze in Log Observer, you can set the sampling rate in your Infinite Logging rule so that some amount of the data you archive will also be indexed. You pay for only the logs that you index and analyze in Log Observer. This way, you can monitor trends across all your logs while reducing the impact on your indexing capacity. See :ref:`order-of-execution` in the next section to learn more about using pipeline rules to help reduce your indexing capacity.
+If you want to keep a sample of your archived logs to analyze in Log Observer, you can set the sampling rate in your infinite logging rule so that some amount of the data you archive will also be indexed. You pay for only the logs that you index and analyze in Log Observer. This way, you can monitor trends across all your logs while reducing the impact on your indexing capacity. See :ref:`order-of-execution` in the next section to learn more about using pipeline rules to help reduce your indexing capacity.
 
 .. _logs-retain:
 
@@ -46,24 +46,24 @@ Logs pipeline rules execute in the following order:
 
 2. All log metricization rules
 
-3. All Infinite Logging rules
+3. All infinite logging rules
 
-Because Infinite Logging rules execute last, you can create field extraction rules, then use the resulting fields in Infinite Logging rules. You can also metricize logs, then archive them via Infinite Logging without impacting your ingest capacity. For more information, see :ref:`logs-pipeline-sequence`.
+Because infinite logging rules execute last, you can create field extraction rules, then use the resulting fields in infinite logging rules. You can also metricize logs, then archive them via infinite logging without impacting your ingest capacity. For more information, see :ref:`logs-pipeline-sequence`.
 
 Prerequisites
 ================================================================================
-You must be a Splunk Observability Cloud admin to create new Infinite Logging connections. Non-admins can send data to S3 buckets using an existing Infinite Logging connection, but they cannot create new connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console.
+You must be a Splunk Observability Cloud admin to create new infinite logging connections. Non-admins can send data to S3 buckets using an existing infinite logging connection, but they cannot create new connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console.
 
-Create an Infinite Logging rule
+Create an infinite logging rule
 ================================================================================
 
-To create an Infinite Logging rule, follow these steps:
+To create an infinite logging rule, follow these steps:
 
 1. From the navigation menu, go to :guilabel:`Data Configuration > Logs Pipeline Management`.
 
-2. Click :guilabel:`New Infinite Logging Rule`.
+2. Click :guilabel:`New infinite logging Rule`.
 
-3. Decide where to archive your data. To send your logs to an existing S3 bucket, click the Infinite Logging connection you want, then skip to step 9.
+3. Decide where to archive your data. To send your logs to an existing S3 bucket, click the infinite logging connection you want, then skip to step 9.
 
 4. If you want to send your data to a new S3 bucket and you are an Observability Cloud admin, click :guilabel:`Create new connection`. The :guilabel:`Establish a New S3 Connection` wizard appears.
 
@@ -86,7 +86,7 @@ To create an Infinite Logging rule, follow these steps:
    c. Give your S3 bucket a name.
    d. Click :guilabel:`Save`.
 
-8. Choose the Amazon S3 Infinite Logging connection that you created on the first page of the wizard. Your data will go to your S3 bucket in a file that you configure in the following two steps.
+8. Choose the Amazon S3 infinite logging connection that you created on the first page of the wizard. Your data will go to your S3 bucket in a file that you configure in the following two steps.
 
 9. (Optional) You can add a file prefix, which will be prepended to the front of the file you send to your S3 bucket.
 
@@ -96,9 +96,13 @@ To create an Infinite Logging rule, follow these steps:
 
 12. On the :strong:`Filter Data` page, create a filter that matches the log lines you want to archive in your S3 bucket. Only logs matching the filter are archived. If you want to index a sample of the logs being sent to the archive, select a percentage in :guilabel:`Define indexing behavior`. Indexing a small percentage of logs in Log Observer allows you to see trends in logs that are stored in S3 buckets. Click :guilabel:`Next`.
 
-13. Add a name and description for your Infinite Logging rule.
+13. Add a name and description for your infinite logging rule.
 
 14. Review your configuration choices, then click :guilabel:`Save`.
 
-Your Infinite Logging setup is now complete. Depending on your selections, your logs will be archived, indexed in Observability Cloud for analysis, or both.
+Your infinite logging setup is now complete. Depending on your selections, your logs will be archived, indexed in Observability Cloud for analysis, or both.
+
+Infinite logging rules limits
+================================================================================
+An organization can create a total of 128 infinite logging rules.
 
