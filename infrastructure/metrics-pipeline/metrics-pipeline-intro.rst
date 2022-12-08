@@ -92,13 +92,9 @@ Data dropping rules
 When you have a new aggregated metric, you might no longer have any use case for the original unaggregated data. You can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want to monitor, so you can save storage space and reduce cardinality.
 
 .. note::
+    - You must be an admin to drop data.
     - You can only drop new incoming data. Existing data can't be dropped.
     - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
-    
-Prerequisite
-+++++++++++++++++
-
-You must be an admin to drop data.
 
 
 Example
