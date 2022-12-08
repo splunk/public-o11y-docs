@@ -5,31 +5,31 @@ Introduction to Splunk Log Observer
 *************************************
 
 .. meta::
-   :description: Get started investigating issues with Splunk Observability Cloud.
+   :description: Get started investigating issues with Splunk Log Observer.
 
 .. toctree::
    :hidden:
 
-   <logs-logs>
-   <logs-timeline>
-   <logs-live-tail>
-   <logs-queries>
-   <logs-raw-logs-display>
-   <logs-keyword>
-   <logs-filter-logs-by-field>
-   <logs-alias>
-   <logs-individual-log>
-   <logs-message-field>
-   <logs-aggregations>
-   <logs-search-time-rules>
-   <logs-save-share>
-   <logs-logviews>
-   <logs-pipeline>
-   <logs-processors>
-   <logs-metricization>
-   <logs-infinite>
-   <logs-timestamp>
-   <logs-limits>
+   <logs>
+   <timeline>
+   <live-tail>
+   <queries>
+   <raw-logs-display>
+   <keyword>
+   <filter-logs-by-field>
+   <alias>
+   <individual-log>
+   <message-field>
+   <aggregations>
+   <search-time-rules>
+   <save-share>
+   <logviews>
+   <pipeline>
+   <processors>
+   <metricization>
+   <infinite>
+   <timestamp>
+   <limits>
 
 If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
 
