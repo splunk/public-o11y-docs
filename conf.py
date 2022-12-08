@@ -35,9 +35,11 @@ extensions = [
     'toggle',
     'newpage',
     'myst_parser',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'olly_on_git_hub'
 ]
-
+olly_on_github_repo = 'splunk/public-o11y-docs'
+olly_on_github_branch = 'main'
 sphinx_tabs_disable_tab_closing = True
 
 # Set myst_parser to automatically generate labels for h1, h2, and h3 headings
@@ -130,13 +132,7 @@ html_theme_options = {
     'logo_name': True,
     'github_button': False,
 }
-html_context = {
-    "display_github": True, 
-    "github_user": "splunk/vpolasa2-splunk", 
-    "github_repo": "splunk/public-o11y-docs", 
-    "github_version": "main", 
-    "conf_py_path": "/", 
-}
+
 copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
 copybutton_prompt_is_regexp = True
 copybutton_copy_empty_lines = False
