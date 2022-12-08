@@ -61,7 +61,7 @@ Alert fields
      -  (string) The alert status
    * -  | alerts.startsAt
         | ``Required``
-     -  (string) Alert start date and time. Send date and time in the Prometheus format (ISO 8601). It is transformed to the epoch long format for the triggeredAt field in the common event model.
+     -  (string) Alert start date and time. Send date and time in the Prometheus format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model.
 
 JSON payload
 ------------

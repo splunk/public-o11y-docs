@@ -63,7 +63,7 @@ Alarm fields
      -  (string) The alarm source.
    * -  | time 
         | ``Required``
-     -  (string) Date-time string. Send date and time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the 
+     -  (string) Date-time string. Send date and time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model.
    * -  region
      -  (string) AWS region.
    * -  resources
@@ -98,7 +98,7 @@ Example JSON payload:
         }
     }
 
-Using this endpoint, your alarm is ingested and transformed into a consistent format for AWS Cloudwatch alerts in Incident Intelligence. This is an example of the transformed alert data that saved as an alert in Incident Intelligence:
+Using this endpoint, your alarm is ingested and transformed into the common event model for alerts in Incident Intelligence. This is an example of the transformed alert data that saved as an alert in Incident Intelligence:
 
 .. code-block:: json 
 
