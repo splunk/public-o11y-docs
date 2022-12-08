@@ -63,7 +63,7 @@ Alarm fields
      -  (string) The alarm source.
    * -  | time 
         | ``Required``
-     -  (string) Date-time string.
+     -  (string) Date-time string. Send date and time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the 
    * -  region
      -  (string) AWS region.
    * -  resources
