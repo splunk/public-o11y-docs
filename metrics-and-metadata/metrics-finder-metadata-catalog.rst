@@ -5,6 +5,9 @@
 Use the Metric Finder and Metadata Catalog
 *****************************************************************
 
+.. meta::
+    :description: How to use the Metric Finder and Metadata Catalog to find, view, and edit information about metrics metadata in Splunk Observability Cloud.
+
 The Splunk Infrastructure Monitoring Metric Finder and Metadata Catalog makes it quick and easy to find the metrics you monitor, across infrastructure and over diverse applications and sources. This topic shows you how to leverage the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
 
 See the following sections for more information on how to:
