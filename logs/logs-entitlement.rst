@@ -1,0 +1,20 @@
+.. _log-observer-entitlement:
+
+***********************************************************************
+Choose your entitlement: Log Observer or Log Observer Connect
+***********************************************************************
+
+.. meta::
+   :description: Choose whether you have Log Observer or Log Observer Connect.
+
+
+.. toctree::
+   :hidden:
+
+   Log Observer <get-started-logs>
+   Log Observer Connect <logs-intro-logconnect>
+
+Does your organization have Log Observer or Log Observer Connect? To learn what you can do with each, select your entitlement:
+
+- :ref:`Log Observer<get-started-logs>`
+- :ref:`Log Observer Connect<logs-intro-logconnect>`
