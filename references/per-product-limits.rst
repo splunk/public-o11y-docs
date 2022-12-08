@@ -18,21 +18,9 @@ The following table shows per-product MTS creation limits.
    * - :strong:`Limit name`
      - :strong:`Default limit value`
 
-   * - :ref:`mts-creations-per-hour-per-product-limit`
-     - Absolute limit of 500,000 MTS per hour, regardless of your subscription limit, or 50 times your MTS per minute limit, whichever is smaller.
-
    * - :ref:`mts-creations-per-minute-per-product-limit`
      - 6,000 or determined by your subscription
-
-
-.. _mts-creations-per-hour-per-product-limit:
-
-MTS creations per hour per product limit
---------------------------------------------------------------------------------------
-
-   * :strong:`Default limit value`: Absolute limit of 500,000 MTS per hour, regardless of your subscription limit, or 50 times your MTS per minute limit, whichever is smaller.
-   * :strong:`Notes`: Maximum number of MTS you can create per hour for each product. For example, if you create 500,000 MTS in the first hour for Infrastructure Monitoring, you can still create another 500,000 MTS for each other product you use in the same hour.
-   * :strong:`Customer impact`: Each product drops new MTS exceeding the limit without returning an error. Data points for existing MTS are still accepted.
+     
 
 .. _mts-creations-per-minute-per-product-limit:
 
