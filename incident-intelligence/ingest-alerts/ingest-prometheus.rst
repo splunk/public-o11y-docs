@@ -126,7 +126,7 @@ Example JSON payload:
     "truncatedAlerts": 0
     }
 
-Using this endpoint, your alert is ingested and transformed into a consistent format for Prometheus alerts in Incident Intelligence. This is an example of the transformed alert data that saved as an alert in Incident Intelligence:
+Using this endpoint, your alert is ingested and transformed into the common event model for alerts in Incident Intelligence. This is an example of the transformed alert data that saved as an alert in Incident Intelligence:
 
 .. code-block:: json 
 
