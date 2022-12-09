@@ -31,22 +31,39 @@ Splunk Log Observer Connect
 
 
 
-:ref:`logs-intro-logconnect`
-:ref:`logs-scp`
-:ref:`logs-set-up-logconnect`
-:ref:`logs-LOconnect-troubleshoot`
-:ref:`logs-timeline`
-:ref:`logs-queries`
-:ref:`logs-raw-logs-display`
-:ref:`logs-keyword`
-:ref:`logs-filter-logs-by-field`
-:ref:`logs-alias`
-:ref:`logs-individual-log-connect`
-:ref:`logs-message-field`
-:ref:`logs-aggregations`
-:ref:`logs-save-share`
-:ref:`logs-logviews`
-:ref:`logs-timestamp`
-:ref:`logs-limits`
+- :ref:`logs-intro-logconnect`
 
-If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
+- :ref:`logs-scp`
+
+- :ref:`logs-set-up-logconnect`
+
+- :ref:`logs-LOconnect-troubleshoot`
+
+- :ref:`logs-timeline`
+
+- :ref:`logs-queries`
+
+- :ref:`logs-raw-logs-display`
+
+- :ref:`logs-keyword`
+
+- :ref:`logs-filter-logs-by-field`
+
+- :ref:`logs-alias`
+
+- :ref:`logs-individual-log-connect`
+
+- :ref:`logs-message-field`
+
+- :ref:`logs-aggregations`
+
+- :ref:`logs-save-share`
+
+- :ref:`logs-logviews`
+
+- :ref:`logs-timestamp`
+
+- :ref:`logs-limits`
+
+
+If you do not have Log Observer Connect and instead use Log Observer, see :ref:`log-observer-landing`. 

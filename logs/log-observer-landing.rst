@@ -34,25 +34,45 @@ Splunk Log Observer
 
 
 
-:ref:`logs-logs`
-:ref:`logs-timeline`
-:ref:`logs-live-tail`
-:ref:`logs-queries`
-:ref:`logs-raw-logs-display`
-:ref:`logs-keyword`
-:ref:`logs-filter-logs-by-field`
-:ref:`logs-alias`
-:ref:`logs-individual-log`
-:ref:`logs-message-field`
-:ref:`logs-aggregations`
-:ref:`logs-search-time-rules`
-:ref:`logs-save-share`
-:ref:`logs-logviews`
-:ref:`logs-pipeline`
-:ref:`logs-processors`
-:ref:`logs-metricization`
-:ref:`logs-infinite`
-:ref:`logs-timestamp`
-:ref:`logs-limits`
+- :ref:`logs-logs`
+
+- :ref:`logs-timeline`
+
+- :ref:`logs-live-tail`
+
+- :ref:`logs-queries`
+
+- :ref:`logs-raw-logs-display`
+
+- :ref:`logs-keyword`
+
+- :ref:`logs-filter-logs-by-field`
+
+- :ref:`logs-alias`
+
+- :ref:`logs-individual-log`
+
+- :ref:`logs-message-field`
+
+- :ref:`logs-aggregations`
+
+- :ref:`logs-search-time-rules`
+
+- :ref:`logs-save-share`
+
+- :ref:`logs-logviews`
+
+- :ref:`logs-pipeline`
+
+- :ref:`logs-processors`
+
+- :ref:`logs-metricization`
+
+- :ref:`logs-infinite`
+
+- :ref:`logs-timestamp`
+
+- :ref:`logs-limits`
+
 
 If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
