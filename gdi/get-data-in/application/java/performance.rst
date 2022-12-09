@@ -32,13 +32,13 @@ The following tables compare the overhead for several system metrics across diff
          * - Condition
            - Value
          * - No instrumentation
-           - 32%
+           - 27%
          * - Splunk OpenTelemetry Java agent
-           - 39%
+           - 22%
          * - Splunk OpenTelemetry Java agent with AlwaysOn Profiling
            - 46%
 
-      * Tested on March 16, 2022 using Splunk Java OTel agent version 1.9.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+      * Tested on December 8, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
    .. tab:: Network
 
@@ -52,13 +52,13 @@ The following tables compare the overhead for several system metrics across diff
          * - Condition
            - Value
          * - No instrumentation
-           - 12.57 Mbps
+           - 10.74 Mbps
          * - Splunk OpenTelemetry Java agent
-           - 49.95 Mbps
+           - 29.32 Mbps
          * - Splunk OpenTelemetry Java agent with AlwaysOn Profiling
            - 51.03 Mbps
 
-      * Tested on March 16, 2022 using Splunk Java OTel agent version 1.9.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+      * Tested on December 8, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
    .. tab:: Request latency
 
@@ -72,13 +72,13 @@ The following tables compare the overhead for several system metrics across diff
          * - Condition
            - Value
          * - No instrumentation
-           - 12.24 milliseconds
+           - 4.62 milliseconds
          * - Splunk OpenTelemetry Java agent
-           - 21.65 milliseconds
+           - 16.67 milliseconds
          * - Splunk OpenTelemetry Java agent with AlwaysOn Profiling
            - 34.12 milliseconds
 
-      * Tested on March 16, 2022 using Splunk Java OTel agent version 1.9.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+      * Tested on December 8, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
    .. tab:: Throughput
 
@@ -92,13 +92,13 @@ The following tables compare the overhead for several system metrics across diff
          * - Condition
            - Value
          * - No instrumentation
-           - 890.47 requests per second
+           - 887.08 requests per second
          * - Splunk OpenTelemetry Java agent
-           - 866.74 requests per second
+           - 629.36 requests per second
          * - Splunk OpenTelemetry Java agent with AlwaysOn Profiling
            - 797.46 requests per second
 
-      * Tested on March 16, 2022 using Splunk Java OTel agent version 1.9.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+      * Tested on December 8, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
    .. tab:: Startup time
 
@@ -112,13 +112,13 @@ The following tables compare the overhead for several system metrics across diff
          * - Condition
            - Value
          * - No instrumentation
-           - 15.23 seconds
+           - 11.77 seconds
          * - Splunk OpenTelemetry Java agent
-           - 22.14 seconds
+           - 18.67 seconds
          * - Splunk OpenTelemetry Java agent with AlwaysOn Profiling
            - 22.92 seconds
 
-      * Tested on March 16, 2022 using Splunk Java OTel agent version 1.9.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
+      * Tested on December 8, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
 .. _perf-overhead-java-setup:
 
