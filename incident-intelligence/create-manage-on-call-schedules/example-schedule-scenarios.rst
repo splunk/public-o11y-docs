@@ -168,7 +168,7 @@ Follow these steps to create a week-by-week shift for secondary 24x7 coverage:
 Add your primary and secondary schedules to the incident workflow for the web application service
 -------------------------------------------------------------------------------------------------------
 
-Your last step to for this scenario is to add your primary and secondary schedules to the incident workflow for your web application service. 
+Your last step for this scenario is to add your primary and secondary schedules to the incident workflow for your web application service. 
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select the :guilabel:`Services` tab.
