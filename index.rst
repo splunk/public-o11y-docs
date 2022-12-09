@@ -605,27 +605,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3   
 
-   logs/intro-logconnect
+   logs/lo-connect-landing
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   3   
 
-   logs/scp
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/set-up-logconnect 
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/LOconnect-troubleshoot
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/get-started-logs
+   logs/log-observerf-landing
 
 .. toctree::
    :maxdepth:   3
