@@ -18,12 +18,12 @@ Create and manage on-call schedules
    check-my-schedule
 
 
-When an incident occurs, it is important to contact a responder who understands that part of the system architecture to fix the problem. This is accomplished through scheduling. An on-call schedule consists of a rotating group of responders that are assigned shifts for incident response. Use an on-call schedule as a step in your service incident workflows.
+When an incident occurs, it is important to contact a responder who understands that part of the system architecture to fix the problem. You can accomplish this through scheduling. An on-call schedule consists of a rotating group of responders that are assigned shifts for incident response. Use an on-call schedule as a step in your service incident workflows.
 
 .. raw:: html
 
    <embed>
-      <h2>Steps to create an on-call schedule</h2>
+      <h2>Create an on-call schedule</h2>
    </embed>
 
 Follow these steps to create a schedule. See :ref:`ii-schedule-scenarios` for steps to create specific schedule scenarios.
