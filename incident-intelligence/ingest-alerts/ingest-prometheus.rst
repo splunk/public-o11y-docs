@@ -5,68 +5,78 @@
 Ingest Prometheus alerts
 ************************************************************************
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route Prometheus incidents to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. See :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`.
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route Prometheus incidents to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. For more information, see :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config` in the Prometheus documentation.
 
 Prometheus ingest endpoint
 ---------------------------------
-
-For steps to obtain your realm see :ref:`organizations`.
 
 .. code:: 
 
     https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/prometheus
 
+For steps to obtain your realm see :ref:`organizations`.
+
 Request header
 ------------------
 
 .. list-table:: 
-   :widths: 30 70
+   :widths: 20 20 60
    :width: 100%
    :header-rows: 1
 
    * - Header
+     - Required
      - Description
-   * - | X-SF-Token  
-       | ``Required``
-     - (string) Authentication token. See :ref:`api-access-token`.
+   * - X-SF-Token  
+     - Required
+     - Authentication token. See :ref:`api-access-token`.
 
 
 Alert fields
 ----------------
 
 .. list-table:: 
-   :widths: 30 70
+   :widths: 15 15 15 55
    :width: 100%
    :header-rows: 1
 
    * - Field
+     - Required
+     - Type
      - Description
-   * -  | status
-        | ``Required``
-     -  (string) The alert status.
-   * -  | receiver
-        | ``Required``
-     -  (string) The alert receiver.
-   * -  | externalURL
-        | ``Required``
-     -  (string) The external URL to the alert.
-   * -  | commonAnnotations
-        | ``Required``
-     -  (object) Alert annotations.
-   * -  | commonLabels
-        | ``Required``
-     -  (object) Alert labels. 
-   * -  | alerts.status
-        | ``Required``
-     -  (string) The alert status
-   * -  | alerts.startsAt
-        | ``Required``
-     -  (string) Alert start date and time. Send date and time in the Prometheus format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model.
+   * - status
+     - Required
+     - String
+     - The alert status
+   * - receiver
+     - Required
+     - String
+     - The alert receiver
+   * - externalURL
+     - Required
+     - String
+     - The external URL to the alert
+   * - commonAnnotations
+     - Required
+     - Object
+     - Alert annotations
+   * - commonLabels
+     - Require
+     - Object
+     - Alert labels
+   * - alerts.status
+     - Required
+     - String
+     - The alert status
+   * - alerts.startsAt
+     - Required
+     - String
+     - Alert start date and time. Send date and time in the Prometheus format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model
 
 JSON payload
 ------------
 
-Use the Prometheus alertmanager webhook config to send Prometheus alerts sent to the Prometheus endpoint. Use this JSON payload. See :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`.
+Use the Prometheus alertmanager webhook config to send Prometheus alerts to the Prometheus endpoint. Use this JSON payload. 
 
 Example JSON payload:
 
@@ -126,7 +136,7 @@ Example JSON payload:
     "truncatedAlerts": 0
     }
 
-Using this endpoint, your alert is ingested and transformed into the common event model for alerts in Incident Intelligence. This is an example of the transformed alert data that saved as an alert in Incident Intelligence:
+Using this endpoint, your alert is ingested and transformed into  common event model for alerts in Incident Intelligence. This is an example of the transformed alert data that saved as an alert in Incident Intelligence:
 
 .. code-block:: json 
 

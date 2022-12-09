@@ -10,66 +10,86 @@ You can use Incident Intelligence ingest endpoints to ingest alerts from various
 Prerequisite
 ================
 
-You have to set up CloudWatch to send alarms to a queue in SNS.
+You must set up CloudWatch to send alarms to a queue in SNS.
 
 
 Send AWS CloudWatch alarms directly to the ingest endpoint
 =================================================================
 
-To send AWS CloudWatch alarms directly to the ingest endpoint, make a POST call to the endpoint to ingest Amazon CloudWatch alarms.
+To send AWS CloudWatch alarms directly to the ingest endpoint, make a POST call to the endpoint.
 
 AWS CloudWatch ingest endpoint
 ---------------------------------
-
-For steps to obtain your realm see :ref:`organizations`.
 
 .. code:: 
 
     https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/cloudwatch
 
+For steps to obtain your realm see :ref:`organizations`.
+
 Request header
 ------------------
 
 .. list-table:: 
-   :widths: 30 70
+   :widths: 20 20 60
    :width: 100%
    :header-rows: 1
 
    * - Header
+     - Required
      - Description
-   * - | X-SF-Token  
-       | ``Required``
-     - (string) Authentication token. See :ref:`api-access-token`.
+
+   * - X-SF-Token  
+     - Required
+     - Authentication token. See :ref:`api-access-token`.
 
 
 Alarm fields
 ----------------
 
 .. list-table:: 
-   :widths: 30 70
+   :widths: 15 15 15 55
    :width: 100%
    :header-rows: 1
 
    * - Field
+     - Required
+     - Type
      - Description
-   * -  | id  
-        | ``Required``
-     -  (string) Alarm ID.
-   * -  | detail-type 
-        | ``Required``
-     -  (string) Alarm title.
-   * -  | source 
-        | ``Required``
-     -  (string) The alarm source.
-   * -  | time 
-        | ``Required``
-     -  (string) Date-time string. Send date and time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model.
-   * -  region
-     -  (string) AWS region.
-   * -  resources
-     -  (array) Alarm resources you want to include with the alert in Incident Intelligence.
-   * -  detail
-     -  (object) Alarm details you want to include with the alert in Incident Intelligence.
+
+   * - id  
+     - Required
+     - String
+     - Alarm ID
+
+   * - detail-type 
+     - Required
+     - String
+     - Alarm title
+   * - source 
+     - Required
+     - String
+     - The alarm source
+
+   * - time 
+     - Required
+     - String
+     - Date-time string. Send date and time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model
+
+   * - region
+     -
+     - String
+     - AWS region
+
+   * - resources
+     -
+     - Array
+     - Alarm resources you want to include with the alert in Incident Intelligence
+
+   * - detail
+     -
+     - Object
+     - Alarm details you want to include with the alert in Incident Intelligence
 
 JSON payload
 ---------------
@@ -130,8 +150,8 @@ Using this endpoint, your alarm is ingested and transformed into the common even
        } 
     }
 
-Send alarms to Incident Intelligence using the  AWS CloudWatch Simple Notification Service (SNS)
+Send alarms to Incident Intelligence using the  AWS CloudWatch SNS
 =====================================================================================================
 
-You can also send alarms to Incident Intelligence using AWS CloudWatch SNS. To do so, you need your CloudWatch ingest endpoint and the JSON payload. See :new-page:`https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/US_SetupSNS.html`.
+You can also send alarms to Incident Intelligence using AWS CloudWatch SNS. To do so, you need your CloudWatch ingest endpoint and the JSON payload. See the Amazon documentation for more information: :new-page:`https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/US_SetupSNS.html`.
 
