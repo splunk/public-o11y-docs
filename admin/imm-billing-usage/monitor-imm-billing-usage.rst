@@ -39,13 +39,13 @@ Differences between host, container, bundled, and custom metrics
      - :strong:`Description`
 
    * - Host and container metrics
-     - Default metrics sent by the Smart Agent or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
+     - Default metrics sent by the the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
 
    * - Bundled metrics
      - Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers. They are included as part of a host-based subscription and you are not charged for them.
 
    * - Custom metrics
-     - Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics. Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. They might also include system or service metrics that you configure the Smart Agent to send outside of its default set of metrics. Your Infrastructure Monitoring subscription allows you to send a certain number of custom metrics.
+     - Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics. Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. They might also include system or service metrics that you configure the Splunk Distribution of OpenTelemetry Collector to send outside of its default set of metrics. Your Infrastructure Monitoring subscription allows you to send a certain number of custom metrics.
 
 .. _about-high-res:
 

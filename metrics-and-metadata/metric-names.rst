@@ -4,6 +4,10 @@
 Guidance for metric and dimension names
 *****************************************************************
 
+
+.. meta::
+   :description: Naming standards for metric and dimensions in Splunk Observability Cloud.
+
 Splunk Observability Cloud has two main categories of data names: existing names and custom names. 
 
 Existing names

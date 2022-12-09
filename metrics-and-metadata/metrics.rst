@@ -5,7 +5,7 @@ Metrics, data points, and metric time series in Splunk Observability Cloud
 *****************************************************************************
 
 .. meta::
-   :description: Introduction to metrics in Splunk Observability Cloud.
+   :description: Introduction to metrics, data points, and metric time series in Splunk Observability Cloud.
 
   
 In Splunk Observability Cloud, data consists of the following components:

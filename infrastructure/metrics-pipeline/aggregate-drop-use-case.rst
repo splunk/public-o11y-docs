@@ -10,7 +10,7 @@ Use case: Combine aggregation and dropping rules to control your metric cardinal
 ****************************************************************************************************
 
 .. meta::
-    :description: Aggregation and dropping use case
+    :description: Aggregation and dropping use case for metrics pipeline management.
 
 The following use case features an example from Buttercup Games, a fictitious e-commerce company.
 
