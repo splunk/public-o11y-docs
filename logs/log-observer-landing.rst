@@ -75,4 +75,4 @@ Splunk Log Observer
 - :ref:`logs-limits`
 
 
-If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
+If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`lo-connect-landing`. 
