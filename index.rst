@@ -942,24 +942,16 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/apm-billing-usage/apm-billing-usage-index
 
 .. toctree::
    :hidden:
    :maxdepth:   3
 
-   admin/imm-billing-usage/monitor-imm-billing-usage
+   Monitor subscription usage <admin/subscription-overview>
 
 .. toctree::
    :hidden:
    :maxdepth:   3
-
-   admin/imm-billing-usage/dpm-usage
-
 
 
 .. toctree::

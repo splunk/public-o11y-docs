@@ -1,4 +1,4 @@
-.. _sso-label:
+.. _subscription-overview:
 
 *********************************************************************
 Monitor subscription usage for Splunk Observability Cloud
@@ -10,7 +10,7 @@ Monitor subscription usage for Splunk Observability Cloud
 .. toctree::
    :hidden:
 
-   analyze-apm-billing-usage
+   apm-billing-usage-index
    monitor-imm-billing-usage
    lo-billing-usage
 
