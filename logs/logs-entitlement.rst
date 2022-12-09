@@ -9,10 +9,11 @@ Choose your entitlement: Log Observer or Log Observer Connect
 
 
 .. toctree::
-   :hidden:
+    :maxdepth: 3
+    :hidden:
 
-   Log Observer <get-started-logs>
-   Log Observer Connect <logs-intro-logconnect>
+    Log Observer <get-started-logs>
+    Log Observer Connect <logs-intro-logconnect>
 
 Does your organization have Log Observer or Log Observer Connect? To learn what you can do with each, select your entitlement:
 

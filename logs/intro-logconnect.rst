@@ -21,7 +21,7 @@ Introduction to Splunk Log Observer Connect
     keyword
     filter-logs-by-field
     alias
-    individual-log-connect
+    logs-individual-log-connect
     message-field
     aggregations
     save-share
