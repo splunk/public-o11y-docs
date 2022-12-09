@@ -11,6 +11,7 @@ Splunk Log Observer
     :maxdepth: 3
     :hidden:
 
+    get-started-logs
     logs
     timeline
     live-tail
