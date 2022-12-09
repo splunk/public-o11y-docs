@@ -5,7 +5,7 @@ Supported integrations
 ********************************************************************************
 
 .. meta::
-  :description: This page provides a listing of integrations and services supported by Splunk Observability Cloud.
+  :description: A list of integrations and services supported by Splunk Observability Cloud.
 
 This page provides the list of integrations supported by Splunk Observability Cloud.
 
