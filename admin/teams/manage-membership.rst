@@ -25,13 +25,15 @@ To create a team, follow these steps:
 
 #. Click :guilabel:`Create New Team`.
 
-#. In the :guilabel:`Choose team name` dialog box, type a name for the team.
+#. In the :guilabel:`Team name` dialog box, type a name for the team.
 
-#. From the :guilabel:`Choose the users who will be a part of this team` list, find the name of user you want to add to the team and click :guilabel:`Add`. You can search for users with the search text box.
+#. (Optional) In the :guilabel:`Description` field, type a description of the team. 
+
+#. From the :guilabel:`Add Users` list, you can search for users with the search text box.
 
 #. Continue to add users to the team.
 
-#. When you're finished adding users, click :guilabel:`Done`.
+#. When you're finished adding users, click :guilabel:`Create`.
 
 #. The new team name appears in the list of teams. If you added yourself to the team, the Member label appears next to the number of team members.
 
@@ -110,6 +112,23 @@ To add or remove team members, follow these steps:
 #. Click :guilabel:`Done`.
 
 
+View a user's team membership
+============================================================================
+
+You can search by a user's name to view a list of the teams to which they belong.
+
+To view which teams a user belongs to, follow these steps:
+
+#. Log in to Splunk Observability Cloud.
+
+#. In the left navigation menu, select :menuselection:`Settings > Teams`.
+
+#. A table of current teams appears in the main panel.
+
+#. In the search bar, type the name of the user and ensure that :guilabel:`Teams` is selected. You can search by the user's name or email address.
+
+
+
 .. _admin-team-controls:
 
 Enable enhanced team security
@@ -181,8 +200,8 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
 
   * - :strong:`Join team`
     - Yes
-    - Not applicable: A Team Manager doesn’t join a team. Only an existing Team Member can be assigned this role.
-    - Not applicable: A Team Member is already on a team and doesn’t need to join.
+    - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
+    - Not applicable: A Team Member is already on a team and doesn't need to join.
     - * Yes, when enhanced team security is disabled
       * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
 
@@ -220,6 +239,6 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - Yes
     - Not applicable: A user must be on a team to leave a team
 
-Permission to link a detector to a team is based on the detector’s permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
+Permission to link a detector to a team is based on the detector's permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
 
-Permission to link a dashboard group to a team is based on the dashboard group’s permissions. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.
+Permission to link a dashboard group to a team is based on the dashboard group's permissions. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.
