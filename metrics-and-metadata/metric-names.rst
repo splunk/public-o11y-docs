@@ -19,7 +19,7 @@ When you send custom metrics, dimensions, or events to Splunk Infrastructure Mon
 
 Modify naming schemes you sent to other metrics systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Splunk Infrastructure Monitoring lets you associate arbitrary key-value pairs called dimensions with metrics. Dimensions let you represent multi-dimensional data without overloading your metric name with metadata.
+Splunk Infrastructure Monitoring lets you associate arbitrary key-value pairs called dimensions with metrics. Dimensions let you represent multidimensional data without overloading your metric name with metadata.
 
 * If you send metrics that you previously sent to other metrics systems such as Graphite or New Relic, then modify the naming scheme to leverage the full feature set of Splunk Observability Cloud. 
 * If you already have metrics with period-separated names, use Splunk OTel parse dimensions from metric names. To learn more, see :ref:`Example: Custom metric name and dimensions <example-custom-metric>`. 
@@ -55,9 +55,9 @@ If you apply a calculation to the metric before you send it, you can also use th
 
 On the other hand, some information is better to include in a dimension instead of a metric name, such as description of hardware or software being measured. For example, don’t use ``production1`` to indicate that the measurement is for a particular host. To learn more, see :ref:`dimensions-name-standards`.
 
-Create metric names using a hierarchical left to right structure
+Create metric names using a hierarchical structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Start at the highest level, then add more specific values as you proceed. In this example, all of these metrics have a dimension key called :code:`hostname` with values such as analytics-1, analytics-2, and so forth. These metrics also have a customer dimension key with values org-x, org-y, and so on. The dimensions provide an infrastructure-focused or a customer-focused view of the analytics service usage. For more information on gauge metrics,  see :ref:`Identify metric types<metric-types>`.
+Start at the highest level, then add more specific values as you proceed. In this example, all of these metrics have a dimension key called :code:`hostname` with values such as analytics-1, analytics-2, and so forth. These metrics also have a customer dimension key with values org-x, org-y, and so on. The dimensions provide an infrastructure-focused or a customer-focused view of the analytics service usage. For more information on gauge metrics, see :ref:`Identify metric types<metric-types>`.
 
 #. Start with a domain or namespace that the metric belongs to, such as analytics or web.
 #. Next, add the entity that the metric measures, such as jobs or http.
@@ -83,7 +83,7 @@ It is necessary to use different metric names to indicate metric types. When you
 Metric types and rollups
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In Infrastructure Monitoring, all metrics have a single metric type, with a specific default rollup. A rollup is a statistical function that takes all the data points for an MTS over a time period and outputs a single data point. Observability Cloud applies rollups after it retrieves the data points from storage but before it applies analytics functions. For more information on rollups, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts.
+In Infrastructure Monitoring, all metrics have a single metric type, with a specific default rollup. A rollup is a statistical function that takes all the data points in a metric time series (MTS) over a time period and outputs a single data point. Observability Cloud applies rollups after it retrieves the data points from storage but before it applies analytics functions. For more information on rollups, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts.
 
 The following list shows the types and their default rollups:
 
@@ -102,7 +102,7 @@ Send the measurement using two different metric names, such as :code:`network_la
 
 Dimension name and value standards
 =====================================
-Dimensions are arbitrary key-value pairs you associate with metrics. They can be numeric or non-numeric. Some dimensions, such as host name and value, come from a system you’re monitoring. You can also create your own dimensions. Metrics identify a measurement, whereas dimensions identify a specific aspect of the system that's generating the measurement or characterizes the measurement.
+Dimensions are arbitrary key-value pairs you associate with metrics. They can be numeric or nonnumeric. Some dimensions, such as host name and value, come from a system you’re monitoring. You can also create your own dimensions. Metrics identify a measurement, whereas dimensions identify a specific aspect of the system that's generating the measurement or characterizes the measurement.
 
 Dimension names have the following requirements:
 
@@ -112,7 +112,7 @@ Dimension names have the following requirements:
 * Must not start with the prefix :code:`sf_`, except for dimensions defined by Observability Cloud such as :code:`sf_hires`.
 * Must not start with the prefix :code:`aws_`, :code:`gcp_`, or :code:`azure_`.
 *  Dimension values are UTF-8 strings with a maximum length of 256 UTF-8 characters (1024 bytes). Numbers are represented as numeric strings.
-* You can have up to 36 dimensions per MTS. If this limit is exceeded, the datapoint is dropped, and a message is logged.
+* You can have up to 36 dimensions per MTS. If this limit is exceeded, the data point is dropped, and a message is logged.
 * To ensure readability, keep names and values to 40 characters or less.
 
 Length limits for metric name, dimension name, and dimension value 
@@ -148,7 +148,7 @@ The following are some examples of types of information that you can add to dime
 * Metadata for filtering, grouping, or aggregating
 * Name of entity being measured: For example :code:`hostname`, :code:`production1`
 * Metadata with large number of possible values: Use one dimension key for many different dimension values.
-* Non-numeric values: Numeric dimension values are usually labels rather than measurements.
+* Nonnumeric values: Numeric dimension values are usually labels rather than measurements.
 
 
 Example: Custom metric name and dimensions
@@ -163,14 +163,14 @@ You want to track the following data:
 * Host that reported the error
 * Service (app) that returned the error
 
-Suppose you identify your data with a long metric name instead of a metric name and a dimension. A metric name that represented the number of HTTP response code 500 errors reported by the host named myhost for the service checkout would have to be the following: :code:`web.http.myhost.checkout.error.500.count`.
+Suppose you identify your data with a long metric name instead of a metric name and a dimension. A metric name that represents the number of HTTP response code 500 errors reported by the host named myhost for the service checkout might be the following: :code:`web.http.myhost.checkout.error.500.count`.
 
-As a result of using this metric name, you’d experience the following:
+If you use this metric name, you encounter the following issues:
 
-* To visualize this data in a Splunk Infrastructure Monitoring chart, you would have to perform a wildcard query with the syntax :code:`web.http.*.*.error.*.count`.
-* To sum up the errors by host, service, or error type, you would have to change the query.
-* You couldn’t use filters or dashboard variables in your chart.
-* You would have to define a separate metric name to track HTTP 400 errors, or errors reported by other hosts, or errors reported by other services.
+* To visualize this data in a Splunk Infrastructure Monitoring chart, you have to run a wildcard query with the syntax :code:`web.http.*.*.error.*.count`.
+* To sum up the errors by host, service, or error type, you have to change the query.
+* You can not use filters or dashboard variables in your chart.
+* You have to define a separate metric name to track HTTP 400 errors, or errors reported by other hosts, or errors reported by other services.
 
 
 Leverage dimensions to track the same data you can do the following:
@@ -187,7 +187,7 @@ Leverage dimensions to track the same data you can do the following:
    * :code:`service`: The service that returned the error
    * :code:`error_type`: The HTTP response code for the error
 
-When you want to visualize the error data using a chart, you can search for “error count” to locate the metric by name. When you create the chart, you can filter and aggregate incoming metric time series by host, service, error_type, or all three. You can add a dashboard filter so that when you view the chart in a specific dashboard, you don’t have the chart itself.
+When you want to visualize the error data using a chart, you can search for "error count" to locate the metric by name. When you create the chart, you can filter and aggregate incoming metric time series by host, service, error_type, or all three. You can add a dashboard filter so that when you view the chart in a specific dashboard, you don’t have the chart itself.
 
 
 .. _example-custom-metric:
@@ -200,7 +200,7 @@ Keep this guidance in mind so that you can create a consitent naming proccess in
 
 * Avoid changing metric and dimension names. If you change a name, you have to update the charts and detectors that use the old name. Infrastructure Monitoring doesn’t do this automatically.
 
-* Remember that you’re not the only person using the metric or dimension. Use names that others in your organization can identify and understand. Follow established conventions. To find out the conventions in your organization, browse your metrics using the Metric Finder.
+* Since you’re not the only person using the metric or dimension, use names that others in your organization can identify and understand. Follow established conventions. To find out the conventions in your organization, browse your metrics using the Metric Finder.
 
 
 
@@ -210,12 +210,12 @@ Guidelines for working with low and high cardinality data
 ==========================================================
 Send low-cardinality data only in metric names or dimension key names. Low-cardinality data has a small number of distinct values. For example, the metric name ``web.http.error.count`` for a gauge metric that reports the number of HTTP request errors has a single value. This name is also readable and self-explanatory. For more information on gauge metrics, see :ref:`Identify metric types<metric-types>`.
 
-High-cardinality data has a large number of distinct values. For example, timestamps are high-cardinality data. Only send this kind of high-cardinality data in dimension values. If you send high-cardinality data in metric names, Infrastructure Monitoring might not ingest the data. Infrastructure Monitoring specifically rejects metrics with names that contain timestamps. High-cardinality data does have legitimate uses. For example, in containerized environments, container_id is usually a high-cardinality field. If you include container_id in a metric name such as :code:`system.cpu.utilization.<container_id>`, instead of having one MTS, you would have as many MTS as you have containers.
+High-cardinality data has a large number of distinct values. For example, timestamps are high-cardinality data. Only send this kind of high-cardinality data in dimension values. If you send high-cardinality data in metric names, Infrastructure Monitoring might not ingest the data. Infrastructure Monitoring rejects metrics with names that contain timestamps. High-cardinality data does have legitimate uses. For example, in containerized environments, container_id is usually a high-cardinality field. If you include container_id in a metric name such as :code:`system.cpu.utilization.<container_id>`, instead of having one MTS, you have as many MTS as you have containers.
 
 .. _name-custom-event:
 
 
 Guidance for custom event names
 =====================================
-Custom events are collections of key-value pairs you can send to Infrastructure Monitoring to display in charts and view in event feeds. For example, you can send “release” events whenever you release new code and then correlate metric changes with releases by overlaying the release events on charts. The Metric and dimension key naming standards also apply to custom event naming.
+Custom events are collections of key-value pairs you can send to Infrastructure Monitoring to display in charts and view in event feeds. For example, you can send "release" events whenever you release new code and then correlate metric changes with releases by overlaying the release events on charts. The Metric and dimension key naming standards also apply to custom event naming.
 
