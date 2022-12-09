@@ -5,11 +5,11 @@ Use case: Troubleshoot an issue from the browser to the back end using Splunk Ob
 ******************************************************************************************************
 
 .. meta::
-   :description: This use case-based documentation describes how a site reliability engineer (SRE) can use Splunk Observability Cloud products and features to troubleshoot a site issue starting with the end user's browser-based experience all the way to microservices on the backend.
+   :description: This use case documentation describes how a site reliability engineer (SRE) can use Splunk Observability Cloud products and features to troubleshoot a site issue starting with the end user's browser-based experience all the way to microservices on the backend.
 
 Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure.
 
-Buttercup Games site reliability engineers (SREs) and service owners work together to monitor and maintain the site to be sure that people have a great experience when they visit. One of the many reasons they decided to take a cloud-native approach is because it would make their system observable by tools. They implemented Splunk Observability Cloud as their observability solution.
+Buttercup Games site reliability engineers (SREs) and service owners work together to monitor and maintain the site to be sure that people have a great experience when they visit. One of the many reasons they decided to take a cloud-native approach is because it facilitates observability. They chose Splunk Observability Cloud as their observability solution.
 
 This use case describes how Kai, an SRE, and Deepu, a service owner, performed the following tasks using Splunk Observability Cloud to troubleshoot and identify the root cause of a recent Buttercup Games site incident:
 
@@ -29,7 +29,7 @@ This use case describes how Kai, an SRE, and Deepu, a service owner, performed t
 
 :ref:`take-preventative-action-xpuc`
 
-For a video version of this use case, see :new-page:`Splunk’s Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
+For a video version of this use case, see :new-page:`Splunk's Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
 
 
 .. _receive-alerts-xpuc:
@@ -74,17 +74,17 @@ Kai opens Splunk Real User Monitoring (RUM) to look for clues about the issue ba
     :width: 75%
     :alt: This screenshot shows the Endpoint Latency module in Splunk Real User Monitoring. The module shows a latency of 8 seconds for the /cart/checkout endpoint.
 
-Kai isn’t sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :code:`/cart/checkout` endpoint because the page load time and largest contentful paint for :code:`cart/checkout` are also high.
+Kai isn't sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :code:`/cart/checkout` endpoint because the page load time and largest contentful paint for :code:`cart/checkout` are also high.
 
-Kai clicks the :strong:`/cart/checkout` endpoint link and sees multiple errors in the Tag Spotlight view in Splunk RUM. The errors don’t seem to be related to any one tag in particular, so they click the :strong:`` tab to look at User sessions.
+Kai clicks the :strong:`/cart/checkout` endpoint link and sees multiple errors in the Tag Spotlight view in Splunk RUM. The errors don't seem to be related to any one tag in particular, so they click the :strong:`` tab to look at User sessions.
 
-Kai sees one session that seems to be taking longer than the others. They click it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn’t a front end problem and that they need to follow the trace through to the back end.
+Kai sees one session that seems to be taking longer than the others. They click it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn't a front end problem and that they need to follow the trace through to the back end.
 
 .. image:: /_images/get-started/session-details.png
   :width: 100%
   :alt: This screenshot shows the Session Details page in Splunk RUM displaying the session timeline from the front end through to the back end, where the /cart/checkout endpoint is taking longer than expected to complete.
 
-Kai clicks the :strong:`APM` link to get a performance summary, as well as access to the session’s trace and workflow details.
+Kai clicks the :strong:`APM` link to get a performance summary, as well as access to the session's trace and workflow details.
 
 .. image:: /_images/get-started/performance-summary.png
   :width: 80%
@@ -130,7 +130,7 @@ Learn more
 
 * For details about using Related Content, see :ref:`get-started-relatedcontent`.
 
-* For more Splunk APM-specific use case-based documentation, see :ref:`apm-use-cases-intro`.
+* For more Splunk APM-specific use case, see :ref:`apm-use-cases-intro`.
 
 
 .. _check-infra-health-xpuc:
@@ -177,7 +177,7 @@ However, when Kai looks at the :strong:version module, they see an interesting p
 
 .. image:: /_images/get-started/version.png
   :width: 60%
-  :alt: This screenshot shows the version module in Splunk APM displaying errors for v350.10 only and no errors for v350.9.
+  :alt: This screenshot shows the version module in Splunk APM displaying errors for version 350.10 only and no errors for version 350.9.
 
 This seems like a strong lead, so Kai decides to dig into the log details. They click the :strong:`Logs for paymentservice` Related Content tile.
 
@@ -192,7 +192,7 @@ For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
 6. Examine error logs for meaningful messages and patterns
 ===============================================================
 
-Now in Splunk Log Observer, Kai’s view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
+Now in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
 
 Kai sees some error logs, so they click one to see more details in a structured view.
 
@@ -212,9 +212,9 @@ Now, Kai can see that all of the logs that contain this test API token error are
 
 .. image:: /_images/get-started/group-by-version.png
   :width: 100%
-  :alt: This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of v350.10. All of the logs that display are error logs.
+  :alt: This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs.
 
-Just to be sure, Kai clicks the "eye" icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don’t include the error message.
+Just to be sure, Kai clicks the "eye" icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message.
 
 This exploration convinces Kai that the test API token in v350.10 is the most likely source of the issue. Kai notifies Deepu, the :strong:`paymentservice` owner about their findings.
 
@@ -227,7 +227,7 @@ For details about using Splunk Log Observer as described in this use case, see :
 .. _monitor-a-fix-xpuc:
 
 7. Monitor a fix
-==============================================================================================================================
+=====================================================================================================================
 
 Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the error logs in Splunk Log Observer. They agree with Kai's assessment that the test API token is the likely cause of the problem.
 
@@ -237,7 +237,7 @@ As one way to see if reverting to version v350.9 fixed the issue, Deepu opens th
 
 .. image:: /_images/get-started/live-tail-verify.gif
   :width: 100%
-  :alt: This animated GIF shows Deepu opening the time picker in the upper left corner of Splunk Log Observer and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received.
+  :alt: This animated GIF shows Deepu opening the time picker of Splunk Log Observer and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received.
 
 Deepu watches the Live Tail view and sure enough, the failed payment messages have stopped appearing in :strong:`paymentservice` logs. Reassured that the Buttercup Games site is back in a stable state, Deepu moves on to helping their team fix v350.10.
 
@@ -250,7 +250,7 @@ For details about using Splunk Log Observer Live Tail view, see :ref:`logs-live-
 .. _take-preventative-action-xpuc:
 
 8. Take preventative action and create metrics from logs to power dashboards and alerts
-==============================================================================================================================
+==============================================================================================================
 
 Now that Kai knows that this particular issue can cause a problem on the Buttercup Games site, they decide to do some preventative work for their SRE team. Kai takes the query they created in Splunk Log Observer and saves it as a metric.
 
