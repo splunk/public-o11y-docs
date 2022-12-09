@@ -610,12 +610,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3   
 
-   logs/log-observerf-landing
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/logs
+   logs/log-observer-landing
 
 .. toctree::
    :caption: RUM

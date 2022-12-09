@@ -7,30 +7,7 @@ Introduction to Splunk Log Observer
 .. meta::
    :description: Get started investigating issues with Splunk Log Observer.
 
-.. toctree::
-    :maxdepth: 3
-    :hidden:
 
-    logs
-    timeline
-    live-tail
-    queries
-    raw-logs-display
-    keyword
-    filter-logs-by-field
-    alias
-    individual-log
-    message-field
-    aggregations
-    search-time-rules
-    save-share
-    logviews
-    pipeline
-    processors
-    metricization
-    infinite
-    timestamp
-    limits
 
 If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
 
