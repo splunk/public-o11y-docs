@@ -13,7 +13,7 @@ Choose your entitlement: Log Observer or Log Observer Connect
     :hidden:
 
     Log Observer <get-started-logs>
-    Log Observer Connect <intro-logconnect>
+    Log Observer Connect <logs-intro-logconnect>
 
 Does your organization have Log Observer or Log Observer Connect? To learn what you can do with each, select your entitlement:
 
