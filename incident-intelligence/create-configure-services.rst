@@ -7,7 +7,7 @@ Create and configure services
 ************************************************************************
 
 .. meta::
-   :description: Use services to organize incidents depending on the impacted environmental component.
+   :description: Steps to create and configure services to organize incidents for Incident Intelligence in Splunk Observability Cloud.
 
 Use services to organize incidents depending on the impacted environmental component, for example, your web application or checkout service. Begin by creating a service. Then, route alerts to the service. Next, specify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered.
 

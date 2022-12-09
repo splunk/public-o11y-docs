@@ -6,7 +6,7 @@ On-call schedule scenarios
 ************************************************************************
 
 .. meta::
-   :description:
+   :description: Applied on-call schedule scenarios to help you learn how to create on-call schedules for Incident Intelligence in Splunk Observability Cloud.
 
 Find the scenario that fits your situation to learn how to create your on-call schedule. For basic on-call schedule creation steps see :ref:`ii-create-manage-on-call-schedules`.
 

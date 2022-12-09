@@ -5,6 +5,9 @@
 Key concepts in Splunk Incident Intelligence 
 **************************************************
 
+.. meta::
+   :description: Review important concepts for successful use of Incident Intelligence in Splunk Observability Cloud. 
+
 Here are some important concepts you need to know to successfully use Splunk Incident Intelligence:
 
 .. list-table::

@@ -5,6 +5,9 @@
 Snooze an incident
 *********************
 
+.. meta::
+   :description: Steps to snooze an incident in Incident Intelligence in Splunk Observability Cloud.
+
 You can snooze an incident to silence paging on unactionable or less-urgent incidents for a specified period of time. At the end of the specified time, the incident workflow with which the incident is associated is triggered again, starting with the first step. To snooze an incident, follow these steps:
 
 #. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 
@@ -23,7 +26,6 @@ If you need to unsnooze an incident before the specified period of time, follow 
 #. Select :guilabel:`Resume`.
 
 When a snoozed incident resumes, the incident workflow is triggered again, starting with the first step. 
-
 
 See also
 ===============

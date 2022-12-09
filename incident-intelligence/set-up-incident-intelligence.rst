@@ -6,7 +6,7 @@ Set up Splunk Incident Intelligence
 ************************************************************************
 
 .. meta::
-   :description: To route incidents to the necessary teams and people, you need to configure your incident management.
+   :description: Steps to configure your incident management in Incident Intelligence in Splunk Observability Cloud.
 
 To route incidents to the necessary teams and people, you need to first generate alerts. Next, you'll complete your incident response configuration which includes creating and configuring services, and creating on-call schedules. After you configure your services and schedules, users can begin responding to incidents. 
 

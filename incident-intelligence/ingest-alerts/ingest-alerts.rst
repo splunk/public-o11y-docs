@@ -5,6 +5,9 @@
 Ingest alerts in Splunk Incident Intelligence
 ************************************************************************
 
+.. meta::
+   :description: Overview of alert ingestion methods for Incident Intelligence in Splunk Observability Cloud. 
+
 .. toctree::
     :maxdepth: 3
     :hidden:
@@ -22,13 +25,27 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
       <h2>Available alert sources in Splunk Observability Cloud</h2>
    </embed>
 
-- Splunk APM: To create a detector for APM, see :ref:`create-detectors`. 
-- Splunk Infrastructure Monitoring: To create a detector for Infrastructure Monitoring, see :ref:`create-detectors`. 
-- Splunk RUM: To create a detector for RUM, see :ref:`rum-detectors`.
-- Splunk Synthetic Monitoring
-    - To create a detector for an API test, see :ref:`api-detector`.
-    - To create a detector for a browser test, see :ref:`detector-browser-test`.
-    - To create a detector for a uptime test, see :ref:`uptime-detector`.
+.. list-table::
+   :header-rows: 1
+   :widths: 25, 75
+
+   * - :strong:`Alert source`
+     - :strong:`Documentation`
+
+   * - Splunk APM
+     - See :ref:`create-detectors`. 
+
+   * - Splunk Infrastructure Monitoring
+     - See :ref:`create-detectors`. 
+
+   * - Splunk RUM
+     - See :ref:`rum-detectors`.
+
+   * - Splunk Synthetic Monitoring
+     - 
+        * To create a detector for an API test, see :ref:`api-detector`.
+        * To create a detector for a browser test, see :ref:`detector-browser-test`.
+        * To create a detector for a uptime test, see :ref:`uptime-detector`.
 
 .. raw:: html
 
@@ -36,8 +53,19 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
       <h2>Available ingest endpoints for cloud alerts</h2>
    </embed>
 
-- Amazon CloudWatch, see :ref:`ii-ingest-cloudwatch-alerts`.
-- Prometheus, see :ref:`ii-ingest-prometheus-alerts`.
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 25, 75
+
+   * - :strong:`Ingest endpoint`
+     - :strong:`Documentation`
+
+   * - Amazon CloudWatch
+     - See :ref:`ii-ingest-cloudwatch-alerts`.
+
+   * - Prometheus
+     - See :ref:`ii-ingest-prometheus-alerts`.
 
 .. raw:: html
 

@@ -5,6 +5,9 @@
 Respond to an incident: Acknowledge, resolve, or reject an incident
 ****************************************************************************
 
+.. meta::
+   :description: Incident status overview and steps to respond to an incident in Incident Intelligence in Splunk Observability Cloud.
+
 Incidents begin in the triggered status. The default status lifecycle for incidents is triggered, and then acknowledged, and then resolved.
 
 .. list-table::

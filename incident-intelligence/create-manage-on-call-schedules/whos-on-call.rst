@@ -5,6 +5,9 @@
 Check who's currently on call
 ************************************************************************
 
+.. meta::
+   :description: Steps to check who's on-call schedule for Incident Intelligence in Splunk Observability Cloud.
+
 You can view who's on call from the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligence.
 
 * If you are on call, :guilabel:`You are currently on call` displays on the :guilabel:`Incidents` and :guilabel:`Alerts` tabs. To view on-call schedule details, select :guilabel:`You are currently on call`. 

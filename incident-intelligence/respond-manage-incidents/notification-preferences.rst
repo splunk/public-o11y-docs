@@ -5,6 +5,9 @@
 Set your on-call notification preferences
 **************************************************
 
+.. meta::
+   :description: Steps to set your notification preferences for Incident Intelligence in Splunk Observability Cloud.
+
 When you are on call, triggered incidents notify you by email by default. You can also choose to receive notifications through SMS or mobile push. To set your on-call notification preferences, follow these steps:
 
 #. In Splunk Observability Cloud, select :guilabel:`Settings` > :guilabel:`Users` in the main menu.

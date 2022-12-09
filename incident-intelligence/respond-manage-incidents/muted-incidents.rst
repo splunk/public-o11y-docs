@@ -6,7 +6,7 @@ What is a muted incident?
 ************************************
 
 .. meta::
-   :description: Incidents are triggered in a muted state when a service is in maintenance. No responders are notified when a muted incident is triggered. Muted incidents are read-only and can't be acknowledged, resolved, or rejected.
+   :description: Understand muted incidents in Incident Intelligence in Splunk Observability Cloud.
 
 Incidents are triggered in a muted state when a service is in maintenance. See :ref:`ii-service-maintenance`.
 

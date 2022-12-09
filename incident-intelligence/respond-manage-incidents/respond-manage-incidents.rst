@@ -6,7 +6,7 @@ Respond to and manage incidents
 ************************************
 
 .. meta::
-   :description: After you configure your services, you can respond to incidents incidents as they are triggered.
+   :description: Overview of steps to respond and manage incidents in Incident Intelligence in Splunk Observability Cloud.
 
 Incidents are automatically triggered after you configure your services to route and group alerts and add an incident workflow to your service. Go to the :guilabel:`Incidents` tab in Incident Intelligence to view incidents as they are triggered.
 

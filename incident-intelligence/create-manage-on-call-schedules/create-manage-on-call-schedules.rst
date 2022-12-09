@@ -6,7 +6,7 @@ Create and manage on-call schedules
 ************************************************************************
 
 .. meta::
-   :description:
+   :description: Steps to create on-call schedules for Incident Intelligence in Splunk Observability Cloud.
     
 
 .. toctree::

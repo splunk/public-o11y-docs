@@ -6,7 +6,7 @@ Introduction to Splunk Incident Intelligence
 ************************************************************************
 
 .. meta::
-   :description: Get started collaboratively diagnosing and remediating issues across your environment using Incident Intelligence. 
+   :description: Intro to Incident Intelligence for collaborative diagnosis and issue remediation in Splunk Observability Cloud. 
 
 Use Incident Intelligence to collaboratively diagnose and remediate issues across your environment. Incident Intelligence lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing. 
 

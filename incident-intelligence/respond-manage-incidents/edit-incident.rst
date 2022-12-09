@@ -5,6 +5,9 @@
 Edit an incident
 *********************
 
+.. meta::
+   :description: Steps to edit an incident in Incident Intelligence in Splunk Observability Cloud.
+
 Incidents automatically inherit the title and description of the first alert that triggers the incident. To edit the incident title, description, or severity, follow these steps:
 
 #. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 

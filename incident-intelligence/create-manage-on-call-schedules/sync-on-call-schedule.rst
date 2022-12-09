@@ -2,10 +2,18 @@
 
 .. _ii-sync-on-call-schedule:
 
-Sync your on-call schedule to your personal calendar
+Check your on-call schedule and sync to your personal calendar
 ************************************************************************
 
-After you create an on-call schedule, you can sync the schedule to your preferred calendar app. 
+.. meta::
+   :description: Steps to access your personal on-call calendar and sync it to third-party calendar apps.
+   
+You can check your on-call schedule in Incident Intelligence and sync it to your preferred calendar app. 
+
+.. _personal-schedule:
+
+Access your personal on-call schedule
+========================================
 
 To access your personal on-call schedule follow these steps: 
 
@@ -22,6 +30,7 @@ Sync your on-call schedule to your Google Calendar
 
 To sync your on-call schedule to your Google Calendar, follow these steps:
 
+#. Get the link to your on-call schedule, see :ref:`personal-schedule`.
 #. Go to your Google Calendar.
 #. Select the plus icon next to :guilabel:`Other calendars`.
 #. Select :guilabel:`From URL`.
@@ -43,6 +52,7 @@ Sync your on-call schedule to your Microsoft Outlook Calendar
 
 To sync your on-call schedule to your Microsoft Outlook Calendar, follow these steps:
 
+#. Get the link to your on-call schedule, see :ref:`personal-schedule`.
 #. Go to your Microsoft Outlook Calendar.
 #. Select :guilabel:`Add calendar` > :guilabel:`Subscribe from web`.
 #. Paste your copied Incident Intelligence calendar URL.
@@ -58,6 +68,7 @@ Sync your on-call schedule to Calendar for iOS
 
 To sync an on-call schedule to your Calendar for iOS, follow these steps:
 
+#. Get the link to your on-call schedule, see :ref:`personal-schedule`.
 #. Go to your iOS Calendar.
 #. Select :guilabel:`File` > :guilabel:`New Calendar Subscription...`.
 #. Paste your copied Incident Intelligence calendar URL.

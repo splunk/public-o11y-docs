@@ -6,7 +6,7 @@ Review mean time to acknowledge and respond and other incident response stats
 ***********************************************************************************************
 
 .. meta::
-   :description: Use mean time to acknowledge and mean time to resolve to track your organization's incident response performance.
+   :description: Review available incident response statistics for tracking your organization's performance for Incident Intelligence in Splunk Observability Cloud.
 
 On the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligence, use the following incident statistics to track your organization's incident response performance.
 
