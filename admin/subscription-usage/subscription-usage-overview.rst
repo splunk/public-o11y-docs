@@ -11,7 +11,10 @@ Monitor subscription usage for Splunk Observability Cloud
    :hidden:
 
    apm-billing-usage-index
+   analyze-apm-billing-usage
+   apm-system-limits
    monitor-imm-billing-usage
+   dpm-usage
    lo-billing-usage
 
 
@@ -19,7 +22,10 @@ View Splunk Observability subscription usage data to monitor your organization's
 
 Observability Cloud admins can monitor billing usage for the following:
 
+-  :ref:`<apm-billing-usage-index>`
 -  :ref:`APM <analyze-apm-billing-usage>`
+-  :ref:`apm-system-limits`
 -  :ref:`Infrastructure Monitoring<monitor-imm-billing-usage>`
+-  :ref:`<dpm-usage>`
 -  :ref:`Log Observer<lo-billing-usage>`
 

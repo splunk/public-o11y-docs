@@ -18,9 +18,9 @@ Monitor Splunk APM subscription usage
    :hidden:
    :maxdepth:  3
 
-   /admin/apm-billing-usage/analyze-apm-billing-usage
-   /admin/apm-billing-usage/view-apm-billing-reports
-   /admin/apm-billing-usage/apm-system-limits
+   /admin/subscription-usage/analyze-apm-billing-usage
+   /admin/subscription-usage/view-apm-billing-reports
+   /admin/subscription-usage/apm-system-limits
    
 
 View Splunk APM subscription usage data to monitor your organization's usage against its subscription plan and entitlements. You have to be an administrator to view the APM Subscription Usage page for your organization. Go to :strong:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.

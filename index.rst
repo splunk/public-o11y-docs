@@ -947,11 +947,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Monitor subscription usage <admin/subscription-overview>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
+   Monitor subscription usage <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::
