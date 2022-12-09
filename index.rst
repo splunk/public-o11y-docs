@@ -600,6 +600,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
+   logs/log-observer-entitlement
+
+.. toctree::
+   :maxdepth:   3   
+
    logs/intro-logconnect
 
 .. toctree::
@@ -626,101 +631,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    logs/logs
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/timeline
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/live-tail
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/queries
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/raw-logs-display
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/keyword
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/filter-logs-by-field
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/alias
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/individual-log
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/message-field
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/aggregations
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/search-time-rules
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/save-share
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/logviews
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/pipeline
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/processors 
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/metricization
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/infinite
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/timestamp
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/limits
 
 .. toctree::
    :caption: RUM
