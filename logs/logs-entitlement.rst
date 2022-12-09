@@ -1,4 +1,4 @@
-.. _log-observer-entitlement:
+.. _logs-entitlement:
 
 ***********************************************************************
 Choose your entitlement: Log Observer or Log Observer Connect

@@ -600,12 +600,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/log-observer-entitlement
+   logs/logs-entitlement
 
 .. toctree::
    :maxdepth:   3   
 
-   logs/intro-logconnect
+   logs/logs-intro-logconnect
 
 .. toctree::
    :maxdepth:   3
