@@ -37,7 +37,7 @@ Differences between host, container, bundled, and custom metrics
      - :strong:`Description`
 
    * - Host and container metrics
-     - Default metrics sent by the the Splunk distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
+     - Default metrics sent by the the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
 
    * - Bundled metrics
      - Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers. They are included as part of a host-based subscription and you are not charged for them.
