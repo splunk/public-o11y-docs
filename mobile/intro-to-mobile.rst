@@ -7,10 +7,6 @@ Introduction to Splunk Observability Cloud for Mobile
 .. meta::
    :description: Get started using Splunk Observability Cloud for Mobile.
 
-============================================================
-What is Splunk Observability Cloud for Mobile?
-============================================================
-
 Splunk Observability Cloud for Mobile is an iOS and Android companion mobile app to Splunk Observability Cloud. You can use Splunk Observability Cloud for Mobile to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
 
 .. _wcidw-mobile:
@@ -30,3 +26,6 @@ Using Splunk Observability Cloud for mobile, you can do the following:
 - View, filter, and search for dashboards and alerts from your Splunk Observability Cloud instance.
 - Gain context on active alerts such as triggering conditions and detector details.
 - Conduct high-level investigation before switching to Splunk Observability Cloud or other relevant tools.
+- View, acknowledge, reject, resolve, and snooze incidents from Incident Intelligence on the :guilabel:`Incidents` tab. You can also add responders to an incident. 
+- View your on-call schedule on the :guilabel:`Settings` tab. 
+- If you've configured your on-call notification preference to send push notifications, you will receive push notification on any device where you're logged in to Splunk Observability Cloud for Mobile.

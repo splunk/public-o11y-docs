@@ -1,0 +1,80 @@
+<!--This can probably be pulled out of the HTML file at some point. This list was originally 3 levels deep and the numbering within the table was incorrect but it could probably be moved back to rst.-->
+
+<ol style="list-style-type: decimal !important;">
+    <li>In Incident Intelligence, select <span class="guilabel">Incident Management.</span></li>
+    <li>Select the <span class="guilabel">On-call schedules</span> tab.</li>
+    <li>Select <span class="guilabel">Create new schedule</span>.</li>
+    <li>Select the pencil icon to edit the schedule name. Name your schedules so that they are easy to find when adding them to an incident workflow. For example, include a team name, a priority (for example, primary, secondary, and so on), and what is being covered (for example, database, web, and so on). Select the checkmark icon to save your schedule name.</li>
+    <li>(Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the <span class="guilabel">Teams tag</span> field and select the team when it appears.</li>
+    <li>Under <span class="guilabel">Add shifts to this schedule</span>, create one day-by-day shift and one week-by-week shift. There is a
+        default blank shift to get you started in new schedules. To add shifts to the schedule, select <span class="guilabel">Add new shift</span>.
+        <li>
+            Enter a shift name. Shift names often refer to time (for example, business hours, weekends, and so on).
+        </li>
+        <li>
+            Select a shift start date.
+        </li>
+        <li>
+            Use the timezone picker to select the timezone for the coverage.
+        </li>
+        <li>
+            <p>Define your shift coverage:</p>
+            <table style="width: 100% !important; border: 1px solid !important;">
+                <thead>
+                <tr>
+                    <th class="head" style="width: 50% !important; border: 1px solid !important; padding: 0.25em 0.7em; !important; text-align:center;"><p><span class="strong">Shift coverage type</span></p></th>
+                    <th class="head" style="width: 50% !important; border: 1px solid !important; padding: 0.25em 0.7em; !important; text-align:center;"><p><span class="strong">Steps</span></p></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="width: 50% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                        <p>Day-by-day shift coverage</p>
+                    </td>
+                    <td style="width: 50% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                        <ol style="list-style-type: decimal !important; list-style-position: inside !important;">
+                            <li>Select the days of the week you want to set up coverage for.</li>
+                            <li>
+                                Select the <span class="guilabel">Daily start time</span> and <span class="guilabel">Daily end time</span>. If you want to set up 24-hour coverage, select <span class="guilabel">Create 24 hr shifts</span>.
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                        <p>Week-by-week shift coverage</p>
+                    </td>
+                    <td style="width: 50% !important; border: 1px solid !important; padding: 0.25em 0.7em;">
+                        <ol style="list-style-type: decimal !important; list-style-position: inside !important;">
+                            <li>
+                                Select the day and time you want the shift to start in the <span class="guilabel">Starts on</span> drop-down lists.
+                            </li>
+                            <li>Select the day and time you want the shift to end in the <span class="guilabel">Ends on</span> drop-down lists.</li>
+                        </ol>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            Under <span class="guilabel">Customize shift handoff</span>, select the number of shifts that you want to elapse before a handoff to the next team member in the schedule list.
+        </li>
+        <li>
+            Under <span class="guilabel">Add responders</span>, add one or more team members to the shift.
+
+            <ol style="list-style-type: lower-alpha !important;">
+                <li>
+                    Enter team member names and select them when they appear. If you added a teams tag, the team members from this team are listed at the top of this drop-down  list. Select <span class="guilabel">Add all members from [TEAM]</span> to quickly add all the team members from that team.  The <span class="guilabel">ALL</span> section of the team member list comes from the Observability Cloud user list. See <a href="https://docs.splunk.com/Observability/admin/users/manage-users.html">Create and manage users in Splunk Observability Cloud</a> for more info.
+                </li>
+                <li>Drag responders in the list to reorder.</li>
+            </ol>
+        </li>
+        <li>
+            Select <span class="guilabel">Save shift</span>. Shifts are added to the <span class="guilabel">SAVED SHIFTS</span> list under the schedule name.
+        </li>
+        <li>
+            Repeat these steps to add shifts to the schedule as needed.
+        </li>
+
+    </li>
+</ol>
