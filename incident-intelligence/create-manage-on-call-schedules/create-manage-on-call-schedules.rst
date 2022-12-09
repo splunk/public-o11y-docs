@@ -15,7 +15,6 @@ Create and manage on-call schedules
    example-schedule-scenarios
    sync-on-call-schedule
    whos-on-call
-   check-my-schedule
 
 
 When an incident occurs, it is important to contact a responder who understands that part of the system architecture to fix the problem. You can accomplish this through scheduling. An on-call schedule consists of a rotating group of responders that are assigned shifts for incident response. Use an on-call schedule as a step in your service incident workflows.
@@ -43,5 +42,4 @@ Now that you've created an on-call schedule, add it to the incident workflow for
 
 * :ref:`ii-schedule-scenarios`
 * :ref:`ii-whos-on-call`
-* :ref:`ii-my-on-call-schedule`
 * :ref:`ii-sync-on-call-schedule`

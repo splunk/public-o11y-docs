@@ -24,5 +24,4 @@ See also
 
 * :ref:`ii-create-manage-on-call-schedules`
 * :ref:`ii-schedule-scenarios`
-* :ref:`ii-my-on-call-schedule`
 * :ref:`ii-sync-on-call-schedule`
