@@ -6,7 +6,7 @@ Review mean time to acknowledge and respond and other incident response stats
 ***********************************************************************************************
 
 .. meta::
-   :description: Use mean time to acknowledge and mean time to respond to track your organization's incident response performance.
+   :description: Use mean time to acknowledge and mean time to resolve to track your organization's incident response performance.
 
 On the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligence, use the following incident statistics to track your organization's incident response performance.
 
@@ -32,7 +32,7 @@ On the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligenc
    * - Mean time to acknowledge (MTTA)
      - The average amount of time in minutes taken to acknowledge an incident for your organization.
 
-   * - Mean time to acknowledge (MTTR)
+   * - Mean time to resolve (MTTR)
      - The average amount of time in minutes taken to resolve an incident for your organization.
 
 See also
