@@ -10,23 +10,24 @@ Introduction to Splunk Log Observer Connect
    :description: Integrate Log Observer with Splunk Enterprise and use Log Observer Connect.
 
 .. toctree::
-   :hidden:
+    :maxdepth: 3
+    :hidden:
 
-   scp>
-   set-up-logconnect
-   timeline
-   queries
-   raw-logs-display
-   keyword
-   filter-logs-by-field
-   alias
-   individual-log-connect
-   message-field
-   aggregations
-   save-share
-   logviews
-   timestamp
-   limits
+    scp
+    set-up-logconnect
+    timeline
+    queries
+    raw-logs-display
+    keyword
+    filter-logs-by-field
+    alias
+    individual-log-connect
+    message-field
+    aggregations
+    save-share
+    logviews
+    timestamp
+    limits
 
 If you have a Log Observer entitlement rather than Log Observer Connect, see :ref:`get-started-logs`. 
 
