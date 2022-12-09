@@ -1,7 +1,7 @@
 .. _lo-billing-usage:
 
 *********************************************************************
-Analyze Splunk APM subscription usage data for your subscription plan
+Monitor Log Observer subscription usage
 *********************************************************************
 
 .. meta::

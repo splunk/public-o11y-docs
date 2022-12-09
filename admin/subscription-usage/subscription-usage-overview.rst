@@ -13,10 +13,11 @@ Monitor subscription usage for Splunk Observability Cloud
    apm-billing-usage-index
    analyze-apm-billing-usage
    apm-system-limits
+   view-apm-billing-reports
    monitor-imm-billing-usage
    dpm-usage
    lo-billing-usage
-   view-apm-billing-reports
+   
 
 
 View Splunk Observability subscription usage data to monitor your organization's usage against its subscription plan and entitlements. You have to be an administrator to view the Subscription Usage page for your organization. Go to :strong:`Settings > Subscription Usage`. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
