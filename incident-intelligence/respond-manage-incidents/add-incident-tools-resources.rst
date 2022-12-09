@@ -5,7 +5,7 @@
 Add collaboration tools and resources to an incident
 *********************************************************
 
-Use resources and collaboration tools to give responders quick access to any resources they might need when working the incident. Collaboration tools ensure that incident responders know where to go to collaborate with other responders to resolve an incident. This might be a Slack channel or a conference bridge. Resources might include a runbook or other helpful resource. 
+Use resources and collaboration tools to give responders quick access to any resources they might need when working the incident. Collaboration tools ensure that incident responders know where to go to collaborate with other responders to resolve an incident, such as a Slack channel or a conference bridge. Resources might include a runbook or other helpful resource. 
 
 .. _add-resources:
 

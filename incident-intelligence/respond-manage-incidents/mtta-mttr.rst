@@ -8,14 +8,32 @@ Review mean time to acknowledge and respond and other incident response stats
 .. meta::
    :description: Use mean time to acknowledge and mean time to respond to track your organization's incident response performance.
 
-On the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligence use the following incident statistics to track your organizations incident response performance.
+On the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligence, use the following incident statistics to track your organization's incident response performance.
 
-- Triggered incidents - The current number of incidents with the triggered status for your organization.
-- Acknowledged incidents - The current number of incidents with the acknowledged status for your organization.
-- Resolved incidents - The current number of incidents with the resolved status for your organization.
-- Rejected incidents - The current number of incidents with the rejected status for your organization.
-- Mean time to acknowledge (MTTA) - The average amount of time (in minutes) taken to acknowledge an incident for your organization.
-- Mean time to respond (MTTR) - The average amount of time (in minutes) taken to resolve an incident for your organization.
+.. list-table::
+   :header-rows: 1
+   :widths: 25, 75
+
+   * - :strong:`Statistic`
+     - :strong:`Description`
+
+   * - Triggered incidents
+     - The current number of incidents with the triggered status for your organization.
+
+   * - Acknowledged incidents
+     - The current number of incidents with the acknowledged status for your organization.
+
+   * - Resolved incidents
+     - The current number of incidents with the resolved status for your organization.
+
+   * - Rejected incidents
+     - The current number of incidents with the rejected status for your organization.
+
+   * - Mean time to acknowledge (MTTA)
+     - The average amount of time in minutes taken to acknowledge an incident for your organization.
+
+   * - Mean time to acknowledge (MTTR)
+     - The average amount of time in minutes taken to resolve an incident for your organization.
 
 See also
 ============

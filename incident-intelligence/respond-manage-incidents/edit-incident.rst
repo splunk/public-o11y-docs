@@ -9,7 +9,7 @@ Incidents automatically inherit the title and description of the first alert tha
 
 #. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 
 #. Select the incident from the incident list.
-#. Select the :guilabel:`pencil` icon.
+#. Select the pencil icon.
 #. Edit the title, description, or severity. 
 #. Select :guilabel:`Save`.
 

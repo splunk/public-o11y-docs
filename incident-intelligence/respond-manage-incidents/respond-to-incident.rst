@@ -7,29 +7,29 @@ Respond to an incident: Acknowledge, resolve, or reject an incident
 
 Incidents begin in the triggered status. The default status lifecycle for incidents is triggered, and then acknowledged, and then resolved.
 
-Acknowledge an incident
-============================
+.. list-table::
+   :header-rows: 1
+   :widths: 25, 75
 
-To acknowledge an incident, select the :guilabel:`Incidents` tab in Incident Intelligence. You can acknowledge incidents in two places:
+   * - :strong:`Incident status`
+     - :strong:`Description`
 
-* Select :guilabel:`Acknowledge` on a triggered incident in the lists of incidents. You can also skip the incident status lifecycle by selecting :guilabel:`Resolve` or :guilabel:`reject` from the :guilabel:`Actions` menu for the incident.
-* Select the triggered incident you want to acknowledge from the list of incidents. On the incident detail page, select :guilabel:`Acknowledge`. You can also select resolve or reject from the :guilabel:`Actions` menu next to the :guilabel:`Acknowledge` button for the incident.
+   * - Triggered
+     - Triggered incidents are considered active and open. Triggered incidents notify responders as defined by the steps in the associated service's incident workflow. 
 
-Resolve an incident
-=================================
+   * - Acknowledged
+     - Acknowledged incidents are considered valid and under investigation. Setting an incident status to acknowledged prevents further notifications. 
 
-To resolve an incident, select the :guilabel:`Incidents` tab in Incident Intelligence. You can resolve incidents in two places:
+   * - Rejected
+     - Rejected incidents are considered invalid and closed; you will no longer be able to make updates to rejected incidents. Setting an incident status to rejected prevents further notifications. 
 
-* Select :guilabel:`Resolve` on acknowledged incidents in the lists of incidents. You can also skip the incident status lifecycle by selecting a status from the :guilabel:`Actions` menu on the incident.
-* Select an acknowledged incident you want to resolve from the list of incidents. On the incident detail page, select :guilabel:`Resolve`. You can also select a status from the :guilabel:`Actions` menu next to the :guilabel:`Resolve` button to resolve or reject the incident.
+   * - Resolved
+     - Resolved incidents are considered investigated and closed. Setting an incident status to resolved prevents further notifications. 
 
-Reject an incident
-====================================
+To acknowledge, reject, or resolve an incident, select the :guilabel:`Incidents` tab in Incident Intelligence. 
 
-To reject an incident, select the :guilabel:`Incidents` tab in Incident Intelligence. When you reject an incident it is considered invalid and closed; you will no longer be able to make updates to the incident. Setting an incident status to rejected prevents the escalation to the next step in an incident workflow. You can reject incidents in two places:
-
-* Select the :guilabel:`Actions` menu on the incident and select :guilabel:`Reject` from the list.
-* Select the incident you want to reject from the list of incidents. On the incident detail page, select the :guilabel:`Actions` menu next to the :guilabel:`Acknowledge` button, and select :guilabel:`Reject` from the list. (This button might say :guilabel:`Resolve` if the incident was previously acknowledged.)
+* You can acknowledge an incident from the list of incidents or, alternatively, you can go into the detail of each incident and acknowledge it there.
+* From either location you also have the option to resolve or reject the incident.
 
 See also
 ============
