@@ -1,4 +1,4 @@
-.. _logs-intro-logconnect:
+.. _intro-logconnect:
 
 *****************************************************************
 Introduction to Splunk Log Observer Connect
