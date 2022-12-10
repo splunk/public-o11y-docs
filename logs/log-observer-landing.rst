@@ -11,6 +11,7 @@ Splunk Log Observer
     :maxdepth: 3
     :hidden:
 
+
     get-started-logs
     logs
     timeline
@@ -34,6 +35,8 @@ Splunk Log Observer
     limits
 
 
+
+- :ref:`get-started-logs`
 
 - :ref:`logs-logs`
 
@@ -65,11 +68,11 @@ Splunk Log Observer
 
 - :ref:`logs-pipeline`
 
-- :ref:`logs-processors`
-
-- :ref:`logs-metricization`
-
-- :ref:`logs-infinite`
+  - :ref:`logs-processors`
+  
+  - :ref:`logs-metricization`
+  
+  - :ref:`logs-infinite`
 
 - :ref:`logs-timestamp`
 
