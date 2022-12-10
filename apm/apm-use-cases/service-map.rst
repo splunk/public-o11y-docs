@@ -24,7 +24,7 @@ Kai clicks the :strong:`paymentservice` node to discover the endpoint with the t
     :width: 70%
     :alt: This screenshot shows the Tag Spotlight preview of the endpoints with the top error rate and the top latency.
 
-Kai adds the link to the endpoint’s Tag Spotlight and a note identifying the endpoint as the root cause of the error to customers’ tickets. Kai sends the ticket to the payment service owner for further troubleshooting.
+Kai adds the link to the endpoint's Tag Spotlight and a note identifying the endpoint as the root cause of the error to customers' tickets. Kai sends the ticket to the payment service owner for further troubleshooting.
 
 Learn more
 ==============

@@ -13,6 +13,10 @@ To learn more about the types of Uptime tests, see :ref:`uptime-test`. To set up
 
 .. _uptime-test-history:
 
+
+
+.. _uptime-detector: 
+
 View Uptime test history
 ==========================
 
