@@ -12,6 +12,7 @@ The following use cases feature examples from Buttercup Industries, a fictitious
 
 About this use case 
 ================================
+
 Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Browser to monitor errors. In this use case, you can learn about the types of errors Kai looks for in their data at Buttercup Industries. 
 
 Errors in Splunk RUM  
@@ -29,6 +30,7 @@ The following definitions and examples walk through different types of errors Ka
 
 JavaScript errors
 =================
+
 In Splunk RUM for Browser, there are two types of JavaScript errors, explicit JavaScript console errors and uncaught JavaScript errors like onerror events. Front-end errors are shown by page and described in terms of errors per min or errors per page load or route change.
 
 JavaScript console errors
@@ -38,6 +40,7 @@ A JavaScript console error is an explicit error. When Kai calls a ``console.erro
 Uncaught JavaScript errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors typically don't have custom error messages. Uncaught JavaScript errors can contain important information in an unedited format like a stack trace. Both caught and uncaught JavaScript errors can contain stack traces. This example span of an uncaught error from the fictitious "my-app" walks through what fields you might see in Splunk RUM in the details view.
+
 ::
 
   Span ID                      c85a362c4667
@@ -63,19 +66,24 @@ An uncaught JavaScript error is an implicit error. Uncaught JavaScript errors ty
 
 Back-end errors and long resource response times
 ================================================
+
 Back-end errors can be captured for both first-party and third-party endpoints.
 
 Resource errors
 ^^^^^^^^^^^^^^^
+
 In Splunk RUM for Browser, resource errors are explicit HTTP <method> event errors like fetch errors, AJAX errors and XHR requests. An XHR/fetch error happens when the server encounters an error. For example, if a user requested to access data on Kai's application and the data was deleted from the server. A third party resource error is when a user tries to access resource over a network and the resource is unavailable. For example, if a user on your application tries to load a JavaScript, CSS, or image resource, but it didn't load.
 
 Resource response time
 ^^^^^^^^^^^^^^^^^^^^^^
+
 Monitor the performance of endpoints with RUM to identify spikes in behavior like slow resource response.
 
 Example span
 ^^^^^^^^^^^^^
+
 This shows an example span for the fictitious "my-app" with a 404 error.
+
 ::
 
   Span ID                      c85a362c4668
@@ -107,11 +115,10 @@ This shows an example span for the fictitious "my-app" with a 404 error.
   splunk.rumVersion	           0.0.14
   splunk.scriptInstance        instance123
 
-
 Summary
 =================================
-This use case walked through the definitions of error types in Splunk RUM for Browser. To learn more about how you can optimize your experience with Splunk Observability Cloud, see:  
 
+This use case walked through the definitions of error types in Splunk RUM for Browser. To learn more about how you can optimize your experience with Splunk Observability Cloud, see:  
 
 .. list-table::
    :header-rows: 1
@@ -131,6 +138,4 @@ This use case walked through the definitions of error types in Splunk RUM for Br
        * :ref:`rum-custom-event`
        * :ref:`rum-alerts`
        * :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
-
-
-
+       * 

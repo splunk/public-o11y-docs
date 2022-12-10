@@ -846,6 +846,42 @@ View a list of all supported integrations :ref:`supported-data-sources`
    synthetics/test-config/test-config
 
 .. toctree::
+   :caption: INCIDENT INTELLIGENCE
+   :maxdepth:   3
+
+   Introduction to Splunk Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
+
+.. toctree::
+   :maxdepth:   3
+
+   incident-intelligence/key-concepts
+
+.. toctree::
+   :maxdepth:   3
+
+   Set up Incident Intelligence <incident-intelligence/set-up-incident-intelligence>
+
+.. toctree::
+   :maxdepth:   3
+
+   Ingest alerts in Incident Intelligence <incident-intelligence/ingest-alerts/ingest-alerts>
+
+.. toctree::
+   :maxdepth:   3
+
+   incident-intelligence/create-configure-services
+
+.. toctree::
+   :maxdepth:   3
+
+   incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules
+
+.. toctree::
+   :maxdepth:   3
+
+   incident-intelligence/respond-manage-incidents/respond-manage-incidents
+
+.. toctree::
    :caption: UNDERSTAND YOUR DATA
    :maxdepth:   3
 
@@ -891,6 +927,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    View dashboards and alerts <mobile/use-mobile>
+
+.. toctree::
+   :maxdepth:   3
+
+   mobile/notification-preferences-mobile
 
 .. toctree::
    :caption: ADMINISTER OBSERVABILITY CLOUD

@@ -5,7 +5,7 @@ Identify metric types
 *****************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud uses the type of a metric to determine how to roll up individual data points for the resolution you specify. Observability Cloud has three metric types: gauges, cumulative counters, and counters. Gauge metrics measure data has a specific, changing value at each point in time. Counters provide a count of occurrences in a time interval; the counter resets to 0 after it's reported. Cumulative counters provide a running count of occurrences, and they don't reset until the system restarts or their value overflows.
+   :description: Learn about three metric types in Splunk Observability Cloud: gauges, cumulative counters, and counters.
 
 In Splunk Observability Cloud, there are three types of metrics: gauge metrics, counter metrics, and cumulative counter metrics. The type of the metric determines how Splunk Observability Cloud summarizes individual incoming data points to
 match a specified data resolution.
