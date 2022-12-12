@@ -27,7 +27,7 @@ Symptom
 
 You may see this error message:
 
-AADSTS700016: Application with identifier 'https://api.signalfx.com/v1/saml/metadata/EiObDvcAYAA' was not found in the directory 'fa80159f-****-****-****-************'.
+:code:`Application with identifier https://api.signalfx.com/v1/saml/metadata/EiObDvcAYAA was not found in the directory fa80159f-****-****-****-************.``
 
 
 Causes
