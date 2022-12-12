@@ -492,7 +492,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   apm/set-up-apm/apm
+   apm/key-concepts
 
 .. toctree::
    :maxdepth:   3
@@ -502,7 +502,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   apm/key-concepts
+   apm/set-up-apm/apm
 
 .. toctree::
    :maxdepth:   3
@@ -546,6 +546,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Introduction <infrastructure/intro-to-infrastructure>
 
 .. toctree::
+   :maxdepth:   3
+
+   Key concepts <infrastructure/terms-concepts>
+
+.. toctree::
    :maxdepth:   2
 
    Quick start tutorial <infrastructure/quickstart-imm>
@@ -555,10 +560,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    infrastructure/infrastructure
 
-.. toctree::
-   :maxdepth:   3
-
-   Key concepts <infrastructure/terms-concepts>
 
 .. toctree::
    :maxdepth:   3
@@ -616,7 +617,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Set up Splunk RUM <rum/set-up-rum>
+   rum/rum-terminology-concepts
 
 .. toctree::
    :maxdepth:   3
@@ -626,13 +627,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/data-collected
+   Set up Splunk RUM <rum/set-up-rum>
 
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-terminology-concepts
-
+   rum/data-collected
 
 .. toctree::
    :maxdepth:   3
@@ -693,17 +693,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   synthetics/set-up-synthetics/set-up-synthetics
-
-.. toctree::
-   :maxdepth:   3
-
    synthetics/key-concepts
 
 .. toctree::
    :maxdepth:   3 
   
    synthetics/synth-use-cases/synth-landing
+
+.. toctree::
+   :maxdepth:   3
+
+   synthetics/set-up-synthetics/set-up-synthetics
 
 .. toctree::
    :maxdepth:   3
