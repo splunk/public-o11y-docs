@@ -132,7 +132,7 @@ Using this endpoint, your alarm is ingested and transformed into the common even
       "description": "Glue Data Catalog Database State Change", 
       "severity": "WARNING", 
       "sourceType": "cloudwatch", 
-      "orgId": "FBMqy06AIA0", 
+      "orgId": "<YOUR_ORG_ID>", 
       "triggeredAt": 1547662128000, 
       "properties": { 
           "version": "0", 
