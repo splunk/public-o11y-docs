@@ -32,6 +32,8 @@ If you've installed the Browser RUM agent using npm, you can run ``npm ls @splun
 Create a span
 ---------------------------------------
 
+The following example shows how to create a span with an attribute:
+
 .. code-block:: javascript
 
    import {trace} from '@opentelemetry/api'
@@ -47,6 +49,8 @@ Create a span
 Set the user ID on all spans
 ---------------------------------------
 
+The following example shows how to set the user ID globally:
+
 .. code-block:: javascript
 
    SplunkRum.setGlobalAttributes({
@@ -55,6 +59,8 @@ Set the user ID on all spans
 
 Create a custom event
 ---------------------------------------
+
+The following example shows how to create a custom event:
 
 .. code-block:: javascript
 
