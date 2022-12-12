@@ -8,7 +8,7 @@ Ingest Prometheus alerts
 .. meta::
    :description: Detailed overview of Prometheus alert ingestion endpoint for Incident Intelligence in Splunk Observability Cloud. 
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route Prometheus incidents to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. For more information, see :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config` in the Prometheus documentation.
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route third-party incidents to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. For more information, see :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config` in the Prometheus documentation.
 
 Prometheus ingest endpoint
 ---------------------------------

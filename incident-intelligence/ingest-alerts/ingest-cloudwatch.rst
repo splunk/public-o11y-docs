@@ -8,7 +8,7 @@ Ingest Amazon CloudWatch alarms
 .. meta::
    :description: Detailed overview of AWS Cloudwatch alert ingestion endpoint for Incident Intelligence in Splunk Observability Cloud. 
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can create on-call schedules and incident workflows to route AWS incidents to responders. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms to Incident Intelligence, which ingests them as alerts. You can send AWS CloudWatch alarms directly to the ingest endpoint or use AWS CloudWatch Simple Notification Service (SNS).
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route third-party incidents to responders. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms to Incident Intelligence, which ingests them as alerts. You can send AWS CloudWatch alarms directly to the ingest endpoint or use AWS CloudWatch Simple Notification Service (SNS).
 
 Prerequisite
 ================
