@@ -21,13 +21,7 @@ Check the version of the OpenTelemetry API
 
 To manually instrument your application, the version of ``@opentelemetry/api`` you use must match the same major version of ``@opentelemetry/api`` used by the Browser RUM agent.
 
-To verify this, search your incoming data for the ``splunk.rumVersion`` and ``telemetry.sdk.version`` attributes in any of the RUM sessions inside the :guilabel:`User Sessions` tab. Both version numbers must match.
-
-..  image:: /_images/rum/user-session-versions.png
-   :width: 99%
-   :alt: OpenTelemetry API version attributes, highlighted in a single RUM user session
-
-If you've installed the Browser RUM agent using npm, you can run ``npm ls @splunk/otel-web`` or ``npm ls @opentelemetry/api`` to check the versions from the console.
+To verify this, run ``window[Symbol.for('opentelemetry.js.api.1')].version`` in the browser's console from any page that you've instrumented. The command returns the full version of the OpenTelemetry API.
 
 Create a span
 ---------------------------------------
