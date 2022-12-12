@@ -27,7 +27,7 @@ You must be an administrator of your Splunk Observability Cloud organization to 
 
 .. note:: 
 
-   Observablity Cloud supports all GCP regions. 
+   Observability Cloud supports all GCP regions. 
 
 .. _gcp-one:
 

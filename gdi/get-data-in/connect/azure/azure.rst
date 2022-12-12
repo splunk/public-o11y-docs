@@ -36,7 +36,7 @@ To learn more about these privileges, see the Azure documentation for registerin
 
 .. note:: 
 
-  Observablity Cloud supports all Azure regular regions, and Azure Government. 
+  Observability Cloud supports all Azure regular regions, and Azure Government. 
 
 .. raw:: html
 

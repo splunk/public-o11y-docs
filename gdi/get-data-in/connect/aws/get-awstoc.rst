@@ -53,7 +53,7 @@ To connect AWS to Observability Cloud and integrate those platforms, you must me
 
 .. note:: 
 
-  Observablity Cloud supports all AWS regular regions, GovCloud, and China. However, the GovCloud and China regions require a secure token for access. 
+  Observability Cloud supports all AWS regular regions, GovCloud, and China. However, the GovCloud and China regions require a secure token for access. 
 
 .. _prep-for-aws-integration:
 
