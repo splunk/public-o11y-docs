@@ -9,7 +9,7 @@ Create and configure incident policies
 .. meta::
    :description: Steps to create and configure incident policies to organize incidents for Incident Intelligence in Splunk Observability Cloud.
 
-Use incident policies to organize incidents depending on the impacted environmental component, for example, your web application service or checkout service. Begin by creating a incident policy. Then, route alerts to the incident policy. Next, specify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered.
+Use incident policies to organize incidents depending on the impacted environmental component, for example, your web application service or checkout service. Begin by creating an incident policy. Then, route alerts to the incident policy. Next, specify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident is triggered.
 
 .. _ii-create-incident-policy:
 
@@ -30,7 +30,7 @@ After you create your incident policy, you are directed to configure which alert
 Configure the alerts that are routed to your incident policy
 ============================================================
 
-Use alert routing to associate alerts with a incident policy. If an alert matches your alert filter conditions, it is routed to the incident policy. To set up your alert routing for the incident policy, follow these steps:
+Use alert routing to associate alerts with an incident policy. If an alert matches your alert filter conditions, it is routed to the incident policy. To set up your alert routing for the incident policy, follow these steps:
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert routing conditions to.
@@ -105,10 +105,10 @@ To put your incident policy in maintenance, select the :guilabel:`Actions` menu 
 
 All incidents that are associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
 
-Take a incident policy out of maintenance
+Take an incident policy out of maintenance
 ---------------------------------------------
 
-To take a incident policy out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the incident policy you want to take out of maintenance and select :guilabel:`Enable`. The incident policy status shows as :guilabel:`Enabled`. This resumes triggering incidents associated with the incident policy.   
+To take an incident policy out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the incident policy you want to take out of maintenance and select :guilabel:`Enable`. The incident policy status shows as :guilabel:`Enabled`. This resumes triggering incidents associated with the incident policy.   
 
 Next step
 ============

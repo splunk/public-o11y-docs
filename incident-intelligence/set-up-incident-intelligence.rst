@@ -24,7 +24,7 @@ Complete these tasks to get started with Incident Intelligence:
 
 #. Ingest alerts in Incident Intelligence. See :ref:`ii-ingest-alerts`.
 #. Create incident policies to organize your alerts and incidents based on the impacted environmental component, for example, your web application service or checkout service. See :ref:`ii-create-configure-incident-policies`.
-#. Configure the alert routing within the incident policy to associate alerts with a incident policy. See :ref:`ii-configure-alert-routing`.
+#. Configure the alert routing within the incident policy to associate alerts with an incident policy. See :ref:`ii-configure-alert-routing`.
 #. Configure alert grouping within the incident policy to manage which alerts create an incident and how alerts are grouped into incidents. See :ref:`ii-configure-alert-grouping`.
 #. Configure the incident workflow within the incident policy to determine who is notified when a new incident is triggered. See :ref:`ii-configure-incident-workflows`. 
 #. Create an on-call schedule and add them as a step in your incident workflows. See :ref:`ii-create-manage-on-call-schedules`.

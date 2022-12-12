@@ -27,13 +27,13 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - Use alert grouping to automate incident trigger conditions and group alerts. Alert grouping conditions are set up at the incident-policy level to let you customize the grouping rules for each incident policy. 
 
    * - Alert routing
-     - Alert routing associates alerts with a incident policy. If an alert matches your configured alert routing conditions, it is routed to the incident policy.
+     - Alert routing associates alerts with an incident policy. If an alert matches your configured alert routing conditions, it is routed to the incident policy.
 
    * - Detector
      - Use a detector to specify the events for which you want to create an alert that is ingested into Incident Intelligence.
 
    * - Incident Management
-     - The entire configuration process for a incident policy in Incident Intelligence. This is where you create a incident policy and configure alert routing, alert grouping, and incident workflows for incidents associated with a incident policy. 
+     - The entire configuration process for an incident policy in Incident Intelligence. This is where you create an incident policy and configure alert routing, alert grouping, and incident workflows for incidents associated with an incident policy. 
 
    * - Incident
      - An unplanned interruption to a service or reduction in the quality of a service that needs to be resolved. Each incident is made up of alerts that are ingested into Incident Intelligence.
@@ -54,7 +54,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - A configurable series of escalation steps that run in response to a triggered incident. Incident workflows determine who is notified of an incident and the time interval for notifications. You can also use incident workflows to manage how incidents are routed, add automation steps, and route to an on-call schedule.
 
    * - Maintenance
-     - A incident policy status that mutes all associated incidents. Use incident policy maintenance for planned outages.
+     - An incident policy status that mutes all associated incidents. Use incident policy maintenance for planned outages.
 
    * - Mean time to acknowledge (MTTA)
      - The average time it takes from when an incident is triggered to when the incident is acknowledged.
@@ -75,7 +75,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.
 
    * - Incident policy-based routing
-     - Incident Intelligence relies on a incident policy-based routing scheme. Incident policy-based routing automatically organizes and routes incidents depending on the service that it’s impacting. Rather than routing to a combination of teams and policies, the incident policy an incident is associated with determines who is notified of the incident. 
+     - Incident Intelligence relies on an incident policy-based routing scheme. Incident policy-based routing automatically organizes and routes incidents depending on the service that it’s impacting. Rather than routing to a combination of teams and policies, the incident policy an incident is associated with determines who is notified of the incident. 
 
    * - Snoozed
      - An incident status that is set when responders snooze the incident.

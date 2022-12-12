@@ -55,7 +55,7 @@ Follow the links in the table to complete the tasks that are relevant to you.
      - Incident policies
      - See :ref:`ii-create-configure-incident-policies`.
 
-   * - Route alerts to associate them with a incident policy.
+   * - Route alerts to associate them with an incident policy.
      - Alert routing
      - See :ref:`ii-configure-alert-routing`.
 
