@@ -44,7 +44,7 @@ Request header
 
    * - X-SF-Token  
      - Required
-     - Authentication token. See :ref:`api-access-token`.
+     - Authentication token. See :ref:`api-access-token`. Ensure that the token as :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
 
 
 Alarm fields
