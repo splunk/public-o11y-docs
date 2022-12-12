@@ -133,7 +133,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
       "description": "",
       "severity": "major",
       "sourceType": "azure_monitor",
-      "orgId": "FBMqy06AIA0",
+      "orgId": "<YOUR_ORG_ID>",
       "triggeredAt": 1553263104371,
       "properties": {
           "schemaId": "azureMonitorCommonAlertSchema",

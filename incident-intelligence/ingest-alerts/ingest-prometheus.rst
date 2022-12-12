@@ -151,7 +151,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
     "description": "Receiver 'my-receivers' received alerts from Prometheus. For more info, see http://d37bfc81e932:9093. Common labels - disk: mydisk1, instance: nodeexporter1:9100, job: node_exporter1",
     "severity": "critical",
     "sourceType": "prometheus",
-    "orgId": "FBMqy06AIA0",
+    "orgId": "<YOUR_ORG_ID>",
     "triggeredAt": 1656550514064,
     "properties": {
         "receiver": "my-receivers",
