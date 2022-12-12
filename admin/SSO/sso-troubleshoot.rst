@@ -86,9 +86,9 @@ You receive a 401 error after you log in to the IdP
 Symptom
 *********
 For example, you see an error message stating that authentication is required.
-.. image:: /_images/admin/sso-troubleshoot401.png
-  :width: 50%
-  :alt: A 401 error message stating "Authentication required".
+  .. image:: /_images/admin/sso-troubleshoot401.png
+    :width: 50%
+    :alt: A 401 error message stating "Authentication required".
 
 Cause
 ******
