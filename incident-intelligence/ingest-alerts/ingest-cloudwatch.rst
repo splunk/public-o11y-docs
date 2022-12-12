@@ -97,7 +97,7 @@ Alarm fields
 JSON payload
 ---------------
 
-Send AWS Cloudwatch alarms to the AWS Cloudwatch endpoint. Use this JSON payload. 
+Send AWS Cloudwatch alarms to the AWS Cloudwatch endpoint. Refer to the below example JSON payload for the AWS Cloudwatch endpoint. 
 
 Example JSON payload:
 

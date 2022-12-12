@@ -79,7 +79,7 @@ Alert fields
 JSON payload
 ------------
 
-Use the Prometheus alertmanager webhook config to send Prometheus alerts to the Prometheus endpoint. Use this JSON payload. 
+Use the Prometheus alertmanager webhook config to send Prometheus alerts to the Prometheus endpoint. Refer to the below example JSON payload for the Prometheus endpoint. 
 
 Example JSON payload:
 

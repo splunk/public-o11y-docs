@@ -66,7 +66,7 @@ Alert fields
 JSON payload
 ------------
 
-Use this JSON payload to send Azure Monitor alerts to the Azure Monitor endpoint. 
+Refer to the below example JSON payload for the Azure Monitor endpoint. 
 
 Example JSON payload:
 
