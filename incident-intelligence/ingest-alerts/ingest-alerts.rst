@@ -73,4 +73,4 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
       <h2>Next step</h2>
    </embed>
 
-If you are setting up Incident Intelligence for the first time, next you need to create and configure a service. See :ref:`ii-create-configure-services`.
+If you are setting up Incident Intelligence for the first time, next you need to create and configure an incident policy. See :ref:`ii-create-configure-services`.
