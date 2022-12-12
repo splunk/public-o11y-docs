@@ -4,8 +4,8 @@
           <a href="{{ doc.link|e }}">{{ doc.title }}</a> &raquo;
       {% endfor %}
     {{ title }}
-    {%- if olly_on_github_url %}
-    <div class="olly_git_hub_link" style="display:none;">
+    {%- if olly_on_github_url and pagename!="index" %} 
+    <div class="olly_git_hub_link" style="display: none;">
     <a variant="outline" class="css-github-link" 
       href="{{ olly_on_github_url }}" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" class="css-icon" xmlns="http://www.w3.org/2000/svg">

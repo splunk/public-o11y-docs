@@ -422,7 +422,7 @@ $(window).scroll(function() {
     });
     
     if($('.sphinxsidebarwrapper ul.current').length > 0) {
-      var liTOC = "<li class='githubeditlink' style='margin-top:5px;'>Edit this Page</li>";
+      var liTOC = "<li class='githubeditlink' style='margin-top:5px;'></li>";
         //console.log("aaaaa");
 
         if($('a.headerlink').parent().length <= 1)
@@ -434,7 +434,7 @@ $(window).scroll(function() {
             $('#rightSideTOC').append(liTOC);
             $(".githubeditlink").html($(".olly_git_hub_link").html());
             currentURL = $(".css-github-link").attr("href");
-            if(!window.location.origin.includes("docs.splunk.com")){
+            if(!window.location.origin.includes("docs.splunk.com") && currentURL!=undefined){
               currentURL = currentURL.replace("public-o11y-docs", "private-o11y-docs");
               $(".css-github-link").attr("href", currentURL)
             }
@@ -474,19 +474,18 @@ $(window).scroll(function() {
           console.log(liTOC);
           $('#rightSideTOC').append(liTOC);
           $(".githubeditlink").html($(".olly_git_hub_link").html());
-          $(".css-github-link").attr("href", "http://www.google.com/")
           currentURL = $(".css-github-link").attr("href");
-            if(!window.location.origin.includes("docs.splunk.com")){
+          if(!window.location.origin.includes("docs.splunk.com") && currentURL!=undefined){
               currentURL = currentURL.replace("public-o11y-docs", "private-o11y-docs");
               $(".css-github-link").attr("href", currentURL)
             }
 
         }else{
-          var liTOC = "<li class='githubeditlink' style='margin-top:5px;'>Edit this Page</li>";
+          var liTOC = "<li class='githubeditlink' style='margin-top:5px;'></li>";
           $('#rightSideTOC').append(liTOC);
           $(".githubeditlink").html($(".olly_git_hub_link").html());
           currentURL = $(".css-github-link").attr("href");
-            if(!window.location.origin.includes("docs.splunk.com")){
+          if(!window.location.origin.includes("docs.splunk.com") && currentURL!=undefined){
               currentURL = currentURL.replace("public-o11y-docs", "private-o11y-docs");
               $(".css-github-link").attr("href", currentURL)
             }
