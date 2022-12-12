@@ -18,7 +18,7 @@ Incidents begin in the triggered status. The default status lifecycle for incide
      - :strong:`Description`
 
    * - Triggered
-     - Triggered incidents are considered active and open. Triggered incidents notify responders as defined by the steps in the associated service's incident workflow. 
+     - Triggered incidents are considered active and open. Triggered incidents notify responders as defined by the steps in the associated incident policy's incident workflow. 
 
    * - Acknowledged
      - Acknowledged incidents are considered valid and under investigation. Setting an incident status to acknowledged prevents further notifications. 

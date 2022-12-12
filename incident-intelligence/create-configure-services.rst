@@ -14,7 +14,7 @@ Use incident policies to organize incidents depending on the impacted environmen
 .. _ii-create-incident-policy:
 
 Create an incident policy
-====================
+===========================
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` > :guilabel:`Create incident policy`.
@@ -64,7 +64,7 @@ After you manage which alerts create an incident and how alerts are grouped into
 .. _ii-configure-incident-workflows:
 
 Configure incident workflows for your incident policy
-==================================================
+=========================================================
 
 Use incident workflows to determine who is notified when a new incident is triggered. To create an automatic incident workflow, add escalating steps to notify responders of the incident. To add an incident workflow, follow these steps:
 
@@ -97,7 +97,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 .. _ii-incident-policy-maintenance:
 
 Mute notifications using incident policy maintenance
-==================================================
+=======================================================
 
 Use incident policy maintenance to mute notifications while you are making changes to the incident policy. 
 
@@ -106,7 +106,7 @@ To put your incident policy in maintenance, select the :guilabel:`Actions` menu 
 All incidents that are associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
 
 Take a incident policy out of maintenance
--------------------------------------
+---------------------------------------------
 
 To take a incident policy out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the incident policy you want to take out of maintenance and select :guilabel:`Enable`. The incident policy status shows as :guilabel:`Enabled`. This resumes triggering incidents associated with the incident policy.   
 

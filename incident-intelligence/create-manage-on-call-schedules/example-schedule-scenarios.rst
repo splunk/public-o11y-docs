@@ -171,7 +171,7 @@ Add your primary and secondary schedules to the incident workflow for the web ap
 Your last step to for this scenario is to add your primary and secondary schedules to the incident workflow for your web application service. 
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select the :guilabel:`Incident policies ` tab.
+#. Select the :guilabel:`Incident policies` tab.
 #. Locate your web application service and select :guilabel:`Edit` from the :guilabel:`Actions` menu.
 #. Select the :guilabel:`Incident workflows` tab.
 #. Add the primary schedule to the first step. 
