@@ -7,16 +7,27 @@ Manually instrument browser-based web applications
 .. meta::
    :description: Manually instrument front-end applications for Splunk RUM to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more.
 
-You can manually instrument front-end applications for Splunk RUM using the Browser RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more.
+You can manually instrument front-end applications for Splunk RUM using the Browser RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more. The following API examples show several manual instrumentations for Splunk RUM.
 
 To migrate manual instrumentation created for another vendor, see :ref:`browser-rum-migrate-instrumentation`. For the API reference of Browser RUM, see :ref:`browser-rum-api-reference`.
 
 Instrument your application using the OpenTelemetry API
 =============================================================
 
-To instrument your front-end application manually, use the OpenTelemetry API. The Browser RUM agent automatically registers its TraceProvider using ``@opentelemetry/api``, so that your own instrumentations can access it. The version of ``@opentelemetry/api`` you use must match the same major version of ``@opentelemetry/api`` used by the Browser RUM agent.
+To instrument your front-end application manually, use the OpenTelemetry API. The Browser RUM agent automatically registers its TraceProvider using ``@opentelemetry/api``, so that your own instrumentations can access it. 
 
-The following API examples show several manual instrumentations for Splunk RUM:
+Check the version of the OpenTelemetry API
+----------------------------------------------
+
+To manually instrument your application, the version of ``@opentelemetry/api`` you use must match the same major version of ``@opentelemetry/api`` used by the Browser RUM agent.
+
+To verify this, search your incoming data for the ``splunk.rumVersion`` and ``telemetry.sdk.version`` attributes in any of the RUM sessions inside the :guilabel:`User Sessions` tab. Both version numbers must match.
+
+..  image:: /_images/rum/user-session-versions.png
+   :width: 99%
+   :alt: OpenTelemetry API version attributes, highlighted in a single RUM user session
+
+If you've installed the Browser RUM agent using npm, you can run ``npm ls @splunk/otel-web`` or ``npm ls @opentelemetry/api`` to check the versions from the console.
 
 Create a span
 ---------------------------------------
