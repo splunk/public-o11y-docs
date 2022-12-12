@@ -10,7 +10,7 @@ def olly_get_github_url(app, view, path):
 
 
 def html_page_context(app, pagename, templatename, context, doctree):
-    if templatename != 'page.html':
+    if templatename != 'index.html':
         return
 
     if not app.config.olly_on_github_repo:
@@ -18,7 +18,7 @@ def html_page_context(app, pagename, templatename, context, doctree):
         return
 
     path = os.path.relpath(doctree.get('source'), app.builder.srcdir)
-    show_url = olly_get_github_url(app, 'blob', path)
+    show_url = olly_get_github_url(app, 'edit', path)
     
     context['olly_on_github_url'] = show_url
     
