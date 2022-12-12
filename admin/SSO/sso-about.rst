@@ -53,11 +53,11 @@ The IdP requires the following information:
   - Application ACS (Assertion Consumer Service) URL: Where to send the assertion. 
   - Application SAML audience: How Splunk Observability Cloud identifies itself.
 
-Additionally, the IdP needs to know what parameters to send to Splunk Observability Cloud.
+Additionally, the IdP needs to know what parameters to send to Splunk Observability Cloud. The following image shows the AWS attribute mappings for the SAML assertion.
 
 .. image:: /_images/admin/sso-parameters.png
       :width: 90%
-      :alt: The attributes that the IdP will send to Splunk Observability Cloud.
+      :alt: The attributes that the IdP sends to Splunk Observability Cloud.
 
 The product-specific integrations provide default values for most of these fields and you don't have to configure them manually.  When setting up generic SAML or Active Directory Federation Searches (FS), you need to provide all the values yourself. 
 
