@@ -9,14 +9,14 @@ Performance overhead of the Splunk OTel Java agent
 
 The Splunk OpenTelemetry Java agent has minimal impact on system performance when instrumenting Java Virtual Machine (JVM) applications. This page contains the latest performance overhead measurements, a description of the testing conditions, and instructions for repeating the tests in your own environment.
 
-.. caution:: Many factors affect performance results, including JVM configuration, transaction volume, deployment architecture, and hardware. These results represent reference information and do not represent performance in all environments. See :ref:`perf-overhead-java-setup` for more information.
+.. caution:: Many factors affect performance results, including JVM configuration, transaction volume, deployment architecture, and hardware. These results represent reference information and do not represent performance in all environments.
 
 .. _java-perf-overhead-data:
 
 Overhead of the Java agent
 ===================================================
 
-The following tables compare the overhead for several system metrics across different usage scenarios. The latest version, 1.18.0, is also compared against the previous test version, 1.9.0.
+The following tables compare the overhead for several system metrics across different usage scenarios.
 
 .. tabs::
 
@@ -35,11 +35,7 @@ The following tables compare the overhead for several system metrics across diff
            - 29%
          * - Splunk OpenTelemetry Java agent 1.18.0
            - 26%
-         * - Splunk OpenTelemetry Java agent 1.18.0 (AlwaysOn Profiling enabled)
-           - 29%
-         * - Splunk OpenTelemetry Java agent version 1.9.0
-           - 26%
-         * - Splunk OpenTelemetry Java agent version 1.9.0 (AlwaysOn Profiling enabled)
+         * - Splunk OpenTelemetry Java agent 1.18.0 with AlwaysOn Profiling
            - 29%
 
       * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
@@ -59,12 +55,8 @@ The following tables compare the overhead for several system metrics across diff
            - 10.72 Mbps
          * - Splunk OpenTelemetry Java agent 1.18.0
            - 29.12 Mbps
-         * - Splunk OpenTelemetry Java agent 1.18.0 (AlwaysOn Profiling enabled)
+         * - Splunk OpenTelemetry Java agent 1.18.0 with AlwaysOn Profiling
            - 28.80 Mbps
-         * - Splunk OpenTelemetry Java agent version 1.9.0
-           - 28.94 Mbps
-         * - Splunk OpenTelemetry Java agent version 1.9.0 (AlwaysOn Profiling enabled)
-           - 28.77 Mbps
 
       * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
@@ -83,12 +75,8 @@ The following tables compare the overhead for several system metrics across diff
            - 5.27 milliseconds
          * - Splunk OpenTelemetry Java agent 1.18.0
            - 16.85 milliseconds
-         * - Splunk OpenTelemetry Java agent 1.18.0 (AlwaysOn Profiling enabled)
+         * - Splunk OpenTelemetry Java agent 1.18.0 with AlwaysOn Profiling
            - 18.70 milliseconds
-         * - Splunk OpenTelemetry Java agent version 1.9.0
-           - 15.82 milliseconds
-         * - Splunk OpenTelemetry Java agent version 1.9.0 (AlwaysOn Profiling enabled)
-           - 17.38 milliseconds
 
       * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
@@ -105,14 +93,10 @@ The following tables compare the overhead for several system metrics across diff
            - Value
          * - No instrumentation
            - 882.92 requests per second
-         * - Splunk OpenTelemetry Java agent 1.18.0
+         * - Splunk OpenTelemetry Java agent
            - 631.74 requests per second
-         * - Splunk OpenTelemetry Java agent 1.18.0 (AlwaysOn Profiling enabled)
+         * - Splunk OpenTelemetry Java agent with AlwaysOn Profiling
            - 588.97 requests per second
-         * - Splunk OpenTelemetry Java agent version 1.9.0
-           - 652.22 requests per second
-         * - Splunk OpenTelemetry Java agent version 1.9.0 (AlwaysOn Profiling enabled)
-           - 620.93 requests per second
 
       * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
@@ -131,12 +115,8 @@ The following tables compare the overhead for several system metrics across diff
            - 11.75 seconds
          * - Splunk OpenTelemetry Java agent 1.18.0
            - 19.65 seconds
-         * - Splunk OpenTelemetry Java agent 1.18.0 (AlwaysOn Profiling enabled)
+         * - Splunk OpenTelemetry Java agent 1.18.0 with AlwaysOn Profiling
            - 20.86 seconds
-         * - Splunk OpenTelemetry Java agent version 1.9.0
-           - 19.56 seconds
-         * - Splunk OpenTelemetry Java agent version 1.9.0 (AlwaysOn Profiling enabled)
-           - 21.43 seconds
 
       * Tested on December 9, 2022 using Splunk Java OTel agent version 1.18.0. For a description of the test environment, see :ref:`perf-overhead-java-setup`.
 
@@ -203,10 +183,7 @@ The following sequence runs 10 times for each configuration:
 
 Measurements come from k6 and from JFR data, and are aggregated across all 10 runs. The test script writes the results to a CSV file and the summary of the final run in a text file.
 
-Measure the performance overhead for your application
-===========================================================
-
-To run measurements in your own environment using the same methodology of the test scenarios described in this document, follow the instructions in the :new-page:`splunk-otel-java-overhead-test <https://github.com/signalfx/splunk-otel-java-overhead-test#performing-your-own-tests>` repository in GitHub.
+.. note:: The method used for testing performance is under active development and might change over time.
 
 Troubleshooting performance issues
 ===========================================================
