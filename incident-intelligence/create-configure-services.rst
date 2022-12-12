@@ -108,7 +108,7 @@ All incidents that are associated with the service that are triggered while the 
 Take a service out of maintenance
 -------------------------------------
 
-To take a service out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the service you want to take out ofmaintenance and select :guilabel:`Enable`. The service status shows as :guilabel:`Enabled`. This resumes triggering incidents associated with the service.   
+To take a service out of maintenance and resume triggering incidents, select the :guilabel:`Actions` menu on the service you want to take out of maintenance and select :guilabel:`Enable`. The service status shows as :guilabel:`Enabled`. This resumes triggering incidents associated with the service.   
 
 Next step
 ============

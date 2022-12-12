@@ -45,7 +45,7 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
      - 
         * To create a detector for an API test, see :ref:`api-detector`.
         * To create a detector for a browser test, see :ref:`detector-browser-test`.
-        * To create a detector for a uptime test, see :ref:`uptime-detector`.
+        * To create a detector for an uptime test, see :ref:`uptime-detector`.
 
 .. raw:: html
 

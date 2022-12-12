@@ -32,7 +32,7 @@ Incidents begin in the triggered status. The default status lifecycle for incide
 To acknowledge, reject, or resolve an incident, select the :guilabel:`Incidents` tab in Incident Intelligence. 
 
 * You can acknowledge an incident from the list of incidents or, alternatively, you can go into the detail of each incident and acknowledge it there.
-* From either location you also have the option to resolve or reject the incident.
+* From either location, you also have the option to resolve or reject the incident.
 
 See also
 ============
