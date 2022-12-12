@@ -43,7 +43,7 @@ Apache worker threads can be in one of the following states:
 
 ```
 receivers:
-  smartagent/apache
+  smartagent/apache:
     type: collectd/apache
     ... # Additional config
 ```
