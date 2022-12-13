@@ -27,7 +27,7 @@ Splunk Log Observer Connect
     save-share
     logviews
     timestamp
-    limits
+    lo-connect-limits
 
 
 
