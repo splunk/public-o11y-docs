@@ -17,7 +17,7 @@ The Splunk platform and Splunk Observability Cloud
    Set up Observability Cloud <setup-o11y/setup-o11y>
    FAQ: The Splunk platform and Splunk Observability Cloud <faq/core-to-o11y-faq>
 
-Splunk Observability Cloud puts your Splunk platform logs in context with metrics and traces so that your teams can find, analyze, and resolve incidents anywhere in your stack with a lower mean time to resolution. Observability Cloud provides solutions you need to solve common reliability problems. 
+Splunk Observability Cloud puts your Splunk platform logs in context with metrics and traces so that your teams can find, analyze, and resolve incidents anywhere in your stack with a lower mean time to resolution. Observability Cloud provides automated and custom solutions to common reliability problems. 
 
 For example, do you have a wide variety of platforms, databases, and cloud services that you must monitor in multiple interfaces? Observability Cloud has hundreds of out of the box integrations that give you a predefined view with a single pane of glass for hybrid coverage.
 
