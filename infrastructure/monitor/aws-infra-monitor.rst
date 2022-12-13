@@ -80,17 +80,6 @@ Organization metrics related to AWS
 
 Infrastructure Monitoring also sends a set of metrics for AWS related to errors and service calls for your organization. These metrics all start with ``sf.org.num.aws``. For more information, see :new-page:`Usage metrics for Splunk Observability Cloud <https://quickdraw.splunk.com/redirect/?product=Observability&location=userdocs.infrastructure.aws.organization.metrics&version=current>`.
 
-
-.. _aws-traffic-assumptions:
-
-AWS traffic assumptions in Observability Cloud
-=============================================================================
-
-The following applies to AWS data displayed in Infrastructure Monitoring:
-
-- Tiles for AWS are dependent on streaming data in. If there's no data coming in for more than 3 hours, that stream will stop being counted in the tiles. 
-- Kubernetes monitoring holds tiles in a "grey" state until it goes inactive (25 hours after the last datapoint).
-
 .. _aws-import-cloudwatch:
 .. _cloudwatch-metric-sync:
 .. _cloudwatch-agent:
@@ -102,7 +91,7 @@ AWS provides a CloudWatch agent that lets you import (or download) metrics, logs
 
 During this import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS. In Infrastructure Monitoring, AWS metadata becomes dimensions and custom properties. AWS tags are key-value pairs, so Infrastructure Monitoring converts them to custom properties.
 
-To learn more about the metadata Infrastructure Monitoring gets from AWS CloudWatch, see :ref:`aws-oc-metrics`, and refer to the AWS documentation site.
+To learn more, see :ref:`aws-oc-metrics`, or refer to the AWS documentation site.
 
 Importing data and metadata from other applications
 =============================================================================
@@ -182,9 +171,7 @@ Only metricA and metricB are included, and only for resources specified by the t
 -  For a resource that doesn't have the tags ``env:prod`` or ``env:beta``, no metrics are included.
 -  No other metrics are included.
 
-Infrastructure Monitoring supports wildcards in filters.
-For example, if you want to import data for a resource that has specific tags, regardless of the tag values, specify this
-filter:
+Infrastructure Monitoring supports wildcards in filters. For example, if you want to import data for a resource that has specific tags, regardless of the tag values, specify this filter:
 
 .. image:: /_images/infrastructure/aws-metric-tag-wildcard.png
    :width: 55%
@@ -201,11 +188,10 @@ When you finish specifying the namespaces, metrics, and tags to include or exclu
    In this case, the UI displays a message indicating that the filter is defined programmatically.
    To see which metrics and tags are included or excluded for that namespace, click :guilabel:`View filter code`.
 
-
 .. _aws-filter:
 
-Filter AWS data using tags
-=============================================================================
+Example: Filter AWS data using tags
+--------------------------------------------------------------------------------
 
 You can filter AWS data using AWS tags, but only with namespaces for which Infrastructure Monitoring syncs tags. For more information, see :ref:`aws-namespaces`. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
 
@@ -239,7 +225,7 @@ For supported AWS services, Infrastructure Monitoring imports AWS tags and adds 
 .. _aws-filter-char: 
 
 Unsupported characters 
--------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.    
 
@@ -364,3 +350,28 @@ the rollup you want, filter for the ``stat`` dimension with a value that corresp
 Infrastructure Monitoring uses a sixty-second sampling period for metrics it imports from AWS.
 
 To learn more, see the AWS developer documentation for AWS CloudWatch.
+
+.. _aws-traffic-assumptions:
+
+AWS traffic assumptions in Observability Cloud
+===========================================================
+
+The following applies to AWS data displayed in Infrastructure Monitoring:
+
+- Tiles for AWS depend on streaming data in. If there's no data coming in for more than 3 hours, that stream will stop being counted in the tiles. 
+   - Kubernetes monitoring holds tiles in a "grey" state until it goes inactive (which happens 25 hours after the last datapoint).
+- Some metrics (like those related to CPU utilization) are always reported. Observability cloud uses these metrics on the Navigator summary page.
+- Although it only affects a small number of metrics, a few are not always sent. For instance, metrics related to the amount of errors are only sent when errors happen.  
+   - Don't try to get a list of entities using one of these metrics, since entities with no errors might be hidden. 
+- Counts are sensitive to the time range, the calculated resolution of the job that runs, and the frequency of the data that is coming in. 
+   - A typical AWS cloud integration is reporting a new data point every 5 minutes. 
+   - As the job is running, reporting instances that are turned off drop off after the time range they are part of passes.  
+
+Considerations regarding Navigators
+-------------------------------------------------------------------
+
+`Navigators <use-navigators-imm>` display information when an entity is both active and sending metrics, whether they are being monitored by a cloud integration or by an agent. Navigators are sensitive to the time range selected, and queries with broader time range take longer. 
+
+The Navigator Summary page only shows the latest data point, regardless of the selected time range. 
+   - You can see historical numbers in the purple graph, but the number itself will be the latest value.  
+   - Even if you select a wide time range, Navigators only display entities active in the most recent data point.
