@@ -65,7 +65,7 @@ Initialize this code snippet to set up session replay through Splunk CDN.
     <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
     <script>
     SplunkSessionRecorder.init({
-        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/ ...',
+        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rumreplay',
         rumAuth: '<auth token>'
     });
     </script>
