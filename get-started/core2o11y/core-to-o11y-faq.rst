@@ -1,7 +1,7 @@
-.. _compare-compare:
+.. _core-to-o11y-faq:
 
 ******************************************************************************************
- Extend the Splunk platform into observability with Splunk Observability Cloud 
+FAQ: The Splunk platform and Splunk Observability Cloud 
 ******************************************************************************************
 
 .. meta::
