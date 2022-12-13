@@ -30,9 +30,7 @@ Follow these steps to create a schedule. See :ref:`ii-schedule-scenarios` for st
 .. raw:: html
     :file: on-call_schedule_steps.html
 
-After you save your shifts, review the schedule details in the :guilabel:`Schedule Preview` to confirm that you've configured your schedule shifts as intended. The schedule preview includes schedule info for up to one year. Select :guilabel:`Next Month` and :guilabel:`Previous Month` to navigate the schedule preview. Select :guilabel:`Back to all schedules` when you are finished adding shifts to your on-call schedule.
-
-Now that you've created an on-call schedule, add it to the incident workflow for your web application service. See :ref:`ii-configure-incident-workflows`.
+Now that you've created an on-call schedule, add it to the incident workflow for the relevant incident policy. Responders are not paged when until the schedule is included as a step in an incident workflow. See :ref:`ii-configure-incident-workflows`.
 
 .. raw:: html
 
