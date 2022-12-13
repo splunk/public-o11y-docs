@@ -50,7 +50,10 @@ To connect AWS to Observability Cloud and integrate those platforms, you must me
    - An AWS IAM role and an external ID from Observability Cloud. An external ID is a random string used to establish a trust relationship between Observability Cloud and your AWS account. An external ID is automatically generated for you when you create a new AWS integration in Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
    - A secure token, which combines an access key ID and a secret access key
 
-The AWS GovCloud and China regions require a secure token for access. 
+
+.. note:: 
+
+  Observability Cloud supports all AWS regular regions, GovCloud, and China. However, the GovCloud and China regions require a secure token for access. 
 
 .. _prep-for-aws-integration:
 

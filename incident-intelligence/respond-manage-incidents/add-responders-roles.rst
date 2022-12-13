@@ -27,7 +27,7 @@ To add responder roles to incident responders, follow these steps:
 #. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 
 #. Select the incident from the incident list.
 #. Hover over the responder you want to add a role to and select the menu, and then select :guilabel:`Edit Role`.
-#. Select roles you want to assign to the responder. The list of roles shows default roles (:guilabel:`Incident Commander`, :guilabel:`Communications Owner`, :guilabel:`Task Manager`, :guilabel:`Customer Liaison`) and any previously created custom roles. To add a new custom role, enter the custom role name you want to use and select enter.
+#. Select the roles you want to assign to the responder. The list of roles shows default roles (:guilabel:`Incident Commander`, :guilabel:`Communications Owner`, :guilabel:`Task Manager`, :guilabel:`Customer Liaison`) and any previously created custom roles. To add a new custom role, enter the custom role name you want to use and select enter.
 #. Select :guilabel:`Save`. 
 
 See also
