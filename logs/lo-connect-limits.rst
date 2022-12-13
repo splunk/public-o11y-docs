@@ -1,0 +1,69 @@
+.. _lo-connect-limits:
+
+*********************************************************************************************
+Log Observer Connect limits
+*********************************************************************************************
+
+.. meta created 2021-12-12
+.. meta DOCS-4836
+
+.. meta::
+  :description: Discover Log Observer Connect limits.
+
+This page documents Splunk Log Observer Connect service limits and behavior. System protection limits are meant to allow for stability and availability of multi-tenant systems and are subject to fine-tuning and change without notice.
+
+Log Observer ingest and index limits
+=============================================================================================
+
+The following table lists Log Observer's log ingestion and indexing limits:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 50
+
+   * - :strong:`Limit name`
+     - :strong:`Default limit value`
+
+   * - MB ingested per month
+     - Determined by your subscription
+
+   * - MB indexed per month
+     - Determined by your subscription
+
+
+Log Observer Connect search query limits
+=============================================================================================
+
+The following table lists Log Observer Connect's search query limits:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50, 50
+
+   * - :strong:`Limit name`
+     - :strong:`Default limit value`
+
+   * - Maximum number of saved search queries
+     - 1,000
+
+   * - Maximum number of logs processed for Fields Summary
+     - 150,000
+
+
+Maximum number of saved search queries
+---------------------------------------------------------------------------------------------
+This is the maximum number of saved search queries that can be created in an organization.
+
+What happens when the limit is hit?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The user experience might degrade and is not guaranteed to be functional.
+
+Maximum number of logs processed for the Fields Summary
+---------------------------------------------------------------------------------------------
+
+The Log Observer UI displays a summary of fields and their value distribution. By default, it processes the most recent 150,0000 events to generate this view. 
+
+What happens when the limit is hit?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the search results contain more than 150,000 events, then only the latest 150,000 events are processed.
