@@ -14,6 +14,8 @@ Practice reliability with Splunk Observability Cloud
    Respond to incidents <practice-reliability/incident-response>
    Toil reduction <practice-reliability/toil-reduction>
    Scale your system's observability through collaboration <practice-reliability/collaboration>
+   Set up Observability Cloud <setup-o11y-setup-o11y>
+   : The Splunk platform and Splunk Observability Cloud <faq-core-to-o11y-faq>
 
 Splunk Observability Cloud puts your Splunk platform logs in context with metrics and traces so that your teams can find, analyze, and resolve incidents anywhere in your stack with a lower mean time to resolution. Observability Cloud provides solutions you need to solve common reliability problems. 
 
