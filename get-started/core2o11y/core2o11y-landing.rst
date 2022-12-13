@@ -21,12 +21,12 @@ Splunk Observability Cloud puts your Splunk platform logs in context with metric
 
 For example, do you have a wide variety of platforms, databases, and cloud services that you must monitor in multiple interfaces? Observability Cloud has hundreds of out of the box integrations that give you a predefined view with a single pane of glass for hybrid coverage.
 
-Are you moving into the cloud and Kubernetes environments, requiring your teams to react to a magnitude of changes very quickly? Observability Cloud’s cloud-native data and analytics scale is built around Kubernetes and highly ephemeral environments. 
+Are you moving into the cloud and Kubernetes environments, requiring your teams to react to a magnitude of changes very quickly? Observability Cloud’s cloud-native data and analytics scale is built around highly ephemeral environments for Kubernetes and cloud. 
 
 
-Five core principles underpin system reliability: availability, performance, monitoring, incident response, and preparation. See :new-page:`What is site reliability engineering? <https://www.splunk.com/en_us/data-insider/what-is-site-reliability-engineering.html#:~:text=Site%20reliability%20engineering%20(SRE)%20is,production%20systems%20and%20solve%20problems.>` for a deeper understanding of what it takes to achieve reliability in your systems. 
+Five core principles underpin system reliability: availability, performance, monitoring, incident response, and preparation. See :new-page:`What is site reliability engineering? <https://www.splunk.com/en_us/data-insider/what-is-site-reliability-engineering.html#:~:text=Site%20reliability%20engineering%20(SRE)%20is,production%20systems%20and%20solve%20problems.>` for a deeper understanding. But you don't have to be an SRE (Site Reliability Engineer) to help maintain system reliability with Observability Cloud. Reliability is essentially 1) measuring your system via its telemetry, 2) alerting you on outages and failures of your infrastructure, and 3) guiding you with dashboards to inform your journey to isolating and resolving problems. 
 
-Anyone can help maintain system reliability using Observability Cloud. The principles of reliability fall into three main categories of practice. Select each of the following categories to learn how you can execute on each major observability practice and maintain reliability with Observability Cloud:
+Select each of the following categories to learn how you can execute on each major observability practice and maintain reliability with Observability Cloud:
 
 * :ref:`Measure and alert on your SLIs <practice-reliability-slis>`
 
@@ -36,6 +36,8 @@ Anyone can help maintain system reliability using Observability Cloud. The princ
 
 
 To learn how to set up Observability Cloud, see :ref:`setup-o11y-setup-o11y`. See :ref:`core-to-o11y-faq` to learn about a few differences in how the Splunk platform and Observability Cloud function.
+
+
 
 
 
