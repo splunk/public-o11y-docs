@@ -1,7 +1,7 @@
 .. _core2o11y-landing:
 
 ***********************************************************************************
-Practice reliability with Splunk Observability Cloud 
+The Splunk platform and Splunk Observability Cloud 
 ***********************************************************************************
 
 .. meta::
