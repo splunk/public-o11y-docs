@@ -284,7 +284,7 @@ To make migration of your data and metadata from dashboards, charts, and detecto
 
 Mapping applies OpenTelemetry naming standards to the following components:
 
-- Metrics and Metric Time Series (MTSes)
+- Metrics and metric time series (MTS)
 
 - Dimensions
 
@@ -313,7 +313,7 @@ Interpreting the mapping impact report
 
 The Mapping and OTel Transition Impact Report summarizes the scope of component name change associated with your migration to open telemetry. It assesses your data set to list the tokens currently used as metric, dimension, property or tag names, and highlights migration rules that could generate conflict between old and new equivalence groups.
 
-The report explains when migration from an old MTS to a new MTS will trigger detectors, and which detectors those are. For example, heartbeat detectors working with un-aggregated MTSes are affected by design, but if a heartbeat detector is working with a dimension that continues across the transition to OTel, then the mapping service ensures continuity so that you do not have to restart that detector.
+The report explains when migration from an old MTS to a new MTS will trigger detectors, and which detectors those are. For example, heartbeat detectors working with un-aggregated MTS are affected by design, but if a heartbeat detector is working with a dimension that continues across the transition to OTel, then the mapping service ensures continuity so that you do not have to restart that detector.
 
 The mapping transition impact report assesses migration effects across three categories:
 
@@ -326,11 +326,11 @@ The mapping transition impact report assesses migration effects across three cat
 Avoiding unexpected results
 ################################
 
-Because Mapping Service only renames existing MTSes when filtering or grouping requires renaming to conform to OpenTelemetry Collector conventions, correlation across different datasets yields unexpected results when a mapped MTS is correlated with an unmapped MTS. This can happen, for example, when an MTS attempts to correlate with a time-shifted or transformed version of itself.
+Because Mapping Service only renames existing MTS when filtering or grouping requires renaming to conform to OpenTelemetry Collector conventions, correlation across different datasets yields unexpected results when a mapped MTS is correlated with an unmapped MTS. This can happen, for example, when an MTS attempts to correlate with a time-shifted or transformed version of itself.
 
 If you have charts and detectors built from formulas whose terms use different agents, you won’t get the alerts you expect.
 
-To resolve this issue, explicitly filter or group by dimensions so that Mapping Service renames the fields in all the MTSes in the job to match the name you specified in the filter or grouping.
+To resolve this issue, explicitly filter or group by dimensions so that Mapping Service renames the fields in all the MTS in the job to match the name you specified in the filter or grouping.
 
 Data object type information
 ################################
