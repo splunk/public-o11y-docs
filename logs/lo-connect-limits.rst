@@ -12,24 +12,6 @@ Log Observer Connect limits
 
 This page documents Splunk Log Observer Connect service limits and behavior. System protection limits are meant to allow for stability and availability of multi-tenant systems and are subject to fine-tuning and change without notice.
 
-Log Observer ingest and index limits
-=============================================================================================
-
-The following table lists Log Observer's log ingestion and indexing limits:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 50, 50
-
-   * - :strong:`Limit name`
-     - :strong:`Default limit value`
-
-   * - MB ingested per month
-     - Determined by your subscription
-
-   * - MB indexed per month
-     - Determined by your subscription
-
 
 Log Observer Connect search query limits
 =============================================================================================
