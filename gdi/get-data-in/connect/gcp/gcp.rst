@@ -49,21 +49,6 @@ The following table specifies the permissions required for GCP integrations.
    *  - :strong:`Permission`
       - :strong:`Required?`
 
-   *  - ``monitoring.metricDescriptors.get``
-      - Yes
-
-   *  - ``monitoring.metricDescriptors.list``
-      - Yes
-
-   *  - ``monitoring.timeSeries.list``
-      - Yes
-
-   *  - ``resourcemanager.projects.get``
-      - Yes, if you want to sync project metadata, such as labels
-
-   *  - ``serviceusage.services.use``
-      - Yes, if you want to enable the use of a quota from the project where metrics are stored
-
    *  - ``compute.instances.list``
       - Yes, if the Compute Engine service is enabled
 
@@ -79,12 +64,26 @@ The following table specifies the permissions required for GCP integrations.
    *  - ``container.pods.list``
       - Yes, if the Kubernetes (GKE) service is enabled
 
+   *  - ``monitoring.metricDescriptors.get``
+      - Yes
+
+   *  - ``monitoring.metricDescriptors.list``
+      - Yes
+
+   *  - ``monitoring.timeSeries.list``
+      - Yes
+
+   *  - ``resourcemanager.projects.get``
+      - Yes, if you want to sync project metadata (such as labels), or if you need to obtain metrics from monitored projects (child projects) from a scoping project (or parent project) 
+
+   *  - ``serviceusage.services.use``
+      - Yes, if you want to enable the use of a quota from the project where metrics are stored
+
    *  - ``spanner.instances.list``
       - Yes, if the Spanner service is enabled
 
    *  - ``storage.buckets.list``
       - Yes, if the Spanner service is enabled
-
 
 .. _gcp-two:
 
