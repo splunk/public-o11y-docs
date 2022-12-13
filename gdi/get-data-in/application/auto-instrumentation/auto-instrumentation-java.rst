@@ -1,7 +1,7 @@
 .. _auto-instrumentation-java:
 
 *****************************************************************************
-Splunk OpenTelemetry Zero Configuration Autoinstrumentation for Java
+Splunk OpenTelemetry Zero Configuration Auto instrumentation for Java
 *****************************************************************************
 
 .. meta::
