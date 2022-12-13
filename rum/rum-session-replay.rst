@@ -50,7 +50,7 @@ This example shows the order in which to initialize the scripts:
         environment: '<your_environment_name>'
     });
     SplunkSessionRecorder.init({
-        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/ ...',
+        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rumreplay',
         rumAuth: '<auth token>'
     });
     </script>
