@@ -11,6 +11,8 @@ The Infrastructure Monitoring Amazon Web Services (AWS) integration imports metr
 
 Metrics are data points identified by a name; and metadata is information that helps you identify aspects of the metrics such as its source. AWS metrics and metadata help you monitor and troubleshoot the AWS services you're using, such as AWS EC2. The metrics and metadata also help you monitor applications, such as Kubernetes clusters, that use the AWS services. 
 
+To learn more about logs and AWS, see :ref:`get-started-logs`.
+
 .. _aws-data:
 
 About AWS data 
@@ -76,24 +78,36 @@ Use the resulting string identifier as the value for the ``sfxdim\_AWSUniqueId``
 Organization metrics related to AWS
 -------------------------------------------------------------------
 
-Infrastructure Monitoring also sends a set of metrics for AWS related to errors and service calls for your organization. These metrics all start with ``sf.org.num.aws``. For more information, see
-:new-page:`Usage metrics for Splunk Observability Cloud <https://quickdraw.splunk.com/redirect/?product=Observability&location=userdocs.infrastructure.aws.organization.metrics&version=current>`.
+Infrastructure Monitoring also sends a set of metrics for AWS related to errors and service calls for your organization. These metrics all start with ``sf.org.num.aws``. For more information, see :new-page:`Usage metrics for Splunk Observability Cloud <https://quickdraw.splunk.com/redirect/?product=Observability&location=userdocs.infrastructure.aws.organization.metrics&version=current>`.
+
+
+.. _aws-traffic-assumptions:
+
+AWS traffic assumptions in Observability Cloud
+=============================================================================
+
+The following applies to AWS data displayed in Infrastructure Monitoring:
+
+- Tiles for AWS are dependent on streaming data in. If there's no data coming in for more than 3 hours, that stream will stop being counted in the tiles. 
+- Kubernetes monitoring holds tiles in a "grey" state until it goes inactive (25 hours after the last datapoint).
 
 .. _aws-import-cloudwatch:
+.. _cloudwatch-metric-sync:
+.. _cloudwatch-agent:
 
 Import AWS CloudWatch data and metadata
 =============================================================================
 
-Infrastructure Monitoring queries AWS CloudWatch to import (or download) metrics, logs, and metadata. During this import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS. In Infrastructure Monitoring, AWS metadata becomes dimensions and custom properties. AWS tags are key-value pairs, so Infrastructure Monitoring converts them to custom properties.
+AWS provides a CloudWatch agent that lets you import (or download) metrics, logs, and metadata. To import these metrics in Infrastructure Monitoring, add the namespace you use for the AWS CloudWatch agent as a custom namespace in your AWS integration, as described in the section :ref:`specify-data-metadata`. 
 
-* To learn more about the metadata Infrastructure Monitoring gets from AWS CloudWatch, see :ref:`aws-oc-metrics` and refer to the AWS documentation site.
-* To learn more about logs and AWS, see :ref:`get-started-logs`.
+During this import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS. In Infrastructure Monitoring, AWS metadata becomes dimensions and custom properties. AWS tags are key-value pairs, so Infrastructure Monitoring converts them to custom properties.
 
-Importing data and metadata from applications
---------------------------------------------------------------------------------
+To learn more about the metadata Infrastructure Monitoring gets from AWS CloudWatch, see :ref:`aws-oc-metrics`, and refer to the AWS documentation site.
 
-Infrastructure Monitoring also imports metrics, metadata, and logs for some of your applications that use AWS services. The
-following table lists these applications.
+Importing data and metadata from other applications
+=============================================================================
+
+Infrastructure Monitoring also imports metrics, metadata, and logs for some of your applications that use AWS services. The following table lists these applications.
 
 .. list-table::
    :header-rows: 1
@@ -123,10 +137,7 @@ Specifying data and metadata to import
 
 The AWS integration imports metrics from a list of supported AWS services in all built-in AWS namespaces. To limit the amount of AWS data that the integration imports, specify a subset of built-in namespaces from which you need data. For each namespace, you can then filter the data based on AWS tags or metric names or both.
 
-Refer to the section :ref:`aws-integrations` to see the list of AWS services from which the AWS integration imports data.
-
-You can also limit the amount of AWS data that the integration imports by changing the rate at which
-Infrastructure Monitoring polls AWS CloudWatch.
+You can also limit the amount of AWS data that the integration imports by changing the rate at which Infrastructure Monitoring polls AWS CloudWatch.
 
 .. note:: You must be an administrator of your AWS account to choose namespaces and set filters.
 
@@ -158,9 +169,7 @@ To create these specifications, perform the following steps:
    that excludes data from resources that have the AWS tag ``version:canary``.
 
 Infrastructure Monitoring adds the prefix ``aws_tag_`` to the names of tags imported from AWS, which indicates their origin.
-For example, the AWS tag ``version:canary`` appears in Infrastructure Monitoring as
-``aws_tag_version:canary``. When you filter an AWS integration by tag, enter the name of the tag as
-it appears in AWS.
+For example, the AWS tag ``version:canary`` appears in Infrastructure Monitoring as ``aws_tag_version:canary``. When you filter an AWS integration by tag, enter the name of the tag as it appears in AWS.
 
 You can also choose specific metrics to include or exclude. For example, consider the following conditions.
 
@@ -180,13 +189,9 @@ filter:
 .. image:: /_images/infrastructure/aws-metric-tag-wildcard.png
    :width: 55%
 
-In this example, metricA and metricB are included for resources that have the ``env`` tag set to any value.
-No other metrics are included.
+In this example, metricA and metricB are included for resources that have the ``env`` tag set to any value. No other metrics are included.
 
-You can use the :guilabel:`Actions` menu next to a namespace name to copy or paste filters from one namespace to another,
-clear the filters for the namespace, or remove the namespace from the list of namespaces to include.
-When you remove a namespace, Infrastructure Monitoring no longer includes metrics from that namespace.
-
+You can use the :guilabel:`Actions` menu next to a namespace name to copy or paste filters from one namespace to another, clear the filters for the namespace, or remove the namespace from the list of namespaces to include. When you remove a namespace, Infrastructure Monitoring no longer includes metrics from that namespace.
 
 When you finish specifying the namespaces, metrics, and tags to include or exclude, click :guilabel:`Save`.
 
@@ -196,35 +201,47 @@ When you finish specifying the namespaces, metrics, and tags to include or exclu
    In this case, the UI displays a message indicating that the filter is defined programmatically.
    To see which metrics and tags are included or excluded for that namespace, click :guilabel:`View filter code`.
 
-.. _cloudwatch-metric-sync:
 
-Import specific AWS CloudWatch metric sources
+.. _aws-filter:
+
+Filter AWS data using tags
 =============================================================================
 
-To import some AWS CloudWatch metrics, you need to configure AWS CloudWatch as well as Infrastructure Monitoring.
+You can filter AWS data using AWS tags, but only with namespaces for which Infrastructure Monitoring syncs tags. For more information, see :ref:`aws-namespaces`. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
 
-.. _s3:
+* ``AutoScalingGroupName``
+* ``ImageId``
+* ``InstanceId``
+* ``InstanceType``.
 
-Receiving S3 metrics
+You can use the following AWS metadata to filter metrics:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
+
+   *  - :strong:`Custom Property`
+      - :strong:`Form`
+      - :strong:`Description`
+
+   *  - aws_account_id
+      - key-value pair
+      - AWS account ID for the instance, volume or load balancer. Use this property to differentiate between metrics you import.
+
+   *  - aws_tag_<TAGNAME>
+      - key and optional value
+      - AWS custom tag name for the instance, volume or load balancer. A metric may have more than one associated custom tag name.
+
+Use aws_account_id to differentiate between metrics you import from multiple AWS accounts. Infrastructure Monitoring adds aws_account_id as a dimension of the MTS for the metric.
+
+For supported AWS services, Infrastructure Monitoring imports AWS tags and adds them as custom properties to the MTS for the metric. For example, if AWS tag has the value named Production, it will be shown in Infrastructure Monitoring as `aws_tag_Production`.
+
+.. _aws-filter-char: 
+
+Unsupported characters 
 -------------------------------------------------------------------
 
-For S3, Infrastructure Monitoring defaults to receiving the daily storage metrics listed on the Amazon S3 console page.
-Amazon bills you separately for the request metrics shown on that page, so
-you must explicitly select to import them. To learn more about selecting them, see the AWS S3 documentation.
-
-Infrastructure Monitoring also imports metadata for AWS S3. To learn more, see :ref:`s3-metadata`.
-
-.. _cloudwatch-agent:
-
-Receiving metrics via the Cloudwatch agent
--------------------------------------------------------------------
-
-AWS provides a CloudWatch agent that lets you import more system-level metrics from Amazon EC2
-instances and also lets you collect system-level metrics from on-premises servers. To import these
-metrics in Infrastructure Monitoring, add the namespace you use for the AWS CloudWatch agent as a custom namespace
-in your AWS integration, as described in the section :ref:`specify-data-metadata`).
-
-To learn more about the AWS CloudWatch agent, see the AWS documentation.
+Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.    
 
 .. _monitor-aws-services:
 
@@ -291,47 +308,6 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 - If you have only the public cloud service and the Smart Agent configured, some charts in the built-in dashboards for Amazon EC2 instances display no data.
 - If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for Amazon EC2 instances display no data.
 - If you have only Smart Agent configured, Amazon EC2 instance navigator isn't available.
-
-.. _aws-filter:
-
-Filter AWS data using tags
-=============================================================================
-
-You can filter AWS data using AWS tags, but only with namespaces for which Infrastructure Monitoring syncs tags. For more information, see :ref:`aws-namespaces`. For example, if you use Detailed Monitoring for EC2 instances in AWS, Infrastructure Monitoring imports the following dimensions:
-
-* ``AutoScalingGroupName``
-* ``ImageId``
-* ``InstanceId``
-* ``InstanceType``.
-
-You can use the following AWS metadata to filter metrics:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 25 25 50
-
-   *  - :strong:`Custom Property`
-      - :strong:`Form`
-      - :strong:`Description`
-
-   *  - aws_account_id
-      - key-value pair
-      - AWS account ID for the instance, volume or load balancer. Use this property to differentiate between metrics you import.
-
-   *  - aws_tag_<TAGNAME>
-      - key and optional value
-      - AWS custom tag name for the instance, volume or load balancer. A metric may have more than one associated custom tag name.
-
-Use aws_account_id to differentiate between metrics you import from multiple AWS accounts. Infrastructure Monitoring adds aws_account_id as a dimension of the MTS for the metric.
-
-For supported AWS services, Infrastructure Monitoring imports AWS tags and adds them as custom properties to the MTS for the metric. For example, if AWS tag has the value named Production, it will be shown in Infrastructure Monitoring as `aws_tag_Production`.
-
-.. _aws-filter-char: 
-
-Unsupported characters 
--------------------------------------------------------------------
-
-Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _using-cloudwatch-metrics:
 

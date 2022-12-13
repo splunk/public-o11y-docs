@@ -976,11 +976,12 @@ Infrastructure Monitoring imports Route 53's :ref:`common properties <aws_common
 For more information refer to AWS documentation.
 
 .. _s3-metadata:
+.. _s3:
 
 Amazon Simple Storage Service (S3) metadata
 -------------------------------------------------------------------
 
-For S3, Infrastructure Monitoring imports the region in which the bucket resides, as well as any tags set on buckets. Infrastructure Monitoring only imports metadata for non-empty buckets.
+For S3, Infrastructure Monitoring imports the region in which the bucket resides, as well as any tags set on buckets. Infrastructure Monitoring only imports metadata for non-empty buckets. By default, Infrastructure Monitoring only receives the daily storage metrics listed on the Amazon S3 console page. Amazon bills you separately for the request metrics shown on that page, so you must explicitly select to import them. 
 
 For more information on S3 bucket tags, see the documentation for AWS S3 Cost Allocation tagging.
 
