@@ -7,11 +7,9 @@ Set up detectors and alerts in Splunk Synthetic Monitoring
 .. meta::
     :description: Learn about detectors alerting in Splunk Synthetic Monitoring.
 
-
 In Splunk Observability Cloud, detectors monitor your tests and metrics for anomalies and generate alerts when problems arise. You can customize the alerting threshold, severity, notification method, recipients, and more. 
 
 To learn more about advanced alerts and detectors in Splunk Observability Cloud, see :ref:`get-started-detectoralert`. Read on to learn about creating static threshold detectors specific to Synthetics. 
-
 
 Use cases for detectors in Synthetics
 =======================================
@@ -39,7 +37,6 @@ You can use detectors to alert on metrics at the test level, or at the page leve
      - | In Browser tests, create synthetic transaction-level detectors to trigger alerts on metrics based on a synthetic transaction within a test. 
        | 
        | You can alert on the three transaction-level metrics that Splunk Synthetic Monitoring captures: Duration, Requests, and Size. See :ref:`transaction-level-detector` to learn more.
-
 
 .. _synth-detector-setup:
 
@@ -74,7 +71,6 @@ Then, in the detector dialog box, do the following:
 #. Add recipients. 
 #. (Optional) Add a URL to a runbook. 
 #. Select :guilabel:`Activate`. 
-
 
 .. _page-level-detector:
 
@@ -120,7 +116,6 @@ To create a transaction-level detector, do the following while creating your det
   If you select multiple transactions, your detector monitors the aggregate metric value for the multiple transactions you selected.
 
   If you want a detector monitoring the metric value for each of the transactions in your test, create a separate detector for each transaction you want to monitor. 
-
 
 See also
 ^^^^^^^^^^  

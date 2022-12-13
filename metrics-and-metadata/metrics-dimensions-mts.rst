@@ -5,7 +5,7 @@ Dimensions, custom properties, and tags in Splunk Observability Cloud
 ************************************************************************
 
 .. meta::
-    :description: Data coming into Splunk Observability Cloud has a metric name, and the data can also contain metadata. A set of data points that have the same metric name and metadata constitute a metric time series.
+    :description: Learn about the differences between dimensions, custom properties, and tags in Splunk Observability Cloud.
 
 Data comes into Splunk Observability Cloud as data points associated with a metric name and additional metadata. Observability Cloud has three types of metadata:
 

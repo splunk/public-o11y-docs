@@ -6,7 +6,7 @@ Find the root cause of a user reported error in Splunk RUM for Mobile
 **************************************************************************
 
 
-The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company.
+The following use cases feature examples from Buttercup Industries, a fictitious ecommerce company.
 
 About this use case 
 ================================
@@ -16,6 +16,7 @@ Buttercup Industries recently launched a mobile application. Kai, a site reliabi
 
 Find the root cause of a user reported error 
 ================================================================
+
 Sometimes, users report an issue in the app that requires a lot of digging to find the root cause. For example, if a user says the app isn’t working, it can be tricky to find where to start troubleshooting. With Splunk RUM for Mobile, Kai can search for a the specific user session.
 
 Splunk RUM Mobile captures:
@@ -48,23 +49,17 @@ Kai follows these steps to find a root cause of an error:
 
     * Detectors
 
-
     ..  image:: /_images/rum/mobile-use-case-overview.png
         :width: 100%
         :alt: This image shows the Overview page of Splunk RUM for Mobile. 
 
-
-
 2. Kai selects :strong:`See all ButtercupMobile` metrics to open the Overview dashboard. The overview page shows a summary of aggregate metrics. From the overview page, Kai can click on any link to open Tag Spotlight.
-
 
 3. Kai searches for sessions associated with the custom event userID by applying a filter like in the following image. To learn more, see :ref:`rum-custom-event`.
 
     ..  image:: /_images/rum/mobile-use-case-filter.png
         :width: 100%
         :alt: This image shows how to filter in Splunk RUM. 
-    
-
 
 4. Kai finds that there is an issue with an error on the ShoppingCart screen and opens an User session to see more sessions related to the crash. To learn more about User sessions, see :ref:`User sessions<example-session>`.
 
@@ -73,8 +68,6 @@ Kai follows these steps to find a root cause of an error:
         :alt: This image shows how to filter in Splunk RUM. 
 
 5. Kai reports the error to the development team and outlines the steps to reproduce the crash and components are affected. 
-
-
 
 Summary 
 =========
@@ -103,5 +96,3 @@ To learn more about how you can optimize your experience with Splunk Observabili
        * :ref:`rum-custom-event`
        * :ref:`rum-alerts`
        * :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
-
-
