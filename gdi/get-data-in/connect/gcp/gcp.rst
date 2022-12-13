@@ -74,7 +74,7 @@ The following table specifies the permissions required for GCP integrations.
       - Yes
 
    *  - ``resourcemanager.projects.get``
-      - Yes, if you want to sync project metadata (such as labels), or if you need to obtain metrics from monitored projects (child projects) from a scoping project (or parent project) 
+      - Yes, if you want to sync project metadata (such as labels), or if you need to obtain metrics from monitored projects of a scoping project  
 
    *  - ``serviceusage.services.use``
       - Yes, if you want to enable the use of a quota from the project where metrics are stored
