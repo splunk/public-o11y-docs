@@ -28,7 +28,7 @@ The following table lists Log Observer Connect's search query limits:
    * - Maximum number of saved search queries
      - 1,000
 
-   * - Maximum number of logs processed for Fields Summary
+   * - Maximum number of logs processed for fields summary
      - 150,000
 
 
@@ -40,7 +40,7 @@ What happens when the limit is hit?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The user experience might degrade and is not guaranteed to be functional.
 
-Maximum number of logs processed for the Fields Summary
+Maximum number of logs processed for the fields summary
 ---------------------------------------------------------------------------------------------
 
 The Log Observer UI displays a summary of fields and their value distribution. By default, it processes the most recent 150,0000 events to generate this view. 
