@@ -85,9 +85,8 @@ Next, initialize this code snippet:
     import SplunkSessionRecorder from '@splunk/otel-web-session-recorder'
 
     SplunkSessionRecorder.init({
-    // Also ingest hasn't been ready so we've been hijacking normal ingest, most likely this would be good to assume:
-    beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/ ...',
-    rumAuth: '<auth token>'
+        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rumreplay',
+        rumAuth: '<auth token>'
     });
 
 
