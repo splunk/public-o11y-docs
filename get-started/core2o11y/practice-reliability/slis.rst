@@ -1,4 +1,4 @@
-.. _slis-slis:
+.. _practice-reliability-slis:
 
 *********************************************************************************
 Measure and alert on your SLIs

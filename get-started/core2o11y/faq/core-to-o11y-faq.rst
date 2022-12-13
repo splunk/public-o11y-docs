@@ -11,9 +11,7 @@ The Splunk platform and Splunk Observability Cloud work together for an end-to-e
 
 Extend the power of Splunk into automated observability
 ==========================================================================================
-The Splunk platform enables you to collect, search, monitor, report, and analyze all of your real-time and historical machine data, making it the most thorough logging solution for security and ITOps. With your Splunk platform instance, you can prevent security breaches and conduct IT and observability investigations with custom made tools created by in-house experts. 
-
-With Splunk Observability Cloud, on the other hand, you have access to automated, out of the box, comprehensive observability across your stack. From day one, reliability engineers have an automatically generated service map showing dependencies and SLIs. Observability Cloud is the ideal toolset for SREs, developers, and DevOps engineers who need automated observability solutions that stream data in near-real time, allowing optimal reliability in an ephemeral, containerized environment. 
+The Splunk platform enables you to perform some reliability tasks, but the method is manual and achieved by writing Splunk searches using SPL or SPL2. With Splunk Observability Cloud, on the other hand, you have access to automated, out of the box, comprehensive observability across your stack. Observability Cloud lets you find and fix problematic code faster because you do not need to locate it manually by drilling with Splunk searches. Instead, you can correlate logs with metrics and traces to locate problems quickly. You can also Observability Cloud alerts and detectors to keep you informed of changes or outliers based on predefined or custom detectors.
 
 With Splunk Observability Cloud, you can:
 

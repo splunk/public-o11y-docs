@@ -1,4 +1,4 @@
-.. _collaboration-collaboration:
+.. _practice-reliability-collaboration:
 
 ***********************************************************************************
 Collaborate on observability within and across teams

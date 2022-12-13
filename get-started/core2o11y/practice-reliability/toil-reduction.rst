@@ -1,4 +1,4 @@
-.. _toil-reduction-toil-reduction:
+.. _practice-reliability-toil-reduction:
 
 ***********************************************************************************
 Reduce toil with automated solutions for interacting with the infrastructure
