@@ -15,7 +15,6 @@ This page documents Splunk Log Observer Connect service limits and behavior. Sys
 
 Log Observer Connect search query limits
 =============================================================================================
-
 The following table lists Log Observer Connect's search query limits:
 
 .. list-table::
@@ -49,3 +48,8 @@ What happens when the limit is hit?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the search results contain more than 150,000 events, then only the latest 150,000 events are processed.
+
+
+Other limits
+=============================================================================================
+Each Log Observer Connect user is also subject to the limits of their Splunk platform role. A user can only access Splunk platform resources that their Splunk platform role allows them to access. See :new-page:`Configuring role-based user access <https://docs.splunk.com/Documentation/Splunk/9.0.2/Security/Aboutusersandroles#Set_permission_granularity_with_custom_roles>` for more information.
