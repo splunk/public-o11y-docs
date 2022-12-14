@@ -11,7 +11,7 @@ This monitor type listens for Kubernetes events by calling the Kubernetes API ru
 
 Upon startup, the Kubernetes events monitor type sends all of the events that Kubernetes has that are still persisted and then send any new events as they come in. The various agents perform leader election amongst themselves to decide which instance will send events, unless the ``alwaysClusterReporter`` option is set to ``true``. 
 
-When ``alwaysClusterReporter`` is set to ``true``, every node, with the configuration, emits the same metrics. There is no additional querying of the manager node. When enabled, each agent on every node of the cluster fetches events from the Kubernetes API, which can bring down the Kubernetes API manager nodes.
+When ``alwaysClusterReporter`` is set to ``true``, every node, with the configuration, emits the same data. There is no additional querying of the manager node. When enabled, each agent on every node of the cluster fetches events from the Kubernetes API, which can bring down the Kubernetes API manager nodes.
 
 This monitor type is available on Kubernetes, Linux, and Windows.
 
@@ -22,6 +22,42 @@ This monitor type is available on Kubernetes, Linux, and Windows.
 ## Installation
 
 ```{include} /_includes/collector-installation.md
+```
+
+### Deploy with Helm
+
+To enable this monitor with the Helm chart, include this argument with the helm install command:
+
+```
+-set splunkObservability.infrastructureMonitoringEventsEnabled='true'
+```
+
+### Deploy without Helm
+
+To deploy without Helm, include the following in the OTel configuration: 
+
+```
+processors:
+  resource/add_event_k8s:
+    attributes:
+      - action: insert
+        key: kubernetes_cluster
+        value: CHANGEME
+
+receivers:
+  smartagent/kubernetes-events:
+   type: kubernetes-events
+   alwaysClusterReporter: true
+
+service:
+  pipelines:
+    logs/events:
+      exporters:
+        - signalfx
+      processors:
+        - resource/add_event_k8s
+      receivers:
+        - smartagent/Kubernetes-events
 ```
 
 ## Configuration
@@ -87,10 +123,10 @@ The **nested** `kubernetesAPI` config object has the following fields:
 
 The **nested** `whitelistedEvents` configuration object has the following fields:
 
-| Option | Required | Type | Description |
+| Option | Required | Type | 
 | --- | --- | --- | --- |
-| `reason` | no | `string` |  |
-| `involvedObjectKind` | no | `string` |  |
+| `reason` | no | `string` | 
+| `involvedObjectKind` | no | `string` | 
 
 ## Get help
 
