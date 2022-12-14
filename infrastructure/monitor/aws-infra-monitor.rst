@@ -18,7 +18,7 @@ To learn more about logs and AWS, see :ref:`get-started-logs`.
 About AWS data 
 =============================================================================
 
-See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada we provide <aws-infra-metadata>` for AWS.
+See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada Observability Cloud provides <aws-infra-metadata>` for AWS.
 
 By default, Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
 
