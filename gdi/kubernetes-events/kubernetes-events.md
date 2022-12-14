@@ -7,9 +7,9 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-events` monitor type. This monitor type listens for Kubernetes events by calling the Kubernetes API running on manager nodes, and sends Kubernetes events into Splunk Observability Cloud as Infrastructure Monitoring events through the OTel pipeline using the [Splunk Observability Cloud Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). 
 
-Once started, the Kubernetes events monitor type sends all of the events that Kubernetes has that are still persisted, and any new events as they come in. The various agents perform leader election amongst themselves to decide which instance will send events, unless the ``alwaysClusterReporter`` option is set to ``true``. When ``alwaysClusterReporter`` is set to ``true``, every node emits the same data, and there is no additional querying of the manager node. 
+After it starts, the Kubernetes events monitor type sends all of the events that Kubernetes has that are still persisted, and any new events as they come in. The various agents decide which instance will lead and sends event. Each enabled agent on every node of the cluster fetches events from the Kubernetes API, which can bring down the Kubernetes API manager nodes.
 
-When enabled, each agent on every node of the cluster fetches events from the Kubernetes API, which can bring down the Kubernetes API manager nodes.
+If ``alwaysClusterReporter`` is set to ``true``, every node emits the same data, and there is no additional querying of the manager node. 
 
 This monitor type is available on Kubernetes, Linux, and Windows.
 
@@ -72,15 +72,15 @@ receivers:
    ... # Additional config
 ```
 
-### 2. Include the monitor in the pipeline
+### 2. Include the monitor in a pipeline
 
-Next, include the monitor type in a ``metrics`` pipeline by adding ``service/pipelines/metrics/receivers`` in your configuration file. For example:
+Next, include the monitor type in an events pipeline in your configuration file. 
 
 ```
-service:
-   pipelines:
-     metrics:
-       receivers: [smartagent/kubernetes-events]
+services:
+  logs/events:
+    receivers:
+      - smartagent/kubernetes-events
 ```
 
 ### 3. Select which events to send
