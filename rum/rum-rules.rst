@@ -207,7 +207,58 @@ RUM has several default rules that you can find in the :guilabel:`RUM URL groupi
 
 Example
 -----------
-Consider the pattern ``/app/<*>``... 
+This * wildcard matches any path that starts with ``/app/``.
+
+.. list-table:: 
+   :widths: 20 40 40
+   :header-rows: 1
+
+   * - :strong:`Pattern`
+     - :strong:`Examples of paths that match`
+     - :strong:`Examples of paths that don't match`
+   * - ``/app/<*>``
+     -
+      * ``/app/v1``
+      * ``/app/v2``
+      * ``/app/dashboard``
+      * ``/app/v1/``
+     - 
+      * ``/app/controller``
+      * ``/applications/v1``
+ 
+  
+
+Example
+-----------
+
+
+The wildcard ``W*`` applies to any token that doesn't have any numbers in it. This pattern matches any path that starts with ``/app/`` and is followed by tokens without numbers in it. 
+
+.. list-table:: 
+   :widths: 20 40 40
+   :header-rows: 1
+
+   * - :strong:`Pattern`
+     - :strong:`Examples of paths that match`
+     - :strong:`Examples of paths that don't match`
+   * - ``/app/<w*>``
+     -
+      * ``/app/chart``
+      * ``/app/dashboard``
+     - 
+      * ``/app/v1``
+      * ``/app/v2``
+
+
+
+
+
+
+
+
+
+
+
 
 
 Use cases   
