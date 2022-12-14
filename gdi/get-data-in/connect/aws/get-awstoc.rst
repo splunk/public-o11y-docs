@@ -102,13 +102,12 @@ By default, Splunk Observability Cloud will bring in data from all :ref:`support
 
 If you can't connect AWS to Splunk Observability Cloud, see :ref:`Troubleshoot your AWS connection <aws-troubleshooting>`.
 
-.. _plan-to-use-cloudwatch-metric-streams:
 .. _aws-metricstreams:
 
 .. raw:: html
 
   <embed>
-    <h2>4. Use Metric Streams to forward data to Splunk Observability Cloud<a name="plan-to-use-cloudwatch-metric-streams" class="headerlink" href="#plan-to-use-cloudwatch-metric-streams" title="Permalink to this headline">¶</a></h3>
+    <h2>4. Use Metric Streams to forward data to Splunk Observability Cloud<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 Rather than polling for metrics data at specified intervals, CloudWatch Metric Streams sends metrics to a Kinesis Data Firehose stream, reducing latency. See :new-page:`Low Latency Observability Into AWS Services With Splunk <https://www.splunk.com/en_us/blog/devops/real-time-observability-splunk-cloudwatch-metric-streams.html>` in the DevOps blog for more information.

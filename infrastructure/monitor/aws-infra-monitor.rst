@@ -9,7 +9,7 @@ Monitor Amazon Web Services
 
 The Infrastructure Monitoring Amazon Web Services (AWS) integration imports metrics and metadata from AWS CloudWatch and the following :ref:`AWS services <aws-integrations>`, as well as other applications.
 
-Metrics are data points identified by a name; and metadata is information that helps you identify aspects of the metrics such as its source. AWS metrics and metadata help you monitor and troubleshoot the AWS services you're using, such as AWS EC2. The metrics and metadata also help you monitor applications, such as Kubernetes clusters, that use the AWS services. 
+Metrics are data points identified by a name, and metadata is information that helps you identify aspects of the metrics such as its source. AWS metrics and metadata help you monitor and troubleshoot the AWS services you're using. They also help you monitor applications, such as Kubernetes clusters, that use the AWS services. 
 
 To learn more about logs and AWS, see :ref:`get-started-logs`.
 
@@ -89,7 +89,10 @@ Import AWS CloudWatch data and metadata
 
 AWS provides a CloudWatch agent that lets you import (or download) metrics, logs, and metadata. To import these metrics in Infrastructure Monitoring, add the namespace you use for the AWS CloudWatch agent as a custom namespace in your AWS integration, as described in the section :ref:`specify-data-metadata`. 
 
-During this import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS. In Infrastructure Monitoring, AWS metadata becomes dimensions and custom properties. AWS tags are key-value pairs, so Infrastructure Monitoring converts them to custom properties.
+During this import, Infrastructure Monitoring gives the metrics special names so you can identify them as coming from AWS: 
+
+- AWS metadata becomes dimensions and custom properties. 
+- AWS tags are key-value pairs, so Infrastructure Monitoring converts them to custom properties.
 
 To learn more, see :ref:`aws-oc-metrics`, or refer to the AWS documentation site.
 
@@ -141,9 +144,9 @@ Example: Specify namespaces and filters
 
 The following example demonstrates how to specify the following:
 
-* Namespace: Only import data from Amazon ElasticSearch Service and EC2
-* Data filters: Only import data from EC2 if it matches a filter
-* Tag filters: Exclude data from resources that have the AWS tag ``version:canary``
+* Namespace: Only import data from Amazon ElasticSearch Service and EC2.
+* Data filters: Only import data from EC2 if it matches a filter.
+* Tag filters: Exclude data from resources that have the AWS tag ``version:canary``.
 
 To create these specifications, follow these steps:
 
@@ -154,11 +157,9 @@ To create these specifications, follow these steps:
    * Use :guilabel:`Import only` if you want a filter that only imports data.
    * Use :guilabel:`Don't import` if you want a filter that only excludes data.
 
-#. To use AWS tags to limit the data Infrastructure Monitoring imports, filter by tag. For this example, specify a filter
-   that excludes data from resources that have the AWS tag ``version:canary``.
+#. To use AWS tags to limit the data Infrastructure Monitoring imports, filter by tag. For this example, specify a filter that excludes data from resources that have the AWS tag ``version:canary``.
 
-Infrastructure Monitoring adds the prefix ``aws_tag_`` to the names of tags imported from AWS, which indicates their origin.
-For example, the AWS tag ``version:canary`` appears in Infrastructure Monitoring as ``aws_tag_version:canary``. When you filter an AWS integration by tag, enter the name of the tag as it appears in AWS.
+Infrastructure Monitoring adds the prefix ``aws_tag_`` to the names of tags imported from AWS, which indicates their origin. For example, the AWS tag ``version:canary`` appears in Infrastructure Monitoring as ``aws_tag_version:canary``. When you filter an AWS integration by tag, enter the name of the tag as it appears in AWS.
 
 You can also choose specific metrics to include or exclude. For example, consider the following conditions.
 
@@ -175,7 +176,6 @@ Infrastructure Monitoring supports wildcards in filters. For example, if you wan
 
 .. image:: /_images/infrastructure/aws-metric-tag-wildcard.png
    :width: 55%
-
 
 In this example, metricA and metricB are included for resources that have the ``env`` tag set to any value. No other metrics are included.
 
@@ -219,17 +219,14 @@ You can use the following AWS metadata to filter metrics:
       - key and optional value
       - AWS custom tag name for the instance, volume or load balancer. A metric may have more than one associated custom tag name.
 
-Receiving metrics using the Cloudwatch agent
--------------------------------------------------------------------
+Use ``aws_account_id`` to differentiate between metrics you import from multiple AWS accounts. Infrastructure Monitoring adds ``aws_account_id`` as a dimension of the MTS for the metric.
 
-Use aws_account_id to differentiate between metrics you import from multiple AWS accounts. Infrastructure Monitoring adds aws_account_id as a dimension of the MTS for the metric.
-
-For supported AWS services, Infrastructure Monitoring imports AWS tags and adds them as custom properties to the MTS for the metric. For example, if AWS tag has the value named Production, it will be shown in Infrastructure Monitoring as `aws_tag_Production`.
+For supported AWS services, Infrastructure Monitoring imports AWS tags and adds them as custom properties to the MTS for the metric. For example, if AWS tag has the value named Production, it will be shown in Infrastructure Monitoring as ``aws_tag_Production``.
 
 .. _aws-filter-char: 
 
 Unsupported characters 
---------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character.    
 
