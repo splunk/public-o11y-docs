@@ -22,8 +22,8 @@ Metric cardinality is the number of unique metric time series (MTS) produced by 
 
 For example, you send in data for a metric ``trans.latency``.
 
-* If ``trans.latency`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then ``trans.latency`` generates 3 MTS.
-* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, and deploy each service in each region, then ``trans.latency`` generates 3 (endpoints) * 3 (regions) = 9 MTS.
+* If ``trans.latency`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then ``trans.latency`` generates 3 metric time series (MTS).
+* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then ``trans.latency`` generates 3 (endpoints) * 3 (regions) = 9 MTS.
 
 Even though ``trans.latency`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
 
@@ -49,7 +49,7 @@ Data you send from your services to Observability Cloud can have high cardinalit
 
 By selecting specific dimensions to keep, you can aggregate your data points into a new metric with fewer dimensions, creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view of your data when you don’t need to view metrics across all dimensions.
 
-When you choose specific dimensions, metrics pipeline management generates a new metric that is rolled up based on your selected dimensions. By default, aggregation rules roll up the data points into the new metric using ``sum``, ``min``, ``max``, ``count``, ``delta``, ``avg``, and ``latest`` functions. The new aggregated metric can be queried in the same way as any other metrics in Observability Cloud. 
+When you choose specific dimensions, metrics pipeline management generates a new metric that is rolled up based on your selected dimensions. By default, aggregation rules roll up the data points into the new metric using ``sum``, ``min``, ``max``, ``count``, ``delta``, ``avg``, and ``latest`` functions. The new aggregated metric can be queried in the same way as any other metrics in Observability Cloud.
 
 How is this different from post-ingestion aggregation at query time?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

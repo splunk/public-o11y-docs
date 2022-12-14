@@ -15,6 +15,7 @@ _image-source-files
 *.bbprojectdata
 *.bbprojectsettings
 vale
+.vale.ini
 .idea
 .DS_Store
 product-docs.iml
