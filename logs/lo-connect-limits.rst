@@ -42,7 +42,7 @@ The user experience might degrade and is not guaranteed to be functional.
 Maximum number of logs processed for the fields summary
 ---------------------------------------------------------------------------------------------
 
-The Log Observer UI displays a summary of fields and their value distribution. By default, it processes the most recent 150,0000 events to generate this view. 
+The Log Observer Connect UI displays a summary of fields and their value distribution. By default, it processes the most recent 150,0000 events to generate this view. 
 
 What happens when the limit is hit?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
