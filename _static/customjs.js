@@ -433,11 +433,7 @@ $(window).scroll(function() {
             });
             $('#rightSideTOC').append(liTOC);
             $(".githubeditlink").html($(".olly_git_hub_link").html());
-            currentURL = $(".css-github-link").attr("href");
-            if(!window.location.origin.includes("docs.splunk.com") && currentURL!=undefined){
-              currentURL = currentURL.replace("public-o11y-docs", "private-o11y-docs");
-              $(".css-github-link").attr("href", currentURL)
-            }
+            
          
           return false;
         }
@@ -474,21 +470,10 @@ $(window).scroll(function() {
           console.log(liTOC);
           $('#rightSideTOC').append(liTOC);
           $(".githubeditlink").html($(".olly_git_hub_link").html());
-          currentURL = $(".css-github-link").attr("href");
-          if(!window.location.origin.includes("docs.splunk.com") && currentURL!=undefined){
-              currentURL = currentURL.replace("public-o11y-docs", "private-o11y-docs");
-              $(".css-github-link").attr("href", currentURL)
-            }
-
-        }else{
+       }else{
           var liTOC = "<li class='githubeditlink' style='margin-top:5px;'></li>";
           $('#rightSideTOC').append(liTOC);
           $(".githubeditlink").html($(".olly_git_hub_link").html());
-          currentURL = $(".css-github-link").attr("href");
-          if(!window.location.origin.includes("docs.splunk.com") && currentURL!=undefined){
-              currentURL = currentURL.replace("public-o11y-docs", "private-o11y-docs");
-              $(".css-github-link").attr("href", currentURL)
-            }
         }
 
 });
