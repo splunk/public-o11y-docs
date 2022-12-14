@@ -28,10 +28,10 @@ To connect Splunk Observability Cloud to AWS through the Observability Cloud API
 .. code-block:: none
 
   curl -X POST 'https://app.<realm>.signalfx.com/v2/integration' \
-    -H 'accept: application/json, text/plain, */*' \
-    -H 'x-sf-token: <USER_API_ACCESS_TOKEN>' \
-    -H 'content-type: application/json' \
-    --data-raw '{"name":"AWS-connection-name","type":"AWSCloudWatch","authMethod":"ExternalId","pollRate":300000,"services":[],"regions":[]}'
+      -H 'accept: application/json, text/plain, */*' \
+      -H 'x-sf-token: <USER_API_ACCESS_TOKEN>' \
+      -H 'content-type: application/json' \
+      --data-raw '{"name":"AWS-connection-name","type":"AWSCloudWatch","authMethod":"ExternalId","pollRate":300000,"services":[],"regions":[]}'
 
 Your system response looks something like this:
 
