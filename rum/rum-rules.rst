@@ -223,7 +223,6 @@ This * wildcard matches any path that starts with ``/app/``.
       * ``/app/dashboard``
       * ``/app/v1/``
      - 
-      * ``/app/controller``
       * ``/applications/v1``
  
   
