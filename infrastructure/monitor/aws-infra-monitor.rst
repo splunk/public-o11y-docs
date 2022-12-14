@@ -18,16 +18,16 @@ To learn more about logs and AWS, see :ref:`get-started-logs`.
 About AWS data 
 =============================================================================
 
-Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadatada we provide <aws-infra-metadata>` for AWS. 
+See the AWS official documentation for a list of the available AWS metrics and other data, or see :ref:`the metadatada we provide <aws-infra-metadata>` for AWS.
 
-By default, Observability Cloud will bring in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
+By default, Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
 
 .. _aws-namespaces:
 
 AWS namespaces
 -------------------------------------------------------------------
 
-Infrastructure Monitoring imports AWS namespace metadata in the using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter.
+Infrastructure Monitoring imports AWS namespace metadata using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter.
 
 To control the amount of data you import, specify the namespaces you want to import as well as the data you want to import or exclude from each namespace. For more information, see :ref:`specify-data-metadata`.
 
@@ -128,7 +128,7 @@ The AWS integration imports metrics from a list of supported AWS services in all
 
 You can also limit the amount of AWS data that the integration imports by changing the rate at which Infrastructure Monitoring polls AWS CloudWatch.
 
-.. note:: You must be an administrator of your AWS account to choose namespaces and set filters.
+.. note:: You must be an administrator of your AWS account to specify namespaces and set filters.
 
 * To select the built-in namespaces for which you want data, click :guilabel:`Select namespaces`, then choose the namespaces.
 
@@ -145,14 +145,14 @@ The following example demonstrates how to specify the following:
 * Data filters: Only import data from EC2 if it matches a filter
 * Tag filters: Exclude data from resources that have the AWS tag ``version:canary``
 
-To create these specifications, perform the following steps:
+To create these specifications, follow these steps:
 
 #. From the list of namespaces, select Amazon ElasticSearch Service and EC2.
-#. To limit the data Infrastructure Monitoring imports from EC2, click the drop-down arrow to see the data filters.
+#. To limit the data Infrastructure Monitoring imports from EC2, select data filters from the list.
 #. To select the filters you want from the following options:
 
-   * Use :guilabel:`Import only` if you want to specify a filter for the data to import.
-   * Use :guilabel:`Don't import` if you want to specify a filter for the data to exclude.
+   * Use :guilabel:`Import only` if you want a filter that only imports data.
+   * Use :guilabel:`Don't import` if you want a filter that only excludes data.
 
 #. To use AWS tags to limit the data Infrastructure Monitoring imports, filter by tag. For this example, specify a filter
    that excludes data from resources that have the AWS tag ``version:canary``.
@@ -165,7 +165,7 @@ You can also choose specific metrics to include or exclude. For example, conside
 .. image:: /_images/infrastructure/aws-metric-tag.png
    :width: 55%
 
-Only metricA and metricB are included, and only for resources specified by the tags:
+Infrastructure Monitoring only includes metricA and metricB, and only for resources specified by the tags:
 
 -  For a resource that has the tag ``env:prod`` or ``env:beta``, metricA and metricB are included.
 -  For a resource that doesn't have the tags ``env:prod`` or ``env:beta``, no metrics are included.
@@ -175,6 +175,7 @@ Infrastructure Monitoring supports wildcards in filters. For example, if you wan
 
 .. image:: /_images/infrastructure/aws-metric-tag-wildcard.png
    :width: 55%
+
 
 In this example, metricA and metricB are included for resources that have the ``env`` tag set to any value. No other metrics are included.
 
@@ -217,6 +218,9 @@ You can use the following AWS metadata to filter metrics:
    *  - aws_tag_<TAGNAME>
       - key and optional value
       - AWS custom tag name for the instance, volume or load balancer. A metric may have more than one associated custom tag name.
+
+Receiving metrics using the Cloudwatch agent
+-------------------------------------------------------------------
 
 Use aws_account_id to differentiate between metrics you import from multiple AWS accounts. Infrastructure Monitoring adds aws_account_id as a dimension of the MTS for the metric.
 

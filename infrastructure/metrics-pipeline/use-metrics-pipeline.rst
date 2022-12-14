@@ -55,5 +55,5 @@ Follow these steps to create rules for a metric.
    
     To learn more, see :ref:`data-dropping-impact`.
 #. Select :guilabel:`Save`.
-#. Review the new MTS volume.
+#. Review the resulting volume of MTS.
 #. Select :strong:`Confirm`.

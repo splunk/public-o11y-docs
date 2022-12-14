@@ -10,7 +10,7 @@ AWS CloudWatch metadata
 Infrastructure Monitoring automatically imports AWS metadata for imported AWS CloudWatch metrics. Keep in mind metadata might take up to 15 minutes to arrive.
 
 .. note::
-   As a naming convention, the `aws_` prefix is added to the original AWS property name converted to `snake_case`.
+   Observability Cloud creates a new property name by converting the original AWS property name to `snake_case` and adding the prefix `aws_` prefix.
    
    For example, `DBClusterIdentifier` becomes `aws_db_cluster_identifier`.
 
@@ -19,7 +19,7 @@ Infrastructure Monitoring automatically imports AWS metadata for imported AWS Cl
 Common properties
 =============================================================================
 
-For all services, the following common properties are imported:
+For all services, the system imports the following common properties:
 
 ..  list-table::
    :header-rows: 1
@@ -112,7 +112,7 @@ For more information, see the AWS documentation for API Gateway.
 
 AWS Elastic Load Balancing (Classic, Application, and Network) metadata
 -----------------------------------------------------------------------------------------------------
-For ELB, Infrastructure Monitoring scans every load balancer name for your AWS account and imports properties of the load balancer and any tags set on the load balancer. 
+For AWS Elastic Load Balancing (ELB), Infrastructure Monitoring scans every load balancer name for your AWS account and imports properties of the load balancer and any tags set on the load balancer.
 
 For more information on these properties, including acceptable values and constraints, see the AWS Documentation for ELB.
 
@@ -127,7 +127,7 @@ For more information on these properties, including acceptable values and constr
 
    *  - CreatedTime
       - aws_create_time
-      - The time stamp when the load balancer was created
+      - Load balancer creation timestamp
 
 Note that the custom property name drops the ``d`` in ``aws_create_time``. 
 
@@ -151,7 +151,7 @@ For more information, see the AWS documentation for Auto Scaling.
 
    *  - CreatedTime
       - aws_creation_time
-      - Time the resource was created at. For example, ``Thu Apr 13 15:59:25 UTC 2017``
+      - Resource creation time, in the form ``Thu Apr 13 15:59:25 UTC 2017``
 
    *  - DefaultCoolDown
       - aws_default_cool_down
@@ -171,15 +171,15 @@ For more information, see the AWS documentation for Auto Scaling.
 
    *  - NewInstancesProtectedFromScaleIn
       - aws_new_instances_protected_from_scale_in
-      - Indicates whether newly launched instances are protected from termination by Auto Scaling when scaling in
+      - Indicates whether Auto Scaling protects newly launched instances from termination when scaling in
 
    *  - PlacementGroup
       - aws_placement_group
-      - The name of the placement group into which you'll launch your instances, if any
+      - The name of the placement group into which you launch your instances, if any
 
    *  - ServiceLinkedRoleARN
       - aws_service_linked_role_arn
-      - ARN of the service-linked role that the Auto Scaling group uses to call other Amazon services on your behalf
+      - Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other Amazon services on your behalf
 
    *  - Stats
       - aws_status
@@ -193,7 +193,7 @@ For more information, see the AWS documentation for Auto Scaling.
       - aws_region
       - AWS Region to which the Auto Scaling group belongs
 
-Note that the custom property name becomes ``aws_creation_time`` instead of ``aws_created_time``. 
+The custom property name becomes ``aws_creation_time`` instead of ``aws_created_time``.
 
 .. _cloudfront-metadata:
 
@@ -227,7 +227,7 @@ For more information on these properties, including acceptable values and constr
 Amazon DocumentDB metadata
 -------------------------------------------------------------------
 
-For DocumentDB, Infrastructure Monitoring scans every AWS/DocDB cluster and AWS/DocDB cluster instance for your AWS account, and imports properties and tags on each instance. Since the amount of AWS/DocDB properties exceeds the amount of properties that can be kept, ``DBSubnetGroup`` has been excluded from the properties list.
+For DocumentDB, Infrastructure Monitoring scans every AWS/DocDB cluster and AWS/DocDB cluster instance for your AWS account, and imports properties and tags on each instance. The system excludes ``DBSubnetGroup`` from the properties list, because the amount of AWS/DocDB properties exceeds the amount of properties that the system can keep.
 
 For more information on these properties, including acceptable values and constraints, see the AWS documentation for Amazon DocumentDB.
 
@@ -298,15 +298,15 @@ For more information on these properties, including acceptable values and constr
 
    *  - availability-zone
       - aws_availability_zone
-      - The Availability Zone in which the volume was created
+      - The Availability Zone in which EBS created the volume
 
    *  - create-time
       - aws_create_time
-      - The time stamp when the volume was created
+      - Date and time that EBS created the volume
 
    *  - delete_on_termination
       - aws_delete_on_termination
-      - Whether or not a volume will be deleted if the instance it is attached to is terminated
+      - Whether or not EBS deletes a volume if something terminates the instance to which it's attached
 
    *  - encrypted
       - aws_encrypted
@@ -439,7 +439,7 @@ AWS Optimizer generates metrics from usage and cost data imported by calls to th
 * To learn more about visualizing and analyzing the metrics, see :ref:`built-in-dashboards`.
 * To learn more about creating detectors, see :ref:`create-detectors`.
 
-To import the usage and cost data to be imported, make sure the following lines are in your AWS Policy Document. To learn how to view and modify your AWS Policy Document, see :ref:`get-started-aws`:
+To import the usage and cost data, make sure the following lines are in your AWS Policy Document. To learn how to view and modify your AWS Policy Document, see :ref:`get-started-aws`:
 
 .. code-block:: none
 
@@ -453,7 +453,7 @@ To import the usage and cost data to be imported, make sure the following lines 
 
 Notes on using AWS Optimizer:
 
-* AWS Optimizer is only available in the Splunk Observability Cloud Enterprise Edition.
+* AWS Optimizer is only available in Splunk Observability Cloud Enterprise Edition.
 * The imported data does not include AWS billing data.
 * Infrastructure Monitoring doesn't import data or generate metrics for EC2 Spot Instances.
 * If you have multiple AWS accounts, you need to add a Infrastructure Monitoring AWS integration for each account, and each integration must have :strong:`Import data for AWS Optimizer` selected. If you don't set this option, your generated metrics might contain inaccurate values.
@@ -489,7 +489,7 @@ For more information, see the AWS documentation for ECS.
 Amazon Elastic File System metadata
 -------------------------------------------------------------------
 
-For EFS, Infrastructure Monitoring scans every volume ID from your AWS account and imports all tags set on the volume. Observability Cloud doesn't import any properties.
+For Amazon Elastic File System (Amazon EFS), Infrastructure Monitoring scans every volume ID from your AWS account and imports all tags set on the volume. Observability Cloud doesn't import any properties.
 
 For more information, including acceptable values and constraints, see the AWS documentation for EFS.
 
@@ -557,7 +557,7 @@ For more information about these properties, including acceptable values and con
       -  Cluster and node
 
 
-CacheClusterId is a dimension that is already in ElastiCache MTS that Infrastructure Monitoring imports from AWS Cloudwatch.
+CacheClusterId is a dimension that is already in the ElastiCache metric time series (MTS) that Infrastructure Monitoring imports from AWS Cloudwatch.
 
 .. _beanstalk-metadata:
 
@@ -597,7 +597,7 @@ For more information, including acceptable values and constraints, see the AWS d
          
          * Aborting: The environment is aborting a deployment
          * Launching: The environment is in the process of initial deployment
-         * LinkingFrom: The environment is being linked to by another environment. See Environment links for details
+         * LinkingFrom: The environment is linked to by another environment. See Environment links for details
          * LinkingTo: The environment is in the process of linking to another environment. See Environment links for details
          * Updating: The environment is updating its configuration settings or application version
          * Ready: The environment is available to have an action performed on it, such as update or terminate
@@ -637,11 +637,11 @@ For more information on these properties, including acceptable values and constr
 
    *  - AutoScalingRole
       - aws_auto_scaling_role
-      - An IAM role for automatic scaling policies
+      - An Amazon Identity and Access Management (IAM) role for automatic scaling policies
 
    *  - CustomAmiId
       - aws_custom_ami_id
-      - The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI
+      - The ID of a custom Amazon EBS-backed Linux Amazon Machine Image (AMI) if the cluster uses a custom AMI
 
    *  - InstanceCollectionType
       - aws_instance_collection_type
@@ -731,7 +731,7 @@ For more information, see the documentation for AWS Elasticsearch
 Amazon Kinesis Firehose metadata
 -------------------------------------------------------------------
 
-Infrastructure Monitoring imports Kinesis Firehose's tags. For more information refer to AWS documentation.
+Infrastructure Monitoring imports Kinesis Firehose's tags. See the AWS documentation.
 
 .. _kinesis-metadata:
 
@@ -770,7 +770,7 @@ Amazon Kinesis Analytics metadata
 
 Infrastructure Monitoring imports Kinesis Analytics' properties and tags, except for ``ApplicationConfiguration``. 
 
-For more information refer to AWS documentation.
+For more information, see the AWS documentation.
 
 .. _lambda-metadata:
 
@@ -822,7 +822,7 @@ For more information on these properties, including acceptable values and constr
 
    *  - VpcConfig.vpcId
       - aws_function_vpc_id
-      - The VPC ID associated with your function
+      - The Amazon Virtual Private Cloud (VPC) ID associated with your function
 
 
 .. _natgateway-metadata:
@@ -830,9 +830,9 @@ For more information on these properties, including acceptable values and constr
 Amazon VPC (NAT Gateway) metadata
 -------------------------------------------------------------------
 
-Infrastructure Monitoring imports all Amazon VPC (NAT Gateway) properties and tags. 
+Infrastructure Monitoring imports all Amazon VPC Network Address Translation (NAT) gateway properties and tags.
 
-For more information on these properties, including acceptable values and constraints, refer to AWS documentation.
+For more information on these properties, including acceptable values and constraints, see the AWS documentation.
 
 .. _cloudwatch-rds-metadata:
 
@@ -841,7 +841,7 @@ Amazon Relational Database Service (RDS) metadata
 
 For RDS, Infrastructure Monitoring scans every database instance for your AWS account and imports properties of each instance and any tags set on each instance. 
 
-For more information, including acceptable values and constraints, see  the AWS documentation for the DBCluster API.
+For more information, including acceptable values and constraints, see the AWS documentation for the DBCluster API.
 
 .. list-table::
    :header-rows: 1
@@ -882,7 +882,7 @@ For more information, including acceptable values and constraints, see  the AWS 
 
    *  - Iops
       - aws_iops
-      - New Provisioned IOPS value for the DB instance. AWS might apply this value in the future, or might be applying it at the moment.
+      - New Provisioned input/output operations per second (IOPS) value for the DB instance. AWS might apply this value in the future, or might be applying it at the moment.
 
    *  - MultiAZ
       - aws_multi_az
@@ -890,7 +890,7 @@ For more information, including acceptable values and constraints, see  the AWS 
 
    *  - PubliclyAccessible
       - aws_publicly_accessible
-      - Accessibility options for the DB instance. ``"true"`` indicates an Internet-facing instance with a publicly resolvable DNS name that resolves to a public IP address. ``"false"`` indicates an internal instance with a DNS name that resolves to a private IP address.
+      - Accessibility options for the DB instance. ``"true"`` indicates an internet-facing instance with a publicly resolvable DNS name that resolves to a public IP address. ``"false"`` indicates an internal instance with a DNS name that resolves to a private IP address.
 
    *  - ReadReplicaSourceDBInstanceIdentifier
       - aws_read_replica_source_db_instance_identifier
@@ -960,7 +960,7 @@ For more information, including acceptable values and constraints, see the AWS d
 
    *  - MasterUsername
       - aws_cluster_master_username
-      - Master user name for the cluster. This is the name used to connect to the database specified in the DBName parameter.
+      - Master username for the cluster. This is the name used to connect to the database specified in the DBName parameter.
 
    *  - PubliclyAccessible
       - aws_cluster_publicly_accessible
@@ -973,7 +973,7 @@ Amazon Route 53 metadata
 
 Infrastructure Monitoring imports Route 53's :ref:`common properties <aws_common_properties>` and tags. 
 
-For more information refer to AWS documentation.
+For more information, see the AWS documentation.
 
 .. _s3-metadata:
 .. _s3:
@@ -1003,14 +1003,14 @@ For more information on S3 bucket tags, see the documentation for AWS S3 Cost Al
 Amazon Simple Notification Service (SNS) metadata
 -------------------------------------------------------------------
 
-Infrastructure Monitoring imports SNS' tags only. For more information refer to AWS documentation.
+Infrastructure Monitoring imports SNS tags only. See the AWS documentation.
 
 .. _sqs-metadata:
 
-SQS metadata
+Amazon SQS metadata
 -------------------------------------------------------------------
 
-For SQS, Infrastructure Monitoring imports properties of every queue as well as any tags set on the queue.
+For Amazon Simple Queue Service (SQS), Infrastructure Monitoring imports properties of every queue as well as any tags set on the queue.
 
 For more information on these properties, including acceptable values and constraints, see the AWS developer documentation for SQS.
 
@@ -1065,9 +1065,9 @@ For more information, including acceptable values and constraints, see the AWS d
 Amazon VPC VPN metadata
 -------------------------------------------------------------------
 
-Infrastructure Monitoring imports Amazon VPC VPN's :ref:`common properties <aws_common_properties>` and tags. 
+Infrastructure Monitoring imports the :ref:`common properties <aws_common_properties>` and tags of Amazon VPC Virtual Private Network (VPN).
 
-For more information refer to AWS documentation.
+For more information, see the AWS documentation.
 
 .. _workspaces-metadata:
 
