@@ -13,6 +13,17 @@ What are custom rules in Splunk RUM?
 Write custom rules to group together URLs with common components based on your specifications. Customizing rules allows you to streamline the organization of your data in Splunk RUM in a way that makes the most sense to you and your organization. You can group URLs by both path and domain. 
 
 
+Write a custom rule
+=======================
+
+Follow these steps to write a custom rule:
+
+1. Learn about your URLs. Identify the components and tokens.
+2. Figure out what kind of results you want to see. 
+3. Review the pattern syntax and examples to better understand how to formulate rules that work for your data. 
+4. Reference the default rules and see if you need to deactivate any for your rule to work. 
+
+
 How to identify components of a URL 
 ===================================
 
@@ -26,7 +37,9 @@ Within the scope of Splunk RUM, there are the following components in a URL:
 Example
 -------------
 Consider the following URL: 
-``https://example.com/path/page#title``
+``https://example.com/path/page#title``.
+
+Here is how to break down this URL into components:
 
 .. list-table:: 
    :widths: 20 40 
@@ -185,6 +198,66 @@ The following syntax is invalid:
      - 	The <??> wildcard must be the last token in a pattern. 
    * - ``/A/B<?>/C``
      - The <?> wildcard must be separated by ``/`` delimiters. 
+
+
+Default rules 
+===========================
+
+RUM has several default rules that you can find in the :guilabel:`RUM URL grouping` tab under :guilabel:`Data Management`. If you want to create a rule that conflicts with a default rule, you can deactivate the default rule globally, or by application. 
+
+Example
+-----------
+This * wildcard matches any path that starts with ``/app/``.
+
+.. list-table:: 
+   :widths: 20 40 40
+   :header-rows: 1
+
+   * - :strong:`Pattern`
+     - :strong:`Examples of paths that match`
+     - :strong:`Examples of paths that don't match`
+   * - ``/app/<*>``
+     -
+      * ``/app/v1``
+      * ``/app/v2``
+      * ``/app/dashboard``
+      * ``/app/v1/``
+     - 
+      * ``/applications/v1``
+ 
+  
+
+Example
+-----------
+
+
+The wildcard ``W*`` applies to any token that doesn't have any numbers in it. This pattern matches any path that starts with ``/app/`` and is followed by tokens without numbers in it. 
+
+.. list-table:: 
+   :widths: 20 40 40
+   :header-rows: 1
+
+   * - :strong:`Pattern`
+     - :strong:`Examples of paths that match`
+     - :strong:`Examples of paths that don't match`
+   * - ``/app/<w*>``
+     -
+      * ``/app/chart``
+      * ``/app/dashboard``
+     - 
+      * ``/app/v1``
+      * ``/app/v2``
+
+
+
+
+
+
+
+
+
+
+
 
 
 Use cases   

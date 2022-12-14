@@ -52,7 +52,7 @@ To create a new log metricization rule from scratch in the logs pipeline, follow
 
 6. Click :guilabel:`Next`.
 
-7. Review your MTS (Metric Time Series) summary to see how your metricization could affect your subscription usage. You can optionally select an ingest token to limit the MTS count.
+7. Review your metric time series (MTS) summary to see how your metricization could affect your subscription usage. You can optionally select an ingest token to limit the MTS count.
 
 8. Click :guilabel:`Next`.
 
