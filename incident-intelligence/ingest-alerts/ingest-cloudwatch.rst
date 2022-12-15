@@ -77,7 +77,7 @@ Alarm fields
    * - time 
      - Required
      - String
-     - Date-time string. Send date and time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model
+     - Date-time string. Send date-time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model
 
    * - region
      -

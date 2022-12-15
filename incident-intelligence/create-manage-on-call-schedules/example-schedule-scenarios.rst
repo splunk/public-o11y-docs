@@ -34,7 +34,7 @@ Week-by-week shifts let you define coverage that is consistent week after week. 
 
 You now have a schedule with a week-by-week shift that includes coverage for weekends from 5 PM Friday to 8 AM Monday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. See :ref:`scenario-three` for an example of a multi-shift schedule. 
 
-Scenario 1: Day-by-day coverage
+Scenario 2: Day-by-day coverage
 =====================================================
 
 Day-by-day shifts let you define coverage for specific days of the week. For example, one responder covers Monday-Friday from 8 AM to 5 PM for 1 week. Follow these steps to set up this example.
@@ -168,7 +168,7 @@ Follow these steps to create a week-by-week shift for secondary 24x7 coverage:
 Add your primary and secondary schedules to the incident workflow for the web application service
 -------------------------------------------------------------------------------------------------------
 
-Your last step to for this scenario is to add your primary and secondary schedules to the incident workflow for your web application service. 
+Your last step for this scenario is to add your primary and secondary schedules to the incident workflow for your web application service. 
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select the :guilabel:`Services` tab.
