@@ -53,9 +53,12 @@ service:
       exporters:
         - signalfx
       processors:
+        - memory_limiter
+        - batch
+        - resourcedetection
         - resource/add_event_k8s
       receivers:
-        - smartagent/kubernetes-events
+        - smartagent/kubernetes-events        
 ```
 
 ## Configuration
