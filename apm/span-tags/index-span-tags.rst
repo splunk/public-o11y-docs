@@ -165,7 +165,7 @@ After you've configured custom Troubleshooting MetricSets you can see their stat
 Status of Database MetricSets
 --------------------------------------------------
 
-You can pause and resume indexing of database query performance data at any time from the :guilabel:`Standard MetricSets` section of :guilabel:`APM MetricSets`. You can also control the indexing of SQL and NoSQL database query performance data separately.
+You can pause and resume indexing of Database Query Performance data at any time from the :guilabel:`Standard MetricSets` section of :guilabel:`APM MetricSets`. You can also control the indexing of SQL and NoSQL tags separately.
 
 To pause the indexing of Database Query Performance data, select :guilabel:`Pause indexing` next to the database type. To resume, select :guilabel:`Resume indexing`.
 
