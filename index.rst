@@ -190,7 +190,7 @@ Set up an integration to an SSO provider :ref:`sso-label`
 .. rst-class:: newcard
 
 :strong:`Subscription Usage`
-Monitor subscription usage for Infrastructure Monitoring :ref:`monitor-imm-billing-usage`
+Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-overview`
 
 
 .. popular integrations section
@@ -868,24 +868,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/apm-billing-usage/apm-billing-usage-index
 
 .. toctree::
    :hidden:
    :maxdepth:   3
 
-   admin/imm-billing-usage/monitor-imm-billing-usage
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/imm-billing-usage/dpm-usage
-
+   Monitor subscription usage <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::
