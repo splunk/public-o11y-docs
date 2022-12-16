@@ -29,14 +29,14 @@ Install and configure the Splunk OpenTelemetry Collector
 
 Deploy the Splunk OpenTelemetry Collector for Kubernetes in agent mode. The required Collector components depend on product entitlements and the data you want to collect. See :ref:`otel-install-k8s`.
 
-In the Collector's Helm chart, set the ``autodetect.istio`` parameter to ``true`` by passing ``--set autodetect.istio=true`` to the ``helm install`` or ``helm upgrade`` commands.
+In the Helm chart for the Collector, set the ``autodetect.istio`` parameter to ``true`` by passing ``--set autodetect.istio=true`` to the ``helm install`` or ``helm upgrade`` commands.
 
-You can also add the following snippet to your  ``values.yaml`` file, which is passed using the ``-f myvalues.yaml`` argument:
+You can also add the following snippet to your  ``values.yaml`` file, which you can pass using the ``-f myvalues.yaml`` argument:
 
 .. code:: yaml
 
    autodetect:
-      stio: true
+      istio: true
    
 Ensure that data forwarding doesn't generate telemetry
 ----------------------------------------------------------
@@ -44,7 +44,7 @@ Ensure that data forwarding doesn't generate telemetry
 Forwarding telemetry from Istio to the Collector might generate undesired telemetry. To avoid this, do one of the following:
 
 - Run the Collector in a separate namespace that lacks the Istio proxy.
-- Add a label to the Collector pods to prevent the injection of the Istio proxy. This is default configuration when the ``autodatect.istio`` parameter is set to ``true``.
+- Add a label to the Collector pods to prevent the injection of the Istio proxy. This is default configuration when the ``autodetect.istio`` parameter is set to ``true``.
 - If you need the Istio proxy in the Collector pods, disable tracing in the Collector pods. For example:
 
    .. code-block:: yaml
@@ -112,7 +112,12 @@ Update all pods that are in the Istio service mesh to include an ``app`` label. 
 Recommendations
 =========================================
 
-To make the best use of Splunk APM's full-fidelity data retention, configure Istio to send as much trace data as possible by configuring sampling and maximum tag length in the ``tracing.yaml`` file:
+To make the best use of Splunk APM's full-fidelity data retention, configure Istio to send as much trace data as possible by configuring sampling and maximum tag length as follows:
+
+- Set a ``sampling`` value of ``100`` to ensure that all traces have correct root spans.
+- Set a ``max_path_tag_length`` value of ``99999`` to avoid that key tags get truncated.
+
+For example:
 
 .. code-block:: yaml
    :emphasize-lines: 13,14
@@ -137,8 +142,6 @@ To make the best use of Splunk APM's full-fidelity data retention, configure Ist
                environment.deployment:
                   literal:
                      value: dev
-
-A ``sampling`` value of ``100`` ensures that all traces have correct root spans. A ``max_path_tag_length`` value of ``99999`` helps avoid that key tags are truncated.
 
 For more information on how to configure Istio see the Istio distributed tracing installation documentation.
 
