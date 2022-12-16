@@ -9,7 +9,7 @@ Performance overhead of the Splunk OTel Java agent
 
 The Splunk OpenTelemetry Java agent has minimal impact on system performance when instrumenting Java Virtual Machine (JVM) applications. This page contains the latest performance overhead measurements, a description of the testing conditions, and instructions for repeating the tests in your own environment.
 
-.. note:: Many factors affect performance results, including JVM configuration, transaction volume, deployment architecture, and hardware. These results represent reference information and do not represent performance in all environments.
+Many factors affect performance results, including JVM configuration, transaction volume, deployment architecture, and hardware. These results represent reference information and do not represent performance in all environments.
 
 .. caution:: The methodology used for performance testing is under active review. Depending on the outcome, these results might become unavailable or be replaced.
 
