@@ -12,13 +12,11 @@ Splunk Observability Cloud global use cases
     :maxdepth: 3
     :hidden:
 
-    use-case
-    use-case-collector
-    use-case-org-security
+    End-to-end use case <use-case>
+    Collector use case <use-case-collector>
 
-Learn more about the Splunk Observability Cloud platform with the following croos-product use cases:
+Learn more about the Splunk Observability Cloud platform with the following cross-product use cases:
 
 - :ref:`Troubleshoot an issue from the browser to the back end using Splunk Observability Cloud <get-started-use-case>`
 - :ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-use-case>`
-- :ref:`Maintain a secure organization with many teams and users using Splunk Observability Cloud <use-case-security>`
 

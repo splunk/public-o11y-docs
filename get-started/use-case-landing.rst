@@ -7,6 +7,18 @@ Splunk Observability Cloud use cases
 .. meta::
   :description: Use cases for Splunk Observability Cloud.
 
+.. toctree::
+    :maxdepth: 3
+    :hidden:
+
+    Global use cases <use-cases/use-case-cross>
+    {include} ../apm/apm-use-cases/apm-use-cases-intro.rst
+    profiling-use-case-landingpage
+    network-explorer-use-cases 
+    use-cases-detectors-alerts 
+    use-case-landingpage
+    synth-landing
+
 Learn more about the Splunk Observability Cloud platform with the following use cases:
 
 - :ref:`Troubleshoot an issue from the browser to the back end using Splunk Observability Cloud <get-started-use-case>`
