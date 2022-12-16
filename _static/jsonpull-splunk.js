@@ -86,6 +86,8 @@ $(document).ready(function () {
             };
 
             let converter = new showdown.Converter();
+            let cache = [];
+            let idMap = [];
 
             function getDataFromObject(data,type) {
 
@@ -117,6 +119,67 @@ $(document).ready(function () {
                 }
                 return doc;
             }
+
+            function traverseFields(mainObj, data, preRef = '', h2Text = '') {
+
+                let id =  "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
+                idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
+                id += idMap[id] > 0 ? '-' + idMap[id] : '';
+
+
+                if (preRef != '' && h2Text != '') {
+                    $(mainObj).append('<h2 class="sub-table-heading" id="' + preRef + '-table">' + h2Text + '</h2>');
+                }
+
+                let table = "<table class='monitor-stats docutils' id='" + id + "'><thead><th>Name</th><th>Type</th><th>Kind</th><th>Description</th></thead><tbody></tbody>";
+
+                $(mainObj).append(table);
+
+                let newObject = $(mainObj).find('#' + id);
+
+                for (let i in data['fields']) {
+
+                    let rowId = id + '-' + data['fields'][i]['name'];
+                    let row = "<td id='" + rowId + "'>" + data['fields'][i]['name'] + "</td><td>" + data['fields'][i]['type'] + "</td><td>" + data['fields'][i]['kind'] + "</td><td>" + converter.makeHtml(data['fields'][i]['doc']) + "</td>";
+                    newObject.append('<tr>' + row + '</tr>');
+
+                    if (data['fields'][i]['fields'] !== undefined) {
+                        traverseFields(mainObj, data['fields'][i], rowId, data['fields'][i]['name']);
+                        newObject.find('#' + rowId).html('<a href="#' + rowId + '-table">' + data['fields'][i]['name'] + '</a>');
+                    }
+
+                }
+            }
+
+            $('.metrics-standard').each(function () {
+
+                let url = $(this).attr('url');
+                let metricsYamlObject = $(this);
+
+                try {
+
+                    let client = new XMLHttpRequest();
+                    client.open('GET', url);
+                    client.onreadystatechange = function () {
+
+                        const result = jsyaml.load(client.responseText, 'utf8');
+                        if (result != null && !cache[result.type]) {
+
+                            metricsYamlObject.append(traverseFields(metricsYamlObject, result));
+
+                            cache[result.type] = true;
+
+                        }
+
+                    }
+                    client.send();
+
+
+                } catch (e) {
+                    console.log(e);
+                }
+
+            });
 
             $('.metrics-yaml').each(function () {
 
