@@ -292,7 +292,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Observability Cloud use cases <get-started/use-cases/use-case-land>
+   Use cases <get-started/use-case-landing>
 
 .. toctree::
    :maxdepth:   3
