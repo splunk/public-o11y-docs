@@ -175,7 +175,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
                   "dimensions": [
                       {
                       "name": "ResourceId",
-                      "value": "3efad9dc-3d50-4eac-9c87-8b3fd6f97e4e"
+                      "value": "<YOUR_RESOURCE_ID>"
                       }
                   ],
                   "metricValue": 7.727

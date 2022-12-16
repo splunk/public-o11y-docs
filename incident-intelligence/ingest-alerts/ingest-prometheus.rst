@@ -173,7 +173,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
             },
             "startsAt": "2022-06-30T00:55:30.064Z",
             "endsAt": "0001-01-01T00:00:00Z",
-            "generatorURL": "http://b8e578b3f5ed:9090/graph?g0.expr=disk_usage+%3E+80&g0.tab=1",
+            "generatorURL": "<YOUR_GENERATOR_URL>",
             "fingerprint": "0e8d353af1ccede9"
         },
         {
@@ -190,7 +190,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
             },
             "startsAt": "2022-06-30T00:55:14.064Z",
             "endsAt": "0001-01-01T00:00:00Z",
-            "generatorURL": "http://b8e578b3f5ed:9090/graph?g0.expr=disk_usage+%3E+50&g0.tab=1",
+            "generatorURL": "<YOUR_GENERATOR_URL>",
             "fingerprint": "2523ef41263c9dc5"
         }
         ],
@@ -203,7 +203,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
         "job": "node_exporter1"
         },
         "commonAnnotations": {},
-        "externalURL": "http://d37bfc81e932:9093",
+        "externalURL": "<YOUR_EXTERNAL_URL>",
         "version": "4",
         "groupKey": "{}:{disk=\"mydisk1\"}",
         "truncatedAlerts": 0
