@@ -13,6 +13,8 @@ You can use Incident Intelligence ingest endpoints to ingest alerts from various
 Prometheus ingest endpoint
 ---------------------------------
 
+To send Prometheus alerts to the ingest endpoint, make a POST call to the endpoint.
+
 .. code:: 
 
     https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/prometheus
@@ -32,7 +34,7 @@ Request header
      - Description
    * - X-SF-Token  
      - Required
-     - Authentication token. See :ref:`api-access-token`. Ensure that the token as :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
+     - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
 
 
 Alert fields
@@ -79,7 +81,7 @@ Alert fields
 JSON payload
 ------------
 
-Use the Prometheus alertmanager webhook config to send Prometheus alerts to the Prometheus endpoint. Refer to the below example JSON payload for the Prometheus endpoint. 
+Use the Prometheus alertmanager webhook config to send Prometheus alerts to the Prometheus endpoint. Refer to the following example JSON payload for the Prometheus endpoint. 
 
 Example JSON payload:
 
@@ -144,8 +146,8 @@ Using this endpoint, your alert is ingested and transformed into the common even
 .. code-block:: json 
 
     {
-    "id": "61bd3de1-8820-37d2-aa1d-527d04667d66",
-    "eventId": "61bd3de1-8820-37d2-aa1d-527d04667d66",
+    "id": "<YOUR_ID>",
+    "eventId": "<YOUR_EVENT_ID>",
     "title": "Prometheus firing alert for group - disk: mydisk1",
     "source": "alertmanager:my-receivers",
     "description": "Receiver 'my-receivers' received alerts from Prometheus. For more info, see http://d37bfc81e932:9093. Common labels - disk: mydisk1, instance: nodeexporter1:9100, job: node_exporter1",

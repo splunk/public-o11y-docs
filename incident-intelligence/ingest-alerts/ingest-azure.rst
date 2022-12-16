@@ -13,6 +13,8 @@ You can use Incident Intelligence ingest endpoints to ingest alerts from various
 Azure Monitor ingest endpoint
 ---------------------------------
 
+To send Azure Monitor alerts to the ingest endpoint, make a POST call to the endpoint.
+
 .. code:: 
 
     https://ingest.<REALM>.signalfx.com/v1/incidentintelligence/azure-monitor
@@ -32,7 +34,7 @@ Request header
      - Description
    * - X-SF-Token  
      - Required
-     - Authentication token. See :ref:`api-access-token`. Ensure that the token as :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
+     - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
 
 Alert fields
 ----------------
@@ -66,7 +68,7 @@ Alert fields
 JSON payload
 ------------
 
-Refer to the below example JSON payload for the Azure Monitor endpoint. 
+Refer to the following example JSON payload for the Azure Monitor endpoint. 
 
 Example JSON payload:
 
@@ -76,19 +78,19 @@ Example JSON payload:
       "schemaId": "azureMonitorCommonAlertSchema",
       "data": {
           "essentials": {
-          "alertId": "/subscriptions/680123C3-2EF6-4679-A222-359FAF36370F/providers/Microsoft.AlertsManagement/alerts/b9569717-bc32-442f-add5-83a997729330",
+          "alertId": "<YOUR_ALERT_ID>",
           "alertRule": "WCUS-R2-Gen2",
           "severity": "Sev3",
           "signalType": "Metric",
           "monitorCondition": "Resolved",
           "monitoringService": "Platform",
           "alertTargetIDs": [
-              "/subscriptions/680123C3-2EF6-4679-A222-359FAF36370F/resourcegroups/pipelinealertrg/providers/microsoft.compute/virtualmachines/wcus-r2-gen2"
+              "<YOUR_ALERTTARGET_ID>"
           ],
           "configurationItems": [
               "wcus-r2-gen2"
           ],
-          "originAlertId": "3f2d4487-b0fc-4125-8bd5-7ad17384221e_PipeLineAlertRG_microsoft.insights_metricAlerts_WCUS-R2-Gen2_-117781227",
+          "originAlertId": "<YOUR_ORIGINALERT_ID>",
           "firedDateTime": "2019-03-22T13:58:24.3713213Z",
           "resolvedDateTime": "2019-03-22T14:03:16.2246313Z",
           "description": "",
@@ -126,8 +128,8 @@ Using this endpoint, your alert is ingested and transformed into the common even
 .. code-block:: json 
     
     {
-      "id": "09e4b8f1-83a3-44ce-bcf5-5dd35d953a77",
-      "eventId": "09e4b8f1-83a3-44ce-bcf5-5dd35d953a77",
+      "id": "<YOUR_ID>",
+      "eventId": "<YOUR_EVENT_ID>",
       "title": "Azure Monitor Alert for WCUS-R2-Gen2",
       "source": "Platform",
       "description": "",
@@ -139,19 +141,19 @@ Using this endpoint, your alert is ingested and transformed into the common even
           "schemaId": "azureMonitorCommonAlertSchema",
           "data": {
           "essentials": {
-              "alertId": "/subscriptions/680123C3-2EF6-4679-A222-359FAF36370F/providers/Microsoft.AlertsManagement/alerts/b9569717-bc32-442f-add5-83a997729330",
+              "alertId": "<YOUR_ALERT_ID>",
               "alertRule": "WCUS-R2-Gen2",
               "severity": "Sev3",
               "signalType": "Metric",
               "monitorCondition": "Resolved",
               "monitoringService": "Platform",
               "alertTargetIDs": [
-              "/subscriptions/680123C3-2EF6-4679-A222-359FAF36370F/resourcegroups/pipelinealertrg/providers/microsoft.compute/virtualmachines/wcus-r2-gen2"
+              "<YOUR_ALERTTARGET_ID>"
               ],
               "configurationItems": [
               "wcus-r2-gen2"
               ],
-              "originAlertId": "3f2d4487-b0fc-4125-8bd5-7ad17384221e_PipeLineAlertRG_microsoft.insights_metricAlerts_WCUS-R2-Gen2_-117781227",
+              "originAlertId": "<YOUR_ORIGINALERT_ID>",
               "firedDateTime": "2019-03-22T13:58:24.3713213Z",
               "resolvedDateTime": "2019-03-22T14:03:16.2246313Z",
               "description": "",

@@ -44,7 +44,7 @@ Request header
 
    * - X-SF-Token  
      - Required
-     - Authentication token. See :ref:`api-access-token`. Ensure that the token as :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
+     - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
 
 
 Alarm fields
@@ -97,7 +97,7 @@ Alarm fields
 JSON payload
 ---------------
 
-Send AWS Cloudwatch alarms to the AWS Cloudwatch endpoint. Refer to the below example JSON payload for the AWS Cloudwatch endpoint. 
+Send AWS Cloudwatch alarms to the AWS Cloudwatch endpoint. Refer to the following example JSON payload for the AWS Cloudwatch endpoint. 
 
 Example JSON payload:
 
@@ -105,7 +105,7 @@ Example JSON payload:
 
     { 
         "version": "0", 
-        "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+        "id": "<YOUR_ID>", 
         "detail-type": "Glue Data Catalog Database State Change", 
         "source": "aws.glue", 
         "account": "123456789012", 
@@ -125,8 +125,8 @@ Using this endpoint, your alarm is ingested and transformed into the common even
 
 .. code-block:: json 
 
-    { "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
-      "eventId": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+    { "id": "<YOUR_ID>", 
+      "eventId": "<YOUR_EVENT_ID>", 
       "title": "Glue Data Catalog Database State Change", 
       "source": "aws.glue", 
       "description": "Glue Data Catalog Database State Change", 
@@ -136,7 +136,7 @@ Using this endpoint, your alarm is ingested and transformed into the common even
       "triggeredAt": 1547662128000, 
       "properties": { 
           "version": "0", 
-          "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+          "id": "<YOUR_ID>", 
           "detail-type": "Glue Data Catalog Database State Change", 
           "source": "aws.glue", 
           "account": "123456789012", 
