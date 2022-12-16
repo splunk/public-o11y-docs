@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache Spark monitor by using the [SignalFx Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache Spark monitor by using the SignalFx Smart Agent receiver.
 
 The integration monitors Apache Spark clusters.
 
