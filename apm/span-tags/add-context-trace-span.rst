@@ -140,8 +140,12 @@ The following examples show how to create a custom tag for an existing span:
       def some_spans
          Splunk::Otel.configure
          tracer = OpenTelemetry.tracer_provider.tracer("mytracer")
+         # Create a span with custom attributes or tags
          tracer.in_span("basic-example-span-1", attributes: { "hello" => "world", "some.number" => 1024 }) do |_span|
             tracer.in_span("basic-example-span-2") do |_span|
+            # Add span attributes after creation
+            current_span = OpenTelemetry::Trace.current_span
+            current_span.set_attribute("animals", ["splunk", "observability"])
             end
          end
       end
