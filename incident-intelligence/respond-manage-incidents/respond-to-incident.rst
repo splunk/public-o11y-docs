@@ -2,7 +2,7 @@
 
 .. _ii-respond-to-incident:
 
-Respond to an incident: Acknowledge, resolve, or reject an incident
+Respond to an incident: Acknowledge, resolve, or dismiss an incident
 ****************************************************************************
 
 .. meta::
@@ -24,15 +24,15 @@ Incidents begin in the triggered status. The default status lifecycle for incide
      - Acknowledged incidents are considered valid and under investigation. Setting an incident status to acknowledged prevents further notifications. 
 
    * - Rejected
-     - Rejected incidents are considered invalid and closed; you will no longer be able to make updates to rejected incidents. Setting an incident status to rejected prevents further notifications. 
+     - Rejected incidents are considered invalid and closed; you will no longer be able to make updates to rejected incidents. Setting an incident status to :guilabel:`Rejected` prevents further notifications. 
 
    * - Resolved
      - Resolved incidents are considered investigated and closed. Setting an incident status to resolved prevents further notifications. 
 
-To acknowledge, reject, or resolve an incident, select the :guilabel:`Incidents` tab in Incident Intelligence. 
+To acknowledge, dismiss, or resolve an incident, select the :guilabel:`Incidents` tab in Incident Intelligence. 
 
 * You can acknowledge an incident from the list of incidents or, alternatively, you can go into the detail of each incident and acknowledge it there.
-* From either location, you also have the option to resolve or reject the incident.
+* From either location, you also have the option to resolve or dismiss the incident.
 
 See also
 ============

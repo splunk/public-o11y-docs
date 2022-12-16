@@ -7,27 +7,27 @@ Add context to spans with span tags in Splunk APM
 .. meta::
    :description: Use span tags to slice and dice service performance by dimensions in Splunk APM.
 
-Enrich the context of the spans you send to Splunk APM by adding span tags. Span tags are key-value pairs that provide additional metadata about spans in a trace.
-
-.. note:: 
-
-   :guilabel:`Span tags` are key-value pairs added to spans through instrumentation. In OpenTelemetry, these key-value pairs are known as ``attributes``. 
+Enrich the context of the spans you send to Splunk APM by adding span tags. Span tags are key-value pairs that provide additional metadata about spans in a trace. In OpenTelemetry, span tags are known as ``attributes``. 
 
 There are two ways to add span tags to your spans:
 
-  * Instrument your application to create span tags. This option gives you the most flexibility at the per-application level. Scroll to :ref:`instrument-tags` in this topic to learn how.
-  * Add span tags as OpenTelemetry attributes to spans when you send data to the Splunk Distribution of OpenTelemetry Collector. This option lets you add span tags to spans in bulk. Scroll to :ref:`otel-span-tags` in this topic to learn how.
+  * Instrument your application to create span tags. This option gives you the most flexibility at the per-application level. See :ref:`instrument-tags` to learn how.
+  * Add span tags as OpenTelemetry attributes to spans when you send data to the Splunk Distribution of OpenTelemetry Collector. This option lets you add span tags to spans in bulk. See :ref:`otel-span-tags` to learn how.
 
-If you deploy the Splunk Distribution of OpenTelemetry Collector as a gateway to centrally manage data collection from multiple services, you might choose to instrument your application to define some span tags and manage other span tags with the OpenTelemetry Collector. 
+If you deploy the Splunk Distribution of OpenTelemetry Collector as a gateway to centrally manage data collection from multiple services, you might want to instrument your application to define span tags and manage other span tags with the Collector. 
 
 .. _span-tag-naming:
 
 Follow span tag naming conventions
 =========================================
-Tags provide more value when you construct a simple, dependable metadata model to use them. Define clear tag names to use for all your applications. Because span tag key-value pairs are text strings, you can create a model to fit your specific needs. As a starting point, OpenTelemetry provides a set of semantic conventions you can use with your spans and traces. For more information, see :new-page:`Trace Semantic Conventions <https://github.com/open-telemetry/opentelemetry-specification/tree/main/specification/trace/semantic_conventions>` on GitHub.
-  
+
+Tags provide more value when you use a naming convention. Define clear tag names to use for all your applications. Because span tag key-value pairs are text strings, you can create a model to fit your specific needs. 
+
+As a starting point, OpenTelemetry provides a set of semantic conventions you can use with your spans and traces. For more information, see OpenTelemetry Trace semantic conventions on GitHub.
+
 Add tags to spans 
 ===================
+
 The following sections describe two ways to add tags to your spans: 
 
 * :ref:`instrument-tags`
@@ -37,15 +37,14 @@ Begin by considering where to add your span tags.
 
 .. include:: /_includes/tag-decision-support.rst
 
-Note that the ``deployment.environment`` span tag is particularly useful because it lets you filter your entire APM experience by deployment environment. To learn more about environments in Splunk APM, see :ref:`apm-environments`. 
+Note that the ``deployment.environment`` span tag is particularly useful, as it lets you filter your entire APM experience by deployment environment. To learn more about environments in Splunk APM, see :ref:`apm-environments`. 
 
 .. _instrument-tags:
 
 Instrument your application code to add tags to spans
 ----------------------------------------------------------
-When you add span tags via instrumentation, you can specify tags on a per-application basis. For detailed instructions on how to manually instrument a Node.js application, see :ref:`instrument-nodejs-applications`. For more detail and examples of creating a tracer and a span, see :new-page:`Acquiring a tracer <https://opentelemetry.io/docs/instrumentation/js/instrumentation/#acquiring-a-tracer>` at https://opentelemetry.io.
 
-How you instrument code to create span tags (attributes) depends on the programming language and instrumentation library you're using. 
+When you add span tags, you can specify tags on a per-application basis. How you instrument code to create span tags or attributes depends on the programming language and instrumentation library you're using. 
 
 The following examples show how to create a custom tag for an existing span:
 
@@ -61,6 +60,10 @@ The following examples show how to create a custom tag for an existing span:
 
       customizedSpan.setAttribute("my.attribute","value");
 
+      // You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
+      // environment variable, which accepts a list of comma-separated key-value
+      // pairs. For example, key1:val1,key2:val2.  
+
    .. code-tab:: python Python
 
       # Splunk Distribution of OpenTelemetry Python
@@ -70,6 +73,10 @@ The following examples show how to create a custom tag for an existing span:
       customizedSpan = trace.get_current_span()
 
       customizedSpan.set_attribute("my.attribute", "value");
+
+      # You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
+      # environment variable, which accepts a list of comma-separated key-value
+      # pairs. For example, key1:val1,key2:val2.  
 
    .. code-tab:: javascript Node.js
 
@@ -83,6 +90,10 @@ The following examples show how to create a custom tag for an existing span:
 
       customizedSpan.setAttribute('my.attribute', 'value');
 
+      // You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
+      // environment variable, which accepts a list of comma-separated key-value
+      // pairs. For example, key1:val1,key2:val2.  
+
    .. code-tab:: csharp .NET
 
       // SignalFx Instrumentation for .NET
@@ -95,24 +106,51 @@ The following examples show how to create a custom tag for an existing span:
       var span = scope.Span;
       span.SetTag("some.tag", "some value");
 
-      // You can also set global tags using the SIGNALFX_TRACE_GLOBAL_TAGS 
+      // You can also set global tags using the SIGNALFX_GLOBAL_TAGS 
       // environment variable, which accepts a list of comma-separated key-value
       // pairs. For example, key1:val1,key2:val2.
+
+   .. code-tab:: go Golang
+
+      import (
+         // ...
+         "github.com/signalfx/splunk-otel-go/distro"
+      )      
+
+      func myFunc(ctx context.Context) {
+
+         // Create a span with custom attributes
+         ctx, span = tracer.Start(ctx, "attributesAtCreation", trace.WithAttributes(attribute.String("hello", "splunk")))
+         defer span.End()
+
+         // Add attributes after creation
+         span.SetAttributes(attribute.Bool("isTrue", true), attribute.String("stringAttr", "Hello there!"))
+
+         // Other activities
+      }
 
    .. code-tab:: ruby Ruby
 
       # SignalFx Ruby Tracing Library
 
-      require 'signalfx/tracing'
+      require "splunk/otel"
 
-      customizedSpan = OpenTracing.active_span
-      if customizedSpan
-         customizedSpan.set_tag('some.tag', 'some value')
-      end
+      module BasicExample
+         def some_spans
+            Splunk::Otel.configure
+            tracer = OpenTelemetry.tracer_provider.tracer("mytracer")
+            # Create a span with custom attributes or tags
+            tracer.in_span("basic-example-span-1", attributes: { "hello" => "world", "some.number" => 1024 }) do |_span|
+               tracer.in_span("basic-example-span-2") do |span|
+               # Add span attributes after creation
+               span.set_attribute("animals", ["splunk", "observability"])
+               end
+            end
+         end
 
-      # You can also set global tags using the SIGNALFX_SPAN_TAGS 
-      # environment variable, which accepts a list of comma-separated key-value
-      # pairs. For example, key1:val1,key2:val2.
+      # You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
+      # environment variable, which accepts a list of comma-separated key-value
+      # pairs. For example, key1:val1,key2:val2.  
 
    .. code-tab:: php PHP
       
@@ -131,29 +169,14 @@ The following examples show how to create a custom tag for an existing span:
       // pairs. For example: key1:val1,key2:val2. 
       ?>
 
-   .. code-tab:: go Golang
-
-      // SignalFx Go Tracing Library
-
-      package main
-
-      import (
-         "github.com/signalfx/signalfx-go-tracing/ddtrace/tracer"
-      )
-
-      if span, ok := tracer.SpanFromContext(ctx); ok {
-         span.SetTag("some.tag", "some value")
-      }
-
-      // You can also set global tags using the SIGNALFX_SPAN_TAGS
-      // environment variable, which accepts a list of comma-separated key-value
-      // pairs. For example, key1:val1,key2:val2.      
-
 .. _otel-span-tags: 
 
 Add span tags with the Splunk Distribution of OpenTelemetry Collector
 -------------------------------------------------------------------------
-To add a span tag to spans received by the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`, you can use the ``attributes`` processor in your OpenTelemetry Collector configuration YAML file. The generic attributes processor is called ``attributes``, and any subsequent  ``attributes/<NAME>`` processors are uniquely named instances of this defined processor. 
+
+To add a span tag to spans received by the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`, you can use the ``attributes`` processor in your OpenTelemetry Collector configuration YAML file. 
+
+The generic attributes processor is called ``attributes``. Any subsequent  ``attributes/<NAME>`` processors are named instances of the ``attributes`` processor. 
 
 Follow these steps to define a new attributes processor and add it to your pipeline: 
 
@@ -187,7 +210,6 @@ Follow these steps to define a new attributes processor and add it to your pipel
                     from_attribute: myTenant
                     action: upsert 
 
-
   2. Add the attributes processor you've created to the list of processors under ``pipelines``. Place it after the ``batch`` processor and before the ``queued_retry`` processor, as the ``attributes/settenant`` processor is placed in the following code sample:
 
       .. code-block:: yaml
@@ -203,7 +225,8 @@ Follow these steps to define a new attributes processor and add it to your pipel
 
 Where do host-specific span tags come from?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you send trace data to the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://github.com/signalfx/splunk-otel-collector>`, the collector automatically adds a ``host`` span tag to every span to identify which infrastructure component each span uses. The ``host`` span tag value is generally the ``hostname`` or unique resource identifier for the infrastructure component. 
+
+The Splunk Distribution of OpenTelemetry Collector automatically adds a ``host`` span tag to every span to identify which infrastructure component each span uses. The ``host`` span tag value is generally the ``hostname`` or unique resource identifier for the infrastructure component. 
 
 The ``host`` span tag allows Splunk APM to render key infrastructure metrics and link to default dashboards for infrastructure components. This can help you more easily monitor the performance of your applications at the infrastructure level and leverage interactions between Splunk APM and Splunk Infrastructure Monitoring. 
 
