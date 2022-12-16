@@ -61,9 +61,14 @@ Forwarding telemetry from Istio to the Collector might generate undesired teleme
    The instrumentation pod is a DaemonSet and isn't injected with a proxy by default. If Istio injects proxies in instrumentation pods, disable tracing using a ``podAnnotation``.
 
 Configure the Istio Operator
-==============================================
+=============================================
 
-Configure the Istio Operator to set an ``environment.deployment`` attribute and configure the Zipkin tracer to send data to the Splunk OpenTelemetry Collector running on the host. For example:
+Configure the Istio Operator following these steps:
+
+- Set an ``environment.deployment`` attribute.
+- Configure the Zipkin tracer to send data to the Splunk OpenTelemetry Collector running on the host. 
+
+For example:
 
 .. code-block:: yaml
 
