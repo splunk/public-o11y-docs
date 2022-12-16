@@ -171,7 +171,7 @@ The following settings control instrumentations and tracing behavior:
 
    * - Setting
      - Description
-   * - ``SIGNALFX_TRACE_GLOBAL_TAGS``
+   * - ``SIGNALFX_GLOBAL_TAGS``
      - Comma-separated list of key-value pairs that specify global span tags. For example: ``key1:val1,key2:val2``.
    * - ``SIGNALFX_RECORDED_VALUE_MAX_LENGTH``
      - Maximum length of the value of an attribute. Values longer than this value are truncated. Values are discarded entirely when set to ``0``, and ignored when set to a negative value. The default value is ``12000``.
