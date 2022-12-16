@@ -8,10 +8,12 @@ Ingest Prometheus alerts
 .. meta::
    :description: Detailed overview of Prometheus alert ingestion endpoint for Incident Intelligence in Splunk Observability Cloud. 
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route Prometheus incidents to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. For more information, see :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config` in the Prometheus documentation.
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route third-party incidents to responders. You can send Prometheus alerts directly to the ingest endpoint using the Prometheus alertmanager webhook config. For more information, see :new-page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config` in the Prometheus documentation.
 
 Prometheus ingest endpoint
 ---------------------------------
+
+To send Prometheus alerts to the ingest endpoint, make a POST call to the endpoint.
 
 .. code:: 
 
@@ -32,7 +34,7 @@ Request header
      - Description
    * - X-SF-Token  
      - Required
-     - Authentication token. See :ref:`api-access-token`.
+     - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
 
 
 Alert fields
@@ -79,7 +81,7 @@ Alert fields
 JSON payload
 ------------
 
-Use the Prometheus alertmanager webhook config to send Prometheus alerts to the Prometheus endpoint. Use this JSON payload. 
+Use the Prometheus alertmanager webhook config to send Prometheus alerts to the Prometheus endpoint. Refer to the following example JSON payload for the Prometheus endpoint. 
 
 Example JSON payload:
 
@@ -144,14 +146,14 @@ Using this endpoint, your alert is ingested and transformed into the common even
 .. code-block:: json 
 
     {
-    "id": "61bd3de1-8820-37d2-aa1d-527d04667d66",
-    "eventId": "61bd3de1-8820-37d2-aa1d-527d04667d66",
+    "id": "<YOUR_ID>",
+    "eventId": "<YOUR_EVENT_ID>",
     "title": "Prometheus firing alert for group - disk: mydisk1",
     "source": "alertmanager:my-receivers",
     "description": "Receiver 'my-receivers' received alerts from Prometheus. For more info, see http://d37bfc81e932:9093. Common labels - disk: mydisk1, instance: nodeexporter1:9100, job: node_exporter1",
     "severity": "critical",
     "sourceType": "prometheus",
-    "orgId": "FBMqy06AIA0",
+    "orgId": "<YOUR_ORG_ID>",
     "triggeredAt": 1656550514064,
     "properties": {
         "receiver": "my-receivers",
@@ -171,7 +173,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
             },
             "startsAt": "2022-06-30T00:55:30.064Z",
             "endsAt": "0001-01-01T00:00:00Z",
-            "generatorURL": "http://b8e578b3f5ed:9090/graph?g0.expr=disk_usage+%3E+80&g0.tab=1",
+            "generatorURL": "<YOUR_GENERATOR_URL>",
             "fingerprint": "0e8d353af1ccede9"
         },
         {
@@ -188,7 +190,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
             },
             "startsAt": "2022-06-30T00:55:14.064Z",
             "endsAt": "0001-01-01T00:00:00Z",
-            "generatorURL": "http://b8e578b3f5ed:9090/graph?g0.expr=disk_usage+%3E+50&g0.tab=1",
+            "generatorURL": "<YOUR_GENERATOR_URL>",
             "fingerprint": "2523ef41263c9dc5"
         }
         ],
@@ -201,7 +203,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
         "job": "node_exporter1"
         },
         "commonAnnotations": {},
-        "externalURL": "http://d37bfc81e932:9093",
+        "externalURL": "<YOUR_EXTERNAL_URL>",
         "version": "4",
         "groupKey": "{}:{disk=\"mydisk1\"}",
         "truncatedAlerts": 0
