@@ -16,6 +16,8 @@ Enable metrics collection
 
 To enable the collection of .NET runtime and trace metrics, see :ref:`dotnet-metric-settings`.
 
+.. note:: NetRuntime metrics are always collected if memory profiling is enabled.
+
 .. _dotnet-runtime-metrics:
 
 .NET runtime metrics
