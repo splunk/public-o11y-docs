@@ -48,7 +48,7 @@ To learn more about how to get AWS CloudWatch data into Observability Cloud, :ne
 .. _aws-iam-policy:
 
 Create an AWS IAM policy
--------------------------
+-------------------------------
 
 The AWS IAM policy is a JSON object to which Observability Cloud refers for permission to collect data from every supported AWS service.
 
@@ -94,29 +94,42 @@ To enable Metric Streams, use the :ref:`guided setup <aws-wizard>`, and take the
 * Follow the instructions to :ref:`enable Metric Streams <enable-cw-metricstreams>`.
 * Update your settings and deploy the CloudFormation template following :ref:`these steps <enable-cw-metricstreams>`.
 
-Review default AWS integration settings
+Review the default AWS integration settings
 ==================================================
 
-After creating an AWS IAM policy and assigning it to a particular role through the guided setup, you can modify your configuration as follows:
+After creating an AWS IAM policy and assigning it to a particular role through the guided setup, you can modify your configuration.
 
-- Limit the scope of data collection in either of the following ways:
+Limit the scope of data collection
+--------------------------------------------------
 
-  - Use the check box options in the guided setup to limit the scope of your data collection.
+By default, Splunk Observability Cloud will bring in data from all supported AWS services associated with your account, with :ref:`certain limitations <aws-data-limits>`. 
 
-    These are the available options:
-      - Amazon Cost and Usage Metrics
-      - CloudWatch Metrics polling (note: you can disable it altogether, or disable the polling but enable AWS Metric Streams instead)
-      - CloudWatch Logs
-      - AWS regions to fetch data from
-      - AWS services to fetch data from
+- To manage the amount of data to import, see :ref:`specify-data-metadata`. 
 
-  - Use the AWS console to revise the contents of the ``Action`` and ``Resource`` fields.
+- Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
+  
+  - Amazon Cost and Usage Metrics
+  - CloudWatch Metrics polling (you can disable it altogether, or disable the polling but enable AWS Metric Streams instead)
+  - CloudWatch Logs
+  - AWS regions to fetch data from
+  - AWS services to fetch data from
 
-- Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or Metric Streams for each AWS region that you want to operate in.
+- In the :strong:`Data Management` menu in Observability Cloud, edit any integration to limit data import.
 
-After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track metrics and analyze your AWS data in real time. See the AWS official documentation for a list of the available AWS resources.
+  .. image:: /_images/gdi/aws-edit-data-limit.png
+    :width: 55%
+
+- Use the AWS console to revise the contents of the ``Action`` and ``Resource`` fields.
+
+Select a CloudFormation template
+--------------------------------------------------
+
+Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or Metric Streams for each AWS region that you want to operate in.
 
 Next steps
-===========
+================
 
-After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
+After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
+
+- See the AWS official documentation for a list of the available AWS resources.
+- See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.

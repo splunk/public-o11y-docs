@@ -124,7 +124,7 @@ Infrastructure Monitoring also imports metrics, metadata, and logs for some of y
 
 .. _specify-data-metadata:
 
-Specifying data and metadata to import
+Specify and limit the data and metadata to import
 =============================================================================
 
 The AWS integration imports metrics from a list of supported AWS services in all built-in AWS namespaces. To limit the amount of AWS data that the integration imports, specify a subset of built-in namespaces from which you need data. For each namespace, you can then filter the data based on AWS tags or metric names or both.
