@@ -122,11 +122,11 @@ Investigate processes with process list
 
 When you are in the drill-down view of a host instance, you can access the current status and full list of processes on your host to look for potential outlier processes based on CPU utilization, memory utilization, and so on.
 
-To view the full list of processes, click :guilabel:`Show Processes`. By default, you then see a list of processes sorted by descending CPU utilization.
+.. note:: To view the full list of processes, include the :ref:`processlist <processlist>` monitor type in your OpenTelemetry configuration.  
 
-If you want to sort the list by a different property or toggle the sorting order, click the column header representing the property you want to sort by. The columns in the process list are the same properties you might see by running the ``top`` command on your \*nix system.
-
-.. note:: Some commands in the COMMAND column are truncated, but you can still see the full command by hovering over the truncated texts. You can also copy the full text by clicking the :guilabel:`Copy to Clipboard` icon.
+* By default, the list of processes are sorted by descending CPU utilization. 
+* If you want to sort the list by a different property or toggle the sorting order, click the column header representing the property you want to sort by. The columns in the process list are the same properties you might see by running the ``top`` command on your \*nix system.
+* Some commands in the COMMAND column are truncated, but you can still see the full command by hovering over the truncated texts. You can also copy the full text by clicking the :guilabel:`Copy to Clipboard` icon.
 
 
 
