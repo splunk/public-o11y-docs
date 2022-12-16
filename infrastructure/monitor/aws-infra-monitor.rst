@@ -96,7 +96,7 @@ During this import, Infrastructure Monitoring gives the metrics special names so
 
 To learn more, see :ref:`aws-oc-metrics`, or refer to the AWS documentation site.
 
-Importing data and metadata from other applications
+Import data and metadata from other applications
 =============================================================================
 
 Infrastructure Monitoring also imports metrics, metadata, and logs for some of your applications that use AWS services. The following table lists these applications.
