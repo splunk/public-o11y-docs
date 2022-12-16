@@ -11,7 +11,7 @@ When setting up an AWS connection, you can choose to import logs from a Cloudwat
 
 To set up log collection, follow these steps:
 
-1. Open the link to a CloudFormation template. 
+1. Open the link to a :ref:`CloudFormation template <aws-cloudformation>`. 
 
 2. Adjust the settings. 
 

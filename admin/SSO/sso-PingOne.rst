@@ -22,10 +22,16 @@ Open a browser tab or window for Observability Cloud, and another for PingOne.
 
 In Observability Cloud, do the following:
    #. Log in to Splunk Observability Cloud.
-   #. In the left navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration`.
-   #. In the integration filter menu, select :guilabel:`All`.
-   #. In the :guilabel:`Search` field, search for :guilabel:`PingOne`, and select it.
+   #. Open the :new-page:`PingOne guided setup <https://login.signalfx.com/#/integrations/pingone/description>`. Optionally, you can navigate to the guided setup on your own:
+ 
+      #. In the left navigation menu, select :menuselection:`Data Management`.
+   
+      #. Select :guilabel:`Add Integration`.
+   
+      #. In the integration filter menu, select :guilabel:`All`.
+   
+      #. In the :guilabel:`Search` field, search for :guilabel:`PingOne`, and select it.
+   
    #. In the :guilabel:`Name` text box, enter a name for your PingOne SSO integration.
    #. Copy the value next to :guilabel:`Integration ID` so you can use it in a later step.
 

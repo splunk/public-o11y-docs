@@ -5,7 +5,7 @@ Instrument a Java application for Splunk Observability Cloud
 ***************************************************************************
 
 .. meta::
-   :description: The Splunk OpenTelemetry Java agent can automatically instrument your Java application or service. Follow these steps to get started. 
+   :description: Start sending metrics and log telemetry to Splunk Observability Cloud using the Splunk OpenTelemetry Java agent to automatically instrument your Java application or service. Follow these steps to get started. 
 
 The Java agent from the Splunk Distribution of OpenTelemetry Java can automatically instrument your Java application by injecting instrumentation to Java classes. To get started, use the guided setup or follow the instructions manually.
 
@@ -15,11 +15,17 @@ Generate customized instructions using the guided setup
 To generate all the basic installation commands for your environment and application, use the Java guided setup. To access the Java guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`By Product`.
-#. Select the :guilabel:`APM` product.
-#. Select the :guilabel:`Java` tile to open the Java guided setup.
+#. Open the :new-page:`Java guided setup <https://login.signalfx.com/#/gdi/scripted/java-tracing/step-1?gdiState=%7B"integrationId":"java-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`. 
+
+   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+
+   #. In the integration filter menu, select :guilabel:`By Product`.
+
+   #. Select the :guilabel:`APM` product.
+
+   #. Select the :guilabel:`Java` tile to open the Java guided setup.
 
 .. _install-enable-jvm-agent:
 
@@ -130,6 +136,8 @@ To enable automatic metric collection, enable the metrics feature using a system
    -jar <myapp>.jar
 
 If your metrics endpoint is different than the default value, set the ``SPLUNK_METRICS_ENDPOINT`` environment variable. See :ref:`metrics-configuration-java` for more information.
+
+.. note:: If you enable memory profiling, metrics collection is enabled automatically and cannot be disabled.
 
 .. _ignore_endpoints_java:
 

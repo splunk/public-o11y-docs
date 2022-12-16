@@ -27,15 +27,17 @@ To generate all the basic installation commands for your environment and applica
 
 #. Log in to Observability Cloud.
 
-#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. Open the :new-page:`Android Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/android/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"android"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. In the left navigation menu, select :menuselection:`Data Management`. 
 
-#. In the integration filter menu, select :guilabel:`By Use Case`.
+   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
-#. Select the :guilabel:`Monitor user experience` use case.
+   #. In the integration filter menu, select :guilabel:`By Use Case`.
 
-#. Select the :guilabel:`Android Instrumentation` tile to open the Android Instrumentation guided setup.
+   #. Select the :guilabel:`Monitor user experience` use case.
+
+   #. Select the :guilabel:`Android Instrumentation` tile to open the Android Instrumentation guided setup.
 
 For detailed installation instructions and requirements, see :ref:`android-rum-install`.
 

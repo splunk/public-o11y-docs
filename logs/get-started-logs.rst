@@ -5,7 +5,11 @@ Introduction to Splunk Log Observer
 *************************************
 
 .. meta::
-   :description: Get started investigating issues with Splunk Observability Cloud.
+   :description: Get started investigating issues with Splunk Log Observer.
+
+
+
+If you do not have a Log Observer entitlement and instead use Log Observer Connect, see :ref:`logs-intro-logconnect`. 
 
 =========================================
 What is Log Observer?

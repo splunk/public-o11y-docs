@@ -26,7 +26,7 @@ To learn more about how to work with each chart type, see :ref:`choose-chart-typ
 Graph charts
 ============
 
-Graph charts appear as one or more plots of data over time. Each MTS in the chart
+Graph charts appear as one or more plots of data over time. Each metric time series (MTS) in the chart
 appears as a single plot, and each plot has its own color.
 For example, a series of line plots for AWS MTS might be colored by their AWS availability zone
 dimension, with red indicating ``us-east-1``, green indicating ``us-east-2``, and purple
@@ -143,7 +143,7 @@ Sorting list charts
 
 The API lets you sort values in list charts by specifying the
 ``options.sortBy`` property in the request to create or update a chart.
-You can sort on one of the MTS dimensions, a data point, the metric
+You can sort on one of the dimensions in the MTS for the chart, a data point, the metric
 name, or the ``publish()`` method ``label`` argument of the SignalFlow
 statement that generates the data. To choose one of these options, you
 specify one of the keyword values shown in the following table:

@@ -5,7 +5,7 @@ View or update your Splunk Observability Cloud password and contact information
 *********************************************************************************
 
 .. meta::
-   :description: You can adjust your user settings in Splunk Observability Cloud to view or update your personal information, organizations, teams, time zone, and color accessiility preferences.
+   :description: Adjust your user settings to view or update your personal information, organizations, teams, time zone, and color accessibility preferences.
 
 
 Every Splunk Observability Cloud user can view or update their password or personal contact information, as well as see and copy their API access token. 

@@ -14,15 +14,11 @@ Deepu, the payment service owner at Buttercup Games, wants to understand how err
     :width: 99%
     :alt: This screenshot shows the Tag Spotlight view of the payment service, which shows that the frontend:/cart/checkout workflow has the most errors
 
-|br|
-
 Deepu notices that the requests of the :strong:`frontend:/cart/checkout` workflow return a majority of root cause errors. Because APM supports infinite cardinality, Deepu selects the :strong:`frontend:/cart/checkout`  workflow and applies filters to show only data from traces. Deepu filters :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to view the tags to examine the subset of traces where the most errors occur:
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-02.png
     :width: 99%
     :alt: This screenshot shows the Tag Spotlight view of the frontend:/cart/checkout workflow filtered by Version and Kind.
-
-|br|
 
 Because Splunk APM stores all traces without sampling, Deepu clicks the peak of errors on the chart to see example traces of those tag combinations at that timestamp. Deepu finds that the requests from :strong:`checkoutservice` to :strong:`paymentservice` are failing. 
 
