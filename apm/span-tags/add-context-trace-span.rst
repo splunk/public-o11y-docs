@@ -117,15 +117,14 @@ The following examples show how to create a custom tag for an existing span:
          "github.com/signalfx/splunk-otel-go/distro"
       )      
 
-      func httpHandler(w http.ResponseWriter, r *http.Request) {
+      func myFunc(ctx context.Context) {
 
          // Create a span with custom attributes
          ctx, span = tracer.Start(ctx, "attributesAtCreation", trace.WithAttributes(attribute.String("hello", "splunk")))
+         defer span.End()
 
          // Add attributes after creation
          span.SetAttributes(attribute.Bool("isTrue", true), attribute.String("stringAttr", "Hello there!"))
-
-         defer span.End()
 
          // Other activities
       }
