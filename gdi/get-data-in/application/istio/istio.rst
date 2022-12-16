@@ -9,7 +9,8 @@ Send traces from Istio to Splunk Observability Cloud
 
 Istio instrumentation allows...  Native support... Send data to O11y Cloud...
 
-SignalFx Istio Mixer Adapter is deprecated...
+.. note::
+   The SignalFx Istio Mixer Adapter is deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-istio-adapter/blob/main/DEPRECATION-NOTICE.md>`.
 
 Requirements
 ==============================
