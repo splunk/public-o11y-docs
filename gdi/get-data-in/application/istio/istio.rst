@@ -5,9 +5,9 @@ Send traces from Istio to Splunk Observability Cloud
 ************************************************************
 
 .. meta::
-   :description: Start sending back-end application metrics and spans to Splunk Observability Cloud.
+   :description: Send telemetry from your Istio service mesh to Splunk Observability Cloud.
 
-Istio instrumentation allows...  Native support... Send data to O11y Cloud...
+Istio 1.8 and higher has native support for observability. You can configure your Istio service mesh to send traces, metrics, and logs to Splunk Observability Cloud by configuring the Splunk OpenTelemetry Collector and Istio.
 
 .. note::
    The SignalFx Istio Mixer Adapter is deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-istio-adapter/blob/main/DEPRECATION-NOTICE.md>`.
@@ -15,89 +15,125 @@ Istio instrumentation allows...  Native support... Send data to O11y Cloud...
 Requirements
 ==============================
 
-Istio 1.8 and higher
-Set B3 context propagation using...
-Splunk OpenTelemetry Collector for Kubernetes in agent mode
+To send telemetry from Istio to Observability Cloud you need the following:
 
-NOTE: Does not support OpenCensus
+- Istio 1.8 and higher
+- Splunk OpenTelemetry Collector for Kubernetes in agent mode. See :ref:`otel-install-k8s`.
+- Splunk APM instrumentation with B3 context propagation. To set B3 as the context propagator, set the ``OTEL_PROPAGATORS`` environment variable to ``b3``.
+
+.. note:: 
+   OpenCensus and W3C trace context are not supported.
 
 Install and configure the Splunk OpenTelemetry Collector
 =============================================================
 
-To get started, deploy the Splunk OpenTelemetry Connector for Kubernetes (only agent-mode is required). The components required from the Connector depend on product entitlements and the desired data to be collected.
+Deploy the Splunk OpenTelemetry Collector for Kubernetes in agent mode. The required Collector components depend on product entitlements and the data you want to collect. See :ref:`otel-install-k8s`.
 
-The only required configuration for istio starting from the chart version 0.29.1 is autodetect.istio=true, which cat be added as --set autodetect.istio=true to helm install/upgrade command or added to user’s values.yaml file (passed with -f myvalues.yaml argument) as:
-autodetect:
-  istio: true
+In the Collector's Helm chart, set the ``autodetect.istio`` parameter to ``true`` by passing ``--set autodetect.istio=true`` to the ``helm install`` or ``helm upgrade`` commands.
+
+You can also add the following snippet to your  ``values.yaml`` file, which is passed using the ``-f myvalues.yaml`` argument:
+
+.. code:: yaml
+
+   autodetect:
+      stio: true
    
-Importantly, when Istio sends telemetry to the collector that communication itself needs to not generate telemetry. There are a few ways to ensure this:
+Ensure that data forwarding doesn't generate telemetry
+----------------------------------------------------------
 
+Forwarding telemetry from Istio to the Collector might generate undesired telemetry. To avoid this, do one of the following:
 
-Run the collector in its own namespace that is not annotated to automatically inject the Istio proxy.
-Specifically add a label to the collector pods to prevent the Istio proxy being injected. Default configuration if autodatect.istio=true
-If the Istio proxy is required for collector pods, then make sure to disable tracing specifically for the collector pods. E.g.
-...
-otelK8sClusterReceiver:
-  podAnnotations:
-    proxy.istio.io/config: '{"tracing":{}}'
-otelCollector:
-  podAnnotations:
-    proxy.istio.io/config: '{"tracing":{}}'
+- Run the Collector in a separate namespace that lacks the Istio proxy.
+- Add a label to the Collector pods to prevent the injection of the Istio proxy. This is default configuration when the ``autodatect.istio`` parameter is set to ``true``.
+- If you need the Istio proxy in the Collector pods, disable tracing in the Collector pods. For example:
 
-Note that the agent pod is a DaemonSet and is by default not injected with a proxy. If proxies are injected on agent pods then tracing should be disabled using a podAnnotation.
+   .. code-block:: yaml
+
+      # ...
+      otelK8sClusterReceiver:
+         podAnnotations:
+            proxy.istio.io/config: '{"tracing":{}}'
+      otelCollector:
+         podAnnotations:
+            proxy.istio.io/config: '{"tracing":{}}'
+
+.. note:: 
+   The instrumentation pod is a DaemonSet and isn't injected with a proxy by default. If Istio injects proxies in instrumentation pods, disable tracing using a ``podAnnotation``.
 
 Configure the Istio Operator
 ==============================================
 
-Next, create or update the existing Istio Operator configuration.
-If desired, set environment.deployment
-Use the Zipkin tracer and configure it to send to the Splunk OpenTelemetry Collector agent running on the host.
+Configure the Istio Operator to set an ``environment.deployment`` attribute and configure the Zipkin tracer to send data to the Splunk OpenTelemetry Collector running on the host. For example:
 
-$ cat <<EOF > ./tracing.yaml
-apiVersion: install.istio.io/v1alpha1
-kind: IstioOperator
-spec:
-  meshConfig:
-    # Requires Splunk Log Observer entitlement or can be disabled
-    accessLogFile: /dev/stdout
-    # Requires Splunk APM entitlement or should be disabled
-    enableTracing: true
-    defaultConfig:
-      tracing:
-        max_path_tag_length: 99999
-        sampling: 100
-        zipkin:
-          address: $(HOST_IP):9411
-        custom_tags:
-          # Optional, but recommended
-          #environment.deployment:
-            #literal:
-              #value: dev
-EOF
-$ istioctl install -f ./tracing.yaml
+.. code-block:: yaml
 
-WARNING: In order for the new tracing configuration to take effect restart pods injected with Istio proxies.
+   # tracing.yaml
+
+   apiVersion: install.istio.io/v1alpha1
+   kind: IstioOperator
+   spec:
+      meshConfig:
+         # Requires Splunk Log Observer
+         accessLogFile: /dev/stdout
+         # Requires Splunk APM
+         enableTracing: true
+         defaultConfig:
+            tracing:
+               max_path_tag_length: 99999
+               sampling: 100
+               zipkin:
+                  address: $(HOST_IP):9411
+            custom_tags:
+               environment.deployment:
+                  literal:
+                     value: dev
+
+To enable the new configuration, run:
+
+.. code-block:: shell
+
+   istioctl install -f ./tracing.yaml
+
+Restart the pods that contain the Istio proxy to enable the new tracing configuration.
 
 Update all pods in the service mesh
 ===========================================
 
-Update all pods that are in the Istio service mesh to include an app label. Istio uses this to define the Splunk service. Not setting this label will make it harder to see the proxy in relationship to your service.
+Update all pods that are in the Istio service mesh to include an ``app`` label. Istio uses this to define the Splunk service.
 
-As stated in the warnings above, your service will need to be configured to use B3 headers for tracing context propagation.
+.. note:: 
+   If you don't set the ``app`` label, identifying the relationship between the proxy and your service is more difficult.
 
 Recommendations
 =========================================
 
-Additional Information
-These getting started settings include updates to the sampling rate and the maximum tag length for paths. Splunk APM is a full fidelity distributed tracing solution and all trace data should be included to ensure the best monitoring of your application.
+To make the best use of Splunk APM's full-fidelity data retention, configure Istio to send as much trace data as possible by configuring sampling and maximum tag length in the ``tracing.yaml`` file:
 
-        sampling: 100
+.. code-block:: yaml
+   :emphasize-lines: 13,14
 
-If sampling is not set to 100 and applications are instrumented then some traces may have a root span from the Istio proxy and others will have a root span from the application due to the sampling configuration.
+   # tracing.yaml
 
-        max_path_tag_length: 99999
+   apiVersion: install.istio.io/v1alpha1
+   kind: IstioOperator
+   spec:
+      meshConfig:
+         # Requires Splunk Log Observer
+         accessLogFile: /dev/stdout
+         # Requires Splunk APM
+         enableTracing: true
+         defaultConfig:
+            tracing:
+               max_path_tag_length: 99999
+               sampling: 100
+               zipkin:
+                  address: $(HOST_IP):9411
+            custom_tags:
+               environment.deployment:
+                  literal:
+                     value: dev
 
-If this configuration parameter is not increased then it is likely that important identifying attributes will be truncated and will impact observability.
+A ``sampling`` value of ``100`` ensures that all traces have correct root spans. A ``max_path_tag_length`` value of ``99999`` helps avoid that key tags are truncated.
 
 For more information on how to configure Istio see the Istio distributed tracing installation documentation.
 
