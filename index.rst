@@ -190,7 +190,7 @@ Set up an integration to an SSO provider :ref:`sso-label`
 .. rst-class:: newcard
 
 :strong:`Subscription Usage`
-Monitor subscription usage for Infrastructure Monitoring :ref:`monitor-imm-billing-usage`
+Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-overview`
 
 
 .. popular integrations section
@@ -492,7 +492,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   apm/set-up-apm/apm
+   apm/key-concepts
 
 .. toctree::
    :maxdepth:   3
@@ -502,7 +502,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   apm/key-concepts
+   apm/set-up-apm/apm
 
 .. toctree::
    :maxdepth:   3
@@ -546,6 +546,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Introduction <infrastructure/intro-to-infrastructure>
 
 .. toctree::
+   :maxdepth:   3
+
+   Key concepts <infrastructure/terms-concepts>
+
+.. toctree::
    :maxdepth:   2
 
    Quick start tutorial <infrastructure/quickstart-imm>
@@ -555,10 +560,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    infrastructure/infrastructure
 
-.. toctree::
-   :maxdepth:   3
-
-   Key concepts <infrastructure/terms-concepts>
 
 .. toctree::
    :maxdepth:   3
@@ -616,7 +617,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Set up Splunk RUM <rum/set-up-rum>
+   rum/rum-terminology-concepts
 
 .. toctree::
    :maxdepth:   3
@@ -626,13 +627,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/data-collected
+   Set up Splunk RUM <rum/set-up-rum>
 
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-terminology-concepts
-
+   rum/data-collected
 
 .. toctree::
    :maxdepth:   3
@@ -693,17 +693,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   synthetics/set-up-synthetics/set-up-synthetics
-
-.. toctree::
-   :maxdepth:   3
-
    synthetics/key-concepts
 
 .. toctree::
    :maxdepth:   3 
   
    synthetics/synth-use-cases/synth-landing
+
+.. toctree::
+   :maxdepth:   3
+
+   synthetics/set-up-synthetics/set-up-synthetics
 
 .. toctree::
    :maxdepth:   3
@@ -828,7 +828,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   admin/SSO/sso
+   admin/SSO/sso-about
 
 .. toctree::
    :maxdepth:   3
@@ -868,24 +868,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/apm-billing-usage/apm-billing-usage-index
 
 .. toctree::
    :hidden:
    :maxdepth:   3
 
-   admin/imm-billing-usage/monitor-imm-billing-usage
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/imm-billing-usage/dpm-usage
-
+   Monitor subscription usage <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::

@@ -28,7 +28,7 @@ A :term:`detector` monitors signals on a plot line, as on a chart, and triggers 
 
 Rules trigger an alert when the conditions in those rules are met. Individual rules in a detector are labeled according to severity: Info, Warning, Minor, Major, and Critical. For example, a detector that monitors the latency of an API call might go into a critical state when the latency is significantly higher than normal, as defined in the detector rules.
 
-Detectors also evaluate streams against a specific condition over a period of time. When you apply analytics to a MTS it produces a stream, an object of SignalFlow query language. The MTS can contain raw data or the output of an analytics function.
+Detectors also evaluate streams against a specific condition over a period of time. When you apply analytics to a metric time series (MTS), it produces a stream, an object of SignalFlow query language. The MTS can contain raw data or the output of an analytics function.
 
 Metadata in detectors
 --------------------------
