@@ -12,12 +12,6 @@ Splunk Observability Cloud use cases
     :hidden:
 
     Global use cases <use-cases/use-case-cross>
-    {include} ../apm/apm-use-cases/apm-use-cases-intro.rst
-    profiling-use-case-landingpage
-    network-explorer-use-cases 
-    use-cases-detectors-alerts 
-    use-case-landingpage
-    synth-landing
 
 Learn more about the Splunk Observability Cloud platform with the following use cases:
 
@@ -25,7 +19,7 @@ Learn more about the Splunk Observability Cloud platform with the following use 
 - :ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-use-case>`
 - :ref:`Maintain a secure organization with many teams and users using Splunk Observability Cloud <use-case-security>`
 
-For information about Splunk APM use cases, see :ref:`apm-use-cases-intro`:
+For information about Splunk APM use cases, see :ref:`the list of APM use cases <apm-use-cases-intro>`:
 
 - :ref:`service-map`
 - :ref:`services-impact-business-workflows`
@@ -39,22 +33,19 @@ For information about Splunk APM use cases, see :ref:`apm-use-cases-intro`:
 - :ref:`historical-data`
 - :ref:`custom-metricset`
 
-For sample Profiling use cases, see :ref:`profiling-use-case-landingpage`:
+For Profiling use cases, see :ref:`profiling-use-case-landingpage`:
 
 - :ref:`profiling-use-case`
 - :ref:`memory-profiling-use-case`
 
 For database troubleshooting, see:
 
-- For a use case focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-use-case`. 
-- For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
+- For MySQL and SQL troubleshooting, see :ref:`db-perf-use-case`. 
+- For Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
 
-For Infrastructure use cases:
+For Infrastructure and :ref:`Network Explorer <network-explorer-use-cases>` use cases refer to:
 
 - :ref:`aggregate-drop-use-case`
-
-:ref:`Network Explorer use cases <network-explorer-use-cases>`:
-
 - :ref:`find-network-error`
 - :ref:`cross-zone-traffic-cost`
 - :ref:`examine-service-dependencies`
@@ -74,7 +65,7 @@ See also the :ref:`use cases for RUM <use-case-landingpage>`:
 * :ref:`rum-mobile-usecase`
 * :ref:`rum-built-in-dashboards`
 
-For :ref:`Synthetics <synth-landing>`:
+For :ref:`Synthetics testing <synth-landing>` use cases, see:
 
 * Browser test: :ref:`browser-test-use-case`
 * API test: :ref:`api-test-use-case`
