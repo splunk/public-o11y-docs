@@ -11,7 +11,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java automatica
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java provides the following benefits:
 
-- You don't need to configure or instrument your applications before deployment if your Java back-end services or applications use any of the supported libraries.
+- You don't need to configure or instrument your applications before deployment if your Java applications use any of the supported libraries.
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 
 To enable automatic instrumentation, install the ``splunk-otel-auto-instrumentation`` package. After installing the package, you must start or restart any Java applications that you want to instrument.
@@ -68,28 +68,30 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
 
    .. tab::  Install using Debian or RPM packages
 
-      Follow these steps to install the package using the Debian or RPM repositories with ``root`` privileges:
+      .. note:: You must first install the Splunk OpenTelemetry Collector using the :ref:`linux-packages`.
+
+      After installing the Collector, follow these steps to install the package using the Debian or RPM repositories with ``root`` privileges:
 
       1. You can either download the ``splunk-otel-auto-instrumentation`` package directly from the :new-page:`GitHub Releases page <https://github.com/signalfx/splunk-otel-collector/releases>` or add the Splunk repository to the package repositories on your Linux host. See :new-page:`Debian or RPM package repositories <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for instructions on how to configure your package repository.
 
       2. Run the following commands to install the package. Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded package.
 
-      .. tabs::
+         .. tabs::
 
-         .. code-tab:: bash Debian
-            
-            dpkg -i <path to splunk-otel-auto-instrumentation deb>
-            
-         .. code-tab:: bash RPM
-            
-            rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
+            .. code-tab:: bash Debian
+               
+               sudo dpkg -i <path to splunk-otel-auto-instrumentation deb>
+               
+            .. code-tab:: bash RPM
+               
+               rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
 
-      3. Set the following environment variables:
+      3. Edit the ``/etc/otel/collector/splunk-otel-collector.conf`` file to set the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` variables to the values you got earlier. If the file does not exist, use the provided sample at ``/etc/otel/collector/splunk-otel-collector.conf.example`` as a starting point.
 
          .. code-block:: bash
 
-            export SPLUNK_ACCESS_TOKEN=<access_token>
-            export SPLUNK_REALM=<realm>
+            SPLUNK_ACCESS_TOKEN=<access_token>
+            SPLUNK_REALM=<realm>
 
       4. Start the collector service:
 
@@ -113,11 +115,17 @@ After a successful installation, run the following command to ensure the ``splun
 
    sudo systemctl status splunk-otel-collector
 
-If the service is not running, start it with the following command:
+If the service is not running, start or restart it with the following command:
 
 .. code-block:: bash
 
-   sudo systemctl start splunk-otel-collector
+   sudo systemctl restart splunk-otel-collector
+
+You can view the service's logs with this command:
+
+.. code-block:: bash
+
+   sudo journalctl -u splunk-otel-collector
 
 
 .. _start-restart-java-apps:
@@ -125,7 +133,9 @@ If the service is not running, start it with the following command:
 Start your applications
 -----------------------------------
 
-For auto instrumentation to take effect, you must manually start or restart any Java applications on the host where you installed the package. This is true after installing the auto instrumentation package for the first time and whenever you make any changes to the configuration file. 
+You are now ready to start sending traces to Splunk APM. For auto instrumentation to take effect, you must manually start or restart any Java applications on the host where you installed the package. This is true after installing the auto instrumentation package for the first time and whenever you make any changes to the configuration file. 
+
+Once your applications are running, you can :ref:`verify-apm-data`. You an also :ref:`configure-the-script`. 
 
 .. _configure-the-script:
 
@@ -177,6 +187,8 @@ The following table shows the supported parameters for the ``/usr/lib/splunk-ins
 
 
 Keep the following information in mind after the installation:
+
+-  Whenever you change the configuration file, you must manually start or restart any Java applications on the host where you installed the package.
 
 - If you installed the package with the installer script and specified the ``--deployment-environment VALUE`` when you ran the script, the ``deployment.environment=VALUE`` resource attribute is automatically added to the configuration file.
 
