@@ -114,10 +114,13 @@ The following examples show how to create a custom tag for an existing span:
 
       import (
          // ...
-         "github.com/signalfx/splunk-otel-go/distro"
+         "go.opentelemetry.io/otel"
       )      
 
       func myFunc(ctx context.Context) {
+
+         // Create a named tracer
+         tracer := otel.Tracer("example.com/myFunc")
 
          // Create a span with custom attributes
          ctx, span = tracer.Start(ctx, "attributesAtCreation", trace.WithAttributes(attribute.String("hello", "splunk")))
@@ -128,6 +131,10 @@ The following examples show how to create a custom tag for an existing span:
 
          // Other activities
       }
+
+      // You can also set global tags using the OTEL_RESOURCE_ATTRIBUTES	
+      // environment variable, which accepts a list of comma-separated key-value
+      // pairs. For example, key1:val1,key2:val2. 
 
    .. code-tab:: ruby Ruby
 
