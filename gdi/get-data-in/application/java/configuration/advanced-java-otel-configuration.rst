@@ -210,7 +210,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``
      - Whether to include stack traces of the agent internal threads and stack traces with JDK internal frames. The default value is ``false``. |br| |br| System property: ``splunk.profiler.include.internal.stacks``
    * - ``SPLUNK_PROFILER_TRACING_STACKS_ONLY``
-     - Whether to include stack traces that are linked to a span context. The default value is ``false``. |br| |br| System property: ``splunk.profiler.tracing.stacks.only``
+     - Whether to include only stack traces that are linked to a span context. The default value is ``false``. When set to ``true``, call stacks not linked to span contexts are dropped, which is useful to reduce data ingest volume. |br| |br| System property: ``splunk.profiler.tracing.stacks.only``
 
 For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 
