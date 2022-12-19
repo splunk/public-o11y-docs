@@ -25,7 +25,7 @@ Prerequisites
 
 - :ref:`java-requirements`.
 
-- Note your Splunk Observability Cloud realm and access token.
+- Your Splunk Observability Cloud realm and access token.
 
    - To get an access token, see :ref:`admin-api-access-tokens`.
 
@@ -50,14 +50,14 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
 
       Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Observability Cloud realm and token, respectively.
 
-      .. code-block:: yaml
+      .. code-block:: bash
 
          curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
          sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
       To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <VALUE>`` option. Replace ``<VALUE>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
-      .. code-block:: yaml
+      .. code-block:: bash
 
          curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
          sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
@@ -84,7 +84,7 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
                
             .. code-tab:: bash RPM
                
-               rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
+               sudo rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
 
       3. Edit the ``/etc/otel/collector/splunk-otel-collector.conf`` file to set the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` variables to the values you got earlier. If the file does not exist, use the provided sample at ``/etc/otel/collector/splunk-otel-collector.conf.example`` as a starting point.
 
@@ -154,7 +154,7 @@ By default, the configuration file only specifies one parameter, ``java_agent_ja
 
 The following is a sample of the default configuration file:
 
-.. code-block:: yaml
+.. code-block:: bash
 
    java_agent_jar=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
 
@@ -283,7 +283,14 @@ Disable automatic instrumentation
 
 Use one of the following options to disable automatic instrumentation:
 
-- Uninstall the package by running ``curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \sudo sh /tmp/splunk-otel-collector.sh --uninstall``. See :ref:`otel-linux-uninstall-otel-and-tdagent` for more information on the files deleted by the uninstall.
+- Uninstall the package by running the following command:
+
+  .. code-block:: bash
+   
+     curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+     sudo sh /tmp/splunk-otel-collector.sh --uninstall
+  
+  See :ref:`otel-linux-uninstall-otel-and-tdagent` for more information on the files deleted by the uninstall.
 
 - Set ``DISABLE_SPLUNK_AUTOINSTRUMENTATION`` to any nonempty value other than ``false``, ``FALSE``, or ``0``.
 
