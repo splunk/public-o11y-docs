@@ -11,7 +11,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java automatica
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java provides the following benefits:
 
-- You don't need to configure or instrument your applications before deployment if your Java applications use any of the supported libraries.
+- You don't need to configure or manually instrument your applications before deployment if your Java applications use any of the supported libraries.
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 
 To enable automatic instrumentation, install the ``splunk-otel-auto-instrumentation`` package. After installing the package, you must start or restart any Java applications that you want to instrument.
