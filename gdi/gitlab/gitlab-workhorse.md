@@ -2,7 +2,7 @@
 
 # GitLab Workhorse
 
-<meta name="Description" content="Documentation on gitlab-workhorse receiver">
+<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor GitLab Workhorse. See benefits, install, configuration, and metrics">
 
 ## Description
 

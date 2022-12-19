@@ -2,7 +2,7 @@
 
 # GitLab
 
-<meta name="Description" content="Documentation for GitLab monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor GitLab. See benefits, install, configuration, and metrics">
 
 
 ## Description
