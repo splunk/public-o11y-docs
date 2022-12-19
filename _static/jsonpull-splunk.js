@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
 
@@ -73,6 +74,10 @@ $(document).ready(function () {
 
     monitorsFromRaw();
 
+    function coalesce() {
+        return [].find.call(arguments, x => x !== null && x !== undefined);
+    }
+
     function monitorsFromRaw() {
         try {
             let columnMap = {
@@ -128,10 +133,17 @@ $(document).ready(function () {
 
 
                 if (preRef != '' && h2Text != '') {
-                    $(mainObj).append('<h2 class="sub-table-heading" id="' + preRef + '-table">' + h2Text + '</h2>');
+                    $(mainObj).append('<h2 class="sub-table-heading" id="' + preRef + '-table">Attributes of <i>' + h2Text + '</i></h2>');
                 }
 
-                let table = "<table class='monitor-stats docutils' id='" + id + "'><thead><th>Name</th><th>Type</th><th>Kind</th><th>Description</th></thead><tbody></tbody>";
+                let table = "<table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='" + id + "'>" +
+                        "<thead>" +
+                            "<th class='head name-head'>Name</th>" +
+                            "<th class='head type-head'>Type</th>" +
+                            "<th class='head kind-head'>Kind</th>" +
+                            "<th class='head description-head'>Description</th>" +
+                        "</thead>" +
+                    "<tbody></tbody>";
 
                 $(mainObj).append(table);
 
@@ -140,14 +152,14 @@ $(document).ready(function () {
                 for (let i in data['fields']) {
 
                     let rowId = id + '-' + data['fields'][i]['name'];
-                    let row = "<td id='" + rowId + "'>" + data['fields'][i]['name'] + "</td><td>" + data['fields'][i]['type'] + "</td><td>" + data['fields'][i]['kind'] + "</td><td>" + converter.makeHtml(data['fields'][i]['doc']) + "</td>";
+
+                    let row = "<td id='" + rowId + "'>" + data['fields'][i]['name'] + "</td><td>" + coalesce(data['fields'][i]['type'], '') + "</td><td>" + coalesce(data['fields'][i]['kind'], '') + "</td><td>" + coalesce(converter.makeHtml(data['fields'][i]['doc']), '') + "</td>";
                     newObject.append('<tr>' + row + '</tr>');
 
                     if (data['fields'][i]['fields'] !== undefined) {
                         traverseFields(mainObj, data['fields'][i], rowId, data['fields'][i]['name']);
-                        newObject.find('#' + rowId).html('<a href="#' + rowId + '-table">' + data['fields'][i]['name'] + '</a>');
+                        newObject.find('#' + rowId).html(data['fields'][i]['name'] + ' (<a href="#' + rowId + '-table">see attributes</a>)');
                     }
-
                 }
             }
 
@@ -166,7 +178,6 @@ $(document).ready(function () {
                         if (result != null && !cache[result.type]) {
 
                             metricsYamlObject.append(traverseFields(metricsYamlObject, result));
-
                             cache[result.type] = true;
 
                         }
