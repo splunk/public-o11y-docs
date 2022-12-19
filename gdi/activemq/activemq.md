@@ -2,7 +2,7 @@
 
 # Apache ActiveMQ
 
-<meta name="description" content="Documentation about the activemq monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Apache ActiveMQ. See benefits, install, configuration, and metrics.">
 
 
 ## Description
