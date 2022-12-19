@@ -2,7 +2,7 @@
 (elasticsearch)=
 
 # Elasticsearch
-<meta name="Description" content="Documentation on elasticsearch monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor ElasticSearch. See benefits, install, configuration, and metrics">
 
 
 ## Description

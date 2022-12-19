@@ -2,7 +2,7 @@
 
 # DNS Query Input
 
-<meta name="description" content="Documentation on the telegraf/dns monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Telegraf DNS. See benefits, install, configuration, and metrics">
 
 ## Description
 

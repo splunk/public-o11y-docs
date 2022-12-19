@@ -4,6 +4,9 @@
 Databricks Receiver
 ****************************************************************
 
+.. meta::
+  :description: Use this Splunk Observability Cloud integration to monitor Databricks clusters. See benefits, install, configuration, and metrics 
+
 Use this integration to view and monitor the health of your Databricks clusters. 
 
 The Databricks Receiver uses the Databricks API to generate metrics about the operation of a Databricks instance. The supported pipeline type is metrics.
