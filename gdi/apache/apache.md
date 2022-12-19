@@ -2,7 +2,7 @@
 
 # Apache HTTP Server
 
-<meta name="description" content="Documentation for the apache monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Apache HTTP server. See benefits, install, configuration, and metrics">
 
 ## Description
 

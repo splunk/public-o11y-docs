@@ -1,7 +1,7 @@
 (collectd-php-fpm)=
 
 # Collectd PHP FPM
-<meta name="Description" content="Documentation on the collectd/php-fpm integration for Splunk Observability Cloud.">
+<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor Collectd PHP-FastCGI Process Manager FPM. See benefits, install, configuration, and metrics">
 
 ## Description
 

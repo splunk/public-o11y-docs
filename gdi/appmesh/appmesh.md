@@ -2,7 +2,7 @@
 (appmesh)=
 
 # AWS AppMesh Envoy Proxy
-<meta name="description" content="Documentation on the appmesh receiver">
+<meta name="description" content="Use this Splunk Observability Cloud integration to monitor AWS AppMesh Envoy Proxy. See benefits, install, configuration, and metrics">
 
 ## Description
 

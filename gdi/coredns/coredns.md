@@ -2,7 +2,7 @@
 
 # CoreDNS
 
-<meta name="description" content="Documentation on the coredns monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration to monitor CoreDNS. See benefits, install, configuration, and metrics">
 
 ## Description
 

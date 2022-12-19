@@ -1,7 +1,7 @@
 (chrony)=
 
 # Chrony NTP
-<meta name="description" content="Documentation for the chrony monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Chrony NTP. See benefits, install, configuration, and metrics">
 
 ## Description
 

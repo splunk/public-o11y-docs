@@ -2,7 +2,7 @@
 
 # Cloud Foundry Loggregator Firehose
 
-<meta name="description" content="Documentation on the cloudfoundry-firehose-nozzle monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Cloud Foundry Loggregator Firehose. See benefits, install, configuration, and metrics">
 
 ## Description
 

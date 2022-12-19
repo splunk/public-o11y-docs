@@ -1,7 +1,7 @@
 (collectd-kafka-consumer)=
 
 # Collectd Kafka consumer
-<meta name="Description" content="Documentation on the collectd/kafka_consumer integration for Splunk Observability Cloud.">
+<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor Collectd Java-based Kafka consumer. See benefits, install, configuration, and metrics">
 
 ## Description
 
