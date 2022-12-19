@@ -26,9 +26,11 @@ Enable debug logging
 
 Debug logging is a special execution mode that outputs more information about the Java agent of the Splunk Distribution of OpenTelemetry Java. This can help you troubleshoot Java instrumentation issues.
 
-To turn on the debug logging for the agent, pass the following argument when running your application:
+To turn on debug logging for the Java agent, select one of the following options:
 
-``-Dotel.javaagent.debug=true``
+- Pass the following argument when running your application: ``-Dotel.javaagent.debug=true``.
+
+- Set the ``OTEL_JAVAAGENT_DEBUG`` environment variable to ``true`` before running your application.
 
 When you run the agent with debug logging enabled, debug information is sent to the console as ``stderr``. Debug log entries look like the following example:
 
