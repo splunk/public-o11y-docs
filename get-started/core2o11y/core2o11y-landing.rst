@@ -15,7 +15,7 @@ The Splunk platform and Splunk Observability Cloud
    Toil reduction <practice-reliability/toil-reduction>
    Scale your system's observability through collaboration <practice-reliability/collaboration>
    Set up Observability Cloud <setup-o11y/setup-o11y>
-   FAQ: The Splunk platform and Splunk Observability Cloud <faq/core-to-o11y-faq>
+
 
 With the Splunk platform, you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can:
 
@@ -40,8 +40,6 @@ Select each of the following categories to learn how you can maintain reliabilit
 
 * :ref:`Scale your system's reliability by collaborating within and across teams <practice-reliability-collaboration>`
 
-
-To learn how to set up Observability Cloud, see :ref:`setup-o11y-setup-o11y`. See :ref:`core-to-o11y-faq` to learn about a few differences in how the Splunk platform and Observability Cloud function.
 
 
 
