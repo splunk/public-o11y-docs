@@ -26,12 +26,37 @@ Show data markers
 Specifies whether small dots are displayed on the chart, indicating the times at which there are data points.
 
 
-Max delay
+Delay settings
 ====================
 
-By default, the :strong:`Max delay` field is set to ``Auto``, which allows data to come in with as little delay as possible.
+Detectors in Splunk Observability Cloud run on a regular time interval, known as the detector resolution. Each time a detector runs, it evaluates a condition to determine if an alert will be fired.
 
-If you know that some of your data is delayed and you want to wait for that data to arrive before your charts are updated, click the drop-down menu and choose a new value from the list. For more information, see :ref:`delayed-datapoints`.
+Because many metric time series (MTS) can be included in a single detector, the analytics engine keeps track of the lag for known MTS, attempting to make sure that the all known MTS will be included. While most MTS have little delay, a detector evaluate its condition up to 15 minutes late if data points are regularly delayed.
+
+You can let the analytics engine determine the time to run the computation, or you can control the delay manually with :strong:`Min Delay` and :strong:`Max Delay` settings.
+
+Min delay
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :strong:`Min Delay` parameter specifies the minimum amount of time that the analytics engine must wait for data to arrive for a specific detector. 
+
+For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits for at least 2 minutes even if all the data points arrive on time with no delay. Because the detector will wait a minimum of 2 minutes whether the data arrives on time or not, you are prioritizing correctness over real-time alerting. :strong:`Min Delay` is most useful in cases of sparse data, where MTS for the detector haven't sent a data point in a long time.
+
+By default, :strong:`Min Delay` is set to ``Auto``, which means the detector can run at real time if all known MTS have sent a data point.
+
+You can permanently override the default setting for a detector by setting a :ref:`Min Delay` value in the :strong:`Detector Options` tab or using the Detector API. For more information, see the :new-page:`Detector API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+
+Max delay
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :strong:`Max Delay` parameter specifies the maximum amount of time that the analytics engine can wait for data to arrive for a specific detector.
+
+For example, if :strong:`Max Delay` is set to 5 minutes, the detector will wait for only a maximum of 5 minutes even if some data points have not arrived.
+
+By default, :strong:`Max Delay` is set to ``Auto``, allowing the analytics engine to determine the appropriate amount of time to wait for data points. With :strong:`Max Delay` set to ``Auto``, the analytics engine will accommodate most data by adopting the maximum observed delay. :strong:`Max Delay` is most useful in cases where there might be occasional momentary delay of some data points.
+
+You can permanently override the default setting for a detector by setting a :strong:`Max Delay` value in the :strong:`Detector Options` tab or using the Detector API. For more information, see the :new-page:`Detector API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+
 
 Disable chart display sampling
 ================================
