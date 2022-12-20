@@ -34,6 +34,10 @@ Successful integration requires administrator privileges for the following:
 
 To learn more about these privileges, see the Azure documentation for registering a new app.
 
+.. note:: 
+
+  Observability Cloud supports all Azure regular regions, and Azure Government. 
+
 .. raw:: html
 
   <embed>

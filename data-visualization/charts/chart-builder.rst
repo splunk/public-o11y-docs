@@ -123,7 +123,7 @@ As you filter a signal, tokens representing the filter options are added to the 
 View and change a plot's rollup type
 =============================================================================
 
-Every signal has a default :term:`rollup` associated with it, which will be displayed as :strong:`Auto`. If the rollup label says :strong:`Multiple`, it means that different rollup functions have been applied to different MTSes on the same plot. This happens when the rollup setting is left as default, and the plot contains metric time series that have different metric types. MTSes on the same plot can have different metric types if the plot contains a wildcard query that matches many different metrics. It can also happen if the plot contains one metric, but that metric is used to record different types of measurements.
+Every signal has a default :term:`rollup` associated with it, which will be displayed as :strong:`Auto`. If the rollup label says :strong:`Multiple`, it means that different rollup functions have been applied to different metric time series (MTS) on the same plot. This happens when the rollup setting is left as default, and the plot contains metric time series that have different metric types. MTS on the same plot can have different metric types if the plot contains a wildcard query that matches many different metrics. It can also happen if the plot contains one metric, but that metric is used to record different types of measurements.
 
 Rollups are used to adjust the chart resolution as necessary to effectively display the chart data. For more information, see :ref:`data-resolution-rollups-charts`.
 
