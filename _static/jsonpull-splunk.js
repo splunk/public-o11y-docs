@@ -133,14 +133,14 @@ $(document).ready(function () {
 
 
                 if (preRef != '' && h2Text != '') {
-                    $(mainObj).append('<h2 class="sub-table-heading" id="' + preRef + '-table">Attributes of <i>' + h2Text + '</i></h2>');
+                    $(mainObj).append('<h2 class="sub-table-heading" id="' + preRef + '-table">Fields of <i>' + h2Text + '</i></h2>');
                 }
 
                 let table = "<table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='" + id + "'>" +
                         "<thead>" +
                             "<th class='head name-head'>Name</th>" +
                             "<th class='head type-head'>Type</th>" +
-                            "<th class='head kind-head'>Kind</th>" +
+                            "<th class='head kind-head'>Default</th>" +
                             "<th class='head description-head'>Description</th>" +
                         "</thead>" +
                     "<tbody></tbody>";
@@ -153,12 +153,12 @@ $(document).ready(function () {
 
                     let rowId = id + '-' + data['fields'][i]['name'];
 
-                    let row = "<td id='" + rowId + "'>" + data['fields'][i]['name'] + "</td><td>" + coalesce(data['fields'][i]['type'], '') + "</td><td>" + coalesce(data['fields'][i]['kind'], '') + "</td><td>" + coalesce(converter.makeHtml(data['fields'][i]['doc']), '') + "</td>";
+                    let row = "<td id='" + rowId + "'>" + data['fields'][i]['name'] + "</td><td>" + coalesce(data['fields'][i]['kind'], '') + "</td><td>" + coalesce(data['fields'][i]['default'], '') + "</td><td>" + coalesce(converter.makeHtml(data['fields'][i]['doc']), '') + "</td>";
                     newObject.append('<tr>' + row + '</tr>');
 
                     if (data['fields'][i]['fields'] !== undefined) {
                         traverseFields(mainObj, data['fields'][i], rowId, data['fields'][i]['name']);
-                        newObject.find('#' + rowId).html(data['fields'][i]['name'] + ' (<a href="#' + rowId + '-table">see attributes</a>)');
+                        newObject.find('#' + rowId).html(data['fields'][i]['name'] + ' (<a href="#' + rowId + '-table">see fields</a>)');
                     }
                 }
             }
