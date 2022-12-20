@@ -12,7 +12,7 @@ Splunk APM supports a variety of span formats, depending on which agent, collect
 .. _apm-formats-otelcol:
 
 Span formats compatible with the OpenTelemetry Collector
-========================================================
+================================================================
 
 The Splunk Distribution of the OpenTelemetry Collector can collect spans in the following format:
 
@@ -31,7 +31,7 @@ For more information on the Splunk Distribution of the OpenTelemetry Collector, 
 .. _apm-formats-trace-ingest:
 
 Span formats compatible with the ingest endpoint
-================================================
+========================================================
 
 The ingest endpoint for Splunk Observability Cloud at ``https://ingest.REALM.signalfx.com/v2/trace`` can receive spans in the following formats:
 
@@ -48,8 +48,8 @@ In addition, the following endpoints are available:
 
 .. _apm-formats-smart-agent:
 
-Span formats compatible with the Smart Agent
-============================================
+Span formats compatible with the Smart Agent (deprecated)
+============================================================
 
 The Smart Agent can receive the following span formats with the ``signalfx-forwarder`` monitor:
 
