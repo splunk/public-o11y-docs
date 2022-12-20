@@ -54,7 +54,7 @@ When you create a global data link for an APM property, you can transfer the pro
    * - Span tag
      - An existing span tag value.
      - ``sf_service``, ``sf_operation``, ``span_id``, ``trace_id``, all other tags for the span
-     - A field-value pair that describes the span. Use span tags to describe the span. Specify the tags when you configure instrumentation for the service. You can also specify span tags in the Splunk Distribution of OpenTelemetry Collector (or the Smart Agent, no deprecated) configuration. 
+     - A field-value pair that describes the span. Use span tags to describe the span. Specify the tags when you configure instrumentation for the service. You can also specify span tags in the Splunk Distribution of OpenTelemetry Collector (or the Smart Agent, now deprecated) configuration. 
 
 
 Link APM properties to Splunk Infrastructure Monitoring dashboards
