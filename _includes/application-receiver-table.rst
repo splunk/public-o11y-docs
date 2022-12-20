@@ -280,6 +280,11 @@
 
    * - :ref:`Interface traffic <interface>`
      - :strong:`X`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Istio <get-started-istio>`
+     - :strong:`X`
      -
      -
 
