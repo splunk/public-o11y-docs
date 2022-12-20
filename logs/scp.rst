@@ -38,11 +38,11 @@ To set up Log Observer Connect for Splunk Cloud Platform without help from the S
    
       - Adds Observability Cloud IPs and your local machine's IP to your Splunk Cloud Platform allow list to allow Log Observer Connect services and your machine to connect to your Splunk Cloud Platform instance through the management port
       
-      - Fetches a server certificate
+      - Fetches a certificate chain
       
       - Removes your local machine's IP from the allow list
       
-4. Copy and paste the server certificate on the next page to securely connect Log Observer Connect and your Splunk Cloud Platform instance.
+4. Copy and paste the root certificate, which is the first certificate, on the next page to securely connect Log Observer Connect and your Splunk Cloud Platform instance.
 
 5. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
