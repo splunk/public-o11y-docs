@@ -44,7 +44,7 @@ For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits 
 
 By default, :strong:`Min Delay` is set to ``Auto``, which means the detector can run at real time if all known MTS have sent a data point.
 
-You can permanently override the default setting for a detector by setting a :ref:`Min Delay` value in the :strong:`Detector Options` tab or using the Detector API. For more information, see the :new-page:`Detector API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+You can only configure :strong:`Min Delay` using the detector API. Detector API. For more information, see the :new-page:`Detector API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
 Max delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
