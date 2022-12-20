@@ -55,7 +55,7 @@ For example, if :strong:`Max Delay` is set to 5 minutes, the detector will wait 
 
 By default, :strong:`Max Delay` is set to ``Auto``, allowing the analytics engine to determine the appropriate amount of time to wait for data points. With :strong:`Max Delay` set to ``Auto``, the analytics engine will accommodate most data by adopting the maximum observed delay. :strong:`Max Delay` is most useful in cases where there might be occasional momentary delay of some data points.
 
-You can permanently override the default setting for a detector by setting a :strong:`Max Delay` value in the :strong:`Detector Options` tab or using the API. For more information, see the :new-page:`Detector API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+You can permanently override the default setting for a detector by setting a :strong:`Max Delay` value in the :strong:`Detector Options` tab or using the API. For more information, see the :new-page:`Detectors API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
 
 Disable chart display sampling
