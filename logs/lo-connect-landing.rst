@@ -27,7 +27,7 @@ Splunk Log Observer Connect
     save-share
     logviews
     timestamp
-    limits
+    lo-connect-limits
 
 
 
@@ -63,7 +63,7 @@ Splunk Log Observer Connect
 
 - :ref:`logs-timestamp`
 
-- :ref:`logs-limits`
+- :ref:`lo-connect-limits`
 
 
 If you do not have Log Observer Connect and instead use Log Observer, see :ref:`log-observer-landing`. 
