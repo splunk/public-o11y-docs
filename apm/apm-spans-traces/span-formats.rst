@@ -94,40 +94,6 @@ In addition, the following endpoints are available:
 * Zipkin v1, v2 at ``/v2/trace/signalfxv1`` with ``Content-Type:application/json``
 * SAPM at ``/v2/trace/sapm`` with ``Content-Type:application/x-protobuf``
 
-To export data configure the trace exporters in the Collector's configuration file as in the following examples. See :ref:`otel-configuration` for more information on Collector configuration.
-
-.. tabs::
-
-   .. code-tab:: yaml Jaeger Thrift
-
-      exporters:
-         jaeger_thrift:
-            endpoint: "https://ingest.<realm>.signalfx.com/v2/trace/jaegerthrift"
-
-   .. code-tab:: yaml Zipkin
-
-      exporters:
-         zipkin:
-            endpoint: "https://ingest.<realm>.signalfx.com/v2/trace/signalfxv1"
-         zipkin/2:
-            endpoint: "https://ingest.<realm>.signalfx.com/v2/trace/signalfxv1"
-
-   .. code-tab:: yaml SAPM
-
-      exporters:
-         sapm:
-            access_token: <access_token>
-            access_token_passthrough: true
-            endpoint: https://ingest.<realm>.signalfx.com/v2/trace/sapm
-            max_connections: 100
-            num_workers: 8
-            log_detailed_response: true
-
-   .. code-tab:: yaml OTLP
-
-      otlp:
-         endpoint: "https://ingest.<realm>.signalfx.com/v2/trace/otlp"
-
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`. 
 
 .. _apm-formats-smart-agent:
