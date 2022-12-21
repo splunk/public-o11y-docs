@@ -9,6 +9,8 @@ Compatible span formats for Splunk APM
 
 Splunk APM supports a variety of span formats, depending on which agent, collector, or endpoint receives and exports trace data. For more information about instrumenting applications for Splunk APM, see :ref:`instrument-applications`.
 
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`. 
+
 .. _apm-formats-otelcol:
 
 Span formats compatible with the OpenTelemetry Collector
@@ -18,33 +20,151 @@ The Splunk Distribution of the OpenTelemetry Collector can collect spans in the 
 
 - Jaeger: gRPC and Thrift
 - Zipkin v1, v2 JSON
-- SAPM
+- Splunk APM Protocol (SAPM)
+- OpenTelemetry Protocol (OTLP)
 
-To export data to Splunk Observability Cloud, use the following span formats:
+The following examples show how to configure receiver and exporters in the Collector's configuration file. You can combine multiple receivers and exporters according to your needs.
 
-- Jaeger: gRPC and Thrift
-- Zipkin v1, v2 JSON
-- SAPM
+.. tabs::
 
-For more information on the Splunk Distribution of the OpenTelemetry Collector, see :ref:`otel-using`.
+   .. code-tab:: yaml Jaeger Thrift
+
+      # To receive spans in Jaeger Thrift format
+
+      receivers:
+         jaeger:
+            protocols:
+               grpc:
+                  endpoint: 0.0.0.0:14250
+               thrift_binary:
+                  endpoint: 0.0.0.0:6832
+               thrift_compact:
+                  endpoint: 0.0.0.0:6831
+               thrift_http:
+                  endpoint: 0.0.0.0:14268
+
+      # To send spans to another Collector in Jaeger Thrift format
+
+      exporters:
+         jaeger_thrift:
+            endpoint: <collector-address>:14250
+            tls:
+               insecure: true
+
+   .. code-tab:: yaml Zipkin
+
+      # To receive spans in Zipkin format
+
+      receivers:
+         zipkin:
+            endpoint: 0.0.0.0:9411
+
+      # To send spans in Zipkin format to another Collector
+
+      exporters:
+         zipkin:
+            endpoint: "<address>:9411/api/v2/spans"
+            tls:
+               insecure: true
+
+   .. code-tab:: yaml SAPM
+
+      # To receive spans in SAPM format
+
+      receivers:
+         sapm:
+            endpoint: 0.0.0.0:7276
+
+      # To send spans in SAPM format (ingest API only)
+
+      exporters:
+         sapm:
+            access_token: <access_token>
+            access_token_passthrough: true
+            endpoint: https://ingest.<realm>.signalfx.com/v2/trace
+            max_connections: 100
+            num_workers: 8
+            log_detailed_response: true
+
+   .. code-tab:: yaml OTLP
+
+      # To receive spans in OTLP format
+
+      receivers:
+         otlp:
+            protocols:
+               grpc:
+                  endpoint: 0.0.0.0:4317
+               http:
+                  endpoint: 0.0.0.0:4318
+
+      # Send data to the Splunk OTel Collector (Gateway mode)   
+
+      exporters:
+         otlp:
+            endpoint: "<collector-address>:4317"
+                  
+
+See :ref:`otel-configuration` for more information on Collector configuration.
+
+For more information on each exporter's settings, see the ``opentelemetry-collector-contrib`` repository on GitHub.
 
 .. _apm-formats-trace-ingest:
 
 Span formats compatible with the ingest endpoint
-================================================
+=================================================
 
-The ingest endpoint for Splunk Observability Cloud at ``https://ingest.REALM.signalfx.com/v2/trace`` can receive spans in the following formats:
+If you can't use or need to bypass the Splunk OpenTelemetry Collector, you can send your span data directly to the ingest API endpoints of Observability Cloud.
 
+The ingest endpoint for Splunk Observability Cloud at ``https://ingest.<realm>.signalfx.com/v2/trace`` can receive spans directly in the following formats:
+
+* OTLP at ``/v2/trace/otlp`` with ``Content-Type:application/x-protobuf``
 * Jaeger Thrift with ``Content-Type:application/x-thrift``
 * Zipkin v1, v2 with ``Content-Type:application/json``
 * SAPM with ``Content-Type:application/x-protobuf``
 
 In addition, the following endpoints are available:
 
-* Jaeger Thrift at ``/v2/trace/jaegerthrift`` with ``Content-Type:application/x-thrift``
 * OTLP at ``/v2/trace/otlp`` with ``Content-Type:application/x-protobuf``
-* SAPM at ``/v2/trace/sapm`` with ``Content-Type:application/x-protobuf``
+* Jaeger Thrift at ``/v2/trace/jaegerthrift`` with ``Content-Type:application/x-thrift``
 * Zipkin v1, v2 at ``/v2/trace/signalfxv1`` with ``Content-Type:application/json``
+* SAPM at ``/v2/trace/sapm`` with ``Content-Type:application/x-protobuf``
+
+To export data configure the trace exporters in the Collector's configuration file as in the following examples. See :ref:`otel-configuration` for more information on Collector configuration.
+
+.. tabs::
+
+   .. code-tab:: yaml Jaeger Thrift
+
+      exporters:
+         jaeger_thrift:
+            endpoint: "https://ingest.<realm>.signalfx.com/v2/trace/jaegerthrift"
+
+   .. code-tab:: yaml Zipkin
+
+      exporters:
+         zipkin:
+            endpoint: "https://ingest.<realm>.signalfx.com/v2/trace/signalfxv1"
+         zipkin/2:
+            endpoint: "https://ingest.<realm>.signalfx.com/v2/trace/signalfxv1"
+
+   .. code-tab:: yaml SAPM
+
+      exporters:
+         sapm:
+            access_token: <access_token>
+            access_token_passthrough: true
+            endpoint: https://ingest.<realm>.signalfx.com/v2/trace/sapm
+            max_connections: 100
+            num_workers: 8
+            log_detailed_response: true
+
+   .. code-tab:: yaml OTLP
+
+      otlp:
+         endpoint: "https://ingest.<realm>.signalfx.com/v2/trace/otlp"
+
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`. 
 
 .. _apm-formats-smart-agent:
 
