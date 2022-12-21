@@ -8,7 +8,7 @@ Use this integration to view and monitor the health of your Databricks clusters.
 
 The Databricks Receiver uses the Databricks API to generate metrics about the operation of a Databricks instance. The supported pipeline type is metrics.
 
-.. note:: This receiver is in alpha. Behavior, configuration fields, and metric data model are subject to change.
+.. note:: This receiver is in alpha. Behavior, configuration fields, and the metric data model are subject to change.
 
 Benefits
 ===================================== 

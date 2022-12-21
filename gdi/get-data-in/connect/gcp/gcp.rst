@@ -13,13 +13,9 @@ Connect to Google Cloud Platform
    gcp-metrics
    gcp-logs
 
-.. note:: To see the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`.
-
 With a Google Cloud Platform (GCP) integration in Splunk Infrastructure Monitoring, you can track your Google Cloud Monitoring (formerly Google Stackdriver) metrics and monitor your GCP services in one place using the navigator in Stackdriver-powered mode and built-in dashboards.  
 
-To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP.
-
-.. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
+To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. To see the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`.
 
 .. raw:: html
 
@@ -28,6 +24,10 @@ To configure a GCP integration with Splunk Infrastructure Monitoring, check the 
    </embed>
 
 You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
+
+.. note:: 
+
+   Observability Cloud supports all GCP regions. 
 
 .. _gcp-one:
 
@@ -48,9 +48,6 @@ The following table specifies the permissions required for GCP integrations.
 
    *  - :strong:`Permission`
       - :strong:`Required?`
-
-   *  - ``monitoring.metricDescriptors.get``
-      - Yes
 
    *  - ``monitoring.metricDescriptors.list``
       - Yes
@@ -134,10 +131,17 @@ To configure your GCP service, follow these steps:
 By default, all available services are monitored, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
 
 #. Log in to Splunk Observability Cloud. 
-#. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
-#. In the :guilabel:`Cloud Integrations` section, select the :guilabel:`Google Cloud Platform` tile to open the Google Cloud Platform guided setup.
-#. Go to :guilabel:`New Integration`, enter a name for this GCP integration, then :guilabel:`Add Project`. 
+#. Open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
+
+   #. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
+
+   #. In the :guilabel:`Cloud Integrations` section, select the :guilabel:`Google Cloud Platform` tile to open the Google Cloud Platform guided setup.
+
+   #. Go to :guilabel:`New Integration`.
+
+#. Enter a name for this GCP integration, then :guilabel:`Add Project`. 
 #. Next, select :guilabel:`Import Service Account Key`, and select one or more of the JSON key files that you downloaded from GCP in :ref:`Configure GCP <gcp-two>`.
 #. Select :guilabel:`Open`. You can then see the project IDs corresponding to the service account keys you selected.
 #. To import :ref:`metrics <gcp-metrics>` from only some of the available services, follow these steps:
@@ -158,6 +162,8 @@ Your GCP integration is now complete.
 
 - Read more about the :ref:`provided GCP metrics <gcp-metrics>`.
 - Learn how to :ref:`ingest GCP logs <gcp-logs>`.
+
+.. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
 .. _gcp-api:
 

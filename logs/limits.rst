@@ -75,7 +75,7 @@ The following table lists Log Observer's processing rule limits:
 Maximum number of processing rules
 ---------------------------------------------------------------------------------------------
 
-This is the maximum number of processing rules that an organization can create.
+This is the maximum number of processing rules that an organization can create. An organization can create 128 combined log processing rules, including field extraction rules, field copy rules, and field redaction rules. An organization can also create a total of 128 infinite logging rules and 128 log metricization rules.
 
 What happens when the limit is hit?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

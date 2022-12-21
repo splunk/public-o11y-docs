@@ -5,7 +5,7 @@ Send alert notifications to third-party services using Splunk Observability Clou
 ************************************************************************************
 
 .. meta::
-      :description: In addition to sending alert notifications via email, you can send alert notifications to various other services, such as PagerDuty, Slack, and BigPanda.
+      :description: In addition to sending alert notifications via email, send alert notifications to other services, such as PagerDuty, Slack, and BigPanda.
 
 .. toctree::
    :hidden:

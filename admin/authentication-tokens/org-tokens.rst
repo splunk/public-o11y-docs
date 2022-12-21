@@ -5,7 +5,7 @@ Create and manage organization access tokens using Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
-   :description: Learn how to how to create and manage organization access tokens
+   :description: Create and manage organization access tokens: defaults, manage, visibility, change a token, rename, or disable.
 
 Access tokens, also known as org tokens, are long-lived organization-level tokens. You can use access tokens in all API requests except those that require a token associated with a user who has administrative access. See :ref:`admin-api-access-tokens` for more information.
 
