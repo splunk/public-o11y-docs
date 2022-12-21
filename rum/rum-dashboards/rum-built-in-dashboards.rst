@@ -11,13 +11,23 @@ Built-in dashboards offer charts, metrics, and aggregations about your applicati
    :header-rows: 1
 
    * - :strong:`Dashboard`
-     - :strong:`Description`
+     - :strong:`Type of data`
    * - Mobile app health
      - 
+        * App crashes and errors 
+        * App launch statistics 
+        * Network performance metrics
    * - Browser app health
-     -
-   * - Browser page health
      - 
+        * Page loads and route changes
+        * Web vitals
+        * Network performance metrics
+
+   * - Browser page health
+     -  
+        * Page loads and route changes
+        * Web vitals by page 
+        * Network performance metrics by page 
 
 Navigate to RUM built-in dashboards  
 ====================================
