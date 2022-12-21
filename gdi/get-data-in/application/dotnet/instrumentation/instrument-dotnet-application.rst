@@ -362,4 +362,6 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
-The realm name appears in the :guilabel:`Organizations` section. 
+The realm name appears in the :guilabel:`Organizations` section.
+
+.. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
