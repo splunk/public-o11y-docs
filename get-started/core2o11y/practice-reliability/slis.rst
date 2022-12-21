@@ -7,29 +7,33 @@ Measure and alert on your SLIs
 .. meta::
    :description: SLIs, SLOs, and SLAs in Observability Cloud
 
-Splunk Observability Cloud provides out of the box solutions for monitoring your SLIs, and for setting and meeting your SLOs and SLAs. You can also define your own SLIs with custom detectors, and alert on the data most important to your teams.
+Splunk Observability Cloud provides out of the box solutions for monitoring your SLIs. You can also define your own SLIs with custom detectors, and alert on the data most important to your teams.
 
-SLIs are Service Level Indicators, the metrics used to measure your system's availability. SLOs, Service Level Objectives, are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements, SLAs, are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
+SLIs, SLOs, and SLAs
+===================================================================================
+SLIs are important because they help you meet your SLAs with customers. To review, SLIs are Service Level Indicators, the metrics used to measure your system’s availability. SLOs, Service Level Objectives, are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements, SLAs, are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
 
 :strong:`Example`:
 
-SLI: the percentage of the time your system is available
+SLI: the percentage of the time your system is available (where we define availability as a transaction taking less than a half second to complete)
 
-SLO: Your system should be available 99.99% of the time. 
+SLO: Your system should be available 99.99% of the time 
 
-SLA: If your system is not available 99.99% of the time during a customer's first year from purchase, you will give them a 10% discount on your services in the following year's contract.
+SLA: If your system is not available 99.99% of the time during a month, you will give the customer a rebate
 
-To meet your SLAs, you must set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs and meet your SLAs. The following sections detail the components in Observability Cloud that you can use to track your SLOs and ensure that you meet your SLAs.
+To meet your SLAs, you must set and manage SLOs based on accurate data, as measured by your SLIs. Observability Cloud immediately monitors and analyzes your SLIs, takes the guesswork out of determining error budgets, and helps you set reasonable SLOs so that you meet your SLAs. The following sections detail the components in Observability Cloud that you can use to measure and alert on your SLIs.
 
 Splunk APM
 ===================================================================================
-Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you select a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency.
+You can monitor your SLIs in Splunk APM. Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you select a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency. For example, you can track whether your SLI for your 90th percentile service latency for each service is less than 5 seconds. On the following service map, we can see in the P90 latency chart on the right that all services have a P90 of less than one second with the longest being 748 milliseconds.
+
+you can track your P90 latency on the service map to make sure that it is less than 10 seconds. Another example is tracking error rates. You can also track the error rates for each of your services to make sure that error rates for each service is less than 0.1%
 
 .. image:: /_images/get-started/core2o11y-apm-pt1.png
   :width: 100%
   :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data
 
-Defining and managing SLOs for services with dependencies, some of which have their own SLOs, is tricky. A dynamically generated service map showing all integrated services, critical SLIs, and dependencies helps you with critical decisions, such as whether to combine SLOs for multiple dependencies.
+
 
 :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services, as seen in the following sample APM dashboard.
 
