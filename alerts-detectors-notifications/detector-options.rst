@@ -29,11 +29,11 @@ Specifies whether small dots are displayed on the chart, indicating the times at
 Delay settings
 ====================
 
-Detectors in Splunk Observability Cloud run on a regular time interval, known as the detector resolution. Each time a detector runs, it evaluates a condition to determine if an alert will be fired.
+Detectors in Splunk Observability Cloud run on a regular time interval, known as the detector resolution. Each time a detector runs, it evaluates its condition to determine if an alert will be fired.
 
 Because many metric time series (MTS) can be included in a single detector, the analytics engine keeps track of the lag for known MTS, attempting to make sure that the all known MTS will be included. While most MTS have little delay, a detector evaluate its condition up to 15 minutes late if data points are regularly delayed.
 
-You can let the analytics engine determine the time to run the computation, or you can control the delay manually with :strong:`Min Delay` and :strong:`Max Delay` settings.
+It is best practice to let the engine determine the time to run the computation, but you can also control the delay manually with :strong:`Min Delay` and :strong:`Max Delay` settings.
 
 Min delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -63,7 +63,7 @@ Disable chart display sampling
 
 .. if text is changed here, also change it as necessary in :ref:`chart-sampling`
 
-In cases where a large number of time series would be displayed, for example, if you choose a metric being reported by 500 servers, Splunk Infrastructure Monitoring samples a subset of those time series so the chart will render more quickly. The sampled display provides you with an approximate sense of the values in those time series. If you disable sampling, any time series data that were previously omitted will be shown. Depending on the number of time series, disabling sampling may cause the chart to render more slowly.
+In cases where a large number of time series are displayed, for example, if you choose a metric being reported by 500 servers, Splunk Infrastructure Monitoring samples a subset of those time series so the chart will render more quickly. The sampled display provides you with an approximate sense of the values in those time series. If you disable sampling, any time series data that were previously omitted will be shown. Depending on the number of time series, disabling sampling might cause the chart to render more slowly.
 
 The detector is still triggered as configured, regardless of the number of time series displayed on the chart.
 
