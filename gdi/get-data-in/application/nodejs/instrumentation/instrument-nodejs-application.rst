@@ -247,6 +247,8 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 
 The realm name appears in the :guilabel:`Organizations` section.
 
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
 .. note:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
 
 Instrument Lambda functions
