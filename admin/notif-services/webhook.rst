@@ -15,9 +15,11 @@ To send Observability Cloud alert notifications to a webhook, complete the follo
 
 * :ref:`webhook2`
 
-   You must be an Observability Cloud administrator to perform this task.
+  You must be an Observability Cloud administrator to perform this task.
 
 * :ref:`webhook3`
+
+Note that if the target destination is not available, Observability Cloud will retry sending the notification for up to a day. After 24 hours, the notification won't be delivered.
 
 
 .. _webhook1:
