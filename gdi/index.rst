@@ -27,11 +27,11 @@ Available host and application monitors
 
 You can configure an application receiver to gather metrics from its associated application and the host the application is running on.
 
-To find a receiver for your application, see the alphabetical listing of receivers on this page, or use the left navigation menu for this section to browse for receivers by application category.
+To find a receiver for your application, see the alphabetical listing of receivers on this page, or use the menu to browse for receivers by application category.
 
-Receiver functionality is also provided in the form of SignalFx Smart Agent monitors. Documentation in this section describes configuration options for both the Splunk Distribution of OpenTelemetry Collector receivers and Smart Agent monitors.
+Receiver functionality is also provided in the form of SignalFx Smart Agent monitors. Configuration options for both the Splunk Distribution of OpenTelemetry Collector receivers and Smart Agent monitors is available.
 
-The SignalFx Smart Agent is deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
+.. note:: The SignalFx Smart Agent is deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
 
 .. using an include for this table because it also appears on gdi/get-start-in/integrations.rst
 

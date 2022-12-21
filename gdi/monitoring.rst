@@ -10,6 +10,7 @@ Configure application exporters and receivers for monitoring
 
    cadvisor/cadvisor
    cgroups/cgroups
+   get-data-in/application/istio/istio
    jaeger-grpc/jaeger-grpc
    nagios/nagios
    prometheus-exporter/prometheus-exporter
@@ -27,6 +28,7 @@ These application receivers gather metrics from their associated monitoring appl
 
 * :ref:`cadvisor`
 * :ref:`cgroups`
+* :ref:`get-started-istio`
 * :ref:`jaeger-grpc`
 * :ref:`nagios`
 * :ref:`prometheus-exporter`
