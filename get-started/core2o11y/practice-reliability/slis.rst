@@ -25,14 +25,11 @@ To meet your SLAs, you must set and manage SLOs based on accurate data, as measu
 
 Splunk APM
 ===================================================================================
-You can monitor your SLIs in Splunk APM. Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you select a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of the service you select. The right panel also shows services by error rate, top error sources, and services by latency. For example, you can track whether your SLI for your 90th percentile service latency for each service is less than 5 seconds. On the following service map, we can see in the P90 latency chart on the right that all services have a P90 of less than one second with the longest being 748 milliseconds.
+You can monitor your SLIs in Splunk APM. Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you select a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of your services. The right panel also shows services by error rate, top error sources, and services by latency. For example, you can track whether the SLI for your 90th percentile service latency for each service is less than 5 seconds. On the following service map, we can see in the :strong:`Services By Latency (P90)` chart on the right that all services have a P90 of less than one second with the longest being 748 milliseconds. Another SLI you can track on the service map is error rate per second of each service in the :strong:`Services by Error Rate` chart on the right. 
 
-you can track your P90 latency on the service map to make sure that it is less than 10 seconds. Another example is tracking error rates. You can also track the error rates for each of your services to make sure that error rates for each service is less than 0.1%
-
-.. image:: /_images/get-started/core2o11y-apm-pt1.png
+.. image:: /_images/get-started/core2o11y-apm-map.png
   :width: 100%
-  :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data
-
+  :alt: This screenshot shows an APM service map.
 
 
 :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services, as seen in the following sample APM dashboard.
@@ -56,16 +53,6 @@ Monitor your SLIs in out of the box navigators, such as the following navigator 
 In addition to out of the box navigators, you can set up alerts and detectors on any custom Infrastructure Monitoring data that matters to you. See :ref:`get-started-detectoralert`.
 
 :ref:`infrastructure-virtual-metrics` help you more accurately and thoroughly measure SLIs by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options.
-
-Splunk Log Observer Connect
-===================================================================================
-Log Observer Connect exposes analytic functions on logs that you can to use to generate SLIs from logs. For example, the following Log Observer Connect aggregation displays a count of all of your logs by severity, highlighting the percentage of logs with errors at any given time. 
-
-  .. image:: /_images/get-started/LOsample-core.png 
-    :width: 100%
-    :alt: This image shows Log Observer Connect with a timeline displaying a count of logs by severity.
-
-The Log Observer UI does not automatically generate SLIs, but you can use log aggregations to create SLI measurements using logs data. For example, in the preceding screenshot, if you change :strong:`Count` to :strong:`AVG`and group by :strong:`Request latency` rather than :strong:`severity`, Log Observer shows the average request latency in logs data. See :ref:`logs-aggregations` for guidance on adjusting aggregations so that you can view the SLIs that are important to you.
 
 Observability Cloud Alerts and detectors
 ===================================================================================
