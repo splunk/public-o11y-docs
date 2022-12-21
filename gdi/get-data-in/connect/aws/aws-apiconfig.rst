@@ -5,7 +5,7 @@ Connect to AWS using the Splunk Observability Cloud API
 ********************************************************
 
 .. meta::
-  :description: Use the API to connect Splunk Observability Cloud to AWS, review your permissions, configure the integration, collect logs, or enable Metric Streams.
+  :description: Use the API to connect Splunk Observability Cloud to AWS, review permissions, configure the integration, collect logs, or enable CloudWatch Metric Streams.
 
 To connect Splunk Observability Cloud to your AWS account, complete the following steps:
 
