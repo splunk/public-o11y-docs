@@ -214,4 +214,4 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 
 The realm name appears in the :guilabel:`Organizations` section.
 
-.. note:: For more information on the ingest API endpoints, see :ref:`allow-domains`.
+.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
