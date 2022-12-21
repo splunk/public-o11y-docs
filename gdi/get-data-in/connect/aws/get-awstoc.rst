@@ -96,11 +96,13 @@ You can connect Observability Cloud to AWS in several different ways. Choose the
   * - Connect to AWS using :ref:`Splunk Terraform <terraform-config>`
     - Can be used if you already manage your infrastructure as code by deploying through Terraform.
 
+See also the :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.splunk.com/Documentation/AddOns/latest/Firehose/ConfigureFirehose>`.
+
 .. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
   
 By default, Splunk Observability Cloud will bring in data from all :ref:`supported AWS services <aws-integrations>` associated with your account. To limit the amount of data to import, see :ref:`specify-data-metadata`.
 
-If you can't connect AWS to Splunk Observability Cloud, see :ref:`Troubleshoot your AWS connection <aws-troubleshooting>`.
+If you can't connect AWS to Observability Cloud, see :ref:`Troubleshoot your AWS connection <aws-troubleshooting>`.
 
 .. _aws-metricstreams:
 
