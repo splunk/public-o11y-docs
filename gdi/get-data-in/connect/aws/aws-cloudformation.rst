@@ -34,11 +34,11 @@ Select the QuickLink for a template with support for metric streams or logs. The
     - QuickLink
     - Hosted template link
 
-  * - yes
-    - yes
-    - once per account (using StackSets)
-    - deploy this :new-page:`https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features.yaml <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features.yaml>`
-    - :new-page:`https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features.yaml`
+  * - Yes
+    - Yes
+    - Once per account (using StackSets)
+    - Deploy this :new-page:`quicklink <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features.yaml <https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?templateURL=https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features.yaml>`
+    - :new-page:`Hostes template <https://o11y-public.s3.amazonaws.com/aws-cloudformation-templates/release/template_all_features.yaml>`
 
   * - yes
     - yes
