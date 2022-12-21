@@ -501,8 +501,6 @@ To enable Metric Streams use the following AWS IAM policy. It includes the permi
   ]
   }
 
-Note that line ``"cloudwatch:ListMetricStreams"`` and onwards are required for Metric Streams support.
-
 See :new-page:`Create an AWS integration using an external ID and ARN <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/#Create-an-AWS-integration-using-an-external-ID-and-ARN>` in the Splunk developer documentation for syntax examples.
 
 .. _metricstreams_cloudformation:
