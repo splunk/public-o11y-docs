@@ -23,7 +23,7 @@ The Splunk Distribution of the OpenTelemetry Collector can collect spans in the 
 - Splunk APM Protocol (SAPM)
 - OpenTelemetry Protocol (OTLP)
 
-The following examples show how to configure receiver and exporters in the Collector's configuration file. You can combine multiple receivers and exporters according to your needs.
+The following examples show how to configure receivers in the Collector's configuration file. You can use multiple receivers according to your needs.
 
 .. tabs::
 
@@ -43,14 +43,6 @@ The following examples show how to configure receiver and exporters in the Colle
                thrift_http:
                   endpoint: 0.0.0.0:14268
 
-      # To send spans to another Collector in Jaeger Thrift format
-
-      exporters:
-         jaeger_thrift:
-            endpoint: <collector-address>:14250
-            tls:
-               insecure: true
-
    .. code-tab:: yaml Zipkin
 
       # To receive spans in Zipkin format
@@ -59,14 +51,6 @@ The following examples show how to configure receiver and exporters in the Colle
          zipkin:
             endpoint: 0.0.0.0:9411
 
-      # To send spans in Zipkin format to another Collector
-
-      exporters:
-         zipkin:
-            endpoint: "<address>:9411/api/v2/spans"
-            tls:
-               insecure: true
-
    .. code-tab:: yaml SAPM
 
       # To receive spans in SAPM format
@@ -74,17 +58,6 @@ The following examples show how to configure receiver and exporters in the Colle
       receivers:
          sapm:
             endpoint: 0.0.0.0:7276
-
-      # To send spans in SAPM format (ingest API only)
-
-      exporters:
-         sapm:
-            access_token: <access_token>
-            access_token_passthrough: true
-            endpoint: https://ingest.<realm>.signalfx.com/v2/trace
-            max_connections: 100
-            num_workers: 8
-            log_detailed_response: true
 
    .. code-tab:: yaml OTLP
 
@@ -96,18 +69,9 @@ The following examples show how to configure receiver and exporters in the Colle
                grpc:
                   endpoint: 0.0.0.0:4317
                http:
-                  endpoint: 0.0.0.0:4318
-
-      # Send data to the Splunk OTel Collector (Gateway mode)   
-
-      exporters:
-         otlp:
-            endpoint: "<collector-address>:4317"
-                  
+                  endpoint: 0.0.0.0:4318            
 
 See :ref:`otel-configuration` for more information on Collector configuration.
-
-For more information on each exporter's settings, see the ``opentelemetry-collector-contrib`` repository on GitHub.
 
 .. _apm-formats-trace-ingest:
 
