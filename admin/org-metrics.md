@@ -33,6 +33,7 @@ To access the Organization Overview page, follow these steps:
    - IMM system limits: These charts identify metrics that track usage of system limits in your organization. 
    - IMM throttling: These charts highlight metrics that track throttling and limiting in your organization. 
    - Cloud integrations: These charts highlight metrics that track errors and throttling which might limit collection of telemetry from cloud provider APIs.
+
 ## Interpret and work with org metrics
 
 This section provides tips that can help you interpret and work with usage metrics.
@@ -49,7 +50,6 @@ The sum of all the by token metric values for a measurement might be less than t
 
 This difference in values applies to AWS CloudWatch, GCP StackDriver, AppDynamics, and New Relic integrations.
 
-
 ### Metrics with values for each metric type
 
 Some metrics have a value for each metric type (counter, cumulative counter, or gauge), so you have three MTS per metric. Each MTS has a dimension named `category` with a value of `COUNTER`, `CUMULATIVE_COUNTER`, or `GAUGE`. Because you can have multiple MTS for these metrics, you need to use the `sum()` SignalFlow function to see the total value.
@@ -58,13 +58,11 @@ For example, you might receive three MTS for `sf.org.numMetricTimeSeriesCreated`
 
 Also, you can filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
 
-
 ### A metric that counts stopped detectors
 
 The metric `sf.org.numDetectorsAborted` monitors the number of detectors that Infrastructure Monitoring stopped because the detector reached a resource limit. In most cases, the detector exceeds the limit of 250K MTS. This condition also generates the event `sf.org.abortedDetectors`, which records details including the detector ID, the reason it stopped, and the value or limit of MTS or data points, whichever caused the detector to stop.
 
 To learn more, see {ref}`Add context to metrics using events <events-intro>`.
-
 
 ### Metrics that track system limits
 
@@ -89,7 +87,6 @@ These metrics track limits that Infrastructure Monitoring enforces for your orga
 * `sf.org.limit.hosts` (gauge): Maximum number of hosts that can send data to your organization. The limit is higher than your contractual limit to allow for burst and overage usage. If you exceed this limit, Infrastructure Monitoring drops data points from new hosts but keeps accepting data points for existing hosts. To monitor your usage against the limit, use the metric `sf.org.numResourcesMonitored` and filter for the dimension `resourceType:hosts`.
 
 * `sf.org.limit.metricTimeSeriesCreatedPerMinute` (gauge): Maximum rate at which you can create new MTS in your organization, measured in MTS per minute. If you exceed this rate, Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS. To monitor the number of metrics you've created overall, use the metric `sf.org.numMetricTimeSeriesCreated`.
-
 
 ### Authentication error metrics 
 
