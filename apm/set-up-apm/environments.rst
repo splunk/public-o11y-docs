@@ -38,7 +38,7 @@ The :new-page:`Splunk Distribution of OpenTelemetry Collector agent config file 
 
     resource/add_environment:
         attributes:
-        - action: insert
+        action: insert
         value: staging/production/...
         key: deployment.environment
 
