@@ -49,9 +49,6 @@ The following table specifies the permissions required for GCP integrations.
    *  - :strong:`Permission`
       - :strong:`Required?`
 
-   *  - ``monitoring.metricDescriptors.get``
-      - Yes
-
    *  - ``monitoring.metricDescriptors.list``
       - Yes
 
