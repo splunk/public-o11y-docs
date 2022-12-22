@@ -24,20 +24,15 @@ To access the Organization Overview page, follow these steps:
 
 2. On the left nav, select **Settings**, then select **Organization Overview**.
 
-3. Select the **DATA INGEST** tab to view metrics about the volume and nature of data being processed and stored, such as the number of data points or events received per minute.
+3. Select the tab for the metrics you want to view:
 
-4. Select the **ENGAGEMENT** tab to view metrics about users and the entities they've created. Observability Cloud displays metrics for the following entities:
-
-    - Charts
-
-    - Detectors
-
-    - Dashboards
-
-    - Dashboard groups
-
-    - Teams
-
+   - Engagement: Metrics about your users and the charts, detectors, dashboards, dashboard groups, and teams they've created.
+   - APM entitlements: For APM troubleshooting.
+   - APM throttling: These charts highlight metrics that track throttling and limiting in your organization.
+   - IMM entitlements: For IMM troubleshooting.
+   - IMM system limits: These charts identify metrics that track usage of system limits in your organization. 
+   - IMM throttling: These charts highlight metrics that track throttling and limiting in your organization. 
+   - Cloud integrations: These charts highlight metrics that track errors and throttling which might limit collection of telemetry from cloud provider APIs.
 ## Interpret and work with org metrics
 
 This section provides tips that can help you interpret and work with usage metrics.
