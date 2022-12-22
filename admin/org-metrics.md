@@ -26,13 +26,19 @@ To access the Organization Overview page, follow these steps:
 
 3. Select the tab for the metrics you want to view:
 
-   - Engagement: Metrics about your users and the charts, detectors, dashboards, dashboard groups, and teams they've created.
-   - APM entitlements: For APM troubleshooting.
-   - APM throttling: These charts highlight metrics that track throttling and limiting in your organization.
-   - IMM entitlements: For IMM troubleshooting.
-   - IMM system limits: These charts identify metrics that track usage of system limits in your organization. 
-   - IMM throttling: These charts highlight metrics that track throttling and limiting in your organization. 
-   - Cloud integrations: These charts highlight metrics that track errors and throttling which might limit collection of telemetry from cloud provider APIs.
+  - Engagement: Metrics about your users and the charts, detectors, dashboards, dashboard groups, and teams they've created.
+
+  - APM entitlements: For APM troubleshooting. 
+
+  - APM throttling: These charts highlight metrics that track throttling and limiting in your organization.
+  
+  - IMM entitlements: For IMM troubleshooting.
+
+  - IMM system limits: These charts identify metrics that track usage of system limits in your organization. 
+
+  - IMM throttling: These charts highlight metrics that track throttling and limiting in your organization. 
+
+  - Cloud integrations: These charts highlight metrics that track errors and throttling which might limit collection of telemetry from cloud provider APIs.
 
 ## Interpret and work with org metrics
 
