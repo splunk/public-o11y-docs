@@ -42,7 +42,7 @@ To set up Log Observer Connect for Splunk Cloud Platform without help from the S
       
       - Removes your local machine's IP from the allow list
       
-4. Copy and paste the root certificate, which is the first certificate, on the next page to securely connect Log Observer Connect and your Splunk Cloud Platform instance.
+4. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance.
 
 5. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
