@@ -13,7 +13,7 @@ Monitor Splunk Infrastructure Monitoring subscription usage
 .. caution:: The information in this topic applies to organizations whose subscription plan is based on the number of hosts or metrics that Splunk Infrastructure Monitoring is monitoring for you. If your organization's usage is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`.
 
 Overview
-========
+=============
 
 Admin users in your organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. In addition to counts for hosts and containers, the reports also contain counts for custom, bundled, and high-resolution metrics.
 
@@ -27,25 +27,28 @@ The following sections describe the different categories of metrics in the metri
 .. _about-custom:
 
 Differences between host, container, bundled, and custom metrics
-----------------------------------------------------------------
-
-
+---------------------------------------------------------------------
 
 .. list-table::
-   :header-rows: 1
-   :widths: 20, 80
+  :header-rows: 1
+  :width: 100
+  :widths: 20, 80
 
-   * - :strong:`Metrics category`
-     - :strong:`Description`
+  * - :strong:`Metrics category`
+    - :strong:`Description`
 
-   * - Host and container metrics
-     - Default metrics sent by the the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
+  * - Host and container metrics
+    - * Default metrics sent by the the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
 
-   * - Bundled metrics
-     - Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers. They are included as part of a host-based subscription and you are not charged for them.
+  * - Bundled metrics
+    - * Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers. 
+      * They are included as part of a host-based subscription, so you're not charged for them.
 
-   * - Custom metrics
-     - Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics. Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. They might also include system or service metrics that you configure the Splunk Distribution of OpenTelemetry Collector to send outside of its default set of metrics. Your Infrastructure Monitoring subscription allows you to send a certain number of custom metrics.
+  * - Custom metrics
+    - * Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics. 
+      * Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. 
+      * You can also configure the Splunk Distribution of OpenTelemetry Collector to send custom metrics (such as system or service metrics) outside of its default set of metrics.
+      * Your Infrastructure Monitoring subscription allows you to send a certain number of custom metrics.
 
 .. _about-high-res:
 
@@ -53,17 +56,20 @@ Differences between high-resolution metrics and standard-resolution metrics
 ---------------------------------------------------------------------------
 
 .. list-table::
-   :header-rows: 1
-   :widths: 20, 80
+  :header-rows: 1
+  :width: 100
+  :widths: 20, 80
 
-   * - :strong:`Metrics category`
-     - :strong:`Description`
+  * - :strong:`Metrics category`
+    - :strong:`Description`
 
-   * - Standard-resolution metrics
-     - Metrics processed by Infrastructure Monitoring at the coarser of their native resolution or at 10-second resolution. In other words, they are never displayed at a resolution finer than 10 |nbsp| seconds.
+  * - Standard-resolution metrics
+    - * Metrics processed by Infrastructure Monitoring at the coarser of their native resolution, or at 10-second resolution. In other words, they are never displayed at a resolution finer than 10 |nbsp| seconds.
 
-   * - High-resolution metrics
-     - Metrics processed by Infrastructure Monitoring at their native resolution or at 1-second resolution (whichever is coarser). High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. Your Infrastructure Monitoring subscription allows you to send a certain number of high-resolution metrics.
+  * - High-resolution metrics
+    - * Metrics processed by Infrastructure Monitoring at their native resolution, or at 1-second resolution (whichever is coarser). 
+      * High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. 
+      * Your Infrastructure Monitoring subscription allows you to send a certain number of high-resolution metrics.
 
 ..
     _how-counted:
@@ -96,18 +102,15 @@ Differences between high-resolution metrics and standard-resolution metrics
 
 .. _using-page:
 
-
 Viewing and downloading Infrastructure Monitoring usage reports
 ====================================================================
 
-Infrastructure Monitoring usage reports help you understand the amount of data you're sending. Use these reports to manage your costs
-and ensure you're collecting the correct data.
+Infrastructure Monitoring usage reports help you understand the amount of data you're sending. Use these reports to manage your costs and ensure you're collecting the correct data.
 
 Prerequisites
--------------
+-------------------
 
 To view and download usage reports, you must be an organization admin.
-
 
 View usage reports
 ---------------------
@@ -144,7 +147,7 @@ To view usage reports available for download:
 Monthly usage report
 ====================
 
-This report is available on the :guilabel:`Billed Usage` tab. For each hour within the month (or month to date, for the current month), this report shows the number of hosts and containers monitored and the number of custom metrics and high-resolution metrics sent to Infrastructure Monitoring. This report follows your usage period and uses the month when a usage period starts as the label in the report link. For example, if your usage period begins on the 10th of the month, then a link for 'March 2021' covers March 10 through April 9, 2021.
+This report is available on the :guilabel:`Billed Usage` tab. For each hour within the month (or month to date, for the current month), this report shows the number of hosts and containers monitored and the number of custom metrics and high-resolution metrics sent to Infrastructure Monitoring. This report follows your usage period and uses the month when a usage period starts as the label in the report link. For example, if your usage period begins on the 10th of the month, then a link for 'March 2022' covers from March 10 through April 9, 2022.
 
 You can use the monthly usage report to determine whether your usage is in line with your subscription plan. You can use the data to calculate your average usage, how many hours in the month you have been over or under your plan, and by how much.
 
@@ -152,6 +155,7 @@ The report has six columns:
 
 .. list-table::
    :header-rows: 1
+   :width: 100
    :widths: 20 80
 
    * - :strong:`Column`
@@ -178,7 +182,7 @@ The report has six columns:
 .. _summary-including-children:
 
 Monthly usage report (multiple organizations)
-=============================================
+====================================================
 
 If you have multiple organizations associated with your Infrastructure Monitoring subscription, an option for a summary report that includes information on multiple organizations is also available. Similar to the :ref:`summary-by-month`, this report shows hourly information for hosts, containers, custom metrics, and high-resolution custom metrics. However, this report also includes this data for each organization associated with your subscription.
 
@@ -197,6 +201,7 @@ The following table explains the different columns in an hourly usage detail rep
 
 .. list-table::
    :header-rows: 1
+   :width: 100
    :widths: 20 80
 
    * - :strong:`Column`
@@ -204,46 +209,46 @@ The following table explains the different columns in an hourly usage detail rep
 
 
    * - Category Type
-     - Type of the MTS category: ``1`` (host) or ``2`` (container)
+     - Type of the MTS category: ``1`` (host) or ``2`` (container).
 
    * - Category name
-     - Name of the MTS category: host or container
+     - Name of the MTS category: host or container.
 
-   * - Token Id
-     - ID of the token associated with the category, if any
+   * - Token Id 
+     - ID of the token associated with the category, if any. Containers or hosts with TokenId 0 are generated when detectors are created. They aren't duplicates, and are not used in billing.
   
    * - Token Name
-     - Name of the token associated with the category, if any
+     - Name of the token associated with the category, if any.
    
    * - Category Key
-     - Key of the category. For example, ``AWSUniqueId``
+     - Key of the category. For example, ``AWSUniqueId``.
 
    * - Category Value
-     - Value of the category
+     - Value of the category.
   
    * - Cloud Provider
-     - Name of the cloud provider for the category
+     - Name of the cloud provider for the category.
   
    * - Cloud Region
-     - Cloud region associated with the category, if available
+     - Cloud region associated with the category, if available.
 
    * - Availability Zone
-     - Availability zone associated with the category, if available
+     - Availability zone associated with the category, if available.
   
    * - Project Name
-     - Name of the project associated with the category, if available
+     - Name of the project associated with the category, if available.
 
    * - Project Number
-     - Number of the project associated with the category, if available
+     - Number of the project associated with the category, if available.
 
    * - Subscription
-     - Subscription associated with the category, if available
+     - Subscription associated with the category, if available.
 
 
 .. _dimension-report:
 
 Dimension report
-================
+=======================
 
 Available on the :guilabel:`Usage Breakdown` tab, the dimension report shows the MTS information associated with data points sent from hosts or containers and information related to custom, high-resolution, and bundled MTS. It breaks down the totals by dimension so that you can trace the origination of the data.
 
@@ -256,26 +261,31 @@ The report has 22 columns: two for dimension name and value, and four for each t
 The following table explains the different columns in a dimension report:
 
 .. list-table::
-   :header-rows: 1
-   :widths: 20 80
+  :header-rows: 1
+  :width: 100
+  :widths: 20 80
 
-   * - :strong:`Columns`
-     - :strong:`Description`
+  * - :strong:`Columns`
+    - :strong:`Description`
 
-   * - Dimension Name and Dimension Value
-     - Key/value pairs of the dimensions that are sent in with your metrics. Unique combinations of dimensions and metrics are represented as MTS in Infrastructure Monitoring. The values in each row represent counts associated with the MTS for the specified dimension name and value.
+  * - Dimension Name and Dimension Value
+    - * Key/value pairs of the dimensions that are sent in with your metrics. Unique combinations of dimensions and metrics are represented as MTS in Infrastructure Monitoring. 
+      * The values in each row represent counts associated with the MTS for the specified dimension name and value.
 
-   * - No. [usage metric type] MTS
-     - During the report's 24-hour period (UTC), the number of unique MTS for which at least one data point was received from a host or a container; the number of custom, high-resolution, or bundled MTS.
+  * - No. [usage metric type] MTS
+    - * During the report's 24-hour period (UTC), the number of unique MTS for which at least one data point was received from a host or a container, and the number of custom, high-resolution, or bundled MTS.
 
-   * - New [usage metric type] MTS
-     - During the report's 24-hour period (UTC), the number of unique MTS for which data was received from a host or a container on that date for the first time; the number of custom metrics, high-resolution, or bundled MTS associated with data that was received on that date for the first time.
+  * - New [usage metric type] MTS
+    - * During the report's 24-hour period (UTC), the number of unique MTS for which data was received from a host or a container on that date for the first time, and the number of custom metrics, high-resolution, or bundled MTS associated with data that was received on that date for the first time.
 
-   * - Avg [usage metric type] MTS Resolution
-     - The average reporting frequency (native resolution) of the data points comprising the MTS. This value is averaged across the number of MTS and throughout the 24 |hyph|  hour period represented by the report's date. For example, a value of 10 means the data is being sent every 10 seconds, that is, has a 10s native resolution; a value of 300 means that the data is being sent every 5 minutes, that is, has a 5m native resolution, as is the case with standard AWS CloudWatch metrics. This value is calculated as an average across all of the MTS associated with the relevant dimension value. As a result, it may contain outliers (for example, an MTS reporting more slowly or with more significant jitter or lag) that skew the average. For example, for data sent every 5 minutes (300 seconds), you might see a value of 280 or a value of 315. This value should be treated as an approximate number that guides what you do with your metrics, rather than a way of auditing the precise timing of them.
+  * - Avg [usage metric type] MTS Resolution
+    - * The average reporting frequency (native resolution) of the data points comprising the MTS. This value is averaged across the number of MTS and throughout the 24 |hyph| hour period represented by the report's date. 
+      * For example, a value of 10 means the data is sent every 10 seconds, so it has a 10s native resolution. A value of 300 means that the data is sent every 5 minutes, so it has a 5m native resolution (a typical value for standard AWS CloudWatch metrics). 
+      * This value is calculated as an average across all of the MTS associated with the relevant dimension value. As a result, it may contain outliers (for example, an MTS reporting more slowly or with more significant jitter or lag) that skew the average. 
+      * For example, for data sent every 5 minutes (300 seconds), you might see a value of 280 or a value of 315. This value should be treated as an approximate number that guides what you do with your metrics, rather than a way of auditing the precise timing of them.
 
-   * - No. [usage metric type] Data points
-     - During the report's 24-hour period (UTC), the number of data points received by Infrastructure Monitoring from hosts or containers; the number of data points associated with custom, high-resolution, or bundled MTS.
+  * - No. [usage metric type] Data points
+    - * During the report's 24-hour period (UTC), the number of data points received by Infrastructure Monitoring from hosts or containers, and the number of data points associated with custom, high-resolution, or bundled MTS.
 
 .. Keeping the following labels (per-dimension and by-dimension) because they may have been used in the past --brs
 
@@ -293,12 +303,11 @@ Older report format
 The :ref:`dimension-report` is a revised format of the report formerly called the Metrics by Dimension report. If you select a date for the Dimension report earlier than the new format's release, the report you download is formatted like the older Metrics by Dimension report. The old report format provides an aggregate view of the data; that is, it doesn't show different values for different usage metrics (host, container, and so on).
 
 Custom metric report
-====================
+===========================
 
 Available on the :guilabel:`Usage Breakdown` tab, custom metric report shows the information on MTS associated with data points sent from hosts or containers, as well as information related to custom, high-resolution, and bundled MTS, for a specified date. The content of most columns in this report represents the same kinds of values as the :ref:`dimension-report`, except that the information is broken down by metric name instead of by dimension name and value. Therefore, you can see how Infrastructure Monitoring is categorizing data associated with each metric.
 
-A significant difference about this report is how you can use the No. |nbsp| Custom |nbsp|  MTS column. For example, there is a non-zero value in this column. In that case, the metric is designated as a custom metric, and all MTS for this metric are counted towards the quota associated with your Infrastructure Monitoring plan. Knowing how many custom MTS your organization is sending can help you tune your usage accordingly. For example, you might notice some custom metrics that you no longer want to report to Infrastructure Monitoring. Conversely, you might decide to increase the number of custom metrics in your plan, so that you can avoid overage charges. You can use the No. |nbsp| High |nbsp| Resolution |nbsp| MTS column in the same way.
-
+A significant difference about this report is how you can use the No. |nbsp| Custom |nbsp| MTS column. For example, there is a non-zero value in this column. In that case, the metric is designated as a custom metric, and all MTS for this metric are counted towards the quota associated with your Infrastructure Monitoring plan. Knowing how many custom MTS your organization is sending can help you tune your usage accordingly. For example, you might notice some custom metrics that you no longer want to report to Infrastructure Monitoring. Conversely, you might decide to increase the number of custom metrics in your plan, so that you can avoid overage charges. You can use the No. |nbsp| High |nbsp| Resolution |nbsp| MTS column in the same way.
 
 .. _host-overages:
 
@@ -323,11 +332,11 @@ Overage fees apply to each type of object individually. For example, suppose you
 
 - Hosts: 35
 
-   This is 10 hosts more than the subscription limit of 25.
+  This is 10 hosts more than the subscription limit of 25.
 
 - Containers: 300
 
-   This is 50 containers more than the subscription limit of 250.
+  This is 50 containers more than the subscription limit of 250.
 
 In this case, Observability Cloud will charge overage fees for 10 hosts and for 50 containers.
 
@@ -345,6 +354,7 @@ When creating the detector, you can use these metrics as signals on the :guilabe
 
 .. list-table::
    :header-rows: 1
+   :width: 100 
    :widths: 25 75
 
    *  -  :strong:`Item to alert on`
