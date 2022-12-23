@@ -8,6 +8,7 @@ Configure application receivers for orchestration
    :maxdepth: 4
    :hidden:
 
+   get-data-in/application/istio/istio
    kubernetes-apiserver/kubernetes-apiserver
    kubernetes-cluster/kubernetes-cluster
    kubernetes-cluster/kubernetes-cluster-receiver
@@ -22,8 +23,7 @@ Configure application receivers for orchestration
 
 These application receivers gather metrics from their associated orchestration-related applications and the hosts the applications are running on.
 
-
-* :ref:`kubernetes-apiserver`
+* :ref:`get-started-istio`
 * :ref:`kubernetes-cluster`
 * :ref:`kubernetes-cluster-receiver`
 * :ref:`kubernetes-events`

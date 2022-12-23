@@ -13,7 +13,9 @@ Ingest alerts in Splunk Incident Intelligence
     :hidden:
 
     ingest-cloudwatch
+    ingest-azure
     ingest-prometheus
+
 
 
 
@@ -63,6 +65,9 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
 
    * - Amazon CloudWatch
      - See :ref:`ii-ingest-cloudwatch-alerts`.
+
+   * - Azure Monitor
+     - See :ref:`ii-ingest-azure-alerts`.
 
    * - Prometheus
      - See :ref:`ii-ingest-prometheus-alerts`.
