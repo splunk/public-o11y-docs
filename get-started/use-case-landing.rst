@@ -22,7 +22,7 @@ This is the collection of use cases available for Splunk Observability Cloud.
 
   * - :strong:`Category`
     - :strong:`Use case`
-  * - :ref:`Splunk Observability Cloud <get-started-o11y>``    
+  * - :ref:`Splunk Observability Cloud <get-started-o11y>`    
     - :ref:`Maintain a secure organization with many teams and users using Splunk Observability Cloud <use-case-security>`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-use-case>`
