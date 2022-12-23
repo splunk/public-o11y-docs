@@ -125,7 +125,7 @@ To solve this issue, use the Jaeger exporter instead. See :ref:`trace-exporters-
 Jaeger can't export spans
 ------------------------------------------------------
 
-The following warnings in your logs mean that the Java agent can't send trace data to the Smart Agent, the OTel Collector, or Splunk Cloud Platform using the Jaeger exporter:
+The following warnings in your logs mean that the Java agent can't send trace data to the OTel Collector, the Smart Agent (now deprecated), or Splunk Cloud Platform using the Jaeger exporter:
 
 .. code-block:: bash
 
@@ -141,10 +141,10 @@ The following warnings in your logs mean that the Java agent can't send trace da
 
 To troubleshoot the lack of connectivity between Jaeger and Splunk Observability Cloud, try the following steps:
 
-1. Make sure that ``otel.exporter.jaeger.endpoint`` points to a Smart Agent or OpenTelemetry Collector instance, or to the Splunk Ingest URL. See :new-page:`Send data measurements <https://dev.splunk.com/observability/docs/apibasics/send_data_basics#Send-data-measurements>` in the Splunk Developer documentation.
-2. Check that the Smart Agent or the OTel Collector instance is configured and running.
+1. Make sure that ``otel.exporter.jaeger.endpoint`` points to an OpenTelemetry Collector (or Smart Agent, now deprecated) instance, or to the Splunk Ingest URL. See :new-page:`Send data measurements <https://dev.splunk.com/observability/docs/apibasics/send_data_basics#Send-data-measurements>` in the Splunk Developer documentation.
+2. Check that the OpenTelemetry Collector (or Smart Agent) instance is configured and running.
 3. Check that the Jaeger Thrift HTTP receiver is enabled and plugged into the traces pipeline. See :ref:`otel-exposed-endpoints`.
-4. Check that the endpoint is correct. The Smart Agent and OpenTelemetry Collector use different ports and paths by default. For the Jaeger receiver, the Smart Agent uses ``http://<host>:9080/v1/trace``, while the OTel Collector uses ``http://<host>:14268/api/traces``.
+4. Check that the endpoint is correct. The OpenTelemetry Collector (or Smart Agent) use different ports and paths by default. For the Jaeger receiver, the Smart Agent uses ``http://<host>:9080/v1/trace``, while the OTel Collector uses ``http://<host>:14268/api/traces``.
 
 401 error when sending spans
 --------------------------------------------------------
@@ -171,8 +171,8 @@ If you see the following warning in your logs, it means that the Java agent can'
 To troubleshoot connectivity issues affecting application metrics, try the following steps:
 
 1. Make sure that ``splunk.metrics.endpoint`` points to the correct host.
-2. Check that the Smart Agent or the OTel Collector instance is configured and running.
-3. Check that the Smart Agent and the OpenTelemetry Collector are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:9943``, and the Agent uses ``http://<host>:9080/v2/datapoint``.
+2. Check that the OpenTelemetry Collector (or Smart Agent) instance is configured and running.
+3. Check that the OpenTelemetry Collector (or Smart Agent) are using the correct ports for the SignalFx receiver. The Collector uses ``http://<host>:9943``, and the Agent uses ``http://<host>:9080/v2/datapoint``.
 4. Make sure that you're using a valid Splunk access token when sending data directly to your Splunk platform instance. See :ref:`admin-api-access-tokens`.
 
 .. note:: Metric collection for Java using OpenTelemetry instrumentation is still experimental.
