@@ -4,15 +4,13 @@
 SignalFx Smart Agent commands reference
 ********************************************************************************************
 
-
 .. meta::
-   :description: The most commonly used commands for the SignalFx Smart Agent.
-
+  :description: The most commonly used commands for the SignalFx Smart Agent.
 
 This topic provides commonly used commands for the Smart Agent.
 
 .. note::
-    To see commonly used commands for the Splunk Distribution of OpenTelemetry Collector, see :ref:`otel-commands`.
+    The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. To see commonly used commands for the Splunk Distribution of OpenTelemetry Collector, see :ref:`otel-commands`.
 
 The standard ports for the Smart Agent are 9080 and 8095. The default configuration is stored in /etc/signalfx/agent.yaml. 
 
