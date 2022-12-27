@@ -1077,6 +1077,11 @@ Instrument your applications to send metrics and traces to Observability Cloud.
    * - :new-page:`C++ <https://github.com/signalfx/splunk-otel-cpp>`
      -
      - :strong:`X`
+     - 
+
+   * - :ref:`Go <get-started-go>`
+     -
+     - :strong:`X`
      -
 
    * - :ref:`Java <get-started-java>`
