@@ -54,7 +54,7 @@ For connections to `localhost`, MySQL programs attempt to connect to the local s
 ```
 
 ```{note}
-Provide a MySQL monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a MySQL monitor entry in your Collector or Smart Agent configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector
