@@ -182,7 +182,7 @@ Extensions
    * - ``pprof``
      - Enables the golang ``net/http/pprof`` endpoint, which is typically used by developers to collect performance profiles and investigate issues with the service.
    * - ``smartagent``
-     - Provides a mechanism to specify configuration options that are not specific only to a single instance of the Smart Agent receiver but are applicable to all instances. This component provides a means of migrating your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
+     - Provides a mechanism to specify configuration options that are not specific only to a single instance of the Smart Agent Receiver but are applicable to all instances. This component provides a means of migrating your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
    * - ``zpages``
      - Enables an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components that were properly instrumented for such. 
 

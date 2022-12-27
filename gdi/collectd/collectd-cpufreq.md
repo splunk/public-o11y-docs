@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/cpufreq` monitor type by using the SignalFx Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/cpufreq` monitor type by using the SignalFx Smart Agent Receiver.
 
 Use this integration to monitor the clock speed of each CPU on a host. This is useful for systems that vary the clock speed to save energy.
 

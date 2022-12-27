@@ -4,7 +4,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Hadoop monitor via the Smart Agent receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Hadoop monitor via the Smart Agent Receiver.
 
 This monitor collects metrics about a Hadoop 2.0+ cluster using the Hadoop Python plugin. If a remote JMX port is exposed in the Hadoop cluster, then you can also configure the hadoopjmx monitor to collect additional metrics about the Hadoop cluster.
 
@@ -18,7 +18,7 @@ The Hadoop monitor collects metrics from the Resource Manager REST API for the f
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
@@ -26,7 +26,7 @@ To install this integration:
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent receiver instance.
+The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
 **Note:** Providing a Hadoop monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 

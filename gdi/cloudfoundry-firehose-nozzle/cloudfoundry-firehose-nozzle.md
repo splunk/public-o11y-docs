@@ -7,7 +7,7 @@
 ## Description
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the
-Cloud Foundry Loggregator Firehose via the Smart Agent receiver. This integration supports gauge and counter metrics.
+Cloud Foundry Loggregator Firehose via the Smart Agent Receiver. This integration supports gauge and counter metrics.
 
 Use this monitor type to create a Cloud Foundry Firehose nozzle. This monitor connects to the Cloud Foundry Reverse Log Proxy (RLP) Gateway that feeds metrics from the Loggregator. This monitor uses the new RLP Gateway model that was introduced in Pivotal Cloud Foundry (PCF) 2.4, so it does not work with older releases.
 
@@ -52,7 +52,7 @@ $ uaac client add my-v2-nozzle \
 
 ### Configuration Example
 
-This monitor is available in the Smart Agent receiver, which is part of the Splunk Distribution of OpenTelemetry Collector. You can use existing Smart Agent monitors as OpenTelemetry Collector metric receivers with the Smart Agent receiver.
+This monitor is available in the Smart Agent Receiver, which is part of the Splunk Distribution of OpenTelemetry Collector. You can use existing Smart Agent monitors as OpenTelemetry Collector metric receivers with the Smart Agent Receiver.
 
 This monitor requires a properly configured environment on your system, in which you’ve installed a functional Smart Agent release bundle. The Splunk Distribution of OpenTelemetry Collector provides this bundle in the installation paths for ``x86_64/amd64``.
 

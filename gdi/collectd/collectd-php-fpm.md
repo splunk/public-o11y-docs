@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/php-fpm` monitor type by using the SignalFx Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/php-fpm` monitor type by using the SignalFx Smart Agent Receiver.
 
 Use this integration to monitor PHP-FastCGI Process Manager (FPM) using the pool status URL.
 

@@ -4,7 +4,7 @@
 
 <meta name="description" content="Documentation on the prometheus-exporter">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-exporter` monitor type by using the SignalFx Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-exporter` monitor type by using the SignalFx Smart Agent Receiver.
 
 ## Description
 

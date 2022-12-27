@@ -15,9 +15,9 @@ Overview
 
 The Splunk Distribution of OpenTelemetry Collector is the Splunk distribution of the :new-page:`OpenTelemetry Collector <https://opentelemetry.io/docs/concepts/data-collection/>` that provides a unified way to receive, process, and export metrics, traces, and logs to Splunk Observability Cloud.
 
-This distribution provides helpful components to assist current SignalFx Smart Agent (deprecated) users in their transition to the Collector and ensure no functionality loss. The Smart Agent receiver, its associated extension, and other Collector components provide a means of integrating all Smart Agent metric monitors into your Collector pipelines.
+This distribution provides helpful components to assist current SignalFx Smart Agent (deprecated) users in their transition to the Collector and ensure no functionality loss. The Smart Agent Receiver, its associated extension, and other Collector components provide a means of integrating all Smart Agent metric monitors into your Collector pipelines.
 
-The Smart Agent metric monitors allow real-time insights into how your target services and applications are performing. These metric gathering utilities have an equivalent counterpart in the Collector, known as the metric receiver. The Smart Agent receiver is a wrapper utility that allows the embedding of Smart Agent monitors within your Collector pipelines.
+The Smart Agent metric monitors allow real-time insights into how your target services and applications are performing. These metric gathering utilities have an equivalent counterpart in the Collector, known as the metric receiver. The Smart Agent Receiver is a wrapper utility that allows the embedding of Smart Agent monitors within your Collector pipelines.
 
 Benefits
 ================

@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `gitlab-runner` monitor type by using the [Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `gitlab-runner` monitor type by using the [Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
 This is the monitor for the Gitlab Runner service, which usually runs on port 9252. To monitor an instance on the same host as the Collector, update your configuration file according to the following example:
 

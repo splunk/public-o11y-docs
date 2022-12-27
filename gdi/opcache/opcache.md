@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/opcache` monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/opcache` monitor type using the Smart Agent Receiver.
 
 Use this monitor to retrieve metrics from OPcache using the `opcache_get_status()` function, which improves PHP performance by storing precompiled script bytecode in shared memory.
 

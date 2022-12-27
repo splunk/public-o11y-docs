@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `http` monitor by using the SignalFx Smart Agent receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `http` monitor by using the SignalFx Smart Agent Receiver.
 
 Use this integration to generate metrics based on whether the HTTP response from the configured URL matches expectations. For example, correct body, status code, and so on.
 

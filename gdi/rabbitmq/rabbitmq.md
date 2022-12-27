@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the RabbitMQ monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the RabbitMQ monitor type using the Smart Agent Receiver.
 
 Use this monitor to keep track of an instance of RabbitMQ by using the RabbitMQ Python Plugin. This monitor uses the RabbitMQ Management HTTP API to poll for statistics on a RabbitMQ server, then reports them to the agent.
 

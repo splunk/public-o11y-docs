@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the Redis monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the Redis monitor type using the Smart Agent Receiver.
 
 Using the Redis monitor, you can capture the following metrics:
 

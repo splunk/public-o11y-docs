@@ -7,7 +7,7 @@
 ## Description
 
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the cgroups type monitor by using the SignalFx Smart Agent receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the cgroups type monitor by using the SignalFx Smart Agent Receiver.
 
 Use this integration to reports statistics about `cgroups` on Linux. This receiver supports cgroups version 1, not the newer cgroups version 2 unified implementation.
 

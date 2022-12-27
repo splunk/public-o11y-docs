@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `postgresql` monitor via the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `postgresql` monitor via the Smart Agent Receiver.
 
 This monitor pulls metrics from all PostgreSQL databases from a specific Postgres server instance. This monitor pulls basic information that is applicable to any database and gathers these metrics via SQL queries.
 
@@ -19,7 +19,7 @@ This monitor pulls metrics from all PostgreSQL databases from a specific Postgre
 
 ## Installation
 
-This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 ```{include} /_includes/collector-installation-linux.md
 

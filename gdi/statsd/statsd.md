@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `statsd` monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `statsd` monitor type using the Smart Agent Receiver.
 
 Use this monitor to collect statsd metrics. This monitor listens on a configured address and port to receive the statsd metrics. The monitor supports the `Counter`, `Timer`, `Gauge`, and `Set` types, which are dispatched as the Splunk Observability Cloud types `counter`, `gauge`, `gauge`, and `gauge` respectively. Statsd extensions such as tags are not supported.
 

@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/node` monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/node` monitor type using the Smart Agent Receiver.
 
 Use this integration to collect Prometheus Node Exporter metrics and send them to Splunk Observability Cloud. This monitor is a wrapper around the {ref}`prometheus-exporter` monitor.
 

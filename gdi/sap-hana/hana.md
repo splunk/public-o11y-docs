@@ -6,7 +6,7 @@
 
 ## Description
 
-The [Splunk Distribution of OpenTelemetry Collector](https://docs.splunk.com/Observability/gdi/opentelemetry/opentelemetry.html#nav-Install-and-configure-Splunk-Distribution-of-OpenTelemetry-Collector) provides this integration as the `hana` type by using the SignalFx Smart Agent receiver.
+The [Splunk Distribution of OpenTelemetry Collector](https://docs.splunk.com/Observability/gdi/opentelemetry/opentelemetry.html#nav-Install-and-configure-Splunk-Distribution-of-OpenTelemetry-Collector) provides this integration as the `hana` type by using the SignalFx Smart Agent Receiver.
 
 Use this integration to get metrics from an SAP Hana database.
 

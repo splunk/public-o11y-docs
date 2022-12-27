@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `vsphere` monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `vsphere` monitor type using the Smart Agent Receiver.
 
 Use this integration to collect metrics from vSphere through the vSphere API. You can install this integration on the same server used by vSphere if it's running on Linux or Windows.
 

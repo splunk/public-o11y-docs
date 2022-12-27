@@ -5,7 +5,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `memory` monitor type by using the SignalFx Smart Agent receiver. This monitor type sends memory usage stats for the underlying host. This monitor type is available on Kubernetes, Linux, and Windows.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `memory` monitor type by using the SignalFx Smart Agent Receiver. This monitor type sends memory usage stats for the underlying host. This monitor type is available on Kubernetes, Linux, and Windows.
 
 On Linux hosts, this monitor type relies on the `/proc` filesystem. If the underlying host's `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top-level configuration `procPath`, as shown in the following example:
 

@@ -4,7 +4,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the MongoDB monitor using the Smart Agent receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the MongoDB monitor using the Smart Agent Receiver.
 
 This monitor captures the following metrics about MongoDB:
 
