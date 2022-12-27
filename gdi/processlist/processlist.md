@@ -27,7 +27,7 @@ This monitor is available on Linux and Windows.
 ```
 
 ```{note}
-Provide a processlist monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a processlist monitor entry in your Collector or Smart Agent configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

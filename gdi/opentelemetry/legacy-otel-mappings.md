@@ -8,7 +8,7 @@ This topic is for users that are migrating from using the SignalFx Smart Agent t
 
 ## The Mapping Service
 
-The Mapping Service is a transition tool that defines equivalencies between legacy SignalFx Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. Mapping supports multiple observers, deployment types, and kinds of metadata.
+The Mapping Service is a transition tool that defines equivalencies between legacy SignalFx Smart Agent (deprecated) metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. Mapping supports multiple observers, deployment types, and kinds of metadata.
 
 The Mapping Service enables you to migrate from Smart Agent deployments to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards and detectors. The Mapping Service also enables you to slowly transition from the Smart Agent to OpenTelemetry across your organization (though you cannot use both agents simultaneously on the same host).
 

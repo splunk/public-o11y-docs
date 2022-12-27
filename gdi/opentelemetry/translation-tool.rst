@@ -17,6 +17,7 @@ There are two approaches to using translatesfx, from the command line or from th
 
 From the command line
 =====================================
+
 To run the tool from the command line, download the executables from the :new-page:`releases page <https://github.com/signalfx/splunk-otel-collector/releases>`. The executables are also contained in the RPM, MSI, and Debian packages as well as the Docker images (version 0.36.1 and higher).
 
 The translatesfx command requires one argument, a Smart Agent configuration file, and accepts an optional second argument, which is the the working directory used by any Smart Agent #from file expansion directives. The translatesfx command uses this working directory to resolve any relative paths to files referenced by any #from directives at runtime.

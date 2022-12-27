@@ -35,7 +35,7 @@ When you add a custom role, don't assign any privileges to it. The role is creat
 ```
 
 ```{note}
-Provide a vsphere monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a vsphere monitor entry in your Collector or Smart Agent configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector
