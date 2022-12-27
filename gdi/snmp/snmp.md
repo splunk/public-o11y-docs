@@ -31,7 +31,7 @@ This monitor doesn't support MIB lookups`.
 ```
 
 ```{note}
-Provide an SNMP monitor entry in your Collector or Smart Agent configuration. Use the appropriate form for your agent type.
+Provide an SNMP monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

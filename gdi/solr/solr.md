@@ -27,7 +27,7 @@ This integration is available for Kubernetes, Windows, and Linux.
 ```
 
 ```{note}
-Provide a SolrCloud monitor entry in your Collector or Smart Agent configuration. Use the appropriate form for your agent type.
+Provide a SolrCloud monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

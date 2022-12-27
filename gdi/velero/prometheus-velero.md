@@ -27,7 +27,7 @@ This monitor is available on Kubernetes, Linux, and Windows.
 ```
 
 ```{note}
-Provide a Velero monitor entry in your Collector or Smart Agent configuration. Use the appropriate form for your agent type.
+Provide a Velero monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Velero

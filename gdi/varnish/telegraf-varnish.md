@@ -37,7 +37,7 @@ usermod -a -G varnish signalfx-agent
 ```
 
 ```{note}
-Provide a Telegraf Varnish monitor entry in your Collector or Smart Agent configuration. Use the appropriate form for your agent type.
+Provide a Telegraf Varnish monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

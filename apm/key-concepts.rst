@@ -90,7 +90,7 @@ A service is a small, flexible, and autonomous unit of software that connects to
 
 Instrumented service
 ---------------------
-Use an agent to instrument a service so that it sends its spans to Splunk APM. As an agent, use the OpenTelemetry Collector. The Smart Agent is now deprecated.  
+Use the OpenTelemetry Collector to instrument a service so that it sends its spans to Splunk APM. The SignalFx Smart Agent is now deprecated and will reach end of support on June 30th, 2023. To migrate from the Smart Agent to the Collector, see the :new-page:`migration guide <https://docs.splunk.com/Observability/gdi/opentelemetry/smart-agent-migration-to-otel-collector.html>`.  
 
 See :ref:`get-started-application` to learn more about instrumenting services. 
 
