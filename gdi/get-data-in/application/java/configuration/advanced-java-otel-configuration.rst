@@ -114,7 +114,7 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
      - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``. |br| |br| System property: ``otel.exporter.jaeger.endpoint``
 
-The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent, use the Jaeger exporter. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
+The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent (now deprecated), use the Jaeger exporter. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
 
 .. caution:: Support for the `jaeger-thrift-splunk` exporter will be removed after December 17th, 2022.
 

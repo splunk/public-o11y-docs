@@ -31,7 +31,7 @@ This monitor requires RabbitMQ 3.0 and higher.
 ```
 
 ```{note}
-Provide a RabbitMQ monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a RabbitMQ monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

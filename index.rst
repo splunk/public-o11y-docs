@@ -189,7 +189,7 @@ Set up an integration to an SSO provider :ref:`sso-label`
 
 .. rst-class:: newcard
 
-:strong:`Subscription Usage`
+:strong:`Subscription usage`
 Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-overview`
 
 

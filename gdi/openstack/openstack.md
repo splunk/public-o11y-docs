@@ -33,7 +33,7 @@ This integration is available for Kubernetes, Linux, and Windows.
 ```
 
 ```{note}
-Provide an OpenStack monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide an OpenStack monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

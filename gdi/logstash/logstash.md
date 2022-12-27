@@ -39,7 +39,7 @@ The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agen
 
 ### The `logstash` monitor
 
-**Note:** Providing a `logstash` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+**Note:** Providing a `logstash` monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 
 ### Splunk Distribution of OpenTelemetry Collector
 
