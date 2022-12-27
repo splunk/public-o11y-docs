@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `gitlab-workhorse` monitor type by using the [Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `gitlab-workhorse` monitor type by using the [Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
 This is a monitor for GitLab Workhorse, which is the GitLab service that handles slow HTTP requests. Workhorse includes a built-in Prometheus exporter that this monitor hits to gather metrics. By default, the exporter runs on port 9229.
 

@@ -7,7 +7,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the disk and partition monitor using the Smart Agent Receiver. This plugin provides disk metrics for Splunk Observability Cloud. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the disk and partition monitor using the Smart Agent receiver. This plugin provides disk metrics for Splunk Observability Cloud. 
 
 Use alerts and thresholds based on the plugin metrics to avoid filling disks to capacity. The Smart Agent plugin computes aggregated utilization metrics based on the output of this plugin.
 
@@ -30,7 +30,7 @@ This plugin requires collectd version 1.5+.
 
 ## Installation
 
-This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -39,7 +39,7 @@ To install this integration:
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent receiver instance.
 
 **Note:** Providing a disk and partition monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 

@@ -7,7 +7,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `windows-iis` monitor via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `windows-iis` monitor via the Smart Agent receiver.
 
 This monitor is only available on Windows and reports metrics for Windows Internet Information Services (IIS). This monitor drives the Windows IIS dashboard content.
 
@@ -23,7 +23,7 @@ This means that in between a collection interval, spikes could occur on the Perf
 
 ##  Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the SignalFx Smart Agent receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -34,7 +34,7 @@ To install this integration:
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent receiver instance.
 
 **Note:** Providing a `windows-iis` monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 

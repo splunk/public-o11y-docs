@@ -24,7 +24,7 @@ The Splunk Distribution of OpenTelemetry Collector for Linux is a package that p
 * :ref:`Install manually <linux-manual>`
 
 .. note::
-   Splunk only supports the SignalFx Smart Agent on x86_64 and AMD64 platforms. The SignalFx Smart Agent Receiver is subject to the same limitation.
+   Splunk only supports the SignalFx Smart Agent on x86_64 and AMD64 platforms. The SignalFx Smart Agent receiver is subject to the same limitation.
 
 .. _linux-scripts:
 

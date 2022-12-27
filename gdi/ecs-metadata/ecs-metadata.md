@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `ecs-metadata` monitor type by using the Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `ecs-metadata` monitor type by using the Smart Agent receiver.
 
 This integration reads container stats from Amazon ECS Task Metadata Endpoint version 2. The task metadata endpoint retrieves various task metadata and Docker stats.
 

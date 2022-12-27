@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/kafka_producer` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/kafka_producer` monitor type by using the SignalFx Smart Agent receiver.
 
 Use this integration to monitor a Java-based Kafka producer using GenericJMX. This monitor has a set of built-in MBeans configured for which it pulls metrics from the Kafka producer's JMX endpoint.
 

@@ -25,4 +25,4 @@ Receiver
 
 The receiver offers the complete set of Smart Agent monitors as Collector metric receivers. Monitors collect metrics from the host system and services.
 
-See :new-page:`SignalFx Smart Agent Receiver <https://github.com/signalfx/splunk-otel-collector/blob/main/pkg/extension/smartagentextension/README.md>` in GitHub to copy the configuration YAML file.
+See :new-page:`SignalFx Smart Agent receiver <https://github.com/signalfx/splunk-otel-collector/blob/main/pkg/extension/smartagentextension/README.md>` in GitHub to copy the configuration YAML file.

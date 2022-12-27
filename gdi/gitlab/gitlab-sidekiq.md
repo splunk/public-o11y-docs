@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `gitlab-sidekiq` monitor type by using the [Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `gitlab-sidekiq` monitor type by using the [Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
 This monitor scrapes the Gitlab Sidekiq Prometheus Exporter. 
 

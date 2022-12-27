@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this `kubernetes-proxy` monitor type using the [Splunk Observability Cloud Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this `kubernetes-proxy` monitor type using the [Splunk Observability Cloud Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
 This monitor type exports Prometheus metrics from the [kube-proxy](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy)
 metrics in Prometheus format. The monitor type queries path `/metrics` by default when no path is configured. It converts the Prometheus metric types to Splunk Observability Cloud metric types as described [here](../prometheus-exporter/prometheus-exporter.md).

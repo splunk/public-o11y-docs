@@ -5,7 +5,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Zookeeper monitor via the Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Zookeeper monitor via the Smart Agent receiver.
 
 This monitor keeps track of an Apache Zookeeper instance using the Zookeeper plugin. This plugin is installed with the Smart 
 Agent so no additional installation is required to use this monitor. The plugin supports Zookeeper 3.4.0 or later.

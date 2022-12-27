@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-scheduler` monitor type by using the [Splunk Observability Cloud Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-scheduler` monitor type by using the [Splunk Observability Cloud Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
 This monitor type exports Prometheus metrics from the [kube-scheduler](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler).
 

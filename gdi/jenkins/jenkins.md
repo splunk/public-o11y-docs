@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jenkins` monitor by using the SignalFx Smart Agent Receiver. 
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jenkins` monitor by using the SignalFx Smart Agent receiver. 
 
 Use this integration to collect metrics from Jenkins instances by hitting the following endpoints:
 

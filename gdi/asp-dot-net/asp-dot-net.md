@@ -5,7 +5,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `aspdotnet` monitor by using the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `aspdotnet` monitor by using the SignalFx Smart Agent receiver.
 
 Use this integration to retrieve metrics for requests, errors, sessions, and worker processes from ASP.NET applications. 
 

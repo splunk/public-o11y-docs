@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `processlist` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `processlist` monitor type by using the SignalFx Smart Agent receiver.
 
 This monitor reports the running processes for a host, similar to the output of the `top` or `ps` commands on *nix systems. The output format is a special base64-encoded event that appears under the Infrastructure view for a specific host. Historical process information is not retained on Splunk Observability Cloud.
 

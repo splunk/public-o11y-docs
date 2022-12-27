@@ -7,7 +7,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache ActiveMQ monitor by using the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache ActiveMQ monitor by using the Smart Agent receiver.
 
 This integration with ActiveMQ wraps the GenericJMX monitor to monitor ActiveMQ. This integration works with ActiveMQ 5.8.0 and higher.
 

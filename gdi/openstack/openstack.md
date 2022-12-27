@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the OpenStack monitor type using the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the OpenStack monitor type using the Smart Agent receiver.
 
 Use this monitor to gather metrics from OpenStack instances using the OpenStack Python plugin.
 

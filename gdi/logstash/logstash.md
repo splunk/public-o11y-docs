@@ -7,7 +7,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides these integrations as the `logstash` and `logstash-tcp` monitor types via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides these integrations as the `logstash` and `logstash-tcp` monitor types via the Smart Agent receiver.
 
 ### The `logstash` monitor
 The `logstash` monitor monitors the health and performance of Logstash deployments through
@@ -25,7 +25,7 @@ You can only use autodiscovery when this monitor is in `client` mode.
 
 ## Installation
 
-These monitors are available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+These monitors are available in the SignalFx Smart Agent receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install these integrations:
 
@@ -35,7 +35,7 @@ To install these integrations:
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent receiver instance.
 
 ### The `logstash` monitor
 

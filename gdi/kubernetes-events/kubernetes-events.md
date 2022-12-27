@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-events` monitor type. This monitor type listens for Kubernetes events by calling the Kubernetes API running on manager nodes, and sends Kubernetes events into Splunk Observability Cloud as Infrastructure Monitoring events through the OTel pipeline using the [Splunk Observability Cloud Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-events` monitor type. This monitor type listens for Kubernetes events by calling the Kubernetes API running on manager nodes, and sends Kubernetes events into Splunk Observability Cloud as Infrastructure Monitoring events through the OTel pipeline using the [Splunk Observability Cloud Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). 
 
 After it starts, the Kubernetes events monitor type sends all of the events that Kubernetes has that are still persisted, and any new events as they come in. The various agents decide which instance will lead and sends event. If ``alwaysClusterReporter`` is set to ``true``, every node emits the same data, and there is no additional querying of the manager node. 
 

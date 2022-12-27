@@ -7,7 +7,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `gitlab` monitor type by using the [Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `gitlab` monitor type by using the [Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
 GitLab is an open-source web-based git repository manager developed by
 GitLab Inc. GitLab has built-in features for creating wiki pages,

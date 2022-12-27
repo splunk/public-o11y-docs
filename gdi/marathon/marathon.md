@@ -4,7 +4,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Mesos Marathon monitor type by using the Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Mesos Marathon monitor type by using the Smart Agent receiver.
 
 Use this integration to monitor a Mesos Marathon instance using the [Marathon Python plugin](https://github.com/signalfx/signalfx-agent/blob/main/docs/monitors/collectd-marathon.md).
 

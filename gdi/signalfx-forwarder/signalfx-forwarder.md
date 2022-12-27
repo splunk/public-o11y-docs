@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `signalfx-forwarder` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `signalfx-forwarder` monitor type by using the SignalFx Smart Agent receiver.
 
 The SignalFx Forwarder receiver runs an HTTP server that listens for data points and trace spans and forwards them to Splunk Observability Cloud. The receiver supports the latest formats for data points and spans that the Splunk ingest API endpoint supports.
 

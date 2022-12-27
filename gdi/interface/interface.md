@@ -8,7 +8,7 @@
 
 **Note:** This monitor is deprecated in favor of the `net-io` monitor. Switch to that monitor as the Smart Agent is deprecated. The `net-io` monitor uses the `interface` dimension to identify the network card instead of the `plugin_instance` dimension, but otherwise the metrics are the same. To learn more, see {ref}`net-io`.
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `interface` monitor by using the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `interface` monitor by using the SignalFx Smart Agent receiver.
 
 Use this integration to collect information about the traffic (octets per second), packets per second and errors of interfaces (of course number of errors during one second).
 

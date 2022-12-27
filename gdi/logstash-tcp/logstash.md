@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `logstash-tcp` monitor by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `logstash-tcp` monitor by using the SignalFx Smart Agent receiver.
 
 Use this integration to monitor the health and performance of Logstash deployments through Logstash's Monitoring APIs.
 

@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `docker-container-stats` monitor via the Smart Agent Receiver. This monitor reads container stats from a Docker API server. The monitor does not currently support CPU share/quota metrics.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `docker-container-stats` monitor via the Smart Agent receiver. This monitor reads container stats from a Docker API server. The monitor does not currently support CPU share/quota metrics.
 
 This integration is available for Kubernetes, Linux, and Windows.
 
@@ -17,7 +17,7 @@ This integration is available for Kubernetes, Linux, and Windows.
 
 ## Installation
 
-This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -30,7 +30,7 @@ To install this integration:
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent receiver instance.
 
 **Note:** Providing a `docker-container-stats` monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 
