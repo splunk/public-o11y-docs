@@ -2,7 +2,7 @@
 
 # Conviva Real-Time/Live video play
 
-<meta name="Description" content="Documentation on the conviva monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Conviva monitor. See benefits, install, configuration, and metrics, including MetricLens">
 
 ## Description
 
@@ -12,8 +12,7 @@ This monitor uses version 2.4 of the Conviva Experience Insights REST APIs to pu
 `Real-Time/Live` video playing experience metrics from Conviva.
 
 Only `Live` conviva metrics listed on the
-[Conviva Developer Community](https://community.conviva.com/site/global/apis_data/experience_insights_api/index.gsp#metrics) page
-are supported. All metrics are gauges. The Conviva metrics are converted to Splunk Observability Cloud metrics with dimensions named account and filter. The account dimension is the name of the Conviva account and the filter dimension is the name of the Conviva filter applied to the metric. In the case of MetricLenses, the constituent MetricLens metrics and MetricLens dimensions are included. The values of the MetricLens dimensions are derived from the values of the associated MetricLens dimension entities.
+[Conviva Developer Community](https://community.conviva.com/site/global/apis_data/experience_insights_api/index.gsp#metrics) page are supported. All metrics are gauges. The Conviva metrics are converted to Splunk Observability Cloud metrics with dimensions named account and filter. The account dimension is the name of the Conviva account and the filter dimension is the name of the Conviva filter applied to the metric. In the case of MetricLenses, the constituent MetricLens metrics and MetricLens dimensions are included. The values of the MetricLens dimensions are derived from the values of the associated MetricLens dimension entities.
 
 ## Installation
 

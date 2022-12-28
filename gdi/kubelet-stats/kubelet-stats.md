@@ -2,7 +2,7 @@
 
 # Kubernetes network stats
 
-<meta name="description" content="Documentation on the kubelet-stats monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the kubelet-stats / kubernetes network stats monitor. See benefits, install, configuration, and metrics">
 
 <style>
   a {text-decoration: none;}

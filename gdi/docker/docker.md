@@ -2,7 +2,7 @@
 
 # Docker Containers
 
-<meta name="description" content="Documentation on the docker monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Docker monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

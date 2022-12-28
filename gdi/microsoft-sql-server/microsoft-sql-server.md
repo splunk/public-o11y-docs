@@ -2,7 +2,7 @@
 
 # Microsoft SQL Server
 
-<meta name="description" content="Documentation on the sqlserver monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Microsoft SQL / MSQL monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

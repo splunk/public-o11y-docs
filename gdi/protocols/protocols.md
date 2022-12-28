@@ -2,7 +2,7 @@
 
 # Network protocols
 
-<meta name="description" content="Documentation on the protocols monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the protocols monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description

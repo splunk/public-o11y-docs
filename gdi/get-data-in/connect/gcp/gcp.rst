@@ -5,7 +5,7 @@ Connect to Google Cloud Platform
 ********************************************************
 
 .. meta::
-   :description: Connect your GCP account to Splunk Observability Cloud.
+   :description: Connect your Google Cloud Platform / GCP account to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:

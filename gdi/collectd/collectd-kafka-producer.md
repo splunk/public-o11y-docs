@@ -1,7 +1,7 @@
 (collectd-kafka-producer)=
 
 # Collectd Kafka producer
-<meta name="Description" content="Documentation on the collectd/kafka_producer integration for Splunk Observability Cloud.">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd Java-based Kafka producer monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

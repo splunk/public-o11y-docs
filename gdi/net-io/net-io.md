@@ -2,7 +2,7 @@
 
 # Network interface I/O
 
-<meta name="description" content="Documentation on the net-io monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the net-io monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description

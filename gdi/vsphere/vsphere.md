@@ -1,7 +1,7 @@
 (vsphere)=
 
 # VMware vSphere
-<meta name="description" content="Documentation on the vsphere monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the vSphere monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

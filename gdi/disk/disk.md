@@ -2,7 +2,7 @@
 
 # Disk and partition
 
-<meta name="description" content="Documentation on the disk monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the disks monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description

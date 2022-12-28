@@ -5,7 +5,7 @@ Deployments
 ****************************
 
 .. meta::
-      :description: Options for deploying the Collector.
+      :description: Options for deploying the Splunk Observability Cloud OpenTelemetry Collector: ECS/EC2, Fargate, Ansible, Chef, Nomad, Puppet, Salt.
 
 .. toctree::
     :maxdepth: 4

@@ -2,7 +2,7 @@
 
 # GitLab Sidekiq 
 
-<meta name="Description" content="Documentation on gitlab-sidekiq receiver">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the GitLab Sidekiq monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

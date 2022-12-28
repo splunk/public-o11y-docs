@@ -1,7 +1,7 @@
 (zookeeper)=
 
 # Apache Zookeeper
-<meta name="description" content="Documentation on the zookeeper monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Apache Zookeeper monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -2,7 +2,7 @@
 
 # Nagios
 
-<meta name="Description" content="Documentation on nagios monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the nagios monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

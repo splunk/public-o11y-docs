@@ -1,7 +1,7 @@
 (sql)=
 
 # SQL
-<meta name="description" content="Documentation on the SQL monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the SQL monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

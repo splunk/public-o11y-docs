@@ -1,6 +1,6 @@
 (mysql)=
 # MySQL
-<meta name="description" content="Documentation on the MySQL monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the MySQL monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

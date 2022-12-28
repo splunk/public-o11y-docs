@@ -4,6 +4,9 @@
 Configure application receivers for languages
 ********************************************************************************
 
+.. meta::
+   :description: Landing for application receivers for language applications in Splunk Observability Cloud.
+
 .. toctree::
    :maxdepth: 4
    :hidden:

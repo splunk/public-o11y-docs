@@ -1,7 +1,7 @@
 (traefik)=
 
 # Traefik
-<meta name="description" content="Documentation on the traefik monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Traefik monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

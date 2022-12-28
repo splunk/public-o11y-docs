@@ -2,7 +2,7 @@
 
 # Kubernetes cluster
 
-<meta name="description" content="Documentation on the kubernetes-cluster monitor type">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Kubernetes cluster monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
