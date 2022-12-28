@@ -2,7 +2,7 @@
 
 # MongoDB Atlas
 
-<meta name="Description" content="Documentation on the MongoDB Atlas receiver">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the MongoDB Atlas receiver. See benefits, install, configuration, and metrics">
 
 ## Description
 

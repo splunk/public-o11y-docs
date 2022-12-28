@@ -1,7 +1,7 @@
 (supervisor)=
 
 # Supervisor
-<meta name="description" content="Documentation on the supervisor monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Supervisor monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

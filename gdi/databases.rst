@@ -4,6 +4,9 @@
 Configure application receivers for databases
 ********************************************************************************
 
+.. meta::
+   :description: Landing for application receivers for database applications in Splunk Observability Cloud.
+
 .. toctree::
    :maxdepth: 4
    :hidden:

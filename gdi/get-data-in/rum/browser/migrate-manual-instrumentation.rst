@@ -6,7 +6,7 @@ Migrate existing manual instrumentation
 *******************************************************************************
 
 .. meta::
-   :description: You can migrate manual instrumentation that you added for another vendor to send telemetry data to Splunk RUM. To migrate the instrumentation, you must edit the instrumentation code to use OpenTelemetry conventions.
+   :description: You can migrate manual instrumentation that you added for another vendor to send telemetry data to Splunk Observability Cloud real user monitoring / RUM. To migrate the instrumentation, you must edit the instrumentation code to use OpenTelemetry conventions.
 
 You can migrate manual instrumentation that you added for another vendor to send telemetry data to Splunk RUM. To migrate the instrumentation, you must edit the instrumentation code to use OpenTelemetry conventions.
 

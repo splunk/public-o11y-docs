@@ -5,7 +5,7 @@ Errors collected by the Browser RUM agent
 ********************************************************
 
 .. meta::
-   :description: Understand which errors are collected by the Browser RUM agent for Splunk Real User Monitoring (RUM).
+   :description: Understand which errors are collected by the Browser RUM agent for Splunk Observability Cloud real user monitoring / RUM.
 
 The Browser RUM agent collects errors as spans with a duration of zero. Error spans carry a timestamp based on the time when the error occurred.
 

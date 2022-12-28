@@ -2,7 +2,7 @@
 
 # Microsoft Windows IIS
 
-<meta name="description" content="Documentation on the windows-iis monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Windows IIS monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description

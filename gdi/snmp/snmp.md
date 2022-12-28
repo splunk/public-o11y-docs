@@ -1,7 +1,7 @@
 (snmp)=
 
 # SNMP agent
-<meta name="description" content="Documentation on the snmp monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the SNMP agent monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

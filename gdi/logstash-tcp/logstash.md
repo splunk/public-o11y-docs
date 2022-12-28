@@ -1,7 +1,7 @@
 (logstash-tcp)=
 
 # Logstash TCP
-<meta name="Description" content="Documentation on the Logstash TCP integration for Splunk Observability Cloud.">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Logstash TCP monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

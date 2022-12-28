@@ -1,6 +1,6 @@
 (hadoop)=
 # Hadoop
-<meta name="description" content="Documentation on the hadoop monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the hadoop monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

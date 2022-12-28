@@ -5,7 +5,7 @@ Collect logs from your AWS services
 ****************************************
 
 .. meta::
-  :description: Collect logs from your AWS services.
+  :description: Collect logs from your AWS services in Splunk Observability Cloud.
 
 When setting up an AWS connection, you can choose to import logs from a Cloudwatch log group or an S3 bucket. 
 

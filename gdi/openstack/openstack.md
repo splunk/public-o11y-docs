@@ -1,7 +1,7 @@
 (openstack)=
 
 # OpenStack
-<meta name="description" content="Documentation on the openstack monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the OpenStack monitor, based on the Python plugin. See benefits, install, configuration, and metrics">
 
 ## Description
 

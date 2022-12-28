@@ -5,7 +5,7 @@ Migrate from SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Co
 ***********************************************************************************************
 
 .. meta::
-   :description: Describes the process of migrating from the Smart Agent to the Splunk Distribution of OpenTelemetry Collector.
+   :description: Describes the process of migrating from the SignalFX Smart Agent to the Splunk Distribution of OpenTelemetry Collector.
 
 .. note::
    Using this content assumes that you are running the SignalFx SmartAgent in the Kubernetes, Linux, or Windows environments and want to migrate to the Splunk Distribution of OpenTelemetry Collector to collect telemetry data.

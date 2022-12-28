@@ -2,7 +2,7 @@
 
 # Free disk space
 
-<meta name="description" content="Documentation on the filesystems monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integrationfor the file systems / filesystems monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
