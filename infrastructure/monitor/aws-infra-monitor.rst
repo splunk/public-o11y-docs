@@ -131,9 +131,9 @@ By default, Observability Cloud imports metrics from all built-in AWS namespaces
 
 To limit the amount of AWS data to import, reduce the number of namespaces to pull data from. For each namespace, you can then filter the data based on AWS tags, metric names, or both.
 
-   * Specify a subset of :strong:`built-in namespaces` to import data from. On the UI, go to :guilabel:`Select namespaces`, then choose the specific namespaces you want to work with. 
+   * Specify a subset of :strong:`built-in namespaces` to import data from. On the UI, go to :guilabel:`Select built-in services to collect data from`, then choose the specific namespaces you want to work with. You can specify multiple built-in services.
    
-   * Specify the :strong:`custom namespaces` from which you want data. On the UI, go to :guilabel:`Add custom namespaces`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces. Note that data from built-in namespaces is imported as well.
+   * Specify the :strong:`custom namespaces` from which you want data. On the UI, go to :guilabel:`Select custom services to collect data from`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces. Note that data from built-in services is imported as well.
 
   * To discard data from built-in namespaces and :strong:`only import metrics from custom namespaces`, use the field ``syncCustomNamespacesOnly`` via the API. See how to do this in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration/>`.  
 
