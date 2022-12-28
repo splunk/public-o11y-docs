@@ -2,7 +2,7 @@
 
 # Collectd plugin
 
-<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Collectd custom plugin. See benefits, install, configuration, and metrics">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd custom plugin monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -1,7 +1,7 @@
 (collectd-uptime)=
 
 # Collectd uptime
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor Collectd Uptime. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd Uptime monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

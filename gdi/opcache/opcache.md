@@ -1,7 +1,7 @@
 (opcache)=
 
 # OPcache
-<meta name="description" content="Documentation on the collectd/opcache monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd OPcache monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -3,7 +3,7 @@
 
 # etcd server
 
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor etcd. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the etcd monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description

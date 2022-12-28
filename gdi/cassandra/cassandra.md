@@ -1,7 +1,7 @@
 (cassandra)=
 
 # Cassandra
-<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Cassandra. See benefits, install, configuration, and metrics">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Cassandra monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

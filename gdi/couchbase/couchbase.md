@@ -2,7 +2,7 @@
 
 # Couchbase server
 
-<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Couchbase. See benefits, install, configuration, and metrics">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Couchbase monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -1,6 +1,6 @@
 (mongodb)=
 # MongoDB
-<meta name="description" content="Documentation on the mongodb monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the MongoDB monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

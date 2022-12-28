@@ -2,7 +2,7 @@
 
 # cgroups
 
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor cgroups. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the cgroups monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -2,7 +2,7 @@
 
 # cAdvisor
 
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor cAdvisor. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the cAdvisor monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

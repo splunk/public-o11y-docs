@@ -2,7 +2,7 @@
 
 # Microsoft .NET
 
-<meta name="description" content="Use this Splunk Observability Cloud integration to monitor .Net (dotnet) apps. See benefits, install, configuration, and metrics">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the .Net (dotnet) apps monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

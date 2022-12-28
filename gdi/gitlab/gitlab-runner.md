@@ -2,7 +2,7 @@
 
 # GitLab Runner
 
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor GitLab Runner. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the GitLab Runner monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

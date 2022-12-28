@@ -1,6 +1,6 @@
 (memcached)=
 # Memcached
-<meta name="description" content="Documentation on the memcached monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Memcached monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

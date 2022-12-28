@@ -2,7 +2,7 @@
 
 # Conviva Real-Time/Live video play
 
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor Conviva. See benefits, install, configuration, and metrics, including MetricLens">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Conviva monitor. See benefits, install, configuration, and metrics, including MetricLens">
 
 ## Description
 

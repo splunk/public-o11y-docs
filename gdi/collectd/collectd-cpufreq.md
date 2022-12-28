@@ -2,7 +2,7 @@
 (collectd-cpufreq)=
 
 # Collectd CPUFreq
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor Collectd cpufreq. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd cpufreq monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -1,7 +1,7 @@
 (kubernetes-events)=
 
 # Kubernetes events
-<meta name="Description" content="Documentation on kubernetes-events monitor type">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Kubernetes events monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

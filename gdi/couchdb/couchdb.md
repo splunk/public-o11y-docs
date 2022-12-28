@@ -2,7 +2,7 @@
 
 # CouchDB
 
-<meta name="description" content="Use this Splunk Observability Cloud integration to monitor Couchdb. See benefits, install, configuration, and metrics">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Couchdb monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

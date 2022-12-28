@@ -5,7 +5,7 @@ Databricks Receiver
 ****************************************************************
 
 .. meta::
-  :description: Use this Splunk Observability Cloud integration to monitor Databricks clusters. See benefits, install, configuration, and metrics 
+  :description: Use this Splunk Observability Cloud integration for the Databricks clusters monitor. See benefits, install, configuration, and metrics 
 
 Use this integration to view and monitor the health of your Databricks clusters. 
 

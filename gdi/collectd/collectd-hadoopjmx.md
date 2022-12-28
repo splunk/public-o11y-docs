@@ -1,7 +1,7 @@
 (collectd-hadoopjmx)=
 
 # Collectd Hadoop JMX
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor Collectd Hadoop. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd Hadoop monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -2,7 +2,7 @@
 
 # Elasticsearch query
 
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor ElasticSearch Query. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the ElasticSearch Query monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

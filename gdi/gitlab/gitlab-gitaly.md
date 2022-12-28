@@ -2,7 +2,7 @@
 
 # Gitaly and Gitaly Cluster
 
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor GitLab Gitaly. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the GitLab Gitaly monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

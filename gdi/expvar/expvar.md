@@ -1,7 +1,7 @@
 (expvar)=
 
 # Expvar (Go)
-<meta name="Description" content="Use this Splunk Observability Cloud integration to monitor Golang Expvar. See benefits, install, configuration, and metrics">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Golang Expvar monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description
