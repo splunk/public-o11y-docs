@@ -1,7 +1,7 @@
 (redis)=
 
 # Redis
-<meta name="description" content="Documentation on the redis monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Redis monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
