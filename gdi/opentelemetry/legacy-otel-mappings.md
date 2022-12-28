@@ -2,7 +2,7 @@
 
 # Metrics and metrics metadata
 
-<meta name="Description" content="Documentation on the legacy and OTel mappings">
+<meta name="Description" content="Documentation on the legacy SignalFX Smart Agent and OpenTelementry Collector mappings in Splunk Observability Cloud">
 
 This topic is for users that are migrating from using the SignalFx Smart Agent to using the Splunk Distribution of OpenTelemetry Collector. In addition to providing a table for OpenTelemetry values and their legacy equivalents, this topic describes how to use the Mapping Service.
 
