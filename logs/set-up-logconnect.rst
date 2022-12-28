@@ -34,7 +34,7 @@ To set up Log Observer Connect for Splunk Enterprise, follow these steps:
 
    c. Create and configure a new user in your Splunk Enterprise instance.
 
-   d. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. 
+   d. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance.
 
 4. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 

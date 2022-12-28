@@ -78,7 +78,7 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
      - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``.
 
-The Splunk Distribution of OpenTelemetry Python uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent, or if you want to send traces directly to the Observability Cloud ingest endpoint, use the Jaeger exporter.
+The Splunk Distribution of OpenTelemetry Python uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent (now deprecated), or if you want to send traces directly to the Observability Cloud ingest endpoint, use the Jaeger exporter.
 
 .. _trace-propagation-configuration-python:
 
