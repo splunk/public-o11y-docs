@@ -129,15 +129,15 @@ Specify and limit the data and metadata to import
 
 The AWS integration imports metrics from a list of supported AWS services in all built-in AWS namespaces. To limit the amount of AWS data that the integration imports, specify a subset of built-in namespaces from which you need data. For each namespace, you can then filter the data based on AWS tags or metric names or both.
 
-You can also limit the amount of AWS data that the integration imports by changing the rate at which Infrastructure Monitoring polls AWS CloudWatch.
-
 .. note:: You must be an administrator of your AWS account to specify namespaces and set filters.
 
-* To select the built-in namespaces for which you want data, click :guilabel:`Select namespaces`, then choose the namespaces.
+* To select the :strong:`built-in namespaces` for which you want data, click :guilabel:`Select namespaces`, then choose the namespaces. Data from standard namespaces is imported as well.
 
-* Infrastructure Monitoring also lets you import data from custom namespaces. To specify a custom namespace from which you want data, click :guilabel:`Add custom namespaces`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces.
+* To specify a :strong:`custom namespace` from which you want data, click :guilabel:`Add custom namespaces`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces. Data from standard namespaces is imported as well.
 
-* ?????
+* To discard data from standard namespaces and :strong:`only import metrics from custom namespaces`, use the field ``syncCustomNamespacesOnly`` via the API. See how in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration/>`.  
+
+You can also limit the amount of AWS data that the integration imports by changing the rate at which Infrastructure Monitoring polls AWS CloudWatch.
 
 Specifying filters for AWS data you want to import doesn't affect tag syncing.
 
