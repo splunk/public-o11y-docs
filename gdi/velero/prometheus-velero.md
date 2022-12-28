@@ -1,7 +1,7 @@
 (prometheus-velero)=
 
 # Prometheus Velero
-<meta name="description" content="Documentation on the prometheus/velero monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Prometehus Velero monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
