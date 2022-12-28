@@ -2,7 +2,7 @@
 (haproxy)=
 
 # HAProxy
-<meta name="Description" content="Documentation on haproxy monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the HAProxy monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

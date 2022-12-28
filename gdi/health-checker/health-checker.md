@@ -2,7 +2,7 @@
 
 # Health Checker
 
-<meta name="description" content="Documentation for the health-checker monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Health Checker monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

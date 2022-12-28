@@ -2,7 +2,7 @@
 
 # Consul datastore
 
-<meta name="description" content="Documentation for the consul monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Consul datastore monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

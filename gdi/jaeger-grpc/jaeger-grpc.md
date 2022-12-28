@@ -2,7 +2,7 @@
 
 # Jaeger gRPC
 
-<meta name="Description" content="Documentation on the Jaeger gRPC monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Jaeger gRCP monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

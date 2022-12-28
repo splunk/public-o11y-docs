@@ -2,7 +2,7 @@
 
 # Logparser
 
-<meta name="description" content="Documentation on the telegraf/logparser monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the telegraf/logparser plugin monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

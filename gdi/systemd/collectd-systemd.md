@@ -1,7 +1,7 @@
 (collectd-systemd)=
 
 # systemd
-<meta name="description" content="Documentation on the collectd/systemd monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd Systemd monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

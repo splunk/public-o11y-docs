@@ -5,7 +5,7 @@ Components
 ******************************************
 
 .. meta::
-    :description: Learn about the components that make up the OpenTelemetry Collector.
+    :description: Learn about the components that make up the Splunk Observability Cloud OpenTelemetry Collector.
 
 .. toctree::
     :maxdepth: 4

@@ -1,7 +1,7 @@
 (telegraf-ntpq)=
 
 # Telegraf NTPQ
-<meta name="description" content="Documentation on the telegraf/ntpq monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Telegraf NTPQ monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

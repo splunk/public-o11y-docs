@@ -2,7 +2,7 @@
 
 # Kubernetes Cluster Receiver
 
-<meta name="description" content="Documentation on the kubernetes-cluster receiver">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Kubernetes Cluster / k8s-cluster receiver. See benefits, install, configuration, and metrics">
 
 ## Description
 

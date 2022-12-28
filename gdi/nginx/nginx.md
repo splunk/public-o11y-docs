@@ -1,6 +1,6 @@
 (nginx)=
 # NGINX
-<meta name="description" content="Documentation on the NGINX monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the NGINX monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

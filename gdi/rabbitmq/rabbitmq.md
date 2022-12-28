@@ -1,7 +1,7 @@
 (rabbitmq)=
 
 # RabbitMQ
-<meta name="description" content="Documentation on the rabbitmq monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the RabbitMQ monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

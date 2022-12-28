@@ -5,7 +5,7 @@ Instrument functions using the SignalFx Lambda wrappers
 *******************************************************
 
 .. meta::
-   :description: Follow these instructions to instrument your AWS Lambda functions using the SignalFx Lambda wrappers. Note that the SignalFx Lambda wrappers are being deprecated.
+   :description: Follow these instructions to instrument your AWS Lambda functions using the SignalFx Lambda wrappers in Splunk Observability Cloud. Note that the SignalFx Lambda wrappers are being deprecated.
 
 .. _wrapper-ingest:
 

@@ -2,7 +2,7 @@
 
 # Prometheus Exporter
 
-<meta name="description" content="Documentation on the prometheus-exporter">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Prometheus exporter monitor. See benefits, install, configuration, and metrics">
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-exporter` monitor type by using the SignalFx Smart Agent Receiver.
 

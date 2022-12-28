@@ -1,7 +1,7 @@
 (procstat)=
 
 # procstat
-<meta name="description" content="Documentation on the procstat monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the procstat monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

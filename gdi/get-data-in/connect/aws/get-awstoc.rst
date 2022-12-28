@@ -5,7 +5,7 @@ Connect to AWS and send data to Splunk Observability Cloud
 ************************************************************
 
 .. meta::
-  :description: Connection planning information and links to the different ways to connect AWS to Splunk Observability Cloud
+  :description: Connection planning information and links to the different ways to connect AWS to Splunk Observability Cloud.
 
 .. toctree::
   :hidden:

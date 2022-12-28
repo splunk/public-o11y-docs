@@ -4,6 +4,9 @@
 Configure application receivers for orchestration
 ********************************************************************************
 
+.. meta::
+   :description: Landing for application receivers for orchestration applications in Splunk Observability Cloud.
+
 .. toctree::
    :maxdepth: 4
    :hidden:
