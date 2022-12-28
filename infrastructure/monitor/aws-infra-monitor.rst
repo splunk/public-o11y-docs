@@ -137,6 +137,8 @@ You can also limit the amount of AWS data that the integration imports by changi
 
 * Infrastructure Monitoring also lets you import data from custom namespaces. To specify a custom namespace from which you want data, click :guilabel:`Add custom namespaces`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces.
 
+* ?????
+
 Specifying filters for AWS data you want to import doesn't affect tag syncing.
 
 Example: Specify namespaces and filters
