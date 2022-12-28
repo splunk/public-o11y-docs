@@ -4,6 +4,9 @@
 Configure application receivers for cloud platforms
 ********************************************************************************
 
+.. meta::
+   :description: Landing for application receivers for cloud platforms in Splunk Observability Cloud.
+
 .. toctree::
    :maxdepth: 4
 
