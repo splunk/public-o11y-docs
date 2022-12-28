@@ -127,19 +127,21 @@ Infrastructure Monitoring also imports metrics, metadata, and logs for some of y
 Specify and limit the data and metadata to import
 =============================================================================
 
-The AWS integration imports metrics from a list of supported AWS services in all built-in AWS namespaces. To limit the amount of AWS data that the integration imports, specify a subset of built-in namespaces from which you need data. For each namespace, you can then filter the data based on AWS tags or metric names or both.
+By default, Observability Cloud imports metrics from all built-in AWS namespaces (corresponding to these :ref:`AWS services <aws-integrations>`), and optionally from custom namespaces. 
 
-.. note:: You must be an administrator of your AWS account to specify namespaces and set filters.
+To limit the amount of AWS data to import, reduce the number of namespaces to pull data from. For each namespace, you can then filter the data based on AWS tags, metric names, or both.
 
-* To select the :strong:`built-in namespaces` for which you want data, click :guilabel:`Select namespaces`, then choose the namespaces. Data from standard namespaces is imported as well.
+   * Specify a subset of :strong:`built-in namespaces` to import data from. On the UI, go to :guilabel:`Select namespaces`, then choose the specific namespaces you want to work with. 
+   
+   * Specify the :strong:`custom namespaces` from which you want data. On the UI, go to :guilabel:`Add custom namespaces`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces. Note that data from built-in namespaces is imported as well.
 
-* To specify a :strong:`custom namespace` from which you want data, click :guilabel:`Add custom namespaces`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces. Data from standard namespaces is imported as well.
-
-* To discard data from standard namespaces and :strong:`only import metrics from custom namespaces`, use the field ``syncCustomNamespacesOnly`` via the API. See how in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration/>`.  
+  * To discard data from built-in namespaces and :strong:`only import metrics from custom namespaces`, use the field ``syncCustomNamespacesOnly`` via the API. See how to do this in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration/>`.  
 
 You can also limit the amount of AWS data that the integration imports by changing the rate at which Infrastructure Monitoring polls AWS CloudWatch.
 
 Specifying filters for AWS data you want to import doesn't affect tag syncing.
+
+.. note:: You must be an administrator of your AWS account to specify namespaces and set filters.
 
 Example: Specify namespaces and filters
 --------------------------------------------------------------------------------
