@@ -129,7 +129,7 @@ Specify and limit the data and metadata to import
 
 By default, Observability Cloud imports metrics from all built-in AWS namespaces (corresponding to these :ref:`AWS services <aws-integrations>`), and optionally from custom namespaces. 
 
-To limit the amount of AWS data to import, reduce the number of namespaces to pull data from. For each namespace, you can then filter the data based on AWS tags, metric names, or both.
+To limit the amount of AWS data to import, reduce the number of namespaces to pull data from. 
 
    * Specify a subset of :strong:`built-in namespaces` to import data from. On the UI, go to :guilabel:`Select built-in services to collect data from`, then choose the specific namespaces you want to work with. You can specify multiple built-in services.
    
@@ -139,7 +139,11 @@ To limit the amount of AWS data to import, reduce the number of namespaces to pu
 
 You can also limit the amount of AWS data that the integration imports by changing the rate at which Infrastructure Monitoring polls AWS CloudWatch.
 
-Specifying filters for AWS data you want to import doesn't affect tag syncing.
+Next, you can specify filters to limit the data you want to import:
+
+   * For built-in services for which we sync metadata, you can filter the data based on AWS tags, metric names, or both. Filters don't affect tag syncing.  
+
+   * For services without metadata (including custom namespaces), you can only filter by metric names.
 
 .. note:: You must be an administrator of your AWS account to specify namespaces and set filters.
 
