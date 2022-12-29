@@ -141,7 +141,7 @@ You can also limit the amount of AWS data that the integration imports by changi
 
 Next, you can specify filters to limit the data you want to import:
 
-   * For built-in services for which we sync metadata, you can filter the data based on AWS tags, metric names, or both. Filters don't affect tag syncing.  
+   * For :ref:`built-in services <aws-integrations>` for which we sync metadata, you can filter the data based on AWS tags, metric names, or both. Filters don't affect tag syncing.  
 
    * For services without metadata (including custom namespaces), you can only filter by metric names.
 
