@@ -1026,7 +1026,7 @@ The following Azure services send metrics to Infrastructure Monitoring:
     - microsoft.network/virtualnetworkgateways
 
 
-Platforms
+Infrastructure
 ----------------------------------
 
 Install the Splunk Distribution of OpenTelemetry Collector on your infrastructure to start sending data to Splunk Observability Cloud.

@@ -10,18 +10,18 @@ Send alert notifications to third-party services using Splunk Observability Clou
 .. toctree::
    :hidden:
 
-   Send alert notifications to Amazon EventBridge<amazoneventbridge>
-   Send alert notifications to BigPanda<bigpanda>
-   Send alert notifications to Jira<jira>
-   Send alert notifications to Microsoft Teams<microsoftteams>
-   Send alert notifications to Opsgenie<opsgenie>
-   Send alert notifications to PagerDuty<pagerduty>
-   Send alert notifications to ServiceNow<servicenow>
-   Send alert notifications to Slack<slack>
-   Send alert notifications to Splunk On-Call<splunkoncall>
-   Send alert notifications to xMatters<xmatters>
-   Send alert notifications to a webhook<webhook>
-
+   Send alerts to Amazon EventBridge<amazoneventbridge>
+   Send alerts to BigPanda<bigpanda>
+   Send alerts to Jira<jira>
+   Send alerts to Microsoft Teams<microsoftteams>
+   Send alerts to Opsgenie<opsgenie>
+   Send alerts to PagerDuty<pagerduty>
+   Send alerts to ServiceNow<servicenow>
+   Send alerts to Slack<slack>
+   Send alerts to Splunk On-Call<splunkoncall>
+   Send alerts to Webhook<webhook>
+   Send alerts to xMatters<xmatters>
+   
 ..
   link to :ref:`sending alert notifications<manage-notifications>` instead once doc is migrated
 
@@ -61,6 +61,9 @@ In addition to sending alert notifications by email (see :ref:`manage-notificati
 
    * - Splunk On-Call (VictorOps)
      - See :ref:`splunkoncall`.
+
+   * - Webhook
+     - See :ref:`webhook`.
 
    * - xMatters
      - See :ref:`xmatters`.
