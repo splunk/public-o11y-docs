@@ -8,7 +8,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 ## Description
 
-The Prometheus Exporter monitor reads metrics of all metric types from a [Prometheus exporter](https://prometheus.io/docs/instrumenting/exporters/) endpoint. For a description of the Prometheus metric types, see [Metric Types](https://prometheus.io/docs/concepts/metric_types/).
+The Prometheus Exporter monitor reads metrics of all metric types from a [Prometheus exporter](https://prometheus.io/docs/instrumenting/exporters/) endpoint. A Prometheus Exporter is a piece of software that fetches statistics from another, non-Prometheus system, and turns them into Prometheus metrics. For a description of the Prometheus metric types, see [Metric Types](https://prometheus.io/docs/concepts/metric_types/).
 
 This monitor is available on Kubernetes, Linux, and Windows.
 
