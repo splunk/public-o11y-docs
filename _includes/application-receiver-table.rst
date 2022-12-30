@@ -448,11 +448,6 @@
      -
      -
 
-   * - :ref:`NTPQ <telegraf-ntpq>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`OPcache <opcache>`
      - :strong:`X`
      -
@@ -564,6 +559,11 @@
      -
 
    * - :ref:`systemd <collectd-systemd>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Telegraf NTPQ <telegraf-ntpq>`
      - :strong:`X`
      -
      -
