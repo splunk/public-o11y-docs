@@ -46,6 +46,7 @@ These application receivers gather metrics from their associated database-relate
 * :ref:`logstash`
 * :ref:`microsoft-sql-server`
 * :ref:`mongodb`
+* :ref:`mongodb-atlas`
 * :ref:`mongodb-atlas-receiver`
 * :ref:`mysql`
 * :ref:`oracledb`
