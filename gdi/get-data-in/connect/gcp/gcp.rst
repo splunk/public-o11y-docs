@@ -129,7 +129,7 @@ To configure your GCP service, follow these steps:
 
 To monitor multiple GCP projects with the integration, repeat these steps for each one of them. 
 
-Note that you can configure GCP so that metrics from a scoping project and its monitored project are available in both projects. See more about GCP settings in :new-page:`<https://cloud.google.com/monitoring/settings>`. Observability Cloud supports shared metrics for projects related two levels only. 
+Note that you can configure GCP so that metrics from a scoping project and its monitored project are available in both projects. See more about GCP settings in :new-page:`Overview of viewing metrics for multiple projects <https://cloud.google.com/monitoring/settings>`. Observability Cloud supports shared metrics for projects related two levels only. 
 
 .. _gcp-three:
 
