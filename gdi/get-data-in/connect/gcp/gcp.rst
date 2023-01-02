@@ -127,7 +127,7 @@ To configure your GCP service, follow these steps:
       <h3>Configure multiple GCP projects<a name="gcp-projects" class="headerlink" href="#gcp-projects" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-To monitor multiple GCP projects with the integration, you have two options: 
+To monitor multiple GCP projects with the integration you have two options: 
 
 * Repeat the steps described in this section for each one of the projects. 
 
