@@ -13,9 +13,9 @@ Connect to Google Cloud Platform
    gcp-metrics
    gcp-logs
 
-With a Google Cloud Platform (GCP) integration in Splunk Infrastructure Monitoring, you can track your Google Cloud Monitoring (formerly Google Stackdriver) metrics and monitor your GCP services in one place using the navigator in Stackdriver-powered mode and built-in dashboards.  
+With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place using the navigator in Stackdriver-powered mode and built-in dashboards. For the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`. 
 
-To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. To see the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`.
+To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 
 .. raw:: html
 
@@ -34,7 +34,7 @@ You must be an administrator of your Splunk Observability Cloud organization to 
 .. raw:: html
 
    <embed>
-      <h2>Select a role for the GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h2>
+      <h2>Select a role for your GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 * If you want to use the :strong:`Project Viewer` role, skip to :ref:`Configure GCP <gcp-two>`. Choosing this role ensures that any functionality update implemented in Infrastructure Monitoring doesn't require changes to your GCP setup.
@@ -118,7 +118,18 @@ To configure your GCP service, follow these steps:
 #. (Optional) Select a role to grant this Service account access to the selected project, then select :guilabel:`CONTINUE`.
 #. Enable Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer.
 #. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and enable the Cloud Resource Manager API. You need to enable this API so Splunk Infrastructure Monitoring can use it to validate permissions on the service account keys.
-#. Repeat the following steps for each project you want to monitor with the GCP integration.
+
+.. _gcp-projects:
+
+.. raw:: html
+
+   <embed>
+      <h3>Configure multiple GCP projects<a name="gcp-projects" class="headerlink" href="#gcp-projects" title="Permalink to this headline">¶</a></h3>
+   </embed>
+
+To monitor multiple GCP projects with the integration, repeat these steps for each one of them. 
+
+Note that you can configure GCP so that metrics from a scoping project and its monitored project are available in both projects. See more about GCP settings in :new-page:`<https://cloud.google.com/monitoring/settings>`. Observability Cloud supports shared metrics for projects related two levels only. 
 
 .. _gcp-three:
 
@@ -173,7 +184,7 @@ Your GCP integration is now complete.
       <h2>Integrate GCP using the API <a name="gcp-api" class="headerlink" href="#gcp-api" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-You can also integrate GCP with Splunk Observability Cloud using the GCP API. See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` for details.
+You can also integrate GCP with Splunk Observability Cloud using the GCP API. See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` in our developer portal for details.
 
 
 
