@@ -1,34 +1,39 @@
 .. _practice-reliability-incident-response:
 
 ***********************************************************************************
-Respond to incidents and write postmortems 
+Respond to incidents
 ***********************************************************************************
 
 .. meta::
    :description: This page provides an overview of the many ways you can drill down to root cause problems and decrease MTTR using the components of Observability Cloud.
 
-Splunk Observability Cloud provides several tools for drilling down to find the root cause of incidents. In the followoing sections, see how each component of Observability Cloud is an effective incident response tool, as well as a boost for writing postmortems. Then find out how you can prepare for and prevent future incidents in :ref:`practice-reliability-toil-reduction`.
+Splunk Observability Cloud provides several tools for drilling down to find the root cause of incidents. In the following sections, see how each component of Observability Cloud is an effective incident response tool.
 
 Alerts and detectors
 ===================================================================================
-Observability Cloud uses alerts, detectors, events, and notifications to inform you when certain criteria are met. Alerts and detectors are often your first awareness that an incident has occurred. Observavility Cloud has AutoDetect, or built-in alerts and detectors for supported integrations. Additionally, your team can create detectors to alert on performance and threshholds that matter most to you. For example, you can use alerts and detectors to notify your teams when your systems are nearing a limit you set in an SLO, such as approaching a server latency that is too high. For information on alerts, detectors, threshholds, and how they interact, see :ref:`get-started-detectoralert`. 
+Observability Cloud uses alerts, detectors, events, and notifications to inform you when certain criteria are met. Alerts and detectors are often your first awareness that an incident has occurred. Observavility Cloud has :ref:`AutoDetect <autodetect>`, or built-in alerts and detectors for supported integrations. Additionally, your team can create detectors to alert on performance and threshholds that matter most to you. For example, you can use alerts and detectors to notify your teams when your systems are nearing a limit you set in an SLO, such as approaching a server latency that is too high. For information on alerts, detectors, threshholds, and how they interact, see :ref:`get-started-detectoralert`. 
 
-When you proactively use alerts and detectors to stay informed on changes in your systems, you can decrease the number of incidents your users experience by updating your systems when events surpass a threshhold you set. For more on prevention, see :ref:`practice-reliability-toil-reduction`. 
+When you proactively use alerts and detectors to stay informed on changes in your systems, you can decrease the number of incidents your users experience and reduce toil for your teams in the future by updating your systems when events surpass a static or dynamic threshhold that you set.
 
-You can see all alerts, including AutoDetect alerts and custom alerts on the Alerts homepage in Observability Cloud. 
+You can see all alerts, including AutoDetect alerts and custom alerts on the Alerts homepage in Observability Cloud. To go to your organization's Alerts homepage, log in to Splunk Observability Cloud, then select :strong:`Alerts` in the left navigation menu.
 
  .. image:: /_images/get-started/core-2-o11y-alerts.png
    :width: 100%
    :alt: This screenshot shows a sample Alerts homepage in Observability Cloud.
 
-To go to your organization's Alerts homepage, log in to Splunk Observability Cloud, then select :strong:`Alerts` in the left navigation menu.
-
-
 AutoDetect enables Observability Cloud's automatic detectors for supported integrations. You can subscribe to notifications for all integrations once you have connected your systems and sent in data for supported integrations. See :ref:`autodetect` to learn more. See also :ref:`autodetect-list`.
+
+Select any alert to see details and links to Observability Cloud components that you can use to troubleshoot the error. The following critical alert showing a high API error rate. The :strong:`Explore Further` section on the right panel shows a link that takes you to APM where you can troubleshoot the issue.
+
+ .. image:: /_images/get-started/alert-details.png
+   :width: 100%
+   :alt: This screenshot shows the detail view of an individual critical alert in Observability Cloud.
+
+See :ref:`use-cases-alerts-detectors` for examples of how you can use alerts to notify teams about increased server latency, high CPU usage, approaching system limits, and other conditions that negatively impact user experience.
 
 Dashboards
 ===================================================================================
-Observability Cloud components all contribute to the data analytics in Observability Cloud Dashboards. You can see charts and dashboards in APM, Infrastructure Monitoring, and RUM. You can also go to the homepage for all Observability Cloud dashboards to see dashboards and charts created in each component, including Log views, or logs data displayed in a chart. 
+Observability Cloud components all contribute to the data analytics in Observability Cloud Dashboards. You can see charts and dashboards in APM, Infrastructure Monitoring, and RUM. You can also go to the homepage for all Observability Cloud dashboards to see dashboards and charts created in each component, including log views, or logs data displayed in a chart. 
 
 Observability Cloud has :ref:`built-in dashboards <built-in-dashboards>`, custom, and user dashboards and dashboard groups. See :ref:`dashboard-basics` for more information. Dashboards contain important information that can provide useful and actionable insight into your system at a glance. You can create custom, complex dashboards and charts that help you monitor your SLOs, or simple dashboards containing just a few charts that drill down into only the data that you want to see. The following example shows a dashboard for an organization with dozens of built-in dashboards reporting on their many supported integrations. When a user selects a dashboard, they see all charts saved to this dashboard and can quickly drill down on a chart showing interesting trends or unexpected variation.
 

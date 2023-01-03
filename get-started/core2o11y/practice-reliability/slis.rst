@@ -31,7 +31,7 @@ You can monitor your SLIs in Splunk APM. Splunk APM automatically generates a se
   :width: 100%
   :alt: This screenshot shows an APM service map.
 
-You can alert on a service by creating a detector. See :ref:`create-detectors` to learn how. See You can also rely on :ref:`built-in alert conditions <condition-reference>` or `link detectors to charts <linking-detectors>`.
+You can alert on a service by creating a detector. See :ref:`create-detectors` to learn how. You can also rely on :ref:`built-in alert conditions <condition-reference>` or :ref:`link detectors to charts <linking-detectors>`.
 
 
 :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services, as seen in the following sample APM dashboard.
@@ -40,11 +40,13 @@ You can alert on a service by creating a detector. See :ref:`create-detectors` t
     :width: 100%
     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
 
-To see a dashboard for a service, select the service on the service map, then select :strong:`View Dashboard`. See :ref:`dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
+To see a dashboard for a service, select the service on the service map, then select :strong:`View Dashboard`. 
+
+See :ref:`dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
 
 Observability Cloud Alerts and detectors
 ===================================================================================
-Observability Cloud includes out of the box alerts and detectors using AutoDetect. You can also set up custom detectors, as described in the previous section. Custom detectors lets you define your own SLIs and alert on any data that matters to you. 
+Observability Cloud includes out of the box alerts and detectors using :ref:`autodetect`. You can also set up custom detectors, as described in the previous section. Custom detectors let you define your own SLIs and alert on any data that matters most to you. 
 
 
 Splunk Infrastructure Monitoring
