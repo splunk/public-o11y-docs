@@ -1,7 +1,7 @@
 .. _core2o11y-landing:
 
 ***********************************************************************************
-The Splunk platform and Splunk Observability Cloud 
+Splunk Observability Cloud and the Splunk platform
 ***********************************************************************************
 
 .. meta::
@@ -12,7 +12,6 @@ The Splunk platform and Splunk Observability Cloud
 
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
-   Toil reduction <practice-reliability/toil-reduction>
    Scale your system's observability through collaboration <practice-reliability/collaboration>
    Set up Observability Cloud <setup-o11y/setup-o11y>
 

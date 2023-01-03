@@ -7,11 +7,11 @@ Measure and alert on your SLIs
 .. meta::
    :description: SLIs, SLOs, and SLAs in Observability Cloud
 
-Splunk Observability Cloud provides out of the box solutions for monitoring your SLIs. You can also define your own SLIs with custom detectors, and alert on the data most important to your teams.
+Splunk Observability Cloud provides out of the box solutions for monitoring your Service Level Indicators (SLIs). You can also define your own SLIs with custom detectors, and alert on the data most important to your teams.
 
 SLIs, SLOs, and SLAs
 ===================================================================================
-SLIs are important because they help you meet your SLAs with customers. To review, SLIs are Service Level Indicators, the metrics used to measure your system’s availability. SLOs, Service Level Objectives, are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements, SLAs, are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
+SLIs are important because they help you meet your SLAs with customers. To review, SLIs are the metrics used to measure your system’s availability. Service Level Objectives (SLOs) are what you have determined is the appropriate level of availability, as measured by your SLIs. Service Level Agreements (SLAs) are the promise you make to your customers about how much of the time you will meet your SLOs and what you will do if you do not meet them.
 
 :strong:`Example`:
 
@@ -31,7 +31,7 @@ You can monitor your SLIs in Splunk APM. Splunk APM automatically generates a se
   :width: 100%
   :alt: This screenshot shows an APM service map.
 
-You can alert on a service by creating a detector. See :ref:`create-detectors` to learn how. You can also rely on :ref:`built-in alert conditions <condition-reference>` or :ref:`link detectors to charts <linking-detectors>`.
+You can alert on a service by creating a detector. See :ref:`create-detectors` to learn how. You can also rely on :ref:`built-in alert conditions <condition-reference>` and :ref:`link detectors to charts <linking-detectors>`.
 
 
 :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services, as seen in the following sample APM dashboard.
@@ -46,7 +46,7 @@ See :ref:`dashboards` for a list of types of dashboards and how you can create, 
 
 Observability Cloud Alerts and detectors
 ===================================================================================
-Observability Cloud includes out of the box alerts and detectors using :ref:`autodetect`. You can also set up custom detectors, as described in the previous section. Custom detectors let you define your own SLIs and alert on any data that matters most to you. 
+:ref:`autodetect` is a set of out of the box, read-only alerts and detectors that Observability Cloud automatically creates when you configure supported integrations. As described in the previous section, you can also set up custom detectors to define your own SLIs and alert on any data that matters most to you. 
 
 
 Splunk Infrastructure Monitoring
