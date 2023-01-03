@@ -22,19 +22,22 @@ You can use either Splunk Observability Cloud or your AWS CloudWatch console to 
 Explore your AWS inventory and data
 ============================================
 
-Review your AWS inventory in Splunk Observability Cloud.
+Review your AWS inventory in Splunk Observability Cloud 
 
 Locate the metrics that you want to monitor
 ------------------------------------------------------
 
-- Select the :menuselection:`Metric Data` tab and click :guilabel:`Explore Metric Data` to access the Infrastructure Monitoring navigators and explore the collection of technologies used to build, run, and deploy applications in your data ecosystem. See :ref:`use-navigators-imm` for more information.
-- Use the Metric Finder to get a list of categories you can browse, drawn from your integrations or custom categories, if configured. See :ref:`Metric Finder <metrics-finder-and-metadata-catalog>` for details.
-- Use the Metadata Catalog to find metadata associated with the metrics you send to Splunk Infrastructure Monitoring. See :new-page:`Use the Metadata Catalog <https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html#use-the-metadata-catalog>` for details.
+- In the :guilabel:`Data Management` section, select :strong:`AWS` from the :guilabel:`Deployed Integrations` list, then select your AWS integration to access the :guilabel:`Data Summary`. Note that depending on how you retrieve metrics (polling or Metric Streams), the Summary UI is different, and :ref:`org metrics <org-metrics>` also differ. 
+- Use the :guilabel:`Metric Finder` on the left nav menu to get a list of categories you can browse, drawn from your integrations or custom categories, if configured. See :ref:`Metric Finder <metrics-finder-and-metadata-catalog>` for details.
+- Go to :guilabel:`Settings`, then select :guilabel:`Metric Metadata` to acccess the Metadata Catalog. Use it to find metadata associated with the metrics you send to Splunk Infrastructure Monitoring. See :new-page:`Use the Metadata Catalog <https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html#use-the-metadata-catalog>` for details.
+- Use the Infrastructure Monitoring navigators to explore the collection of technologies used to build, run, and deploy applications in your data ecosystem. See :ref:`use-navigators-imm` for more information. 
 
 See your logs 
 ------------------------------------------------------
 
-If you have access to Splunk Log Observer and selected the CloudWatch Logs option during configuration, you can review detailed log information. Select the :menuselection:`Log Events` tab and click :guilabel:`Explore Log Events` to view more details using Splunk Log Observer.
+If you have access to Splunk Log Observer and selected the CloudWatch Logs option during configuration, you can review detailed log information. 
+
+In the :guilabel:`Data Management` section, select :strong:`AWS` from the :guilabel:`Deployed Integrations` list, then select your AWS integration to access the :guilabel:`Data Summary`. Select the :menuselection:`Log Events` tab and click :guilabel:`Explore Log Events` to view more details using Splunk Log Observer.
 
 For more information, see :ref:`Introduction to Splunk Log Observer <get-started-logs>`.
 
