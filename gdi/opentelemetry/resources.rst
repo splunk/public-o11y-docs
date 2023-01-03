@@ -5,7 +5,7 @@ Overview of the Splunk Distribution of OpenTelemetry Collector
 *********************************************************************************
 
 .. meta::
-   :description: Resources for using the Splunk Distribution of OpenTelemetry Collector.
+   :description: Resources for using the Splunk Distribution of OpenTelemetry Collector: Architecture, Components, Monitoring, Security, Troubleshooting.
 
 This page provides a list of resources for using the Splunk Distribution of OpenTelemetry Collector. 
 
@@ -56,7 +56,7 @@ Read our docs on how to :ref:`configure the Collector <otel-configuration>`, inc
 
 .. note::
 
-   SignalFx Smart Agent is deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`. See :ref:`Migrating from the SignalFx Smart Agent <migrate-from-sa-to-otel>` for resources and best practices to start using the Collector, which is the replacement for the Smart Agent.
+   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`. See :ref:`Migrating from the SignalFx Smart Agent <migrate-from-sa-to-otel>` for resources and best practices to start using the Collector, which is the replacement for the Smart Agent.
 
 .. _using-upstream-otel:
 

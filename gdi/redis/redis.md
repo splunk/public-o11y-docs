@@ -1,7 +1,7 @@
 (redis)=
 
 # Redis
-<meta name="description" content="Documentation on the redis monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Redis monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -40,7 +40,7 @@ The monitor supports Redis 2.8 and higher.
 ```
 
 ```{note}
-Provide a Redis monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a Redis monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

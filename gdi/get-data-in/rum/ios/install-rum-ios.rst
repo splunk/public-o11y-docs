@@ -5,7 +5,7 @@ Install the iOS RUM agent for Splunk RUM
 **************************************************************
 
 .. meta::
-   :description: Instrument your iOS applications for Splunk RUM using the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS.
+   :description: Instrument your iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS.
 
 You can instrument your iOS applications for Splunk RUM using the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS.
 
