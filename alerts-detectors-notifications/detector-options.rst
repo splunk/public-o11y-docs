@@ -35,6 +35,9 @@ Because many metric time series (MTS) can be included in a single detector, the 
 
 It is best practice to let the engine determine the time to run the computation, but you can also control the delay manually with :strong:`Min Delay` and :strong:`Max Delay` settings.
 
+
+.. _min-delay-detectors:
+
 Min delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -45,6 +48,8 @@ For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits 
 By default, :strong:`Min Delay` is set to ``0``, which means the analytics engine does not have to wait to run the computation.
 
 You can only configure :strong:`Min Delay` using the API. For more information, see the :new-page:`Detectors API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+
+.. _max-delay-detectors:
 
 Max delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

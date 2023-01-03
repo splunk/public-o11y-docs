@@ -23,5 +23,5 @@ In the following use cases, you learn how Kai, a site reliability engineer, uses
 - :ref:`monitor-autodetect`
 - :ref:`find-detectors`
 - :ref:`troubleshoot-noisy-detectors`
-- :ref:`delay-detectors`
+- :ref:`min-delay-detectors-use-case`
 
