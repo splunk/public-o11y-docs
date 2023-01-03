@@ -5,7 +5,7 @@ Instrument mobile and web applications for Splunk RUM
 ******************************************************************
 
 .. meta::
-   :description: Instrument your mobile or web application to send front-end application data to Splunk RUM.
+   :description: Instrument your mobile or web application to send front-end application data to Splunk Observability Cloud real user monitoring / RUM.
 
 ..	toctree::
    :hidden:

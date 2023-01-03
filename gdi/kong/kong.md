@@ -2,7 +2,7 @@
 
 # Kong Gateway
 
-<meta name="description" content="Documentation for the kong monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Kong monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

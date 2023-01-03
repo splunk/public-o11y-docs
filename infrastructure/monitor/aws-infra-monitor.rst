@@ -127,17 +127,25 @@ Infrastructure Monitoring also imports metrics, metadata, and logs for some of y
 Specify and limit the data and metadata to import
 =============================================================================
 
-The AWS integration imports metrics from a list of supported AWS services in all built-in AWS namespaces. To limit the amount of AWS data that the integration imports, specify a subset of built-in namespaces from which you need data. For each namespace, you can then filter the data based on AWS tags or metric names or both.
+By default, Observability Cloud imports metrics from all built-in AWS namespaces (corresponding to these :ref:`AWS services <aws-integrations>`), and optionally from custom namespaces. 
+
+To limit the amount of AWS data to import, reduce the number of namespaces to pull data from. 
+
+   * Specify a subset of :strong:`built-in namespaces` to import data from. On the UI, go to :guilabel:`Select built-in services to collect data from`, then choose the specific namespaces you want to work with. You can specify multiple built-in services.
+   
+   * Specify the :strong:`custom namespaces` to import data from. On the UI, go to :guilabel:`Select custom services to collect data from`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces. Note that data from built-in services is imported as well.
+
+  * To discard data from built-in namespaces and :strong:`only import metrics from custom namespaces`, use the field ``syncCustomNamespacesOnly`` via the API. See how to do this in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration/>`.  
 
 You can also limit the amount of AWS data that the integration imports by changing the rate at which Infrastructure Monitoring polls AWS CloudWatch.
 
+Next, you can specify filters to limit the data you want to import:
+
+   * For :ref:`built-in services <aws-integrations>` for which we sync metadata, you can filter the data based on AWS tags, metric names, or both. Filters don't affect tag syncing.  
+
+   * For services without metadata (including custom namespaces), you can only filter by metric names.
+
 .. note:: You must be an administrator of your AWS account to specify namespaces and set filters.
-
-* To select the built-in namespaces for which you want data, click :guilabel:`Select namespaces`, then choose the namespaces.
-
-* Infrastructure Monitoring also lets you import data from custom namespaces. To specify a custom namespace from which you want data, click :guilabel:`Add custom namespaces`, type the name of the custom namespace, then press :guilabel:`Enter`. Using this procedure, you can specify multiple custom namespaces.
-
-Specifying filters for AWS data you want to import doesn't affect tag syncing.
 
 Example: Specify namespaces and filters
 --------------------------------------------------------------------------------

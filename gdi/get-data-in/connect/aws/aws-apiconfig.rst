@@ -5,7 +5,7 @@ Connect to AWS using the Splunk Observability Cloud API
 ********************************************************
 
 .. meta::
-  :description: Use cURL requests in the API to connect Splunk Observability Cloud to AWS.
+  :description: Use the API to connect Splunk Observability Cloud to AWS, review permissions, configure the integration, collect logs, or enable CloudWatch Metric Streams.
 
 To connect Splunk Observability Cloud to your AWS account, complete the following steps:
 
@@ -62,11 +62,11 @@ Your system response looks something like this:
 In the system response, note the following:
 
 - Values are displayed for the ``externalId`` and ``id`` fields.
-- The ``importCloudWatch`` value is set to ``false``, because ingest of CloudWatch Metric Streams has not been configured.
+- The ``importCloudWatch`` value is set to ``false`` because CloudWatch Metrics collection has not been configured.
 
 .. _aws-api-create-policy-role:
 
-2. Create an AWS policy and IAM role
+1. Create an AWS policy and IAM role
 ---------------------------------------------------------------------
 
 To create an AWS policy and an AWS IAM (Identity and Access Management) role with a unique Amazon Resource Name (ARN), use a PUT request with the ``externalId`` value generated in the previous step.
@@ -402,97 +402,103 @@ To enable Metric Streams use the following AWS IAM policy. It includes the permi
 .. code-block:: json
 
   {
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Effect": "Allow",
-        "Action": [
-          "apigateway:GET",
-          "autoscaling:DescribeAutoScalingGroups",
-          "cloudfront:GetDistributionConfig",
-          "cloudfront:ListDistributions",
-          "cloudfront:ListTagsForResource",
-          "cloudwatch:DescribeAlarms",
-          "cloudwatch:GetMetricData",
-          "cloudwatch:GetMetricStatistics",
-          "cloudwatch:ListMetrics",
-          "directconnect:DescribeConnections",
-          "dynamodb:DescribeTable",
-          "dynamodb:ListTables",
-          "dynamodb:ListTagsOfResource",
-          "ec2:DescribeInstances",
-          "ec2:DescribeInstanceStatus",
-          "ec2:DescribeNatGateways",
-          "ec2:DescribeRegions",
-          "ec2:DescribeReservedInstances",
-          "ec2:DescribeReservedInstancesModifications",
-          "ec2:DescribeTags",
-          "ec2:DescribeVolumes",
-          "ecs:DescribeClusters",
-          "ecs:DescribeServices",
-          "ecs:DescribeTasks",
-          "ecs:ListClusters",
-          "ecs:ListServices",
-          "ecs:ListTagsForResource",
-          "ecs:ListTaskDefinitions",
-          "ecs:ListTasks",
-          "elasticache:DescribeCacheClusters",
-          "elasticloadbalancing:DescribeLoadBalancerAttributes",
-          "elasticloadbalancing:DescribeLoadBalancers",
-          "elasticloadbalancing:DescribeTags",
-          "elasticloadbalancing:DescribeTargetGroups",
-          "elasticmapreduce:DescribeCluster",
-          "elasticmapreduce:ListClusters",
-          "es:DescribeElasticsearchDomain",
-          "es:ListDomainNames",
-          "kinesis:DescribeStream",
-          "kinesis:ListShards",
-          "kinesis:ListStreams",
-          "kinesis:ListTagsForStream",
-          "lambda:GetAlias",
-          "lambda:ListFunctions",
-          "lambda:ListTags",
-          "logs:DeleteSubscriptionFilter",
-          "logs:DescribeLogGroups",
-          "logs:DescribeSubscriptionFilters",
-          "logs:PutSubscriptionFilter",
-          "organizations:DescribeOrganization",
-          "rds:DescribeDBInstances",
-          "rds:DescribeDBClusters",
-          "rds:ListTagsForResource",
-          "redshift:DescribeClusters",
-          "redshift:DescribeLoggingStatus",
-          "s3:GetBucketLocation",
-          "s3:GetBucketLogging",
-          "s3:GetBucketNotification",
-          "s3:GetBucketTagging",
-          "s3:ListAllMyBuckets",
-          "s3:ListBucket",
-          "s3:PutBucketNotification",
-          "sqs:GetQueueAttributes",
-          "sqs:ListQueues",
-          "sqs:ListQueueTags",
-          "states:ListActivities",
-          "states:ListStateMachines",
-          "tag:GetResources",
-          "workspaces:DescribeWorkspaces",
-          "cloudwatch:ListMetricStreams",
-          "cloudwatch:GetMetricStream",
-          "cloudwatch:PutMetricStream",
-          "cloudwatch:DeleteMetricStream",
-          "cloudwatch:StartMetricStreams",
-          "cloudwatch:StopMetricStreams"
-        ],
-        "Resource": "*"
-      },
-      {
-        "Effect": "Allow",
-        "Action": [
-          "iam:PassRole"
-        ],
-        "Resource": "arn:aws:iam::*:role/splunk-metric-streams*"
-      }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:GET",
+        "autoscaling:DescribeAutoScalingGroups",
+        "cloudformation:ListResources",
+        "cloudformation:GetResource",
+        "cloudfront:GetDistributionConfig",
+        "cloudfront:ListDistributions",
+        "cloudfront:ListTagsForResource",
+        "cloudwatch:DescribeAlarms",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:ListMetrics",
+        "directconnect:DescribeConnections",
+        "dynamodb:DescribeTable",
+        "dynamodb:ListTables",
+        "dynamodb:ListTagsOfResource",
+        "ec2:DescribeInstances",
+        "ec2:DescribeInstanceStatus",
+        "ec2:DescribeNatGateways",
+        "ec2:DescribeRegions",
+        "ec2:DescribeReservedInstances",
+        "ec2:DescribeReservedInstancesModifications",
+        "ec2:DescribeTags",
+        "ec2:DescribeVolumes",
+        "ecs:DescribeClusters",
+        "ecs:DescribeServices",
+        "ecs:DescribeTasks",
+        "ecs:ListClusters",
+        "ecs:ListServices",
+        "ecs:ListTagsForResource",
+        "ecs:ListTaskDefinitions",
+        "ecs:ListTasks",
+        "eks:DescribeCluster",
+        "eks:ListClusters",
+        "elasticache:DescribeCacheClusters",
+        "elasticloadbalancing:DescribeLoadBalancerAttributes",
+        "elasticloadbalancing:DescribeLoadBalancers",
+        "elasticloadbalancing:DescribeTags",
+        "elasticloadbalancing:DescribeTargetGroups",
+        "elasticmapreduce:DescribeCluster",
+        "elasticmapreduce:ListClusters",
+        "es:DescribeElasticsearchDomain",
+        "es:ListDomainNames",
+        "kinesis:DescribeStream",
+        "kinesis:ListShards",
+        "kinesis:ListStreams",
+        "kinesis:ListTagsForStream",
+        "kinesisanalytics:ListApplications",
+        "kinesisanalytics:DescribeApplication",
+        "lambda:GetAlias",
+        "lambda:ListFunctions",
+        "lambda:ListTags",
+        "logs:DeleteSubscriptionFilter",
+        "logs:DescribeLogGroups",
+        "logs:DescribeSubscriptionFilters",
+        "logs:PutSubscriptionFilter",
+        "organizations:DescribeOrganization",
+        "rds:DescribeDBInstances",
+        "rds:DescribeDBClusters",
+        "rds:ListTagsForResource",
+        "redshift:DescribeClusters",
+        "redshift:DescribeLoggingStatus",
+        "s3:GetBucketLocation",
+        "s3:GetBucketLogging",
+        "s3:GetBucketNotification",
+        "s3:GetBucketTagging",
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket",
+        "s3:PutBucketNotification",
+        "sqs:GetQueueAttributes",
+        "sqs:ListQueues",
+        "sqs:ListQueueTags",
+        "states:ListActivities",
+        "states:ListStateMachines",
+        "tag:GetResources",
+        "workspaces:DescribeWorkspaces",
+        "cloudwatch:ListMetricStreams",
+        "cloudwatch:GetMetricStream",
+        "cloudwatch:PutMetricStream",
+        "cloudwatch:DeleteMetricStream",
+        "cloudwatch:StartMetricStreams",
+        "cloudwatch:StopMetricStreams"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:PassRole"
+      ],
+      "Resource": "arn:aws:iam::*:role/splunk-metric-streams*"
+    }
+  ]
   }
 
 See :new-page:`Create an AWS integration using an external ID and ARN <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/#Create-an-AWS-integration-using-an-external-ID-and-ARN>` in the Splunk developer documentation for syntax examples.
@@ -509,7 +515,7 @@ To collect CloudWatch Metric Streams or logs from all supported AWS services acr
 
 .. _aws-api-next-steps:
 
-6. Next steps
+1. Next steps
 =================
 
 After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
