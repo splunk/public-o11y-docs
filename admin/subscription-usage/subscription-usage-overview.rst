@@ -11,11 +11,12 @@ Monitor subscription usage for Splunk Observability Cloud
    :hidden:
 
    apm-billing-usage-index
+   view-apm-billing-reports
    analyze-apm-billing-usage
    apm-system-limits
-   view-apm-billing-reports
    monitor-imm-billing-usage
    dpm-usage
+   lo-billing-usage
 
    
 
