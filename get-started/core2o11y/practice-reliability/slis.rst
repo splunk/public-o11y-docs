@@ -25,11 +25,13 @@ To meet your SLAs, you must set and manage SLOs based on accurate data, as measu
 
 Splunk APM
 ===================================================================================
-You can monitor your SLIs in Splunk APM. Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you select a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of your services. The right panel also shows services by error rate, top error sources, and services by latency. For example, you can track whether the SLI for your 90th percentile service latency for each service is less than 5 seconds. On the following service map, we can see in the :strong:`Services By Latency (P90)` chart on the right that all services have a P90 of less than one second with the longest being 472 milliseconds. You can also track error rates on the service map. In the :strong:`Services by Error Rate` chart 
+You can monitor your SLIs in Splunk APM. Splunk APM automatically generates a service map displaying all of your instrumented and inferred services, the dependencies among them, and SLIs for each when you select a service. See :ref:`apm-service-map`. The service map shows SLIs for your services, including error rate, root error rate, and latency of your services. The right panel also shows services by error rate, top error sources, and services by latency. For example, you can track whether the SLI for your 90th percentile service latency for each service is less than 5 seconds. On the following service map, we can see in the :strong:`Services By Latency (P90)` chart on the right that all services have a P90 of less than one minute. You can also track error rates on the service map in the :strong:`Services by Error Rate` chart. 
 
 .. image:: /_images/get-started/core2o11y-apm-map.png
   :width: 100%
   :alt: This screenshot shows an APM service map.
+
+You can alert on a service by creating a detector. See :ref:`create-detectors` to learn how. See You can also rely on :ref:`built-in alert conditions <condition-reference>` or `link detectors to charts <linking-detectors>`.
 
 
 :ref:`built-in-dashboards` in Splunk APM are automatically populated with SLIs for all integrated services, as seen in the following sample APM dashboard.
@@ -38,7 +40,12 @@ You can monitor your SLIs in Splunk APM. Splunk APM automatically generates a se
     :width: 100%
     :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
 
-See :ref:`dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
+To see a dashboard for a service, select the service on the service map, then select :strong:`View Dashboard`. See :ref:`dashboards` for a list of types of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and finally create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
+
+Observability Cloud Alerts and detectors
+===================================================================================
+Observability Cloud includes out of the box alerts and detectors using AutoDetect. You can also set up custom detectors, as described in the previous section. Custom detectors lets you define your own SLIs and alert on any data that matters to you. 
+
 
 Splunk Infrastructure Monitoring
 ===================================================================================
@@ -53,10 +60,6 @@ Monitor your SLIs in out of the box navigators, such as the following navigator 
 In addition to out of the box navigators, you can set up alerts and detectors on any custom Infrastructure Monitoring data that matters to you. See :ref:`get-started-detectoralert`.
 
 :ref:`infrastructure-virtual-metrics` help you more accurately and thoroughly measure SLIs by automatically gathering, aggregating, and defining metrics. Virtual metrics remove the complexity of choosing the most appropriate metric source among various available options.
-
-Observability Cloud Alerts and detectors
-===================================================================================
-In addition to the many out of the box methods of monitoring SLIs in Observability Cloud (e.g. navigators, SLIs on your service map, AutoDetect detectors), you can also set up custom  detectors. This lets you define your own SLIs and alert on any data that matters to you. See :ref:`get-started-detectoralert`.
 
 Real User Monitoring (RUM)
 ===================================================================================
