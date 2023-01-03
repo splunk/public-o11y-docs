@@ -22,9 +22,9 @@ You can use either Splunk Observability Cloud or your AWS CloudWatch console to 
 Explore your AWS inventory and data
 ============================================
 
-Review your AWS inventory in Splunk Observability Cloud 
+Review your AWS inventory in Splunk Observability Cloud. 
 
-Locate the metrics that you want to monitor
+Locate your metrics
 ------------------------------------------------------
 
 - In the :guilabel:`Data Management` section, select :strong:`AWS` from the :guilabel:`Deployed Integrations` list, then select your AWS integration to access the :guilabel:`Data Summary`. Note that depending on how you retrieve metrics (polling or Metric Streams), the Summary UI is different, and :ref:`org metrics <org-metrics>` also differ. 
@@ -41,7 +41,7 @@ In the :guilabel:`Data Management` section, select :strong:`AWS` from the :guila
 
 For more information, see :ref:`Introduction to Splunk Log Observer <get-started-logs>`.
 
-Dashboards and Related Content
+Use Dashboards and Related Content
 ------------------------------------------------------
 
 Explore your AWS data using :strong:`our default dashboards`:
