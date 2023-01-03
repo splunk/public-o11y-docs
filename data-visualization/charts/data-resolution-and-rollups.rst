@@ -10,8 +10,7 @@ Data resolution and rollups in charts
 Splunk Observability Cloud has two types of resolution:
 
 * Chart resolution: Interval at which data points appear on a chart
-* Data collection intervals: Interval at which a server or application sends data points to Observability Cloud.
-  This interval is the native resolution of the data. To learn more about native resolution, see :ref:`get-started-retention`.
+* Data collection intervals: Interval at which a server or application sends data points to Observability Cloud. This interval is the native resolution of the data. To learn more about native resolution, see :ref:`get-started-retention`.
 
 .. _chart-resolution:
 
@@ -35,7 +34,7 @@ A chart can contain multiple plots, each of which represents a different metric 
 Each MTS can have its own resolution. Observability Cloud chooses one resolution per chart,
 and for multiple plots the chart uses the coarsest resolution. Using this resolution lines up data points to facilitate plots and computations.
 
-For example, metrics from AWS CloudWatch typically have a one-minute or five-minute resolution, while metrics reported using the SignalFx Smart Agent or the Splunk Distribution of OpenTelemetry Collector typically have a 10-second resolution. If a single chart has one plot that contains AWS Cloudwatch metrics (five-minute resolution) and another plot that contains Smart Agent or OpenTelemetry Collector metrics, the chart resolution is always five minutes or more.
+For example, metrics from AWS CloudWatch typically have a one-minute or five-minute resolution, while metrics reported using the Splunk Distribution of OpenTelemetry Collector (or the SignalFx Smart Agent, now deprecated) typically have a 10-second resolution. If a single chart has one plot that contains AWS Cloudwatch metrics (five-minute resolution) and another plot that contains Collector or Smart Agent metrics, the chart resolution is always five minutes or more.
 
 Minimum chart resolution
 -------------------------------------------------------------------

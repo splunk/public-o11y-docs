@@ -2,7 +2,7 @@
 
 # Docker Containers
 
-<meta name="description" content="Documentation on the docker monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Docker monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -32,19 +32,7 @@ To install this integration:
 
 The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
-**Note:** Providing a `docker-container-stats` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
-
-### Smart Agent
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
-```
-monitors:  # All monitor config goes under this key
- - type: docker-container-stats
-   ...  # Additional config
-```
-
-See <a href="https://github.com/signalfx/signalfx-agent/blob/main/deployments/docker/agent.yaml" target="_blank">Docker agent.yaml</a> for an example configuration file, with default values where applicable. See [Docker Deployment](https://github.com/signalfx/signalfx-agent/blob/main/deployments/docker) for a link to the Docker image.
+**Note:** Providing a `docker-container-stats` monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 
 ### Splunk Distribution of OpenTelemetry Collector
 
@@ -60,6 +48,18 @@ receivers:
 To complete the monitor activation, you must also include the `smartagent/docker-container-stats` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file.
 
 See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
+
+### Smart Agent
+
+To activate this monitor in the Smart Agent, add the following to your agent configuration:
+
+```
+monitors:  # All monitor config goes under this key
+ - type: docker-container-stats
+   ...  # Additional config
+```
+
+See <a href="https://github.com/signalfx/signalfx-agent/blob/main/deployments/docker/agent.yaml" target="_blank">Docker agent.yaml</a> for an example configuration file, with default values where applicable. See [Docker Deployment](https://github.com/signalfx/signalfx-agent/blob/main/deployments/docker) for a link to the Docker image.
 
 ### Configuration settings
 
@@ -78,13 +78,11 @@ The following table shows the configuration options for this monitor:
 | `envToDimensions` | no | `map of strings` | A mapping of container environment variable names to dimension names. The corresponding env var values become the dimension values on the emitted metrics. For example, `APP_VERSION: version` results in data points having a dimension called `version` whose value is the value of the `APP_VERSION` envvar configured for that particular container, if present. |
 | `excludedImages` | no | `list of strings` | A list of filters of images to exclude. Supports literals, globs, and regex. |
 
-
 ## Metrics
 
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/docker/metrics.yaml"></div>
-
 
 ## Troubleshooting
 

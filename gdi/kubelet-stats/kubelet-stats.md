@@ -2,7 +2,7 @@
 
 # Kubernetes network stats
 
-<meta name="description" content="Documentation on the kubelet-stats monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the kubelet-stats / kubernetes network stats monitor. See benefits, install, configuration, and metrics">
 
 <style>
   a {text-decoration: none;}
@@ -58,7 +58,7 @@ If your deployment uses an image name for the pause container that does not fit 
 
 This Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
-**Note:** Providing a `kubelet-stats` monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+**Note:** Providing a `kubelet-stats` monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 
 ```
 receivers:

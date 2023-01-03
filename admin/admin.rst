@@ -5,7 +5,7 @@ Set up and administer Splunk Observability Cloud
 ********************************************************************************
 
 .. meta::
-   :description: Learn how to how to set up and administer your organization.
+   :description: Overview of the Observability Cloud admin tasks and links to the documentation.
 
 One of the first steps in getting started with Observability Cloud is setting up your organization. In Observability Cloud, an organization, or account, is the highest-level security grouping. For example, data within an organization cannot be accessed by other organizations and their users.
 

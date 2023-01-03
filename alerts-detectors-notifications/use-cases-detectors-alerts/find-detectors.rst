@@ -9,7 +9,7 @@ Find active alerts to investigate a CPU issue
 
 Kai, a site reliability engineer at Buttercup Games, has created a detector called "CPU Detector" that monitors Buttercup Games host machine's CPU usage for sudden changes. Kai has received many alerts from this detector, and wants to get a more detailed view of these alerts. 
 
-Using the Splunk Observability Cloud :guilabel:`Alerts & Detectors` page, Kai can find and view these active alerts so they can easily troubleshoot the CPU changes.
+Using the :guilabel:`Alerts & Detectors` page in Splunk Observability Cloud, Kai can find and view these active alerts so they can easily troubleshoot the CPU changes.
 
 Find active alerts using the search list
 ====================================================

@@ -16,11 +16,9 @@ Enable metrics collection
 
 To enable the collection of .NET runtime and trace metrics, see :ref:`dotnet-metric-settings`.
 
-.. note:: Runtime and trace metrics collection is an experimental feature subject to future changes.
-
 .. _dotnet-runtime-metrics:
 
-Runtime metrics
+.NET runtime metrics
 ====================================================
 
 The SignalFx Instrumentation for .NET can collect the following runtime metrics:
@@ -33,81 +31,102 @@ The SignalFx Instrumentation for .NET can collect the following runtime metrics:
    * - Metric
      - Type
      - Description
-   * - ``runtime.dotnet.aspnetcore.connections.current``
+   * - ``process.runtime.dotnet.exceptions.count``
+     - Gauge
+     - Count of exceptions since the previous observation.
+   * - ``process.runtime.dotnet.gc.collections.count``
+     - Cumulative counter
+     - Number of garbage collections since the process started.
+   * - ``process.runtime.dotnet.gc.heap.size``
+     - Gauge
+     - Heap size, as observed during the last garbage collection.
+   * - ``process.runtime.dotnet.gc.objects.size``
+     - Gauge
+     - Count of bytes currently in use by live objects in the GC heap.
+   * - ``process.runtime.dotnet.gc.allocations.size``
+     - Cumulative counter
+     - Count of bytes allocated on the managed GC heap since the process started. Only available for .NET Core.	
+   * - ``process.runtime.dotnet.gc.committed_memory.size``
+     - Gauge
+     - Amount of committed virtual memory for the managed GC heap, as observed during the last garbage collection. Only available for .NET 6 and higher.
+   * - ``process.runtime.dotnet.gc.pause.time``
+     - Counter
+     - Number of milliseconds spent in GC pause. Only available for .NET Core.
+   * - ``process.runtime.dotnet.monitor.lock_contention.count``
+     - Cumulative counter
+     - Contentions count when trying to acquire a monitor lock since the process started.
+   * - ``process.runtime.dotnet.thread_pool.threads.count``
+     - Gauge
+     - Number of thread pool threads, as observed during the last measurement. Only available for .NET Core.
+
+.. _dotnet-process-metrics:
+
+Process metrics
+====================================================
+
+The SignalFx Instrumentation for .NET can collect the following process metrics:
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 50
+   :width: 100%
+
+   * - Metric
+     - Type
+     - Description
+   * - ``process.memory.usage``
+     - Gauge
+     - The amount of physical memory allocated for this process.	
+   * - ``process.memory.virtual``
+     - Gauge
+     - The amount of committed virtual memory for this process.	
+   * - ``process.cpu.time``
+     - CumulativeCounter
+     - Total CPU seconds broken down by different states, such as user and system.	
+   * - ``process.cpu.utilization``
+     - Gauge
+     - Difference in ``process.cpu.time`` since the last measurement, divided by the elapsed time and number of CPUs available to the process.
+   * - ``process.threads``
+     - Gauge
+     - Process threads count.	
+
+.. _dotnet-aspnetcore-metrics:
+
+ASP.NET Core metrics
+====================================================
+
+The SignalFx Instrumentation for .NET can collect the following ASP.NET Core metrics:
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 50
+   :width: 100%
+
+   * - Metric
+     - Type
+     - Description
+   * - ``signalfx.dotnet.aspnetcore.connections.current``
      - Gauge
      - Number of active HTTP connections to the web server. Only available for .NET Core.
-   * - ``runtime.dotnet.aspnetcore.connections.queue_length``
+   * - ``signalfx.dotnet.aspnetcore.connections.queue_length``
      - Gauge
      - Length of the HTTP connection queue. Only available for .NET Core.
-   * - ``runtime.dotnet.aspnetcore.connections.total``
+   * - ``signalfx.dotnet.aspnetcore.connections.total``
      - Gauge
      - Number of HTTP connections to the web server. Only available for .NET Core.
-   * - ``runtime.dotnet.aspnetcore.requests.current``
+   * - ``signalfx.dotnet.aspnetcore.requests.current``
      - Gauge
      - Number of HTTP requests that have started, but haven't stopped yet. Only available for .NET Core.
-   * - ``runtime.dotnet.aspnetcore.requests.failed``
+   * - ``signalfx.dotnet.aspnetcore.requests.failed``
      - Gauge
      - Number of failed HTTP requests received by the server. Only available for .NET Core.
-   * - ``runtime.dotnet.aspnetcore.requests.queue_length``
+   * - ``signalfx.dotnet.aspnetcore.requests.queue_length``
      - Gauge
      - Length of the HTTP request queue.
-   * - ``runtime.dotnet.aspnetcore.requests.total``
+   * - ``signalfx.dotnet.aspnetcore.requests.total``
      - Gauge
      - Number of HTTP requests received by the server. Only available for .NET Core.
-   * - ``runtime.dotnet.cpu.percent``
-     - Gauge
-     - Percentage of total CPU used by the application.
-   * - ``runtime.dotnet.cpu.system``
-     - Gauge
-     - Milliseconds of execution outside of the kernel.
-   * - ``runtime.dotnet.cpu.user``
-     - Gauge
-     - Milliseconds of execution in the kernel.
-   * - ``runtime.dotnet.exceptions.count``
-     - Gauge
-     - Number of exceptions.
-   * - ``runtime.dotnet.gc.count.gen0``
-     - Counter
-     - Number of ``gen0`` garbage collections.
-   * - ``runtime.dotnet.gc.count.gen1``
-     - Counter
-     - Number of ``gen1`` garbage collections.
-   * - ``runtime.dotnet.gc.count.gen2``
-     - Counter
-     - Number of ``gen2`` garbage collections.
-   * - ``runtime.dotnet.gc.memory_load``
-     - Gauge
-     - Percentage of the memory used by the process. The garbace collector changes its behavior when this value is higher than ``85``. Only available for .NET Core.
-   * - ``runtime.dotnet.gc.pause_time``
-     - Gauge
-     - Amount of time the garbace collector paused the application threads. Only available for .NET Core.
-   * - ``runtime.dotnet.gc.size.gen0``
-     - Gauge
-     - Size of the ``gen0`` heap.
-   * - ``runtime.dotnet.gc.size.gen1``
-     - Gauge
-     - Size of the ``gen1`` heap.
-   * - ``runtime.dotnet.gc.size.gen2``
-     - Gauge
-     - Size of the ``gen2`` heap.
-   * - ``runtime.dotnet.gc.size.loh``
-     - Gauge
-     - Size of the large object heap.
-   * - ``runtime.dotnet.mem.committed``
-     - Gauge
-     - Memory usage.
-   * - ``runtime.dotnet.threads.contention_count``
-     - Counter
-     - Number of times a thread stopped to wait on a lock.
-   * - ``runtime.dotnet.threads.contention_time``
-     - Gauge
-     - Accumulated time spent by threads waiting on a lock Only available for .NET Core.
-   * - ``runtime.dotnet.threads.count``
-     - Counter
-     - Number of threads running in the process.
-   * - ``runtime.dotnet.threads.workers_count``
-     - Gauge
-     - Number of threads that existed in the thread pool. Only available for .NET Core.
+
 
 Additional permissions for IIS
 -------------------------------------------------------------

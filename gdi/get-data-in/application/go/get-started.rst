@@ -6,7 +6,7 @@ Instrument Go applications for Splunk Observability Cloud
 
 
 .. meta::
-   :description: Instrument Go applications automatically to export spans and metrics to Splunk Observability Cloud.
+   :description: Instrument Go applications to export spans and metrics to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -20,7 +20,7 @@ Instrument Go applications for Splunk Observability Cloud
    About Splunk OTel Go <splunk-go-otel-distribution>
    Migrate from SignalFx Go <troubleshooting/migrate-signalfx-go-to-otel>
 
-The Splunk Distribution of OpenTelemetry Go provides multiple Go packages that automatically instrument your Go application. The instrumentation captures distributed traces and sends them to Splunk Observability Cloud.
+The Splunk Distribution of OpenTelemetry Go provides multiple Go packages that instrument your Go application. The instrumentation captures distributed traces and sends them to Splunk Observability Cloud.
 
 To instrument your Go application, follow these steps:
 

@@ -2,7 +2,7 @@
 
 # Host process load
 
-<meta name="description" content="Documentation on the load monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the load monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -1,7 +1,7 @@
 (heroku)=
 
 # Heroku
-<meta name="description" content="Documentation on the Heroku integration">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Heroku monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -11,8 +11,6 @@ The Splunk OpenTelemetry Connector for Heroku is a buildpack for the Splunk Dist
 * Splunk Infrastructure Monitoring through the `signalfx` exporter.
 
 To learn more about the Splunk Distribution of OpenTelemetry Collector, see [Install and configure the Splunk Distribution of OpenTelemetry Collector](../opentelemetry/opentelemetry.rst)
-
-
 
 ## Installation
 

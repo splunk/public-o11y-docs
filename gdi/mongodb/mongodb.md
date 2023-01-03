@@ -1,6 +1,6 @@
 (mongodb)=
 # MongoDB
-<meta name="description" content="Documentation on the mongodb monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the MongoDB monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -55,9 +55,8 @@ Only SCRAM-SHA-1 authentication is supported.
 ```
 
 ```{note}
-OnlyProviding a MongoDB monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type. SCRAM-SHA-1 authentication is supported.
+OnlyProviding a MongoDB monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type. SCRAM-SHA-1 authentication is supported.
 ```
-
 ### Splunk Distribution of OpenTelemetry Collector
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:

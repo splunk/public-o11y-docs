@@ -22,7 +22,7 @@ Logs pipeline rules execute in the following order:
 
 2. Log metricization rules
 
-3. Infinite Logging rules
+3. Infinite logging rules
 
  Log Observer indexes your logs data only after executing all pipeline management rules. When you metricize then archive a set of logs, metricized logs count against your ingest capacity but not against your indexing capacity. Like any other metric, a metric derived from log metricization rules counts toward your metrics quota per your contract. For more information, see :ref:`logs-pipeline-sequence`.
 
@@ -52,7 +52,7 @@ To create a new log metricization rule from scratch in the logs pipeline, follow
 
 6. Click :guilabel:`Next`.
 
-7. Review your MTS (Metric Time Series) summary to see how your metricization could affect your subscription usage. You can optionally select an ingest token to limit the MTS count.
+7. Review your metric time series (MTS) summary to see how your metricization could affect your subscription usage. You can optionally select an ingest token to limit the MTS count.
 
 8. Click :guilabel:`Next`.
 
@@ -82,3 +82,7 @@ To create a new log metricization rule in the context of an existing search quer
 3. In the upper right corner, click the three-dot :guilabel:`More` menu and select :guilabel:`Save as Metric`. This takes you to the Configure Metric page in Logs Pipeline Management.
 
 4. Go to step 3 in :ref:`Create a log metricization rule from the logs pipeline <metricization-rule-from-pipeline>` and complete the instructions.
+
+Log metricization rules limits
+--------------------------------------------------------------------------------
+An organization can create a total of 128 log metricization rules.

@@ -5,7 +5,7 @@ View your realm, API endpoints, and organization
 *********************************************************************************
 
 .. meta::
-   :description: You can see and copy your Splunk Observability Cloud realm, API endpoints, organizations, and organization IDs on your user profile page.
+   :description: View and copy your Splunk Observability Cloud realm, API endpoints, organizations, and organization IDs on your user profile page.
 
 
 To view your realm, organization, or admin status in an organization, follow these steps:

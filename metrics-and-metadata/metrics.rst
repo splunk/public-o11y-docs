@@ -5,7 +5,7 @@ Metrics, data points, and metric time series in Splunk Observability Cloud
 *****************************************************************************
 
 .. meta::
-   :description: Introduction to metrics in Splunk Observability Cloud.
+   :description: Introduction to metrics, data points, and metric time series in Splunk Observability Cloud.
 
   
 In Splunk Observability Cloud, data consists of the following components:
@@ -132,7 +132,7 @@ It's important to configure the Collector or ingest to provide at least one dime
 
 For example, when you report on the CPU utilization of 10 hosts in a cluster, the metric is the CPU utilization.
 
-If each host in the cluster shares the exact same dimensions with all the other hosts, the cluster generates only one MTS. This is not recommended as it makes it difficult to differentiate and monitor the CPU utilization of each individual host in the cluster.
+If each host in the cluster shares the exact same dimensions with all the other hosts, the cluster generates only one MTS. As a result, you might have difficultly in differentiating and monitoring the CPU utilization of each individual host in the cluster.
 
 However, if each host in the cluster has at least one unique dimension (typically a unique hostname), the cluster generates 10 MTS, or one for each host. Each MTS represents the CPU utilization over time for a single host.
 

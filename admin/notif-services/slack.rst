@@ -4,6 +4,9 @@
 Send alert notifications to Slack using Splunk Observability Cloud
 *********************************************************************
 
+.. meta::
+      :description: Configure Observability Cloud to send alerts to Slack when a detector alert condition is met and when the condition clears.
+
 You can configure Splunk Observability Cloud to automatically send alert notifications to Slack when a detector alert condition is met and when the alert clears.
 
 To send Observability Cloud alert notifications to Slack, complete the following configuration tasks:
@@ -19,6 +22,8 @@ To send Observability Cloud alert notifications to Slack, complete the following
 
 Step 1: Create a Slack integration in Observability Cloud
 =================================================================================
+
+.. note:: If the user who creates the integration leaves your organization and their Slack account is deactivated, the Slack integration stops working.   
 
 You must be an Observability Cloud administrator, Slack administrator, and be authorized to add apps to Slack to perform this task.
 

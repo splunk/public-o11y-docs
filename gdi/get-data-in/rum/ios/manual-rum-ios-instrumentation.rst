@@ -5,7 +5,7 @@ Manually instrument iOS applications
 *******************************************************************************
 
 .. meta::
-   :description: Manually instrument iOS applications for Splunk RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
+   :description: Manually instrument iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
 You can manually instrument iOS applications for Splunk RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
