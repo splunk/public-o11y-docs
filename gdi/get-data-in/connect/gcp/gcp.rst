@@ -5,7 +5,7 @@ Connect to Google Cloud Platform
 ********************************************************
 
 .. meta::
-   :description: Connect your GCP account to Splunk Observability Cloud.
+   :description: Connect your Google Cloud Platform / GCP account to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -13,13 +13,9 @@ Connect to Google Cloud Platform
    gcp-metrics
    gcp-logs
 
-.. note:: To see the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`.
-
 With a Google Cloud Platform (GCP) integration in Splunk Infrastructure Monitoring, you can track your Google Cloud Monitoring (formerly Google Stackdriver) metrics and monitor your GCP services in one place using the navigator in Stackdriver-powered mode and built-in dashboards.  
 
-To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP.
-
-.. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
+To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. To see the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`.
 
 .. raw:: html
 
@@ -28,6 +24,10 @@ To configure a GCP integration with Splunk Infrastructure Monitoring, check the 
    </embed>
 
 You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
+
+.. note:: 
+
+   Observability Cloud supports all GCP regions. 
 
 .. _gcp-one:
 
@@ -48,9 +48,6 @@ The following table specifies the permissions required for GCP integrations.
 
    *  - :strong:`Permission`
       - :strong:`Required?`
-
-   *  - ``monitoring.metricDescriptors.get``
-      - Yes
 
    *  - ``monitoring.metricDescriptors.list``
       - Yes
@@ -165,6 +162,8 @@ Your GCP integration is now complete.
 
 - Read more about the :ref:`provided GCP metrics <gcp-metrics>`.
 - Learn how to :ref:`ingest GCP logs <gcp-logs>`.
+
+.. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
 .. _gcp-api:
 

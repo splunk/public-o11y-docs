@@ -14,7 +14,7 @@ Using Splunk Observability Cloud, Kai can create a detector that alerts them whe
 Define the data to use for alerting
 ===================================
 
-From the Splunk Observability Cloud home page, Kai opens the :guilabel:`Alerts & Detectors` page and selects :guilabel:`New Detector` to create a detector from scratch.
+Kai opens the :guilabel:`Alerts & Detectors` page in Splunk Observability Cloud and selects :guilabel:`New Detector` to create a detector from scratch.
 
 After naming the detector, Kai chooses :guilabel:`Infrastructure or Custom Metrics Alert Rule`.
 

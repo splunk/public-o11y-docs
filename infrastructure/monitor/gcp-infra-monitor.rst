@@ -80,7 +80,7 @@ Observability Cloud collects data from many cloud services. To see all of the na
 
   GCP Compute Engine instances are powered by their respective public cloud service as well as the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both for all the charts to display data in the built-in dashboards.
 
-  - If you have only the public cloud service and the Smart Agent configured, some charts in the built-in dashboards for GCP Compute Engine instances display no data.
+  - If you have only the public cloud service and the Smart Agent (now deprecated) configured, some charts in the built-in dashboards for GCP Compute Engine instances display no data.
   - If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for GCP Compute Engine instances display no data.
   - If you have only Smart Agent configured, GCP Compute Engine instance navigator isn't available.
 

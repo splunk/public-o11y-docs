@@ -6,7 +6,7 @@ Ingest Google Cloud Platform log data
 ********************************************************
 
 .. meta::
-   :description: Send GCP logs to Splunk Observability Cloud.
+   :description: Send Google Could Platform / GCP logs to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:

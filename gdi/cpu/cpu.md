@@ -2,7 +2,7 @@
 
 # CPU
 
-<meta name="description" content="Documentation on the cpu monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the CPU monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

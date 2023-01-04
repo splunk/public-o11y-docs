@@ -1,7 +1,7 @@
 (prometheus-nginx-vts)=
 
 # Prometheus NGINX VTS
-<meta name="Description" content="Documentation on the prometheus-nginx-vts integration for Splunk Observability Cloud.">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Prometheus NGINX VTS exporter monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

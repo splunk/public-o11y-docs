@@ -1,7 +1,7 @@
 .. _logs-LOconnect-troubleshoot:
 
 *******************************************************************
-Troubleshoot Log Observer Connect
+Troubleshoot Log Observer Connect setup
 *******************************************************************
 
 This topic helps Log Observer Connect administrators and users resolve issues that might arise when searching Splunk platform indexes in Log Observer Connect.

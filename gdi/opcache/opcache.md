@@ -1,7 +1,7 @@
 (opcache)=
 
 # OPcache
-<meta name="description" content="Documentation on the collectd/opcache monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd OPcache monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -71,7 +71,7 @@ curl http://localhost/monitoring/opcache_stat.php
 ```
 
 ```{note}
-Provide an OPcache monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide an OPcache monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector
