@@ -60,13 +60,14 @@ Learn more
 
 The first thing Kai wants to know about the alert they just received is: What's the user impact?
 
-  #. Kai opens Splunk Real User Monitoring (RUM) to look for clues about the issue based on the site's browser-based performance. They notice two issues that may be related to the drop in purchases and the low checkout completion rate:
+  1. Kai opens Splunk Real User Monitoring (RUM) to look for clues about the issue based on the site's browser-based performance. They notice two issues that may be related to the drop in purchases and the low checkout completion rate:
 
    * A spike in the number of frontend errors
 
      .. image:: /_images/get-started/fe-errors.png
       :width: 35%
-     :alt: This screenshot shows the JS (Javascript) Errors module in Splunk Real User Monitoring. The module shows the error rate for the last 15 minutes. The error rate is 74 errors per second.
+      :alt: This screenshot shows the JS (Javascript) Errors module in Splunk Real User Monitoring. The module shows the error rate for the last 15 minutes. The error rate is 74 errors per second.
+
 
    * High backend endpoint latency
 
@@ -74,17 +75,17 @@ The first thing Kai wants to know about the alert they just received is: What's 
       :width: 75%
       :alt: This screenshot shows the Endpoint Latency module in Splunk Real User Monitoring. The module shows a latency of 8 seconds for the /cart/checkout endpoint.
 
-  #. Kai isn't sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :code:`/cart/checkout` endpoint because the page load time and largest contentful paint for :code:`cart/checkout` are also high.
+  2. Kai isn't sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :code:`/cart/checkout` endpoint because the page load time and largest contentful paint for :code:`cart/checkout` are also high.
   
-  #. Kai clicks the :strong:`/cart/checkout` endpoint link and sees multiple errors in the Tag Spotlight view in Splunk RUM. The errors don't seem to be related to any one tag in particular, so they click the :guilabel:`User Sessions` tab to look at User sessions.
+  3. Kai clicks the :strong:`/cart/checkout` endpoint link and sees multiple errors in the Tag Spotlight view in Splunk RUM. The errors don't seem to be related to any one tag in particular, so they click the :guilabel:`User Sessions` tab to look at User sessions.
   
-  #. Kai sees one session that seems to be taking longer than the others. They click it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn't a front end problem and that they need to follow the trace through to the back end.
+  4. Kai sees one session that seems to be taking longer than the others. They click it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn't a front end problem and that they need to follow the trace through to the back end.
 
     .. image:: /_images/get-started/session-details.png
       :width: 100%
       :alt: This screenshot shows the Session Details page in Splunk RUM displaying the session timeline from the front end through to the back end, where the /cart/checkout endpoint is taking longer than expected to complete.
 
-  #. Kai clicks the :strong:`APM` link to get a performance summary, as well as access to the session's trace and workflow details.
+  5. Kai clicks the :strong:`APM` link to get a performance summary, as well as access to the session's trace and workflow details.
 
     .. image:: /_images/get-started/performance-summary.png
       :width: 80%
@@ -103,19 +104,20 @@ For details about using Splunk RUM to identify and troubleshoot frontend errors,
 3. Investigate the root cause of a business workflow error
 ===============================================================
 
-#. In Splunk RUM, Kai clicks the :strong:`frontend:/cart/checkout` business workflow link to display its service map in Splunk Application Performance Monitoring (APM). A business workflow is a group of logically related traces, such as a group of traces that reflect an end-to-end transaction in your system.
-
-  The service map shows Kai the dependency interactions among  the full set of services backing the :code:`/cart/checkout` action that they're troubleshooting, including the propagation of errors from one service to another.
+1. In Splunk RUM, Kai clicks the :strong:`frontend:/cart/checkout` business workflow link to display its service map in Splunk Application Performance Monitoring (APM). A business workflow is a group of logically related traces, such as a group of traces that reflect an end-to-end transaction in your system.
+  
+    The service map shows Kai the dependency interactions among  the full set of services backing the :code:`/cart/checkout` action that they're troubleshooting, including the propagation of errors from one service to another.
 
   .. image:: /_images/get-started/service-map.png
     :width: 100%
     :alt: This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors.
 
+
   In particular, Kai sees that the :strong:`paymentservice` is having issues. Splunk APM has identified the issues as root cause errors, meaning that the :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow.
 
-  #. Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces :ref:`Related Content <get-started-relatedcontent>` tiles that provide access to relevant data in other areas of the application.
+  2. Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces :ref:`Related Content <get-started-relatedcontent>` tiles that provide access to relevant data in other areas of the application.
 
-  For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`.
+    For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`.
 
     .. image:: /_images/get-started/related-content.png
      :width: 100%
@@ -152,7 +154,7 @@ Learn more
     :width: 100%
     :alt: This screenshot shows the Kubernetes Pod Detail tab in Splunk Infrastructure Monitoring displaying metrics that indicate the pod is stable.
 
-#. Now that Kai can rule out the Kubernetes infrastructure as the source of the issue, they decide to return to their investigation in Splunk APM. Kai clicks the :strong:`paymentservice in map` Related Content tile in their current view of Splunk Infrastructure Monitoring.
+3. Now that Kai can rule out the Kubernetes infrastructure as the source of the issue, they decide to return to their investigation in Splunk APM. Kai clicks the :strong:`paymentservice in map` Related Content tile in their current view of Splunk Infrastructure Monitoring.
 
 Learn more
 ####################
@@ -179,7 +181,7 @@ For details about using the Kubernetes navigator and other navigators, see :ref:
     :width: 60%
     :alt: This screenshot shows the version module in Splunk APM displaying errors for version 350.10 only and no errors for version 350.9.
 
-#. This seems like a strong lead, so Kai decides to dig into the log details. They click the :strong:`Logs for paymentservice` Related Content tile.
+2. This seems like a strong lead, so Kai decides to dig into the log details. They click the :strong:`Logs for paymentservice` Related Content tile.
 
 Learn more
 ####################
@@ -200,13 +202,13 @@ For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
     :width: 100%
     :alt: This screenshot shows the details of an error log in Splunk Log Observer, including the error severity and an error message.
 
-#. As Kai looks at the log details, they see this error message: :strong:`Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)`.
+3. As Kai looks at the log details, they see this error message: :strong:`Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)`.
 
   In the error message, Kai sees what they think is a clear indication of the error. The API token starts with :strong:`test`. It seems that a team pushed v350.10 live with a test token that doesn't work in production.
 
-#. To double-check their hypothesis, Kai clicks the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
+4. To double-check their hypothesis, Kai clicks the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
 
-#. Next, Kai changes the :strong:`Group by method` from :strong:`severity` to :strong:`version`.
+5. Next, Kai changes the :strong:`Group by method` from :strong:`severity` to :strong:`version`.
 
   Now, Kai can see that all of the logs that contain this test API token error are on version :strong:`v350.10` and none are on version v350.9.
 
@@ -214,7 +216,7 @@ For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
     :width: 100%
     :alt: This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs.
 
-#. Just to be sure, Kai clicks the "eye" icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message.
+6. Just to be sure, Kai clicks the "eye" icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message.
 
 #. This exploration convinces Kai that the test API token in v350.10 is the most likely source of the issue. Kai notifies Deepu, the :strong:`paymentservice` owner about their findings.
 
