@@ -5,7 +5,7 @@ Set min delay for detectors to account for sparse data
 ********************************************************************
 
 .. meta::
-    :description: A Splunk alerts and detectors use case describes how to set delays for detectors.
+    :description: A Splunk alerts and detectors use case describes how to set min delay for detectors.
 
 In Splunk Observability Cloud, the site reliability engineering (SRE) team at Buttercup Game has set up a detector called :strong:`Service error` that monitors Buttercup Games services and alerts when the error rate of any service exceeds 5%.
 
@@ -16,6 +16,8 @@ Kai, an SRE on the team, investigates ``productcatalog`` and finds out that the 
 In order to account for delayed data points from ``productcatalog``, Kai configures a Min Delay value for :strong:`Service error`. They do this by making an API call to the ``/detector`` endpoint.
 
 Kai charts the lag from the sparse MTS and determines that it is usually less than 30 seconds but has never been higher than 1 minute, so they set a Min Delay of 1 minute for :strong:`Service error`.
+
+By setting a Min Delay threshold for :strong:`Service error`, Kai has successfully included sparse data and can now catch errors from the ``productcatalog`` service before they affect to customers' experience.
 
 Learn more
 =======================

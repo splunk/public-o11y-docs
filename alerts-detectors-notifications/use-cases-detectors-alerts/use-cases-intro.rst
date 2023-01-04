@@ -15,6 +15,7 @@ Alerts and detectors use case library
     find-detectors
     troubleshoot-noisy-detectors
     min-delay-detectors-use-case
+    max-delay-detectors-use-case
 
 Buttercup Games, a fictitious game company, recently began using their own network of server machines to host games for customers. Buttercup Games utilizes Splunk alerts and detectors to monitor host machine performance and to detect machine problems.
 
@@ -25,4 +26,5 @@ In the following use cases, you learn how Kai, a site reliability engineer, uses
 - :ref:`find-detectors`
 - :ref:`troubleshoot-noisy-detectors`
 - :ref:`min-delay-detectors-use-case`
+- :ref:`max-delay-detectors-use-case`
 
