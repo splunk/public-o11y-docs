@@ -38,7 +38,7 @@ It is best practice to let the engine determine the time to run the computation,
 
 .. _min-delay-detectors:
 
-Min delay
+Min Delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The :strong:`Min Delay` parameter specifies the minimum amount of time that the analytics engine must wait for data to arrive for a specific detector. 
@@ -51,7 +51,7 @@ You can only configure :strong:`Min Delay` using the API. For more information, 
 
 .. _max-delay-detectors:
 
-Max delay
+Max Delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The :strong:`Max Delay` parameter specifies the maximum amount of time that the analytics engine can wait for data to arrive for a specific detector.

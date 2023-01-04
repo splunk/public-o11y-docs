@@ -22,7 +22,7 @@ By setting a Min Delay threshold for :strong:`Service error`, Kai has successful
 Learn more
 =======================
 
-For more information on Min delay for detectors, see :ref:`min-delay-detectors`. 
+For more information on Min Delay for detectors, see :ref:`min-delay-detectors`. 
 
 For more information on the Detectors API, see the :new-page:`Detectors API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
