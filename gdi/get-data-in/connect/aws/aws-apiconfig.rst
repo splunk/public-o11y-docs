@@ -88,9 +88,59 @@ For further information and more examples on how to integrate AWS monitoring wit
 2. Review your IAM policy
 =====================================================
 
+Review the permissions to collect:
+
+* Metrics from services
+* Metric Streams
+* Logs
+
+.. _aws-iam-policy-required:
+
+Required permissions in Observability Cloud 
+---------------------------------------------------------------------
+
+Regardless of the services you want to use, you need the following permissions:
+
+* ``cloudwatch:GetMetricData``
+* ``cloudwatch:GetMetricStatistics``: Required to retrieve metrics from CloudWatch
+* ``cloudwatch:ListMetrics``
+* ``organizations:DescribeOrganization``: Required when the Amazon cost and usage metric integration option is enabled
+* ``tag:GetResources``: Allows the Resource Groups Tagging API to retrieve tags for selected AWS resources
+
+Optional (but recommended) permissions:
+
+* ``ec2:DescribeRegions``: Needed to detect which AWS regions you're using
+
 The default AWS Identify and Access Management (IAM) policy looks like this:
 
-.. IMPORTANT: If you update this JSON, please also update the service:permission pairs in the child section below.
+.. code-block:: json
+
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "cloudwatch:GetMetricData",
+          "cloudwatch:GetMetricStatistics",
+          "cloudwatch:ListMetrics",
+          "ec2:DescribeRegions",
+          "organizations:DescribeOrganization",
+          "tag:GetResources"
+        ],
+        "Resource": "*"
+      }
+    ]
+  }
+
+.. _aws-iam-policy-services:
+
+Add the required service-based permissions
+---------------------------------------------------------------------
+
+On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS service data. 
+
+To do so, add the ``"<service>:<permission>"`` pair relevant to each service in the ``Action`` array of the :ref:`AWS IAM policy JSON <review-aws-iam-policy>`. For example:
 
 .. code-block:: json
 
@@ -181,16 +231,6 @@ The default AWS Identify and Access Management (IAM) policy looks like this:
     ]
   }
 
-Review your AWS IAM policy permissions in Observability Cloud 
----------------------------------------------------------------------
-
-Each entry in the ``Action`` array of the :ref:`AWS IAM policy JSON <review-aws-iam-policy>` is a ``"<service>:<permission>"`` pair. Each pair identifies an AWS service and a permission for that service. Include a service and permission pair in your AWS IAM policy to allow Observability Cloud to collect a specific type of data from a specific AWS service.
-
-Use the information provided here to understand which AWS service and permission pairs to include in your AWS IAM policy to allow specific Observability Cloud features to collect relevant AWS service data.
-
-The ``"ec2:DescribeRegions"`` permission appears in every feature section because every feature requires this permission.
-
-.. IMPORTANT: If you update these service:permission pairs, please also update the JSON in the parent section above.
 
 Metric collection (CloudWatch API)
 ------------------------------------------------------
@@ -202,6 +242,8 @@ Include these permissions to allow Observability Cloud to collect AWS metrics us
 - ``"cloudwatch:GetMetricStatistics"``
 - ``"cloudwatch:ListMetrics"``
 - ``"ec2:DescribeRegions"``
+
+.. _aws-iam-policy-ms:
 
 Metric collection (CloudWatch Metric Streams)
 ------------------------------------------------------
@@ -220,6 +262,8 @@ Include these permissions to allow Observability Cloud to collect AWS metrics us
 - ``"iam:PassRole"``
 
 Note the ``iam:PassRole`` permission is restricted to resources matching the ``arn:aws:iam::*:role/splunk-metric-streams*`` pattern. See :ref:`AWS IAM policy for Metric Streams <metricstreams_iampolicy>` for details.
+
+.. _aws-iam-policy-logs:
 
 Log collection
 ---------------------------
@@ -323,7 +367,7 @@ Include these permissions to allow Observability Cloud to collect AWS tags and p
 
 .. _aws-api-setup:
 
-3. Configure your setup
+1. Configure your setup
 =============================
 
 Provide the ARN role to the Infrastructure Monitoring component of Splunk Observability Cloud. You can also configure your connection to support any of the following use cases:
@@ -515,7 +559,7 @@ To collect CloudWatch Metric Streams or logs from all supported AWS services acr
 
 .. _aws-api-next-steps:
 
-1. Next steps
+Next steps
 =================
 
 After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
