@@ -1,6 +1,6 @@
 (oracledb)=
 # Oracle Database
-<meta name="description" content="Documentation on the Oracle Database monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the OracleDB / Oracle Database monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -4,6 +4,9 @@
 Configure application receivers for databases
 ********************************************************************************
 
+.. meta::
+   :description: Landing for application receivers for database applications in Splunk Observability Cloud.
+
 .. toctree::
    :maxdepth: 4
    :hidden:
@@ -43,6 +46,7 @@ These application receivers gather metrics from their associated database-relate
 * :ref:`logstash`
 * :ref:`microsoft-sql-server`
 * :ref:`mongodb`
+* :ref:`mongodb-atlas`
 * :ref:`mongodb-atlas-receiver`
 * :ref:`mysql`
 * :ref:`oracledb`

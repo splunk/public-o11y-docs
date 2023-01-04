@@ -5,7 +5,7 @@ Prometheus Receiver
 *********************************************************************
 
 .. meta::
-      :description: Use the Prometheus Receiver to collect metric data in the Prometheus format.
+      :description: Use the Prometheus Receiver to collect metric data in the Prometheus format in Splunk Cloud Observability.
 
 The Prometheus Receiver collects metric data in the Prometheus format. The supported pipeline type is metrics.
 

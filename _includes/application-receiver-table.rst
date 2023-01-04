@@ -1,6 +1,7 @@
 .. list-table::
    :header-rows: 1
    :widths: 50 16 16 16
+   :width: 100
    :class: monitor-table
 
    * - :strong:`Data source`
@@ -8,7 +9,7 @@
      - :strong:`Provides traces`
      - :strong:`Provides logs`
 
-   * - :ref:`Amazon AppMesh Envoy Proxy <appmesh>`
+   * - :ref:`AWS AppMesh Envoy Proxy <appmesh>`
      - :strong:`X`
      -
      -
@@ -148,7 +149,7 @@
      -
      -
 
-   * - :ref:`DNS <telegraf-dns>`
+   * - :ref:`DNS Query Input <telegraf-dns>`
      - :strong:`X`
      -
      -
@@ -198,12 +199,12 @@
      -
      -
 
-   * - :ref:`Gitaly and Gitaly Cluster <gitlab-gitaly>`
+   * - :ref:`GitLab <gitlab>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`GitLab <gitlab>`
+   * - :ref:`Gitaly and Gitaly Cluster <gitlab-gitaly>`
      - :strong:`X`
      -
      -
@@ -280,10 +281,20 @@
 
    * - :ref:`Interface traffic <interface>`
      - :strong:`X`
+     - :strong:`X`
+     - :strong:`X`
+
+   * - :ref:`Istio <get-started-istio>`
+     - :strong:`X`
      -
      -
 
    * - :ref:`Jaeger gRPC <jaeger-grpc>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Java metrics receiver <java-monitor>`
      - :strong:`X`
      -
      -
@@ -327,7 +338,6 @@
      - :strong:`X`
      -
      - :strong:`X`
-
 
    * - :ref:`Kubernetes network stats <kubelet-stats>`
      - :strong:`X`
@@ -433,12 +443,7 @@
      -
      - :strong:`X`
 
-   * - :ref:`NTP <ntp>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`NTPQ <telegraf-ntpq>`
+   * - :ref:`NTP Receiver <ntp>`
      - :strong:`X`
      -
      -
@@ -498,7 +503,7 @@
      -
      -
 
-   * - :ref:`Prometheus receiver <prometheus-receiver>`
+   * - :ref:`Prometheus Receiver <prometheus-receiver>`
      - :strong:`X`
      -
      -
@@ -554,6 +559,11 @@
      -
 
    * - :ref:`systemd <collectd-systemd>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Telegraf NTPQ <telegraf-ntpq>`
      - :strong:`X`
      -
      -

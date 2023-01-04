@@ -23,6 +23,8 @@ To send Observability Cloud alert notifications to Slack, complete the following
 Step 1: Create a Slack integration in Observability Cloud
 =================================================================================
 
+.. note:: If the user who creates the integration leaves your organization and their Slack account is deactivated, the Slack integration stops working.   
+
 You must be an Observability Cloud administrator, Slack administrator, and be authorized to add apps to Slack to perform this task.
 
 This method of integrating with Slack replaces a prior design. Slack integrations created using the prior design display an option to upgrade in the Observability Cloud UI. While the prior design continues to work, upgrade your integrations to use the newer integration design. You must upgrade your integration if you want image previews to display when pasting a chart URL into Slack. To learn more, see :ref:`pasting-chart-url-into-slack`.

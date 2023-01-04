@@ -5,7 +5,7 @@ Google Cloud Monitoring metrics
 ******************************************
 
 .. meta::
-   :description: GCP metrics in Splunk Observability Cloud.
+   :description: Google Cloud Platform / GCP metrics in Splunk Observability Cloud.
 
 .. toctree::
    :hidden:

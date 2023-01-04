@@ -5,7 +5,7 @@ Chef
 ****************************
 
 .. meta::
-      :description: Use Chef to install and configure the Collector to collect metrics, traces, and logs from Linux and Windows machines and send data to Splunk Observability Cloud.
+      :description: Use Chef to install and configure the OpenTelemetry Collector to collect metrics, traces, and logs from Linux and Windows machines and send data to Splunk Observability Cloud.
 
 Chef is a configuration management technology used to manage infrastructure on physical or virtual machines. Chef uses cookbooks to define a scenario. 
 

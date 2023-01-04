@@ -1,7 +1,7 @@
 (statsd)=
 
 # Statsd
-<meta name="description" content="Documentation on the statsd monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Statsd monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description
@@ -42,7 +42,7 @@ For Kubernetes environments, use the `status.hostIP` environment variable to ver
 ```
 
 ```{note}
-Provide a StatsD monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a StatsD monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector
