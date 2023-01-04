@@ -28,7 +28,7 @@ To connect Splunk Observability Cloud to AWS through the Observability Cloud API
 
 .. _aws-api-create-id:
 
-1. Create an external AWS ID
+Create an external AWS ID
 ---------------------------------------------------------------------
 
 Use the ``-X`` flag on a POST request to create an AWS connection that generates an external ID:
@@ -66,7 +66,7 @@ In the system response, note the following:
 
 .. _aws-api-create-policy-role:
 
-1. Create an AWS policy and IAM role
+Create an AWS policy and IAM role
 ---------------------------------------------------------------------
 
 To create an AWS policy and an AWS IAM (Identity and Access Management) role with a unique Amazon Resource Name (ARN), use a PUT request with the ``externalId`` value generated in the previous step.
@@ -88,11 +88,11 @@ For further information and more examples on how to integrate AWS monitoring wit
 2. Review your IAM policy
 =====================================================
 
-Review the permissions to collect:
+Review the permissions in this document to collect:
 
 * Metrics from services
-* Metric Streams
-* Logs
+* :ref:`Permissions for Metric Streams <aws-iam-policy-ms>`
+* :ref:`Permissions for logs <aws-iam-policy-logs>`
 
 .. _aws-iam-policy-required:
 
@@ -135,12 +135,76 @@ The default AWS Identify and Access Management (IAM) policy looks like this:
 
 .. _aws-iam-policy-services:
 
-Add the required service-based permissions
----------------------------------------------------------------------
+Service-based permissions for tag and property collection
+---------------------------------------------------------------------------------------
 
 On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS service data. 
 
-To do so, add the ``"<service>:<permission>"`` pair relevant to each service in the ``Action`` array of the :ref:`AWS IAM policy JSON <review-aws-iam-policy>`. For example:
+These are these permissions to allow Observability Cloud to collect AWS tags and properties:
+
+- ``"apigateway:GET"``
+- ``"autoscaling:DescribeAutoScalingGroups"``
+- ``"cloudformation:ListResources"``
+- ``"cloudformation:GetResource"``
+- ``"cloudfront:GetDistributionConfig"``
+- ``"cloudfront:ListDistributions"``
+- ``"cloudfront:ListTagsForResource"``
+- ``"directconnect:DescribeConnections"``
+- ``"dynamodb:DescribeTable"``
+- ``"dynamodb:ListTables"``
+- ``"dynamodb:ListTagsOfResource"``
+- ``"ec2:DescribeInstances"``
+- ``"ec2:DescribeInstanceStatus"``
+- ``"ec2:DescribeNatGateways"``
+- ``"ec2:DescribeRegions"``
+- ``"ec2:DescribeReservedInstances"``
+- ``"ec2:DescribeReservedInstancesModifications"``
+- ``"ec2:DescribeTags"``
+- ``"ec2:DescribeVolumes"``
+- ``"ecS:DescribeClusters"``
+- ``"ecs:DescribeServices"``
+- ``"ecs:DescribeTasks"``
+- ``"ecs:ListClusters"``
+- ``"ecs:ListServices"``
+- ``"ecs:ListTagsForResource"``
+- ``"ecs:ListTaskDefinitions"``
+- ``"ecs:ListTasks"``
+- ``"elasticache:DescribeCacheClusters"``
+- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
+- ``"elasticloadbalancing:DescribeLoadBalancers"``
+- ``"elasticloadbalancing:DescribeTags"``
+- ``"elasticloadbalancing:DescribeTargetGroups"``
+- ``"elasticmapreduce:DescribeCluster"``
+- ``"elasticmapreduce:ListClusters"``
+- ``"es:DescribeElasticsearchDomain"``
+- ``"es:ListDomainNames"``
+- ``"kinesis:DescribeStream"``
+- ``"kinesis:DescribeStream"``
+- ``"kinesis:ListShards"``
+- ``"kinesis:ListStreams"``
+- ``"kinesis:ListStreams"``
+- ``"kinesis:ListTagsForStream"``
+- ``"kinesis:ListTagsForStream"``
+- ``"lambda:GetAlias"``
+- ``"lambda:ListFunctions"``
+- ``"lambda:ListTags"``
+- ``"rds:DescribeDBInstances"``
+- ``"rds:ListTagsForResource"``
+- ``"redshift:DescribeClusters"``
+- ``"redshift:DescribeLoggingStatus"``
+- ``"s3:GetBucketLocation"``
+- ``"s3:GetBucketTagging"``
+- ``"s3:ListAllMyBuckets"``
+- ``"s3:ListBucket"``
+- ``"states:ListActivities"``
+- ``"states:ListStateMachines"``
+- ``"sqs:GetQueueAttributes"``
+- ``"sqs:ListQueues"``
+- ``"sqs:ListQueueTags"``
+- ``"tag:GetResources"``
+- ``"workspaces:DescribeWorkspaces"``
+
+Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Action`` array of the :ref:`AWS IAM policy JSON <review-aws-iam-policy>`. For example:
 
 .. code-block:: json
 
@@ -231,65 +295,6 @@ To do so, add the ``"<service>:<permission>"`` pair relevant to each service in 
     ]
   }
 
-
-Metric collection (CloudWatch API)
-------------------------------------------------------
-
-Include these permissions to allow Observability Cloud to collect AWS metrics using CloudWatch API polling:
-
-- ``"cloudwatch:DescribeAlarms"``
-- ``"cloudwatch:GetMetricData"``
-- ``"cloudwatch:GetMetricStatistics"``
-- ``"cloudwatch:ListMetrics"``
-- ``"ec2:DescribeRegions"``
-
-.. _aws-iam-policy-ms:
-
-Metric collection (CloudWatch Metric Streams)
-------------------------------------------------------
-
-Include these permissions to allow Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
-
-- ``"cloudwatch:DeleteMetricStream"``
-- ``"cloudwatch:DescribeAlarms"``
-- ``"cloudwatch:GetMetricStream"``
-- ``"cloudwatch:ListMetricStreams"``
-- ``"cloudwatch:ListMetrics"``
-- ``"cloudwatch:PutMetricStream"``
-- ``"cloudwatch:StartMetricStreams"``
-- ``"cloudwatch:StopMetricStreams"``
-- ``"ec2:DescribeRegions"``
-- ``"iam:PassRole"``
-
-Note the ``iam:PassRole`` permission is restricted to resources matching the ``arn:aws:iam::*:role/splunk-metric-streams*`` pattern. See :ref:`AWS IAM policy for Metric Streams <metricstreams_iampolicy>` for details.
-
-.. _aws-iam-policy-logs:
-
-Log collection
----------------------------
-
-Include these permissions to allow Observability Cloud to collect AWS logs:
-
-- ``"cloudfront:GetDistributionConfig"``
-- ``"cloudfront:ListDistributions"``
-- ``"cloudfront:ListTagsForResource"``
-- ``"ec2:DescribeRegions"``
-- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
-- ``"elasticloadbalancing:DescribeLoadBalancers"``
-- ``"elasticloadbalancing:DescribeTags"``
-- ``"elasticloadbalancing:DescribeTargetGroups"``
-- ``"logs:DeleteSubscriptionFilter"``
-- ``"logs:DescribeLogGroups"``
-- ``"logs:DescribeSubscriptionFilters"``
-- ``"redshift:DescribeClusters"``
-- ``"redshift:DescribeLoggingStatus"``
-- ``"s3:GetBucketLogging"``
-- ``"s3:GetBucketNotification"``
-- ``"s3:ListAllMyBuckets"``
-- ``"s3:ListBucket"``
-- ``"s3:PutBucketNotification"``
-- ``"tag:GetResources"``
-
 Usage collection and reports
 ------------------------------------------------------
 
@@ -298,76 +303,9 @@ Include these permissions to allow Observability Cloud to collect AWS usage data
 - ``"ec2:DescribeRegions"``
 - ``"organizations:DescribeOrganization"``
 
-Tag and property collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Include these permissions to allow Observability Cloud to collect AWS tags and properties:
-
-- ``"apigateway:GET"``
-- ``"autoscaling:DescribeAutoScalingGroups"``
-- ``"cloudformation:ListResources"``
-- ``"cloudformation:GetResource"``
-- ``"cloudfront:GetDistributionConfig"``
-- ``"cloudfront:ListDistributions"``
-- ``"cloudfront:ListTagsForResource"``
-- ``"directconnect:DescribeConnections"``
-- ``"dynamodb:DescribeTable"``
-- ``"dynamodb:ListTables"``
-- ``"dynamodb:ListTagsOfResource"``
-- ``"ec2:DescribeInstances"``
-- ``"ec2:DescribeInstanceStatus"``
-- ``"ec2:DescribeNatGateways"``
-- ``"ec2:DescribeRegions"``
-- ``"ec2:DescribeReservedInstances"``
-- ``"ec2:DescribeReservedInstancesModifications"``
-- ``"ec2:DescribeTags"``
-- ``"ec2:DescribeVolumes"``
-- ``"ecS:DescribeClusters"``
-- ``"ecs:DescribeServices"``
-- ``"ecs:DescribeTasks"``
-- ``"ecs:ListClusters"``
-- ``"ecs:ListServices"``
-- ``"ecs:ListTagsForResource"``
-- ``"ecs:ListTaskDefinitions"``
-- ``"ecs:ListTasks"``
-- ``"elasticache:DescribeCacheClusters"``
-- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
-- ``"elasticloadbalancing:DescribeLoadBalancers"``
-- ``"elasticloadbalancing:DescribeTags"``
-- ``"elasticloadbalancing:DescribeTargetGroups"``
-- ``"elasticmapreduce:DescribeCluster"``
-- ``"elasticmapreduce:ListClusters"``
-- ``"es:DescribeElasticsearchDomain"``
-- ``"es:ListDomainNames"``
-- ``"kinesis:DescribeStream"``
-- ``"kinesis:DescribeStream"``
-- ``"kinesis:ListShards"``
-- ``"kinesis:ListStreams"``
-- ``"kinesis:ListStreams"``
-- ``"kinesis:ListTagsForStream"``
-- ``"kinesis:ListTagsForStream"``
-- ``"lambda:GetAlias"``
-- ``"lambda:ListFunctions"``
-- ``"lambda:ListTags"``
-- ``"rds:DescribeDBInstances"``
-- ``"rds:ListTagsForResource"``
-- ``"redshift:DescribeClusters"``
-- ``"redshift:DescribeLoggingStatus"``
-- ``"s3:GetBucketLocation"``
-- ``"s3:GetBucketTagging"``
-- ``"s3:ListAllMyBuckets"``
-- ``"s3:ListBucket"``
-- ``"states:ListActivities"``
-- ``"states:ListStateMachines"``
-- ``"sqs:GetQueueAttributes"``
-- ``"sqs:ListQueues"``
-- ``"sqs:ListQueueTags"``
-- ``"tag:GetResources"``
-- ``"workspaces:DescribeWorkspaces"``
-
 .. _aws-api-setup:
 
-1. Configure your setup
+3. Configure your setup
 =============================
 
 Provide the ARN role to the Infrastructure Monitoring component of Splunk Observability Cloud. You can also configure your connection to support any of the following use cases:
@@ -401,10 +339,37 @@ Observability Cloud synchronizes AWS integration settings with the logging confi
 
 See Splunk developer documentation about :new-page:`POST /integration <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration>` for more examples of the request format.
 
+.. _aws-iam-policy-logs:
+
+Permissions for log collection
+----------------------------------------
+
+These are the permissions to allow Observability Cloud to collect AWS logs. Include those related to your service in your IAM policy.
+
+- ``"cloudfront:GetDistributionConfig"``
+- ``"cloudfront:ListDistributions"``
+- ``"cloudfront:ListTagsForResource"``
+- ``"ec2:DescribeRegions"``
+- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
+- ``"elasticloadbalancing:DescribeLoadBalancers"``
+- ``"elasticloadbalancing:DescribeTags"``
+- ``"elasticloadbalancing:DescribeTargetGroups"``
+- ``"logs:DeleteSubscriptionFilter"``
+- ``"logs:DescribeLogGroups"``
+- ``"logs:DescribeSubscriptionFilters"``
+- ``"redshift:DescribeClusters"``
+- ``"redshift:DescribeLoggingStatus"``
+- ``"s3:GetBucketLogging"``
+- ``"s3:GetBucketNotification"``
+- ``"s3:ListAllMyBuckets"``
+- ``"s3:ListBucket"``
+- ``"s3:PutBucketNotification"``
+- ``"tag:GetResources"``
+
 .. _enable-cw-metricstreams:
 
-5. Enable CloudWatch Metric Streams
-=======================================
+5. Enable CloudWatch Metric Streams (optional)
+========================================================
 
 To enable CloudWatch Metric Streams as an alternative to traditional API polling, follow these steps:
 
@@ -422,7 +387,7 @@ To enable CloudWatch Metric Streams as an alternative to traditional API polling
 
 Next, to complete enabling Metric Streams:
 
-#. If you haven't already, add the :ref:`relevant permissions to the AWS IAM policy <metricstreams_iampolicy>`.
+#. If you haven't already, add the :ref:`relevant permissions to your AWS IAM policy <metricstreams_iampolicy>`.
 
 #. In every region from which you want to stream metrics from, :ref:`deploy CloudFormation <metricstreams_cloudformation>`.
 
@@ -437,11 +402,27 @@ This will create:
 - The IAM role that allows Kinesis Firehose to write the S3 bucket.
 
 .. _metricstreams_iampolicy:
+.. _aws-iam-policy-ms:
 
-Update the AWS IAM policy
--------------------------------
+Permissions for Metric Streams
+-----------------------------------------------------------
 
-To enable Metric Streams use the following AWS IAM policy. It includes the permissions with the ``MetricStream`` phrase and the ``iam:PassRole`` permission, which are required by the CloudWatch Metric Streams feature.
+Include these permissions to allow Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
+
+- ``"cloudwatch:DeleteMetricStream"``
+- ``"cloudwatch:DescribeAlarms"``
+- ``"cloudwatch:GetMetricStream"``
+- ``"cloudwatch:ListMetricStreams"``
+- ``"cloudwatch:ListMetrics"``
+- ``"cloudwatch:PutMetricStream"``
+- ``"cloudwatch:StartMetricStreams"``
+- ``"cloudwatch:StopMetricStreams"``
+- ``"ec2:DescribeRegions"``
+- ``"iam:PassRole"``
+
+Note the ``iam:PassRole`` permission is restricted to resources matching the ``arn:aws:iam::*:role/splunk-metric-streams*`` pattern. See :ref:`AWS IAM policy for Metric Streams <metricstreams_iampolicy>` for details.
+
+To enable Metric Streams use the following AWS IAM policy, which includes the ``MetricStream`` phrase and the ``iam:PassRole`` permissions required by the CloudWatch Metric Streams feature:
 
 .. code-block:: json
 
@@ -559,7 +540,7 @@ To collect CloudWatch Metric Streams or logs from all supported AWS services acr
 
 .. _aws-api-next-steps:
 
-Next steps
+6. Next steps
 =================
 
-After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
+After you connect Splunk Observability Cloud with AWS, you'll be able to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
