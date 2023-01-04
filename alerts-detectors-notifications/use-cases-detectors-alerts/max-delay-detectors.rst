@@ -1,7 +1,7 @@
 .. _max-delay-detectors-use-case:
 
 *************************************************************************
-Set max delay for detectors to account for sudden changes in delay
+Set Max Delay for detectors to account for sudden changes in delay
 *************************************************************************
 
 .. meta::

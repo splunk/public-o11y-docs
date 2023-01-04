@@ -1,7 +1,7 @@
 .. _min-delay-detectors-use-case:
 
 ********************************************************************
-Set min delay for detectors to account for sparse data
+Set Min Delay for detectors to account for sparse data
 ********************************************************************
 
 .. meta::
