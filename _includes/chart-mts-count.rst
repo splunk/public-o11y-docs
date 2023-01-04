@@ -11,7 +11,7 @@ To maximize responsiveness when processing incoming metric data, Splunk Observab
 (single plot line) on a chart or detector. If the total number of time series for the metric specified in your signal exceeds this limit, Observability Cloud displays
 an orange border around the MTS number. This border notifies you that the processed data reflects only a subset of the time series in the data.
 
-To ensure that your charts and detectors are processing all the time series in the data , apply as many filters as necessary to make the MTS number less than the maximum.
+To ensure that your charts and detectors are processing all the time series in the data, apply as many filters as necessary to make the MTS number less than the maximum.
 You’ll know you’ve succeeded when the orange outline around the MTS number and the message at the top of the chart or detector no longer appear.
 
 For example, suppose you want to display the sum of available disk capacity per availability zone. You might use ``df.complex.free`` as your signal,
