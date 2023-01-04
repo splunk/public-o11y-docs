@@ -73,7 +73,7 @@ The first thing Kai wants to know about the alert they just received is: What's 
 
     .. image:: /_images/get-started/endpoint-latency.png
       :width: 75%
-      :alt: This screenshot shows the Endpoint Latency module in Splunk Real User Monitoring. The module shows a latency of 8 seconds for the /cart/checkout endpoint.
+      :alt: This screenshot shows the Backend/Resource Request duration module in Splunk Real User Monitoring. The module shows a latency of 8 seconds for the /cart/checkout endpoint.
 
   2. Kai isn't sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :code:`/cart/checkout` endpoint because the page load time and largest contentful paint for :code:`cart/checkout` are also high.
   
