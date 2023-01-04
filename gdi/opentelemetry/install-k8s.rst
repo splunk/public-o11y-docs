@@ -1,8 +1,8 @@
 .. _otel-install-k8s:
 
-******************************
-Kubernetes
-******************************
+******************************************
+Install the Collector for Kubernetes
+******************************************
 
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
@@ -35,7 +35,7 @@ The chart is tested and works with default configurations on the following Kuber
 * Minikube
 * Red Hat OpenShift
 
-While this chart should work for other Kubernetes distributions, it may require additional configurations applied to the values.yaml configuration file.
+While the chart should work for other Kubernetes distributions, it may require additional configurations applied to the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file. For OpenShift, use the :new-page:`actively supported Kubernetes/Openshift versions <https://endoflife.date/kubernetes>`.
 
 How to use the chart
 --------------------------------
