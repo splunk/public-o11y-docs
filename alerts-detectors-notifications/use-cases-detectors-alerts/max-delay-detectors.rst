@@ -17,12 +17,12 @@ To make sure that the data from sudden lags is included in the detector computat
 
 Kai sees that the maximum delay for the late metric time series (MTS) is 10 minutes, so they configure a Max Delay of 10 minutes. Now the analytics engine can't run earlier than 10 minutes if known MTS have not sent a data point. If all known MTS send a data point, the computation can still occur before the 10-minute Max Delay.
 
-By setting a Min Delay threshold for :strong:`Service error`, Kai has successfully accounted for unexpected changes in delayed data and corrected the detector behavior.
+By setting a Max Delay threshold for :strong:`Service error`, Kai has successfully accounted for unexpected changes in delayed data and corrected the detector behavior.
 
 
 Learn more
 =======================
 
-For more information on Min delay for detectors, see :ref:`max-delay-detectors`. 
+For more information on Max Delay for detectors, see :ref:`max-delay-detectors`. 
 
 

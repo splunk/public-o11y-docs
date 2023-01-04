@@ -43,7 +43,7 @@ Min delay
 
 The :strong:`Min Delay` parameter specifies the minimum amount of time that the analytics engine must wait for data to arrive for a specific detector. 
 
-For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits for at least 2 minutes even if all the data points arrive on time with no delay. Because the detector will wait a minimum of 2 minutes whether the data arrives on time or not, you are prioritizing correctness over real-time alerting. :strong:`Min Delay` is most useful in cases of sparse data, where MTS for the detector haven't sent a data point in a long time.
+For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits for at least 2 minutes even if all the data points arrive on time with no delay. Because the detector will wait a minimum of 2 minutes whether the data arrives on time or not, you are prioritizing correctness over real-time alerting. :strong:`Min Delay` is most useful in cases of delayed new metric time series (MTS) or, sparsely emitting MTS for the detector compared to the existing set of MTS being computed on.
 
 By default, :strong:`Min Delay` is set to ``0``, which means the analytics engine does not have to wait to run the computation.
 
