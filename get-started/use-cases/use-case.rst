@@ -66,7 +66,7 @@ The first thing Kai wants to know about the alert they just received is: What's 
 
      .. image:: /_images/get-started/fe-errors.png
       :width: 35%
-     :alt: This screenshot shows the FE (frontend) Errors module in Splunk Real User Monitoring. The module shows the error rate for the last 15 minutes. The error rate is 74 errors per second.
+     :alt: This screenshot shows the JS (Javascript) Errors module in Splunk Real User Monitoring. The module shows the error rate for the last 15 minutes. The error rate is 74 errors per second.
 
    * High backend endpoint latency
 
