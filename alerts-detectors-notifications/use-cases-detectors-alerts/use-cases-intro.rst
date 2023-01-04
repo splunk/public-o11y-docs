@@ -14,8 +14,8 @@ Alerts and detectors use case library
     monitor-autodetect
     find-detectors
     troubleshoot-noisy-detectors
-    min-delay-detectors-use-case
-    max-delay-detectors-use-case
+    delay-detectors
+    max-delay-detectors
 
 Buttercup Games, a fictitious game company, recently began using their own network of server machines to host games for customers. Buttercup Games utilizes Splunk alerts and detectors to monitor host machine performance and to detect machine problems.
 
