@@ -12,8 +12,8 @@ To connect Splunk Observability Cloud to your AWS account, complete the followin
 #. :ref:`Create an AWS connection <aws-api-create-connection>`.
 #. :ref:`Review your IAM policy <review-aws-iam-policy>`. Specify whether to collect both metrics and logs, and whether to gather metrics by API polling (which is the default) or through CloudWatch Metric Streams.
 #. :ref:`Configure your setup <aws-api-setup>`. 
-#. :ref:`Collect logs <aws-api-logs>`.  
 #. Optionally, :ref:`enable Metric Streams <enable-cw-metricstreams>`.
+#. :ref:`Collect logs <aws-api-logs>`.  
 #. See :ref:`next steps <aws-api-next-steps>`. 
 
 .. _aws-api-create-connection:
@@ -477,8 +477,8 @@ Include these permissions to allow Observability Cloud to collect AWS usage data
 
 Provide the ARN role to the Infrastructure Monitoring component of Splunk Observability Cloud. You can also configure your connection to support any of the following use cases:
 
-- Collect metrics for selected regions and services using CloudWatch API.
-- Collect metrics for all regions and all services using CloudWatch API.
+- Collect metrics for selected regions and services using the CloudWatch API.
+- Collect metrics for all regions and all services using the CloudWatch API.
 - Collect metrics using CloudWatch Metric Streams by itself or together with log collection.
 
 The following example shows how to collect metrics from all regions and services by leaving the regions and services values unspecified.
@@ -492,24 +492,9 @@ The following example shows how to collect metrics from all regions and services
     --data-raw '{"authMethod": "ExternalId", "created": 1628082281828, "creator": "E73pzL5BUAI", "customCloudWatchNamespaces": null, "enableCheckLargeVolume": false, "enabled": true, "externalId": "jobcimfczlkhwxlqwbum", "id": "E78gbtjBcAA", "importCloudWatch": true, "largeVolume": false, "lastUpdated": 1628090302516, "lastUpdatedBy": "E73pzL5BUAI", "name": "AWS", "pollRate": 300000, "regions": [], "roleArn": "<your-aws-iam-role-arn>", "services": [], "sfxAwsAccountArn": "arn:aws:iam::134183635603:root", "syncLoadBalancerTargetGroupTags": false, "type": "AWSCloudWatch", "key": null, "token": null, "namedToken": "Default", "namespaceSyncRules": []}'
 
 
-.. _aws-api-logs:
-
-4. Collect logs
-===================================================
-
-To collect log data from any CloudWatch log group, perform the following steps:
-
-#. Deploy one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk that supports log collection.
-#. Update your AWS integration using the ``curl -X PUT`` request to set the ``logsSyncState`` field value to ``ENABLED``.
-#. Review the :ref:`required permissions for logs <aws-iam-policy-logs>`.
-
-Observability Cloud synchronizes AWS integration settings with the logging configuration information on your AWS customer account every 5 minutes, adding triggers for newly-added services, and deleting triggers from regions or services removed from the integration.
-
-See Splunk developer documentation about :new-page:`POST /integration <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration>` for more examples of the request format.
-
 .. _enable-cw-metricstreams:
 
-5. Enable CloudWatch Metric Streams (optional)
+4. Enable CloudWatch Metric Streams (optional)
 ========================================================
 
 To enable CloudWatch Metric Streams as an alternative to traditional API polling, follow these steps:
@@ -546,9 +531,24 @@ To collect CloudWatch Metric Streams or logs from all supported AWS services acr
 - See the :ref:`CloudFormation templates table <aws-cloudformation>` for more information.
 - You can find your access token in your account's profile settings.
 
+.. _aws-api-logs:
+
+5. Collect logs
+===================================================
+
+To collect log data from any CloudWatch log group, perform the following steps:
+
+#. Deploy one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk that supports log collection.
+#. Update your AWS integration using the ``curl -X PUT`` request to set the ``logsSyncState`` field value to ``ENABLED``.
+#. Review the :ref:`required permissions for logs <aws-iam-policy-logs>`.
+
+Observability Cloud synchronizes AWS integration settings with the logging configuration information on your AWS customer account every 5 minutes, adding triggers for newly-added services, and deleting triggers from regions or services removed from the integration.
+
+See Splunk developer documentation about :new-page:`POST /integration <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration>` for more examples of the request format.
+
 .. _aws-api-next-steps:
 
-6. Next steps
+1. Next steps
 =================
 
 After you connect Splunk Observability Cloud with AWS, you'll be able to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
