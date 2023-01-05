@@ -93,7 +93,7 @@ To collect AWS data, review the permissions in this document:
 * :ref:`Required permissions <aws-iam-policy-required>`
 * :ref:`Permissions for the CloudWatch API <aws-iam-policy-cw>` 
 * :ref:`Permissions for Metric Streams <aws-iam-policy-ms>`
-* :ref:`Service-based permissions <aws-iam-policy-services>`
+* :ref:`Permissions for tag and properties collection <aws-iam-policy-services>`
 * :ref:`Permissions for logs <aws-iam-policy-logs>`
 * :ref:`Permissions for usage collection and reports <aws-iam-policy-reports>`
 
@@ -104,7 +104,7 @@ Required permissions in Observability Cloud
 
 Regardless of the services you want to use, you need the following permissions:
 
-* ``organizations:DescribeOrganization``: Only needed when Amazon cost and usage metrics are enabled.
+* ``organizations:DescribeOrganization``. Only needed when Amazon cost and usage metrics are enabled.
 * ``ec2:DescribeRegions``
 * ``tag:GetResources``
 
@@ -196,10 +196,10 @@ For example:
 
 .. _aws-iam-policy-services:
 
-Service-based permissions 
+Permissions for tag and properties collection
 ---------------------------------------------------------------------------------------
 
-On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS service data. 
+On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS' tags and properties. You'll be able to use Infrastructure Monitoring :ref:`to filter metrics based on those tags and properies <aws-filter>`.
 
 These are these permissions to allow Observability Cloud to collect AWS tags and properties:
 
@@ -282,7 +282,6 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "cloudfront:GetDistributionConfig",
           "cloudfront:ListDistributions",
           "cloudfront:ListTagsForResource",
-          "cloudwatch:DescribeAlarms",
           "cloudwatch:GetMetricData",
           "cloudwatch:GetMetricStatistics",
           "cloudwatch:ListMetrics",
@@ -471,7 +470,7 @@ See Splunk developer documentation about :new-page:`POST /integration <https://d
 
 .. _aws-api-next-steps:
 
-1. Next steps
+6. Next steps
 =================
 
 After you connect Splunk Observability Cloud with AWS, you'll be able to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
