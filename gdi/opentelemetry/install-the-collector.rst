@@ -13,8 +13,8 @@ Install the Collector
     :hidden:
 
     Kubernetes <install-k8s.rst>
-    install-linux.rst
-    install-windows.rst
+    Linux <install-linux.rst>
+    Windows <install-windows.rst>
     deployments/otel-deployments.rst
     uninstall-the-collector.rst
 

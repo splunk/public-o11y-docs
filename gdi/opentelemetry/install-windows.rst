@@ -1,8 +1,8 @@
 .. _otel-install-windows:
 
-****************************
-Windows
-****************************
+**************************************************
+Install the Collector for Windows
+**************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows.
