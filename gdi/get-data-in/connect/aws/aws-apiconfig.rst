@@ -88,11 +88,14 @@ For further information and more examples on how to integrate AWS monitoring wit
 2. Review your IAM policy
 =====================================================
 
-Review the permissions in this document to collect:
+To collect AWS data, review the permissions in this document:
 
-* Metrics from services
+* :ref:`Required permissions <aws-iam-policy-required>`
+* :ref:`Permissions for the CloudWatch API <aws-iam-policy-cw>` 
 * :ref:`Permissions for Metric Streams <aws-iam-policy-ms>`
+* :ref:`Service-based permissions <aws-iam-policy-services>`
 * :ref:`Permissions for logs <aws-iam-policy-logs>`
+* :ref:`Permissions for usage collection and reports <aws-iam-policy-reports>`
 
 .. _aws-iam-policy-required:
 
@@ -101,17 +104,26 @@ Required permissions in Observability Cloud
 
 Regardless of the services you want to use, you need the following permissions:
 
-* ``cloudwatch:GetMetricData``
-* ``cloudwatch:GetMetricStatistics``: Required to retrieve metrics from CloudWatch
-* ``cloudwatch:ListMetrics``
-* ``organizations:DescribeOrganization``: Required when the Amazon cost and usage metric integration option is enabled
-* ``tag:GetResources``: Allows the Resource Groups Tagging API to retrieve tags for selected AWS resources
+* ``organizations:DescribeOrganization``
+* ``tag:GetResources``
 
 Optional (but recommended) permissions:
 
-* ``ec2:DescribeRegions``: Needed to detect which AWS regions you're using
+* ``ec2:DescribeRegions``
 
-The default AWS Identify and Access Management (IAM) policy looks like this:
+.. _aws-iam-policy-cw:
+
+Permissions for the CloudWatch API
+-----------------------------------------------------------
+
+Include these permissions to allow Observability Cloud to collect AWS metrics using the CloudWatch API:
+
+* ``cloudwatch:GetMetricData``
+* ``cloudwatch:GetMetricStatistics``
+* ``cloudwatch:ListMetrics``
+* ``"ec2:DescribeRegions"``
+
+For example:
 
 .. code-block:: json
 
@@ -133,9 +145,135 @@ The default AWS Identify and Access Management (IAM) policy looks like this:
     ]
   }
 
+.. _metricstreams_iampolicy:
+.. _aws-iam-policy-ms:
+
+Permissions for Metric Streams
+-----------------------------------------------------------
+
+Include these permissions to allow Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
+
+- ``"cloudwatch:DeleteMetricStream"``
+- ``"cloudwatch:DescribeAlarms"``
+- ``"cloudwatch:GetMetricStream"``
+- ``"cloudwatch:ListMetricStreams"``
+- ``"cloudwatch:ListMetrics"``
+- ``"cloudwatch:PutMetricStream"``
+- ``"cloudwatch:StartMetricStreams"``
+- ``"cloudwatch:StopMetricStreams"``
+- ``"ec2:DescribeRegions"``
+- ``"iam:PassRole"``
+
+These permissions include the ``MetricStream`` phrase and the ``iam:PassRole`` permissions. Note the ``iam:PassRole`` permission is restricted to resources matching the ``arn:aws:iam::*:role/splunk-metric-streams*`` pattern. 
+
+For example:
+
+.. code-block:: json
+
+  {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "apigateway:GET",
+        "autoscaling:DescribeAutoScalingGroups",
+        "cloudformation:ListResources",
+        "cloudformation:GetResource",
+        "cloudfront:GetDistributionConfig",
+        "cloudfront:ListDistributions",
+        "cloudfront:ListTagsForResource",
+        "cloudwatch:DescribeAlarms",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:ListMetrics",
+        "directconnect:DescribeConnections",
+        "dynamodb:DescribeTable",
+        "dynamodb:ListTables",
+        "dynamodb:ListTagsOfResource",
+        "ec2:DescribeInstances",
+        "ec2:DescribeInstanceStatus",
+        "ec2:DescribeNatGateways",
+        "ec2:DescribeRegions",
+        "ec2:DescribeReservedInstances",
+        "ec2:DescribeReservedInstancesModifications",
+        "ec2:DescribeTags",
+        "ec2:DescribeVolumes",
+        "ecs:DescribeClusters",
+        "ecs:DescribeServices",
+        "ecs:DescribeTasks",
+        "ecs:ListClusters",
+        "ecs:ListServices",
+        "ecs:ListTagsForResource",
+        "ecs:ListTaskDefinitions",
+        "ecs:ListTasks",
+        "eks:DescribeCluster",
+        "eks:ListClusters",
+        "elasticache:DescribeCacheClusters",
+        "elasticloadbalancing:DescribeLoadBalancerAttributes",
+        "elasticloadbalancing:DescribeLoadBalancers",
+        "elasticloadbalancing:DescribeTags",
+        "elasticloadbalancing:DescribeTargetGroups",
+        "elasticmapreduce:DescribeCluster",
+        "elasticmapreduce:ListClusters",
+        "es:DescribeElasticsearchDomain",
+        "es:ListDomainNames",
+        "kinesis:DescribeStream",
+        "kinesis:ListShards",
+        "kinesis:ListStreams",
+        "kinesis:ListTagsForStream",
+        "kinesisanalytics:ListApplications",
+        "kinesisanalytics:DescribeApplication",
+        "lambda:GetAlias",
+        "lambda:ListFunctions",
+        "lambda:ListTags",
+        "logs:DeleteSubscriptionFilter",
+        "logs:DescribeLogGroups",
+        "logs:DescribeSubscriptionFilters",
+        "logs:PutSubscriptionFilter",
+        "organizations:DescribeOrganization",
+        "rds:DescribeDBInstances",
+        "rds:DescribeDBClusters",
+        "rds:ListTagsForResource",
+        "redshift:DescribeClusters",
+        "redshift:DescribeLoggingStatus",
+        "s3:GetBucketLocation",
+        "s3:GetBucketLogging",
+        "s3:GetBucketNotification",
+        "s3:GetBucketTagging",
+        "s3:ListAllMyBuckets",
+        "s3:ListBucket",
+        "s3:PutBucketNotification",
+        "sqs:GetQueueAttributes",
+        "sqs:ListQueues",
+        "sqs:ListQueueTags",
+        "states:ListActivities",
+        "states:ListStateMachines",
+        "tag:GetResources",
+        "workspaces:DescribeWorkspaces",
+        "cloudwatch:ListMetricStreams",
+        "cloudwatch:GetMetricStream",
+        "cloudwatch:PutMetricStream",
+        "cloudwatch:DeleteMetricStream",
+        "cloudwatch:StartMetricStreams",
+        "cloudwatch:StopMetricStreams"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:PassRole"
+      ],
+      "Resource": "arn:aws:iam::*:role/splunk-metric-streams*"
+    }
+  ]
+  }
+
+
 .. _aws-iam-policy-services:
 
-Service-based permissions for tag and property collection
+Service-based permissions 
 ---------------------------------------------------------------------------------------
 
 On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS service data. 
@@ -295,7 +433,36 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
     ]
   }
 
-Usage collection and reports
+.. _aws-iam-policy-logs:
+
+Permissions for log collection
+----------------------------------------
+
+These are the permissions to allow Observability Cloud to collect AWS logs. Include those related to your service in your IAM policy.
+
+- ``"cloudfront:GetDistributionConfig"``
+- ``"cloudfront:ListDistributions"``
+- ``"cloudfront:ListTagsForResource"``
+- ``"ec2:DescribeRegions"``
+- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
+- ``"elasticloadbalancing:DescribeLoadBalancers"``
+- ``"elasticloadbalancing:DescribeTags"``
+- ``"elasticloadbalancing:DescribeTargetGroups"``
+- ``"logs:DeleteSubscriptionFilter"``
+- ``"logs:DescribeLogGroups"``
+- ``"logs:DescribeSubscriptionFilters"``
+- ``"redshift:DescribeClusters"``
+- ``"redshift:DescribeLoggingStatus"``
+- ``"s3:GetBucketLogging"``
+- ``"s3:GetBucketNotification"``
+- ``"s3:ListAllMyBuckets"``
+- ``"s3:ListBucket"``
+- ``"s3:PutBucketNotification"``
+- ``"tag:GetResources"``
+
+.. _aws-iam-policy-reports:
+
+Permissions for usage collection and reports
 ------------------------------------------------------
 
 Include these permissions to allow Observability Cloud to collect AWS usage data and reports:
@@ -334,37 +501,11 @@ To collect log data from any CloudWatch log group, perform the following steps:
 
 #. Deploy one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk that supports log collection.
 #. Update your AWS integration using the ``curl -X PUT`` request to set the ``logsSyncState`` field value to ``ENABLED``.
+#. Review the :ref:`required permissions for logs <aws-iam-policy-logs>`.
 
 Observability Cloud synchronizes AWS integration settings with the logging configuration information on your AWS customer account every 5 minutes, adding triggers for newly-added services, and deleting triggers from regions or services removed from the integration.
 
 See Splunk developer documentation about :new-page:`POST /integration <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-create-integration>` for more examples of the request format.
-
-.. _aws-iam-policy-logs:
-
-Permissions for log collection
-----------------------------------------
-
-These are the permissions to allow Observability Cloud to collect AWS logs. Include those related to your service in your IAM policy.
-
-- ``"cloudfront:GetDistributionConfig"``
-- ``"cloudfront:ListDistributions"``
-- ``"cloudfront:ListTagsForResource"``
-- ``"ec2:DescribeRegions"``
-- ``"elasticloadbalancing:DescribeLoadBalancerAttributes"``
-- ``"elasticloadbalancing:DescribeLoadBalancers"``
-- ``"elasticloadbalancing:DescribeTags"``
-- ``"elasticloadbalancing:DescribeTargetGroups"``
-- ``"logs:DeleteSubscriptionFilter"``
-- ``"logs:DescribeLogGroups"``
-- ``"logs:DescribeSubscriptionFilters"``
-- ``"redshift:DescribeClusters"``
-- ``"redshift:DescribeLoggingStatus"``
-- ``"s3:GetBucketLogging"``
-- ``"s3:GetBucketNotification"``
-- ``"s3:ListAllMyBuckets"``
-- ``"s3:ListBucket"``
-- ``"s3:PutBucketNotification"``
-- ``"tag:GetResources"``
 
 .. _enable-cw-metricstreams:
 
@@ -374,13 +515,9 @@ These are the permissions to allow Observability Cloud to collect AWS logs. Incl
 To enable CloudWatch Metric Streams as an alternative to traditional API polling, follow these steps:
 
 #. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
-
 #. Set the ``metricStreamsSyncState`` field to ``ENABLED``.
-
 #. Set the ``importCloudWatch`` field to ``true``.
-
 #. Set the ``enabled`` field to ``true``.
-
 #. Submit a PUT request to the ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` endpoint to save your updated settings.
 
 .. note:: When you edit an AWS integration through the user interface for Splunk Observability Cloud, the integration ID shows in your browser address bar as an alphanumeric string in quotation marks (") after a colon (:) at the end of the URL.
@@ -388,143 +525,14 @@ To enable CloudWatch Metric Streams as an alternative to traditional API polling
 Next, to complete enabling Metric Streams:
 
 #. If you haven't already, add the :ref:`relevant permissions to your AWS IAM policy <metricstreams_iampolicy>`.
-
 #. In every region from which you want to stream metrics from, :ref:`deploy CloudFormation <metricstreams_cloudformation>`.
 
-This will create:
+This creates:
 
 - Kinesis Firehose.
-
 - The S3 bucket, to back up the events that Kinesis Data Firehose fails to send to the specified HTTP endpoint.
-
 - The IAM role that Metric Streams will use.
-
 - The IAM role that allows Kinesis Firehose to write the S3 bucket.
-
-.. _metricstreams_iampolicy:
-.. _aws-iam-policy-ms:
-
-Permissions for Metric Streams
------------------------------------------------------------
-
-Include these permissions to allow Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
-
-- ``"cloudwatch:DeleteMetricStream"``
-- ``"cloudwatch:DescribeAlarms"``
-- ``"cloudwatch:GetMetricStream"``
-- ``"cloudwatch:ListMetricStreams"``
-- ``"cloudwatch:ListMetrics"``
-- ``"cloudwatch:PutMetricStream"``
-- ``"cloudwatch:StartMetricStreams"``
-- ``"cloudwatch:StopMetricStreams"``
-- ``"ec2:DescribeRegions"``
-- ``"iam:PassRole"``
-
-Note the ``iam:PassRole`` permission is restricted to resources matching the ``arn:aws:iam::*:role/splunk-metric-streams*`` pattern. See :ref:`AWS IAM policy for Metric Streams <metricstreams_iampolicy>` for details.
-
-To enable Metric Streams use the following AWS IAM policy, which includes the ``MetricStream`` phrase and the ``iam:PassRole`` permissions required by the CloudWatch Metric Streams feature:
-
-.. code-block:: json
-
-  {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "apigateway:GET",
-        "autoscaling:DescribeAutoScalingGroups",
-        "cloudformation:ListResources",
-        "cloudformation:GetResource",
-        "cloudfront:GetDistributionConfig",
-        "cloudfront:ListDistributions",
-        "cloudfront:ListTagsForResource",
-        "cloudwatch:DescribeAlarms",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics",
-        "cloudwatch:ListMetrics",
-        "directconnect:DescribeConnections",
-        "dynamodb:DescribeTable",
-        "dynamodb:ListTables",
-        "dynamodb:ListTagsOfResource",
-        "ec2:DescribeInstances",
-        "ec2:DescribeInstanceStatus",
-        "ec2:DescribeNatGateways",
-        "ec2:DescribeRegions",
-        "ec2:DescribeReservedInstances",
-        "ec2:DescribeReservedInstancesModifications",
-        "ec2:DescribeTags",
-        "ec2:DescribeVolumes",
-        "ecs:DescribeClusters",
-        "ecs:DescribeServices",
-        "ecs:DescribeTasks",
-        "ecs:ListClusters",
-        "ecs:ListServices",
-        "ecs:ListTagsForResource",
-        "ecs:ListTaskDefinitions",
-        "ecs:ListTasks",
-        "eks:DescribeCluster",
-        "eks:ListClusters",
-        "elasticache:DescribeCacheClusters",
-        "elasticloadbalancing:DescribeLoadBalancerAttributes",
-        "elasticloadbalancing:DescribeLoadBalancers",
-        "elasticloadbalancing:DescribeTags",
-        "elasticloadbalancing:DescribeTargetGroups",
-        "elasticmapreduce:DescribeCluster",
-        "elasticmapreduce:ListClusters",
-        "es:DescribeElasticsearchDomain",
-        "es:ListDomainNames",
-        "kinesis:DescribeStream",
-        "kinesis:ListShards",
-        "kinesis:ListStreams",
-        "kinesis:ListTagsForStream",
-        "kinesisanalytics:ListApplications",
-        "kinesisanalytics:DescribeApplication",
-        "lambda:GetAlias",
-        "lambda:ListFunctions",
-        "lambda:ListTags",
-        "logs:DeleteSubscriptionFilter",
-        "logs:DescribeLogGroups",
-        "logs:DescribeSubscriptionFilters",
-        "logs:PutSubscriptionFilter",
-        "organizations:DescribeOrganization",
-        "rds:DescribeDBInstances",
-        "rds:DescribeDBClusters",
-        "rds:ListTagsForResource",
-        "redshift:DescribeClusters",
-        "redshift:DescribeLoggingStatus",
-        "s3:GetBucketLocation",
-        "s3:GetBucketLogging",
-        "s3:GetBucketNotification",
-        "s3:GetBucketTagging",
-        "s3:ListAllMyBuckets",
-        "s3:ListBucket",
-        "s3:PutBucketNotification",
-        "sqs:GetQueueAttributes",
-        "sqs:ListQueues",
-        "sqs:ListQueueTags",
-        "states:ListActivities",
-        "states:ListStateMachines",
-        "tag:GetResources",
-        "workspaces:DescribeWorkspaces",
-        "cloudwatch:ListMetricStreams",
-        "cloudwatch:GetMetricStream",
-        "cloudwatch:PutMetricStream",
-        "cloudwatch:DeleteMetricStream",
-        "cloudwatch:StartMetricStreams",
-        "cloudwatch:StopMetricStreams"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "iam:PassRole"
-      ],
-      "Resource": "arn:aws:iam::*:role/splunk-metric-streams*"
-    }
-  ]
-  }
 
 See :new-page:`Create an AWS integration using an external ID and ARN <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/#Create-an-AWS-integration-using-an-external-ID-and-ARN>` in the Splunk developer documentation for syntax examples.
 
