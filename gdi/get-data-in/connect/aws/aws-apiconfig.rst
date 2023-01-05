@@ -104,24 +104,20 @@ Required permissions in Observability Cloud
 
 Regardless of the services you want to use, you need the following permissions:
 
-* ``organizations:DescribeOrganization``
-* ``tag:GetResources``
-
-Optional (but recommended) permissions:
-
+* ``organizations:DescribeOrganization``: Only needed when Amazon cost and usage metrics are enabled.
 * ``ec2:DescribeRegions``
+* ``tag:GetResources``
 
 .. _aws-iam-policy-cw:
 
 Permissions for the CloudWatch API
 -----------------------------------------------------------
 
-Include these permissions to allow Observability Cloud to collect AWS metrics using the CloudWatch API:
+Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Observability Cloud to collect AWS metrics using the CloudWatch API:
 
 * ``cloudwatch:GetMetricData``
 * ``cloudwatch:GetMetricStatistics``
 * ``cloudwatch:ListMetrics``
-* ``"ec2:DescribeRegions"``
 
 For example:
 
@@ -151,17 +147,15 @@ For example:
 Permissions for Metric Streams
 -----------------------------------------------------------
 
-Include these permissions to allow Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
+Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Observability Cloud to collect AWS metrics using CloudWatch Metric Streams:
 
 - ``"cloudwatch:DeleteMetricStream"``
-- ``"cloudwatch:DescribeAlarms"``
 - ``"cloudwatch:GetMetricStream"``
 - ``"cloudwatch:ListMetricStreams"``
 - ``"cloudwatch:ListMetrics"``
 - ``"cloudwatch:PutMetricStream"``
 - ``"cloudwatch:StartMetricStreams"``
 - ``"cloudwatch:StopMetricStreams"``
-- ``"ec2:DescribeRegions"``
 - ``"iam:PassRole"``
 
 These permissions include the ``MetricStream`` phrase and the ``iam:PassRole`` permissions. Note the ``iam:PassRole`` permission is restricted to resources matching the ``arn:aws:iam::*:role/splunk-metric-streams*`` pattern. 
@@ -176,87 +170,16 @@ For example:
     {
       "Effect": "Allow",
       "Action": [
-        "apigateway:GET",
-        "autoscaling:DescribeAutoScalingGroups",
-        "cloudformation:ListResources",
-        "cloudformation:GetResource",
-        "cloudfront:GetDistributionConfig",
-        "cloudfront:ListDistributions",
-        "cloudfront:ListTagsForResource",
-        "cloudwatch:DescribeAlarms",
-        "cloudwatch:GetMetricData",
-        "cloudwatch:GetMetricStatistics",
-        "cloudwatch:ListMetrics",
-        "directconnect:DescribeConnections",
-        "dynamodb:DescribeTable",
-        "dynamodb:ListTables",
-        "dynamodb:ListTagsOfResource",
-        "ec2:DescribeInstances",
-        "ec2:DescribeInstanceStatus",
-        "ec2:DescribeNatGateways",
-        "ec2:DescribeRegions",
-        "ec2:DescribeReservedInstances",
-        "ec2:DescribeReservedInstancesModifications",
-        "ec2:DescribeTags",
-        "ec2:DescribeVolumes",
-        "ecs:DescribeClusters",
-        "ecs:DescribeServices",
-        "ecs:DescribeTasks",
-        "ecs:ListClusters",
-        "ecs:ListServices",
-        "ecs:ListTagsForResource",
-        "ecs:ListTaskDefinitions",
-        "ecs:ListTasks",
-        "eks:DescribeCluster",
-        "eks:ListClusters",
-        "elasticache:DescribeCacheClusters",
-        "elasticloadbalancing:DescribeLoadBalancerAttributes",
-        "elasticloadbalancing:DescribeLoadBalancers",
-        "elasticloadbalancing:DescribeTags",
-        "elasticloadbalancing:DescribeTargetGroups",
-        "elasticmapreduce:DescribeCluster",
-        "elasticmapreduce:ListClusters",
-        "es:DescribeElasticsearchDomain",
-        "es:ListDomainNames",
-        "kinesis:DescribeStream",
-        "kinesis:ListShards",
-        "kinesis:ListStreams",
-        "kinesis:ListTagsForStream",
-        "kinesisanalytics:ListApplications",
-        "kinesisanalytics:DescribeApplication",
-        "lambda:GetAlias",
-        "lambda:ListFunctions",
-        "lambda:ListTags",
-        "logs:DeleteSubscriptionFilter",
-        "logs:DescribeLogGroups",
-        "logs:DescribeSubscriptionFilters",
-        "logs:PutSubscriptionFilter",
-        "organizations:DescribeOrganization",
-        "rds:DescribeDBInstances",
-        "rds:DescribeDBClusters",
-        "rds:ListTagsForResource",
-        "redshift:DescribeClusters",
-        "redshift:DescribeLoggingStatus",
-        "s3:GetBucketLocation",
-        "s3:GetBucketLogging",
-        "s3:GetBucketNotification",
-        "s3:GetBucketTagging",
-        "s3:ListAllMyBuckets",
-        "s3:ListBucket",
-        "s3:PutBucketNotification",
-        "sqs:GetQueueAttributes",
-        "sqs:ListQueues",
-        "sqs:ListQueueTags",
-        "states:ListActivities",
-        "states:ListStateMachines",
-        "tag:GetResources",
-        "workspaces:DescribeWorkspaces",
+        "cloudwatch:GetMetricStream",       
+        "cloudwatch:ListMetrics"
         "cloudwatch:ListMetricStreams",
-        "cloudwatch:GetMetricStream",
         "cloudwatch:PutMetricStream",
         "cloudwatch:DeleteMetricStream",
         "cloudwatch:StartMetricStreams",
         "cloudwatch:StopMetricStreams"
+        "ec2:DescribeRegions",
+        "organizations:DescribeOrganization",
+        "tag:GetResources",
       ],
       "Resource": "*"
     },
