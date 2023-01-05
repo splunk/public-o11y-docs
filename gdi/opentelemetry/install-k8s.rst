@@ -13,12 +13,13 @@ Install the chart using one of these methods:
 
 * :ref:`Helm chart <helm-chart>`
 * :ref:`Resource YAML manifests <resource-yaml-manifests>`
-* :ref:`Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator (Alpha) <k8s-operator>`
+* :ref:`Kubernetes Operator (Alpha) <k8s-operator>`
 
 .. _helm-chart:
 
-Helm chart
-===================
+Install the Collector with Helm chart
+==============================================
+
 Use the chart to do the following:
 
 * Create a Kubernetes DaemonSet along with other Kubernetes objects in a Kubernetes cluster
@@ -43,7 +44,7 @@ How to use the chart
 You need the following resources to use the chart:
 
 * Helm 3. Helm 2 is not supported.
-* A Kubernetes cluster
+* A Kubernetes cluster.
 * Access Token: ``splunkObservability.accessToken``. Your Splunk Observability org access token. See :ref:`admin-org-tokens`.
 * Splunk Realm: ``splunkObservability.realm``. Splunk realm to send telemetry data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
 * Cluster name: ``clusterName``. This is an arbitrary value that identifies your Kubernetes cluster.
@@ -67,8 +68,8 @@ See :new-page:`examples of Helm chart configuration <https://github.com/signalfx
 
 .. _resource-yaml-manifests:
 
-Resource YAML manifests
-============================
+Install the Collector with resource YAML manifests
+=======================================================
 
 .. note::
 
@@ -100,7 +101,7 @@ For Gateway mode, download the :new-page:`gateway-only manifest directory on Git
 
 .. _k8s-operator:
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator (Alpha)
+Install the Collector for the Kubernetes Operator (Alpha)
 ============================================================================================
 
 .. caution::
@@ -119,9 +120,9 @@ The :new-page:`Splunk kubectl plugin <https://github.com/signalfx/kubectl-splunk
 * kubectl-splunk get, which is a command that can be used to retrieve any Kubernetes resource (for example, pods, daemonsets, configmaps) that is automatically filtered by ``app=splunk-otel-collector``.
 * kubectl-splunk status, which is a longer description that spans multiple lines and likely contains examples and usage of using your command. 
 
-More options
+Next steps
 ==================================
-Once you have installed the package, you can perform these actions:
+After installing the package, you can:
 
 * :new-page:`Get started using Log Observer <https://quickdraw.splunk.com/redirect/?product=Observability&location=log.observer.setup&version=current>`
 * :ref:`apm`
