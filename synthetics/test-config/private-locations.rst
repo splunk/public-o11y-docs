@@ -7,13 +7,6 @@ Private locations
 .. meta::
     :description: Learn about private locations in Splunk Synthetic Monitoring.
 
-.. admonition:: Preview feature
-
-    Preview features described in this document are provided by Splunk to you "as is" without any warranties, maintenance and support, or service level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. These documents are not yet publicly available and we ask that you keep such information confidential. Use of preview features is subject to the :new-page:`Splunk Pre-Release Agreement for Hosted Services <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>`.
-
-
-
-
 A Private location is a software package that enables quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test earlier in the development cycle and against internal sites or applications that aren't available to the public.
 
 Customers can, through the Splunk Synthetics Monitoring web interface, create new Private locations and launch a runner to perform any checks that are assigned to them.
@@ -76,32 +69,42 @@ Manage your tokens
 --------------------
 It is your responsibility to update and manage your tokens. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
 
+Troubleshooting queue length and latency
+=============================================
 
-.. 
-  Assess the health of your private location
-  ==============================================
+If both the queue latency and length increase over time, then add more runners to improve performance. 
 
-  A private location's health is based on three factors:
+If your queue latency increases but your queue length doesn’t, then try these troubleshooting methods:
 
-  .. list-table::
-    :header-rows: 1
-    :widths: 20 40 40 
+* Check to see  if a step is delaying the rest of the test
+* Investigate whether you have the sufficient resources to run private location runners on your machines.
 
-    * - :strong:`Factor`
-      - :strong:`Description`
-      - :strong:`Solution`
+The maximum number of runners in a queue is 100,000. 
 
-    * - Active runner
-      - At least one runner is actively checking in.
-      - If no runners are checking in, set up new runners for the private location. 
+Any runners older than one hour are removed from the queue. 
 
-    * - Used in tests
-      - The private location is currently being used in one or more tests.
-      - Add the private location to one or more tests. 
 
-    * - Clear queue
-      - The queue for a given location is being cleared periodically and is not backed up.
-      - If the queue is backed up, add new runner(s) to the private location.
+Assess the health of your private location
+==============================================
+
+A private location's health is based on three factors:
+
+.. list-table::
+  :header-rows: 1
+  :widths: 20 40 40 
+
+  * - :strong:`Factor`
+    - :strong:`Description`
+    - :strong:`Solution`
+  * - Active runner
+    - At least one runner is actively checking in.
+    - If no runners are checking in, set up new runners for the private location. 
+  * - Used in tests
+    - The private location is currently being used in one or more tests.
+    - Add the private location to one or more tests. 
+  * - Clear queue
+    - The queue for a given location is being cleared periodically and is not backed up.
+    - If the queue is backed up, add new runner(s) to the private location.
 
 
 
