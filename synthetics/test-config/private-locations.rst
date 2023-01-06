@@ -69,19 +69,6 @@ Manage your tokens
 --------------------
 It is your responsibility to update and manage your tokens. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
 
-Troubleshooting queue length and latency
-=============================================
-
-If both the queue latency and length increase over time, then add more runners to improve performance. 
-
-If your queue latency increases but your queue length doesn’t, then try these troubleshooting methods:
-
-* Check to see  if a step is delaying the rest of the test
-* Investigate whether you have the sufficient resources to run private location runners on your machines.
-
-The maximum number of runners in a queue is 100,000. 
-
-Any runners older than one hour are removed from the queue. 
 
 
 Assess the health of your private location
@@ -106,6 +93,18 @@ A private location's health is based on three factors:
     - The queue for a given location is being cleared periodically and is not backed up.
     - If the queue is backed up, add new runner(s) to the private location.
 
+Troubleshoot queue length and latency
+---------------------------------------------------
 
+If both the queue latency and length increase over time, then add more runners to improve performance. 
+
+If your queue latency increases but your queue length doesn’t, then try these troubleshooting methods:
+
+* Check to see  if a step is delaying the rest of the test
+* Investigate whether you have the sufficient resources to run private location runners on your machines.
+
+The maximum number of runners in a queue is 100,000. 
+
+Any runners older than one hour are removed from the queue. 
 
 
