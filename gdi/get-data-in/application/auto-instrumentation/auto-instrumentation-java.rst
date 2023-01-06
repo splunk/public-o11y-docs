@@ -5,92 +5,165 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java
 *****************************************************************************
 
 .. meta::
-   :description: Use automatic instrumentation to send traces to Splunk APM without altering your code.
+   :description: Use automatic instrumentation to send traces to Splunk Observability Cloud Application Performance Monitoring (APM) without altering your code.
 
-Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java provides a package that automatically instruments your local Java applications to capture and report distributed traces to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
+Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java automatically instruments supported Java libraries in running applications to capture distributed traces. The Splunk OpenTelemetry Collector receives the distributed traces and forwards them to Splunk Application Performance Monitoring (APM) in Splunk Observability Cloud.
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java provides the following benefits:
 
+- You don't need to configure or manually instrument your applications before deployment if your Java applications use any of the supported libraries.
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
-- You don't need to configure or instrument your Java back-end services or applications before deployment.
+
+To enable automatic instrumentation, install the ``splunk-otel-auto-instrumentation`` package. After installing the package, you must start or restart any Java applications that you want to instrument.
+
+.. _prerequisites:
+
+Prerequisites
+===========================
+
+- Automatic instrumentation is only available for applications using one or more of the :ref:`supported-java-libraries`. If your application is not currently supported, you can :ref:`java-manual-instrumentation` to generate trace data.
+
+- :ref:`java-requirements`.
+
+- Your Splunk Observability Cloud realm and access token.
+
+   - To get an access token, see :ref:`admin-api-access-tokens`.
+
+   - To find the realm name of your account, open the navigation menu in Observability Cloud. Select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+
 
 .. _install-the-package:
 
 Install the package
 =========================================================
 
-You can install the package in two ways:
+You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
 
-- :ref:`install-with-script`
-- :ref:`install-manually`
-
-.. _install-with-script:
-
-Install using the Collector installer script
----------------------------------------------
-
-By default, the installer script only installs the Collector. If the ``--with-instrumentation`` option is specified, the installer script also installs the agent from the Splunk Distribution of OpenTelemetry Java, which is then loaded automatically when a Java application starts on the local machine.
-
-Run the installer script with the ``--with-instrumentation`` option, as shown in the following example:
-
-.. code-block:: yaml
-
-   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-   sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
-
-To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <VALUE>`` option. Replace ``<VALUE>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
-
-.. code-block:: yaml
-
-   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-   sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
-
-See :ref:`configure-the-script` for the supported configuration parameters.
-
-After successful installation, the Java applications on the host need to be manually started or restarted for automatic instrumentation to take effect.
-
-.. _install-manually:
-
-Install using Debian or RPM packages
----------------------------------------------
-
-Follow these steps to install the package using the Debian or RPM repositories with ``root`` privileges:
-
-1. Download the ``splunk-otel-auto-instrumentation`` Debian or RPM package for the target system from the :new-page:`GitHub Releases page <https://github.com/signalfx/splunk-otel-collector/releases>`.
-
-2. Run the following commands to install the package. Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded package.
+- Install using the Collector installer script
+- Install using Debian or RPM packages
 
 .. tabs::
 
-   .. code-tab:: bash Debian
+   .. tab:: Install using the Collector installer script
+
+      To install the package, run the Collector installer script with the ``--with-instrumentation`` option. The installer script will install the Collector and the Java agent from the Splunk Distribution of OpenTelemetry Java. The Java agent is then loaded automatically when a Java application starts on the local machine.
+
+      Run the installer script with the ``--with-instrumentation`` option, as shown in the following example. Replace  ``<SPLUNK_REALM>`` and ``<SPLUNK_ACCESS_TOKEN>`` with your Observability Cloud realm and token, respectively.
+
+      .. code-block:: bash
+
+         curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
+      To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <VALUE>`` option. Replace ``<VALUE>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+
+      .. code-block:: bash
+
+         curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+
       
-      dpkg -i <path to splunk-otel-auto-instrumentation deb>
-      
-   .. code-tab:: bash RPM
-      
-      rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
+      Next, :ref:`verify-install` and :ref:`start-restart-java-apps`. 
 
-3. See :ref:`configure-the-script` for additional details.
 
-You can also install the ``splunk-otel-auto-instrumentation`` package using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
+   .. tab::  Install using Debian or RPM packages
 
-Configuration file of the package
----------------------------------------------
+      .. note:: You must first install the Splunk OpenTelemetry Collector using the :ref:`linux-packages`.
 
-The package includes the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file, which is read by the shared object library ``libsplunk.so`` when applications are started. The .so library, which is installed with the configuration file and the JAR file, is a set of files used by multiple applications. 
+      After installing the Collector, follow these steps to install the package using the Debian or RPM repositories with ``root`` privileges:
 
-By default, the configuration file looks like the following example:
+      1. You can either download the ``splunk-otel-auto-instrumentation`` package directly from the :new-page:`GitHub Releases page <https://github.com/signalfx/splunk-otel-collector/releases>` or add the Splunk repository to the package repositories on your Linux host. See :new-page:`Debian or RPM package repositories <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for instructions on how to configure your package repository.
 
-.. code-block:: yaml
+      2. Run the following commands to install the package. Replace ``<path to splunk-otel-auto-instrumentation deb/rpm>`` with the local path to the downloaded package.
 
-   java_agent_jar=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
+         .. tabs::
 
-The ``java_agent_jar`` parameter points to the default location of the JAR file. See :ref:`configure-the-script` for more information on the supported parameters.
+            .. code-tab:: bash Debian
+               
+               sudo dpkg -i <path to splunk-otel-auto-instrumentation deb>
+               
+            .. code-tab:: bash RPM
+               
+               sudo rpm -ivh <path to splunk-otel-auto-instrumentation rpm>
+
+      3. Edit the ``/etc/otel/collector/splunk-otel-collector.conf`` file to set the ``SPLUNK_ACCESS_TOKEN`` and ``SPLUNK_REALM`` variables to the values you got earlier. If the file does not exist, use the provided sample at ``/etc/otel/collector/splunk-otel-collector.conf.example`` as a starting point.
+
+         .. code-block:: bash
+
+            SPLUNK_ACCESS_TOKEN=<access_token>
+            SPLUNK_REALM=<realm>
+
+      4. Start the collector service:
+
+         .. code-block:: bash
+
+            sudo systemctl start splunk-otel-collector
+
+
+      5. :ref:`verify-install`.
+      6. :ref:`start-restart-java-apps`.
+
+
+.. _verify-install:
+
+Ensure the service is running
+--------------------------------------------------------
+
+After a successful installation, run the following command to ensure the ``splunk-otel-collector`` service is running:
+
+.. code-block:: bash
+
+   sudo systemctl status splunk-otel-collector
+
+If the service is not running, start or restart it with the following command:
+
+.. code-block:: bash
+
+   sudo systemctl restart splunk-otel-collector
+
+If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCESS_TOKEN`` in ``/etc/otel/collector/splunk-otel-collector.conf`` are correct. You can also view the service's logs with this command:
+
+.. code-block:: bash
+
+   sudo journalctl -u splunk-otel-collector
+
+
+.. _start-restart-java-apps:
+
+Start your applications
+-----------------------------------
+
+You are now ready to start sending traces to Splunk APM. For auto instrumentation to take effect, you must manually start or restart any Java applications on the host where you installed the package. This is true after installing the auto instrumentation package for the first time and whenever you make any changes to the configuration file. 
+
+Once your applications are running, you can :ref:`verify-apm-data`. You an also :ref:`configure-the-script`. 
 
 .. _configure-the-script:
 
-Supported parameters
+Optionally configure the package
 ====================================
+
+Installing the package installs the following artifacts:
+
+- The shared instrumentation library at ``/usr/lib/splunk-instrumentation/libsplunk.so```
+- The configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf`` 
+- The :new-page:`Java Instrumentation Agent <https://github.com/signalfx/splunk-otel-java>` at ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
+
+You can customize the package by setting parameters in the configuration file.
+
+By default, the configuration file only specifies one parameter, ``java_agent_jar``, which points to the path of the installed Java Instrumentation Agent.
+
+The following is a sample of the default configuration file:
+
+.. code-block:: bash
+
+   java_agent_jar=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
+
+The :ref:`supported-parameters` section discusses additional parameters.
+
+.. _supported-parameters:
+
+Supported parameters
+---------------------------------------------
 
 The following table shows the supported parameters for the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` file:
 
@@ -106,18 +179,21 @@ The following table shows the supported parameters for the ``/usr/lib/splunk-ins
      - The full path to the JAR file provided by the installer.
      -  Yes
    * - ``service_name``
-     - Optional override for the service name that is generated by the shared object before Java startup. By default, this line is commented out, but can be uncommented to override the generated name. If this parameter is set, all instrumented Java applications on the host have their service name set using the  ``OTEL_SERVICE_NAME`` environment variable. 
+     - An optional parameter that specifies a unique identifier for a particular host. If you set this parameter, all instrumented Java applications on the host have their service name set using the  ``OTEL_SERVICE_NAME`` environment variable. If this parameter is not set, the shared object assigns a generated name. 
      - No
    * - ``resource_attributes`` 
      - Contains a list of name-value pairs, separated by ``=s``, that the shared object sets to the ``RESOURCE_ATTRIBUTES`` environment variable. The ``RESOURCE_ATTRIBUTES`` environment variable is then picked up by the Java instrumentation JAR file. The installer script sets this to something like ``resource_attributes=deployment.environment=test``, which defines the deployment environment.
      - No  
 
+
 Keep the following information in mind after the installation:
 
-- The ``/etc/ld.so.preload`` file is automatically created or updated with the default path to the installed instrumentation library, which is ``/usr/lib/splunk-instrumentation/libsplunk.so``. If necessary, custom library paths can be manually added to this file.
-- The ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file can be manually configured for resource attributes and other parameters. By default, this file contains the ``java_agent_jar`` parameter set to the path of the installed :new-page:`Java Instrumentation Agent <https://github.com/signalfx/splunk-otel-java>`, which is ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``. If the ``--deployment-environment VALUE`` installer script option is specified, the ``deployment.environment=VALUE`` resource attribute is automatically added to this file.
+-  Whenever you change the configuration file, you must manually start or restart any Java applications on the host where you installed the package.
 
-After any configuration changes, the Java applications on the host need to be manually started or restarted to source the updated values from the configuration file.
+- If you installed the package with the installer script and specified the ``--deployment-environment VALUE`` when you ran the script, the ``deployment.environment=VALUE`` resource attribute is automatically added to the configuration file.
+
+- The ``/etc/ld.so.preload`` file is automatically created or updated with the default path to the installed instrumentation library. If necessary, custom library paths can be manually added to this file.
+
 
 .. _upgrade-the-package:
 
@@ -146,7 +222,7 @@ Run the following commands:
    sudo apt-get update
    sudo apt-get --only-upgrade splunk-otel-auto-instrumentation
 
-You might be prompted to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+You might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
 RPM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -198,7 +274,7 @@ To manually upgrade the package:
       
          sudo rpm -Uvh <path to splunk-otel-auto-instrumentation rpm>
 
-After upgrading the Debian package, you might be prompted to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
+After upgrading the Debian package, you might see a prompt to keep or overwrite the configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf``. If you choose to overwrite, the configuration file reverts to the default file provided by the upgraded package.
 
 You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
@@ -207,9 +283,16 @@ Disable automatic instrumentation
 
 Use one of the following options to disable automatic instrumentation:
 
-- Uninstall the package by running ``curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \sudo sh /tmp/splunk-otel-collector.sh --uninstall``. See :ref:`otel-linux-uninstall-otel-and-tdagent` for more information on the files deleted by the uninstall.
+- Uninstall the package by running the following command:
 
-- Set ``DISABLE_SPLUNK_AUTOINSTRUMENTATION`` to any non-empty value other than ``false``, ``FALSE``, or ``0``.
+  .. code-block:: bash
+   
+     curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+     sudo sh /tmp/splunk-otel-collector.sh --uninstall
+  
+  See :ref:`otel-linux-uninstall-otel-and-tdagent` for more information on the files deleted by the uninstall.
+
+- Set ``DISABLE_SPLUNK_AUTOINSTRUMENTATION`` to any nonempty value other than ``false``, ``FALSE``, or ``0``.
 
 - Set the ``JAVA_TOOL_OPTIONS`` environment variable to some value that you want the JVM to pick up.
 

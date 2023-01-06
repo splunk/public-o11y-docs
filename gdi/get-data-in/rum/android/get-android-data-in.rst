@@ -5,7 +5,7 @@ Instrument Android applications for Splunk RUM
 **************************************************************
 
 .. meta::
-   :description: Learn how to instrument your Android applications for Splunk RUM and what data you can collect.
+   :description: Learn how to instrument your Android applications in Splunk Observability Cloud real user monitoring / RUM instrumentation, and what data you can collect.
 
 .. toctree::
    :hidden:

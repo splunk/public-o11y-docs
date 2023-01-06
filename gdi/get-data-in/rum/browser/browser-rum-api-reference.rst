@@ -6,7 +6,7 @@ API reference for Browser RUM instrumentation
 **************************************************
 
 .. meta::
-   :description: Use the following methods when creating manual instrumentation for Splunk RUM for Browser.
+   :description: Use the following methods when creating manual instrumentation for Splunk Observability Cloud real user monitoring / RUM for Browser.
 
 Use the following API methods when creating manual instrumentation for Splunk RUM for Browser. For manual instrumentation examples, see :ref:`manual-rum-browser-instrumentation`.
 

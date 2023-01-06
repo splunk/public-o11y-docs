@@ -30,6 +30,9 @@ The SignalFx Instrumentation for .NET can collect the following runtime metrics:
    :widths: 40 10 50
    :width: 100%
 
+   * - Metric
+     - Type
+     - Description
    * - ``process.runtime.dotnet.exceptions.count``
      - Gauge
      - Count of exceptions since the previous observation.

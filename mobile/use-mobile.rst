@@ -5,7 +5,7 @@ View dashboards and alerts using Splunk Observability Cloud for Mobile
 ************************************************************************
 
 .. meta::
-   :description: You can view, search, and share your alerts and dashboards from Splunk Observability Cloud for Mobile.
+   :description: Learn how to view, search, and share your alerts and dashboards from Splunk Observability Cloud for Mobile.
 
 You can use Splunk Observability Cloud for Mobile to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
 

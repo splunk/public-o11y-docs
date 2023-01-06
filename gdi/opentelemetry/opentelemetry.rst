@@ -31,7 +31,7 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 * Fluentd for log capture
 * Tools to support migration from SignalFx products
 
-Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent to the Collector.
+Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent(deprecated) to the Collector.
 
 .. caution::
 

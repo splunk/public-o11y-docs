@@ -82,7 +82,7 @@ Services are the key components of the systems you can monitor with Splunk APM.
 
 Service
 --------
-A small, flexible, and autonomous unit of software that connects to other services to make up a complete application. A service typically represents a collection of API endpoints and operations that work together with other services’ endpoints in a distributed and dynamic architecture to deliver the full functionality of an application. 
+A service is a small, flexible, and autonomous unit of software that connects to other services to make up a complete application. A service typically represents a collection of API endpoints and operations that work together with other services’ endpoints in a distributed and dynamic architecture to deliver the full functionality of an application. 
      
 “Service” is an umbrella term that encompasses container services (e.g. Docker, Kubernetes), microservices, and even calls to serverless functions. By instrumenting each of the services that make up your application, you can collect spans that represent operations within services and traces that represent collections of operations across services, to analyze and monitor this activity in Splunk APM. 
 
@@ -90,7 +90,9 @@ A small, flexible, and autonomous unit of software that connects to other servic
 
 Instrumented service
 ---------------------
-An instrumented service is one you have instrumented using an agent such as OpenTelemetry or Smart Agent so that it sends its spans to Splunk APM. See :ref:`get-started-application` to learn more about instrumenting services.
+Use the OpenTelemetry Collector to instrument a service so that it sends its spans to Splunk APM. The SignalFx Smart Agent is now deprecated and will reach end of support on June 30th, 2023. To migrate from the Smart Agent to the Collector, see the :new-page:`migration guide <https://docs.splunk.com/Observability/gdi/opentelemetry/smart-agent-migration-to-otel-collector.html>`.  
+
+See :ref:`get-started-application` to learn more about instrumenting services. 
 
 .. _inf-service-concept:
 

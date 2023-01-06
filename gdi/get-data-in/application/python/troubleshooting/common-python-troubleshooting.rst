@@ -103,14 +103,14 @@ To solve this issue, use the Jaeger exporter instead. See :ref:`trace-exporters-
 Jaeger can't export spans
 ------------------------------------------------------
 
-If you're exporting trace data using the Jaeger exporter, errors in your logs might mean the Python agent can't send trace data to the Smart Agent, the OTel Collector, or Splunk Cloud Platform:
+If you're exporting trace data using the Jaeger exporter, errors in your logs might mean the Python agent can't send trace data to the OTel Collector, Smart Agent (now deprecated), or Splunk Cloud Platform:
 
 To troubleshoot the lack of connectivity between Jaeger and Splunk Observability Cloud, try the following:
 
-1. Make sure that ``OTEL_EXPORTER_JAEGER_ENDPOINT`` points to a Smart Agent or OpenTelemetry Collector instance, or to the Splunk Ingest URL. See the Splunk Ingest URL summary in :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list>`.
-2. Check that the Smart Agent or the OTel Collector instance is configured and running.
+1. Make sure that ``OTEL_EXPORTER_JAEGER_ENDPOINT`` points to a OpenTelemetry Collector or your Collector or Smart Agent (deprecated) configuration instance, or to the Splunk Ingest URL. See the Splunk Ingest URL summary in :new-page:`Summary of Splunk Observability Cloud API Endpoints <https://dev.splunk.com/observability/docs/apibasics/api_list>`.
+2. Check that the OTel Collector or Smart Agent instance is configured and running.
 3. Check that the Jaeger Thrift HTTP receiver is enabled and plugged into the traces pipeline. See :ref:`otel-exposed-endpoints`.
-4. Check that the endpoint is correct. The Smart Agent and OpenTelemetry Collector use different ports and paths by default. For the Jaeger receiver, the Smart Agent uses ``http://<host>:9080/v1/trace``, while the OTel Collector uses ``http://<host>:14268/api/traces``.
+4. Check that the endpoint is correct. The OpenTelemetry Collector and Smart Agent use different ports and paths by default. For the Jaeger receiver, the OTel Collector uses ``http://<host>:14268/api/traces``, while the Smart Agent uses ``http://<host>:9080/v1/trace``.
 
 401 error when sending spans
 --------------------------------------------------------

@@ -5,7 +5,7 @@ Instrument single-page applications for Splunk RUM
 *******************************************************************************
 
 .. meta::
-   :description: Learn how to instrument your single-page applications (SPAs) for Splunk RUM.
+   :description: Learn how to instrument your single-page applications (SPAs) for Splunk Observability Cloud real user monitoring / RUM.
 
 With the Browser RUM agent from the Splunk Distribution of OpenTelemetry JavaScript for Web you can instrument your single-page applications (SPA) to capture client-side telemetry, including:
 
