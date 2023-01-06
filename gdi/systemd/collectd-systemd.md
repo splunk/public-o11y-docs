@@ -1,7 +1,7 @@
 (collectd-systemd)=
 
 # systemd
-<meta name="description" content="Documentation on the collectd/systemd monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd Systemd monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -38,7 +38,7 @@ docker run ...\
 ```
 
 ```{note}
-Provide a systemd monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a systemd monitor entry in your your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

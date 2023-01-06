@@ -2,7 +2,7 @@
 
 # GitLab Unicorn
 
-<meta name="Description" content="Documentation on gitlab-unicorn receiver">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the GitLab Unicorn monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

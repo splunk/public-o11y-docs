@@ -5,7 +5,7 @@ Salt
 ****************************
 
 .. meta::
-      :description: Deploy the Collector using a Salt formula.
+      :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector using a Salt formula.
 
 You can use a formula to install and configure the Collector to collect metrics, traces, and logs from Linux machines and send data to Splunk Observability Cloud. See the :new-page:`GitHub repository <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/salt>` to download the Salt module.
 

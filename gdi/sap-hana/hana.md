@@ -2,7 +2,7 @@
 
 # SAP HANA
 
-<meta name="Description" content="Documentation on the SAP HANA monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the SAP HANA monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

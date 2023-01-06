@@ -2,7 +2,7 @@
 
 # Host metadata properties
 
-<meta name="description" content="Documentation on the host-metadata monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the host-metadata monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

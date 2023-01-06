@@ -5,7 +5,7 @@ Gather information to open a support request
 *****************************************************************
 
 .. meta::
-      :description: Gather support information before opening a support request. Use this checklist to gather relevant information.
+      :description: Gather support information before opening a support request in Splunk Observability Cloud. Use this checklist to gather relevant information.
 
 When opening a support request, it is important to include as much information about the issue as possible. Use this checklist to gather relevant information.
 

@@ -34,13 +34,13 @@ Set ``deployment.environment`` in the Splunk Distribution of OpenTelemetry Colle
 ------------------------------------------------------------------------------------------------------
 The :new-page:`Splunk Distribution of OpenTelemetry Collector agent config file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml#L117>` includes the following ``resource`` processor for adding the ``deployment.environment`` tag, but it is commented out by default. Uncomment this section and add the ``resource/add_environment`` processor to a pipeline if you want to set the ``deployment.environment`` span tag via the Splunk Distribution of OpenTelemetry Collector instead of via instrumentation:
 
- .. code-block:: yaml
- 
+.. code-block:: yaml
+
     resource/add_environment:
         attributes:
-        - action: insert
-            value: staging/production/...
-            key: deployment.environment
+        action: insert
+        value: staging/production/...
+        key: deployment.environment
 
 Note that unlike standard attributes, the ``deployment.environment`` tag is set with the ``resource`` processor in OpenTelemetry, because this tag is typically associated with the host or container in which the application is running.
 
