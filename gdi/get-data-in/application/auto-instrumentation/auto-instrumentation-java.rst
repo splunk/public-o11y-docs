@@ -61,6 +61,7 @@ In both cases you must restart the applications to start instrumentation.
 
 
 .. _auto-instrumentation-java-install:
+
 Install Zero Configuration Auto Instrumentation
 =========================================================
 
@@ -71,9 +72,10 @@ Follow the appropriate instructions from the following list:
 
 
 .. _auto-instrumentation-java-more:
+
 Learn more
 =======================
 
 - Instrumentation collects and sends trace data to Splunk APM. Learn :ref:`what you can do with Splunk APM <wcidw-apm>`.
 - Learn more about the :ref:`Features of the Splunk Distribution of OpenTelemetry Java <splunk-java-otel-dist>`.
-- Learn how :ref:`instrumentation affects performance<java-otel-performance>`.
+- :ref:`java-otel-performance`.

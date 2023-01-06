@@ -41,7 +41,7 @@ To disable automatic instrumentation, set the annotation to ``otel.splunk.com/in
 .. _enable-zero-conf-java-yaml:
 
 Enable/disable automatic instrumentation before deployment
---------------------------------------------------------
+-------------------------------------------------------------
 
 If the pod or deployment is not already running, set the ``otel.splunk.com/inject-java`` annotation in its YAML file.
 
