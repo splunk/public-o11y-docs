@@ -127,12 +127,21 @@ To replay a session,  open the session you're interested in session waterfall, a
 
 Troubleshooting  
 ===================
-Try these steps: 
+Try these methods:
 
 * If a session is incomplete, it might be because the network bandwidth isn't strong enough, which can cause part of a session to drop off. 
-* If a user has multiple tabs of the same application open, then there is a session replay available for each tab. Make sure to open the tab below session replay and navigate to the tab you're interested in. 
+* If a user has multiple tabs of the same application open, then there is a session replay available for each tab. Make sure to open the tab below session replay and navigate to the tab you're interested in. For example, in the following image, the blue tabs at the top of the chart represent a user loading the page again, or opening the app in a different page.
 
 
+.. image:: /_images/rum/sr-tabs.png
+   :alt: This image shows eight tabs in a chart where a user could have loaded the page again, or opened the app in a different tab. 
+   :width: 97.3%
+
+* Elements or images aren't appearing in your session replay: 
+
+    * It's possible that the images or elements are blocked by a content security policy. Review the policy and CDN provider to confirm.
+ 
+* Aspect ratio is distorted. The aspect ratio is dependent on the user's window size. 
 
 
 
