@@ -8,7 +8,7 @@ GetMetricStatistics API deprecation notice
   :description: Deprecation notice for the AWS integration GetMetricStatistics API.
 
 
-.. note:: Splunk will remove support for the GetMetricStatistics API after May 1, 2023. 
+.. note:: Splunk will remove support for the GetMetricStatistics API on May 1, 2023. 
 
 Splunk Observability Cloud provides a unified view into metrics, traces, and logs coming from various sources via integrations with third party services, including AWS integrations.
 
@@ -18,15 +18,15 @@ Splunk provides the following options to integrate with CloudWatch:
 - ``GetMetricData``, the modern poll-based API. It supports bulk retrieval of CloudWatch metric data. Shifting from ``GetMetricStatistics`` to ``GetMetricData`` can result in up to 20 times fewer API calls, substantially improving performance and data latency. 
 - :ref:`Metric Streams, the streaming API <aws-metricstreams>`.
 
-Required action
+Switch to the GetMetricData API
 ============================================
 
-Configuring an existing integration to use the ``GetMetricData`` API is a one-step process, all you need to do is to ensure Splunk Observability Cloud is :ref:`allowed to use the GetMetricData API <aws-iam-policy>`. 
+You can configure any existing integration to use the ``GetMetricData`` API, all you need to do is to ensure Splunk Observability Cloud is :ref:`allowed to use the GetMetricData API <aws-iam-policy>`. 
 
-To do so, update the AWS IAM policy JSON and add ``"cloudwatch:GetMetricData"`` in the :strong:`Action` section of the AWS policy JSON document.
+To do so, add ``"cloudwatch:GetMetricData"`` in the :strong:`Action` section of the AWS IAM policy JSON document.
 
-Configure the API via AWS
--------------------------------
+Configure the API via the AWS UI
+-----------------------------------------
 
 Alternatively, you can configure this via the AWS GUI. Make sure that the following permissions are set by selecting the box next to the GetMetricData option:
 
