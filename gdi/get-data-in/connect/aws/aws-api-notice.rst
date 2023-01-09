@@ -8,9 +8,9 @@ GetMetricStatistics API deprecation notice
   :description: Deprecation notice for the AWS integration GetMetricStatistics API.
 
 
-.. note:: Splunk will remove support for the ``GetMetricStatistics`` API on May 1, 2023. 
+.. note:: Splunk will remove support for the ``GetMetricStatistics`` API on May 1, 2023. Follow the instructions in this document to migrate to the ``GetMetricData`` API.
 
-Splunk Observability Cloud provides a unified view into metrics, traces, and logs coming from various sources via integrations with third party services, including AWS integrations.
+Splunk Observability Cloud provides a unified view into metrics, traces, and logs coming from various sources through integrations with third party services, including AWS integrations.
 
 Splunk provides the following options to integrate with CloudWatch:
 
@@ -25,10 +25,10 @@ You can configure any existing integration to use the ``GetMetricData`` API, all
 
 To do so, add ``"cloudwatch:GetMetricData"`` in the :strong:`Action` section of the AWS IAM policy JSON document.
 
-Configure the API via the AWS UI
+Configure the API using the AWS UI
 -----------------------------------------
 
-Alternatively, you can configure this via the AWS GUI. 
+Alternatively, you can configure this via the AWS Management Console. 
 
 .. image:: /_images/gdi/GetMetricData_AWSUI.png
   :width: 90% 
@@ -48,10 +48,10 @@ After switching to ``GetMetricData``, you should see:
 - A significant reduction (up to 20x) in the total number of calls required to obtain data.
 - A related reduction in the latency of data obtained by polling CloudWatch.
 
-Control cost
+Manage costs
 ========================================================================================
 
-Note that if an AWS account has lots of CloudWatch metrics, the improved performance could lead to an increase in the AWS API cost.
+If an AWS account produces many CloudWatch metrics, the improved performance might lead to an increase in the AWS API cost.
 
 For example, if the ``GetMetricStatistics`` API takes 5 minutes to retrieve all the data, the ``GetMetricData`` API might take only 1 minute. When an AWS integration's poll rate is set to 1 minute, the ``GetMetricData`` requests are sent up to 5 times more often, generating a larger AWS API bill, while improving data latency at the same time. Increase the poll rate to 5 minutes to keep the cost at the same level.
 
