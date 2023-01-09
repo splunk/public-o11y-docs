@@ -19,7 +19,7 @@ Create an incident policy
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` > :guilabel:`Create incident policy`.
 #. Give your incident policy a unique name and a description. 
-#. Select :guilabel:`Create incidnet policy`.
+#. Select :guilabel:`Create incident policy`.
 
 After you create your incident policy, you are directed to configure which alerts are routed to your incident policy. 
 
