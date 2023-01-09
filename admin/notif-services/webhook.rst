@@ -19,8 +19,7 @@ To send Observability Cloud alert notifications to a webhook, complete the follo
 
 * :ref:`webhook3`
 
-Note that if the target destination is not available, Observability Cloud retries sending the notification for up to a day. After 24 hours of failed attempts the notification is not delivered.
-
+.. caution:: If the target destination is not available, Observability Cloud retries sending the notification for up to a day. After 24 hours of failed attempts the notification is not delivered.
 
 .. _webhook1:
 
