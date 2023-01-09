@@ -13,3 +13,4 @@ Use cases: Schedules in Incident Intelligence
     :hidden:
 
     use-case-business-hours
+    use-case-business-hours-notifications

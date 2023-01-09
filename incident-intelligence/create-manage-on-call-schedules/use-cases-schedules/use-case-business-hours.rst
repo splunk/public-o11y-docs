@@ -5,6 +5,9 @@
 Use case: Business hours and nights-and-weekend rotation for the web application service
 *********************************************************************************************
 
+.. meta::
+   :description: Schedule use case for Incident Intelligence for a business hours and nights-and-weekends rotation.
+
 Coverage needs:
 
 - You need coverage for your web application service for business hours Monday through Friday of each week, with one responder on the team being on call for a whole week.
