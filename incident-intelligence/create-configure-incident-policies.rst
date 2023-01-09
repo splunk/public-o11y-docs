@@ -23,14 +23,14 @@ Create an incident policy
 
 After you create your incident policy, you are directed to configure which alerts are routed to your incident policy. 
 
-.. note:: If you have more than one incident policy, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one incident policy even if they match multiple policies. The incident policy that alerts are routed to is based on your policy's alert routing conditions and incident policy rank order. To rank your incident policies, go to :guilabel:`Incident Management` > :guilabel:`Incident policies` > :guilabel:`Incident policy ranking`. 
-
 .. _ii-configure-alert-routing:
 
 Configure the alerts that are routed to your incident policy
 ============================================================
 
 Use alert routing to associate alerts with an incident policy. If an alert matches your alert filter conditions, it is routed to the incident policy. To set up your alert routing for the incident policy, follow these steps:
+
+.. note:: The rank order of your incident policy also determines where alerts are routed. Alerts are only routed to one incident policy even if they match multiple policies. The incident policy that alerts are routed to is based on your policy's alert routing conditions and incident policy rank order. See :ref:`ii-rank-incident-policies`
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert routing conditions to.
@@ -93,6 +93,13 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. Select an elapsed time period in the drop-down list next to :guilabel:`If unacknowledged after`.
 #. Select :guilabel:`Configure invite` to add responders.
 #. Repeat these steps until you have a complete incident workflow for the incident policy. 
+
+.. _ii-rank-incident-policies:
+
+Rank your incident policies to ensure alerts are appropriately routed
+========================================================================
+
+If you have more than one incident policy, organize them in the order of their importance (top to bottom) to your infrastructure. Alerts are only routed to one incident policy even if they match multiple policies. The incident policy that alerts are routed to is based on your policy's alert routing conditions and incident policy rank order. To rank your incident policies, go to :guilabel:`Incident Management` > :guilabel:`Incident policies` > :guilabel:`Incident policy ranking`. 
 
 .. _ii-incident-policy-maintenance:
 
