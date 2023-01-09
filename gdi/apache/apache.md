@@ -2,13 +2,13 @@
 
 # Apache HTTP Server
 
-<meta name="description" content="Documentation for the apache monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Apache HTTP server monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache HTTP Server monitor with the SignalFx Smart Agent receiver. The integration monitors Apache web servers using information `mod_status` provides.
 
-This monitor is available on Kubernetes, Linux, and Windows.
+This monitor is available on Kubernetes and Linux.
 
 Apache worker threads can be in one of the following states:
 
@@ -43,7 +43,7 @@ Apache worker threads can be in one of the following states:
 
 ```
 receivers:
-  smartagent/apache
+  smartagent/apache:
     type: collectd/apache
     ... # Additional config
 ```

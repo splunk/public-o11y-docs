@@ -5,6 +5,10 @@
 Use case: Maintain a secure organization with many teams and users using Splunk Observability Cloud
 *********************************************************************************************************
 
+.. meta::
+   :description: Use case: Maintain a secure organization with many teams and users using Splunk Observability Cloud.
+
+
 Buttercup Games, a fictitious game company, recently refactored its e-commerce site to go cloud native. The site uses microservices for the application architecture and containers for the underlying infrastructure.
 
 In this use case, you learn how Wei, a site reliability engineering (SRE) manager, performs the following tasks using Splunk Observability Cloud to keep their organization secure and minimize unintentional changes.
@@ -12,7 +16,7 @@ In this use case, you learn how Wei, a site reliability engineering (SRE) manage
 Enhance team security with access restrictions and tokens
 ====================================================================================
 
-Kai, the on-call SRE, informs Wei that the uptime for the Buttercup Games site has dropped significantly in the past hour and that customers haven't been able to access the website. However, Wei hasn’t received any alerts related to the drop in system uptime.
+Kai, the on-call SRE, informs Wei that the uptime for the Buttercup Games site has dropped significantly in the past hour and that customers haven't been able to access the website. However, Wei hasn't received any alerts related to the drop in system uptime.
 
 #. Wei logs in to Splunk Observability Cloud on their laptop to investigate. They go to the alert list to check the alert configurations and notice that the relevant uptime detector has been muted.
 #. Wei goes on to check the detector history in the :guilabel:`Detector Info` tab and sees that the most recent edit was made by someone not on their SRE team. Wei realizes the person might have accidentally muted the detector when they were viewing the detector.
@@ -49,7 +53,7 @@ Prevent people on other teams from viewing and changing your dashboards
 
 #. Wei knows that users can link detectors to charts in Infrastructure Monitoring, so they select :guilabel:`Detector actions > Info` to see if the uptime detector is linked to any charts.
 #. Wei sees that the detector is linked to a chart in the error budget dashboard, which belongs to their team's dashboard group.
-#. To make sure that the chart won’t be accidentally changed like the detector, Wei navigates to the dashboard group and edits the permissions, so that only their team can make changes to the dashboard group, but the rest of the organization can still view it.
+#. To make sure that the chart won't be accidentally changed like the detector, Wei navigates to the dashboard group and edits the permissions, so that only their team can make changes to the dashboard group, but the rest of the organization can still view it.
 #. Wei applies the same permission settings to other detectors and dashboard groups owned by their team.
 
 Learn more

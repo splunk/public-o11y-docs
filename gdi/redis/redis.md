@@ -1,7 +1,7 @@
 (redis)=
 
 # Redis
-<meta name="description" content="Documentation on the redis monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Redis monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -40,7 +40,7 @@ The monitor supports Redis 2.8 and higher.
 ```
 
 ```{note}
-Provide a Redis monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a Redis monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector
@@ -120,15 +120,15 @@ The following table shows you the configuration options for the `sendListLengths
 
 ### Monitor the length of Redis lists
 
-To monitor the length of list keys, you must specify the key and database index in the configuration.
+To monitor the length of list keys, you must specify the key and database index in the configuration using the following syntax:
 
-Specify keys using the following syntax:
-
-`sendListLengths: [{databaseIndex: $db_index, keyPattern: "$key_name"}]`
+```
+sendListLengths: [{databaseIndex: $db_index, keyPattern: "$key_name"}]
+```
 
 You can specify `$key_name` as a glob-style pattern. The only supported wildcard is `*` . When you use a pattern, the configuration processes all keys that match the pattern. 
 
-To ensure that the `*` is interpreted correctly, surround the pattern with double quotes (`""`). When a non-list key matches the pattern, the Redis monitor writes an error to the agent logs.
+To ensure that the `*` is interpreted correctly, surround the pattern with double quotes (`""`). When a nonlist key matches the pattern, the Redis monitor writes an error to the agent logs.
 
 In Observability Cloud, `gauge.key_llen` is the metric name for Redis list key lengths. Observability Cloud creates a separate MTS
 for each Redis list.
@@ -143,6 +143,13 @@ for each Redis list.
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/redis/metrics.yaml"></div>
+
+## Database Query Performance
+
+You can troubleshoot Redis command performance issues using Database Query Performance in Splunk APM.
+
+* For a sample use case, see {ref}`redis-use-case`.
+* For more information on Database Query Performance support for Redis, see {ref}`redis-db-query-performance`.
 
 ## Get help
 

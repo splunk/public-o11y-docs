@@ -5,21 +5,28 @@ Manually instrument browser-based web applications
 *******************************************************************************
 
 .. meta::
-   :description: Manually instrument front-end applications for Splunk RUM to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more.
+   :description: Manually instrument front-end applications for Splunk Observability Cloud real user monitoring / RUM to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more.
 
-You can manually instrument front-end applications for Splunk RUM using the Browser RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more.
+You can manually instrument front-end applications for Splunk RUM using the Browser RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more. The following API examples show several manual instrumentations for Splunk RUM.
 
 To migrate manual instrumentation created for another vendor, see :ref:`browser-rum-migrate-instrumentation`. For the API reference of Browser RUM, see :ref:`browser-rum-api-reference`.
 
 Instrument your application using the OpenTelemetry API
 =============================================================
 
-To instrument your front-end application manually, use the OpenTelemetry API. The Browser RUM agent automatically registers its TraceProvider using ``@opentelemetry/api``, so that your own instrumentations can access it. The version of ``@opentelemetry/api`` you use must match the same major version of ``@opentelemetry/api`` used by the Browser RUM agent.
+To instrument your front-end application manually, use the OpenTelemetry API. The Browser RUM agent automatically registers its TraceProvider using ``@opentelemetry/api``, so that your own instrumentations can access it. 
 
-The following API examples show several manual instrumentations for Splunk RUM:
+Check the version of the OpenTelemetry API
+----------------------------------------------
+
+To manually instrument your application, the version of ``@opentelemetry/api`` you use must match the same major version of ``@opentelemetry/api`` used by the Browser RUM agent.
+
+To verify this, run ``window[Symbol.for('opentelemetry.js.api.1')].version`` in the browser's console from any page that you've instrumented. The command returns the full version of the OpenTelemetry API.
 
 Create a span
 ---------------------------------------
+
+The following example shows how to create a span with an attribute:
 
 .. code-block:: javascript
 
@@ -36,6 +43,8 @@ Create a span
 Set the user ID on all spans
 ---------------------------------------
 
+The following example shows how to set the user ID globally:
+
 .. code-block:: javascript
 
    SplunkRum.setGlobalAttributes({
@@ -44,6 +53,8 @@ Set the user ID on all spans
 
 Create a custom event
 ---------------------------------------
+
+The following example shows how to create a custom event:
 
 .. code-block:: javascript
 

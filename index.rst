@@ -1,16 +1,10 @@
 .. _docs-home-page:
 
-.. to learn how to update this page, see https://splunk.atlassian.net/wiki/spaces/BIZAPPS/pages/1078120167037/Observability+New+Home+Page+Layout+and+Documentation
-
-.. this heading below doesn't display on the page, but it needs to be here to provide the browser tab name and for the page to render correctly
-
 **********
 Welcome
 **********
 
-.. hero image - editable file is here: https://www.figma.com/file/niuvKhPm3kgtyHILyL08wY/?node-id=407%3A3027
-
-.. image:: _images/get-started/o11y-user-doc-hero-banner.svg
+.. image:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
    :alt: Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
@@ -195,8 +189,8 @@ Set up an integration to an SSO provider :ref:`sso-label`
 
 .. rst-class:: newcard
 
-:strong:`Subscription Usage`
-Monitor subscription usage for Infrastructure Monitoring :ref:`monitor-imm-billing-usage`
+:strong:`Subscription usage`
+Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-overview`
 
 
 .. popular integrations section
@@ -298,12 +292,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case: Monitor infrastructure and apps using the Collector <get-started/use-case-collector>
-
-.. toctree::
-   :maxdepth:   3
-
-   Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
+   Use cases <get-started/use-case-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -498,7 +487,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   apm/set-up-apm/apm
+   apm/key-concepts
 
 .. toctree::
    :maxdepth:   3
@@ -508,7 +497,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   apm/key-concepts
+   apm/set-up-apm/apm
 
 .. toctree::
    :maxdepth:   3
@@ -552,6 +541,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Introduction <infrastructure/intro-to-infrastructure>
 
 .. toctree::
+   :maxdepth:   3
+
+   Key concepts <infrastructure/terms-concepts>
+
+.. toctree::
    :maxdepth:   2
 
    Quick start tutorial <infrastructure/quickstart-imm>
@@ -561,10 +555,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    infrastructure/infrastructure
 
-.. toctree::
-   :maxdepth:   3
-
-   Key concepts <infrastructure/terms-concepts>
 
 .. toctree::
    :maxdepth:   3
@@ -606,127 +596,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/intro-logconnect
+   logs/lo-connect-landing
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   3   
 
-   logs/scp
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/set-up-logconnect 
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/LOconnect-troubleshoot
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/get-started-logs
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/logs
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/timeline
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/live-tail
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/queries
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/raw-logs-display
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/keyword
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/filter-logs-by-field
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/alias
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/individual-log
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/message-field
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/aggregations
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/search-time-rules
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/save-share
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/logviews
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/pipeline
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/processors 
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/metricization
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/infinite
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/timestamp
-
-.. toctree::
-   :maxdepth:   3
-
-   logs/limits
+   logs/log-observer-landing
 
 .. toctree::
    :caption: RUM
@@ -737,7 +612,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Set up Splunk RUM <rum/set-up-rum>
+   rum/rum-terminology-concepts
 
 .. toctree::
    :maxdepth:   3
@@ -747,13 +622,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/data-collected
+   Set up Splunk RUM <rum/set-up-rum>
 
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-terminology-concepts
-
+   rum/data-collected
 
 .. toctree::
    :maxdepth:   3
@@ -814,17 +688,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   synthetics/set-up-synthetics/set-up-synthetics
-
-.. toctree::
-   :maxdepth:   3
-
    synthetics/key-concepts
 
 .. toctree::
    :maxdepth:   3 
   
    synthetics/synth-use-cases/synth-landing
+
+.. toctree::
+   :maxdepth:   3
+
+   synthetics/set-up-synthetics/set-up-synthetics
 
 .. toctree::
    :maxdepth:   3
@@ -845,6 +719,42 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    synthetics/test-config/test-config
+
+.. toctree::
+   :caption: INCIDENT INTELLIGENCE
+   :maxdepth:   3
+
+   Introduction to Splunk Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
+
+.. toctree::
+   :maxdepth:   3
+
+   incident-intelligence/key-concepts
+
+.. toctree::
+   :maxdepth:   3
+
+   Set up Incident Intelligence <incident-intelligence/set-up-incident-intelligence>
+
+.. toctree::
+   :maxdepth:   3
+
+   Ingest alerts in Incident Intelligence <incident-intelligence/ingest-alerts/ingest-alerts>
+
+.. toctree::
+   :maxdepth:   3
+
+   incident-intelligence/create-configure-services
+
+.. toctree::
+   :maxdepth:   3
+
+   incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules
+
+.. toctree::
+   :maxdepth:   3
+
+   incident-intelligence/respond-manage-incidents/respond-manage-incidents
 
 .. toctree::
    :caption: UNDERSTAND YOUR DATA
@@ -894,6 +804,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    View dashboards and alerts <mobile/use-mobile>
 
 .. toctree::
+   :maxdepth:   3
+
+   mobile/notification-preferences-mobile
+
+.. toctree::
    :caption: ADMINISTER OBSERVABILITY CLOUD
    :maxdepth:   3
 
@@ -908,7 +823,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   admin/SSO/sso
+   admin/SSO/sso-about
 
 .. toctree::
    :maxdepth:   3
@@ -948,24 +863,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/apm-billing-usage/apm-billing-usage-index
 
 .. toctree::
    :hidden:
    :maxdepth:   3
 
-   admin/imm-billing-usage/monitor-imm-billing-usage
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/imm-billing-usage/dpm-usage
-
+   Monitor subscription usage <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::

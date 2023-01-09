@@ -19,7 +19,7 @@ Skyler selects the :strong:`checkoutservice` because the service triggered the A
 
 ..  image:: /_images/apm/apm-use-cases/historical-data-02.png
     :width: 99%
-    :alt: This screenshot shows the service-level dashboard of the checkoutservice’s performance in six months.
+    :alt: This screenshot shows the service-level dashboard of the checkoutservice's performance in six months.
 
 |br|
 

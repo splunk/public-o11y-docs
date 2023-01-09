@@ -113,7 +113,7 @@ Set up custom metric readers and exporters
 
 You can provide custom exporters and readers using the ``metricReaderFactory`` setting.
 
-.. warning:: Usage of ``metricReaderFactory`` invalidates the ``exportInterval`` and ``endpoint`` settings.
+.. caution:: Usage of ``metricReaderFactory`` invalidates the ``exportInterval`` and ``endpoint`` settings.
 
 The following example shows how to provide a custom exporter:
 

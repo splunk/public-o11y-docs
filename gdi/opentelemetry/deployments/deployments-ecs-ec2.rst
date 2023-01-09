@@ -5,7 +5,7 @@ Amazon ECS EC2
 *******************************
 
 .. meta::
-      :description: Deploy the Collector as a Daemon service in an Amazon ECS EC2 cluster.
+      :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Daemon service in an Amazon ECS EC2 cluster.
 
 Use the guided setup to deploy the Collector as a Daemon service in an Amazon ECS EC2 cluster. The guided setup provides a JSON task definition for the Collector.
 

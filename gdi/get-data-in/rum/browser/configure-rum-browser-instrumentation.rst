@@ -5,7 +5,7 @@ Configure the Splunk Browser RUM instrumentation
 *****************************************************************
 
 .. meta::
-   :description: Configure the Splunk RUM instrumentation for your browser-based web applications.
+   :description: Configure the Splunk Observability Cloud real user monitoring / RUM instrumentation for your browser-based web applications.
 
 You can configure the Browser RUM agent from the Splunk Distribution of OpenTelemetry JS for Web to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 

@@ -2,7 +2,7 @@
 
 # Jenkins
 
-<meta name="description" content="Documentation for the jenkins monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Jenkins monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

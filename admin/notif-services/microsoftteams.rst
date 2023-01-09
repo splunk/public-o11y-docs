@@ -4,6 +4,9 @@
 Send alert notifications to Microsoft Teams using Splunk Observability Cloud
 ********************************************************************************
 
+.. meta::
+      :description: Configure Observability Cloud to send alerts to Microsoft Teams when a detector alert condition is met and when the condition clears.
+
 You can configure Splunk Observability Cloud to automatically send alert notifications to a Microsoft Teams channel when a detector alert condition is met and when the alert clears.
 
 To send Observability Cloud alert notifications to Microsoft Teams, complete the following configuration tasks:

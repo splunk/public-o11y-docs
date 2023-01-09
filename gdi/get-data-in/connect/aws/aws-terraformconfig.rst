@@ -20,6 +20,8 @@ Connecting Splunk Observability Cloud to AWS through the Terraform provider invo
 
 As with other connection options, Terraform uses the Splunk Observability REST API endpoints. See :new-page:`Integrate AWS monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/>` for examples.
 
+.. note:: To use CloudWatch Metric Streams or retrieve logs from AWS services, you need to deploy additional resources on your AWS account using one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk. Also, review your :ref:`AIM policy <review-aws-iam-policy>` to ensure all the required actions are available to Splunk Observability Cloud.
+
 Configure AWS ingest using Terraform
 ======================================
 
@@ -49,7 +51,6 @@ To configure an AWS connection through Terraform, perform the following steps:
 5. Add data sources as described in :guilabel:`Data Source: signalfx_aws_services`. See :new-page:`https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/data-sources/aws_services <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/data-sources/aws_services>` in the SignalFx provider section of the Terraform website for details.
 
 .. note:: For more Terraform syntax examples, see the blog entry :new-page:`Manage Your Splunk Infrastructure as Code Using Terraform <https://www.splunk.com/en_us/blog/partners/manage-your-splunk-infrastructure-as-code-using-terraform.html>`. For examples of how to configure through the Observability Cloud API, see :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>`.
-
 
 Next steps
 ===========

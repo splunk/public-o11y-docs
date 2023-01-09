@@ -2,13 +2,13 @@
 
 # Prometheus Exporter
 
-<meta name="description" content="Documentation on the prometheus-exporter">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Prometheus Exporter monitor. See benefits, install, configuration, and metrics">
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-exporter` monitor type by using the SignalFx Smart Agent Receiver.
 
 ## Description
 
-The Prometheus Exporter monitor reads metrics of all metric types from a [Prometheus exporter](https://prometheus.io/docs/instrumenting/exporters/) endpoint. For a description of the Prometheus metric types, see [Metric Types](https://prometheus.io/docs/concepts/metric_types/).
+The Prometheus Exporter monitor reads metrics of all metric types from a [Prometheus Exporter](https://prometheus.io/docs/instrumenting/exporters/) endpoint. A Prometheus Exporter is a piece of software that fetches statistics from another, non-Prometheus system, and turns them into Prometheus metrics. For a description of the Prometheus metric types, see [Metric Types](https://prometheus.io/docs/concepts/metric_types/).
 
 This monitor is available on Kubernetes, Linux, and Windows.
 
@@ -111,6 +111,9 @@ For basic HTTP authentication, use the `username` and `password` options.
 
 On Kubernetes, if the monitored service requires authentication, use the `useServiceAccount` option to use the service account of the agent when connecting. Make sure that the Smart Agent service account has sufficient permissions for the monitored service.
 
+## Metrics
+
+There are no metrics available for this integration.
 
 ## Troubleshooting
 
@@ -123,11 +126,6 @@ Solution: Enable HTTPS with `useHTTPS`.
 ### Log contains the error `forbidden: User \"system:anonymous\" cannot get path \"/metrics\"`
 
 Solution: Enable `useServiceAccount` and make sure the service account that the Splunk Distribution of OpenTelemetry Collector is running with has the necessary permissions.
-
-
-## Metrics
-
-There are no metrics available for this integration.
 
 ## Get help
 

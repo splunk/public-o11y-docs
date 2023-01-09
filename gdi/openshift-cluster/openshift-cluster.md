@@ -2,7 +2,7 @@
 
 # OpenShift cluster
 
-<meta name="description" content="Documentation for the openshift-cluster monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the OpenShift cluster monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -17,11 +17,17 @@ Generate customized instructions using the guided setup
 To generate all the basic installation commands for your environment and application, use the Ruby guided setup. To access the Ruby guided setup:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`By Product`.
-#. Select the :guilabel:`APM` product.
-#. Select the :guilabel:`Ruby` tile to open the Ruby guided setup.
+#. Open the :new-page:`Ruby guided setup <https://login.signalfx.com/#/gdi/scripted/ruby-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"ruby-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`. 
+
+   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+
+   #. In the integration filter menu, select :guilabel:`By Product`.
+
+   #. Select the :guilabel:`APM` product.
+
+   #. Select the :guilabel:`Ruby` tile to open the Ruby guided setup.
 
 .. _install-enable-ruby-agent:
 
@@ -36,8 +42,8 @@ Follow these steps to automatically instrument your application using the Ruby a
 
       .. code-block:: text
 
-         gem "splunk-otel", "~> 0.1"
-         gem "opentelemetry-instrumentation-all", "~> 0.23.0"
+         gem "splunk-otel", "~> 1.0"
+         gem "opentelemetry-instrumentation-all", "~> 0.27"
 
    Run ``bundle install`` to install the gems.
 
@@ -87,6 +93,13 @@ Follow these steps to automatically instrument your application using the Ruby a
 If no data appears in :strong:`Observability > APM`, see :ref:`common-ruby-troubleshooting`.
 
 If you want to manually install and enable instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
+
+.. _ruby-enable-server-timing:
+
+Enable server timing for RUM
+========================================================
+
+You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby`.
 
 .. _kubernetes_ruby_agent:
 
@@ -160,6 +173,8 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 #. Select your username. 
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
 .. _instrument_aws_ruby_functions:
 

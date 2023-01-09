@@ -30,10 +30,16 @@ In OneLogin, do the following:
 
 Back in Observability Cloud:
    #. Log in to Splunk Observability Cloud.
-   #. In the left navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration`.
-   #. In the integration filter menu, select :guilabel:`All`.
-   #. In the :guilabel:`Search` field, search for :guilabel:`OneLogin`, and select it.
+   #. Open the :new-page:`OneLogin guided setup <https://login.signalfx.com/#/integrations/onelogin/description>`. Optionally, you can navigate to the guided setup on your own:
+    
+      #. In the left navigation menu, select :menuselection:`Data Management`.
+   
+      #. Select :guilabel:`Add Integration`.
+   
+      #. In the integration filter menu, select :guilabel:`All`.
+    
+      #. In the :guilabel:`Search` field, search for :guilabel:`OneLogin`, and select it.
+   
    #. In the :guilabel:`Name` text box, enter the name for your integration.
    #. Copy the :guilabel:`Integration ID` value.
 

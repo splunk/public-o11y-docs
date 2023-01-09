@@ -36,6 +36,8 @@ After you've set up the supported integrations, AutoDetect alerts and detectors 
 View AutoDetect alerts and detectors
 ----------------------------------------
 
+You can view AutoDetect detectors on the :strong:`Alerts` page, in a navigator for a service, or in a chart.
+
 To view a complete list of all available AutoDetect alerts and detectors in your organization, do the following:
 
 #. From the Splunk Observability Cloud home page, go to the :strong:`Alerts` page.
@@ -51,8 +53,7 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
 
    .. tab:: APM
 
-      #. Log in to Observability Cloud.
-      #. In the left navigation menu, select :menuselection:`APM`.
+      #. From the Splunk Observability Cloud home page, go to the :strong:`APM` page.
       #. From the APM overview, click the active alerts for a service.
       #. Select the alert to see more details.
 
@@ -64,8 +65,7 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
 
    .. tab:: Infrastructure
 
-      #. Log in to Observability Cloud.
-      #. In the left navigation menu, select :menuselection:`Infrastructure`. 
+      #. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page.
       #. Select the navigator for the integration you want to view.
       #. On the navigator page, click :guilabel:`Alerts` or :guilabel:`Active Detectors` in the Filter bar.
 
@@ -76,6 +76,18 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
          :alt: AutoDetect component in the Alerts sidebar for a navigator.
 
       .. note:: In either view, if there is no component with the :strong:`Auto` badge, then you don't have any integration supported by AutoDetect.
+
+If available, AutoDetect detectors are connected to a chart by default. To view AutoDetect detectors related to a chart, do the following:
+
+#. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page or the :strong:`Dashboards` page.
+#. Select the navigator or dashboard you want to view.
+#. On the navigator or dashboard page, select the bell icon on a chart to see AutoDetect detectors linked to that chart. 
+
+    A green dot indicates that there is no alert for the detector. A red dot indicates that the detector has an active alert.
+
+    .. image:: /_images/images-detectors-alerts/autodetect/autodetect-linked-chart.png
+      :width: 60%
+      :alt: This screenshot shows where linked AutoDetect detectors are listed for a chart. In this example, there is one AutoDetect detector with a green dot, meaning there is no active alert.
 
 .. _autodetect-subscribe:
 

@@ -5,7 +5,7 @@ Send custom metrics to Splunk Observability Cloud
 **************************************************
 
 .. meta::
-   :description: You can send custom metrics to Splunk Observability Cloud, for example to instrument a service that still isn't supported.
+   :description: You can send custom metrics to Splunk Observability Cloud, for example to instrument a service that isn't supported yet.
 
 You can send custom metrics to Splunk Observability Cloud, for example to instrument a service that isn't supported yet. To send custom metrics, follow these instructions.
 

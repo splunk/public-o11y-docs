@@ -17,11 +17,12 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a Go application <go/get-started>
    Instrument a Ruby application <ruby/get-started>
    Instrument a PHP application <php/get-started>
-   Spans in Splunk Observability Cloud <span-attributes>
+   Instrument applications written in other programming languages <other-languages>
+   Send spans from the Istio service mesh <istio/istio>
 
 Instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
 
-You can instrument applications in each of these languages:
+You can instrument applications in each of these languages using official Splunk instrumentation:
 
 - :ref:`Java <get-started-java>`
 - :ref:`Python <get-started-python>`
@@ -31,7 +32,14 @@ You can instrument applications in each of these languages:
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`
 
-To learn more about the data we collect:
+To send spans from the Istio service mesh, see :ref:`get-started-istio`.
 
-- Browse our docs on :ref:`metrics <get-started-metrics>`.
-- See our docs about :ref:`semantic conventions and common attributes for spans <span-attributes>`.
+You can also send traces from applications written in languages for which Splunk instrumentation isn't available:
+
+- :ref:`Erlang <apm-instrumentation-other-langs>`
+- :ref:`Rust <apm-instrumentation-other-langs>`
+
+To learn more about the data collected by Splunk Observability Cloud, see:
+
+- :ref:`get-started-metrics`.
+- :ref:`span-attributes`.
