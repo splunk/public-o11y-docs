@@ -30,7 +30,7 @@ Configure the API via AWS
 
 Alternatively, you can configure this via the AWS GUI. Make sure that the following permissions are set by selecting the box next to the GetMetricData option:
 
-.. image:: /_images/gdi/GetMetricData-AWSUI.png
+.. image:: /_images/gdi/GetMetricData_AWSUI.png
   :width: 90%   
 
 Once you have made the appropriate changes, choose :guilabel:`Review Policy`, and then save the changes to make them effective.
@@ -41,6 +41,7 @@ Monitor the effects of the new configuration
 Monitor CloudWatch integration calls by checking the ``sf.org.num.awsServiceCallCount`` metric. This metric tracks the number of calls by a method and ``aws_account_id`` so you can easily verify what API each AWS account is using.
 
 After switching to ``GetMetricData``, you should see:
+
 - A significant reduction (up to 20x) in the total number of calls required to obtain data.
 - A related reduction in the latency of data obtained by polling CloudWatch.
 
