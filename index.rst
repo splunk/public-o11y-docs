@@ -744,7 +744,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Ingest alerts in Incident Intelligence <incident-intelligence/ingest-alerts/ingest-alerts>
+   Ingest alerts in Incident Intelligence TOGGLE <incident-intelligence/ingest-alerts/ingest-alerts>
 
 .. toctree::
    :maxdepth:   3

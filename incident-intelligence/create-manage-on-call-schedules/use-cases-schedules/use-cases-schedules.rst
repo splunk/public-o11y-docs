@@ -12,5 +12,5 @@ Use cases: Schedules in Incident Intelligence
     :maxdepth: 3
     :hidden:
 
-    use-case-business-hours
-    use-case-business-hours-notifications
+    use-case-business-hours TOGGLE
+    use-case-business-hours-notifications TOGGLE
