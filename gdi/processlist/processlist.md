@@ -1,7 +1,7 @@
 (processlist)=
 
 # Host process list
-<meta name="description" content="Documentation on the processlist monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the processlist monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -27,7 +27,7 @@ This monitor is available on Linux and Windows.
 ```
 
 ```{note}
-Provide a processlist monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a processlist monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

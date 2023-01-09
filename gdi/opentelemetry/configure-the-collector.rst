@@ -103,7 +103,7 @@ You can also configure the following components:
 
   * Zookeeper (Alpha)
 
-* :ref:`SignalFx Smart Agent <otel-smart-agent>`
+* :ref:`SignalFx Smart Agent components <otel-smart-agent>`
 
   * Extension
 

@@ -157,4 +157,6 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
-The realm name appears in the :guilabel:`Organizations` section. 
+The realm name appears in the :guilabel:`Organizations` section.
+
+.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.

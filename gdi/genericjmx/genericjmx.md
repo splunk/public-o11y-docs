@@ -1,7 +1,7 @@
 (genericjmx)=
 # GenericJMX
 
-<meta name="description" content="Documentation on the genericjmx monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the GenericJMX monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

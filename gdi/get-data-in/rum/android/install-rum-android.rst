@@ -5,7 +5,7 @@ Install the Android RUM agent for Splunk RUM
 *******************************************************************************
 
 .. meta::
-   :description: Instrument your Android applications for Splunk RUM using the Android RUM agent from the Splunk OpenTelemetry Instrumentation for Android.
+   :description: Instrument your Android applications in Splunk Observability Cloud real user monitoring / RUM instrumentation using the agent.
 
 You can instrument your Android applications for Splunk RUM using the Android RUM agent from the Splunk OpenTelemetry Instrumentation for Android. 
 

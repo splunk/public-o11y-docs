@@ -1,15 +1,14 @@
 (cassandra)=
 
 # Cassandra
-<meta name="description" content="Documentation on the cassandra monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Cassandra monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the Cassandra monitor by using 
 the SignalFx Smart Agent Receiver.
 
-Use this integration to monitor Cassandra using the GenericJMX plugin. This plugin wraps the genericjmx monitor, which comes with a set of predefined
-MBean definitions that a standard Cassandra deployment exposes.
+Use this integration to monitor Cassandra using the GenericJMX plugin. This plugin wraps the genericjmx monitor, which comes with a set of predefined MBean definitions that a standard Cassandra deployment exposes.
 
 This monitor is available on Kubernetes, Linux, and Windows.
 

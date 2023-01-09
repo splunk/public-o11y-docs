@@ -5,7 +5,7 @@ Nomad
 ****************************
 
 .. meta::
-      :description: Deploy the Collector using Nomad.
+      :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector using Nomad.
 
 Use Nomad to to deploy the Collector. Nomad is an orchestrator deployment which creates a job that provides a unified way to receive, process, and export metric and trace data for Splunk Observability Cloud.
 
