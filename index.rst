@@ -697,7 +697,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :maxdepth:   3 
-  
+
    synthetics/synth-use-cases/synth-landing
 
 .. toctree::
