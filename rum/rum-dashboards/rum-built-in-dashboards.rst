@@ -6,7 +6,33 @@ Splunk RUM built-in dashboards
 
 Built-in dashboards offer charts, metrics, and aggregations about your applications. 
 
-To access the built-in dashboards: 
+.. list-table::
+   :widths: 20 20 
+   :header-rows: 1
+
+   * - :strong:`Dashboard`
+     - :strong:`Type of data`
+   * - Mobile app health
+     - 
+        * App crashes and errors 
+        * App launch statistics 
+        * Network performance metrics
+   * - Browser app health
+     - 
+        * Page loads and route changes
+        * Web vitals
+        * Network performance metrics
+
+   * - Browser page health
+     -  
+        * Page loads and route changes
+        * Web vitals by page 
+        * Network performance metrics by page 
+
+Navigate to RUM built-in dashboards  
+====================================
+
+To go to the built-in dashboards: 
 
 #. Select :guilabel:`Dashboards` >  :guilabel:`RUM Applications` > then select either Mobile App Health or Browser App Health.
 
@@ -16,6 +42,7 @@ To access the built-in dashboards:
 
     * :guilabel:`Mobile app health` 
     * :guilabel:`Browser app health`
+    * :guilabel:`Browser page health`
 
 #. To open Splunk RUM and explore data from a built-in dashboard, select the settings symbol in any tile, then :guilabel:`Troubleshoot from this time window`.
 

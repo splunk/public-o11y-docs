@@ -95,11 +95,25 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-nodejs-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. caution:: CPU profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
+.. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
 
 To enable AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
-For more settings, see :ref:`profiling-configuration-nodejs`.
+To enable memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+
+The following example shows how to enable the profiler from your application's code:
+
+.. code-block:: javascript
+
+   start({
+      serviceName: '<service-name>',
+      endpoint: 'collectorhost:port',
+      profiling: {                       // Enables CPU profiling
+         memoryProfilingEnabled: true,   // Enables Memory profiling
+      }
+   });
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-nodejs`.
 
 .. _enable_automatic_metric_collection_nodejs:
 

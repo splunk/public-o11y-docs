@@ -98,6 +98,29 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-java-troub
 
 If you need to add custom attributes to spans or want to manually generate spans, instrument your Java application or service manually. See :ref:`java-manual-instrumentation`.
 
+.. _enable_profiling_java:
+
+Enable AlwaysOn Profiling
+--------------------------------------
+
+To enable AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
+
+To enable memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+
+The following example shows how to enable the profiler using the system property:
+
+.. code-block:: bash
+   :emphasize-lines: 2,3,4,5
+
+   java -javaagent:./splunk-otel-javaagent.jar \
+   -Dsplunk.profiler.enabled=true \
+   -Dsplunk.profiler.memory.enabled=true \
+   -Dotel.exporter.otlp.endpoint=http(s)://collector:4317 \
+   -Dsplunk.metrics.endpoint=http(s)://collector:9943
+   -jar <your_application>.jar
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-java`.
+
 .. _enable_automatic_metric_collection:
 
 Enable metrics collection
@@ -115,22 +138,6 @@ To enable automatic metric collection, enable the metrics feature using a system
 If your metrics endpoint is different than the default value, set the ``SPLUNK_METRICS_ENDPOINT`` environment variable. See :ref:`metrics-configuration-java` for more information.
 
 .. note:: If you enable memory profiling, metrics collection is enabled automatically and cannot be disabled.
-
-.. _enable_profiling_java:
-
-Enable AlwaysOn Profiling
---------------------------------------
-
-To enable AlwaysOn CPU Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
-
-.. code-block:: bash
-   :emphasize-lines: 2
-
-   java -javaagent:./splunk-otel-javaagent.jar \
-   -Dsplunk.profiler.enabled=true \
-   -jar <myapp>.jar
-
-To enable memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling CPU profiling.
 
 .. _ignore_endpoints_java:
 
