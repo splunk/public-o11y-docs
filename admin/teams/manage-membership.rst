@@ -125,7 +125,7 @@ To view which teams a user belongs to, follow these steps:
 
 #. A table of current teams appears in the main panel.
 
-#. In the search bar, type the name of the user and ensure that :guilabel:`Teams` is selected. You can search by the user's name or email address.
+#. In the search bar, type the name of the user and ensure that :guilabel:`Users` is selected. You can search by the user's name or email address.
 
 
 
