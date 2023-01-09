@@ -48,8 +48,8 @@ After switching to ``GetMetricData``, you should see:
 Control cost
 ========================================================================================
 
-Please note that if an AWS account has lots of CloudWatch metrics, the improved performance could lead to an increase in the AWS API cost.
+Note that if an AWS account has lots of CloudWatch metrics, the improved performance could lead to an increase in the AWS API cost.
 
 For example, if the ``GetMetricStatistics`` API takes 5 minutes to retrieve all the data, the ``GetMetricData`` API might take only 1 minute. When an AWS integration's poll rate is set to 1 minute, the ``GetMetricData`` requests are sent up to 5 times more often, generating a larger AWS API bill, while improving data latency at the same time. Increase the poll rate to 5 minutes to keep the cost at the same level.
 
-You can keep track of the CloudWatch API cost incurred by Observability Cloud using the AWS CloudWatch integration pricing section in the :ref:`AWS' built-in dashboards <aws-dashboards>`.
+You can keep track of the CloudWatch API cost incurred by Observability Cloud using the :strong:`Organization Metrics / Cloud Integrations` built-in dashboard, or the AWS CloudWatch integration pricing section in :ref:`Infrastructre Monitoring AWS' built-in dashboards <aws-dashboards>`.
