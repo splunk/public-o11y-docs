@@ -18,11 +18,11 @@ Splunk Observability Cloud and the Splunk platform
 
 With the Splunk platform, you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can dig deeper into those search results:
 
-- Correlate logs with metrics and traces to locate, isolate, and resolve problems in your applications or infrastructure quickly
+- Correlate logs with metrics and traces to locate, isolate, and resolve problems in your applications or infrastructure quickly.
 
-- Use hundreds of prepackaged integrations to start monitoring your entire deployment immediately
+- Use hundreds of prepackaged integrations to start monitoring your entire deployment immediately.
 
-- Improve mean time to resolution using prepackaged and custom alerts and detectors
+- Improve mean time to resolution using prepackaged and custom alerts and detectors.
 
 Use Observability Cloud to solve common system reliability problems. For example, do you have a wide variety of platforms, databases, and cloud services that you must monitor in multiple interfaces? Observability Cloud has hundreds of prepackaged integrations that give you a predefined view with a single pane of glass for hybrid coverage.
 
