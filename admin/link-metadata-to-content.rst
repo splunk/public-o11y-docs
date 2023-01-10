@@ -72,7 +72,7 @@ Create a global data link
 
 This procedure describes how to create a global data link for any available metadata using the Global Data Link page.
 
-For information about how to create a global data link using the Observability Cloud API, see :new-page:`Link Metadata to Related Content <https://dev.splunk.com/observability/docs/administration/datalinks/>`.
+For information about how to create a global data link using the Observability Cloud API, see the :new-page:`Link Metadata to Related Content <https://dev.splunk.com/observability/docs/administration/datalinks/>` topic in the Observability Cloud Developer Guide.
 
 For information about how to create a global data link specifically for Splunk APM properties, see :ref:`apm-create-data-links`.
 
