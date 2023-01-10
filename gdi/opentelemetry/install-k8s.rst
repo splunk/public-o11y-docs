@@ -20,43 +20,73 @@ Install the chart using one of these methods:
 Install the Collector with Helm chart
 ==============================================
 
-Use the chart to do the following:
+Use the Helm chart to do the following:
 
-* Create a Kubernetes DaemonSet along with other Kubernetes objects in a Kubernetes cluster
-* Receive, process, and export metric, trace, and log data for Splunk Enterprise, Splunk Cloud Platform, and Splunk Observability Cloud
+* Create a Kubernetes DaemonSet along with other Kubernetes objects in a Kubernetes cluster.
+* Receive, process, and export metric, trace, and log data for Splunk Enterprise, Splunk Cloud Platform, and Splunk Observability Cloud.
 
 Supported Kubernetes distributions
 ---------------------------------------
-The chart is tested and works with default configurations on the following Kubernetes distributions:
 
-* Vanilla (unmodified version) Kubernetes
-* Amazon Elastic Kubernetes Service
-* Azure Kubernetes Service
-* Google Kubernetes Engine
-* Minikube
-* Red Hat OpenShift
+The Helm chart works with default configurations of the main Kubernetes distributions. Use actively supported versions:
 
-While the chart should work for other Kubernetes distributions, it may require additional configurations applied to the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file. For OpenShift, use the :new-page:`actively supported Kubernetes/Openshift versions <https://endoflife.date/kubernetes>`.
+* :new-page:`Vanilla (unmodified version) Kubernetes <https://endoflife.date/kubernetes>`
+* :new-page:`Amazon Elastic Kubernetes Service <https://endoflife.date/amazon-eks>`
+* :new-page:`Azure Kubernetes Service <https://endoflife.date/azure-kubernetes-service>`
+* :new-page:`Google Kubernetes Engine <https://endoflife.date/google-kubernetes-engine>`
+* Minikube ???? https://github.com/kubernetes/minikube/releases
+* :new-page:`Red Hat OpenShift <https://access.redhat.com/support/policy/updates/openshift#dates>`
 
-How to use the chart
+While the chart should work for other Kubernetes distributions, the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file could require additional updates. 
+
+Use the Helm chart
 --------------------------------
+
+Follow these steps to install the Collector using the Helm chart. 
+
+Required resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You need the following resources to use the chart:
 
-* Helm 3. Helm 2 is not supported.
+* :new-page:`Helm 3 <https://helm.sh/docs/intro/install/>`. Helm 2 is not supported.
 * A Kubernetes cluster.
 * Access Token: ``splunkObservability.accessToken``. Your Splunk Observability org access token. See :ref:`admin-org-tokens`.
 * Splunk Realm: ``splunkObservability.realm``. Splunk realm to send telemetry data to. The default is ``us0``. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
 * Cluster name: ``clusterName``. This is an arbitrary value that identifies your Kubernetes cluster.
 
-Run the following commands to deploy the Helm chart. Replace the parameters with their appropriate values.
+Deploy the Helm chart
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Run the following commands to deploy the Helm chart: 
 
 .. code-block:: bash
 
+   
    helm repo add splunk-otel-collector-chart https://signalfx.github.io/splunk-otel-collector-chart
-   helm install my-splunk-otel-collector --set="splunkRealm=us0,splunkAccessToken=xxxxxx,clusterName=my-cluster" splunk-otel-collector-chart/splunk-otel-collector
+   helm install my-splunk-otel-collector --set="splunkRealm=us0,splunkAccessToken=xxxxxx,clusterName=my-cluster" --set=distribution={value},cloudProvider={value} splunk-otel-collector-chart/splunk-otel-collector
 
-If the chart is deployed successfully, the output displays a message stating that the Splunk Distribution of OpenTelemetry Collector for Kubernetes is deploying in your Kubernetes cluster. You also see the last deployed date and status in the output.
+Replace the parameters with their appropriate values. Apply the following for distributions:
+
+.. code-block:: bash
+
+   # aks deployment
+   --set distribution=aks,cloudProvider=azure 
+
+   # eks deployment
+   --set distribution=eks,cloudProvider=aws 
+
+   # eks/fargate deployment (with recommended gateway)
+   --set distribution=eks/fargate,gateway.enabled=true,cloudProvider=aws 
+
+   # gke deployment
+   --set distribution=gke,cloudProvider=gcp 
+
+   # gke/autopilot deployment
+   --set distribution=gke/autopilot,cloudProvider=gcp 
+
+   # openshift deployment (openshift can run on multiple cloud providers, so cloudProvider is excluded here)
+   --set distribution=openshift 
 
 You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named ``my_values.yaml``, run the following command to deploy the Helm chart:
 
@@ -65,6 +95,12 @@ You can also set Helm values as arguments using a YAML file. For example, after 
    helm install my-splunk-otel-collector --values my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
 See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
+
+Verify the deployment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the chart is deployed successfully, the output displays a message informing that the Splunk Distribution of OpenTelemetry Collector for Kubernetes is being deployed in your Kubernetes cluster, the last deployment date, and the status.
+
 
 .. _resource-yaml-manifests:
 
@@ -110,7 +146,7 @@ Install the Collector for the Kubernetes Operator (Alpha)
 
 The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator is an implementation of a Kubernetes Operator. This operator helps deploy and manage the Splunk Distribution of OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
 
-Splunk kubectl plugin
+The Splunk kubectl plugin
 ==========================
 
 The :new-page:`Splunk kubectl plugin <https://github.com/signalfx/kubectl-splunk/blob/main/docs/kubectl-splunk_support.md>` collects Kubernetes resources into a zip file. The plugin contains the following resources:
