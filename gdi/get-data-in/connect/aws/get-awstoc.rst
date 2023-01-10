@@ -17,6 +17,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
   Troubleshooting <aws-troubleshooting>
+  GetMetricStatistics API deprecation notice <aws-api-notice>
 
 To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to AWS following these steps:
 
