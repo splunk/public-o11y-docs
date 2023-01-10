@@ -33,9 +33,7 @@ To create a team, follow these steps:
 
 #. Continue to add users to the team.
 
-#. When you're finished adding users, click :guilabel:`Create`.
-
-#. The new team name appears in the list of teams. If you added yourself to the team, the Member label appears next to the number of team members.
+#. When you're finished adding users, click :guilabel:`Create`. The new team name appears in the list of teams. 
 
 
 .. _admin-delete-team:
@@ -81,7 +79,7 @@ To change the team name, follow these steps:
 
 #. In the :guilabel:`Choose team name` dialog box, edit the team name.
 
-#. When you're finished editing the name, click :guilabel:`Done`.
+#. When you're finished editing the name, click :guilabel:`Save`.
 
 The team now appears with the name you changed it to.
 
