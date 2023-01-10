@@ -90,7 +90,7 @@ Processors
      - Description
      - Supported pipeline type
    * - ``attributes``
-     - Modifies attributes of a span.
+     - Modifies attributes of a span or log record.
      - Logs, traces
    * - ``batch``
      - Accepts spans, metrics, or logs and places them into batches. Batching helps better compress the data and reduce the number of outgoing connections required to transmit the data. This processor supports both size-based and time-based batching.
