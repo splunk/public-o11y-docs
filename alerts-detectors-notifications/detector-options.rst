@@ -35,18 +35,23 @@ Because many metric time series (MTS) can be included in a single detector, the 
 
 It is best practice to let the engine determine the time to run the computation, but you can also control the delay manually with :strong:`Min Delay` and :strong:`Max Delay` settings.
 
-Min delay
+
+.. _min-delay-detectors:
+
+Min Delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The :strong:`Min Delay` parameter specifies the minimum amount of time that the analytics engine must wait for data to arrive for a specific detector. 
 
-For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits for at least 2 minutes even if all the data points arrive on time with no delay. Because the detector will wait a minimum of 2 minutes whether the data arrives on time or not, you are prioritizing correctness over real-time alerting. :strong:`Min Delay` is most useful in cases of sparse data, where MTS for the detector haven't sent a data point in a long time.
+For example, if you set :strong:`Min Delay` to 2 minutes, the computation waits for at least 2 minutes even if all the data points arrive on time with no delay. Because the detector will wait a minimum of 2 minutes whether the data arrives on time or not, you are prioritizing correctness over real-time alerting. :strong:`Min Delay` is most useful in cases of delayed new MTS or sparsely emitting MTS for the detector compared to the existing set of MTS being computed on.
 
 By default, :strong:`Min Delay` is set to ``0``, which means the analytics engine does not have to wait to run the computation.
 
 You can only configure :strong:`Min Delay` using the API. For more information, see the :new-page:`Detectors API reference <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
-Max delay
+.. _max-delay-detectors:
+
+Max Delay
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The :strong:`Max Delay` parameter specifies the maximum amount of time that the analytics engine can wait for data to arrive for a specific detector.
