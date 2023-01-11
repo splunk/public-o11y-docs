@@ -96,6 +96,63 @@ During this import, Infrastructure Monitoring gives the metrics special names so
 
 To learn more, see :ref:`aws-oc-metrics`, or refer to the AWS documentation site.
 
+.. _using-cloudwatch-metrics:
+
+CloudWatch rollups and Infrastructure Monitoring MTS
+--------------------------------------------------------------------------------
+
+AWS CloudWatch uses rollups to summarize metrics, and it refers to them as "statistics". To learn more about rollups, see :ref:`rollups` in data resolution and rollups in charts.
+
+Because AWS CloudWatch rollups don't map directly to Infrastructure Monitoring rollups, you can't directly access AWS CloudWatch rollups using the rollup selection menu in the Chart Builder. Instead, Infrastructure Monitoring captures the rollups as individual MTS that have the dimension ``stat``.
+
+.. list-table::
+   :header-rows: 1
+   :width: 100
+   :widths: 25 25 50
+
+   *  - :strong:`AWS statistic`
+      - :strong:`IM dimension`
+      - :strong:`Definition`
+
+   *  - Average
+      - stat:mean
+      - Mean value of metric over the sampling period
+
+   *  - Maximum
+      - stat:upper
+      - Maximum value of metric over the sampling period
+
+   *  - Minimum
+      - stat:lower
+      - Minimum value of metric over the sampling period
+
+   *  - Data Samples
+      - stat:count
+      - Number of samples over the sampling period
+
+   *  - Sum
+      - stat:sum
+      - Sum of all values that occurred over the sampling period
+
+To use an AWS CloudWatch metric in a plot, always specify the following:
+
+* AWS Cloudwatch metric name
+* Filter for the ``stat`` dimension value that's appropriate for the metric you've chosen.
+
+For example, if you are using the metric ``NetworkPacketsIn`` for EC2 metrics,
+the only meaningful AWS statistics are ``Minimum``, ``Maximum`` and ``Average``. To plot ``NetworkPacketsIn`` metric with
+the rollup you want, filter for the ``stat`` dimension with a value that corresponds to the AWS statistic (rollup) value:
+
+* ``lower``: Rollup that corresponds to the AWS rollup ``Minimum``
+* ``upper``: Rollup that corresponds to the AWS rollup ``Maximum``
+* ``mean``: Rollup that corresponds to the AWS rollup ``Average``
+
+.. note:: The "Rollup: Multiple" label in a plot for a CloudWatch metric indicates that you haven't specified the rollup you want. To avoid confusion, specify the rollup as soon as possible.
+
+Infrastructure Monitoring uses a 60-second sampling period for metrics it imports from AWS.
+
+To learn more, see the AWS developer documentation for AWS CloudWatch.
+
 Import data and metadata from other applications
 =============================================================================
 
@@ -103,6 +160,7 @@ Infrastructure Monitoring also imports metrics, metadata, and logs for some of y
 
 .. list-table::
    :header-rows: 1
+   :width: 100
    :widths: 30, 20, 50
 
    *  - :strong:`Get data in`
@@ -213,6 +271,7 @@ You can use the following AWS metadata to filter metrics:
 
 .. list-table::
    :header-rows: 1
+   :width: 100
    :widths: 25 25 50
 
    *  - :strong:`Custom Property`
@@ -304,58 +363,42 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 - If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for Amazon EC2 instances display no data.
 - If you have only Smart Agent configured, Amazon EC2 instance navigator isn't available.
 
-.. _using-cloudwatch-metrics:
+.. _aws-costs:
 
-CloudWatch rollups and Infrastructure Monitoring MTS
-=============================================================================
+Cost considerations for AWS monitoring
+===========================================================
 
-AWS CloudWatch uses rollups to summarize metrics, and it refers to them as "statistics". To learn more about rollups, see :ref:`rollups` in data resolution and rollups in charts.
+The cost of retrieving Cloudwatch metrics for a service is based on three factors:
 
-Because AWS CloudWatch rollups don't map directly to Infrastructure Monitoring rollups, you can't directly access AWS CloudWatch rollups using the rollup selection menu in the Chart Builder. Instead, Infrastructure Monitoring captures the rollups as individual MTS that have the dimension ``stat``.
+* Frequency of pulling data
+* Number of metrics for a given service 
+* Number of cloud resources
+
+You can control cost by :ref:`limiting the metrics collect, the resources, or the collection frequently <specify-data-metadata>`. 
+
+Cost calculation examples
+-------------------------------------------------------------------
+
+Let's imagine on AWS/SQS configuration where SQS has 9 available CloudWatch metrics.
 
 .. list-table::
    :header-rows: 1
-   :widths: 25 25 50
+   :width: 100
+   :widths: 30 40 20 
 
-   *  - :strong:`AWS statistic`
-      - :strong:`IM dimension`
-      - :strong:`Definition`
+   *  - :strong:`Scenario`
+      - :strong:`Number of requested metrics per day`
+      - :strong:`Cost`
 
-   *  - Average
-      - stat:mean
-      - Mean value of metric over the sampling period
+   *  - A customer has 100k SQS queues and wants to get all metrics every 1 minute
+      - 1440 (number of minutes in a day) *  9 (number of metrics) * 100k (number of SQS resources) = 1.296B
+      - Aprox. $12,960 per day ($0.01 per 1,000 metrics requested)
 
-   *  - Maximum
-      - stat:upper
-      - Maximum value of metric over the sampling period
+   *  - A customer has 100k SQS queues and wants to go get all metrics every 5 minutes
+      - 1440 (number of minutes in a day)/5 (pull interval) *  9 (number of metrics) * 100k (number of SQS resources) = 259.2M
+      - Aprox. $2,592 per day ($0.01 per 1,000 metrics requested)
 
-   *  - Minimum
-      - stat:lower
-      - Minimum value of metric over the sampling period
+   *  - A customer has 100k SQS queues and ONLY wants to get 4 metrics for instances where ``env=prod`` (1000 SQS queues in this example) every 10 minutes
+      - 1440 (number of minutes in a day)/10 (pull interval) *  4 (number of metrics) * 1000 (number of SQS resources) = 576k
+      - Aprox. $5,76 per day ($0.01 per 1,000 metrics requested)
 
-   *  - Data Samples
-      - stat:count
-      - Number of samples over the sampling period
-
-   *  - Sum
-      - stat:sum
-      - Sum of all values that occurred over the sampling period
-
-To use an AWS CloudWatch metric in a plot, always specify the following:
-
-* AWS Cloudwatch metric name
-* Filter for the ``stat`` dimension value that's appropriate for the metric you've chosen.
-
-For example, if you are using the metric ``NetworkPacketsIn`` for EC2 metrics,
-the only meaningful AWS statistics are ``Minimum``, ``Maximum`` and ``Average``. To plot ``NetworkPacketsIn`` metric with
-the rollup you want, filter for the ``stat`` dimension with a value that corresponds to the AWS statistic (rollup) value:
-
-* ``lower``: Rollup that corresponds to the AWS rollup ``Minimum``
-* ``upper``: Rollup that corresponds to the AWS rollup ``Maximum``
-* ``mean``: Rollup that corresponds to the AWS rollup ``Average``
-
-.. note:: The "Rollup: Multiple" label in a plot for a CloudWatch metric indicates that you haven't specified the rollup you want. To avoid confusion, specify the rollup as soon as possible.
-
-Infrastructure Monitoring uses a sixty-second sampling period for metrics it imports from AWS.
-
-To learn more, see the AWS developer documentation for AWS CloudWatch.
