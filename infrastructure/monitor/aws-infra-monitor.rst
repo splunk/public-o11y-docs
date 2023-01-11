@@ -368,22 +368,27 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 Cost considerations for AWS monitoring
 ===========================================================
 
-The cost of retrieving Cloudwatch metrics for a service is based on three factors:
+The cost of obtaining Cloudwatch metrics for a service is based on three factors:
 
-* Frequency of pulling data
-* Number of metrics for a given service 
-* Number of cloud resources
+* Frequency of pulling data.
+* Number of metrics for a given service.
+* Number of cloud resources.
 
-You can control cost by :ref:`limiting the metrics collect, the resources, or the collection frequently <specify-data-metadata>`. 
+Observability Cloud retrieves metrics either using Metric Streams, or through APIs (``ListMetrics``, ``GetMetricData``, or ``GetMetricStatistics``):
 
-Cost calculation examples
+* Generally speaking, Metric Streams costs the same as using an API if the integration is synced every 5 minutes, and is cheaper (up to 5 times) when synced every minute.
+* However, when using Metric Stream you can't control costs, while you can configure the pulling frequency of the APIs (from 1 to 10 minutes). See :ref:`how to limit the metrics to collect, the resources, or the collection frequently <specify-data-metadata>`. 
+* Besides, depending on the AWS namespace, Metric Streams can contain more than one data point. 
+
+Cost examples using APIs
 -------------------------------------------------------------------
 
 Let's imagine a user with the following configuration: 
 
 - 100,000 SQS queues
 - 9 available CloudWatch metrics per queue 
-- A cost of USD 0.01 per 1,000 metrics requested
+
+If data is retrieved using the ``GetMetricData`` or ``GetMetricStatistics`` API at a cost of USD 0.01 per 1,000 metrics requested:
 
 .. list-table::
    :header-rows: 1
@@ -404,5 +409,19 @@ Let's imagine a user with the following configuration:
 
    *  - The user wants to retrieve ONLY 4 metrics for a 1,000 queues (because they're the production instances) every 10 minutes
       - 1440 (number of minutes in a day)/10 (pull interval) *  4 (number of metrics) * 1000 (number of SQS resources) = 576k
-      - USD 5,76 
+      - USD 5.76 
 
+If data is retrieved using the ``ListMetrics`` API at a cost of USD 0.01 per 1,000 API calls:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100
+   :widths: 30 50 20 
+
+   *  - :strong:`Scenario`
+      - :strong:`Number of API calls per day`
+      - :strong:`Cost/day`
+
+   *  - Metrics are listed every 15 minutes, and a list contains up to 500 items
+      - 1440 (number of minutes in a day)/15 (pull interval) * 100k / 500 (items) = 19200
+      - USD 0.192 
