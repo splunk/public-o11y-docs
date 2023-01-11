@@ -1,7 +1,7 @@
 (kubernetes-scheduler)=
 
 # Kubernetes scheduler
-<meta name="Description" content="Documentation on kubernetes-scheduler monitor type">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Kubernetes scheduler monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

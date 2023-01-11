@@ -5,8 +5,7 @@ Exposed ports and endpoints
 ******************************************
 
 .. meta::
-      :description: Exposed ports and endpoints.
-
+      :description: Exposed ports and endpoints of the Splunk Distribution of OpenTelemetry Collector.
 
 By default, the Collector exposes several endpoints. The components providing these endpoints will attempt to listen on loopback (localhost) or all interfaces (0.0.0.0), as detailed in this document.
 

@@ -1,11 +1,12 @@
-:orphan:
-
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 
-.. _key-concepts:
+.. _ii-key-concepts:
 
 Key concepts in Splunk Incident Intelligence 
 **************************************************
+
+.. meta::
+   :description: Review important concepts for successful use of Incident Intelligence in Splunk Observability Cloud. 
 
 Here are some important concepts you need to know to successfully use Splunk Incident Intelligence:
 
@@ -19,20 +20,32 @@ Here are some important concepts you need to know to successfully use Splunk Inc
    * - Acknowledged
      - Incident responders select this status to indicate that they are aware of the incident. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Acknowledging an incident prevents the escalation to the next step in an incident workflow.
 
+   * - Alert 
+     - An alert is an event that meets a defined threshold or criteria. 
+
    * - Alert grouping
-     - Use alert grouping to automate incident trigger conditions and group alerts. Alert grouping conditions are set up at the service level to let you customize the grouping rules for each service. 
+     - Use alert grouping to automate incident trigger conditions and group alerts. Alert grouping conditions are set up at the incident-policy level to let you customize the grouping rules for each incident policy. 
 
    * - Alert routing
-     - Alert routing associates alerts with a service. If an alert matches your configured alert routing conditions, it is routed to the service.
+     - Alert routing associates alerts with an incident policy. If an alert matches your configured alert routing conditions, it is routed to the incident policy.
 
-   * - Incident response configuration
-     - The entire configuration process for a service in Incident Intelligence. This is where you create a service and configure alert routing, alert grouping, and incident workflows for incidents associated with a service. 
+   * - Detector
+     - Use a detector to specify the events for which you want to create an alert that is ingested into Incident Intelligence.
 
-   * - Incidents
-     - An unplanned interruption to a service or reduction in the quality of a service. Not all alerts are incidents. Each incident is made up of alerts or events that are ingested into Incident Intelligence.
+   * - Incident Management
+     - The entire configuration process for an incident policy in Incident Intelligence. This is where you create an incident policy and configure alert routing, alert grouping, and incident workflows for incidents associated with an incident policy. 
+
+   * - Incident
+     - An unplanned interruption to a service or reduction in the quality of a service that needs to be resolved. Each incident is made up of alerts that are ingested into Incident Intelligence.
 
    * - Incident action
      - Any status-changing event taken by a user or the system on an incident. Incident responders can acknowledge, resolve, or reject an incident. These actions update the incident status to reflect the most recent action. 
+
+   * - Incident alerting
+     - The primary mechanism of Incident Intelligence. It is the process by which alerts and events are ingested at scale and grouped to create incidents. As alerts and events are ingested into Incident Intelligence, they pass through a series of data transformations, such as alert routing and alert grouping. 
+
+   * - Incident policy
+     - Incident policies let you organize incidents depending on the impacted component in your environment. Incident policies include alert-routing and alert-grouping rules and an incident workflow. 
 
    * - Incident status
      - Where an incident is in its lifecycle. The status of an incident changes based on alert grouping conditions, as well as actions from a user. Throughout the lifecycle of an incident, the incident status can go from triggered, to acknowledged, to resolved or rejected. 
@@ -40,24 +53,32 @@ Here are some important concepts you need to know to successfully use Splunk Inc
    * - Incident workflow
      - A configurable series of escalation steps that run in response to a triggered incident. Incident workflows determine who is notified of an incident and the time interval for notifications. You can also use incident workflows to manage how incidents are routed, add automation steps, and route to an on-call schedule.
 
-   * - Incident alerting
-     - The primary mechanism of Incident Intelligence. It is the process by which alerts and events are ingested at scale and grouped to create incidents. As alerts and events are ingested into Incident Intelligence, they pass through a series of data transformations, such as alert routing and alert grouping. 
+   * - Maintenance
+     - An incident policy status that mutes all associated incidents. Use incident policy maintenance for planned outages.
+
+   * - Mean time to acknowledge (MTTA)
+     - The average time it takes from when an incident is triggered to when the incident is acknowledged.
+
+   * - Mean time to resolve (MTTR)
+     - The average time it takes from when an incident is triggered to when the incident is resolved.
+
+   * - Muted
+     - An incident status that is set when the associated incident policy is put into maintenance. 
 
    * - On-call schedules
-     - An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your services' incident workflows.
+     - An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your incident policies' incident workflows.
 
    * - Rejected
-     - An incident status that incident responders can set to indicate that the incident is rejected. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to rejected prevents the escalation to the next step in an incident workflow.
+     - An incident status that incident responders can set to indicate that the incident is rejected. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to rejected prevents the escalation to the next step in an incident workflow. When you reject an incident, it is considered invalid and closed; you will no longer be able to make updates to the incident.
 
    * - Resolved
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.
 
-   * - Service-based routing
-     - Incident Intelligence relies on a service-based routing scheme. Service-based routing automatically organizes and routes incidents depending on the service that it’s impacting. Rather than routing to a combination of teams and policies, the service an incident is associated with determines who is notified of the incident. 
+   * - Incident policy-based routing
+     - Incident Intelligence relies on an incident policy-based routing scheme. Incident policy-based routing automatically organizes and routes incidents depending on the service that it’s impacting. Rather than routing to a combination of teams and policies, the incident policy an incident is associated with determines who is notified of the incident. 
 
-   * - Splunk Incident Intelligence
-     - Splunk Incident Intelligence lets IT and DevOps SREs resolve outages with event correlation, incident response, on-call routing, collaboration, and automation. Incident Intelligence provides organizations with a way to manage both their ITOps and DevOps environments by providing a collaborative ChatOps interface. This interface lets SREs and IT Operations teams collaborate to diagnose and remediate issues and across their environment. Incident Intelligence uses event, incident, and diagnosis data to provide insights and recommendations to the SREs and operators to address similar issues in the future.
+   * - Snoozed
+     - An incident status that is set when responders snooze the incident.
 
    * - Triggered
-     - The initial stage of an incident is triggered. Incidents are triggered based on the alert grouping conditions you configured for the service.
-   
+     - The initial stage of an incident is triggered. Incidents are triggered based on the alert grouping conditions you configured for the incident policy.

@@ -1,8 +1,8 @@
 
 (kube-controller-manager)=
 
-# Kubernetes controller manager
-<meta name="Description" content="Documentation on kube-controller-manager monitor">
+# Kubernetes Controller Manager
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the kube-controller-manager monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -1,6 +1,6 @@
 (jmx)=
 # JMX
-<meta name="description" content="JMX monitor install and config details to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the JMX monitor. See benefits, install, configuration, and metrics. Run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points">
 
 ## Description
 

@@ -1,6 +1,6 @@
 (telegraf-win-perf-counters)=
 # Windows performance counters
-<meta name="description" content="Documentation on the telegraf/win_perf_counters monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Telegraf win_perf_counters monitor for Windows. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -32,9 +32,9 @@ For more information about stream objects, see :new-page:`Streams as variables <
 Create custom analytics
 -------------------------------------------
 
-If you want to create custom charts and detector analytics, see :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` in the Splunk Developer Guide. 
+If you want to create custom charts and detector analytics, see :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` in the Splunk Observability Cloud Developer Guide.
 
-You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/>` in the Splunk Developer Guide.
+You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` topic in the Splunk Observability Cloud Developer Guide.
 
 .. _aggregations-transformations:
 
@@ -43,7 +43,7 @@ Aggregate and transform data
 
 Most built-in :ref:`analytical functions <analytics-ref>` can perform computations on time series in charts and detectors in two ways: aggregations and transformations.
 
--  Aggregations operate across all of the data points at a single instance in time, for example the mean CPU utilization across a group of five servers at time t, t+1, t+2, and so on. The output of an aggregation is a single MTS, or :term:`metric time series`, where each data point represents the aggregation of all the data points over a specific period of time. For more information, see :new-page:`Aggregations <https://dev.splunk.com/observability/docs/signalflow/#Aggregations>`.
+-  Aggregations operate across all of the data points at a single instance in time, for example the mean CPU utilization across a group of five servers at time t, t+1, t+2, and so on. The output of an aggregation is a single :term:`metric time series <Metric time series>` (MTS), where each data point represents the aggregation of all the data points over a specific period of time. For more information, see :new-page:`Aggregations <https://dev.splunk.com/observability/docs/signalflow/#Aggregations>`.
 
    An additional option, Group By, is available for aggregations. If a group-by field is specified, MTS sharing values for properties named in the group-by criterion are aggregated together. For example, you can compute the average CPU load grouped by AWS instance type; add the Mean function as an aggregation, and set AWS instance type as the group-by criterion. The output will show one MTS per AWS instance type.
 

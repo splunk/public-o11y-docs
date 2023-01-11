@@ -428,16 +428,16 @@ The following table shows customizable arguments for this detector:
      - Option to show number of hosts instead of percentage
      - ``No``
 
-Splunk Operational - Active MTS is expected to reach the limit 
---------------------------------------------------------------------------------
+Splunk Operational - Active metric time series (MTS) is expected to reach the limit
+----------------------------------------------------------------------------------------
 
-- Description: Alerts when the number of active MTS is projected to reach the organization system limit.
+- Description: Alerts when the number of active metric time series (MTS) is projected to reach the organization system limit.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L49>` repository on GitHub.
 
 This detector does not have any customizable arguments.
 
-Splunk Operational - Custom MTS usage is expected to reach the limit
---------------------------------------------------------------------------------
+Splunk Operational - Custom metric time series (MTS) usage is expected to reach the limit
+---------------------------------------------------------------------------------------------
 
 - Description: Alerts when the custom MTS usage percentage is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L137>` repository on GitHub.

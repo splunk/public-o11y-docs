@@ -115,6 +115,8 @@ The following image shows an example configuration for a URL level metric for lo
 
 
 
+.. _rum-detectors:
+
 Create a detector 
 ==================
 

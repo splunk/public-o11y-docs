@@ -1,30 +1,67 @@
 (kubernetes-events)=
 
 # Kubernetes events
-<meta name="Description" content="Documentation on kubernetes-events monitor type">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Kubernetes events monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-events` monitor type by using the [Splunk Observability Cloud Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-events` monitor type. This monitor type listens for Kubernetes events by calling the Kubernetes API running on manager nodes, and sends Kubernetes events into Splunk Observability Cloud as Infrastructure Monitoring events through the OTel pipeline using the [Splunk Observability Cloud Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). 
 
-This monitor type listens for Kubernetes events by calling the Kubernetes API running on manager nodes, and sends Kubernetes events into Splunk Observability Cloud as Splunk Infrastructure Monitoring events. 
-
-Upon startup, the Kubernetes events monitor type sends all of the events that Kubernetes has that are still persisted and then send any new events as they come in. The various agents perform leader election amongst themselves to decide which instance will send events, unless the ``alwaysClusterReporter`` option is set to ``true``. 
-
-When ``alwaysClusterReporter`` is set to ``true``, every node, with the configuration, emits the same metrics. There is no additional querying of the manager node. When enabled, each agent on every node of the cluster fetches events from the Kubernetes API, which can bring down the Kubernetes API manager nodes.
+After it starts, the Kubernetes events monitor type sends all of the events that Kubernetes has that are still persisted, and any new events as they come in. The various agents decide which instance will lead and sends event. If ``alwaysClusterReporter`` is set to ``true``, every node emits the same data, and there is no additional querying of the manager node. 
 
 This monitor type is available on Kubernetes, Linux, and Windows.
 
 ## Benefits
 
-```{include} /_includes/benefits.md
+```{include} /_includes/benefits-events.md
 ```
 ## Installation
 
 ```{include} /_includes/collector-installation.md
 ```
 
+### Deploy with Helm
+
+To enable this monitor with the Helm chart, include this argument with the helm install command:
+
+```
+-set splunkObservability.infrastructureMonitoringEventsEnabled='true'
+```
+
+### Deploy without Helm
+
+To deploy without Helm, include the following in the OTel configuration: 
+
+```
+processors:
+  resource/add_event_k8s:
+    attributes:
+      - action: insert
+        key: kubernetes_cluster
+        value: CHANGEME
+
+receivers:
+  smartagent/kubernetes-events:
+   type: kubernetes-events
+   alwaysClusterReporter: true
+
+service:
+  pipelines:
+    logs/events:
+      exporters:
+        - signalfx
+      processors:
+        - memory_limiter
+        - batch
+        - resourcedetection
+        - resource/add_event_k8s
+      receivers:
+        - smartagent/kubernetes-events        
+```
+
 ## Configuration
+
+### 1. Activate the monitor
 
 ```{include} /_includes/configuration.md
 ```
@@ -35,38 +72,34 @@ receivers:
    type: kubernetes-events
    ... # Additional config
 ```
-To use this monitor type, configure which events to send. You can see the types of events happening in your cluster with the following command:
+
+### 2. Include the monitor in a pipeline
+
+Next, include the monitor type in an events pipeline in your configuration file. 
+
+```
+services:
+  logs/events:
+    receivers:
+      - smartagent/kubernetes-events
+```
+
+### 3. Select which events to send
+
+Configure which events to send. You can see the types of events happening in your cluster with the following command:
 
 ```
 kubectl get events -o yaml --all-namespaces
 ```
 
-From the output, you can select which events to send by the **Reason** (Started, Created, Scheduled) and **Kind** (Pod, ReplicaSet, Deployment…) combinations. These events need to be specified individually with a single **reason** and **involveObjectKind** for each event rule you want to allow and are placed in the ``whitelistedEvents`` configuration option as a list of events you want to send. 
+To send all events, set the option ``_sendAllEvents`` to ``true`` in your ``values.yaml``, and remove the ``whitelistedEvents`` option.
 
-**Note** Event names will match the reason name.
+From the output, combine **Reason** (Started, Created, Scheduled) and **Kind** (Pod, ReplicaSet, Deployment…) to select which events to send. 
+- Specify a single **reason** and **involveObjectKind** individually for each event rule you want to allow.
+- Events are placed in the `whitelistedEvents` configuration option as a list of events you want to send. 
+- Event names will match the reason name.
 
-Example YAML configuration:
-
-```
-receivers:
-   smartagent/kubernetes-events:
-     type: kubernetes-events
-     whitelistedEvents:
-       - reason: Created
-         involvedObjectKind: Pod
-       - reason: SuccessfulCreate
-         involvedObjectKind: ReplicaSet
-```
-To complete this monitor type activation, you must also include it in a ``metrics`` pipeline. To do this, add the monitor type to the ``service/pipelines/metrics/receivers`` section of your configuration file. For example:
-
-```
-service:
-   pipelines:
-     metrics:
-       receivers: [smartagent/kubernetes-events]
-```
-
-### Configuration settings
+## Configuration settings
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -87,10 +120,23 @@ The **nested** `kubernetesAPI` config object has the following fields:
 
 The **nested** `whitelistedEvents` configuration object has the following fields:
 
-| Option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `reason` | no | `string` |  |
-| `involvedObjectKind` | no | `string` |  |
+| Option | Required | Type | 
+| --- | --- | --- | 
+| `reason` | no | `string` | 
+| `involvedObjectKind` | no | `string` | 
+
+Example YAML configuration:
+
+```
+receivers:
+   smartagent/kubernetes-events:
+     type: kubernetes-events
+     whitelistedEvents:
+       - reason: Created
+         involvedObjectKind: Pod
+       - reason: SuccessfulCreate
+         involvedObjectKind: ReplicaSet
+```
 
 ## Get help
 

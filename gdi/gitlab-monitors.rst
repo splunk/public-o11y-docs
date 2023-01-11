@@ -4,6 +4,9 @@
 Configure application receivers for GitLab
 ********************************************************************************
 
+.. meta::
+   :description: Landing for application receivers for GitLab applications in Splunk Observability Cloud.
+
 .. toctree::
    :maxdepth: 4
    :hidden:

@@ -6,6 +6,7 @@ Interpret API test results
 
 Every run of an API test in Splunk Synthetic Monitoring produces a set of diagnostics that help you understand the performance of your application in real time. 
 
+.. _api-detector:
 
 View API test history
 ==========================

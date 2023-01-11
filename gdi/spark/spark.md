@@ -1,11 +1,11 @@
 (spark)=
 
 # Apache Spark
-<meta name="description" content="Documentation for the Apache Spark monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Apache Sparck clusters monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache Spark monitor by using the [SignalFx Smart Agent receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache Spark monitor by using the SignalFx Smart Agent receiver.
 
 The integration monitors Apache Spark clusters.
 
