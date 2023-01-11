@@ -1,8 +1,8 @@
 .. _otel-install-linux:
 
-*************************
-Linux
-*************************
+**************************************************
+Install the Collector for Linux
+**************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux.
@@ -15,7 +15,7 @@ Linux
    /gdi/pivotalcloudfoundry/pivotal-cloud-foundry
    /gdi/opentelemetry/deployments/deployments-linux-ansible.rst
    /gdi/opentelemetry/deployments/deployments-linux-puppet.rst
-    
+
 
 The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. Install the package using one of these methods:
 
