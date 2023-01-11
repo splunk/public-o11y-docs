@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-sync-on-call-schedule:
 
 Check your on-call schedule and sync it to your personal calendar
