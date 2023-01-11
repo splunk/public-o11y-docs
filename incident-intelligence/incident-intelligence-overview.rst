@@ -18,6 +18,6 @@ Key terms and icons
 
 These icons are used in the overview graphics to symbolize key terms and and processes in Incident Intelligence and Splunk Observability Cloud.
 
-.. image:: /_images/incident-intelligence/Incident-Intelligence-Terms-Icons.png
+.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-Terms-Icons.png
       :width: 99%
       :alt: Incident Intelligence key terms and icons.
