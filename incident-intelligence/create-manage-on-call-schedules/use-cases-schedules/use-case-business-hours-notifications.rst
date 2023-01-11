@@ -5,13 +5,18 @@
 Limit notifications for the checkout service to business hours
 *********************************************************************************************
 
+Skyler 
+
+#. Create a schedule with a business-hours shift
+#. Add the schedule to the incident workflow in the incident policy for the checkout service
+
 .. meta::
    :description: Schedule use case for Incident Intelligence for limiting notifications to business hours.
 
 
 If you  want responders to receive notifications only during business hours you can achieve this by creating a schedule with a business-hours shift that you add as the only step in the incident workflow for the service.
 
-Create a schedule
+Create a schedule with a business-hours shift
 ====================================================================================================
 
 Follow these steps to create your primary schedule:
@@ -23,7 +28,7 @@ Follow these steps to create your primary schedule:
 #. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears.
 
 Create a business-hours shift
-====================================================================================================
+---------------------------------
 
 Follow these steps to create a day-by-day shift for business hours coverage:
 
@@ -41,7 +46,7 @@ Follow these steps to create a day-by-day shift for business hours coverage:
     #. Drag responders in the list to reorder.
 #. Select :guilabel:`Save shift`. 
 
-Add your schedule to the incident workflow for the checkout service
+Add the schedule to the incident workflow in the incident policy for the checkout service
 ====================================================================================================
 
 Your last step to create the schedule for this scenario is to add your schedule to the incident workflow for your checkout service. 
