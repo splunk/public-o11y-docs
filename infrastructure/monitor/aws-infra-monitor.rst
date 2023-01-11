@@ -379,26 +379,30 @@ You can control cost by :ref:`limiting the metrics collect, the resources, or th
 Cost calculation examples
 -------------------------------------------------------------------
 
-Let's imagine on AWS/SQS configuration where SQS has 9 available CloudWatch metrics.
+Let's imagine a user with the following configuration: 
+
+- 100,000 SQS queues
+- 9 available CloudWatch metrics per queue 
+- A cost of USD 0.01 per 1,000 metrics requested
 
 .. list-table::
    :header-rows: 1
    :width: 100
-   :widths: 30 40 20 
+   :widths: 30 50 20 
 
    *  - :strong:`Scenario`
       - :strong:`Number of requested metrics per day`
-      - :strong:`Cost`
+      - :strong:`Cost/day`
 
-   *  - A customer has 100k SQS queues and wants to get all metrics every 1 minute
+   *  - The user wants to retrieve all metrics every 1 minute
       - 1440 (number of minutes in a day) *  9 (number of metrics) * 100k (number of SQS resources) = 1.296B
-      - Aprox. $12,960 per day ($0.01 per 1,000 metrics requested)
+      - USD 12,960  
 
-   *  - A customer has 100k SQS queues and wants to go get all metrics every 5 minutes
+   *  - The user wants to retrieve all metrics every 5 minutes
       - 1440 (number of minutes in a day)/5 (pull interval) *  9 (number of metrics) * 100k (number of SQS resources) = 259.2M
-      - Aprox. $2,592 per day ($0.01 per 1,000 metrics requested)
+      - USD 2,592 
 
-   *  - A customer has 100k SQS queues and ONLY wants to get 4 metrics for instances where ``env=prod`` (1000 SQS queues in this example) every 10 minutes
+   *  - The user wants to retrieve ONLY 4 metrics for a 1,000 queues (because they're the production instances) every 10 minutes
       - 1440 (number of minutes in a day)/10 (pull interval) *  4 (number of metrics) * 1000 (number of SQS resources) = 576k
-      - Aprox. $5,76 per day ($0.01 per 1,000 metrics requested)
+      - USD 5,76 
 
