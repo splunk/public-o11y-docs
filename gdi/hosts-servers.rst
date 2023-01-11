@@ -4,6 +4,9 @@
 Configure application receivers for hosts and servers
 ********************************************************************************
 
+.. meta::
+   :description: Landing for application receivers for host and server applications in Splunk Observability Cloud.
+
 .. toctree::
    :maxdepth: 4
    :hidden:

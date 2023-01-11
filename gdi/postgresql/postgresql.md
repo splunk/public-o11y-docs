@@ -2,7 +2,7 @@
 
 # PostgreSQL
 
-<meta name="description" content="Documentation on the postgresql monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the PostgreSQL monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

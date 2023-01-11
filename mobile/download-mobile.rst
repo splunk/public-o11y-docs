@@ -5,7 +5,7 @@ Download Splunk Observability Cloud for Mobile
 *****************************************************
 
 .. meta::
-   :description: Download Splunk Observability Cloud for Mobile on iOS and Android.
+  :description: See requirements, download Splunk Observability Cloud for Mobile on iOS and Android, and authenticate.
 
 You can download Splunk Observability Cloud for Mobile from the Apple App Store or the Google Play store.
 

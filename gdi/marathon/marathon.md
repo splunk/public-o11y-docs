@@ -1,6 +1,6 @@
 (marathon)=
 # Mesos Marathon
-<meta name="description" content="Documentation about the Marathon monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Marathon monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -1,7 +1,7 @@
 (spark)=
 
 # Apache Spark
-<meta name="description" content="Documentation for the Apache Spark monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Apache Sparck clusters monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

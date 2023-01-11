@@ -1,7 +1,7 @@
 (memory)=
 
 # Memory usage
-<meta name="description" content="Documentation on the memory monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Memory monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

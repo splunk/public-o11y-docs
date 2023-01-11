@@ -8,7 +8,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java
 *****************************************************************************
 
 .. meta::
-   :description: Use automatic instrumentation to send traces to Splunk Application Performance Monitoring (APM) without altering your code.
+   :description: Use automatic instrumentation to send traces to Splunk Observability Cloud Application Performance Monitoring (APM) without altering your code.
 
 .. toctree::
    :hidden:

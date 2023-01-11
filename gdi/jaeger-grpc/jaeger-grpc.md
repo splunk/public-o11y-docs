@@ -2,7 +2,7 @@
 
 # Jaeger gRPC
 
-<meta name="Description" content="Documentation on the Jaeger gRPC monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Jaeger gRCP monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -12,7 +12,7 @@ Use this monitor to run a gRPC server that listens for Jaeger trace batches and 
 
 By default, the server listens on localhost port `14250`, but can be configured to anything.
 
-**Note:** This is a valid Smart Agent monitor, but Smart Agent is deprecated. For details, see the [Deprecation Notice](https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md). If you are using OpenTelemetry, consider using the native OpenTelemetry Jaeger receiver instead. To learn more, see [the Jaeger receiver documentation in GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/jaegerreceiver).
+**Note:** This is a valid Smart Agent monitor, but the Smart Agent is deprecated. For details, see the [Deprecation Notice](https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md). If you are using OpenTelemetry, consider using the native OpenTelemetry Jaeger receiver instead. To learn more, see [the Jaeger receiver documentation in GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/receiver/jaegerreceiver).
 
 
 ## Benefits

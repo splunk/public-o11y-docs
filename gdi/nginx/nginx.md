@@ -1,6 +1,6 @@
 (nginx)=
 # NGINX
-<meta name="description" content="Documentation on the NGINX monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the NGINX monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -28,7 +28,7 @@ This monitor is not available on Windows.
 ```
 
 ```{note}
-Provide an NGINX monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide an NGINX monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

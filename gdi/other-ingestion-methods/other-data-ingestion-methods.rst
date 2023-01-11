@@ -5,7 +5,7 @@ Other data ingestion methods
 ****************************
 
 .. meta::
-   :description: Alternative ways of getting custom metric data into Splunk Observability Cloud.
+   :description: Alternative ways of getting / sending custom metric data into Splunk Observability Cloud.
 
 If your needs are not covered with OpenTelemetry instrumentation, you can still send data to Splunk Observability Cloud using the following alternative methods.
 
