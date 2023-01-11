@@ -1,7 +1,7 @@
 .. _min-delay-detectors-use-case:
 
 ********************************************************************
-Set Min Delay for detectors to account for sparse data
+Use case: Set Min Delay for detectors to account for sparse data
 ********************************************************************
 
 .. meta::
@@ -16,6 +16,9 @@ Kai, an SRE on the team, investigates ``productcatalog`` and finds out that the 
 In order to account for delayed data points from ``productcatalog``, Kai configures a Min Delay value for :strong:`Service error` by making an API call to the ``/detector`` endpoint. The Min Delay configuration forces the detector to wait a set amount of time before running the computation.
 
 Kai charts the lag from the sparse MTS and determines that it is usually less than 30 seconds but has never been higher than 1 minute, so they set a Min Delay of 1 minute for :strong:`Service error`.
+
+Summary
+===========
 
 By setting a Min Delay threshold for :strong:`Service error`, Kai has successfully included sparse data and can now catch errors from the ``productcatalog`` service before they affect customers' experience.
 

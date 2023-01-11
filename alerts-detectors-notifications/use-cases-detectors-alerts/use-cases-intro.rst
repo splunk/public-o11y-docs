@@ -1,7 +1,7 @@
 .. _use-cases-alerts-detectors:
 
 ********************************************************
-Alerts and detectors use case library
+Use case: Alerts and detectors use case library
 ********************************************************
 
 .. meta::

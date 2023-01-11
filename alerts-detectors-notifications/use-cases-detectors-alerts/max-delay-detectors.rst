@@ -1,8 +1,8 @@
 .. _max-delay-detectors-use-case:
 
-*************************************************************************
-Set Max Delay for detectors to account for sudden changes in delay
-*************************************************************************
+******************************************************************************
+Use case: Set Max Delay for detectors to account for sudden changes in delay
+******************************************************************************
 
 .. meta::
     :description: A Splunk alerts and detectors use case describes how to set max delay for detectors.
@@ -16,6 +16,9 @@ After some investigation, they find out that the data from some stores has a sud
 To make sure that the data from sudden lags is included in the detector computation, Kai configures a Max Delay value for :strong:`Store sales`.
 
 Kai sees that the maximum delay for the late metric time series (MTS) is 10 minutes, so they configure a Max Delay of 10 minutes. Now the analytics engine can't run earlier than 10 minutes if known MTS have not sent a data point. If all known MTS send a data point, the computation can still occur before the 10-minute Max Delay.
+
+Summary
+===========
 
 By setting a Max Delay threshold for :strong:`Service error`, Kai has successfully accounted for unexpected changes in delayed data and corrected the detector behavior.
 
