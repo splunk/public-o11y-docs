@@ -34,8 +34,10 @@ The Helm chart works with default configurations of the main Kubernetes distribu
 * :new-page:`Amazon Elastic Kubernetes Service <https://endoflife.date/amazon-eks>`
 * :new-page:`Azure Kubernetes Service <https://endoflife.date/azure-kubernetes-service>`
 * :new-page:`Google Kubernetes Engine <https://endoflife.date/google-kubernetes-engine>`
-* Minikube ???? https://github.com/kubernetes/minikube/releases
 * :new-page:`Red Hat OpenShift <https://access.redhat.com/support/policy/updates/openshift#dates>`
+* Minikube. This distribution was made for local developers and is not meant to be used in production. 
+   - Minikube was created to spin up various past versions of Kubernetes. 
+   - Minikube versions don't necessarily align with Kubernetes versions. For example, the :new-page:`Minikube v1.27.1 releases notes <https://github.com/kubernetes/minikube/releases/tag/v1.27.1>` state the default Kubernetes version was bumped to v1.25.2. 
 
 While the chart should work for other Kubernetes distributions, the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file could require additional updates. 
 
