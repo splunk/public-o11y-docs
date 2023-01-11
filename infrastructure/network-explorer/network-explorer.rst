@@ -10,7 +10,7 @@ Network Explorer in Splunk Infrastructure Monitoring
 
     network-explorer-intro
     network-explorer-setup
-    network-explorer-service-map
+    network-explorer-network-map
     network-explorer-metrics
     network-explorer-use-cases/network-explorer-use-cases
     network-explorer-troubleshoot
