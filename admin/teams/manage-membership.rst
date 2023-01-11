@@ -73,18 +73,18 @@ To change the team name, follow these steps:
 
 #. A table of current teams appears in the main panel.
 
-#. Find the name of the team.
+#. Find the name of the team and select the team.
 
-#. Click the :guilabel:`Actions` menu icon next the team name, then select :menuselection:`Edit Team`.
+#. Click the :guilabel:`Edit` icon next the team name.
 
-#. In the :guilabel:`Choose team name` dialog box, edit the team name.
+#. When you're finished editing the name, click Enter to save your changes. 
 
-#. When you're finished editing the name, click :guilabel:`Save`.
+.. note:: The Team name is case-insensitive. If you attempt to change the team name from :strong:`Team` to :strong:`team`, you will see a message that the name already exists. 
 
 The team now appears with the name you changed it to.
 
 
-Add or remove team members
+Add team members
 ============================================================================
 
 For the roles that can add and remove team members, see :ref:`about-team-roles`.
@@ -99,15 +99,32 @@ To add or remove team members, follow these steps:
 
 #. Find the name of the team.
 
-#. Click the :guilabel:`Actions` menu (|more|) next to the team name and select :menuselection:`Edit Team`.
+#. Click the :guilabel:`Actions` menu (|more|) next to the team name and select :menuselection:`Add users`.
 
-#. Use the :guilabel:`Choose the users who will be a part of this team:` field to add or remove team members.
+#. Use the :guilabel:`Add Users` field to search for users by name or email to add them to the team.
 
-   * To add a team member, click :guilabel:`Add` next to the email address of the member.
+   * To add a team member, click the checkbox next to the email address of the member.
 
-   * To remove a team member, click :guilabel:`Remove` next to the email address of the member.
+#. Click :guilabel:`Add`.
 
-#. Click :guilabel:`Done`.
+Remove team members
+============================================================================
+
+For the roles that can add and remove team members, see :ref:`about-team-roles`.
+
+To remove team members, follow these steps:
+
+#. Log in to Splunk Observability Cloud.
+
+#. In the left navigation menu, select :menuselection:`Settings > Teams`.
+
+#. A table of current teams appears in the main panel.
+
+#. Find the name of the team whose member list you want to edit.
+
+#. On the Users tab, click the :guilabel:`Actions` menu (|more|) next to the name of the user you want to remove from the team.
+
+#. Click :guilabel:`Remove from team`
 
 
 View a user's team membership
