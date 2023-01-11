@@ -11,7 +11,7 @@ In Splunk Observability Cloud, the site reliability engineering (SRE) team at Bu
 
 Kai, an SRE on the team, notices that sometimes the :strong:`Store sales` detector fires, but when they look at the chart 30 minutes later, everything seems normal.
 
-After some investigation, they find out that the data from some stores has a sudden, momentary increase in delay caused by the network infrastructure in that region. Data points missing from the initial computation caused the alert to fire. However, but when Kai goes look at the chart 30 minutes later, the data points have arrived, causing them to think that the detector misfired. In cases like this, the analytics engine can't predict the sudden change in delay. 
+After some investigation, they find out that the data from some stores has a sudden, momentary increase in delay caused by the network infrastructure in that region. Data points missing from the initial computation caused the alert to fire. However, when Kai goes look at the chart 30 minutes later, the data points have arrived, causing them to think that the detector misfired. In cases like this, the analytics engine can't predict the sudden change in delay. 
 
 To make sure that the data from sudden lags is included in the detector computation, Kai configures a Max Delay value for :strong:`Store sales`.
 

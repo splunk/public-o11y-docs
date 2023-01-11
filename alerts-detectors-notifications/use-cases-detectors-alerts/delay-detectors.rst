@@ -7,7 +7,7 @@ Use case: Set Min Delay for detectors to account for sparse data
 .. meta::
     :description: A Splunk alerts and detectors use case describes how to set min delay for detectors.
 
-In Splunk Observability Cloud, the site reliability engineering (SRE) team at Buttercup Game has set up a detector called :strong:`Service error` that monitors Buttercup Games services and alerts when the error rate of any service exceeds 5%.
+In Splunk Observability Cloud, the site reliability engineering (SRE) team at Buttercup Games has set up a detector called :strong:`Service error` that monitors Buttercup Games services and alerts when the error rate of any service exceeds 5%.
 
 Despite the alert, Buttercup Game has been receiving complaints from customers about errors coming from the ``productcatalog`` service.
 
