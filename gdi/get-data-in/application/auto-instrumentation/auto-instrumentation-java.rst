@@ -54,10 +54,9 @@ When you enable Zero Config, the Splunk OTel Java agent automatically instrument
 
 On **Linux**, the target environment is the entire Linux host, so the Java agent instruments every Java application on the host. 
 
-On **Kubernetes**, the target environment is the Deployment or Pod where you enabled Zero Config. The Java agent instruments every Java application running in the pod.
+On **Kubernetes**, the target environment is the Deployment or Pod where you enabled instrumentation. The Java agent instruments every Java application within the pod or deployment.
 
 In both cases you must restart the applications to start instrumentation.
-
 
 
 .. _auto-instrumentation-java-install:
@@ -76,6 +75,6 @@ Follow the appropriate instructions from the following list:
 Learn more
 =======================
 
-- Instrumentation collects and sends trace data to Splunk APM. Learn :ref:`what you can do with Splunk APM <wcidw-apm>`.
-- Learn more about the :ref:`Features of the Splunk Distribution of OpenTelemetry Java <splunk-java-otel-dist>`.
+- Instrumentation sends trace data to Splunk APM. Learn :ref:`what you can do with Splunk APM <wcidw-apm>`.
+- Learn more about the :ref:`features of the Splunk Distribution of OpenTelemetry Java <splunk-java-otel-dist>`.
 - :ref:`java-otel-performance`.
