@@ -48,6 +48,18 @@ receivers:
     ... # Additional config
 ```
 
+The following is an example of what you can use to replace the placeholder, `... # Additional config`:
+
+    host: localhost
+    port: 80
+
+If mod_status is exposed on an endpoint other than /mod_status, you can use the url config option to specify the path:
+
+    type: collectd/apache
+    host: localhost
+    port: 80
+    url: "http://{{.Host}}:{{.Port}}/server-status?auto"
+
 To complete the integration, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
 
 ```
