@@ -131,7 +131,7 @@ You can set two Infrastructure Monitoring rate-related limits:
    * Impact: Setting a limit improves the performance of charts in the Infrastructure Monitoring user interface.
 
    * To learn more about SignalFlow analytics jobs, see the :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>`
-     topic in the Developer Guide for Splunk Infrastructure Monitoring.
+     topic in the Splunk Observability Cloud Developer Guide.
 
 #. Event search limit: The rate at which you search for events.
 
