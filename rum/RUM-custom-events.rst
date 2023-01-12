@@ -3,6 +3,7 @@
 ********************************
 Create custom events
 ********************************
+
 Create custom events to capture meaningful metrics about customer journeys and user behavior on your site. Custom events support filtering by tags and the ability to add custom attributes.  
 
 How custom events can add value to your organization  
@@ -17,31 +18,89 @@ Suppose you are an online retailer. A meaningful custom event for your business 
 
 Create a custom event 
 ========================
-To create a custom event, use the OpenTelementry API for JavaScript with the TraceProvider. The following example shows how to create a custom event. To create a custom event you need to first, declare the tracer. Then, you can define the custom event.
 
-Declare the tracer  
----------------------
-You can declare the tracer through either CDN or NPM. You need to declare the tracer only once. For more information on the difference between CDN and NPM, see :ref:`Choose how you want to instrument and configure Splunk RUM on your application <rum-browser-install>`.
+The following examples show how to create a custom event for browser, Android, and iOS applications. 
 
-Declare the tracer with CDN
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The following code sample shows how to the declare through CDN. 
+.. tabs::
 
-.. code-block:: 
+   .. tab:: Browser
 
-    <script>
-        const Provider = SplunkRum.provider; 
-        var tracer=Provider.getTracer('appModuleLoader');
-    </script>
+      To create a custom event you need to first declare the tracer. Then, you can define the custom event. 
 
+      You can declare the tracer through either CDN or NPM. You need to declare the tracer only once. For more information on the difference between CDN and NPM, see :ref:`rum-browser-install`.
 
-Declare the tracer with NPM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The following code sample shows how to the declare through NPM. 
+      The following example shows how to initialize the tracer and create a custom event using the NPM package:
 
-.. code-block:: javascript
+      .. code-block:: javascript
 
-    import {trace} from '@opentelemetry/api'
+         import {trace} from '@opentelemetry/api'
+
+         const tracer = trace.getTracer('appModuleLoader');
+         const span = tracer.startSpan('test.module.load', {
+         attributes: {
+               'workflow.name': 'test.module.load'
+         }
+         });
+         // time passes
+         span.end();
+
+   .. tab:: Android
+
+      You can report custom events and workflows happening in your Android application using the ``addRumEvent`` and ``startWorkflow`` APIs.
+
+      The following example shows how to report when a user closes a help dialog:
+
+      .. code-block:: java
+         :emphasize-lines: 7
+
+         public Dialog onCreateDialog(Bundle savedInstanceState) {
+               LayoutInflater inflater = LayoutInflater.from(activity);
+               View alertView = inflater.inflate(R.layout.sample_mail_dialog, null);
+               AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+               builder.setView(alertView)
+                     .setNegativeButton(R.string.cancel, (dialog, id) ->
+                           // Record a simple "zero duration" span with the provided name and attributes
+                              SplunkRum.getInstance().addRumEvent("User Rejected Help", HELPER_ATTRIBUTES));
+               return builder.create();
+         }
+
+      The following example shows how to start a workflow for which metrics are recorded by Splunk RUM. To record the workflow you must end the OpenTelemetry span instance:
+
+      .. code-block:: java
+      :emphasize-lines: 3,12
+
+      binding.buttonWork.setOnClickListener(v -> {
+         Span hardWorker =
+                  SplunkRum.getInstance().startWorkflow("Main thread working hard");
+         try {
+               Random random = new Random();
+               long startTime = System.currentTimeMillis();
+               while (true) {
+                  random.nextDouble();
+                  if (System.currentTimeMillis() - startTime > 20_000) {
+                  break;
+                  }
+               }
+         } finally {
+               hardWorker.end();
+         }
+      });
+
+   .. tab:: iOS
+
+      The following example shows how to use the OTel Swift API to report on a function you want to time:
+
+      .. code-block:: swift
+
+         func calculateTax() {
+               let tracer = OpenTelemetrySDK.instance.tracerProvider.get(instrumentationName: "MyApp")
+               let span = tracer.spanBuilder(spanName: "calculateTax").startSpan()
+               span.setAttribute(key: "numClaims", value: claims.count)
+               span.setAttribute(key: "workflow.name", value: "<your_workflow>") // This allows the event to appear in the UI
+            //...
+            //...
+               span.end() // You can also use defer for this
+         }
 
 Define the custom event 
 --------------------------
@@ -49,18 +108,18 @@ Define the custom event
 Next, define the custom event in the start and end span. The field ``workflow.name`` is required. The following code sample shows how to define a custom event: 
 
 .. code-block:: javascript
-    
-    const tracer = trace.getTracer('appModuleLoader');
+   
+   const tracer = trace.getTracer('appModuleLoader');
 
-    const span = tracer.startSpan('test.module.load', {
-        attributes: {
-            'workflow.name': 'test.module.load'
-        }
-    });
-    
-    //  time passes with custom business logic for example checkout, add to cart etc
+   const span = tracer.startSpan('test.module.load', {
+      attributes: {
+         'workflow.name': 'test.module.load'
+      }
+   });
+   
+   //  time passes with custom business logic for example checkout, add to cart etc
 
-    span.end();
+   span.end();
 
 Advanced configurations
 ========================
