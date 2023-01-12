@@ -7,7 +7,7 @@ Use built-in alert conditions in Splunk APM
 .. meta::
    :description: Learn about the built-in alert conditions in Splunk APM. 
 
-When creating rules in detectors to specify conditions that will trigger alerts, Splunk APM provides built-in conditions that detect common problem scenarios. Many of these alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold.
+When creating rules in detectors to specify conditions that can trigger alerts, Splunk APM provides built-in conditions that detect common problem scenarios. Many of these alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold.
 
 .. note:: 
 
