@@ -12,5 +12,5 @@ Use cases: Schedules in Incident Intelligence
    :maxdepth: 3
    :hidden:
 
-   Use case: Business hours and nights-and-weekend rotation for the web application TOGGLE <use-case-business-hours>
-   Limit notifications for the checkout service to business hours TOGGLE <use-case-business-hours-notifications>
+   use-case-business-hours
+   use-case-business-hours-notifications
