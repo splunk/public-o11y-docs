@@ -754,12 +754,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Create and manage on-call schedules TOGGLE incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules
+   Create and manage on-call schedules TOGGLE <incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules>
 
 .. toctree::
    :maxdepth:   3
 
-   Respond to and manage incidents TOGGLE incident-intelligence/respond-manage-incidents/respond-manage-incidents
+   Respond to and manage incidents TOGGLE <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
 
 .. toctree::
    :caption: UNDERSTAND YOUR DATA
