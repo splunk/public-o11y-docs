@@ -51,7 +51,6 @@ The following examples show how to create a custom event for browser, Android, a
       The following example shows how to report when a user closes a help dialog:
 
       .. code-block:: java
-         :emphasize-lines: 7
 
          public Dialog onCreateDialog(Bundle savedInstanceState) {
                LayoutInflater inflater = LayoutInflater.from(activity);
@@ -67,7 +66,6 @@ The following examples show how to create a custom event for browser, Android, a
       The following example shows how to start a workflow for which metrics are recorded by Splunk RUM. To record the workflow you must end the OpenTelemetry span instance:
 
       .. code-block:: java
-         :emphasize-lines: 3,12
 
          binding.buttonWork.setOnClickListener(v -> {
             Span hardWorker =
@@ -102,26 +100,11 @@ The following examples show how to create a custom event for browser, Android, a
                span.end() // You can also use defer for this
          }
 
-Define the custom event 
---------------------------
-
-Next, define the custom event in the start and end span. The field ``workflow.name`` is required. The following code sample shows how to define a custom event: 
-
-.. code-block:: javascript
-   
-   const tracer = trace.getTracer('appModuleLoader');
-
-   const span = tracer.startSpan('test.module.load', {
-      attributes: {
-         'workflow.name': 'test.module.load'
-      }
-   });
-   
-   //  time passes with custom business logic for example checkout, add to cart etc
-
-   span.end();
-
 Advanced configurations
 ========================
 
-For more information on advanced configurations, see :new-page:`Manual instrumentation using API <https://github.com/signalfx/splunk-otel-js-web/blob/main/docs/ManualInstrumentation.md>` in the splunk-otel-js-web library on GitHub. 
+For more information on advanced configurations, see:
+
+- :ref:`manual-rum-browser-instrumentation`
+- :ref:`manual-android-instrumentation`
+- :ref:`manual-rum-ios-instrumentation`
