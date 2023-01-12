@@ -368,13 +368,13 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 Cost considerations for AWS monitoring
 ===========================================================
 
-The cost of obtaining Cloudwatch metrics for a service is based on three factors:
+AWS pricing is based on requested metrics, not the number of requests, so the cost of obtaining Cloudwatch metrics for a service is based on three factors:
 
 * Frequency of pulling data.
 * Number of metrics for a given service.
 * Number of cloud resources.
 
-Observability Cloud retrieves metrics either using Metric Streams, or through APIs (``ListMetrics``, ``GetMetricData``, or ``GetMetricStatistics``):
+Observability Cloud retrieves metrics either streaming with Metric Streams, or through polling APIs: ``ListMetrics``, ``GetMetricData``, or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>`:
 
 * Generally speaking, Metric Streams costs the same as using an API if the integration is synced every 5 minutes, and is cheaper (up to 5 times) when synced every minute.
 * However, when using Metric Stream you can't control costs, while you can configure the pulling frequency of the APIs (from 1 to 10 minutes). See :ref:`how to limit the metrics to collect, the resources, or the collection frequently <specify-data-metadata>`. 
@@ -388,7 +388,7 @@ Let's imagine a user with the following configuration:
 - 100,000 SQS queues
 - 9 available CloudWatch metrics per queue 
 
-If data is retrieved using the ``GetMetricData`` or ``GetMetricStatistics`` API at a cost of USD 0.01 per 1,000 metrics requested:
+If you retrieve data using the ``GetMetricData`` or ``GetMetricStatistics`` API at a cost of USD 0.01 per 1,000 metrics requested:
 
 .. list-table::
    :header-rows: 1
@@ -411,7 +411,7 @@ If data is retrieved using the ``GetMetricData`` or ``GetMetricStatistics`` API 
       - 1440 (number of minutes in a day)/10 (pull interval) *  4 (number of metrics) * 1000 (number of SQS resources) = 576k
       - USD 5.76 
 
-If data is retrieved using the ``ListMetrics`` API at a cost of USD 0.01 per 1,000 API calls:
+If you retrieve data using the ``ListMetrics`` API at a cost of USD 0.01 per 1,000 API calls:
 
 .. list-table::
    :header-rows: 1
