@@ -67,24 +67,24 @@ The following examples show how to create a custom event for browser, Android, a
       The following example shows how to start a workflow for which metrics are recorded by Splunk RUM. To record the workflow you must end the OpenTelemetry span instance:
 
       .. code-block:: java
-      :emphasize-lines: 3,12
+         :emphasize-lines: 3,12
 
-      binding.buttonWork.setOnClickListener(v -> {
-         Span hardWorker =
-                  SplunkRum.getInstance().startWorkflow("Main thread working hard");
-         try {
-               Random random = new Random();
-               long startTime = System.currentTimeMillis();
-               while (true) {
-                  random.nextDouble();
-                  if (System.currentTimeMillis() - startTime > 20_000) {
-                  break;
+         binding.buttonWork.setOnClickListener(v -> {
+            Span hardWorker =
+                     SplunkRum.getInstance().startWorkflow("Main thread working hard");
+            try {
+                  Random random = new Random();
+                  long startTime = System.currentTimeMillis();
+                  while (true) {
+                     random.nextDouble();
+                     if (System.currentTimeMillis() - startTime > 20_000) {
+                     break;
+                     }
                   }
-               }
-         } finally {
-               hardWorker.end();
-         }
-      });
+            } finally {
+                  hardWorker.end();
+            }
+         });
 
    .. tab:: iOS
 
