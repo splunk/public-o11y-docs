@@ -11,6 +11,12 @@ Detectors within Splunk Observability Cloud monitor the system. Users configure 
       :width: 99%
       :alt: Alert generation creates alert noise.
 
+Users determine which alert signals are the most important to the performance of their infrastructure and use them to intelligently trigger incidents that can be investigated by responders. First, users create alert routing and grouping conditions using alert metadata to filter alerts into incidents. This process reduces alert noise and enables responders to more easily map an issue back to the system or service where it occurred. Second, users create an incident workflow that automatically executes time-based hierarchical steps when an incident is triggered. All incident workflows must include a notification to a person, such as a responder in on-call schedule. If a responder doesn't acknowledge an incident when they are on call, the incident is escalated to the next step in the workflow. This entire process is called an incident policy.
+
+On-call scheduling ensures the right person is notified at the right time to resolve system issues as soon as they occur. An on-call schedule contains a group of responders who understand a specific part of the system architecture. Responders rotate through their schedule every day, week, or month based on how their schedule is set up by a team manager or admin. On-call schedules are included as a step in an incident workflow. When an incident is triggered, the first step in the workflow routes to a schedule and the responder on call for that schedule is paged.
+
+This is the end-to-end incident response flow that demonstrates the value of Incident Intelligence (note this graphic is simplified for explanatory purposes). An issue appears in the system that is noticed by detectors monitoring that system or service. The detectors fire, causing a spike in generated alerts. Those alerts have been mapped to an incident policy and the influx of activity causes an incident to trigger. The workflow git for that incident policy connects to an on-call schedule and a responder is paged. The responder acknowledges the incident and begins investigating the root cause by looking at the alerts grouped under that incident. They resolve the incident and verify their solution as alerts decrease and the system returns to normal. This entire process is called incident response.
+
 .. _ii-key-terms-icons:
 
 Key terms and icons
