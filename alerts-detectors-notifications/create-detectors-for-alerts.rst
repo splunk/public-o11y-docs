@@ -94,13 +94,11 @@ Create a detector using the API
 
 Using the API to create a detector provides a number of capabilities that are not available in the UI, letting you build detectors with more advanced rules and conditions. You can view these detectors in the UI. The program text appears in place of the signals displayed in standard detectors.
 
--  For general information on creating detectors using the API, see the :new-page:`SignalFx API detector overview <https://dev.splunk.com/observability/docs/detectors/detectors_events_alerts/>`.
-
--  For information on creating µAPM (also known as APM previous generation or APM PG) detectors using the API, see also :new-page:`Detect Anomalies with Detectors <https://dev.splunk.com/observability/docs/detectors/detectors_events_alerts/>`.
+-  For general information on creating detectors using the API, see the :new-page:`Detect Anomalies with Detectors <https://dev.splunk.com/observability/docs/detectors/detectors_events_alerts/>` topic in the Splunk Observability Cloud Developer Guide.
 
 -  For information on using the UI to edit detectors created using the API, see :ref:`v2-detector-signalflow`.
 
-.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`SignalFx API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
+.. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
 
 
 .. _build-rules:
@@ -621,7 +619,7 @@ Edit detectors through the SignalFlow tab
 
 .. Delete/update the following note when new detectors are v2. Also figure out how to talk about v2 detectors (meaning v2 but could be created using the UI or using the API) Note that the term v2 detector is not used in these docs.--brs
 
-.. note:: This section assumes you are familiar with :new-page:`creating detectors using the SignalFx API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
+.. note:: This section assumes you are familiar with the :new-page:`Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
 If you are modifying a detector that was created using the API, you can add and edit detector rules using the SignalFlow tab. The SignalFlow program text replaces the Alert Signal, Alert Condition, and Alert Settings tabs that are used when creating and editing detectors using the UI.
 

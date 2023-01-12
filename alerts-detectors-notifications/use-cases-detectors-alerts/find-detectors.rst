@@ -1,8 +1,8 @@
 .. _find-detectors:
 
-*************************************************
-Find active alerts to investigate a CPU issue
-*************************************************
+*********************************************************
+Use case: Find active alerts to investigate a CPU issue
+*********************************************************
 
 .. meta::
     :description: A Splunk alerts and detectors use case describes how to find active alerts.
