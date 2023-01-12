@@ -36,7 +36,7 @@ The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lam
 - Ruby 2.7
 - Go 1.18
 
-The Lambda Layer on-disk size requires 49 MB in standard x86_64 systems.
+The Lambda Layer requires 49 MB on-disk in standard x86_64 systems.
 
 For more information, search for Lambda runtimes and other system requirements on the AWS documentation website.
 
