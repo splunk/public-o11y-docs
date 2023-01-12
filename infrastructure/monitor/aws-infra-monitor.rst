@@ -365,22 +365,27 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 
 .. _aws-costs:
 
-Cost considerations for AWS monitoring
+Costs for AWS monitoring
 ===========================================================
 
-AWS pricing is based on requested metrics, not the number of requests, so the cost of obtaining Cloudwatch metrics for a service is based on three factors:
+Observability Cloud retrieves metrics with two methods:
 
-* Frequency of pulling data.
-* Number of metrics for a given service.
-* Number of cloud resources.
+#. Streaming data with Metric Streams. 
+#. Using polling APIs:
+   
+   - First, the list of metrics is retrieved with ``ListMetrics``. 
+   - Next, data points are fetched with either ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>`.
 
-Observability Cloud retrieves metrics either streaming with Metric Streams, or through polling APIs: ``ListMetrics``, ``GetMetricData``, or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>`:
+Cost considerations 
+-------------------------------------------------------------------
 
-* Generally speaking, Metric Streams costs the same as using an API if the integration is synced every 5 minutes, and is cheaper (up to 5 times) when synced every minute.
-* However, when using Metric Stream you can't control costs, while you can configure the pulling frequency of the APIs (from 1 to 10 minutes). See :ref:`how to limit the metrics to collect, the resources, or the collection frequently <specify-data-metadata>`. 
-* Besides, depending on the AWS namespace, Metric Streams can contain more than one data point. 
+AWS :strong:`pricing is based on the amount of requested metrics`, not the number of requests. Therefore the cost of obtaining Cloudwatch metrics for a service is based on three factors: frequency of pulling data, number of metrics for a given service, and number of cloud resources.
 
-Cost examples using APIs
+Generally speaking, Metric Streams costs the same as polling if the integration is synced every 5 minutes, and is cheaper (up to 5 times) when synced every minute.
+
+However, when using Metric Stream you can't control costs, while you can configure the polling frequency of the APIs. See :ref:`how to limit the metrics to collect, the resources, or the collection frequently <specify-data-metadata>`. 
+
+Example using polling APIs
 -------------------------------------------------------------------
 
 Let's imagine a user with the following configuration: 
@@ -388,7 +393,23 @@ Let's imagine a user with the following configuration:
 - 100,000 SQS queues
 - 9 available CloudWatch metrics per queue 
 
-If you retrieve data using the ``GetMetricData`` or ``GetMetricStatistics`` API at a cost of USD 0.01 per 1,000 metrics requested:
+First, you need to retrieve your list of metrics using the ``ListMetrics`` API at a cost of USD 0.01 per 1,000 API calls:
+
+.. list-table::
+   :header-rows: 1
+   :width: 100
+   :widths: 30 50 20 
+
+   *  - :strong:`Scenario`
+      - :strong:`Number of API calls per day`
+      - :strong:`Cost/day`
+
+   *  - Metrics are listed every 15 minutes, and a list contains up to 500 items
+      - 1440 (number of minutes in a day)/15 (pull interval) * 100k / 500 (items) = 19200
+      - USD 0.192 
+
+
+Next, you retrieve the data using either the ``GetMetricData`` or ``GetMetricStatistics`` API at a cost of USD 0.01 per 1,000 metrics requested:
 
 .. list-table::
    :header-rows: 1
@@ -411,17 +432,4 @@ If you retrieve data using the ``GetMetricData`` or ``GetMetricStatistics`` API 
       - 1440 (number of minutes in a day)/10 (pull interval) *  4 (number of metrics) * 1000 (number of SQS resources) = 576k
       - USD 5.76 
 
-If you retrieve data using the ``ListMetrics`` API at a cost of USD 0.01 per 1,000 API calls:
 
-.. list-table::
-   :header-rows: 1
-   :width: 100
-   :widths: 30 50 20 
-
-   *  - :strong:`Scenario`
-      - :strong:`Number of API calls per day`
-      - :strong:`Cost/day`
-
-   *  - Metrics are listed every 15 minutes, and a list contains up to 500 items
-      - 1440 (number of minutes in a day)/15 (pull interval) * 100k / 500 (items) = 19200
-      - USD 0.192 
