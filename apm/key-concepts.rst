@@ -40,7 +40,7 @@ Splunk APM is an Application Performance Monitoring solution that collects every
    * - :ref:`Trace<trace-concept>` 
      - A collection of operations, known as spans, that represents a unique transaction an application handles. 
 
-   * - :ref:`Trace Search<trace-search-concept>`
+   * - :ref:`Trace Analyzer<trace-search-concept>`
      - Search through all traces from all instrumented services to find the exact trace you're looking for. 
 
    * - :ref:`Trace View<trace-view-concept>`
@@ -150,10 +150,10 @@ A collection of related operations, known as spans, that represents a unique tra
 
 .. _trace-search-concept:
 
-Trace Search
+Trace Analyzer
 ---------------
 
-In Trace Search, use Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
+In Trace Analyzer, use Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
 
 To learn more, see :ref:`apm-use-case-trace-analyzer` for a dedicated use case leveraging trace search. 
 
