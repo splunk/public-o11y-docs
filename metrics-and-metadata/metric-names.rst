@@ -7,7 +7,7 @@ Guidance for metric and dimension names
 .. meta::
   :description: Naming standards for metric and dimensions in Splunk Observability Cloud.
 
-Read this document to learn about naming standards for metric and dimensions in Splunk Observability Cloud.
+Read this document to learn about naming standards for metrics and dimensions in Splunk Observability Cloud.
 
 Types of names in Observability Cloud
 ================================================
@@ -106,28 +106,6 @@ In this example, all of these metrics have a dimension key called :code:`hostnam
     * :code:`analytics.thrift.execute.time`: Gauge metric that measures the time needed to process a job execution request
     * :code:`analytics.jobs_by_state`: Counter metric with a dimension key called state, incremented each time a job reaches a particular state.
 
-Metric types and rollups
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In Infrastructure Monitoring, all metrics have a single metric type, with a specific default rollup. 
-
-A :strong:`rollup` is a statistical function that takes all the data points in a metric time series (MTS) over a time period and outputs a single data point. Observability Cloud applies rollups after it retrieves the data points from storage but before it applies analytics functions. For more information on rollups, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts.
-
-These are the metric types and their default rollups:
-
-* Gauge metric: Average
-* Counter metric: Sum
-* Cumulative counter: Delta. This measures the change in the value of the metric from the previous data point.
-
-To track a measurable value using two different metric types, use two metrics instead of one metric with two dimensions. 
-
-For example, suppose you have a :code:`network_latency` measurement that you want to send as two different types:
-
-* Gauge metric: Average network latency in milliseconds
-* Counter metric: Total number of latency values sent in an interval
-
-Send the measurement using two different metric names, such as :code:`network_latency.average` and :code:`network_latency.count`, instead of one metric name with two dimensions ``type:average`` and ``type:count``.
-
 .. _dimensions-name-standards:
 
 Dimension names and value standards
@@ -160,20 +138,6 @@ For example:
 * ``"hostname": "production1"``
 * ``"region": "emea"``
 
-.. _names-dimensions-info:
-
-Type of information suitable for dimension values
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-See some examples of types of information you can add to dimensions:
-
-* Categories rather than measurements: If doing an arithmetic operation on dimension values results in something meaningful, you don't have a dimension.
-* Metadata for filtering, grouping, or aggregating.
-* Name of entity being measured: For example :code:`hostname`, :code:`production1`.
-* Metadata with large number of possible values: Use one dimension key for many different dimension values.
-* Nonnumeric values: Numeric dimension values are usually labels rather than measurements.
-
-.. _example-custom-metric:
 .. _names-org:
 
 Considerations for metric and dimension names in your organization
@@ -195,6 +159,42 @@ Guidelines for working with low and high cardinality data
 Send low-cardinality data only in metric names or dimension key names. Low-cardinality data has a small number of distinct values. For example, the metric name ``web.http.error.count`` for a gauge metric that reports the number of HTTP request errors has a single value. This name is also readable and self-explanatory. For more information on gauge metrics, see :ref:`Identify metric types <metric-types>`.
 
 High-cardinality data has a large number of distinct values. For example, timestamps are high-cardinality data. Only send this kind of high-cardinality data in dimension values. If you send high-cardinality data in metric names, Infrastructure Monitoring might not ingest the data. Infrastructure Monitoring rejects metrics with names that contain timestamps. High-cardinality data does have legitimate uses. For example, in containerized environments, ``container_id`` is usually a high-cardinality field. If you include ``container_id`` in a metric name such as :code:`system.cpu.utilization.<container_id>`, instead of having one MTS, you have as many MTS as you have containers.
+
+When to use metrics or dimensions
+==========================================
+
+Use metrics when tracking different metric types
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In Infrastructure Monitoring, all metrics belong to a specific metric type, with a specific default rollup. 
+
+* A :strong:`rollup` is a statistical function that takes all the data points in a metric time series (MTS) over a time period and outputs a single data point. Observability Cloud applies rollups after it retrieves the data points from storage but before it applies analytics functions. 
+* For more information on rollups, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts.
+
+These are the metric types and their default rollups:
+
+* Gauge metric: Average
+* Counter metric: Sum
+* Cumulative counter: Delta. This measures the change in the value of the metric from the previous data point.
+
+To track a measurable value using two different metric types, use two metrics instead of one metric with two dimensions. 
+
+For example, suppose you have a :code:`network_latency` measurement that you want to send as two different metric types: a gauge metric (the average network latency in milliseconds) and a counter metric (the total number of latency values sent in an interval). In this case, send the measurement using two different metric names, such as :code:`network_latency.average` and :code:`network_latency.count`, instead of one metric name with two dimensions ``type:average`` and ``type:count``.
+
+.. _names-dimensions-info:
+
+Type of information suitable for dimensions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+See some examples of types of information you can add to dimensions:
+
+* Categories rather than measurements: If doing an arithmetic operation on dimension values results in something meaningful, you don't have a dimension.
+* Metadata for filtering, grouping, or aggregating.
+* Name of entity being measured: For example :code:`hostname`, :code:`production1`.
+* Metadata with large number of possible values: Use one dimension key for many different dimension values.
+* Nonnumeric values: Numeric dimension values are usually labels rather than measurements.
+
+.. _example-custom-metric:
 
 Example: Custom metrics and dimensions to measure HTTP errors
 ========================================================================
