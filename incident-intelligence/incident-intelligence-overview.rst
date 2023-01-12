@@ -3,12 +3,12 @@
 Splunk Incident Intelligence Overview
 ************************************************************************
 
-Welcome to Incident Intelligence! Use this overview to better understand the end-to-end journey of an incident; from how it is triggered to when it is resolved. This is a high-level and doesn't include minute details that are occur at each stage. See :ref:`ii-key-terms-icons` to familiarize yourself with the icons used in the graphics in this overview. 
+Welcome to Incident Intelligence! Use this high-level overview to better understand the end-to-end journey of an incident. See :ref:`ii-key-terms-icons` to familiarize yourself with the icons used in the graphics in this overview. 
 
 Typical alert generation creates alert noise
 ==============================================
 
-Detectors within Splunk Observability Cloud monitor the system. Users configure detectors at varying thresholds to generate alerts when something unusual happens, such as a bug or issue. If a specified threshold is met, alerts are generated. A single detector can generate multiple alerts, particularly when several issues occur at once; or when an issue persists over time and then causes further problems downstream. The end result is a countless number of generated alerts.
+Detectors within Splunk Observability Cloud monitor the system. Users configure detectors at varying thresholds to generate alerts when something unusual happens, such as a bug or issue. If a specified threshold is met, alerts are generated. A single detector can generate multiple alerts, particularly when several issues occur at once; or when an issue persists over time and causes further problems downstream. The end result is a countless number of generated alerts.
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-1.png
       :width: 99%
@@ -17,7 +17,7 @@ Detectors within Splunk Observability Cloud monitor the system. Users configure 
 Incident policies route and group alerts into incidents that trigger workflows
 ========================================================================================
 
-Users determine which alert signals are the most important to the performance of their infrastructure and use them to intelligently trigger incidents that can be investigated by responders. First, users create alert routing and grouping conditions using alert metadata to filter alerts into incidents. This process reduces alert noise and enables responders to more easily map an issue back to the system or service where it occurred. Second, users create an incident workflow that automatically executes time-based hierarchical steps when an incident is triggered. All incident workflows must include a notification to a person, such as a responder in on-call schedule. If a responder doesn't acknowledge an incident when they are on call, the incident is escalated to the next step in the workflow. This entire process is called an incident policy.
+Users determine which alert signals are the most important to the performance of their infrastructure and use them to intelligently trigger incidents that can be investigated by responders. First, users create alert routing and grouping conditions using alert metadata to filter alerts into incidents. This process reduces alert noise and enables responders to map an issue back to the system or service where it occurred. Second, users create an incident workflow that automatically executes time-based hierarchical steps when an incident is triggered. All incident workflows must include a notification to a person, such as a responder in on-call schedule. If a responder doesn't acknowledge an incident when they are on call, the incident is escalated to the next step in the workflow. This entire process is called an incident policy.
 
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-2.png
@@ -37,7 +37,7 @@ On-call scheduling ensures the right person is notified at the right time to res
 End-to-end incident response process
 =======================================
 
-This is the end-to-end incident response flow that demonstrates the value of Incident Intelligence (note this graphic is simplified for explanatory purposes). An issue appears in the system that is noticed by detectors monitoring that system or service. The detectors fire, causing a spike in generated alerts. Those alerts have been mapped to an incident policy and the influx of activity causes an incident to trigger. The workflow for that incident policy connects to an on-call schedule and a responder is paged. The responder acknowledges the incident and begins investigating the root cause by looking at the alerts grouped under that incident. They resolve the incident and verify their solution as alerts decrease and the system returns to normal. This entire process is called incident response.
+This end-to-end incident response flow demonstrates the value of Incident Intelligence (note this graphic is simplified for explanatory purposes). An issue appears in the system that is noticed by detectors monitoring that system or service. The detectors fire, causing a spike in generated alerts. Those alerts have been mapped to an incident policy and the influx of activity triggers an incident. The workflow for that incident policy connects to an on-call schedule and a responder is paged. The responder acknowledges the incident and begins investigating the root cause by looking at the alerts grouped under that incident. They resolve the incident and verify their solution. Alerts decrease and the system returns to normal. This entire process is called incident response.
 
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-4.png
@@ -49,7 +49,7 @@ This is the end-to-end incident response flow that demonstrates the value of Inc
 Key terms and icons
 =======================
 
-These icons are used in the overview graphics to symbolize key terms and and processes in Incident Intelligence and Splunk Observability Cloud.
+These icons are used in the overview graphics to symbolize key terms and processes in Incident Intelligence and Splunk Observability Cloud.
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-Terms-Icons.png
       :width: 99%
