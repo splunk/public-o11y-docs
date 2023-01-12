@@ -25,7 +25,7 @@ The following examples show how to create a custom event for browser, Android, a
 
    .. tab:: Browser
 
-      To create a custom event you need to first declare the tracer. Then, you can define the custom event. 
+      To create a custom event, first declare the tracer, and next define the custom event.
 
       You can declare the tracer through either CDN or NPM. You need to declare the tracer only once. For more information on the difference between CDN and NPM, see :ref:`rum-browser-install`.
 
