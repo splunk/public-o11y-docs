@@ -32,9 +32,9 @@ For more information about stream objects, see :new-page:`Streams as variables <
 Create custom analytics
 -------------------------------------------
 
-If you want to create custom charts and detector analytics, see :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` in the Splunk Developer Guide. 
+If you want to create custom charts and detector analytics, see :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` in the Splunk Observability Cloud Developer Guide.
 
-You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/>` in the Splunk Developer Guide.
+You can also run SignalFlow programs directly. For more information, see the :new-page:`SignalFlow API <https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` topic in the Splunk Observability Cloud Developer Guide.
 
 .. _aggregations-transformations:
 

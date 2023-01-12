@@ -8,7 +8,7 @@ Connect to AWS using Splunk Terraform
   :description: Use Splunk Terraform to connect Splunk Observability Cloud to AWS.
 
 
-If you use Terraform to turn cloud APIs into declarative configuration files and do not want to configure your system manually through guided setup, you can use the Terraform Provider for Splunk, also called Splunk Terraform, to connect Splunk Observability Cloud to Amazon Web Services (AWS).
+If you use Terraform to turn Observability Cloud APIs into declarative configuration files and do not want to configure your system manually through guided setup, you can use the Terraform Provider for Splunk, also called Splunk Terraform, to connect Splunk Observability Cloud to Amazon Web Services (AWS).
 
 The HashiCorp Configuration Language (HCL) underlying Terraform supports automation. Although you can apply one configuration file to multiple cloud service providers, this topic explains how you connect your system to Observability Cloud using the Terraform registry for AWS integration from the ``splunk-terraform/signalfx`` provider.
 
