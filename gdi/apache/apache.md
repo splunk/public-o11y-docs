@@ -53,7 +53,7 @@ The following is an example of what you can use to replace the placeholder, `...
     host: localhost
     port: 80
 
-If mod_status is exposed on an endpoint other than /mod_status, you can use the url config option to specify the path:
+If `mod_status` is exposed on an endpoint other than `/mod_status`, you can use the url config option to specify the path:
 
     type: collectd/apache
     host: localhost
