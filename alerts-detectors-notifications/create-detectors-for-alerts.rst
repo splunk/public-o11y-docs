@@ -4,27 +4,27 @@
 Create detectors to trigger alerts
 ************************************
 
-.. meta updated 07/04/21
-
 .. meta::
    :description: How to create detectors to trigger alerts.
 
-A :term:`detector` monitors signals on a plot line, as on a chart, and triggers alert events and clear events based on conditions you define in rules. Conceptually, you can think of a detector as a chart that can trigger alerts when a signal's value crosses specified thresholds defined in alert rules.
+A :term:`detector` monitors signals on a plot line, as on a chart, and triggers alert events and clear events based on conditions you define in rules. You can think of a detector as a chart that can trigger alerts when a signal's value crosses specified thresholds defined in alert rules.
 
 Create detectors
 =============================================================================
 
 The main steps involved in creating a detector are:
 
-1. Choose :ref:`how to create the detector <how-to-create-detector>`
+1. Choose :ref:`how to create the detector <how-to-create-detector>`.
 
-2. Add :ref:`alert rules <build-rules>` to the detector that specify when alerts should be triggered.
+2. Add :ref:`alert rules <build-rules>` to the detector that specify when alerts must be triggered.
 
-Alert rules are also called build rules. They use settings you specify for :ref:`condition-reference` to define thresholds that trigger alerts. When a detector determines that the conditions for a rule are met, it triggers an alert, creates an event, and sends notifications (if specified). Detectors can send notifications through email, as well as through other systems, such as Slack, or by using a webhook. To learn more, see :ref:`admin-notifs-index`.
+Alert rules are also called build rules. They use settings you specify for :ref:`condition-reference` to define thresholds that trigger alerts. When a detector determines that the conditions for a rule are met, it triggers an alert, creates an event, and sends notifications, if specified. 
 
-Active alerts and existing detectors can be found in tabs on the Alerts page. Events can be found in the Events sidebar, available from within any dashboard.
+Detectors can send notifications through email, as well as through other systems, such as Slack, or by using a webhook. To learn more, see :ref:`admin-notifs-index`.
 
-When you specify alert settings in a detector rule, an alert preview is displayed. The alert preview can help you adjust your settings as you create the detector, but also helps when you are editing existing detectors. To learn more, see :ref:`preview-detector-alerts`.
+You can find active alerts and existing detectors in tabs on the Alerts page. Find events in the Events sidebar, available from within any dashboard.
+
+When you configure alert settings in a detector rule, an alert preview appears. The alert preview can help you adjust your settings as you create the detector, but also helps when you are editing existing detectors. To learn more, see :ref:`preview-detector-alerts`.
 
 
 .. _how-to-create-detector:
@@ -34,15 +34,17 @@ Choose how to create a detector
 
 There are several ways to create a detector.
 
--  You can clone an existing detector if you or someone else in your organization have already created detectors that you want to modify, or if you just want to learn more about detectors.
+-  You can clone an existing detector if you or someone else in your organization have already created detectors that you want to modify, or if you want to learn more about detectors.
 
--  Start from :ref:`Detector menu <create-detector-from-chart>` to create detectors that are based on what you are currently viewing, such as a chart or the Infrastructure Navigator.
+- Customize AutoDetect detectors. See :ref:`autodetect-customize`.
 
--  :ref:`create-detector-from-chart` to pre-select one of the chart’s signals as the signal to be monitored.
+-  Start from the Detector tab to create detectors that are based on what you are currently viewing, such as a chart or the Infrastructure Navigator. See :ref:`create-detector-from-chart`.
 
--  :ref:`create-detector-from-scratch` only if you know how to create charts from scratch, and none of the other detector creation options meets your needs.
+-  Create a detector from a chart to preselect one of the chart signals as the signal to be monitored. See :ref:`create-detector-from-chart`.
 
--  Use the :ref:`Splunk Infrastructure Monitoring API <create-via-api>` to programmatically create detectors, instead of creating them through the user interface.
+-  Create a detector from scratch if you know how to create charts from scratch and none of the other detector creation options meets your needs. See :ref:`create-detector-from-scratch`.
+
+-  Use the API to programmatically create detectors, instead of creating them through the user interface. See :ref:`create-via-api`.
 
 .. _clone-detector:
 
@@ -70,36 +72,31 @@ To create the detector, open the Detector menu by selecting the bell icon at the
 
 After you create a detector from a chart, a :ref:`link to the new detector<link-detector-to-chart>` is automatically added to the chart.
 
-
-
 .. _create-detector-from-scratch:
 
 Create a detector from scratch
 -------------------------------------------------------------------
 
-It's good practice to create a new detector using one of the previous techniques, so you have a solid starting point. The most useful and powerful detectors can be quite complex; the best way to learn how to create detectors is to see how existing ones are built.
-
 To create a new detector from scratch, you can either click the :guilabel:`New Detector` button on the Alerts or Detectors tab on the Alerts page, or select :menuselection:`Detector` from the Create menu (plus sign) on the navigation bar.
 
--  If you are not monitoring services using Splunk APM, the Alert Rule Builder will be displayed automatically. To continue, skip to :ref:`build-rules`.
+-  If you are not monitoring services using Splunk APM, the Alert Rule Builder appears automatically. To continue, skip to :ref:`build-rules`.
 
--  If you are using Splunk APM, you will have the option to create a detector designed to alert on conditions related to tracing, such as latency or error rate.
+-  If you are using Splunk APM, you can create a detector designed to alert on conditions related to tracing, such as latency or error rate.
 
    -  If you want to create an APM detector, select that rule type and then click :guilabel:`Proceed to alert signal`. For details about the default alert conditions available for detectors in Splunk APM, see :ref:`alert-conditions-apm`.
 
-   -  If you want to create an  Infrastructure or Custom Metrics rule type, select that rule type and then click :guilabel:`Proceed to alert signal`. For instructions on building the rule, see :ref:`build-rules`.
-
+   -  If you want to create an Infrastructure or Custom Metrics rule type, select that rule type and then click :guilabel:`Proceed to alert signal`. For instructions on building the rule, see :ref:`build-rules`.
 
 .. _create-via-api:
 
-Create a detector using the Splunk Observability Cloud API
+Create a detector using the API
 -------------------------------------------------------------------
 
-Using the API to create a detector provides a number of capabilities that are not available in the UI, letting you build detectors with more advanced rules and conditions. You can view these detectors in the UI; the program text is displayed in place of the signals displayed in standard detectors.
+Using the API to create a detector provides a number of capabilities that are not available in the UI, letting you build detectors with more advanced rules and conditions. You can view these detectors in the UI. The program text appears in place of the signals displayed in standard detectors.
 
 -  For general information on creating detectors using the API, see the :new-page:`Detect Anomalies with Detectors <https://dev.splunk.com/observability/docs/detectors/detectors_events_alerts/>` topic in the Splunk Observability Cloud Developer Guide.
 
--  For information on using the Splunk Infrastructure Monitoring UI to edit detectors created using the API, see :ref:`v2-detector-signalflow`.
+-  For information on using the UI to edit detectors created using the API, see :ref:`v2-detector-signalflow`.
 
 .. note:: If a detector display includes a SignalFlow tab, you are viewing a detector created programmatically using the :new-page:`Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`. If you are familiar with that API, you can use the detector display to view and edit the detector code and make changes to the detector rules.
 
@@ -113,16 +110,13 @@ Build detector rules
 
 -  In the :ref:`Alert condition <alert-condition>` and :ref:`Alert settings <alert-settings>` tabs, you specify criteria for triggering an alert.
 
-.. note:: If you don't see the Alert Signal, Alert Condition, or Alert Settings tabs, you are viewing a detector that was created using the API. For more information, see :ref:`v2-detector-SignalFlow`.
+.. note:: If you don't see the Alert Signal, Alert Condition, or Alert Settings tabs, you are viewing a detector created using the API. For more information, see :ref:`v2-detector-SignalFlow`.
 
--  In the :ref:`Alert message <alert-message>` and :ref:`Alert recipients <alert-recipients>` tabs, you specify who should receive notifications, and add notes that will be included in the notifications.
+-  In the :ref:`Alert message <alert-message>` and :ref:`Alert recipients <alert-recipients>` tabs, you specify who can receive notifications, and add notes that are included in the notifications.
 
--  In the :ref:`Activate <activate-detector>` tab, you name the rule and make the detector "live."
+-  In the :ref:`Activate <activate-detector>` tab, you name the rule and enable the detector.
 
 After you activate the detector, it begins monitoring the signal immediately. When the signal meets the specified criteria, the detector triggers alerts, creates events, and sends the specified message to the alert recipients.
-
-Each tab is discussed below.
-
 
 .. _alert-signal:
 
@@ -133,17 +127,17 @@ In the :strong:`Alert signal` tab, define the signal to monitor by entering a me
 
 .. note:: If you don't see an Alert signal tab, you are viewing a detector that was created using the API; signals are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
 
-If you are creating a detector from scratch, you must first specify the signal(s) you want to monitor. Specifying a signal for a detector is similar to specifying a signal in a chart in the Plot Editor tab in the Chart Builder. When you start typing, a drop-down list of metrics and events displays. Select the metric you want to monitor, then add any filters or analytics. To learn more, see :ref:`specify-signal`
+If you are creating a detector from scratch, you must first specify the signal or signals you want to monitor. Specifying a signal for a detector is similar to specifying a signal in a chart in the Plot Editor tab in the Chart Builder. When you start typing, a list of metrics and events displays. Select the metric you want to monitor, then add any filters or analytics. To learn more, see :ref:`specify-signal`
 
 If you want to add more signals, click :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. Note that you can add events to be displayed on the chart, but you cannot select an event as the signal to be monitored.
 
-.. note:: If you are creating a detector :ref:`from a chart<create-detector-from-chart>` or by :ref:`cloning a detector<clone-detector>`, you may not need to add any new signals. However, if you do add new signals to the detector, the signals will not be added to the original chart or detector.
+.. note:: If you are creating a detector :ref:`from a chart<create-detector-from-chart>` or by :ref:`cloning a detector<clone-detector>`, you might not need to add any new signals. However, if you do add new signals to the detector, the signals is not added to the original chart or detector.
 
 .. _compound-conditions:
 
 If the detector has multiple signals, you can choose whether to monitor one or more signals.
 
--  To monitor one signal (the most common use case), click the bell icon for the Detector menu at the far left to specify which signal will be monitored. A blue bell indicates the signal that is being monitored.
+-  To monitor one signal (the most common use case), click the bell icon for the Detector menu at the far left to specify which signal you want to monitor. A blue bell indicates the signal that is being monitored.
 
 -  To create compound conditions based on the values of more than one signal (for example, signal |nbsp| A is above `x` OR signal |nbsp| B is above `y`), click the multiple signals icon. Note that this option is available only if the alert condition is Custom Threshold.
 
@@ -154,17 +148,13 @@ Continue to the next tab to select a condition for the detector's rule.
 Select Alert conditions
 -------------------------------------------------------------------
 
-In the :strong:`Alert condition` tab, you select the type of condition that will trigger an alert.
+In the :strong:`Alert condition` tab, you select the type of condition that triggers an alert.
 
 If you have chosen to monitor multiple signals, the only available alert condition is Custom Threshold.
 
 .. note:: If you don't see an Alert condition tab, you are viewing a detector that was created using the API; alert conditions are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
 
-Splunk Infrastructure Monitoring provides several built-in alert conditions to make it simple for you to create robust alert conditions without needing to build advanced conditions behind the scenes.
-
-.. note::
-
-   This section details the built-in alert conditions available when you are creating an Infrastructure or Custom Metrics detector. The built-in alert conditions for detectors in Splunk APM are slightly different. For a list of built-in alert conditions available for detectors on the latency and error rate signals specific to Splunk APM, see :ref:`alert-conditions-apm`.
+Splunk Infrastructure Monitoring and Splunk APM provide several built-in alert conditions to make it simple for you to create robust alert conditions without needing to build advanced conditions behind the scenes.
 
 The following table summarizes the available built-in alert conditions for Infrastucture Monitoring and Custom Metrics detectors.
 
@@ -197,7 +187,6 @@ The following table summarizes the available built-in alert conditions for Infra
      - Alert when the signal from one data source differs from similar data sources
      - The number of logins in the last 10 minutes for this instance is 3 standard deviations lower than other instances in the same AWS availability zone.
 
-
    * - :ref:`sudden-change`
      - Alert when a signal is different from its normal behavior (based on mean of preceding window or percentile of preceding window)
      - All the values for ``cpu.utilization`` received in the last 15 |nbsp| minutes are at least |nbsp| 3 standard deviations above the mean of the preceding hour. All the values for ``latency`` received in the last 10 minutes are greater than 99% of the values of the preceding 1 hour.
@@ -206,22 +195,20 @@ The following table summarizes the available built-in alert conditions for Infra
      - Alert when a signal differs by a specified amount when compared to similar periods in the past
      - The average number of logins in the last 2 hours is [30% higher] [3 standard deviations higher]  than the average for this same two hours last week.
 
-
    * - :ref:`custom-threshold`
      - Alert when a signal crosses another signal, or when you want to specify compound conditions using AND and OR operators.
      - Example 1 - The value for ``cache_misses`` is above ``cache_hits``. Example 2 - The value for ``cache_misses`` is above ``cache_hits`` OR the value for ``cache_misses_percent`` is above 10.
 
-
 .. note:: If you want to create compound conditions using AND or OR operators on the Alert Settings tab, you must use the Custom Threshold condition. This limitation applies whether you are monitoring a single signal or multiple signals.
 
-After you have selected the alert condition, continue to the next tab to specify the settings that will trigger alerts.
+After you have selected the alert condition, continue to the next tab to specify the settings that trigger alerts.
 
 .. _alert-settings:
 
 Specify Alert settings
 -------------------------------------------------------------------
 
-In the :strong:`Alert settings` tab, you specify the settings that will trigger an alert.
+In the :strong:`Alert settings` tab, you specify the settings that trigger an alert.
 
 .. note:: If you don't see an Alert settings tab, you are viewing a detector that was created using the API; alert settings are defined in the :ref:`SignalFlow tab<v2-detector-signalflow>`.
 
@@ -231,7 +218,7 @@ The available settings vary depending on the alert condition you selected.
 
 In the chart, you see a preview of the alerts that would have been triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
 
-After you have specified settings for triggering alerts, continue to the next tab to create a message that will be sent when the alert is triggered.
+After you have specified settings for triggering alerts, continue to the next tab to create a message that is sent when the alert is triggered.
 
 .. _alert-message:
 
@@ -261,19 +248,7 @@ Another example might be:
 
 The easiest way to do this is to create a rule at one severity, select :menuselection:`Clone` from the rule's actions menu (|more|) on the right side of the screen, and then edit the settings and severity.
 
-Runbook
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You can enter the URL of a dashboard or team landing page or wiki page to include in the notification message. Adding a runbook URL can help a recipient resolve an alert more quickly.
-
-Tip
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You can enter a suggested first action to include in the notification message, such as a command to execute, or a note like "If you are on call, review immediately." Alternatively, you can add more general information, such as "This is a test alert - OK to ignore."
-
-
 .. _message:
-
 
 Message preview
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -290,15 +265,14 @@ You can also use Markdown in the message.
 
 .. _message-variables:
 
-When entering a variable in the message, typing the first few letters will narrow down the list of variables shown on the right. If only one is shown, pressing Tab will add it to the message. If more than one is shown, pressing Tab will add the first one in the list to the message.
+When entering a variable in the message, typing the first few letters narrows down the list of variables shown on the right. If only one is shown, pressing Tab adds it to the message. If more than one is shown, pressing Tab adds the first one in the list to the message.
 
-The following tables describe the variables and helper functions you can use when creating a custom message. Use triple braces where indicated so that the variable value will not get escaped.
+The following tables describe the variables and helper functions you can use when creating a custom message. Use triple braces where indicated so that the variable value is not escaped.
 
-.. Note:: :ref:`Different additional variables may be available<condition-variables>` depending on the alert condition you specify. If you change the alert condition after customizing the message, an icon on the Message preview tab is displayed.
+.. Note:: :ref:`Different additional variables may be available<condition-variables>` depending on the alert condition you specify. If you change the alert condition after customizing the message, an icon on the Message preview tab appears.
 
    .. image:: /_images/images-detectors-alerts/message-tab-icon.png
       :alt: This image shows the message tab icon.
-
 
    This is to remind you to review the message, since some variables you used might no longer apply to the new condition you selected. The icon is removed when you navigate away from the Message preview tab.
 
@@ -647,7 +621,7 @@ Edit detectors through the SignalFlow tab
 
 .. note:: This section assumes you are familiar with the :new-page:`Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
-If you are modifying a detector that was created using the API, you can add and edit detector rules using the SignalFlow tab. The SignalFlow program text replaces the Alert Signal, Alert Condition, and Alert Settings tabs that are used when creating and editing detectors using the Splunk Infrastructure Monitoring UI.
+If you are modifying a detector that was created using the API, you can add and edit detector rules using the SignalFlow tab. The SignalFlow program text replaces the Alert Signal, Alert Condition, and Alert Settings tabs that are used when creating and editing detectors using the UI.
 
 Every ``publish`` statement in a SignalFlow ``detect`` statement corresponds to a rule in the Alert Rules tab. The label you enter inside the ``publish`` block is displayed next to the number of active alerts displayed on the Alert Rules tab.
 

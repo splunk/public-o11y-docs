@@ -16,6 +16,7 @@ Use dashboards and detectors to visualize and alert on your application in Splun
 
 * :ref:`apm-dashboards`
 * :ref:`apm-alerts`
+* :ref:`autodetect-list`
 * :ref:`alert-conditions-apm`
 
 The following animated image shows an example service dashboard. 
