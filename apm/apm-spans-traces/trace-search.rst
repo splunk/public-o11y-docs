@@ -96,3 +96,11 @@ The following table presents what each APM tool is best suited for:
    * - High cardinality
      - Medium cardinality
      - Low cardinality
+
+
+Learn more
+=====================
+
+See the following links for more information on Trace Analyzer: 
+
+* :ref:`apm-use-case-trace-analyzer`
