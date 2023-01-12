@@ -129,7 +129,7 @@ Although Metric Streams are more efficient than API polling, consider the constr
 
 CloudWatch Metric Streams continually stream Amazon CloudWatch metrics as soon as they are published. In most cases, the metrics are published once per minute.
 
-For customers currently collecting Amazon CloudWatch metrics at the default polling rate of 300 seconds (5 minutes), this difference in intervals typically increases Amazon CloudWatch usage costs.
+For customers currently collecting Amazon CloudWatch metrics at the default polling rate of 300 seconds (5 minutes), this difference in intervals typically increases :ref:`Amazon CloudWatch usage costs <aws-costs>`.
 
 Customers already polling at 1-minute intervals generally see a slight decrease in Amazon CloudWatch usage costs compared to Metric Streams.
 
