@@ -10,7 +10,7 @@ Splunk RUM leverages the Infrastructure Monitoring platform to create detectors 
 How alerts work in Splunk RUM
 ========================================
 
-In Splunk RUM for Browser, alerts are triggered on aggregate metrics for the entire application. If you want to create an alert for a page level metric, first create a custom event for the metric, then create an alert for the custom event. See :ref:`rum-rules` to learn how to create a custom event. See :ref:`Create custom events <rum-custom-event>` for more information. If you are new to alerts and detectors, see :ref:`Introduction to alerts and detectors in Splunk Observability Cloud <get-started-detectoralert>`. 
+In Splunk RUM for Browser, alerts are triggered on aggregate metrics for the entire application. If you want to create an alert for a page level metric, first create a custom event for the metric, then create an alert for the custom event. To learn more, see :ref:`Create custom events <rum-custom-event>`. If you are new to alerts and detectors, see :ref:`Introduction to alerts and detectors in Splunk Observability Cloud <get-started-detectoralert>`. 
 
 
 
