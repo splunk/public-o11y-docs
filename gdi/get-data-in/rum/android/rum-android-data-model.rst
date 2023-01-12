@@ -5,7 +5,7 @@ Android data model
 ****************************************
 
 .. meta::
-   :description: Understand which RUM data you collect from Android applications when using Splunk Real User Monitoring (RUM).
+   :description: Understand which RUM data you collect from Android applications when using Splunk Observability Cloud Real User Monitoring (RUM).
 
 The Android agent for Splunk Real User Monitoring (RUM) collects the following types of data about your Android application: 
 

@@ -18,7 +18,7 @@ Create and manage on-call schedules
    use-cases-schedules/use-cases-schedules
 
 
-When an incident occurs, it is important to contact a responder who understands that part of the system architecture to fix the problem. You can accomplish this through scheduling. An on-call schedule consists of a rotating group of responders that are assigned shifts for incident response. Use an on-call schedule as a step in your service incident workflows.
+When an incident occurs, it is important to contact a responder who understands that part of the system architecture to fix the problem. You can accomplish this through scheduling. An on-call schedule consists of a rotating group of responders that are assigned shifts for incident response. Use an on-call schedule as a step in your incident workflows.
 
 .. raw:: html
 
@@ -31,7 +31,9 @@ Follow these steps to create a schedule. See :ref:`ii-schedule-scenarios` for st
 .. raw:: html
     :file: on-call_schedule_steps.html
 
-Now that you've created an on-call schedule, add it to the incident workflow for the relevant incident policy. Responders are not paged until the schedule is included as a step in an incident workflow. To learn how to add schedules to the incident workflow, see :ref:`ii-configure-incident-workflows`.
+After you save your shifts, review the schedule details in the :guilabel:`Schedule Preview` to confirm that you've configured your schedule shifts as intended. The schedule preview includes schedule info for up to one year. Select :guilabel:`Next Month` and :guilabel:`Previous Month` to navigate the schedule preview. Select :guilabel:`Back to all schedules` when you are finished adding shifts to your on-call schedule.
+
+Now that you've created an on-call schedule, add it to the incident workflow for your web application incident policy. See :ref:`ii-configure-incident-workflows`.
 
 .. raw:: html
 

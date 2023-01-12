@@ -5,7 +5,7 @@ Instrument iOS applications for Splunk RUM
 **************************************************************
 
 .. meta::
-   :description: Learn how to instrument your iOS applications for Splunk RUM and what data you can collect.
+   :description: Learn how to instrument your iOS applications for Splunk Observability Cloud real user monitoring / RUM and what data you can collect.
 
 .. toctree::
    :hidden:

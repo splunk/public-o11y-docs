@@ -5,7 +5,7 @@ Connect to Google Cloud Platform
 ********************************************************
 
 .. meta::
-   :description: Connect your GCP account to Splunk Observability Cloud.
+   :description: Connect your Google Cloud Platform / GCP account to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -48,9 +48,6 @@ The following table specifies the permissions required for GCP integrations.
 
    *  - :strong:`Permission`
       - :strong:`Required?`
-
-   *  - ``monitoring.metricDescriptors.get``
-      - Yes
 
    *  - ``monitoring.metricDescriptors.list``
       - Yes

@@ -5,7 +5,7 @@ Connect to AWS and send data to Splunk Observability Cloud
 ************************************************************
 
 .. meta::
-  :description: Connection planning information and links to the different ways to connect AWS to Splunk Observability Cloud
+  :description: Connection planning information and links to the different ways to connect AWS to Splunk Observability Cloud.
 
 .. toctree::
   :hidden:
@@ -17,6 +17,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
   Troubleshooting <aws-troubleshooting>
+  GetMetricStatistics API deprecation notice <aws-api-notice>
 
 To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to AWS following these steps:
 
@@ -96,11 +97,13 @@ You can connect Observability Cloud to AWS in several different ways. Choose the
   * - Connect to AWS using :ref:`Splunk Terraform <terraform-config>`
     - Can be used if you already manage your infrastructure as code by deploying through Terraform.
 
+See also the :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.splunk.com/Documentation/AddOns/latest/Firehose/ConfigureFirehose>`.
+
 .. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
   
 By default, Splunk Observability Cloud will bring in data from all :ref:`supported AWS services <aws-integrations>` associated with your account. To limit the amount of data to import, see :ref:`specify-data-metadata`.
 
-If you can't connect AWS to Splunk Observability Cloud, see :ref:`Troubleshoot your AWS connection <aws-troubleshooting>`.
+If you can't connect AWS to Observability Cloud, see :ref:`Troubleshoot your AWS connection <aws-troubleshooting>`.
 
 .. _aws-metricstreams:
 
@@ -126,7 +129,7 @@ Although Metric Streams are more efficient than API polling, consider the constr
 
 CloudWatch Metric Streams continually stream Amazon CloudWatch metrics as soon as they are published. In most cases, the metrics are published once per minute.
 
-For customers currently collecting Amazon CloudWatch metrics at the default polling rate of 300 seconds (5 minutes), this difference in intervals typically increases Amazon CloudWatch usage costs.
+For customers currently collecting Amazon CloudWatch metrics at the default polling rate of 300 seconds (5 minutes), this difference in intervals typically increases :ref:`Amazon CloudWatch usage costs <aws-costs>`.
 
 Customers already polling at 1-minute intervals generally see a slight decrease in Amazon CloudWatch usage costs compared to Metric Streams.
 
@@ -154,7 +157,7 @@ You can disable this check by setting the ``enableCheckLargeVolume`` field in th
 
 CloudWatch Metric Streams do not support filtering based on resource tags. Configuration applies to individual services, and all resources that report metrics from a configured service stream those metrics. If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might increase.
 
-Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
+.. caution:: Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _after-aws-integration:
 

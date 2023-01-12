@@ -1,7 +1,7 @@
 (kubernetes-proxy)=
 
 # Kubernetes proxy
-<meta name="Description" content="Documentation on kubernetes-proxy monitor type">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Kubernetes proxy monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

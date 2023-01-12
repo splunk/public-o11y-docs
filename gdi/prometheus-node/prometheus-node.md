@@ -1,13 +1,13 @@
 (prometheus-node)=
 
 # Prometheus Node Exporter
-<meta name="description" content="Documentation on the prometheus/node monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Prometheus Node Exporter monitor. See benefits, install, configuration, and metrics">
+
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/node` monitor type using the Smart Agent Receiver. 
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/node` monitor type using the Smart Agent Receiver.
-
-Use this integration to collect Prometheus Node Exporter metrics and send them to Splunk Observability Cloud. This monitor is a wrapper around the {ref}`prometheus-exporter` monitor.
+Node Exporter is a Prometheus exporter for server level and OS level metrics, and measures various server resources such as RAM, disk space, and CPU utilization. Use the `prometheus/node` integration to collect Prometheus Node Exporter metrics and send them to Splunk Observability Cloud. This monitor is a wrapper around the {ref}`prometheus-exporter` monitor.
 
 This integration is available for Kubernetes, Linux, and Windows.
 
@@ -27,7 +27,7 @@ This integration is available for Kubernetes, Linux, and Windows.
 ```
 
 ```{note}
-Provide a prometheus/node monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a prometheus/node monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

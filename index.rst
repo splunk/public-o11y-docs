@@ -189,7 +189,7 @@ Set up an integration to an SSO provider :ref:`sso-label`
 
 .. rst-class:: newcard
 
-:strong:`Subscription Usage`
+:strong:`Subscription usage`
 Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-overview`
 
 
@@ -292,12 +292,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case: Monitor infrastructure and apps using the Collector <get-started/use-case-collector>
+   Use cases <get-started/use-case-landing>
 
 .. toctree::
    :maxdepth:   3
 
-   Use case: Troubleshoot an issue from the browser to the backend <get-started/use-case>
+   Splunk Observability Cloud and the Splunk platform <get-started/core2o11y/core2o11y-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -749,7 +749,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   incident-intelligence/create-configure-services
+   incident-intelligence/create-configure-incident-policies
 
 .. toctree::
    :maxdepth:   3
