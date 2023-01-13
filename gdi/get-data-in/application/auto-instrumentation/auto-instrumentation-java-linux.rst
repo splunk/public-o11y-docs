@@ -169,7 +169,7 @@ The following table shows the supported parameters for the ``/usr/lib/splunk-ins
      - An optional parameter that specifies a unique identifier for a particular host. If you set this parameter, all instrumented Java applications on the host have their service name set using the  ``OTEL_SERVICE_NAME`` environment variable. If this parameter is not set, the shared object assigns a generated name. 
      - No
    * - ``resource_attributes`` 
-     - Contains a list of name-value pairs, separated by ``=s``, that the shared object sets to the ``RESOURCE_ATTRIBUTES`` environment variable. The ``RESOURCE_ATTRIBUTES`` environment variable is then picked up by the Java instrumentation JAR file. The installer script sets this to something like ``resource_attributes=deployment.environment=test``, which defines the deployment environment.
+     - Contains a comma-separated list of name-value pairs of the form ``name=value``. Use this attribute to add extra tags to the generated trace data. For example, you might want every span to include a ``build.id`` set to ``feb2023`` and a ``deployment.environment`` set to ``test``. You can set the ``resource_attributes`` to ``build.id=feb2023_v2,deployment.environment=test``.  The shared object sets the ``RESOURCE_ATTRIBUTES`` environment variable to the value you specified, and the Java agent includes each pair in every span.
      - No  
 
 

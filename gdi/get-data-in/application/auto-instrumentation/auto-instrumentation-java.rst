@@ -40,7 +40,7 @@ Zero Configuration Automatic Instrumentation does not support the following feat
 - :ref:`Collecting application and JVM metrics<java-otel-metrics-attributes>`
 - :ref:`AlwaysOn Profiling<profiling-intro>`
 
-To use one or more of these features, you must :ref:`manually instrument your Java application<instrument-java-applications>`.
+To use any of these features, you must :ref:`manually instrument your Java application<instrument-java-applications>`.
 
 .. _zero-conf-intro:
 
