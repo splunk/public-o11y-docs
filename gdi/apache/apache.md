@@ -2,7 +2,7 @@
 
 # Apache HTTP Server
 
-<meta name="description" content="Documentation for the apache monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Apache HTTP server monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -43,7 +43,7 @@ Apache worker threads can be in one of the following states:
 
 ```
 receivers:
-  smartagent/apache
+  smartagent/apache:
     type: collectd/apache
     ... # Additional config
 ```

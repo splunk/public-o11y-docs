@@ -19,6 +19,8 @@ To get data into Splunk AlwaysOn Profiling, you need the following:
 
 If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
+.. note:: AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
+
 .. _profiling-setup:
 
 Get profiling data in
@@ -48,10 +50,10 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
      - Splunk Distribution of OpenTelemetry Java version 1.14.2 or higher
      - :ref:`instrument-java-applications`, :ref:`profiling-configuration-java`
    * - Node.js
-     - Splunk Distribution of OpenTelemetry JS
+     - Splunk Distribution of OpenTelemetry JS version 2.0 or higher
      - :ref:`instrument-nodejs-applications`
    * - .NET
-     - SignalFx Instrumentation for .NET
+     - SignalFx Instrumentation for .NET version 1.0.0 or higher
      - :ref:`instrument-dotnet-applications`
 
 .. note:: See :ref:`apm-data-retention` for information on Profiling data retention.
@@ -71,13 +73,13 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
       - To use CPU profiling, enable the ``splunk.profiler.enabled`` system property, or set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Enable Memory profiling by setting the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``. To enable memory profiling, the ``splunk.profiler.enabled`` property must be set to ``true``.
-      - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable point to ``http://localhost:4317``.
-      - Port 9943 is the default port for the SignalFX receiver in the collector distribution. If you change this port in your collector config, you need to pass the custom port to the JVM.
+      - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
+      - Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your Collector config, you need to pass the custom port to the JVM.
       
       The following example shows how to enable the profiler using the system property:
 
       .. code-block:: bash
-         :emphasize-lines: 2,3,4
+         :emphasize-lines: 2,3,4,5
 
          java -javaagent:./splunk-otel-javaagent.jar \
          -Dsplunk.profiler.enabled=true \
@@ -88,6 +90,8 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-java`.
 
+      .. note:: Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your collector config, you need to pass the custom port to the JVM.
+
    .. group-tab:: Node.js
 
       .. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. 
@@ -96,7 +100,7 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
       - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Enable Memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
-      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
+      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``  or to the Splunk Distribution of OpenTelemetry Collector.
 
       The following example shows how to enable the profiler from your application's code:
 
@@ -114,10 +118,14 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: .NET
 
-      AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher.
+      .. caution:: Memory profiling for .NET is an experimental feature subject to future changes.
+
+      AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
 
       - Enable the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
-      - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4318/v1/logs``, or to the Splunk Distribution of OpenTelemetry Collector.
+      - Enable Memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+      - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
+      - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4318/v1/logs`` or to the Splunk Distribution of OpenTelemetry Collector.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
 

@@ -2,7 +2,7 @@
 
 # Host process
 
-<meta name="description" content="Documentation on the Host process monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the processes monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description

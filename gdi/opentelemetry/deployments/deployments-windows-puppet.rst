@@ -5,7 +5,7 @@ Puppet for Windows
 **********************
 
 .. meta::
-      :description: Describes how to install the Puppet module on Windows.
+      :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Puppet module on Windows.
 
 Use this module to install and configure the Collector on Windows. Download and install the module from :new-page:`Puppet Forge <https://forge.puppet.com/modules/signalfx/splunk_otel_collector>`. After downloading the module, you can add customizations using the ``class`` parameter.
 

@@ -182,7 +182,7 @@ Choose this chart type when you want to see a single number in a large font that
 
    To display an accurate value, the plot must use an aggregate analytics function that generates a single value for each data point on the chart, such as Mean, Sum, Max, etc. If the plot line always reflects only a single time series, no analytics function is needed. However, this is uncommon.
 
-   If the plot line on the chart shows multiple values, i.e. one line per MTS when viewed as a line chart, the single number displayed on the chart might represent any of the values for a given point in time.
+   If the plot line on the chart shows multiple values, i.e. one line per metric time series (MTS) when viewed as a line chart, the single number displayed on the chart might represent any of the values for a given point in time.
 
 
 .. note::

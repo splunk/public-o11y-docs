@@ -123,7 +123,7 @@ As you filter a signal, tokens representing the filter options are added to the 
 View and change a plot's rollup type
 =============================================================================
 
-Every signal has a default :term:`rollup` associated with it, which will be displayed as :strong:`Auto`. If the rollup label says :strong:`Multiple`, it means that different rollup functions have been applied to different MTSes on the same plot. This happens when the rollup setting is left as default, and the plot contains metric time series that have different metric types. MTSes on the same plot can have different metric types if the plot contains a wildcard query that matches many different metrics. It can also happen if the plot contains one metric, but that metric is used to record different types of measurements.
+Every signal has a default :term:`rollup` associated with it, which will be displayed as :strong:`Auto`. If the rollup label says :strong:`Multiple`, it means that different rollup functions have been applied to different metric time series (MTS) on the same plot. This happens when the rollup setting is left as default, and the plot contains metric time series that have different metric types. MTS on the same plot can have different metric types if the plot contains a wildcard query that matches many different metrics. It can also happen if the plot contains one metric, but that metric is used to record different types of measurements.
 
 Rollups are used to adjust the chart resolution as necessary to effectively display the chart data. For more information, see :ref:`data-resolution-rollups-charts`.
 
@@ -484,11 +484,16 @@ Data points being sent to Splunk Observability Cloud can be delayed, or not arri
 Delayed data points
 -------------------------------------------------------------------
 
-As a general rule, when using a streaming analytics system, the more "on time" data points are, the better. In other words, the delta between logical time (the time stamp that accompanies the data points, such as when the measurements are actually taken) and wall time (the time at which the data points actually arrive in Splunk Observability Cloud) should be as low as possible.
+As a general rule, when using a streaming analytics system, the more "on time" data points are, the better. In other words, the delta between logical time (the time stamp that accompanies the data points, such as when the measurements are taken) and wall time (the time at which the data points arrive in Splunk Observability Cloud) needs to be as low as possible.
 
-The impact of delayed data points on a streaming analytics system can be illustrated using the following example. Let's say you have a chart that displays the average of the CPU utilization metrics from 10 servers, and that 9 of the servers report every 10 seconds and are on time. One laggard, backed up for whatever reason, submits data with a gap between wall time and logical time that is 10 minutes long. So even though that machine sends one data point every 10 seconds, those data points all arrive after a 10 |hyph| minute delay.
+The impact of delayed data points on a streaming analytics system can be illustrated using the following example:
 
-The :strong:`Max Delay` parameter specifies the maximum time that the Splunk Observability Cloud analytics engine waits for data to arrive for a specific chart. For example, if :strong:`Max Delay` is set to 5 minutes, the computation waits for no more than 5 minutes after time *t*, for data that has been timestamped with time *t*. The leading edge of the CPU utilization chart will be no more than 5 minutes behind the current time, and the laggard will not be considered for the purpose of calculating the average in the streaming chart. When it does arrive, it will be stored properly, such that any re-calculation of the average takes it into account. As such, :strong:`Max Delay` allows users to control the trade-off between correctness and timeliness.
+You have a chart that displays the average of the CPU utilization metrics from 10 servers, and 9 of the servers report every 10 seconds and are on time. One laggard, backed up for whatever reason, submits data with a gap between wall time and logical time that is 10 minutes long. Even though that machine sends one data point every 10 seconds, those data points all arrive after a 10 |hyph| minute delay.
+
+Max delay
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :strong:`Max Delay` parameter specifies the maximum time that the Splunk Observability Cloud analytics engine waits for data to arrive for a specific chart. For example, if :strong:`Max Delay` is set to 5 minutes, the computation waits for no more than 5 minutes after time *t*, for data that timestamped with time *t*. The leading edge of the CPU utilization chart is no more than 5 minutes behind the current time, and the laggard isn't considered for the purpose of calculating the average in the streaming chart. When it does arrive, it will be stored properly, such that any re-calculation of the average takes it into account. As such, :strong:`Max Delay` lets you prioritize timeliness over correctness.
 
 When :strong:`Max Delay` is set to the default, :strong:`Auto`, the timeliness of the reporting time series are sampled to determine an appropriate value. The value is chosen to accommodate most, if not all, data by adopting the maximum observed lag after discarding substantial laggards.
 

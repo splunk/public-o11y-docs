@@ -17,11 +17,17 @@ Generate customized instructions using the guided setup
 To generate all the basic installation commands for your environment and application, use the Python guided setup. To access the Python guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`By Product`.
-#. Select the :guilabel:`APM` product.
-#. Select the :guilabel:`Python` tile to open the Python guided setup.
+#. Open the :new-page:`Python guided setup <https://login.signalfx.com/#/gdi/scripted/python-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"python-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`. 
+
+   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+
+   #. In the integration filter menu, select :guilabel:`By Product`.
+
+   #. Select the :guilabel:`APM` product.
+
+   #. Select the :guilabel:`Python` tile to open the Python guided setup.
 
 .. _install-enable-python-agent:
 
@@ -180,6 +186,8 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 #. Select your username. 
 
 The realm name appears in the :guilabel:`Organizations` section. 
+
+.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
 
 .. _instrument_aws_python_functions:
 

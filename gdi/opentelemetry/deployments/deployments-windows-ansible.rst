@@ -5,7 +5,7 @@ Ansible for Windows
 **********************
 
 .. meta::
-      :description: Describes how to install the Ansible role on Windows.
+      :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Ansible role on Windows.
 
 Before installing the Ansible collection, do the following:
 

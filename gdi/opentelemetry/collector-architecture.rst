@@ -5,7 +5,7 @@ Architecture
 *******************************************************************
 
 .. meta::
-      :description: Describes the architecture of the Splunk Distribution of OpenTelemetry Collector.
+   :description: Describes the architecture of the Splunk Distribution of OpenTelemetry Collector.
 
 The Splunk Distribution of OpenTelemetry Collector can be deployed in the ways described in this document. 
 

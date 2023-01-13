@@ -5,7 +5,7 @@ Configure OpenTelemetry exporters
 ********************************************************************************
 
 .. meta::
-  :description: This page provides a listing of all OpenTelemetry exporters.
+  :description: This page provides a listing of all OpenTelemetry exporters in Splunk Observability Cloud.
 
 .. toctree::
    :maxdepth: 4
