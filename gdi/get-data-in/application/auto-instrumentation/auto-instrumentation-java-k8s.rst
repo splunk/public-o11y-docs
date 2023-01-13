@@ -76,7 +76,7 @@ Enable auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to
             image: my-java-app:latest
     
 
-The Collector operator enables auto instrumentation for any Java applications in the deployment.
+The Collector operator enables automatic instrumentation for any Java applications in the deployment.
 
 To disable automatic instrumentation, remove the annotation or set its value to ``false``.
 
