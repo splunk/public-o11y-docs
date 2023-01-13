@@ -1,78 +1,49 @@
 .. _migrate-signalfx-dotnet-to-dotnet-otel: 
 
-*************************************
-Migrate from the SignalFx Java Agent
-*************************************
+**********************************************
+Migrate from the SignalFx .NET Instrumentation
+**********************************************
 
 .. meta:: 
-   :description: The agent of the Splunk Distribution of OpenTelemetry Java replaces the deprecated SignalFx Java Agent. To migrate to the Splunk Java OTel agent, follow these instructions.
+   :description: The agent of the Splunk Distribution of OpenTelemetry .NET is an alternative to the SignalFx Instrumentation for .NET. To migrate from the SignalFx instrumentation, follow these instructions.
 
-The SignalFx Java Agent is deprecated and will reach End of Support on December 17th, 2022. Replace it with the agent from the Splunk Distribution of OpenTelemetry Java. For more information, see :ref:`smart-agent`.
-
-The agent of the Splunk Distribution of OpenTelemetry Java is based on the OpenTelemetry Instrumentation for Java, an open-source project that uses the OpenTelemetry API and has a smaller memory footprint than the SignalFx Java Agent. 
+The agent of the Splunk Distribution of OpenTelemetry .NET is an alternative to the SignalFx Instrumentation for .NET. To migrate from the SignalFx instrumentation, follow these instructions.
 
 .. _requirements-splunk-dotnet-otel-migration:
 
 Compatibility and requirements
 ==========================================================
 
-The Splunk Distribution of OpenTelemetry Java requires Java runtimes version 8 and higher. See :ref:`java-otel-requirements`.
+For a complete list of requirements, see :ref:`dotnet-otel-requirements`.
 
 .. _migrate-to-splunk-dotnet-otel-agent:
 
-Migrate to the Splunk Distribution of OpenTelemetry Java
+Migrate to the Splunk Distribution of OpenTelemetry .NET
 ========================================================
 
-To migrate from the SignalFx Java Agent to the Splunk Distribution of OpenTelemetry Java, follow these steps:
+To migrate from the SignalFx Instrumentation for .NET to the Splunk Distribution of OpenTelemetry .NET, follow these steps:
 
-#. Install and enable the Java agent. See :ref:`install-enable-jvm-agent`.
-#. Specify the endpoint of the OpenTelemetry Collector you're exporting traces to. See :ref:`trace-exporters-settings-java`.
-#. In your application startup script, replace ``-javaagent:./signalfx-tracing.jar`` with ``-javaagent:/path/to/splunk-otel-javaagent.jar``.
+#. Install and enable the Splunk Distribution of OpenTelemetry .NET. See :ref:`install-dotnet-otel-instrumentation`.
+#. Specify the endpoint of the OpenTelemetry Collector you're exporting traces to. See :ref:`dotnet-otel-exporter-settings`.
+#. Update your settings. See :ref:`changes-functionality-dotnet-otel`.
 
-If you manually instrumented your code with OpenTracing, expose the OpenTelemetry tracer using the OpenTracing Shim. If you use another API for manual instrumentation, ensure it's in your application's ``classpath`` as well.
-
-.. note:: Semantic conventions for span names and attributes change when you migrate. For more information, see :ref:`migrate-sa-to-otel-collector`.
+If you manually instrumented your code with OpenTracing, enable OpenTracing support by setting the ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED`` environment variable to ``true``.
 
 .. _changes-functionality-dotnet-otel:
 
 Changes in functionality
 =======================================================
 
-Each of the following sections describe the main changes in functionality as you migrate from the SignalFx Java Agent to the Splunk Distribution of OpenTelemetry Java.
+Each of the following sections describe the main changes in functionality as you migrate from the SignalFx Instrumentation for .NET to the Splunk Distribution of OpenTelemetry .NET.
 
 Configuration setting changes
 --------------------------------------------------------
 
-The following table shows SignalFx Java Agent system properties and their OpenTelemetry equivalents:
+The following table shows SignalFx Instrumentation for .NET environment variables and their OpenTelemetry equivalents:
 
 .. list-table:: 
    :header-rows: 1
-
-   * - SignalFx system property
-     - OpenTelemetry system property
-   * - ``signalfx.service.name``
-     - ``otel.service.name=<service_name>``
-   * - ``signalfx.env``
-     - ``otel.resource.attributes=deployment.environment=<environment_name>``
-   * - ``signalfx.endpoint.url``
-     - ``otel.exporter.otlp.endpoint`` or ``otel.exporter.jaeger.endpoint``, depending on which trace exporter you're using. OTLP is the default.
-   * - ``signalfx.tracing.enabled``
-     - ``otel.javaagent.enabled``
-   * - ``signalfx.integration.<name>.enabled=false``
-     - ``otel.instrumentation.<id>.enabled=false``. For more information, see :ref:`java-instrumentation-issues`.
-   * - ``signalfx.span.tags``
-     - ``otel.resource.attributes=<comma-separated key=value pairs>``
-   * - ``signalfx.trace.annotated.method.blacklist``
-     - ``otel.trace.annotated.methods.exclude``
-   * - ``signalfx.trace.methods``
-     - ``otel.trace.methods``
-   * - ``signalfx.server.timing.context``
-     - ``splunk.trace-response-header.enabled``
-
-The following table shows SignalFx Java Agent environment variables and their OpenTelemetry equivalents:
-
-.. list-table:: 
-   :header-rows: 1
+   :width: 100%
 
    * - SignalFx environment variable
      - OpenTelemetry environment variable
@@ -80,54 +51,81 @@ The following table shows SignalFx Java Agent environment variables and their Op
      - ``OTEL_SERVICE_NAME=<service_name>``
    * - ``SIGNALFX_ENV``
      - ``OTEL_RESOURCE_ATTRIBUTES=deployment.environment=<environment_name>``
-   * - ``SIGNALFX_ENDPOINT_URL``
-     - ``OTEL_EXPORTER_OTLP_ENDPOINT`` or ``OTEL_EXPORTER_JAEGER_ENDPOINT``, depending on which trace exporter you're using. OTLP is the default one.
-   * - ``SIGNALFX_TRACING_ENABLED``
-     - ``OTEL_JAVAAGENT_ENABLED``
-   * - ``SIGNALFX_INTEGRATION_<name>_ENABLED=false``
-     - ``OTEL_INSTRUMENTATION_<id>_ENABLED=false``. For more information, see :ref:`java-instrumentation-issues`.
-   * - ``SIGNALFX_SPAN_TAGS``
+   * - ``SIGNALFX_VERSION``
+     - ``OTEL_RESOURCE_ATTRIBUTES=version=<version>``
+   * - ``SIGNALFX_GLOBAL_TAGS``
      - ``OTEL_RESOURCE_ATTRIBUTES``
-   * - ``SIGNALFX_TRACE_ANNOTATED_METHOD_BLACKLIST``
-     - ``OTEL_TRACE_ANNOTATED_METHODS_EXCLUDE``
-   * - ``SIGNALFX_TRACE_METHODS``
-     - ``OTEL_TRACE_METHODS``
-   * - ``SIGNALFX_SERVER_TIMING_CONTEXT``
+   * - ``SIGNALFX_TRACE_{<instrumentation>}_ENABLED``
+     - ``OTEL_DOTNET_AUTO_TRACES_DISABLED_INSTRUMENTATIONS``
+   * - ``SIGNALFX_RECORDED_VALUE_MAX_LENGTH``
+     - ``OTEL_SPAN_ATTRIBUTE_VALUE_LENGTH_LIMIT``
+   * - ``SIGNALFX_DISABLED_INTEGRATIONS``
+     - ``OTEL_DOTNET_AUTO_TRACES_DISABLED_INSTRUMENTATIONS``. For a list of supported instrumentations, see :ref:`supported-dotnet-otel-libraries`.
+   * - ``SIGNALFX_AZURE_APP_SERVICES``
+     - Not applicable
+   * - ``SIGNALFX_DOTNET_TRACER_HOME``
+     - ``OTEL_DOTNET_AUTO_HOME``. On Linux, set to ``$HOME/.splunk-otel-dotnet``.
+   * - ``SIGNALFX_PROFILER_EXCLUDE_PROCESSES``
+     - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
+   * - ``SIGNALFX_PROFILER_PROCESSES``
+     - Not applicable
+   * - ``SIGNALFX_TRACE_CONFIG_FILE``
+     - Not applicable
+   * - ``SIGNALFX_TRACE_ENABLED``
+     - Not applicable
+   * - ``SIGNALFX_METRICS_{<metric>}_ENABLED``
+     - ``OTEL_DOTNET_AUTO_METRICS_ENABLED_INSTRUMENTATIONS`` |br| ``OTEL_DOTNET_AUTO_METRICS_DISABLED_INSTRUMENTATIONS``
+   * - ``SIGNALFX_ACCESS_TOKEN``
+     - ``SPLUNK_ACCESS_TOKEN``
+   * - ``SIGNALFX_REALM``
+     - ``SPLUNK_REALM``
+   * - ``SIGNALFX_ENDPOINT_URL``
+     - ``OTEL_EXPORTER_OTLP_ENDPOINT``
+   * - ``SIGNALFX_METRICS_ENDPOINT_URL``
+     - ``OTEL_EXPORTER_OTLP_ENDPOINT``
+   * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_ENABLED``
+     - Not applicable
+   * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``
+     - Not applicable
+   * - ``SIGNALFX_TRACE_BUFFER_SIZE``
+     - ``OTEL_BSP_MAX_QUEUE_SIZE``. The default value is ``2048``.
+   * - ``SIGNALFX_PROPAGATORS``
+     - ``OTEL_PROPAGATORS``. The default values are ``tracecontext, baggage``. Also available: ``b3multi, b3``.
+
+For more information about Splunk Java OTel settings, see :ref:`advanced-dotnet-otel-configuration`. 
+
+Library-specific instrumentation settings
+--------------------------------------------------------
+
+The following table shows library-specific environment variables for the SignalFx Instrumentation for .NET and their OpenTelemetry equivalents:
+
+.. list-table:: 
+   :header-rows: 1
+   :width: 100%
+
+   * - SignalFx environment variable
+     - OpenTelemetry environment variable
+   * - ``SIGNALFX_HTTP_CLIENT_ERROR_STATUSES``
+     - Not applicable
+   * - ``SIGNALFX_HTTP_SERVER_ERROR_STATUSES``
+     - Not applicable
+   * - ``SIGNALFX_INSTRUMENTATION_ELASTICSEARCH_TAG_QUERIES``
+     - Not applicable
+   * - ``SIGNALFX_INSTRUMENTATION_MONGODB_TAG_COMMANDS``
+     - Not configurable using environment variable
+   * - ``SIGNALFX_INSTRUMENTATION_REDIS_TAG_COMMANDS``
+     - Not configurable using environment variable.
+  * - ``SIGNALFX_LOGS_INJECTION``
+     - Logs are correlated if the ``Microsoft.Extensions.Logging`` is used.
+   * - ``SIGNALFX_TRACE_DELAY_WCF_INSTRUMENTATION_ENABLED``
+     - Not applicable
+   * - ``SIGNALFX_TRACE_HEADER_TAGS``
+     - Not applicable
+   * - ``SIGNALFX_TRACE_HTTP_CLIENT_EXCLUDED_URL_SUBSTRINGS``
+     - Not configurable using environment variable.
+   * - ``SIGNALFX_TRACE_KAFKA_CREATE_CONSUMER_SCOPE_ENABLED``
+     - Not applicable
+  * - ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED``
      - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-
-The following SignalFx Java Agent system properties and environment variables don't have a corresponding setting in the Splunk Distribution for OpenTelemetry Java:
-
-Deprecated system properties
-------------------------------
-
-- ``signalfx.agent.host``
-- ``signalfx.db.statement.max.length``
-- ``signalfx.recorded.value.max.length``
-- ``signalfx.max.spans.per.trace``
-- ``signalfx.max.continuation.depth``
-
-Deprecated environment variables
----------------------------------
-
-- ``SIGNALFX_AGENT_HOST``
-- ``SIGNALFX_DB_STATEMENT_MAX_LENGTH``
-- ``SIGNALFX_RECORDED_VALUE_MAX_LENGTH``
-- ``SIGNALFX_MAX_SPANS_PER_TRACE``
-- ``SIGNALFX_MAX_SPANS_PER_TRACE``
-
-For more information about Splunk Java OTel settings, see :ref:`advanced-java-otel-configuration`. 
-
-Log injection changes
-=============================================================
-
-For a list of compatible logging frameworks for injecting trace data in logs, see :ref:`correlate-traces-with-logs-java`.
-
-Trace annotation changes
-=============================================================
-
-The ``@Trace`` annotation that the SignalFx Java Agent uses is compatible with the Splunk Distribution of OpenTelemetry Java. If you're using the ``@Trace`` annotation for custom instrumentation, you don't have to make any changes.
-
-If you want to configure new custom instrumentation and don't want to use the OpenTelemetry ``getTracer`` and API directly, use the OpenTelemetry ``@WithSpan`` annotation instead of the ``@Trace`` annotation. For more information, see
-Configure a WithSpan annotation in the OpenTelemetry documentation.
-
-.. note:: The ``@TraceSetting`` annotation to allow an exception isn't supported.
+   * - ``SIGNALFX_TRACE_ROUTE_TEMPLATE_RESOURCE_NAMES_ENABLED	``
+     - Not applicable. The default behavior is equivalent to setting to previous setting to ``true``.

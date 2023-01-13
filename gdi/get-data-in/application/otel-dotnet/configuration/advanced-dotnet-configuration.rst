@@ -1,20 +1,20 @@
 .. _advanced-dotnet-otel-configuration:
 
 ********************************************************************
-Configure the SignalFx Instrumentation for .NET
+Configure the Splunk Distribution of OpenTelementry .NET
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the SignalFx Instrumentation for .NET to suit your instrumentation needs, such as correlating traces with logs and enabling custom sampling.
+   :description: Configure the Splunk Distribution of OpenTelementry .NET to suit your instrumentation needs, such as correlating traces with logs and enabling custom sampling.
 
-You can configure the SignalFx Instrumentation for .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
+You can configure the Splunk Distribution of OpenTelementry .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
 
 .. _configuration-methods-dotnet-otel:
 
 Configuration methods
 ===========================================================
 
-You can change the settings of the SignalFx Instrumentation for .NET in the following ways:
+You can change the settings of the Splunk Distribution of OpenTelementry .NET in the following ways:
 
 #. Set environment variables. On Windows, set them in the process scope unless you want to enable autoinstrumentation globally for all .NET applications.
 
@@ -277,7 +277,7 @@ The default regular expression for query obfuscation is the following:
 Diagnostic logging settings
 ================================================
 
-The following settings control the internal logging of the SignalFx Instrumentation for .NET:
+The following settings control the internal logging of the Splunk Distribution of OpenTelementry .NET:
 
 .. list-table:: 
    :header-rows: 1
@@ -310,7 +310,7 @@ The following settings control the internal logging of the SignalFx Instrumentat
 Changing the default service name
 =============================================
 
-By default, the SignalFx Instrumentation for .NET retrieves the service name by trying the following steps until it succeeds:
+By default, the Splunk Distribution of OpenTelementry .NET retrieves the service name by trying the following steps until it succeeds:
 
 #. For the SignalFx .NET Tracing Azure Site Extension, the default service name is the site name as defined by the ``WEBSITE_SITE_NAME`` environment variable.
 

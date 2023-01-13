@@ -15,23 +15,22 @@ Instrument .NET applications for Splunk Observability Cloud
    Configure the .NET instrumentation <configuration/advanced-dotnet-configuration>
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
-  Migrate from SignalFx Instrumentation for .NET <troubleshooting/migrate-signalfx-dotnet-to-dotnet-otel>   
+   Migrate from SignalFx Instrumentation for .NET <troubleshooting/migrate-signalfx-dotnet-to-dotnet-otel>   
 
-The SignalFx Instrumentation for .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry data to Splunk Observability Cloud.
+The Splunk Distribution of OpenTelementry .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry data to Splunk Observability Cloud.
 
 .. raw:: html
 
   <embed>
-    <h2>Features of the SignalFx Instrumentation for .NET<a name="features" class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+    <h2>Features of the Splunk Distribution of OpenTelementry .NET<a name="features" class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The SignalFx Instrumentation for .NET provides the following features:
+The Splunk Distribution of OpenTelementry .NET provides the following features:
 
-- Collection and reporting of all spans
+- Collection and reporting of all spans and traces
 - B3 and W3C headers for context propagation
-- Zipkin trace exporter to send spans as JSON
-- Support for existing custom instrumentation through OpenTracing
-- Semantic conventions inspired by the OpenTelemetry standards
+- OTLP over HTTP exporter to send spans to the Splunk OTel Collector
+- OpenTelemetry semantic conventions
 
 .. raw:: html
 

@@ -7,7 +7,17 @@ Troubleshoot .NET instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented .NET application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a .NET application using the SignalFx Instrumentation for .NET and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a .NET application using the Splunk Distribution of OpenTelementry .NET and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+
+
+# Get current installation location
+Get-OpenTelemetryInstallDirectory
+
+# List all available commands
+Get-Command -Module OpenTelemetry.DotNet.Auto
+
+# Get command's usage information
+Get-Help Install-OpenTelemetryCore -Detailed
 
 .. _enable-dotnet-otel-debug-logging:
 
@@ -23,7 +33,7 @@ Follow these steps to troubleshoot general instrumentation issues:
 Enable debug logging
 ----------------------------------------------------
 
-The SignalFx Instrumentation for .NET logs its configuration using ``INF`` log messages at startup.
+The Splunk Distribution of OpenTelementry .NET logs its configuration using ``INF`` log messages at startup.
 
 You can enable debug logging to obtain more information about the issue:
 
@@ -81,7 +91,7 @@ Make sure that you're using an installation package that is compatible with your
 High CPU usage
 ====================================================
 
-By default, the SignalFx Instrumentation for .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've enabled the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
+By default, the Splunk Distribution of OpenTelementry .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've enabled the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
 
 To restrict global instrumentation to a set of processes, use the ``SIGNALFX_PROFILER_PROCESSES`` and ``SIGNALFX_PROFILER_EXCLUDE_PROCESSES`` environment variables, which include and exclude processes for instrumentation. See :ref:`advanced-dotnet-configuration` for more information.
 
@@ -120,7 +130,7 @@ Collector configuration issues might prevent AlwaysOn Profiling data and logs fr
 
 To solve this issue, do the following:
 
-#. Check the configuration of the SignalFx Instrumentation for .NET, especially ``SIGNALFX_PROFILER_LOGS_ENDPOINT``.
+#. Check the configuration of the Splunk Distribution of OpenTelementry .NET, especially ``SIGNALFX_PROFILER_LOGS_ENDPOINT``.
 #. Verify that the Splunk Distribution of OpenTelemetry Collector is running at the expected endpoint and that the application host or container can resolve the host name and connect to the OTLP port.
 #. Make sure that you're running the Splunk Distribution of OpenTelemetry Collector and that the version is 0.34 or higher. Other collector distributions might not be able to route the log data that contains profiling data.
 #. A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured.

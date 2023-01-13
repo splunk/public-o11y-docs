@@ -1,8 +1,8 @@
 .. _dotnet-otel-requirements:
 
-*************************************************************
-.NET instrumentation compatibility and requirements
-*************************************************************
+******************************************************************
+OpenTelemetry .NET instrumentation compatibility and requirements
+******************************************************************
 
 .. meta::
     :description: This is what you need to instrument .NET applications for Splunk Observability Cloud.
@@ -14,17 +14,19 @@ Meet the following requirements to instrument .NET applications for Splunk Obser
 Ensure you are using supported .NET versions
 ==============================================================
 
-The SignalFx Instrumentation for .NET supports the following .NET versions:
+The Splunk Distribution of OpenTelementry .NET supports the following .NET versions:
 
-- .NET Core 3.1, .NET 5.0 and higher on Windows and Linux
-- .NET Framework 4.6.1 and higher on Windows
+- .NET 5.0 and higher on Windows and Linux
+- .NET Framework 4.7 and higher on Windows
+
+.NET Core 3.1 is not supported.
 
 .. _supported-dotnet-otel-libraries:
 
 Supported libraries
 =================================================
 
-The SignalFx Instrumentation for .NET instruments the following libraries:
+The Splunk Distribution of OpenTelementry .NET instruments the following libraries:
 
 .. list-table:: 
    :widths: 60 40
@@ -116,7 +118,7 @@ To instrument the ``System.Net.Http.HttpClient`` library, you must instrument th
 Install and configure the Splunk Distribution of OpenTelemetry Collector
 ======================================================================================================
 
-The SignalFx Instrumentation for .NET exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs, including profiling data.
+The Splunk Distribution of OpenTelementry .NET exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs, including profiling data.
 
 To send application traces and spans to Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
 
