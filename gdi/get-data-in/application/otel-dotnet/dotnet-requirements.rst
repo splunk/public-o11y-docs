@@ -28,6 +28,9 @@ Supported libraries
 
 The Splunk Distribution of OpenTelementry .NET instruments the following libraries:
 
+Traces instrumentations
+---------------------------------
+
 .. list-table:: 
    :widths: 60 40
    :width: 100%
@@ -35,83 +38,64 @@ The Splunk Distribution of OpenTelementry .NET instruments the following librari
 
    * - Library
      - Instrumentation ID
-   * - ``Aerospike.Client``
-     - ``Aerospike``
-   * - ASP.NET 4.x
+   * - ASP.NET Framework
      - ``AspNet``
    * - ASP.NET Core
-     - ``AspNetCore``
-   * - ASP.NET MVC
-     - ``AspNetMvc``
-   * - ASP.NET Web API 2
-     - ``AspNetWebApi2v``
-   * - ``AWSSDK.Core`` (Experimental)
-     - ``AwsSdk``
-   * - ``AWSSDK.SQS`` (Experimental)
-     - ``AwsSqs``
-   * - ``Confluent.Kafka``
-     - ``Kafka``
-   * - ``CouchbaseNetClient`` (Experimental)
-     - ``Couchbase``
-   * - ``Elasticsearch.Net``
-     - ``ElasticsearchNetv``
+     - ``AspNet``
    * - GraphQL
      - ``GraphQL``
-   * - gRPC
-     - ``Grpc``
-   * - ``Microsoft.Data.SqlClient`` and ``System.Data.SqlClient``
-     - ``SqlClient``
-   * - ``Microsoft.Extensions.Logging.Abstractions``
-     - ``ILOgger``
-   * - ``Microsoft.Azure.Cosmos`` (Experimental)
-     - ``CosmosDb``
-   * - ``Microsoft.Azure.WebJobs`` (Experimental)
-     - ``AzureFunctions``
-   * - ``Microsoft.ServiceFabric.Services.Remoting`` (Experimental)
-     - ``ServiceRemoting``
-   * - ``Microsoft.VisualStudio.TestPlatform`` (Experimental)
-     - ``MsTestV2``
-   * - ``MongoDB.Driver.Core``
-     - ``MongoDb``
-   * - ``MySql.Data``
-     - ``MySql``
+   * - Grpc.Net.Client
+     - ``GrpcNetClient``
+   * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
+     - ``HttpClient``
+   * - MassTransit |br| (Not supported on .NET Framework)
+     - ``MassTransit``
+   * - MongoDB.Driver.Core |br| (Not supported on .NET Framework)
+     - ``MongoDB``
+   * - MySql.Data |br| (Not supported on .NET Framework)
+     - ``MySqlData``
    * - Npgsql
      - ``Npgsql``
-   * - ``NUnit`` (Experimental)
-     - ``NUnit``
-   * - ``Oracle.ManagedDataAccess``
-     - ``Oracle``
-   * - ``RabbitMQ.Client``
-     - RabbitMQ
-   * - ``ServiceStack.Redis``
-     - ``ServiceStacksRedis``
-   * - SQLite
-     - ``Sqlite``
-   * - ``StackExchange.Redis``
+   * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
+     - ``SqlClient``
+   * - StackExchange.Redis |br| (Not supported on .NET Framework)
      - ``StackExchangeRedis``
-   * - ``System.Net.Http.CurlHandler``
-     - ``CurlHandler``
-   * - ``System.Net.Http.MessageHandler``
-     - ``HttpMessageHandler``
-   * - ``System.Net.Http.SocketsHandler``
-     - ``HttpSocketsHandler``
-   * - ``System.Net.Http.WinHttpHandler``
-     - ``WinHttpHandler``
-   * - ``System.Net.WebRequest``
-     - ``WebRequest``
-   * - ``System.Messaging`` (Experimental)
-     - ``Msmq``
-   * - Windows Communication Foundation (WCF)
+   * - System.ServiceModel |br| (No support for server side on .NET Core)
      - ``Wcf``
-   * - ``xunit`` (Experimental)
-     - ``XUnit``
 
-To instrument the ``System.Net.Http.HttpClient`` library, you must instrument the following group of libraries:
+Metrics instrumentations
+---------------------------------
 
-- ``System.Net.Http.CurlHandler``
-- ``System.Net.Http.MessageHandler``
-- ``System.Net.Http.SocketsHandler``
-- ``System.Net.Http.WinHttpHandler``
+.. list-table:: 
+   :widths: 60 40
+   :width: 100%
+   :header-rows: 1
+
+   * - Library
+     - Instrumentation ID
+   * - ASP.NET Framework
+     - ``AspNet`` |br| (Requires the trace instrumentation)
+   * - ASP.NET Core
+     - ``AspNet`` |br| (Automatically enables ``Microsoft.AspNetCore.Hosting.HttpRequestIn`` spans.)
+   * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
+     - ``HttpClient``
+   * - OpenTelemetry.Instrumentation.Runtime
+     - ``NetRuntime``
+   * - OpenTelemetry.Instrumesntation.Process
+     - ``Process``
+
+Logs instrumentations
+---------------------------------
+
+.. list-table:: 
+   :widths: 60 40
+   :width: 100%
+   :header-rows: 1
+
+   * - Library
+     - Instrumentation ID
+   * - Microsoft.Extensions.Logging 6.0.0 and higher |br| (Not supported on .NET Framework)
+     - ``ILogger`` |br| (Requires the trace instrumentation)
 
 .. _dotnet-otel-collector-requirement:
 
