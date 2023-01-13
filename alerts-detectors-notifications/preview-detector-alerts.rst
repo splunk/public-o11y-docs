@@ -7,7 +7,7 @@ Preview detector alerts
 .. meta::
   :description: How to preview alerts that your detectors are set up to generate.
 
-Setting up the right alerts is usually a process of trial and error. You set up an alert, get notified when it is triggered (or worse, don't get notified when it should have triggered), adjust the trigger condition if necessary, and wait for the next alert. Splunk Infrastructure Monitoring provides an alert preview functionality that accelerates this trial and error process. (If you are using the SignalFx API to manage detectors, this feature corresponds to the :new-page:`preflight <https://dev.splunk.com/observability/reference/api/signalflow/latest>` call in the API.)
+Setting up the right alerts is usually a process of trial and error. You set up an alert, get notified when it is triggered (or worse, don't get notified when it should have triggered), adjust the trigger condition if necessary, and wait for the next alert. Splunk Infrastructure Monitoring provides an alert preview functionality that accelerates this trial and error process. (If you are using the Splunk Observability Cloud API to manage detectors, this feature corresponds to the :new-page:`POST /v2/signalflow/preflight <https://dev.splunk.com/observability/reference/api/signalflow/latest#endpoint-preview-detector-alert-count>` API endpoint.)
 
 
 How alert preview works
