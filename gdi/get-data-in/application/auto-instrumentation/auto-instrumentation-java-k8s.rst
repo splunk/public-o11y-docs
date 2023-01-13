@@ -9,7 +9,7 @@
 Zero Configuration Auto Instrumentation for Java Applications on Kubernetes
 ==================================================================================================================
 
-Zero Configuration Auto Instrumentation for Java enables automatic instrumentation for Kubernetes Java applications. When you enable automatic instrumentation, you do not have to recompile your applications, but you have to restart any applications that are already running. 
+Zero Configuration Auto Instrumentation for Java enables automatic instrumentation for Kubernetes Java applications. When you enable automatic instrumentation, you do not have to recompile your applications, but you do have to restart any applications that are already running. 
 
 .. _zero-config-k8s-prereqs:
 
