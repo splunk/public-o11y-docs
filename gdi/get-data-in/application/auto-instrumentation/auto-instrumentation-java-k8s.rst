@@ -41,7 +41,7 @@ Enable/disable automatic instrumentation before runtime
 
 If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file.
 
-For example, given the following depoyment YAML:
+For example, given the following deployment YAML:
 
 .. code-block:: yaml
 
