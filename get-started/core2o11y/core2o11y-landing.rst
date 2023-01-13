@@ -37,7 +37,7 @@ Select each of the following categories to learn how you can maintain reliabilit
 
 * :ref:`Respond to incidents <practice-reliability-incident-response>`
 
-* :ref:`Scale your system's reliability by collaborating within and across teams <practice-reliability-collaboration>`
+* :ref:`Collaborate on observability within and across teams <practice-reliability-collaboration>`
 
 
 Then see :ref:`setup-o11y-setup-o11y` to get started.

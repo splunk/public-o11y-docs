@@ -8,7 +8,7 @@ Collaborate on observability within and across teams
    :description: This page provides an overview of how Observability Cloud helps team members collaborate with each other and other teams by sharing dashboards, queries, business workflows, and through alerting.
 
 
-Site Reliability Engineers (SREs), developers, operations, and other teams can efficiently collaborate in Splunk Observability Cloud by sharing dashboards, queries, and detectors, which you can configure to send notifications to the appropriate teams or users. By using Observability Cloud's tools for collaborating, your teams can exponentially expand their reach and scale the reliability of your systems quickly.
+You can scale your system's observability through collaboration. Site Reliability Engineers (SREs), developers, operations, and other teams can efficiently collaborate in Splunk Observability Cloud by sharing dashboards, queries, and detectors, which you can configure to send notifications to the appropriate teams or users. By using Observability Cloud's tools for collaborating, your teams can exponentially expand their reach and scale the reliability of your systems quickly.
 
 Observability Cloud dashboards
 ===================================================================================
