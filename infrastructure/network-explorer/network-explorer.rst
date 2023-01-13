@@ -16,7 +16,7 @@ Network Explorer in Splunk Infrastructure Monitoring
     network-explorer-troubleshoot
 
 
-Use the following links to navigate the documentation set for the preview of Network Explorer in Splunk Infrastructure Monitoring: 
+Use the following links to navigate the documentation set for Network Explorer in Splunk Infrastructure Monitoring: 
 
     * :ref:`network-explorer-intro`
     * :ref:`network-explorer-setup`
