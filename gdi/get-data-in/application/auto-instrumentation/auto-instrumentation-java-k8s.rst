@@ -89,7 +89,7 @@ If the application is already running, patch the deployment using ``kubectl patc
 
 .. caution:: 
 
-    Patching a pod or deployment restarts the pods.
+    Patching a deployment restarts the pods in the deployment.
 
 
 Use the following snippet as an example. Replace ``<my-deployment>`` with your deployment's name.
@@ -152,13 +152,13 @@ See :ref:`advanced-java-otel-configuration` for the full list of supported envir
 Troubleshooting
 =======================
 
-If you enable auto instrumentation and you see an error message or you do not see any data in Observabiity Cloud APM, try the following steps:
+If you enable auto instrumentation and you do not see any telemetry data in Observability Cloud APM, try the following steps:
 
 - Check the Collector operator logs. Look for the pods in the ``splunk-otel-operator-system`` namespace, and then examine their logs:
 
 .. code-block:: bash
 
-   $ kubectl get pods  --namespace=splunk-otel-operator-system
+   kubectl get pods  --namespace=splunk-otel-operator-system
 
    NAME                                                      READY   STATUS    RESTARTS   AGE
    splunk-otel-agent-7cspj                                   1/1     Running   0          31h
@@ -173,7 +173,7 @@ Run this command to see the logs for one of the pods:
 
 .. code-block:: bash
 
-   $ kubectl logs  --namespace=splunk-otel-operator-system  <pod-name>
+   kubectl logs  --namespace=splunk-otel-operator-system  <pod-name>
 
 - You can also follow the :ref:`steps to troubleshoot the Java agent<basic-java-troubleshooting>`.
 
