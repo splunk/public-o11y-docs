@@ -82,7 +82,7 @@ To disable automatic instrumentation, remove the annotation or set its value to 
 
 .. _enable-zero-conf-java-patch:
 
-Enable/disable automatic instrumentation on a running workload
+Enable or disable automatic instrumentation on a running workload
 -----------------------------------------------------------------
 
 If the application is already running, patch the deployment using ``kubectl patch`` to enable instrumentation. 
