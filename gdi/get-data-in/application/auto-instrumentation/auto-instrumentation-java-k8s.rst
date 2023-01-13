@@ -39,7 +39,7 @@ You can also enable automatic instrumentation on a running workload.
 Enable/disable automatic instrumentation before runtime
 -------------------------------------------------------------
 
-If the pod or deployment is not already running, add the ``otel.splunk.com/inject-java`` annotation to the YAML file.
+If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file.
 
 For example, given the following depoyment YAML:
 
