@@ -1,4 +1,4 @@
 Next steps
 ==============
 
-After enabling auto instrumentation, :ref:`verify-apm-data`.
+After enabling automatic instrumentation, :ref:`verify-apm-data`.
