@@ -66,7 +66,7 @@ The waterfall chart provides a visualization of the latency of all of the spans 
 
 Under the Span Performance tab, you can view a summary of span duration from each operation within each service involved in the trace and the percentage of overall trace workload that they represent.
 
-Full-fidelity tracing, in which APM receives all traces from each of your services rather than sampling them, helps you find and solve specific problems problems arising in individual traces. With full-fidelity tracing, you never need to wonder whether a trace representative of a particular issue was captured by a sample. 
+Full-fidelity tracing, in which APM receives all traces from each of your services rather than sampling them, helps you find and solve specific problems arising in individual traces. With full-fidelity tracing, you never need to wonder whether a trace representative of a particular issue was captured by a sample. 
 
 In addition to searching individual traces, you can get an aggregate view of your traces to see where problems are occuring across your systems using tools such as Tag Spotlight. 
 
@@ -74,6 +74,7 @@ In addition to searching individual traces, you can get an aggregate view of you
 
 Get a top-down view of your services in Tag Spotlight
 =================================================================
+
 Return to the service map and click :guilabel:`Tag Spotlight`. Using Tag Spotlight, you can view the request and error rate or latency by span tag for an individual service or business workflow. This helps you identify which particular attributes of your system might be causing reliability or performance issues. 
 
 Rather than looking for similarities across multiple traces, you can use Tag Spotlight to gain a top-down view of your services. This lets you identify the system-wide source of issues and then drill down to find an individual trace that is representative of a wider issue. 
@@ -82,7 +83,7 @@ Rather than looking for similarities across multiple traces, you can use Tag Spo
     :width: 95%
     :alt: This screenshot shows an example of Splunk APM Tag Spotlight view
 
-Splunk APM indexes a set of span tags by default, which are shown as boxes in Tag Spotlight. See :ref:`apm-default-span-tags` for the list of these default tags. By indexing additional span tags, you can have other tags show up in their own boxes on this page. To learn how to index additional span tags, see :ref:`apm-index-span-tags`.
+Splunk APM indexes a set of span tags by default, which are shown as boxes in Tag Spotlight. See :ref:`apm-default-span-tags` for the list of these default tags. By indexing additional span tags, you can have other tags appear in their own boxes on this page. To learn how to index additional span tags, see :ref:`apm-index-span-tags`.
 
 When you navigate to Tag Spotlight from the service map and have a specific service selected, all of the information in trace view and Tag Spotlight preserves the context of that particular service. 
 
@@ -90,4 +91,5 @@ To learn more about Tag Spotlight, see :ref:`apm-tag-spotlight`.
 
 Next step
 ===========
-Now that you’ve explored what you can do with Splunk APM, start tailoring Splunk APM to fit your business needs. See :ref:`customize-apm` to learn more. 
+
+Now that you've explored what you can do with Splunk APM, start tailoring Splunk APM to fit your business needs. See :ref:`customize-apm` to learn more. 
