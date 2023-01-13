@@ -36,7 +36,7 @@ You can also enable automatic instrumentation on a running workload.
 
 .. _enable-zero-conf-java-yaml:
 
-Enable/disable automatic instrumentation before runtime
+Enable or disable automatic instrumentation before runtime
 -------------------------------------------------------------
 
 If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file.
