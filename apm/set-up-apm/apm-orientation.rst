@@ -19,11 +19,11 @@ Prerequisite
 =============
 Before you begin to explore APM, make sure you are sending traces to APM from your services. See :ref:`apm-gdi` to learn more. 
 
-
 .. _apm-landing-page:
 
 Assess the health of your applications with the APM landing page
 =================================================================
+
 When you log into Splunk Observability Cloud and select :strong:`Navigation menu > APM`, you arrive on the APM landing page. You can use this dashboard of consolidated and unsampled span metrics to get a real-time snapshot of your services and :ref:`Business Workflows<apm-workflows>` at a glance. 
 
 ..  image:: /_images/apm/set-up-apm/set-up-apm-01.png
@@ -32,11 +32,11 @@ When you log into Splunk Observability Cloud and select :strong:`Navigation menu
 
 Use the alerts and top charts on this page as a guide to what needs your attention first.
 
-
 .. _apm-explore-view: 
 
 View dependencies among your applications in the Explore view
 =================================================================
+
 From the landing page, click on a service in a chart legend or a row in the Services table to navigate to the Explore view. This view includes the service map, which presents the dependencies and connections among your instrumented and inferred services in APM. This map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. 
 
 You can use these visual cues to understand dependencies, performance bottlenecks, and error propagation. 
@@ -53,9 +53,10 @@ To learn more about the service map, see :ref:`apm-service-map`.
 
 .. _apm-trace-view: 
 
-Examine the latency of a particular trace in Trace View
+Examine the latency of a specific trace in Trace Analyzer
 =================================================================
-Click :strong:`Traces` to navigate to Trace View, where you can see a list of traces from the services you’ve instrumented in Splunk APM. From the list of traces, you can click on a specific trace, search by trace ID or use advanced trace search to view the waterfall chart for a particular trace.
+
+Select :strong:`Traces` to navigate to Trace Analyzer, where you can see a list of traces from the services you've instrumented in Splunk APM. From the list of traces, you can select a specific trace, search by trace ID or use advanced trace search to view the waterfall chart for a particular trace.
 
 ..  image:: /_images/apm/set-up-apm/set-up-apm-03.png
     :width: 95%
