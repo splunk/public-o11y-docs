@@ -191,7 +191,7 @@ For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
 Examine error logs for meaningful messages and patterns
 ===============================================================
 
-Now in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
+Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
 
 1. Kai sees some error logs, so they select one to see more details in a structured view. As Kai looks at the log details, they see this error message: "Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)".
 
