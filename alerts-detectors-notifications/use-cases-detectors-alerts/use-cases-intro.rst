@@ -1,7 +1,7 @@
 .. _use-cases-alerts-detectors:
 
 ********************************************************
-Alerts and detectors use case library
+Use case: Alerts and detectors use case library
 ********************************************************
 
 .. meta::
@@ -14,6 +14,8 @@ Alerts and detectors use case library
     monitor-autodetect
     find-detectors
     troubleshoot-noisy-detectors
+    delay-detectors
+    max-delay-detectors
 
 Buttercup Games, a fictitious game company, recently began using their own network of server machines to host games for customers. Buttercup Games utilizes Splunk alerts and detectors to monitor host machine performance and to detect machine problems.
 
@@ -23,4 +25,6 @@ In the following use cases, you learn how Kai, a site reliability engineer, uses
 - :ref:`monitor-autodetect`
 - :ref:`find-detectors`
 - :ref:`troubleshoot-noisy-detectors`
+- :ref:`min-delay-detectors-use-case`
+- :ref:`max-delay-detectors-use-case`
 

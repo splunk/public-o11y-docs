@@ -1,7 +1,7 @@
 .. _monitor-autodetect:
 
 ***************************************************
-Monitor system limits with AutoDetect 
+Use case: Monitor system limits with AutoDetect 
 ***************************************************
 
 .. meta::

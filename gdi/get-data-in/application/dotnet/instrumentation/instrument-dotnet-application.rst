@@ -112,7 +112,7 @@ Follow these steps to automatically instrument your application:
 
          cat /proc/<pid>/environ # where <pid> is the process ID
 
-#. (Optional) To enable automatic metric collection, see :ref:`dotnet-metric-settings`.
+#. (Optional) To enable automatic metric collection, see :ref:`enable_automatic_metric_collection_dotnet`.
 
 #. Run your application.
 
@@ -125,9 +125,26 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. caution:: CPU profiling for .NET is an experimental feature subject to future changes. See :ref:`profiling-intro`.
+.. caution:: Memory profiling for .NET is an experimental feature subject to future changes. See :ref:`profiling-intro`.
 
 To enable AlwaysOn Profiling, set the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``.
+
+To enable memory profiling, set the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-dotnet`.
+
+.. _enable_automatic_metric_collection_dotnet:
+
+Enable metrics collection
+--------------------------------------
+
+To enable automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLED`` environment variable to true.
+
+To enable runtime metrics, set the ``SIGNALFX_RUNTIME_METRICS_ENABLED`` environment variable to true.
+
+See :ref:`dotnet-metrics-attributes` for more information about the metrics collected by the instrumentation. For more metric settings, see :ref:`dotnet-metric-settings`. 
+
+.. note:: Runtime metrics are always collected if AlwaysOn Profiling is enabled.
 
 .. _instrument-windows-service:
 
@@ -347,4 +364,7 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 
 The realm name appears in the :guilabel:`Organizations` section.
 
-.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
+.. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
+

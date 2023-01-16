@@ -1,7 +1,7 @@
 .. _troubleshoot-noisy-detectors:
 
 ************************************************************
-Fix a detector that misfires alerts
+Use case: Fix a detector that misfires alerts
 ************************************************************
 
 .. meta::

@@ -1,7 +1,7 @@
 .. _monitor-server-latency:
 
 *******************************************************
-Create a detector to monitor server latency 
+Use case: Create a detector to monitor server latency 
 *******************************************************
 
 .. meta::

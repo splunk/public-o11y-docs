@@ -8,7 +8,7 @@ Add responders and assign roles
 .. meta::
    :description: Steps to add responders and assign roles within an incident in Incident Intelligence in Splunk Observability Cloud.
 
-If your services have an incident workflow, responders are automatically added to incidents. To add or remove incident responders, follow these steps:
+If your incident policies have an incident workflow, responders are automatically added to incidents. To add or remove incident responders, follow these steps:
 
 #. In Incident Intelligence, go to the :guilabel:`Incidents` tab. 
 #. Select the incident from the incident list.
