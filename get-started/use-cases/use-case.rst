@@ -265,4 +265,4 @@ Learn more
 
 * For details about creating metrics from logs and displaying them in a chart, see :ref:`logs-metricization`.
 
-* For details about creating detectors to issue alerts based on charts or metrics, see :ref:`create-detectors`..
+* For details about creating detectors to issue alerts based on charts or metrics, see :ref:`create-detectors`.
