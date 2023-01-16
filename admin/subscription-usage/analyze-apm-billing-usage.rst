@@ -15,7 +15,6 @@ You can also use the Subscription Usage page to get detailed reports for each us
 
 To view your organization's APM subscription usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
 
-
 How APM calculates usage
 ========================
 
@@ -35,7 +34,7 @@ Metrics for TAPM subscription plans
 The following metrics power the charts in your APM Subscription Usage page with a TAPM subscription plan:
 
 .. list-table::
-   :header-rows: 1
+   :header-rows: 1 
    :widths: 25, 25, 50
 
    * - :strong:`Metric`
@@ -84,6 +83,8 @@ The following metrics power the charts in your APM Subscription Usage page with 
    * - ``sf.org.apm.numTroubleshootingMetricSets``
      - Troubleshooting MetricSets
      - The cardinality of Troubleshooting MetricSets for each 1-minute window.
+
+.. note:: See :ref:`host-diagnostics-report-apm` for more information on how to measure subscription usage by host.
 
 How APM calculates usage 
 ==========================
