@@ -103,17 +103,17 @@ Investigate the root cause of a business workflow error
 
 #. In Splunk RUM, Kai selects the :strong:`frontend:/cart/checkout` business workflow link to display its service map in Splunk Application Performance Monitoring (APM). A business workflow is a group of logically related traces, such as a group of traces that reflect an end-to-end transaction in your system.
 
-The service map shows Kai the dependency interactions among  the full set of services backing the :strong:`/cart/checkout` action that they're troubleshooting, including the propagation of errors from one service to another.
+    The service map shows Kai the dependency interactions among  the full set of services backing the :strong:`/cart/checkout` action that they're troubleshooting, including the propagation of errors from one service to another.
 
 .. image:: /_images/get-started/service-map.png
   :width: 100%
   :alt: This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors.
 
-  In particular, Kai sees that the :strong:`paymentservice` is having issues. Splunk APM has identified the issues as root cause errors, meaning that the :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow.
+    In particular, Kai sees that the :strong:`paymentservice` is having issues. Splunk APM has identified the issues as root cause errors, meaning that the :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow.
 
 1. Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces Related Content tiles that provide access to relevant data in other areas of the application.
 
-  For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`.
+    For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`.
 
 .. image:: /_images/get-started/related-content.png
   :width: 100%
@@ -144,7 +144,7 @@ Check on infrastructure health
   :width: 80%
   :alt: This screenshot shows a Kubernetes pod menu in Splunk Infrastructure Monitoring displaying details about the pod, including its name and status.
 
-Kai sees that the pod looks stable with no errors or events.
+  Kai sees that the pod looks stable with no errors or events.
 
 .. image:: /_images/get-started/k8s-pod-detail.png
   :width: 100%
@@ -165,13 +165,13 @@ Look for patterns in application errors
 
 1. In Splunk APM, Kai selects :strong:`Tag Spotlight`` to look for correlations in tag values for the errors they're seeing.
 
-  For example, when Kai looks at the :strong:`tenant.level` module, they see that errors are occurring for all levels, so the root cause is likely not tenant-specific.
+    For example, when Kai looks at the :strong:`tenant.level` module, they see that errors are occurring for all levels, so the root cause is likely not tenant-specific.
 
 .. image:: /_images/get-started/tenant-level.png
   :width: 60%
   :alt: This screenshot shows the tenant.level module in Splunk APM displaying errors evenly spread across gold, silver, and bronze tenant levels.
 
-  However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the earlier :strong:`v350.9` version.
+    However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the earlier :strong:`v350.9` version.
 
 .. image:: /_images/get-started/version.png
   :width: 60%
@@ -199,15 +199,15 @@ Now in Splunk Log Observer, Kai's view is automatically narrowed to display log 
   :width: 100%
   :alt: This screenshot shows the details of an error log in Splunk Log Observer, including the error severity and an error message.
 
-  As Kai looks at the log details, they see this error message: "Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)".
+    As Kai looks at the log details, they see this error message: "Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)".
 
 1. In the error message, Kai sees what they think is a clear indication of the error. The API token starts with "test". It seems that a team pushed v350.10 live with a test token that doesn't work in production.
 
-  Just to double-check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
+    Just to double-check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
 
 3. Next, Kai changes the :strong:`Group by method` from :strong:`severity` to :strong:`version`.
 
-  Now, Kai can see that all of the logs that contain this test API token error are on version :strong:`v350.10` and none are on version v350.9.
+    Now, Kai can see that all of the logs that contain this test API token error are on version :strong:`v350.10` and none are on version v350.9.
 
 .. image:: /_images/get-started/group-by-version.png
   :width: 100%
@@ -215,7 +215,7 @@ Now in Splunk Log Observer, Kai's view is automatically narrowed to display log 
 
 4. Just to be sure, Kai selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message.
 
-  This exploration convinces Kai that the test API token in v350.10 is the most likely source of the issue. Kai notifies Deepu, the :strong:`paymentservice` owner about their findings.
+    This exploration convinces Kai that the test API token in v350.10 is the most likely source of the issue. Kai notifies Deepu, the :strong:`paymentservice` owner about their findings.
 
 Learn more
 ####################
