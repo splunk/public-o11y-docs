@@ -111,7 +111,7 @@ Investigate the root cause of a business workflow error
   :width: 100%
   :alt: This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors.
 
-#. Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces Related Content tiles that provide access to relevant data in other areas of the application.
+2. Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces Related Content tiles that provide access to relevant data in other areas of the application.
 
   For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`.
 
@@ -191,7 +191,7 @@ For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
 Examine error logs for meaningful messages and patterns
 ===============================================================
 
-Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
+Now in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
 
 1. Kai sees some error logs, so they select one to see more details in a structured view. As Kai looks at the log details, they see this error message: "Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)".
 
@@ -201,7 +201,7 @@ Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log
 
 2. In the error message, Kai sees what they think is a clear indication of the error. The API token starts with "test". It seems that a team pushed v350.10 live with a test token that doesn't work in production.
 
-  Just to double-check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
+  To double-check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
 
 3. Next, Kai changes the :strong:`Group by method` from :strong:`severity` to :strong:`version`.
 
