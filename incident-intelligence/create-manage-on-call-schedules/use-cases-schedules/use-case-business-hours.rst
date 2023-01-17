@@ -39,6 +39,10 @@ Create a business-hours shift
       :width: 99%
       :alt: Business-hours shift in web service primary schedule.
 
+.. image:: /_images/incident-intelligence/Business-Hours-Schedule-Preview.png
+      :width: 99%
+      :alt: Business-hours shift in web service primary schedule.
+
 Follow these steps to create a day-by-day shift for business hours coverage:
 
 #. Select :guilabel:`Add new shift`
