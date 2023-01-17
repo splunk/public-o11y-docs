@@ -17,11 +17,11 @@ Skyler the site reliability engineering manager needs to create a on-call schedu
 For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
 #. :ref:`Create a schedule for the primary coverage that includes three shifts: <ii-create-primary-schedule>`
-    #. Create a business hours shift
-    #. Create a shift for weeknights coverage
-    #. Create a shift for weekends coverage
-#. Creates a schedule for secondary coverage with a 24x7 shift
-#. Adds the schedules to the incident workflow for the web application service
+    #. :ref:`Create a business hours shift <ii-create-business-shift>`
+    #. :ref:`Create a shift for weeknights coverage <ii-create-weeknights-shift>`
+    #. :ref:`Create a shift for weekends coverage <ii-create-weekends-shift>`
+#. :ref:`Create a schedule for secondary coverage with a 24x7 shift <ii-create-secondary-schedule>`
+#. :ref: `Add the schedules to the incident workflow for the web application service <ii-add-incident-workflow>`
 
 .. _ii-create-primary-schedule:
 
@@ -96,7 +96,7 @@ Follow these steps to create a week-by-week shift for weekend coverage:
     #. Drag responders in the list to reorder.
 #. Select :guilabel:`Save shift`. 
 
-.. _ii-create-secondary-chedule:
+.. _ii-create-secondary-schedule:
 
 Create a schedule for secondary coverage
 ==========================================
