@@ -202,7 +202,7 @@ Let's imagine you want to track the following data to oversee HTTP errors:
 * Host that reported the error
 * Service (app) that returned the error
 
-Suppose you identify your data with a long metric name instead of a metric name and a dimension. For example, :code:`web.http.myhost.checkout.error.500.count` could be a long metric name that represents the number of HTTP response code 500 errors reported by the host named ``myhost`` for the service checkout.
+Suppose you identify your data with a long metric name instead of a metric name and a dimension. For example, :code:`web.http.myhost.checkout.error.500.count` might be a long metric name that represents the number of HTTP response code 500 errors reported by the host named ``myhost`` for the service checkout.
 
 If you use :code:`web.http.myhost.checkout.error.500.count`, you might encounter the following issues:
 
