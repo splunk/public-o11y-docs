@@ -8,7 +8,7 @@ Use case: Business hours and nights-and-weekend rotation for the web application
 .. meta::
    :description: Schedule use case for Incident Intelligence for a business hours and nights-and-weekends rotation.
 
-Skyler the site reliability engineering manager needs to create a on-call schedule for the Buttercup Industries web application with the following coverage needs:
+Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create a on-call schedule for the web application SREs with the following coverage needs:
 
 - Skyler needs coverage for the web application service for business hours Monday through Friday of each week, with one responder on the team being on call for a whole week.
 - Skyler also needs coverage for the web application service for nights and weekends. Night coverage is 5 PM to 8 AM Monday through Friday. Weekend coverage is one responder who is on call from Friday at 5 PM to Monday at 9 AM.
@@ -27,14 +27,6 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 
 Create a schedule for primary coverage
 ==========================================
-
-Follow these steps to create your primary schedule:
-
-#. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select the :guilabel:`On-call schedules` tab.
-#. Select :guilabel:`Create new schedule`.
-#. Select the pencil icon to edit the schedule name. For this example, name the schedule "Heroes team, web application, service primary". Select the checkmark icon to save your schedule name.  
-#. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears.
 
 .. _ii-create-business-shift:
 
@@ -122,7 +114,7 @@ Follow these steps to create your secondary schedule:
 
 .. _ii-add-incident-workflow:
 
-Add your primary and secondary schedules to the incident workflow in the incident policy for the web application service
+Add the primary and secondary schedules to the incident workflow in the incident policy for the web application service
 ==============================================================================================================================
 
 Your last step for this scenario is to add your primary and secondary schedules to the incident workflow in the incident policy for your web application service. 
@@ -150,4 +142,4 @@ Learn more
 =============
 
 * For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
-* For steps 
+* For steps to create an incident policy, including steps for incident workflows, see :ref:`ii-create-configure-incident-policies`.
