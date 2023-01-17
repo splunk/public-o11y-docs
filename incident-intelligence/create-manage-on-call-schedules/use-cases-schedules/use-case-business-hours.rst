@@ -15,6 +15,7 @@ Skyler the site reliability engineering manager needs to create a on-call schedu
 - Finally, Skyler needs one responder on call 24x7 as secondary coverage for one week Monday through Sunday.
 
 For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
+
 #. Create a schedule for the primary coverage that includes three shifts: 
     #. Create a business hours shift
     #. Create a shift for weeknights coverage
