@@ -848,7 +848,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Create and manage users TOGGLE <admin/users/manage-users>
+   Create and manage users <admin/users/manage-users>
 
 .. toctree::
    :maxdepth:   3
