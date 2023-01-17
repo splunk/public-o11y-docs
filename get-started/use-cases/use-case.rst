@@ -78,15 +78,15 @@ The first thing Kai wants to know about the alert they just received is: What's 
 
 4. Kai sees one session that seems to be taking longer than the others. They select it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn't a front end problem and that they need to follow the trace through to the back end.
 
-.. image:: /_images/get-started/session-details.png
-  :width: 100%
-  :alt: This screenshot shows the Session Details page in Splunk RUM displaying the session timeline from the front end through to the back end, where the /cart/checkout endpoint is taking longer than expected to complete.
+  .. image:: /_images/get-started/session-details.png
+    :width: 70%
+    :alt: This screenshot shows the Session Details page in Splunk RUM displaying the session timeline from the front end through to the back end, where the /cart/checkout endpoint is taking longer than expected to complete.
 
 5. Kai selects the :strong:`APM` link to get a performance summary, as well as access to the session's trace and workflow details.
 
-.. image:: /_images/get-started/performance-summary.png
-  :width: 80%
-  :alt: This screenshot shows the Performance Summary menu in Splunk RUM displaying a link to the frontend:/cart/checkout workflow, as well as performance and trace details.
+  .. image:: /_images/get-started/performance-summary.png
+    :width: 80%
+    :alt: This screenshot shows the Performance Summary menu in Splunk RUM displaying a link to the frontend:/cart/checkout workflow, as well as performance and trace details.
 
 Kai decides to take a look at the end-to-end transaction workflow.
 
@@ -108,7 +108,7 @@ Investigate the root cause of a business workflow error
     In particular, Kai sees that the :strong:`paymentservice` is having issues. Splunk APM has identified the issues as root cause errors, meaning that the :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow.
 
     .. image:: /_images/get-started/service-map.png
-      :width: 100%
+      :width: 70%
       :alt: This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors.
 
 #. Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces Related Content tiles that provide access to relevant data in other areas of the application.
@@ -140,15 +140,15 @@ Check on infrastructure health
 
 #. They select the :strong:`paymentservice` pod in the cluster map to dive deeper into the data.
 
-.. image:: /_images/get-started/k8s-pod.png
-  :width: 80%
-  :alt: This screenshot shows a Kubernetes pod menu in Splunk Infrastructure Monitoring displaying details about the pod, including its name and status.
+  .. image:: /_images/get-started/k8s-pod.png
+    :width: 80%
+    :alt: This screenshot shows a Kubernetes pod menu in Splunk Infrastructure Monitoring displaying details about the pod, including its name and status.
 
 Kai sees that the pod looks stable with no errors or events.
 
-.. image:: /_images/get-started/k8s-pod-detail.png
-  :width: 100%
-  :alt: This screenshot shows the Kubernetes Pod Detail tab in Splunk Infrastructure Monitoring displaying metrics that indicate the pod is stable.
+  .. image:: /_images/get-started/k8s-pod-detail.png
+    :width: 100%
+    :alt: This screenshot shows the Kubernetes Pod Detail tab in Splunk Infrastructure Monitoring displaying metrics that indicate the pod is stable.
 
 3. Now that Kai can rule out the Kubernetes infrastructure as the source of the issue, they decide to return to their investigation in Splunk APM. Kai selects the :strong:`paymentservice in map` Related Content tile in their current view of Splunk Infrastructure Monitoring.
 
@@ -167,15 +167,15 @@ Look for patterns in application errors
 
   For example, when Kai looks at the :strong:`tenant.level` module, they see that errors are occurring for all levels, so the root cause is likely not tenant-specific.
 
-.. image:: /_images/get-started/tenant-level.png
-  :width: 60%
-  :alt: This screenshot shows the tenant.level module in Splunk APM displaying errors evenly spread across gold, silver, and bronze tenant levels.
+  .. image:: /_images/get-started/tenant-level.png
+    :width: 60%
+    :alt: This screenshot shows the tenant.level module in Splunk APM displaying errors evenly spread across gold, silver, and bronze tenant levels.
 
-However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the earlier :strong:`v350.9` version.
+  However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the earlier :strong:`v350.9` version.
 
-.. image:: /_images/get-started/version.png
-  :width: 60%
-  :alt: This screenshot shows the version module in Splunk APM displaying errors for version 350.10 only and no errors for version 350.9.
+    .. image:: /_images/get-started/version.png
+    :width: 60%
+    :alt: This screenshot shows the version module in Splunk APM displaying errors for version 350.10 only and no errors for version 350.9.
 
 
 2. This seems like a strong lead, so Kai decides to dig into the log details. They select the :strong:`Logs for paymentservice` Related Content tile.
@@ -195,9 +195,9 @@ Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log
 
 1. Kai sees some error logs, so they select one to see more details in a structured view. As Kai looks at the log details, they see this error message: "Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)".
 
-.. image:: /_images/get-started/error-log.png
-  :width: 100%
-  :alt: This screenshot shows the details of an error log in Splunk Log Observer, including the error severity and an error message.
+  .. image:: /_images/get-started/error-log.png
+    :width: 100%
+    :alt: This screenshot shows the details of an error log in Splunk Log Observer, including the error severity and an error message.
 
 2. In the error message, Kai sees what they think is a clear indication of the error. The API token starts with "test". It seems that a team pushed v350.10 live with a test token that doesn't work in production.
 
@@ -207,9 +207,9 @@ Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log
 
   Now, Kai can see that all of the logs that contain this test API token error are on version :strong:`v350.10` and none are on version v350.9.
 
-.. image:: /_images/get-started/group-by-version.png
-  :width: 100%
-  :alt: This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs.
+  .. image:: /_images/get-started/group-by-version.png
+    :width: 100%
+    :alt: This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs.
 
 4. Just to be sure, Kai selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message.
 
@@ -232,9 +232,9 @@ Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the
 
 2. As one way to see if reverting to version v350.9 fixes the issue, Deepu opens the time picker in the upper left corner of Splunk Log Observer and selects :strong:`Live Tail`. Live Tail provides Deepu with a real-time streaming view of a sample of incoming logs.
 
-.. image:: /_images/get-started/live-tail-verify.gif
-  :width: 100%
-  :alt: This animated GIF shows Deepu opening the time picker of Splunk Log Observer and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received.
+  .. image:: /_images/get-started/live-tail-verify.gif
+    :width: 100%
+    :alt: This animated GIF shows Deepu opening the time picker of Splunk Log Observer and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received.
 
 3. Deepu watches the Live Tail view and sure enough, the failed payment messages have stopped appearing in :strong:`paymentservice` logs. Reassured that the Buttercup Games site is back in a stable state, Deepu moves on to helping their team fix v350.10.
 
