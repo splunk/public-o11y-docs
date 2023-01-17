@@ -837,7 +837,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Create and manage authentication tokens <admin/authentication-tokens/tokens>
+   Create and manage authentication tokens TOGGLE <admin/authentication-tokens/tokens>
 
 .. toctree::
    :hidden:
@@ -848,19 +848,19 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Create and manage users <admin/users/manage-users>
+   Create and manage users TOGGLE <admin/users/manage-users>
 
 .. toctree::
    :maxdepth:   3
 
-   Create and manage teams <admin/teams/manage-teams>
+   Create and manage teams TOGGLE <admin/teams/manage-teams>
 
 
 .. toctree::
    :hidden:
    :maxdepth:   3
 
-   Send alert notifications to third-party services <admin/notif-services/admin-notifs-index>
+   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
    :hidden:
@@ -877,7 +877,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   Monitor subscription usage <admin/subscription-usage/subscription-usage-overview>
+   Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::
