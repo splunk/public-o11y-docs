@@ -213,3 +213,5 @@ require validation.
 If you want to turn off the email authentication feature, contact :ref:`support`.
 
 .. note:: The ADFS portal is the only way that your users can log in to Observability Cloud.
+
+.. include:: /_includes/troubleshooting-steps.rst

@@ -44,6 +44,8 @@ Switch back to Okta:
       * :guilabel:`Public Key`
       * :guilabel:`Issuer URL`
       * :guilabel:`Metadata URL`
+   
+   .. note:: URLs must belong to Okta in order to validate. Accepted domains are ``okta.com``, ``oktapreview.com``, ``okta-emea.com``, and ``trexcloud.com``.
 
 Switch to Observability Cloud to finish:
    #. Copy and paste the Okta :guilabel:`Public Key` value into the :guilabel:`Public Key` text box.
@@ -61,3 +63,4 @@ Once you have a custom URL configured, your users can continue to log in using t
 
 Observability Cloud generates a password for users you create in Okta SSO. If the Okta login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
 
+.. include:: /_includes/troubleshooting-steps.rst
