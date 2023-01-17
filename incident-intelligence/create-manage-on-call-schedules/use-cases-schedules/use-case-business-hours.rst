@@ -21,7 +21,7 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
     #. :ref:`Create a shift for weeknights coverage <ii-create-weeknights-shift>`
     #. :ref:`Create a shift for weekends coverage <ii-create-weekends-shift>`
 #. :ref:`Create a schedule for secondary coverage with a 24x7 shift <ii-create-secondary-schedule>`
-#. :ref: `Add the schedules to the incident workflow for the web application service <ii-add-incident-workflow>`
+#. :ref:`Add the schedules to the incident workflow for the web application service <ii-add-incident-workflow>`
 
 .. _ii-create-primary-schedule:
 
