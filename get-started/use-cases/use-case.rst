@@ -144,11 +144,11 @@ Check on infrastructure health
       :width: 80%
       :alt: This screenshot shows a Kubernetes pod menu in Splunk Infrastructure Monitoring displaying details about the pod, including its name and status.
 
-  Kai sees that the pod looks stable with no errors or events.
+    Kai sees that the pod looks stable with no errors or events.
 
-    .. image:: /_images/get-started/k8s-pod-detail.png
-      :width: 100%
-      :alt: This screenshot shows the Kubernetes Pod Detail tab in Splunk Infrastructure Monitoring displaying metrics that indicate the pod is stable.
+      .. image:: /_images/get-started/k8s-pod-detail.png
+        :width: 100%
+        :alt: This screenshot shows the Kubernetes Pod Detail tab in Splunk Infrastructure Monitoring displaying metrics that indicate the pod is stable.
 
 3. Now that Kai can rule out the Kubernetes infrastructure as the source of the issue, they decide to return to their investigation in Splunk APM. Kai selects the :strong:`paymentservice in map` Related Content tile in their current view of Splunk Infrastructure Monitoring.
 
