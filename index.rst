@@ -297,7 +297,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform <get-started/core2o11y/core2o11y-landing>
+   Splunk Observability Cloud and the Splunk platform TOGGLE <get-started/core2o11y/core2o11y-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -370,12 +370,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: DASHBOARDS AND CHARTS
    :maxdepth:   3
 
-   Dashboards <data-visualization/dashboards/dashboards>
+   Dashboards TOGGLE <data-visualization/dashboards/dashboards>
 
 .. toctree::
    :maxdepth:   3
 
-   Charts <data-visualization/charts/charts>
+   Charts TOGGLE <data-visualization/charts/charts>
 
 .. toctree::
    :maxdepth:   3
@@ -411,7 +411,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Alerts and detectors use case library <alerts-detectors-notifications/use-cases-detectors-alerts/use-cases-intro>
+   Alerts and detectors use case library TOGGLE <alerts-detectors-notifications/use-cases-detectors-alerts/use-cases-intro>
 
 .. toctree::
    :maxdepth:   3
@@ -466,7 +466,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:  3
 
-   Built-in alert conditions <alerts-detectors-notifications/alert-condition-reference/index>
+   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
 
 .. toctree::
    :maxdepth:   3
@@ -497,47 +497,47 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use cases: Troubleshoot errors and monitor application performance <apm/apm-use-cases/apm-use-cases-intro>
+   Use cases: Troubleshoot errors and monitor application performance TOGGLE <apm/apm-use-cases/apm-use-cases-intro>
 
 .. toctree::
    :maxdepth:   3
 
-   apm/set-up-apm/apm
+   Set up Splunk APM TOGGLE <apm/set-up-apm/apm>
 
 .. toctree::
    :maxdepth:   3
 
-   apm/apm-spans-traces/traces-spans
+   Manage services, spans, and traces in SPlunk APM TOGGLE <apm/apm-spans-traces/traces-spans>
 
 .. toctree::
    :maxdepth:   3
 
-   Analyze services with span tags and MetricSets <apm/span-tags/span-tags>
+   Analyze services with span tags and MetricSets TOGGLE <apm/span-tags/span-tags>
 
 .. toctree::
    :maxdepth:   3
 
-   apm/workflows/workflows
+   Correlate traces to track Business Workflows TOGGLE <apm/workflows/workflows>
 
 .. toctree::
    :maxdepth:   3
 
-   apm/apm-alert-visualize/alert-visualize
+   Visualize and alert on your application in Splunk APM TOGGLE <apm/apm-alert-visualize/alert-visualize>
 
 .. toctree::
    :maxdepth:   3
 
-   AlwaysOn Profiling <apm/profiling/intro-profiling>
+   AlwaysOn Profiling TOGGLE <apm/profiling/intro-profiling>
 
 .. toctree::
    :maxdepth:   3
 
-   apm/db-query-perf/db-query-performance
+   Monitor Database Query Performance TOGGLE <apm/db-query-perf/db-query-performance>
 
 .. toctree::
    :maxdepth:   3
 
-   apm/apm-data-links/data-links-landing
+   Use Data Links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
 
 .. toctree::
    :caption: INFRASTRUCTURE
@@ -574,7 +574,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Network Explorer <infrastructure/network-explorer/network-explorer>
+   Network Explorer TOGGLE <infrastructure/network-explorer/network-explorer>
 
 .. toctree::
    :maxdepth:   3
@@ -584,7 +584,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   infrastructure/analytics/signalflow-analytics-intro
+   SignalFlow and analytics TOGGLE <infrastructure/analytics/signalflow-analytics-intro>
 
 .. toctree::
    :maxdepth:   3
@@ -626,7 +626,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-use-case-library/use-case-landingpage
+   Splunk RUM use case library TOGGLE <rum/rum-use-case-library/use-case-landingpage>
 
 .. toctree::
    :maxdepth:   3
@@ -666,7 +666,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   rum/rum-dashboards/rum-dashboards
+   Splunk RUM dashboards TOGGLE <rum/rum-dashboards/rum-dashboards>
 
 .. toctree::
    :maxdepth:   3
@@ -702,7 +702,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3 
   
-   synthetics/synth-use-cases/synth-landing
+   Synthetics use case library TOGGLE <synthetics/synth-use-cases/synth-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -712,22 +712,22 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   synthetics/browser-test/browser-test
+   Use a browser test to test a webpage TOGGLE <synthetics/browser-test/browser-test>
 
 .. toctree::
    :maxdepth:   3
 
-   synthetics/uptime-test/uptime-test
+   Use an Uptime Test to test port or HTTP uptime TOGGLE <synthetics/uptime-test/uptime-test>
 
 .. toctree::
    :maxdepth:   3
 
-   synthetics/api-test/api-test
+   Use an API Test to test an endpoint TOGGLE <synthetics/api-test/api-test>
 
 .. toctree::
    :maxdepth:   3
 
-   synthetics/test-config/test-config
+   Configure your tests TOGGLE <synthetics/test-config/test-config>
 
 .. toctree::
    :caption: INCIDENT INTELLIGENCE
