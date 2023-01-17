@@ -41,15 +41,6 @@ Receive alerts about outlier behavior
 
 #. Kai logs in to Splunk Observability Cloud on their laptop to investigate.
 
-Learn more
-####################
-
-* For details about setting up detectors and alerts, see :ref:`get-started-detectoralert`.
-
-* For details about integrating alerts with notification services, like Splunk On-Call, PagerDuty, and Jira, see :ref:`admin-notifs-index`.
-
-* For details about creating a team to coordinate work in Splunk Observability Cloud, see :ref:`admin-manage-teams`.
-
 
 .. _assess-user-impact-xpuc:
 
@@ -90,11 +81,6 @@ The first thing Kai wants to know about the alert they just received is: What's 
 
 Kai decides to take a look at the end-to-end transaction workflow.
 
-Learn more
-####################
-
-For details about using Splunk RUM to identify and troubleshoot frontend errors, see :ref:`rum-identify-span-problems`.
-
 
 .. _investigate-root-cause-xpuc:
 
@@ -121,14 +107,6 @@ Investigate the root cause of a business workflow error
 
 Kai decides to take a look at the Kubernetes cluster to see if the errors are based on an infrastructure issue.
 
-Learn more
-####################
-
-* For details about business workflows, see :ref:`apm-workflows`.
-
-* For details about using Related Content, see :ref:`get-started-relatedcontent`.
-
-* For more Splunk APM-specific use cases, see :ref:`apm-use-cases-intro`.
 
 
 .. _check-infra-health-xpuc:
@@ -152,10 +130,6 @@ Check on infrastructure health
 
 3. Now that Kai can rule out the Kubernetes infrastructure as the source of the issue, they decide to return to their investigation in Splunk APM. Kai selects the :strong:`paymentservice in map` Related Content tile in their current view of Splunk Infrastructure Monitoring.
 
-Learn more
-####################
-
-For details about using the Kubernetes navigator and other navigators, see :ref:`use-navigators-imm`.
 
 
 .. _look-for-patterns-xpuc:
@@ -180,10 +154,6 @@ Look for patterns in application errors
 
 2. This seems like a strong lead, so Kai decides to dig into the log details. They select the :strong:`Logs for paymentservice` Related Content tile.
 
-Learn more
-####################
-
-For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
 
 
 .. _review-logs-xpuc:
@@ -215,10 +185,6 @@ Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log
 
 This exploration convinces Kai that the test API token in v350.10 is the most likely source of the issue. Kai notifies Deepu, the :strong:`paymentservice` owner about their findings.
 
-Learn more
-####################
-
-For details about using Splunk Log Observer as described in this use case, see :ref:`logs-aggregations`.
 
 
 .. _monitor-a-fix-xpuc:
@@ -238,10 +204,6 @@ Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the
 
 3. Deepu watches the Live Tail view and sure enough, the failed payment messages have stopped appearing in :strong:`paymentservice` logs. Reassured that the Buttercup Games site is back in a stable state, Deepu moves on to helping their team fix v350.10.
 
-Learn more
-####################
-
-For details about using Splunk Log Observer Live Tail view, see :ref:`logs-live-tail`.
 
 
 .. _take-preventative-action-xpuc:
@@ -263,6 +225,22 @@ Learn more
 * For details about creating metrics from logs and displaying them in a chart, see :ref:`logs-metricization`.
 
 * For details about creating detectors to issue alerts based on charts or metrics, see :ref:`create-detectors`.
+
+* For details about setting up detectors and alerts, see :ref:`get-started-detectoralert`.
+
+* For details about integrating alerts with notification services, like Splunk On-Call, PagerDuty, and Jira, see :ref:`admin-notifs-index`.
+
+* For details about using Splunk RUM to identify and troubleshoot frontend errors, see :ref:`rum-identify-span-problems`.
+
+* For details about business workflows, see :ref:`apm-workflows`.
+
+* For details about using Related Content, see :ref:`get-started-relatedcontent`.
+
+* For details about using the Kubernetes navigator and other navigators, see :ref:`use-navigators-imm`.
+
+* For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
+
+* For details about using Splunk Log Observer Live Tail view, see :ref:`logs-live-tail`.
 
 Summary
 ==========
