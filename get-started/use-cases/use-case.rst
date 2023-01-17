@@ -174,8 +174,8 @@ Look for patterns in application errors
     However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the earlier :strong:`v350.9` version.
 
       .. image:: /_images/get-started/version.png
-      :width: 60%
-      :alt: This screenshot shows the version module in Splunk APM displaying errors for version 350.10 only and no errors for version 350.9.
+        :width: 60%
+        :alt: This screenshot shows the version module in Splunk APM displaying errors for version 350.10 only and no errors for version 350.9.
 
 
 2. This seems like a strong lead, so Kai decides to dig into the log details. They select the :strong:`Logs for paymentservice` Related Content tile.
