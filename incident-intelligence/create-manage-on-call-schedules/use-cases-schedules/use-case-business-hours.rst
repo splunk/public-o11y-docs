@@ -28,6 +28,10 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 Create a schedule for primary coverage
 ==========================================
 
+.. image:: /_images/incident-intelligence/Weekdays_shift.png
+      :width: 99%
+      :alt: Alert generation creates alert noise.
+
 .. _ii-create-business-shift:
 
 Create a business-hours shift
