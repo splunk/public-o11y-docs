@@ -16,7 +16,7 @@ Skyler the site reliability engineering manager needs to create a on-call schedu
 
 For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
-#. :ref:`Create a schedule for the primary coverage that includes three shifts: <ii-create-primary-schedule>' 
+#. :ref:`Create a schedule for the primary coverage that includes three shifts: <ii-create-primary-schedule>`
     #. Create a business hours shift
     #. Create a shift for weeknights coverage
     #. Create a shift for weekends coverage
