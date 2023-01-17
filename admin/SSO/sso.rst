@@ -16,14 +16,14 @@ Observability Cloud also supports SSO initiated by Observability Cloud, and this
 
 Observability Cloud supports the following SSO integrations:
 
--  :ref:`Microsoft Active Directory Federation Services (ADFS)<sso-adfs>`
--  :ref:`Azure Active Directory<sso-azure>`
--  :ref:`Google<sso-google>`
--  :ref:`Google Cloud Identity (IDP)<sso-google-cloud-identity>`
--  :ref:`Okta<sso-okta>`
--  :ref:`OneLogin<sso-one-login>`
--  :ref:`PingOne<sso-ping-one>`
--  :ref:`Generic SAML SSO<sso-generic>`
+-  :ref:`Microsoft Active Directory Federation Services TOGGLE (ADFS)<sso-adfs>`
+-  :ref:`Azure Active Directory TOGGLE <sso-azure>`
+-  :ref:`Google TOGGLE <sso-google>`
+-  :ref:`Google Cloud Identity (IDP) TOGGLE <sso-google-cloud-identity>`
+-  :ref:`Okta TOGGLE <sso-okta>`
+-  :ref:`OneLogin TOGGLE <sso-one-login>`
+-  :ref:`PingOne TOGGLE <sso-ping-one>`
+-  :ref:`Generic SAML SSO TOGGLE <sso-generic>`
 
 .. _about-realms:
 
