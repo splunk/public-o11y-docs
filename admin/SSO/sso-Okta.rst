@@ -44,6 +44,8 @@ Switch back to Okta:
       * :guilabel:`Public Key`
       * :guilabel:`Issuer URL`
       * :guilabel:`Metadata URL`
+   
+   .. note:: URLs must belong to Okta in order to validate. Accepted domains are ``okta.com``, ``oktapreview.com``, ``okta-emea.com``, and ``trexcloud.com``.
 
 Switch to Observability Cloud to finish:
    #. Copy and paste the Okta :guilabel:`Public Key` value into the :guilabel:`Public Key` text box.
@@ -51,7 +53,7 @@ Switch to Observability Cloud to finish:
    #. Copy and paste the Okta :guilabel:`Metadata URL` value into the :guilabel:`Metadata URL` text box.
    #. Click :guilabel:`Save`. The message :guilabel:`Validated!` appears. 
 
-.. note:: If you get an error, check the values that you copied and pasted. URLs must belong to Okta in order to validate. Accepted domains are ``okta.com``, ``oktapreview.com``, ``okta-emea.com``, and ``trexcloud.com``.
+.. note:: If you get an error, check the values that you copied and pasted.
 
 The Okta SSO integration is now available to users in your Okta organization. When users log in to Observability Cloud from Okta for the first time, they receive an email containing a link that they must open in order to authenticate. This only occurs the first time the user signs in. Subsequent login attempts don't require validation.
 
