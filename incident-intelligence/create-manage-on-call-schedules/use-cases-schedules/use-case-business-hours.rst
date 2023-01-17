@@ -36,7 +36,7 @@ Create a business-hours shift
 ---------------------------------
 
 .. image:: /_images/incident-intelligence/Business-Hours-Shift.png
-      :width: 99%
+      :width: 75%
       :alt: Business-hours shift in web service primary schedule.
 
 .. image:: /_images/incident-intelligence/Business-Hours-Schedule-Preview.png
