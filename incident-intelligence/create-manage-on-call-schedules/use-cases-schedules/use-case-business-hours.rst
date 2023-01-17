@@ -35,7 +35,7 @@ Create a schedule for primary coverage
 Create a business-hours shift
 ---------------------------------
 
-.. image:: /_images/incident-intelligence/Weekdays_shift.png
+.. image:: /_images/incident-intelligence/Business-Hours-Shift.png
       :width: 99%
       :alt: Business-hours shift in web service primary schedule.
 
