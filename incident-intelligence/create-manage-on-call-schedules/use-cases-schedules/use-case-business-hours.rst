@@ -28,14 +28,16 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 Create a schedule for primary coverage
 ==========================================
 
-.. image:: /_images/incident-intelligence/Weekdays_shift.png
-      :width: 99%
-      :alt: Alert generation creates alert noise.
+
 
 .. _ii-create-business-shift:
 
 Create a business-hours shift
 ---------------------------------
+
+.. image:: /_images/incident-intelligence/Weekdays_shift.png
+      :width: 99%
+      :alt: Business-hours shift in web service primary schedule.
 
 Follow these steps to create a day-by-day shift for business hours coverage:
 
