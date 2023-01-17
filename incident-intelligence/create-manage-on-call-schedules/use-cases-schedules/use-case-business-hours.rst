@@ -8,13 +8,19 @@ Use case: Business hours and nights-and-weekend rotation for the web application
 .. meta::
    :description: Schedule use case for Incident Intelligence for a business hours and nights-and-weekends rotation.
 
-Coverage needs:
+Skyler the site reliability engineering manager needs to create a on-call schedule for the Buttercup Industries web application with the following coverage needs:
 
-- You need coverage for your web application service for business hours Monday through Friday of each week, with one responder on the team being on call for a whole week.
-- You also need coverage for your web application service for nights and weekends. Night coverage is 5 PM to 8 AM Monday through Friday. Weekend coverage is one responder who is on call from Friday at 5 PM to Monday at 9 AM.
-- Finally, you need one responder on call 24x7 as secondary coverage for one week Monday through Sunday.
+- Skyler needs coverage for the web application service for business hours Monday through Friday of each week, with one responder on the team being on call for a whole week.
+- Skyler also needs coverage for the web application service for nights and weekends. Night coverage is 5 PM to 8 AM Monday through Friday. Weekend coverage is one responder who is on call from Friday at 5 PM to Monday at 9 AM.
+- Finally, Skyler needs one responder on call 24x7 as secondary coverage for one week Monday through Sunday.
 
-For these coverage needs, you need to create two schedules, one for the primary coverage that includes three shifts: one for business hours, a second for nights coverage, and a third for weekends. The second schedule is your schedule for secondary coverage. Finally, you need to add these schedules to two steps in the incident workflow for the web application service. Follow these steps to create schedules for these coverage needs. 
+For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
+#. Create a schedule for the primary coverage that includes three shifts: 
+    #. Create a business hours shift
+    #. Create a shift for weeknights coverage
+    #. Create a shift for weekends coverage
+#. Creates a schedule for secondary coverage
+#. Adds the schedules to two steps in the incident workflow for the web application service
 
 Create a schedule for primary coverage
 ==========================================
@@ -28,7 +34,7 @@ Follow these steps to create your primary schedule:
 #. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears.
 
 Create a business-hours shift
-==========================================
+---------------------------------
 
 Follow these steps to create a day-by-day shift for business hours coverage:
 
@@ -47,7 +53,7 @@ Follow these steps to create a day-by-day shift for business hours coverage:
 #. Select :guilabel:`Save shift`. 
 
 Create a weeknights shift
-==========================================
+------------------------------
 
 Follow these steps to create a day-by-day shift for weeknight coverage:
 
@@ -65,7 +71,7 @@ Follow these steps to create a day-by-day shift for weeknight coverage:
 #. Select :guilabel:`Save shift`. 
 
 Create a weekends shift
-==========================================
+--------------------------
 
 Follow these steps to create a week-by-week shift for weekend coverage:
 
