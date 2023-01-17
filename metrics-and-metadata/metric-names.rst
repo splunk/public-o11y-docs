@@ -14,7 +14,7 @@ Read this document to learn about naming conventions and recommendations for cus
 Types of data in Observability Cloud
 ================================================
 
-Splunk Observability Cloud works with imported or :ref:`existing data <names-existing>` as well as ad-hoc or :ref:`custom data <names-custom>`. 
+Splunk Observability Cloud works with imported or :ref:`existing data <names-existing>` as well as :ref:`custom data <names-custom>`. 
 
 .. _names-existing:
 
