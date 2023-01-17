@@ -103,21 +103,21 @@ Investigate the root cause of a business workflow error
 
 #. In Splunk RUM, Kai selects the :strong:`frontend:/cart/checkout` business workflow link to display its service map in Splunk Application Performance Monitoring (APM). A business workflow is a group of logically related traces, such as a group of traces that reflect an end-to-end transaction in your system.
 
-  The service map shows Kai the dependency interactions among  the full set of services backing the :strong:`/cart/checkout` action that they're troubleshooting, including the propagation of errors from one service to another.
+    The service map shows Kai the dependency interactions among  the full set of services backing the :strong:`/cart/checkout` action that they're troubleshooting, including the propagation of errors from one service to another.
 
-  In particular, Kai sees that the :strong:`paymentservice` is having issues. Splunk APM has identified the issues as root cause errors, meaning that the :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow.
+    In particular, Kai sees that the :strong:`paymentservice` is having issues. Splunk APM has identified the issues as root cause errors, meaning that the :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow.
 
-.. image:: /_images/get-started/service-map.png
-  :width: 100%
-  :alt: This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors.
+    .. image:: /_images/get-started/service-map.png
+      :width: 100%
+      :alt: This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors.
 
-2. Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces Related Content tiles that provide access to relevant data in other areas of the application.
+#. Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces Related Content tiles that provide access to relevant data in other areas of the application.
 
-  For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`.
+    For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`.
 
-.. image:: /_images/get-started/related-content.png
-  :width: 100%
-  :alt: This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s cluster(s) for paymentservice and Logs for paymentservice.
+    .. image:: /_images/get-started/related-content.png
+      :width: 100%
+      :alt: This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s cluster(s) for paymentservice and Logs for paymentservice.
 
 Kai decides to take a look at the Kubernetes cluster to see if the errors are based on an infrastructure issue.
 
@@ -191,7 +191,7 @@ For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`.
 Examine error logs for meaningful messages and patterns
 ===============================================================
 
-Now in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
+Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only.
 
 1. Kai sees some error logs, so they select one to see more details in a structured view. As Kai looks at the log details, they see this error message: "Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)".
 
@@ -201,7 +201,7 @@ Now in Splunk Log Observer, Kai's view is automatically narrowed to display log 
 
 2. In the error message, Kai sees what they think is a clear indication of the error. The API token starts with "test". It seems that a team pushed v350.10 live with a test token that doesn't work in production.
 
-  To double-check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
+  Just to double-check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
 
 3. Next, Kai changes the :strong:`Group by method` from :strong:`severity` to :strong:`version`.
 
