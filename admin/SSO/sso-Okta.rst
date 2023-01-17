@@ -45,7 +45,7 @@ Switch back to Okta:
       * :guilabel:`Issuer URL`
       * :guilabel:`Metadata URL`
    
-   .. note:: URLs must belong to Okta in order to validate. Accepted domains are ``okta.com``, ``oktapreview.com``, ``okta-emea.com``, and ``trexcloud.com``.
+.. note:: URLs must belong to Okta in order to validate. Accepted domains are ``okta.com``, ``oktapreview.com``, ``okta-emea.com``, and ``trexcloud.com``.
 
 Switch to Observability Cloud to finish:
    #. Copy and paste the Okta :guilabel:`Public Key` value into the :guilabel:`Public Key` text box.
