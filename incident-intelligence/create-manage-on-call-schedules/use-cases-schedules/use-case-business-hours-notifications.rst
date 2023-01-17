@@ -1,6 +1,6 @@
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 
-.. _ii-use-case-business-hours-notification:
+.. _ii-use-case-business-hours-notifications:
 
 Limit notifications for the checkout service to business hours
 *********************************************************************************************
