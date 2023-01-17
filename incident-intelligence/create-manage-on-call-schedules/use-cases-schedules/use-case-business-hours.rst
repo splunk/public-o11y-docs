@@ -98,8 +98,8 @@ Follow these steps to create a week-by-week shift for weekend coverage:
 
 .. _ii-create-secondary-schedule:
 
-Create a schedule for secondary coverage
-==========================================
+Create a schedule for secondary coverage with a 24x7 shift
+==============================================================
 
 Follow these steps to create your secondary schedule:
 
@@ -108,12 +108,6 @@ Follow these steps to create your secondary schedule:
 #. Select :guilabel:`Create new schedule`.
 #. Select the pencil icon to edit the schedule name. For this example, name the schedule "Heroes team, web application service, secondary". Select the checkmark icon to save your schedule name. 
 #. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears. 
-
-Create a 24x7 shift
-==========================================
-
-Follow these steps to create a week-by-week shift for secondary 24x7 coverage:
-
 #. Enter a shift name. For this example, enter "24x7".
 #. For the shift start date select the Monday that follows the Monday you selected for your business hours shift.
 #. Use the timezone picker to select the timezone for the coverage.
@@ -128,10 +122,10 @@ Follow these steps to create a week-by-week shift for secondary 24x7 coverage:
 
 .. _ii-add-incident-workflow:
 
-Add your primary and secondary schedules to the incident workflow for the web application service
+Add your primary and secondary schedules to the incident workflow in the incident policy for the web application service
 ==============================================================================================================================
 
-Your last step for this scenario is to add your primary and secondary schedules to the incident workflow for your web application service. 
+Your last step for this scenario is to add your primary and secondary schedules to the incident workflow in the incident policy for your web application service. 
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select the :guilabel:`Services` tab.
@@ -147,3 +141,13 @@ Your last step for this scenario is to add your primary and secondary schedules 
     #.  Enter the schedule name "Heroes team, web application, secondary" in the :guilabel:`Search schedules` field and select the schedule when it appears.
     #.  Select :guilabel:`Add responders`.
 #. Select :guilabel:`Save workflow`.
+
+
+Summary
+==========
+
+Learn more
+=============
+
+* For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
+* For steps 
