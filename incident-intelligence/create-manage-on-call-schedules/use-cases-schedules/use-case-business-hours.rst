@@ -16,12 +16,14 @@ Skyler the site reliability engineering manager needs to create a on-call schedu
 
 For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
-#. Create a schedule for the primary coverage that includes three shifts: 
+#. :ref:`Create a schedule for the primary coverage that includes three shifts <ii-create-primary-schedule>:' 
     #. Create a business hours shift
     #. Create a shift for weeknights coverage
     #. Create a shift for weekends coverage
-#. Creates a schedule for secondary coverage
-#. Adds the schedules to two steps in the incident workflow for the web application service
+#. Creates a schedule for secondary coverage with a 24x7 shift
+#. Adds the schedules to the incident workflow for the web application service
+
+.. _ii-create-primary-schedule:
 
 Create a schedule for primary coverage
 ==========================================
@@ -33,6 +35,8 @@ Follow these steps to create your primary schedule:
 #. Select :guilabel:`Create new schedule`.
 #. Select the pencil icon to edit the schedule name. For this example, name the schedule "Heroes team, web application, service primary". Select the checkmark icon to save your schedule name.  
 #. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears.
+
+.. _ii-create-business-shift:
 
 Create a business-hours shift
 ---------------------------------
@@ -53,6 +57,8 @@ Follow these steps to create a day-by-day shift for business hours coverage:
     #. Drag responders in the list to reorder.
 #. Select :guilabel:`Save shift`. 
 
+.. _ii-create-weeknights-shift:
+
 Create a weeknights shift
 ------------------------------
 
@@ -71,6 +77,8 @@ Follow these steps to create a day-by-day shift for weeknight coverage:
     #. Drag responders in the list to reorder.
 #. Select :guilabel:`Save shift`. 
 
+.. _ii-create-weekends-shift:
+
 Create a weekends shift
 --------------------------
 
@@ -87,6 +95,8 @@ Follow these steps to create a week-by-week shift for weekend coverage:
     #. Enter responder names and select them when they appear. 
     #. Drag responders in the list to reorder.
 #. Select :guilabel:`Save shift`. 
+
+.. _ii-create-secondary-chedule:
 
 Create a schedule for secondary coverage
 ==========================================
@@ -115,6 +125,8 @@ Follow these steps to create a week-by-week shift for secondary 24x7 coverage:
     #. Enter responder names and select them when they appear. 
     #. Drag responders in the list to reorder.
 #. Select :guilabel:`Save shift`.
+
+.. _ii-add-incident-workflow:
 
 Add your primary and secondary schedules to the incident workflow for the web application service
 ==============================================================================================================================
