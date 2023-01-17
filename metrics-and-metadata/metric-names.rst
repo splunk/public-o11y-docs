@@ -36,7 +36,7 @@ When you send custom metrics, dimensions, or events (key-value pairs you send to
 Send custom data to Observability Cloud
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-To learn how to send custom metrics in Observability Cloud using our API, refer to our :new-page:`developer portal <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
+To learn how to send custom metrics in Observability Cloud using our API, see the :new-page:`developer portal <https://dev.splunk.com/observability/docs/datamodel/ingest/>`.
 
 If you're using the OpenTelemetry Collector, you can create a receiver to :ref:`send-custom-metrics`.
 
