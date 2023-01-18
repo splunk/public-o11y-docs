@@ -2,6 +2,12 @@
 
 This repository contains the official documentation of Splunk Observability Cloud (https://docs.splunk.com/Observability).
 
+## License
+
+This Splunk repository is subject to the Splunk Websites Terms and Conditions of Use ("Terms")  
+[https://www.splunk.com/en_us/legal/terms/terms-of-use.html](https://www.splunk.com/en_us/legal/terms/terms-of-use.html) 
+and the [LICENSE](LICENSE) specific to this repository.
+
 You can contribute new documentation and edits to the existing documentation.
 
 Read on to learn how to edit and build the docs, and how to follow the workflow for getting your contributions reviewed and merged.
@@ -89,11 +95,11 @@ grep -inro --include \*.rst "OpenTelemetry" .
 
 The main steps for adding or editing documentation are the following:
 
-0. Decide the type of edit.
-1. Create a branch for your work.
-2. Edit the content in your branch.
-3. Test the docs locally.
-4. Create a pull request.
+1. Decide the type of edit.
+2. Create a branch for your work.
+3. Edit the content in your branch.
+4. Test the docs locally.
+5. Create a pull request.
 
 ### Decide the type of edit
 
@@ -101,13 +107,13 @@ Before editing the docs, ask yourself what do you want to accomplish, or what th
 
 The following table contains guidance on which type of edit is best depending on the goal:
 
-| Modify existing docs |  Add new docs    |
-| ---                  | ---              |
-| Fix a typo or error  | Document a whole new feature |
-| Add a note or warning | Split docs into sub-pages |
-| Update a screenshot | Add a use case for a feature |
-| Add or update a section | Expand reference documentation |
-| Update or add links | Create new troubleshooting guides |
+| Modify existing docs    | Add new docs                      |
+|:------------------------|-----------------------------------|
+| Fix a typo or error     | Document a whole new feature      |
+| Add a note or warning   | Split docs into sub-pages         |
+| Update a screenshot     | Add a use case for a feature      |
+| Add or update a section | Expand reference documentation    |
+| Update or add links     | Create new troubleshooting guides |
 
 Create small merge requests with incremental improvements rather than large merge requests with tons of changes. 
 
@@ -203,7 +209,7 @@ The following snippet shows an image, with a path relative to the _images folder
 
 The Splunk Style Guide provides guidance on how to write straightforward, user-focused, example-rich content that inspires confidence in the user. See [A word about Splunk docs](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs) for an orientation to the [Splunk Style Guide](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs).
 
-You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against our style guide. See https://github.com/splunk/vale-splunk-style-guide.
+You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against the Splunk style guide. See https://github.com/splunk/vale-splunk-style-guide.
 
 #### Add an image and alt text 
 
