@@ -318,38 +318,38 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   gdi/get-data-in/connect/connect
+   Connect to your cloud service provider TOGGLE <gdi/get-data-in/connect/connect>
 
 .. toctree::
    :maxdepth:   3
 
-   gdi/get-data-in/compute/compute
+   Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
 
 .. toctree::
    :maxdepth:   3
 
-   Instrument back-end services and applications <gdi/get-data-in/application/application>
+   Instrument back-end services and applications TOGGLE <gdi/get-data-in/application/application>
 
 
 .. toctree::
    :maxdepth:   3
 
-   Instrument serverless functions <gdi/get-data-in/serverless/instrument-serverless-functions>
+   Instrument serverless functions TOGGLE <gdi/get-data-in/serverless/instrument-serverless-functions>
 
 .. toctree::
    :maxdepth:  3
 
-   Instrument front-end applications <gdi/get-data-in/rum/rum-instrumentation>
+   Instrument front-end applications TOGGLE <gdi/get-data-in/rum/rum-instrumentation>
 
 .. toctree::
    :maxdepth:   3
 
-   gdi/index
+   Available host and application monitors TOGGLE <gdi/index>
 
 .. toctree::
    :maxdepth: 3
 
-   Splunk Distribution of OpenTelemetry Collector <gdi/opentelemetry/opentelemetry>
+   Splunk Distribution of OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
    :maxdepth:   3
@@ -364,7 +364,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth: 3
 
-   SignalFx Smart Agent (Deprecated) <gdi/smart-agent/smart-agent-intro>
+   SignalFx Smart Agent (Deprecated) TOGGLE <gdi/smart-agent/smart-agent-intro>
 
 .. toctree::
    :caption: DASHBOARDS AND CHARTS
