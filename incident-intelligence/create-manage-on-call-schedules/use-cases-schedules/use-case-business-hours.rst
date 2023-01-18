@@ -30,9 +30,9 @@ Create a schedule for primary coverage
 
 Skyler creates a new schedule for primary coverage for the web application service and names it accordingly: Web application - primary. Skyler adds a WebApp teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
 
-.. image:: /_images/incident-intelligence/Business-Hours-Shift.png
+.. image:: /_images/incident-intelligence/Create_Schedule.png
       :width: 50%
-      :alt: Business-hours shift in web service primary schedule.
+      :alt: Create a primary schedule for the web application.
 
 .. _ii-create-business-shift:
 
