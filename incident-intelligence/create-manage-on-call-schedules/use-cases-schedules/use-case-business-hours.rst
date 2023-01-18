@@ -42,27 +42,11 @@ Skyler creates a business-hours shift in the primary schedule for the web applic
       :width: 55%
       :alt: Business-hours shift in web service primary schedule.
 
-Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder takes over.
+Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder, takes over.
 
 .. image:: /_images/incident-intelligence/Business-Hours-Schedule-Preview.png
       :width: 99%
       :alt: Business-hours shift in web service primary schedule.
-
-Follow these steps to create a day-by-day shift for business hours coverage:
-
-#. Select :guilabel:`Add new shift`
-#. Enter a shift name. For this example, enter "Business hours".
-#. Select a Monday for your shift start date to correctly configure this shift for Monday-Friday.
-#. Use the timezone picker to select the timezone for the coverage.
-#. Under :guilabel:`Define shift coverage`, select :guilabel:`Day-by-day`.
-#. Select :guilabel:`Monday` through :guilabel:`Friday`.
-#. Select :guilabel:`08:00 AM` in the :guilabel:`Daily start time` drop-down list.
-#. Select :guilabel:`05:00 PM` in the :guilabel:`Daily end time` drop-down list. You need to uncheck :guilabel:`Create 24 hr shifts` to select a daily end time.
-#. Under :guilabel:`Customize shift handoff`, select :guilabel:`5` to have the same responder cover the entire week. 
-#. Under :guilabel:`Add responders`, add one or more responders to the shift. The first responder you add to the shift is on-call on the start date you selected. 
-    #. Enter responder names and select them when they appear. 
-    #. Drag responders in the list to reorder.
-#. Select :guilabel:`Save shift`. 
 
 .. _ii-create-weeknights-shift:
 
