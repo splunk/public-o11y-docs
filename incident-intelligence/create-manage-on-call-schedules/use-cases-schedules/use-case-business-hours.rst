@@ -28,18 +28,22 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 Create a schedule for primary coverage
 ==========================================
 
-Skyler creates a new schedule for primary coverage for the web application service and names it accordingly: Web application - primary. 
+Skyler creates a new schedule for primary coverage for the web application service and names it accordingly: Web application - primary. Skyler adds a WebApp teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
+
+.. image:: /_images/incident-intelligence/Business-Hours-Shift.png
+      :width: 50%
+      :alt: Business-hours shift in web service primary schedule.
 
 .. _ii-create-business-shift:
 
 Create a business-hours shift
 ---------------------------------
 
-Skyler creates a business-hours shift in the primary schedule for the web application. Using the day-by-day shift type he is able to achieve the nightly gap in coverage he wants. He selects a shift handoff of 5 and adds his SREs as responders. 
+Within the new schedule, Skyler creates a business-hours shift in the primary schedule for the web application. Using the day-by-day shift type Skyler is able to achieve the nightly gap in coverage they need. Skyler selects a shift handoff of 5 and adds the SREs as responders. 
 
 
 .. image:: /_images/incident-intelligence/Business-Hours-Shift.png
-      :width: 55%
+      :width: 50%
       :alt: Business-hours shift in web service primary schedule.
 
 Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder, takes over.
