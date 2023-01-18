@@ -11,7 +11,7 @@ Use case: Business hours and nights-and-weekend rotation for the web application
 Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create a on-call schedule for the web application SREs with the following coverage needs:
 
 - Skyler needs coverage for the web application service for business hours Monday through Friday of each week, with one responder on the team being on call for a whole week.
-- Skyler also needs coverage for the web application service for nights and weekends. Night coverage is 5 PM to 8 AM Monday through Friday. Weekend coverage is one responder who is on call from Friday at 5 PM to Monday at 9 AM.
+- Skyler also needs coverage for the web application service for nights and weekends. Night coverage is 5 PM to 8 AM Monday through Friday. Weekend coverage is one responder who is on call from Friday at 5 PM to Monday at 8 AM.
 - Finally, Skyler needs one responder on call 24x7 as secondary coverage for one week Monday through Sunday.
 
 For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
@@ -50,7 +50,7 @@ Using the schedule preview, Skyler verifies that the business-hours shift is con
 
 .. image:: /_images/incident-intelligence/Business-Hours-Schedule-Preview.png
       :width: 99%
-      :alt: Business-hours shift in web service primary schedule.
+      :alt: Schedule preview for business-hours.
 
 .. _ii-create-weeknights-shift:
 
@@ -59,57 +59,34 @@ Create a weeknights shift
 
 Next, Skyler creates a weeknights shift in the primary schedule for the web application. Using the day-by-day shift type Skyler is able to create the daily gap in coverage they need. Skyler selects a shift handoff of 4, as there are only 4 weeknights to cover since Friday will be covered by the weekends shift. Finally, Skyler adds the SREs as responders. 
 
-
 .. image:: /_images/incident-intelligence/Weeknights-Shift.png
       :width: 50%
-      :alt: Business-hours shift in web service primary schedule.
+      :alt: Weeknights shift in web service primary schedule.
 
 Using the schedule preview, Skyler notices that the way the responders are ordered in the shifts, there are responders who have a weeknights shift that immediately follows their business-hours shift. 
 
 .. image:: /_images/incident-intelligence/Back-To-Back-Shifts.png
       :width: 99%
-      :alt: Business-hours shift in web service primary schedule.
+      :alt: Schedule preview with back-to-back responder shifts.
 
-Skyler reorders the responders so responders have a week off between their business0hours shift and their weeknights shift. 
+Skyler reorders the responders so responders have a week off between their business hours shift and their weeknights shift and uses the schedule preview to confirm that the responders are ordered appropriately.
 
 .. image:: /_images/incident-intelligence/Reordered-Responders.png
       :width: 99%
-      :alt: Business-hours shift in web service primary schedule.
-
-
-Follow these steps to create a day-by-day shift for weeknight coverage:
-
-#. Enter a shift name. For this example, enter "Weeknights".
-#. Select a shift start date that is the same Monday you selected in your business hours shift.
-#. Use the timezone picker to select the timezone for the coverage.
-#. Under :guilabel:`Define shift coverage`, select :guilabel:`Day-by-day`.
-#. Select :guilabel:`Monday` through :guilabel:`Friday`.
-#. Select :guilabel:`05:00 PM` in the :guilabel:`Daily start time` drop-down list.
-#. Select :guilabel:`08:00 AM` in the :guilabel:`Daily end time` drop-down list. You need to uncheck :guilabel:`Create 24 hr shifts` to select a daily end time.
-#. Under :guilabel:`Customize shift handoff`, select :guilabel:`5` to have the same responder cover the entire week. 
-#. Under :guilabel:`Add responders`, add one or more responders to the shift. The first responder you add to the shift is on-call on the start date you selected in step 2. If there is an overlap in the responders across your shifts, use the schedule preview to ensure each responder has enough time off between their on-call shifts. 
-    #. Enter responder names and select them when they appear. 
-    #. Drag responders in the list to reorder.
-#. Select :guilabel:`Save shift`. 
+      :alt: Schedule preview with reordered responders.
 
 .. _ii-create-weekends-shift:
 
 Create a weekends shift
 --------------------------
 
-Follow these steps to create a week-by-week shift for weekend coverage:
+Finally, Skyler creates a weekends shift in the primary schedule for the web application service. For the weekend shift Skyler uses the week-by-week shift type, as there is no gap in coverage, and selects 1 for the shift handoff.
 
-#. Enter a shift name. For this example, enter "Weekends".
-#. Select a shift start date that is the Friday that follows the Monday you selected in your previous shifts.
-#. Use the timezone picker to select the timezone for the coverage.
-#. Under :guilabel:`Define shift coverage`, select :guilabel:`Week-by-week`.
-#. Select :guilabel:`Fridays` at :guilabel:`05:00 PM` in the :guilabel:`Starts on` drop-down lists.
-#. Select :guilabel:`Mondays` at :guilabel:`08:00 AM` in the :guilabel:`Ends on` drop-down lists.
-#. Under :guilabel:`Customize shift handoff`, select :guilabel:`5` to have the same responder cover the entire week. 
-#. Under :guilabel:`Add responders`, add one or more responders to the shift. The first responder you add to the shift is on-call on the start date you selected in step 2. For this shift, start with the same responder you added first in the weeknight shift so that that responder is on call for the weeknights shift and the subsequent weekends shift. Use the schedule preview to ensure each responder has enough time off between their on-call shifts. 
-    #. Enter responder names and select them when they appear. 
-    #. Drag responders in the list to reorder.
-#. Select :guilabel:`Save shift`. 
+.. image:: /_images/incident-intelligence/Weekends-Shift.png
+      :width: 50%
+      :alt: Weekends shift in web service primary schedule.
+
+
 
 .. _ii-create-secondary-schedule:
 
