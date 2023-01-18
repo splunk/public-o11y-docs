@@ -60,15 +60,22 @@ Create a weeknights shift
 Next, Skyler creates a weeknights shift in the primary schedule for the web application. Using the day-by-day shift type Skyler is able to create the daily gap in coverage they need. Skyler selects a shift handoff of 4, as there are only 4 weeknights to cover since Friday will be covered by the weekends shift. Finally, Skyler adds the SREs as responders. 
 
 
-.. image:: /_images/incident-intelligence/Business-Hours-Shift.png
+.. image:: /_images/incident-intelligence/Weeknights-Shift.png
       :width: 50%
       :alt: Business-hours shift in web service primary schedule.
 
-Using the schedule preview, Skyler notices that the way the responders are ordered in the shifts, there are responders who have a weeknights shift that immediately follows their business-hours shift. He reorders the responders so responders have a week off between their business0hours shift and their weeknights shift. 
+Using the schedule preview, Skyler notices that the way the responders are ordered in the shifts, there are responders who have a weeknights shift that immediately follows their business-hours shift. 
 
-.. image:: /_images/incident-intelligence/Business-Hours-Schedule-Preview.png
+.. image:: /_images/incident-intelligence/Back-To-Back-Shifts.png
       :width: 99%
       :alt: Business-hours shift in web service primary schedule.
+
+Skyler reorders the responders so responders have a week off between their business0hours shift and their weeknights shift. 
+
+.. image:: /_images/incident-intelligence/Reordered-Responders.png
+      :width: 99%
+      :alt: Business-hours shift in web service primary schedule.
+
 
 Follow these steps to create a day-by-day shift for weeknight coverage:
 
