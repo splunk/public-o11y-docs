@@ -48,17 +48,33 @@ You can also export and monitor data related to your Kubernetes clusters, as des
 Use the Kubernetes navigators
 ==============================
 
+.. note:: The following sections show you components specific to the Kubernetes navigators. For information on components shared by all navigators, see :ref:`use-navigators-imm`.
+
 There are two Kubernetes navigators, Kubernetes nodes and Kubernetes workloads. On the :strong:`Infrastructure` landing page, you can see the summary cards for both navigators under the :strong:`Kubernetes` section.
 
    .. image:: /_images/infrastructure/k8s-nav-summary.png
       :alt: Summary cards for Kubernetes navigators on the landing page.
       :width: 60%
 
-   * Kubernetes nodes navigator: <when to use this>
-   * Kubernetes workloads navigator: <when to use this>
+The following table compares the two Kubernetes navigators.
 
-Maybe a table comparing the two navs?
+.. list-table::
+   :header-rows: 1
+   :widths: 20 40 40
 
+   * - Navigator
+     - Description
+     - When to use?
+   
+   * - Kubernetes nodes
+     - Provides a hierarchical monitoring experience of the Kubernetes infrastructure.
+     - Diagnose an issue?
+
+   * - Kubernetes workloads
+     - ...
+     - ...
+
+.. _k8s-nodes-nav:
 
 Kubernetes nodes navigator
 ------------------------------
@@ -72,18 +88,18 @@ Each Kubernetes service consists of the following elements:
 
    .. image:: /_images/infrastructure/k8s-hierarchy-diagram.png
       :alt: Diagram of Kubernetes component hierarchical relationship.
-      :width: 50%
+      :width: 40%
 
 Instead of a heat map or table view of instances, the Kubernetes nodes navigator lets you monitor Kubernetes infrastructure with an interactive hierarchical map. You can select elements in the map to drill down into them, or use the filter to explore your data. The level of detail shown on the map is dynamic and depends on the number of elements shown. 
 
    .. image:: /_images/infrastructure/k8s-nodes-map.png
       :alt: Hierarchical map view in the Kubernetes nodes navigator at the service level.
-      :width: 100%
+      :width: 90%
 
 Use the breadcrumb navigation bar to jump across levels and drill down into different the entities at any level.
 
     ..  image:: /_images/infrastructure/k8s-nav-breadcrumb.gif
-        :width: 70%
+        :width: 100%
         :alt: How to jump back to the node level from the container level, select a different node to investigate, and jump to the cluster level.
 
 Containers, pods, and nodes are colored by health and status, as reported by Kubernetes:
@@ -93,7 +109,10 @@ Containers, pods, and nodes are colored by health and status, as reported by Kub
     * Nodes are colored by condition: ready, not ready, pressure, and so on.
 
 
+.. _k8s-workloads-nav:
 
+Kubernetes workloads navigator
+---------------------------------
 
 
 
