@@ -23,7 +23,9 @@ On the Infrastructure Monitoring landing page, each card represents a navigator,
 Monitor all instances in a navigator
 ---------------------------------------
 
-In each navigator, you have two options to monitor your instances: table view and heat map view.
+  .. note:: The following section applies to most navigator, except Network Explorer and Kubernetes navigator. For more information, see :ref:`network-explorer-network-map` and :ref:`infrastructure-k8s-nav`.
+
+In most navigators, you have two options to monitor your instances: table view and heat map view.
 
 By default, for AWS, Azure, and select GCP navigators (Google Compute Engine, Google Kubernetes Engine, and Google Cloud Storage), if the region property is available on your data, your instances are grouped by region. Default grouping is applied to both table and heat map views.
 
@@ -52,8 +54,6 @@ The following table shows how instances are sorted in each view:
        * You can’t change the default colors for each Color |hyph| by option.
 
        * The navigator automatically sets the value range for each color.
-
-
 
 
 .. note::
