@@ -605,12 +605,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/lo-connect-landing
+   Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
 
 .. toctree::
    :maxdepth:   3   
 
-   logs/log-observer-landing
+   Splunk Log Observer TOGGLE <logs/log-observer-landing>
 
 .. toctree::
    :caption: RUM
