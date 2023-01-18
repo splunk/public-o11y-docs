@@ -70,7 +70,7 @@ Each Kubernetes service consists of the following elements:
 
    .. image:: /_images/infrastructure/k8s-hierarchy-diagram.png
       :alt: Diagram of Kubernetes component hierarchical relationship.
-      :width: 80%
+      :width: 60%
 
 Instead of a heat map or table view of instances, the Kubernetes nodes navigator lets you monitor your instances with a hierarchical map.
 
@@ -78,7 +78,7 @@ The hierarchical map view displays your Kubernetes infrastructure in an interact
 
    .. image:: /_images/infrastructure/k8s-nodes-map.png
       :alt: Hierarchical map view in the Kubernetes nodes navigator.
-      :width: 80%
+      :width: 100%
 
 
 
