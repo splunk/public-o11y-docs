@@ -42,9 +42,7 @@ If you're using the OpenTelemetry Collector, you can create a receiver to :ref:`
 
 Modify naming schemes you sent to other metric systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you're working with metrics that you had previously sent to other metric systems (such as Graphite), modify the naming scheme to leverage the full feature set of Splunk Observability Cloud. 
-
-If you already have metrics with period-separated names, use Splunk OTel parse dimensions from metric names. 
+If you're working with metrics that you had previously sent to other metric systems, such as Graphite, modify the naming scheme to leverage the full feature set of Splunk Observability Cloud. 
 
 .. _metric-name-standards:
 
