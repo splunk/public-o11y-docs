@@ -1,7 +1,7 @@
 .. _infrastructure-k8s:
 
 **********************************
-Monitor Kubernetes
+Monitor Kubernetes (deprecated)
 **********************************
 
 .. meta::
@@ -41,7 +41,7 @@ You can also export and monitor data related to your Kubernetes clusters, as des
 Use the Kubernetes navigator
 ============================
 .. note::
-   Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes may result in the navigator not displaying all clusters. See :new-page:`endoflife.date <https://endoflife.date/kubernetes>` for more information.
+   Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes might result in the navigator not displaying all clusters. See :new-page:`endoflife.date <https://endoflife.date/kubernetes>` for more information.
 
 View the health of entire Kubernetes clusters at a glance from the Infrastructure page. From the Infrastructure page, you can drill down into and analyze detailed metrics about these Kubernetes resources:
 

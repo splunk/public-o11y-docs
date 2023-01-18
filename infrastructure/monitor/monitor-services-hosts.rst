@@ -16,6 +16,7 @@ Monitor services and hosts in Splunk Infrastructure Monitoring
     gcp
     k8s
     hosts
+    k8s-nav
 
 See the following pages for more information about using :ref:`navigators <use-navigators-imm>` to monitor public cloud, container, or host integrations:
 
@@ -28,6 +29,7 @@ See the following pages for more information about using :ref:`navigators <use-n
 * Containers
   
   - :ref:`infrastructure-k8s`
+  - :ref:`infrastructure-k8s-nav`
 
 * My Data Center
   
