@@ -16,31 +16,7 @@ Monitor Kubernetes
 Before you can start monitoring any Kubernetes resources, :ref:`get-started-k8s`, and log in with your administrator credentials.
 
 
-You can monitor Kubernetes metrics with Splunk Observability Cloud. Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. If you're also exporting logs from Kubernetes and want to learn about how to view logs in Observability Cloud, see :ref:`get-started-logs`.
-
-You can also export and monitor data related to your Kubernetes clusters, as described in the following table.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 30, 30, 40
-
-   * - :strong:`Get data in`
-     - :strong:`Monitor`
-     - :strong:`Description`
-
-   * - - :ref:`get-started-aws`
-       - :ref:`get-started-gcp`
-       - :ref:`get-started-azure`
-     - - :ref:`infrastructure-aws`
-       - :ref:`infrastructure-gcp`
-       - :ref:`infrastructure-azure`
-     - Connect to the cloud service provider your Kubernetes clusters run in, if any.
-
-   * - :ref:`get-started-application`
-     - :ref:`get-started-apm`
-     - Collect metrics and spans from applications running in Kubernetes clusters.
-
-
+You can monitor Kubernetes metrics with Splunk Observability Cloud. Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities.
 
 
 .. _use-k8s-nav:
@@ -117,3 +93,29 @@ Kubernetes workloads navigator
 
 
 
+Learn more
+=====================
+
+If you're also exporting logs from Kubernetes and want to learn about how to view logs in Observability Cloud, see :ref:`get-started-logs`.
+
+You can also export and monitor data related to your Kubernetes clusters, as described in the following table.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30, 30, 40
+
+   * - :strong:`Get data in`
+     - :strong:`Monitor`
+     - :strong:`Description`
+
+   * - - :ref:`get-started-aws`
+       - :ref:`get-started-gcp`
+       - :ref:`get-started-azure`
+     - - :ref:`infrastructure-aws`
+       - :ref:`infrastructure-gcp`
+       - :ref:`infrastructure-azure`
+     - Connect to the cloud service provider your Kubernetes clusters run in, if any.
+
+   * - :ref:`get-started-application`
+     - :ref:`get-started-apm`
+     - Collect metrics and spans from applications running in Kubernetes clusters.
