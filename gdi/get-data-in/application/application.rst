@@ -10,15 +10,15 @@ Instrument back-end applications to send spans to Splunk APM
 ..	toctree::
    :hidden:
 
-   Instrument a Java application <java/get-started>
-   Instrument a Python application <python/get-started>
-   Instrument a Node.js application <nodejs/get-started>
-   Instrument a .NET application <dotnet/get-started>
-   Instrument a Go application <go/get-started>
-   Instrument a Ruby application <ruby/get-started>
-   Instrument a PHP application <php/get-started>
+   Instrument a Java application TOGGLE <java/get-started>
+   Instrument a Python application TOGGLE <python/get-started>
+   Instrument a Node.js application TOGGLE <nodejs/get-started>
+   Instrument a .NET application TOGGLE <dotnet/get-started>
+   Instrument a Go application TOGGLE <go/get-started>
+   Instrument a Ruby application TOGGLE <ruby/get-started>
+   Instrument a PHP application TOGGLE <php/get-started>
    Instrument applications written in other programming languages <other-languages>
-   Send spans from the Istio service mesh <istio/istio>
+   Send spans from the Istio service mesh TOGGLE <istio/istio>
 
 Instrument your back-end services and applications to send metrics and traces to Splunk Observability Cloud.
 
