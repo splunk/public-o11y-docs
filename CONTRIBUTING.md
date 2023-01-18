@@ -1,11 +1,8 @@
-# Contributing Guidelines
+# Contributing guidelines
 
 Thank you for your interest in contributing to Splunk Observability Cloud documentation. Read through this document before submitting any pull request.
 
-In addition to this document, review the [Code of Conduct](CODE_OF_CONDUCT.md). For any code of conduct questions or comments, send an email to oss@splunk.com.
-
-- [Contributing Guidelines](#contributing-guidelines)
-  - [Contributor License Agreement](#contributor-license-agreement)
+- [Contributing guidelines](#contributing-guidelines)
   - [Folder structure](#folder-structure)
     - [Find a document in the repository](#find-a-document-in-the-repository)
   - [Edit or add documentation](#edit-or-add-documentation)
@@ -17,10 +14,6 @@ In addition to this document, review the [Code of Conduct](CODE_OF_CONDUCT.md). 
       - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
     - [Test the docs locally](#test-the-docs-locally)
     - [Create a pull request](#create-a-pull-request)
-
-## Contributor License Agreement
-
-Before contributing, you must sign the [Splunk Contributor License Agreement (CLA)](https://www.splunk.com/en_us/form/contributions.html).
 
 ## Folder structure
 
@@ -212,5 +205,6 @@ To get your edits reviewed, open a pull request with the following features:
 - Target branch must be `main` in `splunk/public-o11y-docs`.
 - Add relevant labels.
 - Add a description for your changes.
+- Fill out the other fields in the PR template.
 
 If your changes aren't ready for review, set the pull request as draft. To do so, select "Convert to draft" at the bottom of the "Reviewers" section.
