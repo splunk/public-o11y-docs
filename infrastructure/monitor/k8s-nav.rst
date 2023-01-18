@@ -63,22 +63,33 @@ Kubernetes nodes navigator
 
 Each Kubernetes service consists of the following elements:
 
-* Container: A lightweight package containing everything needed to run applications.
-* Pod: A group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
-* Node: A physical or a virtual machine that hosts pods and the necessary resources to run pods.
-* Cluster: A group of nodes for running containerized applications. 
+    * Container: A lightweight package containing everything needed to run applications.
+    * Pod: A group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
+    * Node: A physical or a virtual machine that hosts pods and the necessary resources to run pods.
+    * Cluster: A group of nodes for running containerized applications. 
 
    .. image:: /_images/infrastructure/k8s-hierarchy-diagram.png
       :alt: Diagram of Kubernetes component hierarchical relationship.
-      :width: 60%
+      :width: 50%
 
-Instead of a heat map or table view of instances, the Kubernetes nodes navigator lets you monitor your instances with a hierarchical map.
-
-The hierarchical map view displays your Kubernetes infrastructure in an interactive cluster map. Select elements in the map to explore data about each of those elements. The level of detail shown on the map is dynamic and depends on the number of elements shown, either specified through the filters or whether you zoom in on to drill down for more detail.
+Instead of a heat map or table view of instances, the Kubernetes nodes navigator lets you monitor Kubernetes infrastructure with an interactive hierarchical map. You can select elements in the map to drill down into them, or use the filter to explore your data. The level of detail shown on the map is dynamic and depends on the number of elements shown. 
 
    .. image:: /_images/infrastructure/k8s-nodes-map.png
-      :alt: Hierarchical map view in the Kubernetes nodes navigator.
+      :alt: Hierarchical map view in the Kubernetes nodes navigator at the service level.
       :width: 100%
+
+Use the breadcrumb navigation bar to jump across levels and drill down into different the entities at any level.
+
+    ..  image:: /_images/infrastructure/k8s-nav-breadcrumb.gif
+        :width: 70%
+        :alt: How to jump back to the node level from the container level, select a different node to investigate, and jump to the cluster level.
+
+Containers, pods, and nodes are colored by health and status, as reported by Kubernetes:
+
+    * Containers are colored by status: ready, not ready.
+    * Pods are colored by phase: running, pending, failed, and so on.
+    * Nodes are colored by condition: ready, not ready, pressure, and so on.
+
 
 
 
