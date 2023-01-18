@@ -7,11 +7,11 @@ Monitor Kubernetes (deprecated)
 .. meta::
    :description: Learn how to monitor Kubernetes resources with Splunk Observability Cloud.
 
-.. notes::
-    The classic Kubernetes navigator is deprecated and will reach End of Support on ??. Anything else I should say here?
+.. note::
+   The classic Kubernetes navigator is deprecated and will reach End of Support on ??. Anything else I should say here?
 
-.. notes::
-    The following topic describes the classic Kubernetes navigator. See :ref:`infrastructure-k8s` for documentation on the new Kubernetes navigator.
+.. note::
+   The following topic describes the classic Kubernetes navigator. See :ref:`infrastructure-k8s` for documentation on the new Kubernetes navigator.
 
 Before you can start monitoring any Kubernetes resources, :ref:`get-started-k8s`, and log in with your administrator credentials.
 
@@ -44,6 +44,7 @@ You can also export and monitor data related to your Kubernetes clusters, as des
 
 Use the Kubernetes navigator
 ============================
+
 .. note::
    Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes might result in the navigator not displaying all clusters. See :new-page:`endoflife.date <https://endoflife.date/kubernetes>` for more information.
 
