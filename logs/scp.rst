@@ -10,7 +10,7 @@ When you set up Log Observer Connect, your logs data remains strictly in your Sp
 
 Region and version availability
 ==============================================================
-Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
+Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Log Observer Connect is not supported in GovCloud regions. Splunk Log Observer Connect is compatible with Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
 
 .. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the universal forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
 
@@ -38,11 +38,11 @@ To set up Log Observer Connect for Splunk Cloud Platform without help from the S
    
       - Adds Observability Cloud IPs and your local machine's IP to your Splunk Cloud Platform allow list to allow Log Observer Connect services and your machine to connect to your Splunk Cloud Platform instance through the management port
       
-      - Fetches a server certificate
+      - Fetches a certificate chain
       
       - Removes your local machine's IP from the allow list
       
-4. Copy and paste the server certificate on the next page to securely connect Log Observer Connect and your Splunk Cloud Platform instance.
+4. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance.
 
 5. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 

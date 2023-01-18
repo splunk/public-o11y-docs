@@ -24,8 +24,11 @@ Any user can run the following actions:
 * :ref:`request-admin`
 * :ref:`look-up-user-login`
 * :ref:`user-account-locked`
-* :ref:`color-accessibility`
 
+Only the current user can run the following actions:
+
+* :ref:`change_time_zone_color_accessibility`
+* :ref:`api-access-token`
 
 .. _add-users-organization:
 
@@ -130,13 +133,3 @@ After a user makes too many unsuccessful login attempts, Observability Cloud loc
 The user's account is locked for several minutes before the user can try to log in again.
 
 If you need to unlock an account before the lock period ends, contact :ref:`support`.
-
-.. _color-accessibility:
-
-Change color accessibility settings 
-=======================================
-
-Many features of Splunk Observability Cloud use colors to display patterns in data. If your users need more visually accessible color palettes, select :strong:`Account Settings > Color Accessibility` to modify it. 
-
-.. note::
-   Each user must change their own color accessibility settings, and an administrator cannot change these settings for other users.

@@ -5,7 +5,7 @@ Amazon Fargate
 ****************************
 
 .. meta::
-      :description: Deploy the Collector as a Daemon service in an Amazon ECS EC2 cluster.
+      :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector as a Daemon service in an Amazon ECS EC2 cluster.
 
 Knowledge of AWS Fargate (Fargate) is assumed. See the :new-page:`user guide <https://docs.aws.amazon.com/AmazonECS/latest/userguide/what-is-fargate.html>` for more information. 
 
@@ -52,7 +52,7 @@ Copy the default Collector container definition shown in the example.Replace ``M
     },
     {
       "name": "ECS_METADATA_EXCLUDED_IMAGES",
-      "value": "[\"quay.io/signalfx/splunk-otel-collector\"]"
+      "value": "[\"quay.io/signalfx/splunk-otel-collector*\"]"
     }
   ],
   "image": "quay.io/signalfx/splunk-otel-collector:0.33.0",

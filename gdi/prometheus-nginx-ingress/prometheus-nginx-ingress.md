@@ -1,7 +1,7 @@
 (prometheus-nginx-ingress)=
 
 # Prometheus NGINX Ingress
-<meta name="Description" content="Documentation on the prometheus-nginx-ingress integration for Splunk Observability Cloud.">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Prometheus NGINX Ingress monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

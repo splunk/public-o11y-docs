@@ -5,7 +5,7 @@ Configure the Splunk Android RUM instrumentation
 *****************************************************************
 
 .. meta::
-   :description: Configure the Splunk RUM instrumentation for your Android applications.
+   :description: Configure the Splunk Observability Cloud real user monitoring / RUM instrumentation for your Android applications.
 
 You can configure the Android RUM agent from the Splunk OpenTelemetry Instrumentation for Android to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 

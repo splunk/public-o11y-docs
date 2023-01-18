@@ -2,7 +2,7 @@
 
 # Splunk APM (SAPM) 
 
-<meta name="Description" content="Documentation on the Splunk APM (SAPM) exporter">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Splunk APM exporter. See benefits, install, configuration, and traces">
 
 ## Description 
 The Splunk Distribution of OpenTelemetry Collector offers support for the Splunk APM (SAPM) exporter. The SAPM exporter is in beta, but breaking changes will not be introduced in a new release.

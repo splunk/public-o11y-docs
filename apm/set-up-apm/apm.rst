@@ -31,6 +31,7 @@ See the following optional topics for additional guidance as you set up Splunk A
 * :ref:`apm-environments`
 * :ref:`sensitive-data-controls`
 * :ref:`get-started-relatedcontent` 
+* :ref:`autodetect-list`
 * :ref:`instr-troubleshooting`
 
 .. raw:: html

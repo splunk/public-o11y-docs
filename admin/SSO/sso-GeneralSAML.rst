@@ -7,6 +7,7 @@ Configure SSO using a generic SAML SSO integration
 .. meta::
    :description: Prerequisites and installation steps to configure SSO using a generic SAML SSO integration. 
 
+.. caution::  This integration can send credential information to unverified destinations. Although you can use generic SAML SSO integrations to authenticate users, Observability Cloud doesn't support these integrations as your primary authentication mechanism. The Observability Cloud support team can't help you diagnose or repair problems you encounter while trying to authenticate users using generic SSO integrations, aside from ensuring that the integration itself is working.
 
 If you use an SSO login service other than the ones listed in :ref:`sso-label`, you can create a generic SAML SSO integration for your organization. 
 
@@ -98,10 +99,15 @@ Steps
 To install a generic SAML SSO integration, follow these steps:
 
    #. Log in to Splunk Observability Cloud.
-   #. In the left navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration`.
-   #. In the integration filter menu, select :guilabel:`All`.
-   #. In the :guilabel:`Search` field, search for :guilabel:`SAML`, and select it.
+   #. Open the :new-page:`SAML guided setup <https://login.signalfx.com/#/integrations/saml/description>`. Optionally, you can navigate to the guided setup on your own:
+      #. In the left navigation menu, select :menuselection:`Data Management`.
+   
+      #. Select :guilabel:`Add Integration`.
+   
+      #. In the integration filter menu, select :guilabel:`All`.
+   
+      #. In the :guilabel:`Search` field, search for :guilabel:`SAML`, and select it.
+   
    #. In the :guilabel:`Name` field, enter the name for this integration. If your organization has a :ref:`custom URL<custom-url>`, this name appears as the text for the button users click to sign in (see the section :ref:`Name an SSO integration<naming-note-sso>`).
    #. In the remaining fields, enter the information you gathered in the :ref:`generic-sso-prerequisites` section.
    #. :guilabel:`Save`. The message :strong:`Validated!` appears.
@@ -115,4 +121,4 @@ Once you have a custom URL configured, your users can continue to log in using t
 
 Observability Cloud generates a password for users you create in generic SAML SSO. If the generic SAML login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
 
-.. caution::  This integration can send credential information to unverified destinations. Although you can use generic SAML SSO integrations to authenticate users, Observability Cloud doesn't support these integrations as your primary authentication mechanism. The Observability Cloud support team can't help you diagnose or repair problems you encounter while trying to authenticate users using generic SSO integrations, aside from ensuring that the integration itself is working.
+.. include:: /_includes/troubleshooting-steps.rst

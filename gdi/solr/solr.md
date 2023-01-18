@@ -1,7 +1,7 @@
 (solr)=
 
 # SolrCloud
-<meta name="description" content="Documentation for the solr monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the SolrCloud monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -27,7 +27,7 @@ This integration is available for Kubernetes, Windows, and Linux.
 ```
 
 ```{note}
-Provide a SolrCloud monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a SolrCloud monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

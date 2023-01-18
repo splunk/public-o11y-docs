@@ -163,7 +163,7 @@ A span ID is a field name that identifies each span in your application. A span 
 Tag
 ================
 
-A tag is a field name that is an attribute of your span that you can use to filter events. An example of a tag is a property about the user, such as the operating system or the browser the user uses to view your application. The general definition for tags and span tags are the in both Splunk APM and Splunk RUM are the same. In Splunk APM, tags are called span tags. For more, see :ref:`apm-span-tags`.
+A tag is a field name that is an attribute of your span that you can use to filter events. An example of a tag is a property about the user, such as the operating system or the browser the user uses to view your application. The definition for tags and span tags are the same in both Splunk APM and Splunk RUM. In Splunk APM, tags are called span tags. For more, see :ref:`apm-span-tags`.
 
 
 .. _rum-mobile-metrics:

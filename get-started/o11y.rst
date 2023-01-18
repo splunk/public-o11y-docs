@@ -27,7 +27,7 @@ Follow these steps to set up and make the most of Observability Cloud:
 1. Create a plan and set up your organization
 =================================================
 
-Before you start, we recommend you to create a plan for how you want to set up your Observability Cloud organization. For information about how to plan for and set up your Observability Cloud organization, see :ref:`admin-admin`.
+Before you start, create a plan for how you want to set up your Observability Cloud organization. For information about how to plan for and set up your Observability Cloud organization, see :ref:`admin-admin`.
 
 
 .. _get-started-gdi:
@@ -37,7 +37,7 @@ Before you start, we recommend you to create a plan for how you want to set up y
 
 Gather all the data from your environment in Observability Cloud to achieve full-stack observability. For information about how to get data in, see :ref:`get-started-get-data-in`.
 
-As a part of getting data in, make sure to consider bringing in data in a way that enables :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Observability Cloud. When enabled, the Related Content bar displays automatically when a you select a relevant element and allows you to easily take a data-driven investigative approach. 
+As a part of getting data in, make sure to consider bringing in data in a way that enables :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Observability Cloud. When enabled, the Related Content bar displays automatically when a you select a relevant element and lets you take a data-driven investigative approach.
 
 
 .. _get-started-explore:
@@ -67,7 +67,7 @@ Once you have data coming into Observability Cloud, it's time to do some explori
 
 Now that you've explored and familiarized yourself with the data you have coming into Observability Cloud, set up detectors to issue alerts about your data and customize your Observability Cloud experience.
 
-- Set up :ref:`detectors <create-detectors>` to send alerts when data conditions that are important to you are met.
+- Set up :ref:`detectors <create-detectors>` to send alerts when your incoming data contains conditions you want to know about.
 
 - In addition to exploring your data using Infrastructure Monitoring navigators and built-in :ref:`dashboards <dashboard-create-customize>`, you can also create new dashboards and customize existing ones.
 

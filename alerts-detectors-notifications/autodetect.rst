@@ -5,27 +5,31 @@ AutoDetect in Splunk Observability Cloud
 ******************************************************
 
 .. meta::
-   :description: AutoDetect alerts and detectors are read-only alerts and detectors that Splunk Observability Cloud automatically creates when you have supported integrations configured. This topic describes how to work with AutoDetect alerts and detectors.
+   :description: Splunk Observability Cloud automatically alerts and detectors when you have supported integrations configured. Learn more on how to work with AutoDetect alerts and detectors.
 
-AutoDetect alerts and detectors are read-only alerts and detectors that Splunk Observability Cloud automatically creates when you have supported integrations configured.
+AutoDetect alerts and detectors are alerts and detectors that Splunk Observability Cloud automatically creates when you have supported integrations configured.
 
-AutoDetect detectors don't count toward the maximum number of detectors you can have in your organization.
+AutoDetect detectors are available for Splunk APM and Splunk Infrastructure Monitoring.
+
+.. note:: AutoDetect detectors don't count toward the maximum number of detectors you can have in your organization.
 
 Prerequisites
 ==============================
-To use AutoDetect alerts and detectors, you must first connect and send in data for supported integrations. Supported integrations include Amazon Relational Database (Amazon RDS), Kafka, and Kubernetes. AutoDetect detectors are also configured for some system settings of Splunk Observability Cloud.
 
-See the following topics for more information on how to set up each integration:
+To use AutoDetect alerts and detectors, you must first send data for integrations and instrumented services. AutoDetect detectors are also configured for some system settings of Splunk Observability Cloud.
 
-- :ref:`Amazon <get-started-aws>`
-- :new-page-ref:`Kafka <kafka>`
-- :ref:`Kubernetes <get-started-k8s>`
+See the following topics for more information on how to collect the required data:
+
+- :ref:`apm-gdi`
+- :ref:`get-started-aws`
+- :new-page-ref:`kafka`
+- :ref:`get-started-k8s`
 
 
 Use AutoDetect alerts and detectors
 ===========================================
 
-Once you set up the supported integrations, AutoDetect alerts and detectors automatically appear on the :strong:`Alerts` page, the :strong:`Detectors` page, and the corresponding navigators for your integrations. 
+After you've set up the supported integrations, AutoDetect alerts and detectors automatically appear on the :strong:`Alerts` page, the :strong:`Detectors` page, and the corresponding navigators for your integrations. 
 
 .. note:: By default, you are not subscribed to receive notifications from AutoDetect. To learn how to subscribe to AutoDetect notifications, see :ref:`autodetect-subscribe`.
 
@@ -43,17 +47,35 @@ To view a complete list of all available AutoDetect alerts and detectors in your
       :width: 90%
       :alt: This screenshot shows what an AutoDetect component looks like on the Alerts page.
 
-To view AutoDetect alerts and detectors specific to a service, do the following:
+To view AutoDetect alerts and detectors specific to an instrumented service or integration, do the following:
 
-#. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page.
-#. Select the navigator you want to view.
-#. On the navigator page, click :guilabel:`Alerts` or :guilabel:`Active Detectors` in the Filter bar.
-    
-    A sidebar with all alerts related to the content on the page appears, as shown in the following image. AutoDetect components are indicated by the :strong:`Auto` badge.
+.. tabs:: 
 
-    .. image:: /_images/images-detectors-alerts/autodetect/autodetect-in-context.png
-      :width: 60%
-      :alt: This screenshot shows what an AutoDetect component looks like in the Alerts sidebar for a navigator.
+   .. tab:: APM
+
+      #. From the Splunk Observability Cloud home page, go to the :strong:`APM` page.
+      #. From the APM overview, click the active alerts for a service.
+      #. Select the alert to see more details.
+
+      A panel with additional details for the alert appears, as shown in the following image. AutoDetect components are indicated by the :strong:`Autodetect` badge.
+
+      .. image:: /_images/images-detectors-alerts/autodetect/apm-detector-auto.gif
+         :width: 100%
+         :alt: AutoDetector details as accessed from the APM Overview page.
+
+   .. tab:: Infrastructure
+
+      #. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page.
+      #. Select the navigator for the integration you want to view.
+      #. On the navigator page, click :guilabel:`Alerts` or :guilabel:`Active Detectors` in the Filter bar.
+
+      A sidebar with all alerts related to the content on the page appears, as shown in the following image. AutoDetect components are indicated by the :strong:`Auto` badge.
+
+      .. image:: /_images/images-detectors-alerts/autodetect/autodetect-in-context.png
+         :width: 100%
+         :alt: AutoDetect component in the Alerts sidebar for a navigator.
+
+      .. note:: In either view, if there is no component with the :strong:`Auto` badge, then you don't have any integration supported by AutoDetect.
 
 If available, AutoDetect detectors are connected to a chart by default. To view AutoDetect detectors related to a chart, do the following:
 
@@ -89,7 +111,8 @@ When you customize an AutoDetect detector, Splunk Observability Cloud creates a 
 
 To customize a copy of an AutoDetect detector, do the following:
 
-#. From the Splunk Observability Cloud home page, go to the :strong:`Alerts` page.
+#. Log in to Observability Cloud.
+#. In the left navigation menu, select :menuselection:`Alerts`. 
 #. Select the :strong:`Detectors` tab on the :strong:`Alerts` page.
 #. In the search field, enter the name of the detector you want to customize.
     
@@ -99,8 +122,8 @@ To customize a copy of an AutoDetect detector, do the following:
       :width: 80%
       :alt: This screenshot shows what an searching for an AutoDetect looks like on the Alerts page.
 
-#. Click the detector you want to customize to open it.
-#. Click :guilabel:`Create a Customized Version`.
+#. Select the detector you want to customize to open it.
+#. Select :guilabel:`Create a Customized Version`.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-disable-customize.png
       :width: 60%
@@ -108,14 +131,13 @@ To customize a copy of an AutoDetect detector, do the following:
 
 #. Make customizations you want to the detector. For the full list of customizable arguments for each AutoDetect detector, see :ref:`autodetect-list`.
 #. Rename your customized detector to distinguish it from the original detector and any other copy.
-#. Click :guilabel:`Activate`.
+#. Select :guilabel:`Activate`.
 
 Customized detectors created from AutoDetect detectors are indicated by the :strong:`Custom` badge.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-custom.png
       :width: 90%
       :alt: This screenshot shows a customized detector indicated by the Custom badge.
-
 
 Mute AutoDetect alerts and detectors
 ---------------------------------------------------------
@@ -129,7 +151,8 @@ Disable AutoDetect detectors
 
 To disable an AutoDetect detector, do the following:
 
-#. From the Splunk Observability Cloud home page, go to the :strong:`Alerts` page.
+#. Log in to Observability Cloud.
+#. In the left navigation menu, select :menuselection:`Alerts`. 
 #. Select the :strong:`Detectors` tab on the :strong:`Alerts` page.
 #. In the search field, enter the name of the detector you want to disable.
     
@@ -139,13 +162,13 @@ To disable an AutoDetect detector, do the following:
       :width: 80%
       :alt: This screenshot shows what an searching for an AutoDetect looks like on the Alerts page.
 
-#. Click the detector you want to disable to open it.
-#. Click :guilabel:`Disable Detector`.
+#. Select the detector you want to disable to open it.
+#. Select :guilabel:`Disable Detector`.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-disable-customize.png
       :width: 60%
       :alt: This screenshot shows the position of the Disable Detector button.
 
-Once you disable a detector, you can no longer edit it. You need to re-enable a disabled detector before making new updates.
+After you disable a detector, you can no longer edit it. You need to reenable a disabled detector before making new updates.
 
 

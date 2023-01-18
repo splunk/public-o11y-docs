@@ -64,7 +64,7 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
 
 .. code:: shell
 
-   # SignalFx API base URL (https://dev.splunk.com/observability/docs/apibasics/api_list)
+   # Observability Cloud API base URL (https://dev.splunk.com/observability/docs/apibasics/api_list)
    api.<YOUR_REALM>.signalfx.com
 
    # Splunk Observability Cloud user interface
@@ -92,4 +92,4 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
    # For DEB/RPM collector packages
    splunk.jfrog.io 
    
-.. note:: For more information, see :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` in the Developer Guide.
+.. note:: For more information, see the :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` topic in the Observability Cloud Developer Guide.

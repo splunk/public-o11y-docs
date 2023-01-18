@@ -22,7 +22,7 @@ Each set of time series in a plot line has a common metric type, whether a gauge
 
 Take as an example a gauge that is reporting every 30 seconds. In a chart with a time range of 5 minutes, each reported value can be shown on the chart, as there is typically enough screen real estate to show the data at its native resolution, i.e. 10 data points sent in during a 5‑minute period. If the time range is changed to 1 week, however, Infrastructure Monitoring automatically switches to a coarser chart resolution to match.
 
-In this case, Infrastructure Monitoring uses the :strong:`Average` rollup to calculate the average value of the gauge, over each time interval at the coarser chart resolution. With one week’s worth of data, each visible data point is the average of the values sent during the chosen interval. Infrastructure Monitoring then plots those average values, instead of, say, a sampled value. In general, this provides a more accurate representation of the data, but it also has the side effect of averaging out peaks and valleys, which may not be desirable, depending on the actual metric.
+In this case, Infrastructure Monitoring uses the :strong:`Average` rollup to calculate the average value of the gauge, over each time interval at the coarser chart resolution. With one week's worth of data, each visible data point is the average of the values sent during the chosen interval. Infrastructure Monitoring then plots those average values, instead of, say, a sampled value. In general, this provides a more accurate representation of the data, but it also has the side effect of averaging out peaks and valleys, which may not be desirable, depending on the actual metric.
 
 .. note::
 

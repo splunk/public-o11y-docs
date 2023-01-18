@@ -5,7 +5,7 @@ Connect to your cloud service provider
 **************************************
 
 .. meta::
-   :description: Start sending data to Splunk Observability Cloud.
+   :description: Start sending cloud platform data to Splunk Observability Cloud using AWS, Azure, or Google Cloud Platform / GCP.
 
 
 .. toctree::

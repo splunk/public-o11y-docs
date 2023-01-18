@@ -5,7 +5,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET
 *****************************************************************************
 
 .. meta::
-   :description: Use automatic instrumentation to send traces to Splunk APM without altering your code.
+   :description: Use automatic instrumentation to send traces to Splunk Observability Cloud Application Performance Monitoring (APM) without altering your code.
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation for .NET provides a package that automatically instruments your local ASP.NET applications to capture and report distributed traces to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 

@@ -1,13 +1,12 @@
 (expvar)=
 
 # Expvar (Go)
-<meta name="Description" content="Documentation on expvar monitor">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Golang Expvar monitor. See benefits, install, configuration, and metrics">
 
 
 ## Description
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `expvar` monitor via the Smart Agent receiver.
-
 
 The `expvar` monitor is a Smart Agent monitor that scrapes metrics from variables exposed in JSON
 format at an HTTP endpoint by [expvar](https://golang.org/pkg/expvar/). The monitor uses configured paths to get metric and dimension values from fetched JSON objects.
@@ -27,7 +26,7 @@ To install this integration:
 
 The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
-**Note:** Providing an expvar monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+**Note:** Providing an expvar monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 
 ### Splunk Distribution of OpenTelemetry Collector
 

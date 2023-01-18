@@ -5,7 +5,7 @@ Manually instrument Android applications
 *******************************************************************************
 
 .. meta::
-   :description: Manually instrument Android applications for Splunk RUM using the Android RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
+   :description: Manually instrument Android applications in Splunk Observability Cloud real user monitoring / RUM instrumentation using the Android RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
 You can manually instrument Android applications for Splunk RUM using the Android RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
