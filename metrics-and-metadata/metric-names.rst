@@ -21,7 +21,7 @@ Splunk Observability Cloud works with imported or :ref:`existing data <names-exi
 Imported data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When you use an existing data collection integrations such as the collectd agent or the AWS CloudWatch integration, the integration defines metric, dimension, and event names for you. To learn more, see :ref:`Metric name standards <metric-name-standards>`.
+When you use an existing data collection integration such as the collectd agent or the AWS CloudWatch integration, the integration defines metric, dimension, and event names for you. To learn more, see :ref:`Metric name standards <metric-name-standards>`.
 
 To make it easier for you to find and work with metrics coming in from different sources, Splunk Infrastructure Monitoring pulls, transforms, and returns the data in a unified format called virtual metrics. See :ref:`infrastructure-virtual-metrics` for more information.
 
