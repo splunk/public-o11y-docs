@@ -29,7 +29,7 @@ To explore your trace data, use the following controls:
 
 #. Filters for time range, environment, workflow, and services, as well as custom filters.
 #. Type of search, tag grouping, minimum and maximum trace duration, and trace search by ID.
-#. Real time chart of traces, with total and errors. and traces duration heatmap.
+#. Real time chart of traces, with total and errors, as well as traces duration heatmap.
 #. Table view of traces and group metrics, with total count of traces or trace durations.
 
 Trace Analyzer searches all currently retained traces; see :ref:`apm-data-retention` to learn more about the default trace retention period.
@@ -67,7 +67,7 @@ You can group all available traces by a single tag or attribute. For example, yo
     :width: 95%
     :alt: Tag selection menu of Trace Analyzer
 
-The resulting :guilabel:`Group Metrics` tab show different metrics depending on the type of view:
+The resulting :guilabel:`Group Metrics` tab shows different metrics depending on the type of view:
 
 - When the :guilabel:`Trace & error count` view is active, the :guilabel:`Group Metrics` tab shows a breakdown of the top 100 values for the selected tag, ranked by the number of errors.
 - When the :guilabel:`Trace duration` view is active, the :guilabel:`Group Metrics` tab shows a breakdown of top 100 values for the selected tag, ranked by maximum duration.
@@ -81,7 +81,7 @@ You can order both tables by the number of matching traces.
 When to use Trace Analyzer
 =============================================
 
-Splunk Observability Cloud provides several tools for exploring application monitoring data. Trace Analyzer is suited to scenarios where high cardinality, high granularity searches and explorations are required for researching unknown or new issues.
+Splunk Observability Cloud provides several tools for exploring application monitoring data. Trace Analyzer is suited to scenarios where high cardinality, high granularity searches and explorations are required for researching unknown or new issues. See :ref:`guideline-cardinality`.
 
 The following table presents what each APM tool is best suited for:
 
