@@ -23,7 +23,7 @@ On the Infrastructure Monitoring landing page, each card represents a navigator,
 Monitor all instances in a navigator
 ---------------------------------------
 
-  .. note:: The following section applies to most navigator, except Network Explorer and Kubernetes navigator. For more information, see :ref:`network-explorer-network-map` and :ref:`infrastructure-k8s-nav`.
+  .. note:: The following section applies to most navigators, except the Network Explorer and Kubernetes navigators. For more information, see :ref:`network-explorer-network-map` and :ref:`infrastructure-k8s-nav`.
 
 In most navigators, you have two options to monitor your instances: table view and heat map view.
 
