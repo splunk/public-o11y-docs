@@ -58,8 +58,11 @@ For host subscription plans, you can request and download reports that show whic
 To download a host diagnostics report, do the following:
 
 - Go to :menuselection:`Settings > Subscription Usage` and select the :strong:`APM` tab.
-- Expand the :guilabel:`Hosts` chart.
-- Drag to select the time range in the chart.
+- Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
+- Select an hour of time in the chart.
+- Select a specific minute within the hour.
 - Click :guilabel:`Download Data` to download the CSV file.
 
 For each host in the select period, the report shows the name of the tag assigned to the host, for example ``host.name``, and its value.
+
+.. note:: Reports can be generated and downloaded within the retention period. See :ref:`apm-extended-trace-retention` for more information.
