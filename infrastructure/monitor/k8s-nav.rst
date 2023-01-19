@@ -75,26 +75,33 @@ Instead of a heat map or table view of instances, the Kubernetes nodes navigator
       :alt: Hierarchical map view in the Kubernetes nodes navigator at the service level.
       :width: 90%
 
-Use the breadcrumb navigation bar to jump across levels and drill down into different the entities at any level.
-
-    ..  image:: /_images/infrastructure/k8s-nav-breadcrumb.gif
-        :width: 100%
-        :alt: How to jump back to the node level from the container level, select a different node to investigate, and jump to the cluster level.
-
 Containers, pods, and nodes are colored by health and status, as reported by Kubernetes:
 
     * Containers are colored by status: ``Ready``, ``Not Ready``, and ``Unknown``
     * Pods are colored by phase: ``Running``, ``Pending``, ``Succeeded``, ``Failed``, and ``Unknown``
     * Nodes are colored by condition: ``Node Ready``, ``Memory Pressure``, ``PID Pressure``, ``Disk Pressure``, ``Network Unavailable``, and ``Out of Disk``
 
-  You can hover over an item in the map to get a tooltip providing details about the item, including status. For example, hovering over this pod shows that its running phase is ``Pending``.
+Interact with the navigator
++++++++++++++++++++++++++++++++
 
-       .. image:: /_images/infrastructure/k8s-nav-hover.png
-          :alt: 
-          :width: 60%
+* Breadcrumb navigation: Jump across levels and switch to different entities at any level using the breadcrumb navigation bar.
+
+    ..  image:: /_images/infrastructure/k8s-nav-breadcrumb.gif
+        :width: 100%
+        :alt: How to jump back to the node level from the container level, select a different node to investigate, and jump to the cluster level.
 
 
+* Hover: Get more information about an element, including status or phase, by hovering over that element. For example, hovering over this pod shows that its running phase is ``Pending``.
 
+    .. image:: /_images/infrastructure/k8s-nav-hover.png
+        :alt: Hovering over a pod shows its information and ``Pending`` phase.
+        :width: 50%
+
+* Select and zoom: Drill down into an element and change the zoom level of the map, if applicable, by selecting the element. For example, selecting this pod changes the hierarchical map view from cluster level to pod level. Details about the pod displays in the sidebar, in the :strong:`About this pod` panel.
+    
+    ..  image:: /_images/infrastructure/k8s-nav-zoom.gif
+      :width: 100%
+      :alt: Selecting a pod changes the hierarchical map view from cluster level to pod level. Details about the pod displays in the sidebar, in the :strong:`About this pod` panel.
 
 .. _k8s-workloads-nav:
 
