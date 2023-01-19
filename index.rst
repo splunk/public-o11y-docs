@@ -584,11 +584,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   SignalFlow and analytics TOGGLE <infrastructure/analytics/signalflow-analytics-intro>
-
-.. toctree::
-   :maxdepth:   3
-
    Resolution and data retention <infrastructure/retention>
 
 .. toctree::
@@ -605,12 +600,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/lo-connect-landing
+   Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
 
 .. toctree::
    :maxdepth:   3   
 
-   logs/log-observer-landing
+   Splunk Log Observer TOGGLE <logs/log-observer-landing>
 
 .. toctree::
    :caption: RUM
@@ -672,7 +667,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/RUM-metrics
-
 
 .. toctree::
    :maxdepth:   3
@@ -766,7 +760,28 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Respond to and manage incidents TOGGLE <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
 
 .. toctree::
-   :caption: UNDERSTAND YOUR DATA
+   :caption: MOBILE
+   :maxdepth:   3
+
+   mobile/intro-to-mobile
+
+.. toctree::
+   :maxdepth:   3
+
+   Download the app <mobile/download-mobile>
+
+.. toctree::
+   :maxdepth:   3
+
+   View dashboards and alerts <mobile/use-mobile>
+
+.. toctree::
+   :maxdepth:   3
+
+   mobile/notification-preferences-mobile
+
+.. toctree::
+   :caption: UNDERSTAND AND ANALYZE YOUR DATA
    :maxdepth:   3
 
    Metrics, data points, and metric time series <metrics-and-metadata/metrics>
@@ -797,25 +812,9 @@ View a list of all supported integrations :ref:`supported-data-sources`
    metrics-and-metadata/metrics-finder-metadata-catalog
 
 .. toctree::
-   :caption: MOBILE
    :maxdepth:   3
 
-   mobile/intro-to-mobile
-
-.. toctree::
-   :maxdepth:   3
-
-   Download the app <mobile/download-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   View dashboards and alerts <mobile/use-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   mobile/notification-preferences-mobile
+   SignalFlow and analytics TOGGLE <analytics/signalflow-analytics-intro>
 
 .. toctree::
    :caption: ADMINISTER OBSERVABILITY CLOUD
@@ -854,7 +853,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Create and manage teams TOGGLE <admin/teams/manage-teams>
-
 
 .. toctree::
    :hidden:
