@@ -1,3 +1,4 @@
+.gitignore
 _build
 _download
 support
@@ -18,6 +19,6 @@ vale
 .vale.ini
 .idea
 .DS_Store
-product-docs.iml
+my-public-o11y-docs.iml
 _static/main.min.css
 _static/main.min.js
