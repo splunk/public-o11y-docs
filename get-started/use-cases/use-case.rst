@@ -37,7 +37,7 @@ For a video version of this use case, watch :new-page:`Splunk's Observability Cl
 Receive alerts about outlier behavior
 =================================================================================
 
-#. Kai, the SRE on call, receives an alert showing that the number of purchases on the Buttercup Games site has dropped significantly in the past hour and the checkout completion rate is abnormally low. Kai trusts that these are true outlier behaviors because the alert rule their team set up in Splunk Observability Cloud takes into account the time and day of week as a dynamic baseline, rather than simply using a static threshold.
+#. Kai, the SRE on call, receives an alert showing that the number of purchases on the Buttercup Games site has dropped significantly in the past hour and the checkout completion rate is too low. Kai trusts that these are true outlier behaviors because the alert rule their team set up in Splunk Observability Cloud takes into account the time and day of week as a dynamic baseline, rather than using a static threshold.
 
 #. Kai logs in to Splunk Observability Cloud on their laptop to investigate.
 
