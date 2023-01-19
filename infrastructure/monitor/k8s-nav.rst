@@ -41,15 +41,17 @@ The following table compares the two Kubernetes navigators.
 
    * - Navigator
      - Description
-     - When to use?
+     - Use this to
    
    * - Kubernetes nodes
-     - Provides a hierarchical monitoring experience of the Kubernetes infrastructure.
-     - Diagnose an issue?
+     - Provides a hierarchical view of your Kubernetes infrastructure
+     - | * Get an overview of your entire Kubernetes infrastructure
+       | * Monitor the health of all or part of the Kubernetes infrastructure
+       | * Identify and diagnose an issue with some part of the Kubernetes infrastructure
 
    * - Kubernetes workloads
-     - ...
-     - ...
+     - Provides a view of Kubernetes workloads across all your infrastructure
+     - Monitor Kubernetes workloads across your infrastructure, or a specific subset of workloads, such as those running in a particular namespace.
 
 .. _k8s-nodes-nav:
 
