@@ -1,8 +1,8 @@
 .. _infrastructure-k8s:
 
-**********************************
-Monitor Kubernetes (deprecated)
-**********************************
+******************************************
+Monitor Kubernetes (classic version)
+******************************************
 
 .. meta::
    :description: Learn how to monitor Kubernetes resources with Splunk Observability Cloud.
