@@ -21,13 +21,11 @@ Ingest alerts in Splunk Incident Intelligence
 
 There are 3 options for ingesting alerts in Incident Intelligence:
 
-1. 
-
 .. raw:: html
 
    <ol>
       <li>Create a detector for one of the available alert sources in Splunk Observability Cloud to automatically pass alerts. See <a href="#ii-ingest-observability-alerts">Available alert sources in Splunk Observability Cloud</a>.</li>
-      <li>Use the Splunk Incident Intelligence app on Splunkbase to send Splunk Enterprise, Splunk Cloud Platform, and Splunk IT Service Intelligence (ITSI) alerts. See <a href="ii-ingest-splunk-alerts">Available alert sources in Splunk Enterprise, Splunk Cloud Platform, and Splunk IT Service Intelligence (ITSI) </a>.</li>
+      <li>Use the Splunk Incident Intelligence app on Splunkbase to send Splunk Enterprise, Splunk Cloud Platform, and Splunk IT Service Intelligence (ITSI) alerts. See <a href="#ii-ingest-splunk-alerts">Available alert sources in Splunk Enterprise, Splunk Cloud Platform, and Splunk IT Service Intelligence (ITSI) </a>.</li>
       <li>Ingest third-party alerts using an ingest endpoint. See <a href="#ii-ingest-third-party-alerts">Available ingest endpoints for third-party alerts</a>.</li>
    </ol>
 
@@ -41,6 +39,7 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
 
 .. list-table::
    :header-rows: 1
+   :width: 100%
    :widths: 25, 75
 
    * - :strong:`Alert source`
@@ -69,6 +68,7 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
 
 .. list-table::
    :header-rows: 1
+   :width: 100%
    :widths: 25, 75
 
    * - :strong:`Alert source`
