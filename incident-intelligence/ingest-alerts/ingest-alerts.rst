@@ -76,13 +76,13 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
      - :strong:`Documentation`
 
    * - Splunk Enterprise
-     - See :reg:`ii-ingest-splunk-itsi-alerts`.
+     - See :rfc-reference:`ii-ingest-splunk-itsi-alerts`.
 
    * - Splunk Cloud Platform
-     - See :reg:`ii-ingest-splunk-itsi-alerts`.
+     - See :ref:`ii-ingest-splunk-itsi-alerts`.
 
    * - ITSI
-     - See :reg:`ii-ingest-splunk-itsi-alerts`.
+     - See :ref:`ii-ingest-splunk-itsi-alerts`.
 
 .. raw:: html
 
