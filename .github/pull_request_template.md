@@ -4,7 +4,7 @@ For more information, see our Contribution guidelines.
 //-->
 
 **Requirements**
-- [ ] The content follows our guidelines for style and formatting.
+- [ ] The content follows Splunk guidelines for style and formatting.
 - [ ] There are no CLI errors when building the docs locally.
 - [ ] You are contributing original content.
 

@@ -3,19 +3,57 @@
 Thank you for your interest in contributing to Splunk Observability Cloud documentation. Read through this document before submitting any pull request.
 
 - [Contributing guidelines](#contributing-guidelines)
-  - [Folder structure](#folder-structure)
+  - [Decide the type of edit](#decide-the-type-of-edit)
+    - [Quick edits to existing documentation](#quick-edits-to-existing-documentation)
+    - [Complex edits to one or multiple files](#complex-edits-to-one-or-multiple-files)
+  - [Folder structure of the repository](#folder-structure-of-the-repository)
     - [Find a document in the repository](#find-a-document-in-the-repository)
-  - [Edit or add documentation](#edit-or-add-documentation)
-    - [Create a branch for your work](#create-a-branch-for-your-work)
-    - [Edit content](#edit-content)
-    - [Create directories and files](#create-directories-and-files)
-    - [Edit the content](#edit-the-content)
-      - [Add an image and alt text](#add-an-image-and-alt-text)
-      - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
-    - [Test the docs locally](#test-the-docs-locally)
-    - [Create a pull request](#create-a-pull-request)
+    - [Create files or directories](#create-files-or-directories)
+  - [Edit the documentation](#edit-the-documentation)
+    - [Use the reStructuredText markup](#use-the-restructuredtext-markup)
+    - [Add images (optional)](#add-images-optional)
+    - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
+  - [Test the docs](#test-the-docs)
 
-## Folder structure
+## Decide the type of edit
+
+You can do quick edits, for example to fix typos, or more complex edits involving several files.
+
+In both cases, you'll need to fork this repository before opening a pull request.
+
+### Quick edits to existing documentation
+
+Quick edits can save you time and are a good alternative to filing feedback tickets. Good examples of quick edits include fixing typos, updating tables, changing links, adding code snippets, etc.
+
+To make a quick edit to existing documentation, follow these steps:
+
+1. Select the **Edit this page** link in the page you want to edit.
+2. If you’re already logged to GitHub, select **Fork this repository** to create your own copy of the repo.
+3. Make your edits to the content. For more information, read the rest of this document.
+4. After you’ve added your changes select **Propose changes**. Add a summary and description.
+5. Select **Create pull request** to open a pull request from your fork to main of the public repo.
+6. Edit the summary and description, then select **Create pull request** to confirm.
+7. Your pull request is now ready for review. The docs team will review it as soon as possible.
+
+All pull requests you create afterwards use your existing fork of the public docs repo.
+
+### Complex edits to one or multiple files
+
+While the GitHub editing interface works well for quick edits, it’s best to use a code editor and a local copy of your fork for more complex edits or edits involving multiple files. Basic knowledge of GitHub, git, and code editing tools is required in order to do this type of edits.
+
+To perform complex edits on one or multiple files, follow these steps:
+
+1. Select **Fork** in this repository to create a fork or copy of the repo.
+2. Open your fork. The copy now exists under your username (`<username>/public-o11y-docs`).
+3. Clone the repository to your machine using HTTPS or SSH.
+4. Create a branch and edit the documentation using your favorite code editor.
+5. Push the changes to the remote fork of the public docs repository (your copy of the repo).
+6. Open your fork in GitHub and select the **Pull requests** tab, then select **New pull request**.
+7. Select **Create pull request** to open a pull request from your fork to the `main` branch of this repo.
+8. Edit the summary and description, then select **Create pull request** to confirm.
+9. Your pull request is now ready for review. The o11y docs team will review it as soon as possible.
+
+## Folder structure of the repository
 
 Before you add new documents, or edit existing documents, familiarize yourself with the structure of this repository. 
 
@@ -60,34 +98,9 @@ If you want to edit a specific document, run a search for text strings contained
 grep -inro --include \*.rst "OpenTelemetry" .
 ```
 
-## Edit or add documentation
+### Create files or directories
 
-The main steps for adding or editing documentation are the following:
-
-1. Create a branch for your work.
-2. Edit the content in your branch.
-3. Test the docs locally.
-4. Create a pull request.
-
-Create small pull requests with incremental improvements rather than pull requests that contain a large number of changes. 
-
-> Keep your pull requests small and focused on the changes you want to apply. That makes both the reviewer's and your job easier.
-
-### Create a branch for your work
-
-The main branch is `main`. Merging edits to the `main` branch triggers an update of the documentation site at https://docs.splunk.com/Observability. 
-
-The `main` branch is protected, which means that any edit must be in the form of a pull request and approved by at least one member of the Splunk docs team.
-
-When naming branches, use the following pattern: `<github-handle>-description`.
-
-### Edit content 
-
-Follow these instructions to add or edit content:
-
-### Create directories and files
-
-Create directories and files that adhere to the following naming rules:
+When needed, create files or directories that adhere to the following naming rules:
 
 * Use lower case.
 * Use dashes for spaces.
@@ -109,7 +122,11 @@ Title of the page
 Content goes here.
 ```
 
-### Edit the content
+## Edit the documentation
+
+Follow these instructions to add or edit content.
+
+### Use the reStructuredText markup
 
 This repository uses reStructuredText (rST), a feature-rich, lightweight markup language similar to Markdown.
 
@@ -161,7 +178,9 @@ The following snippet shows an image, with a path relative to the _images folder
    :alt: This image shows an example APM service dashboard.
 ```
 
-#### Add an image and alt text 
+For more information on reStructuredText, see [reStructuredText Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
+
+### Add images (optional)
 
 Use the following syntax to add images uploaded to the `_images` folder:
 
@@ -175,13 +194,13 @@ Add images that enhance existing material, instead of replacing text. Don't incl
 
 > **NOTE:** Make sure to add alternative text. Writing alt text for an image is a helpful way to confirm that it adds something, for example, "This animation illustrates the pathway to create a dashboard" instead of something like "This is a screenshot of Tag Spotlight". For further guidance, see [Include alt text in images](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/Graphicsalttext) in the Splunk Style Guide. 
 
-#### Write with the Splunk style guide in mind
+### Write with the Splunk style guide in mind
 
 The Splunk Style Guide provides guidance on how to write straightforward, user-focused, example-rich content that inspires confidence in the user. See [A word about Splunk docs](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs) for an orientation to the [Splunk Style Guide](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs).
 
 You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against Splunk's style guide. See https://github.com/splunk/vale-splunk-style-guide.
 
-### Test the docs locally
+## Test the docs
 
 After you've saved your changes, you can test the docs using the Docker container:
 
@@ -196,15 +215,3 @@ When testing the docs:
 
 - Make sure that Sphinx is not sending warnings to the terminal. Solve all build errors and warnings before opening a pull request.
 - Check that the documentation shows as intended.
-
-### Create a pull request
-
-To get your edits reviewed, open a pull request with the following features:
-
-- Source branch must be a branch from your own fork of `splunk/public-o11y-docs`.
-- Target branch must be `main` in `splunk/public-o11y-docs`.
-- Add relevant labels.
-- Add a description for your changes.
-- Fill out the other fields in the PR template.
-
-If your changes aren't ready for review, set the pull request as draft. To do so, select "Convert to draft" at the bottom of the "Reviewers" section.
