@@ -35,23 +35,23 @@ There are two Kubernetes navigators, Kubernetes nodes and Kubernetes workloads. 
 
 The following table compares the two Kubernetes navigators.
 
-.. list-table::
-   :header-rows: 1
-   :widths: 20 40 40
+ .. list-table::
+    :header-rows: 1
+    :widths: 20 40 40
 
-   * - Navigator
-     - Description
-     - Use this to
+    * - :strong:`Navigator`
+      - :strong:`Description`
+      - :strong:`Use this to`
    
-   * - Kubernetes nodes
-     - Provides a hierarchical view of your Kubernetes infrastructure
-     - | * Get an overview of your entire Kubernetes infrastructure
-       | * Monitor the health of all or part of the Kubernetes infrastructure
-       | * Identify and diagnose an issue with some part of the Kubernetes infrastructure
+    * - Kubernetes nodes
+      - Provides a hierarchical view of your Kubernetes infrastructure
+      - * Get an overview of your entire Kubernetes infrastructure
+        * Monitor the health of all or part of the Kubernetes infrastructure
+        * Identify and diagnose an issue with some part of the Kubernetes infrastructure
 
-   * - Kubernetes workloads
-     - Provides a view of Kubernetes workloads across all your infrastructure
-     - Monitor Kubernetes workloads across your infrastructure, or a specific subset of workloads, such as those running in a particular namespace.
+    * - Kubernetes workloads
+      - Provides a view of Kubernetes workloads across all your infrastructure
+      - Monitor Kubernetes workloads across your infrastructure, or a specific subset of workloads, such as those running in a particular namespace.
 
 .. _k8s-nodes-nav:
 
