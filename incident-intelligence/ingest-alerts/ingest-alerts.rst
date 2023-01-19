@@ -12,6 +12,7 @@ Ingest alerts in Splunk Incident Intelligence
     :maxdepth: 3
     :hidden:
 
+    ingest-splunk-itsi
     ingest-cloudwatch
     ingest-azure
     ingest-prometheus
@@ -74,8 +75,14 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
    * - :strong:`Alert source`
      - :strong:`Documentation`
 
+   * - Splunk Enterprise
+     - See :reg:`ii-ingest-splunk-itsi-alerts`.
+
+   * - Splunk Cloud Platform
+     - See :reg:`ii-ingest-splunk-itsi-alerts`.
+
    * - ITSI
-     - See 
+     - See :reg:`ii-ingest-splunk-itsi-alerts`.
 
 .. raw:: html
 
