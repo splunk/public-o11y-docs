@@ -35,8 +35,9 @@ Settings
    * - :guilabel:`Alert when`
      - ``Above``, ``Below``, ``Out of Range``, ``Within Range``
      -
-       - Test item 1
-       - Test item 2
+       Test item 1
+
+       Test item 2
 
    * - :guilabel:`Threshold`
 
