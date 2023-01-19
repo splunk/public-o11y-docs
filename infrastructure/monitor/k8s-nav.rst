@@ -83,9 +83,17 @@ Use the breadcrumb navigation bar to jump across levels and drill down into diff
 
 Containers, pods, and nodes are colored by health and status, as reported by Kubernetes:
 
-    * Containers are colored by status: ready, not ready.
-    * Pods are colored by phase: running, pending, failed, and so on.
-    * Nodes are colored by condition: ready, not ready, pressure, and so on.
+    * Containers are colored by status: ``Ready``, ``Not Ready``, and ``Unknown``
+    * Pods are colored by phase: ``Running``, ``Pending``, ``Succeeded``, ``Failed``, and ``Unknown``
+    * Nodes are colored by condition: ``Node Ready``, ``Memory Pressure``, ``PID Pressure``, ``Disk Pressure``, ``Network Unavailable``, and ``Out of Disk``
+
+  You can hover over an item in the map to get a tooltip providing details about the item, including status. For example, hovering over this pod shows that its running phase is ``Pending``.
+
+       .. image:: /_images/infrastructure/k8s-nav-hover.png
+          :alt: 
+          :width: 60%
+
+
 
 
 .. _k8s-workloads-nav:
