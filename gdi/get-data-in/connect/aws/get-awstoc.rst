@@ -42,7 +42,7 @@ Following configuration, you can use Amazon CloudWatch to import metrics and log
 .. raw:: html
 
   <embed>
-    <h2>1. AWS integration prerequisites<a name="aws-integration-prereqs" class="headerlink" href="#aws-integration-prereqs" title="Permalink to this headline">¶</a></h2>
+    <h2>AWS integration prerequisites<a name="aws-integration-prereqs" class="headerlink" href="#aws-integration-prereqs" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 To connect AWS to Observability Cloud and integrate those platforms, you must meet the following prerequisites:
@@ -61,7 +61,7 @@ To connect AWS to Observability Cloud and integrate those platforms, you must me
 .. raw:: html
 
   <embed>
-    <h2>2. Plan your integration<a name="prep-for-aws-integration" class="headerlink" href="#prep-for-aws-integration" title="Permalink to this headline">¶</a></h2>
+    <h2>Plan your integration<a name="prep-for-aws-integration" class="headerlink" href="#prep-for-aws-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 Regardless of the connection option you choose, you can configure your system more efficiently if you decide beforehand what data types and sources you want.
@@ -76,7 +76,7 @@ To determine the best connection method and configuration settings, answer the f
 .. raw:: html
 
   <embed>
-    <h2>3. AWS connection options<a name="connection-options-aws" class="headerlink" href="#aws-connection-options-aws" title="Permalink to this headline">¶</a></h2>
+    <h2>AWS connection options<a name="connection-options-aws" class="headerlink" href="#aws-connection-options-aws" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 You can connect Observability Cloud to AWS in several different ways. Choose the connection method that best matches your needs:
@@ -110,7 +110,7 @@ If you can't connect AWS to Observability Cloud, see :ref:`Troubleshoot your AWS
 .. raw:: html
 
   <embed>
-    <h2>4. Use Metric Streams to forward data to Splunk Observability Cloud<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
+    <h2>Use Metric Streams to forward data to Splunk Observability Cloud<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 Rather than polling for metrics data at specified intervals, CloudWatch Metric Streams sends metrics to a Kinesis Data Firehose stream, reducing latency. See :new-page:`Low Latency Observability Into AWS Services With Splunk <https://www.splunk.com/en_us/blog/devops/real-time-observability-splunk-cloudwatch-metric-streams.html>` in the DevOps blog for more information.
@@ -164,10 +164,10 @@ CloudWatch Metric Streams do not support filtering based on resource tags. Confi
 .. raw:: html
 
   <embed>
-    <h2>5. Next steps<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
+    <h2>Next steps<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-After you're all set, we recommend the following:
+After you're all set, try:
 
 * See :ref:`Leverage data from integration with AWS <aws-post-install>` for an overview of what you can do after you connect Observability Cloud to AWS.
 * Learn about :ref:`our AWS Infrastructure Monitoring options <infrastructure-aws>`. You'll find instructions on how to import AWS metrics and metadata, or AWS tag and log information using namespaces and filters. 
