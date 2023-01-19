@@ -69,7 +69,7 @@ Each Kubernetes service consists of the following elements:
       :alt: Diagram of Kubernetes component hierarchical relationship.
       :width: 40%
 
-Instead of a heat map or table view of instances, the Kubernetes nodes navigator lets you monitor Kubernetes infrastructure with an interactive hierarchical map. You can select elements in the map to drill down into them, or use the filter to explore your data. The level of detail shown on the map is dynamic and depends on the number of elements shown. 
+Monitor your entire Kubernetes infrastructure with an interactive hierarchical map. You can select elements in the map to drill down into them, or use the filter to explore your data. The level of detail shown on the map is dynamic and depends on the number of elements shown. 
 
    .. image:: /_images/infrastructure/k8s-nodes-map.png
       :alt: Hierarchical map view in the Kubernetes nodes navigator at the service level.
@@ -91,25 +91,35 @@ Interact with the navigator
         :alt: How to jump back to the node level from the container level, select a different node to investigate, and jump to the cluster level.
 
 
-* Hover: Get more information about an element, including status or phase, by hovering over that element. For example, hovering over this pod shows that its running phase is ``Pending``.
+* Hover: Get more information about an element, including status or phase, by hovering over that element.
 
     .. image:: /_images/infrastructure/k8s-nav-hover.png
         :alt: Hovering over a pod shows its information and ``Pending`` phase.
         :width: 50%
 
-* Select and zoom: Drill down into an element and change the zoom level of the map, if applicable, by selecting the element. For example, selecting this pod changes the hierarchical map view from cluster level to pod level. Details about the pod displays in the sidebar, in the :strong:`About this pod` panel.
+* Select and zoom: Drill down into an element and change the zoom level of the map, if applicable, by selecting the element. Details about the element display in the sidebar, in the :strong:`About this pod` panel.
     
     ..  image:: /_images/infrastructure/k8s-nav-zoom.gif
       :width: 100%
       :alt: Selecting a pod changes the hierarchical map view from cluster level to pod level. Details about the pod displays in the sidebar, in the :strong:`About this pod` panel.
+
+* Filter: Filter the map by any available metadata in your Kubernetes data, such as a namespace, a workload, or any other key-value pair. When you filter the map, you see nodes that match the filter. Nodes that don't match the filter are hidden. Pods and containers that match the filter are highlighted, and non-matching pods and containers are dimmed. You can still select the dimmed pods and containers to view details about them in the sidebar.
+
+    ..  image:: /_images/infrastructure/k8s-nav-filter.gif
+      :width: 100%
+      :alt: Filtering ``kubernetes.io/cluster-service`` to ``true`` hides nodes that don't match and highlights matching pods and containers.
+
 
 .. _k8s-workloads-nav:
 
 Kubernetes workloads navigator
 ---------------------------------
 
+A workload is an application running on Kubernetes. Your workload might be a single component or several that work together, but it always runs inside a set of pods on Kubernetes.
 
+Instead of a hierarchical approach to your Kubernetes infrastructure, you can investigate workloads for a given Kubernetes namespace, and the pods where each workload is running on.
 
+For more information, see :ref:`use-navigators-imm`.
 
 Learn more
 =====================
