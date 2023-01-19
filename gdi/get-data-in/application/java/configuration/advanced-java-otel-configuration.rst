@@ -61,6 +61,8 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`. |br| |br| System property: ``splunk.access.token``
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Enables the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-java`. The default value is ``true``. |br| |br| System property: ``splunk.trace-response-header.enabled``
+   * - ``SPLUNK_METRICS_FORCE_FULL_COMMANDLINE``
+     - Adds the full command line as a resource attribute for all metrics. Maximum length is 255 characters. Commands longer than 255 characters are truncated. |br| |br| System property: ``splunk.metrics.force_full_commandline``
 
 .. _trace-configuration-java:
 
