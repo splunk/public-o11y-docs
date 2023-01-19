@@ -145,7 +145,7 @@ Look for patterns in application errors
       :width: 60%
       :alt: This screenshot shows the tenant.level module in Splunk APM displaying errors evenly spread across gold, silver, and bronze tenant levels.
 
-    However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the earlier :strong:`v350.9` version.
+    However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the lower :strong:`v350.9` version.
 
       .. image:: /_images/get-started/version.png
         :width: 60%
