@@ -22,8 +22,8 @@ Ingest alerts in Splunk Incident Intelligence
 There are 3 options for ingesting alerts in Incident Intelligence:
 
 1. Create a detector for one of the available alert sources in Splunk Observability Cloud to automatically pass alerts. See :ref:`Available alert sources in Splunk Observability Cloud <ii-ingest-observability-alerts>`.
-2. Use the Splunk Incident Intelligence app on Splunkbase to send Splunk Enterprise, Splunk Cloud Platform, and Splunk IT Service Intelligence (ITSI) alerts. See :ref:`<ii-ingest-splunk-alerts>`.
-3. Ingest third-party alerts using an ingest endpoint. See :ref:`<ii-ingest-third-party-alerts>`.
+2. Use the Splunk Incident Intelligence app on Splunkbase to send Splunk Enterprise, Splunk Cloud Platform, and Splunk IT Service Intelligence (ITSI) alerts. See :ref:` vailable alert sources in Splunk Enterprise, Splunk Cloud Platform, and Splunk IT Service Intelligence (ITSI) <ii-ingest-splunk-alerts>`.
+3. Ingest third-party alerts using an ingest endpoint. See :ref:`Available ingest endpoints for third-party alerts <ii-ingest-third-party-alerts>`.
 
 After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab of Incident Intelligence.
 
