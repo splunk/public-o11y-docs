@@ -103,7 +103,7 @@ Investigate the root cause of a business workflow error
 
     .. image:: /_images/get-started/related-content.png
       :width: 100%
-      :alt: This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s cluster(s) for paymentservice and Logs for paymentservice.
+      :alt: This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s clusters for paymentservice and Logs for paymentservice.
 
 Kai decides to take a look at the Kubernetes cluster to see if the errors are based on an infrastructure issue.
 
