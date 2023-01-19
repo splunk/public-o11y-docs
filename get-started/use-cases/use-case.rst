@@ -47,7 +47,7 @@ Receive alerts about outlier behavior
 Assess user impact
 ===========================
 
-The first thing Kai wants to know about the alert they just received is: What's the user impact?
+The first thing Kai wants to know about the alert they received is: What's the user impact?
 
 #. Kai opens Splunk Real User Monitoring (RUM) to look for clues about the issue based on the site's browser-based performance. They notice two issues that might be related to the drop in purchases and the low checkout completion rate:
 
