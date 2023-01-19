@@ -73,7 +73,7 @@ You can also create a new dashboard from scratch. See :ref:`create-dashboard` to
 Use SignalFlow to create charts
 -------------------------------------
 
-The dashboard editor provides a lot of customization options for your charts, but if you need even more flexibility, you can use SignalFlow to run calculations and create charts from your data. See :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` in our Developer Guide to learn more. 
+The dashboard editor provides a lot of customization options for your charts, but if you need even more flexibility, you can use SignalFlow to run calculations and create charts from your data. See the :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow/>` topic in the Splunk Observability Cloud Developer Guide to learn more.
 
 .. note:: See :ref:`dashboards-best-practices` for more tips on building informative dashboards.
 

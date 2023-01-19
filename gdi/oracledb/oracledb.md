@@ -48,6 +48,19 @@ receivers:
     datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
 ```
 
+To add more than one instance of Oracle Database, add as many entries of the `oracledb` receiver as needed. For example:
+
+```yaml
+receivers:
+  oracledb/aninstance:
+    # Refer to Oracle Go Driver go_ora documentation for full connection string options
+    datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+  
+  oracledb/anotherinstance:
+    # Refer to Oracle Go Driver go_ora documentation for full connection string options
+    datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+```
+
 To complete the monitor activation, you must also include the `oracledb` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
 
 ```yaml

@@ -1,11 +1,11 @@
 .. _otel_deployments:
 
-****************************
-Deployments
-****************************
+**************************************************
+Collector deployment tools and options
+**************************************************
 
 .. meta::
-      :description: Options for deploying the Splunk Observability Cloud OpenTelemetry Collector: ECS/EC2, Fargate, Ansible, Chef, Nomad, Puppet, Salt.
+    :description: Options for deploying the Splunk Observability Cloud OpenTelemetry Collector: ECS/EC2, Fargate, Ansible, Chef, Nomad, Puppet, Salt.
 
 .. toctree::
     :maxdepth: 4

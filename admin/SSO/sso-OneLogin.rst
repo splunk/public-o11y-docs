@@ -60,3 +60,5 @@ If you want to turn off email authentication, contact :ref:`support`.
 Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their OneLogin SSO credentials instead. OneLogin SSO authentication and Observability Cloud username/password authentication are independent.
 
 Observability Cloud generates a password for users you create in OneLogin SSO. If the OneLogin portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
+
+.. include:: /_includes/troubleshooting-steps.rst
