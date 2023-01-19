@@ -29,6 +29,9 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
 
 .. _ii-ingest-observability-alerts:
 
+
+
+
 .. raw:: html
 
    <embed>
