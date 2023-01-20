@@ -23,6 +23,11 @@ A
    analytics
       Analytics are the mathematical functions that can be applied to a collection of data points. For a full list of analytics that can be applied in Splunk Infrastructure Monitoring, see the :ref:`analytics-ref`.
 
+C
+==
+
+.. glossary::
+
    call stack
       A call stack is the data structure used by a machine to keep track of which methods are currently being called. When the active call stack is sampled, the result is a stack trace.
 
@@ -31,6 +36,11 @@ A
 
    cumulative counter metric
       The cumulative counter metric type represents a running count of occurrences. It typically represents the total activity in the lifetime of an application or process. Cumulative counters are NOT reset with each reporting interval. Examples of cumulative counters include the total number of Splunk Infrastructure Monitoring API calls served since a web server started up, or the total number of bytes transmitted by an interface since it started up. Cumulative counters can also be used to derive incremental values, just as counters can.
+
+D
+==
+
+.. glossary::
 
    detector
       A detector monitors a signal for conditions or issues that you care about.
@@ -44,17 +54,32 @@ A
    dimension
       A dimension is a key/value pair that, along with the metric name, is part of the identity of a time series. You can filter and aggregate time series by those dimensions across Infrastructure Monitoring.
 
+E
+==
+
+.. glossary::
+
    event
       An event is a periodic occurrence that can be represented as a structured log line to Splunk Infrastructure Monitoring. For example, the values could be represented as any combination of key/value pairs. Events are secondary to :term:`metrics<Metric>` in Infrastructure Monitoring and are meant to provide context for the metric data. Events can be displayed on charts and viewed in the Events sidebar. See :ref:`events-intro`.
 
    event time series
       An event time series (ETS) is a sequence of events uniquely identified by the event name and optional, additional dimensions. For example, an event time series with the name ``code push`` and the dimension ``repository`` can be created to record code push events for a given repository. An example of such an ETS could be ``sf_eventType:code push`` and ``repository:ui-code-base``.
 
+F
+==
+
+.. glossary::
+
    flame graph
       The flame graph is a visual representation of a collection of stack traces. For every line of code in the stack trace, there is a corresponding line in the flame graph. The width of each bar in the flame graph represents the number of times the respective line of code appears in the stack traces that have been collected in the time range of the flame graph. For example, if a line of code occupies 100% of the width of the flame graph, then that line of code appears in all of the stack traces in the collection. The  y-axis of the flame graph shows the depth of the stack trace.  The colors of the flame graph are random. The x-axis is not ordered by time. The ordering of stack traces from left to right is random and it does not correlate to a time-based sequence.
 
    flappy
       A :term:`detector` is said to be "flappy" when it triggers and clears alerts too frequently. For example, if you have a detector set to trigger an alert when a value reaches 90%, and the signal you are monitoring regularly spikes and dips around this value, alerts will be triggered and cleared too often to be of value. To reduce this flappiness, you might want to specify that the value must remain at 90% for a specified amount of time before triggering an alert.
+
+G
+==
+
+.. glossary::
 
    gateway (deployment method)
       Gateway is a deployment method where the :term:`Splunk Distribution of OpenTelemetry Collector` is running by itself. When you configure the Splunk Distribution of OpenTelemetry Collector as a standalone package, you are using the gateway deployment method.
@@ -64,9 +89,19 @@ A
 
       For example, measuring CPU utilization every 5 minutes means that any peaks and valleys that may have occurred between readings are missed, and it's entirely possible that those peaks or valleys may be significant.
 
+I
+==
+
+.. glossary::
+
    integration
       An integration is a configurable component of Observability Cloud that connects Observability Cloud to a third-party service.
       Most integrations connect third-party data services, but Observability Cloud also offers SSO and notification integrations.
+
+M
+==
+
+.. glossary::
 
    metric
       Metrics are the primary form of data you send into Splunk Infrastructure Monitoring. A metric is a periodic measurement that is represented as a numerical value. The same metric can be reported from multiple sources or emitters. Typically, each unique combination of a source and a metric results in a :term:`metric time series<metric time series>`.
@@ -80,13 +115,28 @@ A
    muting rule
       A muting rule defines a period of time during which :term:`notifications<notification>` for specified :term:`alerts<alert>` will not be sent.  See :ref:`mute-notifications`.
 
+N
+==
+
+.. glossary::
+
    notification
       A notification is an action taken when a :term:`detector` triggers an :term:`alert` and when the alert condition clears. Notifications can be sent to an email address; to one of several other systems, such as Slack; or to a webhook URL.
+
+P
+==
+
+.. glossary::
 
    property
       Properties are key-value pairs that can be bound to metrics, dimensions, or time series. They define arbitrary text data that can be used to provide additional operational information on the objects they are associated with. Properties are different from dimensions in the sense that they do not take part in the identity of a time series; changing the value of a property does not affect the identity of that time series.
 
       Property values are most frequently used as dynamic filters for charts (for example, show 90th percentile of CPU utilization for servers with a location property value of "Seattle"), or for groupings (for example, show 90th percentile of CPU utilization for servers, grouped by location value).
+
+R
+==
+
+.. glossary::
 
    rollup
       An accumulation of data points, with some mathematical or statistical expression applied to it. For example, a 95th percentile calculation over a 1-week window. In an Infrastructure Monitoring plot, rollups determine how Infrastructure Monitoring prepares data points for use in charts or analytic computations. 
@@ -100,6 +150,11 @@ A
 
       For more information, see :ref:`build-rules`.
 
+S
+==
+
+.. glossary::
+
    signal
       In the context of a chart in Infrastructure Monitoring, a signal is the metric time series that you want to plot on a chart or use as an input to a detector or to additional analytics.
 
@@ -111,6 +166,11 @@ A
 
    Splunk Distribution of OpenTelemetry Collector
       The Splunk Distribution of OpenTelemetry Collector is a package that bundles the Splunk Distribution of OpenTelemetry Collector with additional components to provide integrated collection and forwarding of traces, metrics, and logs for a specific platform. Configuring the Splunk Distribution of OpenTelemetry Collector uses the :term:`agent deployment method <Agent (deployment method)>`.
+
+T
+==
+
+.. glossary::
 
    tag
       Tags can be thought of as labels or keywords assigned to dimensions, metrics, and other objects. They are not key/value pairs.
