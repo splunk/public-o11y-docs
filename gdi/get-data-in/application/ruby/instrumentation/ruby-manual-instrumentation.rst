@@ -36,6 +36,6 @@ To install and enable an instrumentation library manually:
 Manual instrumentation for spans and events
 ===========================================
 
-For examples of manual instrumentation for Ruby, see the official OpenTelemetry documentation at :new-page:`https://opentelemetry.io/docs/instrumentation/ruby/manual/ <https://opentelemetry.io/docs/instrumentation/ruby/manual/>`.
+For examples of manual instrumentation for Ruby, see the official OpenTelemetry documentation.
 
 .. note:: Manual OTel instrumentation is fully compatible with Splunk automatic Ruby instrumentation and is fully supported by Splunk.
