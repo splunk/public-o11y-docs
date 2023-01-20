@@ -7,7 +7,7 @@ Troubleshoot .NET instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented .NET application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a .NET application using the Splunk Distribution of OpenTelementry .NET and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a .NET application using the Splunk Distribution of OpenTelemetry .NET and you don't see your data in Observability Cloud, follow these troubleshooting steps.
 
 .. _enable-dotnet-otel-debug-logging:
 
@@ -68,6 +68,6 @@ If traces from your instrumented application or service are not available in Spl
 High CPU usage
 ====================================================
 
-By default, the Splunk Distribution of OpenTelementry .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've enabled the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
+By default, the Splunk Distribution of OpenTelemetry .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've enabled the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
 
 To restrict global instrumentation to a set of processes, use the ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES`` environment variable, which excludes processes for instrumentation. See :ref:`advanced-dotnet-otel-configuration` for more information.

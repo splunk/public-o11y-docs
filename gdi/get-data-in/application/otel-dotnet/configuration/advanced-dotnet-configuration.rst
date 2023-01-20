@@ -1,20 +1,20 @@
 .. _advanced-dotnet-otel-configuration:
 
 ********************************************************************
-Configure the Splunk Distribution of OpenTelementry .NET
+Configure the Splunk Distribution of OpenTelemetry .NET
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the Splunk Distribution of OpenTelementry .NET to suit your instrumentation needs, such as correlating traces with logs and enabling custom sampling.
+   :description: Configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs, such as correlating traces with logs and enabling custom sampling.
 
-You can configure the Splunk Distribution of OpenTelementry .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
+You can configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
 
 .. _configuration-methods-dotnet-otel:
 
 Configuration methods
 ===========================================================
 
-You can change the settings of the Splunk Distribution of OpenTelementry .NET in the following ways:
+You can change the settings of the Splunk Distribution of OpenTelemetry .NET in the following ways:
 
 #. Set environment variables. On Windows, set them in the process scope unless you want to enable autoinstrumentation globally for all .NET applications.
 
@@ -165,7 +165,7 @@ The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters 
 Diagnostic logging settings
 ================================================
 
-The following settings control the internal logging of the Splunk Distribution of OpenTelementry .NET:
+The following settings control the internal logging of the Splunk Distribution of OpenTelemetry .NET:
 
 .. list-table:: 
    :header-rows: 1
@@ -192,7 +192,7 @@ The following settings control the internal logging of the Splunk Distribution o
 Changing the default service name
 =============================================
 
-By default, the Splunk Distribution of OpenTelementry .NET retrieves the service name by trying the following steps until it succeeds:
+By default, the Splunk Distribution of OpenTelemetry .NET retrieves the service name by trying the following steps until it succeeds:
 
 #. For ASP.NET applications, the default service name is ``SiteName[/VirtualPath]``.
 

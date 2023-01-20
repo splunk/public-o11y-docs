@@ -14,7 +14,7 @@ Meet the following requirements to instrument .NET applications for Splunk Obser
 Ensure you are using supported .NET versions
 ==============================================================
 
-The Splunk Distribution of OpenTelementry .NET supports the following .NET versions:
+The Splunk Distribution of OpenTelemetry .NET supports the following .NET versions:
 
 - .NET 5.0 and higher on Windows and Linux
 - .NET Framework 4.7 and higher on Windows
@@ -26,7 +26,7 @@ The Splunk Distribution of OpenTelementry .NET supports the following .NET versi
 Supported libraries
 =================================================
 
-The Splunk Distribution of OpenTelementry .NET instruments the following libraries:
+The Splunk Distribution of OpenTelemetry .NET instruments the following libraries:
 
 Traces instrumentations
 ---------------------------------
@@ -105,7 +105,7 @@ Logs instrumentations
 Install and configure the Splunk Distribution of OpenTelemetry Collector
 ======================================================================================================
 
-The Splunk Distribution of OpenTelementry .NET exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs, including profiling data.
+The Splunk Distribution of OpenTelemetry .NET exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs, including profiling data.
 
 To send application traces and spans to Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
 

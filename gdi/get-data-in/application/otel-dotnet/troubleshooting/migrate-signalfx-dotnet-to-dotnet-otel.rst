@@ -101,7 +101,7 @@ The following table shows library-specific environment variables for the SignalF
 
 .. list-table:: 
    :header-rows: 1
-   :width: 100%
+   :width: 100
 
    * - SignalFx environment variable
      - OpenTelemetry environment variable

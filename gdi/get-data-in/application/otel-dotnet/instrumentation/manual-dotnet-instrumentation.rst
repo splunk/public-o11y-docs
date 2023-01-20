@@ -7,12 +7,12 @@ Manually instrument .NET applications for Splunk Observability Cloud
 .. meta:: 
    :description: Manually instrument your .NET application to add custom attributes to spans or manually generate spans. Keep reading to learn how to manually instrument your .NET application for Observability Cloud. 
 
-The Splunk Distribution of OpenTelementry .NET automatic instrumentation provides a base you can build on by adding
+The Splunk Distribution of OpenTelemetry .NET automatic instrumentation provides a base you can build on by adding
 your own manual instrumentation. By using both automatic and manual instrumentation, you can better instrument the logic and functionality of your applications, clients, and frameworks.
 
 To instrument your .NET application manually, follow these steps:
 
-1. Install the Splunk Distribution of OpenTelementry .NET. See :ref:`install-dotnet-otel-instrumentation`.
+1. Install the Splunk Distribution of OpenTelemetry .NET. See :ref:`install-dotnet-otel-instrumentation`.
 
 2. Add the ``System.Diagnostics.DiagnosticSource`` dependency to your project:
 

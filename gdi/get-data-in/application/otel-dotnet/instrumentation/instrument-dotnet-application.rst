@@ -5,9 +5,9 @@ Instrument a .NET application for Splunk Observability Cloud (OTel)
 ***************************************************************************
 
 .. meta::
-   :description: The Splunk Distribution of OpenTelementry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS. Follow these steps to get started.
+   :description: The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS. Follow these steps to get started.
 
-The Splunk Distribution of OpenTelementry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
+The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS.
 
 To get started, use the guided setup or follow the instructions manually.
 
@@ -35,7 +35,7 @@ Windows
 
 #. Check that you meet the requirements. See :ref:`dotnet-requirements`.
 
-#. Download the PowerShell script module of the Splunk Distribution of OpenTelementry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
+#. Download the PowerShell script module of the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
    .. code-block:: powershell
 
@@ -92,7 +92,7 @@ Linux and macOS
 
 #. Check that you meet the requirements. See :ref:`dotnet-requirements`.
 
-#. Download the installation script of the Splunk Distribution of OpenTelementry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
+#. Download the installation script of the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
    .. code-block:: shell
 
