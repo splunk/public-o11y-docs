@@ -9,7 +9,7 @@ Glossary for Splunk Observability Cloud
 
 .. glossary::
 
-   Agent (deployment method)
+   agent (deployment method)
       Agent is a deployment method where an instance of the :term:`Splunk Distribution of OpenTelemetry Collector` runs with the application or on the same host as the application. For example,
       when you configure the :term:`Splunk Distribution of OpenTelemetry Collector` for Linux, Kubernetes, or Windows, you are using the agent deployment method.
 
