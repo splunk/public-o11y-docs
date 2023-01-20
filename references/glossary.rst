@@ -7,6 +7,9 @@ Glossary for Splunk Observability Cloud
 .. meta::
    :description: Learn about common terms and concepts in Splunk Observability Cloud.
 
+A
+==
+
 .. glossary::
 
    agent (deployment method)
