@@ -14,6 +14,7 @@ Configure your tests
    built-in-variables
    global-variables
    public-locations
+   private-locations
 
 
 To simulate diverse types of traffic to your site or application, use a range of configuration options to customize each of your tests.
