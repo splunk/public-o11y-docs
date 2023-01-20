@@ -101,9 +101,9 @@ Interact with the navigator
     
     ..  image:: /_images/infrastructure/k8s-nav-zoom.gif
       :width: 100%
-      :alt: Selecting a pod changes the hierarchical map view from cluster level to pod level. Details about the pod displays in the sidebar, in the :strong:`About this pod` panel.
+      :alt: Selecting a pod zooms the hierarchical map view from cluster level to pod level. Details about the selected pod displays in the sidebar, in the :strong:`About this pod` panel.
 
-* Filter: Filter the map by any available metadata in your Kubernetes data, such as a namespace, a workload, or any other key-value pair. When you filter the map, you see nodes that match the filter. Nodes that don't match the filter are hidden. Pods and containers that match the filter are highlighted, and non-matching pods and containers are dimmed. You can still select the dimmed pods and containers to view details about them in the sidebar.
+* Filter: Filter the map by any available metadata in your Kubernetes data, such as a namespace, a workload, or any other key-value pair. When you apply a filter, the map shows only nodes that match the filter and highlights matching pods and containers. You can still select the dimmed pods and containers to view details about them in the sidebar.
 
     ..  image:: /_images/infrastructure/k8s-nav-filter.gif
       :width: 100%
