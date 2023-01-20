@@ -8,7 +8,7 @@ Log Observer limits
 .. meta DOCS-2491
 
 .. meta::
-  :description: Discover Log Observer limits.
+  :description: Discover Log Observer ingest and index limits. See also limits on the number and type of processing rules.
 
 This page documents Splunk Log Observer service limits and behavior. System protection limits are meant to allow for stability and availability of multi-tenant systems and are subject to fine-tuning and change without notice.
 

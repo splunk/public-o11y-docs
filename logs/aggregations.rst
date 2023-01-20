@@ -8,7 +8,7 @@ Group logs by fields using log aggregation
 .. meta DOCS-1962
 
 .. meta::
-  :description: Identify problem areas using log record aggregation
+  :description: Identify problem using log aggregation. Aggregate log records in groups, then perform analyses to see averages, sums, and other statistics for related logs.
 
 Aggregations group related data by one field and then perform a
 statistical calculation on other fields. Aggregating log records helps you
