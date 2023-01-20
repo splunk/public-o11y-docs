@@ -1,8 +1,8 @@
 .. _get-started-dotnet-otel:
 
-************************************************************
-Instrument .NET applications for Splunk Observability Cloud
-************************************************************
+***************************************************************************
+Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
+***************************************************************************
 
 .. meta::
    :description: Instrument a .NET application to export metrics and spans to Splunk Observability Cloud.

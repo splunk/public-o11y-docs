@@ -19,7 +19,7 @@ The Splunk Distribution of OpenTelementry .NET supports the following .NET versi
 - .NET 5.0 and higher on Windows and Linux
 - .NET Framework 4.7 and higher on Windows
 
-.NET Core 3.1 is not supported.
+.. note:: .NET Core 3.1 is not supported.
 
 .. _supported-dotnet-otel-libraries:
 
@@ -38,7 +38,7 @@ Traces instrumentations
 
    * - Library
      - Instrumentation ID
-   * - ASP.NET Framework
+   * - ASP.NET Framework (.NET Framework) |br| MVC / WebApi
      - ``AspNet``
    * - ASP.NET Core
      - ``AspNet``
@@ -62,6 +62,7 @@ Traces instrumentations
      - ``StackExchangeRedis``
    * - System.ServiceModel |br| (No support for server side on .NET Core)
      - ``Wcf``
+
 
 Metrics instrumentations
 ---------------------------------
