@@ -3,7 +3,7 @@
 Thank you for your interest in contributing to Splunk Observability Cloud documentation. Read through this document before submitting any pull request.
 
 - [Contributing guidelines](#contributing-guidelines)
-  - [Prerequisites](#Prerequisites)
+  - [Prerequisites](#prerequisites)
   - [Decide the type of edit](#decide-the-type-of-edit)
     - [Quick edits to existing documentation](#quick-edits-to-existing-documentation)
     - [Complex edits to one or multiple files](#complex-edits-to-one-or-multiple-files)
