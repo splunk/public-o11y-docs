@@ -18,7 +18,7 @@ To connect Splunk Observability Cloud to your AWS account, complete the followin
 
 .. _aws-api-create-connection:
 
-1. Create an AWS connection 
+Create an AWS connection 
 =====================================================
 
 To connect Splunk Observability Cloud to AWS through the Observability Cloud API, open your command-line interface and perform the following steps:
@@ -85,7 +85,7 @@ For further information and more examples on how to integrate AWS monitoring wit
 
 .. _review-aws-iam-policy:
 
-2. Review your IAM policy
+Review your IAM policy
 =====================================================
 
 To collect AWS data, review the permissions in this document:
@@ -394,7 +394,7 @@ Include these permissions to allow Observability Cloud to collect AWS usage data
 
 .. _aws-api-setup:
 
-3. Configure your setup
+Configure your setup
 =============================
 
 Provide the ARN role to the Infrastructure Monitoring component of Splunk Observability Cloud. You can also configure your connection to support any of the following use cases:
@@ -416,7 +416,7 @@ The following example shows how to collect metrics from all regions and services
 
 .. _enable-cw-metricstreams:
 
-4. Enable CloudWatch Metric Streams (optional)
+Enable CloudWatch Metric Streams (optional)
 ========================================================
 
 To enable CloudWatch Metric Streams as an alternative to traditional API polling, follow these steps:
@@ -455,7 +455,7 @@ To collect CloudWatch Metric Streams or logs from all supported AWS services acr
 
 .. _aws-api-logs:
 
-5. Collect logs
+Collect logs
 ===================================================
 
 To collect log data from any CloudWatch log group, perform the following steps:
@@ -470,7 +470,7 @@ See Splunk developer documentation about :new-page:`POST /integration <https://d
 
 .. _aws-api-next-steps:
 
-6. Next steps
+Next steps
 =================
 
 After you connect Splunk Observability Cloud with AWS, you'll be able to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
