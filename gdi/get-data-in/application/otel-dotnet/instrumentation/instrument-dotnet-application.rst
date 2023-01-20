@@ -120,7 +120,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-tro
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
 
-.. _kubernetes_dotnet:
+.. _kubernetes_dotnet_otel:
 
 Deploy the .NET instrumentation in Kubernetes
 ==========================================================
@@ -153,7 +153,7 @@ The following example shows how to update a deployment to expose environment var
                - name: OTEL_RESOURCE_ATTRIBUTES
                  value: "deployment.environment=<environmentName>"
 
-.. _export-directly-to-olly-cloud-dotnet:
+.. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Observability Cloud
 ==============================================================

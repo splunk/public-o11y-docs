@@ -42,7 +42,7 @@ When instrumenting applications manually, set environment variables using the fo
 
    .. tab:: IIS service
 
-      Set the environment variables for ``W3SVC`` and ``WAS`` Windows services as described in :ref:`dotnet-windows-services`.
+      Set the environment variables for ``W3SVC`` and ``WAS``.
 
 For a list of environment variables, see :ref:`manual-dotnet-envvars`.
 
@@ -126,16 +126,12 @@ The following settings control instrumentations and tracing behavior:
    * - ``OTEL_RESOURCE_ATTRIBUTES``
      - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``. 
    * - ``OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT``
-     - Not applicable
      - Maximum number of attributes per span. Default value is unlimited.
    * - ``OTEL_SPAN_EVENT_COUNT_LIMIT``
-     - Not applicable
      - Maximum number of events per span. Default value is unlimited.
    * - ``OTEL_SPAN_LINK_COUNT_LIMIT``
-     - Not applicable
      - Maximum number of links per span. Default value is ``1000``.
    * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
-     - Not applicable
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
 
 .. _server-trace-information-dotnet-otel:
@@ -178,7 +174,7 @@ The following settings control the internal logging of the Splunk Distribution o
 
    * - Setting
      - Description
-   * - ``OTEL_DOTNET_AUTO_DEBUG	``
+   * - ``OTEL_DOTNET_AUTO_DEBUG``
      - Enables file logging. The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_LOG_DIRECTORY``
      - Directory of the .NET tracer logs. The default value is ``/var/log/opentelemetry/dotnet`` for Linux and macOS, and ``%ProgramData%\OpenTelemetry .NET AutoInstrumentation\logs`` for Windows.
@@ -189,7 +185,7 @@ The following settings control the internal logging of the Splunk Distribution o
    * - ``OTEL_DOTNET_AUTO_LOGS_CONSOLE_EXPORTER_ENABLED``
      - Whether the logd console exporter is enabled. The default value is ``false``.The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_LOGS_INCLUDE_FORMATTED_MESSAGE``
-     - Whether the log state should be formatted. The default value is ``false``.
+     - Whether the log state have to be formatted. The default value is ``false``.
 
 .. _dotnet-otel-default-service-name:
 

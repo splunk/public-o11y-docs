@@ -58,6 +58,8 @@ Traces instrumentations
      - ``Npgsql``
    * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
      - ``SqlClient``
+   * - Quartz |br| (Not supported on .NET Framework 4.7.1 and lower)
+     - ``Quartz``
    * - StackExchange.Redis |br| (Not supported on .NET Framework)
      - ``StackExchangeRedis``
    * - System.ServiceModel |br| (No support for server side on .NET Core)

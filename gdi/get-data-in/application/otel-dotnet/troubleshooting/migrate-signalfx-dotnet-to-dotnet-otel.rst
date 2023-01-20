@@ -115,7 +115,7 @@ The following table shows library-specific environment variables for the SignalF
      - Not configurable using environment variable
    * - ``SIGNALFX_INSTRUMENTATION_REDIS_TAG_COMMANDS``
      - Not configurable using environment variable.
-  * - ``SIGNALFX_LOGS_INJECTION``
+   * - ``SIGNALFX_LOGS_INJECTION``
      - Logs are correlated if the ``Microsoft.Extensions.Logging`` is used.
    * - ``SIGNALFX_TRACE_DELAY_WCF_INSTRUMENTATION_ENABLED``
      - Not applicable
@@ -125,7 +125,7 @@ The following table shows library-specific environment variables for the SignalF
      - Not configurable using environment variable.
    * - ``SIGNALFX_TRACE_KAFKA_CREATE_CONSUMER_SCOPE_ENABLED``
      - Not applicable
-  * - ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED``
+   * - ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED``
      - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-   * - ``SIGNALFX_TRACE_ROUTE_TEMPLATE_RESOURCE_NAMES_ENABLED	``
+   * - ``SIGNALFX_TRACE_ROUTE_TEMPLATE_RESOURCE_NAMES_ENABLED``
      - Not applicable. The default behavior is equivalent to setting to previous setting to ``true``.
