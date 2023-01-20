@@ -318,38 +318,38 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   gdi/get-data-in/connect/connect
+   Connect to your cloud service provider TOGGLE <gdi/get-data-in/connect/connect>
 
 .. toctree::
    :maxdepth:   3
 
-   gdi/get-data-in/compute/compute
+   Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
 
 .. toctree::
    :maxdepth:   3
 
-   Instrument back-end services and applications <gdi/get-data-in/application/application>
+   Instrument back-end services and applications TOGGLE <gdi/get-data-in/application/application>
 
 
 .. toctree::
    :maxdepth:   3
 
-   Instrument serverless functions <gdi/get-data-in/serverless/instrument-serverless-functions>
+   Instrument serverless functions TOGGLE <gdi/get-data-in/serverless/instrument-serverless-functions>
 
 .. toctree::
    :maxdepth:  3
 
-   Instrument front-end applications <gdi/get-data-in/rum/rum-instrumentation>
+   Instrument front-end applications TOGGLE <gdi/get-data-in/rum/rum-instrumentation>
 
 .. toctree::
    :maxdepth:   3
 
-   gdi/index
+   Available host and application monitors TOGGLE <gdi/index>
 
 .. toctree::
    :maxdepth: 3
 
-   Splunk Distribution of OpenTelemetry Collector <gdi/opentelemetry/opentelemetry>
+   Splunk Distribution of OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
    :maxdepth:   3
@@ -364,7 +364,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth: 3
 
-   SignalFx Smart Agent (Deprecated) <gdi/smart-agent/smart-agent-intro>
+   SignalFx Smart Agent (Deprecated) TOGGLE <gdi/smart-agent/smart-agent-intro>
 
 .. toctree::
    :caption: DASHBOARDS AND CHARTS
@@ -584,11 +584,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   SignalFlow and analytics TOGGLE <infrastructure/analytics/signalflow-analytics-intro>
-
-.. toctree::
-   :maxdepth:   3
-
    Resolution and data retention <infrastructure/retention>
 
 .. toctree::
@@ -605,12 +600,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: LOG OBSERVER
    :maxdepth:   3
 
-   logs/lo-connect-landing
+   Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
 
 .. toctree::
    :maxdepth:   3   
 
-   logs/log-observer-landing
+   Splunk Log Observer TOGGLE <logs/log-observer-landing>
 
 .. toctree::
    :caption: RUM
@@ -672,7 +667,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/RUM-metrics
-
 
 .. toctree::
    :maxdepth:   3
@@ -766,7 +760,28 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Respond to and manage incidents TOGGLE <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
 
 .. toctree::
-   :caption: UNDERSTAND YOUR DATA
+   :caption: MOBILE
+   :maxdepth:   3
+
+   mobile/intro-to-mobile
+
+.. toctree::
+   :maxdepth:   3
+
+   Download the app <mobile/download-mobile>
+
+.. toctree::
+   :maxdepth:   3
+
+   View dashboards and alerts <mobile/use-mobile>
+
+.. toctree::
+   :maxdepth:   3
+
+   mobile/notification-preferences-mobile
+
+.. toctree::
+   :caption: UNDERSTAND AND ANALYZE YOUR DATA
    :maxdepth:   3
 
    Metrics, data points, and metric time series <metrics-and-metadata/metrics>
@@ -797,25 +812,9 @@ View a list of all supported integrations :ref:`supported-data-sources`
    metrics-and-metadata/metrics-finder-metadata-catalog
 
 .. toctree::
-   :caption: MOBILE
    :maxdepth:   3
 
-   mobile/intro-to-mobile
-
-.. toctree::
-   :maxdepth:   3
-
-   Download the app <mobile/download-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   View dashboards and alerts <mobile/use-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   mobile/notification-preferences-mobile
+   SignalFlow and analytics TOGGLE <analytics/signalflow-analytics-intro>
 
 .. toctree::
    :caption: ADMINISTER OBSERVABILITY CLOUD
@@ -854,7 +853,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Create and manage teams TOGGLE <admin/teams/manage-teams>
-
 
 .. toctree::
    :hidden:

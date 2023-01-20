@@ -18,13 +18,12 @@ Thank you for your interest in contributing to Splunk Observability Cloud docume
 
 ## Prerequisites
 
-1. A GitHub account. 
-   
+1. A GitHub account.
    - If you're a Splunk employee, you can use an existing Splunk GitHub account.
    - Everyone else needs to create their own GitHub account.
 2. If you plan to use SSH to synchronize your local computer with your GitHub account, you need to create an SSH key on your local
-   computer, add the key to your OpenSSH authentication agent, and add the public key file to your GitHub account. The GitHub
-   describes how to perform these tasks.
+   computer, add the key to your OpenSSH authentication agent, and add the public key file to your GitHub account. The GitHub docs
+   describe how to perform these tasks.
 
 ## Decide the type of edit
 
