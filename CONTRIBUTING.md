@@ -2,19 +2,18 @@
 
 Thank you for your interest in contributing to Splunk Observability Cloud documentation. Read through this document before submitting any pull request.
 
-- [Contributing guidelines](#contributing-guidelines)
-  - [Prerequisites](#prerequisites)
-  - [Decide the type of edit](#decide-the-type-of-edit)
-    - [Quick edits to existing documentation](#quick-edits-to-existing-documentation)
-    - [Complex edits to one or multiple files](#complex-edits-to-one-or-multiple-files)
-  - [Folder structure of the repository](#folder-structure-of-the-repository)
-    - [Find a document in the repository](#find-a-document-in-the-repository)
-    - [Create files or directories](#create-files-or-directories)
-  - [Edit the documentation](#edit-the-documentation)
-    - [Use the reStructuredText markup](#use-the-restructuredtext-markup)
-    - [Add images (optional)](#add-images-optional)
-    - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
-  - [Test the docs](#test-the-docs)
+- [Prerequisites](#prerequisites)
+- [Decide the type of edit](#decide-the-type-of-edit)
+  - [Quick edits to existing documentation](#quick-edits-to-existing-documentation)
+  - [Complex edits to one or multiple files](#complex-edits-to-one-or-multiple-files)
+- [Folder structure of the repository](#folder-structure-of-the-repository)
+  - [Find a document in the repository](#find-a-document-in-the-repository)
+  - [Create files or directories](#create-files-or-directories)
+- [Edit the documentation](#edit-the-documentation)
+  - [Use the reStructuredText markup](#use-the-restructuredtext-markup)
+  - [Add images (optional)](#add-images-optional)
+  - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
+- [Test the docs](#test-the-docs)
 
 ## Prerequisites
 
@@ -43,7 +42,8 @@ To make a quick edit to existing documentation, follow these steps:
 4. After you’ve added your changes select **Propose changes**. Add a summary and description.
 5. Select **Create pull request** to open a pull request from your fork to main of the public repo.
 6. Edit the summary and description, then select **Create pull request** to confirm.
-7. Your pull request is now ready for review. The docs team will review it as soon as possible.
+
+Your pull request is now ready for review. The docs team will review it as soon as possible.
 
 All pull requests you create afterwards use your existing fork of the public docs repo.
 
@@ -53,15 +53,17 @@ While the GitHub editing interface works well for quick edits, it’s best to us
 
 To perform complex edits on one or multiple files, follow these steps:
 
-1. Select **Fork** in this repository to create a fork or copy of the repo.
-2. Open your fork. The copy now exists under your username (`<username>/public-o11y-docs`).
-3. Clone the repository to your machine using HTTPS or SSH.
-4. Create a branch and edit the documentation using your favorite code editor.
-5. Push the changes to the remote fork of the public docs repository (your copy of the repo).
-6. Open your fork in GitHub and select the **Pull requests** tab, then select **New pull request**.
-7. Select **Create pull request** to open a pull request from your fork to the `main` branch of this repo.
-8. Edit the summary and description, then select **Create pull request** to confirm.
-9. Your pull request is now ready for review. The o11y docs team will review it as soon as possible.
+1. Log in to your GitHub account and open this repository.
+2. Select **Fork** in this repository to create a fork or copy of the repo.
+3. Open your fork. The copy now exists under your username (`<username>/public-o11y-docs`).
+4. Clone the repository to your machine using HTTPS or SSH.
+5. Create a branch and edit the documentation using your favorite code editor.
+6. Push the changes to the remote fork of the public docs repository (your copy of the repo).
+7. Open your fork in GitHub and select the **Pull requests** tab, then select **New pull request**.
+8. Select **Create pull request** to open a pull request from your fork to the `main` branch of this repo.
+9. Edit the summary and description, then select **Create pull request** to confirm.
+
+Your pull request is now ready for review. The o11y docs team will review it as soon as possible.
 
 ## Folder structure of the repository
 
