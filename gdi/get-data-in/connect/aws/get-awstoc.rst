@@ -19,13 +19,13 @@ Connect to AWS and send data to Splunk Observability Cloud
   Troubleshooting <aws-troubleshooting>
   GetMetricStatistics API deprecation notice <aws-api-notice>
 
-To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to AWS following these steps:
+To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to AWS. Follow these steps:
 
-1. Verify the :ref:`prerequisites <aws-integration-prereqs>`.  
-2. :ref:`Plan your integration <prep-for-aws-integration>`.
-3. Choose among our :ref:`connection options <aws-connection-options>`.
-4. Optionally, you can :ref:`enable Metric Streams <aws-metricstreams>`.
-5. Check our recommended :ref:`next steps <after-aws-integration>`.
+1. Verify the prerequisites.
+2. Plan your integration.
+3. Choose your AWS connection option.
+4. (Optional) Enable metric streams.
+
 
 .. note:: Check the :ref:`list of AWS integrations available in Splunk Observability Cloud <aws-integrations>`. 
 
@@ -71,13 +71,13 @@ To determine the best connection method and configuration settings, answer the f
 - Do I want to collect metrics through API polling at specified intervals, or through CloudWatch Metric Streams? 
 - Do I want to collect logs in addition to metrics? If yes, then include logs while configuring through the API or when given that option while performing a guided setup.
 
-.. _aws-connection-options:
 
+.. _aws-connection-options:
 
 .. raw:: html
 
   <embed>
-    <h2>AWS connection options<a name="connection-options-aws" class="headerlink" href="#aws-connection-options" title="Permalink to this headline">¶</a></h2>
+    <h2>AWS connection options<a name="connection-options-aws" class="headerlink" href="#connection-options-aws" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 You can connect Observability Cloud to AWS in several different ways. Choose the connection method that best matches your needs:
@@ -167,8 +167,6 @@ CloudWatch Metric Streams do not support filtering based on resource tags. Confi
   <embed>
     <h2>Next steps<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
-
-After you're all set, try:
 
 * See :ref:`Leverage data from integration with AWS <aws-post-install>` for an overview of what you can do after you connect Observability Cloud to AWS.
 * Learn about :ref:`our AWS Infrastructure Monitoring options <infrastructure-aws>`. You'll find instructions on how to import AWS metrics and metadata, or AWS tag and log information using namespaces and filters. 
