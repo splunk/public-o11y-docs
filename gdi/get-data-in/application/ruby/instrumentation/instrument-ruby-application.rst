@@ -140,7 +140,7 @@ To instrument a Ruby on Rails application, follow these steps:
       c.use 'OpenTelemetry::Instrumentation::Rails'
       end
 
-For an example, see :new-page:`Rails 7 example<https://github.com/signalfx/splunk-otel-ruby/blob/main/examples/rails-7-barebones/README.md>`.
+For an example, see :new-page:`Rails 7 example <https://github.com/signalfx/splunk-otel-ruby/blob/main/examples/rails-7-barebones/README.md>`.
 
 .. _ruby-enable-server-timing:
 

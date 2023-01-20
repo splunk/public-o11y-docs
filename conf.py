@@ -84,7 +84,7 @@ language = 'en'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'venv/lib/*/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst']
+exclude_patterns = ['_build', 'venv/lib/*/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'CONTRIBUTING.md', 'pull_request_template.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
