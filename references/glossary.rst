@@ -77,7 +77,7 @@ Glossary for Splunk Observability Cloud
    muting rule
       A muting rule defines a period of time during which :term:`notifications<notification>` for specified :term:`alerts<alert>` will not be sent.  See :ref:`mute-notifications`.
 
-   dotification
+   notification
       A notification is an action taken when a :term:`detector` triggers an :term:`alert` and when the alert condition clears. Notifications can be sent to an email address; to one of several other systems, such as Slack; or to a webhook URL.
 
    property
@@ -86,7 +86,7 @@ Glossary for Splunk Observability Cloud
       Property values are most frequently used as dynamic filters for charts (for example, show 90th percentile of CPU utilization for servers with a location property value of "Seattle"), or for groupings (for example, show 90th percentile of CPU utilization for servers, grouped by location value).
 
    rollup
-      An accumulation of data points, with some mathematical or statistical expression applied to it. For example, a 95th percentile calculation over a 1-week window. In an Infrastructure Monitoring plot, rollups determine how Infrastructure Monitoring prepares data points for use in charts or analytic computations. For more information, see :ref:`rollups`.
+      An accumulation of data points, with some mathematical or statistical expression applied to it. For example, a 95th percentile calculation over a 1-week window. In an Infrastructure Monitoring plot, rollups determine how Infrastructure Monitoring prepares data points for use in charts or analytic computations. 
 
       For example, if you change the time range from -1m (past minute) to -1w (past week), multiple data points may be rolled up into one using a rollup function, such as Average, so the data points for the wider timeframe can be effectively displayed.
 
