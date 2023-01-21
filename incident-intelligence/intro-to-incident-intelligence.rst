@@ -47,7 +47,7 @@ Follow the links in the table to complete the tasks that are relevant to you.
      - :strong:`With this tool`
      - :strong:`Link to documentation`
 
-   * - Ingest alerts from Observability Cloud or third parties. 
+   * - Ingest alerts from Observability Cloud, Splunk Enterprise, Splunk Cloud Platform, IT Service Intelligence (ITSI) or third parties. 
      - Alert ingestion
      - See :ref:`ii-ingest-alerts`.
 
