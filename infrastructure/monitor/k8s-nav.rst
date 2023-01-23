@@ -127,11 +127,11 @@ View services and hosts on which Kubernetes is running
 
 Apart from monitoring your Kubernetes infrastructure, you can also track services and hosts where Kubernetes is running in the navigator sidebar for both the Kubernetes nodes and workloads navigators. When you select a host or service from the sidebar, you are switching to the navigator for that host or service instance. 
 
-.. note:: From a host navigator, you can only jump back to the Kubernetes nodes navigator.
+  .. note:: From a host navigator, you can only jump to the Kubernetes nodes navigator.
 
-    ..  image:: /_images/infrastructure/k8s-nav-pivot.gif
-      :width: 100%
-      :alt: Navigating to the EC2 navigator from the Kubernetes nodes navigator, and then navigating back to the Kubernetes nodes navigator.
+  ..  image:: /_images/infrastructure/k8s-nav-pivot.gif
+    :width: 100%
+    :alt: Navigating to the EC2 navigator from the Kubernetes nodes navigator, and then navigating back to the Kubernetes nodes navigator.
 
 
 Learn more
