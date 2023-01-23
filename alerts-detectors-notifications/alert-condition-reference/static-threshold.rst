@@ -7,7 +7,7 @@ Static Threshold
 .. meta updated 1/23/23
 
 .. meta::
-  :description: The Static Threshold condition alerts when a signal goes above or below a static threshold, or is within or outside of a range1
+  :description: The Static Threshold condition alerts when a signal goes above or below a static threshold, or is within or outside of a range.
 
 Static Threshold alerts when a signal goes above or below a static threshold, or is within or outside of a range. Use this condition when you need to be alerted based on fixed values, as opposed to trends (for which you can use the :ref:`sudden-change` and :ref:`resource-running-out` conditions) or comparisons with past behavior (for which you can use :ref:`hist-anomaly`). This condition works best with metrics that have a static range of "good" and "bad" values.
 
