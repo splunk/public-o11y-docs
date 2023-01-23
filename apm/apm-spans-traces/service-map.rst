@@ -4,8 +4,10 @@
 View dependencies among your services in the service map
 ************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: The service map displays the dependencies and connections among your services in Splunk APM. 
+   :description: Learn about the service map displays for your services in Splunk APM. 
 
 The service map, located in Splunk APM's :guilabel:`Explore` view, displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
 

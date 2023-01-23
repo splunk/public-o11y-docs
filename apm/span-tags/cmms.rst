@@ -5,6 +5,10 @@
 Generate a Monitoring MetricSet with a custom dimension
 *******************************************************
 
+.. Metadata updated: 1/23/23
+
+.. meta::
+   :description: Learn how to generate a Monitoring MetricSet with a custom dimension. 
 
 Generate Monitoring MetricSets with custom dimensions to glean meaningful insights about your services in real time. Splunk APM automatically provides a set of Monitoring MetricSets by default, but  you can configure additional MetricSets using indexed span tags as custom dimensions. You can use your Monitoring MetricSets to create custom charts, dashboards, and detectors to keep track of what matters most to your team. 
 

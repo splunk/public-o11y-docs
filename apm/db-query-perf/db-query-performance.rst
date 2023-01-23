@@ -4,8 +4,10 @@
 Monitor Database Query Performance
 ************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Slow database queries might be the culprit of wider service availability issues. With Database Query Performance, you can monitor the impact of your database queries on service availability directly in Splunk APM. 
+   :description: Learn how to use Database Query Performance to monitor the impact of your database queries on service availability directly in Splunk APM. 
 
 .. toctree::
    :hidden:

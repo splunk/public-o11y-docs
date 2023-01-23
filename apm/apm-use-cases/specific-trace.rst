@@ -4,8 +4,10 @@
 Troubleshoot an edge case by searching for a specific trace
 ************************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-    :description: A Splunk APM use cases describes how to filter for specific trace in APM Trace View for troubleshooting
+    :description: This Splunk APM use case describes how to filter for specific trace in APM Trace View for troubleshooting.
 
 Kai, the site reliability engineer at Buttercup Games, receives a ticket from a customer getting an “Invalid request” error when redeeming a coupon on the Buttercup Games website. Kai looks at the Splunk APM Overview dashboard, seeing that all services have a minimal level of error rate. Kai clicks :strong:`Traces` to enter the trace view powered by full-fidelity tracing to locate the specific trace corresponding to the ticket. 
 

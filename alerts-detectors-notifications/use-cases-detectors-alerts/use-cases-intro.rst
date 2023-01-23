@@ -4,6 +4,8 @@
 Use case: Alerts and detectors use case library
 ********************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
     :description: Get started with Splunk alerts and detectors use cases.
 

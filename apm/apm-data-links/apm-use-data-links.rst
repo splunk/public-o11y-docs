@@ -4,8 +4,10 @@
 Access relevant resources linked to APM services, traces, and spans
 **********************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Use global data links to view resources for services, traces, and spans.
+   :description: Get stated with global data links using this use case. 
 
 Use global data links to access relevant resources directly from Splunk APM properties, including services, traces, spans, and span tags.
 

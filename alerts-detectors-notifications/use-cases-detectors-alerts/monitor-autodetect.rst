@@ -4,8 +4,10 @@
 Use case: Monitor system limits with AutoDetect 
 ***************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-    :description: A Splunk alerts and detectors use case describes how to use AutoDetect to track system limits.
+    :description: This Splunk alerts and detectors use case describes how to use AutoDetect to track system limits.
 
 Kai, a site reliability engineer at Buttercup Games, wants to know when they are reaching their limit for the number of detectors they can create for Buttercup Games. This limit is automatically monitored through an AutoDetect detector, which Kai can view from the Alerts and Detectors page.
 
