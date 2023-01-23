@@ -4,6 +4,8 @@
 Use controls for sensitive data in Splunk APM
 ************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Learn about possible controls for sensitive data in Splunk APM. 
 

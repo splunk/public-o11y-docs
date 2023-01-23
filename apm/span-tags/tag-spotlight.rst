@@ -4,8 +4,10 @@
 Analyze service performance with Tag Spotlight
 *****************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: View metrics for every indexed span tag for a service in a single window in Splunk Observability Cloud.
+   :description: Learn how to view metrics for every indexed span tag for a service in a single window in Splunk Observability Cloud.
 
 Use Tag Spotlight to analyze the performance of your services in Splunk Observability Cloud to discover trends that contribute to high latency or error rates with indexed span tags. You can break down every service by each indexed span tag to view its metrics. When you select span tag values or a time range, you can view relevant traces to learn more about outlying incidents.
 
