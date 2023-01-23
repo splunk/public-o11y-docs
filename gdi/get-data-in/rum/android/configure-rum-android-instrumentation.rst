@@ -56,7 +56,7 @@ Use the following settings to configure the Android RUM agent:
      - Attributes to append to every span collected. For an example, see :ref:`android-rum-attributes`.
    * - :code:`filterSpans(Consumer<SpanFilterBuilder>)`
      - Lets you filter or customize spans. For example, you can use ``filterSpans`` to redact personal identifiable information (PII), remove span attributes, or change the span name. See :ref:`android-rum-span-filtering`.
-   * - :code:`enableDiskBufferingEnabled(boolean)`
+   * - :code:`enableDiskBuffering(boolean)`
      - Enables storage-based buffering of telemetry. This setting is useful when instrumenting applications that might work offline for extended periods of time.
    * - :code:`limitDiskUsageMegabytes(int)`
      -  Sets the maximum amount of storage to use for disk buffering. The default value is 25 MB. Requires ``diskBufferingEnabled`` to be ``true``.
