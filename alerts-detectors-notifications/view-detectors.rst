@@ -4,6 +4,8 @@
 View detectors
 ************************************
 
+.. meta updated 1/23/23
+
 .. meta::
   :description: How to view detectors in Splunk Observability Cloud.
 
