@@ -4,6 +4,8 @@
 AutoDetect in Splunk Observability Cloud
 ******************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
    :description: Splunk Observability Cloud automatically alerts and detectors when you have supported integrations configured. Learn more on how to work with AutoDetect alerts and detectors.
 

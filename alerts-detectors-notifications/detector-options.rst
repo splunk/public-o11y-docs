@@ -4,6 +4,8 @@
 Detector options
 ************************************
 
+.. meta updated 1/23/23
+
 .. meta::
   :description: How to set detector options in the Options tab.
 
