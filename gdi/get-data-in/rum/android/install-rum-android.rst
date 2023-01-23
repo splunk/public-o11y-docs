@@ -11,7 +11,6 @@ You can instrument your Android applications for Splunk RUM using the Android RU
 
 To instrument your Android application and get data into Splunk RUM, follow the instructions on this page.
 
-
 .. note:: Splunk APM is not required to instrument Splunk RUM for Android. 
 
 .. _android-rum-requirements:
@@ -172,6 +171,47 @@ Follow these steps to install the Android RUM agent using Maven Central:
 6. Generate some user activity in your application. After you've interacted with the application, verify that the data is appearing in the RUM dashboard.
 
 .. note:: You can check whether the Android RUM agent has been initialized by calling the ``SplunkRum.isInitialized()`` method anywhere in your code.
+
+.. _android-build-locally:
+
+Build the Android RUM library locally
+=========================================================
+
+To download and build the Android RUM library locally, follow these steps:
+
+1. Clone the repository to your machine:
+
+   .. code:: bash
+
+      git clone https://github.com/signalfx/splunk-otel-android.git
+
+2. Build locally and publish to your local Maven repository:
+
+   .. code:: bash
+
+      ./gradlew publishToMavenLocal
+
+3. Make sure that ``mavenLocal()`` is set as the repository in your ``build.gradle`` file:
+
+   .. code:: kotlin
+
+      allprojects {
+         repositories {
+            google()
+      //...
+            mavenLocal()
+         }
+      }
+
+4. Add the library you've built as a dependency in the ``build.gradle`` file:
+
+   .. code:: kotlin
+
+      dependencies {
+         //...
+            implementation ("com.splunk:splunk-otel-android:<version>")
+         //...
+      }
 
 .. _android-webview-instrumentation:
 
