@@ -5,13 +5,9 @@ Monitor Splunk APM subscription usage
 *************************************************
 
 .. meta::
-      :description: Monitor Splunk APM subscription usage. 
-
-.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
-
-
-.. meta::
    :description: View APM subscription usage information and download usage reports to monitor your organization.
+
+.. note:: General aspects of subscription usage and consumption for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
 
 View Splunk APM subscription usage data to monitor your organization's usage against its subscription plan and entitlements. You have to be an administrator to view the APM Subscription Usage page for your organization. Go to :strong:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
 
@@ -47,22 +43,3 @@ For each subscription plan type, download detailed usage reports for recent usag
 - The billed trace volume
 
 For more information about detailed usage reports, see :ref:`view-apm-billing-reports`.
-
-.. _host-diagnostics-report-apm:
-
-Host diagnostics report
-========================================
-
-For host subscription plans, you can request and download reports that show which hosts are sending APM data during a certain period of time. This can help you identify which hosts are contributing the most to your subscription usage.
-
-To download a host diagnostics report, do the following:
-
-- Go to :menuselection:`Settings > Subscription Usage` and select the :strong:`APM` tab.
-- Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
-- Select an hour of time in the chart.
-- Select a specific minute within the hour.
-- Click :guilabel:`Download Data` to download the CSV file.
-
-For each host in the select period, the report shows the name of the tag assigned to the host, for example ``host.name``, and its value.
-
-.. note:: Reports can be generated and downloaded within the retention period. See :ref:`apm-extended-trace-retention` for more information.
