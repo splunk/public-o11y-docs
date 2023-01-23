@@ -87,7 +87,7 @@ RUM alert conditions are designed to reduce noise and provide clear, actionable 
 Page level metrics 
 ------------------
 
-To create a page level metric, first create a custom rule to map to the page you want to monitor. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule by selecting the rule from the list. The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``. 
+To create a page level metric, first create a custom rule to map to the page you want to monitor. See :ref:`rum-rules` to learn how to create a custom rule. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule by selecting the rule from the list. The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``. 
 
 .. image:: /_images/rum/product-page-rum-example.png
    :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 

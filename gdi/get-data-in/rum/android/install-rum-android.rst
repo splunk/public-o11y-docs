@@ -11,7 +11,6 @@ You can instrument your Android applications for Splunk RUM using the Android RU
 
 To instrument your Android application and get data into Splunk RUM, follow the instructions on this page.
 
-
 .. note:: Splunk APM is not required to instrument Splunk RUM for Android. 
 
 .. _android-rum-requirements:
@@ -122,28 +121,31 @@ Follow these steps to install the Android RUM agent using Maven Central:
    .. code-block:: kotlin
 
       import com.splunk.rum.SplunkRum
-      import com.splunk.rum.Config
       import com.splunk.rum.StandardAttributes
       import io.opentelemetry.api.common.Attributes
 
-      class MyApplication : Application() {
-         private val config: Config = SplunkRum.newConfigBuilder()
-            .realm("<realm>") // Splunk Realm
-            .rumAccessToken("<rum_token>") // Your RUM token
-            .applicationName("<name_of_app>") // Name of your app
-            .deploymentEnvironment("<name_of_env>") // Environment
-            .globalAttributes(
-                  Attributes.builder() // Add the application version. Alternatively, you
-                     // can pass BuildConfig.VERSION_NAME as the value.
-                     .put(StandardAttributes.APP_VERSION, "<version_of_app>")
-                     .build()
-            )
-            .build()
+      class MyApplication extends Application {
+         private final String realm = "<realm>";
+         private final String rumAccessToken = "<your_RUM_access_token>";
 
-         // ...
-         override fun onCreate() {
-            super.onCreate()
-            SplunkRum.initialize(config, this)
+         @Override
+         public void onCreate() {
+            super.onCreate();
+
+            SplunkRum.builder()
+                     .setApplicationName("<name_of_app>")
+                     .setDeploymentEnvironment("<name_of_env>") // Environment
+                     .setRealm(realm)
+                     .setRumAccessToken(rumAccessToken)
+                     .setGlobalAttributes(
+                           Attributes.builder() // Add the application version. Alternatively, you
+                              // can pass BuildConfig.VERSION_NAME as the value.
+                              .put(StandardAttributes.APP_VERSION, "<version_of_app>")
+                              .build()
+                     )
+                     // Enables debug logging if needed
+                     //.enableDebug()
+                     .build(this);
          }
       }
 
@@ -171,7 +173,50 @@ Follow these steps to install the Android RUM agent using Maven Central:
 
 6. Generate some user activity in your application. After you've interacted with the application, verify that the data is appearing in the RUM dashboard.
 
-.. note:: You can check whether the Android RUM agent has been initialized by calling the ``SplunkRum.isInitialized()`` method anywhere in your code.
+   .. note:: You can check whether the Android RUM agent has been initialized by calling the ``SplunkRum.isInitialized()`` method anywhere in your code.
+
+For a sample application using Android RUM, see :new-page:`the sample application in GitHub <https://github.com/signalfx/splunk-otel-android/tree/main/sample-app>`.
+
+.. _android-build-locally:
+
+Build the Android RUM library locally
+=========================================================
+
+To download and build the Android RUM library locally, follow these steps:
+
+1. Clone the repository to your machine:
+
+   .. code:: bash
+
+      git clone https://github.com/signalfx/splunk-otel-android.git
+
+2. Build locally and publish to your local Maven repository:
+
+   .. code:: bash
+
+      ./gradlew publishToMavenLocal
+
+3. Make sure to set ``mavenLocal()`` as the repository in your ``build.gradle`` file:
+
+   .. code:: kotlin
+
+      allprojects {
+         repositories {
+            google()
+      //...
+            mavenLocal()
+         }
+      }
+
+4. Add the library you've built as a dependency in the ``build.gradle`` file:
+
+   .. code:: kotlin
+
+      dependencies {
+         //...
+            implementation ("com.splunk:splunk-otel-android:<version>")
+         //...
+      }
 
 .. _android-webview-instrumentation:
 

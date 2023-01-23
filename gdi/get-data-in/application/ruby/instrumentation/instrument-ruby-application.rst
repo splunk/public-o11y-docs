@@ -94,6 +94,11 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-ruby-troub
 
 If you want to manually install and enable instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
 
+Instrument Ruby on Rails applications
+=======================================================
+
+To instrument a Ruby on Rails application, see :ref:`instrument-ruby-rails`.
+
 .. _ruby-enable-server-timing:
 
 Enable server timing for RUM
