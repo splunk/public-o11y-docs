@@ -207,9 +207,9 @@ The Find Outliers feature also provides a population selector that lets you rest
 View dependencies in the navigator sidebar
 ----------------------------------------------------
 
-.. note:: Available only for hosts and virtual hosts.
+.. note:: Available only for hosts, virtual hosts, and Kubernetes nodes navigators.
 
-In navigators for hosts in :strong:`My Data Center` and virtual hosts, Amazon EC2, Azure Virtual Machines, and Google Cloud Platform, you can track dependent services in the navigator sidebar.
+In navigators for Kubernetes nodes, hosts in :strong:`My Data Center` and virtual hosts, Amazon EC2, Azure Virtual Machines, and Google Cloud Platform, you can track dependent services and containers in the navigator sidebar.
 
 Best practice
 ============================

@@ -81,8 +81,8 @@ Containers, pods, and nodes are colored by health and status, as reported by Kub
     * Pods are colored by phase: ``Running``, ``Pending``, ``Succeeded``, ``Failed``, and ``Unknown``
     * Nodes are colored by condition: ``Node Ready``, ``Memory Pressure``, ``PID Pressure``, ``Disk Pressure``, ``Network Unavailable``, and ``Out of Disk``
 
-Interact with the navigator
-+++++++++++++++++++++++++++++++
+Investigate instances in the hierarchical map
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * Breadcrumb navigation: Jump across levels and switch to different entities at any level using the breadcrumb navigation bar.
 
@@ -109,6 +109,16 @@ Interact with the navigator
       :width: 100%
       :alt: Filtering ``kubernetes.io/cluster-service`` to ``true`` hides nodes that don't match and highlights matching pods and containers.
 
+View services and hosts on which Kubernetes is running
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Apart from monitoring your Kubernetes infrastructure, you can also track services and hosts where Kubernetes is running in the navigator sidebar. When you select a host or service from the sidebar, you are switching to the navigator for that host or service instance. 
+
+From a host navigator, you also have the option to jump back to the Kubernetes navigator.
+
+    ..  image:: /_images/infrastructure/k8s-nav-pivot.gif
+      :width: 100%
+      :alt: Navigating to the EC2 navigator from the Kubernetes nodes navigator, and then navigating back to the Kubernetes nodes navigator.
 
 .. _k8s-workloads-nav:
 
