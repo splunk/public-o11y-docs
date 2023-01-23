@@ -13,11 +13,21 @@ To configure the Android RUM agent, pass the settings by preparing a ``Config`` 
 
 .. code-block:: kotlin
 
-   SplunkRum.builder()
+   class MyApplication extends Application {
+      private final String realm = "<realm>";
+      private final String rumAccessToken = "<your_RUM_access_token>";
+
+      @Override
+      public void onCreate() {
+         super.onCreate();
+
+      SplunkRum.builder() 
             .setApplicationName("<name_of_app>")
             .setRealm("<realm>"")
             .setRumAccessToken("<rumAccessToken>")
             .build(this);
+      }
+   }
 
 .. _android-rum-settings:
 
@@ -53,7 +63,7 @@ Use the following settings to configure the Android RUM agent:
    * - :code:`enableSessionBasedSampling(double)`
      - Enables session ID based sampling and sets a sampling ratio. The sampling ratio is the probability of a session being included between. Values range betwee between ``0.0`` (all dropped) and ``1.0`` (all included).
    * - :code:`enableDebug()`
-     - Enables debug mode. The default value is ``false``. Enabling debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
+     - Enables debug mode. This feature is disabled by default. Enabling debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
 
 .. _android-rum-instrumentation-settings:
 
@@ -69,13 +79,13 @@ Use the following settings to enable or disable the collection of specific data:
    * - Option
      - Description
    * - :code:`disableCrashReporting()`
-     - Enables crash reporting. The default value is ``false``.
+     - Disables crash reporting. This feature is enabled by default.
    * - :code:`disableAnrDetection()`
-     - Enables ANR (Application not responding) detection and reporting. The default value is ``false``.
+     - Disables ANR (Application not responding) detection and reporting. This feature is enabled by default.
    * - :code:`disableNetworkMonitor()`
-     - Enables network monitoring. The default value is ``false``.
+     - Disables network monitoring. This feature is enabled by default.
    * - :code:`disableSlowRenderingDetection()`
-     - Disables the detection of slow frame renders. The default value is ``false``. Splunk RUM defines renders as slow or frozen following the Android Vitals definition of the Android Developers documentation.
+     - Disables the detection of slow frame renders. This feature is enabled by default. Splunk RUM defines renders as slow or frozen following the Android Vitals definition of the Android Developers documentation.
    * - :code:`setSlowRenderingDetectionPollInterval(Duration)`
      - Sets the default polling interval for slow or frozen render detection. The default value is ``1000`` milliseconds. The value must be positive.
 
@@ -97,7 +107,7 @@ Instrument OkHttp using the ``Call.Factory`` wrapper, as in the following exampl
       return splunkRum.createRumOkHttpCallFactory(new OkHttpClient());
    }
 
-Volley HTTP
+Volley HTTP (Experimental)
 -------------------------------------------------
 
 To instrument Volley HTTP, add the ``splunk-otel-android-volley`` dependency to the ``build.gradle.kts`` file:
