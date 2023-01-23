@@ -4,8 +4,10 @@
 Index span tags to generate Troubleshooting MetricSets
 ************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Index tags to create Troubleshooting MetricSets that help you troubleshoot services with Splunk Observability Cloud.
+   :description: Learn how to use index tags to create Troubleshooting MetricSets that help you troubleshoot services with Splunk Observability Cloud.
 
 Thanks to Splunk APM's full-fidelity tracing, which captures every span from every trace, you can use span tags to break down services and inter-service calls along any characteristic or attribute associated with any given trace. This lets you customize data visualizations and metrics for your monitoring and troubleshooting requirements. 
 

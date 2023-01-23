@@ -4,8 +4,10 @@
 Example Business Workflow configuration
 ***************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: See how you can correlate logically-related traces with Business Workflows in Splunk Observability Cloud.
+   :description: Review an example of how you can correlate logically-related traces with Business Workflows in Splunk Observability Cloud.
 
 Suppose you want to identify every trace that goes through ``service.example``. To do this, create a Business Workflow. The following example creates a service rule for ``service.example`` that creates workflows based on endpoints for the service. To follow along in the app, you must be an administrator.
 

@@ -4,8 +4,10 @@
 Introduction to Splunk APM
 ************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-  :description: Get started monitoring applications with Splunk Observability Cloud.
+  :description: Get started monitoring applications with Splunk APM in Splunk Observability Cloud.
 
 What is Splunk APM?
 =========================================
