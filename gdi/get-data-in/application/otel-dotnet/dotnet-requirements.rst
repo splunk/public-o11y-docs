@@ -42,6 +42,8 @@ Traces instrumentations
      - ``AspNet``
    * - ASP.NET Core
      - ``AspNet``
+   * - Microsoft.EntityFrameworkCore  |br| (Not supported on .NET Framework)
+     - ``EntityFrameworkCore``
    * - GraphQL
      - ``GraphQL``
    * - Grpc.Net.Client
