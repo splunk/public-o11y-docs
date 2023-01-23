@@ -177,7 +177,7 @@ Use the :guilabel:`Group by` drop-down menu in the control bar to partition inst
 
 In some cases, you might see an option titled "n/a" in the drop-down menu. This group contains instances that don't have a value for the Group |hyph| by dimension or property you specify.
 
-When you specify a Group |hyph| by field, you can click a group name to filter the navigator to only show the instances in that group. The breadcrumb trail updates to indicate your selected group.
+When you specify a Group |hyph| by field, you can select a group name to filter the navigator to only show the instances in that group. The breadcrumb trail updates to indicate your selected group.
 
 .. _outliers:
 
@@ -207,9 +207,9 @@ The Find Outliers feature also provides a population selector that lets you rest
 View dependencies in the navigator sidebar
 ----------------------------------------------------
 
-.. note:: Available only for hosts, virtual hosts, and Kubernetes nodes navigators.
+.. note:: Available only for Kubernetes, hosts, and virtual hosts.
 
-In navigators for Kubernetes nodes, hosts in :strong:`My Data Center` and virtual hosts, Amazon EC2, Azure Virtual Machines, and Google Cloud Platform, you can track dependent services and containers in the navigator sidebar.
+In navigators for Kubernetes, hosts in :strong:`My Data Center`, and virtual hosts, Amazon EC2, Azure Virtual Machines, and Google Cloud Platform, you can track dependent services and containers in the navigator sidebar.
 
 Best practice
 ============================
@@ -247,7 +247,7 @@ In this Amazon EC2 navigator, Cassandra and Kafka services are running on the Am
     :width: 70%
     :alt: This image shows what the navigator sidebar looks like in a navigator.
 
-#. To see the full list of Cassandra services, hover over or click the Cassandra tile.
+#. To see the full list of Cassandra services, hover over or select the Cassandra tile.
 
     .. image:: /_images/infrastructure/cassandra-services.png
         :width: 70%
@@ -265,7 +265,7 @@ In this Amazon EC2 navigator, Cassandra and Kafka services are running on the Am
         :width: 70%
         :alt: This image shows the search result for ``metadata`` services.
 
-#. Click a Cassandra service to navigate to the navigator or dashboard for that service. When both navigator and dashboard are available for a service, clicking that service opens the navigator.
+#. Select a Cassandra service to navigate to the navigator or dashboard for that service. When both navigator and dashboard are available for a service, clicking that service opens the navigator.
 
 .. _view-alerts-in-navigators:
 
@@ -278,7 +278,7 @@ If a service has any active alerts, you can view a list of the service's alerts 
 #. Search for the navigator that you want to view. 
 #. Under the navigator title, select the text displaying the number of alerts. Alert numbers and types vary depending on the navigator. 
 
-For the following example navigator, the user would select :guilabel:`90 Critical alerts`. 
+For the following example navigator, the user selects :guilabel:`90 Critical alerts`. 
 
 .. image:: /_images/infrastructure/navigator-alerts.png
         :width: 50%
@@ -298,7 +298,7 @@ When data for an integration hasn't been received for 72 hours, the navigator fo
 Follow these steps to remove an inactive navigator.
 
 #. Select :guilabel:`Infrastructure` from the Splunk Observability Cloud home page. You can only remove a navigator when you're in the Infrastructure Monitoring landing page view.
-#. On an inactive navigator, click :guilabel:`Remove Navigator`.
+#. On an inactive navigator, select :guilabel:`Remove Navigator`.
 
     .. image:: /_images/infrastructure/remove-navigator.png
         :width: 50%

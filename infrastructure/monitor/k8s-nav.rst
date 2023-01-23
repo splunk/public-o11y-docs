@@ -109,17 +109,6 @@ Investigate instances in the hierarchical map
       :width: 100%
       :alt: Filtering ``kubernetes.io/cluster-service`` to ``true`` hides nodes that don't match and highlights matching pods and containers.
 
-View services and hosts on which Kubernetes is running
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Apart from monitoring your Kubernetes infrastructure, you can also track services and hosts where Kubernetes is running in the navigator sidebar. When you select a host or service from the sidebar, you are switching to the navigator for that host or service instance. 
-
-From a host navigator, you also have the option to jump back to the Kubernetes navigator.
-
-    ..  image:: /_images/infrastructure/k8s-nav-pivot.gif
-      :width: 100%
-      :alt: Navigating to the EC2 navigator from the Kubernetes nodes navigator, and then navigating back to the Kubernetes nodes navigator.
-
 .. _k8s-workloads-nav:
 
 Kubernetes workloads navigator
@@ -130,6 +119,20 @@ A workload is an application running on Kubernetes. Your workload might be a sin
 Instead of a hierarchical approach to your Kubernetes infrastructure, you can investigate workloads for a given Kubernetes namespace, and the pods where each workload is running on.
 
 For more information, see :ref:`use-navigators-imm`.
+
+.. _k8s-nav-pivot:
+
+View services and hosts on which Kubernetes is running
+-----------------------------------------------------------
+
+Apart from monitoring your Kubernetes infrastructure, you can also track services and hosts where Kubernetes is running in the navigator sidebar for both the Kubernetes nodes and workloads navigators. When you select a host or service from the sidebar, you are switching to the navigator for that host or service instance. 
+
+.. note:: From a host navigator, you can only jump back to the Kubernetes nodes navigator.
+
+    ..  image:: /_images/infrastructure/k8s-nav-pivot.gif
+      :width: 100%
+      :alt: Navigating to the EC2 navigator from the Kubernetes nodes navigator, and then navigating back to the Kubernetes nodes navigator.
+
 
 Learn more
 =====================
