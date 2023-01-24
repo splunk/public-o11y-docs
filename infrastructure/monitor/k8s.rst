@@ -8,10 +8,7 @@ Monitor Kubernetes (classic version)
    :description: Learn how to monitor Kubernetes resources with Splunk Observability Cloud.
 
 .. note::
-   The classic Kubernetes navigator is deprecated and will reach End of Support on ??. Anything else I should say here?
-
-.. note::
-   The following topic describes the classic Kubernetes navigator. See :ref:`infrastructure-k8s-nav` for documentation on the new Kubernetes navigator.
+   The classic Kubernetes navigator is deprecated and will be replaced by the new Kubernetes navigator. See :ref:`infrastructure-k8s-nav` for documentation on the new Kubernetes navigator.
 
 Before you can start monitoring any Kubernetes resources, :ref:`get-started-k8s`, and log in with your administrator credentials.
 
