@@ -4,10 +4,10 @@
 Built-in alert conditions
 *****************************************************************
 
-.. meta updated 8/7/18
+.. meta updated 1/23/23
 
 .. meta::
-  :description: Built-in alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold
+  :description: Built-in alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold.
 
 
 .. toctree::

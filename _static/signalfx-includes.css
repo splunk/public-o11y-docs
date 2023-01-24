@@ -1422,7 +1422,35 @@ ol ol ol{
     right: 2% !important;
   }
 }
+.css-icon {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+.css-github-link {
+display: inline-flex;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center;
+justify-content: center;
+padding: 0.5rem 1rem;
+font-weight: 400;
+border-radius: 3px;
+font-family: var(--primary-font-family);
+line-height: 1;
+cursor: pointer;
+transition: all 0.15s ease-out 0s;
+white-space: nowrap;
+text-decoration: none;
+color: var(--button-outline-color);
+border: 1px solid var(--button-outline-color);
+background-color: transparent;
+font-size: 1rem;
 
-
-
-
+}

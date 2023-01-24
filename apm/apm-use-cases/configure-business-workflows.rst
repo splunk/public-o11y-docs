@@ -4,8 +4,10 @@
 Configure Business Workflows to track business KPIs
 *******************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-    :description: A Splunk APM use cases describes how to configure APM Business Workflows
+    :description: This Splunk APM use case describes how to configure APM Business Workflows.
 
 Executives at Buttercup Games set three new business KPIs: the percentage of successful checkout requests, the P90 latency of logins, and Failed Customer Interactions (FCI). To measure these KPIs, Wei, the director of site reliability engineering and an administrator of Splunk APM, wants to configure the KPIs as Business Workflows. 
 

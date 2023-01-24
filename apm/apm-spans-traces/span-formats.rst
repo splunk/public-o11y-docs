@@ -4,8 +4,10 @@
 Compatible span formats for Splunk APM
 *****************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Splunk APM supports a variety of span formats, depending on which agent, collector, or endpoint receives and exports trace data.
+   :description: Learn about the variety of span formats in Splunk APM.
 
 Splunk APM supports a variety of span formats, depending on which agent, collector, or endpoint receives and exports trace data. For more information about instrumenting applications for Splunk APM, see :ref:`instrument-applications`.
 

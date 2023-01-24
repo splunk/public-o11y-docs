@@ -10,9 +10,9 @@ Instrument mobile and web applications for Splunk RUM
 ..	toctree::
    :hidden:
 
-   Instrument browser-based web applications <browser/get-browser-data-in>
-   Instrument iOS applications <ios/get-ios-data-in>
-   Instrument Android applications <android/get-android-data-in>
+   Instrument browser-based web applications TOGGLE <browser/get-browser-data-in>
+   Instrument iOS applications TOGGLE <ios/get-ios-data-in>
+   Instrument Android applications TOGGLE <android/get-android-data-in>
 
 Instrument your mobile and web applications to send data to Splunk Real User Monitoring (RUM). Splunk RUM provides visibility into the user behaviors in mobile and web applications. To learn more about Splunk RUM, see :ref:`get-started-rum`.
 

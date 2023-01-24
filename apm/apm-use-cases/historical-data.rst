@@ -4,8 +4,10 @@
 Analyze historical data to optimize system performance using the built-in dashboard
 *************************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-    :description: A Splunk APM use cases describes how to configure APM Business Workflows
+    :description: This Splunk APM use case describes how to use historical data to optimize system function.
 
 Skyler, a performance engineer at Buttercup Games, wants to understand and analyze the end-to-end behavior of microservices to optimize the system. Skyler opens the service-level Splunk APM services dashboard among the :strong:`Built-in Dashboard Groups` in Splunk Observability Cloud:
 

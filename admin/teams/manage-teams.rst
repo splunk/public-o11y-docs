@@ -17,7 +17,11 @@ Create and manage teams in Splunk Observability Cloud
 
 Use Splunk Observability Cloud teams to coordinate teamwork. Perform the following tasks to set up your teams and provide team members with resources that can help streamline their teamwork:
 
-* Organize users with teams
+.. raw:: html
+
+  <embed>
+    <h2>Organize users with teams</h2>
+  </embed>
 
    As a Splunk Observability Cloud administrator, use teams to organize users by functional area, then you can connect users in a particular area to the detectors and dashboard groups that they're most interested in. For example, here are examples of some teams based on functional areas:
 
@@ -32,19 +36,32 @@ Use Splunk Observability Cloud teams to coordinate teamwork. Perform the followi
 
    To learn more about creating and managing teams, see :ref:`admin-manage-team-membership`.
 
-* Link teams to relevant Observability Cloud features and content
+.. raw:: html
 
-   For example, you can link teams to relevant dashboard groups and detectors, giving them focused access to the information they use the most.
+  <embed>
+    <h3>Link teams to relevant Observability Cloud features and content</h3>
+  </embed>
+
+   You can link teams to relevant dashboard groups and detectors, giving them focused access to the information they use the most.
 
    To learn more about linking teams to dashboard groups and detectors, see :ref:`admin-associate-team`.
 
-* Set up team landing pages to provide a handy location for team resources
+.. raw:: html
+
+  <embed>
+    <h3>Set up team landing pages to provide a handy location for team resources</h3>
+  </embed> 
 
    A team landing page provides a customizable text area that you can use to provide useful information for the team. The team landing page also provides access to any dashboard groups and detectors that you linked to the team.
 
    To learn more about team landing pages, see :ref:`admin-configure-page`.
 
-* Create team notifications
+.. raw:: html
+
+  <embed>
+    <h3>Create team notifications</h3>
+  </embed> 
+
 
   Define team notifications to help ensure that your team receives the alerts it needs to stay informed.
 
