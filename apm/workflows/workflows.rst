@@ -4,8 +4,10 @@
 Correlate traces to track Business Workflows
 ********************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Correlate logically-related traces with Business Workflows in Splunk Observability Cloud.
+   :description: Learn how to correlate logically-related traces with Business Workflows in Splunk Observability Cloud.
 
 .. toctree::
    :hidden:

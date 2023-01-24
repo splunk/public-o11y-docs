@@ -4,8 +4,10 @@
 List of available AutoDetect detectors
 ******************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-   :description: The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the GitHub link in each AutoDetect detector section.
+   :description: Reference of available AutoDetect detectors and their customizable arguments. 
 
 The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the GitHub link in each AutoDetect detector section.
 

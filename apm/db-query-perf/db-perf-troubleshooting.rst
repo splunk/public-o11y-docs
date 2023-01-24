@@ -4,8 +4,10 @@
 Troubleshoot Database Query Performance
 ************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Follow these steps to troubleshoot Database Query Performance issues.
+   :description: Learn how to troubleshoot Database Query Performance issues.
 
 Follow the steps in the following sections to troubleshoot Database Query Performance issues:
 

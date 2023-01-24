@@ -4,8 +4,10 @@
 Reference and best practices for span tags and Troubleshooting MetricSets
 *******************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-  :description: With Troubleshooting MetricSets (TMS), you can drill down into to gain insights about the performance of your infrastructure, or to address a specific incident.
+  :description: Learn how to drill down to gain insights about the performance of your infrastructure or to address a specific incident using Troubleshooting MetricSets (TMS).
 
 With Troubleshooting MetricSets (TMS), you can drill down into to gain insights about the performance of your infrastructure, or to address a specific incident.
 
