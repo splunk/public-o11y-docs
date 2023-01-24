@@ -5,7 +5,7 @@ Splunk Incident Intelligence overview
 
 Welcome to Incident Intelligence! Use this high-level overview to better understand the end-to-end journey of an incident. These icons are used in the overview graphics to symbolize key terms and processes in Incident Intelligence and Splunk Observability Cloud:
 
-.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-Terms-Icons.png
+.. image:: /_images/incident-intelligence/Incident-Intellgence-Overview-Terms.png
       :width: 99%
       :alt: Incident Intelligence key terms and icons.
 
@@ -17,7 +17,7 @@ Detectors within Splunk Observability Cloud monitor your systems. As an Observab
 The following diagram shows generated alerts and the downstream noise they create:
 
 
-.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview1.svg
+.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-1-Crop.png
       :width: 99%
       :alt: Alert generation creates alert noise.
 
@@ -28,7 +28,7 @@ You can determine which alert signals are the most important to the performance 
 
 The following workflow shows the end-to-end incident policy process, starting with an alert, moving into routing and grouping, and ending with a notification to the on-call responder: 
 
-.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-2.png
+.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-2-Crop.png
       :width: 99%
       :alt: Incident policies route and group alerts into incidents that trigger workflows.
 
@@ -39,7 +39,7 @@ On-call scheduling ensures the right person is notified at the right time to res
 
 The following diagram shows
 
-.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-3.png
+.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-3-Crop.png
       :width: 99%
       :alt: On-call schedules, triggered in incident workflows, notify the appropriate responder.
 
@@ -51,6 +51,6 @@ This simplified end-to-end incident response flow demonstrates the value of Inci
 The following diagram shows this entire incident response process: 
 
 
-.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-4.png
+.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-4-Crop.png
       :width: 99%
       :alt: End-to-end incident response process.
