@@ -98,3 +98,8 @@ Some profiler issues might be specific to the APM instrumentation. See the follo
 - :ref:`java-profiler-issues`
 - :ref:`nodejs-profiler-issues`
 - :ref:`dotnet-profiler-issues`
+
+Disable profiling log data for specific hosts
+==============================================================
+
+If you don't need AlwaysOn Profiling data for a specific host or container, see :ref:`unwanted_profiling_logs`.
