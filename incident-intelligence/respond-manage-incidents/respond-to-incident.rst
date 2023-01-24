@@ -43,4 +43,3 @@ See also
 * :ref:`ii-edit-incident`
 * :ref:`ii-muted-incidents`
 * :ref:`ii-mtta-mttr`
-* :ref:`ii-notification-preferences`
