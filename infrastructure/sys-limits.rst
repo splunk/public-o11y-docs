@@ -605,21 +605,21 @@ MTS creations per minute limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 6,000 or determined by your subscription.
-   * :strong:`Notes`: Maximum number of MTS you can create per minute. For example, if you create 5,500 MTS in the first minute, you can still create 5,500 more in the next minute. If you exceed your MTS limit per minute for more than 30 minutes of any hour, you can't create any more MTS for the remainder of the hour.
+   * :strong:`Notes`: Maximum number of MTS you can create per minute for Infrastructure Monitoring. For example, if you create 5,500 MTS in the first minute, you can still create 5,500 more in the next minute. You can also create 6,000 MTS per minute for each other product in Splunk Observability Cloud.
    * :strong:`Related metrics`:
 
      - ``sf.org.numMetricTimeSeriesCreated``
      - ``sf.org.limit.metricTimeSeriesCreatedPerMinute``
-   * :strong:`Customer impact`: Infrastructure Monitoring drops new MTS above the limit without returning an error. Data points for existing MTS are still accepted.
+   * :strong:`Customer impact`: Infrastructure Monitoring drops new MTS that exceed the limit without returning an error, but accepts data points for existing MTS.
 
 .. _mts-creations-per-hour-limit:
 
 MTS creations per hour limit
 --------------------------------------------------------------------------------------
 
-   * :strong:`Default limit value`: Absolute limit of 500,000 MTS per hour, regardless of your subscription limit, or 50 times your MTS per minute limit, whichever is smaller.
-   * :strong:`Notes`: Maximum number of MTS you can create per hour.
-   * :strong:`Customer impact`: Infrastructure Monitoring drops new MTS above the limit without returning an error. Data points for existing MTS are still accepted.
+   * :strong:`Default limit value`: 60 times your MTS per minute limit
+   * :strong:`Notes`: Maximum number of MTS you can create per hour for Infrastructure Monitoring. You can create more MTS with the same limit for each other Splunk Observability Cloud product.
+   * :strong:`Customer impact`: Infrastructure Monitoring drops new MTS that exceed the limit without returning an error, but accepts data points for existing MTS.
 
 .. _number-of-dimensions-per-mts:
 

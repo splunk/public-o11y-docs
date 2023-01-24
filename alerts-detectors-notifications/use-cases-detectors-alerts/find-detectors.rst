@@ -4,8 +4,10 @@
 Use case: Find active alerts to investigate a CPU issue
 *********************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-    :description: A Splunk alerts and detectors use case describes how to find active alerts.
+    :description: This Splunk alerts and detectors use case describes how to find active alerts.
 
 Kai, a site reliability engineer at Buttercup Games, has created a detector called "CPU Detector" that monitors Buttercup Games host machine's CPU usage for sudden changes. Kai has received many alerts from this detector, and wants to get a more detailed view of these alerts. 
 

@@ -4,6 +4,8 @@
 Set up deployment environments in Splunk APM 
 ********************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
     :description: Learn how to set the deployment environment tag in Splunk APM.
 

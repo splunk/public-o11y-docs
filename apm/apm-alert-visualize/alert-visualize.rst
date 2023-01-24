@@ -2,6 +2,8 @@
 Visualize and alert on your application in Splunk APM
 *****************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Learn about options for dashboards, detectors, and alerts in Splunk APM. 
 

@@ -4,6 +4,8 @@
 Create Business Workflow alerts
 *********************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Learn how to set up detector to alert on issues in your Business Workflows.
 

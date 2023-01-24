@@ -4,8 +4,10 @@
 Use case: Identify slow database queries using Database Query Performance
 **************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Follow a site reliability engineer (SRE)'s workflow using Database Query Performance to examine the relationship between service latency and the performance of database queries in their system.
+   :description: This Splunk APM use case describes a workflow that uses Database Query Performance to examine service latency and the performance of database queries.
 
 Jax, a site reliability engineer, is in charge of identifying the root cause of service latency issues in their system. In this section, follow their workflow using Database Query Performance to examine the relationship between service latency and the performance of database queries in their system.
 

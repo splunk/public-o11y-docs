@@ -4,8 +4,10 @@
 View and manage permissions for detectors
 ********************************************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-   :description: Learn how to manage access permissions for detectors
+   :description: Learn how to manage access permissions for detectors.
 
 |hr|
 :strong:`Available in Enterprise Edition`
