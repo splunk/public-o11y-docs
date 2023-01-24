@@ -7,7 +7,7 @@ Per product limits in Splunk Observability Cloud
 .. meta::
    :description: Separate metric limits alerting for each product.
 
-When you use more than one products in Splunk Observability Cloud to monitor and analyze your data, each product has its own metric time series (MTS) limits. Per product limits let you set up metric limits alerting to manage your resource usage on a per product basis.
+When you use more than one products in Splunk Observability Cloud to monitor and analyze your data, each product has its own metric time series (MTS) limits. You can set up metric limits alerting to manage your resource usage on a per product basis.
 
 The following table shows per product MTS creation limits.
 
