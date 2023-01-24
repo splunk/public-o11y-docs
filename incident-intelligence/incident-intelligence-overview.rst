@@ -17,7 +17,7 @@ Detectors within Splunk Observability Cloud monitor your systems. As an Observab
 The following diagram shows generated alerts and the downstream noise they create:
 
 
-.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-1.png
+.. image:: /_images/incident-intelligence/Incident-Intelligence-Overview1.svg
       :width: 99%
       :alt: Alert generation creates alert noise.
 
