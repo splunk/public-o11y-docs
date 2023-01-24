@@ -31,7 +31,7 @@ To instrument your Java application, follow these steps:
 #. Instrument your Java application. See :ref:`instrument-java-applications`.
 #. Configure your instrumentation. See :ref:`configure-java-instrumentation`.
 
-You can also automatically instrument your Java applications along with the Splunk Distribution of OpenTelemetry Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions.
+You can also automatically instrument your Java applications along with the Splunk Distribution of OpenTelemetry Collector installation. Automatic instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions.
 
 For more information, see :ref:`splunk-java-otel-dist`.
 
