@@ -81,7 +81,7 @@ Create a new chart using the Chart Builder
 #. Select :guilabel:`Chart` from the :guilabel:`Create` menu. Alternatively, you can select :guilabel:`New Chart` on custom dashboards.
 #. Search for metrics or events you want to plot on your chart. For more information, see :ref:`chart-builder`.
     
-    .. note:: You can add functions to your chart with the :strong:`F(x)` column. See :ref:`plot-analytics` and :ref`analytics-ref` for more details.
+    .. note:: You can add functions to your chart with the :strong:`F(x)` column. See :ref:`plot-analytics` and :ref:`analytics-ref` for more details.
 #. Customize your chart. See :ref:`chart-options-tab`.
 
 See also :ref:`choose-chart-type`.
