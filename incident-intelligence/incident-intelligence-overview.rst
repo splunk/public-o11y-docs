@@ -7,6 +7,7 @@ Welcome to Incident Intelligence! Use this high-level overview to better underst
 
 .. image:: /_images/incident-intelligence/Incident-Intellgence-Overview-Terms.png
       :width: 50%
+      :align: center
       :alt: Incident Intelligence key terms and icons.
 
 Typical alert generation creates alert noise
