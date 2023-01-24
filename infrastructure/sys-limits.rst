@@ -184,7 +184,7 @@ Data ingestion limits
      - 128
 
    * - :ref:`mts-creations-per-hour-limit`
-     - Absolute limit of 500,000 MTS per hour, regardless of your subscription limit, or 50 times your MTS per minute limit, whichever is smaller.
+     - 60 times your MTS per minute limit
 
    * - :ref:`mts-creations-per-minute-limit`
      - 6,000 or determined by your subscription
@@ -619,7 +619,7 @@ MTS creations per minute limit
 MTS creations per hour limit
 --------------------------------------------------------------------------------------
 
-   * :strong:`Default limit value`: 60 times your MTS per minute limit.
+   * :strong:`Default limit value`: 60 times your MTS per minute limit
    * :strong:`Notes`: Maximum number of MTS you can create per hour.
    * :strong:`Customer impact`: Infrastructure Monitoring drops new MTS that exceed the limit without returning an error, but accepts data points for existing MTS.
 
