@@ -742,7 +742,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Ingest alerts in Incident Intelligence <incident-intelligence/ingest-alerts/ingest-alerts>
+   Ingest alerts in Incident Intelligence TOGGLE <incident-intelligence/ingest-alerts/ingest-alerts>
 
 .. toctree::
    :maxdepth:   3
@@ -752,12 +752,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Create and manage on-call schedules <incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules>
+   Create and manage on-call schedules TOGGLE <incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules>
 
 .. toctree::
    :maxdepth:   3
 
-   Respond to and manage incidents <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
+   Respond to and manage incidents TOGGLE <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
 
 .. toctree::
    :caption: MOBILE
