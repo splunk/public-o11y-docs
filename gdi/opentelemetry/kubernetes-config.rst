@@ -114,8 +114,6 @@ By default, OpenTelemetry sends only metrics and traces to Observability Cloud a
      metricsEnabled: true
      logsEnabled: true
 
-.. caution:: 
-
 Configure Windows worker nodes
 ===============================================
 
