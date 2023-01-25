@@ -4,14 +4,9 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the kubelet-stats / kubernetes network stats monitor. See benefits, install, configuration, and metrics">
 
-<style>
-  a {text-decoration: none;}
-</style>
-
-| **Note**    |
-|:-------------|
-| This monitor is deprecated in favor of the `kubeletstats` receiver. See <a href="https://docs.splunk.com/Observability/gdi/kubelet-stats/kubelet-stats-receiver.html">Kubelet Stats Receiver</a> for more information. |
-
+```{note}
+This monitor is deprecated in favor of the `kubeletstats` receiver. See <a href="https://docs.splunk.com/Observability/gdi/kubelet-stats/kubelet-stats-receiver.html">Kubelet Stats Receiver</a> for more information.
+```
 ## Description
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to deploy the ``kubelet-stats`` monitor. This monitor pulls cadvisor metrics through a Kubernetes kubelet instance via the ``/stats/container`` endpoint.

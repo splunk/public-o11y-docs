@@ -4,20 +4,25 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Kubernetes Cluster / k8s-cluster receiver. See benefits, install, configuration, and metrics">
 
+```{note}
+This receiver is in beta and configuration fields are subject to change.
+```
+
 ## Description
 
 The Kubernetes Cluster Receiver, `k8s_cluster`, collects cluster-level metrics from the Kubernetes API server. The receiver uses the Kubernetes API to listen for updates. A single instance of this receiver can be used to monitor a cluster.
 
-This receiver is a native OpenTelemetry receiver that replaces the `kubernetes-cluster` SignalFx Smart Agent monitor.
+This receiver is a native OpenTelemetry receiver and replaces the `kubernetes-cluster` SignalFx Smart Agent monitor.
 
-> **Note:** This receiver is in beta and configuration fields are subject to change.
 
 ### Benefits
 
 ```{include} /_includes/benefits.md
 ```
 
-> **Note:** Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not fully supported for this receiver and may result in the navigator not displaying all clusters. See [endoflife.date](https://endoflife.date/kubernetes) for more information.
+```{note}
+Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not fully supported for this receiver and may result in the navigator not displaying all clusters. See [endoflife.date](https://endoflife.date/kubernetes) for more information.
+```
 
 ##  Installation
 
@@ -46,8 +51,8 @@ See <a href="https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/ote
 
 The following table shows the required and optional settings:
 
-| Option                                            | Description                                                                                                                                                                                                                                           | Required |
-|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| Option        | Description         | Required |
+|--------------------|-------------------------|----------|
 | `auth_type`   | Determines how to authenticate to the Kubernetes API server. The options are `none` for no auth, `serviceAccount` to use the standard service account token provided to the agent pod, or `kubeConfig` to use credentials from `~/.kube/config`. The default value is `serviceAccount`.     | Yes      |
 | `collection_interval` | The `k8s_cluster` receiver continuously watches for cluster events using the Kubernetes API. However, the metrics collected are emitted only once every collection interval. The `collection_interval` option determines the frequency at which metrics are emitted by this receiver. The default value is `10s`.| No       |
 | `node_conditions_to_report` | An array of node conditions this receiver reports. The `k8s_cluster` receiver emits one metric per entry in the array. The default value is `[Ready]`. To learn more, search for "Conditions" on the <a href="https://kubernetes.io/docs/home/" target="_blank">Kubernetes documentation</a> site. | No       |
