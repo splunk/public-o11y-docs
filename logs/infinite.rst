@@ -8,7 +8,7 @@ Archive your logs with infinite logging rules
 .. meta DOCS-2247
 
 .. meta::
-  :description: Manage the logs pipeline with infinite logging rules.
+  :description: Archive logs in Amazon S3 buckets using infinite logging rules. Reduce the amount of logs data you index. Increase logs' retention period.
 
 .. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create infinite logging rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 

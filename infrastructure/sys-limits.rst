@@ -8,9 +8,10 @@ System limits for Splunk Infrastructure Monitoring
    :description: This topic describes the Splunk Infrastructure Monitoring limits for incoming data,
     number of charts or detectors, and other features.
 
-Splunk Infrastructure Monitoring has system limits that help ensure good performance, stability, and reliability. These limits also protect the Infrastructure Monitoring multi-tenant environment. Exceeding these limits might degrade your Infrastructure Monitoring experience. 
+Splunk Infrastructure Monitoring has system limits that help ensure good performance, stability, and reliability. These limits also protect the Infrastructure Monitoring multitenant environment. Exceeding these limits might degrade your Infrastructure Monitoring experience.
 
-To help you optimize your product experience, this topic describes the following:
+To help you avoid problems when you use Infrastructure Monitoring, consider the system limit information presented in this
+document, which includes the following:
 
 * The name and value of each system limit
 * If available, the organization metrics associated with the limit
@@ -19,17 +20,18 @@ To help you optimize your product experience, this topic describes the following
 The first section in this topic contains tables of limit names and values, organized by product area. Each entry in the table shows the name of the limit and its default value. The
 limit name is also a link to more information about the limit.
 
-The first table in the section lists the most important limits to pay attention to as you scale your deployment.
+The first table in the section lists the most important limits to consider.
 
 Abbreviations
 ================================================================================
 
-This documentation uses the following abbreviations:
+This documentation uses the following initialisms:
 
-* MTS: Metric time series
-* AMTS: Active MTS
-* IMTS: Inactive MTS
-* ETS: Event time series
+* Metric time series (MTS)
+* Active MTS (AMTS)
+* Inactive MTS (IMTS)
+* Event time series (ETS)
+* Data points per minute (DPM)
 
 Limit summaries
 ================================================================================
@@ -182,7 +184,7 @@ Data ingestion limits
      - 128
 
    * - :ref:`mts-creations-per-hour-limit`
-     - Absolute limit of 500,000 MTS per hour, regardless of your subscription limit, or 50 times your MTS per minute limit, whichever is smaller.
+     - 60 times your MTS per minute limit
 
    * - :ref:`mts-creations-per-minute-limit`
      - 6,000 or determined by your subscription
@@ -332,7 +334,7 @@ Maximum number of dashboards you can retrieve
 ------------------------------------------------
 
    * :strong:`Default limit value`: 20,000
-   * :strong:`Notes`: Maximum number of dashboards you can retrieve per query using either the UI or the API.  If you reach this limit, you receive an error.
+   * :strong:`Notes`: Maximum number of dashboards you can retrieve per query using either the UI or the API. If you reach this limit, you receive an error.
    * :strong:`Customer impact`: When you exceed this limit, the user interface displays the error message "Unexpected error has occurred". After you exceed the limit, the dashboards page stops displaying dashboards.
 
 .. _dashboard-group-links-per-team:
@@ -344,7 +346,7 @@ Number of input MTS per job
 
    * :strong:`Default limit value`: 250,000
    * :strong:`Notes`: Maximum number of input MTS per job. When you use the same MTS multiple times in a job, each use counts towards the maximum.
-   * :strong:`Customer impact`: If the job is for a chart, the chart doesn't load and you receive an error message. If the job is for a detector, the job is aborted. You can monitor aborted detector SignalFlow programs using a built-in metric. Your organization also receives an event with information about the detector that aborted. Your job might reach this limit after it starts. A chart might initially load, but fail when the limit is reached.
+   * :strong:`Customer impact`: If the job is for a chart, the chart doesn't load and you receive an error message. If the job is for a detector, the system aborts the job. You can monitor aborted detector SignalFlow programs using a built-in metric. Your organization also receives an event with information about the detector that aborted. Your job might reach this limit after it starts. A chart might initially load, but fail when its SignalFlow job aborts.
 
 .. _maximum-number-of-derived-mts-per-signalflow-program:
 
@@ -352,8 +354,8 @@ Maximum number of derived MTS per SignalFlow program
 -------------------------------------------------------
 
    * :strong:`Default limit value`: 500,000
-   * :strong:`Notes`: Maximum number of derived MTS per SignalFlow program, where derived MTS are temporary MTS that a SignalFlow SignalFlow function or method has to maintain in memory. For example, if there are 20,000 MTS for the metric ``jvm.load``, and each MTS comes from a unique host, then ``"data('jvm.load').sum(by=['host']).publish()"`` tracks 40,000 derived MTS. The ``data()`` SignalFlow function or method uses 20,000, and the ``sum()`` uses another 20,000. The number of input MTS is still 20,000.
-   * :strong:`Customer impact`: If the SignalFlow program is for a chart, the chart doesn't load and you receive an error message. If the SignalFlow program is for a detector, the SignalFlow program is aborted. You can monitor aborted detector SignalFlow programs using a built-in metric. Your organization also receives an event with information about the detector that aborted. Your SignalFlow program might reach this limit after it starts. A chart might initially load, but fail when the limit is reached.
+   * :strong:`Notes`: Maximum number of derived MTS per SignalFlow program, where derived MTS are temporary MTS that a SignalFlow function or method has to maintain in memory. For example, if there are 20,000 MTS for the metric ``jvm.load``, and each MTS comes from a unique host, then ``"data('jvm.load').sum(by=['host']).publish()"`` tracks 40,000 derived MTS. The ``data()`` SignalFlow function or method uses 20,000, and the ``sum()`` uses another 20,000. The number of input MTS is still 20,000.
+   * :strong:`Customer impact`: If the SignalFlow program is for a chart, the chart doesn't load and you receive an error message. If the SignalFlow program is for a detector, the system aborts the program. You can monitor aborted detector SignalFlow programs using a built-in metric. Your organization also receives an event with information about the detector that aborted. Your SignalFlow program might reach this limit after it starts. A chart might initially load, but fail when its SignalFlow program aborts.
 
 .. _maximum-number-of-mts-allowed-per-chart-data-function:
 
@@ -364,11 +366,11 @@ Maximum number of MTS allowed per chart data() function
 
      - 10,000 for standard subscriptions
      - 30,000 for enterprise subscriptions
-   * :strong:`Notes`: If you're using Enterprise Edition, this limit is 30,000. You can have the limit set higher depending on your subscription. Please contact sales or customer support.
-   * :strong:`Customer impact`: If you exceed the limit, only the most recently created MTS are kept, based on the creation timestamp maintained for each MTS. This might result in inaccurate computations.
+   * :strong:`Notes`: If you're using Enterprise Edition, this limit is 30,000. You can have the limit set higher depending on your subscription. To have your limit changed, contact sales or customer support.
+   * :strong:`Customer impact`: If you exceed the limit, the system only keeps the most recently created MTS, based on the MTS creation timestamps. This might result in inaccurate computations.
 
 .. note::
-  For a chart that is unavailable for auto-sharding, this limit is 10,000. A chart becomes unavailable for auto-sharding when:
+  For a chart that is unavailable for autosharding, this limit is 10,000. A chart becomes unavailable for autosharding when:
 
   - It has been manually sharded using the ``partition_filter()`` function.
   - It uses one of the following functions: ``percentile()``, ``mean_plus_stddev()``, ``median()``, ``stddev()``, ``variance()``, ``sample_stddev()``, ``sample_variance()``, ``ewma()``, ``double_ewma()``, ``kpss()``, ``union()``.
@@ -382,11 +384,11 @@ Maximum number of MTS per detector data() function
 
      - 10,000 for standard subscriptions
      - 30,000 for enterprise subscriptions
-   * :strong:`Notes`: If you're using Enterprise Edition, this limit is 30,000. You can have the limit set higher depending on your subscription. Please contact sales or customer support.
-   * :strong:`Customer impact`: If you exceed the limit, only the most recently created MTS are kept, based on the creation timestamp maintained for each MTS. Detectors might not trigger, or they might trigger incorrectly.
+   * :strong:`Notes`: If you're using Enterprise Edition, this limit is 30,000. You can have the limit set higher depending on your subscription. To have the limit changed, contact sales or customer support.
+   * :strong:`Customer impact`: If you exceed the limit, the system only keeps the most recently created MTS, based on the MTS creation timestamps. Detectors might not trigger, or they might trigger incorrectly.
 
 .. note::
-  For a detector that is unavailable for auto-sharding, this limit is 10,000. A detector becomes unavailable for auto-sharding when:
+  For a detector that is unavailable for autosharding, this limit is 10,000. A detector becomes unavailable for autosharding when:
   
   - It has been manually sharded using the ``partition_filter()`` function.
   - It uses one of the following functions: ``percentile()``, ``mean_plus_stddev()``, ``median()``, ``stddev()``, ``variance()``, ``sample_stddev()``, ``sample_variance()``, ``ewma()``, ``double_ewma()``, ``kpss()``, ``union()``.
@@ -398,7 +400,7 @@ Maximum number of active alerts per detector
 
    * :strong:`Default limit value`: 200,000
    * :strong:`Notes`: Maximum number of active alerts you can have for a detector.
-   * :strong:`Customer impact`: Once you reach this limit, Splunk Infrastructure Monitoring aborts the detector and deletes all active alerts. To avoid hitting this limit, configure auto-clear on your detectors to clear active alerts based on defined thresholds. To learn more, see :ref:`auto-clearing-alerts`.
+   * :strong:`Customer impact`: Once you reach this limit, Splunk Infrastructure Monitoring aborts the detector and deletes all active alerts. To avoid hitting this limit, configure autoclear on your detectors to clear active alerts based on defined thresholds. To learn more, see :ref:`auto-clearing-alerts`.
 
 .. note:: When you update or delete a detector, Observability Cloud stops the SignalFlow program associated with the detector and sends a stop notification to all the recipients currently configured for the detector. If the detector has a large number of recipients or a large number of alerts, sending the notification causes a flood of notifications. Your first reaction might be to delete the detector, but that might cause additional problems.
  
@@ -414,7 +416,7 @@ Maximum number of allocated data points per SignalFlow program
 
    * :strong:`Default limit value`: 60,000,000
    * :strong:`Notes`: Total number of data points a SignalFlow program must buffer to satisfy time window transformations. This is at least the number of input MTS, but if the SignalFlow has a time window calculation, the actual value might be much more. For example, a sum over 1m at 1s resolution requires 60 data points per MTS. If the SignalFlow has 10,000 MTS and only one window transform, the SignalFlow needs 10,000*60=600,000 data points.
-   * :strong:`Customer impact`: If the SignalFlow program is for a chart, the chart doesn't load and you receive an error message. If the SignalFlow program is for a detector, the SignalFlow program is aborted. You can monitor aborted detector SignalFlow programs using a built-in metric. Your organization also receives an event with information about the detector that aborted. Your SignalFlow program might reach this limit after it starts. A chart might initially load, but fail when the limit is reached.
+   * :strong:`Customer impact`: If the SignalFlow program is for a chart, the chart doesn't load and you receive an error message. If the SignalFlow program is for a detector, the system aborts the SignalFlow program. You can monitor aborted detector SignalFlow programs using a built-in metric. Your organization also receives an event with information about the detector that aborted. Your SignalFlow program might reach this limit after it starts. A chart might initially load, but fail when its SignalFlow exceeds reaches the limit.
 
 .. _maximum-number-of-functions-and-methods-per-signalflow-program:
 
@@ -440,7 +442,7 @@ Maximum number of queries per SignalFlow program
     C = data('jvm.c').publish('C')
     D = union(A, B).timeshift('1h').publish('D')
 
-   * :strong:`Customer impact`: SignalFlow programs which violate the limit can't start. You immediately get an error message. Note that this puts a limit on how many ``detect()`` you can use if you use different ``data()``, ``graphite()``, or ``newrelic()`` methods in the ``detect()``.
+   * :strong:`Customer impact`: SignalFlow programs which violate the limit can't start. You immediately get an error message. This limit puts limit on how many ``detect()`` calls you can use if you use different ``data()``, ``graphite()``, or ``newrelic()`` calls in the ``detect()``.
 
 .. _maximum-signalflow-program-stack-size:
 
@@ -457,7 +459,7 @@ Maximum number of MTS analyzed across all SignalFlow programs
 
    * :strong:`Default limit value`: The larger of 10,000,000 AMTS or 20% of your total AMTS.
    * :strong:`Notes`: Maximum number of MTS that can concurrently use SignalFlow programs in your organization, including detector chart SignalFlow. For example, suppose you open 10 charts and keep them open. If each chart uses on average 5,000 MTS, you're using 50,000 MTS, even if each chart looks at the same 5,000 MTS. If you close the charts, your usage goes to zero. Detector SignalFlow programs are always running, so they always use a portion of your MTS usage limit. This limit only applies to streaming SignalFlow programs, not ones that look at historical data.
-   * :strong:`Customer impact`: If the SignalFlow program is for a chart, the chart doesn't load and you receive an error message. If the SignalFlow program is for a detector, the SignalFlow program is aborted. You can monitor aborted detector SignalFlow programs using a built-in metric. Your organization also receives an event with information about the detector that aborted. Your SignalFlow program might reach this limit after it starts. A chart might initially load, but fail when the limit is reached.
+   * :strong:`Customer impact`: If the SignalFlow program is for a chart, the chart doesn't load and you receive an error message. If the SignalFlow program is for a detector, the system aborts the program. You can monitor aborted detector SignalFlow programs using a built-in metric. Your organization also receives an event with information about the detector that aborted. Your SignalFlow program might reach this limit after it starts. A chart might initially load, but fail when the program reaches the limit.
 
 .. _maximum-max-delay-setting-for-signalflow-programs:
 
@@ -502,7 +504,7 @@ Maximum SignalFlow program text size
 
    * :strong:`Default limit value`: 50,000
    * :strong:`Notes`: Maximum character length of a SignalFlow program allowed in charts and detectors.
-   * :strong:`Customer impact`: SignalFlow programs which are violating the limit can't be saved. You immediately get an error message.
+   * :strong:`Customer impact`: You can't save a SignalFlow program that exceeds the limit; instead, an error message appears.
 
 .. _maximum-signalflow-programs-per-minute:
 
@@ -515,10 +517,10 @@ Maximum SignalFlow programs per minute
      * Creating or updating charts
      * Creating or updating detectors
      * Running a SignalFlow job using the API
-     * Opening an alert from the list displayed the **Alerts** UI page. This action displays an alert modal page and
+     * Opening an alert from the list displayed the **Alerts** UI page. This action displays an alert dialog box and
        runs a SignalFlow program that provides charts and information to the page.
 
-     You don't get a notification when Observability Cloud starts a SignalFlow program for an alert modal page, but the program
+     You don't get a notification when Observability Cloud starts a SignalFlow program for an alert dialog box, but the program
      counts against your SignalFlow programs per minute limit.
    * :strong:`Related metrics`:
 
@@ -546,7 +548,7 @@ Maximum number of detectors per organization
 
      - ``sf.org.limit.detector``
      - ``sf.org.num.detector``
-   * :strong:`Customer impact`: The user interface displays an error reporting that the limit has been exceeded.
+   * :strong:`Customer impact`: The user interface displays an error reporting that you've exceeded the limit.
 
 .. _maximum-number-of-signalflow-jobs-per-org:
 
@@ -583,12 +585,12 @@ New dimension or property key name limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 40 per week
-   * :strong:`Notes`: The maximum number of new custom fields (property or dimension keys) you can create, per organization per week. This limit applies to MTS and ETS. For example, host:1 and host:2 are considered to have 1 key which is host. foo:1 and bar:1 are considered to have two keys: foo and bar.
+   * :strong:`Notes`: The maximum number of new custom fields (property or dimension keys) you can create, per organization per week. This limit applies to MTS and ETS. For example, `host: 1` and `host: 2` have the same key, which is `host`. `hostname: host1` and `hosttype: QA` have different keys, which are `hostname` and `hosttype`.
    * :strong:`Related metrics`:
 
      - ``sf.org.numPropertyLimitedMetricTimeSeriesCreateCalls``
      - ``sf.org.numPropertyLimitedMetricTimeSeriesCreateCallsByToken``
-   * :strong:`Customer impact`: MTS creations above the limit are rejected, and no error message appears.
+   * :strong:`Customer impact`: The system rejects MTS creations that exceed the limit are rejected, and no error message appears.
 
 .. _events-per-minute:
 
@@ -597,7 +599,7 @@ Events per minute
 
    * :strong:`Default limit value`: Determined by your subscription
    * :strong:`Notes`: Maximum number of custom events you're allowed to ingest per minute
-   * :strong:`Customer impact`: If you have this limit set for an org token, you will receive a HTTP 429 error from Data Ingestion APIs when you exceed the limit.
+   * :strong:`Customer impact`: If you have this limit set for an org token, you receive a HTTP 429 error from Data Ingestion APIs when you exceed the limit.
 
 .. _mts-creations-per-minute-limit:
 
@@ -605,7 +607,7 @@ MTS creations per minute limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 6,000 or determined by your subscription.
-   * :strong:`Notes`: Maximum number of MTS you can create per minute for Infrastructure Monitoring. For example, if you create 5,500 MTS in the first minute, you can still create 5,500 more in the next minute. You can also create 6,000 MTS per minute for each other product in Splunk Observability Cloud.
+   * :strong:`Notes`: Maximum number of MTS you can create per minute.
    * :strong:`Related metrics`:
 
      - ``sf.org.numMetricTimeSeriesCreated``
@@ -618,7 +620,7 @@ MTS creations per hour limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 60 times your MTS per minute limit
-   * :strong:`Notes`: Maximum number of MTS you can create per hour for Infrastructure Monitoring. You can create more MTS with the same limit for each other Splunk Observability Cloud product.
+   * :strong:`Notes`: Maximum number of MTS you can create per hour.
    * :strong:`Customer impact`: Infrastructure Monitoring drops new MTS that exceed the limit without returning an error, but accepts data points for existing MTS.
 
 .. _number-of-dimensions-per-mts:
@@ -627,7 +629,7 @@ Number of dimensions per MTS
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 36
-   * :strong:`Notes`: Maximum number of dimensions per MTS. Infrastructure Monitoring silently drops invalid data points, but valid data points in the same request are kept.
+   * :strong:`Notes`: Maximum number of dimensions per MTS. Infrastructure Monitoring drops invalid data points without returning an error, but keeps valid data points in the same request.
    * :strong:`Customer impact`: Infrastructure Monitoring accepts valid data points but drops invalid data points. For invalid data points, Infrastructure Monitoring doesn't send an error message.
 
 .. _dimensionmetric-value-length:
@@ -664,7 +666,7 @@ Number of tags per dimension
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 50
-   * :strong:`Notes`: Maximum number of tags per dimension. Infrastructure Monitoring silently drops excess tags.
+   * :strong:`Notes`: Maximum number of tags per dimension. Infrastructure Monitoring drops excess tags without returning an error.
    * :strong:`Customer impact`: Infrastructure Monitoring drops tags that exceed the limit but doesn't issue an error message.
 
 .. _number-of-properties-per-dimension:
@@ -673,8 +675,8 @@ Number of properties per dimension
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 75
-   * :strong:`Notes`: Maximum number of custom properties per dimension. Infrastructure Monitoring silently drops excess properties.
-   * :strong:`Customer impact`: Infrastructure Monitoring drops properties that exceed the limit but doesn't issue an error message.
+   * :strong:`Notes`: Maximum number of custom properties per dimension. Infrastructure Monitoring drops excess properties, but it doesn't return an error.
+   * :strong:`Customer impact`: Infrastructure Monitoring drops properties that exceed the limit, but it doesn't issue an error message.
 
 .. _timeserieswindow-api-datapoint-limit:
 
@@ -693,7 +695,7 @@ Custom MTS entitlement
    * :strong:`Default limit value`: Set by your contract entitlement
    * :strong:`Notes`: Number of custom MTS entitled, as determined by your contract.
    * :strong:`Related metrics`: ``sf.org.numCustomMetrics``
-   * :strong:`Customer impact`: Splunk charges an overage of 1.5 times the normal price for usage above contractual entitlement.
+   * :strong:`Customer impact`: Splunk charges an overage of 1.5 times the normal price for usage that exceeds your contractual entitlement.
 
 .. _custom-mts-burstoverage-limit:
 
@@ -719,7 +721,7 @@ Host entitlement
    * :strong:`Default limit value`: Contract entitlement
    * :strong:`Notes`: Number of hosts in your contract, if applicable.
    * :strong:`Related metrics`: ``sf.org.numResourcesMonitored``
-   * :strong:`Customer impact`: Splunk charges an overage of 1.5 times the normal price for usage above contractual entitlement.
+   * :strong:`Customer impact`: Splunk charges an overage of 1.5 times the normal price for usage that exceeds your contractual entitlement.
 
 .. _host-burstoverage-limit:
 
@@ -768,7 +770,7 @@ High resolution custom metrics entitlement
 
    * :strong:`Default limit value`: Set by your contract entitlement
    * :strong:`Notes`: Number of high resolution metrics allowed in your contract
-   * :strong:`Customer impact`: Splunk charges an overage of 1.5 times the normal price for usage above contractual entitlement.
+   * :strong:`Customer impact`: Splunk charges an overage of 1.5 times the normal price for usage that exceeds your contractual entitlement.
 
 .. _high-resolution-custom-metrics-burstoverage-limit:
 
@@ -777,7 +779,7 @@ High resolution custom metrics burst/overage limit
 
    * :strong:`Default limit value`: Multiples of entitlement
    * :strong:`Notes`: This limit is to protect the SaaS platform. It's typically a multiple of your contractual limit. For example, if you purchase 500 hosts, Infrastructure Monitoring might set limit to 800. The multiple decreases as your contractual limit increases.
-   * :strong:`Customer impact`: MTS creations for high resolution metrics above the limit are rejected.
+   * :strong:`Customer impact`: The system rejects MTS creations for high resolution metrics that exceed the limit.
 
 .. _bundled-mts-limit:
 
@@ -785,8 +787,8 @@ Bundled MTS limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 500,000
-   * :strong:`Notes`: This limit applies to host-based contracts only. It is the total number of bundled MTS a customer can have, apart from the standard host-based or container-based MTS. MTS for SQS queues is an example.
-   * :strong:`Customer impact`: MTS creations above the limit are rejected, and no error message appears.
+   * :strong:`Notes`: This limit applies to host-based contracts only. It is the total number of bundled MTS a customer can have, apart from the standard host-based or container-based MTS. For example, this limit applies to MTS for Amazon Simple Queue Service (SQS) queues.
+   * :strong:`Customer impact`: The system rejects MTS creations that exceed the limit, and no error message appears.
 
 .. _imts-limit:
 
@@ -796,7 +798,7 @@ IMTS Limit
    * :strong:`Default limit value`: Determined by your subscription
    * :strong:`Notes`: Maximum number of inactive MTS, as allowed by your contract.
    * :strong:`Related metrics`: sf.org.numInactiveTimeSeries
-   * :strong:`Customer impact`: When you reach this limit, the system deletes the inactive MTS that have been inactive the longest.
+   * :strong:`Customer impact`: When you reach this limit, the system deletes the MTS with the longest period of inactivity.
 
 .. _amts-limit:
 
@@ -813,7 +815,7 @@ AMTS limit
 
 .. _contract-dpm-limit:
 
-DPM limit
+Data points per minute (DPM) limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: Set by your contract entitlement
@@ -826,8 +828,8 @@ Burst DPM limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: Multiples of entitlement
-   * :strong:`Notes`: Limit on the number of data points you can send to Infrastructure Monitoring each minute. If you have this limit set on the organization token, the data ingest API returns HTTP response code 429 when you exceed the limit.
-   * :strong:`Customer impact`: If you have this limit set for an org token, you will receive a HTTP 429 error from Data Ingestion APIs when you exceed the limit.
+   * :strong:`Notes`: Limit on the number of data points you can send to Infrastructure Monitoring each minute. If you have this limit set on the org token you use, the data ingest API returns HTTP response code 429 when you exceed the limit.
+   * :strong:`Customer impact`: If you have this limit set on the org token you use, you receive a HTTP 429 error from Data Ingestion APIs when you exceed the limit.
 
 .. _maximum-rendered-mts-for-line-histogram-or-heatmap-visualizations:
 
