@@ -54,14 +54,37 @@ The following table shows the required and optional settings:
 | Option        | Description         | Required |
 |--------------------|-------------------------|----------|
 | `auth_type`   | Determines how to authenticate to the Kubernetes API server. The options are `none` for no auth, `serviceAccount` to use the standard service account token provided to the agent pod, or `kubeConfig` to use credentials from `~/.kube/config`. The default value is `serviceAccount`.     | Yes      |
-| `collection_interval` | The `k8s_cluster` receiver continuously watches for cluster events using the Kubernetes API. However, the metrics collected are emitted only once every collection interval. The `collection_interval` option determines the frequency at which metrics are emitted by this receiver. The default value is `10s`.| No       |
-| `node_conditions_to_report` | An array of node conditions this receiver reports. The `k8s_cluster` receiver emits one metric per entry in the array. The default value is `[Ready]`. To learn more, search for "Conditions" on the <a href="https://kubernetes.io/docs/home/" target="_blank">Kubernetes documentation</a> site. | No       |
-| `distribution` | The Kubernetes distribution being used by the cluster. Supported versions are `kubernetes` and `openshift`. Setting the value to `openshift` enables OpenShift specific metrics in addition to standard Kubernetes metrics. The default value is `kubernetes`.   | No       |
 | `allocatable_types_to_report` | An array of allocatable resource types that this receiver reports. `cpu`, `memory`, `ephemeral-storage`, and `storage` are the available types. The default value is `[]`.   | No       |
-
-<br>
+| `collection_interval` | The `k8s_cluster` receiver continuously watches for cluster events using the Kubernetes API. However, the metrics collected are emitted only once every collection interval. The `collection_interval` option determines the frequency at which metrics are emitted by this receiver. The default value is `10s`.| No       |
+| `distribution` | The Kubernetes distribution being used by the cluster. Supported versions are `kubernetes` and `openshift`. Setting the value to `openshift` enables OpenShift specific metrics in addition to standard Kubernetes metrics. The default value is `kubernetes`.   | No       |
+|`metadata_exporters` | The exporters you want to use to retrieve metadata.  | No |
+|`node_conditions_to_report` | An array of node conditions this receiver reports. The `k8s_cluster` receiver emits one metric per entry in the array. The default value is `[Ready]`. To learn more, search for "Conditions" on the <a href="https://kubernetes.io/docs/home/" target="_blank">Kubernetes documentation</a> site. | No       |
 
 See <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/k8sclusterreceiver/config.go" target="_blank">https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/k8sclusterreceiver/config.go</a> for the full list of settings exposed for this receiver.
+
+### `metadata_exporters`
+
+Sync this receiver with the metadata exporters you want to use to collect metadata. Exporters specified in this list need to implement the following interface. If they don't, startup will fail.
+
+```yaml
+type MetadataExporter interface {
+  ConsumeMetadata(metadata []*MetadataUpdate) error
+}
+
+type MetadataUpdate struct {
+  ResourceIDKey string
+  ResourceID    ResourceID
+  MetadataDelta
+}
+
+type MetadataDelta struct {
+  MetadataToAdd    map[string]string
+  MetadataToRemove map[string]string
+  MetadataToUpdate map[string]string
+}
+```
+
+To learn more, see <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/k8sclusterreceiver/internal/collection/metadata.go" target="_blank">our GitHub documentation on metadata exporters</a>.
 
 ### `node_conditions_to_report`
 
