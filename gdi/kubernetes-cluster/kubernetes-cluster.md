@@ -5,7 +5,7 @@
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Kubernetes cluster monitor. See benefits, install, configuration, and metrics">
 
 ```{note}
-This monitor is deprecated in favor of the `k8s_cluster` receiver. See <a href="https://docs.splunk.com/Observability/gdi/kubernetes-cluster/kubernetes-cluster-receiver.html">Kubernetes Cluster Receiver</a> for more information.
+This monitor is deprecated in favor of the `k8s_cluster` receiver. See {ref}`Kubernetes Cluster Receiver <kubernetes-cluster-receiver>` for more information.
 ```
 
 ## Description

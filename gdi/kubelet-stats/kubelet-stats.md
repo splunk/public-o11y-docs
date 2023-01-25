@@ -5,7 +5,7 @@
 <meta name="description" content="Use this Splunk Observability Cloud integration for the kubelet-stats / kubernetes network stats monitor. See benefits, install, configuration, and metrics">
 
 ```{note}
-This monitor is deprecated in favor of the `kubeletstats` receiver. See <a href="https://docs.splunk.com/Observability/gdi/kubelet-stats/kubelet-stats-receiver.html">Kubelet Stats Receiver</a> for more information.
+This monitor is deprecated in favor of the `kubeletstats` receiver. See {ref}`Kubelet Stats Receiver <kubelet-stats-receiver>` for more information.
 ```
 ## Description
 

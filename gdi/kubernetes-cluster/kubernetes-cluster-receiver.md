@@ -64,7 +64,7 @@ See <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/b
 
 ### `metadata_exporters`
 
-Sync this receiver with the metadata exporters you want to use to collect metadata. Exporters specified in this list need to implement the following interface. If they don't, startup will fail.
+Sync the receiver with the metadata exporters you want to use to collect metadata. Exporters specified in this list need to implement the following interface. If an exporter doesn't implement the interface, startup fails.
 
 ```yaml
 type MetadataExporter interface {
