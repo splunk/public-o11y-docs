@@ -8,7 +8,7 @@ Browse logs in the logs table
 .. meta DOCS-1962
 
 .. meta::
-   :description: Browse logs in the logs table they come into Log Observer or Log Observer Connect. Customize the logs table display by field. See a count of new log events.
+   :description: Browse logs in the logs table as they come into Log Observer or Log Observer Connect. Customize the logs table display by field. See a count of new log events.
 
 At the center of the Log Observer display is the logs table,
 which displays log records as they come in. The most recent logs appear at the
