@@ -39,7 +39,7 @@ The class accepts the parameters described in the following table:
      - Description
      - Default value
    * - ``collector_version``
-     - Version of the Collector package to install, for example, ``0.25.0``. The version musts correspond to :new-page:`Github Releases <https://github.com/signalfx/splunk-otel-collector/releases>` without the preceding ``v``. This attribute is required.
+     - Version of the Collector package to install, for example, ``0.25.0``. The version must correspond to :new-page:`Github Releases <https://github.com/signalfx/splunk-otel-collector/releases>` without the preceding ``v``. This attribute is required.
      - None
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.
