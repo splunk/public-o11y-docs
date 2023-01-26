@@ -21,6 +21,35 @@ The Splunk Distribution of OpenTelemetry Collector for Windows is a package that
 * :ref:`Deployments <windows-deployments>`
 * :ref:`Manual <windows-manual>`
 
+.. _windows-otel-requirements
+
+Prerequisites
+==========================
+
+The Splunk Distribution of OpenTelemetry Collector for Windows has the following requirements depending on the install method:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 16 16 16
+   :width: 100
+
+   * - Install method
+     - Supported versions (64-bit)
+   * - Installer script
+     - Windows 2012, 2016, 2019, 2022
+   * - Windows installer (MSI)
+     - Windows 2012, 2016, 2019, 2022
+   * - Ansible
+     - Windows 2012, 2016, 2019
+   * - Chef
+     - Windows 2019, 2022
+   * - Nomad
+     - Windows 2012, 2016, 2019
+   * - Puppet
+     - Windows 2012, 2016, 2019
+   * - Docker
+     - Windows 2019, 2022
+
 .. _windows-script:
 
 Installer script
@@ -30,13 +59,6 @@ The installer script is available for Windows 64-bit environments. The script de
 
 * Splunk Distribution of OpenTelemetry Collector for Windows
 * Fluentd (using the td-agent)
-
-The following Windows versions are supported and require PowerShell 3.0 or newer:
-
-* Windows Server 2012 64-bit
-* Windows Server 2016 64-bit
-* Windows Server 2019 64-bit
-* Windows Server 2022 64-bit
 
 Do the following to install the package using the installer script:
 
@@ -107,7 +129,7 @@ Splunk provides a cookbook to install the Collector using Chef. See :ref:`deploy
 
 Nomad 
 -----------------
-Use Nomad to to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
+Use Nomad to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
 
 .. _windows-puppet:
 
