@@ -4,7 +4,7 @@
 Custom threshold
 =============================================================================
 
-.. meta updated 8/7/18
+.. meta updated 1/23/23
 
 .. meta::
   :description: This alert condition lets you trigger an alert by comparing one signal to another or by evaluating multiple conditions

@@ -8,7 +8,7 @@ Verify changes to monitored systems with Live Tail
 .. meta DOCS-1962
 
 .. meta::
-  :description: Use Live Tail to verify the changes to the systems you're monitoring.
+  :description: Live Tail shows a near real-time feed of log messages as they come into Log Observer. See the impact of updates live. Verify that an integration is sending data.
 
 .. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can monitor systems with Live Tail. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 

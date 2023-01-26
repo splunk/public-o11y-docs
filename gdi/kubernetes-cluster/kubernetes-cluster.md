@@ -4,6 +4,10 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Kubernetes cluster monitor. See benefits, install, configuration, and metrics">
 
+```{note}
+This monitor is deprecated in favor of the `k8s_cluster` receiver. See {ref}`Kubernetes Cluster Receiver <kubernetes-cluster-receiver>` for more information.
+```
+
 ## Description
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `kubernetes-cluster` monitor by using the SignalFx Smart Agent Receiver.

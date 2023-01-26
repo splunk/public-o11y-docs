@@ -4,8 +4,10 @@
 Download traces
 **********************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Download traces from Splunk APM in JSON.
+   :description: Learn about downloading traces from Splunk APM in JSON.
 
 Download APM traces to analyze, save, and share them with other people. When you download a trace, Splunk APM exports its trace content in JSON files. Because there are limits to how much trace content the waterfall view in Splunk APM can display, downloading traces can provide you with more information about a given trace than you are able to view in the UI.
 

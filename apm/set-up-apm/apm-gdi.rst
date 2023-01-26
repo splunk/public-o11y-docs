@@ -4,8 +4,10 @@
 Send traces to Splunk APM
 **************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Send traces to Splunk APM and begin monitoring application performance.
+   :description: Learn how to send traces to Splunk APM and begin monitoring application performance.
 
 Set up your APM experience by sending traces to APM from your services. 
 

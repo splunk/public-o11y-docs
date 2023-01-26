@@ -4,6 +4,8 @@
 Customize your Splunk APM experience
 ****************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Learn about advanced configurations to help you get the most out of Splunk APM. 
 
