@@ -53,7 +53,7 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
 .. raw:: html
 
    <embed>
-      <h2>Available ingest endpoints for cloud alerts</h2>
+      <h2 id="ii-cloud-alert-endpoints">Available ingest endpoints for cloud alerts</h2>
    </embed>
 
 .. list-table::
