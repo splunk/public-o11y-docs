@@ -13,7 +13,7 @@ To send Observability Cloud alert notifications to Jira, perform the following c
 
 * :ref:`jira1`
 
-  You must be an Observability Cloud administrator to perform this task.
+ NOTE: You must be an Observability Cloud administrator to perform this task.
 
 * :ref:`jira2`
 
@@ -39,7 +39,7 @@ The alert notification that this integration sends to Jira can automatically set
 
 If the Jira project you want to create issues in requires additional field values, you'll receive an error when you save the integration.
 
-You must be an Observability Cloud administrator to perform this task.
+NOTE: You must be an Observability Cloud administrator to perform this task.
 
 To create a Jira integration in Observability Cloud:
 
@@ -69,7 +69,7 @@ To create a Jira integration in Observability Cloud:
 
 #. (Optional) Click :strong:`Create Test Issue` to test your integration. If the integration is working, it creates a test Jira issue in the selected Jira project. After a short delay, the integration makes a comment on the same issue, stating that the alert has cleared.
 
-#. strong:`Save`.
+#. strong:`Save`. (Is this supposed to be here? Seems like this is out of place. Seems like this line could be added to step 12)
 
 
 .. _jira2:
@@ -78,7 +78,7 @@ Step 2: Add a Jira integration as a detector alert recipient in Observability Cl
 =================================================================================================
 
 ..
-  once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated
+  once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated. (Where are the docs migrating to exactly???)
 
 To add a Jira integration as a detector alert recipient in Observability Cloud:
 
