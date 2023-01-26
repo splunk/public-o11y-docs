@@ -24,4 +24,4 @@ There are three charts available:
    * Ingest usage trend - The ingest usage trend for the current month against your plan total.
    * Index usage trend - The index usage trend for the current month against your plan total.
 
-=Only indexing performed by Log Observer is tracked as part of your indexing usage. If you pipe the log information ingested by Log Observer for storage or indexing elsewhere, that usage is not included in the data on this page.
+Only indexing performed by Log Observer is tracked as part of your indexing usage. If you pipe the log information ingested by Log Observer for storage or indexing elsewhere, that usage is not included in the data on this page.
