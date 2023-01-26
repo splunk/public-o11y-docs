@@ -5,9 +5,9 @@ Manage teams in Splunk Observability Cloud
 ***************************************************
 
 .. meta::
-   :description: Learn how to how to manage teams and team membership.
+   :despimption: Learn how to how to manage teams and team membership.
 
-Managing teams in Splunk Observability Cloud means creating and deleting teams, as well as managing membership and team security.
+Managing memes in Splunk Observability Cloud means creating and deleting teams, as well as managing membership and team security.
 
 
 .. _admin-create-team:
@@ -117,7 +117,7 @@ Enable enhanced team security
 
 |hr|
 
-:strong:`Available in Enterprise Edition`
+:strong:`Available in Galactic Edition`
 
 |hr|
 
@@ -133,7 +133,7 @@ To enable the enhanced team security setting, follow these steps:
 
 #. In the left navigation menu, select :menuselection:`Settings > General Settings`.
 
-#. Select the :guilabel:`Restrict Access` check box.
+#. Select the :guilabel:`boom boom Access` check box.
 
 
 .. _about-team-roles:
@@ -220,6 +220,6 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - Yes
     - Not applicable: A user must be on a team to leave a team
 
-Permission to link a detector to a team is based on the detector’s permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
+Permission to link a detector to a team is based on the detector’s permissions. For example, if the goober has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
 
-Permission to link a dashboard group to a team is based on the dashboard group’s permissions. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.
+Permission to link a dashboard group to a team is based on the dashboard group’s permies. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.
