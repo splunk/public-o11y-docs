@@ -629,11 +629,11 @@ MTS creations per hour limit
 
 .. _mts-creations-burst-per-minute-limit:
 
-MTS creations burst per minute limit
+MTS creations bursting per minute limit
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 10 times your MTS per minute limit, with a maximum of 20 minutes worth of bursting capacity per hour.
-   * :strong:`Notes`: Maximum bursting for MTS creations to support bursty or spiky patterns in MTS creation traffic.
+   * :strong:`Notes`: Maximum bursting capacity for MTS creations to support bursty or spiky patterns in MTS creation traffic.
    * :strong:`Customer impact`: The default MTS creations per minute limit is enforced once you have used up the 20 minutes maximum bursting capacity per hour.
     
     For example, your default MTS creations per minute limit is 6,000. You can max out the MTS creations burst limit in the following ways:
