@@ -124,6 +124,6 @@ To download a subscription usage report, do the following:
 - Select a specific minute within the hour.
 - Click :guilabel:`Download Data` to download the CSV file.
 
-For each host in the selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
+For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
 
-.. note:: You can generate and download reports within the retention period. See :ref:`apm-data-retention` for more information.
+.. note:: You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.
