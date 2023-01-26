@@ -8,7 +8,7 @@ Ingest generic REST alerts
 .. meta::
    :description: Detailed overview of ingest endpoint for generic REST alerts for Incident Intelligence in Splunk Observability Cloud. 
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route third-party incidents to responders. Use the generic REST ingest endpoint to forward third-party cloud alerts to Incident Intelligence for which there is not a specific ingest endpoint available. See <a href=#ii-cloud-alert-endpoints`.
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route third-party incidents to responders. Use the generic REST ingest endpoint to forward third-party cloud alerts to Incident Intelligence for which there is not a specific ingest endpoint available. 
 
 REST ingest endpoint
 ---------------------------------
