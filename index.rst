@@ -922,4 +922,9 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Per-product limits <references/per-product-limits>
+
+.. toctree::
+   :maxdepth:   3
+
    Glossary <references/glossary>

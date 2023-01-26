@@ -4,6 +4,8 @@
 Configure extended trace retention
 ***************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
   :description: Learn about extended trace retention in APM. 
 

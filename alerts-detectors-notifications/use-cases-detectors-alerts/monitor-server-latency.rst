@@ -4,8 +4,10 @@
 Use case: Create a detector to monitor server latency 
 *******************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-    :description: A Splunk alerts and detectors use case describes how to create a detector to monitor server latency.
+    :description: This Splunk alerts and detectors use case describes how to create a detector to monitor server latency.
 
 Kai, a site reliability engineer at Buttercup Games, receives many tickets from Buttercup Games customers experiencing high latency on game servers. Kai wants a reliable way to monitor their host machines' server latency so they can quickly identify and solve high latency issues before customers experience them. 
 
