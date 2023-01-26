@@ -184,7 +184,7 @@ Data ingestion limits
      - 60 times your MTS per minute limit
 
    * - :ref:`mts-creations-burst-per-minute-limit`
-     - 10 times your MTS per minute limit, with a maximum of 20 minutes worth of burst capacity in an hour.
+     - 10 times your MTS per minute limit, with a maximum of 20 minutes worth of bursting capacity in an hour.
 
    * - :ref:`maximum-number-of-api-calls-per-minute`
      - 100,000
@@ -639,7 +639,7 @@ MTS creations bursting per minute limit
     For example, your default MTS creations per minute limit is 6,000. You can max out the MTS creations burst limit in the following ways:
         
         #. Create 60,000 MTS per minute for consecutive or nonconsecutive 20 minutes, then go back to creating 6,000 MTS per minute for the rest of the hour.
-        #. Spread the burst capacity utilization over the entire hour by creating MTS at the rate of less than or equal to 24,000 per minute.
+        #. Spread the bursting capacity utilization over the entire hour by creating MTS at the rate of less than or equal to 24,000 per minute.
 
 
 .. _number-of-dimensions-per-mts:
