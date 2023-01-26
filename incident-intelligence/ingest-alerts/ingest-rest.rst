@@ -51,7 +51,19 @@ Alert fields
    * - message_type
      - Required
      - String
-     - The criticality of the alert
+     - The criticality of the alert. Supported values are ``CRITICAL``, ``WARNING``, and ``INFO``
+   * - entity_display_name
+     - 
+     - String
+     - Name of the alert
+   * - state_message
+     - 
+     - String
+     - Verbose message. 
+   * - state_start_time
+     - 
+     - String
+     - Date-time string. Send date-time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model
 
 
 JSON payload
