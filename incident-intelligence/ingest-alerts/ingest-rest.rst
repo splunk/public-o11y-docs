@@ -60,7 +60,7 @@ Alert fields
      - 
      - String
      - Verbose message. 
-   * - state_start_time
+   * - timestamp
      - 
      - String
      - Date-time string. Send date-time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model
@@ -76,8 +76,8 @@ Example JSON payload:
 .. code-block:: json
 
     {
-      "message_type": "critical",
-      }
+      "message_type": "CRITICAL",
+    }
 
 Using this endpoint, your alert is ingested and transformed into the common event model for alerts in Incident Intelligence. This is an example of the transformed alert data that is saved as an alert in Incident Intelligence:
 
