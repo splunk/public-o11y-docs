@@ -8,7 +8,7 @@ Query logs in Log Observer Connect or Log Observer
 .. meta DOCS-3730
 
 .. meta::
-  :description: Overview of the various ways you can query logs in Log Observer and Log Observer Connect
+  :description: Overview of the various ways you can query logs in Log Observer and Log Observer Connect. Browse, search by keyword, filter, extract fields, or aggregate logs.
 
 There are many ways you can query your logs in Log Observer and Log Observer Connect. You can begin in any Log Observer tool, then use any other tool, in any order. 
 
