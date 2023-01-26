@@ -8,7 +8,7 @@ Filter logs by field
 .. meta DOCS-1962
 
 .. meta::
-  :description: Identify problems using log field filtering
+  :description: Include or exclude fields or field values to filter your log collection and find specific log events. 
 
 You can filter your Log Observer query to logs that include or exclude specific fields or even specific field values. For example, you can filter data to find log records that contain the value ``error`` in a particular field.
 

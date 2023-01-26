@@ -11,18 +11,18 @@ Available host and application monitors
   :maxdepth: 4
   :hidden:
 
-  Caches and memory <caches-memory>
-  Cloud platforms <cloud>
+  Caches and memory TOGGLE <caches-memory>
+  Cloud platforms TOGGLE <cloud>
   cloudfoundry-firehose-nozzle/cloudfoundry-firehose-nozzle
   conviva/conviva
-  Databases <databases>
-  GitLab <gitlab-monitors>
-  Hosts and servers <hosts-servers>
-  Languages <languages>
-  Messaging <messaging>
-  Monitoring <monitoring>
-  Networks <network>
-  Orchestration <orchestration>
+  Databases TOGGLE <databases>
+  GitLab TOGGLE <gitlab-monitors>
+  Hosts and servers TOGGLE <hosts-servers>
+  Languages TOGGLE <languages>
+  Messaging TOGGLE <messaging>
+  Monitoring TOGGLE <monitoring>
+  Networks TOGGLE <network>
+  Orchestration TOGGLE <orchestration>
 
 You can configure an application receiver to gather metrics from its associated application and the host the application is running on.
 

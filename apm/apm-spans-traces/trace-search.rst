@@ -4,6 +4,11 @@
 Explore your traces using Trace Search
 ***************************************
 
+.. Metadata updated: 1/23/23
+
+.. meta::
+   :description: Learn how to explore your traces using Trace Search.
+
 Use Splunk APM’s Trace Search to search through full fidelity trace data to find a specific trace you’re interested in. Trace search searches all currently retained traces; see :ref:`apm-data-retention` to learn more about the default trace retention period. 
 
 Use these steps to navigate to :guilabel:`Trace Search`:
