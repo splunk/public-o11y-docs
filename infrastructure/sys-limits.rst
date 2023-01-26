@@ -638,7 +638,7 @@ MTS creations burst per minute limit
     
     For example, your default MTS creations per minute limit is 6,000. You can max out the MTS creations burst limit in the following ways:
         
-        #. Create 60,000 MTS per minute for consecutive 20 minutes, then go back to creating 6,000 MTS per minute for the remaining 40 mins in the hour.
+        #. Create 60,000 MTS per minute for consecutive or nonconsecutive 20 minutes, then go back to creating 6,000 MTS per minute for the rest of the hour.
         #. Spread the burst capacity utilization over the entire hour by creating MTS at the rate of less than or equal to 24,000 per minute.
 
 
