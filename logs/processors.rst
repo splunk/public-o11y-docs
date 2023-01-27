@@ -8,7 +8,7 @@ Transform your data with log processing rules
 .. meta DOCS-1962
 
 .. meta::
-  :description: Manage the logs pipeline with log processing rules.
+  :description: Manage the logs pipeline with log processing rules, log metricization rules, and Infinite Logging rules. Customize your logs pipeline.
 
 .. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create or manage log processing rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 

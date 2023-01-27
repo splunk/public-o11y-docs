@@ -8,7 +8,7 @@ Search logs by keywords or fields
 .. meta DOCS-1962
 
 .. meta::
-  :description: Search logs by keywords or fields
+  :description: Search and filter logs by keyword, field, or field values.
 
 To search your logs for particular keywords, field names, or field values, follow these steps:
 

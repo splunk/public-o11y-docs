@@ -4,8 +4,10 @@
 Mute alert notifications
 *****************************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-   :description: You can stop sending alert notifications based on conditions. Notifications can be muted for a limited duration or indefinitely. Alerts and events are still generated and appear in Observability Cloud.
+   :description: Learn how to stop sending alert notifications based on conditions. 
 
 Muting is helpful when you need to stop sending alert notifications during situations that are known to trigger alerts, such as maintenance windows or tests. Muting allows you to reduce noise and focus on what really matters.
 
