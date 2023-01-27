@@ -53,4 +53,4 @@ Make sure that the traces pipeline contains the ``otlp`` exporter:
 Send data in OTLP format over HTTP
 -----------------------------------------------
 
-If you want to send data in OTLP format using HTTP instead of gRPC, see the documentation for the :new-page:`/trace/otlp endpoint <https://ingest.{REALM}.signalfx.com/v2/trace/otlp>`.
+If you want to send data in OTLP format using HTTP instead of gRPC, see the documentation for the :new-page:`/trace/otlp endpoint <https://dev.splunk.com/observability/reference/api/ingest_data/latest#endpoint-sendotlptraces>`.
