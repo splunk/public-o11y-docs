@@ -17,7 +17,7 @@ Ensure you are using supported .NET versions
 The Splunk Distribution of OpenTelemetry .NET supports the following .NET versions:
 
 - .NET 5.0 and higher on Windows and Linux
-- .NET Framework 4.7 and higher on Windows
+- .NET Framework 4.6.2 and higher on Windows
 
 .. note:: .NET Core 3.1 and RHEL 7 are not supported.
 
