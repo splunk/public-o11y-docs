@@ -96,7 +96,7 @@ You can connect Observability Cloud to AWS in several different ways. Choose the
     - Requires knowledge of POST and PUT call syntax, but includes options and automation that are not part of the guided setup. Choose this method if you want to configure many integrations at once. 
 
   * - Connect to AWS using :ref:`Splunk Terraform <terraform-config>`
-    - Can be used if you already manage your infrastructure as code by deploying through Terraform.
+    - Use this connection method if you already manage your infrastructure as code by deploying through Terraform.
 
 See also the :new-page:`Splunk add-on for Amazon Kinesis Firehose <https://docs.splunk.com/Documentation/AddOns/latest/Firehose/ConfigureFirehose>`.
 
@@ -142,7 +142,7 @@ Customers already polling at 1-minute intervals generally see a slight decrease 
     <h3>High data volume warning<a name="aws-data-limits" class="headerlink" href="#aws-data-limits" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-After an AWS integration is created, Observability Cloud checks if more than 100,000 metrics are fetched from CloudWatch. If this is the case, the integration gets automatically disabled, and a warning email is sent. 
+After you create an AWS integration, Observability Cloud checks if more than 100,000 metrics are fetched from CloudWatch. If this is the case, the integration gets automatically disabled, and a warning email is sent. 
 
 This check runs just once per integration. If you enable the integration afterwards, it will work correctly. 
 
