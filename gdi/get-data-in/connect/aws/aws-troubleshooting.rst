@@ -66,12 +66,12 @@ Cause
 
 When a feature in Splunk Observability Cloud does not work as expected after connection to AWS, then permissions for that feature in the AWS IAM policy are absent or blocking implementation. For example, ``ec2:DescribeRegions`` is used to detect which AWS regions are active in your account. Without that permission, or if no region is specified, then system settings default to AWS standard regions.
 
-Similarly, metrics collection depends on the the permissions you set. 
+Metrics collection also depends on the the permissions you set. 
 
 Solution
 ^^^^^^^^^
 
-Review your :ref:`IAM policy <review-aws-iam-policy>` to ensure it includes the permissions needed for the metrics or other data collection that you intend.
+Review your :ref:`IAM policy <review-aws-iam-policy>` to ensure it includes the permissions needed for the metrics or other data that you intend to collect.
 
 Once integrated with your Amazon Web Services account, Splunk Observability Cloud can gather CloudWatch metrics, CloudWatch logs, CloudWatch Metric Streams, service logs stored in Amazon S3 buckets, and service tag and property information. But leveraging the full power of the integration requires all included permissions.
 
@@ -80,7 +80,7 @@ Once integrated with your Amazon Web Services account, Splunk Observability Clou
 Metrics and/or tags for a particular namespace are not displayed
 ==================================================================================
 
-Metrics for a particular namespace are not displayed as expected.
+Metrics and/or tags for a particular namespace are not displayed as expected.
 
 Causes
 ^^^^^^^^
