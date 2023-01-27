@@ -229,7 +229,7 @@ The following table shows customizable arguments for this detector:
 AWS Route 53: Unhealthy status of health check endpoint
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Description: Alerts when the status of Amazon Route 53 health check endpoint is unhealthy.
+- Description: Alerts when the status of Amazon Route 53 health check endpoint is unhealthy. By default, the alert fires when the health check endpoint has been unhealthy for 80% of the past 10 minutes. The alert clears when the health check endpoint has been healthy for 80% of the past 10 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/route53.flow#L41>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
