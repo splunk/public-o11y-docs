@@ -6,7 +6,7 @@ Set up Log Observer
 
 
 .. meta::
-   :description: Connect Splunk Observability Cloud to your data sources.
+   :description: Connect Splunk Observability Cloud to your data sources. Set up Log Observer to investigate logs in context with metrics and traces.
 
 ..	toctree::
    :hidden:
