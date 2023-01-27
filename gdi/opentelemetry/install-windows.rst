@@ -21,7 +21,7 @@ The Splunk Distribution of OpenTelemetry Collector for Windows is a package that
 * :ref:`Deployments <windows-deployments>`
 * :ref:`Manual <windows-manual>`
 
-.. _windows-otel-requirements
+.. _windows-otel-requirements:
 
 Prerequisites
 ==========================
