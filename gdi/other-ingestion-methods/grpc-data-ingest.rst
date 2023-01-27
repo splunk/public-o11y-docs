@@ -40,6 +40,16 @@ To send traces directly to the gRPC ingest endpoint, add the following lines to 
         headers:
            "X-SF-Token": "${SPLUNK_ACCESS_TOKEN}"
 
+Make sure that the traces pipeline contains the ``otlp`` exporter:
+
+.. code-block:: yaml
+
+   service:
+     pipelines:
+       traces:
+         # ...
+         exporters: [otlp]
+
 Send data in OTLP format over HTTP
 -----------------------------------------------
 
