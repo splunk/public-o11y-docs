@@ -30,7 +30,7 @@ The Splunk Distribution of OpenTelemetry Collector for Windows has the following
 
 .. list-table::
    :header-rows: 1
-   :widths: 50 16 16 16
+   :widths: 40 60
    :width: 100
 
    * - Install method
