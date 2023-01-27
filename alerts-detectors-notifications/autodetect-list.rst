@@ -166,6 +166,33 @@ The following table shows customizable arguments for this detector:
      - Dimensions you want to add to the detector
      - None
 
+AWS ALB: Sudden change in HTTP 5xx server errors count
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when there is a sudden change in the number of HTTP 5XX server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/alb.flow#L35>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   * - Current window
+     - Time window to test for anomalous values (in minutes)
+     - ``10m``
+   * - Historical window
+     - Time window to use for historical normal values (in hours)
+     - ``1h``
+   * - Trigger threshold
+     - Triggers the alert when the current value is greater than the specified number of deviations above historical data.
+     - ``3.5``
+   * - Filters
+     - Dimensions you want to add to the detector.
+     - None
 
 AWS Route 53: Health checkers' connection time took over 9 seconds
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -196,34 +223,6 @@ The following table shows customizable arguments for this detector:
      - ``100% of 2m``    
    * - Filters
      - Dimensions you want to add to the detector
-     - None
-
-AWS ALB: Sudden change in HTTP 5xx server errors count
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-- Description: Alerts when there is a sudden change in the number of HTTP 5XX server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
-- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/alb.flow#L35>` repository on GitHub.
-
-The following table shows customizable arguments for this detector:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 33 33 33
-
-   * - Argument
-     - Description
-     - Default value
-   * - Current window
-     - Time window to test for anomalous values (in minutes)
-     - ``10m``
-   * - Historical window
-     - Time window to use for historical normal values (in hours)
-     - ``1h``
-   * - Trigger threshold
-     - Triggers the alert when the current value is greater than the specified number of deviations above historical data.
-     - ``3.5``
-   * - Filters
-     - Dimensions you want to add to the detector.
      - None
 
 AWS Route 53: Unhealthy status of health check endpoint
