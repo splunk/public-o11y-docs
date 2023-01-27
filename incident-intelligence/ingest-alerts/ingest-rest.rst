@@ -79,8 +79,8 @@ Example JSON payload:
 
     {
       "message_type": "CRITICAL",
-      "entity_display_name": "",
-      "state_message": "",
+      "entity_display_name": "My alert name",
+      "state_message": "The disk is very full.  Here is some information about the problem"
       "timestamp": "2022-06-30T00:55:30.064Z"
 
 
@@ -90,62 +90,4 @@ Using this endpoint, your alert is ingested and transformed into the common even
 
 .. code-block:: json 
     
-    {
-      "id": "<YOUR_ID>",
-      "eventId": "<YOUR_EVENT_ID>",
-      "title": "Azure Monitor Alert for WCUS-R2-Gen2",
-      "source": "Platform",
-      "description": "",
-      "severity": "major",
-      "sourceType": "azure_monitor",
-      "orgId": "<YOUR_ORG_ID>",
-      "triggeredAt": 1553263104371,
-      "properties": {
-          "schemaId": "azureMonitorCommonAlertSchema",
-          "data": {
-          "essentials": {
-              "alertId": "<YOUR_ALERT_ID>",
-              "alertRule": "WCUS-R2-Gen2",
-              "severity": "Sev3",
-              "signalType": "Metric",
-              "monitorCondition": "Resolved",
-              "monitoringService": "Platform",
-              "alertTargetIDs": [
-              "<YOUR_ALERTTARGET_ID>"
-              ],
-              "configurationItems": [
-              "wcus-r2-gen2"
-              ],
-              "originAlertId": "<YOUR_ORIGINALERT_ID>",
-              "firedDateTime": "2019-03-22T13:58:24.3713213Z",
-              "resolvedDateTime": "2019-03-22T14:03:16.2246313Z",
-              "description": "",
-              "essentialsVersion": "1.0",
-              "alertContextVersion": "1.0"
-          },
-          "alertContext": {
-              "properties": null,
-              "conditionType": "SingleResourceMultipleMetricCriteria",
-              "condition": {
-              "windowSize": "PT5M",
-              "allOf": [
-                  {
-                  "metricName": "Percentage CPU",
-                  "metricNamespace": "Microsoft.Compute/virtualMachines",
-                  "operator": "GreaterThan",
-                  "threshold": "25",
-                  "timeAggregation": "Average",
-                  "dimensions": [
-                      {
-                      "name": "ResourceId",
-                      "value": "<YOUR_RESOURCE_ID>"
-                      }
-                  ],
-                  "metricValue": 7.727
-                  }
-              ]
-              }
-          }
-          }
-      }
-      }
+    {}
