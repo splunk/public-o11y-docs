@@ -4,6 +4,11 @@
 Troubleshoot your instrumentation
 *****************************************************************
 
+.. Metadata updated: 1/23/23
+
+.. meta::
+   :description: Learn how to troubleshoot your instrumentation for Splunk APM. 
+
 If you have instrumented an application but are not seeing the relevant data in Splunk APM, use the following guidelines to troubleshoot your instrumentation.
 
 - :ref:`common-java-troubleshooting`

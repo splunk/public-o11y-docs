@@ -4,6 +4,8 @@
 Create detectors to trigger alerts
 ************************************
 
+.. meta updated 1/23/23
+
 .. meta::
    :description: How to create detectors to trigger alerts.
 

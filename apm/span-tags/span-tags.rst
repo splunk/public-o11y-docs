@@ -4,9 +4,10 @@
 Analyze services with span tags and MetricSets in Splunk APM
 *************************************************************
 
-.. meta::
-   :description: Learn how to use span tags to add additional context about the operations that spans represent, so that you can drill deeply into service performance. Using these tags, you can analyze requests, errors, and latency for spans that contain specific span tags. You can also index span tags to generate MetricSets for additional visibility into your services' performance over time.
+.. Metadata updated: 1/23/23
 
+.. meta::
+   :description: Learn how to use span tags to add additional context about the operations that spans represent, so that you can drill deeply into service performance. 
 
 .. toctree::
    :hidden:

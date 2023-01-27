@@ -4,6 +4,11 @@
 Troubleshoot cardinality in Monitoring MetricSets 
 **********************************************************************
 
+.. Metadata updated: 1/23/23
+
+.. meta::
+   :description: Learn how to troubleshoot cardinality using Monitoring MetricSets.
+
 Follow these steps to troubleshoot issues with high cardinality and Monitoring MetricSet configurations. 
 
 Troubleshoot high cardinality data

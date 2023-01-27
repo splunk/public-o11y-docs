@@ -5,7 +5,7 @@ Introduction to Splunk Log Observer
 *************************************
 
 .. meta::
-   :description: Get started investigating issues with Splunk Log Observer.
+   :description: Get started investigating issues with Splunk Log Observer. Resolve incidents faster through log filtering, aggregations, and analysis.
 
 
 

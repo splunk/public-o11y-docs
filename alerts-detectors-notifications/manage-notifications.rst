@@ -4,6 +4,8 @@
 Manage notification subscribers 
 *****************************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
   :description: Learn how to set recipients for your Observability Cloud notifications, so that new alerts and their resolution get to the right people in your organization.
 

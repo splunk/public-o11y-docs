@@ -4,8 +4,10 @@
 Enable Database Query Performance
 ************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Enable Database Query Performance in Splunk APM so you can monitor the impact of your database queries on service availability without having to instrument your databases. 
+   :description: Learn how to enable Database Query Performance in Splunk APM so you can monitor the impact of your database queries on service availability. 
 
 Database Query Performance is available by default, so all you need to do is enable the feature so that APM automatically begins indexing a set of database-related span tags. See :ref:`db-tags` for the list of tags.
 
