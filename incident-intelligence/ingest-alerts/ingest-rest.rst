@@ -61,7 +61,7 @@ The following fields are transformed as part of the common information model. Al
    * - state_message
      - 
      - String
-     - Verbose message. 
+     - Verbose message
    * - timestamp
      - 
      - String
@@ -79,6 +79,11 @@ Example JSON payload:
 
     {
       "message_type": "CRITICAL",
+      "entity_display_name": "",
+      "state_message": "",
+      "timestamp": "2022-06-30T00:55:30.064Z"
+
+
     }
 
 Using this endpoint, your alert is ingested and transformed into the common event model for alerts in Incident Intelligence. This is an example of the transformed alert data that is saved as an alert in Incident Intelligence:
