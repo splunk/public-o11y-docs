@@ -92,6 +92,12 @@ Charts, detectors, and SignalFlow limits
    * - :strong:`Limit name`
      - :strong:`Default limit value`
 
+   * - :ref:`maximum-alerts-rate`
+     -
+
+       - 10,000 alerts/minute for a detector with resolution smaller or equal to 1 minute
+       - 20,000 or (job resolution/1m)*10,000)) for a detector with resolution larger than 1 minute, whichever is smaller 
+
    * - :ref:`maximum-max-delay-setting-for-signalflow-programs`
      - 15 min
 
@@ -412,6 +418,20 @@ Maximum number of active alerts per detector
 
   * To update the detector, first mute its alerts. You can unmute them when you’re finished editing. To learn more about muting alerts, see :ref:`rule-from-alerts-page`.
   * To delete the detector, first delete all its recipients. To learn more about deleting recipients, see :ref:`remove-recipients`.
+
+.. _maximum-alerts-rate:
+
+Maximum alert rate per detector
+--------------------------------------------------------------------
+
+   * :strong:`Default limit value`: 
+      - 10,000 alerts/minute for a detector with resolution smaller or equal to 1 minute
+      - 20,000 or (job resolution/1m)*10,000)) for a detector with resolution larger than 1 minute, whichever is smaller 
+   * :strong:`Notes`: Maximum alert rate limits the maximun amount of alerts a detector can fire within the job resolution.
+   * :strong:`Customer impact`: When the detector exceeds this limit, it's aborted. For example: 
+      - If a detector runs at a 30-second resolution, it can fire at most 10,000 alerts within a minute. 
+      - If a detector runs at a 2-minute resolution, it can fire at most 20,000 alerts within 2 minutes. 
+      - If a detector runs at 5-minute resolution, it can fire at most 20,000 alerts within 5 minutes.
 
 .. _maximum-number-of-allocated-datapoints-per-signalflow-program:
 
