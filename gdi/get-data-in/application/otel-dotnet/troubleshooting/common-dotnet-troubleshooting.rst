@@ -45,7 +45,6 @@ You can enable debug logging to obtain more information about the issue:
 
    - Windows: ``%ProgramData%\OpenTelemetry .NET AutoInstrumentation\logs``
    - Linux: ``/var/log/opentelemetry/dotnet``
-   - macOS: ``/var/log/opentelemetry/dotnet``
 
    If the default log directories can't be created, logs are saved in the user's temporary folder.
 

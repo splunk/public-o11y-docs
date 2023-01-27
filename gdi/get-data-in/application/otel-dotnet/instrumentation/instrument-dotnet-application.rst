@@ -81,13 +81,15 @@ Windows
 
    Avoid setting the environment variables in the system or user scopes in Windows unless you require permanent autoinstrumentation. See :ref:`advanced-dotnet-configuration` for more information on how to include or exclude processes for autoinstrumentation.
 
+#. (Optional) To disable specific instrumentations, see :ref:`disable-instrumentations-otel-dotnet`.
+
 #. Run your application.
 
 If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
 
-Linux and macOS
+Linux
 -------------------
 
 #. Check that you meet the requirements. See :ref:`dotnet-requirements`.
@@ -113,6 +115,8 @@ Linux and macOS
       export OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,version=<version>'
 
    Avoid setting the environment variables in the system or user scopes in Windows unless you require permanent autoinstrumentation. See :ref:`advanced-dotnet-configuration` for more information on how to include or exclude processes for autoinstrumentation.      
+
+#. (Optional) To disable specific instrumentations, see :ref:`disable-instrumentations-otel-dotnet`.
 
 #. Run your application.
 
