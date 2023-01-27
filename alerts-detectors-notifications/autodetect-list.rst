@@ -167,11 +167,13 @@ The following table shows customizable arguments for this detector:
      - None
 
 
-Connection time took over 9 seconds
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AWS Route 53: Health checkers' connection time took over 9 seconds
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Description: Alerts when Amazon Route 53 connection time took more than 9 seconds for the past 2 minutes.
+- Description: Alerts when Amazon Route 53 health checkers' connection time took more than 9 seconds for the past 2 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/route53.flow#L5>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
 
 .. list-table::
    :header-rows: 1
@@ -196,11 +198,10 @@ Connection time took over 9 seconds
      - Dimensions you want to add to the detector
      - None
 
+AWS ALB: Sudden change in HTTP 5xx server errors count
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sudden change in HTTP 5xx server errors
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-- Description: Alerts when there is a sudden change in the HTTP 5xx server errors rate. By default, alert fires when the change in HTTP 5xx server error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
+- Description: Alerts when there is a sudden change in the number of HTTP 5XX server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/alb.flow#L35>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
@@ -225,8 +226,8 @@ The following table shows customizable arguments for this detector:
      - Dimensions you want to add to the detector.
      - None
 
-Unhealthy status of health check endpoint
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AWS Route 53: Unhealthy status of health check endpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when the status of Amazon Route 53 health check endpoint is unhealthy.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/route53.flow#L41>` repository on GitHub.
