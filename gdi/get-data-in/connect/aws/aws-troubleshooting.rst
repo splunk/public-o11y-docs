@@ -77,28 +77,28 @@ Once integrated with your Amazon Web Services account, Splunk Observability Clou
 
 .. _aws-ts-namespace-metrics:
 
-Metrics for a particular namespace are not displayed
-=====================================================
+Metrics and/or tags for a particular namespace are not displayed
+==================================================================================
 
 Metrics for a particular namespace are not displayed as expected.
 
-When a customer uses AWS Organization Service Control Policy and/or Permissions boundaries for IAM entities that may impose some limits on the AWS IAM policy used to connect to the Observability Cloud. Review AWS organization policy and permission boundaries to resolve the issue.Also let’s update the section title to “Metrics and/o tags for…“.
+Causes
+^^^^^^^^
 
+If you use the AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` and/or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
+might impact the AWS IAM policy you're using to connect to Observability Cloud. 
 
-Cause
-^^^^^^
-
-If you modified the default IAM policy while setting up an integration between Splunk Observability Cloud and AWS, then your IAM policy does not list namespaces that were removed as not needed for the original integration, and Observability Cloud ignores metrics for those namespaces.
+If you modified the default IAM policy while setting up an integration between Observability Cloud and AWS, then your IAM policy does not list namespaces that were removed as not needed for the original integration, and as a result Observability Cloud ignores metrics for those namespaces.
 
 Solution
 ^^^^^^^^^
 
-To ensure that you can see the metrics you expect to monitor, perform the following steps:
+Review the AWS Organizations' policies and boundaries you're using.
 
-1. Review the default IAM policy shown in :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>` to find the entry for the namespace you want.
+Also, to ensure that you can see the metrics you expect to monitor, perform the following steps:
 
-2. Add the missing entry to your AWS IAM file. For more information, search for "Editing IAM policies" in the AWS Identity and Access Management documentation.
-
+   #. Review the default IAM policy shown in :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>` to find the entry for the namespace you want.
+   #. Add the missing entry to your AWS IAM file. For more information, search for "Editing IAM policies" in the AWS Identity and Access Management documentation.
 
 .. _aws-ts-legacy-check-status:
 
