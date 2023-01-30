@@ -64,8 +64,8 @@ The following fields are transformed as part of the common information model. Al
      - Verbose message
    * - timestamp
      - 
-     - String
-     - Date-time string. Send date-time in the AWS Cloudwatch format (ISO 8601). It is transformed to the epoch long format for the ``triggeredAt`` field in the common event model
+     - Integer
+     - Date-time. Send date-time in epoch format
 
 
 JSON payload
@@ -81,7 +81,7 @@ Example JSON payload:
       "message_type": "CRITICAL",
       "entity_display_name": "My alert name",
       "state_message": "The disk is very full.  Here is some information about the problem"
-      "timestamp": "2022-06-30T00:55:30.064Z"
+      "timestamp": "1675101397"
 
 
     }
