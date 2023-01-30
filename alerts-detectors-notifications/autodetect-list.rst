@@ -169,7 +169,7 @@ The following table shows customizable arguments for this detector:
 AWS ALB: Sudden change in HTTP 5xx server errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Description: Alerts when there is a sudden change in the number of HTTP 5XX server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
+- Description: Alerts when there is a sudden change in the number of HTTP 5XX server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error count in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/alb.flow#L35>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
