@@ -42,9 +42,9 @@ To learn more about creating and managing teams, see :ref:`admin-manage-team-mem
     <h3>Link teams to relevant Observability Cloud features and content</h3>
   </embed>
 
-   You can link teams to relevant dashboard groups and detectors, giving them focused access to the information they use the most.
+You can link teams to relevant dashboard groups and detectors, giving them focused access to the information they use the most.
 
-   To learn more about linking teams to dashboard groups and detectors, see :ref: `admin-team-notifications`.
+To learn more about linking teams to dashboard groups and detectors, see :ref:`admin-team-notifications`.
 
 .. raw:: html
 
@@ -52,9 +52,9 @@ To learn more about creating and managing teams, see :ref:`admin-manage-team-mem
     <h3>Set up team landing pages to provide a handy location for team resources</h3>
   </embed> 
 
-   A team landing page provides a customizable text area that you can use to provide useful information for the team. The team landing page also provides access to any dashboard groups and detectors that you linked to the team.
+A team landing page provides a customizable text area that you can use to provide useful information for the team. The team landing page also provides access to any dashboard groups and detectors that you linked to the team.
 
-   To learn more about team landing pages, see :ref: `admin-configure-page`.
+To learn more about team landing pages, see :ref:`admin-configure-page`.
 
 .. raw:: html
 
@@ -63,6 +63,6 @@ To learn more about creating and managing teams, see :ref:`admin-manage-team-mem
   </embed> 
 
 
-  Define team notifications to help ensure that your team receives the alerts it needs to stay informed.
+Define team notifications to help ensure that your team receives the alerts it needs to stay informed.
 
-  To learn more about team notifications, see :ref:`admin-team-notifications`.
+To learn more about team notifications, see :ref:`admin-team-notifications`.
