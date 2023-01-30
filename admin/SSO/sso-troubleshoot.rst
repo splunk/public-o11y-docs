@@ -25,7 +25,7 @@ After the first redirect to the IdP, the IdP does not recognize the application
 Symptom
 *********
 
-You may see this error message:
+You might see this error message:
 
 :code:`Application with identifier https://api.signalfx.com/v1/saml/metadata/EiObDvcAYAA was not found in the directory fa80159f-****-****-****-************.``
 
@@ -93,14 +93,14 @@ For example, you see an error message stating that authentication is required.
 Cause
 ******
 
-The :code:`Subject` attribute in the assertion has a format other than :code:`Persistent`. The :code:`Subject` attribute identifies the subject of a SAML assertion, which is typically the user who is being authenticated. A :code:`Persistent` subject means that IdP guarantees that this attribute  always stays the same for a given user. Observability Cloud requires the subject to be in Persistent format.
+The :code:`Subject` attribute in the assertion has a format other than :code:`Persistent`. The :code:`Subject` attribute identifies the subject of a SAML assertion, which is typically the user who is being authenticated. A :code:`Persistent` subject means that IdP guarantees that this attribute always stays the same for a given user. Observability Cloud requires the subject to be in Persistent format.
 
 Solution
 **********
 
 Change the subject format to Persistent in the IdP settings.
 
-You see an error message that your SAML provider is unsupported.
+You see an error message that your SAML provider is unsupported
 -------------------------------------------------------------------
   
 Symptom
@@ -113,13 +113,13 @@ Symptom
 Cause
 ******
 
-For IdP specific integrations such as, PingOne, Okta, or OneLogin,  Observability Cloud expects that the requests will come from particular domains or URLs.
+For IdP specific integrations such as, PingOne, Okta, or OneLogin, Observability Cloud expects that the requests come from particular domains or URLs.
 
 Solution
 **********
     Use the generic SAML integration instead of the integration dedicated to your IdP. Most IdPs have built-in generic SAML 2.0 plugins that are used for this purpose. Enabling generic SAML requires additional actions. See :ref:`sso-generic`.
 
-You don't see a login button on the login page.
+You don't see a login button on the login page
 -------------------------------------------------
   
 Cause
@@ -130,4 +130,3 @@ Splunk Observability Cloud can render a login button only for organizations with
 Solution
 ***********
 Contact your CSM to request a custom URL.
-     

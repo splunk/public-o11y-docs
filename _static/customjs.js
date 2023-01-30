@@ -457,7 +457,7 @@ $(window).scroll(function() {
     });
     
     if($('.sphinxsidebarwrapper ul.current').length > 0) {
-      var liTOC = "";
+      var liTOC = "<li class='githubeditlink' style='margin-top:5px;'></li>";
         //console.log("aaaaa");
 
         if($('a.headerlink').parent().length <= 1)
@@ -466,7 +466,10 @@ $(window).scroll(function() {
               $(".toctree-l2").show();
 
             });
-
+            $('#rightSideTOC').append(liTOC);
+            $(".githubeditlink").html($(".olly_git_hub_link").html());
+            
+         
           return false;
         }
 
@@ -501,10 +504,11 @@ $(window).scroll(function() {
           });
           console.log(liTOC);
           $('#rightSideTOC').append(liTOC);
-
-
-
-
+          $(".githubeditlink").html($(".olly_git_hub_link").html());
+       }else{
+          var liTOC = "<li class='githubeditlink' style='margin-top:5px;'></li>";
+          $('#rightSideTOC').append(liTOC);
+          $(".githubeditlink").html($(".olly_git_hub_link").html());
         }
 
 });

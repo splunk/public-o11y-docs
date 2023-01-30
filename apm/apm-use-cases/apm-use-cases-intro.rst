@@ -4,8 +4,10 @@
 Use cases: Troubleshoot errors and monitor application performance using Splunk APM
 *******************************************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-    :description: Get started with Splunk APM use cases and the fictitious company context in the use cases
+    :description: Get started with Splunk APM use cases.
 
 .. toctree::
     :hidden:

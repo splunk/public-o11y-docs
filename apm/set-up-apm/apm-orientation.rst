@@ -5,6 +5,8 @@
 Learn what you can do with Splunk APM
 ***************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Get started monitoring applications with Splunk APM.
 

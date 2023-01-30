@@ -4,8 +4,10 @@
 Index span tags to generate Troubleshooting MetricSets
 ************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Index tags to create Troubleshooting MetricSets that help you troubleshoot services with Splunk Observability Cloud.
+   :description: Learn how to use index tags to create Troubleshooting MetricSets that help you troubleshoot services with Splunk Observability Cloud.
 
 Thanks to Splunk APM's full-fidelity tracing, which captures every span from every trace, you can use span tags to break down services and inter-service calls along any characteristic or attribute associated with any given trace. This lets you customize data visualizations and metrics for your monitoring and troubleshooting requirements. 
 
@@ -121,9 +123,10 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
 
 Manage existing indexed span tags and Troubleshooting MetricSets
 =================================================================
-After you successfully index a span tag, Splunk APM saves the configuration in the :strong:`APM MetricSets` page in your :strong:`Data Configuration`. Visit this page to view the indexing scope of the span tag and its current status.
 
-You can modify the configuration for existing indexed tags, including adding and removing services for specific indexed tags and modifying the scope. You can also pause or stop indexing span tags without deleting their configuration. This is useful when you want to temporarily stop indexing a span tag, but don't want to remove the configuration.
+After you've successfully indexed a span tag, Splunk APM saves the configuration in the :strong:`APM MetricSets` page in :strong:`Data Configuration`. Go to this page to view the indexing scope of the span tag and its current status.
+
+You can modify the configuration for existing indexed tags, including adding and removing services for specific indexed tags and modifying the scope. You can also pause or stop indexing without deleting their configuration. This is useful when you want to temporarily stop indexing a span tag, but don't want to remove the configuration.
 
 To review or modify existing indexed span tags, do the following:
 
@@ -141,7 +144,7 @@ To review or modify existing indexed span tags, do the following:
 Status of configured Troubleshooting MetricSets
 -------------------------------------------------
 
-Once configured, custom Troubleshooting MetricSets can have the statuses listed in the following table:
+After you've configured custom Troubleshooting MetricSets you can see their status. The following table lists all available statuses:
 
 .. list-table::
    :header-rows: 1
@@ -158,3 +161,14 @@ Once configured, custom Troubleshooting MetricSets can have the statuses listed 
     
    * - Stopped
      - The application stopped indexing the span tag and is no longer generating Troubleshooting MetricSets for the span tag. You can't view any data you previously indexed for this span tag.
+
+.. _db-metricsets:
+
+Status of Database MetricSets
+--------------------------------------------------
+
+You can pause and resume indexing of Database Query Performance data at any time from the :guilabel:`Standard MetricSets` section of :guilabel:`APM MetricSets`. You can also control the indexing of SQL and NoSQL tags separately.
+
+To pause the indexing of Database Query Performance data, select :guilabel:`Pause indexing` next to the database type. To resume, select :guilabel:`Resume indexing`.
+
+

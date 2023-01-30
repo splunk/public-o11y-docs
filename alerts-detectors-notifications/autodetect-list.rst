@@ -4,8 +4,10 @@
 List of available AutoDetect detectors
 ******************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-   :description: The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the GitHub link in each AutoDetect detector section.
+   :description: Reference of available AutoDetect detectors and their customizable arguments. 
 
 The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the GitHub link in each AutoDetect detector section.
 
@@ -19,7 +21,7 @@ Splunk APM
 Service latency
 ----------------------------
 
-- Description:  Alerts when there is a sudden change in service latency. By default, the alert is triggered when the latency in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 5 deviations. The alert clears when the latency goes back to less than 4 deviations above the norm.
+- Description: Alerts when there is a sudden change in service latency. By default, the alert fires when the latency in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 5 deviations. The alert clears when the latency goes back to less than 4 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/latency.flow>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
@@ -57,7 +59,7 @@ The following table shows customizable arguments for this detector:
 Service error rate
 --------------------
 
-- Description: Alerts when a sudden change in service error rate occurs. By default, the alert is triggered when the error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 100%. The alert clears when the latency goes back to less than 80% above the norm.
+- Description: Alerts when a sudden change in service error rate occurs. By default, the alert fires when the error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 100%. The alert clears when the latency goes back to less than 80% above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/errors.flow>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
@@ -95,7 +97,7 @@ The following table shows customizable arguments for this detector:
 Service request rate
 -----------------------
 
-- Description: Alerts when a sudden change in request rate occurs. . By default, the alert is triggered when the request rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3 deviations. The alert clears when the latency goes back to less than 2.5 deviations above the norm.
+- Description: Alerts when a sudden change in request rate occurs. By default, the alert fires when the request rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3 deviations. The alert clears when the latency goes back to less than 2.5 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/requests.flow>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
@@ -163,7 +165,92 @@ The following table shows customizable arguments for this detector:
    * - Filters
      - Dimensions you want to add to the detector
      - None
-   
+
+AWS ALB: Sudden change in HTTP 5xx server errors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when there is a sudden change in the number of HTTP 5XX server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error count in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/alb.flow#L35>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   * - Current window
+     - Time window to test for anomalous values (in minutes)
+     - ``10m``
+   * - Historical window
+     - Time window to use for historical normal values (in hours)
+     - ``1h``
+   * - Trigger threshold
+     - Triggers the alert when the current value is greater than the specified number of deviations above historical data.
+     - ``3.5``
+   * - Filters
+     - Dimensions you want to add to the detector.
+     - None
+
+AWS Route 53: Health checkers' connection time took over 9 seconds
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when Amazon Route 53 health checkers' connection time took more than 9 seconds for the past 2 minutes.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/route53.flow#L5>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   * - Trigger threshold
+     - Trigger threshold for long connection time (in milliseconds)
+     - ``9000``
+   * - Sensitivity
+     - Sensitivity of the alerting
+     - ``100% of 2m``
+   * - Clear threshold
+     - Clear threshold for long connection time (in milliseconds)
+     - ``8000``
+   * - Clear sensitivity
+     - Clear sensitivity of the alerting
+     - ``100% of 2m``    
+   * - Filters
+     - Dimensions you want to add to the detector
+     - None
+
+AWS Route 53: Unhealthy status of health check endpoint
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when the status of Amazon Route 53 health check endpoint is unhealthy. By default, the alert fires when the health check endpoint has been unhealthy for 80% of the past 10 minutes. The alert clears when the health check endpoint has been healthy for 80% of the past 10 minutes.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/route53.flow#L41>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   * - Sensitivity
+     - Sensitivity of the alerting
+     - ``80% of 10m``
+   * - Clear sensitivity
+     - Clear sensitivity of the alerting
+     - ``80% of 10m``    
+   * - Filters
+     - Dimensions you want to add to the detector
+     - None
+
+
 .. _autodetect-kafka:
 
 Kafka

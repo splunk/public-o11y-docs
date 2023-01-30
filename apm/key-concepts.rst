@@ -4,6 +4,8 @@
 Key concepts in Splunk APM
 *********************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Learn about key concepts in Splunk APM.
 

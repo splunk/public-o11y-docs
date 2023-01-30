@@ -12,7 +12,7 @@ Splunk Observability Cloud and the Splunk platform
 
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
-   Scale your system's observability through collaboration <practice-reliability/collaboration>
+   Collaborate on observability <practice-reliability/collaboration>
    Set up Observability Cloud <setup-o11y/setup-o11y>
 
 
@@ -37,7 +37,7 @@ Select each of the following categories to learn how you can maintain reliabilit
 
 * :ref:`Respond to incidents <practice-reliability-incident-response>`
 
-* :ref:`Scale your system's reliability by collaborating within and across teams <practice-reliability-collaboration>`
+* :ref:`Collaborate on observability within and across teams <practice-reliability-collaboration>`
 
 
 Then see :ref:`setup-o11y-setup-o11y` to get started.

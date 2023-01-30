@@ -4,8 +4,10 @@
 Compatible span formats for Splunk APM
 *****************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Splunk APM supports a variety of span formats, depending on which agent, collector, or endpoint receives and exports trace data.
+   :description: Learn about the variety of span formats in Splunk APM.
 
 Splunk APM supports a variety of span formats, depending on which agent, collector, or endpoint receives and exports trace data. For more information about instrumenting applications for Splunk APM, see :ref:`instrument-applications`.
 
@@ -95,6 +97,8 @@ In addition, the following endpoints are available:
 * SAPM at ``/v2/trace/sapm`` with ``Content-Type:application/x-protobuf``
 
 For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`. 
+
+.. note:: You can also send trace data in OTLP format directly to Observability Cloud using the gRPC endpoint, either directly or from an OpenTelemetry Collector. See :ref:`grpc-data-ingest`.
 
 .. _apm-formats-smart-agent:
 
