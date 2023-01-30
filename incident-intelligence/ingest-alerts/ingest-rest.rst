@@ -82,8 +82,6 @@ Example JSON payload:
       "entity_display_name": "My alert name",
       "state_message": "The disk is very full.  Here is some information about the problem"
       "timestamp": "1675101397"
-
-
     }
 
 Using this endpoint, your alert is ingested and transformed into the common event model for alerts in Incident Intelligence. This is an example of the transformed alert data that is saved as an alert in Incident Intelligence:
