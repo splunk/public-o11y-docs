@@ -192,6 +192,8 @@ Obtain a federation metadata file to install to Observability Cloud:
 #. Open a new browser window or tab, then navigate to the URL you copied. This opens a file download dialog box.
 #. Save the file FederationMetadata.xml. In a following step, you upload this file to Observability Cloud.
 
+ .. note:: URLs must belong to ADFS in order to validate. Accepted domains include ``windows.net`` and ``windows-ppe.net``.
+
 .. _upload-adfs-cert-metadata-im:
 
 Upload the ADFS certificate and federation metadata to Observability Cloud
