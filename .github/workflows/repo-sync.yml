@@ -24,7 +24,7 @@ jobs:
         source_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
         destination_branch: main
         pr_title: "Pulling ${{ github.ref }} into main"
-        pr_reviewer: "vpolasa2-splunk,jmalin-splunk"                         # Comma-separated list (no spaces)
-        pr_assignee: "vpolasa2-splunk,jmalin-splunk"
+        pr_reviewer: "puribe-splunk,jmalin-splunk"                         # Comma-separated list (no spaces)
+        pr_assignee: "puribe-splunk,jmalin-splunk"
         pr_label: "sync"
         github_token: ${{ secrets.MY_TOKEN }}
