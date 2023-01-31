@@ -25,9 +25,9 @@ To create a team, follow these steps:
 
 #. Click :guilabel:`Create New Team`.
 
-#. In the :guilabel:`Team name` dialog box, type a name for the team.
+#. In the :guilabel:`Team name` dialog box, enter a name for the team.
 
-#. (Optional) In the :guilabel:`Description` field, type a description of the team. 
+#. (Optional) In the :guilabel:`Description` field, enter a description of the team. 
 
 #. From the :guilabel:`Add Users` list, you can search for users with the search text box.
 
@@ -140,7 +140,7 @@ To view which teams a user belongs to, follow these steps:
 
 #. A table of current teams appears in the main panel.
 
-#. In the search bar, type the name of the user and ensure that :guilabel:`Users` is selected. You can search by the user's name or email address.
+#. In the search bar, enter the name of the user and ensure that :guilabel:`Users` is selected. You can search by the user's name or email address.
 
 
 
