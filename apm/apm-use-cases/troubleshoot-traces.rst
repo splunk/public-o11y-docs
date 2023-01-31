@@ -18,7 +18,7 @@ Over the last couple of hours, Alex has been receiving reports from customer sup
 1. Group traces by specific tags
 ==================================
 
-As most reports happened in the weeks following the release of the recommendation service, Alex opens Trace Analyzer and sets the time range to the last week for the recommendation service in production. Next, they use the :guilabel:`Grouped by` menu to select the ``device.type`` tag. To narrow down the search further, they switch :guilabel:`Errors only`.
+As most reports happened in the weeks following the release of the recommendation service, Alex opens Trace Analyzer and sets the time range to the last hour for the recommendation service in production. Next, they use the :guilabel:`Grouped by` menu to select the ``device.type`` tag. To narrow down the search further, they switch :guilabel:`Errors only`.
 
 The search reduces the amount of traces to a few thousand from the millions available in Splunk APM. Alex notices that the tablet throws the most errors among the types of devices, so they decide to switch the grouping tag to ``tablet.brand``. Alex then selects the :guilabel:`Group Metrics` tab to dig into each value of the grouping tag.
 
@@ -28,10 +28,6 @@ The search reduces the amount of traces to a few thousand from the millions avai
 After pinpointing the tablet brands that are more problematic, Alex feels more confident about the issue. They use the chart selector to load the :guilabel:`Trace duration` chart, which shows the number of traces by duration for each period within the time frame.
 
 Another pattern emerges: the highest latencies happen during the weekends. Alex clicks and drags the chart to zoom into weekend days, which confirms the high latencies and reduces the number of traces listed.
-
-..  image:: /_images/apm/trace-analyzer/trace-drag-drop-chart.gif
-    :width: 95%
-    :alt: Selection of a specific time frame
 
 All the available evidence indicates that the issues occur on Amazon tablets at certain times of the day. With this information, Alex goes back to the :guilabel:`Traces` tab and sets a minimum duration to find long, problematic traces they can analyze.
 

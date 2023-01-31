@@ -58,6 +58,8 @@ The :guilabel:`Trace duration` option shows a heatmap of traces by their duratio
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface.
 
+.. note:: The trace duration heatmap isn't affected by :guilabel:`Group by` selections.
+
 Group by tag
 -------------------------------
 
