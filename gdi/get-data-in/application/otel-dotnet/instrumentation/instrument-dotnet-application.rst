@@ -152,37 +152,6 @@ Configure the instrumentation
 
 For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
-.. _kubernetes_dotnet_otel:
-
-Deploy the .NET instrumentation in Kubernetes
-==========================================================
-
-To deploy the .NET instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
-
-The following example shows how to update a deployment to expose environment variables by adding the agent configuration under the ``.spec.template.spec.containers.env`` section:
-
-.. code-block:: yaml
-
-   apiVersion: apps/v1
-   kind: Deployment
-   spec:
-     selector:
-       matchLabels:
-         app: your-application
-     template:
-       spec:
-         containers:
-           - name: myapp
-             env:
-               - name: SPLUNK_OTEL_AGENT
-                 valueFrom:
-                   fieldRef:
-                     fieldPath: status.hostIP
-               - name: OTEL_EXPORTER_OTLP_ENDPOINT
-                 value: "http://$(SPLUNK_OTEL_AGENT):4317"
-               - name: OTEL_RESOURCE_ATTRIBUTES
-                 value: "deployment.environment=<environmentName>,service.version=<version>"
-
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Observability Cloud

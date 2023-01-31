@@ -70,3 +70,16 @@ High CPU usage
 By default, the Splunk Distribution of OpenTelemetry .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've enabled the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
 
 To restrict global instrumentation to a set of processes, use the ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES`` environment variable, which excludes processes for instrumentation. See :ref:`advanced-dotnet-otel-configuration` for more information.
+
+.. _disable-instrumentations-otel-dotnet:
+
+Disable specific instrumentations
+====================================================
+
+All instrumentations are enabled by default for all signal types: traces, metrics, and logs.
+
+You can disable all instrumentations for a specific signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_DISABLED_INSTRUMENTATIONS`` environment variable to ``true``.
+
+For a more granular approach, you can disable specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{0}_INSTRUMENTATION_DISABLED`` environment variable to ``true``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{0}`` is the case-sensitive name of the instrumentation.
+
+.. note:: You can't set environment variables for disabling instrumentations using the ``web.config`` or ``app.config`` files.

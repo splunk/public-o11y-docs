@@ -140,19 +140,6 @@ The following settings control instrumentations and tracing behavior:
    * - ``OTEL_DOTNET_AUTO_LOGS_{0}_INSTRUMENTATION_DISABLED``
      - Enables or disables a specific log instrumentation, where ``{0}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_DISABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_DISABLED`` environment variable.
 
-.. _disable-instrumentations-otel-dotnet:
-
-Disable specific instrumentations
---------------------------------------------
-
-All instrumentations are enabled by default for all signal types: traces, metrics, and logs.
-
-You can disable all instrumentations for a specific signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_DISABLED_INSTRUMENTATIONS`` environment variable to ``true``.
-
-For a more granular approach, you can disable specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{0}_INSTRUMENTATION_DISABLED`` environment variable to ``true``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{0}`` is the case-sensitive name of the instrumentation.
-
-.. note:: You can't set environment variables for disabling instrumentations using the ``web.config`` or ``app.config`` files.
-
 .. _server-trace-information-dotnet-otel:
 
 Server trace information
