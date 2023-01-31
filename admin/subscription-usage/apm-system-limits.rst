@@ -47,9 +47,6 @@ Span and trace limits
    * - Span accumulation duration
      - 10 minutes
      - When a specific trace ID reaches this limit, subsequent spans are grouped into another trace segment. Exceeding the limit leads to suboptimal trace-based analysis for inferred services, failure root cause metrics and workflow metrics, but no spans or traces exceeding this limit are dropped. 
-   * - Max trace duration 
-     - 3 mins 
-     - Spans/traces aren't dropped. 
    * - Trace assembly delay
      - 60s 
      - Time from last span arrival for a traceId to trace assembly completed.
