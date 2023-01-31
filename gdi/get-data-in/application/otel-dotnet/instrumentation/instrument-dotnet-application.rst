@@ -35,94 +35,93 @@ Windows
 
 #. Check that you meet the requirements. See :ref:`dotnet-requirements`.
 
-#. Download the PowerShell script module of the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
+#. Download and install the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
    .. code-block:: powershell
 
-      # Download and import the module
+      # Download and import the PowerShell module
+      # Replace <version> with the desired version
       $module_url = "https://github.com/signalfx/splunk-otel-dotnet/releases/download/<version>/Splunk.OTel.DotNet.psm1"
       $download_path = Join-Path $env:temp "Splunk.OTel.DotNet.psm1"
-      Invoke-WebRequest -Uri $module_url -OutFile $download_path
+      Invoke-WebRequest -Uri $module_url -OutFile $download_path    
       Import-Module $download_path
 
-#. Install and configure the distribution:
+      # Install the Splunk distribution using the PowerShell module
+      Install-OpenTelemetryCore
+
+#. Register the distribution:
 
    .. tabs::
 
       .. code-tab:: shell .NET application
-
-         # Install core files
-         Install-OpenTelemetryCore
 
          # Setup environment to start instrumentation from the current PowerShell session
          Register-OpenTelemetryForCurrentSession -OTelServiceName "<your-service-name>"
 
       .. code-tab:: shell IIS application
 
-         # Install core files
-         Install-OpenTelemetryCore
-
          # Setup IIS instrumentation
          Register-OpenTelemetryForIIS
       
       .. code-tab:: shell Windows service
 
-         # Install core files
-         Install-OpenTelemetryCore
-
          # Setup your Windows Service instrumentation
-         Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>" -OTelServiceName "<your-service-display-name>"
+         Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>"
 
-#. Set the environment and service version resource attributes:
+#. (Optional) Set the environment and service version resource attributes:
 
    .. code-block:: powershell
 
-      $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,version=<version>'
+      # You can also set this in web.config or app.config
+      $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
 
-   Avoid setting the environment variables in the system or user scopes in Windows unless you require permanent autoinstrumentation. See :ref:`advanced-dotnet-configuration` for more information on how to include or exclude processes for autoinstrumentation.
-
-#. (Optional) To disable specific instrumentations, see :ref:`disable-instrumentations-otel-dotnet`.
+   Avoid setting the environment variables in the system or user scopes in Windows unless you require permanent automatic instrumentation. See :ref:`advanced-dotnet-configuration` for more information on how to include or exclude processes for automatic instrumentation.
 
 #. Run your application.
 
 If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.
 
-.. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
+.. note:: If you need to add custom attributes to spans or want to manually generate spans and metrics, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
 
 Linux
 -------------------
 
 #. Check that you meet the requirements. See :ref:`dotnet-requirements`.
 
-#. Download the installation script of the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
+#. Download and install the installation script of the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
    .. code-block:: shell
 
-         curl -sSfL https://raw.githubusercontent.com/signalfx/splunk-otel-dotnet/<version>/splunk-otel-dotnet-install.sh -O
-
-#. Install the distribution for your operating system:
-
-   .. code-block:: shell
-
+      # Replace <version> with the desired version
+      curl -sSfL https://raw.githubusercontent.com/signalfx/splunk-otel-dotnet/<version>/splunk-otel-dotnet-install.sh -O
+      # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
+
+#. Enable the automatic instrumentation:
+
+   .. code-block:: shell
+
+      # Enable the automatic instrumentation
       . $HOME/.splunk-otel-dotnet/instrument.sh
 
-#. Set the following environment variables:
+#. (Optional) Set the environment and service version resource attributes:
 
    .. code-block:: shell
 
-      export OTEL_SERVICE_NAME='<service-name>'
-      export OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,version=<version>'
-
-   Avoid setting the environment variables in the system or user scopes in Windows unless you require permanent autoinstrumentation. See :ref:`advanced-dotnet-configuration` for more information on how to include or exclude processes for autoinstrumentation.      
-
-#. (Optional) To disable specific instrumentations, see :ref:`disable-instrumentations-otel-dotnet`.
+      export OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'     
 
 #. Run your application.
 
 If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
+
+.. _configure-otel-dotnet:
+
+Configure the instrumentation
+===================================
+
+For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 .. _kubernetes_dotnet_otel:
 
@@ -152,10 +151,8 @@ The following example shows how to update a deployment to expose environment var
                      fieldPath: status.hostIP
                - name: OTEL_EXPORTER_OTLP_ENDPOINT
                  value: "http://$(SPLUNK_OTEL_AGENT):4317"
-               - name: OTEL_SERVICE_NAME
-                 value: "<serviceName>"
                - name: OTEL_RESOURCE_ATTRIBUTES
-                 value: "deployment.environment=<environmentName>"
+                 value: "deployment.environment=<environmentName>,service.version=<version>"
 
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
@@ -170,13 +167,13 @@ To bypass the OTel Collector and send data directly to Observability Cloud, set 
 
    .. code-tab:: shell Windows PowerShell
 
-      $env:SIGNALFX_ACCESS_TOKEN=<access_token>
-      $env:SIGNALFX_REALM=<realm>
+      $env:SPLUNK_ACCESS_TOKEN=<access_token>
+      $env:SPLUNK_REALM=<realm>
 
    .. code-tab:: shell Linux
 
-      export SIGNALFX_ACCESS_TOKEN=<access_token>
-      export SIGNALFX_REALM=<realm>
+      export SPLUNK_ACCESS_TOKEN=<access_token>
+      export SPLUNK_REALM=<realm>
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 

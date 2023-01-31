@@ -13,8 +13,8 @@ Instrument back-end applications to send spans to Splunk APM
    Instrument a Java application TOGGLE <java/get-started>
    Instrument a Python application TOGGLE <python/get-started>
    Instrument a Node.js application TOGGLE <nodejs/get-started>
-   Instrument a .NET application (OpenTelemetry) TOGGLE <otel-dotnet/get-started>
    Instrument a .NET application (SignalFx) TOGGLE <dotnet/get-started>
+   Instrument a .NET application (OpenTelemetry) TOGGLE <otel-dotnet/get-started>
    Instrument a Go application TOGGLE <go/get-started>
    Instrument a Ruby application TOGGLE <ruby/get-started>
    Instrument a PHP application TOGGLE <php/get-started>
@@ -28,8 +28,8 @@ You can instrument applications in each of these languages using official Splunk
 - :ref:`Java <get-started-java>`
 - :ref:`Python <get-started-python>`
 - :ref:`Node.js <get-started-nodejs>`
-- :ref:`.NET (OpenTelemetry) <get-started-dotnet-otel>`
 - :ref:`.NET (SignalFx) <get-started-dotnet-otel>`
+- :ref:`.NET (OpenTelemetry) <get-started-dotnet-otel>`
 - :ref:`Go <get-started-go>`
 - :ref:`Ruby <get-started-ruby>`
 - :ref:`PHP <get-started-php>`

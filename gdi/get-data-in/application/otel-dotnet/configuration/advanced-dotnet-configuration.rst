@@ -16,9 +16,9 @@ Configuration methods
 
 You can change the settings of the Splunk Distribution of OpenTelemetry .NET in the following ways:
 
-#. Set environment variables. On Windows, set them in the process scope unless you want to enable autoinstrumentation globally for all .NET applications.
+- Set environment variables. On Windows, set them in the process scope unless you want to enable autoinstrumentation globally for all .NET applications.
 
-#. You can also edit the ``web.config`` file for ASP.NET applications or the ``app.config`` file for Windows services. For example:
+- You can also edit the ``web.config`` file for ASP.NET applications or the ``app.config`` file for Windows services. For example:
 
    .. code-block:: xml
 
@@ -66,8 +66,6 @@ The following settings are common to most instrumentation scenarios:
      - Enables the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-dotnet-otel`. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
      - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Can't be set using the ``web.config`` or ``app.config`` files.
-   * - ``OTEL_DOTNET_AUTO_HOME``
-     - Location of the installed instrumentation. Either set it manually to ``/opt/signalfx`` or run the ``instrument.sh`` script when instrumenting applications on Linux. Can't be set using the ``web.config`` or ``app.config`` files.
 
 .. _dotnet-otel-exporter-settings:
 
@@ -157,9 +155,9 @@ Disable specific instrumentations
 
 All instrumentations are enabled by default for all signal types: traces, metrics, and logs.
 
-You can disable all instrumentations for a specific signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_DISABLED_INSTRUMENTATIONS`` environment variable to ``false``.
+You can disable all instrumentations for a specific signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_DISABLED_INSTRUMENTATIONS`` environment variable to ``true``.
 
-For a more granular approach, you can disable specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{0}_INSTRUMENTATION_DISABLED`` environment variable to ``false``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{0}`` is the case-sensitive name of the instrumentation.
+For a more granular approach, you can disable specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{0}_INSTRUMENTATION_DISABLED`` environment variable to ``true``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{0}`` is the case-sensitive name of the instrumentation.
 
 .. note:: You can't set environment variables for disabling instrumentations using the ``web.config`` or ``app.config`` files.
 
@@ -232,3 +230,44 @@ By default, the Splunk Distribution of OpenTelemetry .NET retrieves the service 
 If all the steps fail, the service name defaults to ``UnknownService``. 
 
 To override the default service name, set the ``OTEL_SERVICE_NAME`` environment variable.
+
+.. _manual-dotnet-envvars:
+
+Environment variables for manual installation
+====================================================
+
+When deploying the instrumentation manually, you might have to set the following environment variables:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+   :width: 100
+
+   * - Environment variable
+     - Value
+   * - ``COR_ENABLE_PROFILING``
+     - ``1``
+   * - ``COR_PROFILER``
+     - ``{918728DD-259F-4A6A-AC2B-B85E1B658318}``
+   * - ``COR_PROFILER_PATH_64``
+     - ``$installationLocation\win-x64\OpenTelemetry.AutoInstrumentation.Native.dll``
+   * - ``COR_PROFILER_PATH_32``
+     - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
+   * - ``CORECLR_ENABLE_PROFILING``
+     - ``1``
+   * - ``CORECLR_PROFILER``
+     - ``{918728DD-259F-4A6A-AC2B-B85E1B658318}``
+   * - ``CORECLR_PROFILER_PATH_64``
+     - ``$installationLocation\win-x64\OpenTelemetry.AutoInstrumentation.Native.dll``
+   * - ``CORECLR_PROFILER_PATH_32``
+     - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
+   * - ``DOTNET_ADDITIONAL_DEPS``
+     - ``$installationLocation\AdditionalDeps``
+   * - ``DOTNET_SHARED_STORE``
+     - ``$installationLocation\store``
+   * - ``DOTNET_STARTUP_HOOKS``
+     - ``$installationLocation\net\OpenTelemetry.AutoInstrumentation.StartupHook.dll``
+   * - ``OTEL_DOTNET_AUTO_HOME``
+     - ``$installationLocation``
+   * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
+     - ``$installationLocation\integrations.json``

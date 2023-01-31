@@ -19,7 +19,7 @@ The Splunk Distribution of OpenTelemetry .NET supports the following .NET versio
 - .NET 5.0 and higher on Windows and Linux
 - .NET Framework 4.6.2 and higher on Windows
 
-.. note:: .NET Core 3.1 and RHEL 7, 8 are not supported.
+.. note:: CentOS and Red Hat Enterprise version 7 to 8 are not supported.
 
 .. _supported-dotnet-otel-libraries:
 
@@ -114,5 +114,3 @@ To send application traces and spans to Observability Cloud, install the Splunk 
 - Splunk OTel Collector for Linux. See :ref:`otel-install-linux`.
 - Splunk OTel Collector for Windows. See :ref:`otel-install-windows`.
 - Splunk OTel Collector for Kubernetes. See :ref:`otel-install-k8s`.
-
-.. note:: The OTel Collector is not required when instrumenting Azure App Service applications. See :ref:`instrument-azure-app`.

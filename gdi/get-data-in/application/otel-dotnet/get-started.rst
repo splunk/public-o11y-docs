@@ -5,7 +5,7 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
 ***************************************************************************
 
 .. meta::
-   :description: Instrument a .NET application to export metrics and spans to Splunk Observability Cloud.
+   :description: Instrument a .NET application to export span, metrics, and logs to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -17,7 +17,7 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
    Migrate from SignalFx Instrumentation for .NET <troubleshooting/migrate-signalfx-dotnet-to-dotnet-otel>   
 
-The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry data to Splunk Observability Cloud.
+The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry to Splunk Observability Cloud.
 
 .. raw:: html
 
@@ -31,6 +31,8 @@ The Splunk Distribution of OpenTelemetry .NET provides the following features:
 - B3 and W3C headers for context propagation
 - OTLP over HTTP exporter to send spans to the Splunk OTel Collector
 - OpenTelemetry semantic conventions
+
+.. note:: If you need AlwaysOn Profiling for .NET, use the SignalFx Instrumentation for .NET. See :ref:`get-started-dotnet`.
 
 .. raw:: html
 
