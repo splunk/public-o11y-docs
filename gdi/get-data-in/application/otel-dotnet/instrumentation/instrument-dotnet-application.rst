@@ -58,7 +58,7 @@ Windows
          # Setup environment to start instrumentation from the current PowerShell session
          Register-OpenTelemetryForCurrentSession -OTelServiceName "<your-service-name>"
 
-      .. code-tab:: shell IIS application
+      .. code-tab:: shell IIS application (.NET Core)
 
          # Setup IIS instrumentation
          Register-OpenTelemetryForIIS
@@ -67,6 +67,8 @@ Windows
 
          # Setup your Windows Service instrumentation
          Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>"
+
+   .. note:: To enable the instrumentation for ASP.NET (.NET Framework), you must enable the ``TelemetryHttpModule`` module in the ``web.config`` file. See :ref:`otel-dotnet-aspnet-framework`.
 
 #. (Optional) Set the environment and service version resource attributes:
 
@@ -115,6 +117,33 @@ Linux
 If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
+
+.. _otel-dotnet-aspnet-framework:
+
+Additional steps for ASP.NET (.NET Framework)
+================================================
+
+To complete the instrumentation process for ASP.NET applications not running on .NET Core, add the ``TelemetryHttpModule`` module to your application's ``web.config`` file. For example:
+
+.. code-block:: xml
+
+   <system.web>
+      <httpModules>
+         <add name="TelemetryHttpModule" type="OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule, OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule" />
+      </httpModules>
+   </system.web>
+
+You can also set the ASP.NET HTTP module in the ``applicationHost.config`` file. The following example shows how to set the module for all ASP.NET applications running in Integrated Pipeline mode:
+
+.. code-block:: xml
+
+   <location path="" overrideMode="Allow">
+      <system.webServer>
+         <modules>
+         <add name="TelemetryHttpModule" type="OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule, OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule" preCondition="managedHandler" />
+         </modules>
+      </system.webServer>
+   </location>   
 
 .. _configure-otel-dotnet:
 
