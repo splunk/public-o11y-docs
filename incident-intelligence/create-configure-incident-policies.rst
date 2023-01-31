@@ -55,6 +55,7 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping rule.
 #. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
 #. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
+#. Under :guilabel:`Alert metadata grouping (optional)` select metadata fields you want to group by. The fields you are using in your alert routing conditions are available in the list to select. If you want to filter on another field enter that field name. 
 #. Select :guilabel:`Save alert grouping`.
 
 After you manage which alerts create an incident and how alerts are grouped into incidents, configure incident workflows for your incident policy.  
