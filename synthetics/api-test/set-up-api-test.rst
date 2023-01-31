@@ -38,3 +38,7 @@ Follow these steps to add requests to your API test:
 #. Select :guilabel:`Save steps & return to test` to finish creating your test.
 
 .. include:: /_includes/synthetics/configure-test.rst
+
+Example
+==================
+For an example, see  :ref:`api-test-use-case`.
