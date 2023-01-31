@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-add-incident-tools-resources:
 
 Add collaboration tools and resources to an incident
