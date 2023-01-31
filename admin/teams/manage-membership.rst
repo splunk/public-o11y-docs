@@ -23,7 +23,7 @@ To create a team, follow these steps:
 
 #. In the left navigation menu, select :menuselection:`Settings > Teams`.
 
-#. Click :guilabel:`Create New Team`.
+#. Select :guilabel:`Create New Team`.
 
 #. In the :guilabel:`Team name` dialog box, enter a name for the team.
 
@@ -53,7 +53,7 @@ To delete a team, follow these steps:
 
 #. Find the name of the team.
 
-#. Click the :guilabel:`Actions` menu icon next the team name, then select :menuselection:`Delete Team`.
+#. Select the :guilabel:`Actions` menu icon next the team name, then select :menuselection:`Delete Team`.
 
 #. Observability Cloud displays a dialog box that asks you to confirm the deletion. Click :guilabel:`Delete`.
 
@@ -75,7 +75,7 @@ To change the team name, follow these steps:
 
 #. Find the name of the team and select the team.
 
-#. Click the :guilabel:`Edit` icon next the team name.
+#. Select the :guilabel:`Edit` icon next the team name.
 
 #. When you're finished editing the name, click Enter to save your changes. 
 
@@ -99,13 +99,13 @@ To add or remove team members, follow these steps:
 
 #. Find the name of the team.
 
-#. Click the :guilabel:`Actions` menu (|more|) next to the team name and select :menuselection:`Add users`.
+#. Select the :guilabel:`Actions` menu (|more|) next to the team name and select :menuselection:`Add users`.
 
 #. Use the :guilabel:`Add Users` field to search for users by name or email to add them to the team.
 
    * To add a team member, click the checkbox next to the email address of the member.
 
-#. Click :guilabel:`Add`.
+#. Select :guilabel:`Add`.
 
 Remove team members
 ============================================================================
@@ -124,7 +124,7 @@ To remove team members, follow these steps:
 
 #. On the Users tab, click the :guilabel:`Actions` menu (|more|) next to the name of the user you want to remove from the team.
 
-#. Click :guilabel:`Remove from team`
+#. Select :guilabel:`Remove from team`
 
 
 View a user's team membership
