@@ -40,7 +40,7 @@ Responders are notified when an triggered incident workflow routes to an on-call
 
 On-call scheduling ensures the right person is notified at the right time to resolve system issues as soon as they occur. An on-call schedule contains a group of responders who understand a specific part of the system architecture. Responders rotate through their schedule every day, week, or month based on how their schedule is set up by a team manager or admin. On-call schedules are included as a step in an incident workflow. When an incident is triggered, the first step in the workflow routes to a schedule, and the responder who is on call for that schedule is paged.
 
-The following diagram shows
+The following diagram shows how on-call schedules and incident workflows work together to ensure the right responder is notified of an incident.
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview-3-Crop.png
       :width: 99%
