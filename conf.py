@@ -165,6 +165,10 @@ rst_prolog = """
 
    ⋯
 
+.. |verticaldots| raw:: html
+
+   ⋮
+
 .. |br| raw:: html
 
    <br />
