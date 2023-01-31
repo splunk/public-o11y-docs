@@ -1,3 +1,5 @@
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 .. _ii-respond-to-incident:
 
 Respond to an incident: Acknowledge, resolve, or dismiss an incident

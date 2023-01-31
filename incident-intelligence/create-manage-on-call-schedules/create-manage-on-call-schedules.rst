@@ -1,3 +1,5 @@
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 .. _ii-create-manage-on-call-schedules:
 
 Create and manage on-call schedules
