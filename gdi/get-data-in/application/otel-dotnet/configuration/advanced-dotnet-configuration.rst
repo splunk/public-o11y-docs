@@ -16,9 +16,11 @@ Configuration methods
 
 You can change the settings of the Splunk Distribution of OpenTelemetry .NET in the following ways:
 
-- Set environment variables. On Windows, set them in the process scope unless you want to enable autoinstrumentation globally for all .NET applications.
+- For .NET applications, set environment variables. On Windows, set them in the process scope unless you want to enable autoinstrumentation globally for all .NET applications.
 
-- You can also edit the ``web.config`` file for ASP.NET applications or the ``app.config`` file for Windows services. For example:
+- For Windows services, you can use ``app.config`` when supported or set environment variables using the Registry.
+
+- For ASP.NET applications, add settings in the ``appSettings`` block of the ``web.config`` file. For example:
 
    .. code-block:: xml
 
@@ -28,23 +30,13 @@ You can change the settings of the Splunk Distribution of OpenTelemetry .NET in 
          </appSettings>
       </configuration>
 
-When instrumenting applications manually, set environment variables using the following methods:
+   Alternatively, you can set environment variables using any of the following methods:
 
-.. tabs:: 
+   - Add the ``<environmentVariables>`` element in ``applicationHost.config`` for your application pools.
+   - Use the ``<environmentVariable>`` elements inside the ``<aspNetCore>`` block of your ``Web.config`` file
+   - Set the environment variables for ``W3SVC`` and ``WAS``.
 
-   .. tab:: ASP.NET
-
-      Add the ``<environmentVariables>`` element in ``applicationHost.config`` for your application pools.
-
-   .. tab:: ASP.NET Core
-
-      Use the ``<environmentVariable>`` elements inside the ``<aspNetCore>`` block of your ``Web.config`` file.
-
-   .. tab:: IIS service
-
-      Set the environment variables for ``W3SVC`` and ``WAS``.
-
-For a list of environment variables, see :ref:`manual-dotnet-envvars`.
+- For ASP.NET Core applications, add ``<environmentVariable>`` blocks in the ``web.config`` file.
 
 .. note:: For IIS versions older than 10.0, consider creating a separate user, set its environment variables, and use it as the application pool user.
 
@@ -272,34 +264,4 @@ When deploying the instrumentation manually, you might have to set the following
    * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
      - ``$installationLocation\integrations.json``
 
-
-   * - ``COR_ENABLE_PROFILING``
-     - ``1``
-   * - ``COR_PROFILER``
-     - ``{918728DD-259F-4A6A-AC2B-B85E1B658318}``
-   * - ``COR_PROFILER_PATH_64``
-     - ``$installationLocation\win-x64\OpenTelemetry.AutoInstrumentation.Native.dll``
-   * - ``COR_PROFILER_PATH_32``
-     - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
-   * - ``CORECLR_ENABLE_PROFILING``
-     - ``1``
-   * - ``CORECLR_PROFILER``
-     - ``{918728DD-259F-4A6A-AC2B-B85E1B658318}``
-   * - ``CORECLR_PROFILER_PATH_64``
-     - ``$installationLocation\win-x64\OpenTelemetry.AutoInstrumentation.Native.dll``
-   * - ``CORECLR_PROFILER_PATH_32``
-     - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
-   * - ``DOTNET_ADDITIONAL_DEPS``
-     - ``$installationLocation\AdditionalDeps``
-   * - ``DOTNET_SHARED_STORE``
-     - ``$installationLocation\store``
-   * - ``DOTNET_STARTUP_HOOKS``
-     - ``$installationLocation\net\OpenTelemetry.AutoInstrumentation.StartupHook.dll``
-   * - ``OTEL_DOTNET_AUTO_HOME``
-     - ``$installationLocation``
-   * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
-     - ``$installationLocation\integrations.json``
-
-
-
-$HOME/.otel-dotnet-auto
+.. note:: The default installation path on Linux is ``$HOME/.otel-dotnet-auto``.
