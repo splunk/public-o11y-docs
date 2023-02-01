@@ -93,11 +93,8 @@ Use the flame graph to identify and confirm issues
 
 In most cases, you open the flame graph following the lead of a problematic span or endpoint, or after having identified performance issues in your infrastructure, like a service hitting its CPU or memory limits. Together with the context you get from spans and metrics of your application, the flame graph can assist you in identifying the lines of code that might be causing issues. 
 
-The top bars of the flame graph, which are the widest, frequently represent framework code, and might be less relevant for troubleshooting. To highlight your application components, type function or class names in the filter and scroll to the highlighted bars. Select each bar to maximize their width and drill down into the methods called from that function:
-
-.. image:: /_images/apm/profiling/filter-narrow-down.gif
-   :alt: Filtering the flame graph results and zooming in.
-
+The top bars of the flame graph, which are the widest, frequently represent framework code, and might be less relevant for troubleshooting. To highlight your application components, type function or class names in the filter and scroll to the highlighted bars. Select each bar to maximize their width and drill down into the methods called from that function.
+∫
 The structure of each flame graph depends on the amount of profiling data and on the behavior of the application. Forks in the flame graph indicate different code paths in the dataset. Whenever a function calls other functions, its bar has several bars underneath. The wider a bar, the more calls to the function AlwaysOn Profiling captured.
 
 When you're examining a frame, the flame graph shows the flow of the code from that point onwards by stacking other frames underneath. Any unusual pattern in the calls originated by the frame can imply issues in your application's code or opportunities for optimization.
