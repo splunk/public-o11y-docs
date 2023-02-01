@@ -12,7 +12,6 @@ Introduction to AlwaysOn Profiling for Splunk APM
 
    profiling-use-case-library
    get-data-in-profiling
-   spans-stack-traces
    using-the-flamegraph
    profiling-memory-metrics
    concepts-terms-profiling
