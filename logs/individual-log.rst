@@ -8,7 +8,7 @@ View individual log details and create a field extraction processor
 .. meta DOCS-1962
 
 .. meta::
-  :description: View problem details in an individual log
+  :description: View and search a log's fields and values in JSON. Link to related content. Extract a field to create a processing rule.
 
 The previous topic, Filter by fields from logs, filtered logs to find the error that appeared with the greatest frequency. Clicking the most frequent
 error value helps you focus on logs that contained the :strong:`could not retrieve product` error.

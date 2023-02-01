@@ -202,7 +202,9 @@ Use the following syntax to add images uploaded to the `_images` folder:
     :alt: <alt text>
 ```
 
-Add images that enhance existing material, instead of replacing text. Don't include a screenshot of the UI if the user can follow your written instructions without it. 
+Screenshots must not include personal identifiable information or any other sensitive data. Use blur filters to redact text in the UI.
+
+Add images that enhance existing material, instead of replacing text. Don't include a screenshot of the UI if the user can follow your written instructions without it.
 
 > **NOTE:** Make sure to add alternative text. Writing alt text for an image is a helpful way to confirm that it adds something, for example, "This animation illustrates the pathway to create a dashboard" instead of something like "This is a screenshot of Tag Spotlight". For further guidance, see [Include alt text in images](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/Graphicsalttext) in the Splunk Style Guide. 
 
