@@ -486,7 +486,7 @@ The following table shows customizable arguments for this detector:
 Redis
 ---------------------------------------------------  
 
-Redis Server - CPU continuously near limit
+Redis Server - CPU Continuously near limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Description: Alerts when Redis CPU usage exceeds the threshold for 80% of the last 10 minutes. The alert clears when Redis CPU usage drops below the clear threshold for 100% of the last 10 minutes.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/redis.flow#L6>` repository on GitHub.
