@@ -214,7 +214,7 @@ To override the default service name, set the ``OTEL_SERVICE_NAME`` environment 
 Environment variables for manual installation
 ====================================================
 
-When deploying the instrumentation manually, you might have to set the following environment variables:
+When deploying the instrumentation manually, you need to make sure to set the following environment variables:
 
 .. list-table::
    :header-rows: 1
