@@ -63,6 +63,9 @@ Here are some important concepts you need to know to successfully use Splunk Inc
    * - Muted
      - An incident status that is set when the associated incident policy is put into maintenance. 
 
+   * - Notification preference
+     - A user-level preference that specifies how the user wants to be notified of incidents when they are on call. Notification methods include email, mobile push, SMS, and voice.
+
    * - On-call schedules
      - An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your incident policies' incident workflows.
 
