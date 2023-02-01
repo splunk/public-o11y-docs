@@ -10,7 +10,7 @@ You can ingest alerts from Splunk Enterprise, Splunk Cloud Platform, and Splunk 
 Download and configure the Splunk Incident Intelligence app
 ==============================================================
 
-#. Download and install the Splunk Incident Intelligence app from :new-page:`Splunkbase h<ttps://splunkbase.splunk.com/>`.
+#. Download and install the Splunk Incident Intelligence app from :new-page:`Splunkbase <https://splunkbase.splunk.com/>`.
 #. Open the app and select :guilabel:`Setup Org and Token`.
     #. Enter the following your realm, Org ID, and SFX Token. For steps to obtain this information see :ref:`organizations`.
     #. Select :guilabel:`Send Test Alert`. This is only a status code verification that ensures there is a valid response to our ingest endpoint. There won't be a test alert in Incident Intelligence. 
