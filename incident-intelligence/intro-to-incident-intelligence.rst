@@ -13,7 +13,7 @@ Use Incident Intelligence to collaboratively diagnose and remediate issues acros
 How Incident Intelligence works 
 ===================================
 
-Incident Intelligence ingests, routes, and groups alerts to create incidents. Alerts are routed and grouped based on rules that you configure. If an alert or set of alerts meets the criteria for a critical incident, an incident is automatically triggered and escalated to the corresponding responder based on the incident workflow and on-call schedules you configure.
+Incident Intelligence ingests, routes, and groups alerts to create incidents. Alerts are routed and grouped based on rules that you configure. If an alert or set of alerts meets the criteria for a critical incident, an incident is automatically triggered and escalated to the corresponding responder based on the incident workflow and on-call schedules you configure. See :ref:`ii-incident-intelligence-overview` high-level overview of the end-to-end journey of an incident in Incident Intelligence.
 
 How Incident Intelligence fits into Splunk Observability Cloud 
 =================================================================
