@@ -33,7 +33,6 @@ You can change the settings of the Splunk Distribution of OpenTelemetry .NET in 
    Alternatively, you can set environment variables using any of the following methods:
 
    - Add the ``<environmentVariables>`` element in ``applicationHost.config`` for your application pools.
-   - Use the ``<environmentVariable>`` elements inside the ``<aspNetCore>`` block of your ``Web.config`` file
    - Set the environment variables for ``W3SVC`` and ``WAS``.
 
 - For ASP.NET Core applications, add ``<environmentVariable>`` blocks in the ``web.config`` file.
