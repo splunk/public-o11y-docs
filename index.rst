@@ -801,6 +801,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Respond to and manage incidents TOGGLE <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
 
 .. toctree::
+   :maxdepth:   3
+
+   Manage notifications from Incident Intelligence TOGGLE <incident-intelligence/manage-notifications/manage-notifications.rst>
+
+.. toctree::
    :caption: MOBILE
    :maxdepth:   3
 
