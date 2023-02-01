@@ -33,8 +33,8 @@ Use alert routing to associate alerts with an incident policy. If an alert match
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert routing conditions to.
 #. Select the :guilabel:`Alert Routing` tab to see the list of alerts that are currently routed to the incident policy.
-#. To filter the alerts routed to the incident policy, select :guilabel:`Add Filters`. 
-    #. Select a filter field. Use :guilabel:`source` to route alerts based on a detector name. 
+#. To filter the alerts routed to the incident policy based on the data in the alerts, select :guilabel:`Add Filters`. 
+    #. Select a filter field. For example, use :guilabel:`source` to route alerts based on a detector name. 
     #. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
     #. Select a filter value. 
     #. Select :guilabel:`Enter` to save your condition. 
