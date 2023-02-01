@@ -1,3 +1,5 @@
+.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
+
 .. _ii-notification-preferences:
 
 Set your on-call notification preferences
@@ -6,7 +8,7 @@ Set your on-call notification preferences
 .. meta::
    :description: Steps to set your notification preferences for Incident Intelligence in Splunk Observability Cloud.
 
-When you are on call, triggered incidents notify you by email by default. You can also choose to receive notifications through SMS or mobile push. To set your on-call notification preferences, follow these steps:
+When you are on call, triggered incidents notify you by email by default. You can also choose to receive notifications through SMS, mobile push, or voice. To set your on-call notification preferences, follow these steps:
 
 #. In Splunk Observability Cloud, select :guilabel:`Settings` > :guilabel:`Users` in the main menu.
 #. Search for your user name and select it when it appears.
@@ -22,10 +24,6 @@ You are now ready to be notified of triggered incidents.
 See also
 ============
 
-* :ref:`ii-respond-to-incident`
-* :ref:`ii-snooze-incident`
-* :ref:`ii-add-responders-roles`
-* :ref:`ii-add-incident-tools-resources`
-* :ref:`ii-edit-incident`
-* :ref:`ii-muted-incidents`
-* :ref:`ii-mtta-mttr`
+* :ref:`ii-prevent-spam`
+* :ref:`ii-sending-phone-numbers`
+* :ref:`ii-example-notifications`
