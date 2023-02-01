@@ -33,9 +33,9 @@ Send alerts from a saved search
     #.  Select the :guilabel:`Severity` for the alert.
     #.  Enter an :guilabel:`Alert Title`.
     #.  Enter an :guilabel:`Alert description`. The description can include tokens that insert text based on the results of the search. See :new-page:`Pass search result values to alert action tokens <https://docs.splunk.com/Documentation/Splunk/7.1.3/AdvancedDev/ModAlertsLog#Pass_search_result_values_to_alert_action_tokens>` in Splunk Enterprise documentation for more information.
-    #.  (Optional) Select a :guilabel:`Realm`, :guilabel:`Org Id`, and :guilabel:`SFX Token` if you want to use something other than the default configured realm, org ID and SFX token. These drop-down lists are populated with the entries added in the configuration step. See :ref:`ii-configure-app:`.
+    #.  (Optional) Select a :guilabel:`Realm`, :guilabel:`Org Id`, and :guilabel:`SFX Token` if you want to use something other than the default configured realm, org ID and SFX token. These drop-down lists are populated with the entries added in the configuration step. See :ref:`ii-configure-app`.
     #.  Select a incident policy in the :guilabel:`Service Name` field.
-# Select :guilabel:`Save`.
+#. Select :guilabel:`Save`.
 
 To access and edit your configured alert go to the :guilabel: `Alerts` tab in the Splunk Incident Intelligence app. 
 
