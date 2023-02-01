@@ -20,11 +20,6 @@ Splunk Observability Cloud provides a unified experience for collecting and moni
 
 For more information about Observability Cloud, see :ref:`welcome`. 
 
-Sign up for the Incident Intelligence public preview
-=======================================================
-
-To sign up for Incident Intelligence public preview, see :new-page:`https://www.splunk.com/en_us/form/splunk-incident-intelligence.html`.
-
 .. _wcidw-incident-intelligence:
 
 Get started with Incident Intelligence
