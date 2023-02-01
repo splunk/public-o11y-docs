@@ -1,8 +1,8 @@
 .. _instrument-otel-dotnet-applications:
 
-***************************************************************************
-Instrument a .NET application for Splunk Observability Cloud (OTel)
-***************************************************************************
+****************************************************************************
+Instrument a .NET application for Splunk Observability Cloud (OpenTelemetry)
+****************************************************************************
 
 .. meta::
    :description: The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET applications, Windows services running .NET applications, and ASP.NET applications deployed on IIS. Follow these steps to get started.
@@ -70,7 +70,7 @@ Windows
 
    .. note:: To enable the instrumentation for ASP.NET (.NET Framework), you must enable the ``TelemetryHttpModule`` module in the ``web.config`` file. See :ref:`otel-dotnet-aspnet-framework`.
 
-#. (Optional) Set the environment and service version resource attributes:
+#. Set the environment and service version resource attributes:
 
    .. code-block:: powershell
 
@@ -106,7 +106,7 @@ Linux
       # Enable the automatic instrumentation
       . $HOME/.splunk-otel-dotnet/instrument.sh
 
-#. (Optional) Set the environment and service version resource attributes:
+#. Set the environment and service version resource attributes:
 
    .. code-block:: shell
 
