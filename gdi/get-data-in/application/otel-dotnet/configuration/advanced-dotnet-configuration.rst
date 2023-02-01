@@ -16,9 +16,9 @@ Configuration methods
 
 You can change the settings of the Splunk Distribution of OpenTelemetry .NET in the following ways:
 
-- For .NET applications, set environment variables. On Windows, set them in the process scope unless you want to enable autoinstrumentation globally for all .NET applications.
+- For .NET applications, set environment variables. On Windows, set them in the process scope unless you want to enable automatic instrumentation globally for all .NET applications.
 
-- For Windows services, you can use ``app.config`` when supported or set environment variables using the Registry.
+- For .NET Framework applications running as Windows services, you can add settings in the ``appSettings`` block of the ``app.config`` file when supported or set environment variables using the Windows Registry.
 
 - For ASP.NET applications, add settings in the ``appSettings`` block of the ``web.config`` file. For example:
 
@@ -33,10 +33,9 @@ You can change the settings of the Splunk Distribution of OpenTelemetry .NET in 
    Alternatively, you can set environment variables using any of the following methods:
 
    - Add the ``<environmentVariables>`` element in ``applicationHost.config`` for your application pools.
-   - Use the ``<environmentVariable>`` elements inside the ``<aspNetCore>`` block of your ``Web.config`` file
    - Set the environment variables for ``W3SVC`` and ``WAS``.
 
-- For ASP.NET Core applications, add ``<environmentVariable>`` blocks in the ``web.config`` file.
+- For ASP.NET Core applications, add ``<environmentVariable>`` elements inside the ``<aspNetCore>`` block of your ``web.config`` file.
 
 .. note:: For IIS versions older than 10.0, consider creating a separate user, set its environment variables, and use it as the application pool user.
 
@@ -215,7 +214,7 @@ To override the default service name, set the ``OTEL_SERVICE_NAME`` environment 
 Environment variables for manual installation
 ====================================================
 
-When deploying the instrumentation manually, you might have to set the following environment variables:
+When deploying the instrumentation manually, you need to make sure to set the following environment variables:
 
 .. list-table::
    :header-rows: 1
