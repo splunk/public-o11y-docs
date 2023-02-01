@@ -35,7 +35,7 @@ The following workflow shows the end-to-end incident policy process, starting wi
       :width: 99%
       :alt: Incident policies route and group alerts into incidents that trigger workflows.
 
-Responders are notified when an triggered incident workflow routes to an on-call schedule
+Responders are notified when a triggered incident workflow routes to an on-call schedule
 ============================================================================================
 
 On-call scheduling ensures the right person is notified at the right time to resolve system issues as soon as they occur. An on-call schedule contains a group of responders who understand a specific part of the system architecture. Responders rotate through their schedule every day, week, or month based on how their schedule is set up by a team manager or admin. On-call schedules are included as a step in an incident workflow. When an incident is triggered, the first step in the workflow routes to a schedule, and the responder who is on call for that schedule is paged.
