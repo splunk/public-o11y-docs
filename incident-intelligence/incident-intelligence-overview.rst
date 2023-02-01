@@ -22,6 +22,7 @@ The following diagram shows generated alerts and the downstream noise they creat
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview1.svg
       :width: 99%
+      :align: center
       :alt: Alert generation creates alert noise.
 
 Incident policies route and group alerts into incidents that trigger workflows
@@ -33,6 +34,7 @@ The following workflow shows the end-to-end incident policy process, starting wi
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview2.svg
       :width: 99%
+      :align: center
       :alt: Incident policies route and group alerts into incidents that trigger workflows.
 
 Responders are notified when a triggered incident workflow routes to an on-call schedule
@@ -44,6 +46,7 @@ The following diagram shows how on-call schedules and incident workflows work to
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview3.svg
       :width: 99%
+      :align: center
       :alt: On-call schedules, triggered in incident workflows, notify the appropriate responder.
 
 End-to-end incident response process
@@ -56,4 +59,5 @@ The following diagram shows this entire incident response process:
 
 .. image:: /_images/incident-intelligence/Incident-Intelligence-Overview4.svg
       :width: 99%
+      :align: center
       :alt: End-to-end incident response process.
