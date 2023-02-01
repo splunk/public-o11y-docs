@@ -18,7 +18,7 @@ You can change the settings of the Splunk Distribution of OpenTelemetry .NET in 
 
 - For .NET applications, set environment variables. On Windows, set them in the process scope unless you want to enable automatic instrumentation globally for all .NET applications.
 
-- For Windows services, you can use ``app.config`` when supported or set environment variables using the Registry.
+- For .NET Framework applications running as Windows services, you can add settings in the ``appSettings`` block of the ``app.config`` file when supported or set environment variables using the Windows Registry.
 
 - For ASP.NET applications, add settings in the ``appSettings`` block of the ``web.config`` file. For example:
 
