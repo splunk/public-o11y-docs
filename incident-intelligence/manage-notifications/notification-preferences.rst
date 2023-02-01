@@ -21,6 +21,50 @@ When you are on call, triggered incidents notify you by email by default. You ca
 
 You are now ready to be notified of triggered incidents. 
 
+Receiving notifications on your mobile phone
+================================================
+
+Android devices running Android 6 or newer. Splunk On-Call no longer supports the mobile app for Android versions 5 and below.
+
+Note: Using custom ROMs (or those provided by the device manufacturer) can alter the settings and functionality described herein. If your device utilizes a custom/manufacturer-furnished ROM, please refer to the owner’s manual (and/or other applicable literature) provided by the ROM developer.
+
+Here are the things you can do to minimize your risk of missing a notification from Splunk On-Call:
+
+* Use a diverse set of notification types in your personal paging policy (Call, SMS, push) to avoid a single point of failure.
+* Test your configuration in various modes for example, do not disturb, vibrate only, using a manual incident before you go on-call.
+* If using Do Not Disturb, set the Splunk On-Call contact to a favorite and allow Favorites to bypass Do Not Disturb (DND).
+
+
+Notification delivery on Android
+-------------------------------------
+
+There are a number of different settings on the Android platform that affect the delivery of Splunk On-Call notifications to your device. Due to the critical nature of Splunk On-Call notifications, it is important that you correctly configure your settings in Android and test those notifications before you go on call. 
+
+* Add Splunk On-Call to your phone contacts from the bottom of the Setting page in the app, then under Notifications. 
+* If you are planning on using Do Not Disturb mode, favorite the Splunk On-Call contact and ensure that in your Android settings, Splunk On Call is one of the contacts allowed to override Do Not Disturb mode.
+
+Setting up volume override
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Depending on the version of Android you are using, it might be possible to set the sound & volume levels for notificationsin two places for Splunk On-Call: in the general settings on your Android device and within Splunk On-Call.
+
+To set the volume override:
+
+#. Open the Splunk On-Call app on your phone.
+#. Select :guilabel:`Settings`, then go to the :guilabel:`Notifications` tab.
+#. Select :guilabel:`Incident Notifications`.
+#. In the :guilabel:`Triggered Incidents` section:
+    #. Change the Notification Sound to your preference.
+    #. Ensure you enable the option to Override System Notification Volume. This ensures that the notification sound plays at maximum volume.
+    #. Select :guilabel:`Manage Channel Settings` and do the following:
+       #. Ensure :guilabel:`Show notifications` is enabled.
+       #. (Optional) To avoid double sounds or ringtones being issued by the Splunk On-Call app and your Android system settings, expand the :guilabel:`Advanced settings` and change the Sound setting to None. 
+
+Android settings to check
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+You should also check your Android system settings to ensure you will receive notification from the Splunk On-Call app. How to do this may vary depending on the version of Android you are using. Refer to your Android documentation for specific instructions.
+
+* Ensure that your Do Not Disturb (DND) settings are set to allow notifications, including calls or notifications, from the Splunk On-Call app to override any DND settings. 
+
 See also
 ============
 
