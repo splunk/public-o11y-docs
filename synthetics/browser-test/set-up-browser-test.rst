@@ -121,8 +121,10 @@ When activated, this feature is used to enforce the validation of expired, inval
 
 .. _browser-exclude:
 
-..
-    Exclude files
-    ----------------
+
+
+Example
+==================
+For an example, see  :ref:`browser-test-use-case`.
 
 
