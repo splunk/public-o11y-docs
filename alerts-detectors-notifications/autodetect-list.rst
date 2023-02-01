@@ -513,7 +513,7 @@ The following table shows customizable arguments for this detector:
      - Threshold to clear alerts for CPU usage percentage 
      - ``80``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``100% of 10m``
 
@@ -554,7 +554,7 @@ The following table shows customizable arguments for this detector:
      - Threshold to clear alerts for containers usage percentage 
      - ``90``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``100% of 30m``
 
@@ -586,7 +586,7 @@ The following table shows customizable arguments for this detector:
      - Sensitivity for alerting 
      - ``80% of 5m``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``80% of 5m``
 
@@ -667,7 +667,7 @@ The following table shows customizable arguments for this detector:
      - Threshold to clear alerts for host usage percentage
      - ``90``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``100% of 30m``
 
@@ -711,7 +711,7 @@ The following table shows customizable arguments for this detector:
      - Threshold to clear alerts for custom MTS usage percentage
      - ``90``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``100% of 30m``
 
