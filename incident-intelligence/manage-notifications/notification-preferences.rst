@@ -26,7 +26,7 @@ Receiving notifications on your mobile phone
 
 Android devices running Android 6 or newer. Splunk On-Call no longer supports the mobile app for Android versions 5 and below.
 
-Note: Using custom ROMs (or those provided by the device manufacturer) can alter the settings and functionality described herein. If your device utilizes a custom/manufacturer-furnished ROM, please refer to the owner’s manual (and/or other applicable literature) provided by the ROM developer.
+.. note:: Using custom ROMs (or those provided by the device manufacturer) can alter the settings and functionality described herein. If your device utilizes a custom/manufacturer-furnished ROM, please refer to the owner's manual (and/or other applicable literature) provided by the ROM developer.
 
 Here are the things you can do to minimize your risk of missing a notification from Splunk On-Call:
 
