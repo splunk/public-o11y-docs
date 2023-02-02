@@ -8,6 +8,7 @@ Monitor Kubernetes
 .. meta::
    :description: Learn how to monitor Kubernetes resources with Splunk Observability Cloud.
 
+.. caution:: The new Kubernetes navigator is an experimental feature subject to future changes.
 
 .. note:: The following topic describes the new Kubernetes navigator. See :ref:`infrastructure-k8s` for documentation on the classic Kubernetes navigator.
 
