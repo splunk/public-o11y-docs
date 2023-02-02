@@ -56,8 +56,8 @@ To set the volume override:
     #. Change the Notification Sound to your preference.
     #. Ensure you enable the option to Override System Notification Volume. This ensures that the notification sound plays at maximum volume.
     #. Select :guilabel:`Manage Channel Settings` and do the following:
-       #. Ensure :guilabel:`Show notifications` is enabled.
-       #. (Optional) To avoid double sounds or ringtones being issued by the Splunk Observability Cloud for Mobile app and your Android system settings, expand the :guilabel:`Advanced settings` and change the Sound setting to None. 
+        #. Ensure :guilabel:`Show notifications` is enabled.
+        #. (Optional) To avoid double sounds or ringtones being issued by the Splunk Observability Cloud for Mobile app and your Android system settings, expand the :guilabel:`Advanced settings` and change the Sound setting to None. 
 
 Android settings to check
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
