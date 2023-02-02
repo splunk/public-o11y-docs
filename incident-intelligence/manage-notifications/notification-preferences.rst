@@ -36,7 +36,7 @@ Here are the things you can do to minimize your risk of missing a notification f
 
 
 Notification delivery on Android
--------------------------------------
+===================================
 
 There are a number of different settings on the Android platform that affect the delivery of Splunk Incident Intelligence notifications to your device. Due to the critical nature of Splunk Incident Intelligence notifications, it is important that you correctly configure your settings in Android and test those notifications before you go on call. 
 
@@ -44,7 +44,8 @@ There are a number of different settings on the Android platform that affect the
 * If you are planning on using Do Not Disturb mode, favorite the Splunk Incident Intelligence contact and ensure that in your Android settings, Splunk Incident Intelligence is one of the contacts allowed to override Do Not Disturb mode.
 
 Setting up volume override
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
+
 Depending on the version of Android you are using, it might be possible to set the sound & volume levels for notificationsin two places for Splunk Observability Cloud for Mobile: in the general settings on your Android device and within Splunk Observability Cloud for Mobile.
 
 To set the volume override:
@@ -58,9 +59,14 @@ To set the volume override:
     #. Select :guilabel:`Manage Channel Settings` and do the following:
         #. Ensure :guilabel:`Show notifications` is enabled.
         #. (Optional) To avoid double sounds or ringtones being issued by the Splunk Observability Cloud for Mobile app and your Android system settings, expand the :guilabel:`Advanced settings` and change the Sound setting to None. 
+        
+    .. image:: /_images/incident-intelligence/incident-intelligence-notif-override.png
+        :width: 90%
+        :alt: In the Triggered Incidents section, manage your notification settings to ensure you receive incident notifications while not receiving dual notifications from the app and your mobile device settings.
 
-Android settings to check
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Android system settings to check
+------------------------------------
+
 You should also check your Android system settings to ensure you will receive notification from the Splunk Observability Cloud for Mobile app. How to do this may vary depending on the version of Android you are using. Refer to your Android documentation for specific instructions.
 
 * Ensure that your Do Not Disturb (DND) settings are set to allow notifications, including calls or notifications, from the Splunk Observability Cloud for Mobile app to override any DND settings. 
