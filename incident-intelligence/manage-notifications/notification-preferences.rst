@@ -24,24 +24,39 @@ You are now ready to be notified of triggered incidents.
 Receiving notifications on your mobile phone
 ================================================
 
-Android devices running Android 6 or newer. Splunk Observability Cloud for Mobile no longer supports the mobile app for Android versions 5 and below.
+There are a number of different settings on the Android platform that affect the delivery of Splunk Incident Intelligence notifications to your device. Due to the critical nature of Splunk Incident Intelligence notifications, it is important that you correctly configure your settings on your mobile phone and test those notifications before you go on call. 
 
-.. note:: Using custom Read Only Memory (ROMs) (or those provided by the device manufacturer) can alter the settings and functionality described herein. If your device utilizes a custom or manufacturer-furnished ROM, please refer to the owner's manual or other applicable literature provided by the ROM developer.
+* Add Splunk Incident Intelligence to your phone contacts from the bottom of the Setting page in the app, then under Notifications. 
+* If you are planning on using Do Not Disturb mode, favorite the Splunk Incident Intelligence contact and ensure that in your mobile phone settings, Splunk Incident Intelligence is one of the contacts allowed to override Do Not Disturb mode.
 
 Here are the things you can do to minimize your risk of missing a notification from Splunk Observability Cloud for Mobile:
 
-* Use a diverse set of notification types in your personal notification preferences (Voice, SMS, push) to avoid a single point of failure.
+* Use a diverse set of notification types in your personal notification preferences (voice, SMS, push) to avoid a single point of failure.
 * Test your configuration in various modes for example, do not disturb, vibrate only, using a manual incident before you go on call.
 * If using Do Not Disturb, set the Splunk Observability Cloud for Mobile contact to a favorite and allow Favorites to bypass Do Not Disturb (DND).
+
+
+Notification delivery on iOS
+===================================
+
+To ensure you receive notifications from Incident Intelligence:
+
+#. Open the Splunk Observability Cloud for Mobile app on your phone.
+#. Select :guilabel:`Settings`
+#. Enable :guilabel:`Inident Notifications are Critical Alerts` to ensure incident notifications are not muted by the system.
+#. When prompted, confirm that the Splunk Observability Cloud for Mobile app is allowed to send push notifications.
+#. Review the options for notifications, sounds, badges, and banners are enabled to ensure you do not miss incident notifications if your phone is locked or set to Do Not Disturb.
+    .. image:: /_images/incident-intelligence/incident-intelligence-iOS-notif-override.png
+        :width: 60%
+        :alt: In the Triggered Incidents section, manage your notification settings to ensure you receive incident notifications while not receiving dual notifications from the app and your mobile device settings.
 
 
 Notification delivery on Android
 ===================================
 
-There are a number of different settings on the Android platform that affect the delivery of Splunk Incident Intelligence notifications to your device. Due to the critical nature of Splunk Incident Intelligence notifications, it is important that you correctly configure your settings in Android and test those notifications before you go on call. 
+Splunk Observability Cloud for Mobile supports Android devices running Android 8 or newer.
 
-* Add Splunk Incident Intelligence to your phone contacts from the bottom of the Setting page in the app, then under Notifications. 
-* If you are planning on using Do Not Disturb mode, favorite the Splunk Incident Intelligence contact and ensure that in your Android settings, Splunk Incident Intelligence is one of the contacts allowed to override Do Not Disturb mode.
+.. note:: Using custom Read Only Memory (ROMs) (or those provided by the device manufacturer) can alter the settings and functionality described herein. If your device utilizes a custom or manufacturer-furnished ROM, please refer to the owner's manual or other applicable literature provided by the ROM developer.
 
 Setting up volume override
 --------------------------------
