@@ -244,34 +244,21 @@ The following settings control metrics collection for the Java agent:
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, enable Splunk trace response headers by setting the following environment variable:
-
-.. tabs::
-
-   .. code-tab:: shell Linux
-   
-      export SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true
-   
-   .. code-tab:: shell Windows PowerShell
-
-      $env:SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true
-
-When you set this environment variable, your application instrumentation adds the following response headers to HTTP responses:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, trace response headers are enabled by default. The instrumentation adds the following response headers to HTTP responses:
 
 .. code-block::
 
    Access-Control-Expose-Headers: Server-Timing 
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
-The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. See the following W3C documents for more information about the ``Server-Timing`` header:
-
--  https://www.w3.org/TR/server-timing
--  https://www.w3.org/TR/trace-context/#traceparent-header
+The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
 
 The following server frameworks and libraries add ``Server-Timing`` information:
 
 - Servlet API versions 2.2 to 4.X.
 - Netty versions 3.8 to 4.0.
+
+.. note:: If you need to disable trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
 .. _other-java-settings:
 
