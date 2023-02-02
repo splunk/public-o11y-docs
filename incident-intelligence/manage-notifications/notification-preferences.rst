@@ -47,7 +47,7 @@ To ensure you receive notifications from Incident Intelligence:
 #. When prompted, confirm that the Splunk Observability Cloud for Mobile app is allowed to send push notifications.
 #. Review the options for notifications, sounds, badges, and banners are enabled to ensure you do not miss incident notifications if your phone is locked or set to Do Not Disturb.
     .. image:: /_images/incident-intelligence/incident-intelligence-iOS-notif-override.png
-        :width: 60%
+        :width: 40%
         :alt: In the Triggered Incidents section, manage your notification settings to ensure you receive incident notifications while not receiving dual notifications from the app and your mobile device settings.
 
 
