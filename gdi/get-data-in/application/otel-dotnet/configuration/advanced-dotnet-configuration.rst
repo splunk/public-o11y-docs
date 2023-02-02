@@ -216,63 +216,59 @@ When deploying the instrumentation manually, you need to make sure to set the fo
 
 .. tabs::
 
-   .. tab:: Windows
+   .. tab:: Windows (.NET)
 
-      .. tabs:: 
+      .. list-table::
+         :header-rows: 1
+         :widths: 30 70
+         :width: 100
 
-         .. tab:: .NET
+         * - Environment variable
+           - Value
+         * - ``CORECLR_ENABLE_PROFILING``
+           - ``1``
+         * - ``CORECLR_PROFILER``
+           - ``{918728DD-259F-4A6A-AC2B-B85E1B658318}``
+         * - ``CORECLR_PROFILER_PATH_64``
+           - ``$installationLocation\win-x64\OpenTelemetry.AutoInstrumentation.Native.dll``
+         * - ``CORECLR_PROFILER_PATH_32``
+           - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
+         * - ``DOTNET_ADDITIONAL_DEPS``
+           - ``$installationLocation\AdditionalDeps``
+         * - ``DOTNET_SHARED_STORE``
+           - ``$installationLocation\store``
+         * - ``DOTNET_STARTUP_HOOKS``
+           - ``$installationLocation\net\OpenTelemetry.AutoInstrumentation.StartupHook.dll``
+         * - ``OTEL_DOTNET_AUTO_HOME``
+           - ``$installationLocation``
+         * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
+           - ``$installationLocation\integrations.json``
+         * - ``OTEL_DOTNET_AUTO_PLUGINS``
+           - ``Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation``
 
-            .. list-table::
-               :header-rows: 1
-               :widths: 30 70
-               :width: 100
+   .. tab:: Windows (.NET Framework)
 
-               * - Environment variable
-                 - Value
-               * - ``CORECLR_ENABLE_PROFILING``
-                 - ``1``
-               * - ``CORECLR_PROFILER``
-                 - ``{918728DD-259F-4A6A-AC2B-B85E1B658318}``
-               * - ``CORECLR_PROFILER_PATH_64``
-                 - ``$installationLocation\win-x64\OpenTelemetry.AutoInstrumentation.Native.dll``
-               * - ``CORECLR_PROFILER_PATH_32``
-                 - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
-               * - ``DOTNET_ADDITIONAL_DEPS``
-                 - ``$installationLocation\AdditionalDeps``
-               * - ``DOTNET_SHARED_STORE``
-                 - ``$installationLocation\store``
-               * - ``DOTNET_STARTUP_HOOKS``
-                 - ``$installationLocation\net\OpenTelemetry.AutoInstrumentation.StartupHook.dll``
-               * - ``OTEL_DOTNET_AUTO_HOME``
-                 - ``$installationLocation``
-               * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
-                 - ``$installationLocation\integrations.json``
-               * - ``OTEL_DOTNET_AUTO_PLUGINS``
-                 - ``Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation``
+      .. list-table::
+         :header-rows: 1
+         :widths: 30 70
+         :width: 100
 
-         .. tab:: .NET Framework
-
-            .. list-table::
-               :header-rows: 1
-               :widths: 30 70
-               :width: 100
-
-               * - Environment variable
-                 - Value
-               * - ``COR_ENABLE_PROFILING``
-                 - ``1``
-               * - ``COR_PROFILER``
-                 - ``{918728DD-259F-4A6A-AC2B-B85E1B658318}``
-               * - ``COR_PROFILER_PATH_64``
-                 - ``$installationLocation\win-x64\OpenTelemetry.AutoInstrumentation.Native.dll``
-               * - ``COR_PROFILER_PATH_32``
-                 - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
-               * - ``OTEL_DOTNET_AUTO_HOME``
-                 - ``$installationLocation``
-               * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
-                 - ``$installationLocation\integrations.json``
-               * - ``OTEL_DOTNET_AUTO_PLUGINS``
-                 - ``Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation``
+         * - Environment variable
+           - Value
+         * - ``COR_ENABLE_PROFILING``
+           - ``1``
+         * - ``COR_PROFILER``
+           - ``{918728DD-259F-4A6A-AC2B-B85E1B658318}``
+         * - ``COR_PROFILER_PATH_64``
+           - ``$installationLocation\win-x64\OpenTelemetry.AutoInstrumentation.Native.dll``
+         * - ``COR_PROFILER_PATH_32``
+           - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
+         * - ``OTEL_DOTNET_AUTO_HOME``
+           - ``$installationLocation``
+         * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
+           - ``$installationLocation\integrations.json``
+         * - ``OTEL_DOTNET_AUTO_PLUGINS``
+           - ``Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation``
 
    .. tab:: Linux
 
