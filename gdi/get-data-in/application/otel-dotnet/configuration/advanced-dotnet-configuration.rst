@@ -94,6 +94,25 @@ The following settings control trace propagation:
    * - ``OTEL_PROPAGATORS``
      - Comma-separated list of propagators for the tracer. The default value is ``tracecontext,baggage``.
 
+.. _trace-sampling-settings-dotnet-otel:
+
+Samplers configuration
+===============================================================
+
+The following settings control trace sampling:
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 30 70
+   :width: 100%
+
+   * - Environment variable
+     - Description
+   * - ``OTEL_TRACES_SAMPLER``
+     - Sampler to use. The default value is ``always_on``.
+   * - ``OTEL_TRACES_SAMPLER_ARG``
+     - Semicolon-separated list of rules for the ``rules`` sampler. The default value is ``1.0``.
+
 .. _dotnet-otel-instrumentation-settings:
 
 Instrumentation settings
@@ -120,8 +139,16 @@ The following settings control instrumentations and tracing behavior:
      - Maximum number of links per span. Default value is ``1000``.
    * - ``OTEL_ATTRIBUTE_VALUE_LENGTH_LIMIT``
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
-   * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
-     - List of bytecode instrumentations JSON configuration file paths, delimited by the platform-specific path separator (``;`` on Windows, ``:`` on Linux). For example: ``%ProfilerDirectory%/integrations.json``.
+   * - ``OTEL_DOTNET_AUTO_GRAPHQL_SET_DOCUMENT``
+     - Whether the GraphQL instrumentation can pass raw queries as a ``graphql.document`` attribute. As queries might contain sensitive information, the default value is ``false``.
+
+The following settings control which instrumentations are enabled. See :ref:`disable-instrumentations-otel-dotnet` for more information.
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 40 60
+
    * - ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``
      - Disables all instrumentations. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``
@@ -136,6 +163,8 @@ The following settings control instrumentations and tracing behavior:
      - Disables all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_LOGS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
      - Enables or disables a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable.
+   * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
+     - List of bytecode instrumentations JSON configuration file paths, delimited by the platform-specific path separator (``;`` on Windows, ``:`` on Linux). For example: ``%ProfilerDirectory%/integrations.json``.
 
 .. _server-trace-information-dotnet-otel:
 
