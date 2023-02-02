@@ -38,10 +38,12 @@ Traces instrumentations
 
    * - Library
      - Instrumentation ID
-   * - ASP.NET Framework (.NET Framework) |br| MVC / WebApi
+   * - ASP.NET Framework (.NET Framework) |br| MVC / WebApi (Only integrated pipeline mode supported)
      - ``ASPNET``
    * - ASP.NET Core
      - ``ASPNETCORE``
+   * - Elastic.Clients.Elasticsearch
+     - ``ELASTICSEARCH``
    * - Microsoft.EntityFrameworkCore  |br| (Not supported on .NET Framework)
      - ``ENTITYFRAMEWORKCORE``
    * - GraphQL
@@ -58,6 +60,8 @@ Traces instrumentations
      - ``MYSQLDATA``
    * - Npgsql
      - ``NPGSQL``
+   * - NServiceBus
+     - ``NSERVICEBUS``
    * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
      - ``SQLCLIENT``
    * - Quartz |br| (Not supported on .NET Framework 4.7.1 and lower)
@@ -72,7 +76,7 @@ Metrics instrumentations
 ---------------------------------
 
 .. list-table:: 
-   :widths: 60 40
+   :widths: 40 40
    :width: 100%
    :header-rows: 1
 
@@ -86,7 +90,9 @@ Metrics instrumentations
      - ``HTTPCLIENT``
    * - OpenTelemetry.Instrumentation.Runtime
      - ``NETRUNTIME``
-   * - OpenTelemetry.Instrumesntation.Process
+   * - NServiceBus
+     - ``NSERVICEBUS``
+   * - OpenTelemetry.Instrumentation.Process
      - ``PROCESS``
 
 Logs instrumentations

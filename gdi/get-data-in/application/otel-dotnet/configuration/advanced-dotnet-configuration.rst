@@ -270,7 +270,7 @@ When deploying the instrumentation manually, you need to make sure to set the fo
          * - ``OTEL_DOTNET_AUTO_PLUGINS``
            - ``Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation``
 
-   .. tab:: Linux
+   .. tab:: Linux (.NET)
 
       .. list-table::
          :header-rows: 1

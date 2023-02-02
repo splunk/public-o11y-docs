@@ -68,7 +68,7 @@ Windows
          # Setup your Windows Service instrumentation
          Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>"
 
-   .. note:: To enable the instrumentation for ASP.NET (.NET Framework), you must enable the ``TelemetryHttpModule`` module in the ``web.config`` file. See :ref:`otel-dotnet-aspnet-framework`.
+   .. note:: To instrument ASP.NET (.NET Framework) apps, see :ref:`otel-dotnet-aspnet-framework`.
 
 #. Set the environment and service version resource attributes:
 
@@ -76,8 +76,6 @@ Windows
 
       # You can also set this in web.config or app.config
       $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
-
-   Avoid setting the environment variables in the system or user scopes in Windows unless you require permanent automatic instrumentation. See :ref:`advanced-dotnet-configuration` for more information on how to include or exclude processes for automatic instrumentation.
 
 #. Run your application.
 
