@@ -78,8 +78,8 @@ Disable specific instrumentations
 
 All instrumentations are enabled by default for all signal types: traces, metrics, and logs.
 
-You can disable all instrumentations for a specific signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_DISABLED_INSTRUMENTATIONS`` environment variable to ``true``.
+You can disable all instrumentations for a specific signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_ENABLED_INSTRUMENTATIONS`` environment variable to ``false``.
 
-For a more granular approach, you can disable specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{Instrumentation}_INSTRUMENTATION_DISABLED`` environment variable to ``true``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{Instrumentation}`` is the case-sensitive name of the instrumentation.
+For a more granular approach, you can disable specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED`` environment variable to ``false``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation.
 
 .. note:: You can't set environment variables for disabling instrumentations using the ``web.config`` or ``app.config`` files.

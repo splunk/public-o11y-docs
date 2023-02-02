@@ -16,7 +16,7 @@ Ensure you are using supported .NET versions
 
 The Splunk Distribution of OpenTelemetry .NET supports the following .NET versions:
 
-- .NET 5.0 and higher on Windows and Linux
+- .NET 6.0 and higher on Windows and Linux
 - .NET Framework 4.6.2 and higher on Windows
 
 .. note:: CentOS and Red Hat Enterprise version 7 to 8 are not supported.
@@ -39,33 +39,33 @@ Traces instrumentations
    * - Library
      - Instrumentation ID
    * - ASP.NET Framework (.NET Framework) |br| MVC / WebApi
-     - ``AspNet``
+     - ``ASPNET``
    * - ASP.NET Core
-     - ``AspNet``
+     - ``ASPNETCORE``
    * - Microsoft.EntityFrameworkCore  |br| (Not supported on .NET Framework)
-     - ``EntityFrameworkCore``
+     - ``ENTITYFRAMEWORKCORE``
    * - GraphQL
-     - ``GraphQL``
+     - ``GRAPHQL``
    * - Grpc.Net.Client
-     - ``GrpcNetClient``
+     - ``GRPCNETCLIENT``
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
-     - ``HttpClient``
+     - ``HTTPCLIENT``
    * - MassTransit |br| (Not supported on .NET Framework)
-     - ``MassTransit``
+     - ``MASSTRANSIT``
    * - MongoDB.Driver.Core |br| (Not supported on .NET Framework)
-     - ``MongoDB``
+     - ``MONGODB``
    * - MySql.Data |br| (Not supported on .NET Framework)
-     - ``MySqlData``
+     - ``MYSQLDATA``
    * - Npgsql
-     - ``Npgsql``
+     - ``NPGSQL``
    * - Microsoft.Data.SqlClient and |br| System.Data.SqlClient
-     - ``SqlClient``
+     - ``SQLCLIENT``
    * - Quartz |br| (Not supported on .NET Framework 4.7.1 and lower)
-     - ``Quartz``
+     - ``QUARTZ``
    * - StackExchange.Redis |br| (Not supported on .NET Framework)
-     - ``StackExchangeRedis``
+     - ``STACKEXCHANGEREDIS``
    * - System.ServiceModel |br| (No support for server side on .NET Core)
-     - ``Wcf``
+     - ``WCF``
 
 
 Metrics instrumentations
@@ -79,15 +79,15 @@ Metrics instrumentations
    * - Library
      - Instrumentation ID
    * - ASP.NET Framework
-     - ``AspNet`` |br| (Requires the trace instrumentation)
+     - ``ASPNET`` |br| (Requires the trace instrumentation)
    * - ASP.NET Core
-     - ``AspNet`` |br| (Automatically enables ``Microsoft.AspNetCore.Hosting.HttpRequestIn`` spans.)
+     - ``ASPNETCORE`` |br| (Automatically enables ``Microsoft.AspNetCore.Hosting.HttpRequestIn`` spans.)
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
-     - ``HttpClient``
+     - ``HTTPCLIENT``
    * - OpenTelemetry.Instrumentation.Runtime
-     - ``NetRuntime``
+     - ``NETRUNTIME``
    * - OpenTelemetry.Instrumesntation.Process
-     - ``Process``
+     - ``PROCESS``
 
 Logs instrumentations
 ---------------------------------
@@ -100,7 +100,7 @@ Logs instrumentations
    * - Library
      - Instrumentation ID
    * - Microsoft.Extensions.Logging 6.0.0 and higher |br| (Not supported on .NET Framework)
-     - ``ILogger`` |br| (Requires the trace instrumentation)
+     - ``ILOGGER`` |br| (Requires the trace instrumentation)
 
 .. _dotnet-otel-collector-requirement:
 

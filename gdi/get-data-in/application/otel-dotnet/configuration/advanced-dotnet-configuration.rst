@@ -54,7 +54,7 @@ The following settings are common to most instrumentation scenarios:
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Enabled by default. Adds server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-dotnet-otel`. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
-     - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. The default value is ``dotnet,dotnet.exe,powershell.exe,pwsh,pwsh.exe``. Can't be set using the ``web.config`` or ``app.config`` files.
+     - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Can't be set using the ``web.config`` or ``app.config`` files.
 
 .. _dotnet-otel-exporter-settings:
 
@@ -122,20 +122,20 @@ The following settings control instrumentations and tracing behavior:
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
    * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
      - List of bytecode instrumentations JSON configuration file paths, delimited by the platform-specific path separator (``;`` on Windows, ``:`` on Linux). For example: ``%ProfilerDirectory%/integrations.json``.
-   * - ``OTEL_DOTNET_AUTO_INSTRUMENTATION_DISABLED``
-     - Disables all instrumentations. The default value is ``false``.
-   * - ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_DISABLED``
-     - Disables all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_DISABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_DISABLED`` environment variable.
-   * - ``OTEL_DOTNET_AUTO_TRACES_{Instrumentation}_INSTRUMENTATION_DISABLED``
-     - Enables or disables a specific trace instrumentation, where ``{Instrumentation}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_DISABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_DISABLED`` environment variable.
-   * - ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_DISABLED``
-     - Disables all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_DISABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_DISABLED`` environment variable.
-   * - ``OTEL_DOTNET_AUTO_METRICS_{Instrumentation}_INSTRUMENTATION_DISABLED``
-     - Enables or disables a specific metric instrumentation, where ``{Instrumentation}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_DISABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_DISABLED`` environment variable.
-   * - ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_DISABLED``
-     - Disables all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_DISABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_DISABLED`` environment variable.
-   * - ``OTEL_DOTNET_AUTO_LOGS_{Instrumentation}_INSTRUMENTATION_DISABLED``
-     - Enables or disables a specific log instrumentation, where ``{Instrumentation}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_DISABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_DISABLED`` environment variable.
+   * - ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``
+     - Disables all instrumentations. The default value is ``true``.
+   * - ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``
+     - Disables all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+   * - ``OTEL_DOTNET_AUTO_TRACES_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
+     - Enables or disables a specific trace instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED`` environment variable.
+   * - ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``
+     - Disables all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+   * - ``OTEL_DOTNET_AUTO_METRICS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
+     - Enables or disables a specific metric instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED`` environment variable.
+   * - ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``
+     - Disables all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+   * - ``OTEL_DOTNET_AUTO_LOGS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
+     - Enables or disables a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable.
 
 .. _server-trace-information-dotnet-otel:
 
