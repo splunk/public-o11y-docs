@@ -90,16 +90,28 @@ Replace the parameters with their appropriate values. Apply the following for di
    # openshift deployment (openshift can run on multiple cloud providers, so cloudProvider is excluded here)
    --set distribution=openshift 
 
+To set your cloud provider and configure ``cloud.platform`` for the resource detection processor, use: 
+
+.. code-block:: bash
+
+   --set cloudProvider={azure|gcp|eks|openshift} 
+
+Set Helm using a YAML file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named ``my_values.yaml``, run the following command to deploy the Helm chart:
 
 .. code-block:: bash
 
    helm install my-splunk-otel-collector --values my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
+Additional configuration resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
 
 Verify the deployment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 If the chart is deployed successfully, the output displays a message informing that the Splunk Distribution of OpenTelemetry Collector for Kubernetes is being deployed in your Kubernetes cluster, the last deployment date, and the status.
 
