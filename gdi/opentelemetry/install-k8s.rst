@@ -90,7 +90,11 @@ Replace the parameters with their appropriate values. Apply the following for di
    # openshift deployment (openshift can run on multiple cloud providers, so cloudProvider is excluded here)
    --set distribution=openshift 
 
-ADD cloud.platform HERE
+To set your cloud provider, and indirectly configure ``cloud.platform`` for the resource detection processor, use: 
+
+.. code-block:: bash
+
+   --set cloudProvider={azure|gcp|eks|openshift} 
 
 Set Helm using a YAML file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
