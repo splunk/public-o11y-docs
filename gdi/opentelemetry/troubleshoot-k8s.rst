@@ -4,6 +4,9 @@
 Kubernetes and container runtimes
 ***************************************************************
 
+.. meta::
+    :description: Describes the Kubernetes and container runtimes in the Splunk Distribution of OpenTelemetry Collector.
+
 This topic describes how to troubleshoot incompatibility issues. A Kubernetes cluster using an incompatible container runtime for its version or configuration could experience the following issues cluster-wide:
 
 - Stats from containers, pods, or nodes being absent or malformed. As a result, the Collector that requires these stats does not produce the desired corresponding metrics.

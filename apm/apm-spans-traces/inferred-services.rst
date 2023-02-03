@@ -4,8 +4,10 @@
 Analyze the performance of inferred services
 ************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: In certain cases, a remote service might not have tracing enabled, either because it is not instrumented yet, or because instrumentation is not possible. Splunk APM can infer the presence of the remote service, or inferred service, if the span calling the remote service has the necessary information. 
+   :description: Learn how Splunk APM can infer the presence of the remote service or inferred service.
 
 In certain cases, a remote service might not have tracing enabled, either because it is not instrumented yet, or because instrumentation is not possible. Splunk APM can infer the presence of the remote service, or inferred service, if the span calling the remote service has the necessary information. 
 

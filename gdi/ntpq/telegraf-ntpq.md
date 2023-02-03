@@ -1,7 +1,7 @@
 (telegraf-ntpq)=
 
 # Telegraf NTPQ
-<meta name="description" content="Documentation on the telegraf/ntpq monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Telegraf NTPQ monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -27,7 +27,7 @@ This monitor is available on Kubernetes, Linux, and Windows.
 ```
 
 ```{note}
-Provide a Telegraf NTPQ monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide a Telegraf NTPQ monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

@@ -5,7 +5,7 @@ Puppet for Linux
 **********************
 
 .. meta::
-      :description: Describes how to install the Puppet module on Linux. 
+      :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Puppet module on Linux. 
 
 Use this module to install and configure the Collector on Linux. Download and install the module from :new-page:`Puppet Forge <https://forge.puppet.com/modules/signalfx/splunk_otel_collector>`. After downloading the module, you can add customizations using the ``class`` parameter.
 

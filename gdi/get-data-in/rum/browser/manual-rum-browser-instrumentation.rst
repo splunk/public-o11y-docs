@@ -5,7 +5,7 @@ Manually instrument browser-based web applications
 *******************************************************************************
 
 .. meta::
-   :description: Manually instrument front-end applications for Splunk RUM to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more.
+   :description: Manually instrument front-end applications for Splunk Observability Cloud real user monitoring / RUM to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more.
 
 You can manually instrument front-end applications for Splunk RUM using the Browser RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), identify users, and more. The following API examples show several manual instrumentations for Splunk RUM.
 

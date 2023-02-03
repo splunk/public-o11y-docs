@@ -131,10 +131,12 @@ The following settings control the AlwaysOn Profiling feature for the .NET instr
      - Description
    * - ``SIGNALFX_PROFILER_ENABLED``
      - Enables AlwaysOn Profiling. The default value is ``false``.
+   * - ``SIGNALFX_PROFILER_MEMORY_ENABLED``
+     - Enables memory profiling. The default value is ``false``.
    * - ``SIGNALFX_PROFILER_LOGS_ENDPOINT``
      - The collector endpoint for profiler logs. The default value is ``http://localhost:4318/v1/logs``.
    * - ``SIGNALFX_PROFILER_CALL_STACK_INTERVAL``
-     - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds.
+     - Frequency with which call stacks are sampled, in milliseconds. The default value is ``10000`` milliseconds.
 
 .. note:: For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 
@@ -152,10 +154,10 @@ The following settings control metric collection:
 
    * - Setting
      - Description
-   * - ``SIGNALFX_RUNTIME_METRICS_ENABLED``
-     - Set to ``true`` to enable runtime metrics collection. The default value is ``false``. See :ref:`dotnet-metrics-attributes` for more information.
-   * - ``SIGNALFX_TRACE_METRICS_ENABLED``
-     - Set to ``true`` to enable trace metrics collection. The default value is ``false``. See :ref:`dotnet-metrics-attributes` for more information.
+   * - ``SIGNALFX_METRICS_{0}_ENABLED``
+     - Configuration pattern for enabling or disabling a specific metrics group. For example, to enable ``NetRuntime`` metrics, set ``SIGNALFX_METRICS_NetRuntime_ENABLED=true``. Supported metrics are ``NetRuntime``, ``Process``, ``AspNetCore``, and ``Traces``. The default value is ``false``. See :ref:`dotnet-metrics-attributes` for more information.
+
+.. note:: NetRuntime metrics are always collected if memory profiling is enabled.
 
 .. _dotnet-instrumentation-settings:
 
@@ -171,7 +173,7 @@ The following settings control instrumentations and tracing behavior:
 
    * - Setting
      - Description
-   * - ``SIGNALFX_TRACE_GLOBAL_TAGS``
+   * - ``SIGNALFX_GLOBAL_TAGS``
      - Comma-separated list of key-value pairs that specify global span tags. For example: ``key1:val1,key2:val2``.
    * - ``SIGNALFX_RECORDED_VALUE_MAX_LENGTH``
      - Maximum length of the value of an attribute. Values longer than this value are truncated. Values are discarded entirely when set to ``0``, and ignored when set to a negative value. The default value is ``12000``.

@@ -5,7 +5,7 @@ Security
 ******************************************
 
 .. meta::
-      :description: Describes how to ensure that the Splunk Distribution of OpenTelemetry Collector is secure.
+      :description: Security landing. Describes how to ensure that the Splunk Distribution of OpenTelemetry Collector is secure.
 
 The Splunk Distribution of OpenTelemetry Collector defaults to operating in a secure manner, but is configuration driven. This document is intended for both end users and component developers, and assumes at least a basic understanding of architecture and functionality. See ref:`collector-architecture` for more information.
 

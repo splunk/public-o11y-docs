@@ -8,7 +8,7 @@ Create metrics from your logs with log metricization rules
 .. meta DOCS-2247
 
 .. meta::
-  :description: Manage the logs pipeline with log metricization rules.
+  :description: Log metricization rules derive metrics from logs. Show an aggregate count of logs grouped by a dimension. Embed logs data in charts, dashboards, and detectors.
 
 .. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create log metricization rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration..
 
@@ -52,7 +52,7 @@ To create a new log metricization rule from scratch in the logs pipeline, follow
 
 6. Click :guilabel:`Next`.
 
-7. Review your MTS (Metric Time Series) summary to see how your metricization could affect your subscription usage. You can optionally select an ingest token to limit the MTS count.
+7. Review your metric time series (MTS) summary to see how your metricization could affect your subscription usage. You can optionally select an ingest token to limit the MTS count.
 
 8. Click :guilabel:`Next`.
 

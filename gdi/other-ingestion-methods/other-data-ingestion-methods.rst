@@ -5,7 +5,7 @@ Other data ingestion methods
 ****************************
 
 .. meta::
-   :description: Alternative ways of getting custom metric data into Splunk Observability Cloud.
+   :description: Alternative ways of getting / sending custom metric data into Splunk Observability Cloud.
 
 If your needs are not covered with OpenTelemetry instrumentation, you can still send data to Splunk Observability Cloud using the following alternative methods.
 
@@ -18,6 +18,11 @@ Send custom metrics
 ======================================
 
 You can send custom metrics to Observability Cloud, for example to instrument a service that isn't supported yet. To create and send custom metrics, see :ref:`send-custom-metrics`.
+
+Send traces using the gRPC endpoint
+============================================
+
+You can send trace data in OTLP format directly to Observability Cloud using the gRPC endpoint, either directly or from an OpenTelemetry Collector. See :ref:`grpc-data-ingest`.
 
 Send metrics using client libraries
 ============================================
@@ -39,4 +44,5 @@ You can use the upstream OpenTelemetry Collector instead of the Splunk Distribut
 
    rest-APIs-for-datapoints
    send-custom-metrics
+   grpc-data-ingest
    set-host-name-attribute-override

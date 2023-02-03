@@ -29,3 +29,4 @@ If you want to turn off the email authentication feature, contact :ref:`support`
 
 Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their GCI credentials instead. GCI SSO authentication and Observability Cloud username/password authentication are independent.
 
+.. include:: /_includes/troubleshooting-steps.rst

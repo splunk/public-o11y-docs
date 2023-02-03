@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-ingest-cloudwatch-alerts:
 
 Ingest Amazon CloudWatch alarms
@@ -8,7 +6,7 @@ Ingest Amazon CloudWatch alarms
 .. meta::
    :description: Detailed overview of AWS Cloudwatch alert ingestion endpoint for Incident Intelligence in Splunk Observability Cloud. 
 
-You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can create on-call schedules and incident workflows to route AWS incidents to responders. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms to Incident Intelligence, which ingests them as alerts. You can send AWS CloudWatch alarms directly to the ingest endpoint or use AWS CloudWatch Simple Notification Service (SNS).
+You can use Incident Intelligence ingest endpoints to ingest alerts from various third-party sources. In Incident Intelligence you can then create on-call schedules and incident workflows to route third-party incidents to responders. Use the AWS CloudWatch endpoint to forward AWS CloudWatch alarms to Incident Intelligence, which ingests them as alerts. You can send AWS CloudWatch alarms directly to the ingest endpoint or use AWS CloudWatch Simple Notification Service (SNS).
 
 Prerequisite
 ================
@@ -44,7 +42,7 @@ Request header
 
    * - X-SF-Token  
      - Required
-     - Authentication token. See :ref:`api-access-token`.
+     - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
 
 
 Alarm fields
@@ -97,7 +95,7 @@ Alarm fields
 JSON payload
 ---------------
 
-Send AWS Cloudwatch alarms to the AWS Cloudwatch endpoint. Use this JSON payload. 
+Send AWS Cloudwatch alarms to the AWS Cloudwatch endpoint. Refer to the following example JSON payload for the AWS Cloudwatch endpoint. 
 
 Example JSON payload:
 
@@ -105,7 +103,7 @@ Example JSON payload:
 
     { 
         "version": "0", 
-        "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+        "id": "<YOUR_ID>", 
         "detail-type": "Glue Data Catalog Database State Change", 
         "source": "aws.glue", 
         "account": "123456789012", 
@@ -125,18 +123,18 @@ Using this endpoint, your alarm is ingested and transformed into the common even
 
 .. code-block:: json 
 
-    { "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
-      "eventId": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+    { "id": "<YOUR_ID>", 
+      "eventId": "<YOUR_EVENT_ID>", 
       "title": "Glue Data Catalog Database State Change", 
       "source": "aws.glue", 
       "description": "Glue Data Catalog Database State Change", 
       "severity": "WARNING", 
       "sourceType": "cloudwatch", 
-      "orgId": "FBMqy06AIA0", 
+      "orgId": "<YOUR_ORG_ID>", 
       "triggeredAt": 1547662128000, 
       "properties": { 
           "version": "0", 
-          "id": "60e7ddc2-a588-5328-220a-21c060f6c3f4", 
+          "id": "<YOUR_ID>", 
           "detail-type": "Glue Data Catalog Database State Change", 
           "source": "aws.glue", 
           "account": "123456789012", 

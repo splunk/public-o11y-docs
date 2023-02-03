@@ -4,6 +4,8 @@
 Analyze error spans in Splunk APM
 ***********************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
   :description: Learn about types of errors in Splunk APM. 
 

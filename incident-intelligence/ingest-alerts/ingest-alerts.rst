@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-ingest-alerts:
 
 Ingest alerts in Splunk Incident Intelligence
@@ -13,7 +11,9 @@ Ingest alerts in Splunk Incident Intelligence
     :hidden:
 
     ingest-cloudwatch
+    ingest-azure
     ingest-prometheus
+
 
 
 
@@ -64,6 +64,9 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
    * - Amazon CloudWatch
      - See :ref:`ii-ingest-cloudwatch-alerts`.
 
+   * - Azure Monitor
+     - See :ref:`ii-ingest-azure-alerts`.
+
    * - Prometheus
      - See :ref:`ii-ingest-prometheus-alerts`.
 
@@ -73,4 +76,4 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
       <h2>Next step</h2>
    </embed>
 
-If you are setting up Incident Intelligence for the first time, next you need to create and configure a service. See :ref:`ii-create-configure-services`.
+If you are setting up Incident Intelligence for the first time, next you need to create and configure an incident policy. See :ref:`ii-create-configure-incident-policies`.

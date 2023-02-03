@@ -56,11 +56,13 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - Environment variable
      - Description
    * - ``SPLUNK_REALM``
-     - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
+     - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector. |br| |br| System property: ``splunk.realm``
    * - ``SPLUNK_ACCESS_TOKEN``
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`. |br| |br| System property: ``splunk.access.token``
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Enables the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-java`. The default value is ``true``. |br| |br| System property: ``splunk.trace-response-header.enabled``
+   * - ``SPLUNK_METRICS_FORCE_FULL_COMMANDLINE``
+     - Adds the full command line as a resource attribute for all metrics. If false, commands longer than 255 characters are truncated. |br| |br| System property: ``splunk.metrics.force_full_commandline``
 
 .. _trace-configuration-java:
 
@@ -114,7 +116,7 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
      - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``. |br| |br| System property: ``otel.exporter.jaeger.endpoint``
 
-The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent, use the Jaeger exporter. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
+The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent (now deprecated), use the Jaeger exporter. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
 
 .. caution:: Support for the `jaeger-thrift-splunk` exporter will be removed after December 17th, 2022.
 
@@ -210,7 +212,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``
      - Whether to include stack traces of the agent internal threads and stack traces with JDK internal frames. The default value is ``false``. |br| |br| System property: ``splunk.profiler.include.internal.stacks``
    * - ``SPLUNK_PROFILER_TRACING_STACKS_ONLY``
-     - Whether to include stack traces that are linked to a span context. The default value is ``false``. |br| |br| System property: ``splunk.profiler.tracing.stacks.only``
+     - Whether to include only stack traces that are linked to a span context. The default value is ``false``. When set to ``true``, call stacks not linked to span contexts are dropped, which is useful to reduce data ingest volume. |br| |br| System property: ``splunk.profiler.tracing.stacks.only``
 
 For more information on AlwaysOn Profiling, see :ref:`profiling-intro`.
 

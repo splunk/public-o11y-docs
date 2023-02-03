@@ -2,7 +2,7 @@
 
 # Apache Kafka
 
-<meta name="description" content="Documentation on the kafka monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Kafka monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

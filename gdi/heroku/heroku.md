@@ -1,7 +1,7 @@
 (heroku)=
 
 # Heroku
-<meta name="description" content="Documentation on the Heroku integration">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Heroku monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

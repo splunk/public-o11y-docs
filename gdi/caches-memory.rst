@@ -4,6 +4,9 @@
 Configure application receivers for caches and memory
 ********************************************************************************
 
+.. meta::
+   :description: Landing for application receivers for cache and memory applications in Splunk Observability Cloud.
+
 .. toctree::
    :maxdepth: 4
    :hidden:

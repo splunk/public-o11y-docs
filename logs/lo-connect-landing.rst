@@ -5,7 +5,7 @@ Splunk Log Observer Connect
 *************************************
 
 .. meta::
-   :description: Investigate issues with Splunk Log Observer Connect.
+   :description: The Log Observer Connect landing page lists and describes all capabilities. Investigate logs in context with metrics and traces in Splunk Log Observer Connect. 
 
 .. toctree::
     :maxdepth: 3
@@ -27,7 +27,7 @@ Splunk Log Observer Connect
     save-share
     logviews
     timestamp
-    limits
+    lo-connect-limits
 
 
 
@@ -63,7 +63,7 @@ Splunk Log Observer Connect
 
 - :ref:`logs-timestamp`
 
-- :ref:`logs-limits`
+- :ref:`lo-connect-limits`
 
 
 If you do not have Log Observer Connect and instead use Log Observer, see :ref:`log-observer-landing`. 

@@ -1,7 +1,7 @@
 (java-monitor)=
 
 # Java metrics receiver
-<meta name="Description" content="Documentation on the java-monitor integration for Splunk Observability Cloud">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Java monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

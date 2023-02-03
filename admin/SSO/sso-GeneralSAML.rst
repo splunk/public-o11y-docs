@@ -7,6 +7,7 @@ Configure SSO using a generic SAML SSO integration
 .. meta::
    :description: Prerequisites and installation steps to configure SSO using a generic SAML SSO integration. 
 
+.. caution::  This integration can send credential information to unverified destinations. Although you can use generic SAML SSO integrations to authenticate users, Observability Cloud doesn't support these integrations as your primary authentication mechanism. The Observability Cloud support team can't help you diagnose or repair problems you encounter while trying to authenticate users using generic SSO integrations, aside from ensuring that the integration itself is working.
 
 If you use an SSO login service other than the ones listed in :ref:`sso-label`, you can create a generic SAML SSO integration for your organization. 
 
@@ -120,4 +121,4 @@ Once you have a custom URL configured, your users can continue to log in using t
 
 Observability Cloud generates a password for users you create in generic SAML SSO. If the generic SAML login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
 
-.. caution::  This integration can send credential information to unverified destinations. Although you can use generic SAML SSO integrations to authenticate users, Observability Cloud doesn't support these integrations as your primary authentication mechanism. The Observability Cloud support team can't help you diagnose or repair problems you encounter while trying to authenticate users using generic SSO integrations, aside from ensuring that the integration itself is working.
+.. include:: /_includes/troubleshooting-steps.rst

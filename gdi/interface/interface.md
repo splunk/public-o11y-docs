@@ -2,7 +2,7 @@
 
 # Interface traffic
 
-<meta name="description" content="Documentation for the interface monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the interface monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

@@ -2,7 +2,7 @@
 
 # Apache Tomcat
 
-<meta name="description" content="Documentation on the collectd/tomcat monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd Tomcat monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

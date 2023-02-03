@@ -12,7 +12,7 @@ Configure an ADFS SSO integration
 The Microsoft Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
 
 Before you begin configuring the Microsoft Active Directory Federation Services (ADFS) integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
- 
+
 This integration is only available for Microsoft Active Directory with ADFS. In addition, you need to have the following fields in your ADFS configuration:
 
 - First Name
@@ -192,6 +192,8 @@ Obtain a federation metadata file to install to Observability Cloud:
 #. Open a new browser window or tab, then navigate to the URL you copied. This opens a file download dialog box.
 #. Save the file FederationMetadata.xml. In a following step, you upload this file to Observability Cloud.
 
+ .. note:: URLs must belong to ADFS in order to validate. Accepted domains include ``windows.net`` and ``windows-ppe.net``.
+
 .. _upload-adfs-cert-metadata-im:
 
 Upload the ADFS certificate and federation metadata to Observability Cloud
@@ -213,3 +215,5 @@ require validation.
 If you want to turn off the email authentication feature, contact :ref:`support`.
 
 .. note:: The ADFS portal is the only way that your users can log in to Observability Cloud.
+
+.. include:: /_includes/troubleshooting-steps.rst

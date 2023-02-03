@@ -5,7 +5,7 @@ Splunk Log Observer
 *************************************
 
 .. meta::
-   :description: Investigate issues with Splunk Log Observer.
+   :description: The Log Observer landing page lists and describes all capabilities. Investigate logs in context with metrics and traces in Splunk Log Observer.
 
 .. toctree::
     :maxdepth: 3

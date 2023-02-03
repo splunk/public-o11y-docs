@@ -5,7 +5,7 @@ Connect to Google Cloud Platform
 ********************************************************
 
 .. meta::
-   :description: Connect your GCP account to Splunk Observability Cloud.
+   :description: Connect your Google Cloud Platform / GCP account to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -48,6 +48,18 @@ The following table specifies the permissions required for GCP integrations.
 
    *  - :strong:`Permission`
       - :strong:`Required?`
+
+   *  - ``monitoring.metricDescriptors.list``
+      - Yes
+
+   *  - ``monitoring.timeSeries.list``
+      - Yes
+
+   *  - ``resourcemanager.projects.get``
+      - Yes, if you want to sync project metadata, such as labels
+
+   *  - ``serviceusage.services.use``
+      - Yes, if you want to enable the use of a quota from the project where metrics are stored
 
    *  - ``compute.instances.list``
       - Yes, if the Compute Engine service is enabled
