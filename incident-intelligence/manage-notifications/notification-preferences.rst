@@ -21,7 +21,7 @@ When you are on call, triggered incidents notify you by email by default. You ca
 
 You are now ready to be notified of triggered incidents. 
 
-Receiving notifications on your mobile phone
+Receive notifications on your mobile phone
 ================================================
 
 There are a number of different settings on the Android platform that affect the delivery of Splunk Incident Intelligence notifications to your device. Here are the things you can do to minimize your risk of missing a notification from Splunk Observability Cloud for Mobile:
@@ -60,8 +60,8 @@ There are a number of different settings on the Android platform that affect the
 * If you are planning on using Do Not Disturb mode, favorite the Splunk Incident Intelligence contact and ensure that in your mobile phone settings, Splunk Incident Intelligence is one of the contacts allowed to override Do Not Disturb mode.
 
 
-Setting up volume override
---------------------------------
+Set up volume override on Android
+----------------------------------------
 
 Depending on the version of Android you are using, it might be possible to set the sound & volume levels for notificationsin two places for Splunk Observability Cloud for Mobile: in the general settings on your Android device and within Splunk Observability Cloud for Mobile.
 
