@@ -63,7 +63,7 @@ There are a number of different settings on the Android platform that affect the
 Set up volume override on Android
 ----------------------------------------
 
-Depending on the version of Android you are using, it might be possible to set the sound & volume levels for notificationsin two places for Splunk Observability Cloud for Mobile: in the general settings on your Android device and within Splunk Observability Cloud for Mobile.
+Depending on the version of Android you are using, it might be possible to set the sound & volume levels for notifications in two places for Splunk Observability Cloud for Mobile: in the general settings on your Android device and within Splunk Observability Cloud for Mobile.
 
 To set the volume override:
 
