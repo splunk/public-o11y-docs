@@ -28,19 +28,19 @@ There are a number of different settings on the Android platform that affect the
 
 * Use a diverse set of notification types in your personal notification preferences (voice, SMS, push) to avoid a single point of failure.
 * Test your configuration in various modes for example, do not disturb, vibrate only, using a manual incident before you go on call.
-* If using Do Not Disturb, set the Splunk Observability Cloud for Mobile contact to a favorite and allow Favorites to bypass Do Not Disturb (DND).
+* If using Do Not Disturb, set  Splunk Observability Cloud for Mobile contact to a favorite and allow Favorites to bypass Do Not Disturb (DND).
 
 See the following sections for operating system-specific information.
 
 Notification delivery on iOS
 ===================================
 
-To ensure you receive notifications from Incident Intelligence:
+To ensure you receive notifications from Incident Intelligence, follow these steps:
 
-#. Open the Splunk Observability Cloud for Mobile app on your phone.
+#. Open Splunk Observability Cloud for Mobile app on your phone.
 #. Select :guilabel:`Settings`
-#. Enable :guilabel:`Inident Notifications are Critical Alerts` to ensure incident notifications are not muted by the system.
-#. When prompted, confirm that the Splunk Observability Cloud for Mobile app is allowed to send push notifications.
+#. Enable :guilabel:`Incident Notifications are Critical Alerts` to ensure incident notifications are not muted by the system.
+#. When prompted, confirm that the Splunk Observability Cloud for Mobile app can send push notifications.
 #. Review the options for notifications, sounds, badges, and banners are enabled to ensure you do not miss incident notifications if your phone is locked or set to Do Not Disturb.
     .. image:: /_images/incident-intelligence/incident-intelligence-iOS-notif-override.png
         :width: 40%
@@ -52,7 +52,7 @@ Notification delivery on Android
 
 Splunk Observability Cloud for Mobile supports Android devices running Android 8 or newer.
 
-.. note:: Using custom Read Only Memory (ROMs) (or those provided by the device manufacturer) can alter the settings and functionality described herein. If your device utilizes a custom or manufacturer-furnished ROM, please refer to the owner's manual or other applicable literature provided by the ROM developer.
+.. note:: Using custom Read Only Memory (ROMs) (or those provided by the device manufacturer) can alter the settings and functionality described herein. If your device utilizes a custom or manufacturer-furnished ROM, see the owner's manual or other applicable literature provided by the ROM developer.
 
 There are a number of different settings on the Android platform that affect the delivery of Splunk Incident Intelligence notifications to your device. Due to the critical nature of Splunk Incident Intelligence notifications, it is important that you correctly configure your settings on your mobile phone and test those notifications before you go on call. 
 
@@ -63,11 +63,11 @@ There are a number of different settings on the Android platform that affect the
 Set up volume override on Android
 ----------------------------------------
 
-Depending on the version of Android you are using, it might be possible to set the sound & volume levels for notifications in two places for Splunk Observability Cloud for Mobile: in the general settings on your Android device and within Splunk Observability Cloud for Mobile.
+Depending on the version of Android you are using, it might be possible to set the sound and volume levels for notifications in two places for Splunk Observability Cloud for Mobile: in the general settings on your Android device and within Splunk Observability Cloud for Mobile.
 
-To set the volume override:
+To set the volume override follow these steps:
 
-#. Open the Splunk Observability Cloud for Mobile app on your phone.
+#. Open Splunk Observability Cloud for Mobile app on your phone.
 #. Select :guilabel:`Settings`, then go to the :guilabel:`Notifications` tab.
 #. Select :guilabel:`Incident Notifications`.
 #. In the :guilabel:`Triggered Incidents` section:
@@ -77,16 +77,18 @@ To set the volume override:
         #. Ensure :guilabel:`Show notifications` is enabled.
         #. (Optional) To avoid double sounds or ringtones being issued by the Splunk Observability Cloud for Mobile app and your Android system settings, expand the :guilabel:`Advanced settings` and change the Sound setting to None. 
         
-        .. image:: /_images/incident-intelligence/incident-intelligence-notif-override.png
-            :width: 60%
-            :alt: In the Triggered Incidents section, manage your notification settings to ensure you receive incident notifications while not receiving dual notifications from the app and your mobile device settings.
+
 
 Android system settings to check
 ------------------------------------
 
-You should also check your Android system settings to ensure you will receive notification from the Splunk Observability Cloud for Mobile app. How to do this may vary depending on the version of Android you are using. Refer to your Android documentation for specific instructions.
+Check your Android system settings to ensure you receive notification from the Splunk Observability Cloud for Mobile app. How to do this might vary depending on the version of Android you are using. See your Android documentation for specific instructions.
 
 * Ensure that your Do Not Disturb (DND) settings are set to allow notifications, including calls or notifications, from the Splunk Observability Cloud for Mobile app to override any DND settings. 
+
+        .. image:: /_images/incident-intelligence/incident-intelligence-notif-override.png
+            :width: 60%
+            :alt: In the Triggered Incidents section, manage your notification settings to ensure you receive incident notifications while not receiving dual notifications from the app and your mobile device settings.
 
 See also
 ============
