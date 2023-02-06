@@ -48,15 +48,15 @@ The following fields are transformed as part of the common information model. Al
      - Required
      - Type
      - Description
-   * - message_type
+   * - severity or message_type for Splunk On-call alerts
      - Required
      - String
      - The criticality of the alert. Supported values are ``CRITICAL``, ``WARNING``, and ``INFO``
-   * - entity_display_name
-     - 
+   * - title or entity_display_name for Splunk On-call alerts
+     - Required
      - String
      - Name of the alert
-   * - state_message
+   * - description or state_message for Splunk On-call alerts
      - 
      - String
      - Verbose message
@@ -76,9 +76,9 @@ Example JSON payload:
 .. code-block:: json
 
     {
-      "message_type": "CRITICAL",
-      "entity_display_name": "My alert name",
-      "state_message": "The disk is very full.  Here is some information about the problem",
+      "severity": "CRITICAL",
+      "title": "My alert name",
+      "description": "The disk is very full.  Here is some information about the problem",
       "timestamp": "1675101397"
     }
 
