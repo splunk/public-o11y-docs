@@ -163,7 +163,5 @@ service:
 
 ## Troubleshooting
 
-## Get help
-
 ```{include} /_includes/troubleshooting.md
 ```
