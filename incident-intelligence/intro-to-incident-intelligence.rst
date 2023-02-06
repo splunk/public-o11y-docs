@@ -1,5 +1,4 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-  
+ 
 .. _ii-get-started-incident-intelligence:
 
 Introduction to Splunk Incident Intelligence
@@ -21,11 +20,6 @@ How Incident Intelligence fits into Splunk Observability Cloud
 Splunk Observability Cloud provides a unified experience for collecting and monitoring metrics, logs, and traces from common data sources. Incident Intelligence is integrated into Observability Cloud to provide alert analytics and on-call management in one place. With Incident Intelligence, you can reduce alert noise, automate actions, and accelerate incident response. 
 
 For more information about Observability Cloud, see :ref:`welcome`. 
-
-Sign up for the Incident Intelligence public preview
-=======================================================
-
-To sign up for Incident Intelligence public preview, see :new-page:`https://www.splunk.com/en_us/form/splunk-incident-intelligence.html`.
 
 .. _wcidw-incident-intelligence:
 
