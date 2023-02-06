@@ -103,13 +103,13 @@ Example transformed alert data for a generic third-party alert:
 .. code-block:: json 
     
     {
-    "id": "f8c25f55-c6e0-3591-ae2c-7fb75899b224",
-    "eventId": "f8c25f55-c6e0-3591-ae2c-7fb75899b224",
+    "id": "<Your alert ID>",
+    "eventId": "<Your event ID>",
     "title": "Out of memory exception",
     "description": "Failed log statement",
     "severity": "critical",
     "sourceType": "generic",
-    "orgId": "perseusTest",
+    "orgId": "<Your org ID>",
     "triggeredAt": 1675704711477,
     "properties": {
       "severity": "critical",
@@ -124,13 +124,13 @@ Example transformed alert data for a Splunk On-call alert:
 .. code-block:: json
 
     {
-    "id": "ebbd2ba7-982a-3539-affc-6b3d96f9cd85",
-    "eventId": "ebbd2ba7-982a-3539-affc-6b3d96f9cd85",
+    "id": "<Your alert ID>",
+    "eventId": "<Your event ID>",
     "title": "Out of memory exception",
     "description": "Failed log statement",
     "severity": "critical",
     "sourceType": "generic",
-    "orgId": "perseusTest",
+    "orgId": "<Your org ID>",
     "triggeredAt": 1675704711477,
     "properties": {
       "message_type": "critical",
