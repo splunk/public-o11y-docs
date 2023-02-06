@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-example-notifications:
 
 Example notifications: Email, mobile push, SMS, and voice
