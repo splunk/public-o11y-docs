@@ -266,7 +266,7 @@ $(document).ready(function () {
                                 monitors[i][j] = monitors[i][j] ? 'Default' : '';
                             } else if (j == 'default') {
                                 addedCategory = true;
-                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : '';
+                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : 'Custom';
                             } else if (j == 'custom') {
                                 addedCategory = true;
                                 monitors[i][j] = (monitors[i][j] == true) ? 'Custom' : '';

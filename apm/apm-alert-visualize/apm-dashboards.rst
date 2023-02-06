@@ -4,8 +4,10 @@
 Track service performance using dashboards in Splunk APM
 ************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Splunk APM provides a set of built-in dashboards to help you see problems occurring in real time, and quickly determine whether the problem is associated with a service, a specific endpoint, or the underlying infrastructure.
+   :description: Learn how to use built-in dashboards in Splunk APM to help you see problems occurring in real time.
 
 Splunk APM provides a set of built-in dashboards that present  :ref:`charts<data-visualization-charts>` and visualized metrics to help you see problems occurring in real time and quickly determine whether the problem is associated with a service, a specific endpoint, or the underlying infrastructure. To learn about dashboards in Splunk Observability Cloud, see :ref:`dashboards`. 
 

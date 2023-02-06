@@ -4,8 +4,10 @@
 Accelerate troubleshooting using Business Workflows on Tag Spotlight
 **************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-    :description: A Splunk APM use cases describes how to use APM Tag Spotlight of Business Workflows to accelerate troubleshooting
+    :description: This Splunk APM use case describes how to use APM Tag Spotlight of Business Workflows to accelerate troubleshooting.
 
 Deepu, the payment service owner at Buttercup Games, wants to understand how errors in the payment service impact business KPIs. Deepu clicks the :strong:`paymentservice` node on the service map, and then selects :strong:`Tag Spotlight` to look at errors and latency for the :strong:`Workflow` tag.
 

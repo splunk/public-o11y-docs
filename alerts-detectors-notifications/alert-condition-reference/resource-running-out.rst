@@ -4,10 +4,10 @@
 Resource Running Out
 =============================================================================
 
-.. meta updated 8/7/18
+.. meta updated 1/23/23
 
 .. meta::
-  :description: The Resource Running Out condition alerts when a signal has a certain amount of time before it is exhausted or full 
+  :description: The Resource Running Out condition alerts when a signal has a certain amount of time before it is exhausted or full.
 
 
 Resource Running Out alerts when a signal has a certain amount of time before it is exhausted (reaches a specified minimum value) or full (reaches a specified capacity). While it is common to use a :ref:`static-threshold` for many types of signals that trend to empty or capacity, such as alerting when memory utilization is  |nbsp| 80% or when free disk space is below |nbsp| 10%, the Resource Running Out condition provides a more powerful way of receiving alerts for these types of signals, because it takes into account whether a signal is trending up or down (steadily rising or falling).
