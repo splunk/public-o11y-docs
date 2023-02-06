@@ -51,7 +51,7 @@ The following fields are transformed as part of the common information model. Al
    * - severity or message_type for Splunk On-call alerts
      - Required
      - String
-     - The criticality of the alert. Supported values are ``critical``, ``warning``, and ``info``
+     - The criticality of the alert. Supported values are ``info``, ``normal``, ``warning``, ``minor``, ``major``, and ``critical``
    * - title or entity_display_name for Splunk On-call alerts
      - Required
      - String
