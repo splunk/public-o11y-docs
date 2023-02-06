@@ -4,6 +4,8 @@
 Configure detectors and alerts in Splunk APM
 *********************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Learn about options for detectors and alerts in Splunk APM. 
 

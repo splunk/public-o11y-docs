@@ -4,8 +4,10 @@
 Track how services impact Business Workflows
 ******************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-    :description: A Splunk APM use cases describes how to use APM service map and Breakdown feature to investigate how services impact Business Workflow
+    :description: This Splunk APM use case describes how to use APM service map and breakdown feature to investigate how services impact Business Workflow.
 
 Kai, a site reliability engineer at Buttercup Games, wants to know how the application's microservices contribute errors or latency to Business Workflows, which track business KPIs at Buttercup Games. 
 

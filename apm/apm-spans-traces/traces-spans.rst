@@ -4,6 +4,8 @@
 Manage services, spans, and traces in Splunk APM
 **************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Learn about traces and spans in Splunk Observability Cloud. Spans are operations, and traces are collections of spans.
 

@@ -4,8 +4,10 @@
 Add context to spans with span tags in Splunk APM
 *****************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Use span tags to slice and dice service performance by dimensions in Splunk APM.
+   :description: Learn how to use span tags to slice and dice service performance by dimensions in Splunk APM.
 
 Enrich the context of the spans you send to Splunk APM by adding span tags. Span tags are key-value pairs that provide additional metadata about spans in a trace. In OpenTelemetry, span tags are known as ``attributes``. 
 

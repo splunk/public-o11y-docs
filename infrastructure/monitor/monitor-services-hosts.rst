@@ -14,8 +14,10 @@ Monitor services and hosts in Splunk Infrastructure Monitoring
     aws
     azure
     gcp
+    k8s-nav
     k8s
     hosts
+    
 
 See the following pages for more information about using :ref:`navigators <use-navigators-imm>` to monitor public cloud, container, or host integrations:
 
@@ -26,7 +28,8 @@ See the following pages for more information about using :ref:`navigators <use-n
   - :ref:`infrastructure-azure`
 
 * Containers
-  
+
+  - :ref:`infrastructure-k8s-nav`
   - :ref:`infrastructure-k8s`
 
 * My Data Center
