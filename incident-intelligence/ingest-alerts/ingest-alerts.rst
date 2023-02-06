@@ -13,6 +13,7 @@ Ingest alerts in Splunk Incident Intelligence
     ingest-cloudwatch
     ingest-azure
     ingest-prometheus
+    ingest-rest
 
 
 
@@ -50,7 +51,7 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
 .. raw:: html
 
    <embed>
-      <h2>Available ingest endpoints for cloud alerts</h2>
+      <h2 id="ii-cloud-alert-endpoints">Available ingest endpoints for cloud alerts</h2>
    </embed>
 
 .. list-table::
@@ -69,6 +70,9 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
 
    * - Prometheus
      - See :ref:`ii-ingest-prometheus-alerts`.
+  
+   * - Generic REST alerts
+     - See :ref:`ii-ingest-rest`.
 
 .. raw:: html
 
