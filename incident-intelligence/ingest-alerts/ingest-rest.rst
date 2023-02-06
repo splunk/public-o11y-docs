@@ -48,15 +48,15 @@ The following fields are transformed as part of the common information model. Al
      - Required
      - Type
      - Description
-   * - message_type
+   * - severity or message_type for Splunk On-call alerts
      - Required
      - String
-     - The criticality of the alert. Supported values are ``CRITICAL``, ``WARNING``, and ``INFO``
-   * - entity_display_name
-     - 
+     - The criticality of the alert. Supported values are ``info``, ``normal``, ``warning``, ``minor``, ``major``, and ``critical``
+   * - title or entity_display_name for Splunk On-call alerts
+     - Required
      - String
      - Name of the alert
-   * - state_message
+   * - description or state_message for Splunk On-call alerts
      - 
      - String
      - Verbose message
@@ -69,32 +69,73 @@ The following fields are transformed as part of the common information model. Al
 JSON payload
 ------------
 
-Refer to the following example JSON payload for the Azure Monitor endpoint. 
+Refer to the following example JSON payload for the generic third-party alert to the REST endpoint. 
 
-Example JSON payload:
+Example JSON payload for generic third-party alert:
 
 .. code-block:: json
 
     {
-      "message_type": "CRITICAL",
-      "entity_display_name": "My alert name",
-      "state_message": "The disk is very full.  Here is some information about the problem",
-      "timestamp": "1675101397"
+    "severity":"critical",
+    "title":"Out of memory exception",
+    "description":"Failed log statement",
+    "timestamp": 1675704711477
     }
 
-Using this endpoint, your alert is ingested and transformed into the common event model for alerts in Incident Intelligence. This is an example of the transformed alert data that is saved as an alert in Incident Intelligence:
+Refer to the following example JSON payload for the generic third-party alert to the REST endpoint. 
+
+Example JSON payload for Splunk On-call alert:
+
+.. code-block:: json
+
+    {
+    "message_type":"critical",
+    "entity_display_name":"Out of memory exception",
+    "state_message":"Failed log statement",
+    "timestamp": 1675704711477
+    }
+
+
+Using this endpoint, your alert is ingested and transformed into the common event model for alerts in Incident Intelligence. These are examples of the transformed alert data that is saved as an alert in Incident Intelligence:
+
+Example transformed alert data for a generic third-party alert:
 
 .. code-block:: json 
     
-    {  
-      "id":"<YOUR_ID>",
-      "eventId":"<YOUR_EVENT_ID>",
-      "title":"My alert name",
-      "source":"generic",
-      "description":"The disk is very full.  Here is some information about the problem",
-      "severity":"critical",
-      "sourceType":"generic",
-      "orgId":"<YOUR_ORG_ID>",
-      "triggeredAt":1675101397,
-      "properties":{}
+    {
+    "id": "<Your alert ID>",
+    "eventId": "<Your event ID>",
+    "title": "Out of memory exception",
+    "description": "Failed log statement",
+    "severity": "critical",
+    "sourceType": "generic",
+    "orgId": "<Your org ID>",
+    "triggeredAt": 1675704711477,
+    "properties": {
+      "severity": "critical",
+      "title": "Out of memory exception",
+      "description": "Failed log statement",
+      "timestamp": 1675704711477
+      }
     }
+
+Example transformed alert data for a Splunk On-call alert:
+
+.. code-block:: json
+
+    {
+    "id": "<Your alert ID>",
+    "eventId": "<Your event ID>",
+    "title": "Out of memory exception",
+    "description": "Failed log statement",
+    "severity": "critical",
+    "sourceType": "generic",
+    "orgId": "<Your org ID>",
+    "triggeredAt": 1675704711477,
+    "properties": {
+      "message_type": "critical",
+      "entity_display_name": "Out of memory exception",
+      "state_message": "Failed log statement",
+      "timestamp": 1675704711477
+    }
+  }
