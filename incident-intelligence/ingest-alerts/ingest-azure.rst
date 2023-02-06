@@ -37,6 +37,8 @@ Request header
 Alert fields
 ----------------
 
+The following fields are transformed as part of the common information model. All other included fields are included properties object in the transformed alert.
+
 .. list-table:: 
    :widths: 15 15 15 55
    :width: 100%
