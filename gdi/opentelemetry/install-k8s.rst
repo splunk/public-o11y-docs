@@ -41,13 +41,8 @@ The Helm chart works with default configurations of the main Kubernetes distribu
 
 While the chart should work for other Kubernetes distributions, the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file could require additional updates. 
 
-Use the Helm chart
---------------------------------
-
-Follow these steps to install the Collector using the Helm chart. 
-
 Required resources
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 You need the following resources to use the chart:
 
@@ -58,7 +53,7 @@ You need the following resources to use the chart:
 * Cluster name: ``clusterName``. This is an arbitrary value that identifies your Kubernetes cluster.
 
 Deploy the Helm chart
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 Run the following commands to deploy the Helm chart: 
 
@@ -97,7 +92,7 @@ To set your cloud provider and configure ``cloud.platform`` for the resource det
    --set cloudProvider={azure|gcp|eks|openshift} 
 
 Set Helm using a YAML file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named ``my_values.yaml``, run the following command to deploy the Helm chart:
 
@@ -105,8 +100,28 @@ You can also set Helm values as arguments using a YAML file. For example, after 
 
    helm install my-splunk-otel-collector --values my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
-Additional configuration resources
+Set Prometheus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Set the Collector to automatically scrape any pod emitting Prometheus by adding this property to the Helm chart's values YAML: 
+
+.. code-block:: bash
+   
+   autodetect:
+      prometheus: true
+
+Add this configuration in the resources file for any pods in the deployment:
+
+.. code-block:: bash
+
+   metadata:
+      annotations:
+         prometheus.io/scrape: "true"
+         prometheus.io/path: /metrics
+         prometheus.io/port: "8080"
+
+Additional configuration resources
+------------------------------------------
 
 See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
 
