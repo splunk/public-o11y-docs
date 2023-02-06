@@ -92,7 +92,7 @@ Using this endpoint, your alert is ingested and transformed into the common even
       "id":"<YOUR_ID>",
       "eventId":"<YOUR_EVENT_ID>",
       "title":"My alert name",
-      "source":"",
+      "source":"generic",
       "description":"The disk is very full.  Here is some information about the problem",
       "severity":"critical",
       "sourceType":"generic",
