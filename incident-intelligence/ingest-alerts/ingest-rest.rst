@@ -80,7 +80,7 @@ Example JSON payload:
     {
       "message_type": "CRITICAL",
       "entity_display_name": "My alert name",
-      "state_message": "The disk is very full.  Here is some information about the problem"
+      "state_message": "The disk is very full.  Here is some information about the problem",
       "timestamp": "1675101397"
     }
 
@@ -88,4 +88,15 @@ Using this endpoint, your alert is ingested and transformed into the common even
 
 .. code-block:: json 
     
-    {}
+    {  
+      "id":"<YOUR_ID>",
+      "eventId":"<YOUR_EVENT_ID>",
+      "title":"My alert name",
+      "source":"",
+      "description":"The disk is very full.  Here is some information about the problem",
+      "severity":"critical",
+      "sourceType":"generic",
+      "orgId":"<YOUR_ORG_ID>",
+      "triggeredAt":1675101397,
+      "properties":{}
+    }
