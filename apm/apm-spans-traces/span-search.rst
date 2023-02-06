@@ -5,8 +5,10 @@
 View and search for spans within a trace
 ******************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Search within a trace to highlight or filter visible spans based on tag values or error status.
+   :description: Learn how to search within a trace to highlight or filter visible spans based on tag values or error status.
 
 In the :guilabel:`Trace Waterfall`, you can search within a trace to highlight or filter visible spans based on tag values or error status, as the following animation demonstrates: 
 

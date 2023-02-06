@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-key-concepts:
 
 Key concepts in Splunk Incident Intelligence 
@@ -36,7 +34,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - The entire configuration process for an incident policy in Incident Intelligence. This is where you create an incident policy and configure alert routing, alert grouping, and incident workflows for incidents associated with an incident policy. 
 
    * - Incident
-     - An unplanned interruption to a service or reduction in the quality of a service that needs to be resolved. Each incident is made up of alerts that are ingested into Incident Intelligence.
+     - An unplanned interruption to a service or reduction in the quality of a service that needs to be resolved. Each incident is made up of alerts that are ingested into Incident Intelligence. You can also create incidents manually. Manual incidents don't have ingested alerts. 
 
    * - Incident action
      - Any status-changing event taken by a user or the system on an incident. Incident responders can acknowledge, resolve, or reject an incident. These actions update the incident status to reflect the most recent action. 
@@ -64,6 +62,9 @@ Here are some important concepts you need to know to successfully use Splunk Inc
 
    * - Muted
      - An incident status that is set when the associated incident policy is put into maintenance. 
+
+   * - Notification preference
+     - A user-level preference that specifies how the user wants to be notified of incidents when they are on call. Notification methods include email, mobile push, SMS, and voice.
 
    * - On-call schedules
      - An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your incident policies' incident workflows.

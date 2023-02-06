@@ -4,8 +4,10 @@
 Use case: Investigate Redis performance issues using Database Query Performance
 ********************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Skyler, the lead site reliability engineer at Buttercup Games, has to troubleshoot high latencies reported by customers in the new advertisement service, which uses a Redis database.
+   :description: This Splunk APM use case describes how to troubleshoot latency reported by customers in a new advertisement service, which uses a Redis database.
 
 Skyler, the lead site reliability engineer at Buttercup Games, has to troubleshoot high latencies reported by customers in the new advertisement service, which uses a Redis database.
 

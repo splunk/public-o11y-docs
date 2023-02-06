@@ -5,6 +5,11 @@
 Monitor SLO detector service latency for a group of customers
 ****************************************************************
 
+.. Metadata updated: 1/23/23
+
+.. meta::
+    :description: This Splunk APM use case describes how to monitor for service latency.
+
 Kai, a site reliability engineer at the fictitious Buttercup Games, wants to monitor a latency issue affecting a critical checkout workflow for the service ``cartservice`` and endpoint ``/getcart`` for a specific set of customers who most frequently have problems with it. By generating a Monitoring MetricSet with ``customer.id`` as a custom dimension and filtering it to the customers affected by the issue, Kai can set up a detector to monitor service and endpoint latency specifically by customer. They can also create charts and dashboards that show service and endpoint latency for specific customers over time.
 
 

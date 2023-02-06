@@ -4,8 +4,10 @@
 Configure Business Workflow rules
 *********************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Business Workflow rules use span tags to make trace behavior in transaction processing explicit and transparent.
+   :description: Learn how Business Workflow rules make trace behavior in transaction processing explicit and transparent.
 
 Business Workflow rules use span tags to make trace behavior in transaction processing explicit and transparent.
 

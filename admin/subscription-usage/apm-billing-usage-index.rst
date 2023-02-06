@@ -5,14 +5,9 @@ Monitor Splunk APM subscription usage
 *************************************************
 
 .. meta::
-      :description: Monitor Splunk APM subscription usage. 
-
-.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
-
-
-.. meta::
    :description: View APM subscription usage information and download usage reports to monitor your organization.
-  
+
+.. note:: General aspects of subscription usage and consumption for Splunk APM. For more detailed billing-related queries, contact your Splunk Account Team.
 
 View Splunk APM subscription usage data to monitor your organization's usage against its subscription plan and entitlements. You have to be an administrator to view the APM Subscription Usage page for your organization. Go to :strong:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
 
@@ -31,6 +26,9 @@ The Subscription Usage page explains the following information about your organi
 .. note::
 
    The APM Subscription Usage page displays a tile for Monitoring MetricSets, but the metric that powers the chart is not currently available.
+
+How APM calculates usage
+=========================================
 
 APM calculates per-minute usage for your subscription plan. There are two types of subscription plans: :strong:`host` and :strong:`traces analyzed per minute (TAPM)`. To learn more about how APM monitors billing and usage for each subscription plan type, see :ref:`analyze-apm-billing-usage`.
 

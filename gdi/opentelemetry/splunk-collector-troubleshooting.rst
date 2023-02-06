@@ -1,13 +1,13 @@
 .. _otel-splunk-collector-tshoot:
 
 ****************************************************************
-Troubleshoot the Collector
+Troubleshoot the Splunk OpenTelemetry Collector
 ****************************************************************
 
 .. meta::
       :description: Describes known issues when using the Splunk Distribution of OpenTelemetry Collector.
 
-See the following issues and workarounds for this version of the Collector.
+See the following issues and workarounds for the Splunk Distribution of OpenTelemetry Collector.
 
 Collector isn't behaving as expected
 =========================================
@@ -39,7 +39,7 @@ Restart the Splunk Distribution of OpenTelemetry Collector and check the configu
 Collector doesn't start in Windows Docker containers
 -----------------------------------------------------------
 
-The process might fail to start in a custom built, Windows-based Docker container, resulting in a "The service process could not connect to the service controller." error message.
+The process might fail to start in a custom built, Windows-based Docker container, resulting in a "The service process could not connect to the service controller" error message.
 
 In this case, the ``NO_WINDOWS_SERVICE=1`` environment variable must be set to force the Splunk Distribution of OpenTelemetry Collector to start as if it were running in an interactive terminal, without attempting to run as a Windows service.
 
@@ -261,6 +261,25 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
 .. note::
 
    Properly structured syslog is required for Fluentd to properly pick up the log line.
+
+.. _unwanted_profiling_logs:
+
+Unwanted profiling logs appearing in Observability Cloud
+------------------------------------------------------------
+
+By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a logs pipeline that uses the Splunk HEC exporter. For more information, see :ref:`profiling-intro`.
+
+If you don't need AlwaysOn Profiling data for a specific host or container, set the ``profiling_data_enabled`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
+
+.. code:: yaml
+
+   splunk_hec/noprofiling:
+      token: "${SPLUNK_HEC_TOKEN}"
+      endpoint: "${SPLUNK_HEC_URL}"
+      source: "otel"
+      sourcetype: "otel"
+      log_data_enabled: true # You can still send non-profiling log data if needed
+      profiling_data_enabled: false
 
 Trace collection issues
 ================================
