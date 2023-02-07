@@ -106,7 +106,7 @@ The following table shows required parameters for this installation:
        * - ``clusterReceiver.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``clusterReceiver.enabled`` as it.
            * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` since Network Explorer doesn't use ``splunk-otel-collector-k8s-cluster-receiver``.
-           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and want to collect telemetry from both Network Explorer and the individual OpenTelemetry Collector agents, set this to ``true``.
+           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and want to collect cluster-level metrics from the Kubernetes API server in addition to Network Explorer telemetry, set this to ``true``.
        * - ``gateway.replicaCount``
          - Set this to ``1`` since Network Explorer doesn't support communication to multiple gateway replicas.
 
@@ -146,7 +146,7 @@ Follow these steps to install Network Explorer using the Helm chart method:
           --set="gateway.replicaCount=1" \
           splunk-otel-collector-chart/splunk-otel-collector
       
-      .. code-tab:: bash Collect both Network Explorer and individual OpenTelemetry Collector agents telemetry
+      .. code-tab:: bash Collect Network Explorer and other telemetry
 
           helm --namespace=<NAMESPACE> install splunk-otel-collector \
           --set="splunkObservability.realm=<REALM>" \
