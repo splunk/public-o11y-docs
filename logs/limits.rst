@@ -8,7 +8,7 @@ Log Observer limits
 .. meta DOCS-2491
 
 .. meta::
-  :description: Discover Log Observer limits.
+  :description: See Log Observer limits on MB of data ingested or indexed per month, limits on the number and type of processing rules, and search query limits.
 
 This page documents Splunk Log Observer service limits and behavior. System protection limits are meant to allow for stability and availability of multi-tenant systems and are subject to fine-tuning and change without notice.
 
@@ -75,7 +75,7 @@ The following table lists Log Observer's processing rule limits:
 Maximum number of processing rules
 ---------------------------------------------------------------------------------------------
 
-This is the maximum number of processing rules that an organization can create.
+This is the maximum number of processing rules that an organization can create. An organization can create 128 combined log processing rules, including field extraction rules, field copy rules, and field redaction rules. An organization can also create a total of 128 infinite logging rules and 128 log metricization rules.
 
 What happens when the limit is hit?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

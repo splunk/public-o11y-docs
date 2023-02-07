@@ -74,7 +74,8 @@ To learn more about web vitals, see :new-page:`https://web.dev/vitals/` in the G
 
 Alert configuration examples
 =============================
-Here are a few examples of how you can configure alerts. Set the scope of your alert to either the page/URl level, or the app level which is an aggregate. The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company. 
+
+Here are a few examples of how you can configure alerts. Set the scope of your alert to either the page or URL level, or the app level which is an aggregate. The following use cases feature examples from Buttercup Industries, a fictitious ecommerce company. 
 
 
 Alert trigger conditions
@@ -86,7 +87,7 @@ RUM alert conditions are designed to reduce noise and provide clear, actionable 
 Page level metrics 
 ------------------
 
-To create a page level metric, first create a custom rule to map to the page you want to monitor.For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule by selecting the rule from the list.  The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``. 
+To create a page level metric, first create a custom rule to map to the page you want to monitor. See :ref:`rum-rules` to learn how to create a custom rule. For example, suppose you use the pattern ``https://buttercupgames.com/product/<?>`` because you want to group by the product type for your online store Buttercup Games. When you create a detector, apply a custom rule by selecting the rule from the list. The following image shows a page level detector for the custom pattern  ``https://buttercupgames.com/product/<?>``. 
 
 .. image:: /_images/rum/product-page-rum-example.png
    :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 
@@ -95,6 +96,7 @@ To create a page level metric, first create a custom rule to map to the page you
 
 App level metrics 
 -----------------
+
 Web vitals have a standard range that denotes good performance. For example, a Largest Contentful Paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps on how to remedy the slow LCP.
 
 .. image:: /_images/rum/alert-modal-lcp.png
@@ -105,13 +107,15 @@ Web vitals have a standard range that denotes good performance. For example, a L
 URL level metrics 
 -----------------
 
-The following image shows an example configuration for a URL level metric for long task duration that triggers if 50% of the data points in a five minute window are longer than 1000 ms. 
+The following image shows an example configuration for a URL level metric for long task duration that triggers if 50% of the data points in a five minute window are longer than 1000 milliseconds. 
 
 .. image:: /_images/rum/url-level-alert-rum.png
    :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 
    :width: 97.3%
 
 
+
+.. _rum-detectors:
 
 Create a detector 
 ==================

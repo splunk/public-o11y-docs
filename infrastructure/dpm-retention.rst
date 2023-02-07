@@ -40,8 +40,8 @@ Each MTS can have its own resolution. Observability Cloud chooses one resolution
 and for multiple plots the chart uses the coarsest resolution. Using this resolution lines up data points to facilitate plots and computations.
 
 For example, metrics from AWS CloudWatch typically have a
-one-minute or five-minute resolution, while metrics reported using the SignalFx Smart Agent or the Splunk Distribution of OpenTelemetry Collector typically have a 10-second resolution. If a single chart has one plot that contains AWS CloudWatch metrics
-(five-minute resolution) and another plot that contains Smart Agent or OpenTelemetry Collector metrics, the chart resolution is always five minutes or more.
+one-minute or five-minute resolution, while metrics reported using the Splunk Distribution of OpenTelemetry Collector or SignalFx Smart Agent typically have a 10-second resolution. If a single chart has one plot that contains AWS CloudWatch metrics
+(five-minute resolution) and another plot that contains OpenTelemetry Collector or Smart Agent metrics, the chart resolution is always five minutes or more.
 
 Minimum chart resolution
 -------------------------------------------------------------------

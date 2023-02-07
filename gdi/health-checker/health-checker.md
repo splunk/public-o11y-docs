@@ -2,7 +2,7 @@
 
 # Health Checker
 
-<meta name="description" content="Documentation for the health-checker monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Health Checker monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -21,7 +21,7 @@ Follow these steps to deploy the integration:
 
 The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
-**Note:** Providing a Health Checker monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+**Note:** Providing a Health Checker monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 
 ### Splunk Distribution of OpenTelemetry Collector
 

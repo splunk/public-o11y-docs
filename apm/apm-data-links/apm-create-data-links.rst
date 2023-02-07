@@ -4,8 +4,10 @@
 Link APM services, traces, and spans to relevant resources
 *************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Use global data links to create links for services, traces, and spans to other resources.
+   :description: An overview of global data links for services, traces, and spans to other resources.
 
 Create global data links to link Splunk APM properties, such as services, traces, spans, and span tags, to relevant resources. For example, you can link APM properties to Infrastructure Monitoring dashboards, Splunk instances, Kibana logs, or custom URLs.
 
@@ -54,7 +56,7 @@ When you create a global data link for an APM property, you can transfer the pro
    * - Span tag
      - An existing span tag value.
      - ``sf_service``, ``sf_operation``, ``span_id``, ``trace_id``, all other tags for the span
-     - A field-value pair that describes the span. Use span tags to describe the span. Specify the tags when you configure instrumentation for the service. You can also specify span tags in the Smart Agent or the Splunk Distribution of OpenTelemetry Collector configuration.
+     - A field-value pair that describes the span. Use span tags to describe the span. Specify the tags when you configure instrumentation for the service. You can also specify span tags in the Splunk Distribution of OpenTelemetry Collector (or the Smart Agent, now deprecated) configuration. 
 
 
 Link APM properties to Splunk Infrastructure Monitoring dashboards

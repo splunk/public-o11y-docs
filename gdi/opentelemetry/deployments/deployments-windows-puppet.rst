@@ -5,17 +5,11 @@ Puppet for Windows
 **********************
 
 .. meta::
-      :description: Describes how to install the Puppet module on Windows.
+      :description: Describes how to install the Splunk Observability Cloud OpenTelemetry Collector Puppet module on Windows.
 
 Use this module to install and configure the Collector on Windows. Download and install the module from :new-page:`Puppet Forge <https://forge.puppet.com/modules/signalfx/splunk_otel_collector>`. After downloading the module, you can add customizations using the ``class`` parameter.
 
-Currently, we support the following Windows versions. All versions require using PowerShell 3.0 or newer.
-
-- Windows Server 2012 64-bit
-- Windows Server 2016 64-bit
-- Windows Server 2019 64-bit
-
-On Windows systems, the :new-page:`puppetlabs/registry module <https://forge.puppet.com/modules/puppetlabs/registry>` is required to set the registry key/values, and the :new-page:`puppetlabs/powershell module <https://forge.puppet.com/modules/puppetlabs/powershell>` is required to execute Powershell commands.
+On Windows systems, the :new-page:`puppetlabs/registry module <https://forge.puppet.com/modules/puppetlabs/registry>` is required to set the registry key/values, and the :new-page:`puppetlabs/powershell module <https://forge.puppet.com/modules/puppetlabs/powershell>` is required to run Powershell commands.
 
 Using the module
 ============================
@@ -45,7 +39,7 @@ The class accepts the parameters described in the following table:
      - Description
      - Default value
    * - ``collector_version``
-     - Version of the Collector package to install, for example, ``0.25.0``. The version should correspond to :new-page:`Github Releases <https://github.com/signalfx/splunk-otel-collector/releases>` without the preceding ``v``. This attribute is required.
+     - Version of the Collector package to install, for example, ``0.25.0``. The version must correspond to :new-page:`Github Releases <https://github.com/signalfx/splunk-otel-collector/releases>` without the preceding ``v``. This attribute is required.
      - None
    * - ``splunk_access_token``
      - The Splunk access token to authenticate requests. This attribute is required.

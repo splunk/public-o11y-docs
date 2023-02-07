@@ -5,7 +5,7 @@ Manually instrument iOS applications
 *******************************************************************************
 
 .. meta::
-   :description: Manually instrument iOS applications for Splunk RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
+   :description: Manually instrument iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
 You can manually instrument iOS applications for Splunk RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
@@ -122,6 +122,7 @@ The following example shows how to use the OTel Swift API to report on a functio
       let tracer = OpenTelemetrySDK.instance.tracerProvider.get(instrumentationName: "MyApp")
       let span = tracer.spanBuilder(spanName: "calculateTax").startSpan()
       span.setAttribute(key: "numClaims", value: claims.count)
+      span.setAttribute(key: "workflow.name", value: "<your_workflow>") // This allows the event to appear in the UI
     //...
     //...
       span.end() // You can also use defer for this

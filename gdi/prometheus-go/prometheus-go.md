@@ -1,7 +1,7 @@
 (prometheus-go)=
 
 # Prometheus Go
-<meta name="Description" content="Documentation on the prometheus-go integration for Splunk Observability Cloud.">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Prometheus Go monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

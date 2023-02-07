@@ -5,7 +5,7 @@ Collect Windows data
 *************************
 
 .. meta::
-   :description: Start sending metrics and logs from Windows hosts to Splunk Observability Cloud.
+   :description: Start sending metrics and log telemetry from Windows hosts to Splunk Observability Cloud.
 
 The Splunk Distribution of OpenTelemetry Collector is a package that provides integrated collection and forwarding for all telemetry types for Windows. You can deploy the Collector to gather telemetry for Splunk Infrastructure Monitoring, Splunk APM, or Splunk Log Observer.
 
@@ -30,14 +30,15 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
 
-#. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
+#. Open the :new-page:`Windows guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-windows/step-1?category=all&gdiState=%7B"integrationId":"otel-connector-windows"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-#. In the integration filter menu, select :guilabel:`All`.
+   #. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
 
+   #. In the integration filter menu, select :guilabel:`All`.
 
-#. #. Select :guilabel:`Windows`.
+   #. Select :guilabel:`Windows`.
 
-#. Select :guilabel:`Add Connection`. The integration guided setup appears.
+   #. Select :guilabel:`Add Connection`. The integration guided setup appears.
 
 #. Follow the steps in the guided setup.
 

@@ -16,7 +16,7 @@ Configure the Collector
     other-configuration-sources.rst
     configure-the-smart-agent.rst
 
-This document describes the different default configuration options available for the Collector. 
+You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well additional components that you can configure separately.
 
 .. _otel-config-options:
 
@@ -28,7 +28,7 @@ Select the configuration file to set up the Collector based on your needs.
 Default configuration
 ----------------------------------------------------
 
-:new-page:`agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` is the recommended starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
+:new-page:`agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` is the starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
 
 Full configuration (Linux)
 ----------------------------------------------------
@@ -103,7 +103,7 @@ You can also configure the following components:
 
   * Zookeeper (Alpha)
 
-* :ref:`SignalFx Smart Agent <otel-smart-agent>`
+* :ref:`SignalFx Smart Agent components <otel-smart-agent>`
 
   * Extension
 

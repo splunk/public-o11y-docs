@@ -205,6 +205,41 @@ $(window).scroll(function() {
         }
     });
 
+    $("#mainTOC .sphinxsidebarwrapper ul li.toctree-l1 a").each(function(){
+
+      //var achorHtml = $(this).html()
+      var anchorText = $(this).text(); 
+      console.log("TEXT:" + anchorText);   
+      var arrowSpan = "<span class='gg-chevron-down' style='transform: scale(var(--ggs,0.7));'></span>";
+      if(anchorText.includes("TOGGLE"))
+      {
+          //console.log("test:" + a);
+          anchorText = anchorText.replace("TOGGLE","");
+          $(this).text($.trim(anchorText));
+          
+          //console.log("test2: " + b);
+          $(this).before(arrowSpan);
+          //$(this).html(ss);
+         
+      }
+  });
+
+  $("#mainTOC ul.current li.current").each(function() {
+    $(this).find('span.gg-chevron-down').removeClass(function(i,class_name){
+        console.log("class:" + class_name);
+        console.log("check span:" + $(this).parent().is('li.current'));
+        if(class_name == 'gg-chevron-down' && $(this).parent().is('li.current'))
+             {
+               $(this).removeClass("gg-chevron-down").addClass('gg-chevron-up');
+             }
+             if(class_name == 'gg-chevron-up' && $(this).parent().is('li.current'))
+             {
+               $(this).removeClass("gg-chevron-up").addClass('gg-chevron-down');
+             }
+    });
+     
+ });
+
     $("#searchbtn").click(function(){
         //$(".popup-overlay, .popup-content").addClass("active");
        // $("#myModal").css("display","block");
@@ -422,7 +457,7 @@ $(window).scroll(function() {
     });
     
     if($('.sphinxsidebarwrapper ul.current').length > 0) {
-      var liTOC = "";
+      var liTOC = "<li class='githubeditlink' style='margin-top:5px;'></li>";
         //console.log("aaaaa");
 
         if($('a.headerlink').parent().length <= 1)
@@ -431,7 +466,10 @@ $(window).scroll(function() {
               $(".toctree-l2").show();
 
             });
-
+            $('#rightSideTOC').append(liTOC);
+            $(".githubeditlink").html($(".olly_git_hub_link").html());
+            
+         
           return false;
         }
 
@@ -466,10 +504,11 @@ $(window).scroll(function() {
           });
           console.log(liTOC);
           $('#rightSideTOC').append(liTOC);
-
-
-
-
+          $(".githubeditlink").html($(".olly_git_hub_link").html());
+       }else{
+          var liTOC = "<li class='githubeditlink' style='margin-top:5px;'></li>";
+          $('#rightSideTOC').append(liTOC);
+          $(".githubeditlink").html($(".olly_git_hub_link").html());
         }
 
 });

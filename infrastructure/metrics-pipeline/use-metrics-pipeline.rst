@@ -10,7 +10,7 @@ Control your metric ingestion volume with rules
 *********************************************************************
 
 .. meta::
-    :description: Learn how to create metric rules
+    :description: Learn how to create metric rules in metrics pipeline management.
 
 For each metric you send to Splunk Observability Cloud, you can create various aggregation and data dropping rules to control ingestion and storage volume.
 
@@ -36,10 +36,10 @@ Follow these steps to create rules for a metric.
           - :strong:`Description`
           - :strong:`Required?`
         * - Filter population
-          - Search for dimension key or value to narrow down the associated MTSs
+          - Search for dimension keys or values to narrow down the associated MTS
           - No
         * - Select dimensions to keep
-          - Search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTSs. All other dimensions are removed.
+          - Search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTS. All other dimensions are removed.
           - Yes
         * - New aggregated metric name
           - Select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric.
@@ -51,9 +51,9 @@ Follow these steps to create rules for a metric.
 
     :strong:`Note:` You need to be an admin to drop data.
 
-    In the :strong:`Drop unaggregated raw metrics data` section, select :guilabel:`Drop data` to discard the raw unaggregated metric that matches your serach in step 3. If you drop raw data, only the new aggregated metric is retained. By default, raw unaggregated data is kept.
+    In the :strong:`Drop unaggregated raw metrics data` section, select :guilabel:`Drop data` to discard the raw unaggregated metric that matches your search in step 3. If you drop raw data, only the new aggregated metric is retained. By default, raw unaggregated data is kept.
    
     To learn more, see :ref:`data-dropping-impact`.
 #. Select :guilabel:`Save`.
-#. Review the new MTS volume.
+#. Review the resulting volume of MTS.
 #. Select :strong:`Confirm`.

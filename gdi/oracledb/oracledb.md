@@ -1,6 +1,6 @@
 (oracledb)=
 # Oracle Database
-<meta name="description" content="Documentation on the Oracle Database monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the OracleDB / Oracle Database monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -44,6 +44,19 @@ To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, 
 ```yaml
 receivers:
   oracledb:
+    # Refer to Oracle Go Driver go_ora documentation for full connection string options
+    datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+```
+
+To add more than one instance of Oracle Database, add as many entries of the `oracledb` receiver as needed. For example:
+
+```yaml
+receivers:
+  oracledb/aninstance:
+    # Refer to Oracle Go Driver go_ora documentation for full connection string options
+    datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
+  
+  oracledb/anotherinstance:
     # Refer to Oracle Go Driver go_ora documentation for full connection string options
     datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
 ```

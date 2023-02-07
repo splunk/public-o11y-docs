@@ -97,7 +97,6 @@ Learn more
 --------------------
 
 - For more information on AlwaysOn Profiling and how to start using it, see :ref:`profiling-intro`.
-- For more information on the stack traces in spans, see :ref:`spans-stack-traces`.
 - For more information on the profiling flame graph, see :ref:`flamegraph-howto`.
 - For more Splunk APM use cases, see :ref:`apm-use-cases-intro`.
 - For more information on monitoring hosts, see :ref:`infrastructure-hosts`.
