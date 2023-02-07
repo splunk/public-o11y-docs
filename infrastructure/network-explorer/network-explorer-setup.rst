@@ -102,7 +102,7 @@ The following table shows required parameters for this installation:
        * - ``agent.enabled``
          - If you are installing Network Explorer for the first time and don't want to collect telemetry from the individual OpenTelemetry Collector agents, set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in Agent mode on each Kubernetes node.
        * - ``clusterReceiver.enabled``
-         - If you are installing Network Explorer for the first time and don't want to collect telemetry from agents and Network Explorer, set this to ``false`` since Network Explorer doesn't use ``splunk-otel-collector-k8s-cluster-receiver``.
+         - If you are installing Network Explorer for the first time and don't want to collect telemetry from the individual OpenTelemetry Collector agents, set this to ``false`` since Network Explorer doesn't use ``splunk-otel-collector-k8s-cluster-receiver``.
        * - ``gateway.replicaCount``
          - Set this to ``1`` since Network Explorer doesn't support communication to multiple gateway replicas.
 
