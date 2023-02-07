@@ -1,5 +1,4 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-  
+ 
 .. _ii-get-started-incident-intelligence:
 
 Introduction to Splunk Incident Intelligence
@@ -22,11 +21,6 @@ Splunk Observability Cloud provides a unified experience for collecting and moni
 
 For more information about Observability Cloud, see :ref:`welcome`. 
 
-Sign up for the Incident Intelligence public preview
-=======================================================
-
-To sign up for Incident Intelligence public preview, see :new-page:`https://www.splunk.com/en_us/form/splunk-incident-intelligence.html`.
-
 .. _wcidw-incident-intelligence:
 
 Get started with Incident Intelligence
@@ -47,7 +41,7 @@ Follow the links in the table to complete the tasks that are relevant to you.
      - :strong:`With this tool`
      - :strong:`Link to documentation`
 
-   * - Ingest alerts from Observability Cloud or third parties. 
+   * - Ingest alerts from Observability Cloud, Splunk Enterprise, Splunk Cloud Platform, IT Service Intelligence (ITSI) or third parties. 
      - Alert ingestion
      - See :ref:`ii-ingest-alerts`.
 
