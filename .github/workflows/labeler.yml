@@ -7,7 +7,7 @@ jobs:
       contents: read
       pull-requests: write
     runs-on: ubuntu-latest
-    if: github.event.actor.login != 'srv-rpa-o11y-docs-splunk'
+    if: github.event.actor != 'srv-rpa-o11y-docs-splunk'
     steps:
       - uses: actions/github-script@v6
         with:
