@@ -32,6 +32,14 @@ To filter unwanted metrics, see [the filter processor documentation on GitHub](h
 
 ## Configuration
 
+### Settings
+
+This receiver has the following settings:
+
+<div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/hostmetrics.yaml"></div>
+
+### Scraper configuration
+
 The collection interval and the categories of metrics to be scraped can be [configured](#scraper-configuration), as shown in the following example.
 
 ```yaml
@@ -56,8 +64,6 @@ The following table shows the available scrapers:
 | paging     | All        | Paging or swap space utilization and I/O metrics       |
 | processes  | Linux        | Process count metrics             |
 | process    | Linux and Windows       | Per process CPU, memory, and disk I/O metrics          |
-
-### Scraper configuration
 
 Scrapers extract data from endpoints and then send that data to a specified target. See the following sections for scraper configurations.
 
@@ -129,8 +135,6 @@ process:
   scrape_process_delay: <time>
 ```
 
-### Advanced configuration
-
 #### Filtering
 
 To only gather a subset of metrics from a particular source, use the host metrics receiver with the filter processor.
@@ -159,8 +163,6 @@ service:
       receivers: [hostmetrics, hostmetrics/disk]
 
 ```
-## Metrics
-
 ## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
