@@ -128,9 +128,15 @@ Follow these steps to install Network Explorer using the Helm chart method:
 
 #. Run the following command to install the Splunk Distribution of OpenTelemetry Collector. Replace the parameters with their appropriate values.
 
-    .. code-block:: bash
+    .. tabs::
 
-        helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,networkExplorer.enabled=true,agent.enabled=false,clusterReceiver.enabled=false,gateway.replicaCount=1" splunk-otel-collector-chart/splunk-otel-collector
+      .. code-tab:: bash Use case 1
+
+          helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,networkExplorer.enabled=true,agent.enabled=false,clusterReceiver.enabled=false,gateway.replicaCount=1" splunk-otel-collector-chart/splunk-otel-collector
+      
+      .. code-tab:: bash Use case 2
+
+          helm install splunk-otel-collector --set="splunkObservability.realm=<REALM>, splunkObservability.accessToken=<ACCESS_TOKEN>, clusterName=<CLUSTER_NAME>, splunkObservability.logsEnabled=true, splunkObservability.infrastructureMonitoringEventsEnabled=true, networkExplorer.enabled=true, networkExplorer.podSecurityPolicy.enabled=false", agent.enabled=true, gateway.replicaCount=1, gateway.resources.limits.cpu=500m, gateway.resources.limits.memory=1Gi, clusterReceiver.enabled=true, environment=<MY_ENV-apm-env>" splunk-otel-collector-chart/splunk-otel-collector
 
 
 #. (Optional) The Network Explorer kernel collector requires kernel headers to run the kernel in each Kubernetes node. The kernel collector installs the headers automatically unless your nodes don't have access to the internet.
