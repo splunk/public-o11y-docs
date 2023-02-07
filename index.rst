@@ -543,7 +543,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Manage services, spans, and traces in SPlunk APM TOGGLE <apm/apm-spans-traces/traces-spans>
+   Manage services, spans, and traces in Splunk APM TOGGLE <apm/apm-spans-traces/traces-spans>
 
 .. toctree::
    :maxdepth:   3
