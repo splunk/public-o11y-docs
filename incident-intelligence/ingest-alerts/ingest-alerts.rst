@@ -25,7 +25,6 @@ There are 3 options for ingesting alerts in Incident Intelligence:
 
    <ol>
       <li>Create a detector for one of the available alert sources in Splunk Observability Cloud to automatically pass alerts. See <a href="#ii-ingest-observability-alerts">Available alert sources in Splunk Observability Cloud</a>.</li>
-      <li>Use the Splunk Incident Intelligence app on Splunkbase to send Splunk Enterprise and Splunk Cloud Platform alerts. See <a href="#ii-ingest-splunk-alerts">Available alert sources in Splunk Enterprise and Splunk Cloud Platform</a>.</li>
       <li>Ingest third-party alerts using an ingest endpoint. See <a href="#ii-ingest-third-party-alerts">Available ingest endpoints for third-party alerts</a>.</li>
    </ol>
 
@@ -59,26 +58,6 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
         * To create a detector for an API test, see :ref:`api-detector`.
         * To create a detector for a browser test, see :ref:`detector-browser-test`.
         * To create a detector for an uptime test, see :ref:`uptime-detector`.
-
-.. raw:: html
-
-   <embed>
-      <h2 id="ii-ingest-splunk-alerts">Available alert sources in Splunk Enterprise and Splunk Cloud Platform</h2>
-   </embed>
-
-.. list-table::
-   :header-rows: 1
-   :width: 100%
-   :widths: 25, 75
-
-   * - :strong:`Alert source`
-     - :strong:`Documentation`
-
-   * - Splunk Enterprise
-     - See :ref:`ii-ingest-splunk-itsi-alerts`.
-
-   * - Splunk Cloud Platform
-     - See :ref:`ii-ingest-splunk-itsi-alerts`.
 
 .. raw:: html
 
