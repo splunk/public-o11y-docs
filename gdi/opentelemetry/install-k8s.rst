@@ -102,11 +102,11 @@ You can also set Helm values as arguments using a YAML file. For example, after 
 
 See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`. Options include:
 
-* Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker node. 
-* Set ``networkExplorer.enabled`` to ``true`` to use the default values for ``splunk-otel-network-explorer``.
+* Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes. 
+* Set ``networkExplorer.enabled`` to ``true`` to use the default values for :ref:`splunk-otel-network-explorer <network-explorer>`.
 
 
-Set Prometheus
+Set Prometheus metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Set the Collector to automatically scrape any pod emitting Prometheus by adding this property to the Helm chart's values YAML: 
