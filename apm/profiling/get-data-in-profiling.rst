@@ -142,4 +142,3 @@ After you set up and enable AlwaysOn Profiling, check that profiling data is com
 4. Select a service, and switch from the CPU view to the Memory view. 
 5. If your service runs in multiple instances, select the instance that you're interested in by selecting the host, container and process ID.
 6. If you've enabled Memory profiling, explore memory metrics. See :ref:`profiling-memory-metrics`.
-7. You can also browse all stack traces coming from your application in the flame graph. See :ref:`flamegraph-howto` for more information about the flame graph. See also :ref:`spans-stack-traces` to learn how to locate and browse call stacks. 

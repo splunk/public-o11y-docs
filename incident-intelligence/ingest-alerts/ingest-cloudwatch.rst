@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-ingest-cloudwatch-alerts:
 
 Ingest Amazon CloudWatch alarms
@@ -49,6 +47,8 @@ Request header
 
 Alarm fields
 ----------------
+
+The following fields are transformed as part of the common information model. All other included fields are included properties object in the transformed alert.
 
 .. list-table:: 
    :widths: 15 15 15 55

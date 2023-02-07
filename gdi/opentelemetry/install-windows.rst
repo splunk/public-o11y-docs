@@ -40,7 +40,7 @@ The Splunk Distribution of OpenTelemetry Collector for Windows has the following
    * - Windows installer (MSI)
      - Windows 2012, 2016, 2019, 2022
    * - Ansible
-     - Windows 2012, 2016, 2019
+     - Windows 2012, 2016, 2019, 2022
    * - Chef
      - Windows 2019, 2022
    * - Nomad
