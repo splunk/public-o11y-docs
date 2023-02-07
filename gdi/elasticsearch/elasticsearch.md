@@ -13,7 +13,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 This monitor collects stats from Elasticsearch. It collects node, cluster, and index level stats.
 
 By default, this monitor only collects cluster level and index level stats from the current master
-in an Elasticsearch cluster. It is possible to override this using the
+in an Elasticsearch cluster. You can override this using the
 `clusterHealthStatsMasterOnly` and `indexStatsMasterOnly` configuration options respectively.
 
 ## Installation
