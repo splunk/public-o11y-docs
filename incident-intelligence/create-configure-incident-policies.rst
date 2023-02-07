@@ -33,10 +33,10 @@ Use alert routing to associate alerts with an incident policy. If an alert match
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert routing conditions to.
 #. Select the :guilabel:`Alert Routing` tab to see the list of alerts that are currently routed to the incident policy.
-#. To filter the alerts routed to the incident policy, select :guilabel:`Add Filters`. 
-    #. Select a filter field. Use :guilabel:`source` to route alerts based on a detector name. 
+#. To filter the alerts routed to the incident policy based on the data in the alerts, select :guilabel:`Add Filters`. 
+    #. Select a filter field. For example, use :guilabel:`source` to route alerts based on a detector name. Key names are case sensitive and require an exact match.
     #. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
-    #. Select a filter value. 
+    #. Select a filter value. Key values are case sensitive and require an exact match.
     #. Select :guilabel:`Enter` to save your condition. 
 #. Repeat these steps for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the incident policy to confirm your filter conditions are correct. 
@@ -55,6 +55,7 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping rule.
 #. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
 #. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
+#. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. If you want to filter on another field enter that field name. 
 #. Select :guilabel:`Save alert grouping`.
 
 After you manage which alerts create an incident and how alerts are grouped into incidents, configure incident workflows for your incident policy.  
