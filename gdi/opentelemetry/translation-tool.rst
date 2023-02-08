@@ -11,7 +11,7 @@ Use translatesfx to translate your existing Smart Agent configuration file into 
 
 .. note::
 
-   translatesfx aims to automate most of the configuration changes required when migrating from the Smart Agent to the Collector. Any configuration produced by translatesfx should be carefully evaluated and tested before being put into production.
+   With translatesfx you can automate most of the configuration changes when migrating from the Smart Agent to the Splunk OpenTelemetry Collector. Evaluate and test any configuration produced by translatesfx carefully before releasing it into production environments.
 
 There are two approaches to using translatesfx, from the command line or from the GUI.
 
@@ -20,7 +20,7 @@ From the command line
 
 To run the tool from the command line, download the executables from the :new-page:`releases page <https://github.com/signalfx/splunk-otel-collector/releases>`. The executables are also contained in the RPM, MSI, and Debian packages as well as the Docker images (version 0.36.1 and higher).
 
-The translatesfx command requires one argument, a Smart Agent configuration file, and accepts an optional second argument, which is the the working directory used by any Smart Agent #from file expansion directives. The translatesfx command uses this working directory to resolve any relative paths to files referenced by any #from directives at runtime.
+The translatesfx command requires a Smart Agent configuration file as the first argument, and accepts a directory as the optional second argument, which is the working directory used by any Smart Agent `#from` file expansion directives. The translatesfx command uses this working directory to resolve any relative paths to files referenced by any `#from` directives at runtime.
 
 .. code-block:: none
 
