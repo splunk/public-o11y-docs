@@ -55,6 +55,18 @@ The following settings are common to most instrumentation scenarios:
      - Enabled by default. Adds server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-dotnet-otel`. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
      - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Can't be set using the ``web.config`` or ``app.config`` files.
+   * - ``OTEL_DOTNET_AUTO_TRACES_ENABLED``
+     - Traces are collected by default. To disable trace collection, set the environment variable to ``false``.
+   * - ``OTEL_DOTNET_AUTO_METRICS_ENABLED``
+     - Metrics are collected by default. To disable metric collection, set the environment variable to ``false``.
+   * - ``OTEL_DOTNET_AUTO_LOGS_ENABLED``
+     - Logs are collected by default. To disable log collection, set the environment variable to ``false``.
+   * - ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED``
+     - Enables the OpenTracing tracer. The default value is ``false``. See :ref:`migrate-signalfx-dotnet-to-dotnet-otel` for more information.
+   * - ``OTEL_DOTNET_AUTO_NETFX_REDIRECT_ENABLED``
+     - Enables automatic redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. 
+   * - ``OTEL_DOTNET_AUTO_FLUSH_ON_UNHANDLEDEXCEPTION``
+     - Controls whether the telemetry data is flushed when an ``AppDomain.UnhandledException`` event is raised. Set to ``true`` when experiencing missing telemetry at the same time of unhandled exceptions.	
 
 .. _dotnet-otel-exporter-settings:
 
@@ -131,6 +143,10 @@ The following settings control instrumentations and tracing behavior:
      - Name of the service or application you're instrumenting. Takes precedence over the service name defined in the ``OTEL_RESOURCE_ATTRIBUTES`` variable.
    * - ``OTEL_RESOURCE_ATTRIBUTES``
      - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``. 
+   * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES``
+     - Comma-separated list of additional ``System.Diagnostics.ActivitySource`` names to be added to the tracer at startup. Use it to capture manually instrumented spans.	 
+   * - ``OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES``
+     - Comma-separated list of additional ``System.Diagnostics.Metrics.Meter`` names to be added to the meter at the startup. Use it to capture manually instrumented spans.
    * - ``OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT``
      - Maximum number of attributes per span. Default value is unlimited.
    * - ``OTEL_SPAN_EVENT_COUNT_LIMIT``
@@ -141,6 +157,8 @@ The following settings control instrumentations and tracing behavior:
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
    * - ``OTEL_DOTNET_AUTO_GRAPHQL_SET_DOCUMENT``
      - Whether the GraphQL instrumentation can pass raw queries as a ``graphql.document`` attribute. As queries might contain sensitive information, the default value is ``false``.
+   * - ``OTEL_DOTNET_AUTO_LEGACY_SOURCES``
+     - Comma-separated list of additional legacy source names to be added to the tracer at the startup. Use it to capture ``System.Diagnostics.Activity`` objects created without using the ``System.Diagnostics.ActivitySource`` API.	
 
 The following settings control which instrumentations are enabled. See :ref:`disable-instrumentations-otel-dotnet` for more information.
 
