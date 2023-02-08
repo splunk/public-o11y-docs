@@ -16,15 +16,16 @@ Install the Collector for Linux
    /gdi/opentelemetry/deployments/deployments-linux-ansible.rst
    /gdi/opentelemetry/deployments/deployments-linux-puppet.rst
 
+The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. 
 
-The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. Install the package using one of these methods:
+Install the package using one of these methods:
 
 * :ref:`Use the installer script <linux-scripts>`
 * :ref:`Use deployment and configuration management tools <linux-deployments>`
 * :ref:`Install manually <linux-manual>`
 
 .. note::
-   Splunk only supports the SignalFx Smart Agent on x86_64 and AMD64 platforms. The SignalFx Smart Agent Receiver is subject to the same limitation.
+   Splunk only supports the SignalFx Smart Agent and the SignalFx Smart Agent Receiver on x86_64 and AMD64 platforms. 
 
 .. _linux-scripts:
 
@@ -238,9 +239,33 @@ Splunk provides a Salt formula to install and configure the Collector. See :ref:
 
 .. _linux-manual:
 
-Manual
-===================
-Splunk offers the manual configuration options described in this section. 
+Install the Collector manually
+===================================
+
+Splunk offers the manual configuration options described in this section:
+
+* :ref:`linux-docker`
+* :ref:`linux-packages`
+* :ref:`linux-binary-file`
+
+.. _linux-manual-permissions:
+
+Permissions
+----------------
+
+You need at least the following permissions to allow the Collector to run without root permissions, regardless of the user. Your systems might require higher or more custom permissions.
+
+Use the following ``setcap`` command, installed with ``libcap2``, to install the Collector with :new-page:`these recommended capabilities <https://man7.org/linux/man-pages/man7/capabilities.7.html>`. 
+
+.. code-block:: bash
+
+   setcap CAP_SYS_PTRACE,CAP_DAC_READ_SEARCH=+eip /usr/bin/otelcol
+
+To set custom permissions after the Collector has been installed, use:
+
+.. code-block:: bash 
+
+   setcap {CUSTOM_CAPABILITIES}=+eip /usr/bin/otelcol
 
 .. _linux-docker:
 
