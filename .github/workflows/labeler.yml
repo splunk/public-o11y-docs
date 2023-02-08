@@ -1,0 +1,23 @@
+name: "Label issues"
+on: pull_request
+  
+jobs:
+  label-pr:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    if: github.actor != 'srv-rpa-o11y-docs-splunk'
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            if (context.payload.pull_request.base.ref == 'main')
+            {
+              github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ['pr']
+              })
+            }

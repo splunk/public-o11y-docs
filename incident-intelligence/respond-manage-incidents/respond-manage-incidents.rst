@@ -36,7 +36,6 @@ Use the following topics to learn about incident management and response:
    edit-incident
    muted-incidents
    mtta-mttr
-   notification-preferences
 
 
 * :ref:`ii-respond-to-incident`
@@ -46,4 +45,3 @@ Use the following topics to learn about incident management and response:
 * :ref:`ii-edit-incident`
 * :ref:`ii-muted-incidents`
 * :ref:`ii-mtta-mttr`
-* :ref:`ii-notification-preferences`

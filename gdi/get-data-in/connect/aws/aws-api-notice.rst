@@ -33,10 +33,7 @@ Alternatively, you can configure this via the AWS Management Console.
 .. image:: /_images/gdi/GetMetricData_AWSUI.png
   :width: 90% 
 
-- Select the ``GetMetricData`` permission.
-- Until May 1, you need to keep the ``GetMetricStatistics`` permission as well.
-
-Once you have made the appropriate changes, choose :guilabel:`Review Policy`, and then save the changes to make them effective.
+Select ``GetMetricData`` (and other permissions if pertinent), choose :guilabel:`Review Policy`, and then save the changes to make them effective.
 
 Monitor the effects of the new configuration
 ========================================================================================

@@ -23,4 +23,3 @@ See also
 * :ref:`ii-add-incident-tools-resources`
 * :ref:`ii-muted-incidents`
 * :ref:`ii-mtta-mttr`
-* :ref:`ii-notification-preferences`
