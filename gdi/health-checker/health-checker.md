@@ -70,7 +70,9 @@ The following table shows the configuration options for the Health Checker monit
 
 ## Metrics
 
-There are no metrics available for this integration.
+The following metrics are available for this integration:
+
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/healthchecker/metadata.yaml"></div>
 
 ## Get help
 
