@@ -72,7 +72,10 @@ The following table shows the configuration options for the Health Checker monit
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/healthchecker/metadata.yaml"></div>
+| Name | Description | Sample value | Type | 
+| ---- | ----------- | ---- | ---- | 
+| `gauge.service.health.status` | The HTTP response status code for the request made to the application being monitored.  A `200` value means an HTTP 200 OK success status response was returned, so the application is healthy.| 200 | ---- | 
+| `gauge.service.health.value` | 0 means an unhealthy state, and 1 means a healthy state. | 0 or 1 | ---- | 
 
 ## Get help
 
