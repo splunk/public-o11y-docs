@@ -20,29 +20,39 @@ Configure the Collector
 You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well additional components that you can configure separately.
 
 .. _otel-config-options:
+.. _otel-config-multiple-files:
 
-Configuration files
-===================================
+.. raw:: html
+
+  <embed>
+    <h2>Configuration files<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 Select the configuration file to set up the Collector based on your needs.
 
-Default configuration
-----------------------------------------------------
+* Default configuration: The :ref:`otel-default-configuration` is the starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
+* Full configuration (Linux): :new-page:`full_config_linux.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/full_config_linux.yaml>` is an extended configuration. This configuration requires using :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` or a similar distribution.
 
-:ref:`otel-default-configuration` is the starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
+To define multiple config files simultaneously use:
 
-Full configuration (Linux)
-----------------------------------------------------
+.. code-block::
 
-:new-page:`full_config_linux.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/full_config_linux.yaml>` is an extended configuration. This configuration requires using :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` or a similar distribution.
+  ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
 
-Fluentd configuration
-----------------------------------------------------
+.. raw:: html
+
+  <embed>
+    <h2>Configure log collection<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
 
 :new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>` to collect logs. Fluentd is applicable to Helm or installer script installations only. Common sources including filelog, journald, and Windows Event Viewer are included in the installation. See the Fluentd configuration documentation for more information.
 
-Fluentd artifacts
-^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
+
+  <embed>
+    <h3>Fluentd artifacts<a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 The following table describes the artifacts in the Fluentd directory:
 
@@ -74,21 +84,13 @@ The following is a sample configuration to collect custom logs:
     tag my-custom-logs
   </source>
 
-.. _otel-config-multiple-files:
-
-Configure the Collector using multiple files
-----------------------------------------------------
-
-To define multiple config files simultaneously use:
-
-.. code-block::
-
-  ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
-
 .. _otel-config-additional-components:
 
-Additional components
-============================================================
+.. raw:: html
+
+  <embed>
+    <h2>Additional components<a name="otel-config-additional-components" class="headerlink" href="#otel-config-additional-components" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 You can also configure the following components:
 
