@@ -39,7 +39,7 @@ The alert notification that this integration sends to Jira can automatically set
 
 If the Jira project you want to create issues in requires additional field values, you'll receive an error when you save the integration.
 
-NOTE: You must be an Observability Cloud administrator to perform this task.
+.. note:: You must be an Observability Cloud administrator to perform this task.
 
 To create a Jira integration in Observability Cloud:
 
