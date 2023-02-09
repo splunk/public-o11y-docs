@@ -5,7 +5,7 @@ Send alert notifications to Jira using Splunk Observability Cloud
 ****************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to Jira when a detector alert condition is met and when the condition clears.
+   :description: Configure Observability Cloud to send alerts to Jira when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to Jira Cloud or Jira Server to create a new issue when a detector alert condition is met and add a comment to the issue when the alert clears.
 
