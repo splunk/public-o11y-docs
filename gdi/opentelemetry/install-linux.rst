@@ -253,9 +253,18 @@ Splunk offers the manual configuration options described in this section:
 Permissions
 ----------------
 
-You need at least the following permissions to allow the Collector to run without root permissions, regardless of the user. Your systems might require higher or more custom permissions.
+You need at least these capabilities to allow the Collector to run without root permissions, regardless of the user:
 
-Use the following ``setcap`` command, installed with ``libcap2``, to install the Collector with :new-page:`these recommended capabilities <https://man7.org/linux/man-pages/man7/capabilities.7.html>`. 
+* ``cap_dac_read_search``: Allows to bypass file read permission checks, and directory read and execute permission checks.
+* ``cap_sys_ptrace``: Allows to trace, manage, and transfer data for arbitrary processes.
+
+Learn more about :new-page:`these recommended capabilities <https://man7.org/linux/man-pages/man7/capabilities.7.html>`.  
+
+.. note::   
+
+   Your systems might require higher or more custom permissions.
+
+If you already have ``setcap/libcap2`` installed, the installer script will set these permissions for you. If you don't, use the following ``setcap`` command to install the permissions:
 
 .. code-block:: bash
 
