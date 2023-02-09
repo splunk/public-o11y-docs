@@ -56,9 +56,7 @@ To create a Jira integration in Observability Cloud, follow these steps:
 #. In the :strong:`JIRA Base URL` field, enter the Jira server base URL. For example, enter a value that looks something 
    like this : ``https://YOUR-DOMAIN.atlassian.net`` or ``http://YOUR-HOSTNAME:PORT``.
 #. If you want to create an integration with Jira Cloud, select :guilabel:`JIRA Cloud` and enter a Jira user email 
-   address and API token. For information about how to create an Atlassian API token, see :new-page:`Manage API tokens
-   for your Atlassian account 
-   <https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/>`.
+   address and API token. For information about how to create an Atlassian API token, see :new-page:`Manage API tokens for your Atlassian account <https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/>`.
 
    If you want to create an integration with Jira server, select :guilabel:`JIRA Server` and enter a Jira username and
    password.
