@@ -12,6 +12,7 @@ Configure the Collector
     :titlesonly:
     :hidden:
 
+    otel-default-configuration.rst
     optional-configurations.rst
     other-configuration-sources.rst
     configure-the-smart-agent.rst
@@ -28,7 +29,7 @@ Select the configuration file to set up the Collector based on your needs.
 Default configuration
 ----------------------------------------------------
 
-:new-page:`agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` is the starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
+:ref:`otel-default-configuration` is the starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
 
 Full configuration (Linux)
 ----------------------------------------------------
@@ -86,7 +87,7 @@ To define multiple config files simultaneously use:
 
 .. _otel-config-additional-components:
 
-Additional configuration components
+Additional components
 ============================================================
 
 You can also configure the following components:
@@ -94,17 +95,12 @@ You can also configure the following components:
 * :ref:`Configuration sources <otel-other-configuration-sources>`
 
   * Environment variable (Alpha)
-
   * etcd (Alpha)
-
   * Include (Alpha)
-
   * Vault (Alpha)
-
   * Zookeeper (Alpha)
 
 * :ref:`SignalFx Smart Agent components <otel-smart-agent>`
 
   * Extension
-
   * Receiver
