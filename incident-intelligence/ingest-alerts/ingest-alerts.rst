@@ -10,7 +10,6 @@ Ingest alerts in Splunk Incident Intelligence
     :maxdepth: 3
     :hidden:
 
-    ingest-splunk-itsi
     ingest-cloudwatch
     ingest-azure
     ingest-prometheus
