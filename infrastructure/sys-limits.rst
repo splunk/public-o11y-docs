@@ -20,7 +20,7 @@ document, which includes the following:
 The first section in this topic contains tables of limit names and values, organized by product area. Each entry in the table shows the name of the limit and its default value. The
 limit name is also a link to more information about the limit.
 
-There are several out-of-the-box charts for the metrics described below. You can view these charts on the :new-page-ref:`Organization Overview page <https://login.signalfx.com/#/organization/CO5Uf1QAcAA?dashboard=FgeCUlMAcAA&startTime=-6h&endTime=Now>` in Splunk Observability Cloud, or by navigating to :guilabel:`Settings > Organization Overview >IMM System Limits`.
+There are several out-of-the-box charts for the metrics described below. You can view these charts on the :new-page:`Organization Overview page <https://login.signalfx.com/#/organization/CO5Uf1QAcAA?dashboard=FgeCUlMAcAA&startTime=-6h&endTime=Now>` in Splunk Observability Cloud, or by navigating to :guilabel:`Settings > Organization Overview >IMM System Limits`.
 
 The first table in the section lists the most important limits to consider.
 
