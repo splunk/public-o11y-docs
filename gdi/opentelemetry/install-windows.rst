@@ -21,7 +21,7 @@ The Splunk Distribution of OpenTelemetry Collector for Windows is a package that
 * :ref:`Deployments <windows-deployments>`
 * :ref:`Manual <windows-manual>`
 
-.. _windows-otel-requirements
+.. _windows-otel-requirements:
 
 Prerequisites
 ==========================
@@ -30,7 +30,7 @@ The Splunk Distribution of OpenTelemetry Collector for Windows has the following
 
 .. list-table::
    :header-rows: 1
-   :widths: 50 16 16 16
+   :widths: 40 60
    :width: 100
 
    * - Install method
@@ -40,7 +40,7 @@ The Splunk Distribution of OpenTelemetry Collector for Windows has the following
    * - Windows installer (MSI)
      - Windows 2012, 2016, 2019, 2022
    * - Ansible
-     - Windows 2012, 2016, 2019
+     - Windows 2012, 2016, 2019, 2022
    * - Chef
      - Windows 2019, 2022
    * - Nomad

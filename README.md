@@ -14,7 +14,7 @@ You can contribute new documentation and edits to the existing documentation.
 
 ## Contribute to the documentation
 
-Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
+Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for our contribution guidelines.
 
 ## Requirements
 
@@ -26,8 +26,10 @@ To build the documentation on your machine use the Docker container in this repo
 
 ### Install the docs on your machine
 
-Follow these steps to create a fork of the `public-o11y-docs` repo and install it on your local machine:
+Follow these steps to create a fork of this repo and install it on your machine:
 
 1. Clone this repository using `git clone`.
 2. Navigate to the cloned repository in your file system.
 3. Change the permissions of `start.sh` by entering `chmod +x start.sh` in the terminal.
+
+

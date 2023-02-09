@@ -16,7 +16,7 @@ Splunk Observability Cloud and the Splunk platform
    Set up Observability Cloud <setup-o11y/setup-o11y>
 
 
-With the Splunk platform, you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can dig deeper into those search results:
+With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can dig deeper into those search results:
 
 - Correlate logs with metrics and traces to locate, isolate, and resolve problems in your applications or infrastructure quickly.
 

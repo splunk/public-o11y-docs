@@ -41,13 +41,8 @@ The Helm chart works with default configurations of the main Kubernetes distribu
 
 While the chart should work for other Kubernetes distributions, the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` configuration file could require additional updates. 
 
-Use the Helm chart
---------------------------------
-
-Follow these steps to install the Collector using the Helm chart. 
-
 Required resources
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 You need the following resources to use the chart:
 
@@ -58,7 +53,7 @@ You need the following resources to use the chart:
 * Cluster name: ``clusterName``. This is an arbitrary value that identifies your Kubernetes cluster.
 
 Deploy the Helm chart
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 Run the following commands to deploy the Helm chart: 
 
@@ -90,16 +85,54 @@ Replace the parameters with their appropriate values. Apply the following for di
    # openshift deployment (openshift can run on multiple cloud providers, so cloudProvider is excluded here)
    --set distribution=openshift 
 
+To set your cloud provider and configure ``cloud.platform`` for the resource detection processor, use: 
+
+.. code-block:: bash
+
+   --set cloudProvider={azure|gcp|eks|openshift} 
+
+Set Helm using a YAML file
+--------------------------------
+
 You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named ``my_values.yaml``, run the following command to deploy the Helm chart:
 
 .. code-block:: bash
 
    helm install my-splunk-otel-collector --values my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
+See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`. Options include:
+
+* Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes. 
+* Set ``networkExplorer.enabled`` to ``true`` to use the default values for :ref:`splunk-otel-network-explorer <network-explorer>`.
+
+
+Set Prometheus metrics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Set the Collector to automatically scrape any pod emitting Prometheus by adding this property to the Helm chart's values YAML: 
+
+.. code-block:: bash
+   
+   autodetect:
+      prometheus: true
+
+Add this configuration in the resources file for any pods in the deployment:
+
+.. code-block:: bash
+
+   metadata:
+      annotations:
+         prometheus.io/scrape: "true"
+         prometheus.io/path: /metrics
+         prometheus.io/port: "8080"
+
+Additional configuration resources
+------------------------------------------
+
 See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
 
 Verify the deployment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 If the chart is deployed successfully, the output displays a message informing that the Splunk Distribution of OpenTelemetry Collector for Kubernetes is being deployed in your Kubernetes cluster, the last deployment date, and the status.
 
