@@ -284,12 +284,12 @@ If you don't need AlwaysOn Profiling data for a specific host or container, set 
 
 .. _disable_log_collection:
 
-Disable log data collection in the Collector
+Disable log data in the Collector
 ------------------------------------------------------------
 
-By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs through a logs pipeline that uses the Splunk HEC exporter.
+By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a logs pipeline that uses the Splunk HEC exporter.
 
-If you need to disable log data collection, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
+If you need to disable log data export to Observability Cloud, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
 .. code-block:: yaml
    :emphasize-lines: 6, 7
@@ -300,7 +300,6 @@ If you need to disable log data collection, for example because you're using Log
       source: "otel"
       sourcetype: "otel"
       log_data_enabled: false
-      profiling_data_enabled: true # Preserves AlwaysOn Profiling data
 
 To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
 
@@ -311,6 +310,37 @@ If you've deployed the Collector in Kubernetes using the Helm chart, change the 
    splunkObservability:
       # Other settings
       logsEnabled: false
+
+.. _send_logs_to_splunk:
+
+Send logs from the Collector to Splunk Cloud or Enterprise
+------------------------------------------------------------
+
+If you're using the Collector for log collection and need to send data to Splunk Cloud, configure the ``splunk_hec`` exporter to use your Splunk ``endpoint`` and token. For example:
+
+.. code-block:: yaml
+
+   exporters:
+      splunk_hec:
+         # Splunk HTTP Event Collector token.
+         token: "00000000-0000-0000-0000-0000000000000"
+         # URL to a Splunk instance to send data to.
+         endpoint: "https://splunk:8088/services/collector"
+         # Optional Splunk source: https://docs.splunk.com/Splexicon:Source
+         source: "otel"
+         # Optional Splunk source type: https://docs.splunk.com/Splexicon:Sourcetype
+         sourcetype: "otel"
+         # Splunk index, optional name of the Splunk index targeted.
+         index: "metrics"
+         # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
+         max_connections: 20
+         # Whether to disable gzip compression over HTTP. Defaults to false.
+         disable_compression: false
+         # HTTP timeout when sending data. Defaults to 10s.
+         timeout: 10s
+         # Whether to skip checking the certificate of the HEC endpoint when sending data over HTTPS. Defaults to false.
+         # For this demo, we use a self-signed certificate on the Splunk docker instance, so this flag is set to true.
+         insecure_skip_verify: true
 
 Trace collection issues
 ================================
