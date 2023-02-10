@@ -341,7 +341,6 @@ If you're using the Collector for log collection and need to send data to Splunk
          # HTTP timeout when sending data. Defaults to 10s.
          timeout: 10s
          # Whether to skip checking the certificate of the HEC endpoint when sending data over HTTPS. Defaults to false.
-         # For this demo, we use a self-signed certificate on the Splunk docker instance, so this flag is set to true.
          insecure_skip_verify: true
 
 To send log data to Splunk Cloud or Enterprise and AlwaysOn Profiling data to Observability Cloud, configure two separate ``splunk_hec`` entries in the ``receiver`` and ``exporters`` sections of the Collector configuration file. Add both to the logs pipeline. For example:
