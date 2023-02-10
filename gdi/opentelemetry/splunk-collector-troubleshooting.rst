@@ -271,7 +271,8 @@ By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysO
 
 If you don't need AlwaysOn Profiling data for a specific host or container, set the ``profiling_data_enabled`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
 
-.. code:: yaml
+.. code-block:: yaml
+   :emphasize-lines: 6,7
 
    splunk_hec/noprofiling:
       token: "${SPLUNK_HEC_TOKEN}"
@@ -280,6 +281,36 @@ If you don't need AlwaysOn Profiling data for a specific host or container, set 
       sourcetype: "otel"
       log_data_enabled: true # You can still send non-profiling log data if needed
       profiling_data_enabled: false
+
+.. _disable_log_collection:
+
+Disable log data collection in the Collector
+------------------------------------------------------------
+
+By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs through a logs pipeline that uses the Splunk HEC exporter.
+
+If you need to disable log data collection, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``exporters`` section of your Collector configuration file:
+
+.. code-block:: yaml
+   :emphasize-lines: 6, 7
+
+   splunk_hec/noprofiling:
+      token: "${SPLUNK_HEC_TOKEN}"
+      endpoint: "${SPLUNK_HEC_URL}"
+      source: "otel"
+      sourcetype: "otel"
+      log_data_enabled: false
+      profiling_data_enabled: true # Preserves AlwaysOn Profiling data
+
+To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
+
+If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or ``values.yaml`` file:
+
+.. code-block:: yaml
+
+   splunkObservability:
+      # Other settings
+      logsEnabled: false
 
 Trace collection issues
 ================================
