@@ -34,6 +34,7 @@ extensions = [
     'sphinx_copybutton',
     'toggle',
     'newpage',
+    'github',
     'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub'

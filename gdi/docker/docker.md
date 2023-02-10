@@ -36,7 +36,7 @@ The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agen
 
 ### Splunk Distribution of OpenTelemetry Collector
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following code to your agent configuration:
 
 ```
 receivers:
