@@ -20,7 +20,7 @@ document, which includes the following:
 The first section in this topic contains tables of limit names and values, organized by product area. Each entry in the table shows the name of the limit and its default value. The
 limit name is also a link to more information about the limit.
 
-There are several out-of-the-box charts in Splunk Observability Cloud for the metrics described below. Admins can view these charts by navigating to :guilabel:`Settings > Organization Overview >IMM System Limits`.
+There are several out-of-the-box charts in Splunk Observability Cloud for the metrics described below. Admins can view these charts by navigating to :guilabel:`Settings > Organization Overview`.
 
 The first table in the section lists the most important limits to consider.
 
