@@ -12,7 +12,6 @@ Configure the Collector
     :titlesonly:
     :hidden:
 
-    otel-default-configuration.rst
     optional-configurations.rst
     other-configuration-sources.rst
     configure-the-smart-agent.rst
@@ -38,6 +37,10 @@ To define multiple config files simultaneously use:
 .. code-block::
 
   ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
+
+   .. github:: yaml
+      :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/agent_config.yaml
+
 
 .. raw:: html
 
