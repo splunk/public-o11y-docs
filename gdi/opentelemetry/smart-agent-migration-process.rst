@@ -1,8 +1,8 @@
 .. _migration-process:
 
-***********************************************************************************************
-Migration process from the Smart Agent to the Collector
-***********************************************************************************************
+********************************************************************************************************
+Migration process from the Smart Agent to the Splunk Distribution of the OpenTelemetry Collector
+********************************************************************************************************
 
 .. meta::
    :description: Describes the process of migrating from the SignalFX Smart Agent to the Splunk Distribution of OpenTelemetry Collector.
@@ -92,8 +92,8 @@ For containerized environments, you can expose this port on a public interface i
 .. code-block:: yaml
 
    extensions:
-     zpages:
-       endpoint: 0.0.0.0:55679
+      zpages:
+         endpoint: 0.0.0.0:55679
 
 Validate using the Metric Finder
 ---------------------------------------------
@@ -104,8 +104,7 @@ Use the Metric Finder to ensure that metrics are coming in from a specific integ
    :width: 99%
    :alt: Select Metric Finder in the left navigation bar.
 
-Find the integration as part of the list present. For example, if you deployed the Collector on the Kubernetes platform, scroll to the
-Containers category and select :menuselection:`Kubernetes`. Search results from all metrics being pulled in by default from the Kubernetes integration and the associated metadata that can be filtered or excluded are shown.
+Find the integration as part of the list present. For example, if you deployed the Collector on the Kubernetes platform, scroll to the Containers category and select :menuselection:`Kubernetes`. Search results from all metrics being pulled in by default from the Kubernetes integration and the associated metadata that can be filtered or excluded are shown.
 
 .. image:: /_images/gdi/3886-find-integration.png
    :width: 99%
@@ -158,13 +157,13 @@ Check for the following errors:
 * Port conflicts: You might see a "bind:address already in use" error message. If you see this message, modify the configuration to use another port.
 
 * HTTP error codes indicating specific use cases: 
-  
+
   * 401 (UNAUTHORIZED): Configured access token or realm is incorrect
-  
+
   * 404 (NOT FOUND): Likely configuration parameter is wrong like endpoint or path (for example, /v1/log); possible network/firewall/port issue
-  
+
   * 429 (TOO MANY REQUESTS): Org is not provisioned for the amount of traffic being sent; reduce traffic or request increase in capacity
-  
+
   * 503 (SERVICE UNAVAILABLE): If using the Log Observer, this is the same as 429 (because that is how HECv1 responds). Otherwise, check the status page.
 
 To confirm that a specific receiver is fetching metrics exposed by an application, update the configuration file, as shown in the following example.
@@ -174,9 +173,9 @@ Set the logging level to ``debug``:
 .. code-block:: yaml
 
    service:
-     telemetry:
-       logs:
-         level: debug
+      telemetry:
+         logs:
+            level: debug
 
 Set ``log_data_points`` to ``true`` using the SignalFx exporter:
 
@@ -184,9 +183,9 @@ Set ``log_data_points`` to ``true`` using the SignalFx exporter:
 
    exporters:
       signalfx:
-        ...
-        log_data_points: true
-        ...
+         ...
+         log_data_points: true
+         ...
 
 After updating the configuration, :ref:`restart the Collector <restart-the-collector>`. Check the logs for your environment to validate the deployment.
 
@@ -216,28 +215,28 @@ The following is an example YAML configuration file with default values where ap
    sysPath: /my_custom_sys
 
    observers:
-     - type: k8s-api
+      - type: k8s-api
 
    collectd:
-     readThreads: 10
-     writeQueueLimitHigh: 1000000
-     writeQueueLimitLow: 600000
-    configDir: "/tmp/signalfx-agent/collectd"
+      readThreads: 10
+      writeQueueLimitHigh: 1000000
+      writeQueueLimitLow: 600000
+   configDir: "/tmp/signalfx-agent/collectd"
 
    monitors:
-     - type: signalfx-forwarder
-       listenAddress: 0.0.0.0:9080
-     - type: collectd/activemq
-       discoveryRule: container_image =~ "activemq" && private_port == 1099
-       extraDimensions:
-         my_dimension: my_dimension_value
-     - type: collectd/apache
-       discoveryRule: container_image =~ "apache" && private_port == 80
-     - type: postgresql
-       discoveryRule: container_image =~ "postgresql" && private_port == 7199
-       extraDimensions:
-         my_other_dimension: my_other_dimension_value
-     - type: processlist
+      - type: signalfx-forwarder
+         listenAddress: 0.0.0.0:9080
+      - type: collectd/activemq
+         discoveryRule: container_image =~ "activemq" && private_port == 1099
+         extraDimensions:
+            my_dimension: my_dimension_value
+      - type: collectd/apache
+         discoveryRule: container_image =~ "apache" && private_port == 80
+      - type: postgresql
+         discoveryRule: container_image =~ "postgresql" && private_port == 7199
+         extraDimensions:
+            my_other_dimension: my_other_dimension_value
+      - type: processlist
 
 
 .. _use-translatefx:
@@ -305,11 +304,11 @@ The Smart Agent has an internal metrics monitor that emits metrics about the int
 .. code-block:: yaml
 
    monitors:
-     - type: internal-metrics
+      - type: internal-metrics
 
 Note that this addition to your Smart Agent configuration file is only necessary to verify the data being sent through the Smart Agent. The Smart Agent configuration file is deleted when you :ref:`deploy the Collector to a production host using the updated configuration file <deploy-to-prod-updated-config>`.
 
-Once the configuration file is updated, restart the Smart Agent.
+After the configuration file is updated, restart the Smart Agent.
 
 You can then use the ``sfxagent.datapoints_sent`` and ``sfxagent.trace_spans_sent`` metrics to estimate the number of data points and spans being sent to Observability Cloud respectively. You can plot them on a dashboard and filter based on dimensions to ascertain the total per cluster or host.
 
@@ -325,16 +324,16 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
 .. code-block:: yaml
 
    extensions:
-     memory_ballast:
-       size_mib:
+      memory_ballast:
+         size_mib:
 
 .. code-block:: yaml
 
    processors:
-     memory_limiter:
-       check_interval: 
-       limit_mib: 
-       spike_limit_mib:
+      memory_limiter:
+         check_interval: 
+         limit_mib: 
+         spike_limit_mib:
 
 .. note::
    The ballast should be configured to be 1/3 to 1/2 of the memory allocated to the Collector. The ``memory_limiter`` processor should be the first processor defined in the pipeline (immediately after the receivers).
@@ -344,7 +343,7 @@ Configure ``ballastextension`` and the ``memory_limiter`` processor on every Col
 6. Deploy the Collector to the non-production environment using the updated configuration file
 ===================================================================================================
 
-Once the necessary updates and translation with the configuration file are complete, restart the Collector on the non-production environment using the updated file.
+Complete the necessary updates and translation of the configuration file, and restart the Collector on the non-production environment using the updated file.
 
 .. _restart-the-collector:
 
@@ -370,7 +369,7 @@ On Kubernetes:
 
    helm upgrade my-splunk-otel-collector --values my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
-Once the Collector is restarted successfully, :ref:`validate the deployment <validate-deployment-of-collector>` to make sure data is being collected and that there are no errors with the updated configuration file.
+After the Collector is restarted successfully, :ref:`validate the deployment <validate-deployment-of-collector>` to make sure data is being collected and that there are no errors with the updated configuration file.
 
 .. _deploy-to-prod-updated-config:
 
@@ -406,7 +405,7 @@ Run the following PowerShell commands to stop and uninstall the ``signalfx-agent
    SignalFxAgent\bin\signalfx-agent.exe -service "stop"
    SignalFxAgent\bin\signalfx-agent.exe -service "uninstall"
 
-Once the Smart Agent  has been uninstalled, :ref:`deploy the Collector to a production host using the updated configuration file <deploy-to-prod-updated-config>` and then :ref:`validate the deployment of the Collector <validate-deployment-of-collector>`.
+After uninstalling the Smart Agent, :ref:`deploy the Collector to a production host using the updated configuration file <deploy-to-prod-updated-config>` and then :ref:`validate the deployment of the Collector <validate-deployment-of-collector>`.
 
 After verifying with one host, deploy the Collector with the same configuration to the rest of the hosts.
 
