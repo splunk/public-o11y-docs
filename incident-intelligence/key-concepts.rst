@@ -30,6 +30,9 @@ Here are some important concepts you need to know to successfully use Splunk Inc
    * - Detector
      - Use a detector to specify the events for which you want to create an alert that is ingested into Incident Intelligence.
 
+   * - Dismissed
+     - An incident status that incident responders can set to indicate that the incident is dismissed. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to dismissed prevents the escalation to the next step in an incident workflow. When you reject an incident, it is considered invalid and closed; you will no longer be able to make updates to the incident.
+  
    * - Incident Management
      - The entire configuration process for an incident policy in Incident Intelligence. This is where you create an incident policy and configure alert routing, alert grouping, and incident workflows for incidents associated with an incident policy. 
 
@@ -68,9 +71,6 @@ Here are some important concepts you need to know to successfully use Splunk Inc
 
    * - On-call schedules
      - An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your incident policies' incident workflows.
-
-   * - Rejected
-     - An incident status that incident responders can set to indicate that the incident is dismissed. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to dismissed prevents the escalation to the next step in an incident workflow. When you reject an incident, it is considered invalid and closed; you will no longer be able to make updates to the incident.
 
    * - Resolved
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.
