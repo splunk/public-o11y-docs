@@ -344,9 +344,23 @@ If you're using the Collector for log collection and need to send data to Splunk
          # For this demo, we use a self-signed certificate on the Splunk docker instance, so this flag is set to true.
          insecure_skip_verify: true
 
-To send log data to Splunk Cloud or Enterprise and AlwaysOn Profiling data to Observability Cloud, configure two separate ``splunk_hec`` entries in the ``exporters`` section of the Collector configuration file. Add both to the logs pipeline. For example:
+To send log data to Splunk Cloud or Enterprise and AlwaysOn Profiling data to Observability Cloud, configure two separate ``splunk_hec`` entries in the ``receiver`` and ``exporters`` sections of the Collector configuration file. Add both to the logs pipeline. For example:
 
 .. code-block:: yaml
+
+   receivers:
+      # Default OTLP receiver--used by Splunk platform logs
+      otlp:
+         protocols:
+            grpc:
+               endpoint: 0.0.0.0:4317
+            http:
+               endpoint: 0.0.0.0:4318
+      # OTLP receiver for AlwaysOn Profiling data
+      otlp/profiling:
+         protocols:
+            grpc:
+               endpoint: 0.0.0.0:4319
 
    exporters:
       # Export logs to Splunk platform
@@ -384,7 +398,7 @@ To send log data to Splunk Cloud or Enterprise and AlwaysOn Profiling data to Ob
             exporters: [splunk_hec/platform]
          # Logs pipeline for AlwaysOn Profiling
          logs/profiling:
-            receivers: [fluentforward, otlp]
+            receivers: [otlp/profiling]
             processors:
             - memory_limiter
             - batch
