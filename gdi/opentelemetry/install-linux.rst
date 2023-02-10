@@ -248,7 +248,7 @@ Splunk offers the manual configuration options described in this section:
 * :ref:`linux-docker`
 * :ref:`linux-packages`
 * :ref:`linux-binary-file`
-* :ref:`linux-tar``
+* :ref:`linux-tar`
 
 .. _linux-manual-permissions:
 
