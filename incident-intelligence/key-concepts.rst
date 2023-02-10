@@ -46,7 +46,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - Incident policies let you organize incidents depending on the impacted component in your environment. Incident policies include alert-routing and alert-grouping rules and an incident workflow. 
 
    * - Incident status
-     - Where an incident is in its lifecycle. The status of an incident changes based on alert grouping conditions, as well as actions from a user. Throughout the lifecycle of an incident, the incident status can go from triggered, to acknowledged, to resolved or rejected. 
+     - Where an incident is in its lifecycle. The status of an incident changes based on alert grouping conditions, as well as actions from a user. Throughout the lifecycle of an incident, the incident status can go from triggered, to acknowledged, to resolved or dismissed. 
 
    * - Incident workflow
      - A configurable series of escalation steps that run in response to a triggered incident. Incident workflows determine who is notified of an incident and the time interval for notifications. You can also use incident workflows to manage how incidents are routed, add automation steps, and route to an on-call schedule.
@@ -70,7 +70,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - An on-call schedule consists of one or more shifts, with members who rotate through a shift. Use an on-call schedule as a step in your incident policies' incident workflows.
 
    * - Rejected
-     - An incident status that incident responders can set to indicate that the incident is rejected. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to rejected prevents the escalation to the next step in an incident workflow. When you reject an incident, it is considered invalid and closed; you will no longer be able to make updates to the incident.
+     - An incident status that incident responders can set to indicate that the incident is dismissed. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to dismissed prevents the escalation to the next step in an incident workflow. When you reject an incident, it is considered invalid and closed; you will no longer be able to make updates to the incident.
 
    * - Resolved
      - An incident status that incident responders set to indicate that the incident is resolved. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Resolving an incident status prevents the escalation to the next step in an incident workflow.

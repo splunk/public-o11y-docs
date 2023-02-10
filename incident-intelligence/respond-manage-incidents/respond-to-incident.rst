@@ -21,8 +21,8 @@ Incidents begin in the triggered status. The default status lifecycle for incide
    * - Acknowledged
      - Acknowledged incidents are considered valid and under investigation. Setting an incident status to acknowledged prevents further notifications. 
 
-   * - Rejected
-     - Rejected incidents are considered invalid and closed; you will no longer be able to make updates to rejected incidents. Setting an incident status to :guilabel:`Rejected` prevents further notifications. 
+   * - Dismissed
+     - Dismissed incidents are considered invalid and closed; you will no longer be able to make updates to dismissed incidents. Setting an incident status to :guilabel:`Rejected` prevents further notifications. 
 
    * - Resolved
      - Resolved incidents are considered investigated and closed. Setting an incident status to resolved prevents further notifications. 
