@@ -15,9 +15,7 @@ To send Observability Cloud alert notifications to Jira, follow these configurat
 .. note:: You must be an Observability Cloud administrator to perform these steps.
 
 * :ref:`jira1`
-
 * :ref:`jira2`
-
 
 .. _jira1:
 
@@ -84,7 +82,6 @@ To create a Jira integration in Observability Cloud, follow these steps:
    stating that the alert has cleared.
 
 #. Select :guilabel:`Save`.
-
 
 .. _jira2:
 
