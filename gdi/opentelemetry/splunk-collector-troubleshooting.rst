@@ -361,7 +361,8 @@ To send log data to Splunk Cloud or Enterprise and AlwaysOn Profiling data to Ob
          protocols:
             grpc:
                # Make sure to configure your agents
-               # to use the custom port for logs
+               # to use the custom port for logs when
+               # setting SPLUNK_PROFILER_LOGS_ENDPOINT
                endpoint: 0.0.0.0:4319
 
    exporters:
