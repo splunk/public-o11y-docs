@@ -289,12 +289,12 @@ Disable log data collection in the Collector
 
 By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs through a logs pipeline that uses the Splunk HEC exporter.
 
-If you need to disable log data collection, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``exporters`` section of your Collector configuration file:
+If you need to disable log data collection, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
 .. code-block:: yaml
    :emphasize-lines: 6, 7
 
-   splunk_hec/noprofiling:
+   splunk_hec:
       token: "${SPLUNK_HEC_TOKEN}"
       endpoint: "${SPLUNK_HEC_URL}"
       source: "otel"
