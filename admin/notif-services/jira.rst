@@ -5,18 +5,17 @@ Send alert notifications to Jira using Splunk Observability Cloud
 ****************************************************************************
 
 .. meta::
-      :description: Configure Observability Cloud to send alerts to Jira when a detector alert condition is met and when the condition clears.
+   :description: Configure Observability Cloud to send alerts to Jira when a detector alert condition is met and when the condition clears.
 
 You can configure Splunk Observability Cloud to automatically send alert notifications to Jira Cloud or Jira Server to create a new issue when a detector alert condition is met and add a comment to the issue when the alert clears.
+
+.. note:: You must be an Observability Cloud administrator to perform the following tasks.
 
 To send Observability Cloud alert notifications to Jira, perform the following configuration tasks:
 
 * :ref:`jira1`
 
-  You must be an Observability Cloud administrator to perform this task.
-
 * :ref:`jira2`
-
 
 .. _jira1:
 
@@ -39,9 +38,9 @@ The alert notification that this integration sends to Jira can automatically set
 
 If the Jira project you want to create issues in requires additional field values, you'll receive an error when you save the integration.
 
-You must be an Observability Cloud administrator to perform this task.
+.. note:: You must be an Observability Cloud administrator to perform the following tasks.
 
-To create a Jira integration in Observability Cloud:
+To create a Jira integration in Observability Cloud, perform these tasks:
 
 #. Log in to Splunk Observability Cloud.
 #. In the left navigation menu, select :menuselection:`Data Management`.
@@ -70,7 +69,6 @@ To create a Jira integration in Observability Cloud:
 #. (Optional) Click :strong:`Create Test Issue` to test your integration. If the integration is working, it creates a test Jira issue in the selected Jira project. After a short delay, the integration makes a comment on the same issue, stating that the alert has cleared.
 
 #. strong:`Save`.
-
 
 .. _jira2:
 
