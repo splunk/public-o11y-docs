@@ -12,13 +12,13 @@ Migration process from the Smart Agent to the Collector
 
 Do the following steps to migrate from the Smart Agent to the Collector:
 
-:ref:`deploy-the-collector-non-prod-env`
-:ref:`validate-deployment-of-collector` 
-:ref:`locate-sa-config-file`
-:ref:`use-translatefx` 
-:ref:`estimate-sizing` 
-:ref:`deploy-non-prod-updated-config` 
-:ref:`deploy-to-prod-updated-config` 
+* :ref:`deploy-the-collector-non-prod-env`
+* :ref:`validate-deployment-of-collector` 
+* :ref:`locate-sa-config-file`
+* :ref:`use-translatefx` 
+* :ref:`estimate-sizing` 
+* :ref:`deploy-non-prod-updated-config` 
+* :ref:`deploy-to-prod-updated-config` 
 
 .. _deploy-the-collector-non-prod-env:
 
