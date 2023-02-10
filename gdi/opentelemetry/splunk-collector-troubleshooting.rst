@@ -316,7 +316,7 @@ If you've deployed the Collector in Kubernetes using the Helm chart, change the 
 Send logs from the Collector to Splunk Cloud or Enterprise
 ------------------------------------------------------------
 
-If you're using the Collector for log collection and need to send data to Splunk Cloud, configure the ``splunk_hec`` exporter to use your Splunk ``endpoint`` and token. For example:
+If you're using the Collector for log collection and need to send data to Splunk Cloud or Splunk Enterprise, configure the ``splunk_hec`` exporter to use your Splunk ``endpoint`` and token. For example:
 
 .. code-block:: yaml
 
