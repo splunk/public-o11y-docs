@@ -153,6 +153,7 @@ If the td-agent package is upgraded after initial installation, you might need t
       Effective:   dac_override, dac_read_search
       Inheritable: dac_override, dac_read_search
       Permitted:   dac_override, dac_read_search
+
 #. If the output from the previous command does not include ``dac_override`` and ``dac_read_search`` as shown above, run the following commands:
 
    .. code-block:: bash
@@ -247,6 +248,7 @@ Splunk offers the manual configuration options described in this section:
 * :ref:`linux-docker`
 * :ref:`linux-packages`
 * :ref:`linux-binary-file`
+* :ref:`linux-tar``
 
 .. _linux-manual-permissions:
 
@@ -445,6 +447,31 @@ Do the following to install the package using a Debian or RPM package:
 Binary file
 -----------------------
 Download pre-built binaries (``otelcol_linux_amd64`` or ``otelcol_linux_arm64``) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+.. _linux-tar:
+
+Tar file
+-----------------------
+
+The ``tar.gz`` archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
+
+To use the tar file:
+
+#. Unarchive it to a directory of your choice on the target system.
+
+.. code-block:: bash
+
+   tar xzf splunk-otel-collector_<version>_<arch>.tar.gz
+   
+#. On ``amd64`` systems, go into the unarchived ``agent-bundle`` directory and run ``bin/patch-interpreter $(pwd)``. This ensures that the binaries in the bundle have the right loader set on them, since your host's loader might not be compatible.
+
+Working on non-default locations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you're running the Collector from a non-default location, the Smart Agent receiver and agent configuration file require that you set two environment variables currently used in the Smart Agent extension:
+
+* ``SPLUNK_BUNDLE_DIR``: The path to the Smart Agent bundle. For example, ``/usr/lib/splunk-otel-collector/agent-bundle``.
+* ``SPLUNK_COLLECTD_DIR``: The path to the ``collectd`` config directory for the Smart Agent. For example, ``/usr/lib/splunk-otel-collector/agent-bundle/run/collectd``. 
 
 More options
 ==================================
