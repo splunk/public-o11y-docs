@@ -12,7 +12,7 @@ Splunk APM system limits
 
 Splunk APM has system limits that help ensure performance, stability, and reliability. These limits also protect the Splunk APM multitenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
-There are several out-of-the-box charts for the metrics described below. You can view these charts by navigating to :guilabel:`Settings > Organization Overview > APM Entitlements`.
+There are several out-of-the-box charts in Splunk Observability Cloud for the metrics described below. Admins can view these charts by navigating to :guilabel:`Settings > Organization Overview > APM Entitlements`.
 
 .. _subscription-apm:
 
