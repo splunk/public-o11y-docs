@@ -292,7 +292,7 @@ By default, the Splunk Distribution of the OpenTelemetry Collector collects and 
 If you need to disable log data export to Observability Cloud, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
 .. code-block:: yaml
-   :emphasize-lines: 6, 7
+   :emphasize-lines: 6
 
    splunk_hec:
       token: "${SPLUNK_HEC_TOKEN}"
@@ -302,6 +302,8 @@ If you need to disable log data export to Observability Cloud, for example becau
       log_data_enabled: false
 
 To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
+
+.. note:: The ``log_data_enabled`` setting is available in the Splunk Distribution of OpenTelemetry Collector version 0.49.0 and higher.
 
 If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or ``values.yaml`` file:
 
@@ -341,6 +343,53 @@ If you're using the Collector for log collection and need to send data to Splunk
          # Whether to skip checking the certificate of the HEC endpoint when sending data over HTTPS. Defaults to false.
          # For this demo, we use a self-signed certificate on the Splunk docker instance, so this flag is set to true.
          insecure_skip_verify: true
+
+To send log data to Splunk Cloud or Enterprise and AlwaysOn Profiling data to Observability Cloud, configure two separate ``splunk_hec`` entries in the ``exporters`` section of the Collector configuration file. Add both to the logs pipeline. For example:
+
+.. code-block:: yaml
+
+   exporters:
+      # Export logs to Splunk platform
+      splunk_hec/platform:
+         token: "<splunk_token>"
+         endpoint: "https://splunk:8088/services/collector"
+         source: "otel"
+         sourcetype: "otel"
+         index: "main"
+         max_connections: 20
+         disable_compression: false
+         timeout: 10s
+         insecure_skip_verify: true
+      splunk_hec/profiling:
+         token: "<${SPLUNK_HEC_TOKEN}>"
+         endpoint: "${SPLUNK_HEC_URL}"
+         source: "otel"
+         sourcetype: "otel"
+         log_data_enabled: false
+
+   # Other settings
+
+   service:
+      pipelines:
+
+         # Traces and metrics pipelines
+
+         # Logs pipeline for Splunk platform
+         logs/platform:
+            receivers: [fluentforward, otlp]
+            processors:
+            - memory_limiter
+            - batch
+            - resourcedetection
+            exporters: [splunk_hec/platform]
+         # Logs pipeline for AlwaysOn Profiling
+         logs/profiling:
+            receivers: [fluentforward, otlp]
+            processors:
+            - memory_limiter
+            - batch
+            - resourcedetection
+            exporters: [splunk_hec/profiling]
 
 Trace collection issues
 ================================
