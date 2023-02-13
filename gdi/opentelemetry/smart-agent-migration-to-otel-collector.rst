@@ -1,4 +1,5 @@
 .. _migrate-from-sa-to-otel:
+.. _migrate-sa-to-otel-collector:
 
 ***********************************************************************************************
 Migrate from SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Collector
@@ -47,4 +48,4 @@ For example, see the Related Content bar displaying in Splunk APM. With the ``pa
       <h2>Understand OpenTelemetry formats for metrics and metric metadata<a name="migration-data" class="headerlink" href="#migration-data" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-Splunk provides a Mapping Service that defines equivalencies between legacy Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. Mapping supports multiple observers, deployment types, and kinds of metadata. See :new-page:`Understand OpenTelemetry formats for metrics and metric metadata <https://docs.splunk.com/Observability/gdi/opentelemetry/legacy-otel-mappings.html>` for more information. 
+Splunk provides a mapping service that defines equivalencies between legacy Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. Mapping supports multiple observers, deployment types, and kinds of metadata. See :new-page:`Metric mapping service <legacy-otel-mappings>` for more information. 
