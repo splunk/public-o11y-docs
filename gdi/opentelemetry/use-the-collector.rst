@@ -12,8 +12,6 @@ Use the Collector in Observability Cloud
     :titlesonly:
     :hidden:
 
-    translation-tool.rst
-    legacy-otel-mappings.md
     data-processing.rst
     deployment-modes.rst
     exposed-endpoints.rst
