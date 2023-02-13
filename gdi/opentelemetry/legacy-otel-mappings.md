@@ -1,25 +1,32 @@
 (legacy-otel-mappings)=
 
-# Metric mapping service and mapping report
+# Mapping service and mapping report
 
 <meta name="Description" content="Documentation on the legacy SignalFX Smart Agent and OpenTelementry Collector mappings in Splunk Observability Cloud">
 
-This document is for users that are migrating from the SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Collector. 
+The mapping service enables you to migrate from Smart Agent to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards, charts, and detectors. It automatically translates collectd (Smart Agent) conventions into the syntax used by the Collector as a background operation. 
 
-The mapping service enables you to migrate from Smart Agent to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards and detectors. Note that you cannot use both agents simultaneously on the same host.
+Mapping supports multiple observers, deployment types, and kinds of metadata. 
 
-## Behavior of the mapping service
+## How does the mapping service work?
 
-The mapping service is a transition tool that defines equivalencies between legacy SignalFx Smart Agent (deprecated) metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. 
+The mapping service is a transition tool that defines equivalencies between legacy SignalFx Smart Agent metric naming and semantic conventions and the OpenTelemetry names and formats: 
 
-- Mapping supports multiple observers, deployment types, and kinds of metadata. 
-- Mapping happens automatically as a background operation. 
+- It applies to metrics and metric time series (MTS), dimensions, and properties. 
+- Mapping logic treats any of the names for a metric or property as referring to that same metric or property in OpenTelemetry, without tracking versions.
 
-After you've migrated to the Collector, read <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a>, to learn you how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+For example, if you track CPU utilization for your Kubernetes pod, your analytics may use the ``kubernetes.container_cpu_limit`` value. In that case, the mapping service updates your existing queries to include both legacy semantics and new semantics (such as ``k8s.container.cpu_limit``) joined by an OR clause. The Mapping Service creates equivalencies between your Smart Agent and OTel metric names.
 
-## Obtain the mapping report
+### Navigate your data
 
-If you decide as a Splunk admin to turn off the mapping service, you can still generate and download a Mapping and OTel Transition Impact Report specific to migration for your cloud computing environment.
+Whether you're using the Smart Agent or the Collector, your original dashboards and detectors function the same way. 
+
+- Infrastructure Navigator views use the mapping service to show both old collection data and new collection data.
+- After you've migrated to the Collector, read <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a>, to learn you how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+
+## Obtain the transition mapping report
+
+If you decide as a Splunk admin to turn off the mapping service, you can still generate and download a **Mapping and OTel Transition Impact Report** specific to migration for your cloud computing environment.
 
 The mapping impact report explains how the transition from Smart Agent to OpenTelemetry affects some of the variables and saved filters in the following dashboards, charts, and detectors.
 
@@ -28,14 +35,14 @@ The mapping impact report also tells you where to find whatever subset of your c
 To access the migration transition impact report, follow these steps:
 
 1. Log in to Splunk Observability Cloud.
-2. In the left navigation menu, select :menuselection:`Settings > Billing and Usage`.
-3. Click the :guilabel:`View detailed usage reports` link.
-4. Select the :guilabel:`OpenTelemetry Migration` tab.
-5. Click :guilabel:`Download` to open the report as a comma-separated values file.
+2. In the left navigation menu, select **Settings > Billing and Usage**.
+3. Click the **View detailed usage reports** link.
+4. Select the **OpenTelemetry Migration** tab.
+5. Click **Download** to open the report as a comma-separated values file.
 
 ### What is flagged for update in translation
 
-The Mapping and OTel Transition Impact Report is specific to your computing environment. The report flags the following items and tells you where to find and update them in your collection of plots, filters, and functions:
+The report is specific to your computing environment. It flags the following items and tells you where to find and update them in your collection of plots, filters, and functions:
 
 - Wildcards
 - Direct references to Smart Agent metrics
@@ -95,7 +102,6 @@ Flagged items that need to be modified include the following (as listed in the r
 
 While the mapping impact report highlights items that need revising because they use legacy syntax or conventions, it also pairs those items with the OTel-based metrics and dimensions that you can use as substitutes for them.
 
-In other words, the mapping transition impact report helps take guesswork out of migration tasks.
 ## OpenTelemetry values and their legacy equivalents
 
 Refer to the following table for OpenTelemetry values and their legacy equivalents:
@@ -221,3 +227,6 @@ Refer to the following table for OpenTelemetry values and their legacy equivalen
 | `statefulSet` (Property) | `k8s.statefulset.name` (Property) |
 | `vmpage_faults.majflt` (Metric) | `system.paging.faults` (Metric) with dimension name `type` equal to `major` |
 | `vmpage_faults.minflt` (Metric) | `system.paging.faults` (Metric) with dimension name `type` equal to `minor` |
+
+
+ADD GH HERE

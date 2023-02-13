@@ -8,7 +8,7 @@ Migration process from the Smart Agent to the Splunk Distribution of the OpenTel
    :description: Describes the process of migrating from the SignalFX Smart Agent to the Splunk Distribution of OpenTelemetry Collector.
 
 .. note::
-   Using this content assumes that you're running the SignalFx SmartAgent in the Kubernetes, Linux, or Windows environments and want to migrate to the Splunk Distribution of OpenTelemetry Collector to collect telemetry data.
+   Using this content assumes that you're running the SignalFx SmartAgent in the Kubernetes, Linux, or Windows environments and want to migrate to the Splunk Distribution of OpenTelemetry Collector to collect telemetry data. Note that you cannot use both agents simultaneously on the same host.
 
 Do the following steps to migrate from the Smart Agent to the Collector:
 
@@ -196,7 +196,7 @@ If you are unable to determine the issue from logs, see :ref:`support`. Gather a
 3. Locate your existing Smart Agent configuration file
 ================================================================
 
-The Smart Agent can be configured by editing the agent.yaml file. By default, the configuration is installed at /etc/signalfx/agent.yaml on Linux and \ProgramData\SignalFxAgent\agent.yaml on Windows. If you override the location while installing the Smart Agent using the ``-config`` command line flag, the configuration file is stored at the location that you specify.
+The Smart Agent can be configured by editing the agent.yaml file. By default, the configuration is installed at ``/etc/signalfx/agent.yaml`` on Linux and ``\ProgramData\SignalFxAgent\agent.yaml`` on Windows. If you override the location while installing the Smart Agent using the ``-config`` command line flag, the configuration file is stored at the location that you specify.
 
 The following is an example YAML configuration file with default values where applicable:
 
@@ -244,49 +244,7 @@ The following is an example YAML configuration file with default values where ap
 4. Translate the Smart Agent configuration file using translatesfx
 =====================================================================================
 
-Use translatesfx to translate your existing Smart Agent configuration file into a configuration that can be used by the Collector. translatesfx is a command-line tool provided by Observability Cloud. 
-
-.. note::
-
-   translatesfx aims to automate most of the configuration changes required when migrating from the Smart Agent to the Collector. Any configuration produced by translatesfx should be carefully evaluated and tested before being put into production.
-
-There are two approaches to using translatesfx, from the command line or from the GUI.
-
-From the command line
-----------------------------------------------------------------------------
-
-To run the tool from the command line, download the executables from the :new-page:`releases page <https://github.com/signalfx/splunk-otel-collector/releases>`. The executables are also contained in the RPM, MSI, and Debian packages as well as the Docker images (version 0.36.1 and higher).
-
-The translatesfx command requires one argument, a Smart Agent configuration file, and accepts an optional second argument, which is the working directory used by any Smart Agent ``#from`` file expansion directives. The translatesfx command uses this working directory to resolve any relative paths to files referenced by any ``#from`` directives at runtime.
-
-.. code-block:: none
-
-   % translatesfx <sfx-file> [<file expansion working directory>]
-
-If this working directory argument is omitted, translatesfx expands relative file paths using the current working directory:
-
-.. code-block:: none
-
-   % translatesfx path/to/sfx/<config-filename>.yaml
-   % translatesfx /etc/signalfx/sa-config.yaml
-
-When translatesfx runs, it sends the translated Collector configuration to the standard output. By default, the standard output is printed to the console (command line output), but can be redirected to a file or to another program. To write the contents to disk, redirect this output to a new Collector configuration file:
-
-.. code-block:: none
-
-   % translatesfx /etc/signalfx/sa-config.yaml > /etc/signalfxotel-config.yaml
-
-From the GUI
-----------------------------------------------------------------------------
-
-#. Access the Smart Agent configuration converter at :new-page:`https://bossofopsando11y.com/configurator/saconverter <https://bossofopsando11y.com/configurator/saconverter>`. This tool is translatesfx with a GUI.
-#. Paste your Smart Agent configuration in the :menuselection:`Smart Agent YAML` section of the GUI.
-
-The corresponding translated Collector configuration file is populated in the OpenTelemetry YAML section.
-
-.. image:: /_images/gdi/3886-sa-configuration-tool.png
-   :width: 99%
-   :alt: View your translated configuration file. 
+``translatesfx`` is a command-line tool provided by Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. To learn how to use it, see :ref:`Configuration translation tool <otel-translation-tool>`.
 
 .. _estimate-sizing:
 

@@ -31,10 +31,10 @@ The Smart Agent metric monitors allow real-time insights into how your target se
 
 The benefits of using the Collector are:
 
-* Open standard based on OpenTelemetry
-* Support for new features such as code profiling
-* Ability to correlate data between different views within Observability Cloud with :ref:`Related Content <get-started-relatedcontent>` 
-* Bundled FluentD for log collection
+* Open standard based on OpenTelemetry.
+* Support for new features such as code profiling.
+* Ability to correlate data between different views within Observability Cloud with :ref:`Related Content <get-started-relatedcontent>`.
+* Bundled FluentD for log collection.
 
 For example, see the Related Content bar displaying in Splunk APM. With the ``paymentservice`` selected in the APM Service Map, the bar offers easy access to the paymentservice-related Kubernetes cluster data in Splunk Infrastructure Monitoring and logs in Splunk Log Observer:
 
@@ -45,7 +45,9 @@ For example, see the Related Content bar displaying in Splunk APM. With the ``pa
 .. raw:: html
 
    <embed>
-      <h2>Understand OpenTelemetry formats for metrics and metric metadata<a name="migration-data" class="headerlink" href="#migration-data" title="Permalink to this headline">¶</a></h2>
+      <h2>Configuration translation tool and data mapping service<a name="migration-data" class="headerlink" href="#migration-data" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-Splunk provides a mapping service that defines equivalencies between legacy Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. Mapping supports multiple observers, deployment types, and kinds of metadata. See :new-page:`Metric mapping service <legacy-otel-mappings>` for more information. 
+Observability Cloud provides a :ref:`translation tool <otel-translation-tool>` to help you adapt your Smart Agent YAML configuration file to a YAML that you can use with the Collector. 
+
+Observability Cloud also has a mapping service that defines equivalencies between legacy Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. See :ref:`Metric mapping service <legacy-otel-mappings>` for more information. 
