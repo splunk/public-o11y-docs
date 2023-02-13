@@ -90,7 +90,7 @@ Follow these steps to create a Monitoring MetricSet.
 
 4. In the :guilabel:`Add MetricSet` or :guilabel:`Edit MetricSet` dialog box, select the check box for :strong:`Also Create Monitoring MetricSet`.
 
-      .. image:: /_images/apm/span-tags/cmms-dialog box.png
+      .. image:: /_images/apm/span-tags/cmms-modal.png
         :width: 70%
         :alt: This image shows the MetricSet creation dialog box. 
 
