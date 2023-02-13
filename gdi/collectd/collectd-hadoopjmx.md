@@ -112,7 +112,7 @@ The following table shows the configuration options for the collectd/hadoopjmx r
 | `host` | **yes** | `string` | Host to connect to. JMX must be configured for remote access and be accessible from the agent. |
 | `port` | **yes** | `integer` | JMX connection port on the application. Not the RMI port. This correponds to the `com.sun.management.jmxremote.port` Java property set on the JVM when running the application. |
 | `name` | no | `string` |  |
-| `serviceName` | no | `string` | How the service type is identified in Splunk Observability Cloud so that you can get built-in content for it.  For custom JMX integrations, set it to an arbitrary value so that metrics get the special property `sf_hostHasService` set to that value. |
+| `serviceName` | no | `string` | How the service type is identified in Splunk Observability Cloud so that you can get built-in content for it.  For custom JMX integrations, set it to an arbitrary value. |
 | `serviceURL` | no | `string` | The JMX connection string. Rendered as a Go template. Has access to the other values in this configuration. Under normal circumstances, don't set this string directly and use the host and port settings instead. The default value is `service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi`. |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with a prefix. If a second `instancePrefix` is specified in a referenced MBean block, the prefix specified in the Connection block appears at the beginning of the plugin instance, and the prefix specified in the MBean block is appended to it. |
 | `username` | no | `string` | Username to authenticate to the server. |
