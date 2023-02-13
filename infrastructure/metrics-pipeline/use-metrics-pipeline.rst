@@ -1,13 +1,15 @@
-:orphan:
-
-.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
-
 
 .. _use-metrics-pipeline:
 
 *********************************************************************
 Control your metric ingestion volume with rules
 *********************************************************************
+
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
 
 .. meta::
     :description: Learn how to create metric rules in metrics pipeline management.

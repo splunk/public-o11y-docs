@@ -1,12 +1,15 @@
-:orphan:
-
-.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
 
 .. _metrics-pipeline-intro:
 
 ******************************************************
 Introduction to metrics pipeline management
 ******************************************************
+
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
 
 .. meta::
     :description: Introduction to metrics pipeline management in Splunk Observability Cloud.

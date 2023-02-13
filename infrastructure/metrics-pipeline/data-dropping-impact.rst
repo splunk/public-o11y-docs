@@ -1,12 +1,15 @@
-:orphan:
-
-.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
 
 .. _data-dropping-impact:
 
 *********************************************************************
 Data dropping impacts
 *********************************************************************
+
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
 
 .. meta::
     :description: Learn about the impact of data dropping in metrics pipeline management.

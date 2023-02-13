@@ -1,13 +1,15 @@
-:orphan:
-
-.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
-
 
 .. _aggregate-drop-use-case:
 
 ****************************************************************************************************
 Use case: Combine aggregation and dropping rules to control your metric cardinality and volume
 ****************************************************************************************************
+
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
 
 .. meta::
     :description: Aggregation and dropping use case for metrics pipeline management.

@@ -610,6 +610,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Metrics pipeline management TOGGLE <infrastructure/metrics-pipeline/metrics-pipeline>
+
+.. toctree::
+   :maxdepth:   3
+
    Network Explorer TOGGLE <infrastructure/network-explorer/network-explorer>
 
 .. toctree::
