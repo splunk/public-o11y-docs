@@ -228,5 +228,4 @@ Refer to the following table for OpenTelemetry values and their legacy equivalen
 | `vmpage_faults.majflt` (Metric) | `system.paging.faults` (Metric) with dimension name `type` equal to `major` |
 | `vmpage_faults.minflt` (Metric) | `system.paging.faults` (Metric) with dimension name `type` equal to `minor` |
 
-
-ADD GH HERE
+You can find a table outlining OpenTelemetry values and their legacy equivalents in GitHub at: :new-page:`Legacy to OTel semantics mapping table <https://github.com/signalfx/integrations/blob/mappings/mappings/mappings.md>`.
