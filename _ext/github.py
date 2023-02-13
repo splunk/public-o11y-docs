@@ -20,12 +20,12 @@ class GitHub(sphinx.directives.code.CodeBlock):
           try:
             call_context = ssl._create_unverified_context()
             f = urllib.request.urlopen(url,context=call_context)
-            self.content = f.read().decode('utf-8')
+            self.content = f.read().decode('utf-8').splitlines()
             #self.content = statemachine.StringList(f.text.splitlines())
           except urllib.error.HTTPError as e:
-            self.content = e.read().decode('utf-8')
+            self.content = e.read().decode('utf-8').splitlines()
           except urllib.error.URLError as e:
-            self.content = e.read().decode('utf-8')
+            self.content = e.read().decode('utf-8').splitlines()
         else:
             message = "Referenced file does not belong to Splunk repositories."
             self.content = message.splitlines()
