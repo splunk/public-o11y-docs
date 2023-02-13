@@ -67,6 +67,10 @@ The following fields are transformed as part of the common information model. Al
      - 
      - Integer
      - Date-time. Send date-time in epoch format
+   * - source 
+     - 
+     - String
+     - The alert source
 
 
 JSON payload
