@@ -15,6 +15,7 @@ Install the Collector
     Kubernetes <install-k8s.rst>
     Linux <install-linux.rst>
     Windows <install-windows.rst>
+    Windows (manual) <install-windows-manual.rst>
     deployments/otel-deployments.rst
     uninstall-the-collector.rst
 
@@ -22,12 +23,12 @@ The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, L
 
 * Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`.
 * Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux <otel-install-linux>`.
-* Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows <otel-install-windows>`.
+* Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`.
 
 .. raw:: html
 
   <embed>
-    <h2>Components of the Collector<a name="collector-components" class="headerlink" href="#collector-components" title="Permalink to this headline">¶</a></h2>
+    <h2>Components of the Collector<a name="collector-components-index" class="headerlink" href="#collector-components-index" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 The Collector uses the components listed in the following table:
