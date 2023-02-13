@@ -18,7 +18,7 @@ The Splunk Distribution of OpenTelemetry Collector for Windows is a package that
 
 * :ref:`Installer script <windows-script>`
 * :ref:`Deployments <windows-deployments>`
-* :ref:`Manual <windows-manual>`
+* :ref:`Manual install <otel-install-windows-manual>`
 
 .. _windows-otel-requirements:
 
@@ -28,26 +28,26 @@ Prerequisites
 The Splunk Distribution of OpenTelemetry Collector for Windows has the following requirements depending on the install method:
 
 .. list-table::
-   :header-rows: 1
-   :widths: 40 60
-   :width: 100
+  :header-rows: 1
+  :widths: 40 60
+  :width: 100
 
-   * - Install method
-     - Supported versions (64-bit)
-   * - Installer script
-     - Windows 2012, 2016, 2019, 2022
-   * - Windows installer (MSI)
-     - Windows 2012, 2016, 2019, 2022
-   * - Ansible
-     - Windows 2012, 2016, 2019, 2022
-   * - Chef
-     - Windows 2019, 2022
-   * - Nomad
-     - Windows 2012, 2016, 2019
-   * - Puppet
-     - Windows 2012, 2016, 2019
-   * - Docker
-     - Windows 2019, 2022
+  * - Install method
+    - Supported versions (64-bit)
+  * - Installer script
+    - Windows 2012, 2016, 2019, 2022
+  * - Windows installer (MSI)
+    - Windows 2012, 2016, 2019, 2022
+  * - Ansible
+    - Windows 2012, 2016, 2019, 2022
+  * - Chef
+    - Windows 2019, 2022
+  * - Nomad
+    - Windows 2012, 2016, 2019
+  * - Puppet
+    - Windows 2012, 2016, 2019
+  * - Docker
+    - Windows 2019, 2022
 
 .. _windows-script:
 
@@ -69,7 +69,7 @@ Do the following to install the package using the installer script:
 
 .. code-block:: PowerShell
 
-   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 Configure memory allocation
 ----------------------------------
@@ -78,7 +78,7 @@ To configure memory allocation, use the ``memory`` parameter. By default, this p
 
 .. code-block:: PowerShell
 
-   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; memory = "SPLUNK_MEMORY_TOTAL_MIB"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; memory = "SPLUNK_MEMORY_TOTAL_MIB"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 Replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
@@ -103,8 +103,8 @@ After any configuration modification, apply the changes by restarting the system
 
 .. code-block:: PowerShell
 
-   Stop-Service fluentdwinsvc
-   Start-Service fluentdwinsvc
+  Stop-Service fluentdwinsvc
+  Start-Service fluentdwinsvc
 
 .. _windows-deployments:
 

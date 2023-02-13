@@ -12,8 +12,6 @@ Install the Collector for Windows manually
   :titlesonly:
   :hidden:
 
-The Splunk Distribution of OpenTelemetry Collector for Windows is a package that provides integrated collection and forwarding for all data types. 
-
 Before proceeding to install the Collector for Windows manually, check the :ref:`prerequisites <windows-otel-requirements>`.
 
 .. _windows-docker:
