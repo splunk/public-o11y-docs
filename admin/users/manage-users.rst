@@ -5,7 +5,7 @@ Create and manage users in Splunk Observability Cloud
 ********************************************************
 
 .. meta::
-   :description: Learn how to how to manage users.
+   :description:  Manage users: add, remove, grant admin access, view login details, and unlock an account.
 
 .. toctree::
    :hidden:
@@ -24,8 +24,11 @@ Any user can run the following actions:
 * :ref:`request-admin`
 * :ref:`look-up-user-login`
 * :ref:`user-account-locked`
-* :ref:`color-accessibility`
 
+Only the current user can run the following actions:
+
+* :ref:`change_time_zone_color_accessibility`
+* :ref:`api-access-token`
 
 .. _add-users-organization:
 
@@ -37,9 +40,10 @@ Add users to your organization by sending them an email invitation.
 To send invitations to users, follow these steps:
 
 #. From the Splunk Observability home page, expand the left navigation menu and select :guilabel:`Settings`.
-#. Select :guilabel:`Invite Users`.
-#. Enter the email addresses of your desired members in the dialog box. Separate each email address with a comma.
-#. Select :guilabel:`Invite`.
+#. Select :guilabel:`Users`.
+#. Select :guilabel:`Invite User`.
+#. Enter the email addresses of your desired members in the dialog box. Separate each email address with a comma or single blank space.
+#. Select :guilabel:`Send Invitation`.
 
 Users receive an email from Splunk Observability Cloud containing instructions for signing into
 the organization. After they sign up, their names appear in the menu in the
@@ -54,10 +58,11 @@ To remove users from the organization, follow these steps:
 
 #. From the Splunk Observability menu, select :menuselection:`Settings > Users`.
    A table of current members appears in the main panel.
-#. Find the name of the user you want to remove.
+#. Use the Search field to find the name of the user you want to remove, either by name or email address.
 #. Select the :guilabel:`Actions` () menu icon next the username, then select :menuselection:`Remove User`.
 #. Observability Cloud displays a dialog box that asks you to confirm the deletion. Select:abbr:`Delete`.
-#. The user no longer appears in the list of members.
+
+The user no longer appears in the list of members.
 
 .. _manage_admin-access:
 
@@ -130,13 +135,3 @@ After a user makes too many unsuccessful login attempts, Observability Cloud loc
 The user's account is locked for several minutes before the user can try to log in again.
 
 If you need to unlock an account before the lock period ends, contact :ref:`support`.
-
-.. _color-accessibility:
-
-Change color accessibility settings 
-=======================================
-
-Many features of Splunk Observability Cloud use colors to display patterns in data. If your users need more visually accessible color palettes, select :strong:`Account Settings > Color Accessibility` to modify it. 
-
-.. note::
-   Each user must change their own color accessibility settings, and an administrator cannot change these settings for other users.

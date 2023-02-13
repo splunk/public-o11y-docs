@@ -2,7 +2,7 @@
 
 # Apache HTTP Server
 
-<meta name="description" content="Documentation for the apache monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Apache HTTP server monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -43,10 +43,22 @@ Apache worker threads can be in one of the following states:
 
 ```
 receivers:
-  smartagent/apache
+  smartagent/apache:
     type: collectd/apache
     ... # Additional config
 ```
+
+The following is an example of what you can use to replace the placeholder, `... # Additional config`:
+
+    host: localhost
+    port: 80
+
+If `mod_status` is exposed on an endpoint other than `/mod_status`, you can use the url config option to specify the path:
+
+    type: collectd/apache
+    host: localhost
+    port: 80
+    url: "http://{{.Host}}:{{.Port}}/server-status?auto"
 
 To complete the integration, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
 

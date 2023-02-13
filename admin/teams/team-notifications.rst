@@ -5,7 +5,7 @@ Manage team notifications in Splunk Observability Cloud
 *****************************************************************
 
 .. meta::
-      :description: Configure a team notification policy to help your team stay aware of alerts from detectors.
+      :description: Configure a general team notification policy, or notification by alert severity, to help your team stay aware of alerts from detectors.
 
 
 Configure a team notification policy to help your team stay aware of alerts from detectors.
@@ -22,11 +22,11 @@ To configure a team notification policy, follow these steps:
 
 #. In the left navigation menu, select :menuselection:`Settings > Teams`.
 
-#. A table of current teams appears in the main panel.
+#. A table of current teams appears in the main panel. Select the team for which you want to manage notifications.
 
 #. Click :guilabel:`Notification Policy` for your team.
 
-#. Click :guilabel:`Configure a single policy for alerts of any severity` to define a single notification policy for alerts of all severities. Click :guilabel:`Configure separate notification tiers for different severity alerts` to define a separate notification policy for each severity level.
+#. Click :guilabel:`Switch to general notifications` to define a single notification policy for alerts of all severities. Click :guilabel:`Switch to severity-based notification` to define a separate notification policy for each severity level.
 
 #. Add and remove notification recipients as needed.
 

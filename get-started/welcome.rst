@@ -49,6 +49,8 @@ Start learning about how the following Observability Cloud products work to prov
 
 - :ref:`welcome-oncall`
 
+- :ref:`welcome-incident-intelligence`
+
 - :ref:`welcome-mobile`
 
 
@@ -122,6 +124,15 @@ Splunk On-Call
 Splunk On-Call incident response software aligns log management, monitoring, chat tools, and more, for a single-pane of glass into system health. Splunk On-Call automates delivery of alerts to get the right alert, to the right person, at the right time.
 
 For more information, see the :new-page:`Splunk On-Call documentation <https://help.victorops.com/>`.
+
+.. _welcome-incident-intelligence:
+
+Splunk Incident Intelligence
+===============================
+
+Splunk Incident Intelligence incident response software lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing. 
+
+For more information, see the :ref:`ii-get-started-incident-intelligence`.
 
 
 .. _welcome-mobile:

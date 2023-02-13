@@ -4,8 +4,10 @@
 Investigate the root cause of an error with Splunk APM service map
 *************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-    :description: A Splunk APM use cases describes how to use APM service map to investigate root cause error rate
+    :description: This Splunk APM use case describes how to use APM service map to investigate root cause error rate.
 
 Kai, a site reliability engineer at Buttercup Games, receives tickets from multiple customers getting “Invalid request” errors when purchasing games on the Buttercup Games website. To figure out the most downstream service causing the error, Kai selects the :strong:`Explore` window in Splunk APM to open the service map for troubleshooting. 
 
@@ -24,7 +26,7 @@ Kai clicks the :strong:`paymentservice` node to discover the endpoint with the t
     :width: 70%
     :alt: This screenshot shows the Tag Spotlight preview of the endpoints with the top error rate and the top latency.
 
-Kai adds the link to the endpoint’s Tag Spotlight and a note identifying the endpoint as the root cause of the error to customers’ tickets. Kai sends the ticket to the payment service owner for further troubleshooting.
+Kai adds the link to the endpoint's Tag Spotlight and a note identifying the endpoint as the root cause of the error to customers' tickets. Kai sends the ticket to the payment service owner for further troubleshooting.
 
 Learn more
 ==============

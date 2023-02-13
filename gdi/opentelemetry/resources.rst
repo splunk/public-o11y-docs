@@ -5,7 +5,7 @@ Overview of the Splunk Distribution of OpenTelemetry Collector
 *********************************************************************************
 
 .. meta::
-   :description: Resources for using the Splunk Distribution of OpenTelemetry Collector.
+   :description: Resources for using the Splunk Distribution of OpenTelemetry Collector: Architecture, Components, Monitoring, Security, Troubleshooting.
 
 This page provides a list of resources for using the Splunk Distribution of OpenTelemetry Collector. 
 
@@ -19,7 +19,7 @@ Refer to the following topics for an overview of the Collector:
 - :ref:`otel-components`, which describes what the Collector supports.
 - :ref:`otel-monitoring`, which describes how to ensure that the Collector is healthy.
 - :ref:`otel-security`, which describes how to ensure that the Collector is secure.
-- :ref:`otel-sizing`, which describes how to ensure that the collecor is properly sized.
+- :ref:`otel-sizing`, which describes how to ensure that the collector is properly sized.
 - :ref:`otel-splunk-collector-tshoot`, which describes how to resolve common issues with the Collector.
 
 Getting started
@@ -56,31 +56,32 @@ Read our docs on how to :ref:`configure the Collector <otel-configuration>`, inc
 
 .. note::
 
-   SignalFx Smart Agent is deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`. See :ref:`Migrating from the SignalFx Smart Agent <migrate-from-sa-to-otel>` for resources and best practices to start using the Collector, which is the replacement for the Smart Agent.
+   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`. See :ref:`Migrating from the SignalFx Smart Agent <migrate-from-sa-to-otel>` for resources and best practices to start using the Collector, which is the replacement for the Smart Agent.
 
 .. _using-upstream-otel:
 
 Upstream OpenTelemetry Collector
 =============================================
 
-It is possible to use the upstream OpenTelemetry Collector instead of this Splunk Distribution of OpenTelemetry Collector. The following features are not available upstream at this time:
+You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector, but the following features are not
+available:
 
-- Packaging, including installer scripts for Linux and Windows, and configuration management using Ansible or Puppet
+- Packaging, including installer scripts for Linux and Windows
+- Configuration management using Ansible or Puppet
 - Configuration sources
 - Several Smart Agent capabilities
+- Visualizations and correlations that are prepackaged in the Splunk Distribution of OpenTelemetry Collector
 
-.. caution::
+.. note::
 
    Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
    Splunk only provides best-effort support for the upstream OpenTelemetry Collector.
 
-Do the following to use the upstream OpenTelemetry Collector:
+To use the upstream OpenTelemetry Collector, follow these steps:
 
-#. Use the :new-page:`OpenTelemetry Collector contribution <https://github.com/open-telemetry/opentelemetry-collector-contrib>`. This contribution includes receivers/exporters and components that are vendor specific.
+#. Get the :new-page:`OpenTelemetry Collector contribution <https://github.com/open-telemetry/opentelemetry-collector-contrib>`. This contribution includes receivers/exporters and vendor-specific components.
 
-#. Configure the upstream OpenTelemetry Collector.
-
-See :new-page:`upstream_agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/upstream_agent_config.yaml>` for an example configuration for the upstream OpenTelemetry Collector. This configuration includes the recommended settings to ensure :new-page:`infrastructure correlation <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/apm-infra-correlation.md>`.
+#. Configure the upstream OpenTelemetry Collector. See :new-page:`upstream_agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/upstream_agent_config.yaml>` for an example configuration for the upstream OpenTelemetry Collector. This configuration includes the recommended settings to ensure :new-page:`infrastructure correlation <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/apm-infra-correlation.md>`.
 
 Troubleshooting
 =============================================

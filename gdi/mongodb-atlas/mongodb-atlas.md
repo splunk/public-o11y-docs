@@ -2,7 +2,7 @@
 
 # MongoDB Atlas cluster
 
-<meta name="description" content="Documentation on the mongodb-atlas monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the MongoDB Atlas monitor. See benefits, install, configuration, and metrics">
 
 > _**Note:**_ Use the [MongoDB Atlas receiver](https://docs.splunk.com/Observability/gdi/mongodb-atlas/mongodb-atlas-receiver.html) in place of the SignalFx Smart Agent ``mongodb-atlas`` cluster monitor. The Smart Agent is deprecated. For details, see the [deprecation notice](https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md). 
 

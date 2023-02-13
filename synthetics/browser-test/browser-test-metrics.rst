@@ -299,27 +299,27 @@ Content size metrics capture information about the size of resources on a page. 
 
    * - Total HTML size
      - ``synthetics.resource_request.size.bytes`` 
-     - Total size (in bytes) of all HTML content loaded. The content type is indicated by the ``content_size`` dimension.
+     - Total size (in bytes) of all HTML content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total image size
      - ``synthetics.resource_request.size.bytes`` 
-     - Total size (in bytes) of all image content loaded. The content type is indicated by the ``content_size`` dimension.
+     - Total size (in bytes) of all image content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total JavaScript size
      - ``synthetics.resource_request.size.bytes`` 
-     - Total size (in bytes) of all JavaScript content loaded. The content type is indicated by the ``content_size`` dimension.
+     - Total size (in bytes) of all JavaScript content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total CSS size
      - ``synthetics.resource_request.size.bytes`` 
-     - Total size (in bytes) of all CSS content loaded. The content type is indicated by the ``content_size`` dimension.
+     - Total size (in bytes) of all CSS content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total video size
      - ``synthetics.resource_request.size.bytes`` 
-     - Total size (in bytes) of all video content loaded. The content type is indicated by the ``content_size`` dimension.
+     - Total size (in bytes) of all video content loaded. The content type is indicated by the ``content_type`` dimension.
 
    * - Total font size
      - ``synthetics.resource_request.size.bytes`` 
-     - Total size (in bytes) of all font content loaded. The content type is indicated by the ``content_size`` dimension.
+     - Total size (in bytes) of all font content loaded. The content type is indicated by the ``content_type`` dimension.
      
    * - Total other size
      - ``synthetics.resource_request.size.bytes`` 

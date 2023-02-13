@@ -17,11 +17,17 @@ Generate customized instructions using the guided setup
 To generate all the basic installation commands for your environment and application, use the Node.js guided setup. To access the Node.js guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`By Product`.
-#. Select the :guilabel:`APM` product.
-#. Select the :guilabel:`Node.js` tile to open the Node.js guided setup.
+#. Open the :new-page:`Node.js guided setup <https://login.signalfx.com/#/gdi/scripted/nodejs-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"nodejs-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`. 
+
+   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+
+   #. In the integration filter menu, select :guilabel:`By Product`.
+
+   #. Select the :guilabel:`APM` product.
+
+   #. Select the :guilabel:`Node.js` tile to open the Node.js guided setup.
 
 .. _install-enable-nodejs-agent:
 
@@ -89,11 +95,23 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-nodejs-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. caution:: CPU profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
-
 To enable AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
-For more settings, see :ref:`profiling-configuration-nodejs`.
+To enable memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+
+The following example shows how to enable the profiler from your application's code:
+
+.. code-block:: javascript
+
+   start({
+      serviceName: '<service-name>',
+      endpoint: 'collectorhost:port',
+      profiling: {                       // Enables CPU profiling
+         memoryProfilingEnabled: true,   // Enables Memory profiling
+      }
+   });
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-nodejs`.
 
 .. _enable_automatic_metric_collection_nodejs:
 
@@ -241,7 +259,9 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 
 The realm name appears in the :guilabel:`Organizations` section.
 
-.. note:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
+.. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
 
 Instrument Lambda functions
 ==================================

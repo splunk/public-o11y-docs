@@ -4,6 +4,8 @@
 Reference for Database Query Performance
 ************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Reference material for using Database Query Performance in Splunk APM. 
 

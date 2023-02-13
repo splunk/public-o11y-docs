@@ -175,8 +175,10 @@ Browser test metrics
 In addition to these diagnostics, every run of a Browser Test produces a set of 40+ metrics that offer a picture of website performance. See :ref:`browser-metrics` for a complete list of these metrics. 
 
 
+.. _detector-browser-test:
+
 Detect and report on your synthetic metrics
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------------------------
 To get even more value out of your synthetic metrics, use the Splunk Observability Cloud metrics engine to create custom metrics, charts, and detectors. See the following links for more information:
 
 * To build charts and dashboards using your metrics, see :ref:`dashboards`.

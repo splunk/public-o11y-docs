@@ -11,15 +11,17 @@ Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS L
 
 :strong:`Tip:` To generate a template that instruments your Lambda function using the Splunk OpenTelemetry Lambda Layer, use the AWS Lambda guided setup. To access the AWS Lambda guided setup, follow these steps:
 
-1. Log in to Splunk Observability Cloud
+#. Log in to Splunk Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+#. Open the :new-page:`AWS Lambda guided setup <https://login.signalfx.com/#/gdi/scripted/awslambda/step-1?category=product-apm&gdiState=%7B"integrationId":"awslambda"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-3. In the integration filter menu, select :guilabel:`All`.
+   #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
-4. In the :guilabel:`Search` field, search for :guilabel:`AWS Lambda`.
+   #. In the integration filter menu, select :guilabel:`All`.
 
-5. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
+   #. In the :guilabel:`Search` field, search for :guilabel:`AWS Lambda`.
+
+   #. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
 .. _otel-lambda-layer-requirements:
 
@@ -34,7 +36,9 @@ The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lam
 - Ruby 2.7
 - Go 1.18
 
-For more information, search for "Lambda runtimes" on the AWS documentation website.
+The Lambda Layer requires 49 MB on-disk in standard x86_64 systems.
+
+For more information, search for Lambda runtimes and other system requirements on the AWS documentation website.
 
 .. _install-otel-lambda-layer:
 

@@ -5,7 +5,7 @@ Configure an Azure Active Directory (Azure AD) SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. The Microsoft Azure Active Directory (Azure AD) integration lets users log in to Observability Cloud using their Azure AD account.
+   :description: Configure the Microsoft Azure Active Directory (Azure AD) integration to let users log in to Observability Cloud using their Azure AD account.
 
 
 The Microsoft Azure Active Directory (Azure AD) integration lets users log in to Observability Cloud using their Azure AD account.
@@ -46,3 +46,5 @@ signs in. Subsequent login attempts don't require validation.
 If you want to turn off the email authentication feature, contact :ref:`support`.
 
 Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their Azure AD credentials instead. Azure AD SSO authentication and Observability Cloud username/password authentication are independent.
+
+.. include:: /_includes/troubleshooting-steps.rst

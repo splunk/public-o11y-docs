@@ -4,8 +4,10 @@
 Correlate traces to track Business Workflows
 ********************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Correlate logically-related traces with Business Workflows in Splunk Observability Cloud.
+   :description: Learn how to correlate logically-related traces with Business Workflows in Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -13,6 +15,13 @@ Correlate traces to track Business Workflows
    create-workflow-rule
    example-business-workflow
    workflow-alerts
+
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
+
 
 Business Workflows generate Monitoring and Troubleshooting MetricSets for traces that fit Business Workflow rules. You can configure Business Workflow rules to group logically-related traces by services or global tags, or monitor performance indicators on transactions with dashboards and alerts.
 

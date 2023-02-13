@@ -2,7 +2,7 @@
 
 # Microsoft .NET
 
-<meta name="description" content="Documentation on the dotnet monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the .Net (dotnet) apps monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -47,7 +47,7 @@ To install this integration:
 
 The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
-**Note:** Providing a .NET monitor entry in your Smart Agent or Collector configuration is required for its use. Use the appropriate form for your agent type.
+**Note:** Providing a .NET monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
 
 ### Splunk Distribution of OpenTelemetry Collector
 

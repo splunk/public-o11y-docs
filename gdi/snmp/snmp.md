@@ -1,7 +1,7 @@
 (snmp)=
 
 # SNMP agent
-<meta name="description" content="Documentation on the snmp monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the SNMP agent monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
@@ -31,7 +31,7 @@ This monitor doesn't support MIB lookups`.
 ```
 
 ```{note}
-Provide an SNMP monitor entry in your Smart Agent or Collector configuration. Use the appropriate form for your agent type.
+Provide an SNMP monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
 ```
 
 ### Splunk Distribution of OpenTelemetry Collector

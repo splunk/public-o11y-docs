@@ -7,13 +7,18 @@ Introduction to Splunk Log Observer Connect
 .. meta created 2021-12-03
 
 .. meta::
-   :description: Integrate Log Observer with Splunk Enterprise and use Log Observer Connect.
+   :description: Log Observer integration with Splunk Cloud Platform or Splunk Enterprise. The introduction is an overview describing all Log Observer Connect functionality.
+
+
+If you have a Log Observer entitlement rather than Log Observer Connect, see :ref:`get-started-logs`. 
 
 Splunk Log Observer Connect is an integration that allows you to query your Splunk Enterprise or Splunk Cloud Platform logs using the capabilities of Splunk Log Observer and :ref:`Related Content <get-started-relatedcontent>` in Splunk Observability Cloud. With Log Observer Connect, you can troubleshoot your application and infrastructure behavior using high-context logs. Perform codeless queries on your Splunk Enterprise or Splunk Cloud Platform logs to detect the source of problems in your systems, then jump to Related Content throughout Splunk Observability Cloud in one click. Seeing your logs data correlated with metrics and traces in Observability Cloud helps your team to locate and resolve problems exponentially faster.
 
 Region and version availability
 ==============================================================
 Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Enterprise and Splunk Cloud Platform versions 8.2 and higher. Log Observer Connect is not available for Splunk Cloud Platform trials.
+
+Customers cannot access logs from a GovCloud environment through Log Observer Connect. However, you can use global data links to link from Log Observer Connect to your GovCloud environment where you can access your logs. For more information on global data links, see :ref:`link-metadata-to-content`.
 
 What can I do with Log Observer Connect?
 ==============================================================

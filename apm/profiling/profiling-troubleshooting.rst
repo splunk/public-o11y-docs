@@ -82,7 +82,9 @@ Another cause for call stacks not appearing is when HTTP requests follow an asyn
 AlwaysOn Profiling is not accessible in Observability Cloud
 ============================================================
 
-If you're sending profiling data to Observability Cloud but can't see AlwaysOn Profiling in Splunk APM, your organization might be lacking the profiler entitlement. 
+If you're sending profiling data to Observability Cloud but can't see AlwaysOn Profiling in Splunk APM, your organization might be lacking the profiler entitlement.
+
+AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, AlwaysOn Profiling might be disabled depending on the contract.
 
 To solve this issue, reach out to Splunk Support to request they enable the AlwaysOn Profiling feature.
 
@@ -96,3 +98,8 @@ Some profiler issues might be specific to the APM instrumentation. See the follo
 - :ref:`java-profiler-issues`
 - :ref:`nodejs-profiler-issues`
 - :ref:`dotnet-profiler-issues`
+
+Disable profiling log data for specific hosts
+==============================================================
+
+If you don't need AlwaysOn Profiling data for a specific host or container, see :ref:`unwanted_profiling_logs`.

@@ -1,22 +1,24 @@
 .. _monitor-autodetect:
 
 ***************************************************
-Monitor system limits with AutoDetect 
+Use case: Monitor system limits with AutoDetect 
 ***************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-    :description: A Splunk alerts and detectors use case describes how to use AutoDetect to track system limits.
+    :description: This Splunk alerts and detectors use case describes how to use AutoDetect to track system limits.
 
 Kai, a site reliability engineer at Buttercup Games, wants to know when they are reaching their limit for the number of detectors they can create for Buttercup Games. This limit is automatically monitored through an AutoDetect detector, which Kai can view from the Alerts and Detectors page.
 
 View AutoDetect alerts and detectors
 ========================================
 
-To utilize their AutoDetect detector, Kai must first find and view the details of the detector. This detector is titled "Splunk Operational -- Number of detectors is expected to reach the maximum".
+To use their AutoDetect detector, Kai must first find and view the details of the detector. This name of the detector is :guilabel:`Splunk Operational -- Number of detectors is expected to reach the maximum`.
 
 Kai finds the detector by following these steps:
 
-#. Kai opens the :guilabel:`All alerts` drop-down menu and unchecks :strong:`Standard` and :strong:`Customized AutoDetect` to filter for only AutoDetect detectors.
+#. Kai opens the :guilabel:`All alerts` menu and unchecks :strong:`Standard` and :strong:`Customized AutoDetect` to filter for only AutoDetect detectors.
 #. Kai enters the name of the detector in the search bar.
 #. Kai selects the detector from the result list.
 
@@ -54,7 +56,7 @@ Kai's AutoDetect detector will trigger an alert when the number of detectors use
 
 To customize this detector, Kai follows these steps:
 
-#. Kai selects the "Splunk Operational -- Number of detectors is expected to reach the maximum" detector. 
+#. Kai selects the :guilabel:`Splunk Operational -- Number of detectors is expected to reach the maximum`` detector. 
 #. In the detector menu, Kai selects :guilabel:`Create a Customized Version`.
 #. Kai changes the :guilabel:`Trigger threshold` to :guilabel:`75%`.
 #. Kai selects :guilabel:`Activate`. 

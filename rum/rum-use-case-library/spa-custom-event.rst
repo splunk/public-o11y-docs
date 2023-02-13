@@ -9,8 +9,8 @@ The following use cases feature examples from Buttercup Industries, a fictitious
 
 About this use case 
 ================================
-Buttercup Industries recently started a blog to share customer success stories and engage with their user base. The engineers at Buttercup Industries created the blog as a single-page application (SPA). Kai, a site reliability engineer at Buttercup Industries, monitors the blog with RUM to learn more about route changes, route durations, and back-end calls. Kai also leverages custom events in RUM to monitor how users engage with content on the blog.  
 
+Buttercup Industries recently started a blog to share customer success stories and engage with their user base. The engineers at Buttercup Industries created the blog as a single-page application (SPA). Kai, a site reliability engineer at Buttercup Industries, monitors the blog with RUM to learn more about route changes, route durations, and back-end calls. Kai also leverages custom events in RUM to monitor how users engage with content on the blog.  
 
 Instrument an SPA with Splunk RUM 
 ===================================
@@ -37,21 +37,13 @@ To monitor an SPA in Splunk RUM:
 
     * Detectors
 
-
-
 3. Kai opens Tag Spotlight to take a look at route changes by clicking :strong:`see all` in the :strong:`Page Views/Route Changes` metric. The following image shows an example set of urls for the Page Views/Route Changes metric in RUM. 
-
 
     ..  image:: /_images/rum/pageview-routechange.png
         :width: 80%
         :alt: This image shows the Page Views/Route Changes metric in RUM.
 
-
 4. To explore a specific session, Kai can open :strong:`User sessions`. To learn more, see :ref:`User sessions<example-session>`.
-
-
-
-
 
 Create a custom event to measure user engagement on blog posts
 =================================================================
@@ -97,4 +89,3 @@ To learn more about how you can optimize your experience with Splunk Observabili
        * :ref:`rum-custom-event`
        * :ref:`rum-alerts`
        * :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
-

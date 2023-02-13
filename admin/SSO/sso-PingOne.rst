@@ -22,10 +22,16 @@ Open a browser tab or window for Observability Cloud, and another for PingOne.
 
 In Observability Cloud, do the following:
    #. Log in to Splunk Observability Cloud.
-   #. In the left navigation menu, select :menuselection:`Data Management`.
-   #. Select :guilabel:`Add Integration`.
-   #. In the integration filter menu, select :guilabel:`All`.
-   #. In the :guilabel:`Search` field, search for :guilabel:`PingOne`, and select it.
+   #. Open the :new-page:`PingOne guided setup <https://login.signalfx.com/#/integrations/pingone/description>`. Optionally, you can navigate to the guided setup on your own:
+ 
+      #. In the left navigation menu, select :menuselection:`Data Management`.
+   
+      #. Select :guilabel:`Add Integration`.
+   
+      #. In the integration filter menu, select :guilabel:`All`.
+   
+      #. In the :guilabel:`Search` field, search for :guilabel:`PingOne`, and select it.
+   
    #. In the :guilabel:`Name` text box, enter a name for your PingOne SSO integration.
    #. Copy the value next to :guilabel:`Integration ID` so you can use it in a later step.
 
@@ -91,3 +97,4 @@ Once you have a custom URL configured, your users can continue to log in using t
 
 Observability Cloud generates a password for users you create in PingOne SSO. If the PingOne login portal is unavailable, Observability Cloud users can use the reset password link on the Observability Cloud login page to get native Observability Cloud credentials.
 
+.. include:: /_includes/troubleshooting-steps.rst

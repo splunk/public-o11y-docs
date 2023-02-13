@@ -1,11 +1,13 @@
 .. _monitor-server-latency:
 
 *******************************************************
-Create a detector to monitor server latency 
+Use case: Create a detector to monitor server latency 
 *******************************************************
 
+.. meta updated 1/23/23
+
 .. meta::
-    :description: A Splunk alerts and detectors use case describes how to create a detector to monitor server latency.
+    :description: This Splunk alerts and detectors use case describes how to create a detector to monitor server latency.
 
 Kai, a site reliability engineer at Buttercup Games, receives many tickets from Buttercup Games customers experiencing high latency on game servers. Kai wants a reliable way to monitor their host machines' server latency so they can quickly identify and solve high latency issues before customers experience them. 
 
@@ -14,7 +16,7 @@ Using Splunk Observability Cloud, Kai can create a detector that alerts them whe
 Define the data to use for alerting
 ===================================
 
-From the Splunk Observability Cloud home page, Kai opens the :guilabel:`Alerts & Detectors` page and selects :guilabel:`New Detector` to create a detector from scratch.
+Kai opens the :guilabel:`Alerts & Detectors` page in Splunk Observability Cloud and selects :guilabel:`New Detector` to create a detector from scratch.
 
 After naming the detector, Kai chooses :guilabel:`Infrastructure or Custom Metrics Alert Rule`.
 

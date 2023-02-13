@@ -34,6 +34,10 @@ Successful integration requires administrator privileges for the following:
 
 To learn more about these privileges, see the Azure documentation for registering a new app.
 
+.. note:: 
+
+  Observability Cloud supports all Azure regular regions, and Azure Government. 
+
 .. raw:: html
 
   <embed>
@@ -61,8 +65,8 @@ Follow these steps to create a new Azure Active Directory application:
       * :guilabel:`Application (client) ID`
       * :guilabel:`Directory (tenant) ID`
       * :guilabel:`Object ID`
-  #. Select :guilabel:`Certificates & settings`. The Certificate is your public key, and the client secret is your password.
-  #. Create a client secret by providing a description and setting the duration to the longest possible interval, then select :guilabel:`Save`. Save the client secret, you need it to create your Azure integration in Observability Cloud.
+  #. Select :guilabel:`Certificates & secrets`. The Certificate is your public key, and the client secret is your password.
+  #. Create a client secret by providing a description and setting the duration to the longest possible interval, and :guilabel:`Save`. Remember the client secret, you'll need it to create your Azure integration in Observability Cloud.
 
 Repeat these steps for each subscription you want to monitor.
 
@@ -92,10 +96,16 @@ Repeat these steps for each subscription you want to monitor.
 
 From Splunk Observability Cloud, connect to Azure by following these steps:
 
-  #. In the left navigation menu, select :menuselection:`Data Management`, and select :guilabel:`Add Integration` to open the Integrate Your Data page.
-  #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
-  #. Select the :guilabel:`Microsoft Azure` tile to open the Microsoft Azure guided setup.
-  #. To start configuring the connection to Azure, select :guilabel:`New Integration`.
+  #. Open the :new-page:`Microsoft Azure guided setup <https://login.signalfx.com/#/integrations/azure>`. Optionally, you can navigate to the guided setup on your own:
+
+    #. In the left navigation menu, select :menuselection:`Data Management`, and select :guilabel:`Add Integration` to open the Integrate Your Data page.
+
+    #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
+
+    #. Select the :guilabel:`Microsoft Azure` tile to open the Microsoft Azure guided setup.
+
+    #. To start configuring the connection to Azure, select :guilabel:`New Integration`.
+
   #. In the text boxes for Splunk Infrastructure Monitoring setup, enter the following information:
       * :guilabel:`Name`: Unique name for this connection to Azure. The name field helps you create multiple connections to Azure, each with its own name.
       * :guilabel:`Directory ID`: Azure Directory ID you saved in a previous step.

@@ -5,7 +5,7 @@ Allow Splunk Observability Cloud services in your network
 *****************************************************************
 
 .. meta::
-      :description: There are several options for securing your implementation, including proxies and allow lists.    
+      :description: Options for securing your implementation, including proxies and allow lists for URLs and domains.    
 
 Splunk Observability Cloud is composed of a number of different services. If your organization has stringent networking security policies that apply to sending data to third parties, use one of the following methods to ensure network access to Splunk Observability Cloud services:
 
@@ -64,7 +64,7 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
 
 .. code:: shell
 
-   # SignalFx API base URL (https://dev.splunk.com/observability/docs/apibasics/api_list)
+   # Observability Cloud API base URL (https://dev.splunk.com/observability/docs/apibasics/api_list)
    api.<YOUR_REALM>.signalfx.com
 
    # Splunk Observability Cloud user interface
@@ -92,4 +92,4 @@ If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure tha
    # For DEB/RPM collector packages
    splunk.jfrog.io 
    
-.. note:: For more information, see :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` in the Developer Guide.
+.. note:: For more information, see the :new-page:`Endpoint Summary <https://dev.splunk.com/observability/docs/apibasics/api_list>` topic in the Observability Cloud Developer Guide.

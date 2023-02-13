@@ -5,7 +5,7 @@ Manage resource usage with access tokens using Splunk Observability Cloud
 ****************************************************************************
 
 .. meta::
-   :description: Learn how to how to manage resource usage with  access tokens.
+   :description: Cost-related token limits, pricing-plan token limits, rate-related token limits, set up custom alerts for access tokens, and monitor token usage.
 
 If you have Infrastructure Monitoring Enterprise Edition, you can manage costs
 associated with sending in data by setting limits on access tokens.
@@ -131,7 +131,7 @@ You can set two Infrastructure Monitoring rate-related limits:
    * Impact: Setting a limit improves the performance of charts in the Infrastructure Monitoring user interface.
 
    * To learn more about SignalFlow analytics jobs, see the :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>`
-     topic in the Developer Guide for Splunk Infrastructure Monitoring.
+     topic in the Splunk Observability Cloud Developer Guide.
 
 #. Event search limit: The rate at which you search for events.
 

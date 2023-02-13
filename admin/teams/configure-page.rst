@@ -5,7 +5,7 @@ Manage team landing pages in Splunk Observability Cloud
 ********************************************************************
 
 .. meta::
-   :description: Learn how to view and configure a team landing page.
+   :description: Learn how to view and configure an associated landing page that contains information relevant to team members.
 
 Every team has an associated landing page that contains information relevant
 to team members. A landing page brings together dashboard groups and alerts
@@ -70,7 +70,7 @@ To learn more about linking teams to detectors and dashboard groups, see :ref:`a
 Edit the landing page text
 ============================================================================
 
-A team landing page provides a text area where you can provide team documentation and useful links. For example, you can use this area to describe the team’s purpose and provide links to relevant wiki pages or runbooks.
+A team landing page provides a text area where you can provide team documentation and useful links. For example, you can use this area to describe the team's purpose and provide links to relevant wiki pages or runbooks.
 
 The text area supports standard Markdown, including links that use the following format:
 

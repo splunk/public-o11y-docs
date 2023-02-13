@@ -5,7 +5,7 @@ RUM Browser data model
 **************************************************
 
 .. meta::
-   :description: Understand which data you collect from browser-based web applications when using Splunk Real User Monitoring (RUM).
+   :description: Understand which data you collect from browser-based web applications when using Splunk Observability Cloud Real User Monitoring (RUM).
 
 The Browser RUM agent collects general RUM telemetry data about your front-end web application, as well as data from several instrumentations.
 
@@ -15,9 +15,6 @@ Common data types
 .. include:: /_includes/rum-data-model.rst
 
 .. _browser-rum-basic-properties:
-
-
-
 
 Basic properties
 ==============================================

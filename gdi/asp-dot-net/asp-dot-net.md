@@ -1,7 +1,7 @@
 (asp-dot-net)=
 
 # ASP.NET
-<meta name="description" content="Documentation on the aspdotnet monitor">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the ASP.NET app monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 

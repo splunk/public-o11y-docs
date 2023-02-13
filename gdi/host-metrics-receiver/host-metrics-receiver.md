@@ -2,20 +2,18 @@
 
 # Host metrics receiver
 
-<meta name="Description" content="Documentation on the host metrics receiver">
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the host metrics monitor. See benefits, install, configuration, and metrics">
 
 ## Description
 
-A receiver is how data gets into the Splunk Distribution of OpenTelemetry Collector. Receivers support one or more data sources - traces, metrics, or logs.
+A receiver is a way to get data into the Splunk Distribution of OpenTelemetry Collector. Receivers support one or more data sources - traces, metrics, or logs.
 
-The host metrics receiver generates metrics about the host system scraped from various sources. Use this receiver when the Collector is deployed as an agent.
-
-The supported pipeline type for this receiver is `metrics`.
+The host metrics receiver generates metrics scraped from host systems when the Collector is deployed as an agent. The supported pipeline type is `metrics`.
 
 ```{note}
 Metrics produced by this receiver count towards the custom metric ingestion limit. See {ref}`System limits for Splunk Infrastructure Monitoring <sys-limits>`.
 
-To filter unwanted metrics, see the filter processor documentation on GitHub: [https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor).
+To filter unwanted metrics, see [the filter processor documentation on GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor).
 ```
 
 ### Benefits
@@ -23,7 +21,7 @@ To filter unwanted metrics, see the filter processor documentation on GitHub: [h
 ```{include} /_includes/benefits.md
 ```
 
-## Installation
+## Get started
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    - <a href="https://docs.splunk.com/Observability/gdi/opentelemetry/install-k8s.html" target="_blank">Install on Kubernetes</a>
@@ -33,6 +31,14 @@ To filter unwanted metrics, see the filter processor documentation on GitHub: [h
 3. Restart the Splunk Distribution of OpenTelemetry Collector.
 
 ## Configuration
+
+### Settings
+
+This receiver has the following settings:
+
+<div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/hostmetrics.yaml"></div>
+
+### Scraper configuration
 
 The collection interval and the categories of metrics to be scraped can be [configured](#scraper-configuration), as shown in the following example.
 
@@ -47,19 +53,17 @@ hostmetrics:
 
 The following table shows the available scrapers:
 
-| Scraper    | Supported OS                                                            | Description                                            |
-|------------|-------------------------------------------------------------------------|--------------------------------------------------------|
-| cpu        | Not supported on macOS when compiled without Cgo, which is the default. | CPU utilization metrics                                |
-| disk       | Not supported on macOS when compiled without Cgo, which is the default. | Disk I/O metrics                                       |
-| load       | All                                                                     | CPU load metrics                                       |
-| filesystem | All                                                                     | File system utilization metrics                        |
-| memory     | All                                                                     | Memory utilization metrics                             |
-| network    | All                                                                     | Network interface I/O metrics & TCP connection metrics |
-| paging     | All                                                                     | Paging or swap space utilization and I/O metrics       |
-| processes  | Linux                                                                   | Process count metrics                                  |
-| process    | Linux and Windows                                                       | Per process CPU, memory, and disk I/O metrics          |
-
-### Scraper configuration
+| Scraper    | Supported OS              | Description            |
+|------------|--------------------------|-------------|
+| cpu        | Not supported on macOS when compiled without Cgo, which is the default. | CPU utilization metrics             |
+| disk       | Not supported on macOS when compiled without Cgo, which is the default. | Disk I/O metrics         |
+| load       | All             | CPU load metrics               |
+| filesystem | All             | File system utilization metrics                        |
+| memory     | All            | Memory utilization metrics                   |
+| network    | All            | Network interface I/O metrics & TCP connection metrics |
+| paging     | All        | Paging or swap space utilization and I/O metrics       |
+| processes  | Linux        | Process count metrics             |
+| process    | Linux and Windows       | Per process CPU, memory, and disk I/O metrics          |
 
 Scrapers extract data from endpoints and then send that data to a specified target. See the following sections for scraper configurations.
 
@@ -131,8 +135,6 @@ process:
   scrape_process_delay: <time>
 ```
 
-### Advanced configurations
-
 #### Filtering
 
 To only gather a subset of metrics from a particular source, use the host metrics receiver with the filter processor.
@@ -161,8 +163,7 @@ service:
       receivers: [hostmetrics, hostmetrics/disk]
 
 ```
-
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

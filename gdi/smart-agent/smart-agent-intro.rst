@@ -5,7 +5,7 @@ SignalFx Smart Agent
 **************************************
 
 .. meta::
-   :description: Landing for Smart Agent info. The SignalFx Smart Agent provides automatic service discovery, configuration, and metrics collection for a variety of environments. The Smart Agent is deprecated as part of the release of Splunk Observability Cloud.
+   :description: Landing for deprecated Smart Agent. The SignalFx Smart Agent provides automatic service discovery, configuration, and metrics collection for a variety of environments. The Smart Agent is deprecated as part of the release of Splunk Observability Cloud.
 
 .. toctree::
    :hidden:

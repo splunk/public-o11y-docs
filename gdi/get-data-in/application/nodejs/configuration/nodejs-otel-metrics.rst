@@ -113,7 +113,7 @@ Set up custom metric readers and exporters
 
 You can provide custom exporters and readers using the ``metricReaderFactory`` setting.
 
-.. warning:: Usage of ``metricReaderFactory`` invalidates the ``exportInterval`` and ``endpoint`` settings.
+.. caution:: Usage of ``metricReaderFactory`` invalidates the ``exportInterval`` and ``endpoint`` settings.
 
 The following example shows how to provide a custom exporter:
 
@@ -183,42 +183,46 @@ To migrate your custom metric instrumentation from the SignalFx client library, 
 
 #. Replace the ``getSignalFxClient`` dependency with ``opentelemetry/api-metrics``, and initialize metrics collection using ``start()``. For example:
 
-   .. tabs::
+   .. code-block:: javascript
 
-      .. code-tab:: javascript SignalFx (Deprecated)
+      // SignalFx
+      const { start } = require('@splunk/otel');
+      const { getSignalFxClient } = start({ serviceName: 'my-service' });
 
-         const { start } = require('@splunk/otel');
-         const { getSignalFxClient } = start({ serviceName: 'my-service' });
+   Becomes the following:
 
-      .. code-tab:: javascript OpenTelemetry (Supported)
+   .. code-block:: javascript
 
-         const { start } = require('@splunk/otel');
-         const { metrics } = require('@opentelemetry/api-metrics');
+      // OpenTelemetry
+      const { start } = require('@splunk/otel');
+      const { metrics } = require('@opentelemetry/api-metrics');
 
-         start({
-           serviceName: 'my-service',
-           metrics: true, // enable metrics with default configuration
-         });
+      start({
+         serviceName: 'my-service',
+         metrics: true, // enable metrics with default configuration
+      });
 
 #. Replace calls to ``getSignalFxClient()`` with metrics instances. For example:
 
-      .. tabs::
+   .. code-block:: javascript
 
-         .. code-tab:: javascript SignalFx (Deprecated)
+      // SignalFx
+      getSignalFxClient().send({
+         gauges: [{ metric: 'cpu', value: 42, timestamp: 1442960607000}],
+         cumulative_counters: [{ metric: 'clicks', value: 99, timestamp: 1442960607000}],
+      })
 
-            getSignalFxClient().send({
-               gauges: [{ metric: 'cpu', value: 42, timestamp: 1442960607000}],
-               cumulative_counters: [{ metric: 'clicks', value: 99, timestamp: 1442960607000}],
-            })
+   Becomes the following:
 
-         .. code-tab:: javascript OpenTelemetry (Supported)
+   .. code-block:: javascript
 
-            const meter = metrics.getMeter('my-meter');
-            meter.createObservableGauge('cpu', result => {
-               result.observe(42);
-            });
-            const counter = meter.createCounter('clicks');
-            counter.add(99);
+      // OpenTelemetry
+      const meter = metrics.getMeter('my-meter');
+      meter.createObservableGauge('cpu', result => {
+         result.observe(42);
+      });
+      const counter = meter.createCounter('clicks');
+      counter.add(99);
 
 Previous metric names
 ================================================

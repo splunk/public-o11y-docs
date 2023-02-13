@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
 
@@ -73,6 +74,10 @@ $(document).ready(function () {
 
     monitorsFromRaw();
 
+    function coalesce() {
+        return [].find.call(arguments, x => x !== null && x !== undefined);
+    }
+
     function monitorsFromRaw() {
         try {
             let columnMap = {
@@ -86,6 +91,8 @@ $(document).ready(function () {
             };
 
             let converter = new showdown.Converter();
+            let cache = [];
+            let idMap = [];
 
             function getDataFromObject(data,type) {
 
@@ -117,6 +124,73 @@ $(document).ready(function () {
                 }
                 return doc;
             }
+
+            function traverseFields(mainObj, data, preRef = '', h2Text = '') {
+
+                let id =  "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
+                idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
+                id += idMap[id] > 0 ? '-' + idMap[id] : '';
+
+
+                if (preRef != '' && h2Text != '') {
+                    $(mainObj).append('<h2 class="sub-table-heading" id="' + preRef + '-table">Fields of <i>' + h2Text + '</i></h2>');
+                }
+
+                let table = "<table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='" + id + "'>" +
+                        "<thead>" +
+                            "<th class='head name-head'>Name</th>" +
+                            "<th class='head type-head'>Type</th>" +
+                            "<th class='head kind-head'>Default</th>" +
+                            "<th class='head description-head'>Description</th>" +
+                        "</thead>" +
+                    "<tbody></tbody>";
+
+                $(mainObj).append(table);
+
+                let newObject = $(mainObj).find('#' + id);
+
+                for (let i in data['fields']) {
+
+                    let rowId = id + '-' + data['fields'][i]['name'];
+
+                    let row = "<td id='" + rowId + "'>" + data['fields'][i]['name'] + "</td><td>" + coalesce(data['fields'][i]['kind'], '') + "</td><td>" + coalesce(data['fields'][i]['default'], '') + "</td><td>" + coalesce(converter.makeHtml(data['fields'][i]['doc']), '') + "</td>";
+                    newObject.append('<tr>' + row + '</tr>');
+
+                    if (data['fields'][i]['fields'] !== undefined) {
+                        traverseFields(mainObj, data['fields'][i], rowId, data['fields'][i]['name']);
+                        newObject.find('#' + rowId).html(data['fields'][i]['name'] + ' (<a href="#' + rowId + '-table">see fields</a>)');
+                    }
+                }
+            }
+
+            $('.metrics-standard').each(function () {
+
+                let url = $(this).attr('url');
+                let metricsYamlObject = $(this);
+
+                try {
+
+                    let client = new XMLHttpRequest();
+                    client.open('GET', url);
+                    client.onreadystatechange = function () {
+
+                        const result = jsyaml.load(client.responseText, 'utf8');
+                        if (result != null && !cache[result.type]) {
+
+                            metricsYamlObject.append(traverseFields(metricsYamlObject, result));
+                            cache[result.type] = true;
+
+                        }
+
+                    }
+                    client.send();
+
+
+                } catch (e) {
+                    console.log(e);
+                }
+
+            });
 
             $('.metrics-yaml').each(function () {
 
@@ -192,7 +266,7 @@ $(document).ready(function () {
                                 monitors[i][j] = monitors[i][j] ? 'Default' : '';
                             } else if (j == 'default') {
                                 addedCategory = true;
-                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : '';
+                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : 'Custom';
                             } else if (j == 'custom') {
                                 addedCategory = true;
                                 monitors[i][j] = (monitors[i][j] == true) ? 'Custom' : '';

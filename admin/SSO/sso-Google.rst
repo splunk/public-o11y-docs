@@ -5,7 +5,7 @@ Configure a Google SSO integration
 *********************************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud provides the capability for your users to log in using various SSO providers. The Google SSO integration lets users in your Google domain log in to the application using their Google credentials. 
+   :description: Configure the Google SSO integration to allow users in your Google domain to log in to the application using their Google credentials. 
 
 
 .. note:: The Google SSO integration doesn't support integration-specific entity IDs.
@@ -68,7 +68,7 @@ The :new-page:`G Suite Administrator Help document <https://support.google.com/a
 topic, developed by Google, describes how to configure the integration.
 
 After you complete these steps, the GCI SSO integration is available to
-users in your GCI organization. When users sign in to Observability Cloud
+users in your GCI organization. When users log in to Observability Cloud
 from GCI for the first time, they receive an email containing a link that
 they must open in order to authenticate. This only occurs the first time the user
 signs in. Subsequent login attempts don't require validation.
@@ -77,3 +77,4 @@ If you want to turn off the email authentication feature, contact :ref:`support`
 
 Once you have a custom URL configured, your users can continue to log in using their existing username/password pair, or they can use their GCI credentials instead. GCI SSO authentication and Observability Cloud username/password authentication are independent.
 
+.. include:: /_includes/troubleshooting-steps.rst
