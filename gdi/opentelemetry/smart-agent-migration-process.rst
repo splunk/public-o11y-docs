@@ -25,7 +25,7 @@ Do the following steps to migrate from the Smart Agent to the Collector:
 1. Deploy the Collector in a non-production environment
 ================================================================
 
-Deploy the Collector in a non-production environment, for example, a development host or VM or a Kubernetes cluster in staging. The environment should be a copy or identical to your production environment.
+Deploy the Collector in a non-production environment, for example, a development host or VM or a Kubernetes cluster in staging. The environment needs to be a copy or identical to your production environment.
 
 Navigate to your instance of Observability Cloud and select :menuselection:`Data Management` in the left navigation bar. Choose the platform you would like to deploy the Collector to.
 
@@ -71,7 +71,7 @@ Navigate to the Critical Monitoring section and review whether there is any data
    :width: 99%
    :alt: Navigate to the Critical Monitoring section and review whether there is any data being dropped.
 
-If any of the charts indicate a value above zero, then data is being dropped and investigation is needed. To diagnose further, see :ref:`validate-logs`.
+If any of the charts indicate a value above zero, then data is being dropped and you need to investigate why. To diagnose further, see :ref:`validate-logs`.
 
 Validate using zPages
 ---------------------------------------------
@@ -253,9 +253,9 @@ The following is an example YAML configuration file with default values where ap
 
 The sizing of the Collector and the corresponding VM or host it is to be deployed to should be based on the telemetry being collected. The Collector requires 1 CPU core per:
 
-- 15000 spans per second
-- 20000 data points per second
-- 10000 log records per second
+- 15,000 spans per second
+- 20,000 data points per second
+- 10,000 log records per second
 
 The Smart Agent has an internal metrics monitor that emits metrics about the internal state of the agent. This is useful for debugging performance issues with the Collector and to ensure that the Collector isn't overloaded. Add the following to your Smart Agent configuration file:
 
