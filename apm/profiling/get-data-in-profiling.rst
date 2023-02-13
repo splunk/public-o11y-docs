@@ -94,8 +94,6 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: Node.js
 
-      .. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. 
-
       AlwaysOn Profiling requires Node 16 and higher.
 
       - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
@@ -117,8 +115,6 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-nodejs`.
 
    .. group-tab:: .NET
-
-      .. caution:: Memory profiling for .NET is an experimental feature subject to future changes.
 
       AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
 
