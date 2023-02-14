@@ -32,12 +32,6 @@ The benefits of using the Collector are:
 * Ability to correlate data between different views within Observability Cloud with :ref:`Related Content <get-started-relatedcontent>`.
 * Bundled FluentD for log collection.
 
-For example, see the Related Content bar displaying in Splunk APM. With the ``paymentservice`` selected in the APM Service Map, the bar offers easy access to the paymentservice-related Kubernetes cluster data in Splunk Infrastructure Monitoring and logs in Splunk Log Observer:
-
-.. image:: /_images/gdi/3886-related-content-bar.png
-   :width: 99%
-   :alt: Viewing the Related Content bar in Splunk APM.
-
 .. raw:: html
 
    <embed>
@@ -49,12 +43,14 @@ To migrate from the Smart Agent to the Collector, follow :ref:`these steps <migr
 .. raw:: html
 
    <embed>
-      <h3>Smart Agent monitors and Receiver<a name="sa-receiver-monitor" class="headerlink" href="#sa-receiver-monitor" title="Permalink to this headline">¶</a></h2>
+      <h3>Smart Agent monitors and the Smart Agent Receiver<a name="sa-receiver-monitor" class="headerlink" href="#sa-receiver-monitor" title="Permalink to this headline">¶</a></h2>
    </embed>
+
+While the Smart Agent is deprecated, Smart Agent :ref:`monitors <monitor-data-sources>` are not.
 
 The Smart Agent metric monitors allow real-time insights into how your target services and applications are performing. These metric gathering utilities have an equivalent counterpart in the Collector.   
 
-The Smart Agent Receiver is a wrapper utility that allows the embedding of Smart Agent monitors within your Collector pipelines. Its associated extension, and other Collector components will continue to provide a means of integrating all Smart Agent metric monitors into your Collector pipelines.
+The Smart Agent Receiver is a :ref:`component of the Collector <otel-components>` that allows the embedding of Smart Agent monitors within your Collector pipelines. Its associated extension, and other Collector components will continue to provide a means of integrating all Smart Agent metric monitors into your Collector pipelines.
 
 .. raw:: html
 
