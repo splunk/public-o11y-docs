@@ -96,7 +96,7 @@ To receive administrator access, request the admin role from an existing adminis
 Follow these steps to view a list of current admins:
 
 #. From the Splunk Observability home page, select :guilabel:`Settings`. 
-#. Select :guilabel:`Users`.
+#. Select :guilabel:`Invite Users`.
 #. Filter for Admins.
 
 From the list, you can email or Slack message any administrators to request admin status. 
