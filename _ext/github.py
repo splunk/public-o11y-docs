@@ -29,7 +29,7 @@ class GitHub(sphinx.directives.code.CodeBlock):
 Error: {error}
 
 To see the code, go to {url}
-              '''.format(url=url, error=error)
+              '''.format(error=error, url=url)
               self.content = message.splitlines()
             except:
               message = '''This snippet couldn't be retrieved due to network issues.
@@ -45,7 +45,7 @@ To see the code, go to {url}
 Error: {error}
 
 To see the code, go to {url}
-              '''.format(url=url, error=error)
+              '''.format(error=error, url=url)
               self.content = message.splitlines()
             except:
               message = '''This snippet couldn't be retrieved due to network issues.
@@ -60,7 +60,7 @@ To see the code, go to {url}
 Error: {error}
 
 To see the code, go to {url}
-              '''.format(url=url, error=error)
+              '''.format(error=error, url=url)
               self.content = message.splitlines()
         else:
             message = "Referenced file does not belong to Splunk repositories."
