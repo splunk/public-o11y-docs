@@ -28,9 +28,6 @@ You can use a variety of default configuration files to set up the Splunk Distri
 
 :new-page:`agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` is the starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
 
-  .. github:: yaml
-      :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/agent_config.yaml
-
 .. _otel-linux-full:
 
 .. raw:: html
@@ -54,9 +51,6 @@ To define multiple config files simultaneously use:
 .. code-block::
 
   ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
-
-   .. github:: yaml
-      :url: https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/cmd/otelcol/config/collector/agent_config.yaml
 
 .. raw:: html
 
