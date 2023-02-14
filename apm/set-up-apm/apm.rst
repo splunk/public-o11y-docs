@@ -28,7 +28,7 @@ To set up Splunk APM and begin analyzing application availability and performanc
 #. :ref:`apm-orientation`
 #. :ref:`customize-apm`
 
-See the following optional topics for additional guidance as you set up Splunk APM:
+See the following optional topics for additional guidance as you set up Splunk Cool:
 
 * :ref:`apm-environments`
 * :ref:`sensitive-data-controls`
