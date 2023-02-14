@@ -1,5 +1,5 @@
 import ssl, sys, urllib
-from docutils import statemachine, nodes
+from docutils import nodes
 from docutils.parsers.rst import directives
 import sphinx.directives.code
 
@@ -22,9 +22,46 @@ class GitHub(sphinx.directives.code.CodeBlock):
             f = urllib.request.urlopen(url,context=call_context)
             self.content = f.read().decode('utf-8').splitlines()
           except urllib.error.HTTPError as e:
-            self.content = e.read().decode('utf-8').splitlines()
+            try:
+              error = e.read().decode('utf-8')
+              message = '''This snippet couldn't be retrieved due to network issues.
+
+Error: {error}
+
+To see the code, go to {url}
+              '''.format(url=url, error=error)
+              self.content = message.splitlines()
+            except:
+              message = '''This snippet couldn't be retrieved due to network issues.
+
+To see the code, go to {url}
+              '''.format(url=url)
+              self.content = message.splitlines()
           except urllib.error.URLError as e:
-            self.content = e.read().decode('utf-8').splitlines()
+            try:
+              error = e.read().decode('utf-8')
+              message = '''This snippet couldn't be retrieved due to network issues.
+
+Error: {error}
+
+To see the code, go to {url}
+              '''.format(url=url, error=error)
+              self.content = message.splitlines()
+            except:
+              message = '''This snippet couldn't be retrieved due to network issues.
+
+To see the code, go to {url}
+              '''.format(url=url)
+              self.content = message.splitlines()
+          except Exception as e:
+              error = e.read().decode('utf-8')
+              message = '''This snippet couldn't be downloaded due to network issues.
+
+Error: {error}
+
+To see the code, go to {url}
+              '''.format(url=url, error=error)
+              self.content = message.splitlines()
         else:
             message = "Referenced file does not belong to Splunk repositories."
             self.content = message.splitlines()
