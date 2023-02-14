@@ -32,7 +32,7 @@ To see the code, go to {url}
               '''.format(error=error, url=url)
               self.content = message.splitlines()
             except:
-              message = '''This snippet couldn't be retrieved due to network issues.
+              message = '''This snippet couldn't be retrieved due to HTTP errors.
 
 To see the code, go to {url}
               '''.format(url=url)
@@ -40,7 +40,7 @@ To see the code, go to {url}
           except urllib.error.URLError as e:
             try:
               error = e.read().decode('utf-8')
-              message = '''This snippet couldn't be retrieved due to network issues.
+              message = '''This snippet couldn't be retrieved due to URL errors.
 
 Error: {error}
 
