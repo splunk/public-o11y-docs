@@ -112,6 +112,23 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-go-trouble
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your Go application or service manually. See :ref:`go-manual-instrumentation`.
 
+.. _enable_automatic_metric_collection_golang:
+
+Enable metrics collection
+--------------------------------------
+
+To enable automatic runtime metric collection, enable the metrics feature using the ``SPLUNK_METRICS_ENABLED`` environment variable. See :ref:`metrics-configuration-golang` for more information.
+
+.. tabs::
+
+   .. code-tab:: bash Linux
+
+      export SPLUNK_METRICS_ENABLED='true'
+
+   .. code-tab:: shell Windows PowerShell
+
+      $env:SPLUNK_METRICS_ENABLED='true'
+
 .. _kubernetes_go:
 
 Deploy the Go instrumentation in Kubernetes
