@@ -97,7 +97,7 @@ The following table shows the retention time period for each data type in Splunk
    * - :strong:`Data type`
      - :strong:`Retention`
    * - Metric data 
-     - 13 months for both Standard and Enterprise 
+     - 13 months for both Standard and Enterprise.
    * - Run results  
      - 
        * Standard contract: 8 days
