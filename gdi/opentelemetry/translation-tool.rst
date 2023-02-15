@@ -19,57 +19,55 @@ Configuration translation rules
 
 To transform a Smart Agent configuration file into a Collector config file, you need to map the original parameters using the Collector's :ref:`configuration syntax <otel-configuration>`.  
 
-.. list-table::
-   :widths: 50 50    
-   :header-rows: 1
+See this basic example:
 
-   *  -  Smart Agent config
-      -  Collector config
+:strong:`Original Smart Agent config`
 
-   *  -  signalFxAccessToken: {"#from": "env:SFX_ACCESS_TOKEN"}
-         ingestUrl: {"#from": "ingest_url", default: "https://ingest.signalfx.com"}
-         apiUrl: {"#from": "api_url", default: "https://api.signalfx.com"}
-         traceEndpointUrl: {"#from": 'trace_endpoint_url', default: "https://ingest.signalfx.com/v2/trace"}
+.. code-block::
+
+   signalFxAccessToken: {"#from": "env:SFX_ACCESS_TOKEN"}
+   ingestUrl: {"#from": "ingest_url", default: "https://ingest.signalfx.com"}
+   apiUrl: {"#from": "api_url", default: "https://api.signalfx.com"}
+   traceEndpointUrl: {"#from": 'trace_endpoint_url', default: "https://ingest.signalfx.com/v2/trace"}
+
+   intervalSeconds: 10
          
-         intervalSeconds: 10
+   logging:
+      level: info
          
-         logging:
-            level: info
-         
-         monitors:
-            - {"#from": "monitors/*.yaml", flatten: true, optional: true}
-            - type: memory
-      -  receivers:
-            smartagent/cpu:
-               type: cpu
-            smartagent/load:
-               type: load
-            smartagent/memory:
-               type: memory
-         exporters:
-            signalfx:
-               access_token: ${SFX_ACCESS_TOKEN}
-               realm: us1
-         service:
-            pipelines:
-               metrics:
-                  receivers:
-                  - smartagent/cpu
-                  - smartagent/load
-                  - smartagent/memory
-                  exporters:
-                  - signalfx   
+   monitors:
+      - {"#from": "monitors/*.yaml", flatten: true, optional: true}
+      - type: memory            
+      
 
+:strong:`Collector config output`
 
-The Smart Agent files are:
+.. code-block::      
+      
+   -  receivers:
+      smartagent/cpu:
+         type: cpu
+      smartagent/load:
+         type: load
+      smartagent/memory:
+         type: memory
+      exporters:
+         signalfx:
+            access_token: ${SFX_ACCESS_TOKEN}
+            realm: us1
+      service:
+         pipelines:
+            metrics:
+               receivers:
+               - smartagent/cpu
+               - smartagent/load
+               - smartagent/memory
+               exporters:
+               - signalfx   
 
-  * ``ingest_url``: ``https://ingest.us1.signalfx.com``
-  * ``api_url``: ``https://api.us1.signalfx.com``
-  * ``trace_endpoint_url``: ``https://ingest.signalfx.com/v2/trace``
-  * ``monitors/cpu.yaml``: ``- type: cpu``
-  * ``monitors/load.yaml``: ``- type: load``
+.. note::
 
-Learn more in :new-page:`our GitHub documentation <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/translatesfx>` on ``translatefx``.
+   Learn more in :new-page:`our GitHub documentation <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/translatesfx>` on ``translatefx``.
 
 Use the configuration translation tool
 ==========================================================================
