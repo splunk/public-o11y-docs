@@ -87,10 +87,8 @@ Data collected by Splunk On-Call is retained unless you request that your data b
 
 Data retention in Splunk Synthetic Monitoring 
 ===============================================
-run results 
-    * Standard contract: 8 days
-       * Enterprise contract: 3 months 
 
+The following table shows the retention time period for each data type in Splunk Synthetic Monitoring. 
 
 .. list-table:: 
    :widths: 25 25
