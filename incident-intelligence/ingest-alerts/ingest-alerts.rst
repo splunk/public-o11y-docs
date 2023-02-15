@@ -15,10 +15,7 @@ Ingest alerts in Splunk Incident Intelligence
     ingest-prometheus
     ingest-rest
 
-
-
-
-There are 3 options for ingesting alerts in Incident Intelligence:
+The following options are available for ingesting alerts in Incident Intelligence:
 
 .. raw:: html
 
