@@ -84,3 +84,23 @@ Data retention in Splunk On-Call
 ============================================
 
 Data collected by Splunk On-Call is retained unless you request that your data be deleted. For more information, see :new-page:`Splunk On-Call Security FAQ <https://www.splunk.com/en_us/support-and-services/on-call-security-faq.html>`.
+
+Data retention in Splunk Synthetic Monitoring 
+===============================================
+run results 
+    * Standard contract: 8 days
+       * Enterprise contract: 3 months 
+
+
+.. list-table:: 
+   :widths: 25 25
+   :header-rows: 1
+
+   * - :strong:`Data type`
+     - :strong:`Retention`
+   * - Metric data 
+     - 13 months for both Standard and Enterprise 
+   * - Run results  
+     - 
+       * Standard contract: 8 days
+       * Enterprise contract: 3 months 
