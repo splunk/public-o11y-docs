@@ -38,7 +38,7 @@ The following Java Virtual Machines (JVMs) are supported:
 - Azul Zulu
 - BellSoft Liberica JDK
 - Eclipse Adoptium/Temurin
-- IBM J9
+- IBM J9 (AlwaysOn Profiling is not supported)
 - Microsoft OpenJDK
 - Oracle OpenJDK
 - Red Hat OpenJDK

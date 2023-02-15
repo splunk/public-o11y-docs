@@ -18,7 +18,7 @@ Read the following instructions to learn how to migrate to the Splunk Python OTe
 Compatibility and requirements
 ==========================================================
 
-The Splunk Distribution of OpenTelemetry Python requires Python 3.6 and higher. See :ref:`python-otel-requirements`.
+The Splunk Distribution of OpenTelemetry Python requires Python 3.7 and higher. See :ref:`python-otel-requirements`.
 
 .. _migrate-to-splunk-python-otel-agent:
 

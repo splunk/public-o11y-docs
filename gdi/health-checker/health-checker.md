@@ -70,7 +70,12 @@ The following table shows the configuration options for the Health Checker monit
 
 ## Metrics
 
-There are no metrics available for this integration.
+The following metrics are available for this integration:
+
+| Name | Description | Sample value | Category | 
+| ---- | ----------- | ---- | ---- | 
+| `gauge.service.health.status` | The HTTP response status code for the request made to the application being monitored.  A `200` value means an HTTP 200 OK success status response was returned, so the application is healthy.| `200` | Default| 
+| `gauge.service.health.value` | `0` means an unhealthy state, and `1` means a healthy state. | `0` or `1` | Default | 
 
 ## Get help
 

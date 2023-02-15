@@ -95,8 +95,6 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-nodejs-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
-
 To enable AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
 To enable memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
