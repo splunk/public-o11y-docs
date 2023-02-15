@@ -1,4 +1,5 @@
 .. _otel-translation-tool:
+.. _translatefx:
 
 *************************************************************************
 Configuration translation rules and tool
@@ -16,11 +17,59 @@ Configuration translation rules and tool
 Configuration translation rules
 ==========================================================================
 
-To transform 
+To transform a Smart Agent configuration file into a Collector config file, you need to map the original parameters using the Collector's :ref:`configuration syntax <otel-configuration>`.  
 
-EXPLAIN HERE
+.. list-table::
+   :widths: 50 50    
+   :header-rows: 1
 
-See some examples and learn more in :new-page:`our GitHub documentation <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/translatesfx>` on ``translatefx``.
+   *  -  Smart Agent config
+      -  Collector config
+
+   *  -  signalFxAccessToken: {"#from": "env:SFX_ACCESS_TOKEN"}
+         ingestUrl: {"#from": "ingest_url", default: "https://ingest.signalfx.com"}
+         apiUrl: {"#from": "api_url", default: "https://api.signalfx.com"}
+         traceEndpointUrl: {"#from": 'trace_endpoint_url', default: "https://ingest.signalfx.com/v2/trace"}
+         
+         intervalSeconds: 10
+         
+         logging:
+            level: info
+         
+         monitors:
+            - {"#from": "monitors/*.yaml", flatten: true, optional: true}
+            - type: memory
+      -  receivers:
+            smartagent/cpu:
+               type: cpu
+            smartagent/load:
+               type: load
+            smartagent/memory:
+               type: memory
+         exporters:
+            signalfx:
+               access_token: ${SFX_ACCESS_TOKEN}
+               realm: us1
+         service:
+            pipelines:
+               metrics:
+                  receivers:
+                  - smartagent/cpu
+                  - smartagent/load
+                  - smartagent/memory
+                  exporters:
+                  - signalfx   
+
+
+The Smart Agent files are:
+
+  * ``ingest_url``: ``https://ingest.us1.signalfx.com``
+  * ``api_url``: ``https://api.us1.signalfx.com``
+  * ``trace_endpoint_url``: ``https://ingest.signalfx.com/v2/trace``
+  * ``monitors/cpu.yaml``: ``- type: cpu``
+  * ``monitors/load.yaml``: ``- type: load``
+
+Learn more in :new-page:`our GitHub documentation <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/translatesfx>` on ``translatefx``.
 
 Use the configuration translation tool
 ==========================================================================
@@ -60,6 +109,6 @@ From the GUI
 The corresponding translated Collector configuration file is populated in the OpenTelemetry YAML section.
 
 .. image:: /_images/gdi/3886-sa-configuration-tool.png
-   :width: 70%
+   :width: 80%
    :alt: View your translated configuration file. 
 
