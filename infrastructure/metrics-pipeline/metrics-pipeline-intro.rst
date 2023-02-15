@@ -14,7 +14,7 @@ Introduction to Metrics Pipeline Management
 .. meta::
     :description: Introduction to Metrics Pipeline Management in Splunk Observability Cloud.
 
-Metrics pipeline management is an evolution of Splunk Observability Cloud metrics platform that offers you solutions to centrally manage metric cardinality.
+Metrics Pipeline Management is an evolution of Splunk Observability Cloud metrics platform that offers you solutions to centrally manage metric cardinality.
 
 With Metrics Pipeline Management, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without updating your Splunk Distribution of OpenTelemetry Collector configurations.
 

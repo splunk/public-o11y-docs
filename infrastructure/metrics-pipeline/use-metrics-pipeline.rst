@@ -21,7 +21,7 @@ Create rules for a metric
 
 Follow these steps to create rules for a metric.
 
-#. From the landing page of Splunk Observability Cloud, go to :strong:`Settings > Metrics pipeline management`.
+#. From the landing page of Splunk Observability Cloud, go to :strong:`Settings > Metrics Pipeline Management`.
 #. Select :guilabel:`Create new rules`.
 #. In the search bar, enter the name of the metric for which you want to create rules.
 #. Select :guilabel:`OK`.
