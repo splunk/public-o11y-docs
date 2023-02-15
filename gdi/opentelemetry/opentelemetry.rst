@@ -11,7 +11,7 @@ Get started with the Splunk Distribution of OpenTelemetry Collector
     :maxdepth: 5
     :hidden:
 
-    Migrate the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
+    Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     Collector overview <resources.rst>
     install-the-collector.rst
     configure-the-collector.rst

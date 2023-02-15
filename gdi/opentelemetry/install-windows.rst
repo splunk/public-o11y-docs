@@ -1,8 +1,8 @@
 .. _otel-install-windows:
 
-**************************************************
-Install the Collector for Windows
-**************************************************
+****************************************************************
+Install the Collector for Windows with the installer script
+****************************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows.
@@ -18,7 +18,8 @@ The Splunk Distribution of OpenTelemetry Collector for Windows is a package that
 
 * :ref:`Installer script <windows-script>`
 * :ref:`Deployments <windows-deployments>`
-* :ref:`Manual install <otel-install-windows-manual>`
+
+Alternatively, you can :new-page:`install the Collector for Windows manually <otel-install-windows-manual>`.
 
 .. _windows-otel-requirements:
 
@@ -54,12 +55,9 @@ The Splunk Distribution of OpenTelemetry Collector for Windows has the following
 Installer script
 ==========================
 
-The installer script is available for Windows 64-bit environments. The script deploys and configures these things:
+The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of OpenTelemetry Collector for Windows and Fluentd (using the td-agent).
 
-* Splunk Distribution of OpenTelemetry Collector for Windows
-* Fluentd (using the td-agent)
-
-Do the following to install the package using the installer script:
+To install the package using the installer script, follow these steps:
 
 #. Ensure that you have Administrator access on your host.
 #. Run the following PowerShell command on your host, replacing the following variables for your environment:
@@ -82,8 +80,8 @@ To configure memory allocation, use the ``memory`` parameter. By default, this p
 
 Replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
-Configure Fluentd
----------------------------------
+Configure Fluentd for log collection
+-------------------------------------------
 
 By default, the Fluentd service is installed and configured to forward log events with the ``@SPLUNK`` label and send these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
@@ -105,6 +103,17 @@ After any configuration modification, apply the changes by restarting the system
 
   Stop-Service fluentdwinsvc
   Start-Service fluentdwinsvc
+
+Start the Collector executable manually 
+-------------------------------------------
+
+If you experience unexpected start failures, try to start the Collector executable manually. 
+
+To do so, run the following PowerShell command as an Admin:  
+
+.. code-block:: PowerShell
+
+  & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --config 'C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml'
 
 .. _windows-deployments:
 
