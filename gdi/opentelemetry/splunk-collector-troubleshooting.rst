@@ -86,13 +86,7 @@ The collector might be unable to export data for the following reasons:
 * Incorrect credentials
 * The destination is unavailable
 
-If you need to use a proxy, set one of the following environment variables according to your needs:
-
-- ``HTTP_PROXY``
-- ``HTTPS_PROXY``
-- ``NO_PROXY``
-
-Restart the Collector after adding these environment variables to your configuration. 
+If you need to use a proxy, see :ref:`configure-proxy-collector`.
 
 Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
 
