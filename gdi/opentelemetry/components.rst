@@ -69,7 +69,7 @@ Receivers
    * - ``prometheus_simple``
      - Provides a simple configuration interface to configure the Prometheus receiver to scrape metrics from a single target.
      - Metrics
-   * - ``smartagent``
+   * - :ref: `smartagent <migration-monitors>` (``smartagent``)
      - Utilizes the existing Smart Agent monitors as OpenTelemetry Collector metric receivers.
      - Metrics
    * - ``splunk_hec``
@@ -78,6 +78,8 @@ Receivers
    * - ``zipkin``
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
+
+.. _collector-components-processors:
 
 Processors
 =================================
@@ -125,6 +127,8 @@ Processors
    * - ``span``
      - Modifies either the span name or attributes of a span based on the span name.
      - Traces
+
+.. _collector-components-exporters:
 
 Exporters
 =================================
