@@ -82,6 +82,17 @@ To configure memory allocation, change the ``--memory`` parameter. By default, t
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB \
        -- SPLUNK_ACCESS_TOKEN
 
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``
+- ``HTTPS_PROXY``
+- ``NO_PROXY``
+
+Restart the Collector after adding these environment variables to your configuration. 
+
 Use pre-configured repos 
 --------------------------------
 
@@ -165,7 +176,7 @@ If the td-agent package is upgraded after initial installation, you might need t
 
 .. _configure-auto-instrumentation:
 
-Configure auto instrumentation for Java
+Configure automatic instrumentation for Java
 --------------------------------------------
 You can also automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`. 
 
