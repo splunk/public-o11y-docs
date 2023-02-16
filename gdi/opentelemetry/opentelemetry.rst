@@ -13,14 +13,13 @@ Get started with the Splunk Distribution of OpenTelemetry Collector
 
     Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     Collector overview <resources.rst>
+    components.rst
     install-the-collector.rst
     configure-the-collector.rst
     collector-architecture.rst
-    components.rst
     use-the-collector.rst
     troubleshooting.rst
     
-
 The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
 
 The OpenTelemetry Collector has a core version and a contributions version. The core version provides receivers, processors, and exporters for general use. The contributions version provides receivers, processors, and exporters for specific vendors and use cases.
@@ -31,7 +30,7 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 * Fluentd for log capture
 * Tools to support migration from SignalFx products
 
-Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent(deprecated) to the Collector.
+Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent (deprecated) to the Collector.
 
 .. caution::
 
