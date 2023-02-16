@@ -208,7 +208,7 @@ The following example shows how to configure the Collector in gateway mode when 
             exporters: [signalfx/internal]
       # More pipelines
 
-If you want to use the ``signalfx`` exporter for metrics on both Agent and Gateway, disable the aggregation at the Gateway. To do so, set the ``translation_rules`` and ``exclude_metrics`` to empty lists as in the following example.
+If you want to use the ``signalfx`` exporter for metrics on both agent and gateway, disable the aggregation at the Gateway. To do so, set the ``translation_rules`` and ``exclude_metrics`` to empty lists as in the following example.
 
 .. note:: If you want to collect host metrics from the Gateway, use a different ``signalfx exporter`` with translation rules intact. For example, add the ``hostmetrics`` to the metrics/internal pipeline.
 
