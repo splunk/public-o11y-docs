@@ -80,6 +80,17 @@ To configure memory allocation, use the ``memory`` parameter. By default, this p
 
 Replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``
+- ``HTTPS_PROXY``
+- ``NO_PROXY``
+
+Restart the Collector after adding these environment variables to your configuration. 
+
 Configure Fluentd for log collection
 -------------------------------------------
 
