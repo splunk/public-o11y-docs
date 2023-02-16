@@ -81,10 +81,18 @@ Collector can't export data
 
 The collector might be unable to export data for the following reasons:
 
-* Network configuration issues, such as firewall, DNS, or proxy support. The collector does have proxy support for exporters. If configured at collector start time, then exporters, regardless of protocol, do or do not proxy traffic as defined by these environment variables.
+* Network configuration issues, such as firewall, DNS, or proxy support.
 * Incorrect exporter configuration
 * Incorrect credentials
 * The destination is unavailable
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``
+- ``HTTPS_PROXY``
+- ``NO_PROXY``
+
+Restart the Collector after adding these environment variables to your configuration. 
 
 Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
 
