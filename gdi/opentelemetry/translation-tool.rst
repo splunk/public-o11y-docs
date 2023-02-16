@@ -10,7 +10,7 @@ Configuration translation rules and tool
 
 ``translatesfx`` is a command-line tool provided by Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector.  
 
-.. note::
+.. caution::
 
    With ``translatesfx`` you can automate most of the configuration changes when migrating from the Smart Agent to the Splunk OpenTelemetry Collector. Evaluate and test any configuration produced by ``translatesfx`` carefully before releasing it into production environments.
 
@@ -19,9 +19,10 @@ Configuration translation rules
 
 To transform a Smart Agent configuration file into a Collector config file, you need to map the original parameters using the Collector's :ref:`configuration syntax <otel-configuration>`.  
 
-See this basic example:
+See the samples below:
 
-:strong:`Original Smart Agent config`
+Original Smart Agent config
+------------------------------------------------------------
 
 .. code-block::
 
@@ -40,7 +41,8 @@ See this basic example:
       - type: memory            
       
 
-:strong:`Collector config output`
+Collector config output
+------------------------------
 
 .. code-block::      
       
@@ -67,7 +69,7 @@ See this basic example:
 
 .. note::
 
-   Learn more in :new-page:`our GitHub documentation <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/translatesfx>` on ``translatefx``.
+   Learn more in :new-page:`the GitHub documentation <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/translatesfx>` on ``translatefx``.
 
 Use the configuration translation tool
 ==========================================================================
@@ -101,7 +103,7 @@ When translatesfx runs, it sends the translated Collector configuration to the s
 From the GUI
 ------------------------------
 
-#. Access the Smart Agent configuration converter at :new-page:`https://bossofopsando11y.com/configurator/saconverter <https://bossofopsando11y.com/configurator/saconverter>`. This tool is translatesfx with a GUI.
+#. Access the Smart Agent configuration converter at :new-page:`https://bossofopsando11y.com/configurator/saconverter <https://bossofopsando11y.com/configurator/saconverter>`. 
 #. Paste your Smart Agent configuration in the :menuselection:`Smart Agent YAML` section of the GUI.
 
 The corresponding translated Collector configuration file is populated in the OpenTelemetry YAML section.
