@@ -25,7 +25,8 @@ Splunk APM assembles incoming spans into traces and analyzes them to give you fu
 
 What is an ongoing trace?
 ---------------------------
-An ongoing trace is an incomplete trace. The spanes within the trace are still being ingested and assembled. With ongoing traces, you can view incoming spans of a trace being assembled, without having to wait for the entire trace to complete. 
+
+An ongoing trace is an incomplete trace. The spans within an ongoing trace are still being ingested and assembled. With an ongoing trace, you don't have to wait for the entire trace to complete to view incoming spans as they are being assembled. 
 
 Why might a trace be ongoing?
 --------------------------------
