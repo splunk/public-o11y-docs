@@ -269,7 +269,7 @@ $(document).ready(function () {
                                 monitors[i][j] = (monitors[i][j] == true) ? 'Default' : 'Custom';
                             } else if (j == 'custom') {
                                 addedCategory = true;
-                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : 'Custom';
+                                monitors[i][j] = (monitors[i][j] == true) ? 'Custom' : 'Default';
                             }
 
                             if (typeof monitors[i][j] == 'undefined' && j == 'title') {
