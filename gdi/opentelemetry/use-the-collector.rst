@@ -13,7 +13,6 @@ Use the Collector in Observability Cloud
     :hidden:
 
     data-processing.rst
-    deployment-modes.rst
     exposed-endpoints.rst
     monitoring.rst
     sizing.rst

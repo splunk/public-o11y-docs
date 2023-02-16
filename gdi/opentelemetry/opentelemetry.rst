@@ -16,7 +16,6 @@ Get started with the Splunk Distribution of OpenTelemetry Collector
     components.rst
     install-the-collector.rst
     configure-the-collector.rst
-    collector-architecture.rst
     use-the-collector.rst
     troubleshooting.rst
     
@@ -57,23 +56,3 @@ For a complete overview of the Collector resources, refer to :ref:`opentelemetry
 - See :ref:`collector-architecture` for a description of the Collector architecture.
 - See :ref:`otel-components` for a description of the components the Collector supports.
 - Use :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
-
-.. raw:: html
-
-  <embed>
-    <h2>Guided install for the Collector</h2>
-  </embed>
-
-.. _collector-guided-install:
-
-Splunk Observability Cloud offers a guided setup to install the Collector:
-
-#. Log in to Splunk Observability Cloud.
-
-#. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
-  
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-
-#. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
-
-#. Follow the step-by-step process provided in the platform's guided setup.
