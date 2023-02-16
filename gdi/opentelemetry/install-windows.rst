@@ -69,6 +69,10 @@ To install the package using the installer script, follow these steps:
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
+.. note:: If needed, enable TLS in PowerShell using the following command: 
+  
+   ``[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12``
+
 Configure memory allocation
 ----------------------------------
 
@@ -79,6 +83,19 @@ To configure memory allocation, use the ``memory`` parameter. By default, this p
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; memory = "SPLUNK_MEMORY_TOTAL_MIB"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 Replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
+
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``: The HTTP proxy address
+- ``HTTPS_PROXY``: The HTTPS proxy address
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+
+Restart the Collector after adding these environment variables to your configuration. 
+
+.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
 
 Configure Fluentd for log collection
 -------------------------------------------
