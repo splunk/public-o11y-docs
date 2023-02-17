@@ -29,7 +29,7 @@ Move the config parameter ``exporters -> otlp -> insecure`` to ``exporters -> ot
 
 The ``otlp`` exporter configuration must look like this:
 
-.. :code-block::
+.. code-block:: yaml
 
   exporters:
     otlp:
@@ -42,7 +42,7 @@ From 0.34.0 to 0.35.0
 
 Move the ``ballast_size_mib`` parameter from the ``memory_limiter`` processor to the ``memory_ballast`` extension, and rename it to ``size_mib``.
 
-.. :code-block::
+.. code-block:: yaml
 
   extensions:
     memory_ballast:

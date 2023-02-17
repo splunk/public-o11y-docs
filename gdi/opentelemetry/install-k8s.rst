@@ -90,6 +90,8 @@ To set your cloud provider and configure ``cloud.platform`` for the resource det
 
    --set cloudProvider={azure|gcp|eks|openshift} 
 
+Read more about :ref:`otel-kubernetes-config`.
+
 Set Helm using a YAML file
 --------------------------------
 
@@ -103,7 +105,6 @@ See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/
 
 * Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes. 
 * Set ``networkExplorer.enabled`` to ``true`` to use the default values for :ref:`splunk-otel-network-explorer <network-explorer>`.
-
 
 Set Prometheus metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -128,8 +129,7 @@ Add this configuration in the resources file for any pods in the deployment:
 Additional configuration resources
 ------------------------------------------
 
-* Read more about :ref:`otel-kubernetes-config`.
-* See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
+See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
 
 Verify the deployment
 --------------------------------
