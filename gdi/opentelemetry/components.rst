@@ -188,7 +188,7 @@ Configuring an exporter does not enable it. After configuring the exporter, you 
   </embed>
 
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 1
 
    * - Name
