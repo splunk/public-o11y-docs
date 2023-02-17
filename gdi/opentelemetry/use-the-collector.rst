@@ -15,8 +15,6 @@ Use the Collector in Observability Cloud
     data-processing.rst
     exposed-endpoints.rst
     monitoring.rst
-    sizing.rst
-    security.rst
     tags.rst
     collector-with-the-uf.rst
     
