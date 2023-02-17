@@ -15,7 +15,7 @@ This page provides a list of resources for using the Splunk Distribution of Open
 
 Refer to the following topics for an overview of the Collector:
 
-- :ref:`collector-architecture`, which describes how to deploy the Collector.
+- :ref:`otel-deployment-mode`, which describes how to deploy the Collector.
 - :ref:`otel-components`, which describes what the Collector supports.
 - :ref:`otel-monitoring`, which describes how to ensure that the Collector is healthy.
 - :ref:`otel-security`, which describes how to ensure that the Collector is secure.
@@ -63,8 +63,7 @@ Read our docs on how to :ref:`configure the Collector <otel-configuration>`, inc
 Upstream OpenTelemetry Collector
 =============================================
 
-You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector, but the following features are not
-available:
+You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector, but the following features are not available:
 
 - Packaging, including installer scripts for Linux and Windows
 - Configuration management using Ansible or Puppet

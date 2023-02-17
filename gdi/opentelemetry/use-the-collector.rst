@@ -12,12 +12,8 @@ Use the Collector in Observability Cloud
     :titlesonly:
     :hidden:
 
-    data-processing.rst
-    deployment-modes.rst
     exposed-endpoints.rst
     monitoring.rst
-    sizing.rst
-    security.rst
     tags.rst
     collector-with-the-uf.rst
     
