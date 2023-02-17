@@ -12,7 +12,7 @@ Install the Collector for Linux
    :titlesonly:
    :hidden:
 
-   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry
+   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry.rst
    /gdi/opentelemetry/deployments/deployments-linux-ansible.rst
    /gdi/opentelemetry/deployments/deployments-linux-puppet.rst
 

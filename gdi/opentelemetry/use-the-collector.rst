@@ -12,7 +12,6 @@ Use the Collector in Observability Cloud
     :titlesonly:
     :hidden:
 
-    data-processing.rst
     exposed-endpoints.rst
     monitoring.rst
     tags.rst

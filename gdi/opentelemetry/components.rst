@@ -13,6 +13,7 @@ Components
     :hidden:
 
     opentelemetry-exporters.rst
+    data-processing.rst
 
 The OpenTelemetry Collector is made up of the following components:
 
@@ -21,12 +22,13 @@ The OpenTelemetry Collector is made up of the following components:
 * Exporters: Where to send received data. Exporters can be push or pull based. See :ref:`otel-exporters` for the list of exporters.
 * Extensions: Provide capabilities on top of the primary functionality of the Splunk Distribution of OpenTelemetry Collector.
 
-You can enable these components through :ref:`pipelines <otel-data-processing>`. You can also define multiple instances of components as well as pipelines with a YAML configuration.
+You can enable these components through :ref:`pipelines <otel-data-processing>`. 
+
+.. :note::
+
+  See :ref:`otel-configuration` to learn how to define multiple instances of components as well as pipelines.
 
 The Splunk Distribution of OpenTelemetry Collector offers support for the components described in the following tables.
-
-.. note::
-  Docs on each component are coming! In the meantime, find additional information in the :new-page:`Splunk Distribution of OpenTelemetry Collector GitHub repository <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/components.md>`. 
 
 .. _collector-components-receivers:
 
@@ -205,3 +207,16 @@ The Splunk Distribution of OpenTelemetry Collector offers support for the compon
    * - ``zpages``
      - Enables an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components that were properly instrumented for such. 
 
+.. raw:: html
+
+  <embed>
+    <h2>Next steps</h2>
+  </embed>
+
+Read on to learn how to:
+
+* :ref:`otel-install-platform`.
+* :ref:`otel-configuration`.
+
+.. note::
+  Docs on each component are coming! In the meantime, find additional information in the :new-page:`Splunk Distribution of OpenTelemetry Collector GitHub repository <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/components.md>`. 

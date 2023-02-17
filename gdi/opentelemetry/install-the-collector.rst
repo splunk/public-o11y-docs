@@ -19,7 +19,6 @@ Install and deploy the Collector
     Windows (manual) <install-windows-manual.rst>
     deployments/otel-deployments.rst
     uninstall-the-collector.rst
-    collector-architecture.rst
 
 See the available options to install the Splunk Distribution of the OpenTelemetry Collector.
 
