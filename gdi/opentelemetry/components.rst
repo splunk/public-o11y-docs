@@ -34,7 +34,7 @@ The Splunk Distribution of OpenTelemetry Collector offers support for the compon
 .. raw:: html
 
   <embed>
-    <h2>Receivers</h2>
+    <h2>Receivers<a name="collector-components-receivers" class="headerlink" href="#collector-components-receivers" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 .. list-table::
@@ -86,7 +86,7 @@ The Splunk Distribution of OpenTelemetry Collector offers support for the compon
 .. raw:: html
 
   <embed>
-    <h2>Processors</h2>
+    <h2>Processors<a name="collector-components-processors" class="headerlink" href="#collector-components-processors" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 .. list-table::
@@ -139,7 +139,7 @@ The Splunk Distribution of OpenTelemetry Collector offers support for the compon
 .. raw:: html
 
   <embed>
-    <h2>Exporters</h2>
+    <h2>Exporters<a name="collector-components-exporters" class="headerlink" href="#collector-components-exporters" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 An exporter, which can be push or pull based, is how you send data to one or more backends or destinations. Exporters may support one or more data sources (logs, metrics, or traces).
@@ -184,7 +184,7 @@ Configuring an exporter does not enable it. After configuring the exporter, you 
 .. raw:: html
 
   <embed>
-    <h2>Extensions</h2>
+    <h2>Extensions<a name="collector-components-extensions" class="headerlink" href="#collector-components-extensions" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 .. list-table::
@@ -215,7 +215,7 @@ Configuring an exporter does not enable it. After configuring the exporter, you 
 .. raw:: html
 
   <embed>
-    <h2>Next steps</h2>
+    <h2>Next steps<a name="next-steps" class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 Read on to learn how to:
