@@ -13,7 +13,9 @@ Configure the Collector
     :hidden:
 
     configure-the-collector-ootb.rst
-    optional-configurations.rst
+    linux-config.rst
+    kubernetes-config.rst
+    windows-config.rst
     other-configuration-sources.rst
     configure-the-smart-agent.rst
     data-processing.rst
@@ -30,15 +32,11 @@ You can use a variety of default configuration files to set up the Splunk Distri
 
 See :ref:`the out-of-the-box configuration <otel-configuration-ootb>` for most environments. 
 
-.. _otel-linux-full:
+Use these configurations to change the default settings in each Collector package:
 
-.. raw:: html
-
-  <embed>
-    <h3>Linux full configuration<a name="otel-linux-full" class="headerlink" href="#otel-linux-full" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-:new-page:`full_config_linux.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/full_config_linux.yaml>` is an extended configuration. This configuration requires using :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` or a similar distribution.
+* :ref:`otel-linux-config`
+* :ref:`otel-kubernetes-config`
+* :ref:`otel-windows-config`
 
 .. _otel-config-multiple-files:
 
@@ -71,7 +69,7 @@ To define multiple config files simultaneously use:
 The following table describes the artifacts in the Fluentd directory:
 
 .. list-table::
-  :widths: 50 50
+  :widths: 25 75
   :header-rows: 1
 
   * - Configuration
