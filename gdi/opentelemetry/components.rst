@@ -18,14 +18,14 @@ The OpenTelemetry Collector is made up of the following components:
 
 * Receivers: How to get data in. Receivers can be push or pull based. See :ref:`monitor-data-sources` for the list of receivers.
 * Processors: What to do with received data.
-* Exporters: Where to send received data. Exporters can be push or pull based. See :ref:`otel-exporters` for the list of exporters.
+* Exporters: Where to send received data. Exporters can be push or pull based. 
 * Extensions: Provide capabilities on top of the primary functionality of the Splunk Distribution of OpenTelemetry Collector.
 
 You can enable these components through :ref:`pipelines <otel-data-processing>`. 
 
-.. :note::
-
-  See :ref:`otel-configuration` to learn how to define multiple instances of components as well as pipelines.
+.. note::
+  
+  See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
 The Splunk Distribution of OpenTelemetry Collector offers support for the components described in the following tables.
 
@@ -71,8 +71,8 @@ The Splunk Distribution of OpenTelemetry Collector offers support for the compon
    * - ``prometheus_simple``
      - Provides a simple configuration interface to configure the Prometheus receiver to scrape metrics from a single target.
      - Metrics
-   * - :ref: `smartagent <migration-monitors>` (``smartagent``)
-     - Utilizes the existing Smart Agent monitors as OpenTelemetry Collector metric receivers.
+   * - ``smartagent``
+     - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
      - Metrics
    * - ``splunk_hec``
      - Accepts metrics in the Splunk HEC format.
