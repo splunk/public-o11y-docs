@@ -62,6 +62,25 @@ If traces from your instrumented application or service are not available in Spl
 #. Check that the OTLP receiver is enabled in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
+Assembly in AdditionalDeps was not found
+==================================================================
+
+The following assembly error message might appear in some cases:
+
+```bash
+An assembly specified in the application dependencies manifest (OpenTelemetry.AutoInstrumentation.AdditionalDeps.deps.json) was not found
+  ...
+```
+
+To troubleshoot the issue, enable host tracing as in the following example:
+
+```bash
+COREHOST_TRACE=1
+COREHOST_TRACEFILE=corehost_verbose_tracing.log
+```
+
+Run the application to collect the logs.
+
 .. _dotnet-otel-troubleshoot-cpu:
 
 High CPU usage

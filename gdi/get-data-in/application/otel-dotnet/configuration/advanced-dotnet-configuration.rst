@@ -157,7 +157,7 @@ The following settings control instrumentations and tracing behavior:
      - Maximum length of strings for attribute values. Values larger than the limit are truncated. Default value is ``1200``. Empty values are treated as infinity.
    * - ``OTEL_DOTNET_AUTO_GRAPHQL_SET_DOCUMENT``
      - Whether the GraphQL instrumentation can pass raw queries as a ``graphql.document`` attribute. As queries might contain sensitive information, the default value is ``false``.
-   * - ``OTEL_DOTNET_AUTO_LEGACY_SOURCES``
+   * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_LEGACY_SOURCES``
      - Comma-separated list of additional legacy source names to be added to the tracer at the startup. Use it to capture ``System.Diagnostics.Activity`` objects created without using the ``System.Diagnostics.ActivitySource`` API.	
 
 The following settings control which instrumentations are enabled. See :ref:`disable-instrumentations-otel-dotnet` for more information.
