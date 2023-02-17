@@ -15,7 +15,7 @@ This page provides a list of resources for using the Splunk Distribution of Open
 
 Refer to the following topics for an overview of the Collector:
 
-- :ref:`deployment-modes`, which describes how to deploy the Collector.
+- :ref:`otel-deployment-mode`, which describes how to deploy the Collector.
 - :ref:`otel-components`, which describes what the Collector supports.
 - :ref:`otel-monitoring`, which describes how to ensure that the Collector is healthy.
 - :ref:`otel-security`, which describes how to ensure that the Collector is secure.

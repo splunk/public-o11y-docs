@@ -5,7 +5,7 @@ Collector requirements
 ***********************************************************************************
 
 .. meta::
-      :description: Requirements for the Splunk Distribution of OpenTelemetry Collector.
+    :description: Requirements for the Splunk Distribution of OpenTelemetry Collector.
 
 .. toctree::
     :maxdepth: 4
@@ -18,6 +18,6 @@ Collector requirements
 
 Keep in mind the following pre-requisites, requirements, and general considerations when using the Collector:
 
-* :ref:`<otel-security>`
-* :ref:`<otel-sizing>`
-* :ref:`<collector-architecture>`
+* :ref:`otel-security`
+* :ref:`otel-sizing`
+* :ref:`collector-architecture`
