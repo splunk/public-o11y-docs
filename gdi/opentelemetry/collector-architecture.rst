@@ -5,7 +5,7 @@ Processor architecture
 *******************************************************************
 
 .. meta::
-   :description: Describes the processor CPU architecture of the Splunk Distribution of OpenTelemetry Collector.
+   :description: Describes the CPU architecture of the Splunk Distribution of OpenTelemetry Collector.
 
 The Collector supports the following processor architecture:
 
