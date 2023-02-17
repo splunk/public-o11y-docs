@@ -225,3 +225,8 @@ Read on to learn how to:
 
 .. note::
   Docs on each component are coming! In the meantime, find additional information in the :new-page:`Splunk Distribution of OpenTelemetry Collector GitHub repository <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/components.md>`. 
+
+To learn about the available configuration options for receivers, processors, exporters, and extensions, see the corresponding folders in the following GitHub repositories:
+
+* :new-page:`OpenTelemetry Collector <https://github.com/open-telemetry/opentelemetry-collector>`
+* :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>`  

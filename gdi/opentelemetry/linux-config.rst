@@ -9,13 +9,12 @@ Advanced configurations for Linux
 
 The following sections describe available settings for configuring the Splunk Distribution of OpenTelemetry Collector for Linux.
 
+.. _otel-linux-full:
+
 Change the default configuration file
 ===========================================
 
-The Collector comes with a default configuration in the ``/etc/otel/collector/agent_config.yaml`` file. You can modify this configuration if needed. To learn about the available configuration options for receivers, processors, exporters, and extensions, see the corresponding folders in the following GitHub repositories:
-
-* :new-page:`OpenTelemetry Collector <https://github.com/open-telemetry/opentelemetry-collector>`
-* :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>`
+The Collector comes with a default configuration in the ``/etc/otel/collector/agent_config.yaml`` file. :new-page:`full_config_linux.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/full_config_linux.yaml>` is an extended configuration. This configuration requires using :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` or a similar distribution.
 
 After you modify the configuration, restart the Collector service. For example: 
 
