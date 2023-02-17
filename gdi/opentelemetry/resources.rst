@@ -15,7 +15,7 @@ This page provides a list of resources for using the Splunk Distribution of Open
 
 Refer to the following topics for an overview of the Collector:
 
-- :ref:`collector-architecture`, which describes how to deploy the Collector.
+- :ref:`otel-deployment-mode`, which describes how to deploy the Collector.
 - :ref:`otel-components`, which describes what the Collector supports.
 - :ref:`otel-monitoring`, which describes how to ensure that the Collector is healthy.
 - :ref:`otel-security`, which describes how to ensure that the Collector is secure.
@@ -36,7 +36,7 @@ This distribution is supported on and packaged for a variety of platforms, inclu
 
 - Kubernetes: :ref:`Helm <helm-chart>` (recommended) and :ref:`YAML <resource-yaml-manifests>`.
 - Linux: :ref:`installer script <linux-scripts>` (recommended), :ref:`Ansible <deployment-linux-ansible>`, :ref:`Puppet <deployment-linux-puppet>`, :ref:`Heroku <linux-heroku>`, and :ref:`manual <linux-manual>` (including DEB/RPM packages, Docker, and binary).
-- Windows: :ref:`installer script <windows-script>` (recommended), :ref:`Ansible <deployment-windows-ansible>`, :ref:`Puppet <deployment-windows-puppet>`, and :ref:`manual <windows-manual>` (including MSI with GUI and PowerShell).
+- Windows: :ref:`installer script <windows-script>` (recommended), :ref:`Ansible <deployment-windows-ansible>`, :ref:`Puppet <deployment-windows-puppet>`, and :ref:`manual <otel-install-windows-manual>` (including MSI with GUI and PowerShell).
 
 See :new-page:`examples <https://github.com/signalfx/splunk-otel-collector/blob/main/examples>` for additional use cases.
 
@@ -63,8 +63,7 @@ Read our docs on how to :ref:`configure the Collector <otel-configuration>`, inc
 Upstream OpenTelemetry Collector
 =============================================
 
-You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector, but the following features are not
-available:
+You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector, but the following features are not available:
 
 - Packaging, including installer scripts for Linux and Windows
 - Configuration management using Ansible or Puppet

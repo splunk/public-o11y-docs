@@ -33,6 +33,9 @@ Request header
    * - X-SF-Token  
      - Required
      - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
+   * - Content-Type
+     - Required
+     - application/json
 
 Alert fields
 ----------------
@@ -64,6 +67,10 @@ The following fields are transformed as part of the common information model. Al
      - 
      - Integer
      - Date-time. Send date-time in epoch format
+   * - source 
+     - 
+     - String
+     - The alert source
 
 
 JSON payload

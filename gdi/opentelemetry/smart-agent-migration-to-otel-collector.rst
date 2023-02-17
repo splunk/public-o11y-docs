@@ -15,13 +15,10 @@ Migrate from SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Co
 
    Migration process <smart-agent-migration-process.rst>
    translation-tool.rst
+   smart-agent-migration-monitors.rst
    legacy-otel-mappings.rst
 
-The Splunk Distribution of OpenTelemetry Collector is the Splunk distribution of the :new-page:`OpenTelemetry Collector <https://opentelemetry.io/docs/concepts/data-collection/>` that provides a unified way to receive, process, and export metrics, traces, and logs to Splunk Observability Cloud.
-
-This distribution provides helpful components to assist current SignalFx Smart Agent (deprecated) users in their transition to the Collector and ensure no functionality loss. The Smart Agent Receiver, its associated extension, and other Collector components provide a means of integrating all Smart Agent metric monitors into your Collector pipelines.
-
-The Smart Agent metric monitors allow real-time insights into how your target services and applications are performing. These metric gathering utilities have an equivalent counterpart in the Collector, known as the metric receiver. The Smart Agent Receiver is a wrapper utility that allows the embedding of Smart Agent monitors within your Collector pipelines.
+The Splunk Distribution of the :new-page:`OpenTelemetry Collector <https://opentelemetry.io/docs/concepts/data-collection/>` provides a unified way to receive, process, and export metrics, traces, and logs to Splunk Observability Cloud. Current SignalFx Smart Agent (deprecated) users can easily transition to the Collector without losing any functionality. 
 
 .. raw:: html
 
@@ -36,11 +33,27 @@ The benefits of using the Collector are:
 * Ability to correlate data between different views within Observability Cloud with :ref:`Related Content <get-started-relatedcontent>`.
 * Bundled FluentD for log collection.
 
-For example, see the Related Content bar displaying in Splunk APM. With the ``paymentservice`` selected in the APM Service Map, the bar offers easy access to the paymentservice-related Kubernetes cluster data in Splunk Infrastructure Monitoring and logs in Splunk Log Observer:
+.. raw:: html
 
-.. image:: /_images/gdi/3886-related-content-bar.png
-   :width: 99%
-   :alt: Viewing the Related Content bar in Splunk APM.
+   <embed>
+      <h2>Migration process<a name="migration-process" class="headerlink" href="#migration-process" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+To migrate from the Smart Agent to the Collector, follow :ref:`these steps <migration-process>`.
+
+.. raw:: html
+
+   <embed>
+      <h3>Smart Agent monitors and the Smart Agent Receiver<a name="sa-receiver-monitor" class="headerlink" href="#sa-receiver-monitor" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+While the Smart Agent is deprecated, Smart Agent :ref:`monitors <monitor-data-sources>` are not.
+
+The Smart Agent metric monitors allow real-time insights into how your target services and applications are performing. These metric gathering utilities have an equivalent counterpart in the Collector.   
+
+The `smartagent` receiver is a :ref:`component of the Collector <otel-components>` that allows the embedding of existing Smart Agent monitors in your Collector metric pipelines. 
+
+Learn :ref:`how to use Smart Agent monitors in the Collector <migration-monitors>`. 
 
 .. raw:: html
 
