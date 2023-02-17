@@ -12,8 +12,7 @@ Components
     :titlesonly:
     :hidden:
 
-    opentelemetry-exporters.rst
-    data-processing.rst
+    sapm/splunk-apm-exporter
 
 The OpenTelemetry Collector is made up of the following components:
 
@@ -66,9 +65,6 @@ The Splunk Distribution of OpenTelemetry Collector offers support for the compon
    * - ``receiver_creator``
      - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, you must first configure one or more observer extensions to discover networked endpoints that you might be interested in.
      - N/A
-   * - :ref:`splunk-apm-exporter` (``sapm``)
-     - Builds on the Jaeger proto. Use this exporter to receive traces from other collectors.
-     - Traces
    * - ``signalfx``
      - Accepts metrics and logs in the proto format.
      - Metrics, logs
@@ -138,12 +134,21 @@ The Splunk Distribution of OpenTelemetry Collector offers support for the compon
      - Traces
 
 .. _collector-components-exporters:
+.. _otel-exporters:
 
 .. raw:: html
 
   <embed>
     <h2>Exporters</h2>
   </embed>
+
+An exporter, which can be push or pull based, is how you send data to one or more backends or destinations. Exporters may support one or more data sources (logs, metrics, or traces).
+
+Exporters may come with default settings, but many require configuration to specify at least the destination and security settings. Any configuration for an exporter must be done in the ``exporters`` section of your configuration file. Configuration parameters specified for which the exporter provides a default configuration are overridden.
+
+By default, no exporters are configured, but one or more exporters must be configured. 
+
+Configuring an exporter does not enable it. After configuring the exporter, you must enable it by using a pipeline within the service section.
 
 .. list-table::
    :widths: 25 50 25
@@ -164,9 +169,9 @@ The Splunk Distribution of OpenTelemetry Collector offers support for the compon
    * - ``otlphttp``
      - Exports traces and/or metrics via HTTP using OTLP format. 
      - Metrics, traces
-   * - ``sapm``
+   * - :ref:`splunk-apm-exporter` (``sapm``)
      - Builds on the Jaeger proto and adds additional batching on top, which allows the Splunk Distribution of OpenTelemetry Collector to export traces from multiple nodes or services in a single batch. 
-     - Traces
+     - Traces  
    * - ``signalfx``
      - Sends metrics, events, and trace correlation to Infrastructure Monitoring. 
      - Logs (events), metrics, traces (trace to metric correlation only)
