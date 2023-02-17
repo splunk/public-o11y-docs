@@ -56,11 +56,11 @@ The following settings are common to most instrumentation scenarios:
    * - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
      - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Can't be set using the ``web.config`` or ``app.config`` files.
    * - ``OTEL_DOTNET_AUTO_TRACES_ENABLED``
-     - Traces are collected by default. To disable trace collection, set the environment variable to ``false``.
+     - Traces are collected by default. To disable trace collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
    * - ``OTEL_DOTNET_AUTO_METRICS_ENABLED``
-     - Metrics are collected by default. To disable metric collection, set the environment variable to ``false``.
+     - Metrics are collected by default. To disable metric collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
    * - ``OTEL_DOTNET_AUTO_LOGS_ENABLED``
-     - Logs are collected by default. To disable log collection, set the environment variable to ``false``.
+     - Logs are collected by default. To disable log collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
    * - ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED``
      - Enables the OpenTracing tracer. The default value is ``false``. See :ref:`migrate-signalfx-dotnet-to-dotnet-otel` for more information.
    * - ``OTEL_DOTNET_AUTO_NETFX_REDIRECT_ENABLED``
@@ -144,9 +144,9 @@ The following settings control instrumentations and tracing behavior:
    * - ``OTEL_RESOURCE_ATTRIBUTES``
      - Comma-separated list of resource attributes added to every reported span. For example, ``key1=val1,key2=val2``. 
    * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_SOURCES``
-     - Comma-separated list of additional ``System.Diagnostics.ActivitySource`` names to be added to the tracer at startup. Use it to capture manually instrumented spans.	 
+     - Comma-separated list of additional ``System.Diagnostics.ActivitySource`` names to be added to the tracer at startup. Use it to capture spans from manual instrumentation.
    * - ``OTEL_DOTNET_AUTO_METRICS_ADDITIONAL_SOURCES``
-     - Comma-separated list of additional ``System.Diagnostics.Metrics.Meter`` names to be added to the meter at the startup. Use it to capture manually instrumented spans.
+     - Comma-separated list of additional ``System.Diagnostics.Metrics.Meter`` names to be added to the meter at the startup. Use it to capture custom metrics.
    * - ``OTEL_SPAN_ATTRIBUTE_COUNT_LIMIT``
      - Maximum number of attributes per span. Default value is unlimited.
    * - ``OTEL_SPAN_EVENT_COUNT_LIMIT``
