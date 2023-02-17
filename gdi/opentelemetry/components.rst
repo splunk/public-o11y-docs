@@ -26,11 +26,15 @@ You can enable these components through :ref:`pipelines <otel-data-processing>`.
 The Splunk Distribution of OpenTelemetry Collector offers support for the components described in the following tables.
 
 .. note::
-   We are in the process of updating the documentation for each component. You can find additional information for each component in the :new-page:`Splunk Distribution of OpenTelemetry Collector GitHub repository <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/components.md>`. 
+  Docs on each component are coming! In the meantime, find additional information in the :new-page:`Splunk Distribution of OpenTelemetry Collector GitHub repository <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/components.md>`. 
 
+.. _collector-components-receivers:
 
-Receivers
-==================
+.. raw:: html
+
+  <embed>
+    <h2>Receivers</h2>
+  </embed>
 
 .. list-table::
    :widths: 25 50 25
@@ -81,8 +85,11 @@ Receivers
 
 .. _collector-components-processors:
 
-Processors
-=================================
+.. raw:: html
+
+  <embed>
+    <h2>Processors</h2>
+  </embed>
 
 .. list-table::
    :widths: 25 50 25
@@ -130,8 +137,11 @@ Processors
 
 .. _collector-components-exporters:
 
-Exporters
-=================================
+.. raw:: html
+
+  <embed>
+    <h2>Exporters</h2>
+  </embed>
 
 .. list-table::
    :widths: 25 50 25
@@ -162,8 +172,13 @@ Exporters
      - Sends metrics to a Splunk HEC endpoint. 
      - Metrics, logs, traces
 
-Extensions
-=================================
+.. _collector-components-extensions:
+
+.. raw:: html
+
+  <embed>
+    <h2>Extensions</h2>
+  </embed>
 
 .. list-table::
    :widths: 50 50
@@ -190,4 +205,3 @@ Extensions
    * - ``zpages``
      - Enables an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components that were properly instrumented for such. 
 
-     
