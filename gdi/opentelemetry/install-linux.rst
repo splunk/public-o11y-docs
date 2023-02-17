@@ -12,7 +12,7 @@ Install the Collector for Linux
    :titlesonly:
    :hidden:
 
-   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry
+   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry.rst
    /gdi/opentelemetry/deployments/deployments-linux-ansible.rst
    /gdi/opentelemetry/deployments/deployments-linux-puppet.rst
 
@@ -81,6 +81,19 @@ To configure memory allocation, change the ``--memory`` parameter. By default, t
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB \
        -- SPLUNK_ACCESS_TOKEN
+
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``: The HTTP proxy address
+- ``HTTPS_PROXY``: The HTTPS proxy address
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+
+Restart the Collector after adding these environment variables to your configuration.
+
+.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
 
 Use pre-configured repos 
 --------------------------------
@@ -165,7 +178,7 @@ If the td-agent package is upgraded after initial installation, you might need t
 
 .. _configure-auto-instrumentation:
 
-Configure auto instrumentation for Java
+Configure automatic instrumentation for Java
 --------------------------------------------
 You can also automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`. 
 

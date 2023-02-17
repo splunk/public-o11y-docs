@@ -1,7 +1,7 @@
 .. _otel-troubleshooting:
 
 *************************************************************************
-Troubleshoot issues when collecting data
+Troubleshoot the Collector
 *************************************************************************
 
 .. meta::

@@ -12,25 +12,30 @@ Components
     :titlesonly:
     :hidden:
 
-    opentelemetry-exporters.rst
+    sapm/splunk-apm-exporter
 
 The OpenTelemetry Collector is made up of the following components:
 
 * Receivers: How to get data in. Receivers can be push or pull based. See :ref:`monitor-data-sources` for the list of receivers.
 * Processors: What to do with received data.
-* Exporters: Where to send received data. Exporters can be push or pull based. See :ref:`otel-exporters` for the list of exporters.
+* Exporters: Where to send received data. Exporters can be push or pull based. 
 * Extensions: Provide capabilities on top of the primary functionality of the Splunk Distribution of OpenTelemetry Collector.
 
-You can enable these components through :ref:`pipelines <otel-data-processing>`. You can also define multiple instances of components as well as pipelines with a YAML configuration.
+You can enable these components through :ref:`pipelines <otel-data-processing>`. 
+
+.. note::
+  
+  See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
 The Splunk Distribution of OpenTelemetry Collector offers support for the components described in the following tables.
 
-.. note::
-   We are in the process of updating the documentation for each component. You can find additional information for each component in the :new-page:`Splunk Distribution of OpenTelemetry Collector GitHub repository <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/components.md>`. 
+.. _collector-components-receivers:
 
+.. raw:: html
 
-Receivers
-==================
+  <embed>
+    <h2>Receivers</h2>
+  </embed>
 
 .. list-table::
    :widths: 25 50 25
@@ -60,9 +65,6 @@ Receivers
    * - ``receiver_creator``
      - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, you must first configure one or more observer extensions to discover networked endpoints that you might be interested in.
      - N/A
-   * - :ref:`splunk-apm-exporter` (``sapm``)
-     - Builds on the Jaeger proto. Use this exporter to receive traces from other collectors.
-     - Traces
    * - ``signalfx``
      - Accepts metrics and logs in the proto format.
      - Metrics, logs
@@ -70,7 +72,7 @@ Receivers
      - Provides a simple configuration interface to configure the Prometheus receiver to scrape metrics from a single target.
      - Metrics
    * - ``smartagent``
-     - Utilizes the existing Smart Agent monitors as OpenTelemetry Collector metric receivers.
+     - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
      - Metrics
    * - ``splunk_hec``
      - Accepts metrics in the Splunk HEC format.
@@ -79,8 +81,13 @@ Receivers
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
 
-Processors
-=================================
+.. _collector-components-processors:
+
+.. raw:: html
+
+  <embed>
+    <h2>Processors</h2>
+  </embed>
 
 .. list-table::
    :widths: 25 50 25
@@ -126,8 +133,22 @@ Processors
      - Modifies either the span name or attributes of a span based on the span name.
      - Traces
 
-Exporters
-=================================
+.. _collector-components-exporters:
+.. _otel-exporters:
+
+.. raw:: html
+
+  <embed>
+    <h2>Exporters</h2>
+  </embed>
+
+An exporter, which can be push or pull based, is how you send data to one or more backends or destinations. Exporters may support one or more data sources (logs, metrics, or traces).
+
+Exporters may come with default settings, but many require configuration to specify at least the destination and security settings. Any configuration for an exporter must be done in the ``exporters`` section of your configuration file. Configuration parameters specified for which the exporter provides a default configuration are overridden.
+
+By default, no exporters are configured, but one or more exporters must be configured. 
+
+Configuring an exporter does not enable it. After configuring the exporter, you must enable it by using a pipeline within the service section.
 
 .. list-table::
    :widths: 25 50 25
@@ -148,9 +169,9 @@ Exporters
    * - ``otlphttp``
      - Exports traces and/or metrics via HTTP using OTLP format. 
      - Metrics, traces
-   * - ``sapm``
+   * - :ref:`splunk-apm-exporter` (``sapm``)
      - Builds on the Jaeger proto and adds additional batching on top, which allows the Splunk Distribution of OpenTelemetry Collector to export traces from multiple nodes or services in a single batch. 
-     - Traces
+     - Traces  
    * - ``signalfx``
      - Sends metrics, events, and trace correlation to Infrastructure Monitoring. 
      - Logs (events), metrics, traces (trace to metric correlation only)
@@ -158,11 +179,16 @@ Exporters
      - Sends metrics to a Splunk HEC endpoint. 
      - Metrics, logs, traces
 
-Extensions
-=================================
+.. _collector-components-extensions:
+
+.. raw:: html
+
+  <embed>
+    <h2>Extensions</h2>
+  </embed>
 
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 1
 
    * - Name
@@ -186,4 +212,16 @@ Extensions
    * - ``zpages``
      - Enables an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components that were properly instrumented for such. 
 
-     
+.. raw:: html
+
+  <embed>
+    <h2>Next steps</h2>
+  </embed>
+
+Read on to learn how to:
+
+* :ref:`otel-install-platform`.
+* :ref:`otel-configuration`.
+
+.. note::
+  Docs on each component are coming! In the meantime, find additional information in the :new-page:`Splunk Distribution of OpenTelemetry Collector GitHub repository <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/components.md>`. 

@@ -1,7 +1,7 @@
 .. _otel-intro:
 
 *******************************************************************************************
-Get started with the Splunk Distribution of OpenTelemetry Collector
+Get started with the Splunk Distribution of the OpenTelemetry Collector
 *******************************************************************************************
 
 .. meta::
@@ -11,19 +11,23 @@ Get started with the Splunk Distribution of OpenTelemetry Collector
     :maxdepth: 5
     :hidden:
 
-    Migrate the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
+    Migrate from the Smart Agent to the Collector <smart-agent-migration-to-otel-collector.rst>
     Collector overview <resources.rst>
+    components.rst
+    Requirements <otel-requirements.rst>
     install-the-collector.rst
     configure-the-collector.rst
-    collector-architecture.rst
-    components.rst
     use-the-collector.rst
-    troubleshooting.rst
+    Troubleshooting <troubleshooting.rst>
     
-
 The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
 
 The OpenTelemetry Collector has a core version and a contributions version. The core version provides receivers, processors, and exporters for general use. The contributions version provides receivers, processors, and exporters for specific vendors and use cases.
+
+.. caution::
+
+  Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
+  Splunk only provides best-effort support for the upstream OpenTelemetry Collector.
 
 The Splunk Distribution of OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. The distribution is a project that bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms. The customizations in the Splunk distribution include these features:
 
@@ -31,20 +35,9 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 * Fluentd for log capture
 * Tools to support migration from SignalFx products
 
-Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent(deprecated) to the Collector.
+.. note::
 
-.. caution::
-
-  Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
-  Splunk only provides best-effort support for the upstream OpenTelemetry Collector.
-
-
-.. raw:: html
-
-  <embed>
-    <h2>Use the Collector</h2>
-  </embed>
-
+  Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent (deprecated) to the Collector.
 
 To use the Collector:
 
@@ -55,26 +48,5 @@ To use the Collector:
 
 For a complete overview of the Collector resources, refer to :ref:`opentelemetry-resources`. 
 
-- See :ref:`collector-architecture` for a description of the Collector architecture.
 - See :ref:`otel-components` for a description of the components the Collector supports.
 - Use :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
-
-.. raw:: html
-
-  <embed>
-    <h2>Guided install for the Collector</h2>
-  </embed>
-
-.. _collector-guided-install:
-
-Splunk Observability Cloud offers a guided setup to install the Collector:
-
-#. Log in to Splunk Observability Cloud.
-
-#. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
-  
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-
-#. Select one of the platforms in the :guilabel:`Splunk OpenTelemetry Collector` section.
-
-#. Follow the step-by-step process provided in the platform's guided setup.

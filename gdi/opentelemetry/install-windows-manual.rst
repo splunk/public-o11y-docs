@@ -29,6 +29,15 @@ All installation methods offer default configurations using environment variable
 - ``${SPLUNK_TRACE_URL}``: The Splunk trace endpoint URL. For example, ``https://ingest.us0.signalfx.com/v2/trace``.
 - ``${SPLUNK_BUNDLE_DIR}``: The location of your Smart Agent bundle for monitor functionality. For example, ``C:\Program Files\Splunk\OpenTelemetry Collector\agent-bundle``.
 
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``: The HTTP proxy address
+- ``HTTPS_PROXY``: The HTTPS proxy address
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+
 .. _windows-installer:
 
 Windows Installer (MSI)

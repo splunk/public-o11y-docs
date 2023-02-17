@@ -1,10 +1,11 @@
 (splunk-apm-exporter)=
 
-# Splunk APM (SAPM) 
+# Splunk APM 
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Splunk APM exporter. See benefits, install, configuration, and traces">
 
 ## Description 
+
 The Splunk Distribution of OpenTelemetry Collector offers support for the Splunk APM (SAPM) exporter. The SAPM exporter is in beta, but breaking changes will not be introduced in a new release.
 
 The SAPM exporter builds on the Jaeger protocol and adds additional batching on top, which allows the Collector to export traces from multiple nodes or services in a single batch. See [SAPM protocol](https://github.com/signalfx/sapm-proto/) for complete details on the schema.
