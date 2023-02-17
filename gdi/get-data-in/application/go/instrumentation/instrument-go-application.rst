@@ -117,17 +117,17 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-go-trouble
 Enable metrics collection
 --------------------------------------
 
-To enable automatic runtime metric collection, enable the metrics feature using the ``SPLUNK_METRICS_ENABLED`` environment variable. See :ref:`metrics-configuration-golang` for more information.
+To enable automatic runtime metric collection, enable the metrics feature using the ``OTLP_METRICS_EXPORTER`` environment variable.
 
 .. tabs::
 
    .. code-tab:: bash Linux
 
-      export SPLUNK_METRICS_ENABLED='true'
+      export OTLP_METRICS_EXPORTER=otlp
 
    .. code-tab:: shell Windows PowerShell
 
-      $env:SPLUNK_METRICS_ENABLED='true'
+      $env:OTLP_METRICS_EXPORTER=otlp
 
 .. _kubernetes_go:
 

@@ -179,29 +179,6 @@ You can also change the trace propagator using ``otel.SetTextMapPropagator``. Fo
    // Change propagator after distro.Run() has been invoked
    otel.SetTextMapPropagator(propagation.TraceContext{})
 
-.. _metrics-configuration-golang:
-
-Metrics configuration
-===============================================================
-
-The following settings enable metrics collection:
-
-.. list-table:: 
-   :header-rows: 1
-
-   * - Environment variable
-     - Description
-   * - ``SPLUNK_METRICS_ENABLED``
-     - Enables metrics collection. The default value is ``false``. For more information on Go metrics, see :ref:`golang-otel-metrics`.
-   * - ``SPLUNK_METRICS_ENDPOINT``
-     - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
-   * - ``OTEL_METRIC_EXPORT_INTERVAL``
-     - The interval, in milliseconds, of metrics collection and exporting. The default value is ``30000``.
-   * - ``SPLUNK_RUNTIME_METRICS_ENABLED``
-     - Enable collecting and exporting of runtime metrics. The default value is ``true``. Runtime metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true`` or if memory profiling is enabled.
-   * - ``SPLUNK_RUNTIME_METRICS_COLLECTION_INTERVAL``
-     - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
-
 .. _server-trace-information-go:
 
 Server trace information

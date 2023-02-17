@@ -7,7 +7,7 @@ Metrics and attributes collected by the Splunk Distribution of OTel Go
 .. meta:: 
    :description: The Splunk Distribution of OpenTelemetry Go collects the following metrics.
 
-The Splunk Distribution of OpenTelemetry Go collects runtime and custom metrics. To enable runtime metrics collection, see :ref:`metrics-configuration-golang`. 
+The Splunk Distribution of OpenTelemetry Go collects runtime and custom metrics. 
 
 To learn about the different metric types, see :ref:`metric-types`.
 
@@ -18,14 +18,14 @@ To learn about the different metric types, see :ref:`metric-types`.
 Enable metrics collection
 ====================================================
 
-To collect Node.js metrics, see :ref:`metrics-configuration-golang`.
+To collect Node.js metrics, see :ref:`enable_automatic_metric_collection_golang`.
 
 .. _golang-otel-runtime-metrics:
 
 Runtime metrics
 ================================================
 
-To enable runtime metrics, see :ref:`metrics-configuration-golang`. The following runtime metrics are automatically collected and exported:
+The following runtime metrics are automatically collected and exported:
 
 .. list-table:: 
    :header-rows: 1
@@ -35,19 +35,3 @@ To enable runtime metrics, see :ref:`metrics-configuration-golang`. The followin
    * - Metric
      - Type
      - Description
-
-.. _golang-otel-custom-metrics:
-
-Custom metrics
-=====================================
-
-To send custom application metrics to Observability Cloud...
-
-.. _golang-otel-metrics-migration:
-
-Migrate from SignalFx metrics for Go
-===========================================
-
-To migrate your custom metric instrumentation from the SignalFx client library, follow these steps:
-
-. . . 

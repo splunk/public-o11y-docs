@@ -265,11 +265,6 @@ Replace the following instrumentation libraries with the OpenTelemetry equivalen
    * - ``tidwall/buntdb``
      - :new-page:`splunkbuntdb <https://github.com/signalfx/splunk-otel-go/tree/main/instrumentation/github.com/tidwall/buntdb/splunkbuntdb>`
 
-Migrate custom metric collection
-==========================================================
-
-To migrate your custom metric instrumentation from the SignalFx client library, see :ref:`golang-otel-metrics-migration`.`
-
 Remove the SignalFx Tracing Library
 ==========================================================
 
