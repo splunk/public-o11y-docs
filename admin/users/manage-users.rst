@@ -9,6 +9,7 @@ Create and manage users in Splunk Observability Cloud
 
 .. toctree::
    :hidden:
+      about-team-roles
 
 .. note:: To create or manage users and teams, you must have administrator access.
    To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
