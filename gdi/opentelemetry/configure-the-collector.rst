@@ -20,7 +20,7 @@ Configure the Collector
     configure-the-smart-agent.rst
     data-processing.rst
 
-You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well additional components that you can configure separately.
+You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately.
 
 .. _otel-config-options:
 

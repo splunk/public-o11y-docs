@@ -20,13 +20,13 @@ After you modify the configuration, restart the Collector service. For example:
 
 .. code-block:: bash
 
-   sudo systemctl restart splunk-otel-collector
+  sudo systemctl restart splunk-otel-collector
 
 You can view splunk-otel-collector service logs and errors in the systemd journal using the following command:
 
 .. code-block:: bash
 
-   sudo journalctl -u splunk-otel-collector   
+  sudo journalctl -u splunk-otel-collector   
 
 Upgrade the Collector
 =================================
