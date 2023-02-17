@@ -1,8 +1,8 @@
 .. _otel-install-windows:
 
-**************************************************
-Install the Collector for Windows
-**************************************************
+****************************************************************
+Install the Collector for Windows with the installer script
+****************************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows.
@@ -18,7 +18,8 @@ The Splunk Distribution of OpenTelemetry Collector for Windows is a package that
 
 * :ref:`Installer script <windows-script>`
 * :ref:`Deployments <windows-deployments>`
-* :ref:`Manual install <otel-install-windows-manual>`
+
+Alternatively, you can :new-page:`install the Collector for Windows manually <otel-install-windows-manual>`.
 
 .. _windows-otel-requirements:
 
@@ -54,12 +55,9 @@ The Splunk Distribution of OpenTelemetry Collector for Windows has the following
 Installer script
 ==========================
 
-The installer script is available for Windows 64-bit environments. The script deploys and configures these things:
+The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of OpenTelemetry Collector for Windows and Fluentd (using the td-agent).
 
-* Splunk Distribution of OpenTelemetry Collector for Windows
-* Fluentd (using the td-agent)
-
-Do the following to install the package using the installer script:
+To install the package using the installer script, follow these steps:
 
 #. Ensure that you have Administrator access on your host.
 #. Run the following PowerShell command on your host, replacing the following variables for your environment:
@@ -70,6 +68,10 @@ Do the following to install the package using the installer script:
 .. code-block:: PowerShell
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+.. note:: If needed, enable TLS in PowerShell using the following command: 
+  
+   ``[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12``
 
 Configure memory allocation
 ----------------------------------
@@ -82,8 +84,21 @@ To configure memory allocation, use the ``memory`` parameter. By default, this p
 
 Replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
-Configure Fluentd
----------------------------------
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``: The HTTP proxy address
+- ``HTTPS_PROXY``: The HTTPS proxy address
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+
+Restart the Collector after adding these environment variables to your configuration. 
+
+.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
+
+Configure Fluentd for log collection
+-------------------------------------------
 
 By default, the Fluentd service is installed and configured to forward log events with the ``@SPLUNK`` label and send these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
@@ -105,6 +120,17 @@ After any configuration modification, apply the changes by restarting the system
 
   Stop-Service fluentdwinsvc
   Start-Service fluentdwinsvc
+
+Start the Collector executable manually 
+-------------------------------------------
+
+If you experience unexpected start failures, try to start the Collector executable manually. 
+
+To do so, run the following PowerShell command as an Admin:  
+
+.. code-block:: PowerShell
+
+  & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --config 'C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml'
 
 .. _windows-deployments:
 
