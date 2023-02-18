@@ -40,12 +40,12 @@ Kai can leverage the custom dimensionalized Monitoring MetricSet Kai created to 
 
 1. There are two ways for Kai to navigate to the Detector Creation page to create a detector using their custom Monitoring MetricSet:
     a. From the left navigation panel, select: :strong:`Alerts & Detectors` > :strong:`New Detector`.
-    b. From any APM page, click the plus sign :strong:`( + )` on the top bar and select :strong:`Detector` from the drop-down list . 
+    b. From any APM page, select the plus sign :strong:`( + )` on the top bar and select :strong:`Detector` from the drop-down list . 
 
 
 2. Kai follows the guided Detector Creation flow to create their detector based on the error rate in the service :strong:`cartservice:GetCart`, filtered to the custom dimension of ``version_id``.
 
-3. Kai  can use  the Metric Finder to find additional information on the metrics and metadata for their system. For more, see :ref:`Metric Finder and Metadata Catalog<metrics-finder-and-metadata-catalog>`. Apply :strong:`sf_dimensionalized:true` as a :strong:`Filter` to see related metrics as shown in the image below. 
+3. Kai can use the Metric Finder to find additional information on the metrics and metadata for their system. For more, see :ref:`Metric Finder and Metadata Catalog<metrics-finder-and-metadata-catalog>`. Apply :strong:`sf_dimensionalized:true` as a :strong:`Filter` to see related metrics as shown in the image below. 
 
 ..  image:: /_images/apm/span-tags/MetricFindercmms.png
     :width: 100%
@@ -59,7 +59,7 @@ Kai can also create charts and dashboards that leverage the custom dimensions Ka
 
 Kai navigates to the built-in APM service endpoint dashboard for :strong:`cartservice:GetCart` using the following steps:
 
-#. From the :strong:`APM` landing page, click the :guilabel:`Dashboards` icon in the left navigation bar.
+#. From the :strong:`APM` landing page, select the :guilabel:`Dashboards` icon in the left navigation bar.
 
 #. Search :strong:`APM` in the search bar.
 
