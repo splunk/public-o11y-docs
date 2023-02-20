@@ -1,4 +1,5 @@
 .. _migration-monitors:
+.. _otel-smart-agent:
 
 ********************************************************************************************************
 Use Smart Agent monitors with the Collector
@@ -7,11 +8,11 @@ Use Smart Agent monitors with the Collector
 .. meta::
    :description: Describes how to use Smart Agent monitors with the Smart Agent Receiver in the Collector.
 
-.. _note: 
+.. note:: 
 
    The Smart Agent receiver is fully supported only on x86_64/amd64 platforms.
 
-The ``smartagent`` receiver lets you use :ref:`SignalFx Smart Agent monitors <monitor-data-sources>` in the Splunk Distribution of OpenTelemetry Collector. Many monitors also require a Smart Agent release bundle, which the Splunk Distribution of OpenTelemetry Collector installs on supported x86_64/amd64 platforms.
+The ``smartagent`` receiver and its associated extension are :ref:`Collector components <otel-components>` that allow you to add :ref:`SignalFx Smart Agent monitors <monitor-data-sources>` into the :ref:`pipelines <otel-data-processing>` of your Splunk Distribution of OpenTelemetry Collector. Many monitors also require a Smart Agent release bundle, which the Splunk Distribution of OpenTelemetry Collector installs on supported x86_64/amd64 platforms.
 
 Configure the Smart Agent receiver
 ================================================================
@@ -44,6 +45,13 @@ If you have a monitor that updates dimension properties or tags, put the name of
   * Sample monitors: ``ecs-metadata``, ``heroku-metadata``, ``kubernetes-cluster``, ``openshift-cluster``, ``postgresql``, or ``sql``.
 
 If you don't specify any exporters in this array field, the receiver attempts to use the Collector pipeline to which it's connected. If the next element of the pipeline isn't compatible with updating dimensions, and if you configured a single SignalFx exporter, the receiver uses that SignalFx exporter. If you don't require dimension updates, you can specify the empty array ``[]`` to disable it.
+
+Smart Agent extension
+==================================
+
+The Smart Agent extension offers collectd and Python extensions. Extensions are available primarily for tasks that do not involve processing data. Examples of extensions include health monitoring, service discovery, and data forwarding. Extensions are optional.
+
+See :new-page:`SignalFx Smart Agent Extension <https://github.com/signalfx/splunk-otel-collector/blob/main/pkg/extension/smartagentextension/README.md>` in GitHub to copy the configuration YAML file.
 
 .. _migration-monitors-example:
 

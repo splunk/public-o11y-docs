@@ -1,7 +1,7 @@
 .. _otel-windows-config:
 
 *********************************************************************************
-Advanced configurations for Windows
+Advanced configuration for Windows
 *********************************************************************************
 
 .. meta::
