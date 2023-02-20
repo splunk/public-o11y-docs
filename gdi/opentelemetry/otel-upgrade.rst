@@ -54,22 +54,22 @@ Move the ``ballast_size_mib`` parameter from the ``memory_limiter`` processor to
 Upgrade the Collector for Kubernetes
 =======================================
 
-To upgrade the Collector for Kubernetes, run the following commands:
+To upgrade the Collector for Kubernetes run the following commands:
 
-Use the flag ``--reuse-values`` to keep the config values you'd already set: 
+- Use the flag ``--reuse-values`` to keep the config values you'd already set while installing or using the Collector: 
 
 .. code-block:: bash
 
   helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector 
   --reuse-values
 
-Use ``--values config.yaml`` to override your previous configuration while upgrading:
+- Use ``--values config.yaml`` to override your previous configuration while upgrading:
 
 .. code-block:: bash
 
   helm upgrade splunk-otel-collector --values config.yaml splunk-otel-collector-chart/splunk-otel-collector --reuse-values
 
-Read more in the official :new-page:`Helm upgrade options <https://helm.sh/docs/helm/helm_upgrade/#options>` documentation.
+Read more in the official Helm upgrade options documentation at :new-page:`https://helm.sh/docs/helm/helm_upgrade/#options <https://helm.sh/docs/helm/helm_upgrade/#options>`.
 
 .. _otel-upgrade-linux:
 
@@ -81,10 +81,14 @@ Run the following commands on your system to upgrade the Collector. It requires 
 Debian
 -------------
 
-.. code-block:: bash
+.. tabs::
+  
+  .. tab:: debian
 
-  sudo apt-get update
-  sudo apt-get --only-upgrade splunk-otel-collector
+    .. code-block:: bash 
+      
+      sudo apt-get update
+      sudo apt-get --only-upgrade splunk-otel-collector
 
 .. note::
   If the default configuration files in ``/etc/otel/collector`` have been modified after the initial installation, you may be prompted to keep the existing files or overwrite the files from the new package.
@@ -94,28 +98,26 @@ RPM
 
 The package managers are yum, dnf, and zypper.
 
-yum
-^^^^^^^^^^^^^
+.. tabs:: 
 
-.. code-block:: bash
+  .. tab:: yum 
 
-    sudo yum upgrade splunk-otel-collector
+    .. code-block:: bash
 
-dnf
-^^^^^^^^^^^^
+      sudo yum upgrade splunk-otel-collector
 
-.. code-block:: bash
-    
-    sudo dnf upgrade splunk-otel-collector
-    
+  .. tab:: dnf 
 
-zypper
-^^^^^^^^^^^^^^^^^^^
+    .. code-block:: bash
 
-.. code-block:: bash
+      sudo dnf upgrade splunk-otel-collector
 
-    sudo zypper refresh
-    sudo zypper update splunk-otel-collector
+  .. tab:: zypper 
+
+    .. code-block:: bash
+
+      sudo zypper refresh
+      sudo zypper update splunk-otel-collector
 
 .. note::
   If the default configuration files in ``/etc/otel/collector`` have been modified after initial installation, the existing files are preserved and the files from the new package may be installed with an ``.rpmnew`` extension.
