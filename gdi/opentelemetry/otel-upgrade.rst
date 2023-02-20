@@ -58,11 +58,13 @@ To upgrade the Collector for Kubernetes, run the following commands:
 
 .. code-block:: bash
 
-  helm upgrade splunk-otel-collector --values config.yaml 
-  splunk-otel-collector-chart/splunk-otel-collector 
+  helm upgrade splunk-otel-collector splunk-otel-collector-chart/splunk-otel-collector 
   --reuse-values
 
-Use the flag ``--reuse-values`` to keep the config values you'd already set.
+* Use the flag ``--reuse-values`` to keep the config values you'd already set. 
+* Use the flag ``--values config.yaml`` to override your previous configuration while upgrading.
+
+Read more in the official :new-page:`Helm upgrade options <https://helm.sh/docs/helm/helm_upgrade/#options>` documentation.
 
 .. _otel-upgrade-linux:
 
@@ -112,3 +114,23 @@ zypper
 
 .. note::
   If the default configuration files in ``/etc/otel/collector`` have been modified after initial installation, the existing files are preserved and the files from the new package may be installed with an ``.rpmnew`` extension.
+
+.. _otel-upgrade-windows:
+
+Upgrade the Collector for Windows
+=======================================
+
+Chocolatey
+------------------
+
+If you're using :ref:`Chocolatey <windows-chocolatey>`, in order to remember parameters when upgrading, before installation you need to enable the following feature:
+
+.. code-block:: PowerShell
+
+  choco feature enable -n=useRememberedArgumentsForUpgrades
+
+To upgrade, run the following command in PowerShell:
+
+.. code-block:: PowerShell
+
+  choco upgrade splunk-otel-collector
