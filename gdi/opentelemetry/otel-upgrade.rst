@@ -83,7 +83,7 @@ Debian
 
 .. tabs::
   
-  .. code-tab:: debian
+  .. tab:: 
 
     sudo apt-get update
     sudo apt-get --only-upgrade splunk-otel-collector
@@ -98,15 +98,15 @@ The package managers are yum, dnf, and zypper.
 
 .. tabs:: 
 
-  .. code-tab:: yum 
+  .. tab:: yum 
 
     sudo yum upgrade splunk-otel-collector
 
-  .. code-tab:: dnf 
+  .. tab:: dnf 
 
     sudo dnf upgrade splunk-otel-collector
 
-  .. code-tab:: zypper 
+  .. tab:: zypper 
 
     sudo zypper refresh
     sudo zypper update splunk-otel-collector
