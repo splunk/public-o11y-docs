@@ -69,7 +69,7 @@ To upgrade the Collector for Kubernetes run the following commands:
 
   helm upgrade splunk-otel-collector --values config.yaml splunk-otel-collector-chart/splunk-otel-collector --reuse-values
 
-Read more in the official Helm upgrade options at :new-page:`<https://helm.sh/docs/helm/helm_upgrade/#options>` documentation.
+Read more in the official Helm upgrade options documentation at :new-page:`https://helm.sh/docs/helm/helm_upgrade/#options <https://helm.sh/docs/helm/helm_upgrade/#options>`.
 
 .. _otel-upgrade-linux:
 
@@ -83,10 +83,12 @@ Debian
 
 .. tabs::
   
-  .. tab:: 
+  .. tab:: debian
 
-    sudo apt-get update
-    sudo apt-get --only-upgrade splunk-otel-collector
+    .. code-block:: bash 
+      
+      sudo apt-get update
+      sudo apt-get --only-upgrade splunk-otel-collector
 
 .. note::
   If the default configuration files in ``/etc/otel/collector`` have been modified after the initial installation, you may be prompted to keep the existing files or overwrite the files from the new package.
@@ -100,16 +102,22 @@ The package managers are yum, dnf, and zypper.
 
   .. tab:: yum 
 
-    sudo yum upgrade splunk-otel-collector
+    .. code-block:: bash
+
+      sudo yum upgrade splunk-otel-collector
 
   .. tab:: dnf 
 
-    sudo dnf upgrade splunk-otel-collector
+    .. code-block:: bash
+
+      sudo dnf upgrade splunk-otel-collector
 
   .. tab:: zypper 
 
-    sudo zypper refresh
-    sudo zypper update splunk-otel-collector
+    .. code-block:: bash
+
+      sudo zypper refresh
+      sudo zypper update splunk-otel-collector
 
 .. note::
   If the default configuration files in ``/etc/otel/collector`` have been modified after initial installation, the existing files are preserved and the files from the new package may be installed with an ``.rpmnew`` extension.
