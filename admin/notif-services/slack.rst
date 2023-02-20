@@ -43,7 +43,7 @@ To create a Slack integration in Observability Cloud:
 
 .. note::
 
-   Splunk Observability Cloud uses the following Slack APIs: :new-page:`oauth.access <https://api.slack.com/methods/oauth.access>`, :new-page:`conversations.list <https://api.slack.com/methods/conversations.list>`,  :new-page:`chat.postMessage <https://api.slack.com/methods/chat.postMessage>`, and :new-page:`chat.unfurl <https://api.slack.com/methods/chat.unfurl>`.
+   Splunk Observability Cloud uses the following Slack APIs: ``oauth.access``, ``conversations.list``, ``chat.postMessage``, and ``chat.unfurl``.
 
 .. _slack2:
 
