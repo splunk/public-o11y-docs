@@ -5,8 +5,6 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the RabbitMQ monitor type using the Smart Agent Receiver.
-
 Use this monitor to keep track of an instance of RabbitMQ by using the RabbitMQ Python Plugin. This monitor uses the RabbitMQ Management HTTP API to poll for statistics on a RabbitMQ server, then reports them to the agent.
 
 This integration is available for Kubernetes, Windows, and Linux.
@@ -30,24 +28,16 @@ This monitor requires RabbitMQ 3.0 and higher.
 ```{include} /_includes/configuration.md
 ```
 
-```{note}
-Provide a RabbitMQ monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
-```
-
 ### Splunk Distribution of OpenTelemetry Collector
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the `smartagent/rabbitmq` option in the receiver and pipeline service sections of your configuration:
 
 ```yaml
 receivers:
   smartagent/rabbitmq:
     type: collectd/rabbitmq
     ...  # Additional config
-```
 
-To complete the monitor activation, you must also include the `smartagent/rabbitmq` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
-
-```yaml
 service:
   pipelines:
     metrics:
@@ -56,7 +46,7 @@ service:
 
 ### Smart Agent
 
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
+To activate this monitor in the Smart Agent (deprecated), add the following to your agent configuration:
 
 ```yaml
 monitors:  # All monitor config goes under this key
