@@ -527,4 +527,4 @@ The following table lists the attributes for each metric:
 Get help
 --------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst

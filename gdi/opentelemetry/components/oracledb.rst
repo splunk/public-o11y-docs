@@ -341,4 +341,4 @@ enabled the ``oracledb.sessions.usage`` metric:
 Get help
 --------
 
-\```{include} /\_includes/troubleshooting.md
+.. include:: /_includes/troubleshooting.rst

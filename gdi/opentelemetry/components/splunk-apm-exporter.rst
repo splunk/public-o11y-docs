@@ -224,4 +224,4 @@ configuration.
 Get help
 --------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst
