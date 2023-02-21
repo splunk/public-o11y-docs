@@ -109,17 +109,11 @@ Collect logs manually with subscription filters
 -----------------------------------------------------------
 
 Alternatively, you can add a subscription filter to forward logs only from selected CloudWatch log groups
-instead of sending all logs to Observability Cloud. 
+instead of sending all logs to Observability Cloud:
 
-To do so:
+#. Install the ``splunk-aws-logs-collector`` lambda using the :ref:`CloudFormation template <aws-cloudformation>`. Don't select ``CloudWatch Logs`` as a data type to ingest in the AWS integration.  
 
-#. Install the ``splunk-aws-logs-collector`` lambda using the :ref:`CloudFormation template <aws-cloudformation>`.  
-
-  - DO NOT select ``CloudWatch Logs`` as a data type to ingest in the AWS integration.  
-
-#.  Create a subscription filter to invoke the lambda as a CloudWatch log group subscriber for any log groups you want to forward logs from.  
-  
-  - DO NOT use :strong:`Splunk Log Collector` as a filter name, since such subscriptions are managed by Splunk Observability, and they would be removed automatically. 
+#. Create a subscription filter to invoke the lambda as a CloudWatch log group subscriber for any log groups you want to forward logs from. Don't use :strong:`Splunk Log Collector` as a filter name, since such subscriptions are managed by Splunk Observability, and they would be removed automatically. 
 
 Metadata
 ============================
