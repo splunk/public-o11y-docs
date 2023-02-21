@@ -117,7 +117,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-go-trouble
 Enable metrics collection
 --------------------------------------
 
-To enable automatic runtime metric collection, enable the metrics feature using the ``OTLP_METRICS_EXPORTER`` environment variable.
+To enable automatic runtime metric collection, you need to set the ``OTLP_METRICS_EXPORTER`` environment variable.
 
 .. tabs::
 
