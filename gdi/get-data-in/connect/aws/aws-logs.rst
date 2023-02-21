@@ -114,7 +114,7 @@ Instead of sending all logs to Observability Cloud, you can forward logs only fr
 
 #. Create a subscription filter to invoke the lambda as a CloudWatch log group subscriber for any log groups you want to forward logs from.
 
-.. caution:: Filters named ``Splunk Log Collector`` are removed automatically, as it's a reserved name for Splunk managed subscriptions.  
+.. caution:: Do not name your filters ``Splunk Log Collector``. It's a reserved name for Splunk-managed subscriptions and they'll be removed automatically. 
 
 Metadata
 ============================
