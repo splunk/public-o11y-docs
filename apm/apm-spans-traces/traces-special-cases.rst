@@ -33,7 +33,12 @@ Why might a trace be ongoing?
 
 The processing pipeline processes spans, associates them with traces, and saves associated metrics. The processing pipeline takes time. Spans that are still in the processing pipeline are considered "live spans". When processing is complete and the spans are in final storage, the spans are no longer considered live. 
 
-When requesting a specific trace by trace ID, we check the processing pipeline for live spans with that trace ID. If we find any live spans then we consider the trace to be ongoing. If we don't find any live spans, and we do find spans in final storage, we then programmatically determine if the trace is ongoing. To do so, we look for 1) missing spans or processing spans and 2) trace age by looking at the latest timestamp on spans in the trace. If a trace has missing or processing spans and has a span with a recent timestamp we consider the trace ongoing. If a trace has missing or processing spans and the most recent timestamp is old, then we consider the trace to be broken.
+When [you request][we request][requesting] a specific trace by trace ID, we check the processing pipeline for live spans with that trace ID. If we find any live spans then we consider the trace to be ongoing. If we don't find any live spans, and we do find spans in final storage, we then check to see if the trace is ongoing. To do so, we look for the following conditions:
+
+1. Missing spans or processing spans
+1. Trace age, by examining the most recent timestamp for spans in the trace. 
+
+If a trace is missing spans, "or processing spans" [don't understand, do you mean that the system is still processing spans for the trace?] and has a span with a recent timestamp, we consider the trace to be ongoing [not sure this is the best way to say it]. If a trace has missing or processing spans and the most recent timestamp is old, then we consider the trace to be broken.[what is a broken trace, and do I have to be concerned about it?]
 
 How to find ongoing traces
 -----------------------------
