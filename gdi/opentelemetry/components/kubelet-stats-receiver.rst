@@ -234,4 +234,4 @@ default <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/
 Get help
 --------
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst

@@ -20,29 +20,33 @@ The Prometheus Receiver is added to your configuration :new-page:`by default < h
    * The Prometheus Receiver is a stateful component, which means that it keeps track of changing data.
 
 Benefits 
---------------------------------------------------
+=====================================
 
 The benefits of using the Prometheus Receiver are described in this section.
 
 Familiarity with the Prometheus scrape configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------------------
+
 The Prometheus Receiver uses the Prometheus source code, which includes a configuration system for scraping metrics data from any application that exposes a Prometheus format metrics endpoint. See :ref:`scrape-configuration` for more information.
 
 Mapping Prometheus metrics to the corresponding OpenTelemetry metrics
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------------------------------
+
 The Prometheus Receiver can map Prometheus metrics to OpenTelemetry's proto-based metrics. The Prometheus Receiver maintains the original metric name, value, timestamp, as well as tags. 
 
 The Prometheus Receiver does not need to provide a one-to-one mapping, since supported metric types are different from the two systems, but it does not drop data.
 
 Parity between Prometheus and the OpenTelemetry Prometheus exporter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------------------
+
 Prometheus can also be used as an exporter that it can expose the metrics it scrapes from other systems with its own metrics endpoint. The Prometheus Receiver retains parity from the following two setups:
 
 * Application > Prometheus > Metric endpoint
 * Application > Splunk Distribution of OpenTelemetry Collector (configured with the Prometheus Receiver and the Prometheus exporter) > metrics endpoint
 
 Unsupported features
---------------------------------------------------
+=====================================
+
 The Prometheus Receiver is meant to be a drop-in replacement for Prometheus to scrape your services. However, there are advanced features of Prometheus that are not supported, and do return an error if the Receiver's configuration contains any of the following options:
 
 * ``alert_config.alertmanagers``
@@ -81,6 +85,7 @@ The following table shows the configuration options:
 
 Scrape configuration
 ------------------------------------
+
 The ``scrape_config`` section of your configuration file can specify a set of targets and parameters describing how to scrape them. For basic configurations, one scrape configuration specifies a single job. 
 
 Targets may be statically configured by using the ``static_configs`` parameter or dynamically discovered using one of the supported service-discovery mechanisms.
@@ -115,4 +120,4 @@ See the :new-page:`scrape configuration in GitHub <https://github.com/prometheus
 Get help
 =======================
 
-.. include:: /_includes/troubleshooting.rst
+.. include:: /_includes/troubleshooting-components.rst
