@@ -56,11 +56,11 @@ To activate this receiver, add a collection to your configuration (YAML) file, a
 See the :new-page:`Collector YAML file <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector>` on GitHub for the complete configuration.
 
 Configuration options
-------------------------------------
+---------------------------------
 
 The following table shows the configuration options available for this receiver:
 
-.. list-table:: Configuration options
+.. list-table::
    :widths: 25 50 25
    :header-rows: 1
 

@@ -127,7 +127,7 @@ The following table shows the configuration options:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://github.com/splunk/collector-config-tools/raw/main/cfg-metadata/exporter/sapm.yaml"></div>
+   <div class="metrics-standard" category="included" url="hhttps://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/sapm.yaml"></div>
 
 Proxy support configuration
 --------------------------------

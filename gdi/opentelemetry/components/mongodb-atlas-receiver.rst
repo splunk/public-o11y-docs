@@ -67,7 +67,7 @@ The following table shows the configuration options:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://github.com/splunk/collector-config-tools/raw/main/cfg-metadata/receiver/mongodbatlas.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/mongodbatlas.yaml"></div>
 
 Metrics
 =======================
