@@ -283,7 +283,7 @@ To estimate the CPU and memory usage the reducer may require from a node, you ca
     Memory in Mebibytes (Mi) = 4 * Number of nodes in your cluster + 60
     Fractional CPU in milliCPU (m) = Number of nodes in your cluster + 30
 
-This gives you an appromixate expected usage.  You may want to multiple the final numbers by a factor of 1.5 or 2 to give headroom for growth and spikes in usage.
+This gives you an appromixate expected usage. Multiply the final numbers by a factor of 1.5 or 2 to give headroom for growth and spikes in usage.
 
 
 .. _customize-network-explorer-metrics:
