@@ -26,7 +26,7 @@ Configure application receivers for databases
    mongodb-atlas/mongodb-atlas
    opentelemetry/components/mongodb-atlas-receiver
    mysql/mysql
-   opentelemetry/components/oracledb
+   opentelemetry/components/oracledb-receiver
    postgresql/postgresql
    redis/redis
    sap-hana/hana

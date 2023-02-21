@@ -17,7 +17,7 @@ Components
     components/kubelet-stats-receiver
     components/kubernetes-cluster-receiver
     components/mongodb-atlas-receiver
-    components/oracledb
+    components/oracledb-receiver
     components/prometheus-receiver
     components/splunk-apm-exporter
 
