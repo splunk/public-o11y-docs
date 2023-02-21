@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `load` monitor type by using the SignalFx Smart Agent Receiver. If you want to collect CPU load metrics, use the {ref}`host-metrics-receiver` instead of this monitor type.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `load` monitor type for the Smart Agent Receiver. If you want to collect CPU load metrics, use the {ref}`host-metrics-receiver` instead of this monitor type.
 
 Use this integration to monitor process load on the host. The process load is defined as the number of runnable tasks in the run queue and is provided by many operating systems as a 1, 5, or 15 minute average.
 

@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/exec` monitor type by using the SignalFx Smart Agent Receiver. This is an embedded form of the Telegraf Exec plugin. The plugin-specific configuration options are the same as that plugin, but parser configurations related to the format of the subprocess output (for example, `data_format`) are managed by using the `telegrafParser` nested configuration object.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/exec` monitor type for the Smart Agent Receiver. This is an embedded form of the Telegraf Exec plugin. The plugin-specific configuration options are the same as that plugin, but parser configurations related to the format of the subprocess output (for example, `data_format`) are managed by using the `telegrafParser` nested configuration object.
 
 ## Benefits
 

@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/uptime` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/uptime` monitor type for the Smart Agent Receiver.
 
 Use this integration to send a single metric of the total number of seconds the host has been up, using the collectd uptime plugin.
 

@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-go` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-go` monitor type for the Smart Agent Receiver.
 
 This monitor wraps the {ref}`prometheus-exporter` to scrape Prometheus Go collector and Prometheus process collector metrics for Splunk Observability Cloud.
 

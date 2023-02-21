@@ -12,7 +12,7 @@ Components
     :titlesonly:
     :hidden:
 
-    sapm/splunk-apm-exporter
+    components/splunk-apm-exporter
 
 The OpenTelemetry Collector is made up of the following components:
 

@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `appmesh` monitor by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `appmesh` monitor for the Smart Agent Receiver.
 
 Use this integration to report metrics from AWS AppMesh Envoy Proxy.
 

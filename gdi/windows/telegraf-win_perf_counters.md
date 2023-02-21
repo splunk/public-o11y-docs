@@ -4,7 +4,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/win_perf_counters` monitor type using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/win_perf_counters` monitor type for the Smart Agent Receiver.
 
 Use this monitor to receive metrics from Windows performance counters.
 
