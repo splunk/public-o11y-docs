@@ -7,9 +7,6 @@ Host metrics receiver
 .. meta::
       :description: Use this Splunk Observability Cloud integration for the host metrics monitor. See benefits, install, configuration, and metrics.
 
-Description
-=====================
-
 A receiver is a way to get data into the Splunk Distribution of
 OpenTelemetry Collector. Receivers support one or more data sources -
 traces, metrics, or logs.
@@ -20,40 +17,34 @@ is ``metrics``.
 
 .. note:: Metrics produced by this receiver count towards the custom metric ingestion limit. See :ref:`sys-limits`.
 
-Benefits
-=====================
-
-
-
-   ### Benefits
-
-   ```{include} /_includes/benefits.md
-
 Get started
------------
+======================
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your
-   host or container platform:
+Follow these steps to deploy the integration:
 
-   -  Install on Kubernetes
-   -  Install on Linux
-   -  Install on Windows
+1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+   
+   - :ref:`otel-install-linux`
+   - :ref:`otel-install-windows`
+   - :ref:`otel-install-k8s`
 
-2. Configure the receiver, as described in the next section.
-3. Restart the Splunk Distribution of OpenTelemetry Collector.
+2. Configure the receiver as described in the next section.
+3. Restart the Collector.
 
 Configuration
--------------
+==================
 
 Settings
-~~~~~~~~
+-----------
 
 This receiver has the following settings:
 
-.. container:: metrics-standard
+.. raw:: html
+
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/hostmetrics.yaml"></div>
 
 Scraper configuration
-~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 The collection interval and the categories of metrics to be scraped can
 be `configured <#scraper-configuration>`__, as shown in the following
@@ -131,7 +122,7 @@ Scrapers extract data from endpoints and then send that data to a
 specified target. See the following sections for scraper configurations.
 
 Disk
-^^^^
+----------------------
 
 .. code:: yaml
 
@@ -141,7 +132,7 @@ Disk
        match_type: <strict|regexp>
 
 File system
-^^^^^^^^^^^
+----------------------
 
 ``{note} The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in [GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters). See the complete list of file system metrics in [GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/documentation.md).``
 
@@ -179,7 +170,7 @@ Similarly, for Windows systems, ``C:`` is a common mount point.
 Find more examples in our GitHub repos.
 
 Network
-^^^^^^^
+----------------------
 
 .. code:: yaml
 
@@ -189,7 +180,7 @@ Network
        match_type: <strict|regexp>
 
 Process
-^^^^^^^
+----------------------
 
 .. code:: yaml
 
@@ -201,13 +192,13 @@ Process
      scrape_process_delay: <time>
 
 Filtering
-^^^^^^^^^
+----------------------
 
 To only gather a subset of metrics from a particular source, use the
 host metrics receiver with the filter processor.
 
 Different frequencies
-^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 To scrape some metrics at a different frequency than others, configure
 multiple host metrics receivers with different ``collection_interval``
@@ -233,7 +224,7 @@ values. For example:
        metrics:
          receivers: [hostmetrics, hostmetrics/disk]
 
-Troubleshooting
----------------
+Get help
+--------
 
-``{include} /_includes/troubleshooting.md``
+.. include:: /_includes/troubleshooting.rst
