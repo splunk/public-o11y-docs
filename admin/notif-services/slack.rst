@@ -17,13 +17,12 @@ To send Observability Cloud alert notifications to Slack, complete the following
 
 * :ref:`slack2`
 
+.. caution:: If the user who creates the integration leaves your organization and their Slack account is deactivated, the Slack integration stops working.   
 
 .. _slack1:
 
 Step 1: Create a Slack integration in Observability Cloud
 =================================================================================
-
-.. note:: If the user who creates the integration leaves your organization and their Slack account is deactivated, the Slack integration stops working.   
 
 You must be an Observability Cloud administrator, Slack administrator, and be authorized to add apps to Slack to perform this task.
 
@@ -42,20 +41,20 @@ To create a Slack integration in Observability Cloud:
 #. By default, the name of the integration is :strong:`Slack`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. :strong:`Save`.
 
+.. note::
+
+   Splunk Observability Cloud uses the following Slack APIs: ``oauth.access``, ``conversations.list``, ``chat.postMessage``, and ``chat.unfurl``.
 
 .. _slack2:
 
 Step 2: Add a Slack integration as a detector alert recipient in Observability Cloud
 =================================================================================================
 
-..
-  once the detector docs are migrated - this step may be covered in those docs and can be removed from these docs. below link to :ref:`detectors` and :ref:`receiving-notifications` instead once docs are migrated
-
 To add a Slack integration as a detector alert recipient in Observability Cloud:
 
 #. Create or edit a detector that you want to configure to send alert notifications using your Slack integration.
 
-    For more information about working with detectors, see :ref:`create-detectors` and :ref:`subscribe`.
+   For more information about working with detectors, see :ref:`create-detectors` and :ref:`subscribe`.
 
 #. In the :strong:`Alert recipients` step, click :strong:`Add Recipient`.
 

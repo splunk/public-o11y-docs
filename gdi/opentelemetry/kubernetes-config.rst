@@ -1,7 +1,7 @@
 .. _otel-kubernetes-config:
 
 *********************************************************************************
-Advanced configurations for Kubernetes
+Advanced configuration for Kubernetes
 *********************************************************************************
 
 .. meta::

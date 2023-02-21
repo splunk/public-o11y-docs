@@ -59,7 +59,6 @@ Run the following commands to deploy the Helm chart:
 
 .. code-block:: bash
 
-   
    helm repo add splunk-otel-collector-chart https://signalfx.github.io/splunk-otel-collector-chart
    helm install my-splunk-otel-collector --set="splunkRealm=us0,splunkAccessToken=xxxxxx,clusterName=my-cluster" --set=distribution={value},cloudProvider={value} splunk-otel-collector-chart/splunk-otel-collector
 
@@ -91,6 +90,8 @@ To set your cloud provider and configure ``cloud.platform`` for the resource det
 
    --set cloudProvider={azure|gcp|eks|openshift} 
 
+Read more about :ref:`otel-kubernetes-config`.
+
 Set Helm using a YAML file
 --------------------------------
 
@@ -104,7 +105,6 @@ See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/
 
 * Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes. 
 * Set ``networkExplorer.enabled`` to ``true`` to use the default values for :ref:`splunk-otel-network-explorer <network-explorer>`.
-
 
 Set Prometheus metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

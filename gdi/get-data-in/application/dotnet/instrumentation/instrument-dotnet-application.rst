@@ -199,6 +199,14 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
          </environmentVariables>
 
       .. note:: The ASP.NET Core instrumentation collects and obfuscates query strings by default. See :ref:`dotnet-instrumentation-query-strings` for more information.
+      
+After applying the changes to the ``web.config`` file, restart IIS by running the following command:
+
+.. code-block:: powershell
+
+   Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+In some cases, you might have to reboot the machine.
 
 .. note:: By default, the installer enables IIS instrumentation for .NET Framework by setting the ``Environment`` registry key for W3SVC and WAS services located in the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services`` folder.
 

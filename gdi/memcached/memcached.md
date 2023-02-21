@@ -4,7 +4,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Memcached monitor via the Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Memcached monitor type for the Smart Agent Receiver.
 
 This monitor collects the following information from Memcached nodes:
 
@@ -15,7 +15,7 @@ This monitor collects the following information from Memcached nodes:
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
