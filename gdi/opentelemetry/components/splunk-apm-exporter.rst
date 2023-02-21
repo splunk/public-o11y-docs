@@ -1,13 +1,10 @@
-(splunk-apm-exporter)=
+.. _splunk-apm-exporter:
 
-Splunk APM
+Splunk APM exporter
 **************************
 
 .. meta::
       :description: Use this Splunk Observability Cloud integration for the Splunk APM exporter. See benefits, install, configuration, and traces
-
-Description
------------
 
 The Splunk Distribution of OpenTelemetry Collector offers support for
 the Splunk APM (SAPM) exporter. The SAPM exporter is in beta, but
@@ -24,27 +21,10 @@ documentation <https://docs.splunk.com/Observability/gdi/opentelemetry/security.
 which contains recommendations on securing sensitive information such as
 the API key required by this exporter.
 
-   **Note:** The SAPM exporter only collects trace data.
-
-Benefits
---------
-
-After you configure the integration, you can access these features:
-
--  View metrics using the built-in dashboard. For information about
-   dashboards, see `View dashboards in Observability
-   Cloud <https://docs.splunk.com/Observability/data-visualization/dashboards/view-dashboards.html#nav-View-dashboards>`__.
--  View a data-driven visualization of the physical servers, virtual
-   machines, AWS instances, and other resources in your environment that
-   are visible to Infrastructure Monitoring. For information about
-   navigators, see `Splunk Infrastructure Monitoring
-   navigators <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`__.
--  Access Metric Finder and search for metrics sent by the monitor. For
-   information about Metric Finder, see `Use the Metric
-   Finder <https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html#use-the-metric-finder>`__.
+.. note:: The SAPM exporter only collects trace data.
 
 Installation
-------------
+=====================
 
 Follow these steps to deploy the integration:
 
@@ -60,9 +40,9 @@ Follow these steps to deploy the integration:
 3. Restart the Collector.
 
 Configuration
--------------
+=====================
 
-Include the ``sapm`` exporter in the ``exporters``\ section of your
+Include the ``sapm`` exporter in the ``exporters`` section of your
 configuration file, as shown in the following example:
 
 .. code:: yaml
@@ -141,74 +121,16 @@ exporter in the Collector:
            exporters: [sapm]
 
 Configuration options
-~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
-The following table shows the required and optional configuration
-options:
+The following table shows the configuration options:
 
-.. list-table::
-   :widths: 24 24 24
-   :header-rows: 1
+.. raw:: html
 
-   - 
-
-      - Option
-      - Description
-      - Required
-   - 
-
-      - ``access_token``
-      - The authentication token provided by Splunk Infrastructure
-         Monitoring or another backend that supports the SAPM protocol.
-         See `Create and manage authentication tokens using Splunk
-         Observability
-         Cloud <https://docs.splunk.com/Observability/admin/authentication-tokens/tokens.html>`__.
-         There is no default value.
-      - Yes
-   - 
-
-      - ``endpoint``
-      - The destination to where traces are sent in SAPM format. The
-         endpoint must be a full URL and include the scheme, port, and
-         path. For example,
-         ``https://ingest.us0.signalfx.com/v2/trace``. The endpoint can
-         be to the Splunk Infrastructure Monitoring backend or to
-         another data collection agent that has the SAPM receiver
-         enabled. There is no default value.
-      - Yes
-   - 
-
-      - ``max_connections``
-      - Used to set a limit to the maximum idle HTTP connection the
-         exporter can keep open. The default value is ``100``.
-      - No
-   - 
-
-      - ``num_workers``
-      - The number of workers that should be used to export traces. The
-         exporter can make as many requests in parallel as the number of
-         workers. Note that this option may be removed in a future
-         release. The default value is ``8``.
-      - No
-   - 
-
-      - ``access_token_passthrough``
-      - The option to use the ``com.splunk.signalfx.access_token`` trace
-         resource attribute, if any, as the access token. In either
-         case, this attribute is deleted during final translation. Use
-         this option with an identical configuration option for the SAPM
-         receiver to preserve trace origin. The default value is
-         ``true``.
-      - No
-   - 
-
-      - ``timeout``
-      - The timeout for every attempt to send data to the back end. The
-         default value is ``5s``.
-      - No
+   <div class="metrics-standard" category="included" url="https://github.com/splunk/collector-config-tools/raw/main/cfg-metadata/exporter/sapm.yaml"></div>
 
 Proxy support configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 The Collector provides proxy support for the SAPM exporter. Beyond the
 standard YAML configuration, the SAPM exporter uses the net/http package
@@ -222,6 +144,6 @@ Restart the Collector after adding these environment variables to your
 configuration.
 
 Get help
---------
+================
 
 .. include:: /_includes/troubleshooting.rst
