@@ -7,15 +7,21 @@ Host metrics receiver
 .. meta::
       :description: Use this Splunk Observability Cloud integration for the host metrics monitor. See benefits, install, configuration, and metrics.
 
-A receiver is a way to get data into the Splunk Distribution of
-OpenTelemetry Collector. Receivers support one or more data sources -
-traces, metrics, or logs.
+The host metrics receiver generates metrics scraped from host systems when the Collector is deployed as an agent. The supported pipeline type is ``metrics``.
 
-The host metrics receiver generates metrics scraped from host systems
-when the Collector is deployed as an agent. The supported pipeline type
-is ``metrics``.
+By default, the host metrics receiver is enabled in the Splunk Distribution of OpenTelemetry Collector and collects the following metrics:
 
-.. note:: Metrics produced by this receiver count towards the custom metric ingestion limit. See :ref:`sys-limits`.
+- CPU usage metrics
+- Disk I/O metrics
+- CPU load metrics
+- File system usage metrics
+- Memory usage metrics
+- Network interface and TCP connection metrics
+- Process count metrics (Linux only)
+- Per process CPU, memory, and disk I/O metrics
+
+Host receiver metrics appear in Infrastructure Monitoring and can be used to create dashboards and alerts. See :ref:`create-detectors` for more information.
+
 
 Get started
 ======================
@@ -31,24 +37,39 @@ Follow these steps to deploy the integration:
 2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
-Configuration
-==================
+.. note:: Metrics produced by this receiver count towards the custom metric ingestion limit. See :ref:`sys-limits`.
+
+Collect container host metrics (Linux)
+---------------------------------------
+
+The host metrics receiver collects metrics from the Linux system directories. To collect metrics for the host instead of the container, follow these steps:
+
+#. Mount the entire host file system when running the container. For example: ``docker run -v /:/hostfs``. You can also choose which parts of the host file system to mount. For example: ``docker run -v /proc:/hostfs/proc``
+
+#. Configure ``root_path`` so that the host metrics receiver knows where the root file system is located. For example:
+
+   .. code-block:: yaml
+
+      receivers:
+      hostmetrics:
+         root_path: /hostfs
+
+   If you are running multiple instances of the host metrics receiver, set the same ``root_path`` for all.
 
 Settings
------------
+======================
 
-This receiver has the following settings:
+The following table shows the configuration options for the host metrics receiver:
 
 .. raw:: html
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/hostmetrics.yaml"></div>
 
-Scraper configuration
+Sample configurations
 ----------------------
 
 The collection interval and the categories of metrics to be scraped can
-be `configured <#scraper-configuration>`__, as shown in the following
-example.
+be configured as shown in the following example:
 
 .. code:: yaml
 
@@ -59,7 +80,7 @@ example.
        <scraper2>:
        ...
 
-The following table shows the available scrapers:
+Scrapers extract data from endpoints and then send that data to a specified target. The following table shows the available scrapers:
 
 .. list-table::
    :widths: 17 37 18
@@ -68,7 +89,7 @@ The following table shows the available scrapers:
    - 
 
       - Scraper
-      - Supported OS
+      - Supported operating system
       - Description
    - 
 
@@ -101,7 +122,7 @@ The following table shows the available scrapers:
 
       - network
       - All
-      - Network interface I/O metrics & TCP connection metrics
+      - Network interface I/O metrics and TCP connection metrics
    - 
 
       - paging
@@ -118,11 +139,10 @@ The following table shows the available scrapers:
       - Linux and Windows
       - Per process CPU, memory, and disk I/O metrics
 
-Scrapers extract data from endpoints and then send that data to a
-specified target. See the following sections for scraper configurations.
+See the following sections for scraper configurations.
 
 Disk
-----------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: yaml
 
@@ -132,9 +152,9 @@ Disk
        match_type: <strict|regexp>
 
 File system
-----------------------
+^^^^^^^^^^^^^^^^^^^
 
-``{note} The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in [GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters). See the complete list of file system metrics in [GitHub](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/documentation.md).``
+.. note:: The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in :new-page:`GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters>`.
 
 .. code:: yaml
 
@@ -149,7 +169,7 @@ File system
        mount_points: [ <mount point>, ... ]
        match_type: <strict|regexp>
 
-For example, for Linux systems, ``/`` is a common mount point:
+The following example shows the forward slash (``/``) as a common mount point for Linux systems:
 
 .. code:: yaml
 
@@ -158,7 +178,7 @@ For example, for Linux systems, ``/`` is a common mount point:
        mount_points: ["/"]
        match_type: strict
 
-Similarly, for Windows systems, ``C:`` is a common mount point.
+Similarly, the following example shows ``C:`` as a common mount point for Windows systems:
 
 .. code:: yaml
 
@@ -167,10 +187,10 @@ Similarly, for Windows systems, ``C:`` is a common mount point.
        mount_points: ["C:"]
        match_type: strict
 
-Find more examples in our GitHub repos.
+Find more examples in the daemonset.yaml file in GitHub.
 
 Network
-----------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: yaml
 
@@ -180,7 +200,7 @@ Network
        match_type: <strict|regexp>
 
 Process
-----------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: yaml
 
@@ -195,7 +215,7 @@ Filtering
 ----------------------
 
 To only gather a subset of metrics from a particular source, use the
-host metrics receiver with the filter processor.
+host metrics receiver with the ``filter`` processor.
 
 Different frequencies
 ---------------------------------
@@ -224,7 +244,18 @@ values. For example:
        metrics:
          receivers: [hostmetrics, hostmetrics/disk]
 
-Get help
---------
+Resource attributes
+========================
+
+The host metrics receiver doesn't set any resource attributes on the exported metrics. 
+
+To set resource attributes, provide them using the ``OTEL_RESOURCE_ATTRIBUTES`` environment variables. For example:
+
+.. code-block:: shell
+
+   export OTEL_RESOURCE_ATTRIBUTES="service.name=<name_of_service>,service.version=<version_of_service>"
+
+Troubleshooting
+======================
 
 .. include:: /_includes/troubleshooting-components.rst
