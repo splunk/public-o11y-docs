@@ -42,9 +42,9 @@ A custom URL is required to allow users to log in to Observability Cloud from yo
 
 When you configure a login service integration and select :guilabel:`Show on login page`, the login details for the service appear on your organization's login page. You can have multiple SSO logins.
 
-You can allow users to log in to Observability Cloud using a custom URL that you've selected, such as `your_org.example.com`. To set this up, contact :ref:`support` and provide the following:
+You can allow users to log in to Observability Cloud using a custom URL that you've selected, such as `your_org.signalfx.com`. The URL will be a subdomain of signalfx.com. To set this up, contact :ref:`support` and provide the following:
 
-- The URL you want to use.
+- The URL (subdomain) you want to use.
 - The organization for which you want to use the custom url.
 - An organization administrator's email address.
 
