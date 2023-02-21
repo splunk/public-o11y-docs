@@ -108,8 +108,7 @@ To capture logs from unsupported services via the API, follow these steps:
 Collect logs manually with subscription filters
 -----------------------------------------------------------
 
-Alternatively, you can add a subscription filter to forward logs only from selected CloudWatch log groups
-instead of sending all logs to Observability Cloud:
+Instead of sending all logs to Observability Cloud, you can forward logs only from selected CloudWatch log groups by adding a subscription filter. To add a filter, follow these steps:
 
 #. Install the ``splunk-aws-logs-collector`` lambda using the :ref:`CloudFormation template <aws-cloudformation>`. Don't select ``CloudWatch Logs`` as a data type to ingest in the AWS integration.  
 
