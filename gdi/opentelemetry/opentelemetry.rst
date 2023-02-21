@@ -17,8 +17,8 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Requirements <otel-requirements.rst>
     install-the-collector.rst
     configure-the-collector.rst
-    otel-commands.rst
-    collector-with-the-uf.rst
+    Commands reference <otel-commands.rst>
+    Use the Universal Forwarder <collector-with-the-uf.rst>
     Troubleshooting <troubleshooting.rst>
     
 The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
