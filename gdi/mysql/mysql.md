@@ -4,7 +4,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the MySQL monitor type using the Smart Agent Receiver. 
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the MySQL monitor type for the Smart Agent Receiver. 
 Use this integration to retrieve metrics and logs from MySQL.
 
 This monitor connects to a MySQL instance and reports on the values returned by a `SHOW STATUS` command, which include the following:

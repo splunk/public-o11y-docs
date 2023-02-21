@@ -21,9 +21,9 @@ Configure application exporters and receivers for monitoring
    prometheus-nginx-ingress/prometheus-nginx-ingress
    prometheus-nginx-vts/prometheus-nginx-vts
    prometheus-node/prometheus-node
-   prometheus-receiver/prometheus-receiver
+   opentelemetry/components/prometheus-receiver
    signalfx-forwarder/signalfx-forwarder
-   opentelemetry/sapm/splunk-apm-exporter
+   opentelemetry/components/splunk-apm-exporter
    velero/prometheus-velero
    windows/telegraf-win_perf_counters
 

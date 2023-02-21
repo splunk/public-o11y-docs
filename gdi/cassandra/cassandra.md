@@ -6,7 +6,7 @@
 ## Description
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the Cassandra monitor by using 
-the SignalFx Smart Agent Receiver.
+the Smart Agent Receiver.
 
 Use this integration to monitor Cassandra using the GenericJMX plugin. This plugin wraps the genericjmx monitor, which comes with a set of predefined MBean definitions that a standard Cassandra deployment exposes.
 

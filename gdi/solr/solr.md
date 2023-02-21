@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the SolrCloud monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the SolrCloud monitor type for the Smart Agent Receiver.
 
 Use this integration to monitor Solr instances. You can collect metrics only when the instance is running in SolrCloud mode.
 

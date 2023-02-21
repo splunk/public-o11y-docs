@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/hadoopjmx` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/hadoopjmx` monitor type for the Smart Agent Receiver.
 
 Use this integration to collect metrics from a Hadoop 2.0 or higher cluster using the collectd GenericJMX plugin. You can also configure the collectd/hadoop monitor to collect additional metrics about the Hadoop cluster using the REST API.
 

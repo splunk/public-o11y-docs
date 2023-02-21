@@ -35,7 +35,7 @@ Configure application receivers for hosts and servers
    haproxy/haproxy
    health-checker/health-checker
    host-metadata/host-metadata
-   host-metrics-receiver/host-metrics-receiver
+   opentelemetry/components/host-metrics-receiver
    http/http
    processes/processes
    processlist/processlist

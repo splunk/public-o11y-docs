@@ -36,7 +36,7 @@ This integration is only supported for Kong Gateway Community Edition (CE).
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to enable this integration.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to enable this integration.
 
 Follow these steps to deploy the integration:
 
