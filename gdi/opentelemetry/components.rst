@@ -48,6 +48,9 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - Name
      - Description
      - Pipeline types
+   * - :ref:`databricks_receiver` (``databricks``)
+     - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
+     - Metrics
    * - ``fluentforward``
      - Runs a TCP server that accepts events through the Fluentd Forward protocol.
      - Logs
@@ -68,9 +71,6 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
      - Metrics
    * - :ref:`oracledb` (``oracledb``)
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
-     - Metrics
-   * - :ref:`databricks_receiver` (``databricks``)
-     - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
    * - ``otlp``
      - Receives data through gRPC or HTTP using OTLP format.
