@@ -17,7 +17,12 @@ Use access tokens to:
 
 .. note:: By default, only users who are administrators can search for and view all access tokens. You can change this default when you create or update an access token.
 
-Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date.
+Token expiry 
+================
+
+Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You can rotate a token before it expires using the Splunk Observability Cloud API. For details, see :new-page:`Org Token <https://dev.splunk.com/observability/reference/api/org_tokens/latest>` in the developer documentation.
+
+Tokens cannot be rotated after they expire. If you don't rotate a token before it expires, you'll need to create a new token to replace it.
 
 The default access token
 ===========================
