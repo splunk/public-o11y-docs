@@ -15,7 +15,7 @@ This monitor reports etcd server metrics under the `/metrics` path on its client
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 

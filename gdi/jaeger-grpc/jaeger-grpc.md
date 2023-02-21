@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jaeger-grpc` monitor by using the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jaeger-grpc` monitor for the Smart Agent Receiver.
 
 Use this monitor to run a gRPC server that listens for Jaeger trace batches and forwards them to Splunk Observability Cloud (or the configured ingest host in the `writer` section of the agent config).
 

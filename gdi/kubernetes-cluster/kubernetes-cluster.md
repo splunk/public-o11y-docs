@@ -10,7 +10,7 @@ This monitor is deprecated in favor of the `k8s_cluster` receiver. See {ref}`Kub
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the SignalFx Smart Agent Receiver to provide the `kubernetes-cluster` monitor.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to provide the `kubernetes-cluster` monitor.
 
 Use this integration to obtain cluster-level resource metrics from the Kubernetes API server.
 

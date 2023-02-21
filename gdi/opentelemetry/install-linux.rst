@@ -25,7 +25,7 @@ Install the package using one of these methods:
 * :ref:`Install manually <linux-manual>`
 
 .. note::
-   Splunk only supports the SignalFx Smart Agent and the SignalFx Smart Agent Receiver on x86_64 and AMD64 platforms. 
+   Splunk only supports the SignalFx Smart Agent and the Smart Agent Receiver on x86_64 and AMD64 platforms. 
 
 .. _linux-scripts:
 
