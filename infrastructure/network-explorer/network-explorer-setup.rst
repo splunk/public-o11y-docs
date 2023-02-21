@@ -274,9 +274,9 @@ The following example uses 4 shards per reducer stage.
           matchingShards: 4
           aggregationShards: 4
 
-Estimating Reducer CPU and Memory Usage
+Estimate reducer CPU and memory usage
 +++++++++++++++++++++++++++++++++++++++
-To estimate the CPU and Memory usage the reducer may require from a node, you can use these simple formulas:
+To estimate the CPU and memory usage the reducer may require from a node, you can use these simple formulas:
 
 ::
 
