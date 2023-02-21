@@ -1,7 +1,7 @@
 .. _databricks_receiver:
 
-**************************************************************** 
-Databricks Receiver
+****************************************************************
+Databricks receiver
 ****************************************************************
 
 .. meta::
@@ -9,12 +9,12 @@ Databricks Receiver
 
 Use this integration to view and monitor the health of your Databricks clusters. 
 
-The Databricks Receiver uses the Databricks API to generate metrics about the operation of a Databricks instance. The supported pipeline type is metrics.
+The Databricks Receiver uses the Databricks API to generate metrics about the operation of a Databricks instance. The supported pipeline type is ``metrics``.
 
-.. note:: This receiver is in alpha. Behavior, configuration fields, and the metric data model are subject to change.
+.. note:: This receiver is experimental. Behavior, configuration fields, and the metric data model might change.
 
 Benefits
-===================================== 
+=====================================
 
 After you configure the integration, you can access these features:
 
@@ -29,17 +29,18 @@ Follow these steps to deploy the integration:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
-   - :new-page:`Install on Kubernetes <https://docs.splunk.com/Observability/gdi/opentelemetry/install-k8s.html>`
+   - :ref:`otel-install-linux`
    
-   - :new-page:`Install on Linux <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html>`
+   - :ref:`otel-install-windows`
    
-   - :new-page:`Install on Windows <https://docs.splunk.com/Observability/gdi/opentelemetry/install-windows.html>`
+   - :ref:`otel-install-k8s`
 
 2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
 Configuration
 ================================
+
 To activate this receiver, add a collection to your configuration (YAML) file, as shown in the following example:
 
 .. code-block:: yaml
