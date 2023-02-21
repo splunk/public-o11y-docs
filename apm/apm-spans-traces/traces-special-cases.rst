@@ -33,12 +33,12 @@ Why might a trace be ongoing?
 
 The processing pipeline processes spans, associates them with traces, and saves associated metrics. The processing pipeline takes time. Spans that are still in the processing pipeline are considered "live spans". When processing is complete and the spans are in final storage, the spans are no longer considered live. 
 
-When you request a specific trace by trace ID, we check the processing pipeline for live spans with that trace ID. If we find any live spans then we consider the trace to be ongoing. If we don't find any live spans, and we do find spans in final storage, we then check to see if the trace is ongoing. To do so, we look for the following conditions:
+When you request a specific trace by trace ID, we check the processing pipeline for live spans with that trace ID. If we find any live spans, then we consider the trace to be ongoing. If we don't find any live spans, and we do find spans in final storage, we then check to see if the trace is ongoing. To do so, we look for the following conditions:
 
 #. Missing spans or processing spans
 #. Trace age, by examining the most recent timestamp for spans in the trace. 
 
-If a trace is missing spans, or the system is still processing spans for the trace, and has a span with a recent timestamp, the trace is then considered ongoing. If a trace has missing or processing spans and the most recent timestamp is old, then we consider the trace to be broken.
+If a trace is missing spans, or the system is still processing spans for the trace, and the trace has a span with a recent timestamp, the trace is then considered ongoing. If a trace has missing spans, or spans still being processed and the most recent timestamp is old, then we consider the trace to be broken.
 
 How to find ongoing traces
 -----------------------------
