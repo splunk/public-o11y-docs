@@ -274,13 +274,16 @@ The following example uses 4 shards per reducer stage.
           matchingShards: 4
           aggregationShards: 4
 
-To estimate the CPU and Memory usage the reducer may require, you can use these simple formulas:
+Estimating Reducer CPU and Memory Usage
++++++++++++++++++++++++++++++++++++++++
+To estimate the CPU and Memory usage the reducer may require from a node, you can use these simple formulas:
 
 ::
-Memory in Mebibytes (Mi) = 4 * Number of nodes in your cluster + 60
-Fractional CPU in milliCPU (m) = Number of nodes in your cluster + 30
 
-This gives you an expected usage.  You may want to multiple the final numbers by a factor of 1.5 or 2 to give some room for growth or spikes in usage.
+    Memory in Mebibytes (Mi) = 4 * Number of nodes in your cluster + 60
+    Fractional CPU in milliCPU (m) = Number of nodes in your cluster + 30
+
+This gives you an appromixate expected usage.  You may want to multiple the final numbers by a factor of 1.5 or 2 to give headroom for growth and spikes in usage.
 
 
 .. _customize-network-explorer-metrics:
