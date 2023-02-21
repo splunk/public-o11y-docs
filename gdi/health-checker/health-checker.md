@@ -10,7 +10,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 Follow these steps to deploy the integration:
 
