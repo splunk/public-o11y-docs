@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the SignalFx Smart Agent Receiver to provide the `openshift-cluster` monitor.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to provide the `openshift-cluster` monitor.
 
 Use this integration to collect cluster-level metrics from the Kubernetes API server, which includes all metrics from the [kubernetes-cluster monitor](https://docs.splunk.com/Observability/gdi/kubernetes-cluster/kubernetes-cluster.html#nav-Kubernetes-cluster) with additional OpenShift-specific metrics. You only need to use the `openshift-cluster` monitor for OpenShift deployments, as it incorporates the `kubernetes-cluster` monitor automatically.
 

@@ -30,7 +30,7 @@ This plugin requires collectd version 1.5+.
 
 ## Installation
 
-This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is provided by the Smart Agent and is available for the Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 

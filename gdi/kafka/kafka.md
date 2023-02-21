@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Kafka monitor type via the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Kafka monitor type via the Smart Agent Receiver.
 
 The Apache Kafka monitor monitors a Kafka instance using the GenericJMX plugin. See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information on how to configure custom MBeans, as well as information on troubleshooting JMX setup.
 

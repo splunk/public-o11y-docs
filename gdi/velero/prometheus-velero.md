@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/velero` monitor type using the Smart Agent Receiver. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/velero` monitor type for the Smart Agent Receiver. 
 
 Use this monitor gets metrics from Velero. This monitor is a wrapper around the `prometheus-exporter` monitor.
 
