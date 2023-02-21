@@ -6,40 +6,16 @@ MongoDB Atlas receiver
 .. meta::
       :description: Use this Splunk Observability Cloud integration for the MongoDB Atlas receiver. See benefits, install, configuration, and metrics.
 
-Description
------------
-
 The MongoDB Atlas receiver fetches metrics from MongoDB Atlas by using
 their monitoring APIs. Database metrics are dimensionalized by project
 and database attributes, for example, ``project_name`` and
-``database_name``.
+``database_name``. The supported pipeline type is metrics.
 
 Use the MongoDB Atlas receiver in place of the SignalFx Smart Agent
-``mongodb-atlas`` cluster monitor, since the Smart Agent is now
-deprecated. For details, see the `deprecation
-notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`__.
-
-The supported pipeline type is metrics.
-
-Benefits
---------
-
-After you configure the integration, you can access these features:
-
--  View metrics using the built-in dashboard. For information about
-   dashboards, see `View dashboards in Observability
-   Cloud <https://docs.splunk.com/Observability/data-visualization/dashboards/view-dashboards.html#nav-View-dashboards>`__.
--  View a data-driven visualization of the physical servers, virtual
-   machines, AWS instances, and other resources in your environment that
-   are visible to Infrastructure Monitoring. For information about
-   navigators, see `Splunk Infrastructure Monitoring
-   navigators <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`__.
--  Access Metric Finder and search for metrics sent by the monitor. For
-   information about Metric Finder, see `Use the Metric
-   Finder <https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html#use-the-metric-finder>`__.
+``mongodb-atlas`` cluster monitor.
 
 Installation
-------------
+=======================
 
 Follow these steps to deploy the integration:
 
@@ -55,7 +31,7 @@ Follow these steps to deploy the integration:
 3. Restart the Collector.
 
 Configuration
--------------
+=======================
 
 Include the MongoDB Atlas receiver in the ``receivers`` section of your
 configuration file, as shown in the following example:
@@ -85,68 +61,16 @@ configuration file. For example:
          receivers: [mongodbatlas]
 
 Configuration options
-~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 The following table shows the configuration options:
 
-.. list-table::
-   :widths: 24 24 24
-   :header-rows: 1
+.. raw:: html
 
-   - 
-
-      - Option
-      - Description
-      - Required
-   - 
-
-      - ``public_key``
-      - The public key acts as the username when making API requests.
-         You can obtain the public key from the API Keys tab of the
-         MongoDB Atlas Project Access Manager.
-      - Yes
-   - 
-
-      - ``private_key``
-      - The private key acts as the password when making API requests.
-         You can obtain the private key from the API Keys tab of the
-         MongoDB Atlas Project Access Manager.
-      - Yes
-   - 
-
-      - ``granularity``
-      - The duration that specifies the interval between measurement
-         data points. The default value is ``PT1M``, which specifies
-         1-minute granularity.
-      - No
-   - 
-
-      - ``retry_on_failure``
-      - See the options described below.
-      - No
-   - 
-
-      - ``enabled``
-      - The default value is ``true``.
-      - No
-   - 
-
-      - ``initial_interval``
-      - The default value is ``5s``.
-      - No
-   - 
-
-      - ``max_interval``
-      - The default value is ``30s``.
-      - No
-   - 
-
-      - ``max_elapsed_time``
-      - The default value is ``5m``.
-      - No
+   <div class="metrics-standard" category="included" url="https://github.com/splunk/collector-config-tools/raw/main/cfg-metadata/receiver/mongodbatlas.yaml"></div>
 
 Metrics
--------
+=======================
 
 These are the metrics available for this integration. All metrics are
 emitted by default.
@@ -428,7 +352,7 @@ To disable any metric, apply the following configuration:
       - 
 
 Metric attributes
-~~~~~~~~~~~~~~~~~
+-----------------------------
 
 The following table lists the attributes for each metric:
 
