@@ -63,6 +63,15 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - :ref:`kubelet-stats-receiver` (``kubeletstats``)
      - Pulls pod metrics from the API server on a kubelet.
      - Metrics
+   * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
+     - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
+     - Metrics
+   * - :ref:`oracledb` (``oracledb``)
+     - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
+     - Metrics
+   * - :ref:`_databricks_receiver` (``databricks``)
+     - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
+     - Metrics
    * - ``otlp``
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
@@ -173,10 +182,12 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``signalfx``
      - Sends metrics, events, and trace correlation to Splunk Observability Cloud. 
      - Logs (events), metrics, traces (trace to metric correlation only)
+   * - :ref:`splunk-apm-exporter` (``sapm``)
+     - Exports traces from multiple nodes or services in a single batch.
+     - Traces
    * - ``splunk_hec``
      - Sends telemetry to a Splunk HEC endpoint. 
      - Metrics, logs, traces
-
 .. _collector-components-extensions:
 
 .. raw:: html
