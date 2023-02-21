@@ -17,7 +17,8 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     Requirements <otel-requirements.rst>
     install-the-collector.rst
     configure-the-collector.rst
-    use-the-collector.rst
+    Commands reference <otel-commands.rst>
+    Use the Universal Forwarder <collector-with-the-uf.rst>
     Troubleshooting <troubleshooting.rst>
     
 The OpenTelemetry Collector uses pipelines to receive, process, and export trace data with components known as receivers, processors, and exporters. You can also add extensions that provide OpenTelemetry Collector with additional functionality, such as diagnostics and health checks.
@@ -39,14 +40,14 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 
   Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent (deprecated) to the Collector.
 
-To use the Collector:
+To get started with the Collector, read :ref:`opentelemetry-resources`:
 
+#. Check the :ref:`prerequistes and requirements <otel-requirements>`.
 #. :ref:`otel-install-platform`. Get instructions for installing the Collector on a variety of platforms. Or use :ref:`our guided install <collector-guided-install>`.
-#. :ref:`otel-configuration`. Download default and advanced configuration files.
-#. :ref:`otel-using`. Determine your access token, realm, and deployment mode to start using the Collector.
+#. Learn about the available :ref:`configuration options <otel-configuration>`. 
 #. :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
 
-For a complete overview of the Collector resources, refer to :ref:`opentelemetry-resources`. 
+For more information:
 
 - See :ref:`otel-components` for a description of the components the Collector supports.
 - Use :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
