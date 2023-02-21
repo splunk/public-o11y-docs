@@ -31,7 +31,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - Use a detector to specify the events for which you want to create an alert that is ingested into Incident Intelligence.
 
    * - Dismissed
-     - An incident status that incident responders can set to indicate that the incident is dismissed. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to dismissed prevents the escalation to the next step in an incident workflow. When you reject an incident, it is considered invalid and closed; you will no longer be able to make updates to the incident.
+     - An incident status that incident responders can set to indicate that the incident is dismissed. The status lifecycle for incidents is triggered, then acknowledged, and then resolved. Setting an incident status to dismissed prevents the escalation to the next step in an incident workflow. When you dismiss an incident, it is considered invalid and closed; you will no longer be able to make updates to the incident.
   
    * - Incident Management
      - The entire configuration process for an incident policy in Incident Intelligence. This is where you create an incident policy and configure alert routing, alert grouping, and incident workflows for incidents associated with an incident policy. 
@@ -40,7 +40,7 @@ Here are some important concepts you need to know to successfully use Splunk Inc
      - An unplanned interruption to a service or reduction in the quality of a service that needs to be resolved. Each incident is made up of alerts that are ingested into Incident Intelligence. You can also create incidents manually. Manual incidents don't have ingested alerts. 
 
    * - Incident action
-     - Any status-changing event taken by a user or the system on an incident. Incident responders can acknowledge, resolve, or reject an incident. These actions update the incident status to reflect the most recent action. 
+     - Any status-changing event taken by a user or the system on an incident. Incident responders can acknowledge, resolve, or dismiss an incident. These actions update the incident status to reflect the most recent action. 
 
    * - Incident alerting
      - The primary mechanism of Incident Intelligence. It is the process by which alerts and events are ingested at scale and grouped to create incidents. As alerts and events are ingested into Incident Intelligence, they pass through a series of data transformations, such as alert routing and alert grouping. 
