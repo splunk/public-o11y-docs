@@ -813,6 +813,6 @@ The following table lists the attributes for each metric:
       - Type of ticket available
 
 Get help
---------
+======================
 
 .. include:: /_includes/troubleshooting-components.rst

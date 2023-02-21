@@ -314,6 +314,6 @@ for the Splunk Distribution of OpenTelemetry Collector equivalents.
    <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
 
 Get help
---------
+======================
 
 .. include:: /_includes/troubleshooting-components.rst

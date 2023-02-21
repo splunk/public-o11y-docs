@@ -232,6 +232,6 @@ See also the `list of metrics excluded by
 default <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/signalfxexporter/internal/translation/default_metrics.go>`__.
 
 Get help
---------
+======================
 
 .. include:: /_includes/troubleshooting-components.rst

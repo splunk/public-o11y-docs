@@ -1,8 +1,8 @@
 .. _prometheus-receiver:
 
-*********************************************************************
-Prometheus Receiver
-*********************************************************************
+*******************************************
+Prometheus receiver
+*******************************************
 
 .. meta::
       :description: Use the Prometheus Receiver to collect metric data in the Prometheus format in Splunk Cloud Observability.
