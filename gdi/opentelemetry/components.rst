@@ -69,7 +69,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - :ref:`oracledb` (``oracledb``)
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
      - Metrics
-   * - :ref:`_databricks_receiver` (``databricks``)
+   * - :ref:`databricks_receiver` (``databricks``)
      - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
    * - ``otlp``
