@@ -6,21 +6,13 @@ Oracle Database receiver
 .. meta::
       :description: Use this Splunk Observability Cloud integration for the OracleDB / Oracle Database monitor. See benefits, install, configuration, and metrics">
 
-Description
------------
-
 The Splunk Distribution of OpenTelemetry Collector provides this
 integration as the Oracle Database receiver. The receiver connects to an
 Oracle Database instance and obtains metrics such as physical reads, cpu
 time, and others.
 
-Benefits
-~~~~~~~~
-
-``{include} /_includes/benefits.md``
-
 Installation
-------------
+=======================
 
 Follow these steps to deploy the integration:
 
@@ -36,7 +28,7 @@ Follow these steps to deploy the integration:
 3. Restart the Collector.
 
 Create a database user for this monitor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------
 
 To create an Oracle Database user for this monitor, run the following
 commands:
@@ -56,13 +48,7 @@ following permissions to the database user:
 -  ``GRANT SELECT ON DBA_DATA_FILES TO <username>;``
 
 Configuration
--------------
-
-To activate this monitor type in the Collector, add the following lines
-to your configuration (YAML) file:
-
-Splunk Distribution of OpenTelemetry Collector
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=======================
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry
 Collector, make sure that the configuration contains the following:
@@ -101,8 +87,17 @@ the receiver item to the ``service`` > ``pipelines`` > ``metrics`` >
          receivers:
            - oracledb
 
+Configuration options
+--------------------------------
+
+The following table shows the configuration options:
+
+.. raw:: html
+
+   <div class="metrics-standard" category="included" url="https://github.com/splunk/collector-config-tools/raw/main/cfg-metadata/receiver/oracledb.yaml"></div>
+
 Metrics
--------
+=======================
 
 The following metrics are available for this integration:
 
@@ -274,7 +269,7 @@ The following metrics are available for this integration:
       - 
 
 Resource attributes
--------------------
+------------------------
 
 .. list-table::
    :widths: 15 42 15
@@ -292,7 +287,7 @@ Resource attributes
       - String
 
 Metric attributes
------------------
+-------------------------
 
 .. list-table::
    :header-rows: 1
@@ -319,7 +314,7 @@ Metric attributes
       - 
 
 Enable or disable metrics
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 You can enable or disable specific metrics by setting the value of the
 ``enabled`` option to ``true`` or ``false``.
@@ -339,6 +334,6 @@ enabled the ``oracledb.sessions.usage`` metric:
            enabled: true
 
 Get help
---------
+=======================
 
 .. include:: /_includes/troubleshooting.rst
