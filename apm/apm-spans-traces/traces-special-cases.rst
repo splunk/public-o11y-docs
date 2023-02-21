@@ -43,7 +43,7 @@ If a trace is missing spans, "or processing spans" [don't understand, do you mea
 How to find ongoing traces
 -----------------------------
 
-.. note:: If you have a Log Observer license, make it easier to find ongoing traces in APM, by making sure the ``trace_id`` field is showing up in your logs.
+.. note:: If you have a Log Observer license, make sure the ``trace_id`` field is present in your logs. This field helps you find ongoing traces in APM.
 
 To view an ongoing trace, do the following:
 
