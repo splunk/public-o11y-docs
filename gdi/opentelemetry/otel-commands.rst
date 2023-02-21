@@ -7,17 +7,7 @@ Splunk Distribution of OpenTelemetry Collector commands reference
 .. meta::
   :description: The most commonly used commands for the Splunk Distribution of OpenTelemetry Collector.
 
-This topic provides commonly used commands for the Splunk Distribution of OpenTelemetry Collector.
-
-.. note::
-    To see commonly used commands for the Smart Agent (deprecated), see :ref:`smart-agent-commands`.
-
-The default configuration is stored in ``/etc/otel/collector/agent_config.yaml``. The environment file with the required variables for services is stored in ``/etc/otel/collector/splunk-otel-collector.conf``.
-
-.. note::
-  When you deploy the collector as a DaemonSet on Kubernetes clusters, the collector configuration is managed by the ConfigMap of the collector.
-
-The following table lists all the commands and their usage in context of the Splunk Distribution of OpenTelemetry Collector. Click a command for a more detailed description and syntax examples.
+The following table lists all the commands and their usage in context of the Splunk Distribution of OpenTelemetry Collector. Select a command for a more detailed description and syntax examples.
 
 .. list-table::
   :header-rows: 1
