@@ -30,7 +30,7 @@ This monitor requires RabbitMQ 3.0 and higher.
 
 ### Splunk Distribution of OpenTelemetry Collector
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the `smartagent/rabbitmq` option in the receiver and pipeline service sections of your configuration:
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your configuration:
 
 ```yaml
 receivers:
