@@ -85,4 +85,7 @@ After you download Splunk Observability Cloud for Mobile, you have a variety of 
 #. Launch Splunk Observability Cloud on your mobile device.
 #. Select your realm or enter a custom URL.
    When your Observability Cloud admin set up Single Sign On (SSO), they created a custom URL for your organization. The URL must be a subdomain of signalfx.com. An example of a custom URL is https://your_org.signalfx.com. The :strong:`Enter Custom URL` field is prepopulated with `signalfx.com`. Enter the custom portion before `signalfx.com`.
+   .. image:: /_images/mobile/CustomURL-iOS.png
+   :width: 99%
+   :alt: This image shows the Custom URL field when logging in to Splunk Observability Cloud on iOS.
 #. Choose from :strong:`User Credentials`, :strong:`Google`, or :strong:`SSO`.
