@@ -1,4 +1,4 @@
-.. _admin-team-controls:
+.. _enhanced-team-security:
 
 ***************************************************
 Enable enhanced team security
