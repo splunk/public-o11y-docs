@@ -83,5 +83,6 @@ User Authentication in Splunk Observability for Mobile
 After you download Splunk Observability Cloud for Mobile, you have a variety of authentication methods to choose from in order to access your Splunk Observability Cloud instances. 
 
 #. Launch Splunk Observability Cloud on your mobile device.
-#. Select your realm or enter a customer URL.
+#. Select your realm or enter a custom URL.
+   The URL must be a subdomain of signalfx.com. An example of a custom URL is https://your_org.signalfx.com.
 #. Choose from :strong:`User Credentials`, :strong:`Google`, or :strong:`SSO`.
