@@ -35,7 +35,7 @@ To enable the enhanced team security setting, follow these steps:
 Team roles and permissions
 ============================================================================
 
-This table presents the available team roles and their permissions. Some team roles and permissions change based on whether enhanced team security is enabled. For example, when you enable enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
+This table presents the available user roles and their permissions. Some team roles and permissions change based on whether enhanced team security is enabled. For example, when you enable enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
 
 To learn more about enabling enhanced team security, see :ref:`admin-team-controls`.
 

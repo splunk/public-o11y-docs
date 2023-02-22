@@ -13,8 +13,8 @@ Manage users in Splunk Observability Cloud
 .. toctree::
     :maxdepth: 3
     :hidden:
-    assign-user-roles
-    roles-and-permissions
+      assign-user-roles
+      roles-and-permissions
    
 
 .. note:: To create or manage users and teams, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
@@ -39,8 +39,12 @@ Only the current user can run the following actions:
 
 .. _add-users-organization:
 
-Add users to the organization
-============================================================================
+.. raw:: html
+
+  <embed>
+    <h2>Add users to the organization</h2>
+  </embed>
+
 
 Add users to your organization by sending them an email invitation.
 
@@ -58,8 +62,13 @@ the organization. After they sign up, their names appear in the menu in the
 
 .. _remove-users-organization:
 
-Remove users from the organization
-============================================================================
+.. raw:: html
+
+  <embed>
+    <h2>Remove users from the organization</h2>
+  </embed>
+
+
 
 To remove users from the organization, follow these steps:
 
@@ -74,8 +83,10 @@ The user no longer appears in the list of members.
 
 .. _look-up-user-login:
 
-Look up when a user logged in
-====================================================================
+  <embed>
+    <h2>Look up when a user logged in</h2>
+  </embed>
+  
 
 You can look up when a user logged in to Observability Cloud by looking at user session creation events. To do this:
 
@@ -98,8 +109,10 @@ You can look up when a user logged in to Observability Cloud by looking at user 
 
 .. _user-account-locked:
 
-Address a locked user account
-======================================
+  <embed>
+    <h2>Address a locked user account</h2>
+  </embed>
+
 
 After a user makes too many unsuccessful login attempts, Observability Cloud locks that user's account.
 
