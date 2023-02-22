@@ -21,7 +21,7 @@ See the following sections for more information on how to:
 Share a dashboard
 =================================================================
 
-The following section describes how to share a dashboard from Splunk Observability Cloud.
+You can share a dashboard from Splunk Observability Cloud in the following ways.
 
 
 
