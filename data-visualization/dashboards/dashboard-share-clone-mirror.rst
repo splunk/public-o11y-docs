@@ -37,9 +37,9 @@ Share directly
 
 - To share a dashboard copy, select :guilabel:`Share` from the :guilabel:`Dashboard actions` menu. A pop-out window will open with sharing options.
 
-- To share directly, Click :guilabel:`Add Recipients` and add email addresses or select any available notification integrations as your sharing method.
+- To share directly, select :guilabel:`Add Recipients` and add email addresses or select any available notification integrations as your sharing method.
 
-- After adding recipients, click :guilabel:`Share`. Recipients will receive a link to the dashboard copy. When they open it, they can edit and save their copy without affecting the original.
+- After adding recipients, select :guilabel:`Share`. Recipients will receive a link to the dashboard copy. When they open it, they can edit and save their copy without affecting the original.
 
 .. caution::
     Administrators can add email addresses of people who aren’t members of your organization. Recipients who aren't members will be asked to create a user account before they can view the shared content. Be sure the email addresses you enter for non-members are correct, especially if the item you are sharing contains any sensitive or proprietary information.
@@ -50,7 +50,7 @@ Copy link
 
 Alternatively, you might want to send out an email or post a link to the dashboard copy on an internal communication tool as opposed to sharing directly to each individual member.
 
-- To do this, click :guilabel:`Copy` next to the link provided in the pop-out window and paste this link into your communication.
+- To do this, select :guilabel:`Copy` next to the link provided in the pop-out window and paste this link into your communication.
 
 - If you share the dashboard link with a group, be aware that only members of your organization with an account are able to view the dashboard.
 
@@ -72,15 +72,15 @@ To clone a dashboard, follow these steps:
 
 #. Select :guilabel:`Dashboard` from the Splunk Observability Cloud home page.
 #. Navigate to the dashboard you want to clone.
-#. Click the :guilabel:`Dashboard actions` (|more|) menu.
+#. Select the :guilabel:`Dashboard actions` (|more|) menu.
 
    .. image:: /_images/images-dashboard/dashboard-page-dashboard-actions-menu.png
       :width: 99%
       :alt: This image shows the Dashboard actions menu in dashboard view.
 
 #. Select :guilabel:`Save As...`.
-#. In the :guilabel:`Dashboard Name` field, specify a name for the cloned dashboard. Use a different name from the original dashboard to avoid multiple dashboards with the same name.
-#. (Optional) Select the :guilabel:`Clone Data Links` check box if you want to save all data links on the source dashboard on the cloned dashboard.
+#. In the :guilabel:`Dashboard Name` field, enter a name for the cloned dashboard. Use a different name from the original dashboard to avoid multiple dashboards with the same name.
+#. (Optional) Select the :guilabel:`Clone Data Links` check box if you want to save all local data links from the source dashboard to the cloned dashboard.
 #. From the :guilabel:`Dashboard Permissions` drop-down menu, configure permission settings for the cloned dashboard.
 #. From the :guilabel:`Dashboard Group` menu, find and choose a dashboard group to save the cloned dashboard.
 
@@ -167,7 +167,7 @@ Mirrored dashboard filters and variables are covered in the following sections o
 Dashboard mirrors and permissions
 ------------------------------------------------------------
 
-Dashboard mirrors can only inherit permissions from the dashboard group where they are saved to. Therefore, when you create a new dashboard mirror, teams and users with read and/or write permissions on the dashboard group will have the same permissions on all mirrors.
+Dashboard mirrors can only inherit permissions from the dashboard group where they are saved to. Therefore, when you create a new dashboard mirror, teams and users with read or write permissions on the dashboard group will have the same permissions on all mirrors.
 
 The following table shows the prerequisites you need to do dashboard mirror actions.
 
@@ -207,8 +207,8 @@ The following table shows the prerequisites you need to do dashboard mirror acti
      - No permissions needed for the original dashboard
      - Write permissions for the target dashboard group, as the mirror inherits permissions from the dashboard group it is saved to
 
-:sup:`*` When you view the :strong:`Mirrors of this dashboard` list on the :strong:`Dashboard Info` page of a dashboard, not all mirrors might show up. The list only shows mirrors for which you have read permissions.
+:sup:`*` When you view the :strong:`Mirrors of this dashboard` list on the :strong:`Dashboard Info` page of a dashboard, not all mirrors might appear. The list only shows mirrors for which you have read permissions.
 
-:sup:`**` When a dashboard has one or more mirrors, the :guilabel:`Delete dashboard` option is not available; it is replaced with the :guilabel:`Remove mirror` option. If all mirrors have been removed from the groups in which they were placed, the :guilabel:`Delete dashboard` option will be available on the last mirror.
+:sup:`**` When a dashboard has one or more mirrors, the :guilabel:`Delete dashboard` option is not available; it is replaced with the :guilabel:`Remove mirror` option. If all mirrors are removed from the groups in which they were placed, the :guilabel:`Delete dashboard` option will be available on the last mirror.
 
 :sup:`***` If you want to delete the last dashboard mirror in the same group as the original dashboard, and the original dashboard inherits permissions from this group, you have to change the permission settings of the original dashboard so that it inherits permissions from another group.
