@@ -1,7 +1,7 @@
 .. _roles-and-permissions:
 
 ***************************************************
-Team roles and permissions
+About roles and permissions
 ***************************************************
 
 .. meta::
