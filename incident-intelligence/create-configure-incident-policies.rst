@@ -109,7 +109,7 @@ Use incident policy maintenance to mute notifications while you are making chang
 
 To put your incident policy in maintenance, select the :guilabel:`Actions` menu on the incident policy you want to put in maintenance and select :guilabel:`Maintenance`. The incident policy status will show as :guilabel:`Maintenance`. 
 
-All incidents that are associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
+All incidents that are associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or dismissed.  
 
 Take an incident policy out of maintenance
 ---------------------------------------------
