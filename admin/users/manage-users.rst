@@ -80,10 +80,8 @@ To remove users from the organization, follow these steps:
 The user no longer appears in the list of members.
  
 
-.. _look-up-user-login:
-
 <embed>
-<h2>Look up when a user logged in</h2> 
+<h2 id="look-up-user-login">Look up when a user logged in</h2> 
 </embed>
 
 
@@ -107,13 +105,10 @@ You can look up when a user logged in to Observability Cloud by looking at user 
 #. The :guilabel:`Event Feed` menu displays user and token session events. A :guilabel:`User Session Created` event indicates when a user logged in to Observability Cloud.
 
 
-.. _user-account-locked:
-
 
 <embed>
-<h2>Address a locked user account</h2>
+<h2>What to expect<a name="user-account-locked" class="headerlink" href="#user-account-locked" title="Address a locked user account"> </a></h2>
 </embed>
-
 
 After a user makes too many unsuccessful login attempts, Observability Cloud locks that user's account.
 
