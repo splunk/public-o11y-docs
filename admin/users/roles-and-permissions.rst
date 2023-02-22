@@ -1,4 +1,4 @@
-.. _about-team-roles:
+.. _roles-and-permissions:
 
 ***************************************************
 Team roles and permissions
@@ -7,6 +7,20 @@ Team roles and permissions
 .. meta::
    :description: Learn how to how to manage teams and team membership.
 
+.. toctree::
+  :hidden:
+  assign-user-roles
+  admin-manage-users
+
+
+Users are assigned to roles. A role contains a set of capabilities. Capabilities specify what actions are available to roles. For example, capabilities determine whether someone with a particular role is allowed to create detectors or dashboards. The various capabilities are listed in "XXXXXXXXXXXXX".
+
+By default, Splunk Observability Cloud comes with the following roles predefined:
+
+* admin -- this role has the most capabilities assigned to it.
+* power -- this role can edit all shared objects (saved searches, etc) and alerts, tag events, and other similar tasks.
+* user -- this role can create and edit its own saved searches, run searches, edit its own preferences, create and edit event types, and other similar tasks.
+  
 
 This table presents the available team roles and their permissions. Some team roles and permissions change based on whether enhanced team security is enabled. For example, when you enable enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
 
