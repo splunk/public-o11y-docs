@@ -30,7 +30,7 @@ Here are key aspects of your Observability Cloud organization to plan for and se
 
    * - Invite administrators to help with the setup process
      - :guilabel:`Settings > Users`
-     - For information, see :ref:`admin-manage-users`.
+     - For information, see :ref:`manage-users`.
 
    * - Create access tokens to authenticate API calls and data ingestion
      - :guilabel:`Settings > Access Tokens`
@@ -42,7 +42,7 @@ Here are key aspects of your Observability Cloud organization to plan for and se
 
    * - Invite users
      - :guilabel:`Settings > Users`
-     - For information, see :ref:`admin-manage-users`.
+     - For information, see :ref:`manage-users`.
 
    * - Integrate with notification services to enable team workflows and communication channels
      - :guilabel:`Data Management`

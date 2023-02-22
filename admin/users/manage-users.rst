@@ -82,7 +82,6 @@ The user no longer appears in the list of members.
 
 .. _look-up-user-login:
 
-
 <embed>
 <h2>Look up when a user logged in</h2> 
 </embed>
