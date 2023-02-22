@@ -269,147 +269,23 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
 Unwanted profiling logs appearing in Observability Cloud
 ------------------------------------------------------------
 
-By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a logs pipeline that uses the Splunk HEC exporter. For more information, see :ref:`profiling-intro`.
+By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a ``logs`` pipeline that uses the Splunk HEC exporter.
 
-If you don't need AlwaysOn Profiling data for a specific host or container, set the ``profiling_data_enabled`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
-
-.. code-block:: yaml
-   :emphasize-lines: 6,7
-
-   splunk_hec/noprofiling:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-      log_data_enabled: true # You can still send non-profiling log data if needed
-      profiling_data_enabled: false
+To send logs to Splunk Observability Cloud without AlwaysOn Profiling data, see :ref:`no_profiling_data`.
 
 .. _disable_log_collection:
 
-Disable log data in the Collector
+Exclude log data in the Collector
 ------------------------------------------------------------
 
 By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a logs pipeline that uses the Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
 
-If you need to disable log data export to Observability Cloud, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
+To avoid sending log data through the Collector to Splunk Observability Cloud, see :ref:`exclude-log-data`.
 
-.. code-block:: yaml
-   :emphasize-lines: 6
+Send logs from the Collector to Splunk Cloud Platform or Enterprise
+-----------------------------------------------------------------------
 
-   splunk_hec:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-      log_data_enabled: false
-
-To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
-
-.. note:: The ``log_data_enabled`` setting is available in the Splunk Distribution of OpenTelemetry Collector version 0.49.0 and higher.
-
-If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or ``values.yaml`` file:
-
-.. code-block:: yaml
-
-   splunkObservability:
-      # Other settings
-      logsEnabled: false
-
-.. _send_logs_to_splunk:
-
-Send logs from the Collector to Splunk Cloud or Enterprise
-------------------------------------------------------------
-
-If you're using the Collector for log collection and need to send data to Splunk Cloud or Splunk Enterprise, configure the ``splunk_hec`` exporter to use your Splunk ``endpoint`` and token. For example:
-
-.. code-block:: yaml
-
-   exporters:
-      splunk_hec:
-         # Splunk HTTP Event Collector token.
-         token: "00000000-0000-0000-0000-0000000000000"
-         # URL to a Splunk instance to send data to.
-         endpoint: "https://splunk:8088/services/collector"
-         # Optional Splunk source: https://docs.splunk.com/Splexicon:Source
-         source: "otel"
-         # Optional Splunk source type: https://docs.splunk.com/Splexicon:Sourcetype
-         sourcetype: "otel"
-         # Splunk index, optional name of the Splunk index targeted.
-         index: "metrics"
-         # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
-         max_connections: 20
-         # Whether to disable gzip compression over HTTP. Defaults to false.
-         disable_compression: false
-         # HTTP timeout when sending data. Defaults to 10s.
-         timeout: 10s
-         # Whether to skip checking the certificate of the HEC endpoint when sending data over HTTPS. Defaults to false.
-         tls:
-            insecure_skip_verify: true
-
-To send log data to Splunk Cloud or Enterprise and AlwaysOn Profiling data to Observability Cloud, configure two separate ``splunk_hec`` entries in the ``receiver`` and ``exporters`` sections of the Collector configuration file. Add both to the logs pipeline. For example:
-
-.. code-block:: yaml
-
-   receivers:
-      # Default OTLP receiver--used by Splunk platform logs
-      otlp:
-         protocols:
-            grpc:
-               endpoint: 0.0.0.0:4317
-            http:
-               endpoint: 0.0.0.0:4318
-      # OTLP receiver for AlwaysOn Profiling data
-      otlp/profiling:
-         protocols:
-            grpc:
-               # Make sure to configure your agents
-               # to use the custom port for logs when
-               # setting SPLUNK_PROFILER_LOGS_ENDPOINT
-               endpoint: 0.0.0.0:4319
-
-   exporters:
-      # Export logs to Splunk platform
-      splunk_hec/platform:
-         token: "<splunk_token>"
-         endpoint: "https://splunk:8088/services/collector"
-         source: "otel"
-         sourcetype: "otel"
-         index: "main"
-         max_connections: 20
-         disable_compression: false
-         timeout: 10s
-         tls:
-            insecure_skip_verify: true
-      splunk_hec/profiling:
-         token: "<${SPLUNK_HEC_TOKEN}>"
-         endpoint: "${SPLUNK_HEC_URL}"
-         source: "otel"
-         sourcetype: "otel"
-         log_data_enabled: false
-
-   # Other settings
-
-   service:
-      pipelines:
-
-         # Traces and metrics pipelines
-
-         # Logs pipeline for Splunk platform
-         logs/platform:
-            receivers: [fluentforward, otlp]
-            processors:
-            - memory_limiter
-            - batch
-            - resourcedetection
-            exporters: [splunk_hec/platform]
-         # Logs pipeline for AlwaysOn Profiling
-         logs/profiling:
-            receivers: [otlp/profiling]
-            processors:
-            - memory_limiter
-            - batch
-            - resourcedetection
-            exporters: [splunk_hec/profiling]
+To send logs from the Collector to Splunk Cloud Platform or Splunk Enterprise, see :ref:`send_logs_to_splunk`.
 
 Trace collection issues
 ================================

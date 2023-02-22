@@ -20,6 +20,8 @@ Components
     components/oracledb-receiver
     components/prometheus-receiver
     components/splunk-apm-exporter
+    components/splunk-hec-exporter
+    components/splunk-hec-receiver
 
 The OpenTelemetry Collector includes the following component types:
 
