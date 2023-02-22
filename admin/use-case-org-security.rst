@@ -32,7 +32,7 @@ Learn more
 --------------------
 
 - For more information on how to create teams, see :ref:`admin-create-team`.
-- For more information on how to turn on team access restrictions, see :ref:`admin-team-controls`.
+- For more information on how to turn on team access restrictions, see :ref:`enhanced-team-security`.
 - For more information on how to generate tokens, see :ref:`create-access-token`.
 
 Limit who can edit a detector

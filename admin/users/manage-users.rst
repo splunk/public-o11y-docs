@@ -36,12 +36,11 @@ Only the current user can run the following actions:
 * :ref:`change_time_zone_color_accessibility`
 * :ref:`api-access-token`
 
-.. _add-users-organization:
 
 .. raw:: html
 
   <embed>
-    <h2>Add users to the organization</h2>
+    <h2 id="add-users-organization">Add users to the organization</h2>
   </embed>
 
 
@@ -59,14 +58,12 @@ Users receive an email from Splunk Observability Cloud containing instructions f
 the organization. After they sign up, their names appear in the menu in the
 :menuselection:`Settings > Users` list.
 
-.. _remove-users-organization:
 
 .. raw:: html
 
-  <embed>
-   <h2>Remove users from the organization</h2>
-  </embed>
-
+   <embed>
+      <h2 id="remove-users-organization">Remove users from the organization</h2>
+   </embed>
 
 
 To remove users from the organization, follow these steps:
@@ -78,11 +75,12 @@ To remove users from the organization, follow these steps:
 #. Observability Cloud displays a dialog box that asks you to confirm the deletion. Select:abbr:`Delete`.
 
 The user no longer appears in the list of members.
- 
 
-<embed>
-<h2 id="look-up-user-login">Look up when a user logged in</h2> 
-</embed>
+.. raw:: html
+
+   <embed>
+   <h2 id="look-up-user-login">Look up when a user logged in</h2> 
+   </embed>
 
 
 
@@ -105,10 +103,11 @@ You can look up when a user logged in to Observability Cloud by looking at user 
 #. The :guilabel:`Event Feed` menu displays user and token session events. A :guilabel:`User Session Created` event indicates when a user logged in to Observability Cloud.
 
 
+.. raw:: html
 
-<embed>
-<h2>What to expect<a name="user-account-locked" class="headerlink" href="#user-account-locked" title="Address a locked user account"> </a></h2>
-</embed>
+   <embed>
+   <h2>What to expect<a name="user-account-locked" href="#user-account-locked" title="Address a locked user account"> </a></h2>
+   </embed>
 
 After a user makes too many unsuccessful login attempts, Observability Cloud locks that user's account.
 

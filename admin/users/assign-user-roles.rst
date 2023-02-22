@@ -13,25 +13,6 @@ Create user and assign a user role
 
 
 
-Add users to the organization
-============================================================================
-
-Add users to your organization by sending them an email invitation.
-
-To send invitations to users, follow these steps:
-
-#. From the Splunk Observability home page, expand the left navigation menu and select :guilabel:`Settings`.
-#. Select :guilabel:`Users`.
-#. Select :guilabel:`Invite User`.
-#. Enter the email addresses of your desired members in the dialog box. Separate each email address with a comma or single blank space.
-#. Select :guilabel:`Send Invitation`.
-
-Users receive an email from Splunk Observability Cloud containing instructions for signing into
-the organization. After they sign up, their names appear in the menu in the
-:menuselection:`Settings > Users` list.
-
-
-
 .. _manage_admin-access:
 
 Grant and revoke administrative access
