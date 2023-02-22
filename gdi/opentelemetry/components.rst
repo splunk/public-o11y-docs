@@ -13,6 +13,7 @@ Components
     :hidden:
 
     components/databricks-receiver
+    components/filter-processor
     components/host-metrics-receiver
     components/kubelet-stats-receiver
     components/kubernetes-cluster-receiver
@@ -119,7 +120,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``groupbyattrs``
      - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
      - Metrics, logs, traces
-   * - ``filter``
+   * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
    * - ``k8s_tagger``

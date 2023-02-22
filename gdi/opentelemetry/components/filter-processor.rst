@@ -1,7 +1,7 @@
-.. _label-type:
+.. _filter-processor:
 
 *************************
-Name of component
+Filter processor
 *************************
 
 .. meta::
