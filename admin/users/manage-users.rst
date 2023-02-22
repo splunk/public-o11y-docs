@@ -12,8 +12,9 @@ Manage users in Splunk Observability Cloud
 .. toctree::
    :hidden:
 
-   Connect to AWS<assign-user-roles>
    About roles and permissions<roles-and-permissions>
+   <assign-user-roles>
+   
    
 
 .. note:: To create or manage users and teams, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
