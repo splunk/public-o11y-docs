@@ -19,6 +19,8 @@ By default, every user can join any team in your organization. If you want to re
 
 To learn more about team roles and permissions, see :ref:`about-team-roles`.
 
+.. _admin-team-controls:
+
 You must be a Splunk Observability Cloud administrator to enable this setting. This setting applies to every team in your organization.
 
 To enable the enhanced team security setting, follow these steps:
