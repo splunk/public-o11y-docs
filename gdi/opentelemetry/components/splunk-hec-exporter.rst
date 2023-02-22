@@ -1,4 +1,4 @@
-.. _label-type:
+.. _splunk-hec-exporter:
 
 *************************
 Name of component

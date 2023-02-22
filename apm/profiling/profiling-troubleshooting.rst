@@ -32,7 +32,7 @@ To solve this, check that you've instrumented your application and that the appl
 Check the OpenTelemetry Collector configuration
 -------------------------------------------------
 
-If the Splunk Distribution of OpenTelemetry Collector isn't configured to send logs to Observability Cloud using the Splunk HEC exporter, it drops profiling data. To solve this issue, edit the configuration file for the Splunk Distribution of OpenTelemetry Collector and make sure that a profiling pipeline exists with an OTLP gRPC receiver and a Splunk HEC exporter.
+If the Splunk Distribution of OpenTelemetry Collector isn't configured to send logs to Observability Cloud using the Splunk HEC exporter, it drops profiling data. To solve this issue, edit the configuration file for the Splunk Distribution of OpenTelemetry Collector and make sure that a profiling pipeline exists with an OTLP gRPC receiver and a Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
 
 The following example shows you how to configure a pipeline in the ``agent-config.yaml`` file. Set the ``SPLUNK_ACCESS_TOKEN`` environment variable to a valid access token. See :ref:`admin-org-tokens`.
 

@@ -1,4 +1,4 @@
-.. _label-type:
+.. _splunk-hec-receiver:
 
 *************************
 Name of component
