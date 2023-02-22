@@ -14,8 +14,8 @@ Manage users in Splunk Observability Cloud
     :maxdepth: 23
     :hidden:
 
-      assign-user-roles
-      roles-and-permissions
+   <assign-user-roles>
+   <roles-and-permissions>
    
 
 .. note:: To create or manage users and teams, you must have administrator access. To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
@@ -84,10 +84,10 @@ The user no longer appears in the list of members.
 
 .. _look-up-user-login:
 
+
   <embed>
-    <h2>Look up when a user logged in</h2>
-  </embed>
-  
+    <h2>Look up when a user logged in</h2> </embed>
+
 
 
 You can look up when a user logged in to Observability Cloud by looking at user session creation events. To do this:
@@ -111,9 +111,9 @@ You can look up when a user logged in to Observability Cloud by looking at user 
 
 .. _user-account-locked:
 
+
   <embed>
-    <h2>Address a locked user account</h2>
-  </embed>
+    <h2>Address a locked user account</h2></embed>
 
 
 After a user makes too many unsuccessful login attempts, Observability Cloud locks that user's account.
