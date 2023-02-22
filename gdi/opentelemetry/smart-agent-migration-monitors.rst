@@ -17,7 +17,7 @@ The ``smartagent`` receiver and its associated extension are :ref:`Collector com
 Configure the Smart Agent receiver
 ================================================================
 
-For each Smart Agent monitor you want to add to the Collector, add a ``smartagent`` receiver or collectd configuration block in the global Smart Agent Extension section of your :ref:`Collector configuration <otel-configuration>`. Each ``smartagent`` receiver acts as a drop-in replacement for its corresponding Smart Agent monitor.
+For each Smart Agent monitor you want to add to the Collector, add a ``smartagent`` receiver and ``smartagent`` service pipeline in your :ref:`Collector configuration file <otel-configuration>`. Each ``smartagent`` receiver acts as a drop-in replacement for its corresponding Smart Agent monitor.
 
 Instead of using ``discoveryRule``, use the Collector's Receiver Creator and Observer extensions.
 
