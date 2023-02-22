@@ -11,10 +11,14 @@ The Splunk HTTP Event Collector (HEC) exporter allows the OpenTelemetry Collecto
 
 The main purpose of the Splunk HEC exporter is to send logs to Log Observer, Splunk Cloud Platform, or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Observability Cloud. See :ref:`lo-connect-landing` for more information.
 
+.. note:: For information about the HEC receiver, see :ref:`splunk-hec-receiver`.
+
 Get started
 ======================
 
 By default, the Splunk Distribution of OpenTelemetry Collector includes the Splunk HEC exporter in the ``logs`` pipeline when deploying the Collector in agent mode. See :ref:`otel-deployment-mode` for more information.
+
+.. note:: To send Splunk HEC data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
 
 Sample configurations
 ----------------------
@@ -67,8 +71,6 @@ The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HE
      - ``https://ingest.<realm>.signalfx.com/v1/log``, where ``<realm>`` is the Observability Cloud realm, for example ``us0``.
 
 .. include:: /_includes/realm-note.rst
-
-.. note:: To send Splunk HEC data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
 
 .. _send_logs_to_splunk:
 

@@ -30,14 +30,14 @@ Follow these steps to deploy the integration:
 Sample configurations
 ----------------------
 
-Activating the Splunk HEC receiver requires to add a ``splunk_hec`` entry inside the ``receivers`` section of the Collector configuration file. For example:
+To activate the Splunk HEC receiver add a ``splunk_hec`` entry inside the ``receivers`` section of the Collector configuration file. For example:
 
 .. code-block:: yaml
 
    exporters:
       splunk_hec:
 
-The following example shows a Splunk HEC receiver configured with all available settings for a metrics pipeline in the Collector configuration file:
+The following example shows a Splunk HEC receiver configured with all available settings:
 
 .. code-block:: yaml
 
@@ -65,13 +65,6 @@ The following example shows a Splunk HEC receiver configured with all available 
          # for TLS connections
          cert_file: /test.crt
          key_file: /test.key
-   
-   service:
-      # ...
-      pipelines:
-         logs:
-            receivers: [splunk_hec]
-            # ...
 
 Settings
 ======================
