@@ -11,8 +11,9 @@ Manage users in Splunk Observability Cloud
 
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 23
     :hidden:
+
       assign-user-roles
       roles-and-permissions
    
@@ -65,7 +66,7 @@ the organization. After they sign up, their names appear in the menu in the
 .. raw:: html
 
   <embed>
-    <h2>Remove users from the organization</h2>
+   <h2>Remove users from the organization</h2>
   </embed>
 
 
@@ -87,6 +88,7 @@ The user no longer appears in the list of members.
     <h2>Look up when a user logged in</h2>
   </embed>
   
+
 
 You can look up when a user logged in to Observability Cloud by looking at user session creation events. To do this:
 
