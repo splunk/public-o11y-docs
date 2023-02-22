@@ -853,7 +853,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   User roles and permissions <roles-and-permissions>
+   Create and manage users <admin/users/manage-users>
 
 .. toctree::
    :maxdepth:   3

@@ -7,10 +7,7 @@ Team roles and permissions
 .. meta::
    :description: Learn how to how to manage teams and team membership.
 
-.. toctree::
-  :hidden:
-  assign-user-roles
-  admin-manage-users
+
 
 
 Users are assigned to roles. A role contains a set of capabilities. Capabilities specify what actions are available to roles. For example, capabilities determine whether someone with a particular role is allowed to create detectors or dashboards. The various capabilities are listed in "XXXXXXXXXXXXX".
