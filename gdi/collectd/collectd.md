@@ -8,6 +8,10 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/custom` monitor type for the Smart Agent Receiver. This monitor lets you provide a custom collectd configuration to be run by the managed collectd instance.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 You can provide configurations for as many plugins as you want in a single instance of this monitor configuration by either putting multiple `<Plugin>` blocks in a single `template` option or by specifying multiple `templates`.
 
 Note that a distinct instance of collectd is run for each instance of this monitor, so it is more efficient to group plugin configurations into a single monitor configuration (either in one large `template` text blob or split into multiple `templates`). If using a `discoveryRule`, do not group configurations to avoid creating a duplicate configuration for each instance of the service endpoint discovered.
