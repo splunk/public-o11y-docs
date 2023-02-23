@@ -9,6 +9,10 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the disk and partition monitor using the Smart Agent Receiver. This plugin provides disk metrics for Splunk Observability Cloud. 
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 Use alerts and thresholds based on the plugin metrics to avoid filling disks to capacity. The Smart Agent plugin computes aggregated utilization metrics based on the output of this plugin.
 
 The disk and partition plugin collects performance statistics of hard disks and, where supported, partitions. Two of the provided metrics are calculated as follows:

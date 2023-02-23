@@ -11,6 +11,10 @@ Use this integration to monitors a Java-based Kafka consumer using collectd's Ge
 
 This monitor has a set of built-in MBeans configured for which it pulls metrics from the Kafka consumer's JMX endpoint.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 ## Requirements
 
 The `collectd/kafka_consumer` monitor requires Kafka version 0.9.0.0 or higher and collects metrics from the new consumer API. Per-topic metrics are not available through the new consumer API in version 0.9.0.0 or lower, which can cause the logs to fill with warnings related to the MBean not being found. Use the `mBeansToOmit` config option in such cases.

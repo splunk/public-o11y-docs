@@ -9,7 +9,9 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Use this integration to monitor PHP-FastCGI Process Manager (FPM) using the pool status URL.
 
-This monitor is available on Linux.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ## Requirements
 

@@ -14,7 +14,9 @@ Use this integration to collect information about the traffic (octets per second
 
 If you're not interested in collecting information from all interfaces, select the interfaces you want to monitor using the plugin's configuration.
 
-
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 <!--
 ## Requirements
@@ -32,7 +34,7 @@ This plugin requires:
 ```
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 ## Configuration
 

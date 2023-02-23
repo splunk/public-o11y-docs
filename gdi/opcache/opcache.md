@@ -9,7 +9,9 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Use this monitor to retrieve metrics from OPcache using the `opcache_get_status()` function, which improves PHP performance by storing precompiled script bytecode in shared memory.
 
-This monitor is available on Kubernetes, Linux, and Windows.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 
@@ -62,7 +64,7 @@ curl http://localhost/monitoring/opcache_stat.php
 ```
 ##  Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
