@@ -85,7 +85,7 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
 
    - Select :strong:`Service` to associate the span tag with services. This means the value of the span tag might change across services in a given trace. Specify ``All Services`` to index the span tag for every service. Select specific services to index the span tag for only those services. 
      
-     (Optional) If your span tag is indexed at the service level, you can also use it as a custom dimension in Monitoring MetricSets. See :ref:`cmms` for instructions.
+     .. note:: (Optional) If your span tag is indexed at the service level, you can also use it as a custom dimension in Monitoring MetricSets. See :ref:`cmms` for instructions.
 
    - Select :strong:`Global` to associate the span tag with traces. This means the value of the span tag is the same for all services in a given trace.
 
