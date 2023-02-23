@@ -1,11 +1,11 @@
-.. _filter-processor:
+.. _attributes-processor:
 
 *************************
-Filter processor
+Attributes processor
 *************************
 
 .. meta::
-      :description: Use the filter processor to include or exclude telemetry based on certain conditions. Read on to learn how to configure the component.
+      :description: Use the attributes processor to include or exclude telemetry based on certain conditions. Read on to learn how to configure the component.
 
 The filter processor is an OpenTelemetry Collector component that filters spans, metrics, or logs based on the conditions you define in its configuration. A typical use case for the filter processor is dropping telemetry that isn't relevant to the observed system, like noncritical logs or spans, to reduce noise in your data.
 
@@ -29,7 +29,7 @@ The filter processor can include or exclude telemetry based on the following cri
 
 The regular expression engine used by the filter processor is ``re2``.
 
-.. note:: To redact or transform attributes of spans, logs, or metrics without dropping them, use the attributes processor. See :ref:`attributes-processor`.
+.. note:: To include or exclude whole spans, logs, or metrics without, use the filter processor. See :ref:`filter-processor`.
 
 Get started
 ======================
