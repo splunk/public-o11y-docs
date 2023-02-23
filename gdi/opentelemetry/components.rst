@@ -12,6 +12,7 @@ Components
     :titlesonly:
     :hidden:
 
+    components/attributes-processor
     components/databricks-receiver
     components/filter-processor
     components/host-metrics-receiver
@@ -111,7 +112,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - Name
      - Description
      - Pipeline types
-   * - ``attributes``
+   * - :ref:`attributes-processor` (``attributes``)
      - Modifies attributes of a span or log record.
      - Logs, traces
    * - ``batch``
