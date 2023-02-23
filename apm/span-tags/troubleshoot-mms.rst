@@ -8,13 +8,20 @@ Troubleshoot cardinality in Monitoring MetricSets
 
 .. meta::
    :description: Learn how to troubleshoot cardinality using Monitoring MetricSets.
+Follow these steps to troubleshoot high cardinality issues and Monitoring MetricSet configurations. 
 
-Follow these steps to troubleshoot issues with high cardinality and Monitoring MetricSet configurations. 
+You’ve reached your subscription limit or you’re unable to create new Monitoring MetricSets
+=========================================================================================================
 
-Troubleshoot high cardinality data
-===================================
+Cause: Your cardinality is too high
+------------------------------------
+If the cardinality of your Monitoring MetricSets is high, you might reach your subscription limits and be unable to create new Monitoring MetricSets.
 
-If the cardinality of your Monitoring MetricSets is high, you might reach your subscription limits and be unable to create new Monitoring MetricSets. This page provides guidance on how to configure your Monitoring MetricSets with efficiency. 
+
+Solution: Configure your MMS to be more efficient 
+------------------------------------------------------------------------
+
+
 
 Choose between service and endpoint level MetricSets
 ---------------------------------------------------------
