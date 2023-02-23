@@ -8,6 +8,10 @@ The Splunk Distribution of OpenTelemetry Collector provides this integration as 
 
 This monitor collects metrics about a Hadoop 2.0+ cluster using the Hadoop Python plugin. If a remote JMX port is exposed in the Hadoop cluster, then you can also configure the hadoopjmx monitor to collect additional metrics about the Hadoop cluster.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 The Hadoop monitor collects metrics from the Resource Manager REST API for the following components:
 
 - Cluster Metrics

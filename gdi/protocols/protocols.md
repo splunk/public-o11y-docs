@@ -11,6 +11,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 This monitor gathers metrics about the network protocol stacks running on the system.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 
 ## Installation
 

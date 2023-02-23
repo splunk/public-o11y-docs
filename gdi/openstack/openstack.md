@@ -15,7 +15,9 @@ This monitor covers the following OpenStack components:
 * Cinder (Block Storage)
 * Neutron (Network)
 
-This integration is available for Kubernetes, Linux, and Windows.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 
@@ -24,7 +26,7 @@ This integration is available for Kubernetes, Linux, and Windows.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration

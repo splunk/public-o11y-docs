@@ -7,7 +7,9 @@
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the Chrony NTP monitor type by using the SignalFx Smart Agent receiver. The integration monitors NTP data from a chrony server, such as clock skew and per-peer stratum. For talking to chronyd, this monitor type mimics what the chronyc control program does on the wire.
 
-This integration is available for Kubernetes, Linux, and Windows.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ## Benefits
 
@@ -16,7 +18,7 @@ This integration is available for Kubernetes, Linux, and Windows.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
