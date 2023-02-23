@@ -12,12 +12,15 @@ Understand your metrics usage with metrics usage report
 |hr|
 
 
-To get a detailed breakdown of your metric time series (MTS) creation and usage, you can request a short-term usage report by contacting your tech support member or your account team. The report covers a specific interval of no more than 30 days.
+To get a detailed breakdown of your metric time series (MTS) creation and usage, you can request a short-term usage report by contacting your tech support member or your account team.
 
 You can use the detailed metrics usage analytics report to optimize your usage of custom metrics. 
 
     * If you are an MTS-based customer, all your metrics are considered custom metrics, you might find the report highly valuable.
     * If you are a host-based customers with hight utilization of custom metrics, you can use the report to lower your custom metrics usage.
+
+Statistics in the report
+==============================
 
 For each metric in the report, you can see the following usage and MTS creation statistics.
 
@@ -62,6 +65,10 @@ For each metric in the report, you can see the following usage and MTS creation 
      - Three examples of MTS for the metric containing the dimensions of the MTS. The example MTS for each metric are picked from the interval in descending order of creation time.
 
 
+Limits of the metrics usage analytics report
+================================================
 
-
+* By default, the report covers an interval of 30 days. You can also request to generate a report with a shorter interval.
+* You can request two reports per calendar month.
+* The report covers the top 1,000 metrics based on the number of MTS creations, since the most significant difference in metrics usage comes from aggregating or dropping metrics with the highest number of MTS.
 
