@@ -33,7 +33,38 @@ You can apply any of the following actions on collected attributes of spans, met
    * - ``convert``
      - Converts an attribute to another type, as specified in the ``converted_type`` parameter, which can be either ``int``, ``double``, or ``string``.
 
-You can include or exclude attributes for processing using ``include`` or ``exclude`` parameters. See the next sections for more information.
+You can then add the filter processors to any compatible pipeline. For example:
+
+.. code-block:: yaml
+   :emphasize-lines: 6, 14, 22
+
+   service:
+     pipelines:
+       traces:
+         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
+         processors:
+         - attributes/traces
+         - memory_limiter
+         - batch
+         - resourcedetection
+         exporters: [sapm, signalfx]
+       metrics:
+         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
+         processors:
+         - attributes/metrics
+         - memory_limiter
+         - batch
+         - resourcedetection
+         exporters: [signalfx]
+       logs:
+         receivers: [fluentforward, otlp]
+         processors:
+         - attributes/logs
+         - memory_limiter
+         - batch
+         - resourcedetection
+         exporters: [splunk_hec]
+
 
 .. note:: To include or exclude whole spans, logs, or metrics without, use the filter processor. See :ref:`filter-processor`.
 
@@ -95,9 +126,60 @@ For a complete list of parameters, see :ref:`attributes-processor-settings`.
 Sample configurations
 ----------------------
 
-The following sample configurations show how to filter spans, metrics, and logs using different criteria.
+The following sample configurations show how to perform different actions on attributes.
 
+Remove or obfuscate sensitive information from logs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The following example shows how to remove a token attribute, hash an email, and redact a password in logs:
+
+.. code-block:: yaml
+
+   attributes/log_body_regexp:
+     include:    
+       match_type: regexp
+         log_bodies: ["AUTH.*"]
+       actions:
+         - key: password
+           action: update
+           value: "Redacted"
+         - key: apitoken
+           action: delete
+         - key: email
+           action: hash
+
+Create a new attribute based on the value of another
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following example shows how to create a new attribute based on the value of another attribute in spans:
+
+.. code-block:: yaml
+
+   attributes/createattributes:
+     actions:
+         # Creates four new attributes (defined in pattern) from the
+         # value of the http.url attribute
+       - key: "http.url"
+           pattern: ^(?P<http_protocol>.*):\/\/(?P<http_domain>.*)\/(?P<http_path>.*)(\?|\&)(?P<http_query_params>.*)
+           action: extract
+
+Backfill spans that miss an attribute
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following example shows how to backfill spans that miss an attribute:
+
+.. code-block:: yaml
+
+   attributes/complex:
+     actions:
+       - key: operation
+         value: default
+         action: insert
+       - key: svc.operation
+         from_attribute: operation
+         action: upsert
+       - key: operation
+         action: delete
 
 .. _attributes-processor-settings:
 
