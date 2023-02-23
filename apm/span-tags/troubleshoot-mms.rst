@@ -68,11 +68,11 @@ The following table outlines the difference between endpoint and service level M
 
 
 
-The Monitoring MetricSets at the service level are an aggregation of the metric sets at the endpoint-level. If you specify the endpoints that are of interest to you in your Monitoring MetricSet, then you can reduce the amount of data.
+The MMS at the service level are an aggregation of the metric sets at the endpoint-level. If you specify the endpoints that are of interest to you in your Monitoring MetricSet, then you can reduce the amount of data.
 
 However, limiting the number of endpoints in your Monitoring MetricSet isn’t always a guaranteed way to reduce your cardinality. 
 
-Solution: How to reduce cardinality through tag filters  
+Solution: Apply tag filters  
 ------------------------------------------------------------------------------------------------------------------
 In this example, the custom dimension is :code:`customer.id`. 
 
