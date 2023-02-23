@@ -30,7 +30,6 @@ Usage statistics
 
 .. list-table:: 
    :header-rows: 1
-   :width: 100
    :widths: 20 80
 
    * - :strong:`Column`
@@ -48,7 +47,6 @@ MTS creation statistics
 
 .. list-table:: 
    :header-rows: 1
-   :width: 100
    :widths: 20 80
 
    * - :strong:`Column`
