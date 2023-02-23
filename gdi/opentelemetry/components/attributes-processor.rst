@@ -97,7 +97,7 @@ You can then add the filter processors to any compatible pipeline. For example:
          exporters: [splunk_hec]
 
 
-You can include or exclude attributes using any of the following properties:
+To include or exclude attributes use any of the following properties:
 
 - ``services``
 - ``resources``
