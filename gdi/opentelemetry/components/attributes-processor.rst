@@ -13,7 +13,7 @@ You can apply any of the following actions on collected attributes of spans, met
 
 .. list-table::
    :width: 100%
-   :widths: 20 80
+   :widths: 10 90
    :header-rows: 1
 
    * - Action
@@ -32,6 +32,37 @@ You can apply any of the following actions on collected attributes of spans, met
      - Extracts values using regular expression rules. A ``pattern`` is required.
    * - ``convert``
      - Converts an attribute to another type, as specified in the ``converted_type`` parameter, which can be either ``int``, ``double``, or ``string``.
+
+.. note:: To include or exclude whole spans, logs, or metrics without, use the filter processor. See :ref:`filter-processor`.
+
+Get started
+======================
+
+By default, the Splunk Distribution of OpenTelemetry Collector includes the attributes processor. To turn on the attributes processor for a pipeline, add ``attributes`` to the ``processors`` section of the configuration. For example:
+
+.. code-block:: yaml
+
+   processors:
+     attributes/example:
+       actions:
+         - key: db.table
+           action: delete
+         - key: redacted_span
+           value: "new_value"
+           action: upsert
+         - key: copy_key
+           from_attribute: key_original
+           action: update
+         - key: account_id
+           value: 33445
+           action: insert
+         - key: account_password
+           action: delete
+         - key: account_email
+           action: hash
+         - key: http.status_code
+           action: convert
+           converted_type: int
 
 You can then add the filter processors to any compatible pipeline. For example:
 
@@ -66,37 +97,6 @@ You can then add the filter processors to any compatible pipeline. For example:
          exporters: [splunk_hec]
 
 
-.. note:: To include or exclude whole spans, logs, or metrics without, use the filter processor. See :ref:`filter-processor`.
-
-Get started
-======================
-
-By default, the Splunk Distribution of OpenTelemetry Collector includes the attributes processor. To turn on the attributes processor for a pipeline, add ``attributes`` to the ``processors`` section of the configuration. For example:
-
-.. code-block:: yaml
-
-   processors:
-     attributes/example:
-       actions:
-         - key: db.table
-           action: delete
-         - key: redacted_span
-           value: "new_value"
-           action: upsert
-         - key: copy_key
-           from_attribute: key_original
-           action: update
-         - key: account_id
-           value: 33445
-           action: insert
-         - key: account_password
-           action: delete
-         - key: account_email
-           action: hash
-         - key: http.status_code
-           action: convert
-           converted_type: int
-
 You can include or exclude attributes using any of the following properties:
 
 - ``services``
@@ -108,18 +108,17 @@ You can include or exclude attributes using any of the following properties:
 - ``metric_names``
 - ``attributes``
 
-The following example shows 
+The following example shows how to apply a ``delete`` action to specific services:
 
 .. code-block:: yaml
 
-   processors:
-     attributes/includeexclude:
-       include:
-         match_type: regexp
-         services: ["auth.*"]
-       exclude:
-         match_type: regexp
-         span_names: ["login.*"]
+   attributes/selectiveprocessing:
+     include:
+       match_type: strict
+       services: ["service1", "service2"]
+     actions:
+       - key: sensitive_field
+         action: delete
 
 For a complete list of parameters, see :ref:`attributes-processor-settings`.
 
@@ -127,6 +126,8 @@ Sample configurations
 ----------------------
 
 The following sample configurations show how to perform different actions on attributes.
+
+.. note:: For a complete list of examples, see the configuration snippets in :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/processor/attributesprocessor/testdata/config.yaml`.
 
 Remove or obfuscate sensitive information from logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
