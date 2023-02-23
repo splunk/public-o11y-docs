@@ -7,6 +7,10 @@
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the `genericjmx` monitor via the Smart Agent Receiver. For a more flexible alternative, use [the JMX monitor](jmx).
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 The Generix JMX integration monitors Java services that expose metrics on Java Management Extensions (JMX) using the GenericJMX plugin. The GenericJMX plugin reads Managed Beans (mBeans) from an MBeanServer using JMX. The monitor uses an embedded Java runtime.
 
 The JMX is a generic framework to provide and query management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used and threads. These basic performance values can therefore be collected for every Java process without any support in the Java process itself.

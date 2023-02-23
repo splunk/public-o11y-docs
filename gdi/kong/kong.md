@@ -8,6 +8,10 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `kong` monitor type with the SignalFx Smart Agent receiver. This monitor requires version 0.11.2+ of Kong and version 0.0.1+ of kong-plugin-signalfx.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 The Kong integration provides service traffic metrics using `kong-plugin-signalfx`, which emits metrics for configurable request and response lifecycle groups, including:
 
 * Counters for response counts

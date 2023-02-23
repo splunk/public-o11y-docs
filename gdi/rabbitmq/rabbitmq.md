@@ -7,7 +7,9 @@
 
 Use this monitor to keep track of an instance of RabbitMQ by using the RabbitMQ Python Plugin. This monitor uses the RabbitMQ Management HTTP API to poll for statistics on a RabbitMQ server, then reports them to the agent.
 
-This integration is available for Kubernetes, Windows, and Linux.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 
@@ -20,7 +22,7 @@ This monitor requires RabbitMQ 3.0 and higher.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration

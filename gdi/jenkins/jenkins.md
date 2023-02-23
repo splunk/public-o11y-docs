@@ -8,10 +8,15 @@
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jenkins` monitor for the Smart Agent Receiver. 
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 Use this integration to collect metrics from Jenkins instances by hitting the following endpoints:
 
 - Job metrics with the `../api/json` endpoint
 - Codahale or Dropwizard JVM metrics with the `metrics/<MetricsKey>/..` endpoint
+
 ## Benefits
 
 ```{include} /_includes/benefits.md
@@ -19,7 +24,7 @@ Use this integration to collect metrics from Jenkins instances by hitting the fo
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration

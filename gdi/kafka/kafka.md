@@ -15,7 +15,9 @@ configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/co
 
 **Note:** This monitor supports Kafka v0.8.2.x and above. For Kafka v1.x.x and above, apart from the list of default metrics, `kafka.server:type=ZooKeeperClientMetrics,name=ZooKeeperRequestLatencyMs` is a good metric to monitor since it gives an understanding of how long brokers wait for requests to Zookeeper to be completed. Since Zookeeper is an integral part of a Kafka cluster, monitoring it using the Zookeeper monitor is recommended. It is also a good idea to monitor disk utilization and network metrics of the underlying host.
 
-This monitor is available on Kubernetes, Linux, and Windows.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 ```{include} /_includes/benefits.md
