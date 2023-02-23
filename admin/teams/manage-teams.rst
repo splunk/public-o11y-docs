@@ -1,11 +1,11 @@
 .. _admin-manage-teams:
 
 *********************************************************
-Create and manage teams in Splunk Observability Cloud
+Manage users and teams in Splunk Observability Cloud
 *********************************************************
 
 .. meta::
-   :description: Learn how to manage teams in Splunk Observability Cloud.
+   :description: Learn how to manage users teams in Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
