@@ -34,7 +34,7 @@ The regular expression engine used by the filter processor is ``re2``.
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the filter processor. To turn on the filter processor for a pipeline, add the ``filter`` processor to the ``processors`` section of the configuration. For example:
+By default, the Splunk Distribution of OpenTelemetry Collector includes the filter processor. To turn on the filter processor for a pipeline, add ``filter`` to the ``processors`` section of the configuration. For example:
 
 .. code-block:: yaml
 

@@ -5,245 +5,101 @@ Attributes processor
 *************************
 
 .. meta::
-      :description: Use the attributes processor to include or exclude telemetry based on certain conditions. Read on to learn how to configure the component.
+      :description: Use the attributes processor to transform, redact, update, hash, or delete attributes of spans, metrics, or logs. Read on to learn how to configure the component.
 
-The filter processor is an OpenTelemetry Collector component that filters spans, metrics, or logs based on the conditions you define in its configuration. A typical use case for the filter processor is dropping telemetry that isn't relevant to the observed system, like noncritical logs or spans, to reduce noise in your data.
+The attributes processor is an OpenTelemetry Collector component that modifies spans, metrics, or logs through actions. You can combine actions in a single processor instance to run complex operations. Use cases include, among others, obfuscating sensitive information, copying values to new keys, and backfilling attributes.
 
-Filtering works through allow lists and deny lists, which include or exclude telemetry based on regular expressions and resource attributes. You can also use the OpenTelemetry Transformation Language (OTTL) to better describe the signals you want to filter. The processor supports all pipeline types. See :ref:`otel-data-processing` for more information.
-
-The filter processor can include or exclude telemetry based on the following criteria:
+You can apply any of the following actions on collected attributes of spans, metrics, or logs:
 
 .. list-table::
    :width: 100%
    :widths: 20 80
    :header-rows: 1
 
-   * - Signal
-     - Criteria and match types
-   * - Spans
-     - OTTL conditions, span names (``strict`` or ``regexp``), and resource attributes (``strict`` or ``regexp``). Span events filtering only supports OTTL conditions.
-   * - Metrics
-     - OTTL conditions, metric names (``strict`` or ``regexp``), and metric attributes (``expr``). Data points filtering only supports OTTL conditions.
-   * - Logs
-     - OTTL conditions, resource attributes (``strict`` or ``regexp``).
+   * - Action
+     - Description
+   * - ``insert``
+     - Inserts a new attribute in data lacking a specific ``key``, which must have either a ``value``, ``from_attribute``, or ``from_context`` defined.
+   * - ``update``
+     - Updates an attribute in data that has a specific ``key``, which must have either a ``value``, ``from_attribute``, or ``from_context`` defined.
+   * - ``upsert``
+     - Updates or insert an attribute in data depending on whether a ``key`` exists or not. The ``key`` must have either a ``value``, ``from_attribute``, or ``from_context`` defined.
+   * - ``delete``
+     - Deletes an attribute from the data that has a specific ``key`` or ``pattern``.
+   * - ``hash``
+     - Hashes the value of an existing attribute that has a specific ``key`` or ``pattern`` using the SHA1 algorithm.
+   * - ``extract``
+     - Extracts values using regular expression rules. A ``pattern`` is required.
+   * - ``convert``
+     - Converts an attribute to another type, as specified in the ``converted_type`` parameter, which can be either ``int``, ``double``, or ``string``.
 
-The regular expression engine used by the filter processor is ``re2``.
+You can include or exclude attributes for processing using ``include`` or ``exclude`` parameters. See the next sections for more information.
 
 .. note:: To include or exclude whole spans, logs, or metrics without, use the filter processor. See :ref:`filter-processor`.
 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the filter processor. To turn on the filter processor for a pipeline, add the ``filter`` processor to the ``processors`` section of the configuration. For example:
+By default, the Splunk Distribution of OpenTelemetry Collector includes the attributes processor. To turn on the attributes processor for a pipeline, add ``attributes`` to the ``processors`` section of the configuration. For example:
 
 .. code-block:: yaml
 
    processors:
-     filter/includemetrics:
-       metrics:
-           # Drop nonmatching metrics from the pipeline
-           include:
-             match_type: strict
-             metric_names:
-               - good_metric
-               - great_metric
-     filter/excludemetrics:
-       metrics:
-         # Drop matching metrics from the pipeline
-         exclude:
-           match_type: strict
-           metric_names:
-             - a_metric
-             - another_metric
-             - a_third_metric
-     filter/mixedlogs:
-       logs:
-          # Include filters are applied before exclude filters
-          include:
-            match_type: strict
-            record_attributes:
-              - key: host.name
-                value: "(host1|anotherhost2)"
-          exclude:
-            match_type: strict
-            record_attributes:
-              - key: host.name
-                value: wrong_host_.*
+     attributes/example:
+       actions:
+         - key: db.table
+           action: delete
+         - key: redacted_span
+           value: "new_value"
+           action: upsert
+         - key: copy_key
+           from_attribute: key_original
+           action: update
+         - key: account_id
+           value: 33445
+           action: insert
+         - key: account_password
+           action: delete
+         - key: account_email
+           action: hash
+         - key: http.status_code
+           action: convert
+           converted_type: int
 
-You can then add the filter processors to any compatible pipeline. For example:
+You can include or exclude attributes using any of the following properties:
+
+- ``services``
+- ``resources``
+- ``libraries``
+- ``span_names``
+- ``log_bodies``
+- ``log_severity_texts``
+- ``metric_names``
+- ``attributes``
+
+The following example shows 
 
 .. code-block:: yaml
-   :emphasize-lines: 6, 14, 15, 23
 
-   service:
-     pipelines:
-       traces:
-         receivers: [jaeger, otlp, smartagent/signalfx-forwarder, zipkin]
-         processors:
-         - filter/traces
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [sapm, signalfx]
-       metrics:
-         receivers: [hostmetrics, otlp, signalfx, smartagent/signalfx-forwarder]
-         processors:
-         - filter/includemetrics
-         - filter/excludemetrics
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [signalfx]
-       logs:
-         receivers: [fluentforward, otlp]
-         processors:
-         - filter/mixedlogs
-         - memory_limiter
-         - batch
-         - resourcedetection
-         exporters: [splunk_hec]
+   processors:
+     attributes/includeexclude:
+       include:
+         match_type: regexp
+         services: ["auth.*"]
+       exclude:
+         match_type: regexp
+         span_names: ["login.*"]
 
-For a complete list of parameters, see :ref:`filter-processor-settings`.
+For a complete list of parameters, see :ref:`attributes-processor-settings`.
 
 Sample configurations
 ----------------------
 
 The following sample configurations show how to filter spans, metrics, and logs using different criteria.
 
-.. note:: For a complete list of examples, see the configuration snippets in :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor/testdata`.
 
-Filter spans
-^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can exclude or include spans from traces using resource attributes or OTTL conditions. For example:
-
-.. code-block:: yaml
-
-   filter/spans:
-     spans:
-       include:
-         match_type: strict
-         services:
-           - ponygame
-           - ponytest
-         attributes:
-           - key: an_attribute
-             value: "(valid_value|another_value)"
-       exclude:
-         match_type: regexp
-         attributes:
-           - key: bad_attributes
-             value: "(invalid_value|another_value)"
-
-   filter/ottl:
-     traces:
-       span:
-         - 'attributes["test"] == "value"'
-         - 'attributes["test"] == "value2"'
-
-.. note:: Include filters are always applied before exclude filters for any given filter processor instance.
-
-Filter metrics
-^^^^^^^^^^^^^^^^^^^^^
-
-You can exclude or include metrics using metric names, expressions, or OTTL conditions. For example:
-
-.. code-block:: yaml
-
-   filter/mixed:
-     metrics:
-       # Include using metric names
-       include:
-         match_type: strict
-         metric_names:
-           - a_metric
-           - another_metric
-       # Exclude using regular expressions
-       exclude:
-         match_type: regexp
-         metric_names:
-           - prefix/.*
-           - prefix_.*
-           - .*/suffix
-           - .*_suffix
-           - .*/contains/.*
-           - .*_contains_.*
-           - full/name/match
-           - full_name_match
-
-   filter/expr:
-     metrics:
-       include:
-         match_type: expr
-         expressions:
-           - Label("label1") == "text"
-           - HasLabel("label2")
-
-   filter/ottl:
-     metrics:
-       metric:
-         - 'name == "a_name"'
-      datapoint:
-         - 'attributes["attributename"] == "value"'
-
-Filter logs
-^^^^^^^^^^^^^^^^^^^^^
-
-You can exclude or include logs using resource attributes or OTTL conditions. For example:
-
-.. code-block:: yaml
-
-   filter/mixed:
-     logs:
-       include:
-         match_type: strict
-         resource_attributes:
-           - key: should_include
-             value: "true"
-       exclude:
-         match_type: regexp
-         resource_attributes:
-           - key: host.name
-             value: banned_host_.*
-
-   filter/severity:
-     logs:
-       exclude:
-         match_type: strict
-         severity_texts:
-           - "DEBUG"
-           - "DEBUG2"
-           - "DEBUG3"
-           - "DEBUG4"
-       include:
-         match_type: regexp
-         severity_texts:
-           - "INFO[2-4]?"
-
-   filter/recordattributes:
-     logs:
-       exclude:
-         match_type: strict
-         record_attributes:
-           - key: should_exclude
-             value: "true"
-
-   filter/includeexclude:
-     logs:
-       include:
-         severity_number:
-           min: "INFO"
-           match_undefined: true
-      exclude:
-         severity_number:
-           min: "ERROR"
-
-   filter/ottl:
-     logs:
-       log_record:
-         - 'attributes["test"] == "pass"'
-
-.. _filter-processor-settings:
+.. _attributes-processor-settings:
 
 Settings
 ======================
@@ -252,7 +108,7 @@ The following table shows the configuration options for the filter processor:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/filter.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/attributes.yaml"></div>
 
 Troubleshooting
 ======================
