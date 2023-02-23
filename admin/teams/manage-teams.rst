@@ -14,7 +14,10 @@ Manage users and teams in Splunk Observability Cloud
    Manage team landing pages <configure-page>
    Manage team notifications <team-notifications>
    Link detectors and dashboards to teams <associate-team>
-   enhanced-team-security
+   Enable enhanced team security <enhanced-team-security>
+   Create and manage users <manage-users>
+   User roles and permissions <roles-and-permissions>
+
 
 Use Splunk Observability Cloud teams to coordinate teamwork. Perform the following tasks to set up your teams and provide team members with resources that can help streamline their teamwork:
 
