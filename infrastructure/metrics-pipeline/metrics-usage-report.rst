@@ -24,8 +24,11 @@ Statistics in the report
 
 For each metric in the report, you can see the following usage and MTS creation statistics.
 
+
+Usage statistics
+--------------------------------
+
 .. list-table:: 
-   :title: Usage statistics
    :header-rows: 1
    :width: 100
    :widths: 20 80
@@ -40,8 +43,10 @@ For each metric in the report, you can see the following usage and MTS creation 
      - Number of unique charts viewed in dashboards during the interval for the metric.
 
 
+MTS creation statistics
+--------------------------------
+
 .. list-table:: 
-   :title: MTS creation statistics
    :header-rows: 1
    :width: 100
    :widths: 20 80
