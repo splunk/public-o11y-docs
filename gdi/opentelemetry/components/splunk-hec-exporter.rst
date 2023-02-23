@@ -138,8 +138,8 @@ To send log data to Splunk Cloud Platform or Enterprise and AlwaysOn Profiling d
          tls:
             insecure_skip_verify: true
       splunk_hec/profiling:
-         token: "<${SPLUNK_HEC_TOKEN}>"
-         endpoint: "${SPLUNK_HEC_URL}"
+         token: "<splunk_o11y_token>"
+         endpoint: "https://ingest.<realm>.signalfx.com/v1/log"
          source: "otel"
          sourcetype: "otel"
          log_data_enabled: false

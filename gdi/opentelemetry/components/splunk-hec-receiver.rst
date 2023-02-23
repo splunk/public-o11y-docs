@@ -5,7 +5,7 @@ Splunk HEC receiver
 *************************
 
 .. meta::
-      :description: The Splunk HEC receiver allows the Splunk Distribution of OpenTelemetry Collector to collect traces, logs, and metrics sent by the Splunk HTTP Event Collector (HEC) exporter.
+      :description: The Splunk HEC receiver allows the Splunk Distribution of OpenTelemetry Collector to collect logs and metrics in Splunk HTTP Event Collector format.
 
 The Splunk HTTP Event Collector (HEC) receiver allows the Splunk Distribution of OpenTelemetry Collector to collect events and logs in Splunk HEC format. The supported pipeline types are ``metrics`` and ``logs``.
 
@@ -24,7 +24,7 @@ Follow these steps to deploy the integration:
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the Splunk HEC receiver as described in the section.
+2. Configure the Splunk HEC receiver as described in the next section.
 3. Restart the Collector.
 
 Sample configurations
