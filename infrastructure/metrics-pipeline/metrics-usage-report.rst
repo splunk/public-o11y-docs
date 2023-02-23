@@ -70,5 +70,5 @@ Limits of the metrics usage analytics report
 
 * By default, the report covers an interval of 30 days. You can also request to generate a report with a shorter interval.
 * You can request two reports per calendar month.
-* The report covers the top 1,000 metrics based on the number of MTS creations, since the most significant difference in metrics usage comes from aggregating or dropping metrics with the highest number of MTS.
+* The report covers the top 1,000 metrics based on MTS count, since the most significant difference in metrics usage comes from aggregating or dropping metrics with the highest number of MTS.
 
