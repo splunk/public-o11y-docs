@@ -7,7 +7,7 @@ Splunk HEC exporter
 .. meta::
       :description: The Splunk HEC exporter allows the OpenTelemetry Collector to send traces, logs, and metrics to Splunk HTTP Event Collector (HEC) endpoints. Read on to learn how to configure the component.
 
-The Splunk HTTP Event Collector (HEC) exporter allows the OpenTelemetry Collector to send traces, logs, and metrics to Splunk HEC endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``.
+The Splunk HTTP Event Collector (HEC) exporter allows the OpenTelemetry Collector to send traces, logs, and metrics to Splunk HEC endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 The main purpose of the Splunk HEC exporter is to send logs to Log Observer, Splunk Cloud Platform, or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Observability Cloud. See :ref:`lo-connect-landing` for more information.
 
@@ -70,7 +70,13 @@ The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HE
      - See :ref:`admin-org-tokens`.
      - ``https://ingest.<realm>.signalfx.com/v1/log``, where ``<realm>`` is the Observability Cloud realm, for example ``us0``.
 
-.. include:: /_includes/realm-note.rst
+In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+
+#. Open the left navigation menu in Observability Cloud.
+#. Select :menuselection:`Settings`.
+#. Select your username. 
+
+The realm name appears in the :guilabel:`Organizations` section.
 
 .. _send_logs_to_splunk:
 
@@ -103,7 +109,9 @@ If you're using the Collector for log collection and need to send data to Splunk
          tls:
             insecure_skip_verify: true
 
-To send log data to Splunk Cloud Platform or Enterprise and AlwaysOn Profiling data to Observability Cloud, configure two separate ``splunk_hec`` entries in the ``receiver`` and ``exporters`` sections of the Collector configuration file. Add both to the ``logs`` pipeline. For example:
+You can split log data between Splunk Cloud Platform or Enterprise and Observability Cloud to preserve AlwaysOn Profiling data while sending logs to Splunk. See :ref:`profiling-pipeline-setup` for more information.
+
+To split the log pipelines, configure two separate ``splunk_hec`` entries in the ``receiver`` and ``exporters`` sections of the Collector configuration file. Then, add both to the ``logs`` pipeline. For example:
 
 .. code-block:: yaml
 
@@ -137,6 +145,7 @@ To send log data to Splunk Cloud Platform or Enterprise and AlwaysOn Profiling d
          timeout: 10s
          tls:
             insecure_skip_verify: true
+      # Export profiling data to Observability Cloud
       splunk_hec/profiling:
          token: "<splunk_o11y_token>"
          endpoint: "https://ingest.<realm>.signalfx.com/v1/log"
