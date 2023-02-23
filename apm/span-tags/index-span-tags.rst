@@ -16,7 +16,7 @@ To get additional value from a particular span tag, a Splunk APM administrator c
 What are MetricSets?
 =========================
 
-MetricSets are metric time series you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides two kinds of MetricSets: Troubleshooting MetricSets and Monitoring MetricSets. Troubleshooting MetricSets are for high-cardinality troubleshooting, while Monitoring MetricSets leverage the Infrastructure Monitoring platform for real-time monitoring and alerting. 
+MetricSets are metric time series you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides two kinds of MetricSets: Troubleshooting MetricSets and Monitoring MetricSets. Troubleshooting MetricSets are for high-cardinality troubleshooting while Monitoring MetricSets leverage the Infrastructure Monitoring platform for real-time monitoring and alerting. 
 
 APM provides a collection of MetricSets by default, and you can index additional span tags to generate additional Troubleshooting MetricSets, and optionally add additional custom dimensionalized Monitoring MetricSets. See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets you receive by default. 
 
@@ -56,7 +56,7 @@ Splunk APM automatically indexes and generates Troubleshooting MetricSets for th
   - Kind
   - Service
 
-For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you canindex additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
+For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
 
 Cardinality contribution of indexed span tags
 ------------------------------------------------------------
@@ -83,17 +83,19 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
 
 4. The :strong:`Scope` determines how APM associates the span tag with services in a trace:
 
-   - Select :strong:`Service` to associate the span tag with services. This means the value of the span tag might change across services in a given trace. Specify ``All Services`` to index the span tag for every service. Select specific services to index the span tag for only those services.
+   - Select :strong:`Service` to associate the span tag with services. This means the value of the span tag might change across services in a given trace. Specify ``All Services`` to index the span tag for every service. Select specific services to index the span tag for only those services. 
+     
+     (Optional) If your span tag is indexed at the service level, you can also use it as a custom dimension in Monitoring MetricSets. See :ref:`cmms` for instructions.
 
    - Select :strong:`Global` to associate the span tag with traces. This means the value of the span tag is the same for all services in a given trace.
 
    For more information about span tag scope, see :ref:`apm-index-tag-types`.
 
-5. (Optional) If your span tag is indexed at the service level, you can also use it as a custom dimension in Monitoring MetricSets. See :ref:`cmms` for instructions.
+5. Select :strong:`Start Analysis` to submit the configuration. When you submit a configuration, Splunk APM runs an analysis of the span tag to calculate the potential cardinality contribution of indexing it and determine whether it generates Troubleshooting MetricSets that exceed your limit.
 
-6. Select :strong:`Start Analysis` to submit the configuration. When you submit a configuration, Splunk APM runs an analysis of the span tag to calculate the potential cardinality contribution of indexing it and determine whether it generates Troubleshooting MetricSets that exceed your limit.
-
-7. Wait a few moments for the cardinality check to run, and then check under :strong:`Pending MetricSet` to view the status of the span tag you're trying to index. See the following table for possible status options for pending MetricSets and actions for each status. 
+6. Wait a few moments for the cardinality check to run, and then check under :strong:`Pending MetricSet` to view the status of the span tag you're trying to index. See the following table for possible status options for pending MetricSets and actions for each status. 
+   
+7. You
 
    .. list-table::
       :header-rows: 1
@@ -108,12 +110,12 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
         - Wait until the cardinality contribution analysis is complete. 
 
       * - Ready
-        - The cardinality contribution analysis is complete: you can index the span tag without any issue.
+        - The cardinality contribution analysis is complete: you can index the span tag without any issues.
         - Select the checkmark in the :guilabel:`Actions` column to manually index the span tag and start generating Troubleshooting MetricSets that include the span tag. 
 
       * - Failed
         - The cardinality contribution analysis is complete, but you can't index the span tag because you reached an entitlement or system limit.
-        - Consider pausing or deleting existing Custom MetricSets to open space for another indexed span tag, or reach out to your Splunk Observability Cloud account manage to increase your account limit. See :ref:`apm-limits-metricsets` to learn more about these limits. 
+        - Consider pausing or deleting existing Custom MetricSets to open space for another indexed span tag, or reach out to your Splunk Observability Cloud account manager to increase your account limit. See :ref:`apm-limits-metricsets` to learn more about these limits. 
 
       * - Timeout
         - If more than one hour passes for a pending MetricSet in a ``Ready`` status, the status changes to ``Timeout``. 
@@ -167,7 +169,7 @@ After you've configured custom Troubleshooting MetricSets you can see their stat
 Status of Database MetricSets
 --------------------------------------------------
 
-You can pause and resume indexing of Database Query Performance data at any time from the :guilabel:`Standard MetricSets` section of :guilabel:`APM MetricSets`. You can also control the indexing of SQL and NoSQL tags separately.
+You can pause and resume indexing Database Query Performance data at any time from the :guilabel:`Standard MetricSets` section of :guilabel:`APM MetricSets`. You can also control the indexing of SQL and NoSQL tags separately.
 
 To pause the indexing of Database Query Performance data, select :guilabel:`Pause indexing` next to the database type. To resume, select :guilabel:`Resume indexing`.
 
