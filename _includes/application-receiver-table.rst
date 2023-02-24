@@ -573,6 +573,11 @@
      -
      -
 
+   * - :ref:`Telegraf Windows services <telegraf-win-services>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Traefik <traefik>`
      - :strong:`X`
      -
