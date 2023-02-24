@@ -132,7 +132,7 @@ To solve this issue, do the following:
 #. Check the configuration of the SignalFx Instrumentation for .NET, especially ``SIGNALFX_PROFILER_LOGS_ENDPOINT``.
 #. Verify that the Splunk Distribution of OpenTelemetry Collector is running at the expected endpoint and that the application host or container can resolve the host name and connect to the OTLP port.
 #. Make sure that you're running the Splunk Distribution of OpenTelemetry Collector and that the version is 0.34 or higher. The required version for memory profiling is 0.44. Other collector distributions might not be able to route the log data that contains profiling data.
-#. A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured.
+#. A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured. See :ref:`splunk-hec-exporter` for more information.
 
 The following snippet contains a sample ``profiling`` pipeline:
 

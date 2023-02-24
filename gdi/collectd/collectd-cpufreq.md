@@ -10,7 +10,9 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Use this integration to monitor the clock speed of each CPU on a host. This is useful for systems that vary the clock speed to save energy.
 
-This monitor is available on Linux.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 

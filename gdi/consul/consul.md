@@ -10,6 +10,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Consul 0.7.0+ is supported.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 The integration monitors Consul datastores, and collects metrics from the following endpoints:
 
 - [/agent/self](https://www.consul.io/api/agent.html#read-configuration)

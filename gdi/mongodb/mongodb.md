@@ -21,7 +21,9 @@ The plugin also captures the following DB-specific metrics:
 * DB size
 * DB counters
 
-This monitor is available on Kubernetes, Linux, and Windows.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 
@@ -30,7 +32,7 @@ This monitor is available on Kubernetes, Linux, and Windows.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ### Authentication
