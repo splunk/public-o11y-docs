@@ -15,7 +15,7 @@ Reassign
 Reassign a full or partial shift
 ========================================
 
-
+If you are unable to complete a current or upcoming shift, you can reassign all or part of that shift to another responder.
 
 To access your on-call schedule follow these steps: 
 
