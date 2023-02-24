@@ -186,3 +186,8 @@ To get even more value out of your synthetic metrics, use the Splunk Observabili
 * To build more advanced detectors using the Splunk Observability Cloud metrics engine, see :ref:`get-started-detectoralert`.
 * To learn more about metrics in Splunk Observability Cloud, see :ref:`get-started-metrics`.
 
+
+
+Splunk RUM integration 
+------------------------------------
+:ref:`rum-synth`

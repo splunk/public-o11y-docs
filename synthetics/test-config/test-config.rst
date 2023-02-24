@@ -15,6 +15,7 @@ Configure your tests
    global-variables
    public-locations
    private-locations
+   rum-synth
 
 
 To simulate diverse types of traffic to your site or application, use a range of configuration options to customize each of your tests.

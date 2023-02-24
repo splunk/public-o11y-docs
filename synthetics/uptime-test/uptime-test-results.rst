@@ -120,6 +120,13 @@ For failed Uptime tests, the Run Results page shows the following additional dia
 - Connection log
 
 
+
+Splunk RUM integration 
+------------------------------------
+:ref:`rum-synth`
+
+
+
 .. _uptime-metrics:
 
 Uptime test metrics
