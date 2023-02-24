@@ -94,24 +94,14 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
 5. Select :strong:`Start Analysis` to submit the configuration. Splunk APM runs an analysis of the span tag to calculate the potential cardinality contribution of the MetricSet to determine whether it is within your entitlement limit. 
 
 6. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check to runs. You might have to wait a few moments for the check to run. 
+
+.. caution: Your pending MetricSet will expire after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
    
 7. After the cardinality check has run, review the cardinality of your new MetricSet. See :ref:`review-troubleshoot-cardinality`. To enable the MetricSet, select the check mark under :guilabel:`Actions`.
 
-8. If you are happy with the cardinality, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
-
-.. caution: Your pending MetricSet will expire after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
-
-.. _review-troubleshoot-cardinality: 
-
-Review the cardinality of your MetricSet
--------------------------------------------
-
-When the cardinality check completes, you can see the estimated total cardinality.
-
- * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
- * If the check times out before you enable the MetricSet, rerun the analysis.
- * If the check shows as failed, your cardinality is too high to create the new MetricSet. You can edit the MetricSet to adjust the configuration to reduce cardinality or you can select the x to delete the pending Metricset.
-
+   * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
+   * If the check times out before you enable the MetricSet, rerun the analysis.
+   * If the check shows as failed, your cardinality is too high to create the new MetricSet. You can edit the MetricSet to adjust the configuration to reduce cardinality or you can select the x to delete the pending Metricset.
 
 The following example shows a cardinality check. 
 
