@@ -7,7 +7,7 @@ Attributes processor
 .. meta::
       :description: Use the attributes processor to transform, redact, update, hash, or delete attributes of spans, metrics, or logs. Read on to learn how to configure the component.
 
-The attributes processor is an OpenTelemetry Collector component that modifies spans, metrics, or logs through actions. You can combine actions in a single processor instance to run complex operations. Use cases include, among others, obfuscating sensitive information, copying values to new keys, and backfilling attributes.
+The attributes processor is an OpenTelemetry Collector component that modifies the attributes of spans, metrics, or logs through actions. You can combine actions in a single processor instance to run complex operations. Use cases include, among others, obfuscating sensitive information, copying values to new keys, and backfilling attributes.
 
 You can apply any of the following actions on collected attributes of spans, metrics, or logs:
 
@@ -64,7 +64,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the attr
            action: convert
            converted_type: int
 
-You can then add the filter processors to any compatible pipeline. For example:
+You can then add the attributes processors to any compatible pipeline. For example:
 
 .. code-block:: yaml
    :emphasize-lines: 6, 14, 22
@@ -164,10 +164,10 @@ The following example shows how to create a new attribute based on the value of 
            pattern: ^(?P<http_protocol>.*):\/\/(?P<http_domain>.*)\/(?P<http_path>.*)(\?|\&)(?P<http_query_params>.*)
            action: extract
 
-Backfill spans that miss an attribute
+Backfill spans that are missing an attribute
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following example shows how to backfill spans that miss an attribute:
+The following example shows how to backfill spans that are missing an attribute:
 
 .. code-block:: yaml
 
@@ -187,7 +187,7 @@ The following example shows how to backfill spans that miss an attribute:
 Settings
 ======================
 
-The following table shows the configuration options for the filter processor:
+The following table shows the configuration options for the attributes processor:
 
 .. raw:: html
 
