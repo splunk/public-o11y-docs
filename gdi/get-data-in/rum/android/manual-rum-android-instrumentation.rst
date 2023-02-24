@@ -20,7 +20,7 @@ The following example shows how to remove a span:
 
 .. code-block:: java
 
-   Config config = SplunkRum.newConfigBuilder()
+   SplunkRum.builder()
             .filterSpans(spanFilter ->
                spanFilter
                      .removeSpanAttribute(stringKey("http.user_agent")))
@@ -29,7 +29,7 @@ The following example shows how to redact the value of an attribute to remove se
 
 .. code-block:: java
 
-   Config config = SplunkRum.newConfigBuilder()
+   SplunkRum.builder()
             .filterSpans(spanFilter ->
                spanFilter 
                      .replaceSpanAttribute(StandardAttributes.HTTP_URL,
@@ -48,8 +48,8 @@ The following example shows how to define the app version and a key-value pair a
 
 .. code-block:: java
 
-   Config config = SplunkRum.newConfigBuilder()
-            .globalAttributes(
+   SplunkRum.builder()
+            .setGlobalAttributes(
                   Attributes.builder()
                            .put("key", "value")
                            .put(StandardAttributes.APP_VERSION, BuildConfig.VERSION_NAME)
@@ -77,8 +77,8 @@ Add identification metadata during initialization
 .. code-block:: java
    :emphasize-lines: 5
 
-   Config config = SplunkRum.newConfigBuilder()
-            .globalAttributes(
+   SplunkRum.builder()
+            .setGlobalAttributes(
                   Attributes.builder()
                            // Adds existing userId
                            .put("enduser.id", "user-id-123456")
@@ -134,7 +134,7 @@ The following example shows how to start a workflow for which metrics are record
             }
          }
       } finally {
-        hardWorker.end();
+         hardWorker.end();
       }
    });
 

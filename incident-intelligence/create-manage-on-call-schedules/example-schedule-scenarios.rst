@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-schedule-scenarios:
 
 On-call schedule scenarios
@@ -80,7 +78,7 @@ Follow these steps to create your primary schedule:
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.
 #. Select :guilabel:`Create new schedule`.
-#. Select the pencil icon to edit the schedule name. For this example, name the schedule "Heroes team, web application, service primary". Select the checkmark icon to save your schedule name.  
+#. Select the pencil icon to edit the schedule name. For this example, name the schedule "Heroes team, web application service, primary". Select the checkmark icon to save your schedule name.  
 #. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears.
 
 Create a business-hours shift
@@ -168,10 +166,10 @@ Follow these steps to create a week-by-week shift for secondary 24x7 coverage:
 Add your primary and secondary schedules to the incident workflow for the web application service
 -------------------------------------------------------------------------------------------------------
 
-Your last step for this scenario is to add your primary and secondary schedules to the incident workflow for your web application service. 
+Your last step to for this scenario is to add your primary and secondary schedules to the incident workflow for your web application service. 
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select the :guilabel:`Services` tab.
+#. Select the :guilabel:`Incident policies` tab.
 #. Locate your web application service and select :guilabel:`Edit` from the :guilabel:`Actions` menu.
 #. Select the :guilabel:`Incident workflows` tab.
 #. Add the primary schedule to the first step. 
@@ -188,7 +186,7 @@ Your last step for this scenario is to add your primary and secondary schedules 
 Scenario 4: Limit notifications for the checkout service to business hours
 ====================================================================================================
 
-If you  want responders to receive notifications only during business hours you can achieve this by creating a schedule with a business-hours shift that you add as the only step in the incident workflow for the service.
+If you  want responders to receive notifications only during business hours you can achieve this by creating a schedule with a business-hours shift that you add as the only step in the incident workflow for the checkout service incident policy.
 
 Create a schedule
 ----------------------------------------
@@ -226,7 +224,7 @@ Add your schedule to the incident workflow for the checkout service
 Your last step to create the schedule for this scenario is to add your schedule to the incident workflow for your checkout service. 
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select the :guilabel:`Services` tab.
+#. Select the :guilabel:`Incident policies` tab.
 #. Locate your checkout service and select :guilabel:`Edit` from the :guilabel:`Actions` menu.
 #. Select the :guilabel:`Incident workflows` tab.
 #. Add the schedule to the first step. 

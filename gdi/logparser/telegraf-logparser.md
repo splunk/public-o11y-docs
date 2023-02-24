@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/logparser` monitor type by using the SignalFx Smart Agent Receiver. This monitor type is based on the Telegraf logparser plugin. This monitor type tails log files. All metrics emitted from this monitor type have the plugin dimension set to `telegraf-logparser`.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/logparser` monitor type for the Smart Agent Receiver. This monitor type is based on the Telegraf logparser plugin. This monitor type tails log files. All metrics emitted from this monitor type have the plugin dimension set to `telegraf-logparser`.
 
 ## Benefits
 

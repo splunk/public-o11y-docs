@@ -33,9 +33,57 @@ To install and enable an instrumentation library manually:
       c.use "OpenTelemetry::Instrumentation::Sinatra", { opt: "value" }
       end
 
+.. _instrument-ruby-rails:
+
+Instrument a Rails application
+=======================================================
+
+To instrument a Ruby on Rails application, follow these steps:
+
+#. Add the instrumentation library it to your project's ``Gemfile``:
+
+   .. code:: ruby
+
+      gem "opentelemetry-instrumentation-rails", "~> 0.27"
+
+   You can also install the gem using ``bundle``:
+
+   .. code:: shell
+
+      bundle add opentelemetry-instrumentation-rails --version "~> 0.27"
+
+#. Configure OpenTelemetry to use all available instrumentation libraries:
+
+   .. code:: ruby
+
+      # config/initializers/opentelemetry.rb
+      require "splunk/otel"
+      ...
+      Splunk::Otel.configure do |c|
+      c.use_all()
+      end
+
+   You can disable specific instrumentations through the ``use_all`` function. For example:
+
+   .. code:: ruby
+
+      Splunk::Otel.configure do |c|
+      c.use_all({ 'OpenTelemetry::Instrumentation::ActiveRecord' => { enabled: false } })
+      end
+
+#. To enable only Rails, you can use a single ``c.use`` statement:
+
+   .. code:: ruby
+
+      Splunk::Otel.configure do |c|
+      c.use 'OpenTelemetry::Instrumentation::Rails'
+      end
+
+For an example, see :new-page:`Rails 7 example <https://github.com/signalfx/splunk-otel-ruby/blob/main/examples/rails-7-barebones/README.md>`.
+
 Manual instrumentation for spans and events
 ===========================================
 
-For examples of manual instrumentation for Ruby, see the official OpenTelemetry documentation at :new-page:`https://opentelemetry.io/docs/instrumentation/ruby/manual/ <https://opentelemetry.io/docs/instrumentation/ruby/manual/>`.
+For examples of manual instrumentation for Ruby, see the official OpenTelemetry documentation.
 
 .. note:: Manual OTel instrumentation is fully compatible with Splunk automatic Ruby instrumentation and is fully supported by Splunk.

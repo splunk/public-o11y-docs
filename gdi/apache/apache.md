@@ -8,7 +8,9 @@
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache HTTP Server monitor with the SignalFx Smart Agent receiver. The integration monitors Apache web servers using information `mod_status` provides.
 
-This monitor is available on Kubernetes and Linux.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 Apache worker threads can be in one of the following states:
 
@@ -32,7 +34,7 @@ Apache worker threads can be in one of the following states:
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
@@ -47,6 +49,18 @@ receivers:
     type: collectd/apache
     ... # Additional config
 ```
+
+The following is an example of what you can use to replace the placeholder, `... # Additional config`:
+
+    host: localhost
+    port: 80
+
+If `mod_status` is exposed on an endpoint other than `/mod_status`, you can use the url config option to specify the path:
+
+    type: collectd/apache
+    host: localhost
+    port: 80
+    url: "http://{{.Host}}:{{.Port}}/server-status?auto"
 
 To complete the integration, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
 

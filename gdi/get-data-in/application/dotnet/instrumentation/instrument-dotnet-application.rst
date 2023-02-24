@@ -112,7 +112,7 @@ Follow these steps to automatically instrument your application:
 
          cat /proc/<pid>/environ # where <pid> is the process ID
 
-#. (Optional) To enable automatic metric collection, see :ref:`dotnet-metric-settings`.
+#. (Optional) To enable automatic metric collection, see :ref:`enable_automatic_metric_collection_dotnet`.
 
 #. Run your application.
 
@@ -125,9 +125,24 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-tro
 Enable AlwaysOn Profiling
 --------------------------------------
 
-.. caution:: CPU profiling for .NET is an experimental feature subject to future changes. See :ref:`profiling-intro`.
-
 To enable AlwaysOn Profiling, set the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``.
+
+To enable memory profiling, set the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+
+See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-dotnet`.
+
+.. _enable_automatic_metric_collection_dotnet:
+
+Enable metrics collection
+--------------------------------------
+
+To enable automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLED`` environment variable to true.
+
+To enable runtime metrics, set the ``SIGNALFX_RUNTIME_METRICS_ENABLED`` environment variable to true.
+
+See :ref:`dotnet-metrics-attributes` for more information about the metrics collected by the instrumentation. For more metric settings, see :ref:`dotnet-metric-settings`. 
+
+.. note:: Runtime metrics are always collected if AlwaysOn Profiling is enabled.
 
 .. _instrument-windows-service:
 
@@ -184,6 +199,14 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
          </environmentVariables>
 
       .. note:: The ASP.NET Core instrumentation collects and obfuscates query strings by default. See :ref:`dotnet-instrumentation-query-strings` for more information.
+      
+After applying the changes to the ``web.config`` file, restart IIS by running the following command:
+
+.. code-block:: powershell
+
+   Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+In some cases, you might have to reboot the machine.
 
 .. note:: By default, the installer enables IIS instrumentation for .NET Framework by setting the ``Environment`` registry key for W3SVC and WAS services located in the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services`` folder.
 
@@ -347,4 +370,7 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 
 The realm name appears in the :guilabel:`Organizations` section.
 
-.. note:: For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+For more information on the ingest API endpoints, see :new-page:`Send APM traces <https://dev.splunk.com/observability/docs/apm/send_traces/>`.
+
+.. caution:: This procedure applies to spans and traces. To send AlwaysOn Profiling data, you must use the OTel Collector.
+

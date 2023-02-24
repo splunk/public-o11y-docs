@@ -10,6 +10,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Consul 0.7.0+ is supported.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 The integration monitors Consul datastores, and collects metrics from the following endpoints:
 
 - [/agent/self](https://www.consul.io/api/agent.html#read-configuration)
@@ -26,7 +30,7 @@ The integration monitors Consul datastores, and collects metrics from the follow
 
 The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 Follow these steps to deploy the integration:
 

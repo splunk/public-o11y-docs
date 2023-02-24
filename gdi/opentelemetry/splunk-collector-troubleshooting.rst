@@ -1,13 +1,13 @@
 .. _otel-splunk-collector-tshoot:
 
 ****************************************************************
-Troubleshoot the Collector
+Troubleshoot the Splunk OpenTelemetry Collector
 ****************************************************************
 
 .. meta::
       :description: Describes known issues when using the Splunk Distribution of OpenTelemetry Collector.
 
-See the following issues and workarounds for this version of the Collector.
+See the following issues and workarounds for the Splunk Distribution of OpenTelemetry Collector.
 
 Collector isn't behaving as expected
 =========================================
@@ -39,7 +39,7 @@ Restart the Splunk Distribution of OpenTelemetry Collector and check the configu
 Collector doesn't start in Windows Docker containers
 -----------------------------------------------------------
 
-The process might fail to start in a custom built, Windows-based Docker container, resulting in a "The service process could not connect to the service controller." error message.
+The process might fail to start in a custom built, Windows-based Docker container, resulting in a "The service process could not connect to the service controller" error message.
 
 In this case, the ``NO_WINDOWS_SERVICE=1`` environment variable must be set to force the Splunk Distribution of OpenTelemetry Collector to start as if it were running in an interactive terminal, without attempting to run as a Windows service.
 
@@ -81,10 +81,12 @@ Collector can't export data
 
 The collector might be unable to export data for the following reasons:
 
-* Network configuration issues, such as firewall, DNS, or proxy support. The collector does have proxy support for exporters. If configured at collector start time, then exporters, regardless of protocol, do or do not proxy traffic as defined by these environment variables.
+* Network configuration issues, such as firewall, DNS, or proxy support.
 * Incorrect exporter configuration
 * Incorrect credentials
 * The destination is unavailable
+
+If you need to use a proxy, see :ref:`configure-proxy-collector`.
 
 Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
 
@@ -261,6 +263,29 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
 .. note::
 
    Properly structured syslog is required for Fluentd to properly pick up the log line.
+
+.. _unwanted_profiling_logs:
+
+Unwanted profiling logs appearing in Observability Cloud
+------------------------------------------------------------
+
+By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a ``logs`` pipeline that uses the Splunk HEC exporter.
+
+To send logs to Splunk Observability Cloud without AlwaysOn Profiling data, see :ref:`no_profiling_data`.
+
+.. _disable_log_collection:
+
+Exclude log data in the Collector
+------------------------------------------------------------
+
+By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a logs pipeline that uses the Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
+
+To avoid sending log data through the Collector to Splunk Observability Cloud, see :ref:`exclude-log-data`.
+
+Send logs from the Collector to Splunk Cloud Platform or Enterprise
+-----------------------------------------------------------------------
+
+To send logs from the Collector to Splunk Cloud Platform or Splunk Enterprise, see :ref:`send_logs_to_splunk`.
 
 Trace collection issues
 ================================

@@ -95,13 +95,20 @@ See the following common issues and fixes for AlwaysOn Profiling:
 Check that AlwaysOn Profiling is enabled
 ----------------------------------------------------------------
 
-The .NET instrumentation logs the string ``Thread sampling initialized`` at startup using an ``INF`` message. To check whether AlwaysOn Profiling is enabled, search your logs for strings similar to the following:
+The .NET instrumentation logs the string ``AlwaysOnProfiler::MemoryProfiling`` started at ``info`` log level. To check whether AlwaysOn Profiling is enabled, search your logs for strings similar to the following:
 
 .. code-block:: bash 
 
-   2022-01-13 13:30:02.601 +01:00 [INF] Thread sampling initialized.  { MachineName: ".", Process: "[11524 dotnet]", AppDomain: "[1 Samples.Profiling]", AssemblyLoadContext: "\"Default\" System.Runtime.Loader.DefaultAssemblyLoadContext #1", TracerVersion: "0.2.0.0" }
+   10/12/22 12:10:31.962 PM [12096|22036] [info] AlwaysOnProfiler::MemoryProfiling started.
 
-If the string does not appear, make sure that you've enabled the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-dotnet`.
+If no string appears, make sure that you've enabled the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-dotnet`.
+
+If you've enabled the CPU profiler or the memory profiler on an unsupported runtime version, entries similar to the following entry appear in the logs:
+
+.. code-block:: bash
+
+   2022-10-12 12:37:18.640 +02:00 [WRN] Cpu profiling enabled but not supported.
+   2022-10-12 12:37:18.640 +02:00 [WRN] Memory profiling enabled but not supported.
 
 Check the AlwaysOn Profiling configuration
 ----------------------------------------------------------------
@@ -111,7 +118,9 @@ If AlwaysOn Profiling is :ref:`not working as intended <profiling-intro>`, check
 Unsupported .NET version
 -----------------------------------------------
 
-To use AlwaysOn Profiling, upgrade your .NET version to .NET Core 3.1 or .NET 5.0 and higher. None of the .NET Framework versions is supported.
+To use AlwaysOn Profiling, upgrade your .NET version to .NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher, as ``ICorProfilerInfo10`` must be available in the runtime.
+
+None of the .NET Framework versions is supported.
 
 AlwaysOn Profiling data and logs don't appear in Observability Cloud
 --------------------------------------------------------------------
@@ -122,8 +131,8 @@ To solve this issue, do the following:
 
 #. Check the configuration of the SignalFx Instrumentation for .NET, especially ``SIGNALFX_PROFILER_LOGS_ENDPOINT``.
 #. Verify that the Splunk Distribution of OpenTelemetry Collector is running at the expected endpoint and that the application host or container can resolve the host name and connect to the OTLP port.
-#. Make sure that you're running the Splunk Distribution of OpenTelemetry Collector and that the version is 0.34 or higher. Other collector distributions might not be able to route the log data that contains profiling data.
-#. A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured.
+#. Make sure that you're running the Splunk Distribution of OpenTelemetry Collector and that the version is 0.34 or higher. The required version for memory profiling is 0.44. Other collector distributions might not be able to route the log data that contains profiling data.
+#. A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured. See :ref:`splunk-hec-exporter` for more information.
 
 The following snippet contains a sample ``profiling`` pipeline:
 
@@ -158,7 +167,11 @@ When the instrumentation can't send data to Splunk OpenTeletry Collector due to 
 
 If the escape hatch activates, it logs the following message:
 
-``Skipping a thread sample period, buffers are full.``
+.. code-block:: bash
+   
+   Skipping a thread sample period, buffers are full.
+
+You can also look for the ``** THIS WILL RESULT IN LOSS OF PROFILING DATA **.`` message.
 
 The thread sampler resumes its activity when any of the buffers is empty.
 

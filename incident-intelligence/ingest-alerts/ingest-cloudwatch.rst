@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-ingest-cloudwatch-alerts:
 
 Ingest Amazon CloudWatch alarms
@@ -45,10 +43,15 @@ Request header
    * - X-SF-Token  
      - Required
      - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
+   * - Content-Type
+     - Required
+     - application/json
 
 
 Alarm fields
 ----------------
+
+The following fields are transformed as part of the common information model. All other included fields are included properties object in the transformed alert.
 
 .. list-table:: 
    :widths: 15 15 15 55

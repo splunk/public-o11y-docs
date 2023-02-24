@@ -1,8 +1,8 @@
 .. _otel-install-linux:
 
-*************************
-Linux
-*************************
+**************************************************
+Install the Collector for Linux
+**************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux.
@@ -12,19 +12,20 @@ Linux
    :titlesonly:
    :hidden:
 
-   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry
+   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry.rst
    /gdi/opentelemetry/deployments/deployments-linux-ansible.rst
    /gdi/opentelemetry/deployments/deployments-linux-puppet.rst
-    
 
-The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. Install the package using one of these methods:
+The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. 
+
+Install the package using one of these methods:
 
 * :ref:`Use the installer script <linux-scripts>`
 * :ref:`Use deployment and configuration management tools <linux-deployments>`
 * :ref:`Install manually <linux-manual>`
 
 .. note::
-   Splunk only supports the SignalFx Smart Agent on x86_64 and AMD64 platforms. The SignalFx Smart Agent Receiver is subject to the same limitation.
+   Splunk only supports the SignalFx Smart Agent and the Smart Agent Receiver on x86_64 and AMD64 platforms. 
 
 .. _linux-scripts:
 
@@ -80,6 +81,19 @@ To configure memory allocation, change the ``--memory`` parameter. By default, t
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB \
        -- SPLUNK_ACCESS_TOKEN
+
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``: The HTTP proxy address
+- ``HTTPS_PROXY``: The HTTPS proxy address
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+
+Restart the Collector after adding these environment variables to your configuration.
+
+.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
 
 Use pre-configured repos 
 --------------------------------
@@ -152,6 +166,7 @@ If the td-agent package is upgraded after initial installation, you might need t
       Effective:   dac_override, dac_read_search
       Inheritable: dac_override, dac_read_search
       Permitted:   dac_override, dac_read_search
+
 #. If the output from the previous command does not include ``dac_override`` and ``dac_read_search`` as shown above, run the following commands:
 
    .. code-block:: bash
@@ -163,7 +178,7 @@ If the td-agent package is upgraded after initial installation, you might need t
 
 .. _configure-auto-instrumentation:
 
-Configure auto instrumentation for Java
+Configure automatic instrumentation for Java
 --------------------------------------------
 You can also automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`. 
 
@@ -238,9 +253,43 @@ Splunk provides a Salt formula to install and configure the Collector. See :ref:
 
 .. _linux-manual:
 
-Manual
-===================
-Splunk offers the manual configuration options described in this section. 
+Install the Collector manually
+===================================
+
+Splunk offers the manual configuration options described in this section:
+
+* :ref:`linux-docker`
+* :ref:`linux-packages`
+* :ref:`linux-binary-file`
+* :ref:`linux-tar`
+
+.. _linux-manual-permissions:
+
+Permissions
+----------------
+
+You need at least these capabilities to allow the Collector to run without root permissions, regardless of the user:
+
+* ``cap_dac_read_search``: Allows to bypass file read permission checks, and directory read and execute permission checks.
+* ``cap_sys_ptrace``: Allows to trace, manage, and transfer data for arbitrary processes.
+
+Learn more about :new-page:`these recommended capabilities <https://man7.org/linux/man-pages/man7/capabilities.7.html>`.  
+
+.. note::   
+
+   Your systems might require higher or more custom permissions.
+
+If you already have ``setcap/libcap2`` installed, the installer script will set these permissions for you. If you don't, use the following ``setcap`` command to install the permissions:
+
+.. code-block:: bash
+
+   setcap CAP_SYS_PTRACE,CAP_DAC_READ_SEARCH=+eip /usr/bin/otelcol
+
+To set custom permissions after the Collector has been installed, use:
+
+.. code-block:: bash 
+
+   setcap {CUSTOM_CAPABILITIES}=+eip /usr/bin/otelcol
 
 .. _linux-docker:
 
@@ -411,6 +460,31 @@ Do the following to install the package using a Debian or RPM package:
 Binary file
 -----------------------
 Download pre-built binaries (``otelcol_linux_amd64`` or ``otelcol_linux_arm64``) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+.. _linux-tar:
+
+Tar file
+-----------------------
+
+The ``tar.gz`` archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
+
+To use the tar file:
+
+#. Unarchive it to a directory of your choice on the target system.
+
+.. code-block:: bash
+
+   tar xzf splunk-otel-collector_<version>_<arch>.tar.gz
+   
+#. On ``amd64`` systems, go into the unarchived ``agent-bundle`` directory and run ``bin/patch-interpreter $(pwd)``. This ensures that the binaries in the bundle have the right loader set on them, since your host's loader might not be compatible.
+
+Working on non-default locations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you're running the Collector from a non-default location, the Smart Agent receiver and agent configuration file require that you set two environment variables currently used in the Smart Agent extension:
+
+* ``SPLUNK_BUNDLE_DIR``: The path to the Smart Agent bundle. For example, ``/usr/lib/splunk-otel-collector/agent-bundle``.
+* ``SPLUNK_COLLECTD_DIR``: The path to the ``collectd`` config directory for the Smart Agent. For example, ``/usr/lib/splunk-otel-collector/agent-bundle/run/collectd``. 
 
 More options
 ==================================

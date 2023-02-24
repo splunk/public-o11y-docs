@@ -13,58 +13,60 @@ This page provides a list of resources for using the Splunk Distribution of Open
 
    This project is currently in **Beta**. See :new-page:`Beta Definition <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/beta-definition.md>` for more information.
 
-Refer to the following topics for an overview of the Collector:
+.. _otel-using:
 
-- :ref:`collector-architecture`, which describes how to deploy the Collector.
-- :ref:`otel-components`, which describes what the Collector supports.
-- :ref:`otel-monitoring`, which describes how to ensure that the Collector is healthy.
-- :ref:`otel-security`, which describes how to ensure that the Collector is secure.
-- :ref:`otel-sizing`, which describes how to ensure that the collector is properly sized.
-- :ref:`otel-splunk-collector-tshoot`, which describes how to resolve common issues with the Collector.
-
-Getting started
+Get started
 ====================
 
-You need the following resources to get started using the Collector:
+The following table describes everything you need to start using the Collector:
 
-- :ref:`Splunk Access Token <admin-org-tokens>`.
-- :new-page:`Splunk Realm <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.
-- :new-page:`Agent or Gateway mode <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/agent-vs-gateway.md>`.
-- :ref:`Confirm exposed ports <otel-exposed-endpoints>` to make sure your environment doesn't have conflicts and that firewalls are configured properly. Ports can be changed in the configuration.
+.. list-table::
+  :widths: 25 75
+  :header-rows: 1
+
+  *   - Resource
+      - Description
+  *   - Access token
+      - Use an access token to track and manage your resource usage. Where you see ``<access_token>``, replace it with the name of your access token. See :ref:`admin-org-tokens`.
+  *   - Realm
+      - A realm is a self-contained deployment that hosts organizations. You can find your realm name on your profile page in the user interface. Where you see ``<REALM>``, replace it with the name of your organization's realm. See :new-page:`realms <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`.   
+  *   - Agent or Gateway mode
+      - In Agent mode, the Collector runs with the application or on the same host as the application. In Gateway mode, one or more collectors run a standalone service, for example, a container or deployment. See :ref:`otel-deployment-mode`.
+  *   - Ports and endpoints
+      - Check exposed ports to make sure your environment doesn't have conflicts and that firewalls are configured properly. You can change the ports in the Collector's configuration. See :ref:`otel-exposed-endpoints`.
+
+See also :ref:`otel-requirements`.
+
+Install and configure the Collector
+==========================================
+
+Learn how to install, deploy, upgrade or uninstall the Collector in :ref:`otel-install-platform`.
 
 This distribution is supported on and packaged for a variety of platforms, including:
 
 - Kubernetes: :ref:`Helm <helm-chart>` (recommended) and :ref:`YAML <resource-yaml-manifests>`.
 - Linux: :ref:`installer script <linux-scripts>` (recommended), :ref:`Ansible <deployment-linux-ansible>`, :ref:`Puppet <deployment-linux-puppet>`, :ref:`Heroku <linux-heroku>`, and :ref:`manual <linux-manual>` (including DEB/RPM packages, Docker, and binary).
-- Windows: :ref:`installer script <windows-script>` (recommended), :ref:`Ansible <deployment-windows-ansible>`, :ref:`Puppet <deployment-windows-puppet>`, and :ref:`manual <windows-manual>` (including MSI with GUI and PowerShell).
+- Windows: :ref:`installer script <windows-script>` (recommended), :ref:`Ansible <deployment-windows-ansible>`, :ref:`Puppet <deployment-windows-puppet>`, and :ref:`manual <otel-install-windows-manual>` (including MSI with GUI and PowerShell).
 
-See :new-page:`examples <https://github.com/signalfx/splunk-otel-collector/blob/main/examples>` for additional use cases.
+Next, read our docs on how to :ref:`configure the Collector <otel-configuration>`, including :ref:`other configuration sources <otel-other-configuration-sources>`.
 
-Configuration
-============================
+.. _otel-monitoring:
 
-The following is a list of default configuration files. These files contain standard specifications and settings.
+Monitor the Collector
+=============================================
 
-- :new-page:`signalfx/splunk-otel-collector <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector>`. *full_config_linux.yaml* includes comments and links to documentation. *agent_config_linux.yaml* is the recommended starting configuration for most environments.
+The default configuration automatically scrapes the Collector's own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances.
 
-- :new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>`, which is only applicable to Helm or installer script installations. See the ``*.conf`` files and the ``conf.d`` directory. Common sources, including filelog, journald, and Windows Event Viewer are included.
+In addition, logs should be collected. For :ref:`Log Observer <get-started-logs>` customers, logs are automatically collected for the Collector and Journald processes.
 
-Custom configuration
-----------------------------------------
-
-Read our docs on how to :ref:`configure the Collector <otel-configuration>`, including our :ref:`advanced settings <otel-optional-configurations>` and :ref:`other configuration sources <otel-other-configuration-sources>`.
-
-.. note::
-
-   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`. See :ref:`Migrating from the SignalFx Smart Agent <migrate-from-sa-to-otel>` for resources and best practices to start using the Collector, which is the replacement for the Smart Agent.
+The Collector also offers zPages. zPages provide in-process web pages that display collected data from the process that they are attached to. These pages are useful for in-process diagnostics without having to depend on any back end to examine traces or metrics. These pages are useful during development time or when the process to be inspected is known in production.
 
 .. _using-upstream-otel:
 
 Upstream OpenTelemetry Collector
 =============================================
 
-You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector, but the following features are not
-available:
+You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector, but the following features are not available:
 
 - Packaging, including installer scripts for Linux and Windows
 - Configuration management using Ansible or Puppet

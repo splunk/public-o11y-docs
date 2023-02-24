@@ -21,7 +21,7 @@ Use this monitor to gather the following types of information from ActiveMQ:
 
 
 ```{note}
-C-based collectd plugins like this one are not available on Windows.
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
 ```
 
 ## Benefits
@@ -68,7 +68,7 @@ The following table shows the configuration options for this monitor:
 | `host` | **yes** | `string` | Host to connect to. JMX must be configured for remote access and accessible from the agent. |
 | `port` | **yes** | `integer` | JMX connection port (NOT the RMI port) on the application. This corresponds to the `com.sun.management.jmxremote.port` Java property that should be set on the JVM when running the application. |
 | `name` | no | `string` |  |
-| `serviceName` | no | `string` | This is how the service type is identified in the Splunk Observability Cloud UI so that you can get built-in content for it. For custom JMX integrations, it can be set to whatever you like and metrics will get the special property `sf_hostHasService` set to this value. |
+| `serviceName` | no | `string` | This is how the service type is identified in the Splunk Observability Cloud UI so that you can get built-in content for it. For custom JMX integrations, it can be set to whatever you like. |
 | `serviceURL` | no | `string` | The JMX connection string. This is rendered as a Go template and has access to the other values in this configuration. **Note**: Under normal circumstances, it is not advised to set this string directly. Setting the host and port as specified above is preferred. (**default:** `service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi`) |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. If a second `instancePrefix` is specified in a referenced MBean block, the prefix specified in the Connection block will appear at the beginning of the plugin instance and the prefix specified in the MBean block will be appended to it. |
 | `username` | no | `string` | Username to authenticate to the server |

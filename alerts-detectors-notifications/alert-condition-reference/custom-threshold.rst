@@ -1,10 +1,10 @@
 .. _custom-threshold:
 
 =============================================================================
-Custom Threshold
+Custom threshold
 =============================================================================
 
-.. meta updated 8/7/18
+.. meta updated 1/23/23
 
 .. meta::
   :description: This alert condition lets you trigger an alert by comparing one signal to another or by evaluating multiple conditions
@@ -12,7 +12,7 @@ Custom Threshold
 
 Custom Threshold lets you trigger an alert by comparing one signal to another or by evaluating multiple conditions. Use Custom Threshold if you want to create a detector that maps to one of the following patterns:
 
--  You need to be alerted if one signal meets a condition based on the value of another signal
+-  You want to see an alert if one signal meets a condition based on the value of another signal
 -  You want to specify compound conditions using AND and OR operators, based on the value of one signal
 -  You want to specify compound conditions using AND and OR operators, based on the values of multiple signals
 
@@ -44,15 +44,15 @@ Example: Compound conditions, monitoring a single signal
 
 The following example shows how you might build compound conditions while monitoring a single signal. 
 
-You have 2 signals (A and B); |nbsp| A |nbsp| measures available memory in prod and  |nbsp| B |nbsp| measures available memory in lab. You want to receive an alert:
+You have 2 signals (A and B); |nbsp| A |nbsp| measures available memory in prod and |nbsp| B |nbsp| measures available memory in lab. You want to receive an alert:
 
 -  if available memory in prod is lower than available memory in lab, or 
--  if available memory in prod is below 50%
+-  if available memory in prod is less than 50%
    
 In this case, monitor a single signal (A, |nbsp| available memory in prod) and then set the following conditions:
    
--  alert when signal A below B  OR
--  signal A below 50
+-  alert when signal A is less than B  OR
+-  signal A is less than 50
 
 
 .. _compound-multiple:
@@ -64,14 +64,14 @@ The following examples show how you might build compound conditions while monito
 
 -  You have 3 signals (A, B, and C), each of which measures available memory in a particular environment (prod, lab, or dev respectively). You want to receive an alert:
 
-   -  if available memory in prod goes below 70%, or 
-   -  if available memory in lab and in dev both go below 70%
+   -  if available memory in prod is less than 70%, or
+   -  if available memory in lab and in dev are less than 70%
    
    In this case, monitor multiple signals and then set the following conditions:
    
-   -  alert when signal A is below 70  OR
-   -  signal B below 70  AND
-   -  signal C below 70  
+   -  alert when signal A is less than 70  OR
+   -  signal B is less than 70  AND
+   -  signal C is less than 70
 
    .. note:: AND conditions are always evaluated before OR conditions. 
 
@@ -145,11 +145,11 @@ Depending on the nature of your signal, triggering alerts immediately can lead t
 
 The ``Duration`` option triggers when the signal meets and remains at threshold condition for a specified period, such as 10 minutes. Therefore, using this option is less sensitive (might trigger fewer alerts) than the ``Immediately`` option. If you use this option, an alert isn't triggered if any data points are delayed or do not arrive at all during that time range, even if all the data points that are received :strong:`do` meet the threshold. For more information about delayed or missing data points, see :ref:`delayed-missing`.
 
-If you want an option that triggers even if some data points do not arrive on time, use ``Percent of duration`` (with a percentage below |nbsp| 100).
+If you want an option that triggers even if some data points do not arrive on time, use ``Percent of duration`` (with a percentage less than |nbsp| 100).
 
 .. _pct-duration-option:
 
-The ``Percent of duration`` option triggers alerts based on the number of data points that met the threshold during the window, compared to how many data points were expected to arrive. Because this option triggers an alert based on the percentage of data points that met the threshold, it can sometimes trigger an alert even if some data points didn't arrive on time. Therefore, using this option with a percentage below |nbsp| 100 is more sensitive (might trigger more alerts) than the ``Duration`` option.
+The ``Percent of duration`` option triggers alerts based on the number of data points that met the threshold during the window, compared to how many data points were expected to arrive. Because this option triggers an alert based on the percentage of data points that met the threshold, it can sometimes trigger an alert even if some data points didn't arrive on time. Therefore, using this option with a percentage less than |nbsp| 100 is more sensitive (might trigger more alerts) than the ``Duration`` option.
 
 
 The following examples illustrate how alerts are triggered in various situations.

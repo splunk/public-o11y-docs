@@ -4,11 +4,13 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the MongoDB Atlas monitor. See benefits, install, configuration, and metrics">
 
-> _**Note:**_ Use the [MongoDB Atlas receiver](https://docs.splunk.com/Observability/gdi/mongodb-atlas/mongodb-atlas-receiver.html) in place of the SignalFx Smart Agent ``mongodb-atlas`` cluster monitor. The Smart Agent is deprecated. For details, see the [deprecation notice](https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md). 
+```{note}
+This monitor is deprecated in favor of the `mongodbatlas` receiver. See {ref}`MongoDB Atlas Receiver <mongodb-atlas-receiver>` for more information.
+```
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `mongodb-atlas` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `mongodb-atlas` monitor type for the Smart Agent Receiver.
 
 MongoDB Atlas provides MongoDB as an on-demand fully managed service. Atlas exposes MongoDB cluster monitoring and logging data through its [monitoring and logs](https://docs.atlas.mongodb.com/reference/api/monitoring-and-logs/) REST API endpoints. These Atlas monitoring API resources are grouped into measurements for MongoDB processes, host disks, and MongoDB databases.
 

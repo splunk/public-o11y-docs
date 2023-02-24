@@ -35,7 +35,7 @@ Configure application receivers for hosts and servers
    haproxy/haproxy
    health-checker/health-checker
    host-metadata/host-metadata
-   host-metrics-receiver/host-metrics-receiver
+   opentelemetry/components/host-metrics-receiver
    http/http
    processes/processes
    processlist/processlist
@@ -50,6 +50,7 @@ Configure application receivers for hosts and servers
    systemd/collectd-systemd
    ntpq/telegraf-ntpq
    varnish/telegraf-varnish
+   win-services/telegraf-win-services
    vsphere/vsphere
 
 
@@ -94,5 +95,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`collectd-systemd`
 * :ref:`telegraf-ntpq`
 * :ref:`telegraf-varnish`
+* :ref:`telegraf-win-services`
 * :ref:`vsphere`
 

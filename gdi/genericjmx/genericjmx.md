@@ -5,7 +5,11 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `genericjmx` monitor via the SignalFx Smart Agent Receiver. For a more flexible alternative, use [the JMX monitor](jmx).
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `genericjmx` monitor via the Smart Agent Receiver. For a more flexible alternative, use [the JMX monitor](jmx).
+
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 The Generix JMX integration monitors Java services that expose metrics on Java Management Extensions (JMX) using the GenericJMX plugin. The GenericJMX plugin reads Managed Beans (mBeans) from an MBeanServer using JMX. The monitor uses an embedded Java runtime.
 
@@ -57,7 +61,7 @@ The following table shows the configuration options for this monitor:
 | `host` | **yes** | `string` | The host to connect to. JMX must be configured for remote access and accessible from the agent. |
 | `port` | **yes** | `integer` | JMX connection port (not the RMI port) on the application. This corresponds to the `com.sun.management.jmxremote.port` Java property that should be set on the JVM when running the application. |
 | `name` | no | `string` |  |
-| `serviceName` | no | `string` | This is how the service type is identified in the Splunk Observability Cloud UI so that you can get built-in content. For custom JMX integrations, create a `serviceName` to allow the metrics to receive the special property `sf_hostHasService` set to this value. |
+| `serviceName` | no | `string` | This is how the service type is identified in the Splunk Observability Cloud UI so that you can get built-in content. |
 | `serviceURL` | no | `string` | The JMX connection string. This is rendered as a Go template and has access to the other values in this config. **Note:** Do not set this string directly; setting the host and port as specified above is preferred. The default value is `service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi`. |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. If a second `instancePrefix` is specified in a referenced MBean block, the prefix specified in the Connection block will appear at the beginning of the plugin instance, and the prefix specified in the MBean block will be appended to it. |
 | `username` | no | `string` | Username to authenticate to the server |
