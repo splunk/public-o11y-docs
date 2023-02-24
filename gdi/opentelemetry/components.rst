@@ -20,6 +20,8 @@ Components
     components/oracledb-receiver
     components/prometheus-receiver
     components/splunk-apm-exporter
+    components/splunk-hec-exporter
+    components/splunk-hec-receiver
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -87,7 +89,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``smartagent``
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
      - Metrics
-   * - ``splunk_hec``
+   * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
    * - ``zipkin``
@@ -185,9 +187,11 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - :ref:`splunk-apm-exporter` (``sapm``)
      - Exports traces from multiple nodes or services in a single batch.
      - Traces
-   * - ``splunk_hec``
+   * - :ref:`splunk-hec-exporter` (``splunk_hec``)
      - Sends telemetry to a Splunk HEC endpoint. 
      - Metrics, logs, traces
+
+
 .. _collector-components-extensions:
 
 .. raw:: html
