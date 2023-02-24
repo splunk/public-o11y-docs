@@ -96,7 +96,7 @@ In the :guilabel:`Function App Settings` section, enter the following details:
    * - Event Hub Namespace
      - The namespace that contains the event hub you've created.
    * - Splunk HEC Endpoint
-     - ``https://ingest.<realm>.signalfx.com/v1/log`` where ``<realm>`` is your Observability Cloud realm.
+     - ``https://ingest.<realm>.signalfx.com/v1/log`` where ``<realm>`` is your Observability Cloud realm. See :ref:`splunk-hec-exporter` for more information.
    * - Splunk HEC Token
      - Your Observabily Cloud ingest token. See :ref:`admin-org-tokens`.
 

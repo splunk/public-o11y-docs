@@ -56,15 +56,6 @@ The host metrics receiver collects metrics from the Linux system directories. To
 
    If you are running multiple instances of the host metrics receiver, set the same ``root_path`` for all.
 
-Settings
-======================
-
-The following table shows the configuration options for the host metrics receiver:
-
-.. raw:: html
-
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/hostmetrics.yaml"></div>
-
 Sample configurations
 ----------------------
 
@@ -245,7 +236,7 @@ values. For example:
          receivers: [hostmetrics, hostmetrics/disk]
 
 Resource attributes
-========================
+--------------------------
 
 The host metrics receiver doesn't set any resource attributes on the exported metrics. 
 
@@ -254,6 +245,15 @@ To set resource attributes, provide them using the ``OTEL_RESOURCE_ATTRIBUTES`` 
 .. code-block:: shell
 
    export OTEL_RESOURCE_ATTRIBUTES="service.name=<name_of_service>,service.version=<version_of_service>"
+
+Settings
+======================
+
+The following table shows the configuration options for the host metrics receiver:
+
+.. raw:: html
+
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/hostmetrics.yaml"></div>
 
 Troubleshooting
 ======================
