@@ -9,6 +9,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Use this integration to collect metrics from a Hadoop 2.0 or higher cluster using the collectd GenericJMX plugin. You can also configure the collectd/hadoop monitor to collect additional metrics about the Hadoop cluster using the REST API.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 ## Requirements
 
 To enable JMX in Hadoop, add the following Java Virtual Machine (JVM) options to hadoop-env.sh and yarn-env.sh:

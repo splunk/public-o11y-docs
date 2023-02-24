@@ -9,6 +9,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Use this integration to monitor a Java-based Kafka producer using GenericJMX. This monitor has a set of built-in MBeans configured for which it pulls metrics from the Kafka producer's JMX endpoint.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 ## Requirements
 
 The collectd/kafka_producer monitor requires Kafka version 0.9.0.0 or higher and collects metrics from the new producer API.

@@ -21,7 +21,7 @@ Use this monitor to gather the following types of information from ActiveMQ:
 
 
 ```{note}
-C-based collectd plugins like this one are not available on Windows.
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
 ```
 
 ## Benefits

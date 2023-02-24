@@ -7,9 +7,11 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache Spark monitor type for the Smart Agent Receiver.
 
-The integration monitors Apache Spark clusters.
+The integration monitors Apache Spark clusters, but does not support fetching metrics from Spark Structured Streaming.
 
-**Note**: This integration does not support fetching metrics from Spark Structured Streaming.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 For the following cluster modes, the integration only supports HTTP endpoints:
 
@@ -28,7 +30,7 @@ When you run Apache Spark on Hadoop YARN, this integration can only report appli
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
