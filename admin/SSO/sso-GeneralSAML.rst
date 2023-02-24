@@ -67,7 +67,7 @@ The SSO provider must put the assertion signature in the assertion message, not 
 
 :strong:`RelayState`
 
-Observability Cloud sends a dynamic RelayState, so the SSO provider must accept and pass back the dynamic RelayState.
+Observability Cloud sends a dynamic RelayState, so the SSO provider must accept and pass back the dynamic RelayState. RelayState is part of SAML specifications. In the Splunk Observability Cloud system it is part of message context in the AuthN request that is sent to the identity provider. The message context also contains a token that can be verified on the service provider side later. The Relay State is set by the Splunk Observability Cloud system and sent with the request to the IDP. The IDP is expected to send the relay state back to the service provider with the same value that was received after a successful authentication on the IDP side. 
 
 .. _saml-install:
 

@@ -22,6 +22,7 @@ monitors:
 This monitor does not accept endpoints. This monitor does allow multiple instances.
 
 ## Migrating from collectd/df
+
 The `collectd/df` monitor is being deprecated in favor of the `filesystems`
 monitor.  While the `collectd/df` monitor will still be available in
 version 5.0, switch to the `filesystems` monitor soon after upgrading. There are a few incompatibilities to be aware of between the two monitors:

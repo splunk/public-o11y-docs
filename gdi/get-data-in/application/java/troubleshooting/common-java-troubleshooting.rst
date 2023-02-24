@@ -230,7 +230,7 @@ To solve this issue, do the following:
 
 - Find the value of ``splunk.profiler.logs-endpoint`` and ``otel.exporter.otlp.endpoint`` in the startup log messages. Check that a collector is running using that endpoint and that the application host or container can resolve any host names and connect to the OTLP port.
 - Make sure that you're running the Splunk Distribution of OpenTelemetry Collector and that the version is 0.34 and higher. Other collector distributions might not be able to route the log data that contains profiling data.
-- A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured.
+- A custom configuration might override settings that let the collector handle profiling data. Make sure to configure an ``otlp`` receiver and a ``splunk_hec`` exporter with correct token and endpoint fields. The ``profiling`` pipeline must use the OTLP receiver and Splunk HEC exporter you've configured. See :ref:`splunk-hec-exporter` for more information.
 
 The following snippet contains a sample ``profiling`` pipeline:
 

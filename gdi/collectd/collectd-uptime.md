@@ -9,6 +9,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Use this integration to send a single metric of the total number of seconds the host has been up, using the collectd uptime plugin.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 ### Benefits
 
 ```{include} /_includes/benefits.md
