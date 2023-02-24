@@ -243,6 +243,48 @@ You can exclude or include logs using resource attributes or OTTL conditions. Fo
        log_record:
          - 'attributes["test"] == "pass"'
 
+.. _ottl-syntax:
+
+Drop telemetry using OTTL conditions
+-------------------------------------------------
+
+You can use the OpenTelemetry Transformation Language (OTTL) to define filtering conditions with more detail. Matching telemetry is dropped (excluded).
+
+In OTTL, each telemetry type or context has its own fields. The following example shows all available OTTL contexts:
+
+.. code-block:: yaml
+
+   processors:
+     filter:
+        traces:
+          span:
+            - 'attributes["attribute.label"] == "attribute_value"'
+            - 'resource.attributes["host.name"] == "localhost"'
+          # Checked only if `span` is not dropped 
+          spanevent:
+            - 'attributes["label"] == true'
+            - 'IsMatch(name, ".*http.*") == false'
+           # If all span events are dropped, the span is dropped
+          metrics:
+            metric:
+              - 'name == "metric.name" and attributes["label"] == "value"'
+              - 'type == METRIC_DATA_TYPE_HISTOGRAM'
+            # Checked only if `metric` is not dropped 
+            datapoint:
+              - 'metric.type == METRIC_DATA_TYPE_SUMMARY'
+              - 'resource.attributes["service.name"] == "my_service_name"'
+             # If all datapoints are dropped, the metric is dropped 
+          logs:
+            log_record:
+              - 'IsMatch(body, ".*token.*") == true'
+              - 'severity_number < SEVERITY_NUMBER_WARN'
+
+For more information on OTTL functions and syntax, see:
+
+- OTTL Syntax: :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/ottl/README.md`
+- OTTL Functions: :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/pkg/ottl/ottlfuncs`
+- OTTL Contexts: :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/pkg/ottl/contexts`
+
 .. _filter-processor-settings:
 
 Settings
