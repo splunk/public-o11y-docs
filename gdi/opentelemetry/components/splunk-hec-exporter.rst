@@ -16,7 +16,7 @@ The main purpose of the Splunk HEC exporter is to send logs to Log Observer, Spl
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Splunk HEC exporter in the ``logs`` pipeline when deploying the Collector in agent mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Splunk HEC exporter in the ``logs`` pipeline when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
 
 .. note:: To send Splunk HEC data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
 
