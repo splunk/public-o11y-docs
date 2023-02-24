@@ -16,8 +16,8 @@ To get a detailed breakdown of your metric time series (MTS) creation and usage,
 
 You can use the detailed metrics usage analytics report to optimize your usage of custom metrics. 
 
-    * If you are an MTS-based customer, all your metrics are considered custom metrics, you might find the report highly valuable.
-    * If you are a host-based customers with hight utilization of custom metrics, you can use the report to lower your custom metrics usage.
+    * If you are an MTS-based customer, all your metrics are considered custom metrics, so you might find the report highly valuable.
+    * If you are a host-based customers with high utilization of custom metrics, you can use the report to lower your custom metrics usage.
 
 Statistics in the report
 ==============================
