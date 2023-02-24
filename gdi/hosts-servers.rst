@@ -50,6 +50,7 @@ Configure application receivers for hosts and servers
    systemd/collectd-systemd
    ntpq/telegraf-ntpq
    varnish/telegraf-varnish
+   win-services/telegraf-win-services
    vsphere/vsphere
 
 
@@ -94,5 +95,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`collectd-systemd`
 * :ref:`telegraf-ntpq`
 * :ref:`telegraf-varnish`
+* :ref:`telegraf-win-services`
 * :ref:`vsphere`
 
