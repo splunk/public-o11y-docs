@@ -28,27 +28,27 @@ The following example shows a Splunk HEC exporter instance configured for a logs
 .. code-block:: yaml
 
    exporters:
-      # ...
-      splunk_hec:
-         token: "<hec-token>"
-         endpoint: "<hec-endpoint>"
-         # Source. See https://docs.splunk.com/Splexicon:Source
-         source: "otel"
-         # Source type. See https://docs.splunk.com/Splexicon:Sourcetype
-         sourcetype: "otel"
+     # ...
+     splunk_hec:
+       token: "<hec-token>"
+       endpoint: "<hec-endpoint>"
+       # Source. See https://docs.splunk.com/Splexicon:Source
+       source: "otel"
+       # Source type. See https://docs.splunk.com/Splexicon:Sourcetype
+       sourcetype: "otel"
 
    # ...
    
    service:
-      # ...
-      pipelines:
-         logs:
-            receivers: [fluentforward, otlp]
-            processors:
-            - memory_limiter
-            - batch
-            - resourcedetection
-            exporters: [splunk_hec]
+     # ...
+     pipelines:
+       logs:
+         receivers: [fluentforward, otlp]
+         processors:
+         - memory_limiter
+         - batch
+         - resourcedetection
+         exporters: [splunk_hec]
 
 The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HEC token and choosing a HEC endpoint depends on the target. The following table shows endpoints and instructions for each back end.
 
@@ -107,7 +107,7 @@ If you're using the Collector for log collection and need to send data to Splunk
          timeout: 10s
          # Whether to skip checking the certificate of the HEC endpoint when sending data over HTTPS. Defaults to false.
          tls:
-            insecure_skip_verify: true
+           insecure_skip_verify: true
 
 You can split log data between Splunk Cloud Platform or Enterprise and Observability Cloud to preserve AlwaysOn Profiling data while sending logs to Splunk. See :ref:`profiling-pipeline-setup` for more information.
 
@@ -116,66 +116,64 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
 .. code-block:: yaml
 
    receivers:
-      # Default OTLP receiver--used by Splunk platform logs
-      otlp:
-         protocols:
-            grpc:
-               endpoint: 0.0.0.0:4317
-            http:
-               endpoint: 0.0.0.0:4318
+     # Default OTLP receiver--used by Splunk platform logs
+     otlp:
+       protocols:
+         grpc:
+           endpoint: 0.0.0.0:4317
+         http:
+           endpoint: 0.0.0.0:4318
       # OTLP receiver for AlwaysOn Profiling data
-      otlp/profiling:
-         protocols:
-            grpc:
-               # Make sure to configure your agents
-               # to use the custom port for logs when
-               # setting SPLUNK_PROFILER_LOGS_ENDPOINT
-               endpoint: 0.0.0.0:4319
+     otlp/profiling:
+       protocols:
+         grpc:
+         # Make sure to configure your agents
+         # to use the custom port for logs when
+         # setting SPLUNK_PROFILER_LOGS_ENDPOINT
+           endpoint: 0.0.0.0:4319
 
    exporters:
-      # Export logs to Splunk platform
-      splunk_hec/platform:
-         token: "<splunk_token>"
-         endpoint: "https://splunk:8088/services/collector"
-         source: "otel"
-         sourcetype: "otel"
-         index: "main"
-         max_connections: 20
-         disable_compression: false
-         timeout: 10s
-         tls:
-            insecure_skip_verify: true
+     # Export logs to Splunk platform
+     splunk_hec/platform:
+       token: "<splunk_token>"
+       endpoint: "https://splunk:8088/services/collector"
+       source: "otel"
+       sourcetype: "otel"
+       index: "main"
+       max_connections: 20
+       disable_compression: false
+       timeout: 10s
+       tls:
+         insecure_skip_verify: true
       # Export profiling data to Observability Cloud
-      splunk_hec/profiling:
-         token: "<splunk_o11y_token>"
-         endpoint: "https://ingest.<realm>.signalfx.com/v1/log"
-         source: "otel"
-         sourcetype: "otel"
-         log_data_enabled: false
+     splunk_hec/profiling:
+       token: "<splunk_o11y_token>"
+       endpoint: "https://ingest.<realm>.signalfx.com/v1/log"
+       source: "otel"
+       sourcetype: "otel"
+       log_data_enabled: false
 
    # Other settings
 
    service:
-      pipelines:
-
-         # Traces and metrics pipelines
-
-         # Logs pipeline for Splunk platform
-         logs/platform:
-            receivers: [fluentforward, otlp]
-            processors:
-            - memory_limiter
-            - batch
-            - resourcedetection
-            exporters: [splunk_hec/platform]
-         # Logs pipeline for AlwaysOn Profiling
-         logs/profiling:
-            receivers: [otlp/profiling]
-            processors:
-            - memory_limiter
-            - batch
-            - resourcedetection
-            exporters: [splunk_hec/profiling]
+     pipelines:
+       # Traces and metrics pipelines
+       # Logs pipeline for Splunk platform
+       logs/platform:
+         receivers: [fluentforward, otlp]
+         processors:
+         - memory_limiter
+         - batch
+         - resourcedetection
+         exporters: [splunk_hec/platform]
+        # Logs pipeline for AlwaysOn Profiling
+       logs/profiling:
+         receivers: [otlp/profiling]
+         processors:
+         - memory_limiter
+         - batch
+         - resourcedetection
+         exporters: [splunk_hec/profiling]
 
 .. _no_profiling_data:
 
@@ -188,11 +186,11 @@ If you don't need AlwaysOn Profiling data for a specific host or container. set 
    :emphasize-lines: 6
 
    splunk_hec/noprofiling:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-      profiling_data_enabled: false
+     token: "${SPLUNK_HEC_TOKEN}"
+     endpoint: "${SPLUNK_HEC_URL}"
+     source: "otel"
+     sourcetype: "otel"
+     profiling_data_enabled: false
 
 To turn off log collection for Observability Cloud while preserving AlwaysOn Profiling data for APM, set the ``log_data_enabled`` option to ``false``. See :ref:`disable_log_collection` for more information.
 
@@ -200,11 +198,11 @@ To turn off log collection for Observability Cloud while preserving AlwaysOn Pro
    :emphasize-lines: 6
 
    splunk_hec:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-      log_data_enabled: false
+     token: "${SPLUNK_HEC_TOKEN}"
+     endpoint: "${SPLUNK_HEC_URL}"
+     source: "otel"
+     sourcetype: "otel"
+     log_data_enabled: false
 
 .. _exclude-log-data:
 
@@ -217,11 +215,11 @@ If you need to turn off log data export to Observability Cloud, for example beca
    :emphasize-lines: 6
 
    splunk_hec:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-      log_data_enabled: false
+     token: "${SPLUNK_HEC_TOKEN}"
+     endpoint: "${SPLUNK_HEC_URL}"
+     source: "otel"
+     sourcetype: "otel"
+     log_data_enabled: false
 
 To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
 
@@ -232,8 +230,8 @@ If you've deployed the Collector in Kubernetes using the Helm chart, change the 
 .. code-block:: yaml
 
    splunkObservability:
-      # Other settings
-      logsEnabled: false
+     # Other settings
+     logsEnabled: false
 
 Settings
 ======================

@@ -65,8 +65,8 @@ To activate the receiver creator receiver, add the desired extensions to the ``e
    service:
      extensions: [k8s_observer]
      pipelines:
-        metrics:
-           receivers: [receiver_creator/k8skubeletstats]
+       metrics:
+         receivers: [receiver_creator/k8skubeletstats]
 
 You can nest and configure any supported receiver inside the ``receivers`` section of a ``receiver_creator`` configuration. Which receiver you can nest depends on the type of infrastructure the receiver creator is watching through the extensions defined in ``watch_observers``.
 

@@ -42,29 +42,29 @@ The following example shows a Splunk HEC receiver configured with all available 
 .. code-block:: yaml
 
    exporters:
-      # ...
-      splunk_hec:
-      # Address and port the Splunk HEC receiver should bind to
-      endpoint: localhost:8088
-      # Whether to preserve incoming access token
-      access_token_passthrough: true
-      # Path accepting raw HEC events (logs only)
-      raw_path: "/foo"
-      # Path reporting health checks
-      health_path: "/bar"
-      # Define field mappings
-      hec_metadata_to_otel_attrs:
-         source: "file.name"
-         sourcetype: "foobar"
-         index: "myindex"
-         host: "myhostfield"
-      # Optional TLS settings
-      tls:
-         # Both cert_file and
-         # key_file are required
-         # for TLS connections
-         cert_file: /test.crt
-         key_file: /test.key
+     # ...
+     splunk_hec:
+     # Address and port the Splunk HEC receiver should bind to
+     endpoint: localhost:8088
+     # Whether to preserve incoming access token
+     access_token_passthrough: true
+     # Path accepting raw HEC events (logs only)
+     raw_path: "/foo"
+     # Path reporting health checks
+     health_path: "/bar"
+     # Define field mappings
+     hec_metadata_to_otel_attrs:
+       source: "file.name"
+       sourcetype: "foobar"
+       index: "myindex"
+       host: "myhostfield"
+     # Optional TLS settings
+     tls:
+       # Both cert_file and
+       # key_file are required
+       # for TLS connections
+       cert_file: /test.crt
+       key_file: /test.key
 
 Settings
 ======================

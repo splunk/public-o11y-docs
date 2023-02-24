@@ -32,8 +32,8 @@ The following example shows how to configure the batch processor to send batches
 
    processors:
      batch/custom:
-        send_batch_size: 5000
-        timeout: 15s
+       send_batch_size: 5000
+       timeout: 15s
 
 Settings
 ======================
