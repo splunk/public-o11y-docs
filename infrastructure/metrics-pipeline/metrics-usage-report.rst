@@ -68,7 +68,7 @@ MTS creation statistics
      - Three examples of MTS for the metric containing the dimensions of the MTS. The example MTS for each metric are picked from the interval in descending order of creation time.
 
 
-Limits of the metrics usage analytics report
+Notes on the metrics usage analytics report
 ================================================
 
 * By default, the report covers an interval of 30 days. You can also request to generate a report with a shorter interval.
