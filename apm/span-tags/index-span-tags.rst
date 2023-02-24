@@ -85,7 +85,7 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
 
    - Select :strong:`Service` to associate the span tag with services. This means the value of the span tag might change across services in a given trace. Specify ``All Services`` to index the span tag for every service. Select specific services to index the span tag for only those services. 
      
-     .. note:: (Optional) If your span tag is indexed at the service level, you can also use it as a custom dimension in Monitoring MetricSets. See :ref:`cmms` for instructions.
+     .. note:: If your span tag is indexed at the service level, you can also use it as a custom dimension in Monitoring MetricSets. See :ref:`cmms` for instructions.
 
    - Select :strong:`Global` to associate the span tag with traces. This means the value of the span tag is the same for all services in a given trace.
 
@@ -95,7 +95,7 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
 
 6. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check to runs. You might have to wait a few moments for the check to run. 
 
-.. caution:: Your pending MetricSet will expire after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
+   .. caution:: Your pending MetricSet will expire after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
    
 7. After the cardinality check has run, review the cardinality of your new MetricSet and enable your new MetricSet.
 
