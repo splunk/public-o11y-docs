@@ -573,7 +573,7 @@
      -
      -
 
-   * - :ref:`Telegraf Win_services <telegraf-win-services>`
+   * - :ref:`Telegraf Windows services <telegraf-win-services>`
      - :strong:`X`
      -
      -

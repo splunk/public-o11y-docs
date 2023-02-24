@@ -1,6 +1,6 @@
 (telegraf-win-services)=
 
-# Telegraf Win_services
+# Telegraf Windows services
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Telegraf Win_services monitor. See benefits, install, configuration, and metrics">
 
@@ -29,7 +29,7 @@ To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, 
 
 ```yaml
 receivers:
-  smartagent/varnish:
+  smartagent/win_services:
     type: telegraf/win_services
     ...  # Additional config
 
