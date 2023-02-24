@@ -25,6 +25,7 @@ Use this topic to learn how to index a span tag or process to generate Troublesh
 Prerequisites
 ====================================================================================
 
+* You must be an Observability Cloud administrator to create Troubleshooting MetricSets.
 * Before you start indexing span tags and processes, see :ref:`apm-index-tag-tips` for guidance on choosing span tags to index. 
 
 .. _apm-tms-details:
