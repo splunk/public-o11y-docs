@@ -91,35 +91,32 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
 
    For more information about span tag scope, see :ref:`apm-index-tag-types`.
 
-5. Select :strong:`Start Analysis` to submit the configuration. When you submit a configuration, Splunk APM runs an analysis of the span tag to calculate the potential cardinality contribution of indexing it and determine whether it generates Troubleshooting MetricSets that exceed your limit.
+5. Select :strong:`Start Analysis` to submit the configuration. Splunk APM runs an analysis of the span tag to calculate the potential cardinality contribution of the MetricSet to determine whether it is within your entitlement limit. 
 
-6. Wait a few moments for the cardinality check to run, and then check under :strong:`Pending MetricSet` to view the status of the span tag you're trying to index. See the following table for possible status options for pending MetricSets and actions for each status. 
+6. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check to runs. You might have to wait a few moments for the check to run. 
    
-7. You
+7. After the cardinality check has run, the status of your MetricSet is updated. See :ref:`review-cardinality` to assess the new MetricSet's cardinality contribution and enable the MetricSet if you're happy with it.  
 
-   .. list-table::
-      :header-rows: 1
-      :widths: 15, 40, 45
+.. caution: Your pending MetricSet will expire after one hour. If your MetricSet times out before you enable it, rerun the analysis to index the span tag. 
 
-      * - :strong:`Status`
-        - :strong:`Description`
-        - :strong:`Next step`
+.. _review-cardinality: 
 
-      * - Analyzing
-        - The application is currently running the cardinality contribution analysis. When this is the status for a span tag you want to index, you can't create or modify any other span tags.
-        - Wait until the cardinality contribution analysis is complete. 
+Review the cardinality of your MetricSet
+-------------------------------------------
 
-      * - Ready
-        - The cardinality contribution analysis is complete: you can index the span tag without any issues.
-        - Select the checkmark in the :guilabel:`Actions` column to manually index the span tag and start generating Troubleshooting MetricSets that include the span tag. 
+When the cardinality check completes, you can see the estimated total cardinality.
 
-      * - Failed
-        - The cardinality contribution analysis is complete, but you can't index the span tag because you reached an entitlement or system limit.
-        - Consider pausing or deleting existing Custom MetricSets to open space for another indexed span tag, or reach out to your Splunk Observability Cloud account manager to increase your account limit. See :ref:`apm-limits-metricsets` to learn more about these limits. 
+ * If you are happy with the cardinality, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. The cardinality check expires after one hour.  
+ * If your MetricSet times out before you enable it, rerun the analysis to index the span tag.
+ * If the check failed to run, run the check again. 
+ * If the check runs and returns a failure, your cardinality is too high to create the new MetricSet. 
 
-      * - Timeout
-        - If more than one hour passes for a pending MetricSet in a ``Ready`` status, the status changes to ``Timeout``. 
-        - Rerun the analysis to try indexing the span tag again. 
+
+The following example shows a cardinality check. 
+
+.. image:: /_images/apm/span-tags/cardinality-check-APM.png
+   :width: 60%
+   :alt: This image shows the cardinality check for a Monitoring MetricSet. 
 
 .. _manage-TMS:
 
