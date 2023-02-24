@@ -19,7 +19,7 @@ Configure the Smart Agent receiver
 
 For each Smart Agent monitor you want to add to the Collector, add a ``smartagent`` receiver and ``smartagent`` service pipeline in your :ref:`Collector configuration file <otel-configuration>`. Each ``smartagent`` receiver acts as a drop-in replacement for its corresponding Smart Agent monitor.
 
-Instead of using ``discoveryRule``, use the Collector's Receiver Creator and Observer extensions. See :ref:`receiver-creator-receiver` for more information.
+Instead of using ``discoveryRule``, use the Collector's receiver creator and observer extensions. See :ref:`receiver-creator-receiver` for more information.
 
 If you're using a SignalFx Forwarder monitor, add it to both a ``traces`` and a ``metrics`` pipeline, and use a Sapm exporter and a SignalFx exporter, as each pipeline's exporter, respectively. See more on :ref:`exporters <collector-components-processors>`.
 
