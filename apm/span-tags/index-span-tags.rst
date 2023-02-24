@@ -103,11 +103,11 @@ Follow these steps to index a span tag and create a Troubleshooting MetricSet fo
    * If the check times out before you enable the MetricSet, rerun the analysis.
    * If the check shows as failed, your cardinality is too high to create the new MetricSet. You can edit the MetricSet to adjust the configuration to reduce cardinality or you can select the x to delete the pending Metricset.
 
-The following example shows a cardinality check. 
+   The following example shows a cardinality check. 
 
-.. image:: /_images/apm/span-tags/cardinality-check-APM.png
-   :width: 60%
-   :alt: This image shows the cardinality check for a Monitoring MetricSet. 
+   .. image:: /_images/apm/span-tags/cardinality-check-APM.png
+      :width: 60%
+      :alt: This image shows the cardinality check for a Monitoring MetricSet. 
 
 .. _manage-TMS:
 
