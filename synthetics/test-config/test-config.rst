@@ -28,7 +28,7 @@ To simulate diverse types of traffic to your site or application, use a range of
 
 When you set up a test in Splunk Synthetic Monitoring, you can configure the viewport and network connection of the device from which the test is simulated. 
 
-Because Browser tests capture the visual experience of a page, while Uptime and API tests only capture response data, viewport applies only to Browser tests. Network connection applies to all test types. 
+Because Browser tests capture the visual experience of a page, while Uptime and API tests only capture response data, viewport applies to Browser tests only. Network connection applies to all test types. 
 
 .. raw:: html
 

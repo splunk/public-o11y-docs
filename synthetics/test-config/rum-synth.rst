@@ -6,5 +6,6 @@ Title
 
 words 
 
-H2
+Prerequisites 
 =================
+See, :ref:`browser-rum-gdi`.

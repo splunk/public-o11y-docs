@@ -76,6 +76,13 @@ For more examples on Java instrumentation, see :ref:`server-trace-information-ja
 
 .. _third-step-config:
 
+
+
+(Optional) Link Splunk RUM with ... 
+=====================================
+
+See, :ref:`rum-synth`
+
 (Optional) Configure your application
 =====================================
 If you use Splunk Synthetic Monitoring to monitor an application or website with allow/block lists or a web analytics tool, you might want to adjust the settings to accommodate traffic from Splunk Synthetic Monitoring. See :ref:`synth-configure-app` for detailed instructions. 
