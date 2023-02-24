@@ -5,13 +5,19 @@ Receiver creator receiver
 *************************
 
 .. meta::
-      :description: The Splunk HEC receiver allows the Splunk Distribution of OpenTelemetry Collector to collect logs and metrics in Splunk HTTP Event Collector format.
+      :description: Use the receive creator to create receivers at runtime in the OpenTelemetry Collector based on rules. Read on to learn how to configure the component.
 
-The Splunk HTTP Event Collector (HEC) receiver allows the Splunk Distribution of OpenTelemetry Collector to collect events and logs in Splunk HEC format. The supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
+The receiver creator receiver allows the Splunk Distribution of OpenTelemetry Collector to create new receivers at runtime based on configured rules and observer extensions. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-The receiver accepts data formatted as JSON HEC events under any path or as end-of-line separated log raw data if sent to the ``raw_path``. See :new-page:`Format events for HTTP Event Collector <https://docs.splunk.com/Documentation/Splunk/latest/Data/FormateventsforHTTPEventCollector>` for more information.
+You can use any of the following observer extensions as listeners for the receiver creator:
 
-.. note:: For information about the HEC exporter, see :ref:`splunk-hec-exporter`.
+- ``docker_observer``: Detects and reports running container endpoints through the Docker API.
+- ``ecs_observer``: Discovers Prometheus scrape targets for all running tasks through the ECS/EC2 API.
+- ``ecs_task_observer``: Detects and reports container endpoints for running ECS tasks.
+- ``host_observer``: Discovers listening network endpoints of the current host.
+- ``k8s_observer``: Detects and reports Kubernetes pod, port, and node endpoints through the Kubernetes API.
+
+A receiver created using the receiver creator can use other receivers for applications and hosts, like the ``kubeletstats`` or ``hostmetrics`` receivers. A typical use case of the receiver creator is to collect metrics for infrastructure that is deployed dynamically, such as Kubernetes pods or Docker containers. 
 
 Get started
 ======================
@@ -24,56 +30,119 @@ Follow these steps to deploy the integration:
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the Splunk HEC receiver as described in the next section.
+2. Configure the receiver creator receiver as described in the next section.
 3. Restart the Collector.
 
 Sample configurations
 ----------------------
 
-To activate the Splunk HEC receiver add a ``splunk_hec`` entry inside the ``receivers`` section of the Collector configuration file. For example:
+To activate the receiver creator receiver, add the desired extensions to the ``extensions`` section of your configuration file, followed by ``receiver_creator`` instances in the ``receivers`` section. For example:
 
 .. code-block:: yaml
 
-   exporters:
-      splunk_hec:
+   extensions:
+      # Configures the Kubernetes observer to watch for pod start and stop events.
+      k8s_observer:
 
-The following example shows a Splunk HEC receiver configured with all available settings:
+   receivers:
+     receiver_creator/k8skubeletstats:
+       watch_observers: [k8s_observer]
+       receivers:
+         kubeletstats:
+           # If this rule matches an instance of this receiver will be started.
+           rule: type == "k8s.node"
+           config:
+             auth_type: serviceAccount
+             collection_interval: 15s
+             endpoint: '`endpoint`:`kubelet_endpoint_port`'
+             extra_metadata_labels:
+               - container.id
+             metric_groups:
+               - container
+               - pod
+               - node
+
+   service:
+     extensions: [k8s_observer]
+     pipelines:
+        metrics:
+           receivers: [receiver_creator/k8skubeletstats]
+
+You can nest and configure any supported receiver inside the ``receivers`` section of a ``receiver_creator`` configuration. Which receiver you can nest depends on the type of infrastructure the receiver creator is watching through the extensions defined in ``watch_observers``.
+
+Docker observer example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following example shows how to configure the receiver creator using the Docker observer:
 
 .. code-block:: yaml
 
-   exporters:
-      # ...
-      splunk_hec:
-      # Address and port the Splunk HEC receiver should bind to
-      endpoint: localhost:8088
-      # Whether to preserve incoming access token
-      access_token_passthrough: true
-      # Path accepting raw HEC events (logs only)
-      raw_path: "/foo"
-      # Path reporting health checks
-      health_path: "/bar"
-      # Define field mappings
-      hec_metadata_to_otel_attrs:
-         source: "file.name"
-         sourcetype: "foobar"
-         index: "myindex"
-         host: "myhostfield"
-      # Optional TLS settings
-      tls:
-         # Both cert_file and
-         # key_file are required
-         # for TLS connections
-         cert_file: /test.crt
-         key_file: /test.key
+   extensions:
+     docker_observer:
+       # Default is unix:///var/run/docker.sock
+       # Collector must have read access to the Docker Engine API 
+       endpoint: path/to/docker.sock
+       excluded_images: ['redis', 'another_image_name']
+       # Docker observer requires Docker API version 1.22 or higher
+       api_version: 1.42
+       # Time to wait for a response from Docker API. Default is 5 seconds
+       timeout: 15s
+
+   receivers:
+     receiver_creator:
+       watch_observers: [docker_observer]
+       receivers:
+         nginx:
+           rule: type == "container" and name matches "nginx" and port == 80
+           config:
+             endpoint: '`endpoint`/status'
+             collection_interval: 10s
+
+.. note:: See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/observer/dockerobserver/README.md` for a complete list of settings.
+
+Kubernetes observer example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following example shows how to configure the receiver creator using the Kubernetes observer:
+
+.. code-block:: yaml
+
+   extensions:
+     k8s_observer:
+       auth_type: serviceAccount
+       # Can be set to the node name to limit discovered endpoints
+       # The value can be obtained using the downward API 
+       node: ${env:K8S_NODE_NAME}
+       observe_pods: true
+       observe_nodes: true
+
+   receivers:
+     receiver_creator:
+       watch_observers: [k8s_observer]
+       receivers:
+         kubeletstats:
+           rule: type == "k8s.node"
+           config:
+             auth_type: serviceAccount
+             collection_interval: 10s
+             endpoint: "`endpoint`:`kubelet_endpoint_port`"
+             extra_metadata_labels:
+               - container.id
+             metric_groups:
+               - container
+               - pod
+               - node
+
+.. note:: See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/observer/k8sobserver/README.md` for a complete list of settings.
 
 Settings
 ======================
 
-The following table shows the configuration options for the Splunk HEC receiver:
+The following table shows the configuration options for the receiver creator receiver:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/splunk_hec.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/receiver_creator.yaml"></div>
 
 Troubleshooting
 ======================
