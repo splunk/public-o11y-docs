@@ -1,15 +1,9 @@
 
 .. _metrics-usage-report:
 
-*************************************************************
-Understand your metrics usage with metrics usage report
-*************************************************************
-
-|hr|
-
-:strong:`Available in Enterprise Edition and Service Bureau`
-
-|hr|
+************************************************************************
+Understand your metrics usage with metrics usage analytics report
+************************************************************************
 
 
 To get a detailed breakdown of your metric time series (MTS) creation and usage, you can request a short-term usage report by contacting your tech support member or your account team.
