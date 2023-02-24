@@ -19,7 +19,7 @@ You can create custom Monitoring MetricSets at the service level and optionally 
 
 When you create a Monitoring MetricSet with a custom dimension, you can use this custom dimension to create charts, dashboards, and alerts for the Infrastructure Monitoring platform. 
 
-To learn more about a specific use case for custom Monitoring MetricSets: :ref:`custom-metricset`.
+To learn more about a specific use case for custom Monitoring MetricSets, see :ref:`custom-metricset`.
 
 Prerequisites 
 ==============
@@ -30,7 +30,7 @@ Prerequisites
 
 * (Optional) If you are unfamiliar with Monitoring Metric Sets and Troubleshooting Metric Sets, see:  :ref:`apm-metricsets`. 
 
-* (Optional) Review :ref:`metrics-dimensions-mts` for an overview of the concepts make up MetricSets. 
+* (Optional) Review :ref:`metrics-dimensions-mts` for an overview of the concepts that make up MetricSets. 
 
 
 How to generate a Monitoring MetricSet with a custom dimension 
@@ -47,9 +47,9 @@ Select how you want to configure your Monitoring MetricSet
 
 You can generate a Monitoring MetricSet in three ways:
 
-* service-level MMS only.
-* endpoint-level MMS for specific endpoints within a given service.
-* orient both service-level MMS and endpoint-level MMS for all endpoints within a service. 
+* service-level MMS only
+* endpoint-level MMS for specific endpoints within a given service
+* orient both service-level MMS and endpoint-level MMS for all endpoints within a service
 
 Choose the best option for your needs to allocate your organization's cardinality entitlement efficiently. See :ref:`reduce-cardinality` to learn more. 
 
@@ -61,13 +61,13 @@ You can also filter by specific tag values to further reduce the cardinality of 
    :widths: 15 50
 
    * - :strong:`Option`
-     - :strong:`Guidance`
+     - :strong:`Summary`
    * - Service-level MMS and endpoint-level MMS for all endpoints within a service
      - Creates a custom dimensionalized MMS for each of the selected service, as well as an MMS for each endpoint in each selected service. This is the highest cardinality option. 
    * - Service-level MMS and endpoint-level MMS for specific endpoints
      - Creates custom dimensionalized MMS for each of the selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters`, you can provide a list of endpoints or a regular expression pattern to generate MMS for those endpoints.
    * - Service-level MMS only
-     - This option creates an MMS for each of the selected service and no endpoint-level MMS. This is the lowest cardinality option. 
+     - Creates an MMS for each of the selected service and no endpoint-level MMS. This is the lowest cardinality option. 
 
 
 Scope of Monitoring MetricsSets 
@@ -142,10 +142,10 @@ To use the custom dimensionalized Monitoring MetricSets you have created, apply 
    * - :strong:`Task`
      - :strong:`Instructions`
    * - Create charts
-     - :ref:`Create charts in Splunk Observability Cloud<create-charts>`
+     - :ref:`create-charts`
    * - Create dashboards
-     - :ref:`Create and customize dashboards<dashboard-create-customize>`
+     - :ref:`dashboard-create-customize`
    * - Create an alert 
-     - :ref:`Configure detectors and alerts in Splunk APM<apm-alerts>`
+     - :ref:`apm-alerts`
    * - Monitor services in APM dashboards 
-     - :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
+     - :ref:`apm-dashboards`
