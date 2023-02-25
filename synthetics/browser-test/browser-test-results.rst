@@ -188,6 +188,6 @@ To get even more value out of your synthetic metrics, use the Splunk Observabili
 
 
 
-Splunk RUM integration 
+(Optional) Splunk RUM integration 
 ------------------------------------
-:ref:`rum-synth`
+Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.

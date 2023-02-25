@@ -78,10 +78,10 @@ For more examples on Java instrumentation, see :ref:`server-trace-information-ja
 
 
 
-(Optional) Link Splunk RUM with ... 
+(Optional) Integrate with Splunk RUM 
 =====================================
+Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
 
-See, :ref:`rum-synth`
 
 (Optional) Configure your application
 =====================================
