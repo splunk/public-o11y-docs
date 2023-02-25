@@ -5,7 +5,7 @@ Receiver creator receiver
 *************************
 
 .. meta::
-      :description: Use the receive creator to create receivers at runtime in the OpenTelemetry Collector based on rules. Read on to learn how to configure the component.
+      :description: Use the receiver creator to create receivers at runtime in the OpenTelemetry Collector based on rules. Read on to learn how to configure the component.
 
 The receiver creator receiver allows the Splunk Distribution of OpenTelemetry Collector to create new receivers at runtime based on configured rules and observer extensions. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
