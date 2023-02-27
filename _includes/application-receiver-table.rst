@@ -413,7 +413,7 @@
      -
      - 
 
-   * - :ref:`MongoDB Atlas  <mongodb-atlas-receiver>`
+   * - :ref:`MongoDB Atlas receiver <mongodb-atlas-receiver>`
      - :strong:`X`
      -
      - 
@@ -478,7 +478,7 @@
      -
      -
 
-   * - :ref:`Prometheus Exporter <prometheus-exporter>`
+   * - :ref:`Prometheus exporter <prometheus-exporter>`
      - :strong:`X`
      -
      -
@@ -498,12 +498,12 @@
      -
      -
 
-   * - :ref:`Prometheus Node Exporter <prometheus-node>`
+   * - :ref:`Prometheus Node exporter <prometheus-node>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Prometheus Receiver <prometheus-receiver>`
+   * - :ref:`Prometheus receiver <prometheus-receiver>`
      - :strong:`X`
      -
      -
