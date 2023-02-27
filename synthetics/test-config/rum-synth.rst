@@ -36,15 +36,35 @@ View web vitals for your run results
 ==========================================
 Navigate to the run results page for the test you're interested in monitoring. The metrics panel for each run result lists web vitals, performance timing, and other metrics. Each web vital shows how your metrics compare to the acceptable range. 
  
-For example, this image shows the acceptable ranges for TBT. Select the flash light icon to open the sessions in Tag Spotlight in Splunk RUM. 
+For example, this image shows the acceptable ranges for TBT. Select the flash light icon to open the sessions in Tag Spotlight in Splunk RUM. The visit count represents the number of users and synthetic tests that have interacted with the normalized URL specified in the test.  
 
 .. image:: /_images/rum/TBT-range.png
       :width: 30%
       :alt: Shows range of typical performance for TBT times that are poor(greater than 300 ms), need to be improved(between 100-300ms), or good (less than 100 ms). 
 
+Compare latency of a test by location 
+====================================================================================
+Web vitals are a great way of measuring if your tests are actually capturing the performance you expect. Suppose you want to compare the latency of your tests by location. Open the run results of your test. In the metrics panel, select the filte icon to open the location options dialog box. 
+
+.. image:: /_images/rum/rum-synth-filter.png
+      :width: 30%
+      :alt: Shows how to toggle among four location options: global, country, region, city. 
+
 Example
-==============
-Web vitals are a great way of measuring if your tests are actually capturing the performance you expect. Suppose you want to compare latency for tests by location... 
+------------------
+The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-use-case`. The SRE team wants to determine the health of the API test by location. The data centers for Buttercup Games are in Johannesburg and the web vitals for the local tests reflect optimal performance. 
+
+Using the RUM integration, the SRE team can compared web vitals by global results and found that the LCP really lagged. 
+
+.. image:: /_images/rum/web-vital-example.png
+      :width: 30%
+      :alt: Shows LCP range for global view. 
+
+To investigate what regions are experiencing poor performance, the SRE team seletcs the RUM link to Tag Spotlight. The team sees that Mumbai has a large range of response times for LCP. The SRE team can apply Mumbai as a filter and explore individual user sessions to find if there are performance discrepensies in relation to the of type of browser, browser version, OS Version, App version and more.  
+
+.. image:: /_images/rum/tag-spotlight-rum-snyth.png
+      :width: 80%
+      :alt: Shows Tag Spotlight dashboard for global view of LCP metric. 
 
 
 See also 
