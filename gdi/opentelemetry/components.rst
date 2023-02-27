@@ -13,6 +13,7 @@ Components
     :hidden:
 
     components/attributes-processor
+    components/batch-processor
     components/databricks-receiver
     components/filter-processor
     components/host-metrics-receiver
@@ -21,6 +22,7 @@ Components
     components/mongodb-atlas-receiver
     components/oracledb-receiver
     components/prometheus-receiver
+    components/receiver-creator-receiver
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
@@ -79,7 +81,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``otlp``
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
-   * - ``receiver_creator``
+   * - :ref:`receiver-creator-receiver` (``receiver_creator``)
      - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
      - N/A
    * - ``signalfx``
@@ -117,7 +119,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - :ref:`attributes-processor` (``attributes``)
      - Modifies attributes of a span or log record.
      - Logs, traces
-   * - ``batch``
+   * - :ref:`batch-processor` (``batch``)
      - Accepts spans, metrics, or logs and places them into batches. Batching helps better compress the data and reduce the number of outgoing connections required to transmit the data. This processor supports both size-based and time-based batching.
      - Metrics, logs, traces
    * - ``groupbyattrs``
