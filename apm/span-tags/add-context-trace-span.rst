@@ -185,7 +185,7 @@ Add span tags with the Splunk Distribution of OpenTelemetry Collector
 
 To add a span tag to spans received by the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`, you can use the ``attributes`` processor in your OpenTelemetry Collector configuration YAML file. 
 
-The generic attributes processor is called ``attributes``. Any subsequent  ``attributes/<NAME>`` processors are named instances of the ``attributes`` processor. 
+The generic attributes processor is called ``attributes``. Any subsequent  ``attributes/<NAME>`` processors are named instances of the ``attributes`` processor. See :ref:`attributes-processor` for more information.
 
 Follow these steps to define a new attributes processor and add it to your pipeline: 
 

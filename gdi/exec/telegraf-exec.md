@@ -118,6 +118,8 @@ The **nested** `telegrafParser` configuration object has the following fields:
 
 ## Metrics
 
+The agent does not do any built-in filtering of metrics coming out of this monitor.
+
 By default, all metrics are emitted as gauges. If you have cumulative counter metrics that you want properly typed in Splunk Observability Cloud, use one of the following options:
 
 - Set the configuration option `signalFxCumulativeCounters` to the list of metric names to be considered as counters. Note that these names are the full names that are sent to Observability Cloud (for example, `<metric>.<field>`).

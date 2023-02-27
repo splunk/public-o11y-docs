@@ -55,9 +55,6 @@ The following table specifies the permissions required for GCP integrations.
    *  - ``monitoring.timeSeries.list``
       - Yes
 
-   *  - ``resourcemanager.projects.get``
-      - Yes, if you want to sync project metadata, such as labels
-
    *  - ``serviceusage.services.use``
       - Yes, if you want to enable the use of a quota from the project where metrics are stored
 
