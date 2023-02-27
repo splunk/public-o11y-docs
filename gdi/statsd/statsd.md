@@ -99,7 +99,9 @@ The Smart Agent and Collector don't do any built-in filtering of metrics that co
 
 ## Metrics
 
-This section describes how metrics can be collected with this monitor.
+The agent does not do any built-in filtering of metrics coming out of this monitor.
+
+See the section below to learn how metrics can be collected with this monitor.
 
 ### Adding dimensions to statsd metrics
 
