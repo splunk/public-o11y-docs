@@ -18,13 +18,22 @@ There are two ways to reassign shifts, depending on what page you are viewing in
 Reassign a full or partial shift
 ========================================
 
-If you are unable to complete a current or upcoming shift, you can reassign all or part of that shift to another team member. 
+If you are unable to complete a current or upcoming shift, you can reassign all or part of that shift to another team member. You can reassign one hour increments if needed, for example if you have an appointment. You can reassign one of your own shifts or reassign someone else's shift for them.
 
-To reassign your shift follow these steps: 
+To reassign a shift follow these steps: 
 
-#. On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident Intelligence, select :guilabel:`You are currently on call` if you are on call or :guilabel:`On-call schedules` if you are not on call. 
-#. Select :guilabel:`Sync to calendar`.
-#. Copy the link.
+#. Do one of the following:
+   * On the main Incident Intelligence page, select :guilabel:`On-call Schedule`. In the side-pane that opens, select :guilabel:`Reassign Shift`.
+   * On the Incident Management page, select the :guilabel:`On-call schedules` tab, then :guilabel:`Reassign shift`
+#. On the Reassign Shifts window, select the time range you are unavailable including the dates and times.
+#. (Optional) If required, enter the name of the shift owner. The default is set to the current user.
+#. Select :guilabel:`Search for schedules` to find the shift to reassign. Any shifts impacted by the time frame you selected display. 
+#. In :guilabel:`Reassign to`, enter the name of the team member who will take the shift or partial shift. 
+#. Save your changes
+
+
+
+
 
 You can paste this link into a browser to download the calendar. If you want to sync your on-call schedule to your personal calendar, follow the steps for your calendar app.
 
