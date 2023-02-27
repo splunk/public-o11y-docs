@@ -7,7 +7,7 @@ Batch processor
 .. meta::
       :description: Use the batch processor to batch telemetry and reduce network usage by the OpenTelemetry Collector. Read on to learn how to configure the component.
 
-The batch processor is an OpenTelemetry Collector component that batches and compresses spans, metrics, or logs based on size or time. Batching telemetry reduces the network usage by the Collector and improves its overall performance.
+The batch processor is an OpenTelemetry Collector component that batches and compresses spans, metrics, or logs based on size or time. Batching can help reduce the number of submission requests made by exporters, and help regulate the flow of telemetry from multiple or single receivers in a pipeline.
 
 Get started
 ======================
