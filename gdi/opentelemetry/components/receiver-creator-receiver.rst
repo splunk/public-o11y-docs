@@ -16,7 +16,7 @@ You can use any of the following observer extensions as listeners for the receiv
 - ``host_observer``: Discovers listening network endpoints of the current host.
 - ``k8s_observer``: Detects and reports Kubernetes pod, port, and node endpoints through the Kubernetes API.
 
-Any instance of the receiver creator can use other receivers for applications and hosts, like the ``kubeletstats`` or ``hostmetrics`` receivers. A typical use case of the receiver creator is to collect metrics for infrastructure that is deployed dynamically, such as Kubernetes pods or Docker containers. 
+This receiver can use other receivers for applications and hosts, like the ``kubeletstats`` or ``hostmetrics`` receivers. A typical use case of the receiver creator is to collect metrics for infrastructure that is deployed dynamically, such as Kubernetes pods or Docker containers. 
 
 Get started
 ======================
