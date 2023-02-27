@@ -42,7 +42,7 @@ The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agen
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector:
 
-1. Find your agent configuration file in `C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml`. Do **not** use `C:\Program Files\Splunk\OpenTelemetry Collector\agent_config.yaml`.
+1. Find your agent configuration file in either `C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml` or `C:\Program Files\Splunk\OpenTelemetry Collector\agent_config.yaml`.
 
 2. Add the following option:
 
