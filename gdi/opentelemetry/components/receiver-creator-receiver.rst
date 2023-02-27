@@ -5,14 +5,13 @@ Receiver creator receiver
 *************************
 
 .. meta::
-      :description: Use the receive creator to create receivers at runtime in the OpenTelemetry Collector based on rules. Read on to learn how to configure the component.
+      :description: Use the receiver creator to create receivers at runtime in the OpenTelemetry Collector based on rules. Read on to learn how to configure the component.
 
 The receiver creator receiver allows the Splunk Distribution of OpenTelemetry Collector to create new receivers at runtime based on configured rules and observer extensions. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 You can use any of the following observer extensions as listeners for the receiver creator:
 
 - ``docker_observer``: Detects and reports running container endpoints through the Docker API.
-- ``ecs_observer``: Discovers Prometheus scrape targets for all running tasks through the ECS/EC2 API.
 - ``ecs_task_observer``: Detects and reports container endpoints for running ECS tasks.
 - ``host_observer``: Discovers listening network endpoints of the current host.
 - ``k8s_observer``: Detects and reports Kubernetes pod, port, and node endpoints through the Kubernetes API.
