@@ -129,7 +129,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``k8s_tagger``
      - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata.
      - Metrics, logs, traces
-   * - ``memorylimiter``
+   * - ``memory_limiter``
      - Prevents out of memory situations on the Splunk Distribution of OpenTelemetry Collector.
      - Metrics, logs, traces
    * - ``metricstransform``
@@ -212,12 +212,14 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints. ``docker_observer`` watches the Docker engine's stream of events to dynamically create, update, and remove endpoints as events are processed. 
    * - ``ecs_observer``
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. If you run the Collector as a sidecar, consider using the ECS resource detector instead of the ECS observer.
-   * - ``healthcheck``
+   * - ``health_check``
      - Enables an HTTP URL that can be probed to check the status of the OpenTelemetry Collector. You can also use this extension as a liveness or readiness probe on Kubernetes.
-   * - ``httpforwarder``
+   * - ``http_forwarder``
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
    * - ``host_observer``
      - Looks at the current host for listening network endpoints. Uses the /proc file system and requires the ``SYS_PTRACE`` and ``DAC_READ_SEARCH`` capabilities so that it can determine what processes own the listening sockets. 
+   * - ``memory_ballast``
+     - Configures the memory ballast for the Collector process, either as a size in megabytes or as a size expressed as a percentage of the total memory. Sufficient ballast enhances the stability of Collector deployments.
    * - ``k8s_observer``
      - Uses the Kubernetes API to discover pods running on the local node. This extension assumes that the Splunk Distribution of OpenTelemetry Collector is deployed in agent mode where it is running on each individual node or host instance. 
    * - ``pprof``
