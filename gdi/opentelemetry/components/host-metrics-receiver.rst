@@ -20,7 +20,7 @@ By default, the host metrics receiver is enabled in the Splunk Distribution of O
 - Process count metrics (Linux only)
 - Per process CPU, memory, and disk I/O metrics
 
-Host receiver metrics appear in Infrastructure Monitoring and can be used to create dashboards and alerts. See :ref:`create-detectors` for more information.
+Host receiver metrics appear in Infrastructure Monitoring. You can use them to create dashboards and alerts. See :ref:`create-detectors` for more information.
 
 
 Get started
@@ -74,61 +74,50 @@ be configured as shown in the following example:
 Scrapers extract data from endpoints and then send that data to a specified target. The following table shows the available scrapers:
 
 .. list-table::
-   :widths: 17 37 18
+   :widths: 10 90
+   :width: 100%
    :header-rows: 1
 
    - 
 
       - Scraper
-      - Supported operating system
       - Description
    - 
 
       - cpu
-      - Not supported on macOS when compiled without Cgo, which is the
-         default.
-      - CPU utilization metrics
+      - CPU utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/cpuscraper/documentation.md` for a complete list of metrics.
    - 
 
       - disk
-      - Not supported on macOS when compiled without Cgo, which is the
-         default.
-      - Disk I/O metrics
+      - Disk I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/diskscraper/documentation.md` for a complete list of metrics.
    - 
 
       - load
-      - All
-      - CPU load metrics
+      - CPU load metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/loadscraper/documentation.md` for a complete list of metrics.
    - 
 
       - filesystem
-      - All
-      - File system utilization metrics
+      - File system utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/documentation.md` for a complete list of metrics.
    - 
 
       - memory
-      - All
-      - Memory utilization metrics
+      - Memory utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/memoryscraper/documentation.md` for a complete list of metrics.
    - 
 
       - network
-      - All
-      - Network interface I/O metrics and TCP connection metrics
+      - Network interface I/O metrics and TCP connection metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/networkscraper/documentation.md` for a complete list of metrics.
    - 
 
       - paging
-      - All
-      - Paging or swap space utilization and I/O metrics
+      - Paging or swap space utilization and I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/pagingscraper/documentation.md` for a complete list of metrics.
    - 
 
       - processes
-      - Linux
-      - Process count metrics
+      - Process count metrics. Only available on Linux. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processesscraper/documentation.md` for a complete list of metrics.
    - 
 
       - process
-      - Linux and Windows
-      - Per process CPU, memory, and disk I/O metrics
+      - Per process CPU, memory, and disk I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processscraper/documentation.md` for a complete list of metrics.
 
 See the following sections for scraper configurations.
 
