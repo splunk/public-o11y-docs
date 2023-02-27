@@ -356,7 +356,7 @@ Override a control plane configuration
 
 If ``agent.controlPlaneEnabled=true``, the Helm chart sets up the Collector to collect metrics from the control plane.
 
-To collect control plane metrics, the Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See the :new-page:`receiver creator <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/receivercreator/README.md>` documentation in GitHub for more information.
+To collect control plane metrics, the Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See :ref:`receiver-creator-receiver` for more information.
 
 If your control plane is using non-standard specifications, then you can provide a custom configuration to allow the Collector to successfully connect to it.
 
