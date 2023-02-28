@@ -9,16 +9,16 @@ Index span tags to generate Troubleshooting MetricSets
 .. meta::
    :description: Learn how to use index tags to create Troubleshooting MetricSets that help you troubleshoot services with Splunk Observability Cloud.
 
-Thanks to Splunk APM's full-fidelity tracing, which captures every span from every trace, you can use span tags to break down services and inter-service calls along any characteristic or attribute associated with any given trace. This lets you customize data visualizations and metrics for your monitoring and troubleshooting requirements. 
+Because Splunk APM offers full-fidelity tracing, which captures every span from every trace, you can use span tags or processes to break down services and inter-service calls along trace characteristics or attributes. This lets you customize data visualizations and metrics for your monitoring and troubleshooting requirements. 
 
-To get additional value from a span tag or process, a Splunk APM administrator can run an action known as indexing, which enables additional analysis of the indexed span tag or process. One benefit of indexing is to get aggregated metrics, or MetricSets, across all spans that contain a specified indexed tag or process.
+To get additional value from a span tag or process, a Splunk APM administrator can run an action known as indexing, which enables additional analysis of the indexed span tag or process. One benefit of indexing is to get aggregated metrics, called MetricSets, across all spans that contain a specified indexed tag or process.
 
 What are MetricSets?
 =========================
 
 MetricSets are metric time series you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides two kinds of MetricSets: Troubleshooting MetricSets and Monitoring MetricSets. Troubleshooting MetricSets are for high-cardinality troubleshooting while Monitoring MetricSets leverage the Infrastructure Monitoring platform for real-time monitoring and alerting. 
 
-APM provides a collection of MetricSets by default, and you can index additional span tags or processes to generate additional Troubleshooting MetricSets, and optionally add additional custom dimensionalized Monitoring MetricSets. See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets you receive by default. 
+APM provides a collection of MetricSets by default. You can also index additional span tags or processes to generate additional Troubleshooting MetricSets and optionally add custom dimensionalized Monitoring MetricSets. See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets available by default. 
 
 Use this topic to learn how to index a span tag or process to generate Troubleshooting MetricSets. Then see :ref:`cmms` to learn how to add custom dimensionalized Monitoring MetricSets. 
 
@@ -26,7 +26,7 @@ Prerequisites
 ====================================================================================
 
 * You must be an Observability Cloud administrator to create Troubleshooting MetricSets.
-* Before you start indexing span tags and processes, see :ref:`apm-index-tag-tips` for guidance on choosing span tags to index. 
+* Before you start indexing span tags and processes, see :ref:`apm-index-tag-tips` for guidance on choosing span tags or processes to index. 
 
 .. _apm-tms-details:
 
@@ -59,7 +59,7 @@ For more details about each of these tags, see :ref:`apm-default-span-tags`. You
 Cardinality contribution of indexed span tags and processes
 ------------------------------------------------------------
 
-When you index a new span tag or process to generate Troubleshooting MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps account for any limits you have to stay within.
+When you index a new span tag or process to generate Troubleshooting MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for any account limits you have to stay within.
 
 If you try to index a span tag or process that might increase the total cardinality contribution beyond your limit, you can change the existing cardinality contribution of indexed tags or processes by modifying or removing indexed span tags or processes.
 
@@ -93,7 +93,7 @@ Follow these steps to index a span tag or process to create a Troubleshooting Me
 
 6. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check to runs. You might have to wait a few moments for the check to run. 
 
-   .. caution:: Your pending MetricSet will expire after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
+   .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
    
 7. After the cardinality check has run, review the cardinality of your new MetricSet and enable your new MetricSet.
 
