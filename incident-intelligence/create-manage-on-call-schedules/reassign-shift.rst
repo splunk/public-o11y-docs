@@ -33,6 +33,7 @@ To reassign a shift follow these steps:
 
 In the updated schedule, the shift or partial shift that was reassigned is now assigned to the new team member. Additionally, there is a notation of from whom the shift was reassigned.
 
+.. _take_shift:
 
 Take a full or partial shift
 ==================================
