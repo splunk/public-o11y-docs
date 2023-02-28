@@ -42,5 +42,9 @@ MTS creations per minute per product limit
      - ``sf.org.apm.limit.metricTimeSeriesCreatedPerMinute``: MTS creations per minute limit for Splunk APM in your organization
      - ``sf.org.rum.limit.metricTimeSeriesCreatedPerMinute``: MTS creations per minute limit for Splunk RUM in your organization
      - ``sf.org.synthetics.limit.metricTimeSeriesCreatedPerMinute``: MTS creations per minute limit for Splunk Synthetics in your organization
+     - ``sf.org.numThrottledMetricTimeSeriesCreateCallsByDatapointType``: Number of MTS by each product
+     - ``sf.org.apm.numDatapointsDroppedInTimeout``: Number of APM data points dropped 
+     - ``sf.org.rum.numDatapointsDroppedInTimeout``: Number of RUM data points dropped
+     - ``sf.org.synthetics.numDatapointsDroppedInTimeout``: Number of Synthetics data points dropped
 
    * :strong:`Customer impact`: Each product drops new MTS exceeding the limit without returning an error. Data points for existing MTS are still accepted.
