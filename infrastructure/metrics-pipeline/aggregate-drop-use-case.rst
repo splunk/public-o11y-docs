@@ -5,11 +5,6 @@
 Use case: Combine aggregation and dropping rules to control your metric cardinality and volume
 ****************************************************************************************************
 
-|hr|
-
-:strong:`Available in Enterprise Edition and Service Bureau`
-
-|hr|
 
 .. meta::
     :description: Aggregation and dropping use case for Metrics Pipeline Management.
