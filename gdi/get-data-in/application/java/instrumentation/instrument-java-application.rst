@@ -105,7 +105,7 @@ Activate AlwaysOn Profiling
 
 To activate AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
 
-To activate memory profiling, set the ``splunk.profiler.memory.activated`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+To activate memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
 
 The following example shows how to activate the profiler using the system property:
 
@@ -113,8 +113,8 @@ The following example shows how to activate the profiler using the system proper
    :emphasize-lines: 2,3,4,5
 
    java -javaagent:./splunk-otel-javaagent.jar \
-   -Dsplunk.profiler.activated=true \
-   -Dsplunk.profiler.memory.activated=true \
+   -Dsplunk.profiler.enabled=true \
+   -Dsplunk.profiler.memory.enabled=true \
    -Dotel.exporter.otlp.endpoint=http(s)://collector:4317 \
    -Dsplunk.metrics.endpoint=http(s)://collector:9943
    -jar <your_application>.jar
@@ -132,7 +132,7 @@ To activate automatic metric collection, activate the metrics feature using a sy
    :emphasize-lines: 2
 
    java -javaagent:./splunk-otel-javaagent.jar \
-   -Dsplunk.metrics.activated=true \
+   -Dsplunk.metrics.enabled=true \
    -jar <myapp>.jar
 
 If your metrics endpoint is different than the default value, set the ``SPLUNK_METRICS_ENDPOINT`` environment variable. See :ref:`metrics-configuration-java` for more information.

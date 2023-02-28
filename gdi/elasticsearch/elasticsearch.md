@@ -91,7 +91,7 @@ The following table shows the configuration options for this monitor:
 | `threadPools` | no | `list of strings` | ThreadPools to report threadpool node stats on (**default:** `[search index]`) |
 | `enableEnhancedClusterHealthStats` | no | `bool` | Activate Cluster level stats. These stats report only from master Elasticserach nodes. (**default:** `false`) |
 | `enableEnhancedIndexStatsForIndexGroups` | no | `list of strings` | Activate enhanced index level index stats groups. A list of index stats groups for which to collect enhanced stats |
-| `enableIndexStatsPrimaries` | no | `bool` | To activateindex stats from only primary shards. By default, the index stats collected are aggregated across all shards. (**default:** `false`) |
+| `enableIndexStatsPrimaries` | no | `bool` | To activate index stats from only primary shards. By default, the index stats collected are aggregated across all shards. (**default:** `false`) |
 | `metadataRefreshIntervalSeconds` | no | `integer` | How often to refresh metadata about the node and cluster (**default:** `30`) |
 
 
@@ -188,7 +188,7 @@ statistics.
 #### Primaries versus total
 By default, the monitor collects a subset of index stats of total aggregation
 type. The total for an index stat aggregates across all shards,
-whereas primaries only reflect the stats from primary shards. It is possible to activateindex
+whereas primaries only reflect the stats from primary shards. It is possible to activate index
 stats of only primaries
 aggregation type. The following is an example
 configuration that shows how to index stats from primary shards:

@@ -44,9 +44,9 @@ The following example sets different attributes to all new spans:
    // All new spans now include enduser.id
 
    SplunkRum.setGlobalAttributes({
-     'dark_mode.activated': darkModeToggle.status,
+     'dark_mode.enabled': darkModeToggle.status,
    });
-   // All new spans now include enduser.id and dark_mode.activated
+   // All new spans now include enduser.id and dark_mode.enabled
 
    SplunkRum.setGlobalAttributes()
    // New spans no longer include those attributes
@@ -68,14 +68,14 @@ The following example shows how to use ``getGlobalAttributes`` after using ``set
      'enduser.id': 'Test User',
    });
    SplunkRum.setGlobalAttributes({
-     'dark_mode.activated': darkModeToggle.status,
+     'dark_mode.enabled': darkModeToggle.status,
    });
 
    const attrs = SplunkRum.getGlobalAttributes();
    /* console.log(attrs)
    {
      'enduser.id': 'Test User',
-     'dark_mode.activated': true
+     'dark_mode.enabled': true
    }
    */
 

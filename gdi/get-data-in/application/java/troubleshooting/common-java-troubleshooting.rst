@@ -70,7 +70,7 @@ If you find an issue with a specific instrumentation of a library, or suspect th
 
 To deactivate a specific library instrumentation, add the following argument:
 
-``-Dotel.instrumentation.<name>.activated=false``
+``-Dotel.instrumentation.<name>.enabled=false``
 
 Replace ``<name>`` with the corresponding instrumentation from the OpenTelemetry Java instrumentation on GitHub at https://opentelemetry.io/docs/instrumentation/java/automatic/agent-config/#suppressing-specific-auto-instrumentation.
 
@@ -193,7 +193,7 @@ The Java agent logs the string ``JFR profiler is active`` at startup using an ``
 
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO com.splunk.opentelemetry.profiler.JfrActivator - JFR profiler is active.
 
-If the string does not appear, make sure that you've activated the profiler by setting the ``splunk.profiler.activated`` system property or the ``SPLUNK_PROFILER_ENABLED`` environment variable. See :ref:`profiling-configuration-java`.
+If the string does not appear, make sure that you've activated the profiler by setting the ``splunk.profiler.enabled`` system property or the ``SPLUNK_PROFILER_ENABLED`` environment variable. See :ref:`profiling-configuration-java`.
 
 Check the AlwaysOn Profiling configuration
 ----------------------------------------------------------------
@@ -204,13 +204,13 @@ If AlwaysOn Profiling is not working as intended, check the configuration settin
       
    [otel.javaagent 2021-09-28 18:17:04:237 +0000] [main] INFO <snip> - -----------------------
    [otel.javaagent 2021-09-28 18:17:04:237 +0000] [main] INFO <snip> - Profiler configuration:
-   [otel.javaagent 2021-09-28 18:17:04:238 +0000] [main] INFO <snip> -                 splunk.profiler.activated : true
+   [otel.javaagent 2021-09-28 18:17:04:238 +0000] [main] INFO <snip> -                 splunk.profiler.enabled : true
    [otel.javaagent 2021-09-28 18:17:04:239 +0000] [main] INFO <snip> -               splunk.profiler.directory : .
    [otel.javaagent 2021-09-28 18:17:04:244 +0000] [main] INFO <snip> -      splunk.profiler.recording.duration : 20s
    [otel.javaagent 2021-09-28 18:17:04:244 +0000] [main] INFO <snip> -              splunk.profiler.keep-files : false
    [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -           splunk.profiler.logs-endpoint : null
    [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -             otel.exporter.otlp.endpoint : http://collector:4317
-   [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -            splunk.profiler.tlab.activated : false
+   [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -            splunk.profiler.tlab.enabled : false
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO <snip> -   splunk.profiler.period.jdk.threaddump : null
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO <snip> - -----------------------
 
