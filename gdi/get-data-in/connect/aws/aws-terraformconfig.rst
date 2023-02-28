@@ -46,7 +46,9 @@ To configure an AWS connection through Terraform, perform the following steps:
 
   Terraform documentation identifies Splunk Observability Cloud as SignalFx or the ``signalfx_aws_integration``.
 
-4. Use the Splunk Observability Cloud API to specify the name of the org token to be used for data ingestion in the ``namedToken:"<name of token>"`` field. Supplying a value for ``namedToken`` lets you see how much traffic is coming from the integration it identifies.
+4. Use the Splunk Observability Cloud API to check the name of the :ref:`org token <admin-org-tokens>` to be used for data ingestion in the ``namedToken:"<name of token>"`` field. Supplying a value for ``namedToken`` lets you see how much traffic is coming from the integration it identifies.
+
+  You also need a session token or :ref:`API access token <admin-api-access-tokens>` to ingest data. Learn more about Observability Cloud tokens in :ref:`admin-tokens`.
 
 5. Add data sources as described in :guilabel:`Data Source: signalfx_aws_services`. See :new-page:`https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/data-sources/aws_services <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/data-sources/aws_services>` in the SignalFx provider section of the Terraform website for details.
 
