@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/tomcat` monitor via the Smart Agent Receiver. `collectd/tomcat` monitors Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/tomcat` monitor type for the Smart Agent Receiver. `collectd/tomcat` monitors Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
 
 > _**Note:**_ You must enable JMX Remote to monitor Tomcat remotely.
 

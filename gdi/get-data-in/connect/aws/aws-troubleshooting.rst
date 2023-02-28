@@ -8,9 +8,9 @@ Troubleshoot your AWS connection
    :description: Resolve AWS policy and permissions conflicts in Splunk Observability Cloud.
 
 
-If you have a problem connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, it is most likely caused by conflicts between policies and permissions.
+If you have a problem connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, it is most likely caused by conflicts between policies and permissions. See also :ref:`aws-ts-logs` for specific log troubleshooting.   
 
-.. note:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
+.. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
 .. _aws-ts-valid-connection:
 

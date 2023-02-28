@@ -18,6 +18,7 @@ Install and deploy the Collector
     Windows (script) <install-windows.rst>
     Windows (manual) <install-windows-manual.rst>
     deployments/otel-deployments.rst
+    otel-upgrade.rst
     uninstall-the-collector.rst
 
 See the available options to install the Splunk Distribution of the OpenTelemetry Collector.
@@ -27,7 +28,7 @@ See the available options to install the Splunk Distribution of the OpenTelemetr
 .. raw:: html
 
   <embed>
-    <h2>Guided install for the Collector</h2>
+    <h2>Guided install for the Collector<a name="collector-guided-install" class="headerlink" href="#collector-guided-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 Splunk Observability Cloud offers a guided setup to install the Collector:
@@ -45,7 +46,7 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 .. raw:: html
 
   <embed>
-    <h2>Install using packages</h2>
+    <h2>Install using packages<a name="collector-package-install" class="headerlink" href="#collector-package-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, and Windows. Deploy one of the following packages to gather data for Infrastructure Monitoring, APM, and Log Observer:

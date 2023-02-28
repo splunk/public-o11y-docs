@@ -45,12 +45,12 @@ To view available usage reports, select :menuselection:`Settings > Subscription 
 
 .. _dpm-usage-report:
 
-To view usage reports available for download, click :guilabel:`View detailed usage reports`. Available reports are shown on the :strong:`Billed Usage` tab.
+To view usage reports available for download, click :guilabel:`View detailed usage reports`. Available reports are shown on the :strong:`Usage` tab.
 
 .. image:: /_images/admin/dpm-summary-tab.png
       :width: 99%
 
-Different reports are available on the :strong:`Billed Usage` and :strong:`Usage Breakdown` tabs. Clicking on the icon for a report downloads the report. In some browsers, you might have to right click on the icon and save the report. 
+Different reports are available on the :strong:`Usage` and :strong:`Usage Breakdown` tabs. Clicking on the icon for a report downloads the report. In some browsers, you might have to right click on the icon and save the report. 
 
 All reports are tab-separated text files. They are designed to be imported into a spreadsheet application, such as Microsoft Excel, Google Sheets, and Apple Numbers.
 
@@ -60,7 +60,7 @@ All reports are tab-separated text files. They are designed to be imported into 
 Data points per minute detail report
 =============================================================================
 
-This report, available on the Billed Usage tab, shows the total number of data points sent for each minute of a month (or month to date, for the current month). It follows your usage period, and uses the month in which a usage period starts as the label in the report link. For example, if your usage period starts on the 10th of the month, then a link for 'March 2018' will cover the period of March 10 through April 9, 2018.
+This report, available on the Usage tab, shows the total number of data points sent for each minute of a month (or month to date, for the current month). It follows your usage period, and uses the month in which a usage period starts as the label in the report link. For example, if your usage period starts on the 10th of the month, then a link for 'March 2018' will cover the period of March 10 through April 9, 2018.
 
 
 Report format

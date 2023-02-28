@@ -352,11 +352,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Splunk Distribution of OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
-   :maxdepth:   3
-
-   Collector commands reference <gdi/agent-commands/otel-commands>
-
-.. toctree::
    :maxdepth: 3
 
    gdi/other-ingestion-methods/other-data-ingestion-methods

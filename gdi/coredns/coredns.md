@@ -6,11 +6,11 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `coredns` monitor via the Smart Agent Receiver. This monitor scrapes Prometheus metrics exposed by CoreDNS. The default port for these metrics are exposed on port 9153, at the `/metrics` path.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `coredns` monitor type for the Smart Agent Receiver. This monitor scrapes Prometheus metrics exposed by CoreDNS. The default port for these metrics are exposed on port 9153, at the `/metrics` path.
 
 ##  Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 

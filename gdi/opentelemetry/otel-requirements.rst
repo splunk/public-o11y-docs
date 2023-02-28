@@ -13,11 +13,13 @@ Collector requirements
     :hidden:
 
     security.rst
+    exposed-endpoints.rst
     sizing.rst
     collector-architecture.rst
 
 Keep in mind the following pre-requisites, requirements, and general considerations when using the Collector:
 
 * :ref:`otel-security`
+* :ref:`otel-exposed-endpoints`
 * :ref:`otel-sizing`
 * :ref:`collector-architecture`

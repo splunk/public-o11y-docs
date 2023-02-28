@@ -7,36 +7,24 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Host process monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Host process monitor type for the Smart Agent Receiver. 
 
-This monitor gathers information about processes running on the host.
-
-```{note}
 To collect metrics about processes running on a host, use the {ref}`Host metrics receiver <host-metrics-receiver>`. 
-```
 
 ```{note}
-Metrics produced by this receiver count towards the custom metric ingestion limit. See {ref}`System limits for Splunk Infrastructure Monitoring <sys-limits>`.
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
 ```
 
 ## Benefits
 
 ```{include} /_includes/benefits.md
-
 ```
-
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 
 ```
-```{note}
-
-This monitor is not available on Windows.
-
-```
-
 ## Configuration
 This monitor type is available in the Smart Agent Receiver, which is part of the Splunk Distribution of OpenTelemetry Collector. You can use existing Smart Agent monitors as OpenTelemetry Collector metric receivers with the Smart Agent Receiver. This monitor type requires a properly configured environment on your system, in which you’ve installed a functional Smart Agent release bundle. The Splunk Distribution of OpenTelemetry Collector provides this bundle in the installation paths for ``x86_64/amd64``. 
 
@@ -85,6 +73,8 @@ The following table shows the configuration options for the host process monitor
 
 
 ## Metrics
+
+Metrics produced by this receiver count towards the custom metric ingestion limit. See {ref}`System limits for Splunk Infrastructure Monitoring <sys-limits>`.
 
 The following metrics are available for this integration:
 

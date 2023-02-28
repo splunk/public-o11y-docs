@@ -25,7 +25,7 @@ You can only use autodiscovery when this monitor is in `client` mode.
 
 ## Installation
 
-These monitors are available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+These monitors are available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install these integrations:
 

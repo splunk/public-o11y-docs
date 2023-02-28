@@ -1,4 +1,5 @@
 .. _migration-monitors:
+.. _otel-smart-agent:
 
 ********************************************************************************************************
 Use Smart Agent monitors with the Collector
@@ -7,18 +8,18 @@ Use Smart Agent monitors with the Collector
 .. meta::
    :description: Describes how to use Smart Agent monitors with the Smart Agent Receiver in the Collector.
 
-.. _note: 
+.. note:: 
 
    The Smart Agent receiver is fully supported only on x86_64/amd64 platforms.
 
-The ``smartagent`` receiver lets you use :ref:`SignalFx Smart Agent monitors <monitor-data-sources>` in the Splunk Distribution of OpenTelemetry Collector. Many monitors also require a Smart Agent release bundle, which the Splunk Distribution of OpenTelemetry Collector installs on supported x86_64/amd64 platforms.
+The ``smartagent`` receiver and its associated extension are :ref:`Collector components <otel-components>` that allow you to add :ref:`SignalFx Smart Agent monitors <monitor-data-sources>` into the :ref:`pipelines <otel-data-processing>` of your Splunk Distribution of OpenTelemetry Collector. Many monitors also require a Smart Agent release bundle, which the Splunk Distribution of OpenTelemetry Collector installs on supported x86_64/amd64 platforms.
 
 Configure the Smart Agent receiver
 ================================================================
 
-For each Smart Agent monitor you want to add to the Collector, add a ``smartagent`` receiver or collectd configuration block in the global Smart Agent Extension section of your :ref:`Collector configuration <otel-configuration>`. Each ``smartagent`` receiver acts as a drop-in replacement for its corresponding Smart Agent monitor.
+For each Smart Agent monitor you want to add to the Collector, add a ``smartagent`` receiver and ``smartagent`` service pipeline in your :ref:`Collector configuration file <otel-configuration>`. Each ``smartagent`` receiver acts as a drop-in replacement for its corresponding Smart Agent monitor.
 
-Instead of using ``discoveryRule``, use the Collector's Receiver Creator and Observer extensions.
+Instead of using ``discoveryRule``, use the Collector's receiver creator and observer extensions. See :ref:`receiver-creator-receiver` for more information.
 
 If you're using a SignalFx Forwarder monitor, add it to both a ``traces`` and a ``metrics`` pipeline, and use a Sapm exporter and a SignalFx exporter, as each pipeline's exporter, respectively. See more on :ref:`exporters <collector-components-processors>`.
 
@@ -44,6 +45,13 @@ If you have a monitor that updates dimension properties or tags, put the name of
   * Sample monitors: ``ecs-metadata``, ``heroku-metadata``, ``kubernetes-cluster``, ``openshift-cluster``, ``postgresql``, or ``sql``.
 
 If you don't specify any exporters in this array field, the receiver attempts to use the Collector pipeline to which it's connected. If the next element of the pipeline isn't compatible with updating dimensions, and if you configured a single SignalFx exporter, the receiver uses that SignalFx exporter. If you don't require dimension updates, you can specify the empty array ``[]`` to disable it.
+
+Smart Agent extension
+==================================
+
+The Smart Agent extension offers collectd and Python extensions. Extensions are available primarily for tasks that do not involve processing data. Examples of extensions include health monitoring, service discovery, and data forwarding. Extensions are optional.
+
+See :new-page:`SignalFx Smart Agent Extension <https://github.com/signalfx/splunk-otel-collector/blob/main/pkg/extension/smartagentextension/README.md>` in GitHub to copy the configuration YAML file.
 
 .. _migration-monitors-example:
 
