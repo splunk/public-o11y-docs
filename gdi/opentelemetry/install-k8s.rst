@@ -90,7 +90,6 @@ To set your cloud provider and configure ``cloud.platform`` for the resource det
 
    --set cloudProvider={azure|gcp|eks|openshift} 
 
-Read more about :ref:`otel-kubernetes-config`.
 
 Set Helm using a YAML file
 --------------------------------
@@ -129,7 +128,10 @@ Add this configuration in the resources file for any pods in the deployment:
 Additional configuration resources
 ------------------------------------------
 
-See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
+See also:
+
+* :ref:`otel-kubernetes-config`.
+* :new-page:`Examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.
 
 Verify the deployment
 --------------------------------
