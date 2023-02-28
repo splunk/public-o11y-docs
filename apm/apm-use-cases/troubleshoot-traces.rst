@@ -22,20 +22,10 @@ As most reports happened in the weeks following the release of the recommendatio
 
 The search reduces the amount of traces to a few thousand from the millions available in Splunk APM. Alex notices that the tablet throws the most errors among the types of devices, so they decide to switch the grouping tag to ``tablet.brand``. Alex then selects the :guilabel:`Group Metrics` tab to dig into each value of the grouping tag.
 
-2. Explore the duration heatmap
+2. Return to confirm solution
 ==================================
 
-After pinpointing the tablet brands that are more problematic, Alex feels more confident about the issue. They use the chart selector to load the :guilabel:`Trace duration` chart, which shows the number of traces by duration for each period within the time frame.
-
-Another pattern emerges: the highest latencies happen during the weekends. Alex clicks and drags the chart to zoom into weekend days, which confirms the high latencies and reduces the number of traces listed.
-
-All the available evidence indicates that the issues occur on Amazon tablets at certain times of the day. With this information, Alex goes back to the :guilabel:`Traces` tab and sets a minimum duration to find long, problematic traces they can analyze.
-
-3. Return to confirm solution
-==================================
-
-After the back-end team confirmed and solved the issue affecting the Android tablet clients, Alex returns to the saved Trace Analyzer view and changes the time range to the current week. They immediately notice that the amount of errors and the latencies are back to normal. Eager to keep an eye on the issue, Alex configures new alerts based on the trace
-metadata they might collect.
+After the back-end team confirmed and solved the issue affecting the Android tablet clients, Alex returns to the saved Trace Analyzer view and changes the time range to the current week. They immediately notice that the amount of errors and the latencies are back to normal. Eager to keep an eye on the issue, Alex configures new alerts based on the trace metadata they might collect.
 
 Summary
 ====================================================================================
@@ -45,6 +35,6 @@ Thanks to the high resolution data provided by full-fidelity tracing and to the 
 Learn more
 --------------------
 
-- For more information on Trace Analyzer, see :ref:`trace-search`.
+- For more information on Trace Analyzer, see :ref:`trace-analyzer`.
 - For a list of APM key concepts, see :ref:`apm-key-concepts`.
 - For more Splunk APM use cases, see :ref:`apm-use-cases-intro`.
