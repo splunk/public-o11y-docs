@@ -25,7 +25,7 @@ Migrate to the Splunk Distribution of OpenTelemetry Java
 
 To migrate from the SignalFx Java Agent to the Splunk Distribution of OpenTelemetry Java, follow these steps:
 
-#. Install and enable the Java agent. See :ref:`install-enable-jvm-agent`.
+#. Install and activate the Java agent. See :ref:`install-enable-jvm-agent`.
 #. Specify the endpoint of the OpenTelemetry Collector you're exporting traces to. See :ref:`trace-exporters-settings-java`.
 #. In your application startup script, replace ``-javaagent:./signalfx-tracing.jar`` with ``-javaagent:/path/to/splunk-otel-javaagent.jar``.
 
@@ -56,10 +56,10 @@ The following table shows SignalFx Java Agent system properties and their OpenTe
      - ``otel.resource.attributes=deployment.environment=<environment_name>``
    * - ``signalfx.endpoint.url``
      - ``otel.exporter.otlp.endpoint`` or ``otel.exporter.jaeger.endpoint``, depending on which trace exporter you're using. OTLP is the default.
-   * - ``signalfx.tracing.enabled``
-     - ``otel.javaagent.enabled``
-   * - ``signalfx.integration.<name>.enabled=false``
-     - ``otel.instrumentation.<id>.enabled=false``. For more information, see :ref:`java-instrumentation-issues`.
+   * - ``signalfx.tracing.activated``
+     - ``otel.javaagent.activated``
+   * - ``signalfx.integration.<name>.activated=false``
+     - ``otel.instrumentation.<id>.activated=false``. For more information, see :ref:`java-instrumentation-issues`.
    * - ``signalfx.span.tags``
      - ``otel.resource.attributes=<comma-separated key=value pairs>``
    * - ``signalfx.trace.annotated.method.blacklist``
@@ -67,7 +67,7 @@ The following table shows SignalFx Java Agent system properties and their OpenTe
    * - ``signalfx.trace.methods``
      - ``otel.trace.methods``
    * - ``signalfx.server.timing.context``
-     - ``splunk.trace-response-header.enabled``
+     - ``splunk.trace-response-header.activated``
 
 The following table shows SignalFx Java Agent environment variables and their OpenTelemetry equivalents:
 

@@ -42,21 +42,21 @@ If the following error appears, you must either set the value of the ``SPLUNK_RE
 
 For instructions on how to define a custom exporter endpoint, see :ref:`trace-exporters-settings-lambda`.
 
-Disable instrumentations that load automatically
+Deactivate instrumentations that load automatically
 ==================================================
 
-Some of the wrappers included in the Splunk OpenTelemetry Lambda Layer load instrumentations for popular libraries or frameworks automatically. To disable instrumentations that load automatically, follow these steps:
+Some of the wrappers included in the Splunk OpenTelemetry Lambda Layer load instrumentations for popular libraries or frameworks automatically. To deactivate instrumentations that load automatically, follow these steps:
 
 .. tabs::
 
    .. group-tab:: Python
 
-      Enter the instrumentations you want to disable as comma-separated values for the ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS`` environment variable. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
+      Enter the instrumentations you want to deactivate as comma-separated values for the ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS`` environment variable. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
 
-Enable debug logging
+Activate debug logging
 ==================================================
 
-If trace data for your function still doesn't appear in Observability Cloud, enable logging to collect debugging information:
+If trace data for your function still doesn't appear in Observability Cloud, activate logging to collect debugging information:
 
 #. Set the ``OTEL_LAMBDA_LOG_LEVEL`` environment variable to ``DEBUG`` for your instrumented function.
 #. Check AWS CloudWatch for spans.

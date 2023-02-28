@@ -117,7 +117,7 @@ To migrate settings from the SignalFx tracing library to the Splunk Distribution
    * - ``SIGNALFX_SPAN_TAGS``
      - ``OTEL_RESOURCE_ATTRIBUTES`` as comma-separated key-value pairs. See :ref:`advanced-nodejs-otel-configuration`.
    * - ``SIGNALFX_LOGS_INJECTION``
-     - Not applicable. Log injection is always enabled. See :ref:`correlate-traces-with-logs-nodejs`.
+     - Not applicable. Log injection is always activated. See :ref:`correlate-traces-with-logs-nodejs`.
    * - ``SIGNALFX_LOGS_INJECTION_TAGS``
      - Not applicable See :ref:`correlate-traces-with-logs-nodejs`.
    * - ``SIGNALFX_ENABLED_PLUGINS``
@@ -140,7 +140,7 @@ If you're using the passing configuration options as arguments to ``start()``, u
      - ``endpoint``
    * - ``accessToken``
      - ``accessToken``
-   * - ``enabled``
+   * - ``activated``
      - No equivalent. Use the ``OTEL_TRACE_ENABLED`` environment variable.
    * - ``debug``
      - No equivalent. See :ref:`migrate-logging-nodejs`.

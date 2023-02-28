@@ -110,12 +110,12 @@ Status check metrics are not displayed.
 Cause
 ^^^^^^
 
-For legacy individual AWS integrations, status check metrics are not enabled by default.
+For legacy individual AWS integrations, status check metrics are not activated by default.
 
 Solution
 ^^^^^^^^^
 
-Enable the metrics for your integration. 
+Activate the metrics for your integration. 
 
 To do so, follow these steps:
 

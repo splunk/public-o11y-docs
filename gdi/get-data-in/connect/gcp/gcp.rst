@@ -38,7 +38,7 @@ You must be an administrator of your Splunk Observability Cloud organization to 
    </embed>
 
 * If you want to use the :strong:`Project Viewer` role, skip to :ref:`Configure GCP <gcp-two>`. Choosing this role ensures that any functionality update implemented in Infrastructure Monitoring doesn't require changes to your GCP setup.
-* If you want to use a role with more restrictive permissions than those available to Project Viewer, make sure your selected role has sufficient permissions to connect to Infrastructure Monitoring. If your GCP service account role has insufficient permissions, you'll get an error message when trying to connect to Infrastructure Monitoring. Review and enable any missing permissions, or change the role to Project Viewer.
+* If you want to use a role with more restrictive permissions than those available to Project Viewer, make sure your selected role has sufficient permissions to connect to Infrastructure Monitoring. If your GCP service account role has insufficient permissions, you'll get an error message when trying to connect to Infrastructure Monitoring. Review and activate any missing permissions, or change the role to Project Viewer.
 
 The following table specifies the permissions required for GCP integrations.
 
@@ -56,22 +56,22 @@ The following table specifies the permissions required for GCP integrations.
       - Yes
 
    *  - ``serviceusage.services.use``
-      - Yes, if you want to enable the use of a quota from the project where metrics are stored
+      - Yes, if you want to activate the use of a quota from the project where metrics are stored
 
    *  - ``compute.instances.list``
-      - Yes, if the Compute Engine service is enabled
+      - Yes, if the Compute Engine service is activated
 
    *  - ``compute.machineTypes.list``
-      - Yes, if the Compute Engine service is enabled
+      - Yes, if the Compute Engine service is activated
 
    *  - ``container.clusters.list``
-      - Yes, if the Kubernetes (GKE) service is enabled
+      - Yes, if the Kubernetes (GKE) service is activated
 
    *  - ``container.nodes.list``
-      - Yes, if the Kubernetes (GKE) service is enabled
+      - Yes, if the Kubernetes (GKE) service is activated
 
    *  - ``container.pods.list``
-      - Yes, if the Kubernetes (GKE) service is enabled
+      - Yes, if the Kubernetes (GKE) service is activated
 
    *  - ``monitoring.metricDescriptors.get``
       - Yes
@@ -86,13 +86,13 @@ The following table specifies the permissions required for GCP integrations.
       - Yes, if you want to sync project metadata (such as labels), or if you need to obtain metrics from monitored projects of a scoping project  
 
    *  - ``serviceusage.services.use``
-      - Yes, if you want to enable the use of a quota from the project where metrics are stored
+      - Yes, if you want to activate the use of a quota from the project where metrics are stored
 
    *  - ``spanner.instances.list``
-      - Yes, if the Spanner service is enabled
+      - Yes, if the Spanner service is activated
 
    *  - ``storage.buckets.list``
-      - Yes, if the Spanner service is enabled
+      - Yes, if the Spanner service is activated
 
 .. _gcp-two:
 
@@ -127,8 +127,8 @@ To configure your GCP service, follow these steps:
 
 #. Select :guilabel:`CREATE`.
 #. (Optional) Select a role to grant this Service account access to the selected project, then select :guilabel:`CONTINUE`.
-#. Enable Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer.
-#. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and enable the Cloud Resource Manager API. You need to enable this API so Splunk Infrastructure Monitoring can use it to validate permissions on the service account keys.
+#. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer.
+#. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and activate the Cloud Resource Manager API. You need to activate this API so Splunk Infrastructure Monitoring can use it to validate permissions on the service account keys.
 
 .. _gcp-projects:
 

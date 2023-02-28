@@ -157,7 +157,7 @@ After any configuration modification, run ``sudo systemctl restart td-agent`` to
 
 If the td-agent package is upgraded after initial installation, you might need to set the Linux capabilities for the new version by performing the following steps for td-agent versions 4.1 or later:
 
-#. Check for the enabled capabilities:
+#. Check for the activated capabilities:
 
    .. code-block:: bash
 
@@ -418,7 +418,7 @@ Do the following to install the package using a Debian or RPM package:
     baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
     gpgcheck=1
     gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
-    enabled=1
+    activated=1
     EOH
 
     yum install -y splunk-otel-collector
@@ -433,7 +433,7 @@ Do the following to install the package using a Debian or RPM package:
     baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
     gpgcheck=1
     gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
-    enabled=1
+    activated=1
     EOH
 
     dnf install -y splunk-otel-collector
@@ -448,7 +448,7 @@ Do the following to install the package using a Debian or RPM package:
     baseurl=https://splunk.jfrog.io/splunk/otel-collector-rpm/release/\$basearch
     gpgcheck=1
     gpgkey=https://splunk.jfrog.io/splunk/otel-collector-rpm/splunk-B3CD4420.pub
-    enabled=1
+    activated=1
     EOH
 
     zypper install -y splunk-otel-collector

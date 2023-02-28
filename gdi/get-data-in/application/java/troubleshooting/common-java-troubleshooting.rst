@@ -21,18 +21,18 @@ The following steps can help you troubleshoot Java agent issues:
 
 .. _enable-java-debug-logging:
 
-Enable debug logging
+Activate debug logging
 -------------------------------------------------------
 
 Debug logging is a special execution mode that outputs more information about the Java agent of the Splunk Distribution of OpenTelemetry Java. This can help you troubleshoot Java instrumentation issues.
 
-To turn on debug logging for the Java agent, select one of the following options:
+To activate debug logging for the Java agent, select one of the following options:
 
 - Pass the following argument when running your application: ``-Dotel.javaagent.debug=true``.
 
 - Set the ``OTEL_JAVAAGENT_DEBUG`` environment variable to ``true`` before running your application.
 
-When you run the agent with debug logging enabled, debug information is sent to the console as ``stderr``. Debug log entries look like the following example:
+When you run the agent with debug logging activated, debug information is sent to the console as ``stderr``. Debug log entries look like the following example:
 
 .. code-block:: bash
 
@@ -43,7 +43,7 @@ When you run the agent with debug logging enabled, debug information is sent to 
 
 While not all debug entries are relevant to the issue affecting your Java instrumentation, the root cause is likely to appear in your debug log.
 
-.. note:: Enable debug logging only when needed. Debug mode requires more resources.
+.. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
 .. _verify-runtime-status:
 
@@ -66,11 +66,11 @@ If the instrumented JVM doesn't appear in the list, check the JVM or application
 Library instrumentation issues
 ==============================================================
 
-If you find an issue with a specific instrumentation of a library, or suspect there might be an issue affecting that instrumentation, disabling it can help you troubleshoot the Java agent.
+If you find an issue with a specific instrumentation of a library, or suspect there might be an issue affecting that instrumentation, deactivating it can help you troubleshoot the Java agent.
 
-To disable a specific library instrumentation, add the following argument:
+To deactivate a specific library instrumentation, add the following argument:
 
-``-Dotel.instrumentation.<name>.enabled=false``
+``-Dotel.instrumentation.<name>.activated=false``
 
 Replace ``<name>`` with the corresponding instrumentation from the OpenTelemetry Java instrumentation on GitHub at https://opentelemetry.io/docs/instrumentation/java/automatic/agent-config/#suppressing-specific-auto-instrumentation.
 
@@ -81,11 +81,11 @@ Class instrumentation issues
 
 You can prevent specific classes from being instrumented. Excluded classes don't send spans, which is useful for muting specific classes or packages.
 
-To disable instrumentation for a class, set the ``otel.javaagent.exclude-classes`` system property or the ``OTEL_JAVAAGENT_EXCLUDE_CLASSES`` environment variable to the name of the class or classes.
+To deactivate instrumentation for a class, set the ``otel.javaagent.exclude-classes`` system property or the ``OTEL_JAVAAGENT_EXCLUDE_CLASSES`` environment variable to the name of the class or classes.
 
 You can enter multiple classes. For example, ``my.package.MyClass,my.package2.*``.
 
-.. caution:: Disabling instrumentation for specific classes can have unintended side effects. Use this feature with caution.
+.. caution:: Deactivating instrumentation for specific classes can have unintended side effects. Use this feature with caution.
 
 .. _java-trace-exporter-issues:
 
@@ -107,7 +107,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 
 #. Make sure that ``otel.exporter.otlp.endpoint`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your OTel Collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
-#. Check that the OTLP gRPC receiver is enabled in the OTel Collector and plugged into the traces pipeline.
+#. Check that the OTLP gRPC receiver is activated in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
 Channel pipeline error
@@ -143,7 +143,7 @@ To troubleshoot the lack of connectivity between Jaeger and Splunk Observability
 
 1. Make sure that ``otel.exporter.jaeger.endpoint`` points to an OpenTelemetry Collector or Smart Agent instance, or to the Splunk Ingest URL. See :new-page:`Send data measurements <https://dev.splunk.com/observability/docs/apibasics/send_data_basics#Send-data-measurements>` in the Splunk Developer documentation.
 2. Check that the OpenTelemetry Collector or Smart Agent instance is configured and running.
-3. Check that the Jaeger Thrift HTTP receiver is enabled and plugged into the traces pipeline. See :ref:`otel-exposed-endpoints`.
+3. Check that the Jaeger Thrift HTTP receiver is activated and plugged into the traces pipeline. See :ref:`otel-exposed-endpoints`.
 4. Check that the endpoint is correct. The OpenTelemetry Collector or Smart Agent use different ports and paths by default. For the Jaeger receiver, the OTel Collector uses ``http://<host>:14268/api/traces``, while the Smart Agent uses ``http://<host>:9080/v1/trace``.
 
 401 error when sending spans
@@ -184,16 +184,16 @@ Troubleshoot AlwaysOn Profiling for Java
 
 Follow these steps to troubleshoot issues with AlwaysOn Profiling:
 
-Check that AlwaysOn Profiling is enabled
+Check that AlwaysOn Profiling is activated
 ----------------------------------------------------------------
 
-The Java agent logs the string ``JFR profiler is active`` at startup using an ``INFO`` message. To check whether AlwaysOn Profiling is enabled, search your logs for strings similar to the following:
+The Java agent logs the string ``JFR profiler is active`` at startup using an ``INFO`` message. To check whether AlwaysOn Profiling is activated, search your logs for strings similar to the following:
 
 .. code-block:: bash 
 
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO com.splunk.opentelemetry.profiler.JfrActivator - JFR profiler is active.
 
-If the string does not appear, make sure that you've enabled the profiler by setting the ``splunk.profiler.enabled`` system property or the ``SPLUNK_PROFILER_ENABLED`` environment variable. See :ref:`profiling-configuration-java`.
+If the string does not appear, make sure that you've activated the profiler by setting the ``splunk.profiler.activated`` system property or the ``SPLUNK_PROFILER_ENABLED`` environment variable. See :ref:`profiling-configuration-java`.
 
 Check the AlwaysOn Profiling configuration
 ----------------------------------------------------------------
@@ -204,20 +204,20 @@ If AlwaysOn Profiling is not working as intended, check the configuration settin
       
    [otel.javaagent 2021-09-28 18:17:04:237 +0000] [main] INFO <snip> - -----------------------
    [otel.javaagent 2021-09-28 18:17:04:237 +0000] [main] INFO <snip> - Profiler configuration:
-   [otel.javaagent 2021-09-28 18:17:04:238 +0000] [main] INFO <snip> -                 splunk.profiler.enabled : true
+   [otel.javaagent 2021-09-28 18:17:04:238 +0000] [main] INFO <snip> -                 splunk.profiler.activated : true
    [otel.javaagent 2021-09-28 18:17:04:239 +0000] [main] INFO <snip> -               splunk.profiler.directory : .
    [otel.javaagent 2021-09-28 18:17:04:244 +0000] [main] INFO <snip> -      splunk.profiler.recording.duration : 20s
    [otel.javaagent 2021-09-28 18:17:04:244 +0000] [main] INFO <snip> -              splunk.profiler.keep-files : false
    [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -           splunk.profiler.logs-endpoint : null
    [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -             otel.exporter.otlp.endpoint : http://collector:4317
-   [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -            splunk.profiler.tlab.enabled : false
+   [otel.javaagent 2021-09-28 18:17:04:245 +0000] [main] INFO <snip> -            splunk.profiler.tlab.activated : false
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO <snip> -   splunk.profiler.period.jdk.threaddump : null
    [otel.javaagent 2021-09-28 18:17:04:246 +0000] [main] INFO <snip> - -----------------------
 
 JFR is not available error
 -----------------------------------------------
 
-If your Java Virtual Machine does not support Java Flight Recording (JFR), the profiler logs a warning at startup with the message ``Java Flight Recorder (JFR) is not available in this JVM. Profiling is disabled.``. 
+If your Java Virtual Machine does not support Java Flight Recording (JFR), the profiler logs a warning at startup with the message ``Java Flight Recorder (JFR) is not available in this JVM. Profiling is deactivated.``. 
 
 To use the profiler, upgrade your JVM version to 8u262 and higher. See :ref:`java-otel-requirements`.
 
@@ -261,13 +261,13 @@ The following snippet contains a sample ``profiling`` pipeline:
 Loss of profiling data or gaps in profiling data
 -------------------------------------------------------------
 
-If there are less than 100 megabytes of space available for the Java Virtual Machine, AlwaysOn Profiling enables the recording escape hatch, which appears in the logs as ``com.splunk.opentelemetry.profiler.RecordingEscapeHatch``. The escape hatch drops all logs with profiling data until more space is available.
+If there are less than 100 megabytes of space available for the Java Virtual Machine, AlwaysOn Profiling activates the recording escape hatch, which appears in the logs as ``com.splunk.opentelemetry.profiler.RecordingEscapeHatch``. The escape hatch drops all logs with profiling data until more space is available.
 
 To avoid the loss of profiling data due to the escape hatch, provide enough resources to the JVM.
 
 .. _disable-java-agent-logs:
 
-Disable all Java agent logs
+Deactivate all Java agent logs
 ============================================================
 
 By default, the Splunk Java agent outputs logs to the console. In certain situations you might want to silence the output of the agent so as not to clutter the system logs. 

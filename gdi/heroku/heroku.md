@@ -33,7 +33,7 @@ Follow these steps to collect metrics with the Heroku buildpack for the Splunk D
 2. Configure the Heroku app to expose Dyno metadata, which is required by Splunk OpenTelemetry Connector to set global dimensions such as `app_name`, `app_id` and `dyno_id`. See [here](https://devcenter.heroku.com/articles/dyno-metadata) for more information.
    
    ``` bash
-   heroku labs:enable runtime-dyno-metadata
+   heroku labs:activate runtime-dyno-metadata
    ```
 
 3. Run both of the following commands together to add the Heroku buildpack.

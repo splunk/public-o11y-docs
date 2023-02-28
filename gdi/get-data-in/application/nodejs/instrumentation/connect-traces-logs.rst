@@ -22,10 +22,10 @@ The Splunk Distribution of OpenTelemetry JS automatically supports the following
 
 .. _nodejs-traces-logs-enable:
 
-Enable logs injection
+Activate logs injection
 =====================================================
 
-Log injection is already enabled for the supported libraries. To inject trace data into formatted logs, see the documentation for each library.
+Log injection is already activated for the supported libraries. To inject trace data into formatted logs, see the documentation for each library.
 
 .. _nodejs-include-trace-data:
 

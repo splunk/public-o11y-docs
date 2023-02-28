@@ -50,7 +50,7 @@ Put the `opcache_stat.php` script in `/srv/http/monitoring` and run the followin
 ```bash
 curl http://localhost/monitoring/opcache_stat.php
 {
-"opcache_enabled": true,
+"opcache_activated": true,
 "cache_full": false,
 "restart_pending": false,
 "restart_in_progress": false,

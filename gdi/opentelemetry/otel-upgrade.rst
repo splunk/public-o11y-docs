@@ -130,11 +130,11 @@ Upgrade the Collector for Windows
 Chocolatey
 ------------------
 
-If you're using :ref:`Chocolatey <windows-chocolatey>`, in order to remember parameters when upgrading, before installation you need to enable the following feature:
+If you're using :ref:`Chocolatey <windows-chocolatey>`, in order to remember parameters when upgrading, before installation you need to activate the following feature:
 
 .. code-block:: PowerShell
 
-  choco feature enable -n=useRememberedArgumentsForUpgrades
+  choco feature activate -n=useRememberedArgumentsForUpgrades
 
 To upgrade, run the following command in PowerShell:
 

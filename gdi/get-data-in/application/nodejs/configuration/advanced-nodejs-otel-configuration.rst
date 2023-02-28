@@ -43,7 +43,7 @@ Configuration for each of the supported data type, such as metrics or tracing, i
       },
    });
 
-You can also enable the collection of a specific data type by passing a boolean value instead of an object. For example:
+You can also activate the collection of a specific data type by passing a boolean value instead of an object. For example:
 
 .. code-block:: javascript
 
@@ -76,10 +76,10 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Required if you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - ``tracing.serverTimingEnabled``
-     - Enables the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-nodejs`. The default value is ``true``.
+     - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-nodejs`. The default value is ``true``.
    * - ``OTEL_LOG_LEVEL``
      - ``logLevel`` 
-     - Log level for the OpenTelemetry diagnostic console logger. To enable debug logging, set the ``debug`` value. Available values are ``error``, ``info``, ``debug``, and ``verbose``. The default value is ``none``.
+     - Log level for the OpenTelemetry diagnostic console logger. To activate debug logging, set the ``debug`` value. Available values are ``error``, ``info``, ``debug``, and ``verbose``. The default value is ``none``.
 
 .. _trace-configuration-nodejs:
 
@@ -96,7 +96,7 @@ The following settings control tracing limits and attributes:
      - Description
    * - ``OTEL_TRACE_ENABLED``
      -  Not applicable
-     - Enables tracer creation and autoinstrumentation. Default value is ``true``.
+     - Activates tracer creation and autoinstrumentation. Default value is ``true``.
    * - ``OTEL_SERVICE_NAME``
      - ``serviceName``
      - Name of the service or application you're instrumenting. Takes precedence over the service name defined in the ``OTEL_RESOURCE_ATTRIBUTES`` variable.
@@ -215,10 +215,10 @@ The following settings control the AlwaysOn Profiling feature for the Node.js ag
      - Description
    * - ``SPLUNK_PROFILER_ENABLED``
      - ``profilingEnabled``
-     - Enables AlwaysOn Profiling. The default value is ``false``.
+     - Activates AlwaysOn Profiling. The default value is ``false``.
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
      - ``profiling.memoryProfilingEnabled``
-     - Enables memory profiling for AlwaysOn Profiling. The default value is ``false``.
+     - Activates memory profiling for AlwaysOn Profiling. The default value is ``false``.
    * - ``SPLUNK_PROFILER_LOGS_ENDPOINT``
      - ``profiling.endpoint``
      - The collector endpoint for profiler logs. The default value is ``localhost:4317``.
@@ -245,7 +245,7 @@ To configure AlwaysOn Profiling programmatically, pass the arguments to the ``st
 Metrics configuration
 ===============================================================
 
-The following settings enable runtime metrics collection:
+The following settings activate runtime metrics collection:
 
 .. list-table:: 
    :header-rows: 1
@@ -254,8 +254,8 @@ The following settings enable runtime metrics collection:
      - Argument to ``start()``
      - Description
    * - ``SPLUNK_METRICS_ENABLED``
-     - Enabled by calling ``start``.
-     - Enables metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
+     - Activated by calling ``start``.
+     - Activates metrics collection. The default value is ``false``. For more information on Node metrics, see :ref:`nodejs-otel-metrics`.
    * - ``SPLUNK_METRICS_ENDPOINT``
      - ``metrics.endpoint``
      - The metrics endpoint. Takes precedence over ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``. When ``SPLUNK_REALM`` is used, the default value is ``https://ingest.<realm>.signalfx.com/v2/datapoint/otlp``.
@@ -267,7 +267,7 @@ The following settings enable runtime metrics collection:
      - The interval, in milliseconds, of metrics collection and exporting. The default value is ``30000``.
    * - ``SPLUNK_RUNTIME_METRICS_ENABLED``
      - ``metrics.runtimeMetricsEnabled``
-     - Enable collecting and exporting of runtime metrics. The default value is ``true``. Runtime metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true`` or if memory profiling is enabled.
+     - Activate collecting and exporting of runtime metrics. The default value is ``true``. Runtime metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true`` or if memory profiling is activated.
    * - ``SPLUNK_RUNTIME_METRICS_COLLECTION_INTERVAL``
      - ``metrics.runtimeMetricsCollectionIntervalMillis``
      - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
@@ -297,7 +297,7 @@ The following is a list of dimensions added by default:
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, enable Splunk trace response headers by setting the following environment variable:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, activate Splunk trace response headers by setting the following environment variable:
 
 .. tabs::
 

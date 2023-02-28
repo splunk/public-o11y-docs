@@ -1,5 +1,5 @@
 .. meta::
-   :description: How to enable zero configuration automatic instrumentation for Linux Java applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
+   :description: How to activate zero configuration automatic instrumentation for Linux Java applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
 
 .. include:: /_includes/gdi/zero-config-preview-header.rst
 
@@ -10,7 +10,7 @@
 Zero Configuration Auto Instrumentation for Linux Java applications
 =======================================================================================
 
-Zero Configuration Auto Instrumentation for Java enables automatic instrumentation for Linux Java applications. To enable automatic instrumentation, install the ``splunk-otel-auto-instrumentation`` package. After installing the package, you must start or restart any Java applications that you want to instrument.
+Zero Configuration Auto Instrumentation for Java activates automatic instrumentation for Linux Java applications. To activate automatic instrumentation, install the ``splunk-otel-auto-instrumentation`` package. After installing the package, you must start or restart any Java applications that you want to instrument.
 
 .. _prerequisites:
 
@@ -269,10 +269,10 @@ After upgrading the Debian package, you might see a prompt to keep or overwrite 
 
 You can also upgrade using the same package repositories as the Collector. See :new-page:`Debian or RPM packages <https://docs.splunk.com/Observability/gdi/opentelemetry/install-linux.html#debian-or-rpm-packages>` for more information.
 
-Disable automatic instrumentation
+Deactivate automatic instrumentation
 =========================================
 
-Use one of the following options to disable automatic instrumentation:
+Use one of the following options to deactivate automatic instrumentation:
 
 - Uninstall the package by running the following command:
 
@@ -296,7 +296,7 @@ Use one of the following options to disable automatic instrumentation:
 Troubleshooting
 =========================================
 
-If you enable auto instrumentation and you see an error message or you do not see any data in Observabiity Cloud APM, try the following steps:
+If you activate auto instrumentation and you see an error message or you do not see any data in Observabiity Cloud APM, try the following steps:
 
 - Check the  ``splunk-otel-collector`` service logs:
   
@@ -304,7 +304,7 @@ If you enable auto instrumentation and you see an error message or you do not se
 
    sudo journalctl -u splunk-otel-collector
 
-- You can also follow the :ref:`steps to enable trace and troubleshoot the Java agent<basic-java-troubleshooting>`.
+- You can also follow the :ref:`steps to activate trace and troubleshoot the Java agent<basic-java-troubleshooting>`.
 
 
 .. include:: /_includes/troubleshooting-steps.rst

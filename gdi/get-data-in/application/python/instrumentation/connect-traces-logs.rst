@@ -53,7 +53,7 @@ You can send Python application logs to Observability Cloud in the same way you 
 
 .. _disable-trace-log-python: 
 
-Disable log correlation
+Deactivate log correlation
 =================================================
 
-To disable the injection of trace metadata, set the ``OTEL_PYTHON_LOG_CORRELATION`` environment variable to ``false``.
+To deactivate the injection of trace metadata, set the ``OTEL_PYTHON_LOG_CORRELATION`` environment variable to ``false``.

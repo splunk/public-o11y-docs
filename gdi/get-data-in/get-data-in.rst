@@ -216,7 +216,7 @@ Steps
    - :ref:`Use a wizard to install in a Kubernetes cluster <get-started-k8s>`
    - :ref:`Manually install in a Kubernetes cluster <otel-install-k8s>`
 
-One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that enables users to seamlessly move between key views in Observability Cloud, is easier to implement. For more information, see :ref:`get-started-relatedcontent`.
+One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Observability Cloud, is easier to implement. For more information, see :ref:`get-started-relatedcontent`.
 
 
 Troubleshooting
@@ -326,7 +326,7 @@ See the instrumentation documentation for your application's language:
 
 - :ref:`Instrument PHP applications <get-started-php>`
 
-One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that enables users to seamlessly move between key views in Observability Cloud, is much easier to implement. For more information, see :ref:`get-started-relatedcontent`.
+One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Observability Cloud, is much easier to implement. For more information, see :ref:`get-started-relatedcontent`.
 
 Troubleshooting
 -------------------------------------------------

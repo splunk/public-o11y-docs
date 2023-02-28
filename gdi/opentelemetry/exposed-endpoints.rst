@@ -9,7 +9,7 @@ Exposed ports and endpoints
 
 By default, the Collector exposes several endpoints. The components providing these endpoints will attempt to listen on loopback (localhost) or all interfaces (0.0.0.0), as detailed in this document.
 
-The endpoints exposed depend on which mode the Collector is configured in. You can disable components, especially receivers, if they are not required for an environment.
+The endpoints exposed depend on which mode the Collector is configured in. You can deactivate components, especially receivers, if they are not required for an environment.
 
 Check ports to make sure your environment doesn't have conflicts and that firewalls are configured properly. Ports can be changed in the YAML configuration file.
 

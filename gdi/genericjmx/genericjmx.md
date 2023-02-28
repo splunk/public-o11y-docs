@@ -98,7 +98,7 @@ The **nested** `values` configuration object has the following fields:
 | `attributes` | no | `list of strings` | The plural form of the `attribute` config above. Used to derive multiple metrics from a single MBean. |
 
 ### Example Configuration
-This example configuration gets the thread count from a standard JMX MBean available on all Java JMX-enabled applications:
+This example configuration gets the thread count from a standard JMX MBean available on all Java JMX-activated applications:
 
 ```yaml
 monitors:
@@ -131,7 +131,7 @@ java \
   -Dcom.sun.management.jmxremote.rmi.port=5000 \
   ...
 ```
-This works as long as the agent is allowed to access port 5000 on the Java app's host. Note that this does not enable authentication or encryption, but these can be added.
+This works as long as the agent is allowed to access port 5000 on the Java app's host. Note that this does not turn onauthentication or encryption, but these can be added.
 
 The following error messages assume the host config is set to 172.17.0.3 and the port set to 5000. Your host config and port settings might be different. The following sections show errors you might receive and their meanings:
 

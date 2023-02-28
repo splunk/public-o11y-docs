@@ -93,7 +93,7 @@ The following configuration options change the resulting values:
 
 * The `desiredCode` option determines the `http.code_matched` value. Configure this option if you expect a different "normal" value. The default value is `200`. For example, configure `desiredCode:301` and `noRedirects:false` to check a redirect (and not the end redirected URL) keeping the value to `1` (success).
 * The `regex` option does the same with the `http.regex_matched` metric, where the value is `1` only if the provided regex matches the response body.
-* The `addRedirectURL` option does not have impact on metrics, but adds a new dimension `redirect_url` with a "dynamic" value. If the `url` dimension changes with the monitor configuration, the `redirect_url` value is impacted by any server change and is always the last URL redirected. This option is disabled by default because this could cause issues with heartbeat detectors, for example.
+* The `addRedirectURL` option does not have impact on metrics, but adds a new dimension `redirect_url` with a "dynamic" value. If the `url` dimension changes with the monitor configuration, the `redirect_url` value is impacted by any server change and is always the last URL redirected. This option is deactivated by default because this could cause issues with heartbeat detectors, for example.
 
 The following HTTP headers let the client and the server pass additional information with an HTTP request or response:
 

@@ -29,7 +29,7 @@ To generate all the basic installation commands for your environment and applica
 
 .. _install-enable-jvm-agent:
 
-Install and enable the Java agent
+Install and activate the Java agent
 ===================================================================
 
 Follow these steps to automatically instrument your application using the Java agent:
@@ -100,21 +100,21 @@ If you need to add custom attributes to spans or want to manually generate spans
 
 .. _enable_profiling_java:
 
-Enable AlwaysOn Profiling
+Activate AlwaysOn Profiling
 --------------------------------------
 
-To enable AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
+To activate AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
 
-To enable memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+To activate memory profiling, set the ``splunk.profiler.memory.activated`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
 
-The following example shows how to enable the profiler using the system property:
+The following example shows how to activate the profiler using the system property:
 
 .. code-block:: bash
    :emphasize-lines: 2,3,4,5
 
    java -javaagent:./splunk-otel-javaagent.jar \
-   -Dsplunk.profiler.enabled=true \
-   -Dsplunk.profiler.memory.enabled=true \
+   -Dsplunk.profiler.activated=true \
+   -Dsplunk.profiler.memory.activated=true \
    -Dotel.exporter.otlp.endpoint=http(s)://collector:4317 \
    -Dsplunk.metrics.endpoint=http(s)://collector:9943
    -jar <your_application>.jar
@@ -123,21 +123,21 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 
 .. _enable_automatic_metric_collection:
 
-Enable metrics collection
+Activate metrics collection
 --------------------------------------
 
-To enable automatic metric collection, enable the metrics feature using a system property argument. You can also use the ``SPLUNK_METRICS_ENABLED`` environment variable.
+To activate automatic metric collection, activate the metrics feature using a system property argument. You can also use the ``SPLUNK_METRICS_ENABLED`` environment variable.
 
 .. code-block:: bash
    :emphasize-lines: 2
 
    java -javaagent:./splunk-otel-javaagent.jar \
-   -Dsplunk.metrics.enabled=true \
+   -Dsplunk.metrics.activated=true \
    -jar <myapp>.jar
 
 If your metrics endpoint is different than the default value, set the ``SPLUNK_METRICS_ENDPOINT`` environment variable. See :ref:`metrics-configuration-java` for more information.
 
-.. note:: If you enable memory profiling, metrics collection is enabled automatically and cannot be disabled.
+.. note:: If you activate memory profiling, metrics collection is activated automatically and cannot be deactivated.
 
 .. _ignore_endpoints_java:
 
@@ -209,7 +209,7 @@ To deploy the Java agent in Docker, edit the Dockerfile for your application ima
    # Modifies the entry point
    ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent-all.jar","-jar","./<myapp>.jar"]
 
-Use ``ENV`` commands to set environment variables for the Java agent. To enable metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
+Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
 
 .. _configure-java-instrumentation:
 

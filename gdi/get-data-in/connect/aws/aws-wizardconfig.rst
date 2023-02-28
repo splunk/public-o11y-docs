@@ -84,14 +84,14 @@ Creating the AWS IAM role generates the ``Role ARN`` used to establish connectio
 
 .. _aws-wizard-metricstreams:
 
-Enable Metric Streams
+Activate Metric Streams
 ======================================
 
-To enable Metric Streams, use the :ref:`guided setup <aws-wizard>`, and take the following considerations into account:
+To activate Metric Streams, use the :ref:`guided setup <aws-wizard>`, and take the following considerations into account:
 
-* On the :strong:`Define AWS connection` screen, disable the CloudWatch Metrics polling box.
+* On the :strong:`Define AWS connection` screen, deactivate the CloudWatch Metrics polling box.
 * When creating the new AWS IAM policy, :ref:`add these additional permissions <metricstreams_iampolicy>` to the ones already suggested in the guided setup.
-* Follow the instructions to :ref:`enable Metric Streams <enable-cw-metricstreams>`.
+* Follow the instructions to :ref:`activate Metric Streams <enable-cw-metricstreams>`.
 * Update your settings and deploy the CloudFormation template following :ref:`these steps <enable-cw-metricstreams>`.
 
 Review the default AWS integration settings
@@ -109,7 +109,7 @@ By default, Splunk Observability Cloud will bring in data from all supported AWS
 - Use the check box options in the guided setup to limit the scope of your data collection. These are the available options:
   
   - Amazon Cost and Usage Metrics
-  - CloudWatch Metrics polling (you can disable it altogether, or disable the polling but enable AWS Metric Streams instead)
+  - CloudWatch Metrics polling (you can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead)
   - CloudWatch Logs
   - AWS regions to fetch data from
   - AWS services to fetch data from

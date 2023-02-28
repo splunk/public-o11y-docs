@@ -121,11 +121,11 @@ Here are some common issues related to this integration.
 
 ### Log contains the error `net/http: HTTP/1.x transport connection broken: malformed HTTP response`
 
-Solution: Enable HTTPS with `useHTTPS`.
+Solution: Activate HTTPS with `useHTTPS`.
 
 ### Log contains the error `forbidden: User \"system:anonymous\" cannot get path \"/metrics\"`
 
-Solution: Enable `useServiceAccount` and make sure the service account that the Splunk Distribution of OpenTelemetry Collector is running with has the necessary permissions.
+Solution: Activate `useServiceAccount` and make sure the service account that the Splunk Distribution of OpenTelemetry Collector is running with has the necessary permissions.
 
 ## Get help
 

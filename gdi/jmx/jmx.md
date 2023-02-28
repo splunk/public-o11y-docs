@@ -84,7 +84,7 @@ The following table shows the configuration options for this monitor:
 | `groovyScript` | **yes** | `string` | A literal Groovy script that generates data points from JMX MBeans. See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it here with `${include:/<my_path>/jmx.groovy}`. For more information on using the `include` config, see <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource">https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource</a>. Or, you can put it straight in YAML by using the \| block indicator.  |
 | `username` | no | `string` | Username for JMX authentication, if applicable. |
 | `password` | no | `string` | Password for JMX authentication, if applicable. |
-| `keyStorePath` | no | `string` | The key store path is required if client authentication is enabled on the target JVM. |
+| `keyStorePath` | no | `string` | The key store path is required if client authentication is activated on the target JVM. |
 | `keyStorePassword` | no | `string` | The key store file password if required. |
 | `keyStoreType` | no | `string` | The key store type. (**default:** `jks`) |
 | `trustStorePath` | no | `string` | The trusted store path if the TLS profile is required. |

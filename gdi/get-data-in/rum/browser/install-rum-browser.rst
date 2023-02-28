@@ -194,7 +194,7 @@ You can customize the data intake for the Browser RUM agent to reduce noise and 
 Opt out of error.message collection
 ------------------------------------------------
 
-To avoid collecting ``error.message`` responses, disable the errors instrumentation as in the following example:
+To avoid collecting ``error.message`` responses, deactivate the errors instrumentation as in the following example:
 
 .. code-block:: html
    :emphasize-lines: 7

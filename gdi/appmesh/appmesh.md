@@ -10,7 +10,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Use this integration to report metrics from AWS AppMesh Envoy Proxy.
 
-To use this integration, you must also enable the Envoy StatsD sink on AppMesh and deploy the agent as a sidecar in the 
+To use this integration, you must also activatethe Envoy StatsD sink on AppMesh and deploy the agent as a sidecar in the 
 services that need to be monitored.
 
 ## Benefits

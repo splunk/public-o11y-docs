@@ -40,7 +40,7 @@ This integration is only supported for Kong Gateway Community Edition (CE).
 
 ## Installation
 
-This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to enable this integration.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to activate this integration.
 
 Follow these steps to deploy the integration:
 
@@ -141,12 +141,12 @@ curl -X POST -d "name=signalfx" http://localhost:8001/routes/<my_route_id>/plugi
 ```
 
 For each request made to the respective registered object context, the `kong` integration obtains metric content 
-and aggregates it for automated retrieval at the `/signalfx` endpoint of the Admin API. Although you can enable request 
+and aggregates it for automated retrieval at the `/signalfx` endpoint of the Admin API. Although you can activate request 
 contexts for specific Consumer objects, consumer IDs or unique visitor metrics are not calculated.
 
 By default, the `kong` integration aggregates metrics by a context determined by the HTTP method of the request and by 
 the status code of the response. If you're monitoring a large infrastructure with hundreds of routes, grouping by HTTP 
-method might be too granular. You can disable context grouping by setting `aggregate_by_http_method` to `false`:
+method might be too granular. You can deactivate context grouping by setting `aggregate_by_http_method` to `false`:
 
 ```sh
 curl -X POST -d "name=signalfx" -d "config.aggregate_by_http_method=false" http://localhost:8001/plugins

@@ -13,7 +13,7 @@ To learn about the different metric types, see :ref:`metric-types`.
 
 .. _enable-otel-metrics:
 
-Enable metrics collection
+Activate metrics collection
 ====================================================
 
 To collect Java application and Java Virtual Machine metrics, see :ref:`enable_automatic_metric_collection`.
@@ -105,7 +105,7 @@ The agent collects the following metrics through the following libraries:
 JVM metrics
 =============================================================
 
-The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is enabled:
+The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is activated:
 
 .. _classloader-metrics:
 
@@ -204,13 +204,13 @@ The agent collects the following memory metrics:
     - Counter
     - Total number of bytes allocated by JVM threads since the previous data point was emitted. 
         - Use the rate per second rollup. 
-        - Requires to enable memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.activated`` flag.
   * - ``process.runtime.jvm.memory.reclaimed``
     - Counter
     - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes: 
         - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC. 
         - Use the rate per second rollup.
-        - Requires to enable memory profiling,or to use the ``splunk.metrics.experimental.enabled`` flag. 
+        - Requires to activate memory profiling,or to use the ``splunk.metrics.experimental.activated`` flag. 
   * - ``runtime.jvm.buffer.count``
     - Gauge
     - An estimate of the number of buffers in the pool.
@@ -430,7 +430,7 @@ Send custom Java application metrics
 
 The Splunk Distribution of OpenTelemetry Java agent detects if the instrumented application is using Micrometer and injects a special ``MeterRegistry`` implementation that lets the agent collect user-defined meters.
 
-Follow these steps to enable custom application metrics:
+Follow these steps to activate custom application metrics:
 
 - :ref:`add-micrometer-dep`
 - :ref:`add-meter-registry`

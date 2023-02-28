@@ -11,12 +11,12 @@ The SignalFx Instrumentation for .NET can collect runtime and trace metrics. To 
 
 .. _enable-dotnet-metrics:
 
-Enable metrics collection
+Activate metrics collection
 ====================================================
 
-To enable the collection of .NET runtime and trace metrics, see :ref:`dotnet-metric-settings`.
+To activate the collection of .NET runtime and trace metrics, see :ref:`dotnet-metric-settings`.
 
-.. note:: NetRuntime metrics are always collected if memory profiling is enabled.
+.. note:: NetRuntime metrics are always collected if memory profiling is activated.
 
 .. _dotnet-runtime-metrics:
 

@@ -44,7 +44,7 @@ If you have a monitor that updates dimension properties or tags, put the name of
 
   * Sample monitors: ``ecs-metadata``, ``heroku-metadata``, ``kubernetes-cluster``, ``openshift-cluster``, ``postgresql``, or ``sql``.
 
-If you don't specify any exporters in this array field, the receiver attempts to use the Collector pipeline to which it's connected. If the next element of the pipeline isn't compatible with updating dimensions, and if you configured a single SignalFx exporter, the receiver uses that SignalFx exporter. If you don't require dimension updates, you can specify the empty array ``[]`` to disable it.
+If you don't specify any exporters in this array field, the receiver attempts to use the Collector pipeline to which it's connected. If the next element of the pipeline isn't compatible with updating dimensions, and if you configured a single SignalFx exporter, the receiver uses that SignalFx exporter. If you don't require dimension updates, you can specify the empty array ``[]`` to deactivate it.
 
 Smart Agent extension
 ==================================

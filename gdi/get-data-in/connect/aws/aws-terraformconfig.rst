@@ -16,7 +16,7 @@ Connecting Splunk Observability Cloud to AWS through the Terraform provider invo
 
 - Amazon Resource Name (ARN) associated with your external ID
 - AWS Identity Access Management (IAM) role for CloudWatch Metric Streams
-- AWS IAM role that enables Kinesis Firehose to write to an Amazon S3 bucket
+- AWS IAM role that activates Kinesis Firehose to write to an Amazon S3 bucket
 
 As with other connection options, Terraform uses the Splunk Observability REST API endpoints. See :new-page:`Integrate AWS monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/>` for examples.
 

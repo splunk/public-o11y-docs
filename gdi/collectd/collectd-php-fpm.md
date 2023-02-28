@@ -17,7 +17,7 @@ This monitor is not available on Windows as collectd plugins are only supported 
 
 To configure the PHP-FPM service itself to expose status metrics, follow these steps:
 
-1. Enable the status path. See the PHP documentation for more information.
+1. Activate the status path. See the PHP documentation for more information.
 2. Configure access through the web server. The following example shows how to configure access for NGINX:
 
    ```

@@ -89,7 +89,7 @@ Make sure the pod spec sets the node name:
          fieldRef:
            fieldPath: spec.nodeName
 
-Enable the Collector to reference the ``K8S_NODE_NAME`` environment
+Activate the Collector to reference the ``K8S_NODE_NAME`` environment
 variable:
 
 .. code:: yaml

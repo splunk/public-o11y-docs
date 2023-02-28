@@ -137,7 +137,7 @@ The instrumented service is ``petclinic-rest`` from the Spring PetClinic sample 
 ..  image:: /_images/performance/java/test-env.png
    :alt: Diagram of the test environment
 
-The ``petclinic-rest`` microservice runs on OpenJDK version 11.0.11, with no additional arguments except ``-javaagent``, with no heap limits specified. AlwaysOn Profiling uses the JDK Flight Recorder subsystem. System updates, AWS daemons, and unnecessary system processes are disabled or removed to reduce errors. The G1 Garbage Collector is the default for java 11 and is used across all tests.
+The ``petclinic-rest`` microservice runs on OpenJDK version 11.0.11, with no additional arguments except ``-javaagent``, with no heap limits specified. AlwaysOn Profiling uses the JDK Flight Recorder subsystem. System updates, AWS daemons, and unnecessary system processes are deactivated or removed to reduce errors. The G1 Garbage Collector is the default for java 11 and is used across all tests.
 
 Hardware configuration
 -----------------------------------------------
@@ -162,7 +162,7 @@ The following configurations are tested for each metric:
 
 - No instrumentation agent
 - Splunk OpenTelemetry Java agent
-- Splunk OpenTelemetry Java agent with AlwaysOn Profiling enabled
+- Splunk OpenTelemetry Java agent with AlwaysOn Profiling activated
 
 Each agent configuration runs 10 times using a fresh JVM. After each test run, the PostgreSQL database of the sample application restarts to eliminate interferences between test runs. The same OTel Collector instance is used across all test runs and configured only for logging export.
 

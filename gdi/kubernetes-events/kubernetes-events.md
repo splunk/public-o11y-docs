@@ -22,7 +22,7 @@ This monitor type is available on Kubernetes, Linux, and Windows.
 
 ### Deploy with Helm
 
-To enable this monitor with the Helm chart, include this argument with the helm install command:
+To activate this monitor with the Helm chart, include this argument with the helm install command:
 
 ```
 -set splunkObservability.infrastructureMonitoringEventsEnabled='true'

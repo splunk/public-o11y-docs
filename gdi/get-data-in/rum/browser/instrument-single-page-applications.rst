@@ -25,7 +25,7 @@ When instrumenting single-page applications with server-side rendering (SSR) sup
 Get single-page applications data in
 ========================================================
 
-The following sections describe how to enable the instrumentation for several different SPA frameworks.
+The following sections describe how to activate the instrumentation for several different SPA frameworks.
 
 Next.js
 --------------------------------------------------------
@@ -300,14 +300,14 @@ To add child spans to the generated spans, use the Context API. For example:
       span.end();
    }
 
-.. note:: Context might not propagate to child spans that aren't called directly, for example inside a ``Promise.then, setTimeout, ...`` block. To mitigate this issue, enable asynchronous tracing. See :ref:`browser-rum-async-traces`.
+.. note:: Context might not propagate to child spans that aren't called directly, for example inside a ``Promise.then, setTimeout, ...`` block. To mitigate this issue, activate asynchronous tracing. See :ref:`browser-rum-async-traces`.
 
 .. _rum-browser-spa-errors:
 
 Collect errors with single-page application frameworks
 ========================================================
 
-To enable the collection of JavaScript errors from single-page application (SPA) frameworks using their own error interceptors or handlers, you need to integrate the Browser RUM agent with the framework.
+To activate the collection of JavaScript errors from single-page application (SPA) frameworks using their own error interceptors or handlers, you need to integrate the Browser RUM agent with the framework.
 
 The following framework-specific examples show how to integrate the Browser RUM agent with the supported frameworks. All the examples assume that you installed the Browser RUM agent using npm. See :ref:`rum-browser-install-npm`.
 

@@ -15,7 +15,7 @@ This monitor is not available on Windows as collectd plugins are only supported 
 
 ## Requirements
 
-To enable JMX in Hadoop, add the following Java Virtual Machine (JVM) options to hadoop-env.sh and yarn-env.sh:
+To activateJMX in Hadoop, add the following Java Virtual Machine (JVM) options to hadoop-env.sh and yarn-env.sh:
 
 **hadoop-env.sh:**
 ```sh

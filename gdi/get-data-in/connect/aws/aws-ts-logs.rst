@@ -29,7 +29,7 @@ If you created the integration recently, it may take some time for the logs to a
 
 If you still don't see any logs after 15 minutes, check the IAM policy you've used to set up the AWS connection. We recommend using the :ref:`provided IAM policy <aws-iam-policy>`. If you still don't see the logs, please contact :ref:`our support <support>`.
 
-You can enable debug mode on the log forwarding lambda function: Add ``LOG_LEVEL=DEBUG`` in the :guilabel:`Configuration > Environment variables` section. If you see log forwarding calls fail due to a 503 HTTP error, you may be exceeding logs limit. To fix this, contact :ref:`our support <support>`.
+You can activate debug mode on the log forwarding lambda function: Add ``LOG_LEVEL=DEBUG`` in the :guilabel:`Configuration > Environment variables` section. If you see log forwarding calls fail due to a 503 HTTP error, you may be exceeding logs limit. To fix this, contact :ref:`our support <support>`.
 
 
 CloudFront access logs are not being collected
@@ -52,17 +52,17 @@ I don't see logs from some of my S3 buckets
 Some AWS services use S3 buckets to store their logs, and sometimes the S3 bucket is located in a different region from the service that produces those logs. In such cases make sure to deploy the ``splunk-aws-logs-collector`` lambda function using the CloudFormation template in all AWS regions where S3 buckets with logs are located.
 
 
-I have disabled logs collection, but logs are still gathered by Observability Cloud
+I have deactivated logs collection, but logs are still gathered by Observability Cloud
 ==============================================================================================================
 
 It may take up to 15 minutes for the Observability Cloud back end to cancel log subscriptions. There may be additional delays introduced by the AWS logs delivery process.
 
-The back end needs log related permissions to cancel log subscriptions. If log related permissions are removed from the AWS IAM policy (or the entire policy is removed), the back end cannot run the cleanup procedure. Make sure to disable the log collection on Observability Cloud's side first, and clean up on AWS' side later.
+The back end needs log related permissions to cancel log subscriptions. If log related permissions are removed from the AWS IAM policy (or the entire policy is removed), the back end cannot run the cleanup procedure. Make sure to deactivate the log collection on Observability Cloud's side first, and clean up on AWS' side later.
 
 
-I disabled the integration or changed its settings, but logs are still being collected!
+I deactivated the integration or changed its settings, but logs are still being collected!
 ===============================================================================================================
 
-If you disable a part or all the integration, our back end job will attempt to clear all notifications and subscriptions it has previously created, which might take up to 15 minutes. However, if you also remove IAM permissions, the attempt may fail. 
+If you deactivate a part or all the integration, our back end job will attempt to clear all notifications and subscriptions it has previously created, which might take up to 15 minutes. However, if you also remove IAM permissions, the attempt may fail. 
 
 To stop sending any logs to Observability Cloud, delete the Splunk AWS Logs collector lambda from the region where you wish to stop collecting logs.

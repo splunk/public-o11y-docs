@@ -12,7 +12,7 @@ Use the Java receiver to retrieve metrics from a Java application.
 This receiver is available on Linux and Windows.
 
 ```{note}
-To enable metrics collection in the OpenTelemetry Java agent, see {ref}`Enable metrics collection <enable_automatic_metric_collection>`.
+To activate metrics collection in the OpenTelemetry Java agent, see {ref}`Activate metrics collection <enable_automatic_metric_collection>`.
 ```
 
 ### Benefits

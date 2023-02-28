@@ -59,7 +59,7 @@ If the properties are not available until later or can change over the lifetime 
    SplunkRum.setGlobalAttributes({
       'account.type': goldStatus,
       'app.release': getReleaseNumber(),
-      'dark_mode.enabled': darkModeToggle.status,
+      'dark_mode.activated': darkModeToggle.status,
    });
 
 Migrate errors instrumentation

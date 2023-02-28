@@ -62,24 +62,24 @@ Use the following settings to configure the iOS RUM agent:
    * - :code:`allowInsecureBeacon`
      - If set to ``true``, this setting allows beacon URLs that use the HTTP protocol. The default value is ``false``.
    * - :code:`enableDiskCache`
-     - Enables caching of exported spans. All spans are written to local storage and deleted after a successful export. The default value is ``false``.
+     - Activates caching of exported spans. All spans are written to local storage and deleted after a successful export. The default value is ``false``.
    * - :code:`spanDiskCacheMaxSize`
-     - Threshold, in megabytes, from which spans start to be dropped from the disk cache. The oldest spans are dropped first. Only applicable when disk caching is enabled. The default value is ``25`` megabytes.
+     - Threshold, in megabytes, from which spans start to be dropped from the disk cache. The oldest spans are dropped first. Only applicable when disk caching is activated. The default value is ``25`` megabytes.
    * - :code:`slowRenderingDetectionEnabled`
-     - Enable the slow rendering detection feature. The default value is ``false``. See :ref:`ios-slow-rendering-data`.
+     - Activate the slow rendering detection feature. The default value is ``false``. See :ref:`ios-slow-rendering-data`.
    * - :code:`slowFrameDetectionThresholdMs`
      - Optional setting that tags as slow all frames that took more than the specified time, in milliseconds. The default value is ``16.7`` milliseconds.
    * - :code:`frozenFrameDetectionThresholdMs`
      - Optional setting that tags as frozen all frames that took more than the specified time, in milliseconds. The default value is ``700`` milliseconds.
    * - :code:`debug`
-     - Enables debug logging. The default value is ``false``.
+     - Activates debug logging. The default value is ``false``.
 
 .. _ios-rum-instrumentation-settings:
 
 Instrumentation settings
 ==============================================
 
-Use the following settings to enable or disable the collection of specific data:
+Use the following settings to activate or deactivate the collection of specific data:
 
 .. list-table:: 
    :header-rows: 1
@@ -88,8 +88,8 @@ Use the following settings to enable or disable the collection of specific data:
    * - Option
      - Description
    * - :code:`showVCInstrumentation`
-     - Enables the creation of spans for ``ViewController Show`` events. The default value is ``true``.
+     - Activates the creation of spans for ``ViewController Show`` events. The default value is ``true``.
    * - :code:`screenNameSpans`
-     - Enables the creation of spans for changes to the screen name.
+     - Activates the creation of spans for changes to the screen name.
    * - :code:`networkInstrumentation`
-     - Enables the creation of spans for network activities.
+     - Activates the creation of spans for network activities.

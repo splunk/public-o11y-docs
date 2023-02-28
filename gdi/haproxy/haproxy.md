@@ -61,7 +61,7 @@ frontend stats-frontend
 <!--- SETUP --->
 ## SELinux setup
 
-If you have SELinux enabled, create a SELinux policy package by downloading
+If you have SELinux activated, create a SELinux policy package by downloading
 the [type enforcement
 file](https://github.com/signalfx/collectd-haproxy/blob/master/selinux/collectd-haproxy.te)
 to some place on your server. Run the following commands to create and install

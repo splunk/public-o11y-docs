@@ -73,7 +73,7 @@ Replace the parameters with their appropriate values. Apply the following for di
    --set distribution=eks,cloudProvider=aws 
 
    # eks/fargate deployment (with recommended gateway)
-   --set distribution=eks/fargate,gateway.enabled=true,cloudProvider=aws 
+   --set distribution=eks/fargate,gateway.activated=true,cloudProvider=aws 
 
    # gke deployment
    --set distribution=gke,cloudProvider=gcp 
@@ -104,7 +104,7 @@ You can also set Helm values as arguments using a YAML file. For example, after 
 See :new-page:`an example of a YAML file in GitHub <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>`. Options include:
 
 * Set ``isWindows`` to ``true`` to apply the Kubernetes cluster with Windows worker nodes. 
-* Set ``networkExplorer.enabled`` to ``true`` to use the default values for :ref:`splunk-otel-network-explorer <network-explorer>`.
+* Set ``networkExplorer.activated`` to ``true`` to use the default values for :ref:`splunk-otel-network-explorer <network-explorer>`.
 
 Set Prometheus metrics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -148,7 +148,7 @@ Install the Collector with resource YAML manifests
 
 A manifest specifies the state you want to apply to a Kubernetes object when you apply the configuration file. Each configuration file can contain multiple resource manifests. 
 
-Apply resource manifests using the ``kubectl create`` command. The manifests are configured with all telemetry types enabled for the agent, which is the default when installing the Helm chart. These manifests should be configured for Splunk Observability Cloud only.
+Apply resource manifests using the ``kubectl create`` command. The manifests are configured with all telemetry types activated for the agent, which is the default when installing the Helm chart. These manifests should be configured for Splunk Observability Cloud only.
 
 Do the following to deploy the Splunk Distribution of OpenTelemetry Collector for Kubernetes using resource manifests:
 

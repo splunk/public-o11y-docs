@@ -4,7 +4,7 @@
 
 <meta name="Description" content="Documentation on the legacy SignalFX Smart Agent and OpenTelementry Collector mappings in Splunk Observability Cloud">
 
-The mapping service enables you to migrate from Smart Agent to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards, charts, and detectors. It automatically translates collectd (Smart Agent) conventions into the syntax used by the Collector as a background operation. 
+The mapping service lets you migrate from Smart Agent to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards, charts, and detectors. It automatically translates collectd (Smart Agent) conventions into the syntax used by the Collector as a background operation. 
 
 Mapping supports multiple observers, deployment types, and kinds of metadata. 
 
