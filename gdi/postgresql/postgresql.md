@@ -81,7 +81,7 @@ The following is an example `postgresql` Smart Agent monitor configuration. Th
 ```yaml
 monitors:
  - type: postgresql
-   connectionString: 'sslmode=deactivate user={{.username}} password={{.password}}'
+   connectionString: 'sslmode=disable user={{.username}} password={{.password}}'
    params: &psqlParams
      username: {"#from": "vault:secret/my-database[username]"}
      password: {"#from": "vault:secret/my-database[password]"}
@@ -91,7 +91,7 @@ monitors:
  # provided SQL queries.
  - type: sql
    dbDriver: postgres
-   connectionString: 'sslmode=deactivate user={{.username}} password={{.password}}'
+   connectionString: 'sslmode=disable user={{.username}} password={{.password}}'
    # This is a YAML reference to avoid duplicating the above config.
    params: *psqlParams
    queries:

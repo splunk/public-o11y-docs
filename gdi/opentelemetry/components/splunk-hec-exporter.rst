@@ -151,7 +151,7 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
        endpoint: "https://ingest.<realm>.signalfx.com/v1/log"
        source: "otel"
        sourcetype: "otel"
-       log_data_activated: false
+       log_data_enabled: false
 
    # Other settings
 
@@ -180,7 +180,7 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
 Turn off profiling data
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you don't need AlwaysOn Profiling data for a specific host or container. set the ``profiling_data_activated`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
+If you don't need AlwaysOn Profiling data for a specific host or container. set the ``profiling_data_enabled`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
 
 .. code-block:: yaml
    :emphasize-lines: 6
@@ -190,9 +190,9 @@ If you don't need AlwaysOn Profiling data for a specific host or container. set 
      endpoint: "${SPLUNK_HEC_URL}"
      source: "otel"
      sourcetype: "otel"
-     profiling_data_activated: false
+     profiling_data_enabled: false
 
-To turn off log collection for Observability Cloud while preserving AlwaysOn Profiling data for APM, set the ``log_data_activated`` option to ``false``. See :ref:`disable_log_collection` for more information.
+To turn off log collection for Observability Cloud while preserving AlwaysOn Profiling data for APM, set the ``log_data_enabled`` option to ``false``. See :ref:`disable_log_collection` for more information.
 
 .. code-block:: yaml
    :emphasize-lines: 6
@@ -202,14 +202,14 @@ To turn off log collection for Observability Cloud while preserving AlwaysOn Pro
      endpoint: "${SPLUNK_HEC_URL}"
      source: "otel"
      sourcetype: "otel"
-     log_data_activated: false
+     log_data_enabled: false
 
 .. _exclude-log-data:
 
 Turn off log data export
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you need to turn off log data export to Observability Cloud, for example because you're using Log Observer Connect, set ``log_data_activated`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
+If you need to turn off log data export to Observability Cloud, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
 .. code-block:: yaml
    :emphasize-lines: 6
@@ -219,11 +219,11 @@ If you need to turn off log data export to Observability Cloud, for example beca
      endpoint: "${SPLUNK_HEC_URL}"
      source: "otel"
      sourcetype: "otel"
-     log_data_activated: false
+     log_data_enabled: false
 
 To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
 
-.. note:: The ``log_data_activated`` setting is available in the Splunk Distribution of OpenTelemetry Collector version 0.49.0 and higher.
+.. note:: The ``log_data_enabled`` setting is available in the Splunk Distribution of OpenTelemetry Collector version 0.49.0 and higher.
 
 If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or ``values.yaml`` file:
 

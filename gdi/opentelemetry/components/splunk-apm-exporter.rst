@@ -60,11 +60,11 @@ The following example shows all available settings:
        # The default value is 5s.
        timeout: 10s
        sending_queue:
-         activated: true
+         enabled: true
          num_consumers: 2
          queue_size: 10
        retry_on_failure:
-         activated: true
+         enabled: true
          initial_interval: 10s
          max_interval: 60s
          max_elapsed_time: 10m

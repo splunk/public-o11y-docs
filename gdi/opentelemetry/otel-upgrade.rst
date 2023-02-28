@@ -134,7 +134,7 @@ If you're using :ref:`Chocolatey <windows-chocolatey>`, in order to remember par
 
 .. code-block:: PowerShell
 
-  choco feature activate -n=useRememberedArgumentsForUpgrades
+  choco feature enable -n=useRememberedArgumentsForUpgrades
 
 To upgrade, run the following command in PowerShell:
 

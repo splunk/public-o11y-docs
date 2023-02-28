@@ -68,7 +68,7 @@ To instrument a Ruby on Rails application, follow these steps:
    .. code:: ruby
 
       Splunk::Otel.configure do |c|
-      c.use_all({ 'OpenTelemetry::Instrumentation::ActiveRecord' => { activated: false } })
+      c.use_all({ 'OpenTelemetry::Instrumentation::ActiveRecord' => { enabled: false } })
       end
 
 #. To activate only Rails, you can use a single ``c.use`` statement:

@@ -89,7 +89,7 @@ To capture logs from unsupported services via the API, follow these steps:
               "namespace": "aws/<namespace>"
           }
       ],
-      "activated": true,
+      "enabled": true,
       "id": "E1c1_huAAAA",
   }
 

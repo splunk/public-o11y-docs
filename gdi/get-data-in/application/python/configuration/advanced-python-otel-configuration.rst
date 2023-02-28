@@ -152,7 +152,7 @@ The following example shows how all the configuration options you can pass to ``
       span_exporter_factories=[OTLPSpanExporter]
       access_token='',
       max_attr_length=1200,
-      trace_response_header_activated=True,
+      trace_response_header_enabled=True,
       resource_attributes={
          'service.version': '3.1',
          'deployment.environment': 'production',

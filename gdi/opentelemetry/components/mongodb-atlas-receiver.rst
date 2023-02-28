@@ -712,7 +712,7 @@ To deactivate any metric, apply the following configuration:
 
    metrics:
      <metric_name>:
-       activated: false
+       enabled: false
 
 
 Metric attributes

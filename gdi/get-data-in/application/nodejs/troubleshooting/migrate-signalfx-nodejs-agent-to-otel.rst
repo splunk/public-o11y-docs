@@ -140,7 +140,7 @@ If you're using the passing configuration options as arguments to ``start()``, u
      - ``endpoint``
    * - ``accessToken``
      - ``accessToken``
-   * - ``activated``
+   * - ``enabled``
      - No equivalent. Use the ``OTEL_TRACE_ENABLED`` environment variable.
    * - ``debug``
      - No equivalent. See :ref:`migrate-logging-nodejs`.

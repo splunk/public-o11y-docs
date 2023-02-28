@@ -141,7 +141,7 @@ to the values.yaml configuration of one of the installations:
 .. code-block:: yaml
 
    clusterReceiver:
-     activated: false
+     enabled: false
 
 Configure Google Kubernetes Engine Autopilot
 ===========================================================
@@ -278,7 +278,7 @@ The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect jo
 
   logsCollection:
     journald:
-      activated: true
+      enabled: true
       directory: /run/log/journal
       # List of service units to collect and configuration for each. Update the list as needed.
       units:

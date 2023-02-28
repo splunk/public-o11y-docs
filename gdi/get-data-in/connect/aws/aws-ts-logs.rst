@@ -57,7 +57,7 @@ I have deactivated logs collection, but logs are still gathered by Observability
 
 It may take up to 15 minutes for the Observability Cloud back end to cancel log subscriptions. There may be additional delays introduced by the AWS logs delivery process.
 
-The back end needs log related permissions to cancel log subscriptions. If log related permissions are removed from the AWS IAM policy (or the entire policy is removed), the back end cannot run the cleanup procedure. Make sure to deactivate the log collection on Observability Cloud's side first, and clean up on AWS' side later.
+The back end needs log related permissions to cancel log subscriptions. If log related permissions are removed from the AWS IAM policy (or the entire policy is removed), the back end cannot run the cleanup procedure. Make sure to deactivate log collection on Observability Cloud's side first, and clean up on AWS' side later.
 
 
 I deactivated the integration or changed its settings, but logs are still being collected!

@@ -317,7 +317,7 @@ Activate or deactivate metrics
 -----------------------------
 
 You can activate or deactivate specific metrics by setting the value of the
-``activated`` option to ``true`` or ``false``.
+``enabled`` option to ``true`` or ``false``.
 
 The following example deactivates the ``oracledb.executions`` metric and
 activated the ``oracledb.sessions.usage`` metric:
@@ -329,9 +329,9 @@ activated the ``oracledb.sessions.usage`` metric:
        datasource: "oracle://otel:password@localhost:51521/XE"
        metrics:
          oracledb.executions:
-           activated: false
+           enabled: false
          oracledb.sessions.usage:
-           activated: true
+           enabled: true
 
 Get help
 =======================
