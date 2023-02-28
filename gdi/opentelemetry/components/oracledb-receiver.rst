@@ -314,7 +314,7 @@ Metric attributes
       - 
 
 Activate or deactivate metrics
------------------------------
+---------------------------------
 
 You can activate or deactivate specific metrics by setting the value of the
 ``enabled`` option to ``true`` or ``false``.

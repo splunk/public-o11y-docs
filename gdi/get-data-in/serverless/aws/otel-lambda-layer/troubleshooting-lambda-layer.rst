@@ -43,7 +43,7 @@ If the following error appears, you must either set the value of the ``SPLUNK_RE
 For instructions on how to define a custom exporter endpoint, see :ref:`trace-exporters-settings-lambda`.
 
 Deactivate instrumentations that load automatically
-==================================================
+=====================================================
 
 Some of the wrappers included in the Splunk OpenTelemetry Lambda Layer load instrumentations for popular libraries or frameworks automatically. To deactivate instrumentations that load automatically, follow these steps:
 

@@ -37,7 +37,7 @@ You can also activate automatic instrumentation on a running workload.
 .. _enable-zero-conf-java-yaml:
 
 Activate or deactivate automatic instrumentation before runtime
--------------------------------------------------------------
+----------------------------------------------------------------
 
 If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file.
 
@@ -83,7 +83,7 @@ To deactivate automatic instrumentation, remove the annotation or set its value 
 .. _enable-zero-conf-java-patch:
 
 Activate or deactivate automatic instrumentation on a running workload
------------------------------------------------------------------
+------------------------------------------------------------------------
 
 If the application is already running, patch the deployment using ``kubectl patch`` to activate instrumentation. 
 
