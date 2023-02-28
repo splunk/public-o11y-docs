@@ -12,20 +12,22 @@ Generate Monitoring MetricSets with custom dimensions to glean meaningful insigh
 Prerequisites 
 ==============
 
-* In order to create a new Monitoring MetricSet based on a span tag, you need to first index the span tag. See :ref:`apm-index-span-tags`. 
+* You need to be an Splunk Observability Cloud Administrator. 
+
+* To create a new Monitoring MetricSet based on a span tag or process, you need to first index the span tag or process. See :ref:`apm-index-span-tags`. 
 
 * (Optional): If you are unfamiliar with Monitoring Metric Sets and Troubleshooting Metric Sets, start here:  :ref:`apm-metricsets`. 
 
 * (Optional): Review :ref:`metrics-dimensions-mts` for an overview of the concepts underpinning MetricSets. 
 
-* You need to be an Administrator. 
+
 
 How custom Monitoring MetricSets add value to your organization
 ======================================================================
 
-APM generates a collection of Monitoring MetricSets (MMS) by default; see :ref:`mms-dimensions` for that list. By creating Monitoring MetricSets with custom dimensions, you can filter and aggregate the generated metrics by a specific indexed span tag such as ``version.id``, ``version``, or ``cloud.provider``.
+APM generates a collection of Monitoring MetricSets (MMS) by default; see :ref:`mms-dimensions`. create Monitoring MetricSets with custom dimensions to filter and aggregate the default generated metrics by a specific indexed span tag or process such as ``version.id``, ``version``, or ``cloud.provider``.
 
-You can create custom Monitoring MetricSets at the service level and optionally at the endpoint (span) level. When you create a custom dimension for a service-level MMS, APM generates MMS that include the 6 service-level metrics listed in :ref:`service-mms`, with your chosen indexed span tag as a custom dimension. If you select to add endpoint-level metrics as well, APM generates MMS that include the 6 span-level metrics listed in :ref:`endpoint-mms`, with your chosen indexed span tag as a custom dimension. 
+You can create custom Monitoring MetricSets at the service level and at the endpoint (span) level. When you create a custom dimension for a service-level MMS, APM generates MMS that include the six service-level metrics listed in :ref:`service-mms`, with your chosen indexed span tag or process as a custom dimension. If you select to add endpoint-level metrics as well, APM generates MMS that include the six span-level metrics listed in :ref:`endpoint-mms`, with your chosen indexed span tag or process as a custom dimension. 
 
 When you create a Monitoring MetricSet with a custom dimension, you can use this custom dimension to create charts, dashboards, and alerts by leveraging the Infrastructure Monitoring platform. 
 
@@ -76,17 +78,17 @@ Add a Monitoring MetricSet
 
 Follow these steps to create a Monitoring MetricSet. 
 
-1. Navigate to the APM MetricSets configuration page. There are two ways to get there: 
-    
-    a. From the left navigation panel, select: :strong:`APM` > :strong:`APM Configurations` > :strong:`APM MetricSets`.
-    b. From the APM landing page, click :strong:`APM Configuration` and select :strong:`APM MetricSets`. 
+1. To get to the :guilabel:`APM MetricSets` page, do one of the following: 
+  
+   a. In Splunk APM, select :guilabel:`APM Configuration` and select :guilabel:`APM MetricSets` from the menu. The APM MetricSets page opens.
+   b. From anywhere in Splunk Observability Cloud, select :guilabel:`Settings` in the left navigation bar and select :guilabel:`APM MetricSets` under :guilabel:`Data Configuration`.   
 
-2. Once in the MetricSets Configuation page, you have two options:
+2. On the :guilabel:`APM MetricSets` page, you have two options:
     
-    a. If you have already indexed the span tag you are interested in, it appears in the list of MetricSets and is already generating Troubleshooting MetricSets. Select the edit icon for that span tag to open the :guilabel:`Edit MetricSet` dialog box and add a Monitoring MetricSet to your configuration using the following steps. 
-    b. If you haven't already indexed the tag, follow steps 1-6 in :ref:`Index a new span tag <index-span-tags-instructions>`, then continue with the following steps in the :guilabel:`Add MetricSet` dialog box.
+  * If you have already indexed the span tag or process you are interested in, it appears in the list of MetricSets and is already generating Troubleshooting MetricSets. Select the edit icon for that span tag to open the :guilabel:`Edit MetricSet` dialog box and add a Monitoring MetricSet to your configuration using the following steps. 
+  * If you haven't already indexed the tag or process, f2. On the :guilabel:`APM MetricSets` page, select :strong:`New MetricSet`. Enter the :strong:`Name` of a span tag or process you want to index. Then continue with the following steps.
 
-3. In the :guilabel:`Service` field, enter the service or services for which you want to create a Monitoring MetricSet. You can only create custom dimensionalized MMS for service-level indexed span tags. You can't create custom MMS for globally indexed span tags. 
+3. The :strong:`Scope` determines how APM associates the span tag or process with services in a trace: Enter the service or services for which you want to create a Monitoring MetricSet in the :guilabel:`Service` field. You can only create custom dimensionalized MMS for service-level indexed span tags. You can't create custom MMS for globally indexed span tags. 
 
 4. In the :guilabel:`Add MetricSet` or :guilabel:`Edit MetricSet` dialog box, select the check box for :strong:`Also Create Monitoring MetricSet`.
 
@@ -95,7 +97,7 @@ Follow these steps to create a Monitoring MetricSet.
         :alt: This image shows the MetricSet creation dialog box. 
 
 
-5. Select how you want to add tag data to your Monitoring MetricSet from the dropdown. See :ref:`mms-conf` for more details. 
+5. Select how you want to add tag or process data to your Monitoring MetricSet from the dropdown. See :ref:`mms-conf` for more details. 
     a. :guilabel:`Service and all endpoint MMS:` Create an MMS for each of the selected service, as well as an MMS for each endpoint in each selected service. 
     b. :guilabel:`Service and specific endpoint MMS:` Create an MMS for each of the selected service and an MMS for specific endpoints you select. To add :guilabel:`Endpoint Filters`, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. 
     c. :guilabel:`Service MMS only:` Create an MMS for each of the selected service and no endpoint-level MMS. 

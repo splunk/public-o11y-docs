@@ -59,7 +59,7 @@ For more details about each of these tags, see :ref:`apm-default-span-tags`. You
 Cardinality contribution of indexed span tags and processes
 ------------------------------------------------------------
 
-When you index a new span tag or process to generate Troubleshooting MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for any account limits you have to stay within.
+When you index a new span tag or process to generate Troubleshooting MetricSets, Splunk APM runs a cardinality contribution analysis to calculate the potential total cardinality contribution after indexing the span tag or process. This gives you control of what you index and helps you to account for any organization limits you have to stay within.
 
 If you try to index a span tag or process that might increase the total cardinality contribution beyond your limit, you can change the existing cardinality contribution of indexed tags or processes by modifying or removing indexed span tags or processes.
 
