@@ -7,19 +7,15 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `windows-iis` monitor type for the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration using the `windows-iis` monitor with the `smartagent` receiver.
 
-This monitor is only available on Windows and reports metrics for Windows Internet Information Services (IIS). This monitor drives the Windows IIS dashboard content.
-
+This monitor is only available on Windows. It reports metrics for Windows Internet Information Services (IIS) and drives the Windows IIS dashboard content.
 
 ### Windows Performance Counters
 
-The underlying source for these metrics are Windows Performance Counters. Most of the performance counters that we query in this monitor are actually Gauges that represent rates per second and percentages.
+The underlying source for these metrics are Windows Performance Counters. Most of the performance counters queried in this monitor are actually Gauges that represent rates per second and percentages.
 
-This monitor reports the instantaneous values for these Windows Performance Counters.
-
-This means that in between a collection interval, spikes could occur on the Performance Counters. The best way to mitigate this limitation is to increase the reporting interval on this monitor to collect more frequently.
-
+This monitor reports the instantaneous values for these Windows Performance Counters. This means that in between a collection interval, spikes could occur on the Performance Counters. The best way to mitigate this limitation is to increase the reporting interval on this monitor to collect more frequently.
 
 ##  Installation
 
@@ -42,7 +38,7 @@ The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agen
 
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector:
 
-1. Find your agent configuration file in either `C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml` or `C:\Program Files\Splunk\OpenTelemetry Collector\agent_config.yaml`.
+1. Find your agent configuration file in `C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml`. If you changed the default path, use the location you chose.
 
 2. Add the following option:
 
