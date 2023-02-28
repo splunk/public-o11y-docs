@@ -13,8 +13,7 @@ Install and deploy the Collector
     :hidden:
 
     Deployment modes <deployment-modes.rst>
-    Kubernetes (Helm) <install-k8s.rst>
-    Kubernetes (other) <install-k8s-other.rst>
+    Kubernetes <install-k8s.rst>
     Linux <install-linux.rst>
     Windows (script) <install-windows.rst>
     Windows (manual) <install-windows-manual.rst>
