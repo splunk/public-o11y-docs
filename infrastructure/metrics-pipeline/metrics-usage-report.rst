@@ -33,7 +33,7 @@ Metric identifiers
 
    * - Category
      - | The category of the metric. For example, ``custom``.
-       | :strong:`Notes:` The category identifier is only available for metrics created after <date>. 
+       | :strong:`Notes:` The category identifier is available only for metrics created after <date>. 
 
 
 Usage statistics
