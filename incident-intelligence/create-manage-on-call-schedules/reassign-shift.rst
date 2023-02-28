@@ -29,34 +29,20 @@ To reassign a shift follow these steps:
 #. (Optional) If required, enter the name of the shift owner. The default is set to the current user.
 #. Select :guilabel:`Search for schedules` to find the shift to reassign. Any shifts impacted by the time frame you selected display. 
 #. In :guilabel:`Reassign to`, enter the name of the team member who will take the shift or partial shift. 
-#. Save your changes
+#. Save your changes.
+
+In the updated schedule, the shift or partial shift that was reassigned is now assigned to the new team member. Additionally, there is a notation of from whom the shift was reassigned.
+
+
+Take a full or partial shift
+==================================
+
+Similar to reassigning a shift, you can take a shift from another team member. 
+
+To take a full or partial shift from someone:
 
 
 
-
-
-You can paste this link into a browser to download the calendar. If you want to sync your on-call schedule to your personal calendar, follow the steps for your calendar app.
-
-.. _sync-to-google-calendar:
-
-Sync your on-call schedule to your Google Calendar
-======================================================
-
-For steps to sync your on-call schedule to your Google Calendar, search the web for "Google Calendar Use a link to add a public calendar" and follow the steps provided. 
-
-.. _sync-to-microsoft-outlook:
-
-Sync your on-call schedule to your Microsoft Outlook Calendar
-=================================================================
-
-For steps to sync your on-call schedule to your Microsoft Outlook Calendar, search the web for "Microsoft Outlook Subscribe to a calendar" and follow the steps provided.
-
-.. _sync-to-iOS-calendar:
-
-Sync your on-call schedule to Calendar for iOS
-======================================================
-
-For steps to sync an on-call schedule to your Calendar for iOS, search the web for "Calendar for iOS Set up multiple calendars" and follow the steps provided. 
 
 
 See also
