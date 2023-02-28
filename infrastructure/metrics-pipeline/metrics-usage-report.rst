@@ -50,7 +50,7 @@ Usage statistics
      - Number of unique detectors running during the interval for the metric.
 
    * - Charts
-     - Number of unique views of dashboards during the interval for the metric. For example, if a metric showed up in 3 different charts, and each of them was viewed 2 times, the number of unique views is 6.
+     - Number of unique views of dashboards during the interval for the metric. For example, if a metric appears in 3 different charts, and you view each chart 2 times, the number of unique views is 6.
 
 
 MTS creation statistics
