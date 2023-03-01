@@ -25,7 +25,7 @@ Follow these steps to create rules for a metric.
 #. Select :guilabel:`Create new rules`.
 #. In the search bar, enter the name of the metric for which you want to create rules.
 
-    .. notes:: Metrics ingested through the through the ``https://ingest.signalfx.com/v1/collectd`` endpoint might appear in your search, but metrics pipeline management is not available for those metrics.
+    .. note:: Metrics ingested through the through the ``https://ingest.signalfx.com/v1/collectd`` endpoint might appear in your search, but metrics pipeline management is not available for those metrics.
 
 #. Select :guilabel:`OK`.
 #. Add aggregation rules:

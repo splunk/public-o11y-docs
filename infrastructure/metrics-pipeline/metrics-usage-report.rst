@@ -73,7 +73,7 @@ MTS creation statistics
      - The approximate cardinality of each dimension for the MTS created for the metric. Error rate is less than 2% when the cardinality is high.
 
    * - MTS per token
-     - The token used to create the MTS and the number of MTS created for the metric using that token.
+     - | The token used to create the MTS and the number of MTS created for the metric using that token.
        * If you see a number, such as ``1336332416901451776``, instead of a token ID, the token was deleted before the report was generated.
        * If you see ``0`` instead of a token ID, the MTS were not created using a token.
        * If you see ``{}`` instead of a token ID and the MTS count, the metric is an internal metric. 

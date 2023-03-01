@@ -117,4 +117,4 @@ Create your first metric rules
 
 To start using metrics pipeline management, see :ref:`use-metrics-pipeline`.
 
-.. notes:: Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
+.. note:: Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
