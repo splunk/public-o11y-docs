@@ -19,6 +19,8 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
 
 The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry to Splunk Observability Cloud.
 
+.. caution:: This distribution is currently in beta. Don't use it in production environments. Some features might not be supported or might have constrained capabilities. Support is provided on a best-effort basis.
+
 .. raw:: html
 
   <embed>
