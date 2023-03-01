@@ -12,7 +12,7 @@ and the [LICENSE](LICENSE) specific to this repository.
 
 You can contribute new documentation and edits to the existing documentation.
 
-## Contribute to the documentation
+## Contribute to the documentation 
 
 Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for our contribution guidelines.
 
