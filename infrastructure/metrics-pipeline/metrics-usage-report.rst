@@ -47,10 +47,10 @@ Usage statistics
      - :strong:`Description`
 
    * - Detectors
-     - Number of unique detectors running during the interval for the metric.
+     - Number of unique detectors running during the interval for the metrics. Detectors created before the interval are also counted.
 
    * - Charts
-     - Number of unique views of charts during the interval for the metric. For example, if a metric appears in 3 different charts and you view each chart 2 times, the number of unique views is 6.
+     - Number of unique charts containing the metric that are viewed in dashboards during the interval. If the same chart is viewed multiple times, it is counted only once towards the total charts count.
 
 
 MTS creation statistics
