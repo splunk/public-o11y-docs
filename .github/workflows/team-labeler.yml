@@ -18,6 +18,7 @@ jobs:
                 team_slug: 'o11y-docs',
                 username: context.payload.sender.login
               });
+              console.log("Author of the PR is a maintainer")
               github.rest.issues.addLabels({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
@@ -25,5 +26,6 @@ jobs:
                 labels: ['internal']
               })
             } catch (err) {
+              console.log("Author of the PR is not a maintainer")
               return
             }
