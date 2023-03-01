@@ -15,7 +15,7 @@ jobs:
       - id: membership_check
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.MY_TOKEN }}
+          github-token: ${{ secrets.TEAM_MEMBERSHIP_CHECK }}
           script: |
             try {
               await github.rest.teams.getMembershipForUserInOrg({
