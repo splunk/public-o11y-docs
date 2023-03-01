@@ -23,8 +23,8 @@ If you are unable to complete a current or upcoming shift, you can reassign all 
 To reassign a shift follow these steps: 
 
 #. Do one of the following:
-   * On the main Incident Intelligence page, select :guilabel:`On-call Schedule`. In the side-pane that opens, select :guilabel:`Reassign Shift`.
-   * On the Incident Management page, select the :guilabel:`On-call schedules` tab, then :guilabel:`Reassign shift`
+   - On the main Incident Intelligence page, select :guilabel:`On-call Schedule`. In the side-pane that opens, select :guilabel:`Reassign Shift`.
+   - On the Incident Management page, select the :guilabel:`On-call schedules` tab, then :guilabel:`Reassign shift`
 #. On the Reassign Shifts window, select the time range you are unavailable including the dates and times.
 #. (Optional) If required, enter the name of the shift owner. The default is set to the current user.
 #. Select :guilabel:`Search for schedules` to find the shift to reassign. Any shifts impacted by the time frame you selected display. 
