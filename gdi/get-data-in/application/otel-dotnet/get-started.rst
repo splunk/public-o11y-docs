@@ -13,13 +13,14 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
    Requirements <dotnet-requirements>
    Instrument a .NET application <instrumentation/instrument-dotnet-application>
    Configure the .NET instrumentation <configuration/advanced-dotnet-configuration>
+   Metrics and attributes <configuration/dotnet-metrics-attributes>
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
    Migrate from SignalFx Instrumentation for .NET <troubleshooting/migrate-signalfx-dotnet-to-dotnet-otel>   
 
 The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry to Splunk Observability Cloud.
 
-.. caution:: This distribution is currently in beta. Don't use it in production environments. Some features might not be supported or might have constrained capabilities. Support is provided on a best-effort basis.
+.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
 
 .. raw:: html
 
