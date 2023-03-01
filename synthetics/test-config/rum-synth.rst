@@ -74,4 +74,4 @@ To learn more about:
 
 * Web Vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation
 * what kind of use cases you can solve with Splunk RUM, see :ref:`use-case-landingpage`
-* Tag spotlight, see :ref:`error-aggregates`.
+* Tag spotlight, see :ref:`error-aggregates`
