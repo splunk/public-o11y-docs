@@ -42,4 +42,4 @@ Now that you've created an on-call schedule, add it to the incident workflow for
 * :ref:`ii-schedule-scenarios`
 * :ref:`ii-whos-on-call`
 * :ref:`ii-sync-on-call-schedule`
-* :ref:`reassign_shift`
+* :ref:`reassign-shift`
