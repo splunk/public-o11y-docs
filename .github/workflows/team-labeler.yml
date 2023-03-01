@@ -24,14 +24,20 @@ jobs:
                 username: context.payload.sender.login
               });
               console.log("Author of the PR is a maintainer")
-              github.rest.issues.addLabels({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: ['internal']
-              })
+              return true
             } catch (err) {
               console.log("Author of the PR is not a maintainer")
-              return
+              return false
             }
+      - id: label
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.MY_TOKEN }}
+          script: |
+                github.rest.issues.addLabels({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  labels: ['internal']
+                })
 
