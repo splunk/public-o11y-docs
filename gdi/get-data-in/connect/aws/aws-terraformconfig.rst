@@ -35,16 +35,16 @@ Required tokens
 
 You might need up to three tokens:
 
-SOC user API access token (mandatory)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Observability Cloud user API access token (mandatory)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To obtain your :ref:`user API access token <admin-api-access-tokens>`: 
 
 #. Go to Observability Cloud and select :guilabel:`Settings`.
 #. Select your avatar or name on the top to access your :guilabel:`Personal information`. Your user API access token is available on the right corner.
 
-SOC org token 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Observability Cloud org token 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To obtain your :ref:`org token <admin-org-tokens>`, you have two options:
 
