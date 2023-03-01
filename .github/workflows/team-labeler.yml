@@ -18,12 +18,12 @@ jobs:
                 team_slug: 'o11y-docs',
                 username: context.payload.sender.login
               });
+              github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ['internal']
+              })
             } catch (err) {
               return
             }
-            github.rest.issues.addLabels({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: ['internal']
-            })
