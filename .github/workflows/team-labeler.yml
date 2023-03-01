@@ -15,7 +15,7 @@ jobs:
       - id: membership_check
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.DOCUBOT_READORG_REPO_WORKFLOW_SCOPES }}
+          github-token: ${{ secrets.MY_TOKEN }}
           script: |
             try {
               await github.rest.teams.getMembershipForUserInOrg({
@@ -34,6 +34,4 @@ jobs:
               console.log("Author of the PR is not a maintainer")
               return
             }
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
 
