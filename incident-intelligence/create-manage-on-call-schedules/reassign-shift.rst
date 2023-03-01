@@ -1,4 +1,4 @@
-.. _reassign_shift:
+.. _reassign-shift:
 
 Reassign a full or partial shift
 ************************************************************************
