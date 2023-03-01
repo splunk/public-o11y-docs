@@ -91,4 +91,6 @@ Using the statistics in the metrics usage analytics report, you can gain more vi
 * Identify dimensions that are the main drivers of high cardinality. You might want to use these dimensions for your aggregation rules.
 * Determine which team member instrumented a high cardinality metric. 
 
-With in-depth insights into your metrics usage and creation, you can make the most use of metrics pipeline management to aggregate or drop metrics which are the main cost drivers.
+With in-depth insights into your metrics usage and creation, you can make the most use out of metrics pipeline management to aggregate or drop metrics which are the main cost drivers.
+
+To learn more about metrics pipeline management, see :ref:`metrics-pipeline-intro`.
