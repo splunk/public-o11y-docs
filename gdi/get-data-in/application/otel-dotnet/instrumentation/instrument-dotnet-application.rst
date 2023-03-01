@@ -116,7 +116,7 @@ Linux
 
 If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
 
-.. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-otel-instrumentation`.
+.. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
 .. _otel-dotnet-aspnet-framework:
 
