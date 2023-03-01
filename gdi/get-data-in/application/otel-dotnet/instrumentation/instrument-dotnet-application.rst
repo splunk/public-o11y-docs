@@ -33,7 +33,7 @@ Follow these steps to automatically instrument your application:
 Windows
 -------------------
 
-#. Check that you meet the requirements. See :ref:`dotnet-requirements`.
+#. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
 #. Download and install the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
@@ -79,14 +79,14 @@ Windows
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.
+If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
 
-.. note:: If you need to add custom attributes to spans or want to manually generate spans and metrics, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
+.. note:: If you need to add custom attributes to spans or want to manually generate spans and metrics, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
 Linux
 -------------------
 
-#. Check that you meet the requirements. See :ref:`dotnet-requirements`.
+#. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
 #. Download and install the installation script of the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
@@ -112,9 +112,9 @@ Linux
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.
+If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
 
-.. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
+.. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-otel-instrumentation`.
 
 .. _otel-dotnet-aspnet-framework:
 

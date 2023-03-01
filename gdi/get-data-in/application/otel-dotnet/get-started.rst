@@ -44,6 +44,6 @@ The Splunk Distribution of OpenTelemetry .NET provides the following features:
 
 To instrument your .NET application, follow these steps:
 
-#. Check compatibility and requirements. See :ref:`dotnet-requirements`.
-#. Instrument your .NET application. See :ref:`instrument-dotnet-applications`.
-#. Configure your instrumentation. See :ref:`advanced-dotnet-configuration`.
+#. Check compatibility and requirements. See :ref:`dotnet-otel-requirements`.
+#. Instrument your .NET application. See :ref:`instrument-dotnet-otel-applications`.
+#. Configure your instrumentation. See :ref:`advanced-dotnet-otel-configuration`.

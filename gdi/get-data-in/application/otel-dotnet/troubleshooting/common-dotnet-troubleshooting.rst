@@ -48,7 +48,7 @@ You can enable debug logging to obtain more information about the issue:
 
    If the default log directories can't be created, logs are saved in the user's temporary folder.
 
-   You can change the default location by updating the ``OTEL_DOTNET_AUTO_LOG_DIRECTORY`` environment variable. See :ref:`dotnet-debug-logging-settings` for more information and settings.
+   You can change the default location by updating the ``OTEL_DOTNET_AUTO_LOG_DIRECTORY`` environment variable. See :ref:`dotnet-otel-debug-logging-settings` for more information and settings.
 
 .. note:: Enable debug logging only when needed. Debug mode requires more resources.
 
@@ -67,17 +67,16 @@ Assembly in AdditionalDeps was not found
 
 The following assembly error message might appear in some cases:
 
-```bash
-An assembly specified in the application dependencies manifest (OpenTelemetry.AutoInstrumentation.AdditionalDeps.deps.json) was not found
-  ...
-```
+.. code-block:: bash
+
+   An assembly specified in the application dependencies manifest (OpenTelemetry.AutoInstrumentation.AdditionalDeps.deps.json) was not found
 
 To troubleshoot the issue, enable host tracing as in the following example:
 
-```bash
-COREHOST_TRACE=1
-COREHOST_TRACEFILE=corehost_verbose_tracing.log
-```
+.. code-block:: bash
+
+   COREHOST_TRACE=1
+   COREHOST_TRACEFILE=corehost_verbose_tracing.log
 
 Run the application to collect the logs.
 
