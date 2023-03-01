@@ -30,7 +30,7 @@ Web vitals are made up of these metrics that measure user experience.
 
 Prerequisites 
 =================
-You need to instrument your broswer application with Splunk RUM. See, :ref:`browser-rum-gdi`.
+You need to instrument your browser application with Splunk RUM. See, :ref:`browser-rum-gdi`.
 
 View web vitals for your run results 
 ==========================================
@@ -42,9 +42,9 @@ For example, this image shows the acceptable ranges for TBT. Select the flash li
       :width: 30%
       :alt: Shows range of typical performance for TBT times that are poor(greater than 300 ms), need to be improved(between 100-300ms), or good (less than 100 ms). 
 
-Compare latency of a test by location 
+Compare latency of a test by run location 
 ====================================================================================
-Web vitals are a great way of measuring if your tests are actually capturing the performance you expect. Suppose you want to compare the latency of your tests by location. Open the run results of your test. In the metrics panel, select the filte icon to open the location options dialog box. 
+Web vitals are a great way of measuring if your tests are actually capturing the performance you expect. Suppose you want to compare the latency of your tests by run location. Open the run results of your test. In the metrics panel, select the filter icon to open the run location options dialog box. 
 
 .. image:: /_images/rum/rum-synth-filter.png
       :width: 30%
@@ -52,7 +52,7 @@ Web vitals are a great way of measuring if your tests are actually capturing the
 
 Example
 ------------------
-The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-use-case`. The SRE team wants to determine the health of the API test by location. The data centers for Buttercup Games are in Johannesburg and the web vitals for the local tests reflect optimal performance. 
+The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-use-case`. The SRE team wants to determine the health of the API test by run location. The data centers for Buttercup Games are in Johannesburg and the web vitals for the local tests reflect optimal performance. 
 
 Using the RUM integration, the SRE team can compared web vitals by global results and found that the LCP really lagged. 
 
@@ -60,7 +60,7 @@ Using the RUM integration, the SRE team can compared web vitals by global result
       :width: 30%
       :alt: Shows LCP range for global view. 
 
-To investigate what regions are experiencing poor performance, the SRE team seletcs the RUM link to Tag Spotlight. The team sees that Mumbai has a large range of response times for LCP. The SRE team can apply Mumbai as a filter and explore individual user sessions to find if there are performance discrepensies in relation to the of type of browser, browser version, OS Version, App version and more.  
+To investigate what regions are experiencing poor performance, the SRE team select the RUM link to Tag Spotlight. The team sees that Mumbai has a large range of response times for LCP. The SRE team can apply Mumbai as a filter and explore individual user sessions to find if there are performance discrepancies in relation to the of type of browser, browser version, OS Version, App version and more.  
 
 .. image:: /_images/rum/tag-spotlight-rum-snyth.png
       :width: 80%
