@@ -15,7 +15,7 @@ Examples of questions that Trace Analyzer helps you answer include:
 -  For a given issue, which customers experience the highest error rate?
 -  How to locate error spikes in my trace data?
 
-To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM. You can also open the trace search when loading example traces from a chart, or from anywhere else in Observability Cloud.
+To open Trace Analyzer, select :guilabel:`Traces` in Splunk APM and select :guilabel:`Switch to Trace Analyzer`. To switch back to the classic Traces view, select :guilabel:`Switch to Classic View`. See :ref:`trace-search` for more info about the classic Traces view.
 
 Filter and search
 ====================

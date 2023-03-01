@@ -15,6 +15,9 @@ Use these steps to navigate to :guilabel:`Trace Search`:
 
 #. From the Splunk Observability Cloud landing page, click :guilabel:`APM`.
 #. From the APM landing page, click :guilabel:`Traces`. A list of recent traces opens. 
+   
+   ..note :: Select :guilabel:`Switch to Trace Analyzer` to use the new Trace Analyzer to search traces and identify patterns in the full-fidelity trace data without prior knowledge of which tags are relevant. Trace Analyzer is available to all Splunk Observability Cloud users that use Splunk APM.
+
 #. Use the filter bar at the top of the list to narrow the list by environment, workflow, service(s), and tag(s). If you select multiple items in a filter, they are treated with an AND boolean operator. For example, if you select multiple services in the service filter, only traces containing spans from ALL of the selected the services appear in the results. 
 #. (Optional) Select a minimum or maximum trace duration and toggle the :guilabel:`Errors Only` switch to include only traces containing errors in your search. 
 #. (Optional) Click the header of the :guilabel:`Start time` or :guilabel:`Duration` column to sort your traces by that field. 
