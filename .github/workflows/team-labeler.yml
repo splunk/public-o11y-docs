@@ -1,5 +1,8 @@
 name: "Label issues"
-on: pull_request_target
+on: 
+  pull_request_target:
+    types:
+      - opened
   
 jobs:
   label-pr:
@@ -7,10 +10,12 @@ jobs:
       contents: read
       pull-requests: write
     runs-on: ubuntu-latest
-    if: github.actor != 'srv-rpa-o11y-docs-splunk'
+    if: github.repository == 'splunk/public-o11y-docs' && github.actor != 'srv-rpa-o11y-docs-splunk'
     steps:
-      - uses: actions/github-script@v6
+      - id: membership_check
+        uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.DOCUBOT_READORG_REPO_WORKFLOW_SCOPES }}
           script: |
             try {
               await github.rest.teams.getMembershipForUserInOrg({
@@ -29,3 +34,6 @@ jobs:
               console.log("Author of the PR is not a maintainer")
               return
             }
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+
