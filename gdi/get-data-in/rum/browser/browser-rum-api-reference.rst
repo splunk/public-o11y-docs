@@ -10,7 +10,7 @@ API reference for Browser RUM instrumentation
 
 Use the following API methods when creating manual instrumentation for Splunk RUM for Browser. For manual instrumentation examples, see :ref:`manual-rum-browser-instrumentation`.
 
-.. note:: ``try ... catch`` blocks can prevent your app from crashing when using the CDN version of Browser RUM.
+.. note:: ``try .
 
 Methods
 =========================

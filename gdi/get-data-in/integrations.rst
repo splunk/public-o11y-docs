@@ -1148,7 +1148,7 @@ Application receivers
 
 An application receiver gathers metrics from its associated application and the host the application is running on and sends them to Infrastructure Monitoring.
 
-.. using an include for this table because it also appears on gdi/index.rst
+
 
 .. include:: /_includes/application-receiver-table.rst
 

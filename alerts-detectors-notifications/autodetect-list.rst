@@ -4,7 +4,7 @@
 List of available AutoDetect detectors
 ******************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
    :description: Reference of available AutoDetect detectors and their customizable arguments. 

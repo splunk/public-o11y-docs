@@ -4,7 +4,7 @@
 Auto-clearing alerts
 **********************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Auto-clear feature automatically resolves active alerts after a certain amount of time when a metric time series stops reporting as expected, so that you don't have to clear alerts manually.

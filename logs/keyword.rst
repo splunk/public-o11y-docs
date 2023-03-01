@@ -4,9 +4,6 @@
 Search logs by keywords or fields
 *****************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: Search and filter logs by keyword, field, or field values.
 

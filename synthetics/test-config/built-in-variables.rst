@@ -62,9 +62,6 @@ Splunk Synthetic Monitoring provides the following set of date and time variable
      -  The current time, in ``YYYY-MM-DD HH:SS:MM -XXXX`` format
      - ``2022-04-22 13:46:02 -0400``
 
-
-.. may not be sending these by time of public preview -- double check with Chapman & Roberta on names and whether sending
-
 Location variables
 ===========================
 Splunk Synthetic Monitoring provides the following set of location variables you can use in your tests: 

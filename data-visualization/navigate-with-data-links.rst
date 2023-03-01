@@ -4,7 +4,7 @@
 Navigate to related resources with data links
 *****************************************************************
 
-.. meta updated 10/12/18
+
 
 .. meta::
   	:description: Data links enable DevOps teams to get to better insights and resolve issues faster by tapping into the right data from the right system at the right time. They accomplish this by enabling seamless and context-aware transitions among Splunk Infrastructure Monitoring dashboards, and to third-party solutions in your toolchain, such as logging and APM.

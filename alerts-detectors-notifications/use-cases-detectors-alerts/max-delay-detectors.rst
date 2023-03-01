@@ -4,7 +4,7 @@
 Use case: Set Max Delay for detectors to account for sudden changes in delay
 ******************************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
     :description: This Splunk alerts and detectors use case describes how to set max delay for detectors.

@@ -43,7 +43,7 @@ To get the service API endpoint URL in Splunk On-Call:
 
 #. Click the :strong:`Splunk Observability Cloud Signal Monitoring` tile. The :strong:`Service API Endpoint` value displays.
 
-   If you don't see an endpoint URL value, click :strong:`Enable Integration` to generate one..
+   If you don't see an endpoint URL value, click :strong:`Enable Integration` to generate one.
 
 #. Copy the entire endpoint URL, including the ``$routing_key`` text, for use in :ref:`oncall3`.
 

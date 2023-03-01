@@ -4,7 +4,7 @@
 Use case: Find active alerts to investigate a CPU issue
 *********************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
     :description: This Splunk alerts and detectors use case describes how to find active alerts.

@@ -4,9 +4,6 @@
 Where does a log’s logical time come from?
 *****************************************************************
 
-.. meta created 2022-02-03
-.. meta DOCS-3531
-
 .. meta::
   :description: Log Observer determines a log’s time and assigns it to _time. Time comes from event time processor, HEC protocol timestamp, or entrance into Observability Cloud.
 

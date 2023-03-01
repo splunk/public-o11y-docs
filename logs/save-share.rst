@@ -4,9 +4,6 @@
 Save and share Log Observer queries
 *****************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: Collaborate with team members by sharing Log Observer or Log Observer Connect queries. Saved queries include filters, aggregations, and search-time rules.
 

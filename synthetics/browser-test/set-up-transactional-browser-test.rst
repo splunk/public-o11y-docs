@@ -133,9 +133,3 @@ Follow these steps to create a Browser Test with synthetic transactions:
 #. (Optional) Use the :guilabel:`Test Settings` tab to adjust your test configuration settings. See :ref:`test-config` to learn more.
 #. (Optional) Use the :guilabel:`Detectors` tab to add detectors to your test. See :ref:`synth-alerts` to learn more.
 #. When you're satisfied with your transactional Browser Test, select :guilabel:`Save`.
-
-
-
-.. Tips for choosing a selector
-
-.. * Use developer tools to interact with DOM (inspector) and JavaScript (console) to interact with elements of a site
