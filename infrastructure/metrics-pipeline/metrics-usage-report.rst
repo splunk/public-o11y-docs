@@ -80,3 +80,15 @@ MTS creation statistics
 
    * - Example MTS
      - Three examples of MTS for the metric containing the dimension key-value pairs of the metric.
+
+
+Leverage metrics usage analytics report for metrics pipeline management
+========================================================================================
+
+Using the statistics in the metrics usage analytics report, you can gain more visibility and control over high cardinality metrics in the following ways:
+
+* Find high cardinality metrics that aren't frequently used in charts and dashboards. You can consider aggregating or dropping these metrics with metrics pipeline management.
+* Identify dimensions that are the main drivers of high cardinality. You might want to use these dimensions for your aggregation rules.
+* Determine which team member instrumented a high cardinality metric. 
+
+With in-depth insights into your metrics usage and creation, you can make the most use of metrics pipeline management to aggregate or drop metrics which are the main cost drivers.
