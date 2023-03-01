@@ -2,7 +2,7 @@
 .. _metrics-pipeline:
 
 **************************************************************************
-Metrics Pipeline Management in Splunk Infrastructure Monitoring 
+Metrics pipeline management in Splunk Infrastructure Monitoring 
 **************************************************************************
 
 |hr|
@@ -21,7 +21,7 @@ Metrics Pipeline Management in Splunk Infrastructure Monitoring
     aggregate-drop-use-case
 
 
-Use the following links to navigate the documentation set for Metrics Pipeline Management:
+Use the following links to navigate the documentation set for metrics pipeline management:
 
     * :ref:`metrics-pipeline-intro`
     * :ref:`use-metrics-pipeline`

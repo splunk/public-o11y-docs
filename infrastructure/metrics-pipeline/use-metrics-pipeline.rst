@@ -12,7 +12,7 @@ Control your metric ingestion volume with rules
 |hr|
 
 .. meta::
-    :description: Learn how to create metric rules in Metrics Pipeline Management.
+    :description: Learn how to create metric rules in metrics pipeline management.
 
 For each metric you send to Splunk Observability Cloud, you can create various aggregation and data dropping rules to control ingestion and storage volume.
 

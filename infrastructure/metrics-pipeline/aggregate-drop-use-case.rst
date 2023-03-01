@@ -7,7 +7,7 @@ Use case: Combine aggregation and dropping rules to control your metric cardinal
 
 
 .. meta::
-    :description: Aggregation and dropping use case for Metrics Pipeline Management.
+    :description: Aggregation and dropping use case for metrics pipeline management.
 
 The following use case features an example from Buttercup Games, a fictitious e-commerce company.
 
@@ -30,14 +30,14 @@ However, Kai knows their team cares most about different regions when it comes t
 Actions
 ===============
  
-Kai decides to use Metrics Pipeline Management to control how Observability Cloud ingests their team's data.
+Kai decides to use metrics pipeline management to control how Observability Cloud ingests their team's data.
 
 #. In Observability Cloud, Kai creates an aggregation rule that reduces the cardinality of ``service.latency`` by keeping the ``region`` dimension and discarding ``instance_id`` and ``host_name``.
 #. Kai has a new aggregated ``service.latency_by_region`` metric that yields only 1,623 MTS.
 #. Kai downloads the list of charts and detectors that use the ``service.latency`` metric.
 #. For each associated chart and detector, Kai replaces ``service.latency`` with ``service.latency_by_region``.
 #. Kai lets Skyler know that they have created an aggregated metric and updated all the associated charts and detectors, so Skyler can drop the unaggregated raw metric that the team no longer needs to monitor.
-#. Skyler selects ``service.latency`` on the :strong:`Metrics Pipeline Management` page to view current rules for the metric.
+#. Skyler selects ``service.latency`` on the :strong:`Metrics pipeline management` page to view current rules for the metric.
 #. Skyler changes :guilabel:`Keep data` to :guilabel:`Drop data`.
 #. Skyler verifies the new metric volume after dropping the data they don't need, and saves the rules.
 
