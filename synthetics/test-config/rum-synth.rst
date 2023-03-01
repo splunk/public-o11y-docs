@@ -60,7 +60,7 @@ Using the RUM integration, the SRE team can compared web vitals by global result
       :width: 30%
       :alt: Shows LCP range for global view. 
 
-To investigate what regions are experiencing poor performance, the SRE team selects the RUM link to Tag Spotlight. The team sees that Mumbai has a large range of response times for LCP. The SRE team can apply Mumbai as a filter and explore individual user sessions to find if there are performance discrepancies in relation to the of type of browser, browser version, OS Version, App version and more.  
+To investigate which regions are experiencing poor performance, the SRE team selects the RUM link to Tag Spotlight. The team sees that Mumbai has a large range of response times for LCP. The SRE team can apply Mumbai as a filter and explore individual user sessions to find if there are performance discrepancies in relation to the of type of browser, browser version, OS Version, App version and more.  
 
 .. image:: /_images/rum/tag-spotlight-rum-snyth.png
       :width: 80%
