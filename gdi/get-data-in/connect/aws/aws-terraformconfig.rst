@@ -8,7 +8,7 @@ Connect to AWS using Splunk Terraform
   :description: Use Splunk Terraform to connect Splunk Observability Cloud to AWS.
 
 
-If you use Terraform to turn Observability Cloud APIs into declarative configuration files and don't want to configure your system manually through guided setup, use the Terraform Provider for Splunk, or Splunk Terraform, to connect Splunk Observability Cloud (SOC) to AWS.
+If you use Terraform to turn Observability Cloud APIs into declarative configuration files and don't want to configure your system manually through guided setup, use Splunk's Terraform provider to connect Splunk Observability Cloud (SOC) to AWS.
 
 The HashiCorp Configuration Language (HCL) underlying Terraform supports automation. Although you can apply one configuration file to multiple cloud service providers, this topic explains how to connect your system to Observability Cloud using the Terraform registry for AWS integration from the ``splunk-terraform/signalfx`` provider.
 
@@ -28,6 +28,8 @@ To connect to AWS using Terraform you need to create the following roles:
 - AWS Identity Access Management (IAM) role for CloudWatch Metric Streams
 - AWS IAM role that enables Kinesis Firehose to write to an Amazon S3 bucket
 
+.. _terraform-aws-tokens:
+
 Required tokens
 -------------------------------------------
 
@@ -36,7 +38,7 @@ You might need up to three tokens:
 SOC org token
 ^^^^^^^^^^^^^^^^^^
 
-To obtain your :ref:`org token <admin-org-tokens>`:
+To obtain your :ref:`org token <admin-org-tokens>`, you have two options:
 
 * Go to Observability Cloud. In :guilabel:`Settings`, select :guilabel:`Access tokens`.
 * Use the :new-page:`Splunk Observability Cloud API <https://dev.splunk.com/observability/reference/api/integrations/latest>` to retrieve the name of the token.
@@ -44,15 +46,15 @@ To obtain your :ref:`org token <admin-org-tokens>`:
 SOC user API access token
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To obtain your :ref:`user API access token <admin-api-access-tokens>`:
+To obtain your :ref:`user API access token <admin-api-access-tokens>`: 
 
-* Go to Observability Cloud. In :guilabel:`Settings`, select your avatar or name to access your :guilabel:`Personal information`. Your user API access token is available on the right corner.
-* Use the :new-page:`Splunk Observability Cloud API <https://dev.splunk.com/observability/reference/api/integrations/latest>` to retrieve the name of the token.
+#. Go to Observability Cloud and select :guilabel:`Settings`.
+#. Select your avatar or name on the top to access your :guilabel:`Personal information`. Your user API access token is available on the right corner.
 
 AWS token
 ^^^^^^^^^^^^^^^^^^^^^
 
-TBC
+Retrieve your AWS token in the AWS IAM console.
 
 Configure the connection
 -------------------------------------------
@@ -61,7 +63,7 @@ Configure the connection
 
 To configure an AWS connection through Terraform, perform the following steps:
 
-1. Go to :new-page:`Terraform's Registry <https://registry.terraform.io/>` and look for ``signalfx`` in the search box. You'll find the ``SignalFx`` provider site with docs and other resources, such as the instructions to add SOC as a Terraform provider or the available data sources. 
+1. Go to :new-page:`Terraform's Registry <https://registry.terraform.io/>` and look for ``signalfx`` in the search box. You'll find the ``SignalFx`` provider site with docs, the available resources, and the compatible data sources. 
 
 2. Copy the ``Use provider`` code to add ``SignalFx`` in the ``required_providers`` block of ``main.tf`` in your configuration file. It looks similar to:
 
@@ -80,15 +82,16 @@ To configure an AWS connection through Terraform, perform the following steps:
         # Configuration options
       }
 
-3. Create an external account ID and an AWS IAM role. Copy and modify the example syntax provided in the documentation section of Terraform Registry's SignalFx page.
+3. Create an external account ID and an AWS IAM role. Copy and modify the example syntax provided in the documentation section of Terraform Registry's SignalFx page. You'll need this to use the ``signalfx_aws_external_integration`` resource. 
   
-4. Configure your tokens:
+4. Configure :ref:`your tokens <terraform-aws-tokens>` in the following Terraform resources: 
 
-  * Paste your org token in the dedicated field in the ``signalfx_org_token`` resource. This allows you to see how much traffic is coming from the integration it identifies.
+  * Paste your org token in the ``namedtoken`` field in the ``signalfx_aws_integration`` resource. This allows you to see how much traffic is coming from the integration it identifies.
   * Paste you user API access token in the ``auth_token`` field in the provider config file.
-  * Use your AWS token in the dedicated field in the ``signalfx_aws_external_integration`` resource config file.
 
-5. Add AWS as a data source as described in :guilabel:`Data Source: signalfx_aws_services`. 
+5. Optionally, if you're using Security Token authentication, paste your AWS token in the ``signalfx_aws_token_integration`` resource token/key fields. 
+
+6. Add AWS as a data source as described in :guilabel:`Data Source: signalfx_aws_services`. 
 
 .. note:: For more Terraform syntax examples, see the blog entry :new-page:`Manage Your Splunk Infrastructure as Code Using Terraform <https://www.splunk.com/en_us/blog/partners/manage-your-splunk-infrastructure-as-code-using-terraform.html>`. For examples of how to configure through the Observability Cloud API, see :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>`.
 
