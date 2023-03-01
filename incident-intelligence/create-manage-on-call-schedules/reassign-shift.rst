@@ -42,6 +42,27 @@ Similar to reassigning a shift, you can take a shift from another team member.
 
 To take a full or partial shift from someone:
 
+#. On the main Incident Intelligence page, select :guilabel:`On-call Schedule`. 
+#. Select the name of the on-call team whose schedule you want to modify. The current on-call schedule displays.
+#. Select the :guilabel:`Take shift` icon (). The Take on-call shift dialog displays.
+#. You have two options:
+   * To take the entire remaining shift, turn on the radio button for :guilabel:`Take remaining duration of this on-call shift`.
+   * To take a few hours of the shift beginning immediately, ensure the radio button is inactive and select the number of hours you want to take from the :guilabel:`Take __ hour(s) of this on-call shift`.
+#. Select :guilabel:`Take shift`.
+
+The on-call schedule updates to reflect the shift reassignment selected.
+
+
+View a list of reassigned shifts
+=====================================
+
+To view a list of all shift reassignments:
+
+#. Log in to Splunk Observability Cloud and navigate to :menuselection:`Settings > Incident Management`.
+#. Select the On-call schedules tab.
+#. In the On-call schedules section, select :guilabel:`Reassignments`.
+#. You can review the list of reassigned shifts, listed by the original shift owner. You can edit the shift assignment by selecting the action menu.
+
 
 
 
