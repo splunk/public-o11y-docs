@@ -4,7 +4,7 @@ This repository contains the code and documentation for https://docs.splunk.com/
 
 A private mirror exists where Splunk's technical writers edit documentation for new and updated features. The public and the private repositories update each other automatically using [repo-sync](https://github.com/repo-sync/repo-sync).
 
-## License 
+## License
 
 This Splunk repository is subject to the Splunk Websites Terms and Conditions of Use ("Terms")  
 [https://www.splunk.com/en_us/legal/terms/terms-of-use.html](https://www.splunk.com/en_us/legal/terms/terms-of-use.html) 
