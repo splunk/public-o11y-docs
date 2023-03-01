@@ -123,7 +123,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-ote
 Additional steps for ASP.NET (.NET Framework)
 ================================================
 
-To complete the instrumentation process for ASP.NET applications not running on .NET Core, add the ``TelemetryHttpModule`` module to your application's ``web.config`` file. For example:
+To complete the instrumentation process for ASP.NET applications for IIS running on .NET Framework, add the ``TelemetryHttpModule`` module to your application's ``web.config`` file. For example:
 
 .. code-block:: xml
 
