@@ -49,7 +49,7 @@ To take a full or partial shift from someone:
 
 #. On the main Incident Intelligence page, select :guilabel:`On-call Schedule`. 
 #. Select the name of the on-call team whose schedule you want to modify. The current on-call schedule displays.
-#. Select the :guilabel:`Take shift` icon (..|takeshift| image:: incident-intelligence-take-shift-icon.png). The Take on-call shift dialog displays.
+#. Select the :guilabel:`Take shift` icon (|takeshift|). The Take on-call shift dialog displays.
 #. You have two options:
 
    - To take the entire remaining shift, turn on the radio button for :guilabel:`Take remaining duration of this on-call shift`.
