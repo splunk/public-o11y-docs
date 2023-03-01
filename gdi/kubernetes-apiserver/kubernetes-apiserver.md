@@ -115,6 +115,8 @@ service:
   extensions: [k8s_observer]
 ```
 
+See {ref}`Receiver creator <receiver-creator-receiver>` for more information.
+
 ## Metrics
 
 The following metrics are available for this integration:
