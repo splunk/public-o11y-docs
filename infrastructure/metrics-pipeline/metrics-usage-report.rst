@@ -2,13 +2,13 @@
 .. _metrics-usage-report:
 
 ************************************************************************
-Understand your metrics usage with metrics usage analytics report
+Understand your metrics usage with metrics usage report
 ************************************************************************
 
 
 To get a detailed breakdown of your metric time series (MTS) creation and usage, you can request a usage report for a specific time interval by contacting your tech support member or your account team. By default, the time interval is 30 days.
 
-You can use the detailed metrics usage analytics report to optimize your usage of custom metrics. 
+You can use the detailed metrics usage report to optimize your usage of custom metrics. 
 
     * If you are on a usage-based pricing plan, all your metrics are considered custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance.
     * If you are on a host-based pricing plan with high utilization of custom metrics, you can use the report to lower your custom metrics usage.
@@ -82,10 +82,10 @@ MTS creation statistics
      - Three examples of MTS for the metric containing the dimension key-value pairs of the metric.
 
 
-Leverage metrics usage analytics report for metrics pipeline management
-========================================================================================
+Leverage metrics usage report to optimize your metrics volume
+=======================================================================
 
-Using the statistics in the metrics usage analytics report, you can gain more visibility and control over high cardinality metrics in the following ways:
+Using the statistics in the metrics usage report, you can gain more visibility and control over high cardinality metrics in the following ways:
 
 * Find high cardinality metrics that aren't frequently used in charts and dashboards. You can consider aggregating or dropping these metrics with metrics pipeline management.
 * Identify dimensions that are the main drivers of high cardinality. You might want to use these dimensions for your aggregation rules.
