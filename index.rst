@@ -4,7 +4,7 @@
 Welcome
 **********
 
-.. image:: _images/get-started/o11y-user-doc-hero-banner-v2.svg
+.. image:: _images/get-started/o11y-user-doc-hero-banner-v2.svg 
    :alt: Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
