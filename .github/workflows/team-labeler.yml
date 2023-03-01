@@ -30,6 +30,7 @@ jobs:
               return false
             }
       - id: label
+        if: steps.membership_check.outputs.result == 'true'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.MY_TOKEN }}
