@@ -35,21 +35,21 @@ Required tokens
 
 You might need up to three tokens:
 
-SOC org token
-^^^^^^^^^^^^^^^^^^
-
-To obtain your :ref:`org token <admin-org-tokens>`, you have two options:
-
-* Go to Observability Cloud. In :guilabel:`Settings`, select :guilabel:`Access tokens`.
-* Use the :new-page:`Splunk Observability Cloud API <https://dev.splunk.com/observability/reference/api/integrations/latest>` to retrieve the name of the token.
-
-SOC user API access token
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SOC user API access token (mandatory)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To obtain your :ref:`user API access token <admin-api-access-tokens>`: 
 
 #. Go to Observability Cloud and select :guilabel:`Settings`.
 #. Select your avatar or name on the top to access your :guilabel:`Personal information`. Your user API access token is available on the right corner.
+
+SOC org token 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To obtain your :ref:`org token <admin-org-tokens>`, you have two options:
+
+* Go to Observability Cloud. In :guilabel:`Settings`, select :guilabel:`Access tokens`.
+* Use the :new-page:`Splunk Observability Cloud API <https://dev.splunk.com/observability/reference/api/org_tokens/latest#endpoint-retrieve-tokens-using-query>` to retrieve the name of the token.
 
 AWS token
 ^^^^^^^^^^^^^^^^^^^^^
@@ -86,10 +86,9 @@ To configure an AWS connection through Terraform, perform the following steps:
   
 4. Configure :ref:`your tokens <terraform-aws-tokens>` in the following Terraform resources: 
 
-  * Paste your org token in the ``namedtoken`` field in the ``signalfx_aws_integration`` resource. This allows you to see how much traffic is coming from the integration it identifies.
-  * Paste you user API access token in the ``auth_token`` field in the provider config file.
-
-5. Optionally, if you're using Security Token authentication, paste your AWS token in the ``signalfx_aws_token_integration`` resource token/key fields. 
+  * :strong:`Required`. Paste you user API access token in the ``auth_token`` field in the provider config file. This is required to authenticate Terraform requests to Observability Cloud's API. 
+  * Optionally, you can add your org token in the ``namedToken`` field in the ``signalfx_aws_integration`` resource. This allows you to see how much traffic is coming from the integration it identifies, if you use different tokens per integration.
+  * Optionally, if you're using Security Token authentication, paste your AWS token in the ``signalfx_aws_token_integration`` resource token/key fields. 
 
 6. Add AWS as a data source as described in :guilabel:`Data Source: signalfx_aws_services`. 
 
