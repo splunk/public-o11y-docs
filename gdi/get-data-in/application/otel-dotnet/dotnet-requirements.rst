@@ -85,7 +85,7 @@ Metrics instrumentations
    * - ASP.NET Framework
      - ``ASPNET`` |br| (Requires the trace instrumentation)
    * - ASP.NET Core
-     - ``ASPNETCORE`` |br| (Automatically enables ``Microsoft.AspNetCore.Hosting.HttpRequestIn`` spans.)
+     - ``ASPNETCORE`` |br| (Automatically activates ``Microsoft.AspNetCore.Hosting.HttpRequestIn`` spans.)
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
      - ``HTTPCLIENT``
    * - OpenTelemetry.Instrumentation.Runtime

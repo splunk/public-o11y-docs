@@ -99,11 +99,11 @@ Linux
       # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
 
-#. Enable the automatic instrumentation:
+#. Activate the automatic instrumentation:
 
    .. code-block:: shell
 
-      # Enable the automatic instrumentation
+      # Activate the automatic instrumentation
       . $HOME/.splunk-otel-dotnet/instrument.sh
 
 #. Set the environment and service version resource attributes:

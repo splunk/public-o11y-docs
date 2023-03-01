@@ -5,7 +5,7 @@ Configure the Splunk Distribution of OpenTelemetry .NET
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs, such as correlating traces with logs and enabling custom sampling.
+   :description: Configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs, such as correlating traces with logs and activating custom sampling.
 
 You can configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
 
@@ -16,7 +16,7 @@ Configuration methods
 
 You can change the settings of the Splunk Distribution of OpenTelemetry .NET in the following ways:
 
-- For .NET applications, set environment variables. On Windows, set them in the process scope unless you want to enable automatic instrumentation globally for all .NET applications.
+- For .NET applications, set environment variables. On Windows, set them in the process scope unless you want to activate automatic instrumentation globally for all .NET applications.
 
 - For .NET Framework applications running as Windows services, you can add settings in the ``appSettings`` block of the ``app.config`` file when supported or set environment variables using the Windows Registry.
 
@@ -52,19 +52,19 @@ The following settings are common to most instrumentation scenarios:
    * - Setting
      - Description
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - Enabled by default. Adds server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-dotnet-otel`. The default value is ``true``.
+     - Activated by default. Adds server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-dotnet-otel`. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
      - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Can't be set using the ``web.config`` or ``app.config`` files.
    * - ``OTEL_DOTNET_AUTO_TRACES_ENABLED``
-     - Traces are collected by default. To disable trace collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
+     - Traces are collected by default. To deactivate trace collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
    * - ``OTEL_DOTNET_AUTO_METRICS_ENABLED``
-     - Metrics are collected by default. To disable metric collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
+     - Metrics are collected by default. To deactivate metric collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
    * - ``OTEL_DOTNET_AUTO_LOGS_ENABLED``
-     - Logs are collected by default. To disable log collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
+     - Logs are collected by default. To deactivate log collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
    * - ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED``
-     - Enables the OpenTracing tracer. The default value is ``false``. See :ref:`migrate-signalfx-dotnet-to-dotnet-otel` for more information.
+     - Activates the OpenTracing tracer. The default value is ``false``. See :ref:`migrate-signalfx-dotnet-to-dotnet-otel` for more information.
    * - ``OTEL_DOTNET_AUTO_NETFX_REDIRECT_ENABLED``
-     - Enables automatic redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. 
+     - Activates automatic redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. 
    * - ``OTEL_DOTNET_AUTO_FLUSH_ON_UNHANDLEDEXCEPTION``
      - Controls whether the telemetry data is flushed when an ``AppDomain.UnhandledException`` event is raised. Set to ``true`` when experiencing missing telemetry at the same time of unhandled exceptions.	
 
@@ -160,7 +160,7 @@ The following settings control instrumentations and tracing behavior:
    * - ``OTEL_DOTNET_AUTO_TRACES_ADDITIONAL_LEGACY_SOURCES``
      - Comma-separated list of additional legacy source names to be added to the tracer at the startup. Use it to capture ``System.Diagnostics.Activity`` objects created without using the ``System.Diagnostics.ActivitySource`` API.	
 
-The following settings control which instrumentations are enabled. See :ref:`disable-instrumentations-otel-dotnet` for more information.
+The following settings control which instrumentations are activated. See :ref:`disable-instrumentations-otel-dotnet` for more information.
 
 .. list-table::
    :header-rows: 1
@@ -168,19 +168,19 @@ The following settings control which instrumentations are enabled. See :ref:`dis
    :widths: 40 60
 
    * - ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``
-     - Disables all instrumentations. The default value is ``true``.
+     - Deactivates all instrumentations. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``
-     - Disables all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+     - Deactivates all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_TRACES_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Enables or disables a specific trace instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED`` environment variable.
+     - Activates or deactivates a specific trace instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``
-     - Disables all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+     - Deactivates all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_METRICS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Enables or disables a specific metric instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED`` environment variable.
+     - Activates or deactivates a specific metric instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``
-     - Disables all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+     - Deactivates all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_LOGS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
-     - Enables or disables a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable.
+     - Activates or deactivates a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
      - List of bytecode instrumentations JSON configuration file paths, delimited by the platform-specific path separator (``;`` on Windows, ``:`` on Linux). For example: ``%ProfilerDirectory%/integrations.json``.
 
@@ -189,7 +189,7 @@ The following settings control which instrumentations are enabled. See :ref:`dis
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, trace response headers are enabled by default. The instrumentation adds the following response headers to HTTP responses:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, trace response headers are activated by default. The instrumentation adds the following response headers to HTTP responses:
 
 .. code-block::
 
@@ -198,7 +198,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
 The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
 
-.. note:: If you need to disable trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
+.. note:: If you need to deactivate trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
 .. _dotnet-otel-debug-logging-settings:
 
@@ -215,15 +215,15 @@ The following settings control the internal logging of the Splunk Distribution o
    * - Setting
      - Description
    * - ``OTEL_DOTNET_AUTO_DEBUG``
-     - Enables file logging. The default value is ``false``. Can't be set using the ``web.config`` or ``app.config`` files.
+     - Activates file logging. The default value is ``false``. Can't be set using the ``web.config`` or ``app.config`` files.
    * - ``OTEL_DOTNET_AUTO_LOG_DIRECTORY``
      - Directory of the .NET tracer logs. The default value is ``/var/log/opentelemetry/dotnet`` for Linux, and ``%ProgramData%\OpenTelemetry .NET AutoInstrumentation\logs`` for Windows. Can't be set using the ``web.config`` or ``app.config`` files.
    * - ``OTEL_DOTNET_AUTO_TRACES_CONSOLE_EXPORTER_ENABLED``
-     - Whether the traces console exporter is enabled. The default value is ``false``.
+     - Whether the traces console exporter is activated. The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_METRICS_CONSOLE_EXPORTER_ENABLED``
-     - Whether the metrics console exporter is enabled. The default value is ``false``.
+     - Whether the metrics console exporter is activated. The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_LOGS_CONSOLE_EXPORTER_ENABLED``
-     - Whether the logs console exporter is enabled. The default value is ``false``.The default value is ``false``.
+     - Whether the logs console exporter is activated. The default value is ``false``.The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_LOGS_INCLUDE_FORMATTED_MESSAGE``
      - Whether the log state have to be formatted. The default value is ``false``.
 

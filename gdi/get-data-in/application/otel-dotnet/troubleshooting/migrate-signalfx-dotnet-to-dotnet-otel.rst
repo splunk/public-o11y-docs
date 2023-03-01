@@ -23,11 +23,11 @@ Migrate to the Splunk Distribution of OpenTelemetry .NET
 
 To migrate from the SignalFx Instrumentation for .NET to the Splunk Distribution of OpenTelemetry .NET, follow these steps:
 
-#. Install and enable the Splunk Distribution of OpenTelemetry .NET. See :ref:`install-dotnet-otel-instrumentation`.
+#. Install and activate the Splunk Distribution of OpenTelemetry .NET. See :ref:`install-dotnet-otel-instrumentation`.
 #. Specify the endpoint of the OpenTelemetry Collector you're exporting traces to. See :ref:`dotnet-otel-exporter-settings`.
 #. Update your settings. See :ref:`changes-functionality-dotnet-otel`.
 
-If you manually instrumented your code with OpenTracing, enable OpenTracing support by setting the ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED`` environment variable to ``true``.
+If you manually instrumented your code with OpenTracing, activate OpenTracing support by setting the ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED`` environment variable to ``true``.
 
 .. _changes-functionality-dotnet-otel:
 

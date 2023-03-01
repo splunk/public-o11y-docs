@@ -32,10 +32,10 @@ Follow these steps to troubleshoot general instrumentation issues:
 
          cat /proc/<pid>/environ # where <pid> is the process ID
 
-Enable debug logging
+Activate debug logging
 ----------------------------------------------------
 
-You can enable debug logging to obtain more information about the issue:
+You can activate debug logging to obtain more information about the issue:
 
 #. Set the ``OTEL_DOTNET_AUTO_DEBUG`` environment variable to ``true`` before starting your instrumented application. 
 
@@ -50,7 +50,7 @@ You can enable debug logging to obtain more information about the issue:
 
    You can change the default location by updating the ``OTEL_DOTNET_AUTO_LOG_DIRECTORY`` environment variable. See :ref:`dotnet-otel-debug-logging-settings` for more information and settings.
 
-.. note:: Enable debug logging only when needed. Debug mode requires more resources.
+.. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
 Traces don't appear in Observability Cloud
 ==================================================================
@@ -59,7 +59,7 @@ If traces from your instrumented application or service are not available in Spl
 
 #. Make sure that ``OTEL_EXPORTER_OTLP_ENDPOINT`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
-#. Check that the OTLP receiver is enabled in the OTel Collector and plugged into the traces pipeline.
+#. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
 Assembly in AdditionalDeps was not found
@@ -71,7 +71,7 @@ The following assembly error message might appear in some cases:
 
    An assembly specified in the application dependencies manifest (OpenTelemetry.AutoInstrumentation.AdditionalDeps.deps.json) was not found
 
-To troubleshoot the issue, enable host tracing as in the following example:
+To troubleshoot the issue, activate host tracing as in the following example:
 
 .. code-block:: bash
 
@@ -85,19 +85,19 @@ Run the application to collect the logs.
 High CPU usage
 ====================================================
 
-By default, the Splunk Distribution of OpenTelemetry .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've enabled the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
+By default, the Splunk Distribution of OpenTelemetry .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've activated the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
 
 To restrict global instrumentation to a set of processes, use the ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES`` environment variable, which excludes processes for instrumentation. See :ref:`advanced-dotnet-otel-configuration` for more information.
 
 .. _disable-instrumentations-otel-dotnet:
 
-Disable specific instrumentations
+Deactivate specific instrumentations
 ====================================================
 
-All instrumentations are enabled by default for all signal types: traces, metrics, and logs.
+All instrumentations are activated by default for all signal types: traces, metrics, and logs.
 
-You can disable all instrumentations for a specific signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_ENABLED_INSTRUMENTATIONS`` environment variable to ``false``.
+You can deactivate all instrumentations for a specific signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_ENABLED_INSTRUMENTATIONS`` environment variable to ``false``.
 
-For a more granular approach, you can disable specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED`` environment variable to ``false``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation.
+For a more granular approach, you can deactivate specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED`` environment variable to ``false``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation.
 
-.. note:: You can't set environment variables for disabling instrumentations using the ``web.config`` or ``app.config`` files.
+.. note:: You can't set environment variables for deactivating instrumentations using the ``web.config`` or ``app.config`` files.
