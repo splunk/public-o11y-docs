@@ -32,8 +32,7 @@ Metric identifiers
      - The name of the metric
 
    * - Category
-     - | The category of the metric. For example, ``custom``.
-       | :strong:`Notes:` The category identifier is available only for metrics created after March 9, 2023. 
+     - The category of the metric. For example, ``custom``.
 
 
 Usage statistics
