@@ -5,7 +5,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `genericjmx` monitor via the Smart Agent Receiver. For a more flexible alternative, use [the JMX monitor](jmx).
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `genericjmx` monitor using the Smart Agent Receiver. For a more flexible alternative, use [the JMX monitor](jmx).
 
 ```{note}
 This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
@@ -80,7 +80,7 @@ The **nested** `mBeanDefinitions` configuration object has the following fields:
 | --- | --- | --- | --- |
 | `objectName` | no | `string` | Sets the pattern which is used to retrieve MBeans from the MBeanServer. If more than one MBean is returned, you should use the `instanceFrom` option to make the identifiers unique. |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. |
-| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include "properties", which are basically key-value pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This is optional and may be repeated to generate the plugin instance from multiple property values. |
+| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include "properties", which are basically key-value pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This is optional and can be repeated to generate the plugin instance from multiple property values. |
 | `values` | no | `list of objects` (see the following table) | The `value` blocks map one or more attributes of an MBean to a value list<!---in collectd-->. There must be at least one `value` block within each MBean block. |
 | `dimensions` | no | `list of strings` |  |
 
@@ -98,7 +98,7 @@ The **nested** `values` configuration object has the following fields:
 | `attributes` | no | `list of strings` | The plural form of the `attribute` config above. Used to derive multiple metrics from a single MBean. |
 
 ### Example Configuration
-This example configuration gets the thread count from a standard JMX MBean available on all Java JMX-enabled applications:
+This example configuration gets the thread count from a standard JMX MBean available on all Java JMX applications:
 
 ```yaml
 monitors:
@@ -131,7 +131,7 @@ java \
   -Dcom.sun.management.jmxremote.rmi.port=5000 \
   ...
 ```
-This works as long as the agent is allowed to access port 5000 on the Java app's host. Note that this does not enable authentication or encryption, but these can be added.
+This works as long as the agent is allowed to access port 5000 on the Java app host. Note that this does not turn on authentication or encryption, but these can be added.
 
 The following error messages assume the host config is set to 172.17.0.3 and the port set to 5000. Your host config and port settings might be different. The following sections show errors you might receive and their meanings:
 

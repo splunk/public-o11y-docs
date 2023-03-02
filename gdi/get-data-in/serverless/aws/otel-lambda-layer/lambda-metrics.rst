@@ -68,4 +68,4 @@ The following table contains all the dimensions reported by the Splunk Lambda Ex
 Tags and properties
 =================================================
 
-By default, metrics reported by the Splunk Lambda Extension don't have tag or properties attached to them. To enable this feature, you must configure an AWS data source in Splunk Observability Cloud. See :ref:`specify-data-metadata`.
+By default, metrics reported by the Splunk Lambda Extension don't have tag or properties attached to them. To activate this feature, you must configure an AWS data source in Splunk Observability Cloud. See :ref:`specify-data-metadata`.

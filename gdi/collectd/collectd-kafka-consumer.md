@@ -7,7 +7,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/kafka_consumer` monitor type for the Smart Agent Receiver.
 
-Use this integration to monitors a Java-based Kafka consumer using collectd's GenericJMX plugin.
+Use this integration to monitors a Java-based Kafka consumer using collectd GenericJMX plugin.
 
 This monitor has a set of built-in MBeans configured for which it pulls metrics from the Kafka consumer's JMX endpoint.
 

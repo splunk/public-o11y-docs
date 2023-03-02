@@ -38,7 +38,7 @@ You can apply any of the following actions on collected attributes of spans, met
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the attributes processor. To turn on the attributes processor for a pipeline, add ``attributes`` to the ``processors`` section of the configuration. For example:
+By default, the Splunk Distribution of OpenTelemetry Collector includes the attributes processor. To activate the attributes processor for a pipeline, add ``attributes`` to the ``processors`` section of the configuration. For example:
 
 .. code-block:: yaml
 

@@ -13,7 +13,7 @@ To learn about the different metric types, see :ref:`metric-types`.
 
 .. _enable-otel-metrics:
 
-Enable metrics collection
+Activate metrics collection
 ====================================================
 
 To collect Java application and Java Virtual Machine metrics, see :ref:`enable_automatic_metric_collection`.
@@ -105,7 +105,7 @@ The agent collects the following metrics through the following libraries:
 JVM metrics
 =============================================================
 
-The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is enabled:
+The Splunk OTel Java agent collects the following Java Virtual Machine (JVM) metrics when metric collection is activated:
 
 .. _classloader-metrics:
 
@@ -180,10 +180,10 @@ The agent collects the following heap pressure metrics:
     - Description
   * - ``runtime.jvm.gc.overhead``
     - Gauge
-    - An approximation of the percentage of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
+    - An approximation of the percentage of CPU time used by GCP activities over the last lookback period or since monitoring began, whichever is shorter, in the range [0..1].
   * - ``runtime.jvm.memory.usage.after.gc``
     - Gauge
-    - The percentage of long-lived heap pool used after the last GC event, in the range [0..1].
+    - The percentage of long-lived heap pool used after the last GCP event, in the range [0..1].
 
 .. _jvm-memory-metrics:
 
@@ -204,13 +204,13 @@ The agent collects the following memory metrics:
     - Counter
     - Total number of bytes allocated by JVM threads since the previous data point was emitted. 
         - Use the rate per second rollup. 
-        - Requires to enable memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag.
   * - ``process.runtime.jvm.memory.reclaimed``
     - Counter
-    - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes: 
+    - Total number of bytes reclaimed by the GCP since the previous data point was emitted. Notes: 
         - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC. 
         - Use the rate per second rollup.
-        - Requires to enable memory profiling,or to use the ``splunk.metrics.experimental.enabled`` flag. 
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag. 
   * - ``runtime.jvm.buffer.count``
     - Gauge
     - An estimate of the number of buffers in the pool.
@@ -430,7 +430,7 @@ Send custom Java application metrics
 
 The Splunk Distribution of OpenTelemetry Java agent detects if the instrumented application is using Micrometer and injects a special ``MeterRegistry`` implementation that lets the agent collect user-defined meters.
 
-Follow these steps to enable custom application metrics:
+Follow these steps to activate custom application metrics:
 
 - :ref:`add-micrometer-dep`
 - :ref:`add-meter-registry`

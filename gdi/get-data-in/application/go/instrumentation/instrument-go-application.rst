@@ -29,7 +29,7 @@ To generate all the basic installation commands for your environment and applica
 
 .. _install-enable-go-instrumentation:
 
-Install and enable the Go instrumentation
+Install and activate the Go instrumentation
 ===================================================================
 
 Follow these steps to instrument your application using the Go instrumentation:
@@ -104,9 +104,9 @@ Follow these steps to instrument your application using the Go instrumentation:
 
          // ...
 
-#. Enable additional instrumentations. For more information, see :ref:`supported-go-libraries`.
+#. Activate additional instrumentations. For more information, see :ref:`supported-go-libraries`.
 
-#. (Optional) To link APM and RUM data, enable the HTTP instrumentation. See :ref:`server-trace-information-go`.
+#. (Optional) To link APM and RUM data, activate the HTTP instrumentation. See :ref:`server-trace-information-go`.
 
 If no data appears in :strong:`Observability > APM`, see :ref:`common-go-troubleshooting`.
 
