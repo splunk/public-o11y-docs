@@ -54,7 +54,7 @@ Follow these steps to deploy the integration:
     # Then notify Kong of the plugin or add to your existing configuration file
     echo 'custom_plugins = signalfx' > /etc/kong/signalfx.conf
     ```
-2. Add the following `lua_shared_dict` memory declarations to the NGINX configuration file of Kong, or add them directly to `/usr/local/share/lua/5.1/kong/templates/nginx_kong.lua` if you are using Kon default setup:
+2. Add the following `lua_shared_dict` memory declarations to the NGINX configuration file of Kong, or add them directly to `/usr/local/share/lua/5.1/kong/templates/nginx_kong.lua` if you are using Kong default setup:
     ```
     lua_shared_dict kong_signalfx_aggregation 10m;
     lua_shared_dict kong_signalfx_locks 100k;

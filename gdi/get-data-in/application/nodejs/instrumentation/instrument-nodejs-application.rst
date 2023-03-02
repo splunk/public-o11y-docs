@@ -99,7 +99,7 @@ To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment 
 
 To activate memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
 
-The following example shows how to activate the profiler from your applicatio code:
+The following example shows how to activate the profiler from your application code:
 
 .. code-block:: javascript
 

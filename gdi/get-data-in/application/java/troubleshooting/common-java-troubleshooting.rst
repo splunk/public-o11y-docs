@@ -198,7 +198,7 @@ If the string does not appear, make sure that you've activated the profiler by s
 Check the AlwaysOn Profiling configuration
 ----------------------------------------------------------------
 
-If AlwaysOn Profiling is not working as intended, check the configuration settings. The Java agent logs AlwaysOn Profilin settings using INFO messages at startup. Search for the string ``com.splunk.opentelemetry.profiler.ConfigurationLogger`` to see entries like the following:
+If AlwaysOn Profiling is not working as intended, check the configuration settings. The Java agent logs AlwaysOn Profiling settings using INFO messages at startup. Search for the string ``com.splunk.opentelemetry.profiler.ConfigurationLogger`` to see entries like the following:
 
 .. code-block:: shell 
       

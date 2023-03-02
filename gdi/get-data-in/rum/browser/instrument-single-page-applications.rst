@@ -117,7 +117,7 @@ To instrument a Gatsby SPA using the Browser RUM agent, follow these steps:
    .. code-block:: javascript
 
       /**
-      * Implement Gatsb Browser APIs in this file.
+      * Implement Gatsby Browser APIs in this file.
       *
       * See: https://www.gatsbyjs.com/docs/browser-apis/
       */

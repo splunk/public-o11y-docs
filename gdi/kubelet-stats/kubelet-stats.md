@@ -87,8 +87,8 @@ The **nested** `kubeletAPI` configuration object has the following fields:
 | --- | --- | --- | --- |
 | `url` | no | `string` | URL of the Kubelet instance.  This will default to `http://<current node hostname>:10255` if not provided. |
 | `authType` | no | `string` | Can be `none` for no auth, `tls` for TLS client cert auth, or `serviceAccount` to use the pod's default service account token to authenticate. The default value is `none`. |
-| `skipVerify` | no | `bool` | Whether to skip verification of the Kubele TLS cert. The default value is `true`.|
-| `caCertPath` | no | `string` | Path to the CA cert that has signed the Kubele TLS cert, unnecessary if `skipVerify` is set to `false`. |
+| `skipVerify` | no | `bool` | Whether to skip verification of the Kubelet TLS cert. The default value is `true`.|
+| `caCertPath` | no | `string` | Path to the CA cert that has signed the Kubelet TLS cert, unnecessary if `skipVerify` is set to `false`. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use if `authType` is set to `tls` |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use if `authType` is set to `tls` |
 | `logResponses` | no | `bool` | Whether to log the raw cadvisor response at the debug level for debugging purposes. The default value is `false`. |

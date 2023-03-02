@@ -118,7 +118,7 @@ Use the following command to check for the ``injection-status`` annotation. Repl
 
     kubectl get pod  <POD_NAME> -o yaml | grep inject
 
-The comman result is similar to the following:
+The command result is similar to the following:
 
 .. code-block:: bash
 
