@@ -73,6 +73,7 @@ MTS creation statistics
 
    * - MTS per token
      - | The token used to create the MTS and the number of MTS created for the metric using that token.
+     
        * If you see a number, such as ``1336332416901451776``, instead of a token ID, the token was deleted before the report was generated.
        * If you see ``0`` instead of a token ID, the MTS were not created using a token.
        * If you see ``{}`` instead of a token ID and the MTS count, the metric is an internal metric. 
