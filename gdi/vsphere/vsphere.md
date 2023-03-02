@@ -13,7 +13,7 @@ This integration is available on Kubernetes, Linux, and Windows.
 
 ### Requirements
 
-This monitor uses VMware’s `govmomi` SDK, which officially supports vCenter 6.5, 6.7, and 7.0. While this monitor might work with vCenter 5.1, 5.5, and 6.0, these versions are not officially supported.
+This monitor uses VMware's `govmomi` SDK, which officially supports vCenter 6.5, 6.7, and 7.0. While this monitor might work with vCenter 5.1, 5.5, and 6.0, these versions are not officially supported.
 
 ```{note}
 When you add a custom role, don't assign any privileges to it. The role is created as a read-only role with three system-defined privileges: `System.Anonymous`, `System.View`, and `System.Read`. For more information, see the vSphere official documentation on user roles.

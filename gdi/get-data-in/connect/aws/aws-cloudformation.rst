@@ -9,14 +9,14 @@ Using CloudFormation templates
 
 Decide which CloudFormation template to use depending on your deployment method (for example, per AWS region or per AWS account) and integration type (for example, logs only, metric streams only, or both). Even if you don't intend to use both logs and metrics, you can safely deploy a CloudFormation template, since unused infrastructure doesn't generate costs.
 
-From the :strong:`CloudFormation templates` table, select the QuickLink for a template with support for metric streams or logs. The QuickLink automatically opens the AWS Management Console in the last region you used, but you may select any other region in the AWS Management Console.
+From the :strong:`CloudFormation templates` table, select the QuickLink for a template with support for metric streams or logs. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
 
 If the prepopulated CloudFormation template does not meet your needs, create required resources using CloudFormation manually by following these steps:
 
 1. Select the :strong:`Hosted template link` to download and modify the template you choose.
 2. In the :strong:`Quick Create stack` dialog box for the selected template, enter the access token for your organization.
 3. Select :strong:`Create stack`.
-4. Use an API call to activate CloudWatch Metric Streams. To learn more, see :ref:`enable-cw-metricstreams`.
+4. Use an API call to activate CloudWatch Metric Streams. To learn more, see :ref:`activate-cw-metricstreams`.
 
 You can optionally use AWS CloudFormation StackSets to work simultaneously across multiple AWS regions after configuring the StackSet prerequisites for self-managed permissions. For more details, see Amazon Web Services documentation to configure StackSet prerequisites.
 

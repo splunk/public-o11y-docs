@@ -136,9 +136,9 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 Activate metrics collection
 --------------------------------------
 
-To activate automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLED`` environment variable to true.
+To activate automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLED`` environment variable to ``true``.
 
-To activate runtime metrics, set the ``SIGNALFX_RUNTIME_METRICS_ENABLED`` environment variable to true.
+To activate runtime metrics, set the ``SIGNALFX_RUNTIME_METRICS_ENABLED`` environment variable to ``true``.
 
 See :ref:`dotnet-metrics-attributes` for more information about the metrics collected by the instrumentation. For more metric settings, see :ref:`dotnet-metric-settings`. 
 

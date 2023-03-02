@@ -60,7 +60,7 @@ When you run the agent with debug logging activated, debug information is sent t
    [opentelemetry.auto.trace 2021-10-10 10:57:05:722 +0200] [main] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable
    ...
 
-While not all debug entries may be relevant to the issue affecting your Python instrumentation, the root cause is likely to appear in your debug log.
+While not all debug entries might be relevant to the issue affecting your Python instrumentation, the root cause is likely to appear in your debug log.
 
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
@@ -91,7 +91,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 Channel pipeline error
 -------------------------------------------------------------------
 
-If you're seeing the following error in your logs, it may mean that the Python agent is trying to send trace data to the Observability Cloud ingest endpoint, which is not yet supported by OTLP:
+If you're seeing the following error in your logs, it might mean that the Python agent is trying to send trace data to the Observability Cloud ingest endpoint, which is not yet supported by OTLP:
 
 .. code-block:: bash
 

@@ -88,7 +88,7 @@ Scrape configuration
 
 The ``scrape_config`` section of your configuration file can specify a set of targets and parameters describing how to scrape them. For basic configurations, one scrape configuration specifies a single job. 
 
-Targets may be statically configured by using the ``static_configs`` parameter or dynamically discovered using one of the supported service-discovery mechanisms.
+Targets can be statically configured by using the ``static_configs`` parameter or dynamically discovered using one of the supported service-discovery mechanisms.
 
 Additionally, the ``relabel_configs`` parameter allows advanced modifications to any target and its labels before scraping.
 

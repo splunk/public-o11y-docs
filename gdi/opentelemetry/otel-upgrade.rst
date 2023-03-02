@@ -91,7 +91,7 @@ Debian
       sudo apt-get --only-upgrade splunk-otel-collector
 
 .. note::
-  If the default configuration files in ``/etc/otel/collector`` have been modified after the initial installation, you may be prompted to keep the existing files or overwrite the files from the new package.
+  If the default configuration files in ``/etc/otel/collector`` have been modified after the initial installation, you might be prompted to keep the existing files or overwrite the files from the new package.
 
 RPM
 ------------------
@@ -120,7 +120,7 @@ The package managers are yum, dnf, and zypper.
       sudo zypper update splunk-otel-collector
 
 .. note::
-  If the default configuration files in ``/etc/otel/collector`` have been modified after initial installation, the existing files are preserved and the files from the new package may be installed with an ``.rpmnew`` extension.
+  If the default configuration files in ``/etc/otel/collector`` have been modified after initial installation, the existing files are preserved and the files from the new package can be installed with an ``.rpmnew`` extension.
 
 .. _otel-upgrade-windows:
 

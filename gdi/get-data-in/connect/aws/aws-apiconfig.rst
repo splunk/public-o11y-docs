@@ -12,7 +12,7 @@ To connect Splunk Observability Cloud to your AWS account, complete the followin
 #. :ref:`Create an AWS connection <aws-api-create-connection>`.
 #. :ref:`Review your IAM policy <review-aws-iam-policy>`. Specify whether to collect both metrics and logs, and whether to gather metrics by API polling (which is the default) or through CloudWatch Metric Streams.
 #. :ref:`Configure your setup <aws-api-setup>`. 
-#. Optionally, :ref:`activate Metric Streams <enable-cw-metricstreams>`.
+#. Optionally, :ref:`activate Metric Streams <activate-cw-metricstreams>`.
 #. :ref:`Collect logs <aws-api-logs>`.  
 #. See :ref:`next steps <aws-api-next-steps>`. 
 
@@ -199,7 +199,7 @@ For example:
 Permissions for tag and properties collection
 ---------------------------------------------------------------------------------------
 
-On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS' tags and properties. You'll be able to use Infrastructure Monitoring :ref:`to filter metrics based on those tags and properies <aws-filter>`.
+On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS tags and properties. You'll be able to use Infrastructure Monitoring :ref:`to filter metrics based on those tags and properies <aws-filter>`.
 
 These are these permissions to allow Observability Cloud to collect AWS tags and properties:
 
@@ -414,7 +414,7 @@ The following example shows how to collect metrics from all regions and services
     --data-raw '{"authMethod": "ExternalId", "created": 1628082281828, "creator": "E73pzL5BUAI", "customCloudWatchNamespaces": null, "enableCheckLargeVolume": false, "enabled": true, "externalId": "jobcimfczlkhwxlqwbum", "id": "E78gbtjBcAA", "importCloudWatch": true, "largeVolume": false, "lastUpdated": 1628090302516, "lastUpdatedBy": "E73pzL5BUAI", "name": "AWS", "pollRate": 300000, "regions": [], "roleArn": "<your-aws-iam-role-arn>", "services": [], "sfxAwsAccountArn": "arn:aws:iam::134183635603:root", "syncLoadBalancerTargetGroupTags": false, "type": "AWSCloudWatch", "key": null, "token": null, "namedToken": "Default", "namespaceSyncRules": []}'
 
 
-.. _enable-cw-metricstreams:
+.. _activate-cw-metricstreams:
 
 Activate CloudWatch Metric Streams (optional)
 ========================================================

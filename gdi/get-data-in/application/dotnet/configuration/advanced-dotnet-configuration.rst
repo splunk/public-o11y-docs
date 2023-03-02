@@ -155,7 +155,7 @@ The following settings control metric collection:
    * - Setting
      - Description
    * - ``SIGNALFX_METRICS_{0}_ENABLED``
-     - Configuration pattern for enabling or deactivating a specific metrics group. For example, to activate ``NetRuntime`` metrics, set ``SIGNALFX_METRICS_NetRuntime_ENABLED=true``. Supported metrics are ``NetRuntime``, ``Process``, ``AspNetCore``, and ``Traces``. The default value is ``false``. See :ref:`dotnet-metrics-attributes` for more information.
+     - Configuration pattern for activating or deactivating a specific metrics group. For example, to activate ``NetRuntime`` metrics, set ``SIGNALFX_METRICS_NetRuntime_ENABLED=true``. Supported metrics are ``NetRuntime``, ``Process``, ``AspNetCore``, and ``Traces``. The default value is ``false``. See :ref:`dotnet-metrics-attributes` for more information.
 
 .. note:: NetRuntime metrics are always collected if memory profiling is activated.
 

@@ -232,7 +232,7 @@ Do the following to check the Fluentd configuration:
 #. Check that td-agent is running. On Linux, run ``systemctl status td-agent``. On Windows, run ``Get-Service td-agent``.
 #. If you changed the configuration, restart Fluentd. On Linux, run ``systemctl restart td-agent``. On Windows, run ``Restart-Service -Name td-agent``.
 #. Check fluentd.conf and conf.d/\*. ``@label @SPLUNK`` must be added to every source to activate log collection.
-#. Manual configuration may be required to collect logs off the source. Add configuration files to in the conf.d directory as needed.
+#. Manual configuration might be required to collect logs off the source. Add configuration files to in the conf.d directory as needed.
 #. Activate debug logging in fluentd.conf (``log_level debug``), restart td-agent, and check that the source is generating logs.
 
 While every attempt is made to properly configure permissions, it is possible that td-agent does not have the permission required to collect logs. Debug logging should indicate this issue.

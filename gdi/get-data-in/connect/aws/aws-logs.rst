@@ -54,7 +54,7 @@ Limitations
 
 The following restrictions apply:
 
-- Log sync can only be activated for a single AWS integration per AWS account. Note the integration may cover multiple services and regions.
+- Log sync can only be activated for a single AWS integration per AWS account. Note the integration can cover multiple services and regions.
 
 - Deployment in China or Gov regions requires additional manual steps. See :new-page:`the available CloudFormation templates on GitHub <https://github.com/signalfx/aws-cloudformation-templates>`.
 

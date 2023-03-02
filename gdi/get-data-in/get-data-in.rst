@@ -152,7 +152,7 @@ Steps
    - :new-page:`Connect to Azure using the Splunk Observability Cloud API <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview>`
    - :new-page:`Connect to Azure using Terraform <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/azure_integration>`
 
-For example, you might want to use the guided setup if you are setting up just a few integrations, such as five or less. However, if you are setting up many integrations, such as for different accounts and regions, use the API or Terraform. Note that if you need all of the latest integration features, you may want to use the API because support may not yet be available using Terraform.
+For example, you might want to use the guided setup if you are setting up just a few integrations, such as five or less. However, if you are setting up many integrations, such as for different accounts and regions, use the API or Terraform. Note that if you need all of the latest integration features, you might want to use the API because support might not yet be available using Terraform.
 
 
 Troubleshooting
@@ -492,7 +492,7 @@ You might want to use the API if you want to integrate with:
 
 - A third-party tool that provides an API/webhook integration only.
 
-- An application written in a language we don’t provide a library for.
+- An application written in a language we don't provide a library for.
 
 This API integration can send all types of data to Observability Cloud. While you can use the API to send logs to Log Observer, we recommend using other integration types to do so. For details about which integrations can send logs to Log Observer, see :ref:`gdi-per-product`.
 

@@ -112,7 +112,7 @@ The following metrics are available for this integration:
 
 ### Metrics about replication
 
-Replication metrics may not be available on some PostgreSQL servers. For now, this monitor automatically deactivates the `replication` metrics group if the monitor detects Aurora. This helps avoid following the error: `Function pg_last_xlog_receive_location() is currently not supported for Aurora`
+Replication metrics can't be available on some PostgreSQL servers. For now, this monitor automatically deactivates the `replication` metrics group if the monitor detects Aurora. This helps avoid following the error: `Function pg_last_xlog_receive_location() is currently not supported for Aurora`
 
 The metric `postgres_replication_state` will be reported only for `master` and for `postgres_replication_lag` for the `standby` role (replica).
 

@@ -74,7 +74,7 @@ Dependencies
 =============================
 The Splunk Distribution of OpenTelemetry Collector relies on a variety of external :new-page:`dependencies <https://github.com/signalfx/splunk-otel-collector/network/dependencies>`. These dependencies are monitored by :new-page:`Dependabot <https://docs.github.com/en/code-security/supply-chain-security/configuring-dependabot-security-updates>`. Dependencies are :new-page:`checked daily <https://github.com/signalfx/splunk-otel-collector/blob/main/.github/dependabot.yml>` and associated pull requests are opened automatically. 
 
-Upgrade to the :new-page:`latest release <https://github.com/signalfx/splunk-otel-collector/releases>` to ensure that you have the latest security updates. If a security vulnerability is detected for a dependency of this project, it may be due to one of the following reasons:
+Upgrade to the :new-page:`latest release <https://github.com/signalfx/splunk-otel-collector/releases>` to ensure that you have the latest security updates. If a security vulnerability is detected for a dependency of this project, it might be due to one of the following reasons:
 
 * You are running an older release.
 * A new release with the updates has not been released.
@@ -89,7 +89,7 @@ The configuration drives the Collector's behavior, and care must be taken to ens
 
 The Collector keeps the configuration in memory, but where the configuration is loaded from at start time depends on the packaging used. For example, in Kubernetes secrets and ConfigMaps can be used, but in Docker, the image embeds the configuration in the container where is it not stored in an encrypted manner by default.
 
-The configuration may contain the following sensitive information:
+The configuration might contain the following sensitive information:
 
 * Authentication information such as API tokens
 * TLS certificates including private keys
@@ -100,7 +100,7 @@ More information on configuring OpenTelemetry components is provided in the foll
 
 Permissions
 ------------------------
-The Collector supports running as a custom user and must not be run as a root or admin user. For the majority of use cases, the Collector does not require privileged access to function. Some components may require privileged access; be careful when enabling these components. Collector components may also require external permissions including network access or RBAC.
+The Collector supports running as a custom user and must not be run as a root or admin user. For the majority of use cases, the Collector does not require privileged access to function. Some components might require privileged access; be careful when enabling these components. Collector components might also require external permissions including network access or RBAC.
 
 More information about permissions is provided in the following sections.
 
@@ -108,9 +108,9 @@ Receivers and exporters
 ------------------------------------------------
 Receivers and exporters can be either push-based or pull-based. In either case, the connection must be established over a secure and authenticated channel. Unused receivers and exporters must be deactivated to minimize the attack vector of the Collector. An attack vector is a pathway or method used by a hacker to illegally access a network or computer in an attempt to exploit system vulnerabilities.
 
-Receivers and exporters may expose buffer, queue, payload, and worker settings by using configuration parameters. If these settings are available, end users can carefully modify the default values. Improperly setting these values may expose the Collector to additional attack vectors including resource exhaustion.
+Receivers and exporters might expose buffer, queue, payload, and worker settings by using configuration parameters. If these settings are available, end users can carefully modify the default values. Improperly setting these values might expose the Collector to additional attack vectors including resource exhaustion.
 
-It is possible that a receiver may require the Collector to run in a privileged mode to operate, which could be a security concern.
+It is possible that a receiver might require the Collector to run in a privileged mode to operate, which could be a security concern.
 
 Developers must use encrypted connections (by using the ``insecure: false`` configuration setting), and receiver and exporter helper functions.
 
@@ -122,7 +122,7 @@ Processors function between receivers and exporters, and they are responsible fo
 
 Recommended configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Processors are not activated by default. Depending on the data source, you may activate multiple processors. Processors must be activated for every data source, and not all processors support all data sources.
+Processors are not activated by default. Depending on the data source, you might activate multiple processors. Processors must be activated for every data source, and not all processors support all data sources.
 
 Keep in mind that the order of processors matters. The order in each section below is the best practice. Refer to the individual processor documentation for more information.
 
@@ -154,7 +154,7 @@ While receivers, processors, and exporters handle telemetry data directly, exten
 
 Health and telemetry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The initial extensions provided health check information, Collector metrics and traces, and the ability to generate and collect profiling data. When activated with their default settings, all of these extensions except the health check extension are only accessibly locally to the Collector. Proceed with caution when configuring these extensions for remote access, as sensitive information may be exposed as a result.
+The initial extensions provided health check information, Collector metrics and traces, and the ability to generate and collect profiling data. When activated with their default settings, all of these extensions except the health check extension are only accessibly locally to the Collector. Proceed with caution when configuring these extensions for remote access, as sensitive information might be exposed as a result.
 
 Forwarding
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

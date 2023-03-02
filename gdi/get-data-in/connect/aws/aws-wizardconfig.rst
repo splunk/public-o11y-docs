@@ -91,8 +91,8 @@ To activate Metric Streams, use the :ref:`guided setup <aws-wizard>`, and take t
 
 * On the :strong:`Define AWS connection` screen, deactivate the CloudWatch Metrics polling box.
 * When creating the new AWS IAM policy, :ref:`add these additional permissions <metricstreams_iampolicy>` to the ones already suggested in the guided setup.
-* Follow the instructions to :ref:`activate Metric Streams <enable-cw-metricstreams>`.
-* Update your settings and deploy the CloudFormation template following :ref:`these steps <enable-cw-metricstreams>`.
+* Follow the instructions to :ref:`activate Metric Streams <activate-cw-metricstreams>`.
+* Update your settings and deploy the CloudFormation template following :ref:`these steps <activate-cw-metricstreams>`.
 
 Review the default AWS integration settings
 ==================================================

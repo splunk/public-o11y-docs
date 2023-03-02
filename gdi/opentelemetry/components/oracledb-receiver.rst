@@ -263,7 +263,7 @@ The following metrics are available for this integration:
 
       - ``oracledb.user_rollbacks``
       - Number of times users manually issue the ``ROLLBACK`` statement
-         or an error occurs during a user’s transactions.
+         or an error occurs during a user's transactions.
       - 1
       - Sum(Int)
       - 
