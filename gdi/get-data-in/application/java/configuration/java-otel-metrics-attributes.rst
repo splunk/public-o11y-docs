@@ -210,7 +210,7 @@ The agent collects the following memory metrics:
     - Total number of bytes reclaimed by the GC since the previous data point was emitted. Notes: 
         - This metric might be inaccurate for concurrent garbage collectors such as Shenandoah or ZGC. 
         - Use the rate per second rollup.
-        - Requires to activate memory profiling,or to use the ``splunk.metrics.experimental.enabled`` flag. 
+        - Requires to activate memory profiling, or to use the ``splunk.metrics.experimental.enabled`` flag. 
   * - ``runtime.jvm.buffer.count``
     - Gauge
     - An estimate of the number of buffers in the pool.
