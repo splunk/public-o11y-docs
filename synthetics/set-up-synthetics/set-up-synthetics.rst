@@ -68,8 +68,8 @@ After you set the environment variable, your application instrumentation adds th
 
 The Server-Timing header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. To learn more, see:
 
-* :new-page:`Server Timing <https://www.w3.org/TR/server-timing/>` from the W3C documentation. 
-* :new-page:`Traceparent Header <https://www.w3.org/TR/trace-context/#traceparent-header>` from the W3C documentation. 
+* :new-page:`Server timing <https://www.w3.org/TR/server-timing/>` from the W3C documentation. 
+* :new-page:`Traceparent header <https://www.w3.org/TR/trace-context/#traceparent-header>` from the W3C documentation. 
 
 
 For more examples on Java instrumentation, see :ref:`server-trace-information-java`.
