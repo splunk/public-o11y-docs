@@ -72,9 +72,9 @@ In the :guilabel:`Performance KPIs` chart, use the selectors to adjust the follo
 
 View results for a specific run
 ---------------------------------
-To navigate to the :guilabel:`Run Results` view for a single run, select a data point within the :guilabel:`Performance KPIs` chart with the visualization interval at :strong:`Run level` and the segmentation set to :strong:`Location`. 
+To navigate to the :guilabel:`Run results` view for a single run, select a data point within the :guilabel:`Performance KPIs` chart with the visualization interval at :strong:`Run level` and the segmentation set to :strong:`Location`. 
 
-If you're viewing aggregate data (for example, at a 20-minute interval instead of run level), selecting a data point zooms you in to see run-level detail. Then you can select a specific run to see the :guilabel:`Run Results` from there. 
+If you're viewing aggregate data (for example, at a 20-minute interval instead of run level), selecting a data point zooms you in to see run-level detail. Then you can select a specific run to see the :guilabel:`Run results` from there. 
 
 You can also select a row in the :guilabel:`Recent run results` table below the :guilabel:`Performance KPIs` chart.
 

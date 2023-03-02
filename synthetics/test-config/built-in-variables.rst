@@ -110,7 +110,7 @@ Splunk Synthetic Monitoring provides the following set of location variables you
 
 Request variables for API Tests 
 ========================================
-Splunk Synthetic Montoring provides the following set of request variables you can use in your API Tests: 
+Splunk Synthetic Monitoring provides the following set of request variables you can use in your API Tests: 
 
 .. list-table:: 
    :header-rows: 1

@@ -19,30 +19,30 @@ To use data such as test login credentials, API keys, or other test information,
 
 .. _concealed-gv:
 
-What happens when you conceal a Global Variable?
+What happens when you conceal a Global variable?
 ==================================================
-When you :strong:`conceal` a Global Variable, its value is permanently concealed from all users of the account. This lets you create and save variables such as test login credentials, API keys, and other sensitive information to use in Browser and API tests. 
+When you :strong:`conceal` a Global variable, its value is permanently concealed from all users of the account. This lets you create and save variables such as test login credentials, API keys, and other sensitive information to use in Browser and API tests. 
 
-To preserve security, the value of a concealed Global Variable is never revealed to any user of the account after it has been created and saved. It is scrubbed from the Splunk Synthetic Monitoring UI, from test results, and from alert messages.  
+To preserve security, the value of a concealed Global variable is never revealed to any user of the account after it has been created and saved. The value is scrubbed from the Splunk Synthetic Monitoring UI, from test results, and from alert messages.  
 
 Prerequisites
 ================
-You need administrator access in Splunk Synthetic Monitoring to create and reference Global Variables. 
+You need administrator access in Splunk Synthetic Monitoring to create and reference Global variables. 
 
-Create a new Global Variable
+Create a Global variable
 ===============================
-There are two ways to create a new Global Variable:
+There are two ways to create a Global variable:
 
-#. Add a new Global Variable in the Global Variables vault:
+#. Add a new Global variable in the vault:
 
-    a. From the Splunk Synthetic Monitoring landing page, select :guilabel:`Synthetics Configuration`. The :guilabel:`Synthetics Configuration` page opens, on the :guilabel:`Global Variables` tab.
+    a. From the Splunk Synthetic Monitoring landing page, select :guilabel:`Synthetics configuration`. The :guilabel:`Synthetics configuration` page opens, on the :guilabel:`Global variables` tab.
     b. Select :guilabel:`+ Add` to open the creation dialog box. 
 
 #. Add a new Global Variable while editing a test: 
 
-   a. In the right-hand :guilabel:`Variables` column, scroll to :guilabel:`Global Variables` and select :guilabel:`Add`. 
+   a. In the right-hand :guilabel:`Variables` column, scroll to :guilabel:`Global variables` and select :guilabel:`Add`. 
 
-Once you're in the :guilabel:`Add Global Variable` dialog box, enter the following:
+Once you're in the :guilabel:`Add Global variable` dialog box, enter the following:
  
 #. In the :guilabel:`env` field, enter the name of the variable. You will use this key to access your variable within a test.
 #. In the :guilabel:`value` field, enter the value that will replace the variable when the test is run.
@@ -67,27 +67,27 @@ While creating or editing a test, the right-hand :guilabel:`Variables` tab provi
 
 .. _ gv-browser-test:
 
-Use a Global Variable in a Browser test
+Use a Global variable in a Browser test
 --------------------------------------------
 Follow these steps to add a variable to your Browser test:
 
 #. While creating or editing a transactional Browser Test, go to your :guilabel:`Steps`.
 #. Under :guilabel:`Action`, select :guilabel:`Fill in field` from the dropdown menu. 
-#. Under :guilabel:`Value`, enter the key for the Global Variable you want to use, preposed by the ``env.`` prefix and enclosed in double curly braces. For example, to reference a Global Variable with the key dev-username, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field. 
+#. Under :guilabel:`Value`, enter the key for the Global Variable you want to use, use the ``env.`` prefix and enclosed in double curly braces. For example, to reference a Global Variable with the key dev-username, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field. 
 #. Finish editing or creating the test.
 #. :guilabel:`Save` your test. 
 
 .. _gv-api-test: 
 
-Use a Global Variable in an API Test
+Use a Global variable in an API Test
 ----------------------------------------
 
-You can also use a Global Variable to fill in any field in an API test. For instance, you can use a Global Variable to provide a URL for any request, a header value, or any other value. 
+You can also use a Global variable to fill in any field in an API test. For instance, you can use a Global variable to provide a URL for any request, a header value, or any other value. 
 
 Follow these steps to add a variable to your API test:
 
 #. While creating or editing an API test, go to your :guilabel:`Requests`.
-#. In a variable field for any setup, request, or validation step, enter the key for the Global Variable you want to use, preposed by the ``env.`` prefix and enclosed in double curly braces.  For example, to reference a Global Variable with the key ``staging-url``, enter ``{{env.staging-url}}`` in the field. 
+#. In a variable field for any setup, request, or validation step, enter the key for the Global Variable you want to use, use the ``env.`` prefix and enclosed in double curly braces.  For example, to reference a Global variable with the key ``staging-url``, enter ``{{env.staging-url}}`` in the field. 
 #. Finish editing or creating the test.
 #. :guilabel:`Save` your test. 
 
