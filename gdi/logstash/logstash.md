@@ -11,7 +11,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 ### The `logstash` monitor
 The `logstash` monitor monitors the health and performance of Logstash deployments through
-Logstas [Monitoring APIs](https://www.elastic.co/guide/en/logstash/current/monitoring-logstash.html).
+Logstash [Monitoring APIs](https://www.elastic.co/guide/en/logstash/current/monitoring-logstash.html).
 
 ### The `logstash-tcp` monitor
 The `logstash-tcp` monitor fetches events from the [logstash tcp output

@@ -168,5 +168,5 @@ Next steps
 Once you have installed the package, you can perform these actions:
 
 * :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsof documentation site <https://docs.microsoft.com/en-us/>` for more information.
+* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
 * :ref:`apm`.

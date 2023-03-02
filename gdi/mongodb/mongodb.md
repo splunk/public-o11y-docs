@@ -104,7 +104,7 @@ The following table shows the configuration options for the MongoDB monitor:
 | `username` | No | `string` | MongoDB user. |
 | `password` | No | `string` | Password of the user defined in `username`. |
 | `useTLS` | No | `bool` | If `true`, the monitor connects to MongoDB using TLS. The default value is `false`. |
-| `caCerts` | No | `string` | Path to a CA cert used to verify the certificate that MongoDB presents. Not needed if not using TLS or if MongoD certificate is signed by a globally trusted issuer already installed in the default location on your system. |
+| `caCerts` | No | `string` | Path to a CA cert used to verify the certificate that MongoDB presents. Not needed if not using TLS or if MongoDB certificate is signed by a globally trusted issuer already installed in the default location on your system. |
 | `tlsClientCert` | No | `string` | Path to a client certificate. Not needed unless your MongoDB instance requires x509 client verification. |
 | `tlsClientKey` | No | `string` | Path to a client certificate key. Not needed unless your MongoDB instance requires x509 client verification, or if your client certificate defined in `tlsClientCert` includes the key. |
 | `tlsClientKeyPassPhrase` | No | `string` | Passphrase for the TLS client key defined in `tlsClientKey`. |
