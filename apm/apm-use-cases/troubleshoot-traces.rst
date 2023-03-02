@@ -12,7 +12,6 @@ Alex, the Site Reliability Engineer for ButterCup Studios, is tasked with monito
 Over the last couple of hours, Alex has been receiving reports from customer support regarding errors during video recommendation. To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows them to explore APM data from wide trends down to single traces. These are the steps Alex took to identify and solve the issue:
 
 #. Group traces by specific tags
-#. Explore the duration heatmap
 #. Come back to confirm solution
 
 1. Group traces by specific tags
