@@ -169,6 +169,8 @@ The following settings control which instrumentations are activated. See :ref:`d
    :width: 100%
    :widths: 40 60
 
+   * - Setting
+     - Description
    * - ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``
      - Deactivates all instrumentations. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``
