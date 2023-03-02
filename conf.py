@@ -170,8 +170,8 @@ rst_prolog = """
 
    ⋮
 
-.. |takeshift| image:: incident-intelligence-take-shift-icon.png
-             :alt: Take shift
+.. |takeshift| image:: /_images/incident-intelligence/Incident-intelligence-take-shift-icon.png
+   :alt: Take shift
 
 
 .. |br| raw:: html
