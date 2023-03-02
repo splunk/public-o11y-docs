@@ -71,7 +71,7 @@ Use variables to fill in fields, provide URLs, and enter other information durin
    * - Built-in variables 
      - Built-in variables such as random values, dates and times, or location names, for use in your Browser and API Tests. See :ref:`built-in-variables` to learn more.  
 
-   * - Global Variables 
+   * - Global variables 
      - Pre-saved, reusable variables you can define once and use across all your Browser and API tests. See :ref:`global-variables` to learn more.   
 
 .. raw:: html
@@ -81,7 +81,7 @@ Use variables to fill in fields, provide URLs, and enter other information durin
   </embed>
 
 
-Specify locations for your tests to simulate traffic from a range of checkpoints around the world, or use private locations to test sites from within a private network.
+Specify locations for your tests to simulate traffic from a range of checkpoints around the world, or use Private locations to test sites from within a private network.
 
 See :ref:`public-locations` for a list of available public locations. 
 
@@ -94,7 +94,7 @@ See :ref:`public-locations` for a list of available public locations.
     <h2>Test state and current status</h2>
   </embed>
 
-Tests can be active or paused. You can use the play and pause buttons in the more menu (|more|) of your tests to pause or resume data collection. 
+You can use the play and pause buttons in the more menu (|more|) of your tests to pause or resume data collection. 
 
 The current status of a test is updated every time you load the :guilabel:`Test Overview` page in Splunk Synthetic Monitoring. The following table describes the possible status types for each test. 
 
@@ -112,10 +112,10 @@ The current status of a test is updated every time you load the :guilabel:`Test 
      - The test is functioning properly. If the test is active, data is being collected at the set interval and can be viewed in the :guilabel:`Test History` page. If the test is paused, it can be unpaused and will resume collecting data.
 
    * - No Data 
-     - The test is not currently collecting data. 
+     - The test isn't currently collecting data. 
 
    * - Failure
-     - The test has encountered a failure. 
+     - The test encountered a failure. 
 
 
 

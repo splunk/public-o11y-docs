@@ -110,7 +110,7 @@ Splunk Synthetic Monitoring provides the following set of location variables you
 
 Request variables for API Tests 
 ========================================
-Splunk Synthetic Montoring provides the following set of request variables you can use in your API Tests: 
+Splunk Synthetic Monitoring provides the following set of request variables you can use in your API Tests: 
 
 .. list-table:: 
    :header-rows: 1
@@ -145,4 +145,4 @@ Splunk Synthetic Montoring provides the following set of request variables you c
 
 Use a variable in a test
 ===========================
-While creating or editing a test, the right-hand :guilabel:`Variables` tab shows a list of built-in variables and existing Global Variables you can use. Select the name of a variable to copy it to your keyboard and paste it in the field of your choice.
+While creating or editing a test, the right-hand :guilabel:`Variables` tab shows a list of built-in variables and existing global variables you can use. Select the name of a variable to copy it to your keyboard and paste it in the field of your choice.
