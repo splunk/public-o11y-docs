@@ -123,7 +123,7 @@ The following settings control trace sampling:
    * - Environment variable
      - Description
    * - ``OTEL_TRACES_SAMPLER``
-     - Sampler to use. The default value is ``always_on``.
+     - Sampler to use. The default value is ``parentbased_always_on``.
    * - ``OTEL_TRACES_SAMPLER_ARG``
      - Semicolon-separated list of rules for the ``rules`` sampler. The default value is ``1.0``.
 
