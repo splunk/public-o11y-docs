@@ -35,7 +35,7 @@ Trace Analyzer searches all currently retained traces; see :ref:`apm-data-retent
 
 Trace Analyzer shows total traces and traces with errors in a stacked bars chart. Select and drag over the bars in the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
 
-..  image:: /_images/apm/trace-analyzer/TraceDrag-Drop-Chart.gif
+..  image:: /_images/apm/trace-analyzer/TraceDragDropChart.gif
     :width: 95%
     :alt: Selection of a specific time frame
 
