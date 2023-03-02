@@ -22,7 +22,7 @@ Format of the report
 
 For each metric in the report, you can see the following columns.
 
-Metric identifiers 
+Metric identifier
 --------------------------------
 
 .. list-table:: 
@@ -34,10 +34,6 @@ Metric identifiers
 
    * - Metric name
      - The name of the metric
-
-   * - Category
-     - The category of the metric. For example, ``custom``.
-
 
 Usage statistics
 --------------------------------
