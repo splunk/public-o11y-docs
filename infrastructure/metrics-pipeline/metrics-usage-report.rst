@@ -6,6 +6,10 @@ Understand your metrics usage with metrics usage report
 ************************************************************************
 
 
+.. meta::
+    :description: Learn about the metrics usage report and how to leverage it for metrics volume optimization.
+
+
 To get a detailed breakdown of your metric time series (MTS) creation and usage, you can request a usage report for a specific time interval by contacting your tech support member or your account team. By default, the time interval is 30 days.
 
 You can use the detailed metrics usage report to optimize your usage of custom metrics. 
@@ -73,7 +77,7 @@ MTS creation statistics
 
    * - MTS per token
      - | The token used to create the MTS and the number of MTS created for the metric using that token.
-     
+
        * If you see a number, such as ``1336332416901451776``, instead of a token ID, the token was deleted before the report was generated.
        * If you see ``0`` instead of a token ID, the MTS were not created using a token.
        * If you see ``{}`` instead of a token ID and the MTS count, the metric is an internal metric. 

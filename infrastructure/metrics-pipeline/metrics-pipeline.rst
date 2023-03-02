@@ -5,6 +5,9 @@
 Metrics pipeline management in Splunk Infrastructure Monitoring 
 **************************************************************************
 
+.. meta::
+    :description: Metrics pipeline management documentation.
+
 |hr|
 
 :strong:`Available in Enterprise Edition and Service Bureau`

@@ -5,14 +5,16 @@
 Data dropping impacts
 *********************************************************************
 
+.. meta::
+    :description: Learn about the impact of data dropping in metrics pipeline management.
+
+
 |hr|
 
 :strong:`Available in Enterprise Edition and Service Bureau`
 
 |hr|
 
-.. meta::
-    :description: Learn about the impact of data dropping in metrics pipeline management.
 
 When you create or update rules for your metric, you can drop unaggregated raw data to discard metric time series (MTS) you don't want to ingest or monitor in Splunk Observability Cloud. You can also drop a metric without adding an aggregation rule. To learn more, see :ref:`data-dropping`.
 

@@ -5,14 +5,16 @@
 Use case: Combine aggregation and dropping rules to control your metric cardinality and volume
 ****************************************************************************************************
 
+.. meta::
+    :description: Aggregation and dropping use case for metrics pipeline management.
+
 |hr|
 
 :strong:`Available in Enterprise Edition and Service Bureau`
 
 |hr|
 
-.. meta::
-    :description: Aggregation and dropping use case for metrics pipeline management.
+
 
 The following use case features an example from Buttercup Games, a fictitious e-commerce company.
 

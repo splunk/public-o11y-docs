@@ -5,6 +5,9 @@
 Introduction to metrics pipeline management
 ******************************************************
 
+.. meta::
+    :description: Introduction to metrics pipeline management in Splunk Infrastructure Monitoring
+
 |hr|
 
 :strong:`Available in Enterprise Edition and Service Bureau`
