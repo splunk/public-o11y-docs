@@ -9,6 +9,8 @@ Troubleshoot .NET instrumentation for Splunk Observability Cloud
 
 When you instrument a .NET application using the Splunk Distribution of OpenTelemetry .NET and you don't see your data in Observability Cloud, follow these troubleshooting steps.
 
+.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
+
 .. _enable-dotnet-otel-debug-logging:
 
 General troubleshooting
@@ -60,7 +62,7 @@ If traces from your instrumented application or service are not available in Spl
 #. Make sure that ``OTEL_EXPORTER_OTLP_ENDPOINT`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
 #. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
-#. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
+#. Check that the OTel Collector points to the following address: ``http://<host>:4318``. Verify that your URL is correct.
 
 Assembly in AdditionalDeps was not found
 ==================================================================

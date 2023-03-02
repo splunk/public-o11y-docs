@@ -57,17 +57,18 @@ Windows
 
       .. code-tab:: shell .NET application
 
-         # Setup environment to start instrumentation from the current PowerShell session
+         # Set up environment to start instrumentation from the current PowerShell session
          Register-OpenTelemetryForCurrentSession -OTelServiceName "<your-service-name>"
 
-      .. code-tab:: shell IIS application (.NET Core)
+      .. code-tab:: shell IIS application (.NET)
 
-         # Setup IIS instrumentation
+         # Set up IIS instrumentation
+         # IIS is restarted as a result
          Register-OpenTelemetryForIIS
       
       .. code-tab:: shell Windows service
 
-         # Setup your Windows Service instrumentation
+         # Set up your Windows Service instrumentation
          Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>"
 
    .. note:: To instrument ASP.NET (.NET Framework) apps, see :ref:`otel-dotnet-aspnet-framework`.

@@ -10,6 +10,8 @@ Manually instrument .NET applications for Splunk Observability Cloud
 The Splunk Distribution of OpenTelemetry .NET automatic instrumentation provides a base you can build on by adding
 your own manual instrumentation. By using both automatic and manual instrumentation, you can better instrument the logic and functionality of your applications, clients, and frameworks.
 
+.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
+
 .. _custom-traces-otel-dotnet:
 
 Create custom traces

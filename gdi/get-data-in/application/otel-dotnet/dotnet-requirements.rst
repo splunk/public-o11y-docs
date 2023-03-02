@@ -19,14 +19,14 @@ The Splunk Distribution of OpenTelemetry .NET supports the following .NET versio
 - .NET 6.0 and higher on Windows and Linux
 - .NET Framework 4.6.2 and higher on Windows
 
-.. note:: CentOS and Red Hat Enterprise version 7 to 8 are not supported.
-
 .. _supported-dotnet-otel-libraries:
 
 Supported libraries
 =================================================
 
-The Splunk Distribution of OpenTelemetry .NET instruments the following libraries:
+The Splunk Distribution of OpenTelemetry .NET instruments the following libraries.
+
+.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
 
 Traces instrumentations
 ---------------------------------
@@ -68,7 +68,7 @@ Traces instrumentations
      - ``QUARTZ``
    * - StackExchange.Redis |br| (Not supported on .NET Framework)
      - ``STACKEXCHANGEREDIS``
-   * - System.ServiceModel |br| (No support for server side on .NET Core)
+   * - System.ServiceModel |br| (No support for server side on .NET)
      - ``WCF``
 
 

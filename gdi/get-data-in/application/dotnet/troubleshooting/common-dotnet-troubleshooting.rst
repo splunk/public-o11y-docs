@@ -177,4 +177,27 @@ The thread sampler resumes its activity when any of the buffers is empty.
 
 To avoid the loss of profiling data due to full buffers, check the configuration and the communication layer between your process and the Splunk Distribution of OpenTelemetry Collector.
 
+.. _uninstall-dotnet-sfx:
+
+Uninstall the SignalFx Instrumentation for .NET
+=====================================================
+
+To remove the SignalFx Instrumentation for .NET, follow the instructions for each operating system.
+
+Windows
+----------------------
+
+Follow these steps to remove the SignalFx Instrumentation for .NET:
+
+#. Uninstall :strong:`SignalFx .NET Tracing` from the :guilabel:`Programs and Features` control panel.
+#. Remove all environment variables you might have set for the instrumentation.
+
+Linux
+----------------------
+
+Follow these steps to remove the SignalFx Instrumentation for .NET:
+
+#. Remove ``signalfx-dotnet-tracing`` using your package manager or delete the files from ``/opt/signalfx`` if you installed the instrumentation using the tar file.
+#. Remove all environment variables you might have set for the instrumentation.
+
 .. include:: /_includes/troubleshooting-steps.rst

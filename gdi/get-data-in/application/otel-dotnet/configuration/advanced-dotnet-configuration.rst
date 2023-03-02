@@ -9,6 +9,8 @@ Configure the Splunk Distribution of OpenTelemetry .NET
 
 You can configure the Splunk Distribution of OpenTelemetry .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
 
+.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
+
 .. _configuration-methods-dotnet-otel:
 
 Configuration methods
@@ -83,7 +85,7 @@ The following settings control trace exporters and their endpoints:
    * - Setting
      - Description
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
-     - The URL to where traces and metrics are sent. The default value is ``http://localhost:4317``. Setting a value overrides the ``SPLUNK_REALM`` environment variable.
+     - The URL to where traces and metrics are sent. The default value is ``http://localhost:4318``. Setting a value overrides the ``SPLUNK_REALM`` environment variable.
    * - ``SPLUNK_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
    * - ``SPLUNK_ACCESS_TOKEN``

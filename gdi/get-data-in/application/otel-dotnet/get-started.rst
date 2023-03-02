@@ -5,7 +5,7 @@ Instrument .NET applications for Splunk Observability Cloud (OpenTelemetry)
 ***************************************************************************
 
 .. meta::
-   :description: Instrument a .NET application to export span, metrics, and logs to Splunk Observability Cloud.
+   :description: Instrument a .NET application to export spans and metrics to Splunk Observability Cloud.
 
 .. toctree::
    :hidden:
@@ -31,7 +31,7 @@ The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation
 The Splunk Distribution of OpenTelemetry .NET provides the following features:
 
 - Collection and reporting of all spans and traces
-- B3 and W3C headers for context propagation
+- B3 and W3C headers for context propagation by default
 - OTLP over HTTP exporter to send spans to the Splunk OTel Collector
 - OpenTelemetry semantic conventions
 

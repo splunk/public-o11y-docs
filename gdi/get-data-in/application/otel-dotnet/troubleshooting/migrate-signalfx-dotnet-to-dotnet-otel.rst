@@ -9,6 +9,8 @@ Migrate from the SignalFx .NET Instrumentation
 
 The agent of the Splunk Distribution of OpenTelemetry .NET is an alternative to the SignalFx Instrumentation for .NET. To migrate from the SignalFx instrumentation, follow these instructions.
 
+.. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
+
 .. _requirements-splunk-dotnet-otel-migration:
 
 Compatibility and requirements
@@ -23,6 +25,7 @@ Migrate to the Splunk Distribution of OpenTelemetry .NET
 
 To migrate from the SignalFx Instrumentation for .NET to the Splunk Distribution of OpenTelemetry .NET, follow these steps:
 
+#. Uninstall the SignalFx Instrumentation for .NET. See :ref:`uninstall-dotnet-sfx`.
 #. Install and activate the Splunk Distribution of OpenTelemetry .NET. See :ref:`install-dotnet-otel-instrumentation`.
 #. Specify the endpoint of the OpenTelemetry Collector you're exporting traces to. See :ref:`dotnet-otel-exporter-settings`.
 #. Update your settings. See :ref:`changes-functionality-dotnet-otel`.
