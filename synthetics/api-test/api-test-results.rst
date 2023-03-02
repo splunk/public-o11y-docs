@@ -107,3 +107,9 @@ In the request result timeline, select the request you're interested in viewing.
 Metrics for API tests
 -------------------------------
 In addition to these diagnostics, every run of an API test produces a set of metrics that offer a picture of website performance. See :ref:`api-test-metrics` for a complete list of these metrics. 
+
+
+(Optional) Splunk RUM integration 
+------------------------------------
+Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
+
