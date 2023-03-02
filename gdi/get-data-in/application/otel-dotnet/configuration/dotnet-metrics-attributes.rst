@@ -116,12 +116,12 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following process 
      - Gauge
      - Process threads count.	
 
-.. _dotnet-aspnet-otel-metrics:
+.. _dotnet-instrumentation-otel-metrics:
 
-ASP.NET metrics
+Instrumentation metrics
 ====================================================
 
-The Splunk Distribution of OpenTelemetry .NET can collect the following ASP.NET metrics:
+The Splunk Distribution of OpenTelemetry .NET can collect the following instrumentation metrics:
 
 .. list-table:: 
    :header-rows: 1
@@ -131,6 +131,18 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following ASP.NET 
    * - Metric
      - Type
      - Description
+   * - ``http.client.duration``
+     - Cumulative counter
+     - Duration of outbound HTTP requests.
    * - ``http.server.duration``
      - Cumulative counter
      - Duration of the inbound HTTP request.
+   * - ``nservicebus.messaging.successes``
+     - Counter
+     - Number of messages successfully processed by the endpoint.
+   * - ``nservicebus.messaging.fetches``
+     - Counter
+     - Number of messages retrieved from the queue by the endpoint.
+   * - ``nservicebus.messaging.failures``
+     - Counter
+     - Number of messages unsuccessfully processed by the endpoint.
