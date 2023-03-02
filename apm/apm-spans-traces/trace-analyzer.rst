@@ -53,14 +53,14 @@ Group by tag
 
 You can group all available traces by a single tag or attribute. For example, you can group all traces from your service by database table, host name, or HTTP status code.
 
-..  image:: /_images/apm/trace-analyzer/trace-select-tag.png
+..  image:: /_images/apm/trace-analyzer/TraceSelectTag.png
     :width: 95%
     :alt: Tag selection menu of Trace Analyzer
 
 The resulting :guilabel:`Group Metrics` tab shows a breakdown of the top 100 values for the selected tag, ranked by the number of errors.
 
 
-..  image:: /_images/apm/trace-analyzer/metric-tables.png
+..  image:: /_images/apm/trace-analyzer/MetricTables.png
     :width: 95%
     :alt: Metric table in Trace analyzer
 
