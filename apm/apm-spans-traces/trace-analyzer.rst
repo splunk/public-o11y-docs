@@ -27,8 +27,8 @@ To explore your trace data, use the following controls:
     :alt: Elements of the Trace Analyzer user interface
 
 #. Filters for time range, environment, workflow, and services, as well as custom filters.
-#. Type of search, minimum and maximum trace duration, and trace search by ID.
-#. Real time chart of traces, with total and errors.
+#. Minimum and maximum trace duration and trace search by ID.
+#. Real time chart of traces with total and errors.
 #. Table view of traces and group metrics with tag grouping. 
 
 Trace Analyzer searches all currently retained traces; see :ref:`apm-data-retention` to learn more about the default trace retention period.
