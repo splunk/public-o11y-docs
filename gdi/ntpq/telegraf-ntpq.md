@@ -71,7 +71,7 @@ The following table shows the configuration options for this monitor:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `dnsLookup` | No | `bool` | If set to `false`, set the `-n ntpq` flag. Disabling DNS lookups can reduce metric gather time. The default value is `true`. |
+| `dnsLookup` | No | `bool` | If set to `false`, set the `-n ntpq` flag. Deactivating DNS lookups can reduce metric gather time. The default value is `true`. |
 
 ## Metrics
 The following metrics are available for this integration:

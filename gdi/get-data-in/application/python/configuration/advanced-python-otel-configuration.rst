@@ -26,7 +26,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SPLUNK_ACCESS_TOKEN``
      - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - Enables the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-python`. The default value is ``true``.
+     - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-python`. The default value is ``true``.
 
 .. _trace-configuration-python:
 
@@ -41,7 +41,7 @@ The following settings control tracing limits and attributes:
    * - Environment variable
      - Description
    * - ``OTEL_TRACE_ENABLED``
-     - Enables tracer creation and autoinstrumentation. The default value is ``true``.
+     - Activates tracer creation and autoinstrumentation. The default value is ``true``.
    * - ``OTEL_SERVICE_NAME``
      - Name of the service or application you're instrumenting. Takes precedence over the service name defined in the ``OTEL_RESOURCE_ATTRIBUTES`` variable.
    * - ``OTEL_RESOURCE_ATTRIBUTES``
@@ -112,7 +112,7 @@ For backward compatibility with the SignalFx Python Tracing Library, use the b3m
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, trace response headers are enabled by default. The instrumentation adds the following response headers to HTTP responses:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, trace response headers are activated by default. The instrumentation adds the following response headers to HTTP responses:
 
 .. code-block::
 

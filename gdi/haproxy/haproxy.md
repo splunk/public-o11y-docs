@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `haproxy` monitor via the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `haproxy` monitor using the Smart Agent receiver.
 
 This monitors an [HAProxy](http://www.haproxy.org/) instance. This monitor requires HAProxy 1.5+.
 
@@ -61,7 +61,7 @@ frontend stats-frontend
 <!--- SETUP --->
 ## SELinux setup
 
-If you have SELinux enabled, create a SELinux policy package by downloading
+If you have SELinux activated, create a SELinux policy package by downloading
 the [type enforcement
 file](https://github.com/signalfx/collectd-haproxy/blob/master/selinux/collectd-haproxy.te)
 to some place on your server. Run the following commands to create and install

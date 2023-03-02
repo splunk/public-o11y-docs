@@ -79,7 +79,7 @@ The Collector uses the components listed in the following table:
 
 To learn more about Collector components, see :ref:`otel-components`.
 
-When configured, enable these components using pipelines within the service section of the configuration. 
+When configured, activate these components using pipelines within the service section of the configuration. 
 
 .. raw:: html
 
@@ -87,7 +87,7 @@ When configured, enable these components using pipelines within the service sect
     <h2>Collector service<a name="collector-service" class="headerlink" href="#collector-service" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The service section of the Collector contains two subsections: extensions and pipelines. The extensions section is where you optionally enable any extensions you have configured, and the pipelines section is where you define one or more pipelines, each of which consists of receivers, processors (optional), and exporters. The service section's two subsections are described in the following table.
+The service section of the Collector contains two subsections: extensions and pipelines. The extensions section is where you optionally activate any extensions you have configured, and the pipelines section is where you define one or more pipelines, each of which consists of receivers, processors (optional), and exporters. The service section's two subsections are described in the following table.
 
 .. list-table::
   :width: 100%

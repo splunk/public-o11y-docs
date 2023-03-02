@@ -66,7 +66,7 @@ The following metrics are available for this integration:
 
 ### Group leader metrics
 
-All of the following metrics are part of the `leader` metric group. To enable them, add `leader` to the `extraGroups` setting:
+All of the following metrics are part of the `leader` metric group. To activate them, add `leader` to the `extraGroups` setting:
 
  - `gauge.zk_followers`
  - `gauge.zk_pending_syncs`

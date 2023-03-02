@@ -84,7 +84,7 @@ Change the following sections of the :new-page:`Agent mode configuration file <h
 * Update the ``SPLUNK_INGEST_URL`` environment variable to the URL of the gateway, specifying the ingress port, which is ``9943`` by default.
 * Make sure that metrics, traces, and logs pipelines send data to the appropriate receivers on the gateway.
 
-To enable trace correlation, use the ``signalfx`` exporter in the traces pipeline. All other pipelines between the agent and the gateway can use the ``otlp`` exporter, which is more efficient.
+To activate trace correlation, use the ``signalfx`` exporter in the traces pipeline. All other pipelines between the agent and the gateway can use the ``otlp`` exporter, which is more efficient.
 
 .. note:: If you are using the ``otlp`` exporter for metrics, the ``hostmetrics`` aggregation takes place in the gateway.
 
@@ -208,7 +208,7 @@ The following example shows how to configure the Collector in gateway mode when 
             exporters: [signalfx/internal]
       # More pipelines
 
-If you want to use the ``signalfx`` exporter for metrics on both agent and gateway, disable the aggregation at the Gateway. To do so, set the ``translation_rules`` and ``exclude_metrics`` to empty lists as in the following example.
+If you want to use the ``signalfx`` exporter for metrics on both agent and gateway, deactivate the aggregation at the Gateway. To do so, set the ``translation_rules`` and ``exclude_metrics`` to empty lists as in the following example.
 
 .. note:: If you want to collect host metrics from the Gateway, use a different ``signalfx exporter`` with translation rules intact. For example, add the ``hostmetrics`` to the metrics/internal pipeline.
 
