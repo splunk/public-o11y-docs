@@ -31,7 +31,7 @@ The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation
 The Splunk Distribution of OpenTelemetry .NET provides the following features:
 
 - Collection and reporting of all spans and traces
-- B3 and W3C headers for context propagation by default
+- W3C headers with baggage for context propagation by default
 - OTLP over HTTP exporter to send spans to the Splunk OTel Collector
 - OpenTelemetry semantic conventions
 
