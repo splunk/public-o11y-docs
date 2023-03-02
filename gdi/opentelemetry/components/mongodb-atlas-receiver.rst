@@ -706,7 +706,7 @@ emitted by default.
       - ``direction``
 
 
-To disable any metric, apply the following configuration:
+To deactivate any metric, apply the following configuration:
 
 .. code:: yaml
 

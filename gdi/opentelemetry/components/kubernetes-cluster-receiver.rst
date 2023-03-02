@@ -32,7 +32,7 @@ Follow these steps to deploy the integration:
 2. Configure the receiver as described in the next section.
 3. Restart the Collector.
 
-.. note:: Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not fully supported for this receiver and may result in the navigator not displaying all clusters.
+.. note:: Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes is not fully supported for this receiver and might result in the navigator not displaying all clusters.
 
 Configuration
 ==========================

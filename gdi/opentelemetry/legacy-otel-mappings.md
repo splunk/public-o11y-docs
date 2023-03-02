@@ -4,7 +4,7 @@
 
 <meta name="Description" content="Documentation on the legacy SignalFX Smart Agent and OpenTelementry Collector mappings in Splunk Observability Cloud">
 
-The mapping service enables you to migrate from Smart Agent to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards, charts, and detectors. It automatically translates collectd (Smart Agent) conventions into the syntax used by the Collector as a background operation. 
+The mapping service lets you migrate from Smart Agent to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards, charts, and detectors. It automatically translates collectd (Smart Agent) conventions into the syntax used by the Collector as a background operation. 
 
 Mapping supports multiple observers, deployment types, and kinds of metadata. 
 
@@ -15,7 +15,7 @@ The mapping service is a transition tool that defines equivalencies between lega
 - It applies to metrics and metric time series (MTS), dimensions, and properties. 
 - Mapping logic treats any of the names for a metric or property as referring to that same metric or property in OpenTelemetry, without tracking versions.
 
-For example, if you track CPU utilization for your Kubernetes pod, your analytics may use the ``kubernetes.container_cpu_limit`` value. In that case, the mapping service updates your existing queries to include both legacy semantics and new semantics (such as ``k8s.container.cpu_limit``) joined by an OR clause. The Mapping Service creates equivalencies between your Smart Agent and OTel metric names.
+For example, if you track CPU utilization for your Kubernetes pod, your analytics can use the ``kubernetes.container_cpu_limit`` value. In that case, the mapping service updates your existing queries to include both legacy semantics and new semantics (such as ``k8s.container.cpu_limit``) joined by an OR clause. The Mapping Service creates equivalencies between your Smart Agent and OTel metric names.
 
 ### Navigate your data
 
@@ -85,7 +85,7 @@ The report shows how many objects of each type are affected, and includes tables
 
 #### Team information
 
-The mapping impact report extracts information from your data set about stakeholders, meaning the people who created object types or are affected by changes to them because they’re on email lists of employees to be notified in the event of, for example, a detector being triggered by a critical alert condition.
+The mapping impact report extracts information from your data set about stakeholders, meaning the people who created object types or are affected by changes to them because they're on email lists of employees to be notified in the event of, for example, a detector being triggered by a critical alert condition.
 
 When applicable, the report shows the names of teams linked to particular detectors. The report also identifies people or teams linked to particular dashboard groups.
 

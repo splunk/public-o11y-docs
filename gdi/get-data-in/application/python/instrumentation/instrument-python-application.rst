@@ -31,7 +31,7 @@ To generate all the basic installation commands for your environment and applica
 
 .. _install-enable-python-agent:
 
-Install and enable the Python agent
+Install and activate the Python agent
 ===================================================================
 
 Follow these steps to automatically instrument your application using the Python agent:
@@ -90,7 +90,7 @@ Follow these steps to automatically instrument your application using the Python
 
          $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
 
-#. Enable the Splunk OTel Python agent by editing your Python service command.
+#. Activate the Splunk OTel Python agent by editing your Python service command.
 
    For example, if you open your Python application as follows:
 

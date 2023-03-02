@@ -105,7 +105,7 @@ The following table shows the configuration options for this monitor:
 | `port` | no | `integer` | This option is filled in by the agent if using service discovery. It can be accessed in the provided configuration template with `{{.Port}}`. This option is set to the port of the discovered service, if it is a TCP/UDP endpoint. (**default:** `0`)|
 | `name` | no | `string` | This option is filled in by the agent if using service discovery. It can be accessed in the provided configuration template with `{{.Name}}`. This option is set to the name that the observer creates for the endpoint upon discovery. You can generally ignore this field. |
 | `template` | no | `string` | A configuration template for collectd. You can include as many plugin blocks as you want in this value.  It is rendered as a standard Go template, so be mindful of the delimiters `{{` and `}}`. |
-| `templates` | no | `list of strings` | A list of templates, but otherwise equivalent to the above `template` option. This enables you to have a single directory with collectd configuration files and load them all by using a globbed remote configuration value. |
+| `templates` | no | `list of strings` | A list of templates, but otherwise equivalent to the above `template` option. This lets you have a single directory with collectd configuration files and load them all by using a globbed remote configuration value. |
 | `collectdReadThreads` | no | `integer` | The number of read threads to use in collectd. This option defaults to the number of templates provided, capped at 10, but if you manually specify it, there is no limit. (**default:** `0`)|
 
 ## Metrics

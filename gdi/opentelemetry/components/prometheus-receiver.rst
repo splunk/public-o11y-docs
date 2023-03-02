@@ -32,7 +32,7 @@ The Prometheus Receiver uses the Prometheus source code, which includes a config
 Mapping Prometheus metrics to the corresponding OpenTelemetry metrics
 ------------------------------------------------------------------------
 
-The Prometheus Receiver can map Prometheus metrics to OpenTelemetry's proto-based metrics. The Prometheus Receiver maintains the original metric name, value, timestamp, as well as tags. 
+The Prometheus Receiver can map Prometheus metrics to OpenTelemetr proto-based metrics. The Prometheus Receiver maintains the original metric name, value, timestamp, as well as tags. 
 
 The Prometheus Receiver does not need to provide a one-to-one mapping, since supported metric types are different from the two systems, but it does not drop data.
 
@@ -47,7 +47,7 @@ Prometheus can also be used as an exporter that it can expose the metrics it scr
 Unsupported features
 =====================================
 
-The Prometheus Receiver is meant to be a drop-in replacement for Prometheus to scrape your services. However, there are advanced features of Prometheus that are not supported, and do return an error if the Receiver's configuration contains any of the following options:
+The Prometheus Receiver is meant to be a drop-in replacement for Prometheus to scrape your services. However, there are advanced features of Prometheus that are not supported, and do return an error if the Receive configuration contains any of the following options:
 
 * ``alert_config.alertmanagers``
 * ``alert_config.relabel_configs``
@@ -88,7 +88,7 @@ Scrape configuration
 
 The ``scrape_config`` section of your configuration file can specify a set of targets and parameters describing how to scrape them. For basic configurations, one scrape configuration specifies a single job. 
 
-Targets may be statically configured by using the ``static_configs`` parameter or dynamically discovered using one of the supported service-discovery mechanisms.
+Targets can be statically configured by using the ``static_configs`` parameter or dynamically discovered using one of the supported service-discovery mechanisms.
 
 Additionally, the ``relabel_configs`` parameter allows advanced modifications to any target and its labels before scraping.
 

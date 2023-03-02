@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `conviva` monitor via the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `conviva` monitor using the Smart Agent receiver.
 
 This monitor uses version 2.4 of the Conviva Experience Insights REST APIs to pull
 `Real-Time/Live` video playing experience metrics from Conviva.

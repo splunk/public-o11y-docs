@@ -16,7 +16,7 @@ Configuration methods
 
 You can change the settings of the SignalFx Instrumentation for .NET in the following ways:
 
-#. Set environment variables. On Windows, set them in the process scope unless you want to enable autoinstrumentation globally for all .NET applications.
+#. Set environment variables. On Windows, set them in the process scope unless you want to activate autoinstrumentation globally for all .NET applications.
 
 #. Edit the ``web.config`` or ``app.config`` file. For example:
 
@@ -65,7 +65,7 @@ The following settings are common to most instrumentation scenarios:
    * - ``SIGNALFX_TRACE_CONFIG_FILE``
      - Path of the JSON configuration file. Set this environment variable if you're configuring the instrumentation using a JSON file. See :ref:`configuration-methods-dotnet` for more information.
    * - ``SIGNALFX_TRACE_ENABLED``
-     - Set to ``false`` to disable the tracer. The default value is ``true``.
+     - Set to ``false`` to deactivate the tracer. The default value is ``true``.
    * - ``SIGNALFX_AZURE_APP_SERVICES``
      - Set to ``true`` to indicate that the profiler is running in the context of Azure App Services.	The default value is ``false``.
    * - ``SIGNALFX_DOTNET_TRACER_HOME``
@@ -86,7 +86,7 @@ The following settings control trace exporters and their endpoints:
    * - Setting
      - Description
    * - ``SIGNALFX_ACCESS_TOKEN``
-     - Splunk Observability Cloud access token for your organization. The token enables sending traces directly to the Observability Cloud ingest endpoint. To obtain an access token, see :ref:`admin-api-access-tokens`.
+     - Splunk Observability Cloud access token for your organization. The token activates sending traces directly to the Observability Cloud ingest endpoint. To obtain an access token, see :ref:`admin-api-access-tokens`.
    * - ``SIGNALFX_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, metrics are sent to ``https://ingest.<realm>.signalfx.com/v2/datapoint`` and traces are sent to ``https://ingest.<realm>.signalfx.com/v2/trace``.
    * - ``SIGNALFX_ENDPOINT_URL``
@@ -94,7 +94,7 @@ The following settings control trace exporters and their endpoints:
    * - ``SIGNALFX_METRICS_ENDPOINT_URL``
      - The URL to where the metrics exporter sends metrics. The default value is ``http://localhost:9943/api/v2/datapoint``. Setting a value overrides the ``SIGNALFX_REALM`` environment variable.
    * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_ENABLED``
-     - Enable to export traces that contain a minimum number of closed spans, as defined by ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``. The default value is ``false``.	
+     - Activate to export traces that contain a minimum number of closed spans, as defined by ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``. The default value is ``false``.	
    * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``
      - Minimum number of closed spans in a trace before it's exported. The default value is ``500``. Requires the value of the ``SIGNALFX_TRACE_PARTIAL_FLUSH_ENABLED`` environment variable to be ``true``.
 
@@ -130,9 +130,9 @@ The following settings control the AlwaysOn Profiling feature for the .NET instr
    * - Environment variable
      - Description
    * - ``SIGNALFX_PROFILER_ENABLED``
-     - Enables AlwaysOn Profiling. The default value is ``false``.
+     - Activates AlwaysOn Profiling. The default value is ``false``.
    * - ``SIGNALFX_PROFILER_MEMORY_ENABLED``
-     - Enables memory profiling. The default value is ``false``.
+     - Activates memory profiling. The default value is ``false``.
    * - ``SIGNALFX_PROFILER_LOGS_ENDPOINT``
      - The collector endpoint for profiler logs. The default value is ``http://localhost:4318/v1/logs``.
    * - ``SIGNALFX_PROFILER_CALL_STACK_INTERVAL``
@@ -155,9 +155,9 @@ The following settings control metric collection:
    * - Setting
      - Description
    * - ``SIGNALFX_METRICS_{0}_ENABLED``
-     - Configuration pattern for enabling or disabling a specific metrics group. For example, to enable ``NetRuntime`` metrics, set ``SIGNALFX_METRICS_NetRuntime_ENABLED=true``. Supported metrics are ``NetRuntime``, ``Process``, ``AspNetCore``, and ``Traces``. The default value is ``false``. See :ref:`dotnet-metrics-attributes` for more information.
+     - Configuration pattern for activating or deactivating a specific metrics group. For example, to activate ``NetRuntime`` metrics, set ``SIGNALFX_METRICS_NetRuntime_ENABLED=true``. Supported metrics are ``NetRuntime``, ``Process``, ``AspNetCore``, and ``Traces``. The default value is ``false``. See :ref:`dotnet-metrics-attributes` for more information.
 
-.. note:: NetRuntime metrics are always collected if memory profiling is enabled.
+.. note:: NetRuntime metrics are always collected if memory profiling is activated.
 
 .. _dotnet-instrumentation-settings:
 
@@ -180,7 +180,7 @@ The following settings control instrumentations and tracing behavior:
    * - ``SIGNALFX_DISABLED_INTEGRATIONS``
      - Comma-separated list of library instrumentations you want to disable. Each value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
    * - ``SIGNALFX_TRACE_{0}_ENABLED``
-     - Enables or disables a specific instrumentation library. For example, to disable the Kafka instrumentation, set ``SIGNALFX_TRACE_Kafka_ENABLED`` to ``false``. The value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
+     - Activates or deactivates a specific instrumentation library. For example, to deactivate the Kafka instrumentation, set ``SIGNALFX_TRACE_Kafka_ENABLED`` to ``false``. The value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
 
 .. _dotnet-instrumentation-libraries-settings:
 
@@ -201,28 +201,28 @@ The following settings control the behavior of specific instrumentations:
    * - ``SIGNALFX_HTTP_SERVER_ERROR_STATUSES``
      - Comma-separated list of HTTP server response statuses or ranges for which the spans are set as errors, for example: ``300, 400-599``. The default value is ``500-599``.
    * - ``SIGNALFX_INSTRUMENTATION_ELASTICSEARCH_TAG_QUERIES``
-     - Enables the tagging of a ``PostData`` command as ``db.statement``. It might introduce overhead for direct streaming users. The default value is ``true``.
+     - Activates the tagging of a ``PostData`` command as ``db.statement``. It might introduce overhead for direct streaming users. The default value is ``true``.
    * - ``SIGNALFX_INSTRUMENTATION_MONGODB_TAG_COMMANDS``
-     - Enables the tagging of a ``BsonDocument`` command as ``db.statement``. The default value is ``true``.	
+     - Activates the tagging of a ``BsonDocument`` command as ``db.statement``. The default value is ``true``.	
    * - ``SIGNALFX_INSTRUMENTATION_REDIS_TAG_COMMANDS``
-     - Enables the tagging of Redis commands as ``db.statement``. The default value is ``true``.
+     - Activates the tagging of Redis commands as ``db.statement``. The default value is ``true``.
    * - ``SIGNALFX_TRACE_DELAY_WCF_INSTRUMENTATION_ENABLED``
-     - Enables the updated WCF instrumentation, which delays execution until later in the WCF pipeline when the WCF server exception handling is established. The default value is ``false``.
+     - Activates the updated WCF instrumentation, which delays execution until later in the WCF pipeline when the WCF server exception handling is established. The default value is ``false``.
    * - ``SIGNALFX_TRACE_HEADER_TAGS``
      - Comma-separated map of HTTP header keys to tag names, automatically applied as tags on traces.	For example: ``x-my-header:my-tag,header2:tag2``.
    * - ``SIGNALFX_TRACE_HTTP_CLIENT_EXCLUDED_URL_SUBSTRINGS``
      - Comma-separated list of URL substrings. Matching URLs are ignored by the tracer. For example, ``subdomain,xyz,login,download``.
    * - ``SIGNALFX_TRACE_KAFKA_CREATE_CONSUMER_SCOPE_ENABLED``
-     - Enable to close consumer scope upon entering a method and starting a new one on method exit. The default value is ``true``.	
+     - Activate to close consumer scope upon entering a method and starting a new one on method exit. The default value is ``true``.	
    * - ``SIGNALFX_TRACE_ROUTE_TEMPLATE_RESOURCE_NAMES_ENABLED``
-     - Enable to base ASP.NET span and resource names on routing configuration, if applicable. The default value is ``true``.
+     - Activate to base ASP.NET span and resource names on routing configuration, if applicable. The default value is ``true``.
 
 .. _server-trace-information-dotnet:
 
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, enable Splunk trace response headers by setting the following environment variable:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, activate Splunk trace response headers by setting the following environment variable:
 
 .. tabs::
 
@@ -260,7 +260,7 @@ The following settings control the inclusion of query strings in the ``http.url`
    * - Setting
      - Description
    * - ``SIGNALFX_HTTP_SERVER_TAG_QUERY_STRING``
-     - Enables or disables query string inclusion in the ``http.url`` tag for ASP.NET Core applications. The default value is ``true``.
+     - Activates or deactivates query string inclusion in the ``http.url`` tag for ASP.NET Core applications. The default value is ``true``.
    * - ``SIGNALFX_TRACE_OBFUSCATION_QUERY_STRING_REGEXP``
      - Custom regular expression to obfuscate query strings. The default value is shown in the example.
    * - ``SIGNALFX_TRACE_OBFUSCATION_QUERY_STRING_REGEXP_TIMEOUT``
@@ -289,23 +289,23 @@ The following settings control the internal logging of the SignalFx Instrumentat
    * - Setting
      - Description
    * - ``SIGNALFX_DIAGNOSTIC_SOURCE_ENABLED``
-     - Enable to generate troubleshooting logs using the ``System.Diagnostics.DiagnosticSource`` class. The default value is ``true``.
+     - Activate to generate troubleshooting logs using the ``System.Diagnostics.DiagnosticSource`` class. The default value is ``true``.
    * - ``SIGNALFX_FILE_LOG_ENABLED``
-     - Enables file logging. The default value is ``true``.
+     - Activates file logging. The default value is ``true``.
    * - ``SIGNALFX_MAX_LOGFILE_SIZE``
      - The maximum size for tracer log files, in bytes. The default value is ``245760``, or 10 megabytes.
    * - ``SIGNALFX_STDOUT_LOG_ENABLED``
-     - Enables ``stdout`` logging. The default value is ``false``.
+     - Activates ``stdout`` logging. The default value is ``false``.
    * - ``SIGNALFX_STDOUT_LOG_TEMPLATE``
      - Configures the ``stdout`` log template using the Serilog formatting conventions. The default value is ``[{Level:u3}] {Message:lj} {NewLine}{Exception}{NewLine}``.
    * - ``SIGNALFX_TRACE_DEBUG``
-     - Enable to activate debugging mode for the tracer. The default value is ``false``.
+     - Activate to activate debugging mode for the tracer. The default value is ``false``.
    * - ``SIGNALFX_TRACE_LOG_DIRECTORY``
      - Directory of the .NET tracer logs. Overrides the value in ``SIGNALFX_TRACE_LOG_PATH`` if present.	The default value is ``/var/log/signalfx/dotnet/`` for Linux and ``%ProgramData%\SignalFx .NET Tracing\logs\`` for Windows.
    * - ``SIGNALFX_TRACE_LOGGING_RATE``
-     - The number of seconds between identical log messages for tracer log files. Setting this environment variable to ``0`` disables rate limiting. The default value is ``60``.
+     - The number of seconds between identical log messages for tracer log files. Setting this environment variable to ``0`` deactivates rate limiting. The default value is ``60``.
    * - ``SIGNALFX_TRACE_STARTUP_LOGS``
-     - Enable to activate diagnostic logs at startup. The default value is ``true``.
+     - Activate to activate diagnostic logs at startup. The default value is ``true``.
 
 .. _dotnet-default-service-name:
 
