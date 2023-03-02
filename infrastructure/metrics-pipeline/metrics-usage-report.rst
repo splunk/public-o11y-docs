@@ -84,12 +84,13 @@ MTS creation statistics
 Leverage metrics usage report to optimize your metrics volume
 =======================================================================
 
-Using the statistics in the metrics usage report, you can gain more visibility and control over high cardinality metrics in the following ways:
+Using the statistics in the metrics usage report, you can gain more visibility into and control over your metrics in the following ways:
 
-* Find high cardinality metrics that aren't frequently used in charts and dashboards. You can consider aggregating or dropping these metrics with metrics pipeline management.
-* Identify dimensions that are the main drivers of high cardinality. You might want to use these dimensions for your aggregation rules.
-* Determine which team member instrumented a high cardinality metric. 
+* Understand the cardinality of your metrics and determine the top cardinality metrics.
+* Find high cardinality metrics that aren’t frequently used in charts and dashboards. You can optimize your metrics volume by aggregating or dropping these metrics with metrics pipeline management.
+* Identify dimensions that are the main drivers of high cardinality. You can drop these dimensions and ingest only the aggregated metrics with metrics pipeline management.
+* Determine which teams are ingesting high cardinality metrics. You can work with those teams to optimize your metrics.
 
-With in-depth insights into your metrics usage and creation, you can make the most use out of metrics pipeline management to aggregate or drop metrics which are the main cost drivers.
+With in-depth insights into your metrics usage and creation, you can make the most use out of metrics pipeline management by aggregating or dropping metrics which are the main cost drivers.
 
 To learn more about metrics pipeline management, see :ref:`metrics-pipeline-intro`.
