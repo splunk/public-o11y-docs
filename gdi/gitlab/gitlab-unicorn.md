@@ -8,7 +8,7 @@
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the `gitlab-unicorn` monitor by using the [Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
 
-This is a monitor for GitLab's Unicorn server. The Unicorn server comes with a Prometheus exporter that runs by default on `port 8080` at the path `/-/metrics`. The IP address of the container or host needs to be allowed for the collector to access the endpoint. See the `IP allowlist` documentation on [GitLab Docs](https://docs.gitlab.com/) for more information.
+This is a monitor for GitLa Unicorn server. The Unicorn server comes with a Prometheus exporter that runs by default on `port 8080` at the path `/-/metrics`. The IP address of the container or host needs to be allowed for the collector to access the endpoint. See the `IP allowlist` documentation on [GitLab Docs](https://docs.gitlab.com/) for more information.
 
 This monitor is available on Kubernetes, Linux, and Windows.
 
@@ -34,7 +34,7 @@ receivers:
     ... # Additional config
 ```
 
-To monitor GitLab's Unicorn server using its Prometheus exporter, use a monitor configuration similar to the following:
+To monitor GitLa Unicorn server using its Prometheus exporter, use a monitor configuration similar to the following:
 
 ```
 receivers:

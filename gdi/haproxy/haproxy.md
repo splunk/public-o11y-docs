@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `haproxy` monitor via the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `haproxy` monitor using the Smart Agent receiver.
 
 This monitors an [HAProxy](http://www.haproxy.org/) instance. This monitor requires HAProxy 1.5+.
 

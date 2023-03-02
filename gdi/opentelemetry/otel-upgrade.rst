@@ -11,7 +11,7 @@ Upgrade the Collector
 Upgrade guidelines
 =================================
 
-Apply the following changes to the Collector's configuration files for specific version upgrades. While automated scripts that cover backward compatibility are included in the bundle, configuration files aren't overridden, so you need to update them manually before the backward compatibility is dropped. 
+Apply the following changes to the Collecto configuration files for specific version upgrades. While automated scripts that cover backward compatibility are included in the bundle, configuration files aren't overridden, so you need to update them manually before the backward compatibility is dropped. 
 
 .. :important::
 

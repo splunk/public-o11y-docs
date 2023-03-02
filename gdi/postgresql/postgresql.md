@@ -8,7 +8,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `postgresql` monitor type for the Smart Agent Receiver.
 
-This monitor pulls metrics from all PostgreSQL databases from a specific Postgres server instance. This monitor pulls basic information that is applicable to any database and gathers these metrics via SQL queries.
+This monitor pulls metrics from all PostgreSQL databases from a specific Postgres server instance. This monitor pulls basic information that is applicable to any database and gathers these metrics using SQL queries.
 
 
 ## Benefits

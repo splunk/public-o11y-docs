@@ -117,7 +117,7 @@ To instrument a Gatsby SPA using the Browser RUM agent, follow these steps:
    .. code-block:: javascript
 
       /**
-      * Implement Gatsby's Browser APIs in this file.
+      * Implement Gatsb Browser APIs in this file.
       *
       * See: https://www.gatsbyjs.com/docs/browser-apis/
       */
@@ -294,7 +294,7 @@ To add child spans to the generated spans, use the Context API. For example:
       const span = tracer.startSpan('process form');
       await context.with(trace.setSpan(context.active(), span), async () => {
          
-         await client.send(form); // client.send would create a XHR span via instrumentation
+         await client.send(form); // client.send would create a XHR span using instrumentation
 
       });
       span.end();

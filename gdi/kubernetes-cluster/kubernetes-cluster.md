@@ -81,7 +81,7 @@ The **nested** `kubernetesAPI` configuration object has the following fields:
 | `skipVerify` | no | `bool` | Whether to skip verifying the TLS cert from the API server. Almost never needed. **Default** is `false`. |
 | `clientCertPath` | no | `string` | The path to the TLS client cert on the pod's filesystem, if using `tls` authentication. |
 | `clientKeyPath` | no | `string` | The path to the TLS client key on the pod's filesystem, if using `tls` authentication. |
-| `caCertPath` | no | `string` | Path to a CA certificate to use when verifying the API server's TLS certificate. This is provided by Kubernetes alongside the service account token, which will be picked up automatically, so this should rarely be necessary to specify. |
+| `caCertPath` | no | `string` | Path to a CA certificate to use when verifying the API serve TLS certificate. This is provided by Kubernetes alongside the service account token, which will be picked up automatically, so this should rarely be necessary to specify. |
 
 ## Metrics
 

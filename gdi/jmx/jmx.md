@@ -154,7 +154,7 @@ output.sendDatapoints([
 
 ```
 
-Make sure that your script is carefully tested before using it to monitor a production JMX service. The script can do anything exposed via JMX, including writing attributes and running methods via JMX. In general, scripts should only read attributes, but nothing enforces that.
+Make sure that your script is carefully tested before using it to monitor a production JMX service. The script can do anything exposed using JMX, including writing attributes and running methods using JMX. In general, scripts should only read attributes, but nothing enforces that.
 
 ## Metrics
 

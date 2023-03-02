@@ -113,7 +113,7 @@ If you've activated the CPU profiler or the memory profiler on an unsupported ru
 Check the AlwaysOn Profiling configuration
 ----------------------------------------------------------------
 
-If AlwaysOn Profiling is :ref:`not working as intended <profiling-intro>`, check the configuration settings. The .NET instrumentation logs AlwaysOn Profiling's settings using INF messages at startup. Search for the string ``TRACER CONFIGURATION``.
+If AlwaysOn Profiling is :ref:`not working as intended <profiling-intro>`, check the configuration settings. The .NET instrumentation logs AlwaysOn Profilin settings using INF messages at startup. Search for the string ``TRACER CONFIGURATION``.
 
 Unsupported .NET version
 -----------------------------------------------

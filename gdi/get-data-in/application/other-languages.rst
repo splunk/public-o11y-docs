@@ -70,13 +70,13 @@ To instrument your application for Observability Cloud, you need to generate tra
 2. Initialize the OpenTelemetry tracer
 =================================================
 
-In your application's code, initialize the OpenTelemetry library and tracer like in the following examples:
+In your applicatio code, initialize the OpenTelemetry library and tracer like in the following examples:
 
 .. tabs::
 
    .. tab:: Erlang
 
-      Include the OpenTelemetry tracer in your application's code.
+      Include the OpenTelemetry tracer in your applicatio code.
 
       .. code-block:: erlang
 
@@ -129,7 +129,7 @@ In your application's code, initialize the OpenTelemetry library and tracer like
 3. Generate spans for your application
 ==================================================
 
-In your application's code, create spans for the operations you want to track. How you create spans differs depending on the target programming language. 
+In your applicatio code, create spans for the operations you want to track. How you create spans differs depending on the target programming language. 
 
 The following examples show how to create spans that have attributes or tags:
 

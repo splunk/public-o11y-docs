@@ -32,7 +32,7 @@ The Prometheus Receiver uses the Prometheus source code, which includes a config
 Mapping Prometheus metrics to the corresponding OpenTelemetry metrics
 ------------------------------------------------------------------------
 
-The Prometheus Receiver can map Prometheus metrics to OpenTelemetry's proto-based metrics. The Prometheus Receiver maintains the original metric name, value, timestamp, as well as tags. 
+The Prometheus Receiver can map Prometheus metrics to OpenTelemetr proto-based metrics. The Prometheus Receiver maintains the original metric name, value, timestamp, as well as tags. 
 
 The Prometheus Receiver does not need to provide a one-to-one mapping, since supported metric types are different from the two systems, but it does not drop data.
 
@@ -47,7 +47,7 @@ Prometheus can also be used as an exporter that it can expose the metrics it scr
 Unsupported features
 =====================================
 
-The Prometheus Receiver is meant to be a drop-in replacement for Prometheus to scrape your services. However, there are advanced features of Prometheus that are not supported, and do return an error if the Receiver's configuration contains any of the following options:
+The Prometheus Receiver is meant to be a drop-in replacement for Prometheus to scrape your services. However, there are advanced features of Prometheus that are not supported, and do return an error if the Receive configuration contains any of the following options:
 
 * ``alert_config.alertmanagers``
 * ``alert_config.relabel_configs``

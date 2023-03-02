@@ -7,7 +7,7 @@
 ## Description
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the
-Cloud Foundry Loggregator Firehose via the Smart Agent Receiver. This integration supports gauge and counter metrics.
+Cloud Foundry Loggregator Firehose using the Smart Agent Receiver. This integration supports gauge and counter metrics.
 
 Use this monitor type to create a Cloud Foundry Firehose nozzle. This monitor connects to the Cloud Foundry Reverse Log Proxy (RLP) Gateway that feeds metrics from the Loggregator. This monitor uses the new RLP Gateway model that was introduced in Pivotal Cloud Foundry (PCF) 2.4, so it does not work with older releases.
 
@@ -32,7 +32,7 @@ Follow these steps to deploy the integration:
 
 ## Configuration
 
-Most of PCF's Key Performance Indicators (KPIs) come through the Firehose. Refer to PCF's documentation for more information on KPIs and the key capacity scaling indicators that help determine when to scale up or down your cluster.
+Most of PCF Key Performance Indicators (KPIs) come through the Firehose. Refer to PCF documentation for more information on KPIs and the key capacity scaling indicators that help determine when to scale up or down your cluster.
 
 The gauge and counter metrics are collected from PCF Platform apps and platform components in the following way:
 

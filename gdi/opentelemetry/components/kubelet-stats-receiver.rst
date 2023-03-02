@@ -135,9 +135,9 @@ metadata entities and set them as extra labels on the metric resource.
 The following metadata is supported:
 
 -  ``container.id`` to augment metrics with the Container ID label
-   obtained from container statuses exposed via ``/pods``.
+   obtained from container statuses exposed using ``/pods``.
 -  ``k8s.volume.type`` to collect the volume type from the Pod spec
-   exposed via ``/pods`` and have it as a label on volume metrics. If
+   exposed using ``/pods`` and have it as a label on volume metrics. If
    there is more information available from the endpoint than just
    volume type, those are synced as well, depending on the available
    fields and the type of volume. For example, ``aws.volume.id`` is

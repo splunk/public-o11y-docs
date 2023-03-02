@@ -6,12 +6,12 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Kafka monitor type via the Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Kafka monitor type using the Smart Agent Receiver.
 
 The Apache Kafka monitor monitors a Kafka instance using the GenericJMX plugin. See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information on how to configure custom MBeans, as well as information on troubleshooting JMX setup.
 
 This monitor has a set of [built-in MBeans
-configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka/mbeans.go) for which it pulls metrics from Kafka's JMX endpoint.
+configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka/mbeans.go) for which it pulls metrics from Kafk JMX endpoint.
 
 **Note:** This monitor supports Kafka v0.8.2.x and above. For Kafka v1.x.x and above, apart from the list of default metrics, `kafka.server:type=ZooKeeperClientMetrics,name=ZooKeeperRequestLatencyMs` is a good metric to monitor since it gives an understanding of how long brokers wait for requests to Zookeeper to be completed. Since Zookeeper is an integral part of a Kafka cluster, monitoring it using the Zookeeper monitor is recommended. It is also a good idea to monitor disk utilization and network metrics of the underlying host.
 

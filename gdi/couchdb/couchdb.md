@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `couchdb` monitor via the Smart Agent receiver. It monitors metrics from CouchDB instances by calling the `_stats` endpoint for instances.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `couchdb` monitor using the Smart Agent receiver. It monitors metrics from CouchDB instances by calling the `_stats` endpoint for instances.
 
 ## Installation
 

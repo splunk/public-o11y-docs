@@ -140,7 +140,7 @@ To do so, follow these steps:
    ``lastUpdatedBy``
    ``lastUpdatedByName``
 
-4. Update the integration object via the API:
+4. Update the integration object using the API:
 
 .. code-block:: none
 

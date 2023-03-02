@@ -63,14 +63,14 @@ The following restrictions apply:
 Collect logs from unsupported services
 ==================================================================================
 
-CloudWatch log groups also store logs from unsupported services. If you want to capture those logs, add ``/aws/<namespace>`` to the list of custom namespaces in the integration object. While this option is not available in the Splunk Observability UI, you can easily do it via :ref:`API <aws-logs-api>`, or by adding :ref:`subscription filters <aws-logs-filter>`.
+CloudWatch log groups also store logs from unsupported services. If you want to capture those logs, add ``/aws/<namespace>`` to the list of custom namespaces in the integration object. While this option is not available in the Splunk Observability UI, you can easily do it using :ref:`API <aws-logs-api>`, or by adding :ref:`subscription filters <aws-logs-filter>`.
 
 .. _aws-logs-api:
 
-Collect logs via API
+Collect logs using API
 -----------------------------------
 
-To capture logs from unsupported services via the API, follow these steps:
+To capture logs from unsupported services using the API, follow these steps:
 
 1. Use a ``GET`` request to retrieve existing integration object:
 

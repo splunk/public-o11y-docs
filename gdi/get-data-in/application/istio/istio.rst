@@ -111,7 +111,7 @@ Update all pods that are in the Istio service mesh to include an ``app`` label. 
 Recommendations
 =========================================
 
-To make the best use of Splunk APM's full-fidelity data retention, configure Istio to send as much trace data as possible by configuring sampling and maximum tag length as follows:
+To make the best use of Splunk AP full-fidelity data retention, configure Istio to send as much trace data as possible by configuring sampling and maximum tag length as follows:
 
 - Set a ``sampling`` value of ``100`` to ensure that all traces have correct root spans.
 - Set a ``max_path_tag_length`` value of ``99999`` to avoid that key tags get truncated.

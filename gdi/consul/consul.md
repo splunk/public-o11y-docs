@@ -100,8 +100,8 @@ The following table shows the configuration options for this monitor:
 | `telemetryServer` | no | `bool` |  (**default:** `false`) |
 | `telemetryHost` | no | `string` | IP address or DNS to which Consul is configured to send telemetry UDP packets. Relevant only if `telemetryServer` is set to `true`. (**default:** `0.0.0.0`) |
 | `telemetryPort` | no | `integer` | Port to which Consul is configured to send telemetry UDP packets. Relevant only if `telemetryServer` is set to `true`. (**default:** `8125`) |
-| `enhancedMetrics` | no | `bool` | Set to `true` to activate the collection all metrics from Consul's runtime telemetry send via UDP or from the `/agent/metrics` endpoint. (**default:** `false`) |
-| `caCertificate` | no | `string` | If Consul server has HTTPS activated for the API, specifies the path to the CA's Certificate. |
+| `enhancedMetrics` | no | `bool` | Set to `true` to activate the collection all metrics from Consul runtime telemetry send using UDP or from the `/agent/metrics` endpoint. (**default:** `false`) |
+| `caCertificate` | no | `string` | If Consul server has HTTPS activated for the API, specifies the path to the CA Certificate. |
 | `clientCertificate` | no | `string` | If client-side authentication is activated, specifies the path to the certificate file. |
 | `clientKey` | no | `string` | If client-side authentication is activated, specifies the path to the key file. |
 | `signalFxAccessToken` | no | `string` |  |

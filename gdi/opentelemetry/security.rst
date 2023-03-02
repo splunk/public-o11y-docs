@@ -46,7 +46,7 @@ For developers
 
 Follow these general guidelines:
 
-* Get the configuration information from the Collector's configuration file.
+* Get the configuration information from the Collecto configuration file.
 * Use configuration helper functions.
 
 Follow these guidelines when using the Collector.

@@ -310,7 +310,7 @@ After you've instrumented your application, you can access your data in the foll
 Steps
 ------------------------------------------------------------------------------------
 
-See the instrumentation documentation for your application's language:
+See the instrumentation documentation for your applicatio language:
 
 - :ref:`Instrument Java applications <get-started-java>`
 
@@ -449,7 +449,7 @@ After you've configured your homegrown applications and instrumented your server
 Configuration steps for homegrown applications
 -------------------------------------------------------------------------
 
-Use the library for your application's language:
+Use the library for your applicatio language:
 
 - :new-page:`Go client library for SignalFx <https://github.com/signalfx/signalfx-go>` on GitHub
 

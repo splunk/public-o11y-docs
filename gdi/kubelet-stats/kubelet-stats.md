@@ -9,13 +9,13 @@ This monitor is deprecated in favor of the `kubeletstats` receiver. See {ref}`Ku
 ```
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to deploy the ``kubelet-stats`` monitor. This monitor pulls cadvisor metrics through a Kubernetes kubelet instance via the ``/stats/container`` endpoint.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to deploy the ``kubelet-stats`` monitor. This monitor pulls cadvisor metrics through a Kubernetes kubelet instance using the ``/stats/container`` endpoint.
 
 ## Pause containers
 
 Network stats for a Kubernetes pod are traditionally accounted for on the "pause" container, which is the container responsible for "owning" the network
 namespace that the other containers in the pod will use, among other things. Therefore, the network stats are usually zero for all non-pause containers and
-accounted for in an aggregated way via the pause container.
+accounted for in an aggregated way using the pause container.
 
 Since the only generally useful stats of the pause container are network stats, this monitor will omit non-network metrics for any containers named ``POD``. This
 is the standard name for the "pause" container in Kubernetes when using the Docker runtime, but the pause container has no name under other runtimes. Therefore,
@@ -87,8 +87,8 @@ The **nested** `kubeletAPI` configuration object has the following fields:
 | --- | --- | --- | --- |
 | `url` | no | `string` | URL of the Kubelet instance.  This will default to `http://<current node hostname>:10255` if not provided. |
 | `authType` | no | `string` | Can be `none` for no auth, `tls` for TLS client cert auth, or `serviceAccount` to use the pod's default service account token to authenticate. The default value is `none`. |
-| `skipVerify` | no | `bool` | Whether to skip verification of the Kubelet's TLS cert. The default value is `true`.|
-| `caCertPath` | no | `string` | Path to the CA cert that has signed the Kubelet's TLS cert, unnecessary if `skipVerify` is set to `false`. |
+| `skipVerify` | no | `bool` | Whether to skip verification of the Kubele TLS cert. The default value is `true`.|
+| `caCertPath` | no | `string` | Path to the CA cert that has signed the Kubele TLS cert, unnecessary if `skipVerify` is set to `false`. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use if `authType` is set to `tls` |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use if `authType` is set to `tls` |
 | `logResponses` | no | `bool` | Whether to log the raw cadvisor response at the debug level for debugging purposes. The default value is `false`. |

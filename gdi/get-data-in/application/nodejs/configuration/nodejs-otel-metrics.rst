@@ -91,7 +91,7 @@ To send custom application metrics to Observability Cloud, add ``@opentelemetry/
      // Takes preference over OTEL_SERVICE_NAME environment variable
      serviceName: 'my-service',
      metrics: {
-       // The suggested resource is filled in via OTEL_RESOURCE_ATTRIBUTES
+       // The suggested resource is filled in using OTEL_RESOURCE_ATTRIBUTES
        resourceFactory: (suggestedResource: Resource) => {
          return suggestedResource.merge(new Resource({
            'my.property': 'xyz',

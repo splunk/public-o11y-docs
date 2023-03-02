@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `expvar` monitor via the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `expvar` monitor using the Smart Agent receiver.
 
 The `expvar` monitor is a Smart Agent monitor that scrapes metrics from variables exposed in JSON
 format at an HTTP endpoint by [expvar](https://golang.org/pkg/expvar/). The monitor uses configured paths to get metric and dimension values from fetched JSON objects.
@@ -64,7 +64,7 @@ The following tables show the configuration options for this monitor:
 | `host` | **yes** | `string` | Host of the expvar endpoint |
 | `port` | **yes** | `integer` | Port of the expvar endpoint |
 | `useHTTPS` | no | `bool` | If `true`, the agent will connect to the host using HTTPS instead of plain HTTP. (**default:** `false`) |
-| `skipVerify` | no | `bool` | If useHTTPS is `true `and this option is also `true`, the host's TLS cert will not be verified. (**default:** `false`) |
+| `skipVerify` | no | `bool` | If useHTTPS is `true `and this option is also `true`, the hos TLS cert will not be verified. (**default:** `false`) |
 | `path` | no | `string` | Path to the expvar endpoint, usually `/debug/vars` (the default). (**default:** `/debug/vars`) |
 | `enhancedMetrics` | no | `bool` | If `true`, sends metrics memstats.alloc, memstats.by_size.size, memstats.by_size.mallocs and memstats.by_size.frees (**default:** `false`) |
 | `metrics` | no | `list of objects (see below)` | Metrics configurations |

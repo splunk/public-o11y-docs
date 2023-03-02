@@ -108,7 +108,7 @@ If the service is not running, start or restart it with the following command:
 
    sudo systemctl restart splunk-otel-collector
 
-If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCESS_TOKEN`` in ``/etc/otel/collector/splunk-otel-collector.conf`` are correct. You can also view the service's logs with this command:
+If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCESS_TOKEN`` in ``/etc/otel/collector/splunk-otel-collector.conf`` are correct. You can also view the servic logs with this command:
 
 .. code-block:: bash
 

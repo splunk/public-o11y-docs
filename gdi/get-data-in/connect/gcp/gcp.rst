@@ -142,7 +142,7 @@ To monitor multiple GCP projects with the integration you have two options:
 
 * Repeat the steps described in this section for each one of the projects. 
 
-* Follow the instructions in GCP's :new-page:`Overview of viewing metrics for multiple projects <https://cloud.google.com/monitoring/settings>` to attach monitored projects to the one you've already configured.
+* Follow the instructions in GC :new-page:`Overview of viewing metrics for multiple projects <https://cloud.google.com/monitoring/settings>` to attach monitored projects to the one you've already configured.
 
 .. _gcp-three:
 

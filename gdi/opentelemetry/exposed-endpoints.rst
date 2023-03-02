@@ -29,7 +29,7 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://localhost:55679/debug/[tracez|pipelinez]``
     - zPages extension for component diagnostics
   * - ``http(s)://0.0.0.0:[4317|4318]``
-    - OTLP receiver via gRPC and http
+    - OTLP receiver using gRPC and http
   * - ``http(s)://0.0.0.0:6060``
     - :new-page:`HTTP forwarder <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/httpforwarder>` used to receive Smart Agent ``apiUrl`` data
   * - ``http(s)://0.0.0.0:7276``
