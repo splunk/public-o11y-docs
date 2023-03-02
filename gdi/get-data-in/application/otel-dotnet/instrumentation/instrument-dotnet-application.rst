@@ -37,6 +37,8 @@ Windows
 
 #. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
+#. (Optional) If needed, uninstall the SignalFx Instrumentation for .NET. See :ref:`uninstall-dotnet-sfx`.
+
 #. Download and install the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
    .. code-block:: powershell
@@ -50,6 +52,8 @@ Windows
 
       # Install the Splunk distribution using the PowerShell module
       Install-OpenTelemetryCore
+
+   .. note:: Replace ``<version>`` in the ``module_url`` with the desired version.
 
 #. Register the distribution:
 
@@ -91,6 +95,8 @@ Linux
 
 #. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
+#. (Optional) If needed, uninstall the SignalFx Instrumentation for .NET. See :ref:`uninstall-dotnet-sfx`.
+
 #. Download and install the installation script of the Splunk Distribution of OpenTelemetry .NET from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>`. For example:
 
    .. code-block:: shell
@@ -99,6 +105,8 @@ Linux
       curl -sSfL https://raw.githubusercontent.com/signalfx/splunk-otel-dotnet/<version>/splunk-otel-dotnet-install.sh -O
       # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
+
+   .. note:: Replace ``<version>`` in the curl URL with the desired version.
 
 #. Activate the automatic instrumentation:
 
