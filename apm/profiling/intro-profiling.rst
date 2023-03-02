@@ -5,7 +5,7 @@ Introduction to AlwaysOn Profiling for Splunk APM
 ***************************************************
 
 .. meta:: 
-   :description: AlwaysOn Profiling continuously collects stack traces so that you can discover which lines in your code are slowing down or crashing your systems as a way to reduce mean time to resolution (MTTR). As part of Splunk APM, AlwaysOn Profiling provides context to spans produced by instrumented applications.
+   :description: AlwaysOn Profiling continuously collects stack traces so that you can discover which lines in your code are consuming too much compute resources. This can help you reduce mean time to resolution (MTTR). As part of Splunk APM, AlwaysOn Profiling provides context to spans produced by instrumented applications.
 
 .. toctree::
    :hidden:
