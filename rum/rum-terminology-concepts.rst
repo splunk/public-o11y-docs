@@ -34,9 +34,9 @@ This topic introduces important terminology and concepts in Splunk RUM for Brows
       - A crash happens when a user encounters an error and has to exit the app.
     * - :ref:`rum-web-vitals`
       - Web Vitals are made up of three metrics that measure user experience:
-            * LCP (largest contentful paint)
-            * CLS (cumulative layout shift)
-            * FID (first input delay).
+            * Largest contentful paint (LCP)
+            * Cumulative layout shift (CLS)
+            * First input delay (FID)
     * - :ref:`rum-error-id`
       - In Splunk RUM, the error ID is created by hashing the associated stack trace, error message, and error type. 
     * - :ref:`rum-custom-event-term`
@@ -249,4 +249,4 @@ Built-in dashboards offer charts, metrics, and aggregations about your applicati
 
 Global attributes
 ===================
-Global attributes are useful for reporting app or user-specific values as tags. You can set global attributes either at the time of library initialization, or afterwards.For more, see :ref:`rum-global_attributes`. 
+Global attributes are useful for reporting app or user-specific values as tags. You can set global attributes either at the time of library initialization, or afterwards. For more, see :ref:`rum-global_attributes`. 
