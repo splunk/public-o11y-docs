@@ -33,7 +33,7 @@ The following table describes everything you need to start using the Collector:
   *   - Agent or Gateway mode
       - In Agent mode, the Collector runs with the application or on the same host as the application. In Gateway mode, one or more collectors run a standalone service, for example, a container or deployment. See :ref:`otel-deployment-mode`.
   *   - Ports and endpoints
-      - Check exposed ports to make sure your environment doesn't have conflicts and that firewalls are configured properly. You can change the ports in the Collecto configuration. See :ref:`otel-exposed-endpoints`.
+      - Check exposed ports to make sure your environment doesn't have conflicts and that firewalls are configured properly. You can change the ports in the Collector configuration. See :ref:`otel-exposed-endpoints`.
 
 See also :ref:`otel-requirements`.
 
@@ -55,7 +55,7 @@ Next, read our docs on how to :ref:`configure the Collector <otel-configuration>
 Monitor the Collector
 =============================================
 
-The default configuration automatically scrapes the Collecto own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances.
+The default configuration automatically scrapes the Collector own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances.
 
 In addition, logs should be collected. For :ref:`Log Observer <get-started-logs>` customers, logs are automatically collected for the Collector and Journald processes.
 
