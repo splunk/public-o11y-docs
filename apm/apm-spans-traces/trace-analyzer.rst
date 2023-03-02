@@ -33,18 +33,9 @@ To explore your trace data, use the following controls:
 
 Trace Analyzer searches all currently retained traces; see :ref:`apm-data-retention` to learn more about the default trace retention period.
 
-Trace & error count chart
--------------------------------
+Trace Analyzer shows total traces and traces with errors in a stacked bars chart. Select and drag over the bars in the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
 
-The :guilabel:`Trace & error` count option shows total traces and traces with errors in a stacked bars chart. You can hover the mouse pointer over any of the bars to see the trace count.
-
-..  image:: /_images/apm/trace-analyzer/trace-error-chart.gif
-    :width: 95%
-    :alt: Trace and error count chart showing data for each period
-
-Drag over the chart to select a specific period within the available time frame. Select :guilabel:`Filter to selection` to update the time range filter.
-
-..  image:: /_images/apm/trace-analyzer/trace-drag-drop-chart.gif
+..  image:: /_images/apm/trace-analyzer/TraceDrag-Drop-Chart.gif
     :width: 95%
     :alt: Selection of a specific time frame
 
