@@ -145,4 +145,4 @@ Splunk Synthetic Monitoring provides the following set of request variables you 
 
 Use a variable in a test
 ===========================
-While creating or editing a test, the right-hand :guilabel:`Variables` tab shows a list of built-in variables and existing Global Variables you can use. Select the name of a variable to copy it to your keyboard and paste it in the field of your choice.
+While creating or editing a test, the right-hand :guilabel:`Variables` tab shows a list of built-in variables and existing global variables you can use. Select the name of a variable to copy it to your keyboard and paste it in the field of your choice.

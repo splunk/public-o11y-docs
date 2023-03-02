@@ -9,7 +9,7 @@ Kai, a site reliability engineer at Buttercup Industries, a fictitious e-commerc
 Set up a Browser test to monitor a critical workflow 
 ======================================================
 
-Buttercup Industries has a large conference coming up. Kai sets up an Browser test to monitor the performance of the website hosting to make sure that all attendees can access the website and see the agenda for the conference. Kai uses a Global variable to retrieve the user credentials during the login workflow. For more, see :ref:`global-variables`. 
+Buttercup Industries has a large conference coming up. Kai sets up an Browser test to monitor the performance of the website hosting to make sure that all attendees can access the website and see the agenda for the conference. Kai uses a global variable to retrieve the user credentials during the login workflow. For more, see :ref:`global-variables`. 
 
 Kai's Browser test captures this user workflow: 
 
@@ -31,13 +31,13 @@ Here is how Kai set up the browser test for the login workflow.
     :width: 100% 
     :alt: This image shows a completed browser test. 
 
-3. Kai creates a step to check the username using a Global Variable. 
+3. Kai creates a step to check the username using a global variable. 
 
 ..  image:: /_images/synthetics/browser-test-three.png
     :width: 100% 
     :alt: This image shows a completed browser test. 
 
-4. Kai creates a step to enter a password using a Global Variable. 
+4. Kai creates a step to enter a password using a global variable. 
 
 ..  image:: /_images/synthetics/browser-test-four.png
     :width: 100% 

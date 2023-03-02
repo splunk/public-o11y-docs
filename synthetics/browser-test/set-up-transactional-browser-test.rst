@@ -68,7 +68,7 @@ The following table describes the types of steps you can include:
      - Click on an element you identify under :guilabel:`Selector`. Optionally, wait for navigation. 
 
    * - Fill in field
-     - Fill a field you identify under :guilabel:`Selector` with a value you provide under :guilabel:`Value`. Optionally, wait for navigation. For security and reusability, use a built-in, custom, or Global Variable to provide the value. See :ref:`global-variables` to learn more.
+     - Fill a field you identify under :guilabel:`Selector` with a value you provide under :guilabel:`Value`. Optionally, wait for navigation. For security and reusability, use a built-in, custom, or global variable to provide the value. See :ref:`global-variables` to learn more.
 
    * - Go to URL
      - Navigate to a URL you provide under :guilabel:`Value`. 

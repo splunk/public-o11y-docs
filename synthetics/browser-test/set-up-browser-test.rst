@@ -93,7 +93,7 @@ Specify custom headers to send with each request. For example, you can add a hea
 Authentication
 --------------------------
 
-Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using Concealed Global Variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
+Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using concealed global variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
 
 The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
 
