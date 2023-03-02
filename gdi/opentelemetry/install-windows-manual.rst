@@ -91,7 +91,7 @@ Install Fluentd MSI for log collection
 Default log collection
 -----------------------------------------------
 
-Install, configure, and start the Collector with :ref:`Windows Installer <windows-installer>`. The Collector's default configuration file ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml`` listens for log events on ``127.0.0.1:8006`` and sends them to Splunk Observability Cloud.
+Install, configure, and start the Collector with :ref:`Windows Installer <windows-installer>`. The Collector default configuration file ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml`` listens for log events on ``127.0.0.1:8006`` and sends them to Splunk Observability Cloud.
 
 Log collection with Fluentd
 -----------------------------------------------
@@ -187,5 +187,5 @@ Next steps
 Once you have installed the package, you can perform these actions:
 
 * :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft's documentation site <https://docs.microsoft.com/en-us/>` for more information.
+* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
 * :ref:`apm`.

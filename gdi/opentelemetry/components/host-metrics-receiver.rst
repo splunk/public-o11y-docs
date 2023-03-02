@@ -9,7 +9,7 @@ Host metrics receiver
 
 The host metrics receiver generates metrics scraped from host systems when the Collector is deployed as an agent. The supported pipeline type is ``metrics``.
 
-By default, the host metrics receiver is enabled in the Splunk Distribution of OpenTelemetry Collector and collects the following metrics:
+By default, the host metrics receiver is activated in the Splunk Distribution of OpenTelemetry Collector and collects the following metrics:
 
 - CPU usage metrics
 - Disk I/O metrics

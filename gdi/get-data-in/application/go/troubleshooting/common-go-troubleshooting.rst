@@ -22,10 +22,10 @@ The following steps can help you troubleshoot Go instrumentation issues:
 
 .. _enable-go-debug-logging:
 
-Enable debug logging
+Activate debug logging
 ==========================================================
 
-Debug logging increases the verbosity of the Go instrumentation. This can help you troubleshoot issues. To enable debug logging, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``.
+Debug logging increases the verbosity of the Go instrumentation. This can help you troubleshoot issues. To activate debug logging, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``.
 
 .. code-block:: shell
 

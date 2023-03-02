@@ -19,7 +19,7 @@ Configure the Smart Agent receiver
 
 For each Smart Agent monitor you want to add to the Collector, add a ``smartagent`` receiver and ``smartagent`` service pipeline in your :ref:`Collector configuration file <otel-configuration>`. Each ``smartagent`` receiver acts as a drop-in replacement for its corresponding Smart Agent monitor.
 
-Instead of using ``discoveryRule``, use the Collector's receiver creator and observer extensions. See :ref:`receiver-creator-receiver` for more information.
+Instead of using ``discoveryRule``, use the Collector receiver creator and observer extensions. See :ref:`receiver-creator-receiver` for more information.
 
 If you're using a SignalFx Forwarder monitor, add it to both a ``traces`` and a ``metrics`` pipeline, and use a Sapm exporter and a SignalFx exporter, as each pipeline's exporter, respectively. See more on :ref:`exporters <collector-components-processors>`.
 
@@ -44,7 +44,7 @@ If you have a monitor that updates dimension properties or tags, put the name of
 
   * Sample monitors: ``ecs-metadata``, ``heroku-metadata``, ``kubernetes-cluster``, ``openshift-cluster``, ``postgresql``, or ``sql``.
 
-If you don't specify any exporters in this array field, the receiver attempts to use the Collector pipeline to which it's connected. If the next element of the pipeline isn't compatible with updating dimensions, and if you configured a single SignalFx exporter, the receiver uses that SignalFx exporter. If you don't require dimension updates, you can specify the empty array ``[]`` to disable it.
+If you don't specify any exporters in this array field, the receiver attempts to use the Collector pipeline to which it's connected. If the next element of the pipeline isn't compatible with updating dimensions, and if you configured a single SignalFx exporter, the receiver uses that SignalFx exporter. If you don't require dimension updates, you can specify the empty array ``[]`` to deactivate it.
 
 Smart Agent extension
 ==================================

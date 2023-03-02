@@ -60,7 +60,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SPLUNK_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - Enables you to add server trace information to HTTP response headers using the ``net/http`` instrumentation package. For more information, see :ref:`server-trace-information-go`. The default value is ``true``.
+     - Lets you add server trace information to HTTP response headers using the ``net/http`` instrumentation package. For more information, see :ref:`server-trace-information-go`. The default value is ``true``.
    * - ``OTEL_LOG_LEVEL``
      - Sets the logging level for instrumentation log messages. Possible values are ``error``, ``warn``, ``info``, and ``debug``. The default value is ``info``. The log level might not apply if you use ``WithLogger`` to change the logger.
 

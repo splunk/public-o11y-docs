@@ -87,7 +87,7 @@ The Collector or Smart Agent must have network access to Traefik.
 
 ### Traefik configuration
 
-Edit the Traefik configuration file, for example `traefik.toml`, to enable Traefik to expose Prometheus metrics at an endpoint. By default, the endpoint is on path `/metrics`. When running the Traefik binary, pass the path to the configuration file using the `-c` argument. For example, `./traefik -c traefik.toml`.
+Edit the Traefik configuration file, for example `traefik.toml`, to activate Traefik to expose Prometheus metrics at an endpoint. By default, the endpoint is on path `/metrics`. When running the Traefik binary, pass the path to the configuration file using the `-c` argument. For example, `./traefik -c traefik.toml`.
 
 When running the Traefik Docker image, use the `/etc/traefik/traefik.toml` volume. For example, `docker run -d -p 8080:8080 -p 80:80 -v $PWD/traefik.toml:/etc/traefik/traefik.toml`.
 
