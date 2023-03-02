@@ -111,7 +111,7 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following process 
      - Total CPU seconds broken down by different states, such as user and system.	
    * - ``process.cpu.count``
      - Gauge
-     - Total CPU seconds broken down by different states, such as user and system.	
+     - Total CPU seconds broken down by different states, such as user and system.
    * - ``process.threads``
      - Gauge
      - Process threads count.	
