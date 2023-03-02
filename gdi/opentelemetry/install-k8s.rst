@@ -148,7 +148,7 @@ Install the Collector with resource YAML manifests
 
 A manifest specifies the state you want to apply to a Kubernetes object when you apply the configuration file. Each configuration file can contain multiple resource manifests. 
 
-Apply resource manifests using the ``kubectl create`` command. The manifests are configured with all telemetry types enabled for the agent, which is the default when installing the Helm chart. These manifests should be configured for Splunk Observability Cloud only.
+Apply resource manifests using the ``kubectl create`` command. The manifests are configured with all telemetry types activated for the agent, which is the default when installing the Helm chart. These manifests should be configured for Splunk Observability Cloud only.
 
 Do the following to deploy the Splunk Distribution of OpenTelemetry Collector for Kubernetes using resource manifests:
 

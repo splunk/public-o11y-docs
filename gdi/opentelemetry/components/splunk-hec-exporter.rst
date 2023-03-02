@@ -101,7 +101,7 @@ If you're using the Collector for log collection and need to send data to Splunk
          index: "metrics"
          # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
          max_connections: 20
-         # Whether to disable gzip compression over HTTP. Defaults to false.
+         # Whether to deactivate gzip compression over HTTP. Defaults to false.
          disable_compression: false
          # HTTP timeout when sending data. Defaults to 10s.
          timeout: 10s

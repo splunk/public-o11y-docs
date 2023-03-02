@@ -20,12 +20,12 @@ Follow these steps to troubleshoot general instrumentation issues:
 
 #. Check what environment variables apply to your process using tools such as Process Explorer. On Linux, run ``cat /proc/<pid>/environ`` where ``<pid>`` is the process ID.
 
-Enable debug logging
+Activate debug logging
 ----------------------------------------------------
 
 The SignalFx Instrumentation for .NET logs its configuration using ``INF`` log messages at startup.
 
-You can enable debug logging to obtain more information about the issue:
+You can activate debug logging to obtain more information about the issue:
 
 #. Set the ``SIGNALFX_TRACE_DEBUG`` environment variable to ``true`` before starting your instrumented application. 
 
@@ -38,7 +38,7 @@ You can enable debug logging to obtain more information about the issue:
 
 You can change the default location by updating the ``SIGNALFX_TRACE_LOG_DIRECTORY`` environment variable. See :ref:`dotnet-debug-logging-settings` for more information and settings.
 
-.. note:: Enable debug logging only when needed. Debug mode requires more resources.
+.. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
 Traces don't appear in Observability Cloud
 ==================================================================
@@ -81,7 +81,7 @@ Make sure that you're using an installation package that is compatible with your
 High CPU usage
 ====================================================
 
-By default, the SignalFx Instrumentation for .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've enabled the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
+By default, the SignalFx Instrumentation for .NET instruments all .NET processes running on the host automatically. This might significantly increase CPU usage if you've activated the instrumentation in the system or user scope. Make sure that the instrumentation's environment variables are always set in the process or terminal scope.
 
 To restrict global instrumentation to a set of processes, use the ``SIGNALFX_PROFILER_PROCESSES`` and ``SIGNALFX_PROFILER_EXCLUDE_PROCESSES`` environment variables, which include and exclude processes for instrumentation. See :ref:`advanced-dotnet-configuration` for more information.
 
@@ -92,28 +92,28 @@ Troubleshoot AlwaysOn Profiling for .NET
 
 See the following common issues and fixes for AlwaysOn Profiling:
 
-Check that AlwaysOn Profiling is enabled
+Check that AlwaysOn Profiling is activated
 ----------------------------------------------------------------
 
-The .NET instrumentation logs the string ``AlwaysOnProfiler::MemoryProfiling`` started at ``info`` log level. To check whether AlwaysOn Profiling is enabled, search your logs for strings similar to the following:
+The .NET instrumentation logs the string ``AlwaysOnProfiler::MemoryProfiling`` started at ``info`` log level. To check whether AlwaysOn Profiling is activated, search your logs for strings similar to the following:
 
 .. code-block:: bash 
 
    10/12/22 12:10:31.962 PM [12096|22036] [info] AlwaysOnProfiler::MemoryProfiling started.
 
-If no string appears, make sure that you've enabled the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-dotnet`.
+If no string appears, make sure that you've activated the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-dotnet`.
 
-If you've enabled the CPU profiler or the memory profiler on an unsupported runtime version, entries similar to the following entry appear in the logs:
+If you've activated the CPU profiler or the memory profiler on an unsupported runtime version, entries similar to the following entry appear in the logs:
 
 .. code-block:: bash
 
-   2022-10-12 12:37:18.640 +02:00 [WRN] Cpu profiling enabled but not supported.
-   2022-10-12 12:37:18.640 +02:00 [WRN] Memory profiling enabled but not supported.
+   2022-10-12 12:37:18.640 +02:00 [WRN] Cpu profiling activated but not supported.
+   2022-10-12 12:37:18.640 +02:00 [WRN] Memory profiling activated but not supported.
 
 Check the AlwaysOn Profiling configuration
 ----------------------------------------------------------------
 
-If AlwaysOn Profiling is :ref:`not working as intended <profiling-intro>`, check the configuration settings. The .NET instrumentation logs AlwaysOn Profiling's settings using INF messages at startup. Search for the string ``TRACER CONFIGURATION``.
+If AlwaysOn Profiling is :ref:`not working as intended <profiling-intro>`, check the configuration settings. The .NET instrumentation logs AlwaysOn Profiling settings using INF messages at startup. Search for the string ``TRACER CONFIGURATION``.
 
 Unsupported .NET version
 -----------------------------------------------
@@ -163,7 +163,7 @@ The following snippet contains a sample ``profiling`` pipeline:
 Loss of profiling data or gaps in profiling data
 -------------------------------------------------------------
 
-When the instrumentation can't send data to Splunk OpenTeletry Collector due to full buffers, AlwaysOn Profiling enables the escape hatch, which drops all logs with profiling data until the buffers are empty.
+When the instrumentation can't send data to Splunk OpenTeletry Collector due to full buffers, AlwaysOn Profiling activates the escape hatch, which drops all logs with profiling data until the buffers are empty.
 
 If the escape hatch activates, it logs the following message:
 
@@ -176,5 +176,30 @@ You can also look for the ``** THIS WILL RESULT IN LOSS OF PROFILING DATA **.`` 
 The thread sampler resumes its activity when any of the buffers is empty.
 
 To avoid the loss of profiling data due to full buffers, check the configuration and the communication layer between your process and the Splunk Distribution of OpenTelemetry Collector.
+
+.. _uninstall-dotnet-sfx:
+
+Uninstall the SignalFx Instrumentation for .NET
+=====================================================
+
+To remove the SignalFx Instrumentation for .NET, follow the instructions for each operating system.
+
+Windows
+----------------------
+
+Follow these steps to remove the SignalFx Instrumentation for .NET:
+
+#. Stop all instrumented services or applications.
+#. Remove all environment variables you might have set for the instrumentation.
+#. Uninstall :strong:`SignalFx .NET Tracing` from the :guilabel:`Programs and Features` control panel.
+
+Linux
+----------------------
+
+Follow these steps to remove the SignalFx Instrumentation for .NET:
+
+#. Stop all instrumented services or applications.
+#. Remove all environment variables you might have set for the instrumentation.
+#. Remove ``signalfx-dotnet-tracing`` using your package manager or delete the files from ``/opt/signalfx`` if you installed the instrumentation using the tar file.
 
 .. include:: /_includes/troubleshooting-steps.rst

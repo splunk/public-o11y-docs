@@ -18,7 +18,7 @@ The Splunk Distribution of OpenTelemetry Java instruments numerous libraries, fr
 
 For custom metrics support, you must use MicroMeter 1.5 and higher. See :ref:`java-otel-custom-metrics`.
 
-.. note:: To disable specific instrumentations, see :ref:`java-instrumentation-issues`.
+.. note:: To deactivate specific instrumentations, see :ref:`java-instrumentation-issues`.
 
 .. _java-requirements:
 

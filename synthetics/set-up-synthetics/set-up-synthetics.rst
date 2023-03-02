@@ -76,6 +76,13 @@ For more examples on Java instrumentation, see :ref:`server-trace-information-ja
 
 .. _third-step-config:
 
+
+
+(Optional) Integrate with Splunk RUM 
+=====================================
+Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
+
+
 (Optional) Configure your application
 =====================================
 If you use Splunk Synthetic Monitoring to monitor an application or website with allow/block lists or a web analytics tool, you might want to adjust the settings to accommodate traffic from Splunk Synthetic Monitoring. See :ref:`synth-configure-app` for detailed instructions. 

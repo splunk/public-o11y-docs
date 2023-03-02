@@ -22,7 +22,7 @@ This monitor is provided by the Smart Agent and is available for the Smart Agent
 To install this integration:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. If using this monitor with the default Docker daemon's domain socket, you might need to add the `splunk-otel-collector` user to the `docker` group to have permission to access the Docker API. If running with the Smart Agent use the `signalfx-agent` user instead.
+2. If using this monitor with the default Docker daemon domain socket, you might need to add the `splunk-otel-collector` user to the `docker` group to have permission to access the Docker API. If running with the Smart Agent use the `signalfx-agent` user instead.
    ```yaml
    usermod -aG docker splunk-otel-collector
    ```

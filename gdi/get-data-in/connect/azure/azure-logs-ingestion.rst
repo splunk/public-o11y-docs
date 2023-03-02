@@ -63,7 +63,7 @@ Azure uses diagnostic settings to send data to Event Hubs. Each resource you wan
 Configure diagnostic settings to send logs
 ===================================================
 
-After you've created the event hub, follow these steps to enable diagnostic settings:
+After you've created the event hub, follow these steps to activate diagnostic settings:
 
 #. In Azure, select the resource and go to :guilabel:`Monitoring > Diagnostic settings`.
 

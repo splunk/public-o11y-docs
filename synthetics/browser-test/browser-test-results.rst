@@ -186,3 +186,8 @@ To get even more value out of your synthetic metrics, use the Splunk Observabili
 * To build more advanced detectors using the Splunk Observability Cloud metrics engine, see :ref:`get-started-detectoralert`.
 * To learn more about metrics in Splunk Observability Cloud, see :ref:`get-started-metrics`.
 
+
+
+(Optional) Splunk RUM integration 
+------------------------------------
+Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
