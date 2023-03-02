@@ -47,15 +47,15 @@ Once you're in the :guilabel:`Add Global variable` dialog box, enter the followi
 #. In the :guilabel:`env` field, enter the name of the variable. You will use this key to access your variable within a test.
 #. In the :guilabel:`value` field, enter the value that will replace the variable when the test is run.
 #. (Optional) In the :guilabel:`Description` field, enter a description to explain the purpose of the variable for future reference. A description is particularly helpful when you conceal the variable and cannot reveal its value. 
-#. (Optional) Select :guilabel:`Conceal value` to permanently conceal the value to all users. See :ref:`concealed-gv` to learn more. 
-#. Once you're satisfied with your Global Variable, select :guilabel:`Add`. 
+#. (Optional) Select :guilabel:`Conceal value` to permanently conceal the value to all users. 
+#. Once you're satisfied with your Global variable, select :guilabel:`Add`. 
 
 
 Edit a Global Variable
 ====================================
-To edit the key or description of a Global Variable, visit the Global Variables page and edit within the field. Select :guilabel:`Save` when you're finished editing.
+To edit the key or description of a Global variable, visit the Global variables page and edit within the field. Select :guilabel:`Save` when you're finished editing.
 
-Editing the value of a saved Concealed Global Variable clears the previous value. You must provide a new value and select :guilabel:`Save` to apply it.
+Editing the value of a saved concealed Global variable clears the previous value. You must provide a new value and select :guilabel:`Save` to apply it.
   
 .. _gv-test:
 
@@ -71,9 +71,9 @@ Use a Global variable in a Browser test
 --------------------------------------------
 Follow these steps to add a variable to your Browser test:
 
-#. While creating or editing a transactional Browser Test, go to your :guilabel:`Steps`.
+#. While creating or editing a transactional Browser test, go to your :guilabel:`Steps`.
 #. Under :guilabel:`Action`, select :guilabel:`Fill in field` from the dropdown menu. 
-#. Under :guilabel:`Value`, enter the key for the Global Variable you want to use, use the ``env.`` prefix and enclosed in double curly braces. For example, to reference a Global Variable with the key dev-username, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field. 
+#. Under :guilabel:`Value`, enter the key for the Global variable you want to use, use the ``env.`` prefix and enclosed in double curly braces. For example, to reference a Global variable with the key dev-username, enter ``{{env.dev-username}}`` in the :guilabel:`Value` field. 
 #. Finish editing or creating the test.
 #. :guilabel:`Save` your test. 
 
@@ -87,7 +87,7 @@ You can also use a Global variable to fill in any field in an API test. For inst
 Follow these steps to add a variable to your API test:
 
 #. While creating or editing an API test, go to your :guilabel:`Requests`.
-#. In a variable field for any setup, request, or validation step, enter the key for the Global Variable you want to use, use the ``env.`` prefix and enclosed in double curly braces.  For example, to reference a Global variable with the key ``staging-url``, enter ``{{env.staging-url}}`` in the field. 
+#. In a variable field for any setup, request, or validation step, enter the key for the Global variable you want to use, use the ``env.`` prefix and enclosed in double curly braces.  For example, to reference a Global variable with the key ``staging-url``, enter ``{{env.staging-url}}`` in the field. 
 #. Finish editing or creating the test.
 #. :guilabel:`Save` your test. 
 
