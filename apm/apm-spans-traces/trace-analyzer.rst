@@ -22,7 +22,7 @@ Filter and search
 
 To explore your trace data, use the following controls:
 
-..  image:: /_images/apm/trace-analyzer/trace-analyzer.png
+..  image:: /_images/apm/trace-analyzer/TraceAnalyzer.png
     :width: 95%
     :alt: Elements of the Trace Analyzer user interface
 
