@@ -51,7 +51,7 @@ You can rearrange the columns in a log view by dragging and dropping column head
 
 Chart actions
 =============================================================================
-You can take six actions on your logs chart from its dashboard. Select the :strong:`Chart` menu on your logs chart, then select one of the following options:
+You can take six actions on your logs chart from its dashboard. Select the :strong:`More` menu on your logs chart, then select one of the following options:
 
 * View in Log Observer
 
@@ -83,7 +83,7 @@ Select :strong:`Delete` to remove your logs chart from the dashboard. Deleting i
 
 .. _field-aliasing:
 
-Align log views with metrics charts on the same dashboard
+Align logs charts with metrics charts on the same dashboard
 =============================================================================
 To maneuver seamlessly on your dashboard, it is important that logs fields and corresponding metrics fields use the same field names. You can ensure that field names match by aliasing logs fields when field names do not align.
 
@@ -97,7 +97,7 @@ To align logs data with metrics data, follow these steps:
 
 4. Follow the steps in :ref:`create-logviews-chart` to save your new query as a chart.
 
-Now you can easily cross reference data in your log view and data in your metrics charts. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster.
+Now you can easily cross reference data in your logs chart and data in your metrics charts. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster.
 
 .. note:: Field Aliasing does not rename or remove your original logs field name. When you alias a logs field, you can search for it by its original name or by any of its aliases. 
 
