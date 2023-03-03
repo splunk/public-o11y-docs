@@ -60,7 +60,7 @@ In Splunk RUM, the JavaScript errors view shows the JavaScript errors sorted by 
 
 2. To open Tag Spotlight from either the Application Summary Dashboard, or Overview pages click on any metric. 
 
-* For example, select :strong:`See All` in the metric :strong:`JavaScript Errors(by error ID)` to explore all of the JavaScript errors in Tag Spotlight. 
+* For example, select :strong:`See all` in the metric :strong:`JavaScript errors(by error ID)` to explore all of the JavaScript errors in Tag Spotlight. 
 
 
 JS Errors without stacktrace, type, or message 

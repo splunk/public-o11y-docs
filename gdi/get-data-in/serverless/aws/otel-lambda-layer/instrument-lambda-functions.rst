@@ -108,13 +108,13 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
                      /opt/otel-handler
 
                      # Same as otel-handler, but proxied through API Gateway,
-                     # with HTTP context propagation enabled
+                     # with HTTP context propagation activated
                      /opt/otel-proxy-handler
 
                      # Wraps streaming handlers that implement RequestStreamHandler
                      /opt/otel-stream-handler
 
-                  .. note:: Only AWS SDK v2 instrumentation is enabled by default. To instrument other libraries, modify your code to include the corresponding library instrumentation from the OpenTelemetry Java SDK.
+                  .. note:: Only AWS SDK v2 instrumentation is activated by default. To instrument other libraries, modify your code to include the corresponding library instrumentation from the OpenTelemetry Java SDK.
 
                .. code-tab:: shell Python
 
@@ -205,7 +205,7 @@ The ``zip`` feature of ``pythonRequirements`` allows packing and deploying Lambd
 Slim feature
 -----------------------------------------------------
 
-The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Disable the ``slim`` option in your ``serverless.yml`` file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
+The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your ``serverless.yml`` file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
 
 .. _check-otel-lambda-data:
 

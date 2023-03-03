@@ -558,10 +558,10 @@ When you edit the SignalFlow that powers a chart, or when you create a chart by 
    	:backlinks: none
 
 
-Convertible SignalFlow can consist of streams only, with each stream assigned to a capital letter from A to ZZZZZZ
+Convertible SignalFlow can consist of streams only, with each stream assigned to a capital letter from A to Z
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-Assign each stream to its own capital letter, from A to ZZZZZZ. Multiple requests for data in a single assignment are not convertible to the plot-builder UI. Expression-type logic can include variables and numbers only.
+Assign each stream to its own capital letter, from A to Z. Multiple requests for data in a single assignment are not convertible to the plot-builder UI. Expression-type logic can include variables and numbers only.
 
 .. list-table::
    :widths: 25 100

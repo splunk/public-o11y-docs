@@ -31,10 +31,10 @@ The OpenTelemetry Collector includes the following component types:
 
 * Receivers: Get data into the Collector from multiple sources.
 * Processors: Perform operations on data before it's exported. For example, filtering.
-* Exporters: Send data to one or more backends or destinations. 
+* Exporters: Send data to one or more back ends or destinations. 
 * Extensions: Extend the capabilities of the Collector.
 
-You can enable these components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
+You can activate these components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
 The Splunk Distribution of OpenTelemetry Collector support the following components.
 
@@ -215,7 +215,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``ecs_observer``
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. If you run the Collector as a sidecar, consider using the ECS resource detector instead of the ECS observer.
    * - ``health_check``
-     - Enables an HTTP URL that can be probed to check the status of the OpenTelemetry Collector. You can also use this extension as a liveness or readiness probe on Kubernetes.
+     - Activates an HTTP URL that can be probed to check the status of the OpenTelemetry Collector. You can also use this extension as a liveness or readiness probe on Kubernetes.
    * - ``http_forwarder``
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
    * - ``host_observer``
@@ -225,11 +225,11 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``k8s_observer``
      - Uses the Kubernetes API to discover pods running on the local node. This extension assumes that the Splunk Distribution of OpenTelemetry Collector is deployed in agent mode where it is running on each individual node or host instance. 
    * - ``pprof``
-     - Enables the golang ``net/http/pprof`` endpoint, which is used to collect performance profiles and investigate issues with a service.
+     - Activates the golang ``net/http/pprof`` endpoint, which is used to collect performance profiles and investigate issues with a service.
    * - ``smartagent``
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
    * - ``zpages``
-     - Enables an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
+     - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
 
 .. raw:: html
 

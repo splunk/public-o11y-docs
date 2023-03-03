@@ -163,7 +163,7 @@ Renaming a token does not affect the value of the token.
    For :ref:`Cloud integrations (AWS, GCP, or Azure) <get-started-connect>`, after renaming an access token you'll need to choose a new token name via the API. For AWS, you can also set up a new token :ref:`in the UI <aws-wizardconfig>`.
 
 Deactivate or activate an access token
-=====================================
+========================================
 
 .. note::
 

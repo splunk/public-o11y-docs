@@ -11,7 +11,7 @@ Set up deployment environments in Splunk APM
 
 A deployment environment is a distinct deployment of your system or application that allows you to set up configurations that don't overlap with configurations in other deployments of the same application. Separate deployment environments are often used for different stages of the development process, such as development, staging, and production. 
 
-A common application deployment pattern is to have multiple, distinct application environments that don’t interact directly with each other but that are all being monitored by Splunk APM: for instance, quality assurance (QA) and production environments, or multiple distinct deployments in different datacenters, regions or cloud providers. 
+A common application deployment pattern is to have multiple, distinct application environments that don't interact directly with each other but that are all being monitored by Splunk APM: for instance, quality assurance (QA) and production environments, or multiple distinct deployments in different data centers, regions or cloud providers. 
 
 You can use the ``deployment.environment`` span tag in APM to identify the deployment environment with which each span is associated. 
 
