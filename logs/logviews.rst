@@ -18,7 +18,7 @@ There are two ways you can add logs data to dashboards:
 
 * Log timeline
 
-A log view chart displays a table showing log records in chronological order for the duration of the period selected in the time picker. A log timeline chart displays a histogram of logged events over time grouped by fields and values of your choice. Both types of logs charts automatically update to dashboard filters. Filter and aggregate logs in Log Observer before creating a log timeline chart.
+A log view chart displays a table showing log records in chronological order for the duration of the period selected in the time picker. A log timeline chart displays a histogram of logged events over time grouped by fields and values of your choice. Both types of logs charts automatically update to dashboard filters. Filter and aggregate logs in Log Observer before creating a log view or log timeline chart.
 
 .. note:: Log Observer Connect customers can only create logs charts in dashboards if each Log Observer Connect connection name is unique.
 
