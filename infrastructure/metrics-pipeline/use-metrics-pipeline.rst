@@ -1,7 +1,3 @@
-:orphan:
-
-.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
-
 
 .. _use-metrics-pipeline:
 
@@ -10,7 +6,14 @@ Control your metric ingestion volume with rules
 *********************************************************************
 
 .. meta::
-    :description: Learn how to create metric rules in metrics pipeline management.
+    :description: Learn how to create aggregation and dropping rules in metrics pipeline management.
+
+|hr|
+
+:strong:`Available in Enterprise Edition and Service Bureau`
+
+|hr|
+
 
 For each metric you send to Splunk Observability Cloud, you can create various aggregation and data dropping rules to control ingestion and storage volume.
 
@@ -22,6 +25,9 @@ Follow these steps to create rules for a metric.
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Settings > Metrics pipeline management`.
 #. Select :guilabel:`Create new rules`.
 #. In the search bar, enter the name of the metric for which you want to create rules.
+
+    .. note:: Metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint might appear in your search, but metrics pipeline management is not available for those metrics.
+
 #. Select :guilabel:`OK`.
 #. Add aggregation rules:
 
