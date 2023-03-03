@@ -18,7 +18,7 @@ To learn about the different metric types, see :ref:`metric-types`.
 Enable metrics collection
 ====================================================
 
-To collect Node.js metrics, see :ref:`enable_automatic_metric_collection_golang`.
+To collect Go metrics, see :ref:`enable_automatic_metric_collection_golang`.
 
 .. _golang-otel-runtime-metrics:
 
