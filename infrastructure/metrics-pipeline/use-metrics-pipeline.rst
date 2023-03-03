@@ -44,8 +44,8 @@ Follow these steps to create rules for a metric.
         * - Filter population
           - Search for dimension keys or values to narrow down the associated MTS
           - No
-        * - Select dimensions to keep
-          - Search for dimensions you want to keep. The dimensions you keep are used in the new aggregated MTS. All other dimensions are removed.
+        * - Specify dimensions: Keep/Drop
+          - Search for dimensions and select either :strong:`Keep` or :strong:`Drop`. The dimensions you keep are used in the new aggregated MTS. All dropped dimensions are removed.
           - Yes
         * - New aggregated metric name
           - Select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric.
