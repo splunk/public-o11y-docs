@@ -28,7 +28,7 @@ Save a Log Observer query
 
 To create a query, follow these steps:
 
-#. In the control bar, select the desired time increment from the time picker, then in the :guilabel:`Index` field, select :guilabel:`Observability Cloud data`. Click :guilabel:`Add Filter`, then enter a keyword field.
+#. In the control bar, select the desired time increment from the time picker, then in the :guilabel:`Index` field, select :guilabel:`Observability Cloud data`. Click :guilabel:`Add Filter`, then enter a keyword or field.
 
 #. To override the default aggregation, follow these steps:
 
