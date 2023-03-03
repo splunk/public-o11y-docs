@@ -28,7 +28,7 @@ Add logs data to a dashboard
 =============================================================================
 To add a log view or log timeline chart on a dashboard, follow these steps:
 
-1. Log into Log Observer and create a query. To learn how, see :ref:`logs-keyword` or :ref:`logs-filter-logs-by-field`.
+1. Log into Log Observer and create a query. To learn how, see :ref:`logs-queries`.
 
 2. In the :strong:`Save` menu, select :strong:`Save to dashboard`.
 
