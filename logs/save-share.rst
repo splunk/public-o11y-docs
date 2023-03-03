@@ -30,12 +30,13 @@ Save a Log Observer query
 To create a query, follow these steps:
 
 #. In the control bar, select the desired time increment from the time picker, then in the :guilabel:`Index` field, select :guilabel:`Observability Cloud data`. Click :guilabel:`Add Filter`, then enter a keyword field.
+
 #. To override the default aggregation, follow these steps:
 
-#. Using the calculation control, set the calculation type you want from the drop-down list. The default is :guilabel:`Count`.
-#. Select the field that you want to aggregate by.
-#. In the :guilabel:`Group by` text box, type the name of the field you want to group by.
-#. Click :guilabel:`Apply`.
+   #. Using the calculation control, set the calculation type you want from the drop-down list. The default is :guilabel:`Count`.
+   #. Select the field that you want to aggregate by.
+   #. In the :guilabel:`Group by` text box, type the name of the field you want to group by.
+   #. Click :guilabel:`Apply`.
 #. Click the :guilabel:`Save` menu icon, then select :guilabel:`Save Query` from the drop-down list. 
    The Save Query dialog box appears.
 #. In the :guilabel:`Name` text box, enter a name for your query.
