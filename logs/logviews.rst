@@ -42,7 +42,7 @@ Modify your logs chart from the dashboard
 =============================================================================
 You cannot directly edit a logs chart from the dashboard. For example, you cannot edit the column headings or data on your log view chart from the dashboard. You can delete a log view or log timeline chart entirely using the :strong:`More` menu. See :ref:`Chart actions <chart-actions>` to learn more.
 
-Log view and log timeline charts respond to any filter or time selection that you make on the dashboard. For example, when you adjust the :strong:`Time` field in the dashboard global control bar, your logs chart updates in unison with all other charts on the dashboard. 
+Log view and log timeline charts respond to any filter or time selection that you make on the dashboard. For example, when you adjust the :strong:`Time` field in the dashboard global control bar, logs charts update in unison with all other charts on the dashboard. 
 
 You can rearrange the columns in your logs chart by dragging and dropping column headers to a preferred order. You can sort rows in your logs chart by selecting the column header that you want to sort by.
 
@@ -51,7 +51,7 @@ You can rearrange the columns in your logs chart by dragging and dropping column
 
 Chart actions
 =============================================================================
-You can take six actions on your logs chart from its dashboard. Select the :strong:`More` menu on the log view, then select one of the following options:
+You can take six actions on your logs chart from its dashboard. Select the :strong:`Chart` menu on your logs chart, then select one of the following options:
 
 * View in Log Observer
 
@@ -69,17 +69,17 @@ You can take six actions on your logs chart from its dashboard. Select the :stro
 
 You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align log views with metrics charts on the same dashboard <field-aliasing>` to learn more.
 
-Select :strong:`Copy` if you want to paste your log view data elsewhere for further examination.
+Select :strong:`Copy` if you want to paste your logs chart elsewhere for further examination.
 
-Select :strong:`Info` to see which user added and last updated the log view.
+Select :strong:`Info` to see which user added and last updated the logs chart.
 
-Select :strong:`Download chart as image` to download your log view as a PNG file.
+Select :strong:`Download chart as image` to download your logs chart as a PNG file.
 
-Select :strong:`Troubleshoot from this Time Window (APM)` to explore related data in Splunk APM. (This option only exists if APM contains data related to the logs chart.)
+Select :strong:`Troubleshoot from this Time Window (APM)` to explore related data in Splunk APM. (This option only exists if APM contains data related to data in the logs chart.)
 
-Select :strong:`Troubleshoot from this Time Window (RUM)` to explore related data in Splunk RUM. (This option only exists if RUM contains data related to the logs chart.)
+Select :strong:`Troubleshoot from this Time Window (RUM)` to explore related data in Splunk RUM. (This option only exists if RUM contains data related to data in the logs chart.)
 
-Select :strong:`Delete` to remove your log view from the dashboard. Deleting it from the dashboard does not impact the query you used to create your log view in Log Observer.
+Select :strong:`Delete` to remove your logs chart from the dashboard. Deleting it from the dashboard does not impact the query you used to create your logs chart in Log Observer.
 
 .. _field-aliasing:
 
