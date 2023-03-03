@@ -11,8 +11,6 @@ The Splunk Distribution of OpenTelemetry JS collects runtime and custom metrics.
 
 To learn about the different metric types, see :ref:`metric-types`.
 
-.. note:: Runtime and trace metrics collection is an experimental feature subject to future changes.
-
 .. _enable-nodejs-metrics:
 
 Activate metrics collection

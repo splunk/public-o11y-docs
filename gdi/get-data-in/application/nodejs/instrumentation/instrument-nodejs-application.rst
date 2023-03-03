@@ -80,6 +80,8 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
 
          $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
 
+#. (Optional) Activate metric collection. See :ref:`enable_automatic_metric_collection_nodejs`.
+
 #. To run your Node application, enter the following command:
 
    .. code-block:: bash
