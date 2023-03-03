@@ -106,9 +106,13 @@ The following settings control trace exporters and their endpoints:
    * - Environment variable
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - The traces exporter to use. The default value is ``otlp``. To select the Jaeger exporter, use ``jaeger-thrift-splunk``.
+     - The traces exporter to use. The default value is ``otlp``. Acceptable values are ``otlp``, ``jaeger-thrift-splunk``, and ``none``. Setting ``none`` deactivates trace exports.
    * - ``OTEL_METRICS_EXPORTER``
-     - Comma-separated list of metrics exporter to use. The default value is ``otlp``.
+     - Comma-separated list of metrics exporter to use. The default value is ``none``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates metric exports.
+   * - ``OTEL_METRIC_EXPORT_INTERVAL``
+     - Interval, in milliseconds, between the start of two export attempts. The default value is ``60000``.
+   * - ``OTEL_METRIC_EXPORT_TIMEOUT``
+     - Maximum allowed time to export data, in milliseconds. The default value is ``30000``.
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
      - The OTLP endpoint. The default value is ``http://localhost:4317``.
    * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
