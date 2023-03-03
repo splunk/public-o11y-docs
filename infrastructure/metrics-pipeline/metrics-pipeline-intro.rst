@@ -1,12 +1,18 @@
-:orphan:
-
-.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
 
 .. _metrics-pipeline-intro:
 
 ******************************************************
 Introduction to metrics pipeline management
 ******************************************************
+
+.. meta::
+    :description: Introduction to metrics pipeline management in Splunk Infrastructure Monitoring
+
+|hr|
+
+:strong:`Available in Enterprise Edition and Service Bureau`
+
+|hr|
 
 .. meta::
     :description: Introduction to metrics pipeline management in Splunk Observability Cloud.
@@ -113,3 +119,5 @@ Create your first metric rules
 ==========================================
 
 To start using metrics pipeline management, see :ref:`use-metrics-pipeline`.
+
+.. note:: Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.
