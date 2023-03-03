@@ -61,6 +61,8 @@ You can take six actions on your logs chart from its dashboard. Select the :stro
 
 * Download chart as image
 
+* Troubleshoot from this Time Window (APM)
+
 * Troubleshoot from this Time Window (RUM)
 
 * Delete
@@ -73,7 +75,9 @@ Select :strong:`Info` to see which user added and last updated the log view.
 
 Select :strong:`Download chart as image` to download your log view as a PNG file.
 
-Select :strong:`Troubleshoot from this Time Window (RUM)` to explore related data in Splunk RUM.
+Select :strong:`Troubleshoot from this Time Window (APM)` to explore related data in Splunk APM. (This option only exists if APM contains data related to the logs chart.)
+
+Select :strong:`Troubleshoot from this Time Window (RUM)` to explore related data in Splunk RUM. (This option only exists if RUM contains data related to the logs chart.)
 
 Select :strong:`Delete` to remove your log view from the dashboard. Deleting it from the dashboard does not impact the query you used to create your log view in Log Observer.
 
