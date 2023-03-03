@@ -10,7 +10,7 @@ Save and share Log Observer queries
 .. meta::
   :description: Collaborate with team members by sharing Log Observer or Log Observer Connect queries. Saved queries include filters, aggregations, and search-time rules.
 
-.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can monitor systems with Live Tail. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can save and share Log Observer queries. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 
 After you create useful queries in Log Observer, you can save them and share them with team members. You can only save or share queries on the :guilabel:`Observability Cloud data` index. A saved query is made up of a filter and any aggregations or search-time rules you applied during the search. You can only save a query if you have created a filter. 
 
