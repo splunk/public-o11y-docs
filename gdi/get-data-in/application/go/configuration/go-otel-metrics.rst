@@ -25,6 +25,8 @@ To collect Go metrics, see :ref:`enable_automatic_metric_collection_golang`.
 Runtime metrics
 ================================================
 
+.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
+
 The following runtime metrics are automatically collected and exported:
 
 .. list-table:: 
@@ -35,3 +37,45 @@ The following runtime metrics are automatically collected and exported:
    * - Metric
      - Type
      - Description
+   * - ``runtime.go.cgo.calls``
+     - Gauge
+     - Number of cgo calls made by the current process.
+   * - ``runtime.go.gc.count``
+     - Cumulative counter
+     - Number of completed garbage collection cycles
+   * - ``runtime.go.gc.pause_ns``
+     - Cumulative counter (histogram)
+     - Amount of nanoseconds in GC stop-the-world pauses
+   * - ``runtime.go.gc.pause_total_ns``
+     - Cumulative counter
+     - Cumulative nanoseconds in GC stop-the-world pauses since the program started
+   * - ``runtime.go.goroutines``
+     - Gauge
+     - Number of goroutines that currently exist
+   * - ``runtime.go.lookups``
+     - Cumulative counter
+     - Number of pointer lookups performed by the runtime
+   * - ``runtime.go.mem.heap_alloc``
+     - Gauge
+     - Bytes of allocated heap objects
+   * - ``runtime.go.mem.heap_idle``
+     - Gauge
+     - Bytes in idle (unused) spans
+   * - ``runtime.go.mem.heap_inuse``
+     - Gauge
+     -  Bytes in in-use spans
+   * - ``runtime.go.mem.heap_objects``
+     - Gauge
+     - Number of allocated heap objects
+   * - ``runtime.go.mem.heap_released``
+     - Gauge
+     - Bytes of idle spans whose physical memory has been returned to the OS
+   * - ``runtime.go.mem.heap_sys``
+     - Gauge
+     - Bytes of heap memory obtained from the OS
+   * - ``runtime.go.mem.live_objects``
+     - Gauge
+     - Number of live objects is the number of cumulative Mallocs - Frees 
+   * - ``runtime.uptime``
+     - Cumulative counter
+     -  Milliseconds since application was initialized 
