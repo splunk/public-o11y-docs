@@ -37,45 +37,45 @@ The following runtime metrics are automatically collected and exported:
    * - Metric
      - Type
      - Description
-   * - ``runtime.go.cgo.calls``
+   * - ``runtime.go.cgo.calls`` (Experimental)
      - Gauge
      - Number of cgo calls made by the current process.
-   * - ``runtime.go.gc.count``
+   * - ``runtime.go.gc.count`` (Experimental)
      - Cumulative counter
      - Number of completed garbage collection cycles
-   * - ``runtime.go.gc.pause_ns``
+   * - ``runtime.go.gc.pause_ns`` (Experimental)
      - Cumulative counter (histogram)
      - Amount of nanoseconds in GC stop-the-world pauses
-   * - ``runtime.go.gc.pause_total_ns``
+   * - ``runtime.go.gc.pause_total_ns`` (Experimental)
      - Cumulative counter
      - Cumulative nanoseconds in GC stop-the-world pauses since the program started
-   * - ``runtime.go.goroutines``
+   * - ``runtime.go.goroutines`` (Experimental)
      - Gauge
      - Number of goroutines that currently exist
-   * - ``runtime.go.lookups``
+   * - ``runtime.go.lookups`` (Experimental)
      - Cumulative counter
      - Number of pointer lookups performed by the runtime
-   * - ``runtime.go.mem.heap_alloc``
+   * - ``runtime.go.mem.heap_alloc`` (Experimental)
      - Gauge
      - Bytes of allocated heap objects
-   * - ``runtime.go.mem.heap_idle``
+   * - ``runtime.go.mem.heap_idle`` (Experimental)
      - Gauge
      - Bytes in idle (unused) spans
-   * - ``runtime.go.mem.heap_inuse``
+   * - ``runtime.go.mem.heap_inuse`` (Experimental)
      - Gauge
      -  Bytes in in-use spans
-   * - ``runtime.go.mem.heap_objects``
+   * - ``runtime.go.mem.heap_objects`` (Experimental)
      - Gauge
      - Number of allocated heap objects
-   * - ``runtime.go.mem.heap_released``
+   * - ``runtime.go.mem.heap_released`` (Experimental)
      - Gauge
      - Bytes of idle spans whose physical memory has been returned to the OS
-   * - ``runtime.go.mem.heap_sys``
+   * - ``runtime.go.mem.heap_sys`` (Experimental)
      - Gauge
      - Bytes of heap memory obtained from the OS
-   * - ``runtime.go.mem.live_objects``
+   * - ``runtime.go.mem.live_objects`` (Experimental)
      - Gauge
      - Number of live objects is the number of cumulative Mallocs - Frees 
-   * - ``runtime.uptime``
+   * - ``runtime.uptime`` (Experimental)
      - Cumulative counter
      -  Milliseconds since application was initialized 
