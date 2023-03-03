@@ -221,6 +221,25 @@ If your Java Virtual Machine does not support Java Flight Recording (JFR), the p
 
 To use the profiler, upgrade your JVM version to 8u262 and higher. See :ref:`java-otel-requirements`.
 
+.. _access-denied-java-error:
+
+Access denied error
+--------------------------------------------------
+
+If your Java runtime has Java Security Manager (JSM) activated, the following error might appear:
+
+.. code-block:: bash
+
+   java.security.AccessControlException: access denied ("java.util.PropertyPermission" "otel.javaagent.debug" "read")
+
+To fix this, deactivate JSM or add the following block to the JSM policy file:
+
+.. code-block:: java 
+
+   grant codeBase "file:<path to splunk-otel-java.jar>" {
+      permission java.security.AllPermission;
+   };
+
 AlwaysOn Profiling data and logs don't appear in Observability Cloud
 --------------------------------------------------------------------
 
