@@ -44,7 +44,7 @@ You cannot directly edit a logs chart from the dashboard. For example, you canno
 
 Log view and log timeline charts respond to any filter or time selection that you make on the dashboard. For example, when you adjust the :strong:`Time` field in the dashboard global control bar, logs charts update in unison with all other charts on the dashboard. 
 
-You can rearrange the columns in your logs chart by dragging and dropping column headers to a preferred order. You can sort rows in your logs chart by selecting the column header that you want to sort by.
+You can rearrange the columns in a log view by dragging and dropping column headers to a preferred order. You can sort rows in your log view by selecting the column header that you want to sort by.
 
 
 .. _chart-actions:
