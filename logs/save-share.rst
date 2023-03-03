@@ -10,8 +10,9 @@ Save and share Log Observer queries
 .. meta::
   :description: Collaborate with team members by sharing Log Observer or Log Observer Connect queries. Saved queries include filters, aggregations, and search-time rules.
 
-After you create useful queries in Log Observer or Log Observer Connect, you can save them and share them
-with team members. A saved query is made up of a filter and any aggregations or search-time rules you applied during the search. You can only save a query if you have created a filter. 
+.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can monitor systems with Live Tail. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
+
+After you create useful queries in Log Observer, you can save them and share them with team members. You can only save or share queries on the :guilabel:`Observability Cloud data` index. A saved query is made up of a filter and any aggregations or search-time rules you applied during the search. You can only save a query if you have created a filter. 
 
 To learn how to create filters, see :ref:`logs-keyword`.
 Log Observer Connect has no default aggregation. Log Observer defaults to All (*) logs grouped by Severity.
@@ -28,15 +29,14 @@ Save a Log Observer query
 
 To create a query, follow these steps:
 
-#. In the control bar, click :guilabel:`Add Filter`, then enter a keyword.
+#. In the control bar, select the desired time increment from the time picker, then in the :guilabel:`Index` field, select :guilabel:`Observability Cloud data`. Click :guilabel:`Add Filter`, then enter a keyword field.
 #. To override the default aggregation, follow these steps:
 
-   #. Using the calculation control, set the calculation type you want from the drop-down list. The default is :guilabel:`Count`.
-   #. Select the field that you want to aggregate by.
-   #. In the :guilabel:`Group by` text box, type the name of the field you want to group by.
-   #. Click :guilabel:`Apply`.
-   
-#. Click the :guilabel:`More` menu icon, then select :guilabel:`Save Query` from the drop-down list. 
+#. Using the calculation control, set the calculation type you want from the drop-down list. The default is :guilabel:`Count`.
+#. Select the field that you want to aggregate by.
+#. In the :guilabel:`Group by` text box, type the name of the field you want to group by.
+#. Click :guilabel:`Apply`.
+#. Click the :guilabel:`Save` menu icon, then select :guilabel:`Save Query` from the drop-down list. 
    The Save Query dialog box appears.
 #. In the :guilabel:`Name` text box, enter a name for your query.
 #. Optionally, you can describe the query in the :guilabel:`Description` text box.
