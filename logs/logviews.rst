@@ -14,13 +14,13 @@ You can add logs data to your Observability Cloud dashboards without turning you
 
 There are two ways you can add logs data to dashboards:
 
-* Log views
+* Log view
 
 * Log timeline
 
 A log view chart displays a table showing log records in chronological order for the duration of the period selected in the time picker. A log timeline chart displays a histogram of logged events over time grouped by fields and values of your choice. Both types of logs charts automatically update to dashboard filters. Filter and aggregate logs in Log Observer before creating a log timeline chart.
 
-.. note:: Log Observer Connect customers can only create log views in dashboards if each Log Observer Connect connection name is unique.
+.. note:: Log Observer Connect customers can only create logs charts in dashboards if each Log Observer Connect connection name is unique.
 
 .. _create-logviews-chart:
 
@@ -30,7 +30,7 @@ To add a log view or log timeline chart on a dashboard, follow these steps:
 
 1. Log into Log Observer and create a query. To learn how, see :ref:`logs-keyword` or :ref:`logs-filter-logs-by-field`.
 
-2. In the :strong:`More` menu, select :strong:`Save to dashboard`.
+2. In the :strong:`Save` menu, select :strong:`Save to dashboard`.
 
 3. Give your log view or log timeline chart a name and optionally a description, then select a dashboard.
 
@@ -38,7 +38,7 @@ To add a log view or log timeline chart on a dashboard, follow these steps:
 
 You can now see your new logs chart along with all other charts on the same dashboard.  
 
-Modify your log view from the dashboard
+Modify your logs chart from the dashboard
 =============================================================================
 You cannot directly edit a logs chart from the dashboard. For example, you cannot edit the column headings or data on your log view chart from the dashboard. You can delete a log view or log timeline chart entirely using the :strong:`More` menu. See :ref:`Chart actions <chart-actions>` to learn more.
 
