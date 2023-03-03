@@ -14,9 +14,10 @@ Users are assigned to roles. A role contains a set of capabilities. Capabilities
 
 By default, Splunk Observability Cloud comes with the following roles predefined:
 
-* admin -- this role has the most capabilities assigned to it.
-* power -- this role can edit all shared objects (saved searches, etc) and alerts, tag events, and other similar tasks.
-* user -- this role can create and edit its own saved searches, run searches, edit its own preferences, create and edit event types, and other similar tasks.
+* admin: This role has the most capabilities assigned to it. An admin user has full privileges across Splunk Observability Cloud.
+* power user: This role can access all components in Splunk Observability Cloud, access a subset of settings, and create, delete, and update charts, dashboards and detectors.
+* read only: This role can access all pages that a power user can, but cannot create, edit, or delete objects, nor can they view the Settings pages.
+* usage reader: This role allows a user to view the subscription usage page only.
   
 
 
@@ -32,7 +33,7 @@ To learn more about enabling enhanced team security, see :ref:`enhanced-team-sec
     - :strong:`Admin`
     - :strong:`Team Manager` (Available with enhanced team security enabled)
     - :strong:`Team Member`
-    - :strong:`User`
+    - :strong:`Power User`
 
   * - :strong:`Create team`
     - Yes
