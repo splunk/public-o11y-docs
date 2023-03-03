@@ -24,7 +24,7 @@ To add a text note to a dashboard, you can do any of the following:
 
 -	While in the Chart Builder, choose :menuselection:`Text Note` as your chart type.
 
-A text or markdown editor opens, which shows some tips on creating markdown.
+A text or Markdown editor opens, which shows some tips on creating markdown.
 
 Markdown is high-level, plain text format which is converted into HTML. You can search for resources on Markdown if you need examples of what you can do in the editor.
 
