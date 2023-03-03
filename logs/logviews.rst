@@ -85,7 +85,7 @@ Select :strong:`Delete` to remove your logs chart from the dashboard. Deleting i
 
 Align logs charts with metrics charts on the same dashboard
 =============================================================================
-To maneuver seamlessly on your dashboard, it is important that logs fields and corresponding metrics fields use the same field names. You can ensure that field names match by aliasing logs fields when field names do not align.
+To maneuver seamlessly on your dashboard, logs fields and corresponding metrics fields should use the same field names. You can ensure that field names match by aliasing logs fields when field names do not align.
 
 To align logs data with metrics data, follow these steps:
 
