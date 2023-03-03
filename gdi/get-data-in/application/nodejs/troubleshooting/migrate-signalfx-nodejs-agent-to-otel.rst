@@ -195,7 +195,7 @@ Considerations for migrating to Splunk Distribution of OpenTelemetry JS
 The following limitations apply when migrating from the SignalFx Tracing Library for Node.js:
 
 - The set of Node.js versions that Splunk Distribution of OpenTelemetry JS supports is different from the set that SignalFx Tracing Library supports. See :ref:``nodejs-otel-requirements``.
-- The default flush interval, which defines how frequently captured telemetry data is sent to the backend, is now 500 milliseconds instead of 2 seconds, and can't be modified.
+- The default flush interval, which defines how frequently captured telemetry data is sent to the back end, is now 500 milliseconds instead of 2 seconds, and can't be modified.
 - Autoinstrumentation is not available for the following libraries:
    - ``AdonisJS``
    - ``amqp10``

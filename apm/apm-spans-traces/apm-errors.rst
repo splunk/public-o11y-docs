@@ -9,7 +9,7 @@ Analyze error spans in Splunk APM
 .. meta::
   :description: Learn about types of errors in Splunk APM. 
 
-With Splunk APM's error detection, you can isolate specific causes of errors in your system and applications.
+With Splunk APM error detection, you can isolate specific causes of errors in your system and applications.
 
 Use these sections to answer the following questions you might have about error detection in Splunk APM:
 
@@ -135,7 +135,7 @@ Example use case: Alert on the rate of ``401`` errors for a service
 For example, if Kai wanted to alert on the rate of ``401`` errors returned by a given service, they would do the following:
 
 1. Index ``http.status_code``. See :ref:`apm-index-span-tags`.
-2. Create a custom Monitoring MetricSet on ``http.status_code`` for the service’s endpoints to get a timeseries for each status code. See :ref:`cmms`.
+2. Create a custom Monitoring MetricSet on ``http.status_code`` for the service’s endpoints to get a time series for each status code. See :ref:`cmms`.
 3. Set up an alert on the rate of ``401`` errors as compared to all requests. See :ref:`apm-alerts`.
 
 .. _5xx-error-logic:

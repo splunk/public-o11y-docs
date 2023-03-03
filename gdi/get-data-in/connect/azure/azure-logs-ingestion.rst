@@ -98,7 +98,7 @@ In the :guilabel:`Function App Settings` section, enter the following details:
    * - Splunk HEC Endpoint
      - ``https://ingest.<realm>.signalfx.com/v1/log`` where ``<realm>`` is your Observability Cloud realm. See :ref:`splunk-hec-exporter` for more information.
    * - Splunk HEC Token
-     - Your Observabily Cloud ingest token. See :ref:`admin-org-tokens`.
+     - Your Observability Cloud ingest token. See :ref:`admin-org-tokens`.
 
 .. include:: /_includes/realm-note.rst
 
