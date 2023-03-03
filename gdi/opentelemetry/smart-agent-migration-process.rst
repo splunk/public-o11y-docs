@@ -76,7 +76,7 @@ If any of the charts indicate a value above zero, then data is being dropped and
 Validate using zPages
 ---------------------------------------------
 
-To ensure that the Collector is configured correctly, enable the zPages extension.
+To ensure that the Collector is configured correctly, activate the zPages extension.
 
 This is exposed locally on port 55679 by default and can be used to give an overview of the following:
 

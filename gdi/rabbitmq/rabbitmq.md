@@ -5,11 +5,11 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the RabbitMQ monitor type using the Smart Agent Receiver.
-
 Use this monitor to keep track of an instance of RabbitMQ by using the RabbitMQ Python Plugin. This monitor uses the RabbitMQ Management HTTP API to poll for statistics on a RabbitMQ server, then reports them to the agent.
 
-This integration is available for Kubernetes, Windows, and Linux.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 
@@ -22,7 +22,7 @@ This monitor requires RabbitMQ 3.0 and higher.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
@@ -30,24 +30,16 @@ This monitor requires RabbitMQ 3.0 and higher.
 ```{include} /_includes/configuration.md
 ```
 
-```{note}
-Provide a RabbitMQ monitor entry in your Collector or Smart Agent (deprecated) configuration. Use the appropriate form for your agent type.
-```
-
 ### Splunk Distribution of OpenTelemetry Collector
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your configuration:
 
 ```yaml
 receivers:
   smartagent/rabbitmq:
     type: collectd/rabbitmq
     ...  # Additional config
-```
 
-To complete the monitor activation, you must also include the `smartagent/rabbitmq` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
-
-```yaml
 service:
   pipelines:
     metrics:
@@ -56,7 +48,7 @@ service:
 
 ### Smart Agent
 
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
+To activate this monitor in the Smart Agent (deprecated), add the following to your agent configuration:
 
 ```yaml
 monitors:  # All monitor config goes under this key
@@ -85,7 +77,7 @@ The following table shows the configuration options for the RabbitMQ monitor:
 | `verbosityLevel` | No | `string` | Verbosity level. |
 | `username` | Yes | `string` | API username of the RabbitMQ instance. |
 | `password` | Yes | `string` | API password of the RabbitMQ instance. |
-| `useHTTPS` | No | `bool` | Whether to enable HTTPS. The default value is`false`. |
+| `useHTTPS` | No | `bool` | Whether to activate HTTPS. The default value is`false`. |
 | `sslCACertFile` | No | `string` | Path to the SSL or TLS certificate of the root certificate authority implicitly trusted by this monitor. |
 | `sslCertFile` | No | `string` | Path to this monitor's own SSL or TLS certificate. |
 | `sslKeyFile` | No | `string` | Path to this monitor's private SSL or TLS key file. |
@@ -93,7 +85,7 @@ The following table shows the configuration options for the RabbitMQ monitor:
 | `sslVerify` | No | `bool` | Whether the monitor verifies the RabbitMQ Management plugin SSL or TLS certificate. The default value is`false`. |
 
 ```{note}
-You must enable each of the five `collect*` options to gather metrics pertaining to those facets of a RabbitMQ instance.
+You must activate each of the five `collect*` options to gather metrics pertaining to those facets of a RabbitMQ instance.
 ```
 
 ## Metrics

@@ -37,7 +37,7 @@ Before you start, create a plan for how you want to set up your Observability Cl
 
 Gather all the data from your environment in Observability Cloud to achieve full-stack observability. For information about how to get data in, see :ref:`get-started-get-data-in`.
 
-As a part of getting data in, make sure to consider bringing in data in a way that enables :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Observability Cloud. When enabled, the Related Content bar displays automatically when a you select a relevant element and lets you take a data-driven investigative approach.
+As a part of getting data in, make sure to consider bringing in data in a way that allows :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Observability Cloud. When turned on, the Related Content bar displays automatically when a you select a relevant element and lets you take a data-driven investigative approach.
 
 
 .. _get-started-explore:
@@ -55,7 +55,7 @@ Once you have data coming into Observability Cloud, it's time to do some explori
 
 - Use :ref:`Log Observer <get-started-logs>` to pinpoint interesting log events and troubleshoot issues with your infrastructure and cloud services.
 
-- As described in step :ref:`get-started-gdi`, if you enabled :ref:`get-started-relatedcontent` when setting up your data integrations, you can click options in the Related Content bar to seamlessly navigate between APM, Log Observer, and Infrastructure Monitoring with your selected filters and context automatically applied to each view.
+- As described in step :ref:`get-started-gdi`, if you turned on :ref:`get-started-relatedcontent` when setting up your data integrations, you can click options in the Related Content bar to seamlessly navigate between APM, Log Observer, and Infrastructure Monitoring with your selected filters and context automatically applied to each view.
 
 - Use the :ref:`mobile app <intro-to-mobile>` to check system critical metrics in Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
 

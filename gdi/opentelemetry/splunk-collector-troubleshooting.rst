@@ -54,7 +54,7 @@ Collector is dropping data
 Data might drop for a variety of reasons, but most commonly for the following reasons:
 
 * The collector is improperly sized, resulting in the Splunk Distribution of OpenTelemetry Collector being unable to process and export the data as fast as it is received. See :ref:`otel-sizing` for sizing guidelines.
-* The exporter destination is unavailable or accepting the data too slowly. To mitigate drops, configure the ``batch`` processor. In addition, you might also need to configure the queued retry options on enabled exporters.
+* The exporter destination is unavailable or accepting the data too slowly. To mitigate drops, configure the ``batch`` processor. In addition, you might also need to configure the queued retry options on activated exporters.
 
 Collector isn't receiving data
 -------------------------------------
@@ -63,7 +63,7 @@ The collector might not receive data for the following reasons:
 
 * Network configuration issues
 * Receiver configuration issues
-* The receiver is defined in the receivers section, but not enabled in any pipelines.
+* The receiver is defined in the receivers section, but not activated in any pipelines.
 * The client configuration is incorrect
 
 Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
@@ -203,7 +203,7 @@ If an HTTP request is not successfully completed, you might see the following HT
 Log collection issues
 =========================================
 
-See the OpenTelemetry project documentation :new-page:`to enable the Collector's debug logging <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#logs>`.
+See the OpenTelemetry project documentation :new-page:`to activate the Collector's debug logging <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#logs>`.
 
 Here are some common issues related to log collection on the Collector.
 
@@ -231,15 +231,15 @@ Do the following to check the Fluentd configuration:
 
 #. Check that td-agent is running. On Linux, run ``systemctl status td-agent``. On Windows, run ``Get-Service td-agent``.
 #. If you changed the configuration, restart Fluentd. On Linux, run ``systemctl restart td-agent``. On Windows, run ``Restart-Service -Name td-agent``.
-#. Check fluentd.conf and conf.d/\*. ``@label @SPLUNK`` must be added to every source to enable log collection.
-#. Manual configuration may be required to collect logs off the source. Add configuration files to in the conf.d directory as needed.
-#. Enable debug logging in fluentd.conf (``log_level debug``), restart td-agent, and check that the source is generating logs.
+#. Check fluentd.conf and conf.d/\*. ``@label @SPLUNK`` must be added to every source to activate log collection.
+#. Manual configuration might be required to collect logs off the source. Add configuration files to in the conf.d directory as needed.
+#. Activate debug logging in fluentd.conf (``log_level debug``), restart td-agent, and check that the source is generating logs.
 
 While every attempt is made to properly configure permissions, it is possible that td-agent does not have the permission required to collect logs. Debug logging should indicate this issue.
 
 It is possible that the ``<parser>`` section configuration does not match the log events.
 
-If you see a message such as "2021-03-17 02:14:44 +0000 [debug]: #0 connect new socket", Fluentd is working as expected. You need to enable debug logging to see this message.
+If you see a message such as "2021-03-17 02:14:44 +0000 [debug]: #0 connect new socket", Fluentd is working as expected. You need to activate debug logging to see this message.
 
 Collector isn't configured properly
 ----------------------------------------
@@ -247,7 +247,7 @@ Collector isn't configured properly
 Do the following to check the Collector configuration:
 
 #. Go to ``http://localhost:55679/debug/tracez`` to check zPages for samples. You might need to configure the endpoint.
-#. Enable logging exporter.
+#. Activate logging exporter.
 #. Run ``journalctl -u splunk-otel-collector.service -f`` to collect the logs for you to review.
 #. Review :ref:`otel-splunk-collector-tshoot` if you can't find what you need in the logs.
 
@@ -269,147 +269,23 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
 Unwanted profiling logs appearing in Observability Cloud
 ------------------------------------------------------------
 
-By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a logs pipeline that uses the Splunk HEC exporter. For more information, see :ref:`profiling-intro`.
+By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a ``logs`` pipeline that uses the Splunk HEC exporter.
 
-If you don't need AlwaysOn Profiling data for a specific host or container, set the ``profiling_data_enabled`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
-
-.. code-block:: yaml
-   :emphasize-lines: 6,7
-
-   splunk_hec/noprofiling:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-      log_data_enabled: true # You can still send non-profiling log data if needed
-      profiling_data_enabled: false
+To send logs to Splunk Observability Cloud without AlwaysOn Profiling data, see :ref:`no_profiling_data`.
 
 .. _disable_log_collection:
 
-Disable log data in the Collector
+Exclude log data in the Collector
 ------------------------------------------------------------
 
-By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a logs pipeline that uses the Splunk HEC exporter.
+By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a logs pipeline that uses the Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
 
-If you need to disable log data export to Observability Cloud, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
+To avoid sending log data through the Collector to Splunk Observability Cloud, see :ref:`exclude-log-data`.
 
-.. code-block:: yaml
-   :emphasize-lines: 6
+Send logs from the Collector to Splunk Cloud Platform or Enterprise
+-----------------------------------------------------------------------
 
-   splunk_hec:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-      log_data_enabled: false
-
-To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
-
-.. note:: The ``log_data_enabled`` setting is available in the Splunk Distribution of OpenTelemetry Collector version 0.49.0 and higher.
-
-If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or ``values.yaml`` file:
-
-.. code-block:: yaml
-
-   splunkObservability:
-      # Other settings
-      logsEnabled: false
-
-.. _send_logs_to_splunk:
-
-Send logs from the Collector to Splunk Cloud or Enterprise
-------------------------------------------------------------
-
-If you're using the Collector for log collection and need to send data to Splunk Cloud or Splunk Enterprise, configure the ``splunk_hec`` exporter to use your Splunk ``endpoint`` and token. For example:
-
-.. code-block:: yaml
-
-   exporters:
-      splunk_hec:
-         # Splunk HTTP Event Collector token.
-         token: "00000000-0000-0000-0000-0000000000000"
-         # URL to a Splunk instance to send data to.
-         endpoint: "https://splunk:8088/services/collector"
-         # Optional Splunk source: https://docs.splunk.com/Splexicon:Source
-         source: "otel"
-         # Optional Splunk source type: https://docs.splunk.com/Splexicon:Sourcetype
-         sourcetype: "otel"
-         # Splunk index, optional name of the Splunk index targeted.
-         index: "metrics"
-         # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
-         max_connections: 20
-         # Whether to disable gzip compression over HTTP. Defaults to false.
-         disable_compression: false
-         # HTTP timeout when sending data. Defaults to 10s.
-         timeout: 10s
-         # Whether to skip checking the certificate of the HEC endpoint when sending data over HTTPS. Defaults to false.
-         tls:
-            insecure_skip_verify: true
-
-To send log data to Splunk Cloud or Enterprise and AlwaysOn Profiling data to Observability Cloud, configure two separate ``splunk_hec`` entries in the ``receiver`` and ``exporters`` sections of the Collector configuration file. Add both to the logs pipeline. For example:
-
-.. code-block:: yaml
-
-   receivers:
-      # Default OTLP receiver--used by Splunk platform logs
-      otlp:
-         protocols:
-            grpc:
-               endpoint: 0.0.0.0:4317
-            http:
-               endpoint: 0.0.0.0:4318
-      # OTLP receiver for AlwaysOn Profiling data
-      otlp/profiling:
-         protocols:
-            grpc:
-               # Make sure to configure your agents
-               # to use the custom port for logs when
-               # setting SPLUNK_PROFILER_LOGS_ENDPOINT
-               endpoint: 0.0.0.0:4319
-
-   exporters:
-      # Export logs to Splunk platform
-      splunk_hec/platform:
-         token: "<splunk_token>"
-         endpoint: "https://splunk:8088/services/collector"
-         source: "otel"
-         sourcetype: "otel"
-         index: "main"
-         max_connections: 20
-         disable_compression: false
-         timeout: 10s
-         tls:
-            insecure_skip_verify: true
-      splunk_hec/profiling:
-         token: "<${SPLUNK_HEC_TOKEN}>"
-         endpoint: "${SPLUNK_HEC_URL}"
-         source: "otel"
-         sourcetype: "otel"
-         log_data_enabled: false
-
-   # Other settings
-
-   service:
-      pipelines:
-
-         # Traces and metrics pipelines
-
-         # Logs pipeline for Splunk platform
-         logs/platform:
-            receivers: [fluentforward, otlp]
-            processors:
-            - memory_limiter
-            - batch
-            - resourcedetection
-            exporters: [splunk_hec/platform]
-         # Logs pipeline for AlwaysOn Profiling
-         logs/profiling:
-            receivers: [otlp/profiling]
-            processors:
-            - memory_limiter
-            - batch
-            - resourcedetection
-            exporters: [splunk_hec/profiling]
+To send logs from the Collector to Splunk Cloud Platform or Splunk Enterprise, see :ref:`send_logs_to_splunk`.
 
 Trace collection issues
 ================================
@@ -419,7 +295,7 @@ Here are some common issues related to trace collection on the Collector.
 Test the Collector by sending synthetic data
 ------------------------------------------------------------
 
-You can test the Collector to make sure it can receive spans without instrumenting an application. By default, the Collector enables the Zipkin receiver, which is capable of receiving trace data over JSON.
+You can test the Collector to make sure it can receive spans without instrumenting an application. By default, the Collector activates the Zipkin receiver, which is capable of receiving trace data over JSON.
 
 To test the UI, you can submit a POST request or paste JSON in this directory, as shown in the following example.
 

@@ -47,7 +47,7 @@ The Collector is configured to use the default configuration file ``/etc/otel/co
    
    You do not need the ``smartagent/ecs-metadata`` metrics receiver in the default configuration file if all you want is tracing. You can take the default configuration, remove the receiver, then use the configuration in a custom configuration following the directions in :ref:`ecs-ec2-custom-config`.
 
-The configured network mode for the task is ``host``. This means that task metadata endpoint version 2 used by the ``smartagent/ecs-metadata`` receiver is not enabled by default. See :new-page:`task metadata endpoint <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-metadata-endpoint.html>` to determine if task metadata endpoint version 3 is enabled by default for your task. If this version is enabled, then add the following to the environment list in the task definition:
+The configured network mode for the task is ``host``. This means that task metadata endpoint version 2 used by the ``smartagent/ecs-metadata`` receiver is not activated by default. See :new-page:`task metadata endpoint <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-metadata-endpoint.html>` to determine if task metadata endpoint version 3 is activated by default for your task. If this version is activated, then add the following to the environment list in the task definition:
 
 .. code-block:: none
 

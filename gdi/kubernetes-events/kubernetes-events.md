@@ -22,7 +22,7 @@ This monitor type is available on Kubernetes, Linux, and Windows.
 
 ### Deploy with Helm
 
-To enable this monitor with the Helm chart, include this argument with the helm install command:
+To activate this monitor with the Helm chart, include this argument with the helm install command:
 
 ```
 -set splunkObservability.infrastructureMonitoringEventsEnabled='true'
@@ -116,7 +116,7 @@ The **nested** `kubernetesAPI` config object has the following fields:
 | `skipVerify` | no | `bool` | Whether to skip verifying the TLS certificate from the API server.  Almost never needed. **Default** is `false` |
 | `clientCertPath` | no | `string` | The path to the TLS client certificate on the pod's filesystem, if using `tls` authentication. |
 | `clientKeyPath` | no | `string` | The path to the TLS client key on the pod's filesystem, if using `tls` authentication. |
-| `caCertPath` | no | `string` | Path to a CA certificate to use when verifying the API server's TLS certificate.  Generally this is provided by K8s alongside the service account token, which will be picked up automatically, so this should rarely be necessary to specify. |
+| `caCertPath` | no | `string` | Path to a CA certificate to use when verifying the API server TLS certificate.  Generally this is provided by K8s alongside the service account token, which will be picked up automatically, so this should rarely be necessary to specify. |
 
 The **nested** `whitelistedEvents` configuration object has the following fields:
 

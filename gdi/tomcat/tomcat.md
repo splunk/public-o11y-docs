@@ -6,9 +6,9 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/tomcat` monitor via the Smart Agent Receiver. `collectd/tomcat` monitors Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/tomcat` monitor type for the Smart Agent Receiver. `collectd/tomcat` monitors Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
 
-> _**Note:**_ You must enable JMX Remote to monitor Tomcat remotely.
+> _**Note:**_ You must activate JMX Remote to monitor Tomcat remotely.
 
 ## Benefits
 
@@ -66,7 +66,7 @@ The **nested** `mBeanDefinitions` configuration object has the following fields:
 | --- | --- | --- | --- |
 | `objectName` | no | `string` | Sets the pattern, which is used to retrieve MBeans from the MBeanServer. If more than one MBean is returned, use the `instanceFrom` option to make the identifiers unique. |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. |
-| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so called "properties", which are basically key-value-pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. Use this option to build the plugin instance from the appropriate property values. This is optional and may be repeated to generate the plugin instance from multiple property values. |
+| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so called "properties", which are basically key-value-pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. Use this option to build the plugin instance from the appropriate property values. This is optional and can be repeated to generate the plugin instance from multiple property values. |
 | `values` | no | `list of objects` (see below) | The `value` blocks map one or more attributes of an MBean to a value list in collectd. There must be at least one `value` block within each MBean block. |
 | `dimensions` | no | `list of strings` | &nbsp; |
 

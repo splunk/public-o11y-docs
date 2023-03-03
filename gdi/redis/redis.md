@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the Redis monitor type using the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the Redis monitor type for the Smart Agent Receiver. 
 
 Using the Redis monitor, you can capture the following metrics:
 
@@ -18,7 +18,11 @@ Using the Redis monitor, you can capture the following metrics:
  * Changes since last save
  * Replication delay per follower
 
-This monitor is available on Kubernetes, Windows, and Linux. It accepts endpoints and allows multiple instances.
+It accepts endpoints and allows multiple instances.
+
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Requirements
 
@@ -31,7 +35,7 @@ The monitor supports Redis 2.8 and higher.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
@@ -108,7 +112,7 @@ The following table shows the configuration options for the Redis monitor:
 | `name`            | No           | `string`                      | Name for the Redis instance. The maximum length is 64 characters. The default value is "{host}:{port}".                                       |
 | `auth`            | No           | `string`                      | Authentication password.                                                                                                                                     |
 | `sendListLengths` | No           | `list of objects (see below)` | List of keys that you want to monitor for length. To learn more, see the section **Monitor the length of Redis lists**.                                      |
-| `verbose`         | No           | `bool`                        | Flag that controls verbose logging for the plugin. If `true`, verbose logging is enabled. The default value is`false`.                                             |
+| `verbose`         | No           | `bool`                        | Flag that controls verbose logging for the plugin. If `true`, verbose logging is activated. The default value is`false`.                                             |
 
 The following table shows you the configuration options for the `sendListLengths` configuration object:
 

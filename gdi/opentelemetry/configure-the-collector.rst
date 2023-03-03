@@ -12,11 +12,14 @@ Configure the Collector
     :titlesonly:
     :hidden:
 
-    optional-configurations.rst
+    configure-the-collector-ootb.rst
+    linux-config.rst
+    kubernetes-config.rst
+    windows-config.rst
     other-configuration-sources.rst
-    configure-the-smart-agent.rst
+    data-processing.rst
 
-You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well additional components that you can configure separately.
+You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately.
 
 .. _otel-config-options:
 
@@ -26,17 +29,13 @@ You can use a variety of default configuration files to set up the Splunk Distri
     <h2>Configuration files<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-:new-page:`agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` is the starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
+See :ref:`the out-of-the-box configuration <otel-configuration-ootb>` for most environments. 
 
-.. _otel-linux-full:
+Use these configurations to change the default settings in each Collector package:
 
-.. raw:: html
-
-  <embed>
-    <h3>Linux full configuration<a name="otel-linux-full" class="headerlink" href="#otel-linux-full" title="Permalink to this headline">¶</a></h2>
-  </embed>
-
-:new-page:`full_config_linux.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/full_config_linux.yaml>` is an extended configuration. This configuration requires using :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` or a similar distribution.
+* :ref:`otel-kubernetes-config`
+* :ref:`otel-linux-config`
+* :ref:`otel-windows-config`
 
 .. _otel-config-multiple-files:
 
@@ -58,7 +57,7 @@ To define multiple config files simultaneously use:
     <h2>Configure log collection<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-:new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>` to collect logs. Fluentd is applicable to Helm or installer script installations only. Common sources including filelog, journald, and Windows Event Viewer are included in the installation. See the Fluentd configuration documentation for more information.
+Use :new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>` to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. 
 
 .. raw:: html
 
@@ -69,7 +68,7 @@ To define multiple config files simultaneously use:
 The following table describes the artifacts in the Fluentd directory:
 
 .. list-table::
-  :widths: 50 50
+  :widths: 25 75
   :header-rows: 1
 
   * - Configuration
@@ -101,12 +100,10 @@ The following is a sample configuration to collect custom logs:
 .. raw:: html
 
   <embed>
-    <h2>Additional components<a name="otel-config-additional-components" class="headerlink" href="#otel-config-additional-components" title="Permalink to this headline">¶</a></h2>
+    <h2>Additional components and configuration sources<a name="otel-config-additional-components" class="headerlink" href="#otel-config-additional-components" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-You can also configure the following components:
-
-* :ref:`Configuration sources <otel-other-configuration-sources>`
+You can also use these additional :ref:`configuration sources <otel-other-configuration-sources>`:
 
   * Environment variable (Alpha)
   * etcd (Alpha)
@@ -114,7 +111,3 @@ You can also configure the following components:
   * Vault (Alpha)
   * Zookeeper (Alpha)
 
-* :ref:`SignalFx Smart Agent components <otel-smart-agent>`
-
-  * Extension
-  * Receiver

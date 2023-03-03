@@ -7,11 +7,11 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides these integrations as the `logstash` and `logstash-tcp` monitor types via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides these integrations as the `logstash` and `logstash-tcp` monitor types using the Smart Agent Receiver.
 
 ### The `logstash` monitor
 The `logstash` monitor monitors the health and performance of Logstash deployments through
-Logstash's [Monitoring APIs](https://www.elastic.co/guide/en/logstash/current/monitoring-logstash.html).
+Logstash [Monitoring APIs](https://www.elastic.co/guide/en/logstash/current/monitoring-logstash.html).
 
 ### The `logstash-tcp` monitor
 The `logstash-tcp` monitor fetches events from the [logstash tcp output
@@ -25,7 +25,7 @@ You can only use autodiscovery when this monitor is in `client` mode.
 
 ## Installation
 
-These monitors are available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+These monitors are available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install these integrations:
 
@@ -154,7 +154,7 @@ filter {
       }
     }
   }
-  # Count the number of logins via SSH from /var/log/auth.log
+  # Count the number of logins using SSH from /var/log/auth.log
   if "auth_log" in [tags] and [message] =~ /sshd.*session opened/ {
     metrics {
       # This determines how often metric events will be sent to the agent, and

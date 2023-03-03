@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `ntp` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `ntp` monitor type for the Smart Agent Receiver.
 
 Use the NTP receiver to retrieve clock offset from an NTP server. The receiver enforces a minimum interval of 30 minutes.
 

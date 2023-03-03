@@ -50,11 +50,11 @@ Key Concepts
 
 Zero Config Auto Instrumentation is available on Kubernetes and Linux, and uses the Splunk OTel Collector and OTel Java agent. 
 
-When you enable Zero Config, the Splunk OTel Java agent automatically instruments all Java applications running in the target environment. 
+When you activate Zero Config, the Splunk OTel Java agent automatically instruments all Java applications running in the target environment. 
 
 On **Linux**, the target environment is the entire Linux host, so the Java agent instruments every Java application on the host. 
 
-On **Kubernetes**, the target environment is the Deployment or Pod where you enabled instrumentation. The Java agent instruments every Java application within the pod or deployment.
+On **Kubernetes**, the target environment is the Deployment or Pod where you activated instrumentation. The Java agent instruments every Java application within the pod or deployment.
 
 In both cases you must restart the applications to start instrumentation.
 

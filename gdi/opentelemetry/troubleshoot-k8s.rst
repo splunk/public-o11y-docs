@@ -27,7 +27,7 @@ First, run ``kubectl get nodes -o wide`` to determine what version of Kubernetes
       NAME         STATUS   VERSION   CONTAINER-RUNTIME
       node-1       Ready    v1.19.6   containerd://1.4.1
 
-Next, verify that you are using a container runtime compatible with your Kubernetes version. Refer to the following vender documentation to see the container runtime compatibility:
+Next, verify that you are using a container runtime compatible with your Kubernetes version. Refer to the following vendor documentation to see the container runtime compatibility:
 
    - :new-page:`containerd <https://containerd.io/releases/#kubernetes-support>`
    - :new-page:`CRI-O <https://github.com/cri-o/cri-o#compatibility-matrix-cri-o--kubernetes>`
