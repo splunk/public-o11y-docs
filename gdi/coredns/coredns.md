@@ -6,11 +6,11 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `coredns` monitor via the Smart Agent Receiver. This monitor scrapes Prometheus metrics exposed by CoreDNS. The default port for these metrics are exposed on port 9153, at the `/metrics` path.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `coredns` monitor type for the Smart Agent Receiver. This monitor scrapes Prometheus metrics exposed by CoreDNS. The default port for these metrics are exposed on port 9153, at the `/metrics` path.
 
 ##  Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -69,7 +69,7 @@ The following table shows the configuration options for this monitor:
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
 | `useHTTPS` | no | `bool` | If true, the agent connects to the server using HTTPS instead of plain HTTP. (**default:** `false`) |
 | `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
-| `skipVerify` | no | `bool` | If `useHTTPS` is `true` and this option is also `true`, the exporter's TLS cert is not verified. (**default:** `false`) |
+| `skipVerify` | no | `bool` | If `useHTTPS` is `true` and this option is also `true`, the exporter TLS cert is not verified. (**default:** `false`) |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to false. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use for TLS required connections |

@@ -480,6 +480,47 @@ The following table shows customizable arguments for this detector:
      - Dimensions you want to add to the detector
      - None
    
+
+.. _autodetect-redis:
+
+Redis
+---------------------------------------------------  
+
+Redis Server - CPU Continuously near limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Description: Alerts when Redis CPU usage exceeds the threshold for 80% of the last 10 minutes. The alert clears when Redis CPU usage drops below the clear threshold for 100% of the last 10 minutes.
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/redis.flow#L6>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Trigger threshold for CPU usage percentage
+     - ``90``
+
+   * - Sensitivity
+     - Sensitivity for alerting 
+     - ``80% of 10m``
+
+   * - Clear threshold
+     - Threshold to clear alerts for CPU usage percentage 
+     - ``80``
+
+   * - Clear sensitivity
+     - Sensitivity for clearing alerts
+     - ``100% of 10m``
+
+   * - Filters
+     - Dimensions you want to add to the detector
+     - None
+
 .. _autodetect-splunk:
 
 Splunk operational
@@ -488,7 +529,7 @@ Splunk operational
 Splunk Operational - Container usage is expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Description: alerts when the container usage percentage is higher than the system limit threshold.
+- Description: Alerts when the container usage percentage is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L185>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
@@ -502,7 +543,7 @@ The following table shows customizable arguments for this detector:
      - Default value
    
    * - Trigger threshold
-     - Trigger threshold for the containers usage percentage
+     - Trigger threshold for containers usage percentage
      - ``95``
 
    * - Sensitivity
@@ -513,7 +554,7 @@ The following table shows customizable arguments for this detector:
      - Threshold to clear alerts for containers usage percentage 
      - ``90``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``100% of 30m``
 
@@ -545,7 +586,7 @@ The following table shows customizable arguments for this detector:
      - Sensitivity for alerting 
      - ``80% of 5m``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``80% of 5m``
 
@@ -626,7 +667,7 @@ The following table shows customizable arguments for this detector:
      - Threshold to clear alerts for host usage percentage
      - ``90``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``100% of 30m``
 
@@ -670,7 +711,7 @@ The following table shows customizable arguments for this detector:
      - Threshold to clear alerts for custom MTS usage percentage
      - ``90``
 
-   * - Clear Sensitivity
+   * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``100% of 30m``
 

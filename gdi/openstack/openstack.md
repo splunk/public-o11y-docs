@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the OpenStack monitor type using the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the OpenStack monitor type for the Smart Agent Receiver.
 
 Use this monitor to gather metrics from OpenStack instances using the OpenStack Python plugin.
 
@@ -15,7 +15,9 @@ This monitor covers the following OpenStack components:
 * Cinder (Block Storage)
 * Neutron (Network)
 
-This integration is available for Kubernetes, Linux, and Windows.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 
@@ -24,7 +26,7 @@ This integration is available for Kubernetes, Linux, and Windows.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration

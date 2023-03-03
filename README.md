@@ -2,9 +2,9 @@
 
 This repository contains the code and documentation for https://docs.splunk.com/Observability
 
-A private mirror exists where Splunk's technical writers edit documentation for new and updated features. The public and the private repositories update each other automatically using [repo-sync](https://github.com/repo-sync/repo-sync).
+A private mirror exists where the Splunk technical writers edit documentation for new and updated features. The public and the private repositories update each other automatically using [repo-sync](https://github.com/repo-sync/repo-sync).
 
-## License
+## License 
 
 This Splunk repository is subject to the Splunk Websites Terms and Conditions of Use ("Terms")  
 [https://www.splunk.com/en_us/legal/terms/terms-of-use.html](https://www.splunk.com/en_us/legal/terms/terms-of-use.html) 
@@ -14,7 +14,7 @@ You can contribute new documentation and edits to the existing documentation.
 
 ## Contribute to the documentation
 
-Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
+Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for our contribution guidelines.
 
 ## Requirements
 
@@ -26,8 +26,10 @@ To build the documentation on your machine use the Docker container in this repo
 
 ### Install the docs on your machine
 
-Follow these steps to create a fork of the `public-o11y-docs` repo and install it on your local machine:
+Follow these steps to create a fork of this repo and install it on your machine:
 
 1. Clone this repository using `git clone`.
 2. Navigate to the cloned repository in your file system.
 3. Change the permissions of `start.sh` by entering `chmod +x start.sh` in the terminal.
+
+

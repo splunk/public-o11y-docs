@@ -54,9 +54,9 @@ Add metric descriptions
 
 Descriptions can help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. If a metric has a description, it is displayed next to the metric in the search results.
 
-If a metric has a description, you can find it underneathe the metric title. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions (for example, from one of our integrations), this provided description is always shown and is not editable.
+If a metric has a description, you can find it underneath the metric title. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions (for example, from one of our integrations), this provided description is always shown and is not editable.
 
-Descriptions are lmited to 1,024 characters. Although the descriptions are included in the search result, the text of metric descriptions is not analyzed by the search.
+Descriptions are limited to 1,024 characters. Although the descriptions are included in the search result, the text of metric descriptions is not analyzed by the search.
 
 
 .. _metric-tooltip:

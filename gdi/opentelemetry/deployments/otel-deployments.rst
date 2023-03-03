@@ -22,7 +22,6 @@ Collector deployment tools and options
     deployments-windows-puppet.rst
     deployments-salt.rst
 
-
 Use the following deployment and configuration management tools to automate the installation of Collector:
 
 * :ref:`deployments-ecs-ec2`

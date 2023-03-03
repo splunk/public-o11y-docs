@@ -41,10 +41,10 @@ The SignalFx Instrumentation supports the following logging libraries:
 
 .. _dotnet-enable-log-correlation:
 
-Enable log correlation
+Activate log correlation
 ============================
 
-To enable log correlation, set the ``SIGNALFX_LOGS_INJECTION`` environment variable to ``true`` before running your instrumented application. 
+To activate log correlation, set the ``SIGNALFX_LOGS_INJECTION`` environment variable to ``true`` before running your instrumented application. 
 
 .. _dotnet-include-trace-data:
 
@@ -158,7 +158,7 @@ See :ref:`logs-processors` for more information on how to define log transformat
 ILogger
 -------------------------
 
-When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, enable the ``IncludeScopes`` option and use the ``json`` formatter. For example:
+When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, activate the ``IncludeScopes`` option and use the ``json`` formatter. For example:
 
 .. code-block:: csharp
 

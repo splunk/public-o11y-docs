@@ -28,9 +28,9 @@ See the following pages for more information about using :ref:`navigators <use-n
   - :ref:`infrastructure-azure`
 
 * Containers
-  
-  - :ref:`infrastructure-k8s`
+
   - :ref:`infrastructure-k8s-nav`
+  - :ref:`infrastructure-k8s`
 
 * My Data Center
   

@@ -23,7 +23,7 @@ Generic SAML SSO integrations
 Observability Cloud provides integrations for specific SAML SSO providers. If your provider isn't in the list of supported integrations, your organization administrator can request a generic integration from Observability Cloud. You can use this integration to test and develop a SAML SSO provider. Using this integration, administrators can direct Observability Cloud
 to use any publicly-available SSO endpoint to authenticate users.
 
-To enable the generic SAML SSO integration, contact :ref:`support`.
+To permit the generic SAML SSO integration, contact :ref:`support`.
 
 Be prepared to provide the domain for the ID/email address that your users provide when they log in. The domain is the part of the user ID/email address string that follows the ``@`` sign.
 
@@ -67,7 +67,7 @@ The SSO provider must put the assertion signature in the assertion message, not 
 
 :strong:`RelayState`
 
-Observability Cloud sends a dynamic RelayState, so the SSO provider must accept and pass back the dynamic RelayState.
+Observability Cloud sends a dynamic RelayState, so the SSO provider must accept and pass back the dynamic RelayState. RelayState is part of SAML specifications. In the Splunk Observability Cloud system it is part of message context in the AuthN request that is sent to the identity provider. The message context also contains a token that can be verified on the service provider side later. The Relay State is set by the Splunk Observability Cloud system and sent with the request to the IDP. The IDP is expected to send the relay state back to the service provider with the same value that was received after a successful authentication on the IDP side. 
 
 .. _saml-install:
 

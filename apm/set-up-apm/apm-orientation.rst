@@ -70,7 +70,7 @@ Under the Span Performance tab, you can view a summary of span duration from eac
 
 Full-fidelity tracing, in which APM receives all traces from each of your services rather than sampling them, helps you find and solve specific problems arising in individual traces. With full-fidelity tracing, you never need to wonder whether a trace representative of a particular issue was captured by a sample. 
 
-In addition to searching individual traces, you can get an aggregate view of your traces to see where problems are occuring across your systems using tools such as Tag Spotlight. 
+In addition to searching individual traces, you can get an aggregate view of your traces to see where problems are occurring across your systems using tools such as Tag Spotlight. 
 
 .. _apm-tag-spotlight-overview:
 

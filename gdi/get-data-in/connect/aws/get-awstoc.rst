@@ -16,7 +16,8 @@ Connect to AWS and send data to Splunk Observability Cloud
   Collect logs from AWS <aws-logs>
   CloudFormation templates <aws-cloudformation>
   Next steps <aws-post-install>
-  Troubleshooting <aws-troubleshooting>
+  Troubleshoot your AWS connection <aws-troubleshooting>
+  Troubleshoot logs <aws-ts-logs>
   GetMetricStatistics API deprecation notice <aws-api-notice>
 
 To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to AWS. Follow these steps:
@@ -24,7 +25,7 @@ To leverage the benefits of data monitoring across your infrastructure, connect 
 1. Verify the prerequisites.
 2. Plan your integration.
 3. Choose your AWS connection option.
-4. (Optional) Enable metric streams.
+4. (Optional) Activate metric streams.
 
 
 .. note:: Check the :ref:`list of AWS integrations available in Splunk Observability Cloud <aws-integrations>`. 
@@ -32,7 +33,7 @@ To leverage the benefits of data monitoring across your infrastructure, connect 
 You can also set the following configuration options to complete the integration:
 
 - Select Amazon Web Services (AWS) regions to collect data from.
-- Enable the ingestion of metrics through polling or streaming.
+- Activate the ingestion of metrics through polling or streaming.
 - Decide whether to process information about application logs.
 
 Following configuration, you can use Amazon CloudWatch to import metrics and logs from supported AWS services into Splunk Observability Cloud, and analyze your data using Observability Cloud tools.
@@ -116,7 +117,7 @@ If you can't connect AWS to Observability Cloud, see :ref:`Troubleshoot your AWS
 
 Rather than polling for metrics data at specified intervals, CloudWatch Metric Streams sends metrics to a Kinesis Data Firehose stream, reducing latency. See :new-page:`Low Latency Observability Into AWS Services With Splunk <https://www.splunk.com/en_us/blog/devops/real-time-observability-splunk-cloudwatch-metric-streams.html>` in the DevOps blog for more information.
 
-You can enable Metric Streams both with our :ref:`guided setup <aws-wizardconfig>`, or the :ref:`Splunk Observability Cloud API <get-configapi>`.
+You can activate Metric Streams both with our :ref:`guided setup <aws-wizardconfig>`, or the :ref:`Splunk Observability Cloud API <get-configapi>`.
 
 Although Metric Streams are more efficient than API polling, consider the constraints below.
 
@@ -142,11 +143,11 @@ Customers already polling at 1-minute intervals generally see a slight decrease 
     <h3>High data volume warning<a name="aws-data-limits" class="headerlink" href="#aws-data-limits" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-After you create an AWS integration, Observability Cloud checks if more than 100,000 metrics are fetched from CloudWatch. If this is the case, the integration gets automatically disabled, and a warning email is sent. 
+After you create an AWS integration, Observability Cloud checks if more than 100,000 metrics are fetched from CloudWatch. If this is the case, the integration gets automatically deactivated, and a warning email is sent. 
 
-This check runs just once per integration. If you enable the integration afterwards, it will work correctly. 
+This check runs just once per integration. If you activate the integration afterwards, it will work correctly. 
 
-You can disable this check by setting the ``enableCheckLargeVolume`` field in the AWS integration to ``false`` :new-page:`using the API <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-update-single-integration>`.
+You can deactivate this check by setting the ``enableCheckLargeVolume`` field in the AWS integration to ``false`` :new-page:`using the API <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-update-single-integration>`.
 
 .. _tag-filtering-aws:
 

@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/exec` monitor type by using the SignalFx Smart Agent Receiver. This is an embedded form of the Telegraf Exec plugin. The plugin-specific configuration options are the same as that plugin, but parser configurations related to the format of the subprocess output (for example, `data_format`) are managed by using the `telegrafParser` nested configuration object.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/exec` monitor type for the Smart Agent Receiver. This is an embedded form of the Telegraf Exec plugin. The plugin-specific configuration options are the same as that plugin, but parser configurations related to the format of the subprocess output (for example, `data_format`) are managed by using the `telegrafParser` nested configuration object.
 
 ## Benefits
 
@@ -117,6 +117,8 @@ The **nested** `telegrafParser` configuration object has the following fields:
 | `CSVSkipColumns` | no | `integer` | The number of columns to ignore before parsing data on a given row. (`csv` only) The default value is `0`.  |
 
 ## Metrics
+
+The agent does not do any built-in filtering of metrics coming out of this monitor.
 
 By default, all metrics are emitted as gauges. If you have cumulative counter metrics that you want properly typed in Splunk Observability Cloud, use one of the following options:
 

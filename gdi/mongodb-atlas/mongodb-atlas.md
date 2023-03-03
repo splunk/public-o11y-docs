@@ -4,11 +4,13 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the MongoDB Atlas monitor. See benefits, install, configuration, and metrics">
 
-> _**Note:**_ Use the [MongoDB Atlas receiver](https://docs.splunk.com/Observability/gdi/mongodb-atlas/mongodb-atlas-receiver.html) in place of the SignalFx Smart Agent ``mongodb-atlas`` cluster monitor. The Smart Agent is deprecated. For details, see the [deprecation notice](https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md). 
+```{note}
+This monitor is deprecated in favor of the `mongodbatlas` receiver. See {ref}`MongoDB Atlas Receiver <mongodb-atlas-receiver>` for more information.
+```
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `mongodb-atlas` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `mongodb-atlas` monitor type for the Smart Agent Receiver.
 
 MongoDB Atlas provides MongoDB as an on-demand fully managed service. Atlas exposes MongoDB cluster monitoring and logging data through its [monitoring and logs](https://docs.atlas.mongodb.com/reference/api/monitoring-and-logs/) REST API endpoints. These Atlas monitoring API resources are grouped into measurements for MongoDB processes, host disks, and MongoDB databases.
 
@@ -59,7 +61,7 @@ The following table shows the configuration options for the `mongodb-atlas` moni
 | `publicKey` | **yes** | `string` | PublicKey is the Atlas public API key |
 | `privateKey` | **yes** | `string` | PrivateKey is the Atlas private API key |
 | `timeout` | no | `integer` | Timeout for HTTP requests to get MongoDB process measurements from Atlas. This should be a duration string that is accepted by [`func ParseDuration`](https://golang.org/pkg/time/#ParseDuration) (**default:** `5s`) |
-| `enableCache` | no | `bool` | EnableCache enables locally cached Atlas metric measurements to be used when true. The metric measurements that were supposed to be fetched are in fact always fetched asynchronously and cached. (**default:** `true`) |
+| `enableCache` | no | `bool` | EnableCache activates locally cached Atlas metric measurements to be used when true. The metric measurements that were supposed to be fetched are in fact always fetched asynchronously and cached. (**default:** `true`) |
 | `granularity` | no | `string` | Granularity is the duration in ISO 8601 notation that specifies the interval between measurement data points from Atlas over the configured period. The default is shortest duration supported by Atlas of 1 minute. (**default:** `PT1M`) |
 | `period` | no | `string` | Period the duration in ISO 8601 notation that specifies how far back in the past to retrieve measurements from Atlas. (**default:** `PT20M`) |
 

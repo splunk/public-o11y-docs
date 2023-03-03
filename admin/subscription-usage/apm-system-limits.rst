@@ -12,6 +12,8 @@ Splunk APM system limits
 
 Splunk APM has system limits that help ensure performance, stability, and reliability. These limits also protect the Splunk APM multitenant environment. Exceeding these limits might degrade your Splunk APM experience.
 
+There are several out-of-the-box charts in Splunk Observability Cloud for the metrics described below. Admins can view these charts by navigating to :guilabel:`Settings > Organization Overview`.
+
 .. _subscription-apm:
 
 Subscriptions 
@@ -47,9 +49,6 @@ Span and trace limits
    * - Span accumulation duration
      - 10 minutes
      - When a specific trace ID reaches this limit, subsequent spans are grouped into another trace segment. Exceeding the limit leads to suboptimal trace-based analysis for inferred services, failure root cause metrics and workflow metrics, but no spans or traces exceeding this limit are dropped. 
-   * - Max trace duration 
-     - 3 mins 
-     - Spans/traces aren't dropped. 
    * - Trace assembly delay
      - 60s 
      - Time from last span arrival for a traceId to trace assembly completed.

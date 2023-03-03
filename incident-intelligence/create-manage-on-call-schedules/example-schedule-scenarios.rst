@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-schedule-scenarios:
 
 On-call schedule scenarios
@@ -175,12 +173,12 @@ Your last step to for this scenario is to add your primary and secondary schedul
 #. Locate your web application service and select :guilabel:`Edit` from the :guilabel:`Actions` menu.
 #. Select the :guilabel:`Incident workflows` tab.
 #. Add the primary schedule to the first step. 
-    #.  Select :guilabel:`Configure invite` under :guilabel:`Immediately`.
+    #.  Select :guilabel:`+ Add responder` under :guilabel:`Immediately`.
     #.  Enter the schedule name "Heroes team, web application, primary" in the :guilabel:`Search schedules` field and select the schedule when it appears.
     #.  Select :guilabel:`Add responders`.
 #. Add the secondary schedule to the second step. 
     #. In the second step, select a time interval next to :guilabel:`If unacknowledged after`; this is the length of time you want to pass before paging the responder on call in your secondary schedule.
-    #. Select :guilabel:`Configure invite`.
+    #. Select :guilabel:`+ Add responder`.
     #.  Enter the schedule name "Heroes team, web application, secondary" in the :guilabel:`Search schedules` field and select the schedule when it appears.
     #.  Select :guilabel:`Add responders`.
 #. Select :guilabel:`Save workflow`.
@@ -230,7 +228,7 @@ Your last step to create the schedule for this scenario is to add your schedule 
 #. Locate your checkout service and select :guilabel:`Edit` from the :guilabel:`Actions` menu.
 #. Select the :guilabel:`Incident workflows` tab.
 #. Add the schedule to the first step. 
-    #.  Select :guilabel:`Configure invite` under :guilabel:`Immediately`.
+    #.  Select :guilabel:`+ Add responder` under :guilabel:`Immediately`.
     #.  Enter the schedule name "Victors team, checkout service" in the :guilabel:`Search schedules` field and select the schedule when it appears.
     #.  Select :guilabel:`Add responders`.
 #. Select :guilabel:`Save workflow`.

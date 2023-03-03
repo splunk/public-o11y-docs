@@ -1,25 +1,25 @@
 .. _otel-install-windows:
 
-**************************************************
-Install the Collector for Windows
-**************************************************
+****************************************************************
+Install the Collector for Windows with the installer script
+****************************************************************
 
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Windows.
 
 .. toctree::
-   :maxdepth: 4
-   :titlesonly:
-   :hidden:
+  :maxdepth: 4
+  :titlesonly:
 
-   /gdi/opentelemetry/deployments/deployments-windows-ansible.rst
-   /gdi/opentelemetry/deployments/deployments-windows-puppet.rst
+  /gdi/opentelemetry/deployments/deployments-windows-ansible.rst
+  /gdi/opentelemetry/deployments/deployments-windows-puppet.rst
 
 The Splunk Distribution of OpenTelemetry Collector for Windows is a package that provides integrated collection and forwarding for all data types. Install the package using one of these methods:
 
 * :ref:`Installer script <windows-script>`
 * :ref:`Deployments <windows-deployments>`
-* :ref:`Manual <windows-manual>`
+
+Alternatively, you can :new-page:`install the Collector for Windows manually <otel-install-windows-manual>`.
 
 .. _windows-otel-requirements:
 
@@ -29,38 +29,35 @@ Prerequisites
 The Splunk Distribution of OpenTelemetry Collector for Windows has the following requirements depending on the install method:
 
 .. list-table::
-   :header-rows: 1
-   :widths: 40 60
-   :width: 100
+  :header-rows: 1
+  :widths: 40 60
+  :width: 100
 
-   * - Install method
-     - Supported versions (64-bit)
-   * - Installer script
-     - Windows 2012, 2016, 2019, 2022
-   * - Windows installer (MSI)
-     - Windows 2012, 2016, 2019, 2022
-   * - Ansible
-     - Windows 2012, 2016, 2019
-   * - Chef
-     - Windows 2019, 2022
-   * - Nomad
-     - Windows 2012, 2016, 2019
-   * - Puppet
-     - Windows 2012, 2016, 2019
-   * - Docker
-     - Windows 2019, 2022
+  * - Install method
+    - Supported versions (64-bit)
+  * - Installer script
+    - Windows 2012, 2016, 2019, 2022
+  * - Windows installer (MSI)
+    - Windows 2012, 2016, 2019, 2022
+  * - Ansible
+    - Windows 2012, 2016, 2019, 2022
+  * - Chef
+    - Windows 2019, 2022
+  * - Nomad
+    - Windows 2012, 2016, 2019
+  * - Puppet
+    - Windows 2012, 2016, 2019
+  * - Docker
+    - Windows 2019, 2022
 
 .. _windows-script:
 
 Installer script
 ==========================
 
-The installer script is available for Windows 64-bit environments. The script deploys and configures these things:
+The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of OpenTelemetry Collector for Windows and Fluentd (using the td-agent).
 
-* Splunk Distribution of OpenTelemetry Collector for Windows
-* Fluentd (using the td-agent)
-
-Do the following to install the package using the installer script:
+To install the package using the installer script, follow these steps:
 
 #. Ensure that you have Administrator access on your host.
 #. Run the following PowerShell command on your host, replacing the following variables for your environment:
@@ -70,7 +67,11 @@ Do the following to install the package using the installer script:
 
 .. code-block:: PowerShell
 
-   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+.. note:: If needed, activate TLS in PowerShell using the following command: 
+  
+   ``[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12``
 
 Configure memory allocation
 ----------------------------------
@@ -79,12 +80,25 @@ To configure memory allocation, use the ``memory`` parameter. By default, this p
 
 .. code-block:: PowerShell
 
-   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; memory = "SPLUNK_MEMORY_TOTAL_MIB"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; memory = "SPLUNK_MEMORY_TOTAL_MIB"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 Replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
-Configure Fluentd
----------------------------------
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``: The HTTP proxy address
+- ``HTTPS_PROXY``: The HTTPS proxy address
+- ``NO_PROXY``: If a proxy is defined, sets addresses that don't use the proxy
+
+Restart the Collector after adding these environment variables to your configuration. 
+
+.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
+
+Configure Fluentd for log collection
+-------------------------------------------
 
 By default, the Fluentd service is installed and configured to forward log events with the ``@SPLUNK`` label and send these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
@@ -104,8 +118,19 @@ After any configuration modification, apply the changes by restarting the system
 
 .. code-block:: PowerShell
 
-   Stop-Service fluentdwinsvc
-   Start-Service fluentdwinsvc
+  Stop-Service fluentdwinsvc
+  Start-Service fluentdwinsvc
+
+Start the Collector executable manually 
+-------------------------------------------
+
+If you experience unexpected start failures, try to start the Collector executable manually. 
+
+To do so, run the following PowerShell command as an Admin:  
+
+.. code-block:: PowerShell
+
+  & 'C:\Program Files\Splunk\OpenTelemetry Collector\otelcol.exe' --config 'C:\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml'
 
 .. _windows-deployments:
 
@@ -137,70 +162,11 @@ Puppet
 -------------------------------
 Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. See :ref:`deployment-windows-puppet` for the instructions to download and customize the module.
 
-.. _windows-manual:
-
-Manual
-===================
-Splunk offers the manual configuration options described in this section. 
-
-.. _windows-docker:
-
-Docker
-----------------------
-
-Run the following command to deploy the latest Docker image:
-
-.. code-block:: PowerShell
-
-   $ docker run --rm -e SPLUNK_ACCESS_TOKEN=12345 -e SPLUNK_REALM=us0  `
-	          -p 13133:13133 -p 14250:14250 -p 14268:14268 -p 4317:4317 -p 6060:6060  `
-	          -p 8888:8888 -p 9080:9080 -p 9411:9411 -p 9943:9943 `
-	          --name=otelcol quay.io/signalfx/splunk-otel-collector-windows:latest
-             # Use a semantic versioning (semver) tag instead of the ``latest`` tag.
-             # Semantic versioning is a formal convention for determining the version
-             # number of new software releases.
-
-More information regarding the ``docker run`` command options:
-
-* ``--rm`` automatically removes the container when it exits.
-* ``-e`` sets simple (non-array) environment variables in the container you’re running, or overwrite variables that are defined in the Dockerfile of the image you’re running.
-* ``-p`` publishes a container's port(s) to the host.
-
-.. _windows-powershell:
-
-PowerShell terminal
--------------------------------
-Do the following to install the package from a PowerShell terminal:
-
-#. Download the Windows MSI package (64-bit only) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
-#. Run the following command in a PowerShell terminal. Replace ``PATH_TO_MSI`` with the full path to the downloaded package. For example, ``C:\your\download\folder\splunk-otel-collector-0.4.0-amd64.msi``::
-
-    PS> Start-Process -Wait msiexec "/i PATH_TO_MSI /qn"
-#. Update all variables in the configuration file as appropriate. See the next section for the steps to do this.
-#. Start the ``splunk-otel-collector`` service by rebooting the system or running the following command in a PowerShell terminal::
-
-    PS> Start-Service splunk-otel-collector
-
-The package is installed to ``\Program Files\Splunk\OpenTelemetry Collector``, and the ``splunk-otel-collector`` service is created, but not started. A default configuration file is copied to ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml``, if it does not already exist. This file is required to start the ``splunk-otel-collector`` service.
-
-.. note:: The ``ProgramData`` folder is hidden by default on Windows.
-
-.. _windows-installer:
-
-Windows Installer
------------------------------------
-
-Do the following to install the package using the Windows Installer:
-
-#. Download the Windows MSI package (64-bit only) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
-#. Double click the downloaded package and follow the instructions in the wizard.
-
-The package is installed to ``\Program Files\Splunk\OpenTelemetry Collector``, and the ``splunk-otel-collector`` service is created, but not started. A default configuration file is copied to ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml``, if it does not already exist. This file is required to start the ``splunk-otel-collector`` service.
-
-More options
+Next steps
 ==================================
+
 Once you have installed the package, you can perform these actions:
 
 * :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft's documentation site <https://docs.microsoft.com/en-us/>` for more information.
+* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
 * :ref:`apm`.

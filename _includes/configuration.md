@@ -1,6 +1,6 @@
-This monitor type is available in the Smart Agent Receiver, which is part of the Splunk Distribution of OpenTelemetry Collector. You can use existing Smart Agent monitors as OpenTelemetry Collector metric receivers with the Smart Agent Receiver.
+To use this Smart Agent monitor with the Collector, include the `smartagent` receiver and service pipeline in your configuration file. The Smart Agent receiver is fully supported only on x86_64/amd64 platforms.
 
-This monitor type requires a properly configured environment on your system in which you've installed a functional Smart Agent release bundle. The Collector provides this bundle in the installation paths for ``x86_64/amd64``.
+- Read more in [Use Smart Agent monitors with the Collector](https://docs.splunk.com/Observability/gdi/opentelemetry/smart-agent-migration-monitors.html).
+- Learn about config options in [Collector default configuration](https://docs.splunk.com/Observability/gdi/opentelemetry/configure-the-collector-ootb.html). 
 
-To activate this monitor type in the Collector, add the following lines to your <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector" target="_blank">configuration (YAML) file</a>: 
-
+See the examples below for more details.

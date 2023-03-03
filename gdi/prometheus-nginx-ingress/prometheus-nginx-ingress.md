@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-nginx-ingress` monitor type using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-nginx-ingress` monitor type for the Smart Agent Receiver.
 
 This monitor wraps the {ref}`prometheus-exporter` to collect Ingress NGINX metrics for Splunk Observability Cloud, and relies on the Prometheus metric implementation that replaces VTS. If you use NGINX 0.15 or lower, use the {ref}`Prometheus NGINX VTS <prometheus-nginx-vts>` monitor.
 
@@ -48,7 +48,7 @@ service:
 
 ### Ingress NGINX configuration
 
-Enable the `controller.stats.enabled=true` and `controller.metrics.enabled=true` flags in the NGINX Ingress Controller chart.
+Activate the `controller.stats.enabled=true` and `controller.metrics.enabled=true` flags in the NGINX Ingress Controller chart.
 
 ### Agent configuration
 
