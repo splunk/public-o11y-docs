@@ -28,7 +28,7 @@ A text or markdown editor opens, which shows some tips on creating markdown.
 
 Markdown is high-level, plain text format which is converted into HTML. You can search for resources on Markdown if you need examples of what you can do in the editor.
 
-In the text/markdown editor, you can clear the tips and write your own text or markdown. A preview is available on the right hand side of the text editor.
+In the text/markdown editor, you can clear the tips and write your own text or Markdown. A preview is available on the right hand side of the text editor.
 
 If you don't have :ref:`write permissions<about-write-permissions>` for the dashboard you are viewing, or you are in a built-in dashboard, you need to select :guilabel:`Save as` to save the text note.
 
