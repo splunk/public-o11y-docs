@@ -11,15 +11,23 @@ Alex, the Site Reliability Engineer for ButterCup Studios, is tasked with monito
 
 Over the last couple of hours, Alex has been receiving reports from customer support regarding errors during video recommendation. To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows them to explore APM data from wide trends down to single traces. These are the steps Alex took to identify and solve the issue:
 
+#. Search for traces with errors
 #. Group traces by specific tags
 #. Come back to confirm solution
 
-1. Group traces by specific tags
+1. Search for traces with errors
+===================================
+
+As most reports happened in the weeks following the release of the recommendation service, Alex opens Trace Analyzer and sets the time range to the last hour for the recommendation service in production. To narrow down the search further, they switch :guilabel:`Errors only`.
+
+The search reduces the amount of traces to a few thousand from the millions available in Splunk APM. 
+
+2. Group traces by specific tags
 ==================================
 
-As most reports happened in the weeks following the release of the recommendation service, Alex opens Trace Analyzer and sets the time range to the last hour for the recommendation service in production. Next, they use the :guilabel:`Grouped by` menu to select the ``device.type`` tag. To narrow down the search further, they switch :guilabel:`Errors only`.
+Next, Alex uses the :guilabel:`Grouped by` menu to select the ``device.type`` tag. 
 
-The search reduces the amount of traces to a few thousand from the millions available in Splunk APM. Alex notices that the tablet throws the most errors among the types of devices, so they decide to switch the grouping tag to ``tablet.brand``. Alex then selects the :guilabel:`Group Metrics` tab to dig into each value of the grouping tag.
+Alex notices that the tablet throws the most errors among the types of devices, so they decide to switch the grouping tag to ``tablet.brand``. Alex then selects the :guilabel:`Group Metrics` tab to dig into each value of the grouping tag.
 
 2. Return to confirm solution
 ==================================
