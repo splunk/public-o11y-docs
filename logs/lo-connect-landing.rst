@@ -24,7 +24,6 @@ Splunk Log Observer Connect
     logs-individual-log-connect
     message-field
     aggregations
-    save-share
     logviews
     timestamp
     lo-connect-limits

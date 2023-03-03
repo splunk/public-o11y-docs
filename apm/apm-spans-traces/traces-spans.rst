@@ -16,6 +16,7 @@ Manage services, spans, and traces in Splunk APM
    apm-errors
    service-map
    trace-search
+   trace-analyzer
    traces-special-cases
    span-search
    download-traces
