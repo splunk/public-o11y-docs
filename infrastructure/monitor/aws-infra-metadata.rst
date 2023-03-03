@@ -34,10 +34,6 @@ For all services, the system imports the following common properties:
       - aws_account_id
       - The id of your AWS account
 
-   *  - AccountAlias
-      - aws_account_alias
-      - The alias of your AWS account
-
    *  - Region
       - aws_region
       - The region you're importing metadata from
