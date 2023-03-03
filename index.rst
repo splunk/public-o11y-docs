@@ -62,7 +62,7 @@ Instrument to collect traces and logs :ref:`instrument-serverless-functions`
 .. rst-class:: newparawithicon
 
 :icon-display:`.` :strong:`Explore and monitor your environment`
-After you have your data coming into Observability Cloud, it’s time to do some exploring.
+After you have data coming into Observability Cloud, you can do some exploring.
 
 
 
