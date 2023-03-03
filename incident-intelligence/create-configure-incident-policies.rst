@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-create-configure-incident-policies:
 
 ************************************************************************
@@ -35,10 +33,10 @@ Use alert routing to associate alerts with an incident policy. If an alert match
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert routing conditions to.
 #. Select the :guilabel:`Alert Routing` tab to see the list of alerts that are currently routed to the incident policy.
-#. To filter the alerts routed to the incident policy, select :guilabel:`Add Filters`. 
-    #. Select a filter field. Use :guilabel:`source` to route alerts based on a detector name. 
+#. To filter the alerts routed to the incident policy based on the data in the alerts, select :guilabel:`Add Filters`. 
+    #. Select a filter field. For example, use :guilabel:`source` to route alerts based on a detector name. Key names are case sensitive and require an exact match.
     #. Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) operator.
-    #. Select a filter value. 
+    #. Select a filter value. Key values are case sensitive and require an exact match.
     #. Select :guilabel:`Enter` to save your condition. 
 #. Repeat these steps for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the incident policy to confirm your filter conditions are correct. 
@@ -57,6 +55,7 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping rule.
 #. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
 #. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
+#. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. If you want to filter on another field enter that field name. 
 #. Select :guilabel:`Save alert grouping`.
 
 After you manage which alerts create an incident and how alerts are grouped into incidents, configure incident workflows for your incident policy.  
@@ -71,7 +70,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy where you want to create an incident workflow.
 #. Select the :guilabel:`Incident workflows` tab. 
-#. To add responders, select :guilabel:`Configure invite` under :guilabel:`Immediately`. 
+#. To add responders, select :guilabel:`+ Add responders` under :guilabel:`Immediately`. 
 #. In the :guilabel:`Configure invite` window, add responders by name or by schedule. If you don't have an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
    
     .. list-table::
@@ -91,7 +90,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. Select :guilabel:`Add responders`.
 #. Select :guilabel:`Add New Step` to add additional escalating steps with additional responders to your incident workflow.
 #. Select an elapsed time period in the drop-down list next to :guilabel:`If unacknowledged after`.
-#. Select :guilabel:`Configure invite` to add responders.
+#. Select :guilabel:`+ Add responders` to add responders.
 #. Repeat these steps until you have a complete incident workflow for the incident policy. 
 
 .. _ii-rank-incident-policies:
@@ -110,7 +109,7 @@ Use incident policy maintenance to mute notifications while you are making chang
 
 To put your incident policy in maintenance, select the :guilabel:`Actions` menu on the incident policy you want to put in maintenance and select :guilabel:`Maintenance`. The incident policy status will show as :guilabel:`Maintenance`. 
 
-All incidents that are associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or rejected.  
+All incidents that are associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. No responders are notified when a muted incident is triggered. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter.  Muted incidents are read-only and can't be acknowledged, resolved, or dismissed.  
 
 Take an incident policy out of maintenance
 ---------------------------------------------

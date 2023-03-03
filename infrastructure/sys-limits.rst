@@ -8,7 +8,7 @@ System limits for Splunk Infrastructure Monitoring
    :description: This topic describes the Splunk Infrastructure Monitoring limits for incoming data,
     number of charts or detectors, and other features.
 
-Splunk Infrastructure Monitoring has system limits that help ensure good performance, stability, and reliability. These limits also protect the Infrastructure Monitoring multitenant environment. Exceeding these limits might degrade your Infrastructure Monitoring experience.
+Splunk Infrastructure Monitoring has system limits that help ensure good performance, stability, and reliability. These limits also protect the Infrastructure Monitoring multitenant environment. Exceeding these limits might degrade your Infrastructure Monitoring experience. 
 
 To help you avoid problems when you use Infrastructure Monitoring, consider the system limit information presented in this
 document, which includes the following:
@@ -19,6 +19,8 @@ document, which includes the following:
 
 The first section in this topic contains tables of limit names and values, organized by product area. Each entry in the table shows the name of the limit and its default value. The
 limit name is also a link to more information about the limit.
+
+There are several out-of-the-box charts in Splunk Observability Cloud for the metrics described below. Admins can view these charts by navigating to :guilabel:`Settings > Organization Overview`.
 
 The first table in the section lists the most important limits to consider.
 
@@ -180,23 +182,20 @@ Data ingestion limits
    * - :ref:`new-dimension-or-property-key-name-limit`
      - 40 per week
 
-   * - :ref:`dimensionmetric-value-length`
-     - 256
-
    * - :ref:`events-per-minute`
      - Determined by your subscription
-
-   * - :ref:`maximum-dimension-name-length`
-     - 128
-
-   * - :ref:`mts-creations-per-hour-limit`
-     - 60 times your MTS per minute limit
 
    * - :ref:`mts-creations-per-minute-limit`
      - 6,000 or determined by your subscription
 
-   * - :ref:`number-of-dimensions-per-mts`
-     - 36
+   * - :ref:`mts-creations-per-hour-limit`
+     - 60 times your MTS per minute limit
+
+   * - :ref:`mts-creations-burst-per-minute-limit`
+     - 10 times your MTS per minute limit, with a maximum of 20 minutes worth of bursting capacity in an hour.
+
+   * - :ref:`maximum-number-of-api-calls-per-minute`
+     - 100,000
 
 .. _mts-metadata-limits:
 
@@ -209,14 +208,21 @@ MTS metadata limits
 
    * - :strong:`Limit name`
      - :strong:`Default limit value`
-   * - :ref:`maximum-number-of-api-calls-per-minute`
-     - 100,000
+
+   * - :ref:`dimensionmetric-value-length`
+     - 256
 
    * - :ref:`number-of-properties-per-dimension`
      - 75
 
    * - :ref:`number-of-tags-per-dimension`
      - 50
+
+   * - :ref:`number-of-dimensions-per-mts`
+     - 36
+
+   * - :ref:`maximum-dimension-name-length`
+     - 128
 
 .. _subscription-limits:
 
@@ -642,6 +648,22 @@ MTS creations per hour limit
    * :strong:`Default limit value`: 60 times your MTS per minute limit
    * :strong:`Notes`: Maximum number of MTS you can create per hour.
    * :strong:`Customer impact`: Infrastructure Monitoring drops new MTS that exceed the limit without returning an error, but accepts data points for existing MTS.
+
+.. _mts-creations-burst-per-minute-limit:
+
+MTS creations bursting per minute limit
+--------------------------------------------------------------------------------------
+
+   * :strong:`Default limit value`: 10 times your MTS per minute limit, with a maximum of 20 minutes worth of bursting capacity per hour.
+   * :strong:`Notes`: Splunk Observability Cloud allows bursting for metric time series (MTS) creation to better support bursty or spiky patterns in MTS creation traffic. This limit is the maximum bursting capacity for MTS creations. Bursting is not guaranteed and is available only when there is enough additional capacity. 
+  
+   * :strong:`Customer impact`: The default MTS creations per minute limit is enforced once you have used up the 20 minutes maximum bursting capacity per hour.
+    
+      For example, your default MTS creations per minute limit is 6,000. You can max out the MTS creations burst limit in the following ways:
+          
+          #. Create 60,000 MTS per minute for consecutive or nonconsecutive 20 minutes, then go back to creating 6,000 MTS per minute for the rest of the hour.
+          #. Spread the bursting capacity utilization over the entire hour by creating MTS at the rate of less than or equal to 24,000 per minute.
+
 
 .. _number-of-dimensions-per-mts:
 

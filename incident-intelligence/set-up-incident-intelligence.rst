@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-set-up-incident-intelligence:
 
 Set up Splunk Incident Intelligence
@@ -10,11 +8,9 @@ Set up Splunk Incident Intelligence
 
 To route incidents to the necessary teams and people, you need to first generate alerts. Next, you'll complete your incident response configuration which includes creating and configuring incident policies and creating on-call schedules. After you configure your incident policies and schedules, users can begin responding to incidents. 
 
-Required Incident Intelligence prerequisites and permissions
+Prerequisite
 ===============================================================
 
-- Sign up for Incident Intelligence public preview. See :new-page:`https://www.splunk.com/en_us/form/splunk-incident-intelligence.html`.
-- Sign the pre-release terms. 
 - You must be an Observability Cloud administrator to configure and set up Incident Intelligence.
 
 Get started

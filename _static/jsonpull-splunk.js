@@ -263,10 +263,10 @@ $(document).ready(function () {
 
                             if (j == 'category') {
                                 addedCategory = true;
-                                monitors[i][j] = monitors[i][j] ? 'Default' : '';
+                                monitors[i][j] = monitors[i][j] ? 'Default' : 'Custom';
                             } else if (j == 'default') {
                                 addedCategory = true;
-                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : '';
+                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : 'Custom';
                             } else if (j == 'custom') {
                                 addedCategory = true;
                                 monitors[i][j] = (monitors[i][j] == true) ? 'Custom' : '';

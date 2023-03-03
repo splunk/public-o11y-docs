@@ -352,11 +352,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Splunk Distribution of OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
 .. toctree::
-   :maxdepth:   3
-
-   Collector commands reference <gdi/agent-commands/otel-commands>
-
-.. toctree::
    :maxdepth: 3
 
    gdi/other-ingestion-methods/other-data-ingestion-methods
@@ -365,6 +360,42 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth: 3
 
    SignalFx Smart Agent (Deprecated) TOGGLE <gdi/smart-agent/smart-agent-intro>
+
+.. toctree::
+   :caption: UNDERSTAND AND ANALYZE YOUR DATA
+   :maxdepth:   3
+
+   Metrics, data points, and metric time series <metrics-and-metadata/metrics>
+
+.. toctree::
+   :maxdepth:   3
+
+   metrics-and-metadata/metric-types
+
+.. toctree::
+   :maxdepth:   3
+
+   Dimensions, custom properties, and tags <metrics-and-metadata/metrics-dimensions-mts>
+
+.. toctree::
+   :maxdepth:   3
+
+   metrics-and-metadata/metric-names
+
+.. toctree::
+   :maxdepth:   3
+
+   Add context to metrics using events <metrics-and-metadata/view-data-events>
+
+.. toctree::
+   :maxdepth:   3
+
+   metrics-and-metadata/metrics-finder-metadata-catalog
+
+.. toctree::
+   :maxdepth:   3
+
+   SignalFlow and analytics TOGGLE <analytics/signalflow-analytics-intro>
 
 .. toctree::
    :caption: DASHBOARDS AND CHARTS
@@ -507,7 +538,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Manage services, spans, and traces in SPlunk APM TOGGLE <apm/apm-spans-traces/traces-spans>
+   Manage services, spans, and traces in Splunk APM TOGGLE <apm/apm-spans-traces/traces-spans>
 
 .. toctree::
    :maxdepth:   3
@@ -732,6 +763,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   incident-intelligence/incident-intelligence-overview
+
+.. toctree::
+   :maxdepth:   3
+
    incident-intelligence/key-concepts
 
 .. toctree::
@@ -760,6 +796,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Respond to and manage incidents TOGGLE <incident-intelligence/respond-manage-incidents/respond-manage-incidents>
 
 .. toctree::
+   :maxdepth:   3
+
+   Manage notifications from Incident Intelligence TOGGLE <incident-intelligence/manage-notifications/manage-notifications.rst>
+
+.. toctree::
    :caption: MOBILE
    :maxdepth:   3
 
@@ -780,41 +821,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    mobile/notification-preferences-mobile
 
-.. toctree::
-   :caption: UNDERSTAND AND ANALYZE YOUR DATA
-   :maxdepth:   3
-
-   Metrics, data points, and metric time series <metrics-and-metadata/metrics>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metric-types
-
-.. toctree::
-   :maxdepth:   3
-
-   Dimensions, custom properties, and tags <metrics-and-metadata/metrics-dimensions-mts>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metric-names
-
-.. toctree::
-   :maxdepth:   3
-
-   Add context to metrics using events <metrics-and-metadata/view-data-events>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metrics-finder-metadata-catalog
-
-.. toctree::
-   :maxdepth:   3
-
-   SignalFlow and analytics TOGGLE <analytics/signalflow-analytics-intro>
 
 .. toctree::
    :caption: ADMINISTER OBSERVABILITY CLOUD

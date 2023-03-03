@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/varnish` monitor type using the Smart Agent Receiver. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/varnish` monitor type for the Smart Agent Receiver. 
 
 Use this integration to collect Varnish metrics.
 
@@ -20,7 +20,7 @@ This monitor is available on Kubernetes and Linux.
 
 This integration uses the `varnishstat` command. The Collector or Smart Agent must run on the same host as the Varnish server.
 
-Run the following command to enable the Smart Agent to run the `varnishstat` command:
+Run the following command to activate the Smart Agent to run the `varnishstat` command:
 
 ```bash
 usermod -a -G varnish signalfx-agent
@@ -78,7 +78,7 @@ The following table shows the configuration options for this monitor:
 
 | Option| Required | Type | Description |
 | --- | --- | --- | --- |
-| `useSudo` | No | `bool` | If running as a restricted user, enable this flag to use `sudo`. The default value is `false`. |
+| `useSudo` | No | `bool` | If running as a restricted user, activate this flag to use `sudo`. The default value is `false`. |
 | `binary` | No | `string` | The location of the `varnishstat` binary.  The default value is `/usr/bin/varnishstat`. |
 | `stats` | No | `list of strings` | Which stats to gather. You can use glob matching. For example, `stats = ["MAIN.*"]`. The default value is `[MAIN.*]`. |
 | `instanceName` | No | `string` | Optional name for the Varnish instance to query. The setting has the same effect of passing the `-n` parameter value. |

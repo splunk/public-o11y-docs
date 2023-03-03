@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `haproxy` monitor via the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `haproxy` monitor using the Smart Agent receiver.
 
 This monitors an [HAProxy](http://www.haproxy.org/) instance. This monitor requires HAProxy 1.5+.
 
@@ -35,11 +35,11 @@ global
 To use a more restricted TCP socket, follow these steps:
 
 1. Define a backend server that listens to stats on localhost.
-2. Define a frontend proxy server that communicates with the backend server on a different port.
+2. Define a frontend proxy server that communicates with the back-end server on a different port.
 3. Use ACLs on both servers to control access. Depending on how restrictive your socket is, you might need to
 add the signalfx-agent user to the haproxy group as follows: `sudo usermod -a -G haproxy signalfx-agent`
 
-The following configuration file shows how to define a backend server and a frontend proxy:
+The following configuration file shows how to define a back-end server and a frontend proxy:
 
 ```
 global
@@ -61,7 +61,7 @@ frontend stats-frontend
 <!--- SETUP --->
 ## SELinux setup
 
-If you have SELinux enabled, create a SELinux policy package by downloading
+If you have SELinux activated, create a SELinux policy package by downloading
 the [type enforcement
 file](https://github.com/signalfx/collectd-haproxy/blob/master/selinux/collectd-haproxy.te)
 to some place on your server. Run the following commands to create and install
@@ -79,7 +79,7 @@ the policy package:
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 

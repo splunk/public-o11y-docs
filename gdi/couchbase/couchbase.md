@@ -8,6 +8,10 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Couchbase server monitor with the SignalFx Smart Agent receiver. The integration collects metrics from Couchbase servers.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 ## Installation
 
 Follow these steps to deploy the integration:

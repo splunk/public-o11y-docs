@@ -1172,7 +1172,7 @@ For information about these integrations:
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for the name of the community integration.
-#. Select the community integration's tile to display its details.
+#. Select the community integration tile to display its details.
 
 
 Notification services

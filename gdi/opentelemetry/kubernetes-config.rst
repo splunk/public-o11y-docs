@@ -1,7 +1,7 @@
 .. _otel-kubernetes-config:
 
 *********************************************************************************
-Advanced configurations for Kubernetes
+Advanced configuration for Kubernetes
 *********************************************************************************
 
 .. meta::
@@ -24,7 +24,7 @@ Configure the following required values to send data to Splunk Enterprise or Spl
      # Required for Splunk Enterprise or Splunk Cloud.
      # Add a URL for the Splunk instance to send data to.
      # For example, "http://X.X.X.X:8088/services/collector".
-     # Setting this parameter enables Splunk Platform as a destination.
+     # Setting this parameter activates Splunk Platform as a destination.
       endpoint: ""
       # Required for Splunk Enterprise or Splunk Cloud if `endpoint` is specified.
       token: ""
@@ -37,7 +37,7 @@ Configure the following required values to send data to Splunk Observability Clo
    splunkObservability:
    # Required for Observability Cloud.
    # Add the Observability Cloud realm to send telemetry data to.
-   # Setting this parameter enables Observability Cloud as a destination.
+   # Setting this parameter activates Observability Cloud as a destination.
      accessToken: xxxxxx
      # The Observability Cloud org access token.
      realm: us0
@@ -99,10 +99,10 @@ If applicable, use the ``environment`` parameter to specify an additional ``depl
      realm: us0
    environment: production
 
-Disable particular types of telemetry
+Deactivate particular types of telemetry
 ============================================
 
-By default, OpenTelemetry sends only metrics and traces to Observability Cloud and sends only logs to Splunk Platform. You can enable or disable any kind of telemetry data collection for a specific destination. For example, with the following configuration, the Collector sends all collected telemetry data to Observability Cloud and Splunk Platform, assuming you've properly configured them.
+By default, OpenTelemetry sends only metrics and traces to Observability Cloud and sends only logs to Splunk Platform. You can activate or deactivate any kind of telemetry data collection for a specific destination. For example, with the following configuration, the Collector sends all collected telemetry data to Observability Cloud and Splunk Platform, assuming you've properly configured them.
 
 .. code-block:: yaml
 
@@ -135,7 +135,7 @@ Use the following values.yaml configuration to install the Helm chart on Windows
 
 If you have both Windows and Linux worker nodes in your Kubernetes cluster, you need to install the Helm chart twice. One of the installations with the default configuration set to ``isWindows: false`` is applied on Linux nodes. The second installation with the values.yaml configuration (shown in the previous example) is applied on Windows nodes.
 
-Disable the ``clusterReceiver`` on one of the installations to avoid cluster-wide metrics duplication. To do this, add the following lines
+Deactivate the ``clusterReceiver`` on one of the installations to avoid cluster-wide metrics duplication. To do this, add the following lines
 to the values.yaml configuration of one of the installations:
 
 .. code-block:: yaml
@@ -196,10 +196,10 @@ To run the Collector in the Amazon Elastic Kubernetes Service with Fargate profi
 
 This distribution operates similarly to the ``eks`` distribution, but with the following distinctions:
 
-* The Collector agent daemonset is not applied since Fargate does not support daemonsets. Any desired Collector instances running as agents must be configured manually as sidecar containers in your custom deployments. This includes any application logging services like Fluentd. Set ``gateway.enabled`` to ``true`` and configure your instrumented applications to report metrics, traces, and logs to the gateway's ``<installed-chart-name>-splunk-otel-collector`` service address. Any desired agent instances that would run as a daemonset should instead run as sidecar containers in your pods.
+* The Collector agent daemonset is not applied since Fargate does not support daemonsets. Any desired Collector instances running as agents must be configured manually as sidecar containers in your custom deployments. This includes any application logging services like Fluentd. Set ``gateway.enabled`` to ``true`` and configure your instrumented applications to report metrics, traces, and logs to the gateway ``<installed-chart-name>-splunk-otel-collector`` service address. Any desired agent instances that would run as a daemonset should instead run as sidecar containers in your pods.
 * Since Fargate nodes use a VM boundary to prevent access to host-based resources used by other pods, pods are not able to reach their own kubelet. The cluster receiver for the Fargate distribution has two primary differences between regular ``eks`` to work around this limitation:
    * The configured cluster receiver is deployed as a two-replica StatefulSet instead of a Deployment, and uses a Kubernetes Observer extension that discovers the cluster's nodes and, on the second replica, its pods for user-configurable receiver creator additions.Using this observer dynamically creates the Kubelet Stats receiver instances that report kubelet metrics for all observed Fargate nodes. The first replica monitors the cluster with a ``k8s_cluster`` receiver, and the second cluster monitors all kubelets except its own (due to an EKS/Fargate networking restriction).
-   * The first replica's Collector monitors the second's kubelet. This is made possible by a Fargate-specific ``splunk-otel-eks-fargate-kubeletstats-receiver-node`` node label. The Collector's ClusterRole for ``eks/fargate`` allows the ``patch`` verb on ``nodes`` resources for the default API groups to allow the cluster receiver's init container to add this node label for designated self monitoring.
+   * The first replica's Collector monitors the second's kubelet. This is made possible by a Fargate-specific ``splunk-otel-eks-fargate-kubeletstats-receiver-node`` node label. The Collector ClusterRole for ``eks/fargate`` allows the ``patch`` verb on ``nodes`` resources for the default API groups to allow the cluster receiver's init container to add this node label for designated self monitoring.
 
 Collect logs
 =========================
@@ -288,7 +288,7 @@ The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect jo
           priority: info
         - name: containerd
           priority: info
-      # Optional: Route journald logs to a seperate Splunk Index by specifying the index
+      # Optional: Route journald logs to a separate Splunk Index by specifying the index
       # value. Make sure the index exists in Splunk and is configured to receive HEC
       # traffic (not applicable to Observability Cloud).
       index: ""
@@ -356,7 +356,7 @@ Override a control plane configuration
 
 If ``agent.controlPlaneEnabled=true``, the Helm chart sets up the Collector to collect metrics from the control plane.
 
-To collect control plane metrics, the Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See the :new-page:`receiver creator <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/receivercreator/README.md>` documentation in GitHub for more information.
+To collect control plane metrics, the Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See :ref:`receiver-creator-receiver` for more information.
 
 If your control plane is using non-standard specifications, then you can provide a custom configuration to allow the Collector to successfully connect to it.
 
@@ -419,7 +419,7 @@ You can override the default configuration values used to connect to the control
 Add additional telemetry sources
 ===========================================
 
-Use the ``autodetect`` configuration option to enable additional telemetry sources.
+Use the ``autodetect`` configuration option to activate additional telemetry sources.
 
 Set ``autodetect.prometheus=true`` if you want the Collector to scrape Prometheus metrics from pods that have generic Prometheus-style annotations. Add the following annotations on pods to allow a fine control of the scraping process:
 
@@ -429,7 +429,7 @@ Set ``autodetect.prometheus=true`` if you want the Collector to scrape Prometheu
 
 If the Collector is running in an Istio environment, set ``autodetect.istio=true`` to make sure that all traces, metrics, and logs reported by Istio are collected in a unified manner.
 
-For example, use the following configuration to enable automatic detection of both Prometheus and Istio telemetry sources:
+For example, use the following configuration to activate automatic detection of both Prometheus and Istio telemetry sources:
 
 .. code-block:: yaml
 

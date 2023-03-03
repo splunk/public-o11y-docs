@@ -63,7 +63,7 @@ Download Splunk Observability for Mobile from the App Store
 #. Tap the Splunk Observability Cloud Mobile app.
 #. Tap :strong:`Get`.
 #. Confirm the download with your Apple ID to install Splunk Observability Cloud for Mobile on your device.
-#. Confirm the download with your Apple ID to install Splunk Observibility Cloud for Mobile on your device.
+
 
 ====================================================================
 Download Splunk Observability for Mobile from the Google Play store
@@ -74,7 +74,7 @@ Download Splunk Observability for Mobile from the Google Play store
 #. Tap the Splunk Observability Cloud Mobile app.
 #. Download Splunk Observability Cloud for Mobile.
 
-.. note:: Due to Chinese network restrictions, you can’t access the Splunk Observability Cloud for Mobile app from the iOS App Store or the Google PlayStore if you are in mainland China and have a device that is on a Chinese network carrier.
+.. note:: Due to Chinese network restrictions, you can't access the Splunk Observability Cloud for Mobile app from the iOS App Store or the Google PlayStore if you are in mainland China and have a device that is on a Chinese network carrier.
 
 ==========================================================
 User Authentication in Splunk Observability for Mobile
@@ -83,5 +83,8 @@ User Authentication in Splunk Observability for Mobile
 After you download Splunk Observability Cloud for Mobile, you have a variety of authentication methods to choose from in order to access your Splunk Observability Cloud instances. 
 
 #. Launch Splunk Observability Cloud on your mobile device.
-#. Select your realm or enter a customer URL.
+#. Select your realm or enter a custom URL.
+   
+   When your Observability Cloud admin set up Single Sign On (SSO), they created a custom URL for your organization. The URL must be a subdomain of signalfx.com. An example of a custom URL is https://your_org.signalfx.com. The :strong:`Enter Custom URL` field is prepopulated with ``signalfx.com``. Enter the unique portion of your organization's custom URL before ``signalfx.com``.
+
 #. Choose from :strong:`User Credentials`, :strong:`Google`, or :strong:`SSO`.
