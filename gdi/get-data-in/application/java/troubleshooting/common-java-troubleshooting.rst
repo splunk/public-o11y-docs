@@ -217,7 +217,7 @@ If AlwaysOn Profiling is not working as intended, check the configuration settin
 JFR is not available error
 -----------------------------------------------
 
-If your Java Virtual Machine does not support Java Flight Recording (JFR), the profiler logs a warning at startup with the message ``Java Flight Recorder (JFR) is not available in this JVM. Profiling is deactivated.``. 
+If your Java Virtual Machine does not support Java Flight Recording (JFR), the profiler logs a warning at startup with the message ``Java Flight Recorder (JFR) is not available in this JVM. Profiling is disabled.``. 
 
 To use the profiler, upgrade your JVM version to 8u262 and higher. See :ref:`java-otel-requirements`.
 

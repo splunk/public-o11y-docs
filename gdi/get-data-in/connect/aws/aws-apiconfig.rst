@@ -199,7 +199,7 @@ For example:
 Permissions for tag and properties collection
 ---------------------------------------------------------------------------------------
 
-On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS tags and properties. You'll be able to use Infrastructure Monitoring :ref:`to filter metrics based on those tags and properies <aws-filter>`.
+On top of the required permissions, you also need to include the specific permissions for the services you use in your AWS IAM policy to allow Observability Cloud to collect specific AWS tags and properties. You'll be able to use Infrastructure Monitoring :ref:`to filter metrics based on those tags and properties <aws-filter>`.
 
 These are these permissions to allow Observability Cloud to collect AWS tags and properties:
 

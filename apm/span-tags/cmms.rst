@@ -85,7 +85,7 @@ Follow these steps to create a Monitoring MetricSet.
     a. From the left navigation panel, select: :strong:`APM` > :strong:`APM Configurations` > :strong:`APM MetricSets`.
     b. From the APM landing page, click :strong:`APM Configuration` and select :strong:`APM MetricSets`. 
 
-2. Once in the MetricSets Configuation page, you have two options:
+2. Once in the MetricSets Configuration page, you have two options:
     
     a. If you have already indexed the span tag you are interested in, it appears in the list of MetricSets and is already generating Troubleshooting MetricSets. Select the edit icon for that span tag to open the :guilabel:`Edit MetricSet` dialog box and add a Monitoring MetricSet to your configuration using the following steps. 
     b. If you haven't already indexed the tag, follow steps 1-6 in :ref:`Index a new span tag <index-span-tags-instructions>`, then continue with the following steps in the :guilabel:`Add MetricSet` dialog box.

@@ -91,7 +91,7 @@ If you need to use a proxy, set one of the following environment variables accor
 
 - ``HTTP_PROXY``: The HTTP proxy address
 - ``HTTPS_PROXY``: The HTTPS proxy address
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+- ``NO_PROXY``: If a proxy is defined, sets addresses that don't use the proxy
 
 Restart the Collector after adding these environment variables to your configuration. 
 

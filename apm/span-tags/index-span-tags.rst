@@ -9,7 +9,7 @@ Index span tags to generate Troubleshooting MetricSets
 .. meta::
    :description: Learn how to use index tags to create Troubleshooting MetricSets that help you troubleshoot services with Splunk Observability Cloud.
 
-Thanks to Splunk APM's full-fidelity tracing, which captures every span from every trace, you can use span tags to break down services and inter-service calls along any characteristic or attribute associated with any given trace. This lets you customize data visualizations and metrics for your monitoring and troubleshooting requirements. 
+Thanks to Splunk APM full-fidelity tracing, which captures every span from every trace, you can use span tags to break down services and inter-service calls along any characteristic or attribute associated with any given trace. This lets you customize data visualizations and metrics for your monitoring and troubleshooting requirements. 
 
 To get additional value from a particular span tag, a Splunk APM administrator can run an action known as indexing, which enables additional automatic analysis of the indexed span tag. One benefit of this action is to get aggregated metrics, or MetricSets, across all spans that contain a specified indexed tag.
 
@@ -56,7 +56,7 @@ Splunk APM automatically indexes and generates Troubleshooting MetricSets for th
   - Kind
   - Service
 
-For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you canindex additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
+For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
 
 Cardinality contribution of indexed span tags
 ------------------------------------------------------------

@@ -29,7 +29,7 @@ This use case describes how Kai, an SRE, and Deepu, a service owner, perform the
 
 #. :ref:`take-preventative-action-xpuc`
 
-For a video version of this use case, watch :new-page:`Splunk's Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
+For a video version of this use case, watch :new-page:`the Splunk Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
 
 
 .. _receive-alerts-xpuc:

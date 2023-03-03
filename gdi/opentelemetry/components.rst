@@ -31,7 +31,7 @@ The OpenTelemetry Collector includes the following component types:
 
 * Receivers: Get data into the Collector from multiple sources.
 * Processors: Perform operations on data before it's exported. For example, filtering.
-* Exporters: Send data to one or more backends or destinations. 
+* Exporters: Send data to one or more back ends or destinations. 
 * Extensions: Extend the capabilities of the Collector.
 
 You can activate these components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.

@@ -544,7 +544,7 @@ Description
 
 Check the status of the collector on the host. Only available for :new-page:`Linux <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/linux-installer.md>`.
 
-Additionaly, you can use the :new-page:`Health Check extension <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/healthcheckextension/README.md>`, which activates to probe an HTTP url to check the status of the OpenTelemetry Collector.
+Additionally, you can use the :new-page:`Health Check extension <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/healthcheckextension/README.md>`, which activates to probe an HTTP url to check the status of the OpenTelemetry Collector.
 
 Syntax
 ---------------

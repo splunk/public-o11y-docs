@@ -33,9 +33,6 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following runtime 
    * - Metric
      - Type
      - Description
-   * - ``process.runtime.dotnet.exceptions.count``
-     - Gauge
-     - Count of exceptions since the previous observation.
    * - ``process.runtime.dotnet.gc.collections.count``
      - Cumulative counter
      - Number of garbage collections since the process started.
@@ -67,7 +64,7 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following runtime 
      - Gauge
      - Number of work items currently queued for processing by the thread pool. Only available for .NET 6 or higher.
    * - ``process.runtime.dotnet.jit.il_compiled.size``
-     - Gauge
+     - Cumulative counter
      - Bytes of intermediate language that have been compiled since the process started. Only available for .NET 6 or higher.
    * - ``process.runtime.dotnet.jit.methods_compiled.count``
      - Cumulative counter
@@ -131,18 +128,18 @@ The Splunk Distribution of OpenTelemetry .NET can collect the following instrume
    * - Metric
      - Type
      - Description
-   * - ``http.client.duration``
-     - Cumulative counter
-     - Duration of outbound HTTP requests.
-   * - ``http.server.duration``
-     - Cumulative counter
-     - Duration of the inbound HTTP request.
+   * - ``http.client.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - Duration of outbound HTTP requests, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs.
+   * - ``http.server.duration_{bucket|count|sum}``
+     - Cumulative counters (histogram)
+     - Duration of the inbound HTTP request, in the form of count, sum, and histogram buckets. This metric originates multiple metric time series, which might result in increased data ingestion costs.
    * - ``nservicebus.messaging.successes``
-     - Counter
+     - Cumulative counter
      - Number of messages successfully processed by the endpoint.
    * - ``nservicebus.messaging.fetches``
-     - Counter
+     - Cumulative counter
      - Number of messages retrieved from the queue by the endpoint.
    * - ``nservicebus.messaging.failures``
-     - Counter
+     - Cumulative counter
      - Number of messages unsuccessfully processed by the endpoint.
