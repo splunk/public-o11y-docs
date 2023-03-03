@@ -155,8 +155,6 @@ A collection of related operations, known as spans, that represents a unique tra
 Trace Analyzer
 ---------------
 
-In Trace Search, leverage full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
-
 In Trace Analyzer, use Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
 
 To learn more, see :ref:`apm-use-case-trace-analyzer` for a dedicated use case leveraging trace search. 
