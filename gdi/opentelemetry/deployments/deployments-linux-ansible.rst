@@ -15,7 +15,7 @@ Before installing the Ansible collection, do the following:
 * Find your :ref:`Splunk realm <otel-using>`
 * Check :ref:`exposed ports <otel-using>` to make sure your environment doesn't have conflicts. Ports can be changed in the package's configuration.
 
-Ansible Galaxy is Ansible's official hub for sharing Ansible content. See :new-page:`Ansible Collection for the Splunk Distribution of OpenTelemetry Collector <https://galaxy.ansible.com/signalfx/splunk_otel_collector>` for more information about the playbook. 
+Ansible Galaxy is the Ansible official hub for sharing Ansible content. See :new-page:`Ansible Collection for the Splunk Distribution of OpenTelemetry Collector <https://galaxy.ansible.com/signalfx/splunk_otel_collector>` for more information about the playbook. 
 
 Run the following command to install the Ansible collection from Ansible Galaxy:
 

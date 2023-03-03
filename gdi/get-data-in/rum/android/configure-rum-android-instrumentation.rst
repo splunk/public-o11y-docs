@@ -61,7 +61,7 @@ Use the following settings to configure the Android RUM agent:
    * - :code:`limitDiskUsageMegabytes(int)`
      -  Sets the maximum amount of storage to use for disk buffering. The default value is 25 MB. Requires ``diskBufferingEnabled`` to be ``true``.
    * - :code:`enableSessionBasedSampling(double)`
-     - Activates session ID based sampling and sets a sampling ratio. The sampling ratio is the probability of a session being included between. Values range betwee between ``0.0`` (all dropped) and ``1.0`` (all included).
+     - Activates session ID based sampling and sets a sampling ratio. The sampling ratio is the probability of a session being included between. Values range between ``0.0`` (all dropped) and ``1.0`` (all included).
    * - :code:`enableDebug()`
      - Activates debug mode. This feature is deactivated by default. Enabling debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
 

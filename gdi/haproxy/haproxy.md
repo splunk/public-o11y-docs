@@ -35,11 +35,11 @@ global
 To use a more restricted TCP socket, follow these steps:
 
 1. Define a backend server that listens to stats on localhost.
-2. Define a frontend proxy server that communicates with the backend server on a different port.
+2. Define a frontend proxy server that communicates with the back-end server on a different port.
 3. Use ACLs on both servers to control access. Depending on how restrictive your socket is, you might need to
 add the signalfx-agent user to the haproxy group as follows: `sudo usermod -a -G haproxy signalfx-agent`
 
-The following configuration file shows how to define a backend server and a frontend proxy:
+The following configuration file shows how to define a back-end server and a frontend proxy:
 
 ```
 global

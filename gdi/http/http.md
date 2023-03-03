@@ -98,7 +98,7 @@ The following configuration options change the resulting values:
 The following HTTP headers let the client and the server pass additional information with an HTTP request or response:
 
 * `Cache-Control: no-cache` to send the request to the origin server for validation before releasing a cached copy.
-* `Host` to change the request, that is, to bypass CDN or load balancer requesting directly the backend. 
+* `Host` to change the request, that is, to bypass CDN or load balancer requesting directly the back end. 
 * `Content-Type` to indicate the media type of the resource. For example, `json`, `xml`, or `octet-stream`.
 
 ### Examples

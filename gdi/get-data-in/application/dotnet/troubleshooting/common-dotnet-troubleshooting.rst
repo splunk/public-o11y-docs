@@ -163,7 +163,7 @@ The following snippet contains a sample ``profiling`` pipeline:
 Loss of profiling data or gaps in profiling data
 -------------------------------------------------------------
 
-When the instrumentation can't send data to Splunk OpenTeletry Collector due to full buffers, AlwaysOn Profiling activates the escape hatch, which drops all logs with profiling data until the buffers are empty.
+When the instrumentation can't send data to Splunk OpenTelemetry Collector due to full buffers, AlwaysOn Profiling activates the escape hatch, which drops all logs with profiling data until the buffers are empty.
 
 If the escape hatch activates, it logs the following message:
 

@@ -288,7 +288,7 @@ The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect jo
           priority: info
         - name: containerd
           priority: info
-      # Optional: Route journald logs to a seperate Splunk Index by specifying the index
+      # Optional: Route journald logs to a separate Splunk Index by specifying the index
       # value. Make sure the index exists in Splunk and is configured to receive HEC
       # traffic (not applicable to Observability Cloud).
       index: ""
