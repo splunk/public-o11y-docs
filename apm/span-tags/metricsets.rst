@@ -20,14 +20,30 @@ Troubleshooting MetricSets
 
 Troubleshooting MetricSets (TMS) are metric time series used for high-cardinality troubleshooting of identities in APM and for historical comparison among spans and workflows. Splunk APM generates Troubleshooting MetricSets based on indexed span tags and processes. To learn how to index span tags and processes to generate new Troubleshooting MetricSets, see :ref:`apm-index-span-tags`.
 
-Observability Cloud generates the following TMS for every identity in your service map:
+Every Troubleshooting MetricSet generates the following metrics, also known as Request, Error, and Duration (RED) metrics. The following metrics appear when you select a service from the :ref:`service map <service-map>` in the :strong:`Troubleshooting` view:
 
-* Request rate
-* Error rate
-* Root cause error rate
-* Latency (minimum, maximum, P50, P90, P99)
+- Request rate
+- Error rate
+- Root cause error rate
+- p50, p90, and p99 latency
 
-These TMS appear in the Troubleshooting page, which contains the service map, and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process.
+The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk APM reports quantiles from a distribution of metrics for each 10-second reporting window. 
+
+Default indexed span tags
+--------------------------------
+
+Splunk APM indexes and generates Troubleshooting MetricSets for the following span tags by default:
+
+  - Environment
+  - Endpoint
+  - Operation
+  - HTTP Method
+  - Kind
+  - Service
+
+For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
+
+TMS appear in the Troubleshooting page, which contains the service map, and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process.
 
 Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
 
@@ -50,7 +66,7 @@ Each MMS includes six metrics. For each metric there is one MTS with responses `
 * ``duration.max``
 
 
-While Observability Cloud generates TMS for every identity in APM, MMS are available only for a specific endpoint, for the aggregate of all endpoints in a service, or for a specific Business Workflow.
+MMS are available only for a specific endpoint, for the aggregate of all endpoints in a service, or for a specific Business Workflow.
 
 Endpoint-level MMS reflect the activity of a single endpoint in a service, while service-level MMS aggregate the activity of all of the endpoints in the service. Endpoint-level and service-level MMS are therefore limited to spans where the ``span.kind = SERVER`` or ``span.kind = CONSUMER``.
 

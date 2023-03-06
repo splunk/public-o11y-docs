@@ -25,10 +25,10 @@ With Troubleshooting MetricSets (TMS), you can drill down into to gain insights 
 
 .. _apm-default-span-tags:
 
-Span tags APM automatically indexes
+Default indexed span tags in APM
 ====================================
 
-APM automatically indexes and creates Troubleshooting MetricSets for the span tags in the following table:
+APM indexes and creates Troubleshooting MetricSets by default for the span tags in the following table:
 
 .. list-table::
    :header-rows: 1

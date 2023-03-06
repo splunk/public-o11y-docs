@@ -42,10 +42,10 @@ Every Troubleshooting MetricSet generates the following metrics, also known as R
 
 The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk APM reports quantiles from a distribution of metrics for each 10-second reporting window. 
 
-Automatically indexed span tags
+Default indexed span tags
 --------------------------------
 
-Splunk APM automatically indexes and generates Troubleshooting MetricSets for the following span tags:
+Splunk APM indexes and generates Troubleshooting MetricSets for the following span tags by default:
 
   - Environment
   - Endpoint
