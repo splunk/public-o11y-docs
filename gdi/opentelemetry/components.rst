@@ -47,7 +47,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
   </embed>
 
 .. list-table::
-   :widths: 25 50 25
+   :widths: 25 50 15
    :header-rows: 1
    :width: 100%
 
@@ -69,9 +69,6 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`databricks_receiver` (``databricks``)
      - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
-   * - ``discovery``
-     - Tests the functional status of any receiver whose targed is reported by an observer extension.
-     - Logs
    * - ``filelog``
      - Tails and parses logs from files.
      - Logs
@@ -108,7 +105,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
-   * - :ref:`oracledb` (``oracledb``)
+   * - :ref:`oracledb` (``oracledb``) |br|
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
      - Metrics
    * - ``otlp``
@@ -141,19 +138,19 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
-   * - ``sqlquery`` (Experimental)
+   * - ``sqlquery``
      - Runs custom SQL queries to generate metrics from a database connection.
      - Metrics
    * - ``statsd``
      - Collects StatsD messages to generate metrics.
      - Metrics
-   * - ``syslog`` (Experimental)
+   * - ``syslog``
      - Parses syslog messages received over TCP or UDP.
      - Logs
-   * - ``tcplog`` (Experimental)
+   * - ``tcplog``
      - Receives logs over TCP.
      - Logs
-   * - ``windowseventlog`` (Experimental)
+   * - ``windowseventlog``
      - Tails and parses logs from the Windows Event log API.
      - Logs
    * - ``windowsperfcounters`` (Windows only)
@@ -185,14 +182,14 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`batch-processor` (``batch``)
      - Accepts spans, metrics, or logs and places them into batches. Batching helps better compress the data and reduce the number of outgoing connections required to transmit the data. This processor supports both size-based and time-based batching.
      - Metrics, logs, traces
-   * - ``groupbyattrs``
-     - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
-     - Metrics, logs, traces
    * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
-   * - ``k8s_tagger``
-     - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata.
+   * - ``groupbyattrs``
+     - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
+     - Metrics, logs, traces
+   * - ``k8sattributes``
+     - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata. Formerly known as ``k8s_tagger``.
      - Metrics, logs, traces
    * - ``memory_limiter``
      - Prevents out of memory situations on the Splunk Distribution of OpenTelemetry Collector.
@@ -215,6 +212,12 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``span``
      - Modifies either the span name or attributes of a span based on the span name.
      - Traces
+   * - ``tail_sampling``
+     - Samples traces based on a set of defined policies. All spans for a given trace must be received by the same Collector instance for effective sampling decisions.
+     - Traces
+   * - ``transform`` (alpha)
+     - Modifies telemetry based on OpenTelemetry Transformation Language functions.
+     - Metrics, logs, traces
 
 .. _collector-components-exporters:
 .. _otel-exporters:
