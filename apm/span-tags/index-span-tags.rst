@@ -45,16 +45,7 @@ The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk AP
 Default indexed span tags
 --------------------------------
 
-Splunk APM indexes and generates Troubleshooting MetricSets for the following span tags by default:
-
-  - Environment
-  - Endpoint
-  - Operation
-  - HTTP Method
-  - Kind
-  - Service
-
-For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
+Splunk APM indexes and generates Troubleshooting MetricSets for several by default. For more details about each of these tags, see :ref:`apm-default-span-tags`. For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
 
 Cardinality contribution of indexed span tags and processes
 ------------------------------------------------------------
