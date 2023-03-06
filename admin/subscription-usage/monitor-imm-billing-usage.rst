@@ -71,35 +71,6 @@ Differences between high-resolution metrics and standard-resolution metrics
       * High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. 
       * Your Infrastructure Monitoring subscription allows you to send a certain number of high-resolution metrics.
 
-..
-    _how-counted:
-
-.. the following is placeholder text that might be added someday
-   It should be moved into an include file  -- brs
-
-   How are high-resolution metrics counted?
-   ----------------------------------------------------------------------------------
-
-   If you have a high-resolution metric that comes from a container or host (ie in the Host plan) it still contributes to those host/container counts and high-resolution counts (edited)
-
-   if you have a custom metric that is high-resolution it will only be included in the high-resolution count
-
-..    usage-about:
-
-..
-..
-.. About usage reports
-.. =============================================================================
-..
-..
-.. -  The :ref:`Monthly Usage report<summary-by-month>`, available on the Billed Usage tab, shows the number of hosts and containers sending in data for each hour within the month, and the number of custom metrics (MTS) and high resolution metrics sent in each hour.
-..
-..
-   ref:`dimension-report`:
-..
-..
-.. - The :ref:`dimension-report`, available on the Usage Breakdown tab, shows, on a daily basis, the number of data points and MTS for a given dimension value, as well as its average reporting frequency. Use this report to help you understand the volume of data you're sending. For example, you might notice that there are some metrics that you do not want to send at all, and conversely, you might see that there are some metrics that you want to send at a higher resolution.
-
 .. _using-page:
 
 Viewing and downloading Infrastructure Monitoring usage reports
@@ -287,7 +258,6 @@ The following table explains the different columns in a dimension report:
   * - No. [usage metric type] Data points
     - * During the report's 24-hour period (UTC), the number of data points received by Infrastructure Monitoring from hosts or containers, and the number of data points associated with custom, high-resolution, or bundled MTS.
 
-.. Keeping the following labels (per-dimension and by-dimension) because they may have been used in the past --brs
 
 .. _metrics-per-dimension:
 

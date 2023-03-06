@@ -4,9 +4,6 @@
 Query logs in Log Observer Connect or Log Observer
 *****************************************************************************
 
-.. meta created 2022-07-12
-.. meta DOCS-3730
-
 .. meta::
   :description: Overview of the various ways you can query logs in Log Observer and Log Observer Connect. Browse, search by keyword, filter, extract fields, or aggregate logs.
 

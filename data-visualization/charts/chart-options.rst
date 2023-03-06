@@ -4,7 +4,7 @@
 Chart Options in the Chart Builder
 *****************************************************************
 
-.. meta updated 8/7/18
+
 
 .. meta::
   :description: In addition to customizing individual plots on a chart, you can set a number of options on the Chart Options tab that apply to the entire chart

@@ -4,9 +4,6 @@
 View individual log details and create a field extraction processor
 ***********************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: View and search a log's fields and values in JSON. Link to related content. Extract a field to create a processing rule.
 
