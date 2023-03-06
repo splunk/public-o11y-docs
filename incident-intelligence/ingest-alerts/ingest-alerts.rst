@@ -14,6 +14,7 @@ Ingest alerts in Splunk Incident Intelligence
     ingest-azure
     ingest-prometheus
     ingest-rest
+    ingest-itsi-alerts
 
 The following options are available for ingesting alerts in Incident Intelligence:
 
@@ -80,6 +81,9 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
   
    * - Generic REST alerts
      - See :ref:`ii-ingest-rest`.
+
+   * - ITSI Splunk Enterprise and Splunk Cloud Platform
+     - See :ref:`ii-ingest-splunk-itsi-alerts`
 
 .. raw:: html
 
