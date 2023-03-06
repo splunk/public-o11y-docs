@@ -97,7 +97,7 @@ To create a page level metric, first create a custom rule to map to the page you
 App level metrics 
 -----------------
 
-Web vitals have a standard range that denotes good performance. For example, a Largest Contentful Paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps on how to remedy the slow LCP.
+Web vitals have a standard range that denotes good performance. For example, a largest contentful paint (LCP) metric of more than 2.5 seconds might lead to bad user experience on your application. With Splunk RUM, you can create an alert to notify you when your aggregated LCP is more than 2.5 seconds, send a Slack notification to your team, and link to the runbook with the steps on how to remedy the slow LCP.
 
 .. image:: /_images/rum/alert-modal-lcp.png
    :alt: This screenshot shows a detector modal where you can select the scope, type, and frequency of your alert. 
@@ -126,7 +126,7 @@ Follow these steps to create a detector in RUM:
 
 1. In Splunk RUM, select a metric that is of interest to you to open Tag Spotlight.  
 
-2. Select :strong:`Create New Detector`.
+2. Select :strong:`Create new detector`.
 
 3. Configure your detector:
 

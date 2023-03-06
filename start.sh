@@ -10,15 +10,19 @@ echo "*                                                                    *"
 echo "**********************************************************************"
 echo ""
 
-docker-compose down 
+echo "docker-compose down"
+docker-compose --ansi=never down 
 
+echo "Remove old files"
 rm -f _build/.DS_Store
 rm -f _build/html/.DS_Store
 rm -rf _build/*
 
-docker-compose build
+echo "docker-compose build"
+docker-compose --ansi=never build
 
-docker-compose up -d
+echo "docker-compose up"
+docker-compose --ansi=never up -d
 
 printf "\rDocker container built.              "
 sleep .5

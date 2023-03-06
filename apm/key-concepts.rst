@@ -42,7 +42,7 @@ Splunk APM is an Application Performance Monitoring solution that collects every
    * - :ref:`Trace<trace-concept>` 
      - A collection of operations, known as spans, that represents a unique transaction an application handles. 
 
-   * - :ref:`Trace Search<trace-search-concept>`
+   * - :ref:`Trace Analyzer<trace-search-concept>`
      - Search through all traces from all instrumented services to find the exact trace you're looking for. 
 
    * - :ref:`Trace View<trace-view-concept>`
@@ -73,7 +73,7 @@ Splunk APM is an Application Performance Monitoring solution that collects every
      - Metric time series that power Splunk APM’s real-time monitoring capabilities, including charts, dashboards, and detectors.
 
    * - :ref:`Cardinality<cardinality-concept>`
-     - The number of distinct values in a dataset.
+     - The number of distinct values in a data set.
  
 
 Services 
@@ -152,11 +152,12 @@ A collection of related operations, known as spans, that represents a unique tra
 
 .. _trace-search-concept:
 
-Trace Search
+Trace Analyzer
 ---------------
-In Trace Search, leverage Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
 
-To learn more, see :ref:`specific-trace` for a dedicated use case leveraging trace search. 
+In Trace Analyzer, use Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
+
+To learn more, see :ref:`apm-use-case-trace-analyzer` for a dedicated use case leveraging trace search. 
 
 .. _trace-view-concept:
 
@@ -248,6 +249,6 @@ For more information about MMS, see :ref:`monitoring-metricsets`.
 
 Cardinality
 ------------
-The number of distinct values in a dataset. Low cardinality data has a small number of distinct values.  High cardinality data has a large number of distinct values, and requires more computation and storage to analyze and store. 
+The number of distinct values in a data set. Low cardinality data has a small number of distinct values.  High cardinality data has a large number of distinct values, and requires more computation and storage to analyze and store. 
 
 See :ref:`troubleshoot-mms` to learn more about working with high cardinality data. 

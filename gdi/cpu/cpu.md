@@ -40,7 +40,7 @@ monitors:  # All monitor config goes under this key
    ...  # Additional config
 ```
 
-On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host's `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top-level configuration `procPath`. Add the following to your configuration:
+On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top-level configuration `procPath`. Add the following to your configuration:
 
 ```
 procPath: /custom_proc

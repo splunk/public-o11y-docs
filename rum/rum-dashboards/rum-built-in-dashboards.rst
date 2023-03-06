@@ -34,7 +34,7 @@ Navigate to RUM built-in dashboards
 
 To go to the built-in dashboards: 
 
-#. Select :guilabel:`Dashboards` >  :guilabel:`RUM Applications` > then select either Mobile App Health or Browser App Health.
+#. Select :guilabel:`Dashboards` >  :guilabel:`RUM applications` > then select either Mobile App Health or Browser App Health.
 
 * You can also navigate to the dashboards from RUM with the :guilabel:`...` settings button. 
 
@@ -79,7 +79,7 @@ Dashboards for alerts and detectors
 
 To create charts and dashboards for your RUM alerts and detectors, see:   
 
-* :ref:`Link detectors to charts <linking-detectors>` in Alerts and Detectors.    
+* :ref:`Link detectors to charts <linking-detectors>` in Alerts & Detectors.    
 
 * :ref:`Dashboards in Splunk Observability Cloud <dashboards>` in Dashboards and Charts. 
 

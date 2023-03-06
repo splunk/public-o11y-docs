@@ -88,7 +88,7 @@ The following configuration options are available for this monitor:
 
 After you deploy the monitor in the Splunk Distribution of OpenTelemetry Collector, follow these steps to configure the Apache web server to expose status metrics:
 
-1. Enable the `mod_status` module in your Apache server. Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which the monitor requires.
+1. Activate the `mod_status` module in your Apache server. Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which the monitor requires.
 2. Add the following configuration to your Apache server:
    ```
     ExtendedStatus on

@@ -70,7 +70,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy where you want to create an incident workflow.
 #. Select the :guilabel:`Incident workflows` tab. 
-#. To add responders, select :guilabel:`Configure invite` under :guilabel:`Immediately`. 
+#. To add responders, select :guilabel:`+ Add responders` under :guilabel:`Immediately`. 
 #. In the :guilabel:`Configure invite` window, add responders by name or by schedule. If you don't have an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
    
     .. list-table::
@@ -90,7 +90,7 @@ Use incident workflows to determine who is notified when a new incident is trigg
 #. Select :guilabel:`Add responders`.
 #. Select :guilabel:`Add New Step` to add additional escalating steps with additional responders to your incident workflow.
 #. Select an elapsed time period in the drop-down list next to :guilabel:`If unacknowledged after`.
-#. Select :guilabel:`Configure invite` to add responders.
+#. Select :guilabel:`+ Add responders` to add responders.
 #. Repeat these steps until you have a complete incident workflow for the incident policy. 
 
 .. _ii-rank-incident-policies:

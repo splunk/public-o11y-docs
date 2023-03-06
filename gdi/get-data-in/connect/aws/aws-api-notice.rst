@@ -28,7 +28,7 @@ To do so, add ``"cloudwatch:GetMetricData"`` in the :strong:`Action` section of 
 Configure the API using the AWS UI
 -----------------------------------------
 
-Alternatively, you can configure this via the AWS Management Console. 
+Alternatively, you can configure this using the AWS Management Console. 
 
 .. image:: /_images/gdi/GetMetricData_AWSUI.png
   :width: 90% 
