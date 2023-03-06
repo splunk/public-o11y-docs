@@ -84,9 +84,24 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``jaeger``
      - Receives trace data in Jaeger format.
      - Traces
+   * - ``journald``
+     - Parses Journald events from the systemd journal. The ``journalctl`` binary must be in the same ``$PATH`` of the agent.
+     - Logs
    * - :ref:`kubernetes-cluster-receiver` (``k8s_cluster``)
      - Collects cluster-level metrics from the Kubernetes API server. It uses the Kubernetes API to listen for updates. You can use a single instance of this receiver to monitor a cluster.
      - Metrics
+   * - ``k8s_events``
+     - Collects all new and updated events from the Kubernetes API server. Supports authentication through service accounts only.
+     - Logs
+   * - ``k8sobjects``
+     - Collects objects from the Kubernetes API server. Supports authentication through service accounts only.
+     - Logs
+   * - ``kafkametrics``
+     - Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
+     - Metrics
+   * - ``kafka``
+     - Receives metrics, logs, and traces from Kafka. Metrics and logs only support the OTLP format.
+     - Metrics, logs, traces
    * - :ref:`kubelet-stats-receiver` (``kubeletstats``)
      - Pulls pod metrics from the API server on a kubelet.
      - Metrics
@@ -99,21 +114,36 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``otlp``
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
-   * - :ref:`receiver-creator-receiver` (``receiver_creator``)
-     - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
-     - N/A
-   * - ``signalfx``
-     - Accepts metrics and logs in the proto format.
-     - Metrics, logs
+   * - ``postgresql``
+     - Queries the PostgreSQL statistics collector. Supports PostgreSQL version 9.6 and higher.
+     - Metrics
    * - :ref:`prometheus-receiver` (``prometheus``)
      - Provides a simple configuration interface to scrape metrics from a single target.
      - Metrics
+   * - ``prometheus_simple``
+     - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
+     - Metrics
+   * - :ref:`receiver-creator-receiver` (``receiver_creator``)
+     - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
+     - N/A
+   * - ``redis``
+     - Retrieves Redis ``INFO`` data from a specific Redis instance and builds metrics from it.
+     - Metrics
+   * - ``sapm``
+     - Receives traces from other collectors or from the SignalFx Smart Agent.
+     - Traces
+   * - ``signalfx``
+     - Accepts metrics and logs in the proto format.
+     - Metrics, logs
    * - ``smartagent``
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
      - Metrics
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
+   * - ``sqlquery`` (Experimental)
+     - Runs custom SQL queries to generate metrics from a database connection.
+     - Metrics
    * - ``zipkin``
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
