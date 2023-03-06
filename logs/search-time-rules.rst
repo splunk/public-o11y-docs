@@ -4,9 +4,6 @@
 Apply processing rules across historical data
 *****************************************************************
 
-.. meta created 2021-04-13
-.. meta DOCS-2001
-
 .. meta::
   :description: Transform your data with a log processing rule, then apply the rule to logs that came in before the rule existed. Learn about search-time vs. index-time rules.
 

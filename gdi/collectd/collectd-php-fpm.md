@@ -17,7 +17,7 @@ This monitor is not available on Windows as collectd plugins are only supported 
 
 To configure the PHP-FPM service itself to expose status metrics, follow these steps:
 
-1. Enable the status path. See the PHP documentation for more information.
+1. Activate the status path. See the PHP documentation for more information.
 2. Configure access through the web server. The following example shows how to configure access for NGINX:
 
    ```
@@ -72,7 +72,7 @@ The following table shows the configuration options for the collectd/php-fpm rec
 | --- | --- | --- | --- |
 | `host` | no | `string` | The host name of the web server. For example, `127.0.0.1`. |
 | `port` | no | `integer` | The port number of the web server. For example, `80`. The default value is `0`. |
-| `useHTTPS` | no | `bool` | Whether the monitor connects to Supervisor via HTTPS instead of HTTP. The default value is `false`. |
+| `useHTTPS` | no | `bool` | Whether the monitor connects to Supervisor using HTTPS instead of HTTP. The default value is `false`. |
 | `path` | no | `string` | The scrape URL for Supervisor. The default value is `/status`. |
 | `url` | no | `string` | URL or Go template that to be populated with the `host`, `port`, and `path` values. |
 | `name` | no | `string` | The `plugin_instance` dimension. It can take any value. |

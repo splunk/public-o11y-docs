@@ -11,7 +11,7 @@ If you have Infrastructure Monitoring Enterprise Edition, you can manage costs
 associated with sending in data by setting limits on access tokens.
 
 Regardless of the edition you're using, access tokens also help you control the
-rate at which you use Infrastructure Monitoring resources. This feature enables
+rate at which you use Infrastructure Monitoring resources. This feature allows
 you to provide exemplary performance in the user interface.
 
 Cost-related token limits

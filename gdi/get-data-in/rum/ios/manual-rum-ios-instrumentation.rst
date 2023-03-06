@@ -71,7 +71,7 @@ The following example shows how to customize the name of an account settings scr
 
    SplunkRum.setScreenName("AccountSettingsTab")
 
-When calling the :code:`setScreenName` function, automatic screen name instrumentation is disabled to avoid overwriting custom names.
+When calling the :code:`setScreenName` function, automatic screen name instrumentation is deactivated to avoid overwriting custom names.
 
 .. note:: Use ``setScreenName`` in all the views of your application to avoid inconsistent names in your data.
 

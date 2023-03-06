@@ -1,7 +1,7 @@
 .. include:: /_includes/gdi/zero-config-preview-header.rst
 
 .. meta::
-   :description: How to enable zero configuration automatic instrumentation for Kubernetes Java applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
+   :description: How to activate zero configuration automatic instrumentation for Kubernetes Java applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
 
 .. _auto-instrumentation-java-k8s:
 
@@ -9,7 +9,7 @@
 Zero Configuration Auto Instrumentation for Java Applications on Kubernetes
 ==================================================================================================================
 
-Zero Configuration Auto Instrumentation for Java enables automatic instrumentation for Kubernetes Java applications. When you enable automatic instrumentation, you do not have to recompile your applications, but you do have to restart any applications that are already running. 
+Zero Configuration Auto Instrumentation for Java activates automatic instrumentation for Kubernetes Java applications. When you activate automatic instrumentation, you do not have to recompile your applications, but you do have to restart any applications that are already running. 
 
 .. _zero-config-k8s-prereqs:
 
@@ -22,22 +22,22 @@ Prerequisites
 
 .. _enable-zero-conf-java-k8s:
 
-Enable automatic instrumentation of Java applications on Kubernetes 
+Activate automatic instrumentation of Java applications on Kubernetes 
 ===============================================================================
 
-Before deployment, you can enable automatic instrumentation for a Kubernetes Deployment or pod by adding the ``otel.splunk.com/inject-java`` annotation.
+Before deployment, you can activate automatic instrumentation for a Kubernetes Deployment or pod by adding the ``otel.splunk.com/inject-java`` annotation.
 
-When you enable instrumentation, the Collector operator injects the Splunk OTel Java agent into Java applications to capture telemetry data.
+When you activate instrumentation, the Collector operator injects the Splunk OTel Java agent into Java applications to capture telemetry data.
 
-To enable automatic instrumentation, add this annotation to the ``spec`` for a deployment or pod: ``otel.splunk.com/inject-java: "true"``.
+To activate automatic instrumentation, add this annotation to the ``spec`` for a deployment or pod: ``otel.splunk.com/inject-java: "true"``.
 If you add the annotation to a pod, restarting the pod removes the annotation.
 
-You can also enable automatic instrumentation on a running workload.
+You can also activate automatic instrumentation on a running workload.
 
 .. _enable-zero-conf-java-yaml:
 
-Enable or disable automatic instrumentation before runtime
--------------------------------------------------------------
+Activate or deactivate automatic instrumentation before runtime
+----------------------------------------------------------------
 
 If the deployment is not deployed, add the ``otel.splunk.com/inject-java`` annotation to the application deployment YAML file.
 
@@ -57,7 +57,7 @@ For example, given the following deployment YAML:
             image: my-java-app:latest
 
 
-Enable auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
+Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
 
 .. code-block:: yaml
 
@@ -76,16 +76,16 @@ Enable auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to
             image: my-java-app:latest
     
 
-The Collector operator enables automatic instrumentation for any Java applications in the deployment.
+The Collector operator activates automatic instrumentation for any Java applications in the deployment.
 
-To disable automatic instrumentation, remove the annotation or set its value to ``false``.
+To deactivate automatic instrumentation, remove the annotation or set its value to ``false``.
 
 .. _enable-zero-conf-java-patch:
 
-Enable or disable automatic instrumentation on a running workload
------------------------------------------------------------------
+Activate or deactivate automatic instrumentation on a running workload
+------------------------------------------------------------------------
 
-If the application is already running, patch the deployment using ``kubectl patch`` to enable instrumentation. 
+If the application is already running, patch the deployment using ``kubectl patch`` to activate instrumentation. 
 
 .. caution:: 
 
@@ -98,7 +98,7 @@ Use the following snippet as an example. Replace ``<my-deployment>`` with your d
     
     kubectl patch deployment <my-deployment> -p '{"spec": {"template":{"metadata":{"annotations":{"otel.splunk.com/inject-java":"true"}}}} }'
 
-To disable automatic instrumentation, run the same command but change the value of the annotation to ``false``:
+To deactivate automatic instrumentation, run the same command but change the value of the annotation to ``false``:
 
 .. code-block:: bash
     
@@ -110,7 +110,7 @@ To disable automatic instrumentation, run the same command but change the value 
 Check the status of automatic instrumentation 
 -------------------------------------------------
 
-When you successfully enable instrumentation for a deployment, the metadata for every pod in the deployment includes the annotation ``otel.splunk.com/injection-status:success``. 
+When you successfully activate instrumentation for a deployment, the metadata for every pod in the deployment includes the annotation ``otel.splunk.com/injection-status:success``. 
 
 Use the following command to check for the ``injection-status`` annotation. Replace ``<POD_NAME>`` with the name of your pod.
 
@@ -118,7 +118,7 @@ Use the following command to check for the ``injection-status`` annotation. Repl
 
     kubectl get pod  <POD_NAME> -o yaml | grep inject
 
-The command's result is similar to the following:
+The command result is similar to the following:
 
 .. code-block:: bash
 
@@ -126,9 +126,9 @@ The command's result is similar to the following:
     otel.splunk.com/injection-status: success
 
 
-If the ``injection-status`` annotation is not present or is not set to ``success``, auto instrumentation is not enabled. See the troubleshooting section for next steps.
+If the ``injection-status`` annotation is not present or is not set to ``success``, auto instrumentation is not activated. See the troubleshooting section for next steps.
 
-If the ``injection-status`` annotation is set to ``success``, you have enabled instrumentation correctly. You can :ref:`verify-apm-data` or :ref:`optionally configure instrumentation settings<configure-java-zeroconf-k8s>`. 
+If the ``injection-status`` annotation is set to ``success``, you have activated instrumentation correctly. You can :ref:`verify-apm-data` or :ref:`optionally configure instrumentation settings<configure-java-zeroconf-k8s>`. 
 
 .. _configure-java-zeroconf-k8s:
 
@@ -152,7 +152,7 @@ See :ref:`advanced-java-otel-configuration` for the full list of supported envir
 Troubleshooting
 =======================
 
-If you enable auto instrumentation and you do not see any telemetry data in Observability Cloud APM, try the following steps:
+If you activate auto instrumentation and you do not see any telemetry data in Observability Cloud APM, try the following steps:
 
 - Check the Collector operator logs. Look for the pods in the ``splunk-otel-operator-system`` namespace, and then examine their logs:
 

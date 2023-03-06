@@ -16,7 +16,7 @@ You can modify the following settings to fully configure the Lambda layer, inclu
 General settings
 =========================================================================
 
-The following settings enable the Lambda layer to send data to Splunk Observability Cloud:
+The following settings activate the Lambda layer to send data to Splunk Observability Cloud:
 
 .. list-table:: 
    :header-rows: 1
@@ -110,9 +110,9 @@ The following settings control the sending of AWS Lambda metric data to Splunk O
    * - ``REPORTING_TIMEOUT``
      - Timeout for sending data points to Splunk Observability Cloud, in seconds. Default value is ``5``. Minimum value is ``1``.
    * - ``VERBOSE``
-     - Enables verbose logging for metric data collection. AWS CloudWatch stores the logs as log groups associated with the Lambda function. Default is ``false``.
+     - Activates verbose logging for metric data collection. AWS CloudWatch stores the logs as log groups associated with the Lambda function. Default is ``false``.
    * - ``HTTP_TRACING``
-     - Enabled detailed logs of HTTP calls to Splunk Observability Cloud. Default is ``false``.
+     - Activates detailed logs of HTTP calls to Splunk Observability Cloud. Default is ``false``.
 
 For more information, see :ref:`splunk-otel-lambda-metrics`.
 

@@ -4,9 +4,6 @@
 Filter logs by field
 *****************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: Include or exclude fields or field values to filter your log collection and find specific log events. 
 

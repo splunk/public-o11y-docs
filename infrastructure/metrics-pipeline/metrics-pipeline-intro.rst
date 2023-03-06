@@ -1,12 +1,18 @@
-:orphan:
-
-.. include:: /_includes/metrics-pipeline/metrics-pipeline-preview-header.rst
 
 .. _metrics-pipeline-intro:
 
 ******************************************************
 Introduction to metrics pipeline management
 ******************************************************
+
+.. meta::
+    :description: Introduction to metrics pipeline management in Splunk Infrastructure Monitoring
+
+|hr|
+
+:strong:`Available in Enterprise Edition and Service Bureau`
+
+|hr|
 
 .. meta::
     :description: Introduction to metrics pipeline management in Splunk Observability Cloud.
@@ -20,12 +26,12 @@ What is metric cardinality?
 
 Metric cardinality is the number of unique metric time series (MTS) produced by a combination of metric name and its associated dimensions. Therefore, a metric has high cardinality when it has a high number of dimension keys, and a high number of possible unique values for those dimension keys.
 
-For example, you send in data for a metric ``trans.latency``.
+For example, you send in data for a metric ``http.server.duration``.
 
-* If ``trans.latency`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then ``trans.latency`` generates 3 metric time series (MTS).
-* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then ``trans.latency`` generates 3 (endpoints) * 3 (regions) = 9 MTS.
+* If ``http.server.duration`` has only 1 dimension ``endpoint`` with 3 unique values: ``A``, ``B``, and ``C``, then ``http.server.duration`` generates 3 metric time series (MTS).
+* If you add another dimension ``region`` with 3 unique values: ``us-east``, ``us-west``, and ``eu``, then ``http.server.duration`` generates 3 (endpoints) * 3 (regions) = 9 MTS.
 
-Even though ``trans.latency`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
+Even though ``http.server.duration`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
 
 To learn more about MTS, see :ref:`metric-time-series`.
 
@@ -62,7 +68,7 @@ With metrics pipeline management, you can aggregate your data as you are ingesti
 Example
 ++++++++
 
-You send a metric called ``service.latency`` for a containerized workload using Splunk Infrastructure Monitoring.
+You send a metric called ``http.server.duration`` for a containerized workload using Splunk Infrastructure Monitoring.
 
 Your workload has 10 endpoints, 20 regions, 5 services, and 10,000 containers. Each of the 5 services has 10,000 containers and 10 endpoints.
 
@@ -100,7 +106,7 @@ When you have a new aggregated metric, you might no longer have any use case for
 Example
 ++++++++
 
-Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for ``service.latency``. 
+Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for ``http.server.duration``. 
 
 Use case for metrics pipeline management
 ==================================================
@@ -113,3 +119,5 @@ Create your first metric rules
 ==========================================
 
 To start using metrics pipeline management, see :ref:`use-metrics-pipeline`.
+
+.. note:: Metrics pipeline management is not available for metrics ingested through the ``https://ingest.signalfx.com/v1/collectd`` endpoint.

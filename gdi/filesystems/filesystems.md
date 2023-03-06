@@ -10,7 +10,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 This monitor reports metrics about free disk space on mounted devices.
 
-On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host's `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top level configuration `procPath`, as shown in the following example:
+On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host`/proc` file system is mounted somewhere other than `/proc`, specify the path using the top level configuration `procPath`, as shown in the following example:
 
 ```yaml
 procPath: /hostfs/proc

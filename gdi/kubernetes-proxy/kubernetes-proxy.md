@@ -55,7 +55,7 @@ service:
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
 | `useHTTPS` | no | `bool` | If true, the agent will connect to the server using HTTPS instead of plain HTTP. **Default** is `false`. |
 | `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
-| `skipVerify` | no | `bool` | If useHTTPS is true and this option is also true, the exporter's TLS certificate will not be verified. **Default** is `false`. |
+| `skipVerify` | no | `bool` | If useHTTPS is true and this option is also true, the exporter TLS certificate will not be verified. **Default** is `false`. |
 | `sniServerName` | no | `string` | If useHTTPS is true and skipVerify is true, the sniServerName is used to verify the hostname on the returned certificates. It is also included in the client's handshake to support virtual hosting unless it is an IP address. |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to false. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections. |

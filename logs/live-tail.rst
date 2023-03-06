@@ -4,9 +4,6 @@
 Verify changes to monitored systems with Live Tail
 **************************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: Live Tail shows a near real-time feed of log messages as they come into Log Observer. See the impact of updates live. Verify that an integration is sending data.
 

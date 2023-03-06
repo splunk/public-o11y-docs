@@ -32,7 +32,7 @@ Provide a Velero monitor entry in your Collector or Smart Agent (deprecated) con
 
 ### Velero
 
-Use the Velero Helm chart to automatically enable Prometheus metrics for Velero. See https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/README.md on GitHub for more information.
+Use the Velero Helm chart to automatically activate Prometheus metrics for Velero. See https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/README.md on GitHub for more information.
 
 ### Splunk Distribution of OpenTelemetry Collector
 

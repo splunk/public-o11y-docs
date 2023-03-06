@@ -63,7 +63,7 @@ Use the following settings to configure the Browser RUM agent:
      - Sets additional attributes added to all spans. For example, ``version`` or ``user_id``.
    * - ``instrumentations``
      - Object
-     - Enables or disables specific Browser RUM instrumentations. See :ref:`browser-rum-instrumentation-settings`.
+     - Activates or deactivates specific Browser RUM instrumentations. See :ref:`browser-rum-instrumentation-settings`.
    * - ``ignoreUrls``
      - ``(string\|regex)[]``
      - List of URLs that the agent must ignore. Matching URLs don't produce spans. You can provide two different types of rules: strings or regular expressions.
@@ -72,7 +72,7 @@ Use the following settings to configure the Browser RUM agent:
      - Domain used for session tracking. For example, if you have sites on both ``foo.example.com`` and ``bar.example.com``, setting ``cookieDomain`` to ``example.com`` allows both sites to use the same session identifier. See :ref:`browser-rum-cookies` for more information.
    * - ``context.async``
      - Boolean
-     - Enables the asynchronous context manager. The default value is ``false``. See :ref:`browser-rum-async-traces`.
+     - Activates the asynchronous context manager. The default value is ``false``. See :ref:`browser-rum-async-traces`.
    * - ``exporter.onAttributesSerializing``
      - ``(a: SpanAttributes, s?: Span) => SpanAttributes``
      - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample use case is :ref:`rum-browser-redact-pii`. 
@@ -81,14 +81,14 @@ Use the following settings to configure the Browser RUM agent:
      - Tracing configuration passed to ``WebTracerProvider``. You can use it to configure sampling. See :ref:`browser-rum-sampling-configuration`.
    * - ``debug``
      - Boolean
-     - Enables debug logging in the developer console. The default value is ``false``.
+     - Activates debug logging in the developer console. The default value is ``false``.
 
 .. _browser-rum-instrumentation-settings:
 
 Instrumentation settings
 ==============================================
 
-To enable or disable specific Browser RUM instrumentations, compose and pass an object to the ``instrumentations`` property. The following example of agent initialization changes the settings of several instrumentations:
+To activate or deactivate specific Browser RUM instrumentations, compose and pass an object to the ``instrumentations`` property. The following example of agent initialization changes the settings of several instrumentations:
 
 .. code-block:: javascript
 
@@ -108,8 +108,8 @@ To enable or disable specific Browser RUM instrumentations, compose and pass an 
                 'gamepadconnected'
               ],
             },
-            longtask: false, // Disables monitoring for longtasks
-            websockets: true, // Enables monitoring for websockets
+            longtask: false, // Deactivates monitoring for longtasks
+            websockets: true, // Activates monitoring for websockets
          },
       });
 
@@ -124,46 +124,46 @@ The following table contains all the properties supported by the ``instrumentati
      - Description
    * - ``connectivity``
      - ``false``
-     - Enables the collection of connectivity events. See :ref:`browser-rum-data-connectivity-events`.
+     - Activates the collection of connectivity events. See :ref:`browser-rum-data-connectivity-events`.
    * - ``document``
      - ``true``
-     - Enables the collection of spans related to document load events. See :ref:`browser-rum-data-doc-load`.
+     - Activates the collection of spans related to document load events. See :ref:`browser-rum-data-doc-load`.
    * - ``errors``
      - ``true``
-     - Enables the collection of JavaScript errors. See :ref:`browser-rum-data-js-errors`.
+     - Activates the collection of JavaScript errors. See :ref:`browser-rum-data-js-errors`.
    * - ``fetch``
      - ``true``
-     - Enables the collection of Fetch API requests. See :ref:`browser-rum-data-fetch-requests`.
+     - Activates the collection of Fetch API requests. See :ref:`browser-rum-data-fetch-requests`.
    * - ``interactions``
      - ``true``
-     - Enables the collection of user interactions, such as clicks or key presses. See :ref:`browser-rum-data-user-interactions`.
+     - Activates the collection of user interactions, such as clicks or key presses. See :ref:`browser-rum-data-user-interactions`.
    * - ``interactions.eventNames``
      - 
      - Array of DOM events that the instrumentation captures as user interactions. You can access the default values by accessing the ``SplunkRum.DEFAULT_AUTO_INSTRUMENTED_EVENT_NAMES`` property. 
    * - ``longtask``
      - ``true``
-     - Enables the collection of long tasks. See :ref:`browser-rum-data-long-tasks`.
+     - Activates the collection of long tasks. See :ref:`browser-rum-data-long-tasks`.
    * - ``socketio``
      - ``false``
-     - Enables the collection of socket.io messages. See :ref:`browser-rum-data-socketio`.
+     - Activates the collection of socket.io messages. See :ref:`browser-rum-data-socketio`.
    * - ``postload``
      - ``true``
-     - Enables the collection of resources loaded after a load event. See :ref:`browser-rum-data-resources-after-load`.
+     - Activates the collection of resources loaded after a load event. See :ref:`browser-rum-data-resources-after-load`.
    * - ``socketio.target``
      - ``'io'``
      - The global variable name to which the socket.io client is loaded, or the ``io`` object. See :ref:`browser-rum-data-socketio`.
    * - ``visibility``
      - ``false``
-     - Enables the collection of visibility events. See :ref:`browser-rum-data-visibility-events`.
+     - Activates the collection of visibility events. See :ref:`browser-rum-data-visibility-events`.
    * - ``websockets``
      - ``false``
-     - Enables the collection of websocket lifecycle events. See :ref:`browser-rum-data-websockets`.
+     - Activates the collection of websocket lifecycle events. See :ref:`browser-rum-data-websockets`.
    * - ``webvitals``
      - ``true``
-     -  Enables the collection of Google Web Vitals metrics. See :ref:`browser-rum-data-webvitals`.
+     -  Activates the collection of Google Web Vitals metrics. See :ref:`browser-rum-data-webvitals`.
    * - ``xhr``
      - ``true``
-     - Enables the collection of XMLHttpRequest events. See :ref:`browser-rum-data-fetch-requests`.
+     - Activates the collection of XMLHttpRequest events. See :ref:`browser-rum-data-fetch-requests`.
 
 .. _browser-rum-sampling-configuration:
 
@@ -218,9 +218,9 @@ The Splunk Distribution of OpenTelemetry JS for Web includes the following sampl
    * - Sampler
      - Description
    * - ``AlwaysOnSampler``
-     - Sampling enabled for all requests. This is the default sampler.
+     - Sampling activated for all requests. This is the default sampler.
    * - ``AlwaysOffSampler``
-     - Sampling disabled for all requests.
+     - Sampling deactivated for all requests.
    * - ``ParentBasedSampler``
      - Inherits the sampler configuration of the parent trace.
    * - ``SessionBasedSampler``
@@ -314,7 +314,7 @@ Traces that happen asynchronously, such as user interactions that result in a pr
 -  ``MessagePort``
 -  Hash-based routers
 
-To enable asynchronous traces, set the ``context.async`` property to ``true``.
+To activate asynchronous traces, set the ``context.async`` property to ``true``.
 
 The context manager allows Splunk RUM to link requests executed when a component is first rendered to the user interaction that caused the application to add the component to the page. ``XMLHttpRequest`` events and Fetch API events through promise methods are patched to preserve the parent context, so subsequent requests link to their parents.
 

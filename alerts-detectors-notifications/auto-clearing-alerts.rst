@@ -4,14 +4,14 @@
 Auto-clearing alerts
 **********************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Auto-clear feature automatically resolves active alerts after a certain amount of time when a metric time series stops reporting as expected, so that you don't have to clear alerts manually.
 
 The Auto-clear feature automatically resolves active alerts after a designated amount of time when a metric time series stops reporting as expected, so that you don't have to clear alerts manually. Auto-clear is available for all condition types, including Sudden Change, Resource Running Out, and Historical Anomaly.
 
-To enable Auto-clear alerts when :ref:`creating or editing a detector <create-detectors>`:
+To turn on Auto-clear alerts when :ref:`creating or editing a detector <create-detectors>`:
 
 #. Go to :guilabel:`Alert settings`.
 

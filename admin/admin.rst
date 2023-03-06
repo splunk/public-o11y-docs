@@ -44,7 +44,7 @@ Here are key aspects of your Observability Cloud organization to plan for and se
      - :guilabel:`Settings > Users`
      - For information, see :ref:`manage-users`.
 
-   * - Integrate with notification services to enable team workflows and communication channels
+   * - Integrate with notification services to facilitate team workflows and communication channels
      - :guilabel:`Data Management`
      - For information, see :ref:`admin-notifs-index`.
 
