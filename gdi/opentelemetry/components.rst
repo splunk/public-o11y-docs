@@ -144,6 +144,21 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``sqlquery`` (Experimental)
      - Runs custom SQL queries to generate metrics from a database connection.
      - Metrics
+   * - ``statsd``
+     - Collects StatsD messages to generate metrics.
+     - Metrics
+   * - ``syslog`` (Experimental)
+     - Parses syslog messages received over TCP or UDP.
+     - Logs
+   * - ``tcplog`` (Experimental)
+     - Receives logs over TCP.
+     - Logs
+   * - ``windowseventlog`` (Experimental)
+     - Tails and parses logs from the Windows Event log API.
+     - Logs
+   * - ``windowsperfcounters`` (Windows only)
+     - Collects the configured system, application, or custom performance counter data from the Windows Registry.
+     - Metrics
    * - ``zipkin``
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
