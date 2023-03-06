@@ -4,7 +4,7 @@
 Use case: Monitor system limits with AutoDetect 
 ***************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
     :description: This Splunk alerts and detectors use case describes how to use AutoDetect to track system limits.

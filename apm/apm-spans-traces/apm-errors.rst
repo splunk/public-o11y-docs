@@ -79,7 +79,7 @@ For example, when ``service_a`` makes a call to ``service_b`` and both services 
   
 If ``service_b`` returns a ``500`` error, both spans receive that error.  To avoid double-counting, Splunk APM counts only the server-side span, ``span_2``, as an error in MetricSets and error totals.  
 
-.. candidate location for a diagram, in the future! 
+
 
 .. _root-cause-error: 
 

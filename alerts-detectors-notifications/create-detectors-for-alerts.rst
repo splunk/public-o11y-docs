@@ -4,8 +4,6 @@
 Create detectors to trigger alerts
 ************************************
 
-.. meta updated 1/23/23
-
 .. meta::
    :description: How to create detectors to trigger alerts.
 
@@ -610,7 +608,7 @@ Click Activate Alert Rule to save the detector and begin monitoring the specifie
 
 	If you make any changes to the detector name or description, be sure to click the green Save button. If you click the Close button without saving, your changes will be lost.
 
-.. keep this label in case people have it bookmarked
+
 
 .. _rules-v2-detectors:
 
@@ -619,7 +617,7 @@ Click Activate Alert Rule to save the detector and begin monitoring the specifie
 Edit detectors through the SignalFlow tab
 ----------------------------------------------------------------------------------
 
-.. Delete/update the following note when new detectors are v2. Also figure out how to talk about v2 detectors (meaning v2 but could be created using the UI or using the API) Note that the term v2 detector is not used in these docs.--brs
+
 
 .. note:: This section assumes you are familiar with the :new-page:`Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
@@ -643,7 +641,7 @@ If the detector contains ``data`` blocks that correspond to plot lines in the de
 
 then the labels are displayed on the right side of the screen in the SignalFlow tab. For a label to be displayed, the ``data`` block must include a ``publish`` block.
 
-.. signalflow-stuff.ai, layer is plot-label
+
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/plot-label.png
    :width: 99%
@@ -651,19 +649,15 @@ then the labels are displayed on the right side of the screen in the SignalFlow 
 
 Click the gear icon to display options you can specify for the plot line shown in the detector's chart.
 
-.. signalflow-stuff.ai, layer is plot-options
+
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/plot-options.png
    :width: 99%
    :alt: This image shows the plot options for the plot line.
 
-
-
 To add or edit the alert message, recipients, or rule name, use the :guilabel:`Edit` button on the Alert Rules tab. The rule name you add on the Activate tab is displayed on the Alert Rules tab as shown below. The rule name is also shown as the alert condition on the Alerts page and in alert notifications.
 
 For example, this rule name in the Activate tab:
-
-.. signalflow-stuff.ai, layer is name=condition
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/name=condition.png
    :width: 65%
@@ -671,13 +665,9 @@ For example, this rule name in the Activate tab:
 
 looks like this on the Alert Rules tab:
 
-.. signalflow-stuff.ai, layer is name=condition2
-
-
 .. image:: /_images/images-detectors-alerts/v2-detectors/name=condition2.png
    :width: 45%
    :alt: This image shows another example of the rule name in the Activate tab.
-
 
 For more information about editing detector options in the Alert Rules tab,  see :ref:`alert-message`, :ref:`alert-recipients`, and :ref:`activate-detector`.
 
