@@ -5,102 +5,46 @@ About roles and permissions
 ***************************************************
 
 .. meta::
-   :description: Learn how to how to manage teams and team membership.
+   :description: Learn how to how to manage user roles and permissions
 
 
 
+|hr|
 
-Users are assigned to roles. A role contains a set of capabilities. Capabilities specify what actions are available to roles. For example, capabilities determine whether someone with a particular role is allowed to create detectors or dashboards. The various capabilities are listed in "XXXXXXXXXXXXX".
+:strong:`Available in Enterprise Edition`
+
+|hr|
+
+Splunk Observability Clouds allows you to restrict access to certain features and data to specific groups of users. This is enforced using role-based access control. Users are assigned to roles. A role contains a set of capabilities. These capabilities specify what actions are available to roles. For example, capabilities determine whether someone with a particular role is allowed to create detectors or dashboards. The various capabilities are listed in "XXXXXXXXXXXXX". 
+
+Role-based access control allows you to restrict users to the least-required permissions, helping you meet compliance, business, or architectural requirements. By assigning the least required permissions, you can help prevent users from accidentally making changes that they shouldn't be allowed to make. It also provides a specific role, subscription usage, for individuals who only require visibility into subscription usage for the org, without needing to access any additional functionality. Similarly, the read-only role provides access to users who need to monitor the system, without taking additional actions.
+
+Additionally, Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud, providing a consistent user and permission-based experience across Splunk Cloud and Splunk Observability CLoud.
 
 By default, Splunk Observability Cloud comes with the following roles predefined:
 
 * admin: This role has the most capabilities assigned to it. An admin user has full privileges across Splunk Observability Cloud.
 * power user: This role can access all components in Splunk Observability Cloud, access a subset of settings, and create, delete, and update charts, dashboards and detectors.
-* read only: This role can access all pages that a power user can, but cannot create, edit, or delete objects, nor can they view the Settings pages.
-* usage reader: This role allows a user to view the subscription usage page only.
+* read-only: This role can access all pages that a power user can, but cannot create, edit, or delete objects, nor can they view the Settings pages.
+* subscription usage: This role allows a user to view the subscription usage page only.
   
 
 
+Mapping Splunk Observability Cloud and Splunk Cloud roles
 
-This table presents the available user roles and their permissions. Some team roles and permissions change based on whether enhanced team security is enabled. For example, when you enable enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
-
-To learn more about enabling enhanced team security, see :ref:`enhanced-team-security`.
 
 .. list-table::
-  :widths: 20,20,20,20,20
+  :header-rows: 1
+  :widths: 50, 50
 
-  * - :strong:`Permission`
-    - :strong:`Admin`
-    - :strong:`Team Manager` (Available with enhanced team security enabled)
-    - :strong:`Team Member`
-    - :strong:`Power User`
+  * - :strong:`Splunk Observability Cloud`
+    - :strong:`Splunk Cloud`
+  * - admin
+    - admin
+  * - power user 
+    - power roles and can_delete role
+  * - read-only
+    - user role
+  * - subscription usage
+    - n/a
 
-  * - :strong:`Create team`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`Delete team`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`View team landing page`
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-
-  * - :strong:`Edit team name and description`
-    - Yes
-    - Yes
-    - * Yes, when enhanced team security is disabled
-      * No, when enhanced team security is enabled
-    - No
-
-  * - :strong:`Join team`
-    - Yes
-    - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
-    - Not applicable: A Team Member is already on a team and doesn't need to join.
-    - * Yes, when enhanced team security is disabled
-      * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
-
-  * - :strong:`Add member`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Assign Team Manager role to Team Member`
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * Yes, when enhanced team security is enabled
-    - Yes
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * No, when enhanced team security is enabled
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * No, when enhanced team security is enabled
-
-  * - :strong:`Remove member`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Edit notification policy`
-    - Yes
-    - Yes
-    - Yes
-    - No
-
-  * - :strong:`Leave team`
-    - * Yes, if on a team
-      * Not applicable, if not on a team
-    - Yes
-    - Yes
-    - Not applicable: A user must be on a team to leave a team
-
-Permission to link a detector to a team is based on the detector's permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
-
-Permission to link a dashboard group to a team is based on the dashboard group's permissions. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.
