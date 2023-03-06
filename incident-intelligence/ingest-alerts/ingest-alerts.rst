@@ -82,7 +82,7 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
    * - Generic REST alerts
      - See :ref:`ii-ingest-rest`.
 
-   * - ITSI Splunk Enterprise and Splunk Cloud Platform
+   * - ITSI
      - See :ref:`ii-ingest-splunk-itsi-alerts`.
 
 

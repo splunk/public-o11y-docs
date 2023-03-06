@@ -3,7 +3,9 @@
 Ingest alerts from Splunk Enterprise and Splunk Cloud Platform
 **********************************************************************************************************
 
-You can ingest alerts from Splunk Enterprise and Splunk Cloud Platform using the Splunk Incident Intelligence app on :new-page:`Splunkbase <https://splunkbase.splunk.com/>`.
+You can ingest episodes from IT Service Intelligence (ITSI) in Splunk Enterprise and Splunk Cloud Platform using the Splunk Incident Intelligence app on :new-page:`Splunkbase <https://splunkbase.splunk.com/>`.
+
+Before you can ingest alerts from ITSI, you must configure Splunk Incident Intelligence alerts.
 
 .. _ii-configure-app:
 
@@ -19,11 +21,11 @@ Download and configure the Splunk Incident Intelligence app
 Now you are ready to start sending alerts to Incident Intelligence.
 
 
-Send alerts from a saved search
-========================================
+Send ITSI episodes as incidents in Incident Intelligence
+==================================================================
 
-#. Create and run as search. 
-#. Select :guilabel:`Save As > Alert`.
+#. In ITSI, navigate to :guilabel:`ITSI > Configuration > Notable Event Aggregation Policies`.
+#. Create a new notable even aggr
 #. Enter a title and description.
 #. Under :guilabel:`Alert type` select :guilabel:`Scheduled` and specify how often you you want to alert to run.
 #. Under :guilabel:`Trigger Conditions` create the conditions for when you want to send an alert.
