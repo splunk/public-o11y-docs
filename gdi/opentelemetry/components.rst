@@ -239,6 +239,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``file``
      - Writes pipeline data to a JSON file in Protobuf JSON encoding using the OpenTelemetry protocol. 
      - Metrics, logs, traces
+   * - ``kafka``
+     - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
+     - Metrics, logs, traces
    * - ``logging``
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
      - Metrics, logs, traces
