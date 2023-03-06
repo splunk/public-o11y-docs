@@ -34,9 +34,9 @@ The OpenTelemetry Collector includes the following component types:
 * Exporters: Send data to one or more back ends or destinations. 
 * Extensions: Extend the capabilities of the Collector.
 
-You can activate these components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
+You can activate components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
-The Splunk Distribution of OpenTelemetry Collector support the following components.
+The Splunk Distribution of OpenTelemetry Collector includes and supports the following components.
 
 .. _collector-components-receivers:
 
@@ -54,9 +54,27 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - Name
      - Description
      - Pipeline types
+   * - ``azureeventhub``
+     - Pulls logs from an Azure event hub.
+     - Logs
+   * - ``carbon``
+     - Receives metrics in Carbon plaintext protocol.
+     - Metrics
+   * - ``cloudfoundry``
+     - Connects to the Reverse Log Proxy (RLP) gateway of Cloud Foundry to extract metrics.
+     - Metrics
+   * - ``collectd``
+     - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
+     - Metrics
    * - :ref:`databricks_receiver` (``databricks``)
      - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
+   * - ``discovery``
+     - Tests the functional status of any receiver whose targed is reported by an observer extension.
+     - Logs
+   * - ``filelog``
+     - Tails and parses logs from files.
+     - Logs
    * - ``fluentforward``
      - Runs a TCP server that accepts events through the Fluentd Forward protocol.
      - Logs
