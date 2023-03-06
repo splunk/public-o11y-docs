@@ -18,8 +18,17 @@ MetricSets are specific to Splunk APM, but Monitoring MetricSets are similar to 
 Troubleshooting MetricSets
 ==========================
 
-Troubleshooting MetricSets (TMS) are metric time series used for high-cardinality troubleshooting of identities in APM and for historical comparison among spans and workflows. Splunk APM generates Troubleshooting MetricSets based on indexed span tags and processes. There are several span tags indexed by default in APM. See :ref:`apm-default-span-tags`. You can also create custom TMS by indexing specific span tags and processes. To learn how to index span tags and processes to generate new Troubleshooting MetricSets, see :ref:`apm-index-span-tags`.
+Troubleshooting MetricSets (TMS) are metric time series used for high-cardinality troubleshooting of identities in APM and for historical comparison among spans and workflows. Splunk APM can generate Troubleshooting MetricSets based on indexed span tags and processes. 
 
+There are several span tags indexed by default in APM. See :ref:`apm-default-span-tags`. You can also create custom TMS by indexing specific span tags and processes. To learn how to index span tags and processes to generate new Troubleshooting MetricSets, see :ref:`apm-index-span-tags`.
+
+Default indexed span tags
+--------------------------------
+
+Splunk APM indexes and generates Troubleshooting MetricSets for several by default. For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
+
+TMS metrics
+--------------
 Every Troubleshooting MetricSet generates the following metrics, also known as Request, Error, and Duration (RED) metrics. The following metrics appear when you select a service from the :ref:`service map <service-map>` in the :strong:`Troubleshooting` view:
 
 - Request rate
@@ -30,18 +39,13 @@ Every Troubleshooting MetricSet generates the following metrics, also known as R
 The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk APM reports quantiles from a distribution of metrics for each 10-second reporting window. 
 
 Where and when can I use TMS?
-----------------------
+--------------------------------
 
 TMS appear in the Troubleshooting page, which contains the service map, and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process.
 
 Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
 
 For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`. 
-
-Default indexed span tags
---------------------------------
-
-Splunk APM indexes and generates Troubleshooting MetricSets for several by default. For more details about each of these tags, see :ref:`apm-default-span-tags`. You can't modify or stop APM from indexing these span tags, but you can index additional span tags. See :ref:`index-span-tags-instructions` to learn how. 
 
 .. _monitoring-metricsets:
 
