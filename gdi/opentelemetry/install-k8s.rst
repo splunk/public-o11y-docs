@@ -155,7 +155,7 @@ Do the following to deploy the Splunk Distribution of OpenTelemetry Collector fo
 #. Determine which mode you want to use, Agent mode or Gateway mode. By default, Agent mode is configured to send data directly to Splunk SaaS endpoints. Agent mode can be reconfigured to send to a gateway.
 #. Download the necessary manifest files from the provided examples for desired Agent or Gateway modes from :new-page:`the examples repository <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples>`.
 #. Update the secret.yaml manifest file with your base64-encoded access token as the ``splunk_observability_access_token`` data field value.
-#. Update any configmap-agent.yaml, configmap-gateway.yaml, and configmap-cluster-receiver.yaml manifest files you downloaded, search for "CHANGEME" to find the values that must be updated in order to use the rendered manifests directly.
+#. Update any configmap-agent.yaml, configmap-gateway.yaml, and configmap-cluster-receiver.yaml manifest files you downloaded, search for "CHANGEME" to find the values that must be updated to use the rendered manifests directly.
       #. Exporter configurations will need to have "CHANGEME" updated to the value of the Splunk realm.
       #. Attribute processor configurations will need to have "CHANGEME" updated to the value of the cluster name.
 #. Apply the manifests using ``kubectl``, as shown in the following examples.
