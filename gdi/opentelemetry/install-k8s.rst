@@ -156,8 +156,8 @@ Do the following to deploy the Splunk Distribution of OpenTelemetry Collector fo
 #. Download the necessary manifest files from the provided examples for desired Agent or Gateway modes from :new-page:`the examples repository <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples>`.
 #. Update the secret.yaml manifest file with your base64-encoded access token as the ``splunk_observability_access_token`` data field value.
 #. Update any configmap-agent.yaml, configmap-gateway.yaml, and configmap-cluster-receiver.yaml manifest files you downloaded, search for "CHANGEME" to find the values that must be updated to use the rendered manifests directly.
-      #. Exporter configurations will need to have "CHANGEME" updated to the value of the Splunk realm.
-      #. Attribute processor configurations will need to have "CHANGEME" updated to the value of the cluster name.
+      #. You need to update "CHANGEME" in exporter configurations to the value of the Splunk realm.
+      #. You need to update "CHANGEME"  in attribute processor configurations to the value of the cluster name.
 #. Apply the manifests using ``kubectl``, as shown in the following examples.
 
 For Agent mode, download the :new-page:`agent-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/default/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
