@@ -276,6 +276,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
 .. list-table::
    :widths: 25 75
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Description
@@ -301,6 +302,8 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
    * - ``zpages``
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
+
+.. note:: The previous lists might not contain the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 .. raw:: html
 
