@@ -6,7 +6,7 @@ Reassign a full or partial shift
 .. meta::
    :description: Steps to reassign a full on-call shift or parts of a shift.
    
-You can reassign full or partial on-call shifts to other team members if you are unable to be on-call. Alternatively, you can also take a current or future shift from someone. This is helpful if the current on-call responder is unable to reassign the shift themselves, for example during an emergency.
+You can reassign full or partial on-call shifts to other team members if you are unable to be on call. Alternatively, you can also take a current or future shift from someone. This is helpful if the current on-call responder is unable to reassign the shift themselves, for example during an emergency.
 
 There are two ways to reassign shifts, depending on what page you are viewing in Incident Intelligence:
 
@@ -36,7 +36,7 @@ To reassign a shift follow these steps:
 #. In :guilabel:`Reassign to`, enter the name of the team member who will take the shift or partial shift. 
 #. Save your changes.
 
-In the updated schedule, the shift or partial shift that was reassigned is now assigned to the new team member. Additionally, there is a notation of from whom the shift was reassigned.
+In the updated schedule, the shift or partial shift that was reassigned is now assigned to the new team member. Additionally. there is a notification that tells you who the shift was reassigned from.
 
 .. _take_shift:
 
