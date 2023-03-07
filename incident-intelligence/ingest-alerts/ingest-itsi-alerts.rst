@@ -44,7 +44,7 @@ To access and edit your configured alert go to the :guilabel:`Alerts` tab in the
 Send alerts from a saved search
 ========================================
 
-#. Create and run as search. 
+#. Create and run a search. 
 #. Select :guilabel:`Save As > Alert`.
 #. Enter a title and description.
 #. Under :guilabel:`Alert type` select :guilabel:`Scheduled` and indicate how often you want to alert to run.
