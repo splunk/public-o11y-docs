@@ -162,35 +162,41 @@ $(document).ready(function () {
                 }
             }
 
-            function traverseMetrics(mainObj, data, preRef = '', h2Text = '') {
+            function traverseMetrics(mainObj, data, preRef = '') {
                 const id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
 
                 const template = (idSuffix, title) => `
-<h3 class="sub-table-heading">${title}</h2>
-<table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='${id}-${idSuffix}'>
-  <thead>
-    <th class='head name-head'>Name</th>
-    <th class='head type-head'>Type</th>
-    ${idSuffix === 'metrics' ? '<th class="head unit-head">Unit</th>' : ''}
-    <th class='head description-head' width="40%">Description</th>
-    ${idSuffix === 'metrics' ? '<th class="head attributes-head">Attributes</th>' : ''}
-    ${idSuffix === 'attributes' ? '<th class="head enum-head">Values</th>' : ''}
-  </thead>
-  <tbody></tbody>
-</table>
-`;
+                                    ${idSuffix === 'metrics' ? '' : `<h3 class="sub-table-heading">${title}</h3>`}
+                                    <table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='${id}-${idSuffix}'>
+                                      <thead>
+                                        <th class='head name-head'>Name</th>
+                                        <th class='head type-head'>Type</th>
+                                        ${idSuffix === 'metrics' ? '<th class="head unit-head">Unit</th>' : ''}
+                                        <th class='head description-head' width="40%">Description</th>
+                                        ${idSuffix === 'metrics' ? '<th class="head attributes-head">Attributes</th>' : ''}
+                                        ${idSuffix === 'attributes' ? '<th class="head enum-head">Values</th>' : ''}
+                                      </thead>
+                                      <tbody></tbody>
+                                    </table>
+                                    `;
 
-                if (data['attributes']) {
-                    const attributesTable = $(template('attributes', 'Attributes'));
-                    $(mainObj).append(attributesTable);
+                if (data['metrics']) {
+                    const metricTable = $(template('metrics', 'Metrics'));
+                    $(mainObj).append(metricTable);
 
-                    for (let [name, attr] of Object.entries(data['attributes'])) {
-                        const idAttr = id + '-attribute-' + name;
-                        const enums = attr['enum'] ? attr['enum'].join('</code></li><li><code>') : '';
-                        const row = `<td id='${idAttr}'>${name}</td><td>${coalesce(attr['type'], '')}</td><td>${coalesce(converter.makeHtml(attr['description']), '')}</td><td>${enums ? "<ul><li>" : ''}<code>${enums}</code>${enums ? "</li></ul>" : ''}</td>`;
-                        attributesTable.find('tbody').append(`<tr>${row}</tr>`);
+                    for (let [name, metric] of Object.entries(data['metrics'])) {
+                        const gauge = metric['gauge'];
+                        const sum = metric['sum'];
+                        if (gauge?.['value_type'] || sum?.['value_type']) {
+                            const idAttr = id + '-metric-' + name;
+                            const attributes = metric['attributes']?.join('</li><li>') ?? '';
+                            const attributesLink = attributes ? attributes.split('</li><li>').map(a => `<a href='#${id}-attribute-${a}'>${a}</a>`).join(', ') : '';
+                            const type = gauge ? 'Gauge' : 'Sum';
+                            const row = `<td id='${idAttr}'>${name}</td><td>${type}</td><td>${metric['unit'] != "1" ? metric['unit'] : ''}</td><td>${converter.makeHtml(metric['description']) ?? ''}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
+                            metricTable.find('tbody').append(`<tr>${row}</tr>`);
+                        }
                     }
                 }
 
@@ -200,37 +206,26 @@ $(document).ready(function () {
 
                     for (let [name, attr] of Object.entries(data['resource_attributes'])) {
                         const idAttr = id + '-resource-' + name;
-                        const enums = attr['enum'] ? attr['enum'].join(', ') : '';
-                        const row = `<td id='${idAttr}'>${name}</td><td>${coalesce(attr['type'], '')}</td><td>${coalesce(converter.makeHtml(attr['description']), '')}${enums ? `Possible values:&nbsp;<code>${enums}</code>` : ''}</td>`;
+                        const enums = attr['enum']?.join(', ') ?? '';
+                        const row = `<td id='${idAttr}'>${name}</td>
+                                      <td>${attr['type'] ?? ''}</td>
+                                      <td>${converter.makeHtml(attr['description']) ?? ''}${enums ? `Possible values: <code>${enums}</code>` : ''}</td>`;
                         resourceTable.find('tbody').append(`<tr>${row}</tr>`);
                     }
                 }
 
-                if (data['metrics']) {
-                    const metricTable = $(template('metrics', 'Metrics'));
-                    $(mainObj).append(metricTable);
+                if (data['attributes']) {
+                    const attributesTable = $(template('attributes', 'Attributes'));
+                    $(mainObj).append(attributesTable);
 
-                    for (let [name, metric] of Object.entries(data['metrics'])) {
-                        const gauge = metric['gauge'];
-                        const sum = metric['sum'];
-                        if (gauge && gauge['value_type']) {
-                            const idAttr = id + '-metric-' + name;
-                            const attributes = metric['attributes'] ? metric['attributes'].join('</li><li>') : '';
-                            const attributesLink = attributes ? `<a href='#${id}-attribute-${attributes}'>${attributes}</a>` : '';
-                            const row = `<td id='${idAttr}'>${name}</td><td>Gauge</td><td>${metric['unit'] != "1" ? coalesce(metric['unit'], '') : ''}</td><td>${coalesce(converter.makeHtml(metric['description']), '')}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
-                            metricTable.find('tbody').append(`<tr>${row}</tr>`);
-                        }
-                        if (sum && sum['value_type']) {
-                            const idAttr = id + '-metric-' + name;
-                            const attributes = metric['attributes'] ? metric['attributes'].join('</li><li>') : '';
-                            const attributesLink = attributes ? `<a href='#${id}-attribute-${attributes}'>${attributes}</a>` : '';
-                            const row = `<td id='${idAttr}'>${name}</td><td>Gauge</td><td>${metric['unit'] != "1" ? coalesce(metric['unit'], '') : ''}</td><td>${coalesce(converter.makeHtml(metric['description']), '')}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
-                            metricTable.find('tbody').append(`<tr>${row}</tr>`);
-                        }
+                    for (let [name, attr] of Object.entries(data['attributes'])) {
+                        const idAttr = id + '-attribute-' + name;
+                        const enums = attr['enum']?.join('</code></li><li><code>') ?? '';
+                        const row = `<td id='${idAttr}'>${name}</td><td>${attr['type'] ?? ''}</td><td>${converter.makeHtml(attr['description']) ?? ''}</td><td>${enums ? "<ul><li>" : ''}<code>${enums}</code>${enums ? "</li></ul>" : ''}</td>`;
+                        attributesTable.find('tbody').append(`<tr>${row}</tr>`);
                     }
                 }
             }
-
 
             $('.metrics-component').each(function () {
 
