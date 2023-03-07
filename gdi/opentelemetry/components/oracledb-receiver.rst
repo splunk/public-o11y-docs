@@ -263,7 +263,7 @@ The following metrics are available for this integration:
 
       - ``oracledb.user_rollbacks``
       - Number of times users manually issue the ``ROLLBACK`` statement
-         or an error occurs during a user’s transactions.
+         or an error occurs during a user's transactions.
       - 1
       - Sum(Int)
       - 
@@ -313,14 +313,14 @@ Metric attributes
       - Tablespace name
       - 
 
-Enable or disable metrics
------------------------------
+Activate or deactivate metrics
+---------------------------------
 
-You can enable or disable specific metrics by setting the value of the
+You can activate or deactivate specific metrics by setting the value of the
 ``enabled`` option to ``true`` or ``false``.
 
-The following example disables the ``oracledb.executions`` metric and
-enabled the ``oracledb.sessions.usage`` metric:
+The following example deactivates the ``oracledb.executions`` metric and
+activated the ``oracledb.sessions.usage`` metric:
 
 .. code:: yaml
 

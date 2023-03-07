@@ -48,7 +48,7 @@ service:
 
 ### Ingress NGINX configuration
 
-Enable the `controller.stats.enabled=true` and `controller.metrics.enabled=true` flags in the NGINX Ingress Controller chart.
+Activate the `controller.stats.enabled=true` and `controller.metrics.enabled=true` flags in the NGINX Ingress Controller chart.
 
 ### Agent configuration
 

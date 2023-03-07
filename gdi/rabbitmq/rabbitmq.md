@@ -77,7 +77,7 @@ The following table shows the configuration options for the RabbitMQ monitor:
 | `verbosityLevel` | No | `string` | Verbosity level. |
 | `username` | Yes | `string` | API username of the RabbitMQ instance. |
 | `password` | Yes | `string` | API password of the RabbitMQ instance. |
-| `useHTTPS` | No | `bool` | Whether to enable HTTPS. The default value is`false`. |
+| `useHTTPS` | No | `bool` | Whether to activate HTTPS. The default value is`false`. |
 | `sslCACertFile` | No | `string` | Path to the SSL or TLS certificate of the root certificate authority implicitly trusted by this monitor. |
 | `sslCertFile` | No | `string` | Path to this monitor's own SSL or TLS certificate. |
 | `sslKeyFile` | No | `string` | Path to this monitor's private SSL or TLS key file. |
@@ -85,7 +85,7 @@ The following table shows the configuration options for the RabbitMQ monitor:
 | `sslVerify` | No | `bool` | Whether the monitor verifies the RabbitMQ Management plugin SSL or TLS certificate. The default value is`false`. |
 
 ```{note}
-You must enable each of the five `collect*` options to gather metrics pertaining to those facets of a RabbitMQ instance.
+You must activate each of the five `collect*` options to gather metrics pertaining to those facets of a RabbitMQ instance.
 ```
 
 ## Metrics

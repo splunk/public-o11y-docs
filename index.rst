@@ -10,7 +10,7 @@ Welcome
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
 
 
-.. get your data in section
+
 
 .. role:: icon-cloud-upload
 .. rst-class:: newparawithicon
@@ -18,7 +18,7 @@ Welcome
 :icon-cloud-upload:`.` :strong:`Get your data in`
 The first step toward observability is getting relevant data into Observability Cloud. View :ref:`all supported integrations <supported-data-sources>`.
 
-.. gdi cards
+
 
 .. rst-class:: newcard
 
@@ -56,15 +56,15 @@ Instrument to collect user sessions :ref:`rum-gdi`
 Instrument to collect traces and logs :ref:`instrument-serverless-functions`
 
 
-.. explore and monitor your env section
+
 
 .. role:: icon-display
 .. rst-class:: newparawithicon
 
 :icon-display:`.` :strong:`Explore and monitor your environment`
-After you have your data coming into Observability Cloud, it’s time to do some exploring.
+After you have data coming into Observability Cloud, you can do some exploring.
 
-.. explore and monitor cards
+
 
 .. rst-class:: newcard
 
@@ -101,15 +101,13 @@ Proactively monitor the performance of web resources :ref:`welcome-synthmon`
 Learn more about all Observability Cloud products :ref:`welcome`
 
 
-.. set up alerts section
+
 
 .. role:: icon-wrench
 .. rst-class:: newparawithicon
 
 :icon-wrench:`.` :strong:`Set up alerts and customize your account`
 Prepare for issues that might arise by setting up alerts, custom dashboards, and other advanced features.
-
-.. alerts and customize cards
 
 .. rst-class:: newcard
 
@@ -147,7 +145,6 @@ Enable users to seamlessly move across product views :ref:`get-started-relatedco
 Provide convenient access to relevant resources :ref:`link-metadata-to-content`
 
 
-.. admin section
 
 .. role:: icon-cogs
 .. rst-class:: newparawithicon
@@ -155,7 +152,6 @@ Provide convenient access to relevant resources :ref:`link-metadata-to-content`
 :icon-cogs:`.` :strong:`Administer your account`
 As an Observability Cloud administrator, use these tools to give your users a secure and relevant user experience.
 
-.. admin cards
 
 .. rst-class:: newcard
 
@@ -192,17 +188,11 @@ Set up an integration to an SSO provider :ref:`sso-label`
 :strong:`Subscription usage`
 Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-overview`
 
-
-.. popular integrations section
-
 .. role:: icon-cloud-upload
 .. rst-class:: newparawithicon
 
 :icon-cloud-upload:`.` :strong:`Popular integrations`
 Access documentation for some of the most popular integrations used to get data into Observability Cloud.
-
-
-.. gdi cards
 
 .. rst-class:: newcard
 
@@ -605,6 +595,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Metrics pipeline management TOGGLE <infrastructure/metrics-pipeline/metrics-pipeline>
+
+.. toctree::
+   :maxdepth:   3
+
    Network Explorer TOGGLE <infrastructure/network-explorer/network-explorer>
 
 .. toctree::
@@ -786,7 +781,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    incident-intelligence/create-configure-incident-policies
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Create and manage on-call schedules TOGGLE <incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules>
 

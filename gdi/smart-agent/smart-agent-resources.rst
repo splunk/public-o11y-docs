@@ -39,7 +39,7 @@ The Smart Agent also supports receiving and sending trace data. See :ref:`apm-do
 Check exposed ports
 =====================================================================
 
-Before installing the Smart Agent, check exposed ports to make sure your environment doesn’t have conflicts. You can change the ports in the Smart Agent configuration.
+Before installing the Smart Agent, check exposed ports to make sure your environment doesn't have conflicts. You can change the ports in the Smart Agent configuration.
 
 * Port 8095 is the default port that the internal status server listens on. Configure port 8095 using the ``internalStatusPort`` option.
 * Port 9080 is the default port that the server listens on. Configure port 9080 using the ``listenAddress`` option. The ``listenAddress`` option is a configurable option for the ``trace-forwarder`` and ``signalfx-forwarder`` monitors.
@@ -67,7 +67,7 @@ There are several options available to install the Smart Agent. Select the optio
 
 * To install the Smart Agent to Kubernetes environments using kubectl, see :new-page:`install using kubectl <https://github.com/signalfx/signalfx-agent/blob/main/docs/agent-k8s-install-kubectl.md>`.
 
-The Smart Agent is incompatible on Linux systems with SELinux enabled. Check the documentation for your distribution to learn how to disable SELinux.
+The Smart Agent is incompatible on Linux systems with SELinux activated. Check the documentation for your distribution to learn how to deactivate SELinux.
 
 .. note:: To uninstall the Smart Agent, see :ref:`uninstall-smart-agent`.
 
@@ -97,12 +97,12 @@ Windows
 
 On Windows, the Smart Agent logs to the console when executed directly in a shell. If the Smart Agent is configured as a Windows service, log events are logged to the Windows Event Log. Select **Start > Administrative Tools > Event Viewer** to read logs. Select **Windows Logs > Application** to see logged events from the Smart Agent service.
 
-Enable proxy support in the Smart Agent
+Activate proxy support in the Smart Agent
 ===========================================
 
 To use an HTTP or HTTPS proxy, set the environment variable ``HTTP_PROXY`` and/or ``HTTPS_PROXY`` in the container configuration to proxy either protocol. The SignalFx ingest and API servers both use HTTPS. If the ``NO_PROXY`` environment variable exists, the Smart Agent automatically appends the local services to the environment variable to not use the proxy.
 
-If the Smart Agent is running as a local service on the host, refer to the host documentation for information on passing environment variables to the Smart Agent service to enable proxy support when the service is started. For example, if the host services are managed by systemd, create the /etc/systemd/system/signalfx-agent.service.d/myproxy.conf file and add the following to the file:
+If the Smart Agent is running as a local service on the host, refer to the host documentation for information on passing environment variables to the Smart Agent service to activate proxy support when the service is started. For example, if the host services are managed by systemd, create the /etc/systemd/system/signalfx-agent.service.d/myproxy.conf file and add the following to the file:
 
 .. code-block:: toml
 

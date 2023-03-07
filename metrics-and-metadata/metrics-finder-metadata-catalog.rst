@@ -54,9 +54,9 @@ Add metric descriptions
 
 Descriptions can help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. If a metric has a description, it is displayed next to the metric in the search results.
 
-If a metric has a description, you can find it underneathe the metric title. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions (for example, from one of our integrations), this provided description is always shown and is not editable.
+If a metric has a description, you can find it underneath the metric title. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions (for example, from one of our integrations), this provided description is always shown and is not editable.
 
-Descriptions are lmited to 1,024 characters. Although the descriptions are included in the search result, the text of metric descriptions is not analyzed by the search.
+Descriptions are limited to 1,024 characters. Although the descriptions are included in the search result, the text of metric descriptions is not analyzed by the search.
 
 
 .. _metric-tooltip:
@@ -77,7 +77,7 @@ You can search for metrics using any information you know about what you’re lo
 
 .. note:: The Metric Finder does not support any special search syntax. Any non-alphanumeric characters in search terms are not included in matches (though these characters can be included in filter values). Advanced search operations like combining search terms with boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms are not supported.
 
-.. The Metric Finder tokenizes search input by non-alphanumeric characters. For example, a plaintext search for ``cpu.utilization`` will match metrics with ``cpu`` and metrics with ``utilization``.
+
 
 On the Metrics page, type search terms into the search field:
 
@@ -113,13 +113,13 @@ You can use (!) (NOT) in your filters to exclude results. For example, ``!env:qa
 Use the filter or exclude sidebar
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. Basically, facets are interesting metadata in this metric search that can help you refine your search.
+
 
 The left sidebar surfaces relevant metadata from the search results as facets to help refine your search. If your organization has configured custom categories, any that appear in the search results will be surfaced at the top of the left sidebar above other facets. Any value found in the sidebar can be added to the search field as a filter or exluded from the search, and the results will be refreshed.
 
 If there are more than a few values for a facet, you can select :guilabel:`Show more` to see the first 100 results. If you don't see the value that you're looking for in the longer list, you can type it in the search field to return more relevant search results.
 
-.. Refine your results by picking and choosing the filters that should apply to your search by selecting facets in the left sidebar, or matching metadata to filter or exclude results from your search.
+
 
 Hovering anywhere over a value in the left sidebar highlights the row and displays the :guilabel:`Filter` and :guilabel:`Exclude Button`. Select a value, or the :guilabel:`Filter`, to add it to your search as a filter. To exclude a value from your search results, select the :guilabel:`Exclude Button`.
 
@@ -128,7 +128,7 @@ When filters are excluded from a search, they are indicated by an exclamation po
 Properties and dimensions of a metric are shown directly with each search result. This is the same list that is shown in the Related Properties panel of the Metadata Catalog for a given metric.
 
 
-.. Any related property selected will be added to the search field as a filter (possibly a NOT/exclusion filter), and the results will be refreshed.
+
 
 
 .. _matching-metadata:
@@ -168,7 +168,7 @@ Use custom categories to browse for metrics using features that are unique to yo
 
 To select dimensions or properties to be displayed as custom categories on the Metrics page, select :guilabel:`Add custom categories`. The number of categories for each organization is limited. Once the limit has been reached, the "+" button will be disabled. Select :guilabel:`Save and close` when you have finished adding categories.
 
-.. Hovering over the disabled button shows a tooltip with an explanation.
+
 
 The custom categories you added are now available for use on the Metrics page. Selecting :guilabel:`Edit` lets you add, delete, or update existing custom categories. Non-administrators do not see the option to edit custom categories.
 

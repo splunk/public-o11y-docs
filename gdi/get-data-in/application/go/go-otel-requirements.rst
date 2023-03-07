@@ -14,7 +14,7 @@ Meet these requirements to instrument Go applications for Splunk Observability C
 Supported libraries and frameworks
 =================================================
 
-The Splunk Distribution of OpenTelemetry Go can instrument the following libraries. Check the documentation of each instrumentation package to learn how to enable it.
+The Splunk Distribution of OpenTelemetry Go can instrument the following libraries. Check the documentation of each instrumentation package to learn how to activate it.
 
 .. list-table:: 
    :header-rows: 1

@@ -4,7 +4,7 @@
 Use case: Fix a detector that misfires alerts
 ************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
     :description: This Splunk alerts and detectors use case describes how to troubleshoot detectors and maintain accurate data.
