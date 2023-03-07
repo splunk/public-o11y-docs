@@ -214,8 +214,8 @@ Update the manifest
 
 Once you've decided which manifest suits you better, make the following updates:
 
-#. In the ``secret.yaml`` manifest, update the ``splunk_observability_access_token`` data field with your base64-encoded access token.
-#. Update any ``configmap-agent.yaml``, ``configmap-gateway.yaml``, and ``configmap-cluster-receiver.yaml`` manifest files you're going to use. Search for "CHANGEME" to find the values that must be updated to use the rendered manifests directly.
+#. In the secret.yaml manifest, update the ``splunk_observability_access_token`` data field with your base64-encoded access token.
+#. Update any configmap-agent.yaml, configmap-gateway.yaml, and configmap-cluster-receiver.yaml manifest files you're going to use. Search for "CHANGEME" to find the values that must be updated to use the rendered manifests directly.
       #. You need to update "CHANGEME" in exporter configurations to the value of the Splunk realm.
       #. You need to update "CHANGEME" in attribute processor configurations to the value of the cluster name.
 
