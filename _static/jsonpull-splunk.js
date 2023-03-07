@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
 
@@ -44,9 +43,9 @@ $(document).ready(function () {
                 "</tr>\n" +
                 "</thead>");
 
-            if(!monitor){
-                for(let x in window.metricDocumentation){
-                    if(window.metricDocumentation[x]['yaml']['monitor'] === monitorKey && monitorKey !== ''){
+            if (!monitor) {
+                for (let x in window.metricDocumentation) {
+                    if (window.metricDocumentation[x]['yaml']['monitor'] === monitorKey && monitorKey !== '') {
                         $(this).find('.monitor-stats').append("<tr>" +
                             "<td>" + x + "</td>" +
                             "<td>" + converter.makeHtml(window.metricDocumentation[x]['markdown']) + "</td>" +
@@ -54,7 +53,7 @@ $(document).ready(function () {
                             "</tr>");
                     }
                 }
-            }else{
+            } else {
                 for (let x in monitor) {
                     try {
                         $(this).find('.monitor-stats').append("<tr>" +
@@ -94,20 +93,20 @@ $(document).ready(function () {
             let cache = [];
             let idMap = [];
 
-            function getDataFromObject(data,type) {
+            function getDataFromObject(data, type) {
 
                 let metrics;
                 try {
                     metrics = data.monitors[0][type];
-                    try{
+                    try {
                         let overridemetrics = data.common[type];
                         metrics = overridemetrics ? overridemetrics : metrics;
-                    }catch(err){
+                    } catch (err) {
                         //console.log(err);
                     }
                 } catch (err) {
                     //console.log(err);
-                    if(type == 'metrics'){
+                    if (type == 'metrics') {
                         metrics = data;
                     }
                 }
@@ -127,7 +126,7 @@ $(document).ready(function () {
 
             function traverseFields(mainObj, data, preRef = '', h2Text = '') {
 
-                let id =  "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
+                let id = "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 id += idMap[id] > 0 ? '-' + idMap[id] : '';
 
@@ -137,12 +136,12 @@ $(document).ready(function () {
                 }
 
                 let table = "<table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='" + id + "'>" +
-                        "<thead>" +
-                            "<th class='head name-head'>Name</th>" +
-                            "<th class='head type-head'>Type</th>" +
-                            "<th class='head kind-head'>Default</th>" +
-                            "<th class='head description-head'>Description</th>" +
-                        "</thead>" +
+                    "<thead>" +
+                    "<th class='head name-head'>Name</th>" +
+                    "<th class='head type-head'>Type</th>" +
+                    "<th class='head kind-head'>Default</th>" +
+                    "<th class='head description-head'>Description</th>" +
+                    "</thead>" +
                     "<tbody></tbody>";
 
                 $(mainObj).append(table);
@@ -162,6 +161,108 @@ $(document).ready(function () {
                     }
                 }
             }
+
+            function traverseMetrics(mainObj, data, preRef = '', h2Text = '') {
+                const id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
+                idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
+                const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
+
+                const template = (idSuffix, title) => `
+<h2 class="sub-table-heading">${title}</h2>
+<table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='${id}-${idSuffix}'>
+  <thead>
+    <th class='head name-head'>Name</th>
+    <th class='head type-head'>Type</th>
+    ${idSuffix === 'metrics' ? '<th class="head unit-head">Unit</th>' : ''}
+    <th class='head description-head'>Description</th>
+    ${idSuffix === 'metrics' ? '<th class="head attributes-head">Attributes</th>' : ''}
+    ${idSuffix === 'attributes' ? '<th class="head enum-head">Values</th>' : ''}
+  </thead>
+  <tbody></tbody>
+</table>
+`;
+
+                if (data['attributes']) {
+                    const attributesTable = $(template('attributes', 'Attributes'));
+                    $(mainObj).append(attributesTable);
+
+                    for (let [name, attr] of Object.entries(data['attributes'])) {
+                        const idAttr = id + '-attribute-' + name;
+                        const enums = attr['enum'] ? attr['enum'].join('</li><li>') : '';
+                        const row = `<td id='${idAttr}'>${name}</td><td>${coalesce(attr['type'], '')}</td><td>${coalesce(converter.makeHtml(attr['description']), '')}</td><td>${enums ? "<ul><li>" : ''}${enums}${enums ? "</li></ul>" : ''}</td>`;
+                        attributesTable.find('tbody').append(`<tr>${row}</tr>`);
+                    }
+                }
+
+                if (data['resource_attributes']) {
+                    const resourceTable = $(template('resource', 'Resource Attributes'));
+                    $(mainObj).append(resourceTable);
+
+                    for (let [name, attr] of Object.entries(data['resource_attributes'])) {
+                        const idAttr = id + '-resource-' + name;
+                        const enums = attr['enum'] ? attr['enum'].join(', ') : '';
+                        const row = `<td id='${idAttr}'>${name}</td><td>${coalesce(attr['type'], '')}</td><td>${coalesce(converter.makeHtml(attr['description']), '')}${enums ? `Possible values: ${enums}` : ''}</td>`;
+                        resourceTable.find('tbody').append(`<tr>${row}</tr>`);
+                    }
+                }
+
+                if (data['metrics']) {
+                    const metricTable = $(template('metrics', 'Metrics'));
+                    $(mainObj).append(metricTable);
+
+                    for (let [name, metric] of Object.entries(data['metrics'])) {
+                        const gauge = metric['gauge'];
+                        const sum = metric['sum'];
+                        if (gauge && gauge['value_type']) {
+                            const idAttr = id + '-metric-' + name;
+                            const attributes = metric['attributes'] ? metric['attributes'].join('</li><li>') : '';
+                            const attributesLink = attributes ? `<a href='#${id}-attribute-${attributes}'>${attributes}</a>` : '';
+                            const row = `<td id='${idAttr}'>${name}</td><td>Gauge</td><td>${metric['unit'] != "1" ? coalesce(metric['unit'], '') : ''}</td><td>${coalesce(converter.makeHtml(metric['description']), '')}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
+                            metricTable.find('tbody').append(`<tr>${row}</tr>`);
+                        }
+                        if (sum && sum['value_type']) {
+                            const idAttr = id + '-metric-' + name;
+                            const attributes = metric['attributes'] ? metric['attributes'].join('</li><li>') : '';
+                            const attributesLink = attributes ? `<a href='#${id}-attribute-${attributes}'>${attributes}</a>` : '';
+                            const row = `<td id='${idAttr}'>${name}</td><td>Gauge</td><td>${metric['unit'] != "1" ? coalesce(metric['unit'], '') : ''}</td><td>${coalesce(converter.makeHtml(metric['description']), '')}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
+                            metricTable.find('tbody').append(`<tr>${row}</tr>`);
+                        }
+                    }
+                }
+            }
+
+
+            $('.metrics-component').each(function () {
+
+                let url = $(this).attr('url');
+                let metricsYamlObject = $(this);
+
+                try {
+
+                    let client = new XMLHttpRequest();
+                    client.open('GET', url);
+                    client.onreadystatechange = function () {
+
+                        const result = jsyaml.load(client.responseText, 'utf8');
+
+                        //console.log(result);
+                        if (result != null && !cache[result.name]) {
+
+                            metricsYamlObject.append(traverseMetrics(metricsYamlObject, result));
+                            cache[result.name] = true;
+                            console.log(result);
+
+                        }
+
+                    }
+                    client.send();
+
+
+                } catch (e) {
+                    console.log(e);
+                }
+
+            });
 
             $('.metrics-standard').each(function () {
 
@@ -202,7 +303,7 @@ $(document).ready(function () {
 
                     var client = new XMLHttpRequest();
                     client.open('GET', url);
-                    client.onreadystatechange = function() {
+                    client.onreadystatechange = function () {
 
                         const result = jsyaml.load(client.responseText, 'utf8');
                         //console.log(result);
@@ -219,7 +320,7 @@ $(document).ready(function () {
 
                 function loadYamls(result) {
 
-                    let monitors = getDataFromObject(result,'metrics');
+                    let monitors = getDataFromObject(result, 'metrics');
 
                     let doc = getDocFromObject(result);
 
@@ -244,7 +345,7 @@ $(document).ready(function () {
                         header += '<th>' + columns[i] + '</th>';
                     }
 
-                    if(category == 'included'){
+                    if (category == 'included') {
                         header += '<th>Category</th>';
                     }
 
@@ -263,10 +364,10 @@ $(document).ready(function () {
 
                             if (j == 'category') {
                                 addedCategory = true;
-                                monitors[i][j] = monitors[i][j] ? 'Default' : 'Custom';
+                                monitors[i][j] = monitors[i][j] ? 'Default' : '';
                             } else if (j == 'default') {
                                 addedCategory = true;
-                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : 'Custom';
+                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : '';
                             } else if (j == 'custom') {
                                 addedCategory = true;
                                 monitors[i][j] = (monitors[i][j] == true) ? 'Custom' : '';
@@ -280,7 +381,7 @@ $(document).ready(function () {
                             }
                         }
 
-                        if(!addedCategory && category == 'included'){
+                        if (!addedCategory && category == 'included') {
                             row += '<td>Included</td>';
                         }
 
@@ -289,12 +390,12 @@ $(document).ready(function () {
                     }
 
 
-                    let extradata = ['dimensions','properties'];
+                    let extradata = ['dimensions', 'properties'];
 
-                    for(let i in extradata){
-                        let newData = getDataFromObject(result,extradata[i]);
+                    for (let i in extradata) {
+                        let newData = getDataFromObject(result, extradata[i]);
 
-                        if(newData){
+                        if (newData) {
 
                             let heading = '<p class="heading-title">' + extradata[i] + '</p>';
                             let header = '<th>Name</th><th>Description</th>';
@@ -303,7 +404,7 @@ $(document).ready(function () {
                             metricsYamlObject.find('.' + classTable).append("<thead>\n" + header + "</thead>");
                             let rows = '';
 
-                            for(let i in newData){
+                            for (let i in newData) {
                                 rows += '<tr><td>' + i + '</td><td>' + newData[i].description + '</td></tr>';
                             }
 
@@ -319,5 +420,5 @@ $(document).ready(function () {
         }
     }
 
-// this is just a comment
+    // this is just a comment
 });
