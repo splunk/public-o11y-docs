@@ -21,26 +21,6 @@ Download and configure the Splunk Incident Intelligence app
 Now you are ready to start sending alerts to Incident Intelligence.
 
 
-Post ITSI episodes as incidents in Incident Intelligence
-==================================================================
-
-To send ITSI episodes as incidents in Incident Intelligence you must have ITSI version 4.17 or newer.
-
-#. In ITSI, navigate to :guilabel:`ITSI > Configuration > Notable Event Aggregation Policies`.
-#. Create a new notable event Aggregation policy or edit an existing notable event Aggregation policy. 
-   * If creating a new policy, define the appropriate filtering criteria and instructions. 
-   * If editing an existing policy select the :guilabel:`Action Rules` tab.
-#. Within the rule select :guilabel:`Change severity to` and select Create an Incident intelligence incident. Then select :guilabel:`Configure`.
-#. Select the following settings:
-    #.  Select the :guilabel:`Severity` for the alert.
-    #.  Enter an :guilabel:`Alert Title`.
-    #.  Enter an :guilabel:`Alert description`. The description can include tokens that insert text based on the results of the search. See :new-page:`Pass search result values to alert action tokens <https://docs.splunk.com/Documentation/Splunk/7.1.3/AdvancedDev/ModAlertsLog#Pass_search_result_values_to_alert_action_tokens>` in Splunk Enterprise documentation for more information.
-    #.  Select a :guilabel:`Realm`, :guilabel:`Org Id`, and :guilabel:`SFX Token` if you want to use something other than the default configured realm, org ID, and SFX token. These lists populate with the entries added in the configuration step. See :ref:`ii-configure-app`.
-    #.  (Optional) Select a incident policy in the :guilabel:`Service Name` field.
-#. Select :guilabel:`Save`.
-
-To access and edit your configured alert go to the :guilabel:`Alerts` tab in the Splunk Incident Intelligence app. 
-
 Ingest Splunk Enterprise alerts using saved searches
 ============================================================
 
