@@ -4,10 +4,10 @@
 Built-in alert conditions
 *****************************************************************
 
-.. meta updated 8/7/18
+
 
 .. meta::
-  :description: Built-in alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold
+  :description: Built-in alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold.
 
 
 .. toctree::
@@ -21,8 +21,6 @@ Built-in alert conditions
    hist-anomaly
    custom-threshold
 
-
-..
 
 When you create rules in detectors to specify conditions that trigger alerts, Splunk Infrastructure Monitoring provides a number of built-in conditions that detect common problem scenarios. Many of these alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold.
 

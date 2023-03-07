@@ -31,7 +31,7 @@ To generate all the basic installation commands for your environment and applica
 
 .. _install-enable-ruby-agent:
 
-Install and enable the Ruby agent
+Install and activate the Ruby agent
 ===================================================================
 
 Follow these steps to automatically instrument your application using the Ruby agent:
@@ -47,7 +47,7 @@ Follow these steps to automatically instrument your application using the Ruby a
 
    Run ``bundle install`` to install the gems.
 
-#.  Enable the instrumentation by passing ``auto_instrument:true`` to the ``configure`` method of ``Splunk::Otel``:
+#.  Activate the instrumentation by passing ``auto_instrument:true`` to the ``configure`` method of ``Splunk::Otel``:
 
       .. code-block:: ruby
 
@@ -92,11 +92,16 @@ Follow these steps to automatically instrument your application using the Ruby a
 
 If no data appears in :strong:`Observability > APM`, see :ref:`common-ruby-troubleshooting`.
 
-If you want to manually install and enable instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
+If you want to manually install and activate instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
+
+Instrument Ruby on Rails applications
+=======================================================
+
+To instrument a Ruby on Rails application, see :ref:`instrument-ruby-rails`.
 
 .. _ruby-enable-server-timing:
 
-Enable server timing for RUM
+Activate server timing for RUM
 ========================================================
 
 You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby`.

@@ -11,18 +11,18 @@ Available host and application monitors
   :maxdepth: 4
   :hidden:
 
-  Caches and memory <caches-memory>
-  Cloud platforms <cloud>
+  Caches and memory TOGGLE <caches-memory>
+  Cloud platforms TOGGLE <cloud>
   cloudfoundry-firehose-nozzle/cloudfoundry-firehose-nozzle
   conviva/conviva
-  Databases <databases>
-  GitLab <gitlab-monitors>
-  Hosts and servers <hosts-servers>
-  Languages <languages>
-  Messaging <messaging>
-  Monitoring <monitoring>
-  Networks <network>
-  Orchestration <orchestration>
+  Databases TOGGLE <databases>
+  GitLab TOGGLE <gitlab-monitors>
+  Hosts and servers TOGGLE <hosts-servers>
+  Languages TOGGLE <languages>
+  Messaging TOGGLE <messaging>
+  Monitoring TOGGLE <monitoring>
+  Networks TOGGLE <network>
+  Orchestration TOGGLE <orchestration>
 
 You can configure an application receiver to gather metrics from its associated application and the host the application is running on.
 
@@ -32,6 +32,6 @@ Receiver functionality is also provided in the form of SignalFx Smart Agent moni
 
 .. note:: The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Open Telemetry Collector are not deprecated. For more details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
 
-.. using an include for this table because it also appears on gdi/get-start-in/integrations.rst
+
 
 .. include:: /_includes/application-receiver-table.rst

@@ -21,7 +21,8 @@ You need the following resources to use Chef:
 
 Linux
 ------------------------
-Currently, we support the following Linux distributions and versions:
+
+The following Linux distributions and versions:
 
 * Amazon Linux: 2
 * CentOS, Red Hat, Oracle: 7, 8
@@ -31,7 +32,8 @@ Currently, we support the following Linux distributions and versions:
 
 Windows
 ---------------------
-Currently, we support the following Windows versions. All versions require using PowerShell 3.0 or newer.
+
+The following Windows versions. All versions require using PowerShell 3.0 or newer.
 
 * Windows Server 2019 64-bit
 * Windows Server 2022 64-bit

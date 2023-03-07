@@ -9,7 +9,7 @@ About the Splunk Distribution of OpenTelemetry Python
 
 The Splunk Distribution of OpenTelemetry Python is a wrapper for the OpenTelemetry Instrumentation for Python, an open source Python agent that dynamically patches supported libraries to capture telemetry data.
 
-With the agent you can automatically instrument any application written in Python 3.6 and higher. See :ref:`python-otel-requirements`. To instrument Python 2 applications, use the :new-page:`SignalFx Tracing Library for Python <https://github.com/signalfx/signalfx-python-tracing>`.
+With the agent you can automatically instrument any application written in Python 3.7 and higher. See :ref:`python-otel-requirements`. To instrument Python 2 applications, use the :new-page:`SignalFx Tracing Library for Python <https://github.com/signalfx/signalfx-python-tracing>`.
 
 Features of the Splunk Distribution of OpenTelemetry Python
 ==============================================================
@@ -29,7 +29,7 @@ Defaults of the Splunk Distribution of OpenTelemetry Python
 
 The Splunk Distribution of OpenTelemetry Python has the following default settings for context propagation, exporters, and trace settings:
 
-- W3C tracecontext and W3C baggage context propagation is enabled by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-python`.
+- W3C tracecontext and W3C baggage context propagation is activated by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-python`.
 - The OTLP gRPC exporter is configured by default to send spans to the local :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 - Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`trace-configuration-python`.
 

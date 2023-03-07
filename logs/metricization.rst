@@ -4,13 +4,10 @@
 Create metrics from your logs with log metricization rules
 *****************************************************************************
 
-.. meta created 2021-04-28
-.. meta DOCS-2247
-
 .. meta::
-  :description: Manage the logs pipeline with log metricization rules.
+  :description: Log metricization rules derive metrics from logs. Show an aggregate count of logs grouped by a dimension. Embed logs data in charts, dashboards, and detectors.
 
-.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create log metricization rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration..
+.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create log metricization rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 
 Log metricization rules allow you to create a log-derived metric showing an aggregate count of logs grouped by the dimension of your choice. While Log Observer visual analysis allows you to dynamically view aggregate metrics in the context of your query, log metricization rules allow you to embed metrics from log data in charts, dashboards, and detectors. Log metricization rules enable you to see trends in your full logs data set without paying to index all of your logs data.
 

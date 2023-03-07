@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-ingest-prometheus-alerts:
 
 Ingest Prometheus alerts
@@ -35,10 +33,15 @@ Request header
    * - X-SF-Token  
      - Required
      - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
+   * - Content-Type
+     - Required
+     - application/json
 
 
 Alert fields
 ----------------
+
+The following fields are transformed as part of the common information model. All other included fields are included properties object in the transformed alert.
 
 .. list-table:: 
    :widths: 15 15 15 55
@@ -146,66 +149,68 @@ Using this endpoint, your alert is ingested and transformed into the common even
 .. code-block:: json 
 
     {
-    "id": "<YOUR_ID>",
-    "eventId": "<YOUR_EVENT_ID>",
-    "title": "Prometheus firing alert for group - disk: mydisk1",
-    "source": "alertmanager:my-receivers",
-    "description": "Receiver 'my-receivers' received alerts from Prometheus. For more info, see http://d37bfc81e932:9093. Common labels - disk: mydisk1, instance: nodeexporter1:9100, job: node_exporter1",
-    "severity": "critical",
-    "sourceType": "prometheus",
-    "orgId": "<YOUR_ORG_ID>",
-    "triggeredAt": 1656550514064,
-    "properties": {
-        "receiver": "my-receivers",
-        "status": "firing",
-        "alerts": [
-        {
-            "status": "firing",
-            "labels": {
-            "alertname": "Disk Usage Red",
-            "disk": "mydisk1",
-            "instance": "nodeexporter1:9100",
-            "job": "node_exporter1",
-            "severity": "critical"
+      "id":"<YOUR_ID>",
+      "eventId":"<YOUR_EVENT_ID>",
+      "title":"Prometheus firing alert for group - disk: mydisk1",
+      "source":"alertmanager:my-receivers",
+      "description":"Receiver 'my-receivers' received alerts from Prometheus. For more info, see http://d37bfc81e932:9093. Common labels - disk: mydisk1, instance: nodeexporter1:9100, job: node_exporter1",
+      "severity":"critical",
+      "sourceType":"prometheus",
+      "orgId":"<YOUR_ORG_ID>",
+      "triggeredAt":1656550514064,
+      "properties":{
+          "receiver":"my-receivers",
+          "status":"firing",
+          "alerts":[
+            {
+                "status":"firing",
+                "labels":{
+                  "alertname":"Disk Usage Red",
+                  "disk":"mydisk1",
+                  "instance":"nodeexporter1:9100",
+                  "job":"node_exporter1",
+                  "severity":"critical"
+                },
+                "annotations":{
+                  "summary":"Delete files now!"
+                },
+                "startsAt":"2022-06-30T00:55:30.064Z",
+                "endsAt":"0001-01-01T00:00:00Z",
+                "generatorURL":"<YOUR_GENERATOR_URL>",
+                "fingerprint":"0e8d353af1ccede9"
             },
-            "annotations": {
-            "summary": "Delete files now!"
-            },
-            "startsAt": "2022-06-30T00:55:30.064Z",
-            "endsAt": "0001-01-01T00:00:00Z",
-            "generatorURL": "<YOUR_GENERATOR_URL>",
-            "fingerprint": "0e8d353af1ccede9"
-        },
-        {
-            "status": "firing",
-            "labels": {
-            "alertname": "Disk Usage Yellow",
-            "disk": "mydisk1",
-            "instance": "nodeexporter1:9100",
-            "job": "node_exporter1",
-            "severity": "warn"
-            },
-            "annotations": {
-            "summary": "Uh oh!"
-            },
-            "startsAt": "2022-06-30T00:55:14.064Z",
-            "endsAt": "0001-01-01T00:00:00Z",
-            "generatorURL": "<YOUR_GENERATOR_URL>",
-            "fingerprint": "2523ef41263c9dc5"
-        }
-        ],
-        "groupLabels": {
-        "disk": "mydisk1"
-        },
-        "commonLabels": {
-        "disk": "mydisk1",
-        "instance": "nodeexporter1:9100",
-        "job": "node_exporter1"
-        },
-        "commonAnnotations": {},
-        "externalURL": "<YOUR_EXTERNAL_URL>",
-        "version": "4",
-        "groupKey": "{}:{disk=\"mydisk1\"}",
-        "truncatedAlerts": 0
-    }
+            {
+                "status":"firing",
+                "labels":{
+                  "alertname":"Disk Usage Yellow",
+                  "disk":"mydisk1",
+                  "instance":"nodeexporter1:9100",
+                  "job":"node_exporter1",
+                  "severity":"warn"
+                },
+                "annotations":{
+                  "summary":"Uh oh!"
+                },
+                "startsAt":"2022-06-30T00:55:14.064Z",
+                "endsAt":"0001-01-01T00:00:00Z",
+                "generatorURL":"<YOUR_GENERATOR_URL>",
+                "fingerprint":"2523ef41263c9dc5"
+            }
+          ],
+          "groupLabels":{
+            "disk":"mydisk1"
+          },
+          "commonLabels":{
+            "disk":"mydisk1",
+            "instance":"nodeexporter1:9100",
+            "job":"node_exporter1"
+          },
+          "commonAnnotations":{
+            
+          },
+          "externalURL":"<YOUR_EXTERNAL_URL>",
+          "version":"4",
+          "groupKey":"{}:{disk=\"mydisk1\"}",
+          "truncatedAlerts":0
+      }
     }

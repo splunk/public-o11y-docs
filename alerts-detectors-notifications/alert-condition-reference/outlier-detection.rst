@@ -4,10 +4,10 @@
 Outlier Detection
 =============================================================================
 
-.. meta updated 8/7/18
+
 
 .. meta::
-  :description: The Outlier Detection condition alerts when a signal is significantly different from its peers in the same time period
+  :description: The Outlier Detection condition alerts when a signal is significantly different from its peers in the same time period.
 
 Outlier Detection alerts when a signal is significantly different from its peers in the same time period. Use this condition to identify inconsistent behavior among a population of emitters (within the same time period), such as which node in a cluster is using more CPU than the others.
 

@@ -4,17 +4,19 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Kubernetes cluster monitor. See benefits, install, configuration, and metrics">
 
+```{note}
+This monitor is deprecated in favor of the `k8s_cluster` receiver. See {ref}`Kubernetes Cluster Receiver <kubernetes-cluster-receiver>` for more information.
+```
+
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `kubernetes-cluster` monitor by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to provide the `kubernetes-cluster` monitor.
 
 Use this integration to obtain cluster-level resource metrics from the Kubernetes API server.
 
-This monitor is similar to `kube-state-metrics` and sends many of the same metrics, but in a way that is less verbose and better fitted for Splunk Infrastructure Monitoring.
-
 The `kubernetes-cluster` monitor does the following:
-- Uses the watch functionality of the Kubernetes API to listen for updates about the cluster
 
+- Uses the watch functionality of the Kubernetes API to listen for updates about the cluster.
 - Maintains a cache of metrics that are sent at regular intervals.
 
 This monitor is available on Linux and Windows.
@@ -79,7 +81,7 @@ The **nested** `kubernetesAPI` configuration object has the following fields:
 | `skipVerify` | no | `bool` | Whether to skip verifying the TLS cert from the API server. Almost never needed. **Default** is `false`. |
 | `clientCertPath` | no | `string` | The path to the TLS client cert on the pod's filesystem, if using `tls` authentication. |
 | `clientKeyPath` | no | `string` | The path to the TLS client key on the pod's filesystem, if using `tls` authentication. |
-| `caCertPath` | no | `string` | Path to a CA certificate to use when verifying the API server's TLS certificate. This is provided by Kubernetes alongside the service account token, which will be picked up automatically, so this should rarely be necessary to specify. |
+| `caCertPath` | no | `string` | Path to a CA certificate to use when verifying the API server TLS certificate. This is provided by Kubernetes alongside the service account token, which will be picked up automatically, so this should rarely be necessary to specify. |
 
 ## Metrics
 

@@ -226,4 +226,4 @@ While you can verify the uninstall of the Collector and Fluentd packages by watc
 
 Uninstall on Windows
 =======================
-If installed with the installer script, the Collector and td-agent (Fluentd) can be uninstalled from **Programs and Features** in the Windows Control Panel. The configuration files may persist in ``\ProgramData\Splunk\OpenTelemetry Collector`` and ``\opt\td-agent`` after uninstall.
+If installed with the installer script, the Collector and td-agent (Fluentd) can be uninstalled from **Programs and Features** in the Windows Control Panel. The configuration files might persist in ``\ProgramData\Splunk\OpenTelemetry Collector`` and ``\opt\td-agent`` after uninstall.

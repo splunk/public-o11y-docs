@@ -8,7 +8,9 @@
 
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache HTTP Server monitor with the SignalFx Smart Agent receiver. The integration monitors Apache web servers using information `mod_status` provides.
 
-This monitor is available on Kubernetes and Linux.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 Apache worker threads can be in one of the following states:
 
@@ -32,7 +34,7 @@ Apache worker threads can be in one of the following states:
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
@@ -47,6 +49,18 @@ receivers:
     type: collectd/apache
     ... # Additional config
 ```
+
+The following is an example of what you can use to replace the placeholder, `... # Additional config`:
+
+    host: localhost
+    port: 80
+
+If `mod_status` is exposed on an endpoint other than `/mod_status`, you can use the url config option to specify the path:
+
+    type: collectd/apache
+    host: localhost
+    port: 80
+    url: "http://{{.Host}}:{{.Port}}/server-status?auto"
 
 To complete the integration, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
 
@@ -74,7 +88,7 @@ The following configuration options are available for this monitor:
 
 After you deploy the monitor in the Splunk Distribution of OpenTelemetry Collector, follow these steps to configure the Apache web server to expose status metrics:
 
-1. Enable the `mod_status` module in your Apache server. Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which the monitor requires.
+1. Activate the `mod_status` module in your Apache server. Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which the monitor requires.
 2. Add the following configuration to your Apache server:
    ```
     ExtendedStatus on

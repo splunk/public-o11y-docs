@@ -152,7 +152,7 @@ Steps
    - :new-page:`Connect to Azure using the Splunk Observability Cloud API <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview>`
    - :new-page:`Connect to Azure using Terraform <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/azure_integration>`
 
-For example, you might want to use the guided setup if you are setting up just a few integrations, such as five or less. However, if you are setting up many integrations, such as for different accounts and regions, use the API or Terraform. Note that if you need all of the latest integration features, you may want to use the API because support may not yet be available using Terraform.
+For example, you might want to use the guided setup if you are setting up just a few integrations, such as five or less. However, if you are setting up many integrations, such as for different accounts and regions, use the API or Terraform. Note that if you need all of the latest integration features, you might want to use the API because support might not yet be available using Terraform.
 
 
 Troubleshooting
@@ -216,7 +216,7 @@ Steps
    - :ref:`Use a wizard to install in a Kubernetes cluster <get-started-k8s>`
    - :ref:`Manually install in a Kubernetes cluster <otel-install-k8s>`
 
-One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that enables users to seamlessly move between key views in Observability Cloud, is easier to implement. For more information, see :ref:`get-started-relatedcontent`.
+One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Observability Cloud, is easier to implement. For more information, see :ref:`get-started-relatedcontent`.
 
 
 Troubleshooting
@@ -310,7 +310,7 @@ After you've instrumented your application, you can access your data in the foll
 Steps
 ------------------------------------------------------------------------------------
 
-See the instrumentation documentation for your application's language:
+See the instrumentation documentation for your application language:
 
 - :ref:`Instrument Java applications <get-started-java>`
 
@@ -326,7 +326,7 @@ See the instrumentation documentation for your application's language:
 
 - :ref:`Instrument PHP applications <get-started-php>`
 
-One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that enables users to seamlessly move between key views in Observability Cloud, is much easier to implement. For more information, see :ref:`get-started-relatedcontent`.
+One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Observability Cloud, is much easier to implement. For more information, see :ref:`get-started-relatedcontent`.
 
 Troubleshooting
 -------------------------------------------------
@@ -449,7 +449,7 @@ After you've configured your homegrown applications and instrumented your server
 Configuration steps for homegrown applications
 -------------------------------------------------------------------------
 
-Use the library for your application's language:
+Use the library for your application language:
 
 - :new-page:`Go client library for SignalFx <https://github.com/signalfx/signalfx-go>` on GitHub
 
@@ -492,7 +492,7 @@ You might want to use the API if you want to integrate with:
 
 - A third-party tool that provides an API/webhook integration only.
 
-- An application written in a language we don’t provide a library for.
+- An application written in a language we don't provide a library for.
 
 This API integration can send all types of data to Observability Cloud. While you can use the API to send logs to Log Observer, we recommend using other integration types to do so. For details about which integrations can send logs to Log Observer, see :ref:`gdi-per-product`.
 

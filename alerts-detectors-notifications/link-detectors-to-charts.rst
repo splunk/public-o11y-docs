@@ -4,8 +4,10 @@
 Link detectors to charts
 *****************************************************************
 
+
+
 .. meta::
-  :description: Link detectors to charts in Splunk Observability Cloud so that you can discover and diagnose issues more quickly.
+  :description: Learn how to Link detectors to charts in Splunk Observability Cloud so that you can discover and diagnose issues more quickly.
 
 Detectors constantly monitor signals for conditions or issues, triggering alerts when needed. When you link detectors to charts, you can discover and diagnose issues at a glance from your dashboards. If you :ref:`create a new detector from a chart <create-detector-from-chart>`, a link to the new detector is automatically added to the chart.
 

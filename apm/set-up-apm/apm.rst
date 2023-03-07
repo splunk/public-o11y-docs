@@ -4,8 +4,10 @@
 Set up Splunk APM
 *****************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Get started monitoring applications with Splunk APM.
+   :description: Learn how to set up Splunk APM to get started monitoring applications.
 
 
 .. toctree::
@@ -31,6 +33,7 @@ See the following optional topics for additional guidance as you set up Splunk A
 * :ref:`apm-environments`
 * :ref:`sensitive-data-controls`
 * :ref:`get-started-relatedcontent` 
+* :ref:`autodetect-list`
 * :ref:`instr-troubleshooting`
 
 .. raw:: html

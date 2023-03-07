@@ -4,10 +4,10 @@
 Sudden Change
 =============================================================================
 
-.. meta updated 8/7/18
+
 
 .. meta::
-  :description: The Sudden Change condition alerts when values received during a recent time window are anomalous compared to values received during the preceding time window
+  :description: The Sudden Change condition alerts when values received during a recent time window are anomalous compared to values received during the preceding time window.
 
 Sudden Change alerts when values received during a recent (short) time window (called the current window) are anomalous compared to values received during the preceding (typically longer) time window (called the historical window). Use this condition to find a sudden change in a metric when you don't have a static baseline for comparison.
 

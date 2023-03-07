@@ -10,6 +10,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 Consul 0.7.0+ is supported.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 The integration monitors Consul datastores, and collects metrics from the following endpoints:
 
 - [/agent/self](https://www.consul.io/api/agent.html#read-configuration)
@@ -26,7 +30,7 @@ The integration monitors Consul datastores, and collects metrics from the follow
 
 The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 Follow these steps to deploy the integration:
 
@@ -96,10 +100,10 @@ The following table shows the configuration options for this monitor:
 | `telemetryServer` | no | `bool` |  (**default:** `false`) |
 | `telemetryHost` | no | `string` | IP address or DNS to which Consul is configured to send telemetry UDP packets. Relevant only if `telemetryServer` is set to `true`. (**default:** `0.0.0.0`) |
 | `telemetryPort` | no | `integer` | Port to which Consul is configured to send telemetry UDP packets. Relevant only if `telemetryServer` is set to `true`. (**default:** `8125`) |
-| `enhancedMetrics` | no | `bool` | Set to `true` to enable collecting all metrics from Consul's runtime telemetry send via UDP or from the `/agent/metrics` endpoint. (**default:** `false`) |
-| `caCertificate` | no | `string` | If Consul server has HTTPS enabled for the API, specifies the path to the CA's Certificate. |
-| `clientCertificate` | no | `string` | If client-side authentication is enabled, specifies the path to the certificate file. |
-| `clientKey` | no | `string` | If client-side authentication is enabled, specifies the path to the key file. |
+| `enhancedMetrics` | no | `bool` | Set to `true` to activate the collection all metrics from Consul runtime telemetry send using UDP or from the `/agent/metrics` endpoint. (**default:** `false`) |
+| `caCertificate` | no | `string` | If Consul server has HTTPS activated for the API, specifies the path to the CA Certificate. |
+| `clientCertificate` | no | `string` | If client-side authentication is activated, specifies the path to the certificate file. |
+| `clientKey` | no | `string` | If client-side authentication is activated, specifies the path to the key file. |
 | `signalFxAccessToken` | no | `string` |  |
 
 ## Metrics

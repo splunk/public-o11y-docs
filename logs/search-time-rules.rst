@@ -4,11 +4,8 @@
 Apply processing rules across historical data
 *****************************************************************
 
-.. meta created 2021-04-13
-.. meta DOCS-2001
-
 .. meta::
-  :description: Apply processing rules across historical data with search-time rules
+  :description: Transform your data with a log processing rule, then apply the rule to logs that came in before the rule existed. Learn about search-time vs. index-time rules.
 
 .. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can apply processing rules across historical data. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 

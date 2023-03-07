@@ -1,0 +1,16 @@
+LICENSE
+
+This Splunk repository is subject to the Splunk Websites Terms and Conditions of Use (“Terms”)
+(https://www.splunk.com/en_us/legal/terms/terms-of-use.html).
+
+Notwithstanding Section 4.2 of the Terms, Splunk grants you express permission solely to fork the repository
+and to modify for the purpose of contributing improvements to Splunk Observability Cloud documentation.
+Except as expressly permitted above, you may not use, download, upload, copy, print, display, perform, reproduce,
+publish, license, post, transmit, rent, lease, modify, loan, sell, distribute, or create derivative works of the
+repository or any other content, in whole or in part, without the express prior written authorization of Splunk.
+
+Other limitations:
+
+1. Splunk only accepts Pull Requests from a forked repository. 
+2. You do not have permission to keep a copy of the repository.
+3. The LICENSE file must be included in any forked repository and cannot be modified. 

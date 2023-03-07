@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-ingest-azure-alerts:
 
 Ingest Azure Monitor alerts
@@ -35,9 +33,14 @@ Request header
    * - X-SF-Token  
      - Required
      - Authentication token. See :ref:`api-access-token`. Ensure that the token has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`.
+   * - Content-Type
+     - Required
+     - application/json
 
 Alert fields
 ----------------
+
+The following fields are transformed as part of the common information model. All other included fields are included properties object in the transformed alert.
 
 .. list-table:: 
    :widths: 15 15 15 55

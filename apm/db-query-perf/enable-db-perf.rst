@@ -4,8 +4,10 @@
 Enable Database Query Performance
 ************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Enable Database Query Performance in Splunk APM so you can monitor the impact of your database queries on service availability without having to instrument your databases. 
+   :description: Learn how to enable Database Query Performance in Splunk APM so you can monitor the impact of your database queries on service availability. 
 
 Database Query Performance is available by default, so all you need to do is enable the feature so that APM automatically begins indexing a set of database-related span tags. See :ref:`db-tags` for the list of tags.
 
@@ -32,7 +34,7 @@ Follow these steps to enable Database Query Performance and begin indexing datab
          :width: 100%
          :alt: Cardinality analysis for indexing new span tags passing within entitlement.
 
-    a. If the cardinality analysis passes within entitlement, as in the screenshot, select the checkmark to accept the cardinality contribution and begin indexing database tags.
+    a. If the cardinality analysis passes within entitlement, as in the screenshot, select the check mark to accept the cardinality contribution and begin indexing database tags.
     b. If the cardinality contribution exceeds your entitlement, consider reviewing the cardinality contributions of your other indexed span tags to free up cardinality for Database Query Performance. To learn more about optimizing cardinality, see :ref:`apm-limits-metricsets`. 
 
 3. Navigate to the APM landing page and select the :guilabel:`Database Query Performance` card to confirm databases are appearing in Database Query Performance. If they are not appearing as expected, see :ref:`db-perf-troubleshooting`.

@@ -5,6 +5,11 @@
 Troubleshoot detectors in Splunk Observability Cloud
 ******************************************************************
 
+
+
+.. meta::
+  :description: Learn how to troubleshoot detectors in Splunk Observability Cloud. 
+
 A :term:`detector` monitors signals on a plot line, as on a chart, and triggers alert events and clear events based on conditions you define in rules.
 
 To access a detector, navigate to :guilabel:`Alerts` then :guilabel:`Detectors` from the Alerts menu, or by selecting :guilabel:`Open Detector` from an alert pop-out window. 

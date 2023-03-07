@@ -4,10 +4,10 @@
 Introduction to Splunk Log Observer Connect
 *****************************************************************
 
-.. meta created 2021-12-03
+
 
 .. meta::
-   :description: Integrate Log Observer with Splunk Enterprise and use Log Observer Connect.
+   :description: Log Observer integration with Splunk Cloud Platform or Splunk Enterprise. The introduction is an overview describing all Log Observer Connect functionality.
 
 
 If you have a Log Observer entitlement rather than Log Observer Connect, see :ref:`get-started-logs`. 

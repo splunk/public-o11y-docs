@@ -4,8 +4,10 @@
 Add context to spans with span tags in Splunk APM
 *****************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Use span tags to slice and dice service performance by dimensions in Splunk APM.
+   :description: Learn how to use span tags to slice and dice service performance by dimensions in Splunk APM.
 
 Enrich the context of the spans you send to Splunk APM by adding span tags. Span tags are key-value pairs that provide additional metadata about spans in a trace. In OpenTelemetry, span tags are known as ``attributes``. 
 
@@ -183,7 +185,7 @@ Add span tags with the Splunk Distribution of OpenTelemetry Collector
 
 To add a span tag to spans received by the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>`, you can use the ``attributes`` processor in your OpenTelemetry Collector configuration YAML file. 
 
-The generic attributes processor is called ``attributes``. Any subsequent  ``attributes/<NAME>`` processors are named instances of the ``attributes`` processor. 
+The generic attributes processor is called ``attributes``. Any subsequent  ``attributes/<NAME>`` processors are named instances of the ``attributes`` processor. See :ref:`attributes-processor` for more information.
 
 Follow these steps to define a new attributes processor and add it to your pipeline: 
 

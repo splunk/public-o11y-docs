@@ -34,10 +34,13 @@ extensions = [
     'sphinx_copybutton',
     'toggle',
     'newpage',
+    'github',
     'myst_parser',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'olly_on_git_hub'
 ]
-
+olly_on_github_repo = 'splunk/public-o11y-docs'
+olly_on_github_branch = 'main'
 sphinx_tabs_disable_tab_closing = True
 
 # Set myst_parser to automatically generate labels for h1, h2, and h3 headings
@@ -84,7 +87,7 @@ language = 'en'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'venv/lib/*/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst']
+exclude_patterns = ['_build', 'venv/lib/*/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'CONTRIBUTING.md', '.github/pull_request_template.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -162,6 +165,14 @@ rst_prolog = """
 .. |more| raw:: html
 
    ⋯
+
+.. |verticaldots| raw:: html
+
+   ⋮
+
+.. |takeshift| image:: /_images/incident-intelligence/Incident-intelligence-take-shift-icon.png
+   :alt: Take shift
+   :class: inline-image
 
 .. |br| raw:: html
 

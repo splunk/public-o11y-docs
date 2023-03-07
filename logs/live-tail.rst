@@ -4,11 +4,8 @@
 Verify changes to monitored systems with Live Tail
 **************************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
-  :description: Use Live Tail to verify the changes to the systems you're monitoring.
+  :description: Live Tail shows a near real-time feed of log messages as they come into Log Observer. See the impact of updates live. Verify that an integration is sending data.
 
 .. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can monitor systems with Live Tail. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 
@@ -97,11 +94,6 @@ know that your integration might have problems.
 
 Adding filters helps you find log records for a specific integration.
 
-The following image shows you an example of filtering in Live Tail:
-
-..  image:: /_images/logs/log-observer-live-tail-filter.png
-    :width: 99%
-    :alt: Live Tail filters
 
 .. _verify-integration-with-live-tail-keyword-highlighting:
 
@@ -122,8 +114,3 @@ To highlight keywords in log records, follow these steps:
 #. In the navigation bar, type up to nine keywords in the :guilabel:`Enter keyword` text box, then press Enter.
    Live Tail displays each keyword it finds with a unique color.
 
-The following image shows you an example of highlighting keywords in Live Tail:
-
-..  image:: /_images/logs/log-observer-live-tail-highlight.png
-    :width: 99%
-    :alt: Live Tail highlight

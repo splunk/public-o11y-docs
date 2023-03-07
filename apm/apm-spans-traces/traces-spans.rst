@@ -4,6 +4,8 @@
 Manage services, spans, and traces in Splunk APM
 **************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
    :description: Learn about traces and spans in Splunk Observability Cloud. Spans are operations, and traces are collections of spans.
 
@@ -14,6 +16,7 @@ Manage services, spans, and traces in Splunk APM
    apm-errors
    service-map
    trace-search
+   trace-analyzer
    traces-special-cases
    span-search
    download-traces
@@ -21,7 +24,7 @@ Manage services, spans, and traces in Splunk APM
    span-formats
 
 
-Spans and traces form the backbone of application monitoring in Splunk APM. Use the following topics to learn about spans and traces and manage your spans and traces effectively, so that you can get the most out of APM's full-fidelity tracing: 
+Spans and traces form the backbone of application monitoring in Splunk APM. Use the following topics to learn about spans and traces and manage your spans and traces effectively, so that you can get the most out of APM full-fidelity tracing: 
 
 * :ref:`apm-inferred-services`
 * :ref:`apm-errors`

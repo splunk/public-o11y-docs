@@ -11,7 +11,7 @@ If you have Infrastructure Monitoring Enterprise Edition, you can manage costs
 associated with sending in data by setting limits on access tokens.
 
 Regardless of the edition you're using, access tokens also help you control the
-rate at which you use Infrastructure Monitoring resources. This feature enables
+rate at which you use Infrastructure Monitoring resources. This feature allows
 you to provide exemplary performance in the user interface.
 
 Cost-related token limits
@@ -131,7 +131,7 @@ You can set two Infrastructure Monitoring rate-related limits:
    * Impact: Setting a limit improves the performance of charts in the Infrastructure Monitoring user interface.
 
    * To learn more about SignalFlow analytics jobs, see the :new-page:`Analyze Data Using SignalFlow <https://dev.splunk.com/observability/docs/signalflow>`
-     topic in the Developer Guide for Splunk Infrastructure Monitoring.
+     topic in the Splunk Observability Cloud Developer Guide.
 
 #. Event search limit: The rate at which you search for events.
 

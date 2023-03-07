@@ -4,8 +4,10 @@
 Send traces to Splunk APM
 **************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Send traces to Splunk APM and begin monitoring application performance.
+   :description: Learn how to send traces to Splunk APM and begin monitoring application performance.
 
 Set up your APM experience by sending traces to APM from your services. 
 
@@ -49,7 +51,7 @@ To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTeleme
   - The collector can add span metadata associated with the infrastructure in which your applications are running.
   - You establish a single configuration point in which you can specify authorization details.
   - You establish a single configuration point in which you add custom tags and custom processing to your spans.
-  - You can batch spans together from many sources. By batching spans, you reduce load on the backend.
+  - You can batch spans together from many sources. By batching spans, you reduce load on the back end.
 
 To deploy the Splunk Distribution of OpenTelemetry Collector on a host, select :guilabel:`Navigation menu > Data Management` and search for the host type you're using. Then follow the steps in the setup wizard. 
 

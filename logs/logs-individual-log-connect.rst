@@ -4,11 +4,8 @@
 View individual log details 
 ***********************************************************************
 
-.. meta created 2022-12-08
-.. meta DOCS-4768
-
 .. meta::
-  :description: View problem details in an individual log
+  :description: View the contents of an individual log, then create a field extraction to drill down further. See message, error, span ID, trace ID, and other fields.
 
 
 After you find log records that contain a specific area, view the

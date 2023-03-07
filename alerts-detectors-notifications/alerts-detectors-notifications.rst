@@ -5,6 +5,7 @@ Introduction to alerts and detectors in Splunk Observability Cloud
 **************************************************************************
 
 
+
 .. meta::
    :description: Splunk Observability Cloud uses detectors, events, alerts, and notifications to keep you informed when certain criteria are met. When a detector condition is met, the detector generates an event, triggers an alert, and can send one or more notifications.
 

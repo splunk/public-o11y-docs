@@ -5,7 +5,7 @@ Splunk Log Observer Connect
 *************************************
 
 .. meta::
-   :description: Investigate issues with Splunk Log Observer Connect.
+   :description: The Log Observer Connect landing page lists and describes all capabilities. Investigate logs in context with metrics and traces in Splunk Log Observer Connect. 
 
 .. toctree::
     :maxdepth: 3
@@ -24,7 +24,6 @@ Splunk Log Observer Connect
     logs-individual-log-connect
     message-field
     aggregations
-    save-share
     logviews
     timestamp
     lo-connect-limits

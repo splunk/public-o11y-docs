@@ -13,9 +13,9 @@ Connect to Google Cloud Platform
    gcp-metrics
    gcp-logs
 
-With a Google Cloud Platform (GCP) integration in Splunk Infrastructure Monitoring, you can track your Google Cloud Monitoring (formerly Google Stackdriver) metrics and monitor your GCP services in one place using the navigator in Stackdriver-powered mode and built-in dashboards.  
+With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place using the navigator in Stackdriver-powered mode and built-in dashboards. For the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`. 
 
-To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. To see the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`.
+To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 
 .. raw:: html
 
@@ -34,11 +34,11 @@ You must be an administrator of your Splunk Observability Cloud organization to 
 .. raw:: html
 
    <embed>
-      <h2>Select a role for the GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h2>
+      <h2>Select a role for your GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 * If you want to use the :strong:`Project Viewer` role, skip to :ref:`Configure GCP <gcp-two>`. Choosing this role ensures that any functionality update implemented in Infrastructure Monitoring doesn't require changes to your GCP setup.
-* If you want to use a role with more restrictive permissions than those available to Project Viewer, make sure your selected role has sufficient permissions to connect to Infrastructure Monitoring. If your GCP service account role has insufficient permissions, you'll get an error message when trying to connect to Infrastructure Monitoring. Review and enable any missing permissions, or change the role to Project Viewer.
+* If you want to use a role with more restrictive permissions than those available to Project Viewer, make sure your selected role has sufficient permissions to connect to Infrastructure Monitoring. If your GCP service account role has insufficient permissions, you'll get an error message when trying to connect to Infrastructure Monitoring. Review and activate any missing permissions, or change the role to Project Viewer.
 
 The following table specifies the permissions required for GCP integrations.
 
@@ -55,33 +55,44 @@ The following table specifies the permissions required for GCP integrations.
    *  - ``monitoring.timeSeries.list``
       - Yes
 
-   *  - ``resourcemanager.projects.get``
-      - Yes, if you want to sync project metadata, such as labels
-
    *  - ``serviceusage.services.use``
-      - Yes, if you want to enable the use of a quota from the project where metrics are stored
+      - Yes, if you want to activate the use of a quota from the project where metrics are stored
 
    *  - ``compute.instances.list``
-      - Yes, if the Compute Engine service is enabled
+      - Yes, if the Compute Engine service is activated
 
    *  - ``compute.machineTypes.list``
-      - Yes, if the Compute Engine service is enabled
+      - Yes, if the Compute Engine service is activated
 
    *  - ``container.clusters.list``
-      - Yes, if the Kubernetes (GKE) service is enabled
+      - Yes, if the Kubernetes (GKE) service is activated
 
    *  - ``container.nodes.list``
-      - Yes, if the Kubernetes (GKE) service is enabled
+      - Yes, if the Kubernetes (GKE) service is activated
 
    *  - ``container.pods.list``
-      - Yes, if the Kubernetes (GKE) service is enabled
+      - Yes, if the Kubernetes (GKE) service is activated
+
+   *  - ``monitoring.metricDescriptors.get``
+      - Yes
+
+   *  - ``monitoring.metricDescriptors.list``
+      - Yes
+
+   *  - ``monitoring.timeSeries.list``
+      - Yes
+
+   *  - ``resourcemanager.projects.get``
+      - Yes, if you want to sync project metadata (such as labels), or if you need to obtain metrics from monitored projects of a scoping project  
+
+   *  - ``serviceusage.services.use``
+      - Yes, if you want to activate the use of a quota from the project where metrics are stored
 
    *  - ``spanner.instances.list``
-      - Yes, if the Spanner service is enabled
+      - Yes, if the Spanner service is activated
 
    *  - ``storage.buckets.list``
-      - Yes, if the Spanner service is enabled
-
+      - Yes, if the Spanner service is activated
 
 .. _gcp-two:
 
@@ -116,9 +127,22 @@ To configure your GCP service, follow these steps:
 
 #. Select :guilabel:`CREATE`.
 #. (Optional) Select a role to grant this Service account access to the selected project, then select :guilabel:`CONTINUE`.
-#. Enable Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer.
-#. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and enable the Cloud Resource Manager API. You need to enable this API so Splunk Infrastructure Monitoring can use it to validate permissions on the service account keys.
-#. Repeat the following steps for each project you want to monitor with the GCP integration.
+#. Activate Key type :guilabel:`JSON`, and select :guilabel:`CREATE`. A new service account key JSON file is then downloaded to your computer.
+#. In a new window or tab, go to :new-page:`Cloud Resource Manager API <https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com?pli=1>`, and activate the Cloud Resource Manager API. You need to activate this API so Splunk Infrastructure Monitoring can use it to validate permissions on the service account keys.
+
+.. _gcp-projects:
+
+.. raw:: html
+
+   <embed>
+      <h3>Configure multiple GCP projects<a name="gcp-projects" class="headerlink" href="#gcp-projects" title="Permalink to this headline">¶</a></h3>
+   </embed>
+
+To monitor multiple GCP projects with the integration you have two options: 
+
+* Repeat the steps described in this section for each one of the projects. 
+
+* Follow the instructions in GCP :new-page:`Overview of viewing metrics for multiple projects <https://cloud.google.com/monitoring/settings>` to attach monitored projects to the one you've already configured.
 
 .. _gcp-three:
 
@@ -173,7 +197,7 @@ Your GCP integration is now complete.
       <h2>Integrate GCP using the API <a name="gcp-api" class="headerlink" href="#gcp-api" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-You can also integrate GCP with Splunk Observability Cloud using the GCP API. See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` for details.
+You can also integrate GCP with Splunk Observability Cloud using the GCP API. See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` in our developer portal for details.
 
 
 

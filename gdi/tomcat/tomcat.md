@@ -6,9 +6,9 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/tomcat` monitor via the Smart Agent Receiver. `collectd/tomcat` monitors Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/tomcat` monitor type for the Smart Agent Receiver. `collectd/tomcat` monitors Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
 
-> _**Note:**_ You must enable JMX Remote to monitor Tomcat remotely.
+> _**Note:**_ You must activate JMX Remote to monitor Tomcat remotely.
 
 ## Benefits
 
@@ -50,7 +50,7 @@ The following tables show the configuration options for this monitor:
 | `host` | **yes** | `string` | The host to connect to. JMX must be configured for remote access and accessible from the agent. |
 | `port` | **yes** | `integer` | The JMX connection port. This is not the same as the remote method invocation (RMI) port on the application. This corresponds to the `com.sun.management.jmxremote.port` Java property to set on the JVM when running the application. |
 | `name` | no | `string` |  |
-| `serviceName` | no | `string` | This is how the service type is identified in the UI so that you can get built-in content for it. For custom JMX integrations, it can be set to whatever you like, and the metrics get the special property `sf_hostHasService` set to this value. |
+| `serviceName` | no | `string` | This is how the service type is identified in the UI so that you can get built-in content for it. For custom JMX integrations, it can be set to whatever you like. |
 | `serviceURL` | no | `string` | The JMX connection string. This is rendered as a Go template and has access to the other values in this configuration. Note that under normal circumstances, it is not advised to set this string directly. Setting the host and port as specified above is preferred. The default value is `service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi`). |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. If a second `instancePrefix` is specified in a referenced MBean block, the prefix specified in the Connection block appears at the beginning of the plugin instance, and the prefix specified in the MBean block is appended to it. |
 | `username` | no | `string` | The username to authenticate to the server. |
@@ -66,7 +66,7 @@ The **nested** `mBeanDefinitions` configuration object has the following fields:
 | --- | --- | --- | --- |
 | `objectName` | no | `string` | Sets the pattern, which is used to retrieve MBeans from the MBeanServer. If more than one MBean is returned, use the `instanceFrom` option to make the identifiers unique. |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. |
-| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so called "properties", which are basically key-value-pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. Use this option to build the plugin instance from the appropriate property values. This is optional and may be repeated to generate the plugin instance from multiple property values. |
+| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so called "properties", which are basically key-value-pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. Use this option to build the plugin instance from the appropriate property values. This is optional and can be repeated to generate the plugin instance from multiple property values. |
 | `values` | no | `list of objects` (see below) | The `value` blocks map one or more attributes of an MBean to a value list in collectd. There must be at least one `value` block within each MBean block. |
 | `dimensions` | no | `list of strings` | &nbsp; |
 

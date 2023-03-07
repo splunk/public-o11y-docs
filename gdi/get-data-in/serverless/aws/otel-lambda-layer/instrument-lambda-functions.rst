@@ -11,7 +11,7 @@ Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS L
 
 :strong:`Tip:` To generate a template that instruments your Lambda function using the Splunk OpenTelemetry Lambda Layer, use the AWS Lambda guided setup. To access the AWS Lambda guided setup, follow these steps:
 
-#. Log in to Splunk Observability Cloud
+#. Log in to Splunk Observability Cloud.
 
 #. Open the :new-page:`AWS Lambda guided setup <https://login.signalfx.com/#/gdi/scripted/awslambda/step-1?category=product-apm&gdiState=%7B"integrationId":"awslambda"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
@@ -36,7 +36,9 @@ The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lam
 - Ruby 2.7
 - Go 1.18
 
-For more information, search for "Lambda runtimes" on the AWS documentation website.
+The Lambda Layer requires 49 MB on-disk in standard x86_64 systems.
+
+For more information, search for Lambda runtimes and other system requirements on the AWS documentation website.
 
 .. _install-otel-lambda-layer:
 
@@ -106,13 +108,13 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
                      /opt/otel-handler
 
                      # Same as otel-handler, but proxied through API Gateway,
-                     # with HTTP context propagation enabled
+                     # with HTTP context propagation activated
                      /opt/otel-proxy-handler
 
                      # Wraps streaming handlers that implement RequestStreamHandler
                      /opt/otel-stream-handler
 
-                  .. note:: Only AWS SDK v2 instrumentation is enabled by default. To instrument other libraries, modify your code to include the corresponding library instrumentation from the OpenTelemetry Java SDK.
+                  .. note:: Only AWS SDK v2 instrumentation is activated by default. To instrument other libraries, modify your code to include the corresponding library instrumentation from the OpenTelemetry Java SDK.
 
                .. code-tab:: shell Python
 
@@ -203,7 +205,7 @@ The ``zip`` feature of ``pythonRequirements`` allows packing and deploying Lambd
 Slim feature
 -----------------------------------------------------
 
-The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Disable the ``slim`` option in your ``serverless.yml`` file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
+The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your ``serverless.yml`` file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
 
 .. _check-otel-lambda-data:
 

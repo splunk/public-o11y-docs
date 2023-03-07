@@ -4,8 +4,10 @@
 View alerts in Splunk Observability Cloud
 *****************************************************************
 
+
+
 .. meta::
-   :description: You can view currently active alerts on the Alerts page or in the Infrastructure Navigator
+   :description: Learn how to view currently active alerts on the Alerts page or in the Infrastructure Navigator.
 
 Alerts are highly relevant to the health of your services and applications. Observability Cloud shows alerts in all places where they matter, so that you don't miss on important information.
 

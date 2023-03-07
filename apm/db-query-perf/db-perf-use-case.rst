@@ -4,8 +4,10 @@
 Use case: Identify slow database queries using Database Query Performance
 **************************************************************************
 
+.. Metadata updated: 1/23/23
+
 .. meta::
-   :description: Follow a site reliability engineer (SRE)'s workflow using Database Query Performance to examine the relationship between service latency and the performance of database queries in their system.
+   :description: This Splunk APM use case describes a workflow that uses Database Query Performance to examine service latency and the performance of database queries.
 
 Jax, a site reliability engineer, is in charge of identifying the root cause of service latency issues in their system. In this section, follow their workflow using Database Query Performance to examine the relationship between service latency and the performance of database queries in their system.
 
@@ -67,7 +69,7 @@ Jax selects this panel to open Database Query Performance. The data they see in 
 
 Jax could also use the database picker to select from among available SQL databases, but now they want to focus on ``mysql:mysql-prod-1``.  
 
-The table under :guilabel:`Top Queries` shows a list of the top 10 queries to ``mysql:mysql-prod-1``, sorted by default in descending order by total time. Jax can use the :guilabel:`Sort` picker to sort by P90 latency or requests per second instead. They can also use the :guilabel:`Compare to:` picker to compare the current data against a past time range. This overlays a historical line based on the selected time range on the chart in each row of the query table, enabling Jax to determine whether the problem is recent, or has been occuring over time. 
+The table under :guilabel:`Top Queries` shows a list of the top 10 queries to ``mysql:mysql-prod-1``, sorted by default in descending order by total time. Jax can use the :guilabel:`Sort` picker to sort by P90 latency or requests per second instead. They can also use the :guilabel:`Compare to:` picker to compare the current data against a past time range. This overlays a historical line based on the selected time range on the chart in each row of the query table, enabling Jax to determine whether the problem is recent, or has been occurring over time. 
 
 The charts under :guilabel:`Database Overview` in the sidebar summarize the latency and request and error rate for all queries in the selected database, illustrating trends in query latency over time. The charts are based on the current state of the filter bar. Changing the time range or environment pickers in the filter bar changes the data shown in the chart.
 

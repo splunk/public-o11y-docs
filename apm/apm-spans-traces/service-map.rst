@@ -4,10 +4,12 @@
 View dependencies among your services in the service map
 ************************************************************
 
-.. meta::
-   :description: The service map displays the dependencies and connections among your services in Splunk APM. 
+.. Metadata updated: 1/23/23
 
-The service map, located in Splunk APM's :guilabel:`Explore` view, displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
+.. meta::
+   :description: Learn about the service map displays for your services in Splunk APM. 
+
+The service map, located in Splunk APM :guilabel:`Explore` view, displays the dependencies and connections among your instrumented and inferred services in APM. The map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-inferred-services` to learn more about inferred services in APM.
 
 You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
 
@@ -48,13 +50,13 @@ You can also use the service map as a starting point for monitoring or troublesh
 Perform breakdowns in the service map
 ===========================================
 
-The following screenshot shows an example service map in which the ``paymentservice`` node is broken down by endpoint, showing that errors with the payment service are occuring in the ``/Charge`` endpoint. 
+The following screenshot shows an example service map in which the ``paymentservice`` node is broken down by endpoint, showing that errors with the payment service are occurring in the ``/Charge`` endpoint. 
 
 ..  image:: /_images/apm/spans-traces/service-map-breakdown.png
     :width: 95%
     :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
 
-The following screenshot shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occuring in the ``/Charge`` endpoint of the ``paymentservice`` are actually originating in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
+The following screenshot shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` are actually originating in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
 
 ..  image:: /_images/apm/spans-traces/service-map-second- breakdown.png
     :width: 95%
