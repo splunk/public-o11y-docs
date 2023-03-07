@@ -174,7 +174,7 @@ $(document).ready(function () {
     <th class='head name-head'>Name</th>
     <th class='head type-head'>Type</th>
     ${idSuffix === 'metrics' ? '<th class="head unit-head">Unit</th>' : ''}
-    <th class='head description-head'>Description</th>
+    <th class='head description-head' width="40%">Description</th>
     ${idSuffix === 'metrics' ? '<th class="head attributes-head">Attributes</th>' : ''}
     ${idSuffix === 'attributes' ? '<th class="head enum-head">Values</th>' : ''}
   </thead>
@@ -188,8 +188,8 @@ $(document).ready(function () {
 
                     for (let [name, attr] of Object.entries(data['attributes'])) {
                         const idAttr = id + '-attribute-' + name;
-                        const enums = attr['enum'] ? attr['enum'].join('</span></li><li><span class="pre">') : '';
-                        const row = `<td id='${idAttr}'>${name}</td><td>${coalesce(attr['type'], '')}</td><td>${coalesce(converter.makeHtml(attr['description']), '')}</td><td>${enums ? "<ul><li>" : ''}<span class="pre">${enums}${enums ? "</li></ul>" : ''}</td>`;
+                        const enums = attr['enum'] ? attr['enum'].join('</code></li><li><code>') : '';
+                        const row = `<td id='${idAttr}'>${name}</td><td>${coalesce(attr['type'], '')}</td><td>${coalesce(converter.makeHtml(attr['description']), '')}</td><td>${enums ? "<ul><li>" : ''}<code>${enums}</code>${enums ? "</li></ul>" : ''}</td>`;
                         attributesTable.find('tbody').append(`<tr>${row}</tr>`);
                     }
                 }
@@ -201,7 +201,7 @@ $(document).ready(function () {
                     for (let [name, attr] of Object.entries(data['resource_attributes'])) {
                         const idAttr = id + '-resource-' + name;
                         const enums = attr['enum'] ? attr['enum'].join(', ') : '';
-                        const row = `<td id='${idAttr}'>${name}</td><td>${coalesce(attr['type'], '')}</td><td>${coalesce(converter.makeHtml(attr['description']), '')}${enums ? `Possible values: <span class="pre">${enums}</pre>` : ''}</td>`;
+                        const row = `<td id='${idAttr}'>${name}</td><td>${coalesce(attr['type'], '')}</td><td>${coalesce(converter.makeHtml(attr['description']), '')}${enums ? `Possible values:&nbsp;<code>${enums}</code>` : ''}</td>`;
                         resourceTable.find('tbody').append(`<tr>${row}</tr>`);
                     }
                 }
