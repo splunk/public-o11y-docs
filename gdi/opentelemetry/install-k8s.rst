@@ -145,33 +145,60 @@ Install the Collector with resource YAML manifests
 
    To specify the configuration, you at least need to know your Splunk realm and base64-encoded access token.
 
-A manifest specifies the state you want to apply to a Kubernetes object when you apply the configuration file. Each configuration file can contain multiple resource manifests. 
+A configuration file can contain multiple resource manifests. Each manifest applies a specific state to a Kubernetes object. The manifests must be configured for Splunk Observability Cloud only and come with all telemetry types activated for the agent, which is the default when installing the Helm chart. 
 
-Apply resource manifests using the ``kubectl create`` command. The manifests are configured with all telemetry types activated for the agent, which is the default when installing the Helm chart. These manifests should be configured for Splunk Observability Cloud only.
+Determine which manifest you want to use
+------------------------------------------------
 
-Do the following to deploy the Splunk Distribution of OpenTelemetry Collector for Kubernetes using resource manifests:
+Download the necessary manifest files from :new-page:`the examples repository <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples>`. Refer to the ``README`` files for more details on each example.
 
-#. Determine which mode you want to use, Agent mode or Gateway mode. By default, Agent mode is configured to send data directly to Splunk SaaS endpoints. Agent mode can be reconfigured to send to a gateway.
-#. Download the necessary manifest files from the provided examples for desired Agent or Gateway modes from :new-page:`the examples repository <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples>`.
-#. Update the secret.yaml manifest file with your base64-encoded access token as the ``splunk_observability_access_token`` data field value.
-#. Update any configmap-agent.yaml, configmap-gateway.yaml, and configmap-cluster-receiver.yaml manifest files you downloaded, search for "CHANGEME" to find the values that must be updated to use the rendered manifests directly.
+Determine which :ref:`otel-deployment-mode` you want to use, agent or gateway. By default, agent mode is configured to send data directly to Splunk SaaS endpoints. Agent mode can be reconfigured to send to a gateway.
+
+Update the manifest
+------------------------------------------------
+
+Once you've decided which manifest suits you better, make the following updates:
+
+#. In the ``secret.yaml`` manifest, update the ``splunk_observability_access_token`` data field with your base64-encoded access token.
+#. Update any ``configmap-agent.yaml``, ``configmap-gateway.yaml``, and ``configmap-cluster-receiver.yaml`` manifest files you're going to use. Search for "CHANGEME" to find the values that must be updated to use the rendered manifests directly.
       #. You need to update "CHANGEME" in exporter configurations to the value of the Splunk realm.
       #. You need to update "CHANGEME" in attribute processor configurations to the value of the cluster name.
-#. Apply the manifests using ``kubectl``, as shown in the following examples.
 
-For Agent mode, download the :new-page:`agent-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/default/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
+Apply the manifest
+--------------------------------
+
+After you've updated them, apply the manifests using ``kubectl``, as shown in the following examples.
+
+For agent mode, download the :new-page:`agent-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/default/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
 
 .. code-block:: bash
-  
+
    kubectl apply -f <agent-manifest-directory> --recursive
 
-For Gateway mode, download the :new-page:`gateway-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/collector-gateway-only/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
+For gateway mode, download the :new-page:`gateway-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/collector-gateway-only/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
 
 .. code-block:: bash
 
    kubectl apply -f <gateway-manifest-directory> --recursive
 
-Examples
+Use templates
+--------------------------------
+
+You can create your own manifest YAML files with customized parameters using ``helm template`` command. 
+
+.. code-block:: bash
+
+   helm template --namespace default --set cloudProvider='aws' --set distribution='openshift' --set splunkObservability.accessToken='KUwtoXXXXXXXX' --set clusterName='my-openshift-EKS-dev-cluster' --set splunkObservability.realm='us1' --set gateway.enabled='false' --output-dir <rendered_manifests_dir> --generate-name splunk-otel-collector-chart/splunk-otel-collector 
+
+If you prefer, you can update the ``values.yaml`` file first.
+
+.. code-block:: bash
+
+   helm template --namespace default --values values.yaml --output-dir <rendered_manifests_dir> --generate-name splunk-otel-collector-chart/splunk-otel-collector 
+
+Manifest files will be created in your specified folder ``<rendered_manifests_dir>``.
+
+Manifest examples
 --------------------------------
 
 See the following manifest to set security constraints:
@@ -210,4 +237,5 @@ Next steps
 After installing the package, you can:
 
 * :new-page:`Get started using Log Observer <https://quickdraw.splunk.com/redirect/?product=Observability&location=log.observer.setup&version=current>`
+* :ref:`otel-kubernetes-config`
 * :ref:`apm`
