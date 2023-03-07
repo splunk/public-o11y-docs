@@ -85,6 +85,11 @@ The following table presents what each APM tool is best suited for:
      - Medium cardinality
      - Low cardinality
 
+Trace Analyzer trace list limit
+==================================
+
+While the Trace Analyzer chart and trace list summary display the full count of traces that match the time window you select, the list of traces has a limit of 1,000 traces. The Trace Analyzer searches for traces at the end of the time window you select. When 1,000 traces are matched, the list stops populating.
+
 Learn more
 =====================
 

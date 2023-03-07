@@ -32,6 +32,6 @@ The following animated gif demonstrates how to select a time range in the chart:
 .. note:: The :guilabel:`Timestamp` column displays the time zone set in your profile. By default, the time zone is automatically detected from your browser. If you want to change to a different time zone to match the experience of a teammate in another time zone, navigate to :guilabel:`Account Settings` and make a selection in the :guilabel:`Time Zone` field. 
 
 Trace Search trace limit
-===========================
+==================================
 
-Trace Search has a limit of 1,000 traces. The Trace Search searches for traces at the end of the time window you select. When 1,000 traces are matched, the chart stops populating. Trace Analyzer does not have a 1,000 trace limit. To see more than 1,000 traces, select :guilabel:`Switch to Trace Analyzer`.
+The Trace Search has a limit of 1,000 traces. The Trace Search searches for traces at the end of the time window you select. When 1,000 traces are matched, the chart stops populating.
