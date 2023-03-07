@@ -781,7 +781,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    incident-intelligence/create-configure-incident-policies
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Create and manage on-call schedules TOGGLE <incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules>
 
