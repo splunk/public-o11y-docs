@@ -15,19 +15,21 @@ Create an incident policy
 ===========================
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. In the Incident Policies list, locate the policy you want to delete. 
-#. Select the :guilabel:`Action` menu (|more|).
-#. Select :guilabel:`Delete`.
+#. Select :guilabel:`Incident policies` > :guilabel:`Create incident policy`.
+#. Give your incident policy a unique name and a description. 
+#. Select :guilabel:`Create incident policy`.
 
 After you create your incident policy, you can configure which alerts are routed to your incident policy. 
+
 
 Delete an incident policy
 ===========================
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select :guilabel:`Incident policies` > :guilabel:`Create incident policy`.
-#. Give your incident policy a unique name and a description. 
-#. Select :guilabel:`Create incident policy`.
+#. In the Incident Policies list, locate the policy you want to delete. 
+#. Select the :guilabel:`Action` menu (|more|).
+#. Select :guilabel:`Delete`.
+
 
 .. _ii-configure-alert-routing:
 
@@ -117,7 +119,7 @@ Use incident policy maintenance to mute notifications while you are making chang
 
 To put your incident policy in maintenance, select the :guilabel:`Actions` menu on the incident policy you want to put in maintenance and select :guilabel:`Maintenance`. The incident policy status shows as :guilabel:`Maintenance`. 
 
-All incidents associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. A muted incident does not notify responders. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter. Muted incidents are read-only and you can't acknowledged, resolve, or dismiss them.  
+All incidents associated with the incident policy that are triggered while the incident policy is in maintenance are created in a muted state. A muted incident does not notify responders. Muted incidents don't show in your incident list by default. To see your muted incidents, select the :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = Muted`` filter. Muted incidents are read-only and you can't acknowledge, resolve, or dismiss them.  
 
 Take an incident policy out of maintenance
 ---------------------------------------------
