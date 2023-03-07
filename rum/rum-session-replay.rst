@@ -137,9 +137,7 @@ Try these methods:
    :alt: This image shows eight tabs in a chart where a user could have loaded the page again, or opened the app in a different tab. 
    :width: 97.3%
 
-* Elements or images aren't appearing in your session replay: 
-
-    * It's possible that the images or elements are blocked by a content security policy. Review the policy and CDN provider to confirm.
+* Elements or images aren't appearing in your session replay. It's possible that the images or elements are blocked by a content security policy. Review the policy and CDN provider to confirm.
  
 * Aspect ratio is distorted. The aspect ratio is dependent on the user's window size. 
 
