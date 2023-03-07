@@ -168,7 +168,7 @@ $(document).ready(function () {
                 const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
 
                 const template = (idSuffix, title) => `
-<h2 class="sub-table-heading">${title}</h2>
+<h3 class="sub-table-heading">${title}</h2>
 <table style='width: 100%' class='monitor-stats docutils monitor-stats-standard' id='${id}-${idSuffix}'>
   <thead>
     <th class='head name-head'>Name</th>
