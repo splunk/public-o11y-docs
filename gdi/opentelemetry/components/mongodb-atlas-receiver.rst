@@ -1,6 +1,6 @@
 .. _mongodb-atlas-receiver:
 
-**********************
+***********************
 MongoDB Atlas receiver
 ***********************
 
@@ -73,7 +73,7 @@ The following metrics, resource attributes, and attributes are available.
 
 .. raw:: html
 
-  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mongodbatlasreceiver.yaml"></div>
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mongodbatlasreceiver.yaml"></div>
 
 Deactivate metrics
 --------------------------------
