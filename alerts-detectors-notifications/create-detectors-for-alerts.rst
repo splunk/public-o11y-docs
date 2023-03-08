@@ -298,8 +298,7 @@ The following tables describe the variables and helper functions you can use whe
      - The severity of this rule (Critical, Major, Minor, Warning, Info)
 
    * - {{{readableRule}}}
-     - The readable description of this rule, e.g.
-          "The value of metric.name.here is above 100"
+     - The readable description of this rule. For example: "The value of metric.name.here is above 100."
 
    * - {{{runbookUrl}}}
      - URL of page to consult when this alert is triggered
@@ -326,10 +325,17 @@ The following tables describe the variables and helper functions you can use whe
    * - :strong:`Variable`
      - :strong:`Description`
 
-   * - {{timestamp}}
-     - The GMT timestamp of this alert, in this format:
-         Fri, |nbsp|  13  |nbsp| Oct  |nbsp| 2017 |nbsp|  20:32:39  |nbsp| GMT
-
+   * - | There are two variations of this variable:
+        
+       * {{timestamp}}
+       * {{dateTimeFormat timestamp format="short"}}
+     - * {{timestamp}} gives the UTC timestamp of this alert, in this format:
+         Wed, |nbsp|  8  |nbsp| Mar  |nbsp| 2023 |nbsp|  22:11:32  |nbsp| GMT
+       * {{dateTimeFormat timestamp format="short"}} gives the UTC timestamp of this alert, in epoch time:
+         1678313492000
+       
+       | Note: When an alert fires or clears, it always generates a timestamp in GMT. However, in the preview message for the alert, you will see this timestamp in your UI time zone, which might be different from GMT.
+         
    * - {{anomalyState}}
      - The state of this alert (OK or ANOMALOUS)
 
