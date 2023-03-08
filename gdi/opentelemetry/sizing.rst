@@ -7,7 +7,7 @@ Sizing and scaling
 .. meta::
       :description: Follow these guidelines when deploying the Splunk Distribution of OpenTelemetry Collector in your environment. Use these guidelines to make sure the Collector is properly sized.
 
-By default, the Collector is configured to use 512 MiB, or 500 x 2^20 bytes, of memory. 
+By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. 
 
 With a single CPU core, the Collector can receive, process, or export the following: 
 
@@ -17,6 +17,8 @@ With a single CPU core, the Collector can receive, process, or export the follow
 
 Sizing recommendations 
 ==========================================
+
+The following is recommended:
 
 * Use a ratio of one CPU to 2 GB of memory. 
 * If the Collector handles both trace and metrics data, consider both types of data when planning your deployment. For example, 7.5K spans per second plus 10K data points per second requires 1 CPU core.
@@ -30,10 +32,10 @@ For :ref:`agent mode <collector-agent-mode>`, allocate resources as needed.
 * Typically, only a single agent runs per application or host, so properly sizing the agent is important. 
 * Consider deploying multiple independent agents for a given application or host depending on the use case. For example, a privileged agent can be deployed alongside an unprivileged agent.
 
-Gateway mode: Redudancy and data load balance
+Gateway mode
 ------------------------------------------------------------
 
-For :ref:`gateway mode <collector-gateway-mode>`, allocate at least 1 CPU core per Collector. Each Collector runs independently, so scale increases linearly with the number of Collectors you deploy.
+For :ref:`gateway mode <collector-gateway-mode>`, allocate at least one CPU core per Collector. Each Collector runs independently, so scale increases linearly with the number of Collectors you deploy.
 
 You can deploy multiple Collectors behind a round-robin load balancer for higher availability and performance. Do the following to evenly distribute the data:
 
