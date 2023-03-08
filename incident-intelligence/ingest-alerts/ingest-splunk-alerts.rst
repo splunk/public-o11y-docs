@@ -37,4 +37,3 @@ Ingest Splunk Enterprise alerts using saved searches
     #.  (Optional) Select a incident policy in the :guilabel:`Service Name` field.
 #. Select :guilabel:`Save`.
 
-To access and edit your configured alert go to the :guilabel:`Alerts` tab in the Splunk Incident Intelligence app. 
