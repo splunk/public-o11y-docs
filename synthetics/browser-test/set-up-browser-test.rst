@@ -17,6 +17,8 @@ For each page checked in a Browser test, Splunk Synthetic Monitoring captures an
    If the site or application you are monitoring uses allow lists or block lists for visitors or an analytics tool to measure traffic, check that it's configured to accommodate traffic from Splunk Synthetic Monitoring. See :ref:`synth-configure-app` for instructions. 
 
 
+
+
 Set up a Browser test
 =========================
 
@@ -27,6 +29,8 @@ Follow these steps to set up a Browser test:
 #. In the :guilabel:`Name` field, enter a name for your test. 
 #. In the :guilabel:`Go to URL` field, enter the URL for the page you want to test, including ``http`` or ``https``.
 #. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more. 
+#. Select :strong:`Try now` to run your test to check if each step passes or fails. Run results aren't stored. 
+
 
 .. include:: /_includes/synthetics/configure-test.rst
 

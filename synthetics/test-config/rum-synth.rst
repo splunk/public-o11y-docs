@@ -22,7 +22,7 @@ Web vitals are made up of these metrics that measure user experience.
      - Measures loading performance by capturing the render time of the largest image or text block visible within the viewport.
    * - Cumulative layout shift (CLS)
      -  Measures visual stability by capturing the sum of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page. A layout shift occurs any time a visible element changes its position from one rendered frame to the next. Fewer shifts are better for page stability.
-   * - First input delay(FID)
+   * - First input delay (FID)
      - Measures the time from when a user first interacts with a web page to the time when the browser is able to respond to that interaction
    * - Total blocking time (TBT)
      - TBT is collected from a synthetic test, while FID is collected from real user data and they both may be considered equivalent to each other since they measure the same metric: time taken by the page to become interactive and responsiveness to the user.

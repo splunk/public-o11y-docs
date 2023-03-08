@@ -19,6 +19,7 @@ Decide whether you want to set up an HTTP Uptime test or Port Uptime test, and t
 Configure an HTTP Uptime test
 ==============================
 
+
 Follow these steps to set up a HTTP Uptime test: 
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring. 
@@ -26,6 +27,7 @@ Follow these steps to set up a HTTP Uptime test:
 #. Make sure the :guilabel:`HTTP` tab is selected.
 #. In the :guilabel:`Name` field, enter a name for your test. You will use this name to identify data from the test in your alerts and reports. 
 #. In the :guilabel:`URL` field, paste the URL for the page you want to test, including ``http`` or ``https``.
+#. Select :strong:`Try now` to run your test to check if each step passes or fails. Run results aren't stored. 
 
 .. _configure-port-test:
 
