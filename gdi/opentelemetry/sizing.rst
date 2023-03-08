@@ -18,7 +18,7 @@ By default, the Collector is configured to use 512 MiB, or 500 x 2^20 bytes, of 
 Sizing recommendations 
 ==========================================
 
-* Use a ratio of 1 CPU to 2 GB of memory. 
+* Use a ratio of one CPU to 2 GB of memory. 
 * If the Collector handles both trace and metrics data, consider both types of data when planning your deployment. For example, 7.5K spans per second plus 10K data points per second requires 1 CPU core.
 * The Collector does not persist data to disk so no disk space is required.
 
