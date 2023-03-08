@@ -35,12 +35,11 @@ The default configuration of the ``fluentforward`` receiver in the Splunk Distri
          - batch
          - resourcedetection
 
-For more information on how to install Fluentd when installing the Collector, see:
+For more information on how to install Fluentd when manually installing the Collector, see:
 
 * :ref:`fluentd-manual-config-linux`
 * :ref:`fluentd-manual-config-windows`
 * :ref:`windows-manual-fluentd`
-* :ref:`fluentd`
 
 Settings
 ======================
@@ -54,7 +53,7 @@ The following table shows the configuration options for the Fluentd receiver:
 Troubleshooting
 ======================
 
-For troubleshooting the Fluentd receiver, see:
+For troubleshooting Fluentd, see:
 
 * :ref:`fluentd-collector-troubleshooting`.
 * :ref:`otel-linux-uninstall-both-otel-and-tdagent`
