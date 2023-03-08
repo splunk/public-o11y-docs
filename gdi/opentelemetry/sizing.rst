@@ -63,7 +63,7 @@ Here's a few tips:
 Sometimes scaling won't bring any benefits: 
 
 * If the telemetry database can't keep up with the load. Check ``otelcol_exporter_queue_size`` and ``otelcol_exporter_queue_capacity``: If queue size is close to the queue capacity, exporting data is slower than receiving data. 
-* If the network connection between the Collector and the backend is saturated. If the ``otelcol_exporter_send_failed_spans`` metric increases, data is not getting to the backend. 
+* If the network connection between the Collector and the back end is saturated. If the ``otelcol_exporter_send_failed_spans`` metric increases, data is not getting to the back end. 
 
 Scale the Collector
 ------------------------------------------------------------
