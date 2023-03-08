@@ -25,7 +25,7 @@ After you create your incident policy, you can configure which alerts are routed
 Delete an incident policy
 ===========================
 
-If you want to stop using an existing incident policy, you can either modify it or delete it and create a new one. When you delete an incident policy, new alerts that were previously routed to the incident policy are no longer grouped to new or existing incidents. You can't open new manual incidents.
+If you want to stop using an existing incident policy, you can either modify it or delete it and create a new one. When you delete an incident policy, new alerts that were previously routed to the incident policy are no longer grouped to new or existing incidents. You can no longer manually open new incidents based on the deleted incident policy.
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. In the Incident Policies list, locate the policy you want to delete. 
