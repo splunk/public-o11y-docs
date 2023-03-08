@@ -4,7 +4,7 @@ Oracle Database receiver
 ****************************
 
 .. meta::
-      :description: Use this Splunk Observability Cloud integration for the OracleDB / Oracle Database monitor. See benefits, install, configuration, and metrics">
+      :description: Use this Splunk Observability Cloud integration for the OracleDB / Oracle Database monitor. See benefits, install, configuration, and metrics"
 
 The Splunk Distribution of OpenTelemetry Collector provides this
 integration as the Oracle Database receiver. The receiver connects to an
