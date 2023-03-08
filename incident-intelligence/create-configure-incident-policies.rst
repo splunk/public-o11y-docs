@@ -25,6 +25,8 @@ After you create your incident policy, you can configure which alerts are routed
 Delete an incident policy
 ===========================
 
+If you want to stop using an existing incident policy, you can either modify it or delete it and create a new one. When you delete an incident policy, new alerts that were previously routed to the incident policy are no longer grouped to new or existing incidents. You can't open new manual incidents.
+
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. In the Incident Policies list, locate the policy you want to delete. 
 #. Select the :guilabel:`Action` menu (|more|).
@@ -33,7 +35,7 @@ Delete an incident policy
 
 .. _ii-configure-alert-routing:
 
-Configure the alerts that are routed to your incident policy
+Configure the alerts routed to your incident policy
 ============================================================
 
 Use alert routing to associate alerts with an incident policy. If an alert matches your alert filter conditions, it is routed to the incident policy. To set up your alert routing for the incident policy, follow these steps:
@@ -50,7 +52,7 @@ Use alert routing to associate alerts with an incident policy. If an alert match
     #. Select :guilabel:`Enter` to save your condition. 
 #. Repeat these steps for any additional alert routing conditions that you want to set up. By default, multiple conditions are joined by an ``OR`` operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` operator and select ``AND``.
 #. Review the list of alerts that are currently routed to the incident policy to confirm your filter conditions are correct. 
-#. Select :guilabel:`Save alert routing` when you are finished setting up your alert routing conditions.
+#. Select :guilabel:`Save alert routing` when you finish setting up your alert routing conditions.
 
 After you configure which alerts are routed to your incident policy, configure how alerts are grouped into incidents.
 
@@ -63,8 +65,8 @@ Use alert grouping to manage which alerts create an incident and how alerts are 
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping rule.
-#. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the drop-down list next to :guilabel:`Trigger an incident when alerts reach severity level`.
-#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the drop-down list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
+#. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the list next to :guilabel:`Trigger an incident when alerts reach severity level`.
+#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
 #. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. If you want to filter on another field enter that field name. 
 #. Select :guilabel:`Save alert grouping`.
 
