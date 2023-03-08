@@ -80,7 +80,7 @@ To scale them, simply add new replicas and use an off-the-shelf load balancer. A
 Stateful components 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Certain components, such as the ``tail-sampling`` processor, might hold data in memory, yielding different results when scaled up. These require some careful consideration before being scaled up. 
+Components that might hold data in memory are considered stateful. Stateful components require careful consideration before being scaled up, as they might yield different results when scaled up.
 
 As a general approach, consider adding a layer of Collectors containing the ``load-balancing`` exporter in front of your Collectors doing the tail-sampling or the span-to-metrics processing. The load-balancing exporter hashes the trace ID or the service name consistently and determine which Collector back end must receive spans for a trace. 
 
