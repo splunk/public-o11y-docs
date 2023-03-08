@@ -82,7 +82,9 @@ Stateful components
 
 Certain components, such as the ``tail-sampling`` processor, might hold data in memory, yielding different results when scaled up. These require some careful consideration before being scaled up. 
 
-One way of approaching this is by deploying a layer of Collectors containing the load-balancing exporter in front of your Collectors doing the tail-sampling or the span-to-metrics processing. The load-balancing exporter will hash the trace ID or the service name consistently and determine which collector backend should receive spans for that trace. You can configure the load-balancing exporter to use the list of hosts behind a given DNS A entry, or, you can specify a list of static hosts to be used by the load-balancing exporter. 
+As a general approach, consider adding a layer of Collectors containing the ``load-balancing`` exporter in front of your Collectors doing the tail-sampling or the span-to-metrics processing. The load-balancing exporter hashes the trace ID or the service name consistently and determine which Collector back end must receive spans for a trace. 
+
+You can configure the ``load-balancing`` exporter to use the list of hosts behind a given DNS ``A`` entry. You can also specify a list of static hosts to be used by the exporter. 
 
 Scrapers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
