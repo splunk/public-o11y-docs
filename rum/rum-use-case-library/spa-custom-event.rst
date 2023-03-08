@@ -37,7 +37,7 @@ To monitor an SPA in Splunk RUM:
 
     * Detectors
 
-3. Kai opens Tag Spotlight to take a look at route changes by clicking :strong:`see all` in the :strong:`Page Views/Route Changes` metric. The following image shows an example set of urls for the Page Views/Route Changes metric in RUM. 
+3. Kai opens Tag Spotlight to take a look at route changes by clicking :strong:`see all` in the :strong:`Page views/Route changes` metric. The following image shows an example set of urls for the Page views/Route changes metric in RUM. 
 
     ..  image:: /_images/rum/pageview-routechange.png
         :width: 80%

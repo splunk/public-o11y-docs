@@ -165,7 +165,7 @@ The agent collects the following garbage collection (GC) metrics:
 
 .. _jvm-heap-pressure-metrics:
 
-Heap preassure metrics
+Heap pressure metrics
 ----------------------------------------------------------------------
 
 The agent collects the following heap pressure metrics:

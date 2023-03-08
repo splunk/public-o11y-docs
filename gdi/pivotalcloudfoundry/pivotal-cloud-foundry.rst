@@ -47,7 +47,7 @@ The script uses the variables described in the following table:
         - Boolean (int). If this variable is set, this script creates the release locally. If this variable is set to ``true``, the script can be used in development.
         - ``false (0)``
       * - ``UPLOAD_RELEASE``
-        - Boolean (int). If this variable is set to ``true``, the script uploads the release to the BOSH Director, which is primarily used for GitHu workflow for testing.
+        - Boolean (int). If this variable is set to ``true``, the script uploads the release to the BOSH Director, which is primarily used for the GitHub workflow for testing.
         - ``true (1)``
 
 Deploy the Collector using a YAML file

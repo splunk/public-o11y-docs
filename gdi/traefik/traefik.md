@@ -98,7 +98,7 @@ If the Traefik configuration file is not available, use the sample configuration
 Traefik exports Prometheus metrics which can be categorized into Traefik, entrypoint, and back-end metrics. 
 
 - Traefik-related metrics are for monitoring Traefik itself and are prefixed by `go_` and `process_`. For instance, the `go_memstats_sys_bytes` metric can be used to plot Traefik memory usage. 
-- Entrypoint and back-end metrics are the number and duration of requests measured at entrypoints and backends. Entrypoint-related metrics are prefixed by `traefik_entrypoint_`. Backend-related metrics are prefixed by `traefik_backend_`.
+- Entrypoint and back-end metrics are the number and duration of requests measured at entrypoints and back ends. Entrypoint-related metrics are prefixed by `traefik_entrypoint_`. Backend-related metrics are prefixed by `traefik_backend_`.
 
 The following table shows the metrics that are available for this integration:
 

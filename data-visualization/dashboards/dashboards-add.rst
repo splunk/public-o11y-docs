@@ -9,14 +9,6 @@ Add information to a dashboard
 
 In addition to standard chart types, such as graphs or lists, dashboards can also contain two special chart types --- :ref:`text notes<text-note>` and :ref:`event feeds<dashboard-event-feed>`.
 
-..  add-charts-to-dashboard:
-
-..
-.. Add charts to a dashboard
-.. =============================================================================
-..
-.. There are a number of ways to create new charts or copy existing charts to a dashboard; see :ref:`ways-to-create-charts`.
-
 .. _text-note:
 
 Add a text note to a dashboard
@@ -32,14 +24,11 @@ To add a text note to a dashboard, you can do any of the following:
 
 -	While in the Chart Builder, choose :menuselection:`Text Note` as your chart type.
 
-A text or markdown editor opens, which shows some tips on creating markdown.
-
-..
-	include:: /_sidebars-and-includes/text-note-how-to.rst
+A text or Markdown editor opens, which shows some tips on creating markdown.
 
 Markdown is high-level, plain text format which is converted into HTML. You can search for resources on Markdown if you need examples of what you can do in the editor.
 
-In the text/markdown editor, you can clear the tips and write your own text or markdown. A preview is available on the right hand side of the text editor.
+In the text/markdown editor, you can clear the tips and write your own text or Markdown. A preview is available on the right hand side of the text editor.
 
 If you don't have :ref:`write permissions<about-write-permissions>` for the dashboard you are viewing, or you are in a built-in dashboard, you need to select :guilabel:`Save as` to save the text note.
 

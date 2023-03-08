@@ -25,7 +25,7 @@ On the :guilabel:`Test History` page, view a customizable summary of recent run 
     - Select :guilabel:`Edit test` to edit your test configuration. Note that if you change the name of your test or the name of a synthetic transaction, it may take up to 20 minutes for the updated name to appear in your charts and detectors. 
     - Select :guilabel:`Create detector` to create a detector based on your test. See :ref:`synth-alerts` to learn more. 
     - Select :guilabel:`Actions > Pause test` to pause your test.
-    - Select :guilabel:`Actions > Copy test` to make a copy of your test. This opens the :guilabel:`New Browser Test` page with the details of the test pre-filled. 
+    - Select :guilabel:`Actions > Copy test` to make a copy of your test. This opens the :guilabel:`New Browser test` page with the details of the test pre-filled. 
 
 Customize the Performance KPIs chart 
 --------------------------------------------------
@@ -79,9 +79,9 @@ In the :guilabel:`Performance KPIs` chart, use the selectors to adjust the follo
 
 View results for a specific run
 ---------------------------------
-To navigate to the :guilabel:`Run Results` view for a single run, select a data point within the :guilabel:`Performance KPIs` chart with the visualization interval at :strong:`Run level` and the segmentation set to :strong:`Location`. 
+To navigate to the :guilabel:`Run results` view for a single run, select a data point within the :guilabel:`Performance KPIs` chart with the visualization interval at :strong:`Run level` and the segmentation set to :strong:`Location`. 
 
-If you're viewing aggregate data (for example, at a 20-minute interval instead of run level), selecting a data point zooms you in to see run-level detail. Then you can select a specific run to see the :guilabel:`Run Results` from there. 
+If you're viewing aggregate data (for example, at a 20-minute interval instead of run level), selecting a data point zooms you in to see run-level detail. Then you can select a specific run to see the :guilabel:`Run results` from there. 
 
 You can also select a row in the :guilabel:`Recent run results` table below the :guilabel:`Performance KPIs` chart.
 
@@ -120,7 +120,7 @@ A waterfall chart is a visual representation of the data in a HAR file. The char
      - File name of the resource, extracted from the URL where the resource is located. Hover over the cell to view the entire URL. 
     
    * - Domain
-     - ``broomstogo.com``
+     - ``buttercupgames.com``
      - Domain where the resource is hosted.
 
    * - Size

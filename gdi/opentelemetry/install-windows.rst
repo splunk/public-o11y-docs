@@ -91,7 +91,7 @@ If you need to use a proxy, set one of the following environment variables accor
 
 - ``HTTP_PROXY``: The HTTP proxy address
 - ``HTTPS_PROXY``: The HTTPS proxy address
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+- ``NO_PROXY``: If a proxy is defined, sets addresses that don't use the proxy
 
 Restart the Collector after adding these environment variables to your configuration. 
 
@@ -168,5 +168,5 @@ Next steps
 Once you have installed the package, you can perform these actions:
 
 * :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsof documentation site <https://docs.microsoft.com/en-us/>` for more information.
+* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
 * :ref:`apm`.

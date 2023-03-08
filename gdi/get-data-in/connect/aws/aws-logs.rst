@@ -396,7 +396,7 @@ Redshift
       arn:aws:redshift:us-east-1:1234567890:cluster:redshift-cluster-1
 
   * - logType
-    - Redshit log type. Possible: connectionlog, useractivitylog, or userlog
+    - Redshift log type. Possible: connectionlog, useractivitylog, or userlog
     - logType: userlog
 
 S3

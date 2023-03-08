@@ -57,7 +57,7 @@ Request-level metrics include an additional ``request_number`` dimension that re
      - ``synthetics.dns.time.ms``  
      - Time required to resolve a host name from the DNS server. Name resolving is the process when libcurl translates a name into an IP address.  
      
-   * - First Byte Time
+   * - Time to first btye (TTFB)
      - ``synthetics.ttfb.time.ms`` 
      - Time from the start of the first request until receiving the first byte of the first non-redirect request. Each 3xx redirect increases this time.
 
@@ -69,11 +69,11 @@ Request-level metrics include an additional ``request_number`` dimension that re
      - ``synthetics.receive_time_ms`` 
      - Total time it takes to receive the previous transfer, for example name resolving.
 
-   * - TCP Connect Time 
+   * - TCP connect time 
      - ``synthetics.connect.time.ms``
      - Time it takes to connect to the to remote host or proxy.   
 
-   * - TLS Time 
+   * - TLS time 
      - ``synthetics.tls.time.ms``
      - Time from start to finish of the SSL/SSH handshake. 
 

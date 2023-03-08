@@ -222,19 +222,7 @@ The following settings control the behavior of specific instrumentations:
 Server trace information
 ==============================================
 
-To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, activate Splunk trace response headers by setting the following environment variable:
-
-.. tabs::
-
-   .. code-tab:: shell Windows PowerShell
-
-      $env:SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED=true
-
-   .. code-tab:: shell Linux
-   
-      export SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED=true
-
-When you set this environment variable, your application instrumentation adds the following response headers to HTTP responses:
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, trace response headers are activated by default. The instrumentation adds the following response headers to HTTP responses:
 
 .. code-block::
 
@@ -242,6 +230,8 @@ When you set this environment variable, your application instrumentation adds th
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
 The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
+
+.. note:: If you need to disable trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
 .. _dotnet-instrumentation-query-strings:
 

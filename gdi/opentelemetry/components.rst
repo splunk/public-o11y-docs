@@ -31,12 +31,12 @@ The OpenTelemetry Collector includes the following component types:
 
 * Receivers: Get data into the Collector from multiple sources.
 * Processors: Perform operations on data before it's exported. For example, filtering.
-* Exporters: Send data to one or more backends or destinations. 
+* Exporters: Send data to one or more back ends or destinations. 
 * Extensions: Extend the capabilities of the Collector.
 
-You can activate these components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
+You can activate components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
-The Splunk Distribution of OpenTelemetry Collector support the following components.
+The Splunk Distribution of OpenTelemetry Collector includes and supports the following components.
 
 .. _collector-components-receivers:
 
@@ -47,16 +47,31 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
   </embed>
 
 .. list-table::
-   :widths: 25 50 25
+   :widths: 25 50 15
    :header-rows: 1
    :width: 100%
 
    * - Name
      - Description
      - Pipeline types
+   * - ``azureeventhub``
+     - Pulls logs from an Azure event hub.
+     - Logs
+   * - ``carbon``
+     - Receives metrics in Carbon plaintext protocol.
+     - Metrics
+   * - ``cloudfoundry``
+     - Connects to the Reverse Log Proxy (RLP) gateway of Cloud Foundry to extract metrics.
+     - Metrics
+   * - ``collectd``
+     - Receives data exported through the CollectD ``write_http`` plugin. Only supports the JSON format.
+     - Metrics
    * - :ref:`databricks_receiver` (``databricks``)
      - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
+   * - ``filelog``
+     - Tails and parses logs from files.
+     - Logs
    * - ``fluentforward``
      - Runs a TCP server that accepts events through the Fluentd Forward protocol.
      - Logs
@@ -66,39 +81,86 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``jaeger``
      - Receives trace data in Jaeger format.
      - Traces
+   * - ``journald``
+     - Parses Journald events from the systemd journal. The ``journalctl`` binary must be in the same ``$PATH`` of the agent.
+     - Logs
    * - :ref:`kubernetes-cluster-receiver` (``k8s_cluster``)
      - Collects cluster-level metrics from the Kubernetes API server. It uses the Kubernetes API to listen for updates. You can use a single instance of this receiver to monitor a cluster.
      - Metrics
+   * - ``k8s_events``
+     - Collects all new and updated events from the Kubernetes API server. Supports authentication through service accounts only.
+     - Logs
+   * - ``k8sobjects``
+     - Collects objects from the Kubernetes API server. Supports authentication through service accounts only.
+     - Logs
+   * - ``kafkametrics``
+     - Collects Kafka metrics such as brokers, topics, partitions, and consumer groups from Kafka server, and converts them to OTLP format.
+     - Metrics
+   * - ``kafka``
+     - Receives metrics, logs, and traces from Kafka. Metrics and logs only support the OTLP format.
+     - Metrics, logs, traces
    * - :ref:`kubelet-stats-receiver` (``kubeletstats``)
      - Pulls pod metrics from the API server on a kubelet.
      - Metrics
    * - :ref:`mongodb-atlas-receiver` (``mongodbatlas``)
      - Retrieves metrics from MongoDB Atlas using their monitoring APIs.
      - Metrics
-   * - :ref:`oracledb` (``oracledb``)
+   * - :ref:`oracledb` (``oracledb``) |br|
      - Connects to an Oracle Database instance and obtains metrics such as physical reads, CPU, time, and others.
      - Metrics
    * - ``otlp``
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
-   * - :ref:`receiver-creator-receiver` (``receiver_creator``)
-     - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
-     - N/A
-   * - ``signalfx``
-     - Accepts metrics and logs in the proto format.
-     - Metrics, logs
+   * - ``postgresql``
+     - Queries the PostgreSQL statistics collector. Supports PostgreSQL version 9.6 and higher.
+     - Metrics
    * - :ref:`prometheus-receiver` (``prometheus``)
      - Provides a simple configuration interface to scrape metrics from a single target.
      - Metrics
+   * - ``prometheus_simple``
+     - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
+     - Metrics
+   * - :ref:`receiver-creator-receiver` (``receiver_creator``)
+     - Instantiates other receivers at runtime based on whether observed endpoints match a configured rule. To use the receiver creator, configure one or more observer extensions to discover networked endpoints.
+     - N/A
+   * - ``redis``
+     - Retrieves Redis ``INFO`` data from a specific Redis instance and builds metrics from it.
+     - Metrics
+   * - ``sapm``
+     - Receives traces from other collectors or from the SignalFx Smart Agent.
+     - Traces
+   * - ``signalfx``
+     - Accepts metrics and logs in the proto format.
+     - Metrics, logs
    * - ``smartagent``
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
      - Metrics
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
      - Accepts telemetry in the Splunk HEC format.
      - Metrics, logs, traces
+   * - ``sqlquery``
+     - Runs custom SQL queries to generate metrics from a database connection.
+     - Metrics
+   * - ``statsd``
+     - Collects StatsD messages to generate metrics.
+     - Metrics
+   * - ``syslog``
+     - Parses syslog messages received over TCP or UDP.
+     - Logs
+   * - ``tcplog``
+     - Receives logs over TCP.
+     - Logs
+   * - ``windowseventlog``
+     - Tails and parses logs from the Windows Event log API.
+     - Logs
+   * - ``windowsperfcounters`` (Windows only)
+     - Collects the configured system, application, or custom performance counter data from the Windows Registry.
+     - Metrics
    * - ``zipkin``
      - Receives spans from Zipkin versions 1 and 2.
      - Traces
+
+.. note:: The previous list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 .. _collector-components-processors:
 
@@ -122,14 +184,14 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - :ref:`batch-processor` (``batch``)
      - Accepts spans, metrics, or logs and places them into batches. Batching helps better compress the data and reduce the number of outgoing connections required to transmit the data. This processor supports both size-based and time-based batching.
      - Metrics, logs, traces
-   * - ``groupbyattrs``
-     - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
-     - Metrics, logs, traces
    * - :ref:`filter-processor` (``filter``)
      - Can be configured to include or exclude metrics based on metric name in the case of the ``strict`` or ``regexp`` match types, or based on other metric attributes in the case of the ``expr`` match type.
      - Metrics
-   * - ``k8s_tagger``
-     - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata.
+   * - ``groupbyattrs``
+     - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
+     - Metrics, logs, traces
+   * - ``k8sattributes``
+     - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata. Formerly known as ``k8s_tagger``.
      - Metrics, logs, traces
    * - ``memory_limiter``
      - Prevents out of memory situations on the Splunk Distribution of OpenTelemetry Collector.
@@ -152,6 +214,14 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
    * - ``span``
      - Modifies either the span name or attributes of a span based on the span name.
      - Traces
+   * - ``tail_sampling``
+     - Samples traces based on a set of defined policies. All spans for a given trace must be received by the same Collector instance for effective sampling decisions.
+     - Traces
+   * - ``transform`` (alpha)
+     - Modifies telemetry based on OpenTelemetry Transformation Language functions.
+     - Metrics, logs, traces
+
+.. note:: The previous list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 .. _collector-components-exporters:
 .. _otel-exporters:
@@ -172,6 +242,9 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
      - Pipeline types
    * - ``file``
      - Writes pipeline data to a JSON file in Protobuf JSON encoding using the OpenTelemetry protocol. 
+     - Metrics, logs, traces
+   * - ``kafka``
+     - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
    * - ``logging``
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
@@ -195,6 +268,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
      - Sends telemetry to a Splunk HEC endpoint. 
      - Metrics, logs, traces
 
+.. note:: The previous list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 .. _collector-components-extensions:
 
@@ -207,6 +281,7 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
 .. list-table::
    :widths: 25 75
    :header-rows: 1
+   :width: 100%
 
    * - Name
      - Description
@@ -214,22 +289,26 @@ The Splunk Distribution of OpenTelemetry Collector support the following compone
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints. ``docker_observer`` watches the Docker engine's stream of events to dynamically create, update, and remove endpoints as events are processed. 
    * - ``ecs_observer``
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. If you run the Collector as a sidecar, consider using the ECS resource detector instead of the ECS observer.
+   * - ``file_storage``
+     - Persists state to the local file system. Requires read and write access to a diectory.
    * - ``health_check``
      - Activates an HTTP URL that can be probed to check the status of the OpenTelemetry Collector. You can also use this extension as a liveness or readiness probe on Kubernetes.
    * - ``http_forwarder``
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
    * - ``host_observer``
      - Looks at the current host for listening network endpoints. Uses the /proc file system and requires the ``SYS_PTRACE`` and ``DAC_READ_SEARCH`` capabilities so that it can determine what processes own the listening sockets. 
+   * - ``k8s_observer``
+     - Uses the Kubernetes API to discover pods running on the local node. This extension assumes that the Splunk Distribution of OpenTelemetry Collector is deployed in agent mode where it is running on each individual node or host instance.
    * - ``memory_ballast``
      - Configures the memory ballast for the Collector process, either as a size in megabytes or as a size expressed as a percentage of the total memory. Sufficient ballast enhances the stability of Collector deployments.
-   * - ``k8s_observer``
-     - Uses the Kubernetes API to discover pods running on the local node. This extension assumes that the Splunk Distribution of OpenTelemetry Collector is deployed in agent mode where it is running on each individual node or host instance. 
    * - ``pprof``
      - Activates the golang ``net/http/pprof`` endpoint, which is used to collect performance profiles and investigate issues with a service.
    * - ``smartagent``
      - Provides a mechanism to set configuration options that are applicable to all instances of the Smart Agent receiver. Allows to migrate your existing Smart Agent configuration to the Splunk Distribution of OpenTelemetry Collector. 
    * - ``zpages``
      - Activates an extension that serves zPages, an HTTP endpoint that provides live data for debugging different components.
+
+.. note:: The previous list might not contain all the latest additions. For a complete list of Collector components, including components that aren't included in the Splunk Distribution of OpenTelemetry Collector, see the ``opentelemetry-contrib`` repository in GitHub.
 
 .. raw:: html
 
