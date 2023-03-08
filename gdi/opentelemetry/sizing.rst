@@ -45,7 +45,7 @@ Scaling recommendations
 
 To define and scale your architecture, analyze the behavior of your workload to understand the loads and format of each signal type, as well as the load's distribution in time.
 
-For example, let's say you have hundreds of Prometheus endpoints to be scraped, a terabyte of logs coming from fluentd instances every minute, and some application metrics and OTLP traces. 
+For example, consider a scenario with hundreds of Prometheus endpoints to scrape, a terabyte of logs coming from fluentd instances every minute, and some application metrics and OTLP traces.
 
 In this scenario:
 
