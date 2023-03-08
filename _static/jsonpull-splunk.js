@@ -187,13 +187,23 @@ $(document).ready(function () {
                     $(mainObj).append(metricTable);
 
                     for (let [name, metric] of Object.entries(data['metrics'])) {
+                        let type = "";
                         const gauge = metric['gauge'];
                         const sum = metric['sum'];
-                        if (gauge?.['value_type'] || sum?.['value_type']) {
+                        const histogram = metric['histogram'];
+                        if (gauge) {
+                            type = "Gauge";
+                        } else if (sum) {
+                            type = "Sum";
+                        } else if (histogram) {
+                            type = "Histogram";
+                        } else {
+                            type = "";
+                        }
+                        if (gauge?.['value_type'] || sum?.['value_type'] || histogram?.['value_type']) {
                             const idAttr = id + '-metric-' + name;
                             const attributes = metric['attributes']?.join('</li><li>') ?? '';
-                            const attributesLink = attributes ? attributes.split('</li><li>').map(a => `<a href='#${id}-attribute-${a}'>${a}</a>`).join(', ') : '';
-                            const type = gauge ? 'Gauge' : 'Sum';
+                            const attributesLink = attributes ? attributes.split('</li><li>').map(a => `<a href='#${id}-attribute-${a}'>${a}</a>`).join('</li><li>') : '';
                             const row = `<td id='${idAttr}'>${name}</td><td>${type}</td><td>${metric['unit'] != "1" ? metric['unit'] : ''}</td><td>${converter.makeHtml(metric['description']) ?? ''}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
                             metricTable.find('tbody').append(`<tr>${row}</tr>`);
                         }
