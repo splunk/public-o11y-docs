@@ -334,7 +334,7 @@ The following tables describe the variables and helper functions you can use whe
        * {{dateTimeFormat timestamp format="short"}} gives the UTC timestamp of this alert, in epoch time:
          1678313492000
        
-       | Note: When an alert fires or clears, it always generates a timestamp in GMT. However, in the preview message for the alert, you will see this timestamp in your UI time zone, which might be different from GMT.
+       | Note: When an alert fires or clears, it always generates a timestamp in UTC. However, in the preview message for the alert, you will see this timestamp in your UI time zone, which might be different from GMT.
          
    * - {{anomalyState}}
      - The state of this alert (OK or ANOMALOUS)
