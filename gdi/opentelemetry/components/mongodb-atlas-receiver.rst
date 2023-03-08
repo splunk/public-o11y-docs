@@ -60,11 +60,11 @@ configuration file. For example:
 Settings
 ======================
 
-The following table shows the configuration options for the Splunk HEC exporter:
+The following table shows the configuration options for the MongoDB Atlas:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/exporter/splunk_hec.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/mongodbatlas.yaml"></div>
 
 Metrics
 =====================
