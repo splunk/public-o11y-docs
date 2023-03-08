@@ -68,7 +68,7 @@ Sometimes scaling won't bring any benefits:
 Scale the Collector
 ------------------------------------------------------------
 
-How to scale depends on the components the Collector is using. There's types of components: stateless, stateful, and scrapers.
+How to scale depends on whether the Collector components are stateless, stateful, or scrapers.
 
 Stateless components 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
