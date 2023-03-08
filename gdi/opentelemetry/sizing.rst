@@ -28,7 +28,7 @@ Agent mode
 For :ref:`agent mode <collector-agent-mode>`, allocate resources as needed. 
 
 * Typically, only a single agent runs per application or host, so properly sizing the agent is important. 
-* Multiple independent agents could be deployed on a given application or host depending on the use case. For example, a privileged agent could be deployed alongside an unprivileged agent.
+* Consider deploying multiple independent agents for a given application or host depending on the use case. For example, a privileged agent can be deployed alongside an unprivileged agent.
 
 Gateway mode: Redudancy and data load balance
 ------------------------------------------------------------
