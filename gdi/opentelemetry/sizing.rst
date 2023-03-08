@@ -75,7 +75,7 @@ Stateless components
 
 Most components are stateless, so even if they hold some state in memory, it isn't relevant for scaling purposes. 
 
-To scale them, simply add new replicas and use an off-the-shelf load balancer. Also consider splitting your collection pipeline with reliability in mind. 
+To scale stateless components, add new replicas and use a load balancer. Consider splitting your collection pipeline for greater reliability.
 
 Stateful components 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
