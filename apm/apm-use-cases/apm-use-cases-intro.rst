@@ -16,6 +16,7 @@ Use cases: Troubleshoot errors and monitor application performance using Splunk 
     services-impact-business-workflows
     troubleshoot-tag-spotlight
     troubleshoot-business-workflows
+    specific-trace
     troubleshoot-traces
     monitor-services
     monitor-business-workflows
