@@ -56,6 +56,9 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
         * To create a detector for a browser test, see :ref:`detector-browser-test`.
         * To create a detector for an uptime test, see :ref:`uptime-detector`.
 
+   * - Splunk Enterprise and Splunk Cloud Platform
+     - See :ref:`ii-ingest-splunk-itsi-alerts`.
+
 .. raw:: html
 
    <embed>
@@ -82,8 +85,7 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
    * - Generic REST alerts
      - See :ref:`ii-ingest-rest`.
 
-   * - ITSI
-     - See :ref:`ii-ingest-splunk-itsi-alerts`.
+
 
 
 .. raw:: html
