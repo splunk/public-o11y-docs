@@ -85,7 +85,7 @@ configuration file. For example:
 Settings
 ======================
 
-The following table shows the configuration options for the Splunk HEC exporter:
+The following table shows the configuration options for the Oracle Database receiver:
 
 .. raw:: html
 
