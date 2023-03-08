@@ -35,7 +35,7 @@ Gateway mode: Redudancy and data load balance
 
 For :ref:`gateway mode <collector-gateway-mode>`, allocate at least 1 CPU core per Collector. Each Collector runs independently, so scale increases linearly with the number of Collectors you deploy.
 
-Note that multiple Collectors can deployed behind a simple round-robin load balancer for high availability and performance reasons. Do the following to evenly distribute the data:
+You can deploy multiple Collectors behind a round-robin load balancer for higher availability and performance. Do the following to evenly distribute the data:
 
 * Install a cluster of Collectors with at least N+1 redundancy, which means a load balancer and a minimum of two Collector instances should be configured initially.
 * Define a round-robin DNS name.
