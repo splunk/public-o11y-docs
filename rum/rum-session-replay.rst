@@ -71,7 +71,9 @@ Use session replay through Splunk NPM
 --------------------------------------------
 Use the following command to set up session replay with NPM through a package named ``@splunk/otel-web-session-recorder``.
 
-``npm install @splunk/otel-web-session-recorder``
+.. code-block:: html
+
+    npm install @splunk/otel-web-session-recorder
 
 Next, initialize this code snippet: 
 
