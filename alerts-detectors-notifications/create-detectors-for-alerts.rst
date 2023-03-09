@@ -62,13 +62,16 @@ Create a detector from a chart
 
 If there is a chart that monitors a signal that you want to alert on, you can use that chart to create a detector. Creating a detector from a chart pre-selects one of the chart's signals as the signal to be monitored.
 
-To create the detector, open the Detector menu by selecting the bell icon at the top right corner of a chart, and select :menuselection:`New detector from chart`.
+Follow these steps to create the detector:
 
--  If you are not monitoring services using Splunk APM, the Alert Rule Builder is displayed automatically. To continue, see :ref:`build-rules`.
+#. Select the bell icon on a chart to open the :strong:`Detector` menu.
+#. Select :menuselection:`New detector from chart`.
 
--  If the chart contains only metrics relevant to APM, such as latency or error rate, the Alert Rule Builder is displayed automatically.
+- If you are not monitoring services using Splunk APM, the Alert Rule Builder is displayed automatically. To continue, see :ref:`build-rules`.
 
--  If you are using APM and the chart contains both APM and infrastructure or custom metrics, you need to choose which type of detector you want to create. To continue after choosing a type and clicking :guilabel:`Proceed to alert signal`, see :ref:`build-rules`.
+- If the chart contains only metrics relevant to APM, such as latency or error rate, the Alert Rule Builder is displayed automatically.
+
+- If you are using APM and the chart contains both APM and infrastructure or custom metrics, you need to choose which type of detector you want to create. To continue after choosing a type and clicking :guilabel:`Proceed to alert signal`, see :ref:`build-rules`.
 
 After you create a detector from a chart, a :ref:`link to the new detector<link-detector-to-chart>` is automatically added to the chart.
 
@@ -120,7 +123,7 @@ After you activate the detector, it begins monitoring the signal immediately. Wh
 
 .. _alert-signal:
 
-Select Alert signals
+Select alert signals
 -------------------------------------------------------------------
 
 In the :strong:`Alert signal` tab, define the signal to monitor by entering a metric and corresponding analytics.
@@ -137,15 +140,15 @@ If you want to add more signals, click :guilabel:`Add Metric or Event` or :guila
 
 If the detector has multiple signals, you can choose whether to monitor one or more signals.
 
--  To monitor one signal (the most common use case), select the bell icon for the Detector menu at the far left to specify which signal you want to monitor. A blue bell indicates the signal that is being monitored.
+-  To monitor one signal, select the bell icon for the :strong:`Detector` menu to specify which signal you want to monitor. A blue bell indicates the signal that is being monitored.
 
--  To create compound conditions based on the values of more than one signal (for example, signal |nbsp| A is above `x` OR signal |nbsp| B is above `y`), select the multiple signals icon. Note that this option is available only if the alert condition is Custom Threshold.
+-  To create compound conditions based on the values of more than one signal, for example, signal A is higher than ``x`` OR signal B is higher than ``y``, select the multiple signals icon. This option is available only if the alert condition is a custom threshold.
 
 Continue to the next tab to select a condition for the detector's rule.
 
 .. _alert-condition:
 
-Select Alert conditions
+Select alert conditions
 -------------------------------------------------------------------
 
 In the :strong:`Alert condition` tab, you select the type of condition that triggers an alert.
@@ -659,21 +662,21 @@ Click the gear icon to display options you can specify for the plot line shown i
    :width: 99%
    :alt: This image shows the plot options for the plot line.
 
-To add or edit the alert message, recipients, or rule name, use the :guilabel:`Edit` button on the Alert Rules tab. The rule name you add on the Activate tab is displayed on the Alert Rules tab as shown below. The rule name is also shown as the alert condition on the Alerts page and in alert notifications.
+To add or edit the alert message, recipients, or rule name, use the :guilabel:`Edit` button on the Alert Rules tab. The rule name you add on the :strong:`Activate` tab is displayed on the :strong:`Alert Rules` tab. The rule name is also shown as the alert condition on the :strong:`Alerts` page and in alert notifications.
 
-For example, this rule name in the Activate tab:
+For example, this rule name on the :strong:`Activate` tab
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/name=condition.png
    :width: 65%
    :alt: This image shows the rule name in the Activate tab.
 
-looks like this on the Alert Rules tab:
+looks like this on the :strong:`Alert Rules` tab:
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/name=condition2.png
    :width: 45%
-   :alt: This image shows another example of the rule name in the Activate tab.
+   :alt: This image shows another example of the rule name in the Alert Rules tab.
 
-For more information about editing detector options in the Alert Rules tab, see :ref:`alert-message`, :ref:`alert-recipients`, and :ref:`activate-detector`.
+For more information about editing detector options in the :strong:`Alert Rules` tab, see :ref:`alert-message`, :ref:`alert-recipients`, and :ref:`activate-detector`.
 
 
 .. _name-detector:
@@ -691,13 +694,13 @@ If you don't enter a name while creating a detector, you will be prompted to add
 Manage detector rules
 =============================================================================
 
-In the Alert Rules tab of a detector, you can use the actions menu (|more|) menu for a rule (at far right, next to the :guilabel:`Edit` option) to perform any of the following actions.
+In the Alert Rules tab of a detector, you can use the actions menu (|more|) menu for a rule to do any of the following.
 
 -  Disable/enable
 
    If a detector has multiple rules, such as different rules for different severity levels, you might want to specify which ones to enable or disable. Disabling a rule prevents it from generating any events or sending any notifications. This option is commonly used after the detector has been activated for a while, to decrease or increase the number of alerts the detector is triggering.
 
-.. note:: The options to clone or delete rules are not available for detectors that were created using the API.
+.. note:: The options to clone or delete rules are not available for detectors created using the API.
 
 -  Clone
 
