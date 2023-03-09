@@ -71,7 +71,7 @@ Follow these steps to create the detector:
 
 - If the chart contains only metrics relevant to APM, such as latency or error rate, the Alert Rule Builder is displayed automatically.
 
-- If you are using APM and the chart contains both APM and infrastructure or custom metrics, you need to choose which type of detector you want to create. To continue after choosing a type and clicking :guilabel:`Proceed to alert signal`, see :ref:`build-rules`.
+- If you are using APM and the chart contains both APM and infrastructure or custom metrics, you need to choose which type of detector you want to create. To continue after choosing a type and selecting :guilabel:`Proceed to alert signal`, see :ref:`build-rules`.
 
 After you create a detector from a chart, a :ref:`link to the new detector<link-detector-to-chart>` is automatically added to the chart.
 
@@ -132,7 +132,7 @@ In the :strong:`Alert signal` tab, define the signal to monitor by entering a me
 
 If you are creating a detector from scratch, you must first specify the signal or signals you want to monitor. Specifying a signal for a detector is similar to specifying a signal in a chart in the Plot Editor tab in the Chart Builder. When you start typing, a list of metrics and events displays. Select the metric you want to monitor, then add any filters or analytics. To learn more, see :ref:`specify-signal`
 
-If you want to add more signals, click :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. Note that you can add events to be displayed on the chart, but you cannot select an event as the signal to be monitored.
+If you want to add more signals, select :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. Note that you can add events to be displayed on the chart, but you cannot select an event as the signal to be monitored.
 
 .. note:: If you are creating a detector :ref:`from a chart<create-detector-from-chart>` or by :ref:`cloning a detector<clone-detector>`, you might not need to add any new signals. However, if you do add new signals to the detector, the signals is not added to the original chart or detector.
 
@@ -142,7 +142,7 @@ If the detector has multiple signals, you can choose whether to monitor one or m
 
 -  To monitor one signal, select the bell icon for the :strong:`Detector` menu to specify which signal you want to monitor. A blue bell indicates the signal that is being monitored.
 
--  To create compound conditions based on the values of more than one signal, for example, signal A is higher than ``x`` OR signal B is higher than ``y``, select the multiple signals icon. This option is available only if the alert condition is a custom threshold.
+-  To create compound conditions based on the values of more than one signal, for example, signal A is higher than ``x`` OR signal B is higher than ``y``, select the multiple signals icon. This option is available only if the alert condition is a Custom Threshold.
 
 Continue to the next tab to select a condition for the detector's rule.
 
@@ -169,13 +169,13 @@ The following table summarizes the available built-in alert conditions for Infra
 
    * - :strong:`Name`
      - :strong:`Description`
-     - :strong:`Summary (samples)`
+     - :strong:`Examples of summary`
 
 
    * - :ref:`static-threshold`
 
      - Alert when a signal crosses a static threshold
-     - Availability over the last day is below 99.9.
+     - Availability over the last day is lower than 99.9.
 
    * - :ref:`heartbeat-check`
      - Alert when a signal has stopped reporting for some time
@@ -191,7 +191,7 @@ The following table summarizes the available built-in alert conditions for Infra
      - The number of logins in the last 10 minutes for this instance is 3 standard deviations lower than other instances in the same AWS availability zone.
 
    * - :ref:`sudden-change`
-     - Alert when a signal is different from its normal behavior (based on mean of preceding window or percentile of preceding window)
+     - Alert when a signal is different from its normal behavior based on mean of preceding window or percentile of preceding window
      - All the values for ``cpu.utilization`` received in the last 15 |nbsp| minutes are at least |nbsp| 3 standard deviations higher than the mean of the preceding hour. All the values for ``latency`` received in the last 10 minutes are greater than 99% of the values of the preceding 1 hour.
 
    * - :ref:`hist-anomaly`
@@ -217,7 +217,7 @@ In the :strong:`Alert settings` tab, you specify the settings that trigger an al
 
 The available settings vary depending on the alert condition you selected.
 
-.. note:: If you are using the Custom Threshold condition, you can click :guilabel:`Add another condition` to create compound conditions using AND and OR operators. For more information about compound conditions, see :ref:`custom-threshold`.
+.. note:: If you are using the Custom Threshold condition, you can select :guilabel:`Add another condition` to create compound conditions using AND and OR operators. For more information about compound conditions, see :ref:`custom-threshold`.
 
 In the chart, you see a preview of the alerts that are triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
 
