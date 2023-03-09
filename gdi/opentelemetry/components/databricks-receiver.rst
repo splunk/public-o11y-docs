@@ -7,9 +7,7 @@ Databricks receiver
 .. meta::
   :description: The Databricks receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Databricks using the Databricks API.
   
-The Databricks receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Databricks using the Databricks API. The supported pipeline type is ``metrics``.
-
-Use this integration to view and monitor the health of your Databricks clusters.
+The Databricks receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Databricks using the Databricks API. Use this integration to view and monitor the health of your Databricks clusters. The supported pipeline type is ``metrics``.
 
 Benefits
 ===============================
