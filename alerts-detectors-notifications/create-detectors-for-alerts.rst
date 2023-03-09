@@ -319,7 +319,7 @@ The following tables describe the variables and helper functions you can use whe
 |br|
 
 
-:strong:`ALERT DETAILS`
+:strong:`Alert details`
 
 .. list-table::
    :header-rows: 1
@@ -360,7 +360,7 @@ The following tables describe the variables and helper functions you can use whe
 
 
 
-:strong:`SIGNAL DETAILS`
+:strong:`Signal details`
 
 .. list-table::
    :header-rows: 1
@@ -409,7 +409,7 @@ The following tables describe the variables and helper functions you can use whe
 
 
 
-:strong:`HELPER FUNCTIONS`
+:strong:`Helper functions`
 
 .. list-table::
    :header-rows: 1
@@ -465,7 +465,7 @@ The following tables describe the additional variables you can use when creating
 
 
 
-:strong:`RESOURCE RUNNING OUT`
+:strong:`Resource running out`
 
 .. list-table::
    :header-rows: 1
@@ -485,11 +485,10 @@ The following tables describe the additional variables you can use when creating
       - Threshold for clearing alert, in hours
 
 
-|br|
 
 
 
-:strong:`OUTLIER DETECTION`
+:strong:`Outlier detection`
 
 .. list-table::
    :header-rows: 1
@@ -514,11 +513,9 @@ The following tables describe the additional variables you can use when creating
       - Threshold for clearing alert
 
 
-|br|
 
 
-
-:strong:`SUDDEN CHANGE`
+:strong:`Sudden change`
 
 .. list-table::
    :header-rows: 1
@@ -549,11 +546,9 @@ The following tables describe the additional variables you can use when creating
       - Threshold for clearing alert
 
 
-|br|
 
 
-
-:strong:`HISTORICAL ANOMALY`
+:strong:`Historical anomaly`
 
 .. list-table::
    :header-rows: 1
@@ -700,7 +695,7 @@ In the Alert Rules tab of a detector, you can use the actions menu (|more|) menu
 
    If a detector has multiple rules, such as different rules for different severity levels, you might want to specify which ones to enable or disable. Disabling a rule prevents it from generating any events or sending any notifications. This option is commonly used after the detector has been activated for a while, to decrease or increase the number of alerts the detector is triggering.
 
-.. note:: The options to clone or delete rules are not available for detectors created using the API.
+   .. note:: The options to clone or delete rules are not available for detectors created using the API.
 
 -  Clone
 
