@@ -62,8 +62,6 @@ When to use Trace Analyzer
 
 Splunk Observability Cloud provides several tools for exploring application monitoring data. Trace Analyzer is suited to scenarios where high cardinality, high granularity searches and explorations are required for researching unknown or new issues. See :ref:`guideline-cardinality`.
 
-.. caution:: Trace Analyzer is only available to search traces that within the default retention period
-
 The following table presents what each APM tool is best suited for:
 
 .. list-table::
