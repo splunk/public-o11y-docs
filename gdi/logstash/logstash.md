@@ -46,15 +46,12 @@ The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agen
 To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
 
 ```
-receivers:
-  smartagent/logstash:
-    type: logstash
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/logstash]
     ...  # Additional config
 ```
-
-To complete the monitor activation, you must also include the `smartagent/logstash` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file.
-
-See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
 
 ### Smart Agent
 
