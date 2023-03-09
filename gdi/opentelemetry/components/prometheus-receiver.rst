@@ -9,10 +9,6 @@ Prometheus receiver
 
 The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source emitting telemetry in Prometheus format. The supported pipeline type is ``metrics``.
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
-
-.. caution:: Don't remove the ``prometheus/internal`` receiver from the configuration. Internal metrics feed the Splunk Distribution of OpenTelemetry Collector default dashboard.
-
 Benefits
 =================================
 
@@ -20,6 +16,8 @@ The Prometheus receiver can scrape metrics data from any application that expose
 
 Get started
 ========================
+
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Prometheus receiver in the ``metrics/internal`` pipeline when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
 
 To activate additional Prometheus receivers, add a new ``prometheus`` entry in the ``receivers`` section of the Collector configuration file, as in the following example:
 
@@ -44,6 +42,11 @@ configuration file. For example:
        metrics:
          receivers:
            - prometheus
+
+.. caution:: Don't remove the ``prometheus/internal`` receiver from the configuration. Internal metrics feed the Splunk Distribution of OpenTelemetry Collector default dashboard.
+
+Scraper configuration
+----------------------------------
 
 The Prometheus Receiver supports the full scrape configuration of Prometheus, including service discovery, through the ``config.scrape_configs`` section. In the ``scrape_config`` section of your configuration file you can specify a set of targets and parameters that describe how to scrape them. 
 
@@ -80,6 +83,16 @@ The following is an example of a basic scrape configuration:
                regex: "(request_duration_seconds.*|response_duration_seconds.*)"
                action: keep
 
+To use environment variables in the Prometheus receiver configuration, use the ``${env: <var>}`` syntax. For example:
+
+.. code-block:: yaml
+
+   prometheus:
+     config:
+       scrape_configs:
+         - job_name: ${env:JOBNAME}
+           scrape_interval: 5s
+
 Scaling considerations
 -------------------------------
 
@@ -95,9 +108,6 @@ The following Prometheus features are not supported and return an error if used 
 * ``remote_read``
 * ``remote_write``
 * ``rule_files``
-
-Scrape configurations
-------------------------------------
 
 Settings
 ======================
