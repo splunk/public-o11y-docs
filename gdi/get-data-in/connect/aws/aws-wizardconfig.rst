@@ -34,7 +34,7 @@ To access the guided setup for AWS integration, perform the following steps:
 
     .. note:: While choosing data sources, you might see the option to import all data from built-in CloudWatch namespaces. Select it to ensure that built-in dashboards display automatically.
 
-#. Authenticate to establish a connection between your AWS account and Splunk Observability Cloud. Read about :ref:`the authentication options <aws-integration-prereqs>`.
+#. Authenticate to establish a connection between your AWS account and Splunk Observability Cloud. You'll need the default IAM policy, which guided setup prompts you to copy in the :guilabel:`Prepare AWS Account` step. Read about :ref:`the authentication options <aws-authentication>`. 
 
 #. Select the rate at which you want Splunk Observability Cloud to poll CloudWatch for metric data, with 1 minute as the minimum value, and 10 minutes as the maximum value. For example, a value of 300 polls metrics once every 5 minutes. Poll rate is expressed in seconds.  
 

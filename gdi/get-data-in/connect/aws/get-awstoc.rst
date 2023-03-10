@@ -45,54 +45,63 @@ Following configuration, you can use Amazon CloudWatch to import metrics and log
     <h2>AWS integration prerequisites<a name="aws-integration-prereqs" class="headerlink" href="#aws-integration-prereqs" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-To connect AWS to Observability Cloud and integrate those platforms you need Administrator privileges in Observability Cloud and your AWS accounts, and an authentication method:
-  
-- In most AWS regions, use an :ref:`Identity and Access Management (IAM) policy <aws-iam-policy>`, an :ref:`AWS IAM role <aws-iam-role>`, and an external ID from Observability Cloud. 
+To connect AWS to Observability Cloud you need: 
 
-    An external ID is a random string used to establish a trust relationship between Observability Cloud and your AWS account. An external ID is automatically generated for you when you create a new AWS integration in Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
+- Administrator privileges in Observability Cloud and your AWS accounts. 
+
+- An authentication method.
   
-- For the GovCloud or China regions, select the option to authenticate using a secure token, which combines an access key ID and a secret access key.
+.. _aws-authentication:
+
+.. raw:: html
+
+  <embed>
+    <h3>AWS authentication methods<a name="aws-authentication" class="headerlink" href="#aws-authentication" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+In most AWS regions, use an :ref:`Identity and Access Management (IAM) policy <aws-iam-policy>`, an :ref:`AWS IAM role <aws-iam-role>`, and an external ID from Observability Cloud. 
+
+An external ID is a random string used to establish a trust relationship between Observability Cloud and your AWS account. It's automatically generated for you when you create a new AWS integration in Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
+  
+For the :strong:`GovCloud or China regions`, select the option to authenticate using a secure token, which combines an access key ID and a secret access key.
 
 .. _aws-iam-policy:
 
 .. raw:: html
 
   <embed>
-    <h3>Create an AWS IAM policy<a name="aws-iam-policy" class="headerlink" href="#aws-iam-policy" title="Permalink to this headline">¶</a></h3>
+    <h4>Create an AWS IAM policy<a name="aws-iam-policy" class="headerlink" href="#aws-iam-policy" title="Permalink to this headline">¶</a></h4>
   </embed>
 
-The AWS IAM policy is a JSON object to which Observability Cloud refers for permission to collect data from every supported AWS service. To create a new AWS IAM policy, follow these steps:
+The AWS IAM policy is a JSON object to which Observability Cloud refers for permission to collect data from every supported AWS service. To create a new AWS IAM policy, follow these steps. 
 
-#. Log into your Amazon Web Services account.
-#. From the Services list, select :strong:`Security, Identity, & Compliance > IAM` to open Identity and Access Management.
-#. Select :strong:`Policies > Create Policy`, then select the :strong:`JSON` tab.
-#. Replace the placeholder JSON with the pertinent AWS IAM policy JSON. See some :ref:`policy examples <aws-api-create-policy-role>`.
+#. Log into your Amazon Web Services account and look for the :guilabel:`Identity and Access Management` service.
+#. Create a new policy. In the :strong:`JSON` tab, replace the placeholder JSON with the pertinent AWS IAM policy JSON. Guided setup provides this policy in the :guilabel:`Prepare AWS Account` step. See also some :ref:`policy examples <aws-api-create-policy-role>`.
+#. Follow the instructions to complete the process and create the policy.
 
-    Alternatively, you can also get this default AWS IAM policy JSON in the :guilabel:`Prepare AWS Account` step of the guided setup in Observability Cloud. The default AWS IAM policy supports metrics and log collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
+.. :note:: The default AWS IAM policy supports metrics and log collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
 
-#. Follow the instructions. Go through :strong:`Next: Tags` and :strong:`Next: Review`. Give the policy a name, and select :strong:`Create policy`.
-
-While preparing your AWS account, guided setup prompts you to copy the default IAM policy to connect your AWS account to Splunk Observability Cloud.
+If you have any doubts, check AWS documentation.  
 
 .. _aws-iam-role:
 
 .. raw:: html
 
   <embed>
-    <h3>Create an AWS IAM role<a name="aws-iam-role" class="headerlink" href="#aws-iam-role" title="Permalink to this headline">¶</a></h3>
+    <h4>Create an AWS IAM role<a name="aws-iam-role" class="headerlink" href="#aws-iam-role" title="Permalink to this headline">¶</a></h4>
   </embed>
 
-Your AWS account includes IAM in its list of services. After creating an AWS IAM policy, you assign that policy to a particular role by performing the following steps in the Amazon Web Services console:
+After creating an AWS IAM policy, you need to assign that policy to a particular role by performing the following steps in the Amazon Web Services console:
 
-#. Select :strong:`Roles > Create Role`.
-#. Select :strong:`Another AWS account` as the type of trusted entity.
+#. Go to :strong:`Roles > Create Role` and select :strong:`Another AWS account` as the type of trusted entity.
 #. Copy and paste the Account ID displayed in guided setup into the :strong:`Account ID` field.
 #. Select :strong:`Require external ID`. Copy and paste the External ID displayed in the guided setup into the :strong:`External ID` field.
 #. Continue with :strong:`Next: Permissions`. Under :strong:`Policy name`, select the policy you made in the previous step.
-#. Go through :strong:`Next: Tags` and :strong:`Next: Review`.
-#. Name your new AWS IAM role. You also have the option of adding a short description for it. Select :strong:`Create role`.
+#. Follow the instructions, and name and create your new AWS IAM role.  
 
 Creating the AWS IAM role generates the ``Role ARN`` used to establish connection with AWS. Copy the created ARN role, and paste it into the :strong:`Role ARN` field in the guided setup.
+
+If you have any doubts, check AWS documentation.
 
 .. _prep-for-aws-integration:
 
@@ -108,7 +117,6 @@ To determine the best connection method and configuration settings, answer the f
 
 - Do I want to collect metrics through API polling at specified intervals, or through CloudWatch Metric Streams? 
 - Do I want to collect logs in addition to metrics? If yes, then include logs while configuring through the API or when given that option while performing a guided setup.
-
 
 .. _aws-connection-options:
 
