@@ -91,7 +91,7 @@ Repeat these steps for each subscription you want to monitor.
 .. raw:: html
 
   <embed>
-    <h2>Connect to Azure<a name="connect-to-azure" class="headerlink" href="#connect-to-azure" title="Permalink to this headline">¶</a></h2>
+    <h2>Connect to Azure with the guided setup<a name="connect-to-azure" class="headerlink" href="#connect-to-azure" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 From Splunk Observability Cloud, connect to Azure by following these steps:
@@ -125,6 +125,26 @@ Splunk Observability Cloud begins receiving metrics from Azure for the subscript
 .. raw:: html
 
   <embed>
+    <h3>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+If you installed Azure while going through the quick start guide, continue by installing the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/resources.html>`.
+
+The Azure integration provides an Azure mode for the :new-page:`navigator <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`, and includes :new-page:`default dashboards <https://docs.splunk.com/Observability/infrastructure/navigators/azure.html#use-default-dashboards-to-monitor-azure-services>` to help you monitor Microsoft Azure services.
+
+You can also connect to Azure and the subscriptions and services running on it by using the Splunk Distribution of OpenTelemetry Collector. To learn more, see :ref:`otel-intro`.
+
+The Collector offers a higher degree of customization than the Azure integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.  
+
+.. raw:: html
+
+  <embed>
+    <h2>Alternatives to connect to Azure<a name="connect-azure-other" class="headerlink" href="#connect-azure-other" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+.. raw:: html
+
+  <embed>
     <h3>Connect to Azure using the Splunk Observability Cloud API<a name="connect-to-azure-using-API" class="headerlink" href="#connect-to-azure-using-API" title="Permalink to this headline">¶</a></h3>
   </embed>
 
@@ -137,16 +157,10 @@ For instructions on how to connect to Azure through the API, see :new-page:`Inte
 .. raw:: html
 
   <embed>
-    <h3>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h3>
+    <h3>Connect to Azure using Terraform<a name="connect-azure-terraform" class="headerlink" href="#connect-azure-terraform" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-If you installed Azure while going through the Quick Start guide, continue by installing the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/resources.html>`.
-
-The Azure integration provides an Azure mode for the :new-page:`navigator <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`, and includes :new-page:`default dashboards <https://docs.splunk.com/Observability/infrastructure/navigators/azure.html#use-default-dashboards-to-monitor-azure-services>` to help you monitor Microsoft Azure services.
-
-You can also connect to Azure and the subscriptions and services running on it by using the Splunk Distribution of OpenTelemetry Collector. To learn more, see :ref:`otel-intro`.
-
-The Collector offers a higher degree of customization than the Azure integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.
+LINK HERE
 
 .. raw:: html
 
