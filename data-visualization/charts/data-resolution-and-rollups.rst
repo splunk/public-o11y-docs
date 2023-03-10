@@ -19,7 +19,7 @@ Chart data resolution
 
 When it renders charts, Observability Cloud defaults to a display resolution based on the time range of the chart.
 In general, shorter time ranges have a fine resolution, and the chart resolution is more likely to be the same as the native resolution.
-Conversely, longer time ranges have a coarse resolution, and the the chart resolution is more likely to differ from the native resolution.
+Conversely, longer time ranges have a coarse resolution, and the chart resolution is more likely to differ from the native resolution.
 For longer time range charts, Observability Cloud ensures that the displayed points accurately reflect the actual data points
 by using :ref:`rollups<rollups>`.
 
