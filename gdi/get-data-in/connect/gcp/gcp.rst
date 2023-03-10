@@ -17,6 +17,8 @@ With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, yo
 
 To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 
+.. _gcp-prerequisites:
+
 .. raw:: html
 
    <embed>
@@ -215,6 +217,8 @@ You can also integrate GCP with Splunk Observability Cloud using the GCP API. Se
    </embed>
 
 To connect using Terraform, see :ref:`terraform-config`.
+
+.. _next-gcp-steps:
 
 .. raw:: html
 
