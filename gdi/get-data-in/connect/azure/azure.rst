@@ -160,7 +160,7 @@ For instructions on how to connect to Azure through the API, see :new-page:`Inte
     <h3>Connect to Azure using Terraform<a name="connect-azure-terraform" class="headerlink" href="#connect-azure-terraform" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-LINK HERE
+To connect using Terraform, see :ref:`terraform-config`.
 
 .. raw:: html
 

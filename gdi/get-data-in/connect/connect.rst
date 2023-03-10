@@ -23,6 +23,6 @@ See the following topics to learn how to connect each of these cloud service pro
 - :ref:`Azure <get-started-azure>`
 - :ref:`GCP <get-started-gcp>`
 
-To use Terraform, see :ref:`terraform-config`.
+To connect using Terraform, see :ref:`terraform-config`.
 
 .. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 

@@ -29,12 +29,18 @@ You must be an administrator of your Splunk Observability Cloud organization to 
 
    Observability Cloud supports all GCP regions. 
 
+.. raw:: html
+
+   <embed>
+      <h2>Connect to GCP using the guided setup<a name="gcp-guided" class="headerlink" href="#gcp-guided" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
 .. _gcp-one:
 
 .. raw:: html
 
    <embed>
-      <h2>Select a role for your GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h2>
+      <h3>Select a role for your GCP service account<a name="gcp-one" class="headerlink" href="#gcp-one" title="Permalink to this headline">¶</a></h3>
    </embed>
 
 * If you want to use the :strong:`Project Viewer` role, skip to :ref:`Configure GCP <gcp-two>`. Choosing this role ensures that any functionality update implemented in Infrastructure Monitoring doesn't require changes to your GCP setup.
@@ -99,7 +105,7 @@ The following table specifies the permissions required for GCP integrations.
 .. raw:: html
 
    <embed>
-      <h2>Configure GCP<a name="gcp-two" class="headerlink" href="#gcp-two" title="Permalink to this headline">¶</a></h2>
+      <h3>Configure GCP<a name="gcp-two" class="headerlink" href="#gcp-two" title="Permalink to this headline">¶</a></h3>
    </embed>
 
 To configure your GCP service, follow these steps:
@@ -135,7 +141,7 @@ To configure your GCP service, follow these steps:
 .. raw:: html
 
    <embed>
-      <h3>Configure multiple GCP projects<a name="gcp-projects" class="headerlink" href="#gcp-projects" title="Permalink to this headline">¶</a></h3>
+      <h4>Configure multiple GCP projects<a name="gcp-projects" class="headerlink" href="#gcp-projects" title="Permalink to this headline">¶</a></h4>
    </embed>
 
 To monitor multiple GCP projects with the integration you have two options: 
@@ -149,7 +155,7 @@ To monitor multiple GCP projects with the integration you have two options:
 .. raw:: html
 
    <embed>
-      <h2>Start the integration<a name="gcp-three" class="headerlink" href="#gcp-three" title="Permalink to this headline">¶</a></h2>
+      <h3>Start the integration<a name="gcp-three" class="headerlink" href="#gcp-three" title="Permalink to this headline">¶</a></h3>
    </embed>
 
 By default, all available services are monitored, and any new services added later are also monitored. When you set integration parameters, you can choose to import metrics from a subset of the available services.
@@ -165,7 +171,7 @@ By default, all available services are monitored, and any new services added lat
 
    #. Go to :guilabel:`New Integration`.
 
-#. Enter a name for this GCP integration, then :guilabel:`Add Project`. 
+#. Enter a name for the new GCP integration, then :guilabel:`Add Project`. 
 #. Next, select :guilabel:`Import Service Account Key`, and select one or more of the JSON key files that you downloaded from GCP in :ref:`Configure GCP <gcp-two>`.
 #. Select :guilabel:`Open`. You can then see the project IDs corresponding to the service account keys you selected.
 #. To import :ref:`metrics <gcp-metrics>` from only some of the available services, follow these steps:
@@ -208,7 +214,7 @@ You can also integrate GCP with Splunk Observability Cloud using the GCP API. Se
       <h3>Connect to GCP using Terraform<a name="connect-gcp-terraform" class="headerlink" href="#connect-gcp-terraform" title="Permalink to this headline">¶</a></h3>
    </embed>
 
-LINK HERE
+To connect using Terraform, see :ref:`terraform-config`.
 
 .. raw:: html
 
