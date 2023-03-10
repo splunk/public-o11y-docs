@@ -40,7 +40,6 @@ Splunk Cloud Platform
       :width: 100%
       :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
 
-
    b. Configure users in the Splunk Cloud Platform.
       .. image:: /_images/logs/setupLOC2.png
       :width: 100%
