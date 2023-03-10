@@ -29,7 +29,7 @@ Observability Cloud
 ----------------------------------------------------------------
 1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Observability Cloud. Contact your organization's Observability Cloud administrator to perform this integration.
 
-2. Select :guilabel:`Splunk Cloud Platform`.
+2. Select :guilabel:`Splunk Cloud Platform`. 
 
 Splunk Cloud Platform
 ----------------------------------------------------------------
