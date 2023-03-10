@@ -86,7 +86,7 @@ To configure a connection through Terraform, perform the following steps:
 
 3. :strong:`Required`. Paste you user API access token in the ``auth_token`` field in the provider config file. You can also set it using the ``SFX_AUTH_TOKEN`` environment variable. This is required to authenticate Terraform requests to Observability Cloud's API. 
 
-4. Configure additional Terraform resources.
+4. Configure the required additional resources, which are Terraform's infrastructure objects.
 
   * For AWS, you need the ``signalfx_aws_integration`` resource. You can add your org token in the ``namedToken`` field to see how much traffic is coming from the integration it identifies, if you use different tokens per integration.
     
@@ -97,7 +97,7 @@ To configure a connection through Terraform, perform the following steps:
 
   * For GCP, use the ``signalfx_gcp_integration`` resource.
 
-5. Add your cloud service as a data source as described in: :guilabel:`Data Source: signalfx_aws_services`, :guilabel:`Data Source: signalfx_azure_services`, or :guilabel:`Data Source: signalfx_gcp_services`.  
+5. Add your cloud service as a data source, as described in: :guilabel:`Data Source: signalfx_aws_services`, :guilabel:`Data Source: signalfx_azure_services`, or :guilabel:`Data Source: signalfx_gcp_services`. Data sources allow Terraform to use information defined outside of Terraform, defined by another separate Terraform configuration, or modified by functions.  
 
 .. note:: For more Terraform syntax examples, see the blog entry :new-page:`Manage Your Splunk Infrastructure as Code Using Terraform <https://www.splunk.com/en_us/blog/partners/manage-your-splunk-infrastructure-as-code-using-terraform.html>`. For examples of how to configure through the Observability Cloud API, see :ref:`Connect to AWS using the Splunk Observability Cloud API <get-configapi>`.
 
