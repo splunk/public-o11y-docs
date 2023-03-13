@@ -24,7 +24,7 @@ The SignalFx Instrumentation supports the following logging libraries:
      - Versions
      - Layouts
    * - ILogger
-     - 2.0.0 to 6.x.x
+     - 2.5.x to 6.x.x
      - * JSON format: ``json`` from the ``NetEscapades.Extensions.Logging`` package
    * - Log4Net
      - 1.0.0 to 2.x.x
