@@ -7,12 +7,12 @@ Prometheus receiver
 .. meta::
       :description: The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any scraping source compatible with the Prometheus format.
 
-The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source emitting telemetry in Prometheus format. The supported pipeline type is ``metrics``.
+The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. The supported pipeline type is ``metrics``.
 
 Benefits
 =================================
 
-The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and attributes.
+The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and labels.
 
 Get started
 ========================
@@ -48,7 +48,7 @@ configuration file. For example:
 Scraper configuration
 ----------------------------------
 
-The Prometheus Receiver supports the full scrape configuration of Prometheus, including service discovery, through the ``config.scrape_configs`` section. In the ``scrape_config`` section of your configuration file you can specify a set of targets and parameters that describe how to scrape them. 
+The Prometheus Receiver supports the most of the scrape configuration of Prometheus, including service discovery, through the ``config.scrape_configs`` section. In the ``scrape_config`` section of your configuration file you can specify a set of targets and parameters that describe how to scrape them. 
 
 For basic configurations, a single scrape configuration specifies a single job. You can configure static targets using the ``static_configs`` parameter. Dynamically discovered targets use service discovery mechanisms of Prometheus. In addition, the ``relabel_configs`` parameter allows advanced modifications to any target and its labels before scraping.
 
@@ -112,7 +112,7 @@ The following Prometheus features are not supported and return an error if used 
 Settings
 ======================
 
-The following table shows the configuration options for the Splunk HEC exporter:
+The following table shows the configuration options for the Prometheus receiver:
 
 .. raw:: html
 
