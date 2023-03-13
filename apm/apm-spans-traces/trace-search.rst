@@ -34,4 +34,4 @@ The following animated gif demonstrates how to select a time range in the chart:
 Trace Search trace limit
 ==================================
 
-The Trace Search has a limit of 1,000 traces. The Trace Search searches for traces at the end of the time window you select. When 1,000 traces are matched, the chart stops populating.
+The Trace Search has a limit of 1,000 traces. The Trace Search retrieves traces at the end of the time window you select. When 1,000 traces are matched, the chart stops populating.
