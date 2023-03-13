@@ -83,14 +83,14 @@ The following is an example of a basic scrape configuration:
                regex: "(request_duration_seconds.*|response_duration_seconds.*)"
                action: keep
 
-To use environment variables in the Prometheus receiver configuration, use the ``${env: <var>}`` syntax. For example:
+To use environment variables in the Prometheus receiver configuration, use the ``${<var>}`` syntax. For example:
 
 .. code-block:: yaml
 
    prometheus:
      config:
        scrape_configs:
-         - job_name: ${env:JOBNAME}
+         - job_name: ${JOBNAME}
            scrape_interval: 5s
 
 Scaling considerations

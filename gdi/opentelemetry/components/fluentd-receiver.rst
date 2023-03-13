@@ -1,13 +1,13 @@
 .. _fluentd-receiver:
 
 *************************
-Fluentd receiver
+Fluent Forward receiver
 *************************
 
 .. meta::
-      :description: The Fluentd receiver allows the Splunk Distribution of OpenTelemetry Collector to collect logs and events using the Fluent Forward protocol.
+      :description: The Fluent Forward receiver allows the Splunk Distribution of OpenTelemetry Collector to collect logs and events using the Fluent Forward protocol.
 
-The Fluentd receiver allows the Splunk Distribution of OpenTelemetry Collector to collect events using the bundled Fluentd application. The supported pipeline type is ``logs``. See :ref:`otel-data-processing` for more information.
+The Fluent Forward receiver allows the Splunk Distribution of OpenTelemetry Collector to collect events using the bundled Fluentd application. The supported pipeline type is ``logs``. See :ref:`otel-data-processing` for more information.
 
 The receiver accepts data formatted as Fluent Forward events through a TCP connection. All three Fluent event types, message, forward, and packed forward, are supported, including compressed packed forward.
 
@@ -16,7 +16,7 @@ The receiver accepts data formatted as Fluent Forward events through a TCP conne
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Fluentd receiver in the ``logs`` pipeline when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Fluent Forward receiver in the ``logs`` pipeline when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
 
 The default configuration of the ``fluentforward`` receiver in the Splunk Distribution of OpenTelemetry Collector is the following:
 
@@ -44,7 +44,7 @@ For more information on how to install Fluentd when manually installing the Coll
 Settings
 ======================
 
-The following table shows the configuration options for the Fluentd receiver:
+The following table shows the configuration options for the Fluent Forward receiver:
 
 .. raw:: html
 
