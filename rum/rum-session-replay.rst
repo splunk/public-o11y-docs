@@ -24,7 +24,7 @@ Session replay is available for enterprise customers only. For more information 
 
 Setup session replay 
 =====================
-There are two ways to setup session replay: CDN, or NPM. 
+There are two ways to setup session replay: CDN or NPM. 
 
 .. admonition:: Note
     
