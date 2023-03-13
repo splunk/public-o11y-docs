@@ -57,7 +57,7 @@ To define multiple config files simultaneously use:
     <h2>Configure log collection<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-Use :new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>` to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. 
+Use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
 
 .. raw:: html
 
@@ -94,6 +94,8 @@ The following is a sample configuration to collect custom logs:
     pos_file /var/log/td-agent/my-custom-logs.pos
     tag my-custom-logs
   </source>
+
+See :ref:`fluentd-receiver` for more information.
 
 .. _otel-config-additional-components:
 
