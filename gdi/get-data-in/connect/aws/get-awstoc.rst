@@ -130,7 +130,7 @@ You can connect Observability Cloud to AWS in several different ways. Choose the
 
 .. list-table::
   :header-rows: 1
-  :widths: 50, 50
+  :widths: 35, 65
 
   * - :strong:`Connection option`
     - :strong:`Why use this?`
