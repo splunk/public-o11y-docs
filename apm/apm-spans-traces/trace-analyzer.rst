@@ -90,6 +90,10 @@ Trace Analyzer trace list limit
 
 While the Trace Analyzer chart (1) and trace list summary (2) display the full count of traces that match the time window you select, the list of traces (3) has a limit of 1,000 traces. The Trace Analyzer searches for traces at the end of the time window you select. When 1,000 traces are matched, the list stops populating.
 
+..  image:: /_images/apm/trace-analyzer/TraceAnalyzerLimit.png
+    :width: 95%
+    :alt: Trace limit in trace list
+
 Learn more
 =====================
 
