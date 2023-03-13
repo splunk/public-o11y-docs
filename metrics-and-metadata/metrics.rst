@@ -88,7 +88,7 @@ A data point consists of the following components:
   * - Metric value
     - | The measurement from your system, represented as a number. 
       | 
-      | Metric values must be a signed integer, float, or numeric string. The system stores them as 64-bit integers. See more in the :new-page:`Send Traces, Metrics and Events API <https://dev.splunk.com/observability/reference/api/ingest_data/latest#endpoint-send-metrics>` documentation.
+      | Metric values must be a signed integer, float, or numeric string in decimal or fixed-point notation. The system stores them as 64-bit integers. See more in the :new-page:`Send Traces, Metrics and Events API <https://dev.splunk.com/observability/reference/api/ingest_data/latest#endpoint-send-metrics>` documentation.
     - ``99.98751``, ``0.7``, ``"1.13"``
 
   * - Dimensions
