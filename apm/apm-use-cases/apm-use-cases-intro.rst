@@ -38,8 +38,13 @@ Site reliability engineers, service owners, engineering executives, and performa
 - :ref:`services-impact-business-workflows`
 - :ref:`troubleshoot-tag-spotlight`
 - :ref:`troubleshoot-business-workflows`
+- :ref:`specific-trace`
 - :ref:`apm-use-case-trace-analyzer`
 - :ref:`profiling-use-case`
+- :ref:`monitor-services`
+- :ref:`configure-business-workflows`
+- :ref:`historical-data`
+- :ref:`custom-metricset`
 
 .. raw:: html
 
