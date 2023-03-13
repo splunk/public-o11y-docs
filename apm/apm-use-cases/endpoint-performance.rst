@@ -12,9 +12,9 @@ Alex, a performance engineer at Buttercup games, wants to regularly monitor and 
 To instrument their infrastructure using the Splunk OTel Collector, Kai takes the following steps:
 
 #. :ref:`endpoint-performance-card`
-#. Alex sorts and filters endpoints in the Endpoint Performance
-#. Alex compares last hour performance from the performance 24 hours previous
-#. Alex uses Tag Spotlight to get more context 
+#. :ref:`sort-filter-endpoint-performance`
+#. :ref:`compare-endpoint-performance`
+#. :ref:`tag-spotlight`
 
 .. _endpoint-performance-card:
 
@@ -23,10 +23,14 @@ Alex reviews the endpoints in the Endpoint Performance card
 
 Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, he can't drill down into a component service using the dependency map. So, Alex uses the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of 2+ seconds. Alex selects the Endpoint Performance card to get more details about which checkout endpoints are taking longer than 2 seconds. 
 
+.. _sort-filter-endpoint-performance:
+
 Alex sorts and filters endpoints in the Endpoint Performance
 ================================================================
 
 Within Endpoint Performance, Alex sorts the endpoints by P90 Latency so he can quickly see the endpoints with the highest latency. He also uses the search to filter to endpoints with /checkout/ in the path. 
+
+.. _compare-endpoint-performance:
 
 Alex compares last hour performance from the performance 24 hours previous
 =============================================================================
@@ -34,6 +38,8 @@ Alex compares last hour performance from the performance 24 hours previous
 Alex knows there was a release this morning, so they want to compare the performance from the last hour to yesterday. So they update the time dropdown to -1h and the select -24h for the comparison so that they can compare the last hour to the same time frame yesterday.
 
 Alex notices that the checkout/{cardId} endpoint has a 110% increase in P90 latency compared with yesterday. 
+
+.. _tag-spotlight:
 
 Alex uses Tag Spotlight to get more context 
 =============================================================================
