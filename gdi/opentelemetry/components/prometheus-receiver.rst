@@ -7,7 +7,7 @@ Prometheus receiver
 .. meta::
       :description: The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any scraping source compatible with the Prometheus format.
 
-The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source emitting telemetry in Prometheus format. The supported pipeline type is ``metrics``.
+The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. The supported pipeline type is ``metrics``.
 
 Benefits
 =================================
