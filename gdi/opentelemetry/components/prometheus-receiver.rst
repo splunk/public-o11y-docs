@@ -12,7 +12,7 @@ The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collecto
 Benefits
 =================================
 
-The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and attributes.
+The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and labels.
 
 Get started
 ========================
