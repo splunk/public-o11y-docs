@@ -7,9 +7,9 @@ Use case: Improve service performance using endpoint performance in Splunk APM
 .. meta::
     :description: Alex uses Splunk APM endpoint performance regularly monitor the performance of the payment service to ensure continuous improvement of the payment experience. 
 
-Alex, a performance engineer at Buttercup games, wants to regularly monitor and optimize the experience of the for Buttercup Games customers. Today Alex is particularly interested in the checkout experience as there were some enhancements released this morning to that experience. 
+Alex, a performance engineer at Buttercup games, wants to regularly monitor and optimize the Buttercup Games customer experience. Today, Alex is particularly interested in the checkout experience as there were some enhancements released this morning to that experience. 
 
-To instrument their infrastructure using the Splunk OTel Collector, Kai takes the following steps:
+To review the performance of the checkout experience, Alex takes the following steps:
 
 #. :ref:`endpoint-performance-card`
 #. :ref:`sort-filter-endpoint-performance`
@@ -21,7 +21,7 @@ To instrument their infrastructure using the Splunk OTel Collector, Kai takes th
 Alex reviews the endpoints in the Endpoint Performance card
 ================================================================
 
-Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, he can't drill down into a component service using the dependency map. So, Alex uses the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of 2+ seconds. Alex selects the Endpoint Performance card to get more details about which checkout endpoints are taking longer than 2 seconds. 
+Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, he can't drill down into a component service using the dependency map; so, Alex reviews the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of 2+ seconds. Alex selects the Endpoint Performance card to get more details about which checkout endpoints are taking longer than 2 seconds. 
 
 .. _sort-filter-endpoint-performance:
 
@@ -47,3 +47,8 @@ Alex uses Tag Spotlight to get more context
 He selects this endpoint and reviews the Tag Spotlight details. He notices that the http.status_code 503 is the top high-latency tag. He selects this tag to explore in Tag Spotlight. 
 
 In Tag Spotlight Alex locates the 503 status codes and adds a filter Tag Spotlight for 503 responses. Now he can see that the latest version released today is responsible for the majority of the 503 responses. Having identified some latency associated with the 503 responses in the latest version, Alex consults with his team regarding the cause for the 503 responses.
+
+Summary
+==========
+
+Alex used Endpoint Performance to monitor endpoints within his monolith architecture. Using the filter, sort, and compare functionality within the Endpoint Performance he was able to quickly isolate an endpoint that had increased latency after a release. 
