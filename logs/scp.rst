@@ -37,13 +37,14 @@ Splunk Cloud Platform
 
    a. Configure a service account in Splunk Cloud Platform. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect.
       .. image:: /_images/logs/setupLOC1.png
-      :width: 100%
-      :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
+         :width: 100%
+         :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
+      
 
    b. Configure users in the Splunk Cloud Platform.
       .. image:: /_images/logs/setupLOC2.png
-      :width: 100%
-      :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
+         :width: 100%
+         :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
 
    c. Attach the role and the user you created in the integration guided setup.
 
