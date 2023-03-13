@@ -112,7 +112,7 @@ The following Prometheus features are not supported and return an error if used 
 Settings
 ======================
 
-The following table shows the configuration options for the Splunk HEC exporter:
+The following table shows the configuration options for the Prometheus receiver:
 
 .. raw:: html
 
