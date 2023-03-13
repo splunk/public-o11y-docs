@@ -9,6 +9,15 @@ Use case: Improve service performance using endpoint performance in Splunk APM
 
 Alex, a performance engineer at Buttercup games, wants to regularly monitor and optimize the experience of the for Buttercup Games customers. Today Alex is particularly interested in the checkout experience as there were some enhancements released this morning to that experience. 
 
+To instrument their infrastructure using the Splunk OTel Collector, Kai takes the following steps:
+
+#. :ref:`endpoint-performance-card`
+#. Alex sorts and filters endpoints in the Endpoint Performance
+#. Alex compares last hour performance from the performance 24 hours previous
+#. Alex uses Tag Spotlight to get more context 
+
+.. _endpoint-performance-card:
+
 Alex reviews the endpoints in the Endpoint Performance card
 ================================================================
 
