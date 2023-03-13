@@ -16,6 +16,7 @@ Components
     components/batch-processor
     components/databricks-receiver
     components/filter-processor
+    components/fluentd-receiver
     components/host-metrics-receiver
     components/kubelet-stats-receiver
     components/kubernetes-cluster-receiver
@@ -72,7 +73,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``filelog``
      - Tails and parses logs from files.
      - Logs
-   * - ``fluentforward``
+   * - :ref:`fluentd-receiver` (``fluentforward``)
      - Runs a TCP server that accepts events through the Fluentd Forward protocol.
      - Logs
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
