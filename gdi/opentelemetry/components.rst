@@ -16,6 +16,7 @@ Components
     components/batch-processor
     components/databricks-receiver
     components/filter-processor
+    components/fluentd-receiver
     components/host-metrics-receiver
     components/kubelet-stats-receiver
     components/kubernetes-cluster-receiver
@@ -29,10 +30,10 @@ Components
 
 The OpenTelemetry Collector includes the following component types:
 
-* Receivers: Get data into the Collector from multiple sources.
-* Processors: Perform operations on data before it's exported. For example, filtering.
-* Exporters: Send data to one or more back ends or destinations. 
-* Extensions: Extend the capabilities of the Collector.
+* :ref:`Receivers <collector-components-receivers>`: Get data into the Collector from multiple sources.
+* :ref:`Processors <collector-components-processors>`: Perform operations on data before it's exported. For example, filtering.
+* :ref:`Exporters <collector-components-exporters>`: Send data to one or more backends or destinations. 
+* :ref:`Extensions <collector-components-extensions>`: Extend the capabilities of the Collector.
 
 You can activate components by configuring :ref:`pipelines <otel-data-processing>` in the Collector configuration. See :ref:`otel-configuration` to learn how to define multiple instances of components as well as their pipelines.
 
@@ -72,7 +73,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``filelog``
      - Tails and parses logs from files.
      - Logs
-   * - ``fluentforward``
+   * - :ref:`fluentd-receiver` (``fluentforward``)
      - Runs a TCP server that accepts events through the Fluentd Forward protocol.
      - Logs
    * - :ref:`host-metrics-receiver` (``hostmetrics``)
