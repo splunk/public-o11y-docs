@@ -48,7 +48,7 @@ You can rearrange the columns in a log view by dragging and dropping column head
 
 Chart actions
 =============================================================================
-You can take six actions on your logs chart from its dashboard. Select the :strong:`More` menu on your logs chart, then select one of the following options:
+You can take 7 actions on your logs chart from its dashboard. Select the :strong:`More` menu on your logs chart, then select one of the following options:
 
 * View in Log Observer
 
