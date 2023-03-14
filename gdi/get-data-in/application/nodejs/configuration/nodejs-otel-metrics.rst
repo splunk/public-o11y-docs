@@ -7,15 +7,13 @@ Metrics and attributes collected by the Splunk Distribution of OTel JS
 .. meta:: 
    :description: The Splunk Distribution of OpenTelemetry JS collects the following metrics.
 
-The Splunk Distribution of OpenTelemetry JS collects runtime and custom metrics. To enable runtime metrics collection, see :ref:`metrics-configuration-nodejs`. 
+The Splunk Distribution of OpenTelemetry JS collects runtime and custom metrics. To activate runtime metrics collection, see :ref:`metrics-configuration-nodejs`. 
 
 To learn about the different metric types, see :ref:`metric-types`.
 
-.. note:: Runtime and trace metrics collection is an experimental feature subject to future changes.
-
 .. _enable-nodejs-metrics:
 
-Enable metrics collection
+Activate metrics collection
 ====================================================
 
 To collect Node.js metrics, see :ref:`metrics-configuration-nodejs`.
@@ -25,7 +23,7 @@ To collect Node.js metrics, see :ref:`metrics-configuration-nodejs`.
 Runtime metrics
 ================================================
 
-To enable runtime metrics, see :ref:`metrics-configuration-nodejs`. The following example shows how to enable runtime metrics by passing the ``runtimeMetricsEnabled`` argument to the ``start`` method:
+To activate runtime metrics, see :ref:`metrics-configuration-nodejs`. The following example shows how to activate runtime metrics by passing the ``runtimeMetricsEnabled`` argument to the ``start`` method:
 
 .. code-block:: javascript
 
@@ -91,7 +89,7 @@ To send custom application metrics to Observability Cloud, add ``@opentelemetry/
      // Takes preference over OTEL_SERVICE_NAME environment variable
      serviceName: 'my-service',
      metrics: {
-       // The suggested resource is filled in via OTEL_RESOURCE_ATTRIBUTES
+       // The suggested resource is filled in using OTEL_RESOURCE_ATTRIBUTES
        resourceFactory: (suggestedResource: Resource) => {
          return suggestedResource.merge(new Resource({
            'my.property': 'xyz',
@@ -199,7 +197,7 @@ To migrate your custom metric instrumentation from the SignalFx client library, 
 
       start({
          serviceName: 'my-service',
-         metrics: true, // enable metrics with default configuration
+         metrics: true, // activate metrics with default configuration
       });
 
 #. Replace calls to ``getSignalFxClient()`` with metrics instances. For example:

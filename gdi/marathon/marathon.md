@@ -8,7 +8,9 @@ The Splunk Distribution of OpenTelemetry Collector provides this integration as 
 
 Use this integration to monitor a Mesos Marathon instance using the [Marathon Python plugin](https://github.com/signalfx/signalfx-agent/blob/main/docs/monitors/collectd-marathon.md).
 
-This monitor is available on Kubernetes, Linux, and Windows.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 
 ## Benefits
@@ -18,7 +20,7 @@ This monitor is available on Kubernetes, Linux, and Windows.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration

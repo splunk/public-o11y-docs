@@ -4,8 +4,6 @@
 Troubleshoot an edge case by searching for a specific trace
 ************************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
     :description: This Splunk APM use case describes how to filter for specific trace in APM Trace View for troubleshooting.
 

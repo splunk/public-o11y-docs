@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `docker-container-stats` monitor via the Smart Agent Receiver. This monitor reads container stats from a Docker API server. The monitor does not currently support CPU share/quota metrics.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `docker-container-stats` monitor type for the Smart Agent Receiver. This monitor reads container stats from a Docker API server. The monitor does not currently support CPU share/quota metrics.
 
 This integration is available for Kubernetes, Linux, and Windows.
 
@@ -17,12 +17,12 @@ This integration is available for Kubernetes, Linux, and Windows.
 
 ## Installation
 
-This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is provided by the Smart Agent and is available for the Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. If using this monitor with the default Docker daemon's domain socket, you might need to add the `splunk-otel-collector` user to the `docker` group to have permission to access the Docker API. If running with the Smart Agent use the `signalfx-agent` user instead.
+2. If using this monitor with the default Docker daemon domain socket, you might need to add the `splunk-otel-collector` user to the `docker` group to have permission to access the Docker API. If running with the Smart Agent use the `signalfx-agent` user instead.
    ```yaml
    usermod -aG docker splunk-otel-collector
    ```
@@ -36,7 +36,7 @@ The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agen
 
 ### Splunk Distribution of OpenTelemetry Collector
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following code to your agent configuration:
 
 ```
 receivers:

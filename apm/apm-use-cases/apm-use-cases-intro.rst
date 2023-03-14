@@ -17,14 +17,14 @@ Use cases: Troubleshoot errors and monitor application performance using Splunk 
     troubleshoot-tag-spotlight
     troubleshoot-business-workflows
     specific-trace
+    troubleshoot-traces
     monitor-services
     monitor-business-workflows
     configure-business-workflows
     historical-data
     custom-metricset
 
-Buttercup Games, a fictitious game company, recently refactored its e-commerce site to go cloud native. The site uses microservices for the application architecture and containers for the underlying infrastructure. The company uses Splunk APM for finding ​​root causes of errors, monitoring system performance, and tracking business KPIs.
-
+Buttercup Games, a fictitious game company, recently refactored its e-commerce site to go cloud native. The site uses microservices for the application architecture and containers for the underlying infrastructure. The company uses Splunk APM for finding root causes of errors, monitoring system performance, and tracking business KPIs.
 
 .. raw:: html
 
@@ -39,8 +39,12 @@ Site reliability engineers, service owners, engineering executives, and performa
 - :ref:`troubleshoot-tag-spotlight`
 - :ref:`troubleshoot-business-workflows`
 - :ref:`specific-trace`
+- :ref:`apm-use-case-trace-analyzer`
 - :ref:`profiling-use-case`
-
+- :ref:`monitor-services`
+- :ref:`configure-business-workflows`
+- :ref:`historical-data`
+- :ref:`custom-metricset`
 
 .. raw:: html
 

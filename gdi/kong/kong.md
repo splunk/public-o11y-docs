@@ -8,6 +8,10 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `kong` monitor type with the SignalFx Smart Agent receiver. This monitor requires version 0.11.2+ of Kong and version 0.0.1+ of kong-plugin-signalfx.
 
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
+
 The Kong integration provides service traffic metrics using `kong-plugin-signalfx`, which emits metrics for configurable request and response lifecycle groups, including:
 
 * Counters for response counts
@@ -36,7 +40,7 @@ This integration is only supported for Kong Gateway Community Edition (CE).
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to enable this integration.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to activate this integration.
 
 Follow these steps to deploy the integration:
 
@@ -50,7 +54,7 @@ Follow these steps to deploy the integration:
     # Then notify Kong of the plugin or add to your existing configuration file
     echo 'custom_plugins = signalfx' > /etc/kong/signalfx.conf
     ```
-2. Add the following `lua_shared_dict` memory declarations to the NGINX configuration file of Kong, or add them directly to `/usr/local/share/lua/5.1/kong/templates/nginx_kong.lua` if you are using Kong's default setup:
+2. Add the following `lua_shared_dict` memory declarations to the NGINX configuration file of Kong, or add them directly to `/usr/local/share/lua/5.1/kong/templates/nginx_kong.lua` if you are using Kong default setup:
     ```
     lua_shared_dict kong_signalfx_aggregation 10m;
     lua_shared_dict kong_signalfx_locks 100k;
@@ -137,12 +141,12 @@ curl -X POST -d "name=signalfx" http://localhost:8001/routes/<my_route_id>/plugi
 ```
 
 For each request made to the respective registered object context, the `kong` integration obtains metric content 
-and aggregates it for automated retrieval at the `/signalfx` endpoint of the Admin API. Although you can enable request 
+and aggregates it for automated retrieval at the `/signalfx` endpoint of the Admin API. Although you can activate request 
 contexts for specific Consumer objects, consumer IDs or unique visitor metrics are not calculated.
 
 By default, the `kong` integration aggregates metrics by a context determined by the HTTP method of the request and by 
 the status code of the response. If you're monitoring a large infrastructure with hundreds of routes, grouping by HTTP 
-method might be too granular. You can disable context grouping by setting `aggregate_by_http_method` to `false`:
+method might be too granular. You can deactivate context grouping by setting `aggregate_by_http_method` to `false`:
 
 ```sh
 curl -X POST -d "name=signalfx" -d "config.aggregate_by_http_method=false" http://localhost:8001/plugins

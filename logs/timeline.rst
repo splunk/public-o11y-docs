@@ -4,21 +4,10 @@
 View overall system health using Timeline
 *****************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: Log Observer Timeline displays a histogram chart of logged events over time, grouped by values of the “message” field. See the spread of error severity levels.
 
-The Log Observer Timeline displays a histogram of logged events over time, grouped by values of the message field ``severity``. Note that Log Observer Connect has no default aggregation. You can change Log Observer's default aggregation by changing the value in the :strong:`Group by` field. To learn more,
-see :new-page-ref:`logs-aggregations`.
-
-The following screenshot shows you a count of events grouped by the event field called :strong:`name`:
-
-..  image:: /_images/logs/log-observer-timeline.png
-    :width: 99%
-    :alt: Log Observer Timeline
-
+The Log Observer Timeline displays a histogram of logged events over time, grouped by values of the message field ``severity``. Note that Log Observer Connect has no default aggregation. You can change Log Observer's default aggregation by changing the value in the :strong:`Group by` field. To learn more, see :new-page-ref:`logs-aggregations`.
 
 These features help you use the Timeline to review the health of your systems:
 

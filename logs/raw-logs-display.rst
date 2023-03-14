@@ -4,9 +4,6 @@
 Browse logs in the logs table
 *****************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
    :description: Browse logs in the logs table as they come into Log Observer or Log Observer Connect. Customize the logs table display by field. See a count of new log events.
 

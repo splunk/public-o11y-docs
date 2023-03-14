@@ -54,7 +54,7 @@ Collector is dropping data
 Data might drop for a variety of reasons, but most commonly for the following reasons:
 
 * The collector is improperly sized, resulting in the Splunk Distribution of OpenTelemetry Collector being unable to process and export the data as fast as it is received. See :ref:`otel-sizing` for sizing guidelines.
-* The exporter destination is unavailable or accepting the data too slowly. To mitigate drops, configure the ``batch`` processor. In addition, you might also need to configure the queued retry options on enabled exporters.
+* The exporter destination is unavailable or accepting the data too slowly. To mitigate drops, configure the ``batch`` processor. In addition, you might also need to configure the queued retry options on activated exporters.
 
 Collector isn't receiving data
 -------------------------------------
@@ -63,7 +63,7 @@ The collector might not receive data for the following reasons:
 
 * Network configuration issues
 * Receiver configuration issues
-* The receiver is defined in the receivers section, but not enabled in any pipelines.
+* The receiver is defined in the receivers section, but not activated in any pipelines.
 * The client configuration is incorrect
 
 Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
@@ -81,10 +81,12 @@ Collector can't export data
 
 The collector might be unable to export data for the following reasons:
 
-* Network configuration issues, such as firewall, DNS, or proxy support. The collector does have proxy support for exporters. If configured at collector start time, then exporters, regardless of protocol, do or do not proxy traffic as defined by these environment variables.
+* Network configuration issues, such as firewall, DNS, or proxy support.
 * Incorrect exporter configuration
 * Incorrect credentials
 * The destination is unavailable
+
+If you need to use a proxy, see :ref:`configure-proxy-collector`.
 
 Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
 
@@ -201,7 +203,7 @@ If an HTTP request is not successfully completed, you might see the following HT
 Log collection issues
 =========================================
 
-See the OpenTelemetry project documentation :new-page:`to enable the Collector's debug logging <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#logs>`.
+See the OpenTelemetry project documentation :new-page:`to activate the Collector's debug logging <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#logs>`.
 
 Here are some common issues related to log collection on the Collector.
 
@@ -222,6 +224,8 @@ If using Windows, run the following command to check if the source is generating
 
   Get-Content myTestLog.log 
 
+.. _fluentd-collector-troubleshooting:
+
 Fluentd isn't configured correctly
 ----------------------------------------
 
@@ -229,15 +233,15 @@ Do the following to check the Fluentd configuration:
 
 #. Check that td-agent is running. On Linux, run ``systemctl status td-agent``. On Windows, run ``Get-Service td-agent``.
 #. If you changed the configuration, restart Fluentd. On Linux, run ``systemctl restart td-agent``. On Windows, run ``Restart-Service -Name td-agent``.
-#. Check fluentd.conf and conf.d/\*. ``@label @SPLUNK`` must be added to every source to enable log collection.
-#. Manual configuration may be required to collect logs off the source. Add configuration files to in the conf.d directory as needed.
-#. Enable debug logging in fluentd.conf (``log_level debug``), restart td-agent, and check that the source is generating logs.
+#. Check fluentd.conf and conf.d/\*. ``@label @SPLUNK`` must be added to every source to activate log collection.
+#. Manual configuration might be required to collect logs off the source. Add configuration files to in the conf.d directory as needed.
+#. Activate debug logging in fluentd.conf (``log_level debug``), restart td-agent, and check that the source is generating logs.
 
 While every attempt is made to properly configure permissions, it is possible that td-agent does not have the permission required to collect logs. Debug logging should indicate this issue.
 
 It is possible that the ``<parser>`` section configuration does not match the log events.
 
-If you see a message such as "2021-03-17 02:14:44 +0000 [debug]: #0 connect new socket", Fluentd is working as expected. You need to enable debug logging to see this message.
+If you see a message such as "2021-03-17 02:14:44 +0000 [debug]: #0 connect new socket", Fluentd is working as expected. You need to activate debug logging to see this message.
 
 Collector isn't configured properly
 ----------------------------------------
@@ -245,7 +249,7 @@ Collector isn't configured properly
 Do the following to check the Collector configuration:
 
 #. Go to ``http://localhost:55679/debug/tracez`` to check zPages for samples. You might need to configure the endpoint.
-#. Enable logging exporter.
+#. Activate logging exporter.
 #. Run ``journalctl -u splunk-otel-collector.service -f`` to collect the logs for you to review.
 #. Review :ref:`otel-splunk-collector-tshoot` if you can't find what you need in the logs.
 
@@ -267,19 +271,23 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
 Unwanted profiling logs appearing in Observability Cloud
 ------------------------------------------------------------
 
-By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a logs pipeline that uses the Splunk HEC exporter. For more information, see :ref:`profiling-intro`.
+By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a ``logs`` pipeline that uses the Splunk HEC exporter.
 
-If you don't need AlwaysOn Profiling data for a specific host or container, set the ``profiling_data_enabled`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
+To send logs to Splunk Observability Cloud without AlwaysOn Profiling data, see :ref:`no_profiling_data`.
 
-.. code:: yaml
+.. _disable_log_collection:
 
-   splunk_hec/noprofiling:
-      token: "${SPLUNK_HEC_TOKEN}"
-      endpoint: "${SPLUNK_HEC_URL}"
-      source: "otel"
-      sourcetype: "otel"
-      log_data_enabled: true # You can still send non-profiling log data if needed
-      profiling_data_enabled: false
+Exclude log data in the Collector
+------------------------------------------------------------
+
+By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a logs pipeline that uses the Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
+
+To avoid sending log data through the Collector to Splunk Observability Cloud, see :ref:`exclude-log-data`.
+
+Send logs from the Collector to Splunk Cloud Platform or Enterprise
+-----------------------------------------------------------------------
+
+To send logs from the Collector to Splunk Cloud Platform or Splunk Enterprise, see :ref:`send_logs_to_splunk`.
 
 Trace collection issues
 ================================
@@ -289,7 +297,7 @@ Here are some common issues related to trace collection on the Collector.
 Test the Collector by sending synthetic data
 ------------------------------------------------------------
 
-You can test the Collector to make sure it can receive spans without instrumenting an application. By default, the Collector enables the Zipkin receiver, which is capable of receiving trace data over JSON.
+You can test the Collector to make sure it can receive spans without instrumenting an application. By default, the Collector activates the Zipkin receiver, which is capable of receiving trace data over JSON.
 
 To test the UI, you can submit a POST request or paste JSON in this directory, as shown in the following example.
 

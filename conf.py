@@ -34,6 +34,7 @@ extensions = [
     'sphinx_copybutton',
     'toggle',
     'newpage',
+    'github',
     'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub'
@@ -168,6 +169,10 @@ rst_prolog = """
 .. |verticaldots| raw:: html
 
    ⋮
+
+.. |takeshift| image:: /_images/incident-intelligence/Incident-intelligence-take-shift-icon.png
+   :alt: Take shift
+   :class: inline-image
 
 .. |br| raw:: html
 

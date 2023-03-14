@@ -1,22 +1,106 @@
 (legacy-otel-mappings)=
 
-# Metrics and metrics metadata
+# Mapping service and mapping report
 
-<meta name="Description" content="Documentation on the legacy SignalFX Smart Agent and OpenTelementry Collector mappings in Splunk Observability Cloud">
+<meta name="Description" content="Documentation on the legacy SignalFX Smart Agent and OpenTelemetry Collector mappings in Splunk Observability Cloud">
 
-This topic is for users that are migrating from using the SignalFx Smart Agent to using the Splunk Distribution of OpenTelemetry Collector. In addition to providing a table for OpenTelemetry values and their legacy equivalents, this topic describes how to use the Mapping Service.
+The mapping service lets you migrate from Smart Agent to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards, charts, and detectors. It automatically translates collectd (Smart Agent) conventions into the syntax used by the Collector as a background operation. 
 
-## The Mapping Service
+Mapping supports multiple observers, deployment types, and kinds of metadata. 
 
-The Mapping Service is a transition tool that defines equivalencies between legacy SignalFx Smart Agent (deprecated) metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. Mapping supports multiple observers, deployment types, and kinds of metadata.
+## How does the mapping service work?
 
-The Mapping Service enables you to migrate from Smart Agent deployments to OpenTelemetry deployments without significantly disrupting the form or content of your existing dashboards and detectors. The Mapping Service also enables you to slowly transition from the Smart Agent to OpenTelemetry across your organization (though you cannot use both agents simultaneously on the same host).
+The mapping service is a transition tool that defines equivalencies between legacy SignalFx Smart Agent metric naming and semantic conventions and the OpenTelemetry names and formats: 
 
-Mapping happens automatically as a background operation. Use the following links to learn more about mapping and to view mapping definitions:
+- It applies to metrics and metric time series (MTS), dimensions, and properties. 
+- Mapping logic treats any of the names for a metric or property as referring to that same metric or property in OpenTelemetry, without tracking versions.
 
-- <a href="https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#how-mapping-makes-upgrades-easier" target="_blank">How mapping makes upgrades easier</a>, which describes the Mapping Service in more detail.
-- <a href="https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#get-started-mapping-transition-rept" target="_blank">About the mapping service transition impact report</a>, which describes how to migrate your data and metadata from dashboards, charts, and detectors from the Smart Agent to the Splunk Distribution of OpenTelemetry Collector.
-- <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a>, which shows you how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+For example, if you track CPU utilization for your Kubernetes pod, your analytics can use the ``kubernetes.container_cpu_limit`` value. In that case, the mapping service updates your existing queries to include both legacy semantics and new semantics (such as ``k8s.container.cpu_limit``) joined by an OR clause. The Mapping Service creates equivalencies between your Smart Agent and OTel metric names.
+
+### Navigate your data
+
+Whether you're using the Smart Agent or the Collector, your original dashboards and detectors function the same way. 
+
+- Infrastructure Navigator views use the mapping service to show both old collection data and new collection data.
+- After you've migrated to the Collector, read <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a>, to learn you how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+
+## Obtain the transition mapping report
+
+If you decide as a Splunk admin to turn off the mapping service, you can still generate and download a **Mapping and OTel Transition Impact Report** specific to migration for your cloud computing environment.
+
+The mapping impact report explains how the transition from Smart Agent to OpenTelemetry affects some of the variables and saved filters in the following dashboards, charts, and detectors.
+
+The mapping impact report also tells you where to find whatever subset of your content calls functions with Smart Agent names, so that you can update that content either by hand or programmatically to complete your transition to open telemetry.
+
+To access the migration transition impact report, follow these steps:
+
+1. Log in to Splunk Observability Cloud.
+2. In the left navigation menu, select **Settings > Billing and Usage**.
+3. Click the **View detailed usage reports** link.
+4. Select the **OpenTelemetry Migration** tab.
+5. Click **Download** to open the report as a comma-separated values file.
+
+### What is flagged for update in translation
+
+The report is specific to your computing environment. It flags the following items and tells you where to find and update them in your collection of plots, filters, and functions:
+
+- Wildcards
+- Direct references to Smart Agent metrics
+- Filters that use Smart Agent dimensions
+- Aggregates that use Smart Agent dimensions
+
+The mapping impact report also shows which OpenTelemetry metrics and dimensions work well as replacements for specific Smart Agent metrics and dimensions, with the important exception of wildcards not supported by OpenTelemetry.
+
+You can view and save the mapping impact report even if you opt out of mapping.
+
+### Interpret the mapping impact report
+
+The Mapping and OTel Transition Impact Report summarizes the scope of component name change associated with your migration to open telemetry. It assesses your data set to list the tokens currently used as metric, dimension, property or tag names, and highlights migration rules that could generate conflict between old and new equivalence groups.
+
+The report explains when migration from an old MTS to a new MTS will trigger detectors, and which detectors those are. For example, heartbeat detectors working with un-aggregated MTS are affected by design, but if a heartbeat detector is working with a dimension that continues across the transition to OTel, then the mapping service ensures continuity so that you do not have to restart that detector.
+
+The mapping transition impact report assesses migration effects across three categories:
+
+- Data object types
+- Team responsibilities
+- Migration mitigation steps you should take
+
+#### Avoiding unexpected results
+
+Because Mapping Service only renames existing MTS when filtering or grouping requires renaming to conform to OpenTelemetry Collector conventions, correlation across different datasets yields unexpected results when a mapped MTS is correlated with an unmapped MTS. This can happen, for example, when an MTS attempts to correlate with a time-shifted or transformed version of itself.
+
+If you have charts and detectors built from formulas whose terms use different agents, you won't get the alerts you expect.
+
+To resolve this issue, explicitly filter or group by dimensions so that Mapping Service renames the fields in all the MTS in the job to match the name you specified in the filter or grouping.
+
+#### Data object type information
+
+The mapping impact report explains migration impacts within your organization to the following object types:
+
+- Dashboards
+- Charts
+- Detectors
+
+The report shows how many objects of each type are affected, and includes tables that show where to find the affected objects. You can read the report to see, for example, a list of all affected charts on a given dashboard or within a dashboard group.
+
+#### Team information
+
+The mapping impact report extracts information from your data set about stakeholders, meaning the people who created object types or are affected by changes to them because they're on email lists of employees to be notified in the event of, for example, a detector being triggered by a critical alert condition.
+
+When applicable, the report shows the names of teams linked to particular detectors. The report also identifies people or teams linked to particular dashboard groups.
+
+#### Migration mitigation steps
+
+The mapping impact report explains what effect migration will have on the content highlighted in it, so that you can modify that content as needed to ensure a smoother transition.
+
+Flagged items that need to be modified include the following (as listed in the report):
+
+- Wildcards used in a plot, filter, or function.
+- Direct references to Smart Agent metrics.
+- Filters that use Smart Agent dimensions.
+- Aggregates that use Smart Agent dimensions.
+
+While the mapping impact report highlights items that need revising because they use legacy syntax or conventions, it also pairs those items with the OTel-based metrics and dimensions that you can use as substitutes for them.
 
 ## OpenTelemetry values and their legacy equivalents
 
@@ -143,3 +227,5 @@ Refer to the following table for OpenTelemetry values and their legacy equivalen
 | `statefulSet` (Property) | `k8s.statefulset.name` (Property) |
 | `vmpage_faults.majflt` (Metric) | `system.paging.faults` (Metric) with dimension name `type` equal to `major` |
 | `vmpage_faults.minflt` (Metric) | `system.paging.faults` (Metric) with dimension name `type` equal to `minor` |
+
+You can find a table outlining OpenTelemetry values and their legacy equivalents in GitHub at <a href="https://github.com/signalfx/integrations/blob/mappings/mappings/mappings.md" target="_blank">Legacy to OTel semantics mapping table</a>.

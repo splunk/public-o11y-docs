@@ -4,9 +4,6 @@
 Create field aliases
 *****************************************************************
 
-.. meta created 2022-01-06
-.. meta DOCS-2998
-
 .. meta::
   :description: Aliases are alternate names for a field that allows you to search for it by multiple names. Aliasing does not rename or remove the original field.
 
@@ -32,9 +29,9 @@ Displaying a field separately in the log details flyout
 --------------------------------------------------------------------------------
 For convenience, your team can choose to always display a particular field separately at the top of the log details flyout. To display the field of your choice separately, alias the desired field to the ``message`` field. The log details flyout in Log Observer always displays the ``message`` field at the top. When you alias another field to the ``message`` field, it appears in the standalone section called :strong:`MESSAGE` at the top of the log details flyout. 
 
-For example, say your team most frequently uses the ``summary`` field. Add an alias for the ``summary`` field called ``message``. The ``summary`` field still exists but is also known as ``message`` and appears in the :strong:`MESSAGE` section of the log details flyout.
+For example, say your team most frequently uses the ``summary`` field. Add an alias for the ``summary`` field called ``message``. The ``summary`` field still exists but is also known as ``message`` and appears in the :strong:`MESSAGE` section of the log details flyout on the right side of the screen.
 
-.. image:: /_images/logs/log-observer-message-field.png
+.. image:: /_images/logs/log-observer-message-field2.png
    :width: 99%
    :alt: This image shows the location of the message field in a separate section at the top of the log details flyout.
 

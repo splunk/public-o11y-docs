@@ -1,18 +1,17 @@
 .. _collector-with-the-uf:
 
 *********************************************************************
-Splunk Universal Forwarder
+Use the Splunk Universal Forwarder with the Collector
 *********************************************************************
 
 .. meta::
       :description: Manage your data ingestion manually by deploying the Splunk Distribution of OpenTelemetry Collector alongside the Splunk Universal Forwarder (UF) on each virtual machine (VM).
 
-Overview
-=====================================
+
 Splunk Enterprise Cloud and Splunk Observability Cloud currently use different data collection agents:
 
 - Enterprise Cloud uses the :new-page:`Splunk Universal Forwarder (UF) <https://docs.splunk.com/Documentation/Forwarder>` to capture logs and some metrics (stored as logs).
-- Observability Cloud uses OpenTelemetry to capture traces, metrics, and logs. Logs are currently captured through bundled FluentD.
+- Observability Cloud uses OpenTelemetry to capture traces, metrics, and logs. Logs are currently captured through bundled Fluentd.
 
 You can manage your data ingestion manually by deploying the Splunk Distribution of OpenTelemetry Collector alongside the UF on each virtual machine (VM).This solution is applicable for VM environments for operating systems that are currently supported by both Observability Cloud and Enterprise and Cloud, running in common environments such as AWS EC2, GCE, Azure VMs, and VMWare.
 

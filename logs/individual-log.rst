@@ -4,9 +4,6 @@
 View individual log details and create a field extraction processor
 ***********************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: View and search a log's fields and values in JSON. Link to related content. Extract a field to create a processing rule.
 
@@ -33,11 +30,3 @@ To view the contents of an individual log record and create a field extraction r
    * Select :menuselection:`View <field_name>` to go to the appropriate view in the Splunk Observability Cloud. For
      example, if you click a field related to Kubernetes, Observability Cloud displays related data in the Kubernetes Navigator.
      If you click fields related to APM, such as :menuselection:`View trace_id` or :menuselection:`View span_id`, Observability Cloud displays the trace or span in the APM Navigator.
-
-The following screenshot shows you an example of viewing the contents of
-an individual log record:
-
-..  image:: /_images/logs/log-observer-individual-log-details-screenshot.png
-    :width: 99%
-    :alt: Individual log details
-

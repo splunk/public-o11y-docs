@@ -12,41 +12,63 @@ Configure the Collector
     :titlesonly:
     :hidden:
 
-    optional-configurations.rst
+    configure-the-collector-ootb.rst
+    linux-config.rst
+    kubernetes-config.rst
+    windows-config.rst
     other-configuration-sources.rst
-    configure-the-smart-agent.rst
+    data-processing.rst
 
-You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well additional components that you can configure separately.
+You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately.
 
 .. _otel-config-options:
 
-Configuration files
-===================================
+.. raw:: html
 
-Select the configuration file to set up the Collector based on your needs.
+  <embed>
+    <h2>Configuration files<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
-Default configuration
-----------------------------------------------------
+See :ref:`the default configuration <otel-configuration-ootb>` to learn about the basic structure of the Collector's configuration file. It also contains an example valid for most environments. 
 
-:new-page:`agent_config.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` is the starting configuration for most environments. This is the default configuration file for the Linux (Debian/RPM) and Windows Installer collector packages.
+You can also use these configurations to change the default settings in each Collector package:
 
-Full configuration (Linux)
-----------------------------------------------------
+* :ref:`otel-kubernetes-config`
+* :ref:`otel-linux-config`
+* :ref:`otel-windows-config`
 
-:new-page:`full_config_linux.yaml <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/full_config_linux.yaml>` is an extended configuration. This configuration requires using :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` or a similar distribution.
+.. _otel-config-multiple-files:
 
-Fluentd configuration
-----------------------------------------------------
+.. raw:: html
 
-:new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>` to collect logs. Fluentd is applicable to Helm or installer script installations only. Common sources including filelog, journald, and Windows Event Viewer are included in the installation. See the Fluentd configuration documentation for more information.
+  <embed>
+    <h3>Multiple configuration files<a name="otel-config-multiple-files" class="headerlink" href="#otel-config-multiple-files" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
-Fluentd artifacts
-^^^^^^^^^^^^^^^^^^^^^^
+To define multiple config files simultaneously use:
+
+.. code-block::
+
+  ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
+
+.. raw:: html
+
+  <embed>
+    <h2>Configure log collection<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
+  </embed>
+
+Use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
+
+.. raw:: html
+
+  <embed>
+    <h3>Fluentd artifacts<a name="otel-fluentd-artifacts" class="headerlink" href="#otel-fluentd-artifacts" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
 The following table describes the artifacts in the Fluentd directory:
 
 .. list-table::
-  :widths: 50 50
+  :widths: 25 75
   :header-rows: 1
 
   * - Configuration
@@ -73,38 +95,21 @@ The following is a sample configuration to collect custom logs:
     tag my-custom-logs
   </source>
 
-.. _otel-config-multiple-files:
-
-Configure the Collector using multiple files
-----------------------------------------------------
-
-To define multiple config files simultaneously use:
-
-.. code-block::
-
-  ./otelcol --config=file:/path/to/first/file --config=file:/path/to/second/file
+See :ref:`fluentd-receiver` for more information.
 
 .. _otel-config-additional-components:
 
-Additional configuration components
-============================================================
+.. raw:: html
 
-You can also configure the following components:
+  <embed>
+    <h2>Additional components and configuration sources<a name="otel-config-additional-components" class="headerlink" href="#otel-config-additional-components" title="Permalink to this headline">¶</a></h2>
+  </embed>
 
-* :ref:`Configuration sources <otel-other-configuration-sources>`
+You can also use these additional :ref:`configuration sources <otel-other-configuration-sources>`:
 
   * Environment variable (Alpha)
-
   * etcd (Alpha)
-
   * Include (Alpha)
-
   * Vault (Alpha)
-
   * Zookeeper (Alpha)
 
-* :ref:`SignalFx Smart Agent components <otel-smart-agent>`
-
-  * Extension
-
-  * Receiver

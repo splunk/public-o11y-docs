@@ -6,16 +6,18 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Kafka monitor type via the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Kafka monitor type using the Smart Agent Receiver.
 
 The Apache Kafka monitor monitors a Kafka instance using the GenericJMX plugin. See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information on how to configure custom MBeans, as well as information on troubleshooting JMX setup.
 
 This monitor has a set of [built-in MBeans
-configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka/mbeans.go) for which it pulls metrics from Kafka's JMX endpoint.
+configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka/mbeans.go) for which it pulls metrics from Kafka JMX endpoint.
 
 **Note:** This monitor supports Kafka v0.8.2.x and above. For Kafka v1.x.x and above, apart from the list of default metrics, `kafka.server:type=ZooKeeperClientMetrics,name=ZooKeeperRequestLatencyMs` is a good metric to monitor since it gives an understanding of how long brokers wait for requests to Zookeeper to be completed. Since Zookeeper is an integral part of a Kafka cluster, monitoring it using the Zookeeper monitor is recommended. It is also a good idea to monitor disk utilization and network metrics of the underlying host.
 
-This monitor is available on Kubernetes, Linux, and Windows.
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 ### Benefits
 ```{include} /_includes/benefits.md
@@ -60,7 +62,7 @@ The following table shows the configuration options for this monitor:
 | `host` | **yes** | `string` | Host to connect to -- JMX must be configured for remote access and accessible from the agent |
 | `port` | **yes** | `integer` | JMX connection port (NOT the RMI port) on the application. This corresponds to the `com.sun.management.jmxremote.port` Java property that should be set on the JVM when running the application. |
 | `name` | no | `string` |  |
-| `serviceName` | no | `string` | This is how the service type is identified in the Splunk Observability Cloud UI so that you can get built-in content for it.  For custom JMX integrations, it can be set to whatever you like and metrics will get the special property `sf_hostHasService` set to this value. |
+| `serviceName` | no | `string` | This is how the service type is identified in the Splunk Observability Cloud UI so that you can get built-in content for it.  For custom JMX integrations, it can be set to whatever you like. |
 | `serviceURL` | no | `string` | The JMX connection string. This is rendered as a Go template and has access to the other values in this config. NOTE: under normal circumstances it is not advised to set this string directly - setting the host and port as specified above is preferred. (**default:** `service:jmx:rmi:///jndi/rmi://{{.Host}}:{{.Port}}/jmxrmi`) |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. If a second `instancePrefix` is specified in a referenced MBean block, the prefix specified in the Connection block will appear at the beginning of the plugin instance, and the prefix specified in the MBean block will be appended to it. |
 | `username` | no | `string` | Username to authenticate to the server |
@@ -78,7 +80,7 @@ The **nested** `mBeanDefinitions` configuration object has the following fields:
 | --- | --- | --- | --- |
 | `objectName` | no | `string` | Sets the pattern used to retrieve MBeans from the MBeanServer. If more than one MBean is returned, you should use the `instanceFrom` option to make the identifiers unique. |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix |
-| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so-called "properties" which are basically key-value pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This option is optional and may be repeated to generate the plugin instance from multiple property values. |
+| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so-called "properties" which are basically key-value pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This option is optional and can be repeated to generate the plugin instance from multiple property values. |
 | `values` | no | `list of objects (see below)` | The `value` blocks map one or more attributes of an MBean to a value list. There must be at least one `value` block within each MBean block. |
 | `dimensions` | no | `list of strings` |  |
 

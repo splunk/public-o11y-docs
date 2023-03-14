@@ -4,8 +4,6 @@
 Key concepts in Splunk APM
 *********************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about key concepts in Splunk APM.
 
@@ -42,7 +40,7 @@ Splunk APM is an Application Performance Monitoring solution that collects every
    * - :ref:`Trace<trace-concept>` 
      - A collection of operations, known as spans, that represents a unique transaction an application handles. 
 
-   * - :ref:`Trace Search<trace-search-concept>`
+   * - :ref:`Trace Analyzer<trace-search-concept>`
      - Search through all traces from all instrumented services to find the exact trace you're looking for. 
 
    * - :ref:`Trace View<trace-view-concept>`
@@ -73,7 +71,7 @@ Splunk APM is an Application Performance Monitoring solution that collects every
      - Metric time series that power Splunk APM’s real-time monitoring capabilities, including charts, dashboards, and detectors.
 
    * - :ref:`Cardinality<cardinality-concept>`
-     - The number of distinct values in a dataset.
+     - The number of distinct values in a data set.
  
 
 Services 
@@ -108,7 +106,7 @@ Service map
 -------------
 A visualization of your instrumented and inferred services and their relationships. The service map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-service-map` to learn more about using the service map in APM, or see :ref:`service-map` for a dedicated use case. 
 
-.. candidate location for screenshot or diagram
+
 
 .. _identity-concept:
 
@@ -152,11 +150,12 @@ A collection of related operations, known as spans, that represents a unique tra
 
 .. _trace-search-concept:
 
-Trace Search
+Trace Analyzer
 ---------------
-In Trace Search, leverage Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
 
-To learn more, see :ref:`specific-trace` for a dedicated use case leveraging trace search. 
+In Trace Analyzer, use Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
+
+To learn more, see :ref:`apm-use-case-trace-analyzer` for a dedicated use case leveraging trace search. 
 
 .. _trace-view-concept:
 
@@ -169,7 +168,7 @@ To learn more, see:
 * :ref:`apm-trace-view` for an overview of Trace View
 * :ref:`span-search` to learn more about span search
 
-.. candidate location for a diagram or screenshot
+
 
 .. _business-workflow-concept:
 
@@ -226,8 +225,6 @@ A MetricSet is a set of metric time series capturing the values of key indicator
 
 There are two categories of MetricSet in APM: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring. For more information, see :ref:`apm-metricsets`.
 
-.. Add diagram
-
 .. _tms-concept:
 
 Troubleshooting MetricSets
@@ -248,6 +245,6 @@ For more information about MMS, see :ref:`monitoring-metricsets`.
 
 Cardinality
 ------------
-The number of distinct values in a dataset. Low cardinality data has a small number of distinct values.  High cardinality data has a large number of distinct values, and requires more computation and storage to analyze and store. 
+The number of distinct values in a data set. Low cardinality data has a small number of distinct values.  High cardinality data has a large number of distinct values, and requires more computation and storage to analyze and store. 
 
 See :ref:`troubleshoot-mms` to learn more about working with high cardinality data. 

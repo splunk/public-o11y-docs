@@ -31,7 +31,7 @@ To generate all the basic installation commands for your environment and applica
 
 .. _install-enable-nodejs-agent:
 
-Install and enable the Node.js instrumentation
+Install and activate the Node.js instrumentation
 ===================================================================
 
 To instrument your Node.js application with the Splunk Distribution of OpenTelemetry JS, follow these steps:
@@ -80,6 +80,8 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
 
          $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
 
+#. (Optional) Activate metric collection. See :ref:`enable_automatic_metric_collection_nodejs`.
+
 #. To run your Node application, enter the following command:
 
    .. code-block:: bash
@@ -92,24 +94,22 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-nodejs-tro
 
 .. _enable_profiling_nodejs:
 
-Enable AlwaysOn Profiling
+Activate AlwaysOn Profiling
 --------------------------------------
 
-.. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. See :ref:`profiling-intro`.
+To activate AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
 
-To enable AlwaysOn Profiling, set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+To activate memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
 
-To enable memory profiling, set the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
-
-The following example shows how to enable the profiler from your application's code:
+The following example shows how to activate the profiler from your application code:
 
 .. code-block:: javascript
 
    start({
       serviceName: '<service-name>',
       endpoint: 'collectorhost:port',
-      profiling: {                       // Enables CPU profiling
-         memoryProfilingEnabled: true,   // Enables Memory profiling
+      profiling: {                       // Activates CPU profiling
+         memoryProfilingEnabled: true,   // Activates Memory profiling
       }
    });
 
@@ -117,10 +117,10 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 
 .. _enable_automatic_metric_collection_nodejs:
 
-Enable metrics collection
+Activate metrics collection
 --------------------------------------
 
-To enable automatic runtime metric collection, enable the metrics feature using the ``SPLUNK_METRICS_ENABLED`` environment variable. See :ref:`metrics-configuration-nodejs` for more information.
+To activate automatic runtime metric collection, activate the metrics feature using the ``SPLUNK_METRICS_ENABLED`` environment variable. See :ref:`metrics-configuration-nodejs` for more information.
 
 .. tabs::
 
@@ -150,7 +150,7 @@ To instrument your application programmatically, add the following lines at the 
 
    // Rest of your main module
 
-The ``start()`` function accepts :ref:`configuration settings <advanced-nodejs-otel-configuration>` as arguments. For example, you can use it to enable runtime metrics and memory profiling:
+The ``start()`` function accepts :ref:`configuration settings <advanced-nodejs-otel-configuration>` as arguments. For example, you can use it to activate runtime metrics and memory profiling:
 
 .. code-block:: javascript
 

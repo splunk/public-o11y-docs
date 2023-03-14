@@ -4,15 +4,12 @@
 Display a field separately in the log details flyout
 *****************************************************************
 
-.. meta created 2022-08-04
-.. meta DOCS-4184
-
 .. meta::
   :description: Display the message field from your logs in an easy-to-access flyout in each individual log record.
 
 The log details flyout in Log Observer always displays the ``message`` field in a standalone section called :strong:`MESSAGE` at the top of the log details flyout.
 
-.. image:: /_images/logs/log-observer-message-field.png
+.. image:: /_images/logs/log-observer-message-field2.png
    :width: 99%
    :alt: This image shows the location of the message field in a separate section at the top of the log details flyout.
 

@@ -11,9 +11,9 @@ Proactively monitor the performance of your web app before problems affect your 
 
 How does Splunk Synthetic Monitoring work?
 =============================================
-Synthetic tests are the primary mechanism of application monitoring in Splunk Synthetic Monitoring. You can set up Browser Tests and Uptime Tests to monitor various aspects of your site or application. You can set up these tests to run at your preferred frequency from the devices and locations of your choosing. 
+Synthetic tests are the primary mechanism of application monitoring in Splunk Synthetic Monitoring. You can set up Browser tests and Uptime tests to monitor various aspects of your site or application. You can set up these tests to run at your preferred frequency from the devices and locations of your choosing. 
 
-Each occurence of a test from a particular device and location at a specific time is called a run. Each run of a test captures a set of metrics that provide insight into your application’s performance. See :ref:`browser-metrics`. You can view this data at the per-run level, or you can view test-level aggregations that provide the data you need at a glance. 
+Each occurrence of a test from a particular device and location at a specific time is called a run. Each run of a test captures a set of metrics that provide insight into your application’s performance. See :ref:`browser-metrics`. You can view this data at the per-run level, or you can view test-level aggregations that provide the data you need at a glance. 
 
 You can also set up alerts that notify you when tests fail and come back online. See :ref:`synth-alerts`. 
 
