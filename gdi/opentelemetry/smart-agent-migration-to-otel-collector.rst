@@ -31,7 +31,7 @@ The benefits of using the Collector are:
 * Open standard based on OpenTelemetry.
 * Support for new features such as code profiling.
 * Ability to correlate data between different views within Observability Cloud with :ref:`Related Content <get-started-relatedcontent>`.
-* Bundled FluentD for log collection.
+* Bundled Fluentd for log collection.
 
 .. raw:: html
 
