@@ -206,7 +206,7 @@ The ``aks`` detector collects the following resource attributes:
 Consul metadata
 ------------------------------------
 
-The ``consul`` detector collects the following resource attributes by querying a consult agent and read its configuration endpoint:
+The ``consul`` detector collects the following resource attributes by querying a consult agent and reading its configuration endpoint:
 
 * ``cloud.region`` (Value: Consul data center)
 * ``host.id`` (Value: Consul node id)
