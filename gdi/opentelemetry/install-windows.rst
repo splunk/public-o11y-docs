@@ -97,6 +97,8 @@ Restart the Collector after adding these environment variables to your configura
 
 .. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
 
+.. _fluentd-manual-config-windows:
+
 Configure Fluentd for log collection
 -------------------------------------------
 

@@ -13,7 +13,7 @@ With a single CPU core, the Collector can receive, process, or export the follow
 
 * If handling traces, 15,000 spans per second.
 * If handling metrics, 20,000 data points per second.
-* If handling logs, 10,000 log records per second, including Fluentd's ``td-agent``, which forwards logs to the ``fluentforward`` receiver in the Collector.
+* If handling logs, 10,000 log records per second, including Fluentd ``td-agent``, which forwards logs to the ``fluentforward`` receiver in the Collector.
 
 Sizing recommendations 
 ==========================================

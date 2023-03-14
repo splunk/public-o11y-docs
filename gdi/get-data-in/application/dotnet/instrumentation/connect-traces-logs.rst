@@ -24,7 +24,7 @@ The SignalFx Instrumentation supports the following logging libraries:
      - Versions
      - Layouts
    * - ILogger
-     - 2.0.0 to 6.x.x
+     - 2.5.0 to 6.x.x
      - * JSON format: ``json`` from the ``NetEscapades.Extensions.Logging`` package
    * - Log4Net
      - 1.0.0 to 2.x.x
@@ -158,6 +158,8 @@ See :ref:`logs-processors` for more information on how to define log transformat
 ILogger
 -------------------------
 
+
+
 When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, activate the ``IncludeScopes`` option and use the ``json`` formatter. For example:
 
 .. code-block:: csharp
@@ -171,6 +173,8 @@ When using the ``NetEscapades.Extensions.Logging.RollingFile`` package, activate
          opts.IncludeScopes = true; // addition
       })
    );
+
+.. note:: SignalFx Instrumentation for .NET only supports ILogger 2.5.0 or higher.
 
 Log correlation also works when ILogger is wrapping other supported loggers.
 
