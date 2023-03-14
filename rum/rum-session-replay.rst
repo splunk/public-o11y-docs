@@ -22,9 +22,9 @@ Prerequisite
 Session replay is available for enterprise customers only. For more information on each type of subscription, see :new-page:`Splunk RUM Pricing <https://www.splunk.com/en_us/products/pricing/faqs/observability.html#splunk-rum>`.
 
 
-Setup session replay 
+Set up session replay 
 =====================
-There are two ways to setup session replay: CDN or NPM. 
+There are two ways to set up session replay: CDN or NPM. 
 
 .. admonition:: Note
     
