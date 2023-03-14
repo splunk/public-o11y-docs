@@ -206,7 +206,7 @@ The ``aks`` detector collects the following resource attributes:
 Consul metadata
 ------------------------------------
 
-The ``consul`` detector collects the following resource attributes by querying a consult agent and reading its configuration endpoint:
+The ``consul`` detector collects the following resource attributes by querying a Consul agent and reading its configuration endpoint:
 
 * ``cloud.region`` (Value: Consul data center)
 * ``host.id`` (Value: Consul node id)
@@ -234,7 +234,7 @@ The ``env`` detector collects resource information from the ``OTEL_RESOURCE_ATTR
 GCP metadata
 ------------------------------------
 
-The ``gcp`` detector uses the Google Cloud client libraries to read resource information from the metadata server, as well as environment variables. The detector uses the metadata to determine which GCP application is running and extract relevant attributes.
+The ``gcp`` detector uses the Google Cloud client libraries to read resource information from the metadata server, as well as environment variables. The detector uses the metadata to determine which GCP application is running and extracts relevant attributes.
 
 GCE metadata
 ^^^^^^^^^^^^^^^^^^^^
