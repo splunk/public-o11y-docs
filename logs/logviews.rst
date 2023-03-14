@@ -7,15 +7,15 @@ Add logs data to Splunk Observability Cloud dashboards
 .. meta::
   :description: Add logs data to Observability Cloud dashboards without turning your logs into metrics first. Align log views, log timeline charts, and metrics charts on one dashboard.
 
-You can add logs data to your Observability Cloud dashboards without turning your logs into metrics first. On a dashboard, metrics charts show what changed in your systems and when the problem started. Logs data on the same dashboard shows you in detail what is happening and why. Your metrics and logs data on the same dashboard respond to the same time selection and other dashboard filters, allowing you to drill down to the source of the problem faster.
+On a dashboard, metrics charts show what changed in your systems and when the problem started. Logs data on the same dashboard shows you in detail what is happening and why. All the data you add to a dashboard respond to the same time selection and other dashboard filters, allowing you to drill down to the source of the problem faster.
 
-There are two ways you can add logs data to dashboards:
+There are two ways to visualize logs data in dashboards:
 
-* Log view
+* Log view: Displays a table showing log records in chronological order for the duration of the period selected in the time picker
 
-* Log timeline
+* Log timeline: Displays a histogram chart of logged events over time grouped by fields and values of your choice
 
-A log view chart displays a table showing log records in chronological order for the duration of the period selected in the time picker. A log timeline chart displays a histogram of logged events over time grouped by fields and values of your choice. Both types of logs charts automatically update to dashboard filters. Filter and aggregate logs in Log Observer before creating a log view or log timeline chart.
+Both types of logs charts automatically update to dashboard filters. Filter and aggregate logs in Log Observer before creating a log view or log timeline chart.
 
 .. note:: Log Observer Connect customers can only create logs charts in dashboards if each Log Observer Connect connection name is unique.
 
@@ -64,19 +64,7 @@ You can take six actions on your logs chart from its dashboard. Select the :stro
 
 * Delete
 
-You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align log views with metrics charts on the same dashboard <field-aliasing>` to learn more.
-
-Select :strong:`Copy` if you want to paste your logs chart elsewhere for further examination.
-
-Select :strong:`Info` to see which user added and last updated the logs chart.
-
-Select :strong:`Download chart as image` to download your logs chart as a PNG file.
-
-Select :strong:`Troubleshoot from this Time Window (APM)` to explore related data in Splunk APM. (This option only exists if APM contains data related to data in the logs chart.)
-
-Select :strong:`Troubleshoot from this Time Window (RUM)` to explore related data in Splunk RUM. (This option only exists if RUM contains data related to data in the logs chart.)
-
-Select :strong:`Delete` to remove your logs chart from the dashboard. Deleting it from the dashboard does not impact the query you used to create your logs chart in Log Observer.
+You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align log views with metrics charts on the same dashboard <field-aliasing>` to learn more. For more information on the actions you can take from the :strong:`Chart actions` menu, see :ref:`work-with-charts`.
 
 .. _field-aliasing:
 
@@ -90,11 +78,9 @@ To align logs data with metrics data, follow these steps:
 
 2. In Log Observer, check whether the corresponding logs fields use the same field names. If they do not match, create a field alias for the logs field using the same field name that your metrics charts use. See :ref:`logs-alias` to learn how. 
 
-3. Create a Log Observer query filtering by the new alias you created in the previous step.
+3. Go back to your dashboard and filter by the field name again using the new alias you created in the previous step.
 
 4. Follow the steps in :ref:`create-logviews-chart` to save your new query as a chart.
 
-Now you can easily cross reference data in your logs chart and data in your metrics charts. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster.
-
-.. note:: Field Aliasing does not rename or remove your original logs field name. When you alias a logs field, you can search for it by its original name or by any of its aliases. 
+Now you can easily cross reference data in your logs chart with data in any other charts on the same dashboard. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster. Field Aliasing does not rename or remove your original logs field name. When you alias a logs field, you can search for it by its original name or by any of its aliases. 
 
