@@ -11,7 +11,7 @@ Use cases
 ===================
 There are many reasons why you might want to replay sessions. Here are a few: 
 
-* Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend time a long time investigating a variety of possible causes based off of an incomplete description of the problem. 
+* Reduce the amount of time support teams take to troubleshoot a problem. By seeing errors from the perspective of an actual user, support teams can quickly identify what happened, and take action. Without session replay, support teams could spend a long time investigating a variety of possible causes based on an incomplete description of the problem. 
 * Introduce fast fixes to your applications by honing in on errors and seeing what errors impact users. 
 * Improve UX by seeing how users interact with your applications and following their navigation path. For example, if customers aren't adding promo codes from a targeted ad campaign, review the checkout workflow to see if customers can even find the dropdown to add a promo code. 
 
