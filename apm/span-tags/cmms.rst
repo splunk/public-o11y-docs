@@ -106,6 +106,22 @@ Follow these steps to create a Monitoring MetricSet.
 
 7. Select :strong:`Start Analysis` and wait for the cardinality check to run. See :ref:`review-cardinality` to assess the new MetricSet's cardinality contribution and enable the MetricSet if you're happy with it.  
 
+8. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check to runs. You might have to wait a few moments for the check to run. 
+
+   .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
+
+9. After the cardinality check has run, review the cardinality of your new MetricSet and enable your new MetricSet.
+
+   * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
+   * If the check times out before you enable the MetricSet, rerun the analysis.
+   * If the check shows as failed, your cardinality is too high to create the new MetricSet. You can edit the MetricSet to adjust the configuration to reduce cardinality or you can select the x to delete the pending Metricset.
+
+   The following example shows a cardinality check. 
+
+   .. image:: /_images/apm/span-tags/cardinality-check-APM.png
+      :width: 60%
+      :alt: This image shows the cardinality check for a Monitoring MetricSet. 
+
 .. note:: Splunk APM replaces dots with underscores in dimension names for MMS time series.
 
 .. _review-cardinality: 
