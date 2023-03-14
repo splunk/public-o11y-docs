@@ -118,7 +118,7 @@ The following example shows how to edit logs received using the ``k8sobjects`` r
 Edit resources and spans for size
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following example shows how to edit resources and spans by limiting the amount of attributes and truncate all attributes to 4,096 characters. The ``resource`` statement drops all keys except the ones indicated in ``keep_keys``.
+The following example shows how to edit resources and spans by limiting the number of attributes and truncating them to 4,096 characters. The ``resource`` statement drops all keys except the ones indicated in ``keep_keys``.
 
 .. code-block:: yaml
 
