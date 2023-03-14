@@ -24,9 +24,11 @@ Components
     components/oracledb-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
+    components/resourcedetection-processor
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
+    components/transform-processor
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -206,7 +208,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``resource``
      - Applies changes to resource attributes. Attributes represent actions that can be applied on resources.
      - Metrics, logs, traces
-   * - ``resourcedetection``
+   * - :ref:`resourcedetection-processor` (``resourcedetection``)
      - Detects resource information from the host, in a format that conforms to the OpenTelemetry resource semantic conventions, and appends or overrides the resource value in telemetry data with this information.
      - Metrics, logs, traces
    * - ``routing``
@@ -218,7 +220,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``tail_sampling``
      - Samples traces based on a set of defined policies. All spans for a given trace must be received by the same Collector instance for effective sampling decisions.
      - Traces
-   * - ``transform`` (alpha)
+   * - :ref:`transform-processor` (``transform``)
      - Modifies telemetry based on OpenTelemetry Transformation Language functions.
      - Metrics, logs, traces
 

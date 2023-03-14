@@ -93,6 +93,8 @@ To use environment variables in the Prometheus receiver configuration, use the `
          - job_name: ${JOBNAME}
            scrape_interval: 5s
 
+If you're using existing Prometheus configurations, replace ``$`` with ``$$`` to prevent the Collector from reading them as environment variables.
+
 Scaling considerations
 -------------------------------
 
