@@ -144,3 +144,101 @@ To use the custom dimensionalized Monitoring MetricSets you have created, apply 
      - :ref:`Configure detectors and alerts in Splunk APM<apm-alerts>`
    * - Monitor services in APM dashboards 
      - :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
+
+Metrics and dimensions of Monitoring MetricSets
+===================================================
+
+Each MMS has a set of metrics and dimensions for spans and traces you can use to monitor and alert on service performance. 
+
+To prevent overcounting metrics in aggregations, the built-in dashboards and charts in Splunk APM automatically exclude custom dimensionalized MMS. 
+Custom dimensionalized MMS have a marker dimension, ``sf_dimensionalized:true``, to enable this filtering.
+
+When you create your own dashboards and charts, you can exclude custom dimensionalized MMS by adding a filter on ``!sf_dimensionalized:true``. 
+If you want to look at the time series of a custom dimensionalized MMS in your charts, filter on ``sf_dimensionalized:true`` and then aggregate by the custom dimension you want to look at. 
+
+The following tables provide the metrics and dimensions for MMS based on services, workflows, spans, and traces:
+
+.. _service-mms: 
+
+Service metrics and dimensions
+---------------------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - :strong:`Metrics`
+     - :strong:`Dimensions`
+
+   * - - ``service.request.count``
+       - ``service.request.duration.ns.min``
+       - ``service.request.duration.ns.median``
+       - ``service.request.duration.ns.max``
+       - ``service.request.duration.ns.p90``
+       - ``service.request.duration.ns.p99``
+     - - ``sf_environment``
+       - ``sf_service``
+       - ``sf_error``
+
+Workflow metrics and dimensions
+---------------------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - :strong:`Metrics`
+     - :strong:`Dimensions`
+
+   * - - ``workflows.count``
+       - ``workflows.duration.ns.min``
+       - ``workflows.duration.ns.median``
+       - ``workflows.duration.ns.max``
+       - ``workflows.duration.ns.p90``
+       - ``workflows.duration.ns.p99``
+     - - ``sf_environment``
+       - ``sf_workflow``
+       - ``sf_error``
+
+.. _endpoint-mms:
+
+Span (endpoint-level) metrics and dimensions
+----------------------------------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - :strong:`Metrics`
+     - :strong:`Dimensions`
+
+   * - - ``spans.count``
+       - ``spans.duration.ns.min``
+       - ``spans.duration.ns.median``
+       - ``spans.duration.ns.max``
+       - ``spans.duration.ns.p90``
+       - ``spans.duration.ns.p99``
+     - - ``sf_environment``
+       - ``sf_service``
+       - ``sf_operation``
+       - ``sf_kind``
+       - ``sf_error``
+       - ``sf_httpMethod``, where relevant
+
+Trace metrics and dimensions
+---------------------------------
+
+.. list-table::
+   :header-rows: 1
+
+   * - :strong:`Metrics`
+     - :strong:`Dimensions`
+
+   * - - ``traces.count``
+       - ``traces.duration.ns.min``
+       - ``traces.duration.ns.median``
+       - ``traces.duration.ns.max``
+       - ``traces.duration.ns.p90``
+       - ``traces.duration.ns.p99``
+     - - ``sf_environment``
+       - ``sf_service``
+       - ``sf_operation``
+       - ``sf_httpMethod``
+       - ``sf_error``
