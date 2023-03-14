@@ -18,7 +18,6 @@ Collecting logs often requires reading log files that are owned by the root user
 .. note::
    Setting the ``containerRuntime:`` parameter to ``cri-o`` did not work during internal testing for logs collection.
 
-
 Add additional telemetry sources
 ===========================================
 
@@ -43,4 +42,71 @@ For example, use the following configuration to activate automatic detection of 
    autodetect:
      istio: true
      prometheus: true
+
+Override a control plane configuration
+==============================================================
+
+If ``agent.controlPlaneEnabled=true``, the Helm chart sets up the Collector to collect metrics from the control plane.
+
+To collect control plane metrics, the Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See :ref:`receiver-creator-receiver` for more information.
+
+If your control plane is using non-standard specifications, then you can provide a custom configuration to allow the Collector to successfully connect to it.
+
+The Collector relies on pod-level network access to collect metrics from the control plane pods. Since most cloud Kubernetes as a service distributions don't expose the control plane pods to the end user, collecting metrics from these distributions is not supported.
+
+The following distributions are supported:
+
+* Kubernetes 1.22 (kops created)
+* OpenShift version 4.9
+
+The following distributions are not supported:
+
+* AKS
+* EKS
+* EKS/Fargate
+* GKE
+* GKE/Autopilot
+
+See the :new-page:`agent template <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/templates/config/_otel-agent.tpl>` for the  default configurations for the control plane receivers.
+
+Refer to the following documentation for information on the configuration options and supported metrics for each control plane receiver:
+
+* :new-page:`CoreDNS <https://docs.splunk.com/Observability/gdi/coredns/coredns.html>`
+* :new-page:`Kubernetes controller manager <https://docs.splunk.com/Observability/gdi/kube-controller-manager/kube-controller-manager.html>`
+* :new-page:`Kubernetes API server <https://docs.splunk.com/Observability/gdi/kubernetes-apiserver/kubernetes-apiserver.html>`
+* :new-page:`Kubernetes proxy <https://docs.splunk.com/Observability/gdi/kubernetes-proxy/kubernetes-proxy.html>`
+* :new-page:`Kubernetes scheduler <https://docs.splunk.com/Observability/gdi/kubernetes-scheduler/kubernetes-scheduler.html>`
+
+There is a known limitation when using the Kubernetes proxy control plane receiver. When using a kops created Kubernetes cluster, a network connectivity issue has been reported that prevents proxy metrics from being collected. The limitation can be addressed by updating the kubeProxy metric bind address in the kops cluster specification:
+
+#. Set ``kubeProxy.metricsBindAddress: 0.0.0.0`` in the kops cluster specification.
+#. Run ``kops update cluster {cluster_name}`` and ``kops rolling-update cluster {cluster_name}`` to deploy the change.
+
+Using custom configurations for nonstandard control plane components
+-----------------------------------------------------------------------------
+
+You can override the default configuration values used to connect to the control plane. If your control plane uses nonstandard ports or custom TLS settings, you need to override the default configurations. The following example shows how to connect to a nonstandard API server that uses port 3443 for metrics and custom TLS certs stored in the /etc/myapiserver/ directory.
+
+.. code-block:: yaml
+
+   agent:
+     config:
+       receivers:
+         receiver_creator:
+           receivers:
+             # Template for overriding the discovery rule and configuration.
+             # smartagent/{control_plane_receiver}:
+             #   rule: {rule_value}
+             #   config:
+             #     {config_value}
+             smartagent/kubernetes-apiserver:
+               rule: type == "port" && port == 3443 && pod.labels["k8s-app"] == "kube-apiserver"
+               config:
+                 clientCertPath: /etc/myapiserver/clients-ca.crt
+                 clientKeyPath: /etc/myapiserver/clients-ca.key
+                 skipVerify: true
+                 useHTTPS: true
+                 useServiceAccount: false
+
+
 
