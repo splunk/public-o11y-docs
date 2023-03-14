@@ -29,9 +29,9 @@ You can use a variety of default configuration files to set up the Splunk Distri
     <h2>Configuration files<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-See :ref:`the out-of-the-box configuration <otel-configuration-ootb>` for most environments. 
+See :ref:`the default configuration <otel-configuration-ootb>` to learn about the basic structure of the Collector's configuration file. It also contains an example valid for most environments. 
 
-Use these configurations to change the default settings in each Collector package:
+You can also use these configurations to change the default settings in each Collector package:
 
 * :ref:`otel-kubernetes-config`
 * :ref:`otel-linux-config`
