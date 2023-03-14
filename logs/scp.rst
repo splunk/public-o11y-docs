@@ -58,7 +58,40 @@ Splunk Cloud Platform
       
       - Removes your local machine's IP from the allow list
       
-4. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance.
+4. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance. The script returns 3 certificates. Copy only the first certificate. The following is an example of a certificate. Be sure to include ``-----BEGIN CERTIFICATE-----`` and ``-----END CERTIFICATE-----``.
+
+   .. code-block:: bash
+
+      -----BEGIN CERTIFICATE-----
+      MIIFJzCCBA+gAwIBAgISA+6+LuTJWVH+R8wTIO8d9frsMA0GCSqGSIb3DQEBCwUA
+      MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+      EwJSMzAeFw0yMjExMjgxNjE1NTlaFw0yMzAyMjYxNjE1NThaMBwxGjAYBgNVBAMT
+      EWxvZ290ZXN0LnNwbGsueHl6MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+      AQEAyLktSn1nk6dxsWC/2PHgb4eSKxoxyEHvah1VlFU56NM5WuzBBAiHE85VlM9z
+      FgggVV6Ztqw8kFp4F1hrU3E0gOhmQDSjbQHT7On+w2+TOoga7CiRdAzIMZRGSp/K
+      qgLzsBIZ0Z27U15RknqtOXcptkXORzfjIecdJS+12l+ICe62xx2Tsmcdd36dXUlu
+      UlMyI4hAFJvyow6pa4Vn5EDtZlOxDs7FbxuKuozgV1MMoMgumVBYxTGxU26BDfAd
+      w2zMILNWbSVd9mEYMD1d+V2G5j5Or8jjpcdeU5HJuTqBm8orFJFflHw9x1VCdKgd
+      sAIewTGVh9f0Ifo8o1RV53mpKQIDAQABo4ICSzCCAkcwDgYDVR0PAQH/BAQDAgWg
+      MB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0G
+      A1UdDgQWBBQp6jnoMxUYvH/XVxHACYB1JcT+xjAfBgNVHSMEGDAWgBQULrMXt1hW
+      y65QCUDmH6+dixTCxjBVBggrBgEFBQcBAQRJMEcwIQYIKwYBBQUHMAGGFWh0dHA6
+      Ly9yMy5vLmxlbmNyLm9yZzAiBggrBgEFBQcwAoYWaHR0cDovL3IzLmkubGVuY3Iu
+      b3JnLzAcBgNVHREEFTATghFsb2dvdGVzdC5zcGxrLnh5ejBMBgNVHSAERTBDMAgG
+      BmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIBFhpodHRwOi8vY3Bz
+      LmxldHNlbmNyeXB0Lm9yZzCCAQMGCisGAQQB1nkCBAIEgfQEgfEA7wB1AK33vvp8
+      /xDIi509nB4+GGq0Zyldz7EMJMqFhjTr3IKKAAABhL89Cg8AAAQDAEYwRAIgLi7C
+      mYDsD/yF2/ko7VdjKjILTS1L8xOD6wlhyk0RTjsCIBH5rnW3meF9FEixSdmVKo/8
+      LP+tylev2W8sQJfROocXAHYAtz77JN+cTbp18jnFulj0bF38Qs96nzXEnh0JgSXt
+      tJkAAAGEvz0LVgAABAMARzBFAiB/RbgI5Nl4vUEBDi/h9J3vQVXS4u2HdL2LXcq4
+      YykeUwIhAKcjcLy7PcLiKjGo/PWSj2bzGGTURw6K9ueAX+86qktwMA0GCSqGSIb3
+      DQEBCwUAA4IBAQAsvFEG2B3YQjjlatoFHjn01mgCuXnXPPA5qtaderZTh2HOrgql
+      XXZukbnmUP04D7ggXV2HEPfyPsgnn+BDbaAMXttCkzwJPAfgFjfaS0qQEZ64r7s7
+      i9UqTcBHP8Rezeu3qlLi7OqWdXX6TF/d+4+5zwmEfA24SlgmZilQPbVtaI9tWTcH
+      t5rkj8V4KbxMOE/cRGyjjKoQysgHSxa/Fg/Z+lQkApj5lKQLtouVXSAAC638KoXf
+      NzxdIRuj2lWaKX4eUGTr6hF4AobaOByXzvJW4GvT48106Yxusx69/eRirTFokaTM
+      2c+wNdSUEh+4s+hu/rrhYia5/4oQcnE6q6BW
+      -----END CERTIFICATE-----
 
 5. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
