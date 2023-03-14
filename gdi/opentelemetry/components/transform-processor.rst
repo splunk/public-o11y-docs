@@ -27,7 +27,7 @@ The transform processor supports the following contexts:
    * - Logs
      - ``resource`` → ``scope`` → ``logs``
 
-Statements can transform telemetry of a higher context. For example, statements applied to a data point can access the metric and resource of the data point. Access of lower contexts isn't possible; for example, you can't use a span statement to transform single span events. As a general rule, associate statements to the context you want to transform.
+Statements can transform telemetry of a higher context. For example, statements applied to a data point can access the metric and resource of the data point. Access to lower contexts isn't possible; for example, you can't use a span statement to transform single span events. As a general rule, associate statements to the context you want to transform.
 
 .. caution:: Modifying telemetry might have unintended consequences, such as orphaned spans or logs, identity conflicts, and wrong metric conversions. Always test transformations before releasing them in a production environment.
 
