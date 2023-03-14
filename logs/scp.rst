@@ -58,7 +58,7 @@ Splunk Cloud Platform
       
       - Removes your local machine's IP from the allow list
       
-4. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance. The script returns 3 certificates. Copy only the first certificate. The following is an example of a certificate. Be sure to include ``-----BEGIN CERTIFICATE-----`` and ``-----END CERTIFICATE-----``.
+4. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance. The script returns 3 certificates. Copy only the first certificate. Be sure to include ``-----BEGIN CERTIFICATE-----`` and ``-----END CERTIFICATE-----``. The following is an example of a certificate. 
 
    .. code-block:: bash
 
