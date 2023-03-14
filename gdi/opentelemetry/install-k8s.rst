@@ -17,7 +17,7 @@ Install the chart using one of these methods:
 
 .. _helm-chart:
 
-Install the Collector with Helm chart
+Install the Collector with the Helm chart
 ==============================================
 
 Use the Helm chart to do the following:
@@ -110,33 +110,10 @@ Run the following commands to deploy the Helm chart:
 Configure other parameters
 --------------------------------
 
-Apply the following to configure your distribution:
+You can configure the following:
 
-.. code-block:: bash
-
-   # aks deployment
-   --set distribution=aks,cloudProvider=azure 
-
-   # eks deployment
-   --set distribution=eks,cloudProvider=aws 
-
-   # eks/fargate deployment (with recommended gateway)
-   --set distribution=eks/fargate,gateway.enabled=true,cloudProvider=aws 
-
-   # gke deployment
-   --set distribution=gke,cloudProvider=gcp 
-
-   # gke/autopilot deployment
-   --set distribution=gke/autopilot,cloudProvider=gcp 
-
-   # openshift deployment (openshift can run on multiple cloud providers, so cloudProvider is excluded here)
-   --set distribution=openshift 
-
-To set your cloud provider and configure ``cloud.platform`` for the resource detection processor, use: 
-
-.. code-block:: bash
-
-   --set cloudProvider={azure|gcp|eks|openshift} 
+* :ref:`otel-kubernetes-config-distro``
+* :ref:`otel-kubernetes-config-environment`
 
 For example:
 
@@ -145,11 +122,9 @@ For example:
    helm repo add splunk-otel-collector-chart https://signalfx.github.io/splunk-otel-collector-chart
    helm install my-splunk-otel-collector --set="splunkRealm=us0,splunkAccessToken=xxxxxx,clusterName=my-cluster" --set=distribution={value},cloudProvider={value} splunk-otel-collector-chart/splunk-otel-collector   
 
-Additional configuration resources
-------------------------------------------
-
-* Read more about :ref:`otel-kubernetes-config`.
+* Read more about :ref:`otel-kubernetes-config` and also :ref:`the advanced Kubernetes config <otel-kubernetes-config-advanced>`. 
 * See :new-page:`examples of Helm chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for additional chart installation examples or upgrade commands to change the default behavior.   
+* For logs, see :ref:`otel-kubernetes-config-logs`.
 
 Set Helm using a YAML file
 --------------------------------
