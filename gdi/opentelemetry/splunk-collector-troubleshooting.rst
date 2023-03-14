@@ -224,6 +224,8 @@ If using Windows, run the following command to check if the source is generating
 
   Get-Content myTestLog.log 
 
+.. _fluentd-collector-troubleshooting:
+
 Fluentd isn't configured correctly
 ----------------------------------------
 
