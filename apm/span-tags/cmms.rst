@@ -85,8 +85,8 @@ Follow these steps to create a Monitoring MetricSet.
 
 2. On the :guilabel:`APM MetricSets` page, you have two options:
     
-  * If you have already indexed the span tag or process you are interested in, it appears in the list of MetricSets and is already generating Troubleshooting MetricSets. Select the edit icon for that span tag to open the :guilabel:`Edit MetricSet` dialog box and add a Monitoring MetricSet to your configuration using the following steps. 
-  * If you haven't already indexed the tag or process, f2. On the :guilabel:`APM MetricSets` page, select :strong:`New MetricSet`. Enter the :strong:`Name` of a span tag or process you want to index. Then continue with the following steps.
+   * If you have already indexed the span tag or process you are interested in, it appears in the list of MetricSets and is already generating Troubleshooting MetricSets. Select the edit icon for that span tag to open the :guilabel:`Edit MetricSet` dialog box and add a Monitoring MetricSet to your configuration using the following steps. 
+   * If you haven't already indexed the tag or process, f2. On the :guilabel:`APM MetricSets` page, select :strong:`New MetricSet`. Enter the :strong:`Name` of a span tag or process you want to index. Then continue with the following steps.
 
 3. The :strong:`Scope` determines how APM associates the span tag or process with services in a trace. Enter the service or services for which you want to create a Monitoring MetricSet in the :guilabel:`Service` field. You can only create custom dimensionalized MMS for service-level indexed span tags. You can't create custom MMS for globally indexed span tags. 
 

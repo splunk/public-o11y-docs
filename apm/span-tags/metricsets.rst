@@ -9,16 +9,16 @@ Learn about MetricSets in APM
 .. meta::
    :description: Learn about MetricSets in Splunk Observability Cloud. MetricSets are categories of metrics about traces and spans in Splunk APM.
 
-MetricSets are categories of key indicators, such as request rate, error rate and durations, calculated based on your traces and spans in Splunk APM. There are two categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring.
+MetricSets are key indicators, such as request rate, error rate and durations, calculated based on your traces and spans in Splunk APM. There are two categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring.
 
-MetricSets are specific to Splunk APM, but Monitoring MetricSets are similar to the metric time-series used in Splunk Infrastructure Monitoring to populate charts and generate alerts. See the following :ref:`monitoring-metricsets` section for more information.
+MetricSets are specific to Splunk APM, but Monitoring MetricSets are similar to the metric time series used in Splunk Infrastructure Monitoring to populate charts and generate alerts. See the following :ref:`monitoring-metricsets` section for more information.
 
 .. _troubleshooting-metricsets:
 
 Troubleshooting MetricSets
 ==========================
 
-Troubleshooting MetricSets (TMS) are metric time series used for high-cardinality troubleshooting of identities in APM and for historical comparison among spans and workflows. Splunk APM can generate Troubleshooting MetricSets based on indexed span tags and processes. 
+Troubleshooting MetricSets (TMS) are metric time series used for troubleshooting high-cardinality identities in APM. You can also use TMS to make historical comparisons among spans and workflows. Splunk APM can index span tags and processes to generate TMS.
 
 There are several span tags indexed by default in APM. See :ref:`apm-default-span-tags`. You can also create custom TMS by indexing specific span tags and processes. To learn how to index span tags and processes to generate new Troubleshooting MetricSets, see :ref:`apm-index-span-tags`.
 
@@ -41,7 +41,7 @@ The measurement precision of Troubleshooting MetricSets is 10 seconds. Splunk AP
 Where and when can I use TMS?
 --------------------------------
 
-TMS appear in the Troubleshooting page, which contains the service map, and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process.
+TMS appear in the Troubleshooting page, which contains the service map, and in Tag Spotlight. You can use TMS to filter the service map and create breakdowns across the values of a given indexed span tag or process. You can also use TMS to monitor and alert on the performance of your services.
 
 Observability Cloud retains TMS for the same amount of time as raw traces. By default, the retention period is 8 days.
 
@@ -52,7 +52,7 @@ For more details about Troubleshooting MetricSets, see :ref:`apm-index-tag-tips`
 Monitoring MetricSets
 =====================
 
-Monitoring MetricSets (MMS) are a collection of :ref:`metric time series (MTS) <metric-time-series>` used in Splunk Infrastructure Monitoring. Use MMS to monitor and alert on the performance of your services in real time. You can also alert on TMS.  MMS power the real-time APM Landing Page and the dashboard view. MMS are also are the metrics that detectors monitor and use to generate alerts. Observability Cloud stores MMS for 13 months by default.
+Monitoring MetricSets (MMS) are a collection of :ref:`metric time series (MTS) <metric-time-series>` used in Splunk Infrastructure Monitoring. MMS power the real-time APM landing page and the dashboard view. MMS are also the metrics that detectors monitor and use to generate alerts. Observability Cloud stores MMS for 13 months by default.
 
 Each MMS includes six metrics. For each metric there is one MTS with responses ``sf_error: true`` or ``sf_error:false``.
 
@@ -80,7 +80,7 @@ Comparing Monitoring MetricSets and Troubleshooting MetricSets
 
 Because endpoint-level and service-level MMS include a subset of the metrics that TMS include, you might notice that metric values for a service are slightly different depending on the context in Splunk APM. This is because MMS are the basis of the dashboard view, and MMS can only have a ``kind`` of ``SERVER`` or ``CONSUMER``. In contrast, TMS are the basis of the Troubleshooting and Tag Spotlight views, and TMS aren't restricted to specific metrics. For example, values for ``checkout`` service metrics displayed in the host dashboard might be different from the metrics displayed in the Troubleshooting view because there are multiple span ``kind`` values associated with this service that the MMS that power the dashboard don't monitor.
 
-To restrict your TMS to endpoint-only data so that you can compare MMS and TMS directly, filter to a specific endpoint or break down the service map by endpoint.
+To restrict your TMS to endpoint-only data, so that you can compare MMS and TMS directly, filter to a specific endpoint or break down the service map by endpoint.
 
 .. _mms-dimensions: 
 
