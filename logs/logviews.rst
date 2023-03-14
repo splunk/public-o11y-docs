@@ -4,9 +4,6 @@
 Add logs data to Splunk Observability Cloud dashboards
 *****************************************************************************
 
-.. meta created 2022-07-12
-.. meta DOCS-3730
-
 .. meta::
   :description: Add logs data to Observability Cloud dashboards without turning your logs into metrics first. Align log views, log timeline charts, and metrics charts on one dashboard.
 

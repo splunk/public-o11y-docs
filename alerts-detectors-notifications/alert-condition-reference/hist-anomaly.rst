@@ -4,7 +4,7 @@
 Historical Anomaly
 =============================================================================
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Historical Anomaly condition alerts when a signal is different from the same periods in the past (for cyclical or seasonal data)

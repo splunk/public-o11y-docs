@@ -4,8 +4,6 @@
 Key concepts in Splunk APM
 *********************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about key concepts in Splunk APM.
 
@@ -108,7 +106,7 @@ Service map
 -------------
 A visualization of your instrumented and inferred services and their relationships. The service map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-service-map` to learn more about using the service map in APM, or see :ref:`service-map` for a dedicated use case. 
 
-.. candidate location for screenshot or diagram
+
 
 .. _identity-concept:
 
@@ -170,7 +168,7 @@ To learn more, see:
 * :ref:`apm-trace-view` for an overview of Trace View
 * :ref:`span-search` to learn more about span search
 
-.. candidate location for a diagram or screenshot
+
 
 .. _business-workflow-concept:
 
@@ -226,8 +224,6 @@ MetricSets are the central type of metric data that power Splunk APM.
 A MetricSet is a set of metric time series capturing the values of key indicators over time, such as request rate, error rate and durations, calculated based on your traces and spans in Splunk APM. Generate MetricSets by indexing span tags of interest. 
 
 There are two categories of MetricSet in APM: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring. For more information, see :ref:`apm-metricsets`.
-
-.. Add diagram
 
 .. _tms-concept:
 

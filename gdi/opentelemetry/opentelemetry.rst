@@ -51,3 +51,4 @@ For more information:
 
 - See :ref:`otel-components` for a description of the components the Collector supports.
 - Use :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
+- Read :ref:`otel-collector-use-case`.
