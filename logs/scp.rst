@@ -19,21 +19,34 @@ Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, 
 
 Prerequisites
 ==============================================================
-Ensure that token authentication is enabled in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
+Ensure that token authentication is enabled in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
 
 Set up Log Observer Connect
 ==============================================================
 To set up Log Observer Connect for Splunk Cloud Platform without help from the Support team, follow these steps:
 
+Observability Cloud
+----------------------------------------------------------------
 1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Observability Cloud. Contact your organization's Observability Cloud administrator to perform this integration.
 
-2. Select :guilabel:`Splunk Cloud Platform`.
+2. Select :guilabel:`Splunk Cloud Platform`. 
 
-3. Follow the instructions in the guided setup for the integration to do the following in Splunk Cloud Platform:
+Splunk Cloud Platform
+----------------------------------------------------------------
+3. In Splunk Cloud Platform, follow the instructions in the guided setup for the integration to do the following:
 
    a. Configure a service account in Splunk Cloud Platform. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect.
 
+      .. image:: /_images/logs/setupLOC1.png
+         :width: 100%
+         :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
+      
+
    b. Configure users in the Splunk Cloud Platform.
+   
+      .. image:: /_images/logs/setupLOC2.png
+         :width: 100%
+         :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
 
    c. Attach the role and the user you created in the integration guided setup.
 
