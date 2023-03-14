@@ -286,8 +286,8 @@
 
    * - :ref:`Istio <get-started-istio>`
      - :strong:`X`
-     -
-     -
+     - :strong:`X`
+     - :strong:`X`
 
    * - :ref:`Jaeger gRPC <jaeger-grpc>`
      - :strong:`X`
