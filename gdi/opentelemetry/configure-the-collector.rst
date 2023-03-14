@@ -15,6 +15,8 @@ Configure the Collector
     configure-the-collector-ootb.rst
     linux-config.rst
     kubernetes-config.rst
+    kubernetes-config-advanced.rst
+    kubernetes-config-logs.rst
     windows-config.rst
     other-configuration-sources.rst
     data-processing.rst
