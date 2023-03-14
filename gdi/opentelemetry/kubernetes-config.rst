@@ -7,48 +7,11 @@ Configure Helm for Kubernetes
 .. meta::
       :description: Optional configurations for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
-See the available settings of the Helm chart for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
+After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, these are the available settings you can configure. Additionally, see also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` such as :ref:`configuring Prometheus <otel-kubernetes-config-resources>`.
 
-See also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` such as :ref:`configuring Prometheus <otel-kubernetes-config-resources>`.
-
-.. _otel-kubernetes-config-helm:
-
-Configure the Helm chart
-===============================
-
-The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. Review values.yaml to understand how to configure this chart.
+The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. Review ``values.yaml`` to understand how to configure this chart.
 
 The Helm chart can also be configured to support different use cases, such as trace sampling and sending data through a proxy server. See :new-page:`Examples of chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for more information.
-
-Configure the following required values to send data to Splunk Enterprise or Splunk Cloud:
-
-.. code-block:: yaml
-
-   splunkPlatform:
-     # Required for Splunk Enterprise or Splunk Cloud.
-     # Add a URL for the Splunk instance to send data to.
-     # For example, "http://X.X.X.X:8088/services/collector".
-     # Setting this parameter activates Splunk Platform as a destination.
-      endpoint: ""
-      # Required for Splunk Enterprise or Splunk Cloud if `endpoint` is specified.
-      token: ""
-      # The Splunk HTTP Event Collector (HEC) token.
-
-Configure the following required values to send data to Splunk Observability Cloud:
-
-.. code-block:: yaml
-
-   splunkObservability:
-   # Required for Observability Cloud.
-   # Add the Observability Cloud realm to send telemetry data to.
-   # Setting this parameter activates Observability Cloud as a destination.
-     accessToken: xxxxxx
-     # The Observability Cloud org access token.
-     realm: us0
-     # Required for Observability Cloud if `realm` is specified.
-   clusterName: my-k8s-cluster
-
-See :ref:`admin-org-tokens` for information on creating and managing your access token.
 
 .. _otel-kubernetes-config-distro:
 
@@ -64,15 +27,37 @@ If applicable, use the ``distribution`` parameter to provide information about t
 * ``gke/autopilot`` for Google GKE or Autopilot mode
 * ``openshift`` for Red Hat OpenShift
 
+Apply the following to configure your distribution:
+
+.. code-block:: bash
+
+  # aks deployment
+  --set distribution=aks,cloudProvider=azure 
+
+  # eks deployment
+  --set distribution=eks,cloudProvider=aws 
+
+  # eks/fargate deployment (with recommended gateway)
+  --set distribution=eks/fargate,gateway.enabled=true,cloudProvider=aws 
+
+  # gke deployment
+  --set distribution=gke,cloudProvider=gcp 
+
+  # gke/autopilot deployment
+  --set distribution=gke/autopilot,cloudProvider=gcp 
+
+  # openshift deployment (openshift can run on multiple cloud providers, so cloudProvider is excluded here)
+  --set distribution=openshift   
+
 For example:
 
 .. code-block:: yaml
 
-   splunkObservability:
-     accessToken: xxxxxx
-     realm: us0
-   clusterName: my-k8s-cluster
-   distribution: gke
+  splunkObservability:
+    accessToken: xxxxxx
+    realm: us0
+  clusterName: my-k8s-cluster
+  distribution: gke   
 
 .. _otel-kubernetes-config-environment:
 
@@ -83,31 +68,37 @@ If applicable, use the ``environment`` parameter to specify an additional ``depl
 
 .. code-block:: yaml
 
-   splunkObservability:
-     accessToken: xxxxxx
-     realm: us0
-   environment: production
+  splunkObservability:
+    accessToken: xxxxxx
+    realm: us0
+  environment: production
 
 .. _otel-kubernetes-config-cloud:
 
 Configure a cloud provider
 =================================
 
-If applicable, use the ``cloudProvider`` parameter to provide information about the cloud provider. The following options are supported:
+If applicable, use the ``cloudProvider`` parameter to provide information about your cloud provider. The following options are supported:
 
 * ``aws`` for Amazon Web Services
 * ``gcp`` for Google Cloud Platform
 * ``azure`` for Microsoft Azure
 
+To set your cloud provider and configure ``cloud.platform`` for the resource detection processor, use: 
+
+.. code-block:: bash
+
+  --set cloudProvider={azure|gcp|eks|openshift} 
+
 For example:
 
 .. code-block:: yaml
 
-   splunkObservability:
-     accessToken: xxxxxx
-     realm: us0
-   clusterName: my-k8s-cluster
-   cloudProvider: aws
+  splunkObservability:
+    accessToken: xxxxxx
+    realm: us0
+  clusterName: my-k8s-cluster
+  cloudProvider: aws
 
 Deactivate particular types of telemetry
 ============================================
@@ -216,7 +207,7 @@ Override the underlying OpenTelemetry agent configuration
 
 You can override the underlying OpenTelemetry agent configuration to use your own OpenTelemetry Agent configuration. To do this, include a custom configuration in the ``agent.config`` parameter in the values.yaml configuration. This custom configuration is merged into the default agent configuration. Parts of the configuration (for example, ``service``, ``pipelines``, ``logs``, and ``processors`` need to be fully re-defined after the files are merged.
 
-The following example shows a values.yaml file with custom gateway values:
+The following example shows a ``values.yaml`` file with custom gateway values:
 
 .. code-block:: yaml
 
