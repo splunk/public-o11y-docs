@@ -44,7 +44,7 @@ You must have systemd installed to use this script. The installer script deploys
 
 * The Splunk Distribution of OpenTelemetry Collector for Linux
 * :new-page:`SignalFx Smart Agent and collectd bundle <https://github.com/signalfx/signalfx-agent/releases>`
-* Fluentd (using the td-agent). See the :new-page:`Fluentd FAQs <https://www.fluentd.org/faqs>` for more information.
+* Fluentd (using the td-agent).  See :ref:`fluentd-receiver` for more information.
 
 Do the following to install the package using the installer script:
 
@@ -108,6 +108,8 @@ To skip these steps and use pre-configured repos on the target system that provi
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- SPLUNK_ACCESS_TOKEN
+
+.. _fluentd-manual-config-linux:
 
 Configure Fluentd
 ---------------------------------------

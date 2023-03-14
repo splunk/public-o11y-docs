@@ -7,7 +7,7 @@ Overview of the Splunk Distribution of OpenTelemetry Collector
 .. meta::
    :description: Resources for using the Splunk Distribution of OpenTelemetry Collector: Architecture, Components, Monitoring, Security, Troubleshooting.
 
-This page provides a list of resources for using the Splunk Distribution of OpenTelemetry Collector. 
+This page provides an overview of the resources available for using the Splunk Distribution of OpenTelemetry Collector. To learn more, read :ref:`otel-collector-use-case`.
 
 .. note::
 

@@ -9,9 +9,9 @@ Use case: Monitor infrastructure and apps in a cloud environment using the Splun
 
 Kai is the lead site reliability engineer in a large fintech company, PonyBank. Their task is to monitor their AWS infrastructure, which consists of several hundred containers running Java applications on Amazon Elastic Kubernetes Service (EKS). Kai also wants to instrument tens of Linux and Windows Elastic Compute Cloud (EC2) instances managed by IT. Kai's primary goal is to extract reliability and performance metrics and logs from each asset, as well as instrumenting the Java application to monitor its performance using Splunk APM.
 
-PonyBank uses Splunk Observability Cloud, which brings data in through the open-source Splunk distribution of the OpenTelemetry Collector, an agent that can collect and export data from multiple sources. The Collector can also forward logs and traces to enable full software observability.
+PonyBank uses Splunk Observability Cloud, which brings data in through the open-source Splunk Distribution of the OpenTelemetry Collector, an agent that can collect and export data from multiple sources. The Collector can also forward logs and traces to enable full software observability.
 
-To instrument their infrastructure using the Splunk OTel Collector, Kai takes the following steps:
+To instrument their infrastructure using the Collector, Kai takes the following steps:
 
 #. :ref:`set-up-eks-monitoring`
 #. :ref:`instrument-ec2-instances`
@@ -108,6 +108,7 @@ Kai used Splunk OTel Collector to instrument PonyBank's entire cloud infrastruct
 Learn more
 =================
 
+- Learn about sending data to Observability Cloud in :ref:`get-started-get-data-in`.
 - To collect infrastructure metrics and logs from multiple platforms, see :ref:`otel-intro`.
 - To instrument Java services for Splunk APM, see :ref:`get-started-java`.
 - For more information on Related Content in Observability Cloud, see :ref:`get-started-enablerelatedcontent`.
