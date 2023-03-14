@@ -9,6 +9,10 @@ Configure Helm for Kubernetes
 
 See the available settings of the Helm chart for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
+See also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` such as :ref:`configuring Prometheus <otel-kubernetes-config-resources>`.
+
+.. _otel-kubernetes-config-helm:
+
 Configure the Helm chart
 ===============================
 
@@ -46,24 +50,7 @@ Configure the following required values to send data to Splunk Observability Clo
 
 See :ref:`admin-org-tokens` for information on creating and managing your access token.
 
-Configure a cloud provider
-=================================
-
-If applicable, use the ``cloudProvider`` parameter to provide information about the cloud provider. The following options are supported:
-
-* ``aws`` for Amazon Web Services
-* ``gcp`` for Google Cloud Platform
-* ``azure`` for Microsoft Azure
-
-For example:
-
-.. code-block:: yaml
-
-   splunkObservability:
-     accessToken: xxxxxx
-     realm: us0
-   clusterName: my-k8s-cluster
-   cloudProvider: aws
+.. _otel-kubernetes-config-distro:
 
 Configure the Kubernetes distribution
 ============================================
@@ -87,6 +74,8 @@ For example:
    clusterName: my-k8s-cluster
    distribution: gke
 
+.. _otel-kubernetes-config-environment:
+
 Configure the deployment environment
 ===========================================
 
@@ -98,6 +87,27 @@ If applicable, use the ``environment`` parameter to specify an additional ``depl
      accessToken: xxxxxx
      realm: us0
    environment: production
+
+.. _otel-kubernetes-config-cloud:
+
+Configure a cloud provider
+=================================
+
+If applicable, use the ``cloudProvider`` parameter to provide information about the cloud provider. The following options are supported:
+
+* ``aws`` for Amazon Web Services
+* ``gcp`` for Google Cloud Platform
+* ``azure`` for Microsoft Azure
+
+For example:
+
+.. code-block:: yaml
+
+   splunkObservability:
+     accessToken: xxxxxx
+     realm: us0
+   clusterName: my-k8s-cluster
+   cloudProvider: aws
 
 Deactivate particular types of telemetry
 ============================================

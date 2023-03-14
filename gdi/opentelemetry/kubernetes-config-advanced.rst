@@ -16,7 +16,9 @@ Run the container in non-root user mode
 Collecting logs often requires reading log files that are owned by the root user. By default, the container runs with ``securityContext.runAsUser = 0``, which gives the root user permission to read those files. To run the container in non-root user mode, set ``.agent.securityContext`` to ``20000`` to cause the container to run the required file system operations as UID and GID ``20000`` (this can be any other UID and GUI).
 
 .. note::
-   Setting the ``containerRuntime:`` parameter to ``cri-o`` did not work during internal testing for logs collection.
+  Setting the ``containerRuntime:`` parameter to ``cri-o`` did not work during internal testing for logs collection.
+
+.. _otel-kubernetes-config-resources:
 
 Add additional telemetry sources
 ===========================================
@@ -35,13 +37,13 @@ For example, use the following configuration to activate automatic detection of 
 
 .. code-block:: yaml
 
-   splunkObservability:
-     accessToken: xxxxxx
-     realm: us0
-   clusterName: my-k8s-cluster
-   autodetect:
-     istio: true
-     prometheus: true
+  splunkObservability:
+    accessToken: xxxxxx
+    realm: us0
+  clusterName: my-k8s-cluster
+  autodetect:
+    istio: true
+    prometheus: true
 
 Override a control plane configuration
 ==============================================================
@@ -82,7 +84,7 @@ There is a known limitation when using the Kubernetes proxy control plane receiv
 #. Set ``kubeProxy.metricsBindAddress: 0.0.0.0`` in the kops cluster specification.
 #. Run ``kops update cluster {cluster_name}`` and ``kops rolling-update cluster {cluster_name}`` to deploy the change.
 
-Using custom configurations for nonstandard control plane components
+Using custom configurations for non-standard control plane components
 -----------------------------------------------------------------------------
 
 You can override the default configuration values used to connect to the control plane. If your control plane uses nonstandard ports or custom TLS settings, you need to override the default configurations. The following example shows how to connect to a nonstandard API server that uses port 3443 for metrics and custom TLS certs stored in the /etc/myapiserver/ directory.
