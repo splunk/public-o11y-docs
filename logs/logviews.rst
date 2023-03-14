@@ -17,7 +17,7 @@ There are two ways to visualize logs data in dashboards:
 
 Both types of logs charts automatically update to dashboard filters. Filter and aggregate logs in Log Observer before creating a log view or log timeline chart.
 
-.. note:: Log Observer Connect customers can only create logs charts in dashboards if each Log Observer Connect connection name is unique.
+.. note:: Log Observer Connect customers can only create logs charts in dashboards if each Log Observer Connect connection name is unique. If you create a log timeline chart that does not function properly, reach out to your Log Observer Connect administrator to see if each Log Observer Connect connection name is unique.
 
 .. _create-logviews-chart:
 
@@ -64,7 +64,9 @@ You can take six actions on your logs chart from its dashboard. Select the :stro
 
 * Delete
 
-You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align log views with metrics charts on the same dashboard <field-aliasing>` to learn more. For more information on the actions you can take from the :strong:`Chart actions` menu, see :ref:`work-with-charts`.
+You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align log views with metrics charts on the same dashboard <field-aliasing>` to learn more. 
+
+For more information on the actions you can take from the :strong:`Chart actions` menu, see :ref:`work-with-charts`.
 
 .. _field-aliasing:
 
