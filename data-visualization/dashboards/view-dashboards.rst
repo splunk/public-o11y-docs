@@ -102,6 +102,10 @@ From the :strong:`Chart actions` menu, you can perform the following tasks:
 
 * Select :strong:`Download chart as image` to download your logs chart as a PNG file.
 
+* Select :strong:`Export Chart as CSV` to export data from a chart to a CSV file.
+
+* Select :strong:`Export Events as JSON` to export the contents of an event feed chart to a JSON file. For more information, see :ref:`dashboard-event-feed`.
+
 * Select :strong:`Troubleshoot from this Time Window (APM)` to explore related data in Splunk APM. (This option only exists if APM contains data related to data in the logs chart.)
 
 * Select :strong:`Troubleshoot from this Time Window (RUM)` to explore related data in Splunk RUM. (This option only exists if RUM contains data related to data in the logs chart.)
