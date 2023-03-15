@@ -9,6 +9,11 @@ Instrument a PHP application for Splunk Observability Cloud
 
 The SignalFx Tracing Library for PHP automatically instruments PHP applications.
 
+To get started, use the guided setup or follow the instructions manually.
+
+Generate customized instructions using the guided setup
+====================================================================
+
 To generate all the basic installation commands for your environment and application, use the PHP guided setup. To access the PHP guided setup, follow these steps:
 
 #. Log in to Observability Cloud.

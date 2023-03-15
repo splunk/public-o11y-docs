@@ -9,6 +9,11 @@ Instrument a Python application for Splunk Observability Cloud
 
 The Python agent from the Splunk Distribution of OpenTelemetry Python can automatically instrument your Python application by dynamically patching supported libraries.
 
+To get started, use the guided setup or follow the instructions manually.
+
+Generate customized instructions using the guided setup
+====================================================================
+
 To generate all the basic installation commands for your environment and application, use the Python guided setup. To access the Python guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
