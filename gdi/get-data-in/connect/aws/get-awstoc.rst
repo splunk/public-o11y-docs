@@ -61,9 +61,7 @@ To connect AWS to Observability Cloud you need:
 
 Observability Cloud supports the following regions:
 
-.. tabs::
-
-  .. tab:: Regular
+* Regular
 
     * ``ap-northeast-1``: Asia Pacific (Tokyo)
     * ``ap-northeast-2``: Asia Pacific (Seoul)
@@ -83,7 +81,7 @@ Observability Cloud supports the following regions:
     * ``us-west-1``: US West (N. California)
     * ``us-west-2``: US West (Oregon)
 
-  .. tab:: Optional
+* Optional
 
     * ``af-south-1``: Africa (Cape Town)
     * ``ap-east-1``: Asia Pacific (Hong Kong)
@@ -96,15 +94,17 @@ Observability Cloud supports the following regions:
     * ``me-central-1``: Middle East (UAE)
     * ``me-south-1``: Middle East (Bahrain)
 
-  .. tab:: Gov
+* Gov
 
     * ``us-gov-east-1``: AWS GovCloud (US-East)
     * ``us-gov-west-1``: AWS GovCloud (US-West)  
 
-  .. tab:: China
+* China
 
     * ``cn-north-1``: China (Beijing)
     * ``cn-northwest-1``: China (Ningxia)    
+
+Notes: 
 
 * Regular and optional regions are enabled by default in the :ref:`UI guided setup <aws-wizardconfig>`.
 * If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Observability Cloud will enable regular and optional regions.
