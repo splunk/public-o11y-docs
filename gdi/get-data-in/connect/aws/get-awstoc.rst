@@ -104,7 +104,10 @@ Observability Cloud supports the following regions:
   .. tab:: China
 
     * ``cn-north-1``: China (Beijing)
-    * ``cn-northwest-1``: China (Ningxia)      
+    * ``cn-northwest-1``: China (Ningxia)    
+
+* Regular and optional regions are enabled by default in the :ref:`UI guided setup <aws-wizardconfig>`.
+* If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Observability Cloud will enable regular and optional regions.
 
 .. _aws-authentication:
 
