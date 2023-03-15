@@ -9,11 +9,6 @@ Instrument a Ruby application for Splunk Observability Cloud
 
 The Ruby agent from the Splunk Distribution of OpenTelemetry Ruby can automatically instrument your Ruby application by dynamically patching supported libraries.
 
-To get started, use the guided setup or follow the instructions manually.
-
-Generate customized instructions using the guided setup
-====================================================================
-
 To generate all the basic installation commands for your environment and application, use the Ruby guided setup. To access the Ruby guided setup:
 
 #. Log in to Observability Cloud.

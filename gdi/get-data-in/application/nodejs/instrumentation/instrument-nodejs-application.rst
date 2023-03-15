@@ -9,11 +9,6 @@ Instrument a Node application for Splunk Observability Cloud
 
 The Splunk Distribution of OpenTelemetry JS can automatically instrument your Node application and many of the popular node.js libraries your application uses.
 
-To get started, use the guided setup or follow the instructions manually.
-
-Generate customized instructions using the guided setup
-====================================================================
-
 To generate all the basic installation commands for your environment and application, use the Node.js guided setup. To access the Node.js guided setup, follow these steps:
 
 #. Log in to Observability Cloud.

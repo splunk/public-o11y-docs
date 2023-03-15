@@ -7,10 +7,7 @@ Instrument a Java application for Splunk Observability Cloud
 .. meta::
    :description: Start sending metrics and log telemetry to Splunk Observability Cloud using the Splunk OpenTelemetry Java agent to automatically instrument your Java application or service. Follow these steps to get started. 
 
-The Java agent from the Splunk Distribution of OpenTelemetry Java can automatically instrument your Java application by injecting instrumentation to Java classes. To get started, use the guided setup or follow the instructions manually.
-
-Generate customized instructions using the guided setup
-====================================================================
+The Java agent from the Splunk Distribution of OpenTelemetry Java can automatically instrument your Java application by injecting instrumentation to Java classes.
 
 To generate all the basic installation commands for your environment and application, use the Java guided setup. To access the Java guided setup, follow these steps:
 
