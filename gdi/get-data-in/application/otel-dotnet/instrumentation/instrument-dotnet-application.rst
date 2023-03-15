@@ -19,11 +19,13 @@ Generate customized instructions using the guided setup
 To generate all the basic installation commands for your environment and application, use the .NET OpenTelemetry guided setup. To access the .NET OpenTelemetry guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`. 
-#. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
-#. In the integration filter menu, select :guilabel:`By Product`.
-#. Select the :guilabel:`APM` product.
-#. Select the :guilabel:`.NET OpenTelemetry` tile to open the .NET OpenTelemetry guided setup.
+#. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
+   #. In the integration filter menu, select :guilabel:`By Product`.
+   #. Select the :guilabel:`APM` product.
+   #. Select the :guilabel:`.NET (OpenTelemetry)` tile to open the .NET OpenTelemetry guided setup.
 
 .. _install-dotnet-otel-instrumentation:
 
