@@ -11,6 +11,11 @@ The Splunk Distribution of OpenTelemetry .NET automatically instruments .NET app
 
 .. caution:: This distribution is currently in beta. Don't use it in production environments. Some features might not be supported or might have constrained capabilities. Support is provided on a best-effort basis.
 
+To get started, use the guided setup or follow the instructions manually.
+
+Generate customized instructions using the guided setup
+====================================================================
+
 To generate all the basic installation commands for your environment and application, use the .NET OpenTelemetry guided setup. To access the .NET OpenTelemetry guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
