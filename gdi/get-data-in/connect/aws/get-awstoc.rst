@@ -20,7 +20,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   Troubleshoot logs <aws-ts-logs>
   GetMetricStatistics API deprecation notice <aws-api-notice>
 
-To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to AWS. Follow these steps:
+To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to Amazon Web Services (AWS). Follow these steps:
 
 1. Verify the prerequisites.
 2. Plan your integration.
@@ -31,7 +31,7 @@ To leverage the benefits of data monitoring across your infrastructure, connect 
 
 You can also set the following configuration options to complete the integration:
 
-- Select Amazon Web Services (AWS) regions to collect data from.
+- Select the :ref:`AWS regions <aws-regions>` to collect data from.
 - Activate the ingestion of metrics through polling or streaming.
 - Decide whether to process information about application logs.
 
