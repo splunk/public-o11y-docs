@@ -71,7 +71,7 @@ By default, Splunk Observability Cloud will bring in data from all supported AWS
   - Amazon Cost and Usage Metrics
   - CloudWatch Metrics polling (you can deactivate it altogether, or deactivate the polling but activate AWS Metric Streams instead)
   - CloudWatch Logs
-  - AWS regions to fetch data from
+  - :ref:`AWS regions <aws-regions>` to fetch data from
   - AWS services to fetch data from
 
 - In the :strong:`Data Management` menu in Observability Cloud, edit any integration to limit data import.
