@@ -106,8 +106,8 @@ Observability Cloud supports the following regions:
 
 Notes: 
 
-* Regular and optional regions are enabled by default in the :ref:`UI guided setup <aws-wizardconfig>`.
-* If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Observability Cloud will enable all regular and optional regions. If you want to enable a specific optional region, you need to do it before adding it to the integration.
+* If you're using the :ref:`UI guided setup <aws-wizardconfig>` to create the integration, you'll be prompted to select the regions you're going to work in. Make sure you've enabled the optional regions you'll need in your AWS console first. Regular regions are enabled by default.
+* If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Observability Cloud will enable all regular regions. If you want to enable a specific optional region, you need to do it before adding it to the integration.
 
 .. _aws-authentication:
 
