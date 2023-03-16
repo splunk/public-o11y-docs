@@ -181,6 +181,14 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
          <add key="SIGNALFX_SERVICE_NAME" value="service-name" />
          <add key="SIGNALFX_ENV" value="environment-name" />
 
+      After applying the changes to the ``web.config`` file, restart IIS by running the following command:
+
+      .. code-block:: powershell
+
+         Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+      In some cases, you might have to restart the machine.
+
    .. tab:: ASP.NET Core
 
       Add the following settings inside the ``<aspNetCore>`` block of your ``web.config`` file:
@@ -194,15 +202,15 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
             <environmentVariable name="SIGNALFX_ENV" value="environment-name" />
          </environmentVariables>
 
+      After applying the changes to the ``web.config`` file, restart IIS by running the following command:
+
+      .. code-block:: powershell
+
+         Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+      In some cases, you might have to restart the machine.
+
       .. note:: The ASP.NET Core instrumentation collects and obfuscates query strings by default. See :ref:`dotnet-instrumentation-query-strings` for more information.
-      
-After applying the changes to the ``web.config`` file, restart IIS by running the following command:
-
-.. code-block:: powershell
-
-   Start-Process "iisreset.exe" -NoNewWindow -Wait
-
-In some cases, you might have to restart the machine.
 
 .. note:: By default, the installer activates IIS instrumentation for .NET Framework by setting the ``Environment`` registry key for W3SVC and WAS services located in the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services`` folder.
 
