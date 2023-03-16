@@ -4,7 +4,7 @@ Logging exporter
 **************************
 
 .. meta::
-      :description: Use the logging exporter to send traces, metrics, and logs to the console. Read on to learn how to configure the component.
+      :description: Use the logging exporter to write traces, metrics, and logs to the console. Read on to learn how to configure the component.
 
 The logging exporter allows the OpenTelemetry Collector to send traces, metrics, and logs directly to the console. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 

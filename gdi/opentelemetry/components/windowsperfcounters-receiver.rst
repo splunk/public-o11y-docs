@@ -145,7 +145,7 @@ The receiver supports the following values through the ``instances`` field:
 Known limitations
 ---------------------------------
 
-Metrics fr the Network Interface object aren't generated when running the Collector inside a container. This is caused by the network interface not being available inside the container. Network Interface metrics are capture for subprocesses.
+Metrics from the Network Interface object aren't generated when running the Collector inside a container. This is caused by the network interface not being available inside the container. Network Interface metrics are captured for subprocesses.
 
 Settings
 ======================
