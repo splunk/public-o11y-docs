@@ -39,7 +39,7 @@ Alex compares the last hour performance to the 24 hours previous
 
 Alex knows there was a release this morning, so they update the time dropdown to -1h and they select -24h for the comparison so that they can compare the last hour to the same time frame yesterday.
 
-Alex notices that the checkout/{cardId} endpoint has a 110% increase in P90 latency compared with yesterday. 
+Alex notices that the checkout/{cardId} endpoint has a 110% increase in P90 latency compared with the same hour yesterday. 
 
 .. _tag-spotlight:
 
@@ -53,4 +53,4 @@ In Tag Spotlight Alex locates the 503 status codes and adds a filter Tag Spotlig
 Summary
 ==========
 
-Alex used Endpoint Performance to monitor endpoints within his monolith architecture. Using the filter, sort, and compare functionality within the Endpoint Performance they were able to quickly isolate an endpoint that had increased latency after a release. 
+Alex used Endpoint Performance to monitor endpoints within his monolith. Using the filter, sort, and compare functionality within the Endpoint Performance they were able to quickly isolate an endpoint that had increased latency after a release. 
