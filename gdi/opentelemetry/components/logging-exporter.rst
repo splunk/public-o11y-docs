@@ -23,7 +23,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the logg
       # ...
       logging:
          # loglevel is deprecated; use verbosity instead
-         # Available leves are "basic", "normal", and "detailed"
+         # Available levels are "basic", "normal", and "detailed"
          verbosity: detailed
 
 To activate the logging exporter, add it to any pipeline you want to diagnose. For example:
