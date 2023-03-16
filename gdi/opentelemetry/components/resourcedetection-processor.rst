@@ -23,6 +23,8 @@ The resource detection processor uses detectors to collect system metadata from 
 
 You can use metadata collected by the resource detection processor to expand or overwrite resource values in the collected telemetry. By default, the processor overrides existing resource metadata. You can also choose to append attributes to existing resources.
 
+.. note:: For information about the Resource processor, see :ref:`resource-processor`.
+
 Get started
 ======================
 

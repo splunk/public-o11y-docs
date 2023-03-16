@@ -16,7 +16,7 @@ The receiver accepts data formatted as JSON HEC events under any path or as end-
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
