@@ -40,7 +40,7 @@ Target attributes are defined through the ``key`` field. The ``value`` field con
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
