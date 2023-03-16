@@ -94,7 +94,7 @@ Observability Cloud supports the following regions:
     * ``me-central-1``: Middle East (UAE)
     * ``me-south-1``: Middle East (Bahrain)
 
-* Gov
+* GovCloud
 
     * ``us-gov-east-1``: AWS GovCloud (US-East)
     * ``us-gov-west-1``: AWS GovCloud (US-West)  
