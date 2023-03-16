@@ -72,7 +72,7 @@ Available verbosity levels are ``basic``, ``normal``, and ``detailed``. The corr
 Sample configurations
 ----------------------
 
-The following example shows a logging exporter with detailed verbosity, which is equivalent to a ``debug`` log level. Initial sampling is two messages logged each second, logging every 500 messages after the initial sample. 
+The following example shows a logging exporter with detailed verbosity, which is equivalent to a ``debug`` log level. Initial sampling is five messages logged each second, logging every 200 messages after the initial sample. 
 
 .. code:: yaml
 
