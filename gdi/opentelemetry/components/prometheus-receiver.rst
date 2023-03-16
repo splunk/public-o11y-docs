@@ -32,7 +32,7 @@ To activate additional Prometheus receivers, add a new ``prometheus`` entry in t
              static_configs:
                - targets: ['0.0.0.0:8888']
 
-To complete the integration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
 
 .. code:: yaml

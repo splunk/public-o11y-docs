@@ -18,7 +18,7 @@ The Windows Performance Counters receiver replaces the SmartAgent monitor type o
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -50,7 +50,7 @@ To activate the Windows Performance Counters receiver add a ``windowsperfcounter
            - name: Committed Bytes
              metric: bytes.committed
 
-To complete the integration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
 
 .. code-block:: yaml

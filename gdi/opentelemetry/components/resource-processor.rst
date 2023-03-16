@@ -7,7 +7,7 @@ Resource processor
 .. meta::
       :description: Use the resource processor to update, add, or delete resource attributes. Read on to learn how to configure the component.
 
-The resource processor is an OpenTelemetry Collector component that can add, update, or delete resource attributes, also known as tags. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The resource processor is an OpenTelemetry Collector component that can add, update, or delete resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 The resource processor is useful when you want to add attributes that your instrumentation doesn't provide, or when you need to override the value of attributes collected by receivers using other attributes. To edit existing attributes, for example to obfuscate sensitive information, use the attributes processor. See :ref:`attributes-processor`.
 
@@ -40,7 +40,7 @@ Target attributes are defined through the ``key`` field. The ``value`` field con
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -73,7 +73,7 @@ configuration file, as shown in the following example:
      - key: redundant-attribute
        action: delete
 
-To complete the integration, include the receiver in any pipeline of the ``service`` section of your
+To complete the configuration, include the receiver in any pipeline of the ``service`` section of your
 configuration file. For example:
 
 .. code:: yaml

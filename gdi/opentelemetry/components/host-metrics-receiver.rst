@@ -26,7 +26,7 @@ Host receiver metrics appear in Infrastructure Monitoring. You can use them to c
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    

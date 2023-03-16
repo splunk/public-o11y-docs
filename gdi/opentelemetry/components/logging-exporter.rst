@@ -23,6 +23,7 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the logg
       # ...
       logging:
          # loglevel is deprecated; use verbosity instead
+         # Available leves are "basic", "normal", and "detailed"
          verbosity: detailed
 
 To activate the logging exporter, add it to any pipeline you want to diagnose. For example:
@@ -67,18 +68,17 @@ Available verbosity levels are ``basic``, ``normal``, and ``detailed``. The corr
    * - ``detailed``
      - ``debug``
          
-.. note:: The debug mode of the logging exporter can increase resource consumption on the host. Deactivate the logging exporter after you've obtained sufficient samples.
+.. note:: The ``detailed`` verbosity level might increase resource consumption on the host. Deactivate the logging exporter after you've obtained sufficient samples.
 
 Sample configurations
 ----------------------
 
-The following example shows a logging exporter with detailed verbosity, which is equivalent to a ``debug`` log level. Initial sampling is two messages logged each second, logging every 500 messages after the initial sample. 
+The following example shows a logging exporter with detailed verbosity, which is equivalent to a ``debug`` log level. Initial sampling is five messages logged each second, logging every 200 messages after the initial sample. 
 
 .. code:: yaml
 
    exporters:
      logging:
-       # Available leves are "basic", "normal", and "detailed"
        verbosity: detailed
        sampling_initial: 5
        sampling_thereafter: 200
