@@ -9,7 +9,7 @@ Learn about MetricSets in APM
 .. meta::
    :description: Learn about MetricSets in Splunk Observability Cloud. MetricSets are categories of metrics about traces and spans in Splunk APM.
 
-MetricSets are key indicators, such as request rate, error rate and durations, calculated based on your traces and spans in Splunk APM. There are two categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring.
+MetricSets are key indicators, such as request rate, error rate, and durations, calculated based on your traces and spans in Splunk APM. There are two categories of MetricSets: Troubleshooting MetricSets (TMS), used for high-cardinality troubleshooting, and Monitoring MetricSets (MMS), used for real-time monitoring.
 
 MetricSets are specific to Splunk APM, but Monitoring MetricSets are similar to the metric time series used in Splunk Infrastructure Monitoring to populate charts and generate alerts. See the following :ref:`monitoring-metricsets` section for more information.
 
@@ -26,7 +26,7 @@ You can also create custom TMS by indexing specific span tags and processes. To 
 
 Available TMS metrics
 -----------------------
-Every Troubleshooting MetricSet generates the following metrics, known as request, error, and duration (RED) metrics. The RED metrics appear when you select a service in the service map. See :ref:`service map` to learn more.
+Every Troubleshooting MetricSet generates the following metrics, known as request, error, and duration (RED) metrics. The RED metrics appear when you select a service in the service map. See :ref:`service-map` to learn more.
 
 - Request rate
 - Error rate
@@ -57,7 +57,7 @@ Monitoring MetricSets (MMS) are a collection of metric time series (MTS) used in
 Available MMS metrics
 -----------------------
 
-Each MMS includes six metrics. For each metric there is one MTS with responses ``sf_error: true`` or ``sf_error:false``.
+Each MMS includes six metrics. For each metric, there is one MTS with responses ``sf_error: true`` or ``sf_error: false``.
 
 * ``count``
 * ``duration.min``
@@ -85,9 +85,9 @@ Observability Cloud stores MMS for 13 months by default.
 Comparing Monitoring MetricSets and Troubleshooting MetricSets
 =================================================================
 
-Because endpoint-level and service-level MMS include a subset of the metrics that TMS include, you might notice that metric values for a service are slightly different depending on the context in Splunk APM. This is because MMS are the basis of the dashboard view, and MMS can only have a ``kind`` of ``SERVER`` or ``CONSUMER``. In contrast, TMS are the basis of the Troubleshooting and Tag Spotlight views, and TMS aren't restricted to specific metrics. For example, values for ``checkout`` service metrics displayed in the host dashboard might be different from the metrics displayed in the Troubleshooting view because there are multiple span ``kind`` values associated with this service that the MMS that power the dashboard don't monitor.
+Because endpoint-level and service-level MMS include a subset of the TMS metrics, you might notice that metric values for a service are different depending on the context in Splunk APM. This is because MMS are the basis of the dashboard view, and MMS can only have a ``kind`` of ``SERVER`` or ``CONSUMER``. In contrast, TMS are the basis of the Troubleshooting and Tag Spotlight views, and TMS aren't restricted to specific metrics. For example, values for ``checkout`` service metrics displayed in the host dashboard might be different from the metrics displayed in the service map because there are multiple span ``kind`` values associated with this service that the MMS that power the dashboard don't monitor.
 
-To restrict your TMS to endpoint-only data, so that you can compare MMS and TMS directly, filter to a specific endpoint or break down the service map by endpoint.
+To restrict your TMS to endpoint-only data, so that you can compare MMS and TMS directly, filter to a specific endpoint, or break down the service map by endpoint.
 
 .. _mms-dimensions: 
 
