@@ -73,7 +73,7 @@ Spans might lack a ``kind`` value, or have a different ``kind`` value, in the fo
 Workflow-level MMS aggregate data from all traces identified as part of a given Business Workflow. 
 
 Comparing Monitoring MetricSets and Troubleshooting MetricSets
----------------------------------------------------------------
+=================================================================
 
 Because endpoint-level and service-level MMS include a subset of the metrics that TMS include, you might notice that metric values for a service are slightly different depending on the context in Splunk APM. This is because MMS are the basis of the dashboard view, and MMS can only have a ``kind`` of ``SERVER`` or ``CONSUMER``. In contrast, TMS are the basis of the Troubleshooting and Tag Spotlight views, and TMS aren't restricted to specific metrics. For example, values for ``checkout`` service metrics displayed in the host dashboard might be different from the metrics displayed in the Troubleshooting view because there are multiple span ``kind`` values associated with this service that the MMS that power the dashboard don't monitor.
 
