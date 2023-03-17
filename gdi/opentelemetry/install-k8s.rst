@@ -112,7 +112,7 @@ Configure other parameters
 
 You can configure the following:
 
-* :ref:`otel-kubernetes-config-distro``
+* :ref:`otel-kubernetes-config-distro`
 * :ref:`otel-kubernetes-config-environment`
 
 For example:
