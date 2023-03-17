@@ -188,6 +188,7 @@ You can also automatically instrument your Java applications along with the Coll
 
 Deployments
 ====================
+
 Splunk offers the configuration management options described in this section.
 
 .. _linux-amazon-ecs-ec2:

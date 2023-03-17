@@ -11,7 +11,7 @@ The Collector supports the following processor architecture:
 
 * x86_64 and AMD64
 * ARM64 compatible Docker image. See :ref:`linux-docker`.
-* ppc64 compatible Docker image, including IBM Private Cloud. See :ref:`linux-docker`.
+* ppc64le compatible Docker image, including IBM Private Cloud. See :ref:`linux-docker`.
 
 See :ref:`compatible components <x86_64-AMD64-ARM64-yes>` for more information on supported components. 
 
@@ -22,7 +22,7 @@ Some monitors within the Smart Agent receivers are not supported with ARM64 and 
 Compatible components
 ======================================================================
 
-All native OpenTelemetry receivers are supported in the Collector for the x86_64, AMD64, ARM64, and ppc64 architectures.
+All native OpenTelemetry receivers are supported in the Collector for the x86_64, AMD64, ARM64, and ppc64le architectures.
 
 Standalone
 ----------------------------------
@@ -116,7 +116,7 @@ The following components are supported:
 Unsupported components
 ===================================
 
-Using the Smart Agent receiver with monitor types is not supported for ARM64 and ppc64 architectures.
+Using the Smart Agent receiver with monitor types is not supported for ARM64 and ppc64le architectures.
 
 Subprocess monitor types are those that initiate the creation and management of a child process where metric gathering occurs. There are three major subprocess monitor types: 
 
