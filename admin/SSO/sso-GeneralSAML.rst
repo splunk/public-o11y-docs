@@ -23,7 +23,7 @@ Generic SAML SSO integrations
 Observability Cloud provides integrations for specific SAML SSO providers. If your provider isn't in the list of supported integrations, your organization administrator can request a generic integration from Observability Cloud. You can use this integration to test and develop a SAML SSO provider. Using this integration, administrators can direct Observability Cloud
 to use any publicly-available SSO endpoint to authenticate users.
 
-To enable the generic SAML SSO integration, contact :ref:`support`.
+To permit the generic SAML SSO integration, contact :ref:`support`.
 
 Be prepared to provide the domain for the ID/email address that your users provide when they log in. The domain is the part of the user ID/email address string that follows the ``@`` sign.
 

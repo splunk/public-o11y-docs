@@ -44,7 +44,7 @@ You must have systemd installed to use this script. The installer script deploys
 
 * The Splunk Distribution of OpenTelemetry Collector for Linux
 * :new-page:`SignalFx Smart Agent and collectd bundle <https://github.com/signalfx/signalfx-agent/releases>`
-* Fluentd (using the td-agent). See the :new-page:`Fluentd FAQs <https://www.fluentd.org/faqs>` for more information.
+* Fluentd (using the td-agent).  See :ref:`fluentd-receiver` for more information.
 
 Do the following to install the package using the installer script:
 
@@ -89,7 +89,7 @@ If you need to use a proxy, set one of the following environment variables accor
 
 - ``HTTP_PROXY``: The HTTP proxy address
 - ``HTTPS_PROXY``: The HTTPS proxy address
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+- ``NO_PROXY``: If a proxy is defined, sets addresses that don't use the proxy
 
 Restart the Collector after adding these environment variables to your configuration.
 
@@ -108,6 +108,8 @@ To skip these steps and use pre-configured repos on the target system that provi
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- SPLUNK_ACCESS_TOKEN
+
+.. _fluentd-manual-config-linux:
 
 Configure Fluentd
 ---------------------------------------
@@ -157,7 +159,7 @@ After any configuration modification, run ``sudo systemctl restart td-agent`` to
 
 If the td-agent package is upgraded after initial installation, you might need to set the Linux capabilities for the new version by performing the following steps for td-agent versions 4.1 or later:
 
-#. Check for the enabled capabilities:
+#. Check for the activated capabilities:
 
    .. code-block:: bash
 
@@ -311,7 +313,7 @@ Run the following command to install the package using Docker:
 The following list provides more information on the ``docker run`` command options:
 
 * ``--rm`` automatically removes the container when it exits.
-* ``-e`` sets simple (non-array) environment variables in the container you’re running, or overwrite variables that are defined in the Dockerfile of the image you’re running.
+* ``-e`` sets simple (non-array) environment variables in the container you're running, or overwrite variables that are defined in the Dockerfile of the image you're running.
 * ``-p`` publishes a container's port(s) to the host.
 
 Run the following command to execute an interactive bash shell on the container and see the status of the Collector:
@@ -338,7 +340,7 @@ Command line arguments take precedence over environment variables. This applies 
        -p 14268:14268 -p 4317:4317 -p 6060:6060 -p 8888:8888 \
        -p 9080:9080 -p 9411:9411 -p 9943:9943 \
        -v "${PWD}/collector.yaml":/etc/collector.yaml:ro \
-       # A volume mount may be required to load the custom configuration file.
+       # A volume mount might be required to load the custom configuration file.
        --name otelcol quay.io/signalfx/splunk-otel-collector:latest
        # Use a semantic versioning (semver) tag instead of the ``latest`` tag.
        # Semantic versioning is a formal convention for determining the version

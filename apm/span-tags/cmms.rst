@@ -46,9 +46,13 @@ Before you generate an MMS, first consider:
 Select how you want to configure your Monitoring MetricSet
 ------------------------------------------------------------------
 
-There are three options for the scope of the MMS you generate, including generating a service-level MMS only, generating endpoint-level MMS for specific endpoints within a given service, or generating both service-level MMS and endpoint-level MMS for all endpoints within a service. 
+You can generate a Monitoring MetricSet in three ways:
 
-Choosing the best option for your needs helps you allocate your organization's cardinality entitlement efficiently. See :ref:`reduce-cardinality` to learn more. 
+* service-level MMS only
+* endpoint-level MMS for specific endpoints within a given service
+* orient both service-level MMS and endpoint-level MMS for all endpoints within a service
+
+Choose the best option for your needs to allocate your organization's cardinality entitlement efficiently. See :ref:`reduce-cardinality` to learn more. 
 
 You can also filter by specific tag values to further reduce the cardinality of your MMS. All custom MMS include service-level metrics. In addition, you can generate endpoint-level metrics.
 
@@ -136,11 +140,11 @@ To use the custom dimensionalized Monitoring MetricSets you have created, apply 
    * - :strong:`Task`
      - :strong:`Documentation`
    * - Create charts
-     - :ref:`Create charts in Splunk Observability Cloud<create-charts>`
+     - :ref:`create-charts`
    * - Create dashboards
-     - :ref:`Create and customize dashboards<dashboard-create-customize>`
+     - :ref:`dashboard-create-customize`
    * - Create an alert 
-     - :ref:`Configure detectors and alerts in Splunk APM<apm-alerts>`
+     - :ref:`apm-alerts`
    * - Monitor services in APM dashboards 
      - :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
 

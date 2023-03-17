@@ -43,7 +43,7 @@ This is the collection of use cases available for Splunk Observability Cloud.
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`troubleshoot-business-workflows`
   * - :ref:`APM <apm-use-cases-intro>`
-    - :ref:`specific-trace`
+    - :ref:`apm-use-case-trace-analyzer`
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`monitor-services`
   * - :ref:`APM <apm-use-cases-intro>`

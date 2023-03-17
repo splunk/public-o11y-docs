@@ -178,7 +178,7 @@ By default, the Android RUM agent adds the following resource attributes to all 
 Instrumentation attributes
 ==============================================
 
-The Android RUM agent collects the following data using its instrumentations. To enable or disable specific instrumentations, see :ref:`android-rum-instrumentation-settings`.
+The Android RUM agent collects the following data using its instrumentations. To activate or deactivate specific instrumentations, see :ref:`android-rum-instrumentation-settings`.
 
 Crash reporting
 ----------------------------------------------------
@@ -290,7 +290,7 @@ Slow rendering detection spans have the following attribute:
 HTTP clients
 ------------------------------------
 
-The Android RUM agent includes instrumentation for the OkHttp and Volley HTTP clients. To enable the instrumentation, see :ref:`android-rum-http-client-settings`.
+The Android RUM agent includes instrumentation for the OkHttp and Volley HTTP clients. To activate the instrumentation, see :ref:`android-rum-http-client-settings`.
 
 The HTTP client instrumentation collects the following OpenTelemetry HTTP attributes:
 

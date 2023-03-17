@@ -20,14 +20,14 @@ The following steps can help you troubleshoot Node.js instrumentation issues:
 
 .. _enable-nodejs-debug-logging:
 
-Enable diagnostic logging
+Activate diagnostic logging
 -------------------------------------------------------
 
 Diagnostic logs can help you troubleshoot instrumentation issues.
 
 To output instrumentation logs to the console, set the ``OTEL_LOG_LEVEL`` environment variable to ``debug``. 
 
-You can also enable debug logging programmatically by setting the ``logLevel`` argument. For example:
+You can also activate debug logging programmatically by setting the ``logLevel`` argument. For example:
 
 .. code-block:: js
    :emphasize-lines: 2
@@ -45,14 +45,14 @@ You can also enable debug logging programmatically by setting the ``logLevel`` a
       },
    });
 
-To disable debug logging in your code, call ``setLogger()`` as in the following example:
+To deactivate debug logging in your code, call ``setLogger()`` as in the following example:
 
 .. code-block:: js
 
    const { diag } = require('@opentelemetry/api');
    diag.setLogger();
 
-.. note:: Enable debug logging only when needed. Debug mode requires more resources.
+.. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
 .. _nodejs-trace-exporter-issues:
 
@@ -75,7 +75,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 
 #. Make sure that ``OTEL_EXPORTER_OTLP_ENDPOINT`` points to the correct OpenTelemetry Collector instance host.
 #. Check that your collector instance is configured and running. See :ref:`otel-splunk-collector-tshoot`.
-#. Check that the OTLP receiver is enabled in the OTel Collector and plugged into the traces pipeline.
+#. Check that the OTLP receiver is activated in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
 401 error when sending spans
@@ -129,10 +129,10 @@ Troubleshoot AlwaysOn Profiling for Node.js
 
 See the following common issues and fixes for AlwaysOn Profiling:
 
-Check that AlwaysOn Profiling is enabled
+Check that AlwaysOn Profiling is activated
 ----------------------------------------------------------------
 
-Make sure that you've enabled the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-nodejs`.
+Make sure that you've activated the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``. See :ref:`profiling-configuration-nodejs`.
 
 Unsupported Node version
 -----------------------------------------------

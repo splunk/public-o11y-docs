@@ -19,7 +19,7 @@ SignalFx Smart Agent monitors.
 Installation
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -89,7 +89,7 @@ Make sure the pod spec sets the node name:
          fieldRef:
            fieldPath: spec.nodeName
 
-Enable the Collector to reference the ``K8S_NODE_NAME`` environment
+Activate the Collector to reference the ``K8S_NODE_NAME`` environment
 variable:
 
 .. code:: yaml
@@ -135,9 +135,9 @@ metadata entities and set them as extra labels on the metric resource.
 The following metadata is supported:
 
 -  ``container.id`` to augment metrics with the Container ID label
-   obtained from container statuses exposed via ``/pods``.
+   obtained from container statuses exposed using ``/pods``.
 -  ``k8s.volume.type`` to collect the volume type from the Pod spec
-   exposed via ``/pods`` and have it as a label on volume metrics. If
+   exposed using ``/pods`` and have it as a label on volume metrics. If
    there is more information available from the endpoint than just
    volume type, those are synced as well, depending on the available
    fields and the type of volume. For example, ``aws.volume.id`` is
@@ -224,12 +224,12 @@ The following parameters can also be specified:
 Metrics
 ======================
 
-Refer to `our GitHub
-repo <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/kubeletstatsreceiver/documentation.md>`__
-to see the metrics available for this integration.
+The following metrics, resource attributes, and attributes are available.
 
-See also the `list of metrics excluded by
-default <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/signalfxexporter/internal/translation/default_metrics.go>`__.
+.. raw:: html
+
+  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/kubeletstatsreceiver.yaml"></div>
+
 
 Get help
 ======================

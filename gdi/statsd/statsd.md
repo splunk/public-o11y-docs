@@ -99,7 +99,9 @@ The Smart Agent and Collector don't do any built-in filtering of metrics that co
 
 ## Metrics
 
-This section describes how metrics can be collected with this monitor.
+The agent does not do any built-in filtering of metrics coming out of this monitor.
+
+See the section below to learn how metrics can be collected with this monitor.
 
 ### Adding dimensions to statsd metrics
 
@@ -128,7 +130,7 @@ converters:
 The metrics that match to the given pattern are reported to Infrastructure Monitoring as `{traffic}.{action}`.
 For instance, metric `cluster.cds_egress_ecommerce-demo-mesh_gateway-vn_tcp_8080.update_success` is reported as `egress.update_success`.
 
-`metricName` is required for a converter configuration. A converter is disabled if `metricName` is not provided.
+`metricName` is required for a converter configuration. A converter is deactivated if `metricName` is not provided.
 
 Data points get a `host` dimension of the current host that the agent is running on, not the host from which the statsd metric was sent. For this reason, send statsd metrics to a local agent instance. If you don't want the `host` dimension, you can set `disableHostDimensions: true` on the monitor configuration.
 

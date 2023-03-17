@@ -4,8 +4,6 @@
 Create detectors to trigger alerts
 ************************************
 
-.. meta updated 1/23/23
-
 .. meta::
    :description: How to create detectors to trigger alerts.
 
@@ -64,13 +62,16 @@ Create a detector from a chart
 
 If there is a chart that monitors a signal that you want to alert on, you can use that chart to create a detector. Creating a detector from a chart pre-selects one of the chart's signals as the signal to be monitored.
 
-To create the detector, open the Detector menu by selecting the bell icon at the top right corner of a chart, and select :menuselection:`New detector from chart`.
+Follow these steps to create the detector:
 
--  If you are not monitoring services using Splunk APM, the Alert Rule Builder is displayed automatically. To continue, see :ref:`build-rules`.
+#. Select the bell icon on a chart to open the :strong:`Detector` menu.
+#. Select :menuselection:`New detector from chart`.
 
--  If the chart contains only metrics relevant to APM, such as latency or error rate, the Alert Rule Builder is displayed automatically.
+- If you are not monitoring services using Splunk APM, the Alert Rule Builder is displayed automatically. To continue, see :ref:`build-rules`.
 
--  If you are using APM and the chart contains both APM and infrastructure or custom metrics, you need to choose which type of detector you want to create. To continue after choosing a type and clicking :guilabel:`Proceed to alert signal`, see :ref:`build-rules`.
+- If the chart contains only metrics relevant to APM, such as latency or error rate, the Alert Rule Builder is displayed automatically.
+
+- If you are using APM and the chart contains both APM and infrastructure or custom metrics, you need to choose which type of detector you want to create. To continue after choosing a type and selecting :guilabel:`Proceed to alert signal`, see :ref:`build-rules`.
 
 After you create a detector from a chart, a :ref:`link to the new detector<link-detector-to-chart>` is automatically added to the chart.
 
@@ -79,15 +80,15 @@ After you create a detector from a chart, a :ref:`link to the new detector<link-
 Create a detector from scratch
 -------------------------------------------------------------------
 
-To create a new detector from scratch, you can either click the :guilabel:`New Detector` button on the Alerts or Detectors tab on the Alerts page, or select :menuselection:`Detector` from the Create menu (plus sign) on the navigation bar.
+To create a new detector from scratch, you can either select the :guilabel:`New Detector` button on the Alerts or Detectors tab on the Alerts page, or select :menuselection:`Detector` from the Create menu (plus sign) on the navigation bar.
 
 -  If you are not monitoring services using Splunk APM, the Alert Rule Builder appears automatically. To continue, skip to :ref:`build-rules`.
 
 -  If you are using Splunk APM, you can create a detector designed to alert on conditions related to tracing, such as latency or error rate.
 
-   -  If you want to create an APM detector, select that rule type and then click :guilabel:`Proceed to alert signal`. For details about the default alert conditions available for detectors in Splunk APM, see :ref:`alert-conditions-apm`.
+   -  If you want to create an APM detector, select that rule type and then select :guilabel:`Proceed to alert signal`. For details about the default alert conditions available for detectors in Splunk APM, see :ref:`alert-conditions-apm`.
 
-   -  If you want to create an Infrastructure or Custom Metrics rule type, select that rule type and then click :guilabel:`Proceed to alert signal`. For instructions on building the rule, see :ref:`build-rules`.
+   -  If you want to create an Infrastructure or Custom Metrics rule type, select that rule type and then select :guilabel:`Proceed to alert signal`. For instructions on building the rule, see :ref:`build-rules`.
 
 .. _create-via-api:
 
@@ -122,7 +123,7 @@ After you activate the detector, it begins monitoring the signal immediately. Wh
 
 .. _alert-signal:
 
-Select Alert signals
+Select alert signals
 -------------------------------------------------------------------
 
 In the :strong:`Alert signal` tab, define the signal to monitor by entering a metric and corresponding analytics.
@@ -131,7 +132,7 @@ In the :strong:`Alert signal` tab, define the signal to monitor by entering a me
 
 If you are creating a detector from scratch, you must first specify the signal or signals you want to monitor. Specifying a signal for a detector is similar to specifying a signal in a chart in the Plot Editor tab in the Chart Builder. When you start typing, a list of metrics and events displays. Select the metric you want to monitor, then add any filters or analytics. To learn more, see :ref:`specify-signal`
 
-If you want to add more signals, click :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. Note that you can add events to be displayed on the chart, but you cannot select an event as the signal to be monitored.
+If you want to add more signals, select :guilabel:`Add Metric or Event` or :guilabel:`Add Formula`. Note that you can add events to be displayed on the chart, but you cannot select an event as the signal to be monitored.
 
 .. note:: If you are creating a detector :ref:`from a chart<create-detector-from-chart>` or by :ref:`cloning a detector<clone-detector>`, you might not need to add any new signals. However, if you do add new signals to the detector, the signals is not added to the original chart or detector.
 
@@ -139,15 +140,15 @@ If you want to add more signals, click :guilabel:`Add Metric or Event` or :guila
 
 If the detector has multiple signals, you can choose whether to monitor one or more signals.
 
--  To monitor one signal (the most common use case), click the bell icon for the Detector menu at the far left to specify which signal you want to monitor. A blue bell indicates the signal that is being monitored.
+-  To monitor one signal, select the bell icon for the :strong:`Detector` menu to specify which signal you want to monitor. A blue bell indicates the signal that is being monitored.
 
--  To create compound conditions based on the values of more than one signal (for example, signal |nbsp| A is above `x` OR signal |nbsp| B is above `y`), click the multiple signals icon. Note that this option is available only if the alert condition is Custom Threshold.
+-  To create compound conditions based on the values of more than one signal, for example, signal A is higher than ``x`` OR signal B is higher than ``y``, select the multiple signals icon. This option is available only if the alert condition is a Custom Threshold.
 
 Continue to the next tab to select a condition for the detector's rule.
 
 .. _alert-condition:
 
-Select Alert conditions
+Select alert conditions
 -------------------------------------------------------------------
 
 In the :strong:`Alert condition` tab, you select the type of condition that triggers an alert.
@@ -158,7 +159,7 @@ If you have chosen to monitor multiple signals, the only available alert conditi
 
 Splunk Infrastructure Monitoring and Splunk APM provide several built-in alert conditions to make it simple for you to create robust alert conditions without needing to build advanced conditions behind the scenes.
 
-The following table summarizes the available built-in alert conditions for Infrastucture Monitoring and Custom Metrics detectors.
+The following table summarizes the available built-in alert conditions for Infrastructure Monitoring and Custom Metrics detectors.
 
 .. _condition-ref-table:
 
@@ -168,13 +169,13 @@ The following table summarizes the available built-in alert conditions for Infra
 
    * - :strong:`Name`
      - :strong:`Description`
-     - :strong:`Summary (samples)`
+     - :strong:`Examples of summary`
 
 
    * - :ref:`static-threshold`
 
      - Alert when a signal crosses a static threshold
-     - Availability over the last day is below 99.9.
+     - Availability over the last day is lower than 99.9.
 
    * - :ref:`heartbeat-check`
      - Alert when a signal has stopped reporting for some time
@@ -190,16 +191,16 @@ The following table summarizes the available built-in alert conditions for Infra
      - The number of logins in the last 10 minutes for this instance is 3 standard deviations lower than other instances in the same AWS availability zone.
 
    * - :ref:`sudden-change`
-     - Alert when a signal is different from its normal behavior (based on mean of preceding window or percentile of preceding window)
-     - All the values for ``cpu.utilization`` received in the last 15 |nbsp| minutes are at least |nbsp| 3 standard deviations above the mean of the preceding hour. All the values for ``latency`` received in the last 10 minutes are greater than 99% of the values of the preceding 1 hour.
+     - Alert when a signal is different from its normal behavior based on mean of preceding window or percentile of preceding window
+     - All the values for ``cpu.utilization`` received in the last 15 |nbsp| minutes are at least |nbsp| 3 standard deviations higher than the mean of the preceding hour. All the values for ``latency`` received in the last 10 minutes are greater than 99% of the values of the preceding 1 hour.
 
    * - :ref:`hist-anomaly`
      - Alert when a signal differs by a specified amount when compared to similar periods in the past
-     - The average number of logins in the last 2 hours is [30% higher] [3 standard deviations higher]  than the average for this same two hours last week.
+     - The average number of logins in the last 2 hours is [30% higher] [3 standard deviations higher] than the average for this same two hours last week.
 
    * - :ref:`custom-threshold`
      - Alert when a signal crosses another signal, or when you want to specify compound conditions using AND and OR operators.
-     - Example 1 - The value for ``cache_misses`` is above ``cache_hits``. Example 2 - The value for ``cache_misses`` is above ``cache_hits`` OR the value for ``cache_misses_percent`` is above 10.
+     - Example 1 - The value for ``cache_misses`` is higher than ``cache_hits``. Example 2 - The value for ``cache_misses`` is higher than ``cache_hits`` OR the value for ``cache_misses_percent`` is higher than 10.
 
 .. note:: If you want to create compound conditions using AND or OR operators on the Alert Settings tab, you must use the Custom Threshold condition. This limitation applies whether you are monitoring a single signal or multiple signals.
 
@@ -207,7 +208,7 @@ After you have selected the alert condition, continue to the next tab to specify
 
 .. _alert-settings:
 
-Specify Alert settings
+Specify alert settings
 -------------------------------------------------------------------
 
 In the :strong:`Alert settings` tab, you specify the settings that trigger an alert.
@@ -216,9 +217,9 @@ In the :strong:`Alert settings` tab, you specify the settings that trigger an al
 
 The available settings vary depending on the alert condition you selected.
 
-.. note:: If you are using the Custom Threshold condition, you can click :guilabel:`Add another condition` to create compound conditions using AND and OR operators. For more information about compound conditions, see :ref:`custom-threshold`.
+.. note:: If you are using the Custom Threshold condition, you can select :guilabel:`Add another condition` to create compound conditions using AND and OR operators. For more information about compound conditions, see :ref:`custom-threshold`.
 
-In the chart, you see a preview of the alerts that would have been triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
+In the chart, you see a preview of the alerts that are triggered based on the settings you selected. For more information on using the preview, see :ref:`preview-detector-alerts`.
 
 After you have specified settings for triggering alerts, continue to the next tab to create a message that is sent when the alert is triggered.
 
@@ -234,7 +235,7 @@ In the :strong:`Alert message` tab, you specify the severity of the alert and th
 Severity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Specify the importance of the alerts generated by this rule. Splunk Observability Cloud has 5  |nbsp| severity labels: Critical, Major, Minor, Warning and Info. Each severity label has a different color, and event markers appear on charts in the associated color.
+Specify the importance of the alerts generated by this rule. Splunk Observability Cloud has five severity labels: ``Critical``, ``Major``, ``Minor``, ``Warning``, and ``Info``. Each severity label has a different color, and event markers appear on charts in the associated color.
 
 You can create multiple rules to generate alerts with different severity levels for similar conditions, for example:
 
@@ -255,7 +256,7 @@ The easiest way to do this is to create a rule at one severity, select :menusele
 Message preview
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Displays a default message that is sent when an alert is triggered or cleared. To edit the subject or the content of the message, click :guilabel:`Customize`; you can see the code and variables used to construct the message. Available variables are shown to the right of the message area while you are editing the message.
+Displays a default message that is sent when an alert is triggered or cleared. To edit the subject or the content of the message, select :guilabel:`Customize`; you can see the code and variables used to construct the message. Available variables are shown to the right of the message area while you are editing the message.
 
 Note that the use of variables is supported only in the message subject and body, not in the Runbook or Tip fields.
 
@@ -297,20 +298,19 @@ The following tables describe the variables and helper functions you can use whe
      - The name of the rule that triggered the alert
 
    * - {{ruleSeverity}}
-     - The severity of this rule (Critical, Major, Minor, Warning, Info)
+     - The severity of this rule: ``Critical``, ``Major``, ``Minor``, ``Warning``, or ``Info``
 
    * - {{{readableRule}}}
-     - The readable description of this rule, e.g.
-          "The value of metric.name.here is above 100"
+     - The readable description of this rule. For example: "The value of metric.name.here is above 100".
 
    * - {{{runbookUrl}}}
-     - URL of page to consult when this alert is triggered
+     - URL of page to see when this alert is triggered
 
    * - {{{tip}}}
-     - Plain text suggested first course of action, such as a command line to execute
+     - Plain text suggested first course of action, such as a command line to run.
 
    * - {{detectorId}}
-     - The ID of this detector (can be used to programmatically reference this detector)
+     - The ID of this detector. You can use this to programmatically reference this detector.
 
    * - {{detectorUrl}}
      - The URL of this detector
@@ -319,7 +319,7 @@ The following tables describe the variables and helper functions you can use whe
 |br|
 
 
-:strong:`ALERT DETAILS`
+:strong:`Alert details`
 
 .. list-table::
    :header-rows: 1
@@ -328,10 +328,17 @@ The following tables describe the variables and helper functions you can use whe
    * - :strong:`Variable`
      - :strong:`Description`
 
-   * - {{timestamp}}
-     - The GMT timestamp of this alert, in this format:
-         Fri, |nbsp|  13  |nbsp| Oct  |nbsp| 2017 |nbsp|  20:32:39  |nbsp| GMT
-
+   * - | There are two variations of this variable:
+        
+       * {{timestamp}}
+       * {{dateTimeFormat timestamp format="short"}}
+     - * {{timestamp}} gives the UTC timestamp of this alert in the following format:
+         ``Wed, 8 Mar 2023 22:11:32 GMT``
+       * {{dateTimeFormat timestamp format="short"}} gives the UTC timestamp of this alert in UNIX time:
+         ``1678313492000``
+       
+       | Note: When an alert fires or clears, it always generates a timestamp in UTC. However, in the preview message for the alert, you will see this timestamp in your UI time zone, which might be different from GMT.
+         
    * - {{anomalyState}}
      - The state of this alert (OK or ANOMALOUS)
 
@@ -345,7 +352,7 @@ The following tables describe the variables and helper functions you can use whe
      - The URL for the preview image shown in the notification message
 
    * - {{incidentId}}
-     - The ID of this incident (the incidentID is the same for both the trigger and the clear alerts)
+     - The ID of this incident. The incidentID is the same for both the trigger and the clear alerts.
 
 
 |br|
@@ -353,7 +360,7 @@ The following tables describe the variables and helper functions you can use whe
 
 
 
-:strong:`SIGNAL DETAILS`
+:strong:`Signal details`
 
 .. list-table::
    :header-rows: 1
@@ -395,14 +402,14 @@ The following tables describe the variables and helper functions you can use whe
      - :strong:`Description`
 
    * - {{organizationId}}
-     - The organization ID (can be used to programmatically reference this organization)
+     - The organization ID. You can use this to programmatically reference this organization.
 
 
 |br|
 
 
 
-:strong:`HELPER FUNCTIONS`
+:strong:`Helper functions`
 
 .. list-table::
    :header-rows: 1
@@ -454,11 +461,11 @@ Here is an example of a default message that you can customize:
 .. _condition-variables:
 
 
-The following tables describe the additional variables you can use when creating a custom message for specific alert conditions. (Not all of these conditions are available for µAPM |nbsp| detectors, also known as APM previous generation or APM PG detectors.)
+The following tables describe the additional variables you can use when creating a custom message for specific alert conditions. 
 
 
 
-:strong:`RESOURCE RUNNING OUT`
+:strong:`Resource running out`
 
 .. list-table::
    :header-rows: 1
@@ -472,17 +479,16 @@ The following tables describe the additional variables you can use when creating
       - Number of hours left before reaching empty or capacity
 
    *  - {{event_annotations.fire_forecast_ahead}}
-      - Threshold for triggering alert (number of hours)
+      - Threshold for triggering alert, in hours
 
    *  - {{event_annotations.clear_forecast_ahead}}
-      - Threshold for clearing alert (number of hours)
-
-
-|br|
+      - Threshold for clearing alert, in hours
 
 
 
-:strong:`OUTLIER DETECTION`
+
+
+:strong:`Outlier detection`
 
 .. list-table::
    :header-rows: 1
@@ -495,23 +501,21 @@ The following tables describe the additional variables you can use when creating
       - Signal being monitored
 
    *  - {{inputs.fire_bot.value}}
-      - Threshold for triggering alert (when value is below threshold)
+      - Threshold for triggering alert when value is lower than the threshold
 
    *  - {{inputs.clear_bot.value}}
       - Threshold for clearing alert
 
    *  - {{inputs.fire_top.value}}
-      - Threshold for triggering alert (when value is above threshold)
+      - Threshold for triggering alert when value is higher than the threshold
 
    *  - {{inputs.clear_top.value}}
       - Threshold for clearing alert
 
 
-|br|
 
 
-
-:strong:`SUDDEN CHANGE`
+:strong:`Sudden change`
 
 .. list-table::
    :header-rows: 1
@@ -530,23 +534,21 @@ The following tables describe the additional variables you can use when creating
       - Maximum value during current window
 
    *  - {{inputs.f_bot.value}}
-      - Threshold for triggering alert (when value is below threshold)
+      - Threshold for triggering alert when value is lower than the threshold
 
    *  - {{inputs.c_bot.value}}
       - Threshold for clearing alert
 
    *  - {{inputs.f_top.value}}
-      - Threshold for triggering alert (when value is above threshold)
+      - Threshold for triggering alert when value is higher than the threshold
 
    *  - {{inputs.c_top.value}}
       - Threshold for clearing alert
 
 
-|br|
 
 
-
-:strong:`HISTORICAL ANOMALY`
+:strong:`Historical anomaly`
 
 .. list-table::
    :header-rows: 1
@@ -562,13 +564,13 @@ The following tables describe the additional variables you can use when creating
       - Mean value during current window
 
    *  - {{inputs.fire_bot.value}}
-      - Threshold for triggering alert (when value is below threshold)
+      - Threshold for triggering alert when value is lower than the threshold
 
    *  - {{inputs.clear_bot.value}}
       - Threshold for clearing alert
 
    *  - {{inputs.fire_top.value}}
-      - Threshold for triggering alert (when value is above threshold)
+      - Threshold for triggering alert when value is higher than the threshold
 
    *  - {{inputs.clear_top.value}}
       - Threshold for clearing alert
@@ -582,16 +584,16 @@ After you have created an alert message, continue to the next tab to specify whe
 Alert recipients
 -------------------------------------------------------------------
 
-In the :strong:`Alert recipients` tab, you specify where notification messages should be sent when alerts are triggered or cleared. Recipients are considered subscribers to a rule.
+In the :strong:`Alert recipients` tab, specify where notification messages are sent when alerts are triggered or cleared. Recipients are considered subscribers to a rule.
 
-If you have previously :ref:`integrated your alerts with another system <admin-notifs-index>`, those options appear in the Add Recipient drop-down menu. You can also send to email addresses, :ref:`webhook URLs<webhook>`, and :ref:`Create and manage teams<admin-manage-teams>`. Notifications are also sent when a condition clears.
+If you have previously :ref:`integrated your alerts with another system <admin-notifs-index>`, those options appear in the :guilabel:`Add Recipient` dropdown menu. You can also send to email addresses, :ref:`webhook URLs<webhook>`, and :ref:`Create and manage teams<admin-manage-teams>`. Notifications are also sent when a condition clears.
 
 Adding recipients is optional, but often useful.
 
 
 .. note:: Tips
 
-   - If you want to add the same subscriber(s) to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option in the Detectors tab on the Alerts page after you save the detector.
+   - If you want to add the same subscribers to each of multiple rules, you can add the subscribers to all rules at once by using the :ref:`Manage subscriptions<manage-subs>` option in the Detectors tab on the Alerts page after you save the detector.
 
    - You can temporarily stop a detector from sending notifications by :ref:`muting notifications<mute-notifications>`.
 
@@ -603,14 +605,12 @@ Activate
 
 In the :strong:`Activate` tab you see a summary of the detector settings you specified. Review the summary and make any necessary changes in the associated tabs, then name the rule; by default, the rule name is the same as the detector name. The rule name is displayed on the Alerts page and in notifications.
 
-Click Activate Alert Rule to save the detector and begin monitoring the specified signal. After you activate the detector, the Alert Rules tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. At this point, you can edit the detector name (shown at upper left); the text you enter here is displayed as the detector name in the Detectors tab on the Alerts page. You can also provide additional descriptive text below the name, for example to clarify the purpose of the detector for others.
+Select :guilabel:`Activate Alert Rule` to save the detector and begin monitoring the specified signal. After you activate the detector, the :strong:`Alert Rules` tab of the detector is displayed, showing the signal you selected and a summary of the rule you built. You can edit the detector name; the text you enter here is displayed as the detector name in the Detectors tab on the Alerts page. You can also provide additional descriptive text below the name, for example, to clarify the purpose of the detector for others.
 
 
-.. 	important::
+.. note:: If you make any changes to the detector name or description, select the :guilabel:`Save` button. If you select the :strong:`Close` button without saving, your changes will be lost.
 
-	If you make any changes to the detector name or description, be sure to click the green Save button. If you click the Close button without saving, your changes will be lost.
 
-.. keep this label in case people have it bookmarked
 
 .. _rules-v2-detectors:
 
@@ -619,7 +619,7 @@ Click Activate Alert Rule to save the detector and begin monitoring the specifie
 Edit detectors through the SignalFlow tab
 ----------------------------------------------------------------------------------
 
-.. Delete/update the following note when new detectors are v2. Also figure out how to talk about v2 detectors (meaning v2 but could be created using the UI or using the API) Note that the term v2 detector is not used in these docs.--brs
+
 
 .. note:: This section assumes you are familiar with the :new-page:`Observability Cloud Detectors API <https://dev.splunk.com/observability/reference/api/detectors/latest>`.
 
@@ -643,7 +643,7 @@ If the detector contains ``data`` blocks that correspond to plot lines in the de
 
 then the labels are displayed on the right side of the screen in the SignalFlow tab. For a label to be displayed, the ``data`` block must include a ``publish`` block.
 
-.. signalflow-stuff.ai, layer is plot-label
+
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/plot-label.png
    :width: 99%
@@ -651,35 +651,27 @@ then the labels are displayed on the right side of the screen in the SignalFlow 
 
 Click the gear icon to display options you can specify for the plot line shown in the detector's chart.
 
-.. signalflow-stuff.ai, layer is plot-options
+
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/plot-options.png
    :width: 99%
    :alt: This image shows the plot options for the plot line.
 
+To add or edit the alert message, recipients, or rule name, use the :guilabel:`Edit` button on the Alert Rules tab. The rule name you add on the :strong:`Activate` tab is displayed on the :strong:`Alert Rules` tab. The rule name is also shown as the alert condition on the :strong:`Alerts` page and in alert notifications.
 
-
-To add or edit the alert message, recipients, or rule name, use the :guilabel:`Edit` button on the Alert Rules tab. The rule name you add on the Activate tab is displayed on the Alert Rules tab as shown below. The rule name is also shown as the alert condition on the Alerts page and in alert notifications.
-
-For example, this rule name in the Activate tab:
-
-.. signalflow-stuff.ai, layer is name=condition
+For example, this rule name on the :strong:`Activate` tab
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/name=condition.png
    :width: 65%
    :alt: This image shows the rule name in the Activate tab.
 
-looks like this on the Alert Rules tab:
-
-.. signalflow-stuff.ai, layer is name=condition2
-
+looks like this on the :strong:`Alert Rules` tab:
 
 .. image:: /_images/images-detectors-alerts/v2-detectors/name=condition2.png
    :width: 45%
-   :alt: This image shows another example of the rule name in the Activate tab.
+   :alt: This image shows another example of the rule name in the Alert Rules tab.
 
-
-For more information about editing detector options in the Alert Rules tab,  see :ref:`alert-message`, :ref:`alert-recipients`, and :ref:`activate-detector`.
+For more information about editing detector options in the :strong:`Alert Rules` tab, see :ref:`alert-message`, :ref:`alert-recipients`, and :ref:`activate-detector`.
 
 
 .. _name-detector:
@@ -697,13 +689,13 @@ If you don't enter a name while creating a detector, you will be prompted to add
 Manage detector rules
 =============================================================================
 
-In the Alert Rules tab of a detector, you can use the actions menu (|more|) menu for a rule (at far right, next to the :guilabel:`Edit` option) to perform any of the following actions.
+In the Alert Rules tab of a detector, you can use the actions menu (|more|) menu for a rule to do any of the following.
 
 -  Disable/enable
 
-   If a detector has multiple rules, such as different rules for different severity levels, you may want to specify which ones to enable or disable. Disabling a rule prevents it from generating any events or sending any notifications. This option is commonly used after the detector has been activated for a while, to decrease or increase the number of alerts the detector is triggering.
+   If a detector has multiple rules, such as different rules for different severity levels, you might want to specify which ones to enable or disable. Disabling a rule prevents it from generating any events or sending any notifications. This option is commonly used after the detector has been activated for a while, to decrease or increase the number of alerts the detector is triggering.
 
-.. note:: The options to clone or delete rules are not available for detectors that were created using the API.
+   .. note:: The options to clone or delete rules are not available for detectors created using the API.
 
 -  Clone
 

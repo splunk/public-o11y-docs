@@ -42,7 +42,7 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 
 To get started with the Collector, read :ref:`opentelemetry-resources`:
 
-#. Check the :ref:`prerequistes and requirements <otel-requirements>`.
+#. Check the :ref:`prerequisites and requirements <otel-requirements>`.
 #. :ref:`otel-install-platform`. Get instructions for installing the Collector on a variety of platforms. Or use :ref:`our guided install <collector-guided-install>`.
 #. Learn about the available :ref:`configuration options <otel-configuration>`. 
 #. :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
@@ -51,3 +51,4 @@ For more information:
 
 - See :ref:`otel-components` for a description of the components the Collector supports.
 - Use :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
+- Read :ref:`otel-collector-use-case`.

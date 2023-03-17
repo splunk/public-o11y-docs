@@ -4,7 +4,7 @@
 Link detectors to charts
 *****************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: Learn how to Link detectors to charts in Splunk Observability Cloud so that you can discover and diagnose issues more quickly.

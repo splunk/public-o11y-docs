@@ -212,7 +212,7 @@ Add images that enhance existing material, instead of replacing text. Don't incl
 
 The Splunk Style Guide provides guidance on how to write straightforward, user-focused, example-rich content that inspires confidence in the user. See [A word about Splunk docs](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs) for an orientation to the [Splunk Style Guide](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs).
 
-You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against Splunk's style guide. See https://github.com/splunk/vale-splunk-style-guide.
+You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against the Splunk style guide. See https://github.com/splunk/vale-splunk-style-guide.
 
 ## Test the docs
 
