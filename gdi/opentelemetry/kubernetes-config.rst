@@ -156,29 +156,29 @@ To run the Collector in Google Kubernetes Engine Autopilot mode, set the ``distr
 Search for "Autopilot overview" on the :new-page:`Google Cloud documentation site <https://cloud.google.com/docs>` for more information.
 
 .. note::
-   Native OpenTelemetry logs collection is not yet supported in Google Kubernetes Engine Autopilot mode.
+  Native OpenTelemetry logs collection is not yet supported in Google Kubernetes Engine Autopilot mode.
 
 The Collector agent daemonset can have problems scheduling in Autopilot mode. If this happens, do the following to assign the daemonset a higher priority class to ensure that the daemonset pods are always present on each node:
 
-Create a new priority class for the Collector agent:
+1. Create a new priority class for the Collector agent:
 
-.. code-block:: yaml
+  .. code-block:: yaml
 
-   cat <<EOF | kubectl apply -f -
-   apiVersion: scheduling.k8s.io/v1
-   kind: PriorityClass
-   metadata:
-     name: splunk-otel-agent-priority
-   value: 1000000
-   globalDefault: false
-   description: "Higher priority class for the Splunk Distribution of OpenTelemetry Collector pods."
-   EOF
+    cat <<EOF | kubectl apply -f -
+    apiVersion: scheduling.k8s.io/v1
+    kind: PriorityClass
+    metadata:
+      name: splunk-otel-agent-priority
+    value: 1000000
+    globalDefault: false
+    description: "Higher priority class for the Splunk Distribution of OpenTelemetry Collector pods."
+    EOF
 
-Use the created priority class in the helm install/upgrade command using the ``--set="priorityClassName=splunk-otel-agent-priority"`` argument, or add the following line to your custom values.yaml:
+2. Use the created priority class in the helm install/upgrade command using the ``--set="priorityClassName=splunk-otel-agent-priority"`` argument, or add the following line to your custom values.yaml:
 
-.. code-block:: yaml
+  .. code-block:: yaml
 
-   priorityClassName: splunk-otel-agent-priority
+    priorityClassName: splunk-otel-agent-priority
 
 
 .. _config-eks-fargate:
