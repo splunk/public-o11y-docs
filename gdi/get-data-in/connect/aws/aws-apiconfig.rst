@@ -9,7 +9,7 @@ Connect to AWS using the Splunk Observability Cloud API
 
 To connect Splunk Observability Cloud to your AWS account, complete the following steps:
 
-#. :ref:`Create an AWS connection <aws-api-create-connection>`.
+#. :ref:`Create an AWS connection <aws-api-create-connection>`. See the available :ref:`AWS regions <aws-regions>`.
 #. :ref:`Review your IAM policy <review-aws-iam-policy>`. Specify whether to collect both metrics and logs, and whether to gather metrics by API polling (which is the default) or through CloudWatch Metric Streams.
 #. :ref:`Configure your setup <aws-api-setup>`. 
 #. Optionally, :ref:`activate Metric Streams <activate-cw-metricstreams>`.

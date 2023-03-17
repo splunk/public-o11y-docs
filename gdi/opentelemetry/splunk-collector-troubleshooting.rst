@@ -249,7 +249,7 @@ Collector isn't configured properly
 Do the following to check the Collector configuration:
 
 #. Go to ``http://localhost:55679/debug/tracez`` to check zPages for samples. You might need to configure the endpoint.
-#. Activate logging exporter.
+#. Activate logging exporter. See :ref:`logging-exporter` for more information.
 #. Run ``journalctl -u splunk-otel-collector.service -f`` to collect the logs for you to review.
 #. Review :ref:`otel-splunk-collector-tshoot` if you can't find what you need in the logs.
 
