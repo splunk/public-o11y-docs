@@ -86,7 +86,7 @@ Follow these steps to index a span tag or process to create a Troubleshooting Me
 
    .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
    
-7. After the cardinality check has run, review the cardinality of your new MetricSet and enable your new MetricSet.
+7. After the cardinality check has run, review the cardinality and enable your new MetricSet.
 
    * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
    * If the check times out before you enable the MetricSet, rerun the analysis.

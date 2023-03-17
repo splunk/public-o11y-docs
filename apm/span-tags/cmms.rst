@@ -62,7 +62,7 @@ You can also filter by specific tag values to further reduce the cardinality of 
    * - service-level MMS and endpoint-level MMS for all endpoints within a service
      -  This option creates a custom dimensionalized MMS for each selected service, as well as an MMS for each endpoint in each selected service. This is the highest cardinality option. 
    * - service-level MMS and endpoint-level MMS for specific endpoints
-     - This option creates a custom dimensionalized MMS for each selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters`, you can provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in to minimize unnecessary cardinality.
+     - This option creates a custom dimensionalized MMS for each selected service and an MMS for specific endpoints you select. In the box labeled :guilabel:`Endpoint Filters, provide a list of endpoints or a regular expression pattern to generate MMS for specific endpoints you're interested in. This helps you to minimize unnecessary cardinality."
    * - Service-level MMS only
      - This option creates an MMS for each selected service and no endpoint-level MMS. This is the lowest cardinality option. 
 
@@ -109,7 +109,7 @@ Follow these steps to create a Monitoring MetricSet.
 
    .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
 
-9.  After the cardinality check has run, review the cardinality of your new MetricSet and enable your new MetricSet.
+9.  After the cardinality check has run, review the cardinality and enable your new MetricSet.
 
    * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
    * If the check times out before you enable the MetricSet, rerun the analysis.
