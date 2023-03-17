@@ -60,9 +60,7 @@ Splunk Cloud Platform
       
 4. Copy the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance. The script returns 3 certificates. Be sure to copy only the first certificate and include ``-----BEGIN CERTIFICATE-----`` and ``-----END CERTIFICATE-----``. The following is an example of a certificate. 
 
-   .. code-block:: bash
-
-      -----BEGIN CERTIFICATE-----
+      ``-----BEGIN CERTIFICATE-----
       MIIEiDCCA3CgAwIBAgIQYtRkQZS4gkQSqEN/3NaYgjANBgkqhkiG9w0BAQsFADBG
       MQswCQYDVQQGEwJVUzEiMCAGA1UEChMZR29vZ2xlIFRydXN0IFNlcnZpY2VzIExM
       QzETMBEGA1UEAxMKR1RTIENBIDFDMzAeFw0yMzAyMjAwOTE1MzRaFw0yMzA1MTUw
@@ -88,7 +86,7 @@ Splunk Cloud Platform
       0BNRR+EO4Vw/tOkpyisemMt9L9aFZ4HaEuiSvL3R/HGU94uCxXc+TFwmVTelVFZN
       eP4Q0ck4ooUOd7XgCc5qdvCiCiD/268+gBNSHhJSPZXeuzC6vL7mMKVY4I80sKKP
       F+4goIJZUyLdHZ+a
-      -----END CERTIFICATE-----
+      -----END CERTIFICATE-----``
 
 5. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
