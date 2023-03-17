@@ -21,7 +21,7 @@ After you configure the integration, you can access the following features:
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -48,7 +48,7 @@ configuration file with all the mandatory fields, as shown in the following exam
       collection_interval: 60s
       max_results: 10
 
-To complete the integration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
 
 .. code:: yaml

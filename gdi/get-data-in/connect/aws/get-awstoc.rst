@@ -20,7 +20,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   Troubleshoot logs <aws-ts-logs>
   GetMetricStatistics API deprecation notice <aws-api-notice>
 
-To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to AWS. Follow these steps:
+To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to Amazon Web Services (AWS). Follow these steps:
 
 1. Verify the prerequisites.
 2. Plan your integration.
@@ -31,7 +31,7 @@ To leverage the benefits of data monitoring across your infrastructure, connect 
 
 You can also set the following configuration options to complete the integration:
 
-- Select Amazon Web Services (AWS) regions to collect data from.
+- Select the :ref:`AWS regions <aws-regions>` to collect data from.
 - Activate the ingestion of metrics through polling or streaming.
 - Decide whether to process information about application logs.
 
@@ -50,7 +50,66 @@ To connect AWS to Observability Cloud you need:
 - Administrator privileges in Observability Cloud and your AWS accounts. 
 
 - An authentication method.
-  
+
+.. _aws-regions:
+
+.. raw:: html
+
+  <embed>
+    <h3>Supported AWS regions<a name="aws-regions" class="headerlink" href="#aws-regions" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+Observability Cloud supports the following regions:
+
+* Regular
+
+    * ``ap-northeast-1``: Asia Pacific (Tokyo)
+    * ``ap-northeast-2``: Asia Pacific (Seoul)
+    * ``ap-northeast-3``: Asia Pacific (Osaka)
+    * ``ap-south-1``: Asia Pacific (Mumbai)
+    * ``ap-southeast-1``: Asia Pacific (Singapore)
+    * ``ap-southeast-2``: Asia Pacific (Sydney)
+    * ``ca-central-1``: Canada (Central)
+    * ``eu-central-1``: Europe (Frankfurt)
+    * ``eu-north-1``: Europe (Stockholm)
+    * ``eu-west-1``: Europe (Ireland)
+    * ``eu-west-2``: Europe (London)
+    * ``eu-west-3``: Europe (Paris)
+    * ``sa-east-1``: South America (Sao Paulo)
+    * ``us-east-1``: US East (N. Virginia)
+    * ``us-east-2``: US East (Ohio)
+    * ``us-west-1``: US West (N. California)
+    * ``us-west-2``: US West (Oregon)
+
+* Optional
+
+    * ``af-south-1``: Africa (Cape Town)
+    * ``ap-east-1``: Asia Pacific (Hong Kong)
+    * ``ap-south-2``: Asia Pacific (Hyderabad)
+    * ``ap-southeast-3``: Asia Pacific (Jakarta)
+    * ``ap-southeast-4``: Asia Pacific (Melbourne)
+    * ``eu-central-2``: Europe (Zurich)
+    * ``eu-south-1``: Europe (Milan)
+    * ``eu-south-2``: Europe (Spain)
+    * ``me-central-1``: Middle East (UAE)
+    * ``me-south-1``: Middle East (Bahrain)
+
+* GovCloud
+
+    * ``us-gov-east-1``: AWS GovCloud (US-East)
+    * ``us-gov-west-1``: AWS GovCloud (US-West)  
+
+* China
+
+    * ``cn-north-1``: China (Beijing)
+    * ``cn-northwest-1``: China (Ningxia)    
+
+Notes: 
+
+* If you want to enable a specific optional region, you need to do it before adding it to the integration. Make sure you've enabled the optional regions you'll need in your AWS console first. Regular regions are enabled in AWS by default.
+* If you're using the :ref:`UI guided setup <aws-wizardconfig>` to create the integration, you'll be prompted to select which AWS regions you work with. 
+* If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Observability Cloud will enable all regular regions. If you add the ``ec2:DescribeRegions`` permission to your AWS policy, optional regions you've enabled on your AWS account will be enabled in Observability Cloud as well. 
+
 .. _aws-authentication:
 
 .. raw:: html

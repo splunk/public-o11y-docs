@@ -20,13 +20,18 @@ Components
     components/host-metrics-receiver
     components/kubelet-stats-receiver
     components/kubernetes-cluster-receiver
+    components/logging-exporter
     components/mongodb-atlas-receiver
     components/oracledb-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
+    components/resource-processor
+    components/resourcedetection-processor
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
+    components/transform-processor
+    components/windowsperfcounters-receiver
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -154,7 +159,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``windowseventlog``
      - Tails and parses logs from the Windows Event log API.
      - Logs
-   * - ``windowsperfcounters`` (Windows only)
+   * - :ref:`windowsperfcounters-receiver` (``windowsperfcounters``) (Windows only)
      - Collects the configured system, application, or custom performance counter data from the Windows Registry.
      - Metrics
    * - ``zipkin``
@@ -203,10 +208,10 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``probabilisticsampler``
      - Provides samples based on hash values determined by trace IDs.
      - Traces
-   * - ``resource``
+   * - :ref:`resource-processor` (``resource``)
      - Applies changes to resource attributes. Attributes represent actions that can be applied on resources.
      - Metrics, logs, traces
-   * - ``resourcedetection``
+   * - :ref:`resourcedetection-processor` (``resourcedetection``)
      - Detects resource information from the host, in a format that conforms to the OpenTelemetry resource semantic conventions, and appends or overrides the resource value in telemetry data with this information.
      - Metrics, logs, traces
    * - ``routing``
@@ -218,7 +223,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``tail_sampling``
      - Samples traces based on a set of defined policies. All spans for a given trace must be received by the same Collector instance for effective sampling decisions.
      - Traces
-   * - ``transform`` (alpha)
+   * - :ref:`transform-processor` (``transform``)
      - Modifies telemetry based on OpenTelemetry Transformation Language functions.
      - Metrics, logs, traces
 
@@ -247,7 +252,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``kafka``
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
-   * - ``logging``
+   * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
      - Metrics, logs, traces
    * - ``otlp``
