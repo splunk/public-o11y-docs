@@ -15,21 +15,21 @@ Over the last couple of hours, Alex has been receiving reports from customer sup
 #. Group traces by specific tags
 #. Come back to confirm solution
 
-1. Search for traces with errors
+Search for traces with errors
 ===================================
 
 As most reports happened in the weeks following the release of the recommendation service, Alex opens Trace Analyzer and sets the time range to the last hour for the recommendation service in production. To narrow down the search further, they switch :guilabel:`Errors only`.
 
 The search reduces the amount of traces to a few thousand from the millions available in Splunk APM. 
 
-2. Group traces by specific tags
+Group traces by specific tags
 ==================================
 
 Next, Alex uses the :guilabel:`Grouped by` menu to select the ``device.type`` tag. 
 
 Alex notices that the tablet throws the most errors among the types of devices, so they decide to switch the grouping tag to ``tablet.brand``. Alex then selects the :guilabel:`Group Metrics` tab to dig into each value of the grouping tag.
 
-2. Return to confirm solution
+Return to confirm solution
 ==================================
 
 After the back-end team confirmed and solved the issue affecting the Android tablet clients, Alex returns to the saved Trace Analyzer view and changes the time range to the current week. They immediately notice that the amount of errors and the latencies are back to normal. Eager to keep an eye on the issue, Alex configures new alerts based on the trace metadata they might collect.
