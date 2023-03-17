@@ -132,9 +132,9 @@ You'll get something similar to:
 .. code-block:: 
 
    {
-    "count": 2,
-    "results": [
-        {
+      "count": 2,
+      "results": [
+         {
             "authMethod": "ExternalId",
             "created": 1674862496869,
             "createdByName": null,
@@ -159,8 +159,8 @@ You'll get something similar to:
             "syncCustomNamespacesOnly": false,
             "syncLoadBalancerTargetGroupTags": false,
             "type": "AWSCloudWatch"
-        },
-        {
+         },
+         {
             "authMethod": "ExternalId",
             "created": 1522297476849,
             "createdByName": null,
@@ -184,11 +184,12 @@ You'll get something similar to:
             "sfxAwsAccountArn": "arn:aws:iam::134183635603:root",
             "syncCustomNamespacesOnly": false,
             "type": "AWSCloudWatch"
-        }
-    ]
+         }
+      ]
    }
 
-2. Modify the file. Remove the fields below from the call, as these will be populated automatically, and 
+2. Modify the integration file as explained in steps 3 and 4.
+3. Remove the fields below from the call, as these will be populated automatically:  
 
 .. code-block:: none 
 
@@ -199,7 +200,7 @@ You'll get something similar to:
    ``lastUpdatedBy``
    ``lastUpdatedByName``
 
-Include ``ignoreAllStatusMetrics``, set to ``false``. It will look like this:
+4. Include ``ignoreAllStatusMetrics``, set to ``false``, in the integration. It will look like this:
 
 .. code-block:: 
    :emphasize-lines: 12
@@ -232,7 +233,7 @@ Include ``ignoreAllStatusMetrics``, set to ``false``. It will look like this:
       "type": "AWSCloudWatch"
    }
 
-4. Update the integration object using the API:
+5. Update the integration object above using the API:
 
 .. code-block:: none
 
