@@ -32,7 +32,7 @@ Splunk RUM for Browser instrumentation
       - :strong:`Example`
     * - Drop or redact parts of an attribute value
       - ``onAttributesSerializing``
-      - words 
+      - Specify the name of the  Parse one or more attributes specified by their name and regex matched value 
     * - Drop specific attributes across all spans or events
       - ``onAttributesSerializing``
       - words 
