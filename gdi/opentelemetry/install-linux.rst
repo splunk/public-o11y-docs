@@ -298,6 +298,8 @@ To set custom permissions after the Collector has been installed, use:
 Docker
 ----------------
 
+The Docker container of the Splunk Distribution of OpenTelemetry Collector automatically determines the correct image depending on the processor architecture: x86_64, AMD64, ARM64, or ppc64.
+
 Run the following command to install the package using Docker:
 
 .. code-block:: bash
@@ -316,7 +318,7 @@ The following list provides more information on the ``docker run`` command optio
 * ``-e`` sets simple (non-array) environment variables in the container you're running, or overwrite variables that are defined in the Dockerfile of the image you're running.
 * ``-p`` publishes a container's port(s) to the host.
 
-Run the following command to execute an interactive bash shell on the container and see the status of the Collector:
+Run the following command to run an interactive bash shell on the container and see the status of the Collector:
 
 .. code-block:: bash
 

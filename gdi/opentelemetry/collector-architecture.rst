@@ -10,8 +10,8 @@ Processor architecture
 The Collector supports the following processor architecture:
 
 * x86_64 and AMD64
-* ARM64 compatible Docker image
-* ppc64 compatible Docker image, including IBM Private Cloud
+* ARM64 compatible Docker image. See :ref:`linux-docker`.
+* ppc64 compatible Docker image, including IBM Private Cloud. See :ref:`linux-docker`.
 
 See :ref:`compatible components <x86_64-AMD64-ARM64-yes>` for more information on supported components. 
 
