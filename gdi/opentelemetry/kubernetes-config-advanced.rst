@@ -48,7 +48,7 @@ For example, use the following configuration to activate automatic detection of 
 Override a control plane configuration
 ==============================================================
 
-If ``agent.controlPlaneEnabled=true``, the Helm chart sets up the Collector to collect metrics from the control plane.
+If any of the control plane metric receivers are enabled under the ``agent.controlPlaneMetrics`` configuration section, then the Helm chart will configure the Collector to use the enabled receivers to collect metrics from the control plane.
 
 To collect control plane metrics, the Helm chart uses the Collector on each node to use the receiver creator to represent control plane receivers at runtime. The receiver creator has a set of discovery rules that know which control plane receivers to create. The default discovery rules can vary depending on the Kubernetes distribution and version. See :ref:`receiver-creator-receiver` for more information.
 
