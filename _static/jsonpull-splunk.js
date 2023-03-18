@@ -381,8 +381,8 @@ $(document).ready(function () {
                             if (typeof monitors[i][j] == 'undefined' && j == 'title') {
                                 row += '<td>' + i + '</td>';
                             } else {
-                                row += '<td>' + monitors[i][j] + '</td>';
-                                //row += '<td>' + converter.makeHtml(monitors[i][j]) + '</td>';
+                                //row += '<td>' + monitors[i][j] + '</td>';
+                                row += '<td>' + converter.makeHtml(monitors[i][j]) + '</td>';
                             }
                         }
 

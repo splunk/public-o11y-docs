@@ -85,7 +85,7 @@ The SignalFx Instrumentation for .NET can collect the following process metrics:
    * - ``process.cpu.time``
      - CumulativeCounter
      - Total CPU seconds broken down by different states, such as user and system.	
-   * - ``process.cpu.utilization``
+   * - ``process.cpu.utilization`` (deprecated)
      - Gauge
      - Difference in ``process.cpu.time`` since the last measurement, divided by the elapsed time and number of CPUs available to the process.
    * - ``process.threads``

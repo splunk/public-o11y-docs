@@ -15,11 +15,13 @@ Configure the Collector
     configure-the-collector-ootb.rst
     linux-config.rst
     kubernetes-config.rst
+    kubernetes-config-advanced.rst
+    kubernetes-config-logs.rst
     windows-config.rst
     other-configuration-sources.rst
     data-processing.rst
 
-You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately.
+You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately. See also :ref:`otel-data-processing`.
 
 .. _otel-config-options:
 
@@ -33,7 +35,7 @@ See :ref:`the default configuration <otel-configuration-ootb>` to learn about th
 
 You can also use these configurations to change the default settings in each Collector package:
 
-* :ref:`otel-kubernetes-config`
+* Kubernetes: :ref:`Helm configuration <otel-kubernetes-config>`, :ref:`advanced config <otel-kubernetes-config-advanced>`, and :ref:`log config <otel-kubernetes-config-logs>`
 * :ref:`otel-linux-config`
 * :ref:`otel-windows-config`
 
