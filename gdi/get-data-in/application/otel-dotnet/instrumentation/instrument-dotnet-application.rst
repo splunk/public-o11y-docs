@@ -27,15 +27,24 @@ To generate all the basic installation commands for your environment and applica
    #. Select the :guilabel:`APM` product.
    #. Select the :guilabel:`.NET (OpenTelemetry)` tile to open the .NET OpenTelemetry guided setup.
 
+Install the Splunk Distribution of OpenTelemetry .NET manually
+==================================================================
+
+Follow these instructions to install the Splunk Distribution of OpenTelemetry .NET:
+
+- :ref:`install-dotnet-otel-instrumentation`
+- :ref:`configure-otel-dotnet`
+
 .. _install-dotnet-otel-instrumentation:
 
 Instrument a .NET application
-===================================================================
+---------------------------------------------
 
 Follow these steps to automatically instrument your application:
 
+
 Windows
--------------------
+^^^^^^^^^^^^
 
 #. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
@@ -93,7 +102,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-ote
 .. note:: If you need to add custom attributes to spans or want to manually generate spans and metrics, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
 Linux
--------------------
+^^^^^^^^^^^^^^^^^
 
 #. Check that you meet the requirements. See :ref:`dotnet-otel-requirements`.
 
@@ -132,7 +141,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-ote
 .. _otel-dotnet-aspnet-framework:
 
 Additional steps for ASP.NET (.NET Framework)
-================================================
+---------------------------------------------
 
 To complete the instrumentation process for ASP.NET applications for IIS running on .NET Framework, add the ``TelemetryHttpModule`` module to your application's ``web.config`` file. For example:
 
@@ -159,14 +168,14 @@ You can also set the ASP.NET HTTP module in the ``applicationHost.config`` file.
 .. _configure-otel-dotnet:
 
 Configure the instrumentation
-===================================
+---------------------------------------------
 
 For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Observability Cloud
-==============================================================
+---------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
