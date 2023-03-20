@@ -70,7 +70,7 @@ Perform the following steps:
 Once you configure this, any incident created using that incident policy displays the related ServiceNow ticket information in the :guilabel:`Resources` section of the incident details.
 
 
-:.. image:: /_images/incident-intelligence/ii-snow-ticket.png
+.. image:: /_images/incident-intelligence/ii-snow-ticket.png
     :width: 60%
     :alt: On the Incident details page, the ServiceNow ticket link displays in the Resources section.
 
