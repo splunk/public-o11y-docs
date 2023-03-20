@@ -12,7 +12,7 @@ Kai, a site reliability engineer at Buttercup Games, receives tickets from multi
 To troubleshoot the invalid request error reports, Kai takes the following steps:
 
 #. Kai opens the service map
-#. Kai looks for services that have a red dot
+#. Kai looks for services that have root cause errors
 #. Kai selects service to gather more details about the root cause error
 #. Kai adds a link to Tag Spotlight for the offending endpoint to the customer ticket
 
@@ -21,10 +21,10 @@ Kai opens the service map
 
 To figure out the most downstream service causing the error, Kai selects the :strong:`Explore` card in Splunk APM to open the service map for troubleshooting. Kai looks through the real-time service map, which contains nodes and dependencies of services instrumented in Splunk APM. 
 
-Kai looks for services that have a red dot
-=============================================
+Kai looks for services that have root cause errors
+====================================================
 
-The service map identifies the root cause error rate using red color. Kai finds that the :strong:`paymentservice` node has a red dot, and the dependency arrow from the :strong:`checkoutservice` node and the :strong:`paymentservice` node is red. 
+The service map identifies the root cause error rate using red. Kai finds that the :strong:`paymentservice` node has a red dot, and the dependency arrow from the :strong:`checkoutservice` node and the :strong:`paymentservice` node is red. 
 
 ..  image:: /_images/apm/apm-use-cases/service-map-01.png
     :width: 80%
