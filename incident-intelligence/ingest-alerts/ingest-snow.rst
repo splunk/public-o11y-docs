@@ -40,8 +40,9 @@ Perform the following steps:
 
 Once you configure this, any incident created using that incident policy displays the related ServiceNow ticket information in the :guilabel:`Resources` section of the incident details.
 
-:.. image:: /_images/incident-intelligence/ii-snow-ticket.png
-     :alt: On the Incident details page, the ServiceNow ticket link displays in the Resources section.
+
+   :.. image:: /_images/incident-intelligence/ii-snow-ticket.png
+        :alt: On the Incident details page, the ServiceNow ticket link displays in the Resources section.
 
 
 Manually connect Splunk Incident Intelligence to ServiceNow in a specific incident
