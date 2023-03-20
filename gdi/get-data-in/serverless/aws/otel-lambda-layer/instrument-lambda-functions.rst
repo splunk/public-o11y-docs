@@ -7,9 +7,14 @@ Instrument your AWS Lambda function for Splunk Observability Cloud
 .. meta::
    :description: The Splunk OpenTelemetry Lambda Layer automatically instruments your AWS Lambda functions for many programming languages. Follow these steps to get started.
 
-Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS Lambda functions for many programming languages.
+Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS Lambda functions for many programming languages. To get started, use the guided setup or follow the instructions manually.
 
-:strong:`Tip:` To generate a template that instruments your Lambda function using the Splunk OpenTelemetry Lambda Layer, use the AWS Lambda guided setup. To access the AWS Lambda guided setup, follow these steps:
+To send data to a Splunk OTel Collector in EC2, see :ref:`ec2-otel-collector-serverless`.
+
+Generate customized instructions using the guided setup
+====================================================================
+
+To generate a template that instruments your Lambda function using the Splunk OpenTelemetry Lambda Layer, use the AWS Lambda guided setup. To access the AWS Lambda guided setup, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
 
@@ -23,10 +28,23 @@ Use the Splunk OpenTelemetry Lambda Layer to automatically instrument your AWS L
 
    #. Select the :guilabel:`AWS Lambda` tile to open the AWS Lambda guided setup.
 
+Install the Splunk OpenTelemetry Lambda Layer manually
+==================================================================
+
+Follow these instructions to install the Splunk OpenTelemetry Lambda Layer:
+
+- :ref:`otel-lambda-layer-requirements`
+- :ref:`install-otel-lambda-layer`
+- :ref:`set-env-vars-otel-lambda`
+
+To instrument Go functions, also follow the steps in :ref:`go-serverless-instrumentation`.
+
+For Python functions using the Serverless Framework, see :ref:`serverless-framework-support-aws`.
+
 .. _otel-lambda-layer-requirements:
 
 Check compatibility and requirements
-====================================
+----------------------------------------------
 
 The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lambda:
 
@@ -43,7 +61,7 @@ For more information, search for Lambda runtimes and other system requirements o
 .. _install-otel-lambda-layer:
 
 Install the AWS Lambda layer
-====================================
+----------------------------------------------
 
 Follow these steps to instrument your function using the Splunk OpenTelemetry Lambda Layer:
 
@@ -53,8 +71,17 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. Copy the Amazon Resource Name (ARN) for the region of your Lambda function from the list matching your architecture:
 
-   - Standard x86_64: https://github.com/signalfx/lambda-layer-versions/blob/master/splunk-apm/splunk-apm.md
-   - Graviton2 ARM64: https://github.com/signalfx/lambda-layer-versions/blob/master/splunk-apm/splunk-apm-arm.md
+   .. tabs::
+
+      .. tab:: Standard x86_64
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm.md
+
+      .. tab:: Graviton2 ARM64
+
+         .. github:: yaml
+            :url: https://raw.githubusercontent.com/signalfx/lambda-layer-versions/main/splunk-apm/splunk-apm-arm.md
 
 #. Paste the selected ARN in the :guilabel:`Specify an ARN` field and select :guilabel:`Add`.
 
@@ -69,7 +96,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 .. _set-env-vars-otel-lambda:
 
 Configure the Splunk OpenTelemetry Lambda Layer
-===============================================
+----------------------------------------------------
 
 Follow these steps to add the required configuration for the Splunk OpenTelemetry Lambda Layer:
 
@@ -147,7 +174,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 .. _go-serverless-instrumentation:
 
 Instrument Go functions in AWS Lambda
-====================================================
+-------------------------------------------
 
 To instrument a Go function in AWS Lambda for Splunk APM, follow these additional steps:
 
@@ -193,23 +220,44 @@ To instrument a Go function in AWS Lambda for Splunk APM, follow these additiona
 .. _serverless-framework-support-aws:
 
 Serverless Framework support
-=====================================================
+---------------------------------
 
 Some features of the Serverless Framework might impact OpenTelemetry tracing of Python Lambda functions.
 
 Python libraries compression
------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``zip`` feature of ``pythonRequirements`` allows packing and deploying Lambda dependencies as compressed files. To instrument packages compressed using the Serverless Framework, set the ``SPLUNK_LAMBDA_SLS_ZIP`` environment variable to ``true``. For more information, see https://github.com/serverless/serverless-python-requirements#dealing-with-lambdas-size-limitations on GitHub.
 
 Slim feature
------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your ``serverless.yml`` file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
 
 .. _check-otel-lambda-data:
 
 Check that data appears in Splunk Observability Cloud
-=====================================================
+----------------------------------------------------------
 
 Each time the AWS Lambda function runs, trace and metric data appears in Splunk Observability Cloud. If no data appears, see :ref:`troubleshooting-lambda-layer`.
+
+.. _ec2-otel-collector-serverless:
+
+Send serverless spans through the Splunk OpenTelemetry Collector
+=====================================================================
+
+By default, the Splunk OpenTelemetry Lambda Layer sends telemetry to Splunk Observability Cloud endpoints, without using a Collector. 
+
+Though not required, deploying a Splunk OTel Collector in the same virtual private cloud (VPC) of your Lambda can reduce latency in some cases.
+
+To send spans to the Splunk OTel Collector from an AWS Lambda function instrumented using the Splunk Lambda layer, follow these steps:
+
+#. Deploy the Collector in Gateway mode in a service your Lambda can reach, for example EC2. See :ref:`collector-gateway-mode`.
+#. Install the Splunk OTel Lambda layer. See :ref:`instrument-aws-lambda-functions`.
+#. Navigate to :guilabel:`Configuration` > :guilabel:`Environment variables`, then select :guilabel:`Edit`.
+#. As you're sending telemetry to the Collector, delete the ``SPLUNK_REALM`` environment variable.
+#. If you've already set the access token in the Collector configuration, delete the ``SPLUNK_ACCESS_TOKEN`` environment variable.
+#. Add the following environment variables:
+
+   -  ``OTEL_TRACES_EXPORTER`` with the value ``otlp_proto_http``
+   -  ``OTEL_EXPORTER_OTLP_ENDPOINT`` with the value ``<collector-gateway-ip-or-dns-name>:4318``
