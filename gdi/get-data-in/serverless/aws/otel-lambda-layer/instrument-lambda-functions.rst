@@ -169,6 +169,8 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
 4. Click :guilabel:`Save` and check that the environment variables appear in the table.
 
+To configure the mode of metric ingest, see :ref:`metrics-configuration-lambda`.
+
 .. note:: By default, the layer sends telemetry directly to Observability Cloud ingest endpoints. To send data to a Splunk OTel Collector in EC2, see :ref:`ec2-otel-collector-serverless`.
 
 .. _go-serverless-instrumentation:
