@@ -20,6 +20,23 @@ If no data from your instrumented AWS Lambda function appears in Observability C
 
 3. Try increasing the value of the ``OTEL_INSTRUMENTATION_AWS_LAMBDA_FLUSH_TIMEOUT`` environment variable if the back end or network is slow.
 
+4. Activate verbose logging of the extension. See :ref:`aws-lambda-debug-logging`.
+
+.. _aws-lambda-troubleshooting:
+
+No data points or metrics in Splunk Observability Cloud
+=========================================================
+
+If no metric data from your instrumented AWS Lambda function appears in Observability Cloud, try the following steps:
+
+1. Check the CloudWatch metrics of your AWS Lambda Function. Make sure the Lambda function is responding to invocations. You can also check for errors.
+
+2. Make sure that you specified the ``SPLUNK_REALM`` and ``SPLUNK_ACCESS_TOKEN`` environment variables. See :ref:`set-env-vars-otel-lambda`.
+
+3. The extension might be sending data points with significant delay due to buffering mode. See :ref:`metrics-configuration-lambda`.
+
+4. Activate verbose logging of the extension. See :ref:`aws-lambda-debug-logging`.
+
 Error about SPLUNK_ACCESS_TOKEN and SPLUNK_REALM
 =================================================================
 
@@ -52,6 +69,8 @@ Some of the wrappers included in the Splunk OpenTelemetry Lambda Layer load inst
    .. group-tab:: Python
 
       Enter the instrumentations you want to deactivate as comma-separated values for the ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS`` environment variable. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
+
+.. _aws-lambda-debug-logging:
 
 Activate debug logging
 ==================================================

@@ -29,15 +29,15 @@ To add a log view or log timeline chart on a dashboard, follow these steps:
 
 2. In the :strong:`Save` menu, select :strong:`Save to dashboard`.
 
-3. Give your log view or log timeline chart a name and optionally a description, then select a dashboard.
+3. Give your log view a name and optionally a description, then select a dashboard.
 
-4. In :strong:`Chart type`, select :strong:`Log timeline` or :strong:`Log view`, then select :strong:`Save`. Or, to see your new logs chart on its dashboard, select :strong:`Save and go to dashboard`.
+4. In :strong:`Chart type`, select :strong:`Log view`, then select :strong:`Save`. Or, to see your new log view on its dashboard, select :strong:`Save and go to dashboard`.
 
-You can now see your new logs chart along with all other charts on the same dashboard.  
+You can now see your new log view along with all other charts on the same dashboard.  
 
 Modify your logs chart from the dashboard
 =============================================================================
-You cannot directly edit a logs chart from the dashboard. For example, you cannot edit the column headings or data on your log view chart from the dashboard. You can delete a log view or log timeline chart entirely using the :strong:`More` menu. See :ref:`Chart actions <chart-actions>` to learn more.
+You cannot directly edit a log view from the dashboard. For example, you cannot edit the column headings or data on your log view chart from the dashboard. You can delete a log view entirely using the :strong:`More` menu. See :ref:`Chart actions <chart-actions>` to learn more.
 
 Log view and log timeline charts respond to any filter or time selection that you make on the dashboard. For example, when you adjust the :strong:`Time` field in the dashboard global control bar, logs charts update in unison with all other charts on the dashboard. 
 
