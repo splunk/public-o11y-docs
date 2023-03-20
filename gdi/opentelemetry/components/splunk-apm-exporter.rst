@@ -32,7 +32,7 @@ The following example shows a SAPM exporter instance configure for a maximum of 
 
    service:
      pipelines:
-       # To complete the integration, include the exporter in a traces metrics pipeline. 
+       # To complete the configuration, include the exporter in a traces metrics pipeline. 
        traces:
            receivers: [nop]
            processors: [nop]

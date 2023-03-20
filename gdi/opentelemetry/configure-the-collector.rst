@@ -15,11 +15,13 @@ Configure the Collector
     configure-the-collector-ootb.rst
     linux-config.rst
     kubernetes-config.rst
+    kubernetes-config-advanced.rst
+    kubernetes-config-logs.rst
     windows-config.rst
     other-configuration-sources.rst
     data-processing.rst
 
-You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately.
+You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately. See also :ref:`otel-data-processing`.
 
 .. _otel-config-options:
 
@@ -29,11 +31,11 @@ You can use a variety of default configuration files to set up the Splunk Distri
     <h2>Configuration files<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-See :ref:`the out-of-the-box configuration <otel-configuration-ootb>` for most environments. 
+See :ref:`the default configuration <otel-configuration-ootb>` to learn about the basic structure of the Collector's configuration file. It also contains an example valid for most environments. 
 
-Use these configurations to change the default settings in each Collector package:
+You can also use these configurations to change the default settings in each Collector package:
 
-* :ref:`otel-kubernetes-config`
+* Kubernetes: :ref:`Helm configuration <otel-kubernetes-config>`, :ref:`advanced config <otel-kubernetes-config-advanced>`, and :ref:`log config <otel-kubernetes-config-logs>`
 * :ref:`otel-linux-config`
 * :ref:`otel-windows-config`
 
@@ -57,7 +59,7 @@ To define multiple config files simultaneously use:
     <h2>Configure log collection<a name="otel-config-options" class="headerlink" href="#otel-config-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-Use :new-page:`Fluentd <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/buildscripts/packaging/fpm/etc/otel/collector/fluentd>` to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. 
+Use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
 
 .. raw:: html
 
@@ -94,6 +96,8 @@ The following is a sample configuration to collect custom logs:
     pos_file /var/log/td-agent/my-custom-logs.pos
     tag my-custom-logs
   </source>
+
+See :ref:`fluentd-receiver` for more information.
 
 .. _otel-config-additional-components:
 
