@@ -23,14 +23,11 @@ Scanning through requests and errors correlated with each indexed tag, Deepu see
 
 Deepu narrows the investigation to the code in version 350.10 of the ``/PaymentService/Charge`` endpoint and clicks the :strong:`Request/Errors` chart to get an example trace to see what the error is. Because Deepu enabled Related Content in Splunk APM, Deepu can click :strong:`Logs for trace` to switch to Splunk Log Observer for further troubleshooting. 
 
-:strong:`Learn more`
+Learn more
+============
 
 * For details about how to configure Splunk APM detectors, see :ref:`apm-alerts`.
-
 * For details about Tag Spotlight, see :ref:`apm-tag-spotlight`.
-
 * For an interactive walkthrough of Tag Spotlight, see :new-page:`APM Tag Spotlight Scenario <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-tag-spotlight-walkthrough&version=current>`. 
-
 * For details about using Related Content, see :ref:`get-started-relatedcontent`.
-
 * For more information about using Splunk Log Observer to detect the source of problems, see :ref:`get-started-logs`. 
