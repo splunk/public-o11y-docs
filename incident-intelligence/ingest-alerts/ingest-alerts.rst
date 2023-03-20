@@ -14,6 +14,7 @@ Ingest alerts in Splunk Incident Intelligence
     ingest-azure
     ingest-prometheus
     ingest-rest
+    ingest-snow
 
 The following options are available for ingesting alerts in Incident Intelligence:
 
