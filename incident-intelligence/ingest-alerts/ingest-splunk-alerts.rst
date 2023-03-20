@@ -14,7 +14,7 @@ Download and configure the Splunk Incident Intelligence app
 
 #. Download and install the Splunk Incident Intelligence app from :new-page:`Splunkbase <https://splunkbase.splunk.com/>`.
 #. Open the app and select :guilabel:`Setup Org and Token`.
-    #. Enter the :guilabel:`Realm`, :guilabel:`Org Id`, and :guilabel:`SFX Token`. For steps to obtain this information, see :ref:`organizations`.
+    #. Enter the :guilabel:`Realm`, :guilabel:`Org Id`, and :guilabel:`SFX Token`. For steps to obtain this information, see :ref:`organizations`. When obtaining your access token, select the default token or a token with INGEST and API scopes, in the list of tokens.
     #. Select :guilabel:`Send Test Alert`. This is only a status code verification that ensures there is a valid response to the ingest endpoint. There is no test alert in Incident Intelligence. 
     #. You can repeat these steps to create multiple entries for additional realms or organizations.
 
