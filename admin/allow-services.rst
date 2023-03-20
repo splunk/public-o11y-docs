@@ -48,34 +48,34 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
 
    .. code-tab:: powershell Windows
 
-      $Env:HTTP_PROXY = "proxy.ex"
-      $Env:HTTPS_PROXY = "proxy.ex"
+      $Env:HTTP_PROXY = "proxy.address:<port>"
+      $Env:HTTPS_PROXY = "proxy.address:<port>"
 
    .. code-tab:: bash Linux
 
-      export HTTPS_PROXY = "proxy.ex"
-      export HTTPS_PROXY = "proxy.ex"
+      export HTTPS_PROXY = "proxy.address:<port>"
+      export HTTPS_PROXY = "proxy.address:<port>"
 
    .. code-tab:: yaml Docker compose
 
       services:
          otelcol:
             environment:
-               - HTTP_PROXY='proxy.ex'
-               - HTTPS_PROXY='proxy.ex'
+               - HTTP_PROXY='proxy.address:<port>'
+               - HTTPS_PROXY='proxy.address:<port>'
 
    .. code-tab:: bash Docker run
 
-      -e HTTP_PROXY=proxy.ex
-      -e HTTPS_PROXY=proxy.ex
+      -e HTTP_PROXY=proxy.address:<port>
+      -e HTTPS_PROXY=proxy.address:<port>
 
    .. code-tab:: yaml Kubernetes
 
       env:
          - name: HTTP_PROXY
-           value: 'proxy.ex'
+           value: 'proxy.address:<port>'
          - name: HTTPS_PROXY
-           value: 'proxy.ex'
+           value: 'proxy.address:<port>'
 
    .. code-tab:: yaml Ansible
 
@@ -91,8 +91,8 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
               splunk_realm: SPLUNK_REALM
               # Set the proxy address, respectively for http_proxy and https_proxy environment variables
               # It must be a full URL like http://user:pass@10.0.0.42. Not used by Ansible itself.
-              splunk_otel_collector_proxy_http: proxy.ex
-              splunk_otel_collector_proxy_https: proxy.ex
+              splunk_otel_collector_proxy_http: proxy.address:<port>
+              splunk_otel_collector_proxy_https: proxy.address:<port>
               # Set the ip or hosts that don't use proxy settings. Only used if splunk_otel_collector_proxy_http
               # or splunk_otel_collector_proxy_https is defined. Default is localhost,127.0.0.1,::1)
               splunk_otel_collector_no_proxy): 127.0.0.1
