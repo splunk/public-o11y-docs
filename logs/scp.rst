@@ -19,21 +19,34 @@ Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, 
 
 Prerequisites
 ==============================================================
-Ensure that token authentication is enabled in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how.
+Ensure that token authentication is enabled in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
 
 Set up Log Observer Connect
 ==============================================================
 To set up Log Observer Connect for Splunk Cloud Platform without help from the Support team, follow these steps:
 
+Observability Cloud
+----------------------------------------------------------------
 1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Observability Cloud. Contact your organization's Observability Cloud administrator to perform this integration.
 
-2. Select :guilabel:`Splunk Cloud Platform`.
+2. Select :guilabel:`Splunk Cloud Platform`. 
 
-3. Follow the instructions in the guided setup for the integration to do the following in Splunk Cloud Platform:
+Splunk Cloud Platform
+----------------------------------------------------------------
+3. In Splunk Cloud Platform, follow the instructions in the guided setup for the integration to do the following:
 
    a. Configure a service account in Splunk Cloud Platform. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect.
 
+      .. image:: /_images/logs/setupLOC1.png
+         :width: 100%
+         :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
+      
+
    b. Configure users in the Splunk Cloud Platform.
+   
+      .. image:: /_images/logs/setupLOC2.png
+         :width: 100%
+         :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
 
    c. Attach the role and the user you created in the integration guided setup.
 
@@ -45,7 +58,37 @@ To set up Log Observer Connect for Splunk Cloud Platform without help from the S
       
       - Removes your local machine's IP from the allow list
       
-4. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance.
+4. Copy the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Cloud Platform instance. The script returns 3 certificates. Be sure to copy only the first certificate and include ``-----BEGIN CERTIFICATE-----`` and ``-----END CERTIFICATE-----``. The following is an example of a certificate. 
+
+      ``-----BEGIN CERTIFICATE-----``
+      
+      ``MIIEiDCCA3CgAwIBAgIQYtRkQZS4gkQSqEN/3NaYgjANBgkqhkiG9w0BAQsFADBG
+      MQswCQYDVQQGEwJVUzEiMCAGA1UEChMZR29vZ2xlIFRydXN0IFNlcnZpY2VzIExM
+      QzETMBEGA1UEAxMKR1RTIENBIDFDMzAeFw0yMzAyMjAwOTE1MzRaFw0yMzA1MTUw
+      OTE1MzNaMBkxFzAVBgNVBAMTDnd3dy5nb29nbGUuY29tMFkwEwYHKoZIzj0CAQYI
+      KoZIzj0DAQcDQgAEOU31sc6basWKjNmWj0gWF9ewzDavJK3QKASkQ/V7XwatprPh
+      /vnuEzWx8vYY1Rlfcy5Yhsxpa/Cb9Iomn+wIaqOCAmgwggJkMA4GA1UdDwEB/wQE
+      AwIHgDATBgNVHSUEDDAKBggrBgEFBQcDATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQW
+      BBQilv+CDxMpP/SuW5VTeT4rzLTAoTAfBgNVHSMEGDAWgBSKdH+vhc3ulc09nNDi
+      RhTzcTUdJzBqBggrBgEFBQcBAQReMFwwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3Nw
+      LnBraS5nb29nL2d0czFjMzAxBggrBgEFBQcwAoYlaHR0cDovL3BraS5nb29nL3Jl
+      cG8vY2VydHMvZ3RzMWMzLmRlcjAZBgNVHREEEjAQgg53d3cuZ29vZ2xlLmNvbTAh
+      BgNVHSAEGjAYMAgGBmeBDAECATAMBgorBgEEAdZ5AgUDMDwGA1UdHwQ1MDMwMaAv
+      oC2GK2h0dHA6Ly9jcmxzLnBraS5nb29nL2d0czFjMy9tb1ZEZklTaWEyay5jcmww
+      ggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEAdwCt9776fP8QyIudPZwePhhqtGcpXc+x
+      DCTKhYY069yCigAAAYZuUlZbAAAEAwBIMEYCIQDlwIgI7EnPSD21IsDsf1botxy/
+      Blfi2jKy60WpGq+XNgIhAI8L2XYzQ8OEGsw7JmpWC/hOKSB18n6wqB3EMWYFoaRc
+      AHYAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGGblJWVQAABAMA
+      RzBFAiBd+rIH4lPny35N5OmGqOEYNXl3rK7pfzfjZH0sFF30TwIhAKK4pgWZO0IN
+      fTzqnyWKEbmqy6lyNvl/khtYreqsvE0eMA0GCSqGSIb3DQEBCwUAA4IBAQCyw1us
+      +cEBWh7HglwAoU1TMStbdNrugviDQ3DoBnGL4N+sCjOfXzCXGhINLwzv8KfAZV+Y
+      0IX4nGNyliDu7Gd6vt+pnyLUsI2fTfPZq6Po14rNGaC8vRHcN+Yo317ylo6sQD6E
+      Z04CmlIA4JUzEtj1H6tj69RjyxDqV5EXsGLJ+DIJ4JYAm5xi6gEvFkdhnVYvHV5W
+      0BNRR+EO4Vw/tOkpyisemMt9L9aFZ4HaEuiSvL3R/HGU94uCxXc+TFwmVTelVFZN
+      eP4Q0ck4ooUOd7XgCc5qdvCiCiD/268+gBNSHhJSPZXeuzC6vL7mMKVY4I80sKKP
+      F+4goIJZUyLdHZ+a``
+
+     ``-----END CERTIFICATE-----``
 
 5. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 

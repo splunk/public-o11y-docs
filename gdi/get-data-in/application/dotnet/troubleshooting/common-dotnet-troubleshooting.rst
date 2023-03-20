@@ -20,6 +20,20 @@ Follow these steps to troubleshoot general instrumentation issues:
 
 #. Check what environment variables apply to your process using tools such as Process Explorer. On Linux, run ``cat /proc/<pid>/environ`` where ``<pid>`` is the process ID.
 
+#. Make sure that all environment variables are configured use the following commands:
+
+   .. tabs::
+
+      .. code-tab:: shell Windows (PowerShell)
+
+         # Run a tool like Process Explorer or execute the following:
+
+         [System.Diagnostics.Process]::GetProcessById(<pid>).StartInfo.EnvironmentVariables
+
+      .. code-tab:: shell Linux
+
+         cat /proc/<pid>/environ # where <pid> is the process ID
+
 Activate debug logging
 ----------------------------------------------------
 

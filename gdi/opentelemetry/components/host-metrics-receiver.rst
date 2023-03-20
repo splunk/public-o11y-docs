@@ -22,11 +22,10 @@ By default, the host metrics receiver is activated in the Splunk Distribution of
 
 Host receiver metrics appear in Infrastructure Monitoring. You can use them to create dashboards and alerts. See :ref:`create-detectors` for more information.
 
-
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -84,40 +83,40 @@ Scrapers extract data from endpoints and then send that data to a specified targ
       - Description
    - 
 
-      - cpu
-      - CPU utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/cpuscraper/documentation.md` for a complete list of metrics.
+      - ``cpu``
+      - CPU utilization metrics
    - 
 
-      - disk
-      - Disk I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/diskscraper/documentation.md` for a complete list of metrics.
+      - ``disk``
+      - Disk I/O metrics
    - 
 
-      - load
-      - CPU load metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/loadscraper/documentation.md` for a complete list of metrics.
+      - ``load``
+      - CPU load metrics
    - 
 
-      - filesystem
-      - File system utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/documentation.md` for a complete list of metrics.
+      - ``filesystem``
+      - File system utilization metrics
    - 
 
-      - memory
-      - Memory utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/memoryscraper/documentation.md` for a complete list of metrics.
+      - ``memory``
+      - Memory utilization metrics
    - 
 
-      - network
-      - Network interface I/O metrics and TCP connection metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/networkscraper/documentation.md` for a complete list of metrics.
+      - ``network``
+      - Network interface I/O metrics and TCP connection metrics
    - 
 
-      - paging
-      - Paging or swap space utilization and I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/pagingscraper/documentation.md` for a complete list of metrics.
+      - ``paging``
+      - Paging or swap space utilization and I/O metrics
    - 
 
-      - processes
-      - Process count metrics. Only available on Linux. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processesscraper/documentation.md` for a complete list of metrics.
+      - ``processes``
+      - Process count metrics. Only available on Linux
    - 
 
-      - process
-      - Per process CPU, memory, and disk I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processscraper/documentation.md` for a complete list of metrics.
+      - ``process``
+      - Per process CPU, memory, and disk I/O metrics
 
 See the following sections for scraper configurations.
 
@@ -223,6 +222,74 @@ values. For example:
      pipelines:
        metrics:
          receivers: [hostmetrics, hostmetrics/disk]
+
+Metrics
+=====================
+
+The following metrics, resource attributes, and attributes are available.
+
+cpu scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/cpuscraper.yaml"></div>
+
+disk scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/diskscraper.yaml"></div>
+
+filesystem scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/filesystemscraper.yaml"></div>
+
+load scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/loadscraper.yaml"></div>
+
+memory scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url=https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
+
+network scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/networkscraper.yaml"></div>
+
+paging scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/pagingscraper.yaml"></div>
+
+processes scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processesscraper.yaml"></div>
+
+process scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processscraper.yaml"></div>
 
 Resource attributes
 --------------------------

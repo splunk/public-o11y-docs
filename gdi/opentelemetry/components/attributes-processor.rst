@@ -33,7 +33,7 @@ You can apply any of the following actions on collected attributes of spans, met
    * - ``convert``
      - Converts an attribute to another type, as specified in the ``converted_type`` parameter, which can be either ``int``, ``double``, or ``string``.
 
-.. note:: To include or exclude whole spans, logs, or metrics without, use the filter processor. See :ref:`filter-processor`.
+.. note:: To include or exclude whole spans, logs, or metrics, use the filter processor. See :ref:`filter-processor`.
 
 Get started
 ======================
