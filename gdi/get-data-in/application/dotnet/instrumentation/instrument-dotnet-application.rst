@@ -11,12 +11,6 @@ The SignalFx Instrumentation for .NET automatically instruments .NET application
 
 To get started, use the guided setup or follow the instructions manually.
 
-- :ref:`install-dotnet-instrumentation`
-- :ref:`instrument-windows-service`
-- :ref:`instrument-aspnet-iis`
-- :ref:`instrument-azure-app`
-- :ref:`instrument-azure-webjobs`
-
 Generate customized instructions using the guided setup
 ====================================================================
 
@@ -35,10 +29,21 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`.NET` tile to open the .NET guided setup.
 
+Install the SignalFx Instrumentation for .NET manually
+==================================================================
+
+Follow these instructions to install the SignalFx Instrumentation for .NET:
+
+- :ref:`install-dotnet-instrumentation`
+- :ref:`instrument-windows-service`
+- :ref:`instrument-aspnet-iis`
+- :ref:`instrument-azure-app`
+- :ref:`instrument-azure-webjobs`
+
 .. _install-dotnet-instrumentation:
 
 Instrument a .NET application
-===================================================================
+--------------------------------------------------------------------
 
 Follow these steps to automatically instrument your application:
 
@@ -119,7 +124,7 @@ If you need to add custom attributes to spans or want to manually generate spans
 .. _enable_profiling_dotnet:
 
 Activate AlwaysOn Profiling
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate AlwaysOn Profiling, set the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``.
 
@@ -130,7 +135,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 .. _enable_automatic_metric_collection_dotnet:
 
 Activate metrics collection
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLED`` environment variable to ``true``.
 
@@ -143,7 +148,7 @@ See :ref:`dotnet-metrics-attributes` for more information about the metrics coll
 .. _instrument-windows-service:
 
 Instrument a Windows service running a .NET application
-===================================================================
+--------------------------------------------------------------------
 
 To instrument a Windows service, install the instrumentation and set the following environment variables:
 
@@ -166,7 +171,7 @@ For more information on the default service name, see :ref:`dotnet-default-servi
 .. _instrument-aspnet-iis:
 
 Instrument an ASP.NET application deployed on IIS
-===================================================================
+--------------------------------------------------------------------
 
 To instrument an ASP.NET application running on IIS, install the instrumentation and edit the ``web.config`` file to add the following settings. See :ref:`configuration-methods-dotnet` for more information.
 
@@ -217,7 +222,7 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
 .. _instrument-azure-app:
 
 Instrument an application in Azure App Service
-===================================================================
+--------------------------------------------------------------------
 
 To instrument an application or service in Azure App Service, follow these steps:
 
@@ -254,7 +259,7 @@ To instrument an application or service in Azure App Service, follow these steps
 .. _instrument-azure-webjobs:
 
 Instrument a background task in Azure App Service
-----------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When instrumenting an Azure WebJob in App Service, add the following settings. Replace ``<extension-version>`` in system paths with the version of the .NET instrumentation, for example, ``v0.2.0``:
 
@@ -305,7 +310,7 @@ When instrumenting an Azure WebJob in App Service, add the following settings. R
 .. _kubernetes_dotnet:
 
 Deploy the .NET instrumentation in Kubernetes
-==========================================================
+--------------------------------------------------------------------
 
 To deploy the .NET instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -346,7 +351,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-dotnet:
 
 Send data directly to Observability Cloud
-==============================================================
+--------------------------------------------------------------------
 
 By default, the instrumentation sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
