@@ -12,16 +12,16 @@ Kai, a site reliability engineer at Buttercup Games, receives tickets from multi
 To troubleshoot the invalid request error reports, Kai takes the following steps:
 
 #. Kai opens the service map
-#. Kai looks for services that have root cause errors
+#. Kai looks for services that have root-cause errors
 #. Kai selects the service to gather more details
 #. Kai adds a link to Tag Spotlight for the offending endpoint to the customer ticket
 
 Kai opens the service map
 ===========================
 
-To figure out the most downstream service causing the error, Kai selects the :strong:`Explore` card in Splunk APM to open the service map for troubleshooting. Kai looks through the real-time service map, which contains nodes and dependencies of services instrumented in Splunk APM. 
+To investigate the downstream service causing the error, Kai selects the :strong:`Explore` card in Splunk APM to open the service map for troubleshooting. Kai looks through the real-time service map, which contains nodes and dependencies of services instrumented in Splunk APM. 
 
-Kai looks for services that have root cause errors
+Kai looks for services that have root-cause errors
 ====================================================
 
 The service map identifies the root cause error rate using red. Kai finds that the :strong:`paymentservice` node has a red dot, and the dependency arrow from the :strong:`checkoutservice` node and the :strong:`paymentservice` node is red. 
@@ -44,12 +44,12 @@ Kai selects the :strong:`paymentservice` node to discover the endpoint with the 
 Kai adds a link to Tag Spotlight for the offending endpoint to the customer ticket
 =====================================================================================
 
-Kai gets a link to the Tag Spotlight for the endpoint and includes it in a note he adds to the customers' tickets identifying the endpoint as the root cause of the error. Kai sends the ticket to the payment service owner for further troubleshooting.
+Kai gets a link to the Tag Spotlight for the endpoint and includes it in a note he adds to the customer tickets identifying the endpoint as the root cause of the error. Kai sends the ticket to the payment service owner for further troubleshooting.
 
 Summary
 ==============
 
-Kai used the service map to quickly isolate a service with a high root cause error rate rate and identifies it as the likely culprit of invalid request errors customers were reporting. He shares this info with the service owner for further troubleshooting.
+Kai used the service map to quickly isolate a service with a high root cause error rate and identified it as the likely culprit of invalid request errors customers were reporting. He shares this info with the service owner for further troubleshooting.
 
 Learn more
 ==============
