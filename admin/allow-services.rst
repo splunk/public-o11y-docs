@@ -38,20 +38,22 @@ Configure proxy settings
 
 If you need to use a proxy, set one of the following environment variables according to your needs:
 
-- ``HTTP_PROXY``: The HTTP proxy address
-- ``HTTPS_PROXY``: The HTTPS proxy address
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+- ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
+- ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy.
 
-The following examples show how to set the ``HTTPS_PROXY`` environment variable for hosts and containers:
+The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` environment variable for hosts and containers:
 
 .. tabs::
 
    .. code-tab:: powershell Windows
 
+      $Env:HTTP_PROXY = "proxy.address:8080"
       $Env:HTTPS_PROXY = "proxy.address:443"
 
    .. code-tab:: bash Linux
 
+      export HTTPS_PROXY = "proxy.address:8080"
       export HTTPS_PROXY = "proxy.address:443"
 
    .. code-tab:: yaml Docker compose
@@ -59,15 +61,19 @@ The following examples show how to set the ``HTTPS_PROXY`` environment variable 
       services:
          otelcol:
             environment:
+               - HTTP_PROXY='proxy.address:8080'
                - HTTPS_PROXY='proxy.address:443'
 
    .. code-tab:: bash Docker run
 
+      -e HTTP_PROXY=proxy.address:8080
       -e HTTPS_PROXY=proxy.address:443
 
    .. code-tab:: yaml Kubernetes
 
       env:
+         - name: HTTP_PROXY
+           value: 'proxy.address:8080'
          - name: HTTPS_PROXY
            value: 'proxy.address:443'
 
