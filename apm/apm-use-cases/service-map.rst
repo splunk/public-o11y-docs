@@ -13,7 +13,7 @@ To troubleshoot the invalid request error reports, Kai takes the following steps
 
 #. Kai opens the service map
 #. Kai looks for services that have root cause errors
-#. Kai selects service to gather more details about the root cause error
+#. Kai selects the service to gather more details about the root cause error
 #. Kai adds a link to Tag Spotlight for the offending endpoint to the customer ticket
 
 Kai opens the service map
@@ -32,8 +32,8 @@ The service map identifies the root cause error rate using red. Kai finds that t
 
 |br|
 
-Kai selects service to gather more details about the root cause error
-=======================================================================
+Kai selects the service to gather more details about the root cause error
+===========================================================================
 
 Kai selects the :strong:`paymentservice` node to discover the endpoint with the top error rate in the Tag Spotlight sidebar. Kai finds that all of the errors occur in one endpoint, as shown in the following screenshot:
 
