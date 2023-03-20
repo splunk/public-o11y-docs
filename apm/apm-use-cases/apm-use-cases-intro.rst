@@ -32,7 +32,7 @@ Buttercup Games, a fictitious game company, recently refactored its e-commerce s
     <h2>Troubleshooting use cases</h2>
   </embed>
 
-Site reliability engineers, service owners, engineering executives, and performance engineers at Buttercup Games use Splunk APM for the following troubleshooting-related use cases: 
+Site reliability engineers, service owners, engineering executives, and performance engineers at Buttercup Games use Splunk APM for the following troubleshooting use cases: 
 
 - :ref:`service-map`
 - :ref:`services-impact-business-workflows`
@@ -41,10 +41,6 @@ Site reliability engineers, service owners, engineering executives, and performa
 - :ref:`specific-trace`
 - :ref:`apm-use-case-trace-analyzer`
 - :ref:`profiling-use-case`
-- :ref:`monitor-services`
-- :ref:`configure-business-workflows`
-- :ref:`historical-data`
-- :ref:`custom-metricset`
 
 .. raw:: html
 
@@ -52,7 +48,7 @@ Site reliability engineers, service owners, engineering executives, and performa
     <h2>Monitoring use cases</h2>
   </embed>
 
-Site reliability engineers, service owners, engineering executives, and performance engineers at Buttercup Games use Splunk APM for the following monitoring-related use cases: 
+Site reliability engineers, service owners, engineering executives, and performance engineers at Buttercup Games use Splunk APM for the following monitoring use cases: 
 
 - :ref:`monitor-services`
 - :ref:`configure-business-workflows`
