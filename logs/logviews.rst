@@ -7,9 +7,9 @@ Add logs data to Splunk Observability Cloud dashboards
 .. meta::
   :description: Add logs data to Observability Cloud dashboards without turning your logs into metrics first. Align log views, log timeline charts, and metrics charts on one dashboard.
 
-You can add logs data to your Observability Cloud dashboards without turning your logs into metrics first. On a dashboard, metrics charts show what changed in your systems and when the problem started. Logs data on the same dashboard shows you in detail what is happening and why. Your metrics and logs data on the same dashboard respond to the same time selection and other dashboard filters, allowing you to drill down to the source of the problem faster.
+On a dashboard, metrics charts show what changed in your systems and when the problem started. Logs data on the same dashboard shows you in detail what is happening and why. Your metrics and logs data on the same dashboard respond to the same time selection and other dashboard filters, allowing you to drill down to the source of the problem faster.
 
-A log view chart displays a table showing log records in chronological order for the duration of the period selected in the time picker. Log view charts automatically update to dashboard filters. Filter and aggregate logs in Log Observer before creating a log timeline chart.
+A log view chart displays a table showing log records in chronological order for the duration of the period selected in the time picker. Log views automatically update to dashboard filters. Filter and aggregate logs in Log Observer before creating a log timeline chart.
 
 .. note:: Log Observer Connect customers can only create log views in dashboards if each Log Observer Connect connection name is unique.
 
