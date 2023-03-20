@@ -34,9 +34,9 @@ Perform the following steps:
 
    #. :guilabel:`ServiceNow Fields`: Enter the JSON that contains the ServiceNow field values to use. For example, if you have an incident policy for WebUI incidents, you can create a field that says WebUI incident, so the responder doesn't have to fill that in.
 
-   #. (Optional):guilabel:`Close Incident Mapping JSON`: Enter the JSON to map the fields users is prompted to provide when closing an incident.
+   #. (Optional) :guilabel:`Close Incident Mapping JSON`: Enter the JSON to map the fields users are prompted to provide when closing an incident.
 
-   #. (Optional) :guilabel:`Resolve Incident Mapping JSON`: Enter the JSON to map the fields users is prompted to provide when closing an incident.
+   #. (Optional) :guilabel:`Resolve Incident Mapping JSON`: Enter the JSON to map the fields users are prompted to provide when closing an incident.
 
 Once you configure this, any incident created using that incident policy displays the related ServiceNow ticket information in the :guilabel:`Resources` section of the incident details.
 
@@ -62,9 +62,9 @@ If you are reviewing or working on a specific incident in Splunk Incident Intell
 
    #. :guilabel:`ServiceNow Fields`: Enter the JSON that contains the ServiceNow field values to use.
 
-   #. (Optional):guilabel:`Close Incident Mapping JSON`: Enter the JSON to map the fields users is prompted to provide when closing an incident.
+   #. (Optional) :guilabel:`Close Incident Mapping JSON`: Enter the JSON to map the fields users are prompted to provide when closing an incident.
 
-   #. (Optional) :guilabel:`Resolve Incident Mapping JSON`: Enter the JSON to map the fields users is prompted to provide when closing an incident.
+   #. (Optional) :guilabel:`Resolve Incident Mapping JSON`: Enter the JSON to map the fields users are prompted to provide when closing an incident.
 
 
 
