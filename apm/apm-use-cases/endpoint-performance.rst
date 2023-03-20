@@ -34,7 +34,7 @@ Within Endpoint Performance, Alex sorts the endpoints by P90 Latency so they can
 
 .. _compare-endpoint-performance:
 
-Alex compares the last hour performance to the 24 hours previous
+Alex compares the last hour performance to the same hour from yesterday
 =============================================================================
 
 Alex knows there was a release this morning, so they update the time dropdown to -1h and they select -24h for the comparison so that they can compare the last hour to the same time frame yesterday.
