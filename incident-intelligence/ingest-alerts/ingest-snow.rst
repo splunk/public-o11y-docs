@@ -27,10 +27,15 @@ Perform the following steps:
 #. Select :guilabel:`Add action`.
 #.  On the :guilabel:`Add new action` dialog, in the :guilabel:`Integration` field, select Create ServiceNOW ticket.
 #. Complete the following fields:
+
    #. :guilabel:`Integration Instance`: Select the ServiceNow instance to work with. For example, you might have a production and a test instance.
+  
    #. :guilabel:`ServiceNow table`: the default is incident.
+
    #. :guilabel:`ServiceNow Fields`: Enter the JSON that contains the ServiceNow field values to use. For example, if you have an incident policy for WebUI incidents, you can create a field that says WebUI incident, so the responder doesn't have to fill that in.
+
    #. (Optional):guilabel:`Close Incident Mapping JSON`: Enter the JSON to map the fields users is prompted to provide when closing an incident.
+
    #. (Optional) :guilabel:`Resolve Incident Mapping JSON`: Enter the JSON to map the fields users is prompted to provide when closing an incident.
 
 Once you configure this, any incident created using that incident policy displays the related ServiceNow ticket information in the :guilabel:`Resources` section of the incident details.
@@ -50,10 +55,15 @@ If you are reviewing or working on a specific incident in Splunk Incident Intell
 #. In the :guilabel:`Resources` section, select :guilabel:`Add Resource`.
 #. On the :guilabel:`Add resource` dialog, in the :guilabel:`Integration` field, select Create ServiceNOW ticket.
 #. Complete the following fields:
+
    #. :guilabel:`Integration Instance`: Select the ServiceNow instance to work with. For example, you might have a production and a test instance.
+
    #. :guilabel:`ServiceNow table`: the default is incident.
+
    #. :guilabel:`ServiceNow Fields`: Enter the JSON that contains the ServiceNow field values to use.
+
    #. (Optional):guilabel:`Close Incident Mapping JSON`: Enter the JSON to map the fields users is prompted to provide when closing an incident.
+
    #. (Optional) :guilabel:`Resolve Incident Mapping JSON`: Enter the JSON to map the fields users is prompted to provide when closing an incident.
 
 
