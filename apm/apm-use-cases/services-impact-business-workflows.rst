@@ -11,9 +11,9 @@ Kai, a site reliability engineer at Buttercup Games, wants to know how the appli
 
 To track how microservices impact business KPIs, Kai takes the following steps:
 
-#. :ref:`apm-overview`Kai reviews the APM Overview
-#. Kai opens the service map to find services with root-cause errors
-#. Kai breaks down the services to see error details by workflow
+#. :ref:`apm-overview`
+#. :ref:`business-workflow-use-case-service-map`
+#. :ref:`breakdown`
 
 .. _apm-overview:
 
@@ -26,10 +26,14 @@ Kai opens the :strong:`APM Overview`, which generates charts of all services and
     :width: 99%
     :alt: This screenshot shows the APM Overview page, which has charts of latency and requests/errors of all Business Workflows.
 
+.. _workflow-use-case-service-map:
+
 Kai opens the service map to find services with root-cause errors
 ====================================================================
 
 Kai selects the :strong:`Explore` card to open the service map. Kai selects nodes with red dots that indicate services with root-cause errors. In this case, :strong:`paymentservice` and :strong:`checkoutservice` nodes are showing root-case errors. 
+
+.. _breakdown:
 
 Kai breaks down the services by workflow to see error details by workflow
 ============================================================================
