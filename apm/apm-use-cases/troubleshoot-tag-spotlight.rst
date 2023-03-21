@@ -33,7 +33,7 @@ Deepu notices errors differ based on the version tag
 Deepu sees that the errors are evenly distributed for all tag values except the :strong:`version` tag. All errors occur in version 350.10, a recent code release for the service. Deepu rolls back to the previous release, version 350.9, to keep the site running while notifying and waiting for the engineers to solve the issue.
 
 ..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_VersionTag.png
-    :width: 99%
+    :width: 50%
     :alt: This screenshot shows the data based in the indexed version tag in Tag Spotlight. 
 
 Deepu opens a example trace
