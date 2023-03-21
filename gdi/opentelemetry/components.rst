@@ -27,6 +27,9 @@ Components
     components/receiver-creator-receiver
     components/resource-processor
     components/resourcedetection-processor
+    components/signalfx-exporter
+    components/signalfx-receiver
+    components/smartagent-receiver
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
