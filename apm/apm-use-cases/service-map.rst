@@ -31,7 +31,7 @@ Kai looks for services that have root-cause errors
 The service map identifies the root cause error rate using red. Kai finds that the :strong:`paymentservice` node has a red dot, and the dependency arrow from the :strong:`checkoutservice` node and the :strong:`paymentservice` node is red. 
 
 ..  image:: /_images/apm/apm-use-cases/service-map-01.png
-    :width: 80%
+    :width: 50%
     :alt: This screenshot shows the service map view of the Buttercup Games website where nodes with root cause errors are highlighted in red.
 
 |br|
