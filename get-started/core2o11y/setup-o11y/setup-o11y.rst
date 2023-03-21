@@ -24,4 +24,6 @@ For every Observability Cloud component, see the following topics to send your d
 
 - :ref:`set-up-synthetics` to set up your first Uptime and Browser tests.
 
-For an overview of setting up all components and the recommended order of setup, see :ref:`get-started-get-data-in`.
+- :ref:`ii-set-up-incident-intelligence` to configure alerts, incident policies, and on-call schedules in Incident Intelligence.
+
+For an overview of setting up all components and the suggested order of setup, see :ref:`get-started-get-data-in`.
