@@ -188,6 +188,7 @@ You can also automatically instrument your Java applications along with the Coll
 
 Deployments
 ====================
+
 Splunk offers the configuration management options described in this section.
 
 .. _linux-amazon-ecs-ec2:
@@ -298,6 +299,8 @@ To set custom permissions after the Collector has been installed, use:
 Docker
 ----------------
 
+The Linux docker image of the Splunk Distribution of OpenTelemetry Collector contains a multi-arch manifest that specifies the images for AMD64, ARM64, and ppc64le architectures. Docker uses this manifest to download the correct image for the target platform.
+
 Run the following command to install the package using Docker:
 
 .. code-block:: bash
@@ -316,7 +319,7 @@ The following list provides more information on the ``docker run`` command optio
 * ``-e`` sets simple (non-array) environment variables in the container you're running, or overwrite variables that are defined in the Dockerfile of the image you're running.
 * ``-p`` publishes a container's port(s) to the host.
 
-Run the following command to execute an interactive bash shell on the container and see the status of the Collector:
+Run the following command to run an interactive bash shell on the container and see the status of the Collector:
 
 .. code-block:: bash
 
