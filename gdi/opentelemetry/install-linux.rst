@@ -299,7 +299,7 @@ To set custom permissions after the Collector has been installed, use:
 Docker
 ----------------
 
-The Docker container of the Splunk Distribution of OpenTelemetry Collector contains an image whose manifest specifies images for x86_64, AMD64, ARM64, and ppc64 architectures. Docker can use the manifests to download the correct image for the target platform.
+The Docker container of the Splunk Distribution of OpenTelemetry Collector contains an image whose manifest specifies images for AMD64, ARM64, and ppc64le architectures. Docker can use the manifests to download the correct image for the target platform.
 
 Run the following command to install the package using Docker:
 
