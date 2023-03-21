@@ -21,84 +21,77 @@ Sensitive data may fall within the categories of personally identifiable informa
 
 Splunk RUM for Browser instrumentation
 ==============================================
-``splunk-otel-js-web`` library 
+This instrumentation uses the ``splunk-otel-js-web`` library. 
+
 
 .. list-table::
     :header-rows: 1
-    :widths: 40, 20, 40 
+    :widths: 40, 60
 
     * - :strong:`Scenario`
       - :strong:`Command`
-      - :strong:`Example`
-    * - Drop or redact parts of an attribute value
+    * - Drop or redact parts of an attribute value.  Specify the name, or parse one or more attributes specified by their name and regex matched value. 
       - ``onAttributesSerializing``
-      - Specify the name of the  Parse one or more attributes specified by their name and regex matched value 
-    * - Drop specific attributes across all spans or events
+    * - Drop specific attributes across all spans or events.
       - ``onAttributesSerializing``
-      - words 
-    * - Drop entire spans or events
+    * - Drop entire spans or events.
       - 
          * ``ignoreURLs``
          * ``suppressTracing``
-      - 
-         * words 
-         * words 
+
  
 
 Splunk RUM for Mobile Android instrumentation
 ==============================================
 
-``splunk-otel-android``
+This instrumentation uses the ``splunk-otel-android`` library. 
+
 
 .. list-table::
     :header-rows: 1
-    :widths: 40, 20, 40 
+    :widths: 40, 60
 
     * - :strong:`Scenario`
       - :strong:`Command`
-      - :strong:`Example`
-    * - Drop or redact parts of an attribute value
+    * - Drop or redact parts of an attribute value.
       - ``filterSpans(SpanFilterBuilder.replaceSpanAttribute)``
-      - words 
-    * - Drop specific attributes across all spans or events
+    * - Drop specific attributes across all spans or events.
       - ``filterSpans(SpanFilterBuilder.removeSpanAttribute``
-      - words 
-    * - Drop entire spans or events
+    * - Drop entire spans or events.
       - ``filterSpans(SpanFilterBuilder.rejectSpansByName)``
-      - 
-         * words 
-         * words 
+
  
-
-
-
-
-
 
 
 Splunk RUM for mobile iOS instrumentation 
 ================================================
 
-``splunk-otel-ios`` library 
+This instrumentation uses the ``splunk-otel-ios`` library. For an example of these commands, see:
 
 .. list-table::
     :header-rows: 1
-    :widths: 40, 20, 40 
+    :widths: 40, 60 
 
     * - :strong:`Scenario`
       - :strong:`Command`
-      - :strong:`Example`
-    * - Drop or redact parts of an attribute value
+    * - Drop or redact parts of an attribute value.
       - ``options.spanFilter``
-      - words 
-    * - Drop specific attributes across all spans or events
+    * - Drop specific attributes across all spans or events.
       - ``options.spanFilter``
-      - words 
-    * - Drop entire spans or events
+    * - Drop entire spans or events.
       - 
          * ``ignoreURLs``
          * ``options.spanFilter``
-      - 
-         * words 
-         * words 
- 
+
+
+See also 
+=========
+For instrumentation examples, see the following links from Splunk OpenTelemetry GitHub
+
+* :new-page:`Splunk OpenTelemetry iOS agent <https://github.com/signalfx/splunk-otel-ios/blob/7e7115d9e5ee77a3d1d893a14b974fb619347c40/README.md#span-filtering>`
+
+* :new-page:`Android sample application <https://github.com/signalfx/splunk-otel-android/blob/main/sample-app/src/main/java/com/splunk/android/sample/SampleApplication.java>`
+
+*  :new-page:`Browser sample application <https://github.com/signalfx/splunk-otel-js-web/blob/0ac1df52b2c22f37eeb74f8e4104ccdf0e8fe99e/examples/todolist/public/index.html>` 
+
+* :new-page:`Simple span processor <https://github.com/open-telemetry/opentelemetry-js/blob/0dc4c3d8eb4f52b839365f964bb7aaac08dcefb2/packages/opentelemetry-sdk-trace-base/src/export/SimpleSpanProcessor.ts>`
