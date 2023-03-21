@@ -11,10 +11,11 @@ Kai, a site reliability engineer at Buttercup Games, wants to know how the appli
 
 To track how microservices impact business KPIs, Kai takes the following steps:
 
-#. Kai reviews the APM Overview
+#. :ref:`apm-overview`Kai reviews the APM Overview
 #. Kai opens the service map to find services with root-cause errors
 #. Kai breaks down the services to see error details by workflow
 
+.. _apm-overview:
 
 Kai reviews the APM Overview
 =================================
