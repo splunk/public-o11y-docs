@@ -9,16 +9,29 @@ Accelerate troubleshooting using Business Workflows on Tag Spotlight
 
 Deepu, the payment service owner at Buttercup Games, wants to understand how errors in the payment service impact business KPIs. 
 
-============
+To understand the impact of errors on business KPIs, Deepu takes the following steps:
+
+#. Deepu selects the payment service on the service map and opens Tag Spotlight 
+
+Deepu selects the payment service on the service map and opens Tag Spotlight 
+===============================================================================
 
 Deepu selects the :strong:`paymentservice` node on the service map, and then selects :strong:`Tag Spotlight` to look at errors and latency for the :strong:`Workflow` tag.
 
+..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_OpenTagSpotlight.png
+    :width: 99%
+    :alt: This screenshot shows the Tag Spotlight view of the payment service, which shows that the frontend:/cart/checkout workflow has the most errors
+
+Deepu selects the payment service on the service map and opens Tag Spotlight 
+===============================================================================
+
+Deepu notices that the requests of the :strong:`frontend:/cart/checkout` workflow return a majority of root cause errors. Because APM supports infinite cardinality, 
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-01.png
     :width: 99%
     :alt: This screenshot shows the Tag Spotlight view of the payment service, which shows that the frontend:/cart/checkout workflow has the most errors
 
-Deepu notices that the requests of the :strong:`frontend:/cart/checkout` workflow return a majority of root cause errors. Because APM supports infinite cardinality, Deepu selects the :strong:`frontend:/cart/checkout`  workflow and applies filters to show only data from traces. Deepu filters :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to view the tags to examine the subset of traces where the most errors occur:
+Deepu selects the :strong:`frontend:/cart/checkout`  workflow and applies filters to show only data from traces. Deepu filters :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to view the tags to examine the subset of traces where the most errors occur:
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-02.png
     :width: 99%
