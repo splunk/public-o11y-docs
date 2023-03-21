@@ -12,7 +12,7 @@ Kai, a site reliability engineer at Buttercup Games, wants to know how the appli
 To track how microservices impact business KPIs, Kai takes the following steps:
 
 #. :ref:`apm-overview`
-#. :ref:`business-workflow-use-case-service-map`
+#. :ref:`workflow-use-case-service-map`
 #. :ref:`breakdown`
 
 .. _apm-overview:
