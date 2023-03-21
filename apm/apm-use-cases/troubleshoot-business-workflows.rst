@@ -48,7 +48,7 @@ Deepu opens a example trace
 
 Because Splunk APM stores all traces without sampling, Deepu clicks the peak of errors on the chart to see example traces of those tag combinations at that timestamp. Deepu finds that the requests from :strong:`checkoutservice` to :strong:`paymentservice` are failing. 
 
-..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_ExampleTrace.png
+..  image:: /_images/apm/apm-use-cases/WorkflowUseCase_Exemplar.png
     :width: 99%
     :alt: This screenshot shows an example trace with errors in Tag Spotlight.
 
@@ -57,7 +57,7 @@ Deepu switches to Splunk Log Observer for further troubleshooting
 
 Deepu remembers that version 350.10 of the payment service recently deployed a backwards incompatible change to its API. Because Deepu enabled :ref:`Related Content <get-started-relatedcontent>` in Splunk APM, Deepu can click :strong:`Logs for payment service` to switch to Splunk Log Observer to investigate whether the deployment causes the error. 
 
-..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_LogsForTrace.png
+..  image:: /_images/apm/apm-use-cases/WorkflowUseCase_Logs.png
     :width: 99%
     :alt: This screenshot shows a trace view with the option to review the logs for the trace.
 
