@@ -5,17 +5,36 @@ Processor architecture
 *******************************************************************
 
 .. meta::
-   :description: Describes the compatible CPU architectures of the Splunk Distribution of OpenTelemetry Collector.
+   :description: Describes the compatible CPU architectures and operating systems of the Splunk Distribution of OpenTelemetry Collector.
 
-The Collector supports the following processor architecture:
+The Collector supports the following processor architectures and operating systems:
 
-* x86_64 and AMD64
-* ARM64 compatible Docker image. See :ref:`linux-docker`.
-* ppc64le compatible Docker image, including IBM Private Cloud. See :ref:`linux-docker`.
+.. list-table::
+   :width: 100%
+   :widths: 20 40 40
+   :header-rows: 1
 
-See :ref:`compatible components <x86_64-AMD64-ARM64-yes>` for more information on supported components. 
-
-Some monitors within the Smart Agent receivers are not supported with ARM64 and ppc64. See :ref:`unsupported components <ARM64-no>` for more information.
+   * - Architecture
+     - Install methods
+     - Supported components
+   * - x86_64 and AMD64
+     - 
+        * Linux packages (deb, rpm, and tar.gz)
+        * Linux binary file (``otelcol_linux_amd64``)
+        * Windows installer and binary file (``otelcol_windows_amd64.exe``)
+        * Docker image. See :ref:`linux-docker`
+     - See :ref:`compatible components <x86_64-AMD64-ARM64-yes>`.
+   * - ARM64
+     - 
+        * Linux packages (deb, rpm, and tar.gz)
+        * Linux binary file (``otelcol_linux_arm64``)
+        * Docker image. See :ref:`linux-docker`
+     - Some monitors within the Smart Agent receivers are not supported with ARM64 and ppc64le. See :ref:`unsupported components <ARM64-no>`.
+   * - ppc64le, including IBM Private Cloud
+     - 
+        * Linux binary file (``otelcol_linux_ppc64le``)
+        * Docker image. See :ref:`linux-docker`
+     - Some monitors within the Smart Agent receivers are not supported with ARM64 and ppc64le. See :ref:`unsupported components <ARM64-no>`.
 
 .. _x86_64-AMD64-ARM64-yes:
 
