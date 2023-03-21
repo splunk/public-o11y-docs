@@ -22,19 +22,21 @@ The Collector supports the following processor architectures and operating syste
         * Linux packages (deb, rpm, and tar.gz)
         * Linux binary file (``otelcol_linux_amd64``)
         * Windows installer and binary file (``otelcol_windows_amd64.exe``)
-        * Docker image. See :ref:`linux-docker`
-     - See :ref:`compatible components <x86_64-AMD64-ARM64-yes>`.
+        * Docker image. See :ref:`linux-docker` and :ref:`windows-docker`
+     - See :ref:`compatible components <x86_64-AMD64-ARM64-yes>`
    * - ARM64
      - 
         * Linux packages (deb, rpm, and tar.gz)
         * Linux binary file (``otelcol_linux_arm64``)
         * Docker image. See :ref:`linux-docker`
-     - Some monitors within the Smart Agent receivers are not supported with ARM64 and ppc64le. See :ref:`unsupported components <ARM64-no>`.
+     - Some monitors within the Smart Agent receivers are not supported with ARM64. See :ref:`unsupported components <ARM64-no>`
    * - ppc64le, including IBM Private Cloud
      - 
         * Linux binary file (``otelcol_linux_ppc64le``)
         * Docker image. See :ref:`linux-docker`
-     - Some monitors within the Smart Agent receivers are not supported with ARM64 and ppc64le. See :ref:`unsupported components <ARM64-no>`.
+     - Smart Agent monitors are unsupported on ppc64le. See :ref:`unsupported components <ARM64-no>`
+
+.. caution:: Smart Agent support on ARM64 is experimental.
 
 .. _x86_64-AMD64-ARM64-yes:
 
