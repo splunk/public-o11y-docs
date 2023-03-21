@@ -11,11 +11,13 @@ Deepu receives a notification from Kai, the site reliability engineer. The notif
 
 To troubleshoot the issue, Deepu takes the following steps:
 
-#. Deepu selects the affected service on the service map and opens Tag Spotlight 
-#. Deepu reviews Tag Spotlight for tags that are correlated with errors
-#. Deepu notices errors differ based on the version tag
-#. Deepu opens a example trace
-#. Deepu switches to log observer for further troubleshooting
+#. :ref:`open-tag-spotlight`
+#. :ref:`correlated-errors`
+#. :ref:`version-tag`
+#. :ref:`tag-spotlight-use-case-example-trace`
+#. :ref:`tag-spotlight-use-case-log-observer`
+
+.. _open-tag-spotlight:
 
 Deepu selects the affected service on the service map and opens Tag Spotlight 
 ===============================================================================
@@ -26,6 +28,8 @@ Deepu selects the :strong:`paymentservice` node on the service map and selects t
     :width: 99%
     :alt: This screenshot shows the payment service in the service map and Tag Spotlight side panel. 
 
+.. _correlated-errors:
+
 Deepu reviews Tag Spotlight for tags that are correlated with errors
 =========================================================================================
 
@@ -34,6 +38,8 @@ Deepu scans through the requests and errors correlated with each indexed tag in 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-tag-spotlight-01.png
     :width: 99%
     :alt: This screenshot shows the Tag Spotlight view of the payment service.
+
+.. _version-tag:
 
 Deepu notices errors differ based on the version tag
 ======================================================
@@ -44,6 +50,8 @@ Deepu sees that the errors are evenly distributed for all tag values except the 
     :width: 50%
     :alt: This screenshot shows the data based in the indexed version tag in Tag Spotlight. 
 
+.. _tag-spotlight-use-case-example-trace:
+
 Deepu opens a example trace
 ==============================
 
@@ -52,6 +60,8 @@ Deepu narrows the investigation to the code in version 350.10 of the ``/PaymentS
 ..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_ExampleTrace.png
     :width: 99%
     :alt: This screenshot shows an example trace with errors in Tag Spotlight.
+
+.. _tag-spotlight-use-case-log-observer:
 
 Deepu switches to Splunk Log Observer for further troubleshooting
 ===================================================================
