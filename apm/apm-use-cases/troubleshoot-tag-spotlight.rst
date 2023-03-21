@@ -18,10 +18,10 @@ Deepu selects the :strong:`paymentservice` node on the service map and selects t
     :width: 99%
     :alt: This screenshot shows the payment service in the service map and Tag Spotlight side panel. 
 
-Deepu scans through the requests and errors for each indexed tag in the payment service
+Deepu reviews Tag Spotlight for tags that are correlated with errors
 =========================================================================================
 
-Deepu scans through the requests and errors correlated with each indexed tag in the payment service 
+Deepu scans through the requests and errors correlated with each indexed tag in the payment service.
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-tag-spotlight-01.png
     :width: 99%
@@ -56,6 +56,8 @@ Because Deepu enabled Related Content in Splunk APM, Deepu can select :strong:`L
 
 Summary
 ===========
+
+Deepu used Tag Spotlight to quickly isolate a recent code release as the cause of errors that are prevented customers from shopping on the Buttercup Games website. Using the links to example traces in Tag Spotlight he quickly navigates to an example trace and its corresponding logs to further troubleshoot.
 
 Learn more
 ============
