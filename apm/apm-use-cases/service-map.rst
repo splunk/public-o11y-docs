@@ -32,7 +32,7 @@ The service map identifies the root cause error rate using red. Kai finds that t
 
 ..  image:: /_images/apm/apm-use-cases/service-map-01.png
     :width: 65%
-    :alt: This screenshot shows the service map view of the Buttercup Games website where nodes with root cause errors are highlighted in red.
+    :alt: This screenshot shows the service map view of the Buttercup Games website where nodes with root-cause errors are highlighted in red.
 
 |br|
 
@@ -45,7 +45,7 @@ Kai selects the :strong:`paymentservice` node to discover the endpoint with the 
 
 ..  image:: /_images/apm/apm-use-cases/service-map-02.png
     :width: 50%
-    :alt: This screenshot shows the Tag Spotlight preview of the endpoints with the top error rate and the top latency.
+    :alt: This screenshot shows the Tag Spotlight card with endpoint data showing the top error rate and the top latency.
 
 .. _tag-spotlight-link:
 

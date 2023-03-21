@@ -23,7 +23,7 @@ Deepu selects the :strong:`paymentservice` node on the service map, and then sel
 
 ..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_OpenTagSpotlight.png
     :width: 99%
-    :alt: This screenshot shows the Tag Spotlight view of the payment service, which shows that the frontend:/cart/checkout workflow has the most errors
+    :alt: This screenshot shows the payment service in the service map and Tag Spotlight side panel. 
 
 Deepu reviews the errors by workflow 
 ===============================================================================
@@ -59,7 +59,7 @@ Deepu remembers that version 350.10 of the payment service recently deployed a b
 
 ..  image:: /_images/apm/apm-use-cases/WorkflowUseCase_Logs.png
     :width: 99%
-    :alt: This screenshot shows a trace view with the option to review the logs for the trace.
+    :alt: This screenshot shows Tag Spotlight with the option to select to view Logs for paymentservice highlighted.  
 
 Summary
 ===========
