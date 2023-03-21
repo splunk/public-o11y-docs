@@ -9,6 +9,14 @@ Find the root cause of an error using Tag Spotlight
 
 Deepu receives a notification from Kai, the site reliability engineer. The notification says that the high root cause error rate with the ``/PaymentService/Charge`` endpoint is preventing customers from shopping on the Buttercup Games website. The notification also includes a link to the endpoint on the Splunk APM service map. 
 
+To track troubleshoot the issue, Deepu takes the following steps:
+
+#. Deepu selects the affected service on the service map and opens Tag Spotlight 
+#. Deepu reviews Tag Spotlight for tags that are correlated with errors
+#. Deepu notices errors differ based on the version tag
+#. Deepu opens a example trace
+#. Deepu switches to log observer for further troubleshooting
+
 Deepu selects the affected service on the service map and opens Tag Spotlight 
 ===============================================================================
 

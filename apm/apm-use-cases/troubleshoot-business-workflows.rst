@@ -4,12 +4,14 @@
 Accelerate troubleshooting using Business Workflows on Tag Spotlight
 **************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
     :description: This Splunk APM use case describes how to use APM Tag Spotlight of Business Workflows to accelerate troubleshooting.
 
-Deepu, the payment service owner at Buttercup Games, wants to understand how errors in the payment service impact business KPIs. Deepu clicks the :strong:`paymentservice` node on the service map, and then selects :strong:`Tag Spotlight` to look at errors and latency for the :strong:`Workflow` tag.
+Deepu, the payment service owner at Buttercup Games, wants to understand how errors in the payment service impact business KPIs. 
+
+============
+
+Deepu selects the :strong:`paymentservice` node on the service map, and then selects :strong:`Tag Spotlight` to look at errors and latency for the :strong:`Workflow` tag.
 
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-01.png
@@ -26,10 +28,9 @@ Because Splunk APM stores all traces without sampling, Deepu clicks the peak of 
 
 Deepu remembers that version 350.10 of the payment service recently deployed a backwards incompatible change to its API. Because Deepu enabled :ref:`Related Content <get-started-relatedcontent>` in Splunk APM, Deepu can click :strong:`Logs for payment service` to switch to Splunk Log Observer to investigate whether the deployment causes the error. 
 
-:strong:`Learn more`
+Learn more
+==============
 
 * For details about business workflows, see :ref:`apm-workflows`.
-
 * For details about using Related Content, see :ref:`get-started-relatedcontent`.
-
 * For more information about using Splunk Log Observer to detect the source of problems, see :ref:`get-started-logs`.
