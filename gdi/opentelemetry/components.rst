@@ -27,6 +27,7 @@ Components
     components/receiver-creator-receiver
     components/resource-processor
     components/resourcedetection-processor
+    components/simple-prometheus-receiver
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
@@ -123,7 +124,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`prometheus-receiver` (``prometheus``)
      - Provides a simple configuration interface to scrape metrics from a single target.
      - Metrics
-   * - ``prometheus_simple``
+   * - :ref:`simple-prometheus-receiver` (``prometheus_simple``)
      - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
      - Metrics
    * - :ref:`receiver-creator-receiver` (``receiver_creator``)
