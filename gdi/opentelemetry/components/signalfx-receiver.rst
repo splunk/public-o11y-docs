@@ -18,6 +18,11 @@ Get started
 
 By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx receiver in the ``metrics`` and ``logs/signalfx`` pipelines when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
 
+.. caution:: Don't remove the ``signalfx`` receiver from the default configuration. If you need to change its settings, use the existing receiver or create a separate receiver configuration.
+
+Sample configurations
+----------------------
+
 The default configuration of the ``signalfx`` receiver in the Splunk Distribution of OpenTelemetry Collector is the following:
 
 .. code-block:: yaml
@@ -29,7 +34,7 @@ The default configuration of the ``signalfx`` receiver in the Splunk Distributio
        #  use instead of exporter token. Default value is false.
        #access_token_passthrough: true
 
-When adding the SignalFx receiver, configure both the metrics and logs pipelines. Make sure to also add the SignalFx expoerter as in the following example:
+When adding the SignalFx receiver, configure both the metrics and logs pipelines. Make sure to also add the SignalFx exporter as in the following example:
 
 .. code-block:: yaml
 
@@ -44,8 +49,6 @@ When adding the SignalFx receiver, configure both the metrics and logs pipelines
          processors: [memory_limiter, batch]
          exporters: [signalfx]
 
-.. caution:: Don't remove the ``signalfx`` receiver from the default configuration. If you need to change its settings, use the existing receiver or create a separate instance.
-
 Settings
 ======================
 
@@ -55,7 +58,7 @@ The following table shows the configuration options for the SignalFx receiver:
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/signalfx.yaml"></div>
 
-.. caution:: If you use the ``access_token_passthrough`` setting  with any exporter other than the SignalFx exporter, the receiver might reveal all organization access tokens. Only use the SignalFx receiver with the SignalFx exporter when activating this setting.
+.. caution:: If you use the ``access_token_passthrough`` setting with any exporter other than the SignalFx exporter, the receiver might reveal all organization access tokens. Only use the SignalFx receiver with the SignalFx exporter when activating this setting.
 
 Troubleshooting
 ======================
