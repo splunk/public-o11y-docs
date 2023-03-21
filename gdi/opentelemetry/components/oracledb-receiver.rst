@@ -13,7 +13,7 @@ time, and others. The supported pipeline type is ``metrics``. See :ref:`otel-dat
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and enable the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -71,7 +71,7 @@ the ``oracledb`` receiver as needed. For example:
        # Refer to Oracle Go Driver go_ora documentation for full connection string options
        datasource: "oracle://<user>:<password>@<host>:<port>/<database>"
 
-To complete the integration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
 
 .. code:: yaml
