@@ -32,15 +32,27 @@ Deepu notices errors differ based on the version tag
 
 Deepu sees that the errors are evenly distributed for all tag values except the :strong:`version` tag. All errors occur in version 350.10, a recent code release for the service. Deepu rolls back to the previous release, version 350.9, to keep the site running while notifying and waiting for the engineers to solve the issue.
 
+..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_VersionTag.png
+    :width: 99%
+    :alt: This screenshot shows the data based in the indexed version tag in Tag Spotlight. 
+
 Deepu opens a example trace
 ==============================
 
 Deepu narrows the investigation to the code in version 350.10 of the ``/PaymentService/Charge`` endpoint and selects the :strong:`Request/Errors` chart to get an example trace to see what the error is. 
 
+..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_ExampleTrace.png
+    :width: 99%
+    :alt: This screenshot shows an example trace with errors in Tag Spotlight.
+
 Deepu switches to log observer for further troubleshooting
 ==============================================================
 
 Because Deepu enabled Related Content in Splunk APM, Deepu can select :strong:`Logs for trace` to switch to Splunk Log Observer for further troubleshooting. 
+
+..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_LogsForTrace.png
+    :width: 99%
+    :alt: This screenshot shows a trace view with the option to review the logs for the trace.
 
 Summary
 ===========
