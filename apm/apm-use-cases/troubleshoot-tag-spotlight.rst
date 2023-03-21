@@ -53,8 +53,8 @@ Deepu narrows the investigation to the code in version 350.10 of the ``/PaymentS
     :width: 99%
     :alt: This screenshot shows an example trace with errors in Tag Spotlight.
 
-Deepu switches to log observer for further troubleshooting
-==============================================================
+Deepu switches to Splunk Log Observer for further troubleshooting
+===================================================================
 
 Because Deepu enabled Related Content in Splunk APM, Deepu can select :strong:`Logs for trace` to switch to Splunk Log Observer for further troubleshooting. 
 
