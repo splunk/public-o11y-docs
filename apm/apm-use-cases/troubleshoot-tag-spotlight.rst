@@ -16,12 +16,12 @@ Deepu selects the :strong:`paymentservice` node on the service map and selects t
 
 ..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_OpenTagSpotlight.png
     :width: 99%
-    :alt: This screenshot shows the Tag Spotlight view of the payment service.
+    :alt: This screenshot shows the payment service in the service map and Tag Spotlight side panel. 
 
 Deepu scans through the requests and errors for each indexed tag in the payment service
 =========================================================================================
 
-Deepu scans through the  requests and errors correlated with each indexed tag in the payment service 
+Deepu scans through the requests and errors correlated with each indexed tag in the payment service 
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-tag-spotlight-01.png
     :width: 99%
