@@ -11,15 +11,19 @@ Kai, a site reliability engineer at Buttercup Games, receives tickets from multi
 
 To troubleshoot the invalid request error reports, Kai takes the following steps:
 
-#. Kai opens the service map
-#. Kai looks for services that have root-cause errors
-#. Kai selects the service to gather more details
-#. Kai adds a link to Tag Spotlight for the offending endpoint to the customer ticket
+#. :ref:`service-map-use-case-service map`
+#. :ref:`root-cause-errors`
+#. :ref:`select-service`
+#. :ref:`tag-spotlight-link`
+
+.. _service-map-use-case-service map:
 
 Kai opens the service map
 ===========================
 
 To investigate the downstream service causing the error, Kai selects the :strong:`Explore` card in Splunk APM to open the service map for troubleshooting. Kai looks through the real-time service map, which contains nodes and dependencies of services instrumented in Splunk APM. 
+
+.. _root-cause-errors:
 
 Kai looks for services that have root-cause errors
 ====================================================
@@ -32,6 +36,8 @@ The service map identifies the root cause error rate using red. Kai finds that t
 
 |br|
 
+.. _select-service:
+
 Kai selects the service to gather more details
 ===========================================================================
 
@@ -40,6 +46,8 @@ Kai selects the :strong:`paymentservice` node to discover the endpoint with the 
 ..  image:: /_images/apm/apm-use-cases/service-map-02.png
     :width: 50%
     :alt: This screenshot shows the Tag Spotlight preview of the endpoints with the top error rate and the top latency.
+
+.. _tag-spotlight-link:
 
 Kai adds a link to Tag Spotlight for the offending endpoint to the customer ticket
 =====================================================================================
