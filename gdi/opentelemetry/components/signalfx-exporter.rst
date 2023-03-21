@@ -11,7 +11,7 @@ The SignalFx exporter allows the OpenTelemetry Collector to send traces, logs, a
 
 The main purpose of the SignalFx exporter is to send logs to Log Observer, Splunk Cloud Platform, or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Observability Cloud. See :ref:`lo-connect-landing` for more information.
 
-.. note:: For information about the HEC receiver, see :ref:`splunk-hec-receiver`.
+.. note:: For information on the receiver, see :ref:`signalfx-receiver`.
 
 Get started
 ======================

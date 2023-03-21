@@ -11,6 +11,8 @@ The SignalFx receiver allows the Splunk Distribution of OpenTelemetry Collector 
 
 For more information on the SignalFx proto format, see :new-page:`Send Traces, Metrics, and Events <https://dev.splunk.com/observability/reference/api/ingest_data/latest>` in the Splunk Developer Program documentation.
 
+.. note:: For information on the exporter, see :ref:`signalfx-exporter`.
+
 Get started
 ======================
 
