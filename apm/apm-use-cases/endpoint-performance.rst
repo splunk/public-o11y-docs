@@ -22,6 +22,7 @@ Alex reviews the endpoints in the Endpoint Performance card
 ================================================================
 
 Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, they can't drill down into a component service using the dependency map; so, Alex reviews the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of 2+ seconds. 
+
 .. _sort-filter-endpoint-performance:
 
 Alex sorts and filters endpoints in Endpoint Performance
