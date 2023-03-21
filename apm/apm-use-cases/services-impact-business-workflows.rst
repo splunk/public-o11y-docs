@@ -41,7 +41,7 @@ Kai breaks down the services by workflow to see error details by workflow
 Kai uses the :strong:`Breakdown` menu to break down each service by :strong:`Workflow` and selects each workflow node to see charts that provide error and latency details. Kai discovers that the :strong:`paymentservice` contributes the errors for :strong:`PaymentService/Charge` and :strong:`frontend/chart/checkout` workflows, and the :strong:`checkoutservice` doesn't impact any Business Workflows. Kai sends this information to the payment service owner to resolve the errors impacting overall business KPIs.
 
 ..  image:: /_images/apm/apm-use-cases/business-workflows-services-02.png
-    :width: 75%
+    :width: 50%
     :alt: This screenshot shows charts and numerical data of the requests, errors, and root causes in the Business Workflow node.
 
 Summary
