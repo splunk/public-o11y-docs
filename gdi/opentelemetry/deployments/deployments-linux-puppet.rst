@@ -143,7 +143,7 @@ The following table shows the variables that can be configured for this Puppet m
      - Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. However, if this variable is set to a non-empty value, the value overrides the derived service name and is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
      - None
    * - ``auto_instrumentation_generate_service_name``
-     - Set to ``false`` to  prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
+     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
      - ``true``
    * - ``auto_instrumentation_disable_telemetry``
      - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.

@@ -119,7 +119,7 @@ The following table shows the variables that can be configured for this Ansible 
    * -  ``splunk_otel_auto_instrumentation_service_name`` 
      - Available on Linux only. Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. The specified service name is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node, overriding any generated service name. See :ref:`trace-configuration-java` for more information. The Java application on the node needs to be restarted separately for any change to take effect.
    * - ``splunk_otel_auto_instrumentation_generate_service_name``
-     - Set to ``false`` to  prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
+     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
    * - ``splunk_otel_auto_instrumentation_disable_telemetry``
      - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
    * - ``splunk_otel_auto_instrumentation_enable_profiler``
