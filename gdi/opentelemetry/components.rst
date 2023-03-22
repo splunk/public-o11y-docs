@@ -23,6 +23,7 @@ Components
     components/logging-exporter
     components/mongodb-atlas-receiver
     components/oracledb-receiver
+    components/postgresql-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
     components/resource-processor
@@ -118,7 +119,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``otlp``
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
-   * - ``postgresql``
+   * - :ref:`postgresql-receiver` (``postgresql``)
      - Queries the PostgreSQL statistics collector. Supports PostgreSQL version 9.6 and higher.
      - Metrics
    * - :ref:`prometheus-receiver` (``prometheus``)
