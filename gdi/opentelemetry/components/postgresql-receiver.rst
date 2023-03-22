@@ -7,7 +7,7 @@ PostgreSQL receiver
 .. meta::
       :description: The PostgreSQL receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from PostgreSQL through its statistics collector.
 
-The PostgreSQL receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from PostgreSQL through its statistics collector The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The PostgreSQL receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from PostgreSQL through its statistics collector. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 .. note:: Use the PostgreSQL receiver in place of the SignalFx Smart Agent ``postgresql`` monitor type.
 
