@@ -15,6 +15,7 @@ Splunk Log Observer Connect
     scp
     set-up-logconnect
     LOconnect-troubleshoot
+    LOconnect-usecase
     timeline
     queries
     raw-logs-display
