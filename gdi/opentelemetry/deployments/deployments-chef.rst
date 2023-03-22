@@ -134,7 +134,7 @@ You can automatically instrument your Java applications along with the Collector
 
 The following table shows the variables that can be configured for this Chef cookbook:
 
-.. list-table:: Variables for auto instrumentation
+.. list-table::
    :widths: 20 30 50
    :header-rows: 1
 
