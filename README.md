@@ -31,5 +31,3 @@ Follow these steps to create a fork of this repo and install it on your machine:
 1. Clone this repository using `git clone`.
 2. Navigate to the cloned repository in your file system.
 3. Change the permissions of `start.sh` by entering `chmod +x start.sh` in the terminal.
-
-
