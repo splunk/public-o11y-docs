@@ -93,8 +93,9 @@ The following table describes the variables that can be configured for this role
 
 .. _ansible-zero-config-java:
 
-Configure auto instrumentation for Java 
-=================================================
+Configure auto instrumentation for Java (Linux only)
+======================================================
+
 You can automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
 
 The following table shows the variables that can be configured for this Ansible role:
@@ -117,4 +118,18 @@ The following table shows the variables that can be configured for this Ansible 
      - Available on Linux only. Configures the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The resource attributes are user-defined key-value pairs. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be restarted separately for any change to take effect. See :ref:`trace-configuration-java` for more information.
    * -  ``splunk_otel_auto_instrumentation_service_name`` 
      - Available on Linux only. Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. The specified service name is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node, overriding any generated service name. See :ref:`trace-configuration-java` for more information. The Java application on the node needs to be restarted separately for any change to take effect.
-   * - ``
+   * - ``aaa``
+     - Desc
+   * - ``aaa``
+     - Desc
+   * - ``aaa``
+     - Desc
+   * - ``aaa``
+     - Desc
+   * - ``aaa``
+     - Desc
+   * - ``aaa``
+     - Desc
+   * - ``aaa``
+     - Desc
+
