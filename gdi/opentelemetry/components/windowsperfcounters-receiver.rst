@@ -18,7 +18,7 @@ The Windows Performance Counters receiver replaces the SmartAgent monitor type o
 Get started
 ======================
 
-Follow these steps to configure and enable the component:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
