@@ -21,7 +21,7 @@ Use this monitor to gather the following types of information from ActiveMQ:
 
 
 ```{note}
-C-based collectd plugins like this one are not available on Windows.
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
 ```
 
 ## Benefits
@@ -85,7 +85,7 @@ The **nested** `mBeanDefinitions` configuration object has the following fields:
 | --- | --- | --- | --- |
 | `objectName` | no | `string` | Sets the pattern that is used to retrieve MBeans from the MBeanServer. If more than one MBean is returned, you should use the `instanceFrom` option to make the identifiers unique. |
 | `instancePrefix` | no | `string` | Prefixes the generated plugin instance with prefix. |
-| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so-called "properties" that are basically key-value pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This option is optional and may be repeated to generate the plugin instance from multiple property values. |
+| `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so-called "properties" that are basically key-value pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This option is optional and can be repeated to generate the plugin instance from multiple property values. |
 | `values` | no | `list of objects (see below)` | The `value` blocks map one or more attributes of an MBean to a value list in the agent. There must be at least one `value` block within each MBean block |
 | `dimensions` | no | `list of strings` |  |
 

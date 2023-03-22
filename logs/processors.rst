@@ -4,9 +4,6 @@
 Transform your data with log processing rules
 *****************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: Manage the logs pipeline with log processing rules, log metricization rules, and Infinite Logging rules. Customize your logs pipeline.
 

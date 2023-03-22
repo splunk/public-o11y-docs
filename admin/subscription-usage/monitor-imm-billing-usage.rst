@@ -71,35 +71,6 @@ Differences between high-resolution metrics and standard-resolution metrics
       * High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. 
       * Your Infrastructure Monitoring subscription allows you to send a certain number of high-resolution metrics.
 
-..
-    _how-counted:
-
-.. the following is placeholder text that might be added someday
-   It should be moved into an include file  -- brs
-
-   How are high-resolution metrics counted?
-   ----------------------------------------------------------------------------------
-
-   If you have a high-resolution metric that comes from a container or host (ie in the Host plan) it still contributes to those host/container counts and high-resolution counts (edited)
-
-   if you have a custom metric that is high-resolution it will only be included in the high-resolution count
-
-..    usage-about:
-
-..
-..
-.. About usage reports
-.. =============================================================================
-..
-..
-.. -  The :ref:`Monthly Usage report<summary-by-month>`, available on the Billed Usage tab, shows the number of hosts and containers sending in data for each hour within the month, and the number of custom metrics (MTS) and high resolution metrics sent in each hour.
-..
-..
-   ref:`dimension-report`:
-..
-..
-.. - The :ref:`dimension-report`, available on the Usage Breakdown tab, shows, on a daily basis, the number of data points and MTS for a given dimension value, as well as its average reporting frequency. Use this report to help you understand the volume of data you're sending. For example, you might notice that there are some metrics that you do not want to send at all, and conversely, you might see that there are some metrics that you want to send at a higher resolution.
-
 .. _using-page:
 
 Viewing and downloading Infrastructure Monitoring usage reports
@@ -138,16 +109,16 @@ To view usage reports available for download:
 
 4. Click :guilabel:`View detailed usage reports`.
 
-5. Click a report link on the :guilabel:`Billed Usage` tab or :guilabel:`Usage Breakdown` tab to download it as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
+5. Click a report link on the :guilabel:`Usage` tab or :guilabel:`Usage Breakdown` tab to download it as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
 
-.. note:: If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics that Infrastructure Monitoring monitors for you, older reports on the :guilabel:`Billed Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
+.. note:: If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics that Infrastructure Monitoring monitors for you, older reports on the :guilabel:`Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
 
 .. _summary-by-month:
 
 Monthly usage report
 ====================
 
-This report is available on the :guilabel:`Billed Usage` tab. For each hour within the month (or month to date, for the current month), this report shows the number of hosts and containers monitored and the number of custom metrics and high-resolution metrics sent to Infrastructure Monitoring. This report follows your usage period and uses the month when a usage period starts as the label in the report link. For example, if your usage period begins on the 10th of the month, then a link for 'March 2022' covers from March 10 through April 9, 2022.
+This report is available on the :guilabel:`Usage` tab. For each hour within the month (or month to date, for the current month), this report shows the number of hosts and containers monitored and the number of custom metrics and high-resolution metrics sent to Infrastructure Monitoring. This report follows your usage period and uses the month when a usage period starts as the label in the report link. For example, if your usage period begins on the 10th of the month, then a link for 'March 2022' covers from March 10 through April 9, 2022.
 
 You can use the monthly usage report to determine whether your usage is in line with your subscription plan. You can use the data to calculate your average usage, how many hours in the month you have been over or under your plan, and by how much.
 
@@ -287,7 +258,6 @@ The following table explains the different columns in a dimension report:
   * - No. [usage metric type] Data points
     - * During the report's 24-hour period (UTC), the number of data points received by Infrastructure Monitoring from hosts or containers, and the number of data points associated with custom, high-resolution, or bundled MTS.
 
-.. Keeping the following labels (per-dimension and by-dimension) because they may have been used in the past --brs
 
 .. _metrics-per-dimension:
 

@@ -6,11 +6,11 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `filesystem` monitor via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `filesystem` monitor type for the Smart Agent Receiver.
 
 This monitor reports metrics about free disk space on mounted devices.
 
-On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host's `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top level configuration `procPath`, as shown in the following example:
+On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host`/proc` file system is mounted somewhere other than `/proc`, specify the path using the top level configuration `procPath`, as shown in the following example:
 
 ```yaml
 procPath: /hostfs/proc
@@ -22,6 +22,7 @@ monitors:
 This monitor does not accept endpoints. This monitor does allow multiple instances.
 
 ## Migrating from collectd/df
+
 The `collectd/df` monitor is being deprecated in favor of the `filesystems`
 monitor.  While the `collectd/df` monitor will still be available in
 version 5.0, switch to the `filesystems` monitor soon after upgrading. There are a few incompatibilities to be aware of between the two monitors:
@@ -42,7 +43,7 @@ version 5.0, switch to the `filesystems` monitor soon after upgrading. There are
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 

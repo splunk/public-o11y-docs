@@ -60,7 +60,7 @@ Copy the default Collector container definition shown in the example.Replace ``M
   "name": "splunk_otel_collector"
    }
 
-In this example container definition, the Collector is configured to use the default configuration file ``/etc/otel/collector/fargate_config.yaml``. The Collector image Dockerfile is available at :new-page:`Dockerfile <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/Dockerfile>` and the contents of the default configuration file can be seen at :new-page:`Fargate configuration <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/fargate_config.yaml>`. Note that the ``smartagent/ecs-metadata`` receiver is enabled by default.
+In this example container definition, the Collector is configured to use the default configuration file ``/etc/otel/collector/fargate_config.yaml``. The Collector image Dockerfile is available at :new-page:`Dockerfile <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/Dockerfile>` and the contents of the default configuration file can be seen at :new-page:`Fargate configuration <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/fargate_config.yaml>`. Note that the ``smartagent/ecs-metadata`` receiver is activated by default.
 
 In summary, the default Collector container definition does the following:
 

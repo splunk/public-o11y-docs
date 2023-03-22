@@ -17,7 +17,7 @@ When you select email notification, you will receive an email with this content:
     :width: 75%
     :alt: Incident Intelligence email notification example content
 
-You can select the incident link to go to the incident details where you can review details and acknowledge, reject, or resolve the incident.
+You can select the incident link to go to the incident details where you can review details and acknowledge, dismiss, or resolve the incident.
 
 SMS notification
 ====================
@@ -26,7 +26,7 @@ When you select SMS notification, you will receive an SMS message with this cont
 
 INC-[NUMBER] [SEVERITY] Incident title: [Link to incident in Splunk Observability Cloud].
 
-You can select the incident link to go to the incident details where you can review details and acknowledge, reject, or resolve the incident.
+You can select the incident link to go to the incident details where you can review details and acknowledge, dismiss, or resolve the incident.
 
 Mobile push notification
 ============================
@@ -36,7 +36,7 @@ When you select mobile push notification, you will receive an push notification 
 :strong:`INC-[NUMBER] Incident title`
 [SEVERITY] for policy [incident policy name]: Rule "[rule name]" in detector "[detector name]" triggered at [date-time triggered]
 
-You can select the notification to go to the incident details where you can review details and acknowledge, reject, or resolve the incident.
+You can select the notification to go to the incident details where you can review details and acknowledge, dismiss, or resolve the incident.
 
 Voice notification
 ====================

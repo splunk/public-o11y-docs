@@ -6,9 +6,9 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `postgresql` monitor via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `postgresql` monitor type for the Smart Agent Receiver.
 
-This monitor pulls metrics from all PostgreSQL databases from a specific Postgres server instance. This monitor pulls basic information that is applicable to any database and gathers these metrics via SQL queries.
+This monitor pulls metrics from all PostgreSQL databases from a specific Postgres server instance. This monitor pulls basic information that is applicable to any database and gathers these metrics using SQL queries.
 
 
 ## Benefits
@@ -19,17 +19,17 @@ This monitor pulls metrics from all PostgreSQL databases from a specific Postgre
 
 ## Installation
 
-This monitor is provided by the Smart Agent and is available by using the SignalFx Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is provided by the Smart Agent and is available for the Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 ```{include} /_includes/collector-installation-linux.md
 
 ```
 
-To report all available metrics, enable the `pg_stat_statements` extension in your PostgreSQL deployment. This extension must be specified in the `shared_preload_libraries` configuration option in the main PostgreSQL configuration at server start up. You must also enable the extension for each database by running `CREATE EXTENSION IF NOT EXISTS pg_stat_statements;` on each database.
+To report all available metrics, activate the `pg_stat_statements` extension in your PostgreSQL deployment. This extension must be specified in the `shared_preload_libraries` configuration option in the main PostgreSQL configuration at server start up. You must also activate the extension for each database by running `CREATE EXTENSION IF NOT EXISTS pg_stat_statements;` on each database.
 
 Note that to get consistent and accurate query execution time metrics, you must set the [pg_stat_statements.max configuration option](https://www.postgresql.org/docs/9.3/pgstatstatements.html#AEN160631) to larger than the number of distinct queries on the server.
 
-Here is a [sample configuration](https://www.postgresql.org/docs/9.3/pgstatstatements.html#AEN160631) of Postgres to enable statement tracking.
+Here is a [sample configuration](https://www.postgresql.org/docs/9.3/pgstatstatements.html#AEN160631) of Postgres to activate statement tracking.
 
 This configuration was tested with PostgreSQL `9.2+`.
 
@@ -112,7 +112,7 @@ The following metrics are available for this integration:
 
 ### Metrics about replication
 
-Replication metrics may not be available on some PostgreSQL servers. For now, this monitor automatically disables the `replication` metrics group if the monitor detects Aurora. This helps avoid following the error: `Function pg_last_xlog_receive_location() is currently not supported for Aurora`
+Replication metrics can't be available on some PostgreSQL servers. For now, this monitor automatically deactivates the `replication` metrics group if the monitor detects Aurora. This helps avoid following the error: `Function pg_last_xlog_receive_location() is currently not supported for Aurora`
 
 The metric `postgres_replication_state` will be reported only for `master` and for `postgres_replication_lag` for the `standby` role (replica).
 

@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the SQL monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the SQL monitor type for the Smart Agent Receiver.
 
 Use this monitor to gather database usage metrics from SQL queries on your databases.
 

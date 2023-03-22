@@ -34,9 +34,13 @@ Configure proxy settings
 
 If you need to use a proxy, set one of the following environment variables according to your needs:
 
-- ``HTTP_PROXY``: The HTTP proxy address
-- ``HTTPS_PROXY``: The HTTPS proxy address
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+- ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
+- ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy.
+
+Restart the Collector after adding these environment variables to your configuration.
+
+.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
 
 .. _windows-installer:
 
@@ -91,7 +95,7 @@ Install Fluentd MSI for log collection
 Default log collection
 -----------------------------------------------
 
-Install, configure, and start the Collector with :ref:`Windows Installer <windows-installer>`. The Collector's default configuration file ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml`` listens for log events on ``127.0.0.1:8006`` and sends them to Splunk Observability Cloud.
+Install, configure, and start the Collector with :ref:`Windows Installer <windows-installer>`. The Collector default configuration file ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml`` listens for log events on ``127.0.0.1:8006`` and sends them to Splunk Observability Cloud.
 
 Log collection with Fluentd
 -----------------------------------------------
@@ -187,5 +191,5 @@ Next steps
 Once you have installed the package, you can perform these actions:
 
 * :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft's documentation site <https://docs.microsoft.com/en-us/>` for more information.
+* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
 * :ref:`apm`.

@@ -35,11 +35,6 @@ You can change the instrumentation settings in two ways:
          // Before running distro.Run()
          os.Setenv("OTEL_EXPORTER_OTLP_ENDPOINT", "http://localhost:4317")
 
-- Set functional options in the code. For example:
-
-   .. code-block:: go
-
-         sdk, err := distro.Run(distro.WithTLSConfig(&tls.Config{}))
 
 To configure the instrumentation, use environment variables. Specify options in the code to override existing environment variables.
 
@@ -60,7 +55,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SPLUNK_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
-     - Enables you to add server trace information to HTTP response headers using the ``net/http`` instrumentation package. For more information, see :ref:`server-trace-information-go`. The default value is ``true``.
+     - Lets you add server trace information to HTTP response headers using the ``net/http`` instrumentation package. For more information, see :ref:`server-trace-information-go`. The default value is ``true``.
    * - ``OTEL_LOG_LEVEL``
      - Sets the logging level for instrumentation log messages. Possible values are ``error``, ``warn``, ``info``, and ``debug``. The default value is ``info``. The log level might not apply if you use ``WithLogger`` to change the logger.
 
@@ -106,11 +101,19 @@ The following settings control trace exporters and their endpoints:
    * - Environment variable
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - The traces exporter to use. The default value is ``otlp``. To select the Jaeger exporter, use ``jaeger-thrift-splunk``.
+     - The traces exporter to use. The default value is ``otlp``. Acceptable values are ``otlp`` and ``none``. Setting ``none`` deactivates trace exports.
+   * - ``OTEL_METRICS_EXPORTER``
+     - Comma-separated list of metrics exporter to use. The default value is ``none``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates metric exports.
+   * - ``OTEL_METRIC_EXPORT_INTERVAL``
+     - Interval, in milliseconds, between the start of two export attempts. The default value is ``60000``.
+   * - ``OTEL_METRIC_EXPORT_TIMEOUT``
+     - Maximum allowed time to export data, in milliseconds. The default value is ``30000``.
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
      - The OTLP endpoint. The default value is ``http://localhost:4317``.
-   * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
-     - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace`` when the exporter is set to ``jaeger-thrift-splunk``.
+   * - ``OTEL_EXPORTER_OTLP_TRACES_ENDPOINT``
+     - The OTLP endpoint for traces. The default value is ``http://localhost:4317``.
+   * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
+     - The OTLP endpoint. The default value is ``http://localhost:4317``.
 
 To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-go`.
 
@@ -152,10 +155,8 @@ The following settings control trace propagation:
    :header-rows: 1
 
    * - Environment variable
-     - Option
      - Description
    * - ``OTEL_PROPAGATORS``
-     - ``WithPropagator``
      - Comma-separated list of propagators you want to use. The default value is ``tracecontext,baggage``. Values can be joined with a comma (``,``) to produce a composite ``TextMapPropagator``.
 
 The instrumentation supports the following propagators:
@@ -164,7 +165,6 @@ The instrumentation supports the following propagators:
    - ``baggage``: W3C baggage
    - ``b3``: B3 single-header format
    - ``b3multi``: B3 multiheader format
-   - ``jaeger``: Jaeger
    - ``xray``: AWS X-Ray
    - ``ottrace``: OpenTracing 
    - ``none``: None

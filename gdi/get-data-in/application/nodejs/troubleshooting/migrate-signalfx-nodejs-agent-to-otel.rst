@@ -117,7 +117,7 @@ To migrate settings from the SignalFx tracing library to the Splunk Distribution
    * - ``SIGNALFX_SPAN_TAGS``
      - ``OTEL_RESOURCE_ATTRIBUTES`` as comma-separated key-value pairs. See :ref:`advanced-nodejs-otel-configuration`.
    * - ``SIGNALFX_LOGS_INJECTION``
-     - Not applicable. Log injection is always enabled. See :ref:`correlate-traces-with-logs-nodejs`.
+     - Not applicable. Log injection is always activated. See :ref:`correlate-traces-with-logs-nodejs`.
    * - ``SIGNALFX_LOGS_INJECTION_TAGS``
      - Not applicable See :ref:`correlate-traces-with-logs-nodejs`.
    * - ``SIGNALFX_ENABLED_PLUGINS``
@@ -195,7 +195,7 @@ Considerations for migrating to Splunk Distribution of OpenTelemetry JS
 The following limitations apply when migrating from the SignalFx Tracing Library for Node.js:
 
 - The set of Node.js versions that Splunk Distribution of OpenTelemetry JS supports is different from the set that SignalFx Tracing Library supports. See :ref:``nodejs-otel-requirements``.
-- The default flush interval, which defines how frequently captured telemetry data is sent to the backend, is now 500 milliseconds instead of 2 seconds, and can't be modified.
+- The default flush interval, which defines how frequently captured telemetry data is sent to the back end, is now 500 milliseconds instead of 2 seconds, and can't be modified.
 - Autoinstrumentation is not available for the following libraries:
    - ``AdonisJS``
    - ``amqp10``

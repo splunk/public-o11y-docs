@@ -6,7 +6,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `http` monitor by using the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `http` monitor for the Smart Agent Receiver.
 
 Use this integration to generate metrics based on whether the HTTP response from the configured URL matches expectations. For example, correct body, status code, and so on.
 
@@ -93,12 +93,12 @@ The following configuration options change the resulting values:
 
 * The `desiredCode` option determines the `http.code_matched` value. Configure this option if you expect a different "normal" value. The default value is `200`. For example, configure `desiredCode:301` and `noRedirects:false` to check a redirect (and not the end redirected URL) keeping the value to `1` (success).
 * The `regex` option does the same with the `http.regex_matched` metric, where the value is `1` only if the provided regex matches the response body.
-* The `addRedirectURL` option does not have impact on metrics, but adds a new dimension `redirect_url` with a "dynamic" value. If the `url` dimension changes with the monitor configuration, the `redirect_url` value is impacted by any server change and is always the last URL redirected. This option is disabled by default because this could cause issues with heartbeat detectors, for example.
+* The `addRedirectURL` option does not have impact on metrics, but adds a new dimension `redirect_url` with a "dynamic" value. If the `url` dimension changes with the monitor configuration, the `redirect_url` value is impacted by any server change and is always the last URL redirected. This option is deactivated by default because this could cause issues with heartbeat detectors, for example.
 
 The following HTTP headers let the client and the server pass additional information with an HTTP request or response:
 
 * `Cache-Control: no-cache` to send the request to the origin server for validation before releasing a cached copy.
-* `Host` to change the request, that is, to bypass CDN or load balancer requesting directly the backend. 
+* `Host` to change the request, that is, to bypass CDN or load balancer requesting directly the back end. 
 * `Content-Type` to indicate the media type of the resource. For example, `json`, `xml`, or `octet-stream`.
 
 ### Examples

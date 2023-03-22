@@ -18,6 +18,7 @@ Install and deploy the Collector
     Windows (script) <install-windows.rst>
     Windows (manual) <install-windows-manual.rst>
     deployments/otel-deployments.rst
+    otel-upgrade.rst
     uninstall-the-collector.rst
 
 See the available options to install the Splunk Distribution of the OpenTelemetry Collector.
@@ -27,7 +28,7 @@ See the available options to install the Splunk Distribution of the OpenTelemetr
 .. raw:: html
 
   <embed>
-    <h2>Guided install for the Collector</h2>
+    <h2>Guided install for the Collector<a name="collector-guided-install" class="headerlink" href="#collector-guided-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 Splunk Observability Cloud offers a guided setup to install the Collector:
@@ -45,7 +46,7 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 .. raw:: html
 
   <embed>
-    <h2>Install using packages</h2>
+    <h2>Install using packages and deployment tools<a name="collector-package-install" class="headerlink" href="#collector-package-install" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, and Windows. Deploy one of the following packages to gather data for Infrastructure Monitoring, APM, and Log Observer:
@@ -53,6 +54,8 @@ The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, L
 * Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`.
 * Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux <otel-install-linux>`.
 * Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`.
+
+See also :ref:`other deployment tools and options <otel_deployments>`.
 
 .. raw:: html
 
@@ -78,15 +81,15 @@ The Collector uses the components listed in the following table:
 
 To learn more about Collector components, see :ref:`otel-components`.
 
-When configured, enable these components using pipelines within the service section of the configuration. 
+When configured, activate these components using pipelines within the service section of the configuration. 
 
 .. raw:: html
 
   <embed>
-    <h2>Collector service<a name="collector-service" class="headerlink" href="#collector-service" title="Permalink to this headline">¶</a></h2>
+    <h2>Collector services<a name="collector-service" class="headerlink" href="#collector-service" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-The service section of the Collector contains two subsections: extensions and pipelines. The extensions section is where you optionally enable any extensions you have configured, and the pipelines section is where you define one or more pipelines, each of which consists of receivers, processors (optional), and exporters. The service section's two subsections are described in the following table.
+The service section of the Collector contains two subsections: extensions and pipelines. The extensions section is where you optionally activate any extensions you have configured, and the pipelines section is where you define one or more pipelines, each of which consists of receivers, processors (optional), and exporters. The service section's two subsections are described in the following table.
 
 .. list-table::
   :width: 100%

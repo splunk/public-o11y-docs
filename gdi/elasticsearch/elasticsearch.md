@@ -7,7 +7,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Elasticsearch monitor via the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Elasticsearch monitor using the Smart Agent receiver.
 
 
 This monitor collects stats from Elasticsearch. It collects node, cluster, and index level stats.
@@ -18,7 +18,7 @@ in an Elasticsearch cluster. You can override this using the
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -70,28 +70,28 @@ The following table shows the configuration options for this monitor:
 | `password` | no | `string` | Password used to access Elasticsearch stats API |
 | `useHTTPS` | no | `bool` | Whether to use https or not (**default:** `false`) |
 | `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
-| `skipVerify` | no | `bool` | If useHTTPS is `true` and this option is also `true`, the exporter's TLS cert will not be verified. (**default:** `false`) |
+| `skipVerify` | no | `bool` | If useHTTPS is `true` and this option is also `true`, the exporter TLS cert will not be verified. (**default:** `false`) |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to `false`. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use for TLS required connections |
 | `cluster` | no | `string` | Cluster name to which the node belongs. This is an optional config that will override the cluster name fetched from a node and will be used to populate the plugin_instance dimension |
-| `enableIndexStats` | no | `bool` | Enable Index stats. If set to `true`, by default the a subset of index stats will be collected (see docs for list of default index metrics collected). (**default:** `true`) |
+| `enableIndexStats` | no | `bool` | Activate Index stats. If set to `true`, by default the a subset of index stats will be collected (see docs for list of default index metrics collected). (**default:** `true`) |
 | `indexes` | no | `list of strings` | Indexes to collect stats from (by default stats from all indexes are collected) |
 | `indexStatsIntervalSeconds` | no | `integer` | Interval to report IndexStats on (**default:** `60`) |
 | `indexSummaryOnly` | no | `bool` | Collect only aggregated index stats across all indexes (**default:** `false`) |
 | `indexStatsMasterOnly` | no | `bool` | Collect index stats only from Master node (**default:** `true`) |
-| `enableClusterHealth` | no | `bool` | EnableClusterHealth enables reporting on the cluster health (**default:** `true`) |
+| `enableClusterHealth` | no | `bool` | EnableClusterHealth activates reporting on the cluster health (**default:** `true`) |
 | `clusterHealthStatsMasterOnly` | no | `bool` | Whether or not non master nodes should report cluster health (**default:** `true`) |
-| `enableEnhancedHTTPStats` | no | `bool` | Enable enhanced HTTP stats (**default:** `false`) |
-| `enableEnhancedJVMStats` | no | `bool` | Enable enhanced JVM stats (**default:** `false`) |
-| `enableEnhancedProcessStats` | no | `bool` | Enable enhanced Process stats (**default:** `false`) |
-| `enableEnhancedThreadPoolStats` | no | `bool` | Enable enhanced ThreadPool stats (**default:** `false`) |
-| `enableEnhancedTransportStats` | no | `bool` | Enable enhanced Transport stats (**default:** `false`) |
-| `enableEnhancedNodeIndicesStats` | no | `list of strings` | Enable enhanced node level index stats groups. A list of index stats groups for which to collect enhanced stats |
+| `enableEnhancedHTTPStats` | no | `bool` | Activate enhanced HTTP stats (**default:** `false`) |
+| `enableEnhancedJVMStats` | no | `bool` | Activate enhanced JVM stats (**default:** `false`) |
+| `enableEnhancedProcessStats` | no | `bool` | Activate enhanced Process stats (**default:** `false`) |
+| `enableEnhancedThreadPoolStats` | no | `bool` | Activate enhanced ThreadPool stats (**default:** `false`) |
+| `enableEnhancedTransportStats` | no | `bool` | Activate enhanced Transport stats (**default:** `false`) |
+| `enableEnhancedNodeIndicesStats` | no | `list of strings` | Activate enhanced node level index stats groups. A list of index stats groups for which to collect enhanced stats |
 | `threadPools` | no | `list of strings` | ThreadPools to report threadpool node stats on (**default:** `[search index]`) |
-| `enableEnhancedClusterHealthStats` | no | `bool` | Enable Cluster level stats. These stats report only from master Elasticserach nodes. (**default:** `false`) |
-| `enableEnhancedIndexStatsForIndexGroups` | no | `list of strings` | Enable enhanced index level index stats groups. A list of index stats groups for which to collect enhanced stats |
-| `enableIndexStatsPrimaries` | no | `bool` | To enable index stats from only primary shards. By default, the index stats collected are aggregated across all shards. (**default:** `false`) |
+| `enableEnhancedClusterHealthStats` | no | `bool` | Activate Cluster level stats. These stats report only from master Elasticserach nodes. (**default:** `false`) |
+| `enableEnhancedIndexStatsForIndexGroups` | no | `list of strings` | Activate enhanced index level index stats groups. A list of index stats groups for which to collect enhanced stats |
+| `enableIndexStatsPrimaries` | no | `bool` | To activate index stats from only primary shards. By default, the index stats collected are aggregated across all shards. (**default:** `false`) |
 | `metadataRefreshIntervalSeconds` | no | `integer` | How often to refresh metadata about the node and cluster (**default:** `30`) |
 
 
@@ -188,7 +188,7 @@ statistics.
 #### Primaries versus total
 By default, the monitor collects a subset of index stats of total aggregation
 type. The total for an index stat aggregates across all shards,
-whereas primaries only reflect the stats from primary shards. It is possible to enable index
+whereas primaries only reflect the stats from primary shards. It is possible to activate index
 stats of only primaries
 aggregation type. The following is an example
 configuration that shows how to index stats from primary shards:

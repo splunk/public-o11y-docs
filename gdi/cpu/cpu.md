@@ -6,14 +6,14 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the CPU monitor via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the CPU monitor type for the Smart Agent Receiver.
 
 This monitor reports CPU metrics.
 
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -40,7 +40,7 @@ monitors:  # All monitor config goes under this key
    ...  # Additional config
 ```
 
-On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host's `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top-level configuration `procPath`. Add the following to your configuration:
+On Linux hosts, this monitor relies on the `/proc` filesystem. If the underlying host `/proc` file system is mounted somewhere other than `/proc`, specify the path using the top-level configuration `procPath`. Add the following to your configuration:
 
 ```
 procPath: /custom_proc

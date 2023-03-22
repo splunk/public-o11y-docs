@@ -59,7 +59,7 @@ To remove users from the organization, follow these steps:
 #. From the Splunk Observability menu, select :menuselection:`Settings > Users`.
    A table of current members appears in the main panel.
 #. Use the Search field to find the name of the user you want to remove, either by name or email address.
-#. Select the :guilabel:`Actions` () menu icon next the username, then select :menuselection:`Remove User`.
+#. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Remove User`.
 #. Observability Cloud displays a dialog box that asks you to confirm the deletion. Select:abbr:`Delete`.
 
 The user no longer appears in the list of members.
