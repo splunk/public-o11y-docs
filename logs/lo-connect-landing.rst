@@ -39,6 +39,8 @@ Splunk Log Observer Connect
 
 - :ref:`logs-LOconnect-troubleshoot`
 
+- :ref:`logs-LOconnect-usecase`
+
 - :ref:`logs-timeline`
 
 - :ref:`logs-queries`
