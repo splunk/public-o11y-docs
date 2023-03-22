@@ -269,7 +269,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Instrument back-end services TOGGLE <gdi/get-data-in/application/application>
 
