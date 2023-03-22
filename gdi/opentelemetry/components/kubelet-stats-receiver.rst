@@ -19,7 +19,7 @@ SignalFx Smart Agent monitors.
 Installation
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -224,12 +224,12 @@ The following parameters can also be specified:
 Metrics
 ======================
 
-Refer to `our GitHub
-repo <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/kubeletstatsreceiver/documentation.md>`__
-to see the metrics available for this integration.
+The following metrics, resource attributes, and attributes are available.
 
-See also the `list of metrics excluded by
-default <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/signalfxexporter/internal/translation/default_metrics.go>`__.
+.. raw:: html
+
+  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/kubeletstatsreceiver.yaml"></div>
+
 
 Get help
 ======================

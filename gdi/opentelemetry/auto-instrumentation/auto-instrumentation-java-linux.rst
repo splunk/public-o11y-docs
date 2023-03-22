@@ -1,16 +1,16 @@
-.. meta::
-   :description: How to activate zero configuration automatic instrumentation for Linux Java applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
-
 .. include:: /_includes/gdi/zero-config-preview-header.rst
 
 
 .. _auto-instrumentation-java-linux:
 
-=======================================================================================
+*********************************************************************
 Zero Configuration Auto Instrumentation for Linux Java applications
-=======================================================================================
+*********************************************************************
 
-Zero Configuration Auto Instrumentation for Java activates automatic instrumentation for Linux Java applications. To activate automatic instrumentation, install the ``splunk-otel-auto-instrumentation`` package. After installing the package, you must start or restart any Java applications that you want to instrument.
+.. meta::
+   :description: How to activate zero configuration automatic instrumentation for Linux Java applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
+
+Zero Configuration Auto Instrumentation for Java activates automatic instrumentation for Java applications running on Linux. After installing the package, you must start or restart any Java applications that you want to instrument.
 
 .. _prerequisites:
 
@@ -24,14 +24,11 @@ Prerequisites
 Install the package
 =========================================================
 
-You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
-
-- Install using the Collector installer script
-- Install using Debian or RPM packages
+You can install the ``splunk-otel-auto-instrumentation`` package in the following ways:
 
 .. tabs::
 
-   .. tab:: Install using the Collector installer script
+   .. tab:: Installer script
 
       To install the package, run the Collector installer script with the ``--with-instrumentation`` option. The installer script will install the Collector and the Java agent from the Splunk Distribution of OpenTelemetry Java. The Java agent is then loaded automatically when a Java application starts on the local machine.
 
@@ -42,18 +39,28 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
          curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
          sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
-      To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <VALUE>`` option. Replace ``<VALUE>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+      To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
       .. code-block:: bash
+         :emphasize-lines: 2
 
          curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+         --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
+      You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
+
+      .. code-block:: bash
+         :emphasize-lines: 4
+
+         curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+         --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+         --enable-profiler --enable-profiler-memory --enable-metrics
       
-      Next, :ref:`ensure the service is running<verify-install>` and :ref:`start your applications<start-restart-java-apps>`. 
+      Next, ensure the service is running and restart your application. See :ref:`verify-install` and :ref:`start-restart-java-apps`. 
 
-
-   .. tab::  Install using Debian or RPM packages
+   .. tab::  Linux packages (deb, rpm)
 
       .. note:: You must first install the Splunk OpenTelemetry Collector using the :ref:`linux-packages`.
 
@@ -86,10 +93,24 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
 
             sudo systemctl start splunk-otel-collector
 
-
       5. :ref:`verify-install`.
       6. :ref:`start-restart-java-apps`.
 
+   .. tab:: Ansible
+
+      See :ref:`ansible-zero-config-java`.
+
+   .. tab:: Chef
+
+      See :ref:`chef-zero-config-java`.
+
+   .. tab:: Puppet
+
+      See :ref:`puppet-zero-config-java`.
+      
+   .. tab:: Salt
+
+      See :ref:`salt-zero-config-java`.
 
 .. _verify-install:
 
@@ -114,24 +135,23 @@ If the service fails to start, check that the ``SPLUNK_REALM`` and ``SPLUNK_ACCE
 
    sudo journalctl -u splunk-otel-collector
 
-
 .. _start-restart-java-apps:
 
 Start your applications
 -----------------------------------
 
-You are now ready to start sending traces to Splunk APM. For auto instrumentation to take effect, you must manually start or restart any Java applications on the host where you installed the package. This is true after installing the auto instrumentation package for the first time and whenever you make any changes to the configuration file. 
+For auto instrumentation to take effect, you must manually start or restart any Java applications on the host where you installed the package. This is true after installing the auto instrumentation package for the first time and whenever you make any changes to the configuration file. 
 
-Once your applications are running, you can :ref:`verify-apm-data`. You can also :ref:`optionally configure instrumentation settings<configure-java-zeroconf-linux>`. 
+After your applications are running, you can verify your data. See :ref:`verify-apm-data`. You can also configure instrumentation settings. See :ref:`configure-java-zeroconf-linux`. 
 
 .. _configure-java-zeroconf-linux:
 
-Optionally configure instrumentation
-====================================
+(Optional) Configure the instrumentation
+==========================================
 
-The default settings for zero config autoinstrumentation are sufficient for most basic cases. You can set additional customizations by editing the configuration file. 
+The default settings for zero config autoinstrumentation are sufficient for most cases. You can set additional customizations by editing the configuration file. 
 
-Installing the package installs the following artifacts:
+The installation package contains the following artifacts:
 
 - The configuration file at ``/usr/lib/splunk-instrumentation/instrumentation.conf`` 
 - The :new-page:`Java Instrumentation Agent <https://github.com/signalfx/splunk-otel-java>` at ``/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar``
@@ -144,6 +164,17 @@ The following is a sample of the default configuration file:
    java_agent_jar=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
 
 By default, the configuration file only specifies one parameter, ``java_agent_jar``, which points to the path of the installed Java Instrumentation Agent.
+
+The following is a sample configuration that sets the service name and environment, activates CPU and memory profiling, and activates metric collection:
+
+.. code-block:: bash
+
+   java_agent_jar=/usr/lib/splunk-instrumentation/splunk-otel-javaagent.jar
+   service_name=default.service
+   resource_attributes=deployment.environment=test
+   enable_profiler=true
+   enable_profiler_memory=true
+   enable_metrics=true
 
 The :ref:`supported-parameters` section discusses additional parameters you can set in the configuration file.
 
@@ -166,25 +197,35 @@ The following table shows the supported parameters for the ``/usr/lib/splunk-ins
      - The full path to the JAR file provided by the installer.
      -  Yes
    * - ``service_name``
-     - An optional parameter that specifies a unique identifier for a particular host. If you set this parameter, all instrumented Java applications on the host have their service name set using the  ``OTEL_SERVICE_NAME`` environment variable. If this parameter is not set, the shared object assigns a generated name. 
+     - An optional parameter that specifies a unique identifier for a particular host. If you set this parameter, all instrumented Java applications on the host have their service name set using the  ``OTEL_SERVICE_NAME`` environment variable. If this parameter isn't set, the shared object assigns a generated name.
      - No
    * - ``resource_attributes`` 
-     - Contains a comma-separated list of name-value pairs of the form ``name=value``. Use this attribute to add extra tags to the generated trace data. For example, you might want every span to include a ``build.id`` set to ``feb2023`` and a ``deployment.environment`` set to ``test``. You can set the ``resource_attributes`` to ``build.id=feb2023_v2,deployment.environment=test``. The shared object sets the ``RESOURCE_ATTRIBUTES`` environment variable to the value you specified, and the Java agent includes each pair in every span.
+     - Contains a comma-separated list of name-value pairs of the form ``name=value``. Use this attribute to add extra tags to the generated trace data. |br| If you installed the package with the installer script and specified the ``--deployment-environment <your_env>`` when you ran the script, the ``deployment.environment=<your_env>`` resource attribute is automatically added to the configuration.
      - No  
+   * - ``generate_service_name``
+     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable. In that case, the instrumentation library tries to determine the service name automatically.
+     - No
+   * - ``enable_profiler``
+     - Set to ``true`` to activate AlwaysOn Profiling (CPU). See :ref:`profiling-intro`.
+     - No
+   * - ``enable_profiler_memory``
+     - Set to ``true`` to activate AlwaysOn Profiling (Memory). See :ref:`profiling-memory-metrics`.
+     - No
+   * - ``enable_metrics``
+     - Set to ``true``  to activate metric collection. See :ref:`java-otel-metrics-attributes`.
+     - No
+   * - ``disable_telemetry``
+     - Set to ``true`` to prevent the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the local collector.
+     - No
 
+The ``/etc/ld.so.preload`` file is automatically created or updated with the default path to the installed instrumentation library. If necessary, custom library paths can be manually added to this file.
 
-Keep the following information in mind after the installation:
+.. note:: Whenever you change the configuration file, you must manually start or restart any Java applications on the host where you installed the package.
 
--  Whenever you change the configuration file, you must manually start or restart any Java applications on the host where you installed the package.
-
-- If you installed the package with the installer script and specified the ``--deployment-environment VALUE`` when you ran the script, the ``deployment.environment=VALUE`` resource attribute is automatically added to the configuration file.
-
-- The ``/etc/ld.so.preload`` file is automatically created or updated with the default path to the installed instrumentation library. If necessary, custom library paths can be manually added to this file.
-
-**Advanced configuration**
+Advanced configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 More advanced configuration options like correlating traces and logs and enabling custom sampling are available by :ref:`configuring the Java agent<advanced-java-otel-configuration>`. 
-
 
 .. _upgrade-the-package:
 
@@ -289,9 +330,7 @@ Use one of the following options to deactivate automatic instrumentation:
 
 - Delete or move the ``instrumentation.conf`` configuration file.
 
-
 .. include:: /_includes/gdi/next-steps.rst
-
 
 Troubleshooting
 =========================================
@@ -305,6 +344,5 @@ If you activate auto instrumentation and you see an error message or you do not 
    sudo journalctl -u splunk-otel-collector
 
 - You can also follow the :ref:`steps to activate trace and troubleshoot the Java agent<basic-java-troubleshooting>`.
-
 
 .. include:: /_includes/troubleshooting-steps.rst

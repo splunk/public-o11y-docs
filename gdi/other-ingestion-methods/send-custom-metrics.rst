@@ -35,6 +35,8 @@ Make sure that the new receiver is the ``metrics`` pipeline of the configuration
       processors: [ memory_limiter, batch, resourcedetection ]
       exporters: [ signalfx ]
 
+See :ref:`prometheus-receiver` for more information.
+
 Add the required dependencies
 ======================================
 

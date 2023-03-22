@@ -18,6 +18,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     install-the-collector.rst
     configure-the-collector.rst
     Commands reference <otel-commands.rst>
+    Zero config auto instrumentation <zero-config.rst>
     Use the Universal Forwarder <collector-with-the-uf.rst>
     Troubleshooting <troubleshooting.rst>
     
@@ -51,3 +52,4 @@ For more information:
 
 - See :ref:`otel-components` for a description of the components the Collector supports.
 - Use :ref:`collector-remove-data` to strip data out of your telemetry, including PII.
+- Read :ref:`otel-collector-use-case`.

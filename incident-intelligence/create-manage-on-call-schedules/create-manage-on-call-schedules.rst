@@ -13,6 +13,7 @@ Create and manage on-call schedules
    example-schedule-scenarios
    sync-on-call-schedule
    whos-on-call
+   reassign-shift
 
 
 When an incident occurs, it is important to contact a responder who understands that part of the system architecture to fix the problem. You can accomplish this through scheduling. An on-call schedule consists of a rotating group of responders that are assigned shifts for incident response. Use an on-call schedule as a step in your incident workflows.
@@ -32,6 +33,8 @@ After you save your shifts, review the schedule details in the :guilabel:`Schedu
 
 Now that you've created an on-call schedule, add it to the incident workflow for your web application incident policy. See :ref:`ii-configure-incident-workflows`.
 
+.. note:: You can edit the schedule if you need to make broader changes than a single shift reassignment. After saving changes to the shift schedule, a dialog displays to inform you of any shifts that might be impacted by your changes. The list displays the potentially impacted users and shifts over the next 90 days so you can adjust shift assignments as needed.
+
 .. raw:: html
 
    <embed>
@@ -41,3 +44,4 @@ Now that you've created an on-call schedule, add it to the incident workflow for
 * :ref:`ii-schedule-scenarios`
 * :ref:`ii-whos-on-call`
 * :ref:`ii-sync-on-call-schedule`
+* :ref:`reassign-shift`

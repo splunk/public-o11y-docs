@@ -44,7 +44,7 @@ You must have systemd installed to use this script. The installer script deploys
 
 * The Splunk Distribution of OpenTelemetry Collector for Linux
 * :new-page:`SignalFx Smart Agent and collectd bundle <https://github.com/signalfx/signalfx-agent/releases>`
-* Fluentd (using the td-agent). See the :new-page:`Fluentd FAQs <https://www.fluentd.org/faqs>` for more information.
+* Fluentd (using the td-agent).  See :ref:`fluentd-receiver` for more information.
 
 Do the following to install the package using the installer script:
 
@@ -87,9 +87,9 @@ Configure proxy settings
 
 If you need to use a proxy, set one of the following environment variables according to your needs:
 
-- ``HTTP_PROXY``: The HTTP proxy address
-- ``HTTPS_PROXY``: The HTTPS proxy address
-- ``NO_PROXY``: If a proxy is defined, sets addresses that don't use the proxy
+- ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
+- ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy.
 
 Restart the Collector after adding these environment variables to your configuration.
 
@@ -108,6 +108,8 @@ To skip these steps and use pre-configured repos on the target system that provi
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- SPLUNK_ACCESS_TOKEN
+
+.. _fluentd-manual-config-linux:
 
 Configure Fluentd
 ---------------------------------------
@@ -186,6 +188,7 @@ You can also automatically instrument your Java applications along with the Coll
 
 Deployments
 ====================
+
 Splunk offers the configuration management options described in this section.
 
 .. _linux-amazon-ecs-ec2:
@@ -296,6 +299,8 @@ To set custom permissions after the Collector has been installed, use:
 Docker
 ----------------
 
+The Linux docker image of the Splunk Distribution of OpenTelemetry Collector contains a multi-arch manifest that specifies the images for AMD64, ARM64, and ppc64le architectures. Docker uses this manifest to download the correct image for the target platform.
+
 Run the following command to install the package using Docker:
 
 .. code-block:: bash
@@ -314,7 +319,7 @@ The following list provides more information on the ``docker run`` command optio
 * ``-e`` sets simple (non-array) environment variables in the container you're running, or overwrite variables that are defined in the Dockerfile of the image you're running.
 * ``-p`` publishes a container's port(s) to the host.
 
-Run the following command to execute an interactive bash shell on the container and see the status of the Collector:
+Run the following command to run an interactive bash shell on the container and see the status of the Collector:
 
 .. code-block:: bash
 
