@@ -20,7 +20,7 @@ Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for our c
 
 The documentation is built from [reStructuredText](https://docutils.sourceforge.io/rst.html) and Markdown files using [Sphinx](https://www.sphinx-doc.org/en/master/).
 
-To contribute to the documentation you only need a GitHub account. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
+To contribute to the documentation you only need a GitHub account. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 To build the documentation on your machine use the Docker container in this repository, which provides a configured Python environment. To run the container you need Docker Desktop or a compatible container runtime.
 
