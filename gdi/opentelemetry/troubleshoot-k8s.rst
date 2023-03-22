@@ -1,7 +1,7 @@
 .. _tshoot-k8s-container-runtimes:
 
-*************************************************************** 
-Kubernetes and container runtimes
+***************************************************************
+Troubleshoot the Collector for Kubernetes 
 ***************************************************************
 
 .. meta::
@@ -348,5 +348,4 @@ When using Kubernetes versions 1.23.0 to 1.23.6 with containerd, memory stats or
 
 At this time, there is no workaround for this issue. 
 
-.. include:: /_includes/troubleshooting-steps.rst
 
