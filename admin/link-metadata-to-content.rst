@@ -52,7 +52,7 @@ For more examples of global data links displayed in context, see :ref:`access-gl
 
 Global data links dynamically transfer contextual information about the metadata you’re viewing to the linked resource, helping you get to relevant information faster.
 
-When you create a global data link, the system displays it wherever the designated metadata is visible in dashboards, Splunk Infrastructure Monitoring navigators, Splunk APM, and alert messages. All users who can see the metadata can see the global data link.
+When you create a global data link, it appears wherever the designated metadata is visible in dashboards, Splunk Infrastructure Monitoring navigators, Splunk APM, and alert messages. All users who can see the metadata can see the global data link.
 
 By contrast, when you create a local data link, it is only available on the dashboard or navigator you created it on. All users who can see the metadata can see the local data link. For more information about local data links, see :ref:`navigate-with-data-links`.
 
