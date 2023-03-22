@@ -273,7 +273,7 @@ The following settings activate runtime metrics collection:
      - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
    * - ``SPLUNK_DEBUG_METRICS_ENABLED`` 
      - ``metrics.debugMetricsEnabled``
-     - Activates the collection and export of debug metrics. The default value is ``false``. Debug metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true``. For more information, see :ref:`nodejs-otel-debug-metrics`.
+     - Activates the collection and export of internal debug metrics for troubleshooting. The default value is ``false``. Debug metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true``. For more information, see :ref:`nodejs-otel-debug-metrics`.
    * - None
      - ``metrics.resourceFactory``
      - Callback that lets you filter the default resource or provide a custom one. The function takes one argument of type ``Resource``, which contains the service name, environment, host, and process attributes by default.
