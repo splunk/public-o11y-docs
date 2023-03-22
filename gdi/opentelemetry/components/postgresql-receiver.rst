@@ -56,7 +56,7 @@ configuration file, as shown in the following example:
          cert_file: /home/otel/mypostgrescert.crt
          key_file: /home/otel/mypostgreskey.key
 
-The ``username`` and ``password`` fields are mandatory. By default, the receiver searches for a PostgreSQL server at ``localhost:5432``. You can customize the addresse by editing the value of the ``endpoint`` field.
+The ``username`` and ``password`` fields are mandatory. By default, the receiver searches for a PostgreSQL server at ``localhost:5432``. You can customize the address by editing the value of the ``endpoint`` field.
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
