@@ -250,3 +250,49 @@ With the release of version 2.0 of the Splunk Distribution of OpenTelemetry JS, 
      - ``nodejs.event_loop.lag.max``
    * - ``process.runtime.nodejs.event_loop.lag.min``
      - ``nodejs.event_loop.lag.min``
+
+.. _nodejs-otel-debug-metrics:
+
+Debug metrics
+=====================================
+
+To activate debug metrics, see :ref:`metrics-configuration-nodejs`. Debug metrics are used for internal debugging purposes and to provide data to Splunk customer support.
+
+The following example shows how to activate runtime metrics by passing the ``debugMetricsEnabled`` argument to the ``start`` method:
+
+.. code-block:: javascript
+
+   const { start } = require('@splunk/otel');
+
+   start({
+      serviceName: 'my-service',
+      metrics: {
+        debugMetricsEnabled: true,
+      }
+   });
+
+The following runtime metrics are automatically collected and exported:
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 50
+   :width: 100%
+
+   * - Metric
+     - Type
+     - Description
+   * - ``splunk.profiler.cpu.start.duration``
+     - Histogram
+     - Time to start a new V8 profiling run.
+   * - ``splunk.profiler.cpu.stop.duration``
+     - Histogram
+     - Time to stop a new V8 profiling run.
+   * - ``splunk.profiler.cpu.process.duration``
+     - Histogram
+     - Time spent matching span activations with stack traces and building the final output.
+   * - ``splunk.profiler.heap.collect.duration``
+     - Histogram
+     - Time to provide an alloxation profile through the V8 profiler.
+   * - ``splunk.profiler.heap.process.duration``
+     - Histogram
+     -  Time to traverse the call graph and build stack traces from the allocation samples.

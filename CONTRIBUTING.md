@@ -1,6 +1,8 @@
 # Contributing guidelines
 
-Thank you for your interest in contributing to Splunk Observability Cloud documentation. Read through this document before submitting any pull request.
+Thank you for your interest in contributing to Splunk Observability Cloud documentation!
+
+Read through this document before submitting any pull request.
 
 - [Prerequisites](#prerequisites)
 - [Decide the type of edit](#decide-the-type-of-edit)

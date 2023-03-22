@@ -17,7 +17,7 @@ Database metrics are dimensionalized by project and database attributes, for exa
 Get started
 ======================
 
-Follow these steps to configure and enable the component:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
