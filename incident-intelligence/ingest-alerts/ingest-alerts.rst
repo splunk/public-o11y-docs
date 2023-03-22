@@ -28,11 +28,10 @@ The following options are available for ingesting alerts in Incident Intelligenc
 
 After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab of Incident Intelligence.
 
-.. raw:: html
-
-   <embed>
+<embed>
       <h2 id="ii-ingest-observability-alerts">Available alert sources in Splunk Observability Cloud</h2>
-   </embed>
+      </embed>
+
 
 .. list-table::
    :header-rows: 1
@@ -57,7 +56,24 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
         * To create a detector for a browser test, see :ref:`detector-browser-test`.
         * To create a detector for an uptime test, see :ref:`uptime-detector`.
 
-   * - Splunk Enterprise and Splunk Cloud Platform
+.. raw:: html
+
+   <embed>
+      <h2 id="ii-ingest-splunk-alerts">Available alert sources in Splunk Enterprise and Splunk Cloud Platform</h2>
+   </embed>
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 25, 75
+
+   * - :strong:`Alert source`
+     - :strong:`Documentation`
+
+   * - Splunk Enterprise
+     - See :ref:`ii-ingest-splunk-itsi-alerts`.
+
+   * - Splunk Cloud Platform
      - See :ref:`ii-ingest-splunk-itsi-alerts`.
 
 .. raw:: html
@@ -85,6 +101,7 @@ After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab
   
    * - Generic REST alerts
      - See :ref:`ii-ingest-rest`.
+
 
 
 
