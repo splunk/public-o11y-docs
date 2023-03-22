@@ -66,7 +66,7 @@ The collector might not receive data for the following reasons:
 * The receiver is defined in the receivers section, but not activated in any pipelines.
 * The client configuration is incorrect
 
-Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
+Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in the OpenTelemetry project GitHub repositories for more information. Note that Splunk only provides best-effort support for the upstream OpenTelemetry Collector. 
 
 Collector can't process data
 -----------------------------------
@@ -88,7 +88,7 @@ The collector might be unable to export data for the following reasons:
 
 If you need to use a proxy, see :ref:`configure-proxy-collector`.
 
-Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
+Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in the OpenTelemetry project GitHub repositories for more information. Note that Splunk only provides best-effort support for the upstream OpenTelemetry Collector. 
 
 .. _collector-gateway-metrics-issue:
 
