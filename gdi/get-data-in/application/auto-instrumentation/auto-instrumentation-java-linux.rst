@@ -24,14 +24,11 @@ Prerequisites
 Install the package
 =========================================================
 
-You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
-
-- Install using the Collector installer script
-- Install using Debian or RPM packages
+You can install the ``splunk-otel-auto-instrumentation`` package in the following ways:
 
 .. tabs::
 
-   .. tab:: Install using the Collector installer script
+   .. tab:: Installer script
 
       To install the package, run the Collector installer script with the ``--with-instrumentation`` option. The installer script will install the Collector and the Java agent from the Splunk Distribution of OpenTelemetry Java. The Java agent is then loaded automatically when a Java application starts on the local machine.
 
@@ -61,9 +58,9 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
          --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
          --enable-profiler --enable-profiler-memory --enable-metrics
       
-      Next, :ref:`ensure the service is running<verify-install>` and :ref:`start your applications<start-restart-java-apps>`. 
+      Next, ensure the service is running and restart your application. See :ref:`verify-install` and :ref:`start-restart-java-apps`. 
 
-   .. tab::  Install using deb or rpm packages
+   .. tab::  Linux packages (deb, rpm)
 
       .. note:: You must first install the Splunk OpenTelemetry Collector using the :ref:`linux-packages`.
 
@@ -98,6 +95,22 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
 
       5. :ref:`verify-install`.
       6. :ref:`start-restart-java-apps`.
+
+   .. tab:: Ansible
+
+      See :ref:`ansible-zero-config-java`.
+
+   .. tab:: Chef
+
+      See :ref:`chef-zero-config-java`.
+
+   .. tab:: Puppet
+
+      See :ref:`puppet-zero-config-java`.
+      
+   .. tab:: Salt
+
+      See :ref:`salt-zero-config-java`.
 
 .. _verify-install:
 
