@@ -107,16 +107,16 @@ Identify the root cause and remediate
 
 1. Her exploration in Log Observer Connect convinces Aisha that the test API token in v350.10 is the most likely source of the failures to complete payment. Aisha rolls back the Buttercup Games code from the problematic v350.10 to v350.9.
 
-2. Aisha notifies Deepu about the invalid API token, which is a test token. Deepu replaced the test token with a token that works in production.
+2. Aisha notifies Deepu about the invalid API token, which is a test token. Deepu replaces the test token with a token that works in production.
 
 
 Summary
 ========================================================================================================================
-When Buttercup Games' e-commerce site began having a slow checkout completion rate and saw drop in the number of purchases, a site reliability engineer, Aisha, looked at the :strong:`/cart/checkout` business workflow on the APM service map. She saw that Splunk APM identified the :strong:`paymentservice` as the root cause of errors. Aisha decided to look into the log details by linking from APM to related logs via the Related Content bar. In Log Observer Connect, Aisha noticed that several logs coming from :strong:`paymentservice` had the same error. The common error messages indicated that the API token started with “test”. She figured that the test token was the problem. She ruled out other possible problems by filtering logs. She correlated the suspicious test token error message with only logs in v350.10.
+When Buttercup Games' e-commerce site began having a slow checkout completion rate and saw a drop in the number of purchases, a site reliability engineer, Aisha, looked at the :strong:`/cart/checkout` business workflow on the APM service map. She saw that Splunk APM identified the :strong:`paymentservice` as the root cause of errors. Aisha decided to look into the log details by linking from APM to related logs via the Related Content bar. In Log Observer Connect, Aisha noticed that several logs coming from :strong:`paymentservice` had the same error. The common error messages indicated that the API token started with “test”. She figured that the test token was the problem. She ruled out other possible problems by filtering and aggregating logs. She correlated the suspicious test token error message with only logs in v350.10.
 
-Consulting with Deepu, the paymentservice owner, they agreed that the test API token was the likely cause of the problem. Aisha rolled back the code to the previous version because v350.9 logs did not contain the test token error message. Then Deepu replaced the test token with a token that works in production. 
+Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. Aisha rolled back the code to the previous version because v350.9 logs did not contain the test token error message. Then Deepu replaced the test token with a token that works in production. 
 
-After the fix, users were able to complete checkout and make purchases from the Buttercup Games e-commerce site. To prevent similar problems in the future, Aisha decided to create a detector to alert her team when tokens contain "test".
+After the fix, users were able to complete checkout and make purchases from the Buttercup Games e-commerce site. To prevent similar problems in the future, Aisha decided to create a detector to alert her team when tokens contain "test". The alert and detector will notify Aisha's and Deepu's teams before customers attempt to make purchases that will fail.
 
 
 Learn more
