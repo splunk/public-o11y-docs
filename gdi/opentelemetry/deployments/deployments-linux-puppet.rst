@@ -118,7 +118,7 @@ You can automatically instrument your Java applications along with the Collector
 The following table shows the variables that can be configured for this Puppet module:
 
 .. list-table:: Variables for auto instrumentation
-   :widths: 50 50
+   :widths: 20 30 50
    :header-rows: 1
 
    * - Name
@@ -149,8 +149,7 @@ The following table shows the variables that can be configured for this Puppet m
      - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
      - ``false``
    * - ``auto_instrumentation_enable_profiler``
-     - nable or disable
-  AlwaysOn CPU Profiling.
+     - Activates or deactivates AlwaysOn CPU Profiling.
      - ``false``
    * - ``auto_instrumentation_enable_profiler_memory``
      - Activates or deactivates AlwaysOn Memory Profiling.

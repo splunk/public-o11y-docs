@@ -123,8 +123,7 @@ The following table shows the variables that can be configured for this Ansible 
    * - ``splunk_otel_auto_instrumentation_disable_telemetry``
      - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
    * - ``splunk_otel_auto_instrumentation_enable_profiler``
-     - nable or disable
-  AlwaysOn CPU Profiling.
+     - Activates or deactivates AlwaysOn CPU Profiling.
    * - ``splunk_otel_auto_instrumentation_enable_profiler_memory``
      - Activates or deactivates AlwaysOn Memory Profiling.
    * - ``splunk_otel_auto_instrumentation_enable_metrics``
