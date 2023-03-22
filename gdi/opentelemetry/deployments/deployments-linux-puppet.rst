@@ -17,7 +17,7 @@ Currently, we support the following Linux distributions and versions:
 - SUSE: 12, 15 (Note: Only applicable for Collector versions v0.34.0 or higher. Log collection with Fluentd not currently supported.)
 - Ubuntu: 16.04, 18.04, 20.04, 22.04
 
-On Linux-based systems, the :new-page:`puppetlabs/stdlib module <https://forge.puppet.com/puppetlabs/stdlib >` is required. 
+On Linux systems, the :new-page:`puppetlabs/stdlib module <https://forge.puppet.com/puppetlabs/stdlib >` is required. 
 
 .. note::
     
@@ -107,6 +107,23 @@ The class accepts the parameters described in the following table:
    * - ``manage_repo`` 
      - In cases where the Collector and Fluentd apt/yum repositories are managed externally, set this to ``false`` to deactivate management of the repositories by this module. If set to ``false``, the externally managed repositories should provide the ``splunk-otel-collector`` and ``td-agent`` packages. Also, the apt (``/etc/apt/sources.list.d/splunk-otel-collector.list`` and ``/etc/apt/sources.list.d/splunk-td-agent.list``) and yum (``/etc/yum.repos.d/splunk-otel-collector.repo`` and ``/etc/yum.repos.d/splunk-td-agent.repo``) repository definition files are deleted if they exist in order to avoid any conflicts.
      - ``true``
+
+.. _puppet-zero-config-java:
+
+Configure auto instrumentation for Java (Linux only)
+======================================================
+
+You can automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
+
+The following table shows the variables that can be configured for this Puppet module:
+
+.. list-table::
+   :widths: 20 30 50
+   :header-rows: 1
+
+   * - Name
+     - Description
+     - Default value
    * - ``with_auto_instrumentation``
      - Whether to install or manage :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
      - ``false``
@@ -125,3 +142,18 @@ The class accepts the parameters described in the following table:
    * - ``auto_instrumentation_service_name``
      - Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. However, if this variable is set to a non-empty value, the value overrides the derived service name and is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
      - None
+   * - ``auto_instrumentation_generate_service_name``
+     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
+     - ``true``
+   * - ``auto_instrumentation_disable_telemetry``
+     - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
+     - ``false``
+   * - ``auto_instrumentation_enable_profiler``
+     - Activates or deactivates AlwaysOn CPU Profiling.
+     - ``false``
+   * - ``auto_instrumentation_enable_profiler_memory``
+     - Activates or deactivates AlwaysOn Memory Profiling.
+     - ``false``
+   * - ``auto_instrumentation_enable_metrics``
+     - Activates or deactivates JVM metrics. 
+     - ``false``

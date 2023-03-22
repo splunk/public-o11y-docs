@@ -17,6 +17,7 @@ Steps for troubleshooting Node.js OpenTelemetry issues
 The following steps can help you troubleshoot Node.js instrumentation issues:
 
 #. :ref:`enable-nodejs-debug-logging`
+#. :ref:`enable-debug-metrics`
 
 .. _enable-nodejs-debug-logging:
 
@@ -53,6 +54,13 @@ To deactivate debug logging in your code, call ``setLogger()`` as in the followi
    diag.setLogger();
 
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
+
+.. _enable-debug-metrics:
+
+Activate debug metrics
+---------------------------------
+
+You can activate internal debug metrics by setting the ``SPLUNK_DEBUG_METRICS_ENABLED`` environment variable to true. For more information, see :ref:`nodejs-otel-debug-metrics`.
 
 .. _nodejs-trace-exporter-issues:
 
