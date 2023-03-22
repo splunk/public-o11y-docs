@@ -101,21 +101,21 @@ If you don't see metrics and metadata after manually deploying the Collector in 
 
 #. Make sure that the agent configuration has a ``signalfx`` exporter in a pipeline. The following example shows a ``signalfx`` exporter and a pipeline that uses it for sending metrics:
 
-   .. code-block:: yaml
+  .. code-block:: yaml
       :emphasize-lines: 2,3,4,5,14
 
       exporters:
-         signalfx:
+        signalfx:
             access_token: "${SPLUNK_ACCESS_TOKEN}"
             api_url: "http://${SPLUNK_GATEWAY_URL}:6060"
             ingest_url: "http://${SPLUNK_GATEWAY_URL}:9943"
             sync_host_metadata: true
             correlation:
-         # Other exporters
+        # Other exporters
 
       service:
-         extensions: [health_check, http_forwarder, zpages]
-         pipelines:
+        extensions: [health_check, http_forwarder, zpages]
+        pipelines:
             metrics/internal:
                   receivers: [prometheus/internal]
                   processors: [memory_limiter, batch, resourcedetection]
@@ -186,19 +186,19 @@ You're receiving an HTTP error code
 If an HTTP request is not successfully completed, you might see the following HTTP error codes.
 
 .. list-table::
-   :widths: 50 50
-   :header-rows: 1
+  :widths: 50 50
+  :header-rows: 1
 
-   * - Error code
-     - Description
-   * - ``401 (UNAUTHORIZED)``
-     - Configured access token or realm is incorrect.
-   * - ``404 (NOT FOUND)``
-     - Incorrect configuration parameter, like an endpoint or path, or a network, firewall, or port issue.
-   * - ``429 (TOO MANY REQUESTS)``
-     - Organization is not provisioned for the amount of traffic being sent. Reduce traffic or request increase in capacity.
-   * - ``503 (SERVICE UNAVAILABLE)``
-     - If using the Log Observer, this is the same as the ``429 (TOO MANY REQUESTS)`` error code, due to how HECv1 responds. Otherwise, check the status page.
+  * - Error code
+    - Description
+  * - ``401 (UNAUTHORIZED)``
+    - Configured access token or realm is incorrect.
+  * - ``404 (NOT FOUND)``
+    - Incorrect configuration parameter, like an endpoint or path, or a network, firewall, or port issue.
+  * - ``429 (TOO MANY REQUESTS)``
+    - Organization is not provisioned for the amount of traffic being sent. Reduce traffic or request increase in capacity.
+  * - ``503 (SERVICE UNAVAILABLE)``
+    - If using the Log Observer, this is the same as the ``429 (TOO MANY REQUESTS)`` error code, due to how HECv1 responds. Otherwise, check the status page.
 
 Trace collection issues
 ================================
