@@ -1,4 +1,4 @@
-.. _LOconnect-usecase:
+.. _logs-LOconnect-usecase:
 
 ************************************************************************************************************************
 Use case: Troubleshoot failures in online purchases with Log Observer Connect
