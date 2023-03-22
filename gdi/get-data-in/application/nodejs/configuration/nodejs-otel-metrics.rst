@@ -71,6 +71,50 @@ The following runtime metrics are automatically collected and exported:
      - Gauge
      - Minimum event loop lag within the collection interval, in nanoseconds.
 
+.. _nodejs-otel-debug-metrics:
+
+Debug metrics
+=====================================
+
+To activate runtime metrics, see :ref:`metrics-configuration-nodejs`. The following example shows how to activate runtime metrics by passing the ``debugMetricsEnabled`` argument to the ``start`` method:
+
+.. code-block:: javascript
+
+   const { start } = require('@splunk/otel');
+
+   start({
+      serviceName: 'my-service',
+      metrics: {
+        debugMetricsEnabled: true,
+      }
+   });
+
+The following runtime metrics are automatically collected and exported:
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 10 50
+   :width: 100%
+
+   * - Metric
+     - Type
+     - Description
+   * - ``splunk.profiler.cpu.start.duration``
+     - <type>
+     - <description>
+   * - ``splunk.profiler.cpu.stop.duration``
+     - <type>
+     - <description>
+   * - ``splunk.profiler.cpu.process.duration``
+     - <type>
+     - <description>
+   * - ``splunk.profiler.heap.collect.duration``
+     - <type>
+     - <description>
+   * - ``splunk.profiler.heap.process.duration``
+     - <type>
+     - <description>
+
 .. _nodejs-otel-custom-metrics:
 
 Custom metrics
