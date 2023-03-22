@@ -24,7 +24,7 @@ In the past hour, the number of purchases on the Buttercup Games site dropped si
 
 5. :ref:`test-your-hypothesis`
 
-6. :ref:``
+6. :ref:`identify-and-remediate`
 
 
 .. _which-logs-matter:
@@ -95,6 +95,7 @@ Now that Aisha has used Log Observer Connect to determine where the problem is, 
 
 Summary
 ========================================================================================================================
+
 
 Learn more
 ========================================================================================================================
