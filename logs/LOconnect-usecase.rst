@@ -39,15 +39,15 @@ Determine which logs matter
 
 
     Aisha sees that :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow. Splunk APM identifies the issues as root cause errors. Aisha selects :strong:`paymentservice`. Splunk Observability Cloud displays details about the service’s errors and latency.
-    Splunk Observability Cloud also surfaces Related Content tiles that provide access to relevant data in other areas of the application. For example, Aisha can look at the health of the Kubernetes cluster where the paymentservice is running or she can examine logs being issued by the paymentservice. 
+    Splunk Observability Cloud also surfaces Related Content tiles that provide access to relevant data in other areas of the application. For example, Aisha can look at the health of the Kubernetes cluster where :strong:`paymentservice` is running or she can examine logs being issued by the :strong:`paymentservice`. 
 
     .. image:: /_images/logs/related-content.png
         :width: 100%
         :alt: This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s clusters for paymentservice and Logs for paymentservice.
 
-2. Aisha decides to look at the log details. She selects the Related Content tile, :strong:`Logs for paymentservice`. Log Observer Connect opens, and Aisha’s view is automatically narrowed to display only logs from paymentservice. Log Observer Connect displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer Connect does not ingest the logs, but displays the logs from their storage in Splunk Cloud Platform. 
+2. Aisha decides to look at the log details. She selects the Related Content tile, :strong:`Logs for paymentservice`. Log Observer Connect opens, and Aisha’s view is automatically narrowed to display only logs from :strong:`paymentservice`. Log Observer Connect displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer Connect does not ingest the logs, but displays the logs from their storage in Splunk Cloud Platform. 
 
-    Because Aisha first tracked the workflow problems in Splunk APM, she was able to narrow her search down to only logs coming from paymentservice. Now Aisha can use Log Observer Connect to analyze the logs. 
+    Because Aisha first tracked the workflow problems in Splunk APM, she was able to narrow her search down to only logs coming from :strong:`paymentservice`. Now Aisha can use Log Observer Connect to analyze the logs. 
 
 
 .. _conduct-initial-analysis:
@@ -56,7 +56,7 @@ Conduct initial analysis of logs
 ========================================================================================================================
 Aisha can query the :strong:`paymentservice` logs in Log Observer Connect’s codeless UI where she can filter and aggregate the logs without needing to know the SPL query language.
 
-1. Looking through the logs coming in in the logs table, Aisha sees some error logs, so she selects one to see more details in a structured view. In the log details view on the right, Aisha notices the error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)``.
+1. Looking through the incoming logs in the logs table, Aisha sees some error logs, so she selects one to see more details in a structured view. In the log details view on the right, Aisha notices the error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)``.
 
     .. image:: /_images/get-started/error-log.png
         :width: 100%
@@ -71,7 +71,7 @@ Find log patterns
 ========================================================================================================================
 1. Aisha opens a few other logs to see if others have the same error message. Several of the logs Aisha opens have the same error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)``. 
 
-    Aisha notes that all of the invalid API tokens start with “test”. It seems that a team pushed the current version, v350.10 live with a test token that doesn’t work in production.
+    Aisha notes that all of the invalid API tokens start with “test”. Aisha hypothesizes that a team pushed the current version, v350.10 live with a test token that doesn’t work in production.
 
 2. To double-check her hypothesis, Aisha selects the error message and selects :strong:`Add to filter`` to show only the logs that contain the same error message.
 
@@ -81,9 +81,9 @@ Find log patterns
 Narrow the hypothesis
 ========================================================================================================================
 
-1. Next, Aisha wants to group the logs by version to see if the group of logs that contain the test API token are on multiple versions. She changes the :strong:`Group by`` field from :strong:`severity` to :strong:`version`. 
+1. Next, Aisha wants to group the logs by version to see if the group of logs that contain the test API token are on multiple versions. She changes the :strong:`Group by` field to :strong:`version`. 
 
-    Now Aisha can see that all logs that contain the test API token are on version v350.1.
+    Now Aisha can see that all logs that contain the test API token are on version v350.10.
 
     .. image:: /_images/logs/group-by-version.png
         :width: 100%
@@ -97,7 +97,7 @@ Narrow the hypothesis
 Test the hypothesis
 ========================================================================================================================
 
-1. To be sure, Aisha selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don’t include the error message.
+1. To be sure, Aisha selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don’t include the error message. Aisha can now correlate all of the logs containing the error message to version v350.10.
 
     
 .. _identify-and-remediate:
@@ -105,22 +105,28 @@ Test the hypothesis
 Identify the root cause and remediate
 ========================================================================================================================
 
-1. Her exploration in Log Observer Connect convinces Aisha that the test API token in v350.10 is the most likely source of the failures to complete payment. Aisha rolls back v350.9, the version of the code with the problematic API token.
+1. Her exploration in Log Observer Connect convinces Aisha that the test API token in v350.10 is the most likely source of the failures to complete payment. Aisha rolls back the Buttercup Games code from the problematic v350.10 to v350.9.
 
-2. Aisha notifies Deepu about the invalid API token, which is a test token. Deepu and his team replace the test token with a token that works in production.
+2. Aisha notifies Deepu about the invalid API token, which is a test token. Deepu replaced the test token with a token that works in production.
 
 
 Summary
 ========================================================================================================================
+Looking at the service map, Aisha noted that Splunk APM identified the :strong:`paymentservice` as the root cause of errors. Aisha decided to look into the log details by linking from APM to related logs via the Related Content bar. In Log Observer Connect, Aisha noticed that several logs coming from :strong:`paymentservice` had the same error. The common error messages indicated that the API token started with “test”. She figured that the test token was the problem. She ruled out other possible problems by filtering logs and correlated the suspicious test token error message with only logs in v350.10.
 
+Consulting with Deepu, the paymentservice owner, they agreed that the test API token was the likely cause of the problem. Aisha rolled back the code to the previous version because v350.9 logs did not contain the test token error message. Then Deepu replaced the test token with a token that works in production. 
+
+After the fix, users were able to complete checkout and make purchases from the Buttercup Games e-commerce site. To prevent similar problems in the future, Aisha decided to create a detector to alert her team when tokens contain "test".
 
 Learn more
 ========================================================================================================================
 
-* For details about business workflows, see :ref:`apm-workflows`.
+* For details on business workflows, see :ref:`apm-workflows`.
 
-* For details about using Related Content, see :ref:`get-started-relatedcontent`.
+* For details on using Related Content, see :ref:`get-started-relatedcontent`.
 
-* For details about Log Observer Connect queries, see :ref:`logs-queries`.
+* For details on Log Observer Connect queries, see :ref:`logs-queries`.
 
-* For details about aggregating logs, seel :ref:`logs-aggregations`.
+* For details on aggregating logs, seel :ref:`logs-aggregations`.
+
+* For details on alerts and detectors, see :ref:`create-detectors`.
