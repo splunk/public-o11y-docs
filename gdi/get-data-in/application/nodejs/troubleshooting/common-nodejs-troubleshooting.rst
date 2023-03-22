@@ -57,10 +57,10 @@ To deactivate debug logging in your code, call ``setLogger()`` as in the followi
 
 .. _enable-debug-metrics:
 
-Enable debug metrics
+Activate debug metrics
 ---------------------------------
 
-You can enable internal debug metrics by setting the ``SPLUNK_DEBUG_METRICS_ENABLED`` environment variable to true. For more information, see :ref:`nodejs-otel-debug-metrics`.
+You can activate internal debug metrics by setting the ``SPLUNK_DEBUG_METRICS_ENABLED`` environment variable to true. For more information, see :ref:`nodejs-otel-debug-metrics`.
 
 .. _nodejs-trace-exporter-issues:
 
