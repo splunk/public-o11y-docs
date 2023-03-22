@@ -42,18 +42,28 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
          curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
          sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
-      To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <VALUE>`` option. Replace ``<VALUE>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
+      To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
       .. code-block:: bash
+         :emphasize-lines: 2
 
          curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
-         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
+         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+         --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
+      You can activate AlwaysOn Profiling for CPU and memory, as well as metrics, using additional options, as in the following example:
+
+      .. code-block:: bash
+         :emphasize-lines: 4
+
+         curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+         sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --deployment-environment prod \
+         --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN> \
+         --enable-profiler --enable-profiler-memory --enable-metrics
       
       Next, :ref:`ensure the service is running<verify-install>` and :ref:`start your applications<start-restart-java-apps>`. 
 
-
-   .. tab::  Install using Debian or RPM packages
+   .. tab::  Install using deb or rpm packages
 
       .. note:: You must first install the Splunk OpenTelemetry Collector using the :ref:`linux-packages`.
 
@@ -85,7 +95,6 @@ You can install the ``splunk-otel-auto-instrumentation`` package in two ways:
          .. code-block:: bash
 
             sudo systemctl start splunk-otel-collector
-
 
       5. :ref:`verify-install`.
       6. :ref:`start-restart-java-apps`.
