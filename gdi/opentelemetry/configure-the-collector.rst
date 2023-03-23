@@ -25,11 +25,11 @@ Configure the Collector
 
 You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately. 
 
-See also: 
+See also other configuration options: 
 
-* `otel-data-processing`
-* `otel-tags`
-* `configure-remove`
+* :ref:`otel-data-processing`
+* :ref:`otel-tags`
+* :ref:`configure-remove`
 
 .. _otel-config-options:
 
