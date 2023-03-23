@@ -13,8 +13,6 @@ Get started
 
 By default, the Splunk Distribution of OpenTelemetry Collector includes the SAPM exporter in the ``traces`` pipeline when deploying in agent or gateway modes. See :ref:`otel-deployment-mode` for more information.
 
-.. caution:: Don't remove the ``sapm`` exporter from the configuration. Data ingest for Splunk APM requires that the Collector in agent mode send spans through the SAPM exporter.
-
 Sample configurations
 ----------------------
 

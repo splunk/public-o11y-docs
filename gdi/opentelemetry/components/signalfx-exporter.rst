@@ -32,7 +32,6 @@ The following example shows the default configuration of SignalFx exporter for m
      #api_url: http://${SPLUNK_GATEWAY_URL}:6060
      #ingest_url: http://${SPLUNK_GATEWAY_URL}:9943
      sync_host_metadata: true
-     correlation:
 
 When adding the SignalFx exporter, configure both the metrics and logs pipelines. Make sure to also add the SignalFx receiver as in the following example:
 
