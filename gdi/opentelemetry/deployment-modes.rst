@@ -79,7 +79,6 @@ Agent configuration
 Change the following sections of the :new-page:`Agent mode configuration file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>`:
 
 * Update the ``SPLUNK_GATEWAY_URL`` environment variable to the URL of the gateway.
-* Update the ``SPLUNK_GATEWAY_URL`` environment variable to the URL of the gateway. 
 * Update the ``SPLUNK_API_URL`` environment variable to the URL of the gateway, specifying the ingress port, which is ``6060`` by default.
 * Update the ``SPLUNK_INGEST_URL`` environment variable to the URL of the gateway, specifying the ingress port, which is ``9943`` by default.
 * Make sure that metrics, traces, and logs pipelines send data to the appropriate receivers on the gateway.
