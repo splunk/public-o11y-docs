@@ -52,12 +52,12 @@ Kai selects the :strong:`paymentservice` node to discover the endpoint with the 
 Kai adds a link to Tag Spotlight for the offending endpoint to the customer ticket
 =====================================================================================
 
-Kai gets a link to the Tag Spotlight for the endpoint and includes it in a note he adds to the customer tickets identifying the endpoint as the root cause of the error. Kai sends the ticket to the payment service owner for further troubleshooting.
+Kai gets a link to the Tag Spotlight for the endpoint and includes it in a note they add to the customer tickets identifying the endpoint as the root cause of the error. Kai sends the ticket to the payment service owner for further troubleshooting.
 
 Summary
 ==============
 
-Kai used the service map to quickly isolate a service with a high root cause error rate and identified it as the likely culprit of invalid request errors customers were reporting. He shares this info with the service owner for further troubleshooting.
+Kai used the service map to quickly isolate a service with a high root cause error rate and identified it as the likely culprit of invalid request errors customers were reporting. Kai shares this info with the service owner for further troubleshooting.
 
 Learn more
 ==============

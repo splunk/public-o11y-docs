@@ -20,7 +20,7 @@ To track how microservices impact business KPIs, Kai takes the following steps:
 Kai reviews the APM Overview
 =================================
 
-Kai opens the :strong:`APM Overview`, which generates charts of all services and Business Workflows by error rate or latency and highlights the top services and Business Workflows. Kai finds that two Business Workflow, which track business KPIs at Buttercup games, have abnormal error rates. 
+Kai opens the :strong:`APM Overview`, which generates charts of all services and Business Workflows by error rate or latency and highlights the top services and Business Workflows. Kai finds that two Business Workflow, which track business KPIs at Buttercup games, have atypical error rates. 
 
 ..  image:: /_images/apm/apm-use-cases/business-workflows-services-01.png
     :width: 99%

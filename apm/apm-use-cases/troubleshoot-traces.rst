@@ -7,7 +7,7 @@ Use case: Troubleshoot an unknown issue using Trace Analyzer
 .. meta::
     :description: To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows to explore APM data from wide trends down to single traces. 
 
-Alex, the Site Reliability Engineer for ButterCup Studios, is tasked with monitoring and troubleshooting the video delivery product, which is central to their monetization strategy. The product comprises several back-end services that manage the storage, processing, search, and streaming of video, as well as front-end applications for web and mobile.
+Alex, the site reliability engineer for ButterCup Studios, needs to monitor and troubleshoot the video delivery product, which is central to their monetization strategy. The product comprises several back-end services that manage the storage, processing, search, and streaming of video, as well as front-end applications for web and mobile.
 
 Over the last couple of hours, Alex has been receiving reports from customer support regarding errors during video recommendation. To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows them to explore APM data from wide trends down to single traces. These are the steps Alex took to identify and solve the issue:
 

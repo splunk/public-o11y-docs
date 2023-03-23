@@ -55,7 +55,7 @@ Because Splunk APM stores all traces without sampling, Deepu clicks the peak of 
 Deepu switches to Splunk Log Observer for further troubleshooting
 ====================================================================
 
-Deepu remembers that version 350.10 of the payment service recently deployed a backwards incompatible change to its API. Because Deepu enabled :ref:`Related Content <get-started-relatedcontent>` in Splunk APM, Deepu can click :strong:`Logs for payment service` to switch to Splunk Log Observer to investigate whether the deployment causes the error. 
+Deepu remembers that version 350.10 of the payment service recently deployed a backwards incompatible change to its API. Because Deepu turned on :ref:`Related Content <get-started-relatedcontent>` in Splunk APM, Deepu can select :strong:`Logs for payment service` to switch to Splunk Log Observer to investigate whether the deployment causes the error. 
 
 ..  image:: /_images/apm/apm-use-cases/WorkflowUseCase_Logs.png
     :width: 99%
