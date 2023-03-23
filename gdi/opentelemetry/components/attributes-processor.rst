@@ -96,7 +96,6 @@ You can then add the attributes processors to any compatible pipeline. For examp
          - resourcedetection
          exporters: [splunk_hec]
 
-
 To include or exclude attributes use any of the following properties:
 
 - ``services``
@@ -128,6 +127,8 @@ Sample configurations
 The following sample configurations show how to perform different actions on attributes.
 
 .. note:: For a complete list of examples, see the configuration snippets in :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/processor/attributesprocessor/testdata/config.yaml`.
+
+See also an example on how to remove sensitive data in :ref:`collector-remove-data`.  
 
 Remove or obfuscate sensitive information from logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
