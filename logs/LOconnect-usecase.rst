@@ -12,7 +12,7 @@ Buttercup Games, a fictitious company, runs an e-commerce site to sell its produ
 
 Buttercup Games site reliability engineers and service owners collaborate to monitor and maintain the site to ensure that people have a great experience when they visit. Buttercup Games chose a cloud-native approach because it facilitates observability. Splunk Observability Cloud is their observability solution. Buttercup Games uses Splunk Observability Cloud to find and solve problems that cause outages or failures in purchases from their online store.
 
-In the past hour, the number of purchases on the Buttercup Games site dropped significantly and the checkout completion rate is too low. Aisha, an SRE, and Deepu, a service owner, perform the following tasks with Splunk Log Observer Connect and other views in Splunk Observability Cloud to troubleshoot by identifying the root cause of the problem with the purchase workflow:
+In the past hour, the number of purchases on the Buttercup Games site dropped significantly and the checkout completion rate is too low. Aisha, an SRE, and Deepu, a service owner, perform the following tasks with Splunk Log Observer Connect and other views in Splunk Observability Cloud to identify and troubleshoot the root cause of the problem with the purchase workflow:
 
 1. :ref:`which-logs-matter`
 
@@ -71,7 +71,7 @@ Find log patterns
 ========================================================================================================================
 1. Aisha opens a few other logs to see if others have the same error message. Several of the logs Aisha opens have the same error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)``. 
 
-    Aisha notes that all of the invalid API tokens start with “test”. Aisha hypothesizes that a team pushed the current version, v350.10 live with a test token that doesn’t work in production.
+    Aisha notes that all of the invalid API tokens start with “test”. Aisha hypothesizes that a team pushed the current version, v350.10, live with a test token that doesn’t work in production.
 
 2. To double-check her hypothesis, Aisha selects the error message and selects :strong:`Add to filter`` to show only the logs that contain the same error message.
 
@@ -97,7 +97,7 @@ Narrow the hypothesis
 Test the hypothesis
 ========================================================================================================================
 
-1. To be sure, Aisha selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don’t include the error message. Aisha can now correlate all of the logs containing the error message to version v350.10.
+1. To be sure, Aisha selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don’t include the error message. Aisha can now correlate all of the logs containing the test token error message, and no logs that don't contain the error message, to version v350.10.
 
     
 .. _identify-and-remediate:
