@@ -703,10 +703,16 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/sample-app
+
 .. toctree:: 
    :maxdepth:    3
 
    rum/rum-limits
+
+.. toctree:: 
+   :maxdepth:    3
+   
+   rum/rum-subscription-usage
 
 .. toctree::
    :maxdepth:   3

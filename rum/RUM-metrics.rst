@@ -11,6 +11,7 @@ The following metrics are available in Splunk RUM. All errors in Splunk RUM have
 * :ref:`RUM Browser metrics <browser-rum-default-tags>`
 * :ref:`RUM iOS metrics <rum-ios-metrics>`
 * :ref:`RUM Android metrics <rum-android-metrics>`
+* :ref:`rum-subscription-usage`
 
 
 Aggregates versus page level metrics 
