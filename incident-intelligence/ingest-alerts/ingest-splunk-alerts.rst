@@ -3,7 +3,7 @@
 Ingest alerts from Splunk Enterprise and Splunk Cloud Platform
 **********************************************************************************************************
 
-You can ingest alerts into Incident Intelligence from Splunk Enterprise and Splunk Cloud Platform using the Splunk Incident Intelligence. 
+You can ingest alerts into Incident Intelligence from Splunk Enterprise and Splunk Cloud Platform using Splunk Incident Intelligence. 
 
 Before you can ingest alerts from Splunk Enterprise and Splunk Cloud Platform, you must configure Incident Intelligence in Splunk Observability Cloud.
 
