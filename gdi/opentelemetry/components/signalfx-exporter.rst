@@ -7,7 +7,7 @@ SignalFx exporter
 .. meta::
       :description: The SignalFx exporter allows the OpenTelemetry Collector to send traces, logs, and metrics to SignalFx endpoints. Read on to learn how to configure the component.
 
-The SignalFx exporter allows the OpenTelemetry Collector to send metrics and events to SignalFx endpoints. The supported pipeline types are ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The SignalFx exporter allows the OpenTelemetry Collector to send metrics and events to SignalFx endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 .. note:: For information on the receiver, see :ref:`signalfx-receiver`.
 
