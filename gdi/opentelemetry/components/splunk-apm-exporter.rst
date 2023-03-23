@@ -13,8 +13,6 @@ Get started
 
 By default, the Splunk Distribution of OpenTelemetry Collector includes the SAPM exporter in the ``traces`` pipeline when deploying in agent or gateway modes. See :ref:`otel-deployment-mode` for more information.
 
-.. note:: To send SAPM data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
-
 Sample configurations
 ----------------------
 
@@ -83,6 +81,8 @@ In the endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``
 #. Select your username. 
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+.. note:: To send SAPM data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
 
 Settings
 ======================

@@ -137,7 +137,7 @@ The following components are supported:
 Unsupported components
 ===================================
 
-Using the Smart Agent receiver with monitor types is not supported for ppc64le architectures. Support for Smart Agent receiver monitor types is experimental for ARM64.
+Using the Smart Agent receiver with monitor types is not supported for ppc64le architectures. Support for Smart Agent receiver monitor types is experimental for ARM64 starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher
 
 Subprocess monitor types are those that initiate the creation and management of a child process where metric gathering occurs. There are three major subprocess monitor types: 
 
@@ -145,7 +145,7 @@ Subprocess monitor types are those that initiate the creation and management of 
 * ``sfxcollectd``
 * ``JMX``
 
-These types are derived from integrations that produce metrics in the Smart Agent and are not reflective of the current ability to run arbitrary Python or Java applications.
+These types derive from integrations that produce metrics in the Smart Agent and are not reflective of the current ability to run arbitrary Python or Java applications.
 
 collectd
 ----------------------------------
