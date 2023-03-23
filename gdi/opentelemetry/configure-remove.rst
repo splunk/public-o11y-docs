@@ -1,19 +1,15 @@
 .. _configure-remove:
 
 *********************************************************************
-Remove ingested data 
+Remove ingested data using the Collector
 *********************************************************************
 
 .. meta::
       :description: Remove data ingested with the Splunk Distribution of OpenTelemetry Collector.
 
-The Collector bla bla ingests data . See DATA MODEL.
+Depending on how it's configured, the Collector ingests a wide range of data, such as metrics, traces, or logs. For certain use cases, some of this data can be redundant, unnecessary, or sensitive, causing technical complications, increased cost, or legal issues. 
 
-* dimensions: Key-value pairs that describe some aspect of the source of the metric. A data point can have one or more dimensions. The most common dimension is a source. For example, a dimension can be a host or instance for infrastructure metrics, or it can be an application component or service tier for application metrics.
-* sensitive data
-* other?
-
-You can use the :ref:`attributes processor <attributes-processor>` to edit or remove any unwanted data you've ingested.
+To address these situations, the Collector comes with options to process the data you're receiving to modify or delete unwanted elements. For example, you can use the :ref:`attributes processor <attributes-processor>` to edit or remove any unwanted data you've ingested.
 
 .. note:: See another example of how to tweak your data at :ref:`collector-remove-data`.
 
