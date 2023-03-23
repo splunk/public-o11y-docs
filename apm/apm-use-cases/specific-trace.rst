@@ -49,6 +49,8 @@ Kai has global data links configured to redirect to other tools in Splunk Observ
 Summary
 ==========
 
+Kai was able to use trace view to quickly navigate to a specific trace to troubleshoot an edge case issue reported by a customer.
+
 Learn more
 ===========
 
