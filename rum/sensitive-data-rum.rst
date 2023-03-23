@@ -84,14 +84,7 @@ This instrumentation uses the ``splunk-otel-ios`` library. For an example of the
          * ``options.spanFilter``
 
 
-See also 
+Example
 =========
-For instrumentation examples, see the following links from Splunk OpenTelemetry GitHub
+This sample instrumentation shows how to .... 
 
-* :new-page:`Splunk OpenTelemetry iOS agent <https://github.com/signalfx/splunk-otel-ios/blob/7e7115d9e5ee77a3d1d893a14b974fb619347c40/README.md#span-filtering>`
-
-* :new-page:`Android sample application <https://github.com/signalfx/splunk-otel-android/blob/main/sample-app/src/main/java/com/splunk/android/sample/SampleApplication.java>`
-
-*  :new-page:`Browser sample application <https://github.com/signalfx/splunk-otel-js-web/blob/0ac1df52b2c22f37eeb74f8e4104ccdf0e8fe99e/examples/todolist/public/index.html>` 
-
-* :new-page:`Simple span processor <https://github.com/open-telemetry/opentelemetry-js/blob/0dc4c3d8eb4f52b839365f964bb7aaac08dcefb2/packages/opentelemetry-sdk-trace-base/src/export/SimpleSpanProcessor.ts>`
