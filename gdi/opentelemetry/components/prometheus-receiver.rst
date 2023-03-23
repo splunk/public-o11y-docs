@@ -9,10 +9,12 @@ Prometheus receiver
 
 The Prometheus receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. The supported pipeline type is ``metrics``.
 
+.. note:: To use a simplified version of the Prometheus receiver that supports single endpoints, see :ref:`simple-prometheus-receiver`.
+
 Benefits
 =================================
 
-The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and labels.
+The Prometheus receiver can scrape metrics data from any application that exposes a Prometheus endpoint. The receiver converts Prometheus metrics to OpenTelemetry metrics while preserving metric names, values, timestamps, and labels. You can also reuse your existing Prometheus configurations.
 
 Get started
 ========================
@@ -32,7 +34,7 @@ To activate additional Prometheus receivers, add a new ``prometheus`` entry in t
              static_configs:
                - targets: ['0.0.0.0:8888']
 
-To complete the integration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
 
 .. code:: yaml
@@ -92,6 +94,8 @@ To use environment variables in the Prometheus receiver configuration, use the `
        scrape_configs:
          - job_name: ${JOBNAME}
            scrape_interval: 5s
+
+If you're using existing Prometheus configurations, replace ``$`` with ``$$`` to prevent the Collector from reading them as environment variables.
 
 Scaling considerations
 -------------------------------
