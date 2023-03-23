@@ -9,7 +9,7 @@ Smart Agent receiver
 
 The Smart Agent receiver lets you use Smart Agent monitors through the Splunk Distribution of OpenTelemetry Collector. Supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-Most Smart Agent monitors require x86_64 or amd64 architectures. Support for ARM64 is experimental starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher. For a list of supported monitors, see :ref:`collector-architecture`.
+The Smart Agent receiver is fully supported only on amd64 linux platforms. Support for ARM64 is experimental starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher. For a list of supported monitors, see :ref:`collector-architecture`.
 
 .. note:: For instructions on how to migrate from the Smart Agent to the Splunk Distribution of OpenTelemetry Collector, see :ref:`migrate-from-sa-to-otel`.
 
