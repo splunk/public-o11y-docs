@@ -16,7 +16,7 @@ The Smart Agent receiver is fully supported only on amd64 linux platforms. Suppo
 Benefits
 =================================
 
-The Smart Agent receiver lets you use most Smart Agent monitors through the OpenTelemetry Collector. In most cases, you can move your existing Smart Agent monitor configuration to the configuration file of the Collector without changes.
+The Smart Agent receiver lets you use Smart Agent monitors through the OpenTelemetry Collector. In most cases, you can move your existing Smart Agent monitor configuration to the configuration file of the Collector without changes.
 
 For a list of monitor data sources, see :ref:`monitor-data-sources`.
 
