@@ -49,6 +49,8 @@ You need the following resources to use the chart:
 * :new-page:`Helm 3 <https://helm.sh/docs/intro/install/>`. Helm 2 is not supported.
 * Administrator access to your Kubernetes cluster.
 
+.. _collector-k8s-destination:
+
 Prerequisites: Destination 
 ------------------------------------------------
 

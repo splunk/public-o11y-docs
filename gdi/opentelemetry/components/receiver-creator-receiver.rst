@@ -21,7 +21,7 @@ This receiver can use other receivers for applications and hosts, like the ``kub
 Get started
 ======================
 
-Follow these steps to configure and enable the component:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
