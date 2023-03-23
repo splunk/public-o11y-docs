@@ -1,7 +1,7 @@
 .. _services-impact-business-workflows:
 
 ******************************************************************
-Track how services impact Business Workflows
+Use case: Track how services impact Business Workflows
 ******************************************************************
 
 .. meta::

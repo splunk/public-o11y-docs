@@ -1,8 +1,7 @@
 .. _troubleshoot-business-workflows:
 
-**************************************************************************
-Accelerate troubleshooting using Business Workflows on Tag Spotlight
-**************************************************************************
+Use case: Accelerate troubleshooting using Business Workflows on Tag Spotlight
+********************************************************************************
 
 .. meta::
     :description: This Splunk APM use case describes how to use APM Tag Spotlight of Business Workflows to accelerate troubleshooting.

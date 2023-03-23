@@ -1,7 +1,7 @@
 .. _troubleshoot-tag-spotlight:
 
 ******************************************************************
-Find the root cause of an error using Tag Spotlight
+Use case: Find the root cause of an error using Tag Spotlight
 ******************************************************************
 
 .. meta::
@@ -66,7 +66,7 @@ Deepu narrows the investigation to the code in version 350.10 of the ``/PaymentS
 Deepu switches to Splunk Log Observer for further troubleshooting
 ===================================================================
 
-Because Deepu enabled Related Content in Splunk APM, Deepu can select :strong:`Logs for trace` to switch to Splunk Log Observer for further troubleshooting. 
+Because Deepu turned on Related Content in Splunk APM, Deepu can select :strong:`Logs for trace` to switch to Splunk Log Observer for further troubleshooting. 
 
 ..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_LogsForTrace.png
     :width: 99%
@@ -75,7 +75,7 @@ Because Deepu enabled Related Content in Splunk APM, Deepu can select :strong:`L
 Summary
 ===========
 
-Deepu used Tag Spotlight to quickly isolate a recent code release as the cause of errors that are prevented customers from shopping on the Buttercup Games website. Using the links to example traces in Tag Spotlight he quickly navigates to an example trace and its corresponding logs to further troubleshoot.
+Deepu used Tag Spotlight to quickly isolate a recent code release as the cause of errors that prevented customers from shopping on the Buttercup Games website. Using the links to example traces in Tag Spotlight they quickly navigate to an example trace and its corresponding logs to further troubleshoot.
 
 Learn more
 ============

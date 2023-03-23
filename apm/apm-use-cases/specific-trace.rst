@@ -1,7 +1,7 @@
 .. _specific-trace:
 
 ************************************************************************************
-Troubleshoot an edge case by searching for a specific trace
+Use case: Troubleshoot an edge case by searching for a specific trace
 ************************************************************************************
 
 .. meta::
