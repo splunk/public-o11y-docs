@@ -21,7 +21,7 @@ Remove sensitive data using the Splunk Distribution of OpenTelemetry Collector
 
 The first line of defense for sensitive information is to use the Splunk autoinstrumentation, which never captures sensitive information.
 
-If sensitive data has been sent to Splunk Observability Cloud during manual instrumentation, you can remove it by configuring the :ref:`Splunk Distribution of OpenTelemetry Collector<otel-intro>`. You can add processors to your build of the Splunk Distribution of OpenTelemetry Collector to delete, redact, or hash specific attributes, or span tags, from spans during the pre-processing step.
+If sensitive data has been sent to Splunk Observability Cloud during manual instrumentation, you can remove it with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`'s :ref:`attributes processor <attributes-processor>`, a component that modifies the attributes of spans, metrics, or logs. 
 
 .. note:: A note about dropping spans   
 
