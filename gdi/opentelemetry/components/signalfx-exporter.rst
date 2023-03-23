@@ -16,8 +16,6 @@ Get started
 
 By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx exporter in the ``traces``, ``metrics``, and ``logs/signalfx`` pipelines when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
 
-.. caution:: Don't remove the ``signalfx`` exporter from the default configuration. Metric ingest in Splunk Observability Cloud requires data in SignalFx format.
-
 Sample configurations
 ----------------------
 
@@ -44,11 +42,11 @@ When adding the SignalFx exporter, configure both the metrics and logs pipelines
      pipelines:
        metrics:
          receivers: [signalfx]
-         processors: [memory_limiter, batch]
+         processors: [memory_limiter, batch, resourcedetection]
          exporters: [signalfx]
-         logs:
-       receivers: [signalfx]
-         processors: [memory_limiter, batch]
+       logs:
+         receivers: [signalfx]
+         processors: [memory_limiter, batch, resourcedetection]
          exporters: [signalfx]
 
 Settings
