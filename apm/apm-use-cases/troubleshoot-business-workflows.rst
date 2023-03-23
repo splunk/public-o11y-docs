@@ -10,10 +10,13 @@ Deepu, the payment service owner at Buttercup Games, wants to understand how err
 
 To understand the impact of errors on business KPIs, Deepu takes the following steps:
 
-#. Deepu selects the payment service on the service map and opens Tag Spotlight 
-#. Deepu reviews the errors by workflow 
-#. Deepu filters Tag Spotlight to subset to the traces where most errors occur
+#. :ref:`troubleshoot-workflows-tag-spotlight`
+#. :ref:`troubleshoot-workflows-errors`
+#. :ref:`troubleshoot-workflows-filter`
+#. :ref:`troubleshoot-workflows-trace`
+#. :ref:`troubleshoot-workflows-LO`
 
+.. _troubleshoot-workflows-tag-spotlight:
 
 Deepu selects the payment service on the service map and opens Tag Spotlight 
 ===============================================================================
@@ -24,6 +27,8 @@ Deepu selects the :strong:`paymentservice` node on the service map, and then sel
     :width: 99%
     :alt: This screenshot shows the payment service in the service map and Tag Spotlight side panel. 
 
+.. _troubleshoot-workflows-errors:
+
 Deepu reviews the errors by workflow 
 ===============================================================================
 
@@ -32,6 +37,8 @@ Deepu reviews the errors by workflow and notices that the requests for the :stro
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-01.png
     :width: 99%
     :alt: This screenshot shows the Tag Spotlight view of the payment service, which shows that the frontend:/cart/checkout workflow has the most errors
+
+.. _troubleshoot-workflows-filter:
 
 Deepu filters Tag Spotlight to subset to the traces where most errors occur
 ===============================================================================
@@ -42,6 +49,8 @@ Because APM supports infinite cardinality, Deepu selects the :strong:`frontend:/
     :width: 99%
     :alt: This screenshot shows the Tag Spotlight view of the frontend:/cart/checkout workflow filtered by Version and Kind.
 
+.. _troubleshoot-workflows-trace:
+
 Deepu opens a example trace
 ==============================
 
@@ -50,6 +59,8 @@ Because Splunk APM stores all traces without sampling, Deepu clicks the peak of 
 ..  image:: /_images/apm/apm-use-cases/WorkflowUseCase_Exemplars.png
     :width: 99%
     :alt: This screenshot shows an example trace with errors in Tag Spotlight.
+
+.. _troubleshoot-workflows-LO:
 
 Deepu switches to Splunk Log Observer for further troubleshooting
 ====================================================================
