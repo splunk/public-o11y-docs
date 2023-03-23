@@ -185,6 +185,8 @@ To instrument a Go function in AWS Lambda for Splunk APM, follow these additiona
       go get -u go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-lambda-go/otellambda
       go get -u github.com/signalfx/splunk-otel-go/distro
 
+#. Set environment variable ``OTEL_EXPORTER_OTLP_ENDPOINT`` with the value ``http://localhost:4318`` and ``OTEL_EXPORTER_OTLP_TRACES_PROTOCOL`` with the value ``http/protobuf``.
+
 #. Create a wrapper for the OpenTelemetry instrumentation in your function's code. For example:
 
    .. code-block:: go
