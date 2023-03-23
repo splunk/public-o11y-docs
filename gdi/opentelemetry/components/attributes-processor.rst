@@ -128,8 +128,6 @@ The following sample configurations show how to perform different actions on att
 
 .. note:: For a complete list of examples, see the configuration snippets in :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/processor/attributesprocessor/testdata/config.yaml`.
 
-See also an example on how to remove sensitive data in :ref:`collector-remove-data`.  
-
 Remove or obfuscate sensitive information from logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -182,6 +180,14 @@ The following example shows how to backfill spans that are missing an attribute:
          action: upsert
        - key: operation
          action: delete
+
+More examples and use cases
+------------------------------
+
+See also the following use cases: 
+
+* :ref:`configure-remove`
+* :ref:`collector-remove-data`  
 
 .. _attributes-processor-settings:
 
