@@ -9,11 +9,15 @@ Use case: Troubleshoot an unknown issue using Trace Analyzer
 
 Alex, the site reliability engineer for ButterCup Studios, needs to monitor and troubleshoot the video delivery product, which is central to their monetization strategy. The product comprises several back-end services that manage the storage, processing, search, and streaming of video, as well as front-end applications for web and mobile.
 
-Over the last couple of hours, Alex has been receiving reports from customer support regarding errors during video recommendation. To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows them to explore APM data from wide trends down to single traces. These are the steps Alex took to identify and solve the issue:
+Over the last couple of hours, Alex has been receiving reports from customer support regarding errors during video recommendation. To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows them to explore APM data from wide trends down to single traces. 
 
-#. Search for traces with errors
-#. Group traces by specific tags
-#. Come back to confirm solution
+These are the steps Alex took to identify and solve the issue:
+
+#. :ref:`trace-analyzer-errors`
+#. :ref:`trace-analyzer-group`
+#. :ref:`trace-analyzer-solution`
+
+.. _trace-analyzer-errors:
 
 Search for traces with errors
 ===================================
@@ -22,12 +26,16 @@ As most reports happened in the weeks following the release of the recommendatio
 
 The search reduces the amount of traces to a few thousand from the millions available in Splunk APM. 
 
+.. _trace-analyzer-group:
+
 Group traces by specific tags
 ==================================
 
 Next, Alex uses the :guilabel:`Grouped by` menu to select the ``device.type`` tag. 
 
 Alex notices that the tablet throws the most errors among the types of devices, so they decide to switch the grouping tag to ``tablet.brand``. Alex then selects the :guilabel:`Group Metrics` tab to dig into each value of the grouping tag.
+
+.. _trace-analyzer-solution:
 
 Return to confirm solution
 ==================================
@@ -40,7 +48,7 @@ Summary
 Thanks to the high resolution data provided by full-fidelity tracing and to the features of Trace Analyzer, Alex managed to troubleshoot an unknown issue and set up alerts in case it happens again.
 
 Learn more
---------------------
+===============
 
 - For more information on Trace Analyzer, see :ref:`trace-analyzer`.
 - For a list of APM key concepts, see :ref:`apm-key-concepts`.
