@@ -28,7 +28,7 @@ The following example shows the default configuration of SignalFx exporter for m
      access_token: "${SPLUNK_ACCESS_TOKEN}"
      api_url: "${SPLUNK_API_URL}"
      ingest_url: "${SPLUNK_INGEST_URL}"
-     # Use instead when sending to gateway
+     # Use instead when sending to gateway (http forwarder extension ingress endpoint)
      #api_url: http://${SPLUNK_GATEWAY_URL}:6060
      #ingest_url: http://${SPLUNK_GATEWAY_URL}:9943
      sync_host_metadata: true
