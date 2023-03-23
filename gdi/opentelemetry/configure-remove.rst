@@ -7,47 +7,41 @@ Remove ingested data
 .. meta::
       :description: Remove data ingested with the Splunk Distribution of OpenTelemetry Collector.
 
-The Collector bla bla
+The Collector bla bla ingests data . See DATA MODEL.
 
-* contents
+* dimensions: Key-value pairs that describe some aspect of the source of the metric. A data point can have one or more dimensions. The most common dimension is a source. For example, a dimension can be a host or instance for infrastructure metrics, or it can be an application component or service tier for application metrics.
 * sensitive data
 * other?
 
-You can use the :ref:`attributes processor <attributes-processor>` to remove any unwanted data you've ingested.
+You can use the :ref:`attributes processor <attributes-processor>` to edit or remove any unwanted data you've ingested.
 
-For example, Moira, a performance engineer, notices metrics are ingested along with a huge amount of unnecessary dimensions, which heavily impacts data charges. Moira decides that it's best to drop certain dimensions
+.. note:: See another example of how to tweak your data at :ref:`collector-remove-data`.
 
-The following is an example of a processor that Moira can add to their Splunk Distribution of OpenTelemetry Collector configuration file. In this example, they delete the keys and values of the ``user.password`` attribute from the spans associated with ``checkoutService`` because they know this value is not relevant for debugging application performance.
+Use case: Remove dimensions using the attributes processor
+==============================================================================
 
-Additionally, Moira hashes the value of ``user.name`` to replace the user's name with a unique hash value that doesn't contain PIIs. This way, during debugging, they can use these unique hash values to see whether an issue is impacting one or more users without revealing their names.
+Moira, a performance engineer, notices high cardinality in ingested metrics, which heavily impacts data charges. Moira is considering dropping certain dimensions to cut costs. 
 
-Moira also redacts the values of ``credit.card.number``, ``cvv``, and ``credit.card.expiration.date`` tags from incoming spans because it's useful to know in debugging that a value was entered for these fields, but not necessary to discern the contents of that value. 
+Moira checks which dimensions are being used, realizes that for the metric ``cpu.utilization``, the dimensions ``hostname`` and ``source_host`` are irrelevant, and decides to delete them.
+
+To do so, first Moira adds the attributes processor in the Collectors's configuration, set up to delete the unnecessary dimensions:
 
 .. code-block:: yaml
 
     extensions: 
         ...  
     processors:
-      attributes/update:
+      attributes/delete:
         actions:
-          - key: user.password
+          - key: hostname
             action: delete
-          - key: user.name
-            action: hash
-          - key: credit.card.number
-            value: redacted
-            action: update
-          - key: cvv
-            value: redacted
-            action: update
-          - key: credit.card.expiration.date
-            value: redacted
-            action: update
+          - key: source_host
+            action: delete            
     service:
         ...
     ...
 
-After configuring the processor, Moira adds the ``attributes/delete`` processor to the ``processors`` pipeline under ``pipelines`` in the Collector's configuration: 
+Next, Moira adds the ``attributes/delete`` processor to the ``processors`` pipeline under ``pipelines`` in the Collector's configuration: 
 
 .. code-block:: yaml
 
@@ -58,6 +52,3 @@ After configuring the processor, Moira adds the ``attributes/delete`` processor 
             receivers: ...
             processors: [..., attributes/delete, ...] 
             ...
-
-
-See another example of how to at :ref:`collector-remove-data`.
