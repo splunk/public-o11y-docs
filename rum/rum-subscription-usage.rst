@@ -4,7 +4,7 @@
 Splunk RUM subscription and usage metrics 
 ***************************************************************************
 
-
+Splunk RUM offers three metrics you can use to track your subscription usage. You can use these metrics to create charts, dashboards, and set alerts. 
 
 .. list-table:: 
    :widths: 25 25 
@@ -19,6 +19,12 @@ Splunk RUM subscription and usage metrics
    * - ``sf.org.rum.numBytes``
      - Number of bytes processed by RUM.
 
+See also
+==========
 
+To learn more, see: 
 
+* :ref:`get-started-metrics`
+* :ref:`rum-alerts`
+* :ref:`Create charts in Splunk Observability Cloud<create-charts>`
 
