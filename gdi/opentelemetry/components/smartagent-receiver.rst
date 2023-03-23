@@ -40,7 +40,7 @@ The following example adds the Postgresql monitor type to the Collector using th
        host: mypostgresinstance
        port: 5432
        dimensionClients:
-         - signalfx  # Export dimension properties or tags
+         - signalfx # Instructs the receiver to use this exporter for dimension updates
 
 You can then add the receiver to any compatible pipeline. For example:
 
@@ -49,11 +49,6 @@ You can then add the receiver to any compatible pipeline. For example:
    service:
      pipelines:
        metrics:
-         receivers:
-           - smartagent/postgresql
-         exporters:
-           - signalfx
-       logs:
          receivers:
            - smartagent/postgresql
          exporters:
