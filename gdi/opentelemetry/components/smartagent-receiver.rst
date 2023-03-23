@@ -39,6 +39,8 @@ The following example adds the Postgresql monitor type to the Collector using th
        type: postgresql
        host: mypostgresinstance
        port: 5432
+       dimensionClients:
+         - signalfx  # Export dimension properties or tags
 
 You can then add the receiver to any compatible pipeline. For example:
 
@@ -46,11 +48,18 @@ You can then add the receiver to any compatible pipeline. For example:
 
    service:
      pipelines:
-        metrics:
-           receivers:
-             - smartagent/postgresql
-           exporters:
-             - signalfx
+       metrics:
+         receivers:
+           - smartagent/postgresql
+         exporters:
+           - signalfx
+       logs:
+         receivers:
+           - smartagent/postgresql
+         exporters:
+           - signalfx
+
+If you use a monitor that updates dimension properties or tags, for example ``postgresql``, add the name of your SignalFx exporter in the ``dimensionClients`` field in Smart Agent receiver configuration block. If you don't set any exporter in the ``dimensionClients`` field, the receiver tries to use the pipeline to which it's connected. If you don't require dimension updates, you can use an empty array (``[]``) to deactivate it.
 
 .. caution:: Don't remove the ``smartagent/signalfx-forwarder`` and ``smartagent/processlist`` receivers from the configuration. System processes and Smart Agent telemetry depend on both receivers's configurations.
 
