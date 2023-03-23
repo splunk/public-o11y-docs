@@ -5,13 +5,12 @@ Use case: Troubleshoot an unknown issue using Trace Analyzer
 ************************************************************************************
 
 .. meta::
-    :description: To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows to explore APM data from wide trends down to single traces. 
+    :description: To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows them to explore APM data from wide trends down to single traces. 
 
-Alex, the site reliability engineer for ButterCup Studios, needs to monitor and troubleshoot the video delivery product, which is central to their monetization strategy. The product comprises several back-end services that manage the storage, processing, search, and streaming of video, as well as front-end applications for web and mobile.
+Alex, the site reliability engineer for Buttercup Games, receives a report of a customer who received an error during checkout. To proactively prevent a potential incident, Alex uses Trace Analyzer to quickly determine how pervasive the checkout errors are. 
 
-Over the last couple of hours, Alex has been receiving reports from customer support regarding errors during video recommendation. To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows them to explore APM data from wide trends down to single traces. 
 
-These are the steps Alex took to identify and solve the issue:
+These are the steps Alex took to determine how pervasive the checkout errors are:
 
 #. :ref:`trace-analyzer-errors`
 #. :ref:`trace-analyzer-group`
@@ -21,6 +20,8 @@ These are the steps Alex took to identify and solve the issue:
 
 Search for traces with errors
 ===================================
+
+Customer support shares a trace ID which Alex uses to
 
 As most reports happened in the weeks following the release of the recommendation service, Alex opens Trace Analyzer and sets the time range to the last hour for the recommendation service in production. To narrow down the search further, they switch :guilabel:`Errors only`.
 
