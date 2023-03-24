@@ -55,15 +55,15 @@ This is the collection of use cases available for Splunk Observability Cloud.
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`custom-metricset`  
   * - :ref:`APM <apm-use-cases-intro>`
-    - :ref:`apm-use-case-endpoint-performance`    
+    - :ref:`Monitor service performance using endpoint performance in Splunk APM <apm-use-case-endpoint-performance>` 
   * - :ref:`APM database query performance <db-query-performance>`
-    - :ref:`db-perf-use-case` 
+    - :ref:`Identify slow database queries using Database Query Performance <db-perf-use-case>` 
   * - :ref:`APM database query performance <db-query-performance>`
-    - :ref:`redis-use-case`
+    - :ref:`Investigate Redis performance issues using Database Query Performance <redis-use-case>`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>`
-    - :ref:`profiling-use-case`
+    - :ref:`Find performance issues using AlwaysOn Profiling <profiling-use-case>`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
-    - :ref:`memory-profiling-use-case`
+    - :ref:`Analyze memory usage using AlwaysOn Profiling <memory-profiling-use-case>`
   * - :ref:`RUM <use-case-landingpage>`
     - :ref:`use-case-monitoring`
   * - :ref:`RUM <use-case-landingpage>`
