@@ -23,6 +23,10 @@ Alex reviews the endpoints in the Endpoint Performance card
 
 Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, they can't drill down into a component service using the dependency map; so, Alex reviews the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of 2+ seconds. 
 
+..  image:: /_images/apm/apm-use-cases/EndpointPerformanceCard.png
+    :width: 95%
+    :alt: This screenshot shows the endpoint performance card that displays when you select a service in the service map that has endpoints
+
 .. _sort-filter-endpoint-performance:
 
 Alex sorts and filters endpoints in Endpoint Performance
@@ -31,7 +35,17 @@ Alex sorts and filters endpoints in Endpoint Performance
 
 Alex selects the Endpoint Performance card to go to the full Endpoint Performance page to get more details about which checkout endpoints are taking longer than 2 seconds. 
 
-Within Endpoint Performance, Alex sorts the endpoints by P90 Latency so they can quickly see the endpoints with the highest latency. Alex also uses the search to filter to endpoints with /checkout/ in the path. 
+Within Endpoint Performance, Alex sorts the endpoints by P90 Latency so they can quickly see the endpoints with the highest latency. 
+
+..  image:: /_images/apm/apm-use-cases/EndpointPerfSort.png
+    :width: 95%
+    :alt: This screenshot shows the sort options within endpoint performance 
+
+Alex also uses the search to filter to endpoints with /checkout/ in the path. 
+
+..  image:: /_images/apm/apm-use-cases/EndpointPerfSearch.png
+    :width: 95%
+    :alt: This screenshot shows the sort options within endpoint performance 
 
 .. _compare-endpoint-performance:
 
@@ -40,7 +54,16 @@ Alex compares the last hour performance to the same hour from yesterday
 
 Alex knows there was a release this morning, so they update the time dropdown to -1h and they select -24h for the comparison so that they can compare the last hour to the same time frame yesterday.
 
+..  image:: /_images/apm/apm-use-cases/EndpointPerfCompare.png
+    :width: 95%
+    :alt: This screenshot highlights the endpoint performance compare setting 
+
 Alex notices that the checkout/{cardId} endpoint has a 110% increase in P90 latency compared with the same hour yesterday. 
+
+..  image:: /_images/apm/apm-use-cases/EndpointPerfCompareResult.png
+    :width: 95%
+    :alt: This screenshot highlights the endpoint performance compare setting 
+
 
 .. _tag-spotlight:
 
