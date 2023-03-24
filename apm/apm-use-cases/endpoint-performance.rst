@@ -7,7 +7,7 @@ Use case: Monitor service performance using endpoint performance in Splunk APM
 .. meta::
     :description: Alex uses Splunk APM endpoint performance regularly monitor the performance of the payment service to ensure continuous improvement of the payment experience. 
 
-Alex, a performance engineer at Buttercup games, wants to monitor and optimize the Buttercup Games customer experience. Today, Alex is particularly interested in the checkout workflow since enhancements to the process were this morning.
+Alex, a performance engineer at Buttercup games, wants to monitor and optimize the Buttercup Games customer experience to proactively prevent incidents. Today, Alex is particularly interested in the checkout workflow since they released enhancements to the process this morning.
 
 To review the performance of the checkout experience, Alex takes the following steps:
 
