@@ -35,7 +35,7 @@ Alex sorts and filters endpoints in Endpoint Performance
 Alex selects the Endpoint Performance card to go to the full Endpoint Performance page to get more details about which checkout endpoints are taking longer than 2 seconds. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerfOverview.png
-    :width: 20%
+    :width: 95%
     :alt: This screenshot shows the endpoint performance page
 
 Within Endpoint Performance, Alex sorts the endpoints by P90 Latency so they can quickly see the endpoints with the highest latency. 
