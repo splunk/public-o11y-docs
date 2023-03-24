@@ -78,3 +78,8 @@ Summary
 ==========
 
 Alex used Endpoint Performance to monitor endpoints within their monolith. Using the filter, sort, and compare functionality within the Endpoint Performance they were able to quickly isolate an endpoint that had increased latency after a release. 
+
+Learn more
+=============
+
+* For details about Tag Spotlight, see :ref:`apm-tag-spotlight`.
