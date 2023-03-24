@@ -1,7 +1,7 @@
 .. _apm-use-case-endpoint-performance:
 
 *******************************************************************************************************
-Use case: Monitor service performance using endpoint performance in Splunk APM
+Use case: Monitor service performance using endpoint performance
 *******************************************************************************************************
 
 .. meta::
@@ -9,7 +9,7 @@ Use case: Monitor service performance using endpoint performance in Splunk APM
 
 Alex, a performance engineer at Buttercup games, wants to monitor and optimize the Buttercup Games customer experience to proactively prevent incidents. Today, Alex is particularly interested in the checkout workflow since they released enhancements to the process this morning.
 
-To review the performance of the checkout experience, Alex takes the following steps:
+To review the performance of the checkout experience, Alex takes the following steps in Splunk APM:
 
 #. :ref:`endpoint-performance-card`
 #. :ref:`sort-filter-endpoint-performance`
