@@ -1,7 +1,7 @@
 .. _kubelet-stats-receiver:
 
 **************************
-Kubelet Stats receiver
+Kubelet stats receiver
 **************************
 
 .. meta::
