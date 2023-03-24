@@ -7,10 +7,6 @@ You can create ServiceNow tickets within Incident Intelligence incidents. With t
 
 This lets you create and close ServiceNow tickets from within Incident Intelligence. Updates to the ServiceNow ticket must be performed in ServiceNow.
 
-Prerequisite
-=====================
-
-Before you can configure the ServiceNow integration with Splunk Incident Intelligence, you must configure the ServiceNow integration with Splunk Incident Intelligence. 
 
 
 Configure ServiceNow for Incident Intelligence
@@ -31,7 +27,7 @@ Perform the following steps:
 
    #. Select :guilabel:`ServiceNow Incident Intelligence`.
 
-#. By default, the name of the integration is :guilabel:`ServiceNow`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page:`About naming your integrations <naming-note>`
+#. By default, the name of the integration is :guilabel:`ServiceNow`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page:`About naming your integrations <naming-note>`.
 #. Enter the :guilabel:`ServiceNow URL` for the instance.
 #. In the :strong:`Username or Client` field, enter the user ID from ServiceNow or the Oauth client ID.
 #. In the :strong:`Password or Client` field, enter the password from ServiceNow or the Oauth client secret.
@@ -71,7 +67,7 @@ Once you configure this, any incident created using that incident policy display
 
 
 .. image:: /_images/incident-intelligence/ii-snow-ticket.png
-    :width: 60%
+    :width: 80%
     :alt: On the Incident details page, the ServiceNow ticket link displays in the Resources section.
 
 
