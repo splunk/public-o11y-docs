@@ -54,7 +54,7 @@ Determine which logs matter
 
 Conduct initial analysis of logs
 ========================================================================================================================
-Aisha can query the :strong:`paymentservice` logs in Log Observer's point-and-click UI, then filter and aggregate the logs to drill down to the underlying problem. For more complex analysis using SPL query language, she can continue her analysis of :strong:`paymentservice` logs, or a subset of them, in the Splunk Cloud Platform Search & Reporting application.
+Aisha can query the :strong:`paymentservice` logs in Log Observer's point-and-click UI, then filter and aggregate the logs to drill down to the underlying problem. For more complex analysis using SPL query language, she can continue her analysis of :strong:`paymentservice` logs in the Splunk Cloud Platform Search & Reporting application.
 
 1. Looking through the incoming logs in the logs table, Aisha sees some error logs, so she selects one to see more details in a structured view. In the log details view on the right, Aisha notices the error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)``.
 
@@ -130,6 +130,6 @@ Learn more
 
 * For details on Log Observer queries, see :ref:`logs-queries`.
 
-* For details on aggregating logs, seel :ref:`logs-aggregations`.
+* For details on aggregating logs, see :ref:`logs-aggregations`.
 
 * For details on alerts and detectors, see :ref:`create-detectors`.
