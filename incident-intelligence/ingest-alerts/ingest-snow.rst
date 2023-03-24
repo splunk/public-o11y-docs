@@ -27,7 +27,7 @@ Perform the following steps:
 
    #. Select :guilabel:`Add Integration`.
 
-   #. In the drop-down, select :guilabel:`Product` and search for 'Incident Intelligence'.
+   #. In the drop-down, select :guilabel:`Product` and search for Incident Intelligence.
 
    #. Select :guilabel:`ServiceNow Incident Intelligence`.
 
