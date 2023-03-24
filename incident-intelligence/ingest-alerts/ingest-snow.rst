@@ -37,7 +37,6 @@ Perform the following steps:
 
 You are now ready to configure ServiceNow as part of the incident policy workflows in Incident Intelligence.
 
-.. _ii-configure-app:
 
 Connect ServiceNow to Splunk Incident Intelligence incident policy workflows
 ====================================================================================
