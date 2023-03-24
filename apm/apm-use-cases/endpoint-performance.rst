@@ -75,10 +75,10 @@ Alex uses Tag Spotlight to get more context
 
 Alex selects this endpoint and reviews the Tag Spotlight details. Alex notices that a http.status_code 503 is the top high-latency tag. Alex selects this tag to explore in Tag Spotlight. 
 
-..  image:: /_images/apm/apm-use-cases/EndpointPerfTagSpotlight.png
+..  image:: /_images/apm/apm-use-cases/EndpointPerTagSpotlight.png
     :width: 50%
     :alt: This screenshot shows the Tag Spotlight details that are available when selecting an endpoint in endpoint performance
-    
+
 In Tag Spotlight Alex locates the 503 status codes and adds a filter Tag Spotlight for 503 responses. Now they can see that the latest version released today is responsible for the majority of the 503 responses. Having identified some latency associated with the 503 responses in the latest version, Alex consults with their team regarding the cause for the 503 responses.
 
 Summary
