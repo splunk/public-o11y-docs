@@ -32,12 +32,52 @@ This instrumentation uses the ``splunk-otel-js-web`` library.
       - :strong:`Command`
     * - Drop or redact parts of an attribute value.  Specify the name, or parse one or more attributes specified by their name and regex matched value. 
       - ``onAttributesSerializing``
+
     * - Drop specific attributes across all spans or events.
       - ``onAttributesSerializing``
     * - Drop entire spans or events.
       - 
          * ``ignoreURLs``
          * ``suppressTracing``
+
+
+
+
+Code snippets and examples
+--------------------------
+This code snippet shows how to use ``onAttributesSerializing`` to use regex to modify URLs.  
+
+.. code:: js
+
+    onAttributesSerializing: (attributes) => ({
+            ...attributes,
+            'http.url': typeof attributes['http.url'] === 'string'
+              ? attributes['http.url'].replace(/([?&]token=)[^&]+(&|$)/g, '$1<token>$2')
+              : attributes['http.url'],
+
+
+Use the format ``(string\|regex)[]`` with ``ignoreUrls`` to drop all URLs that contain ``/payment/``:
+
+.. code:: js
+
+    ignoreUrls: [/\/payment\//] 
+
+
+This code snippet shows how to drop all spans that have a failed status. 
+
+.. code:: js 
+
+    context.with(suppressTracing(context.active()), () => {
+          this._exporter.export([span], result => {
+            if (result.code !== ExportResultCode.SUCCESS) {
+              globalErrorHandler(
+                result.error ??
+                  new Error(
+                    `SimpleSpanProcessor: span export failed (status ${result})`
+                  )
+              );
+            }
+
 
  
 
@@ -61,6 +101,9 @@ This instrumentation uses the ``splunk-otel-android`` library.
       - ``filterSpans(SpanFilterBuilder.rejectSpansByName)``
 
  
+Code snippets
+--------------------------
+
 
 
 Splunk RUM for mobile iOS instrumentation 
@@ -84,7 +127,28 @@ This instrumentation uses the ``splunk-otel-ios`` library. For an example of the
          * ``options.spanFilter``
 
 
-Example
+Code snippets
+--------------------------
+
+.. code:: js 
+
+    options.spanFilter = { spanData in
+      var spanData = spanData
+      if spanData.name == "DropThis" {
+        return nil // spans with this name will not be sent
+      }
+      var atts = spanData.attributes
+      atts["http.url"] = .string("redacted") // change values for all urls
+      return spanData.settingAttributes(atts)
+    }
+
+
+
+See also 
 =========
-This sample instrumentation shows how to .... 
+The following sample applications with examples of how to use these commands to obscure PII are available on Splunk OpenTelemetry GitHub:
+
+* :new-page:`splunk-otel-js-web <https://github.com/signalfx/splunk-otel-js-web/blob/0ac1df52b2c22f37eeb74f8e4104ccdf0e8fe99e/examples/todolist/public/index.html>` sample application. 
+
+* :new-page:`splunk-otel-android <https://github.com/signalfx/splunk-otel-android/blob/main/sample-app/src/main/java/com/splunk/android/sample/SampleApplication.java>` sample application.
 
