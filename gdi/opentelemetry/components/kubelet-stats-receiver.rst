@@ -51,9 +51,11 @@ The following example shows how to configure the kubelet stats receiver with TLS
        cert_file: "/path/to/apiserver.crt"
        endpoint: "192.168.64.1:10250"
        insecure_skip_verify: true
+
    exporters:
      file:
        path: "fileexporter.txt"
+       
    service:
      pipelines:
        metrics:

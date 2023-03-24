@@ -19,6 +19,7 @@ Components
     components/fluentd-receiver
     components/host-metrics-receiver
     components/kubelet-stats-receiver
+    components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
     components/mongodb-atlas-receiver
@@ -201,7 +202,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``groupbyattrs``
      - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
      - Metrics, logs, traces
-   * - ``k8sattributes``
+   * - :ref:`kubernetes-attributes-processor` (``k8sattributes``)
      - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata. Formerly known as ``k8s_tagger``.
      - Metrics, logs, traces
    * - ``memory_limiter``

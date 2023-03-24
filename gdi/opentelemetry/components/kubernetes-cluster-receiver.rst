@@ -16,20 +16,6 @@ Kubernetes version 1.21 and higher is compatible with the Kubernetes navigator. 
 Get started
 ======================
 
-Follow these steps to configure and activate the component:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
-   
-   - :ref:`otel-install-linux`
-   - :ref:`otel-install-windows`
-   - :ref:`otel-install-k8s`
-
-2. Configure the Kubernetes cluster receiver as described in the next section.
-3. Restart the Collector.
-
-Sample configurations
-----------------------
-
 By default, the Kubernetes cluster receiver is already activated in the Helm chart of the Splunk OpenTelemetry Collectors. See :ref:`otel-kubernetes-config` for more information.
 
 To activate the Kubernetes cluster receiver manually in the Collector configuration, add ``k8s_cluster`` to the ``receivers`` section of your configuration file, as shown in the following example:
@@ -43,6 +29,16 @@ To activate the Kubernetes cluster receiver manually in the Collector configurat
        node_conditions_to_report: ["Ready", "MemoryPressure"]
        allocatable_types_to_report: ["cpu","memory"]
        metadata_exporters: [signalfx]
+
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
+configuration file. For example:
+
+.. code:: yaml
+
+   service:
+     pipelines:
+       metrics:
+         receivers: [k8s_cluster]
 
 Sync metadata_exporters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
