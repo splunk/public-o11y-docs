@@ -1,18 +1,18 @@
 .. _logs-LOconnect-usecase:
 
 ************************************************************************************************************************
-Use case: Troubleshoot workflow failures with Log Observer Connect
+Use case: Troubleshoot workflow failures with Log Observer
 ************************************************************************************************************************
 
 
 .. meta::
-  :description: Troubleshoot problems in a workflow using Log Observer Connect.
+  :description: Troubleshoot problems in a workflow using Log Observer where Log Observer accesses Splunk platform logs through Log Observer Connect.
 
-Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure.
+Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They analyze logs in Splunk Cloud Platform. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure. They purchased Splunk Observability Cloud as their observability solution. Buttercup Games analyzes their Splunk Cloud Platform logs in Log Observer, a point-and-click Splunk Observability Cloud tool, which they set up through Log Observer Connect.
 
-Buttercup Games site reliability engineers and service owners collaborate to monitor and maintain the site to ensure that people have a great experience when they visit. Buttercup Games chose a cloud-native approach because it facilitates observability. Splunk Observability Cloud is their observability solution. Buttercup Games uses Splunk Observability Cloud to find and solve problems that cause outages or failures in purchases from their online store.
+Buttercup Games site reliability engineers and service owners collaborate to monitor and maintain the site to ensure that people have a great experience when they visit. Buttercup Games uses Splunk Observability Cloud to find and solve problems that cause outages or failures in purchases from their online store.
 
-In the past hour, the number of purchases on the Buttercup Games site dropped significantly and the checkout completion rate is too low. Aisha, an SRE, and Deepu, a service owner, perform the following tasks with Splunk Log Observer Connect and other views in Splunk Observability Cloud to identify and troubleshoot the root cause of the problem with the purchase workflow:
+In the past hour, the number of purchases on the Buttercup Games site dropped significantly and the checkout completion rate is too low. Aisha, an SRE, and Deepu, a service owner, perform the following tasks with Splunk Log Observer and other views in Splunk Observability Cloud to identify and troubleshoot the root cause of the problem with the purchase workflow:
 
 1. :ref:`which-logs-matter`
 
@@ -45,16 +45,16 @@ Determine which logs matter
         :width: 100%
         :alt: This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s clusters for paymentservice and Logs for paymentservice.
 
-2. Aisha decides to look at the log details. She selects the Related Content tile, :strong:`Logs for paymentservice`. Log Observer Connect opens, and Aisha’s view is automatically narrowed to display only logs from :strong:`paymentservice`. Log Observer Connect displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer Connect does not ingest the logs, but displays the logs from their storage in Splunk Cloud Platform. 
+2. Aisha decides to look at the log details. She selects the Related Content tile, :strong:`Logs for paymentservice`. Log Observer opens, and Aisha’s view is automatically narrowed to display only logs from :strong:`paymentservice`. Log Observer displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer does not ingest the logs, but displays the logs from their storage in Splunk Cloud Platform. 
 
-    Because Aisha first tracked the workflow problems in Splunk APM, she was able to narrow her search down to only logs coming from :strong:`paymentservice`. Now Aisha can use Log Observer Connect to analyze the logs. 
+    Because Aisha first tracked the workflow problems in Splunk APM, she was able to narrow her search down to only logs coming from :strong:`paymentservice`. Now Aisha can use Log Observer to analyze the logs. 
 
 
 .. _conduct-initial-analysis:
 
 Conduct initial analysis of logs
 ========================================================================================================================
-Aisha can query the :strong:`paymentservice` logs in Log Observer Connect’s codeless UI where she can filter and aggregate the logs without needing to know the SPL query language.
+Aisha can query the :strong:`paymentservice` logs in Log Observer's point-and-click UI, then filter and aggregate the logs to drill down to the underlying problem. For more complex analysis using SPL query language, she can continue her analysis of :strong:`paymentservice` logs, or a subset of them, in the Splunk Cloud Platform Search & Reporting application.
 
 1. Looking through the incoming logs in the logs table, Aisha sees some error logs, so she selects one to see more details in a structured view. In the log details view on the right, Aisha notices the error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)``.
 
@@ -105,7 +105,7 @@ Test the hypothesis
 Identify the root cause and remediate
 ========================================================================================================================
 
-1. Her exploration in Log Observer Connect convinces Aisha that the test API token in v350.10 is the most likely source of the failures to complete payment. Aisha rolls back the Buttercup Games code from the problematic v350.10 to v350.9.
+1. Her exploration in Log Observer convinces Aisha that the test API token in v350.10 is the most likely source of the failures to complete payment. Aisha rolls back the Buttercup Games code from the problematic v350.10 to v350.9.
 
 2. Aisha notifies Deepu about the invalid API token, which is a test token. Deepu replaces the test token with a token that works in production.
 
@@ -114,7 +114,7 @@ Summary
 ========================================================================================================================
 When Buttercup Games' e-commerce site began having a slow checkout completion rate and saw a drop in the number of purchases, a site reliability engineer, Aisha, looked at the :strong:`/cart/checkout` business workflow on the Splunk APM service map. She saw that APM identified the :strong:`paymentservice` as the root cause of errors. Aisha decided to look into the log details by linking from APM to related logs through the Related Content bar. 
 
-In Log Observer Connect, Aisha noticed that several logs coming from :strong:`paymentservice` had the same error. The common error messages indicated that the API token started with “test”. She figured that the test token was the problem. She ruled out other possible problems by filtering and aggregating logs. She correlated the suspicious test token error message with only logs in v350.10.
+In Log Observer, Aisha noticed that several logs coming from :strong:`paymentservice` had the same error. The common error messages indicated that the API token started with “test”. She figured that the test token was the problem. She ruled out other possible problems by filtering and aggregating logs. She correlated the suspicious test token error message with only logs in v350.10.
 
 Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. Aisha rolled back the code to the previous version because v350.9 logs did not contain the test token error message. Then Deepu replaced the test token with a token that works in production. 
 
@@ -128,7 +128,7 @@ Learn more
 
 * For details on using Related Content, see :ref:`get-started-relatedcontent`.
 
-* For details on Log Observer Connect queries, see :ref:`logs-queries`.
+* For details on Log Observer queries, see :ref:`logs-queries`.
 
 * For details on aggregating logs, seel :ref:`logs-aggregations`.
 
