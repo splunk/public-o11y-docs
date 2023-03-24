@@ -36,7 +36,7 @@ Perform the following steps:
 #. In the :strong:`Username or Client` field, enter the user ID from ServiceNow or the Oauth client ID.
 #. In the :strong:`Password or Client` field, enter the password from ServiceNow or the Oauth client secret.
 #. In the :strong:`Provide the timezone` field, enter the time zone name for the ServiceNOW integration.
-#. In the :strong:`Observability Integration Token` field, enter the API Access token for your Incident Intelligence org.
+#. In the :strong:`Observability Integration Token` field, enter the API Access token for your Incident Intelligence org. This must be an org level API access token.
 #. Select :guilabel:`Save`
 
 You are now ready to configure ServiceNow as part of the incident policy workflows in Incident Intelligence.
