@@ -22,13 +22,13 @@ Learn how to get data in from each layer in your stack :ref:`get-started-get-dat
 
 .. rst-class:: newcard
 
-:strong:`Cloud providers`
-Integrate to collect service metrics and logs :ref:`get-started-connect`
+:strong:`OpenTelemetry`
+Install the Splunk Distribution of the OpenTelemetry Collector :ref:`otel-intro`
 
 .. rst-class:: newcard
 
-:strong:`Servers and clusters`
-Install the Splunk Distribution of OpenTelemetry Collector to collect metrics and logs :ref:`get-started-compute`
+:strong:`Cloud providers`
+Integrate to collect service metrics and logs :ref:`get-started-connect`
 
 .. rst-class:: newcard
 
@@ -308,7 +308,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: UNDERSTAND AND ANALYZE YOUR DATA
    :maxdepth:   3
 
-   Metrics, data points, and metric time series <metrics-and-metadata/metrics>
+   metrics-and-metadata/data-model
+
+.. toctree::
+   :maxdepth:   3
+
+   metrics-and-metadata/metrics
 
 .. toctree::
    :maxdepth:   3
