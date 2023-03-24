@@ -68,11 +68,11 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_TRACES_EXPORTER``
      - Trace exporter to use. You can set multiple comma-separated values. Possible values are ``otlp`` and ``jaeger-thrift-splunk``.
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
-     - The OTLP endpoint. When you set a value for the ``SPLUNK_REALM`` environment variable, the default endpoint is in the form ``https://ingest.<realm>.signalfx.com/v2/trace/otlp``.
+     - The OTLP endpoint. This defaults to the collector running on localhost, ``http://localhost:4318``.
    * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
      - The endpoint for the Jaeger exporter. When you set a value for the ``SPLUNK_REALM`` environment variable, the default endpoint is in the form ``https://ingest.<realm>.signalfx.com/v2/trace``.
 
-.. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to Observability Cloud ingest endpoints.
+.. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to a Collector run in the Lambda layer which sends the data to Observability Cloud ingest endpoints.
 
 .. _trace-propagation-configuration-lambda:
 
