@@ -24,7 +24,7 @@ Alex reviews the endpoints in the Endpoint Performance card
 Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, they can't drill down into a component service using the dependency map; so, Alex reviews the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of 2+ seconds. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerformanceCard.png
-    :width: 95%
+    :width: 50%
     :alt: This screenshot shows the endpoint performance card that displays when you select a service in the service map that has endpoints
 
 .. _sort-filter-endpoint-performance:
@@ -38,13 +38,13 @@ Alex selects the Endpoint Performance card to go to the full Endpoint Performanc
 Within Endpoint Performance, Alex sorts the endpoints by P90 Latency so they can quickly see the endpoints with the highest latency. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerfSort.png
-    :width: 95%
+    :width: 50%
     :alt: This screenshot shows the sort options within endpoint performance 
 
 Alex also uses the search to filter to endpoints with /checkout/ in the path. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerfSearch.png
-    :width: 95%
+    :width: 50%
     :alt: This screenshot shows the sort options within endpoint performance 
 
 .. _compare-endpoint-performance:
@@ -61,7 +61,7 @@ Alex knows there was a release this morning, so they update the time dropdown to
 Alex notices that the checkout/{cardId} endpoint has a 110% increase in P90 latency compared with the same hour yesterday. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerfCompareResult.png
-    :width: 95%
+    :width: 50%
     :alt: This screenshot highlights the endpoint performance compare setting 
 
 
