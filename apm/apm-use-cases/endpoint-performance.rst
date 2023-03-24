@@ -7,7 +7,7 @@ Use case: Monitor service performance using endpoint performance in Splunk APM
 .. meta::
     :description: Alex uses Splunk APM endpoint performance regularly monitor the performance of the payment service to ensure continuous improvement of the payment experience. 
 
-Alex, a performance engineer at Buttercup games, wants to monitor and optimize the Buttercup Games customer experience. Today, Alex is particularly interested in the checkout experience as there were some enhancements released this morning to that experience. 
+Alex, a performance engineer at Buttercup games, wants to monitor and optimize the Buttercup Games customer experience. Today, Alex is particularly interested in the checkout workflow since enhancements to the process were this morning.
 
 To review the performance of the checkout experience, Alex takes the following steps:
 
@@ -21,7 +21,7 @@ To review the performance of the checkout experience, Alex takes the following s
 Alex reviews the endpoints in the Endpoint Performance card
 ================================================================
 
-Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, they can't drill down into a component service using the dependency map; so, Alex reviews the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of 2+ seconds. 
+Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, they can't drill down into a component service using the dependency map. So, Alex reviews the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of over 2 seconds. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerformanceCard.png
     :width: 50%
