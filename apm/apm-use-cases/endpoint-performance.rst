@@ -38,7 +38,7 @@ Alex selects the Endpoint Performance card to go to the full Endpoint Performanc
 Within Endpoint Performance, Alex sorts the endpoints by P90 Latency so they can quickly see the endpoints with the highest latency. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerfSort.png
-    :width: 30%
+    :width: 20%
     :alt: This screenshot shows the sort options within endpoint performance 
 
 Alex also uses the search to filter to endpoints with /checkout/ in the path. 
