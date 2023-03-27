@@ -34,26 +34,57 @@ The following examples show how to include trace data in log statements produced
 
 .. tabs::
 
-   .. code-tab:: xml Log4j
+   .. tab:: Log4j
 
-      <?xml version="1.0" encoding="UTF-8"?>
-      <Configuration status="WARN">
-         <Appenders>
-            <Console name="STDOUT" target="SYSTEM_OUT">
-               <JsonLayout compact="true" eventEol="true">
-                  <KeyValuePair key="trace_id" value="${ctx:trace_id}"/>
-                  <KeyValuePair key="span_id" value="${ctx:span_id}"/>
-                  <KeyValuePair key="service.name" value="${sys:otel.resource.service.name}"/>
-                  <KeyValuePair key="trace_sampled" value="${ctx:trace_flags}"/>
-               </JsonLayout>
-            </Console>
-         </Appenders>
-         <!-- More configuration -->
-      </Configuration>
+      Edit your Log4j configuration, for example in the ``src/main/resources/log4j2.xml`` file. Depending on your environment, you might have to edit a different file or use a different configuration system.
+
+      .. code-block:: xml
+
+         <?xml version="1.0" encoding="UTF-8"?>
+         <Configuration status="WARN">
+            <Appenders>
+               <Console name="STDOUT" target="SYSTEM_OUT">
+                  <JsonLayout compact="true" eventEol="true">
+                     <KeyValuePair key="trace_id" value="${ctx:trace_id}"/>
+                     <KeyValuePair key="span_id" value="${ctx:span_id}"/>
+                     <KeyValuePair key="service.name" value="${sys:otel.resource.service.name}"/>
+                     <KeyValuePair key="trace_sampled" value="${ctx:trace_flags}"/>
+                  </JsonLayout>
+               </Console>
+            </Appenders>
+            <!-- More configuration -->
+         </Configuration>
+
+      For Spring Boot applications, you can also edit the ``application.properties`` file to add the following logging pattern:
+
+      .. code.block:: text
+
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n
 
    .. code-tab:: bash Logback
 
-      logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n
+      Edit your Logback configuration, for example in the ``src/main/resources/logback.xml`` file. Depending on your environment, you might have to edit a different file or use a different configuration system.
+
+      .. code-block:: xml
+         :emphasize-lines: 
+
+         <?xml version="1.0" encoding="UTF-8"?>
+         <configuration>
+            <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+               <encoder>
+                  <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n</pattern>
+               </encoder>
+            </appender>
+            <root level="info">
+               <appender-ref ref="STDOUT" />
+            </root>
+         </configuration>
+
+      For Spring Boot applications, you can also edit the ``application.properties`` file to add the following logging pattern:
+
+      .. code.block:: text
+
+         logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n
 
 Add resource attributes to your application logs
 ---------------------------------------------------
