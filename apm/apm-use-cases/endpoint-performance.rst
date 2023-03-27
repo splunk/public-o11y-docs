@@ -14,7 +14,6 @@ To review the performance of the checkout experience, Alex takes the following s
 #. :ref:`endpoint-performance-card`
 #. :ref:`sort-filter-endpoint-performance`
 #. :ref:`compare-endpoint-performance`
-#. :ref:`tag-spotlight`
 
 .. _endpoint-performance-card:
 
@@ -52,10 +51,10 @@ Alex also uses the search to filter to endpoints with /checkout/ in the path.
 
 .. _compare-endpoint-performance:
 
-Alex compares the last hour performance to the same hour from yesterday
+Alex compares the last hour's performance to the same hour from yesterday
 =============================================================================
 
-Alex knows there was a release this morning, so they update the time dropdown to -1h and they select -24h for the comparison so that they can compare the last hour to the same time frame yesterday.
+Alex knows there was a release this morning, so they update the time dropdown to -1h and select -24h for the comparison so that they can compare the last hour to the same time frame yesterday.
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerfCompare.png
     :width: 95%
@@ -73,13 +72,13 @@ Alex notices that the checkout/{cardId} endpoint has a 110% increase in P90 late
 Alex uses Tag Spotlight to get more context 
 =============================================================================
 
-Alex selects this endpoint and reviews the Tag Spotlight details. Alex notices that a http.status_code 503 is the top high-latency tag. Alex selects this tag to explore in Tag Spotlight. 
+Alex selects this endpoint and reviews the Tag Spotlight details. Alex notices that an http.status_code 503 is the top high-latency tag. Alex selects this tag to explore in Tag Spotlight. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerTagSpotlight.png
     :width: 50%
     :alt: This screenshot shows the Tag Spotlight details that are available when selecting an endpoint in endpoint performance
 
-In Tag Spotlight Alex locates the 503 status codes and adds a filter Tag Spotlight for 503 responses. Now they can see that the latest version released today is responsible for the majority of the 503 responses. Having identified some latency associated with the 503 responses in the latest version, Alex consults with their team regarding the cause for the 503 responses.
+In Tag Spotlight, Alex locates the 503 status codes and adds a filter Tag Spotlight for 503 responses. Now they can see that the latest version released today is responsible for the majority of the 503 responses. Having identified some latency associated with the 503 responses in the latest version, Alex consults with their team regarding the cause of the 503 responses.
 
 Summary
 ==========
