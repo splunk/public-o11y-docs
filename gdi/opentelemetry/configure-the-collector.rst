@@ -21,7 +21,7 @@ Configure the Collector
     other-configuration-sources.rst
     data-processing.rst
     tags.rst
-    configure-remove.rst
+    Remove data pre-ingest <configure-remove.rst>
 
 You can use a variety of default configuration files to set up the Splunk Distribution of OpenTelemetry Collector, as well :ref:`additional components <otel-components>` that you can configure separately. 
 

@@ -19,7 +19,7 @@ Introduction to metrics pipeline management
 
 Metrics pipeline management is an evolution of Splunk Observability Cloud metrics platform that offers you solutions to centrally manage metric cardinality.
 
-With metrics pipeline management, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without updating the configuration of your :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`'s :ref:`attributes processor <attributes-processor>`.
+With metrics pipeline management, you have more control over how you ingest and store your metrics, so you can lower costs and improve monitoring performance without updating the configuration of your :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. To remove data pre-ingest using the Collector, see :ref:`configure-remove`. 
 
 What is metric cardinality?
 =============================
