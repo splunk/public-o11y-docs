@@ -96,7 +96,6 @@ You can then add the attributes processors to any compatible pipeline. For examp
          - resourcedetection
          exporters: [splunk_hec]
 
-
 To include or exclude attributes use any of the following properties:
 
 - ``services``
@@ -181,6 +180,14 @@ The following example shows how to backfill spans that are missing an attribute:
          action: upsert
        - key: operation
          action: delete
+
+More examples and use cases
+------------------------------
+
+See also the following use cases: 
+
+* :ref:`configure-remove`
+* :ref:`collector-remove-data`  
 
 .. _attributes-processor-settings:
 
