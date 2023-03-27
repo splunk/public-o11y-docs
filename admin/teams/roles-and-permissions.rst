@@ -71,10 +71,10 @@ APIs honor permissions based on the role defined. This is important to have stri
 * APIs using Org Tokens - Similar to users and teams, even org tokens can be assigned a predefined role and inherit those permissions. For example, if you are taking system backups on a regular basis, you can use read-only org token APIs to take those backups without worrying about accidental changes with APIs that have full permissions. 
 
 
-Assign multiple roles to users or teams
+Multiple roles to users or teams
 ===========================================
 
-Individual users or teams can have multiple roles. In this scenario, they receive a combination of permissions inherited from all of their roles.
+You can assign multiple roles to individual users or teams. In this scenario, they receive a combination of permissions inherited from all of their roles.
 
 .. list-table::
   :header-rows: 1
