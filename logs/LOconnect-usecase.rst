@@ -31,7 +31,7 @@ In the past hour, the number of purchases on the Buttercup Games site dropped si
 
 Determine which logs matter
 ========================================================================================================================
-1. Aisha opens the service map in Splunk Application Performance Monitoring (APM). To find out why the checkout completion rate is so low, she selects the :strong:`/cart/checkout` business workflow on the service map. The service map now shows Aisha the dependency interactions among the full set of services backing the :strong:`/cart/checkout workflow`.
+1. Aisha opens the service map in Splunk Application Performance Monitoring (APM). To find out why the checkout completion rate is so low, she selects the :strong:`/cart/checkout` business workflow on the service map. The service map now shows Aisha the dependency interactions among the full set of services backing the :strong:`/cart/checkout` workflow.
 
     .. image:: /_images/logs/service-map.png
         :width: 70%
