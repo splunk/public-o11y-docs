@@ -7,7 +7,7 @@ Kubelet stats receiver
 .. meta::
       :description: Use this Splunk Observability Cloud integration for the kubelet-stats receiver. See benefits, install, configuration, and metrics.
 
-The ``kubeletstats`` receiver pulls pod metrics from the Kubernetes API server on a kubelet and sends them through the metrics pipeline for further processing. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The Kubelet stats receiver pulls pod metrics from the Kubernetes API server on a kubelet and sends them through the metrics pipeline for further processing. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
 .. note:: This receiver replaces the ``kubelet-stats``, ``kubelet-metrics``, and ``kubernetes-volumes`` Smart Agent monitors.
 
@@ -22,15 +22,15 @@ Follow these steps to configure and activate the component:
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the kubelet stats receiver as described in the next section.
+2. Configure the Kubelet stats receiver as described in the next section.
 3. Restart the Collector.
 
 Sample configurations
 ----------------------
 
-A kubelet runs on a Kubernetes node and has an API server to which the kubelet stats receiver connects. To configure the receiver, set the connection and authentication details, and how often you want to collect data and send it.
+A kubelet runs on a Kubernetes node and has an API server to which the Kubelet stats receiver connects. To configure the receiver, set the connection and authentication details, and how often you want to collect data and send it.
 
-There are two ways to authenticate, driven by the ``auth_type`` field:
+There are two ways to authenticate, as indicated by the ``auth_type`` field:
 
 -  ``tls`` tells the receiver to use TLS for authentication and requires that the ``ca_file``, ``key_file``, and ``cert_file`` fields.
 -  ``ServiceAccount`` tells this receiver to use the default service account token to authenticate to the kubelet API.
@@ -96,12 +96,12 @@ The following example shows how to configure the ``kubeletstats`` receiver with 
          receivers: [kubeletstats]
          exporters: [file]
 
-.. caution:: A missing or empty ``endpoint`` value causes the host name on which the Collector is running to be used as the endpoint. If the ``hostNetwork`` flag is set, and the Collector is running in a Pod, this host name resolves to the node's network namespace.
+.. caution:: A missing or empty ``endpoint`` value causes the host name on which the Collector is running to be used as the endpoint. If the ``hostNetwork`` flag is set, and the Collector is running in a Pod, the host name resolves to the node's network namespace.
 
 Add metrics excluded by default
 ---------------------------------------------
 
-To import excluded metrics, use ``include_metrics``.
+To import excluded metrics, use the ``include_metrics`` option as in the following example:
 
 .. code:: yaml
 
@@ -115,7 +115,7 @@ To import excluded metrics, use ``include_metrics``.
 Add additional metadata labels
 --------------------------------------
 
-By default, all produced metrics get resource labels based on what kubelet the ``/stats/summary`` endpoint provides. For some use cases, this might not be enough. Use other endpoints to retrieve additional metadata entities and set them as extra labels on the metric resource.
+By default, all produced metrics get resource labels based on what kubelet the ``/stats/summary`` endpoint provides. For some use cases, this might not be enough: use other endpoints to retrieve additional metadata entities and set them as extra labels on the metric resource.
 
 The kubelet stats receiver supports the following metadata:
 
@@ -135,7 +135,7 @@ To add the ``container.id`` label to your metrics, set the ``extra_metadata_labe
        extra_metadata_labels:
          - container.id
 
-If ``extra_metadata_labels`` isn't set, no additional API calls are done to receive metadata.
+If ``extra_metadata_labels`` isn't set, no additional API calls are made to receive metadata.
 
 Collect additional volume metadata
 ---------------------------------------
@@ -155,7 +155,7 @@ When dealing with persistent volume claims, you can sync metadata from the under
        k8s_api_config:
          auth_type: serviceAccount
 
-If ``k8s_api_config`` is set, the receiver attempts to collect metadata from underlying storage resources for persistent volume claims. For example, if a Pod is using a persistent volume claim backed by an EBS instance on AWS, the receiver sets the ``k8s.volume.type`` label to ``awsElasticBlockStore`` rather than ``persistentVolumeClaim``.
+If ``k8s_api_config`` is set, the receiver attempts to collect metadata from underlying storage resources for persistent volume claims. For example, if a Pod is using a persistent volume claim backed by an Elastic Block Stor (EBS) instance on AWS, the receiver sets the ``k8s.volume.type`` label to ``awsElasticBlockStore`` rather than ``persistentVolumeClaim``.
 
 Configure metric groups
 -----------------------------
@@ -179,7 +179,7 @@ For example, to collect only node and pod metrics from the receiver:
 Configure optional parameters
 ----------------------------------
 
-The following parameters can also be specified:
+You can also set the following optional parameters:
 
 -  ``collection_interval``, which is the interval at which to collect
    data. The default value is ``10s``.
@@ -197,7 +197,7 @@ The following metrics, resource attributes, and attributes are available.
   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/kubeletstatsreceiver.yaml"></div>
 
 
-Get help
+Troubleshooting
 ======================
 
 .. include:: /_includes/troubleshooting-components.rst
