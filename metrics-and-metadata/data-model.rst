@@ -33,4 +33,7 @@ Data management tools
 The platform provides a wide array of features and tools to help you manage, understand, and leverage your data:
 
 * :ref:`metrics-finder-and-metadata-catalog`
-* Related Content
+* :ref:`get-started-relatedcontent`
+* :ref:`data-visualization-charts` 
+* :ref:`dashboards`
+* :ref:`signalflow-analytics-intro`
