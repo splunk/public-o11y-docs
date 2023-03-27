@@ -1,7 +1,7 @@
 .. _metrics-dimensions-mts:
 
 ************************************************************************
-Metadata: Dimensions, custom properties, and tags 
+Metric metadata: Dimensions, custom properties, and tags 
 ************************************************************************
 
 .. meta::

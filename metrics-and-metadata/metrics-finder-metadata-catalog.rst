@@ -1,6 +1,5 @@
 .. _metrics-finder-and-metadata-catalog:
 
-
 *****************************************************************
 Use the Metric Finder and Metadata Catalog
 *****************************************************************
