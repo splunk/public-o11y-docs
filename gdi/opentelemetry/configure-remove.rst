@@ -1,7 +1,7 @@
 .. _configure-remove:
 
 *********************************************************************
-Remove data to ingest using the Collector
+Control data to ingest using the Collector
 *********************************************************************
 
 .. meta::
@@ -52,4 +52,4 @@ Alternatives to alter or remove data
 
 See another example of how to tweak your data at :ref:`collector-remove-data`.
 
-You can also use the 
+You can also use the metrics pipeline management tool to control how you ingest and store your metrics. Learn more at :ref:`metrics-pipeline-intro`.
