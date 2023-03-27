@@ -38,8 +38,8 @@ Splunk Observability Cloud comes with the following roles predefined:
 Splunk Observability Cloud APIs also honor the role-based access control framework as well. APIs inherit permissions of the read-only role, since tokens can be assigned to roles. This can be used take system backups with a reduced risk of introducing changes.
 
 
-Mapping Splunk Observability Cloud and Splunk Cloud roles
-===============================================================
+Mapping Splunk Observability Cloud and Splunk Cloud Platform roles
+===========================================================================
 
 Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud Platform. This role mapping is pre-configured to allow a seamless transition of Splunk Cloud Platform users into Splunk Observability Cloud.
 
@@ -71,10 +71,10 @@ APIs honor permissions based on the role defined. This is important to have stri
 * APIs using Org Tokens - Similar to users and teams, even org tokens can be assigned a predefined role and inherit those permissions. For example, if you are taking system backups on a regular basis, you can use read-only org token APIs to take those backups without worrying about accidental changes with APIs that have full permissions. 
 
 
-Multiple roles to users or teams
+Multiple roles for a user or team
 ===========================================
 
-You can assign multiple roles to individual users or teams. In this scenario, they receive a combination of permissions inherited from all of their roles.
+You can assign multiple roles to individual users or teams. The user or team receives a combination of permissions inherited from all of their roles.
 
 .. list-table::
   :header-rows: 1
