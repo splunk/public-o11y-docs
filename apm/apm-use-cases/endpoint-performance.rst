@@ -14,6 +14,7 @@ To review the performance of the checkout experience, Alex takes the following s
 #. :ref:`endpoint-performance-card`
 #. :ref:`sort-filter-endpoint-performance`
 #. :ref:`compare-endpoint-performance`
+#. :ref:`tag-spotlight`
 
 .. _endpoint-performance-card:
 
