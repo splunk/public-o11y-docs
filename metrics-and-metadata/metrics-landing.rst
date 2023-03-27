@@ -13,7 +13,7 @@ Metrics in Splunk Observability Cloud
 
   Get started with metrics <metrics>
   metric-types.rst
-  Metadata: dimensions, properties, tags <metrics-dimensions-mts>
+  Metadata: Dimensions, properties, tags <metrics-dimensions-mts>
   Naming conventions <metric-names>
   Metric finder and metadata catalogue <metrics-finder-metadata-catalog>
   Events <view-data-events>
@@ -25,7 +25,6 @@ To learn about metrics and events in the Splunk Cloud Observability platform, se
 * :ref:`metrics-dimensions-mts`
 * :ref:`metric-dimension-names`
 * :ref:`events-intro`
-
 
 To learn about metrics for specific data sources, refer to:
 
@@ -41,7 +40,5 @@ See metric access, visualization, and management tools at:
 * :ref:`metrics-pipeline`
 * :ref:`data-visualization-charts` 
 * :ref:`dashboards`
-
-ADD LINKS!
 
 .. note:: For information about our data model, see :ref:`data-model`.
