@@ -1,4 +1,4 @@
-.. _roles-and-permissions:
+.. _roles-and-permissions-table:
 
 ***************************************************
 Splunk Observability Cloud roles and capabilities

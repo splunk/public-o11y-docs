@@ -14,7 +14,6 @@
     - No
     - No
     - No
-    - No
 
   * - :strong:`Delete team`
     - Yes

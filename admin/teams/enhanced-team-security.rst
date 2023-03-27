@@ -30,12 +30,11 @@ To enable the enhanced team security setting, follow these steps:
 #. Select the :guilabel:`Restrict Access` check box.
 
 
-.. _about-team-roles:
 
 Team roles and permissions
 ============================================================================
 
-This table presents the available user roles and their permissions. Some team roles and permissions change based on whether enhanced team security is enabled. For example, when you enable enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
+This table presents the available user roles and their permissions. Some team roles and permissions change based on whether enhanced team security is turned on. For example, when you turn on enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
 
 
 .. list-table::
@@ -43,7 +42,7 @@ This table presents the available user roles and their permissions. Some team ro
 
   * - :strong:`Permission`
     - :strong:`Admin`
-    - :strong:`Team Manager` (Available with enhanced team security enabled)
+    - :strong:`Team Manager` (Available with enhanced team security turned on)
     - :strong:`Team Member`
     - :strong:`User`
 
@@ -68,17 +67,16 @@ This table presents the available user roles and their permissions. Some team ro
   * - :strong:`Edit team name and description`
     - Yes
     - Yes
-    - * Yes, when enhanced team security is disabled
-      * No, when enhanced team security is enabled
+    - * Yes, when enhanced team security is turned off
+      * No, when enhanced team security is turned on
     - No
 
   * - :strong:`Join team`
     - Yes
     - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
     - Not applicable: A Team Member is already on a team and doesn't need to join.
-    - * Yes, when enhanced team security is disabled
-      * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
-
+    - * Yes, when enhanced team security is turned off
+      * No, when enhanced team security is turned on. An Admin or Team Manager must add a user
   * - :strong:`Add member`
     - Yes
     - Yes
@@ -86,13 +84,13 @@ This table presents the available user roles and their permissions. Some team ro
     - No
 
   * - :strong:`Assign Team Manager role to Team Member`
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * Yes, when enhanced team security is enabled
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
+      * Yes, when enhanced team security is turned on
     - Yes
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * No, when enhanced team security is enabled
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * No, when enhanced team security is enabled
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
+      * No, when enhanced team security is turned on
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
+      * No, when enhanced team security is turned on
 
   * - :strong:`Remove member`
     - Yes
@@ -113,6 +111,6 @@ This table presents the available user roles and their permissions. Some team ro
     - Yes
     - Not applicable: A user must be on a team to leave a team
 
-Permission to link a detector to a team is based on the detector's permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
+Permission to link a detector to a team is determined by the detector's permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
 
-Permission to link a dashboard group to a team is based on the dashboard group's permissions. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.
+Permission to link a dashboard group to a team is determined by the dashboard group's permissions. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.

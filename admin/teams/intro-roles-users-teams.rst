@@ -1,8 +1,8 @@
-.. _admin-manage-teams:
+.. _intro-roles-users-teams:
 
-*********************************************************
-Manage users and teams in Splunk Observability Cloud
-*********************************************************
+***************************************************************************
+Introduction to roles, users, and teams in Splunk Observability Cloud
+*******************************************************************************8
 
 .. meta::
    :description: Learn how to manage users teams in Splunk Observability Cloud.
@@ -10,8 +10,9 @@ Manage users and teams in Splunk Observability Cloud
 .. toctree::
    :hidden:
 
+   About user roles and permissions <roles-and-permissions-about>
+   Matrix of roles and capabilities <roles-and-permissions-table>
    Create and manage users <manage-users>
-   User roles and permissions <roles-and-permissions>
    Manage teams <manage-membership>
    Manage team landing pages <configure-page>
    Manage team notifications <team-notifications>
@@ -41,33 +42,3 @@ For example, your security team might focus on metrics that indicate login failu
 
 To learn more about creating and managing teams, see :ref:`admin-manage-team-membership`.
 
-.. raw:: html
-
-  <embed>
-    <h3>Link teams to relevant Observability Cloud features and content</h3>
-  </embed>
-
-You can link teams to relevant dashboard groups and detectors, giving them focused access to the information they use the most.
-
-To learn more about linking teams to dashboard groups and detectors, see :ref:`admin-team-notifications`.
-
-.. raw:: html
-
-  <embed>
-    <h3>Set up team landing pages to provide a handy location for team resources</h3>
-  </embed> 
-
-A team landing page provides a customizable text area that you can use to provide useful information for the team. The team landing page also provides access to any dashboard groups and detectors that you linked to the team.
-
-To learn more about team landing pages, see :ref:`admin-configure-page`.
-
-.. raw:: html
-
-  <embed>
-    <h3>Create team notifications</h3>
-  </embed> 
-
-
-Define team notifications to help ensure that your team receives the alerts it needs to stay informed.
-
-To learn more about team notifications, see :ref:`admin-team-notifications`.

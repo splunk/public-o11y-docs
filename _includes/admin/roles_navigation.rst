@@ -38,8 +38,8 @@
     - No
     - No
     - No
-  
-    * - :strong:`Activate or deactivate org access token`
+
+  * - :strong:`Activate or deactivate org access token`
     - Yes
     - No
     - No

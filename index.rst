@@ -801,7 +801,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Manage users and teams TOGGLE <admin/teams/manage-teams>
+   Manage roles, users, teams TOGGLE <admin/teams/intro-roles-users-teams>
 
 .. toctree::
    :hidden:
