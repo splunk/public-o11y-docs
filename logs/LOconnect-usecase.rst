@@ -10,7 +10,7 @@ Use case: Troubleshoot workflow failures with Log Observer
 
 Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They analyze logs in Splunk Cloud Platform. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure. They purchased Splunk Observability Cloud as their observability solution. Buttercup Games analyzes their Splunk Cloud Platform logs in Log Observer, a point-and-click Splunk Observability Cloud tool, which they set up through Log Observer Connect.
 
-Buttercup Games site reliability engineers and service owners collaborate to monitor and maintain the site to ensure that people have a great experience when they visit. Buttercup Games uses Splunk Observability Cloud to find and solve problems that cause outages or failures in purchases from their online store.
+Buttercup Games site reliability engineers and service owners collaborate to monitor and maintain the site to ensure that people have a great experience when they visit. They use Splunk Observability Cloud to find and solve problems that cause outages or failures in purchases from their online store.
 
 In the past hour, the number of purchases on the Buttercup Games site dropped significantly and the checkout completion rate is too low. Aisha, an SRE, and Deepu, a service owner, perform the following tasks with Splunk Log Observer and other views in Splunk Observability Cloud to identify and troubleshoot the root cause of the problem with the purchase workflow:
 
@@ -20,9 +20,9 @@ In the past hour, the number of purchases on the Buttercup Games site dropped si
 
 3. :ref:`find-log-patterns` 
 
-4. :ref:`narrow-your-hypothesis`
+4. :ref:`narrow-hypothesis`
 
-5. :ref:`test-your-hypothesis`
+5. :ref:`test-hypothesis`
 
 6. :ref:`identify-and-remediate`
 
@@ -76,7 +76,7 @@ Find log patterns
 2. To double-check her hypothesis, Aisha selects the error message and selects :strong:`Add to filter`` to show only the logs that contain the same error message.
 
 
-.. _narrow-your-hypothesis:
+.. _narrow-hypothesis:
 
 Narrow the hypothesis
 ========================================================================================================================
@@ -92,7 +92,7 @@ Narrow the hypothesis
     Aisha is pretty confident that she has isolated the problem to logs containing the error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)`` in only the most recent version, v350.1. Now she wants to test her hypothesis.
 
 
-.. _test-your-hypothesis:
+.. _test-hypothesis:
 
 Test the hypothesis
 ========================================================================================================================
