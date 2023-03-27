@@ -68,8 +68,8 @@ Monitor data about front-end app user experiences :ref:`wcidw-rum`
 
 .. rst-class:: newcard
 
-:strong:`Log Observer`
-Query logs to identify root causes :ref:`LogObserverFeatures`
+:strong:`Log Observer Connect`
+Query logs to identify root causes :ref:`logs-intro-logconnect`
 
 .. rst-class:: newcard
 
@@ -313,32 +313,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   metrics-and-metadata/metrics
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metric-types
-
-.. toctree::
-   :maxdepth:   3
-
-   Dimensions, custom properties, and tags <metrics-and-metadata/metrics-dimensions-mts>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metric-names
-
-.. toctree::
-   :maxdepth:   3
-
-   Add context to metrics using events <metrics-and-metadata/view-data-events>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metrics-finder-metadata-catalog
+   Metrics and events TOGGLE <metrics-and-metadata/metrics-landing>
 
 .. toctree::
    :maxdepth:   3
