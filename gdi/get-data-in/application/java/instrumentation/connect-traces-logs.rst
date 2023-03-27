@@ -61,12 +61,11 @@ The following examples show how to include trace data in log statements produced
 
          logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n
 
-   .. code-tab:: bash Logback
+   .. tab:: Logback
 
       Edit your Logback configuration, for example in the ``src/main/resources/logback.xml`` file. Depending on your environment, you might have to edit a different file or use a different configuration system.
 
       .. code-block:: xml
-         :emphasize-lines: 
 
          <?xml version="1.0" encoding="UTF-8"?>
          <configuration>
@@ -82,7 +81,7 @@ The following examples show how to include trace data in log statements produced
 
       For Spring Boot applications, you can also edit the ``application.properties`` file to add the following logging pattern:
 
-      .. code.block:: text
+      .. code-block:: text
 
          logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n
 
