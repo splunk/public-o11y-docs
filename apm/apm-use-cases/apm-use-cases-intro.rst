@@ -15,6 +15,7 @@ Use cases: Troubleshoot errors and monitor application performance using Splunk 
     service-map
     services-impact-business-workflows
     troubleshoot-tag-spotlight
+    endpoint-performance
     troubleshoot-business-workflows
     specific-trace
     troubleshoot-traces
