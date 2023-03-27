@@ -57,7 +57,7 @@ The following examples show how to include trace data in log statements produced
 
       For Spring Boot applications, you can also edit the ``application.properties`` file to add the following logging pattern:
 
-      .. code.block:: text
+      .. code-block:: text
 
          logging.pattern.console = %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg trace_id=%X{trace_id} span_id=%X{span_id} trace_flags=%X{trace_flags} %n
 
