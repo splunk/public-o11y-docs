@@ -48,10 +48,27 @@ There are three types of metrics: gauge, cumulative counter, and counter. See mo
     - Number of new occurrences or items since the last measurement
     - The number of packets that fail to reach their destinations over each 24-hour period
 
+.. _metrics-category:
+
 Metric category
 ----------------------
 
-ADD HERE
+Metrics have the following categories:
+
+.. list-table::
+  :header-rows: 1
+  :widths: 25 75
+
+  * - Metric category
+    - Description
+  * - Default
+    - TBC???
+  * - Bundled
+    - Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers.
+  * - Custom
+    - Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics. 
+
+Read more in :ref:`about-custom-high-res`.
 
 Metric metadata
 ----------------------
