@@ -143,7 +143,4 @@ The following table shows the configuration options for the receiver creator rec
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/receiver_creator.yaml"></div>
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

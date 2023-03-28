@@ -86,7 +86,4 @@ The following metrics, resource attributes, and attributes are available.
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/postgresqlreceiver.yaml"></div>
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

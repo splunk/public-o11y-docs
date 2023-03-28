@@ -63,7 +63,4 @@ Settings
 
 To configure each Smart Agent receiver, see the documentation of each monitor type in :ref:`monitor-data-sources`.
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

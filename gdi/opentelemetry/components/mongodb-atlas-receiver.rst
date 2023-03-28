@@ -86,7 +86,4 @@ To deactivate any metric, apply the following configuration:
      <metric_name>:
        enabled: false
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

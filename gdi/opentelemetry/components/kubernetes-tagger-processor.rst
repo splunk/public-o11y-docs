@@ -330,7 +330,4 @@ Sidecar
 
 The processor can't detect containers from the same pods when running as a sidecar. Instead, use the Kubernetes Downward API to inkect environment variables into the pods and use their values as tags.
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

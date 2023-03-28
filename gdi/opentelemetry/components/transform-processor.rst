@@ -176,7 +176,4 @@ You can apply the following functions to metric contexts:
 
 .. caution:: Using conversion functions might break metric semantics.
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

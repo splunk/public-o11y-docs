@@ -98,7 +98,4 @@ integration. See :ref:`legacy-otel-mappings` for the Splunk Distribution of Open
 
    <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

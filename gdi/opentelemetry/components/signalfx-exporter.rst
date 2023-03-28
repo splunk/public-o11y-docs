@@ -59,7 +59,4 @@ The following table shows the configuration options for the SignalFx exporter:
 
 .. caution:: Use the ``access_token_passthrough`` setting if you're using a SignalFx receiver with the same setting. Only use the SignalFx receiver with the SignalFx exporter when activating this setting.
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

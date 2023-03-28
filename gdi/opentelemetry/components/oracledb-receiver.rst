@@ -120,7 +120,4 @@ activated the ``oracledb.sessions.usage`` metric:
          oracledb.sessions.usage:
            enabled: true
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst

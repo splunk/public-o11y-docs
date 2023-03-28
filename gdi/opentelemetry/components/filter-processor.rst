@@ -296,7 +296,4 @@ The following table shows the configuration options for the filter processor:
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/filter.yaml"></div>
 
-Troubleshooting
-======================
-
 .. include:: /_includes/troubleshooting-components.rst
