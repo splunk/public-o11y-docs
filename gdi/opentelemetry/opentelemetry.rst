@@ -16,6 +16,7 @@ Get started with the Splunk Distribution of the OpenTelemetry Collector
     components.rst
     Requirements <otel-requirements.rst>
     install-the-collector.rst
+    discovery-mode.rst
     configure-the-collector.rst
     Commands reference <otel-commands.rst>
     Zero config auto instrumentation <zero-config.rst>
@@ -34,6 +35,8 @@ The OpenTelemetry Collector has a core version and a contributions version. The 
 The Splunk Distribution of OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. The distribution is a project that bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms. The customizations in the Splunk distribution include these features:
 
 * Better defaults for Splunk products
+* Discovery mode for metric sources
+* Zero configuration auto instrumentation
 * Fluentd for log capture
 * Tools to support migration from SignalFx products
 
@@ -41,10 +44,11 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 
   Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent (deprecated) to the Collector.
 
-To get started with the Collector, read :ref:`opentelemetry-resources`:
+To get started with the Collector, see :ref:`opentelemetry-resources`:
 
-#. Check the :ref:`prerequisites and requirements <otel-requirements>`.
+#. Check the :ref:`requirements <otel-requirements>`.
 #. :ref:`otel-install-platform`. Get instructions for installing the Collector on a variety of platforms. Or use :ref:`our guided install <collector-guided-install>`.
+#. Learn about the discovery mode. See :ref:`discovery-mode`.
 #. Learn about the available :ref:`configuration options <otel-configuration>`. 
 #. :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
 
