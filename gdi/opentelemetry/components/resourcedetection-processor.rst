@@ -365,4 +365,7 @@ The following table shows the configuration options for the resource detection p
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/resourcedetection.yaml"></div>
 
+Troubleshooting
+======================
+
 .. include:: /_includes/troubleshooting-components.rst

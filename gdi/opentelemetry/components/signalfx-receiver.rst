@@ -60,4 +60,7 @@ The following table shows the configuration options for the SignalFx receiver:
 
 .. caution:: If you use the ``access_token_passthrough`` setting with any exporter other than the SignalFx exporter, the receiver might reveal all organization access tokens. Only use the SignalFx receiver with the SignalFx exporter when activating this setting.
 
+Troubleshooting
+======================
+
 .. include:: /_includes/troubleshooting-components.rst

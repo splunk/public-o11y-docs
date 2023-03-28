@@ -156,4 +156,7 @@ The following table shows the configuration options for the Windows Performance 
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/windowsperfcounters.yaml"></div>
 
+Troubleshooting
+======================
+
 .. include:: /_includes/troubleshooting-components.rst

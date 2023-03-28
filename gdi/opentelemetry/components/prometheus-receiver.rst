@@ -143,4 +143,7 @@ The Prometheus receiver converts Prometheus metrics to OpenTelemetry metrics fol
    * - Summary
      - Summary (percentiles)
 
+Troubleshooting
+======================
+
 .. include:: /_includes/troubleshooting-components.rst

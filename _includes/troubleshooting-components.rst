@@ -1,6 +1,3 @@
-Troubleshooting
-======================
-
 If you are a Splunk Observability Cloud customer and are not able to see your data in Splunk Observability Cloud, you can get help in the following ways.
 
 Available to Splunk Observability Cloud customers

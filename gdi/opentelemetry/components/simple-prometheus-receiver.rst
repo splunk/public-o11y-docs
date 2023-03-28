@@ -93,4 +93,7 @@ The Simple Prometheus receiver converts Prometheus metrics to OpenTelemetry metr
    * - Summary
      - Summary (percentiles)
 
+Troubleshooting
+======================
+
 .. include:: /_includes/troubleshooting-components.rst
