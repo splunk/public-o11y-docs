@@ -5,18 +5,19 @@ Discovery receiver
 *************************
 
 .. meta::
-      :description: Use the receiver creator to create receivers at runtime in the OpenTelemetry Collector based on rules. Read on to learn how to configure the component.
+      :description: Use the discovery mode provided by the discovery receiver in the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
 
-The discovery receiver allows the Splunk Distribution of OpenTelemetry Collector to create new receivers at runtime based on configured rules and observer extensions. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The discovery mode dynamically creates new receivers at runtime to detect metric sources and collect metric data based on a set of predefined set of receiver configurations. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
 
-You can use any of the following observer extensions as listeners for the receiver creator:
+The receiver powers the discovery mode of the Splunk Distribution of OpenTelemetry Collector. You can use the discovery mode to automatically detect any service supported by the following observer extensions:
 
 - ``docker_observer``: Detects and reports running container endpoints through the Docker API.
-- ``ecs_task_observer``: Detects and reports container endpoints for running ECS tasks.
 - ``host_observer``: Discovers listening network endpoints of the current host.
 - ``k8s_observer``: Detects and reports Kubernetes pod, port, and node endpoints through the Kubernetes API.
 
-This receiver can use other receivers for applications and hosts, like the ``kubeletstats`` or ``hostmetrics`` receivers. A typical use case of the receiver creator is to collect metrics for infrastructure that is deployed dynamically, such as Kubernetes pods or Docker containers. 
+A typical use case of the receiver creator is to collect metrics for infrastructure that is deployed dynamically, such as Kubernetes pods or Docker containers. 
+
+.. note:: The discovery receiver is available in the Splunk Distribution of OpenTelemetry Collector version 0.72.0 and higher.
 
 Get started
 ======================
@@ -29,119 +30,13 @@ Follow these steps to configure and activate the component:
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the discovery receiver as described in the next section.
-3. Restart the Collector.
+2. Run the Collector in Discovery mode:
 
-Sample configurations
-----------------------
+   .. code-block:: shell
 
-To activate the discovery receiver, add the desired extensions to the ``extensions`` section of your configuration file, followed by ``receiver_creator`` instances in the ``receivers`` section. For example:
+      otelcol --discovery
 
-.. code-block:: yaml
-
-   extensions:
-      # Configures the Kubernetes observer to watch for pod start and stop events.
-      k8s_observer:
-
-   receivers:
-     receiver_creator/k8skubeletstats:
-       watch_observers: [k8s_observer]
-       receivers:
-         kubeletstats:
-           # If this rule matches an instance of this receiver will be started.
-           rule: type == "k8s.node"
-           config:
-             auth_type: serviceAccount
-             collection_interval: 15s
-             endpoint: '`endpoint`:`kubelet_endpoint_port`'
-             extra_metadata_labels:
-               - container.id
-             metric_groups:
-               - container
-               - pod
-               - node
-
-   service:
-     extensions: [k8s_observer]
-     pipelines:
-       metrics:
-         receivers: [receiver_creator/k8skubeletstats]
-
-You can nest and configure any supported receiver inside the ``receivers`` section of a ``receiver_creator`` configuration. Which receiver you can nest depends on the type of infrastructure the receiver creator is watching through the extensions defined in ``watch_observers``.
-
-Docker observer example
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The following example shows how to configure the receiver creator using the Docker observer:
-
-.. code-block:: yaml
-
-   extensions:
-     docker_observer:
-       # Default is unix:///var/run/docker.sock
-       # Collector must have read access to the Docker Engine API 
-       endpoint: path/to/docker.sock
-       excluded_images: ['redis', 'another_image_name']
-       # Docker observer requires Docker API version 1.22 or higher
-       api_version: 1.42
-       # Time to wait for a response from Docker API. Default is 5 seconds
-       timeout: 15s
-
-   receivers:
-     receiver_creator:
-       watch_observers: [docker_observer]
-       receivers:
-         nginx:
-           rule: type == "container" and name matches "nginx" and port == 80
-           config:
-             endpoint: '`endpoint`/status'
-             collection_interval: 10s
-
-.. note:: See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/observer/dockerobserver/README.md` for a complete list of settings.
-
-Kubernetes observer example
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The following example shows how to configure the receiver creator using the Kubernetes observer:
-
-.. code-block:: yaml
-
-   extensions:
-     k8s_observer:
-       auth_type: serviceAccount
-       # Can be set to the node name to limit discovered endpoints
-       # The value can be obtained using the downward API 
-       node: ${env:K8S_NODE_NAME}
-       observe_pods: true
-       observe_nodes: true
-
-   receivers:
-     receiver_creator:
-       watch_observers: [k8s_observer]
-       receivers:
-         kubeletstats:
-           rule: type == "k8s.node"
-           config:
-             auth_type: serviceAccount
-             collection_interval: 10s
-             endpoint: "`endpoint`:`kubelet_endpoint_port`"
-             extra_metadata_labels:
-               - container.id
-             metric_groups:
-               - container
-               - pod
-               - node
-
-.. note:: See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/extension/observer/k8sobserver/README.md` for a complete list of settings.
-
-Settings
-======================
-
-The following table shows the configuration options for the discovery receiver:
-
-.. raw:: html
-
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/receiver_creator.yaml"></div>
+3. (Optional) Configure the receiver.
 
 Troubleshooting
 ======================

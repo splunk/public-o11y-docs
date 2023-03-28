@@ -405,7 +405,7 @@ Observability Cloud provides a default configuration for each installation metho
 
 Do the following to install the package using a Debian or RPM package:
 
-#. Set up the package repository and install the package, as shown in the following examples. The first example shows the Debian package and the subsequent examples show the RPM package. A default configuration is installed to /etc/otel/collector/agent_config.yaml, if it does not already exist::
+#. Set up the package repository and install the package, as shown in the following examples. The first example shows the Debian package and the subsequent examples show the RPM package. A default configuration is installed to /etc/otel/collector/agent_config.yaml, if it does not already exist:
 
     # Debian
     curl -sSL https://splunk.jfrog.io/splunk/otel-collector-deb/splunk-B3CD4420.gpg > /etc/apt/trusted.gpg.d/splunk.gpg
