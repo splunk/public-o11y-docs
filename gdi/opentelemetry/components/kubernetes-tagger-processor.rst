@@ -7,7 +7,7 @@ Kubernetes attributes processor
 .. meta::
       :description: Use the Kubernetes attributes processor to update, add, or delete resource attributes. Read on to learn how to configure the component.
 
-The Kubernetes attributes processor, also known as k8s_tagger, is an OpenTelemetry Collector component that can set resource attributes using Kubernetes metadata. The processor automatically discovers Kubernetes resources, extracts metadata from them, and adds the extracted metadata to the relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The Kubernetes attributes processor, also known as k8s_tagger, is an OpenTelemetry Collector component that sets resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
@@ -27,7 +27,7 @@ Sample configurations
 ----------------------
 
 To activate the Kubernetes attributes processor, add ``resource`` to the ``processors`` section of your
-configuration file, as shown in the following example:
+configuration file, as shown in the following example, which contains a list of extracted metadata, Kubernetes annotations and labels, and an association list:
 
 .. code:: yaml
 
@@ -44,6 +44,12 @@ configuration file, as shown in the following example:
          - k8s.namespace.name
          - k8s.node.name
          - k8s.pod.start_time
+     annotations:
+       - key_regex: opentel.* # extracts Keys & values of annotations matching regex `opentel.*`
+         from: pod
+     labels:
+       - key_regex: opentel.* # extracts Keys & values of labels matching regex `opentel.*`
+         from: pod
      pod_association:
        - sources:
           - from: resource_attribute
@@ -68,37 +74,10 @@ configuration file. For example:
        traces:
          processors: [k8sattributes/demo]
 
-Association lists
-----------------------------
-
-You can define rules for associating data passing through the processor with Pod metadata using the ``pod_association`` field, which represents a list of associations executed in the specified order until the first one matches.
-
-Each association is a list of sources. Sources contain rules. The processor executes all rules and produce a metadata cache key as a result. To apply an association, each source has to be successfully retrieved from a log, trace, or metric. If you don't configure association rules, the processor associate resources using the IP address of the connection.
-
-Each source rule consists of a pair of ``from`` and ``name`` statements, representing the rule type and attribute name respectively. You can define two types of ``from`` statements:
-
-- ``from: connection``: Extracts the IP address attribute from the connection context, if available.
-- ``from: resource_attribute``: Specifies the attribute name to search in the list of attributes.
-
-The following example shows the two type of ``from`` source statements in pod association rules:
-
-.. code-block:: yaml
-
-   pod_association:
-     - sources:
-         - from: resource_attribute
-           name: k8s.pod.ip
-     # Association matches for pair `k8s.pod.name` and `k8s.namespace.name`
-     - sources:
-         - from: resource_attribute
-           name: k8s.pod.name
-         - from: resource_attribute
-           name: k8s.namespace.name
-
 Extracted metadata
 ----------------------------
 
-You can use the ``metadata`` option to define what resource attributes you want to add. Only attribute names from metadata can be used in the ``pod_association.resource_attribute`` option. Empty or nonexisting values are ignored.
+Use the ``metadata`` option to define what resource attributes you want to add. You can only use attribute names from existing metadata defined in ``pod_association.resource_attribute``. The processor ignores empty or nonexisting values.
 
 The following attributes are added by default:
 
@@ -127,23 +106,68 @@ You can change this list by adding a ``metadata`` section. For example:
          - k8s.node.name
          - k8s.pod.start_time
 
-The following container level attributes require additional attributes to identify a particular container in a pod:
+The following container level attributes require additional attributes to identify a container in a pod:
 
 * Container spec attributes: Set only if ``k8s.container.name`` is available as a resource attribute.
 
    * ``container.image.name``
    * ``container.image.tag``
 
-* Container attributes: Set only if ``k8s.container.name`` is available as a resource attribute. Set the ``k8s.container.restart_count`` resource attribute to retrieve the association with a particular container instance. If ``k8s.container.restart_count`` is not set, the last container instance is used.
+* Container attributes: Set only if ``k8s.container.name`` is available as a resource attribute. 
 
    * ``container.id``: Must be available in the metadata.
 
-Use pods and namespaces labels and annotations
+.. note:: Set the ``k8s.container.restart_count`` resource attribute to retrieve the association with a particular container instance. If ``k8s.container.restart_count`` is not set, the last container instance is used.
+
+Association lists
+----------------------------
+
+Define rules for associating data passing through the processor with pod metadata using the ``pod_association`` field, which represents a list of associations executed in the specified order until the first match.
+
+Each association is a list of sources. Sources contain rules. The processor executes all rules and produce a metadata cache key as a result. For example:
+
+.. code-block:: yaml
+
+   pod_association:
+    # List of associations
+     - sources:
+         # List of sources. Each cointains rules
+         - from: resource_attribute
+           name: k8s.pod.name
+         - from: resource_attribute
+           name: k8s.namespace.name
+
+To apply an association, each source has to be successfully retrieved from a log, trace, or metric. If you don't configure association rules, the processor associates resources using the connection's address.
+
+Each source rule consists of a pair of ``from`` and ``name`` statements, representing the rule type and attribute name respectively. You can define two types of ``from`` statements:
+
+- ``from: connection``: Extracts the IP address attribute from the connection context, if available.
+- ``from: resource_attribute``: Specifies the attribute name to search in the list of attributes.
+
+The following example shows the two type of ``from`` source statements in pod association rules:
+
+.. code-block:: yaml
+
+   pod_association:
+     - sources:
+       - from: resource_attribute
+         name: ip
+     - sources:
+       - from: resource_attribute
+         name: k8s.pod.ip
+     - sources:
+       - from: resource_attribute
+         name: host.name
+     - sources:
+       - from: connection
+         name: ip
+
+Kubernetes labels and annotations
 ---------------------------------------------------
 
-The Kubernetes attributes processor can also set resource attributes from Kubernetes labels and annotations of pods and namespaces. This configuration is available through the ``annotations`` and ``labels`` lists. 
+The Kubernetes attributes processor can also set resource attributes from Kubernetes labels and annotations of pods and namespaces. You can configure this through the ``annotations`` and ``labels`` lists inside ``extract``.
 
-Annotations and labels are extracted from pods and namespaces and added to spans, metrics, and logs. Each item is specified using the following parameters:
+The processor extracts annotations and labels from pods and namespaces and adds them to spans, metrics, and logs. You can specify each item using the following parameters:
 
 * ``tag_name``: Name used to tag telemetry.
 * ``key``: Key used to extract the value.

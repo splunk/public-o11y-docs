@@ -187,6 +187,15 @@ You can also set the following optional parameters:
    server certificate chain and host name verification. The default
    value is ``false``.
 
+Settings
+======================
+
+The following table shows the configuration options for the MongoDB Atlas:
+
+.. raw:: html
+
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/kubeletstats.yaml"></div>
+
 Metrics
 ======================
 
