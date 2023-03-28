@@ -74,7 +74,7 @@ Aisha opens a few other logs to see if others have the same error message. Sever
 
 Aisha notes that all of the invalid API tokens start with “test”. Aisha hypothesizes that a team pushed the current version, v350.10, live with a test token that doesn’t work in production.
 
-To double-check their hypothesis, Aisha selects the error message and selects :strong:`Add to filter`` to show only the logs that contain the same error message.
+To double-check their hypothesis, Aisha selects the error message and selects :strong:`Add to filter` to show only the logs that contain the same error message.
 
 
 .. _narrow-hypothesis:
