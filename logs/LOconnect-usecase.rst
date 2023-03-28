@@ -48,14 +48,14 @@ Splunk Observability Cloud also surfaces Related Content tiles that provide acce
 
 Aisha decides to look at the log details. They select the Related Content tile, :strong:`Logs for paymentservice`. Log Observer opens, and Aisha’s view is automatically narrowed to display only logs from :strong:`paymentservice`. Log Observer displays :strong:`paymentservice` logs that were sent in to Splunk Cloud Platform. Log Observer does not ingest the logs, but displays the logs from their storage in Splunk Cloud Platform. 
 
-Because Aisha first tracked the workflow problems in Splunk APM, they were able to narrow her search down to only logs coming from :strong:`paymentservice`. Now Aisha can use Log Observer to analyze the logs. 
+Because Aisha first tracked the workflow problems in Splunk APM, they were able to narrow their search down to only logs coming from :strong:`paymentservice`. Now Aisha can use Log Observer to analyze the logs. 
 
 
 .. _conduct-initial-analysis:
 
 Conduct initial analysis of logs
 ========================================================================================================================
-Aisha can query the :strong:`paymentservice` logs in Log Observer's point-and-click UI, then filter and aggregate the logs to drill down to the underlying problem. For more complex analysis using SPL query language, they can continue her analysis of :strong:`paymentservice` logs in the Splunk Cloud Platform Search & Reporting application.
+Aisha can query the :strong:`paymentservice` logs in Log Observer's point-and-click UI, then filter and aggregate the logs to drill down to the underlying problem. For more complex analysis using SPL query language, they can continue their analysis of :strong:`paymentservice` logs in the Splunk Cloud Platform Search & Reporting application.
 
 Looking through the incoming logs in the logs table, Aisha sees some error logs, so they select one to see more details in a structured view. In the log details view on the right, Aisha notices the error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)``.
 
@@ -74,7 +74,7 @@ Aisha opens a few other logs to see if others have the same error message. Sever
 
 Aisha notes that all of the invalid API tokens start with “test”. Aisha hypothesizes that a team pushed the current version, v350.10, live with a test token that doesn’t work in production.
 
-To double-check her hypothesis, Aisha selects the error message and selects :strong:`Add to filter`` to show only the logs that contain the same error message.
+To double-check their hypothesis, Aisha selects the error message and selects :strong:`Add to filter`` to show only the logs that contain the same error message.
 
 
 .. _narrow-hypothesis:
@@ -89,7 +89,7 @@ Now Aisha can see that all logs that contain the test API token are on version v
         :width: 100%
         :alt: This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs.
 
-Aisha is pretty confident that they have isolated the problem to logs containing the error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)`` in only the most recent version, v350.1. Now they want to test her hypothesis.
+Aisha is pretty confident that they have isolated the problem to logs containing the error message: ``Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)`` in only the most recent version, v350.1. Now they want to test their hypothesis.
 
 
 .. _test-hypothesis:
@@ -103,7 +103,7 @@ To be sure, Aisha selects the eye icon for the message filter value to temporari
 
 Identify the root cause and remediate
 ========================================================================================================================
-Her exploration in Log Observer convinces Aisha that the test API token in v350.10 is the most likely source of the failures to complete payment. Aisha rolls back the Buttercup Games code from the problematic v350.10 to v350.9.
+Their exploration in Log Observer convinces Aisha that the test API token in v350.10 is the most likely source of the failures to complete payment. Aisha rolls back the Buttercup Games code from the problematic v350.10 to v350.9.
 
 Aisha notifies Deepu about the invalid API token, which is a test token. Deepu replaces the test token with a token that works in production.
 
@@ -116,7 +116,7 @@ In Log Observer, Aisha noticed that several logs coming from :strong:`paymentser
 
 Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. Aisha rolled back the code to the previous version because v350.9 logs did not contain the test token error message. Then Deepu replaced the test token with a token that works in production. 
 
-After the fix, users were able to complete checkout and make purchases from the Buttercup Games e-commerce site. To prevent similar problems in the future, Aisha decided to create a detector to alert her team when tokens contain "test". The alert and detector will notify Aisha's and Deepu's teams before customers attempt to make purchases that will fail.
+After the fix, users were able to complete checkout and make purchases from the Buttercup Games e-commerce site. To prevent similar problems in the future, Aisha decided to create a detector to alert their team when tokens contain "test". The alert and detector will notify Aisha's and Deepu's teams before customers attempt to make purchases that will fail.
 
 
 Learn more
