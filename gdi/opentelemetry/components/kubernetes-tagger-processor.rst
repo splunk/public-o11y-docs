@@ -14,17 +14,63 @@ Get started
 
 Follow these steps to configure and activate the component:
 
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+#. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-2. Configure the Kubernetes attributes processor as described in the next section.
-3. Restart the Collector.
+#. Configure the Kubernetes attributes processor as described in the following sections:
+   
+   #. :ref:`configure-rbac-k8stagger`
+   #. :ref:`configure-filter-k8stagger`
+   #. :ref:`configure-extracted-metadata-k8stagger`
+   #. :ref:`configure-association-lists-k8stagger`
+   #. :ref:`configure-labels-k8stagger`
 
-Sample configurations
-----------------------
+#. Restart the Collector.
+
+.. _configure-rbac-k8stagger:
+
+Configure role-based access control
+--------------------------------------
+
+The Kubernetes attributes processor requires ``get``, ``watch`` and ``list`` permissions on both pod and namespace resources for all namespaces and pods included in the configured filters. 
+
+The following example of a ClusterRole shows how to give a ServiceAccount the necessary permissions for all pods and namespaces in the cluster. Replace ``<col_namespace>`` with the namespace where the Collector is deployed:
+
+.. code-block:: yaml
+
+   apiVersion: v1
+   kind: ServiceAccount
+   metadata:
+      name: collector
+      namespace: <col_namespace>
+   ---
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRole
+   metadata:
+      name: otel-collector
+   rules:
+      - apiGroups: [""]
+      resources: ["pods", "namespaces"]
+      verbs: ["get", "watch", "list"]
+   ---
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRoleBinding
+   metadata:
+      name: otel-collector
+   subjects:
+   - kind: ServiceAccount
+     name: collector
+     namespace: <col_namespace>
+   roleRef:
+      kind: ClusterRole
+      name: otel-collector
+      apiGroup: rbac.authorization.k8s.io
+
+Sample configuration
+---------------------------
 
 To activate the Kubernetes attributes processor, add ``resource`` to the ``processors`` section of your
 configuration file, as shown in the following example, which contains a list of extracted metadata, Kubernetes annotations and labels, and an association list:
@@ -74,6 +120,57 @@ configuration file. For example:
        traces:
          processors: [k8sattributes/demo]
 
+.. _configure-filter-k8stagger:
+
+Discovery filters
+-------------------------------------
+
+You can use the Kubernetes attributes processor in Collectors deployed either as agents or as gateways, using DaemonSets or Deployments respectively. See :ref:`otel-deployment-mode` for more information.
+
+Agent configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In agent mode, the processor detects IP addresses of pods sending spans, metrics, or logs to the agent and uses this information to extract metadata from pods.
+
+When running the Collector in agent mode, apply a discovery filter so that only pods from the same host the Collector is running on are discovered. Using a discovery filter also optimizes resource consumption on large clusters.
+
+To automatically filter pods by the node the processors is running on, configure the Downward API to inject the node name as an environment variable. For example:
+
+.. code-block:: yaml
+
+   spec:
+     containers:
+     - env:
+       - name: KUBE_NODE_NAME
+         valueFrom:
+           fieldRef:
+             apiVersion: v1
+             fieldPath: spec.nodeName
+
+Then, set the ``filter.node_from_env_var`` field to the name of the environment variable that containes the name of the node. For example:
+
+.. code-block:: yaml
+
+   k8sattributes:
+     filter:
+       node_from_env_var: KUBE_NODE_NAME
+
+Gateway configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The processor can't resolve the IP address of the pods that emit telemetry data when running in gateway mode. To receive the correct IP addresses in a Collector gateway, configure the agents to forward addresses.
+
+To forward IP addresses to gateways, configure the Collectors in agent mode to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
+
+.. code-block:: yaml
+
+   k8sattributes:
+     passthrough: true
+
+Then, configure the Collector gateways as usual. The processor automatically detects the IP addresses of spans, logs, and metrics sent by the agents or by other sources, and call the Kubernetes API to extract metadata.
+
+.. _configure-extracted-metadata-k8stagger:
+
 Extracted metadata
 ----------------------------
 
@@ -119,6 +216,8 @@ The following container level attributes require additional attributes to identi
 
 .. note:: Set the ``k8s.container.restart_count`` resource attribute to retrieve the association with a particular container instance. If ``k8s.container.restart_count`` is not set, the last container instance is used.
 
+.. _configure-association-lists-k8stagger:
+
 Association lists
 ----------------------------
 
@@ -162,6 +261,8 @@ The following example shows the two type of ``from`` source statements in pod as
        - from: connection
          name: ip
 
+.. _configure-labels-k8stagger:
+
 Kubernetes labels and annotations
 ---------------------------------------------------
 
@@ -203,85 +304,6 @@ For example:
        regex: field=(?P<value>.+)
        from: pod
 
-Role-based access control
------------------------------
-
-The k8sattributesprocessor needs get, watch and list permissions on both pods and namespaces resources, for all namespaces and pods included in the configured filters. Here is an example of a ClusterRole to give a ServiceAccount the necessary permissions for all pods and namespaces in the cluster (replace <OTEL_COL_NAMESPACE> with a namespace where collector is deployed):
-
-.. code-block:: yaml
-
-   apiVersion: v1
-   kind: ServiceAccount
-   metadata:
-      name: collector
-      namespace: <OTEL_COL_NAMESPACE>
-   ---
-   apiVersion: rbac.authorization.k8s.io/v1
-   kind: ClusterRole
-   metadata:
-      name: otel-collector
-   rules:
-      - apiGroups: [""]
-      resources: ["pods", "namespaces"]
-      verbs: ["get", "watch", "list"]
-   ---
-   apiVersion: rbac.authorization.k8s.io/v1
-   kind: ClusterRoleBinding
-   metadata:
-      name: otel-collector
-   subjects:
-   - kind: ServiceAccount
-     name: collector
-     namespace: <OTEL_COL_NAMESPACE>
-   roleRef:
-      kind: ClusterRole
-      name: otel-collector
-      apiGroup: rbac.authorization.k8s.io
-
-Deployment scenarios
-The processor can be used in collectors deployed both as an agent (Kubernetes DaemonSet) or as a gateway (Kubernetes Deployment).
-
-As an agent
-When running as an agent, the processor detects IP addresses of pods sending spans, metrics or logs to the agent and uses this information to extract metadata from pods. When running as an agent, it is important to apply a discovery filter so that the processor only discovers pods from the same host that it is running on. Not using such a filter can result in unnecessary resource usage especially on very large clusters. Once the filter is applied, each processor will only query the k8s API for pods running on it's own node.
-
-Node filter can be applied by setting the filter.node config option to the name of a k8s node. While this works as expected, it cannot be used to automatically filter pods by the same node that the processor is running on in most cases as it is not know before hand which node a pod will be scheduled on. Luckily, kubernetes has a solution for this called the downward API. To automatically filter pods by the node the processor is running on, you'll need to complete the following steps:
-
-Use the downward API to inject the node name as an environment variable. Add the following snippet under the pod env section of the OpenTelemetry container.
-1. spec:
-  containers:
-  - env:
-    - name: KUBE_NODE_NAME
-      valueFrom:
-        fieldRef:
-          apiVersion: v1
-          fieldPath: spec.nodeName
-This will inject a new environment variable to the OpenTelemetry container with the value as the name of the node the pod was scheduled to run on.
-
-Set "filter.node_from_env_var" to the name of the environment variable holding the node name.
-k8sattributes:
-  filter:
-    node_from_env_var: KUBE_NODE_NAME # this should be same as the var name used in previous step
-This will restrict each OpenTelemetry agent to query pods running on the same node only dramatically reducing resource requirements for very large clusters.
-
-As a gateway
-When running as a gateway, the processor cannot correctly detect the IP address of the pods generating the telemetry data without any of the well-known IP attributes, when it receives them from an agent instead of receiving them directly from the pods. To workaround this issue, agents deployed with the k8sattributes processor can be configured to detect the IP addresses and forward them along with the telemetry data resources. Collector can then match this IP address with k8s pods and enrich the records with the metadata. In order to set this up, you'll need to complete the following steps:
-
-Setup agents in passthrough mode Configure the agents' k8sattributes processors to run in passthrough mode.
-# k8sattributes config for agent
-k8sattributes:
-  passthrough: true
-This will ensure that the agents detect the IP address as add it as an attribute to all telemetry resources. Agents will not make any k8s API calls, do any discovery of pods or extract any metadata.
-
-Configure the collector as usual No special configuration changes are needed to be made on the collector. It'll automatically detect the IP address of spans, logs and metrics sent by the agents as well as directly by other services/pods.
-Caveats
-There are some edge-cases and scenarios where k8sattributes will not work properly.
-
-Host networking mode
-The processor cannot correct identify pods running in the host network mode and enriching telemetry data generated by such pods is not supported at the moment, unless the association rule is not based on IP attribute.
-
-As a sidecar
-The processor does not support detecting containers from the same pods when running as a sidecar. While this can be done, we think it is simpler to just use the kubernetes downward API to inject environment variables into the pods and directly use their values as tags.
-
 .. _resource-processor-settings:
 
 Settings
@@ -292,6 +314,21 @@ The following table shows the configuration options for the Kubernetes attribute
 .. raw:: html
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/k8sattributes.yaml"></div>
+
+Known limitations
+=======================
+
+The Kubernetes attributes processor doesn't work well in the following cases.
+
+Host networking mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The processor can't identify pods running in the host network mode. Enriching telemetry data generated by such pods only works if the association rule isn't based on the IP address attribute.
+
+Sidecar
+^^^^^^^^^^^^^^^
+
+The processor can't detect containers from the same pods when running as a sidecar. Instead, use the Kubernetes Downward API to inkect environment variables into the pods and use their values as tags.
 
 Troubleshooting
 ======================
