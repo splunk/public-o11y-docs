@@ -19,7 +19,7 @@ Components
     components/fluentd-receiver
     components/host-metrics-receiver
     components/kubelet-stats-receiver
-    components/kubernetes-attributes-processor
+    components/kubernetes-tagger-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
     components/mongodb-atlas-receiver
