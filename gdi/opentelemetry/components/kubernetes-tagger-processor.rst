@@ -73,7 +73,9 @@ Sample configuration
 ---------------------------
 
 To activate the Kubernetes attributes processor, add ``resource`` to the ``processors`` section of your
-configuration file, as shown in the following example, which contains a list of extracted metadata, Kubernetes annotations and labels, and an association list:
+configuration file. 
+
+The following example contains a list of extracted metadata, Kubernetes annotations and labels, and an association list:
 
 .. code:: yaml
 
