@@ -19,7 +19,7 @@ Admin users in your organization can view the subscription usage information for
 
 .. _about-custom-high-res:
 
-About custom, bundled, and high-resolution metrics
+Metric categories and high-resolution metrics
 ==================================================
 
 The following sections describe the different categories of metrics in the metric time series (MTS) that Infrastructure Monitoring collects.
@@ -52,15 +52,15 @@ Differences between host, container, bundled, and custom metrics
 
 .. _about-high-res:
 
-Differences between high-resolution metrics and standard-resolution metrics
----------------------------------------------------------------------------
+Differences between standard and high-resolution metrics
+-------------------------------------------------------------------------------------
 
 .. list-table::
   :header-rows: 1
   :width: 100
   :widths: 20, 80
 
-  * - :strong:`Metrics category`
+  * - :strong:`Metric resolution`
     - :strong:`Description`
 
   * - Standard-resolution metrics

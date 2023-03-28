@@ -66,7 +66,7 @@ The collector might not receive data for the following reasons:
 * The receiver is defined in the receivers section, but not activated in any pipelines.
 * The client configuration is incorrect
 
-Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
+Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in the OpenTelemetry project GitHub repositories for more information. Note that Splunk only provides best-effort support for the upstream OpenTelemetry Collector. 
 
 Collector can't process data
 -----------------------------------
@@ -88,7 +88,7 @@ The collector might be unable to export data for the following reasons:
 
 If you need to use a proxy, see :ref:`configure-proxy-collector`.
 
-Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in GitHub for more information.
+Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in the OpenTelemetry project GitHub repositories for more information. Note that Splunk only provides best-effort support for the upstream OpenTelemetry Collector. 
 
 .. _collector-gateway-metrics-issue:
 
@@ -101,21 +101,21 @@ If you don't see metrics and metadata after manually deploying the Collector in 
 
 #. Make sure that the agent configuration has a ``signalfx`` exporter in a pipeline. The following example shows a ``signalfx`` exporter and a pipeline that uses it for sending metrics:
 
-   .. code-block:: yaml
+  .. code-block:: yaml
       :emphasize-lines: 2,3,4,5,14
 
       exporters:
-         signalfx:
+        signalfx:
             access_token: "${SPLUNK_ACCESS_TOKEN}"
             api_url: "http://${SPLUNK_GATEWAY_URL}:6060"
             ingest_url: "http://${SPLUNK_GATEWAY_URL}:9943"
             sync_host_metadata: true
             correlation:
-         # Other exporters
+        # Other exporters
 
       service:
-         extensions: [health_check, http_forwarder, zpages]
-         pipelines:
+        extensions: [health_check, http_forwarder, zpages]
+        pipelines:
             metrics/internal:
                   receivers: [prometheus/internal]
                   processors: [memory_limiter, batch, resourcedetection]
@@ -186,108 +186,19 @@ You're receiving an HTTP error code
 If an HTTP request is not successfully completed, you might see the following HTTP error codes.
 
 .. list-table::
-   :widths: 50 50
-   :header-rows: 1
+  :widths: 50 50
+  :header-rows: 1
 
-   * - Error code
-     - Description
-   * - ``401 (UNAUTHORIZED)``
-     - Configured access token or realm is incorrect.
-   * - ``404 (NOT FOUND)``
-     - Incorrect configuration parameter, like an endpoint or path, or a network, firewall, or port issue.
-   * - ``429 (TOO MANY REQUESTS)``
-     - Organization is not provisioned for the amount of traffic being sent. Reduce traffic or request increase in capacity.
-   * - ``503 (SERVICE UNAVAILABLE)``
-     - If using the Log Observer, this is the same as the ``429 (TOO MANY REQUESTS)`` error code, due to how HECv1 responds. Otherwise, check the status page.
-
-Log collection issues
-=========================================
-
-See the OpenTelemetry project documentation :new-page:`to activate the Collector's debug logging <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#logs>`.
-
-Here are some common issues related to log collection on the Collector.
-
-Source isn't generating logs
-----------------------------------------
-
-If using Linux, run the following commands to check if the source is generating logs:
-
-.. code-block:: bash
-
-  tail -f /var/log/myTestLog.log
-  journalctl -u my-service.service -f
-
-
-If using Windows, run the following command to check if the source is generating logs:
-
-.. code-block:: shell
-
-  Get-Content myTestLog.log 
-
-.. _fluentd-collector-troubleshooting:
-
-Fluentd isn't configured correctly
-----------------------------------------
-
-Do the following to check the Fluentd configuration:
-
-#. Check that td-agent is running. On Linux, run ``systemctl status td-agent``. On Windows, run ``Get-Service td-agent``.
-#. If you changed the configuration, restart Fluentd. On Linux, run ``systemctl restart td-agent``. On Windows, run ``Restart-Service -Name td-agent``.
-#. Check fluentd.conf and conf.d/\*. ``@label @SPLUNK`` must be added to every source to activate log collection.
-#. Manual configuration might be required to collect logs off the source. Add configuration files to in the conf.d directory as needed.
-#. Activate debug logging in fluentd.conf (``log_level debug``), restart td-agent, and check that the source is generating logs.
-
-While every attempt is made to properly configure permissions, it is possible that td-agent does not have the permission required to collect logs. Debug logging should indicate this issue.
-
-It is possible that the ``<parser>`` section configuration does not match the log events.
-
-If you see a message such as "2021-03-17 02:14:44 +0000 [debug]: #0 connect new socket", Fluentd is working as expected. You need to activate debug logging to see this message.
-
-Collector isn't configured properly
-----------------------------------------
-
-Do the following to check the Collector configuration:
-
-#. Go to ``http://localhost:55679/debug/tracez`` to check zPages for samples. You might need to configure the endpoint.
-#. Activate logging exporter.
-#. Run ``journalctl -u splunk-otel-collector.service -f`` to collect the logs for you to review.
-#. Review :ref:`otel-splunk-collector-tshoot` if you can't find what you need in the logs.
-
-Test the Collector by sending synthetic data
-------------------------------------------------------------
-You can manually generate logs. By default, Fluentd monitors journald and /var/log/syslog.log for events.
-
-.. code-block:: bash
-
-   echo "2021-03-17 02:14:44 +0000 [debug]: test" >>/var/log/syslog.log
-   echo "2021-03-17 02:14:44 +0000 [debug]: test" | systemd-cat
-
-.. note::
-
-   Properly structured syslog is required for Fluentd to properly pick up the log line.
-
-.. _unwanted_profiling_logs:
-
-Unwanted profiling logs appearing in Observability Cloud
-------------------------------------------------------------
-
-By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a ``logs`` pipeline that uses the Splunk HEC exporter.
-
-To send logs to Splunk Observability Cloud without AlwaysOn Profiling data, see :ref:`no_profiling_data`.
-
-.. _disable_log_collection:
-
-Exclude log data in the Collector
-------------------------------------------------------------
-
-By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a logs pipeline that uses the Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
-
-To avoid sending log data through the Collector to Splunk Observability Cloud, see :ref:`exclude-log-data`.
-
-Send logs from the Collector to Splunk Cloud Platform or Enterprise
------------------------------------------------------------------------
-
-To send logs from the Collector to Splunk Cloud Platform or Splunk Enterprise, see :ref:`send_logs_to_splunk`.
+  * - Error code
+    - Description
+  * - ``401 (UNAUTHORIZED)``
+    - Configured access token or realm is incorrect.
+  * - ``404 (NOT FOUND)``
+    - Incorrect configuration parameter, like an endpoint or path, or a network, firewall, or port issue.
+  * - ``429 (TOO MANY REQUESTS)``
+    - Organization is not provisioned for the amount of traffic being sent. Reduce traffic or request increase in capacity.
+  * - ``503 (SERVICE UNAVAILABLE)``
+    - If using the Log Observer, this is the same as the ``429 (TOO MANY REQUESTS)`` error code, due to how HECv1 responds. Otherwise, check the status page.
 
 Trace collection issues
 ================================
@@ -303,11 +214,11 @@ To test the UI, you can submit a POST request or paste JSON in this directory, a
 
 .. code-block:: bash
 
-   curl -OL https://raw.githubusercontent.com/openzipkin/zipkin/master/zipkin-lens/testdata/yelp.json
-   curl -X POST localhost:9411/api/v2/spans -H'Content-Type: application/json' -d @yelp.json
+  curl -OL https://raw.githubusercontent.com/openzipkin/zipkin/master/zipkin-lens/testdata/yelp.json
+  curl -X POST localhost:9411/api/v2/spans -H'Content-Type: application/json' -d @yelp.json
 
 .. note::
 
-   Update the ``localhost`` field as appropriate to reach the Collector.
+  Update the ``localhost`` field as appropriate to reach the Collector.
 
 No response means the request was sent successfully. You can also pass ``-v`` to the curl command to confirm.

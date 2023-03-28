@@ -17,7 +17,7 @@ Database metrics are dimensionalized by project and database attributes, for exa
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -47,7 +47,7 @@ configuration file, as shown in the following example:
        # You can obtain the private key from the API Keys tab of the MongoDB Atlas Project Access Manager. 
        # This value is required.
 
-To complete the integration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
+To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
 
 .. code:: yaml

@@ -20,7 +20,7 @@ Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for our c
 
 The documentation is built from [reStructuredText](https://docutils.sourceforge.io/rst.html) and Markdown files using [Sphinx](https://www.sphinx-doc.org/en/master/).
 
-To contribute to the documentation you only need a GitHub account. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
+To contribute to the documentation you only need a GitHub account. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 To build the documentation on your machine use the Docker container in this repository, which provides a configured Python environment. To run the container you need Docker Desktop or a compatible container runtime.
 
@@ -31,5 +31,3 @@ Follow these steps to create a fork of this repo and install it on your machine:
 1. Clone this repository using `git clone`.
 2. Navigate to the cloned repository in your file system.
 3. Change the permissions of `start.sh` by entering `chmod +x start.sh` in the terminal.
-
-

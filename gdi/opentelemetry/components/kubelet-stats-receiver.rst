@@ -19,7 +19,7 @@ SignalFx Smart Agent monitors.
 Installation
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    

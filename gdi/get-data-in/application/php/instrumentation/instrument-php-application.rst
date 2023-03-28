@@ -29,10 +29,18 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`PHP` tile to open the PHP guided setup.
 
+Install the SignalFx Tracing Library for PHP manually
+==================================================================
+
+Follow these instructions to install the SignalFx Tracing Library for PHP:
+
+- :ref:`install-php-instrumentation`
+- :ref:`configure-otel-dotnet`
+
 .. _install-php-instrumentation:
 
 Instrument a PHP application
-===================================================================
+------------------------------------------
 
 Follow these steps to automatically instrument your application:
 
@@ -83,7 +91,7 @@ Follow these steps to automatically instrument your application:
 .. _php-ini-config:
 
 INI file settings
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you don't set any environment variable, the library extracts default values from the INI file. The prefix for settings defined using environment variables that start with ``SIGNALFX_TRACE_`` is ``signalfx.trace.``. For all other environment variables that start with ``SIGNALFX_`` the prefix is ``signalfx.``.
 
@@ -98,7 +106,7 @@ This is useful for options common to all PHP services running in the system, lik
 .. _kubernetes_php:
 
 Deploy the PHP instrumentation in Kubernetes
-==========================================================
+-----------------------------------------------
 
 To deploy the PHP instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -131,7 +139,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-php:
 
 Send data directly to Observability Cloud
-==============================================================
+---------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 

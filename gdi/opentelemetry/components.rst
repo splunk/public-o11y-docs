@@ -20,15 +20,23 @@ Components
     components/host-metrics-receiver
     components/kubelet-stats-receiver
     components/kubernetes-cluster-receiver
+    components/logging-exporter
     components/mongodb-atlas-receiver
     components/oracledb-receiver
+    components/postgresql-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
+    components/resource-processor
     components/resourcedetection-processor
+    components/simple-prometheus-receiver
+    components/signalfx-exporter
+    components/signalfx-receiver
+    components/smartagent-receiver
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
     components/transform-processor
+    components/windowsperfcounters-receiver
 
 The OpenTelemetry Collector includes the following component types:
 
@@ -114,13 +122,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``otlp``
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
-   * - ``postgresql``
+   * - :ref:`postgresql-receiver` (``postgresql``)
      - Queries the PostgreSQL statistics collector. Supports PostgreSQL version 9.6 and higher.
      - Metrics
    * - :ref:`prometheus-receiver` (``prometheus``)
      - Provides a simple configuration interface to scrape metrics from a single target.
      - Metrics
-   * - ``prometheus_simple``
+   * - :ref:`simple-prometheus-receiver` (``prometheus_simple``)
      - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
      - Metrics
    * - :ref:`receiver-creator-receiver` (``receiver_creator``)
@@ -132,10 +140,10 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``sapm``
      - Receives traces from other collectors or from the SignalFx Smart Agent.
      - Traces
-   * - ``signalfx``
+   * - :ref:`signalfx-receiver` (``signalfx``)
      - Accepts metrics and logs in the proto format.
      - Metrics, logs
-   * - ``smartagent``
+   * - :ref:`smartagent-receiver` (``smartagent``)
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
      - Metrics
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
@@ -156,7 +164,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``windowseventlog``
      - Tails and parses logs from the Windows Event log API.
      - Logs
-   * - ``windowsperfcounters`` (Windows only)
+   * - :ref:`windowsperfcounters-receiver` (``windowsperfcounters``) (Windows only)
      - Collects the configured system, application, or custom performance counter data from the Windows Registry.
      - Metrics
    * - ``zipkin``
@@ -205,7 +213,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``probabilisticsampler``
      - Provides samples based on hash values determined by trace IDs.
      - Traces
-   * - ``resource``
+   * - :ref:`resource-processor` (``resource``)
      - Applies changes to resource attributes. Attributes represent actions that can be applied on resources.
      - Metrics, logs, traces
    * - :ref:`resourcedetection-processor` (``resourcedetection``)
@@ -249,7 +257,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``kafka``
      - Exports metrics, logs, and traces to Kafka using a synchronous producer. 
      - Metrics, logs, traces
-   * - ``logging``
+   * - :ref:`logging-exporter` (``logging``)
      - Exports data to the console. By default, ``logging`` doesn't send its output to Windows Event Viewer. Run the Splunk Distribution of OpenTelemetry Collector directly from the PowerShell terminal to send output to the Windows Event Viewer.
      - Metrics, logs, traces
    * - ``otlp``
@@ -261,7 +269,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`splunk-apm-exporter` (``sapm``)
      - Allows the Splunk Distribution of OpenTelemetry Collector to export traces from multiple nodes or services in a single batch. 
      - Traces  
-   * - ``signalfx``
+   * - :ref:`signalfx-exporter` (``signalfx``)
      - Sends metrics, events, and trace correlation to Splunk Observability Cloud. 
      - Logs (events), metrics, traces (trace to metric correlation only)
    * - :ref:`splunk-apm-exporter` (``sapm``)

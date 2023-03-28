@@ -11,7 +11,6 @@ You can instrument your iOS applications for Splunk RUM using the iOS RUM agent 
 
 To instrument your iOS application and get data into Splunk RUM, follow the instructions on this page.
 
-
 .. note:: Splunk APM is not required to instrument Splunk RUM for iOS. 
 
 .. _ios-rum-requirements:
