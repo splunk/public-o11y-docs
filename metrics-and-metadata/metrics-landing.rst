@@ -18,7 +18,7 @@ Metrics in Splunk Observability Cloud
   Metric finder and metadata catalogue <metrics-finder-metadata-catalog>
   Events <view-data-events>
   
-To learn about metrics and events in the Splunk Cloud Observability platform, see the following docs:
+To learn about metrics, metric metadata and events in the Splunk Cloud Observability platform, see the following docs:
 
 * :ref:`get-started-metrics`
 * :ref:`metric-types`
@@ -26,7 +26,9 @@ To learn about metrics and events in the Splunk Cloud Observability platform, se
 * :ref:`metric-dimension-names`
 * :ref:`events-intro`
 
-To learn about metrics for specific data sources, refer to:
+.. note:: For information about our data model, see :ref:`data-model`.
+
+For metrics from specific data sources, refer to:
 
 * :ref:`monitor-services-hosts`
 * :ref:`apm-metricsets`  
@@ -41,4 +43,3 @@ See metric access, visualization, and management tools at:
 * :ref:`data-visualization-charts` 
 * :ref:`dashboards`
 
-.. note:: For information about our data model, see :ref:`data-model`.

@@ -7,7 +7,9 @@ Data types in Splunk Observability Cloud
 .. meta::
   :description: Learn about the data types available in Splunk Observability Cloud: metrics, events, traces, and logs.
 
-The :ref:`Splunk Observability Cloud platform <get-started-o11y>` provides you with the tools to collect, manage, and visualize the following data types: metrics, events, logs, traces, and logs. You can use them to build charts and dashboards and set up alerts and other system notification methods, which allows you to better understand the performance of your systems and services, detect anomalies, or plan deployments and enhancements.
+The :ref:`Splunk Observability Cloud platform <get-started-o11y>` provides you with the tools to collect, manage, and visualize the following data types: metrics, events, logs, traces, and logs. 
+
+With Observability Cloud's features, you'll be able to build charts and dashboards, and set up alerts and other system notification methods. This will help you better understand the performance of your systems and services, detect anomalies, or plan deployments and enhancements.
 
 Quick overview of Observability Cloud data types
 ========================================================
