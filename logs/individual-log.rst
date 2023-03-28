@@ -15,10 +15,12 @@ the problem. Once you have identified an interesting field, you can perform a fi
 
 To view the contents of an individual log record and create a field extraction rule, follow these steps:
 
-#  Select a log record line in the Logs table to display the Log Details panel.
-   This panel displays the entire record in JSON format as well as a table
-   of each field and its value.
+#. Select a log record line in the Logs table to display the Log Details panel.
+
+   This panel displays the entire record in JSON format as well as a table of each field and its value.
+
 #. To do more with a particular field in the table, select the field value.
+
    Log Observer displays a drop-down list with 5 options:
 
    * To copy the field value to the clipboard, select :menuselection:`Copy`
