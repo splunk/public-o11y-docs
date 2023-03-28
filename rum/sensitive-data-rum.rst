@@ -41,46 +41,6 @@ This instrumentation uses the ``splunk-otel-js-web`` library.
          * ``suppressTracing``
 
 
-
-
-Code snippets and examples
---------------------------
-This code snippet shows how to use ``onAttributesSerializing`` to use regex to modify URLs.  
-
-.. code:: js
-
-    onAttributesSerializing: (attributes) => ({
-            ...attributes,
-            'http.url': typeof attributes['http.url'] === 'string'
-              ? attributes['http.url'].replace(/([?&]token=)[^&]+(&|$)/g, '$1<token>$2')
-              : attributes['http.url'],
-
-
-Use the format ``(string\|regex)[]`` with ``ignoreUrls`` to drop all URLs that contain ``/payment/``:
-
-.. code:: js
-
-    ignoreUrls: [/\/payment\//] 
-
-
-This code snippet shows how to drop all spans that have a failed status. 
-
-.. code:: js 
-
-    context.with(suppressTracing(context.active()), () => {
-          this._exporter.export([span], result => {
-            if (result.code !== ExportResultCode.SUCCESS) {
-              globalErrorHandler(
-                result.error ??
-                  new Error(
-                    `SimpleSpanProcessor: span export failed (status ${result})`
-                  )
-              );
-            }
-
-
- 
-
 Splunk RUM for Mobile Android instrumentation
 ==============================================
 
@@ -99,10 +59,6 @@ This instrumentation uses the ``splunk-otel-android`` library.
       - ``filterSpans(SpanFilterBuilder.removeSpanAttribute``
     * - Drop entire spans or events.
       - ``filterSpans(SpanFilterBuilder.rejectSpansByName)``
-
- 
-Code snippets
---------------------------
 
 
 
@@ -127,21 +83,67 @@ This instrumentation uses the ``splunk-otel-ios`` library. For an example of the
          * ``options.spanFilter``
 
 
-Code snippets
---------------------------
+Code snippets and examples
+===================================
+
+This code snippet shows how to use ``onAttributesSerializing`` to use regex to modify URLs.  
+
+.. code:: js
+
+    onAttributesSerializing: (attributes) => ({
+            ...attributes,
+            'http.url': typeof attributes['http.url'] === 'string'
+              ? attributes['http.url'].replace(/([?&]token=)[^&]+(&|$)/g, '$1<token>$2')
+              : attributes['http.url'],
+
+
+Use the format ``(string\|regex)[]`` with ``ignoreUrls`` to drop all URLs that contain ``/payment/``:
+
+.. code:: js
+
+    ignoreUrls: [/\/payment\//] 
+
+
+
+This code snippet shows how to drop all spans that have a failed status. 
+
+.. code:: js 
+
+    context.with(suppressTracing(context.active()), () => {
+          this._exporter.export([span], result => {
+            if (result.code !== ExportResultCode.SUCCESS) {
+              globalErrorHandler(
+                result.error ??
+                  new Error(
+                    `SimpleSpanProcessor: span export failed (status ${result})`
+                  )
+              );
+            }
+
+
+This code snippet uses ``spanfilter`` to drop spans. 
 
 .. code:: js 
 
     options.spanFilter = { spanData in
       var spanData = spanData
       if spanData.name == "DropThis" {
-        return nil // spans with this name will not be sent
+        return nil // spans with this name aren't sent
       }
       var atts = spanData.attributes
       atts["http.url"] = .string("redacted") // change values for all urls
       return spanData.settingAttributes(atts)
     }
 
+
+This code snippet redacts by string key and span name. 
+
+.. code:: js
+
+  .removeSpanAttribute(stringKey("http.user_agent"))
+  .rejectSpansByName(spanName -> spanName.contains("ignored"))
+   // sensitive data in the login http.url attribute
+   // is redacted before data moves to the exporter
 
 
 See also 
