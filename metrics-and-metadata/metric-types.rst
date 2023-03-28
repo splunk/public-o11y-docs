@@ -35,7 +35,7 @@ These are the types of metrics and their default rollouts in Splunk Observabilit
     - Represent a running count of occurrences, and measure the change in the value of the metric from the previous data point.
     - Delta 
 
-For example, Observability Cloud applies the SignalFlow ``average()`` function to data points for gauge metrics. When you specify a ten second resolution for a line graph plot, and Observability Cloud is receiving data for the metric every second, each point in the line represents the average of 10 data points. 
+For example, Observability Cloud applies the SignalFlow ``average()`` function to data points for gauge metrics. When you specify a 10-second resolution for a line graph plot, and Observability Cloud is receiving data for the metric every second, each point in the line represents the average of 10 data points. 
 
 .. _gauges:
 
