@@ -155,7 +155,7 @@ When dealing with persistent volume claims, you can sync metadata from the under
        k8s_api_config:
          auth_type: serviceAccount
 
-If ``k8s_api_config`` is set, the receiver attempts to collect metadata from underlying storage resources for persistent volume claims. For example, if a Pod is using a persistent volume claim backed by an Elastic Block Stor (EBS) instance on AWS, the receiver sets the ``k8s.volume.type`` label to ``awsElasticBlockStore`` rather than ``persistentVolumeClaim``.
+If ``k8s_api_config`` is set, the receiver attempts to collect metadata from underlying storage resources for persistent volume claims. For example, if a Pod is using a persistent volume claim backed by an Elastic Block Store (EBS) instance on AWS, the receiver sets the ``k8s.volume.type`` label to ``awsElasticBlockStore`` rather than ``persistentVolumeClaim``.
 
 Configure metric groups
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
