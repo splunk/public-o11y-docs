@@ -7,6 +7,8 @@ Processor architecture
 .. meta::
    :description: Describes the compatible CPU architectures and operating systems of the Splunk Distribution of OpenTelemetry Collector.
 
+.. note:: For information on the Collector's deployment modes and their architecture, see :ref:`otel-deployment-mode`. 
+
 The Collector supports the following processor architectures and operating systems:
 
 .. list-table::
