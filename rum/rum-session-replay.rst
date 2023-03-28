@@ -35,7 +35,7 @@ This example shows the order in which to initialize the scripts:
 .. code-block:: html
 
     <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.signalfx.com/o11y-gdi-rum/packages/otel-web-session-recorder/latest/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web-session-recorder.js" crossorigin="anonymous"></script>
     <script>
     SplunkRum.init({
         beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
