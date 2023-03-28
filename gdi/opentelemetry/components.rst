@@ -19,7 +19,7 @@ Components
     components/fluentd-receiver
     components/host-metrics-receiver
     components/kubelet-stats-receiver
-    components/kubernetes-tagger-processor
+    components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
     components/mongodb-atlas-receiver
@@ -298,7 +298,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - Name
      - Description
    * - ``docker_observer``
-     - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints. See :ref:`receiver-creator-receiver` for more information.
+     - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - ``ecs_observer``
      - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. See :ref:`receiver-creator-receiver` for more information.
    * - ``file_storage``

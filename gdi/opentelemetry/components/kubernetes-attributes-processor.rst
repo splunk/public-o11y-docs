@@ -7,7 +7,7 @@ Kubernetes attributes processor
 .. meta::
       :description: Use the Kubernetes attributes processor to update, add, or delete resource attributes. Read on to learn how to configure the component.
 
-The Kubernetes attributes processor, also known as k8s_tagger, is an OpenTelemetry Collector component that sets resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The Kubernetes attributes processor is an OpenTelemetry Collector component that sets resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
@@ -22,15 +22,15 @@ Follow these steps to configure and activate the component:
 
 #. Configure the Kubernetes attributes processor as described in the following sections:
    
-   #. :ref:`configure-rbac-k8stagger`
-   #. :ref:`configure-filter-k8stagger`
-   #. :ref:`configure-extracted-metadata-k8stagger`
-   #. :ref:`configure-association-lists-k8stagger`
-   #. :ref:`configure-labels-k8stagger`
+   #. :ref:`configure-rbac-k8sattributes`
+   #. :ref:`configure-filter-k8sattributes`
+   #. :ref:`configure-extracted-metadata-k8sattributes`
+   #. :ref:`configure-association-lists-k8sattributes`
+   #. :ref:`configure-labels-k8sattributes`
 
 #. Restart the Collector.
 
-.. _configure-rbac-k8stagger:
+.. _configure-rbac-k8sattributes:
 
 Configure role-based access control
 --------------------------------------
@@ -122,7 +122,7 @@ configuration file. For example:
        traces:
          processors: [k8sattributes/demo]
 
-.. _configure-filter-k8stagger:
+.. _configure-filter-k8sattributes:
 
 Discovery filters
 -------------------------------------
@@ -171,7 +171,7 @@ To forward IP addresses to gateways, configure the Collectors in agent mode to r
 
 Then, configure the Collector gateways as usual. The processor automatically detects the IP addresses of spans, logs, and metrics sent by the agents or by other sources, and call the Kubernetes API to extract metadata.
 
-.. _configure-extracted-metadata-k8stagger:
+.. _configure-extracted-metadata-k8sattributes:
 
 Extracted metadata
 ----------------------------
@@ -218,7 +218,7 @@ The following container level attributes require additional attributes to identi
 
 .. note:: Set the ``k8s.container.restart_count`` resource attribute to retrieve the association with a particular container instance. If ``k8s.container.restart_count`` is not set, the last container instance is used.
 
-.. _configure-association-lists-k8stagger:
+.. _configure-association-lists-k8sattributes:
 
 Association lists
 ----------------------------
@@ -263,7 +263,7 @@ The following example shows the two type of ``from`` source statements in pod as
        - from: connection
          name: ip
 
-.. _configure-labels-k8stagger:
+.. _configure-labels-k8sattributes:
 
 Kubernetes labels and annotations
 ---------------------------------------------------

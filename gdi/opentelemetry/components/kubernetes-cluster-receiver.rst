@@ -43,7 +43,17 @@ configuration file. For example:
 Sync metadata_exporters
 -----------------------------
 
-You can synchronize the receiver with metadata exporters. Exporters specified in this list need to implement the following interface. If an exporter doesn't implement the interface, startup fails.
+Use ``metadata_exporters`` as a list of metadata exporters to sync with metadata collected by the Kubernetes cluster receiver. For example:
+
+.. code-block:: yaml
+
+   receivers:
+     k8s_cluster:
+       auth_type: serviceAccount
+       metadata_exporters:
+       - signalfx
+
+Exporters specified in this list need to implement the following interface. If an exporter doesn't implement the interface, startup fails.
 
 .. code:: yaml
 
