@@ -76,7 +76,7 @@ To create a new log metricization rule in the context of an existing search quer
 
 2. Create a query that aggregates logs. See :ref:`logs-aggregations` to learn how.
 
-3. In the upper right corner, click the three-dot :guilabel:`More` menu and select :guilabel:`Save as Metric`. This takes you to the Configure Metric page in Logs Pipeline Management.
+3. In the :guilabel:`Save` menu, select :guilabel:`Save as Metric`. This takes you to the Configure Metric page in Logs Pipeline Management.
 
 4. Go to step 3 in :ref:`Create a log metricization rule from the logs pipeline <metricization-rule-from-pipeline>` and complete the instructions.
 
