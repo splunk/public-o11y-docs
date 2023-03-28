@@ -17,6 +17,8 @@ Monitor services and hosts in Splunk Infrastructure Monitoring
     k8s-nav
     k8s
     hosts
+    use-case-k8s-nav
+    
     
 
 See the following pages for more information about using :ref:`navigators <use-navigators-imm>` to monitor public cloud, container, or host integrations:
@@ -36,6 +38,10 @@ See the following pages for more information about using :ref:`navigators <use-n
   
   - :ref:`infrastructure-hosts`
 
+* Use cases for navigators
+
+  - :ref:`troubleshoot-k8s-nav-use-case`
+
 Splunk Observability Cloud also provides metrics and other data :ref:`for the following host and application monitors <monitor-data-sources>`.
 
 .. _imm-traffic-considerations:
@@ -52,12 +58,13 @@ Displayed data: Traffic considerations
     - A typical cloud integration is reporting a new data point every 5 minutes. 
     - As the job is running, reporting instances that are turned off drop off after the time range they are part of passes.  
 
-Considerations regarding Navigators
+Considerations regarding navigators
 -------------------------------------------------------------------
 
 :ref:`Navigators <use-navigators-imm>` display information when an entity is both active and sending metrics, whether they are being monitored by a cloud integration or by an agent. Navigators are sensitive to the time range selected, and queries with broader time range take longer. 
 
-The Navigator Summary page only shows the latest data point, regardless of the selected time range. 
+The :strong:`Navigator Summary`` page only shows the latest data point, regardless of the selected time range. 
+
     - You can see historical numbers in the purple graph, but the number itself will be the latest value.  
     - Even if you select a wide time range, Navigators only display entities active in the most recent data point.
 
