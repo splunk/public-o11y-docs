@@ -41,7 +41,7 @@ configuration file. For example:
          receivers: [k8s_cluster]
 
 Sync metadata_exporters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 You can synchronize the receiver with metadata exporters. Exporters specified in this list need to implement the following interface. If an exporter doesn't implement the interface, startup fails.
 
@@ -64,7 +64,7 @@ You can synchronize the receiver with metadata exporters. Exporters specified in
    }
 
 Set node_conditions_to_report
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 Use the following configuration to have the ``k8s_cluster`` receiver emit two metrics, ``k8s.node.condition_ready`` and ``k8s.node.condition_memory_pressure``, one for each condition in the configuration:
 

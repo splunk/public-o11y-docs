@@ -304,7 +304,7 @@ For example:
        regex: field=(?P<value>.+)
        from: pod
 
-.. kubernetes-attributes-processor-settings:
+.. _kubernetes-attributes-processor-settings:
 
 Settings
 ======================
