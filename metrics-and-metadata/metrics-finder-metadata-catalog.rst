@@ -7,14 +7,15 @@ Use the Metric Finder and Metadata Catalog
 .. meta::
     :description: How to use the Metric Finder and Metadata Catalog to find, view, and edit information about metrics metadata in Splunk Observability Cloud.
 
-The Splunk Infrastructure Monitoring Metric Finder and Metadata Catalog makes it quick and easy to find the metrics you monitor, across infrastructure and over diverse applications and sources. This topic shows you how to leverage the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+Splunk Observability Cloud's :ref:`Metric Finder <metric-finder>` and :ref:`Metadata Catalog <metadata-catalog>` make it quick and easy to find, view, and edit the metrics and metadata you monitor, across infrastructure and over diverse applications and sources. 
 
-See the following sections for more information on how to:
+For more information about metrics, see :ref:`metrics-landing`.
 
-- :ref:`metric-finder`
+In Observability Cloud you can also access the following features:
 
-- :ref:`metadata-catalog`
-
+- Use dashboards to see groupings of charts and visualizations of metrics. To learn more, see :ref:`dashboards`.
+- Use navigators to see a data-driven visualization of resources in your environment that are visible to Infrastructure Monitoring. To learn more, see :ref:`use-navigators-imm`.
+- Use global search to search all available data.
 
 .. _metric-finder:
 
@@ -43,8 +44,6 @@ If there are no custom categories, Infrastructure Monitoring administrators will
 When you select a custom category value or integration, a key-value pair is added as a search filter, and a metric search is run.
 
 If there are more than a few values for a custom category, you can select :guilabel:`Show more` to see the first 100 results. If you don’t see the value that you’re looking for in the longer list, you can enter it in the search field to return more relevant search results.
-
-
 
 .. _metric-descriptions:
 
@@ -112,23 +111,15 @@ You can use (!) (NOT) in your filters to exclude results. For example, ``!env:qa
 Use the filter or exclude sidebar
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
-
 The left sidebar surfaces relevant metadata from the search results as facets to help refine your search. If your organization has configured custom categories, any that appear in the search results will be surfaced at the top of the left sidebar above other facets. Any value found in the sidebar can be added to the search field as a filter or exluded from the search, and the results will be refreshed.
 
 If there are more than a few values for a facet, you can select :guilabel:`Show more` to see the first 100 results. If you don't see the value that you're looking for in the longer list, you can type it in the search field to return more relevant search results.
-
-
 
 Hovering anywhere over a value in the left sidebar highlights the row and displays the :guilabel:`Filter` and :guilabel:`Exclude Button`. Select a value, or the :guilabel:`Filter`, to add it to your search as a filter. To exclude a value from your search results, select the :guilabel:`Exclude Button`.
 
 When filters are excluded from a search, they are indicated by an exclamation point (!) at the beginning to distinguish them from regular search terms. Select :guilabel:`Search metrics` or hit Enter to run a search.
 
 Properties and dimensions of a metric are shown directly with each search result. This is the same list that is shown in the Related Properties panel of the Metadata Catalog for a given metric.
-
-
-
-
 
 .. _matching-metadata:
 
@@ -172,26 +163,14 @@ To select dimensions or properties to be displayed as custom categories on the M
 The custom categories you added are now available for use on the Metrics page. Selecting :guilabel:`Edit` lets you add, delete, or update existing custom categories. Non-administrators do not see the option to edit custom categories.
 
 .. _metadata-catalog:
-
-Use the Metadata Catalog
-=================================================================
-
-Use the metadata catalog to find, view, and edit information about the metadata in your system, such as dimensions, properties, and tags.
-
-.. note::
-    Enhancements to Infrastructure Monitoring have changed the function of the Metadata Catalog. The Metadata Catalog previously served many purposes that are now better served by the following features:
-
-    - Use the Metric Finder to find metrics and related properties. To learn more, see :ref:`metric-finder`.
-    - Use dashboards to see groupings of charts and visualizations of metrics. To learn more, see :ref:`dashboards`.
-    - Use navigators to see a data-driven visualization of resources in your environment that are visible to Infrastructure Monitoring. To learn more, see :ref:`use-navigators-imm`.
-    - Use global search to search all available data.
-
 .. _search-edit-metadata:
 
-Search and edit metadata using the Metadata Catalog
-------------------------------------------------------------
+Use the Metadata Catalog to search and edit metadata
+=================================================================
 
-To search for dimensions, properties, or metrics using the Metadata Catalog, perform the following steps:
+Use the Metadata Catalog to find, view, and edit information about the :ref:`metadata <metrics-dimensions-mts>` in your system, such as dimensions, properties, and tags.
+
+.. note:: You can't add or edit a new dimension to any object after data ingest in Splunk Observability Cloud. To learn more, see :ref:`metadata-best-practices`.  
 
 #. Go to :menuselection:`Settings > Metric Metadata`.
 #. Enter your search criteria in the :guilabel:`Search bar`. You can search for metrics, dimensions, custom properties, and tags.
@@ -212,7 +191,7 @@ To search for dimensions, properties, or metrics using the Metadata Catalog, per
                     :width: 100%
                     :alt: This image shows an example of a dimension key search result.               
 
-            * Enter the complete dimension or custom property key-value pair. For example, enter ``host.name:appsvr01``. Observability Cloud displays all the metrics, metadata (dimensions, properties, and tags), and data links associated with the key-value pair.
+            * Enter the complete dimension or custom property key-value pair. For example, enter ``host.name:appsvr01``. Observability Cloud displays all the metrics, metadata, and data links associated with the key-value pair.
 
                 .. image:: /_images/images-metrics/metadata-catalog-pair-view.png
                     :width: 100%
@@ -244,4 +223,4 @@ To search for dimensions, properties, or metrics using the Metadata Catalog, per
 
     For more information on naming custom properties and tags, see :ref:`Guidance for metric and dimension names <metric-dimension-names>`.
 
-    .. note:: You can't add or edit a new dimension to any object after data ingest in Splunk Observability Cloud. To learn more, see :ref:`metadata-best-practices`.      
+        
