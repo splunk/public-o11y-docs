@@ -64,7 +64,7 @@ You can take 7 actions on your logs chart from its dashboard. Select the :strong
 
 * Delete
 
-You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align log views with metrics charts on the same dashboard <field-aliasing>` to learn more. 
+You can only edit the contents of your logs chart by updating the query you derived it from in Log Observer. Select :strong:`View in Log Observer` to see and edit your logs chart in Log Observer. In Log Observer, you can update the logs chart's filters, including field aliases. See :ref:`Align logs charts with metrics charts on the same dashboard <field-aliasing>` to learn more. 
 
 For more information on the actions you can take from the :strong:`Chart actions` menu, see :ref:`work-with-charts`.
 
@@ -84,5 +84,5 @@ To align logs data with metrics data, follow these steps:
 
 4. Follow the steps in :ref:`create-logviews-chart` to save your new query as a chart.
 
-Now you can easily cross reference data in your logs chart with data in any other charts on the same dashboard. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster. Field Aliasing does not rename or remove your original logs field name. When you alias a logs field, you can search for it by its original name or by any of its aliases. 
+Now you can easily cross reference data in your logs chart with data in any other charts on the same dashboard. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster. Field aliasing does not rename or remove your original logs field name. When you alias a logs field, you can search for it by its original name or by any of its aliases. 
 
