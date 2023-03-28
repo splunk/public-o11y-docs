@@ -31,7 +31,7 @@ To add a log view or log timeline chart on a dashboard, follow these steps:
 
 3. Give your log view a name and optionally a description, then select a dashboard.
 
-4. In :strong:`Chart type`, select :strong:`Log view`, then select :strong:`Save`. Or, to see your new log view on its dashboard, select :strong:`Save and go to dashboard`.
+4. In :strong:`Chart type`, select :strong:`Log timeline` or :strong:`Log view`, then select :strong:`Save`. Or, to see your new log view on its dashboard, select :strong:`Save and go to dashboard`.
 
 You can now see your new log view along with all other charts on the same dashboard.  
 
