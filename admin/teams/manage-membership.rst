@@ -1,4 +1,4 @@
-.. _admin-manage-team-membership:
+.. _admin-manage-teams:
 
 ***************************************************
 Manage teams in Splunk Observability Cloud

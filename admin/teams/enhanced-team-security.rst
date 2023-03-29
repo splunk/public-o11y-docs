@@ -30,6 +30,7 @@ To enable the enhanced team security setting, follow these steps:
 #. Select the :guilabel:`Restrict Access` check box.
 
 
+.. _about-team-roles:
 
 Team roles and permissions
 ============================================================================

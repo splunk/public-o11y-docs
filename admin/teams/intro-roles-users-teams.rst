@@ -40,5 +40,5 @@ In these areas, each team might monitor specific metrics related to their functi
 
 For example, your security team might focus on metrics that indicate login failures, because these failures indicate attempts to break into systems. You might also have several DevOps teams, each of which monitors CPU temperature and network response time metrics for the systems they manage.
 
-To learn more about creating and managing teams, see :ref:`admin-manage-team-membership`.
+To learn more about creating and managing teams, see :ref:`admin-manage-teams`.
 
