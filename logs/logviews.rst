@@ -37,7 +37,7 @@ You can now see your new log view along with all other charts on the same dashbo
 
 Modify your logs chart from the dashboard
 =============================================================================
-You cannot directly edit a log view from the dashboard. For example, you cannot edit the column headings or data on your log view chart from the dashboard. You can delete a log view entirely using the :strong:`More` menu. See :ref:`Chart actions <chart-actions>` to learn more.
+You cannot directly edit a logs chart from the dashboard. For example, you cannot edit the column headings or data on your log view chart from the dashboard. You can delete a log view entirely using the :strong:`More` menu. See :ref:`Chart actions <chart-actions>` to learn more.
 
 Log view and log timeline charts respond to any filter or time selection that you make on the dashboard. For example, when you adjust the :strong:`Time` field in the dashboard global control bar, logs charts update in unison with all other charts on the dashboard. 
 
@@ -84,5 +84,5 @@ To align logs data with metrics data, follow these steps:
 
 4. Follow the steps in :ref:`create-logviews-chart` to save your new query as a chart.
 
-Now you can easily cross reference data in your logs chart with data in any other charts on the same dashboard. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster. Field aliasing does not rename or remove your original logs field name. When you alias a logs field, you can search for it by its original name or by any of its aliases. 
+Now you can efficiently cross reference data in your logs chart with data in any other charts on the same dashboard. Logs fields that correspond to metrics fields on the same dashboard now use the same field name, so you can drill down to the problem faster. Field aliasing does not rename or remove your original logs field name. When you alias a logs field, you can search for it by its original name or by any of its aliases. 
 
