@@ -162,7 +162,7 @@ To remove team members, follow these steps:
 
 #. Find the name of the team whose member list you want to edit.
 
-#. On the Users tab, click the :guilabel:`Actions` menu (|more|) next to the name of the user you want to remove from the team.
+#. On the Users tab, select the :guilabel:`Actions` menu (|more|) next to the name of the user you want to remove from the team.
 
 #. Select :guilabel:`Remove from team`
 

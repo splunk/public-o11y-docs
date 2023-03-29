@@ -7,6 +7,8 @@ Introduction to roles, users, and teams in Splunk Observability Cloud
 .. meta::
    :description: Learn how to manage users teams in Splunk Observability Cloud.
 
+Use Splunk Observability Cloud teams to coordinate teamwork. Perform the following tasks to set up your teams and provide team members with resources that can help streamline their teamwork:
+
 .. toctree::
    :hidden:
 
