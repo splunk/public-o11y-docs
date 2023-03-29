@@ -27,10 +27,15 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`Go` tile to open the Go guided setup.
 
+Install the Splunk Distribution of OpenTelemetry Go manually
+==================================================================
+
+Follow these instructions to install the Splunk Distribution of OpenTelemetry Go.
+
 .. _install-enable-go-instrumentation:
 
 Install and activate the Go instrumentation
-===================================================================
+--------------------------------------------------------------------
 
 Follow these steps to instrument your application using the Go instrumentation:
 
@@ -115,7 +120,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-go-trouble
 .. _enable_automatic_metric_collection_golang:
 
 Enable metrics collection
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. caution:: The OpenTelemetry Go Metrics API is a release candidate. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
 
@@ -134,7 +139,7 @@ To enable automatic runtime metric collection, you need to set the ``OTLP_METRIC
 .. _kubernetes_go:
 
 Deploy the Go instrumentation in Kubernetes
-==========================================================
+--------------------------------------------------------------------
 
 To deploy the Go instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -167,7 +172,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-go:
 
 Send data directly to Observability Cloud
-==============================================================
+--------------------------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 

@@ -19,14 +19,20 @@ Components
     components/fluentd-receiver
     components/host-metrics-receiver
     components/kubelet-stats-receiver
+    components/kubernetes-attributes-processor
     components/kubernetes-cluster-receiver
     components/logging-exporter
     components/mongodb-atlas-receiver
     components/oracledb-receiver
+    components/postgresql-receiver
     components/prometheus-receiver
     components/receiver-creator-receiver
     components/resource-processor
     components/resourcedetection-processor
+    components/simple-prometheus-receiver
+    components/signalfx-exporter
+    components/signalfx-receiver
+    components/smartagent-receiver
     components/splunk-apm-exporter
     components/splunk-hec-exporter
     components/splunk-hec-receiver
@@ -117,13 +123,13 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``otlp``
      - Receives data through gRPC or HTTP using OTLP format.
      - Metrics, logs, traces
-   * - ``postgresql``
+   * - :ref:`postgresql-receiver` (``postgresql``)
      - Queries the PostgreSQL statistics collector. Supports PostgreSQL version 9.6 and higher.
      - Metrics
    * - :ref:`prometheus-receiver` (``prometheus``)
      - Provides a simple configuration interface to scrape metrics from a single target.
      - Metrics
-   * - ``prometheus_simple``
+   * - :ref:`simple-prometheus-receiver` (``prometheus_simple``)
      - Wraps the ``prometheus`` receiver to provide simplified settings for single targets.
      - Metrics
    * - :ref:`receiver-creator-receiver` (``receiver_creator``)
@@ -135,10 +141,10 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``sapm``
      - Receives traces from other collectors or from the SignalFx Smart Agent.
      - Traces
-   * - ``signalfx``
+   * - :ref:`signalfx-receiver` (``signalfx``)
      - Accepts metrics and logs in the proto format.
      - Metrics, logs
-   * - ``smartagent``
+   * - :ref:`smartagent-receiver` (``smartagent``)
      - Uses the existing Smart Agent monitors as Collector metric receivers. Learn more in :ref:`migration-monitors`.
      - Metrics
    * - :ref:`splunk-hec-receiver` (``splunk_hec``)
@@ -196,7 +202,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``groupbyattrs``
      - Reassociates spans, log records, and metric data points to a resource that matches with the specified attributes. As a result, all spans, log records, or metric data points with the same values for the specified attributes are grouped under the same resource.
      - Metrics, logs, traces
-   * - ``k8sattributes``
+   * - :ref:`kubernetes-attributes-processor` (``k8sattributes``)
      - Allows automatic tagging of spans, metrics, and logs with Kubernetes metadata. Formerly known as ``k8s_tagger``.
      - Metrics, logs, traces
    * - ``memory_limiter``
@@ -264,7 +270,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`splunk-apm-exporter` (``sapm``)
      - Allows the Splunk Distribution of OpenTelemetry Collector to export traces from multiple nodes or services in a single batch. 
      - Traces  
-   * - ``signalfx``
+   * - :ref:`signalfx-exporter` (``signalfx``)
      - Sends metrics, events, and trace correlation to Splunk Observability Cloud. 
      - Logs (events), metrics, traces (trace to metric correlation only)
    * - :ref:`splunk-apm-exporter` (``sapm``)
@@ -292,9 +298,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - Name
      - Description
    * - ``docker_observer``
-     - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints. ``docker_observer`` watches the Docker engine's stream of events to dynamically create, update, and remove endpoints as events are processed. 
+     - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - ``ecs_observer``
-     - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. If you run the Collector as a sidecar, consider using the ECS resource detector instead of the ECS observer.
+     - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. Only compatible with the Prometheus receiver.
    * - ``file_storage``
      - Persists state to the local file system. Requires read and write access to a diectory.
    * - ``health_check``
@@ -302,9 +308,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``http_forwarder``
      - Accepts HTTP requests and optionally adds headers and forwards them. The RequestURIs of the original requests are preserved by the extension. 
    * - ``host_observer``
-     - Looks at the current host for listening network endpoints. Uses the /proc file system and requires the ``SYS_PTRACE`` and ``DAC_READ_SEARCH`` capabilities so that it can determine what processes own the listening sockets. 
+     - Looks at the current host for listening network endpoints. Uses the /proc file system and requires the ``SYS_PTRACE`` and ``DAC_READ_SEARCH`` capabilities so that it can determine what processes own the listening sockets. See :ref:`receiver-creator-receiver` for more information.
    * - ``k8s_observer``
-     - Uses the Kubernetes API to discover pods running on the local node. This extension assumes that the Splunk Distribution of OpenTelemetry Collector is deployed in agent mode where it is running on each individual node or host instance.
+     - Uses the Kubernetes API to discover pods running on the local node. See :ref:`receiver-creator-receiver` for more information.
    * - ``memory_ballast``
      - Configures the memory ballast for the Collector process, either as a size in megabytes or as a size expressed as a percentage of the total memory. Sufficient ballast enhances the stability of Collector deployments.
    * - ``pprof``

@@ -9,6 +9,7 @@ Ansible for Linux
 
 Install the Ansible collection
 =========================================
+
 Before installing the Ansible collection, do the following:
 
 * Find your :ref:`Splunk access token <otel-using>`
@@ -90,13 +91,16 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_fluentd_config_source``
      - The source path to a Fluentd configuration file on your control host that is uploaded and set in place of the value set in ``splunk_fluentd_config`` on remote hosts. Use this variable to submit a custom Fluentd configuration, for example, ``./custom_fluentd_config.conf``. The default value is ``""``, which means that nothing is copied and the configuration file set with ``splunk_otel_collector_config`` is used.
 
-Configure auto instrumentation for Java 
-=================================================
+.. _ansible-zero-config-java:
+
+Configure auto instrumentation for Java (Linux only)
+======================================================
+
 You can automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
 
 The following table shows the variables that can be configured for this Ansible role:
 
-.. list-table:: Variables for auto instrumentation
+.. list-table::
    :widths: 50 50
    :header-rows: 1
 
@@ -114,3 +118,14 @@ The following table shows the variables that can be configured for this Ansible 
      - Available on Linux only. Configures the OpenTelemetry instrumentation resource attributes, for example, ``deployment.environment=prod``. The resource attributes are user-defined key-value pairs. The specified resource attributes are added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be restarted separately for any change to take effect. See :ref:`trace-configuration-java` for more information.
    * -  ``splunk_otel_auto_instrumentation_service_name`` 
      - Available on Linux only. Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. The specified service name is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node, overriding any generated service name. See :ref:`trace-configuration-java` for more information. The Java application on the node needs to be restarted separately for any change to take effect.
+   * - ``splunk_otel_auto_instrumentation_generate_service_name``
+     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
+   * - ``splunk_otel_auto_instrumentation_disable_telemetry``
+     - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
+   * - ``splunk_otel_auto_instrumentation_enable_profiler``
+     - Activates or deactivates AlwaysOn CPU Profiling.
+   * - ``splunk_otel_auto_instrumentation_enable_profiler_memory``
+     - Activates or deactivates AlwaysOn Memory Profiling.
+   * - ``splunk_otel_auto_instrumentation_enable_metrics``
+     - Activates or deactivates JVM metrics. 
+
