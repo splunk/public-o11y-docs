@@ -90,3 +90,5 @@ Learn more
 =============
 
 * For details about Tag Spotlight, see :ref:`apm-tag-spotlight`.
+* For a list of APM key concepts, see :ref:`apm-key-concepts`.
+* For more Splunk APM use cases, see :ref:`apm-use-cases-intro`.
