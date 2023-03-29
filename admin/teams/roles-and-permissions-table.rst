@@ -17,8 +17,8 @@ Splunk Observability Cloud roles and capabilities
 
 Splunk Observability Clouds lets you restrict access to certain features and data to specific groups of users using role-based access control. You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are available to roles. For example, capabilities determine whether someone with a particular role has permissions to create detectors or dashboards. 
 
-Navigation
-================
+General Settings page
+==============================
 
 .. include:: /_includes/admin/roles_navigation.rst
 

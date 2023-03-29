@@ -9,17 +9,13 @@
     - :strong:`Read-only`
     - :strong:`Subscription usage`
 
-  * - :strong:`View Homepage`
+
+  * - :strong:`View Settings`
     - Yes
     - Yes
     - Yes
     - Yes
 
-  * - :strong:`View General Settings`
-    - Yes
-    - No
-    - No
-    - No
 
   * - :strong:`View Organization overview`
     - Yes
