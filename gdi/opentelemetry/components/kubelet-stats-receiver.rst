@@ -120,7 +120,7 @@ By default, all produced metrics get resource attributes based on what kubelet t
 The kubelet stats receiver supports the following metadata:
 
 -  ``container.id``: Enriches metric metadata with the Container ID label obtained from container statuses exposed using ``/pods``.
--  ``k8s.volume.type``: Collects the volume type from the Pod spec exposed using ``/pods`` and add it as a label to  volume metrics. If more metadata than the volume type is available, the receiver syncs it depending on the available fields and the type of volume. For example, ``aws.volume.id`` is synced from ``awsElasticBlockStore`` and ``gcp.pd.name`` is synced from ``gcePersistentDisk``.
+-  ``k8s.volume.type``: Collects the volume type from the Pod spec exposed using ``/pods`` and add it as an attribute to volume metrics. If more metadata than the volume type is available, the receiver syncs it depending on the available fields and the type of volume. For example, ``aws.volume.id`` is synced from ``awsElasticBlockStore`` and ``gcp.pd.name`` is synced from ``gcePersistentDisk``.
 
 To add the ``container.id`` label to your metrics, set the ``extra_metadata_labels`` field. For example:
 
