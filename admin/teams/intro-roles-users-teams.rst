@@ -1,6 +1,6 @@
 .. _intro-roles-users-teams:
 
-***************************************************************************
+*******************************************************************************
 Introduction to roles, users, and teams in Splunk Observability Cloud
 *******************************************************************************
 
@@ -13,13 +13,13 @@ Use Splunk Observability Cloud teams to coordinate teamwork. Perform the followi
    :hidden:
 
    About user roles and permissions TOGGLE <roles-and-permissions-about>
-   Matrix of roles and capabilities TOGGLE <roles-and-permissions-table>
-   Create and manage users TOGGLE <manage-users>
-   Manage teams TOGGLE <manage-membership>
-   Manage team landing pages TOGGLE <configure-page>
-   Manage team notifications TOGGLE <team-notifications>
-   Link detectors and dashboards to teams TOGGLE <associate-team>
-   Enable enhanced team security TOGGLE <enhanced-team-security>
+   Matrix of roles and capabilities  <roles-and-permissions-table>
+   Create and manage users  <manage-users>
+   Manage teams  <manage-membership>
+   Manage team landing pages  <configure-page>
+   Manage team notifications  <team-notifications>
+   Link detectors and dashboards to teams  <associate-team>
+   Enable enhanced team security  <enhanced-team-security>
    
 
 
