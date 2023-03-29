@@ -20,27 +20,34 @@ These are the steps Alex took to determine how pervasive the checkout errors are
 Alex reviews the customer's trace for errors
 ===============================================
 
-Customer support shares a trace ID which Alex uses to pull up the trace to begin troubleshooting. Alex notes that an http request in the checkout service is returning a 500 error. Alex would like to quickly understand how prevalent this error is for the checkout flow. He makes a note of the ``http.url`` for the request that is returning a 500. 
+Customer support shares a trace ID which Alex uses to pull up the trace to begin troubleshooting. Alex notes that an http request in the checkout service is returning a 500 error. Alex wants to quickly understand how prevalent this error is for the checkout flow. So, Alex makes a note of the ``http.url`` for the request that is returning a 500 to investigate further. 
 
 .. _trace-analyzer-group:
 
-Group traces by specific tags
+Alex groups traces by specific tags
 ==================================
 
-In Trace Analyzer, Alex selects ``http.url`` in the :guilabel:`Group traces by`` menu to quickly understand the prevalence of errors for the the specific http.url value that he made note of from the problematic trace. He notes that a good number of traces for the ``/checkout/{cardId}`` request have errors. 
+Because ``http.url`` is an unindexed span, Alex can't use Tag Spotlight to see a breakdown in requests and errors by ``http.url``. So, Alex goes to Trace Analyzer, and selects ``http.url`` in the :guilabel:`Group traces by`` menu to quickly understand the prevalence of errors for the specific http.url value that they made note of from the problematic trace. Alex notes that over 10% of traces for the ``/checkout/{cardId}`` request have errors. 
 
 
 .. _trace-analyzer-filter:
 
-Filter Trace Analyzer by http url value
-==========================================
+Alex filter Trace Analyzer by http url value
+==============================================
 
-Alex adds the ``/checkout/{cardId}`` http url to the Trace Analyzer filter so that he can review traces for this specific endpoint. Now Alex is able to 
+Alex adds the ``/checkout/{cardId}`` http url to the Trace Analyzer filter so that he can review traces for this specific endpoint.
+
+.. _trace-analyzer-compare:
+
+Alex compares successful traces with traces with errors
+=========================================================
+
+Now, Alex can review and compare successful traces for the ``/checkout/{cardId}`` http url with traces for the same endpoint that have errors. 
 
 Summary
 ====================================================================================
 
-Thanks to the high resolution data provided by full-fidelity tracing and to the features of Trace Analyzer, Alex managed to troubleshoot an unknown issue and set up alerts in case it happens again. click
+Thanks to the high resolution data provided by full-fidelity tracing and to the features of Trace Analyzer, Alex managed to troubleshoot an unknown issue and set up alerts in case it happens again.
 
 Learn more
 ===============
