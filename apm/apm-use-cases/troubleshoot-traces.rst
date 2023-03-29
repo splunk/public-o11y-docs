@@ -30,7 +30,7 @@ Alex groups traces by specific tags
 Because ``http.url`` is an unindexed span, Alex can't use Tag Spotlight to see a breakdown in requests and errors by ``http.url``. So, Alex goes to Trace Analyzer, and selects ``http.url`` in the :guilabel:`Group traces by`` menu to quickly understand the prevalence of errors for the specific http.url value that they made note of from the problematic trace. Alex notes that over 10% of traces for the ``/checkout/{cardId}`` request have errors. 
 
 ..  image:: /_images/apm/apm-use-cases/TraceAnalyzerGroup.png
-    :width: 60%
+    :width: 95%
     :alt: This screenshot shows the Group traces by option and the resulting grouped metrics in Trace Analyzer 
 
 .. _trace-analyzer-filter:
@@ -52,7 +52,7 @@ Alex compares successful traces with traces with errors
 Now, Alex can review and compare successful traces for the ``/checkout/{cardId}`` http url with traces for the same endpoint that have errors. 
 
 ..  image:: /_images/apm/apm-use-cases/TraceAnalyzerCompare.png
-    :width: 60%
+    :width: 95%
     :alt: This screenshot a filtered view of Trace Analyzer
 
 Summary
