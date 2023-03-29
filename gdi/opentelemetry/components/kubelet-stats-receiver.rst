@@ -112,10 +112,10 @@ To import excluded metrics, use the ``include_metrics`` option as in the followi
              - container.memory.rss.bytes
              - container.memory.available.bytes  
 
-Add additional metadata labels
+Add additional metadata attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default, all produced metrics get resource labels based on what kubelet the ``/stats/summary`` endpoint provides. For some use cases, this might not be enough: use other endpoints to retrieve additional metadata entities and set them as extra labels on the metric resource.
+By default, all produced metrics get resource attributes based on what kubelet the ``/stats/summary`` endpoint provides. For some use cases, this might not be enough: use other endpoints to retrieve additional metadata entities and set them as extra attributes on the metric resource.
 
 The kubelet stats receiver supports the following metadata:
 
