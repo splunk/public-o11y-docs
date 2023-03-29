@@ -300,7 +300,7 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - ``docker_observer``
      - Detects and reports container endpoints discovered through the Docker API. Only containers that are in the state of ``Running`` and not ``Paused`` emit endpoints.
    * - ``ecs_observer``
-     - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. See :ref:`receiver-creator-receiver` for more information.
+     - Uses the ECS and EC2 API to discover Prometheus scrape targets from all running tasks and filter them based on service names, task definitions, and container labels. Only compatible with the Prometheus receiver.
    * - ``file_storage``
      - Persists state to the local file system. Requires read and write access to a diectory.
    * - ``health_check``
