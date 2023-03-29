@@ -29,7 +29,7 @@ $(window).scroll(function() {
       $("#welcome h1").hide();
 
       $("p.caption").css({"cursor": "pointer","width":"calc(100% - 10px);"});
-      $("a.reference.internal").prepend('<span class="gg-chevron-down"></span>');
+      $("span.caption-text ").after('<span class="gg-chevron-down"></span>');
       $("p.caption").nextUntil("p.caption").hide();
 
       $(".toctree-l2").not(".current").each(function(){
