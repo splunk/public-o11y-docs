@@ -2,14 +2,6 @@
 /* Layout File -- Start */
 $(window).scroll(function() {
     var scrollDistance = $(window).scrollTop();
-      //console.log("scrollDistance: " + scrollDistance);
-    // Show/hide menu on scroll
-    //if (scrollDistance >= 850) {
-    //		$('nav').fadeIn("fast");
-    //} else {
-    //		$('nav').fadeOut("fast");
-    //}
-  
     // Assign active class to nav links while scolling
     $('.bodywrapper .section a.headerlink').each(function(i) {
         //console.log("$(this).position().top: " + $(this).position().top);
@@ -20,9 +12,6 @@ $(window).scroll(function() {
         }
     });
   }).scroll();
-
-
-
 
   $(document).ready(function(){
 
@@ -40,8 +29,7 @@ $(window).scroll(function() {
       $("#welcome h1").hide();
 
       $("p.caption").css({"cursor": "pointer","width":"calc(100% - 10px);"});
-      $("span.caption-text ").after('<span class="gg-chevron-down"></span>');
-      //$("p.caption").nextUntil("p.caption").css({"display": "none"});
+      $("a.reference.internal").prepend('<span class="gg-chevron-down"></span>');
       $("p.caption").nextUntil("p.caption").hide();
 
       $(".toctree-l2").not(".current").each(function(){
@@ -121,15 +109,6 @@ $(window).scroll(function() {
 
       });
 
-
-      // if($('ul.current').css('display') == 'none')
-      // {
-      //     $('ul.current').css("display","block");
-      //     $('ul.current').nextUntil('p.caption').css("display","block");
-      //     $('ul.current').prevUntil('p.caption').css("display","block");
-      //     console.log("Inside current class");
-      // }
-
       $("p.caption").each(function(){
           if($(this).nextUntil('p.caption').hasClass('current')){
               $(this).find('span.gg-chevron-down').removeClass("gg-chevron-down").addClass('gg-chevron-up');
@@ -157,25 +136,9 @@ $(window).scroll(function() {
       });
       // left Side TOC  ====>>END
 
-
-      // Get the modal
       var modal = document.getElementById('myModal');
 
-      // Get the button that opens the modal
-      //var btn = document.getElementById("myBtn");
-
-      // Get the <span> element that closes the modal
       var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks the button, open the modal
-      // btn.onclick = function() {
-      //     modal.style.display = "block";
-      // }
-
-      // When the user clicks on <span> (x), close the modal
-      // span.onclick = function() {
-      //     modal.style.display = "none";
-      // }
 
 
     $(".close").on("click", function(){
