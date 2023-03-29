@@ -2,7 +2,7 @@
 
 ***************************************************************************
 Introduction to roles, users, and teams in Splunk Observability Cloud
-*******************************************************************************8
+*******************************************************************************
 
 .. meta::
    :description: Learn how to manage users teams in Splunk Observability Cloud.

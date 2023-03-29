@@ -8,7 +8,6 @@ About roles and permissions
    :description: Learn how to how to manage user roles and permissions
 
 
-
 |hr|
 
 :strong:`Available in Enterprise Edition`
