@@ -10,19 +10,22 @@ Splunk Observability Cloud and the Splunk platform
 .. toctree::
    :hidden:
 
+   Unified Identity <unified-id-unified-identity>
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
    Collaborate on observability <practice-reliability/collaboration>
    Set up Observability Cloud <setup-o11y/setup-o11y>
 
 
-With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can dig deeper into those search results:
+With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can measure the current state of your system based on the data it generates in the form of logs, metrics, traces, and user sessions. Splunk Observability Cloud allows you to do the following:
 
 - Correlate logs with metrics and traces to locate, isolate, and resolve problems in your applications or infrastructure quickly.
 
 - Use hundreds of prepackaged integrations to start monitoring your entire deployment immediately.
 
 - Improve mean time to resolution using prepackaged and custom alerts and detectors.
+
+When you integrate Splunk Observability Cloud with your Splunk Cloud Platform instance, you can enjoy the benefits of Unified Identity, including Single Sign On (SSO) and shared access and permissions. To learn more, see :ref:`unified-id-unified-identity`.
 
 Use Observability Cloud to solve common system reliability problems. For example, do you have a wide variety of platforms, databases, and cloud services that you must monitor in multiple interfaces? Observability Cloud has hundreds of prepackaged integrations that give you a predefined view with a single pane of glass for hybrid coverage.
 
