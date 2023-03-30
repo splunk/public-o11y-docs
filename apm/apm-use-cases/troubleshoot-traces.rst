@@ -58,7 +58,7 @@ Now, Alex can review and compare successful traces for the ``/checkout/{cardId}`
 Summary
 ====================================================================================
 
-Using the high-resolution data provided by full-fidelity tracing Alex managed to quickly determine the prevalence of an unknown. Using the grouping and filtering functionality of Trace Analyzer he quickly isolated successful and problematic traces to provide to his developers to isolate an the issue. 
+Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of an unknown issue. Using the grouping and filtering functionality of Trace Analyzer, Alex quickly isolated successful and problematic traces to provide to the developers to isolate an the issue. 
 
 Learn more
 ===============
