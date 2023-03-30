@@ -10,14 +10,16 @@ Splunk Observability Cloud and the Splunk platform
 .. toctree::
    :hidden:
 
-   Unified Identity <unified-id/gitunified-identity>
+   Unified Identity <unified-id/unified-identity>
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
    Collaborate on observability <practice-reliability/collaboration>
    Set up Observability Cloud <setup-o11y/setup-o11y>
 
 
-With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can measure the current state of your system based on the data it generates in the form of logs, metrics, traces, and user sessions. Splunk Observability Cloud allows you to do the following:
+With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can monitor your system and measure its current state based on the data it generates in the form of logs, metrics, traces, and user sessions. In other words, you can perform observability to ensure reliability.
+
+Splunk Observability Cloud lets you to do the following:
 
 - Correlate logs with metrics and traces to locate, isolate, and resolve problems in your applications or infrastructure quickly.
 
