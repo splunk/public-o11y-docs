@@ -5,7 +5,7 @@ Configure the SignalFx Instrumentation for .NET
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the SignalFx Instrumentation for .NET to suit your instrumentation needs, such as correlating traces with logs and enabling custom sampling.
+   :description: Configure the SignalFx Instrumentation for .NET to suit your instrumentation needs, such as correlating traces with logs and activating custom sampling.
 
 You can configure the SignalFx Instrumentation for .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
 
@@ -231,7 +231,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
 The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
 
-.. note:: If you need to disable trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
+.. note:: If you need to deactivate trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
 .. _dotnet-instrumentation-query-strings:
 

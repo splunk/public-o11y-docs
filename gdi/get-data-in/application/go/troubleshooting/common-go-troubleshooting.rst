@@ -69,7 +69,7 @@ If you don't see spans in Splunk Observability Cloud for your service, do the fo
 Missing some spans from a service
 -----------------------------------------
 
-After enabling debug logging, check the logs for messages like the following:
+After activating debug logging, check the logs for messages like the following:
 
 .. code-block:: text
 

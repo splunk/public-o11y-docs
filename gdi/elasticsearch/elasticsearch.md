@@ -80,7 +80,7 @@ The following table shows the configuration options for this monitor:
 | `indexStatsIntervalSeconds` | no | `integer` | Interval to report IndexStats on (**default:** `60`) |
 | `indexSummaryOnly` | no | `bool` | Collect only aggregated index stats across all indexes (**default:** `false`) |
 | `indexStatsMasterOnly` | no | `bool` | Collect index stats only from Master node (**default:** `true`) |
-| `enableClusterHealth` | no | `bool` | EnableClusterHealth activates reporting on the cluster health (**default:** `true`) |
+| `enableClusterHealth` | no | `bool` | Activates eClusterHealth activates reporting on the cluster health (**default:** `true`) |
 | `clusterHealthStatsMasterOnly` | no | `bool` | Whether or not non master nodes should report cluster health (**default:** `true`) |
 | `enableEnhancedHTTPStats` | no | `bool` | Activate enhanced HTTP stats (**default:** `false`) |
 | `enableEnhancedJVMStats` | no | `bool` | Activate enhanced JVM stats (**default:** `false`) |

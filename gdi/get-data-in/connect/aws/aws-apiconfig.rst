@@ -429,7 +429,7 @@ To activate CloudWatch Metric Streams as an alternative to traditional API polli
 
 .. note:: When you edit an AWS integration through the user interface for Splunk Observability Cloud, the integration ID shows in your browser address bar as an alphanumeric string in quotation marks (") after a colon (:) at the end of the URL.
 
-Next, to complete enabling Metric Streams:
+Next, to complete activating Metric Streams:
 
 #. If you haven't already, add the :ref:`relevant permissions to your AWS IAM policy <metricstreams_iampolicy>`.
 #. In every region from which you want to stream metrics from, :ref:`deploy CloudFormation <metricstreams_cloudformation>`.
