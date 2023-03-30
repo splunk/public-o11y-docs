@@ -126,6 +126,6 @@ The following attributes are available:
   * - Tag
     - Value
   * - ``pool.name``
-    - Name of the connection pool.
+    - Name of the connection pool. Applies to all connection pool metrics.
   * - ``state``
-    - State of the connection. Can be ``idle`` or ``used``.
+    - State of the connection. Can be ``idle`` or ``used``. Only applies to the ``db.client.connections.usage`` metric.
