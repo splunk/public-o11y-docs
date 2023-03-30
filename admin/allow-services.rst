@@ -7,7 +7,7 @@ Allow Splunk Observability Cloud services in your network
 .. meta::
       :description: Options for securing your implementation, including proxies and allow lists for URLs and domains.    
 
-Splunk Observability Cloud is composed of a number of different services. If your organization has stringent networking security policies that apply to sending data to third parties, use one of the following methods to ensure network access to Splunk Observability Cloud services:
+A number of different services make up Splunk Observability Cloud. If your organization has stringent networking security policies that apply to sending data to third parties, use one of the following methods to ensure network access to Splunk Observability Cloud services:
 
 - :ref:`simple-http-proxy`
 - :ref:`otel-connector`
@@ -40,36 +40,42 @@ If you need to use a proxy, set one of the following environment variables accor
 
 - ``HTTP_PROXY``: The HTTP proxy address
 - ``HTTPS_PROXY``: The HTTPS proxy address
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+- ``NO_PROXY``: If you have a proxy, this option sets addresses that don't use the proxy
 
-The following examples show how to set the ``HTTPS_PROXY`` environment variable for hosts and containers:
+The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` environment variable for hosts and containers:
 
 .. tabs::
 
    .. code-tab:: powershell Windows
 
-      $Env:HTTPS_PROXY = "proxy.address:443"
+      $Env:HTTP_PROXY = "proxy.address:<port>"
+      $Env:HTTPS_PROXY = "proxy.address:<port>"
 
    .. code-tab:: bash Linux
 
-      export HTTPS_PROXY = "proxy.address:443"
+      export HTTPS_PROXY = "proxy.address:<port>"
+      export HTTPS_PROXY = "proxy.address:<port>"
 
    .. code-tab:: yaml Docker compose
 
       services:
          otelcol:
             environment:
-               - HTTPS_PROXY='proxy.address:443'
+               - HTTP_PROXY='proxy.address:<port>'
+               - HTTPS_PROXY='proxy.address:<port>'
 
    .. code-tab:: bash Docker run
 
-      -e HTTPS_PROXY=proxy.address:443
+      -e HTTP_PROXY=proxy.address:<port>
+      -e HTTPS_PROXY=proxy.address:<port>
 
    .. code-tab:: yaml Kubernetes
 
       env:
+         - name: HTTP_PROXY
+           value: 'proxy.address:<port>'
          - name: HTTPS_PROXY
-           value: 'proxy.address:443'
+           value: 'proxy.address:<port>'
 
    .. code-tab:: yaml Ansible
 
@@ -86,7 +92,7 @@ The following examples show how to set the ``HTTPS_PROXY`` environment variable 
               # Set the proxy address, respectively for http_proxy and https_proxy environment variables
               # It must be a full URL like http://user:pass@10.0.0.42. Not used by Ansible itself.
               splunk_otel_collector_proxy_http: proxy.address:<port>
-              splunk_otel_collector_proxy_https: proxy.address:443
+              splunk_otel_collector_proxy_https: proxy.address:<port>
               # Set the ip or hosts that don't use proxy settings. Only used if splunk_otel_collector_proxy_http
               # or splunk_otel_collector_proxy_https is defined. Default is localhost,127.0.0.1,::1)
               splunk_otel_collector_no_proxy): 127.0.0.1
@@ -105,7 +111,7 @@ URLs to allow in your network
 
 .. include:: /_includes/realm-note.rst
 
-If your organization's networking security policies require that services delivered over the internet be individually allowed, ensure that the following service URLs are allowed by your network.
+If your organization's networking security policies require you to individually allow services delivered over the internet, ensure that you allow the following service URLs on your network:
 
 .. code:: shell
 
@@ -120,7 +126,7 @@ If you're unable to allow all URLs as shown here, see :ref:`allow-domains`.
 Domains to allow in your network
 ==================================================
 
-If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure that the following domains are allowed by your network.
+If you're unable to allow all URLs as described in :ref:`allow-urls`, ensure that you allow the following domains on your network:
 
 .. code:: shell
 

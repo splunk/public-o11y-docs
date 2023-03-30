@@ -9,12 +9,6 @@ Instrument a .NET application for Splunk Observability Cloud
 
 The SignalFx Instrumentation for .NET automatically instruments .NET applications, Windows services running .NET applications, ASP.NET applications deployed on IIS, and Azure App Service applications.
 
-- :ref:`install-dotnet-instrumentation`
-- :ref:`instrument-windows-service`
-- :ref:`instrument-aspnet-iis`
-- :ref:`instrument-azure-app`
-- :ref:`instrument-azure-webjobs`
-
 To get started, use the guided setup or follow the instructions manually.
 
 Generate customized instructions using the guided setup
@@ -35,10 +29,21 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`.NET` tile to open the .NET guided setup.
 
+Install the SignalFx Instrumentation for .NET manually
+==================================================================
+
+Follow these instructions to install the SignalFx Instrumentation for .NET:
+
+- :ref:`install-dotnet-instrumentation`
+- :ref:`instrument-windows-service`
+- :ref:`instrument-aspnet-iis`
+- :ref:`instrument-azure-app`
+- :ref:`instrument-azure-webjobs`
+
 .. _install-dotnet-instrumentation:
 
 Instrument a .NET application
-===================================================================
+--------------------------------------------------------------------
 
 Follow these steps to automatically instrument your application:
 
@@ -50,42 +55,54 @@ Follow these steps to automatically instrument your application:
 
    .. tabs::
 
-      .. code-tab:: shell Windows x64
+      .. group-tab:: Windows (PowerShell)
 
-         msiexec /i signalfx-dotnet-tracing-<version-here>-x64.msi /quiet
+         .. tabs::
 
-      .. code-tab:: shell Windows x86
+            .. code-tab:: shell Windows x64
 
-         msiexec /i signalfx-dotnet-tracing-<version-here>-x86.msi /quiet
+               msiexec /i signalfx-dotnet-tracing-<version-here>-x64.msi /quiet
 
-      .. code-tab:: bash rpm
+            .. code-tab:: shell Windows x86
 
-         rpm -ivh signalfx-dotnet-tracing-<version-here>.rpm
-         ./opt/signalfx/createLogPath.sh # Optional
+               msiexec /i signalfx-dotnet-tracing-<version-here>-x86.msi /quiet
 
-      .. code-tab:: bash deb
+      .. group-tab:: Linux
 
-         dpkg -i signalfx-dotnet-tracing-<version-here>.deb
-         ./opt/signalfx/createLogPath.sh # Optional
+         .. tabs::
 
-      .. code-tab:: bash tar (glibc)
+            .. code-tab:: bash rpm
 
-         tar -xf signalfx-dotnet-tracing-<version-here>.tar.gz -C /opt/signalfx
-         ./opt/signalfx/createLogPath.sh # Optional
+               rpm -ivh signalfx-dotnet-tracing-<version-here>.rpm
+               ./opt/signalfx/createLogPath.sh # Optional
+
+            .. code-tab:: bash deb
+
+               dpkg -i signalfx-dotnet-tracing-<version-here>.deb
+               ./opt/signalfx/createLogPath.sh # Optional
+
+            .. code-tab:: bash tar (glibc)
+
+               tar -xf signalfx-dotnet-tracing-<version-here>.tar.gz -C /opt/signalfx
+               ./opt/signalfx/createLogPath.sh # Optional
 
 #. Set the following environment variables:
 
    .. tabs::
 
-      .. code-tab:: shell Windows PowerShell
+      .. group-tab:: Windows (PowerShell)
 
-         # Set the following variables in the process scope
-         $Env:COR_ENABLE_PROFILING = "1"
-         $Env:COR_PROFILER = "{B4C89B0F-9908-4F73-9F59-0D77C5A06874}"
-         $Env:CORECLR_ENABLE_PROFILING = "1"
-         $Env:CORECLR_PROFILER = "{B4C89B0F-9908-4F73-9F59-0D77C5A06874}"
-         $Env:SIGNALFX_SERVICE_NAME = "<my-service-name>"
-         $Env:SIGNALFX_ENV = "<your-environment>"
+         .. code-block:: shell
+
+            # Set the following variables in the process scope
+            $Env:COR_ENABLE_PROFILING = "1"
+            $Env:COR_PROFILER = "{B4C89B0F-9908-4F73-9F59-0D77C5A06874}"
+            $Env:CORECLR_ENABLE_PROFILING = "1"
+            $Env:CORECLR_PROFILER = "{B4C89B0F-9908-4F73-9F59-0D77C5A06874}"
+            $Env:SIGNALFX_SERVICE_NAME = "<my-service-name>"
+            $Env:SIGNALFX_ENV = "<your-environment>"
+
+         - Avoid setting the environment variables in the system or user scopes in Windows unless you require permanent autoinstrumentation. See :ref:`advanced-dotnet-configuration` for more information on how to include or exclude processes for autoinstrumentation.
 
       .. code-tab:: shell Linux
 
@@ -96,45 +113,29 @@ Follow these steps to automatically instrument your application:
          export SIGNALFX_SERVICE_NAME="<my-service-name>"
          export SIGNALFX_ENV="<your-environment>"
 
-   Avoid setting the environment variables in the system or user scopes in Windows unless you require permanent autoinstrumentation. See :ref:`advanced-dotnet-configuration` for more information on how to include or exclude processes for autoinstrumentation.
-
-#. Restart your application and make sure that all environment variables are configured:
-
-   .. tabs::
-
-      .. code-tab:: shell Windows PowerShell
-
-         # Run a tool like Process Explorer or execute the following:
-
-         [System.Diagnostics.Process]::GetProcessById(<pid>).StartInfo.EnvironmentVariables
-
-      .. code-tab:: shell Linux
-
-         cat /proc/<pid>/environ # where <pid> is the process ID
-
 #. (Optional) To activate automatic metric collection, see :ref:`enable_automatic_metric_collection_dotnet`.
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.
+If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.  
 
-.. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
+If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
 
 .. _enable_profiling_dotnet:
 
 Activate AlwaysOn Profiling
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate AlwaysOn Profiling, set the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``.
 
-To activate memory profiling, set the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+To activate memory profiling, set the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
 
 See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-dotnet`.
 
 .. _enable_automatic_metric_collection_dotnet:
 
 Activate metrics collection
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate automatic metric collection, set the ``SIGNALFX_TRACE_METRICS_ENABLED`` environment variable to ``true``.
 
@@ -147,7 +148,7 @@ See :ref:`dotnet-metrics-attributes` for more information about the metrics coll
 .. _instrument-windows-service:
 
 Instrument a Windows service running a .NET application
-===================================================================
+--------------------------------------------------------------------
 
 To instrument a Windows service, install the instrumentation and set the following environment variables:
 
@@ -170,7 +171,7 @@ For more information on the default service name, see :ref:`dotnet-default-servi
 .. _instrument-aspnet-iis:
 
 Instrument an ASP.NET application deployed on IIS
-===================================================================
+--------------------------------------------------------------------
 
 To instrument an ASP.NET application running on IIS, install the instrumentation and edit the ``web.config`` file to add the following settings. See :ref:`configuration-methods-dotnet` for more information.
 
@@ -185,6 +186,14 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
          <add key="SIGNALFX_SERVICE_NAME" value="service-name" />
          <add key="SIGNALFX_ENV" value="environment-name" />
 
+      After applying the changes to the ``web.config`` file, restart IIS by running the following command:
+
+      .. code-block:: powershell
+
+         Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+      In some cases, you might have to restart the machine.
+
    .. tab:: ASP.NET Core
 
       Add the following settings inside the ``<aspNetCore>`` block of your ``web.config`` file:
@@ -198,22 +207,22 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
             <environmentVariable name="SIGNALFX_ENV" value="environment-name" />
          </environmentVariables>
 
+      After applying the changes to the ``web.config`` file, restart IIS by running the following command:
+
+      .. code-block:: powershell
+
+         Start-Process "iisreset.exe" -NoNewWindow -Wait
+
+      In some cases, you might have to restart the machine.
+
       .. note:: The ASP.NET Core instrumentation collects and obfuscates query strings by default. See :ref:`dotnet-instrumentation-query-strings` for more information.
-      
-After applying the changes to the ``web.config`` file, restart IIS by running the following command:
-
-.. code-block:: powershell
-
-   Start-Process "iisreset.exe" -NoNewWindow -Wait
-
-In some cases, you might have to reboot the machine.
 
 .. note:: By default, the installer activates IIS instrumentation for .NET Framework by setting the ``Environment`` registry key for W3SVC and WAS services located in the ``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services`` folder.
 
 .. _instrument-azure-app:
 
 Instrument an application in Azure App Service
-===================================================================
+--------------------------------------------------------------------
 
 To instrument an application or service in Azure App Service, follow these steps:
 
@@ -225,7 +234,7 @@ To instrument an application or service in Azure App Service, follow these steps
 
 #. Go to :guilabel:`Settings > Configuration`.
 
-#. Click :strong:`New application setting` to add the following settings:
+#. Select :strong:`New application setting` to add the following settings:
 
    .. list-table::
       :header-rows: 1
@@ -250,7 +259,7 @@ To instrument an application or service in Azure App Service, follow these steps
 .. _instrument-azure-webjobs:
 
 Instrument a background task in Azure App Service
-----------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When instrumenting an Azure WebJob in App Service, add the following settings. Replace ``<extension-version>`` in system paths with the version of the .NET instrumentation, for example, ``v0.2.0``:
 
@@ -301,7 +310,7 @@ When instrumenting an Azure WebJob in App Service, add the following settings. R
 .. _kubernetes_dotnet:
 
 Deploy the .NET instrumentation in Kubernetes
-==========================================================
+--------------------------------------------------------------------
 
 To deploy the .NET instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -342,9 +351,9 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-dotnet:
 
 Send data directly to Observability Cloud
-==============================================================
+--------------------------------------------------------------------
 
-By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
+By default, the instrumentation sends all telemetry to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
 To bypass the OTel Collector and send data directly to Observability Cloud, set the following environment variables:
 

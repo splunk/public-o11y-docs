@@ -9,7 +9,7 @@ Connect to AWS using the Splunk Observability Cloud API
 
 To connect Splunk Observability Cloud to your AWS account, complete the following steps:
 
-#. :ref:`Create an AWS connection <aws-api-create-connection>`.
+#. :ref:`Create an AWS connection <aws-api-create-connection>`. See the available :ref:`AWS regions <aws-regions>`.
 #. :ref:`Review your IAM policy <review-aws-iam-policy>`. Specify whether to collect both metrics and logs, and whether to gather metrics by API polling (which is the default) or through CloudWatch Metric Streams.
 #. :ref:`Configure your setup <aws-api-setup>`. 
 #. Optionally, :ref:`activate Metric Streams <activate-cw-metricstreams>`.
@@ -429,7 +429,7 @@ To activate CloudWatch Metric Streams as an alternative to traditional API polli
 
 .. note:: When you edit an AWS integration through the user interface for Splunk Observability Cloud, the integration ID shows in your browser address bar as an alphanumeric string in quotation marks (") after a colon (:) at the end of the URL.
 
-Next, to complete enabling Metric Streams:
+Next, to complete the activation of Metric Streams:
 
 #. If you haven't already, add the :ref:`relevant permissions to your AWS IAM policy <metricstreams_iampolicy>`.
 #. In every region from which you want to stream metrics from, :ref:`deploy CloudFormation <metricstreams_cloudformation>`.

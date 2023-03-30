@@ -1,15 +1,15 @@
 .. include:: /_includes/gdi/zero-config-preview-header.rst
 
+.. _auto-instrumentation-java-k8s:
+
+*****************************************************************************
+Zero Configuration Auto Instrumentation for Java Applications on Kubernetes
+*****************************************************************************
+
 .. meta::
    :description: How to activate zero configuration automatic instrumentation for Kubernetes Java applications and thus collect and send traces to Splunk Application Performance Monitoring (APM) without altering your code.
 
-.. _auto-instrumentation-java-k8s:
-
-==================================================================================================================
-Zero Configuration Auto Instrumentation for Java Applications on Kubernetes
-==================================================================================================================
-
-Zero Configuration Auto Instrumentation for Java activates automatic instrumentation for Kubernetes Java applications. When you activate automatic instrumentation, you do not have to recompile your applications, but you do have to restart any applications that are already running. 
+Zero Configuration Auto Instrumentation for Java activates automatic instrumentation for Kubernetes Java applications. When you activate automatic instrumentation, you only have to restart any applications that are already running. 
 
 .. _zero-config-k8s-prereqs:
 
@@ -18,7 +18,7 @@ Prerequisites
 
 .. include:: /_includes/gdi/zero-conf-reqs.rst
 
-- Install :ref:`the Splunk OpenTelemetry (OTel) Collector Kubernetes Operator<k8s-operator>` on a :new-page:`compatible version of Kubernetes <https://github.com/signalfx/splunk-otel-collector-operator#compatibility-matrix>`.
+- Install :ref:`the Splunk OpenTelemetry Collector Kubernetes Operator<k8s-operator>` on a :new-page:`compatible version of Kubernetes <https://github.com/signalfx/splunk-otel-collector-operator#compatibility-matrix>`.
 
 .. _enable-zero-conf-java-k8s:
 
@@ -29,8 +29,7 @@ Before deployment, you can activate automatic instrumentation for a Kubernetes D
 
 When you activate instrumentation, the Collector operator injects the Splunk OTel Java agent into Java applications to capture telemetry data.
 
-To activate automatic instrumentation, add this annotation to the ``spec`` for a deployment or pod: ``otel.splunk.com/inject-java: "true"``.
-If you add the annotation to a pod, restarting the pod removes the annotation.
+To activate automatic instrumentation, add this annotation to the ``spec`` for a deployment or pod: ``otel.splunk.com/inject-java: "true"``. If you add the annotation to a pod, restarting the pod removes the annotation.
 
 You can also activate automatic instrumentation on a running workload.
 
@@ -56,7 +55,6 @@ For example, given the following deployment YAML:
           - name: my-java-app
             image: my-java-app:latest
 
-
 Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` to the ``spec``:
 
 .. code-block:: yaml
@@ -74,7 +72,6 @@ Activate auto instrumentation by adding ``otel.splunk.com/inject-java: "true"`` 
           containers:
           - name: my-java-app
             image: my-java-app:latest
-    
 
 The Collector operator activates automatic instrumentation for any Java applications in the deployment.
 
@@ -135,7 +132,7 @@ If the ``injection-status`` annotation is set to ``success``, you have activated
 Optionally configure instrumentation
 -----------------------------------------
 
-The default settings for auto instrumentation are sufficient for most basic cases. You can add advanced configuration like enabling custom sampling and including custom data in the reported spans with environment variables and Java system properties.
+The default settings for auto instrumentation are sufficient for most cases. You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and Java system properties.
 
 For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable.
 

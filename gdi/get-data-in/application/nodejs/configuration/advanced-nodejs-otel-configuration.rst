@@ -5,11 +5,11 @@ Configure the Splunk Distribution of OTel JS for Splunk Observability Cloud
 ***************************************************************************
 
 .. meta:: 
-   :description: Configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs, like correlating traces with logs, enabling exporters, and more.
+   :description: Configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs, like correlating traces with logs, activating exporters, and more.
 
 You can configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-The following sections describe all available settings for configuring OpenTelemetry for Node.js, including options for enabling new features that are unique to the Splunk Distribution of OpenTelemetry JS.
+The following sections describe all available settings for configuring OpenTelemetry for Node.js, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry JS.
 
 .. _configuration-methods-nodejs:
 
@@ -267,11 +267,14 @@ The following settings activate runtime metrics collection:
      - The interval, in milliseconds, of metrics collection and exporting. The default value is ``30000``.
    * - ``SPLUNK_RUNTIME_METRICS_ENABLED``
      - ``metrics.runtimeMetricsEnabled``
-     - Activates the collection and export of runtime metrics. The default value is ``true``. Runtime metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true`` or if memory profiling is activated.
+     - Activates the collection and export of runtime metrics. The default value is ``true``. Runtime metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true`` or if memory profiling is activated. For more information, see :ref:`nodejs-otel-runtime-metrics`.
    * - ``SPLUNK_RUNTIME_METRICS_COLLECTION_INTERVAL``
      - ``metrics.runtimeMetricsCollectionIntervalMillis``
      - The interval, in milliseconds, during which garbage collection and event loop statistics are collected. After collection, the values become available to the metric exporter. The default value is ``5000``.
-   * - 
+   * - ``SPLUNK_DEBUG_METRICS_ENABLED`` 
+     - ``metrics.debugMetricsEnabled``
+     - Activates the collection and export of internal debug metrics for troubleshooting. The default value is ``false``. Debug metrics are only sent if the ``SPLUNK_METRICS_ENABLED`` environment variable is set to ``true``. For more information, see :ref:`nodejs-otel-debug-metrics`.
+   * - None
      - ``metrics.resourceFactory``
      - Callback that lets you filter the default resource or provide a custom one. The function takes one argument of type ``Resource``, which contains the service name, environment, host, and process attributes by default.
 

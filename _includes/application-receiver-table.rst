@@ -9,11 +9,6 @@
      - :strong:`Provides traces`
      - :strong:`Provides logs`
 
-   * - :ref:`AWS AppMesh Envoy Proxy <appmesh>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Apache ActiveMQ <activemq>`
      - :strong:`X`
      -
@@ -45,6 +40,11 @@
      -
 
    * - :ref:`ASP.NET <asp-dot-net>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`AWS AppMesh Envoy Proxy <appmesh>`
      - :strong:`X`
      -
      -
@@ -286,8 +286,8 @@
 
    * - :ref:`Istio <get-started-istio>`
      - :strong:`X`
-     -
-     -
+     - :strong:`X`
+     - :strong:`X`
 
    * - :ref:`Jaeger gRPC <jaeger-grpc>`
      - :strong:`X`

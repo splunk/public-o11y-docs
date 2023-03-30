@@ -27,10 +27,21 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`Java` tile to open the Java guided setup.
 
+Install the Splunk Distribution of OpenTelemetry Java manually
+==================================================================
+
+Follow these instructions to install the Splunk Distribution of OpenTelemetry Java:
+
+- :ref:`install-enable-jvm-agent`
+   - :ref:`enable_profiling_java` 
+   - :ref:`enable_automatic_metric_collection`
+   - :ref:`ignore_endpoints_java`
+- :ref:`configure-java-instrumentation`
+
 .. _install-enable-jvm-agent:
 
 Install and activate the Java agent
-===================================================================
+-----------------------------------------------------------
 
 Follow these steps to automatically instrument your application using the Java agent:
 
@@ -101,11 +112,11 @@ If you need to add custom attributes to spans or want to manually generate spans
 .. _enable_profiling_java:
 
 Activate AlwaysOn Profiling
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
 
-To activate memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+To activate memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
 
 The following example shows how to activate the profiler using the system property:
 
@@ -124,7 +135,7 @@ See :ref:`get-data-in-profiling` for more information. For more settings, see :r
 .. _enable_automatic_metric_collection:
 
 Activate metrics collection
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To activate automatic metric collection, activate the metrics feature using a system property argument. You can also use the ``SPLUNK_METRICS_ENABLED`` environment variable.
 
@@ -142,7 +153,7 @@ If your metrics endpoint is different than the default value, set the ``SPLUNK_M
 .. _ignore_endpoints_java:
 
 Ignore specific endpoints
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, the Java agent collects traces from all the endpoints of your application. To ignore specific endpoints, use the ``rules`` sampler and define ``drop`` rules.
 
@@ -162,10 +173,19 @@ In the following example, the sampler drops all ``SERVER`` spans whose endpoints
 
 See :ref:`trace-sampling-settings-java` for more information.
 
+.. _configure-java-instrumentation:
+
+Configure the Java agent
+-----------------------------------------------------------
+
+You can configure the agent using environment variables or by setting system properties as runtime arguments. For more details about both methods, see :ref:`configuration-methods-java`.
+
+For advanced configuration of the JVM agent, like changing trace propagation formats, correlating traces and logs, or activating custom sampling, see :ref:`advanced-java-otel-configuration`.
+
 .. _kubernetes_java_agent:
 
 Deploy the Java agent in Kubernetes
-==========================================================
+-----------------------------------------------------------
 
 To deploy the Java agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -198,7 +218,7 @@ The following example shows how to update a deployment to expose environment var
 .. _docker_java_agent:
 
 Deploy the Java agent in Docker
-==========================================================
+-----------------------------------------------------------
 
 To deploy the Java agent in Docker, edit the Dockerfile for your application image to add the following commands:
 
@@ -211,19 +231,10 @@ To deploy the Java agent in Docker, edit the Dockerfile for your application ima
 
 Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
 
-.. _configure-java-instrumentation:
-
-Configure the Java agent
-===========================================================
-
-You can configure the agent using environment variables or by setting system properties as runtime arguments. For more details about both methods, see :ref:`configuration-methods-java`.
-
-For advanced configuration of the JVM agent, like changing trace propagation formats, correlating traces and logs, or enabling custom sampling, see :ref:`advanced-java-otel-configuration`.
-
 .. _export-directly-to-olly-cloud-java:
 
 Send data directly to Observability Cloud
-==============================================================
+-----------------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -258,6 +269,6 @@ For more information on the ingest API endpoints, see :new-page:`Send APM traces
 .. _instrument_aws_lambda_functions:
 
 Instrument Lambda functions
-=========================================================
+-----------------------------------------------------------
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information. 

@@ -9,15 +9,16 @@ Chef
 
 Chef is a configuration management technology used to manage infrastructure on physical or virtual machines. Chef uses cookbooks to define a scenario. 
 
-Cookbooks are fundamental working units of Chef, which consists of all the details related to working units, having the capability to modify configuration and the state of any system configured as a node on Chef infrastructure. Cookbooks can perform multiple tasks.
+Cookbooks are fundamental working units of Chef, which consists of all the details related to working units, having the capability to modify configuration and the state of any system configured as a node on Chef infrastructure. Cookbooks can run multiple tasks.
 
 Prerequisites
 =========================
+
 You need the following resources to use Chef:
 
 * :ref:`Splunk Access Token <admin-org-tokens>`
 * :new-page:`Splunk Realm <https://dev.splunk.com/observability/docs/realms_in_endpoints/>`
-* Double-check exposed ports to make sure your environment doesn't have conflicts. Ports can be changed in the collector's configuration. See :ref:`otel-exposed-endpoints` for more information.
+* Double-check exposed ports to make sure your environment doesn't have conflicts. You can change ports in the Collector configuration. See :ref:`otel-exposed-endpoints` for more information.
 
 Linux
 ------------------------
@@ -27,7 +28,7 @@ The following Linux distributions and versions:
 * Amazon Linux: 2
 * CentOS, Red Hat, Oracle: 7, 8
 * Debian: 9, 10, 11
-* SUSE: 12, 15 (Note: Only for Collector versions v0.34.0 or higher. Log collection with Fluentd not currently supported.)
+* SUSE: 12, 15 (Note: Only for Collector versions 0.34.0 or higher. Log collection with Fluentd not currently supported.)
 * Ubuntu: 18.04, 20.04, 22.04
 
 Windows
@@ -40,6 +41,7 @@ The following Windows versions. All versions require using PowerShell 3.0 or new
 
 Getting started
 ========================
+
 Download the Chef cookbook from the :new-page:`Chef Supermarket <https://supermarket.chef.io/cookbooks/splunk_otel_collector>`, which is the site for community cookbooks. 
 
 To install the Collector and Fluentd, include the ``splunk_otel_collector::default`` recipe in the ``run_list``, and set the attributes on the node's ``run_state``. The following is an example configuration that shows how to configure the required ``splunk_access_token`` attribute and some optional attributes:
@@ -111,7 +113,7 @@ For Linux, the cookbook accepts the attributes described in the following table:
      - The Collector package repository stage to use. Can be ``release``, ``beta``, or ``test``.
      - ``release``
    * - ``with_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for enabling Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
+     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
      - ``true``
    * - ``fluentd_version``
      -  Version of the td-agent (Fluentd) package to install 
@@ -122,6 +124,23 @@ For Linux, the cookbook accepts the attributes described in the following table:
    * - ``fluentd_config_dest``
      - Destination path to the Fluentd configuration file on the node. Only applicable if ``$with_fluentd`` is set to ``true``.
      - ``/etc/otel/collector/fluentd/fluent.conf``
+
+.. _chef-zero-config-java:
+
+Configure auto instrumentation for Java (Linux only)
+-------------------------------------------------------------
+
+You can automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`configure-auto-instrumentation` for more information. 
+
+The following table shows the variables that can be configured for this Chef cookbook:
+
+.. list-table::
+   :widths: 20 30 50
+   :header-rows: 1
+
+   * - Name
+     - Description
+     - Default value
    * - ``with_auto_instrumentation``
      - Whether to install or manage :ref:`auto-instrumentation-java`. When set to ``true``, the ``splunk-otel-auto-instrumentation`` deb/rpm package is downloaded and installed from the Collector repository. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
      - ``false``
@@ -140,6 +159,21 @@ For Linux, the cookbook accepts the attributes described in the following table:
    * - ``auto_instrumentation_service_name``
      - Explicitly sets the service name for the instrumented Java application, for example, ``my.service``. By default, the service name is automatically derived from the arguments of the Java executable on the node. However, if this variable is set to a non-empty value, the value overrides the derived service name and is added to the ``/usr/lib/splunk-instrumentation/instrumentation.conf`` configuration file on the node. The Java application on the node needs to be started or restarted separately after installation for auto instrumentation to take effect.
      - ``''``
+   * - ``auto_instrumentation_generate_service_name``
+     - Set to ``false`` to prevent the preloader from setting the ``OTEL_SERVICE_NAME`` environment variable.
+     - ``true``
+   * - ``auto_instrumentation_disable_telemetry``
+     - Prevents the preloader from sending the ``splunk.linux-autoinstr.executions`` metric to the Collector.
+     - ``false``
+   * - ``auto_instrumentation_enable_profiler``
+     - Activates or deactibvates AlwaysOn CPU Profiling.
+     - ``false``
+   * - ``auto_instrumentation_enable_profiler_memory``
+     - Activates or deactivates AlwaysOn Memory Profiling.
+     - ``false``
+   * - ``auto_instrumentation_enable_metrics``
+     - Activates or deactivates JVM metrics. 
+     - ``false``
 
 Attributes for Windows
 ===========================
@@ -204,7 +238,7 @@ For Windows, the cookbook accepts the attributes described in the following tabl
      - The Collector package repository stage to use. Can be ``release``, ``beta``, or ``test``.
      - ``release``
    * - ``with_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for enabling Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
+     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
      - ``true``
    * - ``fluentd_version``
      -  Version of the td-agent (Fluentd) package to install 

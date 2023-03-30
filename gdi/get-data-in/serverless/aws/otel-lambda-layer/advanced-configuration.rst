@@ -9,7 +9,7 @@ Configure the Splunk OpenTelemetry Lambda Layer
 
 You can configure the Splunk OpenTelemetry Lambda Layer to suit most of your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. See :ref:`set-env-vars-otel-lambda`.
 
-You can modify the following settings to fully configure the Lambda layer, including options for enabling new features that are unique to the Splunk OpenTelemetry Lambda Layer.
+You can modify the following settings to fully configure the Lambda layer, including options for activating new features that are unique to the Splunk OpenTelemetry Lambda Layer.
 
 .. _main-lambda-agent-settings:
 
@@ -68,11 +68,11 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_TRACES_EXPORTER``
      - Trace exporter to use. You can set multiple comma-separated values. Possible values are ``otlp`` and ``jaeger-thrift-splunk``.
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
-     - The OTLP endpoint. When you set a value for the ``SPLUNK_REALM`` environment variable, the default endpoint is in the form ``https://ingest.<realm>.signalfx.com/v2/trace/otlp``.
+     - The OTLP endpoint. This defaults to the collector running on localhost, ``http://localhost:4318``.
    * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
      - The endpoint for the Jaeger exporter. When you set a value for the ``SPLUNK_REALM`` environment variable, the default endpoint is in the form ``https://ingest.<realm>.signalfx.com/v2/trace``.
 
-.. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to Observability Cloud ingest endpoints.
+.. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to a Collector run in the Lambda layer which sends the data to Observability Cloud ingest endpoints.
 
 .. _trace-propagation-configuration-lambda:
 
@@ -147,6 +147,6 @@ Other settings
    * - ``SPLUNK_LAMBDA_SLS_ZIP``
      - Set to ``true`` to instrument Python libraries compressed using the Serverless Framework. The default value is ``false``.
    * - ``OTEL_PYTHON_DISABLED_INSTRUMENTATIONS``
-     - Comma-separated list of Python instrumentations you want to disable. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
+     - Comma-separated list of Python instrumentations you want to deactivate. For a list of automatically loaded instrumentations, see the requirements list in the OpenTelemetry repository on GitHub: https://github.com/open-telemetry/opentelemetry-lambda/blob/main/python/src/otel/otel_sdk/requirements-nodeps.txt
 
-.. caution:: Enabling ``DEBUG`` logging might increase AWS CloudWatch costs.
+.. caution:: Activating ``DEBUG`` logging might increase AWS CloudWatch costs.
