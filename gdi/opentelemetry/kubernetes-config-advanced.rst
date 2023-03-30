@@ -7,8 +7,48 @@ Advanced configuration for Kubernetes
 .. meta::
       :description: Advanced configurations for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
-See the following advanced configuration options for the Collector for Kubernetes.
+See the following advanced configuration options for the Collector for Kubernetes. 
 
+For basic Helm chart configuration, see :ref:`otel-kubernetes-config`. For log configuration, refer to :ref:`otel-kubernetes-config-logs`.
+
+Override the underlying OpenTelemetry agent configuration
+==============================================================
+
+You can override the underlying OpenTelemetry agent configuration to use your own OpenTelemetry Agent configuration. To do this, include a custom configuration in the ``agent.config`` parameter in the values.yaml configuration. This custom configuration is merged into the default agent configuration. Parts of the configuration (for example, ``service``, ``pipelines``, ``logs``, and ``processors`` need to be fully re-defined after the files are merged.
+
+The following example shows a ``values.yaml`` file with custom gateway values:
+
+.. code-block:: yaml
+
+   clusterName: my-cluster
+   splunkObservability:
+     realm: us0
+     accessToken: my-access-token
+
+   agent:
+     config:
+       exporters:
+         otlp:
+           endpoint: <custom-gateway-url>:4317
+           insecure: true
+         signalfx:
+           ingest_url: http://<custom-gateway-url>:9943
+           api_url: http://<custom-gateway-url>:6060
+       service:
+         pipelines:
+           traces:
+             exporters: [otlp, signalfx]
+           metrics:
+             exporters: [otlp]
+           logs:
+             exporters: [otlp]
+
+   clusterReceiver:
+     config:
+       exporters:
+         signalfx:
+           ingest_url: http://<custom-gateway-url>:9943
+           api_url: http://<custom-gateway-url>:6060
 
 Run the container in non-root user mode
 ==================================================

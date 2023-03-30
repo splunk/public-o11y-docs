@@ -100,6 +100,19 @@ For example:
   clusterName: my-k8s-cluster
   cloudProvider: aws
 
+.. _otel-kubernetes-config-token:
+
+Provide tokens as a secret
+=================================
+
+Instead of having the tokens as clear text in the config file, you can provide them as a secret created before deploying the chart. See :new-page:`secret-splunk.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/templates/secret-splunk.yaml>` for the required fields.
+
+.. code-block:: yaml
+
+  secret:
+    create: false
+    name: your-secret
+
 Deactivate particular types of telemetry
 ============================================
 
@@ -201,42 +214,3 @@ This distribution operates similarly to the ``eks`` distribution, but with the f
 * Since Fargate nodes use a VM boundary to prevent access to host-based resources used by other pods, pods are not able to reach their own kubelet. The cluster receiver for the Fargate distribution has two primary differences between regular ``eks`` to work around this limitation:
    * The configured cluster receiver is deployed as a two-replica StatefulSet instead of a Deployment, and uses a Kubernetes Observer extension that discovers the cluster's nodes and, on the second replica, its pods for user-configurable receiver creator additions.Using this observer dynamically creates the Kubelet Stats receiver instances that report kubelet metrics for all observed Fargate nodes. The first replica monitors the cluster with a ``k8s_cluster`` receiver, and the second cluster monitors all kubelets except its own (due to an EKS/Fargate networking restriction).
    * The first replica's Collector monitors the second's kubelet. This is made possible by a Fargate-specific ``splunk-otel-eks-fargate-kubeletstats-receiver-node`` node label. The Collector ClusterRole for ``eks/fargate`` allows the ``patch`` verb on ``nodes`` resources for the default API groups to allow the cluster receiver's init container to add this node label for designated self monitoring.
-
-Override the underlying OpenTelemetry agent configuration
-==============================================================
-
-You can override the underlying OpenTelemetry agent configuration to use your own OpenTelemetry Agent configuration. To do this, include a custom configuration in the ``agent.config`` parameter in the values.yaml configuration. This custom configuration is merged into the default agent configuration. Parts of the configuration (for example, ``service``, ``pipelines``, ``logs``, and ``processors`` need to be fully re-defined after the files are merged.
-
-The following example shows a ``values.yaml`` file with custom gateway values:
-
-.. code-block:: yaml
-
-   clusterName: my-cluster
-   splunkObservability:
-     realm: us0
-     accessToken: my-access-token
-
-   agent:
-     config:
-       exporters:
-         otlp:
-           endpoint: <custom-gateway-url>:4317
-           insecure: true
-         signalfx:
-           ingest_url: http://<custom-gateway-url>:9943
-           api_url: http://<custom-gateway-url>:6060
-       service:
-         pipelines:
-           traces:
-             exporters: [otlp, signalfx]
-           metrics:
-             exporters: [otlp]
-           logs:
-             exporters: [otlp]
-
-   clusterReceiver:
-     config:
-       exporters:
-         signalfx:
-           ingest_url: http://<custom-gateway-url>:9943
-           api_url: http://<custom-gateway-url>:6060
