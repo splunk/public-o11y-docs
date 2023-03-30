@@ -1178,7 +1178,7 @@ For information about these integrations:
 Notification services
 --------------------------------------------
 
-These integrations enable you to send Observability Cloud alert notifications to the following third-party notification services:
+These integrations let you send Observability Cloud alert notifications to the following third-party notification services:
 
 - Amazon EventBridge
 - BigPanda
@@ -1198,7 +1198,7 @@ For more information about integrating with notification services, see :ref:`adm
 Login services
 --------------------------------------------
 
-These login service integrations enable your users to single sign-on (SSO) to Observability Cloud using a third-party identity provider (IdP) that uses SAML SSO or a custom URL that you specify.
+These login service integrations allow your users to single sign-on (SSO) to Observability Cloud using a third-party identity provider (IdP) that uses SAML SSO or a custom URL that you specify.
 
 - Active Directory FS
 - Azure Active Directory
@@ -1215,7 +1215,7 @@ For more information about configuring an SSO integration, see :ref:`sso-label`.
 Data link destinations
 --------------------------------------------
 
-Data links enable you to link metadata to the following destinations outside of Observability Cloud:
+Data links let you link metadata to the following destinations outside of Observability Cloud:
 
 - Splunk Cloud Platform
 - Splunk Enterprise
