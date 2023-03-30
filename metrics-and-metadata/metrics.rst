@@ -72,7 +72,7 @@ These are the most relevant categories for metrics:
   * - Custom
     - Metrics reported to Observability Cloud outside of those reported by default, such as host, container, or bundled metrics. Custom metrics might result in increased data ingest costs.
 
-Metric category impacts billing. Read more in :ref:`about-custom-high-res`.
+The type of metric category might impact billing. Read more in :ref:`about-custom-high-res`.
 
 Metric metadata
 ----------------------
