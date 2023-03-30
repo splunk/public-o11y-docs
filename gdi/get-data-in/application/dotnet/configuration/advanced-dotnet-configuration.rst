@@ -178,7 +178,7 @@ The following settings control instrumentations and tracing behavior:
    * - ``SIGNALFX_RECORDED_VALUE_MAX_LENGTH``
      - Maximum length of the value of an attribute. Values longer than this value are truncated. Values are discarded entirely when set to ``0``, and ignored when set to a negative value. The default value is ``12000``.
    * - ``SIGNALFX_DISABLED_INTEGRATIONS``
-     - Comma-separated list of library instrumentations you want to disable. Each value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
+     - Comma-separated list of library instrumentations you want to deactivate. Each value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
    * - ``SIGNALFX_TRACE_{0}_ENABLED``
      - Activates or deactivates a specific instrumentation library. For example, to deactivate the Kafka instrumentation, set ``SIGNALFX_TRACE_Kafka_ENABLED`` to ``false``. The value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
 

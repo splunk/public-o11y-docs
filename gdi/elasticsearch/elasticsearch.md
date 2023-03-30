@@ -108,7 +108,7 @@ monitors:
 ### Enhanced (custom) metrics
 
 The `elasticsearch` monitor collects a subset of node stats of JVM, process, HTTP,
-transport, indices, and thread pool stats. It is possible to enable
+transport, indices, and thread pool stats. It is possible to activate
 enhanced stats for each stat group separately.  Note that these metrics
 get categorized under the _custom_ group if you are on host-based
 pricing. This is an example of a configuration that collects enhanced (custom) metrics:

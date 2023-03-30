@@ -52,7 +52,7 @@ For example, consider a scenario with hundreds of Prometheus endpoints to scrape
 In this scenario:
 
 * Scaling the Prometheus receivers requires coordination among the scrapers to decide which scraper goes to which endpoint, so set up an architecture that can scale each signal individually. 
-* Given that the OTLP receiver enables the ingestion of all telemetry types, application metrics and traces can be on the same instance, so you can scale them horizontally when needed.
+* Given that the OTLP receiver  allows the ingestion of all telemetry types, application metrics and traces can be on the same instance, so you can scale them horizontally when needed.
 
 When to scale
 ------------------------------------------------------------
