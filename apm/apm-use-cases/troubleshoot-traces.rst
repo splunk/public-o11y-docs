@@ -27,7 +27,7 @@ Customer support shares a trace ID which Alex uses to pull up the trace to begin
 Alex groups traces by specific tags
 =====================================
 
-Because ``http.url`` is an unindexed span, Alex can't use Tag Spotlight to see a breakdown in requests and errors by ``http.url``. So, Alex goes to Trace Analyzer, and selects ``http.url`` in the :guilabel:`Group traces by`` menu to quickly understand the prevalence of errors for the specific http.url value that they made note of from the problematic trace. Alex notes that over 10% of traces for the ``/checkout/{cardId}`` request have errors. 
+Because ``http.url`` is an unindexed span, Alex can't use Tag Spotlight to see a breakdown in requests and errors by ``http.url``. So, Alex goes to Trace Analyzer and selects ``http.url`` in the :guilabel:`Group traces by` menu to quickly understand the prevalence of errors for the specific ``http.url`` value that they made note of from the problematic trace. Alex notes that over 10% of traces for the ``/checkout/{cardId}`` request have errors. 
 
 ..  image:: /_images/apm/apm-use-cases/TraceAnalyzerGroup.png
     :width: 95%
@@ -35,7 +35,7 @@ Because ``http.url`` is an unindexed span, Alex can't use Tag Spotlight to see a
 
 .. _trace-analyzer-filter:
 
-Alex filter Trace Analyzer by http url value
+Alex filters Trace Analyzer by http url value
 ==============================================
 
 Alex adds the ``/checkout/{cardId}`` http url to the Trace Analyzer filter so that he can review traces for this specific endpoint.
@@ -58,7 +58,7 @@ Now, Alex can review and compare successful traces for the ``/checkout/{cardId}`
 Summary
 ====================================================================================
 
-Thanks to the high resolution data provided by full-fidelity tracing and to the features of Trace Analyzer, Alex managed to troubleshoot an unknown issue and set up alerts in case it happens again.
+Using the high-resolution data provided by full-fidelity tracing Alex managed to quickly determine the prevalence of an unknown. Using the grouping and filtering functionality of Trace Analyzer he quickly isolated successful and problematic traces to provide to his developers to isolate an the issue. 
 
 Learn more
 ===============
