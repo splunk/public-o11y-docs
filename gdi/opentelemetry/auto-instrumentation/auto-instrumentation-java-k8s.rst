@@ -132,7 +132,7 @@ If the ``injection-status`` annotation is set to ``success``, you have activated
 Optionally configure instrumentation
 -----------------------------------------
 
-The default settings for auto instrumentation are sufficient for most cases. You can add advanced configuration like enabling custom sampling and including custom data in the reported spans with environment variables and Java system properties.
+The default settings for auto instrumentation are sufficient for most cases. You can add advanced configuration like activating custom sampling and including custom data in the reported spans with environment variables and Java system properties.
 
 For example, if you want every span to include the key-value pair ``build.id=feb2023_v2``, set the ``OTEL_RESOURCE_ATTRIBUTES`` environment variable.
 
