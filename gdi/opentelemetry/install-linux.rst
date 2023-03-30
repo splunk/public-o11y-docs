@@ -121,7 +121,7 @@ By default, the Fluentd service is installed and configured to forward log event
 
 The following Fluentd plugins are also installed:
 
-* ``capng_c`` for enabling Linux capabilities.
+* ``capng_c`` for activating Linux capabilities.
 * ``fluent-plugin-systemd`` for systemd journal log collection.
 
 Additionally, the following dependencies are installed as prerequisites for the Fluentd plugins:
@@ -415,7 +415,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with yum
     yum install -y libcap
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -430,7 +430,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with dnf
     dnf install -y libcap
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -445,7 +445,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with zypper
     zypper install -y libcap-progs
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/zypp/repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]

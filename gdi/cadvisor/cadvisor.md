@@ -10,7 +10,7 @@ This receiver pulls metrics directly from cAdvisor, which runs by default on por
 
 If you are using Kubernetes, consider the {ref}`kubelet-stats-receiver` because many Kubernetes nodes do not expose cAdvisor on a network port, even though they are running it within Kubelet.
 
-If you are running containers using Docker and the {ref}`docker` receiver, metrics duplication might happen, with the same metric data sent under different metric names. Consider not enabling the Docker Containers receiver in a Kubernetes environment, or use filtering to allow only certain metrics. Deactivating the Docker Containers receiver causes the built-in Docker dashboards to be empty, though container metrics are available on the Kubernetes dashboards instead.
+If you are running containers using Docker and the {ref}`docker` receiver, metrics duplication might happen, with the same metric data sent under different metric names. Consider not activating the Docker Containers receiver in a Kubernetes environment, or use filtering to allow only certain metrics. Deactivating the Docker Containers receiver causes the built-in Docker dashboards to be empty, though container metrics are available on the Kubernetes dashboards instead.
 
 ### Benefits
 

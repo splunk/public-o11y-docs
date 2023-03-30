@@ -128,7 +128,7 @@ Activate AlwaysOn Profiling
 
 To activate AlwaysOn Profiling, set the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true``.
 
-To activate memory profiling, set the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+To activate memory profiling, set the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
 
 See :ref:`get-data-in-profiling` for more information. For more settings, see :ref:`profiling-configuration-dotnet`.
 
