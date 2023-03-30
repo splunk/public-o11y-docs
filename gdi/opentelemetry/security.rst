@@ -100,7 +100,7 @@ More information on configuring OpenTelemetry components is provided in the foll
 
 Permissions
 ------------------------
-The Collector supports running as a custom user and must not be run as a root or admin user. For the majority of use cases, the Collector does not require privileged access to function. Some components might require privileged access; be careful when enabling these components. Collector components might also require external permissions including network access or RBAC.
+The Collector supports running as a custom user and must not be run as a root or admin user. For the majority of use cases, the Collector does not require privileged access to function. Some components might require privileged access; be careful when activating these components. Collector components might also require external permissions including network access or RBAC.
 
 More information about permissions is provided in the following sections.
 
