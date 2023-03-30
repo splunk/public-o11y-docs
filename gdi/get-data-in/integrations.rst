@@ -1178,7 +1178,7 @@ For information about these integrations:
 Notification services
 --------------------------------------------
 
-These integrations let you to send Observability Cloud alert notifications to the following third-party notification services:
+These integrations let you send Observability Cloud alert notifications to the following third-party notification services:
 
 - Amazon EventBridge
 - BigPanda
