@@ -10,7 +10,7 @@ Splunk Observability Cloud and the Splunk platform
 .. toctree::
    :hidden:
 
-   Unified Identity <unified-id-unified-identity>
+   Unified Identity <unified-id/gitunified-identity>
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
    Collaborate on observability <practice-reliability/collaboration>
