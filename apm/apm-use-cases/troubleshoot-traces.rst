@@ -14,6 +14,7 @@ These are the steps Alex took to determine how pervasive the checkout errors are
 #. :ref:`trace-analyzer-errors`
 #. :ref:`trace-analyzer-group`
 #. :ref:`trace-analyzer-filter`
+#. :ref:`trace-analyzer-compare`
 
 .. _trace-analyzer-errors:
 
