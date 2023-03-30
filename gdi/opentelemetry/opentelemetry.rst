@@ -48,7 +48,7 @@ To get started with the Collector, see :ref:`opentelemetry-resources`:
 
 #. Check the :ref:`requirements <otel-requirements>`.
 #. :ref:`otel-install-platform`. Get instructions for installing the Collector on a variety of platforms. Or use :ref:`our guided install <collector-guided-install>`.
-#. Learn about the discovery mode. See :ref:`discovery-mode`.
+#. Learn about the discovery mode. See :ref:`discovery_mode`.
 #. Learn about the available :ref:`configuration options <otel-configuration>`. 
 #. :ref:`otel-troubleshooting`. Try these troubleshooting techniques and learn how to open a support request.
 
