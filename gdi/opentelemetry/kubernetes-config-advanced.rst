@@ -27,6 +27,9 @@ If your control plane is using non-standard specifications, then you can provide
 
 The Collector relies on pod-level network access to collect metrics from the control plane pods. Since most cloud Kubernetes as a service distributions don't expose the control plane pods to the end user, collecting metrics from these distributions is not supported.
 
+Availability and configuration instructions
+-----------------------------------------------------------------------------
+
 The following distributions are supported:
 
 * Kubernetes 1.22 (kops created)
@@ -44,14 +47,17 @@ See the :new-page:`agent template <https://github.com/signalfx/splunk-otel-colle
 
 Refer to the following documentation for information on the configuration options and supported metrics for each control plane receiver:
 
-* :ref:`CoreDNS <coredns>`
-* :ref:`etcd`. To retrieve etcd metrics, see :new-page:`Setting up etcd metrics <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#setting-up-etcd-metrics>`
-* :new-page:`Kubernetes controller manager <https://docs.splunk.com/Observability/gdi/kube-controller-manager/kube-controller-manager.html>`
-* :new-page:`Kubernetes API server <https://docs.splunk.com/Observability/gdi/kubernetes-apiserver/kubernetes-apiserver.html>`
-* :new-page:`Kubernetes proxy <https://docs.splunk.com/Observability/gdi/kubernetes-proxy/kubernetes-proxy.html>`
-* :new-page:`Kubernetes scheduler <https://docs.splunk.com/Observability/gdi/kubernetes-scheduler/kubernetes-scheduler.html>`
+* :ref:`CoreDNS <coredns>`.
+* :ref:`etcd`. To retrieve etcd metrics, see :new-page:`Setting up etcd metrics <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#setting-up-etcd-metrics>`.
+* :ref:`Kubernetes controller manager <kube-controller-manager>`.
+* :ref:`Kubernetes API server <kubernetes-apiserver>`.
+* :ref:`Kubernetes proxy <kubernetes-proxy>`.
+* :ref:`Kubernetes scheduler <kubernetes-scheduler>`.
 
-There is a known limitation when using the Kubernetes proxy control plane receiver. When using a kops created Kubernetes cluster, a network connectivity issue has been reported that prevents proxy metrics from being collected. The limitation can be addressed by updating the kubeProxy metric bind address in the kops cluster specification:
+Known issue
+-----------------------------------------------------------------------------
+
+There is a known limitation for the Kubernetes proxy control plane receiver. When using a Kubernetes cluster created via kops, a network connectivity issue prevents proxy metrics from being collected. The limitation can be addressed by updating the kubeProxy metric bind address in the kops cluster specification:
 
 #. Set ``kubeProxy.metricsBindAddress: 0.0.0.0`` in the kops cluster specification.
 #. Run ``kops update cluster {cluster_name}`` and ``kops rolling-update cluster {cluster_name}`` to deploy the change.
@@ -243,6 +249,7 @@ Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you st
 2. Add the following custom ClusterRole rule in your values.yaml file along with all other required fields like ``clusterName``, ``splunkObservability`` or ``splunkPlatform``:
 
   .. code-block:: yaml
+
     rbac:
       customRules:
         - apiGroups:     [extensions]
@@ -253,4 +260,5 @@ Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you st
 3. Install the Helm chart:
 
   .. code-block:: yaml
+
     helm install my-splunk-otel-collector -f my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
