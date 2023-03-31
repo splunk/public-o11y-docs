@@ -6,8 +6,8 @@ Use controls for sensitive data in Splunk RUM
 
 By default, Splunk RUM doesn't capture any sensitive information such as data filled in a text box, the string or label of a button, or the POST request or response body. However, you might have the possibility of a sensitive data leak in the following situations: 
 
-* names of page or screen elements
-* query parameters in URLs that may contain sensitive information
+* Names of page or screen elements
+* Query parameters in URLs that might contain sensitive information
 
 Splunk RUM provides additional controls in its instrumentation libraries that allow for additional sanitization of your data. 
 
@@ -30,7 +30,7 @@ This instrumentation uses the ``splunk-otel-js-web`` library.
 
     * - :strong:`Scenario`
       - :strong:`Command`
-    * - Drop or redact parts of an attribute value.  Specify the name, or parse one or more attributes specified by their name and regex matched value. 
+    * - Drop or redact parts of an attribute value.  Specify the name, or parse one or more attributes specified by their name and use regular expressions to match the value. 
       - ``onAttributesSerializing``
 
     * - Drop specific attributes across all spans or events.
@@ -65,7 +65,7 @@ This instrumentation uses the ``splunk-otel-android`` library.
 Splunk RUM for mobile iOS instrumentation 
 ================================================
 
-This instrumentation uses the ``splunk-otel-ios`` library. For an example of these commands, see:
+This instrumentation uses the ``splunk-otel-ios`` library. 
 
 .. list-table::
     :header-rows: 1
@@ -86,7 +86,7 @@ This instrumentation uses the ``splunk-otel-ios`` library. For an example of the
 Code snippets and examples
 ===================================
 
-This code snippet shows how to use ``onAttributesSerializing`` to use regex to modify URLs.  
+This code snippet shows how to use ``onAttributesSerializing`` to use regular expressions to modify URLs.  
 
 .. code:: js
 
