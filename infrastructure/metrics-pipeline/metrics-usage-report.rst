@@ -62,7 +62,10 @@ See the following table for more information on metric category types.
      - Custom
 
    * - 4
-     - High resolution
+     - Hi-resolution
+
+   * - 5
+     - Internal
 
    * - 6
      - Tracing metrics
@@ -76,6 +79,9 @@ See the following table for more information on metric category types.
    * - 9
      - APM container   
 
+   * - 10
+     - APM identity   
+
    * - 11
      - APM bundled metrics  
 
@@ -86,10 +92,10 @@ See the following table for more information on metric category types.
      - APM Monitoring MetricSets
 
    * - 14
-     - Infrastructure Monitoring Function
+     - Infrastructure Monitoring function
 
    * - 15
-     - APM Function
+     - APM function
 
    * - 16
      - RUM Troubleshooting MetricSets
@@ -99,6 +105,9 @@ See the following table for more information on metric category types.
 
    * - 18
      - Network Explorer metrics
+
+   * - 19
+     - Runtime metrics
 
    * - 20
      - Synthetics metrics
