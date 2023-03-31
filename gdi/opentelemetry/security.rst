@@ -7,7 +7,7 @@ Security guidelines, permissions, and dependencies
 .. meta::
       :description: Security landing. Describes how to ensure that the Splunk Distribution of OpenTelemetry Collector is secure.
 
-The Splunk Distribution of OpenTelemetry Collector defaults to operating in a secure manner, but is configuration driven, so you need at least a basic understanding of architecture and functionality to manage security. See :ref:`collector-architecture` and :ref:`otel-deployment-modes` for more information.
+The Splunk Distribution of OpenTelemetry Collector defaults to operating in a secure manner, but is configuration driven, so you need at least a basic understanding of architecture and functionality to manage security. See :ref:`collector-architecture` and :ref:`otel-deployment-mode` for more information.
 
 .. caution:: Do not report security vulnerabilities by using public GitHub issue reports. See :new-page:`Report a Security Vulnerability <https://www.splunk.com/en_us/product-security/report.html>` to report security issues.
 

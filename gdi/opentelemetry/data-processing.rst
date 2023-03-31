@@ -9,7 +9,7 @@ Configure pipelines
 
 A pipeline defines a path the data follows in the Collector starting from reception, then further processing or modification, and finally exiting the Collector through exporters.
 
-Pipelines operate on three data types: logs, traces, and metrics. The data type is a property of the pipeline defined by its configuration. Receivers, exporters, and processors used in a pipeline must support the particular data type, otherwise the "ErrDataTypeIsNotSupported" error message is reported when the configuration is loaded.
+Pipelines operate on three data types: logs, traces, and metrics. The data type is a property of the pipeline defined by its configuration. Receivers, exporters, and processors used in a pipeline must support the particular data type, otherwise the "ErrDataTypeIsNotSupported" error message is reported when the configuration is loaded. To learn more about data in Observability Cloud, see :ref:`data-model`.
 
 There can be one or more receivers in a pipeline. Data from all receivers is pushed to the first processor, which performs processing on it and then pushes it to the next processor and so on until the last processor in the pipeline pushes the data to the exporters. Each exporter gets a copy of each data element. The last processor uses a data fan-out connector to fan out (distribute) the data to multiple exporters.
 
@@ -29,8 +29,6 @@ A pipeline configuration typically looks like this:
          receivers: [otlp, jaeger, zipkin]
          processors: [memory_limiter, batch]
          exporters: [otlp, jaeger, zipkin]
-
-|br|
 
 This example defines a pipeline for ``traces``, with three receivers, two processors, and three exporters. The following table describes the receivers, processors, and exporters used in this example.
 
