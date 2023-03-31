@@ -11,44 +11,10 @@ See the following advanced configuration options for the Collector for Kubernete
 
 For basic Helm chart configuration, see :ref:`otel-kubernetes-config`. For log configuration, refer to :ref:`otel-kubernetes-config-logs`.
 
-Override the default OpenTelemetry agent configuration
+Override the default configuration
 ==============================================================
 
-You can override the default OpenTelemetry agent configuration to use your own configuration. To do this, include a custom configuration using the ``agent.config`` parameter in the values.yaml file. This custom configuration is merged into the default agent configuration. Parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``, need to be fully redefined after the files are merged.
-
-The following example shows a ``values.yaml`` file with custom gateway values:
-
-.. code-block:: yaml
-
-   clusterName: my-cluster
-   splunkObservability:
-     realm: us0
-     accessToken: my-access-token
-
-   agent:
-     config:
-       exporters:
-         otlp:
-           endpoint: <custom-gateway-url>:4317
-           insecure: true
-         signalfx:
-           ingest_url: http://<custom-gateway-url>:9943
-           api_url: http://<custom-gateway-url>:6060
-       service:
-         pipelines:
-           traces:
-             exporters: [otlp, signalfx]
-           metrics:
-             exporters: [otlp]
-           logs:
-             exporters: [otlp]
-
-   clusterReceiver:
-     config:
-       exporters:
-         signalfx:
-           ingest_url: http://<custom-gateway-url>:9943
-           api_url: http://<custom-gateway-url>:6060
+You can override the :ref:`default OpenTelemetry agent configuration <otel-configuration-ootb>` to use your own configuration. To do this, include a custom configuration using the ``agent.config`` parameter in the values.yaml file. This custom configuration is merged into the default agent configuration. Parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``, need to be fully redefined after the files are merged.
 
 Override a control plane configuration
 ==============================================================
@@ -78,7 +44,8 @@ See the :new-page:`agent template <https://github.com/signalfx/splunk-otel-colle
 
 Refer to the following documentation for information on the configuration options and supported metrics for each control plane receiver:
 
-* :new-page:`CoreDNS <https://docs.splunk.com/Observability/gdi/coredns/coredns.html>`
+* :ref:`CoreDNS <coredns>`
+* :ref:`etcd`. To retrieve etcd metrics, see :new-page:`Setting up etcd metrics <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/advanced-configuration.md#setting-up-etcd-metrics>`
 * :new-page:`Kubernetes controller manager <https://docs.splunk.com/Observability/gdi/kube-controller-manager/kube-controller-manager.html>`
 * :new-page:`Kubernetes API server <https://docs.splunk.com/Observability/gdi/kubernetes-apiserver/kubernetes-apiserver.html>`
 * :new-page:`Kubernetes proxy <https://docs.splunk.com/Observability/gdi/kubernetes-proxy/kubernetes-proxy.html>`
@@ -115,17 +82,175 @@ You can override the default configuration values used to connect to the control
                  useHTTPS: true
                  useServiceAccount: false
 
+
 Run the container in non-root user mode
 ==================================================
 
-Collecting logs often requires reading log files that are owned by the root user. By default, the container runs with ``securityContext.runAsUser = 0``, which gives the root user permission to read those files. To run the container in non-root user mode, set ``.agent.securityContext`` to ``20000`` to cause the container to run the required file system operations as UID and GID ``20000`` (this can be any other UID and GUI).
+Collecting logs often requires reading log files owned by the root user. By default, the container runs with ``securityContext.runAsUser = 0``, which gives the root user permission to read those files. 
 
-.. note::
-  Setting the ``containerRuntime:`` parameter to ``cri-o`` did not work during internal testing for logs collection.
+To run the container in non-root user mode, set ``.agent.securityContext`` to ``20000``, which makes the container to run the required file system operations as UID and GID ``20000``. You can use any other UID and GUI.
 
+.. note:: Setting the ``containerRuntime:`` parameter to ``cri-o`` did not work during internal testing for logs collection.
 
+Use the Network Explorer to collect telemetry
+==================================================
 
+:new-page:`Network Explorer <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/network-explorer-architecture.md>` allows you to collect network telemetry and send it to the :ref:`OpenTelemetry Collector gateway <collector-gateway-mode>`. 
 
+To enable the Network Explorer, set the ``enabled`` flag to ``true``:
 
+.. code-block:: yaml
 
+  networkExplorer:
+    enabled: true
 
+.. caution:: Activating the network explorer automatically activates the OpenTelemetry Collector gateway.
+
+Prerequisites
+-----------------------------------------------------------------------------
+
+Network Explorer is only supported in the following Kubernetes-based environments on Linux hosts: 
+
+* RedHat Linux 7.6+ 
+* Ubuntu 16.04+
+* Debian Stretch+
+* Amazon Linux 2
+* Google COS
+
+Modify the reducer footprint
+-----------------------------------------------------------------------------
+
+The reducer is a single pod per Kubernetes cluster. If your cluster contains a large number of pods, nodes, and services, you can increase the resources allocated to it.
+
+The reducer processes telemetry in multiple stages, with each stage partitioned into one or more shards, where each shard is a separate thread. Increasing the number of shards in each stage expands the capacity of the reducer. There are three stages: ingest, matching, and aggregation. You can set between 1 to 32 shards for each stage. There is one shard per reducer stage by default.
+
+The following example sets the reducer to use 4 shards per stage.
+
+.. code-block:: yaml
+
+  networkExplorer:
+    reducer:
+      ingestShards: 4
+      matchingShards: 4
+      aggregationShards: 4
+
+Customize network telemetry generated by the Network Explorer
+-----------------------------------------------------------------------------
+
+Metrics can be deactivated, either individually or by entire categories. See the :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` for a complete list of categories and metrics.
+
+To disable an entire category, give the category name, followed by ``.all``:
+
+.. code-block:: yaml
+
+  networkExplorer:
+    reducer:
+      disableMetrics:
+        - tcp.all
+
+Disable individual metrics by their names:
+
+.. code-block:: yaml
+
+  networkExplorer:
+    reducer:
+      disableMetrics:
+        - tcp.bytes
+
+You can mix categories and names. For example, yo disable all http metrics and the ``udp.bytes`` metric use:
+
+.. code-block:: yaml
+
+  networkExplorer:
+    reducer:
+      disableMetrics:
+        - http.all
+        - udp.bytes
+
+Reactivate metrics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To activate metrics you have deactivated, use ``enableMetrics``. 
+
+The ``disableMetrics`` flag is evaluated before ``enableMetrics``, so you can deactivate an entire category, then re-activate individual metrics in that category that you are interested in.
+
+For example, to deactivate all internal and http metrics but keep ``ebpf_net.collector_health``, use:
+
+.. code-block:: yaml
+
+  networkExplorer:
+    reducer:
+      disableMetrics:
+      - http.all
+      - ebpf_net.all
+
+      enableMetrics:
+      - ebpf_net.collector_health
+
+Configure features using gates
+==================================================
+
+Use the ``agent.featureGates``, ``clusterReceiver.featureGates``, and ``gateway.featureGates`` configs to activate or deactivate features of the ``otel-collector`` agent, ``clusterReceiver``, and gateway, respectively. These configs are used to populate the otelcol binary startup argument ``-feature-gates``. 
+
+For example, to activate ``feature1`` in the agent, activate ``feature2`` in the ``clusterReceiver``, and deactivate ``feature2`` in the gateway, run:
+
+.. code-block:: yaml
+
+  helm install {name} --set agent.featureGates=+feature1 --set clusterReceiver.featureGates=feature2 --set gateway.featureGates=-feature2 {other_flags}
+
+Set the pod security policy manually 
+==================================================
+
+Support of Pod Security Policies (PSP) was removed in Kubernetes 1.25. If you still rely on PSPs in an older cluster, you can add PSP manually:
+
+1. Run the following command to install the PSP. Don't forget to add the ``--namespace`` kubectl argument if needed:
+
+  .. code-block:: yaml
+
+    cat <<EOF | kubectl apply -f -
+    apiVersion: policy/v1beta1
+    kind: PodSecurityPolicy
+    metadata:
+      name: splunk-otel-collector-psp
+      labels:
+        app: splunk-otel-collector-psp
+      annotations:
+        seccomp.security.alpha.kubernetes.io/allowedProfileNames: 'runtime/default'
+        apparmor.security.beta.kubernetes.io/allowedProfileNames: 'runtime/default'
+        seccomp.security.alpha.kubernetes.io/defaultProfileName:  'runtime/default'
+        apparmor.security.beta.kubernetes.io/defaultProfileName:  'runtime/default'
+    spec:
+      privileged: false
+      allowPrivilegeEscalation: false
+      hostNetwork: true
+      hostIPC: false
+      hostPID: false
+      volumes:
+      - 'configMap'
+      - 'emptyDir'
+      - 'hostPath'
+      - 'secret'
+      runAsUser:
+        rule: 'RunAsAny'
+      seLinux:
+        rule: 'RunAsAny'
+      supplementalGroups:
+        rule: 'RunAsAny'
+      fsGroup:
+        rule: 'RunAsAny'
+    EOF
+
+2. Add the following custom ClusterRole rule in your values.yaml file along with all other required fields like ``clusterName``, ``splunkObservability`` or ``splunkPlatform``:
+
+  .. code-block:: yaml
+    rbac:
+      customRules:
+        - apiGroups:     [extensions]
+          resources:     [podsecuritypolicies]
+          verbs:         [use]
+          resourceNames: [splunk-otel-collector-psp]
+
+3. Install the Helm chart:
+
+  .. code-block:: yaml
+    helm install my-splunk-otel-collector -f my_values.yaml splunk-otel-collector-chart/splunk-otel-collector
