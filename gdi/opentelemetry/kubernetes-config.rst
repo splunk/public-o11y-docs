@@ -7,9 +7,9 @@ Configure Helm for Kubernetes
 .. meta::
       :description: Optional configurations for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
-After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, these are the available settings you can configure. Additionally, see also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` such as :ref:`configuring Prometheus <otel-kubernetes-config-resources>`.
+After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, these are the available settings you can configure. Additionally, see also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` and :ref:`otel-kubernetes-config-logs`.
 
-The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. Review ``values.yaml`` to understand how to configure this chart.
+The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. Review it to understand how to configure this chart.
 
 The Helm chart can also be configured to support different use cases, such as trace sampling and sending data through a proxy server. See :new-page:`Examples of chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for more information.
 
@@ -100,6 +100,49 @@ For example:
   clusterName: my-k8s-cluster
   cloudProvider: aws
 
+.. _otel-kubernetes-config-token:
+
+Provide tokens as a secret
+=================================
+
+Instead of having the tokens as clear text in the config file, you can provide them as a secret created before deploying the chart. See :new-page:`secret-splunk.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/templates/secret-splunk.yaml>` for the required fields.
+
+.. code-block:: yaml
+
+  secret:
+    create: false
+    name: your-secret
+
+
+.. _otel-kubernetes-config-resources:
+
+Add additional telemetry sources
+===========================================
+
+Use the ``autodetect`` configuration option to activate additional telemetry sources.
+
+Set ``autodetect.prometheus=true`` if you want the Collector to scrape Prometheus metrics from pods that have generic Prometheus-style annotations. Add the following annotations on pods to allow a fine control of the scraping process:
+
+* ``prometheus.io/scrape: true``: The default configuration scrapes all pods. If set to ``false``, this annotation excludes the pod from the scraping process.
+* ``prometheus.io/path``: The path to scrape the metrics from. The default value is ``/metrics``.
+* ``prometheus.io/port``: The port to scrape the metrics from. The default value is ``9090``.
+
+If the Collector is running in an Istio environment, set ``autodetect.istio=true`` to make sure that all traces, metrics, and logs reported by Istio are collected in a unified manner.
+
+For example, use the following configuration to activate automatic detection of both Prometheus and Istio telemetry sources:
+
+.. code-block:: yaml
+
+  splunkObservability:
+    accessToken: xxxxxx
+    realm: us0
+  clusterName: my-k8s-cluster
+  autodetect:
+    istio: true
+    prometheus: true
+
+.. _otel-kubernetes-deactivate-telemetry:
+
 Deactivate particular types of telemetry
 ============================================
 
@@ -120,7 +163,7 @@ Configure Windows worker nodes
 
 The Splunk Distribution of OpenTelemetry Collector for Kubernetes supports collecting metrics, traces, and logs (using OpenTelemetry native logs collection only) from Windows nodes. All Windows images are available in the ``quay.io/signalfx/splunk-otel-collector-windows`` repository.
 
-Use the following values.yaml configuration to install the Helm chart on Windows worker nodes:
+Use the following configuration to install the Helm chart on Windows worker nodes:
 
 .. code-block:: yaml
 
@@ -136,27 +179,28 @@ Use the following values.yaml configuration to install the Helm chart on Windows
 
 If you have both Windows and Linux worker nodes in your Kubernetes cluster, you need to install the Helm chart twice. One of the installations with the default configuration set to ``isWindows: false`` is applied on Linux nodes. The second installation with the values.yaml configuration (shown in the previous example) is applied on Windows nodes.
 
-Deactivate the ``clusterReceiver`` on one of the installations to avoid cluster-wide metrics duplication. To do this, add the following lines
-to the values.yaml configuration of one of the installations:
+Deactivate the ``clusterReceiver`` on one of the installations to avoid cluster-wide metrics duplication. To do this, add the following lines to the configuration of one of the installations:
 
 .. code-block:: yaml
 
    clusterReceiver:
      enabled: false
 
-Configure Google Kubernetes Engine Autopilot
+Configure Google Kubernetes Engine 
 ===========================================================
 
-To run the Collector in Google Kubernetes Engine Autopilot mode, set the ``distribution`` option to ``gke/autopilot``, as shown in the following example:
+Configure GKE Autopilot
+-----------------------------------------------------------------------------
+
+To run the Collector in GKE Autopilot mode, set the ``distribution`` option to ``gke/autopilot``:
 
 .. code-block:: yaml
 
-   distribution: gke/autopilot
+  distribution: gke/autopilot
 
 Search for "Autopilot overview" on the :new-page:`Google Cloud documentation site <https://cloud.google.com/docs>` for more information.
 
-.. note::
-  Native OpenTelemetry logs collection is not yet supported in Google Kubernetes Engine Autopilot mode.
+.. note:: GKE Autopilot doesn't support native OpenTelemetry logs collection.
 
 The Collector agent daemonset can have problems scheduling in Autopilot mode. If this happens, do the following to assign the daemonset a higher priority class to ensure that the daemonset pods are always present on each node:
 
@@ -180,13 +224,21 @@ The Collector agent daemonset can have problems scheduling in Autopilot mode. If
 
     priorityClassName: splunk-otel-agent-priority
 
+GKE ARM support
+-----------------------------------------------------------------------------
+
+The default configuration of the Helm chart supports ARM workloads on GKE. Make sure to set the distribution value to ``gke``:
+
+.. code-block:: yaml
+
+  distribution: gke
 
 .. _config-eks-fargate:
 
-Configure EKS Fargate
-===============================
+Configure Amazon Elastic Kubernetes Service Fargate
+==============================================================
 
-To run the Collector in the Amazon Elastic Kubernetes Service with Fargate profiles, set the required ``distribution`` value to ``eks/fargate``, as shown in the following example:
+To run the Collector in the Amazon EKS with Fargate profiles, set the required ``distribution`` value to ``eks/fargate``, as shown in the following example:
 
 .. code-block:: yaml
 
@@ -201,42 +253,3 @@ This distribution operates similarly to the ``eks`` distribution, but with the f
 * Since Fargate nodes use a VM boundary to prevent access to host-based resources used by other pods, pods are not able to reach their own kubelet. The cluster receiver for the Fargate distribution has two primary differences between regular ``eks`` to work around this limitation:
    * The configured cluster receiver is deployed as a two-replica StatefulSet instead of a Deployment, and uses a Kubernetes Observer extension that discovers the cluster's nodes and, on the second replica, its pods for user-configurable receiver creator additions.Using this observer dynamically creates the Kubelet Stats receiver instances that report kubelet metrics for all observed Fargate nodes. The first replica monitors the cluster with a ``k8s_cluster`` receiver, and the second cluster monitors all kubelets except its own (due to an EKS/Fargate networking restriction).
    * The first replica's Collector monitors the second's kubelet. This is made possible by a Fargate-specific ``splunk-otel-eks-fargate-kubeletstats-receiver-node`` node label. The Collector ClusterRole for ``eks/fargate`` allows the ``patch`` verb on ``nodes`` resources for the default API groups to allow the cluster receiver's init container to add this node label for designated self monitoring.
-
-Override the underlying OpenTelemetry agent configuration
-==============================================================
-
-You can override the underlying OpenTelemetry agent configuration to use your own OpenTelemetry Agent configuration. To do this, include a custom configuration in the ``agent.config`` parameter in the values.yaml configuration. This custom configuration is merged into the default agent configuration. Parts of the configuration (for example, ``service``, ``pipelines``, ``logs``, and ``processors`` need to be fully re-defined after the files are merged.
-
-The following example shows a ``values.yaml`` file with custom gateway values:
-
-.. code-block:: yaml
-
-   clusterName: my-cluster
-   splunkObservability:
-     realm: us0
-     accessToken: my-access-token
-
-   agent:
-     config:
-       exporters:
-         otlp:
-           endpoint: <custom-gateway-url>:4317
-           insecure: true
-         signalfx:
-           ingest_url: http://<custom-gateway-url>:9943
-           api_url: http://<custom-gateway-url>:6060
-       service:
-         pipelines:
-           traces:
-             exporters: [otlp, signalfx]
-           metrics:
-             exporters: [otlp]
-           logs:
-             exporters: [otlp]
-
-   clusterReceiver:
-     config:
-       exporters:
-         signalfx:
-           ingest_url: http://<custom-gateway-url>:9943
-           api_url: http://<custom-gateway-url>:6060
