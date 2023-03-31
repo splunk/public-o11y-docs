@@ -7,7 +7,7 @@ Configure Helm for Kubernetes
 .. meta::
       :description: Optional configurations for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
-After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, these are the available settings you can configure. Additionally, see also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` such as :ref:`configuring Prometheus <otel-kubernetes-config-resources>`.
+After you've :ref:`installed the Collector for Kubernetes <otel-install-k8s>`, these are the available settings you can configure. Additionally, see also :ref:`the advanced configuration options <otel-kubernetes-config-advanced>` and :ref:`otel-kubernetes-config-logs`.
 
 The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. Review ``values.yaml`` to understand how to configure this chart.
 
@@ -113,6 +113,36 @@ Instead of having the tokens as clear text in the config file, you can provide t
     create: false
     name: your-secret
 
+
+.. _otel-kubernetes-config-resources:
+
+Add additional telemetry sources
+===========================================
+
+Use the ``autodetect`` configuration option to activate additional telemetry sources.
+
+Set ``autodetect.prometheus=true`` if you want the Collector to scrape Prometheus metrics from pods that have generic Prometheus-style annotations. Add the following annotations on pods to allow a fine control of the scraping process:
+
+* ``prometheus.io/scrape: true``: The default configuration scrapes all pods. If set to ``false``, this annotation excludes the pod from the scraping process.
+* ``prometheus.io/path``: The path to scrape the metrics from. The default value is ``/metrics``.
+* ``prometheus.io/port``: The port to scrape the metrics from. The default value is ``9090``.
+
+If the Collector is running in an Istio environment, set ``autodetect.istio=true`` to make sure that all traces, metrics, and logs reported by Istio are collected in a unified manner.
+
+For example, use the following configuration to activate automatic detection of both Prometheus and Istio telemetry sources:
+
+.. code-block:: yaml
+
+  splunkObservability:
+    accessToken: xxxxxx
+    realm: us0
+  clusterName: my-k8s-cluster
+  autodetect:
+    istio: true
+    prometheus: true
+
+.. _otel-kubernetes-deactivate-telemetry:
+
 Deactivate particular types of telemetry
 ============================================
 
@@ -157,19 +187,21 @@ to the values.yaml configuration of one of the installations:
    clusterReceiver:
      enabled: false
 
-Configure Google Kubernetes Engine Autopilot
+Configure Google Kubernetes Engine 
 ===========================================================
 
-To run the Collector in Google Kubernetes Engine Autopilot mode, set the ``distribution`` option to ``gke/autopilot``, as shown in the following example:
+Configure GKE Autopilot
+-----------------------------------------------------------------------------
+
+To run the Collector in GKE Autopilot mode, set the ``distribution`` option to ``gke/autopilot``:
 
 .. code-block:: yaml
 
-   distribution: gke/autopilot
+  distribution: gke/autopilot
 
 Search for "Autopilot overview" on the :new-page:`Google Cloud documentation site <https://cloud.google.com/docs>` for more information.
 
-.. note::
-  Native OpenTelemetry logs collection is not yet supported in Google Kubernetes Engine Autopilot mode.
+.. note:: GKE Autopilot doesn't support native OpenTelemetry logs collection.
 
 The Collector agent daemonset can have problems scheduling in Autopilot mode. If this happens, do the following to assign the daemonset a higher priority class to ensure that the daemonset pods are always present on each node:
 
@@ -193,13 +225,21 @@ The Collector agent daemonset can have problems scheduling in Autopilot mode. If
 
     priorityClassName: splunk-otel-agent-priority
 
+GKE ARM support
+-----------------------------------------------------------------------------
+
+The default configuration of the Helm chart supports ARM workloads on GKE. Make sure to set the distribution value to ``gke``:
+
+.. code-block:: yaml
+
+  distribution: gke
 
 .. _config-eks-fargate:
 
-Configure EKS Fargate
-===============================
+Configure Amazon Elastic Kubernetes Service Fargate
+==============================================================
 
-To run the Collector in the Amazon Elastic Kubernetes Service with Fargate profiles, set the required ``distribution`` value to ``eks/fargate``, as shown in the following example:
+To run the Collector in the Amazon EKS with Fargate profiles, set the required ``distribution`` value to ``eks/fargate``, as shown in the following example:
 
 .. code-block:: yaml
 
