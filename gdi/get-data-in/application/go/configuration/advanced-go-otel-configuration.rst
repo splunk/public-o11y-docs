@@ -5,11 +5,11 @@ Configure the Go instrumentation for Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the Splunk Distribution of OpenTelemetry Go to suit most of your instrumentation needs, like correlating traces with logs, enabling exporters, and more.
+   :description: Configure the Splunk Distribution of OpenTelemetry Go to suit most of your instrumentation needs, like correlating traces with logs, activating exporters, and more.
 
 You can configure the Splunk Distribution of OpenTelemetry Go to suit your instrumentation needs.
 
-The following sections describe all available settings for configuring the Go instrumentation, including options for enabling new features that are unique to the Splunk Distribution of OpenTelemetry Go.
+The following sections describe all available settings for configuring the Go instrumentation, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry Go.
 
 .. _configuration-methods-go:
 

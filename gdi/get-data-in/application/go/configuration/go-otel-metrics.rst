@@ -15,7 +15,7 @@ To learn about the different metric types, see :ref:`metric-types`.
 
 .. _enable-golang-metrics:
 
-Enable metrics collection
+Activate metrics collection
 ====================================================
 
 To collect Go metrics, see :ref:`enable_automatic_metric_collection_golang`.
