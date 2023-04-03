@@ -1,7 +1,7 @@
 .. _enhanced-team-security:
 
 ***************************************************
-Enable enhanced team security
+Turn on enhanced team security
 ***************************************************
 
 .. meta::
