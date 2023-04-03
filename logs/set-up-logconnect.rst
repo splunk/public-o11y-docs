@@ -13,6 +13,7 @@ When you set up Log Observer Connect, your Splunk Enterprise logs data remains i
 
 Region and version compatibility
 ==============================================================
+
 Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Enterprise 8.2 and higher. 
 
 .. note:: You can collect data using both the Splunk Distribution of OpenTelemetry Collector and the Universal Forwarder without submitting any duplicate telemetry data. See :ref:`collector-with-the-uf` to learn how.
@@ -38,6 +39,7 @@ Ensure the following configuration in your Splunk Enterprise instance:
 
 Set up Log Observer Connect
 ==============================================================
+
 To set up Log Observer Connect for Splunk Enterprise, follow these steps:
 
 1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and click :guilabel:`Add new connection`.
@@ -46,13 +48,13 @@ To set up Log Observer Connect for Splunk Enterprise, follow these steps:
 
 3. Follow the instructions in the integration guided setup to do the following in Splunk Enterprise:
 
-   a. Create a new role in your Splunk Enterprise instance.
+  a. Create a new role in your Splunk Enterprise instance.
 
-   b. Select the Splunk Enterprise indexes that you want to search in Log Observer Connect. 
+  b. Select the Splunk Enterprise indexes that you want to search in Log Observer Connect. 
 
-   c. Create and configure a new user in your Splunk Enterprise instance.
+  c. Create and configure a new user in your Splunk Enterprise instance.
 
-   d. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance.
+  d. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance.
 
 4. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
