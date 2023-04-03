@@ -151,11 +151,11 @@ Splunk IT Essentials Work (ITE Work) is a free application that helps you get st
 
 Splunk IT Service Intelligence (ITSI) is a premium IT operations solution that provides actionable insight into the performance and behavior of your IT services. You can also ingest events from across your IT landscape and from other monitoring silos to provide a unified operational console of all your events and service-impacting issues. 
 
-For more information about these applications, see the :new-page:`IT operations product overview <https://docs.splunk.com/Documentation/ITOps/current/Overview/Overview>`. 
+For more information about these applications, see the :ref:`IT operations product overview <https://docs.splunk.com/Documentation/ITOps/current/Overview/Overview>`. 
 
 Splunk App for Content Packs
 ======================================
 
 Quickly set up your IT Service Intelligence (ITSI) or IT Essentials Work (ITE Work) environment using prepackaged content such as KPI base searches, service templates, saved glass tables, and other knowledge objects. 
 
-For more information, see the :new-page:`Overview of the Splunk App for Content Packs <https://docs.splunk.com/Documentation/ContentPackApp/latest/Overview/Overview>`.
+For more information, see the :ref:`Overview of the Splunk App for Content Packs <https://docs.splunk.com/Documentation/ContentPackApp/latest/Overview/Overview>`.
