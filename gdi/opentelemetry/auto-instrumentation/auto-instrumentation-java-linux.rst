@@ -225,7 +225,7 @@ The ``/etc/ld.so.preload`` file is automatically created or updated with the def
 Advanced configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-More advanced configuration options like correlating traces and logs and enabling custom sampling are available by :ref:`configuring the Java agent<advanced-java-otel-configuration>`. 
+More advanced configuration options like correlating traces and logs and activating custom sampling are available by :ref:`configuring the Java agent<advanced-java-otel-configuration>`. 
 
 .. _upgrade-the-package:
 

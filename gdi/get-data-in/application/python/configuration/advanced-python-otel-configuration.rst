@@ -5,11 +5,11 @@ Configure the Python agent for Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Python to suit most of your instrumentation needs, like correlating traces with logs, enabling exporters, and more.
+   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Python to suit most of your instrumentation needs, like correlating traces with logs, activating exporters, and more.
 
 You can configure the Python agent from the Splunk Distribution of OpenTelemetry Python to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-The following sections describe all available settings for configuring the Python agent, including options for enabling new features that are unique to the Splunk Distribution of OpenTelemetry Python.
+The following sections describe all available settings for configuring the Python agent, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry Python.
 
 .. _main-python-agent-settings:
 
@@ -121,7 +121,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
 
 The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
 
-.. note:: If you need to disable trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
+.. note:: If you need to deactivate trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
 .. _code-configuration-python:
 
