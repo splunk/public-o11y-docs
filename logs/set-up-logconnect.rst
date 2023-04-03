@@ -11,7 +11,7 @@ Set up Log Observer Connect by integrating Log Observer with Splunk Enterprise. 
 
 When you set up Log Observer Connect, your Splunk Enterprise logs data remains in Splunk Enterprise. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
 
-Region and version availability
+Region and version compatibility
 ==============================================================
 Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, and au0. Splunk Log Observer Connect is compatible with Splunk Enterprise 8.2 and higher. 
 
@@ -19,7 +19,22 @@ Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, 
 
 Prerequisites
 ==============================================================
-Ensure that token authentication is enabled in your Splunk Enterprise instance. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
+
+Ensure the following configuration in your Splunk Enterprise instance:
+
+* Token authentication is active. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
+
+* Allow these IPs:
+
+  - us0: ``34.199.200.84``, ``52.20.177.252``, ``52.201.67.203``, ``54.89.1.85``
+  - us1: ``44.230.152.35``, ``44.231.27.66``, ``44.225.234.52``, ``44.230.82.104``
+  - eu0: ``108.128.26.145``, ``34.250.243.212``, ``54.171.237.247``
+  - jp0: ``35.78.47.79``, ``35.77.252.198``, ``35.75.200.181``
+  - au0: ``13.54.193.47``, ``13.55.9.109``, ``54.153.190.59``
+
+* Expose port ``8089`` to all the IPs of the realms you're using.
+
+.. caution:: Check with your security team before you add these IPs to the allow list of your firewall rules or to your security groups in AWS.
 
 Set up Log Observer Connect
 ==============================================================
