@@ -12,8 +12,8 @@ Use Splunk Observability Cloud teams to coordinate teamwork. Perform the followi
 .. toctree::
    :hidden:
 
-   About roles and capabilities <roles-and-permissions-about>
-   Matrix of roles and capabilities  <roles-and-permissions-table>
+   About roles and capabilities <roles-and-capabilities-about>
+   Matrix of roles and capabilities  <roles-and-capabilities-table>
    Assign roles to users <users-assign-roles>
    Create and manage users  <manage-users>
    Manage teams  <manage-membership>
