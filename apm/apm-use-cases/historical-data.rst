@@ -1,7 +1,7 @@
 .. _historical-data:
 
-Analyze historical data to optimize system performance using the built-in dashboard
-*************************************************************************************
+Use case: Analyze historical data to optimize system performance using the built-in dashboard
+*************************************************************************************************
 
 .. meta::
     :description: This Splunk APM use case describes how to use historical data to optimize system function.

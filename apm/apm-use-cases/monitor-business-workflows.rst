@@ -1,6 +1,6 @@
 .. _monitor-business-workflows:
 
-Monitor Business Workflows to measure business KPIs
+Use case: Monitor Business Workflows to measure business KPIs
 **********************************************************************
 
 .. meta::
