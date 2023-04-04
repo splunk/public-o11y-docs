@@ -37,4 +37,12 @@ Skyler selects the ``checkoutservice`` because the service triggered the APM det
 
 |br|
 
+Summary
+============
+
 From the latency chart, Skyler notices that the time when the checkoutservice had high latency are the days that Buttercup Games was having special sales or deploying major code changes to the system. Skyler identifies them as possible causes of the high latency and uses this information to improve system performance.
+
+Learn more
+==============
+
+See :ref:`apm-dashboards` for more information on built-in APM dashboards.
