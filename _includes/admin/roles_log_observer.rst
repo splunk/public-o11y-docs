@@ -83,9 +83,15 @@
     - Yes
     - No
 
-  * - :strong:`Create and manage infinite logging rules`
+  * - :strong:`Create new S3 connection to allow infinite logging rules`
     - Yes
     - No
+    - No
+    - No
+
+  * - :strong:`Create and manage infinite logging rules`
+    - Yes
+    - Yes (if admin has created S3 connection)
     - No
     - No
 
@@ -94,4 +100,10 @@
     - Yes
     - No
     - Yes
+
+  * - :strong:`Set up Log Observer Connect connection to Splunk platform`
+    - Yes
+    - No
+    - No
+    - No
 
