@@ -21,7 +21,7 @@ Wei creates a business workflow rule for the checkout service
 
 Wei wants to monitor the percentage of successful checkout requests by tracking end-to-end traces that include the checkout service. Using the guided setup in Splunk APM, Wei creates a service rule that targets the ``checkoutservice``. Wei specifies the :guilabel:`Source of Workflow Name` as ``matched service:endpoint`` for correlating traces by endpoints.
 
-..  image:: /_images/apm/apm-use-cases/ConfigureWorkflowsCheckoutRule.png
+..  image:: /_images/apm/apm-use-cases/ConfigureWorklowsCheckoutRule.png
     :width: 99%
     :alt: This screenshot shows the rule setup for a service workflow rule. 
 
