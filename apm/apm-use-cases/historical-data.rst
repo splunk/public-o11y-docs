@@ -11,6 +11,7 @@ Skyler, a performance engineer at Buttercup Games, wants to understand and analy
 These are the steps Wei takes to analyze microservice performance:
 
 #. :ref:`historical-data-service-dashboard`
+#. :ref:`historical-data-checkout-service`
 
 .. _historical-data-service-dashboard:
 
@@ -19,7 +20,7 @@ Skyler opens the service-level dashboard
 
 Skyler opens the service-level Splunk APM services dashboard under :guilabel:`Dashboards` > :guilabel:`Built-in Dashboard Groups` in Splunk Observability Cloud:
 
-..  image:: /_images/apm/apm-use-cases/historical-data-01.png
+..  image:: /_images/apm/apm-use-cases/HistoricalDataServiceDashboard.png
     :width: 75%
     :alt: This screenshot shows selecting the service-level APM Services dashboard from built-in dashboards
 
@@ -36,4 +37,4 @@ Skyler selects the ``checkoutservice`` because the service triggered the APM det
 
 |br|
 
-From the latency chart, Skyler notices that the time when the :strong:`checkoutservice` had high latency are the days that Buttercup Games was having special sales or deploying major code changes to the system. Skyler identifies them as possible causes of the high latency and uses this information to improve system performance.
+From the latency chart, Skyler notices that the time when the checkoutservice had high latency are the days that Buttercup Games was having special sales or deploying major code changes to the system. Skyler identifies them as possible causes of the high latency and uses this information to improve system performance.
