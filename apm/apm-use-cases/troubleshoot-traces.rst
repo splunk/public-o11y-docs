@@ -1,10 +1,10 @@
 .. _apm-use-case-trace-analyzer:
 
-Use case: Troubleshoot an unknown issue using Trace Analyzer
+Use case: Troubleshoot an issue to find the root cause using Trace Analyzer
 ************************************************************************************
 
 .. meta::
-    :description: To identify the cause and prevalence of an unknown issue, Alex uses Trace Analyzer to explore APM data from wide trends down to single traces. 
+    :description: To identify the cause and prevalence of an issue, Alex uses Trace Analyzer to explore APM data from wide trends down to single traces. 
 
 Alex, the site reliability engineer for Buttercup Games, receives a report of a customer who received an error during checkout. To proactively prevent a potential incident, Alex uses Trace Analyzer to quickly determine how pervasive the checkout errors are. 
 
@@ -36,7 +36,7 @@ Because ``http.url`` is an unindexed span, Alex can't use Tag Spotlight to see a
 
 .. _trace-analyzer-filter:
 
-Alex filters Trace Analyzer by http url value
+Alex filters Trace Analyzer by a specific tag
 ==============================================
 
 Alex adds the ``/checkout/{cardId}`` http url to the Trace Analyzer filter so that he can review traces for this specific endpoint.
