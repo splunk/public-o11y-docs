@@ -8,7 +8,7 @@ Use case: Configure Business Workflows to track business KPIs
 
 Executives at Buttercup Games set three new business KPIs: the percentage of successful checkout requests, the P90 latency of logins, and Failed Customer Interactions (FCI). To measure these KPIs, Wei, the director of site reliability engineering and an administrator of Splunk APM, wants to configure the KPIs as Business Workflows. 
 
-These are the steps Wei takes to monitor Business Workflows:
+These are the steps Wei takes to configure Business Workflows:
 
 #. :ref:`configure-business-workflows-checkout-rule`
 #. :ref:`configure-business-workflows-login-rule`
