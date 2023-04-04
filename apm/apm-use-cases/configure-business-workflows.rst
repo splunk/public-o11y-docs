@@ -1,6 +1,6 @@
 .. _configure-business-workflows:
 
-Configure Business Workflows to track business KPIs
+Use case: Configure Business Workflows to track business KPIs
 *******************************************************************************
 
 .. meta::
@@ -21,7 +21,7 @@ Wei creates a business workflow rule for the checkout service
 
 Wei wants to monitor the percentage of successful checkout requests by tracking end-to-end traces that include the checkout service. Using the guided setup in Splunk APM, Wei creates a service rule that targets the ``checkoutservice``. Wei specifies the :guilabel:`Source of Workflow Name` as ``matched service:endpoint`` for correlating traces by endpoints.
 
-..  image:: /_images/apm/apm-use-cases/ConfigureWorkflowsRuleSetup.png
+..  image:: /_images/apm/apm-use-cases/ConfigureWorkflowsCheckoutRule.png
     :width: 99%
     :alt: This screenshot shows the rule setup for a service workflow rule. 
 
@@ -32,7 +32,7 @@ Wei creates a business workflow rule for the login service
 
 Wei creates another service rule that targets the ``loginservice`` for the P90 latency of logins KPI. This time, Wei sets the :strong:`Source of Workflow Name` as ``Tag Value`` and selects the ``Operation`` tag for correlating traces with the login operation.
 
-..  image:: /_images/apm/apm-use-cases/ConfigureWorkflowsRuleSetup2.png
+..  image:: /_images/apm/apm-use-cases/ConfigureWorkflowsLoginRule.png
     :width: 99%
     :alt: This screenshot shows the rule setup for a service workflow rule. that uses a tag value for correlating traces. 
 
