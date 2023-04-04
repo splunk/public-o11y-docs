@@ -91,7 +91,7 @@
 
   * - :strong:`Create and manage infinite logging rules`
     - Yes
-    - Yes - After admin has create S3 connection
+    - Yes - After admin creates S3 connection
     - No
     - No
 
