@@ -27,3 +27,9 @@ Users and teams
 ==================
 
 .. include:: /_includes/admin/roles_users_teams.rst
+
+
+Log Observer
+==================
+
+.. include:: /_includes/admin/roles_log_observer.rst
