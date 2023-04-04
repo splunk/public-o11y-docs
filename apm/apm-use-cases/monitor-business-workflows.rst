@@ -12,6 +12,7 @@ These are the steps Wei took to monitor Business Workflows:
 
 #. :ref:`monitor-business-workflows-open-dashboard`
 #. :ref:`monitor-business-workflows-open-details`
+#. :ref:`monitor-business-workflows-error-rate:`
 
 .. _monitor-business-workflows-open-dashboard:
 
