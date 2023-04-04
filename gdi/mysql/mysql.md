@@ -156,7 +156,7 @@ The following table shows the configuration options for this monitor:
 | `username` | No | `string` | Username for all databases. You can override it by defining each username in the `databases` object. |
 | `password` | No | `string` | Password for all databases. You can override it by defining each username in the `databases` object. |
 | `reportHost` | No | `bool` | When set to `true`, the `host` dimension is set to the name of the MySQL database host. When `false`, the monitor uses the global `hostname` configuration instead. The default value is `false`. When `disableHostDimensions` is set to `true`, the host name in which the agent or monitor is running is not used for the `host` metric dimension value.  |
-| `innodbStats` | No | `bool` | Collects InnoDB statistics. Before enabling InnoDB metrics make sure that you granted the `PROCESS` privilege to your user. The default value is `false`. |
+| `innodbStats` | No | `bool` | Collects InnoDB statistics. Before activating InnoDB metrics make sure that you granted the `PROCESS` privilege to your user. The default value is `false`. |
 
 The nested `databases` configuration object has the following fields:
 
@@ -171,6 +171,9 @@ The nested `databases` configuration object has the following fields:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/mysql/metrics.yaml"></div>
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

@@ -34,8 +34,8 @@ Installer script
 
 The following Linux distributions and versions are supported:
 
-* Amazon Linux: 2
-* CentOS, Red Hat, or Oracle: 7, 8
+* Amazon Linux: 2, 2023. Log collection with Fluentd is not currently supported for Amazon Linux 2023.
+* CentOS, Red Hat, or Oracle: 7, 8, 9
 * Debian: 9, 10, 11
 * SUSE: 12, 15 for versions v0.34.0 or higher. Log collection with Fluentd is not currently supported.
 * Ubuntu: 16.04, 18.04, 20.04, and 22.04
@@ -121,7 +121,7 @@ By default, the Fluentd service is installed and configured to forward log event
 
 The following Fluentd plugins are also installed:
 
-* ``capng_c`` for enabling Linux capabilities.
+* ``capng_c`` for activating Linux capabilities.
 * ``fluent-plugin-systemd`` for systemd journal log collection.
 
 Additionally, the following dependencies are installed as prerequisites for the Fluentd plugins:
@@ -415,7 +415,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with yum
     yum install -y libcap
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -430,7 +430,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with dnf
     dnf install -y libcap
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -445,7 +445,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with zypper
     zypper install -y libcap-progs
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/zypp/repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]

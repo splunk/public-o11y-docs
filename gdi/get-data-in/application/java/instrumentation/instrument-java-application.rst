@@ -116,7 +116,7 @@ Activate AlwaysOn Profiling
 
 To activate AlwaysOn Profiling, use the following system property argument. You can also use the ``SPLUNK_PROFILER_ENABLED`` environment variable. For more information, see :ref:`profiling-intro`.
 
-To activate memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after enabling AlwaysOn Profiling.
+To activate memory profiling, set the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true`` after activating AlwaysOn Profiling.
 
 The following example shows how to activate the profiler using the system property:
 
@@ -180,7 +180,7 @@ Configure the Java agent
 
 You can configure the agent using environment variables or by setting system properties as runtime arguments. For more details about both methods, see :ref:`configuration-methods-java`.
 
-For advanced configuration of the JVM agent, like changing trace propagation formats, correlating traces and logs, or enabling custom sampling, see :ref:`advanced-java-otel-configuration`.
+For advanced configuration of the JVM agent, like changing trace propagation formats, correlating traces and logs, or activating custom sampling, see :ref:`advanced-java-otel-configuration`.
 
 .. _kubernetes_java_agent:
 

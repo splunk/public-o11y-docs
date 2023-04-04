@@ -92,13 +92,13 @@ To get platform infrastructure data into Splunk Observability Cloud:
 
 #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
-#. Click the tile for the platform you want to get data in from:
+#. Select the tile for the platform you want to get data in from:
 
     - :strong:`Kubernetes`
     - :strong:`Linux`
     - :strong:`Windows`
 
-#. The access screen for your selected guided setup displays. For example, here is the access screen for the Linux guided setup. Click :strong:`Add Connection`.
+#. The access screen for your selected guided setup displays. For example, here is the access screen for the Linux guided setup. Select :strong:`Add Connection`.
 
     .. image:: /_images/infrastructure/linux-wizard-access.png
       :width: 90%
@@ -183,7 +183,7 @@ To get platform infrastructure data into Splunk Observability Cloud:
           - Kubernetes
           - When you install the Splunk Distribution of OpenTelemetry Collector for Kubernetes, it will automatically and always run in agent mode.
 
-            * Select :strong:`Yes` to deploy a gateway service, in addition to running the Splunk Distribution of OpenTelemetry Collector in agent mode. With this configuration, collectors running in agent mode can send data to the gateway and the gateway sends data to Splunk Observability Cloud. Splunk recommends using this configuration if your Kubernetes cluster has more than 25 hosts. Agents installed with this gateway (using the same Helm chart) are automatically configured to send data to this gateway.
+            * Select :strong:`Yes` to deploy a gateway service, in addition to running the Splunk Distribution of OpenTelemetry Collector in agent mode. With this configuration, collectors running in agent mode can send data to the gateway and the gateway sends data to Splunk Observability Cloud. For more information on when to use gateway mode, see :ref:`collector-gateway-mode`. Agents installed with this gateway (using the same Helm chart) are automatically configured to send data to this gateway.
 
               If you have any other Splunk Distribution of OpenTelemetry Collectors running in agent mode in other clusters, you can manually configure them to point to this gateway.
 
@@ -191,7 +191,7 @@ To get platform infrastructure data into Splunk Observability Cloud:
 
             For more installation details, see :new-page-ref:`otel-install-k8s`.
 
-#. Click :strong:`Next`. The Install Integration screen displays.
+#. Select :strong:`Next`. The Install Integration screen displays.
 
    Based on your entries on the Configure Integration screen, the guided setup provides commands that you can copy and paste to install the Splunk Distribution of OpenTelemetry Collector on your selected platform.
 
@@ -201,9 +201,9 @@ To get platform infrastructure data into Splunk Observability Cloud:
       :width: 100%
       :alt: Image of the Splunk Distribution of OpenTelemetry Collector installation success message in a Powershell window: The Splunk Distribution of OpenTelemetry Collector for Windows has been successfully installed.
 
-#. For Windows Server and Linux, once your installation of the Splunk Distribution of OpenTelemetry Collector is complete, click :strong:`Done`. The Infrastructure page displays, where you can :ref:`monitor Windows Server and Linux host data using the Hosts navigator <host-navigator-imqs>`.
+#. For Windows Server and Linux, once your installation of the Splunk Distribution of OpenTelemetry Collector is complete, select :strong:`Done`. The Infrastructure page displays, where you can :ref:`monitor Windows Server and Linux host data using the Hosts navigator <host-navigator-imqs>`.
 
-   For Kubernetes, click :strong:`Next`. The Review Inventory screen displays. On the :strong:`Log Events` tab, click :strong:`Explore Log Events` to view more details using :new-page-ref:`Splunk Log Observer <get-started-logs>`. This option applies only if you have access to Splunk Log Observer and set :strong:`Log Collection` to :strong:`Yes` earlier in this task. On the :strong:`Metric Data` tab, click :strong:`Explore Metric Data` to access the Kubernetes navigator, where you can :ref:`monitor Kubernetes cluster data <kubernetes-navigator-imqs>`.
+   For Kubernetes, select :strong:`Next`. The Review Inventory screen displays. On the :strong:`Log Events` tab, select :strong:`Explore Log Events` to view more details using :new-page-ref:`Splunk Log Observer <get-started-logs>`. This option applies only if you have access to Splunk Log Observer and set :strong:`Log Collection` to :strong:`Yes` earlier in this task. On the :strong:`Metric Data` tab, select :strong:`Explore Metric Data` to access the Kubernetes navigator, where you can :ref:`monitor Kubernetes cluster data <kubernetes-navigator-imqs>`.
 
 
 .. _gdi-cloud-imqs:
@@ -250,7 +250,7 @@ To get cloud infrastructure data into Splunk Observability Cloud:
 
     The guided setup for your selected platform displays.
 
-#. For Amazon Web Services, click :strong:`Add Connection`. For Google Cloud Platform and Microsoft Azure, click :strong:`Add Integration`. Follow the instructions in the guided setup for your selected platform to complete the connection.
+#. For Amazon Web Services, select :strong:`Add Connection`. For Google Cloud Platform and Microsoft Azure, select :strong:`Add Integration`. Follow the instructions in the guided setup for your selected platform to complete the connection.
 
    - For details about connecting Amazon Web Services, see :new-page-ref:`get-started-aws`.
 
@@ -262,7 +262,7 @@ To get cloud infrastructure data into Splunk Observability Cloud:
 
    - After you successfully connect with Amazon Web Services, the Review Inventory screen displays.
 
-     If you have access to Splunk Log Observer and selected :strong:`Cloudwatch Logs` on the Add Filters screen, the Log Events tab displays as follows. Click :strong:`Explore Log Events` to view more details using :new-page-ref:`Splunk Log Observer <get-started-logs>`.
+     If you have access to Splunk Log Observer and selected :strong:`Cloudwatch Logs` on the Add Filters screen, the Log Events tab displays as follows. Select :strong:`Explore Log Events` to view more details using :new-page-ref:`Splunk Log Observer <get-started-logs>`.
 
      .. image:: /_images/infrastructure/aws-connection-review-inventory-log-events.png
        :width: 100%
@@ -270,7 +270,7 @@ To get cloud infrastructure data into Splunk Observability Cloud:
 
      |
 
-     Select the :strong:`Metric Data` tab to see an overview of your Amazon Web Services infrastructure metrics. Click :strong:`Explore Metric Data` to :ref:`view more details using Splunk Infrastructure Monitoring navigators <navigators-imqs>`.
+     Select the :strong:`Metric Data` tab to see an overview of your Amazon Web Services infrastructure metrics. Select :strong:`Explore Metric Data` to :ref:`view more details using Splunk Infrastructure Monitoring navigators <navigators-imqs>`.
 
      .. image:: /_images/infrastructure/aws-connection-review-inventory-metric-data.png
        :width: 100%
@@ -316,7 +316,7 @@ Navigators display only if Splunk Infrastructure Monitoring is receiving data fr
 
 For example, even if a guided setup you used in :ref:`gdi-infrastructure-imqs` or :ref:`gdi-cloud-imqs` provided confirmation of a valid connection, the navigators don't display unless your host, Kubernetes cluster, or cloud provider service is actively sending data to Splunk Infrastructure Monitoring.
 
-If you don't see a navigator after 15 minutes of making a valid connection, check your source to ensure that it is generating data. For example, ensure that your host, cluster, or service is actually being used in a way that generates data that it can send to Splunk Infrastructure Monitoring.
+If you don't see a navigator after 15 minutes of making a valid connection, check your source to ensure that it is generating data. For example, ensure that your host, cluster, or service is being used in a way that generates data that it can send to Splunk Infrastructure Monitoring.
 
 
 Tips for working with navigators
@@ -326,17 +326,17 @@ Navigators are primarily composed of charts.
 
 - Hover over a chart to see details about specific metric time series.
 
-- Click within a chart to see the data table for a given time period.
+- Select within a chart to see the data table for a given time period.
 
-- Click a chart title in the top left of a chart to display the full chart along with more chart options, such as a plot editor and the ability to change the chart's visualization type to area, column, or histogram, for example.
+- Select a chart title in the top left of a chart to display the full chart along with more chart options, such as a plot editor and the ability to change the chart's visualization type to area, column, or histogram, for example.
 
   .. image:: /_images/infrastructure/elb-navigator-chart.gif
     :width: 100%
-    :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
+    :alt: This animated GIF shows hover and select actions on a chart to display metric time series, a data table, and full chart data.
 
   |
 
-- Every chart has a :strong:`Chart Actions` menu. Click the more (|more|) icon in the upper right of a chart to open the menu and view available actions. For example, you can share the chart, download it as an image, or export it as a CSV (comma-separated values) file.
+- Every chart has a :strong:`Chart Actions` menu. Select the more (|more|) icon in the upper right of a chart to open the menu and view available actions. For example, you can share the chart, download it as an image, or export it as a CSV (comma-separated values) file.
 
   .. image:: /_images/infrastructure/chart-actions.png
     :width: 70%
@@ -358,13 +358,13 @@ If you completed :ref:`gdi-infrastructure-imqs`, you can explore the host’s da
 
 #. In the left navigation menu, select :menuselection:`Infrastructure`.
 
-#. Click :strong:`My Data Center` and then click the :strong:`Hosts` tile. The Hosts navigator displays.
+#. Select :strong:`My Data Center` and then select the :strong:`Hosts` tile. The Hosts navigator displays.
 
     .. image:: /_images/infrastructure/hosts-navigator.gif
       :width: 100%
       :alt: Animated GIF scrolling through the Hosts navigator in Splunk Infrastructure Monitoring showing charts and visualizations of data collected from hosts.
 
-To filter the data shown in the navigator to a specific host, such as the one you just installed the Splunk Distribution of OpenTelemetry Collector on, click :strong:`Add Filter` and select a key and value that uniquely identify your host. For example, for a Windows Server host, you can select :strong:`host.name` = :strong:`<host computer name>`. Click :strong:`Apply Filter`.
+To filter the data shown in the navigator to a specific host, such as the one you just installed the Splunk Distribution of OpenTelemetry Collector on, select :strong:`Add Filter` and select a key and value that uniquely identify your host. For example, for a Windows Server host, you can select :strong:`host.name` = :strong:`<host computer name>`. Select :strong:`Apply Filter`.
 
 .. image:: /_images/infrastructure/add-filter-host-name.gif
   :width: 60%
@@ -385,7 +385,7 @@ Tips for viewing host data
 
   Each of these navigators includes a :strong:`Host With Agent Installed` module that reflects all of the hosts where you've installed the Splunk Distribution of OpenTelemetry Collector.
 
-- If you want to see data from all hosts, including those where you installed the Splunk Distribution of OpenTelemetry Collector and SignalFx Smart Agent, use the :strong:`Hosts with agent installed` built-in dashboard. To access this dashboard, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`Hosts with agent installed`. The :strong:`Hosts with agent installed` dashboard group displays. Click a link to access a relevant dashboard. For more details about working with dashboards, see :new-page-ref:`dashboards`.
+- If you want to see data from all hosts, including those where you installed the Splunk Distribution of OpenTelemetry Collector and SignalFx Smart Agent, use the :strong:`Hosts with agent installed` built-in dashboard. To access this dashboard, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`Hosts with agent installed`. The :strong:`Hosts with agent installed` dashboard group displays. Select a link to access a relevant dashboard. For more details about working with dashboards, see :new-page-ref:`dashboards`.
 
 
 .. _kubernetes-navigator-imqs:
@@ -405,11 +405,11 @@ If you completed :ref:`gdi-infrastructure-imqs`, you can explore the cluster’s
       :width: 100%
       :alt: This animated GIF shows the Kubernetes navigator in Splunk Infrastructure Monitoring displaying charts and visualizations of data collected from a Kubernetes cluster.
 
-To filter the data shown in the navigator to a specific cluster, such as the one you just installed the Splunk Distribution of OpenTelemetry Collector in, set the :strong:`Cluster:` drop-down value to the cluster name you provided in :ref:`gdi-infrastructure-imqs`.
+To filter the data shown in the navigator to a specific cluster, such as the one you installed the Splunk Distribution of OpenTelemetry Collector in, set the :strong:`Cluster:` value to the cluster name you provided in :ref:`gdi-infrastructure-imqs`.
 
 For more details about the data displayed in the Kubernetes navigator, see :new-page-ref:`use-the-k8s-navigator`.
 
-Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Kubernetes data. To access these dashboards, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`Kubernetes`. The :strong:`Kubernetes` dashboard group displays. Click a link to access a relevant dashboard.
+Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Kubernetes data. To access these dashboards, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`Kubernetes`. The :strong:`Kubernetes` dashboard group displays. Select a link to access a relevant dashboard.
 
 
 .. _aws-navigators-imqs:
@@ -423,7 +423,7 @@ If you completed :ref:`gdi-cloud-imqs`, you can explore your Amazon Web Services
 
 #. In the left navigation menu, select :menuselection:`Infrastructure`.
 
-#. In the :strong:`Public Clouds` section, select :strong:`Amazon AWS`. The :strong:`Amazon AWS` section provides a high-level view of Amazon Web Services data received by Splunk Infrastructure Monitoring. Click a service to access its navigator.
+#. In the :strong:`Public Clouds` section, select :strong:`Amazon AWS`. The :strong:`Amazon AWS` section provides a high-level view of Amazon Web Services data received by Splunk Infrastructure Monitoring. Select a service to access its navigator.
 
     .. image:: /_images/infrastructure/amazonaws-section.png
       :width: 100%
@@ -437,11 +437,11 @@ If you completed :ref:`gdi-cloud-imqs`, you can explore your Amazon Web Services
         :width: 100%
         :alt: This animated GIF shows the EC2 navigator in Splunk Infrastructure Monitoring displaying charts and visualizations of data collected from the EC2 service.
 
-To narrow the scope of the data shown in the navigator, such as to only the data received from the connection you just made, click :strong:`Add Filter` and select a key and value that uniquely identify your connection. For example, you can select :strong:`aws_account_id` = :strong:`<your AWS account ID>`. Click :strong:`Apply Filter`.
+To narrow the scope of the data shown in the navigator, such as to only the data received from the connection you made, select :strong:`Add Filter` and select a key and value that uniquely identify your connection. For example, you can select :strong:`aws_account_id` = :strong:`<your AWS account ID>`. Select :strong:`Apply Filter`.
 
 For more details about Amazon Web Services navigators, see :new-page-ref:`monitor-aws-services`.
 
-Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Amazon Web Services data. To access these dashboards, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`AWS`. Several Amazon Web Services dashboard groups display. Click a link to access a relevant dashboard.
+Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Amazon Web Services data. To access these dashboards, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`AWS`. Several Amazon Web Services dashboard groups display. Select a link to access a relevant dashboard.
 
 
 .. _gcp-navigators-imqs:
@@ -455,7 +455,7 @@ If you completed :ref:`gdi-cloud-imqs`, you can explore your Google Cloud platfo
 
 #. In the left navigation menu, select :menuselection:`Infrastructure`.
 
-#. In the :strong:`Public Clouds` section, select :strong:`Google Cloud Platform`. The :strong:`Google Cloud Platform` section provides a high-level view of Google Cloud Platform services data received by Splunk Infrastructure Monitoring. Click a service to access its navigator.
+#. In the :strong:`Public Clouds` section, select :strong:`Google Cloud Platform`. The :strong:`Google Cloud Platform` section provides a high-level view of Google Cloud Platform services data received by Splunk Infrastructure Monitoring. Select a service to access its navigator.
 
     .. image:: /_images/infrastructure/gcp-section.png
       :width: 100%
@@ -469,9 +469,9 @@ If you completed :ref:`gdi-cloud-imqs`, you can explore your Google Cloud platfo
 
 For more details about Google Cloud Platform service navigators, see :new-page-ref:`monitor-gcp-services`.
 
-To narrow the scope of the data shown in the navigator, such as to only the data received from the connection you just made, click :strong:`Add Filter` and select a key and value that uniquely identify your connection. For example, you can select :strong:`project_id` = :strong:`<your project ID>`, where the project ID value is the one you provided in :ref:`gdi-cloud-imqs`. Click :strong:`Apply Filter`.
+To narrow the scope of the data shown in the navigator, such as to only the data received from the connection you made, select :strong:`Add Filter` and select a key and value that uniquely identify your connection. For example, you can select :strong:`project_id` = :strong:`<your project ID>`, where the project ID value is the one you provided in :ref:`gdi-cloud-imqs`. Select :strong:`Apply Filter`.
 
-Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Google Cloud Platform data. To access these dashboards, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`Google`. Several Google Cloud Platform dashboard groups display. Click a link to access a relevant dashboard.
+Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Google Cloud Platform data. To access these dashboards, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`Google`. Several Google Cloud Platform dashboard groups display. Select a link to access a relevant dashboard.
 
 
 .. _azure-navigators-imqs:
@@ -485,7 +485,7 @@ If you completed :ref:`gdi-cloud-imqs`, you can explore your Microsoft Azure dat
 
 #. In the left navigation menu, select :menuselection:`Infrastructure`.
 
-#. In the :strong:`Public Clouds` section, select :strong:`Microsoft Azure`. The :strong:`Microsoft Azure` section provides a high-level view of Microsoft Azure services data received by Splunk Infrastructure Monitoring. Click a service to access its navigator.
+#. In the :strong:`Public Clouds` section, select :strong:`Microsoft Azure`. The :strong:`Microsoft Azure` section provides a high-level view of Microsoft Azure services data received by Splunk Infrastructure Monitoring. Select a service to access its navigator.
 
     .. image:: /_images/infrastructure/azure-section.png
       :width: 100%
@@ -499,9 +499,9 @@ If you completed :ref:`gdi-cloud-imqs`, you can explore your Microsoft Azure dat
 
 For more details about Microsoft Azure service navigators, see :new-page-ref:`monitor-azure-services`.
 
-To narrow the scope of the data shown in the navigator, such as to only the data received from the connection you just made, click :strong:`Add Filter` and select a key and value that uniquely identify your connection. For example, you can select :strong:`subscription_id` = :strong:`<your subscription ID>`, where the subscription ID value is the one associated with a subscription you provided in :ref:`gdi-cloud-imqs`. Click :strong:`Apply Filter`.
+To narrow the scope of the data shown in the navigator, such as to only the data received from the connection you made, select :strong:`Add Filter` and select a key and value that uniquely identify your connection. For example, you can select :strong:`subscription_id` = :strong:`<your subscription ID>`, where the subscription ID value is the one associated with a subscription you provided in :ref:`gdi-cloud-imqs`. Select :strong:`Apply Filter`.
 
-Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Microsoft Azure data. To access these dashboards, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`Azure`. Several Microsoft Azure dashboard groups display. Click a link to access a relevant dashboard.
+Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box) dashboards <dashboards>` that you can use to explore your Microsoft Azure data. To access these dashboards, open the navigation :strong:`Menu` and select :strong:`Dashboards`. The Dashboards page displays. Search for :strong:`Azure`. Several Microsoft Azure dashboard groups display. Select a link to access a relevant dashboard.
 
 
 .. _alerts-imqs:
@@ -509,7 +509,7 @@ Splunk Observability Cloud also provides :new-page-ref:`built-in (out of the box
 Step 4. Activate an out-of-the-box detector to issue alerts
 ========================================================================
 
-Now that you have data flowing into Splunk Observability Cloud and you can explore that data using navigators and dashboards, let’s set up an alert that can help keep you informed about certain conditions in your data.
+Now that you have data flowing into Splunk Observability Cloud and you can explore that data using navigators and dashboards, let's set up an alert that can help keep you informed about certain conditions in your data.
 
 To create an alert, you first create a detector that monitors data for conditions you want to be alerted about. When a condition you want to be alerted about is met, the detector issues an alert.
 
@@ -517,7 +517,7 @@ This task describes how to create a detector directly from a chart in a navigato
 
 #. Access the chart you want to create a detector from. This example creates a detector based on the :strong:`Memory Used %` chart in the :ref:`host-navigator-imqs`.
 
-#. Click the :strong:`Get Alerts` icon in the upper right of a chart. For some chart data, we provide built-in templates to enable you to easily create detectors for useful alert conditions. For example, for the :strong:`Memory Used %` chart, we provide a :strong:`Memory utilization % greater than historical norm` detector template.
+#. Select the :strong:`Get Alerts` icon in the upper right of a chart. For some chart data, there are built-in templates that make it easy for you create detectors for useful alert conditions. For example, for the :strong:`Memory Used %` chart, we provide a :strong:`Memory utilization % greater than historical norm` detector template.
 
     .. image:: /_images/infrastructure/memory-used-create-new-detector.png
       :width: 100%
@@ -527,7 +527,7 @@ This task describes how to create a detector directly from a chart in a navigato
 
     This detector sends an alert when memory usage for the last 10 minutes was significantly higher than normal, as compared to the last 24 hours.
 
-#. The :strong:`New Detector` panel displays. Click :strong:`Add Recipients` to add an email, :new-page-ref:`Splunk Observability Cloud team <admin-manage-teams>`, or :new-page-ref:`webhook <webhook>` that you want to receive the alert.
+#. The :strong:`New Detector` panel displays. Select :strong:`Add Recipients` to add an email, :new-page-ref:`Splunk Observability Cloud team <admin-manage-teams>`, or :new-page-ref:`webhook <webhook>` that you want to receive the alert.
 
     .. image:: /_images/infrastructure/new-detector-panel.png
       :width: 60%
@@ -535,7 +535,7 @@ This task describes how to create a detector directly from a chart in a navigato
 
     |
 
-#. Click :strong:`Activate`. When the data condition is met, Splunk Observability Cloud sends a notification to designated recipients and displays alerts on the Alerts page.
+#. Select :strong:`Activate`. When the data condition is met, Splunk Observability Cloud sends a notification to designated recipients and displays alerts on the Alerts page.
 
     .. image:: /_images/infrastructure/alerts-page.png
       :width: 100%
@@ -551,7 +551,7 @@ Next steps
 
 - Now that you've seen some out-of-the-box visualizations, want to create your own dashboards and share them with your team? See :ref:`dashboard-create-customize` and :ref:`dashboards-best-practices`.
 
-- :ref:`Use Related Content <get-started-relatedcontent>` to jump between components of Splunk Observability Cloud by clicking related data.
+- :ref:`Use Related Content <get-started-relatedcontent>` to jump between components of Splunk Observability Cloud by selecting related data.
 
 - Now that you have infrastructure data flowing into Splunk Observability Cloud, consider :ref:`instrumenting an application to send spans and traces <get-started-application>` to :ref:`Splunk Application Performance Monitoring <get-started-apm>` (APM), where you can access dashboards like this one for your services and business workflows.
 
