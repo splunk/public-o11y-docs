@@ -154,7 +154,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#mainTOC .sphinxsidebarwrapper ul li.toctree-l1 a").each(function () {
+    $("#mainTOC .sphinxsidebarwrapper ul li.toctree-l1 a, #mobileSideBar .sphinxsidebarwrapper ul li.toctree-l1 a").each(function () {
 
         //var achorHtml = $(this).html()
         var anchorText = $(this).text();
