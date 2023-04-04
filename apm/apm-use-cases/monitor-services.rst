@@ -11,6 +11,7 @@ Buttercup Games launches a Black Friday sales event. Deepu, the payment service 
 These are the steps Deepu took to monitor the payment service using a Splunk APM Service dashboard:
 
 #. :ref:`monitor-services-open-dash`
+#. :ref:`monitor-services-chart-res`
 
 .. _monitor-services-open-dash:
 
@@ -25,8 +26,8 @@ From the :guilabel:`APM Overview`, Deepu selects :guilabel:`Explore` to enter th
 
 .. _monitor-services-chart-res:
 
-Deepu adjusts chart resolution and uses a data link to go to a related infrastructure dashboard
-==================================================================================================
+Deepu adjusts the dashboard chart resolution and uses a data link to go to a related infrastructure dashboard
+================================================================================================================
 
 Deepu sees the built-in dashboard for the payment service, and then sets the :guilabel:`Chart Resolution` to very high for monitoring more details. Deepu configured global data links to connect Splunk APM properties to related resources in Splunk Observability Cloud. By selecting a tag with a global data link, Deepu can navigate to an infrastructure-related dashboard that they can use to cross-monitor the payment service and the infrastructure.
 
