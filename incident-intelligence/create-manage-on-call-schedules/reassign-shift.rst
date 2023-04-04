@@ -18,7 +18,7 @@ There are two ways to reassign shifts, depending on what page you are viewing in
 Reassign a full or partial shift
 ========================================
 
-If you are unable to complete a current or upcoming shift, you can reassign all or part of that shift to another team member. You can reassign 1 hour increments if needed, for example if you have an appointment. You can reassign one of your own shifts or reassign someone else's shift for them.
+If you are unable to complete a current or upcoming shift, you can reassign all or part of that shift to one or more team members. You can reassign coverage in 1 hour increments if needed, for example if you have an appointment. You can reassign one of your own shifts or reassign someone else's shift for them.
 
 To reassign a shift, follow these steps: 
 
@@ -29,11 +29,10 @@ To reassign a shift, follow these steps:
    - On the Incident Management page, select the :guilabel:`On-call schedules` tab, then :guilabel:`Reassign shift`.
 
 #. On the Reassign Shifts window, select the time range you are unavailable, including the dates and times.
-
-
 #. (Conditional) If required, enter the name of the shift owner. The default is set to the current user.
 #. Select :guilabel:`Search for schedules` to find the shift to reassign. Any shifts impacted by the time frame you selected display. 
 #. In :guilabel:`Reassign to`, enter the name of the team member who will take the shift or partial shift. 
+#. (Conditional) If you need to reassign multiple shifts, select :guilabel:`Add Responder` and select another :guilabel:`Time range` and team member who will take over that shift.
 #. Save your changes.
 
 In the updated schedule, the shift or partial shift that was reassigned is now assigned to the new team member. 
