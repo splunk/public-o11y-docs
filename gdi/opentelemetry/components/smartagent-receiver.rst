@@ -30,7 +30,7 @@ For each Smart Agent monitor you want to add to the Collector, add a Smart Agent
 Sample configurations
 ----------------------
 
-The following example adds the Postgresql monitor type to the Collector using the Smart Agent receiver
+The following example adds the Postgresql monitor to the Collector using the Smart Agent receiver:
 
 .. code-block:: yaml
 
@@ -61,7 +61,7 @@ If you use a monitor that updates dimension properties or tags, for example ``po
 Settings
 ======================
 
-To configure each Smart Agent receiver, see the documentation of each monitor type in :ref:`monitor-data-sources`.
+To configure Smart Agent monitors, see the documentation on each monitor type in :ref:`monitor-data-sources`.
 
 Troubleshooting
 ======================
