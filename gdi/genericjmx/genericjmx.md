@@ -119,6 +119,9 @@ monitors:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/genericjmx/metadata.yaml"></div>
 
+```{include} /_includes/metric-defs.md
+```
+
 ## Troubleshooting
 
 The following Java properties show how to expose JMX ports to inbound connections. For more information, see Monitoring and Management Using JMX Technology in the Java documentation.

@@ -89,6 +89,9 @@ The following table shows the legacy metrics that are available for this integra
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
 
+```{include} /_includes/metric-defs.md
+```
+
 ## Get help
 
 ```{include} /_includes/troubleshooting.md

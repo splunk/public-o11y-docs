@@ -186,7 +186,7 @@ By default, all available services are monitored, and any new services added lat
 
    - List any additional GCP service domain names that you want to monitor, using commas to separate domain names in the :strong:`Custom Metric Type Domains` field. For examples of custom metric type domain syntax, see :new-page:`Custom metric type domain examples <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Custom-metric-type-domain-examples>` in the Splunk developer documentation.
 
-   - If you select Compute Engine as one of the services to monitor, you can enter a comma-separated list of Compute Engine Instance metadata keys to send as properties. These metadata keys are sent as properties named ``gcp_metadata_<metadata-key>`` in the :ref:`gce-metrics` table. 
+   - If you select Compute Engine as one of the services to monitor, you can enter a comma-separated list of Compute Engine Instance metadata keys to send as properties. These metadata keys are sent as properties named ``gcp_metadata_<metadata-key>``.
 
    - Select :strong:`Use quota from the project where metrics are stored` to use a quota from the project where metrics are stored. The service account provided for the project needs either the ``serviceusage.services.use`` permission, or the `Service Usage Consumer` role.
 
@@ -230,4 +230,4 @@ To validate your setup, examine the details of your GCP integration as displayed
 
 * For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`.
 * To send logs from Azure to Observability Cloud, follow the instructions in :ref:`gcp-logs`.
-* Learn about :ref:`our GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
+* Learn about Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`. 

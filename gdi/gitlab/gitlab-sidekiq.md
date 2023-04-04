@@ -73,6 +73,9 @@ These are the metrics available for this integration:
 
 <br>
 
+```{include} /_includes/metric-defs.md
+```
+
 See [Sidekiq Metrics](https://docs.gitlab.com/13.12/ee/administration/monitoring/prometheus/gitlab_metrics.html#sidekiq-metrics) for information on Sidekiq jobs. Sidekiq jobs can also gather metrics, and these metrics can be accessed if the Sidekiq exporter is activated: for example, using the `monitoring.sidekiq_exporter` configuration option in `gitlab.yml`. These metrics are served from the `/metrics` path on the configured port.
 
 ## Get help
