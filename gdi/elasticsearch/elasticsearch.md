@@ -207,6 +207,9 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/elasticsearch/metrics.yaml"></div>
 
+```{include} /_includes/metric-defs.md
+```
+
 ## Get help
 
 ```{include} /_includes/troubleshooting.md

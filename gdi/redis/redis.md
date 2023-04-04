@@ -148,6 +148,9 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/redis/metrics.yaml"></div>
 
+```{include} /_includes/metric-defs.md
+```
+
 ## Database Query Performance
 
 You can troubleshoot Redis command performance issues using Database Query Performance in Splunk APM.
