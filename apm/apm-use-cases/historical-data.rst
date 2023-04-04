@@ -21,7 +21,7 @@ Skyler opens the service-level dashboard
 Skyler opens the service-level Splunk APM services dashboard under :guilabel:`Dashboards` > :guilabel:`Built-in Dashboard Groups` in Splunk Observability Cloud:
 
 ..  image:: /_images/apm/apm-use-cases/HistoricalDataServiceDashboard.png
-    :width: 75%
+    :width: 99%
     :alt: This screenshot shows selecting the service-level APM Services dashboard from built-in dashboards
 
 .. _historical-data-checkout-service:
