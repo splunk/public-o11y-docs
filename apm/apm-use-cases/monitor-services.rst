@@ -8,7 +8,7 @@ Use case: Monitor service performance using a built-in dashboard
 
 Buttercup Games launches a Black Friday sales event. Deepu, the payment service owner, expects higher traffic on the website that might impact the payment service. In addition to setting Splunk APM detectors to alert for the atypical error rate and latency, Deepu uses the Splunk APM Service dashboard for monitoring. 
 
-These are the steps Deepu took to monitor the payment service using a Splunk APM Service dashboard:
+These are the steps Deepu takes to monitor the payment service using a Splunk APM Service dashboard:
 
 #. :ref:`monitor-services-open-dash`
 #. :ref:`monitor-services-chart-res`

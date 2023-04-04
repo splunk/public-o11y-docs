@@ -9,7 +9,7 @@ Use case: Troubleshoot an issue to find the root cause using Trace Analyzer
 Alex, the site reliability engineer for Buttercup Games, receives a report of a customer who received an error during checkout. To proactively prevent a potential incident, Alex uses Trace Analyzer to quickly determine how pervasive the checkout errors are. 
 
 
-These are the steps Alex took to determine how pervasive the checkout errors are:
+These are the steps Alex takes to determine how pervasive the checkout errors are:
 
 #. :ref:`trace-analyzer-errors`
 #. :ref:`trace-analyzer-group`

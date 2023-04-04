@@ -8,7 +8,7 @@ Monitor Business Workflows to measure business KPIs
 
 Wei, the director of site reliability engineering at Buttercup Games, wants to monitor Business Workflows to make sure their error rates are in the normal range. 
 
-These are the steps Wei took to monitor Business Workflows:
+These are the steps Wei takes to monitor Business Workflows:
 
 #. :ref:`monitor-business-workflows-open-dashboard`
 #. :ref:`monitor-business-workflows-open-details`
