@@ -1,11 +1,8 @@
 
 .. _custom-metricset:
 
-****************************************************************
 Monitor detector service latency for a group of customers
 ****************************************************************
-
-.. Metadata updated: 1/23/23
 
 .. meta::
     :description: This Splunk APM use case describes how to monitor for service latency.
@@ -35,17 +32,17 @@ This image shows a sample Monitoring MetricSet configuration with the service se
 Create service latency detectors to track metrics 
 ====================================================================================
 
-Kai can leverage the custom dimensionalized Monitoring MetricSet Kai created to monitor the performance of this critical checkout workflow in the :strong:`cartservice` service. To do this, Kai creates a detector using the same custom indexed tag, ``version_id``, to track error rates associated with the checkout workflow.
+Kai can use the custom dimensionalized Monitoring MetricSet Kai created to monitor the performance of this critical checkout workflow in the :strong:`cartservice` service. To do this, Kai creates a detector using the same custom indexed tag, ``version_id``, to track error rates associated with the checkout workflow.
 
 
 1. There are two ways for Kai to navigate to the Detector Creation page to create a detector using their custom Monitoring MetricSet:
-    a. From the left navigation panel, select: :strong:`Alerts & Detectors` > :strong:`New Detector`.
-    b. From any APM page, select the plus sign :strong:`( + )` on the top bar and select :strong:`Detector` from the drop-down list . 
+    a. From the navigation panel, select: :strong:`Alerts & Detectors` > :strong:`New Detector`.
+    b. From any APM page, select the plus sign :strong:`( + )` on the top bar and select :strong:`Detector` from the list. 
 
 
 2. Kai follows the guided Detector Creation flow to create their detector based on the error rate in the service :strong:`cartservice:GetCart`, filtered to the custom dimension of ``version_id``.
 
-3. Kai can use the Metric Finder to find additional information on the metrics and metadata for their system. For more, see :ref:`Metric Finder and Metadata Catalog<metrics-finder-and-metadata-catalog>`. Apply :strong:`sf_dimensionalized:true` as a :strong:`Filter` to see related metrics as shown in the image below. 
+3. Kai can use the Metric Finder to find additional information on the metrics and metadata for their system. For more, see :ref:`Metric Finder and Metadata Catalog<metrics-finder-and-metadata-catalog>`. Apply :strong:`sf_dimensionalized:true` as a :strong:`Filter` to see related metrics as shown in the following image. 
 
 ..  image:: /_images/apm/span-tags/MetricFindercmms.png
     :width: 100%
@@ -55,15 +52,15 @@ Kai can leverage the custom dimensionalized Monitoring MetricSet Kai created to 
 
 Set up charts, dashboards, and alerts for custom dimensions
 ==================================================================
-Kai can also create charts and dashboards that leverage the custom dimensions Kai created.
+Kai can also create charts and dashboards that use the custom dimensions Kai created.
 
 Kai navigates to the built-in APM service endpoint dashboard for :strong:`cartservice:GetCart` using the following steps:
 
-#. From the :strong:`APM` landing page, select the :guilabel:`Dashboards` icon in the left navigation bar.
+#. From the :strong:`APM` landing page, select the :guilabel:`Dashboards` icon in the navigation bar.
 
 #. Search :strong:`APM` in the search bar.
 
-#. Under :strong:`APM Services` in the :strong:`Built-in Dashboard Groups` section, click :strong:`Service Endpoint`.
+#. Under :strong:`APM Services` in the :strong:`Built-in Dashboard Groups` section, select :strong:`Service Endpoint`.
 
 #. Select the relevant environment, then select ``cartservice`` as the :strong:`Service`, ``GetCart`` as the Endpoint, and apply :strong:`sf_dimensionalized:true` as a :strong:`Filter`.
 
@@ -74,7 +71,13 @@ Kai navigates to the built-in APM service endpoint dashboard for :strong:`cartse
     :width: 100%
     :alt: This screenshot shows how to filter the MetricFinder for metrics related to custom monitoring MetricSets. 
 
-See also 
+
+Summary
+==================================================================
+
+Kai created a Monitoring MetricSet with a custom dimension to track a checkout workflow for a subset of customers. To learn more about Monitoring MetricSets, see :ref:`cmms`. 
+
+Learn more
 ===========
 
 Use the links in the following table to learn more about charts, dashboards, and alerts.
@@ -93,11 +96,5 @@ Use the links in the following table to learn more about charts, dashboards, and
      - :ref:`Configure detectors and alerts in Splunk APM<apm-alerts>`
    * - Monitor services in APM dashboards 
      - :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>`
-
-
-Summary
-==================================================================
-
-Kai created a Monitoring MetricSet with a custom dimension to track a checkout workflow for a subset of customers. To learn more about Monitoring MetricSets, see :ref:`cmms`. 
 
 
