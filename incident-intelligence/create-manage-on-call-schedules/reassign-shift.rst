@@ -13,11 +13,17 @@ There are two ways to reassign shifts, depending on what page you are viewing in
 * From the main Incident Intelligence page, select :guilabel:`On-call Schedule`. In the side-pane that opens, select :guilabel:`Reassign Shift`.
 * From the Incident Management page, select the :guilabel:`On-call schedules` tab, then :guilabel:`Reassign shift`.
 
-.. note:: When reassigning shifts, keep in mind:
-   * You must reassign coverage for the entire time period that the original shift owner is unavailable. That is, you cannot leave part of any shift unassigned.
-   * If you are reassigning a shift to multiple people, the reassigned times cannot overlap.
-   * You cannot reassign a shift to someone who is also unavailable.
-   * In the :guilabel:`Reassign Shift` dialog, the initial timeframe you select is the time range that the individual is unavailable. The shifts that display are those assigned during that time range.
+When reassigning shifts, keep in mind:
+
+- You must reassign coverage for the entire time period that the original shift owner is unavailable. That is, you cannot leave part of any shift unassigned.
+  
+- If you are reassigning a shift to multiple people, the reassigned times cannot overlap.
+  
+- You cannot reassign a shift to someone who is also unavailable.
+  
+- In the :guilabel:`Reassign Shift` dialog, the initial timeframe you select is the time range that the individual is unavailable. The shifts that display are those assigned during that time range.
+
+
 
 .. _reassign-shift-to-other:
 
