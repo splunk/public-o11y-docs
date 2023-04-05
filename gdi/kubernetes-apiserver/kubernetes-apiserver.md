@@ -123,6 +123,8 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/apiserver/metadata.yaml"></div>
 
+### Notes
+
 ```{include} /_includes/metric-defs.md
 ```
 
