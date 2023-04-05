@@ -22,7 +22,7 @@ You have three deployment options:
 BOSH release
 =========================
 
-If deployed using the BOSH release, the Collector acts as a :new-page:`Loggregator Firehose nozzle <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`.
+If deployed using the BOSH release, the Collector acts as a :new-page:`Loggregator Firehose nozzle <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`, which is one of the architectures Cloud Foundry uses to emit logs and metrics. 
 
 Dependencies
 ----------------------------------
@@ -58,9 +58,7 @@ See the following GitHub repos and files:
 Cloud Foundry Buildpack
 =========================
 
-A Cloud Foundry buildpack to install the Splunk OpenTelemetry Collector for use with PCF apps.
-
-The buildpack's default functionality, as described in this document, is to deploy the OpenTelemetry Collector as a sidecar for the given app that's being deployed. The Collector is able to observe the app as a nozzle to the Loggregator Firehose. The Loggregator Firehose is one of the architectures Cloud Foundry uses to emit logs and metrics. This means that the Splunk OpenTelemetry Collector will be observing all apps and deployments that emit metrics and logs to the Loggregator Firehose as long as it's running.
+The Cloud Foundry Buildpack deploys the Collector as a sidecar for the actual app being deployed. The Collector is able to observe the app as a nozzle to the Loggregator Firehose, seeing all metrics and logs sent to the Loggregator Firehose as long as it's running.
 
 Dependencies
 ----------------------------------
@@ -74,8 +72,9 @@ Install the pack and deploy the Collector
 To install the Buildpack:
 
 * Clone the Collector's :new-page:`Buildpack GitHub repository <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/buildpack>`.
-* Enter the new repo.
+* Go to the newly created repo.
 * Run the following command to add the Buildpack for the Collector:
+
 .. code-block:: 
 
    $ cf create-buildpack otel_collector_buildpack . 99 --enable
@@ -110,13 +109,13 @@ The release script requires:
 Release and deploy the Collector
 ----------------------------------
 
-Run the following command to create the BOSH release and package it as a dependency for the Tile to generate the tile with the same version as the Collector. 
+Run the following command to create the BOSH release. 
 
 .. code-block:: 
 
    $ ./make-latest-tile
 
-If the command is successful, the tile will be at ``./product/splunk-otel-collector-<VERSION>.pivotal``.
+Package the release as a dependency for the Tile so it has the same version as the Collector. If the command is successful, the tile will be at ``./product/splunk-otel-collector-<VERSION>.pivotal``.
 
 Learn more
 ----------------------------------
