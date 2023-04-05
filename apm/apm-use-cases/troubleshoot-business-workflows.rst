@@ -74,6 +74,8 @@ Deepu remembers that version 350.10 of the payment service recently deployed a b
 Summary
 ===========
 
+Using Business Workflows and Tag Spotlight Deepu quickly isolated a trace with an error. Because Deepu had related content turned on, Deepu was able to quickly navigate from the trace to logs to further investigate causes of the errors.
+
 Learn more
 ==============
 
