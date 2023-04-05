@@ -15,7 +15,7 @@ You have three deployment options:
 
 * :ref:`otel-pcf-buildpack`: This integration installs and runs the Collector as a sidecar to your app. In this configuration, the Collector runs in the same container as the app.
 
-* :ref:`otel-pcf-tile`: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal's Ops Manager. The Tanzu Tile enables you to download, install, run, configure, and update the Collector from the Ops Manager.
+* :ref:`otel-pcf-tile`: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal Ops Manager. The Tanzu Tile allows you to download, install, run, configure, and update the Collector from the Ops Manager.
 
 .. _otel-pcf-bosch:
 
