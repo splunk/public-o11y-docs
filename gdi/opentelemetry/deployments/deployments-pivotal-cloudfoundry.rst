@@ -9,15 +9,118 @@ Pivotal Cloud Foundry
 
 Use Pivotal Cloud Foundry (PCF) to deploy the Collector.
 
-Deployment options
-=========================
-
 You have three deployment options:
 
-* Cloud Foundry Buildpack: This integration can be used to install and run the Collector as a sidecar to your app. In this configuration, the Collector runs in the same container as the app.
+* :ref:`otel-pcf-bosch`: The Collector is deployed to the PCF environment as a standalone deployment.
 
-* Bosh release: The Collector is deployed to the PCF environment as a standalone deployment.
+* :ref:`otel-pcf-buildpack`: This integration installs and runs the Collector as a sidecar to your app. In this configuration, the Collector runs in the same container as the app.
 
-* Tanzu Tile: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal's Ops Manager. The Tanzu Tile enables you to download, install, run, configure, and update the Collector from the Ops Manager.
+* :ref:`otel-pcf-tile`: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal's Ops Manager. The Tanzu Tile enables you to download, install, run, configure, and update the Collector from the Ops Manager.
 
-  * This method is supported for Tanzu Application Service (TAS) version 2. It's not supported for TAS version 3.
+.. _otel-pcf-bosch:
+
+BOSH release
+=========================
+
+If deployed using the BOSH release, the Collector acts as a :new-page:`Loggregator Firehose nozzle <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`.
+
+Dependencies
+----------------------------------
+
+The release script requires:
+
+* The :new-page:`BOSH CLI <https://bosh.io/docs/cli-v2-install/>``
+* ``wget``
+* ``jq``
+
+Release and deploy the Collector
+----------------------------------
+
+Use the :new-page:`release script <https://github.com/signalfx/splunk-otel-collector/blob/main/deployments/cloudfoundry/bosh/release>` to generate a new release with the latest version of the Splunk Distribution of OpenTelemetry Collector. 
+
+.. code-block:: 
+
+   $ bosh -d splunk-otel-collector deploy deployment.yaml
+
+* It's best to run the script from the PCF tile.
+* See :new-page:`configuration examples <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/bosh/example>`.
+
+Learn more
+----------------------------------
+
+See the following GitHub repos and files:
+
+* The Collector's :new-page:`BOSH release repo <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/bosh>`.
+* The Collector's :new-page:`development guide for PCF BOSH <https://github.com/signalfx/splunk-otel-collector/blob/main/deployments/cloudfoundry/bosh/DEVELOPMENT.md>`.
+
+.. _otel-pcf-buildpack:
+
+Cloud Foundry Buildpack
+=========================
+
+A Cloud Foundry buildpack to install the Splunk OpenTelemetry Collector for use with PCF apps.
+
+The buildpack's default functionality, as described in this document, is to deploy the OpenTelemetry Collector as a sidecar for the given app that's being deployed. The Collector is able to observe the app as a nozzle to the Loggregator Firehose. The Loggregator Firehose is one of the architectures Cloud Foundry uses to emit logs and metrics. This means that the Splunk OpenTelemetry Collector will be observing all apps and deployments that emit metrics and logs to the Loggregator Firehose as long as it's running.
+
+Dependencies
+----------------------------------
+
+* ``wget``
+* ``jq``
+
+Install the pack and deploy the Collector
+--------------------------------------------------
+
+To install the Buildpack:
+
+* Clone the Collector's :new-page:`Buildpack GitHub repository <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/buildpack>`.
+* Enter the new repo.
+* Run the following command to add the Buildpack for the Collector:
+.. code-block:: 
+
+   $ cf create-buildpack otel_collector_buildpack . 99 --enable
+
+Learn more
+----------------------------------
+
+See the following GitHub repos and files:
+
+* :new-page:`Configuration options <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/buildpack#configuration>`.
+* :new-page:`Troubleshooting <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/buildpack#troubleshooting>`.
+
+.. _otel-pcf-tile:
+
+Tanzu Tile
+=========================
+
+The Tanzu tile uses the :ref:`otel-pcf-bosch` to deploy the Collector as a :new-page:`Loggregator Firehose nozzle <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`.
+
+.. caution:: This method is supported for Tanzu Application Service (TAS) version 2. It's not supported for TAS version 3.
+
+Dependencies
+----------------------------------
+
+The release script requires:
+
+* The :new-page:`BOSH CLI <https://bosh.io/docs/cli-v2-install/>`
+* The :new-page:`Tile generator <https://docs.vmware.com/en/Tile-Developer-Guide/2.10/tile-dev-guide/tile-generator.html>`
+* ``wget``
+* ``jq``
+
+Release and deploy the Collector
+----------------------------------
+
+Run the following command to create the BOSH release and package it as a dependency for the Tile to generate the tile with the same version as the Collector. 
+
+.. code-block:: 
+
+   $ ./make-latest-tile
+
+If the command is successful, the tile will be at ``./product/splunk-otel-collector-<VERSION>.pivotal``.
+
+Learn more
+----------------------------------
+
+See the following GitHub repos and files:
+
+* The Collector's :new-page:`Tanzu Tile GitHub repo <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/tile>`.
