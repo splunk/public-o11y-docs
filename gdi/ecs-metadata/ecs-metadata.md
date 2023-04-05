@@ -51,6 +51,8 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/ecs/metadata.yaml"></div>
 
+### Notes
+
 ```{include} /_includes/metric-defs.md
 ```
 
