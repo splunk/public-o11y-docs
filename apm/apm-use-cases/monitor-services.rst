@@ -29,7 +29,7 @@ From the :guilabel:`APM Overview`, Deepu selects :guilabel:`Explore` to enter th
 Deepu adjusts the dashboard chart resolution and uses a data link to go to a related infrastructure dashboard
 ================================================================================================================
 
-Deepu sees the built-in dashboard for the payment service, and then sets the :guilabel:`Chart Resolution` to very high for monitoring more details. Deepu configured global data links to connect Splunk APM properties to related resources in Splunk Observability Cloud. By selecting a tag with a global data link, Deepu can navigate to an infrastructure-related dashboard that they can use to cross-monitor the payment service and the infrastructure.
+Deepu sees the built-in dashboard for the payment service and then sets the :guilabel:`Chart Resolution` to very high for monitoring more details. Deepu configured global data links to connect Splunk APM properties to related resources in Splunk Observability Cloud. By selecting a tag with a global data link, Deepu can navigate to an infrastructure-related dashboard that they can use to cross-monitor the payment service and the infrastructure.
 
 ..  image:: /_images/apm/apm-use-cases/MonitorServicesDashboard.png
     :width: 99%

@@ -41,7 +41,7 @@ Wei creates another service rule that targets the ``loginservice`` for the P90 l
 Wei monitors business KPIs using Business Workflow dashboards and charts
 ===========================================================================
 
-Now that Wei has created and these rules, Splunk APM automatically groups all relevant traces and generates dashboards and charts with Troubleshooting MetricSets for configured Business Workflows that Wei can monitor to measure relevant business KPIs.
+Now that Wei has created these rules, Splunk APM automatically groups all relevant traces and generates dashboards and charts with Troubleshooting MetricSets for configured Business Workflows that Wei can monitor to measure relevant business KPIs.
 
 Learn more
 =============

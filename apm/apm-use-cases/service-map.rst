@@ -1,10 +1,10 @@
 .. _service-map:
 
-Use case: Investigate the root cause of an error with Splunk APM service map
+Use case: Investigate the root cause of an error with the Splunk APM service map
 *******************************************************************************
 
 .. meta::
-    :description: This Splunk APM use case describes how to use APM service map to investigate root cause error rate.
+    :description: This Splunk APM use case describes how to use the APM service map to investigate root cause error rate.
 
 Kai, a site reliability engineer at Buttercup Games, receives tickets from multiple customers getting "Invalid request" errors when purchasing games on the Buttercup Games website. 
 

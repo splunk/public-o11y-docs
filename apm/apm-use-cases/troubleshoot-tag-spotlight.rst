@@ -52,7 +52,7 @@ Deepu sees that the errors are evenly distributed for all tag values except the 
 
 .. _tag-spotlight-use-case-example-trace:
 
-Deepu opens a example trace
+Deepu opens an example trace
 ==============================
 
 Deepu narrows the investigation to the code in version 350.10 of the ``/PaymentService/Charge`` endpoint and selects the :strong:`Request/Errors` chart to get an example trace to see what the error is. 

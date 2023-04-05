@@ -47,7 +47,7 @@ Alex adds the ``/checkout/{cardId}`` http url to the Trace Analyzer filter so th
 
 .. _trace-analyzer-compare:
 
-Alex compares successful traces with traces with errors
+Alex compares successful traces to traces with errors
 =========================================================
 
 Now, Alex can review and compare successful traces for the ``/checkout/{cardId}`` http url with traces for the same endpoint that have errors. 
@@ -59,7 +59,7 @@ Now, Alex can review and compare successful traces for the ``/checkout/{cardId}`
 Summary
 ====================================================================================
 
-Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of an unknown issue. Using the grouping and filtering functionality of Trace Analyzer, Alex quickly isolated successful and problematic traces to provide to the developers to isolate an the issue. 
+Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of an unknown issue. Using the grouping and filtering functionality of Trace Analyzer, Alex quickly isolated successful and problematic traces to provide to the developers to isolate the issue. 
 
 Learn more
 ===============

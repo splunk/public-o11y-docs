@@ -21,7 +21,7 @@ To understand the impact of errors on business KPIs, Deepu takes the following s
 Deepu selects the payment service on the service map and opens Tag Spotlight 
 ===============================================================================
 
-Deepu selects the :strong:`paymentservice` node on the service map, and then selects :strong:`Tag Spotlight` to look at errors and latency for the :strong:`Workflow` tag.
+Deepu selects the :strong:`paymentservice` node on the service map and then selects :strong:`Tag Spotlight` to look at errors and latency for the :strong:`Workflow` tag.
 
 ..  image:: /_images/apm/apm-use-cases/TagSpotlightUseCase_OpenTagSpotlight.png
     :width: 99%
@@ -51,7 +51,7 @@ Because APM supports infinite cardinality, Deepu selects the :strong:`frontend:/
 
 .. _troubleshoot-workflows-trace:
 
-Deepu opens a example trace
+Deepu opens an example trace
 ==============================
 
 Because Splunk APM stores all traces without sampling, Deepu clicks the peak of errors on the chart to see example traces of those tag combinations at that timestamp. Deepu finds that the requests from :strong:`checkoutservice` to :strong:`paymentservice` are failing. 
@@ -65,7 +65,7 @@ Because Splunk APM stores all traces without sampling, Deepu clicks the peak of 
 Deepu switches to Splunk Log Observer for further troubleshooting
 ====================================================================
 
-Deepu remembers that version 350.10 of the payment service recently deployed a backwards incompatible change to its API. Because Deepu turned on :ref:`Related Content <get-started-relatedcontent>` in Splunk APM, Deepu can select :strong:`Logs for payment service` to switch to Splunk Log Observer to investigate whether the deployment causes the error. 
+Deepu remembers that version 350.10 of the payment service recently deployed a backward-incompatible change to its API. Because Deepu turned on :ref:`Related Content <get-started-relatedcontent>` in Splunk APM, Deepu can select :strong:`Logs for payment service` to switch to Splunk Log Observer to investigate whether the deployment causes the error. 
 
 ..  image:: /_images/apm/apm-use-cases/WorkflowUseCase_Logs.png
     :width: 99%

@@ -16,10 +16,10 @@ These are the steps Wei takes to monitor Business Workflows:
 
 .. _monitor-business-workflows-open-dashboard:
 
-Wei opens the opens the Workflow Overview in the Business Workflows dashboard
+Wei opens the workflow overview in the Business Workflows dashboard
 ===============================================================================
 
-Wei first wants to understand the overall performance of all Business Workflows. Wei opens the Splunk APM Business Workflows dashboard and selects :strong:`Workflows Overview`, which shows the line chart and the list view with top workflows by each troubleshooting metric. Wei finds that the :strong:`paymentservice:PaymentService/Charge` workflow has the highest error rate in the past 15 minutes: 
+Wei first wants to understand the overall performance of all Business Workflows. Wei opens the Splunk APM Business Workflows dashboard and selects :guilabel:`Workflows Overview`, which shows the line chart and the list view with top workflows by each troubleshooting metric. Wei finds that the paymentservice:PaymentService/Charge workflow has the highest error rate in the past 15 minutes: 
 
 
 ..  image:: /_images/apm/apm-use-cases/monitor-business-workflows-01.png
@@ -28,7 +28,7 @@ Wei first wants to understand the overall performance of all Business Workflows.
 
 .. _monitor-business-workflows-open-details:
 
-Wei opens the opens the Workflow Details in the Business Workflows dashboard
+Wei opens the workflow details in the Business Workflows dashboard
 ===============================================================================
 
 Wei wants to further analyze the workflows with atypical error rate. Wei selects :strong:`Workflows Details` and enters the :strong:`paymentservice:PaymentService/Charge` workflow in the :strong:`Workflow` field. Wei can see statistics and charts of the workflow requests, latency, and error rate:

@@ -63,11 +63,11 @@ By generating an MMS with ``version_id`` as a custom dimension and filtering it 
 Learn more
 ===========
 
-* See :ref:`apm-index-span-tags` for more info about indexing span tags.
-* See :ref:`cmms` for more info about generating a custom MMS.
-* See :ref:`metrics-finder-and-metadata-catalog` for more info about additional metrics and metadata.
-* See :ref:`apm-alerts` for more info on configuring detectors and alerts for APM.
-* See :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>` for more info about monitoring services in APM dashboards.
-* See :ref:`Create charts in Splunk Observability Cloud<create-charts>` for more info about creating charts.
-* See :ref:`Create and customize dashboards<dashboard-create-customize>` for more info about creating dashboards.
-* See :ref:`Configure detectors and alerts in Splunk APM<apm-alerts>` for more info about creating alerts.
+* See :ref:`apm-index-span-tags` for more information about indexing span tags.
+* See :ref:`cmms` for more information about generating a custom MMS.
+* See :ref:`metrics-finder-and-metadata-catalog` for more information about additional metrics and metadata.
+* See :ref:`apm-alerts` for more information on configuring detectors and alerts for APM.
+* See :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>` for more information about monitoring services in APM dashboards.
+* See :ref:`Create charts in Splunk Observability Cloud<create-charts>` for more information about creating charts.
+* See :ref:`Create and customize dashboards<dashboard-create-customize>` for more information about creating dashboards.
+* See :ref:`Configure detectors and alerts in Splunk APM<apm-alerts>` for more information about creating alerts.
