@@ -32,7 +32,7 @@ To activate the discovery mode in the Collector, add the ``--discovery`` option 
         --memory SPLUNK_MEMORY_TOTAL_MIB \
         -- SPLUNK_ACCESS_TOKEN
 
-    .. code-tab:: poweshell Windows
+    .. code-tab:: powershell Windows
         :emphasize-lines: 5
 
         & {Set-ExecutionPolicy Bypass -Scope Process -Force;  `
