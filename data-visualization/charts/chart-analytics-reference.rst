@@ -57,7 +57,7 @@ Ceiling
 
 SignalFlow function: :new-page:`ceil() <https://dev.splunk.com/observability/docs/signalflow/methods/ceil_stream_method/>`
 
-Rounds data points up, away from zero, to the nearest integer.
+Rounds a data point up to the largest (closest to positive infinity) floating-point value that is less than or equal to the argument and is equal to a mathematical integer.
 
 .. _count:
 
@@ -141,7 +141,7 @@ Floor
 
 SignalFlow function: :new-page:`floor() <https://dev.splunk.com/observability/docs/signalflow/methods/floor_stream_method>`
 
-Rounds data points down, toward zero, to the nearest integer.
+Rounds a data point down to the smallest (closest to negative infinity) floating-point value that is greater than or equal to the argument and is equal to a mathematical integer.
 
 .. _integrate:
 
