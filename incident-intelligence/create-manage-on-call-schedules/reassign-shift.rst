@@ -79,7 +79,7 @@ View a list of reassigned shifts
 To view a list of all shift reassignments, follow these steps:
 
 #. Log in to Splunk Observability Cloud and navigate to :menuselection:`Settings > Incident Management`.
-#. Select the :guilabel:`On-call schedules`` tab.
+#. Select the :guilabel:`On-call schedules` tab.
 #. In the On-call schedules section, select :guilabel:`Reassignments`.
 #. You can review the list of reassigned shifts, listed by the original shift owner. You can edit the shift assignment by selecting the action menu (|more|).
 
