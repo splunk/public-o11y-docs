@@ -11,7 +11,7 @@ You can reassign full or partial on-call shifts to other team members if you are
 There are two ways to reassign shifts, depending on what page you are viewing in Incident Intelligence:
 
 * From the main Incident Intelligence page, select :guilabel:`On-call Schedule`. In the side-pane that opens, select :guilabel:`Reassign Shift`.
-* From the Incident Management page, select the :guilabel:`On-call schedules` tab, then :guilabel:`Reassign shift`.
+* From the Incident Management page, select the :guilabel:`On-call schedules > Reassignments` tab, then :guilabel:`Reassign shift`.
 
 When reassigning shifts, keep in mind:
 
@@ -39,13 +39,13 @@ To reassign a shift, follow these steps:
 
    - On the main Incident Intelligence page, select :guilabel:`On-call Schedule`. In the side-pane that opens, select :guilabel:`Reassign Shift`.
   
-   - On the Incident Management page, select the :guilabel:`On-call schedules` tab, then :guilabel:`Reassign shift`.
+   - On the Incident Management page, select the :guilabel:`On-call schedules > Reassignments` tab, then :guilabel:`Reassign shift`.
   
-#. On the Reassign Shifts window, select the time range you are unavailable, including the dates and times. This does not need to match shift start and end times. This is the time that the person is unavailable.
+#. On the :guilabel:`Reassign Shifts` window, select the time range you are unavailable, including the dates and times. This does not need to match shift start and end times. This is the time that the person is unavailable.
 #. (Conditional) If required, enter the name of the shift owner. The default is set to the current user. If you are reassigning shifts on behalf of another team member, enter their name in the :guilabel:`Reassign from` field.
 #. Select :guilabel:`Search for schedules` to find the shift to reassign. Any shifts impacted by the time frame you selected are displayed. This includes shifts from another schedule, if the same user is assigned to more than one schedule.
 #. In :guilabel:`Reassign to`, enter the name of the team member who will take the shift or partial shift. 
-#. (Conditional) If you need to reassign multiple shifts, select :guilabel:`Add Responder` and select another :guilabel:`Time range` and team member who will take over that shift.
+#. (Conditional) If you need to reassign multiple team members to one or more shifts, select :guilabel:`Add Responder` and select another :guilabel:`Time range` and team member who will take over that shift.
 #. Save your changes.
 
 In the updated schedule, the shift or partial shift that was reassigned is now assigned to the new team member. 
