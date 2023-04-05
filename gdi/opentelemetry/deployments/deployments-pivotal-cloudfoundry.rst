@@ -115,7 +115,7 @@ Run the following command to create the BOSH release.
 
    $ ./make-latest-tile
 
-Package the release as a dependency for the Tile so it has the same version as the Collector. If the command is successful, the tile will be at ``./product/splunk-otel-collector-<VERSION>.pivotal``.
+Package the release as a dependency for the Tile so it has the same version as the Collector. If the command is successful, you can find the tile in ``./product/splunk-otel-collector-<VERSION>.pivotal``.
 
 Learn more
 ----------------------------------
