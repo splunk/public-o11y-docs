@@ -172,6 +172,36 @@ Configure the instrumentation
 
 For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
 
+.. _windows-offline-install-otel-dotnet:
+
+Offline installation for Windows
+----------------------------------------------
+
+To install the .NET automatic instrumentation on Windows hosts that are offline, follow these steps:
+
+#. Download the following files from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>` and copy them to the offline server:
+   
+   - ``Splunk.OTel.DotNet.psm1``
+   - ``splunk-opentelemetry-dotnet-windows.zip``
+
+#. Import the PowerShell script manually by running the following command:
+
+   .. code-block:: powershell
+   
+      # Make sure the Download path is correct
+
+      Import-Module C:\Users\Administrator\Downloads\Splunk.OTel.DotNet.psm1
+   
+   When prompted, enter ``R`` for ``Run Once``.
+
+#. Run the install command:
+
+   .. code-block:: powershell
+   
+      # Make sure the Download path is correct
+
+      Install-OpenTelemetryCore -LocalPath "C:\Users\Administrator\Downloads\splunk-opentelemetry-dotnet-windows.zip"
+
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Observability Cloud
