@@ -1,7 +1,7 @@
 .. _discovery_mode:
 
 ***************************************************************************
-Discovery mode of the Splunk Distribution of OpenTelemetry Collector
+Discovery mode of the Collector
 ***************************************************************************
 
 .. meta::
