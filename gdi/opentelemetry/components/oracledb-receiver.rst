@@ -100,7 +100,7 @@ The following metrics, resource attributes, and attributes, are available.
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/oracledbreceiver.yaml"></div>
 
-.. include:: /_includes/deactivate-native-metrics.rst
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Troubleshooting
 ======================
