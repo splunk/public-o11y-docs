@@ -2,7 +2,7 @@
 .. _custom-metricset:
 
 Use case: Monitor detector service latency for a group of customers
-****************************************************************
+*********************************************************************
 
 .. meta::
     :description: This Splunk APM use case describes how to monitor for service latency.
@@ -26,8 +26,6 @@ This image shows an example MMS configuration for the ``cartservice`` endpoint `
 ..  image:: /_images/apm/span-tags/version_id_metric_set.png
     :width: 60%
     :alt: This screenshot shows how to add a custom Monitoring MetricSet for a single service. 
-
-|br|
 
 .. _custom-metricset-detectors:
 
@@ -56,7 +54,6 @@ Kai also creates charts and dashboards that use the custom dimensions they creat
 ..  image:: /_images/apm/span-tags/dashboard-cmms-use-case.png
     :width: 100%
     :alt: This screenshot shows how to filter the MetricFinder for metrics related to custom Monitoring MetricSets. 
-
 
 Summary
 ==================================================================
