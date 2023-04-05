@@ -7,10 +7,17 @@ Monitor detector service latency for a group of customers
 .. meta::
     :description: This Splunk APM use case describes how to monitor for service latency.
 
-Kai, a site reliability engineer at the fictitious Buttercup Games, wants to monitor a latency issue affecting a critical checkout workflow for the :strong:`cartservice` service and :strong:`/getcart` endpoint for a specific set of customers who most frequently have problems with the service. By generating a Monitoring MetricSet with ``version_id`` as a custom dimension and filtering it to the customers affected by the issue, Kai can set up a detector to monitor service and endpoint latency by customer. Kai can also create charts and dashboards that show service and endpoint latency for specific customers over time.
+Kai, a site reliability engineer at the fictitious Buttercup Games, wants to monitor a latency issue affecting a critical checkout workflow for the cart service and ``/getcart`` endpoint for a specific set of customers who most frequently have problems with the service. 
 
+Kai takes the following steps to monitor latency in the cart service:
 
-Generate a Monitoring MetricSet and filter by span tag
+#. :ref:`custom-metricset-mms`
+#. :ref:`custom-metricset-detectors`
+#. :ref:`custom-metricset-dashboards`
+
+.. _custom-metricset-mms:
+
+Kai generates a Monitoring MetricSet and filters by span tag
 ====================================================================================
 To generate Monitoring MetricSets by customer:
 
@@ -28,8 +35,9 @@ This image shows a sample Monitoring MetricSet configuration with the service se
 
 |br|
 
+.. _custom-metricset-detectors:
 
-Create service latency detectors to track metrics 
+Kai creates service latency detectors to track metrics 
 ====================================================================================
 
 Kai can use the custom dimensionalized Monitoring MetricSet Kai created to monitor the performance of this critical checkout workflow in the :strong:`cartservice` service. To do this, Kai creates a detector using the same custom indexed tag, ``version_id``, to track error rates associated with the checkout workflow.
@@ -48,9 +56,9 @@ Kai can use the custom dimensionalized Monitoring MetricSet Kai created to monit
     :width: 100%
     :alt: This screenshot shows how to filter the MetricFinder for metrics related to custom monitoring MetricSets. 
 
+.. _custom-metricset-dashboards:
 
-
-Set up charts, dashboards, and alerts for custom dimensions
+Kai sets up charts, dashboards, and alerts for custom dimensions
 ==================================================================
 Kai can also create charts and dashboards that use the custom dimensions Kai created.
 
@@ -64,7 +72,7 @@ Kai navigates to the built-in APM service endpoint dashboard for :strong:`cartse
 
 #. Select the relevant environment, then select ``cartservice`` as the :strong:`Service`, ``GetCart`` as the Endpoint, and apply :strong:`sf_dimensionalized:true` as a :strong:`Filter`.
 
-5. To see the custom dimensions Kai created, Kai applies the filter :strong:`sf_dimensionalized:true` in the filter bar while creating their dashboard, as the following image illustrates:
+#. To see the custom dimensions Kai created, Kai applies the filter :strong:`sf_dimensionalized:true` in the filter bar while creating their dashboard, as the following image illustrates:
 
 
 ..  image:: /_images/apm/span-tags/dashboard-cmms-use-case.png
@@ -74,6 +82,8 @@ Kai navigates to the built-in APM service endpoint dashboard for :strong:`cartse
 
 Summary
 ==================================================================
+
+By generating a Monitoring MetricSet with ``version_id`` as a custom dimension and filtering it to the customers affected by the issue, Kai can set up a detector to monitor service and endpoint latency by customer. Kai can also create charts and dashboards that show service and endpoint latency for specific customers over time.
 
 Kai created a Monitoring MetricSet with a custom dimension to track a checkout workflow for a subset of customers. To learn more about Monitoring MetricSets, see :ref:`cmms`. 
 
