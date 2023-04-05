@@ -79,7 +79,7 @@ Custom configurations consist of the fields you want to override in the default 
         # Only overrides this field with port 9871
         docker_observer: type == "container" and port == 9871
 
-If you prefer to override settings from the console, use the ``--set`` option when running the Collector. For example:
+If you prefer to override settings from the console, use the ``--set`` option when running the Collector. This is useful in environments like Kubernetes. For example:
 
 .. code-block:: bash
 
