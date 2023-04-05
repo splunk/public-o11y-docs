@@ -91,6 +91,8 @@ This monitor emits all metrics by default. However, none of these metrics are ca
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/dotnet/metadata.yaml"></div>
 
+### Notes
+
 ```{include} /_includes/metric-defs.md
 ```
 

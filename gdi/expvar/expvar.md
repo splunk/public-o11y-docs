@@ -309,6 +309,8 @@ The following metrics are available for this integration: This monitor will also
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/expvar/metrics.yaml"></div>
 
+### Notes
+
 ```{include} /_includes/metric-defs.md
 ```
 

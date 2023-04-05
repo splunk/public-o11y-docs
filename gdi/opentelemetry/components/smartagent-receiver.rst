@@ -28,9 +28,9 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the Smar
 For each Smart Agent monitor you want to add to the Collector, add a Smart Agent receiver. After you've configured a Smart Agent monitor in the Collector, each Smart Agent receiver behaves like the corresponding Smart Agent monitor. 
 
 Sample configurations
-----------------------
+--------------------------------------------
 
-The following example adds the Postgresql monitor type to the Collector using the Smart Agent receiver
+The following example adds the Postgresql monitor to the Collector using the Smart Agent receiver:
 
 .. code-block:: yaml
 
@@ -58,10 +58,28 @@ If you use a monitor that updates dimension properties or tags, for example ``po
 
 .. caution:: Don't remove the ``smartagent/signalfx-forwarder`` and ``smartagent/processlist`` receivers from the configuration. System processes and Smart Agent telemetry depend on both receivers's configurations.
 
+.. _otel-sareceiver-extrametrics:
+
+Add additional metrics
+--------------------------------------------
+
+To ingest additional metrics using Smart Agent monitors, add the ``extraMetrics`` field to the monitor configuration. For example:
+
+.. code-block:: yaml
+
+   receivers:
+     smartagent/postgresql:
+       type: postgresql
+       host: mypostgresinstance
+       port: 5432
+       extraMetrics:
+         - actual-name-0 # Add metrics to be ingested
+         - actual-name-1 
+
 Settings
 ======================
 
-To configure each Smart Agent receiver, see the documentation of each monitor type in :ref:`monitor-data-sources`.
+To configure Smart Agent monitors, see the documentation on each monitor type in :ref:`monitor-data-sources`.
 
 Troubleshooting
 ======================
