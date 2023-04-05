@@ -21,13 +21,13 @@ Kai generates a Monitoring MetricSet and filters by span tag
 ====================================================================================
 To generate Monitoring MetricSets by customer:
 
-1. Kai indexes a span tag to identify each customer: ``version_id``. See :ref:`apm-index-span-tags` for the steps Kai takes to generate a custom MMS.
+1. Kai indexes a span tag to identify each customer: ``version_id``. 
 
-2. Kai generates a Monitoring MetricSet using ``version_id`` as a dimension. See :ref:`cmms` for the steps Kai takes to generate a custom MMS.
+2. Kai generates a Monitoring MetricSet using ``version_id`` as a dimension. 
 
 3. Kai sets the scope of the Monitoring MetricSet to the :strong:`cartservice` service, and filters on the tag values for ``version_id`` that represent the specific list of customers Kai wants to investigate. 
 
-This image shows a sample Monitoring MetricSet configuration with the service selected as :strong:`cartservice`, endpoint as :strong:`/getcart` and filtering by tag values for ``version_id``:
+This image shows a sample Monitoring MetricSet configuration with the service selected as :strong:`cartservice`, endpoint as :strong:`/getcart` and a filter by tag values for ``version_id``:
 
 ..  image:: /_images/apm/span-tags/version_id_metric_set.png
     :width: 60%
@@ -40,10 +40,10 @@ This image shows a sample Monitoring MetricSet configuration with the service se
 Kai creates service latency detectors to track metrics 
 ====================================================================================
 
-Kai can use the custom dimensionalized Monitoring MetricSet Kai created to monitor the performance of this critical checkout workflow in the :strong:`cartservice` service. To do this, Kai creates a detector using the same custom indexed tag, ``version_id``, to track error rates associated with the checkout workflow.
+Kai can use the custom dimensionalized Monitoring MetricSet they created to monitor the performance of this critical checkout workflow in the :strong:`cartservice` service. To do this, Kai creates a detector using the same custom indexed tag, ``version_id``, to track error rates associated with the checkout workflow.
 
 
-1. There are two ways for Kai to navigate to the Detector Creation page to create a detector using their custom Monitoring MetricSet:
+1. There are 2 ways for Kai to navigate to the Detector Creation page to create a detector using their custom Monitoring MetricSet:
     a. From the navigation panel, select: :strong:`Alerts & Detectors` > :strong:`New Detector`.
     b. From any APM page, select the plus sign :strong:`( + )` on the top bar and select :strong:`Detector` from the list. 
 
