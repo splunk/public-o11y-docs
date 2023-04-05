@@ -302,6 +302,8 @@ To set resource attributes, provide them using the ``OTEL_RESOURCE_ATTRIBUTES`` 
 
    export OTEL_RESOURCE_ATTRIBUTES="service.name=<name_of_service>,service.version=<version_of_service>"
 
+.. include:: /_includes/deactivate-native-metrics.rst
+
 Settings
 ======================
 

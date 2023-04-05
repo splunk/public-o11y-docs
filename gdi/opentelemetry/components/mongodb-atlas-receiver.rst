@@ -75,16 +75,7 @@ The following metrics, resource attributes, and attributes are available.
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mongodbatlasreceiver.yaml"></div>
 
-Deactivate metrics
---------------------------------
-
-To deactivate any metric, apply the following configuration:
-
-.. code:: yaml
-
-   metrics:
-     <metric_name>:
-       enabled: false
+.. include:: /_includes/deactivate-native-metrics.rst
 
 Troubleshooting
 ======================

@@ -100,25 +100,7 @@ The following metrics, resource attributes, and attributes, are available.
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/oracledbreceiver.yaml"></div>
 
-Activate or deactivate metrics
----------------------------------
-
-You can activate or deactivate specific metrics by setting the value of the
-``enabled`` option to ``true`` or ``false``.
-
-The following example deactivates the ``oracledb.executions`` metric and
-activated the ``oracledb.sessions.usage`` metric:
-
-.. code:: yaml
-
-   receivers:
-     oracledb:
-       datasource: "oracle://otel:password@localhost:51521/XE"
-       metrics:
-         oracledb.executions:
-           enabled: false
-         oracledb.sessions.usage:
-           enabled: true
+.. include:: /_includes/deactivate-native-metrics.rst
 
 Troubleshooting
 ======================

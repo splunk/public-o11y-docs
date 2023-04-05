@@ -95,6 +95,8 @@ The following metrics, resource attributes, and attributes are available.
 
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/receiver/databricksreceiver/metadata.yaml"></div>
 
+.. include:: /_includes/deactivate-native-metrics.rst
+
 Troubleshooting
 ======================
 
