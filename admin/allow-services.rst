@@ -12,6 +12,7 @@ A number of different services make up Splunk Observability Cloud. If your organ
 - :ref:`simple-http-proxy`
 - :ref:`otel-connector`
 
+.. note:: If you write to http://domain/path, the request must happen on port 80. Similarly, if you write to https://domain/path, the request must happen on port 443. If you want to use a different port, you must use http[s]://domain:port/path
 
 .. _simple-http-proxy:
 

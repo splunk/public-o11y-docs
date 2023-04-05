@@ -67,7 +67,7 @@ master_doc = 'index'
 # General information about the project.
 # Update the copyright date annually -- Barbara Snyder
 project = 'Splunk'
-copyright = '2022 Splunk, Inc'
+copyright = '2023 Splunk, Inc'
 author = 'Splunk'
 
 # The version info for the project you're documenting, acts as replacement for

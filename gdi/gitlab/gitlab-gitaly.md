@@ -70,6 +70,11 @@ These are the metrics available for this integration:
 
 <div class="metrics-table" type="gitlab-gitaly" include="markdown"></div>
 
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
+
 ## Get help
 
 ```{include} /_includes/troubleshooting.md

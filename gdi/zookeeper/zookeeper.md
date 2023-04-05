@@ -64,6 +64,11 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/zookeeper/metrics.yaml"></div>
 
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
+
 ### Group leader metrics
 
 All of the following metrics are part of the `leader` metric group. To activate them, add `leader` to the `extraGroups` setting:
