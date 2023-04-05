@@ -39,11 +39,11 @@ Release and deploy the Collector
 Use the :new-page:`release script <https://github.com/signalfx/splunk-otel-collector/blob/main/deployments/cloudfoundry/bosh/release>` to generate a new release with the latest version of the Splunk Distribution of OpenTelemetry Collector. 
 
 .. code-block:: 
+   
+   # Run the script from the PCF tile
+   bosh -d splunk-otel-collector deploy deployment.yaml
 
-   $ bosh -d splunk-otel-collector deploy deployment.yaml
-
-* It's best to run the script from the PCF tile.
-* See :new-page:`configuration examples <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/bosh/example>`.
+See :new-page:`configuration examples <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/bosh/example>`.
 
 Learn more
 ----------------------------------
@@ -77,7 +77,7 @@ To install the Buildpack:
 
 .. code-block:: 
 
-   $ cf create-buildpack otel_collector_buildpack . 99 --enable
+   cf create-buildpack otel_collector_buildpack . 99 --enable
 
 Learn more
 ----------------------------------
@@ -113,7 +113,7 @@ Run the following command to create the BOSH release.
 
 .. code-block:: 
 
-   $ ./make-latest-tile
+   ./make-latest-tile
 
 Package the release as a dependency for the Tile so it has the same version as the Collector. If the command is successful, you can find the tile in ``./product/splunk-otel-collector-<VERSION>.pivotal``.
 
