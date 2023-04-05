@@ -9,20 +9,15 @@ Pivotal Cloud Foundry
 
 Use Pivotal Cloud Foundry (PCF) to deploy the Collector.
 
-Requirements
-=========================
-
-This method is supported for Tanzu Application Service (TAS) version 2. It's not supported for TAS version 3.
-
-
 Deployment options
 =========================
 
-You have three options:
+You have three deployment options:
 
-* Cloud Foundry Buildpack: This integration can be used to install and run the Collector as a sidecar to your app. In this configuration, the Collector will run in the same container as the app.
+* Cloud Foundry Buildpack: This integration can be used to install and run the Collector as a sidecar to your app. In this configuration, the Collector runs in the same container as the app.
 
 * Bosh release: The Collector is deployed to the PCF environment as a standalone deployment.
 
-* Tanzu Tile: This is a Tanzu Tile of the Collector, which is a packaged release of the collector that can be integrated into the Ops Manager. The Tanzu Tile enables users to download, install, run, configure, and update the collector all from the Ops Manager.
+* Tanzu Tile: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal's Ops Manager. The Tanzu Tile enables you to download, install, run, configure, and update the Collector from the Ops Manager.
 
+  * This method is supported for Tanzu Application Service (TAS) version 2. It's not supported for TAS version 3.
