@@ -90,7 +90,14 @@ Kai created a Monitoring MetricSet with a custom dimension to track a checkout w
 Learn more
 ===========
 
-Use the links in the following table to learn more about charts, dashboards, and alerts.
+* See Index span tags to generate Troubleshooting MetricSets for the steps Kai takes to generate a custom MMS.
+* See :ref:`cmms` for more info about generating a custom MMS.
+* For more, see Metric Finder and Metadata Catalog.
+* See :ref:`Track service performance using dashboards in Splunk APM<apm-dashboards>` for more info about monitoring services in APM dashboards.
+* See :ref:`Create charts in Splunk Observability Cloud<create-charts>` for more info about creating charts.
+* See :ref:`Create and customize dashboards<dashboard-create-customize>` for more info about creating dashboards.
+* See :ref:`Configure detectors and alerts in Splunk APM<apm-alerts>` for more info about creating alerts.
+
 
 .. list-table::
    :header-rows: 1
