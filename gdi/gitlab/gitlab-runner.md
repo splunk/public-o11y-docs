@@ -79,6 +79,8 @@ These are the metrics available for this integration:
 
 <div class="metrics-table" type="gitlab-runner" include="markdown"></div>
 
+### Notes
+
 ```{include} /_includes/metric-defs.md
 ```
 
