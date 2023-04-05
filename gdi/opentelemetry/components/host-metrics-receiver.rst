@@ -268,7 +268,7 @@ memory scraper
 
 .. raw:: html
 
-   <div class="metrics-component" category="included" url=https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
 
 network scraper
 --------------------------
