@@ -63,7 +63,7 @@ If you use a monitor that updates dimension properties or tags, for example ``po
 Add additional metrics
 --------------------------------------------
 
-To ingest additional metrics using monitors, add the ``extraMetrics`` field to the monitor configuration. For example:
+To ingest additional metrics using Smart Agent monitors, add the ``extraMetrics`` field to the monitor configuration. For example:
 
 .. code-block:: yaml
 
