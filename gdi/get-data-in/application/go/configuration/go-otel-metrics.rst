@@ -25,7 +25,7 @@ To collect Go metrics, see :ref:`enable_automatic_metric_collection_golang`.
 Runtime metrics
 ================================================
 
-.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
+.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on a best-effort basis.
 
 The following runtime metrics are automatically collected and exported:
 
@@ -79,3 +79,53 @@ The following runtime metrics are automatically collected and exported:
    * - ``runtime.uptime`` (Experimental)
      - Cumulative counter
      -  Milliseconds since application was initialized 
+
+.. _golang-otel-pool-metrics:
+
+Connection pool metrics
+================================================
+
+.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on a best-effort basis.
+
+The Splunk Distribution of OpenTelemetry Go instruments several connection pool implementations:
+
+- ``splunksql``
+- ``splunkmysql``
+- ``splunkpgx``
+- ``splunkgorm``
+- ``splunksqlx``
+- ``splunkpq``
+
+Each of the connection pools reports a subset of the following metrics:
+
+.. list-table:: 
+  :header-rows: 1
+  :widths: 40 10 50
+  :width: 100%
+
+  * - Metric
+    - Type
+    - Description
+  * - ``db.client.connections.usage``
+    - Gauge
+    - Number of connections that are currently in the state described by the ``state`` attribute.
+  * - ``db.client.connections.max``
+    - Gauge
+    - Maximum number of open connections allowed.
+  * - ``db.client.connections.wait_time``
+    - Timer
+    - Time it took to obtain an open connection from the pool.
+
+The following attributes are available:
+
+.. list-table:: 
+  :header-rows: 1
+  :widths: 40 60
+  :width: 100%
+
+  * - Tag
+    - Value
+  * - ``pool.name``
+    - Name of the connection pool. Applies to all connection pool metrics.
+  * - ``state``
+    - State of the connection. Can be ``idle`` or ``used``. Only applies to the ``db.client.connections.usage`` metric.
