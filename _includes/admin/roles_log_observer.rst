@@ -38,7 +38,7 @@
   * - :strong:`Create and manage field aliases`
     - Yes
     - Yes
-    - Yes
+    - No
     - No
 
   * - :strong:`View individual log details`
@@ -50,7 +50,7 @@
   * - :strong:`Create and manage log processing rules`
     - Yes
     - Yes
-    - Yes
+    - No
     - No
 
   * - :strong:`Apply processing rules across historical data`
@@ -74,13 +74,13 @@
   * - :strong:`Transform data with log processing rules`
     - Yes
     - Yes
-    - Yes
+    - No
     - No
 
   * - :strong:`Create and manage log metricization rules`
     - Yes
     - Yes
-    - Yes
+    - No
     - No
 
   * - :strong:`Create new S3 connection to allow infinite logging rules`
