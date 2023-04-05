@@ -169,8 +169,9 @@ Similarly, the following example shows ``C:`` as a common mount point for Window
 To include virtual file systems, set ``include_virtual_filesystems`` to ``true``. 
 
 .. code:: yaml
+
    filesystem:
-      include_virtual_filesystems: true
+     include_virtual_filesystems: true
 
 Find more examples in the daemonset.yaml file in GitHub.
 
