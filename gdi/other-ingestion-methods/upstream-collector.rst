@@ -11,9 +11,9 @@ Send telemetry using the upstream OpenTelemetry Collector
 .. meta:: 
       :description: If you have to use the upstream OpenTelemetry Collector due to technical or practical reasons, you can still send traces and metrics to Splunk Observability Cloud. The upstream Collector lacks many features present in the Splunk distribution and requires manual deployment and configuration.
 
-The Splunk Distribution of OpenTelemetry Collector builds on the upstream OpenTelemetry Collector to send metrics, logs, and traces to Splunk Observability Cloud. The Splunk distribution also performs trace-metric correlation and is fully compatible with Splunk distributions of OpenTelemetry instrumentation. See :ref:`otel-intro`.
+The upstream OpenTelemetry Collector is the original source of the all OpenTelemetry Collector distributions, including the Splunk Distribution of OpenTelemetry Collector. The upstream Collector comes in two different versions, ``core``, which only contains the base components, and ``contrib``, which includes vendor-specific components, such as receivers and exporters for several observability back ends, including Splunk Observability Cloud.
 
-If you have to use the upstream OpenTelemetry Collector due to technical or practical reasons, you can still send traces and metrics to Splunk Observability Cloud. The upstream Collector lacks many features present in the Splunk distribution and requires manual deployment and configuration.
+If you need to use the upstream Collector due to technical or practical reasons, you can still send traces and metrics to Observability Cloud. However, the upstream Collector lacks many features and requires manual deployment and configuration. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation. See :ref:`otel-intro`.
 
 .. note:: Splunk participates in the OpenTelemetry project and is committed to its growth. Features developed for the Splunk distribution are regularly added to the upstream Collector for the benefit of the entire community.
 
@@ -74,9 +74,9 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 Prerequisites
 ===================================================
 
-To send data to Splunk Observability Cloud using the upstream Collector, use an OpenTelemetry Collector ``contrib`` version with the same version number as the latest Splunk distribution. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information.
+To send data to Splunk Observability Cloud use the ``contrib`` version of the upstream OpenTelemetry Collector. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information. 
 
-.. note:: The OpenTelemetry Collector ``core`` version lacks vendor-specific components, such as receivers and exporters used by the Splunk Distribution of OpenTelemetry Collector.
+.. note:: Make sure that the version number is the same of the latest Splunk distribution.
 
 .. _gdi-upstream-collector:
 
