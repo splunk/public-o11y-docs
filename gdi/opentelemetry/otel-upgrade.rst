@@ -9,7 +9,7 @@ Upgrade the Collector
 
 The installer script uses one of the supported package managers to install the Collector, for example apt or yum.
 
-However, configuration files aren't overridden, so you need to update them manually before the backward compatibility is dropped. 
+When you update the Collector using the official packages, configuration files are never overridden. If you need to update the configuration after an update, edit them manually before backward compatibility is dropped. 
 
 Upgrade guidelines
 =================================
