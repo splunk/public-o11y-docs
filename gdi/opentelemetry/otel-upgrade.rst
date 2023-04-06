@@ -7,11 +7,14 @@ Upgrade the Collector
 .. meta::
   :description: Upgrade the Splunk Distribution of OpenTelemetry Collector.
 
+The installer script uses one of the package managers to install the Collector. Automated scripts that cover backward compatibility are included in the bundle. 
+
+However, configuration files aren't overridden, so you need to update them manually before the backward compatibility is dropped. 
 
 Upgrade guidelines
 =================================
 
-Apply the following changes to the Collector configuration files for specific version upgrades. While automated scripts that cover backward compatibility are included in the bundle, configuration files aren't overridden, so you need to update them manually before the backward compatibility is dropped. 
+Apply the following changes to the Collector configuration files for specific version upgrades. 
 
 .. :important::
 
