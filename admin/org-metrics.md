@@ -46,6 +46,8 @@ To access the Organization Overview page, follow these steps:
 
 This section provides tips that can help you interpret and work with usage metrics.
 
+(metrics-by-token)=
+
 ### Metrics for values by token
 
 In some cases, Infrastructure Monitoring has two similar metrics:

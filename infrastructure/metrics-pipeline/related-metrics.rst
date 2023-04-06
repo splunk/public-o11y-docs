@@ -57,7 +57,34 @@ Data point dropping metrics
     
    * - ``sf.org.numReceivedDatapointsAggregatedByToken``
      - One value per token, number of data points metrics pipeline management dropped based on configured rules 
+    
+   * - ``sf.org.numAggregatedDatapointsDroppedThrottle``
+     - Number of data points metrics pipeline management dropped when the aggregation metrics are more than the limit configured for your organization
+    
+   * - ``sf.org.numAggregatedDatapointsDroppedThrottleByToken``
+     - One value per token, number of data points metrics pipeline management dropped when the aggregation metrics are more than the limit configured for your organization
 
+   * - ``sf.org.numDatapointsDroppedInTimeout``
+     - Number of data points Splunk Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds, and creation was unlikely to succeed.
+
+   * - ``sf.org.numDatapointsDroppedExceededQuota``
+     - Number of new data points you sent to Infrastructure Monitoring but Infrastructure Monitoring didn't accept because your organization exceeded its subscription limit. To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription limits, see :ref:`dpm-usage`.
+
+   * - ``sf.org.numDatapointsDroppedExceededQuotaByToken``
+     - One value per token, number of new data points you sent to Infrastructure Monitoring but Infrastructure Monitoring didn't accept because your organization exceeded its subscription limit. To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription limits, see :ref:`dpm-usage`. The sum of all the values might be less than the value of ``sf.org.numDatapointsDroppedExceededQuota``. For more information, see :new-page-ref:`metrics-by-token`.
+  `
+   * - ``sf.org.numDatapointsDroppedThrottle``
+     - Number of data points you sent to Infrastructure Monitoring that Infrastructure Monitoring didn't accept because your organization significantly exceeded its DPM limit. For help with this issue, reach out to support at observability-support@splunk.com. Unlike ``sf.org.numDatapointsDroppedExceededQuota``, this metric represents data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization, it isn't keeping any of your data.
+
+   * - ``sf.org.numDatapointsDroppedThrottleByToken``
+     - One value per token, number of data points you sent to Infrastructure Monitoring that Infrastructure Monitoring didn't accept because your organization significantly exceeded its DPM limit. For help with this issue, reach out to support at observability-support@splunk.com. Unlike ``sf.org.numDatapointsDroppedExceededQuota``, this metric represents data points for both existing and new MTS. If Infrastructure Monitoring is throttling your organization, it isn't keeping any of your data. The sum of all the values might be less than the value of ``sf.org.numDatapointsDroppedThrottle``. For more information, see :new-page-ref:`metrics-by-token`.
+
+   * - ``sf.org.numDatapointsDroppedInvalid``
+     - Number of data points dropped because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
+
+   * - ``sf.org.numDatapointsDroppedInvalidByToken``
+     - Number of data points dropped for a specific access token because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
+  
 
 Data point retention metrics
 ----------------------------------------
