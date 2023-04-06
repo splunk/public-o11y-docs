@@ -25,25 +25,24 @@ You can override the :ref:`default OpenTelemetry agent configuration <otel-confi
 .. code-block:: yaml 
 
   agent:
-  enabled: true
+    enabled: true
 
   # Metric collection from k8s control plane components.
-  # For control plane configuration details see: docs/advanced-configuration.md#control-plane-metrics
-  controlPlaneMetrics:
-    apiserver:
-      enabled: true
-    controllerManager:
-      enabled: true
-    coredns:
-      enabled: false
-    proxy:
-      enabled: true
-    scheduler:
-      enabled: false
+    controlPlaneMetrics:
+      apiserver:
+        enabled: true
+      controllerManager:
+        enabled: true
+      coredns:
+        enabled: false
+      proxy:
+        enabled: true
+      scheduler:
+        enabled: false
 
 This custom configuration is merged into the default agent configuration. 
 
-.. caution:: After merging the files you'll need to fully redefine parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``.
+.. caution:: After merging the files you need to fully redefine parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``.
 
 Override a control plane configuration
 ==============================================================
