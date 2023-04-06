@@ -1,6 +1,7 @@
 version: '3'
 services:
   sphinx:
+    restart: on-failure
     build:
       context: ./.
       dockerfile: ./Dockerfile
