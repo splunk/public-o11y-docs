@@ -40,6 +40,7 @@ Gather all the data from your environment in Observability Cloud to achieve full
 As a part of getting data in, make sure to consider bringing in data in a way that allows :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Observability Cloud. When turned on, the Related Content bar displays automatically when a you select a relevant element and lets you take a data-driven investigative approach.
 
 
+
 .. _get-started-explore:
 
 3. Explore and analyze your data
