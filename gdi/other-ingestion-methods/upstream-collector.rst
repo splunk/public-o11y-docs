@@ -1,26 +1,26 @@
 .. caution::
 
-   Splunk only provides best-effort support for the upstream OpenTelemetry Collector. Only Splunk OpenTelemetry distributions are in scope for official Splunk support and support-related service-level agreements (SLAs).
+   Splunk only provides best-effort support for OpenTelemetry Collector Contrib. Only Splunk OpenTelemetry distributions are in scope for official Splunk support and support-related service-level agreements (SLAs).
 
 .. _using-upstream-otel:
 
 **********************************************************
-Send telemetry using the upstream OpenTelemetry Collector
+Send telemetry using OpenTelemetry Collector Contrib
 **********************************************************
 
 .. meta:: 
-      :description: If you have to use the upstream OpenTelemetry Collector due to technical or practical reasons, you can still send traces and metrics to Splunk Observability Cloud. The upstream Collector lacks many features present in the Splunk distribution and requires manual deployment and configuration.
+      :description: If you need to use the Contrib Collector due to technical or practical reasons, you can still send traces and metrics to Observability Cloud. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation.
 
-The upstream OpenTelemetry Collector is the original source of the all OpenTelemetry Collector distributions, including the Splunk Distribution of OpenTelemetry Collector. The upstream Collector comes in two different versions, ``core``, which only contains the base components, and ``contrib``, which includes vendor-specific components, such as receivers and exporters for several observability back ends, including Splunk Observability Cloud.
+The OpenTelemetry Collector Contrib project is the upstream source of all OpenTelemetry Collector distributions, including the Splunk Distribution of OpenTelemetry Collector. The Contrib Collector contains vendor-specific components, such as receivers and exporters for several observability back ends, including Splunk Observability Cloud. However, the Contrib Collector lacks many features and requires manual deployment and configuration. 
 
-If you need to use the upstream Collector due to technical or practical reasons, you can still send traces and metrics to Observability Cloud. However, the upstream Collector lacks many features and requires manual deployment and configuration. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation. See :ref:`otel-intro`.
+If you need to use the Contrib Collector due to technical or practical reasons, you can still send traces and metrics to Observability Cloud. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation. See :ref:`otel-intro`.
 
 .. note:: Splunk participates in the OpenTelemetry project and is committed to its growth. Features developed for the Splunk distribution are regularly added to the upstream Collector for the benefit of the entire community.
 
 Feature comparison
 ===================================
 
-The following table compares the Splunk Distribution of OpenTelemetry Collector with the upstream Collector from the OpenTelemetry contrib repository.
+The following table compares the Splunk Distribution of OpenTelemetry Collector with the Collector from the OpenTelemetry Collector Contrib repository.
 
 .. list-table::
   :header-rows: 1
@@ -29,7 +29,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 
   * - :strong:`Feature`
     - :strong:`Splunk Collector`
-    - :strong:`OTel contrib Collector`
+    - :strong:`Contrib Collector`
 
   * - Splunk support
     - Full support
@@ -74,9 +74,9 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 Prerequisites
 ===================================================
 
-To send data to Splunk Observability Cloud use the ``contrib`` version of the upstream OpenTelemetry Collector. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information. 
+To send data to Splunk Observability Cloud use the Collector from the OpenTelemetry Collector Contrib repository. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information. 
 
-.. note:: Make sure that the version number is the same of the latest Splunk distribution.
+.. note:: Make sure that the version number of OpenTelemetry Collector Contrib is the same of the latest Splunk distribution before configuring it.
 
 .. _gdi-upstream-collector:
 
@@ -93,19 +93,19 @@ The following example shows how to configure the OpenTelemetry Collector ``contr
 Migrate to the Splunk OpenTelemetry Collector
 ==================================================
 
-Migrating from existing upstream Collectors to the Splunk Distribution of OpenTelemetry Collector requires fewer steps than migrating from other proprietary agents. The Splunk distribution is based on the OpenTelemetry Collector ``contrib`` repository.
+Migrating from existing upstream Collectors to the Splunk Distribution of OpenTelemetry Collector requires fewer steps than migrating from other proprietary agents, as the Splunk distribution is based on the OpenTelemetry Collector 
 
-To migrate from the upstream Collector to the Splunk OTel Collector, follow these steps:
+To migrate from the Collector Contrib to the Splunk OTel Collector, follow these steps:
 
 #. Save a copy of your current Collector configuration.
 
-#. Stop the upstream Collector service using ``sudo systemctl stop otelcol`` on Linux or ``net stop otelcol`` on Windows. If you're running the Collector in a Terminal session, interrupt execution by pressing Control+C.
+#. Stop the Collector service using ``sudo systemctl stop otelcol`` on Linux or ``net stop otelcol`` on Windows. If you're running the Collector in a Terminal session, interrupt execution by pressing Control+C.
 
 #. Remove the OpenTelemetry Collector binary and configuration files, including system service configuration files, or use the package manager in your system to remove the Collector.
 
 #. Install the Splunk Distribution of OpenTelemetry Collector. See :ref:`otel-install-platform`.
 
-#. Configure the Collector taking into account the settings you saved before removing the upstream Collector, as well as the components available in the Splunk Distribution of OpenTelemetry Collector. See :ref:`gdi-upstream-collector` and :ref:`otel-components`.
+#. Configure the Collector taking into account the settings you saved before removing the previous Collector, as well as the components available in the Splunk Distribution of OpenTelemetry Collector. See :ref:`gdi-upstream-collector` and :ref:`otel-components`.
 
 Troubleshooting
 ==================================================
