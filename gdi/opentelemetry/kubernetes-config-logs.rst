@@ -7,7 +7,10 @@ Configure logs for Kubernetes
 .. meta::
       :description: Configure logs for the Splunk Distribution of OpenTelemetry Collector for Kubernetes.
 
-The Helm chart currently uses Fluentd for Kubernetes logs collection. Logs collected with Fluentd are sent through the Collector agent, which does all of the necessary metadata enrichment. The OpenTelemetry Collector also has native functionality for logs collection, which will soon be migrated from Fluentd to the OpenTelemetry logs collection.
+
+.. note:: See how to configure the Collector for Kubernetes at :ref:`otel-kubernetes-config` and :ref:`otel-kubernetes-config-advanced`.
+
+The Helm chart currently uses Fluentd for Kubernetes logs collection. Logs collected with Fluentd are sent through the Collector agent, which does all of the necessary metadata enrichment. 
 
 Add the following line to your configuration to use OpenTelemetry logs collection instead of Fluentd:
 
@@ -75,7 +78,7 @@ Use :new-page:`regex101 <https://regex101.com/ >` to find a golang regex that wo
 Collect journald events
 ===========================================================================
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect journald events from Kubernetes environment. Process journald events by adding the following section to your values.yaml configuration:
+The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect journald events from Kubernetes environment. Process journald events by adding the following section to your ``values.yaml`` configuration:
 
 .. code-block:: yaml
 
@@ -95,6 +98,27 @@ The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect jo
       # value. Make sure the index exists in Splunk and is configured to receive HEC
       # traffic (not applicable to Observability Cloud).
       index: ""
+
+Manage log ingestion using annotations
+===========================================================================
+
+The following annotations for log ingestion management are supported: 
+
+* Use the ``splunk.com/index`` annotation on pods and/or namespaces to indicate which Splunk platform indexes you want to send logs to. Pod annotation will take precedence over namespace annotation when both are annotated. 
+
+  * For example, to send logs from the ``kube-system`` namespace to the ``k8s_events`` index, use the command: 
+  
+  .. code-block:: yaml
+
+    kubectl annotate namespace kube-system splunk.com/index=k8s_events
+
+* Filter logs using pod and/or namespace annotations:
+
+  * If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``false`` (default value), set the ``splunk.com/exclude`` annotation to ``true`` on pods and/or namespaces to exclude their logs from being ingested.
+  
+  * If ``logsCollection.containers.useSplunkIncludeAnnotation`` is ``true``, set the ``splunk.com/include`` annotation to ``true`` on pods and/or namespaces to only ingest their logs. All other logs will be ignored.
+
+* Use the ``splunk.com/sourcetype`` annotation on a pod to overwrite the ``sourcetype`` field. If not set, it will default to ``kube:container:CONTAINER_NAME``.
 
 Review performance benchmarks
 ===========================================================================

@@ -78,3 +78,5 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`api-test-use-case`
   * - :ref:`Synthetic Monitoring <synth-landing>`     
     - :ref:`uptime-test-use-case`
+  * - :ref:`Log Observer <logs-intro-logconnect>`
+    - :ref:`Troubleshoot workflow failures with Log Observer <logs-LOconnect-usecase>`

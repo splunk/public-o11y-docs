@@ -92,7 +92,7 @@ The following settings control trace exporters and their endpoints:
    * - ``SIGNALFX_ENDPOINT_URL``
      - The URL to where the trace exporter sends traces. The default value is ``http://localhost:9411/api/v2/spans``. Setting a value overrides the ``SIGNALFX_REALM`` environment variable.
    * - ``SIGNALFX_METRICS_ENDPOINT_URL``
-     - The URL to where the metrics exporter sends metrics. The default value is ``http://localhost:9943/api/v2/datapoint``. Setting a value overrides the ``SIGNALFX_REALM`` environment variable.
+     - The URL to where the metrics exporter sends metrics. The default value is ``http://localhost:9943/v2/datapoint``. Setting a value overrides the ``SIGNALFX_REALM`` environment variable.
    * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_ENABLED``
      - Activate to export traces that contain a minimum number of closed spans, as defined by ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``. The default value is ``false``.	
    * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``

@@ -1,89 +1,77 @@
 .. _otel-security:
 
-******************************************
-Security
-******************************************
+***********************************************************
+Security guidelines, permissions, and dependencies
+***********************************************************
 
 .. meta::
       :description: Security landing. Describes how to ensure that the Splunk Distribution of OpenTelemetry Collector is secure.
 
-The Splunk Distribution of OpenTelemetry Collector defaults to operating in a secure manner, but is configuration driven. This document is intended for both end users and component developers, and assumes at least a basic understanding of architecture and functionality. See ref:`collector-architecture` for more information.
+The Splunk Distribution of OpenTelemetry Collector defaults to operating in a secure manner, but is configuration driven, so you need at least a basic understanding of architecture and functionality to manage security. See :ref:`collector-architecture` and :ref:`otel-deployment-mode` for more information.
+
+.. caution:: Do not report security vulnerabilities by using public GitHub issue reports. See :new-page:`Report a Security Vulnerability <https://www.splunk.com/en_us/product-security/report.html>` to report security issues.
+
+Security guidelines
+=====================
 
 For end users
-=====================
+---------------------------------
 Follow these guidelines when using the Collector.
 
 Configure the Collector
----------------------------------
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Activate the minimum required components in the configuration.
 2. Ensure that sensitive configuration information is stored securely.
 
 Set permissions 
-----------------------------------------
-Permissions
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Do not not run Collector as root or admin user.
 2. Configure require privileged access for components as necessary.
 
 Configure receivers and exporters
--------------------------------------------
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Use encryption and authentication.
 2. Make sure configuration parameters are modified properly to reduce security risks.
 
 Configure processors
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Configure obfuscation or scrubbing of sensitive metadata.
 2. Configure all recommended processors.
 
 Configure extensions
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Do not expose sensitive health or telemetry data.
 
 For developers
-======================
-
+---------------------------------
 Follow these general guidelines:
 
 * Get the configuration information from the Collector configuration file.
 * Use configuration helper functions.
 
-Follow these guidelines when using the Collector.
-
 Configure the Collector
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Use the central configuration file.
 2. Use configuration helpers.
 
 Set permissions
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Minimize privileged access.
 2. Document what requires privileged access and why.
 
 Configure receivers and exporters
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 1. Configure receivers and exporters to default to encrypted connections.
 2. Configure receivers and exporters to use helper functions. See :new-page:`exporter helper <https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/exporterhelper/README.md>` in GitHub for more information. 
 
 Configure extensions
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Configure extensions to not expose sensitive health or telemetry data by default.
-
-Dependencies
-=============================
-The Splunk Distribution of OpenTelemetry Collector relies on a variety of external :new-page:`dependencies <https://github.com/signalfx/splunk-otel-collector/network/dependencies>`. These dependencies are monitored by :new-page:`Dependabot <https://docs.github.com/en/code-security/supply-chain-security/configuring-dependabot-security-updates>`. Dependencies are :new-page:`checked daily <https://github.com/signalfx/splunk-otel-collector/blob/main/.github/dependabot.yml>` and associated pull requests are opened automatically. 
-
-Upgrade to the :new-page:`latest release <https://github.com/signalfx/splunk-otel-collector/releases>` to ensure that you have the latest security updates. If a security vulnerability is detected for a dependency of this project, it might be due to one of the following reasons:
-
-* You are running an older release.
-* A new release with the updates has not been released.
-* The updated dependency has not been merged likely due to some breaking change (in this case, we will actively work to resolve the issue and open a tracking GitHub issues with details).
-* The dependency has not released an updated version with the patch.
 
 General configuration
 ===========================
-The Collector binary does not contain an embedded or default configuration, and must not start without a configuration file being specified. The configuration file passed to the Collector must be validated prior to loading. If an invalid configuration is detected, the Collector must fail to start as a protective mechanism.
+
+The Collector binary does not contain an embedded or default configuration, so you need to specify a configuration file before you start it. The configuration file passed to the Collector must be validated prior to loading. If an invalid configuration is detected, the Collector must fail to start as a protective mechanism.
 
 The configuration drives the Collector's behavior, and care must be taken to ensure that the configuration only activates the minimum set of capabilities and, as such, exposes the minimum set of required ports. See :ref:`otel-exposed-endpoints` for more information. In addition, any incoming or outgoing communication must leverage TLS and authentication.
 
@@ -168,6 +156,14 @@ Subprocesses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Extensions can also be used to run subprocesses, which can be useful for collection mechanisms that cannot natively be run by the Collector (for example, FluentBit). Subprocesses expose a completely separate attack vector that would depend on the subprocess itself. In general, care should be taken before running any subprocesses alongside the Collector.
 
-Report security issues
-===================================
-Do not report security vulnerabilities by using public GitHub issue reports. See :new-page:`Report a Security Vulnerability <https://www.splunk.com/en_us/product-security/report.html>` to report security issues.
+Dependencies
+=============================
+
+The Splunk Distribution of OpenTelemetry Collector relies on a variety of external :new-page:`dependencies <https://github.com/signalfx/splunk-otel-collector/network/dependencies>`. These dependencies are monitored by :new-page:`Dependabot <https://docs.github.com/en/code-security/supply-chain-security/configuring-dependabot-security-updates>`. Dependencies are :new-page:`checked daily <https://github.com/signalfx/splunk-otel-collector/blob/main/.github/dependabot.yml>` and associated pull requests are opened automatically. 
+
+Upgrade to the :new-page:`latest release <https://github.com/signalfx/splunk-otel-collector/releases>` to ensure that you have the latest security updates. If a security vulnerability is detected for a dependency of this project, it might be due to one of the following reasons:
+
+* You are running an older release.
+* A new release with the updates has not been released.
+* The updated dependency has not been merged likely due to some breaking change (in this case, we will actively work to resolve the issue and open a tracking GitHub issues with details).
+* The dependency has not released an updated version with the patch.

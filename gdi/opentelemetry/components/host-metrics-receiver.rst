@@ -166,6 +166,13 @@ Similarly, the following example shows ``C:`` as a common mount point for Window
        mount_points: ["C:"]
        match_type: strict
 
+To include virtual file systems, set ``include_virtual_filesystems`` to ``true``. 
+
+.. code:: yaml
+
+   filesystem:
+     include_virtual_filesystems: true
+
 Find more examples in the daemonset.yaml file in GitHub.
 
 Network
@@ -261,7 +268,7 @@ memory scraper
 
 .. raw:: html
 
-   <div class="metrics-component" category="included" url=https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
 
 network scraper
 --------------------------
@@ -301,6 +308,8 @@ To set resource attributes, provide them using the ``OTEL_RESOURCE_ATTRIBUTES`` 
 .. code-block:: shell
 
    export OTEL_RESOURCE_ATTRIBUTES="service.name=<name_of_service>,service.version=<version_of_service>"
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Settings
 ======================

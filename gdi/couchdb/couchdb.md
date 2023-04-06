@@ -76,10 +76,14 @@ The following table shows the configuration options for this monitor:
 
 ## Metrics
 
-
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/collectd-couchdb/metrics.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

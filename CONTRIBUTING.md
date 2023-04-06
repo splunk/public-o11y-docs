@@ -4,18 +4,19 @@ Thank you for your interest in contributing to Splunk Observability Cloud docume
 
 Read through this document before submitting any pull request.
 
-- [Prerequisites](#prerequisites)
-- [Decide the type of edit](#decide-the-type-of-edit)
-  - [Quick edits to existing documentation](#quick-edits-to-existing-documentation)
-  - [Complex edits to one or multiple files](#complex-edits-to-one-or-multiple-files)
-- [Folder structure of the repository](#folder-structure-of-the-repository)
-  - [Find a document in the repository](#find-a-document-in-the-repository)
-  - [Create files or directories](#create-files-or-directories)
-- [Edit the documentation](#edit-the-documentation)
-  - [Use the reStructuredText markup](#use-the-restructuredtext-markup)
-  - [Add images (optional)](#add-images-optional)
-  - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
-- [Test the docs](#test-the-docs)
+- [Contributing guidelines](#contributing-guidelines)
+  - [Prerequisites](#prerequisites)
+  - [Decide the type of edit](#decide-the-type-of-edit)
+    - [Quick edits to existing documentation](#quick-edits-to-existing-documentation)
+    - [Complex edits to one or multiple files](#complex-edits-to-one-or-multiple-files)
+  - [Folder structure of the repository](#folder-structure-of-the-repository)
+    - [Find a document in the repository](#find-a-document-in-the-repository)
+    - [Create files or directories](#create-files-or-directories)
+  - [Edit the documentation](#edit-the-documentation)
+    - [Use the reStructuredText markup](#use-the-restructuredtext-markup)
+    - [Add images (optional)](#add-images-optional)
+    - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
+  - [Test the docs](#test-the-docs)
 
 ## Prerequisites
 
@@ -222,8 +223,8 @@ After you've saved your changes, you can test the docs using the Docker containe
 
 - Run `./start.sh` from the terminal. Make sure to run `chmod +x start.sh` to grant execution permissions.
 - Enter `make html` or `make clean html` from within the container to build the documentation.
-- Browse `http://localhost:9999` to see the local build of the docs. 
-- If you're using the `make livehtml` option, browse `http://localhost:8888`.
+- You can find the built documentation inside the `/_build/html` directory of the repo.
+- If you're using the `make livehtml` option, browse `http://localhost:8888` to see live docs.
 
 > **NOTE:** Don't run git commands from the container. Exit the container first or use a separate terminal window or tab.
 
