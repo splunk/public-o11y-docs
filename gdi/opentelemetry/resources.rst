@@ -51,9 +51,9 @@ After you've installed the Collector, see :ref:`otel-configuration` and :ref:`ot
 Monitor the Collector
 =============================================
 
-The default configuration automatically scrapes the Collector own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances. In addition, logs are automatically collected for the Collector and Journald processes.
+The default configuration automatically scrapes the Collector's own metrics and sends the data using the ``signalfx`` exporter. A built-in dashboard provides information about the health and status of Collector instances. In addition, logs are automatically collected for the Collector and Journald processes.
 
-The Collector also offers zPages, which provide in-process web pages that display collected data from the process that they're attached to. zPages are useful for in-process diagnostics without having to depend on any back end to examine traces or metrics.
+The Collector also offers a [zPages extension](https://github.com/open-telemetry/opentelemetry-collector/blob/main/extension/zpagesextension/README.md), which provides live data about the Collector. zPages are useful for in-process diagnostics without having to depend on any back end to examine traces or metrics.
 
 Troubleshooting
 =============================================
