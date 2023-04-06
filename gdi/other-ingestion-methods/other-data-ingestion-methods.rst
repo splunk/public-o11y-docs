@@ -21,14 +21,14 @@ If your needs are not covered by Splunk distributions of OpenTelemetry, you can 
 .. raw:: html
 
   <embed>
-    <h2>Use the upstream OpenTelemetry Collector</h2>
+    <h2>Use the OpenTelemetry Collector Contrib (upstream)</h2>
   </embed>
 
-You can use the upstream OpenTelemetry Collector instead of the Splunk Distribution of OpenTelemetry Collector. See :ref:`using-upstream-otel` for installation instructions and information about the differences between the upstream Collector and the Splunk distribution.
+You can use the OpenTelemetry Collector Contrib instead of the Splunk Distribution of OpenTelemetry Collector. See :ref:`using-upstream-otel` for installation instructions and information about the differences between the upstream Collector and the Splunk distribution.
 
 .. caution::
 
-   Splunk only provides best-effort support for the upstream OpenTelemetry Collector. Only Splunk OpenTelemetry distributions are in scope for official Splunk support and support-related service-level agreements (SLAs).
+   Splunk only provides best-effort support for OpenTelemetry Collector Contrib. Only Splunk OpenTelemetry distributions are in scope for official Splunk support and support-related service-level agreements (SLAs).
 
 .. raw:: html
 
