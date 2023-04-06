@@ -42,7 +42,7 @@ You can override the :ref:`default OpenTelemetry agent configuration <otel-confi
 
 This custom configuration is merged into the default agent configuration. 
 
-.. caution:: After merging the files you'll need to fully redefine parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``.
+.. caution:: After merging the files you need to fully redefine parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``.
 
 Override a control plane configuration
 ==============================================================
