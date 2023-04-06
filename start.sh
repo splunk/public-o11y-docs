@@ -24,7 +24,7 @@ echo "docker-compose build"
 docker-compose --ansi=never build
 
 echo "docker-compose up"
-COMPOSE_PROJECT_NAME=$(hostname)-$(realpath .) docker-compose --ansi=never up -d
+docker-compose --ansi=never up -d
 
 printf "\rDocker container built.              "
 sleep .5
