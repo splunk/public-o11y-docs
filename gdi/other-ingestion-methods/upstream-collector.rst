@@ -74,7 +74,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 Prerequisites
 ===================================================
 
-To send data to Splunk Observability Cloud using the Contrib Collector, use an OpenTelemetry Collector ``contrib`` version with the same version number as the latest Splunk distribution. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information.
+To send data to Splunk Observability Cloud using the upstream Collector, use an OpenTelemetry Collector ``contrib`` version with the same version number as the latest Splunk distribution. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information.
 
 .. note:: The OpenTelemetry Collector ``core`` version lacks vendor-specific components, such as receivers and exporters used by the Splunk Distribution of OpenTelemetry Collector.
 
