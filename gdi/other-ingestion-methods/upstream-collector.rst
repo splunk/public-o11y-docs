@@ -4,9 +4,9 @@
 
 .. _using-upstream-otel:
 
-**********************************************
-Using the upstream OpenTelemetry Collector
-**********************************************
+**********************************************************
+Send telemetry using the upstream OpenTelemetry Collector
+**********************************************************
 
 .. meta:: 
       :description: If you have to use the upstream OpenTelemetry Collector due to technical or practical reasons, you can still send traces and metrics to Splunk Observability Cloud. The upstream Collector lacks many features present in the Splunk distribution and requires manual deployment and configuration.
@@ -24,7 +24,8 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 
 .. list-table::
   :header-rows: 1
-  :widths: 20 40 40
+  :widths: 30 30 30
+  :width: 100%
 
   * - :strong:`Feature`
     - :strong:`Splunk Collector`
@@ -54,16 +55,20 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes (CPU and memory)
     - No
 
+  * - Network Explorer
+    - Yes
+    - No
+
   * - Log collection and export
     - Yes (Splunk HEC and Fluentd)
     - No (Under development)
 
   * - Database query performance
-    - yes
+    - Yes
     - No
 
   * - RUM correlation
-    - yes
+    - Yes
     - No
 
 Prerequisites
