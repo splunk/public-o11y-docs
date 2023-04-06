@@ -41,7 +41,7 @@ The Splunk Distribution of OpenTelemetry Collector is a distribution of the Open
 
   Check :ref:`migrate-from-sa-to-otel` to learn how to migrate your data from the SignalFx Smart Agent (deprecated) to the Collector.
 
-To get started with the Collector, read :ref:`opentelemetry-resources`:
+To get started with the Collector, see :ref:`opentelemetry-resources`:
 
 #. Check the :ref:`prerequisites and requirements <otel-requirements>`.
 #. :ref:`otel-install-platform`. Get instructions for installing the Collector on a variety of platforms. Or use :ref:`our guided install <collector-guided-install>`.
