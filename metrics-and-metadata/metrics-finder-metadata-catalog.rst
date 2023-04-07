@@ -177,13 +177,13 @@ Use the Metadata Catalog to find, view, and edit information about the :ref:`met
     
     .. note:: As soon as you enters a search term, the search bar automatically expands a drop-down menu with a matching list of results. The listed values are marked as :strong:`metric`, :strong:`property`, or :strong:`tag`. Both dimensions and custom properties are marked as :strong:`property`. 
     
-    * To search for a metric, enter the metric name you want to search for. For example, enter ``cpu.utilization``. Observability Cloud displays a chart for the metric, the metric type, and a list of properties (dimensions and custom properties) associated with the metric. 
+    * :strong:`To search for a metric`, enter the metric name you want to search for. For example, enter ``cpu.utilization``. Observability Cloud displays a chart for the metric, the metric type, and a list of properties (dimensions and custom properties) associated with the metric. 
 
         .. image:: /_images/images-metrics/metadata-catalog-metric-view.png
             :width: 80%
             :alt: This image shows an example of a metric search result.
 
-    * To search for a dimension or a custom property, do one of the following:
+    * :strong:`To search for a dimension or a custom property`, do one of the following:
 
             * Enter a dimension or custom property key. For example, enter ``host.name``. Observability Cloud displays a list of associated metrics and a list of possible values for the key.
 
@@ -197,27 +197,27 @@ Use the Metadata Catalog to find, view, and edit information about the :ref:`met
                     :width: 100%
                     :alt: This image shows an example of a dimension key-value pair search result.
 
-    * To search for a tag, enter the tag you want to search for. For example, enter ``kubernetes_service_redis-cart``. Observability Cloud displays a list of metrics and properties (dimensions and custom properties) assigned with the tag.
+    * :strong:`To search for a tag`, enter the tag you want to search for. For example, enter ``kubernetes_service_redis-cart``. Observability Cloud displays a list of metrics and properties (dimensions and custom properties) assigned with the tag.
         
         .. image:: /_images/images-metrics/metadata-catalog-tag-view.png
                     :width: 80%
                     :alt: This image shows an example of a tag search result.
 
-#. Add or edit metadata. You can add or edit the following metadata:
+#. You can add or edit the following metadata:
 
-    * For a metric:
+    * :strong:`For a metric:`
         
         * Metric type: To edit metric type, select :guilabel:`Edit` next to the :strong:`Metric Type`.
         
         .. note:: While chart isn't metadata for a metric, you can also view and edit a chart when searching for a metric using the Metadata Catalog. To edit the chart associated with a metric, select :guilabel:`View In Chart` and make changes to the chart.
         
-    * For a dimension or custom property:
+    * :strong:`For a dimension or custom property:`
 
         * Custom property: To add or edit a new custom property, select :guilabel:`Edit` or :guilabel:`Add new property...` in the :strong:`Properties` section.
         * Tag: To add or edit a new tag, select :guilabel:`Edit` or :guilabel:`Add new tag...` in the :strong:`Tags` section.
         * Data links: To add a new data link, select :guilabel:`New Link` in the :strong:`Data Links` section.
 
-    * For a tag:
+    * :strong:`For a tag:`
         
         * Custom property: To add or edit a new custom property to a tag, select :guilabel:`Edit` or :guilabel:`Add new property...` in the :strong:`Properties` section.
 
