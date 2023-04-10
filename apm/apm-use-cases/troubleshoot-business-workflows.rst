@@ -40,8 +40,8 @@ Deepu reviews the errors by workflow and notices that the requests for the :stro
 
 .. _troubleshoot-workflows-filter:
 
-Deepu filters Tag Spotlight to subset to the traces where most errors occur
-===============================================================================
+Deepu filters Tag Spotlight to find the subset to the traces where most errors occur
+=======================================================================================
 
 Because APM supports infinite cardinality, Deepu selects the :strong:`frontend:/cart/checkout` workflow and applies filters to show only data from traces. Deepu filters :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to view the tags to examine the subset of traces where the most errors occur:
 

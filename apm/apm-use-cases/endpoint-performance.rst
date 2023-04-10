@@ -21,7 +21,7 @@ To review the performance of the checkout experience, Alex takes the following s
 Alex reviews the endpoints in the Endpoint Performance card
 ================================================================
 
-Alex opens the dependency map in APM. Because the Buttercups Games app uses a monolith architecture, they can't drill down into a component service using the dependency map. So, Alex reviews the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of over 2 seconds. 
+Alex opens the dependency map in APM. Because the Buttercup Games app uses a monolith architecture, they can't drill down into a component service using the dependency map. So, Alex reviews the Endpoint Performance card and notices there are checkout endpoints listed in the Endpoint Performance card that show a P90 latency of over 2 seconds. 
 
 ..  image:: /_images/apm/apm-use-cases/EndpointPerformanceCard.png
     :width: 50%
@@ -79,7 +79,7 @@ Alex selects this endpoint and reviews the Tag Spotlight details. Alex notices t
     :width: 50%
     :alt: This screenshot shows the Tag Spotlight details that are available when selecting an endpoint in endpoint performance
 
-In Tag Spotlight, Alex locates the 503 status codes and adds a filter Tag Spotlight for 503 responses. Now they can see that the latest version released today is responsible for the majority of the 503 responses. Having identified some latency associated with the 503 responses in the latest version, Alex consults with their team regarding the cause of the 503 responses.
+In Tag Spotlight, Alex locates the 503 status codes and adds a filter to Tag Spotlight for 503 responses. Now they can see that the latest version released today is responsible for the majority of the 503 responses. Having identified some latency associated with the 503 responses in the latest version, Alex consults with their team regarding the cause of the 503 responses.
 
 Summary
 ==========

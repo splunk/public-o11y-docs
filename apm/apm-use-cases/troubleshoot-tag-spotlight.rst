@@ -75,7 +75,7 @@ Because Deepu turned on Related Content in Splunk APM, Deepu can select :strong:
 Summary
 ===========
 
-Deepu used Tag Spotlight to quickly isolate a recent code release as the cause of errors that prevented customers from shopping on the Buttercup Games website. Using the links to example traces in Tag Spotlight they quickly navigate to an example trace and its corresponding logs to further troubleshoot.
+Deepu used Tag Spotlight to quickly isolate a recent code release as the cause of errors that prevented customers from shopping on the Buttercup Games website. Using the links to example traces in Tag Spotlight, they quickly navigate to an example trace and its corresponding logs to further troubleshoot.
 
 Learn more
 ============
