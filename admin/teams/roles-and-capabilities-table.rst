@@ -31,7 +31,9 @@ Users and teams
 Splunk Synthetic Monitoring roles and capabilities
 ==================================================
 
+.. include:: /_includes/admin/synth-roles-caps.rst
 
 
 Splunk Real User Monitoring roles and capabilities
 ==================================================
+.. include:: /_includes/admin/rum-roles-caps.rst
