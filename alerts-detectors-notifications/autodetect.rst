@@ -114,11 +114,11 @@ When you customize an AutoDetect detector, Splunk Observability Cloud creates a 
 To customize a copy of an AutoDetect detector, do the following:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Alerts`. 
+#. In the navigation menu, select :menuselection:`Alerts`. 
 #. Select the :strong:`Detectors` tab on the :strong:`Alerts` page.
 #. In the search field, enter the name of the detector you want to customize.
     
-    For example, to search for the ``K8s Node Memory Utilization is high`` detector, start by typing ``K8s Node``. The result lists update automatically as you type.
+    For example, to search for the ``K8s Node Memory Utilization is high`` detector, start by entering ``K8s Node``. The result lists update automatically.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-search.png
       :width: 80%
@@ -148,29 +148,29 @@ The procedures for muting AutoDetect alerts and detectors are the same as those 
 
 To learn how to create muting rules for alerts and detectors, see :ref:`mute-notifications`.
 
-Disable AutoDetect detectors
+Turn off AutoDetect detectors
 ---------------------------------------------------------
 
-To disable an AutoDetect detector, do the following:
+To turn off an AutoDetect detector, do the following:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Alerts`. 
+#. In the navigation menu, select :menuselection:`Alerts`. 
 #. Select the :strong:`Detectors` tab on the :strong:`Alerts` page.
-#. In the search field, enter the name of the detector you want to disable.
+#. In the search field, enter the name of the detector you want to turn off.
     
-    For example, to search for the ``K8s Node Memory Utilization is high`` detector, start by typing ``K8s Node``. The result lists update automatically as you type.
+    For example, to search for the ``K8s Node Memory Utilization is high`` detector, start by entering ``K8s Node``. The result lists update automatically.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-search.png
       :width: 80%
       :alt: This screenshot shows what an searching for an AutoDetect looks like on the Alerts page.
 
-#. Select the detector you want to disable to open it.
+#. Select the detector you want to turn off to open it.
 #. Select :guilabel:`Disable Detector`.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-disable-customize.png
       :width: 60%
       :alt: This screenshot shows the position of the Disable Detector button.
 
-After you disable a detector, you can no longer edit it. You need to reenable a disabled detector before making new updates.
+After you turn off a detector, you can no longer edit it. You need to turn on a detector before making new updates.
 
 

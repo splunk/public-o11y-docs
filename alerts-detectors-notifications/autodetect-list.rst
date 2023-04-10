@@ -16,10 +16,13 @@ The following tables show available AutoDetect detectors and their customizable 
 Splunk APM
 ===================================
 
+Request, error, duration (RED) detectors
+--------------------------------------------
+
 .. _apm-autodetector-service-latency:
 
 Service latency
-----------------------------
+^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when there is a sudden change in service latency. By default, the alert fires when the latency in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 5 deviations. The alert clears when the latency goes back to less than 4 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/latency.flow>` repository on GitHub.
@@ -57,7 +60,7 @@ The following table shows customizable arguments for this detector:
 .. _apm-autodetector-error-rate:
 
 Service error rate
---------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when a sudden change in service error rate occurs. By default, the alert fires when the error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 100%. The alert clears when the latency goes back to less than 80% above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/errors.flow>` repository on GitHub.
@@ -95,7 +98,7 @@ The following table shows customizable arguments for this detector:
 .. _apm-autodetector-service-request-rate:
 
 Service request rate
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Alerts when a sudden change in request rate occurs. By default, the alert fires when the request rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3 deviations. The alert clears when the latency goes back to less than 2.5 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/requests.flow>` repository on GitHub.
@@ -126,6 +129,24 @@ The following table shows customizable arguments for this detector:
    * - Filters
      - Dimensions you want to add to the detector.
      - None
+
+Splunk operational APM detectors
+------------------------------------
+
+.. _apm-autodetector-profile-msg-throttled:
+
+APM - Profiling messages throttled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _apm-autodetector-spans-throttled:
+
+APM - Spans throttled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _apm-autodetector-spans-blocked:
+
+APM - Spans blocked
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _infrastructure-autodetectors:
 
@@ -169,7 +190,7 @@ The following table shows customizable arguments for this detector:
 AWS ALB: Sudden change in HTTP 5xx server errors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Description: Alerts when there is a sudden change in the number of HTTP 5XX server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error count in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
+- Description: Alerts when there is a sudden change in the number of HTTP 5xx server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error count in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/alb.flow#L35>` repository on GitHub.
 
 The following table shows customizable arguments for this detector:
