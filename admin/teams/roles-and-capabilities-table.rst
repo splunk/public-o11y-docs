@@ -27,3 +27,11 @@ Users and teams
 ==================
 
 .. include:: /_includes/admin/roles_users_teams.rst
+
+Splunk Synthetic Monitoring roles and capabilities
+==================================================
+
+
+
+Splunk Real User Monitoring roles and capabilities
+==================================================
