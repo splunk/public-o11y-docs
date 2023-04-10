@@ -21,7 +21,7 @@ Sensitive data may fall within the categories of personally identifiable informa
 
 Splunk RUM for Browser instrumentation
 ==============================================
-This instrumentation uses the ``splunk-otel-js-web`` library. 
+This instrumentation uses the ``splunk-otel-js-web`` library. For examples, see :ref:`rum-code-snippet`.
 
 
 .. list-table::
@@ -44,7 +44,8 @@ This instrumentation uses the ``splunk-otel-js-web`` library.
 Splunk RUM for Mobile Android instrumentation
 ==============================================
 
-This instrumentation uses the ``splunk-otel-android`` library. 
+This instrumentation uses the ``splunk-otel-android`` library. For examples, see :ref:`rum-code-snippet`.
+
 
 
 .. list-table::
@@ -65,7 +66,8 @@ This instrumentation uses the ``splunk-otel-android`` library.
 Splunk RUM for mobile iOS instrumentation 
 ================================================
 
-This instrumentation uses the ``splunk-otel-ios`` library. 
+This instrumentation uses the ``splunk-otel-ios`` library. For examples, see :ref:`rum-code-snippet`.
+
 
 .. list-table::
     :header-rows: 1
@@ -82,6 +84,7 @@ This instrumentation uses the ``splunk-otel-ios`` library.
          * ``ignoreURLs``
          * ``options.spanFilter``
 
+.. _rum-code-snippet:
 
 Code snippets and examples
 ===================================
