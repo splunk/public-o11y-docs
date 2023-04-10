@@ -74,7 +74,7 @@ Once users are set up, Splunk Cloud Platform admins and Splunk Observability Clo
 
 What to expect at first login
 ==========================================================================================
-The first time a user tries to log in to Splunk Observability Cloud after the integration, they are directed to their Splunk Cloud Platform login page. Upon providing their Splunk Cloud Platform credentials, the user is authenticated in Splunk Observability Cloud and can access all Splunk Cloud Platform data that their Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
+The first time a user tries to log in to Splunk Observability Cloud after the integration, they are directed to their Splunk Cloud Platform login page where they must provide their Splunk Cloud Platform credentials. The user then receives an e-mail to verify their identity. When the user verifies their identity in the e-mail, the user is authenticated in Splunk Observability Cloud and can access all Splunk Cloud Platform data that their Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
 
 
 Working in Splunk Observability Cloud after the integration
