@@ -370,7 +370,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   AutoDetect in Splunk Observability Cloud <alerts-detectors-notifications/autodetect>
+   Use and customize AutoDetect alerts and detectors <alerts-detectors-notifications/autodetect>
 
 .. toctree::
    :maxdepth:   3
