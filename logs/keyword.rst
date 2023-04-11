@@ -17,4 +17,3 @@ To search your logs for particular keywords, field names, or field values, follo
 #. Review the top values for your query on the the :guilabel:`Fields` panel on right. This list includes the count of each value in the log records. To include log records with a particular value, select the field name, then select :guilabel:`=`. To exclude log records with a particular value from your results, select the field name, then select :guilabel:`!=`. To see the full list of values and distribution for this field, select :guilabel:`Explore all values`.
 
 When you add keywords, field names, or field values to the filters, Log Observer narrows the results in the Timeline and the Logs table so that only records containing the selected fields and values appear.
-
