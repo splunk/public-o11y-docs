@@ -15,8 +15,6 @@ Click any of the following documents to learn more about each way you can explor
 
 * :ref:`logs-keyword`
 
-* :ref:`logs-filter-logs-by-field`
-
 * :ref:`logs-individual-log`
 
 * :ref:`logs-aggregations`

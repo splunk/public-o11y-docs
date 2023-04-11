@@ -19,7 +19,6 @@ Splunk Log Observer
     queries
     raw-logs-display
     keyword
-    filter-logs-by-field
     alias
     individual-log
     message-field
@@ -49,8 +48,6 @@ Splunk Log Observer
 - :ref:`logs-raw-logs-display`
 
 - :ref:`logs-keyword`
-
-- :ref:`logs-filter-logs-by-field`
 
 - :ref:`logs-alias`
 

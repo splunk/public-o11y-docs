@@ -9,16 +9,12 @@ Search logs by keywords or fields
 
 To search your logs for particular keywords, field names, or field values, follow these steps:
 
-#. In the content control bar next to the time picker, begin a new query by clicking :guilabel:`Add Filter`.
-#. To search on a keyword, click the Keyword tab, type the keyword or phrase you want to search on, then press Enter. If you want to search on a field, click the Fields tab, enter the field name, then press Enter. 
-#. To continue adding keywords or fields to the search, click :guilabel:`Add Filter`.
+#. Navigate to :guilabel:`Log Observer`. In the content control bar, enter a time range in the time picker if you know it.
+#. Select :guilabel:`Index` next to :guilabel:`Saved Queries`, then select the indexes you want to query. If you want to search your Splunk platform (Splunk Cloud Platform or Splunk Enterprise) data, select the integration for the appropriate Splunk platform instance first, then select which of its indexes you want to query in Log Observer. You can only query indexes from one Splunk platform instance or Observability Cloud instance at a time. Select :guilabel:`Apply`.
+#. In the content control bar next to the index picker, select :guilabel:`Add Filter`.
+#. To search on a keyword, select the :guilabel:`Keyword` tab, type the keyword or phrase you want to search on, then press Enter. If you want to search on a field, select the :guilabel:`Fields` tab, enter the field name, then press Enter. 
+#. To continue adding keywords or fields to the search, select :guilabel:`Add Filter`.
+#. Review the top values for your query on the the :guilabel:`Fields` panel on right. This list includes the count of each value in the log records. To include log records with a particular value, select the field name, then select :guilabel:`=`. To exclude log records with a particular value from your results, select the field name, then select :guilabel:`!=`. To see the full list of values and distribution for this field, select :guilabel:`Explore all values`.
 
-The Timeline and Logs table now display only the log events that contain the
-keywords you entered. You can continue to add keywords without limit.
+When you add keywords, field names, or field values to the filters, Log Observer narrows the results in the Timeline and the Logs table so that only records containing the selected fields and values appear.
 
-Discover keywords by grouping log records
---------------------------------------------------------------------------------
-
-If you can't think of keywords to use, group log records using aggregations with
-statistical analysis. Based on the analysis, identify frequently-repeated words or
-phrases, which you can then use as keywords. To learn more, see :new-page-ref:`logs-aggregations`.
