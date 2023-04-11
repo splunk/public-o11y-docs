@@ -130,24 +130,6 @@ The following table shows customizable arguments for this detector:
      - Dimensions you want to add to the detector.
      - None
 
-Splunk operational APM detectors
-------------------------------------
-
-.. _apm-autodetector-profile-msg-throttled:
-
-APM - Profiling messages throttled
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. _apm-autodetector-spans-throttled:
-
-APM - Spans throttled
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. _apm-autodetector-spans-blocked:
-
-APM - Spans blocked
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 .. _infrastructure-autodetectors:
 
 Splunk Infrastructure Monitoring
@@ -545,7 +527,28 @@ The following table shows customizable arguments for this detector:
 .. _autodetect-splunk:
 
 Splunk operational
----------------------------------------------------
+========================
+
+Splunk operational APM detectors
+------------------------------------
+
+.. _apm-autodetector-profile-msg-throttled:
+
+APM - Profiling messages throttled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _apm-autodetector-spans-throttled:
+
+APM - Spans throttled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _apm-autodetector-spans-blocked:
+
+APM - Spans blocked
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Splunk operational Infrastructure Monitoring detectors
+-----------------------------------------------------------
 
 Splunk Operational - Container usage is expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
