@@ -27,6 +27,11 @@ After you've set up the supported integrations, AutoDetect alerts and detectors 
 
 .. note:: By default, you are not subscribed to receive notifications from AutoDetect. To learn how to subscribe to AutoDetect notifications, see :ref:`autodetect-subscribe`.
 
+What to do when an autodetect detector generates an alert
+============================================================
+
+
+
 View AutoDetect alerts and detectors
 ======================================
 
@@ -83,15 +88,6 @@ If available, AutoDetect detectors are connected to a chart by default. To view 
       :width: 60%
       :alt: This screenshot shows where linked AutoDetect detectors are listed for a chart. In this example, there is one AutoDetect detector with a green dot, meaning there is no active alert.
 
-.. _autodetect-subscribe:
-
-Subscribe to AutoDetect notifications
-========================================
-
-The procedures for subscribing to AutoDetect alerts and detectors are the same as those for interacting with other alerts and detectors.
-
-To learn how to subscribe to a detector or alert for notifications, see :ref:`manage-notifications`.
-
 .. _autodetect-customize:
 
 Copy and customize an AutoDetect detector
@@ -132,6 +128,15 @@ Customized detectors created from AutoDetect detectors are indicated by the :str
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-custom.png
       :width: 90%
       :alt: This screenshot shows a customized detector indicated by the Custom badge.
+
+.. _autodetect-subscribe:
+
+Subscribe to AutoDetect notifications
+========================================
+
+The procedures for subscribing to AutoDetect alerts and detectors are the same as those for interacting with other alerts and detectors.
+
+To learn how to subscribe to a detector or alert for notifications, see :ref:`manage-notifications`.
 
 Mute AutoDetect alerts and detectors
 ======================================
