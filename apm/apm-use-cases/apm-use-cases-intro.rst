@@ -38,6 +38,7 @@ Site reliability engineers, service owners, engineering executives, and performa
 - :ref:`service-map`
 - :ref:`services-impact-business-workflows`
 - :ref:`troubleshoot-tag-spotlight`
+- :ref:`apm-use-case-endpoint-performance`
 - :ref:`troubleshoot-business-workflows`
 - :ref:`specific-trace`
 - :ref:`apm-use-case-trace-analyzer`
