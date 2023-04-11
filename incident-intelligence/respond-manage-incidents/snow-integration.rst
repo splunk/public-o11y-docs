@@ -1,4 +1,4 @@
-.. _ingest-snow:
+.. _snow-integration:
 
 Create ServiceNow tickets within Splunk Incident Intelligence incidents
 **********************************************************************************************************

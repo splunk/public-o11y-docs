@@ -103,6 +103,39 @@ You can use the ``signalfx-setup.php`` script to set INI file options without ha
    
 This is useful for options common to all PHP services running in the system, like endpoints.
 
+.. _docker_php:
+
+Deploy the PHP instrumentation in Docker
+-----------------------------------------------
+
+You can deploy the PHP instrumentation using Docker. Follow these steps to get started:
+
+#. Create a startup shell script in a location Docker can access. The script can have any name, for example ``setup.sh``.
+
+#. Edit the startup shell script to export the environment variables described in :ref:`install-php-instrumentation`.
+
+#. Add the following commands to the startup shell script to initialize the PHP instrumentation:
+
+   .. code-block:: shell
+
+      curl -LO https://github.com/signalfx/signalfx-php-tracing/releases/latest/download/signalfx-setup.php
+      php signalfx-setup.php --php-bin=all
+      php signalfx-setup.php --update-config --signalfx.endpoint_url=https://ingest.<realm>.signalfx.com/v2/trace/signalfxv1
+      php signalfx-setup.php --update-config --signalfx.access_token=<access_token>
+      php signalfx-setup.php --update-config --signalfx.service_name=<service-name>
+
+#. Add a line to the script to start the application using ``supervisorctl``, ``supervisord``, ``systemd``, or similar. The following example uses ``supervisorctl``:
+
+   .. code-block:: shell
+
+      supervisor start my-php-app
+
+#. Add a command to run the newly created shell script at the end of the Dockerfile.
+
+#. Rebuild the container using ``docker build``.
+
+.. caution:: Make sure to deactivate the ``Xdebug`` extension completely, as it's not compatible with the PHP instrumentation.
+
 .. _kubernetes_php:
 
 Deploy the PHP instrumentation in Kubernetes
