@@ -4,13 +4,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Apache HTTP server monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache HTTP Server monitor with the SignalFx Smart Agent receiver. The integration monitors Apache web servers using information `mod_status` provides.
-
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache HTTP Server monitor type to monitor Apache web servers using information `mod_status` provides.
 
 Apache worker threads can be in one of the following states:
 
@@ -27,7 +21,9 @@ Apache worker threads can be in one of the following states:
 | Finishing    | Finishing as part of graceful shutdown  |
 | Starting     | Starting up to serve                    |
 
-### Benefits
+This monitor type is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -39,7 +35,6 @@ Apache worker threads can be in one of the following states:
 
 ## Configuration
 
-
 ```{include} /_includes/configuration.md
 ```
 
@@ -48,19 +43,16 @@ receivers:
   smartagent/apache:
     type: collectd/apache
     ... # Additional config
+```    
+
+Additional configuration options include host or port, as shown below. If `mod_status` is exposed on an endpoint other than `/mod_status`, you can use the url config option to specify the path:
+
 ```
-
-The following is an example of what you can use to replace the placeholder, `... # Additional config`:
-
-    host: localhost
-    port: 80
-
-If `mod_status` is exposed on an endpoint other than `/mod_status`, you can use the url config option to specify the path:
-
     type: collectd/apache
     host: localhost
     port: 80
     url: "http://{{.Host}}:{{.Port}}/server-status?auto"
+```
 
 To complete the integration, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
 
@@ -71,7 +63,7 @@ service:
       receivers: [smartagent/apache]
 ```  
 
-### Configuration settings
+### Configuration options
 
 The following configuration options are available for this monitor:
 
@@ -86,7 +78,7 @@ The following configuration options are available for this monitor:
 
 ## Apache configuration
 
-After you deploy the monitor in the Splunk Distribution of OpenTelemetry Collector, follow these steps to configure the Apache web server to expose status metrics:
+After you deploy the monitor in the Collector, follow these steps to configure the Apache web server to expose status metrics:
 
 1. Activate the `mod_status` module in your Apache server. Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which the monitor requires.
 2. Add the following configuration to your Apache server:
@@ -109,6 +101,7 @@ These metrics are available for this integration.
 ```{include} /_includes/metric-defs.md
 ```
 ## Troubleshooting
+
 ```{include} /_includes/troubleshooting.md
 ```
   
