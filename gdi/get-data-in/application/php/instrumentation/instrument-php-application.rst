@@ -112,8 +112,6 @@ You can deploy the PHP instrumentation using Docker. Follow these steps to get s
 
 #. Create a startup shell script in a location Docker can access. The script can have any name, for example ``startup.sh``.
 
-#. Add a command to run the newly created shell script at the end of the Dockerfile.
-
 #. Edit the startup shell script to export the environment variables described in :ref:`install-php-instrumentation`.
 
 #. Add the following commands to the startup shell script to initialize the PHP instrumentation:
@@ -128,7 +126,9 @@ You can deploy the PHP instrumentation using Docker. Follow these steps to get s
 
 #. Add a line to the script to run the application using ``supervisorctl``, ``supervisord``, ``systemd``, or similar.
 
-#. Save the startup shell script and rebuild the container using ``docker build``.
+#. Add a command to run the newly created shell script at the end of the Dockerfile.
+
+#. Rebuild the container using ``docker build``.
 
 .. caution:: Make sure to deactivate the ``Xdebug`` extension completely, as it's not compatible with the PHP instrumentation.
 
