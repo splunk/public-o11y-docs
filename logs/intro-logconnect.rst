@@ -50,7 +50,7 @@ The following table lists features available to customers who have integrated Sp
 
    * - Filter your logs to see only logs that contain a field of your choice with the value :guilabel:`error`.
      - Logs table
-     - :ref:`logs-filter-logs-by-field`
+     - :ref:`logs-keyword`
 
    * - View the JSON schema of an individual log.
      - Log details
