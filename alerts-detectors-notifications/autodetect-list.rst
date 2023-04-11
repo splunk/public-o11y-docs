@@ -4,12 +4,12 @@
 List of available AutoDetect detectors
 ******************************************************
 
-
-
 .. meta::
    :description: Reference of available AutoDetect detectors and their customizable arguments. 
 
 The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the detectors functions in the SignalFlow library in :new-page:`GitHub <https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors/autodetect>`. Links to each specific function are also included in the following documentation for each detector. 
+
+To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`
 
 .. _apm-autodetectors:
 
