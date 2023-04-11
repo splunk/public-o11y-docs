@@ -538,7 +538,33 @@ Splunk operational - APM profiling messages are throttled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of profiling messages that are dropped due to throttling is above the specified threshold. 
-- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+- SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Trigger threshold for APM profiling messages throttled
+     - ``0``
+
+   * - Sensitivity
+     - Sensitivity for alerting 
+     - ``80% of 5m``
+
+   * - Clear sensitivity
+     - Sensitivity for clearing alerts
+     - ``100% of 5m``
+
+   * - Default severity
+     - The default alert severity
+     - ``Critical``
 
 .. _apm-autodetector-spans-throttled:
 
@@ -546,7 +572,33 @@ Splunk operational - APM spans are throttled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of spans that are dropped due to throttling is above the specified threshold.
-- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+- SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Trigger threshold for APM profiling messages throttled
+     - ``0``
+
+   * - Sensitivity
+     - Sensitivity for alerting 
+     - ``80% of 5m``
+
+   * - Clear sensitivity
+     - Sensitivity for clearing alerts
+     - ``100% of 5m``
+
+   * - Default severity
+     - The default alert severity
+     - ``Critical``
 
 .. _apm-autodetector-spans-blocked:
 
@@ -554,7 +606,33 @@ Splunk operational - APM spans are blocked
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of blocked spans is above the specified threshold.
-- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+- SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+
+The following table shows customizable arguments for this detector:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Trigger threshold for APM profiling messages throttled
+     - ``0``
+
+   * - Sensitivity
+     - Sensitivity for alerting 
+     - ``80% of 5m``
+
+   * - Clear sensitivity
+     - Sensitivity for clearing alerts
+     - ``100% of 5m``
+
+   * - Default severity
+     - The default alert severity
+     - ``Info``
 
 Splunk operational Infrastructure Monitoring detectors
 -----------------------------------------------------------
