@@ -4,9 +4,6 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Apache ActiveMQ monitor type. See benefits, install, configuration, and metrics.">
 
-
-## Description
-
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache ActiveMQ monitor type to wrap the GenericJMX monitor to track the following information from ActiveMQ:
 
 * Broker (Totals per broker)
