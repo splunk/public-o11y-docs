@@ -124,7 +124,11 @@ You can deploy the PHP instrumentation using Docker. Follow these steps to get s
       php signalfx-setup.php --update-config --signalfx.access_token=<access_token>
       php signalfx-setup.php --update-config --signalfx.service_name=<service-name>
 
-#. Add a line to the script to run the application using ``supervisorctl``, ``supervisord``, ``systemd``, or similar.
+#. Add a line to the script to start the application using ``supervisorctl``, ``supervisord``, ``systemd``, or similar. The following example uses ``supervisorctl``:
+
+   .. code-block:: shell
+
+      supervisor start my-php-app
 
 #. Add a command to run the newly created shell script at the end of the Dockerfile.
 
