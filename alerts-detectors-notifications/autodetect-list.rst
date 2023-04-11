@@ -534,18 +534,18 @@ Splunk operational APM detectors
 
 .. _apm-autodetector-profile-msg-throttled:
 
-APM - Profiling messages throttled
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Splunk operational - APM profiling messages are throttled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _apm-autodetector-spans-throttled:
 
-APM - Spans throttled
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Splunk operational - APM spans are throttled
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _apm-autodetector-spans-blocked:
 
-APM - Spans blocked
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Splunk operational - APM spans are blocked
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Splunk operational Infrastructure Monitoring detectors
 -----------------------------------------------------------
