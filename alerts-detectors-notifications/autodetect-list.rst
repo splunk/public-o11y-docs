@@ -9,7 +9,7 @@ List of available AutoDetect detectors
 
 The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the detectors functions in the SignalFlow library in :new-page:`GitHub <https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors/autodetect>`. Links to each specific function are also included in the following documentation for each detector. 
 
-To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`
+To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. _apm-autodetectors:
 
@@ -27,7 +27,7 @@ Service latency
 - Description: Alerts when there is a sudden change in service latency. By default, the alert fires when the latency in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 5 deviations. The alert clears when the latency goes back to less than 4 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/latency.flow>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -65,7 +65,7 @@ Service error rate
 - Description: Alerts when a sudden change in service error rate occurs. By default, the alert fires when the error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 100%. The alert clears when the latency goes back to less than 80% above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/errors.flow>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -103,7 +103,7 @@ Service request rate
 - Description: Alerts when a sudden change in request rate occurs. By default, the alert fires when the request rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3 deviations. The alert clears when the latency goes back to less than 2.5 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/requests.flow>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -146,7 +146,7 @@ AWS/RDS free disk space is going to run out
 - Description: Alerts when RDS free disk space is expected to run out in the next 48 hours.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/rds.flow#L6>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -175,7 +175,7 @@ AWS ALB: Sudden change in HTTP 5xx server errors
 - Description: Alerts when there is a sudden change in the number of HTTP 5xx server error codes that originate from the load balancer. By default, the alert fires when the change in HTTP 5xx server error count in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3.5 deviations.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/alb.flow#L35>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -203,7 +203,7 @@ AWS Route 53: Health checkers' connection time took over 9 seconds
 - Description: Alerts when Amazon Route 53 health checkers' connection time took more than 9 seconds for the past 2 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/route53.flow#L5>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -234,7 +234,7 @@ AWS Route 53: Unhealthy status of health check endpoint
 - Description: Alerts when the status of Amazon Route 53 health check endpoint is unhealthy. By default, the alert fires when the health check endpoint has been unhealthy for 80% of the past 10 minutes. The alert clears when the health check endpoint has been healthy for 80% of the past 10 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/aws/route53.flow#L41>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -265,7 +265,7 @@ Kafka - Partition is under-replicated
 - Description: Alerts when at least one Kafka partition is under replicated for at least 5 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/kafka/broker.flow#L18>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -291,7 +291,7 @@ Kafka - No Active Controller
 - Description: Alerts when there is no active controller in a cluster.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/kafka/broker.flow#L5>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.r:
 
 .. list-table::
    :header-rows: 1
@@ -310,7 +310,7 @@ Kafka - Offline partitions on a broker
 - Description: Alerts when there is no active leader for a partition, and the partition cannot be read from or written to.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/kafka/broker.flow#L39>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -333,7 +333,7 @@ Kafka - Consumer Group lag
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/kafka/consumer.flow#L5>` repository on GitHub.
 
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -369,7 +369,7 @@ K8s Cluster DaemonSet ready vs scheduled
 - Description: Alerts when number of ready and scheduled DaemonSets have diverged.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/daemonsets.flow#L5>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -394,7 +394,7 @@ K8s Cluster Deployment is not at spec
 - Description: Alerts when the numbers of ready and available pods in Cluster Deployments have diverged.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/deployments.flow#L5>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -420,7 +420,7 @@ K8s Container Restart Count is > 0
 - Description: Alerts when container restart count in the last 5 minutes is greater than 0.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/containers.flow#L5>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -440,7 +440,7 @@ K8s Node Memory Utilization is high
 - Description: Alerts when a Kubernetes Node has been using more than 90% memory for 5 minutes.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/nodes.flow#L21>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -466,7 +466,7 @@ K8s Nodes are not ready
 - Description: Alerts when Kubernetes Nodes are not in a ready state after 30 seconds.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/k8s/nodes.flow#L5>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -494,7 +494,7 @@ Redis Server - CPU Continuously near limit
 - Description: Alerts when Redis CPU usage exceeds the threshold for 80% of the last 10 minutes. The alert clears when Redis CPU usage drops below the clear threshold for 100% of the last 10 minutes.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/redis.flow#L6>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -540,7 +540,7 @@ Splunk operational - APM profiling messages are throttled
 - Description: Generates an alert when the number of profiling messages that are dropped due to throttling is above the specified threshold. 
 - SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -574,7 +574,8 @@ Splunk operational - APM spans are throttled
 - Description: Generates an alert when the number of spans that are dropped due to throttling is above the specified threshold.
 - SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
 
 .. list-table::
    :header-rows: 1
@@ -608,7 +609,7 @@ Splunk operational - APM spans are blocked
 - Description: Generates an alert when the number of blocked spans is above the specified threshold.
 - SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -643,7 +644,7 @@ Splunk Operational - Container usage is expected to reach the limit
 - Description: Alerts when the container usage percentage is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L185>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -679,7 +680,7 @@ Splunk Operational - Datapoints are throttled
 - Description: Alerts when the number of throttled data points is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L235>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -708,7 +709,7 @@ Splunk Operational - Detectors aborted
 - Description: Alerts when at least one detector has been aborted for the last 5 hours.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L4>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -734,7 +735,7 @@ Splunk Operational - The number of detectors is expected to reach the limit
 - Description: Alerts when number of detectors about to reach the organization system limit. This limit includes customized detectors created from AutoDetect detectors.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L23>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -756,7 +757,7 @@ Splunk Operational - Host usage percentage is expected to reach the limit
 - Description: Alerts when the host usage percentage is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L89>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
@@ -800,7 +801,7 @@ Splunk Operational - Custom metric time series (MTS) usage is expected to reach 
 - Description: Alerts when the custom MTS usage percentage is higher than the system limit threshold.
 - SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L137>` repository on GitHub.
 
-The following table shows customizable arguments for this detector:
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
 .. list-table::
    :header-rows: 1
