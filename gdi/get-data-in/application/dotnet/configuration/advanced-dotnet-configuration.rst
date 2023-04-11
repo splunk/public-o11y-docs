@@ -229,7 +229,7 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
    Access-Control-Expose-Headers: Server-Timing 
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
-The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
+The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. W3C tracecontext and W3C baggage context propagation is activated by default. For more information, see the Server-Timing and traceparent documentation on the W3C website. 
 
 .. note:: If you need to deactivate trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
