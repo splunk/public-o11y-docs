@@ -1,17 +1,13 @@
 .. _autodetect:
 
-******************************************************
-AutoDetect in Splunk Observability Cloud
-******************************************************
 
-
+Use and customize AutoDetect alerts and detectors
+******************************************************
 
 .. meta::
-   :description: Splunk Observability Cloud automatically alerts and detectors when you have supported integrations configured. Learn more on how to work with AutoDetect alerts and detectors.
+   :description: Splunk Observability Cloud automatically alerts and detectors when you have supported integrations configured. Learn how to use and customize with AutoDetect alerts and detectors.
 
-AutoDetect alerts and detectors are alerts and detectors that Splunk Observability Cloud automatically creates when you have supported integrations configured.
-
-AutoDetect detectors are available for Splunk APM and Splunk Infrastructure Monitoring.
+AutoDetect alerts and detectors are alerts and detectors that Splunk Observability Cloud automatically creates when you have supported integrations configured. AutoDetect detectors are available for Splunk APM and Splunk Infrastructure Monitoring.
 
 .. note:: AutoDetect detectors don't count toward the maximum number of detectors you can have in your organization.
 
@@ -27,16 +23,12 @@ See the following topics for more information on how to collect the required dat
 - :new-page-ref:`kafka`
 - :ref:`get-started-k8s`
 
-
-Use AutoDetect alerts and detectors
-===========================================
-
 After you've set up the supported integrations, AutoDetect alerts and detectors automatically appear on the :strong:`Alerts` page, the :strong:`Detectors` page, and the corresponding navigators for your integrations. 
 
 .. note:: By default, you are not subscribed to receive notifications from AutoDetect. To learn how to subscribe to AutoDetect notifications, see :ref:`autodetect-subscribe`.
 
 View AutoDetect alerts and detectors
-----------------------------------------
+======================================
 
 You can view AutoDetect detectors on the :strong:`Alerts` page, in a navigator for a service, or in a chart.
 
@@ -94,7 +86,7 @@ If available, AutoDetect detectors are connected to a chart by default. To view 
 .. _autodetect-subscribe:
 
 Subscribe to AutoDetect notifications
----------------------------------------------------------
+========================================
 
 The procedures for subscribing to AutoDetect alerts and detectors are the same as those for interacting with other alerts and detectors.
 
@@ -103,7 +95,7 @@ To learn how to subscribe to a detector or alert for notifications, see :ref:`ma
 .. _autodetect-customize:
 
 Copy and customize an AutoDetect detector
----------------------------------------------------------
+============================================
 
 When you customize an AutoDetect detector, Splunk Observability Cloud creates a copy of the original detector for you to apply the customizations.
 
@@ -142,14 +134,14 @@ Customized detectors created from AutoDetect detectors are indicated by the :str
       :alt: This screenshot shows a customized detector indicated by the Custom badge.
 
 Mute AutoDetect alerts and detectors
----------------------------------------------------------
+======================================
 
 The procedures for muting AutoDetect alerts and detectors are the same as those for interacting with other alerts and detectors.
 
 To learn how to create muting rules for alerts and detectors, see :ref:`mute-notifications`.
 
 Turn off AutoDetect detectors
----------------------------------------------------------
+======================================
 
 To turn off an AutoDetect detector, do the following:
 
