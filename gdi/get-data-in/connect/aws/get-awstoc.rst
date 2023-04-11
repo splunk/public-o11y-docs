@@ -167,18 +167,36 @@ Regardless of the connection option you choose, you can configure your system mo
 To determine the best connection method and configuration settings, answer the following questions before you connect AWS to Splunk Observability Cloud:
 
 - Which :ref:`AWS regions <aws-regions>` do you need to work with?
-- Do you want to collect metrics through API polling at specified intervals, or through :ref:`CloudWatch Metric Streams <aws-metricstreams>`? You can activate either option with both our :ref:`guided setup <aws-wizardconfig>`, or the :ref:`Splunk Observability Cloud API <get-configapi>`.
+- Do you want to collect metrics through :ref:`API polling <aws-api-polling>` at specified intervals, or through :ref:`CloudWatch Metric Streams <aws-metricstreams>`? You can activate either option with both our :ref:`guided setup <aws-wizardconfig>`, or the :ref:`Splunk Observability Cloud API <get-configapi>`.
 - Do you want to collect logs in addition to metrics? If yes, then include logs while configuring through the API or when given that option while performing a guided setup.
+
+.. _aws-api-polling:
+
+.. raw:: html
+
+  <embed>
+    <h3>Poll data from AWS using APIs<a name="aws-api-polling" class="headerlink" href="#aws-api-polling" title="Permalink to this headline">¶</a></h3>
+  </embed>
+
+You can poll data from AWS at specified intervals using APIs:
+
+  - First, the list of metrics is retrieved with the ``ListMetrics`` API every 15 minutes. 
+  
+  - Next, data points are fetched with either the ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>` APIs.  
+  
+    - Use ``pollRate`` to configure the polling interval for metrics. 
+    - Use ``metadataPollRate`` to configure the polling interval for metadata. 
+    - See more on :new-page:`how to configure the APIs in the developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>`.
 
 .. _aws-metricstreams:
 
 .. raw:: html
 
   <embed>
-    <h3>Use Metric Streams to forward data to Splunk Observability Cloud<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
+    <h3>Use Metric Streams to forward data to Observability Cloud<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-Rather than polling for metrics data at specified intervals, CloudWatch Metric Streams sends metrics to a Kinesis Data Firehose stream, reducing latency. See :new-page:`Low Latency Observability Into AWS Services With Splunk <https://www.splunk.com/en_us/blog/devops/real-time-observability-splunk-cloudwatch-metric-streams.html>` in the DevOps blog for more information.
+Rather than polling for metrics data, CloudWatch Metric Streams sends metrics to a Kinesis Data Firehose stream, reducing latency. See :new-page:`Low Latency Observability Into AWS Services With Splunk <https://www.splunk.com/en_us/blog/devops/real-time-observability-splunk-cloudwatch-metric-streams.html>` in the DevOps blog for more information.
 
 Although Metric Streams are more efficient than API polling, consider the constraints below, as well as a few :ref:`cost considerations <aws-costs>`.
 
