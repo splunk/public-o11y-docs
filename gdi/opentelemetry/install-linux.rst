@@ -178,6 +178,10 @@ If the td-agent package is upgraded after initial installation, you might need t
       sudo systemctl daemon-reload
       sudo systemctl restart td-agent
 
+
+If Fluentd is already installed on the same host, the installation of the OpenTelemetry Collector will be halted. In this case, please specify --without-fluentd and install without Fluentd. Log transmission can be configured using the already installed Fluentd. Please refer to ``/etc/otel/collector/fluentd/fluent.conf`` for the forward configuration method from Fluentd to OpenTelemetry Collector.
+
+
 .. _configure-auto-instrumentation:
 
 Configure automatic instrumentation for Java
