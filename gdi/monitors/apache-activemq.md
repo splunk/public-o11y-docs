@@ -2,27 +2,20 @@
 
 # Apache ActiveMQ
 
-<meta name="description" content="Use this Splunk Observability Cloud integration for the Apache ActiveMQ monitor. See benefits, install, configuration, and metrics.">
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Apache ActiveMQ monitor type. See benefits, install, configuration, and metrics.">
 
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the Apache ActiveMQ monitor by using the Smart Agent Receiver.
-
-This integration with ActiveMQ wraps the GenericJMX monitor to monitor ActiveMQ. This integration works with ActiveMQ 5.8.0 and higher.
-
-Use this monitor to gather the following types of information from ActiveMQ:
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache ActiveMQ monitor type to wrap the GenericJMX monitor to track the following information from ActiveMQ:
 
 * Broker (Totals per broker)
-
 * Queue (Queue status)
-
 * Topic (Topic status)
 
+This monitor type is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
+This integration works with ActiveMQ 5.8.0 and higher.
 
 ## Benefits
 
@@ -33,7 +26,6 @@ This monitor is not available on Windows as collectd plugins are only supported 
 
 ```{include} /_includes/collector-installation-linux.md
 ```
-
 
 ## Configuration
 
@@ -49,7 +41,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete monitor activation, include the monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+To complete monitor activation, include the Apache ActiveMQ monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:
@@ -58,8 +50,7 @@ service:
       receivers: [smartagent/activemq]
 ```
 
-
-### Configuration settings
+### Configuration options
 
 The following table shows the configuration options for this monitor:
 
@@ -113,7 +104,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
