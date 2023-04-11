@@ -537,15 +537,21 @@ Splunk operational APM detectors
 Splunk operational - APM profiling messages are throttled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- Description: Generates an alert when the number of profiling messages that are dropped due to throttling is above the specified threshold. 
+
 .. _apm-autodetector-spans-throttled:
 
 Splunk operational - APM spans are throttled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- Description: Generates an alert when the number of spans that are dropped due to throttling is above the specified threshold.
+
 .. _apm-autodetector-spans-blocked:
 
 Splunk operational - APM spans are blocked
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Generates an alert when the number of blocked spans is above the specified threshold.
 
 Splunk operational Infrastructure Monitoring detectors
 -----------------------------------------------------------
