@@ -7,11 +7,12 @@ View individual log details and create a field extraction processor
 .. meta::
   :description: View and search a log's fields and values in JSON. Link to related content. Extract a field to create a processing rule.
 
-The previous topic, Filter by fields from logs, filtered logs to find the error that appeared with the greatest frequency. Selecting the most frequent error value helps you focus on logs that contained the :strong:`could not retrieve product` error.
+After you find a set of log records that contain a specific useful information, you can view the contents of an individual record to get a complete view of the data in the log, broken down by fields and values and displayed in JSON format in the :strong:`Fields` panel. You can also see the number of times each field appears in all of your logs. 
 
-After you find log records that contain a specific area, view the
-contents of an individual record to get a precise view of the data related to
-the problem. Once you have identified an interesting field, you can perform a field extraction and :ref:`transform your data <logs-processors>` with it.
+Once you have identified an interesting field, you can perform a field extraction and use it to transform your data. See :ref:`<logs-processors>` for more information.
+
+.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create a field extraction processor. If you are using Log Observer Connect, you can view and search Splunk Cloud Platform or Splunk Enterprise data in Log Observer, but you cannot transform it.
+
 
 To view the contents of an individual log record and create a field extraction rule, follow these steps:
 
