@@ -55,7 +55,7 @@ create a processor based on the format of the field's value.
 
 Field extraction helps you do the following tasks:
 
-* Filter logs based on the extracted fields. To learn more about filtering, see :ref:`logs-filter-logs-by-field`.
+* Filter logs based on the extracted fields. To learn more about filtering, see :ref:`logs-keyword`.
 * Aggregate on extracted fields. To learn more, see :ref:`logs-aggregations`.
 
 Consider the following raw log record
