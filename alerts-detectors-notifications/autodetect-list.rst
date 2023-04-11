@@ -9,7 +9,7 @@ List of available AutoDetect detectors
 .. meta::
    :description: Reference of available AutoDetect detectors and their customizable arguments. 
 
-The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the GitHub link in each AutoDetect detector section.
+The following tables show available AutoDetect detectors and their customizable arguments. To learn more about the driving SignalFlow functions, see the detectors functions in the SignalFlow library in GitHub: :new-page:`https://github.com/signalfx/signalflow-library/tree/master/library/signalfx/detectors/autodetect`. Links to each specific function are also included in the following documentation for each detector. 
 
 .. _apm-autodetectors:
 
@@ -538,6 +538,7 @@ Splunk operational - APM profiling messages are throttled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of profiling messages that are dropped due to throttling is above the specified threshold. 
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
 
 .. _apm-autodetector-spans-throttled:
 
@@ -545,6 +546,7 @@ Splunk operational - APM spans are throttled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of spans that are dropped due to throttling is above the specified threshold.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
 
 .. _apm-autodetector-spans-blocked:
 
@@ -552,6 +554,7 @@ Splunk operational - APM spans are blocked
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of blocked spans is above the specified threshold.
+- SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
 
 Splunk operational Infrastructure Monitoring detectors
 -----------------------------------------------------------
