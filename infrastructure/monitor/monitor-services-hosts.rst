@@ -49,13 +49,13 @@ Splunk Observability Cloud also provides metrics and other data :ref:`for the fo
 Displayed data: Traffic considerations
 ================================================
 
-* Information is displayed only if data is streamed in. If there's no data coming in for more than 3 hours, that stream will stop being counted in Observability Cloud. 
-    - Kubernetes monitoring holds tiles in a disabled state until it goes inactive, which happens 25 hours after the last datapoint.
+* Information is displayed only if data is streamed in. If there's no data coming in from a stream for more than 3 hours, that stream will stop being counted in Observability Cloud. 
+    - Kubernetes monitoring holds tiles in a disabled state until it goes inactive, which happens 25 hours after the last data point.
 * Some metrics, like those related to CPU utilization, are always reported. Observability Cloud uses these metrics on the Navigator summary page.
-* Although it only affects a small number of metrics, a few are not continuously sent. For instance, metrics related to the amount of errors are only sent when errors happen.  
-    - Don't try to get a list of entities using one of these metrics, since entities with no errors might be hidden. 
+* Although it only affects a small number of metrics, a few are not continuously sent. For instance, metrics related to the number of errors are only sent when errors happen.  
+    - Don't try to get a list of entities using one of these metrics, because entities with no errors might be hidden. 
 * Counts are sensitive to the time range, the calculated resolution of the job that runs, and the frequency of the data that is coming in. 
-    - A typical cloud integration is reporting a new data point every 5 minutes. 
+    - A typical cloud integration reports a new data point every 5 minutes. 
     - As the job is running, reporting instances that are turned off drop off after the time range they are part of passes.  
 
 Considerations regarding navigators
@@ -66,5 +66,5 @@ Considerations regarding navigators
 The :strong:`Navigator Summary`` page only shows the latest data point, regardless of the selected time range. 
 
     - You can see historical numbers in the purple graph, but the number itself will be the latest value.  
-    - Even if you select a wide time range, Navigators only display entities active in the most recent data point.
+    - Even if you select a wide time range, Navigators only displays entities active in the most recent data point.
 
