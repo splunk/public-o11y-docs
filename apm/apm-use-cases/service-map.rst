@@ -1,7 +1,7 @@
 .. _service-map:
 
 Use case: Investigate the root cause of an error with the Splunk APM service map
-*******************************************************************************
+**********************************************************************************
 
 .. meta::
     :description: This Splunk APM use case describes how to use the APM service map to investigate root cause error rate.
