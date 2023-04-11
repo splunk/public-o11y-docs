@@ -17,12 +17,14 @@ You have three deployment options:
 
 * :ref:`otel-pcf-tile`: The Tanzu Tile is a packaged release of the Collector that can be integrated into Pivotal Ops Manager. The Tanzu Tile allows you to download, install, run, configure, and update the Collector from the Ops Manager.
 
+.. caution:: Only Tanzu Application Service (TAS) version 2 is supported. TAS version 3 is not supported.
+
 .. _otel-pcf-bosch:
 
 BOSH release
 =========================
 
-If deployed using the BOSH release, the Collector acts as a :new-page:`Loggregator Firehose nozzle <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`, which is one of the architectures Cloud Foundry uses to emit logs and metrics. 
+If deployed using the BOSH release, the Collector acts as a nozzle to :new-page:`Loggregator Firehose <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`, which is one of the architectures Cloud Foundry uses to emit logs and metrics. 
 
 Dependencies
 ----------------------------------
@@ -40,7 +42,6 @@ Use the :new-page:`release script <https://github.com/signalfx/splunk-otel-colle
 
 .. code-block:: 
    
-   # Run the script from the PCF tile
    bosh -d splunk-otel-collector deploy deployment.yaml
 
 See :new-page:`configuration examples <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/bosh/example>`.
@@ -92,9 +93,7 @@ See the following GitHub repos and files:
 Tanzu Tile
 =========================
 
-The Tanzu tile uses the :ref:`otel-pcf-bosch` to deploy the Collector as a :new-page:`Loggregator Firehose nozzle <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`.
-
-.. caution:: This method is supported for Tanzu Application Service (TAS) version 2. It's not supported for TAS version 3.
+The Tanzu tile uses the :ref:`otel-pcf-bosch` to deploy the Collector as a nozzle to :new-page:`Loggregator Firehose <https://docs.pivotal.io/tiledev/2-2/nozzle.html>`.
 
 Dependencies
 ----------------------------------
@@ -109,13 +108,13 @@ The release script requires:
 Release and deploy the Collector
 ----------------------------------
 
-Run the following command to create the BOSH release. 
+Run the following command to create the BOSH release packaged as a dependency of the Tanzu tile, and build the tile. 
 
 .. code-block:: 
 
    ./make-latest-tile
 
-Package the release as a dependency for the Tile so it has the same version as the Collector. If the command is successful, you can find the tile in ``./product/splunk-otel-collector-<VERSION>.pivotal``.
+If the command is successful, you can find the tile in ``./product/splunk-otel-collector-<VERSION>.pivotal``.
 
 Learn more
 ----------------------------------
