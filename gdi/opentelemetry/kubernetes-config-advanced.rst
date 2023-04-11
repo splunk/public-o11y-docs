@@ -11,10 +11,38 @@ See the following advanced configuration options for the Collector for Kubernete
 
 For basic Helm chart configuration, see :ref:`otel-kubernetes-config`. For log configuration, refer to :ref:`otel-kubernetes-config-logs`.
 
+.. note:: 
+
+  The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. :strong:`Review it to understand how to configure this chart`.
+
+  The Helm chart can also be configured to support different use cases, such as trace sampling and sending data through a proxy server. See :new-page:`Examples of chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for more information.
+
 Override the default configuration
 ==============================================================
 
-You can override the :ref:`default OpenTelemetry agent configuration <otel-configuration-ootb>` to use your own configuration. To do this, include a custom configuration using the ``agent.config`` parameter in the values.yaml file. This custom configuration is merged into the default agent configuration. Parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``, need to be fully redefined after the files are merged.
+You can override the :ref:`default OpenTelemetry agent configuration <otel-configuration-ootb>` to use your own configuration. To do this, include a custom configuration using the ``agent.config`` parameter in the values.yaml file. For example: 
+
+.. code-block:: yaml 
+
+  agent:
+    enabled: true
+
+  # Metric collection from k8s control plane components.
+    controlPlaneMetrics:
+      apiserver:
+        enabled: true
+      controllerManager:
+        enabled: true
+      coredns:
+        enabled: false
+      proxy:
+        enabled: true
+      scheduler:
+        enabled: false
+
+This custom configuration is merged into the default agent configuration. 
+
+.. caution:: After merging the files you need to fully redefine parts of the configuration, for example ``service``, ``pipelines``, ``logs``, and ``processors``.
 
 Override a control plane configuration
 ==============================================================
@@ -69,24 +97,24 @@ You can override the default configuration values used to connect to the control
 
 .. code-block:: yaml
 
-   agent:
-     config:
-       receivers:
-         receiver_creator:
-           receivers:
-             # Template for overriding the discovery rule and configuration.
-             # smartagent/{control_plane_receiver}:
-             #   rule: {rule_value}
-             #   config:
-             #     {config_value}
-             smartagent/kubernetes-apiserver:
-               rule: type == "port" && port == 3443 && pod.labels["k8s-app"] == "kube-apiserver"
-               config:
-                 clientCertPath: /etc/myapiserver/clients-ca.crt
-                 clientKeyPath: /etc/myapiserver/clients-ca.key
-                 skipVerify: true
-                 useHTTPS: true
-                 useServiceAccount: false
+  agent:
+    config:
+      receivers:
+        receiver_creator:
+          receivers:
+            # Template for overriding the discovery rule and configuration.
+            # smartagent/{control_plane_receiver}:
+            #   rule: {rule_value}
+            #   config:
+            #     {config_value}
+            smartagent/kubernetes-apiserver:
+              rule: type == "port" && port == 3443 && pod.labels["k8s-app"] == "kube-apiserver"
+              config:
+                clientCertPath: /etc/myapiserver/clients-ca.crt
+                clientKeyPath: /etc/myapiserver/clients-ca.key
+                skipVerify: true
+                useHTTPS: true
+                useServiceAccount: false
 
 
 Run the container in non-root user mode

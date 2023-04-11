@@ -1,46 +1,68 @@
 .. _apm-use-case-trace-analyzer:
 
-************************************************************************************
-Use case: Troubleshoot an unknown issue using Trace Analyzer
+Use case: Troubleshoot an issue to find the root cause using Trace Analyzer
 ************************************************************************************
 
 .. meta::
-    :description: To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows to explore APM data from wide trends down to single traces. 
+    :description: To identify the cause and prevalence of an issue, Alex uses Trace Analyzer to explore APM data from wide trends down to single traces. 
 
-Alex, the Site Reliability Engineer for ButterCup Studios, is tasked with monitoring and troubleshooting the video delivery product, which is central to their monetization strategy. The product comprises several back-end services that manage the storage, processing, search, and streaming of video, as well as front-end applications for web and mobile.
+Alex, the site reliability engineer for Buttercup Games, receives a report of a customer who received an error during checkout. To proactively prevent a potential incident, Alex uses Trace Analyzer to quickly determine how pervasive the checkout errors are. 
 
-Over the last couple of hours, Alex has been receiving reports from customer support regarding errors during video recommendation. To identify the cause of the unknown issues, Alex decides to use Trace Analyzer, which allows them to explore APM data from wide trends down to single traces. These are the steps Alex took to identify and solve the issue:
 
-#. Search for traces with errors
-#. Group traces by specific tags
-#. Come back to confirm solution
+These are the steps Alex takes to determine how pervasive the checkout errors are:
 
-1. Search for traces with errors
-===================================
+#. :ref:`trace-analyzer-errors`
+#. :ref:`trace-analyzer-group`
+#. :ref:`trace-analyzer-filter`
+#. :ref:`trace-analyzer-compare`
 
-As most reports happened in the weeks following the release of the recommendation service, Alex opens Trace Analyzer and sets the time range to the last hour for the recommendation service in production. To narrow down the search further, they switch :guilabel:`Errors only`.
+.. _trace-analyzer-errors:
 
-The search reduces the amount of traces to a few thousand from the millions available in Splunk APM. 
+Alex reviews the customer's trace for errors
+===============================================
 
-2. Group traces by specific tags
-==================================
+Customer support shares a trace ID which Alex uses to pull up the trace to begin troubleshooting. Alex notes that an http request in the checkout service is returning a 500 error. Alex wants to quickly understand how prevalent this error is for the checkout flow. So, Alex makes a note of the ``http.url`` for the request that is returning a 500 to investigate further. 
 
-Next, Alex uses the :guilabel:`Grouped by` menu to select the ``device.type`` tag. 
+.. _trace-analyzer-group:
 
-Alex notices that the tablet throws the most errors among the types of devices, so they decide to switch the grouping tag to ``tablet.brand``. Alex then selects the :guilabel:`Group Metrics` tab to dig into each value of the grouping tag.
+Alex groups traces by specific tags
+=====================================
 
-2. Return to confirm solution
-==================================
+Because ``http.url`` is an unindexed span, Alex can't use Tag Spotlight to see a breakdown in requests and errors by ``http.url``. So, Alex goes to Trace Analyzer and selects ``http.url`` in the :guilabel:`Group traces by` menu to quickly understand the prevalence of errors for the specific ``http.url`` value that they made note of from the problematic trace. Alex notes that over 10% of traces for the ``/checkout/{cardId}`` request have errors. 
 
-After the back-end team confirmed and solved the issue affecting the Android tablet clients, Alex returns to the saved Trace Analyzer view and changes the time range to the current week. They immediately notice that the amount of errors and the latencies are back to normal. Eager to keep an eye on the issue, Alex configures new alerts based on the trace metadata they might collect.
+..  image:: /_images/apm/apm-use-cases/TraceAnalyzerGroup.png
+    :width: 95%
+    :alt: This screenshot shows the Group traces by option and the resulting grouped metrics in Trace Analyzer 
+
+.. _trace-analyzer-filter:
+
+Alex filters Trace Analyzer by a specific tag
+==============================================
+
+Alex adds the ``/checkout/{cardId}`` http url to the Trace Analyzer filter so that he can review traces for this specific endpoint.
+
+..  image:: /_images/apm/apm-use-cases/TraceAnalyzerFilter.png
+    :width: 60%
+    :alt: This screenshot shows the option to add a value to the filter for Trace Analyzer from the Group Metrics tab
+
+.. _trace-analyzer-compare:
+
+Alex compares successful traces to traces with errors
+=========================================================
+
+Now, Alex can review and compare successful traces for the ``/checkout/{cardId}`` http url with traces for the same endpoint that have errors. 
+
+..  image:: /_images/apm/apm-use-cases/TraceAnalyzerCompare.png
+    :width: 95%
+    :alt: This screenshot a filtered view of Trace Analyzer
 
 Summary
 ====================================================================================
 
-Thanks to the high resolution data provided by full-fidelity tracing and to the features of Trace Analyzer, Alex managed to troubleshoot an unknown issue and set up alerts in case it happens again.
+Using the high-resolution data provided by full-fidelity tracing, Alex managed to quickly determine the prevalence of an unknown issue. Using the grouping and filtering functionality of Trace Analyzer, Alex quickly isolated successful and problematic traces to provide to the developers to isolate the issue. 
 
 Learn more
---------------------
+===============
 
 - For more information on Trace Analyzer, see :ref:`trace-analyzer`.
 - For a list of APM key concepts, see :ref:`apm-key-concepts`.
