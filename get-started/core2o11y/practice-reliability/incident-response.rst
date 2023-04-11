@@ -83,7 +83,7 @@ With Log Observer Connect, you can aggregate logs to group by interesting fields
 
 * :ref:`logs-aggregations`
 
-* :ref:`logs-keyword``
+* :ref:`logs-keyword`
 
 * :ref:`logs-individual-log`
 
