@@ -110,7 +110,7 @@ Deploy the PHP instrumentation in Docker
 
 You can deploy the PHP instrumentation using Docker. Follow these steps to get started:
 
-#. Create a startup shell script in a location Docker can access. The script can have any name, for example ``startup.sh``.
+#. Create a startup shell script in a location Docker can access. The script can have any name, for example ``setup.sh``.
 
 #. Edit the startup shell script to export the environment variables described in :ref:`install-php-instrumentation`.
 
