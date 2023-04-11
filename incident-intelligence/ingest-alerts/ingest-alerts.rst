@@ -29,7 +29,9 @@ The following options are available for ingesting alerts in Incident Intelligenc
 
 After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab of Incident Intelligence.
 
-<embed>
+.. raw:: html
+
+      <embed>
       <h2 id="ii-ingest-observability-alerts">Available alert sources in Splunk Observability Cloud</h2>
       </embed>
 
