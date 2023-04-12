@@ -7,7 +7,7 @@ Instrument Azure functions for Splunk Observability Cloud
 .. meta::
    :description: Learn how to instrument your Azure functions to export spans to Splunk Observability Cloud. Both in-process and isolated functions are supported.
 
-Instrumenting .NET Azure functions allows you to send spans to Splunk Observability Cloud every team your functions run. You can instrument both isolated worker process and in-process functions.
+Instrumenting .NET Azure functions allows you to send spans to Splunk Observability Cloud every time your functions run. You can instrument both isolated worker process and in-process functions.
 
 To instrument your .NET Azure function with OpenTelemetry to send telemetry to Observability Cloud, follow these steps.
 
@@ -45,7 +45,7 @@ Add the following libraries using NuGet in Visual Studio:
 
 .. tabs:: 
 
-   .. tab:: Isolated worker process function
+   .. group-tab:: Isolated worker process function
 
       #. Activate the :strong:`Include prerelease` setting.
       #. Install the latest version of the following libraries:
@@ -55,7 +55,7 @@ Add the following libraries using NuGet in Visual Studio:
          - OpenTelemetry.Instrumentation.Http
          - OpenTelemetry.Instrumentation.AspNetCore
 
-   .. tab:: In-process function
+   .. group-tab:: In-process function
 
       #. Activate the :strong:`Include prerelease` setting.
       #. Install the specified version of the following libraries:
@@ -66,14 +66,16 @@ Add the following libraries using NuGet in Visual Studio:
          - OpenTelemetry.Instrumentation.AspNetCore version 1.0.0-rc9.4
          - Microsoft.Azure.Functions.Extensions version 1.1.0
 
-3. Initialize OpenTelemetry in the code
+      .. note:: Due to runtime dependencies, only the indicated versions are guaranteed to work when instrumenting in-process functions.
+
+1. Initialize OpenTelemetry in the code
 =================================================
 
 After adding the dependencies, initialize OpenTelemetry in your function:
 
 .. tabs:: 
 
-   .. tab:: Isolated worker process function
+   .. group-tab:: Isolated worker process function
 
       Add startup initialization in the ``Program.cs`` file:
 
@@ -89,7 +91,7 @@ After adding the dependencies, initialize OpenTelemetry in your function:
          TracerProvider? traceProvider = null;
          
          // Get environment variables from function configuration
-         // You need a valid Observability Cloud access token an realm
+         // You need a valid Observability Cloud access token and realm
          var serviceName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") ?? "Unknown";
          var accessToken = Environment.GetEnvironmentVariable("SPLUNK_ACCESS_TOKEN")?.Trim();
          var realm = Environment.GetEnvironmentVariable("SPLUNK_REALM")?.Trim();
@@ -133,7 +135,7 @@ After adding the dependencies, initialize OpenTelemetry in your function:
 
       .. note:: When instrumenting isolated worker process functions, you can encapsulate startup initialization and parameters into other functions.
 
-   .. tab:: In-process function
+   .. group-tab:: In-process function
 
       Define a startup function and decorate the assembly with it. The startup function uses the Azure.Functions.Extensions package to collect useful metadata. 
 
@@ -164,7 +166,7 @@ After adding the dependencies, initialize OpenTelemetry in your function:
                public override void Configure(IFunctionsHostBuilder builder)
                {
                // Get environment variables from function configuration
-               // You need a valid Observability Cloud access token an realm
+               // You need a valid Observability Cloud access token and realm
                      var serviceName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") ?? "Unknown";
                      var accessToken = Environment.GetEnvironmentVariable("SPLUNK_ACCESS_TOKEN")?.Trim();
                      var realm = Environment.GetEnvironmentVariable("SPLUNK_REALM")?.Trim();
@@ -212,7 +214,7 @@ The last step is instrumenting your code using OpenTelemetry:
 
 .. tabs:: 
 
-   .. tab:: Isolated worker process function
+   .. group-tab:: Isolated worker process function
 
       The following example shows how to instrument a function using start and stop helper functions.
 
@@ -268,7 +270,7 @@ The last step is instrumenting your code using OpenTelemetry:
             }
          }
 
-   .. tab:: In-process function
+   .. group-tab:: In-process function
 
       The following example shows how to retrieve ``faas`` attributes:
 
@@ -299,14 +301,14 @@ Run your function and search for its spans in Splunk APM. See :ref:`span-search`
 
 .. tabs:: 
 
-   .. tab:: Isolated worker process function
+   .. group-tab:: Isolated worker process function
 
       The following image shows a span sent by an isolated worker process function:
 
       .. image:: /_images/gdi/isolated_span.png
          :alt: Span details from an isolated worker process function
 
-   .. tab:: In-process function
+   .. group-tab:: In-process function
 
       The following image shows a span sent by an in-process function:
 
