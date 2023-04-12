@@ -418,7 +418,7 @@ The following example shows how to collect metrics from all regions and services
 Configure API polling (optional)
 ========================================================
 
-If you're retrieving AWS metrics using Observability Cloud polling APIs, keep in mind the following intervals: 
+If you're retrieving AWS metrics polling CloudWatch APIs, keep in mind the following intervals: 
 
   - First, the list of metrics is retrieved with the ``ListMetrics`` API every 15 minutes. 
   

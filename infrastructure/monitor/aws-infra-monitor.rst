@@ -371,7 +371,7 @@ Costs for AWS monitoring
 Observability Cloud retrieves metrics with two methods:
 
 #. Streaming data with Metric Streams. 
-#. Using polling APIs:
+#. Polling CloudWatch APIs:
    
    - First, the list of metrics is retrieved with ``ListMetrics``. 
    - Next, data points are fetched with either ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>`.

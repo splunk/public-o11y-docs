@@ -175,10 +175,10 @@ To determine the best connection method and configuration settings, answer the f
 .. raw:: html
 
   <embed>
-    <h3>Poll data from AWS using Observability Cloud APIs<a name="aws-api-polling" class="headerlink" href="#aws-api-polling" title="Permalink to this headline">¶</a></h3>
+    <h3>Poll data from AWS using CloudWatch APIs<a name="aws-api-polling" class="headerlink" href="#aws-api-polling" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-You can poll data from AWS at specified intervals using Observability Cloud APIs. Due to the CloudWatch metrics instability, for certain namespaces some metrics might be delayed a few minutes.
+You can poll data from AWS at specified intervals using CloudWatch APIs. Due to the CloudWatch metrics instability, for certain namespaces some metrics might be delayed a few minutes. See more in :ref:`Configure API polling <aws-configure-api-polling>`.
 
 .. _aws-data-limits:
 
