@@ -77,7 +77,7 @@ After adding the dependencies, initialize OpenTelemetry in your function:
 
       Add startup initialization in the ``Program.cs`` file:
 
-      .. code-block:: chsarp
+      .. code-block:: csharp
 
          using Microsoft.Extensions.Hosting;
          using OpenTelemetry.Resources;
@@ -274,23 +274,23 @@ The last step is instrumenting your code using OpenTelemetry:
 
       .. code-block:: csharp
          
-         public static class ExampleFunction
-         {
-            [FunctionName("ExampleFunction")]
-         // Add the ExecutionContext parameter to capture per-invocation information
-            public static async Task<IActionResult> Run(
-                  [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-                  ILogger log, ExecutionContext context)
+            public static class ExampleFunction
             {
-         // You can also factor this out into a helper method to use across all functions
-                  Activity.Current.AddTag("faas.invocation_id", context.InvocationId.ToString());
-                  Activity.Current.AddTag("faas.name", Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") + "/" + context.FunctionName);
-      
-                  string responseMessage = "The current time is " + DateTime.Now.ToLongTimeString();
-                  return new OkObjectResult(responseMessage);
+               [FunctionName("ExampleFunction")]
+            // Add the ExecutionContext parameter to capture per-invocation information
+               public static async Task<IActionResult> Run(
+                     [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
+                     ILogger log, ExecutionContext context)
+               {
+            // You can also factor this out into a helper method to use across all functions
+                     Activity.Current.AddTag("faas.invocation_id", context.InvocationId.ToString());
+                     Activity.Current.AddTag("faas.name", Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") + "/" + context.FunctionName);
+         
+                     string responseMessage = "The current time is " + DateTime.Now.ToLongTimeString();
+                     return new OkObjectResult(responseMessage);
+               }
             }
          }
-      }
 
 5. Check that data is coming in
 =========================================
