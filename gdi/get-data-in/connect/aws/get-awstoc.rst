@@ -166,19 +166,19 @@ Regardless of the connection option you choose, you can configure your system mo
 
 To determine the best connection method and configuration settings, answer the following questions before you connect AWS to Splunk Observability Cloud:
 
-- Which :ref:`AWS regions <aws-regions>` do you need to work with?
+- Which :ref:`AWS regions <aws-regions>` do you need to work with.
 - Do you want to collect metrics through :ref:`API polling <aws-api-polling>` at specified intervals, or through :ref:`CloudWatch Metric Streams <aws-metricstreams>`? You can activate Metric Streams using the :ref:`Splunk Observability Cloud API <get-configapi>`.
-- Do you want to collect logs in addition to metrics? If yes, then include logs while configuring through the API or when given that option while performing a guided setup.
+-  If you want to collect logs in addition to metrics, include logs while configuring the API or when given that option while performing a guided setup.
 
 .. _aws-api-polling:
 
 .. raw:: html
 
   <embed>
-    <h3>Poll data from AWS using APIs<a name="aws-api-polling" class="headerlink" href="#aws-api-polling" title="Permalink to this headline">¶</a></h3>
+    <h3>Poll data from AWS using Observability Cloud APIs<a name="aws-api-polling" class="headerlink" href="#aws-api-polling" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-You can poll data from AWS at specified intervals using APIs. Due to the CloudWatch metrics instability, for certain namespaces some metrics might be delayed a few minutes.
+You can poll data from AWS at specified intervals using Observability Cloud APIs. Due to the CloudWatch metrics instability, for certain namespaces some metrics might be delayed a few minutes.
 
 .. _aws-data-limits:
 
@@ -188,7 +188,7 @@ You can poll data from AWS at specified intervals using APIs. Due to the CloudWa
     <h4>High data volume warning<a name="aws-data-limits" class="headerlink" href="#aws-data-limits" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-After you create an AWS integration, Observability Cloud checks if more than 100,000 metrics are fetched from CloudWatch. If this is the case, the integration gets automatically deactivated, and a warning email is sent. 
+After you create an AWS integration, if more than 100,000 metrics are retrieved from CloudWatch, Observability Cloud automatically deactivates the integration and sends you a warning email.  
 
 This check runs just once per integration. If you activate the integration afterwards, it will work correctly. 
 
@@ -202,7 +202,7 @@ You can deactivate this check by setting the ``enableCheckLargeVolume`` field in
     <h4>Tag filtering<a name="tag-filtering-aws" class="headerlink" href="#tag-filtering-aws" title="Permalink to this headline">¶</a></h3>
   </embed>
 
-If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might increase.
+If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might decrease.
 
 Be careful when choosing tag names: Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 

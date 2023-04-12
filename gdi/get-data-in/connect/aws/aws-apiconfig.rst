@@ -418,15 +418,15 @@ The following example shows how to collect metrics from all regions and services
 Configure API polling (optional)
 ========================================================
 
-If you're fetching AWS using our polling APIs, keep in mind the following intervals: 
+If you're fetching AWS metrics using Observability Cloud polling APIs, keep in mind the following intervals: 
 
   - First, the list of metrics is retrieved with the ``ListMetrics`` API every 15 minutes. 
   
-  - Next, data points are fetched with either the ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>` APIs.  
+  - Next, data points are retrieved with either the ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>` APIs.  
   
     - Use ``pollRate`` to configure the polling interval for metrics. 
     - Use ``metadataPollRate`` to configure the polling interval for metadata. 
-    - See more on :new-page:`how to configure the APIs in the developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>`.
+    - See :new-page:`how to configure the APIs in the developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>` for more information.
 
 .. _activate-cw-metricstreams:
 
