@@ -83,6 +83,8 @@ These are the metrics available for this integration:
 
 <br>
 
+### Notes
+
 ```{include} /_includes/metric-defs.md
 ```
 

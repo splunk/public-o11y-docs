@@ -31,9 +31,10 @@ The Splunk Distribution of OpenTelemetry .NET provides automatic instrumentation
 The Splunk Distribution of OpenTelemetry .NET provides the following features:
 
 - Collection and reporting of all spans and traces
+- Ready for Splunk Observability Cloud (APM and RUM)
 - W3C headers with baggage for context propagation by default
 - OTLP over HTTP exporter to send spans to the Splunk OTel Collector
-- OpenTelemetry semantic conventions
+- OpenTelemetry and Observability Cloud semantic conventions
 
 .. note:: If you need AlwaysOn Profiling for .NET, use the SignalFx Instrumentation for .NET. See :ref:`get-started-dotnet`.
 
