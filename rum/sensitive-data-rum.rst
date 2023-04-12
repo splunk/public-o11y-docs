@@ -45,7 +45,7 @@ Examples
 -----------------
 
 
-This code snippet shows how to use ``onAttributesSerializing`` to use regular expressions to modify URLs.  
+This code snippet with ``onAttributesSerializing`` to uses regular expressions to modify URLs.  
 
 .. code:: js
 
