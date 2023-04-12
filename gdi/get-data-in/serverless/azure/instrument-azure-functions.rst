@@ -295,7 +295,7 @@ The last step is instrumenting your code using OpenTelemetry:
 5. Check that data is coming in
 =========================================
 
-Run your function and search for its spans in Splunk APM. See ref:`span-search` for more information.
+Run your function and search for its spans in Splunk APM. See :ref:`span-search` for more information.
 
 .. tabs:: 
 
