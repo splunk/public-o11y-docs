@@ -94,7 +94,12 @@ $(document).ready(function () {
                 'default': 'Category',
             };
 
-            let converter = new showdown.Converter();
+            let converter = new showdown.Converter(
+                {
+                    simplifiedAutoLink: true,
+                    excludeTrailingPunctuationFromURLs: true,
+                    literalMidWordUnderscores: true
+            });
             let cache = [];
             let idMap = [];
 
