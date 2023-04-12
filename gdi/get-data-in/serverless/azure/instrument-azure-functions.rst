@@ -7,7 +7,7 @@ Instrument Azure functions for Splunk Observability Cloud
 .. meta::
    :description: Learn how to instrument your Azure functions to export spans to Splunk Observability Cloud. Both in-process and isolated functions are supported.
 
-Instrumenting .NET Azure functions allows to send spans to Splunk Observability Cloud every team your functions run. You can instrument both isolated worker process and in-process functions. For differences between isolated and in-process functions, see Execution mode comparison in the C# Azure documentation.
+Instrumenting .NET Azure functions allows you to send spans to Splunk Observability Cloud every team your functions run. You can instrument both isolated worker process and in-process functions.
 
 To instrument your .NET Azure function with OpenTelemetry to send telemetry to Observability Cloud, follow these steps.
 
@@ -47,7 +47,7 @@ Add the following libraries using NuGet in Visual Studio:
 
    .. tab:: Isolated worker process function
 
-      #. Activate the :strong:`Include prerelease` setting
+      #. Activate the :strong:`Include prerelease` setting.
       #. Install the latest version of the following libraries:
 
          - OpenTelemetry
@@ -57,7 +57,7 @@ Add the following libraries using NuGet in Visual Studio:
 
    .. tab:: In-process function
 
-      #. Activate the :strong:`Include prerelease` setting
+      #. Activate the :strong:`Include prerelease` setting.
       #. Install the specified version of the following libraries:
          
          - OpenTelemetry version 1.3.2
@@ -214,7 +214,7 @@ The last step is instrumenting your code using OpenTelemetry:
 
    .. tab:: Isolated worker process function
 
-      The following examples shows how to instrument a function using start and stop helper functions.
+      The following example shows how to instrument a function using start and stop helper functions.
 
       .. code-block:: csharp
 
