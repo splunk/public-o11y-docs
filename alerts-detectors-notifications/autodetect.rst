@@ -27,11 +27,6 @@ After you've set up the supported integrations, AutoDetect alerts and detectors 
 
 .. note:: By default, you aren't subscribed to receive notifications from AutoDetect. To learn how to subscribe to AutoDetect notifications, see :ref:`autodetect-subscribe`.
 
-What to do when an autodetect detector generates an alert
-============================================================
-
-* Review the Splunk Organization Metrics for more context. Select :guilabel:`Dashboards` from the main navigation menu and search for "Organization Metrics".
-
 View AutoDetect alerts and detectors
 ======================================
 
