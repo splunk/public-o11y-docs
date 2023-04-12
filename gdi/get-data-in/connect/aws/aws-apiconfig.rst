@@ -413,6 +413,20 @@ The following example shows how to collect metrics from all regions and services
     -H 'content-type: application/json' \
     --data-raw '{"authMethod": "ExternalId", "created": 1628082281828, "creator": "E73pzL5BUAI", "customCloudWatchNamespaces": null, "enableCheckLargeVolume": false, "enabled": true, "externalId": "jobcimfczlkhwxlqwbum", "id": "E78gbtjBcAA", "importCloudWatch": true, "largeVolume": false, "lastUpdated": 1628090302516, "lastUpdatedBy": "E73pzL5BUAI", "name": "AWS", "pollRate": 300000, "regions": [], "roleArn": "<your-aws-iam-role-arn>", "services": [], "sfxAwsAccountArn": "arn:aws:iam::134183635603:root", "syncLoadBalancerTargetGroupTags": false, "type": "AWSCloudWatch", "key": null, "token": null, "namedToken": "Default", "namespaceSyncRules": []}'
 
+.. _aws-configure-api-polling:
+
+Configure API polling (optional)
+========================================================
+
+If you're fetching AWS using our polling APIs, keep in mind the following intervals: 
+
+  - First, the list of metrics is retrieved with the ``ListMetrics`` API every 15 minutes. 
+  
+  - Next, data points are fetched with either the ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>` APIs.  
+  
+    - Use ``pollRate`` to configure the polling interval for metrics. 
+    - Use ``metadataPollRate`` to configure the polling interval for metadata. 
+    - See more on :new-page:`how to configure the APIs in the developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>`.
 
 .. _activate-cw-metricstreams:
 
@@ -446,7 +460,7 @@ See :new-page:`Create an AWS integration using an external ID and ARN <https://d
 .. _metricstreams_cloudformation:
 
 Deploy CloudFormation
----------------------------
+===================================================
 
 To collect CloudWatch Metric Streams or logs from all supported AWS services across all regions, select and deploy a CloudFormation template that supports metric streams or logs. Deploying the template creates the additional resources on your AWS account required both by Metric Streams (Kinesis Firehose, S3 bucket, IAM roles) and logs (Splunk AWS log collector lambda function, IAM role).
 
