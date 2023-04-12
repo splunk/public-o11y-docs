@@ -68,7 +68,7 @@ Add the following libraries using NuGet in Visual Studio:
 
       .. note:: Due to runtime dependencies, only the indicated versions are guaranteed to work when instrumenting in-process functions.
 
-1. Initialize OpenTelemetry in the code
+3. Initialize OpenTelemetry in the code
 =================================================
 
 After adding the dependencies, initialize OpenTelemetry in your function:
