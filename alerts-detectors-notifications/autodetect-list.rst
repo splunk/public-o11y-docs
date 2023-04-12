@@ -62,7 +62,7 @@ The following table shows customizable arguments for this detector. To learn how
 Service error rate
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-- Description: Alerts when a sudden change in service error rate occurs. By default, the alert fires when the error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 100%. The alert clears when the latency goes back to less than 80% above the norm.
+- Description: Alerts when a sudden change in service error rate occurs. By default, the alert fires when the error rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 100%. The alert clears when the error rate goes back to less than 80% above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/errors.flow>` repository on GitHub.
 
 The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
@@ -100,7 +100,7 @@ The following table shows customizable arguments for this detector. To learn how
 Service request rate
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Description: Alerts when a sudden change in request rate occurs. By default, the alert fires when the request rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3 deviations. The alert clears when the latency goes back to less than 2.5 deviations above the norm.
+- Description: Alerts when a sudden change in request rate occurs. By default, the alert fires when the request rate in the last ten minutes (current window) exceeds the baseline of the preceding hour (historical window) by more than 3 deviations. The alert clears when the request rate goes back to less than 2.5 deviations above the norm.
 - SignalFlow function: See the function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/requests.flow>` repository on GitHub.
 
 The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
@@ -538,7 +538,7 @@ Splunk operational - APM profiling messages are throttled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of profiling messages that are dropped due to throttling is above the specified threshold. 
-- SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+- SignalFlow function: See the APM ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L4>` repository on GitHub.
 
 The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
@@ -572,7 +572,7 @@ Splunk operational - APM spans are throttled
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of spans that are dropped due to throttling is above the specified threshold.
-- SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+- SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L29>` repository on GitHub.
 
 The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
@@ -586,7 +586,7 @@ The following table shows customizable arguments for this detector. To learn how
      - Default value
    
    * - Trigger threshold
-     - Trigger threshold for APM profiling messages throttled
+     - Trigger threshold for APM spans throttled
      - ``0``
 
    * - Sensitivity
@@ -607,7 +607,7 @@ Splunk operational - APM spans are blocked
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Description: Generates an alert when the number of blocked spans is above the specified threshold.
-- SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow>` repository on GitHub.
+- SignalFlow function: See the ``operational.flow`` function in :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/apm/operational.flow#L53>` repository on GitHub.
 
 The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
@@ -620,7 +620,7 @@ The following table shows customizable arguments for this detector. To learn how
      - Default value
    
    * - Trigger threshold
-     - Trigger threshold for APM profiling messages throttled
+     - Trigger threshold for APM spans blocked
      - ``0``
 
    * - Sensitivity

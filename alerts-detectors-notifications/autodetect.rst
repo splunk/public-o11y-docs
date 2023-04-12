@@ -72,10 +72,13 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
       A sidebar with all alerts related to the content on the page appears, as shown in the following image. AutoDetect components are indicated by an :guilabel:`Auto` badge.
 
       .. image:: /_images/images-detectors-alerts/autodetect/autodetect-in-context.png
-         :width: 100%
+         :width: 60%
          :alt: AutoDetect component in the alerts sidebar for a navigator.
 
       .. note:: In either view, if there is no component with an :strong:`Auto` badge, then you don't have an integration that supports AutoDetect.
+
+Navigate to AutoDetect detectors from dashboard and navigator charts
+-----------------------------------------------------------------------
 
 If available, AutoDetect detectors are connected to a chart by default. To view AutoDetect detectors related to a chart, do the following:
 
@@ -86,7 +89,7 @@ If available, AutoDetect detectors are connected to a chart by default. To view 
     A green dot indicates that there is no alert for the detector. A red dot indicates that the detector has an active alert.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-linked-chart.png
-      :width: 60%
+      :width: 50%
       :alt: This screenshot shows where linked AutoDetect detectors are listed for a chart. In this example, there is one AutoDetect detector with a green dot, meaning there is no active alert.
 
 .. _autodetect-customize:
@@ -106,7 +109,7 @@ To customize a copy of an AutoDetect detector, do the following:
 #. Select the :strong:`Detectors` tab.
 #. In the search field, enter the name of the detector you want to customize.
     
-    For example, to search for the ``K8s Node Memory Utilization is high`` detector, start by entering ``K8s Node``. The result lists update automatically.
+    For example, to search for the "K8s Node Memory Utilization is high" detector, enter "K8s Node." The result lists update automatically.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-search.png
       :width: 80%
@@ -154,7 +157,7 @@ To turn off an AutoDetect detector, do the following:
 #. Select the :strong:`Detectors` tab.
 #. In the search field, enter the name of the detector you want to turn off.
     
-    For example, to search for the ``K8s Node Memory Utilization is high`` detector, start by entering ``K8s Node``. The result list update automatically.
+    For example, to search for the "K8s Node Memory Utilization is high" detector, enter "K8s Node."" The result list update automatically.
 
     .. image:: /_images/images-detectors-alerts/autodetect/autodetect-search.png
       :width: 80%
