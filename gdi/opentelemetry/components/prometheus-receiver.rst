@@ -120,7 +120,7 @@ The following table shows the configuration options for the Prometheus receiver:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://github.com/splunk/collector-config-tools/raw/main/cfg-metadata/receiver/prometheus.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/prometheus.yaml"></div>
 
 Metrics
 =====================

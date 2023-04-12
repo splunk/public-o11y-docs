@@ -14,6 +14,8 @@ Use Smart Agent monitors with the Collector
 
 The ``smartagent`` receiver and its associated extension are :ref:`Collector components <otel-components>` that allow you to add :ref:`SignalFx Smart Agent monitors <monitor-data-sources>` into the :ref:`pipelines <otel-data-processing>` of your Splunk Distribution of OpenTelemetry Collector. Many monitors also require a Smart Agent release bundle, which the Splunk Distribution of OpenTelemetry Collector installs on supported x86_64/amd64 platforms.
 
+Learn more about the :ref:`smartagent-receiver`.
+
 Configure the Smart Agent receiver
 ================================================================
 

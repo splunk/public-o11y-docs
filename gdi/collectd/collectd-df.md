@@ -62,6 +62,8 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/collectd-df/metrics.yaml"></div>
 
+### Notes
+
 ```{include} /_includes/metric-defs.md
 ```
 

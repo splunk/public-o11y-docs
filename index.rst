@@ -590,6 +590,16 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   rum/rum-use-case-library/use-case-landingpage
+
+.. toctree::
+   :maxdepth:   3
+
+   rum/sensitive-data-rum
+
+.. toctree::
+   :maxdepth:   3
+
    rum/data-collected
 
 .. toctree::
