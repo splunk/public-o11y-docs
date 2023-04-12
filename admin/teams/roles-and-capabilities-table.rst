@@ -22,6 +22,10 @@ General Settings page
 
 .. include:: /_includes/admin/roles_navigation.rst
 
+Metrics pipeline management
+===============================================================================
+
+.. include:: /_includes/admin/roles_mpm.rst
 
 Users and teams
 ==================
