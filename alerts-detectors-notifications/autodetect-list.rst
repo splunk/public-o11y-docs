@@ -635,6 +635,57 @@ The following table shows customizable arguments for this detector. To learn how
      - The default alert severity
      - ``Info``
 
+Splunk operational detector-related detectors
+------------------------------------------------
+
+Splunk Operational - Detectors aborted
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when at least one detector has been aborted for the last 5 hours.
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L4>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Trigger threshold for number of aborted detectors
+     - ``0``
+   * - Over period
+     - Period of time to compute the number of aborted detectors
+     - ``5h``
+   * - Filters
+     - Dimensions you want to add to the detector
+     - None
+
+Splunk Operational - The number of detectors is expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when number of detectors about to reach the organization system limit. This limit includes customized detectors created from AutoDetect detectors.
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L23>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   * - Trigger threshold
+     - Percentage system limit reached for maximum number of detectors in an organization
+     - ``90``
+   * - Sensitivity
+     - Sensitivity of the alerting
+     - ``100% of 3h``
+
 Splunk operational Infrastructure Monitoring detectors
 -----------------------------------------------------------
 
@@ -703,53 +754,7 @@ The following table shows customizable arguments for this detector. To learn how
      - ``80% of 5m``
 
 
-Splunk Operational - Detectors aborted
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Description: Alerts when at least one detector has been aborted for the last 5 hours.
-- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L4>` repository on GitHub.
-
-The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 33 33 33
-
-   * - Argument
-     - Description
-     - Default value
-   
-   * - Trigger threshold
-     - Trigger threshold for number of aborted detectors
-     - ``0``
-   * - Over period
-     - Period of time to compute the number of aborted detectors
-     - ``5h``
-   * - Filters
-     - Dimensions you want to add to the detector
-     - None
-
-Splunk Operational - The number of detectors is expected to reach the limit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-- Description: Alerts when number of detectors about to reach the organization system limit. This limit includes customized detectors created from AutoDetect detectors.
-- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/splunk/operational.flow#L23>` repository on GitHub.
-
-The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 33 33 33
-
-   * - Argument
-     - Description
-     - Default value
-   * - Trigger threshold
-     - Percentage system limit reached for maximum number of detectors in an organization
-     - ``90``
-   * - Sensitivity
-     - Sensitivity of the alerting
-     - ``100% of 3h``
 
 Splunk Operational - Host usage percentage is expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
