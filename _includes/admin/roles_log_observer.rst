@@ -62,7 +62,7 @@
   * - :strong:`Save and share Log Observer queries`
     - Yes
     - Yes
-    - Yes
+    - No
     - No
 
   * - :strong:`Add logs data to Splunk Observability Cloud dashboards`
