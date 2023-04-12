@@ -32,3 +32,4 @@ The following packages are available:
 See also:
 
 - :ref:`auto-instrumentation-operator`
+- :ref:`auto-instrumentation-operator-ex`
