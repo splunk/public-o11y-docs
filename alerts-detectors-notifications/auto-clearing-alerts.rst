@@ -1,7 +1,7 @@
 .. _auto-clearing-alerts:
 
 **********************
-Auto-clearing alerts
+Auto-clear alerts
 **********************
 
 

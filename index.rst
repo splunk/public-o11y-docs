@@ -400,11 +400,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Detector options <alerts-detectors-notifications/detector-options>
-
-.. toctree::
-   :maxdepth:   3
-
    Preview detector alerts <alerts-detectors-notifications/preview-detector-alerts>
 
 .. toctree::
@@ -420,17 +415,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:  3
 
-   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
-
-.. toctree::
-   :maxdepth:   3
-
    Mute alert notifications <alerts-detectors-notifications/mute-notifications>
 
 .. toctree::
    :maxdepth:   3
 
-   Auto-clearing alerts <alerts-detectors-notifications/auto-clearing-alerts>
+   Auto-clear alerts <alerts-detectors-notifications/auto-clearing-alerts>
 
 .. toctree::
    :maxdepth:   3
@@ -439,6 +429,16 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 .. toctree::
    :caption: APM
+   :maxdepth:   3
+
+   Detector options <alerts-detectors-notifications/detector-options>
+
+.. toctree::
+   :maxdepth:   3
+
+   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
+
+.. toctree::
    :maxdepth:   3
 
    apm/intro-to-apm
