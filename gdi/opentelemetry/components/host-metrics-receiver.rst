@@ -55,6 +55,9 @@ The host metrics receiver collects metrics from the Linux system directories. To
 
    If you are running multiple instances of the host metrics receiver, set the same ``root_path`` for all.
 
+
+.. note:: The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in :new-page:`GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters>`.
+
 Sample configurations
 ----------------------
 
@@ -132,8 +135,6 @@ Disk
 
 File system
 ^^^^^^^^^^^^^^^^^^^
-
-.. note:: The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in :new-page:`GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters>`.
 
 .. code:: yaml
 
