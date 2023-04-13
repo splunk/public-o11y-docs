@@ -268,7 +268,7 @@ memory scraper
 
 .. raw:: html
 
-   <div class="metrics-component" category="included" url=https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
 
 network scraper
 --------------------------
@@ -308,6 +308,8 @@ To set resource attributes, provide them using the ``OTEL_RESOURCE_ATTRIBUTES`` 
 .. code-block:: shell
 
    export OTEL_RESOURCE_ATTRIBUTES="service.name=<name_of_service>,service.version=<version_of_service>"
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Settings
 ======================

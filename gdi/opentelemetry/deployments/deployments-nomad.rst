@@ -7,13 +7,13 @@ Nomad
 .. meta::
       :description: Deploy the Splunk Observability Cloud OpenTelemetry Collector using Nomad.
 
-Use Nomad to to deploy the Collector. Nomad is an orchestrator deployment which creates a job that provides a unified way to receive, process, and export metric and trace data for Splunk Observability Cloud.
+Use the Nomad deployment orchestrator to create a job that provides a unified way to receive, process, and export metric and trace data for Splunk Observability Cloud.
 
 .. note:: 
     
     Job files are provided as a reference only and are not intended for production use.
 
-Getting started
+Get started
 =======================
 To run the job files, you need:
 

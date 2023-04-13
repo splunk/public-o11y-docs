@@ -20,7 +20,6 @@ Splunk Log Observer Connect
     queries
     raw-logs-display
     keyword
-    filter-logs-by-field
     alias
     logs-individual-log-connect
     message-field
@@ -48,8 +47,6 @@ Splunk Log Observer Connect
 - :ref:`logs-raw-logs-display`
 
 - :ref:`logs-keyword`
-
-- :ref:`logs-filter-logs-by-field`
 
 - :ref:`logs-alias`
 
