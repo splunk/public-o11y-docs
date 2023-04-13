@@ -43,7 +43,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes (Agent and gateway modes)
     - No
 
-  * - Ready for configuration management tools
+  * - Pre-baked recipes for configuration management tools
     - Yes (Ansible, Chef, Puppet, Salt)
     - No
 

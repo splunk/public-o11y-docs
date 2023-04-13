@@ -18,7 +18,7 @@ Before you begin the setup process, consider the following:
 
 * If you are using multiple components of Splunk Observability Cloud and want to collect host metrics, logs, or other application data in addition to traces, follow the steps in :ref:`get-started-get-data-in` to get data into Observability Cloud. Then see :ref:`verify-apm-data` in this topic to make sure your data is coming into Splunk APM as you expect. 
 
-* If you have already deployed the upstream OpenTelemetry Collector Contrib, you can use your existing deployment to send traces to Splunk APM. See :ref:`using-upstream-otel` for more information. However, note that using the Splunk Distribution of OpenTelemetry Collector provides a more supported experience, customized for Splunk APM. 
+* If you have already deployed the upstream OpenTelemetry Collector Contrib, you can use your existing deployment to send traces to Splunk APM. See :ref:`using-upstream-otel` for more information. However, note that using the Splunk Distribution of OpenTelemetry Collector provides a more supported experience, customized for Splunk Observability Cloud. 
 
 * If you want to start sending traces to Splunk APM with Splunk Distribution of OpenTelemetry Collector using the guided setup wizards in Splunk APM, follow the steps in the sections below. To set it up yourself without the guided process, see :ref:`otel-intro`.
 
