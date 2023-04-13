@@ -9,6 +9,9 @@ Install the Collector with the Kubernetes Operator for Auto Instrumentation
 
 You can use an Operator in a Kubernetes environment to implement and simplify the management of OpenTelemetry Auto Instrumentation of your applications. Learn more about :new-page:`the operator pattern in Kubernetes <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>`.
 
+Requirements
+================================================================
+
 Operator Auto Instrumentation requires the following components: 
 
 * The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the collector and related resources, including the OpenTelemetry Operator.
