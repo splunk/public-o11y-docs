@@ -92,8 +92,8 @@ Many AutoDetect detectors are connected to a charts by default. To view AutoDete
       A green dot indicates that there is no alert for the detector. A red dot indicates that the detector has an active alert.
 
       .. image:: /_images/images-detectors-alerts/autodetect/autodetect-linked-chart.png
-      :width: 50%
-      :alt: This screenshot shows where linked AutoDetect detectors are listed for a chart. In this example, there is one AutoDetect detector with a green dot, meaning there is no active alert.     
+         :width: 50%
+         :alt: This screenshot shows where linked AutoDetect detectors are listed for a chart. In this example, there is one AutoDetect detector with a green dot, meaning there is no active alert.     
 
 .. _autodetect-customize:
 
