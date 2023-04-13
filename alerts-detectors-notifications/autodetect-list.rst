@@ -529,6 +529,8 @@ The following table shows customizable arguments for this detector. To learn how
 Splunk operational
 ========================
 
+Splunk operational detectors let you know when you reach certain limits within your Splunk Observability Cloud products. 
+
 Splunk operational APM detectors
 ------------------------------------
 
@@ -752,9 +754,6 @@ The following table shows customizable arguments for this detector. To learn how
    * - Clear sensitivity
      - Sensitivity for clearing alerts
      - ``80% of 5m``
-
-
-
 
 Splunk Operational - Host usage percentage is expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
