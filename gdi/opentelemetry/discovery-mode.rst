@@ -39,7 +39,7 @@ If you want to apply the configuration directly to the Collector, remove the ``-
 How discovery mode works
 ==========================================
 
-The discovery mode uses the discovery receiver, which wraps the receiver creator and OpenTelemetry observer extensions to detect metric sources on the host and send metrics to Splunk Observability Cloud. See :ref:`receiver-creator-receiver` for more information.
+The discovery mode uses a custom config provider that manages temporary discovery receiver instances, which wrap the receiver creator and use OpenTelemetry observer extensions to detect metric sources on the host capable of sending metrics to Splunk Observability Cloud. See :ref:`receiver-creator-receiver` for more information.
 
 When you run the Collector in discovery mode, the Collector uses both built-in and custom configurations to run observer extensions for a variety of services. If successful, the discovery mode embeds the required settings to the Collector configuration so as to collect and send metrics from the confirmed metric sources.
 
