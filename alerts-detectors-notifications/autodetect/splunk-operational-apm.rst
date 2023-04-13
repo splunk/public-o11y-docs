@@ -1,6 +1,6 @@
 .. _splunk-operational-apm:
 
-What to do when you receive a Splunk operational APM AutoDetect alert 
+Investigate an Splunk operational APM AutoDetect alert
 ****************************************************************************
 
 There are three Splunk operational APM AutoDetect detectors that let you know when you reach certain limits within Splunk APM. 
