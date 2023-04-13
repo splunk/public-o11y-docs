@@ -55,12 +55,12 @@ Splunk Observability Cloud role-based access control aligns with roles available
     - admin
   * - power user 
     - power roles and can_delete role
-  * - read-only
+  * - read_only
     - user role
-  * - subscription usage
+  * - subscription_usage
     - n/a Role is not available in Splunk Cloud Platform
 
-For example, when a Splunk Cloud Platform user with a power role logs in to Splunk Observability Cloud for the first time, that user is automatically created and assigned the power user role within Splunk Observability Cloud, based on the pre-defined mapping. Assigning users and teams to roles is also available using an API call to reduce the administrative burden.
+For example, when a Splunk Cloud Platform user with a power role logs in to Splunk Observability Cloud for the first time, that user is automatically created and assigned the power user role within Splunk Observability Cloud, based on the pre-defined mapping. Assigning users and teams to roles is also available using an API call to reduce the administrative burden. For details, see :ref:`unified-id-unified-identity`.
 
 
 
