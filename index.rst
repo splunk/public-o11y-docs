@@ -375,6 +375,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   alerts-detectors-notifications/splunk-operational-apm
+
+.. toctree::
+   :maxdepth:   3
+
    List of available AutoDetect detectors <alerts-detectors-notifications/autodetect-list>
 
 .. toctree::
