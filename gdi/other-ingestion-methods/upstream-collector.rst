@@ -41,11 +41,11 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes (Windows and Linux)
     - No
 
-  * - Preconfigured for Observability Cloud
+  * - Configured for Observability Cloud
     - Yes (Agent and gateway modes)
     - No
 
-  * - Pre-baked recipes for configuration management tools
+  * - Recipes for configuration management tools
     - Yes (Ansible, Chef, Puppet, Salt)
     - No
 
