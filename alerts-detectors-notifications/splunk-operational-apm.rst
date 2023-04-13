@@ -1,6 +1,6 @@
 .. _splunk-operational-apm:
 
-What to do when you receive an Splunk operational APM AutoDetect Alert
+What to do when you receive a Splunk operational APM AutoDetect alert 
 ****************************************************************************
 
 After you receive an alert from one of the following Splunk operational APM AutoDetect detectors, here are some potential next steps: 
