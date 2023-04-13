@@ -29,10 +29,14 @@ To create sample configurations for metric sources detected by the Collector, ru
 
 The ``--dry-run`` option ensures that a configuration isn't applied to the Collector at runtime. The resulting sample configuration appears in the console as YAML. For example:
 
-.. code-block:: yaml
+.. code-block:: bash
 
-   sample configuration
+   Discovering for next 10s...
+   Discovery complete.
+   
+   # YAML configuration follows
 
+If issues are identified during discovery, the Collector shows status messages for full and partial failures. Status messages include possible solutions that you can try.
 
 If you want to apply the configuration directly to the Collector, remove the ``--dry-run`` option.
 
