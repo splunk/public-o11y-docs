@@ -26,7 +26,7 @@ There are three Splunk operational APM AutoDetect detectors that let you know wh
      - See :ref:`apm-autodetector-spans-blocked` for more information about this detector.
 
 
-After you receive an alert from one of the following Splunk operational APM AutoDetect detectors, here are some potential next steps: 
+Here are some potential next steps after you receive an alert from one of a Splunk operational APM AutoDetect detectors: 
 
 1. Identify when the alert threshold was exceeded.
 2. Review additional metrics
