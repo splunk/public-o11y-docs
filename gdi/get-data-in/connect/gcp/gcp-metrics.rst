@@ -19,9 +19,9 @@ Although you can configure :new-page:`Cloud Monitoring <https://cloud.google.com
 Available GCP metrics
 ================================
 
-All metrics of built-in services are included by default. 
+All metrics of supported services are included by default. 
 
-* Check the list of built-in GCP services in Observability Cloud at :ref:`gcp-integrations`.
+* Check the list of supported GCP services in Observability Cloud at :ref:`gcp-integrations`.
 * For a detailed list of the available Google Cloud Monitoring metrics, see the official Google documentation at :new-page:`Google Cloud metrics <https://cloud.google.com/monitoring/api/metrics_gcp>`. 
 * To track and understand your consumption, see :ref:`monitor-imm-billing-usage`.
 
