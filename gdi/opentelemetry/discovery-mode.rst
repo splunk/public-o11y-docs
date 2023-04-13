@@ -11,46 +11,32 @@ Discovery mode of the Collector
 .. meta::
       :description: Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
 
-Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, discovery mode creates a configuration you can either modify or apply to the Collector.
+Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
+a configuration based on the results. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, it creates a Collector configuration you can either modify or use.
 
-The advantage of using discovery mode is that you don't need to manually configure the Collector for the supported metric sources. This is helpful in environments when services might be activated dynamically, for example when scaling your infrastructure. Discovery mode supports the following host services and applications:
+The advantage of using discovery mode is that you don't need to manually configure the Collector for the supported metric sources. This is helpful in environments when services might be activated dynamically, for example when scaling your infrastructure.
+
+Discovery mode supports the following host services and applications:
 
 - MySQL using the MySQL monitor of the Smart Agent receiver. See :ref:`mysql`.
 - PostgreSQL using the PostgreSQL receiver. See :ref:`postgresql-receiver`.
 
-.. note:: Discovery mode is an experimental feature introduced in version 0.72.0 and higher of the Splunk Distribution of the OpenTelemetry Collector and is subject to future changes.
+.. note:: Discovery mode is available starting from version 0.72.0 and higher of the Splunk Distribution of the OpenTelemetry Collector.
 
-How to activate discovery mode
-====================================
+Create sample configurations
+=====================================
 
-To activate the discovery mode in the Collector, add the ``--discovery`` option to the installer script. For example:
-
-.. tabs::
-
-    .. code-tab:: shell Linux
-        :emphasize-lines: 2
-
-        curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
-        sudo sh /tmp/splunk-otel-collector.sh --discovery \
-        --realm SPLUNK_REALM \
-        --memory SPLUNK_MEMORY_TOTAL_MIB \
-        -- SPLUNK_ACCESS_TOKEN
-
-    .. code-tab:: powershell Windows
-        :emphasize-lines: 5
-
-        & {Set-ExecutionPolicy Bypass -Scope Process -Force;  `
-        $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1'));  `
-        $params = @{access_token = "SPLUNK_ACCESS_TOKEN";  `
-        realm = "SPLUNK_REALM"  `
-        discovery = true};  `
-        Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
-
-You can also pass the ``--discovery`` option directly to the ``otelcol`` executable file in your system. To use the discovery mode to output the generated configuration to the console, add the ``--dry-run`` option. For example:
+To create sample configurations for metric sources detected by the Collector, run the following command:
 
 .. code-block:: shell
 
-    otelcol --discovery --dry-run
+    bin/otelcol --discovery --dry-run
+
+The ``--dry-run`` option ensures that a configuration isn't applied to the Collector at runtime. The resulting sample configuration appears in the console as YAML. For example:
+
+.. code-block:: yaml
+
+
 
 How discovery mode works
 ==========================================
@@ -100,3 +86,8 @@ To define a custom directory for discovery settings, use the ``--config-dir`` op
 .. code-block:: text
 
     otelcol --discovery --config-dir <custom_path>
+
+Troubleshooting
+======================
+
+.. include:: /_includes/troubleshooting-components.rst
