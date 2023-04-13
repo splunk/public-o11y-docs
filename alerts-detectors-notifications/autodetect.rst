@@ -75,7 +75,8 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
 Navigate to AutoDetect detectors from dashboard and navigator charts
 ----------------------------------------------------------------------
 
-Many AutoDetect detectors are connected to a charts by default. To view AutoDetect detectors related to a chart, do the following:
+Many AutoDetect detectors are connected to a charts by default. To learn how to link detectors to charts see :ref:`linking-detectors`.
+To view AutoDetect detectors related to a chart, do the following:
 
 .. tabs:: 
 
