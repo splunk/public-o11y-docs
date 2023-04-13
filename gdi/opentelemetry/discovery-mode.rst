@@ -16,15 +16,10 @@ a configuration based on the results. Discovery mode can detect several types of
 
 The advantage of using discovery mode is that you don't need to manually configure the Collector for the supported metric sources. This is helpful in environments when services might be activated dynamically, for example when scaling your infrastructure.
 
-Discovery mode supports the following host services and applications:
-
-- MySQL using the MySQL monitor of the Smart Agent receiver. See :ref:`mysql`.
-- PostgreSQL using the PostgreSQL receiver. See :ref:`postgresql-receiver`.
-
 .. note:: Discovery mode is available starting from version 0.72.0 and higher of the Splunk Distribution of the OpenTelemetry Collector.
 
 Create sample configurations
-=====================================
+=========================================
 
 To create sample configurations for metric sources detected by the Collector, run the following command:
 
@@ -36,7 +31,10 @@ The ``--dry-run`` option ensures that a configuration isn't applied to the Colle
 
 .. code-block:: yaml
 
+   sample configuration
 
+
+If you want to apply the configuration directly to the Collector, remove the ``--dry-run`` option.
 
 How discovery mode works
 ==========================================
@@ -46,6 +44,31 @@ The discovery mode uses the discovery receiver, which wraps the receiver creator
 When you run the Collector in discovery mode, the Collector uses both built-in and custom configurations to run observer extensions for a variety of services. If successful, the discovery mode embeds the required settings to the Collector configuration so as to collect and send metrics from the confirmed metric sources.
 
 If some of the detected services throw a ``partial`` status, the Collector provides guidance on how to complete the configuration for collecting metrics from the detected source. By default, the duration of the discovery process is 10 seconds, which you can increase by setting the ``SPLUNK_DISCOVERY_DURATION`` environment variable.
+
+Supported host services and applications
+=========================================
+
+Discovery mode supports the following host services and applications:
+
+.. list-table::
+   :width: 100%
+   :widths: 20 40 40
+   :header-rows: 1
+
+   * - Service
+     - Receiver
+     - Configuration
+
+   * - MySQL
+     - Smart Agent with MySQL monitor type. See :ref:`mysql`.
+     - ``smartagent-postgresql.discovery.yaml`` 
+
+   * - PostgreSQL
+     - :ref:`postgresql-receiver`
+     - ``smartagent-postgresql.discovery.yaml``
+
+- MySQL using the MySQL monitor of the Smart Agent receiver. See .
+- PostgreSQL using the PostgreSQL receiver. See .
 
 Custom discovery configuration
 ==========================================
@@ -57,7 +80,7 @@ You can provide your own discovery configuration to modify settings or adjust th
 To create custom configurations, follow these steps:
 
 #. Navigate to the ``config.d`` folder in ``/etc/otel/collector/config.d`` for Linux or ``\opt\td-agent\etc\td-agent\config.d`` on Windows.
-#. Create a ``<name>.discovery.yaml`` file inside ``observers`` or ``receivers`` depending on your needs, where ``<name>`` is the name of the component you want to use.
+#. Create a ``<name>.discovery.yaml`` file and place it inside a subdirectory of ``config.d``, for example ``observers`` or ``receivers`` where ``<name>`` is the name of the component you want to use.
 #. Edit the ``<name>.discovery.yaml`` files to add the desired configuration. For example, if you're adding a receiver, discovery mode loads the content inside the ``receivers`` object of the Collector configuration.
 
 Custom configurations consist of the fields you want to override in the default configuration. For example:
