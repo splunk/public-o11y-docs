@@ -82,7 +82,7 @@ Prerequisites
 
 To send data to Splunk Observability Cloud use the Collector from the OpenTelemetry Collector Contrib repository. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>` on GitHub for more information. 
 
-.. note:: Make sure that the version number of OpenTelemetry Collector Contrib is the same of the latest Splunk distribution before configuring it.
+.. note:: Make sure that the version number of OpenTelemetry Collector Contrib is the same of the latest Splunk distribution before configuring the Collector. To check the version of the Splunk Distribution of OpenTelemetry Collector, see the :new-page:`releases <https://github.com/signalfx/splunk-otel-collector/releases>` page on GitHub.
 
 .. _gdi-upstream-collector:
 
