@@ -64,6 +64,9 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
       #. Select the navigator for the integration you want to view.
       #. On the navigator page, select :guilabel:`Alerts` or :guilabel:`Active Detectors` in the filter.
 
+      .. image:: /_images/images-detectors-alerts/autodetect/autodetect-alerts-active-detectors.png
+         :width: 99%
+         :alt: This screenshot shows the Alerts and Active Detectors filter options within an navigator.
       A sidebar with all alerts related to the content on the page appears, as shown in the following image. AutoDetect components are indicated by an :guilabel:`Auto` badge.
 
       .. image:: /_images/images-detectors-alerts/autodetect/autodetect-in-context.png
@@ -76,6 +79,7 @@ Navigate to AutoDetect detectors from dashboard and navigator charts
 ----------------------------------------------------------------------
 
 Many AutoDetect detectors are connected to a charts by default. To learn how to link detectors to charts see :ref:`linking-detectors`.
+
 To view AutoDetect detectors related to a chart, do the following:
 
 .. tabs:: 
@@ -83,7 +87,7 @@ To view AutoDetect detectors related to a chart, do the following:
    .. tab:: APM
       #. From the Splunk Observability Cloud home page, go to the :guilabel:`Dashboards` page.
       #. Select the dashboard you want to view.
-      #. On the dashboard page, if a chart is linked to a detector the chart has a red or green border and the bell icon is red or green. Select the bell icon on a chart to see detectors linked to that chart. 
+      #. On the dashboard, if a chart is linked to a detector the chart has a red or green border and the bell icon is red or green. Select the bell icon on a chart to see detectors linked to that chart. 
 
       A green dot and chart border indicates that there are no active alerts for the detector. A red dot and chart border indicates that the detector has active alerts.
 
@@ -92,7 +96,7 @@ To view AutoDetect detectors related to a chart, do the following:
 
       #. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page or the :guilabel:`Dashboards` page.
       #. Select the navigator or dashboard you want to view.
-      #. On the navigator or dashboard page, if a chart is linked to a detector the chart has a red or green border and the bell icon is red or green. Select the bell icon on a chart to see detectors linked to that chart. 
+      #. On the navigator or dashboard, if a chart is linked to a detector the chart has a red or green border and the bell icon is red or green. Select the bell icon on a chart to see detectors linked to that chart. 
 
       A green dot and chart border indicates that there are no active alerts for the detector. A red dot and chart border indicates that the detector has active alerts.
 
