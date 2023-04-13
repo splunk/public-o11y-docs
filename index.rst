@@ -433,7 +433,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Troubleshoot detectors <alerts-detectors-notifications/troubleshoot-detectors>
 
 .. toctree::
-   :caption: APM
    :maxdepth:   3
 
    Detector options <alerts-detectors-notifications/detector-options>
@@ -444,6 +443,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
 
 .. toctree::
+   :maxdepth:   3
+
+.. toctree::
+   :caption: APM
    :maxdepth:   3
 
    apm/intro-to-apm

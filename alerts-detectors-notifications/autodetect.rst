@@ -64,9 +64,9 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
       #. Select the navigator for the integration you want to view.
       #. On the navigator page, select :guilabel:`Alerts` or :guilabel:`Active Detectors` in the filter.
 
-      .. image:: /_images/images-detectors-alerts/autodetect/autodetect-alerts-active-detectors.png
-         :width: 20%
-         :alt: This screenshot shows the Alerts and Active Detectors filter options within an navigator.
+         .. image:: /_images/images-detectors-alerts/autodetect/autodetect-alerts-active-detectors.png
+            :width: 20%
+            :alt: This screenshot shows the Alerts and Active Detectors filter options within an navigator.
 
       A sidebar with all alerts related to the content on the page appears, as shown in the following image. AutoDetect components are indicated by an :guilabel:`Auto` badge.
 
@@ -79,7 +79,7 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
 Navigate to AutoDetect detectors from dashboard and navigator charts
 ----------------------------------------------------------------------
 
-Many AutoDetect detectors are connected to a charts by default. To learn how to link detectors to charts see :ref:`linking-detectors`.
+Many AutoDetect detectors are connected to a charts by default. To learn how to link detectors to charts, see :ref:`linking-detectors`.
 
 To view AutoDetect detectors related to a chart, do the following:
 
