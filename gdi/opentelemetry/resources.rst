@@ -40,9 +40,9 @@ Learn how to install, deploy, upgrade or uninstall the Collector in :ref:`otel-i
 
 This distribution is supported on and packaged for a variety of platforms, including:
 
-- Kubernetes: :ref:`Helm <helm-chart>` and :ref:`YAML <resource-yaml-manifests>`.
-- Linux: :ref:`installer script <linux-scripts>`, :ref:`Ansible <deployment-linux-ansible>`, :ref:`Puppet <deployment-linux-puppet>`, :ref:`Heroku <linux-heroku>`, and :ref:`manual <linux-manual>` (including DEB/RPM packages, Docker, and binary).
-- Windows: :ref:`installer script <windows-script>`, :ref:`Ansible <deployment-windows-ansible>`, :ref:`Puppet <deployment-windows-puppet>`, and :ref:`manual <otel-install-windows-manual>` (including MSI with GUI and PowerShell).
+- Kubernetes: :ref:`Helm <helm-chart>` (recommended) and :ref:`YAML <resource-yaml-manifests>`.
+- Linux: :ref:`installer script <linux-scripts>` (recommended), :ref:`Ansible <deployment-linux-ansible>`, :ref:`Puppet <deployment-linux-puppet>`, :ref:`Heroku <linux-heroku>`, and :ref:`manual <linux-manual>` (including DEB/RPM packages, Docker, and binary).
+- Windows: :ref:`installer script <windows-script>` (recommended), :ref:`Ansible <deployment-windows-ansible>`, :ref:`Puppet <deployment-windows-puppet>`, and :ref:`manual <otel-install-windows-manual>` (including MSI with GUI and PowerShell).
 
 After you've installed the Collector, see :ref:`otel-configuration` and :ref:`otel-other-configuration-sources`.
 

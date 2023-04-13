@@ -11,11 +11,13 @@ Send telemetry using OpenTelemetry Collector Contrib
 .. meta:: 
       :description: If you need to use the Contrib Collector due to technical or practical reasons, you can still send traces and metrics to Observability Cloud. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation.
 
-The OpenTelemetry Collector Contrib project is the upstream source of all OpenTelemetry Collector distributions, including the Splunk Distribution of OpenTelemetry Collector. The Contrib Collector contains vendor-specific components, such as receivers and exporters for several observability back ends, including Splunk Observability Cloud. However, the Contrib Collector lacks many features and requires manual deployment and configuration. 
+The OpenTelemetry Collector Contrib project is the upstream source of all OpenTelemetry Collector distributions, including the Splunk Distribution of OpenTelemetry Collector. The Contrib Collector contains vendor-specific components, such as receivers and exporters for several observability back ends, including Splunk Observability Cloud.
+
+The Splunk Distribution of OpenTelemetry Collector, on the other hand, is configured for Splunk Observability Cloud and can be deployed automatically by a variety of configuration management tools or using the installer scripts. The distribution adds additional functionality to the Collector while preserving all Contrib features.
 
 If you need to use the Contrib Collector due to technical or practical reasons, you can still send traces and metrics to Observability Cloud. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation. See :ref:`otel-intro`.
 
-.. note:: Splunk participates in the OpenTelemetry project and is committed to its growth. Features developed for the Splunk distribution are regularly added to the upstream Collector for the benefit of the entire community.
+.. note:: Splunk participates in the OpenTelemetry project and is committed to its growth. Features developed for the Splunk distribution are regularly added to the upstream Collector for the benefit of the entire community. The goal is for all Splunk distributions to eventually become snapshots of upstream.r
 
 Feature comparison
 ===================================
@@ -47,6 +49,10 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes (Ansible, Chef, Puppet, Salt)
     - No
 
+  * - Helm chart and Kubernetes operator
+    - Yes
+    - No
+
   * - Built-in dashboards
     - Yes
     - No
@@ -61,7 +67,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 
   * - Log collection and export
     - Yes (Splunk HEC and Fluentd)
-    - No (Under development)
+    - No (Requires)
 
   * - Database query performance
     - Yes
