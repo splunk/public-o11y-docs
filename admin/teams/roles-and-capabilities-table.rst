@@ -27,3 +27,11 @@ Users and teams
 ==================
 
 .. include:: /_includes/admin/roles_users_teams.rst
+
+
+
+Alerts and detectors
+===============================================================================
+
+
+.. include:: /_includes/admin/roles_alerts_detectors.rst
