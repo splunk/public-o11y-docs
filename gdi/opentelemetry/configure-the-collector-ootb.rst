@@ -66,6 +66,21 @@ The following diagram shows the default metrics pipeline:
 .. image:: /_images/collector/pipeline-metrics.png
   :alt: Default metrics pipeline.  
 
+Learn more about these receivers:
+
+* :ref:`host-metrics-receiver`
+* :ref:`signalfx-receiver`
+* :ref:`signalfx-forwarder`
+* :ref:`prometheus-receiver`
+
+Learn more about these processors:
+
+* :ref:`batch-processor`
+* :ref:`resourcedetection-processor`
+
+Learn more about these exporters:
+
+* :ref:`signalfx-exporter`
 
 Default pipelines for traces 
 ----------------------------------------------------------------------------
@@ -74,6 +89,21 @@ The following diagram shows the default traces pipeline:
 
 .. image:: /_images/collector/pipeline-traces.png
   :alt: Default traces pipeline.  
+
+Learn more about these receivers:
+
+* :ref:`jaeger-grpc`
+* :ref:`signalfx-forwarder`
+
+Learn more about these processors:
+
+* :ref:`batch-processor`
+* :ref:`resourcedetection-processor`
+
+Learn more about these exporters:
+
+* :ref:`splunk-apm-exporter`
+* :ref:`signalfx-exporter`
 
 Learn more
 ========================================================
