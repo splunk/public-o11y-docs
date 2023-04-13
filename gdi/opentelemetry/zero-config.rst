@@ -12,10 +12,9 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation
 .. toctree::
    :hidden:
 
+   Kubernetes Operator <auto-instrumentation/auto-instrumentation-operator>
    Java <auto-instrumentation/auto-instrumentation-java>
    .NET <auto-instrumentation/auto-instrumentation-dotnet>
-   Kubernetes Operator <auto-instrumentation/auto-instrumentation-operator>
-   Kubernetes Operator example <auto-instrumentation/auto-instrumentation-operator-ex>
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation provides several packages that automatically instrument your back-end applications and services to capture and report distributed traces and metrics to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 
@@ -29,7 +28,6 @@ The following packages are available:
 - :ref:`auto-instrumentation-java`
 - :ref:`auto-instrumentation-dotnet`
 
-See also:
+.. note:: You can also install the Collector with the Kubernetes Operator for Auto Instrumentation. See :ref:`Install the Collector with the Kubernetes Operator <auto-instrumentation-operator>` for more information.
 
-- :ref:`auto-instrumentation-operator`
-- :ref:`auto-instrumentation-operator-ex`
+
