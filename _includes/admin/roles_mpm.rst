@@ -32,20 +32,20 @@
   * - :strong:`Add routing exception rule`
     - Yes
     - Yes
-    - Yes
-    - Yes
+    - No
+    - No
 
   * - :strong:`Edit routing exception rule`
     - Yes
     - Yes
-    - Yes
-    - Yes
+    - No
+    - No
 
   * - :strong:`Activate, deactivate, or delete routing exception rule`
     - Yes
     - Yes
-    - Yes
-    - Yes
+    - No
+    - No
 
   * - :strong:`Add aggregation rule`
     - Yes
@@ -56,14 +56,14 @@
   * - :strong:`Edit aggregation rule`
     - Yes
     - Yes
-    - Yes
-    - Yes
+    - No
+    - No
 
   * - :strong:`Activate, deactivate, or delete aggregation rule`
     - Yes
     - Yes
-    - Yes
-    - Yes
+    - No
+    - No
 
   * - :strong:`Delete entire ruleset`
     - Yes
