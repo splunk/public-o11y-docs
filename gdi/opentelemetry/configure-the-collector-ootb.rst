@@ -34,7 +34,7 @@ Default pipelines
 
 By default, ingested data follows these pipelines.
 
-Default pipeline for logs 
+Default pipelines for logs 
 ----------------------------------------------------------------------------
 
 The following diagram shows the default logs pipeline:
@@ -42,12 +42,23 @@ The following diagram shows the default logs pipeline:
 .. image:: /_images/collector/pipeline-logs.png
   :alt: Default logs pipeline.  
 
-Learn more:
+Learn more about these receivers:
 
 * :ref:`signalfx-receiver`
+* :ref:`fluentd-receiver`
+
+Learn more about these processors:
+
+* :ref:`batch-processor`
+* :ref:`resourcedetection-processor`
+
+Learn more about these exporters:
+
+* :ref:`signalfx-exporter`
+* :ref:`splunk-hec-exporter`
 
 
-Default pipeline for metrics 
+Default pipelines for metrics 
 ----------------------------------------------------------------------------
 
 The following diagram shows the default metrics pipeline:
@@ -56,7 +67,7 @@ The following diagram shows the default metrics pipeline:
   :alt: Default metrics pipeline.  
 
 
-Default pipeline for traces 
+Default pipelines for traces 
 ----------------------------------------------------------------------------
 
 The following diagram shows the default traces pipeline:
