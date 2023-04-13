@@ -80,16 +80,20 @@ Many AutoDetect detectors are connected to a charts by default. To view AutoDete
 .. tabs:: 
 
    .. tab:: APM
+      #. From the Splunk Observability Cloud home page, go to the :guilabel:`Dashboards` page.
+      #. Select the dashboard you want to view.
+      #. On the dashboard page, if a chart is linked to a detector the chart has a red or green border and the bell icon is red or green. Select the bell icon on a chart to see detectors linked to that chart. 
 
+      A green dot and chart border indicates that there are no active alerts for the detector. A red dot and chart border indicates that the detector has active alerts.
 
 
    .. tab:: Infrastructure
 
       #. From the Splunk Observability Cloud home page, go to the :strong:`Infrastructure` page or the :guilabel:`Dashboards` page.
       #. Select the navigator or dashboard you want to view.
-      #. On the navigator or dashboard page, select the bell icon on a chart to see AutoDetect detectors linked to that chart. 
+      #. On the navigator or dashboard page, if a chart is linked to a detector the chart has a red or green border and the bell icon is red or green. Select the bell icon on a chart to see detectors linked to that chart. 
 
-      A green dot indicates that there is no alert for the detector. A red dot indicates that the detector has an active alert.
+      A green dot and chart border indicates that there are no active alerts for the detector. A red dot and chart border indicates that the detector has active alerts.
 
       .. image:: /_images/images-detectors-alerts/autodetect/autodetect-linked-chart.png
          :width: 50%
