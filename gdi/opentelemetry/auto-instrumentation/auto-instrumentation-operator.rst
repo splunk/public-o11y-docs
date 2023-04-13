@@ -1,7 +1,7 @@
 .. _auto-instrumentation-operator:
 
 *****************************************************************************
-Splunk OpenTelemetry Auto Instrumentation with the Kubernetes Operator
+Install the Collector with the Kubernetes Operator for Auto Instrumentation
 *****************************************************************************
 
 .. meta::
