@@ -65,7 +65,7 @@ To view AutoDetect alerts and detectors specific to an instrumented service or i
       #. On the navigator page, select :guilabel:`Alerts` or :guilabel:`Active Detectors` in the filter.
 
       .. image:: /_images/images-detectors-alerts/autodetect/autodetect-alerts-active-detectors.png
-         :width: 99%
+         :width: 50%
          :alt: This screenshot shows the Alerts and Active Detectors filter options within an navigator.
       A sidebar with all alerts related to the content on the page appears, as shown in the following image. AutoDetect components are indicated by an :guilabel:`Auto` badge.
 
