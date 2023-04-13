@@ -17,7 +17,7 @@ The Splunk Distribution of OpenTelemetry Collector, on the other hand, is config
 
 If you need to use the Contrib Collector due to technical or practical reasons, you can still send traces and metrics to Observability Cloud. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation. See :ref:`otel-intro`.
 
-.. note:: Splunk participates in the OpenTelemetry project and is committed to its growth. Features developed for the Splunk distribution are regularly added to the upstream Collector for the benefit of the entire community. The goal is for all Splunk distributions to eventually become snapshots of upstream.r
+.. note:: Splunk participates in the OpenTelemetry project and is committed to its growth. Features developed for the Splunk distribution are regularly added to the upstream Collector for the benefit of the entire community. The goal is for all Splunk distributions to eventually become snapshots of upstream.
 
 Feature comparison
 ===================================
