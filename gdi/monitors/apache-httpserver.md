@@ -39,7 +39,7 @@ This integration is only available on Kubernetes and Linux since collectd plugin
 ```
 ### Example
 
-To activate this monitor, add the following to your Collector configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:

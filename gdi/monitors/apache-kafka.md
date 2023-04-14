@@ -28,7 +28,7 @@ For Kafka v1.x.x and above, on top of default metrics, monitor `kafka.server:typ
 ```
 ### Example
 
-To activate this monitor, add the following to your Collector configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:

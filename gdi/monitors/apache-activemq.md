@@ -33,7 +33,7 @@ This integration works with ActiveMQ 5.8.0 and higher.
 
 ### Example
 
-To activate this monitor, add the following to your Collector configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:

@@ -34,7 +34,7 @@ This integration is only available on Kubernetes and Linux since collectd plugin
 
 ### Example
 
-To activate this monitor, add one of the following to your Collector configuration:
+To activate this integration, add one of the following to your Collector configuration:
 
 ```yaml
 receivers:
@@ -65,7 +65,7 @@ service:
       receivers: [smartagent/collectd_spark_worker]
 ```
 
-**Note:** The names of the monitor, `collectd_spark_master` and `collectd_spark_worker`, are for identification purposes only and don't affect functionality. You can use either name in your configuration, but you need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, see the `isMaster` field in the [Configuration settings](#configuration-settings) section.
+**Note:** The names `collectd_spark_master` and `collectd_spark_worker` are for identification purposes only and don't affect functionality. You can use either name in your configuration, but you need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, see the `isMaster` field in the [Configuration settings](#configuration-settings) section.
 
 
 ## Configuration settings
