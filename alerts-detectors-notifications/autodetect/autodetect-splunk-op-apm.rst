@@ -1,4 +1,4 @@
-.. _splunk-operational-apm:
+.. _autodetect-splunk-op-apm:
 
 Investigate an Splunk operational APM AutoDetect alert
 ****************************************************************************

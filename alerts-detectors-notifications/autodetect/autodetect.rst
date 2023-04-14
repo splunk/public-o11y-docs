@@ -16,5 +16,14 @@ AutoDetect alerts and detectors are automatically created in Splunk Observabilit
    autodetect-view
    autodetect-customize
    autodetect-subscribe-mute-turn-off
-   splunk-operational-apm
+   autodetect-splunk-op-apm
    autodetect-list
+
+Use the following topics to learn how to use and customize AutoDetect detectors:
+
+* :ref:`autodetect-intro`
+* :ref:`autodetect-view`
+* :ref:`autodetect-customize`
+* :ref:`autodetect-subscribe-mute-turn-off`
+* :ref:`autodetect-splunk-op-apm`
+* :ref:`autodetect-list`

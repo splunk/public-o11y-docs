@@ -370,7 +370,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use and customize AutoDetect alerts and detectors <alerts-detectors-notifications/autodetect/autodetect>
+   Use and customize AutoDetect alerts and detectors TOGGLE <alerts-detectors-notifications/autodetect/autodetect>
 
 .. toctree::
    :maxdepth:   3
