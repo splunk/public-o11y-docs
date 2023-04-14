@@ -45,6 +45,7 @@ The following diagram shows the default logs pipeline:
 Learn more about these receivers:
 
 * :ref:`signalfx-receiver`
+* :ref:`processlist`
 * :ref:`fluentd-receiver`
 
 Learn more about these processors:
