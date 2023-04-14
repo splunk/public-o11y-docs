@@ -11,9 +11,9 @@ Configure application receivers for hosts and servers
    :maxdepth: 4
    :hidden:
 
-   tomcat/tomcat
    monitors/apache-httpserver
-   zookeeper/zookeeper
+   monitors/apache-tomcat
+   monitors/apache-zookeeper
    chrony/chrony
    collectd/collectd
    collectd/collectd-cpufreq

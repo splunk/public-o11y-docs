@@ -28,7 +28,7 @@ For Kafka v1.x.x and above, on top of default metrics, monitor `kafka.server:typ
 ```
 ### Example
 
-To activate this monitor, add the following to your Collector configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -37,7 +37,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, include the `smartagent/kafka` monitor type in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
 
 ```
 service:
