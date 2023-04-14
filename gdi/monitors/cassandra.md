@@ -26,7 +26,9 @@ This integration is only available on Kubernetes and Linux since collectd plugin
 ```{include} /_includes/configuration.md
 ```
 
-### Configuration example
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -46,7 +48,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option   | Required | Type | Description |
 |--------|-----|------------|-------|
