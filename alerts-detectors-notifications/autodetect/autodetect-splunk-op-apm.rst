@@ -56,7 +56,7 @@ Once you determine the timeline for the increased workload, consider what else h
 Review additional metrics
 ===========================
 
-In the APM Throttling dashboard use the `ByToken` metrics to better understand what source is getting throttled. Perhaps you have a separate tokens for staging and production. 
+In the APM Throttling dashboard use the ``ByToken`` metrics to better understand what source is getting throttled. Perhaps you have a separate tokens for staging and production. 
 
 To open the APM Throttling dashboard follow these steps:
 
