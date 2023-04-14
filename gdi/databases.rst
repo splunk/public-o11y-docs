@@ -13,7 +13,7 @@ Configure application receivers for databases
 
    monitors/apache-kafka
    monitors/apache-spark
-   cassandra/cassandra
+   monitors/cassandra
    consul/consul
    opentelemetry/components/databricks-receiver
    etcd/etcd
