@@ -11,7 +11,7 @@ Configure application receivers for databases
    :maxdepth: 4
    :hidden:
 
-   kafka/kafka
+   monitors/apache-kafka
    spark/spark
    cassandra/cassandra
    consul/consul
