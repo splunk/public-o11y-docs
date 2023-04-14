@@ -12,7 +12,7 @@ Configure application receivers for hosts and servers
    :hidden:
 
    tomcat/tomcat
-   apache/apache
+   monitors/apache-httpserver
    zookeeper/zookeeper
    chrony/chrony
    collectd/collectd
