@@ -26,13 +26,15 @@ There are three Splunk operational APM AutoDetect detectors that let you know wh
      - See :ref:`apm-autodetector-spans-blocked` for more information about this detector.
 
 
-Here are some potential next steps after you receive an alert from one of a Splunk operational APM AutoDetect detectors: 
+Here are some potential next steps after you receive an alert from one of th Splunk operational APM AutoDetect detectors: 
 
-1. Identify when the alert threshold was exceeded.
-2. Review additional metrics
+#. :ref:`autodetect-apm-throttling-dash`
+#. :ref:`autodetect-review-metrics`
 
-Identify when the alert threshold was exceeded
-================================================================= 
+.. _autodetect-apm-throttling-dash:
+
+Use the APM Throttling dashboard to identify when the alert threshold was first exceeded
+===========================================================================================
 
 Open the APM Throttling dashboard.
 
@@ -46,8 +48,12 @@ Open the APM Throttling dashboard.
 #. Use the filter, time window, and chart resolution as needed to better understand when your workload increased.
 #. In the Chart Actions menu select :guilabel:`Troubleshoot this Time Window in (APM)` to further investigate.
 
+Once you determine the timeline for the increased workload, consider what else happened at that time. Was there a release, for example? 
+
+.. _autodetect-review-metrics:
 
 Review additional metrics
 ===========================
 
+In the APM 
 , for example "byToken", to better understand what source is getting throttled - perhaps you have a separate token for staging, and a separate one for production. ... you can use the "byToken" metrics to see if there is anything interesting there.
