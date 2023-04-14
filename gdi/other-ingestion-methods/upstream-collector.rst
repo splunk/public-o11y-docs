@@ -45,6 +45,14 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - Yes (Agent and gateway modes)
     - No
 
+  * - Zero config automatic instrumentation
+    - Yes
+    - No 
+
+  * - Discovery mode
+    - Yes
+    - No
+
   * - Recipes for configuration management tools
     - Yes (Ansible, Chef, Puppet, Salt)
     - No
@@ -67,9 +75,9 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
 
   * - Log collection and export
     - Yes (Splunk HEC and Fluentd)
-    - No (Requires)
+    - No (Requires configuration)
 
-  * - Database query performance
+  * - Related content
     - Yes
     - No
 
