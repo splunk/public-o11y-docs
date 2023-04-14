@@ -3,8 +3,6 @@
 # Apache Spark
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Apache Sparck clusters monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache Spark monitor type to monitor Apache Spark clusters. It does not support fetching metrics from Spark Structured Streaming.
 
 For the following cluster modes, the integration only supports HTTP endpoints:
