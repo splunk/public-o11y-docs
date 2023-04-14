@@ -30,7 +30,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
   :width: 100%
 
   * - :strong:`Feature`
-    - :strong:`Splunk Collector`
+    - :strong:`Splunk Distribution of OpenTelemetry Collector`
     - :strong:`Contrib Collector`
 
   * - Splunk support
