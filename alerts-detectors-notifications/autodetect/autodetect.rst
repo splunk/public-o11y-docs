@@ -10,7 +10,7 @@ Use and customize AutoDetect alerts and detectors
 AutoDetect alerts and detectors are automatically created in Splunk Observability Cloud when you have supported integrations configured. AutoDetect detectors are available for Splunk APM and Splunk Infrastructure Monitoring.
 
 .. toctree::
-    :hidden:
+   :hidden:
 
    autodetect-intro
    autodetect-view
