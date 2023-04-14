@@ -42,7 +42,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, include the Apache ActiveMQ monitor in a metrics pipeline. Add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:

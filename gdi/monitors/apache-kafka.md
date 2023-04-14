@@ -37,7 +37,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, include the `smartagent/kafka` monitor type in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
 
 ```
 service:
