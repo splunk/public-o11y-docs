@@ -4,8 +4,6 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd Tomcat monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Collectd Tomcat monitor type to monitor Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
 
 See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
