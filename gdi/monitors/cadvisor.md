@@ -27,6 +27,10 @@ If you are running containers using Docker and the {ref}`docker` receiver, metri
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```yaml
 receivers:
   smartagent/cadvisor: 
@@ -34,7 +38,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the integration, include the receiver with this monitor type in a `metrics` pipeline. To do this, add the receiver to the `service > pipelines > metrics > receivers` section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file.
 
 ```yaml
 service:
