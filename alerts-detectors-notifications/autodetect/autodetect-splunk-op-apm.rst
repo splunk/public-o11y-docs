@@ -33,10 +33,12 @@ Here are some potential next steps after you receive an alert from one of th Spl
 
 .. _autodetect-apm-throttling-dash:
 
-Use the APM Throttling dashboard to identify when the alert threshold was first exceeded
+Review the data in the APM Throttling dashboard
 ===========================================================================================
 
-Open the APM Throttling dashboard.
+Use the APM Throttling dashboard to identify when the alert threshold was first exceeded.
+
+To open the APM Throttling dashboard follow these steps:
 
 #. In the navigation menu, select :guilabel:`Dashobards`.
 #. Locate the Splunk Organization Metrics in the Built-in Dashboard Groups.
@@ -46,7 +48,6 @@ Open the APM Throttling dashboard.
     #. Profiling throttling.
     #. Spans dropped because blocked
 #. Use the filter, time window, and chart resolution as needed to better understand when your workload increased.
-#. In the Chart Actions menu select :guilabel:`Troubleshoot this Time Window in (APM)` to further investigate.
 
 Once you determine the timeline for the increased workload, consider what else happened at that time. Was there a release, for example? 
 
@@ -55,5 +56,15 @@ Once you determine the timeline for the increased workload, consider what else h
 Review additional metrics
 ===========================
 
-In the APM 
-, for example "byToken", to better understand what source is getting throttled - perhaps you have a separate token for staging, and a separate one for production. ... you can use the "byToken" metrics to see if there is anything interesting there.
+In the APM Throttling dashboard use the `ByToken` metrics to better understand what source is getting throttled. Perhaps you have a separate tokens for staging and production. 
+
+To open the APM Throttling dashboard follow these steps:
+
+#. In the navigation menu, select :guilabel:`Dashobards`.
+#. Locate the Splunk Organization Metrics in the Built-in Dashboard Groups.
+#. Select the :guilabel:`APM Throttling` dashboard. 
+#. Review the following charts:
+    #. Span drop due to ingest limits - Compare the `ByToken` metric to the overall metric for more insight.
+    #. Profiling throttling - Compare the `ByToken` metric to the overall metric for more insight.
+    #. Spans dropped because blocked by token - Compare the data for each token for more insight. 
+#. Use the filter, time window, and chart resolution as needed to better understand when your workload increased.
