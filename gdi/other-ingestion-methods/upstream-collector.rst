@@ -107,15 +107,15 @@ The following example shows how to configure the OpenTelemetry Collector ``contr
 Migrate to the Splunk Distribution of OpenTelemetry Collector
 ================================================================
 
-Migrating from existing upstream Collectors to the Splunk Distribution of OpenTelemetry Collector requires fewer steps than migrating from other proprietary agents, as the Splunk distribution is based on the OpenTelemetry Collector 
+Migrating from existing upstream Collectors to the Splunk Distribution of OpenTelemetry Collector requires fewer steps than migrating from other proprietary agents, as the Splunk distribution is based on the OpenTelemetry Collector. 
 
 To migrate from the Collector Contrib to the Splunk OTel Collector, follow these steps:
 
 #. Save a copy of your current Collector configuration.
 
-#. Stop the Collector service using ``sudo systemctl stop otelcol`` on Linux or ``net stop otelcol`` on Windows. If you're running the Collector in a Terminal session, interrupt execution by pressing Control+C.
+#. Stop the Collector Contrib service using ``sudo systemctl stop otelcol`` on Linux or ``net stop otelcol`` on Windows. If you're running the Collector in a Terminal session, interrupt execution by pressing Control+C.
 
-#. Remove the OpenTelemetry Collector binary and configuration files, including system service configuration files, or use the package manager in your system to remove the Collector.
+#. Remove the OpenTelemetry Collector Contrib binary and configuration files, including system service configuration files, or use the package manager in your system to remove the Collector.
 
 #. Install the Splunk Distribution of OpenTelemetry Collector. See :ref:`otel-install-platform`.
 

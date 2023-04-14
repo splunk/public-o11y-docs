@@ -29,7 +29,7 @@ The OpenTelemetry Collector has a core version and a contributions version. The 
 .. caution::
 
   Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
-  Splunk only provides best-effort support for the upstream OpenTelemetry Collector.
+  Splunk only provides best-effort support for the upstream OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
 
 The Splunk Distribution of OpenTelemetry Collector is a distribution of the OpenTelemetry Collector. The distribution is a project that bundles components from OpenTelemetry Core, OpenTelemetry Contrib, and other sources to provide data collection for multiple source platforms. The customizations in the Splunk distribution include these features:
 
