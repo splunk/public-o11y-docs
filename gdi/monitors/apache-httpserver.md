@@ -21,7 +21,7 @@ Apache worker threads can be in one of the following states:
 | Finishing    | Finishing as part of graceful shutdown  |
 | Starting     | Starting up to serve                    |
 
-This monitor type is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
 ## Benefits
 
@@ -37,6 +37,8 @@ This monitor type is only available on Kubernetes and Linux since collectd plugi
 
 ```{include} /_includes/configuration.md
 ```
+
+To activate this monitor, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -54,7 +56,7 @@ Additional configuration options include host or port, as shown below. If `mod_s
     url: "http://{{.Host}}:{{.Port}}/server-status?auto"
 ```
 
-To complete the integration, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
+Next, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
 
 ```
 service:
@@ -65,7 +67,7 @@ service:
 
 ### Configuration options
 
-The following configuration options are available for this monitor:
+The following configuration options are available for this integration:
 
 | Options | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -78,7 +80,7 @@ The following configuration options are available for this monitor:
 
 ## Apache configuration
 
-After you deploy the monitor in the Collector, follow these steps to configure the Apache web server to expose status metrics:
+After you've set up the Collector, follow these steps to configure the Apache web server to expose status metrics:
 
 1. Activate the `mod_status` module in your Apache server. Make sure that the URL you provide for your `mod_status` module ends in `?auto`. This returns the status page as `text/plain`, which the monitor requires.
 2. Add the following configuration to your Apache server:

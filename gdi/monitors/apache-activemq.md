@@ -10,6 +10,8 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 * Queue (Queue status)
 * Topic (Topic status)
 
+See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
+
 This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
 This integration works with ActiveMQ 5.8.0 and higher.
@@ -29,7 +31,7 @@ This integration works with ActiveMQ 5.8.0 and higher.
 ```{include} /_includes/configuration.md
 ```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this monitor, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -38,7 +40,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, include the Apache ActiveMQ monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, include the Apache ActiveMQ monitor in a metrics pipeline. Add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:
