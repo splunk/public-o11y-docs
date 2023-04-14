@@ -4,13 +4,13 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Apache ActiveMQ monitor type. See benefits, install, configuration, and metrics.">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache ActiveMQ monitor type to wrap the GenericJMX monitor to track the following information from ActiveMQ:
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache ActiveMQ monitor type to wrap the GenericJMX monitor and track the following information from ActiveMQ:
 
 * Broker (Totals per broker)
 * Queue (Queue status)
 * Topic (Topic status)
 
-This monitor type is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
 This integration works with ActiveMQ 5.8.0 and higher.
 
@@ -38,7 +38,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete monitor activation, include the Apache ActiveMQ monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, include the Apache ActiveMQ monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:
@@ -49,7 +49,7 @@ service:
 
 ### Configuration options
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -88,7 +88,6 @@ The **nested** `values` configuration object has the following fields:
 | `instanceFrom` | no | `list of strings` | Works like the option of the same name directly beneath the MBean block, but sets the type instance instead. |
 | `attribute` | no | `string` | Sets the name of the attribute to read the value from. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example: “attrib0.key42”. If `table` is set to `true`, path must point to a composite type, otherwise it must point to a numeric type. |
 | `attributes` | no | `list of strings` | The plural form of the `attribute` config above. Used to derive multiple metrics from a single MBean. |
-
 
 ## Metrics
 
