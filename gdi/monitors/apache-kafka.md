@@ -4,9 +4,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Kafka monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache Kafka monitor type to monitor Kafka instances using the GenericJMX plugin. 
-
-This integration pulls metrics from Kafka JMX endpoints for the [built-in MBeans
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache Kafka monitor type to monitor Kafka instances using the GenericJMX plugin. This integration pulls metrics from Kafka JMX endpoints for the [built-in MBeans
 you've configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka/mbeans.go). See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information on how to configure custom MBeans, as well as information on troubleshooting JMX setup.
 
 This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
@@ -28,6 +26,7 @@ For Kafka v1.x.x and above, on top of default metrics, monitor `kafka.server:typ
 
 ```{include} /_includes/configuration.md
 ```
+### Example
 
 To activate this monitor, add the following to your Collector configuration:
 
