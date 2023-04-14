@@ -12,7 +12,7 @@ Configure application receivers for databases
    :hidden:
 
    monitors/apache-kafka
-   spark/spark
+   monitors/apache-spark
    cassandra/cassandra
    consul/consul
    opentelemetry/components/databricks-receiver
