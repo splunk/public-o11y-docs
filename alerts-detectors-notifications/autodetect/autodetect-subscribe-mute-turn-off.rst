@@ -1,6 +1,6 @@
 .. _autodetect-subscribe-mute-turn-off:
 
-Subscribe, mute, or turn off AutoDetect notifications
+Subscribe to, mute, or turn off AutoDetect notifications
 **********************************************************
 
 Subscribe to AutoDetect notifications
