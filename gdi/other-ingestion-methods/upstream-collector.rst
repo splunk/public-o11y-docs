@@ -105,7 +105,7 @@ The following example shows how to configure the OpenTelemetry Collector ``contr
 .. _migrate-otel-upstream:
 
 Migrate to the Splunk Distribution of OpenTelemetry Collector
-==================================================
+================================================================
 
 Migrating from existing upstream Collectors to the Splunk Distribution of OpenTelemetry Collector requires fewer steps than migrating from other proprietary agents, as the Splunk distribution is based on the OpenTelemetry Collector 
 
