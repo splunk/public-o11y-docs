@@ -6,9 +6,13 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/tomcat` monitor type for the Smart Agent Receiver. `collectd/tomcat` monitors Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Collectd Tomcat monitor type to monitor Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
 
-> _**Note:**_ You must activate JMX Remote to monitor Tomcat remotely.
+See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
+
+You must activate JMX Remote to monitor Tomcat remotely.
+
+This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
 ## Benefits
 
@@ -25,6 +29,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```yaml
 receivers:
   smartagent/tomcat:
@@ -32,7 +40,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the integration, include the monitor in a metrics pipeline. Add the monitor item to the ``service/pipelines/metrics/receivers`` section of your configuration file. For example:
+Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```yaml
 service:
