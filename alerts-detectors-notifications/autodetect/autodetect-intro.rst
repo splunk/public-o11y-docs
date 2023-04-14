@@ -1,6 +1,6 @@
 .. _autodetect-intro:
 
-Intro to Autodetect Alerts and Detectors
+Intro to AutoDetect alerts and detectors
 ******************************************************
 
 .. meta::

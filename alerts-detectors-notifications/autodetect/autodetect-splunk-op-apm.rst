@@ -34,7 +34,18 @@ Here are some potential next steps after you receive an alert from one of a Splu
 Identify when the alert threshold was exceeded
 ================================================================= 
 
-did your workload increase? did a new release occur?
+Open the APM Throttling dashboard.
+
+#. In the navigation menu, select :guilabel:`Dashobards`.
+#. Locate the Splunk Organization Metrics in the Built-in Dashboard Groups.
+#. Select the :guilabel:`APM Throttling` dashboard. 
+#. Review the following charts:
+    #. Span drop due to ingest limits.
+    #. Profiling throttling.
+    #. Spans dropped because blocked
+#. Use the filter, time window, and chart resolution as needed to better understand when your workload increased.
+#. In the Chart Actions menu select :guilabel:`Troubleshoot this Time Window in (APM)` to further investigate.
+
 
 Review additional metrics
 ===========================
