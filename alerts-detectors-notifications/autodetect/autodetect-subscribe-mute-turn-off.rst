@@ -3,17 +3,19 @@
 Subscribe to, mute, or turn off AutoDetect notifications
 **********************************************************
 
+By default, you aren't subscribed to receive notifications from AutoDetect. There are various options to choose how you are notified of alerts generated from AutoDetect detectors. See the following sections to learn how to subscribe or mute notifications or turn off the detector. 
+
 Subscribe to AutoDetect notifications
 ========================================
 
-The procedures for subscribing to AutoDetect alerts and detectors are the same as those for interacting with other alerts and detectors.
+Subscribe to detectors to receive notifications When a detector triggers an alert in Observability Cloud. The steps for subscribing to AutoDetect alerts and detectors are the same as those for other alerts and detectors.
 
 To learn how to subscribe to a detector or alert for notifications, see :ref:`manage-notifications`.
 
 Mute AutoDetect alerts and detectors
 ======================================
 
-The procedures for muting AutoDetect alerts and detectors are the same as those for interacting with other alerts and detectors.
+Mute notifications when you need to stop sending alert notifications during situations that are known to trigger alerts, such as maintenance windows or tests. The steps for muting AutoDetect alerts and detectors are the same as those for interacting with other alerts and detectors.
 
 To learn how to create muting rules for alerts and detectors, see :ref:`mute-notifications`.
 

@@ -26,7 +26,8 @@ After you've set up the supported integrations, AutoDetect alerts and detectors 
 
 .. note:: By default, you aren't subscribed to receive notifications from AutoDetect. To learn how to subscribe to AutoDetect notifications, see :ref:`autodetect-subscribe-mute-turn-off`.
 
-
+See also
+============
 
 Use the following topics to learn how to use and customize AutoDetect detectors:
 
