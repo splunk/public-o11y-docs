@@ -39,7 +39,7 @@ This integration is only available on Kubernetes and Linux since collectd plugin
 ```
 ### Example
 
-To activate this monitor, add the following to your Collector configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -57,7 +57,7 @@ Additional configuration options include host or port, as shown below. If `mod_s
     url: "http://{{.Host}}:{{.Port}}/server-status?auto"
 ```
 
-Next, include the monitor in a `metrics` pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
 
 ```
 service:
