@@ -12,9 +12,9 @@ AutoDetect alerts and detectors are automatically created in Splunk Observabilit
 .. toctree::
     :hidden:
 
-    autodetect-intro
-    autodetect-view
-    autodetect-customize
-    autodetect-subscribe-mute-turn-off
-    splunk-operational-apm
-    autodetect-list
+   autodetect-intro
+   autodetect-view
+   autodetect-customize
+   autodetect-subscribe-mute-turn-off
+   splunk-operational-apm
+   autodetect-list
