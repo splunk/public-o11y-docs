@@ -236,6 +236,8 @@ Metrics
 
 The following metrics, resource attributes, and attributes are available.
 
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+
 cpu scraper
 --------------------------
 
