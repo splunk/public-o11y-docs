@@ -37,6 +37,7 @@ This integration is only available on Kubernetes and Linux since collectd plugin
 
 ```{include} /_includes/configuration.md
 ```
+### Example
 
 To activate this monitor, add the following to your Collector configuration:
 

@@ -31,6 +31,8 @@ This integration works with ActiveMQ 5.8.0 and higher.
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
 To activate this monitor, add the following to your Collector configuration:
 
 ```
