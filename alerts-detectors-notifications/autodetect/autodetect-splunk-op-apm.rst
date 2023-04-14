@@ -64,7 +64,7 @@ To open the APM Throttling dashboard follow these steps:
 #. Locate the Splunk Organization Metrics in the Built-in Dashboard Groups.
 #. Select the :guilabel:`APM Throttling` dashboard. 
 #. Review the following charts:
-    #. Span drop due to ingest limits - Compare the `ByToken` metric to the overall metric for more insight.
-    #. Profiling throttling - Compare the `ByToken` metric to the overall metric for more insight.
+    #. Span drop due to ingest limits - Compare the data for each token for more insight. 
+    #. Profiling throttling - Compare the data for each token for more insight. 
     #. Spans dropped because blocked by token - Compare the data for each token for more insight. 
 #. Use the filter, time window, and chart resolution as needed to better understand when your workload increased.
