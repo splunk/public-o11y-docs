@@ -117,7 +117,7 @@ To migrate from the Collector Contrib to the Splunk OTel Collector, follow these
 
 #. Remove the OpenTelemetry Collector Contrib binary and configuration files, including system service configuration files, or use the package manager in your system to remove the Collector.
 
-#. Install the Splunk Distribution of OpenTelemetry Collector. See :ref:`otel-install-platform`.
+#. Install the Splunk Distribution of OpenTelemetry Collector. See :ref:`otel-install-platform`. If you've deployed the Collector in Kubernetes use the Helm chart. See :ref:`helm-chart` for more information. 
 
 #. Configure the Collector taking into account the settings you saved before removing the previous Collector, as well as the components available in the Splunk Distribution of OpenTelemetry Collector. See :ref:`gdi-upstream-collector` and :ref:`otel-components`.
 
