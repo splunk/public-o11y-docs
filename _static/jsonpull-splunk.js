@@ -11,7 +11,12 @@ $(document).ready(function () {
         cache: true
     });
 
-    let converter = new showdown.Converter();
+    let converter = new showdown.Converter(
+        {
+            simplifiedAutoLink: true,
+            excludeTrailingPunctuationFromURLs: true,
+            literalMidWordUnderscores: true
+    });
 
     $.getScript('https://public-sites--signalfx-com.s3.us-east-1.amazonaws.com/cdn/integrations-docs/integrations-docs.js', function () {
         $('.metrics-table').each(function () {
@@ -89,7 +94,12 @@ $(document).ready(function () {
                 'default': 'Category',
             };
 
-            let converter = new showdown.Converter();
+            let converter = new showdown.Converter(
+                {
+                    simplifiedAutoLink: true,
+                    excludeTrailingPunctuationFromURLs: true,
+                    literalMidWordUnderscores: true
+            });
             let cache = [];
             let idMap = [];
 
