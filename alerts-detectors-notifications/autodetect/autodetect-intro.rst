@@ -24,4 +24,4 @@ See the following topics for more information on how to collect the required dat
 
 After you've set up the supported integrations, AutoDetect alerts and detectors automatically appear on the :strong:`Alerts & Detectors` page and the corresponding dashboards and navigators for your integrations. 
 
-.. note:: By default, you aren't subscribed to receive notifications from AutoDetect. To learn how to subscribe to AutoDetect notifications, see :ref:`autodetect-subscribe`.
+.. note:: By default, you aren't subscribed to receive notifications from AutoDetect. To learn how to subscribe to AutoDetect notifications, see :ref:`autodetect-subscribe-mute-turn-off`.
