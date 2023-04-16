@@ -8,8 +8,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the AppMesh monitor type to report metrics from AWS AppMesh Envoy Proxy.
 
-To use this integration, you must also activate the Envoy StatsD sink on AppMesh and deploy the agent as a sidecar in the 
-services that need to be monitored.
+To use this integration, you must also activate the Envoy StatsD sink on AppMesh and deploy the agent as a sidecar in the services that need to be monitored.
 
 This integration is available on Kubernetes, Linux, and Windows. 
 
