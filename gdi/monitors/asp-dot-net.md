@@ -3,26 +3,16 @@
 # ASP.NET
 <meta name="description" content="Use this Splunk Observability Cloud integration for the ASP.NET app monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `aspdotnet` monitor type to retrieve metrics for requests, errors, sessions, and worker processes from ASP.NET applications. 
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `aspdotnet` monitor for the Smart Agent Receiver.
+This integration reports the instantaneous values of Windows Performance Counters, which are the source of the retrieved metrics. Most of the performance counters in this monitor are gauges that represent rates per second and percentages. Between collection intervals, spikes might occur in the Performance Counters. To mitigate the effect of these spikes, decrease the reporting interval on the monitor so that it collects more frequently.
 
-Use this integration to retrieve metrics for requests, errors, sessions, and worker processes from ASP.NET applications. 
-
-This monitor is only available on Windows.
+This integration is only available on Windows.
 
 ## Benefits
 
 ```{include} /_includes/benefits.md
 ```
-
-## Windows Performance Counters
-
-Windows Performance Counters are the source of retrieved metrics. Most of the performance counters in this monitor are 
-gauges that represent rates per second and percentages.
-
-This monitor reports the instantaneous values of these Windows Performance Counters. Between collection intervals, spikes might occur in the
-Performance Counters. To mitigate the effect of these spikes, decrease the reporting interval on the monitor so that it collects more frequently.
 
 ## Installation
 
@@ -34,9 +24,9 @@ Performance Counters. To mitigate the effect of these spikes, decrease the repor
 ```{include} /_includes/configuration.md
 ```
 
-### Configuration example
+### Example
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -45,8 +35,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the integration, include the monitor in a metrics pipeline. 
-Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:

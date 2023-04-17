@@ -11,7 +11,7 @@ Configure application exporters and receivers for monitoring
    :maxdepth: 4
    :hidden:
 
-   cadvisor/cadvisor
+   monitors/cadvisor
    cgroups/cgroups
    Istio <get-data-in/application/istio/istio>
    jaeger-grpc/jaeger-grpc
