@@ -125,7 +125,7 @@ Run the following:
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-4. Instrument application by setting an annotation
+4. Set annotations to instrument applications
 ------------------------------------------------------------
 
 You can add an ``instrumentation.opentelemetry.io/inject-{instrumentation_library}`` annotation to the following:

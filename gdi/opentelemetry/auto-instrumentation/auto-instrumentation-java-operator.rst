@@ -1,8 +1,8 @@
 .. _auto-instrumentation-java-operator:
 
-******************************************************************************************
-Use case: Auto-instrument your Java apps with the Collector and the Kubernetes Operator for Java auto-instrumentation 
-******************************************************************************************
+*************************************************************************************************************
+Use case: Auto-instrument your Java apps with the Collector and the Kubernetes Operator  
+*************************************************************************************************************
 
 .. meta::
    :description: Example/use case on how to deploy the OpenTelemetry Operator and Java auto-instrumentation
