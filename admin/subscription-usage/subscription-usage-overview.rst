@@ -8,6 +8,7 @@ Monitor and manage subscription usage
    :description: Monitor your Infrastructure Monitoring, APM, and Log Observer subscription usage. 
 
 .. toctree::
+   :hidden:
 
    APM subscription usage <apm-billing-usage-index>
    APM billing reports <view-apm-billing-reports>

@@ -816,7 +816,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    View organization metrics <admin/org-metrics>
 
 .. toctree::
-   :hidden:
    :maxdepth:   3
 
    Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>
