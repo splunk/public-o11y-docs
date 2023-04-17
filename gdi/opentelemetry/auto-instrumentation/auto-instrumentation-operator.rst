@@ -34,12 +34,15 @@ To use the Operator for Auto Instrumentation, follow these steps:
 
 #. Check out the results at Splunk Observability APM.
 
-#. Deploy the Helm Chart with the Operator enabled
+1. Deploy the Helm Chart with the Operator enabled
 ------------------------------------------------------------
 
 Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with ``operator.enabled=true`` to include the Operator in the deployment.
 
-If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. The cert-manager issues TLS certificates the operator requires. You can use the commands below to run these steps.
+Add certifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. You can use the commands below to run these steps.
 
 .. code-block:: yaml
 
@@ -52,12 +55,15 @@ If a certification manager (or any other TLS certificate source) is not availabl
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
 
+Ingest traces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 In order to be properly ingest trace telemetry data, the attribute ``deployment.environment`` must be on board the exported traces. There are two ways to set this attribute:
 
 * Use the values.yaml optional environment configuration.
 * Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
 
-#. Deploy Auto Instrumentation
+2. Deploy Auto Instrumentation
 ------------------------------------------------------------
 
 Deploy ``opentelemetry.io/v1alpha1``, an instrumentation object with specifications on how to configure the instrumentation libraries to use for instrumentation. It must be available to the target pod for auto-instrumentation to function. 
@@ -91,7 +97,7 @@ For example:
    # Check the current deployed values
    kubectl get otelinst -o yaml
 
-#. Verify all the OpenTelemetry resources are deployed successfully
+3. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
 
 Resources include the Collector, the Operator, webhook, an instrumentation.
@@ -119,7 +125,7 @@ Run the following:
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-#. Instrument application by setting an annotation
+4. Instrument application by setting an annotation
 ------------------------------------------------------------
 
 You can add an ``instrumentation.opentelemetry.io/inject-{instrumentation_library}`` annotation to the following:
@@ -141,7 +147,7 @@ Sample annotations include:
 * ``instrumentation.opentelemetry.io/inject-nodejs: "true"``
 * ``instrumentation.opentelemetry.io/inject-python: "true"``
 
-#. Check out the results at Splunk Observability APM
+5. Check out the results at Splunk Observability APM
 ------------------------------------------------------------
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kuberenetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
