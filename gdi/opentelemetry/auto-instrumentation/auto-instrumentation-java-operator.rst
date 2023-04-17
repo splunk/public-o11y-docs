@@ -1,8 +1,8 @@
 .. _auto-instrumentation-java-operator:
 
-*****************************************************************************
-Use case: Deploy the OpenTelemetry Operator and Java auto-instrumentation
-*****************************************************************************
+******************************************************************************************
+Use case: Auto-instrument your Java apps with the Collector and the Kubernetes Operator for Java auto-instrumentation 
+******************************************************************************************
 
 .. meta::
    :description: Example/use case on how to deploy the OpenTelemetry Operator and Java auto-instrumentation
@@ -15,7 +15,7 @@ Spring Clinic Microservices, a fictitious company, wants to use the Collector wi
    :width: 80%
    :alt: Java app auto instrumentation diagram.
 
-To do so, Arnau, their DevOps manager, proceeds as described:
+To do so, Arnau, their DevOps manager, proceeds to:
 
 #. :ref:`Set up the apps to instrument <auto-instrument-operator-java-set-up>`.
 #. :ref:`Deploy and configure the Collector <auto-instrument-operator-java-install>`.
@@ -27,7 +27,7 @@ To do so, Arnau, their DevOps manager, proceeds as described:
 Set up the applications to instrument
 ======================================================================
 
-The Java ``spring-petclinic`` demo creates a ``spring-petclinic`` namespace and deploys the related Java applications to it. 
+Arnau creates the ``spring-petclinic`` namespace and deploys the related Java applications to it. 
 
 TODO: Add the Kubernetes manifests for spring-petclinic to this example in a followup PR
 
@@ -40,7 +40,9 @@ TODO: Add the Kubernetes manifests for spring-petclinic to this example in a fol
 Deploy and configure the Collector
 ======================================================================
 
-LINK TO INSTALL INSTRUCTIONS TBC
+Arnau follows the steps described in :ref:`auto-instrumentation-operator` to set up Auto Intrumentation for their clinic apps.
+
+Finally, Arnau can see the results using :ref:`APM <get-started-apm>`.
 
 .. image:: /_images/collector/auto-instrumentation-op-java-1.png
    :width: 100%
