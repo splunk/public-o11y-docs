@@ -27,3 +27,9 @@ Users and teams
 ==================
 
 .. include:: /_includes/admin/roles_users_teams.rst
+
+
+APM
+==================
+
+.. include:: /_includes/admin/roles_apm.rst
