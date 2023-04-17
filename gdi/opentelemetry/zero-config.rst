@@ -18,7 +18,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation
 
 Splunk OpenTelemetry Zero Configuration Auto Instrumentation provides several packages that automatically instrument your back-end applications and services to capture and report distributed traces and metrics to the Splunk Distribution of OpenTelemetry Collector, and then on to Splunk APM.
 
-The Zero Configuration packages provides the following benefits:
+The Zero Configuration packages provide the following benefits:
 
 - You can start streaming traces and monitor distributed applications with Splunk APM in minutes.
 - You don't need to configure or instrument your back-end services or applications before deployment.
