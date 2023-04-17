@@ -6,11 +6,13 @@
 
 ## Description
 
-This receiver pulls metrics directly from cAdvisor, which runs by default on port 4194, but can be configured to any other port.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the cAdvisor monitor type to pull metrics directly from cAdvisor. By default, it runs on port 4194, but it can be configured to any other port.
 
 If you are using Kubernetes, consider the {ref}`kubelet-stats-receiver` because many Kubernetes nodes do not expose cAdvisor on a network port, even though they are running it within Kubelet.
 
-If you are running containers using Docker and the {ref}`docker` receiver, metrics duplication might happen, with the same metric data sent under different metric names. Consider not activating the Docker Containers receiver in a Kubernetes environment, or use filtering to allow only certain metrics. Deactivating the Docker Containers receiver causes the built-in Docker dashboards to be empty, though container metrics are available on the Kubernetes dashboards instead.
+If you are running containers with Docker, retrieved metrics might overlap with `docker-container-stats`'. Consider not enabling the Docker monitor in a Kubernetes environment, or else use filtering to allow only certain metrics. This will cause the built-in Docker dashboards to be blank, but container metrics will be available on the Kubernetes dashboards instead.
+
+This integration is available on Kubernetes, Linux, and Windows. 
 
 ### Benefits
 
@@ -46,8 +48,6 @@ service:
     metrics:
       receivers: [smartagent/cadvisor]
 ```
-
-See the [configuration example](https://github.com/signalfx/splunk-otel-collector/tree/main/examples) in GitHub for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
 
 ### Configuration settings
 
