@@ -1,7 +1,7 @@
 .. _admin-manage-usage:
 
 *****************************************************************************************
-Manage IMM data consumption using access tokens 
+Manage data ingest using access tokens 
 *****************************************************************************************
 
 .. meta::
