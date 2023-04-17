@@ -5,14 +5,11 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Cassandra monitor by using 
-the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Cassandra monitor type to monitor Cassandra using the GenericJMX plugin. This plugin wraps the genericjmx monitor, which comes with a set of predefined MBean definitions that a standard Cassandra deployment exposes.
 
-Use this integration to monitor Cassandra using the GenericJMX plugin. This plugin wraps the genericjmx monitor, which comes with a set of predefined MBean definitions that a standard Cassandra deployment exposes.
+See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
+This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
 ## Benefits
 
@@ -29,7 +26,9 @@ This monitor is not available on Windows as collectd plugins are only supported 
 ```{include} /_includes/configuration.md
 ```
 
-### Configuration example
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -38,8 +37,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the integration, include the monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file.
-For example:
+Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:
@@ -50,7 +48,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option   | Required | Type | Description |
 |--------|-----|------------|-------|

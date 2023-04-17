@@ -3,16 +3,11 @@
 # Apache Zookeeper
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Apache Zookeeper monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache Zookeeper monitor type to keep track of an Apache Zookeeper instance using the Zookeeper plugin. 
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Apache Zookeeper monitor using the Smart Agent Receiver.
+This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
-This monitor keeps track of an Apache Zookeeper instance using the Zookeeper plugin. This plugin is installed with the Smart 
-Agent so no additional installation is required to use this monitor. The plugin supports Zookeeper 3.4.0 and higher.
-
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
+The plugin supports Zookeeper 3.4.0 and higher.
 
 ## Benefits
 
@@ -28,7 +23,9 @@ This monitor is not available on Windows as collectd plugins are only supported 
 ```{include} /_includes/configuration.md
 ```
 
-### Configuration example
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -37,8 +34,7 @@ type: collectd/zookeeper
 ... # Additional config
 ```
 
-To complete the integration, include the monitor in a metrics pipeline. Add the monitor item to the 
-`service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:

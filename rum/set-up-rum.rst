@@ -17,7 +17,7 @@ Follow these steps to create a RUM access token for your organization.
 
 #. Log in to Splunk Observability Cloud.
 
-#. Open the settings and select :strong:`Access Tokens`.
+#. Select  :strong:`Settings > Access Tokens`.
 
 #. Select :strong:`New Token` and enter a name.
 
