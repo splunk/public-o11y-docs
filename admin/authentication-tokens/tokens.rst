@@ -14,9 +14,9 @@ Create and manage authentication tokens using Splunk Observability Cloud
    Org access tokens <org-tokens>
    Manage usage with access tokens <manage-usage>
 
-Use authentication tokens to authenticate Splunk Infrastructure Monitoring API requests, track API usage, and control your use of resources.
+Use authentication tokens to authenticate Splunk Observability Cloud API requests, track API usage, and control your use of resources.
 
-Infrastructure Monitoring has two types of tokens:
+Observability Cloud has two types of tokens:
 
 * :ref:`admin-api-access-tokens` (also known as session tokens). These tokens are valid for a short period.
 * :ref:`admin-org-tokens` (also known as org tokens). These tokens are valid for an extended period.

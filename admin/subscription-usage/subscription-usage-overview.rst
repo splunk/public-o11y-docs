@@ -8,17 +8,18 @@ Monitor and manage subscription usage
    :description: Monitor your Infrastructure Monitoring, APM, and Log Observer subscription usage. 
 
 .. toctree::
-   :hidden:
 
-   apm-billing-usage-index
-   view-apm-billing-reports
-   analyze-apm-billing-usage
-   apm-system-limits
-   monitor-imm-billing-usage
-   dpm-usage
-   lo-billing-usage
+   APM subscription usage <apm-billing-usage-index>
+   APM billing reports <view-apm-billing-reports>
+   Analyze APM usage <analyze-apm-billing-usage>
+   APM system limits <apm-system-limits>
+   Infrastructure subscription usage <monitor-imm-billing-usage>
+   Infrastructure subscription usage (DPM plans) <dpm-usage>
+   Logs subscription usage <lo-billing-usage>
 
-View Splunk Observability subscription usage data to monitor your organization's usage against its subscription plan and entitlements. You must be an administrator to view the Subscription Usage page for your organization. Go to :guilabel:`Settings > Subscription Usage`. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
+View Splunk Observability subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
+
+You must be an Observability Cloud administrator to view the Subscription Usage page for your organization. Go to :guilabel:`Settings > Subscription Usage` or :guilabel:`Settings > Billing and Usage`, depending on your subscription model.
 
 .. _usage-source:
 
@@ -50,15 +51,15 @@ Observability Cloud has system limits that help ensure good performance, stabili
 
 Learn more at:
 
-* :ref:`System limits for Splunk Infrastructure Monitoring <sys-limits>`. 
+* :ref:`System limits for Splunk Infrastructure Monitoring <sys-limits>` 
    
    * Data ingest can be limited at the source by Cloud providers. You can track this with the metric ``sf.org.num.<cloudprovidername>ServiceClientCallCountThrottles``.
 
-* :ref:`APM system limits <apm-system-limits>`.
+* :ref:`APM system limits <apm-system-limits>`
 
-* :ref:`Log Observer Connect limits <lo-connect-limits>` and :ref:`Log Observer limits <logs-limits>`.
+* :ref:`Log Observer Connect limits <lo-connect-limits>` and :ref:`Log Observer limits <logs-limits>`
 
-* :ref:`System limits for Splunk RUM <rum-limits>`.
+* :ref:`System limits for Splunk RUM <rum-limits>`
 
 If you exceed your ingestion limits you might incurr in overcost. To help avoid overage fees, :ref:`create a detector <create-detectors>` to proactively monitor for potential overages and receive alerts when you are nearing a subscription limit.
 
