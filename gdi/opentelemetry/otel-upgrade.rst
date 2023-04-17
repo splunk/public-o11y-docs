@@ -91,7 +91,7 @@ Debian
     .. code-block:: bash 
       
       sudo apt-get update
-      sudo apt-get --only-upgrade splunk-otel-collector
+      sudo apt-get install --only-upgrade splunk-otel-collector
 
 .. note::
   If the default configuration files in ``/etc/otel/collector`` have been modified after the initial installation, you might be prompted to keep the existing files or overwrite the files from the new package.
@@ -129,6 +129,8 @@ The package managers are yum, dnf, and zypper.
 
 Upgrade the Collector for Windows
 =======================================
+
+If you used the Windows installer script, to upgrade you can manually download and run the MSI for the desired Collector version :new-page:`from GitHub <https://github.com/signalfx/splunk-otel-collector/releases>`.
 
 Chocolatey
 ------------------
