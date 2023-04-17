@@ -1,8 +1,8 @@
 .. _admin-manage-usage:
 
-****************************************************************************
-Manage resource usage with access tokens using Splunk Observability Cloud
-****************************************************************************
+*****************************************************************************************
+Manage IMM data consumption using access tokens 
+*****************************************************************************************
 
 .. meta::
    :description: Cost-related token limits, pricing-plan token limits, rate-related token limits, set up custom alerts for access tokens, and monitor token usage.
