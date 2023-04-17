@@ -207,9 +207,6 @@ You'll get something similar to:
 
    {
       "authMethod": "ExternalId",
-      "created": 1674862496869,
-      "createdByName": null,
-      "creator": "E-tkECKAsAA",
       "customCloudWatchNamespaces": null,
       "enableAwsUsage": true,
       "enableCheckLargeVolume": true,
@@ -219,9 +216,6 @@ You'll get something similar to:
       "ignoreAllStatusMetrics": false,
       "importCloudWatch": true,
       "largeVolume": false,
-      "lastUpdated": 1674862497253,
-      "lastUpdatedBy": "E-tkECKAsAA",
-      "lastUpdatedByName": "John Smith",
       "name": "AWS Dev",
       "pollRate": 300000,
       "regions": [],
