@@ -3,7 +3,7 @@
 Investigate a Splunk operational APM AutoDetect alert
 ****************************************************************************
 
-There are three Splunk operational APM AutoDetect detectors that let you know when you reach certain limits within Splunk APM. 
+There are three Splunk operational APM AutoDetect detectors that generate alerts to let you know when you reach certain limits within Splunk APM. 
 
 .. list-table::
    :header-rows: 1
