@@ -68,6 +68,9 @@ To view AutoDetect detectors related to a chart, do the following:
 
       A green dot and chart border indicates that there are no active alerts for the detector. A red dot and chart border indicates that the detector has active alerts.
 
+      .. image:: /_images/images-detectors-alerts/autodetect/autodetect-linked-chart-apm.png
+         :width: 50%
+         :alt: This screenshot shows where linked AutoDetect detectors are listed for a chart. In this example, there is one AutoDetect detector with a red dot, meaning there is an active alert.   
 
    .. tab:: Infrastructure
 
