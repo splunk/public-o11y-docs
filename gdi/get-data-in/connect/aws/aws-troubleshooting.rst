@@ -244,4 +244,4 @@ You'll get something similar to:
 
 6. ``StatusCheckFailed`` is always ignored but now you can combine the other two status check metrics, ``StatusCheckFailed_Instance`` and ``StatusCheckFailed_System``, to obtain status information. 
 
-   For more on AWS status check metrics, :new-page:`see the official AWS documentation <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#status-check-metrics>`.
+   For more on AWS status check metrics, see the official AWS documentation.
