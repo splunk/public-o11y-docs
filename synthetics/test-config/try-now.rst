@@ -18,12 +18,12 @@ There are two types of runs in Splunk Synthetic Monitoring try now runs, and per
     - :strong:`Use cases`
   * - Try now run
     -
-        * add on a new test and you want to check that the steps you added are correct  
-        * edit an existing test and you want to make sure that your changes 
+        * Add on a new test and you want to check that the steps you added are correct.  
+        * Edit an existing test and you want to make sure that your changes. 
 
   * - Persisted run
     - 
-        * review run results 
-        * execute a test on a schedule 
+        * Review run results. 
+        * Execute a test on a schedule. 
 
 
