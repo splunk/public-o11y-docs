@@ -68,3 +68,8 @@ To open the APM Throttling dashboard follow these steps:
     #. Profiling throttling - Compare the data for each token for more insight. 
     #. Spans dropped because blocked by token - Compare the data for each token for more insight. 
 #. Use the filter, time window, and chart resolution as needed to better understand when your workload increased.
+
+See also
+===============
+
+To learn how to customize an AutoDetect detector, see :ref:`autodetect-customize`.
