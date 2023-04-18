@@ -313,7 +313,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Metrics and events TOGGLE <metrics-and-metadata/metrics-landing>
+   Metrics, metadata and events TOGGLE <metrics-and-metadata/metrics-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   Data tools TOGGLE <metrics-and-metadata/data-tools-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -347,16 +352,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :maxdepth:   3
-
-   Related Content <data-visualization/relatedcontent>
-
-.. toctree::
-   :maxdepth:   3
-
-   Enable Related Content <data-visualization/enablerelatedcontent>
-
-.. toctree::
    :caption: ALERTS AND DETECTORS
    :maxdepth:   3
 
@@ -370,12 +365,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   AutoDetect in Splunk Observability Cloud <alerts-detectors-notifications/autodetect>
-
-.. toctree::
-   :maxdepth:   3
-
-   List of available AutoDetect detectors <alerts-detectors-notifications/autodetect-list>
+   Use and customize AutoDetect alerts and detectors TOGGLE <alerts-detectors-notifications/autodetect/autodetect>
 
 .. toctree::
    :maxdepth:   3
@@ -400,11 +390,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Detector options <alerts-detectors-notifications/detector-options>
-
-.. toctree::
-   :maxdepth:   3
-
    Preview detector alerts <alerts-detectors-notifications/preview-detector-alerts>
 
 .. toctree::
@@ -420,22 +405,30 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:  3
 
-   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
-
-.. toctree::
-   :maxdepth:   3
-
    Mute alert notifications <alerts-detectors-notifications/mute-notifications>
 
 .. toctree::
    :maxdepth:   3
 
-   Auto-clearing alerts <alerts-detectors-notifications/auto-clearing-alerts>
+   Auto-clear alerts <alerts-detectors-notifications/auto-clearing-alerts>
 
 .. toctree::
    :maxdepth:   3
 
    Troubleshoot detectors <alerts-detectors-notifications/troubleshoot-detectors>
+
+.. toctree::
+   :maxdepth:   3
+
+   Detector options <alerts-detectors-notifications/detector-options>
+
+.. toctree::
+   :maxdepth:   3
+
+   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
+
+.. toctree::
+   :maxdepth:   3
 
 .. toctree::
    :caption: APM
@@ -805,18 +798,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Link metadata to related resources using global data links <admin/link-metadata-to-content>
-
-.. toctree::
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
 
 .. toctree::
-   :hidden:
    :maxdepth:   3
 
    Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>

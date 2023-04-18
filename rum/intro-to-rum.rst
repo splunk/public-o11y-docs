@@ -54,19 +54,6 @@ Splunk RUM for Browser uses the server-timing header response times to associate
 For more information on Splunk APM, see :ref:`Monitor applications with Splunk APM <get-started-apm>`.
 
 
-Get data in
+Get data in 
 =============================
-Follow these steps:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 25, 25
-
-   * - :strong:`Product`
-     - :strong:`Instructions`
-   * - Splunk RUM for Browser
-     - :ref:`browser-rum-gdi`
-   * - Splunk RUM for iOS
-     - :ref:`rum-mobile-ios`
-   * - Splunk RUM for Android
-     - :ref:`rum-mobile-android`
+To start instrumenting your application with Splunk RUM, see :ref:`rum-setup`. 
