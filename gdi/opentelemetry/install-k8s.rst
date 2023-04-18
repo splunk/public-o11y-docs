@@ -246,8 +246,13 @@ See the following manifest to set security constraints:
 
 .. _k8s-operator:
 
-Install the Collector for the Kubernetes Operator (Alpha)
+Use the Kubernetes Operator 
 ============================================================================================
+
+You can install the Kubernetes Operator for Auto Instrumentation. See more at :ref:`auto-instrumentation-operator`.
+
+Splunk Distribution for the Kubernetes Operator (Alpha)
+--------------------------------------------------------
 
 .. caution::
 

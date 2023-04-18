@@ -1,7 +1,7 @@
 .. _auto-instrumentation-operator:
 
 *****************************************************************************
-Install the Collector with the Kubernetes Operator for Auto Instrumentation
+Install the Collector and the Kubernetes Operator for Auto Instrumentation
 *****************************************************************************
 
 .. meta::
