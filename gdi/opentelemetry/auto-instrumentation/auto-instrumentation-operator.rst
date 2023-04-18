@@ -16,7 +16,7 @@ Operator Auto Instrumentation requires the following components:
 
 * The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the Collector and related resources, including the OpenTelemetry Operator.
 * The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
-* Instrumentation libraries to generate telemetry data when your application uses instrumented components.
+* Instrumentation libraries generate telemetry data when your application uses instrumented components.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
 Install the Collector with the Kubernetes Operator  
