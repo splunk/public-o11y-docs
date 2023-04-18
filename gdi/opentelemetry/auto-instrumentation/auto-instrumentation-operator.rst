@@ -72,7 +72,7 @@ For example:
 
 .. code-block:: yaml
 
-   # splunk-instrumentation.yaml
+   # instrumentation.yaml
    apiVersion: opentelemetry.io/v1alpha1
    kind: Instrumentation
    metadata:
