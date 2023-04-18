@@ -35,14 +35,14 @@
     - No
 
   * - READ_CONFIG
-    - The READ_CONFIG capability only applies to functionality in the API. In the APM API, the READ_CONFIG capability lets you use the GET method on the APM Visibility Filters resource.
+    - The READ_CONFIG capability only applies to functionality in the API. In the APM API, the READ_CONFIG capability lets you use the GET method on the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
     - Yes
     - Yes
     - No
     - No
 
   * - DELETE_CONFIG
-    - The DELETE_CONFIG capability only applies to functionality in the API. In the APM API, the DELETE_CONFIG capability lets you use the DELETE method on the APM Visibility Filters resource.
+    - The DELETE_CONFIG capability only applies to functionality in the API. In the APM API, the DELETE_CONFIG capability lets you use the DELETE method on the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
     - Yes
     - Yes
     - No
