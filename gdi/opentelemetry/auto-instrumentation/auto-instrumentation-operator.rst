@@ -50,7 +50,7 @@ In order to be properly ingest trace telemetry data, the attribute ``deployment.
 Add certifications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. You can use the commands below to run these steps.
+The Operator requires certain TLS cerificates to work. If a certification manager (or any other TLS certificate source) is not available in the cluster, then you'll need to deploy it using ``certmanager.enabled=true``. You can use the following commands to run these steps.
 
 .. code-block:: yaml
 
@@ -63,7 +63,7 @@ The Operator requires certain TLS cerificates to work. If a certification manage
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
 
-2. Deploy Auto Instrumentation
+1. Deploy Auto Instrumentation
 ------------------------------------------------------------
 
 Deploy an opentelemetry.io Instrumentation object with specifications on how to configure the instrumentation libraries to use for instrumentation. It must be available to the target pod for auto-instrumentation to function. 
@@ -102,7 +102,7 @@ For example:
 
 Resources include the Collector, the Operator, webhook, an instrumentation.
 
-Run the following:
+Run the following to verify the resources are deployed correctly:
 
 .. code-block:: yaml
    
