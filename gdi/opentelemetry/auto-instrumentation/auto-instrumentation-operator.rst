@@ -121,7 +121,7 @@ Run the following:
    # splunk-otel-collector-cert-manager-webhook              1          14m
    # splunk-otel-collector-opentelemetry-operator-mutation   3          14m
 
-   kubectl get otelinst -n spring-petclinic
+   kubectl get otelinst -n {target_application_namespace}
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
