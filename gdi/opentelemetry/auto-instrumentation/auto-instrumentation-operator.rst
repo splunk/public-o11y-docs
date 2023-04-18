@@ -66,7 +66,7 @@ In order to be properly ingest trace telemetry data, the attribute ``deployment.
 2. Deploy Auto Instrumentation
 ------------------------------------------------------------
 
-Deploy ``opentelemetry.io/v1alpha1``, an instrumentation object with specifications on how to configure the instrumentation libraries to use for instrumentation. It must be available to the target pod for auto-instrumentation to function. 
+Deploy an opentelemetry.io Instrumentation object with specifications on how to configure the instrumentation libraries to use for instrumentation. It must be available to the target pod for auto-instrumentation to function. 
 
 For example:
 
