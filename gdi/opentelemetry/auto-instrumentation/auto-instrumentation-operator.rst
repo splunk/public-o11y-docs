@@ -19,7 +19,7 @@ Operator Auto Instrumentation requires the following components:
 * Instrumentation libraries generate telemetry data when your application uses instrumented components.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
-Install the Collector with the Kubernetes Operator  
+Install the Collector using the Kubernetes Operator  
 ===========================================================================
 
 To use the Operator for Auto Instrumentation, follow these steps:
