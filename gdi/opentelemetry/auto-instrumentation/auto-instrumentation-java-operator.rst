@@ -9,7 +9,7 @@ Use case: Auto-instrument your Java apps with the Collector and the Kubernetes O
 
 .. note:: To install the Operator for Auto Instrumentation, see :ref:`Install the Collector with the Kubernetes Operator <auto-instrumentation-operator>`.
 
-Spring Clinic Microservices, a fictitious company, wants to use the Collector with the Kubernetes Operator to auto-instrument their Java applications. The final architecture will look as shown in the diagram below:
+Spring Clinic Microservices, a fictitious company, wants to use the Collector and the Kubernetes Operator to auto-instrument their Java applications. The final architecture will look as shown in the diagram below:
 
 .. image:: /_images/collector/auto-instrumentation-op-java-2.png
    :width: 80%
@@ -29,8 +29,6 @@ Set up the applications to instrument
 
 Arnau creates the ``spring-petclinic`` namespace and deploys the related Java applications to it. 
 
-TODO: Add the Kubernetes manifests for spring-petclinic to this example in a followup PR
-
 .. code-block:: yaml
    
    kubectl apply -f examples/enable-operator-and-auto-instrumentation/spring-petclinic -R
@@ -42,7 +40,7 @@ Deploy and configure the Collector
 
 Arnau follows the steps described in :ref:`auto-instrumentation-operator` to set up Auto Intrumentation for their clinic apps.
 
-Finally, Arnau can see the results using :ref:`APM <get-started-apm>`.
+After completing the deployment, Arnau is able to see the results using :ref:`APM <get-started-apm>`.
 
 .. image:: /_images/collector/auto-instrumentation-op-java-1.png
    :width: 100%
