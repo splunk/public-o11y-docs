@@ -92,7 +92,7 @@ For example:
                fieldPath: status.hostIP
 
    # Install
-   kubectl apply -f splunk-instrumentation.yaml
+   kubectl apply -f instrumentation.yaml -n {target_application_namespace}
 
    # Check the current deployed values
    kubectl get otelinst -o yaml
