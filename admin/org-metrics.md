@@ -54,7 +54,7 @@ In some cases, Infrastructure Monitoring has two similar metrics:
 
 The sum of all the by token metric values for a measurement might be less than the total value metric value. For example, the sum, of all `sf.org.numAddDatapointCallsByToken` values might be less than the value of `sf.org.numAddDatapointCalls`. The sums differ because Infrastructure Monitoring doesn't use a token to retrieve data from cloud services you've integrated. Infrastructure Monitoring counts the data point calls for the integrated services, but it doesn't have a way to count the calls for any specific token.
 
-This difference in values applies to AWS CloudWatch, GCP StackDriver, AppDynamics, and New Relic integrations.
+This difference in values applies to AWS CloudWatch, GCP StackDriver, and AppDynamics.
 
 ### Metrics with values for each metric type
 
