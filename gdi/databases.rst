@@ -11,9 +11,9 @@ Configure application receivers for databases
    :maxdepth: 4
    :hidden:
 
-   kafka/kafka
-   spark/spark
-   cassandra/cassandra
+   monitors/apache-kafka
+   monitors/apache-spark
+   monitors/cassandra
    consul/consul
    opentelemetry/components/databricks-receiver
    etcd/etcd

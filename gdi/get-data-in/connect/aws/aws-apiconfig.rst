@@ -441,7 +441,7 @@ To activate CloudWatch Metric Streams as an alternative to traditional API polli
 #. Set the ``enabled`` field to ``true``.
 #. Submit a PUT request to the ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` endpoint to save your updated settings.
 
-.. note:: When you edit an AWS integration through the user interface for Splunk Observability Cloud, the integration ID shows in your browser address bar as an alphanumeric string in quotation marks (") after a colon (:) at the end of the URL.
+.. caution:: CloudWatch Metric Streams doesn't support filtering based on resource tags.   
 
 Next, to complete the activation of Metric Streams:
 
@@ -488,3 +488,5 @@ Next steps
 =================
 
 After you connect Splunk Observability Cloud with AWS, you'll be able to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
+
+.. note:: When you edit an AWS integration through the user interface for Splunk Observability Cloud, the integration ID shows in your browser address bar as an alphanumeric string in quotation marks (") after a colon (:) at the end of the URL.
