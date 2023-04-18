@@ -30,7 +30,7 @@ The **Mapping and OTel Transition Impact Report** explains how the transition fr
 
 The mapping impact report also tells you where to find whatever subset of your content calls functions with Smart Agent names, so that you can update that content either by hand or programmatically to complete your transition to open telemetry.
 
-If you're a Splunk admin, you can turn off the mapping service using `sf.matt.query.remapping.excludedOrgs`. You'll still be able to generate and download a mapping impact report specific to your cloud computing environment. 
+Mapping service can be turned off. You'll still be able to generate and download a mapping impact report specific to your cloud computing environment. 
 
 ### Access the transition report
 
