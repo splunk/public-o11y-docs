@@ -37,32 +37,6 @@ Splunk Observability Cloud comes with the following roles predefined:
 Splunk Observability Cloud APIs also honor the role-based access control framework as well. APIs inherit capabilities of the read-only role, since tokens can be assigned to roles. This can be used take system backups with a reduced risk of introducing changes.
 
 
-  
-
-Mapping Splunk Observability Cloud and Splunk Cloud Platform roles
-===========================================================================
-
-Splunk Observability Cloud role-based access control aligns with roles available in Splunk Cloud Platform. This role mapping is pre-configured to allow a seamless transition of Splunk Cloud Platform users into Splunk Observability Cloud.
-
-
-.. list-table::
-  :header-rows: 1
-  :widths: 50, 50
-
-  * - :strong:`Splunk Observability Cloud`
-    - :strong:`Splunk Cloud Platform`
-  * - admin
-    - admin
-  * - power user 
-    - power roles and can_delete role
-  * - read_only
-    - user role
-  * - subscription_usage
-    - n/a Role is not available in Splunk Cloud Platform
-
-For example, when a Splunk Cloud Platform user with a power role logs in to Splunk Observability Cloud for the first time, that user is automatically created and assigned the power user role within Splunk Observability Cloud, based on the pre-defined mapping. Assigning users and teams to roles is also available using an API call to reduce the administrative burden. For details, see :ref:`unified-id-unified-identity`.
-
-
 
 Tokens and APIs
 ===================================
