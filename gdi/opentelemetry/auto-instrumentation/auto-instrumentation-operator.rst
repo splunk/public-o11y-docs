@@ -28,7 +28,7 @@ To use the Operator for Auto Instrumentation, follow these steps:
 
 #. Deploy the Auto Instrumentation libraries. 
 
-#. Verify the deployments are working correctly. 
+#. Verify the deployed resources are working correctly. 
 
 #. Apply annotations at the pod or namespace level for the Operator to know which pods to apply auto-instrumentation to.   
 
