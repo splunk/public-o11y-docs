@@ -95,7 +95,7 @@ For example:
    kubectl apply -f instrumentation.yaml -n {target_application_namespace}
 
    # Check the current deployed values
-   kubectl get otelinst -o yaml
+   kubectl get otelinst -o yaml -n {target_application_namespace}
 
 3. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
