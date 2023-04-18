@@ -5,7 +5,7 @@ Use case: Instrument your Java apps using the Splunk Collector and Kubernetes Op
 *************************************************************************************************************
 
 .. meta::
-   :description: Example/use case on how to deploy the OpenTelemetry Operator and Java auto-instrumentation
+   :description: Learn how to deploy the OpenTelemetry Operator and Java automatic instrumentation for Splunk Observability Cloud.
 
 .. note:: To install the Operator for Auto Instrumentation, see :ref:`Install the Collector with the Kubernetes Operator <auto-instrumentation-operator>`.
 
