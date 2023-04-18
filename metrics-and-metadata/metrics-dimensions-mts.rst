@@ -105,7 +105,7 @@ Tags are UTF-8 strings with a maximum length of 256 UTF-8 characters/1024 bytes.
 Tags in OpenTelemetry
 ---------------------------
 
-In the OpenTelemetry data model, tags are provided as span ``attributes``. You can add and modify them using an attributes processor in your traces pipelines. Learn more in :ref:`Tags in OpenTelemetry <otel-tags>`.
+In the OpenTelemetry data model, tags are provided as span ``attributes``. You can add and modify them using an attributes processor in your Collector's traces pipelines. Learn more in :ref:`Tags in OpenTelemetry <otel-tags>`.
 
 Tags in Splunk APM
 --------------------------------
