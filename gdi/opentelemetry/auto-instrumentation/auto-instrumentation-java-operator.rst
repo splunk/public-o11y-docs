@@ -7,8 +7,6 @@ Use case: Instrument your Java apps using the Splunk Collector and Kubernetes Op
 .. meta::
    :description: Learn how to deploy the OpenTelemetry Operator and Java automatic instrumentation for Splunk Observability Cloud.
 
-.. note:: To install the Operator for Auto Instrumentation, see :ref:`Install the Collector with the Kubernetes Operator <auto-instrumentation-operator>`.
-
 Spring Clinic Microservices, a fictitious company, wants to use the Collector and the Kubernetes Operator to auto-instrument their Java applications. The final architecture will look as shown in the diagram below:
 
 .. image:: /_images/collector/auto-instrumentation-op-java-2.png
@@ -24,7 +22,7 @@ To do so, Arnau, their DevOps manager, proceeds to:
 
 .. _auto-instrument-operator-java-set-up:
 
-Set up the applications to instrument
+1. Set up the applications to instrument
 ======================================================================
 
 Arnau creates the ``spring-petclinic`` namespace and deploys the related Java applications to it. 
@@ -35,7 +33,7 @@ Arnau creates the ``spring-petclinic`` namespace and deploys the related Java ap
 
 .. _auto-instrument-operator-java-install:
 
-Deploy and configure the Collector
+2. Deploy and configure the Collector
 ======================================================================
 
 Arnau follows the steps described in :ref:`auto-instrumentation-operator` to set up Auto Intrumentation for their clinic apps.
@@ -46,3 +44,12 @@ After completing the deployment, Arnau is able to see the results using :ref:`AP
    :width: 100%
    :alt: Java app auto instrumented.
 
+Summary
+======================================================================
+
+Arnau uses the Collector and the Kubernetes Operator to auto-instrument their Java applications and see the results in APM dashboards. 
+
+Learn more
+======================================================================
+
+To install the Operator for Auto Instrumentation, see :ref:`Install the Collector with the Kubernetes Operator <auto-instrumentation-operator>`.
