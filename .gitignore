@@ -6,7 +6,7 @@ support
 env
 venv
 _image-source-files
-
+vale-splunk-style-guide
 *.ignoreme
 *.rstignoreme
 *.pyc
