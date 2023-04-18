@@ -313,7 +313,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Metrics and events TOGGLE <metrics-and-metadata/metrics-landing>
+   Metrics, metadata and events TOGGLE <metrics-and-metadata/metrics-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   Data tools TOGGLE <metrics-and-metadata/data-tools-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -345,16 +350,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Read and write permissions <data-visualization/permissions>
-
-.. toctree::
-   :maxdepth:   3
-
-   Related Content <data-visualization/relatedcontent>
-
-.. toctree::
-   :maxdepth:   3
-
-   Enable Related Content <data-visualization/enablerelatedcontent>
 
 .. toctree::
    :caption: ALERTS AND DETECTORS
@@ -803,18 +798,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Link metadata to related resources using global data links <admin/link-metadata-to-content>
-
-.. toctree::
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
 
 .. toctree::
-   :hidden:
    :maxdepth:   3
 
    Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>
