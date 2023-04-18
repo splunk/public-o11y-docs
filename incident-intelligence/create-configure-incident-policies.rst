@@ -61,14 +61,19 @@ After you configure which alerts are routed to your incident policy, configure h
 Configure how alerts are grouped
 ====================================
 
-Use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents. Alert grouping is specific to each incident policy and you can customize it to create the workflow that works for you. You can use alert severity to determine if an incident is created and also group alerts by time period. To configure alert grouping, follow these steps:
+Use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents. Alert grouping is specific to each incident policy and you can customize it to create the workflow that works for you. You can determine when an incident is created and also group alerts by time period. To configure alert grouping, follow these steps:
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping rule.
-#. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the list next to :guilabel:`Trigger an incident when alerts reach severity level`.
-#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
+#. Select the :guilabel:`Alert grouping` tab.
 #. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. If you want to filter on another field enter that field name. 
-#. Select :guilabel:`Save alert grouping`.
+#. In the :guilabel:`Incident breaking conditions` section, define under what conditions alerts should be grouped into a new incident. When any one of the conditions you set in this section are met, a new incident is created.
+   #. If you want to create a new incident if there has been a pause in alerts that lasts between 10 minutes to 24 hours, select the pause duration from the :guilabel:`Select time value` drop down.
+   #. If you want to create a new incident when specific values are included, select :guilabel:`Add Filters` and choose the key value pair which will trigger a new incident.
+   #. If you want to create a new incident after a specific amount of time has passed for the current alert, select that time duration in the :guilabel:`Select time value` dropdown.
+   #. If you want to group alerts into a new incident after a specific number of alerts in an incident, enter that number in the :guilabel:`The number of alerts in an incident reaches` field.
+
+#. Select :guilabel:`Save`.
 
 After you manage which alerts create an incident and how alerts are grouped into incidents, configure incident workflows for your incident policy.  
 
