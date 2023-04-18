@@ -1,7 +1,7 @@
 
 
 .. list-table::
-  :widths: 20,30,10,10,10,10
+  :widths: 20,40,10,10,10,10
 
   * - :strong:`Capability name`
     - :strong:`What it lets you do`
