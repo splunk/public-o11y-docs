@@ -1,7 +1,7 @@
 .. _auto-instrumentation-java-operator:
 
 *************************************************************************************************************
-Use case: Auto-instrument your Java apps with the Collector and the Kubernetes Operator  
+Use case: Instrument your Java apps using the Splunk Collector and Kubernetes Operator  
 *************************************************************************************************************
 
 .. meta::
