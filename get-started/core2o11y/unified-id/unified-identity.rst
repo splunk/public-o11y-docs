@@ -53,14 +53,17 @@ The integration automatically maps Splunk Cloud Platform roles to the following 
    * - :strong:`Role in Splunk Cloud Platform`
      - :strong:`Role in Splunk Observability Cloud`
 
-   * - sc_admin
+   * - admin
      - admin
 
-   * - Power
-     - user/member
+   * - power, can_delete
+     - power
 
-   * - User and other custom roles
-     - user/member
+   * - user
+     - read_only
+
+   * - N/A
+     - subscription_usage
 
 
 The mapping process is defined by the system, and a user cannot change it at provisioning time or after. 
