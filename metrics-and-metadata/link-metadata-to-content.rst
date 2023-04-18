@@ -1,12 +1,11 @@
 .. _link-metadata-to-content:
 
 **************************************************************************************************************
-Link metadata to related resources using global data links in Splunk Observability Cloud
+Link metadata to related resources using global data links 
 **************************************************************************************************************
 
 .. meta::
    :description: Link metadata to related resources in Splunk Observability Cloud by creating global data links. Global data links enable you to enrich charts and alert messages with links to useful contextual information.
-
 
 Global data links let you link metadata displayed in Splunk Observability Cloud to the following relevant resources:
 

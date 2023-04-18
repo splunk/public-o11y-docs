@@ -27,7 +27,7 @@ You must be an Observability Cloud administrator to view the Subscription Usage 
 .. raw:: html
 
    <embed>
-      <h2>Usage and billing by source<a name="usage-source" class="headerlink" href="#usage-source" title="Permalink to this headline">¶</a></h2>
+      <h2>Usage and billing by source</h2>
    </embed>
 
 Observability Cloud admins can monitor billing usage for the following:
@@ -45,7 +45,7 @@ Observability Cloud admins can monitor billing usage for the following:
 .. raw:: html
 
    <embed>
-      <h2>System limits<a name="system-limits" class="headerlink" href="#system-limits" title="Permalink to this headline">¶</a></h2>
+      <h2>System limits</h2>
    </embed>
 
 Observability Cloud has system limits that help ensure good performance, stability, and reliability. Exceeding these limits might degrade your experience. 
