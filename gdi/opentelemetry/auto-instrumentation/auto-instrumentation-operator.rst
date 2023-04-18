@@ -15,7 +15,7 @@ Requirements
 Operator Auto Instrumentation requires the following components: 
 
 * The :ref:`Splunk OTel Collector chart <helm-chart>`: It deploys the collector and related resources, including the OpenTelemetry Operator.
-* The OpenTelemetry Operator, an upstream implementation of the Kubernetes Operator that manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GH repo <https://github.com/open-telemetry/opentelemetry-operator>`.
+* The OpenTelemetry Operator, which manages auto-instrumentation of Kubernetes applications. See more in the :new-page:`OpenTelemetry GitHub repo <https://github.com/open-telemetry/opentelemetry-operator>`.
 * Instrumentation libraries to generate telemetry data when your application uses instrumented components.
 * A Kubernetes instrumentation object ``opentelemetry.io/v1alpha1``, which configures auto-instrumentation settings for applications.
 
@@ -26,7 +26,7 @@ To use the Operator for Auto Instrumentation, follow these steps:
 
 #. Deploy the Helm chart with the required components, including the Operator, to your Kubernetes cluster. 
 
-#. Deploy the Auto Instrumentation libraries. 
+#. Deploy the specifications of the Auto Instrumentation libraries to be used. 
 
 #. Verify the deployed resources are working correctly. 
 
@@ -38,6 +38,14 @@ To use the Operator for Auto Instrumentation, follow these steps:
 ------------------------------------------------------------
 
 Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with ``operator.enabled=true`` to include the Operator in the deployment.
+
+Ingest traces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to be properly ingest trace telemetry data, the attribute ``deployment.environment`` must be on board the exported traces. There are two ways to set this attribute:
+
+* Use the values.yaml optional environment configuration.
+* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
 
 Add certifications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -54,14 +62,6 @@ The Operator requires certain TLS cerificates to work. If a certification manage
 
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
-
-Ingest traces
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In order to be properly ingest trace telemetry data, the attribute ``deployment.environment`` must be on board the exported traces. There are two ways to set this attribute:
-
-* Use the values.yaml optional environment configuration.
-* Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
 
 2. Deploy Auto Instrumentation
 ------------------------------------------------------------
