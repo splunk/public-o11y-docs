@@ -112,7 +112,7 @@ Charts, detectors, and SignalFlow limits
    * - :ref:`maximum-number-of-allocated-datapoints-per-signalflow-program`
      - 60,000,000
 
-   * - :ref:`maximum-number-of-data-graphite-or-newrelic-functions-per-signalflow-program`
+   * - :ref:`maximum-number-of-data-graphite-functions-per-signalflow-program`
      - 200
 
    * - :ref:`maximum-number-of-derived-mts-per-signalflow-program`
@@ -453,13 +453,13 @@ Maximum number of functions and methods per SignalFlow program
    * :strong:`Notes`: The SignalFlow program ``"A = data().sum(by="az").sum().publish()"`` has 4 functions and methods (data, sum, sum, publish).
    * :strong:`Customer impact`: SignalFlow programs which are violating the limit can't start. You immediately get an error message.
 
-.. _maximum-number-of-data-graphite-or-newrelic-functions-per-signalflow-program:
+.. _maximum-number-of-data-graphite-functions-per-signalflow-program:
 
 Maximum number of queries per SignalFlow program
 --------------------------------------------------------------------------------------
 
    * :strong:`Default limit value`: 200
-   * :strong:`Notes`: Maximum number of queries you can have in a SignalFlow program used in a chart or detector. Queries that count toward this limit include ``data()``, ``graphite()``, ``newrelic()``, ``events()``, and ``alerts()``. Using a ``timeshift()`` function on a stream causes all the queries for that stream to run again and increases the total number of queries in the program. For example, in the following program, queries A and B run again to retrieve data for D.
+   * :strong:`Notes`: Maximum number of queries you can have in a SignalFlow program used in a chart or detector. Queries that count toward this limit include ``data()``, ``graphite()``, ``events()``, and ``alerts()``. Using a ``timeshift()`` function on a stream causes all the queries for that stream to run again and increases the total number of queries in the program. For example, in the following program, queries A and B run again to retrieve data for D.
      
    .. code-block::
 
@@ -468,7 +468,7 @@ Maximum number of queries per SignalFlow program
     C = data('jvm.c').publish('C')
     D = union(A, B).timeshift('1h').publish('D')
 
-   * :strong:`Customer impact`: SignalFlow programs which violate the limit can't start. You immediately get an error message. This limit puts limit on how many ``detect()`` calls you can use if you use different ``data()``, ``graphite()``, or ``newrelic()`` calls in the ``detect()``.
+   * :strong:`Customer impact`: SignalFlow programs which violate the limit can't start. You immediately get an error message. This limit puts limit on how many ``detect()`` calls you can use if you use different ``data()`` or ``graphite()`` calls in the ``detect()``.
 
 .. _maximum-signalflow-program-stack-size:
 
