@@ -44,7 +44,20 @@ olly_on_github_repo = 'splunk/public-o11y-docs'
 olly_on_github_branch = 'main'
 sphinx_tabs_disable_tab_closing = True
 
-notfound_template = "404.html"
+# Custom 4O4 page HTML template.
+# https://github.com/readthedocs/sphinx-notfound-page
+notfound_context = {
+    "title": "Page not found",
+    "body": """
+        <h1>Page not found</h1>
+        <p>
+            We can't find the page you requested. It might have been deleted or moved. 
+        </p>
+        <p>
+            Use the navigation menu or the search box to find the content you're looking for.
+        </p>
+    """,
+}
 
 # Set myst_parser to automatically generate labels for h1, h2, and h3 headings
 myst_heading_anchors = 3
