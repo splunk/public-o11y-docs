@@ -37,7 +37,6 @@ extensions = [
     'github',
     'myst_parser',
     'sphinx_tabs.tabs',
-    'notfound.extension',
     'olly_on_git_hub'
 ]
 olly_on_github_repo = 'splunk/public-o11y-docs'
