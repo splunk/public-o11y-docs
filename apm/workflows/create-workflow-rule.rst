@@ -4,16 +4,25 @@
 Configure Business Workflow rules
 *********************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how Business Workflow rules make trace behavior in transaction processing explicit and transparent.
+
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
 
 Business Workflow rules use span tags to make trace behavior in transaction processing explicit and transparent.
 
 You can create rules that correlate traces from a specific service or from multiple services that include the same global span tag. You must be an administrator to configure Business Workflow rules.
 
-The Business Workflow page includes the following system-generated rule by default: “All traces will be associated with workflows that are identified by the initiating operations of those traces.” This is the only default rule. You cannot edit the default rule, but you can disable it.
+The Business Workflow page includes the following system-generated rule by default: "All traces will be associated with workflows that are identified by the initiating operations of those traces". This is the only default rule. You cannot edit the default rule, but you can turn it off.
+
+Prerequisite
+=============
+
+To configure Business Workflows, you must have the admin role. 
 
 Configure a rule
 ================
@@ -22,9 +31,9 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
 
 1. Go to :strong:`Data Configuration > Business Workflow`.
 
-2. Click :strong:`New Rule`.
+2. Select :strong:`New Rule`.
 
-3. Select one of the following options from the :strong:`Rule Type` drop-down:
+3. Select one of the following options from the :strong:`Rule Type` menu:
 
    .. list-table::
       :header-rows: 1
@@ -37,21 +46,21 @@ To configure a new rule from Splunk APM, follow these steps. There is a differen
         - Define workflows based on the value of a global tag in spans associated with a trace. This correlates traces that contain spans with the global tag.
 
       * - Service
-        - Define workflows based on traces that include a service you specify. When a trace matches the rule, you also see a specified tag value or endpoint associated with the trace for the service.
+        - Define workflows based on traces that include a service you select. When a trace matches the rule, you also see a specified tag value or endpoint associated with the trace for the service.
 
 3. Select a :strong:`Target Global Tag` or :strong:`Target Service` according to the :strong:`Rule Type` you selected.
 
    :strong:`Target Global Tag` prompts you to select an indexed global tag. When you select a tag, the rule correlates all traces with the global tag. The rule name is based on the global tag you select.
 
-   :strong:`Target Service` prompts you to select a service and specify the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value.
+   :strong:`Target Service` prompts you to select a service and enter the :strong:`Source of Workflow Name`, which is extra metadata to view about the workflow. You can select to correlate traces for a service by an endpoint for the initiating span or a span tag value.
 
-4. Click :strong:`Create` to save your changes and create the rule.
+4. Select :strong:`Create` to save your changes and create the rule.
 
-5. View the list of rules to confirm the rule you just created is enabled. 
+5. View the list of rules to confirm the rule you created is enabled. 
 
 6. By default, the newest rule has the highest priority. This means Splunk APM applies the new rule before applying any other rules. If there are other rules you want to apply first, adjust the priority of the new rule.
 
-7. Click :strong:`Save Changes` to apply the new rule and priority list.
+7. Select :strong:`Save Changes` to apply the new rule and priority list.
 
 When to keep or disable the default rule
 ========================================
@@ -63,7 +72,7 @@ In systems where many traces have the same initiating operations, for example be
 Rule behavior and limits
 ========================
 
-To reduce the likelihood of partial rule changes generating unexpected results, changes to rules are accumulated throughout a single computing session and applied all together when you click :strong:`Apply Changes`. Change encompasses all of the following:
+To reduce the likelihood of partial rule changes generating unexpected results, changes to rules are accumulated throughout a single computing session and applied all together when you select :strong:`Apply Changes`. Change encompasses all of the following:
 
 - Creating rules
 
@@ -71,11 +80,11 @@ To reduce the likelihood of partial rule changes generating unexpected results, 
 
 - Deleting or disabling rules
 
-The Business Workflow configuration UI displays rules numbered in continuous sequence 1 to ``n``, regardless of whether those rules are enabled or disabled. Because each trace belongs to only one workflow rule, priority matters. When multiple rules could apply to the same trace, that trace is matched to the highest priority rule. Rule creation and configuration is governed by the following properties:
+The Business Workflow configuration UI displays rules numbered in continuous sequence 1 to ``n``, regardless of whether those rules are enabled or disabled. Because each trace belongs to only one workflow rule, priority matters. When multiple rules apply to the same trace, that trace is matched to the highest priority rule. Rule creation and configuration is governed by the following properties:
 
 - The limit on the number of rules you can have is 99.
 
-- You can enable or disable a rule using its toggle switch without affecting the content of the rule.
+- You can enable or disable a rule using its switch without affecting the content of the rule.
 
 - Using the directional arrows in the UI to move a rule up or down in the list changes the rule priority relative to other rules. Rules at the beginning of the list have higher priority than rules at the end of the list.
 

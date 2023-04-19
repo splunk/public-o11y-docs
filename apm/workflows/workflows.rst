@@ -4,8 +4,6 @@
 Correlate traces to track Business Workflows
 ********************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to correlate logically-related traces with Business Workflows in Splunk Observability Cloud.
 
@@ -27,13 +25,16 @@ Business Workflows generate Monitoring and Troubleshooting MetricSets for traces
 
 You can also filter your Troubleshooting view to display only transactions for specific Business Workflows.
 
-You must be an administrator to configure Business Workflows.
+Prerequisite
+=============
+
+To configure Business Workflows, you must have the admin role. 
 
 Follow these steps to configure Business Workflow rules to track related traces in Splunk APM:
 
 1. Create or change a workflow rule.
 
-2. Enable the workflow rule.
+2. Turn on the workflow rule.
 
 3. Set the priority of the rule relative to any other rules.
 

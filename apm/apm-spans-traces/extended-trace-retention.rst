@@ -18,7 +18,7 @@ Extended trace retention applies to traces viewed in the Splunk APM UI. The defa
 Prerequisites
 ================
 
-To configure extended trace retention, you have to have an admin role. 
+To configure extended trace retention, you must have an admin role. 
 
 Customize your extended retention period
 ===============================================

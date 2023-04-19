@@ -100,10 +100,10 @@ The advantage of inferring HTTP services is that you have visibility into their 
 
 Splunk APM administrators can manage inferred HTTP services in the :guilabel:`APM Configuration`, providing flexibility based on your particular system. 
 
-Prerequisites
+Prerequisite
 ---------------
 
-To configure inferred HTTP services, you have to have an admin role. 
+To configure inferred HTTP services, you must have an admin role. 
 
 Configure Splunk APM to infer HTTP services 
 ---------------------------------------------------

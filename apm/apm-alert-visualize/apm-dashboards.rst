@@ -4,8 +4,6 @@
 Track service performance using dashboards in Splunk APM
 ************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use built-in dashboards in Splunk APM to help you see problems occurring in real time.
 
@@ -83,6 +81,11 @@ The dashboard editor provides a lot of customization options for your charts, bu
 
 Create a detector from a dashboard
 ===================================
+
+Prerequisite
+---------------
+
+To create a detector from a dashboard, you must have the admin or power user role.
 
 To create a detector from a dashboard, select the bell icon within a specific chart in the dashboard and select :guilabel:`New Detector From Chart`. 
 
