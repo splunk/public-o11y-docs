@@ -1,8 +1,8 @@
 
-.. _related-metrics:
+.. _org-metrics-metrics-pipeline:
 
 ************************************************************************
-View related metrics for metrics pipeline management
+Related org metrics for metrics pipeline management
 ************************************************************************
 
 
@@ -66,6 +66,9 @@ Data point dropping metrics
 
    * - ``sf.org.numDatapointsDroppedInTimeout``
      - Number of data points Splunk Observability Cloud didn't attempt to create because your account was throttled or limited in the previous few seconds, and creation was unlikely to succeed.
+  
+   * - ``sf.org.numDatapointsDroppedInTimeoutByToken``
+     - Reserved for Infrastructure Monitoring internal use only.
 
    * - ``sf.org.numDatapointsDroppedExceededQuota``
      - Number of new data points you sent to Infrastructure Monitoring but Infrastructure Monitoring didn't accept because your organization exceeded its subscription limit. To learn more about the process Infrastructure Monitoring uses for incoming data when you exceed subscription limits, see :ref:`dpm-usage`.
