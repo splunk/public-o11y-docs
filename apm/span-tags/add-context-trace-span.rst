@@ -18,6 +18,11 @@ There are two ways to add span tags to your spans:
 
 If you deploy the Splunk Distribution of OpenTelemetry Collector as a gateway to centrally manage data collection from multiple services, you might want to instrument your application to define span tags and manage other span tags with the Collector. 
 
+Prerequisites
+================
+
+To add span tags, you have to have an admin role. 
+
 .. _span-tag-naming:
 
 Follow span tag naming conventions

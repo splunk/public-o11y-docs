@@ -105,7 +105,7 @@ Splunk APM administrators can manage inferred HTTP services in the :guilabel:`AP
 Prerequisites
 ---------------
 
-You need to be an administrator in Splunk APM to manage HTTP inferred services.
+To configure inferred HTTP services, you have to have an admin role. 
 
 Configure Splunk APM to infer HTTP services 
 ---------------------------------------------------

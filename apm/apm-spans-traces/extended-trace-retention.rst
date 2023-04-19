@@ -17,6 +17,11 @@ Note that extended trace retention applies specifically to traces viewed in the 
 
 .. You can also use the APM Extended Trace Retention API to request specific traces be retained by ``traceId``. See :new-page:`APM Extended Trace Retention API <https://quickdraw.splunk.com/redirect/?product=Observability&location=trace-retention-api&version=current>` to learn how to use this API. 
 
+Prerequisites
+================
+
+To configure extended trace retention, you have to have an admin role. 
+
 Customize your extended retention period
 ===============================================
 Before you choose your extended retention period, consider any compliance requirements in your industry, such as the European General Data Protection Regulation (GDPR), that dictate how long you should retain customer information. 
