@@ -11,7 +11,12 @@ $(document).ready(function () {
         cache: true
     });
 
-    let converter = new showdown.Converter();
+    let converter = new showdown.Converter(
+        {
+            simplifiedAutoLink: true,
+            excludeTrailingPunctuationFromURLs: true,
+            literalMidWordUnderscores: true
+    });
 
     $.getScript('https://public-sites--signalfx-com.s3.us-east-1.amazonaws.com/cdn/integrations-docs/integrations-docs.js', function () {
         $('.metrics-table').each(function () {
@@ -89,7 +94,12 @@ $(document).ready(function () {
                 'default': 'Category',
             };
 
-            let converter = new showdown.Converter();
+            let converter = new showdown.Converter(
+                {
+                    simplifiedAutoLink: true,
+                    excludeTrailingPunctuationFromURLs: true,
+                    literalMidWordUnderscores: true
+            });
             let cache = [];
             let idMap = [];
 
@@ -370,20 +380,22 @@ $(document).ready(function () {
 
                             if (j == 'category') {
                                 addedCategory = true;
-                                monitors[i][j] = monitors[i][j] ? 'Default' : '';
+                                monitors[i][j] = monitors[i][j] ? 'Default' : 'Custom';
                             } else if (j == 'default') {
                                 addedCategory = true;
-                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : '';
+                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : 'Custom';
                             } else if (j == 'custom') {
                                 addedCategory = true;
                                 monitors[i][j] = (monitors[i][j] == true) ? 'Custom' : 'Default';
                             }
+                            
 
                             if (typeof monitors[i][j] == 'undefined' && j == 'title') {
                                 row += '<td>' + i + '</td>';
-                            } else {
-                                //row += '<td>' + monitors[i][j] + '</td>';
+                            } else if (j == 'description') {
                                 row += '<td>' + converter.makeHtml(monitors[i][j]) + '</td>';
+                            } else {
+                                row += '<td>' + monitors[i][j] + '</td>';
                             }
                         }
 
