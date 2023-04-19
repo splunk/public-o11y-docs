@@ -4,12 +4,10 @@
 Analyze the performance of inferred services
 ************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how Splunk APM can infer the presence of the remote service or inferred service.
 
-In certain cases, a remote service might not have tracing enabled, either because it is not instrumented yet, or because instrumentation is not possible. Splunk APM can infer the presence of the remote service, or inferred service, if the span calling the remote service has the necessary information. 
+In certain cases, a remote service might not have tracing turned on, either because it is not instrumented yet, or because instrumentation is not possible. Splunk APM can infer the presence of the remote service, or inferred service, if the span calling the remote service has the necessary information. 
 
 Splunk APM adds an inferred span to the relevant trace to represent an operation occurring in an inferred service. For further details on how Splunk APM infers services, see :ref:`how-apm-infers-services`.
 
@@ -32,7 +30,7 @@ The following table describes common types of inferred services:
           * :ref:`rpc-inf-logic`
           * :ref:`generic-inf-logic`
 
-       | If your system interacts with a large number of HTTP services, inferring HTTP services might increase Troubleshooting MetricSets cardinality. You might disable inferring HTTP services in your org to prevent excessive cardinality. See  :ref:`infer-http-services` to manage inferred HTTP services.     
+       | If your system interacts with a large number of HTTP services, inferring HTTP services might increase Troubleshooting MetricSets cardinality. You might turn off inferring HTTP services in your org to prevent excessive cardinality. See  :ref:`infer-http-services` to manage inferred HTTP services.     
        
    * - | Publisher/subscriber queues (pub/sub)
 
@@ -157,7 +155,7 @@ To assign a service name for an inferred HTTP service, Splunk APM does the follo
 
 4. If any of these tags are found, infer the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
 
-.. note:: To reduce noise in the service map and managing cardinality, Splunk APM excludes services without a host name or that use their IP address as host name. If you need to enable IP addresses, contact your sales representative.
+.. note:: To reduce noise in the service map and managing cardinality, Splunk APM excludes services without a host name or that use their IP address as host name. If you need to turn on IP addresses, contact your sales representative.
 
 .. _rpc-inf-logic:
 
@@ -215,8 +213,8 @@ To identify a database, the ``kind`` of the referring span must be equal to ``cl
 
 To determine the ``name`` of an inferred database, Splunk APM applies this logic in the following order: 
 
-#. If the ``db.system`` tag exists, its value is used to specify the type of database being queried, e.g. ``mysql``, ``redis``, etc. If only this tag is present, its value is also used as the ``service.name`` for the inferred database.
-#. If the ``db.name`` tag exists, its value is concatenated with ``db.system`` to form the name of the inferred service: ``db.system:db.name`` (e.g. ``mysql:sql_db_1``).
+#. If the ``db.system`` tag exists, its value is used to specify the type of database being queried, for example ``mysql``, ``redis``, and so on. If only this tag is present, its value is also used as the ``service.name`` for the inferred database.
+#. If the ``db.name`` tag exists, its value is concatenated with ``db.system`` to form the name of the inferred service: ``db.system:db.name`` (for example ``mysql:sql_db_1``).
 #. If the ``db.connection_string`` tag is present and its value conforms to a known format such as Java database connectivity (JDBC), Splunk APM extracts the database name portion of the url and concatenates it with the value of ``db.system`` to form the database name, such as ``mysql:dbname``. If the value of ``db.connection_string`` does not conform to a known format or the database portion cannot be extracted and ``db.name`` also does not exist, Splunk APM uses the raw value of ``db.connection_string`` as the database name. If ``db.system`` also exists, the two values are concatenated. 
 
 Splunk APM also provides additional analytics for supported SQL databases. See :ref:`db-query-performance` to learn more.

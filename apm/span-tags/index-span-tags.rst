@@ -4,8 +4,6 @@
 Index span tags to generate Troubleshooting MetricSets
 ************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use index tags to create Troubleshooting MetricSets that help you troubleshoot services with Splunk Observability Cloud.
 
@@ -16,7 +14,7 @@ To get additional value from a span tag or process, a Splunk APM administrator c
 What are MetricSets?
 =========================
 
-MetricSets are metric time series you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides two kinds of MetricSets: Troubleshooting MetricSets and Monitoring MetricSets. Troubleshooting MetricSets are for high-cardinality troubleshooting while Monitoring MetricSets leverage the Infrastructure Monitoring platform for real-time monitoring and alerting. 
+MetricSets are metric time series you can use to track the performance of specific metrics over time. To help you analyze your service performance, APM provides two kinds of MetricSets: Troubleshooting MetricSets and Monitoring MetricSets. Troubleshooting MetricSets are for high-cardinality troubleshooting while Monitoring MetricSets use the Infrastructure Monitoring platform for real-time monitoring and alerting. 
 
 APM provides a collection of MetricSets by default. You can also index additional span tags or processes to generate additional Troubleshooting MetricSets and optionally add custom dimensionalized Monitoring MetricSets. See :ref:`apm-MetricSets` for an overview of the types of MetricSets in APM and a list of the MetricSets available by default. 
 
@@ -25,7 +23,7 @@ Use this topic to learn how to index a span tag or process to generate Troublesh
 Prerequisites
 ====================================================================================
 
-* You must be an Observability Cloud administrator to create Troubleshooting MetricSets.
+* To index span tags to create Troubleshooting MetricSets in Splunk APM, you must have the admin role.
 * Before you start indexing span tags and processes, see :ref:`apm-index-tag-tips` for guidance on choosing span tags or processes to index. 
 
 .. _apm-tms-details:
@@ -64,7 +62,7 @@ Follow these steps to index a span tag or process to create a Troubleshooting Me
 1. To get to the :guilabel:`APM MetricSets` page, do one of the following: 
   
    a. In Splunk APM, select :guilabel:`APM Configuration` and select :guilabel:`APM MetricSets` from the menu. The APM MetricSets page opens.
-   b. From anywhere in Splunk Observability Cloud, select :guilabel:`Settings` in the left navigation bar and select :guilabel:`APM MetricSets` under :guilabel:`Data Configuration`.   
+   b. From anywhere in Splunk Observability Cloud, select :guilabel:`Settings` in the navigation bar and select :guilabel:`APM MetricSets` under :guilabel:`Data Configuration`.   
 
 2. On the :guilabel:`APM MetricSets` page, select :strong:`New MetricSet`.
 
@@ -84,12 +82,12 @@ Follow these steps to index a span tag or process to create a Troubleshooting Me
 
 6. Your new metric set shows under :strong:`Pending MetricSets` section of the table with an :guilabel:`Analyzing` status while the cardinality check runs. You might have to wait a few moments for the check to run. 
 
-   .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you enable it, rerun the analysis. 
+   .. caution:: Your pending MetricSet expires after one hour. If your MetricSet times out before you turn on it, run the analysis again. 
    
-7. After the cardinality check has run, review the cardinality and enable your new MetricSet.
+7. After the cardinality check has run, review the cardinality and turn on your new MetricSet.
 
-   * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to enable your Troubleshooting MetricSet. 
-   * If the check times out before you enable the MetricSet, rerun the analysis.
+   * If the cardinality impact of indexing this new MetricSet is acceptable, select the check mark under :guilabel:`Actions` to turn on your Troubleshooting MetricSet. 
+   * If the check times out before you turn on the MetricSet, run the analysis again.
    * If the check shows as failed, your cardinality is too high to create the new MetricSet. You can edit the MetricSet to adjust the configuration to reduce cardinality or you can select the x to delete the pending Metricset.
 
    The following example shows a cardinality check. 

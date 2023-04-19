@@ -4,12 +4,10 @@
 Add context to spans with span tags in Splunk APM
 *****************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use span tags to slice and dice service performance by dimensions in Splunk APM.
 
-Enrich the context of the spans you send to Splunk APM by adding span tags. Span tags are key-value pairs that provide additional metadata about spans in a trace. In OpenTelemetry, span tags are known as ``attributes``. 
+Enrich the context of the spans you send to Splunk APM by adding span tags. Span tags are key-value pairs that provide additional metadata about spans in a trace. In OpenTelemetry, span tags are ``attributes``. 
 
 There are two ways to add span tags to your spans:
 
@@ -44,7 +42,7 @@ Begin by considering where to add your span tags.
 
 .. include:: /_includes/tag-decision-support.rst
 
-Note that the ``deployment.environment`` span tag is particularly useful, as it lets you filter your entire APM experience by deployment environment. To learn more about environments in Splunk APM, see :ref:`apm-environments`. 
+The ``deployment.environment`` span tag is particularly useful, as it lets you filter your entire APM experience by deployment environment. To learn more about environments in Splunk APM, see :ref:`apm-environments`. 
 
 .. _instrument-tags:
 
@@ -240,9 +238,9 @@ Follow these steps to define a new attributes processor and add it to your pipel
 Where do host-specific span tags come from?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Splunk Distribution of OpenTelemetry Collector automatically adds a ``host`` span tag to every span to identify which infrastructure component each span uses. The ``host`` span tag value is generally the ``hostname`` or unique resource identifier for the infrastructure component. 
+The Splunk Distribution of OpenTelemetry Collector automatically adds a ``host`` span tag to every span to identify which infrastructure component each span uses. The ``host`` span tag value is commonly the ``hostname`` or unique resource identifier for the infrastructure component. 
 
-The ``host`` span tag allows Splunk APM to render key infrastructure metrics and link to default dashboards for infrastructure components. This can help you more easily monitor the performance of your applications at the infrastructure level and leverage interactions between Splunk APM and Splunk Infrastructure Monitoring. 
+The ``host`` span tag allows Splunk APM to render key infrastructure metrics and link to default dashboards for infrastructure components. This can help you more monitor the performance of your applications at the infrastructure level and use interactions between Splunk APM and Splunk Infrastructure Monitoring. 
 
 In addition to the ``host`` span tag, the OpenTelemetry Collector automatically adds certain span tags to every span captured on that host, according to the type of host. These additional span tags provide more information about infrastructure components each span uses, render corresponding infrastructure metrics, and link to more complete dashboards for the underlying infrastructure component.
 
