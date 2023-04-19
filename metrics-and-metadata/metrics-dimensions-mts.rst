@@ -9,7 +9,7 @@ Metadata: Dimensions, custom properties, and tags
 
 Data comes into Splunk Observability Cloud as data points associated with a metric name and additional metadata. 
 
-Observability Cloud has three types of metadata:
+Observability Cloud has the following types of metadata:
 
 .. list-table::
   :header-rows: 1
@@ -27,6 +27,9 @@ Observability Cloud has three types of metadata:
     - Key-value pair
   * - Tags
     - Labels or keywords applied to metric dimensions and custom properties after ingest.
+    - String
+  * - Attributes
+    - ???
     - String
 
 * To find and edit your metadata, use the Metadata Catalogue. Learn more at :ref:`metadata-catalog`. 
@@ -112,9 +115,26 @@ Tags in Splunk APM
 
 Metadata tags in Splunk APM, which are key-value pairs added to spans through instrumentation to provide information and context about the operations that the spans represent. To learn more about span tags, see :ref:`apm-traces-spans`.
 
+
+.. _metadata-attributes:
+
+Attributes
+==============
+
+Attributes in Splunk RUM
+--------------------------------
+
+To set global attributes in RUM, see:
+
+* :ref:`Android <android-rum-attributes>`
+* :ref:`iOS <ios-rum-globalattributes>`
+* :ref:`Browser <browser-rum-identify-users>`
+
+
+
 .. _metadata-best-practices:
 
-When to use dimensions, custom properties, and tags
+When to use each metadata type
 ================================================================================
 
 The following table shows the main differences between the three types of metadata:
