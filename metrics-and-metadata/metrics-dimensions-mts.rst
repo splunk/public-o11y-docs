@@ -1,36 +1,39 @@
 .. _metrics-dimensions-mts:
 
 ************************************************************************
-Metadata: Dimensions, custom properties, and tags 
+Metadata: Dimensions, custom properties, tags, and attributes 
 ************************************************************************
 
 .. meta::
     :description: Learn about the differences between dimensions, custom properties, and tags in Splunk Observability Cloud.
 
-Data comes into Splunk Observability Cloud as data points associated with a metric name and additional metadata. 
-
-Observability Cloud has the following types of metadata:
+Splunk Observability Cloud data comes associated with additional metadata: 
 
 .. list-table::
   :header-rows: 1
-  :widths: 25 50 25 
+  :widths: 20 50 15 15 
   :width: 100
 
-  * - :strong:`Metadata`
+  * - :strong:`Name`
     - :strong:`Description`
+    - :strong:`Data type`
     - :strong:`Format`
   * - Dimensions
-    - Sent in with metric time series (MTS) at the time of ingest to add context to the metrics.
+    - Sent in with metric time series (MTS) at the time of ingest to add context to metrics.
+    - Infrastructure metric
     - Key-value pair
   * - Custom properties 
     - Applied to metric dimensions after ingest to add context to the metrics.
+    - Infrastructure metric
     - Key-value pair
   * - Tags
     - Labels or keywords applied to metric dimensions and custom properties after ingest.
+    - Infrastructure metric
     - String
-  * - Attributes
-    - ???
-    - String
+  * - Attributes or span tags
+    - Annotation to carry information about the operation being tracked.
+    - APM metric, span
+    - Key-value pair
 
 * To find and edit your metadata, use the Metadata Catalogue. Learn more at :ref:`metadata-catalog`. 
 * To link metadata to other resources, see how in :ref:`link-metadata-to-content`.
@@ -87,39 +90,39 @@ Custom property name and value criteria:
 
 In custom property values, Observability Cloud stores numbers as numeric strings.
 
-.. _metadata-tags:
+.. _metadata-infra-tags:
 
-Tags
-==========
+Infrastructure Monitoring tags
+========================================
 
-Tags in Infrastructure Monitoring
-------------------------------------------------------
-
-Tags are labels or keywords you can assign to dimensions and custom properties to give the same searchable value to multiple dimensions. To learn more about adding tags to existing metrics, see :ref:`search-edit-metadata`.
+In Infrastructure Monitoring, tags are labels or keywords you can assign to dimensions and custom properties to give the same searchable value to multiple dimensions. To learn more about adding tags to existing metrics, see :ref:`search-edit-metadata`.
 
 Tags criteria
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------------
 
 Tags are UTF-8 strings with a maximum length of 256 UTF-8 characters/1024 bytes.
 
 * You can have up to 50 tags per dimension.
 * You can have up to 50 tags per custom property.
 
-Tags in OpenTelemetry
----------------------------
-
-In the OpenTelemetry data model, tags are provided as span ``attributes``. You can add and modify them using an attributes processor in your Collector's traces pipelines. Learn more in :ref:`Tags in OpenTelemetry <otel-tags>`.
-
-Tags in Splunk APM
---------------------------------
-
-Metadata tags in Splunk APM, which are key-value pairs added to spans through instrumentation to provide information and context about the operations that the spans represent. To learn more about span tags, see :ref:`apm-traces-spans`.
-
-
 .. _metadata-attributes:
 
-Attributes
-==============
+Span attributes or tags 
+==========================================
+
+In the OpenTelemetry data model, metadata is provided as span attributes or tags. You can add and modify them using an attributes processor in your Collector's traces pipelines. 
+
+Learn more in :ref:`Tags in OpenTelemetry <otel-tags>`.
+
+Attributes in Splunk APM
+--------------------------------
+
+In Splunk APM, span tags are key-value pairs added to spans through instrumentation to provide information and context about the operations that the spans represent. 
+
+To learn more about span tags in APM, see: 
+
+* :ref:`apm-traces-spans`
+* :ref:`apm-index-span-tags`
 
 Attributes in Splunk RUM
 --------------------------------
@@ -130,14 +133,12 @@ To set global attributes in RUM, see:
 * :ref:`iOS <ios-rum-globalattributes>`
 * :ref:`Browser <browser-rum-identify-users>`
 
-
-
 .. _metadata-best-practices:
 
-When to use each metadata type
+When to use each metadata type in Infrastructure
 ================================================================================
 
-The following table shows the main differences between the three types of metadata:
+The following table shows the main differences between the types of IMM metadata:
 
 .. list-table::
   :header-rows: 1
@@ -194,7 +195,7 @@ Use custom properties in the following situations:
 
       **Example:** You collect a metric called ``service.errors`` to know when your customers are running into issues with your services. The MTS for this metric are already uniquely identifiable by the customer and service dimensions. You want to attach the escalation contacts for each service for every customer to your metrics. In this case, you assign the escalation contacts as custom properties to the specific service dimension or customer dimensions. As your team grows and goes through reorganization, you want to be able to change this metadata. You also don't need the escalation contacts as dimensions as the customer and service dimensions already yield separate MTS.
 
-Use tags
+Use IMM tags
 ----------------------------------------
 
 Use tags when there is a one-to-many relationship between the tag and the objects you are assigning it to. 
