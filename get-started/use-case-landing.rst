@@ -26,6 +26,8 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`Maintain a secure organization with many teams and users using Splunk Observability Cloud <use-case-security>`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-use-case>`
+  * - :ref:`OpenTelemetry <otel-intro>`
+    - :ref:`auto-instrumentation-java-operator`     
   * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`
     - :ref:`monitor-server-latency`
   * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`    
