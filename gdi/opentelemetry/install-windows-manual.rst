@@ -23,7 +23,7 @@ All installation methods offer default configurations using environment variable
 
 - ``${SPLUNK_ACCESS_TOKEN}``: The Splunk access token to authenticate requests.
 - ``${SPLUNK_API_URL}``: The Splunk API URL. For example, ``https://api.us0.signalfx.com``.
-- ``${SPLUNK_HEC_TOKEN}``: The Splunk HEC authentication token.
+- ``${SPLUNK_HEC_TOKEN}``: The Splunk HTTP Event Collector (HEC) authentication token.
 - ``${SPLUNK_HEC_URL}``: The Splunk HEC endpoint URL. For example, ``https://ingest.us0.signalfx.com/v1/log``.
 - ``${SPLUNK_INGEST_URL}``: The Splunk ingest URL. For example, ``https://ingest.us0.signalfx.com``.
 - ``${SPLUNK_TRACE_URL}``: The Splunk trace endpoint URL. For example, ``https://ingest.us0.signalfx.com/v2/trace``.
@@ -36,7 +36,7 @@ If you need to use a proxy, set one of the following environment variables accor
 
 - ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
 - ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy.
+- ``NO_PROXY``: If a proxy is defined, sets addresses that don't use the proxy.
 
 Restart the Collector after adding these environment variables to your configuration.
 
@@ -44,8 +44,8 @@ Restart the Collector after adding these environment variables to your configura
 
 .. _windows-installer:
 
-Windows Installer (MSI)
-===============================
+Windows installer file (MSI) installation
+===============================================================================
 
 To install the package using Windows Installer, download the Windows MSI package (64-bit only) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
 
@@ -62,7 +62,7 @@ Next, proceed with the GUI, or follow the instructions to install using a Powers
 Install using the GUI
 ---------------------------------
 
-Double click the downloaded package and follow the instructions in the wizard.
+Run the downloaded package and follow the instructions in the guided setup.
 
 .. _windows-powershell:
 
@@ -85,7 +85,7 @@ Follow these steps:
 
     Start-Service splunk-otel-collector
 
-Learn more about about advanced configuration options (including Service Logging) using PowerShell in our :new-page:`GitHub repos <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/windows-manual.md>`.
+Learn more about advanced configuration options (including Service Logging) using PowerShell in the Splunk Distribution of OpenTelemetry Collector :new-page:`Windows manual <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/windows-manual.md>`.
 
 .. _windows-manual-fluentd:
 
