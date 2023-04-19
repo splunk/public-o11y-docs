@@ -44,7 +44,7 @@ olly_on_github_repo = 'splunk/public-o11y-docs'
 olly_on_github_branch = 'main'
 sphinx_tabs_disable_tab_closing = True
 
-notfound_template = '404.html'
+notfound_template = 'layout.html'
 notfound_context = {
     'title': 'Page not found',
     'body': 'We can\'t find the page you requested. It might have been deleted or moved.\n\nUse the navigation menu or the search box to find the content you\'re looking for.'
