@@ -12,12 +12,13 @@
 
 
   * - WRITE_CONFIG
-    - Create, edit, and delete the following APM components:
-       - MetricSets
-       - Business Workflows. 
-       - This permission also controls access to configuration options for traces and spans. Functionality in the API is similarly restricted by capability.
-
-      In the APM API, the WRITE_CONFIG capability lets you use the PUT and POST methods on the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
+    -  - Create, edit, and delete the following APM components:
+         - MetricSets
+         - Business Workflows. 
+       - Configuration options for traces and spans. 
+       - The following methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
+        - PUT
+        - POST
     - Yes
     - No
     - No
