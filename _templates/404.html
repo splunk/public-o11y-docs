@@ -65,12 +65,18 @@ function OptanonWrapper() { }
       {%- endif %}
           <div class="body" role="main">
             {% include "breadcrumbs.html" %}
+            <h1>Page not found</h1>
+
             <br /><br />
 
-            We can't find the page you requested. It might have been deleted or moved. 
+            We couldn't find the page you requested. It might have been deleted or moved. 
+
+            <br /><br />
 
             Use the navigation menu or the search box to find the content you're looking for.
-            
+
+            <br /><br />
+
             {% include "page-nav.html" %}
           </div>
       {%- if render_sidebar %}
