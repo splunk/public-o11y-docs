@@ -40,7 +40,7 @@ Arnau follows the steps described in :ref:`auto-instrumentation-operator` to set
 
 After completing the deployment, Arnau is able to see the results using :ref:`APM <get-started-apm>`.
 
-.. image:: /_images/collector/auto-instrumentation-op-java-1.png
+.. image:: /_images/collector/auto-instrumentation-op-java-1-light.png
    :width: 100%
    :alt: Java app auto instrumented.
 

@@ -73,7 +73,7 @@ All of the following metrics are part of the `leader` metric group. To activate 
  - `gauge.zk_pending_syncs`
  - `gauge.zk_synced_followers`
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
