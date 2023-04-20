@@ -12,7 +12,7 @@ Configure application exporters and receivers for monitoring
    :hidden:
 
    monitors/cadvisor
-   cgroups/cgroups
+   monitors/cgroups
    Istio <get-data-in/application/istio/istio>
    jaeger-grpc/jaeger-grpc
    nagios/nagios

@@ -14,9 +14,9 @@ Configure application receivers for hosts and servers
    monitors/apache-httpserver
    monitors/apache-tomcat
    monitors/apache-zookeeper
-   chrony/chrony
-   collectd/collectd
-   collectd/collectd-cpufreq
+   monitors/chrony
+   monitors/collectd
+   monitors/collectd-cpufreq
    collectd/collectd-df
    collectd/collectd-hadoopjmx
    collectd/collectd-kafka-consumer
