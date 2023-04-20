@@ -8,23 +8,17 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 This monitor is available on Linux. 
 
-For general information on cgroups, see the Linux control groups documentation: 
+For general information on cgroups, see the Linux control groups and Linux Kernel documentation: 
 
 *  <a href="http://man7.org/linux/man-pages/man7/cgroups.7.html">http://man7.org/linux/man-pages/man7/cgroups.7.html</a>.
 
-For detailed information on `cpu` cgroup metrics, see the Red Hat guide to CPU management:
+*  <a href="https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt">https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt</a>.
+
+For detailed information on `cpu` and `memory` cgroup metrics, see the Red Hat guides:
 
 *  <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-cpu">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-cpu</a>. Note that the `cpuacct` cgroup is primarily an informational cgroup that gives detailed information on how long processes in a cgroup used the CPU.
 
-For detailed information on `memory` cgroup metrics, see the Red Hat guide to the Memory cgroup: 
-
 * <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-memory">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-memory</a>.
-
-
-Also refer to the Linux Kernel memory cgroup document:
-
-*  <a href="https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt">https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt</a>.
-
 
 ## Benefits
 

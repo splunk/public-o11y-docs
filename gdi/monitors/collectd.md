@@ -4,97 +4,43 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd custom plugin monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `collectd/custom` monitor type to customize the collectd configuration of your managed collectd instances.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/custom` monitor type for the Smart Agent Receiver. This monitor lets you provide a custom collectd configuration to be run by the managed collectd instance.
+This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows.
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+## Benefits
+
+```{include} /_includes/benefits.md
 ```
-
-You can provide configurations for as many plugins as you want in a single instance of this monitor configuration by either putting multiple `<Plugin>` blocks in a single `template` option or by specifying multiple `templates`.
-
-Note that a distinct instance of collectd is run for each instance of this monitor, so it is more efficient to group plugin configurations into a single monitor configuration (either in one large `template` text blob or split into multiple `templates`). If using a `discoveryRule`, do not group configurations to avoid creating a duplicate configuration for each instance of the service endpoint discovered.
-
-You can also use your own Python plugins in conjunction with the `ModulePath` option in `collectd-python`. If your Python plugin has dependencies of its own, you can specify the path to them by specifying multiple `ModulePath` options with those paths.
-
-Here's an example of a configuration with a custom Python plugin:
-
-```yaml
-  - type: collectd/custom
-    discoveryRule: container_image =~ "myservice"
-    template: |
-      LoadPlugin "python"
-      <Plugin python>
-        ModulePath "/usr/lib/python2.7/dist-packages/health_checker"
-        Import "health_checker"
-        <Module health_checker>
-          URL "http://{{.Host}}:{{.Port}}"
-          JSONKey "isRunning"
-          JSONVal "1"
-        </Module>
-      </Plugin>
-```
-
-There are many collectd plugins included in the container image that are not exposed as monitors. You can see the plugins in the `<AGENT_BUNDLE>/lib/collectd` directory, where `<AGENT_BUNDLE>` is the root of the file system in the containerized version, and is normally `/usr/lib/signalfx-agent` in the non-containerized agent.
-
-## Running the collectd/exec plugin
-
-You can use the `collectd/custom` monitor to run the `collectd/exec` plugin. If you are not running the Smart Agent in the container, you can use any appropriate user on your system.
-
-If you are running the Smart Agent in a container, then you need to use a non-root user when you run your script, as shown in the following example:
-
-```yaml
-  - type: collectd/custom
-    template: |
-      LoadPlugin exec
-      <Plugin exec>
-        Exec "`non-root user`" "/path/to/script.sh"
-      </Plugin>
-```
-
-Replace `non-root user` with an actual non-root user on your host.
 
 ##  Installation
 
-This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
-
-To install this integration:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-
-2. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation-linux.md
+```
 
 ## Configuration
 
-This Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+```{include} /_includes/configuration.md
+```
+### Example
 
-**Note:** Providing a Custom monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
-### Splunk Distribution of OpenTelemetry Collector
+To activate this integration, add the following to your Collector configuration:
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
-
-```yaml
+```
 receivers:
   smartagent/custom:
     type: collectd/custom
-    ...  # Additional config
+    ... # Additional config
 ```
 
-See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
+Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
-### Smart Agent
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
-```yaml
-monitors:  # All monitor config goes under this key
- - type: collectd/custom
-   ...  # Additional config
 ```
-
-See <a href="https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#configure-the-smart-agent" target="_blank">Smart Agent example configuration</a> for an autogenerated example of a YAML configuration file, with default values where applicable.
-
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/custom/collectd]
+```
 ### Configuration settings 
 
 The following table shows the configuration options for this monitor:
@@ -110,9 +56,9 @@ The following table shows the configuration options for this monitor:
 
 ## Metrics
 
-The Splunk Distribution of OpenTelemetry Collector does not do any built-in filtering of metrics coming out of this monitor.
+The Splunk Distribution of OpenTelemetry Collector does not do any built-in filtering of metrics coming out of this integration.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

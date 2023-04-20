@@ -3,11 +3,9 @@
 # Chrony NTP
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Chrony NTP monitor. See benefits, install, configuration, and metrics">
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Chrony NTP monitor type by using the SignalFx Smart Agent receiver. The integration monitors NTP data from a chrony server, such as clock skew and per-peer stratum. For talking to chronyd, this monitor type mimics what the chronyc control program does on the wire.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Chrony NTP monitor type to monitor NTP data from a chrony server, such as clock skew and per-peer stratum. To talk to chronyd, this integration mimics what the chronyc control program does on the wire.
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
+This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
 ## Benefits
 
@@ -24,6 +22,10 @@ This monitor is not available on Windows as collectd plugins are only supported 
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/chrony:
@@ -31,7 +33,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the integration, include the monitor type in a metrics pipeline. Add the monitor type to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:
@@ -41,7 +43,7 @@ service:
 ```
 ### Configuration options
 
-The following table shows the configuration options for this monitor type:
+The following table shows the configuration options for this integration:
 
  Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -51,9 +53,8 @@ The following table shows the configuration options for this monitor type:
 
 ## Metrics
 
-The Splunk Distribution of OpenTelemetry Collector does not do any built-in filtering of metrics coming out of this monitor type.
-
-## Get help
+The Splunk Distribution of OpenTelemetry Collector does not do any built-in filtering of metrics coming out of this integration.
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
