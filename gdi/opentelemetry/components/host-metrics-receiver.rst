@@ -22,6 +22,8 @@ By default, the host metrics receiver is activated in the Splunk Distribution of
 
 Host receiver metrics appear in Infrastructure Monitoring. You can use them to create dashboards and alerts. See :ref:`create-detectors` for more information.
 
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+
 Get started
 ======================
 
@@ -133,8 +135,6 @@ Disk
 File system
 ^^^^^^^^^^^^^^^^^^^
 
-.. note:: The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in :new-page:`GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters>`.
-
 .. code:: yaml
 
    filesystem:
@@ -234,6 +234,8 @@ Metrics
 =====================
 
 The following metrics, resource attributes, and attributes are available.
+
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
 
 cpu scraper
 --------------------------
