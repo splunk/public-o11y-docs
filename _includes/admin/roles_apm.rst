@@ -13,12 +13,12 @@
 
   * - WRITE_CONFIG
     -  - Create, edit, and delete the following APM components:
-         - MetricSets
-         - Business Workflows. 
+          - MetricSets
+          - Business Workflows. 
        - Configuration options for traces and spans. 
        - The following methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
-        - PUT
-        - POST
+          - PUT
+          - POST
     - Yes
     - No
     - No
