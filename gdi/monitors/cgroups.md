@@ -4,12 +4,7 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the cgroups monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the cgroups type monitor for the Smart Agent Receiver.
-
-Use this integration to reports statistics about `cgroups` on Linux. This receiver supports cgroups version 1, not the newer cgroups version 2 unified implementation.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the cgroups monitor type to report statistics about `cgroups` on Linux. This receiver supports cgroups version 1, not the newer cgroups version 2 unified implementation.
 
 This monitor is available on Linux. 
 
@@ -31,7 +26,7 @@ Also refer to the Linux Kernel memory cgroup document:
 *  <a href="https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt">https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt</a>.
 
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -46,6 +41,10 @@ Also refer to the Linux Kernel memory cgroup document:
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/cgroups: 
@@ -53,7 +52,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the integration, include the receiver with this monitor type in a `metrics` pipeline. To do this, add the receiver to the `service > pipelines > metrics > receivers` section of your configuration file.
+Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
 ```
 service:
@@ -61,9 +60,6 @@ service:
     metrics:
       receivers: [smartagent/cgroups]
 ```
-
-See the [configuration example](https://github.com/signalfx/splunk-otel-collector/tree/main/examples) for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
-
 ### Configuration settings
 
 The following table shows the configuration options for this receiver:
@@ -71,19 +67,6 @@ The following table shows the configuration options for this receiver:
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `cgroups` | no | `list of strings` | The cgroup names to include or exclude, based on the full hierarchy path. This set can be overridden. If not provided, `cgroups` defaults to a list of all cgroups. For example, to monitor all Docker container cgroups, you could use a value of `["/docker/*"]`. |
-
-### Filtering
-You can limit the cgroups for which metrics are generated with the `cgroups` config option to the receiver.
-
-For example, the following will only monitor Docker-generated cgroups:
-
-```yaml
-monitors:
- - type: cgroups
-   cgroups:
-    - "/docker/*"
-```
-
 
 ## Metrics
 
@@ -96,7 +79,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

@@ -3,8 +3,6 @@
 # Chrony NTP
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Chrony NTP monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
 The Splunk Distribution of OpenTelemetry Collector provides this integration as the Chrony NTP monitor type by using the SignalFx Smart Agent receiver. The integration monitors NTP data from a chrony server, such as clock skew and per-peer stratum. For talking to chronyd, this monitor type mimics what the chronyc control program does on the wire.
 
 ```{note}
