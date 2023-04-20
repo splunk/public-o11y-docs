@@ -260,20 +260,6 @@ Splunk Distribution for the Kubernetes Operator (Alpha)
 
 The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator is an implementation of a Kubernetes Operator. This operator helps deploy and manage the Splunk Distribution of OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
 
-.. _otel-k8-kubectl:
-
-Collect resources with the kubectl plugin
-=====================================================
-
-The :new-page:`Splunk kubectl plugin <https://github.com/signalfx/kubectl-splunk/blob/main/docs/kubectl-splunk_support.md>` collects Kubernetes resources into a zip file. 
-
-The plugin contains the following resources:
-
-* kubectl-splunk, which is a wrapper around kubectl for managing the Splunk Distribution of OpenTelemetry Collector for Kubernetes. 
-* kubectl-splunk describe, which is a command that describes any Kubernetes resource (for example, pods, daemonsets, configmaps) that is automatically filtered by ``app=splunk-otel-collector``.
-* kubectl-splunk get, which is a command that can be used to retrieve any Kubernetes resource (for example, pods, daemonsets, configmaps) that is automatically filtered by ``app=splunk-otel-collector``.
-* kubectl-splunk status, which is a longer description that spans multiple lines and likely contains examples and usage of using your command. 
-
 Next steps
 ==================================
 After installing the package, you can:
