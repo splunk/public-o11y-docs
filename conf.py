@@ -49,7 +49,7 @@ notfound_context = {
     'title': 'Page not found',
     'body': 'We can\'t find the page you requested. It might have been deleted or moved.\n\nUse the navigation menu or the search box to find the content you\'re looking for.'
 }
-notfound_urls_prefix = ''
+notfound_urls_prefix = '/Observability/'
 
 # Set myst_parser to automatically generate labels for h1, h2, and h3 headings
 myst_heading_anchors = 3
