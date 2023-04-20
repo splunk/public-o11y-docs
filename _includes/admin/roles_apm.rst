@@ -12,10 +12,12 @@
 
 
   * - WRITE_CONFIG
-    -  - Create, edit, and delete the following APM components:
+    -  - Create, edit, and delete the following APM components. Functionality in the API is similarly restricted by capability.
+          - Span tags
           - MetricSets
-          - Business Workflows. 
-       - Configuration options for traces and spans. 
+          - Business Workflows
+          -  
+       - Configure options for traces and spans. 
        - The following methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
           - PUT
           - POST
