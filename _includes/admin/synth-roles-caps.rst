@@ -19,13 +19,11 @@
     - No
     - No
 
-
   * - :strong:`Read test`
     - Yes
     - Yes
     - Yes
     - No
-
   
   * - :strong:`Delete test`
     - Yes
@@ -33,39 +31,38 @@
     - No
     - No
   
-
   * - :strong:`Create private location`
     - Yes
     - No
     - No
     - No
 
- * - :strong:`Read private location`
+  * - :strong:`Read private location`
     - Yes
     - Yes
     - No
     - No
 
 
- * - :strong:`Delete private location`
+  * - :strong:`Delete private location`
     - Yes
     - No
     - No
     - No
 
- * - :strong:`Create private location token`
+  * - :strong:`Create private location token`
     - Yes
     - No
     - No
     - No
 
-* - :strong:`Read private location token`
+  * - :strong:`Read private location token`
     - Yes
     - No
     - No
     - No
 
-* - :strong:`Delete private location token`
+  * - :strong:`Delete private location token`
     - Yes
     - No
     - No
