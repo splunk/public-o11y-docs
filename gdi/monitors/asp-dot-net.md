@@ -1,6 +1,7 @@
 (asp-dot-net)=
 
 # ASP.NET
+
 <meta name="description" content="Use this Splunk Observability Cloud integration for the ASP.NET app monitor. See benefits, install, configuration, and metrics">
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `aspdotnet` monitor type to retrieve metrics for requests, errors, sessions, and worker processes from ASP.NET applications. 
@@ -64,7 +65,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
