@@ -14,19 +14,21 @@ Install the Collector for Windows with the installer script
   /gdi/opentelemetry/deployments/deployments-windows-ansible.rst
   /gdi/opentelemetry/deployments/deployments-windows-puppet.rst
 
-The Splunk Distribution of OpenTelemetry Collector for Windows is a package that provides integrated collection and forwarding for all data types. Install the package using one of these methods:
+The Splunk Distribution of OpenTelemetry Collector for Windows is a package that provides integrated collection and
+forwarding for all data types. Install the package using one of these methods:
 
 * :ref:`Installer script <windows-script>`
 * :ref:`Deployments <windows-deployments>`
 
-Alternatively, you can :new-page:`install the Collector for Windows manually <otel-install-windows-manual>`.
+Alternatively, you can manually install the Collector. To learn how, see :ref:`otel-install-windows-manual`.
 
 .. _windows-otel-requirements:
 
 Prerequisites
 ==========================
 
-The Splunk Distribution of OpenTelemetry Collector for Windows has the following requirements depending on the install method:
+The Splunk Distribution of OpenTelemetry Collector for Windows has the following requirements
+depending on the installation method:
 
 .. list-table::
   :header-rows: 1
@@ -76,7 +78,8 @@ To install the package using the installer script, follow these steps:
 Configure memory allocation
 ----------------------------------
 
-To configure memory allocation, use the ``memory`` parameter. By default, this parameter is set to 512 MiB, or 500 x 2^20 bytes, of memory. Increase this setting to allocate more memory, as shown in the following example.
+To configure memory allocation, use the ``memory`` parameter. The default value for this parameter is 512 MiB, or
+500 x 2^20 bytes, of memory. Increase this setting to allocate more memory, as shown in the following example.
 
 .. code-block:: PowerShell
 
@@ -91,7 +94,7 @@ If you need to use a proxy, set one of the following environment variables accor
 
 - ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
 - ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy.
+- ``NO_PROXY``: If you use a proxy, sets addresses that don't use the proxy.
 
 Restart the Collector after adding these environment variables to your configuration.
 
@@ -99,22 +102,29 @@ Restart the Collector after adding these environment variables to your configura
 
 .. _fluentd-manual-config-windows:
 
-Configure Fluentd for log collection
+Configure fluentd for log collection
 -------------------------------------------
 
-By default, the Fluentd service is installed and configured to forward log events with the ``@SPLUNK`` label and send these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
+By default, the installation configures the fluentd service to forward log events with the ``@SPLUNK`` label and
+send these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option.
+For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
-To configure the package to send log events to a custom HEC endpoint URL, you can specify the following parameters for the installer script:
+To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL, you can specify the
+following parameters for the installer script:
 
 * ``hec-url = "<URL>"``
 * ``hec-token = "<TOKEN>"``
 
-The main Fluentd configuration file is installed to ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the driver where Fluentd is installed. Custom Fluentd source configuration files can be added to the ``<drive>\opt\td-agent\etc\td-agent\conf.d`` directory after installation.
+The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``.
+``<drive>`` is the drive letter for the fluentd installation directory.
+You can add custom fluentd source configuration files to the ``<drive>\opt\td-agent\etc\td-agent\conf.d``
+directory after installation.
 
 Note the following:
 
-* In this directory, all files with the .conf extension are automatically included by Fluentd.
-* By default, Fluentd is configured to collect from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
+* In this directory, fluentd includes all files with the .conf extension.
+* By default, fluentd collects from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf``
+  for the default configuration.
 
 After any configuration modification, apply the changes by restarting the system or running the following PowerShell commands:
 
@@ -156,13 +166,13 @@ Splunk provides a cookbook to install the Collector using Chef. See :ref:`deploy
 
 Nomad 
 -----------------
-Use Nomad to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
+Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
 
 .. _windows-puppet:
 
 Puppet
 -------------------------------
-Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. See :ref:`deployment-windows-puppet` for the instructions to download and customize the module.
+Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
 
 Next steps
 ==================================
