@@ -112,8 +112,14 @@ For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
 To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL, you can specify the following parameters for the installer script:
 
-* ``SPLUNK_HEC_URL = "<URL>"``
-* ``SPLUNK_HEC_TOKEN = "<TOKEN>"``
+* ``hec_url = "<SPLUNK_HEC_URL>"``
+* ``hec_token = "<SPLUNK_HEC_TOKEN>"``
+
+For example:
+
+.. code-block:: PowerShell
+
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; hec_url = "SPLUNK_HEC_URL"; hec_token = "SPLUNK_HEC_TOKEN"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the drive letter for the fluentd installation directory.
 
