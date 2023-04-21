@@ -1,17 +1,17 @@
 .. caution::
 
-   Splunk only provides best-effort support for OpenTelemetry Collector Contrib. Only Splunk OpenTelemetry distributions are in scope for official Splunk support and support-related service-level agreements (SLAs).
+   Splunk provides best-effort support for the OpenTelemetry Collector Contrib. Only Splunk OpenTelemetry distributions are in scope for official Splunk support and support-related service-level agreements (SLAs).
 
 .. _using-upstream-otel:
 
-**********************************************************
-Send telemetry using OpenTelemetry Collector Contrib
-**********************************************************
+****************************************************************
+Send telemetry using the OpenTelemetry Collector Contrib project
+****************************************************************
 
 .. meta:: 
       :description: If you need to use the Contrib Collector due to technical or practical reasons, you can still send traces and metrics to Observability Cloud. On the other hand, the Splunk Distribution of OpenTelemetry Collector enhances the upstream OpenTelemetry Collector and is fully compatible with Splunk instrumentation.
 
-The OpenTelemetry Collector Contrib project is the upstream source of all OpenTelemetry Collector distributions, including the Splunk Distribution of OpenTelemetry Collector. The Contrib Collector contains vendor-specific components, such as receivers and exporters for several observability back ends, including Splunk Observability Cloud.
+The OpenTelemetry Collector Contrib project, referred to officially as the upstream Collector, is the upstream source of all OpenTelemetry Collector distributions, including the Splunk Distribution of OpenTelemetry Collector. The upstream Collector contains vendor-specific components, such as receivers and exporters for several observability back ends, including Splunk Observability Cloud.
 
 The Splunk Distribution of OpenTelemetry Collector, on the other hand, is configured for Splunk Observability Cloud and can be deployed automatically by a variety of configuration management tools or using the installer scripts. The distribution adds additional functionality to the Collector while preserving all Contrib features.
 
