@@ -105,3 +105,12 @@ To delete custom events:
 #. Click :guilabel:`Mark For Deletion` to delete the event.
 
 .. note:: Events might not be deleted immediately. 
+
+
+*****
+Examples
+*****
+
+Example 1:
+
+Example 2:
