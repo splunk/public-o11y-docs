@@ -98,3 +98,5 @@ The following metrics are available for this integration:
 
 ```{include} /_includes/troubleshooting.md
 ```
+
+##Examples
