@@ -1,7 +1,10 @@
-# -*- coding: utf-8 -*-
-# Splunk Observability Cloud documentation build configuration file,
+######################################################################
+# SPLUNK OBSERVABILITY CLOUD DOCUMENTATION BUILD CONFIGURATION FILE  #
+######################################################################
 
-# Add modules that support adding local modules 
+# GENERAL CONFIGURATION
+#######################
+
 import sys
 import os
 
@@ -42,9 +45,13 @@ language = 'en'
 
 exclude_patterns = ['_build', 'venv/lib/*/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'CONTRIBUTING.md', '.github/pull_request_template.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst']
 
+# THEME CONFIGURATION
+#######################
+
 pygments_style = 'sphinx'
 todo_include_todos = False
 html_theme = 'alabaster'
+html_baseurl = "https://docs.splunk.com/Observability/"
 html_title = 'Splunk Observability Cloud documentation'
 html_favicon = 'favicon.ico'
 html_static_path = ['_static']
@@ -56,14 +63,15 @@ html_sidebars = {
         'relations.html',
     ]
 }
-
 html_theme_options = {
     'logo_name': True,
     'github_button': False,
 }
-
 html_permalinks_icon = u'  🔗'
 htmlhelp_basename = 'Splunkdoc'
+
+# EXTENSION SETTINGS
+#######################
 
 # GitHub edit links settings
 olly_on_github_repo = 'splunk/public-o11y-docs'
@@ -85,7 +93,9 @@ copybutton_prompt_is_regexp = True
 copybutton_copy_empty_lines = False
 copybutton_line_continuation_character = "\\"
 
-# Roles
+# ROLES AND MACROS
+#######################
+
 rst_prolog = """
 .. role:: not-ok
 .. role:: ok
@@ -134,6 +144,9 @@ rst_epilog = """
       :trim:
 
 """
+
+# FUNCTIONS AND SETUP
+#######################
 
 def on_page_context(app, pagename, templatename, context, doctree):
     """
@@ -184,5 +197,3 @@ def setup(app):
 
 # Removed from above
 #   app.add_stylesheet('signalfx-fonts.css')
-
-html_baseurl = "https://docs.splunk.com/Observability/"
