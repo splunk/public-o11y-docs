@@ -194,6 +194,8 @@ def setup(app):
             
     app.connect('html-page-context', on_page_context)
     app.connect('html-page-context', determine_local_toc)
+    #   app.add_stylesheet('signalfx-fonts.css')
 
-# Removed from above
-#   app.add_stylesheet('signalfx-fonts.css')
+
+# END OF SETTINGS FILE
+#######################
