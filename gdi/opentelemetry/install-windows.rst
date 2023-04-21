@@ -107,19 +107,19 @@ Configure fluentd for log collection
 -------------------------------------------
 
 By default, the installation configures the fluentd service to forward log events with the ``@SPLUNK`` label and
-send these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option.
+send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
 For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
-To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL, you can specify the following parameters for the installer script:
+To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL with a token different than ``<SPLUNK_ACCESS_TOKEN>``, you can specify the following parameters for the installer script:
 
 * ``hec_url = "<SPLUNK_HEC_URL>"``
 * ``hec_token = "<SPLUNK_HEC_TOKEN>"``
 
-For example:
+For example (replace the ``<SPLUNK...>`` values in the command for your configuration):
 
 .. code-block:: PowerShell
 
-  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; hec_url = "SPLUNK_HEC_URL"; hec_token = "SPLUNK_HEC_TOKEN"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; hec_url = "<SPLUNK_HEC_URL>"; hec_token = "<SPLUNK_HEC_TOKEN>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
 The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the drive letter for the fluentd installation directory.
 
