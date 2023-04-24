@@ -32,6 +32,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinx_copybutton',
+    'notfound.extension',
     'toggle',
     'newpage',
     'github',
@@ -42,6 +43,9 @@ extensions = [
 olly_on_github_repo = 'splunk/public-o11y-docs'
 olly_on_github_branch = 'main'
 sphinx_tabs_disable_tab_closing = True
+
+notfound_template = '404.html'
+notfound_urls_prefix = '/Observability/'
 
 # Set myst_parser to automatically generate labels for h1, h2, and h3 headings
 myst_heading_anchors = 3

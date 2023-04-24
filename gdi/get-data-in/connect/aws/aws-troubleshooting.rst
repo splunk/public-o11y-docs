@@ -102,20 +102,20 @@ Also, to ensure that you can see the metrics you expect to monitor, perform the 
 
 .. _aws-ts-legacy-check-status:
 
-Status check metrics are missing (Legacy)
+Status check metrics are missing 
 =====================================================
 
-Status check metrics are not displayed.
+Metrics related to status check are missing.
 
 Cause
 ^^^^^^
 
-For legacy individual AWS integrations, status check metrics are not activated by default.
+By default, status check metrics are not activated to reduce AWS CloudWatch cost and Splunk Observability Cloud system usage.
 
 Solution
 ^^^^^^^^^
 
-Activate the metrics for your integration. 
+Activate status metrics for your integration. 
 
 To do so, follow these steps:
 
@@ -207,9 +207,6 @@ You'll get something similar to:
 
    {
       "authMethod": "ExternalId",
-      "created": 1674862496869,
-      "createdByName": null,
-      "creator": "E-tkECKAsAA",
       "customCloudWatchNamespaces": null,
       "enableAwsUsage": true,
       "enableCheckLargeVolume": true,
@@ -219,9 +216,6 @@ You'll get something similar to:
       "ignoreAllStatusMetrics": false,
       "importCloudWatch": true,
       "largeVolume": false,
-      "lastUpdated": 1674862497253,
-      "lastUpdatedBy": "E-tkECKAsAA",
-      "lastUpdatedByName": "John Smith",
       "name": "AWS Dev",
       "pollRate": 300000,
       "regions": [],
@@ -242,3 +236,6 @@ You'll get something similar to:
    --header "Content-Type:application/json" \
    --data "@integration.json" 
 
+6. ``StatusCheckFailed`` is always ignored but now you can combine the other two status check metrics, ``StatusCheckFailed_Instance`` and ``StatusCheckFailed_System``, to obtain status information. 
+
+   For more on AWS status check metrics, see the official AWS documentation.

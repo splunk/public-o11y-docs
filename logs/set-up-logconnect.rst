@@ -35,6 +35,7 @@ Ensure the following configuration in your Splunk Enterprise instance:
 
 * Expose port ``8089`` to all the IPs of the realms you're using.
 
+
 .. caution:: Check with your security team before you add these IPs to the allow list of your firewall rules or to your security groups in AWS.
 
 Set up Log Observer Connect
@@ -48,7 +49,7 @@ To set up Log Observer Connect for Splunk Enterprise, follow these steps:
 
 3. Follow the instructions in the integration guided setup to do the following in Splunk Enterprise:
 
-  a. Create a new role in your Splunk Enterprise instance.
+  a. Create a new role in your Splunk Enterprise instance. This user must be assigned the admin role.
 
   b. Select the Splunk Enterprise indexes that you want to search in Log Observer Connect. 
 

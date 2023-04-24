@@ -11,7 +11,7 @@ Configure application receivers for messaging
    :maxdepth: 4
    :hidden:
 
-   activemq/activemq
+   monitors/apache-activemq
    rabbitmq/rabbitmq
 
 These application receivers gather metrics from their associated messaging-related applications and the hosts the applications are running on.

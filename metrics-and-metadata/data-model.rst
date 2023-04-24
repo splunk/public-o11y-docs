@@ -29,13 +29,3 @@ Observability Cloud works with the following data types:
 
 * :strong:`Logs`: Automatic, time-stamped record of a relevant event or activity. Log ingestion is configured for each feature. To learn how to query logs, see :ref:`logs-intro-logconnect`.
 
-Data management tools 
-========================================================
-
-Splunk Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data:
-
-* :ref:`metrics-finder-and-metadata-catalog`
-* :ref:`get-started-relatedcontent`
-* :ref:`data-visualization-charts` 
-* :ref:`dashboards`
-* :ref:`signalflow-analytics-intro`
