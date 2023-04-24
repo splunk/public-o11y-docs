@@ -62,7 +62,7 @@ To configure a connection through Terraform, perform the following steps:
 
 1. Go to :new-page:`Terraform's Registry <https://registry.terraform.io/>` and look for ``signalfx`` in the search box. You'll find ``splunk-terraform``'s ``signalFx`` provider site with docs, the available resources, and the compatible data sources. 
 
-2. Copy the ``Use provider`` code to add ``SignalFx`` in the ``required_providers`` block of ``main.tf`` in your configuration file. It looks similar to:
+2. Copy the ``Use provider`` code to add ``SignalFx`` in the ``required_providers`` block of main.tf in your configuration file. It looks similar to:
 
     .. code-block:: none
 

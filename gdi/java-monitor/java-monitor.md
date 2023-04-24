@@ -68,6 +68,11 @@ The following metrics are available for this integration:
 
 The agent doesn't do any built-in filtering of metrics coming out of this receiver.
 
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
+
 ## Get help
 
 ```{include} /_includes/troubleshooting.md

@@ -18,6 +18,7 @@ Collector deployment tools and options
     deployments-windows-ansible.rst
     deployments-chef.rst
     deployments-nomad.rst
+    deployments-pivotal-cloudfoundry.rst
     deployments-linux-puppet.rst
     deployments-windows-puppet.rst
     deployments-salt.rst
@@ -30,6 +31,7 @@ Use the following deployment and configuration management tools to automate the 
 * :ref:`deployment-windows-ansible`
 * :ref:`deployments-chef`
 * :ref:`deployments-nomad`
+* :ref:`deployments-pivotal-cloudfoundry`
 * :ref:`deployment-linux-puppet`
 * :ref:`deployment-windows-puppet`
 * :ref:`deployments-salt`

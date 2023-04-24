@@ -146,7 +146,13 @@ The following table shows the configuration options for this monitor:
 | `name` | No | `string` | Name of the monitor. Sent as the `plugin_instance` dimension. |
 
 ## Metrics
+
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/opcache/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

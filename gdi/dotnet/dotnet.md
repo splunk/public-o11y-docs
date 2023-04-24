@@ -87,9 +87,14 @@ The following table shows the configuration options for this monitor:
 
 ## Metrics
 
-This monitor emits all metrics by default. However, none of these metrics are categorized as container/host metrics, and are all custom.
+This monitor emits all metrics by default. However, none of these metrics are categorized as container or host metrics, and are all custom.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/dotnet/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

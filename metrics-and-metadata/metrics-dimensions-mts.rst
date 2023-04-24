@@ -1,7 +1,7 @@
 .. _metrics-dimensions-mts:
 
 ************************************************************************
-Dimensions, custom properties, and tags in Splunk Observability Cloud
+Metric metadata: Dimensions, custom properties, and tags 
 ************************************************************************
 
 .. meta::

@@ -5,11 +5,11 @@ Configure the Ruby agent for Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Ruby to suit most of your instrumentation needs, like correlating traces with logs, enabling exporters, and more.
+   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Ruby to suit most of your instrumentation needs, like correlating traces with logs, activating exporters, and more.
 
 You can configure the Ruby agent from the Splunk Distribution of OpenTelemetry Ruby to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-The following sections describe all available settings for configuring the Ruby agent, including options for enabling new features that are unique to the Splunk Distribution of OpenTelemetry Ruby.
+The following sections describe all available settings for configuring the Ruby agent, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry Ruby.
 
 .. _main-ruby-agent-settings:
 

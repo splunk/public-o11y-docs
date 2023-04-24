@@ -225,7 +225,7 @@ The ``/etc/ld.so.preload`` file is automatically created or updated with the def
 Advanced configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-More advanced configuration options like correlating traces and logs and enabling custom sampling are available by :ref:`configuring the Java agent<advanced-java-otel-configuration>`. 
+More advanced configuration options like correlating traces and logs and activating custom sampling are available by :ref:`configuring the Java agent<advanced-java-otel-configuration>`. 
 
 .. _upgrade-the-package:
 
@@ -328,7 +328,7 @@ Use one of the following options to deactivate automatic instrumentation:
 
 - Set the ``JAVA_TOOL_OPTIONS`` environment variable to some value that you want the JVM to pick up.
 
-- Delete or move the ``instrumentation.conf`` configuration file.
+- Delete or move the instrumentation.conf configuration file.
 
 .. include:: /_includes/gdi/next-steps.rst
 

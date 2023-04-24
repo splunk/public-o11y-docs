@@ -12,7 +12,7 @@ Collector requirements
     :titlesonly:
     :hidden:
 
-    security.rst
+    Security guidelines <security>
     exposed-endpoints.rst
     sizing.rst
     collector-architecture.rst

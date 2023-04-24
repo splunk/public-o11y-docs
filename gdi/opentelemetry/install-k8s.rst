@@ -108,6 +108,11 @@ Run the following commands to deploy the Helm chart:
 
       helm -n otel install my-splunk-otel-collector -f values.yaml splunk-otel-collector-chart/splunk-otel-collector
 
+.. caution:: 
+
+  The :new-page:`values.yaml <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/helm-charts/splunk-otel-collector/values.yaml>` file lists all supported configurable parameters for the Helm chart, along with a detailed explanation of each parameter. :strong:`Review it to understand how to configure this chart`.
+
+  You can also configure the Helm chart to support different use cases, such as trace sampling and sending data through a proxy server. See :new-page:`Examples of chart configuration <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/examples/README.md>` for more information.
 
 Configure other parameters
 --------------------------------
@@ -131,7 +136,7 @@ For example:
 Set Helm using a YAML file
 --------------------------------
 
-You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named ``my_values.yaml``, run the following command to deploy the Helm chart:
+You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named my_values.yaml, run the following command to deploy the Helm chart:
 
 .. code-block:: bash
 
@@ -222,7 +227,7 @@ You can create your own manifest YAML files with customized parameters using ``h
 
    helm template --namespace default --set cloudProvider='aws' --set distribution='openshift' --set splunkObservability.accessToken='KUwtoXXXXXXXX' --set clusterName='my-openshift-EKS-dev-cluster' --set splunkObservability.realm='us1' --set gateway.enabled='false' --output-dir <rendered_manifests_dir> --generate-name splunk-otel-collector-chart/splunk-otel-collector 
 
-If you prefer, you can update the ``values.yaml`` file first.
+If you prefer, you can update the values.yaml file first.
 
 .. code-block:: bash
 
@@ -241,28 +246,19 @@ See the following manifest to set security constraints:
 
 .. _k8s-operator:
 
-Install the Collector for the Kubernetes Operator (Alpha)
+Use the Kubernetes Operator 
 ============================================================================================
+
+You can install the Kubernetes Operator for Auto Instrumentation. See more at :ref:`auto-instrumentation-operator`.
+
+Splunk Distribution for the Kubernetes Operator (Alpha)
+--------------------------------------------------------
 
 .. caution::
 
    This project is Alpha. Do not use in production.
 
 The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator is an implementation of a Kubernetes Operator. This operator helps deploy and manage the Splunk Distribution of OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
-
-.. _otel-k8-kubectl:
-
-Collect resources with the kubectl plugin
-=====================================================
-
-The :new-page:`Splunk kubectl plugin <https://github.com/signalfx/kubectl-splunk/blob/main/docs/kubectl-splunk_support.md>` collects Kubernetes resources into a zip file. 
-
-The plugin contains the following resources:
-
-* kubectl-splunk, which is a wrapper around kubectl for managing the Splunk Distribution of OpenTelemetry Collector for Kubernetes. 
-* kubectl-splunk describe, which is a command that describes any Kubernetes resource (for example, pods, daemonsets, configmaps) that is automatically filtered by ``app=splunk-otel-collector``.
-* kubectl-splunk get, which is a command that can be used to retrieve any Kubernetes resource (for example, pods, daemonsets, configmaps) that is automatically filtered by ``app=splunk-otel-collector``.
-* kubectl-splunk status, which is a longer description that spans multiple lines and likely contains examples and usage of using your command. 
 
 Next steps
 ==================================

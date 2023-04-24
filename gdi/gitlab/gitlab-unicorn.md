@@ -83,6 +83,11 @@ These are the metrics available for this integration:
 
 <br>
 
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
+
 See [Unicorn Metrics](https://docs.gitlab.com/13.12/ee/administration/monitoring/prometheus/gitlab_metrics.html#unicorn-metrics) for the Unicorn specific metrics, when Unicorn is used.
 
 ## Get help

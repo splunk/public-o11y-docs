@@ -34,14 +34,14 @@ To activate the Splunk HEC receiver add a ``splunk_hec`` entry inside the ``rece
 
 .. code-block:: yaml
 
-   exporters:
+   receivers:
       splunk_hec:
 
 The following example shows a Splunk HEC receiver configured with all available settings:
 
 .. code-block:: yaml
 
-   exporters:
+   receivers:
      # ...
      splunk_hec:
      # Address and port the Splunk HEC receiver should bind to

@@ -22,6 +22,8 @@ By default, the host metrics receiver is activated in the Splunk Distribution of
 
 Host receiver metrics appear in Infrastructure Monitoring. You can use them to create dashboards and alerts. See :ref:`create-detectors` for more information.
 
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+
 Get started
 ======================
 
@@ -133,8 +135,6 @@ Disk
 File system
 ^^^^^^^^^^^^^^^^^^^
 
-.. note:: The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in :new-page:`GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters>`.
-
 .. code:: yaml
 
    filesystem:
@@ -165,6 +165,13 @@ Similarly, the following example shows ``C:`` as a common mount point for Window
      include_mount_points:
        mount_points: ["C:"]
        match_type: strict
+
+To include virtual file systems, set ``include_virtual_filesystems`` to ``true``. 
+
+.. code:: yaml
+
+   filesystem:
+     include_virtual_filesystems: true
 
 Find more examples in the daemonset.yaml file in GitHub.
 
@@ -228,6 +235,8 @@ Metrics
 
 The following metrics, resource attributes, and attributes are available.
 
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+
 cpu scraper
 --------------------------
 
@@ -261,7 +270,7 @@ memory scraper
 
 .. raw:: html
 
-   <div class="metrics-component" category="included" url=https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
 
 network scraper
 --------------------------
@@ -301,6 +310,8 @@ To set resource attributes, provide them using the ``OTEL_RESOURCE_ATTRIBUTES`` 
 .. code-block:: shell
 
    export OTEL_RESOURCE_ATTRIBUTES="service.name=<name_of_service>,service.version=<version_of_service>"
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Settings
 ======================

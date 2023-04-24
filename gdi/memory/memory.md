@@ -58,6 +58,11 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/memory/metadata.yaml"></div>
 
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
+
 To emit metrics that are not default, you can add those metrics in the generic monitor-level `extraMetrics` configuration option. Metrics that are derived from specific configuration options that do not appear in the above list of metrics do not need to be added to `extraMetrics.`
 
 To see a list of metrics that will be emitted, you can run `agent-status monitors` after configuring this monitor type in a running agent instance.

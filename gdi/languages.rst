@@ -11,7 +11,7 @@ Configure application receivers for languages
    :maxdepth: 4
    :hidden:
 
-   asp-dot-net/asp-dot-net
+   monitors/asp-dot-net
    expvar/expvar
    genericjmx/genericjmx
    java-monitor/java-monitor

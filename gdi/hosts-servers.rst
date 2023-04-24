@@ -11,12 +11,12 @@ Configure application receivers for hosts and servers
    :maxdepth: 4
    :hidden:
 
-   tomcat/tomcat
-   apache/apache
-   zookeeper/zookeeper
-   chrony/chrony
-   collectd/collectd
-   collectd/collectd-cpufreq
+   monitors/apache-httpserver
+   monitors/apache-tomcat
+   monitors/apache-zookeeper
+   monitors/chrony
+   monitors/collectd
+   monitors/collectd-cpufreq
    collectd/collectd-df
    collectd/collectd-hadoopjmx
    collectd/collectd-kafka-consumer

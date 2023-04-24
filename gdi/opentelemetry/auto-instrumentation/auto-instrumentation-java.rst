@@ -14,6 +14,7 @@ Splunk OpenTelemetry Zero Configuration Auto Instrumentation for Java
 
    Linux <auto-instrumentation-java-linux>
    Kubernetes <auto-instrumentation-java-k8s>
+   Kubernetes Operator <auto-instrumentation-java-operator>
 
 Splunk OpenTelemetry (OTel) Zero Configuration Auto Instrumentation for Java automatically instruments supported Java libraries in running applications to capture distributed traces. The Splunk OpenTelemetry Collector receives the distributed traces and forwards them to Splunk Application Performance Monitoring (APM) in Splunk Observability Cloud. 
 
@@ -40,9 +41,11 @@ Zero Config Auto Instrumentation is available on Kubernetes and Linux using the 
 
 On **Linux**, the target environment is the entire Linux host, so the Java agent instruments every Java application on the host. 
 
-On **Kubernetes**, the target environment is the deployment or pod where you activated instrumentation. The Java agent instruments every Java application within the pod or deployment.
+On **Kubernetes**, the target environment is the deployment or pod where you activated instrumentation. The Java agent instruments every Java application within the pod or deployment. 
 
 In both cases you must restart the applications to start instrumentation.
+
+.. note:: You can also use the Kubernetes Operator for Auto Instrumentation. See an example in :ref:`Use case: Deploy the OpenTelemetry Operator and Java auto-instrumentation <auto-instrumentation-java-operator>`.
 
 .. raw:: html
 
@@ -60,7 +63,6 @@ Follow the instructions from the following list:
   <embed>
     <h2>Learn more</h2>
   </embed>
-
 
 - Instrumentation sends trace data to Splunk APM. Learn :ref:`what you can do with Splunk APM <wcidw-apm>`.
 - Learn more about the :ref:`features of the Splunk Distribution of OpenTelemetry Java <splunk-java-otel-dist>`.

@@ -102,7 +102,7 @@ For Linux, the formula accepts the attributes described in the following table:
      - Sets the user or group ownership for the Collector service. The user or group is created if they do not exist.
      - ``splunk-otel-collector``
    * - ``install_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for enabling Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
+     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
      - ``true``
    * - ``td_agent_version``
      -  Version of the td-agent (Fluentd) package to install 

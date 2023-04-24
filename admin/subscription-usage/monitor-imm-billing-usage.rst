@@ -8,9 +8,9 @@ Monitor Splunk Infrastructure Monitoring subscription usage
       :description: Splunk Infrastructure Monitoring administrators can view the billing and usage information for the organization. The application provides a summary and detailed reports. In addition to counts for hosts and containers, the reports also contain counts for custom metrics and high-resolution metrics.
 
 
-.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
-
 .. caution:: The information in this topic applies to organizations whose subscription plan is based on the number of hosts or metrics that Splunk Infrastructure Monitoring is monitoring for you. If your organization's usage is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`.
+
+.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
 
 Overview
 =============
@@ -19,7 +19,7 @@ Admin users in your organization can view the subscription usage information for
 
 .. _about-custom-high-res:
 
-About custom, bundled, and high-resolution metrics
+Metric categories and high-resolution metrics
 ==================================================
 
 The following sections describe the different categories of metrics in the metric time series (MTS) that Infrastructure Monitoring collects.
@@ -52,15 +52,15 @@ Differences between host, container, bundled, and custom metrics
 
 .. _about-high-res:
 
-Differences between high-resolution metrics and standard-resolution metrics
----------------------------------------------------------------------------
+Differences between standard and high-resolution metrics
+-------------------------------------------------------------------------------------
 
 .. list-table::
   :header-rows: 1
   :width: 100
   :widths: 20, 80
 
-  * - :strong:`Metrics category`
+  * - :strong:`Metric resolution`
     - :strong:`Description`
 
   * - Standard-resolution metrics
@@ -286,7 +286,6 @@ Manage overage charges
 
 When you exceed your subscription limits for a sustained period of time during a monthly usage period, Splunk Observability Cloud might charge overage fees to your organization.
 
-
 .. _calc-monthly-use:
 
 How we calculate monthly usage
@@ -312,13 +311,12 @@ In this case, Observability Cloud will charge overage fees for 10 hosts and for 
 
 However, note that paying the overage fee for 10 hosts doesn't automatically add 100 containers to your subscription limit and thus accommodate for the 50 additional containers. You must add 10 hosts to your subscription plan, as discussed in :ref:`avoid-fees`, to add support for an additional 100 containers.
 
-
 .. _detect-subscription-limits:
 
 Create a detector to receive alerts about subscription limits
 ---------------------------------------------------------------
 
-Overage fees can be as high as 110% of the monthly list price for each element for which you are over your plan's limit. To help avoid overage fees, :ref:`create a detector<create-detectors>` to proactively monitor for potential overages and receive alerts when you are nearing a subscription limit.
+Overage fees can be as high as 110% of the monthly list price for each element for which you are over your plan's limit. To help avoid overage fees, :ref:`create a detector <create-detectors>` to proactively monitor for potential overages and receive alerts when you are nearing a subscription limit.
 
 When creating the detector, you can use these metrics as signals on the :guilabel:`Alert signal` tab.
 
@@ -348,18 +346,17 @@ Also, consider using one of the following conditions on the :guilabel:`Alert con
 
 - :ref:`Resource Running Out<resource-running-out>` condition: In :guilabel:`Alert settings`, set :guilabel:`Capacity` to your limit. In :guilabel:`Alert settings`, select :guilabel:`Show advanced settings`, set the :guilabel:`Double EWMA` option to :guilabel:`Yes`.
 
-
 .. _avoid-fees:
 
 How to avoid overage fees
 -------------------------------
 
-If you are approaching or over your limit in any area, you have a few options available to avoid overage fees.
+If you are approaching or over your limit in any area, you have a few options available to avoid overage fees:
 
-You can monitor fewer hosts, send in fewer custom metrics, and so forth. However, this approach of reducing your monitoring coverage is generally not the ideal solution.
-
-Instead, Observability Cloud recommends that you correctly size your subscription, increasing your limits to match your need for hosts, containers, custom metrics, or high-resolution metrics.
-
-If you have a Standard Edition pricing plan, you can upgrade your subscription to the Enterprise Edition, which includes support for monitoring more containers, custom metrics, and high-resolution metrics per host.
-
-Another option is to purchase support for increasing your limits on any of these items. To get help with understanding which option is best for your organization, contact :ref:`support`.
+* Monitor fewer hosts, send in fewer custom metrics, and so forth. 
+* Re-evaluate the size your subscription, increasing your limits to match your need for hosts, containers, custom metrics, or high-resolution metrics.
+* If you have Enterprise Edition, you can manage costs associated with sending in data by setting limits on access tokens. See :ref:`admin-manage-usage` for more information.
+* If you have a Standard Edition pricing plan, you can upgrade your subscription to the Enterprise Edition, which includes support for monitoring more containers, custom metrics, and high-resolution metrics per host. 
+* Purchase support for increasing your limits on any of these items. 
+  
+To get help with understanding which option is best for your organization, contact :ref:`support`.

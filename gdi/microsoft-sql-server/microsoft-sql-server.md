@@ -121,6 +121,11 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/microsoft-sql-server/metrics.yaml"></div>
 
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
+
 ## Troubleshooting
 
 In some Windows-based SQL Server instances, TCP/IP has been deactivated by default. You might encounter this in a Microsoft Azure service instance. If you see error messages similar to `Cannot read handshake packet: read tcp: wsarecv: An existing connection was forcibly closed by the remote host.`, you need to explicitly activate TCP/IP for the instance.

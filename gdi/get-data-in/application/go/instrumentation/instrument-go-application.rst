@@ -119,12 +119,12 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-go-trouble
 
 .. _enable_automatic_metric_collection_golang:
 
-Enable metrics collection
+Activate metrics collection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. caution:: The OpenTelemetry Go Metrics API is a release candidate. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
 
-To enable automatic runtime metric collection, you need to set the ``OTLP_METRICS_EXPORTER`` environment variable.
+To activate automatic runtime metric collection, you need to set the ``OTLP_METRICS_EXPORTER`` environment variable.
 
 .. tabs::
 

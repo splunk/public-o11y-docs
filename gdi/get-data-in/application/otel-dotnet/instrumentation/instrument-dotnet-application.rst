@@ -143,7 +143,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-ote
 Additional steps for ASP.NET (.NET Framework)
 ---------------------------------------------
 
-To complete the instrumentation process for ASP.NET applications for IIS running on .NET Framework, add the ``TelemetryHttpModule`` module to your application's ``web.config`` file. For example:
+To complete the instrumentation process for ASP.NET applications for IIS running on .NET Framework, add the ``TelemetryHttpModule`` module to your application's web.config file. For example:
 
 .. code-block:: xml
 
@@ -153,7 +153,7 @@ To complete the instrumentation process for ASP.NET applications for IIS running
       </httpModules>
    </system.web>
 
-You can also set the ASP.NET HTTP module in the ``applicationHost.config`` file. The following example shows how to set the module for all ASP.NET applications running in Integrated Pipeline mode:
+You can also set the ASP.NET HTTP module in the applicationHost.config file. The following example shows how to set the module for all ASP.NET applications running in Integrated Pipeline mode:
 
 .. code-block:: xml
 
@@ -171,6 +171,36 @@ Configure the instrumentation
 ---------------------------------------------
 
 For advanced configuration of the .NET automatic instrumentation, like changing trace propagation formats or changing the endpoint URLs, see :ref:`advanced-dotnet-otel-configuration`.
+
+.. _windows-offline-install-otel-dotnet:
+
+Offline installation for Windows
+----------------------------------------------
+
+To install the .NET automatic instrumentation on Windows hosts that are offline, follow these steps:
+
+#. Download the following files from the :new-page:`Releases page on GitHub <https://github.com/signalfx/splunk-otel-dotnet/releases>` and copy them to the offline server:
+   
+   - ``Splunk.OTel.DotNet.psm1``
+   - ``splunk-opentelemetry-dotnet-windows.zip``
+
+#. Import the PowerShell script manually by running the following command:
+
+   .. code-block:: powershell
+   
+      # Make sure the Download path is correct
+
+      Import-Module C:\Users\Administrator\Downloads\Splunk.OTel.DotNet.psm1
+   
+   When prompted, enter ``R`` for ``Run Once``.
+
+#. Run the install command:
+
+   .. code-block:: powershell
+   
+      # Make sure the Download path is correct
+
+      Install-OpenTelemetryCore -LocalPath "C:\Users\Administrator\Downloads\splunk-opentelemetry-dotnet-windows.zip"
 
 .. _export-directly-to-olly-cloud-dotnet-otel:
 

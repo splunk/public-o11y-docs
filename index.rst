@@ -22,13 +22,13 @@ Learn how to get data in from each layer in your stack :ref:`get-started-get-dat
 
 .. rst-class:: newcard
 
-:strong:`Cloud providers`
-Integrate to collect service metrics and logs :ref:`get-started-connect`
+:strong:`OpenTelemetry`
+Install the Splunk Distribution of the OpenTelemetry Collector :ref:`otel-intro`
 
 .. rst-class:: newcard
 
-:strong:`Servers and clusters`
-Install the Splunk Distribution of OpenTelemetry Collector to collect metrics and logs :ref:`get-started-compute`
+:strong:`Cloud providers`
+Integrate to collect service metrics and logs :ref:`get-started-connect`
 
 .. rst-class:: newcard
 
@@ -68,8 +68,8 @@ Monitor data about front-end app user experiences :ref:`wcidw-rum`
 
 .. rst-class:: newcard
 
-:strong:`Log Observer`
-Query logs to identify root causes :ref:`LogObserverFeatures`
+:strong:`Log Observer Connect`
+Query logs to identify root causes :ref:`logs-intro-logconnect`
 
 .. rst-class:: newcard
 
@@ -308,32 +308,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: UNDERSTAND AND ANALYZE YOUR DATA
    :maxdepth:   3
 
-   Metrics, data points, and metric time series <metrics-and-metadata/metrics>
+   metrics-and-metadata/data-model
 
 .. toctree::
    :maxdepth:   3
 
-   metrics-and-metadata/metric-types
+   Metrics, metadata and events TOGGLE <metrics-and-metadata/metrics-landing>
 
 .. toctree::
    :maxdepth:   3
 
-   Dimensions, custom properties, and tags <metrics-and-metadata/metrics-dimensions-mts>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metric-names
-
-.. toctree::
-   :maxdepth:   3
-
-   Add context to metrics using events <metrics-and-metadata/view-data-events>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metrics-finder-metadata-catalog
+   Data tools TOGGLE <metrics-and-metadata/data-tools-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -367,16 +352,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :maxdepth:   3
-
-   Related Content <data-visualization/relatedcontent>
-
-.. toctree::
-   :maxdepth:   3
-
-   Enable Related Content <data-visualization/enablerelatedcontent>
-
-.. toctree::
    :caption: ALERTS AND DETECTORS
    :maxdepth:   3
 
@@ -390,12 +365,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   AutoDetect in Splunk Observability Cloud <alerts-detectors-notifications/autodetect>
-
-.. toctree::
-   :maxdepth:   3
-
-   List of available AutoDetect detectors <alerts-detectors-notifications/autodetect-list>
+   Use and customize AutoDetect alerts and detectors TOGGLE <alerts-detectors-notifications/autodetect/autodetect>
 
 .. toctree::
    :maxdepth:   3
@@ -420,11 +390,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Detector options <alerts-detectors-notifications/detector-options>
-
-.. toctree::
-   :maxdepth:   3
-
    Preview detector alerts <alerts-detectors-notifications/preview-detector-alerts>
 
 .. toctree::
@@ -440,22 +405,30 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:  3
 
-   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
-
-.. toctree::
-   :maxdepth:   3
-
    Mute alert notifications <alerts-detectors-notifications/mute-notifications>
 
 .. toctree::
    :maxdepth:   3
 
-   Auto-clearing alerts <alerts-detectors-notifications/auto-clearing-alerts>
+   Auto-clear alerts <alerts-detectors-notifications/auto-clearing-alerts>
 
 .. toctree::
    :maxdepth:   3
 
    Troubleshoot detectors <alerts-detectors-notifications/troubleshoot-detectors>
+
+.. toctree::
+   :maxdepth:   3
+
+   Detector options <alerts-detectors-notifications/detector-options>
+
+.. toctree::
+   :maxdepth:   3
+
+   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
+
+.. toctree::
+   :maxdepth:   3
 
 .. toctree::
    :caption: APM
@@ -606,6 +579,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Set up Splunk RUM <rum/set-up-rum>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   rum/sensitive-data-rum
 
 .. toctree::
    :maxdepth:   3
@@ -815,18 +794,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Link metadata to related resources using global data links <admin/link-metadata-to-content>
-
-.. toctree::
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
 
 .. toctree::
-   :hidden:
    :maxdepth:   3
 
    Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>

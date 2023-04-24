@@ -83,7 +83,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_ballast_size_mib``
      - The set memory ballast size in MiB. The default value is 1/3 of the value set in ``splunk_memory_total_mib``.
    * - ``install_fluentd``
-     - The option to install or manage Fluentd and dependencies for log collection. The dependencies include ``capng_c`` for enabling Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries or development tools. The default value is ``true``.
+     - The option to install or manage Fluentd and dependencies for log collection. The dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries or development tools. The default value is ``true``.
    * - ``td_agent_version``
      - The version of td-agent (Fluentd package) that is installed. The default value is ``3.3.0`` for Debian jessie, ``3.7.1`` for Debian stretch, and ``4.3.0`` for other distros.
    * - ``splunk_fluentd_config``
