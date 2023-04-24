@@ -227,7 +227,3 @@ Refer to the following table for OpenTelemetry values and their legacy equivalen
 | `vmpage_faults.minflt` (Metric) | `system.paging.faults` (Metric) with dimension name `type` equal to `minor` |
 
 You can find a table outlining OpenTelemetry values and their legacy equivalents in GitHub at <a href="https://github.com/signalfx/integrations/blob/mappings/mappings/mappings.md" target="_blank">Legacy to OTel semantics mapping table</a>.
-
-```{note}
-Mapping service can be turned off. You can view and save the mapping impact report even if you opt out of mapping. 
-```
