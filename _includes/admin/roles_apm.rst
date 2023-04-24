@@ -3,24 +3,31 @@
 .. list-table::
   :widths: 20,40,10,10,10,10
 
-  * - :strong:`Capability name`
-    - :strong:`What it lets you do`
+  * - :strong:`Capability`
     - :strong:`Admin`
     - :strong:`Power user`
     - :strong:`Read-only`
     - :strong:`Subscription usage`
 
 
-  * - WRITE_CONFIG
-    -  - Create, edit, and delete the following APM components. Functionality in the API is similarly restricted by capability.
-          - Span tags
-          - MetricSets
-          - Business Workflows
-          -  
-       - Configure options for traces and spans. 
-       - The following methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
-          - PUT
-          - POST
+  * -  Create, edit, and delete the following APM components. Functionality in the API is similarly restricted by capability.
+        - Span tags
+        - MetricSets
+        - Business Workflows
+    - Yes
+    - No
+    - No
+    - No
+
+  * - Configure options for traces and spans. 
+    - Yes
+    - No
+    - No
+    - No
+
+  * - The following methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
+      - PUT
+      - POST
     - Yes
     - No
     - No
