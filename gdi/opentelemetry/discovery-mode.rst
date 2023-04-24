@@ -43,7 +43,7 @@ Discovery mode supports the following host services and applications:
 Create sample configurations
 =========================================
 
-To create sample configurations for metric sources detected by the Collector, run the following command:
+To discover any available default metric sources detected by the Collector, run the following command on the desired monitoring host:
 
 .. code-block:: shell
 
