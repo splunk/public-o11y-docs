@@ -69,11 +69,11 @@ Use the following settings to configure the Browser RUM agent:
      - List of URLs that the agent must ignore. Matching URLs don't produce spans. You can provide two different types of rules: strings or regular expressions.
    * - ``cookieDomain``
      - String
-     - Domain used for session tracking. For example, if you have sites on both ``foo.example.com`` and ``bar.example.com``, setting ``cookieDomain`` to example.com allows both sites to use the same session identifier. See :ref:`browser-rum-cookies` for more information.
-   * - context.async
+     - Domain used for session tracking. For example, if you have sites on both ``foo.example.com`` and ``bar.example.com``, setting ``cookieDomain`` to ``example.com`` allows both sites to use the same session identifier. See :ref:`browser-rum-cookies` for more information.
+   * - ``context.async``
      - Boolean
      - Activates the asynchronous context manager. The default value is ``false``. See :ref:`browser-rum-async-traces`.
-   * - exporter.onAttributesSerializing
+   * - ``exporter.onAttributesSerializing``
      - ``(a: SpanAttributes, s?: Span) => SpanAttributes``
      - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample use case is :ref:`rum-browser-redact-pii`. 
    * - ``tracer``
@@ -137,9 +137,9 @@ The following table contains all the properties supported by the ``instrumentati
    * - ``interactions``
      - ``true``
      - Activates the collection of user interactions, such as clicks or key presses. See :ref:`browser-rum-data-user-interactions`.
-   * - interactions.eventNames
+   * - ``interactions.eventNames``
      - 
-     - Array of DOM events that the instrumentation captures as user interactions. You can access the default values by accessing the SplunkRum.DEFAULT_AUTO_INSTRUMENTED_EVENT_NAMES property. 
+     - Array of DOM events that the instrumentation captures as user interactions. You can access the default values by accessing the ``SplunkRum.DEFAULT_AUTO_INSTRUMENTED_EVENT_NAMES`` property. 
    * - ``longtask``
      - ``true``
      - Activates the collection of long tasks. See :ref:`browser-rum-data-long-tasks`.
@@ -149,7 +149,7 @@ The following table contains all the properties supported by the ``instrumentati
    * - ``postload``
      - ``true``
      - Activates the collection of resources loaded after a load event. See :ref:`browser-rum-data-resources-after-load`.
-   * - socketio.target
+   * - ``socketio.target``
      - ``'io'``
      - The global variable name to which the socket.io client is loaded, or the ``io`` object. See :ref:`browser-rum-data-socketio`.
    * - ``visibility``
@@ -235,7 +235,7 @@ The Splunk Distribution of OpenTelemetry JS for Web includes a custom sampler th
 
 You can access the session-based sampler in the following ways:
 
-- Use the SplunkRum.SessionBasedSampler export when using the Splunk CDN build.
+- Use the ``SplunkRum.SessionBasedSampler`` export when using the Splunk CDN build.
 - Use the ``SessionBasedSampler`` export when using the npm package.
 
 The session-based sampler accepts the following settings:
@@ -250,8 +250,8 @@ The session-based sampler accepts the following settings:
      - Description
    * - ``ratio``
      - ``number``
-     - 1.0
-     - Percentage of sessions reported, ranging from 0.0 to 1.0.
+     - ``1.0``
+     - Percentage of sessions reported, ranging from ``0.0`` to ``1.0``.
    * - ``sampled``
      - ``Sampler``
      - ``AlwaysOnSampler``
@@ -309,12 +309,12 @@ Traces that happen asynchronously, such as user interactions that result in a pr
 -  ``setTimeout`` with less than 34ms timeout
 -  ``setImmediate``
 -  ``requestAnimationFrame``
--  Promise.then / ``catch`` / ``finally``
+-  ``Promise.then`` / ``catch`` / ``finally``
 -  ``MutationObserver`` on ``textNode``
 -  ``MessagePort``
 -  Hash-based routers
 
-To activate asynchronous traces, set the context.async property to ``true``.
+To activate asynchronous traces, set the ``context.async`` property to ``true``.
 
 The context manager allows Splunk RUM to link requests executed when a component is first rendered to the user interaction that caused the application to add the component to the page. ``XMLHttpRequest`` events and Fetch API events through promise methods are patched to preserve the parent context, so subsequent requests link to their parents.
 

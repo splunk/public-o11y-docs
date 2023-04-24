@@ -71,7 +71,7 @@ To instrument a Ruby on Rails application, follow these steps:
       c.use_all({ 'OpenTelemetry::Instrumentation::ActiveRecord' => { enabled: false } })
       end
 
-#. To activate only Rails, you can use a single c.use statement:
+#. To activate only Rails, you can use a single ``c.use`` statement:
 
    .. code:: ruby
 
