@@ -135,7 +135,7 @@ To bundle the Browser RUM agent directly with your application, use the ``@splun
 
 Follow these steps to instrument and configure Splunk RUM using npm:
 
-#. Enter the following command to install the Browser RUM agent and add it to your ``package.json`` file:
+#. Enter the following command to install the Browser RUM agent and add it to your package.json file:
 
    .. code-block:: shell
 
@@ -194,7 +194,7 @@ You can customize the data intake for the Browser RUM agent to reduce noise and 
 Opt out of error.message collection
 ------------------------------------------------
 
-To avoid collecting ``error.message`` responses, deactivate the errors instrumentation as in the following example:
+To avoid collecting error.message responses, deactivate the errors instrumentation as in the following example:
 
 .. code-block:: html
    :emphasize-lines: 7
@@ -262,7 +262,7 @@ The versioning of the Browser RUM agent follows semantic versioning rules. To ha
 
 * Use the ``LATEST`` version to use the latest version of the Browser RUM agent. This might not be suitable for manual instrumentation, as breaking API changes might occur between major version changes.
 * Use ``MAJOR`` versions, for example ``v1``, if you want to receive new features automatically while keeping backward compatibility with the API. This is the default for all production deployments, as well as for npm installations.
-* Use ``MINOR`` versions, for example ``v1.1``, to receive bug fixes while not receiving new features automatically.
+* Use ``MINOR`` versions, for example v1.1, to receive bug fixes while not receiving new features automatically.
 * Use ``PATCH`` versions, for example, ``v1.2.1``, to pin a specific version of the agent for your application.
 
 The versions of the agent are included in URLs as a designated token:

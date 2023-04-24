@@ -23,7 +23,7 @@ The Collector supports the following processor architectures and operating syste
      - 
         * Linux packages (deb, rpm, and tar.gz)
         * Linux binary file (``otelcol_linux_amd64``)
-        * Windows installer and binary file (``otelcol_windows_amd64.exe``)
+        * Windows installer and binary file (otelcol_windows_amd64.exe)
         * Docker image. See :ref:`Docker image for Linux <linux-docker>` and :ref:`Docker image for Windows <windows-docker>`
      - See :ref:`compatible components <x86_64-AMD64-ARM64-yes>`
    * - ARM64

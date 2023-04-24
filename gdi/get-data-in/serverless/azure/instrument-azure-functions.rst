@@ -77,7 +77,7 @@ After adding the dependencies, initialize OpenTelemetry in your function:
 
    .. group-tab:: Isolated worker process function
 
-      Add startup initialization in the ``Program.cs`` file:
+      Add startup initialization in the Program.cs file:
 
       .. code-block:: csharp
 
