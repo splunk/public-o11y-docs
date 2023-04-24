@@ -25,6 +25,12 @@ Data point ingestion metrics
    * - ``sf.org.datapointsTotalCountByToken``
      - One value per token, number of data points Infrastructure Monitoring ingested
 
+   * - ``sf.org.grossDatapointsReceived``
+     - Reserved for Infrastructure Monitoring internal use only.
+
+   * - ``sf.org.grossDatapointsReceivedByToken``
+     - Reserved for Infrastructure Monitoring internal use only.
+
 Data point aggregation metrics
 ----------------------------------------
 
@@ -55,7 +61,7 @@ Data point dropping metrics
    * - ``sf.org.numDatapointsDroppedMetricRuleset``
      - Number of data points metrics pipeline management dropped based on configured rules in your organization
     
-   * - ``sf.org.numReceivedDatapointsAggregatedByToken``
+   * - ``sf.org.numDatapointsDroppedMetricRulesetByToken``
      - One value per token, number of data points metrics pipeline management dropped based on configured rules 
     
    * - ``sf.org.numAggregatedDatapointsDroppedThrottle``
@@ -88,6 +94,13 @@ Data point dropping metrics
    * - ``sf.org.numDatapointsDroppedInvalidByToken``
      - Number of data points dropped for a specific access token because they didn't follow documented guidelines for data points. For example, the metric name was too long, the metric name included unsupported characters, or the data point contained no values.
   
+   * - ``sf.org.numDatapointsDroppedBatchSize``
+     - Number of data points dropped because a single request contained more than 100,000 data points. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
+  
+   * - ``sf.org.numDatapointsDroppedBatchSizeByToken``
+     - One value per token, number of data points dropped because a single request contained more than 100,000 data points. In this scenario, Observability Cloud drops data points because it perceives sending more than 100,000 data points in a single request as excessive.
+  
+  
 
 Data point retention metrics
 ----------------------------------------
@@ -102,7 +115,7 @@ Data point retention metrics
    * - ``sf.org.numDatapointsReceived``
      - One value per metric type, each representing the number of data points that Infrastructure Monitoring received and processed. The sum of the values represents the total number of data points you sent to Infrastructure Monitoring, minus any data points that weren't accepted because you exceeded a limit. You can have up to three metric time series (MTS) for this metric. 
     
-   * - ``sf.org.numReceivedDatapointsAggregatedByToken``
+   * - ``sf.org.numDatapointsReceivedByToken``
      - One value per metric type per token, each representing the number of data points Infrastructure Monitoring received and processed. The sum of values for a token is the total number of data points you sent to Infrastructure Monitoring, minus the number of data points that Infrastructure Monitoring didn't accept because you exceeded a limit. You can have up to three MTS for this metric. 
 
 
