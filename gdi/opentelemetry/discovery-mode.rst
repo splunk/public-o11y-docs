@@ -34,7 +34,6 @@ Discovery mode supports the following host services and applications:
 
    * - MySQL
      - Smart Agent with MySQL monitor type. See :ref:`mysql`.
-     - ``smartagent-postgresql.discovery.yaml`` 
 
    * - PostgreSQL
      - :ref:`postgresql-receiver`
