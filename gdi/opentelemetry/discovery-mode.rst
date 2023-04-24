@@ -14,9 +14,18 @@ Discovery mode of the Collector
 Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
 a configuration based on the results. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, it creates a Collector configuration you can either modify or use.
 
-The advantage of using discovery mode is that you don't need to manually configure the Collector for the supported metric sources. This is helpful in environments when services might be activated dynamically, for example when scaling your infrastructure.
+The advantage of using discovery mode is that you don't need to manually configure the OpenTelemetry Collector for the supported metric sources. This is helpful in environments when services might be activated dynamically, for example when scaling your infrastructure based on existing demand.
 
 .. note:: Discovery mode is available starting from version 0.72.0 and higher of the Splunk Distribution of the OpenTelemetry Collector.
+
+How discovery mode works
+==========================================
+
+When you run the Collector in discovery mode, the Collector tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions. 
+
+For any receiver that successfully retrieves metrics, the Collector translates the discovery configuration to a receiver creator instance with the known working rules. At the same, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
+
+For any receiver that can receive data or communicate with the target metric service, discovery mode provides guidance on which properties to set, or what extensions or settings to configure on the application to be able to successfully retrieve data for generating telemetry.
 
 Supported host services and applications
 =========================================
@@ -37,12 +46,11 @@ Discovery mode supports the following host services and applications:
 
    * - PostgreSQL
      - :ref:`postgresql-receiver`
-     - ``smartagent-postgresql.discovery.yaml``
 
-Create sample configurations
+Discover active metric sources
 =========================================
 
-To discover any available default metric sources detected by the Collector, run the following command on the desired monitoring host:
+To discover any active and supported metric sources, run the following command on the desired monitoring host:
 
 .. code-block:: shell
 
@@ -61,6 +69,8 @@ If discovery mode identifies issues, the Collector shows status messages for ful
 
 If you want to apply the configuration directly to the Collector, remove the ``--dry-run`` option.
 
+.. note:: By default, the duration of the discovery process is 10 seconds, which you can increase by setting the ``SPLUNK_DISCOVERY_DURATION`` environment variable.
+
 Customize discovery settings
 ==========================================
 
@@ -70,7 +80,7 @@ You can provide your own discovery configuration to modify settings or adjust th
 
 To create custom configurations, follow these steps:
 
-#. Navigate to the ``config.d`` folder in ``/etc/otel/collector/config.d`` for Linux or ``\opt\td-agent\etc\td-agent\config.d`` on Windows.
+#. Navigate to the ``config.d`` folder in ``/etc/otel/collector/config.d`` on Linux.
 #. Create a ``<name>.discovery.yaml`` file and place it inside a subdirectory of ``config.d``, for example ``observers`` or ``receivers`` where ``<name>`` is the name of the component you want to use.
 #. Edit the ``<name>.discovery.yaml`` files to add the desired configuration. For example, if you're adding a receiver, discovery mode loads the content inside the ``receivers`` object of the Collector configuration.
 
@@ -100,15 +110,6 @@ To define a custom directory for discovery settings, use the ``--config-dir`` op
 .. code-block:: text
 
     otelcol --discovery --config-dir <custom_path>
-
-How discovery mode works
-==========================================
-
-The discovery mode creates temporary discovery receiver instances. The discovery receiver instances wrap the receiver creator and use OpenTelemetry observer extensions to detect metric sources on the host capable of sending metrics to Splunk Observability Cloud. See :ref:`receiver-creator-receiver` for more information.
-
-When you run the Collector in discovery mode, the Collector uses both built-in and custom configurations to run observer extensions for a variety of services. If successful, the discovery mode embeds the required settings to the Collector configuration so as to collect and send metrics from the confirmed metric sources.
-
-If some of the detected services throw a ``partial`` status, the Collector provides guidance on how to complete the configuration for collecting metrics from the detected source. By default, the duration of the discovery process is 10 seconds, which you can increase by setting the ``SPLUNK_DISCOVERY_DURATION`` environment variable.
 
 Troubleshooting
 ======================
