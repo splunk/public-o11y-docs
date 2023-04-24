@@ -107,8 +107,9 @@ The following table describes the four methods for remapping log fields:
 
    * - Observability Cloud Logs Pipeline Management
      - Create and apply a field copy processor. See the
-       :strong:`Field copy processors` section in
-       :ref:`logs-processors` to learn how.
+       :strong:`Field copy processors` section in 
+       :ref:`logs-processors` to learn how. 
+       Note: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can use this method. If you are using Log Observer Connect, use one of other methods in this table.
 
    * - Log Field Aliasing
      - Create and activate a field alias. See :ref:`logs-alias` to learn how. Learn when to use Log Field Aliasing in the next section.
