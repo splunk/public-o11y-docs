@@ -20,9 +20,9 @@ You can change the settings of the Splunk Distribution of OpenTelemetry .NET in 
 
 - For .NET applications, set environment variables. On Windows, set them in the process scope unless you want to activate automatic instrumentation globally for all .NET applications.
 
-- For .NET Framework applications running as Windows services, you can add settings in the ``appSettings`` block of the ``app.config`` file when supported or set environment variables using the Windows Registry.
+- For .NET Framework applications running as Windows services, you can add settings in the ``appSettings`` block of the app.config file when supported or set environment variables using the Windows Registry.
 
-- For ASP.NET applications, add settings in the ``appSettings`` block of the ``web.config`` file. For example:
+- For ASP.NET applications, add settings in the ``appSettings`` block of the web.config file. For example:
 
    .. code-block:: xml
 
@@ -37,7 +37,7 @@ You can change the settings of the Splunk Distribution of OpenTelemetry .NET in 
    - Add the ``<environmentVariables>`` element in ``applicationHost.config`` for your application pools.
    - Set the environment variables for ``W3SVC`` and ``WAS``.
 
-- For ASP.NET Core applications, add ``<environmentVariable>`` elements inside the ``<aspNetCore>`` block of your ``web.config`` file.
+- For ASP.NET Core applications, add ``<environmentVariable>`` elements inside the ``<aspNetCore>`` block of your web.config file.
 
 .. _main-dotnet-otel-agent-settings:
 
@@ -56,7 +56,7 @@ The following settings are common to most instrumentation scenarios:
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Activated by default. Adds server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-dotnet-otel`. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
-     - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Can't be set using the ``web.config`` or ``app.config`` files.
+     - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_TRACES_ENABLED``
      - Traces are collected by default. To deactivate trace collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
    * - ``OTEL_DOTNET_AUTO_METRICS_ENABLED``
@@ -219,9 +219,9 @@ The following settings control the internal logging of the Splunk Distribution o
    * - Setting
      - Description
    * - ``OTEL_DOTNET_AUTO_DEBUG``
-     - Activates file logging. The default value is ``false``. Can't be set using the ``web.config`` or ``app.config`` files.
+     - Activates file logging. The default value is ``false``. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_LOG_DIRECTORY``
-     - Directory of the .NET tracer logs. The default value is ``/var/log/opentelemetry/dotnet`` for Linux, and ``%ProgramData%\OpenTelemetry .NET AutoInstrumentation\logs`` for Windows. Can't be set using the ``web.config`` or ``app.config`` files.
+     - Directory of the .NET tracer logs. The default value is ``/var/log/opentelemetry/dotnet`` for Linux, and ``%ProgramData%\OpenTelemetry .NET AutoInstrumentation\logs`` for Windows. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_TRACES_CONSOLE_EXPORTER_ENABLED``
      - Whether the traces console exporter is activated. The default value is ``false``.
    * - ``OTEL_DOTNET_AUTO_METRICS_CONSOLE_EXPORTER_ENABLED``
