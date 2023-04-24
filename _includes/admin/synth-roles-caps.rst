@@ -11,7 +11,7 @@
     - Yes
     - Yes
     - No
-    - test
+    - No
 
   * - :strong:`Update test`
     - Yes
@@ -23,7 +23,7 @@
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
   
   * - :strong:`Delete test`
     - Yes
@@ -40,8 +40,8 @@
   * - :strong:`Read private location`
     - Yes
     - Yes
-    - No
-    - No
+    - Yes
+    - Yes
 
 
   * - :strong:`Delete private location`
