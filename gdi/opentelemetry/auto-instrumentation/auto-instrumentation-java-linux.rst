@@ -328,7 +328,7 @@ Use one of the following options to deactivate automatic instrumentation:
 
 - Set the ``JAVA_TOOL_OPTIONS`` environment variable to some value that you want the JVM to pick up.
 
-- Delete or move the ``instrumentation.conf`` configuration file.
+- Delete or move the instrumentation.conf configuration file.
 
 .. include:: /_includes/gdi/next-steps.rst
 

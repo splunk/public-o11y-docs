@@ -173,20 +173,20 @@ For more information on the default service name, see :ref:`dotnet-default-servi
 Instrument an ASP.NET application deployed on IIS
 --------------------------------------------------------------------
 
-To instrument an ASP.NET application running on IIS, install the instrumentation and edit the ``web.config`` file to add the following settings. See :ref:`configuration-methods-dotnet` for more information.
+To instrument an ASP.NET application running on IIS, install the instrumentation and edit the web.config file to add the following settings. See :ref:`configuration-methods-dotnet` for more information.
 
 .. tabs::
 
    .. tab:: ASP.NET 4.x and higher
 
-      Add the following settings inside the ``<appSettings>`` block of your ``web.config`` file:
+      Add the following settings inside the ``<appSettings>`` block of your web.config file:
 
       .. code-block:: xml
 
          <add key="SIGNALFX_SERVICE_NAME" value="service-name" />
          <add key="SIGNALFX_ENV" value="environment-name" />
 
-      After applying the changes to the ``web.config`` file, restart IIS by running the following command:
+      After applying the changes to the web.config file, restart IIS by running the following command:
 
       .. code-block:: powershell
 
@@ -196,7 +196,7 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
 
    .. tab:: ASP.NET Core
 
-      Add the following settings inside the ``<aspNetCore>`` block of your ``web.config`` file:
+      Add the following settings inside the ``<aspNetCore>`` block of your web.config file:
 
       .. code-block:: xml
 
@@ -207,7 +207,7 @@ To instrument an ASP.NET application running on IIS, install the instrumentation
             <environmentVariable name="SIGNALFX_ENV" value="environment-name" />
          </environmentVariables>
 
-      After applying the changes to the ``web.config`` file, restart IIS by running the following command:
+      After applying the changes to the web.config file, restart IIS by running the following command:
 
       .. code-block:: powershell
 

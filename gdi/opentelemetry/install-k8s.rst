@@ -136,7 +136,7 @@ For example:
 Set Helm using a YAML file
 --------------------------------
 
-You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named ``my_values.yaml``, run the following command to deploy the Helm chart:
+You can also set Helm values as arguments using a YAML file. For example, after creating a YAML file named my_values.yaml, run the following command to deploy the Helm chart:
 
 .. code-block:: bash
 
@@ -227,7 +227,7 @@ You can create your own manifest YAML files with customized parameters using ``h
 
    helm template --namespace default --set cloudProvider='aws' --set distribution='openshift' --set splunkObservability.accessToken='KUwtoXXXXXXXX' --set clusterName='my-openshift-EKS-dev-cluster' --set splunkObservability.realm='us1' --set gateway.enabled='false' --output-dir <rendered_manifests_dir> --generate-name splunk-otel-collector-chart/splunk-otel-collector 
 
-If you prefer, you can update the ``values.yaml`` file first.
+If you prefer, you can update the values.yaml file first.
 
 .. code-block:: bash
 
