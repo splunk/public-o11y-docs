@@ -65,7 +65,7 @@ If you want to apply the configuration directly to the Collector, remove the ``-
 Customize discovery settings
 ==========================================
 
-By default, discovery mode reads the built-in configuration provided by the Collector, which is located inside the ``embed.FS`` directory created at runtime.
+By default, discovery mode reads the built-in configuration provided by the Collector executable.
 
 You can provide your own discovery configuration to modify settings or adjust the existing configuration in case of a partial discovery status.
 
