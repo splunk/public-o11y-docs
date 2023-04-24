@@ -34,12 +34,11 @@ Discovery mode supports the following host services and applications:
 
 .. list-table::
    :width: 100%
-   :widths: 20 40 40
+   :widths: 30 70
    :header-rows: 1
 
    * - Service
      - Receiver
-     - Configuration
 
    * - MySQL
      - Smart Agent with MySQL monitor type. See :ref:`mysql`.
