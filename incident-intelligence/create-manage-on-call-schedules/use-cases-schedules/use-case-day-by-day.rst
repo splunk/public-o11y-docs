@@ -20,8 +20,8 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
    <embed>
       <ol>
             <li><a href="#ii-create-schedule">Sklyer creates a schedule for the checkout service</a>
-            <li><a href="#ii-create-mwf-shift">Skyler creates a Monday, Wednesday, and Friday shift</a></li>
-            <li><a href="#ii-create-trss-shift">Skyler creates a Tuesday,Thursday, Saturday, and Sunday shift</a></li>
+            <li><a href="#ii-create-mwf-shift">Skyler creates a day-by-day shift for Monday, Wednesday, and Friday coverage</a></li>
+            <li><a href="#ii-create-trss-shift">Skyler creates a day-by-day shift for Tuesday,Thursday, Saturday, and Sunday coverage</a></li>
             <li><a href="#ii-add-incident-workflow">Skyler adds the schedule to the incident workflow in the incident policy for the checkout service</a></li>
             <li><a href="#ii-enable-incident-policy">Skyler enables the checkout service</a></li>
       </ol>
@@ -33,21 +33,39 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
       <h2 id="ii-create-schedule">Sklyer creates a schedule for the checkout service</h2>
    </embed>
 
+Skyler creates a new schedule for the checkout service and names it accordingly. Skyler adds a Checkout teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
+
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-create-schedule.png
+      :width: 50%
+      :alt: Create a schedule for the checkout service.
+
 .. raw:: html
 
    <embed>
-      <h2 id="ii-create-mwf-shift">Skyler creates a Monday, Wednesday, and Friday shift</h2>
+      <h2 id="ii-create-mwf-shift">Skyler creates a day-by-day shift for Monday, Wednesday, and Friday coverage</h2>
    </embed>
 
+Skyler creates a M,W,F shift in the schedule for the checkout service. Using the day-by-day shift type Skyler creates the every-other-day coverage they need Day-by-day shifts are designed to span 24 hours or fewer on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
+
+Skyler selects a shift handoff of three, which and adds the SREs as responders. 
+
+.. image:: /_images/incident-intelligence/Business-Hours-Shift.png
+      :width: 50%
+      :alt: Business-hours shift in web service primary schedule.
+
+Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder, takes over.
+
+.. image:: /_images/incident-intelligence/Business-Hours-Schedule-Preview.png
+      :width: 99%
+      :alt: Schedule preview for business-hours.
+
 .. raw:: html
 
    <embed>
-      <h2 id="ii-create-trss-shift">Skyler creates a Tuesday,Thursday, Saturday, and Sunday shift</h2>
+      <h2 id="ii-create-trss-shift">Skyler creates a day-by-day shift for Tuesday,Thursday, Saturday, and Sunday coverage</h2>
    </embed>
 
 Day-by-day shifts are configured to span 24 hours on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
-
-Day-by-day shifts let you define coverage for specific days of the week. For example, one responder covers Monday-Friday from 8 AM to 5 PM for one week. Follow these steps to set up this example.
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
 #. Select the :guilabel:`On-call schedules` tab.

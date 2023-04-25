@@ -43,7 +43,7 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 
 Skyler creates a new schedule for primary coverage for the web application service and names it accordingly: Web application - primary. Skyler adds a WebApp teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
 
-.. image:: /_images/incident-intelligence/Create_Schedule.png
+.. image:: /_images/incident-intelligence/use-cases/Create_Schedule.png
       :width: 50%
       :alt: Create a primary schedule for the web application.
 
@@ -56,13 +56,13 @@ Skyler creates a new schedule for primary coverage for the web application servi
 Skyler creates a business-hours shift in the primary schedule for the web application. Using the day-by-day shift type Skyler creates the nightly gap in coverage they need. Skyler selects a shift handoff of five and adds the SREs as responders. 
 
 
-.. image:: /_images/incident-intelligence/Business-Hours-Shift.png
+.. image:: /_images/incident-intelligence/use-cases/Business-Hours-Shift.png
       :width: 50%
       :alt: Business-hours shift in web service primary schedule.
 
 Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder, takes over.
 
-.. image:: /_images/incident-intelligence/Business-Hours-Schedule-Preview.png
+.. image:: /_images/incident-intelligence/use-cases/Business-Hours-Schedule-Preview.png
       :width: 99%
       :alt: Schedule preview for business-hours.
 
@@ -74,19 +74,19 @@ Using the schedule preview, Skyler verifies that the business-hours shift is con
 
 Next, Skyler creates a weeknights shift in the primary schedule for the web application. Using the day-by-day shift type Skyler creates the daily gap in coverage they need. Skyler selects a shift handoff of four, as there are only four weeknights to cover since Friday is covered by the weekends shift. Finally, Skyler adds the SREs as responders. 
 
-.. image:: /_images/incident-intelligence/Weeknights-Shift.png
+.. image:: /_images/incident-intelligence/use-cases/Weeknights-Shift.png
       :width: 50%
       :alt: Weeknights shift in web service primary schedule.
 
 Using the schedule preview, Skyler notices that the way the responders are ordered in the shifts, there are responders who have a weeknights shift that immediately follows their business-hours shift. 
 
-.. image:: /_images/incident-intelligence/Back-To-Back-Shifts.png
+.. image:: /_images/incident-intelligence/use-cases/Back-To-Back-Shifts.png
       :width: 99%
       :alt: Schedule preview with back-to-back responder shifts.
 
 Skyler reorders the responders so responders have a week off between their business-hours shift and their weeknights shift and uses the schedule preview to confirm that the responders are ordered appropriately.
 
-.. image:: /_images/incident-intelligence/Reordered-Responders.png
+.. image:: /_images/incident-intelligence/use-cases/Reordered-Responders.png
       :width: 99%
       :alt: Schedule preview with reordered responders.
 
@@ -98,13 +98,13 @@ Skyler reorders the responders so responders have a week off between their busin
 
 Finally, Skyler creates a weekends shift in the primary schedule for the web application service. For the weekend shift Skyler uses the week-by-week shift type, as there is no gap in coverage, and selects one for the shift handoff.
 
-.. image:: /_images/incident-intelligence/Weekends-Shift.png
+.. image:: /_images/incident-intelligence/use-cases/Weekends-Shift.png
       :width: 50%
       :alt: Weekends shift in web service primary schedule.
 
 Skyler wants the responder for the weeknights shift to be the same as the subsequent weekends shift. Skyler uses the schedule preview to confirm that the responders are in the correct order to achieve this.
 
-.. image:: /_images/incident-intelligence/Weekends-Shift.png
+.. image:: /_images/incident-intelligence/use-cases/Weekends-Shift.png
       :width: 50%
       :alt: Weekends shift schedule preview.
 
