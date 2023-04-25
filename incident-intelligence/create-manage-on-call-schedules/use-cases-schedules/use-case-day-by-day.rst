@@ -6,6 +6,45 @@ Use case: Create every-other-day coverage using the day-by-day shift type
 .. meta::
    :description: Schedule use case for every-other-day coverage in Incident Intelligence.
 
+Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create a on-call schedule for the checkout service SREs with the following coverage needs:
+
+- Skyler needs coverage for the checkout service Monday through Sunday.
+- Skyler wants to schedule his SREs so that they are on call every other day. He wants to create 2 rotations:
+   - Rotation 1: Monday, Wednesday, and Friday 24x7
+   - Rotation 2: Tuesday, Thursday, Saturday, and Sunday 24x7
+
+For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
+
+.. raw:: html
+
+   <embed>
+      <ol>
+            <li><a href="#ii-create-schedule">Sklyer creates a schedule for the checkout service</a>
+            <li><a href="#ii-create-mwf-shift">Skyler creates a Monday, Wednesday, and Friday shift</a></li>
+            <li><a href="#ii-create-trss-shift">Skyler creates a Tuesday,Thursday, Saturday, and Sunday shift</a></li>
+            <li><a href="#ii-add-incident-workflow">Skyler adds the schedule to the incident workflow in the incident policy for the checkout service</a></li>
+            <li><a href="#ii-enable-incident-policy">Skyler enables the checkout service</a></li>
+      </ol>
+   </embed>
+
+.. raw:: html
+
+   <embed>
+      <h2 id="ii-create-schedule">Sklyer creates a schedule for the checkout service</h2>
+   </embed>
+
+.. raw:: html
+
+   <embed>
+      <h2 id="ii-create-mwf-shift">Skyler creates a Monday, Wednesday, and Friday shift</h2>
+   </embed>
+
+.. raw:: html
+
+   <embed>
+      <h2 id="ii-create-trss-shift">Skyler creates a Tuesday,Thursday, Saturday, and Sunday shift</h2>
+   </embed>
+
 Day-by-day shifts are configured to span 24 hours on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
 
 Day-by-day shifts let you define coverage for specific days of the week. For example, one responder covers Monday-Friday from 8 AM to 5 PM for one week. Follow these steps to set up this example.
@@ -30,3 +69,38 @@ Day-by-day shifts let you define coverage for specific days of the week. For exa
 
 You now have a schedule with a day-by-day shift that includes coverage for business hours Monday to Friday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. For an example of a multi-shift schedule, see the next scenario
 
+.. raw:: html
+
+   <embed>
+      <h2 id="ii-add-incident-workflow">Skyler adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service</h2>
+   </embed>
+
+Skyler adds the primary and secondary schedules as the first and second step in the incident workflow for the incident policy for the web application service. 
+
+.. image:: /_images/incident-intelligence/add_to_incident_workflow.png
+      :width: 99%
+      :alt: Add schedules as first and second steps in the incident workflow within the web application service incident policy.
+
+.. raw:: html
+
+   <embed>
+      <h2 id="ii-enable-incident-policy">Skyler enables the web application service</h2>
+   </embed>
+
+With the schedules configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedules.
+
+
+.. raw:: html
+
+   <embed>
+      <h2>Summary</h2>
+   </embed>
+
+.. raw:: html
+
+   <embed>
+      <h2>Learn more</h2>
+   </embed>
+
+* For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
+* For steps to create an incident policy, including steps for incident workflows, see :ref:`ii-create-configure-incident-policies`.
