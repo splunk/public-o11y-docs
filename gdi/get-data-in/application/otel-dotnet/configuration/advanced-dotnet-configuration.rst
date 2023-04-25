@@ -66,7 +66,7 @@ The following settings are common to most instrumentation scenarios:
    * - ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED``
      - Activates the OpenTracing tracer. The default value is ``false``. See :ref:`migrate-signalfx-dotnet-to-dotnet-otel` for more information.
    * - ``OTEL_DOTNET_AUTO_NETFX_REDIRECT_ENABLED``
-     - Activates automatic redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. 
+     - Activates automatic redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_FLUSH_ON_UNHANDLEDEXCEPTION``
      - Controls whether the telemetry data is flushed when an ``AppDomain.UnhandledException`` event is raised. Set to ``true`` when experiencing missing telemetry at the same time of unhandled exceptions.	
 
@@ -185,8 +185,6 @@ The following settings control which instrumentations are activated. See :ref:`d
      - Deactivates all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_LOGS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
      - Activates or deactivates a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable.
-   * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
-     - List of bytecode instrumentations JSON configuration file paths, delimited by the platform-specific path separator (``;`` on Windows, ``:`` on Linux). For example: ``%ProfilerDirectory%/integrations.json``.
 
 .. _server-trace-information-dotnet-otel:
 
@@ -218,8 +216,8 @@ The following settings control the internal logging of the Splunk Distribution o
 
    * - Setting
      - Description
-   * - ``OTEL_DOTNET_AUTO_DEBUG``
-     - Activates file logging. The default value is ``false``. Can't be set using the web.config or app.config files.
+   * - ``OTEL_LOG_LEVEL``
+     - Sets the logging level for instrumentation log messages. Possible values are ``none``, ``error``, ``warn``, ``info``, and ``debug``. The default value is ``info``. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_LOG_DIRECTORY``
      - Directory of the .NET tracer logs. The default value is ``/var/log/opentelemetry/dotnet`` for Linux, and ``%ProgramData%\OpenTelemetry .NET AutoInstrumentation\logs`` for Windows. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_TRACES_CONSOLE_EXPORTER_ENABLED``
@@ -238,15 +236,13 @@ Changing the default service name
 
 By default, the Splunk Distribution of OpenTelemetry .NET retrieves the service name by trying the following steps until it succeeds:
 
-#. For ASP.NET applications, the default service name is ``SiteName[/VirtualPath]``.
-
-#. For other applications, the default service name is the name of the entry assembly. For example, the name of your .NET project file.
+#. The default service name is the name of the entry assembly. For example, the name of your .NET project file. For ASP.NET applications, the default service name is ``SiteName[/VirtualPath]``.
 
 #. If the entry assembly is not available, the instrumentation tries to use the current process name. The process name can be ``dotnet`` if launched directly using an assembly. For example, ``dotnet InstrumentedApp.dll``.
 
 If all the steps fail, the service name defaults to ``unknown_service``. 
 
-To override the default service name, set the ``OTEL_SERVICE_NAME`` environment variable.
+.. note:: To override the default service name, set the ``OTEL_SERVICE_NAME`` environment variable.
 
 .. _manual-dotnet-envvars:
 
@@ -282,8 +278,6 @@ When deploying the instrumentation manually, you need to make sure to set the fo
            - ``$installationLocation\net\OpenTelemetry.AutoInstrumentation.StartupHook.dll``
          * - ``OTEL_DOTNET_AUTO_HOME``
            - ``$installationLocation``
-         * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
-           - ``$installationLocation\integrations.json``
          * - ``OTEL_DOTNET_AUTO_PLUGINS``
            - ``Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation``
 
@@ -306,8 +300,6 @@ When deploying the instrumentation manually, you need to make sure to set the fo
            - ``$installationLocation\win-x86\OpenTelemetry.AutoInstrumentation.Native.dll``
          * - ``OTEL_DOTNET_AUTO_HOME``
            - ``$installationLocation``
-         * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
-           - ``$installationLocation\integrations.json``
          * - ``OTEL_DOTNET_AUTO_PLUGINS``
            - ``Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation``
 
@@ -334,8 +326,6 @@ When deploying the instrumentation manually, you need to make sure to set the fo
            - ``$INSTALL_DIR\net\OpenTelemetry.AutoInstrumentation.StartupHook.dll``
          * - ``OTEL_DOTNET_AUTO_HOME``
            - ``$INSTALL_DIR``
-         * - ``OTEL_DOTNET_AUTO_INTEGRATIONS_FILE``
-           - ``$INSTALL_DIR\integrations.json``
          * - ``OTEL_DOTNET_AUTO_PLUGINS``
            - ``Splunk.OpenTelemetry.AutoInstrumentation.Plugin, Splunk.OpenTelemetry.AutoInstrumentation``
 

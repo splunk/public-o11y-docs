@@ -39,7 +39,7 @@ Activate debug logging
 
 You can activate debug logging to obtain more information about the issue:
 
-#. Set the ``OTEL_DOTNET_AUTO_DEBUG`` environment variable to ``true`` before starting your instrumented application. 
+#. Set the ``OTEL_LOG_LEVEL`` environment variable to ``debug`` before starting your instrumented application. 
 
 #. Run your application or service and generate some activity.
 
