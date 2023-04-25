@@ -22,6 +22,7 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
     #. :ref:`ii-create-weekends-shift`
 #. :ref:`Create a schedule for secondary coverage with a 24x7 shift <ii-create-secondary-schedule>`
 #. :ref:`Add the schedules to the incident workflow for the web application service <ii-add-incident-workflow>`
+#. :re:`ii-enable-incident-policy`
 
 .. _ii-create-primary-schedule:
 
@@ -94,49 +95,41 @@ Skyler wants the responder for the weeknights shift to be the same as the subseq
 
 .. _ii-create-secondary-schedule:
 
-Skylar creates a schedule for secondary coverage with a 24x7 shift
+Skyler creates a schedule for secondary coverage with a 24x7 shift
 ======================================================================
 
-Follow these steps to create your secondary schedule:
+Skyler creates a new schedule for secondary coverage for the web application service and names it accordingly: Web application - secondary. Skyler adds the WebApp teams tag again to make the schedule easier to find. The teams tag also sorts the list of responders so they’re easier to find and select when Skyler adds them to a shift later.
 
-#. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select the :guilabel:`On-call schedules` tab.
-#. Select :guilabel:`Create new schedule`.
-#. Select the pencil icon to edit the schedule name. For this example, name the schedule "Heroes team, web application service, secondary". Select the checkmark icon to save your schedule name. 
-#. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears. 
-#. Enter a shift name. For this example, enter "24x7".
-#. For the shift start date select the Monday that follows the Monday you selected for your business hours shift.
-#. Use the timezone picker to select the timezone for the coverage.
-#. Under :guilabel:`Define shift coverage`, select :guilabel:`Week-by-week`.
-#. Select :guilabel:`Mondays` at :guilabel:`08:00 AM` in the :guilabel:`Starts on` drop-down lists.
-#. Select :guilabel:`Mondays` at :guilabel:`08:00 AM` in the :guilabel:`Ends on` drop-down lists.
-#. Under :guilabel:`Customize shift handoff`, select :guilabel:`1` to have the same responder cover one week. 
-#. Under :guilabel:`Add responders`, add one or more responders to the shift. The first responder you add to the shift is on-call on the start date you selected in step 2. If there is an overlap between your primary and secondary responders, use the schedule preview for your primary schedule to ensure each responder has enough time off between their on-call shifts. 
-    #. Enter responder names and select them when they appear. 
-    #. Drag responders in the list to reorder.
-#. Select :guilabel:`Save shift`.
+.. image:: /_images/incident-intelligence/Create_secondary_schedule.png
+      :width: 50%
+      :alt: Create a secondary schedule for the web application.
+
+Skyler creates a 24x7 shift within the schedule for secondary coverage
+-------------------------------------------------------------------------
+
+Skyler creates a 24x7 shift in the secondary schedule for the web application. Using the week-by-week shift type Skyler creates 24x7 as secondary coverage for one week Monday through Sunday. Skyler selects a shift handoff of 1 and adds the SREs as responders.
+
+.. image:: /_images/incident-intelligence/24x7_shift.png
+      :width: 50%
+      :alt: 24x7 shift in web service secondary schedule.
 
 .. _ii-add-incident-workflow:
 
-Skylar adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service
+Skyler adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service
 =================================================================================================================================
 
-Your last step for this scenario is to add your primary and secondary schedules to the incident workflow in the incident policy for your web application service. 
+Skyler adds the primary and secondary schedules as the first and second step in the incident workflow for the incident policy for the web application service. 
 
-#. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select the :guilabel:`Services` tab.
-#. Locate your web application service and select :guilabel:`Edit` from the :guilabel:`Actions` menu.
-#. Select the :guilabel:`Incident workflows` tab.
-#. Add the primary schedule to the first step. 
-    #.  Select :guilabel:`Configure invite` under :guilabel:`Immediately`.
-    #.  Enter the schedule name "Heroes team, web application, primary" in the :guilabel:`Search schedules` field and select the schedule when it appears.
-    #.  Select :guilabel:`Add responders`.
-#. Add the secondary schedule to the second step. 
-    #. In the second step, select a time interval next to :guilabel:`If unacknowledged after`; this is the length of time you want to pass before paging the responder on call in your secondary schedule.
-    #. Select :guilabel:`Configure invite`.
-    #.  Enter the schedule name "Heroes team, web application, secondary" in the :guilabel:`Search schedules` field and select the schedule when it appears.
-    #.  Select :guilabel:`Add responders`.
-#. Select :guilabel:`Save workflow`.
+.. image:: /_images/incident-intelligence/add_to_incident_workflow.png
+      :width: 99%
+      :alt: Add schedules as first and second steps in the incident workflow within the web application service incident policy.
+
+.. _ii-enable-incident-policy:
+
+Skyler enables the web application service
+==============================================
+
+With his schedules configured and added to his incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in his newly-configured schedules.
 
 
 Summary
