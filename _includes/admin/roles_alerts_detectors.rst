@@ -29,12 +29,6 @@
     - No
     - No
 
-  * - :strong:`Create muting rules for a detector`
-    - Yes
-    - Yes
-    - No
-    - No
-
   * - :strong:`Subscribe to notifications for a detector`
     - Yes
     - Yes
@@ -89,11 +83,6 @@
     - No
     - No
 
-  * - :strong:`Edit a detector`
-    - Yes
-    - Yes
-    - No
-    - No
 
   * - :strong:`Disable an AutoDetect detector`
     - Yes
@@ -118,6 +107,12 @@
     - Yes
     - Yes
     - Yes
+
+  * - :strong:`Create muting rules for a detector`
+    - Yes
+    - Yes
+    - No
+    - No
 
   * - :strong:`Delete a muting rule for a detector`
     - Yes
