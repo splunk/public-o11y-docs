@@ -46,7 +46,7 @@ To learn more about the shared secret string, the cryptographic algorithm, and t
 the :emphasis:`Splunk Observability Cloud Developers Guide`.
 
 Your webhook must return a HTTP ``200 OK`` response code immediately after you receive the request.
-If Observability Cloud does not receive a 200 response code within a certain timeframe, it retries the request.
+If Observability Cloud does not receive a 200 response code within a certain time frame, it retries the request.
 
 Observability Cloud sends the webhook notification request to your webhook using these settings:
 
