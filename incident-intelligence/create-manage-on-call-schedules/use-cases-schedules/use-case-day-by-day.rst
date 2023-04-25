@@ -1,10 +1,12 @@
 .. _ii-use-case-day-by-day:
 
-Use case: Create ________ coverage using the day-by-day shift type
-************************************************************************
+Use case: Create every-other-day coverage using the day-by-day shift type
+***************************************************************************
 
 .. meta::
-   :description: Schedule use case for creating business-hours and nights-and-weekends rotations in Incident Intelligence.
+   :description: Schedule use case for every-other-day coverage in Incident Intelligence.
+
+Day-by-day shifts are configured to span 24 hours on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
 
 Day-by-day shifts let you define coverage for specific days of the week. For example, one responder covers Monday-Friday from 8 AM to 5 PM for one week. Follow these steps to set up this example.
 
