@@ -26,3 +26,5 @@ Splunk Observability Cloud provides a wide array of features and tools to help y
 * :ref:`data-visualization-charts` 
 * :ref:`dashboards`
 * :ref:`signalflow-analytics-intro`
+* :ref:`view-alerts`
+* :ref:`view-detectors`
