@@ -1,6 +1,6 @@
 .. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
 
-.. _ii-use-schedules:
+.. _ii-use-cases-schedules:
 
 Use cases: Schedules in Incident Intelligence
 *********************************************************************************************
