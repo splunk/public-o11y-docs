@@ -66,11 +66,11 @@ The following settings are common to most instrumentation scenarios:
    * - ``OTEL_DOTNET_AUTO_OPENTRACING_ENABLED``
      - Activates the OpenTracing tracer. The default value is ``false``. See :ref:`migrate-signalfx-dotnet-to-dotnet-otel` for more information.
    * - ``OTEL_DOTNET_AUTO_NETFX_REDIRECT_ENABLED``
-     - Activates automatic redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. Can't be set using the web.config or app.config files.
+     - Activates immediate redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_FLUSH_ON_UNHANDLEDEXCEPTION``
      - Controls whether the telemetry data is flushed when an ``AppDomain.UnhandledException`` event is raised. Set to ``true`` when experiencing missing telemetry at the same time of unhandled exceptions.	
    * - ``OTEL_DOTNET_AUTO_RULE_ENGINE_ENABLED``
-     - Activates RuleEngine. The default values is ``true``. RuleEngine increases the stability of the instrumentation by validatig assemblies for unsupported scenarios.
+     - Activates RuleEngine. The default values is ``true``. RuleEngine increases the stability of the instrumentation by validating assemblies for unsupported scenarios.
 
 .. _dotnet-otel-exporter-settings:
 
