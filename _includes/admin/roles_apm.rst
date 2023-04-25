@@ -1,7 +1,7 @@
 
 
 .. list-table::
-  :widths: 20,40,10,10,10,10
+  :widths: 60,10,10,10,10
 
   * - :strong:`Capability`
     - :strong:`Admin`
