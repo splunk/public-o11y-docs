@@ -116,7 +116,7 @@ Skyler wants the responder for the weeknights shift to be the same as the subseq
 
 Skyler creates a new schedule for secondary coverage for the web application service and names it accordingly: Web application - secondary. Skyler adds the WebApp teams tag again to make the schedule easier to find. The teams tag also sorts the list of responders so they’re easier to find and select when Skyler adds them to a shift later.
 
-.. image:: /_images/incident-intelligence/Create_secondary_schedule.png
+.. image:: /_images/incident-intelligence/use-cases/Create_secondary_schedule.png
       :width: 50%
       :alt: Create a secondary schedule for the web application.
 
@@ -128,7 +128,7 @@ Skyler creates a new schedule for secondary coverage for the web application ser
 
 Skyler creates a 24x7 shift in the secondary schedule for the web application. Using the week-by-week shift type Skyler creates 24x7 as secondary coverage for one week Monday through Sunday. Skyler selects a shift handoff of one and adds the SREs as responders.
 
-.. image:: /_images/incident-intelligence/24x7_shift.png
+.. image:: /_images/incident-intelligence/use-cases/24x7_shift.png
       :width: 50%
       :alt: 24x7 shift in web service secondary schedule.
 
@@ -140,7 +140,7 @@ Skyler creates a 24x7 shift in the secondary schedule for the web application. U
 
 Skyler adds the primary and secondary schedules as the first and second step in the incident workflow for the incident policy for the web application service. 
 
-.. image:: /_images/incident-intelligence/add_to_incident_workflow.png
+.. image:: /_images/incident-intelligence/use-cases/add_to_incident_workflow.png
       :width: 99%
       :alt: Add schedules as first and second steps in the incident workflow within the web application service incident policy.
 
