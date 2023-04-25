@@ -14,7 +14,10 @@ The following use cases feature examples from Buttercup Industries, a fictitious
    :hidden:
 
    use-case-business-hours
-   use-case-business-hours-notifications
+   use-case-day-by-day
+   use-case-week-by-week
 
 * :ref:`ii-use-case-business-hours`
-* :ref:`ii-use-case-business-hours-notifications`
+* :ref:`ii-use-case-day-by-day`
+* :ref:`ii-use-case-week-by-week`
+
