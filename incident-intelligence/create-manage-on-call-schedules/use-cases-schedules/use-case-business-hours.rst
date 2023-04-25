@@ -16,7 +16,15 @@ Skyler, the site reliability engineering (SRE) manager for Buttercup Industries,
 
 For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
-#. :ref:`Sklyer creates a schedule for the primary coverage that includes three shifts: <ii-create-primary-schedule>`
+.. raw:: html
+
+   <embed>
+      <ol>
+            <li><a href="#ii-create-primary-schedule">Sklyer creates a schedule for the primary coverage that includes three shifts:</a></li>
+      </ol>
+   </embed>
+
+
     #. :ref:`ii-create-business-shift`
     #. :ref:`ii-create-weeknights-shift`
     #. :ref:`ii-create-weekends-shift`
@@ -24,12 +32,10 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 #. :ref:`ii-add-incident-workflow`
 #. :ref:`ii-enable-incident-policy`
 
-.. _ii-create-primary-schedule:
-
 .. raw:: html
 
    <embed>
-      <h2>Skyler creates a schedule for primary coverage</h2>
+      <h2 id="ii-create-business-shift">Skyler creates a schedule for primary coverage</h2>
    </embed>
 
 Skyler creates a new schedule for primary coverage for the web application service and names it accordingly: Web application - primary. Skyler adds a WebApp teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
