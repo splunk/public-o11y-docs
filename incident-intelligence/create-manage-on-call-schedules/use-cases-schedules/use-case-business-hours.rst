@@ -28,9 +28,9 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
                   </ol>
 
             </li>
-            <li><a href="#ii-create-secondary-schedule">Sklyer creates a schedule for the primary coverage that includes three shifts:</a></li>
-            <li><a href="#ii-add-incident-workflow">Sklyer creates a schedule for the primary coverage that includes three shifts:</a></li>
-            <li><a href="#ii-enable-incident-policy">Sklyer creates a schedule for the primary coverage that includes three shifts:</a></li>
+            <li><a href="#ii-create-secondary-schedule">Skyler creates a schedule for secondary coverage with a 24x7 shift</a></li>
+            <li><a href="#ii-add-incident-workflow">Skyler adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service</a></li>
+            <li><a href="#ii-enable-incident-policy">Skyler enables the web application service</a></li>
       </ol>
    </embed>
 
@@ -120,8 +120,11 @@ Skyler creates a new schedule for secondary coverage for the web application ser
       :width: 50%
       :alt: Create a secondary schedule for the web application.
 
-Skyler creates a 24x7 shift within the schedule for secondary coverage
--------------------------------------------------------------------------
+.. raw:: html
+
+   <embed>
+      <h3>Skyler creates a 24x7 shift within the schedule for secondary coverage</h3>
+   </embed>
 
 Skyler creates a 24x7 shift in the secondary schedule for the web application. Using the week-by-week shift type Skyler creates 24x7 as secondary coverage for one week Monday through Sunday. Skyler selects a shift handoff of one and adds the SREs as responders.
 
