@@ -163,7 +163,7 @@ The following resource detectors are available:
      - Description
      - Attributes
    * - ``CONTAINER``
-     - Docker container detector.
+     - Container detector. For example, Docker or Podman containers.
      - ``container.id``
 
 .. _dotnet-otel-instrumentation-settings:
