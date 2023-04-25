@@ -3,7 +3,7 @@
 # Prometheus Node Exporter
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Prometheus Node Exporter monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/node` monitor type using the Smart Agent Receiver. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/node` monitor type for the Smart Agent Receiver. 
 
 ## Description
 
@@ -88,6 +88,11 @@ The following table shows the configuration options for the `prometheus/node` mo
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/prometheus/node/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

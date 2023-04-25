@@ -4,7 +4,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Prometheus Exporter monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-exporter` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-exporter` monitor type for the Smart Agent Receiver.
 
 ## Description
 
@@ -83,7 +83,7 @@ The following table shows the configuration options for the `prometheus-exporter
 | `password` | no | `string` | Basic Auth password to use on each request, if any. |
 | `useHTTPS` | no | `bool` | If `true`, the agent will connect to the server using HTTPS instead of plain HTTP. (**default:** `false`) |
 | `httpHeaders` | no | `map of strings` | A map of HTTP header names to values. Comma separated multiple values for the same message-header is supported. |
-| `skipVerify` | no | `bool` | If useHTTPS is `true` and this option is also `true`, the exporter's TLS cert will not be verified. (**default:** `false`) |
+| `skipVerify` | no | `bool` | If useHTTPS is `true` and this option is also `true`, the exporter TLS cert will not be verified. (**default:** `false`) |
 | `caCertPath` | no | `string` | Path to the CA cert that has signed the TLS cert, unnecessary if `skipVerify` is set to `false`. |
 | `clientCertPath` | no | `string` | Path to the client TLS cert to use for TLS required connections |
 | `clientKeyPath` | no | `string` | Path to the client TLS key to use for TLS required connections |
@@ -121,11 +121,11 @@ Here are some common issues related to this integration.
 
 ### Log contains the error `net/http: HTTP/1.x transport connection broken: malformed HTTP response`
 
-Solution: Enable HTTPS with `useHTTPS`.
+Solution: Activate HTTPS with `useHTTPS`.
 
 ### Log contains the error `forbidden: User \"system:anonymous\" cannot get path \"/metrics\"`
 
-Solution: Enable `useServiceAccount` and make sure the service account that the Splunk Distribution of OpenTelemetry Collector is running with has the necessary permissions.
+Solution: Activate `useServiceAccount` and make sure the service account that the Splunk Distribution of OpenTelemetry Collector is running with has the necessary permissions.
 
 ## Get help
 

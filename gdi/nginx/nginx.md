@@ -4,7 +4,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the nginx monitor type by using the SignalFx Smart Agent Receiver. 
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the nginx monitor type for the Smart Agent Receiver. 
 
 Use this integration to retrieve metrics and logs from an NGINX instance.
 
@@ -88,6 +88,11 @@ The following table shows the configuration options for this monitor:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/nginx/metrics.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

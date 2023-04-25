@@ -5,14 +5,14 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `java-monitor` receiver by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `java-monitor` receiver for the Smart Agent Receiver.
 
 Use the Java receiver to retrieve metrics from a Java application.
 
 This receiver is available on Linux and Windows.
 
 ```{note}
-To enable metrics collection in the OpenTelemetry Java agent, see {ref}`Enable metrics collection <enable_automatic_metric_collection>`.
+To activate metrics collection in the OpenTelemetry Java agent, see {ref}`Activate metrics collection <enable_automatic_metric_collection>`.
 ```
 
 ### Benefits
@@ -67,6 +67,11 @@ The following metrics are available for this integration:
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/java/metrics.yaml"></div>
 
 The agent doesn't do any built-in filtering of metrics coming out of this receiver.
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

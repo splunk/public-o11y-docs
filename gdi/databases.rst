@@ -11,11 +11,11 @@ Configure application receivers for databases
    :maxdepth: 4
    :hidden:
 
-   kafka/kafka
-   spark/spark
-   cassandra/cassandra
+   monitors/apache-kafka
+   monitors/apache-spark
+   monitors/cassandra
    consul/consul
-   databricks/databricks-receiver
+   opentelemetry/components/databricks-receiver
    etcd/etcd
    exec/telegraf-exec
    hadoop/hadoop
@@ -24,9 +24,9 @@ Configure application receivers for databases
    microsoft-sql-server/microsoft-sql-server
    mongodb/mongodb
    mongodb-atlas/mongodb-atlas
-   mongodb-atlas/mongodb-atlas-receiver
+   opentelemetry/components/mongodb-atlas-receiver
    mysql/mysql
-   oracledb/oracledb
+   opentelemetry/components/oracledb-receiver
    postgresql/postgresql
    redis/redis
    sap-hana/hana

@@ -27,13 +27,13 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SIGNALFX_ENDPOINT_URL``
      - Endpoint URL. The default value is ``http://localhost:9080/v1/trace``.
    * - ``SIGNALFX_TRACING_ENABLED``
-     - Whether to enable automatic tracer creation and instrumentation. The default value is ``true``.
+     - Whether to activate automatic tracer creation and instrumentation. The default value is ``true``.
    * - ``SIGNALFX_TRACE_CLI_ENABLED``
-     - Whether to enable automatic tracer creation and instrumentation for the ``cli`` SAPI. See :ref:`tracing-cli-sessions` for more information. The default value is ``false``.
+     - Whether to activate automatic tracer creation and instrumentation for the ``cli`` SAPI. See :ref:`tracing-cli-sessions` for more information. The default value is ``false``.
    * - ``SIGNALFX_TRACE_DEBUG``
-     - Whether to enable debug logging. The default value is ``false``.
+     - Whether to activate debug logging. The default value is ``false``.
    * - ``SIGNALFX_DISTRIBUTED_TRACING``
-     - Whether to enable B3 context propagation. The default value is ``true``.
+     - Whether to activate B3 context propagation. The default value is ``true``.
    * - ``SIGNALFX_RECORDED_VALUE_MAX_LENGTH``
      - Maximum length an attribute value can have. Values longer than this are truncated.	The default value is ``1200``.
    * - ``SIGNALFX_CAPTURE_ENV_VARS``
@@ -48,7 +48,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
 Tracing CLI sessions
 =====================================
 
-To trace the CLI SAPI functionality, you have to enable it manually using the ``SIGNALFX_TRACE_CLI_ENABLED`` environment variable. When you enable CLI tracing, the instrumentation automatically creates a root span to track the lifetime of your CLI session.
+To trace the CLI SAPI functionality, you have to activate it manually using the ``SIGNALFX_TRACE_CLI_ENABLED`` environment variable. When you activate CLI tracing, the instrumentation automatically creates a root span to track the lifetime of your CLI session.
 
 .. code-block:: shell
 
@@ -56,4 +56,4 @@ To trace the CLI SAPI functionality, you have to enable it manually using the ``
    php artisan migrate:fresh
    php myTracedCliScript.php
 
-.. caution:: This SAPI is disabled by default to avoid undesired tracing of system activity.
+.. caution:: This SAPI is deactivated by default to avoid undesired tracing of system activity.

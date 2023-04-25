@@ -1,20 +1,18 @@
 .. _rest-api-ingest:
 
 **************************************************************
-Observability Cloud REST APIs for sending data points
+Observability Cloud REST APIs for sending traces and metrics
 **************************************************************
 
 .. meta::
-  :description: Use a REST API to send data points to Splunk Infrastructure Monitoring.
+  :description: Use a REST API to send data points to Splunk Observability Cloud.
 
-On top of sending data to Splunk Infrastructure Monitoring by using an integration or SDK library, you can also use the API. Infrastructure Monitoring persists incoming data for further use.
-
-Learn more in the developer documentation. For instance, see :new-page:`how to send data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>` using the API, or :new-page:`how to send metrics <https://dev.splunk.com/observability/reference/api/ingest_data/latest#endpoint-send-metrics>`. 
+You can use the REST API to send telemetry directly to Splunk Observability Cloud. See :new-page:`Send data points <https://dev.splunk.com/observability/docs/datamodel/ingest/>` and :new-page:`Send traces, metrics, and events <https://dev.splunk.com/observability/reference/api/ingest_data/latest#endpoint-send-metrics>` in the developer documentation.
 
 Start sending data using the API
 =====================================
 
-Start experimenting with Infrastructure Monitoring by sending data using the following `curl` command:
+Start experimenting by sending data using the following `curl` command:
 
 .. code-block:: bash
 

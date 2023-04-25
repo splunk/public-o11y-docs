@@ -6,11 +6,11 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/dns` monitor via the Smart Agent Receiver. This is an embedded form of the Telegraf DNS Query plugin.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/dns` monitor type for the Smart Agent Receiver. This is an embedded form of the Telegraf DNS Query plugin.
 
 ##  Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -67,6 +67,11 @@ The following table shows the configuration options for this monitor:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/telegraf/monitors/dns/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

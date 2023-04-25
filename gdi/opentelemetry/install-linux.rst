@@ -12,19 +12,20 @@ Install the Collector for Linux
    :titlesonly:
    :hidden:
 
-   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry
+   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry.rst
    /gdi/opentelemetry/deployments/deployments-linux-ansible.rst
    /gdi/opentelemetry/deployments/deployments-linux-puppet.rst
 
+The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. 
 
-The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. Install the package using one of these methods:
+Install the package using one of these methods:
 
 * :ref:`Use the installer script <linux-scripts>`
 * :ref:`Use deployment and configuration management tools <linux-deployments>`
 * :ref:`Install manually <linux-manual>`
 
 .. note::
-   Splunk only supports the SignalFx Smart Agent on x86_64 and AMD64 platforms. The SignalFx Smart Agent Receiver is subject to the same limitation.
+   Splunk only supports the SignalFx Smart Agent and the Smart Agent Receiver on x86_64 and AMD64 platforms. 
 
 .. _linux-scripts:
 
@@ -33,8 +34,8 @@ Installer script
 
 The following Linux distributions and versions are supported:
 
-* Amazon Linux: 2
-* CentOS, Red Hat, or Oracle: 7, 8
+* Amazon Linux: 2, 2023. Log collection with Fluentd is not currently supported for Amazon Linux 2023.
+* CentOS, Red Hat, or Oracle: 7, 8, 9
 * Debian: 9, 10, 11
 * SUSE: 12, 15 for versions v0.34.0 or higher. Log collection with Fluentd is not currently supported.
 * Ubuntu: 16.04, 18.04, 20.04, and 22.04
@@ -43,7 +44,7 @@ You must have systemd installed to use this script. The installer script deploys
 
 * The Splunk Distribution of OpenTelemetry Collector for Linux
 * :new-page:`SignalFx Smart Agent and collectd bundle <https://github.com/signalfx/signalfx-agent/releases>`
-* Fluentd (using the td-agent). See the :new-page:`Fluentd FAQs <https://www.fluentd.org/faqs>` for more information.
+* Fluentd (using the td-agent).  See :ref:`fluentd-receiver` for more information.
 
 Do the following to install the package using the installer script:
 
@@ -81,6 +82,19 @@ To configure memory allocation, change the ``--memory`` parameter. By default, t
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB \
        -- SPLUNK_ACCESS_TOKEN
 
+Configure proxy settings
+----------------------------------
+
+If you need to use a proxy, set one of the following environment variables according to your needs:
+
+- ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
+- ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
+- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy.
+
+Restart the Collector after adding these environment variables to your configuration.
+
+.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
+
 Use pre-configured repos 
 --------------------------------
 
@@ -95,6 +109,8 @@ To skip these steps and use pre-configured repos on the target system that provi
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --skip-collector-repo --skip-fluentd-repo \
     -- SPLUNK_ACCESS_TOKEN
 
+.. _fluentd-manual-config-linux:
+
 Configure Fluentd
 ---------------------------------------
 
@@ -105,7 +121,7 @@ By default, the Fluentd service is installed and configured to forward log event
 
 The following Fluentd plugins are also installed:
 
-* ``capng_c`` for enabling Linux capabilities.
+* ``capng_c`` for activating Linux capabilities.
 * ``fluent-plugin-systemd`` for systemd journal log collection.
 
 Additionally, the following dependencies are installed as prerequisites for the Fluentd plugins:
@@ -143,7 +159,7 @@ After any configuration modification, run ``sudo systemctl restart td-agent`` to
 
 If the td-agent package is upgraded after initial installation, you might need to set the Linux capabilities for the new version by performing the following steps for td-agent versions 4.1 or later:
 
-#. Check for the enabled capabilities:
+#. Check for the activated capabilities:
 
    .. code-block:: bash
 
@@ -152,6 +168,7 @@ If the td-agent package is upgraded after initial installation, you might need t
       Effective:   dac_override, dac_read_search
       Inheritable: dac_override, dac_read_search
       Permitted:   dac_override, dac_read_search
+
 #. If the output from the previous command does not include ``dac_override`` and ``dac_read_search`` as shown above, run the following commands:
 
    .. code-block:: bash
@@ -161,9 +178,13 @@ If the td-agent package is upgraded after initial installation, you might need t
       sudo systemctl daemon-reload
       sudo systemctl restart td-agent
 
+
+If you already installed Fluentd on a host, install the Splunk OTel Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`. 
+
+
 .. _configure-auto-instrumentation:
 
-Configure auto instrumentation for Java
+Configure automatic instrumentation for Java
 --------------------------------------------
 You can also automatically instrument your Java applications along with the Collector installation. Auto instrumentation removes the need to install and configure the Java agent separately. See :ref:`auto-instrumentation-java` for the installation instructions. For more information on Java instrumentation, see :ref:`get-started-java`. 
 
@@ -171,6 +192,7 @@ You can also automatically instrument your Java applications along with the Coll
 
 Deployments
 ====================
+
 Splunk offers the configuration management options described in this section.
 
 .. _linux-amazon-ecs-ec2:
@@ -222,7 +244,14 @@ Use Nomad to to deploy the Collector. See :ref:`deployments-nomad` for the insta
 
 Pivotal Cloud Foundry
 -------------------------------
-Splunk provides a script to create a BOSH release of Collector. This is intended to be run by the Pivotal Cloud Foundry (PCF) tile. See :ref:`pivotal-cloud-foundry` for the script.
+
+You can use one of these three options to deploy the Collector with Pivotal Cloud Foundry (PCF):
+
+* Collector standalone deployment.
+* Collector as a sidecar to your app. 
+* Tanzu Tile.
+
+See more in :ref:`deployments-pivotal-cloudfoundry`.
 
 .. _linux-puppet:
 
@@ -238,14 +267,50 @@ Splunk provides a Salt formula to install and configure the Collector. See :ref:
 
 .. _linux-manual:
 
-Manual
-===================
-Splunk offers the manual configuration options described in this section. 
+Install the Collector manually
+===================================
+
+Splunk offers the manual configuration options described in this section:
+
+* :ref:`linux-docker`
+* :ref:`linux-packages`
+* :ref:`linux-binary-file`
+* :ref:`linux-tar`
+
+.. _linux-manual-permissions:
+
+Permissions
+----------------
+
+You need at least these capabilities to allow the Collector to run without root permissions, regardless of the user:
+
+* ``cap_dac_read_search``: Allows to bypass file read permission checks, and directory read and execute permission checks.
+* ``cap_sys_ptrace``: Allows to trace, manage, and transfer data for arbitrary processes.
+
+Learn more about :new-page:`these recommended capabilities <https://man7.org/linux/man-pages/man7/capabilities.7.html>`.  
+
+.. note::   
+
+   Your systems might require higher or more custom permissions.
+
+If you already have ``setcap/libcap2`` installed, the installer script will set these permissions for you. If you don't, use the following ``setcap`` command to install the permissions:
+
+.. code-block:: bash
+
+   setcap CAP_SYS_PTRACE,CAP_DAC_READ_SEARCH=+eip /usr/bin/otelcol
+
+To set custom permissions after the Collector has been installed, use:
+
+.. code-block:: bash 
+
+   setcap {CUSTOM_CAPABILITIES}=+eip /usr/bin/otelcol
 
 .. _linux-docker:
 
 Docker
 ----------------
+
+The Linux docker image of the Splunk Distribution of OpenTelemetry Collector contains a multi-arch manifest that specifies the images for AMD64, ARM64, and ppc64le architectures. Docker uses this manifest to download the correct image for the target platform.
 
 Run the following command to install the package using Docker:
 
@@ -262,10 +327,10 @@ Run the following command to install the package using Docker:
 The following list provides more information on the ``docker run`` command options:
 
 * ``--rm`` automatically removes the container when it exits.
-* ``-e`` sets simple (non-array) environment variables in the container you’re running, or overwrite variables that are defined in the Dockerfile of the image you’re running.
+* ``-e`` sets simple (non-array) environment variables in the container you're running, or overwrite variables that are defined in the Dockerfile of the image you're running.
 * ``-p`` publishes a container's port(s) to the host.
 
-Run the following command to execute an interactive bash shell on the container and see the status of the Collector:
+Run the following command to run an interactive bash shell on the container and see the status of the Collector:
 
 .. code-block:: bash
 
@@ -289,7 +354,7 @@ Command line arguments take precedence over environment variables. This applies 
        -p 14268:14268 -p 4317:4317 -p 6060:6060 -p 8888:8888 \
        -p 9080:9080 -p 9411:9411 -p 9943:9943 \
        -v "${PWD}/collector.yaml":/etc/collector.yaml:ro \
-       # A volume mount may be required to load the custom configuration file.
+       # A volume mount might be required to load the custom configuration file.
        --name otelcol quay.io/signalfx/splunk-otel-collector:latest
        # Use a semantic versioning (semver) tag instead of the ``latest`` tag.
        # Semantic versioning is a formal convention for determining the version
@@ -361,7 +426,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with yum
     yum install -y libcap
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -376,7 +441,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with dnf
     dnf install -y libcap
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -391,7 +456,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with zypper
     zypper install -y libcap-progs
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/zypp/repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -411,6 +476,31 @@ Do the following to install the package using a Debian or RPM package:
 Binary file
 -----------------------
 Download pre-built binaries (``otelcol_linux_amd64`` or ``otelcol_linux_arm64``) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+.. _linux-tar:
+
+Tar file
+-----------------------
+
+The tar.gz archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
+
+To use the tar file:
+
+#. Unarchive it to a directory of your choice on the target system.
+
+.. code-block:: bash
+
+   tar xzf splunk-otel-collector_<version>_<arch>.tar.gz
+   
+#. On ``amd64`` systems, go into the unarchived ``agent-bundle`` directory and run ``bin/patch-interpreter $(pwd)``. This ensures that the binaries in the bundle have the right loader set on them, since your host's loader might not be compatible.
+
+Working on non-default locations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you're running the Collector from a non-default location, the Smart Agent receiver and agent configuration file require that you set two environment variables currently used in the Smart Agent extension:
+
+* ``SPLUNK_BUNDLE_DIR``: The path to the Smart Agent bundle. For example, ``/usr/lib/splunk-otel-collector/agent-bundle``.
+* ``SPLUNK_COLLECTD_DIR``: The path to the ``collectd`` config directory for the Smart Agent. For example, ``/usr/lib/splunk-otel-collector/agent-bundle/run/collectd``. 
 
 More options
 ==================================

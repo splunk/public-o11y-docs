@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-nginx-vts` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-nginx-vts` monitor type for the Smart Agent Receiver.
 
 This monitor wraps the {ref}`prometheus-exporter` to collect Prometheus NGINX VTS exporter metrics for Splunk Observability Cloud.
 
@@ -68,6 +68,11 @@ The following table shows the configuration options for the `prometheus-nginx-vt
 The following metrics are available for this integration.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/prometheus/nginxvts/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

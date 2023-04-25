@@ -74,7 +74,7 @@ While not an exhaustive list, here are key notes about some of the files that ar
   * ``/etc/otel/collector/splunk-otel-collector.conf.example``
   * ``/etc/otel/collector/splunk-support-bundle.sh``
 
-* On RPM-based systems, if you modified any of the following files, the modified files aren't deleted and are renamed with the ``.rpmsave`` extension. For example, the uninstall process renames a modified ``agent_config.yaml`` to ``agent_config.yaml.rpmsave``. You can delete these ``.rpmsave`` files if you don't need them. Unmodified files in this list are deleted. Files not in this list aren't deleted.
+* On RPM-based systems, if you modified any of the following files, the modified files aren't deleted and are renamed with the .rpmsave extension. For example, the uninstall process renames a modified agent_config.yaml to agent_config.yaml.rpmsave. You can delete these .rpmsave files if you don't need them. Unmodified files in this list are deleted. Files not in this list aren't deleted.
 
   * ``/etc/otel/collector/agent_config.yaml``
   * ``/etc/otel/collector/fluentd/README``
@@ -226,4 +226,4 @@ While you can verify the uninstall of the Collector and Fluentd packages by watc
 
 Uninstall on Windows
 =======================
-If installed with the installer script, the Collector and td-agent (Fluentd) can be uninstalled from **Programs and Features** in the Windows Control Panel. The configuration files may persist in ``\ProgramData\Splunk\OpenTelemetry Collector`` and ``\opt\td-agent`` after uninstall.
+If installed with the installer script, the Collector and td-agent (Fluentd) can be uninstalled from **Programs and Features** in the Windows Control Panel. The configuration files might persist in ``\ProgramData\Splunk\OpenTelemetry Collector`` and ``\opt\td-agent`` after uninstall.

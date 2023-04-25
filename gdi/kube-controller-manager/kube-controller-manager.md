@@ -8,7 +8,7 @@
 
 **Note:** This monitor is deprecated in favor of the `prometheus-exporter` monitor. Switch to the Prometheus Exporter as the Smart Agent is deprecated. All Prometheus labels are converted directly to Infrastructure Monitoring dimensions. To learn more, see {ref}`prometheus-exporter`.
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `kube-controller-manager` monitor by using the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `kube-controller-manager` monitor for the Smart Agent Receiver.
 
 Use this integration to export Prometheus metrics from the [kube-controller-manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/).
 
@@ -91,6 +91,11 @@ monitors:
 These metrics are available for this integration.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/controllermanager/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

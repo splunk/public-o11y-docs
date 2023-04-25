@@ -14,13 +14,13 @@ Configure application receivers for orchestration
    Istio <get-data-in/application/istio/istio>
    kubernetes-apiserver/kubernetes-apiserver
    kubernetes-cluster/kubernetes-cluster
-   kubernetes-cluster/kubernetes-cluster-receiver
+   opentelemetry/components/kubernetes-cluster-receiver
    kube-controller-manager/kube-controller-manager
    kubernetes-events/kubernetes-events
    kubernetes-proxy/kubernetes-proxy
    kubernetes-scheduler/kubernetes-scheduler
    kubelet-stats/kubelet-stats
-   kubelet-stats/kubelet-stats-receiver
+   opentelemetry/components/kubelet-stats-receiver
    marathon/marathon
    openshift-cluster/openshift-cluster
 

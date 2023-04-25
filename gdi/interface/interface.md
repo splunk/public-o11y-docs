@@ -8,13 +8,15 @@
 
 **Note:** This monitor is deprecated in favor of the `net-io` monitor. Switch to that monitor as the Smart Agent is deprecated. The `net-io` monitor uses the `interface` dimension to identify the network card instead of the `plugin_instance` dimension, but otherwise the metrics are the same. To learn more, see {ref}`net-io`.
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `interface` monitor by using the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `interface` monitor for the Smart Agent Receiver.
 
 Use this integration to collect information about the traffic (octets per second), packets per second and errors of interfaces (of course number of errors during one second).
 
 If you're not interested in collecting information from all interfaces, select the interfaces you want to monitor using the plugin's configuration.
 
-
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 <!--
 ## Requirements
@@ -32,7 +34,7 @@ This plugin requires:
 ```
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 ## Configuration
 
@@ -75,6 +77,11 @@ The following table shows the configuration options for this monitor:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/netinterface/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

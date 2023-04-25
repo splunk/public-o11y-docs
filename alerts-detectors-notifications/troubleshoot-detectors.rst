@@ -5,7 +5,7 @@
 Troubleshoot detectors in Splunk Observability Cloud
 ******************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: Learn how to troubleshoot detectors in Splunk Observability Cloud. 

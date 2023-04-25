@@ -222,7 +222,7 @@ Provide a label for the variable. The text you enter here appears on the dashboa
 Description
 -------------------------------------------------------------------
 
-If you add a description for the dashboard variable, it appears in the mouseover text for the alias you specify.
+If you add a description for the dashboard variable, it appears in the mouse-over text for the alias you specify.
 
 Default value and value required
 -------------------------------------------------------------------

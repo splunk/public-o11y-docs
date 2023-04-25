@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-mtta-mttr:
 
 Review mean time to acknowledge and respond and other incident response stats
@@ -26,8 +24,8 @@ On the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident Intelligenc
    * - Resolved incidents
      - The current number of incidents with the resolved status for your organization.
 
-   * - Rejected incidents
-     - The current number of incidents with the rejected status for your organization.
+   * - Dismissed incidents
+     - The current number of incidents with the dismissed status for your organization.
 
    * - Mean time to acknowledge (MTTA)
      - The average amount of time in minutes taken to acknowledge an incident for your organization.
@@ -44,4 +42,3 @@ See also
 * :ref:`ii-add-incident-tools-resources`
 * :ref:`ii-edit-incident`
 * :ref:`ii-muted-incidents`
-* :ref:`ii-notification-preferences`

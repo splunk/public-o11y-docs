@@ -1,8 +1,8 @@
 .. _otel-other-configuration-sources:
 
-****************************************
-Optional configurations
-****************************************
+******************************************************************
+Other configuration sources (Alpha)
+******************************************************************
 
 .. meta::
       :description: Configure these optional components to retrieve data from specific configuration sources. After retrieving the data, you can then insert the data into your Splunk Distribution of OpenTelemetry Collector configuration.

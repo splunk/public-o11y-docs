@@ -8,7 +8,7 @@
 
 **Note:** This monitor is deprecated in favor of the `host-metrics-receiver` monitor. Switch to that receiver as the Smart Agent is deprecated. To learn more, see {ref}`host-metrics-receiver`.
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `host-metadata` monitor by using the SignalFx Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `host-metadata` monitor for the Smart Agent Receiver.
 
 Use this integration to collect metadata properties about a host.
 
@@ -70,6 +70,11 @@ See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/example
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/metadata/hostmetadata/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ### Non-default metrics (version 4.7.0+)
 

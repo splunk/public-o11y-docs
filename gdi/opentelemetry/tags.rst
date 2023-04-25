@@ -1,8 +1,8 @@
 .. _otel-tags:
 
-***************
-Tags
-***************
+******************************************
+Configure tags in OpenTelemetry
+******************************************
 
 .. meta::
       :description: Add tags to your Splunk Distribution of OpenTelemetry Collector configuration. You can include span tags in settings for the batch processor in your configuration YAML file.

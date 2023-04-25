@@ -94,8 +94,6 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: Node.js
 
-      .. caution:: Memory profiling for Node.js is an experimental feature subject to future changes. 
-
       AlwaysOn Profiling requires Node 16 and higher.
 
       - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
@@ -117,8 +115,6 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-nodejs`.
 
    .. group-tab:: .NET
-
-      .. caution:: Memory profiling for .NET is an experimental feature subject to future changes.
 
       AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
 
@@ -142,4 +138,3 @@ After you set up and enable AlwaysOn Profiling, check that profiling data is com
 4. Select a service, and switch from the CPU view to the Memory view. 
 5. If your service runs in multiple instances, select the instance that you're interested in by selecting the host, container and process ID.
 6. If you've enabled Memory profiling, explore memory metrics. See :ref:`profiling-memory-metrics`.
-7. You can also browse all stack traces coming from your application in the flame graph. See :ref:`flamegraph-howto` for more information about the flame graph. See also :ref:`spans-stack-traces` to learn how to locate and browse call stacks. 

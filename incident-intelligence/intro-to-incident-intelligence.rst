@@ -1,5 +1,4 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
+ 
 .. _ii-get-started-incident-intelligence:
 
 Introduction to Splunk Incident Intelligence
@@ -13,7 +12,7 @@ Use Incident Intelligence to collaboratively diagnose and remediate issues acros
 How Incident Intelligence works 
 ===================================
 
-Incident Intelligence ingests, routes, and groups alerts to create incidents. Alerts are routed and grouped based on rules that you configure. If an alert or set of alerts meets the criteria for a critical incident, an incident is automatically triggered and escalated to the corresponding responder based on the incident workflow and on-call schedules you configure.
+Incident Intelligence ingests, routes, and groups alerts to create incidents. Alerts are routed and grouped based on rules that you configure. If an alert or set of alerts meets the criteria for a critical incident, an incident is automatically triggered and escalated to the corresponding responder based on the incident workflow and on-call schedules you configure. See :ref:`ii-incident-intelligence-overview` high-level overview of the end-to-end journey of an incident in Incident Intelligence.
 
 How Incident Intelligence fits into Splunk Observability Cloud 
 =================================================================
@@ -21,11 +20,6 @@ How Incident Intelligence fits into Splunk Observability Cloud
 Splunk Observability Cloud provides a unified experience for collecting and monitoring metrics, logs, and traces from common data sources. Incident Intelligence is integrated into Observability Cloud to provide alert analytics and on-call management in one place. With Incident Intelligence, you can reduce alert noise, automate actions, and accelerate incident response. 
 
 For more information about Observability Cloud, see :ref:`welcome`. 
-
-Sign up for the Incident Intelligence public preview
-=======================================================
-
-To sign up for Incident Intelligence public preview, see :new-page:`https://www.splunk.com/en_us/form/splunk-incident-intelligence.html`.
 
 .. _wcidw-incident-intelligence:
 
@@ -47,7 +41,7 @@ Follow the links in the table to complete the tasks that are relevant to you.
      - :strong:`With this tool`
      - :strong:`Link to documentation`
 
-   * - Ingest alerts from Observability Cloud or third parties. 
+   * - Ingest alerts from Observability Cloud, Splunk Enterprise, Splunk Cloud Platform, IT Service Intelligence (ITSI) or third parties. 
      - Alert ingestion
      - See :ref:`ii-ingest-alerts`.
 

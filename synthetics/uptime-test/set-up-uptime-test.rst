@@ -19,6 +19,7 @@ Decide whether you want to set up an HTTP Uptime test or Port Uptime test, and t
 Configure an HTTP Uptime test
 ==============================
 
+
 Follow these steps to set up a HTTP Uptime test: 
 
 #. From the landing page of Splunk Observability Cloud, navigate to Splunk Synthetic Monitoring. 
@@ -26,6 +27,7 @@ Follow these steps to set up a HTTP Uptime test:
 #. Make sure the :guilabel:`HTTP` tab is selected.
 #. In the :guilabel:`Name` field, enter a name for your test. You will use this name to identify data from the test in your alerts and reports. 
 #. In the :guilabel:`URL` field, paste the URL for the page you want to test, including ``http`` or ``https``.
+#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`.  
 
 .. _configure-port-test:
 
@@ -85,22 +87,22 @@ Set custom headers
 
 Specify custom headers to send with each request. For example, you can add a header in your request to filter out requests from analytics on the back end by sending a specific header in the requests. You can also use custom headers to set cookies. 
 
-..
-        .. _uptime-success-critera:
+.. _uptime-success-critera:
 
-        Activate SSL/TLS validation
-        ----------------------------
-        When activated, this feature is used to enforce the validation of expired, invalid hostname, or untrusted issuer on SSL/TLS certificates. When testing pre-production environments that have self-signed or invalid certificates, it's best to leave this feature deactivated.
+Activate SSL/TLS validation
+----------------------------
+When activated, this feature is used to enforce the validation of expired, invalid hostname, or untrusted issuer on SSL/TLS certificates. When testing pre-production environments that have self-signed or invalid certificates, it's best to leave this feature deactivated.
 
-..
-    .. _uptime- assertions:
 
-    Add assertions
-    ----------------
+.. _uptime- assertions:
 
-    You can make an assertion on two values. Add two parameters along with the comparison that you would like to perform between the two. There are three types of comparisons: string, numeric, and regular expression. For string and numeric comparisons, values are coerced to the comparison type before the comparison is made. For a regular expression comparison, the first parameter is a string and the second parameter is a regular expression. An assertion step fails if the assertion is false when the step runs.
+Add assertions
+----------------
 
+You can make an assertion on two values. Add two parameters along with the comparison that you would like to perform between the two. There are three types of comparisons: string, numeric, and regular expression. For string and numeric comparisons, values are coerced to the comparison type before the comparison is made. For a regular expression comparison, the first parameter is a string and the second parameter is a regular expression. An assertion step fails if the assertion is false when the step runs.
 
 
 
-
+Example
+==================
+For an example, see :ref:`uptime-test-use-case`.

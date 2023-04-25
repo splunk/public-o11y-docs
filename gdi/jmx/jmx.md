@@ -4,7 +4,7 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jmx` monitor via the Smart Agent Receiver.
+The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jmx` monitor type for the Smart Agent Receiver.
 
 Use this integration to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points. This is a more flexible alternative to the [genericjmx](genericjmx) monitor.
 
@@ -84,7 +84,7 @@ The following table shows the configuration options for this monitor:
 | `groovyScript` | **yes** | `string` | A literal Groovy script that generates data points from JMX MBeans. See the top-level `jmx` monitor doc for more information on how to write this script. You can put the Groovy script in a separate file and refer to it here with `${include:/<my_path>/jmx.groovy}`. For more information on using the `include` config, see <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource">https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource</a>. Or, you can put it straight in YAML by using the \| block indicator.  |
 | `username` | no | `string` | Username for JMX authentication, if applicable. |
 | `password` | no | `string` | Password for JMX authentication, if applicable. |
-| `keyStorePath` | no | `string` | The key store path is required if client authentication is enabled on the target JVM. |
+| `keyStorePath` | no | `string` | The key store path is required if client authentication is activated on the target JVM. |
 | `keyStorePassword` | no | `string` | The key store file password if required. |
 | `keyStoreType` | no | `string` | The key store type. (**default:** `jks`) |
 | `trustStorePath` | no | `string` | The trusted store path if the TLS profile is required. |
@@ -154,7 +154,7 @@ output.sendDatapoints([
 
 ```
 
-Make sure that your script is carefully tested before using it to monitor a production JMX service. The script can do anything exposed via JMX, including writing attributes and running methods via JMX. In general, scripts should only read attributes, but nothing enforces that.
+Make sure that your script is carefully tested before using it to monitor a production JMX service. The script can do anything exposed using JMX, including writing attributes and running methods using JMX. In general, scripts should only read attributes, but nothing enforces that.
 
 ## Metrics
 

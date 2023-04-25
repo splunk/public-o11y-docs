@@ -17,9 +17,9 @@ Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting
 
 Choose from :ref:`over 100 supported open standards-based integrations <supported-data-sources>` with common data sources to get data from your on-premise and cloud infrastructure, applications and services, and user interfaces into Observability Cloud.
 
-When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
+When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
-Splunk Observability Cloud’s suite of products and features enable you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward.
+Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward.
 
 The following diagram provides a high-level view of how each Observability Cloud product plays its part to provide you with full-stack observability:
 
@@ -91,7 +91,7 @@ For information about how APM can be used to address real-life use cases, see :r
 Splunk Real User Monitoring
 ===========================
 
-Splunk Real User Monitoring provides insights about the performance and health of the front-end user experience of your application. Splunk RUM collects performance metrics, web vitals, errors, and other forms of data to enable you to detect and troubleshoot problems in your application, measure the health of your application, and assess the performance of your user experience.
+Splunk Real User Monitoring provides insights about the performance and health of the front-end user experience of your application. Splunk RUM collects performance metrics, web vitals, errors, and other forms of data to allow you to detect and troubleshoot problems in your application, measure the health of your application, and assess the performance of your user experience.
 
 For more information, see :ref:`get-started-rum`.
 
@@ -101,7 +101,7 @@ For more information, see :ref:`get-started-rum`.
 Splunk Synthetic Monitoring
 ======================================
 
-Splunk Synthetics Monitoring is a platform to synthetically measure performance of your web-based properties. It offers features that provide insights that enable you to optimize uptime and performance of APIs, service endpoints, and end user experiences and prevent web performance issues.
+Splunk Synthetics Monitoring is a platform to synthetically measure performance of your web-based properties. It offers features that provide insights that allow you to optimize uptime and performance of APIs, service endpoints, and end user experiences and prevent web performance issues.
 
 For more information, see the :ref:`intro-synthetics`.
 
@@ -143,3 +143,19 @@ Splunk Observability Cloud for Mobile
 Splunk Observability Cloud for Mobile is an iOS and Android companion mobile app to Splunk Observability Cloud. You can use Splunk Observability Cloud for Mobile to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
 
 For more information, see :ref:`wcidw-mobile`
+
+Splunk IT Essentials Work and Splunk IT Service Intelligence 
+===================================================================
+
+Splunk IT Essentials Work (ITE Work) is a free application that helps you get started with monitoring and analyzing your IT infrastructure. 
+
+Splunk IT Service Intelligence (ITSI) is a premium IT operations solution that provides actionable insight into the performance and behavior of your IT services. You can also ingest events from across your IT landscape and from other monitoring silos to provide a unified operational console of all your events and service-impacting issues. 
+
+For more information about these applications, see the :new-page:`IT operations product overview <https://docs.splunk.com/Documentation/ITOps/current/Overview/Overview>`. 
+
+Splunk App for Content Packs
+======================================
+
+Quickly set up your IT Service Intelligence (ITSI) or IT Essentials Work (ITE Work) environment using prepackaged content such as KPI base searches, service templates, saved glass tables, and other knowledge objects. 
+
+For more information, see the :new-page:`Overview of the Splunk App for Content Packs <https://docs.splunk.com/Documentation/ContentPackApp/latest/Overview/Overview>`.

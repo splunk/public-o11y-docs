@@ -1,15 +1,16 @@
 .. _infrastructure-k8s:
 
-**********************************
-Monitor Kubernetes
-**********************************
+******************************************
+Monitor Kubernetes (classic version)
+******************************************
 
 .. meta::
    :description: Learn how to monitor Kubernetes resources with Splunk Observability Cloud.
 
 .. note::
-   Before you can start monitoring any Kubernetes resources, :ref:`get-started-k8s`, and log in with your administrator credentials.
-   
+   The classic Kubernetes navigator is deprecated. See :ref:`infrastructure-k8s-nav` for documentation on the new Kubernetes navigator.
+
+Before you can start monitoring any Kubernetes resources, :ref:`get-started-k8s`, and log in with your administrator credentials.
 
 You can monitor Kubernetes metrics with Splunk Observability Cloud. Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. If you're also exporting logs from Kubernetes and want to learn about how to view logs in Observability Cloud, see :ref:`get-started-logs`.
 
@@ -40,8 +41,9 @@ You can also export and monitor data related to your Kubernetes clusters, as des
 
 Use the Kubernetes navigator
 ============================
+
 .. note::
-   Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes may result in the navigator not displaying all clusters. See :new-page:`endoflife.date <https://endoflife.date/kubernetes>` for more information.
+   Kubernetes version 1.21 and higher are compatible with the Kubernetes navigator. Using lower versions of Kubernetes might result in the navigator not displaying all clusters. See :new-page:`endoflife.date <https://endoflife.date/kubernetes>` for more information.
 
 View the health of entire Kubernetes clusters at a glance from the Infrastructure page. From the Infrastructure page, you can drill down into and analyze detailed metrics about these Kubernetes resources:
 

@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-ingest-alerts:
 
 Ingest alerts in Splunk Incident Intelligence
@@ -15,20 +13,31 @@ Ingest alerts in Splunk Incident Intelligence
     ingest-cloudwatch
     ingest-azure
     ingest-prometheus
+    ingest-rest
+    ingest-splunk-alerts
 
-
-
-
-To ingest alerts in Incident Intelligence, you can create a detector for one of the available alert sources to automatically pass alerts into Incident Intelligence or you can ingest third-party alerts using an ingest endpoint. After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab of Incident Intelligence.
+The following options are available for ingesting alerts in Incident Intelligence:
 
 .. raw:: html
 
-   <embed>
-      <h2>Available alert sources in Splunk Observability Cloud</h2>
-   </embed>
+   <ol>
+      <li>Create a detector for one of the available alert sources in Splunk Observability Cloud to automatically pass alerts. See <a href="#ii-ingest-observability-alerts">Available alert sources in Splunk Observability Cloud</a>.</li>
+      <li>Use the Splunk Incident Intelligence app on Splunkbase to send Splunk Enterprise and Splunk Cloud Platform alerts. See <a href="#ii-ingest-splunk-alerts">Available alert sources in Splunk Enterprise and Splunk Cloud Platform</a>.</li>
+      <li>Ingest third-party alerts using an ingest endpoint. See <a href="#ii-ingest-third-party-alerts">Available ingest endpoints for third-party alerts</a>.</li>
+   </ol>
+
+After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab of Incident Intelligence.
+
+.. raw:: html
+
+      <embed>
+      <h2 id="ii-ingest-observability-alerts">Available alert sources in Splunk Observability Cloud</h2>
+      </embed>
+
 
 .. list-table::
    :header-rows: 1
+   :width: 100%
    :widths: 25, 75
 
    * - :strong:`Alert source`
@@ -52,7 +61,27 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
 .. raw:: html
 
    <embed>
-      <h2>Available ingest endpoints for cloud alerts</h2>
+      <h2 id="ii-ingest-splunk-alerts">Available alert sources in Splunk Enterprise and Splunk Cloud Platform</h2>
+   </embed>
+
+.. list-table::
+   :header-rows: 1
+   :width: 100%
+   :widths: 25, 75
+
+   * - :strong:`Alert source`
+     - :strong:`Documentation`
+
+   * - Splunk Enterprise
+     - See :ref:`ii-ingest-splunk-itsi-alerts`.
+
+   * - Splunk Cloud Platform
+     - See :ref:`ii-ingest-splunk-itsi-alerts`.
+
+.. raw:: html
+
+   <embed>
+      <h2 id="ii-ingest-third-party-alerts">Available ingest endpoints for third-party alerts</h2>
    </embed>
 
 .. list-table::
@@ -71,6 +100,13 @@ To ingest alerts in Incident Intelligence, you can create a detector for one of 
 
    * - Prometheus
      - See :ref:`ii-ingest-prometheus-alerts`.
+  
+   * - Generic REST alerts
+     - See :ref:`ii-ingest-rest`.
+
+
+
+
 
 .. raw:: html
 

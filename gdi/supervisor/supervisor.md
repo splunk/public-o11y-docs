@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `supervisor` monitor type using the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `supervisor` monitor type for the Smart Agent Receiver.
 
 Use this integration to retrieve the state of processes running by the Supervisor.
 
@@ -79,6 +79,11 @@ The following table shows the configuration options for this monitor:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/supervisor/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

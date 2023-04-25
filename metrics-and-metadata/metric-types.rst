@@ -1,18 +1,19 @@
 .. _metric-types:
 
 *****************************************************************
-Identify metric types
+Metric types
 *****************************************************************
 
 .. meta::
   :description: Learn about three metric types in Splunk Observability Cloud: gauges, cumulative counters, and counters.
 
-In Splunk Observability Cloud, there are three types of metrics. The type of the metric determines which default rollup function Observability Cloud applies to summarize individual incoming data points to match a specified data resolution.
+In Splunk Observability Cloud, there are three types of metrics. For example, ``cpu.utilization`` is a gauge metric, ``api.calls`` is a cumulative counter metric, and ``dropped.packets`` is a counter metric.
 
-A :strong:`rollup` is a statistical function that takes all the data points in a metric time series (MTS) over a time period and outputs a single data point. Observability Cloud applies rollups after it retrieves the data points from storage but before it applies analytics functions. To learn more about rollups and data resolution, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts.
+.. image:: /_images/images-metrics/metrics-diagram.png
+  :width: 60%
+  :alt: This diagram shows examples of metrics.
 
-For example, Observability Cloud applies the SignalFlow ``average()`` function to data points for gauge metrics.
-When you specify a ten second resolution for a line graph plot, and Observability Cloud is receiving data for the metric every second, each point in the line represents the average of 10 data points.  
+The type of the metric determines which default :strong:`rollup` function Observability Cloud applies to summarize individual incoming data points to match a specified data resolution. A rollup is a statistical function that takes all the data points in a metric time series (MTS) over a time period and outputs a single data point. Observability Cloud applies rollups after it retrieves the data points from storage but before it applies analytics functions. To learn more about rollups and data resolution, see :ref:`Rollups <rollups>` in Data resolution and rollups in charts.
 
 These are the types of metrics and their default rollouts in Splunk Observability Cloud:
 
@@ -33,6 +34,8 @@ These are the types of metrics and their default rollouts in Splunk Observabilit
   * - :ref:`Cumulative counter metrics <cumulative-counters>` 
     - Represent a running count of occurrences, and measure the change in the value of the metric from the previous data point.
     - Delta 
+
+For example, Observability Cloud applies the SignalFlow ``average()`` function to data points for gauge metrics. When you specify a 10-second resolution for a line graph plot, and Observability Cloud is receiving data for the metric every second, each point in the line represents the average of 10 data points. 
 
 .. _gauges:
 

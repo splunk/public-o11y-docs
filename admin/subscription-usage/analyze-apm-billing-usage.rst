@@ -15,7 +15,6 @@ You can also use the Subscription Usage page to get detailed reports for each us
 
 To view your organization's APM subscription usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
 
-
 How APM calculates usage
 ========================
 
@@ -35,7 +34,7 @@ Metrics for TAPM subscription plans
 The following metrics power the charts in your APM Subscription Usage page with a TAPM subscription plan:
 
 .. list-table::
-   :header-rows: 1
+   :header-rows: 1 
    :widths: 25, 25, 50
 
    * - :strong:`Metric`
@@ -85,6 +84,8 @@ The following metrics power the charts in your APM Subscription Usage page with 
      - Troubleshooting MetricSets
      - The cardinality of Troubleshooting MetricSets for each 1-minute window.
 
+.. note:: See :ref:`host-diagnostics-report-apm` for more information on how to measure subscription usage by host.
+
 How APM calculates usage 
 ==========================
 
@@ -107,3 +108,22 @@ The detailed usage report for each usage period provides the billed value for ea
    # The halfpeak TAPM value for this month is: 47064
 
 For more information about APM usage reports, see :ref:`view-apm-billing-reports`.
+
+.. _host-diagnostics-report-apm:
+
+Subscription usage report for hosts and containers
+=========================================================
+
+For host subscription plans, you can request and download reports that show which hosts and containers are sending APM data over a specific minute. This can help you identify which hosts and containers are contributing to your subscription usage.
+
+To download a subscription usage report, do the following:
+
+- Go to :menuselection:`Settings > Subscription Usage` and select the :strong:`APM` tab.
+- Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
+- Select an hour of time in the chart.
+- Select a specific minute within the hour.
+- Click :guilabel:`Download Data` to download the CSV file.
+
+For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
+
+.. note:: You can generate and download reports within the retention period for traces. See :ref:`apm-data-retention` for more information.

@@ -5,7 +5,7 @@ Introduction to Splunk Log Observer
 *************************************
 
 .. meta::
-   :description: Get started investigating issues with Splunk Log Observer.
+   :description: Get started investigating issues with Splunk Log Observer. Resolve incidents faster through log filtering, aggregations, and analysis.
 
 
 
@@ -54,7 +54,7 @@ The following table lists features available to customers with a Log Observer en
 
    * - Filter your logs to see only logs that contain the field :guilabel:`error`.
      - Logs table
-     - :ref:`logs-filter-logs-by-field`
+     - :ref:`logs-keyword`
 
    * - Redact data to mask personally identifiable information in your logs.
      - Field redaction processors

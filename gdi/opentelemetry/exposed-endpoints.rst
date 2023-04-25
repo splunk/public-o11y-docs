@@ -9,7 +9,7 @@ Exposed ports and endpoints
 
 By default, the Collector exposes several endpoints. The components providing these endpoints will attempt to listen on loopback (localhost) or all interfaces (0.0.0.0), as detailed in this document.
 
-The endpoints exposed depend on which mode the Collector is configured in. You can disable components, especially receivers, if they are not required for an environment.
+The endpoints exposed depend on which mode the Collector is configured in. You can deactivate components, especially receivers, if they are not required for an environment.
 
 Check ports to make sure your environment doesn't have conflicts and that firewalls are configured properly. Ports can be changed in the YAML configuration file.
 
@@ -29,7 +29,7 @@ See the table for a complete list of exposed ports and endpoints:
   * - ``http(s)://localhost:55679/debug/[tracez|pipelinez]``
     - zPages extension for component diagnostics
   * - ``http(s)://0.0.0.0:[4317|4318]``
-    - OTLP receiver via gRPC and http
+    - OTLP receiver using gRPC and http
   * - ``http(s)://0.0.0.0:6060``
     - :new-page:`HTTP forwarder <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/httpforwarder>` used to receive Smart Agent ``apiUrl`` data
   * - ``http(s)://0.0.0.0:7276``

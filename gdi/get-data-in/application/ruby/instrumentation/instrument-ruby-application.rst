@@ -29,9 +29,17 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`Ruby` tile to open the Ruby guided setup.
 
+Install the Splunk Distribution of OpenTelemetry Ruby manually
+==================================================================
+
+Follow these instructions to install the Splunk Distribution of OpenTelemetry Ruby:
+
+- :ref:`install-enable-ruby-agent`
+- :ref:`configure-python-instrumentation`
+
 .. _install-enable-ruby-agent:
 
-Install and enable the Ruby agent
+Install and activate the Ruby agent
 ===================================================================
 
 Follow these steps to automatically instrument your application using the Ruby agent:
@@ -47,7 +55,7 @@ Follow these steps to automatically instrument your application using the Ruby a
 
    Run ``bundle install`` to install the gems.
 
-#.  Enable the instrumentation by passing ``auto_instrument:true`` to the ``configure`` method of ``Splunk::Otel``:
+#.  Activate the instrumentation by passing ``auto_instrument:true`` to the ``configure`` method of ``Splunk::Otel``:
 
       .. code-block:: ruby
 
@@ -92,24 +100,33 @@ Follow these steps to automatically instrument your application using the Ruby a
 
 If no data appears in :strong:`Observability > APM`, see :ref:`common-ruby-troubleshooting`.
 
-If you want to manually install and enable instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
+If you want to manually install and activate instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
 
 Instrument Ruby on Rails applications
-=======================================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To instrument a Ruby on Rails application, see :ref:`instrument-ruby-rails`.
 
 .. _ruby-enable-server-timing:
 
-Enable server timing for RUM
-========================================================
+Activate server timing for RUM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data produced by your Ruby application or service. For more information, see :ref:`server-trace-information-ruby`.
+
+.. _configure-ruby-instrumentation:
+
+Configure the Ruby agent
+---------------------------------------------
+
+In most cases, the only configuration setting you need to enter is the service name. You can also define other basic settings, like the deployment environment, the service version, and the endpoint, among others.
+
+For advanced configuration of the Ruby agent, like changing trace propagation formats, correlating traces and logs, or configuring server trace data, see :ref:`advanced-ruby-otel-configuration`.
 
 .. _kubernetes_ruby_agent:
 
 Deploy the Ruby agent in Kubernetes
-==========================================================
+---------------------------------------------
 
 To deploy the Ruby agent in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -139,19 +156,10 @@ The following example shows how to update a deployment to expose environment var
                - name: OTEL_RESOURCE_ATTRIBUTES
                  value: "deployment.environment=<environmentName>"
 
-.. _configure-ruby-instrumentation:
-
-Configure the Ruby agent
-===========================================================
-
-In most cases, the only configuration setting you need to enter is the service name. You can also define other basic settings, like the deployment environment, the service version, and the endpoint, among others.
-
-For advanced configuration of the Ruby agent, like changing trace propagation formats, correlating traces and logs, or configuring server trace data, see :ref:`advanced-ruby-otel-configuration`.
-
 .. _export-directly-to-olly-cloud-ruby:
 
 Send data directly to Observability Cloud
-==============================================================
+--------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -184,6 +192,6 @@ The realm name appears in the :guilabel:`Organizations` section.
 .. _instrument_aws_ruby_functions:
 
 Instrument Lambda functions
-=========================================================
+----------------------------------
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information.

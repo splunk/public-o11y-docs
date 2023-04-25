@@ -1,7 +1,7 @@
 .. _error-aggregates:
 
 ******************************************************************************************
-Error monitoring and crash aggregation
+Error monitoring and crash aggregation in Tag spotlight 
 ******************************************************************************************
 
 Errors are aggregated based on the stack trace. The error stack trace contains the error type and error message in the body of the stack trace. The following table outlines the different ways errors are grouped together depending on the situation. 
@@ -60,7 +60,7 @@ In Splunk RUM, the JavaScript errors view shows the JavaScript errors sorted by 
 
 2. To open Tag Spotlight from either the Application Summary Dashboard, or Overview pages click on any metric. 
 
-* For example, select :strong:`See All` in the metric :strong:`JavaScript Errors(by error ID)` to explore all of the JavaScript errors in Tag Spotlight. 
+* For example, select :strong:`See all` in the metric :strong:`JavaScript errors(by error ID)` to explore all of the JavaScript errors in Tag Spotlight. 
 
 
 JS Errors without stacktrace, type, or message 

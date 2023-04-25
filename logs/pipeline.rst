@@ -5,7 +5,7 @@ Manage the logs pipeline
 *****************************************************************
 
 .. meta::
-   :description: Manage the logs pipeline with log processing rules, log metricization rules, and Infinite Logging rules.
+   :description: Manage the logs pipeline with log processing rules, log metricization rules, and Infinite Logging rules. Customize your pipeline.
 
 .. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can manage the logs pipeline. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 

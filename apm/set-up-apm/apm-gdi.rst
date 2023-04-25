@@ -18,7 +18,7 @@ Before you begin the setup process, consider the following:
 
 * If you are using multiple components of Splunk Observability Cloud and want to collect host metrics, logs, or other application data in addition to traces, follow the steps in :ref:`get-started-get-data-in` to get data into Observability Cloud. Then see :ref:`verify-apm-data` in this topic to make sure your data is coming into Splunk APM as you expect. 
 
-* If you have already deployed the upstream OpenTelemetry Collector, you can use your existing deployment to send traces to Splunk APM. See :ref:`using-upstream-otel` for more information. However, note that using the Splunk Distribution of OpenTelemetry Collector provides a more supported experience, customized for Splunk APM. 
+* If you have already deployed the OpenTelemetry Collector Contrib project, also known as upstream Collector, you can use your existing deployment to send traces to Splunk APM. See :ref:`using-upstream-otel` for more information. However, note that using the Splunk Distribution of OpenTelemetry Collector provides a more supported experience, customized for Splunk Observability Cloud. 
 
 * If you want to start sending traces to Splunk APM with Splunk Distribution of OpenTelemetry Collector using the guided setup wizards in Splunk APM, follow the steps in the sections below. To set it up yourself without the guided process, see :ref:`otel-intro`.
 
@@ -51,7 +51,7 @@ To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTeleme
   - The collector can add span metadata associated with the infrastructure in which your applications are running.
   - You establish a single configuration point in which you can specify authorization details.
   - You establish a single configuration point in which you add custom tags and custom processing to your spans.
-  - You can batch spans together from many sources. By batching spans, you reduce load on the backend.
+  - You can batch spans together from many sources. By batching spans, you reduce load on the back end.
 
 To deploy the Splunk Distribution of OpenTelemetry Collector on a host, select :guilabel:`Navigation menu > Data Management` and search for the host type you're using. Then follow the steps in the setup wizard. 
 

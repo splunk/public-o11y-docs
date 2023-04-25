@@ -71,7 +71,7 @@ To create a ServiceNow integration in Observability Cloud:
 #. Select :guilabel:`Add Integration`.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for :guilabel:`ServiceNow`, and select it.
-#. Click :strong:`New Integration` to display the configuration options.
+#. Select :strong:`New Integration` to display the configuration options.
 #. By default, the name of the integration is :strong:`ServiceNow`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`Username` field, enter the user ID from ServiceNow in :ref:`servicenow1`.
 #. In the :strong:`Password` field, enter the password from ServiceNow in :ref:`servicenow1`.
@@ -79,7 +79,7 @@ To create a ServiceNow integration in Observability Cloud:
 
    To troubleshoot potential blind server-side request forgeries (SSRF), Observability Cloud has included ``\*.service-now.com`` on an allow list. As a result, if you enter a domain name that is rejected by Observability Cloud, contact :ref:`support` to update the allow list of domain names.
 
-#. Click :strong:`Incident`, :strong:`Problem`, or :strong:`Event` to indicate the issue type you want the integration to create in ServiceNow. If necessary, you can create a second integration using the other issue type. This lets you create an incident issue for one detector rule and a problem issue for another detector rule.
+#. Select :strong:`Incident`, :strong:`Problem`, or :strong:`Event` to indicate the issue type you want the integration to create in ServiceNow. If necessary, you can create a second integration using the other issue type. This lets you create an incident issue for one detector rule and a problem issue for another detector rule.
 
 #. :strong:`Save`.
 

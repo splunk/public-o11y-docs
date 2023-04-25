@@ -43,7 +43,7 @@ To link a detector to a team, follow these steps:
 
 #. If the team is not already a notification recipient for the detector, Observability Cloud asks if you want to send notifications to the team. Click :guilabel:`Yes` to add the team as a recipient to each detector rule. Click :guilabel:`No` to leave all recipients as is.
 
-.. note:: Sending alert notifications to a team doesn’t necessarily mean that every team member is notified. The team’s notification policy determines which team members receive notifications. To learn more about configuring team notification policies, see :ref:`admin-team-notifications`.
+.. note:: Sending alert notifications to a team doesn't necessarily mean that every team member is notified. The team's notification policy determines which team members receive notifications. To learn more about configuring team notification policies, see :ref:`admin-team-notifications`.
 
 
 .. _remove-link-detector-team:

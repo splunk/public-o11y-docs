@@ -21,9 +21,29 @@ Learn about the following special cases for spans and traces that you might enco
 Ongoing traces
 ===============================
 
-Splunk APM assembles incoming spans into traces and analyzes them to give you full fidelity access to your application data. With ongoing traces, you can view incoming spans of a trace being assembled, without having to wait for the entire trace to complete. 
+Splunk APM assembles incoming spans into traces and analyzes them to give you full fidelity access to your application data. 
 
-.. note:: If you have a Log Observer license, make it easier to find ongoing traces in APM, by making sure the ``trace_id`` field is showing up in your logs.
+What is an ongoing trace?
+---------------------------
+
+An ongoing trace is an incomplete trace. The spans within an ongoing trace are still being ingested and assembled. With an ongoing trace, you don't have to wait for the entire trace to complete to view incoming spans as they are being assembled. 
+
+Why might a trace be ongoing?
+--------------------------------
+
+The processing pipeline processes spans, associates them with traces, and saves associated metrics. The processing pipeline takes time. Spans that are still in the processing pipeline are considered "live spans". When processing is complete and the spans are in final storage, the spans are no longer considered live. 
+
+When you request a specific trace by trace ID, we check the processing pipeline for live spans with that trace ID. If we find any live spans, then we consider the trace to be ongoing. If we don't find any live spans, and we do find spans in final storage, we then check to see if the trace is ongoing. To do so, we look for the following conditions:
+
+#. Missing spans
+#. Trace age, by examining the most recent timestamp for spans in the trace. 
+
+If a trace is missing spans and the trace has a span with a recent timestamp, then the trace is considered ongoing. If a trace has missing spans and the most recent timestamp is old, then we consider the trace to be broken.
+
+How to find ongoing traces
+-----------------------------
+
+.. note:: If you have a Log Observer license, make sure the ``trace_id`` field is present in your logs. This field helps you find ongoing traces in APM.
 
 To view an ongoing trace, do the following:
 

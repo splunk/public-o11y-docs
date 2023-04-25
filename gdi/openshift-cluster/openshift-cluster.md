@@ -6,17 +6,17 @@
 
 ## Description
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `openshift-cluster` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to provide the `openshift-cluster` monitor.
 
 Use this integration to collect cluster-level metrics from the Kubernetes API server, which includes all metrics from the [kubernetes-cluster monitor](https://docs.splunk.com/Observability/gdi/kubernetes-cluster/kubernetes-cluster.html#nav-Kubernetes-cluster) with additional OpenShift-specific metrics. You only need to use the `openshift-cluster` monitor for OpenShift deployments, as it incorporates the `kubernetes-cluster` monitor automatically.
+
+This monitor is available on Kubernetes, Linux, and Windows.
+
+### Behaviour
 
 Since the agent is generally running in multiple places in a Kubernetes cluster, and since it is generally more convenient to share the same configuration across all agent instances, this monitor by default makes use of a leader election process to ensure that it is the only agent sending metrics in a cluster.
 
 All of the agents running in the same namespace that have this monitor configured decide amongst themselves which agent should send metrics for this monitor. This agent becomes the leader agent. The remaining agents stand by, ready to activate if the leader agent dies. You can override leader agent election by setting the `alwaysClusterReporter` option to `true`, which makes the monitor always report metrics.
-
-This monitor is similar to the `kube-state-metrics` monitor, and sends many of the same metrics, but in a way that is less verbose and a better fit for the Splunk Observability Cloud backend.
-
-This monitor is available on Kubernetes, Linux, and Windows.
 
 ## Benefits
 
@@ -53,23 +53,6 @@ Follow these steps to deploy this integration:
 ```{include} /_includes/configuration.md
 ```
 
-```
-receivers:  # All configuration goes under this key
- - smartagent/openshift-cluster:
-    type: openshift-cluster
-
-   ...  # Additional config
-```
-
-To complete the monitor activation, you must also include the `smartagent/openshift-cluster` monitor in a `metrics` pipeline. To do this, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
-
-```
-service:
-  pipelines:
-    metrics:
-      receivers: [smartagent/openshift-cluster]
-```
-
 ### Configuration options
 
 The following table shows the configuration options for this monitor:
@@ -96,6 +79,11 @@ The **nested** `kubernetesAPI` configuration object has the following fields:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

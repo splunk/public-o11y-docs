@@ -68,13 +68,20 @@ After you set the environment variable, your application instrumentation adds th
 
 The Server-Timing header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. To learn more, see:
 
-* :new-page:`Server Timing <https://www.w3.org/TR/server-timing/>` from the W3C documentation. 
-* :new-page:`Traceparent Header <https://www.w3.org/TR/trace-context/#traceparent-header>` from the W3C documentation. 
+* :new-page:`Server timing <https://www.w3.org/TR/server-timing/>` from the W3C documentation. 
+* :new-page:`Traceparent header <https://www.w3.org/TR/trace-context/#traceparent-header>` from the W3C documentation. 
 
 
 For more examples on Java instrumentation, see :ref:`server-trace-information-java`.
 
 .. _third-step-config:
+
+
+
+(Optional) Integrate with Splunk RUM 
+=====================================
+Integrate with Splunk RUM so that you can automatically measure Web Vital metrics against your run results. Web vitals capture key metrics that affect user experience and assess the overall performance of your site. For more, see :ref:`rum-synth`.
+
 
 (Optional) Configure your application
 =====================================

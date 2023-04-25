@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-edit-incident:
 
 Edit an incident
@@ -25,4 +23,3 @@ See also
 * :ref:`ii-add-incident-tools-resources`
 * :ref:`ii-muted-incidents`
 * :ref:`ii-mtta-mttr`
-* :ref:`ii-notification-preferences`

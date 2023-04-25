@@ -21,7 +21,7 @@ The Splunk Distribution of OpenTelemetry Python instruments numerous libraries a
 Ensure you have supported Python and library versions
 ==============================================================
 
-The agent of the Splunk Distribution of OpenTelemetry Python is compatible with Python 3.6 and higher. To instrument Python 2 applications, use the :new-page:`SignalFx Tracing Library for Python <https://github.com/signalfx/signalfx-python-tracing>`.
+The agent of the Splunk Distribution of OpenTelemetry Python is compatible with Python 3.7 and higher. To instrument Python 2 applications, use the :new-page:`SignalFx Tracing Library for Python <https://github.com/signalfx/signalfx-python-tracing>`.
 
 .. _python-otel-connector-requirement:
 

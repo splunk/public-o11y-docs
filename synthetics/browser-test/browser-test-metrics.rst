@@ -69,7 +69,7 @@ Test-level metrics in Browser tests
      - ``synthetics.run.count``
      - Total number of runs for the test. This metric contains dimensions such as ``success: true`` and ``failed: false`` to indicate whether the run succeeded or failed. 
 
-   * - Run-level Duration
+   * - Run-level duration
      - ``synthetics.run.duration.time.ms``
      - The total duration of the entire run, including all pages and synthetic transactions. 
 
@@ -110,7 +110,7 @@ Performance timing metrics capture information about how long it takes resources
      - ``synthetics.dom_load.time.ms``
      - Time until the Document Object Model (DOM) has loaded, and the initial markup has been parsed. This metric corresponds to the browser ``DOMContentLoaded`` event.
 
-   * - First byte time
+   * - Time to first byte (TTFB)
      - ``synthetics.ttfb.time.ms``
      - Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects increase the duration of this time.
 

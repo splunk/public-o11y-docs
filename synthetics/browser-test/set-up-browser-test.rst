@@ -17,6 +17,8 @@ For each page checked in a Browser test, Splunk Synthetic Monitoring captures an
    If the site or application you are monitoring uses allow lists or block lists for visitors or an analytics tool to measure traffic, check that it's configured to accommodate traffic from Splunk Synthetic Monitoring. See :ref:`synth-configure-app` for instructions. 
 
 
+
+
 Set up a Browser test
 =========================
 
@@ -27,6 +29,8 @@ Follow these steps to set up a Browser test:
 #. In the :guilabel:`Name` field, enter a name for your test. 
 #. In the :guilabel:`Go to URL` field, enter the URL for the page you want to test, including ``http`` or ``https``.
 #. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more. 
+#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`. 
+
 
 .. include:: /_includes/synthetics/configure-test.rst
 
@@ -37,7 +41,7 @@ View your Browser test
 Now that you created and saved a test, check whether it’s collecting data as expected: 
 
 #. From the :guilabel:`Tests` list, select the three-dot :guilabel:`Actions` menu and select :guilabel:`Play` arrow icon to manually trigger a live run of the test, or wait for at least one duration of the test frequency you set so that the test has time to run and collect data. 
-#. Select the test you’re interested in to open the :guilabel:`Test History` view, where you can view visualizations of recent test results and metrics.
+#. Select the test you’re interested in to open the :guilabel:`Test history` view, where you can view visualizations of recent test results and metrics.
 
 Interpret your Browser test results
 ======================================
@@ -49,7 +53,7 @@ Edit your Browser test
 
 To edit your Browser test, do the following:
 
-#. Select the row for the test you want to edit in the :guilabel:`Tests` list to open the :guilabel:`Test History` view.
+#. Select the row for the test you want to edit in the :guilabel:`Tests` list to open the :guilabel:`Test history` view.
 #. Select :guilabel:`Edit test` to edit your test configuration.
 
 If you change the name of your test or the name of a synthetic transaction, it may take up to 20 minutes for the updated name to appear in your charts and detectors.
@@ -93,7 +97,7 @@ Specify custom headers to send with each request. For example, you can add a hea
 Authentication
 --------------------------
 
-Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using Concealed Global Variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
+Add credentials to authenticate with sites that require additional security protocols, for example from within a corporate network. By using concealed global variables in the Authentication field, you create an additional layer of security for your credentials simplify the ability to share credentials across checks. For more, see :ref:`concealed-gv`
 
 The Authentication field is available for Browser tests in Chrome only. Firefox tests support Basic Authentication. Splunk Synthetic Monitoring supports a suite of authentication protocols. At this time, Splunk Synthetic Monitoring supports the following in Chrome:
 
@@ -121,8 +125,10 @@ When activated, this feature is used to enforce the validation of expired, inval
 
 .. _browser-exclude:
 
-..
-    Exclude files
-    ----------------
+
+
+Example
+==================
+For an example, see  :ref:`browser-test-use-case`.
 
 

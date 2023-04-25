@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/velero` monitor type using the Smart Agent Receiver. 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus/velero` monitor type for the Smart Agent Receiver. 
 
 Use this monitor gets metrics from Velero. This monitor is a wrapper around the `prometheus-exporter` monitor.
 
@@ -32,7 +32,7 @@ Provide a Velero monitor entry in your Collector or Smart Agent (deprecated) con
 
 ### Velero
 
-Use the Velero Helm chart to automatically enable Prometheus metrics for Velero. See https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/README.md on GitHub for more information.
+Use the Velero Helm chart to automatically activate Prometheus metrics for Velero. See https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/README.md on GitHub for more information.
 
 ### Splunk Distribution of OpenTelemetry Collector
 
@@ -101,6 +101,11 @@ The following table shows the configuration options for this monitor:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/prometheus/velero/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

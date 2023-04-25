@@ -215,7 +215,7 @@ The following snippet shows how to create a workflow span:
    // Time passes
    span.end();
 
-To enable error collection for workflow spans, add the ``error`` and ``error.message`` attributes:
+To activate error collection for workflow spans, add the ``error`` and ``error.message`` attributes:
 
 .. code-block:: javascript
    :emphasize-lines: 8,9

@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/df` monitor type by using the SignalFx Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/df` monitor type for the Smart Agent Receiver.
 
 Use this integration to track free disk space on the host using the collectd df plugin.
 
@@ -61,6 +61,11 @@ The following table shows the configuration options for the collectd/df monitor:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/collectd-df/metrics.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

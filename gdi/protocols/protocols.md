@@ -7,14 +7,18 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the network protocols monitor via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the network protocols monitor type for the Smart Agent Receiver.
 
 This monitor gathers metrics about the network protocol stacks running on the system.
+
+```{note}
+This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+```
 
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -61,6 +65,11 @@ See <a href="https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-r
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/protocols/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

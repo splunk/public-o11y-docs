@@ -47,7 +47,7 @@ window.onload = function(){
       match = document.getElementById(href.slice(1));
       console.log("MATCH: " + match);
       if(match) {
-        if((match == "[object HTMLElement]") || (match == "[object HTMLSpanElement]") || (match == "[object HTMLDivElement]") || (match == "[object HTMLHeadingElement]")) {
+        if((match == "[object HTMLElement]") || (match == "[object HTMLSpanElement]") || (match == "[object HTMLDivElement]") || (match == "[object HTMLHeadingElement]") || (match == "[object HTMLTableCellElement]")) {
           anchorOffset = $(match).offset().top - this.getFixedOffset();
           $('html, body').animate({ scrollTop: anchorOffset}, 0.1);
         }

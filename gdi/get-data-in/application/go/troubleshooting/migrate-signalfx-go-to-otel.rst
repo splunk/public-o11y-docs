@@ -14,7 +14,7 @@ The Splunk Distribution of OpenTelemetry Go replaces the deprecated SignalFx Go 
 Compatibility and requirements
 ==========================================================
 
-The Splunk Distribution of OpenTelemetry Go requires Go 1.16 and higher. See :ref:`go-otel-requirements`.
+The Splunk Distribution of OpenTelemetry Go requires Go 1.18 and higher. See :ref:`go-otel-requirements`.
 
 Reconfigure the tracing settings
 ==========================================================

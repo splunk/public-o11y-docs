@@ -1,17 +1,17 @@
 .. _auto-clearing-alerts:
 
 **********************
-Auto-clearing alerts
+Auto-clear alerts
 **********************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Auto-clear feature automatically resolves active alerts after a certain amount of time when a metric time series stops reporting as expected, so that you don't have to clear alerts manually.
 
 The Auto-clear feature automatically resolves active alerts after a designated amount of time when a metric time series stops reporting as expected, so that you don't have to clear alerts manually. Auto-clear is available for all condition types, including Sudden Change, Resource Running Out, and Historical Anomaly.
 
-To enable Auto-clear alerts when :ref:`creating or editing a detector <create-detectors>`:
+To turn on Auto-clear alerts when :ref:`creating or editing a detector <create-detectors>`:
 
 #. Go to :guilabel:`Alert settings`.
 
@@ -19,7 +19,7 @@ To enable Auto-clear alerts when :ref:`creating or editing a detector <create-de
 
 #. Enter a duration (numerical value and time period in days, hours, or minutes). For example, 3d, 1h, or 4m.
 
-#. Click :guilabel:`Done` to save your changes.
+#. Select :guilabel:`Done` to save your changes.
 
 .. note:: You can use Auto-clear alerts to specify that alerts from heartbeat detectors persist longer than alerts from other detectors before being cleared. Alternatively, to clear a heartbeat alert within an activity period and before inactivity sets in, set explicit clear conditions such as the following, rendered in SignalFlow: ``detect(when(A is None, '10s') and not when(A is None, '40s'))``
 

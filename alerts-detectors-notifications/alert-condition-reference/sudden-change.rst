@@ -4,7 +4,7 @@
 Sudden Change
 =============================================================================
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: The Sudden Change condition alerts when values received during a recent time window are anomalous compared to values received during the preceding time window.

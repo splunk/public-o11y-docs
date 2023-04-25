@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-respond-manage-incidents:
 
 Respond to and manage incidents
@@ -35,17 +33,17 @@ Use the following topics to learn about incident management and response:
    snooze-incident
    add-responders-roles
    add-incident-tools-resources
+   snow-integration
    edit-incident
    muted-incidents
    mtta-mttr
-   notification-preferences
 
 
 * :ref:`ii-respond-to-incident`
 * :ref:`ii-snooze-incident`
 * :ref:`ii-add-responders-roles`
 * :ref:`ii-add-incident-tools-resources`
+* :ref:`snow-integration`
 * :ref:`ii-edit-incident`
 * :ref:`ii-muted-incidents`
 * :ref:`ii-mtta-mttr`
-* :ref:`ii-notification-preferences`

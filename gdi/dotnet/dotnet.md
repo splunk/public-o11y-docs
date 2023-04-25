@@ -6,7 +6,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `dotnet` monitor via the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `dotnet` monitor type for the Smart Agent Receiver.
 
 This monitor reports metrics for .NET applications. This monitor is only available on Windows.
 
@@ -34,7 +34,7 @@ The following is a list of the most critical .NET performance counters:
 
 ## Installation
 
-This monitor is available in the SignalFx Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
+This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
 
 To install this integration:
 
@@ -87,9 +87,14 @@ The following table shows the configuration options for this monitor:
 
 ## Metrics
 
-This monitor emits all metrics by default. However, none of these metrics are categorized as container/host metrics, and are all custom.
+This monitor emits all metrics by default. However, none of these metrics are categorized as container or host metrics, and are all custom.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/dotnet/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

@@ -1,19 +1,22 @@
 # Contributing guidelines
 
-Thank you for your interest in contributing to Splunk Observability Cloud documentation. Read through this document before submitting any pull request.
+Thank you for your interest in contributing to Splunk Observability Cloud documentation!
 
-- [Prerequisites](#prerequisites)
-- [Decide the type of edit](#decide-the-type-of-edit)
-  - [Quick edits to existing documentation](#quick-edits-to-existing-documentation)
-  - [Complex edits to one or multiple files](#complex-edits-to-one-or-multiple-files)
-- [Folder structure of the repository](#folder-structure-of-the-repository)
-  - [Find a document in the repository](#find-a-document-in-the-repository)
-  - [Create files or directories](#create-files-or-directories)
-- [Edit the documentation](#edit-the-documentation)
-  - [Use the reStructuredText markup](#use-the-restructuredtext-markup)
-  - [Add images (optional)](#add-images-optional)
-  - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
-- [Test the docs](#test-the-docs)
+Read through this document before submitting any pull request.
+
+- [Contributing guidelines](#contributing-guidelines)
+  - [Prerequisites](#prerequisites)
+  - [Decide the type of edit](#decide-the-type-of-edit)
+    - [Quick edits to existing documentation](#quick-edits-to-existing-documentation)
+    - [Complex edits to one or multiple files](#complex-edits-to-one-or-multiple-files)
+  - [Folder structure of the repository](#folder-structure-of-the-repository)
+    - [Find a document in the repository](#find-a-document-in-the-repository)
+    - [Create files or directories](#create-files-or-directories)
+  - [Edit the documentation](#edit-the-documentation)
+    - [Use the reStructuredText markup](#use-the-restructuredtext-markup)
+    - [Add images (optional)](#add-images-optional)
+    - [Write with the Splunk style guide in mind](#write-with-the-splunk-style-guide-in-mind)
+  - [Test the docs](#test-the-docs)
 
 ## Prerequisites
 
@@ -202,7 +205,9 @@ Use the following syntax to add images uploaded to the `_images` folder:
     :alt: <alt text>
 ```
 
-Add images that enhance existing material, instead of replacing text. Don't include a screenshot of the UI if the user can follow your written instructions without it. 
+Screenshots must not include personal identifiable information or any other sensitive data. Use blur filters to redact text in the UI.
+
+Add images that enhance existing material, instead of replacing text. Don't include a screenshot of the UI if the user can follow your written instructions without it.
 
 > **NOTE:** Make sure to add alternative text. Writing alt text for an image is a helpful way to confirm that it adds something, for example, "This animation illustrates the pathway to create a dashboard" instead of something like "This is a screenshot of Tag Spotlight". For further guidance, see [Include alt text in images](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/Graphicsalttext) in the Splunk Style Guide. 
 
@@ -210,7 +215,7 @@ Add images that enhance existing material, instead of replacing text. Don't incl
 
 The Splunk Style Guide provides guidance on how to write straightforward, user-focused, example-rich content that inspires confidence in the user. See [A word about Splunk docs](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs) for an orientation to the [Splunk Style Guide](https://docs.splunk.com/Documentation/StyleGuide/current/StyleGuide/AwordaboutSplunkdocs).
 
-You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against Splunk's style guide. See https://github.com/splunk/vale-splunk-style-guide.
+You can also use the Splunk Style Guide rules for the vale linter to check automatically your docs against the Splunk style guide. See https://github.com/splunk/vale-splunk-style-guide.
 
 ## Test the docs
 
@@ -218,8 +223,8 @@ After you've saved your changes, you can test the docs using the Docker containe
 
 - Run `./start.sh` from the terminal. Make sure to run `chmod +x start.sh` to grant execution permissions.
 - Enter `make html` or `make clean html` from within the container to build the documentation.
-- Browse `http://localhost:9999` to see the local build of the docs. 
-- If you're using the `make livehtml` option, browse `http://localhost:8888`.
+- You can find the built documentation inside the `/_build/html` directory of the repo.
+- If you're using the `make livehtml` option, browse `http://localhost:8888` to see live docs.
 
 > **NOTE:** Don't run git commands from the container. Exit the container first or use a separate terminal window or tab.
 

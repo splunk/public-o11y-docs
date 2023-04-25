@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the SQL monitor type using the Smart Agent receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the SQL monitor type for the Smart Agent Receiver.
 
 Use this monitor to gather database usage metrics from SQL queries on your databases.
 
@@ -121,11 +121,11 @@ smartagent/sql:
       port: 1433
       dbDriver: sqlserver
       connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=123456;'
-    queries: 
-      query: 'SELECT COUNT(*) as count FROM Sales.Orders'
-    metrics:
-      metricName: "orders"
-      valueColumn: "count"
+      queries: 
+         - query: 'SELECT COUNT(*) as count FROM Sales.Orders'
+           metrics:
+             - metricName: "orders"
+               valueColumn: "count"
 ```
 
 ### Parameterized connection string

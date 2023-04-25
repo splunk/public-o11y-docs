@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-schedule-scenarios:
 
 On-call schedule scenarios
@@ -57,10 +55,7 @@ Day-by-day shifts let you define coverage for specific days of the week. For exa
     #. Drag responders in the list to reorder.
 #. Select :guilabel:`Save shift`. 
 
-You now have a schedule with a day-by-day shift that includes coverage for business hours Monday-Friday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. For an example of a multi-shift schedule, see the next scenario.
-
-
-
+You now have a schedule with a day-by-day shift that includes coverage for business hours Monday-Friday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. For an example of a multi-shift schedule, see the next scenario
 
 See also
 ============

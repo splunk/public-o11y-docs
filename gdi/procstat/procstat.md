@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the procstat monitor type using the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the procstat monitor type for the Smart Agent Receiver.
 
 Use this monitor to collect metrics about processes.
 
@@ -99,6 +99,11 @@ The Smart Agent supports the `native` pid finder only. The `cgroup` and `systemd
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/telegraf/monitors/procstat/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

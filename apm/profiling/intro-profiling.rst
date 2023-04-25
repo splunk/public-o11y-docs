@@ -12,7 +12,6 @@ Introduction to AlwaysOn Profiling for Splunk APM
 
    profiling-use-case-library
    get-data-in-profiling
-   spans-stack-traces
    using-the-flamegraph
    profiling-memory-metrics
    concepts-terms-profiling
@@ -55,7 +54,7 @@ For sample use cases, see :ref:`profiling-use-case-landingpage`.
     <h2>Memory profiling</h2>
   </embed>
 
-Memory profiling adds memory allocation data to stack traces and exposes JVM memory metrics, so that you can discover leaks and unusual consumption patterns in your instrumented services and applications. See :ref:`memory-profiling-use-case`.
+Memory profiling adds memory allocation data to stack traces and exposes memory metrics, so that you can discover leaks and unusual consumption patterns in your instrumented services and applications. See :ref:`memory-profiling-use-case`.
 
 After you get profiling data into Observability Cloud, you can visualize the memory allocation behavior of each component using the flame graph. See :ref:`flamegraph-howto`.
 

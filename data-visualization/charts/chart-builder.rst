@@ -41,10 +41,7 @@ Use wildcards
 
 You can use wildcards when entering a metric name into the :strong:`Signal` field.
 
-- If your metrics follow the naming conventions for Graphite metrics, see :ref:`graphite-options` for information on using Graphite wildcards and node aliasing.
-
-- If you have integrated Splunk Observability Cloud with New Relic, see :ref:`newrelic-options` for information on identifying and using New Relic metrics in Splunk Observability Cloud.
-
+If your metrics follow the naming conventions for Graphite metrics, see :ref:`graphite-options` for information on using Graphite wildcards and node aliasing.
 
 .. _find-metric:
 
@@ -452,7 +449,7 @@ For more information, see :ref:`missing-datapoints`.
 Aliasing
 -------------------------------------------------------------------
 
-If a plot uses :ref:`Graphite<graphite-wildcards>` or :ref:`New Relic<newrelic-wildcard>` style wildcards, options for node aliasing are displayed below the :strong:`Visualization` options.
+If a plot uses :ref:`Graphite<graphite-wildcards>` style wildcards, options for node aliasing are displayed below the :strong:`Visualization` options.
 
 Enter the aliases you want to use that correspond to the node place values. To make it easier, Splunk Observability Cloud provides examples of the dimension values that correspond to the nodes in question.
 
@@ -558,10 +555,10 @@ When you edit the SignalFlow that powers a chart, or when you create a chart by 
    	:backlinks: none
 
 
-Convertible SignalFlow can consist of streams only, with each stream assigned to a capital letter from A to ZZZZZZ
+Convertible SignalFlow can consist of streams only, with each stream assigned to a capital letter from A to Z
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-Assign each stream to its own capital letter, from A to ZZZZZZ. Multiple requests for data in a single assignment are not convertible to the plot-builder UI. Expression-type logic can include variables and numbers only.
+Assign each stream to its own capital letter, from A to Z. Multiple requests for data in a single assignment are not convertible to the plot-builder UI. Expression-type logic can include variables and numbers only.
 
 .. list-table::
    :widths: 25 100
@@ -686,8 +683,6 @@ When the Graphite wildcard option is selected, the ability to filter plots by di
 Node aliasing for Graphite-style metrics
 -------------------------------------------------------------------
 
-.. note:: The information in this section also applies to New Relic style metrics.
-
 One of the most powerful features in Splunk Observability Cloud is its use of dimensions to filter metrics or perform group |hyph| by aggregations. For example, you can filter in or out time series that match :code:`datacenter:snc`, or calculate the average value of the metric :code:`cpu.total.user` across multiple hosts, grouped by role.
 
 In Graphite, metric names typically contain multiple dot-separated dimension values, such as ``snc.role1.server3.cpu.total.user``. The dimension keys; such as datacenter, role, and host; are implicit. To use the dimensions in Graphite metric names as if they were native Splunk Observability Cloud dimensions, you can apply on-the-fly dimension aliasing to the chart you're constructing. This allows you to treat the nodes in a Graphite metric name as if they were dimensions in Splunk Observability Cloud, and you can also assign aliases to the implicit dimension keys to make it easier to use and easier to understand.
@@ -695,110 +690,6 @@ In Graphite, metric names typically contain multiple dot-separated dimension val
 Before applying aliasing, you can use the node place values as dimension or property values. After aliasing, you can use the node aliases instead of the node place values in analytics functions. The aliases are also used in the :ref:`data table<data-table>`.
 
 For information about how to apply aliases, see :ref:`plot-aliasing-options`.
-
-
-.. _newrelic-options:
-
-New Relic options for plots
-=============================================================================
-
-This section includes information that can help you build Splunk Observability Cloud charts from New Relic data.
-
-
-Recognize New Relic metrics in Splunk Observability Cloud
--------------------------------------------------------------------
-
-Metrics from New Relic are composed of strings delimited by the slash character (:code:`/`). Examples of New Relic metrics in Splunk Observability Cloud include the following:
-
-- ``WebTransaction/average_call_time/12345678``
-
-- ``WebTransaction/Expressjs/GET//*/average_call_time/12345678``
-
-Note that sometimes, as in this example, the delimiter :code:`/` appears in the metric name to denote a URL path, such as :code:`/*`. Splunk Observability Cloud does not distinguish between :code:`/` characters used as delimiters, and :code:`/` characters used in paths.
-
-Splunk Observability Cloud has made two changes to the names of metrics as we collect them from New Relic to enhance the ability to perform wildcard searches:
-
-- All New Relic metrics have their appropriate object ID appended to the metric name.
-
-  - For metrics from the Applications module, this is an application ID. For metrics from the Servers module, this is a server ID. The same value can be found in the id dimension associated with that metric.
-
-- Server metrics have their account ID prepended in front of the metric name.
-
-  - This only occurs for Server metrics because account ID information is only available for Server metrics. The same value can be found in the account dimension.
-
-
-Example of New Relic application metric in Splunk Observability Cloud
-------------------------------------------------------------------------
-
-New Relic application metric as obtained from API:
-
-``Apdex/Expressjs/GET//*/score``
-
-As it appears in Splunk Observability Cloud with application ID 12345678 appended:
-
-``Apdex/Expressjs/GET//*/score/12345678``
-
-
-Example of New Relic server metric in Splunk Observability Cloud
--------------------------------------------------------------------
-
-New Relic server metric as obtained from API:
-
-``System/CPU/System/percent/average_exclusive_time``
-
-As it appears in Splunk Observability Cloud, with account ID 7654321 prepended and server ID 12345678 appended:
-
-``7654321/System/CPU/System/percent/average_exclusive_time/12345678``
-
-To help you compose charts with New Relic metrics, Splunk Observability Cloud supports two kinds of wildcard searching: ordinary Splunk Observability Cloud wildcard mode and New Relic wildcard mode.
-
-
-Use wildcards with New Relic metrics
-=============================================================================
-
-New Relic mode appears as an option only after a New Relic integration has been set up in your Splunk Observability Cloud organization. Regular Splunk Observability Cloud dimensions are not available in New Relic mode. You cannot dynamically filter a chart that uses New Relic mode.
-
-
-.. _newrelic-wildcard:
-
-New Relic mode
--------------------------------------------------------------------
-
-Use New Relic mode when you're comparing detailed metrics about applications or servers, and can make individual static dashboards about specific applications or servers. You need to filter or aggregate by detailed information that's only available in the metric name, like transaction endpoint or process name.
-
-This mode is different from a regular wildcard query using :code:`*` because it treats the slash (:code:`/`) character as a special delimiter. The New Relic wildcard search :code:`System/*` will only return a metric that has no subsequent slash characters in the name. See the next section for an example.
-
-In New Relic mode, you can filter and aggregate metrics based only on the contents of the metric name. To help with this, Splunk Observability Cloud supports on-the-fly dimension aliasing in New Relic mode. Node aliasing allows you to assign names to the slash-delimited components of a metric name, and use the value of each component for aggregation and analytics. When using New Relic mode, you can find aliasing controls in the Y-axis configuration menu in the Chart Builder. For more information about aliasing, see :ref:`graphite-node-alias`.
-
-
-.. _regular-wildcard:
-
-Regular wildcard mode
--------------------------------------------------------------------
-
-Use this mode when you're comparing general data across applications or across accounts, or need to dynamically filter an entire dashboard. The information that you filter or aggregate by is captured in dimensions like application (the name of the New Relic application) and host (the hostname of the server hosting a New Relic application).
-
-In normal wildcard mode, you can use :code:`*` for wildcarding, and the wildcard applies to the entire metric name. For example, in a regular wildcard query, :code:`System/*` returns any metric beginning with :code:`System/`, even if there are subsequent slash characters in their metric names.
-
-
-Example: Comparing Regular wildcard mode to New Relic wildcard mode
--------------------------------------------------------------------
-
-In this example, we've input the search string :code:`System/*` into the :strong:`Signal` field in the Chart Builder.
-
-In Regular wildcard mode, this search returns the following example metrics:
-
-   - ``System/foo``
-   - ``System/bar``
-   - ``System/foo/bar``
-
-In contrast, a New Relic wildcard search for the same string returns a different list:
-
-   - ``System/foo``
-   - ``System/bar``
-
-Note that in New Relic wildcard mode, searching for :code:`System/*` does not return the metric ``System/foo/bar``. This is because the search returns only those metrics that have exactly one slash-delimited node after :code:`System`. ``System/foo/bar`` contains two nodes after :code:`System`: ``foo`` and ``bar``, and so does not match the search.
-
 
 .. _chart-whats-next:
 

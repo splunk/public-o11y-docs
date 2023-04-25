@@ -5,7 +5,7 @@
 
 ## Description
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/ntpq` monitor type using the Smart Agent Receiver. This is an embedded form of the Telegraf NTPQ plugin and requires the `ntpq` executable available on the path of the agent.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/ntpq` monitor type for the Smart Agent Receiver. This is an embedded form of the Telegraf NTPQ plugin and requires the `ntpq` executable available on the path of the agent.
 
 Use this integration to retrieve metrics from NTPQ.
 
@@ -71,12 +71,17 @@ The following table shows the configuration options for this monitor:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `dnsLookup` | No | `bool` | If set to `false`, set the `-n ntpq` flag. Disabling DNS lookups can reduce metric gather time. The default value is `true`. |
+| `dnsLookup` | No | `bool` | If set to `false`, set the `-n ntpq` flag. Deactivating DNS lookups can reduce metric gather time. The default value is `true`. |
 
 ## Metrics
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/telegraf/monitors/ntpq/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

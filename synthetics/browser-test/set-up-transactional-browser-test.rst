@@ -40,7 +40,7 @@ You can identify specific page elements involved in these steps by their id, nam
 
 To learn more about all available types of steps, see :ref:`step-types` below.
 
-A step doesn't generate its own dedicated metrics, but it counts toward the metrics for the synthetic transaction it belongs to. Additionally, when a step triggers a new pageload, the pageload triggers the set of pageload metrics. 
+A step doesn't generate its own dedicated metrics, but it counts toward the metrics for the synthetic transaction it belongs to. Additionally, when a step triggers a new page load, the page load triggers the set of page load metrics. 
 
 .. _step-types:
 
@@ -68,7 +68,7 @@ The following table describes the types of steps you can include:
      - Click on an element you identify under :guilabel:`Selector`. Optionally, wait for navigation. 
 
    * - Fill in field
-     - Fill a field you identify under :guilabel:`Selector` with a value you provide under :guilabel:`Value`. Optionally, wait for navigation. For security and reusability, use a built-in, custom, or Global Variable to provide the value. See :ref:`global-variables` to learn more.
+     - Fill a field you identify under :guilabel:`Selector` with a value you provide under :guilabel:`Value`. Optionally, wait for navigation. For security and reusability, use a built-in, custom, or global variable to provide the value. See :ref:`global-variables` to learn more.
 
    * - Go to URL
      - Navigate to a URL you provide under :guilabel:`Value`. 
@@ -117,7 +117,7 @@ Add synthetic transactions to your Browser Test
 ===================================================
 Follow these steps to create a Browser Test with synthetic transactions:
 
-#. From the Splunk Synthetic Monitoring landing page, click :guilabel:`Add New Test > Browser Test` to start creating a Browser Test. See :ref:`set-up-browser-test` for more details.
+#. From the Splunk Synthetic Monitoring landing page, click :guilabel:`Add new test > Browser test` to start creating a Browser Test. See :ref:`set-up-browser-test` for more details.
 #. While creating your Browser Test, select :guilabel:`Edit steps or synthetic transactions`. Your current configuration and detector selections are preserved and the :guilabel:`Add synthetic transactions` view opens.  
 #. Enter a name for your synthetic transaction, such as "Log in" or "Begin search."
 #. Enter a name for the first step in your synthetic transaction.
@@ -128,14 +128,8 @@ Follow these steps to create a Browser Test with synthetic transactions:
       * Selector path: Enter the path used to identify the selector you're using, conforming to the selector type you chose. 
 
 #. If your step type requires that you enter a :guilabel:`Value`, you can either type a raw value, or use a built-in, custom, or Global Variable here. You can select a variable name from the :guilabel:`Variables` tab to copy it and paste it in the field where you'd like it to be entered.
-#. If your step type has the option to :guilabel:`Wait for Navigation`, check the checkbox if you'd like the test to wait for a 2 second delay to allow the specified action to be executed. 
+#. If your step type has the option to :guilabel:`Wait for navigation`, check the checkbox if you'd like the test to wait for a 2 second delay to allow the specified action to be executed. 
 #. (Optional) Create additional steps and synthetic transactions using the :guilabel:`+ Step` and :guilabel:`+ Synthetic transaction` buttons. Click and drag steps and synthetic transactions to rearrange their order. 
-#. (Optional) Use the :guilabel:`Test Settings` tab to adjust your test configuration settings. See :ref:`test-config` to learn more.
+#. (Optional) Use the :guilabel:`Test settings` tab to adjust your test configuration settings. See :ref:`test-config` to learn more.
 #. (Optional) Use the :guilabel:`Detectors` tab to add detectors to your test. See :ref:`synth-alerts` to learn more.
 #. When you're satisfied with your transactional Browser Test, select :guilabel:`Save`.
-
-
-
-.. Tips for choosing a selector
-
-.. * Use developer tools to interact with DOM (inspector) and JavaScript (console) to interact with elements of a site
