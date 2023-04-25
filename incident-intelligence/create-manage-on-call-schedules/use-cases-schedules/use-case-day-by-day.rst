@@ -49,13 +49,13 @@ Skyler creates a M,W,F shift in the schedule for the checkout service. Using the
 
 Skyler selects a shift handoff of three, which and adds the SREs as responders. 
 
-.. image:: /_images/incident-intelligence/Business-Hours-Shift.png
+.. image:: /_images/incident-intelligence/use-cases/Business-Hours-Shift.png
       :width: 50%
       :alt: Business-hours shift in web service primary schedule.
 
 Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder, takes over.
 
-.. image:: /_images/incident-intelligence/Business-Hours-Schedule-Preview.png
+.. image:: /_images/incident-intelligence/use-cases/Business-Hours-Schedule-Preview.png
       :width: 99%
       :alt: Schedule preview for business-hours.
 
@@ -95,7 +95,7 @@ You now have a schedule with a day-by-day shift that includes coverage for busin
 
 Skyler adds the primary and secondary schedules as the first and second step in the incident workflow for the incident policy for the web application service. 
 
-.. image:: /_images/incident-intelligence/add_to_incident_workflow.png
+.. image:: /_images/incident-intelligence/use-cases/add_to_incident_workflow.png
       :width: 99%
       :alt: Add schedules as first and second steps in the incident workflow within the web application service incident policy.
 
