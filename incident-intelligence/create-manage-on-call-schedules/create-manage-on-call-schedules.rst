@@ -11,6 +11,7 @@ Create and manage on-call schedules
    :hidden:
 
    Use cases: Schedules in Incident Intelligence TOGGLE <use-cases-schedules/use-cases-schedules>
+   create-on-call-schedule
    sync-on-call-schedule
    whos-on-call
    reassign-shift
