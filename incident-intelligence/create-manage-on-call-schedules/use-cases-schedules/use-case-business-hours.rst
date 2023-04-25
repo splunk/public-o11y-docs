@@ -26,8 +26,11 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 
 .. _ii-create-primary-schedule:
 
-Skyler creates a schedule for primary coverage
-================================================
+.. raw:: html
+
+   <embed>
+      <h2>Skyler creates a schedule for primary coverage</h2>
+   </embed>
 
 Skyler creates a new schedule for primary coverage for the web application service and names it accordingly: Web application - primary. Skyler adds a WebApp teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
 
