@@ -17,8 +17,8 @@ Week-by-week shifts let you define coverage that is consistent week after week. 
 #. Select a shift start date.
 #. Use the timezone picker to select the timezone for the coverage.
 #. Under :guilabel:`Define shift coverage`, select :guilabel:`Week-by-week`.
-#. Select :guilabel:`Fridays` at :guilabel:`05:00 PM` in the :guilabel:`Starts on` drop-down lists.
-#. Select :guilabel:`Mondays` at :guilabel:`08:00 AM` in the :guilabel:`Ends on` drop-down lists.
+#. Select :guilabel:`Fridays` at :guilabel:`05:00 PM` in the :guilabel:`Starts on` menu.
+#. Select :guilabel:`Mondays` at :guilabel:`08:00 AM` in the :guilabel:`Ends on` menu.
 #. Under :guilabel:`Customize shift handoff`, select :guilabel:`4` to have the same responder cover the weekend shift for 4 weeks. 
 #. Under :guilabel:`Add responders`, add one or more responders to the shift. 
     #. Enter responder names and select them when they appear. 
