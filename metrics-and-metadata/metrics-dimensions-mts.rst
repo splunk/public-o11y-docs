@@ -7,7 +7,7 @@ Metadata: Dimensions, custom properties, tags, and attributes
 .. meta::
     :description: Learn about the differences between dimensions, custom properties, and tags in Splunk Observability Cloud.
 
-Splunk Observability Cloud data comes associated with additional metadata: 
+Splunk Observability Cloud data comes enrichened with additional metadata: 
 
 .. list-table::
   :header-rows: 1
@@ -19,15 +19,15 @@ Splunk Observability Cloud data comes associated with additional metadata:
     - :strong:`Data type`
     - :strong:`Format`
   * - Dimensions
-    - Sent in with metric time series (MTS) at the time of ingest to add context to metrics.
+    - Sent in with metric time series (MTS) at the time of ingest to add context to metrics. Along with the metric name, they uniquely identify the MTS.
     - Infrastructure metric
     - Key-value pair
   * - Custom properties 
-    - Applied to metric dimensions after ingest to add context to the metrics.
+    - Applied to metric dimensions after ingest to add context to the metrics. Custom properties do not contribute to uniquely identify an MTS.
     - Infrastructure metric
     - Key-value pair
   * - Tags
-    - Labels or keywords applied to metric dimensions and custom properties after ingest.
+    - Labels or keywords applied to metric dimensions and custom properties after ingest to help you categorize them. You can use tags to filter MTSes in charts and detectors using ``sf_tags``. 
     - Infrastructure metric
     - String
   * - Attributes or span tags
@@ -38,17 +38,27 @@ Splunk Observability Cloud data comes associated with additional metadata:
 * To find and edit your metadata, use the Metadata Catalogue. Learn more at :ref:`metadata-catalog`. 
 * To link metadata to other resources, see how in :ref:`link-metadata-to-content`.
 
+For more tools to leverage your data, see:
+
+* :ref:`data-visualization-charts` 
+* :ref:`view-alerts`
+* :ref:`view-detectors`
+
 .. _metadata-dimension:
 
 Dimensions
 ================================================================================
 
-Dimensions are metadata in the form of key-value pairs that a monitoring software sends in along with the metrics. Dimensions provide additional information about the metric, such as the name of the host that sent the metric. For example, ``"hostname": "host1"``.
+Dimensions are metadata in the form of key-value pairs that monitoring software sends in along with the metrics. The set of MTS dimensions sent during ingest is used, along with the metric name, to uniquely identify an MTS. 
+
+Dimensions provide additional information about the metric, such as the name of the host that sent the metric. For example, ``"hostname": "host1"``. 
 
 .. note:: 
-    * Two key-value pairs with different keys are different dimensions, regardless of value.
-    * Two key-value pairs that have the same key but different values are different dimensions.
-    * Two key-value pairs with the same key and value are the same dimension.
+    * Two key-value pairs with different keys are different dimensions, regardless of value. For example, ``"hostname": "bcn"`` and ``"clustername": "bcn"``.  
+    * Two key-value pairs that have the same key but different values are different dimensions. For example, ``"hostname": "bcn"`` and ``"hostname": "gir"``.   
+    * Two key-value pairs with the same key and value are the same dimension. For example, ``"hostname": "host"`` and ``"hostname": "host"``.   
+
+See how to use them in :ref:`metadata-best-practices`.
 
 Dimensions criteria
 ----------------------
@@ -69,7 +79,9 @@ Dimension name criteria:
 Custom properties
 ===================
 
-Custom properties are key-value pairs you can assign to dimensions of existing metrics. For example, you can add the custom property ``use: QA`` to the host dimension of your metrics to indicate that the host that is sending the data is used for QA. The custom property ``use: QA`` then propagates to all MTS with that dimension. To learn more about adding custom properties to existing metric dimensions, see :ref:`search-edit-metadata`.
+Custom properties are key-value pairs you can assign to dimensions of existing MTSes. Custom properties are single-valued and don't support multiple values.
+
+For example, you can add the custom property ``use: QA`` to the host dimension of your metrics to indicate that the host that is sending the data is used for QA. The custom property ``use: QA`` then propagates to all MTS with that dimension. To learn more about adding custom properties to existing metric dimensions, see :ref:`search-edit-metadata`.
 
 When Splunk Observability Cloud assigns a different name to a dimension coming from an integration or monitor, the dimension also becomes a custom property as it is assigned to the metric after ingest. For example, the AWS EC2 integration sends the ``instance-id`` dimension, and Observability Cloud renames the dimension to ``aws_instance_id``. This renamed dimension is a custom property.
 
@@ -84,7 +96,7 @@ You can define up to 75 custom properties per dimension.
 
 Custom property name and value criteria:
 
-* Names must be UTF-8 strings with a maximum length of 128 characters (512 bytes).
+* Names must be UTF-8 strings with a maximum length of 128 characters (512 bytes). Avoid custom property names already used as dimension names.
 * Values must be UTF-8 strings with a maximum length of 256 characters (1024 bytes).
 * The optional description property lets you provide a detailed description of a metric, dimension, or tag. You can use up to 1024 UTF-8 characters for a description.
 
@@ -95,7 +107,9 @@ In custom property values, Observability Cloud stores numbers as numeric strings
 Infrastructure Monitoring tags
 ========================================
 
-In Infrastructure Monitoring, tags are labels or keywords you can assign to dimensions and custom properties to give the same searchable value to multiple dimensions. To learn more about adding tags to existing metrics, see :ref:`search-edit-metadata`.
+In Infrastructure Monitoring, tags are labels or keywords you can assign to dimensions and custom properties to give the same searchable value to multiple dimensions. Unlike custom properties, tags go under the ``sf_tags`` property of a dimension and can have multiple values. 
+
+To learn more about adding tags to existing metrics, see :ref:`search-edit-metadata`.
 
 Tags criteria
 ------------------------------------------------------
