@@ -32,7 +32,7 @@ Traces instrumentations
 ---------------------------------
 
 .. list-table:: 
-   :widths: 60 40
+   :widths: 40 30 30
    :width: 100%
    :header-rows: 1
 
@@ -93,7 +93,7 @@ Metrics instrumentations
 ---------------------------------
 
 .. list-table:: 
-   :widths: 40 40
+   :widths: 40 30 30
    :width: 100%
    :header-rows: 1
 
@@ -123,7 +123,7 @@ Logs instrumentations
 ---------------------------------
 
 .. list-table:: 
-   :widths: 60 40
+   :widths: 40 30 30
    :width: 100%
    :header-rows: 1
 

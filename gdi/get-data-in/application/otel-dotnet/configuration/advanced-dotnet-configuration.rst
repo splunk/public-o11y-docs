@@ -69,6 +69,8 @@ The following settings are common to most instrumentation scenarios:
      - Activates automatic redirection of the assemblies used by the automatic instrumentation on the .NET Framework. The default values is ``true``. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_FLUSH_ON_UNHANDLEDEXCEPTION``
      - Controls whether the telemetry data is flushed when an ``AppDomain.UnhandledException`` event is raised. Set to ``true`` when experiencing missing telemetry at the same time of unhandled exceptions.	
+   * - ``OTEL_DOTNET_AUTO_RULE_ENGINE_ENABLED``
+     - Activates RuleEngine. The default values is ``true``. RuleEngine increases the stability of the instrumentation by validatig assemblies for unsupported scenarios.
 
 .. _dotnet-otel-exporter-settings:
 
@@ -127,6 +129,43 @@ The following settings control trace sampling:
    * - ``OTEL_TRACES_SAMPLER_ARG``
      - Semicolon-separated list of rules for the ``rules`` sampler. The default value is ``1.0``.
 
+.. _resource-detector-settings-dotnet-otel:
+
+Resource detectors configuration
+===============================================================
+
+You can use resource detectors to retrieve additional attributes for your application's spans.
+
+The following settings control resource detectors:
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 30 70
+   :width: 100%
+
+   * - Environment variable
+     - Description
+   * - ``OTEL_DOTNET_AUTO_RESOURCE_DETECTOR_ENABLED``
+     - Activates or deactivates all resource detectors. The default values is ``true``.
+   * - ``OTEL_DOTNET_AUTO_{DECTECTOR}_RESOURCE_DETECTOR_ENABLED``
+     - Activates or deactivates a specific resource detector, where ``{DETECTOR}`` is the uppercase identifier of the resource detector you want to activate. Overrides ``OTEL_DOTNET_AUTO_RESOURCE_DETECTOR_ENABLED``.
+
+.. _list-resource-detectors-dotnet:
+
+The following resource detectors are available:
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 30 30 40
+   :width: 100%
+
+   * - Detector ID
+     - Description
+     - Attributes
+   * - ``CONTAINER``
+     - Docker container detector. Requires the ``OpenTelemetry.ResourceDetectors.Container`` package. See :ref:`resource-detector-dotnet` for more information.
+     - ``container.id``
+
 .. _dotnet-otel-instrumentation-settings:
 
 Instrumentation settings
@@ -172,17 +211,17 @@ The following settings control which instrumentations are activated. See :ref:`d
    * - Setting
      - Description
    * - ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``
-     - Deactivates all instrumentations. The default value is ``true``.
+     - Activates or deactivates all instrumentations. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``
-     - Deactivates all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+     - Activates or deactivates all trace instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_TRACES_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
      - Activates or deactivates a specific trace instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_TRACES_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``
-     - Deactivates all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+     - Activates or deactivates all metric instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_METRICS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
      - Activates or deactivates a specific metric instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_METRICS_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``
-     - Deactivates all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
+     - Activates or deactivates all log instrumentations. Overrides ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_INSTRUMENTATION_ENABLED`` environment variable.
    * - ``OTEL_DOTNET_AUTO_LOGS_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED``
      - Activates or deactivates a specific log instrumentation, where ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation. Overrides ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED``. Inherits the value of the ``OTEL_DOTNET_AUTO_LOGS_INSTRUMENTATION_ENABLED`` environment variable.
 
