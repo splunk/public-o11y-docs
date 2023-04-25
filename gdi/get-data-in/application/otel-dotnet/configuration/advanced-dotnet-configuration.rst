@@ -163,7 +163,7 @@ The following resource detectors are available:
      - Description
      - Attributes
    * - ``CONTAINER``
-     - Docker container detector. Requires the ``OpenTelemetry.ResourceDetectors.Container`` package. See :ref:`resource-detector-dotnet` for more information.
+     - Docker container detector. Requires the ``OpenTelemetry.ResourceDetectors.Container`` package.
      - ``container.id``
 
 .. _dotnet-otel-instrumentation-settings:
