@@ -28,16 +28,12 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
                   </ol>
 
             </li>
+            <li><a href="#ii-create-secondary-schedule">Sklyer creates a schedule for the primary coverage that includes three shifts:</a></li>
+            <li><a href="#ii-add-incident-workflow">Sklyer creates a schedule for the primary coverage that includes three shifts:</a></li>
+            <li><a href="#ii-enable-incident-policy">Sklyer creates a schedule for the primary coverage that includes three shifts:</a></li>
       </ol>
    </embed>
 
-
-    #. :ref:`ii-create-business-shift`
-    #. :ref:`ii-create-weeknights-shift`
-    #. :ref:`ii-create-weekends-shift`
-#. :ref:`ii-create-secondary-schedule`
-#. :ref:`ii-add-incident-workflow`
-#. :ref:`ii-enable-incident-policy`
 
 .. raw:: html
 
@@ -112,10 +108,11 @@ Skyler wants the responder for the weeknights shift to be the same as the subseq
       :width: 50%
       :alt: Weekends shift schedule preview.
 
-.. _ii-create-secondary-schedule:
+.. raw:: html
 
-Skyler creates a schedule for secondary coverage with a 24x7 shift
-======================================================================
+   <embed>
+      <h2 id="ii-create-secondary-schedule">Skyler creates a schedule for secondary coverage with a 24x7 shift</h2>
+   </embed>
 
 Skyler creates a new schedule for secondary coverage for the web application service and names it accordingly: Web application - secondary. Skyler adds the WebApp teams tag again to make the schedule easier to find. The teams tag also sorts the list of responders so they’re easier to find and select when Skyler adds them to a shift later.
 
@@ -132,10 +129,11 @@ Skyler creates a 24x7 shift in the secondary schedule for the web application. U
       :width: 50%
       :alt: 24x7 shift in web service secondary schedule.
 
-.. _ii-add-incident-workflow:
+.. raw:: html
 
-Skyler adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service
-=================================================================================================================================
+   <embed>
+      <h2 id="ii-add-incident-workflow">Skyler adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service</h2>
+   </embed>
 
 Skyler adds the primary and secondary schedules as the first and second step in the incident workflow for the incident policy for the web application service. 
 
@@ -143,19 +141,26 @@ Skyler adds the primary and secondary schedules as the first and second step in 
       :width: 99%
       :alt: Add schedules as first and second steps in the incident workflow within the web application service incident policy.
 
-.. _ii-enable-incident-policy:
+.. raw:: html
 
-Skyler enables the web application service
-==============================================
+   <embed>
+      <h2 id="ii-enable-incident-policy">Skyler enables the web application service</h2>
+   </embed>
 
 With the schedules configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedules.
 
 
-Summary
-==========
+.. raw:: html
 
-Learn more
-=============
+   <embed>
+      <h2>Summary</h2>
+   </embed>
+
+.. raw:: html
+
+   <embed>
+      <h2>Learn more</h2>
+   </embed>
 
 * For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
 * For steps to create an incident policy, including steps for incident workflows, see :ref:`ii-create-configure-incident-policies`.
