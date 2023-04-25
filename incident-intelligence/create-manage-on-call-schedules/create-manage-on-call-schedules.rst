@@ -13,6 +13,7 @@ Create and manage on-call schedules
    example-schedule-scenarios
    sync-on-call-schedule
    whos-on-call
+   reassign-shift
    Use cases: Schedules in Incident Intelligence TOGGLE <use-cases-schedules/use-cases-schedules>
 
 
