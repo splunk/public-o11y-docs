@@ -249,9 +249,9 @@ See the following manifest to set security constraints:
 Use the Kubernetes Operator 
 ============================================================================================
 
-You can install the Collector with a Kubernetes Operator for Auto Instrumentation. See more at :ref:`auto-instrumentation-operator`. This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Collector Contrib project. 
+You can install the Collector with a Kubernetes Operator for Auto Instrumentation. This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Collector Contrib project. See more at :ref:`auto-instrumentation-operator`. 
 
-.. caution:: The OTel Kubernetes Operator is not related to the Splunk Operator for Kubernetes, which is used to deploy and operate Splunk Enterprise deployments in a Kubernetes infrastructure. 
+.. note:: The OTel Kubernetes Operator is not related to the Splunk Operator for Kubernetes, which is used to deploy and operate Splunk Enterprise deployments in a Kubernetes infrastructure. 
 
 Splunk Distribution for the Kubernetes Operator (Alpha)
 --------------------------------------------------------
