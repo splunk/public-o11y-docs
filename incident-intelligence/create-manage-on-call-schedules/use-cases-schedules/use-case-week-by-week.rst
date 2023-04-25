@@ -25,4 +25,4 @@ Week-by-week shifts let you define coverage that is consistent week after week. 
     #. Drag responders in the list to reorder.
 #. Select :guilabel:`Save shift`. 
 
-You now have a schedule with a week-by-week shift that includes coverage for weekends from 5 PM Friday to 8 AM Monday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. See :ref:`scenario-three` for an example of a multi-shift schedule. 
+You now have a schedule with a week-by-week shift that includes coverage for weekends from 5 PM Friday to 8 AM Monday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. See for an example of a multi-shift schedule. 
