@@ -42,25 +42,10 @@
     - No
     - No
 
-  * - In the APM API, access the APM Reporting resource.
+  * - The following functionality in the APM API.
+       - The APM Reporting resource
+       - The GET and DELETE methods on the APM Visibility Filters resource, see :ref:`sensitive-data-controls` for more information.
     - Yes
     - Yes
     - No
     - No
-
-  * - In the APM API, use the GET method on the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - In the APM API, use the DELETE method on the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
-    - Yes
-    - Yes
-    - No
-    - No
-
-
-
-
-
