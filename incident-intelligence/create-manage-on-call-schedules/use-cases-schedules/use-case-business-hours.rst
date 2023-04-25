@@ -20,7 +20,14 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 
    <embed>
       <ol>
-            <li><a href="#ii-create-primary-schedule">Sklyer creates a schedule for the primary coverage that includes three shifts:</a></li>
+            <li><a href="#ii-create-primary-schedule">Sklyer creates a schedule for the primary coverage that includes three shifts:</a>
+                  <ol>
+                        <li><a href="#ii-create-business-shift">Skyler creates a business-hours shift</a></li>
+                        <li><a href="#ii-create-weeknights-shift">Skyler creates a weeknights shift</a></li>
+                        <li><a href="#ii-create-weekends-shift">Skyler creates a weekends shift</a></li>
+                  </ol>
+
+            </li>
       </ol>
    </embed>
 
@@ -35,7 +42,7 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 .. raw:: html
 
    <embed>
-      <h2 id="ii-create-business-shift">Skyler creates a schedule for primary coverage</h2>
+      <h2 id="ii-create-primary-schedule">Skyler creates a schedule for primary coverage</h2>
    </embed>
 
 Skyler creates a new schedule for primary coverage for the web application service and names it accordingly: Web application - primary. Skyler adds a WebApp teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
@@ -44,10 +51,11 @@ Skyler creates a new schedule for primary coverage for the web application servi
       :width: 50%
       :alt: Create a primary schedule for the web application.
 
-.. _ii-create-business-shift:
+.. raw:: html
 
-Skyler creates a business-hours shift
----------------------------------------
+   <embed>
+      <h3 id="ii-create-business-shift">Skyler creates a business-hours shift</h3>
+   </embed>
 
 Skyler creates a business-hours shift in the primary schedule for the web application. Using the day-by-day shift type Skyler creates the nightly gap in coverage they need. Skyler selects a shift handoff of five and adds the SREs as responders. 
 
@@ -62,10 +70,11 @@ Using the schedule preview, Skyler verifies that the business-hours shift is con
       :width: 99%
       :alt: Schedule preview for business-hours.
 
-.. _ii-create-weeknights-shift:
+.. raw:: html
 
-Skyler creates a weeknights shift
-------------------------------------
+   <embed>
+      <h3 id="ii-create-weeknights-shift">Skyler creates a weeknights shift</h3>
+   </embed>
 
 Next, Skyler creates a weeknights shift in the primary schedule for the web application. Using the day-by-day shift type Skyler creates the daily gap in coverage they need. Skyler selects a shift handoff of four, as there are only four weeknights to cover since Friday is covered by the weekends shift. Finally, Skyler adds the SREs as responders. 
 
@@ -85,10 +94,11 @@ Skyler reorders the responders so responders have a week off between their busin
       :width: 99%
       :alt: Schedule preview with reordered responders.
 
-.. _ii-create-weekends-shift:
+.. raw:: html
 
-Create a weekends shift
---------------------------
+   <embed>
+      <h3 id="ii-create-weekends-shift">Skyler creates a weekends shift</h3>
+   </embed>
 
 Finally, Skyler creates a weekends shift in the primary schedule for the web application service. For the weekend shift Skyler uses the week-by-week shift type, as there is no gap in coverage, and selects one for the shift handoff.
 
