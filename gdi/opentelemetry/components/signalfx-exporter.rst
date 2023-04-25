@@ -84,7 +84,7 @@ The following example instructs the exporter to send only the ``cpu.interrupt`` 
 List of metrics excluded by default
 ---------------------------------------
 
-Metrics excluded by default by the SignalFx exporter are listed in the ``default_metrics.go`` file. The following snippet shows the latest version of the list:
+Metrics excluded by default by the SignalFx exporter are listed in the default_metrics.go file. The following snippet shows the latest version of the list:
 
 .. code-block:: yaml
 

@@ -17,7 +17,7 @@ Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting
 
 Choose from :ref:`over 100 supported open standards-based integrations <supported-data-sources>` with common data sources to get data from your on-premise and cloud infrastructure, applications and services, and user interfaces into Observability Cloud.
 
-When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
+When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
 Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward.
 

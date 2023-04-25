@@ -33,7 +33,7 @@ depending on the installation method:
 .. list-table::
   :header-rows: 1
   :widths: 40 60
-  :width: 100
+  :width: 100%
 
   * - Install method
     - Supported versions (64-bit)
@@ -78,14 +78,15 @@ To install the package using the installer script, follow these steps:
 Configure memory allocation
 ----------------------------------
 
-To configure memory allocation, use the ``memory`` parameter. The default value for this parameter is 512 MiB, or
-500 x 2^20 bytes, of memory. Increase this setting to allocate more memory, as shown in the following example.
+To configure memory allocation, use the ``memory`` parameter. 
+
+By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. To increase this setting to allocate more memory, replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
 .. code-block:: PowerShell
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; memory = "SPLUNK_MEMORY_TOTAL_MIB"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-Replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
+Read more about Collector sizing in :ref:`otel-sizing`.
 
 Configure proxy settings
 ----------------------------------
@@ -106,25 +107,29 @@ Configure fluentd for log collection
 -------------------------------------------
 
 By default, the installation configures the fluentd service to forward log events with the ``@SPLUNK`` label and
-send these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option.
+send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
 For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
-To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL, you can specify the
-following parameters for the installer script:
+To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL with a token different than ``<SPLUNK_ACCESS_TOKEN>``, you can specify the following parameters for the installer script:
 
-* ``hec-url = "<URL>"``
-* ``hec-token = "<TOKEN>"``
+* ``hec_url = "<SPLUNK_HEC_URL>"``
+* ``hec_token = "<SPLUNK_HEC_TOKEN>"``
 
-The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``.
-``<drive>`` is the drive letter for the fluentd installation directory.
+For example (replace the ``<SPLUNK...>`` values in the command for your configuration):
+
+.. code-block:: PowerShell
+
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; hec_url = "<SPLUNK_HEC_URL>"; hec_token = "<SPLUNK_HEC_TOKEN>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the drive letter for the fluentd installation directory.
+
 You can add custom fluentd source configuration files to the ``<drive>\opt\td-agent\etc\td-agent\conf.d``
 directory after installation.
 
 Note the following:
 
 * In this directory, fluentd includes all files with the .conf extension.
-* By default, fluentd collects from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf``
-  for the default configuration.
+* By default, fluentd collects from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
 
 After any configuration modification, apply the changes by restarting the system or running the following PowerShell commands:
 

@@ -225,7 +225,7 @@ To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use 
 
 .. note:: The ``log_data_enabled`` setting is available in the Splunk Distribution of OpenTelemetry Collector version 0.49.0 and higher.
 
-If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or ``values.yaml`` file:
+If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or values.yaml file:
 
 .. code-block:: yaml
 

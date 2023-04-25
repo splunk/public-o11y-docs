@@ -27,7 +27,7 @@ Activate desugaring in your application
 
 To instrument applications that run on Android API levels 21 to 25, you must activate desugaring. 
 
-To activate desugaring in your application, open the ``build.gradle`` file for your app module and update the ``compileOptions`` and ``dependencies`` sections as in the following examples:
+To activate desugaring in your application, open the build.gradle file for your app module and update the ``compileOptions`` and ``dependencies`` sections as in the following examples:
 
 .. tabs::
 
@@ -80,7 +80,7 @@ To activate the agent, you must install the Android RUM agent as a code-level de
 
 Follow these steps to install the Android RUM agent using Maven Central:
 
-1. Make sure Maven Central is in the repositories section of your main ``build.gradle`` file:
+1. Make sure Maven Central is in the repositories section of your main build.gradle file:
 
    .. code-block:: kotlin
 
@@ -92,7 +92,7 @@ Follow these steps to install the Android RUM agent using Maven Central:
          }
       }
 
-2. Add the latest Android RUM agent release as a dependency in the ``build.gradle`` file of your application:
+2. Add the latest Android RUM agent release as a dependency in the build.gradle file of your application:
 
    .. tabs::
 
@@ -196,7 +196,7 @@ To download and build the Android RUM library locally, follow these steps:
 
       ./gradlew publishToMavenLocal
 
-3. Make sure to set ``mavenLocal()`` as the repository in your ``build.gradle`` file:
+3. Make sure to set ``mavenLocal()`` as the repository in your build.gradle file:
 
    .. code:: kotlin
 
@@ -208,7 +208,7 @@ To download and build the Android RUM library locally, follow these steps:
          }
       }
 
-4. Add the library you've built as a dependency in the ``build.gradle`` file:
+4. Add the library you've built as a dependency in the build.gradle file:
 
    .. code:: kotlin
 

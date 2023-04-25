@@ -244,7 +244,14 @@ Use Nomad to to deploy the Collector. See :ref:`deployments-nomad` for the insta
 
 Pivotal Cloud Foundry
 -------------------------------
-Splunk provides a script to create a BOSH release of Collector. This is intended to be run by the Pivotal Cloud Foundry (PCF) tile. See :ref:`pivotal-cloud-foundry` for the script.
+
+You can use one of these three options to deploy the Collector with Pivotal Cloud Foundry (PCF):
+
+* Collector standalone deployment.
+* Collector as a sidecar to your app. 
+* Tanzu Tile.
+
+See more in :ref:`deployments-pivotal-cloudfoundry`.
 
 .. _linux-puppet:
 
@@ -475,7 +482,7 @@ Download pre-built binaries (``otelcol_linux_amd64`` or ``otelcol_linux_arm64``)
 Tar file
 -----------------------
 
-The ``tar.gz`` archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
+The tar.gz archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
 
 To use the tar file:
 

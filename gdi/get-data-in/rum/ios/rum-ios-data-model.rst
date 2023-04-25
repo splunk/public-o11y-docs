@@ -14,10 +14,6 @@ Common data types
 
 .. include:: /_includes/rum-data-model.rst
 
-
-
-
-
 .. _rum-ios-metrics:
 
 Metrics 
@@ -61,9 +57,6 @@ The following tables list all of the metrics available in Splunk RUM for iOS.
    * - ``rum.hot_start.time.ns.p75``
      - Hot start time
      - The p75 time in nanoseconds for a hot start. 
-
-
-
 
 .. _ios-rum-basic-properties:
 
