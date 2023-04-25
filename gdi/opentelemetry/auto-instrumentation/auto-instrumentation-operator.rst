@@ -1,7 +1,7 @@
 .. _auto-instrumentation-operator:
 
 *****************************************************************************
-Install the Collector and the Upstream Kubernetes Operator for Auto Instrumentation
+Install the Collector and the upstream Kubernetes Operator for Auto Instrumentation
 *****************************************************************************
 
 .. meta::
