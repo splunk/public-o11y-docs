@@ -7,7 +7,7 @@ Metadata: Dimensions, custom properties, tags, and attributes
 .. meta::
     :description: Learn about the differences between dimensions, custom properties, and tags in Splunk Observability Cloud.
 
-Splunk Observability Cloud data comes enrichened with additional metadata: 
+Splunk Observability Cloud data comes enriched with additional metadata: 
 
 .. list-table::
   :header-rows: 1

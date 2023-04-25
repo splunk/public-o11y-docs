@@ -16,7 +16,7 @@ Quick overview of Observability Cloud data types
 
 Observability Cloud works with the following data types:
 
-* :strong:`Metrics`: A measurable number that varies over time. For more information, read :ref:`metrics-landing`. 
+* :strong:`Metrics`: A metric is a measurement about a data source (host, application) that varies over time. For more information, read :ref:`metrics-landing`. 
 
   - Metrics and their metadata are stored in data points, which are then collected in metric time series. 
   - Metadata includes dimensions, custom properties, tags, and attributes.
