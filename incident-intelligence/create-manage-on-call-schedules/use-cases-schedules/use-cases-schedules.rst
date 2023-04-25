@@ -8,7 +8,7 @@ Use cases: Schedules in Incident Intelligence
 .. meta::
    :description: Schedule use cases for Incident Intelligence. 
 
-The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company. Each use case shares a story of how Buttercup Industries uses on-call schedules Splunk Incident Intelligence to notify the right responder to take action on their applications and services when incidents are triggered.
+The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company. Each use case shares a story of how Buttercup Industries uses on-call schedules in Splunk Incident Intelligence to notify the correct responder to take action on their applications and services when incidents are triggered.
 
 .. toctree::
    :maxdepth: 3

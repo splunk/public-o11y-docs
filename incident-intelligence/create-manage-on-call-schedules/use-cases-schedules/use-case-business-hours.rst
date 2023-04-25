@@ -16,17 +16,17 @@ Skyler, the site reliability engineering (SRE) manager for Buttercup Industries,
 
 For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
-#. :ref:`Create a schedule for the primary coverage that includes three shifts: <ii-create-primary-schedule>`
-    #. :ref:`Create a business hours shift <ii-create-business-shift>`
-    #. :ref:`Create a shift for weeknights coverage <ii-create-weeknights-shift>`
-    #. :ref:`Create a shift for weekends coverage <ii-create-weekends-shift>`
+#. :ref:`Sklyer creates a schedule for the primary coverage that includes three shifts: <ii-create-primary-schedule>`
+    #. :ref:`ii-create-business-shift`
+    #. :ref:`ii-create-weeknights-shift`
+    #. :ref:`ii-create-weekends-shift`
 #. :ref:`Create a schedule for secondary coverage with a 24x7 shift <ii-create-secondary-schedule>`
 #. :ref:`Add the schedules to the incident workflow for the web application service <ii-add-incident-workflow>`
 
 .. _ii-create-primary-schedule:
 
-Create a schedule for primary coverage
-==========================================
+Skyler creates a schedule for primary coverage
+================================================
 
 Skyler creates a new schedule for primary coverage for the web application service and names it accordingly: Web application - primary. Skyler adds a WebApp teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
 
@@ -36,8 +36,8 @@ Skyler creates a new schedule for primary coverage for the web application servi
 
 .. _ii-create-business-shift:
 
-Create a business-hours shift
----------------------------------
+Skyler creates a business-hours shift
+---------------------------------------
 
 Skyler creates a business-hours shift in the primary schedule for the web application. Using the day-by-day shift type Skyler is able to create the nightly gap in coverage they need. Skyler selects a shift handoff of 5 and adds the SREs as responders. 
 
@@ -54,8 +54,8 @@ Using the schedule preview, Skyler verifies that the business-hours shift is con
 
 .. _ii-create-weeknights-shift:
 
-Create a weeknights shift
-------------------------------
+Skyler creates a weeknights shift
+------------------------------------
 
 Next, Skyler creates a weeknights shift in the primary schedule for the web application. Using the day-by-day shift type Skyler is able to create the daily gap in coverage they need. Skyler selects a shift handoff of 4, as there are only 4 weeknights to cover since Friday will be covered by the weekends shift. Finally, Skyler adds the SREs as responders. 
 
@@ -94,8 +94,8 @@ Skyler wants the responder for the weeknights shift to be the same as the subseq
 
 .. _ii-create-secondary-schedule:
 
-Create a schedule for secondary coverage with a 24x7 shift
-==============================================================
+Skylar creates a schedule for secondary coverage with a 24x7 shift
+======================================================================
 
 Follow these steps to create your secondary schedule:
 
@@ -118,8 +118,8 @@ Follow these steps to create your secondary schedule:
 
 .. _ii-add-incident-workflow:
 
-Add the primary and secondary schedules to the incident workflow in the incident policy for the web application service
-==============================================================================================================================
+Skylar adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service
+=================================================================================================================================
 
 Your last step for this scenario is to add your primary and secondary schedules to the incident workflow in the incident policy for your web application service. 
 
