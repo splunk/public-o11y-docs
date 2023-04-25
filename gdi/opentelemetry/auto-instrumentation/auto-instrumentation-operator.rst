@@ -1,8 +1,8 @@
 .. _auto-instrumentation-operator:
 
-*****************************************************************************
+***************************************************************************************************
 Install the Collector and the upstream Kubernetes Operator for Auto Instrumentation
-*****************************************************************************
+***************************************************************************************************
 
 .. meta::
    :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
