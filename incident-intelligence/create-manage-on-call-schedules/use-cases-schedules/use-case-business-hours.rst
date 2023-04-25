@@ -20,9 +20,9 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
     #. :ref:`ii-create-business-shift`
     #. :ref:`ii-create-weeknights-shift`
     #. :ref:`ii-create-weekends-shift`
-#. :ref:`Create a schedule for secondary coverage with a 24x7 shift <ii-create-secondary-schedule>`
-#. :ref:`Add the schedules to the incident workflow for the web application service <ii-add-incident-workflow>`
-#. :re:`ii-enable-incident-policy`
+#. :ref:`ii-create-secondary-schedule`
+#. :ref:`ii-add-incident-workflow`
+#. :ref:`ii-enable-incident-policy`
 
 .. _ii-create-primary-schedule:
 
@@ -40,7 +40,7 @@ Skyler creates a new schedule for primary coverage for the web application servi
 Skyler creates a business-hours shift
 ---------------------------------------
 
-Skyler creates a business-hours shift in the primary schedule for the web application. Using the day-by-day shift type Skyler is able to create the nightly gap in coverage they need. Skyler selects a shift handoff of 5 and adds the SREs as responders. 
+Skyler creates a business-hours shift in the primary schedule for the web application. Using the day-by-day shift type Skyler creates the nightly gap in coverage they need. Skyler selects a shift handoff of five and adds the SREs as responders. 
 
 
 .. image:: /_images/incident-intelligence/Business-Hours-Shift.png
@@ -58,7 +58,7 @@ Using the schedule preview, Skyler verifies that the business-hours shift is con
 Skyler creates a weeknights shift
 ------------------------------------
 
-Next, Skyler creates a weeknights shift in the primary schedule for the web application. Using the day-by-day shift type Skyler is able to create the daily gap in coverage they need. Skyler selects a shift handoff of 4, as there are only 4 weeknights to cover since Friday will be covered by the weekends shift. Finally, Skyler adds the SREs as responders. 
+Next, Skyler creates a weeknights shift in the primary schedule for the web application. Using the day-by-day shift type Skyler creates the daily gap in coverage they need. Skyler selects a shift handoff of four, as there are only four weeknights to cover since Friday is covered by the weekends shift. Finally, Skyler adds the SREs as responders. 
 
 .. image:: /_images/incident-intelligence/Weeknights-Shift.png
       :width: 50%
@@ -70,7 +70,7 @@ Using the schedule preview, Skyler notices that the way the responders are order
       :width: 99%
       :alt: Schedule preview with back-to-back responder shifts.
 
-Skyler reorders the responders so responders have a week off between their business hours shift and their weeknights shift and uses the schedule preview to confirm that the responders are ordered appropriately.
+Skyler reorders the responders so responders have a week off between their business-hours shift and their weeknights shift and uses the schedule preview to confirm that the responders are ordered appropriately.
 
 .. image:: /_images/incident-intelligence/Reordered-Responders.png
       :width: 99%
@@ -81,7 +81,7 @@ Skyler reorders the responders so responders have a week off between their busin
 Create a weekends shift
 --------------------------
 
-Finally, Skyler creates a weekends shift in the primary schedule for the web application service. For the weekend shift Skyler uses the week-by-week shift type, as there is no gap in coverage, and selects 1 for the shift handoff.
+Finally, Skyler creates a weekends shift in the primary schedule for the web application service. For the weekend shift Skyler uses the week-by-week shift type, as there is no gap in coverage, and selects one for the shift handoff.
 
 .. image:: /_images/incident-intelligence/Weekends-Shift.png
       :width: 50%
@@ -107,7 +107,7 @@ Skyler creates a new schedule for secondary coverage for the web application ser
 Skyler creates a 24x7 shift within the schedule for secondary coverage
 -------------------------------------------------------------------------
 
-Skyler creates a 24x7 shift in the secondary schedule for the web application. Using the week-by-week shift type Skyler creates 24x7 as secondary coverage for one week Monday through Sunday. Skyler selects a shift handoff of 1 and adds the SREs as responders.
+Skyler creates a 24x7 shift in the secondary schedule for the web application. Using the week-by-week shift type Skyler creates 24x7 as secondary coverage for one week Monday through Sunday. Skyler selects a shift handoff of one and adds the SREs as responders.
 
 .. image:: /_images/incident-intelligence/24x7_shift.png
       :width: 50%
@@ -129,7 +129,7 @@ Skyler adds the primary and secondary schedules as the first and second step in 
 Skyler enables the web application service
 ==============================================
 
-With his schedules configured and added to his incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in his newly-configured schedules.
+With the schedules configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedules.
 
 
 Summary
