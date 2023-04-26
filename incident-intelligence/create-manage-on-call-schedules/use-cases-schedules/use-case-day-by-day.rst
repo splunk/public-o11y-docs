@@ -9,7 +9,7 @@ Use case: Create every-other-day coverage using the day-by-day shift type
 Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create a on-call schedule for the checkout service SREs with the following coverage needs:
 
 - Skyler needs coverage for the checkout service Monday through Sunday.
-- Skyler wants to schedule his SREs so that they are on call every other day. He wants to create 2 rotations:
+- Skyler wants to schedule his SREs so that they are on call every other day. He wants to create two rotations:
    - Rotation 1: Monday, Wednesday, and Friday 24x7
    - Rotation 2: Tuesday, Thursday, Saturday, and Sunday 24x7
 
