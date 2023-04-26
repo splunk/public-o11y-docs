@@ -16,6 +16,7 @@ For Kafka v1.x.x and above, on top of default metrics, monitor the following:
 * Disk utilization and network metrics of the underlying host. Since Zookeeper is an integral part of a Kafka cluster, you can monitor it using the Zookeeper monitor.
 
 ## Benefits
+
 ```{include} /_includes/benefits.md
 ```
 
@@ -39,7 +40,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file.
 
 ```
 service:
