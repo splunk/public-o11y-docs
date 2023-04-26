@@ -13,7 +13,7 @@ Skyler, the site reliability engineering (SRE) manager for Buttercup Industries,
    - Rotation 1: Monday, Wednesday, and Friday 24x7
    - Rotation 2: Tuesday, Thursday, Saturday, and Sunday 24x7
 
-For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
+Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
 .. raw:: html
 
@@ -69,7 +69,7 @@ Skyler creates a T,R,S,U shift in the schedule for the checkout service. Using t
 
 Skyler selects a shift handoff of four, which configures the shift to assign the same responder as on call for Tuesday, Thursday, Saturday, and Sunday. Skyler then adds the SREs as responders. 
 
-.. image:: /_images/incident-intelligence/use-cases/Day-by-day-TRSU-shift.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-TRSU-Shift.png
       :width: 50%
       :alt: T,R,S,U shift in checkout schedule.
 
@@ -116,3 +116,4 @@ Skyler created the every-other-day coverage they need by creating a single sched
 
 * For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
 * For steps to create an incident policy, including steps for incident workflows, see :ref:`ii-create-configure-incident-policies`.
+* For a use case with a multi-shift schedule and primary and secondary coverage, see :ref:`ii-use-case-business-hours`.

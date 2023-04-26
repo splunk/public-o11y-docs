@@ -14,7 +14,7 @@ Skyler, the site reliability engineering (SRE) manager for Buttercup Industries,
 - Skyler also needs coverage for the web application service for nights and weekends. Night coverage is 5 PM to 8 AM Monday through Friday. Weekend coverage is one responder who is on call from Friday at 5 PM to Monday at 8 AM.
 - Finally, Skyler needs one responder on call 24x7 as secondary coverage for one week Monday through Sunday.
 
-For these coverage needs, Skyler takes the following steps to configure a schedule that meets these coverage needs:
+Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
 .. raw:: html
 
