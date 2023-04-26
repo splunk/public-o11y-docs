@@ -14,6 +14,11 @@
      -
      -
 
+   * - :ref:`Apache CouchDB <apache-couchdb>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Apache HTTP Server <apache>`
      - :strong:`X`
      -

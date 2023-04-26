@@ -25,7 +25,7 @@ Configure application receivers for hosts and servers
    collectd/collectd-uptime
    monitors/coredns
    monitors/couchbase
-   cpu/cpu
+   monitors/cpu
    disk/disk
    docker/docker
    ecs-metadata/ecs-metadata
