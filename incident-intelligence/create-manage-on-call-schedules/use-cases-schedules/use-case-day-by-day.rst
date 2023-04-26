@@ -9,7 +9,7 @@ Use case: Create every-other-day coverage using the day-by-day shift type
 Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create a on-call schedule for the checkout service SREs with the following coverage needs:
 
 - Skyler needs coverage for the checkout service Monday through Sunday.
-- Skyler wants to schedule his SREs so that they are on call every other day. He wants to create two rotations:
+- Skyler wants to schedule their SREs so that they are on call every other day. He wants to create two rotations:
    - Rotation 1: Monday, Wednesday, and Friday 24x7
    - Rotation 2: Tuesday, Thursday, Saturday, and Sunday 24x7
 
@@ -106,7 +106,7 @@ With the schedule configured and added to the incident policy, Skyler then enabl
       <h2>Summary</h2>
    </embed>
 
-Skyler created the every-other-day coverage they needs by creating a single schedule for the checkout service with two day-by-day shifts: one shift for Monday, Wednesday, and Friday coverage and second for Tuesday, Thursday, Saturday, and Sunday coverage. Skyler added the schedule to the incident workflow in the incident policy for the checkout service. Skyler then enabled the policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
+Skyler created the every-other-day coverage they need by creating a single schedule for the checkout service with two day-by-day shifts: one shift for Monday, Wednesday, and Friday coverage and a second for Tuesday, Thursday, Saturday, and Sunday coverage. Skyler added the schedule to the incident workflow in the incident policy for the checkout service. Skyler then enabled the policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
 
 .. raw:: html
 

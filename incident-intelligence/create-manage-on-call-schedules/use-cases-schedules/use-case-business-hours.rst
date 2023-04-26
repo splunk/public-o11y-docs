@@ -159,7 +159,7 @@ With the schedules configured and added to the incident policy, Skyler then enab
       <h2>Summary</h2>
    </embed>
 
-Skyler created the coverage he needs by creating the following schedules and shifts:
+Skyler created the coverage they needs by creating the following schedules and shifts:
 
 * A primary schedule for the web appplication service with two shifts: 
    * A day-by-day shift for business-hours coverage 
