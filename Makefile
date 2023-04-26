@@ -11,6 +11,7 @@ ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 endif
 
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
+TESTOPTS = -W --keep-going -n -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
 
 .PHONY: help
 help:
@@ -56,3 +57,14 @@ livehtml:
 	@echo "Starting the live server..."
 	@echo
 	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --host 0.0.0.0 --port 8888
+
+.PHONY: test
+test:
+	@echo
+	@echo "*****************************************************"
+	@echo "       Testing Splunk Observability Docs build       "
+	@echo "*****************************************************"
+	@echo
+	@echo "Testing the docs..."
+	@echo
+	$(SPHINXBUILD) -b dummy $(TESTOPTS) $(BUILDDIR)/html
