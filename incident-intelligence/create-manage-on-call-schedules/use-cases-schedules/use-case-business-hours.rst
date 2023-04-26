@@ -143,7 +143,7 @@ Skyler adds the primary and secondary schedules as the first and second steps  i
 .. image:: /_images/incident-intelligence/use-cases/add_to_incident_workflow.png
       :width: 99%
       :alt: Add schedules as first and second steps in the incident workflow within the web application service incident policy.
-f 
+
 .. raw:: html
 
    <embed>
@@ -151,7 +151,6 @@ f
    </embed>
 
 With the schedules configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedules.
-
 
 .. raw:: html
 
