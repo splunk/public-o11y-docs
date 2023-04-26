@@ -35,7 +35,7 @@ For these coverage needs, Skyler takes the following steps to configure a schedu
 
 Skyler creates a new schedule for the checkout service and names it accordingly. Skyler adds a Checkout teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
 
-.. image:: /_images/incident-intelligence/use-cases/Day-by-day-create-schedule.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-create-checkout-schedule.png
       :width: 50%
       :alt: Create a schedule for the checkout service.
 
@@ -49,13 +49,13 @@ Skyler creates a M,W,F shift in the schedule for the checkout service. Using the
 
 Skyler selects a shift handoff of three, which and adds the SREs as responders. 
 
-.. image:: /_images/incident-intelligence/use-cases/Business-Hours-Shift.png
+.. image:: /_images/incident-intelligence/Day-by-day-MWF-shift.png
       :width: 50%
       :alt: Business-hours shift in web service primary schedule.
 
 Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder, takes over.
 
-.. image:: /_images/incident-intelligence/use-cases/Business-Hours-Schedule-Preview.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-dayMWF-preview.png
       :width: 99%
       :alt: Schedule preview for business-hours.
 

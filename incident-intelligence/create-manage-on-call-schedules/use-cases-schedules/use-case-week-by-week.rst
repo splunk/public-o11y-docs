@@ -1,10 +1,10 @@
 .. _ii-use-case-week-by-week:
 
-Use case: Create ________ coverage using the week-by-week shift type
+Use case: Create weekly coverage using the week-by-week shift type
 ************************************************************************
 
 .. meta::
-   :description: Schedule use case for creating business-hours and nights-and-weekends rotations in Incident Intelligence.
+   :description: Schedule use case for creating a weekly rotation in Incident Intelligence.
 
 Week-by-week shifts let you define coverage that is consistent week after week. For example, one responder covers weekends from 5 PM Friday to 8 AM Monday for 4 weeks. Follow these steps to set up this example schedule.
 
