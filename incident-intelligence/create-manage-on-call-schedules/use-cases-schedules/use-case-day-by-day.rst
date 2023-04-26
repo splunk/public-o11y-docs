@@ -55,7 +55,7 @@ Skyler selects a shift handoff of three, which configures the shift to assign th
 
 Using the schedule preview, Skyler verifies that they configured the M,W,F shift correctly. Alex is on call Monday, Wednesday, and Friday for 24 hours and then the next responder takes over.
 
-.. image:: /_images/incident-intelligence/use-cases/Day-by-day-TRSU-preview.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-MWF-preview.png
       :width: 99%
       :alt: Schedule preview for M,W,F shift.
 
@@ -79,28 +79,25 @@ Using the schedule preview, Skyler verifies that they configured the T,R,S,U shi
       :width: 99%
       :alt: Schedule preview for T,R,S,U shift.
 
-
-
-
 .. raw:: html
 
    <embed>
-      <h2 id="ii-add-incident-workflow">Skyler adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service</h2>
+      <h2 id="ii-add-incident-workflow">Skyler adds the checkout schedule to the incident workflow in the incident policy for the checkout service</h2>
    </embed>
 
-Skyler adds the primary and secondary schedules as the first and second step in the incident workflow for the incident policy for the web application service. 
+Skyler adds the checkout schedule as the first step in the incident workflow for the incident policy for the checkout service. 
 
-.. image:: /_images/incident-intelligence/use-cases/add_to_incident_workflow.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day--incident_workflow.png
       :width: 99%
-      :alt: Add schedules as first and second steps in the incident workflow within the web application service incident policy.
+      :alt: Add schedule as first step in the incident workflow within the checkout service incident policy.
 
 .. raw:: html
 
    <embed>
-      <h2 id="ii-enable-incident-policy">Skyler enables the web application service</h2>
+      <h2 id="ii-enable-incident-policy">Skyler enables the checkout service</h2>
    </embed>
 
-With the schedules configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedules.
+With the schedule configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
 
 
 .. raw:: html
