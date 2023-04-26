@@ -32,5 +32,5 @@ Use the following links to navigate the documentation set for metrics pipeline m
     * :ref:`data-dropping-impact`
     * :ref:`metrics-usage-report`
     * :ref:`aggregate-drop-use-case`
-    * :ref:`related-metrics`
+    * :ref:`org-metrics-metrics-pipeline`
 
