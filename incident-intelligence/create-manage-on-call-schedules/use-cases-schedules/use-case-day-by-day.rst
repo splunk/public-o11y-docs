@@ -45,19 +45,19 @@ Skyler creates a new schedule for the checkout service and names it accordingly.
       <h2 id="ii-create-mwf-shift">Skyler creates a day-by-day shift for Monday, Wednesday, and Friday coverage</h2>
    </embed>
 
-Skyler creates a M,W,F shift in the schedule for the checkout service. Using the day-by-day shift type Skyler creates the every-other-day coverage they need Day-by-day shifts are designed to span 24 hours or fewer on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
+Skyler creates a M,W,F shift in the schedule for the checkout service. Using the day-by-day shift type Skyler creates the every-other-day coverage they need. Day-by-day shifts are designed to span 24 hours or fewer on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
 
-Skyler selects a shift handoff of three, which and adds the SREs as responders. 
+Skyler selects a shift handoff of three, which configures the shift to assign the same responder as on call for Monday, Wednesday, and Friday. Skyler then adds the SREs as responders. 
 
 .. image:: /_images/incident-intelligence/use-cases/Day-by-day-MWF-shift.png
       :width: 50%
-      :alt: Business-hours shift in web service primary schedule.
+      :alt: M,W,F shift in checkout schedule.
 
-Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder, takes over.
+Using the schedule preview, Skyler verifies that they configured the M,W,F shift correctly. Alex is on call Monday, Wednesday, and Friday for 24 hours and then the next responder takes over.
 
-.. image:: /_images/incident-intelligence/use-cases/Day-by-day-MWF-preview.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-TRSU-preview.png
       :width: 99%
-      :alt: Schedule preview for business-hours.
+      :alt: Schedule preview for M,W,F shift.
 
 .. raw:: html
 
@@ -65,27 +65,22 @@ Using the schedule preview, Skyler verifies that the business-hours shift is con
       <h2 id="ii-create-trss-shift">Skyler creates a day-by-day shift for Tuesday,Thursday, Saturday, and Sunday coverage</h2>
    </embed>
 
-Day-by-day shifts are configured to span 24 hours on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
+Skyler creates a T,R,S,U shift in the schedule for the checkout service. Using the day-by-day shift type Skyler creates the every-other-day coverage they need. Day-by-day shifts are designed to span 24 hours or fewer on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
 
-#. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select the :guilabel:`On-call schedules` tab.
-#. Select :guilabel:`Create new schedule`.
-#. Select the pencil icon to edit the schedule name. For this example, name the schedule "Heroes team, web application service". Select the checkmark icon to save your schedule name. 
-#. (Optional) Add a teams tag if you want to associate your schedule with a team. The teams tag makes finding a schedule in an incident workflow easier. It also sorts the team members at the top of the responder list when adding responders to your schedule shifts. To add a teams tag, enter the team name in the :guilabel:`Teams tag` field and select the team when it appears. 
-#. Enter a shift name. For this example, enter "Weekday coverage, business hours".
-#. Select a shift start date.
-#. Use the timezone picker to select the timezone for the coverage.
-#. Under :guilabel:`Define shift coverage`, select :guilabel:`Day-by-day`.
-#. Select :guilabel:`Monday` through :guilabel:`Friday`.
-#. Select :guilabel:`08:00 AM` in the :guilabel:`Daily start time` menu.
-#. Select :guilabel:`05:00 PM` in the :guilabel:`Daily end time` menu. You need to uncheck :guilabel:`Create 24 hr shifts` to select a daily end time.
-#. Under :guilabel:`Customize shift handoff`, select :guilabel:`5`, to have the same responder cover the entire week. 
-#. Under :guilabel:`Add responders`, add one or more responders to the shift. 
-    #. Enter responder names and select them when they appear. 
-    #. Drag responders in the list to reorder.
-#. Select :guilabel:`Save shift`. 
+Skyler selects a shift handoff of four, which configures the shift to assign the same responder as on call for Tuesday, Thursday, Saturday, and Sunday. Skyler then adds the SREs as responders. 
 
-You now have a schedule with a day-by-day shift that includes coverage for business hours Monday to Friday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. For an example of a multi-shift schedule, see the next scenario
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-TRSU-shift.png
+      :width: 50%
+      :alt: T,R,S,U shift in checkout schedule.
+
+Using the schedule preview, Skyler verifies that they configured the T,R,S,U shift correctly. Alex is on call Tuesday, Thursday, Saturday, and Sunday for 24 hours and then the next responder takes over.
+
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-TRSU-preview.png
+      :width: 99%
+      :alt: Schedule preview for T,R,S,U shift.
+
+
+
 
 .. raw:: html
 
@@ -113,6 +108,8 @@ With the schedules configured and added to the incident policy, Skyler then enab
    <embed>
       <h2>Summary</h2>
    </embed>
+
+You now have a schedule with a day-by-day shift that includes coverage for business hours Monday to Friday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. For an example of a multi-shift schedule, see the next scenario
 
 .. raw:: html
 
