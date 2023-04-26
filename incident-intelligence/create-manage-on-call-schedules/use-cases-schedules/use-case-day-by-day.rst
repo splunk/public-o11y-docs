@@ -87,7 +87,7 @@ Using the schedule preview, Skyler verifies that they configured the T,R,S,U shi
 
 Skyler adds the checkout schedule as the first step in the incident workflow for the incident policy for the checkout service. 
 
-.. image:: /_images/incident-intelligence/use-cases/Day-by-day--incident_workflow.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-incident-policy.png
       :width: 99%
       :alt: Add schedule as first step in the incident workflow within the checkout service incident policy.
 
