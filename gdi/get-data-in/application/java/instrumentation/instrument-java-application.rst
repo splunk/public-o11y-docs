@@ -227,7 +227,7 @@ To deploy the Java agent in Docker, edit the Dockerfile for your application ima
    # Adds the latest version of the Splunk Java agent
    ADD https://github.com/signalfx/splunk-otel-java/releases/latest/download/splunk-otel-javaagent.jar .
    # Modifies the entry point
-   ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent-all.jar","-jar","./<myapp>.jar"]
+   ENTRYPOINT ["java","-javaagent:splunk-otel-javaagent.jar","-jar","./<myapp>.jar"]
 
 Use ``ENV`` commands to set environment variables for the Java agent. To activate metrics or profiling, add the required ``-Dotel`` argument to the ``ENTRYPOINT`` list.
 

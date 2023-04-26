@@ -50,14 +50,14 @@ To collect data with the Collector and the UF:
 
 #. Ensure that the UF captures the fully qualified domain name (FQDN) of the host, which is used to identify hosts in Observability Cloud. The UF can already capture this, and its behavior is consistent with the Collector. To capture the FQDN:
 
-   * From the ``$SPLUNK_HOME/etc/system/local/`` directory, open ``server.conf`` and verify that the following :new-page:`stanza <https://docs.splunk.com/Documentation/Splunk/latest/Admin/Serverconf#OVERVIEW>` is present:
+   * From the ``$SPLUNK_HOME/etc/system/local/`` directory, open server.conf and verify that the following :new-page:`stanza <https://docs.splunk.com/Documentation/Splunk/latest/Admin/Serverconf#OVERVIEW>` is present:
    
    .. code-block:: bash
 
      [general]
      hostnameOption = fullyqualifiedname
 
-   * From the ``$SPLUNK_HOME/etc/system/local/ directory`` directory, open ``inputs.conf`` and verify that the following :new-page:`stanza <https://docs.splunk.com/Documentation/Splunk/latest/Admin/Inputsconf#OVERVIEW>` is present:
+   * From the ``$SPLUNK_HOME/etc/system/local/ directory`` directory, open inputs.conf and verify that the following :new-page:`stanza <https://docs.splunk.com/Documentation/Splunk/latest/Admin/Inputsconf#OVERVIEW>` is present:
 
    .. code-block:: bash
   

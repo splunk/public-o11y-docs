@@ -13,7 +13,7 @@ Available host and application monitors
 
   Caches and memory TOGGLE <caches-memory>
   Cloud platforms TOGGLE <cloud>
-  cloudfoundry-firehose-nozzle/cloudfoundry-firehose-nozzle
+  monitors/cloudfoundry-firehose-nozzle
   conviva/conviva
   Databases TOGGLE <databases>
   GitLab TOGGLE <gitlab-monitors>

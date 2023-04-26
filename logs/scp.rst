@@ -20,6 +20,7 @@ Splunk Log Observer Connect is available in the AWS regions us0, us1, eu0, jp0, 
 Prerequisites
 ==============================================================
 Ensure that token authentication is enabled in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
+The Splunk Cloud users you configure in the following section must have the sc_admin role.
 
 Set up Log Observer Connect
 ==============================================================
@@ -42,7 +43,7 @@ Splunk Cloud Platform
          :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
       
 
-   b. Configure users in the Splunk Cloud Platform.
+   b. Configure users in the Splunk Cloud Platform.  
    
       .. image:: /_images/logs/setupLOC2.png
          :width: 100%

@@ -374,7 +374,7 @@ Observability Cloud retrieves metrics with two methods:
 #. Polling CloudWatch APIs:
    
    - First, the list of metrics is retrieved with ``ListMetrics``. 
-   - Next, data points are fetched with either ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>`.
+   - Next, data points are fetched with ``GetMetricData``. Note that the ``GetMetricStatistics`` API is deprecated, see more in :ref:`aws-api-notice`.  
 
 Learn more at :ref:`Evaluate your data ingest needs and costs <prep-for-aws-integration>`.
 
@@ -410,8 +410,7 @@ First, you need to retrieve your list of metrics using the ``ListMetrics`` API a
       - 1440 (number of minutes in a day)/15 (pull interval) * 100k / 500 (items) = 19200
       - USD 0.192 
 
-
-Next, you retrieve the data using either the ``GetMetricData`` or ``GetMetricStatistics`` API at a cost of USD 0.01 per 1,000 metrics requested:
+Next, you retrieve the data using the ``GetMetricData`` API at a cost of USD 0.01 per 1,000 metrics requested:
 
 .. list-table::
    :header-rows: 1

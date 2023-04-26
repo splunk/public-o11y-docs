@@ -67,9 +67,9 @@ The Splunk Distribution of OpenTelemetry Python doesn't require you to add anyth
 
 Follow these steps to update your Django configuration:
 
-#. Remove ``signalfx_tracing`` from ``INSTALLED_APPS`` in ``settings.py``.
+#. Remove ``signalfx_tracing`` from ``INSTALLED_APPS`` in settings.py.
 
-#. Set the ``DJANGO_SETTINGS_MODULE`` environment variable to the same value as in ``manage.py`` or ``wsgi.py``.
+#. Set the ``DJANGO_SETTINGS_MODULE`` environment variable to the same value as in manage.py or wsgi.py.
 
 .. _install-splunk-otel-python-distribution:
 

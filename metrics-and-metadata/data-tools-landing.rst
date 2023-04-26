@@ -19,10 +19,12 @@ Data tools in Splunk Observability Cloud
 Splunk Observability Cloud provides a wide array of features and tools to help you manage, understand, and leverage your data:
 
 * :ref:`metrics-finder-and-metadata-catalog`
-* :ref:`Metrics pipleine management <use-metrics-pipeline>`
+* :ref:`Metrics pipeline management <use-metrics-pipeline>`
 * :ref:`Logs timeline <logs-timeline>`
 * :ref:`get-started-relatedcontent`
 * :ref:`Metadata global links <link-metadata-to-content>`
 * :ref:`data-visualization-charts` 
 * :ref:`dashboards`
 * :ref:`signalflow-analytics-intro`
+* :ref:`view-alerts`
+* :ref:`view-detectors`

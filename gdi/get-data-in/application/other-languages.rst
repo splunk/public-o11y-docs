@@ -22,7 +22,7 @@ To instrument your application for Observability Cloud, you need to generate tra
 
    .. tab:: Erlang
 
-      Add the OpenTelemetry packages to the list of dependencies in your ``rebar.config`` file:
+      Add the OpenTelemetry packages to the list of dependencies in your rebar.config file:
 
       .. code-block:: Erlang
 
@@ -48,7 +48,7 @@ To instrument your application for Observability Cloud, you need to generate tra
 
    .. tab:: Rust
 
-      Add the required dependencies to the ``cargo.toml`` file:
+      Add the required dependencies to the cargo.toml file:
 
       .. code-block:: toml
 
