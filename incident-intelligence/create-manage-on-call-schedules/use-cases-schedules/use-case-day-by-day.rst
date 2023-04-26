@@ -106,7 +106,7 @@ With the schedule configured and added to the incident policy, Skyler then enabl
       <h2>Summary</h2>
    </embed>
 
-You now have a schedule with a day-by-day shift that includes coverage for business hours Monday to Friday. You can add additional shifts within this schedule to create coverage for other days of the week for this same team and environmental component. For an example of a multi-shift schedule, see the next scenario
+Skyler created a the every-other-day coverage he needs by creating a single schedule for the checkout service with two day-by-day shifts: one shift for Monday, Wednesday, and Friday coverage and another for Tuesday, Thursday, Saturday, and Sunday coverage. Skyler added the schedule to the incident workflow in the incident policy for the checkout service. Skyler then enabled the policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
 
 .. raw:: html
 
