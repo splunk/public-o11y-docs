@@ -11,58 +11,77 @@
     - Yes
     - Yes
     - Yes
-    - 
+    - Yes
+    
+  * - :strong:`View RUM homepage`
+    - Yes
+    - Yes
+    - Yes
+    - Yes
+
 
   * - :strong:`Create detector`
     - Yes
     - Yes
     - No
-    - test
+    - No
 
-  * - :strong:`Session search`
+  * - :strong:`View session search`
     - Yes
     - Yes
     - Yes
-    - test
+    - Yes
 
   * - :strong:`View app overview dashboard`
     - Yes
     - Yes
     - Yes
-    - test
+    - Yes
 
   * - :strong:`View tag spotlight`
-    - test
-    - test
-    - test
-    - test
+    - Yes
+    - Yes
+    - Yes
+    - Yes
+
+  * - :strong:`View session detail page`
+    - Yes
+    - Yes
+    - Yes
+    - Yes
   
   * - :strong:`View URL grouping rule`
     - Yes
     - Yes
     - Yes
-    - test
+    - Yes
   
   * - :strong:`Create URL grouping rule`
-    - test
-    - test
-    - test
-    - test
+    - Yes
+    - Yes
+    - No
+    - No
 
   * - :strong:`Delete URL grouping rule`
-    - test
-    - test
-    - test
-    - test
+    - Yes
+    - Yes
+    - No
+    - No
 
-  * - :strong:`Deactivate rule`
-    - test
-    - test
-    - test
-    - test
+  * - :strong:`Deactivate  URL grouping rule`
+    - Yes
+    - Yes
+    - No
+    - No
 
-  * - :strong:`Edit rule`
-    - test
-    - test
-    - test
-    - test
+  * - :strong:`Edit URL grouping rule`
+    - Yes
+    - Yes
+    - No
+    - No
+
+  * - :strong:`Filter URL grouping rules`
+    - Yes
+    - Yes
+    - No
+    - No
