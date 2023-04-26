@@ -3,11 +3,7 @@
 # Cassandra
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Cassandra monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Cassandra monitor type to monitor Cassandra using the GenericJMX plugin. This plugin wraps the genericjmx monitor, which comes with a set of predefined MBean definitions that a standard Cassandra deployment exposes.
-
-See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Cassandra monitor type to monitor Cassandra.
 
 This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
