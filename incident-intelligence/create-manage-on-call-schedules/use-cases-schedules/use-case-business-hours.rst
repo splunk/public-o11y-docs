@@ -8,7 +8,7 @@ Use case: Create business-hours and nights-and-weekend rotations for the web app
 .. meta::
    :description: Schedule use case for creating business-hours and nights-and-weekends rotations in Incident Intelligence.
 
-Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create a on-call schedule for the web application SREs with the following coverage needs:
+Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create an on-call schedule for the web application SREs with the following coverage needs:
 
 - Skyler needs coverage for the web application service for business hours Monday through Friday of each week, with one responder on the team being on call for a whole week.
 - Skyler also needs coverage for the web application service for nights and weekends. Night coverage is 5 PM to 8 AM Monday through Friday. Weekend coverage is one responder who is on call from Friday at 5 PM to Monday at 8 AM.
@@ -20,7 +20,7 @@ Skyler takes the following steps to configure a schedule that meets these covera
 
    <embed>
       <ol>
-            <li><a href="#ii-create-primary-schedule">Sklyer creates a schedule for the primary coverage that includes three shifts:</a>
+            <li><a href="#ii-create-primary-schedule">Skyler creates a schedule for the primary coverage that includes three shifts:</a>
                   <ol>
                         <li><a href="#ii-create-business-shift">Skyler creates a business-hours shift</a></li>
                         <li><a href="#ii-create-weeknights-shift">Skyler creates a weeknights shift</a></li>
@@ -78,7 +78,7 @@ Next, Skyler creates a weeknights shift in the primary schedule for the web appl
       :width: 50%
       :alt: Weeknights shift in web service primary schedule.
 
-Using the schedule preview, Skyler notices that the way the responders are ordered in the shifts, there are responders who have a weeknights shift that immediately follows their business-hours shift. 
+Using the schedule preview, Skyler notices that the way the responders are ordered in the shifts, some responders have a weeknights shift that immediately follows their business-hours shift. 
 
 .. image:: /_images/incident-intelligence/use-cases/Back-To-Back-Shifts.png
       :width: 99%
@@ -96,7 +96,7 @@ Skyler reorders the responders so responders have a week off between their busin
       <h3 id="ii-create-weekends-shift">Skyler creates a weekends shift</h3>
    </embed>
 
-Finally, Skyler creates a weekends shift in the primary schedule for the web application service. For the weekend shift Skyler uses the week-by-week shift type, as there is no gap in coverage, and selects one for the shift handoff.
+Finally, Skyler creates a weekends shift in the primary schedule for the web application service. For the weekends shift, Skyler uses the week-by-week shift type, as there is no gap in coverage, and selects one for the shift handoff.
 
 .. image:: /_images/incident-intelligence/use-cases/Weekends-Shift.png
       :width: 50%
@@ -138,12 +138,12 @@ Skyler creates a 24x7 shift in the secondary schedule for the web application. U
       <h2 id="ii-add-incident-workflow">Skyler adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service</h2>
    </embed>
 
-Skyler adds the primary and secondary schedules as the first and second step in the incident workflow for the incident policy for the web application service. 
+Skyler adds the primary and secondary schedules as the first and second steps  in the incident workflow for the incident policy for the web application service. 
 
 .. image:: /_images/incident-intelligence/use-cases/add_to_incident_workflow.png
       :width: 99%
       :alt: Add schedules as first and second steps in the incident workflow within the web application service incident policy.
-
+f 
 .. raw:: html
 
    <embed>
@@ -161,13 +161,13 @@ With the schedules configured and added to the incident policy, Skyler then enab
 
 Skyler created the coverage they needs by creating the following schedules and shifts:
 
-* A primary schedule for the web appplication service with two shifts: 
+* A primary schedule for the web application service with two shifts: 
    * A day-by-day shift for business-hours coverage 
    * A day-by-day shift for weeknights coverage
-* A secondary schedule for the web appplication service with one shift: 
+* A secondary schedule for the web application service with one shift: 
    * A week-by-week shift for weekends coverage
 
-Skyler added the schedules as the first and second step in the incident workflow in the incident policy for the web application service. Skyler then enabled the policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
+Skyler added the schedules as the first and second steps in the incident workflow in the incident policy for the web application service. Skyler then enabled the policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
 
 .. raw:: html
 

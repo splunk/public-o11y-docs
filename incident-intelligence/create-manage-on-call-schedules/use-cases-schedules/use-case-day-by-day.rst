@@ -6,7 +6,7 @@ Use case: Create every-other-day coverage using the day-by-day shift type
 .. meta::
    :description: Schedule use case for every-other-day coverage in Incident Intelligence.
 
-Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create a on-call schedule for the checkout service SREs with the following coverage needs:
+Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create an on-call schedule for the checkout service SREs with the following coverage needs:
 
 - Skyler needs coverage for the checkout service Monday through Sunday.
 - Skyler wants to schedule their SREs so that they are on call every other day. He wants to create two rotations:
@@ -19,9 +19,9 @@ Skyler takes the following steps to configure a schedule that meets these covera
 
    <embed>
       <ol>
-            <li><a href="#ii-create-schedule">Sklyer creates a schedule for the checkout service</a>
+            <li><a href="#ii-create-schedule">Skyler creates a schedule for the checkout service</a>
             <li><a href="#ii-create-mwf-shift">Skyler creates a day-by-day shift for Monday, Wednesday, and Friday coverage</a></li>
-            <li><a href="#ii-create-trss-shift">Skyler creates a day-by-day shift for Tuesday,Thursday, Saturday, and Sunday coverage</a></li>
+            <li><a href="#ii-create-trss-shift">Skyler creates a day-by-day shift for Tuesday, Thursday, Saturday, and Sunday coverage</a></li>
             <li><a href="#ii-add-incident-workflow">Skyler adds the schedule to the incident workflow in the incident policy for the checkout service</a></li>
             <li><a href="#ii-enable-incident-policy">Skyler enables the checkout service</a></li>
       </ol>
@@ -30,7 +30,7 @@ Skyler takes the following steps to configure a schedule that meets these covera
 .. raw:: html
 
    <embed>
-      <h2 id="ii-create-schedule">Sklyer creates a schedule for the checkout service</h2>
+      <h2 id="ii-create-schedule">Skyler creates a schedule for the checkout service</h2>
    </embed>
 
 Skyler creates a new schedule for the checkout service and names it accordingly. Skyler adds a Checkout teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
@@ -45,7 +45,7 @@ Skyler creates a new schedule for the checkout service and names it accordingly.
       <h2 id="ii-create-mwf-shift">Skyler creates a day-by-day shift for Monday, Wednesday, and Friday coverage</h2>
    </embed>
 
-Skyler creates a M,W,F shift in the schedule for the checkout service. Using the day-by-day shift type Skyler creates the every-other-day coverage they need. Day-by-day shifts are designed to span 24 hours or fewer on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
+Skyler creates an M,W,F shift in the schedule for the checkout service. Using the day-by-day shift type Skyler creates the every-other-day coverage they need. Day-by-day shifts are designed to span 24 hours or fewer on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
 
 Skyler selects a shift handoff of three, which configures the shift to assign the same responder as on call for Monday, Wednesday, and Friday. Skyler then adds the SREs as responders. 
 
@@ -62,7 +62,7 @@ Using the schedule preview, Skyler verifies that they configured the M,W,F shift
 .. raw:: html
 
    <embed>
-      <h2 id="ii-create-trss-shift">Skyler creates a day-by-day shift for Tuesday,Thursday, Saturday, and Sunday coverage</h2>
+      <h2 id="ii-create-trss-shift">Skyler creates a day-by-day shift for Tuesday, Thursday, Saturday, and Sunday coverage</h2>
    </embed>
 
 Skyler creates a T,R,S,U shift in the schedule for the checkout service. Using the day-by-day shift type Skyler creates the every-other-day coverage they need. Day-by-day shifts are designed to span 24 hours or fewer on select days of the week. This option is best if you want to create short-term shifts that are staggered on specific days of the week, with responders rotating on a more frequent basis.
