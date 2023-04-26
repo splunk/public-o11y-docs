@@ -3,13 +3,9 @@
 # Cassandra
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Cassandra monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Cassandra monitor type to monitor Cassandra.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Cassandra monitor type to monitor Cassandra using the GenericJMX plugin. This plugin wraps the genericjmx monitor, which comes with a set of predefined MBean definitions that a standard Cassandra deployment exposes.
-
-See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
-
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux.
 
 ## Benefits
 
@@ -37,7 +33,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -75,7 +71,6 @@ The `mBeanDefinitions` configuration option has the following fields:
 | `instanceFrom` | no | `list of strings` | This array specifies a list of object names used by JMX to identify MBeans, including properties that are key-value pairs. If the given object name is not unique and the server returns multiple MBeans, the values of these properties usually differ. Use the `instanceFrom` option to build the plugin instance from the appropriate property values. You can have multiple values of this option in your configuration, so you can generate the plugin instance from multiple property values. |
 | `values` | no | `list of objects` (see the following table for details) | This array specifies a list of objects corresponding to blocks in the `values` option. Each block maps the attributes of an MBean to a value list in `collectd`. You need to specify at least one `value` object for each MBean.  |
 | `dimensions` | no | `list of strings` |  |
-
 
 The `values` configuration option has the following fields:
 

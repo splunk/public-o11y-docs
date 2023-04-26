@@ -6,7 +6,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the CPUFreq monitor type to monitor the clock speed of each CPU on a host. This is useful for systems that vary the clock speed to save energy.
 
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows.
+This integration is only available on Kubernetes and Linux.
 
 ## Benefits
 
@@ -33,7 +33,7 @@ receivers:
     ... # Additional config
 ```
 
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
