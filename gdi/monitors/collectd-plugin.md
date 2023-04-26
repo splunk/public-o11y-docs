@@ -1,6 +1,6 @@
-(collectd)=
+(collectd-plugin)=
 
-# Collectd plugin
+# Collectd custom plugin
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd custom plugin monitor. See benefits, install, configuration, and metrics">
 
