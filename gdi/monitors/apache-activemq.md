@@ -4,13 +4,11 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Apache ActiveMQ monitor type. See benefits, install, configuration, and metrics.">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache ActiveMQ monitor type to wrap the GenericJMX monitor and track the following information from ActiveMQ:
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache ActiveMQ monitor type to track the following information from ActiveMQ:
 
 * Broker (Totals per broker)
 * Queue (Queue status)
 * Topic (Topic status)
-
-See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
 
 This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
 
@@ -70,7 +68,6 @@ The following table shows the configuration options for this integration:
 | `mBeansToOmit` | no | `list of strings` | A list of the MBeans to omit. This will come in handy in cases where only a few MBeans need to be omitted from the default list. |
 | `mBeanDefinitions` | no | `map of objects (see below)` | Specifies how to map JMX MBean values to metrics. If using a specific service monitor such as cassandra, kafka, or activemq, they come pre-loaded with a set of mappings, and any that you add in this option will be merged with those. |
 
-
 The **nested** `mBeanDefinitions` configuration object has the following fields:
 
 | Option | Required | Type | Description |
@@ -80,7 +77,6 @@ The **nested** `mBeanDefinitions` configuration object has the following fields:
 | `instanceFrom` | no | `list of strings` | The object names used by JMX to identify MBeans include so-called "properties" that are basically key-value pairs. If the given object name is not unique and multiple MBeans are returned, the values of those properties usually differ. You can use this option to build the plugin instance from the appropriate property values. This option is optional and can be repeated to generate the plugin instance from multiple property values. |
 | `values` | no | `list of objects (see below)` | The `value` blocks map one or more attributes of an MBean to a value list in the agent. There must be at least one `value` block within each MBean block |
 | `dimensions` | no | `list of strings` |  |
-
 
 The **nested** `values` configuration object has the following fields:
 
