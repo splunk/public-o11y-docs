@@ -21,7 +21,7 @@ Apache worker threads can be in one of the following states:
 | Finishing    | Finishing as part of graceful shutdown  |
 | Starting     | Starting up to serve                    |
 
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux. 
 
 ## Benefits
 
@@ -57,7 +57,7 @@ Additional configuration options include host or port, as shown below. If `mod_s
     url: "http://{{.Host}}:{{.Port}}/server-status?auto"
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
