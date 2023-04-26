@@ -14,7 +14,7 @@ Configure application receivers for databases
    monitors/apache-kafka
    monitors/apache-spark
    monitors/cassandra
-   consul/consul
+   monitors/consul
    opentelemetry/components/databricks-receiver
    etcd/etcd
    exec/telegraf-exec
