@@ -41,7 +41,7 @@ To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
-  smartagent/activemq:
+  smartagent/consul:
     type: collectd/consul
     ...  # Additional config
 ```
