@@ -49,13 +49,13 @@ Skyler creates a M,W,F shift in the schedule for the checkout service. Using the
 
 Skyler selects a shift handoff of three, which and adds the SREs as responders. 
 
-.. image:: /_images/incident-intelligence/Day-by-day-MWF-shift.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-MWF-shift.png
       :width: 50%
       :alt: Business-hours shift in web service primary schedule.
 
 Using the schedule preview, Skyler verifies that the business-hours shift is configured correctly. Alex is on call Monday-Friday from 8 AM to 5 PM for one week and then Deepu, the next responder, takes over.
 
-.. image:: /_images/incident-intelligence/use-cases/Day-by-dayMWF-preview.png
+.. image:: /_images/incident-intelligence/use-cases/Day-by-day-MWF-preview.png
       :width: 99%
       :alt: Schedule preview for business-hours.
 
