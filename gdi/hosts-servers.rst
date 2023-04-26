@@ -16,8 +16,8 @@ Configure application receivers for hosts and servers
    monitors/apache-zookeeper
    monitors/chrony
    monitors/collectd-plugin
+   monitors/collectd-df 
    monitors/cpufreq
-   collectd/collectd-df
    collectd/collectd-hadoopjmx
    collectd/collectd-kafka-consumer
    collectd/collectd-kafka-producer

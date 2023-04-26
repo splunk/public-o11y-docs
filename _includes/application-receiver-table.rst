@@ -84,12 +84,12 @@
      -
      -
 
-   * - :ref:`CPUFreq <cpufreq>`
+   * - :ref:`Collectd df plugin <collectd-df>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Collectd df <collectd-df>`
+   * - :ref:`CPUFreq <cpufreq>`
      - :strong:`X`
      -
      -
