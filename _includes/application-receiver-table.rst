@@ -74,12 +74,12 @@
      -
      -
 
-   * - :ref:`Collectd plugin <collectd>`
+   * - :ref:`Collectd plugin <collectd-plugin>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Collectd CPUFreq <collectd-cpufreq>`
+   * - :ref:`CPUFreq <cpufreq>`
      - :strong:`X`
      -
      -

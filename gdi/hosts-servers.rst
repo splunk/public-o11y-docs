@@ -15,8 +15,8 @@ Configure application receivers for hosts and servers
    monitors/apache-tomcat
    monitors/apache-zookeeper
    monitors/chrony
-   monitors/collectd
-   monitors/collectd-cpufreq
+   monitors/collectd-plugin
+   monitors/cpufreq
    collectd/collectd-df
    collectd/collectd-hadoopjmx
    collectd/collectd-kafka-consumer
@@ -60,8 +60,8 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`apache`
 * :ref:`zookeeper`
 * :ref:`chrony`
-* :ref:`collectd`
-* :ref:`collectd-cpufreq`
+* :ref:`collectd-plugin`
+* :ref:`cpufreq`
 * :ref:`collectd-df`
 * :ref:`collectd-hadoopjmx`
 * :ref:`collectd-kafka-consumer`
