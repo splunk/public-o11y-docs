@@ -24,7 +24,7 @@ Configure application receivers for hosts and servers
    collectd/collectd-php-fpm
    collectd/collectd-uptime
    monitors/coredns
-   couchbase/couchbase
+   monitors/couchbase
    cpu/cpu
    disk/disk
    docker/docker
