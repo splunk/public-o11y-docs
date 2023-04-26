@@ -5,7 +5,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Chrony NTP monitor type to monitor NTP data from a chrony server, such as clock skew and per-peer stratum. To talk to chronyd, this integration mimics what the chronyc control program does on the wire.
 
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux.
 
 ## Benefits
 
@@ -33,7 +33,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:

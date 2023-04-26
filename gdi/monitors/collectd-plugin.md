@@ -1,12 +1,12 @@
-(collectd)=
+(collectd-plugin)=
 
-# Collectd plugin
+# Collectd custom plugin
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd custom plugin monitor. See benefits, install, configuration, and metrics">
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `collectd/custom` monitor type to customize the collectd configuration of your managed collectd instances.
 
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows.
+This integration is only available on Kubernetes and Linux.
 
 ## Benefits
 
@@ -33,7 +33,7 @@ receivers:
     ... # Additional config
 ```
 
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -43,7 +43,7 @@ service:
 ```
 ### Configuration settings 
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
