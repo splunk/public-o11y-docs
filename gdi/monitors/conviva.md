@@ -18,7 +18,7 @@ Only `Live` conviva metrics listed on the
 
 ## Installation
 
-```{include} /_includes/collector-installation-linux.md
+```{include} /_includes/collector-installation.md
 ```
 
 ## Configuration
@@ -43,7 +43,7 @@ Next, add the monitor to the `service > pipelines > metrics > receivers` section
 service:
   pipelines:
     metrics:
-      receivers: [smartagent/consul]
+      receivers: [smartagent/conviva]
 ```
 
 ### Configuration settings

@@ -23,7 +23,7 @@ Configure application receivers for hosts and servers
    collectd/collectd-kafka-producer
    collectd/collectd-php-fpm
    collectd/collectd-uptime
-   coredns/coredns
+   monitors/coredns
    couchbase/couchbase
    cpu/cpu
    disk/disk
