@@ -160,12 +160,13 @@ With the schedules configured and added to the incident policy, Skyler then enab
    </embed>
 
 Skyler created the coverage he needs by creating the following schedules and shifts:
+
 * A primary schedule for the web appplication service with two shifts: 
    * A day-by-day shift for business-hours coverage 
    * A day-by-day shift for weeknights coverage
 * A secondary schedule for the web appplication service with one shift: 
    * A week-by-week shift for weekends coverage
-  
+
 Skyler added the schedules as the first and second step in the incident workflow in the incident policy for the web application service. Skyler then enabled the policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
 
 .. raw:: html
