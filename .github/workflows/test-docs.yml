@@ -1,7 +1,9 @@
-name: "Test docs PR for errors"
+name: "Test the documentation for errors and warnings"
 
-on: 
-  pull_request_target:
+on:
+  push: 
+    branches: [ main ]
+  pull_request:
     types:
       - opened
       - synchronize
@@ -24,8 +26,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          ref: ${{ github.head_ref || github.ref_name }}
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
