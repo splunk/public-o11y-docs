@@ -16,7 +16,7 @@ Configure application receivers for languages
    genericjmx/genericjmx
    java-monitor/java-monitor
    jmx/jmx
-   dotnet/dotnet
+   monitors/microsoft-dotnet
 
 These application receivers gather metrics from their associated language-related applications and the hosts the applications are running on.
 
@@ -25,5 +25,5 @@ These application receivers gather metrics from their associated language-relate
 * :ref:`genericjmx`
 * :ref:`java-monitor`
 * :ref:`jmx`
-* :ref:`dotnet`
+* :ref:`microsoft-dotnet`
 

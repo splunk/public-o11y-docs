@@ -12,7 +12,7 @@ Configure application receivers for networks
    :hidden:
 
    monitors/aws-appmesh
-   dns/telegraf-dns
+   monitors/dns
    logstash-tcp/logstash
    net-io/net-io
    ntp/ntp
@@ -24,7 +24,7 @@ Configure application receivers for networks
 These application receivers gather metrics from their associated network-related applications and the hosts the applications are running on.
 
 * :ref:`appmesh`
-* :ref:`telegraf-dns`
+* :ref:`dns`
 * :ref:`logstash-tcp`
 * :ref:`net-io`
 * :ref:`ntp`
