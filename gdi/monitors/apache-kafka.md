@@ -4,16 +4,19 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Kafka monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache Kafka monitor type to monitor Kafka instances using the GenericJMX plugin. This integration pulls metrics from Kafka JMX endpoints for the [built-in MBeans
-you've configured](https://github.com/signalfx/signalfx-agent/tree/main/pkg/monitors/collectd/kafka/mbeans.go). See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information on how to configure custom MBeans, as well as information on troubleshooting JMX setup.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache Kafka monitor type to monitor Kafka instances. 
 
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux. 
 
-This monitor supports Kafka v0.8.2.x and above. 
+This integration supports Kafka v0.8.2.x and above. 
 
-For Kafka v1.x.x and above, on top of default metrics, monitor `kafka.server:type=ZooKeeperClientMetrics,name=ZooKeeperRequestLatencyMs` since it indicates how long brokers wait for requests to Zookeeper to be completed. It is also a good idea to monitor disk utilization and network metrics of the underlying host. Since Zookeeper is an integral part of a Kafka cluster, you can monitor it using the Zookeeper monitor.
+For Kafka v1.x.x and above, on top of default metrics, monitor the following:
+
+* `kafka.server:type=ZooKeeperClientMetrics,name=ZooKeeperRequestLatencyMs` to track how long brokers wait for requests to Zookeeper to be completed. 
+* Disk utilization and network metrics of the underlying host. Since Zookeeper is an integral part of a Kafka cluster, you can monitor it using the Zookeeper monitor.
 
 ## Benefits
+
 ```{include} /_includes/benefits.md
 ```
 
@@ -37,7 +40,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:

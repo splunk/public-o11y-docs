@@ -14,6 +14,11 @@
      -
      -
 
+   * - :ref:`Apache CouchDB <apache-couchdb>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Apache HTTP Server <apache>`
      - :strong:`X`
      -
@@ -74,17 +79,17 @@
      -
      -
 
-   * - :ref:`Collectd plugin <collectd>`
+   * - :ref:`Collectd plugin <collectd-plugin>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Collectd CPUFreq <collectd-cpufreq>`
+   * - :ref:`Collectd df plugin <collectd-df>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Collectd df <collectd-df>`
+   * - :ref:`CPUFreq <cpufreq>`
      - :strong:`X`
      -
      -
