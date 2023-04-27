@@ -393,6 +393,11 @@
      -
      -
 
+   * - :ref:`Microsoft .NET <microsoft-dotnet>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Microsoft .NET runtime <get-started-dotnet>`
      - :strong:`X`
      -
