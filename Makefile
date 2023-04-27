@@ -11,7 +11,7 @@ ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 endif
 
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
-TESTOPTS = -W --keep-going -n -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
+TESTOPTS = -W --keep-going -n -E -q -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
 
 .PHONY: help
 help:
