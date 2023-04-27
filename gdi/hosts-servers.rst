@@ -26,7 +26,7 @@ Configure application receivers for hosts and servers
    monitors/coredns
    monitors/couchbase
    monitors/cpu
-   disk/disk
+   monitors/disk
    docker/docker
    ecs-metadata/ecs-metadata
    elasticsearch/elasticsearch
