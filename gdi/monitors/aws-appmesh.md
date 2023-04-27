@@ -36,7 +36,7 @@ receivers:
     type: appmesh
       ... # Additional config
 ```
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
