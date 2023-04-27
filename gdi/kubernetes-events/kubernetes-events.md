@@ -92,7 +92,7 @@ Configure which events to send. You can see the types of events happening in you
 kubectl get events -o yaml --all-namespaces
 ```
 
-To send all events, set the option ``_sendAllEvents`` to ``true`` in your ``values.yaml``, and remove the ``whitelistedEvents`` option.
+To send all events, set the option ``_sendAllEvents`` to ``true`` in your values.yaml, and remove the ``whitelistedEvents`` option.
 
 From the output, combine **Reason** (Started, Created, Scheduled) and **Kind** (Pod, ReplicaSet, Deployment…) to select which events to send. 
 - Specify a single **reason** and **involveObjectKind** individually for each event rule you want to allow.

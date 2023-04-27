@@ -580,10 +580,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Set up Splunk RUM <rum/set-up-rum>
 
-.. toctree::
-   :maxdepth:   3
-
-   rum/rum-use-case-library/use-case-landingpage
 
 .. toctree::
    :maxdepth:   3

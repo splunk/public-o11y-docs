@@ -29,7 +29,6 @@ This integration uses the new RLP Gateway model that was introduced in Pivotal C
 
 To activate this integration, add the following to your Collector configuration:
 
-
 ```
 receivers:
   smartagent/cloudfoundry-firehose-nozzle
@@ -37,7 +36,7 @@ receivers:
     ... # Additional config
 ```
 
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:

@@ -9,7 +9,7 @@ Instrument applications written in other programming languages
 
 You can send traces to Splunk Observabilty Cloud from applications or services written in programming languages for which a Splunk distribution isn't available. See :ref:`get-started-application` for a list of supported languages.
 
-Follow these steps to manually instrument an application to send traces to Splunk Observability Cloud.
+Follow these steps to manually instrument an application to send traces to Splunk APM in Observability Cloud.
 
 .. _other-add-dependencies:
 
@@ -22,7 +22,7 @@ To instrument your application for Observability Cloud, you need to generate tra
 
    .. tab:: Erlang
 
-      Add the OpenTelemetry packages to the list of dependencies in your ``rebar.config`` file:
+      Add the OpenTelemetry packages to the list of dependencies in your rebar.config file:
 
       .. code-block:: Erlang
 
@@ -48,7 +48,7 @@ To instrument your application for Observability Cloud, you need to generate tra
 
    .. tab:: Rust
 
-      Add the required dependencies to the ``cargo.toml`` file:
+      Add the required dependencies to the cargo.toml file:
 
       .. code-block:: toml
 

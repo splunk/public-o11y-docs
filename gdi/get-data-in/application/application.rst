@@ -46,5 +46,6 @@ You can also send traces from applications written in languages for which Splunk
 
 To learn more about the data collected by Splunk Observability Cloud, see:
 
+- :ref:`data-model`.
 - :ref:`get-started-metrics`.
 - :ref:`span-attributes`.

@@ -22,7 +22,7 @@ You can use either Splunk Observability Cloud or your AWS CloudWatch console to 
 Explore your AWS inventory and data
 ============================================
 
-Review your AWS inventory in Splunk Observability Cloud. 
+Review your AWS inventory in Splunk Observability Cloud. To learn about Observability Cloud's data model, refer to :ref:`data-model`.
 
 Locate your metrics
 ------------------------------------------------------

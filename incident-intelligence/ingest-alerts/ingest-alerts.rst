@@ -26,7 +26,7 @@ The following options are available for ingesting alerts in Incident Intelligenc
       <li>Ingest third-party alerts using an ingest endpoint. See <a href="#ii-ingest-third-party-alerts">Available ingest endpoints for third-party alerts</a>.</li>
    </ol>
 
-After alerts have been ingested, you can view them on the :guilabel:`Alerts` tab of Incident Intelligence.
+After alerts are ingested, you can view them on the :guilabel:`Alerts` tab of Incident Intelligence.
 
 .. raw:: html
 

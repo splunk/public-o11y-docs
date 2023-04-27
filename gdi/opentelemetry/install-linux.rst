@@ -482,7 +482,7 @@ Download pre-built binaries (``otelcol_linux_amd64`` or ``otelcol_linux_arm64``)
 Tar file
 -----------------------
 
-The ``tar.gz`` archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
+The tar.gz archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
 
 To use the tar file:
 
