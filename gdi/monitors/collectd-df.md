@@ -1,24 +1,21 @@
 (collectd-df)=
 
 # Collectd df
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd df plugin monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Collectd df monitor type to track free disk space on the host using the collectd df plugin.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/df` monitor type for the Smart Agent Receiver.
+This integration is only available on Linux. Note a file system must be mounted in the same file system namespace that the agent is running in for this monitor to be able to collect statistics about that file system. This might be an issue when running the agent in a container.
 
-Use this integration to track free disk space on the host using the collectd df plugin.
-
-This monitor is available on Linux. Note a file system must be mounted in the same file system namespace that the agent is running in for this monitor to be able to collect statistics about that file system.  This might be an issue when running the agent in a container.
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
 
 ## Installation
 
-```{include} /_includes/collector-installation-linux.md
+```{include} /_includes/collector-installation-linux-only.md
 ```
 
 ## Configuration
@@ -26,20 +23,24 @@ This monitor is available on Linux. Note a file system must be mounted in the sa
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
-  smartagent/ collectd/df:
+  smartagent/collectd/df:
     type: collectd/df
     ... # Additional config
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a metrics pipeline. To do this, add the receiver to the service > pipelines > metrics > receivers section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
   pipelines:
     metrics:
-      receivers: [smartagent/ collectd/df]
+      receivers: [smartagent/collectd/df]
 ```
 
 ### Configuration settings
@@ -67,7 +68,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
