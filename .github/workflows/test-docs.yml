@@ -1,4 +1,4 @@
-name: "Test the documentation for errors and warnings"
+name: "Test the documentation for errors"
 
 on:
   push: 
