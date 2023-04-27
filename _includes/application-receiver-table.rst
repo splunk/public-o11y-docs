@@ -154,7 +154,7 @@
      -
      -
 
-   * - :ref:`DNS Query Input <telegraf-dns>`
+   * - :ref:`DNS Query Input <dns>`
      - :strong:`X`
      -
      -
