@@ -1,5 +1,3 @@
-.. include:: /_includes/incident_intelligence/incident-intelligence-preview-header.rst
-
 .. _ii-use-case-business-hours:
 
 Use case: Create business-hours and nights-and-weekend rotations for the web application service
