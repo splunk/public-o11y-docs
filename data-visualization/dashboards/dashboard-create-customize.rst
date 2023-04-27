@@ -40,19 +40,16 @@ To create a dashboard, follow these steps:
 #. Select :guilabel:`Dashboards` from the Observability Cloud home page:
 
    .. image:: /_images/images-dashboard/dashboard-menu-item.png
-      :width: 99%
       :alt: Dashboards menu item in Observability Cloud main menu
 
 #. Select the Create menu (plus sign) on the navigation bar:
 
-   .. image:: _images/images-dashboard/create_menu_icon.png
-      :width: 99%
+   .. image:: /_images/images-dashboard/create_menu_icon.png
       :alt: Create dashboard icon in the navigation bar
 
 #. Select :guilabel:`Dashboard`.
 
-   .. image:: _images/images-dashboard/create_menu_dashboard.png
-      :width: 99%
+   .. image:: /_images/images-dashboard/create_menu_dashboard.png
       :alt: Dashboard menu item in Create navigation bar menu
 
 .. _change-dashboard-name-description:
@@ -64,14 +61,12 @@ To rename a dashboard or change the dashboard's description, follow these steps:
 
 #. Select :guilabel:`More Actions` from the dashboard control bar.
 
-   .. image:: _images/images-dashboard/dashboard_more_actions.png
-      :width: 99%
+   .. image:: /_images/images-dashboard/dashboard_more_actions.png
       :alt: The dashboard More Actions control
 
 #. From the :guilabel:`More Actions` menu, select :menuselection:`Rename`. The Dashboard Info tab appears.
 
-   .. image:: _images/images-dashboard/dashboard_rename.png
-      :width: 99%
+   .. image:: /_images/images-dashboard/dashboard_rename.png
       :alt: Rename menu item on the dashboard More Actions menu
 
 #. Make any desired changes, then select :guilabel:`Save and close`.
