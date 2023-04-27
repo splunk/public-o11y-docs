@@ -45,6 +45,10 @@ Update configuration to resolve pod failure
 
 Now that Kai knows the root cause of the server failure, they update the Kubernetes configuration and restart the pod. Kai verifies that the pod is running, and that their Apache dashboards are showing incoming data again.
 
+    .. image:: /_images/images-navigators/now-incoming-data.png
+       :width: 99%
+       :alt: Kubernetes navigator showing incoming data after issue resolved
+
 
 Summary
 ================================================
