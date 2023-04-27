@@ -4,9 +4,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Docker monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` deploys this integration as the `docker-container-stats` monitor type for the Smart Agent Receiver. This monitor reads container stats from a Docker API server. The monitor does not currently support CPU share/quota metrics.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `docker-container-stats` monitor type to read container stats from a Docker API server. Note it doesn't currently support CPU share/quota metrics.
 
 This integration is available for Kubernetes, Linux, and Windows.
 
@@ -17,26 +15,23 @@ This integration is available for Kubernetes, Linux, and Windows.
 
 ## Installation
 
-This monitor is provided by the Smart Agent and is available for the Smart Agent Receiver in the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`.
-
-To install this integration:
-
-1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform.
-2. If using this monitor with the default Docker daemon domain socket, you might need to add the `splunk-otel-collector` user to the `docker` group to have permission to access the Docker API. If running with the Smart Agent use the `signalfx-agent` user instead.
-   ```yaml
-   usermod -aG docker splunk-otel-collector
-   ```
-3. Configure the monitor, as described in the next section.
+```{include} /_includes/collector-installation.md
+```
 
 ## Configuration
 
-The Splunk Distribution of OpenTelemetry Collector allows embedding a Smart Agent monitor configuration in an associated Smart Agent Receiver instance.
+```{include} /_includes/configuration.md
+```
 
-**Note:** Providing a `docker-container-stats` monitor entry in your Collector or Smart Agent (deprecated) configuration is required for its use. Use the appropriate form for your agent type.
+If you're using this integration with the default Docker daemon domain socket, you might need to add the `splunk-otel-collector` user to the `docker` group to have permission to access the Docker API. 
 
-### Splunk Distribution of OpenTelemetry Collector
+```yaml
+usermod -aG docker splunk-otel-collector
+```
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following code to your agent configuration:
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -45,25 +40,18 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the monitor activation, you must also include the `smartagent/docker-container-stats` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file.
-
-See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
-
-### Smart Agent
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
-monitors:  # All monitor config goes under this key
- - type: docker-container-stats
-   ...  # Additional config
+service:
+ pipelines:
+   metrics:
+     receivers: [smartagent/docker-container-stats]
 ```
-
-See <a href="https://github.com/signalfx/signalfx-agent/blob/main/deployments/docker/agent.yaml" target="_blank">Docker agent.yaml</a> for an example configuration file, with default values where applicable. See [Docker Deployment](https://github.com/signalfx/signalfx-agent/blob/main/deployments/docker) for a link to the Docker image.
 
 ### Configuration settings
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -91,6 +79,9 @@ The following metrics are available for this integration:
 
 ## Troubleshooting
 
+```{include} /_includes/troubleshooting.md
+```
+
 ### Protocol not available error
 
 If you get the following error message when configuring the monitor on a Windows host:
@@ -101,7 +92,6 @@ Error: Error initializing Docker client: protocol not available
 
 edit the configuration and replace `unix:///var/run/docker.sock` with `npipe:////.//pipe//docker_engine`.
 
-## Get help
 
-```{include} /_includes/troubleshooting.md
-```
+
+
