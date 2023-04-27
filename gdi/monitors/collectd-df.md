@@ -8,7 +8,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 This integration is only available on Linux. Note a file system must be mounted in the same file system namespace that the agent is running in for this monitor to be able to collect statistics about that file system. This might be an issue when running the agent in a container.
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
