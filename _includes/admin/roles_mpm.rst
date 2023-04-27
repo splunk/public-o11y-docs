@@ -50,8 +50,8 @@
   * - :strong:`Add MTS aggregation rule`
     - Yes
     - Yes
-    - Yes
-    - Yes
+    - No
+    - No
 
   * - :strong:`Edit MTS aggregation rule`
     - Yes
@@ -67,6 +67,8 @@
 
   * - :strong:`Delete entire metrics pipeline management ruleset`
     - Yes
-    - No
+    - Yes, if default routing is real-time storage and the user deletes all aggregation rules.
+      No, if default routing is Drop Data and the user deletes all aggregation rules. Metrics pipeline management
+      doesn't delete the ruleset. An Admin needs to change the routing to real-time storage and delete the ruleset.
     - No
     - No
