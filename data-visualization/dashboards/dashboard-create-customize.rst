@@ -27,7 +27,7 @@ Using Splunk Infrastructure Monitoring, you can quickly add simple charts to a n
 .. note::
 
    - If you see :guilabel:`Dashboard (unsaved)`, you have already added charts to a new dashboard and haven't saved
-     the dashboard yet. Clicking this option opens the unsaved dashboard. You can only have one unsaved dashboard at
+     the dashboard yet. Select this option to open the unsaved dashboard. You can only have one unsaved dashboard at
      a time.
    - If you see :guilabel:`Dashboard with <n> copied charts`, you have copied some charts from one or more dashboards
      and haven't yet added any charts to a new (unsaved) dashboard. Clicking this option creates a dashboard and
@@ -71,15 +71,13 @@ To rename a dashboard or change the dashboard's description, follow these steps:
 
 #. Make any desired changes, then select :guilabel:`Save and close`.
 
-
-
 .. _customize-dashboard-filters:
 
 Customize dashboard filters
 =========================================
 
-After you create the dashboard, you can customize the dashboard filters from the Overrides bar or the
-Dashboard Info tab. As with any dashboard, changes you make to filters on the Overrides take effect immediately,
+After you create the dashboard, you can customize the dashboard filters from the :guilabel:`Overrides` bar or the
+Dashboard Info tab. As with any dashboard, changes you make to filters on the :guilabel:`Overrides` bar take effect immediately,
 which lets you modify your view and explore your data in real time.
 
 Customizing mirrored dashboard filters
