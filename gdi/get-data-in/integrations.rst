@@ -1089,7 +1089,7 @@ Instrument your applications to send metrics and traces to Observability Cloud.
      - :strong:`X`
      -
 
-   * - :ref:`Microsoft .NET <dotnet>`
+   * - :ref:`Microsoft .NET <microsoft-dotnet>`
      -
      - :strong:`X`
      -

@@ -154,7 +154,7 @@
      -
      -
 
-   * - :ref:`DNS Query Input <telegraf-dns>`
+   * - :ref:`DNS Query Input <dns>`
      - :strong:`X`
      -
      -
@@ -389,6 +389,11 @@
      -
      -
    * - :ref:`Mesos Marathon <marathon>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Microsoft .NET <microsoft-dotnet>`
      - :strong:`X`
      -
      -
