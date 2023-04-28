@@ -14,20 +14,20 @@ Configure application receivers for hosts and servers
    monitors/apache-httpserver
    monitors/apache-tomcat
    monitors/apache-zookeeper
-   chrony/chrony
-   collectd/collectd
-   collectd/collectd-cpufreq
-   collectd/collectd-df
+   monitors/chrony
+   monitors/collectd-plugin
+   monitors/collectd-df 
+   monitors/cpufreq
    collectd/collectd-hadoopjmx
    collectd/collectd-kafka-consumer
    collectd/collectd-kafka-producer
    collectd/collectd-php-fpm
    collectd/collectd-uptime
-   coredns/coredns
-   couchbase/couchbase
-   cpu/cpu
-   disk/disk
-   docker/docker
+   monitors/coredns
+   monitors/couchbase
+   monitors/cpu
+   monitors/disk
+   monitors/docker
    ecs-metadata/ecs-metadata
    elasticsearch/elasticsearch
    elasticsearch-query/elasticsearch-query
@@ -60,8 +60,8 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`apache`
 * :ref:`zookeeper`
 * :ref:`chrony`
-* :ref:`collectd`
-* :ref:`collectd-cpufreq`
+* :ref:`collectd-plugin`
+* :ref:`cpufreq`
 * :ref:`collectd-df`
 * :ref:`collectd-hadoopjmx`
 * :ref:`collectd-kafka-consumer`

@@ -33,7 +33,7 @@ For example, you send in data for a metric ``http.server.duration``.
 
 Even though ``http.server.duration`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
 
-To learn more about MTS, see :ref:`metric-time-series`.
+To learn more about MTS, see :ref:`metric-time-series`. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
 
 How does metrics pipeline management work?

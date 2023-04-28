@@ -130,6 +130,8 @@ After you've integrated with your cloud services, you can access your data in th
 
 - Query logs in :ref:`Log Observer <logs-timeline>`, if you chose to ingest logs
 
+- To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
+
 
 Steps
 --------------------------------------------------------------
@@ -165,7 +167,7 @@ For help with other questions, contact :ref:`support`.
 
 .. _gdi-2:
 
-2. Configure servers and clusters to send metrics and logs
+1. Configure servers and clusters to send metrics and logs
 =============================================================================================================
 
 Install the Splunk Distribution of OpenTelemetry Collector on any servers (hosts) or in any clusters you are using as a part of your infrastructure. For example, this might mean installing the Splunk Distribution of OpenTelemetry Collector on servers running in your data center or on a virtual machine running in the cloud.

@@ -13,7 +13,7 @@ For the following cluster modes, the integration only supports HTTP endpoints:
 
 You need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, set `isMaster` to `true`. When you run Apache Spark on Hadoop YARN, this integration can only report application metrics from the master node.
 
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux.
 
 ## Benefits
 
@@ -47,7 +47,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -65,10 +65,9 @@ service:
 
 **Note:** The names `collectd_spark_master` and `collectd_spark_worker` are for identification purposes only and don't affect functionality. You can use either name in your configuration, but you need to select distinct monitor configurations and discovery rules for master and worker processes. For the master configuration, see the `isMaster` field in the [Configuration settings](#configuration-settings) section.
 
-
 ## Configuration settings
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description                                                                                                                                                                                                                                       |
 | -------| -------- | ---- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +90,7 @@ These are the metrics available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
