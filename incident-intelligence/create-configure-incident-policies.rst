@@ -69,11 +69,11 @@ Use alert grouping to manage how alerts are grouped into incidents and which ale
 #. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping rule.
 #. Select the :guilabel:`Alert grouping` tab.
 #. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert grouping conditions are available to select. If you want add another field, enter the field name and select it from the dropdown to add it as a selected metadata field.
-#. In the :guilabel:`Incident breaking conditions` section, define under what conditions alerts should be grouped into a new incident. When any one of the conditions you set in this section are met any subsequent alerts will trigger a new incident instead of being added to the existing incident.
+#. In the :guilabel:`Incident breaking conditions` section, define under what conditions an incident will stop accumulating new alerts. When any one of the conditions you set in this section are met any subsequent alerts will trigger a new incident instead of being added to the existing incident.
 
    #. To break the existing incident if there has been a pause in alerts that lasts for the time duration you specify, select the pause duration from the :guilabel:`Select time value` drop down. Note: If you choose a time duration that is too short, you might encounter the situation where every alert triggers a new incident.  This is not generally recommended if the alerts are coming in within a short time span.
    
-   #. To break the existing incident when specific values are included, select :guilabel:`Add Filters` and choose the key value pair which will trigger a new incident.
+   #. To break the existing incident when specific values are included, select :guilabel:`Add Filters` and choose the key value pair which will prevent new alerts coming to the existing incident.
    
    #. To break the existing incident after a specific amount of time has passed for the current alert, select that time duration in the :guilabel:`Select time value` dropdown.
    
