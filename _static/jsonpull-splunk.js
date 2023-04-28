@@ -388,11 +388,13 @@ $(document).ready(function () {
                                 addedCategory = true;
                                 monitors[i][j] = (monitors[i][j] == true) ? 'Custom' : 'Default';
                             }
-                            
+
 
                             if (typeof monitors[i][j] == 'undefined' && j == 'title') {
                                 row += '<td><code>' + i + '</code></td>';
-                            } else if (j == 'description') {
+                            } else if(j == 'title'){
+							    row += '<td><code>' + i + '</code></td>';
+							} else if (j == 'description') {
                                 row += '<td>' + converter.makeHtml(monitors[i][j]) + '</td>';
                             } else {
                                 row += '<td>' + monitors[i][j] + '</td>';
