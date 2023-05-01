@@ -5,9 +5,9 @@ Use case: Instrument your Java apps using the Splunk Collector and Kubernetes Op
 *************************************************************************************************************
 
 .. meta::
-   :description: Learn how to deploy the OpenTelemetry Operator and Java automatic instrumentation for Splunk Observability Cloud.
+   :description: Learn how to deploy the upstream Kubernetes Operator and Java automatic instrumentation for Splunk Observability Cloud.
 
-Spring Clinic Microservices, a fictitious company, wants to use the Collector and the Kubernetes Operator to auto-instrument their Java applications. The final architecture will look as shown in the diagram below:
+Spring Clinic Microservices, a fictitious company, wants to use the OTel Collector and the upstream Kubernetes Operator to auto-instrument their Java applications. The final architecture will look as shown in the diagram below:
 
 .. image:: /_images/collector/auto-instrumentation-op-java-2.png
    :width: 80%
@@ -40,14 +40,14 @@ Arnau follows the steps described in :ref:`auto-instrumentation-operator` to set
 
 After completing the deployment, Arnau is able to see the results using :ref:`APM <get-started-apm>`.
 
-.. image:: /_images/collector/auto-instrumentation-op-java-1.png
+.. image:: /_images/collector/auto-instrumentation-op-java-1-light.png
    :width: 100%
    :alt: Java app auto instrumented.
 
 Summary
 ======================================================================
 
-Arnau uses the Collector and the Kubernetes Operator to auto-instrument their Java applications and see the results in APM dashboards. 
+Arnau uses the Collector and the upstream Kubernetes Operator to auto-instrument their Java applications and see the results in APM dashboards. 
 
 Learn more
 ======================================================================

@@ -18,7 +18,7 @@ You can change the settings of the SignalFx Instrumentation for .NET in the foll
 
 #. Set environment variables. On Windows, set them in the process scope unless you want to activate autoinstrumentation globally for all .NET applications.
 
-#. Edit the ``web.config`` or ``app.config`` file. For example:
+#. Edit the web.config or app.config file. For example:
 
    .. code-block:: xml
 

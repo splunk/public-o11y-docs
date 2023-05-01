@@ -231,3 +231,4 @@ To validate your setup, examine the details of your GCP integration as displayed
 * For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`.
 * To send logs from Azure to Observability Cloud, follow the instructions in :ref:`gcp-logs`.
 * Learn about Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
+* To learn more about Observability Cloud's data model, refer to :ref:`data-model`.

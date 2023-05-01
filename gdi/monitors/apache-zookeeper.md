@@ -5,7 +5,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Apache Zookeeper monitor type to keep track of an Apache Zookeeper instance using the Zookeeper plugin. 
 
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux.
 
 The plugin supports Zookeeper 3.4.0 and higher.
 
@@ -34,7 +34,7 @@ type: collectd/zookeeper
 ... # Additional config
 ```
 
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -73,7 +73,7 @@ All of the following metrics are part of the `leader` metric group. To activate 
  - `gauge.zk_pending_syncs`
  - `gauge.zk_synced_followers`
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

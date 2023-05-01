@@ -13,7 +13,7 @@ Metrics in Splunk Observability Cloud
 
   Get started with metrics <metrics>
   metric-types.rst
-  Metadata: Dimensions, properties, tags <metrics-dimensions-mts>
+  Metadata: Dimensions, properties, tags, attributes <metrics-dimensions-mts>
   Naming conventions <metric-names>
   Events <view-data-events>
   

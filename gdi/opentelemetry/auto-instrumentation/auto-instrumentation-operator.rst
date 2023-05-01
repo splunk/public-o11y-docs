@@ -1,13 +1,15 @@
 .. _auto-instrumentation-operator:
 
-*****************************************************************************
-Install the Collector and the Kubernetes Operator for Auto Instrumentation
-*****************************************************************************
+***************************************************************************************************
+Install the Collector and the upstream Kubernetes Operator for Auto Instrumentation
+***************************************************************************************************
 
 .. meta::
-   :description: Use the Collector with the Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
+   :description: Use the Collector with the upstream Kubernetes Operator for automatic instrumentation to easily add observability code to your application, enabling it to produce telemetry data.
 
-You can use an Operator in a Kubernetes environment to implement and simplify the management of OpenTelemetry Auto Instrumentation of your applications. 
+You can use the OTel Collector with an upstream Operator in a Kubernetes environment to implement and simplify the management of OpenTelemetry Auto Instrumentation of your applications. 
+
+.. caution:: This instance of the Kubernetes Operator is part of the upstream OpenTelemetry Collector Contrib project. It's not related to the Splunk Operator for Kubernetes, which is used to deploy and operate Splunk Enterprise deployments in a Kubernetes infrastructure. 
 
 Requirements
 ================================================================
