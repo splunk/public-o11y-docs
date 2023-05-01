@@ -1,7 +1,7 @@
 .. _auto-clearing-alerts:
 
 **********************
-Auto-clearing alerts
+Auto-clear alerts
 **********************
 
 
@@ -19,7 +19,7 @@ To turn on Auto-clear alerts when :ref:`creating or editing a detector <create-d
 
 #. Enter a duration (numerical value and time period in days, hours, or minutes). For example, 3d, 1h, or 4m.
 
-#. Click :guilabel:`Done` to save your changes.
+#. Select :guilabel:`Done` to save your changes.
 
 .. note:: You can use Auto-clear alerts to specify that alerts from heartbeat detectors persist longer than alerts from other detectors before being cleared. Alternatively, to clear a heartbeat alert within an activity period and before inactivity sets in, set explicit clear conditions such as the following, rendered in SignalFlow: ``detect(when(A is None, '10s') and not when(A is None, '40s'))``
 

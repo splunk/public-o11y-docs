@@ -85,11 +85,7 @@ Follow these steps to instrument your function using the Splunk OpenTelemetry La
 
 #. Check that the Splunk layer appears in the :guilabel:`Layers` table.
 
-.. note:: You can automate the update of the Lambda layer using the AWS CLI. The following command, for example, retrieves the latest version of the Splunk layer for x86_64 and the ``us-east-1`` region:
-
-   .. code-block:: bash
-
-      aws lambda list-layer-versions --layer-name splunk-apm --region us-east-1 --query 'LayerVersions[0].LayerVersionArn'
+.. note:: You can automate the update of the Lambda layer using the AWS CLI or other automation tools.
 
 .. _set-env-vars-otel-lambda:
 
@@ -234,7 +230,7 @@ The ``zip`` feature of ``pythonRequirements`` allows packing and deploying Lambd
 Slim feature
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your ``serverless.yml`` file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
+The Slim feature reduces the size of Lambda packages by removing some files, including ``dist-info`` folders. Some of the files removed by the Slim feature are required by the OpenTelemetry Python autoinstrumentation. Deactivate the ``slim`` option in your serverless.yml file or define custom ``slimPatterns``. For more information, see https://github.com/serverless/serverless-python-requirements#slim-package on GitHub.
 
 .. _check-otel-lambda-data:
 

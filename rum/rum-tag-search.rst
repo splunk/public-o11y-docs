@@ -45,23 +45,22 @@ To search for global attributes, type the tag and value into the filter bar like
     :width: 30%
     :alt: This shows how to search for a global attribute. in this case enduser.id=123.
 
+.. _rum-global-attributes:
+
+How to set global attributes
+------------------------------------
+
+For instructions on how to set global attributes, see the instrumentation documentation for: 
+
+* :ref:`Android <android-rum-attributes>`
+* :ref:`iOS <ios-rum-globalattributes>`
+* :ref:`Browser <browser-rum-identify-users>`
+
 Global attributes examples
 -----------------------------------------
 
 Suppose you want to identify users, you can add global attributes ``enduser.id`` and 
-``enduser.role``.
-
-For steps on how to add instrumentation to identify users, see: 
-
-* :ref:`android-rum-identify-users`
-* :ref:`user-id-rum-browser`
-* :ref:`ios-rum-identify-users`
-
-You might also consider adding: 
-
-* ``environment`` 
-* ``app.version`` 
-* ``enduser.id`` 
+``enduser.role``. You might also consider adding ``environment`` and ``app.version``.
 
 Span attributes example
 --------------------------------
@@ -72,15 +71,6 @@ Suppose you have have an autofill function in your code, and you'd like to know 
 * ``{'autocomplete': 'false'}`` 
 * ``{'autocomplete_status': 'on'}``
 * ``{'autocomplete_status': 'off'}`` 
-
-How to set global attributes
-------------------------------------
-
-For instructions on how to set global attributes, see the instrumentation documentation for: 
-
-* :ref:`Android<android-rum-attributes>`
-* :ref:`iOS<ios-rum-globalattributes>`
-* :ref:`Browser<browser-rum-identify-users>`
 
 Search for unindexed tags
 ==========================

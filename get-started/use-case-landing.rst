@@ -26,6 +26,8 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`Maintain a secure organization with many teams and users using Splunk Observability Cloud <use-case-security>`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-use-case>`
+  * - :ref:`OpenTelemetry <otel-intro>`
+    - :ref:`auto-instrumentation-java-operator`     
   * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`
     - :ref:`monitor-server-latency`
   * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`    
@@ -64,6 +66,8 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`Find performance issues using AlwaysOn Profiling <profiling-use-case>`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
     - :ref:`Analyze memory usage using AlwaysOn Profiling <memory-profiling-use-case>`
+  * - Infrastructure Monitoring
+    - :ref:`Troubleshoot server failure using the Kubernetes navigator <troubleshoot-k8s-nav-use-case>`
   * - :ref:`RUM <use-case-landingpage>`
     - :ref:`use-case-monitoring`
   * - :ref:`RUM <use-case-landingpage>`

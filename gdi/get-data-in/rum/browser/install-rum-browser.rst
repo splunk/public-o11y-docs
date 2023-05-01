@@ -135,7 +135,7 @@ To bundle the Browser RUM agent directly with your application, use the ``@splun
 
 Follow these steps to instrument and configure Splunk RUM using npm:
 
-#. Enter the following command to install the Browser RUM agent and add it to your ``package.json`` file:
+#. Enter the following command to install the Browser RUM agent and add it to your package.json file:
 
    .. code-block:: shell
 

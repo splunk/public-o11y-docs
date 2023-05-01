@@ -3,7 +3,7 @@
 .. list-table::
   :widths: 20,20,20,20,20
 
-  * - :strong:`Permission`
+  * - :strong:`Capability`
     - :strong:`Admin`
     - :strong:`Power user`
     - :strong:`Read-only`
