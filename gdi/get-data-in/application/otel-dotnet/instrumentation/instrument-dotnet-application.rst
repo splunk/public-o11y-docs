@@ -143,7 +143,7 @@ If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-ote
 Additional steps for ASP.NET (.NET Framework)
 ---------------------------------------------
 
-To complete the instrumentation process for ASP.NET applications for IIS running on .NET Framework, add the ``TelemetryHttpModule`` module to your application's ``web.config`` file. For example:
+To complete the instrumentation process for ASP.NET applications for IIS running on .NET Framework, add the ``TelemetryHttpModule`` module to your application's web.config file. For example:
 
 .. code-block:: xml
 
@@ -153,7 +153,7 @@ To complete the instrumentation process for ASP.NET applications for IIS running
       </httpModules>
    </system.web>
 
-You can also set the ASP.NET HTTP module in the ``applicationHost.config`` file. The following example shows how to set the module for all ASP.NET applications running in Integrated Pipeline mode:
+You can also set the ASP.NET HTTP module in the applicationHost.config file. The following example shows how to set the module for all ASP.NET applications running in Integrated Pipeline mode:
 
 .. code-block:: xml
 

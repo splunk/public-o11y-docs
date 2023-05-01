@@ -30,7 +30,7 @@ Deploy the Splunk OpenTelemetry Collector for Kubernetes in agent mode. The requ
 
 In the Helm chart for the Collector, set the ``autodetect.istio`` parameter to ``true`` by passing ``--set autodetect.istio=true`` to the ``helm install`` or ``helm upgrade`` commands.
 
-You can also add the following snippet to your  ``values.yaml`` file, which you can pass using the ``-f myvalues.yaml`` argument:
+You can also add the following snippet to your  values.yaml file, which you can pass using the ``-f myvalues.yaml`` argument:
 
 .. code:: yaml
 
