@@ -5,7 +5,7 @@ Dashboards in Splunk Observability Cloud
 ********************************************
 
 .. meta::
-   :description: Homepage for dashboards
+   :description: Visualize metrics using Splunk Observability Cloud dashboards. Documentation about how to use, create, and modify dashboards. 
 
 .. toctree::
    :hidden:

@@ -5,7 +5,7 @@ Create and customize dashboards
 ********************************************************************************
 
 .. meta::
-   :description: Learn how to create and customize a dashboard.
+   :description: Visualize metrics and create customized filters and variables to explore data in real time with dashboards in Splunk Observability Cloud. 
 
 You can quickly visualize the metrics you monitor using Splunk Observability Cloud dashboards. This topic
 explains how to create and customize these dashboards, as well as how to customize mirrored dashboards. 
