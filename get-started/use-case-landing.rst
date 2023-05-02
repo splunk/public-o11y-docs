@@ -68,6 +68,8 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`Analyze memory usage using AlwaysOn Profiling <memory-profiling-use-case>`
   * - Infrastructure Monitoring
     - :ref:`Troubleshoot server failure using the Kubernetes navigator <troubleshoot-k8s-nav-use-case>`
+  * - IT Service Intelligence
+    - :new-page:`Use case: Group related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/4.16.0/EA/UseCaseGrpAlerts>`
   * - :ref:`RUM <use-case-landingpage>`
     - :ref:`use-case-monitoring`
   * - :ref:`RUM <use-case-landingpage>`
