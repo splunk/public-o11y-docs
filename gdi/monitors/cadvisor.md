@@ -4,8 +4,6 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the cAdvisor monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the cAdvisor monitor type to pull metrics directly from cAdvisor. By default, it runs on port 4194, but it can be configured to any other port.
 
 If you are using Kubernetes, consider the {ref}`kubelet-stats-receiver` because many Kubernetes nodes do not expose cAdvisor on a network port, even though they are running it within Kubelet.
@@ -14,7 +12,7 @@ If you are running containers with Docker, retrieved metrics might overlap with 
 
 This integration is available on Kubernetes, Linux, and Windows. 
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -40,7 +38,7 @@ receivers:
     ... # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -68,7 +66,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

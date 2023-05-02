@@ -1,16 +1,12 @@
-(collectd-tomcat)=
+(apache-tomcat)=
 
 # Apache Tomcat
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Collectd Tomcat monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Collectd Tomcat monitor type to monitor Tomcat using the collectd GenericJMX plugin. This monitor is essentially a wrapper around the `collectd-genericjmx` monitor that comes with a set of predefined MBean definitions that a standard Tomcat deployment exposes.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Collectd Tomcat monitor type to monitor Tomcat. You must activate JMX Remote to monitor Tomcat remotely. See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
 
-See [GenericJMX](https://docs.splunk.com/Observability/gdi/genericjmx/genericjmx.html) for more information.
-
-You must activate JMX Remote to monitor Tomcat remotely.
-
-This integration is only available on Kubernetes and Linux since collectd plugins are not supported in Windows. 
+This integration is only available on Kubernetes and Linux. 
 
 ## Benefits
 
@@ -38,7 +34,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -49,7 +45,7 @@ service:
 
 ### Configuration settings 
 
-The following tables show the configuration options for this monitor:
+The following tables show the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -87,7 +83,6 @@ The **nested** `values` configuration object has the following fields:
 | `attribute` | no | `string` | Sets the name of the attribute from which to read the value. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example, “attrib0.key42”. If `table` is set to `true`, then the path must point to a composite type, otherwise, it must point to a numeric type. |
 | `attributes` | no | `list of strings` | The plural form of the `attribute` configuration above. Used to derive multiple metrics from a single MBean. |
 
-
 ## Metrics
 
 The following metrics are available for this integration:
@@ -99,7 +94,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

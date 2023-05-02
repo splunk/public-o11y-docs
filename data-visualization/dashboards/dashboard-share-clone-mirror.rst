@@ -5,6 +5,9 @@
 Share, clone, and mirror dashboards in Splunk Observability Cloud
 *****************************************************************
 
+.. meta::
+   :description: Share a dashboard link or URL, or create a copy of your dashboard. Use a dashboard mirror to add the same dashboard to multiple dashboard groups and monitor real-time updates.
+
 Splunk Observability Cloud dashboards are groupings of charts and visualizations of metrics that make it quick and easy to find the metrics you monitor. Learn how to share, clone and mirror dashboards to suit your specific needs.
 
 See the following sections for more information on how to:
