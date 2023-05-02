@@ -194,7 +194,7 @@
      -
      -
 
-   * - :ref:`Free disk space <filesystems>`
+   * - :ref:`Free disk space (filesystems) <filesystems>`
      - :strong:`X`
      -
      -

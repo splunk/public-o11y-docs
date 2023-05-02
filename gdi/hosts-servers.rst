@@ -31,7 +31,7 @@ Configure application receivers for hosts and servers
    monitors/docker
    monitors/elasticsearch
    elasticsearch-query/elasticsearch-query
-   filesystems/filesystems
+   monitors/filesystems
    haproxy/haproxy
    health-checker/health-checker
    host-metadata/host-metadata
