@@ -50,4 +50,4 @@ Splunk Synthetic Monitoring roles and capabilities
 Splunk Real User Monitoring roles and capabilities
 ==================================================
 .. include:: /_includes/admin/rum-roles-caps.rst
->>>>>>> mfoulds-docs4670-RBACroles
+
