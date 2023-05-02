@@ -9,6 +9,11 @@
      - :strong:`Provides traces`
      - :strong:`Provides logs`
 
+   * - :ref:`Amazon ECS Task Metadata <amazon-ecs-metadata>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Apache ActiveMQ <activemq>`
      - :strong:`X`
      -
@@ -19,7 +24,7 @@
      -
      -
 
-   * - :ref:`Apache HTTP Server <apache>`
+   * - :ref:`Apache HTTP Server <apache-httpserver>`
      - :strong:`X`
      -
      - :strong:`X`
@@ -34,7 +39,7 @@
      -
      -
 
-   * - :ref:`Apache Tomcat <collectd-tomcat>`
+   * - :ref:`Apache Tomcat <apache-tomcat>`
      - :strong:`X`
      -
      -
@@ -163,11 +168,6 @@
      - :strong:`X`
      -
      - :strong:`X`
-
-   * - :ref:`Amazon ECS Task Metadata <ecs-metadata>`
-     - :strong:`X`
-     -
-     -
 
    * - :ref:`Elasticsearch <elasticsearch>`
      - :strong:`X`
