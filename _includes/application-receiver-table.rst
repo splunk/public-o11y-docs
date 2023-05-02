@@ -184,7 +184,7 @@
      -
      - :strong:`X`
 
-   * - :ref:`Exec Input <telegraf-exec>`
+   * - :ref:`Exec Input <exec-input>`
      - :strong:`X`
      -
      - :strong:`X`
