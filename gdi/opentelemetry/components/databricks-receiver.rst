@@ -74,7 +74,7 @@ The following table shows the configuration options for the Databricks receiver:
      - A string representing the name of the instance. This value gets set as a ``databricks.instance.name`` resource attribute.
      - Yes
    * - ``endpoint``
-     - The protocol (http or https), hostname, and port for the Databricks API, without a trailing slash.
+     - The protocol (http or https), host name, and port for the Databricks API, without a trailing slash.
      - Yes
    * - ``token``
      - An access token to authenticate to the Databricks API. See :new-page:`Authentication using Databricks personal access tokens <https://docs.databricks.com/dev-tools/api/latest/authentication.html>` on the Databricks documentation site for more information. 

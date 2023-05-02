@@ -136,7 +136,7 @@ $(document).ready(function () {
 
             function traverseFields(mainObj, data, preRef = '', h2Text = '') {
 
-                let id = "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
+                let id = "monitor-stats-" + data['type'];
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 id += idMap[id] > 0 ? '-' + idMap[id] : '';
 
@@ -173,7 +173,7 @@ $(document).ready(function () {
             }
 
             function traverseMetrics(mainObj, data, preRef = '') {
-                const id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
+                const id = "monitor-stats-" + data['name'];
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
 
