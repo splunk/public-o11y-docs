@@ -11,25 +11,25 @@ Configure application receivers for hosts and servers
    :maxdepth: 4
    :hidden:
 
+   monitors/amazon-ecs-metadata   
    monitors/apache-httpserver
    monitors/apache-tomcat
    monitors/apache-zookeeper
    monitors/chrony
-   monitors/collectd
-   monitors/collectd-cpufreq
-   collectd/collectd-df
+   monitors/collectd-plugin
+   monitors/collectd-df 
+   monitors/cpufreq
    collectd/collectd-hadoopjmx
    collectd/collectd-kafka-consumer
    collectd/collectd-kafka-producer
    collectd/collectd-php-fpm
    collectd/collectd-uptime
-   coredns/coredns
-   couchbase/couchbase
-   cpu/cpu
-   disk/disk
-   docker/docker
-   ecs-metadata/ecs-metadata
-   elasticsearch/elasticsearch
+   monitors/coredns
+   monitors/couchbase
+   monitors/cpu
+   monitors/disk
+   monitors/docker
+   monitors/elasticsearch
    elasticsearch-query/elasticsearch-query
    filesystems/filesystems
    haproxy/haproxy
@@ -53,15 +53,15 @@ Configure application receivers for hosts and servers
    win-services/telegraf-win-services
    vsphere/vsphere
 
-
 These application receivers gather metrics from their associated host- and server-related applications and the hosts the applications are running on.
 
-* :ref:`collectd-tomcat`
-* :ref:`apache`
+* :ref:`amazon-ecs-metadata`
+* :ref:`apache-httpserver`
+* :ref:`apache-tomcat`
 * :ref:`zookeeper`
 * :ref:`chrony`
-* :ref:`collectd`
-* :ref:`collectd-cpufreq`
+* :ref:`collectd-plugin`
+* :ref:`cpufreq`
 * :ref:`collectd-df`
 * :ref:`collectd-hadoopjmx`
 * :ref:`collectd-kafka-consumer`
@@ -73,7 +73,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`cpu`
 * :ref:`disk`
 * :ref:`docker`
-* :ref:`ecs-metadata`
 * :ref:`elasticsearch`
 * :ref:`elasticsearch-query`
 * :ref:`filesystems`

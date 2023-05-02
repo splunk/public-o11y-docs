@@ -64,6 +64,8 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`Find performance issues using AlwaysOn Profiling <profiling-use-case>`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
     - :ref:`Analyze memory usage using AlwaysOn Profiling <memory-profiling-use-case>`
+  * - Infrastructure Monitoring
+    - :ref:`Troubleshoot server failure using the Kubernetes navigator <troubleshoot-k8s-nav-use-case>`
   * - :ref:`RUM <use-case-landingpage>`
     - :ref:`use-case-monitoring`
   * - :ref:`RUM <use-case-landingpage>`

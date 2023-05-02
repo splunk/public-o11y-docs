@@ -9,12 +9,22 @@
      - :strong:`Provides traces`
      - :strong:`Provides logs`
 
+   * - :ref:`Amazon ECS Task Metadata <amazon-ecs-metadata>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Apache ActiveMQ <activemq>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Apache HTTP Server <apache>`
+   * - :ref:`Apache CouchDB <apache-couchdb>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Apache HTTP Server <apache-httpserver>`
      - :strong:`X`
      -
      - :strong:`X`
@@ -29,7 +39,7 @@
      -
      -
 
-   * - :ref:`Apache Tomcat <collectd-tomcat>`
+   * - :ref:`Apache Tomcat <apache-tomcat>`
      - :strong:`X`
      -
      -
@@ -74,17 +84,17 @@
      -
      -
 
-   * - :ref:`Collectd plugin <collectd>`
+   * - :ref:`Collectd plugin <collectd-plugin>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Collectd CPUFreq <collectd-cpufreq>`
+   * - :ref:`Collectd df plugin <collectd-df>`
      - :strong:`X`
      -
      -
 
-   * - :ref:`Collectd df <collectd-df>`
+   * - :ref:`CPUFreq <cpufreq>`
      - :strong:`X`
      -
      -
@@ -149,7 +159,7 @@
      -
      -
 
-   * - :ref:`DNS Query Input <telegraf-dns>`
+   * - :ref:`DNS Query Input <dns>`
      - :strong:`X`
      -
      -
@@ -158,11 +168,6 @@
      - :strong:`X`
      -
      - :strong:`X`
-
-   * - :ref:`Amazon ECS Task Metadata <ecs-metadata>`
-     - :strong:`X`
-     -
-     -
 
    * - :ref:`Elasticsearch <elasticsearch>`
      - :strong:`X`
@@ -384,6 +389,11 @@
      -
      -
    * - :ref:`Mesos Marathon <marathon>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Microsoft .NET <microsoft-dotnet>`
      - :strong:`X`
      -
      -

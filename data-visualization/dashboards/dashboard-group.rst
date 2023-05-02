@@ -4,6 +4,9 @@
 Create and manage dashboard groups
 ****************************************
 
+.. meta::
+   :description: Manage permissions to your Splunk Observability Cloud dashboards and learn how to grant access to specific groups of people. 
+
 This topic shows you how to create dashboard groups and manage permission settings for your dashboard groups.
 
 .. _create-dashboard-group:

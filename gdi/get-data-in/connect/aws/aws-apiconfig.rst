@@ -116,7 +116,6 @@ Permissions for the CloudWatch API
 Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Observability Cloud to collect AWS metrics using the CloudWatch API:
 
 * ``cloudwatch:GetMetricData``
-* ``cloudwatch:GetMetricStatistics``
 * ``cloudwatch:ListMetrics``
 
 For example:
@@ -130,7 +129,6 @@ For example:
         "Effect": "Allow",
         "Action": [
           "cloudwatch:GetMetricData",
-          "cloudwatch:GetMetricStatistics",
           "cloudwatch:ListMetrics",
           "ec2:DescribeRegions",
           "organizations:DescribeOrganization",
@@ -283,7 +281,6 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "cloudfront:ListDistributions",
           "cloudfront:ListTagsForResource",
           "cloudwatch:GetMetricData",
-          "cloudwatch:GetMetricStatistics",
           "cloudwatch:ListMetrics",
           "directconnect:DescribeConnections",
           "dynamodb:DescribeTable",
@@ -422,7 +419,7 @@ If you're retrieving AWS metrics polling CloudWatch APIs, keep in mind the follo
 
   - First, the list of metrics is retrieved with the ``ListMetrics`` API every 15 minutes. 
   
-  - Next, data points are retrieved with either the ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>` APIs.  
+  - Next, data points are retrieved with the ``GetMetricData`` API. Note that the ``GetMetricStatistics`` API is deprecated, see more in :ref:`aws-api-notice`.  
   
     - Use ``pollRate`` to configure the polling interval for metrics. 
     - Use ``metadataPollRate`` to configure the polling interval for metadata. 

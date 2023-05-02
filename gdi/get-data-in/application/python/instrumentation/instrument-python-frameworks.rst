@@ -16,7 +16,7 @@ Instrument a Django application
 
 To automatically instrument Django applications, set the ``DJANGO_SETTINGS_MODULE`` environment variable to the same value in manage.py or wsgi.py. 
 
-For example, if your manage.py file sets the environment variable to ``mydjangoproject.settings`` and you start your project using ``./manage.py runserver``, you can run the following commands:
+For example, if your manage.py file sets the environment variable to mydjangoproject.settings and you start your project using ``./manage.py runserver``, you can run the following commands:
 
 .. tabs:: 
 
