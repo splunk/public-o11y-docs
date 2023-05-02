@@ -3,7 +3,7 @@
 .. list-table::
   :widths: 20,20,20,20,20
 
-  * - :strong:`Permission`
+  * - :strong:`Capability`
     - :strong:`Admin`
     - :strong:`Power user`
     - :strong:`Read-only`
@@ -29,19 +29,7 @@
     - No
     - No
 
-  * - :strong:`Create org access token`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`Activate or deactivate org access token`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`Edit org access token`
+  * - :strong:`Create, activate, edit, or deactivate an org access token`
     - Yes
     - No
     - No
@@ -59,11 +47,6 @@
     - No
     - Yes
 
-  * - :strong:`View org access tokens`
-    - Yes
-    - No
-    - No
-    - No
 
   * - :strong:`View users`
     - Yes
@@ -83,21 +66,10 @@
     - No
     - No
 
-  * - :strong:`Create Global Data Links`
+  * - :strong:`Create, delete, or clone Global Data Links`
     - Yes
     - Yes
     - No
     - No
 
-  * - :strong:`Delete Global Data Links`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Clone Global Data Links`
-    - Yes
-    - Yes
-    - No
-    - No
 
