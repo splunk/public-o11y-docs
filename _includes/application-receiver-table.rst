@@ -24,7 +24,7 @@
      -
      -
 
-   * - :ref:`Apache HTTP Server <apache>`
+   * - :ref:`Apache HTTP Server <apache-httpserver>`
      - :strong:`X`
      -
      - :strong:`X`
