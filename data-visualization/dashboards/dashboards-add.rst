@@ -5,7 +5,7 @@ Add information to a dashboard
 *****************************************************************
 
 .. meta::
-      :description: In addition to standard chart types, such as graphs or lists, dashboards can also contain two special chart types -- text notes and event feeds. You can also overlay events onto all charts in a dashboard and create data links from other dashboard content to specified locations.
+      :description: Add a text note or event feed chart in Splunk Observability Cloud dashboards. Text notes include explanatory information about charts, and event feeds show specific events.
 
 In addition to standard chart types, such as graphs or lists, dashboards can also contain two special chart types --- :ref:`text notes<text-note>` and :ref:`event feeds<dashboard-event-feed>`.
 
