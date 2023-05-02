@@ -18,7 +18,7 @@ Configure application receivers for databases
    monitors/consul
    opentelemetry/components/databricks-receiver
    monitors/etcd
-   exec/telegraf-exec
+   monitors/exec-input
    hadoop/hadoop
    logparser/telegraf-logparser
    logstash/logstash
@@ -41,7 +41,7 @@ These application receivers gather metrics from their associated database-relate
 * :ref:`consul`
 * :ref:`databricks_receiver`
 * :ref:`etcd`
-* :ref:`telegraf-exec`
+* :ref:`exec-input`
 * :ref:`hadoop`
 * :ref:`telegraf-logparser`
 * :ref:`logstash`
