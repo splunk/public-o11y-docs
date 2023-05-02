@@ -28,10 +28,18 @@ Users and teams
 
 .. include:: /_includes/admin/roles_users_teams.rst
 
+
+Log Observer
+==================
+
+.. include:: /_includes/admin/roles_log_observer.rst
+
+
 Alerts and detectors roles and capabilities
 ===============================================================================
 
 .. include:: /_includes/admin/roles_alerts_detectors.rst
+
 
 Splunk Synthetic Monitoring roles and capabilities
 ==================================================
@@ -42,3 +50,4 @@ Splunk Synthetic Monitoring roles and capabilities
 Splunk Real User Monitoring roles and capabilities
 ==================================================
 .. include:: /_includes/admin/rum-roles-caps.rst
+
