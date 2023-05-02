@@ -28,7 +28,6 @@ Users and teams
 
 .. include:: /_includes/admin/roles_users_teams.rst
 
-<<<<<<< HEAD
 
 Log Observer
 ==================
