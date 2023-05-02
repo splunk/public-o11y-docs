@@ -33,11 +33,13 @@ Log Observer
 ==================
 
 .. include:: /_includes/admin/roles_log_observer.rst
-=======
+
+
 Alerts and detectors roles and capabilities
 ===============================================================================
 
 .. include:: /_includes/admin/roles_alerts_detectors.rst
+
 
 Splunk Synthetic Monitoring roles and capabilities
 ==================================================
