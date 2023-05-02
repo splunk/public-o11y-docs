@@ -78,7 +78,7 @@ Use :new-page:`regex101 <https://regex101.com/ >` to find a golang regex that wo
 Collect journald events
 ===========================================================================
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect journald events from Kubernetes environment. Process journald events by adding the following section to your ``values.yaml`` configuration:
+The Splunk Distribution of OpenTelemetry Collector for Kubernetes can collect journald events from Kubernetes environment. Process journald events by adding the following section to your values.yaml configuration:
 
 .. code-block:: yaml
 

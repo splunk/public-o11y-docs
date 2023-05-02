@@ -14,6 +14,8 @@ Splunk Observability Cloud provides the following metrics to measure your organi
 
 You're not charged for these metrics, and they don't count against any limits.
 
+(access-org-metrics)=
+
 ## Access organization metrics
 
 If you're an admin, you can view some of these metrics in built-in charts on the Organization Overview page. Any user can view these metrics in custom charts.
@@ -43,6 +45,8 @@ To access the Organization Overview page, follow these steps:
 ## Interpret and work with org metrics
 
 This section provides tips that can help you interpret and work with usage metrics.
+
+(metrics-by-token)=
 
 ### Metrics for values by token
 
