@@ -13,7 +13,7 @@ Configure application receivers for languages
 
    monitors/asp-dot-net
    monitors/expvar
-   genericjmx/genericjmx
+   monitors/genericjmx
    java-monitor/java-monitor
    jmx/jmx
    monitors/microsoft-dotnet
