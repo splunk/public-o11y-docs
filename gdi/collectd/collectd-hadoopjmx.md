@@ -15,7 +15,7 @@ This monitor is not available on Windows as collectd plugins are only supported 
 
 ## Requirements
 
-To enable JMX in Hadoop, add the following Java Virtual Machine (JVM) options to hadoop-env.sh and yarn-env.sh:
+To activate JMX in Hadoop, add the following Java Virtual Machine (JVM) options to hadoop-env.sh and yarn-env.sh:
 
 **hadoop-env.sh:**
 ```sh
@@ -153,6 +153,11 @@ The nested `values` config object has the following fields:
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/hadoopjmx/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

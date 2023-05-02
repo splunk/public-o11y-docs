@@ -4,13 +4,10 @@
 Create metrics from your logs with log metricization rules
 *****************************************************************************
 
-.. meta created 2021-04-28
-.. meta DOCS-2247
-
 .. meta::
   :description: Log metricization rules derive metrics from logs. Show an aggregate count of logs grouped by a dimension. Embed logs data in charts, dashboards, and detectors.
 
-.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create log metricization rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration..
+.. note:: Only customers with a Splunk Log Observer entitlement in Splunk Observability Cloud can create log metricization rules. If you do not have a Log Observer entitlement and are using Splunk Log Observer Connect instead, see :ref:`logs-intro-logconnect` to learn what you can do with the Splunk Enterprise integration.
 
 Log metricization rules allow you to create a log-derived metric showing an aggregate count of logs grouped by the dimension of your choice. While Log Observer visual analysis allows you to dynamically view aggregate metrics in the context of your query, log metricization rules allow you to embed metrics from log data in charts, dashboards, and detectors. Log metricization rules enable you to see trends in your full logs data set without paying to index all of your logs data.
 
@@ -24,7 +21,9 @@ Logs pipeline rules execute in the following order:
 
 3. Infinite logging rules
 
- Log Observer indexes your logs data only after executing all pipeline management rules. When you metricize then archive a set of logs, metricized logs count against your ingest capacity but not against your indexing capacity. Like any other metric, a metric derived from log metricization rules counts toward your metrics quota per your contract. For more information, see :ref:`logs-pipeline-sequence`.
+Log Observer indexes your logs data only after executing all pipeline management rules. When you metricize then archive a set of logs, metricized logs count against your ingest capacity but not against your indexing capacity. Like any other metric, a metric derived from log metricization rules counts toward your metrics quota per your contract. For more information, see :ref:`logs-pipeline-sequence`.
+
+All pipeline management rules, including log metricization rules, apply only to logs that are sent to Splunk Observability Cloud.  You can't apply log metricization rules, or any pipeline management rules, to logs viewed in Log Observer Connect because logs are not ingested into Observability Cloud. Log Observer Connect lets users view and analyze Splunk Platform logs but can't transform them.
 
 Create log metricization rules
 =============================================================================
@@ -79,7 +78,7 @@ To create a new log metricization rule in the context of an existing search quer
 
 2. Create a query that aggregates logs. See :ref:`logs-aggregations` to learn how.
 
-3. In the upper right corner, click the three-dot :guilabel:`More` menu and select :guilabel:`Save as Metric`. This takes you to the Configure Metric page in Logs Pipeline Management.
+3. In the :guilabel:`Save` menu, select :guilabel:`Save as Metric`. This takes you to the Configure Metric page in Logs Pipeline Management.
 
 4. Go to step 3 in :ref:`Create a log metricization rule from the logs pipeline <metricization-rule-from-pipeline>` and complete the instructions.
 

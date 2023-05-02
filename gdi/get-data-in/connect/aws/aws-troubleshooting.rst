@@ -102,20 +102,20 @@ Also, to ensure that you can see the metrics you expect to monitor, perform the 
 
 .. _aws-ts-legacy-check-status:
 
-Status check metrics are missing (Legacy)
+Status check metrics are missing 
 =====================================================
 
-Status check metrics are not displayed.
+Metrics related to status check are missing.
 
 Cause
 ^^^^^^
 
-For legacy individual AWS integrations, status check metrics are not enabled by default.
+By default, status check metrics are not activated to reduce AWS CloudWatch cost and Splunk Observability Cloud system usage.
 
 Solution
 ^^^^^^^^^
 
-Enable the metrics for your integration. 
+Activate status metrics for your integration. 
 
 To do so, follow these steps:
 
@@ -127,9 +127,69 @@ To do so, follow these steps:
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" > integration.json
 
-2. Modify the file to include ``ignoreAllStatusMetrics``, and set it to ``false``.
-   
-3. Remove the following fields from the call as these will be populated automatically:
+You'll get something similar to:
+
+.. code-block:: 
+
+   {
+      "count": 2,
+      "results": [
+         {
+            "authMethod": "ExternalId",
+            "created": 1674862496869,
+            "createdByName": null,
+            "creator": "E-tkECKAsAA",
+            "customCloudWatchNamespaces": null,
+            "enableAwsUsage": true,
+            "enableCheckLargeVolume": true,
+            "enabled": false,
+            "externalId": "fyprhjmtpxttxwqhotep",
+            "id": "integration-id",
+            "importCloudWatch": true,
+            "largeVolume": false,
+            "lastUpdated": 1674862497253,
+            "lastUpdatedBy": "E-tkECKAsAA",
+            "lastUpdatedByName": "John Smith",
+            "name": "AWS Dev",
+            "pollRate": 300000,
+            "regions": [],
+            "roleArn": null,
+            "services": [],
+            "sfxAwsAccountArn": "arn:aws:iam::134183635603:root",
+            "syncCustomNamespacesOnly": false,
+            "syncLoadBalancerTargetGroupTags": false,
+            "type": "AWSCloudWatch"
+         },
+         {
+            "authMethod": "ExternalId",
+            "created": 1522297476849,
+            "createdByName": null,
+            "creator": "CGa4fY-AoAA",
+            "customCloudWatchNamespaces": null,
+            "enableAwsUsage": true,
+            "enableCheckLargeVolume": false,
+            "enabled": true,
+            "externalId": "uoejtvhsjnbcbdbfvbhg",
+            "id": "DZTsWRwAkAA",
+            "importCloudWatch": false,
+            "largeVolume": false,
+            "lastUpdated": 1671440367214,
+            "lastUpdatedBy": "CGa4fY-AoAA",
+            "lastUpdatedByName": "John Doe",
+            "name": "AWS Prod",
+            "pollRate": 300000,
+            "regions": [],
+            "roleArn": "arn:aws:iam::123456789012:role/splunk-o11y-role",
+            "services": [],
+            "sfxAwsAccountArn": "arn:aws:iam::134183635603:root",
+            "syncCustomNamespacesOnly": false,
+            "type": "AWSCloudWatch"
+         }
+      ]
+   }
+
+2. Modify the integration file as explained in steps 3 and 4.
+3. Remove the fields below from the call, as these will be populated automatically:  
 
 .. code-block:: none 
 
@@ -140,11 +200,42 @@ To do so, follow these steps:
    ``lastUpdatedBy``
    ``lastUpdatedByName``
 
-4. Update the integration object via the API:
+4. Include ``ignoreAllStatusMetrics``, set to ``false``, in the integration. It will look like this:
+
+.. code-block:: 
+   :emphasize-lines: 12
+
+   {
+      "authMethod": "ExternalId",
+      "customCloudWatchNamespaces": null,
+      "enableAwsUsage": true,
+      "enableCheckLargeVolume": true,
+      "enabled": false,
+      "externalId": "fyprhjmtpxttxwqhotep",
+      "id": "integration-id",
+      "ignoreAllStatusMetrics": false,
+      "importCloudWatch": true,
+      "largeVolume": false,
+      "name": "AWS Dev",
+      "pollRate": 300000,
+      "regions": [],
+      "roleArn": null,
+      "services": [],
+      "sfxAwsAccountArn": "arn:aws:iam::134183635603:root",
+      "syncCustomNamespacesOnly": false,
+      "syncLoadBalancerTargetGroupTags": false,
+      "type": "AWSCloudWatch"
+   }
+
+5. Update the integration object above using the API:
 
 .. code-block:: none
 
-   curl --request PUT https://api..signalfx.com/v2/integration/ \
+   curl --request PUT https://api..signalfx.com/v2/integration/integration-id \
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" \
    --data "@integration.json" 
+
+6. ``StatusCheckFailed`` is always ignored but now you can combine the other two status check metrics, ``StatusCheckFailed_Instance`` and ``StatusCheckFailed_System``, to obtain status information. 
+
+   For more on AWS status check metrics, see the official AWS documentation.

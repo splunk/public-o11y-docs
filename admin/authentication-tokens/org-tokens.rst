@@ -41,7 +41,7 @@ To manage your access (org) tokens:
 #. To find the access token in a large list, start entering its name in the search box. Infrastructure Monitoring returns matching results.
 #. To look at the details for an access token, select the expand icon to the left of the token name.
 
-   For information about the access token permissions enabled by the :guilabel:`Authorization Scopes` field value, see the permissions step in :ref:`create-access-token`.
+   For information about the access token permissions allowed by the :guilabel:`Authorization Scopes` field value, see the permissions step in :ref:`create-access-token`.
 #. If you're an organization administrator, the actions menu (|more| icon) appears on the right side of the token listing. You can select token actions from this menu.
 
 #. To change the token visibility, follow these steps:
@@ -162,18 +162,18 @@ Renaming a token does not affect the value of the token.
 
    For :ref:`Cloud integrations (AWS, GCP, or Azure) <get-started-connect>`, after renaming an access token you'll need to choose a new token name via the API. For AWS, you can also set up a new token :ref:`in the UI <aws-wizardconfig>`.
 
-Disable or enable an access token
-=====================================
+Deactivate or activate an access token
+========================================
 
 .. note::
 
-   You can't delete tokens; you can only disable them.
+   You can't delete tokens; you can only deactivate them.
 
-To disable a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
+To deactivate a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
 The line that displays the token has a shaded background, which indicates that the
-token is disabled. The UI displays disabled tokens at the end of the tokens list,
-after the enabled tokens.
+token is deactivated. The UI displays deactivated tokens at the end of the tokens list,
+after the activated tokens.
 
-To enable a disabled token, select :menuselection:`Enable` from the disabled
+To activate a deactivated token, select :menuselection:`Enable` from the deactivated
 token's actions menu (|more| icon). The line that displays the token has a light background,
-which indicates that the token is enabled.
+which indicates that the token is deactivated.

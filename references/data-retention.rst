@@ -13,20 +13,23 @@ The following sections list the data retention for each product in Splunk Observ
 
 Data retention in Infrastructure Monitoring
 ====================================================
+
 The following table shows the retention time period for each data type in Infrastructure Monitoring. 
 
 .. list-table:: 
    :widths: 25 25
    :header-rows: 1
+   :width: 100%
 
-   * - :strong:`Data type`
+   * - :strong:`Data resolution`
      - :strong:`Retention`
-   * - One-minute roll-ups 
-     - 13 months
-   * - One-second native resolution data 
+   * - 1 to 60-second resolution
      - 
        * Standard contract: 8 days
        * Enterprise contract: 3 months 
+   * - 1 minute resolution and more (one-minute roll-ups)
+     - 
+       * 13 months
 
 .. _rum-data-retention:
 
@@ -38,15 +41,19 @@ The following table shows the retention time period for each data type in RUM.
 .. list-table:: 
    :widths: 25 25
    :header-rows: 1
+   :width: 100%
 
    * - :strong:`Data type`
      - :strong:`Retention`
    * - Spans 
-     - 8 days
+     - 
+       * 8 days
    * - Metrics 
-     - 8 days
+     - 
+       * 8 days
    * - :ref:`Monitoring MetricSets <monitoring-metricsets>`
-     - 13 months 
+     - 
+       * 13 months 
 
 .. _apm-data-retention:
 
@@ -57,6 +64,7 @@ The following table shows the retention time period for each data type in APM. S
 .. list-table:: 
    :widths: 20 25
    :header-rows: 1
+   :width: 100%
 
    * - :strong:`Data type`
      - :strong:`Retention`
@@ -65,11 +73,14 @@ The following table shows the retention time period for each data type in APM. S
         * All raw traces: 8 days
         * Specific traces of interest: up to 13 months
    * - :ref:`Troubleshooting MetricSets <troubleshooting-metricsets>`
-     - 8 days   
+     - 
+       * 8 days   
    * - :ref:`Monitoring MetricSets <monitoring-metricsets>`
-     - 13 months 
+     - 
+       * 13 months 
    * - :ref:`Profiling data <profiling-intro>`
-     - 8 days
+     - 
+       * 8 days
 
 .. _log-observer-data-retention:
 
@@ -93,12 +104,14 @@ The following table shows the retention time period for each data type in Splunk
 .. list-table:: 
    :widths: 25 25
    :header-rows: 1
+   :width: 100%
 
    * - :strong:`Data type`
      - :strong:`Retention`
-   * - Metric data 
-     - 13 months for both Standard and Enterprise.
    * - Run results  
      - 
        * Standard contract: 8 days
        * Enterprise contract: 3 months 
+   * - Metric data 
+     - 
+       * 13 months for both Standard and Enterprise.

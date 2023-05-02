@@ -33,12 +33,12 @@ You can apply any of the following actions on collected attributes of spans, met
    * - ``convert``
      - Converts an attribute to another type, as specified in the ``converted_type`` parameter, which can be either ``int``, ``double``, or ``string``.
 
-.. note:: To include or exclude whole spans, logs, or metrics without, use the filter processor. See :ref:`filter-processor`.
+.. note:: To include or exclude whole spans, logs, or metrics, use the filter processor. See :ref:`filter-processor`.
 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the attributes processor. To turn on the attributes processor for a pipeline, add ``attributes`` to the ``processors`` section of the configuration. For example:
+By default, the Splunk Distribution of OpenTelemetry Collector includes the attributes processor. To activate the attributes processor for a pipeline, add ``attributes`` to the ``processors`` section of the configuration. For example:
 
 .. code-block:: yaml
 
@@ -95,7 +95,6 @@ You can then add the attributes processors to any compatible pipeline. For examp
          - batch
          - resourcedetection
          exporters: [splunk_hec]
-
 
 To include or exclude attributes use any of the following properties:
 
@@ -181,6 +180,14 @@ The following example shows how to backfill spans that are missing an attribute:
          action: upsert
        - key: operation
          action: delete
+
+More examples and use cases
+------------------------------
+
+See also the following use cases: 
+
+* :ref:`configure-remove`
+* :ref:`collector-remove-data`  
 
 .. _attributes-processor-settings:
 

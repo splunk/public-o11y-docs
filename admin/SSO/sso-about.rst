@@ -41,7 +41,7 @@ Splunk Observability Cloud adds additional security with email verification to g
   </embed>
 
 
-When setting up SSO integration, you need to provide information that enables your IdP to trust Splunk Observability Cloud and Splunk Observability Cloud to trust your IdP. 
+When setting up SSO integration, you need to provide information that permits your IdP to trust Splunk Observability Cloud and Splunk Observability Cloud to trust your IdP. 
 
 The following image shows Okta configuration information, however, all IdPs require similar information.
 

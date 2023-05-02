@@ -9,62 +9,47 @@ Welcome
    :width: 97.3%
    :target: https://docs.splunk.com/Observability/get-started/o11y.html#nav-Get-started
 
-
-.. get your data in section
-
 .. role:: icon-cloud-upload
 .. rst-class:: newparawithicon
 
 :icon-cloud-upload:`.` :strong:`Get your data in`
 The first step toward observability is getting relevant data into Observability Cloud. View :ref:`all supported integrations <supported-data-sources>`.
 
-.. gdi cards
-
 .. rst-class:: newcard
 
 :strong:`Get data in`
 Learn how to get data in from each layer in your stack :ref:`get-started-get-data-in`
 
+.. rst-class:: newcard
+
+:strong:`OpenTelemetry`
+Install the Splunk Distribution of the OpenTelemetry Collector :ref:`otel-intro`
 
 .. rst-class:: newcard
 
 :strong:`Cloud providers`
 Integrate to collect service metrics and logs :ref:`get-started-connect`
 
-
-.. rst-class:: newcard
-
-:strong:`Servers and clusters`
-Install the Splunk Distribution of OpenTelemetry Collector to collect metrics and logs :ref:`get-started-compute`
-
-
 .. rst-class:: newcard
 
 :strong:`Back-end apps and services`
 Instrument to collect traces and logs :ref:`get-started-application`
-
 
 .. rst-class:: newcard
 
 :strong:`Front-end app user experiences`
 Instrument to collect user sessions :ref:`rum-gdi`
 
-
 .. rst-class:: newcard
 
 :strong:`Serverless functions`
 Instrument to collect traces and logs :ref:`instrument-serverless-functions`
 
-
-.. explore and monitor your env section
-
 .. role:: icon-display
 .. rst-class:: newparawithicon
 
 :icon-display:`.` :strong:`Explore and monitor your environment`
-After you have your data coming into Observability Cloud, it’s time to do some exploring.
-
-.. explore and monitor cards
+After you have data coming into Observability Cloud, you can do some exploring.
 
 .. rst-class:: newcard
 
@@ -76,32 +61,25 @@ Monitor server and cluster metrics :ref:`wcidw-imm`
 :strong:`Application Performance Monitoring`
 Monitor back-end app and service traces :ref:`wcidw-apm`
 
-
 .. rst-class:: newcard
 
 :strong:`Real User Monitoring`
 Monitor data about front-end app user experiences :ref:`wcidw-rum`
 
-
 .. rst-class:: newcard
 
-:strong:`Log Observer`
-Query logs to identify root causes :ref:`LogObserverFeatures`
-
+:strong:`Log Observer Connect`
+Query logs to identify root causes :ref:`logs-intro-logconnect`
 
 .. rst-class:: newcard
 
 :strong:`Synthetic Monitoring`
 Proactively monitor the performance of web resources :ref:`welcome-synthmon`
 
-
 .. rst-class:: newcard
 
 :strong:`All products`
 Learn more about all Observability Cloud products :ref:`welcome`
-
-
-.. set up alerts section
 
 .. role:: icon-wrench
 .. rst-class:: newparawithicon
@@ -109,45 +87,35 @@ Learn more about all Observability Cloud products :ref:`welcome`
 :icon-wrench:`.` :strong:`Set up alerts and customize your account`
 Prepare for issues that might arise by setting up alerts, custom dashboards, and other advanced features.
 
-.. alerts and customize cards
-
 .. rst-class:: newcard
 
 :strong:`Detectors and alerts`
 Receive alerts about conditions you care about :ref:`create-detectors`
-
 
 .. rst-class:: newcard
 
 :strong:`Dashboards and charts`
 Get actionable insights about the systems you monitor :ref:`dashboards`
 
-
 .. rst-class:: newcard
 
 :strong:`Span tags`
 Use span tags to add useful metadata to traces :ref:`apm-add-context-trace-span`
-
 
 .. rst-class:: newcard
 
 :strong:`Logs pipeline`
 Add value to your raw logs by customizing your pipeline :ref:`logs-pipeline`
 
-
 .. rst-class:: newcard
 
 :strong:`Related Content`
 Enable users to seamlessly move across product views :ref:`get-started-relatedcontent`
 
-
 .. rst-class:: newcard
 
 :strong:`Global Data Links`
 Provide convenient access to relevant resources :ref:`link-metadata-to-content`
-
-
-.. admin section
 
 .. role:: icon-cogs
 .. rst-class:: newparawithicon
@@ -155,45 +123,35 @@ Provide convenient access to relevant resources :ref:`link-metadata-to-content`
 :icon-cogs:`.` :strong:`Administer your account`
 As an Observability Cloud administrator, use these tools to give your users a secure and relevant user experience.
 
-.. admin cards
-
 .. rst-class:: newcard
 
 :strong:`Get started`
 Learn how to set up and administer your organization :ref:`admin-admin`
-
 
 .. rst-class:: newcard
 
 :strong:`Access tokens`
 Authenticate and track API use :ref:`admin-org-tokens`
 
-
 .. rst-class:: newcard
 
 :strong:`Users`
 Invite users and set access levels :ref:`admin-manage-users`
-
 
 .. rst-class:: newcard
 
 :strong:`Teams`
 Create teams to help coordinate teamwork :ref:`admin-manage-teams`
 
-
 .. rst-class:: newcard
 
 :strong:`Single sign-on`
 Set up an integration to an SSO provider :ref:`sso-label`
 
-
 .. rst-class:: newcard
 
 :strong:`Subscription usage`
 Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-overview`
-
-
-.. popular integrations section
 
 .. role:: icon-cloud-upload
 .. rst-class:: newparawithicon
@@ -201,80 +159,65 @@ Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-over
 :icon-cloud-upload:`.` :strong:`Popular integrations`
 Access documentation for some of the most popular integrations used to get data into Observability Cloud.
 
-
-.. gdi cards
-
 .. rst-class:: newcard
 
 :strong:`Linux`
 Collect metrics and logs :ref:`get-started-linux`
-
 
 .. rst-class:: newcard
 
 :strong:`Kubernetes`
 Collect metrics and logs :ref:`get-started-k8s`
 
-
 .. rst-class:: newcard
 
 :strong:`Windows`
 Collect metrics and logs :ref:`get-started-windows`
-
 
 .. rst-class:: newcard
 
 :strong:`Amazon Web Services`
 Collect metrics and logs :ref:`get-started-aws`
 
-
 .. rst-class:: newcard
 
 :strong:`Azure`
 Collect metrics :ref:`get-started-azure`
-
 
 .. rst-class:: newcard
 
 :strong:`Browser`
 Collect user sessions :ref:`browser-rum-gdi`
 
-
 .. rst-class:: newcard
 
 :strong:`.NET`
 Collect traces :ref:`get-started-dotnet`
-
 
 .. rst-class:: newcard
 
 :strong:`Java`
 Collect traces :ref:`get-started-java`
 
-
 .. rst-class:: newcard
 
 :strong:`Ruby`
 Collect traces :ref:`get-started-ruby`
-
 
 .. rst-class:: newcard
 
 :strong:`Node.js`
 Collect traces :ref:`get-started-nodejs`
 
-
 .. rst-class:: newcard
 
 :strong:`PHP`
 Collect traces :ref:`get-started-php`
 
-
 .. rst-class:: newcard
 
 :strong:`All supported integrations`
 View a list of all supported integrations :ref:`supported-data-sources`
-
 
 .. ----- This comment separates the landing page from the TOC -----
 
@@ -326,9 +269,9 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Collect infrastructure metrics and logs TOGGLE <gdi/get-data-in/compute/compute>
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
-   Instrument back-end services and applications TOGGLE <gdi/get-data-in/application/application>
+   Instrument back-end services TOGGLE <gdi/get-data-in/application/application>
 
 
 .. toctree::
@@ -347,7 +290,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Available host and application monitors TOGGLE <gdi/index>
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
 
    Splunk Distribution of OpenTelemetry Collector TOGGLE <gdi/opentelemetry/opentelemetry>
 
@@ -365,32 +308,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: UNDERSTAND AND ANALYZE YOUR DATA
    :maxdepth:   3
 
-   Metrics, data points, and metric time series <metrics-and-metadata/metrics>
+   metrics-and-metadata/data-model
 
 .. toctree::
    :maxdepth:   3
 
-   metrics-and-metadata/metric-types
+   Metrics, metadata and events TOGGLE <metrics-and-metadata/metrics-landing>
 
 .. toctree::
    :maxdepth:   3
 
-   Dimensions, custom properties, and tags <metrics-and-metadata/metrics-dimensions-mts>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metric-names
-
-.. toctree::
-   :maxdepth:   3
-
-   Add context to metrics using events <metrics-and-metadata/view-data-events>
-
-.. toctree::
-   :maxdepth:   3
-
-   metrics-and-metadata/metrics-finder-metadata-catalog
+   Data tools TOGGLE <metrics-and-metadata/data-tools-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -424,16 +352,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :maxdepth:   3
-
-   Related Content <data-visualization/relatedcontent>
-
-.. toctree::
-   :maxdepth:   3
-
-   Enable Related Content <data-visualization/enablerelatedcontent>
-
-.. toctree::
    :caption: ALERTS AND DETECTORS
    :maxdepth:   3
 
@@ -447,12 +365,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   AutoDetect in Splunk Observability Cloud <alerts-detectors-notifications/autodetect>
-
-.. toctree::
-   :maxdepth:   3
-
-   List of available AutoDetect detectors <alerts-detectors-notifications/autodetect-list>
+   Use and customize AutoDetect alerts and detectors TOGGLE <alerts-detectors-notifications/autodetect/autodetect>
 
 .. toctree::
    :maxdepth:   3
@@ -477,11 +390,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Detector options <alerts-detectors-notifications/detector-options>
-
-.. toctree::
-   :maxdepth:   3
-
    Preview detector alerts <alerts-detectors-notifications/preview-detector-alerts>
 
 .. toctree::
@@ -497,22 +405,30 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:  3
 
-   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
-
-.. toctree::
-   :maxdepth:   3
-
    Mute alert notifications <alerts-detectors-notifications/mute-notifications>
 
 .. toctree::
    :maxdepth:   3
 
-   Auto-clearing alerts <alerts-detectors-notifications/auto-clearing-alerts>
+   Auto-clear alerts <alerts-detectors-notifications/auto-clearing-alerts>
 
 .. toctree::
    :maxdepth:   3
 
    Troubleshoot detectors <alerts-detectors-notifications/troubleshoot-detectors>
+
+.. toctree::
+   :maxdepth:   3
+
+   Detector options <alerts-detectors-notifications/detector-options>
+
+.. toctree::
+   :maxdepth:   3
+
+   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
+
+.. toctree::
+   :maxdepth:   3
 
 .. toctree::
    :caption: APM
@@ -605,6 +521,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Metrics pipeline management TOGGLE <infrastructure/metrics-pipeline/metrics-pipeline>
+
+.. toctree::
+   :maxdepth:   3
+
    Network Explorer TOGGLE <infrastructure/network-explorer/network-explorer>
 
 .. toctree::
@@ -658,6 +579,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Set up Splunk RUM <rum/set-up-rum>
+
+
+.. toctree::
+   :maxdepth:   3
+
+   rum/sensitive-data-rum
 
 .. toctree::
    :maxdepth:   3
@@ -792,7 +719,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    incident-intelligence/create-configure-incident-policies
 
 .. toctree::
-   :maxdepth:   3
+   :maxdepth:   4
 
    Create and manage on-call schedules TOGGLE <incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules>
 
@@ -873,18 +800,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Link metadata to related resources using global data links <admin/link-metadata-to-content>
-
-.. toctree::
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
 
 .. toctree::
-   :hidden:
    :maxdepth:   3
 
    Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>
@@ -934,7 +854,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Per-product limits <references/per-product-limits>
+   Per product limits <references/per-product-limits>
 
 .. toctree::
    :maxdepth:   3

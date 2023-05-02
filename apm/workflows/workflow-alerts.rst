@@ -22,7 +22,7 @@ For workflow duration, you can configure a detector to alert on the following co
 - Sudden change
 - Historical anomaly
 
-.. see <default-conditions> to learn more about these default alert conditions. 
+
 
 You can use the Create Detector wizard to fine-tune settings such as trigger threshold, trigger sensitivity, and cycle length for each of the above conditions. You can also control the alert message, set the severity, and specify alert recipients. 
 

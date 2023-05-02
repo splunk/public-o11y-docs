@@ -12,11 +12,11 @@ Instrumenting applications automatically using the agent of the Splunk Distribut
 Libraries installation
 =========================================
 
-With manual instrumentation, you can install and enable instrumentation libraries separately. This lets you control which gems Ruby retrieves when building your project. 
+With manual instrumentation, you can install and activate instrumentation libraries separately. This lets you control which gems Ruby retrieves when building your project. 
 
 To learn how to manually instrument a Ruby application, see  :new-page:`https://opentelemetry.io/docs/instrumentation/ruby/manual/` at OpenTelemetry.io.
 
-To install and enable an instrumentation library manually:
+To install and activate an instrumentation library manually:
 
 #. Install the instrumentation library using ``gem install`` or by including it in the project's Gemfile. For example, to install the Sinatra instrumentation, add the following to your Gemfile:
 
@@ -63,7 +63,7 @@ To instrument a Ruby on Rails application, follow these steps:
       c.use_all()
       end
 
-   You can disable specific instrumentations through the ``use_all`` function. For example:
+   You can deactivate specific instrumentations through the ``use_all`` function. For example:
 
    .. code:: ruby
 
@@ -71,7 +71,7 @@ To instrument a Ruby on Rails application, follow these steps:
       c.use_all({ 'OpenTelemetry::Instrumentation::ActiveRecord' => { enabled: false } })
       end
 
-#. To enable only Rails, you can use a single ``c.use`` statement:
+#. To activate only Rails, you can use a single ``c.use`` statement:
 
    .. code:: ruby
 

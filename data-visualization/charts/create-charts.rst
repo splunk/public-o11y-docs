@@ -298,7 +298,7 @@ Here are some additional ways in which you can customize a table chart to best v
 
 - Sort table values
 
-  Select a column header to swtich between sorting by ascending and descending order. An arrow icon displays in the column header to indicate the sort order.
+  Select a column header to switch between sorting by ascending and descending order. An arrow icon displays in the column header to indicate the sort order.
 
 - Link a detector to the table chart
 

@@ -30,7 +30,7 @@ Deploy the Splunk OpenTelemetry Collector for Kubernetes in agent mode. The requ
 
 In the Helm chart for the Collector, set the ``autodetect.istio`` parameter to ``true`` by passing ``--set autodetect.istio=true`` to the ``helm install`` or ``helm upgrade`` commands.
 
-You can also add the following snippet to your  ``values.yaml`` file, which you can pass using the ``-f myvalues.yaml`` argument:
+You can also add the following snippet to your  values.yaml file, which you can pass using the ``-f myvalues.yaml`` argument:
 
 .. code:: yaml
 
@@ -44,7 +44,7 @@ Forwarding telemetry from Istio to the Collector might generate undesired teleme
 
 - Run the Collector in a separate namespace that lacks the Istio proxy.
 - Add a label to the Collector pods to prevent the injection of the Istio proxy. This is default configuration when the ``autodetect.istio`` parameter is set to ``true``.
-- If you need the Istio proxy in the Collector pods, disable tracing in the Collector pods. For example:
+- If you need the Istio proxy in the Collector pods, deactivate tracing in the Collector pods. For example:
 
    .. code-block:: yaml
 
@@ -57,7 +57,7 @@ Forwarding telemetry from Istio to the Collector might generate undesired teleme
             proxy.istio.io/config: '{"tracing":{}}'
 
 .. note:: 
-   The instrumentation pod is a DaemonSet and isn't injected with a proxy by default. If Istio injects proxies in instrumentation pods, disable tracing using a ``podAnnotation``.
+   The instrumentation pod is a DaemonSet and isn't injected with a proxy by default. If Istio injects proxies in instrumentation pods, deactivate tracing using a ``podAnnotation``.
 
 Configure the Istio Operator
 =============================================
@@ -92,13 +92,13 @@ For example:
                   literal:
                      value: dev
 
-To enable the new configuration, run:
+To activate the new configuration, run:
 
 .. code-block:: shell
 
    istioctl install -f ./tracing.yaml
 
-Restart the pods that contain the Istio proxy to enable the new tracing configuration.
+Restart the pods that contain the Istio proxy to activate the new tracing configuration.
 
 Update all pods in the service mesh
 ===========================================
@@ -111,7 +111,7 @@ Update all pods that are in the Istio service mesh to include an ``app`` label. 
 Recommendations
 =========================================
 
-To make the best use of Splunk APM's full-fidelity data retention, configure Istio to send as much trace data as possible by configuring sampling and maximum tag length as follows:
+To make the best use of full-fidelity data retention, configure Istio to send as much trace data as possible by configuring sampling and maximum tag length as follows:
 
 - Set a ``sampling`` value of ``100`` to ensure that all traces have correct root spans.
 - Set a ``max_path_tag_length`` value of ``99999`` to avoid that key tags get truncated.

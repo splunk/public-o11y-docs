@@ -6,7 +6,7 @@ Find the root cause of a user reported error in Splunk RUM for Mobile
 **************************************************************************
 
 
-The following use cases feature examples from Buttercup Industries, a fictitious ecommerce company.
+The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company.
 
 About this use case 
 ================================

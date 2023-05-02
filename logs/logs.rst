@@ -93,11 +93,11 @@ After you see data coming into Log Observer from your data source, you can send 
 
    If you already have existing Fluentd or Fluent Bit deployments, you can configure them to send logs to Log Observer. However, it is important to note that the following are true when using Fluentd or Fluent Bit:
 
-      - Logs captured by your own FluentD or Fluent Bit agents do not include the resource metadata that automatically links log data to other related sources available within APM and Infrastructure Monitoring.
+      - Logs captured by your own Fluentd or Fluent Bit agents do not include the resource metadata that automatically links log data to other related sources available within APM and Infrastructure Monitoring.
 
       - Although there are multiple ways to send log data to Log Observer, Splunk only provides direct support for the Splunk distribution of OpenTelemetry Collector.
 
-   If you still want to use FluentD to send logs to Log Observer, see :ref:`Configure Fluentd to send logs <fluentd>`.
+   If you still want to use Fluentd to send logs to Log Observer, see :ref:`Configure Fluentd to send logs <fluentd>`.
 
 .. _work-with-data:
 

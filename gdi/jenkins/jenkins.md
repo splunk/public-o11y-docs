@@ -65,11 +65,11 @@ The following table shows the configuration options for this monitor:
 | `port` | **yes** | `integer` |  |
 | `path` | no | `string` |  |
 | `metricsKey` | **yes** | `string` | Key required for collecting metrics.  The access key located at `Manage Jenkins > Configure System > Metrics > ADD.` If empty, click `Generate`. |
-| `enhancedMetrics` | no | `bool` | Whether to enable enhanced metrics (**default:** `false`) |
-| `includeMetrics` | no | `list of strings` | Used to enable individual enhanced metrics when `enhancedMetrics` is set to `false` |
+| `enhancedMetrics` | no | `bool` | Whether to activate enhanced metrics (**default:** `false`) |
+| `includeMetrics` | no | `list of strings` | Used to activate individual enhanced metrics when `enhancedMetrics` is set to `false` |
 | `username` | no | `string` | User with security access to Jenkins |
 | `apiToken` | no | `string` | API Token of the user |
-| `useHTTPS` | no | `bool` | Whether to enable HTTPS. (**default:** `false`) |
+| `useHTTPS` | no | `bool` | Whether to activate HTTPS. (**default:** `false`) |
 | `sslKeyFile` | no | `string` | Path to the keyfile |
 | `sslCertificate` | no | `string` | Path to the certificate |
 | `sslCACerts` | no | `string` | Path to the ca file |
@@ -117,6 +117,11 @@ monitors:
 These metrics are available for this integration.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/jenkins/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

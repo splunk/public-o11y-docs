@@ -18,9 +18,10 @@ Instrument .NET applications for Splunk Observability Cloud
    Metrics and attributes <configuration/dotnet-metrics-attributes>
    Manual instrumentation <instrumentation/manual-dotnet-instrumentation>
    Troubleshoot the .NET instrumentation <troubleshooting/common-dotnet-troubleshooting>
-   /gdi/get-data-in/application/auto-instrumentation/auto-instrumentation-dotnet
 
-The SignalFx Instrumentation for .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry data to Splunk Observability Cloud.
+The SignalFx Instrumentation for .NET provides automatic instrumentation for popular .NET libraries and frameworks to collect and send telemetry data to Splunk Observability Cloud. 
+
+.. note:: To use the experimental OpenTelemetry instrumentation for .NET, see :ref:`get-started-dotnet-otel`.
 
 .. raw:: html
 
@@ -31,6 +32,7 @@ The SignalFx Instrumentation for .NET provides automatic instrumentation for pop
 The SignalFx Instrumentation for .NET provides the following features:
 
 - Collection and reporting of all spans
+- AlwaysOn Profiling for CPU and memory
 - B3 and W3C headers for context propagation
 - Zipkin trace exporter to send spans as JSON
 - Support for existing custom instrumentation through OpenTracing

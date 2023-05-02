@@ -4,9 +4,6 @@
 Log Observer Connect limits
 *********************************************************************************************
 
-.. meta created 2021-12-12
-.. meta DOCS-4836
-
 .. meta::
   :description: See Log Observer Connect’s limits on MB of data ingested or indexed per month, limits on the number and type of processing rules, and search query limits.
 

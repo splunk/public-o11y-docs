@@ -30,7 +30,7 @@ Defaults of the Splunk Distribution of OpenTelemetry JS
 
 The Splunk Distribution of OpenTelemetry JS has the following default settings for context propagation, exporters, and trace settings:
 
-- W3C tracecontext and W3C baggage context propagation is enabled by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-nodejs`.
+- W3C tracecontext and W3C baggage context propagation is activated by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-nodejs`.
 - The OTLP exporter is configured by default to send spans to the local :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` over gRPC.
 - Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`trace-configuration-nodejs`.
 

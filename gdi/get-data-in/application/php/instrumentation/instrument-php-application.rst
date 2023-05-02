@@ -29,10 +29,18 @@ To generate all the basic installation commands for your environment and applica
 
    #. Select the :guilabel:`PHP` tile to open the PHP guided setup.
 
+Install the SignalFx Tracing Library for PHP manually
+==================================================================
+
+Follow these instructions to install the SignalFx Tracing Library for PHP:
+
+- :ref:`install-php-instrumentation`
+- :ref:`configure-otel-dotnet`
+
 .. _install-php-instrumentation:
 
 Instrument a PHP application
-===================================================================
+------------------------------------------
 
 Follow these steps to automatically instrument your application:
 
@@ -83,7 +91,7 @@ Follow these steps to automatically instrument your application:
 .. _php-ini-config:
 
 INI file settings
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you don't set any environment variable, the library extracts default values from the INI file. The prefix for settings defined using environment variables that start with ``SIGNALFX_TRACE_`` is ``signalfx.trace.``. For all other environment variables that start with ``SIGNALFX_`` the prefix is ``signalfx.``.
 
@@ -95,10 +103,43 @@ You can use the ``signalfx-setup.php`` script to set INI file options without ha
    
 This is useful for options common to all PHP services running in the system, like endpoints.
 
+.. _docker_php:
+
+Deploy the PHP instrumentation in Docker
+-----------------------------------------------
+
+You can deploy the PHP instrumentation using Docker. Follow these steps to get started:
+
+#. Create a startup shell script in a location Docker can access. The script can have any name, for example setup.sh.
+
+#. Edit the startup shell script to export the environment variables described in :ref:`install-php-instrumentation`.
+
+#. Add the following commands to the startup shell script to initialize the PHP instrumentation:
+
+   .. code-block:: shell
+
+      curl -LO https://github.com/signalfx/signalfx-php-tracing/releases/latest/download/signalfx-setup.php
+      php signalfx-setup.php --php-bin=all
+      php signalfx-setup.php --update-config --signalfx.endpoint_url=https://ingest.<realm>.signalfx.com/v2/trace/signalfxv1
+      php signalfx-setup.php --update-config --signalfx.access_token=<access_token>
+      php signalfx-setup.php --update-config --signalfx.service_name=<service-name>
+
+#. Add a line to the script to start the application using ``supervisorctl``, ``supervisord``, ``systemd``, or similar. The following example uses ``supervisorctl``:
+
+   .. code-block:: shell
+
+      supervisor start my-php-app
+
+#. Add a command to run the newly created shell script at the end of the Dockerfile.
+
+#. Rebuild the container using ``docker build``.
+
+.. caution:: Make sure to deactivate the ``Xdebug`` extension completely, as it's not compatible with the PHP instrumentation.
+
 .. _kubernetes_php:
 
 Deploy the PHP instrumentation in Kubernetes
-==========================================================
+-----------------------------------------------
 
 To deploy the PHP instrumentation in Kubernetes, configure the Kubernetes Downward API to expose environment variables to Kubernetes resources.
 
@@ -131,7 +172,7 @@ The following example shows how to update a deployment to expose environment var
 .. _export-directly-to-olly-cloud-php:
 
 Send data directly to Observability Cloud
-==============================================================
+---------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 

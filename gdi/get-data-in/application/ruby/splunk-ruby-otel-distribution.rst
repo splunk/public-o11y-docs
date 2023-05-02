@@ -29,7 +29,7 @@ Defaults of the Splunk Distribution of OpenTelemetry Ruby
 
 The Splunk Distribution of OpenTelemetry Ruby has the following default settings for context propagation, exporters, and trace settings:
 
-- W3C tracecontext and W3C baggage context propagation is enabled by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-ruby`.
+- W3C tracecontext and W3C baggage context propagation is activated by default. You can also configure B3 propagation. See :ref:`trace-propagation-configuration-ruby`.
 - The OTLP gRPC exporter is configured by default to send spans to the local :ref:`Splunk OpenTelemetry Collector <otel-intro>`.
 - Unlimited defaults for trace configuration to support full-fidelity tracing. See :ref:`trace-configuration-ruby`.
 

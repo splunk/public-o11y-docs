@@ -25,7 +25,7 @@ Migrate to the Splunk Distribution of OpenTelemetry Java
 
 To migrate from the SignalFx Java Agent to the Splunk Distribution of OpenTelemetry Java, follow these steps:
 
-#. Install and enable the Java agent. See :ref:`install-enable-jvm-agent`.
+#. Install and activate the Java agent. See :ref:`install-enable-jvm-agent`.
 #. Specify the endpoint of the OpenTelemetry Collector you're exporting traces to. See :ref:`trace-exporters-settings-java`.
 #. In your application startup script, replace ``-javaagent:./signalfx-tracing.jar`` with ``-javaagent:/path/to/splunk-otel-javaagent.jar``.
 

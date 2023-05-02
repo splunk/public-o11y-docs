@@ -460,6 +460,10 @@ img {
     margin-bottom: 20px !important;
 }
 
+.inline-image {
+    margin-bottom: 0px !important;
+}
+
 tt.descname, tt.descclassname, code.descname, code.descclassname {
     font-size: 0.95em;
 }

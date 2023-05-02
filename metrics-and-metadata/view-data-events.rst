@@ -69,6 +69,8 @@ Custom events are usually generated through an integration with another service,
 
 You can also create custom events manually, which you can display on charts alongside other events. To create custom events, select :guilabel:`New event` in the :ref:`Events sidebar <events-sidebar>` or add custom events while using the Chart Builder. To learn more, see :ref:`chart-manual-events`.
 
+Custom events are retained in the platform for a year.
+
 .. _new-event:
 
 Create a new event from the sidebar

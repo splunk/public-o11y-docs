@@ -4,7 +4,7 @@
 View alerts in Splunk Observability Cloud
 *****************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
    :description: Learn how to view currently active alerts on the Alerts page or in the Infrastructure Navigator.

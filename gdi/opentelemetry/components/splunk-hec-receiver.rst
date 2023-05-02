@@ -16,7 +16,7 @@ The receiver accepts data formatted as JSON HEC events under any path or as end-
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -34,14 +34,14 @@ To activate the Splunk HEC receiver add a ``splunk_hec`` entry inside the ``rece
 
 .. code-block:: yaml
 
-   exporters:
+   receivers:
       splunk_hec:
 
 The following example shows a Splunk HEC receiver configured with all available settings:
 
 .. code-block:: yaml
 
-   exporters:
+   receivers:
      # ...
      splunk_hec:
      # Address and port the Splunk HEC receiver should bind to

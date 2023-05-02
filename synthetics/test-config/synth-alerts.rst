@@ -29,7 +29,7 @@ You can use detectors to alert on metrics at the test level, or at the page leve
        | For example, alert when the count of failed runs, % Uptime, or duration of the entire test exceeds a given threshold. 
 
    * - Page-level detectors
-     - | In Browser tests, create page-level detectors to trigger alerts on metrics corresponding to a single page within a test. For example, alert when the DOM load time, Largest Contentful Paint, or total image size on a given page exceeds a given threshold. 
+     - | In Browser tests, create page-level detectors to trigger alerts on metrics corresponding to a single page within a test. For example, alert when the DOM load time, largest contentful paint (LCP), or total image size on a given page exceeds a given threshold. 
        | 
        | If you don't scope your alerts to the page level for page-level metrics, the detector monitors the average metric value across pages. See :ref:`page-level-detector` to learn more.
   
@@ -79,7 +79,7 @@ Create a page-level detector for a Browser test
 
 To create a page-level detector, do the following while creating your detector:
 
-#. While choosing a metric for the detector to alert on, select a metric that applies to the page level. Don't use metrics such as :guilabel:`Run Duration` or :guilabel:`Run Count`, which apply to the entire Browser test run, not a specific page within the test.
+#. While choosing a metric for the detector to alert on, select a metric that applies to the page level. Don't use metrics such as :guilabel:`Run Duration` or :guilabel:`Run count`, which apply to the entire Browser test run, not a specific page within the test.
 #. Select the :guilabel:`+` button labeled :guilabel:`Scope alerts to`.
 #. Under :guilabel:`Find a key`, select the ``page_position`` dimension.
 #. Under :guilabel:`Find a value`, select the number corresponding to the page you want to monitor. Page position 0 is the first page your Browser test interacts with, position 1 is the second page in your test, and so on. 
@@ -106,7 +106,7 @@ To create a transaction-level detector, do the following while creating your det
     * Size
 
 #. Select the :guilabel:`+` button labeled :guilabel:`Scope alerts to`.
-#. Under :guilabel:`Find a key`, select the ``transaction`` or ``transaction_position`` dimension. Using the ``transaction`` dimension allows you to identify transactions by name rather than numerical positoin. 
+#. Under :guilabel:`Find a key`, select the ``transaction`` or ``transaction_position`` dimension. Using the ``transaction`` dimension allows you to identify transactions by name rather than numerical position. 
 #. Under :guilabel:`Find a value`, select the synthetic transaction you want to monitor.
 #. Finish setting up your detector. See :ref:`synth-detector-setup` above. 
 
@@ -118,7 +118,7 @@ To create a transaction-level detector, do the following while creating your det
   If you want a detector monitoring the metric value for each of the transactions in your test, create a separate detector for each transaction you want to monitor. 
 
 See also
-^^^^^^^^^^  
+---------------------------------------------------------  
 
 To learn more about synthetic transactions in Browser tests, see :ref:`set-up-transactional-browser-test`.
 

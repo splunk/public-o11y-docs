@@ -11,7 +11,6 @@ Instrument AWS Lambda functions for Splunk Observability Cloud
    :hidden:
 
    Instrument your Lambda function <otel-lambda-layer/instrument-lambda-functions>
-   otel-lambda-layer/collector-ec2-setup
    Advanced configuration <otel-lambda-layer/advanced-configuration>
    Metrics and dimensions <otel-lambda-layer/lambda-metrics>
    Troubleshooting <otel-lambda-layer/troubleshooting-lambda-layer>

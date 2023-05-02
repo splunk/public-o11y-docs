@@ -7,9 +7,9 @@ Private locations
 .. meta::
     :description: Learn about private locations in Splunk Synthetic Monitoring.
 
-A Private location is a software package that enables quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. Private locations allow Splunk Synthetics Monitoring users to test earlier in the development cycle and against internal sites or applications that aren't available to the public.
+A private location is a software package that enables quick and easy deployment of Splunk Synthetic Monitoring solutions beyond the public network so that you can find, fix, and prevent web performance defects on any internal web application, in any environment - whether inside or outside of your firewalls. private locations allow Splunk Synthetics Monitoring users to test earlier in the development cycle and against internal sites or applications that aren't available to the public.
 
-Customers can, through the Splunk Synthetics Monitoring web interface, create new Private locations and launch a runner to perform any checks that are assigned to them.
+Customers can, through the Splunk Synthetics Monitoring web interface, create new private locations and launch a runner to perform any checks that are assigned to them.
 
 What is a runner?
 ===================
@@ -56,14 +56,14 @@ Follow these steps to set up a new private location:
 4. Save your private location. 
 
 
-What you can do with your Private location ID 
+What you can do with your private location ID 
 ------------------------------------------------------------
 
-Each private location has a corresponding Private location ID. With this ID, you can:
+Each private location has a corresponding private location ID. With this ID, you can:
 
 * Build charts or dashboards
-* Search for metrics by Private location
-* Refer to your Private location ID if you're interacting with the Splunk Synthetics Monitoring APIs. 
+* Search for metrics by private location
+* Refer to your private location ID if you're interacting with the Splunk Synthetics Monitoring APIs. 
 
 Manage your tokens
 --------------------

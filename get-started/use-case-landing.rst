@@ -26,6 +26,8 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`Maintain a secure organization with many teams and users using Splunk Observability Cloud <use-case-security>`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-use-case>`
+  * - :ref:`OpenTelemetry <otel-intro>`
+    - :ref:`auto-instrumentation-java-operator`     
   * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`
     - :ref:`monitor-server-latency`
   * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`    
@@ -43,7 +45,7 @@ This is the collection of use cases available for Splunk Observability Cloud.
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`troubleshoot-business-workflows`
   * - :ref:`APM <apm-use-cases-intro>`
-    - :ref:`specific-trace`
+    - :ref:`apm-use-case-trace-analyzer`
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`monitor-services`
   * - :ref:`APM <apm-use-cases-intro>`
@@ -53,7 +55,9 @@ This is the collection of use cases available for Splunk Observability Cloud.
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`historical-data`
   * - :ref:`APM <apm-use-cases-intro>`
-    - :ref:`custom-metricset`    
+    - :ref:`custom-metricset`  
+  * - :ref:`APM <apm-use-cases-intro>`
+    - :ref:`Monitor service performance using endpoint performance <apm-use-case-endpoint-performance>` 
   * - :ref:`APM database query performance <db-query-performance>`
     - :ref:`Identify slow database queries using Database Query Performance <db-perf-use-case>` 
   * - :ref:`APM database query performance <db-query-performance>`
@@ -62,6 +66,8 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`Find performance issues using AlwaysOn Profiling <profiling-use-case>`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
     - :ref:`Analyze memory usage using AlwaysOn Profiling <memory-profiling-use-case>`
+  * - Infrastructure Monitoring
+    - :ref:`Troubleshoot server failure using the Kubernetes navigator <troubleshoot-k8s-nav-use-case>`
   * - :ref:`RUM <use-case-landingpage>`
     - :ref:`use-case-monitoring`
   * - :ref:`RUM <use-case-landingpage>`
@@ -76,3 +82,5 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`api-test-use-case`
   * - :ref:`Synthetic Monitoring <synth-landing>`     
     - :ref:`uptime-test-use-case`
+  * - :ref:`Log Observer <logs-intro-logconnect>`
+    - :ref:`Troubleshoot workflow failures with Log Observer <logs-LOconnect-usecase>`

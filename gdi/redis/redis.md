@@ -112,7 +112,7 @@ The following table shows the configuration options for the Redis monitor:
 | `name`            | No           | `string`                      | Name for the Redis instance. The maximum length is 64 characters. The default value is "{host}:{port}".                                       |
 | `auth`            | No           | `string`                      | Authentication password.                                                                                                                                     |
 | `sendListLengths` | No           | `list of objects (see below)` | List of keys that you want to monitor for length. To learn more, see the section **Monitor the length of Redis lists**.                                      |
-| `verbose`         | No           | `bool`                        | Flag that controls verbose logging for the plugin. If `true`, verbose logging is enabled. The default value is`false`.                                             |
+| `verbose`         | No           | `bool`                        | Flag that controls verbose logging for the plugin. If `true`, verbose logging is activated. The default value is`false`.                                             |
 
 The following table shows you the configuration options for the `sendListLengths` configuration object:
 
@@ -147,6 +147,11 @@ for each Redis list.
 The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/redis/metrics.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Database Query Performance
 

@@ -4,7 +4,7 @@
 Use case: Create a detector to monitor server latency 
 *******************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
     :description: This Splunk alerts and detectors use case describes how to create a detector to monitor server latency.

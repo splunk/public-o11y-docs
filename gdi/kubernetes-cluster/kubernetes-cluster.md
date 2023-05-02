@@ -81,13 +81,18 @@ The **nested** `kubernetesAPI` configuration object has the following fields:
 | `skipVerify` | no | `bool` | Whether to skip verifying the TLS cert from the API server. Almost never needed. **Default** is `false`. |
 | `clientCertPath` | no | `string` | The path to the TLS client cert on the pod's filesystem, if using `tls` authentication. |
 | `clientKeyPath` | no | `string` | The path to the TLS client key on the pod's filesystem, if using `tls` authentication. |
-| `caCertPath` | no | `string` | Path to a CA certificate to use when verifying the API server's TLS certificate. This is provided by Kubernetes alongside the service account token, which will be picked up automatically, so this should rarely be necessary to specify. |
+| `caCertPath` | no | `string` | Path to a CA certificate to use when verifying the API server TLS certificate. This is provided by Kubernetes alongside the service account token, which will be picked up automatically, so this should rarely be necessary to specify. |
 
 ## Metrics
 
 The following table shows the legacy metrics that are available for this integration. See [OpenTelemetry values and their legacy equivalents](https://docs.splunk.com/Observability/gdi/opentelemetry/legacy-otel-mappings.html#opentelemetry-values-and-their-legacy-equivalents) for the Splunk Distribution of OpenTelemetry Collector equivalents.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

@@ -4,9 +4,6 @@
 View overall system health using Timeline
 *****************************************************************
 
-.. meta created 2021-02-17
-.. meta DOCS-1962
-
 .. meta::
   :description: Log Observer Timeline displays a histogram chart of logged events over time, grouped by values of the “message” field. See the spread of error severity levels.
 

@@ -29,7 +29,7 @@ Defaults of the Splunk Distribution of OpenTelemetry Go
 
 The Splunk Distribution of OpenTelemetry Go has the following default settings for context propagation, exporters, and trace settings:
 
-- W3C tracecontext and W3C baggage context propagation is enabled by default.
+- W3C tracecontext and W3C baggage context propagation is activated by default.
 - The OTLP over gRPC exporter is configured to send spans to a locally running the Splunk Distribution of OpenTelemetry Collector.
 - Unlimited defaults for trace configuration to support full-fidelity tracing.
 

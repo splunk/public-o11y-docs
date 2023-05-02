@@ -1,4 +1,4 @@
-- Automatic instrumentation is only available for applications using one or more of the :ref:`supported-java-libraries`. If your application is not currently supported, you can :ref:`java-manual-instrumentation` to generate trace data.
+- Automatic instrumentation is only available for applications using supported Java libraries. See :ref:`supported-java-libraries`. If your application isn't supported, manually instrument your service to generate trace data. See :ref:`java-manual-instrumentation` .
 
 - :ref:`java-requirements`.
 

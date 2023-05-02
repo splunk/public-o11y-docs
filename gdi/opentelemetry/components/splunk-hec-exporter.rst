@@ -101,7 +101,7 @@ If you're using the Collector for log collection and need to send data to Splunk
          index: "metrics"
          # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
          max_connections: 20
-         # Whether to disable gzip compression over HTTP. Defaults to false.
+         # Whether to deactivate gzip compression over HTTP. Defaults to false.
          disable_compression: false
          # HTTP timeout when sending data. Defaults to 10s.
          timeout: 10s
@@ -225,7 +225,7 @@ To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use 
 
 .. note:: The ``log_data_enabled`` setting is available in the Splunk Distribution of OpenTelemetry Collector version 0.49.0 and higher.
 
-If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or ``values.yaml`` file:
+If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or values.yaml file:
 
 .. code-block:: yaml
 

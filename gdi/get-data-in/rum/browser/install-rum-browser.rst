@@ -135,7 +135,7 @@ To bundle the Browser RUM agent directly with your application, use the ``@splun
 
 Follow these steps to instrument and configure Splunk RUM using npm:
 
-#. Enter the following command to install the Browser RUM agent and add it to your ``package.json`` file:
+#. Enter the following command to install the Browser RUM agent and add it to your package.json file:
 
    .. code-block:: shell
 
@@ -194,7 +194,7 @@ You can customize the data intake for the Browser RUM agent to reduce noise and 
 Opt out of error.message collection
 ------------------------------------------------
 
-To avoid collecting ``error.message`` responses, disable the errors instrumentation as in the following example:
+To avoid collecting ``error.message`` responses, deactivate the errors instrumentation as in the following example:
 
 .. code-block:: html
    :emphasize-lines: 7

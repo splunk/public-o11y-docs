@@ -35,6 +35,8 @@ Make sure that the new receiver is the ``metrics`` pipeline of the configuration
       processors: [ memory_limiter, batch, resourcedetection ]
       exporters: [ signalfx ]
 
+See :ref:`prometheus-receiver` for more information.
+
 Add the required dependencies
 ======================================
 
@@ -56,7 +58,7 @@ The following example shows dependencies for a Python script that send metrics e
    from opentelemetry.sdk.metrics import MeterProvider
    from opentelemetry.sdk.metrics.export import PeriodicExportingMetricReader
 
-The ``requirements.txt`` file for the example contains the following:
+The requirements.txt file for the example contains the following:
 
 .. code-block:: text
 
@@ -77,7 +79,7 @@ Configure your code to create counters, gauges, and other metric data types and 
    provider = MeterProvider(metric_readers=[reader])
    set_meter_provider(provider)
 
-See the ``example.py`` file in GitHub for a full example: :new-page:`https://github.com/open-telemetry/opentelemetry-python/blob/main/docs/examples/metrics/instruments/example.py`.
+See the example.py file in GitHub for a full example: :new-page:`https://github.com/open-telemetry/opentelemetry-python/blob/main/docs/examples/metrics/instruments/example.py`.
 
 Send custom metrics without the Collector
 -------------------------------------------

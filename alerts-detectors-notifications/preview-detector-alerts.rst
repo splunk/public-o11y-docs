@@ -4,7 +4,7 @@
 Preview detector alerts
 **********************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
   :description: How to preview alerts that your detectors are set up to generate.

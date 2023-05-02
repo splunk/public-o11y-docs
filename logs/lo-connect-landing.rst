@@ -15,16 +15,15 @@ Splunk Log Observer Connect
     scp
     set-up-logconnect
     LOconnect-troubleshoot
+    LOconnect-usecase
     timeline
     queries
     raw-logs-display
     keyword
-    filter-logs-by-field
     alias
     logs-individual-log-connect
     message-field
     aggregations
-    save-share
     logviews
     timestamp
     lo-connect-limits
@@ -39,6 +38,8 @@ Splunk Log Observer Connect
 
 - :ref:`logs-LOconnect-troubleshoot`
 
+- :ref:`logs-LOconnect-usecase`
+
 - :ref:`logs-timeline`
 
 - :ref:`logs-queries`
@@ -46,8 +47,6 @@ Splunk Log Observer Connect
 - :ref:`logs-raw-logs-display`
 
 - :ref:`logs-keyword`
-
-- :ref:`logs-filter-logs-by-field`
 
 - :ref:`logs-alias`
 

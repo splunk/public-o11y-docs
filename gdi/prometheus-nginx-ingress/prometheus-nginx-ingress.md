@@ -48,7 +48,7 @@ service:
 
 ### Ingress NGINX configuration
 
-Enable the `controller.stats.enabled=true` and `controller.metrics.enabled=true` flags in the NGINX Ingress Controller chart.
+Activate the `controller.stats.enabled=true` and `controller.metrics.enabled=true` flags in the NGINX Ingress Controller chart.
 
 ### Agent configuration
 
@@ -87,6 +87,11 @@ The following table shows the configuration options for the `prometheus-nginx-in
 The following metrics are available for this integration.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/prometheus/nginxingress/metadata.yaml"></div>
+
+### Notes
+
+```{include} /_includes/metric-defs.md
+```
 
 ## Get help
 

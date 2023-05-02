@@ -9,7 +9,7 @@ Host metrics receiver
 
 The host metrics receiver generates metrics scraped from host systems when the Collector is deployed as an agent. The supported pipeline type is ``metrics``.
 
-By default, the host metrics receiver is enabled in the Splunk Distribution of OpenTelemetry Collector and collects the following metrics:
+By default, the host metrics receiver is activated in the Splunk Distribution of OpenTelemetry Collector and collects the following metrics:
 
 - CPU usage metrics
 - Disk I/O metrics
@@ -22,11 +22,12 @@ By default, the host metrics receiver is enabled in the Splunk Distribution of O
 
 Host receiver metrics appear in Infrastructure Monitoring. You can use them to create dashboards and alerts. See :ref:`create-detectors` for more information.
 
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`. The most up-to-date list of excluded metrics is in GitHub. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/signalfxexporter/internal/translation/default_metrics.go#L49`. 
 
 Get started
 ======================
 
-Follow these steps to deploy the integration:
+Follow these steps to configure and activate the component:
 
 1. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
    
@@ -84,40 +85,40 @@ Scrapers extract data from endpoints and then send that data to a specified targ
       - Description
    - 
 
-      - cpu
-      - CPU utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/cpuscraper/documentation.md` for a complete list of metrics.
+      - ``cpu``
+      - CPU utilization metrics
    - 
 
-      - disk
-      - Disk I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/diskscraper/documentation.md` for a complete list of metrics.
+      - ``disk``
+      - Disk I/O metrics
    - 
 
-      - load
-      - CPU load metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/loadscraper/documentation.md` for a complete list of metrics.
+      - ``load``
+      - CPU load metrics
    - 
 
-      - filesystem
-      - File system utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/filesystemscraper/documentation.md` for a complete list of metrics.
+      - ``filesystem``
+      - File system utilization metrics
    - 
 
-      - memory
-      - Memory utilization metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/memoryscraper/documentation.md` for a complete list of metrics.
+      - ``memory``
+      - Memory utilization metrics
    - 
 
-      - network
-      - Network interface I/O metrics and TCP connection metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/networkscraper/documentation.md` for a complete list of metrics.
+      - ``network``
+      - Network interface I/O metrics and TCP connection metrics
    - 
 
-      - paging
-      - Paging or swap space utilization and I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/pagingscraper/documentation.md` for a complete list of metrics.
+      - ``paging``
+      - Paging or swap space utilization and I/O metrics
    - 
 
-      - processes
-      - Process count metrics. Only available on Linux. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processesscraper/documentation.md` for a complete list of metrics.
+      - ``processes``
+      - Process count metrics. Only available on Linux
    - 
 
-      - process
-      - Per process CPU, memory, and disk I/O metrics. See :new-page:`https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/hostmetricsreceiver/internal/scraper/processscraper/documentation.md` for a complete list of metrics.
+      - ``process``
+      - Per process CPU, memory, and disk I/O metrics
 
 See the following sections for scraper configurations.
 
@@ -133,8 +134,6 @@ Disk
 
 File system
 ^^^^^^^^^^^^^^^^^^^
-
-.. note:: The SignalFx exporter excludes some available file system metrics by default. Learn more about default metric filters in :new-page:`GitHub <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/signalfxexporter#default-metric-filters>`.
 
 .. code:: yaml
 
@@ -166,6 +165,13 @@ Similarly, the following example shows ``C:`` as a common mount point for Window
      include_mount_points:
        mount_points: ["C:"]
        match_type: strict
+
+To include virtual file systems, set ``include_virtual_filesystems`` to ``true``. 
+
+.. code:: yaml
+
+   filesystem:
+     include_virtual_filesystems: true
 
 Find more examples in the daemonset.yaml file in GitHub.
 
@@ -224,6 +230,76 @@ values. For example:
        metrics:
          receivers: [hostmetrics, hostmetrics/disk]
 
+Metrics
+=====================
+
+The following metrics, resource attributes, and attributes are available.
+
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
+
+cpu scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/cpuscraper.yaml"></div>
+
+disk scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/diskscraper.yaml"></div>
+
+filesystem scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/filesystemscraper.yaml"></div>
+
+load scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/loadscraper.yaml"></div>
+
+memory scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/memoryscraper.yaml"></div>
+
+network scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/networkscraper.yaml"></div>
+
+paging scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/pagingscraper.yaml"></div>
+
+processes scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processesscraper.yaml"></div>
+
+process scraper
+--------------------------
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/processscraper.yaml"></div>
+
 Resource attributes
 --------------------------
 
@@ -234,6 +310,8 @@ To set resource attributes, provide them using the ``OTEL_RESOURCE_ATTRIBUTES`` 
 .. code-block:: shell
 
    export OTEL_RESOURCE_ATTRIBUTES="service.name=<name_of_service>,service.version=<version_of_service>"
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Settings
 ======================

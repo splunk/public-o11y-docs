@@ -72,7 +72,7 @@ In addition to sending alert notifications by email (see :ref:`manage-notificati
 
 You can also configure Observability Cloud to send alert notifications to a webhook. See :ref:`webhook`.
 
-These notification service integrations enable you to configure Observability Cloud to automatically send alert notifications to these third-party services and webhooks when a detector alert condition is met and when the condition clears.
+These notification service integrations allow you to configure Observability Cloud to automatically send alert notifications to these third-party services and webhooks when a detector alert condition is met and when the condition clears.
 
 Depending on the third-party service, the alert notification can create notifications, incidents, or issues, for example, based on information sent in the Observability Cloud alert notification.
 

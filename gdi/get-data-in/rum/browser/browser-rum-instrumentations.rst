@@ -8,7 +8,7 @@ Instrumentation-specific data for Browser RUM
 .. meta::
    :description: Splunk Observability Cloud real user monitoring / RUM for Browser collects the following data through automatic instrumentations.
 
-Splunk RUM for Browser collects the following data through automatic instrumentations. To enable or disable instrumentations, see :ref:`browser-rum-instrumentation-settings`.
+Splunk RUM for Browser collects the following data through automatic instrumentations. To activate or deactivate instrumentations, see :ref:`browser-rum-instrumentation-settings`.
 
 .. _browser-rum-data-doc-load:
 
@@ -202,7 +202,7 @@ The Browser RUM agent collects the following data using the ``webvitals`` instru
 Resources after load
 ===========================================
 
-The ``postload`` instrumentation collects data about resources that load after a page ``load`` event. By default, the instrumentation enables instrumenting ``<script>`` and ``<img>`` resources. Typically, you might use the ``postload`` instrumentation to collect telemetry when loading images on ``scroll`` events. 
+The ``postload`` instrumentation collects data about resources that load after a page ``load`` event. By default, the instrumentation activates instrumenting ``<script>`` and ``<img>`` resources. Typically, you might use the ``postload`` instrumentation to collect telemetry when loading images on ``scroll`` events. 
 
 Spans collected by the ``postload`` instrumentation match the data model described in :ref:`browser-rum-resourcefetch`.
 
@@ -399,9 +399,9 @@ The ``websockets`` instrumentation collects the following data from ``send`` and
 Socket.io messages
 ===========================================
 
-The Socket.io instrumentation generates spans from messages sent using the socket.io client library. Spans conform to the OpenTelemetry specifications on messaging systems. This instrumentation is disabled by default.
+The Socket.io instrumentation generates spans from messages sent using the socket.io client library. Spans conform to the OpenTelemetry specifications on messaging systems. This instrumentation is deactivated by default.
 
-When using the standalone socket.io build, enable the instrumentation by passing ``true`` to the configuration setting, as in the following snippet:
+When using the standalone socket.io build, activate the instrumentation by passing ``true`` to the configuration setting, as in the following snippet:
 
 .. code-block:: html
 
@@ -431,7 +431,7 @@ When using both the ``@splunk/otel-web`` and the ``socket.io-client`` npm packag
       },
    });
 
-When using the CDN distribution of Splunk RUM, enable the socket.io instrumentation and expose the ``io`` function as  ``window.io``, as in the following example:
+When using the CDN distribution of Splunk RUM, activate the socket.io instrumentation and expose the ``io`` function as  ``window.io``, as in the following example:
 
 .. code-block:: html
 

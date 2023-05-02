@@ -16,6 +16,7 @@ Manage services, spans, and traces in Splunk APM
    apm-errors
    service-map
    trace-search
+   trace-analyzer
    traces-special-cases
    span-search
    download-traces
@@ -23,7 +24,7 @@ Manage services, spans, and traces in Splunk APM
    span-formats
 
 
-Spans and traces form the backbone of application monitoring in Splunk APM. Use the following topics to learn about spans and traces and manage your spans and traces effectively, so that you can get the most out of APM's full-fidelity tracing: 
+Spans and traces form the backbone of application monitoring in Splunk APM. Use the following topics to learn about spans and traces and manage your spans and traces effectively, so that you can get the most out of APM full-fidelity tracing: 
 
 * :ref:`apm-inferred-services`
 * :ref:`apm-errors`
@@ -129,7 +130,7 @@ You can add custom span tags via the OpenTelemetry Collector, or when you instru
 
 Span tags are most useful when they follow a simple, dependable system of naming conventions. See :ref:`span-tag-naming` to learn about OpenTelemetry naming conventions for span tags. 
 
-.. note:: Note that span tags in Splunk APM are distinct from metadata tags in Splunk Infrastructure Monitoring, which are searchable labels or keywords you can assign to metric dimensions in the form of strings rather than as key-value pairs. To learn more about metadata tags, see :ref:`metadata-tags`.
+.. note:: Note that span tags in Splunk APM are distinct from metadata tags in Splunk Infrastructure Monitoring, which are searchable labels or keywords you can assign to metric dimensions in the form of strings rather than as key-value pairs. To learn more about metadata tags, see :ref:`metadata-infra-tags`.
 
 .. raw:: html
 

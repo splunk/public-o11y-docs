@@ -4,7 +4,7 @@
 Mute alert notifications
 *****************************************************************
 
-.. meta updated 1/23/23
+
 
 .. meta::
    :description: Learn how to stop sending alert notifications based on conditions. 

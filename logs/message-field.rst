@@ -4,9 +4,6 @@
 Display a field separately in the log details flyout
 *****************************************************************
 
-.. meta created 2022-08-04
-.. meta DOCS-4184
-
 .. meta::
   :description: Display the message field from your logs in an easy-to-access flyout in each individual log record.
 

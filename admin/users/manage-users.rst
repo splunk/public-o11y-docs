@@ -11,7 +11,7 @@ Create and manage users in Splunk Observability Cloud
    :hidden:
 
 .. note:: To create or manage users and teams, you must have administrator access.
-   To get this access, an existing administrative adds it to your user profile. See :ref:`request-admin` for more information.
+   To get this access, an existing administrator adds it to your user profile. See :ref:`request-admin` for more information.
 
 Users with administrative access for an organization can run the following actions:
 
@@ -59,7 +59,7 @@ To remove users from the organization, follow these steps:
 #. From the Splunk Observability menu, select :menuselection:`Settings > Users`.
    A table of current members appears in the main panel.
 #. Use the Search field to find the name of the user you want to remove, either by name or email address.
-#. Select the :guilabel:`Actions` () menu icon next the username, then select :menuselection:`Remove User`.
+#. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Remove User`.
 #. Observability Cloud displays a dialog box that asks you to confirm the deletion. Select:abbr:`Delete`.
 
 The user no longer appears in the list of members.
@@ -77,14 +77,14 @@ To grant administrator privileges to a user, follow these steps:
 #. From the left navigation menu, select :menuselection:`Settings > Users`.
    A table of current users appears in the main panel.
 #. Find the name of the user.
-#. Select the :guilabel:`Actions` () menu icon next the username, then select :menuselection:`Grant Admin`.
+#. Select the :guilabel:`Actions` (|more|) menu icon next the username, then select :menuselection:`Grant Admin`.
 
 To revoke administrator privileges from a user, follow these steps:
 
 #. From the left navigation menu, select :menuselection:`Settings > Users`.
    A table of current members appears in the main panel.
 #. Find the name of the user.
-#. Select the :guilabel:`Actions` () menu icon next the user's name, then select :menuselection:`Revoke Admin`.
+#. Select the :guilabel:`Actions` (|more|) menu icon next the user's name, then select :menuselection:`Revoke Admin`.
 
 .. _request-admin:
 
@@ -96,7 +96,7 @@ To receive administrator access, request the admin role from an existing adminis
 Follow these steps to view a list of current admins:
 
 #. From the Splunk Observability home page, select :guilabel:`Settings`. 
-#. Select :guilabel:`Users`.
+#. Select :guilabel:`Invite Users`.
 #. Filter for Admins.
 
 From the list, you can email or Slack message any administrators to request admin status. 

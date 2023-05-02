@@ -158,9 +158,6 @@ Use the :guilabel:`Color by` drop-down menu in the control bar to specify the me
 
 For example, if you select :guilabel:`CPU Utilization`, colors range from green (lowest 20% of values among all instances) to red (highest 20% of values among all instances). For many metrics, red indicates intensity of performance rather than a problem situation.
 
-.. commenting this out because there is currently no Alerts tab in the UI -trangl (06/15/2021)
-  You can also color by the "Most severe alert." The highest severity currently active alert in each instance is determined, and the squares are colored from green (no alerts) to red (one or more critical alerts). In this view, red does in fact indicate a problem situation that you will probably want to address. You can start by looking at the Alerts tab below the visualization. For information on working with a list of alerts, see :ref:`view-alerts`.
-
 - White squares indicate instances that do not emit values for the specified metric.
 
 - Black squares indicate instances considered "dead" by Infrastructure Monitoring because they do not emit values for a specified period of time.
@@ -303,4 +300,5 @@ Follow these steps to remove an inactive navigator.
     .. image:: /_images/infrastructure/remove-navigator.png
         :width: 50%
         :alt: This image shows a navigator with a Remove Navigator option.
+        
 #. Confirm your selection.

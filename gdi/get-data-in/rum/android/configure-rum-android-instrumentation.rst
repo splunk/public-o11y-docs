@@ -57,20 +57,20 @@ Use the following settings to configure the Android RUM agent:
    * - :code:`filterSpans(Consumer<SpanFilterBuilder>)`
      - Lets you filter or customize spans. For example, you can use ``filterSpans`` to redact personal identifiable information (PII), remove span attributes, or change the span name. See :ref:`android-rum-span-filtering`.
    * - :code:`enableDiskBuffering()`
-     - Enables storage-based buffering of telemetry. This setting is useful when instrumenting applications that might work offline for extended periods of time.
+     - Activates storage-based buffering of telemetry. This setting is useful when instrumenting applications that might work offline for extended periods of time.
    * - :code:`limitDiskUsageMegabytes(int)`
      -  Sets the maximum amount of storage to use for disk buffering. The default value is 25 MB. Requires ``diskBufferingEnabled`` to be ``true``.
    * - :code:`enableSessionBasedSampling(double)`
-     - Enables session ID based sampling and sets a sampling ratio. The sampling ratio is the probability of a session being included between. Values range betwee between ``0.0`` (all dropped) and ``1.0`` (all included).
+     - Activates session ID based sampling and sets a sampling ratio. The sampling ratio is the probability of a session being included between. Values range between ``0.0`` (all dropped) and ``1.0`` (all included).
    * - :code:`enableDebug()`
-     - Enables debug mode. This feature is disabled by default. Enabling debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
+     - Activates debug mode. This feature is deactivated by default. Activating debug mode activates the OpenTelemetry logging span exporter, which might be useful when debugging instrumentation issues.
 
 .. _android-rum-instrumentation-settings:
 
 Instrumentation settings
 ==============================================
 
-Use the following settings to enable or disable the collection of specific data:
+Use the following settings to activate or deactivate the collection of specific data:
 
 .. list-table:: 
    :widths: 20 80
@@ -79,13 +79,13 @@ Use the following settings to enable or disable the collection of specific data:
    * - Option
      - Description
    * - :code:`disableCrashReporting()`
-     - Disables crash reporting. This feature is enabled by default.
+     - Deactivates crash reporting. This feature is activated by default.
    * - :code:`disableAnrDetection()`
-     - Disables ANR (Application not responding) detection and reporting. This feature is enabled by default.
+     - Deactivates ANR (Application not responding) detection and reporting. This feature is activated by default.
    * - :code:`disableNetworkMonitor()`
-     - Disables network monitoring. This feature is enabled by default.
+     - Deactivates network monitoring. This feature is activated by default.
    * - :code:`disableSlowRenderingDetection()`
-     - Disables the detection of slow frame renders. This feature is enabled by default. Splunk RUM defines renders as slow or frozen following the Android Vitals definition of the Android Developers documentation.
+     - Deactivates the detection of slow frame renders. This feature is activated by default. Splunk RUM defines renders as slow or frozen following the Android Vitals definition of the Android Developers documentation.
    * - :code:`setSlowRenderingDetectionPollInterval(Duration)`
      - Sets the default polling interval for slow or frozen render detection. The default value is ``1000`` milliseconds. The value must be positive.
 

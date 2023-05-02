@@ -14,24 +14,26 @@ Install the Collector for Windows with the installer script
   /gdi/opentelemetry/deployments/deployments-windows-ansible.rst
   /gdi/opentelemetry/deployments/deployments-windows-puppet.rst
 
-The Splunk Distribution of OpenTelemetry Collector for Windows is a package that provides integrated collection and forwarding for all data types. Install the package using one of these methods:
+The Splunk Distribution of OpenTelemetry Collector for Windows is a package that provides integrated collection and
+forwarding for all data types. Install the package using one of these methods:
 
 * :ref:`Installer script <windows-script>`
 * :ref:`Deployments <windows-deployments>`
 
-Alternatively, you can :new-page:`install the Collector for Windows manually <otel-install-windows-manual>`.
+Alternatively, you can manually install the Collector. To learn how, see :ref:`otel-install-windows-manual`.
 
 .. _windows-otel-requirements:
 
 Prerequisites
 ==========================
 
-The Splunk Distribution of OpenTelemetry Collector for Windows has the following requirements depending on the install method:
+The Splunk Distribution of OpenTelemetry Collector for Windows has the following requirements
+depending on the installation method:
 
 .. list-table::
   :header-rows: 1
   :widths: 40 60
-  :width: 100
+  :width: 100%
 
   * - Install method
     - Supported versions (64-bit)
@@ -69,50 +71,65 @@ To install the package using the installer script, follow these steps:
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-.. note:: If needed, enable TLS in PowerShell using the following command: 
+.. note:: If needed, activate TLS in PowerShell using the following command: 
   
    ``[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12``
 
 Configure memory allocation
 ----------------------------------
 
-To configure memory allocation, use the ``memory`` parameter. By default, this parameter is set to 512 MiB, or 500 x 2^20 bytes, of memory. Increase this setting to allocate more memory, as shown in the following example.
+To configure memory allocation, use the ``memory`` parameter. 
+
+By default, the Collector is configured to use 512 MB (500 x 2^20 bytes) of memory. To increase this setting to allocate more memory, replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
 
 .. code-block:: PowerShell
 
   & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; memory = "SPLUNK_MEMORY_TOTAL_MIB"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
 
-Replace ``SPLUNK_MEMORY_TOTAL_MIB`` with the desired integer value.
+Read more about Collector sizing in :ref:`otel-sizing`.
 
 Configure proxy settings
 ----------------------------------
 
 If you need to use a proxy, set one of the following environment variables according to your needs:
 
-- ``HTTP_PROXY``: The HTTP proxy address
-- ``HTTPS_PROXY``: The HTTPS proxy address
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy
+- ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
+- ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
+- ``NO_PROXY``: If you use a proxy, sets addresses that don't use the proxy.
 
-Restart the Collector after adding these environment variables to your configuration. 
+Restart the Collector after adding these environment variables to your configuration.
 
 .. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
 
-Configure Fluentd for log collection
+.. _fluentd-manual-config-windows:
+
+Configure fluentd for log collection
 -------------------------------------------
 
-By default, the Fluentd service is installed and configured to forward log events with the ``@SPLUNK`` label and send these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
+By default, the installation configures the fluentd service to forward log events with the ``@SPLUNK`` label and
+send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
+For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
-To configure the package to send log events to a custom HEC endpoint URL, you can specify the following parameters for the installer script:
+To configure the package to send log events to a custom HTTP Event Collector (HEC) endpoint URL with a token different than ``<SPLUNK_ACCESS_TOKEN>``, you can specify the following parameters for the installer script:
 
-* ``hec-url = "<URL>"``
-* ``hec-token = "<TOKEN>"``
+* ``hec_url = "<SPLUNK_HEC_URL>"``
+* ``hec_token = "<SPLUNK_HEC_TOKEN>"``
 
-The main Fluentd configuration file is installed to ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the driver where Fluentd is installed. Custom Fluentd source configuration files can be added to the ``<drive>\opt\td-agent\etc\td-agent\conf.d`` directory after installation.
+For example (replace the ``<SPLUNK...>`` values in the command for your configuration):
+
+.. code-block:: PowerShell
+
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "<SPLUNK_ACCESS_TOKEN>"; realm = "<SPLUNK_REALM>"; hec_url = "<SPLUNK_HEC_URL>"; hec_token = "<SPLUNK_HEC_TOKEN>"}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+The installation creates the main fluentd configuration file  ``<drive>\opt\td-agent\etc\td-agent\td-agent.conf``, where ``<drive>`` is the drive letter for the fluentd installation directory.
+
+You can add custom fluentd source configuration files to the ``<drive>\opt\td-agent\etc\td-agent\conf.d``
+directory after installation.
 
 Note the following:
 
-* In this directory, all files with the .conf extension are automatically included by Fluentd.
-* By default, Fluentd is configured to collect from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
+* In this directory, fluentd includes all files with the .conf extension.
+* By default, fluentd collects from the Windows Event Log. See ``<drive>\opt\td-agent\etc\td-agent\conf.d\eventlog.conf`` for the default configuration.
 
 After any configuration modification, apply the changes by restarting the system or running the following PowerShell commands:
 
@@ -154,13 +171,13 @@ Splunk provides a cookbook to install the Collector using Chef. See :ref:`deploy
 
 Nomad 
 -----------------
-Use Nomad to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
+Use Nomad to deploy the Collector. To learn how to install Nomad, see :ref:`deployments-nomad`.
 
 .. _windows-puppet:
 
 Puppet
 -------------------------------
-Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. See :ref:`deployment-windows-puppet` for the instructions to download and customize the module.
+Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. To learn how to download and customize the module, see :ref:`deployment-windows-puppet`.
 
 Next steps
 ==================================
@@ -168,5 +185,5 @@ Next steps
 Once you have installed the package, you can perform these actions:
 
 * :ref:`use-navigators-imm`.
-* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft's documentation site <https://docs.microsoft.com/en-us/>` for more information.
+* View logs and errors in the Windows Event Viewer. Search for "view logs and errors" on :new-page:`Microsoft documentation site <https://docs.microsoft.com/en-us/>` for more information.
 * :ref:`apm`.

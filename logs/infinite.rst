@@ -4,9 +4,6 @@
 Archive your logs with infinite logging rules
 *****************************************************************
 
-.. meta created 2021-04-28
-.. meta DOCS-2247
-
 .. meta::
   :description: Archive logs in Amazon S3 buckets using infinite logging rules. Reduce the amount of logs data you index. Increase logs' retention period.
 

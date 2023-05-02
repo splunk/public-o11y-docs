@@ -14,10 +14,6 @@ Common data types
 
 .. include:: /_includes/rum-data-model.rst
 
-
-
-
-
 .. _rum-ios-metrics:
 
 Metrics 
@@ -61,9 +57,6 @@ The following tables list all of the metrics available in Splunk RUM for iOS.
    * - ``rum.hot_start.time.ns.p75``
      - Hot start time
      - The p75 time in nanoseconds for a hot start. 
-
-
-
 
 .. _ios-rum-basic-properties:
 
@@ -203,7 +196,7 @@ By default, the iOS RUM agent adds the following resource attributes to all span
 Instrumentation attributes
 ==============================================
 
-The iOS RUM agent collects the following data using its instrumentations. To enable or disable specific instrumentations, see :ref:`ios-rum-instrumentation-settings`.
+The iOS RUM agent collects the following data using its instrumentations. To activate or deactivate specific instrumentations, see :ref:`ios-rum-instrumentation-settings`.
 
 Crash reporting
 ----------------------------------------------------
@@ -292,7 +285,7 @@ Slow rendering detection spans have the following attribute:
 HTTP clients
 ------------------------------------
 
-The iOS RUM agent includes instrumentation for the NSURLConnection clients. To enable the instrumentation, see :ref:`ios-rum-instrumentation-settings`.
+The iOS RUM agent includes instrumentation for the NSURLConnection clients. To activate the instrumentation, see :ref:`ios-rum-instrumentation-settings`.
 
 The HTTP client instrumentation collects the following OpenTelemetry HTTP attributes:
 

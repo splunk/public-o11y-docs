@@ -1,24 +1,19 @@
 .. _logs-queries:
 
 *****************************************************************************
-Query logs in Log Observer Connect or Log Observer
+Query logs in Log Observer
 *****************************************************************************
 
-.. meta created 2022-07-12
-.. meta DOCS-3730
-
 .. meta::
-  :description: Overview of the various ways you can query logs in Log Observer and Log Observer Connect. Browse, search by keyword, filter, extract fields, or aggregate logs.
+  :description: Overview of the various ways you can query logs in Log Observer. Browse, search by keyword, filter, extract fields, or aggregate logs.
 
-There are many ways you can query your logs in Log Observer and Log Observer Connect. You can begin in any Log Observer tool, then use any other tool, in any order. 
+You can search Splunk Observability Cloud logs if your Splunk Observability Cloud instance ingests logs. Many Splunk platform (Splunk Cloud Platform and Splunk Enterprise) users can access their Splunk platform logs in Splunk Observability Cloud because their organization has integrated its Splunk platform and Splunk Observability Cloud instances. If you are using the integration, you can only access Splunk platform logs in Splunk Observability Cloud if your Splunk platform role has permissions to see that log's index in Splunk platform. Your Splunk platform admin controls your permissions to see Splunk platform logs in Splunk Observability Cloud.
 
 Click any of the following documents to learn more about each way you can explore, query, filter, and drill down into your logs:
 
 * :ref:`logs-raw-logs-display`
 
 * :ref:`logs-keyword`
-
-* :ref:`logs-filter-logs-by-field`
 
 * :ref:`logs-individual-log`
 

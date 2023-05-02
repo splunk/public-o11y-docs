@@ -4,9 +4,6 @@
 Log Observer limits
 *********************************************************************************************
 
-.. meta created 2021-06-14
-.. meta DOCS-2491
-
 .. meta::
   :description: See Log Observer limits on MB of data ingested or indexed per month, limits on the number and type of processing rules, and search query limits.
 

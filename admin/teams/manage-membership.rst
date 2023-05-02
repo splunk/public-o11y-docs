@@ -155,13 +155,13 @@ Enable enhanced team security
 
 |hr|
 
-By default, every user can join any team in your organization. If you want to restrict users from being able to join any team, you can enable the enhanced team security setting. Enabling the enhanced team security setting also makes the Team Manager role available to teams.
+By default, every user can join any team in your organization. If you want to restrict users from being able to join any team, you can turn on the enhanced team security setting. Turning on the enhanced team security setting also makes the Team Manager role available to teams.
 
 To learn more about team roles and permissions, see :ref:`about-team-roles`.
 
-You must be a Splunk Observability Cloud administrator to enable this setting. This setting applies to every team in your organization.
+You must be a Splunk Observability Cloud administrator to apply this setting. This setting applies to every team in your organization.
 
-To enable the enhanced team security setting, follow these steps:
+To turn on the enhanced team security setting, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
 
@@ -175,7 +175,7 @@ To enable the enhanced team security setting, follow these steps:
 Team roles and permissions
 ============================================================================
 
-This table presents the available team roles and their permissions. Some team roles and permissions change based on whether enhanced team security is enabled. For example, when you enable enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
+This table presents the available team roles and their permissions. Some team roles and permissions change based on whether enhanced team security is turned on. For example, when you turn on enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
 
 To learn more about enabling enhanced team security, see :ref:`admin-team-controls`.
 
@@ -184,7 +184,7 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
 
   * - :strong:`Permission`
     - :strong:`Admin`
-    - :strong:`Team Manager` (Available with enhanced team security enabled)
+    - :strong:`Team Manager` (Available with enhanced team security turned on)
     - :strong:`Team Member`
     - :strong:`User`
 
@@ -209,8 +209,8 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
   * - :strong:`Edit team name and description`
     - Yes
     - Yes
-    - * Yes, when enhanced team security is disabled
-      * No, when enhanced team security is enabled
+    - * Yes, when enhanced team security is turned off
+      * No, when enhanced team security is turned on
     - No
 
   * - :strong:`Join team`
@@ -218,7 +218,7 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
     - Not applicable: A Team Member is already on a team and doesn't need to join.
     - * Yes, when enhanced team security is disabled
-      * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
+      * No, when enhanced team security is turned on. A user must be added by an Admin or Team Manager
 
   * - :strong:`Add member`
     - Yes
@@ -228,12 +228,12 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
 
   * - :strong:`Assign Team Manager role to Team Member`
     - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * Yes, when enhanced team security is enabled
+      * Yes, when enhanced team security is turned on
     - Yes
     - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * No, when enhanced team security is enabled
+      * No, when enhanced team security is turned on
     - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
-      * No, when enhanced team security is enabled
+      * No, when enhanced team security is turned on
 
   * - :strong:`Remove member`
     - Yes
