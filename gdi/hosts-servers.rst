@@ -29,7 +29,7 @@ Configure application receivers for hosts and servers
    monitors/cpu
    monitors/disk
    monitors/docker
-   elasticsearch/elasticsearch
+   monitors/elasticsearch
    elasticsearch-query/elasticsearch-query
    filesystems/filesystems
    haproxy/haproxy
