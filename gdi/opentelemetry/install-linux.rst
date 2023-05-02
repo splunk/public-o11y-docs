@@ -34,8 +34,8 @@ Installer script
 
 The following Linux distributions and versions are supported:
 
-* Amazon Linux: 2
-* CentOS, Red Hat, or Oracle: 7, 8
+* Amazon Linux: 2, 2023. Log collection with Fluentd is not currently supported for Amazon Linux 2023.
+* CentOS, Red Hat, or Oracle: 7, 8, 9
 * Debian: 9, 10, 11
 * SUSE: 12, 15 for versions v0.34.0 or higher. Log collection with Fluentd is not currently supported.
 * Ubuntu: 16.04, 18.04, 20.04, and 22.04
@@ -121,7 +121,7 @@ By default, the Fluentd service is installed and configured to forward log event
 
 The following Fluentd plugins are also installed:
 
-* ``capng_c`` for enabling Linux capabilities.
+* ``capng_c`` for activating Linux capabilities.
 * ``fluent-plugin-systemd`` for systemd journal log collection.
 
 Additionally, the following dependencies are installed as prerequisites for the Fluentd plugins:
@@ -177,6 +177,10 @@ If the td-agent package is upgraded after initial installation, you might need t
       sudo /opt/td-agent/bin/fluent-cap-ctl --add "dac_override,dac_read_search" -f /opt/td-agent/bin/ruby
       sudo systemctl daemon-reload
       sudo systemctl restart td-agent
+
+
+If you already installed Fluentd on a host, install the Splunk OTel Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`. 
+
 
 .. _configure-auto-instrumentation:
 
@@ -240,7 +244,14 @@ Use Nomad to to deploy the Collector. See :ref:`deployments-nomad` for the insta
 
 Pivotal Cloud Foundry
 -------------------------------
-Splunk provides a script to create a BOSH release of Collector. This is intended to be run by the Pivotal Cloud Foundry (PCF) tile. See :ref:`pivotal-cloud-foundry` for the script.
+
+You can use one of these three options to deploy the Collector with Pivotal Cloud Foundry (PCF):
+
+* Collector standalone deployment.
+* Collector as a sidecar to your app. 
+* Tanzu Tile.
+
+See more in :ref:`deployments-pivotal-cloudfoundry`.
 
 .. _linux-puppet:
 
@@ -415,7 +426,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with yum
     yum install -y libcap
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -430,7 +441,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with dnf
     dnf install -y libcap
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/yum.repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -445,7 +456,7 @@ Do the following to install the package using a Debian or RPM package:
 
     # RPM with zypper
     zypper install -y libcap-progs
-    # Required for enabling cap_dac_read_search and cap_sys_ptrace capabilities.
+    # Required for activating cap_dac_read_search and cap_sys_ptrace capabilities.
 
     cat <<EOH > /etc/zypp/repos.d/splunk-otel-collector.repo
     [splunk-otel-collector]
@@ -471,7 +482,7 @@ Download pre-built binaries (``otelcol_linux_amd64`` or ``otelcol_linux_arm64``)
 Tar file
 -----------------------
 
-The ``tar.gz`` archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
+The tar.gz archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
 
 To use the tar file:
 

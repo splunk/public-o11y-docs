@@ -11,7 +11,12 @@ $(document).ready(function () {
         cache: true
     });
 
-    let converter = new showdown.Converter();
+    let converter = new showdown.Converter(
+        {
+            simplifiedAutoLink: true,
+            excludeTrailingPunctuationFromURLs: true,
+            literalMidWordUnderscores: true
+    });
 
     $.getScript('https://public-sites--signalfx-com.s3.us-east-1.amazonaws.com/cdn/integrations-docs/integrations-docs.js', function () {
         $('.metrics-table').each(function () {
@@ -47,7 +52,7 @@ $(document).ready(function () {
                 for (let x in window.metricDocumentation) {
                     if (window.metricDocumentation[x]['yaml']['monitor'] === monitorKey && monitorKey !== '') {
                         $(this).find('.monitor-stats').append("<tr>" +
-                            "<td>" + x + "</td>" +
+                            "<td><code>" + x + "</code></td>" +
                             "<td>" + converter.makeHtml(window.metricDocumentation[x]['markdown']) + "</td>" +
                             "<td>" + window.metricDocumentation[x]['yaml']['metric_type'] + "</td>" +
                             "</tr>");
@@ -57,7 +62,7 @@ $(document).ready(function () {
                 for (let x in monitor) {
                     try {
                         $(this).find('.monitor-stats').append("<tr>" +
-                            "<td>" + monitor[x] + "</td>" +
+                            "<td><code>" + monitor[x] + "</code></td>" +
                             "<td>" + converter.makeHtml(window.metricDocumentation[monitor[x]]['markdown']) + "</td>" +
                             "<td>" + window.metricDocumentation[monitor[x]]['yaml']['metric_type'] + "</td>" +
                             "</tr>");
@@ -89,7 +94,12 @@ $(document).ready(function () {
                 'default': 'Category',
             };
 
-            let converter = new showdown.Converter();
+            let converter = new showdown.Converter(
+                {
+                    simplifiedAutoLink: true,
+                    excludeTrailingPunctuationFromURLs: true,
+                    literalMidWordUnderscores: true
+            });
             let cache = [];
             let idMap = [];
 
@@ -152,7 +162,7 @@ $(document).ready(function () {
 
                     let rowId = id + '-' + data['fields'][i]['name'];
 
-                    let row = "<td id='" + rowId + "'>" + data['fields'][i]['name'] + "</td><td>" + coalesce(data['fields'][i]['kind'], '') + "</td><td>" + coalesce(data['fields'][i]['default'], '') + "</td><td>" + coalesce(converter.makeHtml(data['fields'][i]['doc']), '') + "</td>";
+                    let row = "<td id='" + rowId + "'><code>" + data['fields'][i]['name'] + "</code></td><td>" + coalesce(data['fields'][i]['kind'], '') + "</td><td>" + coalesce(data['fields'][i]['default'], '') + "</td><td>" + coalesce(converter.makeHtml(data['fields'][i]['doc']), '') + "</td>";
                     newObject.append('<tr>' + row + '</tr>');
 
                     if (data['fields'][i]['fields'] !== undefined) {
@@ -174,6 +184,7 @@ $(document).ready(function () {
                                         <th class='head name-head'>Name</th>
                                         <th class='head type-head'>Type</th>
                                         ${idSuffix === 'metrics' ? '<th class="head unit-head">Unit</th>' : ''}
+                                        ${idSuffix === 'metrics' ? '<th class="head status-head">Active</th>' : ''}
                                         <th class='head description-head' width="40%">Description</th>
                                         ${idSuffix === 'metrics' ? '<th class="head attributes-head">Attributes</th>' : ''}
                                         ${idSuffix === 'attributes' ? '<th class="head enum-head">Values</th>' : ''}
@@ -204,7 +215,7 @@ $(document).ready(function () {
                             const idAttr = id + '-metric-' + name;
                             const attributes = metric['attributes']?.join('</li><li>') ?? '';
                             const attributesLink = attributes ? attributes.split('</li><li>').map(a => `<a href='#${id}-attribute-${a}'>${a}</a>`).join('</li><li>') : '';
-                            const row = `<td id='${idAttr}'>${name}</td><td>${type}</td><td>${metric['unit'] != "1" ? metric['unit'] : ''}</td><td>${converter.makeHtml(metric['description']) ?? ''}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
+                            const row = `<td id='${idAttr}'><code>${name}</code></td><td>${type}</td><td>${metric['unit'] != "1" ? metric['unit'] : ''}</td><td>${(metric['enabled'] == true ? 'Yes' : 'No')}</td><td>${converter.makeHtml(metric['description']) ?? ''}</td><td>${attributesLink ? "<ul><li>" : ''}${attributesLink}${attributesLink ? "</li></ul>" : ''}</td>`;
                             metricTable.find('tbody').append(`<tr>${row}</tr>`);
                         }
                     }
@@ -217,7 +228,7 @@ $(document).ready(function () {
                     for (let [name, attr] of Object.entries(data['resource_attributes'])) {
                         const idAttr = id + '-resource-' + name;
                         const enums = attr['enum']?.join(', ') ?? '';
-                        const row = `<td id='${idAttr}'>${name}</td>
+                        const row = `<td id='${idAttr}'><code>${name}</code></td>
                                       <td>${attr['type'] ?? ''}</td>
                                       <td>${converter.makeHtml(attr['description']) ?? ''}${enums ? `Possible values: <code>${enums}</code>` : ''}</td>`;
                         resourceTable.find('tbody').append(`<tr>${row}</tr>`);
@@ -231,7 +242,7 @@ $(document).ready(function () {
                     for (let [name, attr] of Object.entries(data['attributes'])) {
                         const idAttr = id + '-attribute-' + name;
                         const enums = attr['enum']?.join('</code></li><li><code>') ?? '';
-                        const row = `<td id='${idAttr}'>${name}</td><td>${attr['type'] ?? ''}</td><td>${converter.makeHtml(attr['description']) ?? ''}</td><td>${enums ? "<ul><li>" : ''}<code>${enums}</code>${enums ? "</li></ul>" : ''}</td>`;
+                        const row = `<td id='${idAttr}'><code>${name}</code></td><td>${attr['type'] ?? ''}</td><td>${converter.makeHtml(attr['description']) ?? ''}</td><td>${enums ? "<ul><li>" : ''}<code>${enums}</code>${enums ? "</li></ul>" : ''}</td>`;
                         attributesTable.find('tbody').append(`<tr>${row}</tr>`);
                     }
                 }
@@ -369,20 +380,24 @@ $(document).ready(function () {
 
                             if (j == 'category') {
                                 addedCategory = true;
-                                monitors[i][j] = monitors[i][j] ? 'Default' : '';
+                                monitors[i][j] = monitors[i][j] ? 'Default' : 'Custom';
                             } else if (j == 'default') {
                                 addedCategory = true;
-                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : '';
+                                monitors[i][j] = (monitors[i][j] == true) ? 'Default' : 'Custom';
                             } else if (j == 'custom') {
                                 addedCategory = true;
                                 monitors[i][j] = (monitors[i][j] == true) ? 'Custom' : 'Default';
                             }
 
+
                             if (typeof monitors[i][j] == 'undefined' && j == 'title') {
-                                row += '<td>' + i + '</td>';
-                            } else {
-                                //row += '<td>' + monitors[i][j] + '</td>';
+                                row += '<td><code>' + i + '</code></td>';
+                            } else if (j == 'title') {
+				row += '<td><code>' + i + '</code></td>';
+			    } else if (j == 'description') {
                                 row += '<td>' + converter.makeHtml(monitors[i][j]) + '</td>';
+                            } else {
+                                row += '<td>' + monitors[i][j] + '</td>';
                             }
                         }
 
@@ -424,6 +439,4 @@ $(document).ready(function () {
             console.log(err);
         }
     }
-
-    // this is just a comment
 });

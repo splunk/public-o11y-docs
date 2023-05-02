@@ -239,6 +239,7 @@ div.body {
       border: 2px solid transparent;
       border-radius: 100px;
       float: right;
+      cursor: pointer;
       /* margin-right: -18px; */
   }
   .gg-chevron-down::after {

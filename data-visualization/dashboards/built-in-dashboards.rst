@@ -5,7 +5,7 @@ Built-in dashboards
 ********************
 
 .. meta::
-      :description: Built-in dashboards are automatically created in your organization if you deploy any of the integrations.
+      :description: Monitor services and identify patterns and outliers using built-in dashboards in Splunk Observability Cloud. Learn how to clone or export dashboards. 
 
 Splunk Observability Cloud provides built-in dashboards that give you immediate visibility into the technologies and services being used in your environment.
 

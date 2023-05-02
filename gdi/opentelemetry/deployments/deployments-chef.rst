@@ -113,7 +113,7 @@ For Linux, the cookbook accepts the attributes described in the following table:
      - The Collector package repository stage to use. Can be ``release``, ``beta``, or ``test``.
      - ``release``
    * - ``with_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for enabling Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
+     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
      - ``true``
    * - ``fluentd_version``
      -  Version of the td-agent (Fluentd) package to install 
@@ -238,7 +238,7 @@ For Windows, the cookbook accepts the attributes described in the following tabl
      - The Collector package repository stage to use. Can be ``release``, ``beta``, or ``test``.
      - ``release``
    * - ``with_fluentd``
-     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for enabling Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
+     - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
      - ``true``
    * - ``fluentd_version``
      -  Version of the td-agent (Fluentd) package to install 

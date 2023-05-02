@@ -5,11 +5,11 @@ Configure the Java agent for Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Java to suit most of your instrumentation needs, like correlating traces with logs, enabling custom sampling, and more.
+   :description: Configure the agent of the Splunk Distribution of OpenTelemetry Java to suit most of your instrumentation needs, like correlating traces with logs, activating custom sampling, and more.
 
 You can configure the Java agent from the Splunk Distribution of OpenTelemetry Java to suit most of your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available.
 
-The following sections describe all available settings for configuring the Java Virtual Machine (JVM) agent, including options for enabling new features that are unique to the Splunk Distribution of OpenTelemetry Java.
+The following sections describe all available settings for configuring the Java Virtual Machine (JVM) agent, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry Java.
 
 .. _configuration-methods-java:
 
@@ -204,7 +204,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds. |br| |br| System property: ``splunk.profiler.call.stack.interval``
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
-     - Activates memory profiling with all the options. Enabling memory profiling overrides the value of ``splunk.metrics.enabled``. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be set to ``true``. To activate or deactivate specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
+     - Activates memory profiling with all the options. Activating memory profiling overrides the value of ``splunk.metrics.enabled``. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be set to ``true``. To activate or deactivate specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
    * - ``SPLUNK_PROFILER_MEMORY_SAMPLER_INTERVAL``
      - Defines the sampling interval. The default value is 1. Set the value to 2 and higher to sample data every nth allocation event. |br| |br| System property: ``splunk.profiler.memory.sampler.interval``
    * - ``SPLUNK_PROFILER_TLAB_ENABLED``
@@ -258,7 +258,7 @@ The following server frameworks and libraries add ``Server-Timing`` information:
 - Servlet API versions 2.2 to 4.X.
 - Netty versions 3.8 to 4.0.
 
-.. note:: If you need to disable trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
+.. note:: If you need to deactivate trace response headers, set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
 .. _other-java-settings:
 

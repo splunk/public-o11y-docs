@@ -16,6 +16,7 @@ Configure your tests
    public-locations
    private-locations
    rum-synth
+   try-now
 
 
 To simulate diverse types of traffic to your site or application, use a range of configuration options to customize each of your tests.

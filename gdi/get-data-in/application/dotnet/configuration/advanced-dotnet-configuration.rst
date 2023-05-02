@@ -5,7 +5,7 @@ Configure the SignalFx Instrumentation for .NET
 ********************************************************************
 
 .. meta:: 
-   :description: Configure the SignalFx Instrumentation for .NET to suit your instrumentation needs, such as correlating traces with logs and enabling custom sampling.
+   :description: Configure the SignalFx Instrumentation for .NET to suit your instrumentation needs, such as correlating traces with logs and activating custom sampling.
 
 You can configure the SignalFx Instrumentation for .NET to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started. More advanced settings are also available. 
 
@@ -18,7 +18,7 @@ You can change the settings of the SignalFx Instrumentation for .NET in the foll
 
 #. Set environment variables. On Windows, set them in the process scope unless you want to activate autoinstrumentation globally for all .NET applications.
 
-#. Edit the ``web.config`` or ``app.config`` file. For example:
+#. Edit the web.config or app.config file. For example:
 
    .. code-block:: xml
 
@@ -92,7 +92,7 @@ The following settings control trace exporters and their endpoints:
    * - ``SIGNALFX_ENDPOINT_URL``
      - The URL to where the trace exporter sends traces. The default value is ``http://localhost:9411/api/v2/spans``. Setting a value overrides the ``SIGNALFX_REALM`` environment variable.
    * - ``SIGNALFX_METRICS_ENDPOINT_URL``
-     - The URL to where the metrics exporter sends metrics. The default value is ``http://localhost:9943/api/v2/datapoint``. Setting a value overrides the ``SIGNALFX_REALM`` environment variable.
+     - The URL to where the metrics exporter sends metrics. The default value is ``http://localhost:9943/v2/datapoint``. Setting a value overrides the ``SIGNALFX_REALM`` environment variable.
    * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_ENABLED``
      - Activate to export traces that contain a minimum number of closed spans, as defined by ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``. The default value is ``false``.	
    * - ``SIGNALFX_TRACE_PARTIAL_FLUSH_MIN_SPANS``
@@ -178,7 +178,7 @@ The following settings control instrumentations and tracing behavior:
    * - ``SIGNALFX_RECORDED_VALUE_MAX_LENGTH``
      - Maximum length of the value of an attribute. Values longer than this value are truncated. Values are discarded entirely when set to ``0``, and ignored when set to a negative value. The default value is ``12000``.
    * - ``SIGNALFX_DISABLED_INTEGRATIONS``
-     - Comma-separated list of library instrumentations you want to disable. Each value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
+     - Comma-separated list of library instrumentations you want to deactivate. Each value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
    * - ``SIGNALFX_TRACE_{0}_ENABLED``
      - Activates or deactivates a specific instrumentation library. For example, to deactivate the Kafka instrumentation, set ``SIGNALFX_TRACE_Kafka_ENABLED`` to ``false``. The value must match an internal instrumentation ID. See :ref:`supported-dotnet-libraries` for a list of integration identifiers.
 
@@ -229,9 +229,9 @@ To connect Real User Monitoring (RUM) requests from mobile and web applications 
    Access-Control-Expose-Headers: Server-Timing 
    Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
 
-The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
+The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. W3C tracecontext and W3C baggage context propagation is activated by default. For more information, see the Server-Timing and traceparent documentation on the W3C website. 
 
-.. note:: If you need to disable trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
+.. note:: If you need to deactivate trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false``.
 
 .. _dotnet-instrumentation-query-strings:
 

@@ -22,4 +22,4 @@ See the following topics to set up the Splunk Distribution of OpenTelemetry Coll
  - :ref:`get-started-linux`
  - :ref:`get-started-windows`
 
-To send custom metrics to Observability Cloud, see :ref:`send-custom-metrics`.
+To send custom metrics to Observability Cloud, see :ref:`send-custom-metrics`. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.

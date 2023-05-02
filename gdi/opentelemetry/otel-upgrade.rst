@@ -7,11 +7,14 @@ Upgrade the Collector
 .. meta::
   :description: Upgrade the Splunk Distribution of OpenTelemetry Collector.
 
+The installer script uses one of the supported package managers to install the Collector, for example apt or yum.
+
+When you update the Collector using the official packages, configuration files are never overridden. If you need to update the configuration after an update, edit them manually before backward compatibility is dropped. 
 
 Upgrade guidelines
 =================================
 
-Apply the following changes to the Collector configuration files for specific version upgrades. While automated scripts that cover backward compatibility are included in the bundle, configuration files aren't overridden, so you need to update them manually before the backward compatibility is dropped. 
+Apply the following changes to the Collector configuration files for specific version upgrades. 
 
 .. :important::
 
@@ -88,7 +91,7 @@ Debian
     .. code-block:: bash 
       
       sudo apt-get update
-      sudo apt-get --only-upgrade splunk-otel-collector
+      sudo apt-get install --only-upgrade splunk-otel-collector
 
 .. note::
   If the default configuration files in ``/etc/otel/collector`` have been modified after the initial installation, you might be prompted to keep the existing files or overwrite the files from the new package.
@@ -127,10 +130,12 @@ The package managers are yum, dnf, and zypper.
 Upgrade the Collector for Windows
 =======================================
 
+If you used the Windows installer script, to upgrade you can manually download and run the MSI for the desired Collector version :new-page:`from GitHub <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
 Chocolatey
 ------------------
 
-If you're using :ref:`Chocolatey <windows-chocolatey>`, in order to remember parameters when upgrading, before installation you need to activate the following feature:
+If you're using :ref:`Chocolatey <windows-chocolatey>`, in order to keep parameters when upgrading, before installation you need to activate the following feature:
 
 .. code-block:: PowerShell
 

@@ -5,11 +5,11 @@ Configure the Splunk Distribution of OTel JS for Splunk Observability Cloud
 ***************************************************************************
 
 .. meta:: 
-   :description: Configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs, like correlating traces with logs, enabling exporters, and more.
+   :description: Configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs, like correlating traces with logs, activating exporters, and more.
 
 You can configure the Splunk Distribution of OpenTelemetry JS to suit your instrumentation needs. In most cases, modifying the basic configuration is enough to get started.
 
-The following sections describe all available settings for configuring OpenTelemetry for Node.js, including options for enabling new features that are unique to the Splunk Distribution of OpenTelemetry JS.
+The following sections describe all available settings for configuring OpenTelemetry for Node.js, including options for activating new features that are unique to the Splunk Distribution of OpenTelemetry JS.
 
 .. _configuration-methods-nodejs:
 

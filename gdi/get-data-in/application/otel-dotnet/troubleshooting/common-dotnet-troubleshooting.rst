@@ -39,7 +39,7 @@ Activate debug logging
 
 You can activate debug logging to obtain more information about the issue:
 
-#. Set the ``OTEL_DOTNET_AUTO_DEBUG`` environment variable to ``true`` before starting your instrumented application. 
+#. Set the ``OTEL_LOG_LEVEL`` environment variable to ``debug`` before starting your instrumented application. 
 
 #. Run your application or service and generate some activity.
 
@@ -102,4 +102,4 @@ You can deactivate all instrumentations for a specific signal type by setting th
 
 For a more granular approach, you can deactivate specific instrumentations for a given signal type by setting the ``OTEL_DOTNET_AUTO_{SIGNAL}_{INSTRUMENTATION}_INSTRUMENTATION_ENABLED`` environment variable to ``false``, where ``{SIGNAL}`` is the type of signal, for example traces, and ``{INSTRUMENTATION}`` is the case-sensitive name of the instrumentation.
 
-.. note:: You can't set environment variables for deactivating instrumentations using the ``web.config`` or ``app.config`` files.
+.. note:: You can't set environment variables for deactivating instrumentations using the web.config or app.config files.

@@ -41,7 +41,7 @@ If ``pip`` installs packages into your user local environment, add the user base
 Activate debug logging
 -------------------------------------------------------
 
-Enabling debug logging can help you troubleshoot Python instrumentation issues. 
+Activating debug logging can help you troubleshoot Python instrumentation issues. 
 
 To activate logging, import the ``logging`` module and configure the logging level to ``DEBUG``:
 
