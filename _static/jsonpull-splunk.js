@@ -392,7 +392,7 @@ $(document).ready(function () {
 
                             if (typeof monitors[i][j] == 'undefined' && j == 'title') {
                                 row += '<td><code>' + i + '</code></td>';
-                            } else if (j == 'title'){
+                            } else if (j == 'title') {
 				row += '<td><code>' + i + '</code></td>';
 			    } else if (j == 'description') {
                                 row += '<td>' + converter.makeHtml(monitors[i][j]) + '</td>';
