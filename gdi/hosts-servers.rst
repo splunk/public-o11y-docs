@@ -11,6 +11,7 @@ Configure application receivers for hosts and servers
    :maxdepth: 4
    :hidden:
 
+   monitors/amazon-ecs-metadata   
    monitors/apache-httpserver
    monitors/apache-tomcat
    monitors/apache-zookeeper
@@ -28,7 +29,6 @@ Configure application receivers for hosts and servers
    monitors/cpu
    monitors/disk
    monitors/docker
-   ecs-metadata/ecs-metadata
    elasticsearch/elasticsearch
    elasticsearch-query/elasticsearch-query
    filesystems/filesystems
@@ -53,11 +53,11 @@ Configure application receivers for hosts and servers
    win-services/telegraf-win-services
    vsphere/vsphere
 
-
 These application receivers gather metrics from their associated host- and server-related applications and the hosts the applications are running on.
 
-* :ref:`collectd-tomcat`
-* :ref:`apache`
+* :ref:`amazon-ecs-metadata`
+* :ref:`apache-httpserver`
+* :ref:`apache-tomcat`
 * :ref:`zookeeper`
 * :ref:`chrony`
 * :ref:`collectd-plugin`
@@ -73,7 +73,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`cpu`
 * :ref:`disk`
 * :ref:`docker`
-* :ref:`ecs-metadata`
 * :ref:`elasticsearch`
 * :ref:`elasticsearch-query`
 * :ref:`filesystems`
