@@ -8,7 +8,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 This integration is only available on Kubernetes and Linux.
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
