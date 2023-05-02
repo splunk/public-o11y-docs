@@ -17,7 +17,7 @@ Configure application receivers for databases
    monitors/cassandra
    monitors/consul
    opentelemetry/components/databricks-receiver
-   etcd/etcd
+   monitors/etcd
    exec/telegraf-exec
    hadoop/hadoop
    logparser/telegraf-logparser
