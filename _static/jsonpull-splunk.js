@@ -176,7 +176,11 @@ $(document).ready(function () {
             }
 
             function traverseMetrics(mainObj, data, preRef = '') {
-                const id = "monitor-stats-" + data['name'];
+                if (data['type']) {
+                    const id = "monitor-stats-" + data['name'];
+		    } else {
+		    const id = "monitor-stats-table";
+	        }
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
 
