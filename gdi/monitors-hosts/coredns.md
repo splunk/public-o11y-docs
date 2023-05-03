@@ -43,7 +43,7 @@ service:
       receivers: [smartagent/coredns]
 ```
 
-### Configuration settings
+### Configuration options
 
 The following table shows the configuration options for this monitor:
 
