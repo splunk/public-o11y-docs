@@ -11,27 +11,27 @@ Configure application receivers for hosts and servers
    :maxdepth: 4
    :hidden:
 
-   monitors/amazon-ecs-metadata   
-   monitors/apache-httpserver
-   monitors/apache-tomcat
-   monitors/apache-zookeeper
-   monitors/chrony
-   monitors/collectd-plugin
-   monitors/collectd-df 
-   monitors/cpufreq
+   monitors-hosts/amazon-ecs-metadata   
+   monitors-hosts/apache-httpserver
+   monitors-hosts/apache-tomcat
+   monitors-hosts/apache-zookeeper
+   monitors-hosts/chrony
+   monitors-hosts/collectd-plugin
+   monitors-hosts/collectd-df 
    collectd/collectd-hadoopjmx
    collectd/collectd-kafka-consumer
    collectd/collectd-kafka-producer
    collectd/collectd-php-fpm
    collectd/collectd-uptime
-   monitors/coredns
-   monitors/couchbase
-   monitors/cpu
-   monitors/disk
-   monitors/docker
-   monitors/elasticsearch
+   monitors-hosts/coredns
+   monitors-hosts/couchbase
+   monitors-hosts/cpu
+   monitors-hosts/cpufreq
+   monitors-hosts/disk
+   monitors-hosts/docker
+   monitors-hosts/elasticsearch
    elasticsearch-query/elasticsearch-query
-   monitors/filesystems
+   monitors-hosts/filesystems
    haproxy/haproxy
    health-checker/health-checker
    host-metadata/host-metadata
