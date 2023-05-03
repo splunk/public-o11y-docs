@@ -11,14 +11,14 @@ Configure application receivers for databases
    :maxdepth: 4
    :hidden:
 
-   monitors/apache-couchdb
-   monitors/apache-kafka
-   monitors/apache-spark
-   monitors/cassandra
-   monitors/consul
+   monitors-databases/apache-couchdb
+   monitors-databases/apache-kafka
+   monitors-databases/apache-spark
+   monitors-databases/cassandra
+   monitors-databases/consul
    opentelemetry/components/databricks-receiver
-   monitors/etcd
-   monitors/exec-input
+   monitors-databases/etcd
+   monitors-databases/exec-input
    hadoop/hadoop
    logparser/telegraf-logparser
    logstash/logstash
