@@ -18,7 +18,6 @@ Configure application receivers for hosts and servers
    monitors-hosts/chrony
    monitors-hosts/collectd-plugin
    monitors-hosts/collectd-df 
-   collectd/collectd-hadoopjmx
    collectd/collectd-kafka-consumer
    collectd/collectd-kafka-producer
    collectd/collectd-php-fpm
@@ -63,7 +62,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`collectd-plugin`
 * :ref:`cpufreq`
 * :ref:`collectd-df`
-* :ref:`collectd-hadoopjmx`
 * :ref:`collectd-kafka-consumer`
 * :ref:`collectd-kafka-producer`
 * :ref:`collectd-php-fpm`

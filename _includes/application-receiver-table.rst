@@ -99,11 +99,6 @@
      -
      -
 
-   * - :ref:`Collectd Hadoop JMX <collectd-hadoopjmx>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
      - :strong:`X`
      -
@@ -235,6 +230,11 @@
      -
 
    * - :ref:`Hadoop <hadoop>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Hadoop JMX <hadoopjmx>`
      - :strong:`X`
      -
      -

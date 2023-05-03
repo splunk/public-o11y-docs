@@ -19,7 +19,8 @@ Configure application receivers for databases
    opentelemetry/components/databricks-receiver
    monitors-databases/etcd
    monitors-databases/exec-input
-   hadoop/hadoop
+   monitors-databases/hadoop
+   monitors-databases/hadoopjmx
    logparser/telegraf-logparser
    logstash/logstash
    microsoft-sql-server/microsoft-sql-server
@@ -43,6 +44,7 @@ These application receivers gather metrics from their associated database-relate
 * :ref:`etcd`
 * :ref:`exec-input`
 * :ref:`hadoop`
+* :ref:`hadoopjmx`
 * :ref:`telegraf-logparser`
 * :ref:`logstash`
 * :ref:`microsoft-sql-server`
