@@ -3,7 +3,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the hadoop monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Hadoop monitor type to collect metrics from the following components of a Hadoop 2.0+ cluster:
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Hadoop monitor type to collect metrics from the following components of a Hadoop 2.0 or higher cluster:
 
 - Cluster Metrics
 - Cluster Scheduler
@@ -11,7 +11,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 - Cluster Nodes
 - MapReduce Jobs
 
-If a remote JMX port is exposed in the Hadoop cluster, then you can also configure the hadoopjmx monitor to collect additional metrics about the Hadoop cluster.
+This integration uses the REST API. If a remote JMX port is exposed in the Hadoop cluster, then you can also configure the `hadoopjmx` monitor to collect additional metrics about the Hadoop cluster.
 
 This integration is only available on Kubernetes and Linux.
 
@@ -50,7 +50,7 @@ service:
       receivers: [smartagent/hadoop]
 ```
 
-### Configuration settings
+### Configuration options
 
 The following table shows the configuration options for this integration:
 
