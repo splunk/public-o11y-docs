@@ -65,7 +65,7 @@ Next, add the monitor to the `service > pipelines > metrics > receivers` section
 service:
   pipelines:
     metrics:
-      monitors: [smartagent/ collectd/hadoopjmx]
+      monitors: [smartagent/collectd/hadoopjmx]
 ```
 
 ### Configuration options

@@ -31,7 +31,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/elasticsearch
    elasticsearch-query/elasticsearch-query
    monitors-hosts/filesystems
-   haproxy/haproxy
+   monitors-hosts/haproxy
    health-checker/health-checker
    host-metadata/host-metadata
    opentelemetry/components/host-metrics-receiver
