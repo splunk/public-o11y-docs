@@ -5,7 +5,7 @@ Specify settings for all charts in a dashboard
 ***********************************************
 
 .. meta::
-      :description: There are many situations where you will want to align all of the charts on a dashboard to the same filters, time range, max delay value, or chart display resolution. Some of these include troubleshooting, efficiently creating similar dashboards, or using the same dashboard to view metrics for an entire fleet as well as select subsets of it. You can use the Overrides bar to apply various settings to all the charts on the dashboard.
+      :description: Use the Overrides navigation bar to apply the same settings to multiple dashboards and charts, or override individual settings for dashboards and charts.
 
 There are many situations where you want to align all of the charts on a dashboard to the same filters, time range, or chart display resolution, such as:
 

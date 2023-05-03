@@ -5,7 +5,7 @@ Import and export dashboards
 *****************************************************************
 
 .. meta::
-      :description: Learn how you can import and export dashboards to collaborate with other members of your team.
+      :description: Learn how to import and export dashboards as JSON files to collaborate with your team.  
 
 You can import or export dashboards from the UI. You can export the dashboard as a JSON file for other users to import to their dashboard or dashboard group. Exporting a dashboard is also a way to maintain a backup of the dashboard. Splunk does not support editing the exported JSON file, which could negatively impact import.
 
