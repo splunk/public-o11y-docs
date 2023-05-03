@@ -7,27 +7,19 @@ Monitor Splunk Infrastructure Monitoring subscription usage
 .. meta::
       :description: Splunk Infrastructure Monitoring administrators can view the billing and usage information for the organization. The application provides a summary and detailed reports. In addition to counts for hosts and containers, the reports also contain counts for custom metrics and high-resolution metrics.
 
-
 .. caution:: The information in this topic applies to organizations whose subscription plan is based on the number of hosts or metrics that Splunk Infrastructure Monitoring is monitoring for you. If your organization's usage is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`.
 
 .. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
 
-Overview
-=============
-
 Admin users in your organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. In addition to counts for hosts and containers, the reports also contain counts for custom, bundled, and high-resolution metrics.
 
 .. _about-custom-high-res:
-
-Metric categories and high-resolution metrics
-==================================================
-
-The following sections describe the different categories of metrics in the metric time series (MTS) that Infrastructure Monitoring collects.
-
 .. _about-custom:
 
-Differences between host, container, bundled, and custom metrics
----------------------------------------------------------------------
+Metric categories
+==================================================
+
+Infrastructure Monitoring collects metric time series (MTS) with different categories of metrics:
 
 .. list-table::
   :header-rows: 1
@@ -73,15 +65,12 @@ Differences between standard and high-resolution metrics
 
 .. _using-page:
 
-Viewing and downloading Infrastructure Monitoring usage reports
+View and download Infrastructure Monitoring usage reports
 ====================================================================
 
 Infrastructure Monitoring usage reports help you understand the amount of data you're sending. Use these reports to manage your costs and ensure you're collecting the correct data.
 
-Prerequisites
--------------------
-
-To view and download usage reports, you must be an organization admin.
+.. note:: To view and download usage reports, you must be an organization admin.
 
 View usage reports
 ---------------------
@@ -260,17 +249,15 @@ The following table explains the different columns in a dimension report:
 
 
 .. _metrics-per-dimension:
-
 .. _metrics-by-dimension:
-
-.. _custom-metric-report:
-
-.. _custom-metrics-report:
 
 Older report format
 --------------------------------
 
 The :ref:`dimension-report` is a revised format of the report formerly called the Metrics by Dimension report. If you select a date for the Dimension report earlier than the new format's release, the report you download is formatted like the older Metrics by Dimension report. The old report format provides an aggregate view of the data; that is, it doesn't show different values for different usage metrics (host, container, and so on).
+
+.. _custom-metric-report:
+.. _custom-metrics-report:
 
 Custom metric report
 ===========================
