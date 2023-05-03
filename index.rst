@@ -544,11 +544,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :maxdepth:   3
-
-   System limits <infrastructure/sys-limits>
-
-.. toctree::
    :caption: LOG OBSERVER
    :maxdepth:   3
 
