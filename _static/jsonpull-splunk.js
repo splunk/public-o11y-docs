@@ -135,8 +135,11 @@ $(document).ready(function () {
             }
 
             function traverseFields(mainObj, data, preRef = '', h2Text = '') {
-
-                let id = "monitor-stats-" + data['type'];
+                if (data['type']) {
+                    let id = "monitor-stats-" + data['type'];
+		    } else {
+		    let id = "monitor-stats-table"; 
+	        }
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 id += idMap[id] > 0 ? '-' + idMap[id] : '';
 
