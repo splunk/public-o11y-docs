@@ -94,11 +94,6 @@
      -
      -
 
-   * - :ref:`CPUFreq <cpufreq>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
      - :strong:`X`
      -
@@ -140,6 +135,11 @@
      -
 
    * - :ref:`CPU <cpu>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`CPUFreq <cpufreq>`
      - :strong:`X`
      -
      -
