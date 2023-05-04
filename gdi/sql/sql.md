@@ -117,15 +117,15 @@ See the following example:
 ```yaml
 smartagent/sql:
   - type: sql
-      host: localhost
-      port: 1433
-      dbDriver: sqlserver
-      connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=123456;'
-      queries: 
-         - query: 'SELECT COUNT(*) as count FROM Sales.Orders'
-           metrics:
-             - metricName: "orders"
-               valueColumn: "count"
+    host: localhost
+    port: 1433
+    dbDriver: sqlserver
+    connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=123456;'
+    queries: 
+      - query: 'SELECT COUNT(*) as count FROM Sales.Orders'
+        metrics:
+          - metricName: "orders"
+            valueColumn: "count"
 ```
 
 ### Parameterized connection string
