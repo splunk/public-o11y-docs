@@ -16,7 +16,7 @@ Admin users in your organization can view the subscription usage information for
 .. _about-custom-high-res:
 .. _about-custom:
 
-Metric categories
+Metrics in Infrastructure
 ==================================================
 
 Infrastructure Monitoring collects metric time series (MTS) with different categories of metrics:
@@ -87,27 +87,14 @@ To view the available usage reports:
 
 You can see a chart showing your current usage numbers for hosts, containers, custom metrics, and high-resolution metrics. Below the chart, you might see additional charts representing usage trends that you can customize to show different data or different time periods.
 
-Download a usage report
--------------------------
+In :guilabel:`View detailed usage reports`, select the :guilabel:`Usage` or :guilabel:`Usage Breakdown` tabs to download available reports as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
 
-To view usage reports available for download:
-
-1. Log in to Splunk Observability Cloud.
-
-2. In the left navigation menu, select :menuselection:`Settings > Subscription Usage`.
-
-3. Select the :strong:`Infrastructure Monitoring` tab.
-
-4. Click :guilabel:`View detailed usage reports`.
-
-5. Click a report link on the :guilabel:`Usage` tab or :guilabel:`Usage Breakdown` tab to download it as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
-
-.. note:: If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics that Infrastructure Monitoring monitors for you, older reports on the :guilabel:`Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
+If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics you monitor with Infrastructure Monitoring, older reports on the :guilabel:`Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
 
 .. _summary-by-month:
 
 Monthly usage report
-====================
+=============================
 
 This report is available on the :guilabel:`Usage` tab. For each hour within the month (or month to date, for the current month), this report shows the number of hosts and containers monitored and the number of custom metrics and high-resolution metrics sent to Infrastructure Monitoring. This report follows your usage period and uses the month when a usage period starts as the label in the report link. For example, if your usage period begins on the 10th of the month, then a link for 'March 2022' covers from March 10 through April 9, 2022.
 
