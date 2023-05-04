@@ -14,6 +14,7 @@ Monitor and manage subscription usage and billing
    APM billing reports <view-apm-billing-reports>
    Analyze APM usage <analyze-apm-billing-usage>
    Infrastructure subscription usage (Host plans) <monitor-imm-billing-usage>
+   Manage Infrastructure billing (Host plans) <imm-billing>
    Infrastructure subscription usage (DPM plans) <dpm-usage>
    Logs subscription usage <lo-billing-usage>
    RUM subscription usage <rum-subscription-usage>
@@ -36,7 +37,8 @@ Observability Cloud admins can monitor billing usage for the following:
 -  :ref:`Analyze Splunk APM subscription usage data for your subscription plan <analyze-apm-billing-usage>`
 -  :ref:`View APM billing reports <view-apm-billing-reports>`
 -  :ref:`Monitor Splunk Infrastructure Monitoring subscription usage (Host plans) <monitor-imm-billing-usage>`
--  :ref:`Monitor Splunk Infrastructure Monitoring billing and usage (DPM plans only) <dpm-usage>`
+-  :ref:`Manage Infrastructure costs and billing (Host plans) <imm-billing>`
+-  :ref:`Monitor Splunk Infrastructure Monitoring subscription usage (DPM plans only) <dpm-usage>`
 -  :ref:`Monitor Log Observer subscription usage <lo-billing-usage>`
 -  :ref:`Monitor RUM subscription usage <rum-subscription-usage>` 
 

@@ -1,7 +1,7 @@
 .. _dpm-usage:
 
 **********************************************************************************
-Infrastructure Monitoring subscription usage and billing (DPM plans)
+Infrastructure Monitoring subscription usage (DPM plans)
 **********************************************************************************
 
 .. meta::
