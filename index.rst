@@ -797,7 +797,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>
+   Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::
@@ -844,7 +844,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Per product limits <references/per-product-limits>
+   Per product system limits <references/per-product-limits>
 
 .. toctree::
    :maxdepth:   3
