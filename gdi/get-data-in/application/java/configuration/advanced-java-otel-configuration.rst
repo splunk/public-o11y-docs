@@ -206,7 +206,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
      - Activates memory profiling with all the options. Activating memory profiling overrides the value of ``splunk.metrics.enabled``. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be set to ``true``. To activate or deactivate specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
    * - ``SPLUNK_PROFILER_MEMORY_EVENT_RATE``
-     - Rate limit for memory profiling data, expressed as stack traces per second. You can define duration in the form ``<number>/<unit>``, where the unit can be ``ms``, ``s``, ``m``, ``h``, or ``d``.  The default value is ``150/s``, or 150 stack traces per second. Increase this limit, for example to ``300s``, to reduce the amount of memory profiling data sent to Observability Cloud and improve performance. This replaces the memory sampling interval setting. |br| |br| System property: ``splunk.profiler.memory.event.rate``
+     - Rate limit for memory profiling data, expressed as stack traces per second. You can define duration in the form ``<number>/<unit>``, where the unit can be ``ms``, ``s``, ``m``, ``h``, or ``d``. The default value is ``150/s``, or 150 stack traces per second. This replaces the memory sampling interval setting. |br| |br| System property: ``splunk.profiler.memory.event.rate``
    * - ``SPLUNK_PROFILER_TLAB_ENABLED``
      - Whether to activate TLAB memory events. The default value is the value assigned to the ``splunk.profiler.memory.enabled`` property. |br| |br| System property: ``splunk.profiler.tlab.enabled``
    * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``
