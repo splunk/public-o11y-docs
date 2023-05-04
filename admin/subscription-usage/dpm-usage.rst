@@ -1,7 +1,7 @@
 .. _dpm-usage:
 
 **********************************************************************************
-Monitor Splunk Infrastructure Monitoring billing and usage (DPM plans only)
+Infrastructure Monitoring subscription usage and billing (DPM plans)
 **********************************************************************************
 
 .. meta::

@@ -1,17 +1,17 @@
 .. _monitor-imm-billing-usage:
 
-***************************************************************
-Monitor Splunk Infrastructure Monitoring subscription usage
-***************************************************************
+***************************************************************************************
+Infrastructure Monitoring subscription usage and billing (Host and metric plans)
+***************************************************************************************
 
 .. meta::
       :description: Splunk Infrastructure Monitoring administrators can view the billing and usage information for the organization. The application provides a summary and detailed reports. In addition to counts for hosts and containers, the reports also contain counts for custom metrics and high-resolution metrics.
 
-.. caution:: The information in this topic applies to organizations whose subscription plan is based on the number of hosts or metrics that Splunk Infrastructure Monitoring is monitoring for you. If your organization's usage is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`.
+.. note:: Read this document if your organization's subscription plan is based on the number of hosts or metrics you're monitoring with Infrastructure Monitoring. If your usage plan is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`. 
+  
+  This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
 
-.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
-
-Admin users in your organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. In addition to counts for hosts and containers, the reports also contain counts for custom, bundled, and high-resolution metrics.
+Admin users in your organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. 
 
 .. _about-custom-high-res:
 .. _about-custom:
@@ -41,6 +41,8 @@ Infrastructure Monitoring collects metric time series (MTS) with different categ
       * Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. 
       * You can also configure the Splunk Distribution of OpenTelemetry Collector to send custom metrics (such as system or service metrics) outside of its default set of metrics.
       * Your Infrastructure Monitoring subscription allows you to send a certain number of custom metrics.
+
+Learn more about metric categories in :ref:`metrics-category`.
 
 .. _about-high-res:
 

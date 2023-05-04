@@ -28,6 +28,7 @@ Metric identifiers
 .. list-table:: 
    :header-rows: 1
    :widths: 20 80
+   :width: 100%
 
    * - :strong:`Column`
      - :strong:`Description`
@@ -39,86 +40,17 @@ Metric identifiers
      - The category of the metric, in the format of a number. 
 
 
-See the following table for more information on metric category types.
+See the following table for more information on metric category types. For more information, see :ref:`metric-categories`.
 
-.. list-table:: 
-   :header-rows: 1
-   :widths: 20 80
+.. include:: /_includes/metric-categories.rst
 
-   * - :strong:`Category type`
-     - :strong:`Description`
-
-   * - 0
-     - | No information about the category type of the metric.
-       | Note: Category type information for metrics is only available after 03/16/2023. Any metrics created before that date has category type ``0``. 
-   
-   * - 1
-     - Host
-
-   * - 2
-     - Container
-
-   * - 3
-     - Custom
-
-   * - 4
-     - Hi-resolution
-
-   * - 5
-     - Internal
-
-   * - 6
-     - Tracing metrics
-
-   * - 7
-     - Bundled
-
-   * - 8
-     - APM hosts
-
-   * - 9
-     - APM container   
-
-   * - 10
-     - APM identity   
-
-   * - 11
-     - APM bundled metrics  
-
-   * - 12
-     - APM Troubleshooting MetricSets
-
-   * - 13
-     - APM Monitoring MetricSets
-
-   * - 14
-     - Infrastructure Monitoring function
-
-   * - 15
-     - APM function
-
-   * - 16
-     - RUM Troubleshooting MetricSets
-
-   * - 17
-     - RUM Monitoring MetricSets
-
-   * - 18
-     - Network Explorer metrics
-
-   * - 19
-     - Runtime metrics
-
-   * - 20
-     - Synthetics metrics
-
-    
 Usage statistics
 --------------------------------
 
 .. list-table:: 
    :header-rows: 1
    :widths: 20 80
+   :width: 100%
 
    * - :strong:`Column`
      - :strong:`Description`
@@ -136,6 +68,7 @@ MTS creation statistics
 .. list-table:: 
    :header-rows: 1
    :widths: 20 80
+   :width: 100%
 
    * - :strong:`Column`
      - :strong:`Description`
