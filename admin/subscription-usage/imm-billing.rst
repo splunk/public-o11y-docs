@@ -14,7 +14,7 @@ Infrastructure Monitoring billing (Host and metric plans)
 
 When you exceed your subscription limits for a sustained period of time during a monthly usage period, Splunk Observability Cloud might charge overage fees to your organization.
 
-For information on system limits, refer to :ref:`system-limits`.
+For information on system limits, refer to :ref:`per-product-limits`.
 
 .. _calc-monthly-use:
 
@@ -27,26 +27,30 @@ The number of hosts, containers, and other resources that Infrastructure Monitor
 
 - To calculate monthly usage for custom and high-resolution metrics, Observability Cloud counts the number of custom and high-resolution metrics sent during each hour in the month. It then calculates the average of these counts to determine monthly usage.
 
-Overage fees apply to each type of object individually. For example, suppose your subscription plan covers 25 hosts and 10 containers per host, or 250 containers. Let's also suppose that you are over your limits as follows:
+Overage fees apply to each type of object individually. 
 
-- Hosts: 35
+Example
+------------------------------
 
-  This is 10 hosts more than the subscription limit of 25.
+Let's suppose the your subscription plan covers 25 hosts and 10 containers per host, or 250 containers. 
 
-- Containers: 300
+Let's also suppose that you are over your limits as follows:
 
-  This is 50 containers more than the subscription limit of 250.
+- Hosts: 35, or 10 hosts more than the subscription limit of 25.
+- Containers: 300, or 50 containers more than the subscription limit of 250.
 
 In this case, Observability Cloud will charge overage fees for 10 hosts and for 50 containers.
 
 However, note that paying the overage fee for 10 hosts doesn't automatically add 100 containers to your subscription limit and thus accommodate for the 50 additional containers. You must add 10 hosts to your subscription plan, as discussed in :ref:`avoid-fees`, to add support for an additional 100 containers.
+
+Overage fees can be as high as 110% of the monthly list price for each element for which you are over your plan's limit. 
 
 .. _detect-subscription-limits:
 
 Create a detector to receive alerts about subscription limits
 ========================================================================
 
-Overage fees can be as high as 110% of the monthly list price for each element for which you are over your plan's limit. To help avoid overage fees, :ref:`create a detector <create-detectors>` to proactively monitor for potential overages and receive alerts when you are nearing a subscription limit.
+To help avoid overage fees, :ref:`create a detector <create-detectors>` to proactively monitor for potential overages and receive alerts when you are nearing a subscription limit.
 
 When creating the detector, you can use these metrics as signals on the :guilabel:`Alert signal` tab.
 

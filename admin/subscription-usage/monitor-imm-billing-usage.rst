@@ -46,7 +46,7 @@ Learn more about metric categories in :ref:`metrics-category`.
 
 .. _about-high-res:
 
-Differences between standard and high-resolution metrics
+Standard and high-resolution metrics
 -------------------------------------------------------------------------------------
 
 .. list-table::
@@ -77,15 +77,7 @@ Infrastructure Monitoring usage reports help you understand the amount of data y
 View and download usage reports
 -----------------------------------------
 
-To view the available usage reports:
-
-1. Log in to Observability Cloud.
-
-2. In the left navigation menu, select :menuselection:`Settings > Subscription Usage`.
-
-3. Select the :strong:`Infrastructure Monitoring` tab.
-
-You can see a chart showing your current usage numbers for hosts, containers, custom metrics, and high-resolution metrics. Below the chart, you might see additional charts representing usage trends that you can customize to show different data or different time periods.
+Go to :menuselection:`Settings > Subscription Usage > Infrastructure Monitoring` to see a chart showing your current usage numbers for hosts, containers, custom metrics, and high-resolution metrics. Below the chart, you might see additional charts representing usage trends that you can customize to show different data or different time periods.
 
 In :guilabel:`View detailed usage reports`, select the :guilabel:`Usage` or :guilabel:`Usage Breakdown` tabs to download available reports as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
 

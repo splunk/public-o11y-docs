@@ -19,18 +19,23 @@ Admin users in your Splunk Observability Cloud organization can view the usage i
 Access the Subscription Usage page
 =============================================================================
 
-To view available usage reports, select :menuselection:`Settings > Subscription Usage`. You see a usage chart that shows average and maximum DPM for the current usage period. Hovering over different points in the chart shows actual values below the chart. To see average and maximum usage for a previous period, choose the desired period from the dropdown menu.
+Go to :menuselection:`Settings > Subscription Usage > Infrastructure Monitoring` to see a usage chart that shows average and maximum DPM for the current usage period. Hovering over different points in the chart shows actual values below the chart. To see average and maximum usage for a previous period, choose the desired period from the dropdown menu.
 
 .. image:: /_images/admin/dpm-usage-max.png
       :alt: Maximum usage chart for the usage period from Nov 1 - Dec 1
       :width: 85%
 
-To view usage reports available for download, click :guilabel:`View detailed usage reports`. Available reports are shown on the :strong:`Usage` tab.
+In DPM subscription plans all metrics are categorized as custom. 
 
-.. image:: /_images/admin/dpm-summary-tab.png
-      :width: 99%
+View and download usage reports
+-------------------------------------------------------------------
 
-Different reports are available on the :strong:`Usage` and :strong:`Usage Breakdown` tabs. Observability Cloud provides you with the following summary reports to help you understand and manage your metrics submission:
+To view usage reports available for download, go to :guilabel:`View detailed usage reports` and select the :strong:`Usage` and :strong:`Usage Breakdown` tabs.
+
+.. image:: /_images/admin/dpm-report-tab.png
+      :width: 85%
+
+Observability Cloud provides you with the following summary reports to help you understand and manage your metrics submission:
 
 - :ref:`datapoints-per-minute-detail-report`. Shows the total number of data points sent for each minute of a month (or month to date, for the current month). This information is helpful for understanding whether your rate of data submission has stayed within the limits of your Splunk Infrastructure Monitoring subscription.
 
@@ -38,16 +43,14 @@ Different reports are available on the :strong:`Usage` and :strong:`Usage Breakd
 
 -  :ref:`datapoints-per-dimension-report`. Shows on a daily basis the number of data points and time series for a given dimension value, as well as its average reporting frequency (resolution). It is useful for understanding the nature of the data your organization is sending so you can tune it accordingly. For example, you might notice that there are some metrics which you do not want to send at all, and conversely, you might see that there are some metrics that you want to send at a higher resolution.
 
-All reports are tab-separated text files. They are designed to be imported into a spreadsheet application, such as Microsoft Excel, Google Sheets, and Apple Numbers.
-
-.. note:: In DPM subscription plans all metrics are categorized as custom. 
+All reports are tab-separated text files and are designed to be imported into a spreadsheet application, such as Microsoft Excel, Google Sheets, and Apple Numbers.
 
 .. _datapoints-per-minute-detail-report:
 
 Data points per minute detail report
 =============================================================================
 
-This report, available on the Usage tab, shows the total number of data points sent for each minute of a month (or month to date, for the current month). It follows your usage period, and uses the month in which a usage period starts as the label in the report link. For example, if your usage period starts on the 10th of the month, then a link for 'March 2018' will cover the period of March 10 through April 9, 2018.
+This report, available on the Usage tab, shows the total number of data points sent for each minute of a month (or month to date, for the current month). It follows your usage period, and uses the month in which a usage period starts as the label in the report link. For example, if your usage period starts on the 10th of the month, then a link for 'March 2023' will cover the period of March 10 through April 9, 2023.
 
 Report contents
 -------------------------------------------------------------------
@@ -55,10 +58,10 @@ Report contents
 The report has five columns:
 
 -  Date: Follows the mm/dd/yy format
-   
+
 -  Time: 24 hour hh:mm UTC
-   
--  Streaming Datapoints: The number of data points received by Splunk Infrastructure Monitoring through our ingest APIs for the specified date and time. This includes data points sent in using the API directly; via a supported agent like collectd using our write_http plugin configuration; through a client library; or using the SignalFx Gateway (formerly called the metric proxy).
+
+-  Streaming Datapoints: The number of data points received by Splunk Infrastructure Monitoring through our ingest APIs for the specified date and time. 
 
 -  Backfill Datapoints: The number of data points received by Splunk Infrastructure Monitoring through the backfill API for the specified date and time.
 
@@ -108,7 +111,7 @@ The report has seven columns:
 
 -  Average Reporting Frequency for the Day: The time (in seconds) between successive data points, averaged across the number of time series associated with the dimension name and value, and over the course of the 24 hour period represented by the date of the report. For example, a value of 10 means the data is being sent every 10 seconds, i.e. has a 10s frequency; a value of 60 means that the data is being sent every minute, i.e. has a 1m frequency; and a value of 300 means that the data is being sent every 5 minutes, i.e. has a 5m frequency, as is the case with standard AWS CloudWatch metrics.
 
-   Note that frequency is calculated as an average across all of the time series associated with the relevant dimension value, rather than measured for each individual time series. As a result, it may contain outliers (e.g. a time series that is reporting more slowly or with greater jitter or lag) that skew the average. For example, for data being sent every 5 minutes (300 seconds), you might see a value of 280, or a value of 315. Frequency should be treated as an approximate value that guides what you do with your metrics, rather than a way of auditing the precise timing of them.
+   Note that frequency is calculated as an average across all of the time series associated with the relevant dimension value, rather than measured for each individual time series. As a result, it may contain outliers (for example, a time series that is reporting more slowly or with greater jitter or lag) that skew the average. For example, for data being sent every 5 minutes (300 seconds), you might see a value of 280, or a value of 315. Frequency should be treated as an approximate value that guides what you do with your metrics, rather than a way of auditing the precise timing of them.
 
 -  Number of Contributing Metric Time Series Which Were Created Today: The number of metric time series associated with the dimension name and value that were created over the course of the 24 hour period represented by the date of the report.
 
