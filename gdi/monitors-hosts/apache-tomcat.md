@@ -1,4 +1,4 @@
-(collectd-tomcat)=
+(apache-tomcat)=
 
 # Apache Tomcat
 

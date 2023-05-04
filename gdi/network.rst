@@ -11,8 +11,8 @@ Configure application receivers for networks
    :maxdepth: 4
    :hidden:
 
-   monitors/aws-appmesh
-   monitors/dns
+   monitors-network/aws-appmesh
+   monitors-network/dns
    logstash-tcp/logstash
    net-io/net-io
    ntp/ntp
