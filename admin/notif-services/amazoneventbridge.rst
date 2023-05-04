@@ -27,9 +27,12 @@ To send Observability Cloud alert notifications to Amazon EventBridge, perform t
 Step 1: Create an Amazon EventBridge integration in Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to perform this task.
+Prerequiste
+--------------
 
-To create an Amazon EventBridge integration in Observability Cloud:
+To complete this task, you must be a Splunk Observability Cloud administrator.
+
+To create an Amazon EventBridge integration in Splunk Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
 #. In the left navigation menu, select :menuselection:`Data Management`.
@@ -48,6 +51,9 @@ To create an Amazon EventBridge integration in Observability Cloud:
 
 Step 2: Accept Observability Cloud as an event source in Amazon EventBridge
 =====================================================================================
+
+Prerequiste
+-------------------
 
 You must have access to the Amazon EventBridge console to perform this task.
 
