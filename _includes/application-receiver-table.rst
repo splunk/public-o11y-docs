@@ -1,7 +1,7 @@
 .. list-table::
    :header-rows: 1
    :widths: 50 16 16 16
-   :width: 100
+   :width: 100%
    :class: monitor-table
 
    * - :strong:`Data source`
