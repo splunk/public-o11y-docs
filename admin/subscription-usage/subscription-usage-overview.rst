@@ -48,7 +48,7 @@ Observability Cloud admins can monitor billing usage for the following:
 
 Observability Cloud has system limits that help ensure good performance, stability, and reliability. Exceeding these limits might degrade your experience. 
 
-Learn more at :ref: `per-product-limits`, or see:
+Learn more at :ref:`per-product-limits`, or see:
 
 * :ref:`System limits for Splunk Infrastructure Monitoring <sys-limits>` 
    
