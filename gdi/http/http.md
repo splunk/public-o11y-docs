@@ -36,12 +36,35 @@ receivers:
 
 To complete the integration, include the monitor in a metrics pipeline. Add the monitor item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
 
-```
+```yaml
 service:
   pipelines:
     metrics:
       receivers: [smartagent/http]
 ```
+
+### Monitor multiple hosts
+
+To monitor multiple hosts, add an `http` monitor entry for each host in the `receivers` section of the configuration. For example:
+
+```yaml
+receivers:
+  smartagent/host1:
+    type: http
+    ... # Additional config for host 1
+  smartagent/host2:
+    type: http
+    ... # Additional config for host 2
+```
+
+After defining the receivers, add them to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+
+```yaml
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/host1, smartagent/host2]
+```  
 
 ### Configuration options
 

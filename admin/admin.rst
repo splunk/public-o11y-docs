@@ -52,7 +52,7 @@ The following table shows you aspects of your Observability Cloud organization t
      - :guilabel:`Settings > Global Data links`
      - For information, see :ref:`link-metadata-to-content`.
 
-   * - Understand your subscription usage
+   * - Understand your subscription usage and billing
      - :guilabel:`Settings` 
      -  For information about APM subscription usage, see :ref:`apm-billing-usage-index`.
 
