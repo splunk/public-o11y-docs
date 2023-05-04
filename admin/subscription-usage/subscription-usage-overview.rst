@@ -14,7 +14,7 @@ Monitor and manage subscription usage
    APM billing reports <view-apm-billing-reports>
    Analyze APM usage <analyze-apm-billing-usage>
    APM system limits <apm-system-limits>
-   Infrastructure subscription usage <monitor-imm-billing-usage>
+   Infrastructure subscription usage (Host plans) <monitor-imm-billing-usage>
    Infrastructure subscription usage (DPM plans) <dpm-usage>
    Logs subscription usage <lo-billing-usage>
 

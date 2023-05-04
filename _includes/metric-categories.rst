@@ -71,3 +71,5 @@
 
    * - 20
      - Synthetics metrics
+
+.. note:: In DPM subscription plans all metrics are categorized as custom. 
