@@ -48,7 +48,7 @@ Observability Cloud admins can monitor billing usage for the following:
 
 Observability Cloud has system limits that help ensure good performance, stability, and reliability. Exceeding these limits might degrade your experience. 
 
-Learn more at:
+Learn more at :ref: `per-product-limits`, or see:
 
 * :ref:`System limits for Splunk Infrastructure Monitoring <sys-limits>` 
    
@@ -62,5 +62,5 @@ Learn more at:
 
 If you exceed your ingestion limits you might incurr in overcost. To help avoid overage fees, :ref:`create a detector <create-detectors>` to proactively monitor for potential overages and receive alerts when you are nearing a subscription limit.
 
-.. caution:: Make sure you understand what's included in your subscription. For more detailed queries about your subscription and billing, contact your Splunk Account Team. 
+.. note:: Make sure you understand what's included in your subscription. For more detailed queries about your subscription and billing, contact your Splunk Account Team. 
 
