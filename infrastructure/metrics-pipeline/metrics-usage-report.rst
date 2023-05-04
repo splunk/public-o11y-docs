@@ -40,7 +40,7 @@ Metric identifiers
      - The category of the metric, in the format of a number. 
 
 
-See the following table for more information on metric category types. For more information, see :ref:`metric-categories`.
+See the following table for more information on metric category types. For more information, see :ref:`metrics-category`.
 
 .. include:: /_includes/metric-categories.rst
 

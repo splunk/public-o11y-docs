@@ -53,7 +53,7 @@ There are three types of metrics: gauge, cumulative counter, and counter. See mo
 Metric category
 ----------------------
 
-These are the most relevant categories for metrics:
+These are the available categories for metrics:
 
 .. include:: /_includes/metric-categories.rst
 
