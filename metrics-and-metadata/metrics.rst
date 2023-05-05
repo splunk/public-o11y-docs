@@ -34,6 +34,7 @@ There are three types of metrics: gauge, cumulative counter, and counter. See mo
 .. list-table::
   :header-rows: 1
   :widths: 15 45 40
+  :width: 100%
 
   * - Metric type
     - Description
@@ -57,6 +58,18 @@ These are the available categories for metrics:
 
 .. include:: /_includes/metric-categories.rst
 
+Identify the category of a metric
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In :ref:`host-based plans <monitor-imm-billing-usage>`, the category of a metric might impact billing. 
+
+To keep track of the type of metrics you're ingesting, Observability Cloud provides you with different tools and reports:
+
+* :ref:`custom-metric-report`.
+* Metric Pipeline Management's :ref:`usage report <metrics-usage-report>`.
+* Track specific org metrics with custom metric information. See more in :ref:`org-metrics`.
+* Query for the ``sf_mtsCategoryType`` dimension, which indicates the metric category, using Signalflow. Learn more in :ref:`signalflow-analytics-intro`. 
+
 High resolution metrics
 ----------------------------
 
@@ -64,15 +77,15 @@ By default, metrics are processed by Observability Cloud at a 10-second resoluti
 
 Metrics can be ingested at a higher resolution of 1 second. To do so, set the dimension ``sf_hires`` to ``1`` in any MTS.
 
-To add or edit dimensions: 
-
-* :ref:`metadata-catalog`.
-* Use the API. See how in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/metrics_metadata/latest#endpoint-update-dimension-metadata>`.
-
 Metric metadata
 ----------------------
 
 Metrics can have associated metadata such as dimensions, custom properties, or tags. Learn more in :ref:`metrics-dimensions-mts`.
+
+To add or edit dimensions: 
+
+* :ref:`metadata-catalog`.
+* Use the API. See how in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/metrics_metadata/latest#endpoint-update-dimension-metadata>`.
 
 .. _data-points:
 
