@@ -205,8 +205,6 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds. |br| |br| System property: ``splunk.profiler.call.stack.interval``
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
      - Activates memory profiling with all the options. Activating memory profiling overrides the value of ``splunk.metrics.enabled``. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be set to ``true``. To activate or deactivate specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
-   * - ``SPLUNK_PROFILER_MEMORY_SAMPLER_INTERVAL``
-     - Defines the sampling interval. The default value is 1. Set the value to 2 and higher to sample data every nth allocation event. |br| |br| System property: ``splunk.profiler.memory.sampler.interval``
    * - ``SPLUNK_PROFILER_TLAB_ENABLED``
      - Whether to activate TLAB memory events. The default value is the value assigned to the ``splunk.profiler.memory.enabled`` property. |br| |br| System property: ``splunk.profiler.tlab.enabled``
    * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``

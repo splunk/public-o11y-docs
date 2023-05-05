@@ -277,13 +277,6 @@ The following snippet contains a sample ``profiling`` pipeline:
            processors: [batch]
            exporters: [logging/info, splunk_hec]
 
-Loss of profiling data or gaps in profiling data
--------------------------------------------------------------
-
-If there are less than 100 megabytes of space available for the Java Virtual Machine, AlwaysOn Profiling activates the recording escape hatch, which appears in the logs as ``com.splunk.opentelemetry.profiler.RecordingEscapeHatch``. The escape hatch drops all logs with profiling data until more space is available.
-
-To avoid the loss of profiling data due to the escape hatch, provide enough resources to the JVM.
-
 .. _disable-java-agent-logs:
 
 Deactivate all Java agent logs

@@ -544,11 +544,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :maxdepth:   3
-
-   System limits <infrastructure/sys-limits>
-
-.. toctree::
    :caption: LOG OBSERVER
    :maxdepth:   3
 
@@ -630,10 +625,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/sample-app
-.. toctree:: 
-   :maxdepth:    3
-
-   rum/rum-limits
 
 .. toctree::
    :maxdepth:   3
@@ -796,7 +787,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>
+   Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::
@@ -843,7 +834,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Per product limits <references/per-product-limits>
+   Per product system limits <references/per-product-limits>
 
 .. toctree::
    :maxdepth:   3

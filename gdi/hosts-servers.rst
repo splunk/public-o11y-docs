@@ -11,28 +11,27 @@ Configure application receivers for hosts and servers
    :maxdepth: 4
    :hidden:
 
-   monitors/amazon-ecs-metadata   
-   monitors/apache-httpserver
-   monitors/apache-tomcat
-   monitors/apache-zookeeper
-   monitors/chrony
-   monitors/collectd-plugin
-   monitors/collectd-df 
-   monitors/cpufreq
-   collectd/collectd-hadoopjmx
+   monitors-hosts/amazon-ecs-metadata   
+   monitors-hosts/apache-httpserver
+   monitors-hosts/apache-tomcat
+   monitors-hosts/apache-zookeeper
+   monitors-hosts/chrony
+   monitors-hosts/collectd-plugin
+   monitors-hosts/collectd-df 
    collectd/collectd-kafka-consumer
    collectd/collectd-kafka-producer
    collectd/collectd-php-fpm
    collectd/collectd-uptime
-   monitors/coredns
-   monitors/couchbase
-   monitors/cpu
-   monitors/disk
-   monitors/docker
-   monitors/elasticsearch
+   monitors-hosts/coredns
+   monitors-hosts/couchbase
+   monitors-hosts/cpu
+   monitors-hosts/cpufreq
+   monitors-hosts/disk
+   monitors-hosts/docker
+   monitors-hosts/elasticsearch
    elasticsearch-query/elasticsearch-query
-   filesystems/filesystems
-   haproxy/haproxy
+   monitors-hosts/filesystems
+   monitors-hosts/haproxy
    health-checker/health-checker
    host-metadata/host-metadata
    opentelemetry/components/host-metrics-receiver
@@ -63,7 +62,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`collectd-plugin`
 * :ref:`cpufreq`
 * :ref:`collectd-df`
-* :ref:`collectd-hadoopjmx`
 * :ref:`collectd-kafka-consumer`
 * :ref:`collectd-kafka-producer`
 * :ref:`collectd-php-fpm`

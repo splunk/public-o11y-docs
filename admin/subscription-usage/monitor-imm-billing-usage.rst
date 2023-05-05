@@ -1,44 +1,36 @@
 .. _monitor-imm-billing-usage:
 
-***************************************************************
-Monitor Splunk Infrastructure Monitoring subscription usage
-***************************************************************
+***************************************************************************************
+Infrastructure Monitoring subscription usage (Host and metric plans)
+***************************************************************************************
 
 .. meta::
-      :description: Splunk Infrastructure Monitoring administrators can view the billing and usage information for the organization. The application provides a summary and detailed reports. In addition to counts for hosts and containers, the reports also contain counts for custom metrics and high-resolution metrics.
+      :description: Splunk Infrastructure Monitoring administrators can view the usage information for the organization. The application provides a summary and detailed reports. In addition to counts for hosts and containers, the reports also contain counts for custom metrics and high-resolution metrics.
 
+.. note:: Read this document if your organization's subscription plan is based on the number of hosts or metrics you're monitoring with Infrastructure Monitoring. If your usage plan is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`. 
+  
+  This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
 
-.. caution:: The information in this topic applies to organizations whose subscription plan is based on the number of hosts or metrics that Splunk Infrastructure Monitoring is monitoring for you. If your organization's usage is based on the rate at which you send data points to Infrastructure Monitoring (DPM), see :ref:`dpm-usage`.
-
-.. note:: This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
-
-Overview
-=============
-
-Admin users in your organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. In addition to counts for hosts and containers, the reports also contain counts for custom, bundled, and high-resolution metrics.
+Admin users in your organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. 
 
 .. _about-custom-high-res:
-
-Metric categories and high-resolution metrics
-==================================================
-
-The following sections describe the different categories of metrics in the metric time series (MTS) that Infrastructure Monitoring collects.
-
 .. _about-custom:
 
-Differences between host, container, bundled, and custom metrics
----------------------------------------------------------------------
+Metrics in Infrastructure
+==================================================
+
+In host-based plans, Infrastructure Monitoring collects metric time series (MTS) with different categories of metrics:
 
 .. list-table::
   :header-rows: 1
   :width: 100
   :widths: 20, 80
 
-  * - :strong:`Metrics category`
+  * - :strong:`Metric category`
     - :strong:`Description`
 
   * - Host and container metrics
-    - * Default metrics sent by the the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
+    - * Default metrics sent by the Splunk Distribution of OpenTelemetry Collector or through Infrastructure Monitoring public cloud integrations for hosts, containers, and the services running on them.
 
   * - Bundled metrics
     - * Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers. 
@@ -48,11 +40,13 @@ Differences between host, container, bundled, and custom metrics
     - * Metrics reported to Infrastructure Monitoring outside of the host, container, or bundled metrics. 
       * Custom metrics are often used for application monitoring, such as counting the number of Splunk Infrastructure Monitoring API calls or measuring the duration of the API requests. 
       * You can also configure the Splunk Distribution of OpenTelemetry Collector to send custom metrics (such as system or service metrics) outside of its default set of metrics.
-      * Your Infrastructure Monitoring subscription allows you to send a certain number of custom metrics.
+      * Your Infrastructure Monitoring subscription allows you to send a certain number of custom metrics. If you exceed this number your organization might be overcharged.
+
+Learn more about metric categories in :ref:`metrics-category`.
 
 .. _about-high-res:
 
-Differences between standard and high-resolution metrics
+Standard and high-resolution metrics
 -------------------------------------------------------------------------------------
 
 .. list-table::
@@ -73,50 +67,26 @@ Differences between standard and high-resolution metrics
 
 .. _using-page:
 
-Viewing and downloading Infrastructure Monitoring usage reports
+View and download Infrastructure Monitoring usage reports
 ====================================================================
 
 Infrastructure Monitoring usage reports help you understand the amount of data you're sending. Use these reports to manage your costs and ensure you're collecting the correct data.
 
-Prerequisites
--------------------
+.. note:: To view and download usage reports, you must be an organization admin.
 
-To view and download usage reports, you must be an organization admin.
+View and download usage reports
+-----------------------------------------
 
-View usage reports
----------------------
+Go to :menuselection:`Settings > Subscription Usage > Infrastructure Monitoring` to see a chart showing your current usage numbers for hosts, containers, custom metrics, and high-resolution metrics. Below the chart, you might see additional charts representing usage trends that you can customize to show different data or different time periods.
 
-To view the available usage reports:
+In :guilabel:`View detailed usage reports`, select the :guilabel:`Usage` or :guilabel:`Usage Breakdown` tabs to download available reports as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
 
-1. Log in to Observability Cloud.
-
-2. In the left navigation menu, select :menuselection:`Settings > Subscription Usage`.
-
-3. Select the :strong:`Infrastructure Monitoring` tab.
-
-You can see a chart showing your current usage numbers for hosts, containers, custom metrics, and high-resolution metrics. Below the chart, you might see additional charts representing usage trends that you can customize to show different data or different time periods.
-
-Download a usage report
--------------------------
-
-To view usage reports available for download:
-
-1. Log in to Splunk Observability Cloud.
-
-2. In the left navigation menu, select :menuselection:`Settings > Subscription Usage`.
-
-3. Select the :strong:`Infrastructure Monitoring` tab.
-
-4. Click :guilabel:`View detailed usage reports`.
-
-5. Click a report link on the :guilabel:`Usage` tab or :guilabel:`Usage Breakdown` tab to download it as a tab-delimited text file. In some browsers, you might have to right-click on a report to save the report.
-
-.. note:: If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics that Infrastructure Monitoring monitors for you, older reports on the :guilabel:`Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
+If you have switched from a DPM-based subscription plan to a plan based on the number of hosts or metrics you monitor with Infrastructure Monitoring, older reports on the :guilabel:`Usage` tab indicate that they represent DPM-based data. Reports on the :guilabel:`Usage Breakdown` tab are not available for dates before changing your subscription.
 
 .. _summary-by-month:
 
 Monthly usage report
-====================
+=============================
 
 This report is available on the :guilabel:`Usage` tab. For each hour within the month (or month to date, for the current month), this report shows the number of hosts and containers monitored and the number of custom metrics and high-resolution metrics sent to Infrastructure Monitoring. This report follows your usage period and uses the month when a usage period starts as the label in the report link. For example, if your usage period begins on the 10th of the month, then a link for 'March 2022' covers from March 10 through April 9, 2022.
 
@@ -172,12 +142,11 @@ The following table explains the different columns in an hourly usage detail rep
 
 .. list-table::
    :header-rows: 1
-   :width: 100
+   :width: 100%
    :widths: 20 80
 
    * - :strong:`Column`
      - :strong:`Description`
-
 
    * - Category Type
      - Type of the MTS category: ``1`` (host) or ``2`` (container).
@@ -214,7 +183,6 @@ The following table explains the different columns in an hourly usage detail rep
 
    * - Subscription
      - Subscription associated with the category, if available.
-
 
 .. _dimension-report:
 
@@ -260,17 +228,15 @@ The following table explains the different columns in a dimension report:
 
 
 .. _metrics-per-dimension:
-
 .. _metrics-by-dimension:
-
-.. _custom-metric-report:
-
-.. _custom-metrics-report:
 
 Older report format
 --------------------------------
 
 The :ref:`dimension-report` is a revised format of the report formerly called the Metrics by Dimension report. If you select a date for the Dimension report earlier than the new format's release, the report you download is formatted like the older Metrics by Dimension report. The old report format provides an aggregate view of the data; that is, it doesn't show different values for different usage metrics (host, container, and so on).
+
+.. _custom-metric-report:
+.. _custom-metrics-report:
 
 Custom metric report
 ===========================
@@ -279,84 +245,3 @@ Available on the :guilabel:`Usage Breakdown` tab, custom metric report shows the
 
 A significant difference about this report is how you can use the No. |nbsp| Custom |nbsp| MTS column. For example, there is a non-zero value in this column. In that case, the metric is designated as a custom metric, and all MTS for this metric are counted towards the quota associated with your Infrastructure Monitoring plan. Knowing how many custom MTS your organization is sending can help you tune your usage accordingly. For example, you might notice some custom metrics that you no longer want to report to Infrastructure Monitoring. Conversely, you might decide to increase the number of custom metrics in your plan, so that you can avoid overage charges. You can use the No. |nbsp| High |nbsp| Resolution |nbsp| MTS column in the same way.
 
-.. _host-overages:
-
-Manage overage charges
-=========================
-
-When you exceed your subscription limits for a sustained period of time during a monthly usage period, Splunk Observability Cloud might charge overage fees to your organization.
-
-.. _calc-monthly-use:
-
-How we calculate monthly usage
------------------------------------
-
-The number of hosts, containers, and other resources that Infrastructure Monitoring monitors can fluctuate significantly over the course of a month. For this reason, Observability Cloud calculates monthly usage by using averages.
-
-- To calculate monthly usage for hosts and containers, Observability Cloud counts the number of unique hosts and containers sending metrics during each hour in the month. It then calculates the average of these counts to determine monthly usage.
-
-- To calculate monthly usage for custom and high-resolution metrics, Observability Cloud counts the number of custom and high-resolution metrics sent during each hour in the month. It then calculates the average of these counts to determine monthly usage.
-
-Overage fees apply to each type of object individually. For example, suppose your subscription plan covers 25 hosts and 10 containers per host, or 250 containers. Let's also suppose that you are over your limits as follows:
-
-- Hosts: 35
-
-  This is 10 hosts more than the subscription limit of 25.
-
-- Containers: 300
-
-  This is 50 containers more than the subscription limit of 250.
-
-In this case, Observability Cloud will charge overage fees for 10 hosts and for 50 containers.
-
-However, note that paying the overage fee for 10 hosts doesn't automatically add 100 containers to your subscription limit and thus accommodate for the 50 additional containers. You must add 10 hosts to your subscription plan, as discussed in :ref:`avoid-fees`, to add support for an additional 100 containers.
-
-.. _detect-subscription-limits:
-
-Create a detector to receive alerts about subscription limits
----------------------------------------------------------------
-
-Overage fees can be as high as 110% of the monthly list price for each element for which you are over your plan's limit. To help avoid overage fees, :ref:`create a detector <create-detectors>` to proactively monitor for potential overages and receive alerts when you are nearing a subscription limit.
-
-When creating the detector, you can use these metrics as signals on the :guilabel:`Alert signal` tab.
-
-.. list-table::
-   :header-rows: 1
-   :width: 100 
-   :widths: 25 75
-
-   *  -  :strong:`Item to alert on`
-      -  :strong:`Metric to use as the detector signal`
-
-   *  -  Hosts
-      -  ``sf.org.numResourcesMonitored``, filtered on the dimension ``resourceType:host``
-
-   *  -  Containers
-      -  ``sf.org.numResourcesMonitored``, filtered on the dimension ``resourceType:container``
-
-   *  -  Custom metrics
-      -  ``sf.org.numCustomMetrics``
-
-   *  -  High-resolution metrics
-      -  ``sf.org.numHighResolutionMetrics``
-
-Also, consider using one of the following conditions on the :guilabel:`Alert condition` tab:
-
-- :ref:`Static Threshold<static-threshold>` condition: Set the threshold to a relatively high percentage of your limit.
-
-- :ref:`Resource Running Out<resource-running-out>` condition: In :guilabel:`Alert settings`, set :guilabel:`Capacity` to your limit. In :guilabel:`Alert settings`, select :guilabel:`Show advanced settings`, set the :guilabel:`Double EWMA` option to :guilabel:`Yes`.
-
-.. _avoid-fees:
-
-How to avoid overage fees
--------------------------------
-
-If you are approaching or over your limit in any area, you have a few options available to avoid overage fees:
-
-* Monitor fewer hosts, send in fewer custom metrics, and so forth. 
-* Re-evaluate the size your subscription, increasing your limits to match your need for hosts, containers, custom metrics, or high-resolution metrics.
-* If you have Enterprise Edition, you can manage costs associated with sending in data by setting limits on access tokens. See :ref:`admin-manage-usage` for more information.
-* If you have a Standard Edition pricing plan, you can upgrade your subscription to the Enterprise Edition, which includes support for monitoring more containers, custom metrics, and high-resolution metrics per host. 
-* Purchase support for increasing your limits on any of these items. 
-  
-To get help with understanding which option is best for your organization, contact :ref:`support`.
