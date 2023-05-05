@@ -19,13 +19,13 @@ Admin users in your Splunk Observability Cloud organization can view the usage i
 Access the Subscription Usage page
 =============================================================================
 
+In DPM subscription plans all metrics are categorized as custom, regardless of their origin. 
+
 Go to :menuselection:`Settings > Subscription Usage > Infrastructure Monitoring` to see a usage chart that shows average and maximum DPM for the current usage period. Hovering over different points in the chart shows actual values below the chart. To see average and maximum usage for a previous period, choose the desired period from the dropdown menu.
 
 .. image:: /_images/admin/dpm-usage-max.png
       :alt: Maximum usage chart for the usage period from Nov 1 - Dec 1
       :width: 85%
-
-In DPM subscription plans all metrics are categorized as custom. 
 
 View and download usage reports
 -------------------------------------------------------------------
