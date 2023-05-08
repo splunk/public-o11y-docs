@@ -3,10 +3,10 @@
 Copy and customize an AutoDetect detector
 ******************************************************
 
-When you customize an AutoDetect detector, Splunk Observability Cloud creates a copy of the original detector for you to apply the customizations.
+You copy and customize an AutoDetect detector if you want to modify it because AutoDetect detectors are read-only. When you customize an AutoDetect detector, Splunk Observability Cloud creates a copy of the original detector for you to apply the customizations.
 
 - Any changes you make to the customized detector don't apply to the original AutoDetect detector.
-- Customized detectors created from AutoDetect detectors count toward the maximum numbers of detectors your organization can have. To learn more about detectors limit, see :ref:`maximum-number-of-detectors-per-org`.
+- Customized detectors created from AutoDetect detectors count toward the maximum numbers of detectors your organization can have. To learn more about the detectors limit, see :ref:`maximum-number-of-detectors-per-org`.
 - The default limit for customized detectors per AutoDetect detector is 15. If you want to increase this limit, contact support for help.
 
 To customize a copy of an AutoDetect detector, do the following:
