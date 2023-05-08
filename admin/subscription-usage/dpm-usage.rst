@@ -11,7 +11,7 @@ Infrastructure Monitoring subscription usage (DPM plans)
 
    This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
 
-Admin users in your Splunk Observability Cloud organization can view the usage information for the organization as a whole. 
+Observability Cloud provides a summary and detailed subscription usage reports to help you understand and manage the data you monitor with Infrastructure Monitoring. This information is available to Admin users only. 
 
 .. _dpm-using-page:
 .. _dpm-usage-report:
@@ -19,13 +19,13 @@ Admin users in your Splunk Observability Cloud organization can view the usage i
 Access the Subscription Usage page
 =============================================================================
 
+In DPM subscription plans all metrics are categorized as custom, regardless of their origin. 
+
 Go to :menuselection:`Settings > Subscription Usage > Infrastructure Monitoring` to see a usage chart that shows average and maximum DPM for the current usage period. Hovering over different points in the chart shows actual values below the chart. To see average and maximum usage for a previous period, choose the desired period from the dropdown menu.
 
 .. image:: /_images/admin/dpm-usage-max.png
       :alt: Maximum usage chart for the usage period from Nov 1 - Dec 1
       :width: 85%
-
-In DPM subscription plans all metrics are categorized as custom. 
 
 View and download usage reports
 -------------------------------------------------------------------
@@ -44,6 +44,8 @@ Observability Cloud provides you with the following summary reports to help you 
 -  :ref:`datapoints-per-dimension-report`. Shows on a daily basis the number of data points and time series for a given dimension value, as well as its average reporting frequency (resolution). It is useful for understanding the nature of the data your organization is sending so you can tune it accordingly. For example, you might notice that there are some metrics which you do not want to send at all, and conversely, you might see that there are some metrics that you want to send at a higher resolution.
 
 All reports are tab-separated text files and are designed to be imported into a spreadsheet application, such as Microsoft Excel, Google Sheets, and Apple Numbers.
+
+You can also request on demand reports with detailed information about metric time series (MTS). See :ref:`on-demand-report-dpm` for more information.
 
 .. _datapoints-per-minute-detail-report:
 
@@ -124,5 +126,10 @@ Using the report
 
 -  Hosts and instances: Finally, many people find the host, instanceId or similar dimensions worthwhile, as hosts or instances are often associated with different stages or environments. For example, you might decide that you want to have fewer metrics coming in from your test environment, and more from production. Knowing which hosts map to which stage or environment gives you insight into this question, and lets you manage your data submission accordingly.
 
+.. _on-demand-report-dpm:
 
+On demand reports
+===========================
+
+To get a detailed breakdown of the MTS you've created and use, you can request a usage report for a specific time interval by contacting your tech support member or your account team. Learn more at :ref:`metrics-usage-report`.
 
