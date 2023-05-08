@@ -314,7 +314,7 @@ Traces that happen asynchronously, such as user interactions that result in a pr
 -  ``MessagePort``
 -  Hash-based routers
 
-To asynchronous trace linking is enabled by default. In case of compatibility issues you can disable it by setting the ``context.async`` property to ``false``.
+Asynchronous trace linking is activated by default. In case of compatibility issues you can disable it by setting the ``context.async`` property to ``false``.
 
 The context manager allows Splunk RUM to link requests executed when a component is first rendered to the user interaction that caused the application to add the component to the page. ``XMLHttpRequest`` events and Fetch API events through promise methods are patched to preserve the parent context, so subsequent requests link to their parents.
 
@@ -323,7 +323,7 @@ Limitations
 
 The following limitations apply when using asynchronous tracing:
 
-- ``async/await`` functions aren't supported. You down-compile the code using Babel and targeting older browsers.
+- ``async/await`` functions aren't supported. Down-compile the code using Babel and targeting older browsers.
 
    .. code-block:: javascript
 
