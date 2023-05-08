@@ -196,6 +196,9 @@ The Browser RUM agent collects the following data using the ``webvitals`` instru
    * - ``cls``
      - Cumulative Layout Shift
      - Measures visual stability by capturing the sum of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page. A layout shift occurs any time a visible element changes its position from one rendered frame to the next.
+   * - ``inp``
+     - Interaction to Next Paint
+     - Measures responsiveness by observing the latency of all interactions a user has done on the page and reports the value which most interactions were faster of.
 
 .. _browser-rum-data-resources-after-load:
 
