@@ -15,6 +15,10 @@ using their Google credentials.
 
 Before you begin configuring the Google SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
+Prerequisite
+===================
+To complete the tasks in this topic you must have the admin role in your organization.
+
 To configure a Google SSO integration, you must be an administrator for your organization.
 To learn more, see :new-page-ref:`manage_admin-access`.
 
@@ -27,16 +31,16 @@ To learn more, see :new-page-ref:`manage_admin-access`.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for :guilabel:`Google Sign-In`.
 #. Select the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.
-#. To add Google SSO for a new domain, click :guilabel:`Add Domain`.
+#. To add Google SSO for a new domain, select :guilabel:`Add Domain`.
 
 #. A Google dialog box appears. Select the email address associated with the Google domain that you want to add. For example, if you select the Google account ``myAddress@myGoogleDomain.com``, you add ``myGoogleDomain.com`` as the authenticated domain for logging in.
 
 #. Exit the dialog box. The domain appears in the list of domains for the Google SSO integration.
    Anyone who has credentials for that domain can use them to log in to Observability Cloud.
 
-If at least one Google domain has access to your organization, the option to sign in
+If at least one Google domain has access to your organization, the option to log in
 with Google appears on the Observability Cloud login screen. If your organization
-has a :ref:`custom URL<custom-url>`, the option to sign in with Google also appears on
+has a :ref:`custom URL<custom-url>`, the option to log in with Google also appears on
 the custom URL login page.
 
 To remove a Google domain's login access:
@@ -46,8 +50,8 @@ To remove a Google domain's login access:
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for :guilabel:`Google Sign-In`.
-#. Click the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.
-#. Click the "x" for the domain you want to remove.
+#. Select the :guilabel:`Google Sign-In` tile to open the Google Sign-In page.
+#. Select the "x" for the domain you want to remove.
 
 
 .. TO-DO: Need a test account in order to figure out how to document integration-specific entity ID.
