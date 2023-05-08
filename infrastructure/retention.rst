@@ -81,6 +81,8 @@ These rollups are retained at different resolutions depending on how long ago th
 Retention
 ----------------------------------------------------------------------------------
 
+Retention period is officially managed in days since the length of each month is different. Therefore, the number of months is only an approximation to the number of days in the actual retention period.
+
 The following table shows how long data is retained at different resolutions.
 
 .. list-table::
@@ -98,7 +100,6 @@ The following table shows how long data is retained at different resolutions.
       -  ~13 months (384 days)
       -  ~13 months (384 days)
 
-.. note::
-   Retention period is officially managed in days since the length of each month is different. Therefore, the number of months is only an approximation to the number of days in the actual retention period.
-
 For more information on rollups in general, and how they apply to charts and detectors, see :ref:`rollups`.
+
+.. note:: Custom events are retained in the platform for a year.

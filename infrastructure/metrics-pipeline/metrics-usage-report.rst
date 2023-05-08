@@ -37,7 +37,7 @@ Metric identifiers
      - The name of the metric
    
    * - Category type 
-     - The category of the metric, in the format of a number. It only applies to Host-based subscription plans. In DPM subscription plans, all metrics are considered custom.
+     - The category of the metric, in the format of a number. It only applies to host-based subscription plans. In DPM subscription plans, all metrics are considered custom.
 
 See the following table for more information on metric category types. For more information, see :ref:`metrics-category`.
 
