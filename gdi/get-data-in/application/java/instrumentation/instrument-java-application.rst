@@ -293,4 +293,4 @@ To reduce the risk of issues with an upgrade, do the following:
 - Never put untested code into production. Verify that the new build works in a staging or pre-production environment before promoting it to production. Don't use snapshot builds in production.
 - Use canary instances. Let the canaries operate with the code before releasing the code to production. Run the canaries for at least a few hours, and preferably for a few days.
 - Minimize the number of dependencies, including instrumentation, that change in a given release. Determining the root cause of a problem after upgrading multiple dependencies at the same time can be difficult.
-- Don't do automatic upgrades. Pin version numbers in your build pipeline.
+- Pin version numbers in your build pipeline. Don't use the ``latest`` URL in automated processes.
