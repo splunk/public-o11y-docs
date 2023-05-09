@@ -106,13 +106,13 @@ Each of the connection pools reports a subset of the following metrics:
   * - Metric
     - Type
     - Description
-  * - ``db.client.connections.usage``
+  * - ``db.client.connections.usage`` (Experimental)
     - Gauge
     - Number of connections that are currently in the state described by the ``state`` attribute.
-  * - ``db.client.connections.max``
+  * - ``db.client.connections.max`` (Experimental)
     - Gauge
     - Maximum number of open connections allowed.
-  * - ``db.client.connections.wait_time``
+  * - ``db.client.connections.wait_time`` (Experimental)
     - Timer
     - Time it took to obtain an open connection from the pool.
 
@@ -125,7 +125,7 @@ The following attributes are available:
 
   * - Tag
     - Value
-  * - ``pool.name``
+  * - ``pool.name`` (Experimental)
     - Name of the connection pool. Applies to all connection pool metrics.
-  * - ``state``
+  * - ``state`` (Experimental)
     - State of the connection. Can be ``idle`` or ``used``. Only applies to the ``db.client.connections.usage`` metric.
