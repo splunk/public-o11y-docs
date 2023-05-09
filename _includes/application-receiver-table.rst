@@ -1,7 +1,7 @@
 .. list-table::
    :header-rows: 1
    :widths: 50 16 16 16
-   :width: 100
+   :width: 100%
    :class: monitor-table
 
    * - :strong:`Data source`
@@ -94,16 +94,6 @@
      -
      -
 
-   * - :ref:`CPUFreq <cpufreq>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Hadoop JMX <collectd-hadoopjmx>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
      - :strong:`X`
      -
@@ -149,6 +139,11 @@
      -
      -
 
+   * - :ref:`CPUFreq <cpufreq>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Databricks Receiver <databricks_receiver>`  
      - :strong:`X`
      -
@@ -184,7 +179,7 @@
      -
      - :strong:`X`
 
-   * - :ref:`Exec Input <telegraf-exec>`
+   * - :ref:`Exec Input <exec-input>`
      - :strong:`X`
      -
      - :strong:`X`
@@ -194,7 +189,7 @@
      -
      -
 
-   * - :ref:`Free disk space <filesystems>`
+   * - :ref:`Free disk space (filesystems) <filesystems>`
      - :strong:`X`
      -
      -
@@ -235,6 +230,11 @@
      -
 
    * - :ref:`Hadoop <hadoop>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Hadoop JMX <hadoopjmx>`
      - :strong:`X`
      -
      -

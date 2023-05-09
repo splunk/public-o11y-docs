@@ -7,7 +7,7 @@ Create and configure incident policies
 .. meta::
    :description: Steps to create and configure incident policies to organize incidents for Incident Intelligence in Splunk Observability Cloud.
 
-Use incident policies to organize incidents depending on the impacted environmental component, for example, your web application service or checkout service. Begin by creating an incident policy. Then, route alerts to the incident policy. Next, specify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident triggers.
+Use incident policies to organize incidents depending on the impacted environmental component, for example, your web application service or checkout service. Begin by creating an incident policy. Then, route alerts to the incident policy. Next, identify which alerts create an incident and how alerts are grouped into incidents. Finally, create incident workflows with escalating steps to determine who is notified to respond when a new incident triggers.
 
 .. _ii-create-incident-policy:
 
@@ -61,14 +61,25 @@ After you configure which alerts are routed to your incident policy, configure h
 Configure how alerts are grouped
 ====================================
 
-Use alert grouping to manage which alerts create an incident and how alerts are grouped into incidents. Alert grouping is specific to each incident policy and you can customize it to create the workflow that works for you. You can use alert severity to determine if an incident is created and also group alerts by time period. To configure alert grouping, follow these steps:
+Use alert grouping to manage how alerts are grouped into incidents and which alerts trigger a new incident. Alert grouping is specific to each incident policy and you can customize it to create the workflow that works for you. 
+
+ To configure alert grouping, follow these steps:
 
 #. In Incident Intelligence, select :guilabel:`Incident Management`.
-#. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping rule.
-#. On the :guilabel:`Alert grouping` tab, select the minimum severity level you want to require for an incident to be triggered in the list next to :guilabel:`Trigger an incident when alerts reach severity level`.
-#. If you want to group alerts into incidents, select :guilabel:`Group alerts from the same time period into incidents`, and then select a time period between 10 minutes and 24 hours from the list next to :guilabel:`Create a new incident if there is a pause in alerts for`.
-#. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. If you want to filter on another field enter that field name. 
-#. Select :guilabel:`Save alert grouping`.
+#. Select :guilabel:`Incident policies` and then the incident policy you want to add alert grouping conditions to. Each incident policy can have one alert grouping configuration.
+#. Select the :guilabel:`Alert grouping` tab.
+#. Under :guilabel:`Alert metadata grouping (optional)`, select metadata fields you want to group by. The fields you are using in your alert routing conditions are available to select. However any custom field that is common in the alert routing metadata can be entered as a custom value. If you want add a field that is not displayed, enter the field name and select it from the dropdown to add it as a selected metadata field. Any custom field that is common in the alert routing metadata can be entered as a ``group by`` field.
+#. In the :guilabel:`Incident breaking conditions` section, define the conditions that cause an incident to stop accumulating new alerts. When any one of the conditions you set in this section are met any subsequent alerts will trigger a new incident instead of being added to the existing incident.
+
+   #. To break the existing incident if there has been a pause in alerts that lasts for the time duration you specify, select the pause duration from the :guilabel:`Select time value` drop down. Note: If you choose a time duration that is too short, you might encounter the situation where every alert triggers a new incident.  This is not generally desirable if the alerts are coming in within a short time span.
+   
+   #. To break the existing incident when an alert with specific values are included, select :guilabel:`Add Filters` and choose the key-value pair which will prevent new alerts coming to the existing incident.
+   
+   #. To break the existing incident after a specific amount of time has passed for the current alert, select that time duration in the :guilabel:`Select time value` dropdown.
+   
+   #. To break the existing incident after a specific number of alerts has been received in an incident, enter that value in the :guilabel:`The number of alerts in an incident reaches` field.
+
+#. Select :guilabel:`Save`.
 
 After you manage which alerts create an incident and how alerts are grouped into incidents, configure incident workflows for your incident policy.  
 
