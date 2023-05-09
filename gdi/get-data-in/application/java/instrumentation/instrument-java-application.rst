@@ -272,3 +272,25 @@ Instrument Lambda functions
 -----------------------------------------------------------
 
 You can instrument AWS Lambda functions using the Splunk OpenTelemetry Lambda Layer. See :ref:`instrument-aws-lambda-functions` for more information. 
+
+.. _upgrade-java-instrumentation:
+
+Upgrade the Splunk Distribution of OpenTelemetry Java
+============================================================
+
+New releases of the Splunk Distribution of OpenTelemetry Java happen after a new upstream release, or when new features and enhancements are available.
+
+Upgrade to each new version of the Splunk Distribution of OpenTelemetry Java after it's released. To find out about new releases, watch the GitHub repository at :new-page:`https://github.com/signalfx/splunk-otel-java/releases <https://github.com/signalfx/splunk-otel-java/releases>`
+
+.. note:: See the [versioning document](https://github.com/signalfx/splunk-otel-java/blob/main/VERSIONING.md) to learn more about version numbers. Major versions contain a large number of changes, which might result in increased risk to your production environment. Minor version changes indicate common releases, which contain a modest number of changes Patch releases are infrequent and contain specific fixes or enhancements.
+
+Best practices for upgrades
+-------------------------------------
+
+To reduce the risk of issues with an upgrade, do the following:
+
+- Read the release notes and changelog for each release to determine if the release has changes that might affect your environment. Pay attention to mentions of libraries, frameworks, and tools that your software uses.
+- Never put untested code into production. Verify that the new build works in a staging or pre-production environment before promoting it to production. Don't use snapshot builds in production.
+- Use canary instances. Let the canaries operate with the code before releasing the code to production. Run the canaries for at least a few hours, and preferably for a few days.
+- Minimize the number of dependencies, including instrumentation, that change in a given release. Determining the root cause of a problem after upgrading multiple dependencies at the same time can be difficult.
+- Don't do automatic upgrades. Pin version numbers in your build pipeline.
