@@ -282,7 +282,7 @@ New releases of the Splunk Distribution of OpenTelemetry Java happen after a new
 
 Upgrade to each new version of the Splunk Distribution of OpenTelemetry Java after it's released. To find out about new releases, watch the GitHub repository at :new-page:`https://github.com/signalfx/splunk-otel-java/releases <https://github.com/signalfx/splunk-otel-java/releases>`
 
-.. note:: See the [versioning document](https://github.com/signalfx/splunk-otel-java/blob/main/VERSIONING.md) to learn more about version numbers. Major versions contain a large number of changes, which might result in increased risk to your production environment. Minor version changes indicate common releases, which contain a modest number of changes Patch releases are infrequent and contain specific fixes or enhancements.
+.. note:: See the :new-page:`versioning document <https://github.com/signalfx/splunk-otel-java/blob/main/VERSIONING.md>` in GitHub to learn more about version numbers. Major versions contain a large number of changes, which might result in increased risk to your production environment. Minor version changes indicate common releases, which contain a modest number of changes Patch releases are infrequent and contain specific fixes or enhancements.
 
 Best practices for upgrades
 -------------------------------------
