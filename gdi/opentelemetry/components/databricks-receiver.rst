@@ -59,6 +59,8 @@ configuration file. For example:
        metrics:
          receivers: [databricks]
 
+.. _spark-substytem-databricks:
+
 Spark subsystem configuration
 ----------------------------------
 
@@ -91,6 +93,15 @@ The following table shows the configuration options for the Databricks receiver:
      - Yes
    * - ``token``
      - An access token to authenticate to the Databricks API. See :new-page:`Authentication using Databricks personal access tokens <https://docs.databricks.com/dev-tools/api/latest/authentication.html>` on the Databricks documentation site for more information. 
+     - Yes
+   * - ``spark_org_id``
+     - Spark Org ID. See :ref:`spark-substytem-databricks` for information on how to found this value.
+     - Yes
+   * - ``spark_endpoint``
+     - Spark API endpoint, composed of protocol, hostname, and, optionally, the port. See :ref:`spark-substytem-databricks` for information on how to found this value.
+     - Yes
+   * - ``spark_ui_port``
+     - Spark UI Port. Usually, the port is ``40001``. See :ref:`spark-substytem-databricks` for information on how to found this value.
      - Yes
    * - ``collection_interval``
      -  How often this receiver fetches information from the Databricks API. Must be a string readable by ``time.ParseDuration``. The default value is ``30s``.
