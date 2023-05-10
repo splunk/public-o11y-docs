@@ -1,25 +1,14 @@
 (genericjmx)=
+
 # GenericJMX
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the GenericJMX monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `genericjmx` monitor to expose metrics on Java Management Extensions (JMX), a generic framework to provide and query management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used and threads. For a more flexible alternative, use [the JMX monitor](jmx).
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `genericjmx` monitor using the Smart Agent Receiver. For a more flexible alternative, use [the JMX monitor](jmx).
+This integration is only available on Kubernetes and Linux.
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
-
-The Generix JMX integration monitors Java services that expose metrics on Java Management Extensions (JMX) using the GenericJMX plugin. The GenericJMX plugin reads Managed Beans (mBeans) from an MBeanServer using JMX. The monitor uses an embedded Java runtime.
-
-The JMX is a generic framework to provide and query management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used and threads. These basic performance values can therefore be collected for every Java process without any support in the Java process itself.
-
-Advanced Java processes can use the JMX interface to provide performance information themselves. The Apache Tomcat application server, for example, provides information on the number of requests processed, the number of bytes sent, processing time, and thread counts.
-
-> _**Note:**_ C-based collectd plugins like this one are not available on Windows.
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -34,6 +23,10 @@ Advanced Java processes can use the JMX interface to provide performance informa
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/genericjmx:
@@ -41,7 +34,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the monitor activation, you must also include the `smartagent/genericjmx` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -49,8 +42,6 @@ service:
     metrics:
       receivers: [smartagent/genericjmx]
 ```
-
-See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
 
 ### Configuration settings
 
@@ -72,7 +63,6 @@ The following table shows the configuration options for this monitor:
 | `mBeanDefinitions` | no | `map of objects` (see the following table) | Specifies how to map JMX MBean values to metrics. Specific service monitors such as Cassandra, Kafka, or ActiveMQ are pre-loaded with a set of mappings, and any that you add in this option will be merged with those. See <a href="https://collectd.org/documentation/manpages/collectd-java.5.shtml#genericjmx_plugin" target="_blank">GenericJMX plugin</a> for more details. |
 
 <br>
-
 
 The **nested** `mBeanDefinitions` configuration object has the following fields:
 
@@ -97,24 +87,6 @@ The **nested** `values` configuration object has the following fields:
 | `attribute` | no | `string` | Sets the name of the attribute from which to read the value. You can access the keys of composite types by using a dot to concatenate the key name to the attribute name. For example,  “attrib0.key42”. If `table` is set to `true`, path must point to a composite type, otherwise it must point to a numeric type. |
 | `attributes` | no | `list of strings` | The plural form of the `attribute` config above. Used to derive multiple metrics from a single MBean. |
 
-### Example Configuration
-This example configuration gets the thread count from a standard JMX MBean available on all Java JMX applications:
-
-```yaml
-monitors:
- - type: collectd/genericjmx
-   host: my-java-app
-   port: 7099
-   mBeanDefinitions:
-     threading:
-       objectName: java.lang:type=Threading
-       values:
-       - type: gauge
-         table: false
-         instancePrefix: jvm.threads.count
-         attribute: ThreadCount
-```
-
 ## Metrics
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/genericjmx/metadata.yaml"></div>
@@ -125,6 +97,11 @@ monitors:
 ```
 
 ## Troubleshooting
+
+```{include} /_includes/troubleshooting.md
+```
+
+### Exposed ports
 
 The following Java properties show how to expose JMX ports to inbound connections. For more information, see Monitoring and Management Using JMX Technology in the Java documentation.
 
@@ -160,7 +137,3 @@ Creating MBean server connection failed: java.rmi.ConnectException: Connection r
 ```
 This indicates that the JMX connect port was reached successfully, but the RMI port that it was directed to is being blocked, probably by a firewall. Make sure the `com.sun.management.jmxremote.rmi.port` property in your Java app is set to the same port as the JMX connect port. There might be other variations of the error message that say Connection reset or Connection refused which indicate a similar cause.
 
-## Get help
-
-```{include} /_includes/troubleshooting.md
-```

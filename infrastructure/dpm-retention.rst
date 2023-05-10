@@ -72,7 +72,9 @@ This time, or age, controls the data retention policy for the time series. To le
 Resolution and data retention policies
 =============================================================================
 
-Data is retained at different resolutions depending on how long ago the data was received. The policies for data retention are:
+Data is retained at different resolutions depending on how long ago the data was received. Retention period is officially managed in days since the length of each month is different. Therefore, the number of months is only an approximation to the number of days in the actual retention period.  
+
+The policies for data retention are:
 
 - 1 second for 8 days (to allow week over week comparisons)
 
@@ -82,7 +84,4 @@ Data is retained at different resolutions depending on how long ago the data was
 
 - 1 hour for 384 days (approximately 13 months, to allow year over year comparisons)
 
-.. note::
-   Retention period is officially managed in days since the length of each month is different. Therefore, the number of months is only an approximation to the number of days in the actual retention period.
-
-
+.. note:: Custom events are retained in the platform for a year.

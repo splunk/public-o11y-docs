@@ -169,15 +169,15 @@ For example:
       "Effect": "Allow",
       "Action": [
         "cloudwatch:GetMetricStream",       
-        "cloudwatch:ListMetrics"
+        "cloudwatch:ListMetrics",
         "cloudwatch:ListMetricStreams",
         "cloudwatch:PutMetricStream",
         "cloudwatch:DeleteMetricStream",
         "cloudwatch:StartMetricStreams",
-        "cloudwatch:StopMetricStreams"
+        "cloudwatch:StopMetricStreams",
         "ec2:DescribeRegions",
         "organizations:DescribeOrganization",
-        "tag:GetResources",
+        "tag:GetResources"
       ],
       "Resource": "*"
     },

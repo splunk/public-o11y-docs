@@ -1,18 +1,12 @@
-(ecs-metadata)=
+(amazon-ecs-metadata)=
 
-# Amazon ECS Task Metadata
+# Amazon ECS Task Metadata endpoint
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the ECS metadata monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `ecs-metadata` monitor type to read metadata and Docker stats from Amazon ECS Task Metadata Endpoint version 2. This integration does not currently support CPU share and quota metrics.
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `ecs-metadata` monitor type by using the Smart Agent Receiver.
-
-This integration reads container stats from Amazon ECS Task Metadata Endpoint version 2. The task metadata endpoint retrieves various task metadata and Docker stats.
-
-This monitor does not currently support CPU share/quota metrics.
-
-This monitor is available on Linux and Windows.
+This integration is only available on Kubernetes and Linux. 
 
 ## Benefits
 
@@ -21,13 +15,17 @@ This monitor is available on Linux and Windows.
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
 
 ```{include} /_includes/configuration.md
 ```
+
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -36,7 +34,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the integration, include the monitor in a `metrics` pipeline. To do this, add the monitor item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -56,7 +54,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

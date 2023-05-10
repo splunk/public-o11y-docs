@@ -72,7 +72,7 @@ Use the following settings to configure the Browser RUM agent:
      - Domain used for session tracking. For example, if you have sites on both ``foo.example.com`` and ``bar.example.com``, setting ``cookieDomain`` to ``example.com`` allows both sites to use the same session identifier. See :ref:`browser-rum-cookies` for more information.
    * - ``context.async``
      - Boolean
-     - Activates the asynchronous context manager. The default value is ``false``. See :ref:`browser-rum-async-traces`.
+     - Activates the asynchronous context manager. The default value is ``true``. See :ref:`browser-rum-async-traces`.
    * - ``exporter.onAttributesSerializing``
      - ``(a: SpanAttributes, s?: Span) => SpanAttributes``
      - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample use case is :ref:`rum-browser-redact-pii`. 
@@ -314,7 +314,7 @@ Traces that happen asynchronously, such as user interactions that result in a pr
 -  ``MessagePort``
 -  Hash-based routers
 
-To activate asynchronous traces, set the ``context.async`` property to ``true``.
+Asynchronous trace linking is activated by default. In case of compatibility issues you can disable it by setting the ``context.async`` property to ``false``.
 
 The context manager allows Splunk RUM to link requests executed when a component is first rendered to the user interaction that caused the application to add the component to the page. ``XMLHttpRequest`` events and Fetch API events through promise methods are patched to preserve the parent context, so subsequent requests link to their parents.
 
@@ -323,7 +323,7 @@ Limitations
 
 The following limitations apply when using asynchronous tracing:
 
-- ``async/await`` functions aren't supported. You can connect them using Babel as in the following example:
+- ``async/await`` functions aren't supported. Down-compile the code using Babel and targeting older browsers.
 
    .. code-block:: javascript
 
