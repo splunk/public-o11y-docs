@@ -1,7 +1,7 @@
 Realm,Provider,Location ID,Display Name,World Region,Country,IP Addresses
-US1,Amazon,aws-af-south-1,AWS - Cape Town,Africa,South Africa, 13.245.124.240 ,  13.245.204.138 ,  13.246.113.149 "
-US1,Amazon,aws-ap-east-1,AWS - Hong Kong,Asia Pacific,China," 18.166.112.231 ,  43.198.5.123 ,  18.166.219.194 "
-US1,Amazon,aws-ap-northeast-1,AWS - Tokyo,Asia Pacific,Japan," 18.176.81.242 ,  35.76.96.145 ,  3.113.130.19 "
+US1,Amazon,aws-af-south-1,AWS - Cape Town,Africa,South Africa, "13.245.124.240 ,  13.245.204.138 ,  13.246.113.149 "
+US1,Amazon,aws-ap-east-1,AWS - Hong Kong,Asia Pacific,China, "18.166.112.231 ,  43.198.5.123 ,  18.166.219.194 "
+US1,Amazon,aws-ap-northeast-1,AWS - Tokyo,Asia Pacific,Japan, " 18.176.81.242 ,  35.76.96.145 ,  3.113.130.19 "
 US1,Amazon,aws-ap-northeast-2,AWS - Seoul ,Asia Pacific,South Korea," 3.34.218.25 ,  3.39.93.238 ,  3.39.197.189 "
 US1,Amazon,aws-ap-northeast-3,AWS - Osaka,Asia Pacific,Japan," 13.208.114.54 ,  15.152.29.179 ,  15.152.59.199 "
 US1,Amazon,aws-ap-south-1,AWS - Mumbai,Asia Pacific,India," 15.206.216.145 ,  65.2.77.113 ,  13.127.81.235 "
