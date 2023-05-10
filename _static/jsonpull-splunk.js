@@ -174,17 +174,10 @@ $(document).ready(function () {
 
             function traverseMetrics(mainObj, data, preRef = '') {
                 console.log(data['name']);
-                let id = "monitor-stats-";
-                if (data['name']) {
-                    id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
-                    Object.freeze(id);
-                } else if (data['type']) {
-                    id = "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
-                    Object.freeze(id);
-                } else {
-                    id = "monitor-stats-" + Math.floor(Math.random() * 10000);
-                    Object.freeze(id);
-                }
+                const id = data['name'] ? "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "") :
+                           // If the name field is not available, use type or create random id 
+                           (data['type'] ? "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "") :
+                           "monitor-stats-" + Math.floor(Math.random() * 10000));
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
 
