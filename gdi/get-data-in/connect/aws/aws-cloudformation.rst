@@ -7,6 +7,8 @@ Using CloudFormation templates
 .. meta::
   :description: CloudFormation templates for AWS in Splunk Observability Cloud.
 
+You need to install the AWS integration first before you use any Cloudformation template. 
+
 Decide which CloudFormation template to use depending on your deployment method (for example, per AWS region or per AWS account) and integration type (for example, logs only, metric streams only, or both). Even if you don't intend to use both logs and metrics, you can safely deploy a CloudFormation template, since unused infrastructure doesn't generate costs.
 
 From the :strong:`CloudFormation templates` table, select the QuickLink for a template with support for metric streams or logs. The QuickLink automatically opens the AWS Management Console in the last region you used, but you can select any other region in the AWS Management Console.
