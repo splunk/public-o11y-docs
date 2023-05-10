@@ -7,7 +7,7 @@ Databricks receiver
 .. meta::
   :description: The Databricks receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Databricks using the Databricks API.
   
-The Databricks receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Databricks using the Databricks API. Use this integration to view and monitor the health of your Databricks clusters. The supported pipeline type is ``metrics``.
+The Databricks receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from Databricks using the Databricks API. Use this integration to view and monitor the health of your Databricks clusters. The receiver also generates metrics from the Spark subsystem running in a Databricks instance. The supported pipeline type is ``metrics``.
 
 Benefits
 ===============================
@@ -40,13 +40,14 @@ configuration file with all the mandatory fields, as shown in the following exam
 
 .. code-block:: yaml
 
-  receivers:
-    databricks:
-      instance_name: my-instance
-      endpoint: https://my.host
-      token: abc123
-      collection_interval: 60s
-      max_results: 10
+   databricks:
+     instance_name: my-instance
+     endpoint: https://dbr.example.net
+     token: abc123
+     spark_org_id: 1234567890
+     spark_endpoint: https://spark.example.net
+     spark_ui_port: 40001
+     collection_interval: 10s
 
 To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
 configuration file. For example:
@@ -57,6 +58,18 @@ configuration file. For example:
      pipelines:
        metrics:
          receivers: [databricks]
+
+Spark subsystem configuration
+----------------------------------
+
+To obtain the Spark settings for the receiver configuration, run the following Scala notebook and copy the values into your configuration:
+
+.. code-block:: scala
+
+   %scala  
+   val sparkOrgId = spark.conf.get("spark.databricks.clusterUsageTags.clusterOwnerOrgId")
+   val sparkEndpoint = dbutils.notebook.getContext.apiUrl.get
+   val sparkUiPort = spark.conf.get("spark.ui.port")
 
 Settings
 ======================
