@@ -176,11 +176,14 @@ $(document).ready(function () {
                 console.log(data['name']);
                 let id = "monitor-stats-";
                 if (data['name']) {
-                    const id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
+                    id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
+                    Object.freeze(id);
                 } else if (data['type']) {
-                    const id = "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
+                    id = "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
+                    Object.freeze(id);
                 } else {
-                    const id = "monitor-stats-" + Math.floor(Math.random() * 10000);;
+                    id = "monitor-stats-" + Math.floor(Math.random() * 10000);
+                    Object.freeze(id);
                 }
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
