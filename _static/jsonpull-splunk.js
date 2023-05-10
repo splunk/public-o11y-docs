@@ -173,7 +173,7 @@ $(document).ready(function () {
             }
 
             function traverseMetrics(mainObj, data, preRef = '') {
-                console.log(data['type']);
+                console.log(data['name']);
                 const id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
