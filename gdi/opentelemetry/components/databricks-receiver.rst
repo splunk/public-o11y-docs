@@ -89,7 +89,7 @@ The following table shows the configuration options for the Databricks receiver:
      - A string representing the name of the instance. This value gets set as a ``databricks.instance.name`` resource attribute.
      - Yes
    * - ``endpoint``
-     - The protocol (http or https), hostname, and port for the Databricks API, without a trailing slash.
+     - The protocol (http or https), host name, and port for the Databricks API, without a trailing slash.
      - Yes
    * - ``token``
      - An access token to authenticate to the Databricks API. See :new-page:`Authentication using Databricks personal access tokens <https://docs.databricks.com/dev-tools/api/latest/authentication.html>` on the Databricks documentation site for more information. 
@@ -98,7 +98,7 @@ The following table shows the configuration options for the Databricks receiver:
      - Spark Org ID. See :ref:`spark-substytem-databricks` for information on how to found this value.
      - Yes
    * - ``spark_endpoint``
-     - Spark API endpoint, composed of protocol, hostname, and, optionally, the port. See :ref:`spark-substytem-databricks` for information on how to found this value.
+     - Spark API endpoint, composed of protocol, host name, and, optionally, the port. See :ref:`spark-substytem-databricks` for information on how to found this value.
      - Yes
    * - ``spark_ui_port``
      - Spark UI Port. Usually, the port is ``40001``. See :ref:`spark-substytem-databricks` for information on how to found this value.
