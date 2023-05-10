@@ -135,11 +135,8 @@ $(document).ready(function () {
             }
 
             function traverseFields(mainObj, data, preRef = '', h2Text = '') {
-                if (data['type']) {
-                    let id = "monitor-stats-" + data['type'];
-		    } else {
-		    let id = "monitor-stats-table"; 
-	        }
+                console.log(data['type']);
+                let id = "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 id += idMap[id] > 0 ? '-' + idMap[id] : '';
 
