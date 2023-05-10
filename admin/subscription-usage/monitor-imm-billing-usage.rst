@@ -11,7 +11,7 @@ Infrastructure Monitoring subscription usage (Host and metric plans)
   
   This topic describes general aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team. 
 
-Admin users in your organization can view the subscription usage information for the organization. The application provides a summary and detailed reports to help you understand and manage the data that Infrastructure Monitoring monitors for you. 
+Observability Cloud provides a summary and detailed subscription usage reports to help you understand and manage the data you monitor with Infrastructure Monitoring. This information is available to Admin users only.
 
 .. _about-custom-high-res:
 .. _about-custom:
@@ -67,7 +67,7 @@ Standard and high-resolution metrics
 
 .. _using-page:
 
-View and download Infrastructure Monitoring usage reports
+Access Infrastructure Monitoring usage reports
 ====================================================================
 
 Infrastructure Monitoring usage reports help you understand the amount of data you're sending. Use these reports to manage your costs and ensure you're collecting the correct data.
@@ -123,7 +123,7 @@ The report has six columns:
 .. _summary-including-children:
 
 Monthly usage report (multiple organizations)
-====================================================
+----------------------------------------------------------------
 
 If you have multiple organizations associated with your Infrastructure Monitoring subscription, an option for a summary report that includes information on multiple organizations is also available. Similar to the :ref:`summary-by-month`, this report shows hourly information for hosts, containers, custom metrics, and high-resolution custom metrics. However, this report also includes this data for each organization associated with your subscription.
 
@@ -132,11 +132,7 @@ If you have multiple organizations associated with your Infrastructure Monitorin
 Hourly usage detail report
 ==============================
 
-Available on the :strong:`Usage Breakdown` tab, the hourly usage report shows the information on MTS associated with data points sent from hosts or containers in a given hour. This report contains the MTS category keys and values, along with associated cloud provider metadata.
-
-With this report, you can see all of the MTS categories used within a given hour period.
-
-.. note:: Hourly reports are only available for host-based subscriptions.
+Available on the :strong:`Usage Breakdown` tab, the hourly usage report shows the information on MTS associated with data points sent from hosts or containers in a given hour. This report contains the MTS category keys and values, along with associated cloud provider metadata, within a given hour period.
 
 The following table explains the different columns in an hourly usage detail report.
 
@@ -245,3 +241,9 @@ Available on the :guilabel:`Usage Breakdown` tab, custom metric report shows the
 
 A significant difference about this report is how you can use the No. |nbsp| Custom |nbsp| MTS column. For example, there is a non-zero value in this column. In that case, the metric is designated as a custom metric, and all MTS for this metric are counted towards the quota associated with your Infrastructure Monitoring plan. Knowing how many custom MTS your organization is sending can help you tune your usage accordingly. For example, you might notice some custom metrics that you no longer want to report to Infrastructure Monitoring. Conversely, you might decide to increase the number of custom metrics in your plan, so that you can avoid overage charges. You can use the No. |nbsp| High |nbsp| Resolution |nbsp| MTS column in the same way.
 
+.. _on-demand-report-host:
+
+On demand reports
+===========================
+
+To get a detailed breakdown of the metric time series (MTS) you've created and use, you can request a usage report for a specific time interval by contacting your tech support member or your account team. Learn more at :ref:`metrics-usage-report`.
