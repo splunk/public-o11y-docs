@@ -135,7 +135,7 @@ $(document).ready(function () {
             }
 
             function traverseFields(mainObj, data, preRef = '', h2Text = '') {
-
+                console.log(data['type']);
                 let id = "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "");
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 id += idMap[id] > 0 ? '-' + idMap[id] : '';
@@ -173,7 +173,11 @@ $(document).ready(function () {
             }
 
             function traverseMetrics(mainObj, data, preRef = '') {
-                const id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
+                console.log(data['name']);
+                const id = data['name'] ? "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "") :
+                           // If the name field is not available, use type or create random id 
+                           (data['type'] ? "monitor-stats-" + data['type'].replace(/[^0-9A-Z]+/gi, "") :
+                           "monitor-stats-" + Math.floor(Math.random() * 10000));
                 idMap[id] = (idMap[id] !== undefined) ? (idMap[id] + 1) : 0;
                 const suffix = idMap[id] > 0 ? '-' + idMap[id] : '';
 
