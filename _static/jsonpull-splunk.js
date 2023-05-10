@@ -174,6 +174,7 @@ $(document).ready(function () {
 
             function traverseMetrics(mainObj, data, preRef = '') {
                 console.log(data['name']);
+                let id = "monitor-stats-";
                 if (data['name']) {
                     const id = "monitor-stats-" + data['name'].replace(/[^0-9A-Z]+/gi, "");
                 } else if (data['type']) {
