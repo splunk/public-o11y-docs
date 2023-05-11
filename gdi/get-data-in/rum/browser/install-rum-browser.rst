@@ -75,7 +75,7 @@ Follow these steps to instrument your application with the CDN:
          });
       </script>
 
-   * In the URL of the library, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`. Don't use ``latest`` in production without prior testing.
+   * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`. Don't use ``latest`` in production without prior testing.
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
