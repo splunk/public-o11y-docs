@@ -123,7 +123,7 @@ To do so, follow these steps:
 
 .. code-block:: none
 
-   curl --request GET https://api..signalfx.com/v2/integration/ \
+   curl --request GET https://api.<realm>.signalfx.com/v2/integration?type=AWSCloudWatch&offset=0&limit=50&orderBy=-lastUpdated
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" > integration.json
 
@@ -231,7 +231,7 @@ You'll get something similar to:
 
 .. code-block:: none
 
-   curl --request PUT https://api..signalfx.com/v2/integration/integration-id \
+   curl --request PUT https://api.<realm>.signalfx.com/v2/integration/<integration-id>
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" \
    --data "@integration.json" 
