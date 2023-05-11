@@ -22,9 +22,7 @@ The Browser RUM agent supports the following browser versions:
 - Edge 12 and higher
 - Firefox 36 and higher
 - Safari and Safari iOS 10.1 and higher
-- Internet Explorer 11
-
-Internet Explorer 11 requires the ``splunk-otel-web-legacy.js`` version of the Browser RUM agent.
+- Internet Explorer 11, which requires the ``splunk-otel-web-legacy.js`` version of the Browser RUM agent
 
 All your pages, assets, and requests must be securely loaded over the HTTPS protocol.
 
@@ -66,7 +64,7 @@ Follow these steps to instrument your application with the CDN:
 
    .. code-block:: html
 
-      <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.signalfx.com/o11y-gdi-rum/<version>/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
          SplunkRum.init({
             beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
@@ -76,6 +74,8 @@ Follow these steps to instrument your application with the CDN:
             environment: '<your_environment_name>'
          });
       </script>
+
+   * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
@@ -89,7 +89,9 @@ Follow these steps to instrument your application with the CDN:
 
 #. Add the snippet to the head section of every page you want to monitor in your application.
 
-#. Deploy the changes to your application.
+#. Deploy the changes to your application. Make sure to test the instrumentation in a pre-production environment before deploying to production.
+
+.. caution:: Don't use the ``latest`` version in production without prior testing.
 
 .. _rum-browser-install-self-hosted:
 
@@ -124,7 +126,7 @@ Follow these steps to instrument your application using a self-hosted script:
 
 #. Add the snippet to the head section of every page you want to monitor in your application.
 
-#. Deploy the changes to your application.
+#. Deploy the changes to your application. Make sure to test the instrumentation in a pre-production environment before deploying to production.
 
 .. _rum-browser-install-npm:
 
@@ -166,7 +168,7 @@ Follow these steps to instrument and configure Splunk RUM using npm:
 
 #. Import or require the ``splunk-instrumentation.js`` file before other files to ensure that the instrumentation runs before the application code.
 
-#. Deploy the changes to your application.
+#. Deploy the changes to your application. Make sure to test the instrumentation in a pre-production environment before deploying to production.
 
 .. note:: Make sure the Splunk RUM agent doesn't run in Node.js. To instrument Node.js services for Splunk APM, see :ref:`get-started-nodejs`.
 
@@ -226,7 +228,7 @@ By default, the Splunk Distributions of OpenTelemetry already send the ``Server-
 
 The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM. 
 
- To create a header manually, see :ref:`browser-server-trace-context`.
+To create a header manually, see :ref:`browser-server-trace-context`.
 
 .. note::  When linking sessions from Splunk RUM to Splunk APM while using the Safari browser, note that Safari supports linking XHR and fetch requests to Splunk APM, but doesn't support linking page loads or resource loads to Splunk APM.
 
@@ -260,7 +262,7 @@ Versioning policy
 
 The versioning of the Browser RUM agent follows semantic versioning rules. To have more control over the version you load, see the following versioning policy:
 
-* Use the ``LATEST`` version to use the latest version of the Browser RUM agent. This might not be suitable for manual instrumentation, as breaking API changes might occur between major version changes.
+* Use the ``LATEST`` version to use the latest version of the Browser RUM agent. Don't use in production environments without prior testing. This version might not be suitable for manual instrumentation, as breaking API changes might occur between major version changes.
 * Use ``MAJOR`` versions, for example ``v1``, if you want to receive new features automatically while keeping backward compatibility with the API. This is the default for all production deployments, as well as for npm installations.
 * Use ``MINOR`` versions, for example ``v1.1``, to receive bug fixes while not receiving new features automatically.
 * Use ``PATCH`` versions, for example, ``v1.2.1``, to pin a specific version of the agent for your application.
