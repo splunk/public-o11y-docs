@@ -75,7 +75,7 @@ Follow these steps to instrument your application with the CDN:
          });
       </script>
 
-   * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`. Don't use ``latest`` in production without prior testing.
+   * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
@@ -90,6 +90,8 @@ Follow these steps to instrument your application with the CDN:
 #. Add the snippet to the head section of every page you want to monitor in your application.
 
 #. Deploy the changes to your application. Make sure to test the instrumentation in a pre-production environment before deploying to production.
+
+.. caution:: Don't use the ``latest`` version in production without prior testing.
 
 .. _rum-browser-install-self-hosted:
 
