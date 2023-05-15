@@ -1,5 +1,5 @@
 .. _metric-categories:
-.. _metric-category:
+.. _metrics-category:
 
 *****************************************************************
 Metric categories
