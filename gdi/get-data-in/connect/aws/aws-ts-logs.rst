@@ -25,7 +25,7 @@ To learn more about supported templates, see the :new-page:`README <https://gith
 I created an integration, but I don't see any logs
 ================================================================
 
-If you created the integration recently, it might take some time for the logs to appear in your account. The job that makes your logs notify Splunk AWS Log Collector runs every minute, so it may take a short while to subscribe to a new resource. AWS logs delivery inside AWS (to CloudWatch log groups, or to S3 buckets) and AWS lambda triggering can introduce additional delay. Check AWS documentation for more details. 
+If you created the integration recently, it might take some time for the logs to appear in your account. The job that makes your logs notify Splunk AWS Log Collector runs every minute, so it might take a short while to subscribe to a new resource. AWS logs delivery inside AWS (to CloudWatch log groups, or to S3 buckets) and AWS lambda triggering can introduce additional delay. Check AWS documentation for more details. 
 
 If you still don't see any logs after 15 minutes, check the IAM policy you've used to set up the AWS connection. We recommend using the :ref:`provided IAM policy <aws-iam-policy>`. If you still don't see the logs, please contact :ref:`our support <support>`.
 
