@@ -8,7 +8,7 @@ GetMetricStatistics API deprecation notice
   :description: Deprecation notice for the AWS integration GetMetricStatistics API.
 
 
-.. note:: Splunk will remove support for the ``GetMetricStatistics`` API on May 1, 2023. Follow the instructions in this document to migrate to the ``GetMetricData`` API.
+.. note:: Splunk will remove support for the ``GetMetricStatistics`` API on :strike:`May 1, 2023` **May 23, 2023**. Follow the instructions in this document to migrate to the ``GetMetricData`` API. After this date **only** ``GetMetricData`` API will be used.
 
 Splunk Observability Cloud provides a unified view into metrics, traces, and logs coming from various sources through integrations with third party services, including AWS integrations.
 
