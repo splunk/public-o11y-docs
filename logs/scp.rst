@@ -54,7 +54,7 @@ Splunk Cloud Platform
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search job limit and user search job limit.
 
-      On the :guilabel:`Resources` tab in the :guilabel:`Role search time window limit` section, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days)
+      On the :guilabel:`Resources` tab in the :guilabel:`Role search time window limit` section, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
 
       .. image:: /_images/logs/ResourcesTab2.png
          :width: 100%
