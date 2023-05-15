@@ -36,18 +36,29 @@ Splunk Cloud Platform
 ----------------------------------------------------------------
 3. In Splunk Cloud Platform, follow the instructions in the guided setup for the integration to do the following:
 
-   a. Configure a service account in Splunk Cloud Platform. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect.
+   a. Configure a role in Splunk Cloud Platform for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect.
 
       .. image:: /_images/logs/setupLOC1.png
          :width: 100%
          :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
-      
 
    b. Configure users in the Splunk Cloud Platform.  
    
       .. image:: /_images/logs/setupLOC2.png
          :width: 100%
          :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
+      
+      On the :guilabel:`Resources` tab for the service account, enter the following :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
+
+      .. image:: /_images/logs/ResourcesTab1.png
+         :width: 100%
+         :alt: This screenshot shows recommended configuration for role search job limit and user search job limit.
+
+      On the :guilabel:`Resources` tab in the :guilabel:`Role search time window limit` section, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days)
+
+      .. image:: /_images/logs/ResourcesTab2.png
+         :width: 100%
+         :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
 
    c. Attach the role and the user you created in the integration guided setup.
 
