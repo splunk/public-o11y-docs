@@ -145,7 +145,12 @@ Follow these steps to configure custom wait times for your Browser tests:
 
 The following image shows how to configure a test to go to a URL, wait for 10 seconds, then login. 
 
+.. image:: /_images/synthetics/wait-times-example.png
+   :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then login. 
+
+
 .. _browser-wait-times:
+
 
 Example
 ==================
