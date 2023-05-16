@@ -26,9 +26,9 @@ Set up Log Observer Connect
 ==============================================================
 To set up Log Observer Connect for Splunk Cloud Platform without help from the Support team, follow these steps:
 
-Observability Cloud
+Splunk Observability Cloud
 ----------------------------------------------------------------
-1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Observability Cloud. Contact your organization's Observability Cloud administrator to perform this integration.
+1. In Splunk Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration.
 
 2. Select :guilabel:`Splunk Cloud Platform`. 
 
@@ -68,15 +68,15 @@ Splunk Cloud Platform
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
 
-   b. Next, in Splunk Cloud Platform, go to :guilabel:`Settings > Users` and create the user you want to use for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, attach the role you created for the service account to the user you are creating.
+   b. Next, in Splunk Cloud Platform, go to :guilabel:`Settings > Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created for the Log Observer Connect service account.
    
       .. image:: /_images/logs/CreateUser.png
          :width: 100%
          :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
 
-   c. Secure a connection to your Splunk Cloud Platform instance in Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, select :guilabel:`Download this script` in the guided setup section, :guilabel:`Secure connection to the Splunk platform`, and follow the instructions on screen. When you run the script, the Admin Config Service API does the following:
+   c. Secure a connection to your Splunk Cloud Platform instance in Splunk Observability Cloud. To get help from Splunk Support, :ref:`Submit a support ticket <support-ticket>`. To do it yourself, select :guilabel:`Download this script` in the guided setup section, :guilabel:`Secure connection to the Splunk platform`, and follow the instructions on screen. When you run the script, the Admin Config Service API does the following:
    
-      - Adds Observability Cloud IPs and your local machine's IP to your Splunk Cloud Platform allow list to allow Log Observer Connect services and your machine to connect to your Splunk Cloud Platform instance through the management port
+      - Adds Splunk Observability Cloud IPs and your local machine's IP to your Splunk Cloud Platform allow list to allow Log Observer Connect services and your machine to connect to your Splunk Cloud Platform instance through the management port
       
       - Fetches a certificate chain
       
@@ -128,7 +128,7 @@ To submit a support ticket, follow these steps:
 
 1. Find the following:
 
-   a. Your Observability Cloud organization name and region. To see this information in Observability Cloud, go to :guilabel:`Settings`, then select your profile name.
+   a. Your Splunk Observability Cloud organization name and region. To see this information in Splunk Observability Cloud, go to :guilabel:`Settings`, then select your profile name.
    
    b. Your Splunk Cloud Platform instance name, the URL prefix of your Splunk Cloud Platform deployment, which is formatted as such: [Your_instance_name].splunkcloud.com.
 
