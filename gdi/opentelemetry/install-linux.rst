@@ -24,9 +24,6 @@ Install the package using one of these methods:
 * :ref:`Use deployment and configuration management tools <linux-deployments>`
 * :ref:`Install manually <linux-manual>`
 
-.. note::
-   Splunk only supports the SignalFx Smart Agent and the Smart Agent Receiver on x86_64 and AMD64 platforms. 
-
 .. _linux-scripts:
 
 Installer script
@@ -40,15 +37,14 @@ The following Linux distributions and versions are supported:
 * SUSE: 12, 15 for versions v0.34.0 or higher. Log collection with Fluentd is not currently supported.
 * Ubuntu: 16.04, 18.04, 20.04, and 22.04
 
-You must have systemd installed to use this script. The installer script deploys and configures these things:
+The installer script deploys and configures these elements:
 
 * The Splunk Distribution of OpenTelemetry Collector for Linux
-* :new-page:`SignalFx Smart Agent and collectd bundle <https://github.com/signalfx/signalfx-agent/releases>`
-* Fluentd (using the td-agent).  See :ref:`fluentd-receiver` for more information.
+* Fluentd, using the td-agent. See :ref:`fluentd-receiver` for more information
 
-Do the following to install the package using the installer script:
+To install the package using the installer script, follow these steps:
 
-#. Ensure that you have ``curl`` and ``sudo`` installed.
+#. Ensure you have systemd, ``curl`` and ``sudo`` installed.
 #. Download and execute the installer script.
 #. Replace the following variables for your environment:
 
