@@ -13,11 +13,11 @@ To send Observability Cloud alert notifications to BigPanda, complete the follow
 
 * :ref:`bigpanda1`
 
-  You must be a BigPanda administrator to perform this task.
+  You must be a BigPanda administrator to complete this task.
 
 * :ref:`bigpanda2`
 
-  You must be an Observability Cloud administrator to perform this task.
+  You must be an Observability Cloud administrator to complete this task.
 
 * :ref:`bigpanda3`
 
@@ -27,16 +27,16 @@ To send Observability Cloud alert notifications to BigPanda, complete the follow
 Step 1: Create an Observability Cloud integration in BigPanda
 =================================================================================
 
-You must be a BigPanda administrator to perform this task.
+You must be a BigPanda administrator to complete this task.
 
 To create an Observability Cloud integration in BigPanda:
 
 #. Log in to BigPanda.
-#. Access the Integrations page and click :strong:`New Integration`.
-#. Hover over the :strong:`ALERTS REST API` tile and click :strong:`Integrate`.
-#. Enter a descriptive name for the integration and click :strong:`Generate App Key`.
+#. Access the Integrations page and select :strong:`New Integration`.
+#. Hover over the :strong:`ALERTS REST API` tile and select :strong:`Integrate`.
+#. Enter a descriptive name for the integration and select :strong:`Generate App Key`.
 #. The app key displays. Copy the app key for use in :ref:`bigpanda2`.
-#. Click :strong:`ALERTS REST API`. Copy the bearer token for use in :ref:`bigpanda2`.
+#. Select :strong:`ALERTS REST API`. Copy the bearer token for use in :ref:`bigpanda2`.
 
 
 .. _bigpanda2:
