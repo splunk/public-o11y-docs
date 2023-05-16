@@ -12,7 +12,7 @@ create a new issue when a detector alert condition is met and add a comment to t
 
 To send Observability Cloud alert notifications to Jira, follow these configuration steps:
 
-.. note:: You must be an Observability Cloud administrator to perform these steps.
+.. note:: You must be an Observability Cloud administrator to complete these steps.
 
 * :ref:`jira1`
 * :ref:`jira2`
@@ -36,10 +36,10 @@ The alert notification that this integration sends to Jira can automatically set
 
 * Summary
 
-If the Jira project you want to create issues in requires additional field values, you'll receive an error when you save 
+If the Jira project you want to create issues in requires additional field values, you receive an error when you save 
 the integration.
 
-.. note:: You must be an Observability Cloud administrator to perform these tasks.
+.. note:: You must be an Observability Cloud administrator to complete these tasks.
 
 To create a Jira integration in Observability Cloud, follow these steps:
 
@@ -60,7 +60,7 @@ To create a Jira integration in Observability Cloud, follow these steps:
    password.
 
    The user you associate with this integration must have Jira permissions to create issues, add comments, and browse
-   projects. This user will be the reporter on the Jira issues created by using this integration.
+   projects. This user is the reporter on the Jira issues created by using this integration.
 
 #. In :guilabel:`Select Project`, select the project you want the alert notifications to create issues in, and select
    :guilabel:`Apply`.
@@ -98,15 +98,15 @@ To add a Jira integration as a detector alert recipient in Observability Cloud:
 
    For more information about working with detectors, see :ref:`create-detectors` and :ref:`subscribe`.
 
-#. In the :strong:`Alert recipients` step, click :strong:`Add Recipient`.
+#. In the :strong:`Alert recipients` step, select :strong:`Add Recipient`.
 
 #. Select :strong:`Jira` and then select the name of the Jira integration you want to use to send alert notifications. 
    This is the integration name you created in :ref:`jira1`.
 
 #. If you set an assignee on the Jira integration, the assignee name displays. To overwrite the assignee or a blank 
-   assignee set on the integration, click the assignee and enter a new assignee name.
+   assignee set on the integration, select the assignee and enter a new assignee name.
 
 #. Activate and save the detector.
 
-Observability Cloud will send an alert notification that will create a Jira issue whenever the detector rule condition is 
-met. It will also add a comment to that issue when the alert condition clears.
+Splunk Observability Cloud sends an alert notification that creates a Jira issue whenever the detector rule condition is 
+met. It also adds a comment to that issue when the alert condition clears.

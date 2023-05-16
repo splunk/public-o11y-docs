@@ -32,11 +32,18 @@ You must be an Observability Cloud administrator to complete this task.
 To create an Amazon EventBridge integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Amazon EventBridge`, and select it.
-#. Select :strong:`New Integration` to display the configuration options.
+#. Open the :new-page:`Amazon EventBridge guided setup <https://login.signalfx.com/#/integrations/amazoneventbridge>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`.
+
+   #. Select :guilabel:`Add Integration`.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`Amazon EventBridge`, and select it.
+
+   #. Select :strong:`New Integration` to display the configuration options.
+
 #. By default, the name of the integration is :strong:`Amazon EventBridge`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`AWS Account Id` field, enter the ID of the AWS account that you want to send Observability Cloud alert notifications to.
 #. The :strong:`Event Source` field displays the name of the partner event source. This value has a one-to-one mapping with the name of the partner event bus you see in :ref:`amazoneventbridge2`.
