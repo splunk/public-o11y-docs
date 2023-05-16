@@ -50,13 +50,13 @@ Splunk Cloud Platform
          :width: 100%
          :alt: This screenshot shows the Capabilities tab in user configuration.
 
-      On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
+      On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`*(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
 
       .. image:: /_images/logs/IndexesTab1.png
          :width: 100%
          :alt: This screenshot shows the Indexes tab in user configuration.
 
-      On the :guilabel:`Resources` tab for the service account, enter a :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
+      On the :guilabel:`Resources` tab, enter a :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
 
       .. image:: /_images/logs/ResourcesTab1.png
          :width: 100%
@@ -68,7 +68,7 @@ Splunk Cloud Platform
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
 
-   b. In the Splunk Cloud Platform, go to :guilabel:`Settings > Users` and create the user you want to use for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, attach the role you created for the service account to the user you are creating.
+   b. Next, in Splunk Cloud Platform, go to :guilabel:`Settings > Users` and create the user you want to use for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, attach the role you created for the service account to the user you are creating.
    
       .. image:: /_images/logs/CreateUser.png
          :width: 100%
