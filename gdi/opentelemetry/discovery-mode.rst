@@ -5,27 +5,29 @@
 .. _discovery_mode:
 
 ***************************************************************************
-Discovery mode of the Collector
+Discover and configure metrics sources automatically
 ***************************************************************************
 
 .. meta::
       :description: Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
 
 Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
-a configuration based on the results. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, it creates a Collector configuration you can either modify or use.
+a configuration based on the results. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, the Collector generates configuration you can modify and use.
 
-The advantage of using discovery mode is that you don't need to manually configure the OpenTelemetry Collector for the supported metric sources. This is helpful in environments when services might be activated dynamically, for example when scaling your infrastructure based on existing demand.
+The advantage of using discovery mode is that you don't need to manually configure the OpenTelemetry Collector for the supported metric sources. This is helpful in environments when you deploy and activate host services dynamically, for example when scaling your infrastructure based on existing demand.
 
 .. note:: Discovery mode is available starting from version 0.72.0 and higher of the Splunk Distribution of the OpenTelemetry Collector.
 
 How discovery mode works
 ==========================================
 
-When you run the Collector in discovery mode, the Collector tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions. 
+When you run the Collector in discovery mode, it tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions.
 
-For any receiver that successfully retrieves metrics, the Collector translates the discovery configuration to a receiver creator instance with the known working rules. At the same, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
+For any receiver that successfully retrieves metrics, the Collector translates the discovery configuration to a receiver creator instance with the known working rules. See :ref:`receiver-creator-receiver` for more information.
 
-For any receiver that can receive data or communicate with the target metric service, discovery mode provides guidance on which properties to set, or what extensions or settings to configure on the application to be able to successfully retrieve data for generating telemetry.
+At the same, the Collector adds the configuration to the ``metrics`` pipeline at runtime, unless you run the Collector using ``--dry-run``, in which case it outputs the configuration to the terminal.
+
+For any receiver that can establish a connection with a service, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry.
 
 Supported host services and applications
 =========================================
