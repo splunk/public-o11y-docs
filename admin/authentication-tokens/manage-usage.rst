@@ -152,9 +152,10 @@ For example, suppose you set the job start limit for a token to 20 per minute. B
 
 Set up access token limits and alerts
 =========================================
+
 To set token limits:
 
-#. Select :menuselection:`Manage Token Limit` from the token's actions menu. The Manage Token Limits options appear. Depending on your pricing model, you see up to four cost-related token limits you can set. You can also set the :guilabel:`Job Start Rate` and :guilabel:`Event Search Rate` rate-related limits.
+#. Select :menuselection:`Manage Token Limit` from the token's actions menu (|more|). The Manage Token Limits options appear. Depending on your pricing model, you see up to four cost-related token limits you can set. You can also set the :guilabel:`Job Start Rate` and :guilabel:`Event Search Rate` rate-related limits.
 
 #. Enter a value for the limit or limits you want to set.
 
@@ -167,7 +168,7 @@ To set token limits:
 
 #. If you chose a team as a notification recipient and you want to have alerts display on the team's Dashboards page, you must link the detector you created in the previous step to the team. To do this:
 
-    #. Access the left navigation panel and select :menuselection:`Alerts`.
+    #. Access the left navigation panel and select :menuselection:`Alerts & Detectors`.
     #. Select the :guilabel:`Detectors` tab.
     #. Search for the detector you created. By default, the detector's name includes the name of the access token it was created for. So, an easy way to find the detector is to search for the name of the access token.
     #. Open the detector's action menu (|more|) and select :guilabel:`Links to Teams`. Select a team.

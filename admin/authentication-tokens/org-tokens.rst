@@ -139,7 +139,7 @@ To create an access token:
 
          You might see the following message in the middle of the dialog:
 
-         You are currently giving permissions to a team with Restrict Access deactivated. This means any user can join this team and is able to access this Access Token.
+         You are currently giving permissions to a team with Restrict Access deactivated. This means any user can join this team and can access this Access Token.
 
          This message means that all users are able to join the team and then view or read the access token.
 
@@ -152,7 +152,7 @@ Rename an access token
 
 To rename a token:
 
-#. Select :menuselection:`Edit Token` from the token's actions menu (|more| icon).
+#. Select :menuselection:`Edit Token` from the token's actions menu (|more|).
 #. Enter a new name for the token.
 #. Select :guilabel:`OK`.
 

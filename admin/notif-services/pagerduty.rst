@@ -13,11 +13,11 @@ To send Observability Cloud alert notifications to PagerDuty, complete the follo
 
 * :ref:`pagerduty1`
 
-  You must be a PagerDuty administrator to perform this task.
+  You must be a PagerDuty administrator to complete this task.
 
 * :ref:`pagerduty2`
 
-  You must be an Observability Cloud administrator to perform this task.
+  You must be an Observability Cloud administrator to complete this task.
 
 * :ref:`pagerduty3`
 

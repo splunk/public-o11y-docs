@@ -44,11 +44,19 @@ the integration.
 To create a Jira integration in Observability Cloud, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :menuselection:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Jira`, and select it.
-#. Select :guilabel:`New Integration` to display the configuration options.
+#. Open the :new-page:`Jira guided setup <https://login.signalfx.com/#/integrations/jira>`. Optionally, you can navigate to the guided setup on your own: 
+
+    #. In the left navigation menu, select :menuselection:`Data Management`.
+
+    #. Select :guilabel:`Add Integration`.
+
+    #. In the integration filter menu, select :menuselection:`All`.
+
+   
+    #. In the :guilabel:`Search` field, search for :guilabel:`Jira`, and select it.
+    
+    #. Select :guilabel:`New Integration` to display the configuration options.
+
 #. By default, the name of the integration is :strong:`JIRA`. Give your integration a unique and descriptive name. For 
    information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`JIRA Base URL` field, enter the Jira server base URL. For example, enter a value that looks something 

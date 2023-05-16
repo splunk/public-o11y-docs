@@ -65,13 +65,20 @@ You must be an Observability Cloud administrator to complete this task.
 To create a Microsoft Teams integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Microsoft Teams`, and select it.
-#. Select :strong:`New Integration` to display the configuration options.
+#. Open the :new-page:`Microsoft Teams guided setup <https://login.signalfx.com/#/integrations/office365>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`.
+
+   #. Select :guilabel:`Add Integration`.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`Microsoft Teams`, and select it.
+
+   #. Select :strong:`New Integration` to display the configuration options.
+
 #. By default, the name of the integration is :strong:`Microsoft Teams`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
-#. In the :strong:`Webhook URL` field, paste the webhook URL you copied in :ref:`microsoftteams1`. The webhook URL looks something like this: ``https://<tenantName>.webhook.office.com/webhook2/<GroupExternalObjectGuid>@<TenantExternalGuid>/<ProviderName>/<AlternateGuid>/<GroupOwnerExternalObjectGuid>``.
+#. In the :strong:`Webhook URL` field, paste the webhook URL you copied in :ref:`microsoftteams1`. The webhook URL looks similar to this: ``https://<tenantName>.webhook.office.com/webhook2/<GroupExternalObjectGuid>@<TenantExternalGuid>/<ProviderName>/<AlternateGuid>/<GroupOwnerExternalObjectGuid>``.
 #. :strong:`Save`.
 #. If Splunk Observability Cloud can validate the Microsoft Teams webhook URL, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the webhook URL value you entered matches the value displayed in Microsoft Teams in :ref:`microsoftteams1`.
 
@@ -118,7 +125,7 @@ If the Microsoft Teams channel stops receiving notifications, consider the follo
 
   #. Select the :strong:`Integrations` menu and select :strong:`Validate`. If you see an error message,  :strong:`Connector configuration not found`, then the :strong:`Incoming Webhook` connector was removed from the Microsoft Teams channel and you must add it back. To do this, see :ref:`microsoftteams2`.
 
-* Verify that the Microsoft Teams notification service integration in Observability Cloud has not been changed to send alert notifications to a different Microsoft Teams channel.
+* Verify that the Microsoft Teams notification service integration in Splunk Observability Cloud has not been changed to send alert notifications to a different Microsoft Teams channel.
 
 * Verify that the Microsoft Teams notification service integration is still the alert recipient on the detector in Observability Cloud.
 
