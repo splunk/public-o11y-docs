@@ -49,26 +49,12 @@ There are three types of metrics: gauge, cumulative counter, and counter. See mo
     - Number of new occurrences or items since the last measurement
     - The number of packets that fail to reach their destinations over each 24-hour period
 
-.. _metrics-category:
-
 Metric category
 ----------------------
 
-These are the available categories for metrics:
+There are about 20 metric categories in Splunk Observability Cloud. Metric category, especially metrics categorized as custom, can impact billing.
 
-.. include:: /_includes/metric-categories.rst
-
-Identify the category of a metric
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-In :ref:`host-based plans <monitor-imm-billing-usage>`, the category of a metric might impact billing. 
-
-To keep track of the type of metrics you're ingesting, Observability Cloud provides you with different tools and reports:
-
-* :ref:`custom-metric-report`.
-* Metric Pipeline Management's :ref:`usage report <metrics-usage-report>`.
-* Track specific org metrics with custom metric information. See more in :ref:`org-metrics`.
-* Query for the ``sf_mtsCategoryType`` dimension, which indicates the metric category, using Signalflow. Learn more in :ref:`signalflow-analytics-intro`. 
+Learn all metric categories and how to identify them in :ref:`metric-categories`.
 
 High resolution metrics
 ----------------------------
