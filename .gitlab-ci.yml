@@ -8,3 +8,4 @@ include:
     file: 'cicd.yml'
   - project: 'it-engineering/it-cicd/templates/it-docs'
     file: 'build.yml'
+    ref: it-engineering/it-cicd/templates/it-docs!35
