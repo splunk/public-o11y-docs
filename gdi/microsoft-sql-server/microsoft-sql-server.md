@@ -119,7 +119,17 @@ Ensure that `port` and `appName` are _always_ set to the values stated in this e
 
 The following metrics are available for this integration:
 
+ORIGINAL
+
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/microsoft-sql-server/metrics.yaml"></div>
+
+SFX
+
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/telegraf/monitors/mssqlserver/metadata.yaml"></div>
+
+CTRL
+
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/cgroups/metadata.yaml"></div>
 
 ### Notes
 
