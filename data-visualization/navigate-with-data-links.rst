@@ -117,8 +117,7 @@ Select a property value to follow a link
 
 If a link target is an Infrastructure Monitoring dashboard, you can follow a link by selecting on the property value. When multiple links to dashboards are available for a property, the application selects which link to follow based on the following order of operations.
 
-.. note:: In any dashboard, all local and global data links are available by using a property's :guilabel:`Actions` (|more
-|)menu. You don't have to click on a property value to navigate to a link.
+.. note:: In any dashboard, all local and global data links are available by using a property's :guilabel:`Actions` (|more|) menu. You don't have to click on a property value to navigate to a link.
 
 More specific data links override less specific data links
 ----------------------------------------------------------------------------------
