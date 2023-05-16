@@ -77,4 +77,4 @@ To add an xMatters integration as a detector alert recipient in Observability Cl
 
 #. Activate and save the detector.
 
-Splunk Observability Cloud sends an alert notification to xMatters when an alert is triggered by the detector and when the alert clears.
+Splunk Observability Cloud sends an alert notification to xMatters when the detector triggers an alert by the detector and when the alert clears.
