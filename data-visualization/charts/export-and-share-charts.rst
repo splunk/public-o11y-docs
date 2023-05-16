@@ -38,7 +38,7 @@ The techniques available for sharing a chart depend on where you are viewing the
      - :strong:`Notes`
 
    * - In the Chart Builder
-     - Use the Share icon at top right or select :strong:`Share` from the chart’s Actions menu
+     - Use the Share icon at top right or select :strong:`Share` from the chart’s Actions menu (|more|)
      - Version you are viewing, including any unsaved changes
      - URL that links to a copy of the chart, which you can send to others (see :ref:`share-feature-to-share`) or :ref:`pasting-chart-url-into-slack`
      - In most cases, can be viewed only by other users
@@ -56,7 +56,7 @@ The techniques available for sharing a chart depend on where you are viewing the
      - Can be viewed by anyone
 
    * - On a dashboard
-     - Select :strong:`Share` from the chart’s Actions menu
+     - Select :strong:`Share` from the chart’s  (|more|)
      - Most recently saved version
      - URL that links to a copy of the chart, which you can send to others (see :ref:`share-feature-to-share`) or :ref:`pasting-chart-url-into-slack`
      - In most cases, can be viewed only by other users
@@ -91,9 +91,9 @@ Use the Share feature to share a chart
 
 You can share a copy of a chart. Copies include unsaved changes at the time you share, and auto-expire unless the recipient saves them. Sharing a copy is perfect for when you make a change that you want to show your team members, but don’t want to modify the original chart.
 
-- To share a chart you are viewing in the Chart Builder, click the :strong:`Share` icon near the upper right corner of the chart or select :strong:`Share` from the chart’s Actions menu.
+- To share a chart you are viewing in the Chart Builder, click the :strong:`Share` icon near the upper right corner of the chart or select :strong:`Share` from the chart’s Actions menu (|more|).
 
-- To share a chart you are viewing in a dashboard, select :strong:`Share` from the chart’s Actions menu.
+- To share a chart you are viewing in a dashboard, select :strong:`Share` from the chart’s Actions menu (|more|).
 
 You’ll see options for sharing, discussed below.
 

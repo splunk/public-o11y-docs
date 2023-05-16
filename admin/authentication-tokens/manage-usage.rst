@@ -154,7 +154,7 @@ Set up access token limits and alerts
 =========================================
 To set token limits:
 
-#. Select :menuselection:`Manage Token Limit` from the token's actions menu. The Manage Token Limits options appear. Depending on your pricing model, you see up to four cost-related token limits you can set. You can also set the :guilabel:`Job Start Rate` and :guilabel:`Event Search Rate` rate-related limits.
+#. Select :menuselection:`Manage Token Limit` from the token's actions menu (|more|). The Manage Token Limits options appear. Depending on your pricing model, you see up to four cost-related token limits you can set. You can also set the :guilabel:`Job Start Rate` and :guilabel:`Event Search Rate` rate-related limits.
 
 #. Enter a value for the limit or limits you want to set.
 
