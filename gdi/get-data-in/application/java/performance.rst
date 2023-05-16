@@ -7,7 +7,7 @@ Performance reference for Splunk OTel Java agent
 .. meta::
    :description:
 
-<General statement>
+<General statement: Need of observability, cost and gain balance, acceptable impact levels, design consideration, language specific, end results depends on environment and monitored service behavior profile>
 
 Minimum requirements for production deployments the Java agent
 ===============================================================
@@ -22,9 +22,11 @@ Hardware specifications to scale the deployment of the various components of the
 Guidelines to optimize performance of the Java agent
 ===========================================================
 
+These are best practices.
+
 <General guidelines as an include>
 
-Suggestions for storage, hardware, data ingestion, and configuration to optimize performance. For example, settings that can be tweaked or disable according to the situation, features that can be disabled, etc.
+Suggestions for storage, hardware, data ingestion, and configuration to optimize performance. For example, settings that can be tweaked or disabled according to the situation, features that can be disabled, etc.
 
 Constraints impacting the performance of the Java agent
 ===========================================================
@@ -32,13 +34,6 @@ Constraints impacting the performance of the Java agent
 <General constraints as an include>
 
 Information on the potential challenges that might decrease the performance of the Java agent, such as span volume, application features, etc.
-
-Performance considerations to deploy the Java agent in virtualized environments
-======================================================================================
-
-<General considerations as an include>
-
-Information on the performance considerations when deploying the Java agent in a virtualized environment. 
 
 Troubleshooting performance issues when deploying the Java agent
 ==================================================================
@@ -53,3 +48,8 @@ After you've collected the information, you can do the following:
 - Ask questions and get answers through community support at Splunk Answers.
 - If you have a support contract, file a case using the Splunk Support Portal. See Support and Services.
 - To get professional help with optimizing your Splunk software investment, see Splunk Services.
+
+How to get support
+==============================================================
+
+.. include:: /_includes/troubleshooting-components.rst
