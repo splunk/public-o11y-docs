@@ -150,7 +150,7 @@ When you receive the SSL certificate from Splunk Support in your support ticket,
 
 1. Paste the first certificate stanza in the final section of the Log Observer Connect guided setup, :guilabel:`Set up Observability Cloud`.
 
-2. Click :guilabel:`Save and Activate`.
+2. Select :guilabel:`Save and Activate`.
 
 
 Troubleshooting
