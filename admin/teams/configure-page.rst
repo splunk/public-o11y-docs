@@ -36,7 +36,7 @@ To see the landing page for any team, follow these steps:
 
 #. A table of current teams appears in the main panel.
 
-#. Click a team name to see its landing page.
+#. Select a team name to see its landing page.
 
 To see the landing page for your team, follow these steps:
 
@@ -44,7 +44,7 @@ To see the landing page for your team, follow these steps:
 
 #. In the left navigation menu, select :menuselection:`Dashboards`.
 
-#. In the :guilabel:`My Teams` area, click a team name to see its team landing page.
+#. In the :guilabel:`My Teams` area, select a team name to see its team landing page.
 
 
 .. _use-team-landing-page:
@@ -56,11 +56,11 @@ Use a team landing page as your starting point for monitoring important data.
 
 To review alerts associated with a detector linked to the team, follow these steps:
 
-#. To see all active alerts, click :guilabel:`Team Alerts`. The Alerts page for the team appears. You see all active alerts for detectors that are linked to the team.
+#. To see all active alerts, select :guilabel:`Team Alerts`. The Alerts page for the team appears. You see all active alerts for detectors linked to the team.
 
-#. To see all active alerts for a specific severity level, click the severity. The Alert page for the team appears. You see active alerts for detectors that are linked to the team, filtered by the severity level you selected.
+#. To see all active alerts for a specific severity level, select the severity. The Alert page for the team appears. You see active alerts for detectors linked to the team, filtered by the severity level you selected.
 
-#. To see a list of active alerts for each detector linked to the team, click :guilabel:`Team Detectors`. The Alert page for the team appears, listing the name of the detector that issued each alert.
+#. To see a list of active alerts for each detector linked to the team, select :guilabel:`Team Detectors`. The Alert page for the team appears, listing the name of the detector that issued each alert.
 
 To learn more about linking teams to detectors and dashboard groups, see :ref:`admin-associate-team`,
 
@@ -80,8 +80,8 @@ To learn about which roles can edit landing page text, see :ref:`about-team-role
 
 To edit landing page text, follow these steps:
 
-#. Click :guilabel:`Edit Description`.
+#. Select :guilabel:`Edit Description`.
 
 #. Enter your changes in the edit box.
 
-#. Click :guilabel:`Save`.
+#. Select :guilabel:`Save`.

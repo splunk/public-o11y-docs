@@ -39,7 +39,7 @@ Use the alerts and top charts on this page as a guide to what needs your attenti
 View dependencies among your applications in the Explore view
 =================================================================
 
-From the landing page, click on a service in a chart legend or a row in the Services table to navigate to the Explore view. This view includes the service map, which presents the dependencies and connections among your instrumented and inferred services in APM. This map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. 
+From the landing page, select a service in a chart legend or a row in the Services table to navigate to the Explore view. This view includes the service map, which presents the dependencies and connections among your instrumented and inferred services in APM. This map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. 
 
 You can use these visual cues to understand dependencies, performance bottlenecks, and error propagation. 
 
@@ -47,9 +47,9 @@ You can use these visual cues to understand dependencies, performance bottleneck
     :width: 95%
     :alt: This screenshot shows an example of Splunk APM Explore view
 
-Click on any service in the service map to see charts for that specific service. You can also use the :guilabel:`Breakdown` selector to break the service down by any indexed span tag. 
+Select any service in the service map to see charts for that specific service. You can also use the :guilabel:`Breakdown` selector to break the service down by any indexed span tag. 
 
-Click on any chart in this view to show example traces that match the parameters of the chart.  
+Select any chart in this view to show example traces that match the parameters of the chart.  
 
 To learn more about the service map, see :ref:`apm-service-map`. 
 
@@ -77,7 +77,7 @@ In addition to searching individual traces, you can get an aggregate view of you
 Get a top-down view of your services in Tag Spotlight
 =================================================================
 
-Return to the service map and click :guilabel:`Tag Spotlight`. Using Tag Spotlight, you can view the request and error rate or latency by span tag for an individual service or business workflow. This helps you identify which particular attributes of your system might be causing reliability or performance issues. 
+Return to the service map and select :guilabel:`Tag Spotlight`. Using Tag Spotlight, you can view the request and error rate or latency by span tag for an individual service or business workflow. This helps you identify which particular attributes of your system might be causing reliability or performance issues. 
 
 Rather than looking for similarities across multiple traces, you can use Tag Spotlight to gain a top-down view of your services. This lets you identify the system-wide source of issues and then drill down to find an individual trace that is representative of a wider issue. 
 

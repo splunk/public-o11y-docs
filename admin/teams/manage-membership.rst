@@ -33,7 +33,7 @@ To create a team, follow these steps:
 
 #. Continue to add users to the team.
 
-#. When you're finished adding users, click :guilabel:`Create`. The new team name appears in the list of teams. 
+#. When you're finished adding users, select :guilabel:`Create`. The new team name appears in the list of teams. 
 
 
 .. _admin-delete-team:
@@ -55,7 +55,7 @@ To delete a team, follow these steps:
 
 #. Select the :guilabel:`Actions` menu icon next the team name, then select :menuselection:`Delete Team`.
 
-#. Observability Cloud displays a dialog box that asks you to confirm the deletion. Click :guilabel:`Delete`.
+#. Splunk Observability Cloud displays a dialog box that asks you to confirm the deletion. Select :guilabel:`Delete`.
 
 The team no longer appears in the list of teams.
 
@@ -77,7 +77,7 @@ To change the team name, follow these steps:
 
 #. Select the :guilabel:`Edit` icon next the team name.
 
-#. When you're finished editing the name, click Enter to save your changes. 
+#. When you're finished editing the name, select :guilabel:`Enter to save your changes`. 
 
 .. note:: The Team name is case-insensitive. If you attempt to change the team name from :strong:`Team` to :strong:`team`, you will see a message that the name already exists. 
 
@@ -103,7 +103,7 @@ To add or remove team members, follow these steps:
 
 #. Use the :guilabel:`Add Users` field to search for users by name or email to add them to the team.
 
-   * To add a team member, click the checkbox next to the email address of the member.
+   * To add a team member, select the email address of the member.
 
 #. Select :guilabel:`Add`.
 
@@ -122,7 +122,7 @@ To remove team members, follow these steps:
 
 #. Find the name of the team whose member list you want to edit.
 
-#. On the Users tab, click the :guilabel:`Actions` menu (|more|) next to the name of the user you want to remove from the team.
+#. On the Users tab, select the :guilabel:`Actions` menu (|more|) next to the name of the user you want to remove from the team.
 
 #. Select :guilabel:`Remove from team`
 
@@ -146,7 +146,7 @@ To view which teams a user belongs to, follow these steps:
 
 .. _admin-team-controls:
 
-Enable enhanced team security
+Turn on enhanced team security
 ============================================================================
 
 |hr|
@@ -217,7 +217,7 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - Yes
     - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
     - Not applicable: A Team Member is already on a team and doesn't need to join.
-    - * Yes, when enhanced team security is disabled
+    - * Yes, when enhanced team security is turned off
       * No, when enhanced team security is turned on. A user must be added by an Admin or Team Manager
 
   * - :strong:`Add member`
@@ -227,12 +227,12 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - No
 
   * - :strong:`Assign Team Manager role to Team Member`
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
       * Yes, when enhanced team security is turned on
     - Yes
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is tirmed off
       * No, when enhanced team security is turned on
-    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
       * No, when enhanced team security is turned on
 
   * - :strong:`Remove member`

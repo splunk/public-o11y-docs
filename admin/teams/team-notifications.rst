@@ -24,10 +24,10 @@ To configure a team notification policy, follow these steps:
 
 #. A table of current teams appears in the main panel. Select the team for which you want to manage notifications.
 
-#. Click :guilabel:`Notification Policy` for your team.
+#. Select :guilabel:`Notification Policy` for your team.
 
-#. Click :guilabel:`Switch to general notifications` to define a single notification policy for alerts of all severities. Click :guilabel:`Switch to severity-based notification` to define a separate notification policy for each severity level.
+#. Select :guilabel:`Switch to general notifications` to define a single notification policy for alerts of all severities. Select :guilabel:`Switch to severity-based notification` to define a separate notification policy for each severity level.
 
 #. Add and remove notification recipients as needed.
 
-#. Click :guilabel:`Save`.
+#. Select :guilabel:`Save`.
