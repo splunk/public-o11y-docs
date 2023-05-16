@@ -167,7 +167,7 @@ Deactivate or activate an access token
 
 .. note::
 
-   You can't delete tokens; you can only deactivate them.
+   You can't delete tokens. You can only deactivate them.
 
 To deactivate a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
 The line that displays the token has a shaded background, which indicates that the
