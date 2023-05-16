@@ -36,19 +36,25 @@ Splunk Cloud Platform
 ----------------------------------------------------------------
 3. In Splunk Cloud Platform, follow the instructions in the guided setup for the integration to do the following:
 
-   a. Configure a role in Splunk Cloud Platform for the Log Observer Connect service account, go to :guilabel:`Settings > Roles` and select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect.
+   a. To configure a role in Splunk Cloud Platform for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
 
       .. image:: /_images/logs/setupLOC1.png
          :width: 100%
          :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
       
+      Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Cloud Platform indexes that you want your users to search in Log Observer Connect. 
+      
       On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` is selected. Also, ensure that ``indexes_list_all`` is not selected.
 
       .. image:: /_images/logs/CapabilitiesTab1.png
          :width: 100%
-         :alt: This scr
+         :alt: This screenshot shows the Capabilities tab in user configuration.
 
       On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
+
+      .. image:: /_images/logs/IndexesTab1.png
+         :width: 100%
+         :alt: This screenshot shows the Indexes tab in user configuration.
 
       On the :guilabel:`Resources` tab for the service account, enter a :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
 
