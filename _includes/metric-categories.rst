@@ -72,4 +72,4 @@
    * - 20
      - Synthetics metrics
 
-.. note:: In DPM subscription plans all metrics are categorized as custom. 
+.. note:: In MTS-based subscription plans, all metrics are categorized as custom metrics and billed accordingly.
