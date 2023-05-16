@@ -41,12 +41,6 @@ Splunk Cloud Platform
       .. image:: /_images/logs/setupLOC1.png
          :width: 100%
          :alt: This screenshot shows how to go to Roles in Splunk Cloud Platform where you will set up a service account for Log Observer Connect.
-
-   b. Configure users in the Splunk Cloud Platform.  
-   
-      .. image:: /_images/logs/setupLOC2.png
-         :width: 100%
-         :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
       
       On the :guilabel:`Resources` tab for the service account, enter the following :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
 
@@ -59,6 +53,12 @@ Splunk Cloud Platform
       .. image:: /_images/logs/ResourcesTab2.png
          :width: 100%
          :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
+
+   b. Configure users in the Splunk Cloud Platform.  
+   
+      .. image:: /_images/logs/setupLOC2.png
+         :width: 100%
+         :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
 
    c. Attach the role and the user you created in the integration guided setup.
 
