@@ -289,19 +289,26 @@ the data center latency and the data center latency is greater than 40 ms.
 Step 2: Create a webhook integration in Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to perform this task.
+You must be an Observability Cloud administrator to complete this task.
 
 #. Log in to Splunk Observability Cloud.
-#. In the navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Webhook`, and select it.
-#. Select :strong:`New Integration` to display the configuration options.
+#. Open the :new-page:`Webhook guided setup <https://login.signalfx.com/#/integrations/webhook>`. Optionally, you can navigate to the guided setup on your own:
+
+    #. In the navigation menu, select :menuselection:`Data Management`.
+ 
+    #. Select :guilabel:`Add Integration`.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`Webhook`, and select it.
+
+   #. Select :strong:`New Integration` to display the configuration options.
+
 #. Enter a name for this integration. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`URL` field, enter the webhook URL you created in :ref:`webhook1`.
 #. In the :strong:`Shared Secret` field, enter the shared secret you established in :ref:`webhook1`.
 #. In the :strong:`Headers` section, enter any header parameters required by the webhook you created in :ref:`webhook1`.
-#. :strong:`Save`.
+#. Select :strong:`Save`.
 #. If Observability Cloud validates the URL, shared secret, and headers you provided for your webhook,
    a :strong:`Validated!` success message appears. If you see an error message, make sure that the values you entered
    match the values you defined in :ref:`webhook1`.
@@ -325,4 +332,4 @@ To add a webhook integration as a detector alert recipient in Observability Clou
 
 #. Activate and save the detector.
 
-Observability Cloud sends an alert notification to the webhook when the detector triggers or clears an alert.
+Splunk Observability Cloud sends an alert notification to the webhook when the detector triggers or clears an alert.

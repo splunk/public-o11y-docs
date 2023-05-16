@@ -58,11 +58,18 @@ You must be an Observability Cloud administrator to complete this task.
 To create an Opsgenie integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Opsgenie`, and select it.
-#. Select :strong:`New Integration` to display the configuration options.
+#. Open the :new-page:`OpsGenie guided setup <https://login.signalfx.com/#/integrations/opsgenie?search_pattern=opsge&category=all>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`.
+
+   #. Select :guilabel:`Add Integration`.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`Opsgenie`, and select it.
+
+   #. Select :strong:`New Integration` to display the configuration options.
+
 #. Enter a name for the integration. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`Service Region` list, select your Opsgenie service region.
 #. In the :strong:`Token` field, enter the token copied from Opsgenie in :ref:`opsgenie1`.
