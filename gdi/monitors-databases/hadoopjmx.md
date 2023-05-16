@@ -1,16 +1,25 @@
-(collectd-hadoopjmx)=
+(hadoopjmx)=
 
-# Collectd Hadoop JMX
+# Hadoop JMX
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd Hadoop monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Hadoop JMX monitor type to collect metrics from Hadoop 2.0 or higher clusters.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/hadoopjmx` monitor type for the Smart Agent Receiver.
+This integration produces metrics from a set of built-in MBeans available for the respective `nodeTypes`:
 
-Use this integration to collect metrics from a Hadoop 2.0 or higher cluster using the collectd GenericJMX plugin. You can also configure the collectd/hadoop monitor to collect additional metrics about the Hadoop cluster using the REST API.
+  - Name Nodes (`nameNode`)
+  - Resource Manager (`resourceManager`)
+  - Node Manager (`nodeManager`)
+  - Data Nodes (`dataNode`)
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+This integration uses the collectd GenericJMX plugin. You can also configure the `hadoop` monitor to collect additional metrics about the Hadoop cluster using the REST API.
+
+This integration is only available on Kubernetes and Linux.
+
+## Benefits
+
+```{include} /_includes/benefits.md
 ```
 
 ## Requirements
@@ -29,58 +38,6 @@ export YARN_NODEMANAGER_OPTS="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun
 export YARN_RESOURCEMANAGER_OPTS="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=5680 $YARN_RESOURCEMANAGER_OPTS"
 ```
 
-This monitor produces metrics from a set of built-in MBeans available for the respective `nodeTypes`:
-
-  - Name Nodes (`nameNode`)
-  - Resource Manager (`resourceManager`)
-  - Node Manager (`nodeManager`)
-  - Data Nodes (`dataNode`)
-  
-### Sample configuration for nodeTypes
-
-The following sample configurations show how to configure the monitor for different nodeTypes.
-
-**Name Node:**
-```yaml
-monitors:
-- type: collectd/hadoopjmx
-  host: 127.0.0.1
-  port: 5677
-  nodeType: nameNode
-```
-
-**Resource Manager:**
-```yaml
-monitors:
-- type: collectd/hadoopjmx
-  host: 127.0.0.1
-  port: 5680
-  nodeType: resourceManager
-```
-
-**Node Manager:**
-```yaml
-monitors:
-- type: collectd/hadoopjmx
-  host: 127.0.0.1
-  port: 8002
-  nodeType: nodeManager
-```
-
-**Data Node:**
-```yaml
-monitors:
-- type: collectd/hadoopjmx
-  host: 127.0.0.1
-  port: 5679
-  nodeType: dataNode
-```
-
-### Benefits
-
-```{include} /_includes/benefits.md
-```
-
 ## Installation
 
 ```{include} /_includes/collector-installation-linux.md
@@ -91,6 +48,10 @@ monitors:
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/ collectd/hadoopjmx:
@@ -98,16 +59,16 @@ receivers:
     ... # Additional config
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a metrics pipeline. To do this, add the receiver to the service > pipelines > metrics > receivers section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
   pipelines:
     metrics:
-      monitors: [smartagent/ collectd/hadoopjmx]
+      monitors: [smartagent/collectd/hadoopjmx]
 ```
 
-### Configuration settings
+### Configuration options
 
 The following table shows the configuration options for the collectd/hadoopjmx receiver:
 
@@ -159,7 +120,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

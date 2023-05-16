@@ -1,12 +1,10 @@
-(telegraf-exec)=
+(exec-input)=
 
 # Exec Input
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Telegraf Exec monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/exec` monitor type for the Smart Agent Receiver. This is an embedded form of the Telegraf Exec plugin. The plugin-specific configuration options are the same as that plugin, but parser configurations related to the format of the subprocess output (for example, `data_format`) are managed by using the `telegrafParser` nested configuration object.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Exec Input monitor type, an embedded form of the Telegraf Exec plugin, to receive metrics or logs from exec files.  
 
 ## Benefits
 
@@ -23,6 +21,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```yaml
 receivers:
   smartagent/exec:
@@ -30,7 +32,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the integration, include this monitor type as a member of a `logs` pipeline that utilizes an exporter that makes the event submission requests. Use a Resource Detection processor to ensure that host identity and other useful information is made available as event dimensions. For example:
+Next, include the monitor in a `logs` pipeline that utilizes an exporter that makes the event submission requests. Use a Resource Detection processor to ensure that host identity and other useful information is made available as event dimensions. For example:
 
 ```yaml
 service:
@@ -43,23 +45,6 @@ service:
       exporters:
         - signalfx
 ```
-
-### Example
-
-See a configuration example used in integration testing, including how to set intervals checking with `intervalSeconds`:
-
-```yaml
-monitors:
-  - type: telegraf/exec
-    intervalSeconds: 3600
-    command: /usr/local/bin/script.sh
-    signalFxCumulativeMetrics:
-      - weather.lightning_strikes
-    telegrafParser:
-      dataFormat: influx    
-```
-
-Find a [shell script](https://github.com/signalfx/signalfx-agent/blob/main/tests/monitors/telegraf_exec/script.sh) in our GitHib repo.
 
 ### Configuration settings
 
@@ -125,7 +110,7 @@ By default, all metrics are emitted as gauges. If you have cumulative counter me
 - Set the configuration option `signalFxCumulativeCounters` to the list of metric names to be considered as counters. Note that these names are the full names that are sent to Observability Cloud (for example, `<metric>.<field>`).
 - Set a tag named `signalfx_type` on the metric emitted by the exec script to `cumulative`. All other values are ignored. Note that you **must allow this tag value through in your parser configuration** if the parser ignores certain fields. For example, the JSON parser requires adding `signalfx_type` to the `JSONTagKeys` configuration option.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

@@ -37,8 +37,8 @@ When you run the agent with debug logging activated, debug information is sent t
 .. code-block:: bash
 
    ...
-   [opentelemetry.auto.trace 2021-10-10 10:57:05:814 +0200] [main] DEBUG io.opencensus.tags.Tags - <Could not load lite implementation for TagsComponent, now using default implementation for TagsComponent.3>
-   [opentelemetry.auto.trace 2021-10-10 10:57:05:722 +0200] [main] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable
+   [otel.javaagent 2023-05-09 15:22:40:172 +0200] [main] DEBUG io.opentelemetry.javaagent.tooling.VersionLogger - Running on Java 17.0.2. JVM OpenJDK 64-Bit Server VM - Eclipse Adoptium - 17.0.2+8
+   [otel.javaagent 2023-05-09 15:22:40:264 +0200] [main] DEBUG io.opentelemetry.sdk.internal.JavaVersionSpecific - Using the APIs optimized for: Java 9+
    ...
 
 While not all debug entries are relevant to the issue affecting your Java instrumentation, the root cause is likely to appear in your debug log.
@@ -56,7 +56,7 @@ In the following example, the first entry shows a JVM running the agent with ``-
 
 .. code-block:: bash
 
-   37602 target/spring-petclinic-2.4.5.jar -javaagent:./splunk-otel-javaagent.jar -Dotel.resource.attributes=service.name=pet-store-demo,deployment.environment=prod,service.version=1.2.0 -Dotel,javaagent.debug=true
+   37602 target/spring-petclinic-2.4.5.jar -javaagent:./splunk-otel-javaagent.jar -Dotel.resource.attributes=service.name=pet-store-demo,deployment.environment=prod,service.version=1.2.0 -Dotel.javaagent.debug=true
    38262 jdk.jcmd/sun.tools.jps.Jps -lvm -Dapplication.home=/usr/lib/jvm/java-16-openjdk-amd64 -Xms8m -Djdk.module.main=jdk.jcmd
 
 If the instrumented JVM doesn't appear in the list, check the JVM or application logs to find the cause of the problem. Also check that the additional startup parameters are correctly passed to the runtime. See :ref:`instrument-java-applications` to learn more about startup parameters.
@@ -277,13 +277,6 @@ The following snippet contains a sample ``profiling`` pipeline:
            processors: [batch]
            exporters: [logging/info, splunk_hec]
 
-Loss of profiling data or gaps in profiling data
--------------------------------------------------------------
-
-If there are less than 100 megabytes of space available for the Java Virtual Machine, AlwaysOn Profiling activates the recording escape hatch, which appears in the logs as ``com.splunk.opentelemetry.profiler.RecordingEscapeHatch``. The escape hatch drops all logs with profiling data until more space is available.
-
-To avoid the loss of profiling data due to the escape hatch, provide enough resources to the JVM.
-
 .. _disable-java-agent-logs:
 
 Deactivate all Java agent logs
@@ -295,6 +288,6 @@ To run the Java agent in silent mode, add the following argument:
 
 .. code-block:: bash
    
-   -Dio.opentelemetry.javaagent.slf4j.simpleLogger.defaultLogLevel=off
+   -Dotel.javaagent.logging=none
 
 .. include:: /_includes/troubleshooting-steps.rst

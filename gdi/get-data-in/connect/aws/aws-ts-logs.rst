@@ -25,7 +25,7 @@ To learn more about supported templates, see the :new-page:`README <https://gith
 I created an integration, but I don't see any logs
 ================================================================
 
-If you created the integration recently, it might take some time for the logs to appear in your account.  The job that makes your logs notify Splunk AWS Log Collector runs every 5 minutes, so it might take that long to subscribe to a new resource. AWS logs delivery inside AWS (to CloudWatch log groups, or to S3 buckets) and AWS lambda triggering can introduce additional delay. Check AWS documentation for more details. 
+If you created the integration recently, it might take some time for the logs to appear in your account. The job that makes your logs notify Splunk AWS Log Collector runs every minute, so it might take a short while to subscribe to a new resource. AWS logs delivery inside AWS (to CloudWatch log groups, or to S3 buckets) and AWS lambda triggering can introduce additional delay. Check AWS documentation for more details. 
 
 If you still don't see any logs after 15 minutes, check the IAM policy you've used to set up the AWS connection. We recommend using the :ref:`provided IAM policy <aws-iam-policy>`. If you still don't see the logs, please contact :ref:`our support <support>`.
 
@@ -35,7 +35,7 @@ You can activate debug mode on the log forwarding lambda function: Add ``LOG_LEV
 CloudFront access logs are not being collected
 ================================================================
 
-CloudFront is a global service, and its logs can be stored in any of the standard AWS regions. Each CloudFront instance can have an S3 target bucket to access configured logs. Splunk AWS log collection can only grab the logs if the S3 bucket is located in a region Splunk AWS log collection can access.Use the provided IAM policy to ensure the Splunk Observability Cloud back end has the required permissions.
+CloudFront is a global service, and its logs can be stored in any of the standard AWS regions. Each CloudFront instance can have an S3 target bucket to access configured logs. Splunk AWS log collection can only grab the logs if the S3 bucket is located in a region Splunk AWS log collection can access. Use the provided IAM policy to ensure the Splunk Observability Cloud back end has the required permissions.
 
 
 I don't see logs from some instances

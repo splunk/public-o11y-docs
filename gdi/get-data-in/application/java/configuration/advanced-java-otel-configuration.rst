@@ -198,15 +198,15 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_DIRECTORY``
      -  The location of the JDK Flight Recorder files. The default value is the local directory (``.``). |br| |br| System property: ``splunk.profiler.directory``
    * - ``SPLUNK_PROFILER_RECORDING_DURATION``
-     - The duration of the recording unit, in seconds. You can define duration in the form ``<number><unit>``, where the unit can be ``ms``, ``s``, ``m``, ``h``, or ``d``. The default interval is ``20s``. If you enter a number but not a unit, the default unit is assumed to be ``ms``. |br| |br| System property: ``splunk.profiler.recording.duration``
+     - The duration of the recording unit. You can define duration in the form ``<number><unit>``, where the unit can be ``ms``, ``s``, ``m``, ``h``, or ``d``. The default interval is ``20s``. If you enter a number but not a unit, the default unit is assumed to be ``ms``. |br| |br| System property: ``splunk.profiler.recording.duration``
    * - ``SPLUNK_PROFILER_KEEP_FILES``
      -  Whether to preserve JDK Flight Recorder (JFR) files or not. The default value is ``false``, which means that JFR files are deleted after processing. |br| |br| System property: ``splunk.profiler.keep-files``
    * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds. |br| |br| System property: ``splunk.profiler.call.stack.interval``
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
      - Activates memory profiling with all the options. Activating memory profiling overrides the value of ``splunk.metrics.enabled``. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be set to ``true``. To activate or deactivate specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
-   * - ``SPLUNK_PROFILER_MEMORY_SAMPLER_INTERVAL``
-     - Defines the sampling interval. The default value is 1. Set the value to 2 and higher to sample data every nth allocation event. |br| |br| System property: ``splunk.profiler.memory.sampler.interval``
+   * - ``SPLUNK_PROFILER_MEMORY_EVENT_RATE``
+     - Rate limit for memory profiling data, expressed as stack traces per unit of time. You can define duration in the form ``<number>/<unit>``, where the unit can be ``s`` or ``m``. The default value is ``150/s``, or 150 stack traces per second. Consider increasing this value when collecting memory profiling data from complex, multithreaded workloads, like application servers. |br| |br| System property: ``splunk.profiler.memory.event.rate``
    * - ``SPLUNK_PROFILER_TLAB_ENABLED``
      - Whether to activate TLAB memory events. The default value is the value assigned to the ``splunk.profiler.memory.enabled`` property. |br| |br| System property: ``splunk.profiler.tlab.enabled``
    * - ``SPLUNK_PROFILER_INCLUDE_INTERNAL_STACKS``

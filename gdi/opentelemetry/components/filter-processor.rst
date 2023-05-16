@@ -243,6 +243,53 @@ You can exclude or include logs using resource attributes or OTTL conditions. Fo
        log_record:
          - 'attributes["test"] == "pass"'
 
+Filter containers
+^^^^^^^^^^^^^^^^^^^^^
+
+You can exclude or include containers with the following configuration:
+
+.. code-block:: yaml 
+
+  agent:
+    config:
+      processors:
+        filter/exclude_containers:
+          metrics:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - Key: k8s.container.name
+                Value: '^(containerX|containerY)$'
+      service:
+        pipelines:
+          metrics:
+            processors:
+              - memory_limiter
+              - batch
+              - resourcedetection
+              - resource
+              - filter/exclude_containers
+  
+  clusterReceiver:
+    config:
+      processors:
+        filter/exclude_containers:
+          metrics:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - Key: k8s.container.name
+                  Value: '^(containerX|containerY)$'
+      service:
+        pipelines:
+          metrics:
+            processors:
+              - memory_limiter
+              - batch
+              - resource
+              - resource/k8s_cluster
+              - filter/exclude_containers
+
 .. _ottl-syntax:
 
 Drop telemetry using OTTL conditions

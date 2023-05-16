@@ -10,6 +10,8 @@ echo "*                                                                    *"
 echo "**********************************************************************"
 echo ""
 
+branchname=$(git branch --show-current)
+
 echo "docker-compose down"
 docker-compose --ansi=never down
 
@@ -46,4 +48,9 @@ echo "To run git commands while using"
 echo "the testing container, open a separate terminal window or tab."
 echo ""
 
-docker exec -it sphinx bash
+echo ""
+printf 'BRANCH: %s\n' "$branchname"
+echo ""
+
+docker exec -it -e BRANCH=$branchname sphinx bash
+

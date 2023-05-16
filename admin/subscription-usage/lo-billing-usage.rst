@@ -13,7 +13,6 @@ Use the Log Observer subscription usage page to view charts that track your orga
 
 To view your organization's Log Observer subscription usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`Log Observer` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
 
-
 What Log Observer tracks 
 ====================================
 
