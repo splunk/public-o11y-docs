@@ -20,9 +20,9 @@ Use access tokens to:
 Token expiry 
 ================
 
-Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You can rotate a token before it expires using the Splunk Observability Cloud API. For details, see :new-page:`Org Token <https://dev.splunk.com/observability/reference/api/org_tokens/latest>` in the developer documentation.
+Access tokens expire one year after the creation date. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You can rotate a token before it expires using Splunk Observability Cloud APIs. For details, see :new-page:`Org Token <https://dev.splunk.com/observability/reference/api/org_tokens/latest>` in the developer documentation.
 
-Tokens cannot be rotated after they expire. If you don't rotate a token before it expires, you'll need to create a new token to replace it.
+You can't rotate tokens after they expire. If you don't rotate a token before it expires, you must create a new token to replace it.
 
 The default access token
 ===========================
@@ -42,7 +42,7 @@ To manage your access (org) tokens:
 #. To look at the details for an access token, select the expand icon to the left of the token name.
 
    For information about the access token permissions allowed by the :guilabel:`Authorization Scopes` field value, see the permissions step in :ref:`create-access-token`.
-#. If you're an organization administrator, the actions menu (|more| icon) appears on the right side of the token listing. You can select token actions from this menu.
+#. If you're an organization administrator, the actions menu (|more| icon) appears to the right side of the token listing. You can select token actions from this menu.
 
 #. To change the token visibility, follow these steps:
 
@@ -64,7 +64,7 @@ To manage your access (org) tokens:
 
             You might see the following message in the middle of the dialog:
 
-            You are currently giving permissions to a team with Restrict Access disabled. This means any user may join this team and will be able to access this Access Token.
+            You are currently giving permissions to a team with Restrict Access deactivated. This means any user can join this team and is  able to access this Access Token.
 
             This message means that all users are able to join the team and then view or read the access token.
 
@@ -94,7 +94,7 @@ To create an access token:
 #. Open the Observability Cloud main menu.
 #. Select :menuselection:`Settings` and select :menuselection:`Access Tokens`.
 #. Select :guilabel:`New Token`. If your organization has a long list of access tokens, you might need to scroll down to the bottom of the list to access this button.
-#. Enter a unique token name. If you enter a token name that is already in use, even if the token is disabled, Infrastructure Monitoring doesn't accept the name.
+#. Enter a unique token name. If you enter a token name that is already in use, even if the token is inactive, Infrastructure Monitoring doesn't accept the name.
 #. Select an authorization scope for the token from one of the following values:    
    
    .. note:: Assign only one authorization scope to each token. Applying both the :strong:`API` and :strong:`Ingest` authorization scopes to the same token might raise a security concern.
@@ -128,7 +128,7 @@ To create an access token:
       * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
       * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
    #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
-#. If you selected :guilabel:`Admins and Select Users or Teams can Read`, specify the users or teams to whom you want to give access:
+#. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
 
    #. Select :guilabel:`Add Team or User`. Observability Cloud displays a list of teams and users in your organization.
    #. To find the team or username in a large list, start entering the name in the search box. Infrastructure Monitoring returns matching results.
@@ -139,7 +139,7 @@ To create an access token:
 
          You might see the following message in the middle of the dialog:
 
-         You are currently giving permissions to a team with Restrict Access disabled. This means any user may join this team and will be able to access this Access Token.
+         You are currently giving permissions to a team with Restrict Access deactivated. This means any user can join this team and is able to access this Access Token.
 
          This message means that all users are able to join the team and then view or read the access token.
 
@@ -160,7 +160,7 @@ Renaming a token does not affect the value of the token.
 
 .. note::
 
-   For :ref:`Cloud integrations (AWS, GCP, or Azure) <get-started-connect>`, after renaming an access token you'll need to choose a new token name via the API. For AWS, you can also set up a new token :ref:`in the UI <aws-wizardconfig>`.
+   For :ref:`Cloud integrations (AWS, GCP, or Azure) <get-started-connect>`, after renaming an access token you need to select a new token name using the API. For AWS, you can also set up a new token :ref:`in the UI <aws-wizardconfig>`.
 
 Deactivate or activate an access token
 ========================================
@@ -171,9 +171,9 @@ Deactivate or activate an access token
 
 To deactivate a token, select :menuselection:`Disable` from the token's actions menu (|more| icon).
 The line that displays the token has a shaded background, which indicates that the
-token is deactivated. The UI displays deactivated tokens at the end of the tokens list,
+token is inactive. The UI displays deactivated tokens at the end of the tokens list,
 after the activated tokens.
 
 To activate a deactivated token, select :menuselection:`Enable` from the deactivated
 token's actions menu (|more| icon). The line that displays the token has a light background,
-which indicates that the token is deactivated.
+which indicates that the token is inactive.
