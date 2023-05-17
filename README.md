@@ -6,7 +6,7 @@ A private mirror exists where the Splunk technical writers edit documentation fo
 
 ## License
 
-This Splunk repository is subject to the Splunk Websites Terms and Conditions of Use ("Terms")  
+This Splunk repository is subject to the Splunk Websites Terms and Conditions of Use ("Terms")
 [https://www.splunk.com/en_us/legal/terms/terms-of-use.html](https://www.splunk.com/en_us/legal/terms/terms-of-use.html) 
 and the [LICENSE](LICENSE) specific to this repository.
 
