@@ -25,11 +25,11 @@ Impacts of dropping data
 
 Before you decide to drop unaggregated raw data for your metric, consider the following impacts:
 
-- You can only drop new incoming data. Existing data can't be dropped.
+- You can drop new incoming data, but you can't drop existing data.
 - You can't recover dropped data.
-- Detectors using the metric you drop will misfire alerts or stop alerting.
-- Charts using the metric you drop will stop reporting new data.
-- If you drop data for metrics associated with built-in charts and AutoDetect detectors, these charts and detectors will be empty and not function correctly. Avoid dropping data for metrics used in built-in charts and AutoDetect detectors. For a list of AutoDetect detectors, see :ref:`autodetect-list`.
+- Detectors using the metric you drop stop working. Alerts don't fire correctly or stop firing entirely.
+- Charts using the metric you drop no longer display new data.
+- If you drop data for metrics associated with built-in charts and AutoDetect detectors, these charts and detectors no longer display any data, or they don't function correctly. Avoid dropping data for metrics used in built-in charts and AutoDetect detectors. For a list of AutoDetect detectors, see :ref:`autodetect-list`.
 
 Avoid empty charts and detectors when dropping data
 ======================================================

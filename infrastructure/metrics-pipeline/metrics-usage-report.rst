@@ -14,7 +14,7 @@ To get a detailed breakdown of your metric time series (MTS) creation and usage,
 
 You can use the detailed metrics usage report to optimize your usage of custom metrics. 
 
-    * If you are on a usage-based pricing plan, all your metrics are considered custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance. Learn more about this subscription plan in :ref:`dpm-usage`.
+    * If you are on a usage-based pricing plan, Splunk Observability Cloud counts all your metrics as custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance. To learn more about this subscription plan, see :ref:`dpm-usage`.
     * If you are on a host-based pricing plan with high utilization of custom metrics, you can use the report to lower your custom metrics usage. Learn more about this subscription plan in :ref:`monitor-imm-billing-usage`.
 
 Format of the report
@@ -37,7 +37,7 @@ Metric identifiers
      - The name of the metric
    
    * - Category type 
-     - The category of the metric, in the format of a number. It only applies to host-based subscription plans. In DPM subscription plans, all metrics are considered custom.
+     - The category of the metric, in the format of a number. It only applies to host-based subscription plans. In data points per minute (DPM) subscription plans, Splunk Observability Cloud metrics counts all metrics as custom metrics.
 
 See the following table for more information on metric category types. For more information, see :ref:`metrics-category`.
 
@@ -58,7 +58,7 @@ Usage statistics
      - Number of unique detectors running during the interval for the metric. Detectors created before the interval are also counted.
 
    * - Charts
-     - Number of unique charts containing the metric that are viewed in dashboards during the interval. If the same chart is viewed multiple times, it is counted only once towards the total charts count.
+     - Number of unique charts containing the metric that users viewed during the interval. If users view the same chart viewed multiple times, all the views count only once towards the total charts count.
 
 
 MTS creation statistics
@@ -84,7 +84,7 @@ MTS creation statistics
    * - MTS per token
      - | The token used to create the MTS and the number of MTS created for the metric using that token.
 
-       * If you see a number, such as ``1336332416901451776``, instead of a token ID, the token was deleted before the report was generated.
+       * If you see a number, such as ``1336332416901451776``, instead of a token ID, something delete the token before the system generated the report.
        * If you see ``0`` instead of a token ID, the MTS were not created using a token.
        * If you see ``{}`` instead of a token ID and the MTS count, the metric is an internal metric. 
 
