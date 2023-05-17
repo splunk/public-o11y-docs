@@ -24,7 +24,7 @@ Built-in alert conditions
 
 When you create rules in detectors to specify conditions that trigger alerts, Splunk Infrastructure Monitoring provides a number of built-in conditions that detect common problem scenarios. Many of these alert conditions provide more powerful ways of monitoring signals than the standard practice of comparing a signal to a static threshold.
 
-The following table summarizes the available built-in alert conditions. To learn more about each condition, click the name of the condition.
+The following table summarizes the available built-in alert conditions. To learn more about each condition, select the name of the condition.
 
 .. _condition-ref-table:
 

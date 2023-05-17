@@ -87,7 +87,7 @@ In this situation, Infrastructure Monitoring applies the default visualization r
 
 |br|
 
-To retain the peaks or valleys, you can change the rollup to :strong:`max` or :strong:`min`, whichever is more relevant to your metric. The Y-axis value range may change from what it was in the original visualization. In this illustration, we clone plot A and change the rollup to :strong:`max` in plot B (and change the color in plot B to make the differences easier to see). To clone a plot line, open the plot’s Actions menu at the far right of the plot line, then select :strong:`Clone`. For information on changing plot color, see :ref:`plot-config-panel`.
+To retain the peaks or valleys, you can change the rollup to :strong:`max` or :strong:`min`, whichever is more relevant to your metric. The Y-axis value range may change from what it was in the original visualization. In this illustration, we clone plot A and change the rollup to :strong:`max` in plot B (and change the color in plot B to make the differences easier to see). To clone a plot line, open the plot’s Actions menu (|more|) at the far right of the plot line, then select :strong:`Clone`. For information on changing plot color, see :ref:`plot-config-panel`.
 
 ..  image:: /_images/data-visualization/charts/gain-insights-through-chart-analytics/retain-peaks-and-valleys-02.png
     :width: 99%
@@ -151,7 +151,7 @@ View weekly, daily or hourly comparisons
 
 If time of day or week matters for understanding whether your apps or infrastructure are performing within normal bounds, or if your business sees cyclical or periodic demand, e.g. weekdays and weekends are very different, then you can create charts that highlight the change from one week, one day, one hour etc. to the next. (Note that Splunk Infrastructure Monitoring allows you to do comparisons using whatever timeframe you want, not just these intervals.)
 
-1. Use the first plot (plot A) to show the metric you care about, then clone A to create plot B. (To clone a plot line, open the plot’s Actions menu at the far right of the plot line, then select :strong:`Clone`.) In this example, we are using ``memory.usage.total`` as our signal.
+1. Use the first plot (plot A) to show the metric you care about, then clone A to create plot B. (To clone a plot line, open the plot’s Actions menu (|more|) at the far right of the plot line, then select :strong:`Clone`.) In this example, we are using ``memory.usage.total`` as our signal.
 
 2. Add a :new-page-ref:`Timeshift <timeshift>` function to plot B, entering a time range over which the change matters, For example, use ``5m`` for 5 minutes, ``2d`` for 2 days, and ``1w`` for 1 week.
 
@@ -182,7 +182,7 @@ Use the Timeshift function to understand trends
 
 In infrastructure and application monitoring, the trend of a metric (the rate at which it is changing) is frequently of greater interest than the absolute value of the metric itself. For example, it might not be meaningful to know that your CPU is 70% utilized, but you might care to know that the utilization has doubled consistently for the past 10 minutes, as that might indicate that the system is trending towards failure.
 
-1. Use the first plot (plot A) to show the metric you care about (we used the mean for ``cpu.utilization``), then clone A to create plot B. (To clone a plot line, open the plot’s Actions menu at the far right of the plot line, then select :strong:`Clone`).
+1. Use the first plot (plot A) to show the metric you care about (we used the mean for ``cpu.utilization``), then clone A to create plot B. (To clone a plot line, open the plot’s Actions menu (|more|) at the far right of the plot line, then select :strong:`Clone`).
 
 2. Add a :new-page-ref:`Timeshift <timeshift>` function to plot B, entering a time range over which the change matters, e.g. ``5m`` for 5 minutes.
 

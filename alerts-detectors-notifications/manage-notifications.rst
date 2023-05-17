@@ -31,7 +31,7 @@ Manage subscribers from the Detectors tab
 To manage the subscribers to a specific detector:
 
 #. Go to :guilabel:`Alerts` and select the :guilabel:`Detectors` tab.
-#. Click the more icon (|more|) of the detector you want to edit.
+#. Select the more icon (|more|) of the detector you want to edit.
 #. In the actions menu, select :menuselection:`Manage Subscriptions`.
 #. In the dialog box, select :guilabel:`Add Recipient`.
 
@@ -46,7 +46,7 @@ You can manage subscriptions to any detector linked to a chart by using the dete
 
 To subscribe to a linked detector from a chart:
 
-#. Click the :guilabel:`Detector` menu (bell icon).
+#. Select the :guilabel:`Detector` menu (bell icon).
 #. Select the detector, then select :guilabel:`Subscribe`.
 
    .. image:: /_images/alerts-detectors-notifications/manage-notifications/detector-subscribe.png
@@ -60,7 +60,7 @@ Remove notification recipients from a detector
 
 To stop sending notifications to a recipient, open the detector from the :guilabel:`Detectors` tab and edit each rule. 
 
-You can also :ref:`manage-subs` to see a list of current recipients and click the :guilabel:`X` next to any recipient to unsubscribe them.
+You can also :ref:`manage-subs` to see a list of current recipients and select the :guilabel:`X` next to any recipient to unsubscribe them.
 
 Do more with your notifications
 =============================================================

@@ -73,7 +73,7 @@ To create a team, follow these steps:
 
 #. Continue to add users to the team.
 
-#. When you're finished adding users, click :guilabel:`Create`. The new team name appears in the list of teams. 
+#. When you're finished adding users, select :guilabel:`Create`. The new team name appears in the list of teams. 
 
 
 .. _admin-delete-team:
@@ -95,7 +95,7 @@ To delete a team, follow these steps:
 
 #. Select the :guilabel:`Actions` menu icon next the team name, then select :menuselection:`Delete Team`.
 
-#. Observability Cloud displays a dialog box that asks you to confirm the deletion. Click :guilabel:`Delete`.
+#. Splunk Observability Cloud displays a dialog box that asks you to confirm the deletion. Select :guilabel:`Delete`.
 
 The team no longer appears in the list of teams.
 
@@ -117,7 +117,7 @@ To change the team name, follow these steps:
 
 #. Select the :guilabel:`Edit` icon next the team name.
 
-#. When you're finished editing the name, click Enter to save your changes. 
+#. When you're finished editing the name, select :guilabel:`Enter to save your changes`. 
 
 .. note:: The Team name is case-insensitive. If you attempt to change the team name from :strong:`Team` to :strong:`team`, you will see a message that the name already exists. 
 
@@ -143,7 +143,7 @@ To add or remove team members, follow these steps:
 
 #. Use the :guilabel:`Add Users` field to search for users by name or email to add them to the team.
 
-   * To add a team member, click the checkbox next to the email address of the member.
+   * To add a team member, select the email address of the member.
 
 #. Select :guilabel:`Add`.
 
@@ -183,3 +183,117 @@ To view which teams a user belongs to, follow these steps:
 #. In the search bar, enter the name of the user and ensure that :guilabel:`Users` is selected. You can search by the user's name or email address.
 
 
+
+.. _admin-team-controls:
+
+Enable enhanced team security
+============================================================================
+
+|hr|
+
+:strong:`Available in Enterprise Edition`
+
+|hr|
+
+By default, every user can join any team in your organization. If you want to restrict users from being able to join any team, you can turn on the enhanced team security setting. Turning on the enhanced team security setting also makes the Team Manager role available to teams.
+
+To learn more about team roles and permissions, see :ref:`about-team-roles`.
+
+You must be a Splunk Observability Cloud administrator to apply this setting. This setting applies to every team in your organization.
+
+To turn on the enhanced team security setting, follow these steps:
+
+#. Log in to Splunk Observability Cloud.
+
+#. In the left navigation menu, select :menuselection:`Settings > General Settings`.
+
+#. Select the :guilabel:`Restrict Access` check box.
+
+
+.. _about-team-roles:
+
+Team roles and permissions
+============================================================================
+
+This table presents the available team roles and their permissions. Some team roles and permissions change based on whether enhanced team security is turned on. For example, when you turn on enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
+
+To learn more about enabling enhanced team security, see :ref:`admin-team-controls`.
+
+.. list-table::
+  :widths: 20,20,20,20,20
+
+  * - :strong:`Permission`
+    - :strong:`Admin`
+    - :strong:`Team Manager` (Available with enhanced team security turned on)
+    - :strong:`Team Member`
+    - :strong:`User`
+
+  * - :strong:`Create team`
+    - Yes
+    - No
+    - No
+    - No
+
+  * - :strong:`Delete team`
+    - Yes
+    - No
+    - No
+    - No
+
+  * - :strong:`View team landing page`
+    - Yes
+    - Yes
+    - Yes
+    - Yes
+
+  * - :strong:`Edit team name and description`
+    - Yes
+    - Yes
+    - * Yes, when enhanced team security is turned off
+      * No, when enhanced team security is turned on
+    - No
+
+  * - :strong:`Join team`
+    - Yes
+    - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
+    - Not applicable: A Team Member is already on a team and doesn't need to join.
+    - * Yes, when enhanced team security is disabled
+      * No, when enhanced team security is turned on. A user must be added by an Admin or Team Manager
+
+  * - :strong:`Add member`
+    - Yes
+    - Yes
+    - No
+    - No
+
+  * - :strong:`Assign Team Manager role to Team Member`
+    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
+      * Yes, when enhanced team security is turned on
+    - Yes
+    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
+      * No, when enhanced team security is turned on
+    - * Not applicable, when enhanced team security is disabled. The Team Manager role isn't available when enhanced team security is disabled
+      * No, when enhanced team security is turned on
+
+  * - :strong:`Remove member`
+    - Yes
+    - Yes
+    - No
+    - No
+
+  * - :strong:`Edit notification policy`
+    - Yes
+    - Yes
+    - Yes
+    - No
+
+  * - :strong:`Leave team`
+    - * Yes, if on a team
+      * Not applicable, if not on a team
+    - Yes
+    - Yes
+    - Not applicable: A user must be on a team to leave a team
+
+Permission to link a detector to a team is based on the detector's permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
+
+Permission to link a dashboard group to a team is based on the dashboard group's permissions. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.
