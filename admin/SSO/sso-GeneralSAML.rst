@@ -108,7 +108,7 @@ To install a generic SAML SSO integration, follow these steps:
    
       #. In the :guilabel:`Search` field, search for :guilabel:`SAML`, and select it.
    
-   #. In the :guilabel:`Name` field, enter the name for this integration. If your organization has a :ref:`custom URL<custom-url>`, this name appears as the text for the button users click to sign in (see the section :ref:`Name an SSO integration<naming-note-sso>`).
+   #. In the :guilabel:`Name` field, enter the name for this integration. If your organization has a :ref:`custom URL<custom-url>`, this name appears as the text for the button users select to log in (see the section :ref:`Name an SSO integration<naming-note-sso>`).
    #. In the remaining fields, enter the information you gathered in the :ref:`generic-sso-prerequisites` section.
    #. :guilabel:`Save`. The message :strong:`Validated!` appears.
 

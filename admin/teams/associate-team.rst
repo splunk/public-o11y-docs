@@ -23,7 +23,7 @@ When you link detectors to a team, you get the following features:
 
 * On the Alerts page, users can use filters to display only those detectors linked to a specific team.
 
-.. note:: You can manually add a team as a notification recipient for any detector; you don't have to link the detector to the team.
+.. note:: You can manually add a team as a notification recipient for any detector. You don't have to link the detector to the team.
 
 
 .. _create-link-detector-teams:
@@ -39,9 +39,9 @@ To link a detector to a team, follow these steps:
 
 #. From the :guilabel:`Actions` menu for the detector, select :guilabel:`Links to teams`.
 
-#. From the drop-down list, select the team you want to link to the detector, then click :guilabel:`Done`.
+#. From the drop-down list, select the team you want to link to the detector, then select :guilabel:`Done`.
 
-#. If the team is not already a notification recipient for the detector, Observability Cloud asks if you want to send notifications to the team. Click :guilabel:`Yes` to add the team as a recipient to each detector rule. Click :guilabel:`No` to leave all recipients as is.
+#. If the team is not already a notification recipient for the detector, Observability Cloud asks if you want to send notifications to the team. Select :guilabel:`Yes` to add the team as a recipient to each detector rule. Select :guilabel:`No` to leave all recipients as is.
 
 .. note:: Sending alert notifications to a team doesn't necessarily mean that every team member is notified. The team's notification policy determines which team members receive notifications. To learn more about configuring team notification policies, see :ref:`admin-team-notifications`.
 
@@ -58,8 +58,8 @@ You can remove the link between a detector and a team when you are viewing the :
 To remove the link between a detector and a team, follow these steps:
 
 #. From the :guilabel:`Actions` menu for the detector, select :guilabel:`Links to teams`.
-#. Click the :guilabel:`x` to remove a team from the linked teams list, then click :guilabel:`Done`.
-#. If the team is a notification recipient for the detector, Observability Cloud asks if you want to stop sending notifications to the team. Click :guilabel:`Yes` to remove the team as a recipient from each detector rule. Select :guilabel:`No` to leave all recipients as is.
+#. Select the :guilabel:`x` to remove a team from the linked teams list, then select :guilabel:`Done`.
+#. If the team is a notification recipient for the detector, Observability Cloud asks if you want to stop sending notifications to the team. Select :guilabel:`Yes` to remove the team as a recipient from each detector rule. Select :guilabel:`No` to leave all recipients as is.
 
 
 .. _dashboard-groups-link-team-features:
@@ -99,23 +99,23 @@ To link a dashboard group to a team from the team landing page, follow these ste
 
 #. Access the team landing page. To learn how to access team landing pages, see :ref:`view-team-landing-page`.
 
-#. Click :guilabel:`Add Dashboard Group`.
+#. Select :guilabel:`Add Dashboard Group`.
 
 #. Select the dashboard group you want to link.
 
-#. Click :guilabel:`OK`.
+#. Select :guilabel:`OK`.
 
 To link a dashboard group to a team from the dashboard group:
 
 #. Access the dashboard group. To learn how to access dashboard groups, see :ref:`viewing-dashboards`.
 
-#. Click the :guilabel:`Dashboard group actions` menu (|more|) next to the dashboard group name and select :guilabel:`Links to Teams`.
+#. Select the :guilabel:`Dashboard group actions` menu (|more|) next to the dashboard group name and select :guilabel:`Links to Teams`.
 
-#. In the text box, start typing a team name. Observability Cloud auto-completes the team name. If Observability Cloud finds more than one match, it displays a drop-down list.
+#. In the text box, start typing a team name. Observability Cloud autocompletes the team name. If Splunk Observability Cloud finds more than one match, it displays a list.
 
 #. Select the team you want to link to from the list.
 
-#. Click :guilabel:`Done`.
+#. Select :guilabel:`Done`.
 
 
 .. _remove-link-dashboard-group-team:
@@ -129,8 +129,8 @@ To remove the link between a dashboard group and a team, follow these steps:
 
 #. Access the dashboard group. To learn how to access dashboard groups, see :ref:`viewing-dashboards`.
 
-#. Click the :guilabel:`Dashboard group actions` menu (|more|) next to the dashboard group name and select :guilabel:`Links to Teams`.
+#. Select the :guilabel:`Dashboard group actions` menu (|more|) next to the dashboard group name and select :guilabel:`Links to Teams`.
 
-#. Click the :guilabel:`x` to remove a linked team.
+#. Select the :guilabel:`x` to remove a linked team.
 
-#. Click :guilabel:`Done`.
+#. Select :guilabel:`Done`.

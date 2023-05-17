@@ -649,7 +649,7 @@ then the labels are displayed on the right side of the screen in the SignalFlow 
    :width: 99%
    :alt: This image shows plot label.
 
-Click the gear icon to display options you can specify for the plot line shown in the detector's chart.
+Select the gear icon to display options you can specify for the plot line shown in the detector's chart.
 
 
 

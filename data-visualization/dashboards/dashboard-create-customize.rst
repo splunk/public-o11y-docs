@@ -67,7 +67,7 @@ To rename a dashboard or change the dashboard's description, follow these steps:
 #. From the :guilabel:`More Actions` menu, select :menuselection:`Rename`. The Dashboard Info tab appears.
 
    .. image:: /_images/images-dashboard/dashboard_rename.png
-      :alt: Rename menu item on the dashboard More Actions menu
+      :alt: Rename menu item on the dashboard More Actions menu (|more|)
 
 #. Make any desired changes, then select :guilabel:`Save and close`.
 
