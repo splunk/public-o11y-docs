@@ -20,6 +20,8 @@ To configure the iOS RUM agent, pass the settings as arguments when initializati
       SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
         // Call functions to configure additional options
         .globalAttributes(globalAttributes: ["deployment.environment": "<environment>"])
+        .allowInsecureBeacon(enabled: true)
+        .debug(enabled: true)
         .build()
 
    .. code-tab:: objective-c

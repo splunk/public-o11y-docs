@@ -47,7 +47,7 @@ The following example shows how to define global attributes in your code:
    //..
    SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
    // You can set the globalAttributes option to the map at initialization
-      .globalAttributes(globalAttributes: ["key1": "value1", "key2": 7])
+      .deploymentEnvironment(environment: "<environment>")
       .build()
 
    // You can also call the ``setGlobalAttributes`` function 
