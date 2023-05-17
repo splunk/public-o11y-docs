@@ -18,19 +18,19 @@ To configure the iOS RUM agent, pass the settings as arguments when initializati
 
       import SplunkOtel
       //..
-      SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-            rumAuth: "<rum-token>",
-            options: SplunkRumOptions(environment:"<environment-name>"))
+      SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+        // Call functions to configure additional options
+        .globalAttributes(globalAttributes: ["deployment.environment": "<environment>"])
+        .build()
 
    .. code-tab:: objective-c
       :emphasize-lines: 4,5,6
 
       @import SplunkOtel;
-
-      //Create an options object to store the settings
-      SplunkRumOptions *options = [[SplunkRumOptions alloc] init];
-      options.environment = @"<environment-name>";
-      [SplunkRum initializeWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>" options: options];
+      //...
+      SplunkRumBuilder *builder = [SplunkRumBuilder withBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>"];
+      // Call functions to configure additional options
+      [builder build];
 
 .. _ios-rum-settings:
 
