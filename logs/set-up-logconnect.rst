@@ -43,21 +43,61 @@ Set up Log Observer Connect
 
 To set up Log Observer Connect for Splunk Enterprise, follow these steps:
 
-1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and click :guilabel:`Add new connection`.
+Splunk Observability Cloud
+----------------------------------------------------------------
+In Splunk Observability Cloud, do the following:
 
-2. Click :guilabel:`Splunk Enterprise`.
+1. Go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`. If you don't see :guilabel:`Log Observer Connect` in :guilabel:`Settings`, you are not an administrator in Splunk Observability Cloud. Contact your organization's Splunk Observability Cloud administrator to perform this integration.
 
-3. Follow the instructions in the integration guided setup to do the following in Splunk Enterprise:
+2. Select :guilabel:`Splunk Enterprise`. 
 
-  a. Create a new role in your Splunk Enterprise instance. This user must be assigned the admin role.
+Splunk Enterprise
+----------------------------------------------------------------
+In Splunk Enterprise, follow the instructions in the guided setup for the integration to do the following:
 
-  b. Select the Splunk Enterprise indexes that you want to search in Log Observer Connect. 
+1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
 
-  c. Create and configure a new user in your Splunk Enterprise instance.
+      .. image:: /_images/logs/setupLOC1.png
+         :width: 100%
+         :alt: This screenshot shows how to go to Roles in Splunk Enterprise where you will set up a service account for Log Observer Connect.
+      
+2. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
+      
+3. On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` is selected. Also, ensure that ``indexes_list_all`` is not selected.
 
-  d. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance.
+      .. image:: /_images/logs/CapabilitiesTab1.png
+         :width: 100%
+         :alt: This screenshot shows the Capabilities tab in user configuration.
 
-4. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
+4. On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`*(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
+
+      .. image:: /_images/logs/IndexesTab1.png
+         :width: 100%
+         :alt: This screenshot shows the Indexes tab in user configuration.
+
+5. On the :guilabel:`Resources` tab, enter a :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
+
+   The limit of 40 assumes that you have 10 Log Observer Connect users. To determine your ideal :guilabel:`Standard search limit`, multiply the number of Log Observer Connect users you have by 4. For example, if you have 20 Log Observer users, enter a :guilabel:`Standard search limit` of 80 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`.
+
+      .. image:: /_images/logs/ResourcesTab1.png
+         :width: 100%
+         :alt: This screenshot shows recommended configuration for role search job limit and user search job limit.
+
+6. Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
+
+      .. image:: /_images/logs/ResourcesTab2.png
+         :width: 100%
+         :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
+
+7. Next, in Splunk Enterprise, go to :guilabel:`Settings > Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created in the preceeding steps for the Log Observer Connect service account.
+   
+      .. image:: /_images/logs/CreateUser.png
+         :width: 100%
+         :alt: This screenshot shows the Create user page in Splunk Enterprise where you can assign a user to the service account role.
+
+8. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance.
+
+9. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
 .. note:: Manage concurrent search limits using your current strategy in Splunk Enterprise. All searches initiated by Log Observer Connect users go through the service account you create in Splunk Enterprise. For each active Log Observer Connect user, four back-end searches occur when a user performs a search in the Log Observer Connect UI. For example, if there are three concurrent users accessing the Log Observer Connect UI at the same time, the service account for Log Observer Connect initiates approximately 12 searches in Splunk Enterprise.
 
