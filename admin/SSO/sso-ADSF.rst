@@ -76,13 +76,13 @@ Add Observability Cloud as a relying party in ADFS:
 
 #. In separate browser tab or window, log in to the ADFS server and open the ADFS management console.
 #. In the console, right-click on :guilabel:`Relying Party Trusts`, select
-   :menuselection:`Add Relying Party Trust`, then click :guilabel:`Start`.
-#. Select :menuselection:`Claims aware`, then click :guilabel:`Next`.
-#. Select :menuselection:`Enter data about the relying party manually`, then click :guilabel:`Next`.
+   :menuselection:`Add Relying Party Trust`, then select :guilabel:`Start`.
+#. Select :menuselection:`Claims aware`, then select :guilabel:`Next`.
+#. Select :menuselection:`Enter data about the relying party manually`, then select :guilabel:`Next`.
 #. For :guilabel:`Display name`, enter :guilabel:`Splunk Observability Cloud`,
-   then click :guilabel:`Next`.
+   then select :guilabel:`Next`.
 #. On the screen that appears, leave the default certificate settings unchanged.
-#. On the :guilabel:`Configure URL` page, leave the two options deselected and click :guilabel:`Next`.
+#. On the :guilabel:`Configure URL` page, leave the two options deselected and select :guilabel:`Next`.
 #. On the :guilabel:`Configure Identifiers` page, enter your entity ID in the :guilabel:`Relying party trust identifiers` text box:
 
       * If you're setting up multiple integrations for ADFS, enter the integration-specific entity ID you obtained previously.
@@ -98,27 +98,27 @@ Add Observability Cloud as a relying party in ADFS:
 
       To learn more about realms, see :ref:`Note about realms<about-realms>`.
 
-#. Click :guilabel:`Add`, then click :guilabel:`Next`.
-#. The next step in the wizard lets you configure multi-factor authentication.
-   Because Observability Cloud doesn't require this option, click :guilabel:`Next`.
+#. Select :guilabel:`Add`, then select :guilabel:`Next`.
+#. The next step in the guided setup lets you configure multifactor authentication.
+   Because Observability Cloud doesn't require this option, select :guilabel:`Next`.
 #. On the :guilabel:`Choose access control policy` page, do the following:
 
    #. Select :menuselection:`Permit everyone`.
    #. Optionally, you can select :guilabel:`I do not want to configure access control policies at this time`
       In a later step, you can add authorization rules. Adding rules isn't part of the integration procedure,
       so it's not described here.
-   #. Click :guilabel:`Next`.
-#. Review your settings, and then click :guilabel:`Next`.
-#. On the :guilabel:`Ready to Add Trust` page, click :guilabel:`Next`.
+   #. Select :guilabel:`Next`.
+#. Review your settings, and then select :guilabel:`Next`.
+#. On the :guilabel:`Ready to Add Trust` page, select :guilabel:`Next`.
 #. On the :guilabel:`Finish` page, deselect :guilabel:`Configure claims issuance policy for this application`,
-   then click :guilabel:`Close`.
+   then select :guilabel:`Close`.
 #. On the page that appears, select :menuselection:`Relying Party Trusts`,
    right-click :guilabel:`Splunk Observability Cloud`, then select :menuselection:`Properties`.
-#. Click the :guilabel:`Advanced` tab, then from the :guilabel:`Secure Hash Algorithm` drop-down list, select :menuselection:`SHA-256`.
-#. Click the :guilabel:`Endpoints` tab, then click :guilabel:`Add SAML...` In the dialog box, do the following:
+#. Select the :guilabel:`Advanced` tab, then from the :guilabel:`Secure Hash Algorithm` list, select :menuselection:`SHA-256`.
+#. Select the :guilabel:`Endpoints` tab, then select :guilabel:`Add SAML...` In the dialog box, do the following:
 
-    * From the :guilabel:`Endpoint type` drop-down list, select :guilabel:`SAML Assertion Consumer`.
-    * From the :guilabel:`Binding` drop-down list, select :guilabel:`POST`.
+    * From the :guilabel:`Endpoint type` list, select :guilabel:`SAML Assertion Consumer`.
+    * From the :guilabel:`Binding` list, select :guilabel:`POST`.
     * Select :guilabel:`Set the trusted URL as default`.
     * For :guilabel:`Trusted URL`, enter the URL, replacing ``<INTEGRATION_ID>`` with the integration ID you copied in step 3 of the section :ref:`Create a new ADFS SSO integration in Observability Cloud<create-adfs-imm-integration>`:
 
@@ -132,13 +132,13 @@ Add Observability Cloud as a relying party in ADFS:
 
       To learn more about realms, see :ref:`Note about realms<about-realms>`.
 
-#. Click :guilabel:`OK` to close the :guilabel:`Add an endpoint` dialog box.
-#. Click :guilabel:`OK` to close the :guilabel:`Splunk Observability Cloud Properties` dialog box.
+#. Select :guilabel:`OK` to close the :guilabel:`Add an endpoint` dialog box.
+#. Select :guilabel:`OK` to close the :guilabel:`Splunk Observability Cloud Properties` dialog box.
 #. On the page that appears, select :guilabel:`Relying Party Trusts` and right-click on :guilabel:`Splunk Observability Cloud`.
-#. From the :guilabel:`Claim rule policy` drop-down list, select :menuselection:`Edit Claim Issuance Policy...`.
+#. From the :guilabel:`Claim rule policy` list, select :menuselection:`Edit Claim Issuance Policy...`.
 #. Select :guilabel:`Add Rule...`.
-#. Select :menuselection:`Send LDAP Attributes as Claims`, and then click :guilabel:`Next`.
-#. Enter a name for the claim rule, such as "LDAP", then from the :guilabel:`Attribute store` drop-down list,
+#. Select :menuselection:`Send LDAP Attributes as Claims`, and then select :guilabel:`Next`.
+#. Enter a name for the claim rule, such as "LDAP", then from the :guilabel:`Attribute store` list,
    select :guilabel:`Active Directory`.
 #. In the :guilabel:`Mapping of LDAP attributes to outgoing claim types` pane,
    use the drop-down lists to set the mappings between the
@@ -158,7 +158,7 @@ Add Observability Cloud as a relying party in ADFS:
    #. From the :guilabel:`Incoming claim type` drop-down list, select :guilabel:`User.email`.
    #. From the :guilabel:`Outgoing claim type` drop-down list, select :guilabel:`Name ID`.
    #. Regardless of the types you choose, from the :guilabel:`Outgoing name ID format` drop-down list, select :guilabel:`Persistent Identifier`.
-   #. Click :guilabel:`Finish`.
+   #. Select :guilabel:`Finish`.
 
 .. _obtain-adfs-cert:
 
@@ -169,9 +169,9 @@ Obtain an ADFS certificate to install to Observability Cloud:
 
 #. In the ADFS management console, select :guilabel:`Service`, then select :guilabel:`Certificates`.
 #. From the :guilabel:`Token-signing` list, right-click the certificate, then select :menuselection:`View Certificate`.
-#. Select :guilabel:`Detail`, then click :guilabel:`Copy to file`. The certificate export wizard appears.
-#. Click :menuselection:`Next`, then select :menuselection:`DER encoded binary X.509`.
-#. Enter certificate.cer, then click :guilabel:`Finish`.
+#. Select :guilabel:`Detail`, then select :guilabel:`Copy to file`. The certificate export wizard appears.
+#. Select :menuselection:`Next`, then select :menuselection:`DER encoded binary X.509`.
+#. Enter certificate.cer, then select :guilabel:`Finish`.
 #. Convert the certificate from a .cer format to a .pem format, using the ``openssl`` tool:
 
    ``openssl x509 -inform der -in certificate.cer -out certificate.pem``
@@ -202,12 +202,12 @@ Upload the ADFS certificate and federation metadata to Observability Cloud
 In Observability Cloud, do the following:
 
 #. Find the Active Directory FS page you opened in a previous step.
-#. Click the :strong:`Upload File` link in the :guilabel:`Certificate` field and upload the ``certificate.pem`` file.
-#. Click the :strong:`Upload File` link in the :guilabel:`Metadata` field and upload the ``FederationMetadata.xml`` file.
-#. Click :guilabel:`Save`.
+#. Select the :strong:`Upload File` link in the :guilabel:`Certificate` field and upload the ``certificate.pem`` file.
+#. Select the :strong:`Upload File` link in the :guilabel:`Metadata` field and upload the ``FederationMetadata.xml`` file.
+#. Select :guilabel:`Save`.
 
 The Microsoft ADFS SSO integration is now available to users in your ADFS organization.
-When users sign in to Observability Cloud from ADFS for the first time,
+When users log in to Observability Cloud from ADFS for the first time,
 they receive an email containing a link that they must open in order to authenticate.
 This only occurs the first time the user signs in. Subsequent login attempts don't
 require validation.

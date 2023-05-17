@@ -56,12 +56,16 @@ There are about 20 metric categories in Splunk Observability Cloud. Metric categ
 
 Learn all metric categories and how to identify them in :ref:`metric-categories`.
 
-High resolution metrics
+.. _metric-resolution:
+
+Metric resolution
 ----------------------------
 
-By default, metrics are processed by Observability Cloud at a 10-second resolution.
+By default, metrics are processed by Observability Cloud at the coarser of their native resolution, or at 10-second resolution. In other words, they are never displayed at a resolution finer than 10 |nbsp| seconds.
 
-Metrics can be ingested at a higher resolution of 1 second. To do so, set the dimension ``sf_hires`` to ``1`` in any MTS.
+Optionally, metrics can be ingested at a :strong:`higher resolution of 1 second`. High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. 
+
+.. note:: To process a metric at high resolution, set the dimension ``sf_hires`` to ``1`` in any MTS.
 
 Metric metadata
 ----------------------
@@ -76,7 +80,7 @@ To add or edit dimensions:
 .. _data-points:
 
 Data points
-============
+=================
 
 A data point contains a metric name and value, the type of the metric, and the dimensions of the metric. Dimensions are the key-value pairs that identify the source of the reported value. Infrastructure Monitoring assumes that incoming data points contain a metric as well as a dimension, or a unique key-value pair that describes some aspect of the metric source. 
 

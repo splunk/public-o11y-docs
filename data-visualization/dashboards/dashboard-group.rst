@@ -21,7 +21,7 @@ To create a dashboard group from scratch, take the following steps:
 #. Select :guilabel:`Dashboard Group` from the :strong:`Create` menu on the navigation bar.
 #. Enter a name and (optionally) a description of the group.
 #. Set write permissions if needed, then click :guilabel:`Create`. To learn more, see :ref:`about-permissions`.
-#. After that, you land on a dashboard with the same name as the group. You can rename the dashboard from the dashboard's Actions menu, or just begin adding charts to the group.
+#. After that, you land on a dashboard with the same name as the group. You can rename the dashboard from the dashboard's Actions menu (|more|), or begin adding charts to the group.
 
 For more information on creating charts, see :ref:`simple-charts-dashboards` and :ref:`create-charts`.
 

@@ -74,7 +74,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - Business Workflows
     - :ref:`apm-workflows`
 
-  * - Jump between components of Splunk Observability Cloud by clicking related data
+  * - Jump between components of Splunk Observability Cloud by selecting related data
     - Related Content
     - :ref:`get-started-relatedcontent`
 
