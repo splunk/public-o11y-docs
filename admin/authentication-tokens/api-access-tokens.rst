@@ -22,11 +22,11 @@ Observability Cloud automatically generates a user API access token every time y
 
 To retrieve it:
 
-#. On the Left Nav menu, go to :strong:`Settings`.
+#. On the left nav menu, select :strong:`Settings`.
 #. Select your profile name.
-#. Select :strong:`Show API Access Token` on the top right corner.
+#. Select :strong:`Show API Access Token`.
 #. If you need it, :strong:`Copy` the token to your clipboard.
-#. If you are going to keep your Account Settings screen open, select :strong:`Hide` to prevent others from seeing your token.
+#. If you keep your Account Settings screen open, select :strong:`Hide` to prevent others from seeing your token.
 
 You don't need to delete your user API access tokens. Instead, you can let them expire.
 
