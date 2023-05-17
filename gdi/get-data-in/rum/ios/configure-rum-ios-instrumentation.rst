@@ -14,7 +14,6 @@ To configure the iOS RUM agent, pass the settings as arguments when initializati
 .. tabs::
 
    .. code-tab:: swift
-      :emphasize-lines: 3,4,5
 
       import SplunkOtel
       //..
@@ -24,7 +23,6 @@ To configure the iOS RUM agent, pass the settings as arguments when initializati
         .build()
 
    .. code-tab:: objective-c
-      :emphasize-lines: 4,5,6
 
       @import SplunkOtel;
       //...
