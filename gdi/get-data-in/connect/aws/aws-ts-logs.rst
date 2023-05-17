@@ -12,7 +12,7 @@ See the following topics when experiencing issues collecting logs from AWS.
 
 .. note::
 
-  See also :ref:`aws-troubleshooting`.
+  See also :ref:`aws-troubleshooting` and :ref:`aws-ts-metric-streams`.
 
 CloudFormation stack was not created
 ================================================================
