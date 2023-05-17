@@ -13,7 +13,7 @@ If your needs are not covered by Splunk distributions of OpenTelemetry, you can 
    :maxdepth: 3
 
    upstream-collector
-   Send traces and metrics using REST APIs <rest-APIs-for-datapoints>
+   Send data using REST APIs <rest-APIs-for-datapoints>
    send-custom-metrics
    grpc-data-ingest
    set-host-name-attribute-override
