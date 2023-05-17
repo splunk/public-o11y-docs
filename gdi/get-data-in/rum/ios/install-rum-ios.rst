@@ -61,8 +61,9 @@ Follow these steps to import and initialize the iOS RUM package.
          import SplunkOtel
          //..
          SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
-           // Call functions to configure additional options
-           .build()
+         // Call functions to configure additional options
+            .globalAttributes(globalAttributes: ["deployment.environment": "<environment>"])
+            .build()
 
       .. code-tab:: objective-c Objective-C
 
@@ -101,33 +102,36 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
 
    ``https://github.com/signalfx/splunk-otel-ios-crashreporting``
 
-2. Click :guilabel:`Add Package` to install the package.
+2. Select :guilabel:`Add Package` to install the package.
 
 3. Initialize the crash reporting module with your configuration parameters:
 
    .. tabs::
 
       .. code-tab:: swift Swift
-         :emphasize-lines: 2,7,8
+         :emphasize-lines: 2,10,11
 
          import SplunkOtel
          import SplunkOtelCrashReporting
+
+         import SplunkOtel
          //..
-         SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-                           rumAuth: "<rum-token>",
-                           options: SplunkRumOptions(environment:"<environment-name>"))
+         SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+         // Call functions to configure additional options
+            .globalAttributes(globalAttributes: ["deployment.environment": "<environment>"])
+            .build()
          // Initialize crash reporting module after the iOS agent
          SplunkRumCrashReporting.start()
 
       .. code-tab:: objective-c Objective-C
-         :emphasize-lines: 2,7,8
+         :emphasize-lines: 2,8,9
 
          @import SplunkOtel;
          @import SplunkOtelCrashReporting;
          //...
-         SplunkRumOptions *options = [[SplunkRumOptions alloc] init];
-         options.environment = @"<environment-name>";
-         [SplunkRum initializeWithBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>" options: nil];
+         SplunkRumBuilder *builder = [SplunkRumBuilder withBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>"];
+            // Call functions to configure additional options
+            [builder build];
          // Initialize crash reporting module after the iOS agent
          [SplunkRumCrashReporting start]
 
