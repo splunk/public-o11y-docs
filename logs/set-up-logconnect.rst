@@ -43,19 +43,51 @@ Set up Log Observer Connect
 
 To set up Log Observer Connect for Splunk Enterprise, follow these steps:
 
-1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and click :guilabel:`Add new connection`.
+Splunk Observability Cloud
+----------------------------------------------------------------
+1. In Observability Cloud, go to :guilabel:`Settings > Log Observer Connect` and select :guilabel:`Add new connection`.
 
-2. Click :guilabel:`Splunk Enterprise`.
+2. Select :guilabel:`Splunk Enterprise`.
 
-3. Follow the instructions in the integration guided setup to do the following in Splunk Enterprise:
+Splunk Enterprise
+----------------------------------------------------------------
+3. In Splunk Enterprise, follow the instructions in the guided setup for the integration to do the following:
 
-  a. Create a new role in your Splunk Enterprise instance. This user must be assigned the admin role.
+  a. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
 
-  b. Select the Splunk Enterprise indexes that you want to search in Log Observer Connect. 
+     Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
+      
+      On the :guilabel:`Capabilities` tab, ensure that ``edit_tokens_own`` is selected. Also, ensure that ``indexes_list_all`` is not selected.
 
-  c. Create and configure a new user in your Splunk Enterprise instance.
+      .. image:: /_images/logs/CapabilitiesTab1.png
+         :width: 100%
+         :alt: This screenshot shows the Capabilities tab in user configuration.
 
-  d. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance.
+      On the :guilabel:`Indexes` tab in the :guilabel:`Included` column, deselect :guilabel:`*(All internal indexes)` and select the indexes that you want users to query in Log Observer Connect.
+
+      .. image:: /_images/logs/IndexesTab1.png
+         :width: 100%
+         :alt: This screenshot shows the Indexes tab in user configuration.
+
+      On the :guilabel:`Resources` tab, enter a :guilabel:`Standard search limit` of 40 for both :guilabel:`Role search job limit` and :guilabel:`User search job limit`. Enter 0 for :guilabel:`Real-time search limit` for both role and user search job limits.
+
+      .. image:: /_images/logs/ResourcesTab1.png
+         :width: 100%
+         :alt: This screenshot shows recommended configuration for role search job limit and user search job limit.
+
+      Now, in the :guilabel:`Role search time window limit` section of the :guilabel:`Resources` tab, select :guilabel:`Custom time` and enter 2,592,000 seconds (30 days) for the maximum time window for searches for this role. For the earliest searchable event time for this role,  select :guilabel:`Custom time` and enter 7,776,000 seconds (90 days). In the :guilabel:`Disk space limit` section enter a :guilabel:`Standard search limit` of 1000 MB.
+
+      .. image:: /_images/logs/ResourcesTab2.png
+         :width: 100%
+         :alt: This screenshot shows recommended configuration for role search time window limit and disk space limit.
+
+  b. Next, in Splunk Enterprise, go to :guilabel:`Settings > Users` and create the user for the Log Observer Connect service account. In the :guilabel:`Assign roles` section, assign to the user the role you created for the Log Observer Connect service account.
+   
+      .. image:: /_images/logs/CreateUser.png
+         :width: 100%
+         :alt: This screenshot shows the Create user page in Splunk Cloud Platform where you can assign a user to the service account role.
+
+  c. Obtain certificates for securing inter-Splunk communication. See :new-page:`Configure and install certificates in Splunk Enterprise for Splunk Log Observer Connect <https://quickdraw.splunk.com/redirect/?product=Observability&location=splunk.integration.third.party&version=current>` to learn how. Copy only the first certificate in the chain and paste it on the next page of the guided setup to securely connect Log Observer Connect and your Splunk Enterprise instance.
 
 4. Make sure to give each connection a unique name on the final page of the Log Observer Connect guided setup.
 
