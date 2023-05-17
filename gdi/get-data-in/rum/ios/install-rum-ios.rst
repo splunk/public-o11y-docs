@@ -109,7 +109,6 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
    .. tabs::
 
       .. code-tab:: swift Swift
-         :emphasize-lines: 2,10,11
 
          import SplunkOtel
          import SplunkOtelCrashReporting
@@ -124,16 +123,15 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
          SplunkRumCrashReporting.start()
 
       .. code-tab:: objective-c Objective-C
-         :emphasize-lines: 2,8,9
 
          @import SplunkOtel;
          @import SplunkOtelCrashReporting;
          //...
          SplunkRumBuilder *builder = [SplunkRumBuilder withBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>"];
-            // Call functions to configure additional options
-            [builder build];
-            // Initialize crash reporting module after the iOS agent
-            [SplunkRumCrashReporting start]
+         // Call functions to configure additional options
+         [builder build];
+         // Initialize crash reporting module after the iOS agent
+         [SplunkRumCrashReporting start]
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
