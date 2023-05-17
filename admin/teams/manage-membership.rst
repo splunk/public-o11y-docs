@@ -230,7 +230,7 @@ To learn more about enabling enhanced team security, see :ref:`admin-team-contro
     - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
       * Yes, when enhanced team security is turned on
     - Yes
-    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is tirmed off
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
       * No, when enhanced team security is turned on
     - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
       * No, when enhanced team security is turned on

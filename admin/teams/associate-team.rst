@@ -111,7 +111,7 @@ To link a dashboard group to a team from the dashboard group:
 
 #. Select the :guilabel:`Dashboard group actions` menu (|more|) next to the dashboard group name and select :guilabel:`Links to Teams`.
 
-#. In the text box, start typing a team name. Observability Cloud autocompletes the team name. If SplunkObservability Cloud finds more than one match, it displays a list.
+#. In the text box, start typing a team name. Observability Cloud autocompletes the team name. If Splunk Observability Cloud finds more than one match, it displays a list.
 
 #. Select the team you want to link to from the list.
 
