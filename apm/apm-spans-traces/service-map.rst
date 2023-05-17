@@ -65,7 +65,7 @@ The following screenshot shows the same service map with an additional breakdown
 To perform a breakdown in the service map:
 
 #. Select a service you're interested in. 
-#. In the right-hand service tab, click :guilabel:`Breakdown` and choose an option from the drop-down menu. This breaks down your view of the service by the feature you choose. For example, select :guilabel:`Endpoint > Latency (P90)` to break the service node down into its endpoints, ranked from highest to lowest by 90th percentile latency. If there are more than 5 breakdown values, the breakdown shows the top 5 and groups the remainder into a node labeled :guilabel:`<other>`.
+#. In the right-hand service tab, select :guilabel:`Breakdown` and choose an option from the drop-down menu. This breaks down your view of the service by the feature you choose. For example, select :guilabel:`Endpoint > Latency (P90)` to break the service node down into its endpoints, ranked from highest to lowest by 90th percentile latency. If there are more than 5 breakdown values, the breakdown shows the top 5 and groups the remainder into a node labeled :guilabel:`<other>`.
 #. (Optional) Select a node within the breakdown to further break down the visualization by another feature. 
 
 Share your view of the service map
