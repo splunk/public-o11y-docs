@@ -34,8 +34,11 @@ Requirements
 =============
 
 * Docker
+   * The Docker container requires the host have the ifb kernel module installed. 
+   * The Docker container needs outbound internet access; however it doesn't need inbound access.  
 * Linux, Windows1, or OSX1
 * An internet connection
+
 
 Recommended for running Browser Tests:
 ---------------------------------------
