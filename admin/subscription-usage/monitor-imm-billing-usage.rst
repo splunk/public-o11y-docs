@@ -49,21 +49,7 @@ Learn more about metric categories in :ref:`metrics-category`.
 Standard and high-resolution metrics
 -------------------------------------------------------------------------------------
 
-.. list-table::
-  :header-rows: 1
-  :width: 100
-  :widths: 20, 80
-
-  * - :strong:`Metric resolution`
-    - :strong:`Description`
-
-  * - Standard-resolution metrics
-    - * Metrics processed by Infrastructure Monitoring at the coarser of their native resolution, or at 10-second resolution. In other words, they are never displayed at a resolution finer than 10 |nbsp| seconds.
-
-  * - High-resolution metrics
-    - * Metrics processed by Infrastructure Monitoring at their native resolution, or at 1-second resolution (whichever is coarser). 
-      * High-resolution metrics permit exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. 
-      * Your Infrastructure Monitoring subscription lets you send a certain number of high-resolution metrics.
+Metric resolution does not affect billing in host-based plans. To learn more, see :ref:`metric-resolution`.
 
 .. _using-page:
 
