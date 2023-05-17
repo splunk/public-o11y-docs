@@ -43,17 +43,16 @@ The following example shows how to define global attributes in your code:
 
 .. code-block:: swift
 
-   // You can set the globalAttributes option to the map at initialization
    import SplunkOtel
    //..
-   SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-         rumAuth: "<rum-token>",
-         options: SplunkRumOptions(environment:"<environment-name>"))
-         options.globalAttributes = ["key1": "value1", "key2": 7]
+   SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+   // You can set the globalAttributes option to the map at initialization
+      .globalAttributes(globalAttributes: ["key1": "value1", "key2": 7])
+      .build()
 
    // You can also call the ``setGlobalAttributes`` function 
    // anywhere in your code using the same map
-   SplunkRum.setGlobalAttributes(["key1": "value1", "key2": 7])
+   SplunkRum.setGlobalAttributes([])
    
    // To remove a global attribute, pass the key name to removeGlobalAttribute
    SplunkRum.removeGlobalAttribute("key2")
