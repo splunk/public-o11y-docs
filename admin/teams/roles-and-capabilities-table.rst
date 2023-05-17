@@ -28,6 +28,10 @@ Users and teams
 
 .. include:: /_includes/admin/roles_users_teams.rst
 
+Metrics pipeline management
+===============================================================================
+
+.. include:: /_includes/admin/roles_mpm.rst
 
 Log Observer
 ==================

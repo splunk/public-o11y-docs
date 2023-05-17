@@ -42,10 +42,10 @@ Follow these steps to create rules for a metric.
           - :strong:`Description`
           - :strong:`Required?`
         * - Filter population
-          - Search for dimension keys or values to narrow down the associated MTS
+          - Search for dimension keys or values to narrow down the associated metric time series (MTS).
           - No
         * - Specify dimensions: Keep/Drop
-          - Search for dimensions and select either :strong:`Keep` or :strong:`Drop`. The dimensions you keep are used in the new aggregated MTS. All dropped dimensions are removed.
+          - Search for dimensions and select either :strong:`Keep` or :strong:`Drop`. Splunk Observability Cloud saves the dimensions you keep in the new aggregated MTS, and removes the dropped dimensions.
           - Yes
         * - New aggregated metric name
           - Select :guilabel:`Generate name` to use a metric name set by the system, or enter a custom name for your aggregated metric.
@@ -57,7 +57,7 @@ Follow these steps to create rules for a metric.
 
     :strong:`Note:` You need to be an admin to drop data.
 
-    In the :strong:`Drop unaggregated raw metrics data` section, select :guilabel:`Drop data` to discard the raw unaggregated metric that matches your search in step 3. If you drop raw data, only the new aggregated metric is retained. By default, raw unaggregated data is kept.
+    In the :strong:`Drop unaggregated raw metrics data` section, select :guilabel:`Drop data` to discard the raw unaggregated metric that matches your search in step 3. If you drop raw data, Splunk Observability Cloud retains only the new aggregated metric. By default, Splunk Observability Cloud keeps raw unaggregated data.
    
     To learn more, see :ref:`data-dropping-impact`.
 #. Select :guilabel:`Save`.
