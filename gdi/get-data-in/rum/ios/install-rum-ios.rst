@@ -60,18 +60,17 @@ Follow these steps to import and initialize the iOS RUM package.
 
          import SplunkOtel
          //..
-         SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-               rumAuth: "<rum-token>",
-               options: SplunkRumOptions(environment:"<environment-name>"))
+         SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+           // Call functions to configure additional options
+           .build()
 
       .. code-tab:: objective-c Objective-C
 
          @import SplunkOtel;
-
          //...
-         SplunkRumOptions *options = [[SplunkRumOptions alloc] init];
-         options.environment = @"<environment-name>";
-         [SplunkRum initializeWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>" options: options];
+         SplunkRumBuilder *builder = [SplunkRumBuilder withBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>"];
+            // Call functions to configure additional options
+            [builder build];
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
