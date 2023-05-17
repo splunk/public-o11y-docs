@@ -13,11 +13,11 @@ To send Observability Cloud alert notifications to Opsgenie, complete the follow
 
 * :ref:`opsgenie1`
 
-   You must be an Opsgenie account owner or administrator to perform this task. 
+   You must be an Opsgenie account owner or administrator to complete this task. 
 
 * :ref:`opsgenie2`
 
-   You must be an Observability Cloud administrator to perform this task.
+   You must be an Observability Cloud administrator to complete this task.
 
 * :ref:`opsgenie3`
 
@@ -27,7 +27,7 @@ To send Observability Cloud alert notifications to Opsgenie, complete the follow
 Step 1: Create an Observability Cloud integration in OpsGenie
 =================================================================================
 
-You must be an Opsgenie account owner or administrator to perform these tasks.
+You must be an Opsgenie account owner or administrator to complete these tasks.
 
 To create an Observability Cloud integration in OpsGenie:
 
@@ -35,17 +35,17 @@ To create an Observability Cloud integration in OpsGenie:
 
 #. Determine whether you want to create an integration to one team or multiple teams. The option to create an integration to multiple teams is not available for all Opsgenie accounts.
 
-   * If you want to create an integration to one Opsgenie team, access the :new-page:`Team Dashboard <https://app.opsgenie.com/teams>`. Click the team that you want to receive alert notifications from Observability Cloud. Click the :strong:`Integrations` tab and then click :strong:`Add Integration`.
+   * If you want to create an integration to one Opsgenie team, access the :new-page:`Team Dashboard <https://app.opsgenie.com/teams>`. Select the team that you want to receive alert notifications from Observability Cloud. Select the :strong:`Integrations` tab and then select :strong:`Add Integration`.
 
    * If you want to create an integration to multiple Opsgenie teams, access the :new-page:`Integration list <https://app.opsgenie.com/integration#/integration-list>` page.
 
-#. Find and hover over the :strong:`API` icon. Click :strong:`Add`.
+#. Find and hover over the :strong:`API` icon. Select :strong:`Add`.
 
 #. Enter a descriptive name for the integration.
 
 #. Copy the API key for use in :ref:`opsgenie2`.
 
-#. Click :strong:`Save Integration`.
+#. Select :strong:`Save Integration`.
 
 
 .. _opsgenie2:
@@ -53,21 +53,28 @@ To create an Observability Cloud integration in OpsGenie:
 Step 2: Create an Opsgenie integration in Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to perform this task.
+You must be an Observability Cloud administrator to complete this task.
 
 To create an Opsgenie integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Opsgenie`, and select it.
-#. Click :strong:`New Integration` to display the configuration options.
+#. Open the :new-page:`OpsGenie guided setup <https://login.signalfx.com/#/integrations/opsgenie?search_pattern=opsge&category=all>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`.
+
+   #. Select :guilabel:`Add Integration`.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`Opsgenie`, and select it.
+
+   #. Select :strong:`New Integration` to display the configuration options.
+
 #. Enter a name for the integration. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
-#. In the :strong:`Service Region` drop-down list, select your Opsgenie service region.
+#. In the :strong:`Service Region` list, select your Opsgenie service region.
 #. In the :strong:`Token` field, enter the token copied from Opsgenie in :ref:`opsgenie1`.
 #. :strong:`Save`.
-#. If Observability Cloud is able to validate the Opsgenie API key, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the API key you entered matches the API key value displayed in Opsgenie in :ref:`opsgenie1`.
+#. If Splunk Observability Cloud can validate the Opsgenie API key, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the API key you entered matches the API key value displayed in Opsgenie in :ref:`opsgenie1`.
 
 
 .. _opsgenie3:
@@ -84,11 +91,11 @@ To add an Opsgenie integration as a detector alert recipient in Observability Cl
 
     For more information about working with detectors, see :ref:`create-detectors` and :ref:`subscribe`.
 
-#. In the :strong:`Alert recipients` step, click :strong:`Add Recipient`.
+#. In the :strong:`Alert recipients` step, select :strong:`Add Recipient`.
 
 #. Select :strong:`Opsgenie` and then select the name of the Opsgenie integration you want use to send alert notifications. This is the integration name you created in :ref:`opsgenie2`.
 
-   * If you select an integration that you set up for one Opsgenie team, alert notifications will be sent to that team.
+   * If you select an integration that you set up for one Opsgenie team, alert notifications are sent to that team.
 
    * If you select an integration that you set up for multiple Opsgenie teams, you can do one of the following:
 
@@ -98,4 +105,4 @@ To add an Opsgenie integration as a detector alert recipient in Observability Cl
 
 #. Activate and save the detector.
 
-Observability Cloud will send an alert notification to Opsgenie when an alert is triggered by the detector and when the alert clears.
+Splunk Observability Cloud sends an alert notification to Opsgenie when the detector triggers an alert and when the alert clears.

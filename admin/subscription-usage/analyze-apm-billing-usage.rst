@@ -24,7 +24,7 @@ As a result, the metrics for calculating usage depend on the subscription plan t
 
 To see all of the organization metrics for APM, see :ref:`Usage metrics for Splunk Observability Cloud <org-metrics>`.
 
-To see the usage charts and metrics for your subscription plan, go to :guilabel:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.  The following sections detail the metrics for TAPM and host subscription plans respectively.
+To see the usage charts and metrics for your subscription plan, go to :guilabel:`Settings > Subscription Usage` and select the :strong:`APM` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`. The following sections detail the metrics for TAPM and host subscription plans respectively.
 
 .. _tapm_subscription_plans:
 
@@ -122,7 +122,7 @@ To download a subscription usage report, do the following:
 - Expand the :guilabel:`Hosts` chart or the :guilabel:`Containers` chart.
 - Select an hour of time in the chart.
 - Select a specific minute within the hour.
-- Click :guilabel:`Download Data` to download the CSV file.
+- Select :guilabel:`Download Data` to download the CSV file.
 
 For each selected minute, the report shows the attributes or tags associated with the hosts and containers that sent data to Splunk APM. You might see different tags, like ``AWSUniqueId``, ``container_id``,  ``gcp_id``, and so on depending on the source of the host or container observed and the version of your instrumentation agent.
 
