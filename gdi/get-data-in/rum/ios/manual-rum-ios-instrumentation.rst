@@ -93,9 +93,9 @@ Add identification metadata during initialization
 
    import SplunkOtel
    //..
-   SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-         rumAuth: "<rum-token>",
-         options.globalAttributes = ["enduser.id": "user-id-123456"]
+   SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+      .globalAttributes(globalAttributes: ["enduser.id": "user-id-123456"])
+      .build()
 
 Add identification metadata after initialization
 --------------------------------------------------
