@@ -52,7 +52,7 @@ The following example shows how to add logs from Kubernetes host machines:
     extraVolumes:
       - name: audit-log
         hostPath:
-        path: /var/log/kubernetes/apiserver
+          path: /var/log/kubernetes/apiserver
 
 Process multi-line logs
 ===========================================================================
