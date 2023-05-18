@@ -30,4 +30,4 @@ This Splunk repository is subject to the Splunk Websites Terms and Conditions of
 [https://www.splunk.com/en_us/legal/terms/terms-of-use.html](https://www.splunk.com/en_us/legal/terms/terms-of-use.html) 
 and the [LICENSE](LICENSE) specific to this repository.
 
-You can contribute new documentation and edits to the existing documentation.
+You can contribute new documentation and edits to the existing documentation. 
