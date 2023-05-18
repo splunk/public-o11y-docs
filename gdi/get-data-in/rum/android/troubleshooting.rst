@@ -54,7 +54,7 @@ Error: Handling gzip compressed request EOF
 
 When including the Splunk RUM agent to your application, Android Studio might show an EOFException related to gzip compression. 
 
-Splunk RUM uses gzip encoding to reduce network bandwidth consumption. The Network Inspector in Android Studio attempts to read the body of the HTTP request, breaking the gzip encoding. This results in error 400 responses from the Observability Cloud ingest endpoints.
+Splunk RUM uses gzip encoding to reduce network bandwidth consumption. The Network Inspector in Android Studio attempts to read the body of the HTTP request, breaking the gzip encoding. This results in Observability Cloud ingest endpoints returning error 400.
 
 As a workaround, deactivate Splunk RUM while profiling your app, or deactivate gzip compression when profiling your app.
 
