@@ -84,8 +84,12 @@ Optionally you might also need to review your S3 buckets notifications settings 
 
 For S3 bucket notifications, remove all event notifications with the destination set to the ``splunk-aws-logs-collector`` lambda.
 
-.. image:: /_images/gdi/aws-ts-logs-s3.png
+.. image:: /_images/gdi/aws-ts-log-s3.png
    :width: 100%
-   :alt: This image shows blabla.
+   :alt: This image shows notifications for S3 buckets.
 
 For CloudWatch Log Groups, remove the subscription filter called Splunk Log Collector from all log groups.
+
+.. image:: /_images/gdi/aws-ts-log-collector.png
+   :width: 100%
+   :alt: This image shows subscription filters for the Log Collector.

@@ -54,6 +54,10 @@ To manually remove Metric Streams:
 #. Go to the AWS CloudWatch Metric Streams console in each region where you deployed a CloudFormation template. 
 #. Remove all Metric Streams with a name starting with the ``splunk-metric-stream`` prefix followed by a numeric id.
 
+.. image:: /_images/gdi/aws-ts-ms-remove.png
+   :width: 100%
+   :alt: This image shows how to manually remove Metric Streams.
+
 Optionally, go to the CloudFormation console and remove the entire Observability Cloud stack.
 
 
