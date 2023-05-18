@@ -8,4 +8,3 @@ include:
     file: 'cicd.yml'
   - project: 'it-engineering/it-cicd/templates/it-docs'
     file: 'build.yml'
-    ref: itcicd-1470-read-requirements-txt
