@@ -7,7 +7,7 @@ Troubleshoot Android instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented Android application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument an Android application using the plunk OpenTelemetry Instrumentation for Android and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument an Android application using the Splunk OpenTelemetry Instrumentation for Android and you don't see your data in Observability Cloud, follow these troubleshooting steps.
 
 .. _activate-android-debug-logging:
 
