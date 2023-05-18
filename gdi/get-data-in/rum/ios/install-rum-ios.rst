@@ -70,7 +70,7 @@ Follow these steps to import and initialize the iOS RUM package.
          @import SplunkOtel;
 
          SplunkRumBuilder *builder = [SplunkRumBuilder withBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>"];
-         [builder withGlobalAttributes: [NSDictionary dictionary]]
+         [builder deploymentEnvironment: @“environment-name”];
          [builder build];
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
@@ -116,7 +116,6 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
          import SplunkOtel
          //..
          SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
-         // Call functions to configure additional options
             .deploymentEnvironment(environment: "<environment>")
             .build()
          // Initialize crash reporting module after the iOS agent
@@ -128,7 +127,7 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
          @import SplunkOtelCrashReporting;
          //...
          SplunkRumBuilder *builder = [SplunkRumBuilder withBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>"];
-         // Call functions to configure additional options
+         [builder deploymentEnvironment: @“environment-name”];
          [builder build];
          // Initialize crash reporting module after the iOS agent
          [SplunkRumCrashReporting start]

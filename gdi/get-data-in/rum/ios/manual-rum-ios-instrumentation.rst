@@ -23,14 +23,16 @@ The following example shows how to remove a span:
    options.spanFilter = { spanData in
       var spanData = spanData
       if spanData.name == "DropThis" {
-         return nil // Spans with the name "DropThis" are not be sent
+         // Spans with the name "DropThis" aren't sent
+         return nil
       }
       var atts = spanData.attributes
-      atts["http.url"] = .string("redacted") // Change values for all URLs
+      // Change values for all URLs
+      atts["http.url"] = .string("redacted")
       return spanData.settingAttributes(atts)
    }
 
-.. note:: Span filtering is supported only in Swift.
+.. note:: Objective-C doesn't support span filtering.
 
 .. _ios-rum-globalattributes:
 

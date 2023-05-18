@@ -176,7 +176,7 @@ By default, the iOS RUM agent adds the following resource attributes to all span
      - Description
    * - ``environment``
      - String
-     - Name of the deployment environment. For example, ``dev``. Defined using :code:`deploymentEnvironment(String)`.
+     - Name of the deployment environment. For example, ``dev``. Defined using :code:`deploymentEnvironment(environment: <string>)`.
    * - ``device.model.name``
      - String
      - The model name for the device.

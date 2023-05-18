@@ -9,7 +9,9 @@ Configure the Splunk iOS RUM instrumentation
 
 You can configure the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 
-To configure the iOS RUM agent, pass the settings as arguments when initializating the ``SplunkRum`` module. The following example shows how to configure the RUM token, beacon URL, environment name, and other settings:
+To configure the iOS RUM agent, pass the settings as methods when initializating the ``SplunkRum`` module. The beacon URL and the RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
+
+The following example shows how to configure the RUM token, beacon URL, environment name, and other settings:
 
 .. tabs::
 
@@ -25,6 +27,7 @@ To configure the iOS RUM agent, pass the settings as arguments when initializati
         .deploymentEnvironment(environment: "env")
         .ignoreURLs(ignoreURLs: try! NSRegularExpression(pattern: ".*ignore_this.*"))
         .screenNameSpans(enabled: true)
+        // The build method always come last
         .build()
 
    .. code-tab:: objective-c
@@ -33,9 +36,13 @@ To configure the iOS RUM agent, pass the settings as arguments when initializati
       //...
       SplunkRumBuilder *builder = [SplunkRumBuilder withBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>"];
       // Call functions to configure additional options
-      [builder environment: "<environment>"]
-      []
-      [builder withGlobalAttributes: [NSDictionary dictionary]]
+      [builder allowInsecureBeacon: 1];
+      [builder debug: 1]
+      [builder withGlobalAttributes: [NSDictionary dictionary]];
+      [builder deploymentEnvironment: @“environment-name”];
+      [builder ignoreURLs: try! [NSRegularExpression(pattern: @".*ignore_this.*")]];
+      [builder screenNameSpans: 1];
+      // The build method always come last
       [builder build];
 
 .. _ios-rum-settings:
