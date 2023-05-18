@@ -36,7 +36,7 @@ Requirements
 
 .. list-table::
   :header-rows: 1
-  :widths: 50 50 
+  :widths: 20 80 
 
   * - :strong:`Requirement`
     - :strong:`Description`
@@ -54,7 +54,7 @@ Requirements
   * - Operating system   
     -  Linux, Windows1, or OSX1
   * - Network 
-    - An internet connection. 
+    - Internet connection.
 
 
 For optimal performance when running Browser tests:
