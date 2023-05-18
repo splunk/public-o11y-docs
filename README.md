@@ -1,6 +1,6 @@
 # Splunk Observability Cloud documentation
 
-This repository contains the code and documentation for https://docs.splunk.com/Observability
+This repository contains the code and documentation for https://docs.splunk.com/Observability 
 
 A private mirror exists where the Splunk technical writers edit documentation for new and updated features. The public and the private repositories update each other automatically using [repo-sync](https://github.com/repo-sync/repo-sync).
 
