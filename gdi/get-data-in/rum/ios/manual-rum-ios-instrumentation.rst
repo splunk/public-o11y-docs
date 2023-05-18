@@ -32,7 +32,7 @@ The following example shows how to remove a span:
       return spanData.settingAttributes(atts)
    }
 
-.. note:: Objective-C doesn't support span filtering.
+.. note:: Span filtering doesn't work in Objective-C.
 
 .. _ios-rum-globalattributes:
 
