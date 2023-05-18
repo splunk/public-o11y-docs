@@ -51,4 +51,4 @@ For detailed installation instructions and requirements, see :ref:`android-rum-i
 * Learn about the Splunk Android RUM data model. See :ref:`rum-android-data`.
 * :ref:`configure-android-instrumentation`.
 * :ref:`manual-android-instrumentation`.
-* :ref:`_common-android-troubleshooting`.
+* :ref:`common-android-troubleshooting`.
