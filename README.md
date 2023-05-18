@@ -18,7 +18,7 @@ To build the documentation on your machine use the Docker container in this repo
 
 ### Install the docs on your machine
 
-Follow these steps to create a fork of this repo and install it on your machine:
+Follow these steps to fork this repo and install it on your machine:
 
 1. Clone this repository using `git clone`.
 2. Navigate to the cloned repository in your file system.
