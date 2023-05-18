@@ -68,7 +68,7 @@ Customize APM dashboards
 
 You can customize your dashboard by setting filters, chart type, and chart resolution on a pre-built dashboard. 
 
-Edit a specific chart by clicking its more menu (|more|) and selecting :guilabel:`Open`. This opens a detailed chart editor you can use to adjust chart type, axis labels, formulas, and more. Once you edit a chart or dashboard, select the more menu (|more|) and select :guilabel:`Save As` from the dropdown to save your customizations for future reference.  
+Edit a specific chart by selecting its more menu (|more|) and selecting :guilabel:`Open`. This opens a detailed chart editor you can use to adjust chart type, axis labels, formulas, and more. Once you edit a chart or dashboard, select the more menu (|more|) and select :guilabel:`Save As` from the dropdown to save your customizations for future reference.  
 
 You can also create a new dashboard from scratch. See :ref:`create-dashboard` to learn more. See :ref:`dashboard-group` to learn how you can share your custom dashboards in groups. 
 
@@ -86,7 +86,7 @@ Create a detector from a dashboard
 
 To create a detector from a dashboard, select the bell icon within a specific chart in the dashboard and select :guilabel:`New Detector From Chart`. 
 
-If you don't have write permissions on the dashboard you’re viewing, a Detector Linking pop-up informs you the detector is not linked directly to the dashboard. You can select :guilabel:`Ok` to proceed, or save a copy of the dashboard to gain write permissions so that you can create a linked detector based on your new dashboard. To learn more about linking detectors, see :ref:`linking-detectors`. 
+If you don't have write permissions on the dashboard you're viewing, a Detector Linking pop-up informs you the detector is not linked directly to the dashboard. You can select :guilabel:`Ok` to proceed, or save a copy of the dashboard to gain write permissions so that you can create a linked detector based on your new dashboard. To learn more about linking detectors, see :ref:`linking-detectors`. 
 
 In the New Detector window, enter a name for your detector and select :guilabel:`Create Alert Rule`. The Alert Rule guided setup opens. Follow the steps in the guided setup to configure your detector, or see :ref:`create-detectors` for more information. 
 

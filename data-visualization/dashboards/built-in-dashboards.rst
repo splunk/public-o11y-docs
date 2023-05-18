@@ -35,7 +35,7 @@ To clone a built-in dashboard in a navigator, follow these steps:
 
    .. image:: /_images/images-dashboard/navigator-dashboard-actions-menu.png
       :width: 99%
-      :alt: This image shows the Dashboard actions menu in a navigator.
+      :alt: This image shows the Dashboard actions menu (|more|) in a navigator.
 
 #. Select :guilabel:`Save As...`. 
 #. In the :guilabel:`Dashboard Name` field, specify a name for the cloned dashboard. Use a different name from the original dashboard to avoid multiple dashboards with the same name.
@@ -55,7 +55,7 @@ To clone a built-in dashboard from the :strong:`Dashboards` page, follow these s
 
    .. image:: /_images/images-dashboard/dashboard-page-dashboard-actions-menu.png
       :width: 99%
-      :alt: This image shows the Dashboard actions menu in a dashboard.
+      :alt: This image shows the Dashboard actions menu (|more|) in a dashboard.
 
 #. Select :guilabel:`Save As...`. 
 #. In the :guilabel:`Dashboard Name` field, specify a name for the cloned dashboard. Use a different name from the original dashboard to avoid multiple dashboards with the same name.
@@ -85,7 +85,7 @@ To export a dashboard in a navigator, follow these steps:
 
    .. image:: /_images/images-dashboard/navigator-dashboard-actions-menu.png
       :width: 99%
-      :alt: This image shows the Dashboard actions menu in a navigator.
+      :alt: This image shows the Dashboard actions menu (|more|) in a navigator.
 
 #. Select :guilabel:`Export`.
 #. Click :guilabel:`Download`.
@@ -103,7 +103,7 @@ To clone a built-in dashboard from the :strong:`Dashboards` page, follow these s
 
    .. image:: /_images/images-dashboard/dashboard-page-dashboard-actions-menu.png
       :width: 99%
-      :alt: This image shows the Dashboard actions menu in a dashboard.
+      :alt: This image shows the Dashboard actions menu (|more|) in a dashboard.
 
 #. Select :guilabel:`Export`.
 #. Click :guilabel:`Download`.

@@ -21,10 +21,10 @@ Follow these steps to download a trace:
 
 2. Select the :strong:`Troubleshooting` view of the Service Map.
 
-3. If you are investigating a performance issue with a specific service, select the service and click :strong:`Add to Filter`. You can also add additional filters, including span tags and a custom time range.
+3. If you are investigating a performance issue with a specific service, select the service and select :strong:`Add to Filter`. You can also add additional filters, including span tags and a custom time range.
 
-4. Click :strong:`Show Traces`. This displays recent traces according to any filters you specified. If you did not specify any additional filters, it displays recent traces for every service.
+4. Select :strong:`Show Traces`. This displays recent traces according to any filters you specified. If you did not specify any additional filters, it displays recent traces for every service.
 
 5. Select the trace you want to download. If you know the trace ID, enter it in the trace search bar.
 
-6. Click :strong:`Download Trace` to get a JSON file of the trace content. If the trace contains more than one trace segment, the button is a dropdown menu that provides a link to each segment.
+6. Select :strong:`Download Trace` to get a JSON file of the trace content. If the trace contains more than one trace segment, the button is a dropdown menu that provides a link to each segment.
