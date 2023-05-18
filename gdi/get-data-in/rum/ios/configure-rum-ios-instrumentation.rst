@@ -40,7 +40,8 @@ The following example shows how to configure the RUM token, beacon URL, environm
       [builder debug: true]
       [builder withGlobalAttributes: [NSDictionary dictionary]];
       [builder deploymentEnvironment: @“environment-name”];
-      [builder ignoreURLs: try! [NSRegularExpression(pattern: @".*ignore_this.*")]];
+      NSError* error = nil;
+      [builder ignoreURLS: [NSRegularExpression regularExpressionWithPattern: @".*ignore_this.*" options: 0 error: &error]];
       [builder screenNameSpans: true];
       // The build method always come last
       [builder build];
