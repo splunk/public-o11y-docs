@@ -9,10 +9,27 @@ Troubleshoot Android instrumentation for Splunk Observability Cloud
 
 When you instrument an Android application using the Splunk OpenTelemetry Instrumentation for Android and you don't see your data in Observability Cloud, follow these troubleshooting steps.
 
+.. _basic-android-troubleshooting:
+
+Steps for troubleshooting Android OpenTelemetry issues
+=======================================================
+
+The following steps can help you troubleshoot Android RUM agent issues:
+
+#. :ref:`activate-desugaring`
+#. :ref:`activate-android-debug-logging`
+
+.. _activate-desugaring:
+
+Check that desugaring is activated for your app
+-------------------------------------------------
+
+If you see runtime errors related to Java 8 interfaces and classes, make sure you have activated ``coreLibraryDesugaring``. See :ref:`enable-desugaring`.
+
 .. _activate-android-debug-logging:
 
 Activate debug logging
-=======================================================
+----------------------------------------
 
 Activating debug logging can help you troubleshoot Android instrumentation issues. 
 
@@ -39,6 +56,6 @@ When including the Splunk RUM agent to your application, Android Studio might sh
 
 Splunk RUM uses gzip encoding to reduce network bandwidth consumption. The Network Inspector in Android Studio attempts to read the body of the HTTP request, breaking the gzip encoding. This results in error 400 responses from the Observability Cloud ingest endpoints.
 
-As a workaround, disable Splunk RUM while profiling your app, or disable gzip compression when profiling your app.
+As a workaround, deactivate Splunk RUM while profiling your app, or deactivate gzip compression when profiling your app.
 
 .. include:: /_includes/troubleshooting-steps.rst
