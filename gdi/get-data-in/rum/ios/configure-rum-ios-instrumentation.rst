@@ -34,15 +34,15 @@ The following example shows how to configure the RUM token, beacon URL, environm
 
       @import SplunkOtel;
       //...
-      SplunkRumBuilder *builder = [SplunkRumBuilder withBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>"];
-      // Call functions to configure additional options
-      [builder allowInsecureBeacon: true];
-      [builder debug: true]
-      [builder withGlobalAttributes: [NSDictionary dictionary]];
-      [builder deploymentEnvironment: @“environment-name”];
+      
+      SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum"  rumAuth: @"<rum-token>"]];
+      [builder allowInsecureBeaconWithEnabled:true];
+      [builder globalAttributesWithGlobalAttributes:[NSDictionary dictionary]];
+      [builder debugWithEnabled:true];
+      [builder deploymentEnvironmentWithEnvironment:@"environment-name"];
       NSError* error = nil;
-      [builder ignoreURLS: [NSRegularExpression regularExpressionWithPattern: @".*ignore_this.*" options: 0 error: &error]];
-      [builder screenNameSpans: true];
+      [builder ignoreURLsWithIgnoreURLs: [NSRegularExpression regularExpressionWithPattern: @".*ignore_this.*" options: 0 error: &error]];
+      [builder screenNameSpansWithEnabled:true];
       // The build method always come last
       [builder build];
 
