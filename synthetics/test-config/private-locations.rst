@@ -38,6 +38,7 @@ Requirements
    * The Docker container needs outbound internet access; however it doesn't need inbound access.  
 * Linux, Windows1, or OSX1
 * An internet connection
+* Add the endpoint ``runner.<realm>.signalfx.com`` to your allowlist. 
 
 
 Recommended for running Browser Tests:
