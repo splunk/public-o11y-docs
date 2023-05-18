@@ -53,8 +53,6 @@ Requirements
 
   * - Operating system   
     -  Linux, Windows1, or OSX1
-  * - Network 
-    - Internet connection.
 
 
 For optimal performance when running Browser tests:
