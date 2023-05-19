@@ -70,13 +70,13 @@ Next, Skyler creates a weeknights shift in the primary schedule for the web appl
       :width: 50%
       :alt: Weeknights shift in web service primary schedule.
 
-Using the :guilabel:`Schedule Preview`, Skyler notices that because of the way the responders are ordered in the shifts, some responders have a weeknights shift that immediately follows their business-hours shift. The order of shifts that Skyler sees is shown in the following image.
+Using the :guilabel:`Schedule Preview`, shown in the following image, Skyler notices that because of the way the responders are ordered in the shifts, some responders have a weeknights shift that immediately follows their business-hours shift. The order of shifts that Skyler sees is shown in the following image.
 
 .. image:: /_images/incident-intelligence/use-cases/Back-To-Back-Shifts.png
       :width: 99%
       :alt: Schedule Preview with back-to-back responder shifts.
 
-Skyler reorders the responders so that the responders have a week off between their business-hours shift and their weeknights shift. Skyler then uses the :guilabel:`Schedule Preview` to confirm that the responders are ordered appropriately.
+Skyler reorders the responders so that the responders have a week off between their business-hours shift and their weeknights shift. Skyler then uses the :guilabel:`Schedule Preview`, shown in the following image, to confirm that the responders are ordered appropriately.
 
 .. image:: /_images/incident-intelligence/use-cases/Reordered-Responders.png
       :width: 99%
@@ -94,7 +94,7 @@ Finally, Skyler creates a weekends shift in the primary schedule for the web app
       :width: 50%
       :alt: Weekends shift in web service primary schedule.
 
-Skyler wants the responder for the weeknights shift to be the same as the responder for the subsequent weekends shift. Skyler uses the :guilabel:`Schedule Preview` to confirm that the responders are in the correct order. 
+Skyler wants the responder for the weeknights shift to be the same as the responder for the subsequent weekends shift. Skyler uses the :guilabel:`Schedule Preview`, shown in the following image, to confirm that the responders are in the correct order. 
 
 .. image:: /_images/incident-intelligence/use-cases/Weekends-Schedule-Preview.png
       :width: 50%
