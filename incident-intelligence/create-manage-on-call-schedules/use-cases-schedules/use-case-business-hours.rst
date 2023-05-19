@@ -94,9 +94,9 @@ Finally, Skyler creates a weekends shift in the primary schedule for the web app
       :width: 50%
       :alt: Weekends shift in web service primary schedule.
 
-Skyler wants the responder for the weeknights shift to be the same as the responder for the subsequent weekends shift. Skyler uses the :guilabel:`Schedule Preview` to confirm that the responders are in the correct order to achieve this.
+Skyler wants the responder for the weeknights shift to be the same as the responder for the subsequent weekends shift. Skyler uses the :guilabel:`Schedule Preview` to confirm that the responders are in the correct order. 
 
-.. image:: /_images/incident-intelligence/use-cases/Weekends-Shift.png
+.. image:: /_images/incident-intelligence/use-cases/Weekends-Schedule-Preview.png
       :width: 50%
       :alt: Weekends shift Schedule Preview.
 
