@@ -1,4 +1,5 @@
 (gitlab)=
+(gitlab-sidekiq)=
 
 # GitLab
 
@@ -6,7 +7,15 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the GitLab monitor type to monitor GitLab. 
 
-GitLab has built-in features for creating wiki pages, issue-tracking and CI/CD pipelines. GitLab is bundled with [Prometheus exporters](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html), which can be configured to export performance metrics of itself and of the bundled software that GitLab depends on. These exporters publish Prometheus metrics at endpoints that are scraped by this monitor type.
+GitLab is bundled with [Prometheus exporters](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html), which can be configured to export performance metrics of itself and of the bundled software that GitLab depends on. These exporters publish Prometheus metrics at endpoints that are scraped by this monitor type.
+
+This integration allows you to monitor the following:
+
+* Gitaly and Gitaly Cluster: Gitaly is a git remote procedure call (RPC) service for handling all git calls made by GitLab. This monitor scrapes the Gitlab Gitaly git RPC server.
+* GitLab Runner: GitLab Runner can be monitored using Prometheus. See the GitLab Runner documentation on [GitLab Docs](https://docs.gitlab.com/) for more information.
+* GitLab Sidekiq: It scrapes the Gitlab Sidekiq Prometheus Exporter. 
+* GitLab Unicorn server: It comes with a Prometheus exporter. The IP address of the container or host needs to be allowed for the collector to access the endpoint. See the `IP allowlist` documentation on [GitLab Docs](https://docs.gitlab.com/) for more information.  
+* GitLab Workhorse: The GitLab service that handles slow HTTP requests. Workhorse includes a built-in Prometheus exporter that this monitor hits to gather metrics. 
 
 This monitor type is available on Kubernetes, Linux, and Windows using GitLab version 9.3 or higher.
 
@@ -31,10 +40,11 @@ accompanied by running command `gitlab-ctl restart`. Note that changes to the co
 
 The following table shows some of the Prometheus endpoint targets with links to their respective configuration pages. Note that target `gitlab_monitor` metrics are just targets `gitlab_monitor_database`, `gitlab_monitor_process` and `gitlab_monitor_sidekiq` metrics combined.
 
-| Monitor type    |     Reference                          | Standard port | Standard path |
+| Monitor type    |     Reference                          | Default port | Standard path |
 |-----------------------|------------------------------------------|---------------|---------------|
 | `gitlab-exporter` | [GitLab exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/gitlab_exporter.html) | 9168 | /metrics |
 | `gitlab-gitaly` | [Gitaly and Gitaly Cluster ](/gdi/gitlab/gitlab-gitaly.md) | 9236 | /metrics |
+| `gitlab-runner` | [GitLab Runner](/gdi/gitlab/gitlab-runner.md)  | 9252 | /metrics |
 | `gitlab-sidekiq` | [GitLab SideKiq](/gdi/gitlab/gitlab-sidekiq.md) | 8082 | /metrics |
 | `gitlab-unicorn` | [GitLab Unicorn](/gdi/gitlab/gitlab-unicorn.md)  | 8080 | /-/metrics |
 | `gitlab-workhorse` | [GitLab Workhorse](/gdi/gitlab/gitlab-workhorse.md)  | 9229 | /metrics |
@@ -43,7 +53,6 @@ The following table shows some of the Prometheus endpoint targets with links to 
 | `prometheus/postgres` | [PostgreSQL Server Exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/postgres_exporter.html) | 9187 | /metrics |
 | `prometheus/prometheus` | [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 9090 | /metrics |
 | `prometheus/redis` | [Redis exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/redis_exporter.html) | 9121 | /metrics |
-| `gitlab-runner` | [GitLab Runner](/gdi/gitlab/gitlab-runner.md)  | 9252 | /metrics |
 
 <br>
 
@@ -61,9 +70,7 @@ postgres_exporter['listen_address'] = ':9187'
 ```
 
 The following excerpt from the file `/var/opt/gitlab/nginx/conf/nginx-status.conf` shows the `location /metrics` block for metric related configuration. This file configures nginx. The statement `allow 172.17.0.0/16;` allows
-network connection in the `172.17.0.0/16` IP range. The assumption is that
-the IP address associated with the OpenTelemetry Collector is in that IP
-range.
+network connection in the `172.17.0.0/16` IP range. The assumption is that the IP address associated with the OpenTelemetry Collector is in that IP range.
 
 ```
 server {
@@ -100,26 +107,26 @@ receivers:
     ... # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the services you want to monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 receivers:
-  smartagent/gitlab-workhorse:
-    type: gitlab
-    host: localhost
-    port: 9229
   smartagent/gitlab-sidekiq:
     type: gitlab
     host: localhost
     port: 8082
+  smartagent/gitlab-workhorse:
+    type: gitlab
+    host: localhost
+    port: 9229
 exporters:
   logging:
 service:
   pipelines:
     metrics:
       receivers:
-        - smartagent/gitlab-workhorse
         - smartagent/gitlab-sidekiq
+        - smartagent/gitlab-workhorse
       exporters:
         - logging
 ```
