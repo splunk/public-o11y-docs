@@ -41,7 +41,7 @@ When you deactivate Metric Streams (or an entire AWS integration), Observability
 
 The clean-up procedure might fail if you remove IAM permissions or due to throttling, for example if there are too many API calls to delete Metric Streams objects.
 
-To re-try the clean-up process, you have two options:
+To retry the clean-up process, you have two options:
 
 * Observability Cloud UI (beta feature - limited availability): Go to the context menu in the integration list and select Cleanup. 
 * API: Set ``metricStreamsSyncState`` to the ``CANCELLING`` state.

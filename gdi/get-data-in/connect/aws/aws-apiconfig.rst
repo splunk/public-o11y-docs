@@ -463,8 +463,8 @@ To deactivate Metric Streams, follow these steps:
 #. Set the ``metricStreamsSyncState`` field to ``CANCELLING``.
 #. Wait for Observability Cloud to clean up. This can take up to 15 minutes. 
 
-  * If ``metricStreamsSyncState`` has been set to ``DISABLED``, Metric Streams has been deactivated sucessfully.
-  * If ``metricStreamsSyncState`` has been set to ``CANCELLATION_FAILED``, try again, or refer to :ref:`aws-ts-metric-streams`.
+  * If Observability Cloud sets ``metricStreamsSyncState`` to ``DISABLED``, Metric Streams has been deactivated sucessfully.
+  * If Observability Cloud sets ``metricStreamsSyncState`` to ``CANCELLATION_FAILED``, try again, or refer to :ref:`aws-ts-metric-streams`.
 
 .. _metricstreams_cloudformation:
 

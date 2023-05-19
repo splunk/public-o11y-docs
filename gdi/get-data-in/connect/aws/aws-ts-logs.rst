@@ -68,7 +68,7 @@ When you deactivate log synchronization (or an entire AWS integration), Observab
 
 The clean-up procedure might fail if you remove IAM permissions or due to throttling, for example if there are too many API calls to update CloudWatch Log Groups subscriptions. 
 
-To re-try the clean-up process, you have two options:
+To retry the clean-up process, you have two options:
 
 * Observability Cloud UI (beta feature - limited availability): Go to the context menu in the integration list and select Cleanup. 
 * API: Set ``logsSyncState`` to the ``CANCELLING`` state.
