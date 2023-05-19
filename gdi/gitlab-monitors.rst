@@ -11,12 +11,12 @@ Configure application receivers for GitLab
    :maxdepth: 4
    :hidden:
 
-   gitlab/gitlab
-   gitlab/gitlab-gitaly
-   gitlab/gitlab-runner
-   gitlab/gitlab-sidekiq
-   gitlab/gitlab-unicorn
-   gitlab/gitlab-workhorse
+   monitors-gitlab/gitlab
+   monitors-gitlab/gitlab-gitaly
+   monitors-gitlab/gitlab-runner
+   monitors-gitlab/gitlab-sidekiq
+   monitors-gitlab/gitlab-unicorn
+   monitors-gitlab/gitlab-workhorse
 
 These application receivers gather performance metrics from GitLab.
 

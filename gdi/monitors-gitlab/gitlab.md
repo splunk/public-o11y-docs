@@ -4,22 +4,13 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the GitLab monitor. See benefits, install, configuration, and metrics">
 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the GitLab monitor type to monitor GitLab. 
 
-## Description
+GitLab has built-in features for creating wiki pages, issue-tracking and CI/CD pipelines. GitLab is bundled with [Prometheus exporters](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html), which can be configured to export performance metrics of itself and of the bundled software that GitLab depends on. These exporters publish Prometheus metrics at endpoints that are scraped by this monitor type.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `gitlab` monitor type by using the [Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
+This monitor type is available on Kubernetes, Linux, and Windows using GitLab version 9.3 or higher.
 
-GitLab is an open-source web-based git repository manager developed by
-GitLab Inc. GitLab has built-in features for creating wiki pages,
-issue-tracking and CI/CD pipelines. GitLab is bundled with [Prometheus
-exporters](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html),
-which can be configured to export performance metrics of itself and of
-the bundled software that GitLab depends on. These exporters publish
-Prometheus metrics at endpoints that are scraped by this monitor type.
-
-This monitor type is available on Kubernetes, Linux, and Windows using GitLab version 9.3 or later.
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -29,31 +20,16 @@ This monitor type is available on Kubernetes, Linux, and Windows using GitLab ve
 ```{include} /_includes/collector-installation.md
 ```
 
-## Configuration
+## GitLab configuration
 
-### GitLab configuration
+Follow the instructions on [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) to configure the GitLab Prometheus exporters to expose metric endpoint targets. For the GitLab Runner monitoring configuration, see [GitLab Runner monitoring](https://docs.gitlab.com/runner/monitoring/README.html).
 
-Follow the instructions on
-[Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html)
-to configure the GitLab Prometheus exporters to expose metric endpoint
-targets. For the GitLab Runner monitoring configuration, see
-[GitLab Runner monitoring](https://docs.gitlab.com/runner/monitoring/README.html).
+Note that configuring GitLab by editing `/etc/gitlab/gitlab.rb` should be accompanied by running the command `gitlab-ctl reconfigure` for the changes to take effect.
 
-Note that configuring GitLab by editing `/etc/gitlab/gitlab.rb` should be
-accompanied by running the command `gitlab-ctl reconfigure` for
-the changes to take effect.
+Also, configuring nginx by editing the file `/var/opt/gitlab/nginx/conf/nginx-status.conf`, for instance, should be
+accompanied by running command `gitlab-ctl restart`. Note that changes to the configuration file `/var/opt/gitlab/nginx/conf/nginx-status.conf` in particular are erased by subsequent runs of `gitlab-ctl reconfigure` because `gitlab-ctl reconfigure` restores the original configuration file.
 
-Also, configuring nginx by editing the file
-`/var/opt/gitlab/nginx/conf/nginx-status.conf`, for instance, should be
-accompanied by running command `gitlab-ctl restart`. Note that changes to
-the configuration file `/var/opt/gitlab/nginx/conf/nginx-status.conf` in
-particular are erased by subsequent runs of `gitlab-ctl reconfigure` because `gitlab-ctl reconfigure` restores the original
-configuration file.
-
-The following table shows some of the Prometheus endpoint targets with links to
-their respective configuration pages. Note that target `gitlab_monitor`
-metrics are just targets `gitlab_monitor_database`,
-`gitlab_monitor_process` and `gitlab_monitor_sidekiq` metrics combined.
+The following table shows some of the Prometheus endpoint targets with links to their respective configuration pages. Note that target `gitlab_monitor` metrics are just targets `gitlab_monitor_database`, `gitlab_monitor_process` and `gitlab_monitor_sidekiq` metrics combined.
 
 | Monitor type    |     Reference                          | Standard port | Standard path |
 |-----------------------|------------------------------------------|---------------|---------------|
@@ -71,11 +47,8 @@ metrics are just targets `gitlab_monitor_database`,
 
 <br>
 
-GitLab Prometheus exporters, nginx, and GitLab Runner must be configured to
-accept requests from the host or Docker
-container of the OpenTelemetry Collector. For example, the following configuration
-in `/etc/gitlab/gitlab.rb` configures the GitLab Postgres Prometheus
-exporter to allow network connections on port `9187` from any IP address:
+GitLab Prometheus exporters, nginx, and GitLab Runner must be configured to accept requests from the host or Docker
+container of the OpenTelemetry Collector. For example, the following configuration in `/etc/gitlab/gitlab.rb` configures the GitLab Postgres Prometheus exporter to allow network connections on port `9187` from any IP address:
 
 ```
 postgres_exporter['listen_address'] = '0.0.0.0:9187'
@@ -111,54 +84,14 @@ listen_address = "0.0.0.0:9252"
 
 ```
 
-#### GitLab sample configuration
-
-Use the following configuration to monitor some of the features supported in GitLab:
-
-```
-monitors:
- - type: gitlab-unicorn
-   host: localhost
-   port: 8080
-
- - type: gitlab
-   host: localhost
-   port: 9168
-
- - type: gitlab-runner
-   host: localhost
-   port: 9252
-
- - type: gitlab-workhorse
-   host: localhost
-   port: 9229
-
- - type: gitlab-sidekiq
-   host: localhost
-   port: 8082
-
- - type: gitlab-gitaly
-   host: localhost
-   port: 9236
-
- - type: prometheus/postgres
-   host: localhost
-   port: 9187
-
- - type: prometheus/nginx-vts
-   host: localhost
-   port: 8060
-
-```
-
-You can use autodiscovery by specifying a `discoveryRule` instead of `host` and `port`.
-
-See [GitLab](https://docs.splunk.com/Observability/gdi/gitlab.html) for information on the monitors used in the configuration.
-
-### Collector configuration
+## Configuration
 
 ```{include} /_includes/configuration.md
 ```
+
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -167,7 +100,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a `metrics` pipeline. To do this, add the receiver item to the `service`/`pipelines`/`metrics`/`receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 receivers:
@@ -191,9 +124,7 @@ service:
         - logging
 ```
 
-See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
-
-#### Collector configuration options
+### Configuration options
 
 The following table shows the configuration options for this monitor:
 
@@ -220,12 +151,14 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/gitlab/metrics.yaml"></div>
 
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/gitlab/metadata.yaml"></div>
+
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
