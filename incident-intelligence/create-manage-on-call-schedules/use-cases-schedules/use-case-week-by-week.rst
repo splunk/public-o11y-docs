@@ -17,7 +17,7 @@ Skyler takes the following steps to configure a schedule that meets these covera
             <li><a href="#ii-create-schedule">Skyler creates a schedule for the payment service</a>
             <li><a href="#ii-create-shift">Skyler creates a week-by-week shift for Monday through Sunday</a></li>
             <li><a href="#ii-add-incident-workflow">Skyler adds the schedule to the incident workflow in the incident policy for the payment service</a></li>
-            <li><a href="#ii-enable-incident-policy">Skyler enables the payment service</a></li>
+            <li><a href="#ii-enable-incident-policy">Skyler enables the incident policy for the payment service</a></li>
       </ol>
    </embed>
 
@@ -68,7 +68,7 @@ Skyler adds the payment schedule as the first step in the incident workflow for 
 .. raw:: html
 
    <embed>
-      <h2 id="ii-enable-incident-policy">Skyler enables the payment service</h2>
+      <h2 id="ii-enable-incident-policy">Skyler enables the incident policy for the payment service</h2>
    </embed>
 
 With the schedule configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.

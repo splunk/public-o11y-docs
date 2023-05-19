@@ -21,7 +21,7 @@ Skyler takes the following steps to configure a schedule that meets these covera
             <li><a href="#ii-create-primary-schedule">Skyler creates a schedule for the primary coverage that includes three shifts: a business-hours shift, a weeknights shift, and a weekends shift.</a></li>
             <li><a href="#ii-create-secondary-schedule">Skyler creates a schedule for secondary coverage with a 24x7 shift</a></li>
             <li><a href="#ii-add-incident-workflow">Skyler adds the primary and secondary schedules to the incident workflow in the incident policy for the web application service</a></li>
-            <li><a href="#ii-enable-incident-policy">Skyler enables the web application service</a></li>
+            <li><a href="#ii-enable-incident-policy">Skyler enables the incident policy for the web application service</a></li>
       </ol>
    </embed>
 
@@ -139,7 +139,7 @@ Skyler adds the primary and secondary schedules as the first and second steps in
 .. raw:: html
 
    <embed>
-      <h2 id="ii-enable-incident-policy">Skyler enables the web application service</h2>
+      <h2 id="ii-enable-incident-policy">Skyler enables the incident policy for the web application service</h2>
    </embed>
 
 With the schedules configured and added to the incident policy, Skyler enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedules.
