@@ -88,6 +88,7 @@ The following table shows the configuration options for this monitor:
 After you've set up the Collector, follow these steps to configure the Nginx web server to expose status metrics:
 
 1. Add the following configuration to your Nginx server:
+
    ```conf
    server {
      location /nginx_status {
@@ -98,6 +99,7 @@ After you've set up the Collector, follow these steps to configure the Nginx web
      }
    }
    ```
+
 2. Restart the Nginx web server.
 
 ## Metrics
