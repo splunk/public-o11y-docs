@@ -18,6 +18,7 @@ Connect to AWS and send data to Splunk Observability Cloud
   Next steps <aws-post-install>
   Troubleshoot your AWS connection <aws-troubleshooting>
   Troubleshoot logs <aws-ts-logs>
+  Troubleshoot Metric Streams <aws-ts-metric-streams>
   GetMetricStatistics API deprecation notice <aws-api-notice>
 
 To leverage the benefits of data monitoring across your infrastructure, connect Splunk Observability Cloud to Amazon Web Services (AWS). Follow these steps:

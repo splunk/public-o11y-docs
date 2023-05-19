@@ -56,10 +56,6 @@ Splunk Enterprise
 In Splunk Enterprise, follow the instructions in the guided setup for the integration to do the following:
 
 1. To configure a role in Splunk Enterprise for the Log Observer Connect service account, go to :guilabel:`Settings > Roles`.
-
-      .. image:: /_images/logs/setupLOC1.png
-         :width: 100%
-         :alt: This screenshot shows how to go to Roles in Splunk Enterprise where you will set up a service account for Log Observer Connect.
       
 2. Select the role you want to use for the Log Observer Connect service account. The service account is a user role that can access the specific Splunk Enterprise indexes that you want your users to search in Log Observer Connect. 
       

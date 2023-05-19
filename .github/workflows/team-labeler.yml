@@ -29,7 +29,7 @@ jobs:
               console.log("Author of the PR is not a maintainer")
               return false
             }
-      - id: label
+      - id: labelTeam
         if: steps.membership_check.outputs.result == 'true'
         uses: actions/github-script@v6
         with:
@@ -40,5 +40,17 @@ jobs:
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   labels: ['internal']
+                })
+      - id: labelContributor
+        if: steps.membership_check.outputs.result == 'false'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.MY_TOKEN }}
+          script: |
+                github.rest.issues.addLabels({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  labels: ['external']
                 })
 
