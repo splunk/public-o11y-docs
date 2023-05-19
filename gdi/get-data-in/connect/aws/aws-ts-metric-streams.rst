@@ -26,9 +26,9 @@ If you're experiencing issues streaming metrics, check the following:
   
   * ``SplunkIngestUrl`` needs to be set to the value shown in the :strong:`Profile > Organizations > Real-time Data Ingest Endpoint`. For example, https://ingest.signalfx.com.
   
-    Note: do NOT include the /v1/cloudwatch_metric_stream endpoint path in ``SplunkIngestUrl``.
+    Note: do NOT include the :strong:`/v1/cloudwatch_metric_stream` endpoint path in ``SplunkIngestUrl``.
 
-  * ``SplunkAccessToken`` needs to be set to a valid organization access token with ``INGEST`` authorization scope. You can find access tokens in the :strong:`Settings > Access Tokens` page in the Observability Cloud UI.
+  * ``SplunkAccessToken`` needs to be a valid organization access token with ``INGEST`` authorization scope. You can find access tokens in the :strong:`Settings > Access Tokens` page in the Observability Cloud UI.
 
 * In the AWS Kinesis Streams console, validate that metrics are being delivered to the Kinesis Stream created by the CloudFormation template.
 
@@ -43,7 +43,7 @@ The clean-up procedure might fail if you remove IAM permissions or due to thrott
 
 To re-try the clean-up process, you have two options:
 
-* Observability Cloud UI: Go to the context menu in the integration list and select Cleanup. 
+* Observability Cloud UI (beta feature - limited availability): Go to the context menu in the integration list and select Cleanup. 
 * API: Set ``metricStreamsSyncState`` to the ``CANCELLING`` state.
 
 Assisted Metric Streams clean-up failed. How do I clean up Metric Streams manually?
