@@ -27,7 +27,7 @@ Skyler takes the following steps to configure a schedule that meets these covera
       <h2 id="ii-create-schedule">Skyler creates a schedule for the payment service</h2>
    </embed>
 
-Skyler creates a new schedule for the payment service and names it accordingly: **Payment service**. Skyler adds a **Payment** teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
+Skyler creates a new schedule for the payment service and names it accordingly: **Payment service**. Skyler adds a **Payment** teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later. The following image shows the new schedule Skyler creates with the teams tag. 
 
 .. image:: /_images/incident-intelligence/use-cases/Week-by-week-create-payment-schedule.png
       :width: 50%
@@ -59,7 +59,7 @@ Using the :guilabel:`Schedule Preview`, Skyler verifies that they configured the
       <h2 id="ii-add-incident-workflow">Skyler adds the payment schedule to the incident workflow</h2>
    </embed>
 
-Skyler adds the payment schedule as the first step in the incident workflow for the incident policy for the payment service. 
+Skyler adds the payment schedule as the first step of the :guilabel:`Incident workflow` for the payment service incident policy. The incident workflow that Skyler creates is shown in the following image.
 
 .. image:: /_images/incident-intelligence/use-cases/Week-by-week-incident-policy.png
       :width: 99%
@@ -71,7 +71,7 @@ Skyler adds the payment schedule as the first step in the incident workflow for 
       <h2 id="ii-enable-incident-policy">Skyler enables the incident policy for the payment service</h2>
    </embed>
 
-With the schedule configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
+With the schedule configured and added to the incident policy, Skyler enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
 
 
 .. raw:: html
