@@ -83,6 +83,23 @@ The following table shows the configuration options for this monitor:
 | `password` | no | `string` | Password for HTTP basic authentication, if needed. |
 | `timeout` | no | `integer` | Timeout in seconds for the request. The default value is `0`. |
 
+## Nginx configuration
+
+After you've set up the Collector, follow these steps to configure the Nginx web server to expose status metrics:
+
+1. Add the following configuration to your Nginx server:
+   ```conf
+   server {
+     location /nginx_status {
+       stab_status on;
+       access_log off;
+       allow 127.0.0.1; # The source IP address of OpenTelemetry Collector.
+       deny all;
+     }
+   }
+   ```
+2. Restart the Nginx web server.
+
 ## Metrics
 
 The following metrics are available for this integration:
