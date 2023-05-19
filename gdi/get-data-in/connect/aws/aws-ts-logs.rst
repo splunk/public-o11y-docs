@@ -70,7 +70,7 @@ The clean-up procedure might fail if you remove IAM permissions or due to thrott
 
 To re-try the clean-up process, you have two options:
 
-* Observability Cloud UI: Go to the context menu in the integration list and select Cleanup. 
+* Observability Cloud UI (beta feature - limited availability): Go to the context menu in the integration list and select Cleanup. 
 * API: Set ``logsSyncState`` to the ``CANCELLING`` state.
 
 Assisted log subscription clean-up failed. How do I clean up log subscriptions manually?
@@ -88,7 +88,7 @@ For S3 bucket notifications, remove all event notifications with the destination
    :width: 100%
    :alt: This image shows notifications for S3 buckets.
 
-For CloudWatch Log Groups, remove the subscription filter called Splunk Log Collector from all log groups.
+For CloudWatch Log Groups, remove the subscription filter called :strong:`Splunk Log Collector` from all log groups.
 
 .. image:: /_images/gdi/aws-ts-log-collector.png
    :width: 100%
