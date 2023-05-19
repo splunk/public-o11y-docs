@@ -6,7 +6,7 @@ Use case: Create weekly coverage using the week-by-week shift type
 .. meta::
    :description: Schedule use case for creating a weekly rotation in Incident Intelligence.
 
-Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create an on-call schedule for SREs with weekly 24x7 coverage for the payment service Monday through Sunday.
+Skyler, the site reliability engineering (SRE) manager for Buttercup Games, needs to create an on-call schedule for SREs with weekly 24x7 coverage for the payment service Monday through Sunday.
 
 Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
@@ -47,11 +47,11 @@ Skyler selects a shift handoff of one, which configures the shift to assign the 
       :width: 50%
       :alt: Weekly shift in payment schedule.
 
-Using the schedule preview, Skyler verifies that they configured the weekly shift correctly. Alex is on call Monday, Wednesday, and Friday for 24 hours and then the next responder takes over.
+Using the :guilabel:`Schedule Preview`, Skyler verifies that they configured the weekly shift correctly. Alex is on call Monday, Wednesday, and Friday for 24 hours and then the next responder takes over.
 
 .. image:: /_images/incident-intelligence/use-cases/Week-by-week-preview.png
       :width: 99%
-      :alt: Schedule preview for weekly shift.
+      :alt: Schedule Preview for weekly shift.
 
 .. raw:: html
 

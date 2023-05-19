@@ -1,15 +1,15 @@
 .. _ii-use-case-day-by-day:
 
-Use case: Create every-other-day coverage using the day-by-day shift type
+Use case: Create every-other-day coverage using the Day-by-day shift type
 ***************************************************************************
 
 .. meta::
    :description: Schedule use case for every-other-day coverage in Incident Intelligence.
 
-Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create an on-call schedule for the checkout service SREs with the following coverage needs:
+Skyler, the site reliability engineering (SRE) manager for Buttercup Games, needs to create an on-call schedule for the checkout service SREs with the following coverage needs:
 
 - Skyler needs coverage for the checkout service Monday through Sunday.
-- Skyler wants to schedule their SREs so that they are on call every other day. He wants to create two rotations:
+- Skyler wants to schedule their SREs so that they are on call every other day. They want to create two rotations:
    - Rotation 1: Monday, Wednesday, and Friday 24x7
    - Rotation 2: Tuesday, Thursday, Saturday, and Sunday 24x7
 
@@ -53,11 +53,11 @@ Skyler selects a shift handoff of three, which configures the shift to assign th
       :width: 50%
       :alt: M,W,F shift in checkout schedule.
 
-Using the schedule preview, Skyler verifies that they configured the M,W,F shift correctly. Alex is on call Monday, Wednesday, and Friday for 24 hours and then the next responder takes over.
+Using the :guilabel:`Schedule Preview`, Skyler verifies that they configured the M,W,F shift correctly. Alex is on call Monday, Wednesday, and Friday for 24 hours and then the next responder takes over.
 
 .. image:: /_images/incident-intelligence/use-cases/Day-by-day-MWF-preview.png
       :width: 99%
-      :alt: Schedule preview for M,W,F shift.
+      :alt: Schedule Preview for M,W,F shift.
 
 .. raw:: html
 
@@ -73,11 +73,11 @@ Skyler selects a shift handoff of four, which configures the shift to assign the
       :width: 50%
       :alt: T,R,S,U shift in checkout schedule.
 
-Using the schedule preview, Skyler verifies that they configured the T,R,S,U shift correctly. Alex is on call Tuesday, Thursday, Saturday, and Sunday for 24 hours and then the next responder takes over.
+Using the :guilabel:`Schedule Preview`, Skyler verifies that they configured the T,R,S,U shift correctly. Alex is on call Tuesday, Thursday, Saturday, and Sunday for 24 hours and then the next responder takes over.
 
 .. image:: /_images/incident-intelligence/use-cases/Day-by-day-TRSU-preview.png
       :width: 99%
-      :alt: Schedule preview for T,R,S,U shift.
+      :alt: Schedule Preview for T,R,S,U shift.
 
 .. raw:: html
 
