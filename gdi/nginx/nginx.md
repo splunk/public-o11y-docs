@@ -89,7 +89,7 @@ After you've set up the Collector, follow these steps to configure the Nginx web
 
 1. Add the following configuration to your Nginx server:
 
-   ```conf
+   ```nginx
    server {
      location /nginx_status {
        stab_status on;
