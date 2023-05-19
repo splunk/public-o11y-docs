@@ -167,7 +167,7 @@ For help with other questions, contact :ref:`support`.
 
 .. _gdi-2:
 
-1. Configure servers and clusters to send metrics and logs
+2. Configure servers and clusters to send metrics and logs
 =============================================================================================================
 
 Install the Splunk Distribution of OpenTelemetry Collector on any servers (hosts) or in any clusters you are using as a part of your infrastructure. For example, this might mean installing the Splunk Distribution of OpenTelemetry Collector on servers running in your data center or on a virtual machine running in the cloud.
