@@ -1,5 +1,4 @@
 (gitlab)=
-(gitlab-sidekiq)=
 
 # GitLab
 
@@ -33,12 +32,11 @@ This monitor type is available on Kubernetes, Linux, and Windows using GitLab ve
 
 Follow the instructions on [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) to configure the GitLab Prometheus exporters to expose metric endpoint targets. For the GitLab Runner monitoring configuration, see [GitLab Runner monitoring](https://docs.gitlab.com/runner/monitoring/README.html).
 
-Note that configuring GitLab by editing `/etc/gitlab/gitlab.rb` should be accompanied by running the command `gitlab-ctl reconfigure` for the changes to take effect.
+If you configue GitLab by editing `/etc/gitlab/gitlab.rb`, you need to run the command `gitlab-ctl reconfigure` for the changes to take effect.
 
-Also, configuring nginx by editing the file `/var/opt/gitlab/nginx/conf/nginx-status.conf`, for instance, should be
-accompanied by running command `gitlab-ctl restart`. Note that changes to the configuration file `/var/opt/gitlab/nginx/conf/nginx-status.conf` in particular are erased by subsequent runs of `gitlab-ctl reconfigure` because `gitlab-ctl reconfigure` restores the original configuration file.
+If you configue nginx by editing the file `/var/opt/gitlab/nginx/conf/nginx-status.conf`, you need to run the command `gitlab-ctl restart`. Note that changes to the configuration file `/var/opt/gitlab/nginx/conf/nginx-status.conf` in particular are erased by subsequent runs of `gitlab-ctl reconfigure` because `gitlab-ctl reconfigure` restores the original configuration file.
 
-The following table shows some of the Prometheus endpoint targets with links to their respective configuration pages. Note that target `gitlab_monitor` metrics are just targets `gitlab_monitor_database`, `gitlab_monitor_process` and `gitlab_monitor_sidekiq` metrics combined.
+The following table shows some of the Prometheus endpoint targets with links to their respective configuration pages. 
 
 | Monitor type    |     Reference                          | Default port | Standard path |
 |-----------------------|------------------------------------------|---------------|---------------|
@@ -63,7 +61,7 @@ container of the OpenTelemetry Collector. For example, the following configurati
 postgres_exporter['listen_address'] = '0.0.0.0:9187'
 ```
 
-The previous configuration can also be written as follows:
+Or
 
 ```
 postgres_exporter['listen_address'] = ':9187'
@@ -154,7 +152,7 @@ The following table shows the configuration options for this monitor:
 
 ## Metrics
 
-The following metrics are available for this integration:
+The following metrics are available for this integration.
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/gitlab/metadata.yaml"></div>
 
