@@ -29,7 +29,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/disk
    monitors-hosts/docker
    monitors-hosts/elasticsearch
-   elasticsearch-query/elasticsearch-query
+   monitors-hosts/elasticsearch-query
    monitors-hosts/filesystems
    monitors-hosts/haproxy
    health-checker/health-checker

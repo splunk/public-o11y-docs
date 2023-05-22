@@ -4,73 +4,20 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the ElasticSearch Query monitor. See benefits, install, configuration, and metrics">
 
-## Description
+**This integration is in beta.**
 
-**This receiver is in beta.**
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `elasticsearch-query` monitor type to metricize aggregated responses from Elasticsearch. The integration constructs Splunk Observability Cloud data points based on Elasticsearch aggregation types and aggregation names.
 
-This receiver metricizes aggregated responses from Elasticsearch. The receiver constructs Splunk Observability Cloud data points based on Elasticsearch aggregation types and also aggregation names.
+## Benefits
 
-The following is a sample configuration: 
-
-```yaml
-monitors:
-- type: elasticsearch-query
- host: localhost
- port: 9200
- index: <name_of_index>
- elasticsearchRequest: |
-    {
-      "query" : {
-        "range" : {
-          "@timestamp" : {
-            "gte": "now-5m"
-          }
-        }
-      },
-      "aggs": {
-        "avg_cpu_utilization": {
-          "avg": {
-            "field": "cpu_utilization"
-          }
-        }
-      }
-    }
-intervalSeconds: 300
-```
-
-The `elasticsearchRequest` takes in a `string` request in the format specified in 
-[elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-body.html).
-
-The above query is performed against an index containing documents that take the following form:
-
-```
-{
-   'cpu_utilization':87,
-   'memory_utilization':94,
-   'host':'helsinki',
-   'service':'android',
-   'container_id':'macbook',
-   '@timestamp':1580321240579
-}
-```
-
-The query specified in `elasticsearchRequest` returns the average value of `cpu_utilization` across all documents with a `@timestamp`
-in the last five minutes. This value is metricized to the following form in Splunk Observability Cloud:
-
-```
-{
-metric_name: avg_cpu_utilization,
-dimensions:
-  index: <name_of_index>
-  metric_aggregation_type: avg
-}
+```{include} /_includes/benefits.md
 ```
 
 ## Data model transformation
 
-This receiver transforms Elasticsearch responses into Splunk Observability Cloud data points.
+This integration transforms Elasticsearch responses into Splunk Observability Cloud data points.
 
-At high level, this receiver metricizes responses of the following types:
+At high level, it metricizes responses of the following types:
 
 1. Metric aggregations inside one or more Bucket aggregations such as the `terms` and `filters` aggregations. Dimensions on a data point are determined by the aggregation name (dimension name) and the `key` of each bucket (dimension value). The metric name is derived from the type of metric aggregation name and its values in case of multi-value aggregations. A dimension called `metric_aggregation_type`is also set on the corresponding data points. 
 
@@ -82,9 +29,9 @@ dimension apart from the `key` of each bucket.
 
 **Note**: Since Bucket aggregations determine dimensions in Splunk Observability Cloud, in most cases Bucket aggregations should be performed on `string` fields that represent a slice of the data from Elasticsearch.
 
-## Examples
+### Example: avg metric aggregation 
 
-1. `avg` metric aggregation as a sub-aggregation of `terms` bucket aggregation: 
+`avg` metric aggregation as a sub-aggregation of `terms` bucket aggregation: 
 
 
     ```json
@@ -104,9 +51,9 @@ dimension apart from the `key` of each bucket.
     }
     ```
 
-    This query results in a metric called `elasticsearch_query.average_cpu_usage`, where the data point has a `host` dimension with its value being the `key` of a bucket in the response. The type of the metric aggregation (`avg`) is set on the data oint as the `metric_aggregation_type` dimension. 
+This query results in a metric called `elasticsearch_query.average_cpu_usage`, where the data point has a `host` dimension with its value being the `key` of a bucket in the response. The type of the metric aggregation (`avg`) is set on the data oint as the `metric_aggregation_type` dimension. 
 
-    For instance, the `json` below provides 4 data points, each with a different value for `host`:
+For instance, the `json` below provides 4 data points, each with a different value for `host`:
 
     ```json
     "aggregations" : {
@@ -147,7 +94,9 @@ dimension apart from the `key` of each bucket.
     }
     ```
 
-2. `extended_stats` metric aggregation as a sub-aggregation of `terms` bucket aggregation
+### Example: extended_stats metric aggregation 
+
+`extended_stats` metric aggregation as a sub-aggregation of `terms` bucket aggregation
 
 
     ```json
@@ -222,7 +171,7 @@ dimension apart from the `key` of each bucket.
     }
     ```
 
-    In this case, each bucket results in 5 metrics:
+In this case, each bucket outputs 5 metrics:
 
     1. `cpu_usage_stats.count`
     2. `cpu_usage_stats.min`
@@ -230,12 +179,8 @@ dimension apart from the `key` of each bucket.
     4. `cpu_usage_stats.avg`
     5. `cpu_usage_stats.sum`
 
-    The dimensions are derived in the same manner as the previous example.
+The dimensions are derived in the same manner as the previous example.
 
-### Benefits
-
-```{include} /_includes/benefits.md
-```
 
 ## Installation
 
@@ -247,6 +192,10 @@ dimension apart from the `key` of each bucket.
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/elasticsearch-query: 
@@ -254,7 +203,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the integration, include the receiver with this monitor type in a `metrics` pipeline. To do this, add the receiver to the `service > pipelines > metrics > receivers` section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -262,6 +211,8 @@ service:
     metrics:
       receivers: [smartagent/elasticsearch-query]
 ```
+
+### Condiguration options
 
 See the [configuration example](https://github.com/signalfx/splunk-otel-collector/tree/main/examples) in GitHub for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
 
@@ -271,7 +222,7 @@ For Prometheus, see [Prometheus Federation Endpoint Example](https://github.com/
 
 ### Configuration settings
 
-The following table shows the configuration options for this receiver:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -293,7 +244,7 @@ The following table shows the configuration options for this receiver:
 
 The Splunk Distribution of OpenTelemetry Collector does not do any built-in filtering of metrics for this receiver.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
