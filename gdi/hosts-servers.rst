@@ -33,10 +33,10 @@ Configure application receivers for hosts and servers
    monitors-hosts/filesystems
    monitors-hosts/haproxy
    monitors-hosts/health-checker
-   host-metadata/host-metadata
+   monitors-hosts/host-metadata
    opentelemetry/components/host-metrics-receiver
+   monitors-hosts/host-processes
    http/http
-   processes/processes
    processlist/processlist
    load/load
    interface/interface
@@ -78,8 +78,8 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`health-checker`
 * :ref:`host-metadata`
 * :ref:`host-metrics-receiver`
-* :ref:`http`
 * :ref:`processes`
+* :ref:`http`
 * :ref:`processlist`
 * :ref:`load`
 * :ref:`interface`
