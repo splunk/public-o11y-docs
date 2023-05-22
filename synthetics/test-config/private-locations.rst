@@ -33,12 +33,29 @@ Use cases for private locations
 Requirements 
 =============
 
-* Docker
-* Linux, Windows1, or OSX1
-* An internet connection
 
-Recommended for running Browser Tests:
----------------------------------------
+.. list-table::
+  :header-rows: 1
+  :widths: 20 80 
+
+  * - :strong:`Requirement`
+    - :strong:`Description`
+  * - Docker
+    - 
+        * The Docker container requires the host have the ifb kernel module installed. 
+        * The Docker container needs outbound internet access; however it doesn't need inbound access.  
+  * - Allowlist
+    - 
+        * ``runner.<realm>.signalfx.com`` 
+        * ``*.signalfx.com`` 
+        * ``*.amazonaws.com``
+        * ``quay.io/signalfx``
+
+  * - Operating system   
+    -  Linux, Windows1, or OSX1
+
+
+For optimal performance when running Browser tests:
 
 * Linux
 * 2.3 GHz Dual-Core Intel Xeon (or equivalent) processor
