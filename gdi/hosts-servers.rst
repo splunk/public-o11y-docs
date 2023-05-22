@@ -38,7 +38,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/host-processes
    monitors-hosts/host-processlist
    monitors-hosts/host-processload
-   http/http
+   monitors-hosts/http
    interface/interface
    jenkins/jenkins
    windows/windows-iis
