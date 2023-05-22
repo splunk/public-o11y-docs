@@ -10,7 +10,7 @@ Configure application receivers for cloud platforms
 .. toctree::
    :maxdepth: 4
 
-   heroku/heroku
+   monitors-cloud/heroku
    kong/kong
    openstack/openstack
 
