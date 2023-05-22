@@ -8,7 +8,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 This monitor is available on Linux and Windows.
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```

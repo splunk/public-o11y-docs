@@ -37,8 +37,8 @@ Configure application receivers for hosts and servers
    opentelemetry/components/host-metrics-receiver
    monitors-hosts/host-processes
    monitors-hosts/host-processlist
+   monitors-hosts/host-processload
    http/http
-   load/load
    interface/interface
    jenkins/jenkins
    windows/windows-iis
@@ -80,8 +80,8 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`host-metrics-receiver`
 * :ref:`processes`
 * :ref:`processlist`
-* :ref:`http`
 * :ref:`load`
+* :ref:`http`
 * :ref:`interface`
 * :ref:`jenkins`
 * :ref:`windows-iis`
