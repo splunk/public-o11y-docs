@@ -6,7 +6,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `processlist` monitor type to report the running processes for a host, similar to the output of the `top` or `ps` commands on *nix systems. The output format is a special base64-encoded event that appears under the Infrastructure view for a specific host. Historical process information is not retained on Splunk Observability Cloud.
 
-This monitor is available on Linux and Windows.
+This integration is available on Linux and Windows.
 
 ## Benefits
 
