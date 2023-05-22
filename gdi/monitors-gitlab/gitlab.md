@@ -41,11 +41,11 @@ The following table shows some of the Prometheus endpoint targets with links to 
 | Monitor type    |     Reference                          | Default port | Standard path |
 |-----------------------|------------------------------------------|---------------|---------------|
 | `gitlab-exporter` | [GitLab exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/gitlab_exporter.html) | 9168 | /metrics |
-| `gitlab-gitaly` | [Gitaly and Gitaly Cluster ](/gdi/gitlab/gitlab-gitaly.md) | 9236 | /metrics |
-| `gitlab-runner` | [GitLab Runner](/gdi/gitlab/gitlab-runner.md)  | 9252 | /metrics |
-| `gitlab-sidekiq` | [GitLab SideKiq](/gdi/gitlab/gitlab-sidekiq.md) | 8082 | /metrics |
-| `gitlab-unicorn` | [GitLab Unicorn](/gdi/gitlab/gitlab-unicorn.md)  | 8080 | /-/metrics |
-| `gitlab-workhorse` | [GitLab Workhorse](/gdi/gitlab/gitlab-workhorse.md)  | 9229 | /metrics |
+| `gitlab-gitaly` | Gitaly and Gitaly Cluster | 9236 | /metrics |
+| `gitlab-runner` | GitLab Runner | 9252 | /metrics |
+| `gitlab-sidekiq` | GitLab SideKiq | 8082 | /metrics |
+| `gitlab-unicorn` | GitLab Unicorn | 8080 | /-/metrics |
+| `gitlab-workhorse` | GitLab Workhorse | 9229 | /metrics |
 | `prometheus/nginx-vts` | [Monitoring GitLab with Prometheus](https://docs.gitlab.com/ee/administration/monitoring/prometheus/index.html) | 8060 | /metrics |
 | `prometheus/node` | [Node exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/node_exporter.html) | 9100 | /metrics |
 | `prometheus/postgres` | [PostgreSQL Server Exporter](https://docs.gitlab.com/ee/administration/monitoring/prometheus/postgres_exporter.html) | 9187 | /metrics |
