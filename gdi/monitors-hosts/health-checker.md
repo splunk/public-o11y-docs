@@ -20,7 +20,6 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 ```{include} /_includes/configuration.md
 ```
-
 ### Example
 
 To activate this integration, add the following to your Collector configuration:

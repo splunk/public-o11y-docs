@@ -36,8 +36,8 @@ Configure application receivers for hosts and servers
    monitors-hosts/host-metadata
    opentelemetry/components/host-metrics-receiver
    monitors-hosts/host-processes
+   monitors-hosts/host-processlist
    http/http
-   processlist/processlist
    load/load
    interface/interface
    jenkins/jenkins
@@ -79,8 +79,8 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`host-metadata`
 * :ref:`host-metrics-receiver`
 * :ref:`processes`
-* :ref:`http`
 * :ref:`processlist`
+* :ref:`http`
 * :ref:`load`
 * :ref:`interface`
 * :ref:`jenkins`
