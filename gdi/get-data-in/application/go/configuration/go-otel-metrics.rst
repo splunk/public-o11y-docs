@@ -13,13 +13,6 @@ To learn about the different metric types, see :ref:`metric-types`.
 
 .. note:: Runtime and trace metrics collection is an experimental feature subject to future changes.
 
-.. _enable-golang-metrics:
-
-Activate metrics collection
-====================================================
-
-To collect Go metrics, see :ref:`enable_automatic_metric_collection_golang`.
-
 .. _golang-otel-runtime-metrics:
 
 Runtime metrics
