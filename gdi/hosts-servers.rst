@@ -40,7 +40,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/host-processload
    monitors-hosts/http
    monitors-hosts/interface
-   jenkins/jenkins
+   monitors-hosts/jenkins
    windows/windows-iis
    nginx/nginx
    procstat/procstat
