@@ -67,12 +67,6 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/java/metrics.yaml"></div>
 
-### NEW
-
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/java-monitor/metadata.yaml"></div>
-
-The agent doesn't do any built-in filtering of metrics coming out of this integration.
-
 ### Notes
 
 ```{include} /_includes/metric-defs.md
