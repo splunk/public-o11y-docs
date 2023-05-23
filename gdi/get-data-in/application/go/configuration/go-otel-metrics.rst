@@ -16,8 +16,6 @@ To learn about the different metric types, see :ref:`metric-types`.
 Runtime metrics
 ================================================
 
-.. note:: The OpenTelemetry Go runtime instrumentation is experimental.
-
 The following runtime metrics are automatically collected and exported:
 
 .. list-table:: 
@@ -75,8 +73,6 @@ The following runtime metrics are automatically collected and exported:
 
 Connection pool metrics
 ================================================
-
-.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on a best-effort basis.
 
 The Splunk Distribution of OpenTelemetry Go instruments several connection pool implementations:
 
