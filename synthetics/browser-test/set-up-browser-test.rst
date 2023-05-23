@@ -131,14 +131,14 @@ When activated, this feature is used to enforce the validation of expired, inval
 
 Wait times 
 ---------------------
-Optimize your test coverage by adding custom wait times to capture longer page loads and improve the accuracy of run results. Applications with long load times can cause a Browser test to fail. If you know that there are certain steps in a workflow that takes longer than ten seconds, add a custom wait time to your Browser test. 
+Optimize your test coverage by adding custom wait times to capture longer page loads and improve the accuracy of run results. Applications with long load times can cause a Browser test to fail. If you know that there are certain steps in a workflow that take longer than 10 seconds, add a custom wait time to your Browser test. 
 
 * Wait times are available with Browser tests only. 
 * The maximum cumulative wait time for each test is 200 seconds. 
 
 Follow these steps to configure custom wait times for your Browser tests: 
 
-#. In Splunk Synthetic Monitoring, Select Edit on the Browser test to open the configuration panel.
+#. In Splunk Synthetic Monitoring, select :strong:`Edit` on the Browser test to open the configuration panel.
 #. Select :strong:`New step > Wait`, from the step type drop down.
 #. Add a name and the wait time in ms.
 #. When you finish instrumenting your test, save the workflow: :strong:`Return to test > Save`.
