@@ -16,7 +16,7 @@ To view your organization's Log Observer subscription usage, go to :guilabel:`Se
 What Log Observer tracks 
 ====================================
 
-Log Observer provides visibility to your logging ingest and indexing usage, measured in gigabytes. Ingestion and indexing are measured separately. The monthly ingest and indexing allowance your org has purchased is displayed along with your term start and end dates. This allows you to monitor when you need to renew your quotas.
+Log Observer provides visibility to your logging ingest and indexing usage, measured in gigabytes. Ingestion and indexing are measured separately. The monthly ingest and indexing allowance your org has purchased displays along with your term start and end dates. This lets you  monitor when you need to renew your quotas.
 
 There are three charts available:
    * Current usage - The current monthly total usage for each of ingest and indexing. Your plan limits are indicated on the chart.

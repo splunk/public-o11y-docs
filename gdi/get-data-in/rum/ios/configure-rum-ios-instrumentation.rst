@@ -90,6 +90,6 @@ Use the following settings to activate or deactivate the collection of specific 
    * - :code:`showVCInstrumentation`
      - Activates the creation of spans for ``ViewController Show`` events. The default value is ``true``.
    * - :code:`screenNameSpans`
-     - Activates the creation of spans for changes to the screen name.
+     - Activates the creation of spans for changes to the screen name. The default value is ``true``.
    * - :code:`networkInstrumentation`
-     - Activates the creation of spans for network activities.
+     - Activates the creation of spans for network activities. The default value is ``true``.

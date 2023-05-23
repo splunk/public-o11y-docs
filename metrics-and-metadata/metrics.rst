@@ -49,33 +49,23 @@ There are three types of metrics: gauge, cumulative counter, and counter. See mo
     - Number of new occurrences or items since the last measurement
     - The number of packets that fail to reach their destinations over each 24-hour period
 
-.. _metrics-category:
-
 Metric category
 ----------------------
 
-These are the available categories for metrics:
+There are about 20 metric categories in Splunk Observability Cloud. Metric category, especially metrics categorized as custom, can impact billing.
 
-.. include:: /_includes/metric-categories.rst
+Learn all metric categories and how to identify them in :ref:`metric-categories`.
 
-Identify the category of a metric
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _metric-resolution:
 
-In :ref:`host-based plans <monitor-imm-billing-usage>`, the category of a metric might impact billing. 
-
-To keep track of the type of metrics you're ingesting, Observability Cloud provides you with different tools and reports:
-
-* :ref:`custom-metric-report`.
-* Metric Pipeline Management's :ref:`usage report <metrics-usage-report>`.
-* Track specific org metrics with custom metric information. See more in :ref:`org-metrics`.
-* Query for the ``sf_mtsCategoryType`` dimension, which indicates the metric category, using Signalflow. Learn more in :ref:`signalflow-analytics-intro`. 
-
-High resolution metrics
+Metric resolution
 ----------------------------
 
-By default, metrics are processed by Observability Cloud at a 10-second resolution.
+By default, metrics are processed by Observability Cloud at the coarser of their native resolution, or at 10-second resolution. In other words, they are never displayed at a resolution finer than 10 |nbsp| seconds.
 
-Metrics can be ingested at a higher resolution of 1 second. To do so, set the dimension ``sf_hires`` to ``1`` in any MTS.
+Optionally, metrics can be ingested at a :strong:`higher resolution of 1 second`. High-resolution metrics enable exceptionally fine-grained and low-latency visibility and alerting for your infrastructure, applications, and business performance. 
+
+.. note:: To process a metric at high resolution, set the dimension ``sf_hires`` to ``1`` in any MTS.
 
 Metric metadata
 ----------------------
@@ -90,7 +80,7 @@ To add or edit dimensions:
 .. _data-points:
 
 Data points
-============
+=================
 
 A data point contains a metric name and value, the type of the metric, and the dimensions of the metric. Dimensions are the key-value pairs that identify the source of the reported value. Infrastructure Monitoring assumes that incoming data points contain a metric as well as a dimension, or a unique key-value pair that describes some aspect of the metric source. 
 

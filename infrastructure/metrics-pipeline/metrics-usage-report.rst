@@ -14,7 +14,7 @@ To get a detailed breakdown of your metric time series (MTS) creation and usage,
 
 You can use the detailed metrics usage report to optimize your usage of custom metrics. 
 
-    * If you are on a usage-based pricing plan, all your metrics are considered custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance. Learn more about this subscription plan in :ref:`dpm-usage`.
+    * If you are on a usage-based pricing plan, all your metrics are considered custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance. 
     * If you are on a host-based pricing plan with high utilization of custom metrics, you can use the report to lower your custom metrics usage. Learn more about this subscription plan in :ref:`monitor-imm-billing-usage`.
 
 Format of the report

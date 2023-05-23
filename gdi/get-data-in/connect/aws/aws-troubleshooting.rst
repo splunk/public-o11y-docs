@@ -8,7 +8,7 @@ Troubleshoot your AWS connection
    :description: Resolve AWS policy and permissions conflicts in Splunk Observability Cloud.
 
 
-If you have a problem connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, it is most likely caused by conflicts between policies and permissions. See also :ref:`aws-ts-logs` for specific log troubleshooting.   
+If you experience issues when connecting Splunk Observability Cloud to your Amazon Web Services (AWS) account, they might be caused by conflicts between policies and permissions. See :ref:`aws-ts-logs` for specific log troubleshooting and :ref:`aws-ts-metric-streams` for issues specific to Metric Streams.   
 
 .. caution:: Splunk is not responsible for data availability, and it can take up to several minutes (or longer, depending on your configuration) from the time you connect until you start seeing valid data from your account. 
 
@@ -123,7 +123,7 @@ To do so, follow these steps:
 
 .. code-block:: none
 
-   curl --request GET https://api..signalfx.com/v2/integration/ \
+   curl --request GET https://api.<realm>.signalfx.com/v2/integration?type=AWSCloudWatch&offset=0&limit=50&orderBy=-lastUpdated
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" > integration.json
 
@@ -231,7 +231,7 @@ You'll get something similar to:
 
 .. code-block:: none
 
-   curl --request PUT https://api..signalfx.com/v2/integration/integration-id \
+   curl --request PUT https://api.<realm>.signalfx.com/v2/integration/<integration-id>
    --header "X-SF-TOKEN:" \
    --header "Content-Type:application/json" \
    --data "@integration.json" 
