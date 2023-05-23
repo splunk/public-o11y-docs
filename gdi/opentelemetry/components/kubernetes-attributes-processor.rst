@@ -12,23 +12,17 @@ The Kubernetes attributes processor is an OpenTelemetry Collector component that
 Get started
 ======================
 
-Follow these steps to configure and activate the component:
+The Helm chart for the Splunk Distribution of OpenTelemetry Collector already includes the Kubernetes attributes processor, which is activated by default for all deployment modes. See :ref:`helm-chart`.
 
-#. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
-   
-   - :ref:`otel-install-linux`
-   - :ref:`otel-install-windows`
-   - :ref:`otel-install-k8s`
+To manually configure the Kubernetes attributes processor, follow these steps:
 
-#. Configure the Kubernetes attributes processor as described in the following sections:
-   
-   #. :ref:`configure-rbac-k8sattributes`
-   #. :ref:`configure-filter-k8sattributes`
-   #. :ref:`configure-extracted-metadata-k8sattributes`
-   #. :ref:`configure-association-lists-k8sattributes`
-   #. :ref:`configure-labels-k8sattributes`
+#. :ref:`configure-rbac-k8sattributes`
+#. :ref:`configure-filter-k8sattributes`
+#. :ref:`configure-extracted-metadata-k8sattributes`
+#. :ref:`configure-association-lists-k8sattributes`
+#. :ref:`configure-labels-k8sattributes`
 
-#. Restart the Collector.
+.. caution:: Don't remove the Kubernetes attributes processor from your configuration. Default attributes extracted by the processor, such as ``k8s.pod.name``, are required by Splunk Observability Cloud.
 
 .. _configure-rbac-k8sattributes:
 
@@ -73,24 +67,8 @@ The following example shows how to give a ServiceAccount the necessary permissio
       name: otel-collector
       apiGroup: rbac.authorization.k8s.io
 
-The following example shows the minimum permissions you need to use the processor:
-
-.. code-block:: yaml
-
-   apiVersion: rbac.authorization.k8s.io/v1
-     kind: ClusterRole
-     metadata:
-       name: otel-collector
-     rules:
-       - apiGroups: ['']
-         resources: ['pods', 'namespaces']
-         verbs: ['get', 'watch', 'list']
-
 Sample configuration
 ---------------------------
-
-To activate the Kubernetes attributes processor, add ``resource`` to the ``processors`` section of your
-configuration file. 
 
 The following example contains a list of extracted metadata, Kubernetes annotations and labels, and an association list:
 
@@ -221,6 +199,8 @@ You can change this list by adding a ``metadata`` section. For example:
          - k8s.namespace.name
          - k8s.node.name
          - k8s.pod.start_time
+
+.. caution:: Make sure that default attributes such as ``k8s.pod.name`` are always extracted, as they're required by Splunk Observability Cloud.
 
 The following container level attributes require additional attributes to identify a container in a pod:
 
