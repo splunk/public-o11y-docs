@@ -25,14 +25,6 @@
     - No
     - No
 
-  * - The following methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
-       - PUT
-       - POST
-    - Yes
-    - No
-    - No
-    - No
-
   * - View the following APM-related pages in the Observability Cloud Settings. Functionality in the API is similarly restricted by capability.
        - APM MetricSets
        - Business Workflow
@@ -44,8 +36,8 @@
 
   * - The following functionality in the APM API.
        - The APM Reporting resource
-       - The GET and DELETE methods on the APM Visibility Filters resource, see :ref:`sensitive-data-controls` for more information.
+       - The APM Visibility Filters resource, see :ref:`sensitive-data-controls` for more information.
     - Yes
-    - Yes
+    - No
     - No
     - No
