@@ -138,7 +138,7 @@ Any Splunk Observability Cloud user can create a mirror of any custom or user da
 .. note:: If you are working with a dashboard you control, make sure to set appropriate write permissions on the dashboard, to prevent inadvertent edits by other users who might be viewing a mirror of the dashboard.
 
 
-To create a mirror, select :guilabel:`Add a mirror` from the dashboard actions menu.
+To create a mirror, select :guilabel:`Add a mirror` from the dashboard actions menu (|more|).
 
 
 When you create a mirror, you have a number of ways to customize how the mirror will be displayed in the target dashboard group. You can also add dashboard mirrors to the same group as the current dashboard. This is useful if you want to have quick access to the same set of charts but with different filters or dashboard variable settings.
@@ -154,7 +154,7 @@ Change the dashboard name and description
 
 Specify a name for the mirror in the target group. The default name suggested when creating a new dashboard mirror is the name of the original dashboard, which might be different from the displayed name of the dashboard you are currently mirroring if that dashboard itself is a mirror.
 
-Specify a new description for the mirror in the target group. As with the name, the default will come from the dashboard. A dashboard or mirror’s description is visible when you select :guilabel:`Dashboard Info` from the Actions menu.
+Specify a new description for the mirror in the target group. As with the name, the default will come from the dashboard. A dashboard or mirror’s description is visible when you select :guilabel:`Dashboard Info` from the Actions menu (|more|).
 
 Customize dashboard filters and variables
 -------------------------------------------------

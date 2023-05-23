@@ -340,7 +340,7 @@ Navigators are primarily composed of charts.
 
   .. image:: /_images/infrastructure/chart-actions.png
     :width: 70%
-    :alt: This screenshot shows the Chart actions menu displaying available options such as Share, Download Chart as Image, and Export Chart as CSV.
+    :alt: This screenshot shows the Chart actions menu (|more|) displaying available options such as Share, Download Chart as Image, and Export Chart as CSV.
 
 For more details about using navigators, see :new-page-ref:`use-navigators-imm`.
 

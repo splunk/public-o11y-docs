@@ -50,7 +50,7 @@ Switch to OneLogin:
 In Observability Cloud:
    #. Copy the value of :guilabel:`X.509 certificate` from the text editor and paste it into the :guilabel:`Public Key` text box.
    #. Copy the value of :guilabel:`Issuer URL` from the text editor and paste it into the :guilabel:`Issuer URL` text box.
-   #. Click :guilabel:`Save`. The message :guilabel:`Validated!` appears. If you get an error, double-check the values that you copied and pasted.
+   #. Select :guilabel:`Save`. The message :guilabel:`Validated!` appears. If you get an error, check the values that you copied and pasted.
 
 The OneLogin SSO integration is now available to users in your OneLogin App portal. When users use the integration for the first time, they receive an email containing a link that they must open in order to authenticate. This only occurs the first
 time the user signs in. Subsequent login attempts don't require validation.

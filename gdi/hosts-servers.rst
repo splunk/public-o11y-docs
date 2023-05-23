@@ -29,16 +29,16 @@ Configure application receivers for hosts and servers
    monitors-hosts/disk
    monitors-hosts/docker
    monitors-hosts/elasticsearch
-   elasticsearch-query/elasticsearch-query
+   monitors-hosts/elasticsearch-query
    monitors-hosts/filesystems
    monitors-hosts/haproxy
-   health-checker/health-checker
-   host-metadata/host-metadata
+   monitors-hosts/health-checker
+   monitors-hosts/host-metadata
    opentelemetry/components/host-metrics-receiver
-   http/http
-   processes/processes
-   processlist/processlist
-   load/load
+   monitors-hosts/host-processes
+   monitors-hosts/host-processlist
+   monitors-hosts/host-processload
+   monitors-hosts/http
    interface/interface
    jenkins/jenkins
    windows/windows-iis
@@ -78,10 +78,10 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`health-checker`
 * :ref:`host-metadata`
 * :ref:`host-metrics-receiver`
-* :ref:`http`
 * :ref:`processes`
 * :ref:`processlist`
 * :ref:`load`
+* :ref:`http`
 * :ref:`interface`
 * :ref:`jenkins`
 * :ref:`windows-iis`
