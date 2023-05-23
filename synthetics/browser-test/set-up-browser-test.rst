@@ -143,10 +143,10 @@ Follow these steps to configure custom wait times for your Browser tests:
 #. Add a name and the wait time in ms.
 #. When you finish instrumenting your test, save the workflow: :strong:`Return to test > Save`.
 
-The following image shows how to configure a test to go to a URL, wait for 10 seconds, then login. 
+The following image shows how to configure a test to go to a URL, wait for 10 seconds, then log in. 
 
 .. image:: /_images/synthetics/wait-times-example.png
-   :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then login. 
+   :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then log in. 
 
 
 .. _browser-wait-times:
