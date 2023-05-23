@@ -7,7 +7,7 @@ Kubernetes attributes processor
 .. meta::
       :description: Use the Kubernetes attributes processor to update, add, or delete resource attributes. Read on to learn how to configure the component.
 
-The Kubernetes attributes processor is an OpenTelemetry Collector component that sets resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The Kubernetes attributes processor is an OpenTelemetry Collector component that manages resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Get started
 ======================
@@ -35,9 +35,9 @@ Follow these steps to configure and activate the component:
 Configure role-based access control
 --------------------------------------
 
-The Kubernetes attributes processor requires ``get``, ``watch`` and ``list`` permissions on both pod and namespace resources for all namespaces and pods included in the configured filters. 
+The Kubernetes attributes processor requires ``get``, ``watch`` and ``list`` permissions on both ``pods`` and ``namespaces`` resources for all namespaces and pods included in the configured filters. 
 
-The following example of a ClusterRole shows how to give a ServiceAccount the necessary permissions for all pods and namespaces in the cluster. Replace ``<col_namespace>`` with the namespace where the Collector is deployed:
+The following example shows how to give a ServiceAccount the necessary permissions for all pods and namespaces in a cluster. Replace ``<col_namespace>`` with the namespace where you've deployed the Collector:
 
 .. code-block:: yaml
 
@@ -46,7 +46,9 @@ The following example of a ClusterRole shows how to give a ServiceAccount the ne
    metadata:
       name: collector
       namespace: <col_namespace>
+
    ---
+
    apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRole
    metadata:
@@ -55,7 +57,9 @@ The following example of a ClusterRole shows how to give a ServiceAccount the ne
       - apiGroups: [""]
       resources: ["pods", "namespaces"]
       verbs: ["get", "watch", "list"]
+   
    ---
+   
    apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRoleBinding
    metadata:
@@ -68,6 +72,19 @@ The following example of a ClusterRole shows how to give a ServiceAccount the ne
       kind: ClusterRole
       name: otel-collector
       apiGroup: rbac.authorization.k8s.io
+
+The following example shows the minimum permissions you need to use the processor:
+
+.. code-block:: yaml
+
+   apiVersion: rbac.authorization.k8s.io/v1
+     kind: ClusterRole
+     metadata:
+       name: otel-collector
+     rules:
+       - apiGroups: ['']
+         resources: ['pods', 'namespaces']
+         verbs: ['get', 'watch', 'list']
 
 Sample configuration
 ---------------------------
@@ -330,7 +347,7 @@ The processor can't identify pods running in the host network mode. Enriching te
 Sidecar
 ------------------------------
 
-The processor can't detect containers from the same pods when running as a sidecar. Instead, use the Kubernetes Downward API to inkect environment variables into the pods and use their values as tags.
+The processor can't detect containers from the same pods when running as a sidecar. Instead, use the Kubernetes Downward API to inject environment variables into the pods and use their values as tags.
 
 Troubleshooting
 ======================
