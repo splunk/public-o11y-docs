@@ -1,9 +1,8 @@
 (heroku)=
 
 # Heroku
-<meta name="description" content="Use this Splunk Observability Cloud integration for the Heroku monitor. See benefits, install, configuration, and metrics">
 
-## Description
+<meta name="description" content="Use this Splunk Observability Cloud integration for the Heroku monitor. See benefits, install, configuration, and metrics">
 
 The Splunk OpenTelemetry Connector for Heroku is a buildpack for the Splunk Distribution of OpenTelemetry Collector. The buildpack installs and runs the Splunk OpenTelemetry Connector on a Dyno to receive, process and export metric and trace data for Splunk Observability Cloud:
 
@@ -95,8 +94,7 @@ Use the following environment variables to configure the Heroku buildpack.
 | `SPLUNK_OTEL_VERSION`     | No       | `latest`                                            | Version of Splunk OTel Connector to use. Defaults to latest.                                                               |
 | `SPLUNK_TRACE_URL`        | No       | `https://ingest.SPLUNK_REALM.signalfx.com/v2/trace` | The Splunk APM base URL.                                                                                                   |
 
-
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
