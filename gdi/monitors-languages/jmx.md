@@ -1,30 +1,26 @@
 (jmx)=
+
 # JMX
+
 <meta name="description" content="Use this Splunk Observability Cloud integration for the JMX monitor. See benefits, install, configuration, and metrics. Run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `jmx` monitor type to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points. This is a more flexible alternative to the [GenericJMX](https://docs.splunk.com/Observability/gdi/monitors-languages/genericjmx.html) monitor.
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jmx` monitor type for the Smart Agent Receiver.
+You can use the following utility helpers in the Groovy script within the `util` variable, which is set in the script's context:
 
-Use this integration to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points. This is a more flexible alternative to the [genericjmx](genericjmx) monitor.
+- `util.queryJMX(String objectName)`: This helper queries the pre-configured JMX application for the given `objectName`, which can include wildcards. In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object. You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
 
-The following utility helpers are available to use in the Groovy script within the `util` variable that will be set in the script's context:
-
-- `util.queryJMX(String objectName)`: This helper will
-  query the pre-configured JMX application for the given `objectName`, which can include wildcards. In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object. You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
 - `util.makeGauge(String name, double val, Map<String, String> dimensions)`:
-	A convenience function to create a SignalFx gauge data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`.  This does not send the data point, only creates it.
+	A convenience function to create a SignalFx gauge data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`. This does not send the data point, only creates it.
 
-- `util.makeCumulative(String name, double val, Map<String, String> dimensions)`:
-  A convenience function to create a SignalFx cumulative counter data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`. This does not send the data point, only creates it.
+- `util.makeCumulative(String name, double val, Map<String, String> dimensions)`: A convenience function to create a SignalFx cumulative counter data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`. This does not send the data point, it only creates it.
 
-The `output` instance available in the script context is what is used to send data to SignalFx. It contains the following methods:
+The `output` instance available in the script context is used to send data to Observability Cloud. It contains the following methods:
 
-- `output.sendDatapoint(DataPoint dp)`:
-	Emit the given data point to SignalFx.  Use the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance.
+- `output.sendDatapoint(DataPoint dp)`: Emit the given data point to SignalFx. Use the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance.
 
-- `output.sendDatapoints(List<DataPoint> dp)`:
-	Emit the given data points to SignalFx. We recommend using the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance. It is slightly more efficient to send multiple data points at once, but this doesn't matter that much unless you're sending very high volumes of data.
+- `output.sendDatapoints(List<DataPoint> dp)`: Emit the given data points to SignalFx. We recommend using the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance. It's slightly more efficient to send multiple data points at once, but this doesn't matter that much unless you're sending very high volumes of data.
+
 ## Benefits
 
 ```{include} /_includes/benefits.md
@@ -38,9 +34,9 @@ The `output` instance available in the script context is what is used to send da
 
 ```{include} /_includes/configuration.md
 ```
-### Splunk Distribution of OpenTelemetry Collector
+### Example
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -49,7 +45,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the monitor activation, you must also include the `smartagent/jmx` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -58,23 +54,9 @@ service:
       receivers: [smartagent/jmx]
 ```
 
-See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
-
-### Smart Agent
-
-To activate this monitor in the Smart Agent, add the following to your agent configuration:
-
-```
-monitors:  # All monitor config goes under this key
- - type: jmx
-   ...  # Additional config
-```
-
-See <a href="https://docs.splunk.com/Observability/gdi/smart-agent/smart-agent-resources.html#configure-the-smart-agent" target="_blank">Smart Agent example configuration</a> for an autogenerated example of a YAML configuration file, with default values where applicable.
-
 ### Configuration settings
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -91,7 +73,6 @@ The following table shows the configuration options for this monitor:
 | `trustStorePassword` | no | `string` | The trust store file password if required. |
 | `jmxRemoteProfiles` | no | `string` | Supported JMX remote profiles are TLS in combination with SASL profiles: SASL/PLAIN, SASL/DIGEST-MD5 and SASL/CRAM-MD5. Thus valid `jmxRemoteProfiles` values are: `SASL/PLAIN`, `SASL/DIGEST-MD5`, `SASL/CRAM-MD5`, `TLS SASL/PLAIN`, `TLS SASL/DIGEST-MD5` and `TLS SASL/CRAM-MD5`. |
 | `realm` | no | `string` | The realm is required by profile SASL/DIGEST-MD5. |
-
 
 The following is an example Groovy script that replicates some of the data presented by the Cassandra `nodetool status` utility:
 
@@ -151,16 +132,15 @@ output.sendDatapoints([
 		ss.Ownership.get(InetAddress.getByName(localEndpoint)),
 		dims)
 	])
-
 ```
 
-Make sure that your script is carefully tested before using it to monitor a production JMX service. The script can do anything exposed using JMX, including writing attributes and running methods using JMX. In general, scripts should only read attributes, but nothing enforces that.
+Make sure that your script is carefully tested before using it to monitor a production JMX service. In general, scripts should only read attributes, but nothing enforces that.
 
 ## Metrics
 
 There are no metrics available for this integration.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
