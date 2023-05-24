@@ -199,7 +199,7 @@ Process
      mute_process_io_error: <true|false>
      scrape_process_delay: <time>
 
-If you continually encounter error logs related to process reading, consider setting ``mute_process_name_error``, ``mute_process_exe_error``, or ``mute_process_io_error`` to true.
+If you keep getting errors related to process reading, consider setting ``mute_process_name_error``, ``mute_process_exe_error``, or ``mute_process_io_error`` to ``true``.
 
 Filtering
 ----------------------
