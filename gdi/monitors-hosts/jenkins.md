@@ -4,18 +4,12 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Jenkins monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `jenkins` monitor type to collect metrics from Jenkins instances by hitting the following endpoints:
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the `jenkins` monitor for the Smart Agent Receiver. 
+- Job metrics with the `../api/json` endpoint.
+- Codahale or Dropwizard JVM metrics with the `metrics/<MetricsKey>/..` endpoint.
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
-
-Use this integration to collect metrics from Jenkins instances by hitting the following endpoints:
-
-- Job metrics with the `../api/json` endpoint
-- Codahale or Dropwizard JVM metrics with the `metrics/<MetricsKey>/..` endpoint
+This integration is only available on Kubernetes and Linux. 
 
 ## Benefits
 
@@ -32,9 +26,9 @@ Use this integration to collect metrics from Jenkins instances by hitting the fo
 ```{include} /_includes/configuration.md
 ```
 
-### Configuration example
+### Example
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -43,7 +37,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the monitor activation, you must also include the `smartagent/jenkins` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service/pipelines/metrics/receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -51,8 +45,6 @@ service:
     metrics:
       receivers: [smartagent/jenkins]
 ```
-
-See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
 
 ### Configuration settings
 
@@ -75,55 +67,19 @@ The following table shows the configuration options for this monitor:
 | `sslCACerts` | no | `string` | Path to the ca file |
 | `skipVerify` | no | `bool` | Skip SSL certificate validation (**default:** `false`) |
 
-
-### Sample YAML configurations
-
-Sample basic YAML configuration:
-
-```yaml
-monitors:
-- type: collectd/jenkins
-  host: 127.0.0.1
-  port: 8080
-  metricsKey: reallylongmetricskey
-```
-
-Sample YAML configuration with specific enhanced metrics included:
-
-```yaml
-monitors:
-- type: collectd/jenkins
-  host: 127.0.0.1
-  port: 8080
-  metricsKey: reallylongmetricskey
-  includeMetrics:
-  - "vm.daemon.count"
-  - "vm.terminated.count"
-```
-
-Sample YAML configuration with all enhanced metrics included:
-
-```yaml
-monitors:
-- type: collectd/jenkins
-  host: 127.0.0.1
-  port: 8080
-  metricsKey: reallylongmetricskey
-  enhancedMetrics: true
-```
-
 ## Metrics
 
-These metrics are available for this integration.
+The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/jenkins/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/jenkins/metadata.yaml"></div>
+
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
