@@ -33,6 +33,11 @@ Observability Cloud provides three types of log processors:
   in the log record to a different field name in a new record.
 * :ref:`Field redaction processors <field-redaction-processors>` redact data to mask personally identifiable information.
 
+Prerequisites
+================================================================================
+To create and manage log processing rules, you must have an administrator or power user role in Splunk Observability Cloud.
+
+
 Order of execution of logs pipeline rules
 =============================================================================
 Logs pipeline rules execute in the following order:

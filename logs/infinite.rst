@@ -49,7 +49,9 @@ Because infinite logging rules execute last, you can create field extraction rul
 
 Prerequisites
 ================================================================================
-You must be a Splunk Observability Cloud admin to create new infinite logging connections. Non-admins can send data to S3 buckets using an existing infinite logging connection, but they cannot create new connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console.
+To create new infinite logging connections, You have an administrator role in Splunk Observability Cloud. If you have a power user role, you can send data to S3 buckets using an existing infinite logging connection, but you cannot create new connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console. 
+
+If you have a read-only or subscription usage role, you cannot create new S3 connections or use existing connections to send data to S3 buckets.
 
 Create an infinite logging rule
 ================================================================================

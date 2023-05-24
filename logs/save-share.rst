@@ -19,6 +19,10 @@ Log Observer Connect has no default aggregation. Log Observer defaults to :guila
 
 You can also download the results of a query as a CSV or JSON file. See :ref:`exportCSV` to learn how.
 
+Prerequisites
+================================================================================
+To save and share Log Observer queries, you must have an administrator or power user role.
+
 
 Save a Log Observer query
 ----------------------------------------------------------------------------
