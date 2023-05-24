@@ -103,7 +103,7 @@ The following table shows the configuration options for this monitor:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
-| `host` | no | `string` | The host or IP address to monitor. |
+| `host` | no | `string` | The host or IP address to monitor. Note: Host is required for functionality, but not for configuration validation.|
 | `port` | no | `integer` | The port of the HTTP server to monitor. The default value is `0`. |
 | `path` | no | `string` | The HTTP path to use in the test request. |
 | `httpTimeout` | no | `int64` | The HTTP timeout duration for both read and writes. This should be a duration string that is accepted by the `ParseDuration` type. The default value is `10s`. |
