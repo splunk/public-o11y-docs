@@ -1,21 +1,18 @@
 (java-monitor)=
 
 # Java metrics receiver
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Java monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `java-monitor` to retrieve metrics from a Java application.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `java-monitor` receiver for the Smart Agent Receiver.
-
-Use the Java receiver to retrieve metrics from a Java application.
-
-This receiver is available on Linux and Windows.
+This integration is available on Linux and Windows.
 
 ```{note}
 To activate metrics collection in the OpenTelemetry Java agent, see {ref}`Activate metrics collection <enable_automatic_metric_collection>`.
 ```
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -30,6 +27,10 @@ To activate metrics collection in the OpenTelemetry Java agent, see {ref}`Activa
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/java-monitor:
@@ -37,7 +38,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the receiver activation, you must also include the receiver in a `metrics` pipeline. To do this, add the receiver to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -66,14 +67,12 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/java/metrics.yaml"></div>
 
-The agent doesn't do any built-in filtering of metrics coming out of this receiver.
-
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
