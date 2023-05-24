@@ -6,23 +6,20 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `jmx` monitor type to run an arbitrary Groovy script to convert JMX MBeans fetched from a remote Java application to SignalFx data points. This is a more flexible alternative to the [GenericJMX](genericjmx) monitor.
 
-The following utility helpers are available to use in the Groovy script within the `util` variable that will be set in the script's context:
+You can use the following utility helpers in the Groovy script within the `util` variable, which is set in the script's context:
 
-- `util.queryJMX(String objectName)`: This helper will
-  query the pre-configured JMX application for the given `objectName`, which can include wildcards. In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object. You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
+- `util.queryJMX(String objectName)`: This helper queries the pre-configured JMX application for the given `objectName`, which can include wildcards. In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object. You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
+
 - `util.makeGauge(String name, double val, Map<String, String> dimensions)`:
 	A convenience function to create a SignalFx gauge data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`. This does not send the data point, only creates it.
 
-- `util.makeCumulative(String name, double val, Map<String, String> dimensions)`:
-  A convenience function to create a SignalFx cumulative counter data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`. This does not send the data point, only creates it.
+- `util.makeCumulative(String name, double val, Map<String, String> dimensions)`: A convenience function to create a SignalFx cumulative counter data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`. This does not send the data point, it only creates it.
 
-The `output` instance available in the script context is what is used to send data to SignalFx. It contains the following methods:
+The `output` instance available in the script context is used to send data to Observability Cloud. It contains the following methods:
 
-- `output.sendDatapoint(DataPoint dp)`:
-	Emit the given data point to SignalFx. Use the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance.
+- `output.sendDatapoint(DataPoint dp)`: Emit the given data point to SignalFx. Use the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance.
 
-- `output.sendDatapoints(List<DataPoint> dp)`:
-	Emit the given data points to SignalFx. We recommend using the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance. It is slightly more efficient to send multiple data points at once, but this doesn't matter that much unless you're sending very high volumes of data.
+- `output.sendDatapoints(List<DataPoint> dp)`: Emit the given data points to SignalFx. We recommend using the `util.make[Gauge|Cumulative]` helpers to create the `DataPoint` instance. It's slightly more efficient to send multiple data points at once, but this doesn't matter that much unless you're sending very high volumes of data.
 
 ## Benefits
 
@@ -59,7 +56,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -135,10 +132,9 @@ output.sendDatapoints([
 		ss.Ownership.get(InetAddress.getByName(localEndpoint)),
 		dims)
 	])
-
 ```
 
-Make sure that your script is carefully tested before using it to monitor a production JMX service. The script can do anything exposed using JMX, including writing attributes and running methods using JMX. In general, scripts should only read attributes, but nothing enforces that.
+Make sure that your script is carefully tested before using it to monitor a production JMX service. In general, scripts should only read attributes, but nothing enforces that.
 
 ## Metrics
 
