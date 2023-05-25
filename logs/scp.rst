@@ -9,7 +9,7 @@ Set up Log Observer Connect for Splunk Cloud Platform
 
 Set up Log Observer Connect by integrating Log Observer with Splunk Cloud Platform. If you are in a Splunk Enterprise environment and want to set up Log Observer Connect, see :ref:`logs-set-up-logconnect`.
 
-When you set up Log Observer Connect, your logs data remains strictly in your Splunk Cloud Platform instance and is accessible only to Log Observer Connect. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
+When you set up Log Observer Connect, your logs data remains in your Splunk Cloud Platform instance and is accessible only to Log Observer Connect. Log Observer Connect does not store or index your logs data. There is no additional charge for Log Observer Connect.
 
 Region and version availability
 ==============================================================
@@ -21,7 +21,7 @@ Prerequisites
 ==============================================================
 To set up Log Observer Connect for Splunk Cloud Platform, you must have an administrator role in Splunk Observability Cloud. You must also be an administrator in Splunk Cloud Platform.
 
-Ensure that token authentication is enabled in your Splunk Cloud Platform instance. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
+Activate token authentication in your Splunk Cloud Platform instance if it is not already. See :new-page:`Securing Splunk Cloud Platform: Enable or disable token authentication token <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>` to learn how. 
 
 
 Set up Log Observer Connect
