@@ -4,28 +4,11 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd Java-based Kafka producer monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/kafka_producer` monitor type for the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `collectd/kafka_producer` monitor type to monitor a Java-based Kafka producer. It has a set of built-in MBeans to pull metrics from the Kafka consumer's JMX endpoint.
 
-Use this integration to monitor a Java-based Kafka producer using GenericJMX. This monitor has a set of built-in MBeans configured for which it pulls metrics from the Kafka producer's JMX endpoint.
+This integration is only available on Kubernetes and Linux. It requires Kafka version 0.9.0.0 or higher and collects metrics from the new producer API.
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
-
-## Requirements
-
-The collectd/kafka_producer monitor requires Kafka version 0.9.0.0 or higher and collects metrics from the new producer API.
-
-The following is a sample configuration:
-
-```yaml
-monitors:
-  - type: collectd/kafka_producer
-    host: localhost
-    port: 8099
-```
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -40,14 +23,18 @@ monitors:
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
-  smartagent/ collectd/kafka_producer:
+  smartagent/collectd/kafka_producer:
     type: collectd/kafka_producer
     ... # Additional config
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a metrics pipeline. To do this, add the receiver to the service > pipelines > metrics > receivers section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -58,7 +45,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for the collectd/kafka_producer monitor:
+The following table shows the configuration options for `collectd/kafka_producer`:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |

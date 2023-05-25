@@ -45,7 +45,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for the collectd/kafka_consumer receiver:
+The following table shows the configuration options for `collectd/kafka_consumer`:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -100,7 +100,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
