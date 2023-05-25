@@ -15,7 +15,7 @@ Configure application receivers for orchestration
    monitors-orchestration/kubernetes-apiserver
    monitors-orchestration/kubernetes-cluster
    opentelemetry/components/kubernetes-cluster-receiver
-   kube-controller-manager/kube-controller-manager
+   monitors-orchestration/kube-controller-manager
    kubernetes-events/kubernetes-events
    kubernetes-proxy/kubernetes-proxy
    kubernetes-scheduler/kubernetes-scheduler
@@ -27,6 +27,7 @@ Configure application receivers for orchestration
 These application receivers gather metrics from their associated orchestration-related applications and the hosts the applications are running on.
 
 * :ref:`get-started-istio`
+* :ref:`kubernetes-apiserver`
 * :ref:`kubernetes-cluster`
 * :ref:`kubernetes-cluster-receiver`
 * :ref:`kube-controller-manager`
