@@ -88,10 +88,6 @@ The nested `values` config object has the following fields:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/kafkaconsumer/metadata.yaml"></div>
-
-### Metrics NEW
-
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/kafkaconsumer/metadata.yaml"></div>
 
 

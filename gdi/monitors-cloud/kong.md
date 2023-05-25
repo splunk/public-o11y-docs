@@ -35,7 +35,7 @@ This integration is only available on Kubernetes and Linux, and requires version
 ```{include} /_includes/collector-installation-linux.md
 ```
 
-## Kong installation
+### Kong installation
 
 Bedsides the Collector, you also need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to activate this integration.
 
@@ -151,10 +151,6 @@ curl -X PATCH -d "config.aggregate_by_http_method=false" http://localhost:8001/p
 ## Metrics
 
 These metrics are available for this integration:
-
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/kong/metadata.yaml"></div>
-
-### Metrics NEW
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/kong/metadata.yaml"></div>
 
