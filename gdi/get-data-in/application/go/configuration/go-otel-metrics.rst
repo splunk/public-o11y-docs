@@ -11,21 +11,10 @@ The Splunk Distribution of OpenTelemetry Go collects runtime and custom metrics.
 
 To learn about the different metric types, see :ref:`metric-types`.
 
-.. note:: Runtime and trace metrics collection is an experimental feature subject to future changes.
-
-.. _enable-golang-metrics:
-
-Activate metrics collection
-====================================================
-
-To collect Go metrics, see :ref:`enable_automatic_metric_collection_golang`.
-
 .. _golang-otel-runtime-metrics:
 
 Runtime metrics
 ================================================
-
-.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on a best-effort basis.
 
 The following runtime metrics are automatically collected and exported:
 
@@ -84,8 +73,6 @@ The following runtime metrics are automatically collected and exported:
 
 Connection pool metrics
 ================================================
-
-.. caution:: The OpenTelemetry Go runtime instrumentation is experimental. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on a best-effort basis.
 
 The Splunk Distribution of OpenTelemetry Go instruments several connection pool implementations:
 
