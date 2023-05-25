@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
       - name: Download lastest Splunk style
         run: |
-          wget https://github.com/splunk/vale-splunk-style-guide/archive/refs/latest/latest.zip -O latest.zip
+          wget https://github.com/splunk/vale-splunk-style-guide/archive/latest.zip -O latest.zip
           unzip latest.zip -d .
       - name: Get all changed docs
         id: changed-files
