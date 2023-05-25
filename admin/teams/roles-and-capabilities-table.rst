@@ -33,8 +33,8 @@ Metrics pipeline management
 
 .. include:: /_includes/admin/roles_mpm.rst
 
-Log Observer
-==================
+Log Observer and Log Observer Connect
+===============================================================================
 
 .. include:: /_includes/admin/roles_log_observer.rst
 

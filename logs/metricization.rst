@@ -25,7 +25,7 @@ Logs pipeline rules execute in the following order:
 
 Prerequisites
 ================================================================================
-To create log metricization rules, you must have an administrator or power user role.
+To create log metricization rules, you must have an administrator or power user role in Splunk Observability Cloud.
 
 
 Create log metricization rules
