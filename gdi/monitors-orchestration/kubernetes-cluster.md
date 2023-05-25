@@ -1,68 +1,16 @@
 (kubernetes-cluster)=
 
-# Kubernetes cluster
+# Kubernetes cluster (deprecated)
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Kubernetes cluster monitor. See benefits, install, configuration, and metrics">
 
 ```{note}
 This monitor is deprecated in favor of the `k8s_cluster` receiver. See {ref}`Kubernetes Cluster Receiver <kubernetes-cluster-receiver>` for more information.
+
+If you are using OpenShift, use the `openshift-cluster` monitor type instead. 
 ```
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to provide the `kubernetes-cluster` monitor.
-
-Use this integration to obtain cluster-level resource metrics from the Kubernetes API server.
-
-The `kubernetes-cluster` monitor does the following:
-
-- Uses the watch functionality of the Kubernetes API to listen for updates about the cluster.
-- Maintains a cache of metrics that are sent at regular intervals.
-
-This monitor is available on Linux and Windows.
-
-### Overriding leader election
-
-This monitor defaults to a leader election process to ensure that it is the only agent sending metrics in a cluster. The leader election process is used because:
-- The agent usually runs in multiple places in a Kubernetes cluster
-
-- It is convenient to share the same configuration across all agent instances
-
-Leader election means that all of the agents running in the same namespace that have this monitor configured decide among themselves which agent sends metrics for this monitor, while the other agents stand by ready to activate if the leader agent expires.
-
-You can override leader election by setting the configuration option `alwaysClusterReporter` to `true`, which makes the monitor always report metrics.
-
-**Note:** If you are using OpenShift, use the ``openshift-cluster`` monitor type instead of this ``kubernetes-cluster`` monitor type. The ``openshift-cluster`` monitor type contains additional OpenShift metrics.
-
-
-### Benefits
-
-```{include} /_includes/benefits.md
-```
-
-##  Installation
-
-
-```{include} /_includes/collector-installation.md
-```
-
-## Configuration
-
-```{include} /_includes/configuration.md
-```
-
-```
-receivers:
-  smartagent/kubernetes-cluster:
-    type: kubernetes-cluster
-    ... # Additional config
-```
-
-To complete the integration, include the monitor in a metrics pipeline. To do this, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file.
-
-See the [kubernetes.yaml](https://github.com/signalfx/splunk-otel-collector/tree/main/examples/kubernetes-yaml) in GitHub for the Agent and Gateway YAML files.
-
-### Configuration settings
+## Configuration settings
 
 The following tables show the configuration options for this monitor type:
 
@@ -87,14 +35,14 @@ The **nested** `kubernetesAPI` configuration object has the following fields:
 
 The following table shows the legacy metrics that are available for this integration. See [OpenTelemetry values and their legacy equivalents](https://docs.splunk.com/Observability/gdi/opentelemetry/legacy-otel-mappings.html#opentelemetry-values-and-their-legacy-equivalents) for the Splunk Distribution of OpenTelemetry Collector equivalents.
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
