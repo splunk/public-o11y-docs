@@ -1,15 +1,14 @@
 (kubernetes-apiserver)=
 
 # Kubernetes API server
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the kubernetes-apiserver monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the Kubernetes API server integration as the `kubernetes-apiserver` monitor type for the Smart Agent Receiver. Use this integration to retrieve metrics from the API server's Prometheus metric endpoint.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Kubernetes API server monitor type to retrieve metrics from the API server's Prometheus metric endpoint.
 
-This monitor is available on Kubernetes, Linux, and Windows. 
+This integration is available on Kubernetes, Linux, and Windows. 
 
-## Requirements
-
-Control plane related rely on having access to certain pods in the control plane. Since several cloud Kubernetes as a service distributions don't expose the control plane pods to the end user, metric collection might not be possible in these cases. This receiver requires access to [kube-apiserver pods](https://kubernetes.io/docs/concepts/overview/components/#kube-apiserver).
+This integration requires access to [kube-apiserver pods](https://kubernetes.io/docs/concepts/overview/components/#kube-apiserver) to be able to access certain pods in the control plane. Since several Kubernetes-as-a-service distributions don't expose the control plane pods to the end user, metric collection might not be possible in these cases. 
 
 ## Benefits
 
@@ -26,6 +25,10 @@ Control plane related rely on having access to certain pods in the control plane
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
   receivers:
     smartagent/kubernetes-apiserver:
@@ -33,7 +36,7 @@ Control plane related rely on having access to certain pods in the control plane
       ... # Additional config
 ```
 
-To complete the monitor activation, you must also include the `smartagent/kubernetes-apiserver` receiver in a `metrics` pipeline. To do this, add the receiver name to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -65,7 +68,7 @@ The following table shows the configuration options for this monitor:
 | `metricPath` | no | `string` | Path to the metrics endpoint on the exporter server, usually `/metrics` (the default). (**default:** `/metrics`) |
 | `sendAllMetrics` | no | `bool` | Send all the metrics that come out of the Prometheus exporter without any filtering.  This option has no effect when using the prometheus exporter monitor directly since there is no built-in filtering, only when embedding it in other monitors. (**default:** `false`) |
 
-### Example configuration
+### Example: Kubernetes observer 
 
 The following is an example YAML configuration:
 
@@ -81,7 +84,7 @@ receivers:
 
 The OpenTelemetry Collector has a Kubernetes observer (`k8sobserver`) that can be implemented as an extension to discover networked endpoints, such as a Kubernetes pod. Using this observer assumes that the OpenTelemetry Collector is deployed in Agent mode, where it is running on each individual node or host instance.
 
-To use the observer, you must create a receiver creator instance with an associated rule. For example:
+To use the observer, create a receiver creator instance with an associated rule. For example:
 
 ```yaml
 extensions:
@@ -121,7 +124,7 @@ See {ref}`Receiver creator <receiver-creator-receiver>` for more information.
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" category="included" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/apiserver/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/kubernetes/apiserver/metadata.yaml"></div>
 
 ### Notes
 
