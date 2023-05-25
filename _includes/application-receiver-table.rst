@@ -94,16 +94,6 @@
      -
      -
 
-   * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Kafka producer <collectd-kafka-producer>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd PHP FPM <collectd-php-fpm>`
      - :strong:`X`
      -
@@ -285,6 +275,16 @@
      -
 
    * - :ref:`JMX <jmx>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka consumer <kafka-consumer>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka producer <kafka-producer>`
      - :strong:`X`
      -
      -

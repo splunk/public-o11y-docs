@@ -12,8 +12,8 @@ Configure application receivers for orchestration
    :hidden:
 
    Istio <get-data-in/application/istio/istio>
-   kubernetes-apiserver/kubernetes-apiserver
-   kubernetes-cluster/kubernetes-cluster
+   monitors-orchestration/kubernetes-apiserver
+   monitors-orchestration/kubernetes-cluster
    opentelemetry/components/kubernetes-cluster-receiver
    kube-controller-manager/kube-controller-manager
    kubernetes-events/kubernetes-events
