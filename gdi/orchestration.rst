@@ -18,8 +18,8 @@ Configure application receivers for orchestration
    monitors-orchestration/kubernetes-controller-manager
    monitors-orchestration/kubernetes-events
    monitors-orchestration/kubernetes-network-stats
-   kubernetes-proxy/kubernetes-proxy
-   kubernetes-scheduler/kubernetes-scheduler
+   monitors-orchestration/kubernetes-proxy
+   monitors-orchestration/kubernetes-scheduler
    opentelemetry/components/kubelet-stats-receiver
    marathon/marathon
    openshift-cluster/openshift-cluster
