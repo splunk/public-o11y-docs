@@ -15,11 +15,11 @@ Configure application receivers for orchestration
    monitors-orchestration/kubernetes-apiserver
    monitors-orchestration/kubernetes-cluster
    opentelemetry/components/kubernetes-cluster-receiver
-   monitors-orchestration/kube-controller-manager
+   monitors-orchestration/kubernetes-controller-manager
    monitors-orchestration/kubernetes-events
+   monitors-orchestration/kubernetes-network-stats
    kubernetes-proxy/kubernetes-proxy
    kubernetes-scheduler/kubernetes-scheduler
-   kubelet-stats/kubelet-stats
    opentelemetry/components/kubelet-stats-receiver
    marathon/marathon
    openshift-cluster/openshift-cluster
@@ -32,9 +32,9 @@ These application receivers gather metrics from their associated orchestration-r
 * :ref:`kubernetes-cluster-receiver`
 * :ref:`kube-controller-manager`
 * :ref:`kubernetes-events`
+* :ref:`kubelet-stats`
 * :ref:`kubernetes-proxy`
 * :ref:`kubernetes-scheduler`
-* :ref:`kubelet-stats`
 * :ref:`kubelet-stats-receiver`
 * :ref:`marathon`
 * :ref:`openshift-cluster`
