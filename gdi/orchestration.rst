@@ -16,7 +16,7 @@ Configure application receivers for orchestration
    monitors-orchestration/kubernetes-cluster
    opentelemetry/components/kubernetes-cluster-receiver
    monitors-orchestration/kube-controller-manager
-   kubernetes-events/kubernetes-events
+   monitors-orchestration/kubernetes-events
    kubernetes-proxy/kubernetes-proxy
    kubernetes-scheduler/kubernetes-scheduler
    kubelet-stats/kubelet-stats
