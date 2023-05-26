@@ -73,7 +73,7 @@ This is the collection of use cases available for Splunk Observability Cloud.
   * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
     - :ref:`ii-use-case-day-by-day`
   * - Infrastructure Monitoring
-    - :ref:`Troubleshoot server failure using the Kubernetes navigator <troubleshoot-k8s-nav-use-case>`
+    - :ref:`troubleshoot-k8s-nav-use-case`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
     - :ref:`find-network-error`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
