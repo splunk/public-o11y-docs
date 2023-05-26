@@ -1,13 +1,13 @@
 .. _max-delay-detectors-use-case:
 
-******************************************************************************
-Use case: Set Max Delay for detectors to account for sudden changes in delay
-******************************************************************************
+************************************************************************************
+Scenario: Kai sets a Max Delay for detectors to account for sudden changes in delay
+************************************************************************************
 
 
 
 .. meta::
-    :description: This Splunk alerts and detectors use case describes how to set max delay for detectors.
+    :description: This Splunk alerts and detectors scenario describes how to set max delay for detectors.
 
 In Splunk Observability Cloud, the site reliability engineering (SRE) team at Buttercup Game has set up a detector called :strong:`Store sales` that monitors Buttercup Games stores and alerts when any store’s hourly sales decrease by more than 10% compared to the previous week.
 
