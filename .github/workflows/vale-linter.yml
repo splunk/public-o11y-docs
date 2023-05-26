@@ -14,6 +14,7 @@ on:
 jobs:
   lint:
     # if: ${{ github.event.label.name == 'vale' }}
+    if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
     runs-on: macos-latest
     name: Lint changed files
     steps:
