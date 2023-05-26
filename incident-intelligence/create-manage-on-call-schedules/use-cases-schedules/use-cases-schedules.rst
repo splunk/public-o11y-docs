@@ -1,12 +1,12 @@
 .. _ii-use-cases-schedules:
 
-Use cases: Schedules in Incident Intelligence
+Scenarios: Schedules in Incident Intelligence
 *********************************************************************************************
 
 .. meta::
-   :description: Schedule use cases for Incident Intelligence. 
+   :description: Schedule scenarios for Incident Intelligence. 
 
-The following use cases feature examples from Buttercup Games, a fictitious e-commerce company. Each use case shares a story of how Buttercup Games uses on-call schedules in Splunk Incident Intelligence to notify the correct responder to take action on their applications and services when incidents are triggered.
+The following scenarios feature examples from Buttercup Games, a fictitious e-commerce company. Each scenario shares a story of how Buttercup Games uses on-call schedules in Splunk Incident Intelligence to notify the correct responder to take action on their applications and services when incidents are triggered.
 
 .. toctree::
    :hidden:
