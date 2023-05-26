@@ -3,14 +3,14 @@
 
 
 *******************************************************************
-Use case: Identify network problems affecting services
+Scenario: Identify network problems affecting services
 *******************************************************************
 
 .. meta::
-    :description: Network anomalies use case
+    :description: Network anomalies scenario
 
     
-The following use cases feature examples from Buttercup Games, a fictitious e-commerce company.
+The following scenario features examples from Buttercup Games, a fictitious e-commerce company.
 
 Kai, a site reliability engineer (SRE) at Buttercup Games, receives an alert about a drop in transaction volume in the ``checkoutservice`` service on the company's site.
 

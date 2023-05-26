@@ -1,13 +1,11 @@
 .. _apm-use-cases-intro:
 
 *******************************************************************************************************
-Use cases: Troubleshoot errors and monitor application performance using Splunk APM
+Scenarios: Troubleshoot errors and monitor application performance using Splunk APM
 *******************************************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
-    :description: Get started with Splunk APM use cases.
+    :description: Get started with Splunk APM scenarios.
 
 .. toctree::
     :hidden:
@@ -30,10 +28,10 @@ Buttercup Games, a fictitious game company, recently refactored its e-commerce s
 .. raw:: html
 
   <embed>
-    <h2>Troubleshooting use cases</h2>
+    <h2>Troubleshooting scenarios</h2>
   </embed>
 
-Site reliability engineers, service owners, engineering executives, and performance engineers at Buttercup Games use Splunk APM for the following troubleshooting use cases: 
+Site reliability engineers, service owners, engineering executives, and performance engineers at Buttercup Games use Splunk APM for the following troubleshooting scenarios: 
 
 - :ref:`service-map`
 - :ref:`services-impact-business-workflows`
@@ -47,10 +45,10 @@ Site reliability engineers, service owners, engineering executives, and performa
 .. raw:: html
 
   <embed>
-    <h2>Monitoring use cases</h2>
+    <h2>Monitoring scenarios</h2>
   </embed>
 
-Site reliability engineers, service owners, engineering executives, and performance engineers at Buttercup Games use Splunk APM for the following monitoring use cases: 
+Site reliability engineers, service owners, engineering executives, and performance engineers at Buttercup Games use Splunk APM for the following monitoring scenarios: 
 
 - :ref:`monitor-services`
 - :ref:`configure-business-workflows`

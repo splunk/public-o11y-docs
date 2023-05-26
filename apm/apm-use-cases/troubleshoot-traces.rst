@@ -1,6 +1,6 @@
 .. _apm-use-case-trace-analyzer:
 
-Use case: Troubleshoot an issue to find the root cause using Trace Analyzer
+Scenario: Alex troubleshoots an issue to find the root cause using Trace Analyzer
 ************************************************************************************
 
 .. meta::
@@ -66,4 +66,4 @@ Learn more
 
 - For more information on Trace Analyzer, see :ref:`trace-analyzer`.
 - For a list of APM key concepts, see :ref:`apm-key-concepts`.
-- For more Splunk APM use cases, see :ref:`apm-use-cases-intro`.
+- For more Splunk APM scenarios, see :ref:`apm-use-cases-intro`.
