@@ -382,7 +382,8 @@ Use the following configuration to collect and log CPU metrics. The ``cat`` comm
             cpu:
    exporters:
       logging:
-         logLevel: debug
+         # Can be changed to info
+         verbosity: detailed
    service:
       pipelines:
          metrics:

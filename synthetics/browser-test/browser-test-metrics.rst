@@ -233,15 +233,15 @@ Resource and error count metrics capture information about the number and types 
    
    * - Client error count
      - ``synthetics.resource_request.error.count``
-     - Number of client responses with a status code between 400 and 499. The error type is indicated in the ``content_type`` dimension. 
+     - Number of client responses with a status code between 400 and 499. The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Connection error count
      - ``synthetics.resource_request.error.count``
-     - Number of connection responses where the status code is 504 or 0 (a request aborted by the browser). The error type is indicated in the ``content_type`` dimension. 
+     - Number of connection responses where the status code is 504 or 0 (a request aborted by the browser). The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Server error count 
      - ``synthetics.resource_request.error.count``
-     - Number of server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the ``content_type`` dimension. 
+     - Number of server responses where the status code is 500 or higher (excluding 504). The error type is indicated in the ``http.status_code_type`` dimension. 
 
    * - Error count
      - ``synthetics.resource_request.error.count``

@@ -190,7 +190,7 @@ You can also set the following optional parameters:
 Settings
 ======================
 
-The following table shows the configuration options for the MongoDB Atlas:
+The following table shows the configuration options for the Kubelet stats receiver:
 
 .. raw:: html
 

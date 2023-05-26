@@ -13,7 +13,7 @@ Configure application receivers for networks
 
    monitors-network/aws-appmesh
    monitors-network/dns
-   logstash-tcp/logstash
+   monitors-network/logstash-tcp
    net-io/net-io
    ntp/ntp
    protocols/protocols

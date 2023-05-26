@@ -1,18 +1,14 @@
 (kubernetes-scheduler)=
 
 # Kubernetes scheduler
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Kubernetes scheduler monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-scheduler` monitor type by using the [Splunk Observability Cloud Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver).
-
-This monitor type exports Prometheus metrics from the [kube-scheduler](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `kubernetes-proxy` monitor type to export Prometheus metrics from the [kube-scheduler](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler).
 
 This monitor type is available on Kubernetes, Linux, and Windows.
 
 ## Benefits
-
 
 ```{include} /_includes/benefits.md
 ```
@@ -26,8 +22,18 @@ This monitor type is available on Kubernetes, Linux, and Windows.
 
 ```{include} /_includes/configuration.md
 ```
+### Example
 
-To complete the monitor type activation, you must also include it in a **metrics** pipeline. To do this, add the monitor type to the **service** > **pipelines** > **metrics** > **receivers** section of your configuration file. For example:
+To activate this integration, add the following to your Collector configuration:
+
+```yaml
+receivers:
+  smartagent/kubernetes-scheduler
+    type: kubernetes-scheduler
+    ... # Additional config
+```
+
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -36,9 +42,7 @@ service:
        receivers: [smartagent/kubernetes-scheduler]
 ```
 
-
 ### Configuration settings
-
 
 | Config option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -58,12 +62,11 @@ service:
 | `metricPath` | no | `string` | Path to the metrics endpoint on the exporter server, usually `/metrics`. **Default** is `/metrics`. |
 | `sendAllMetrics` | no | `bool` | Send all the metrics that come out of the Prometheus exporter without any filtering.  This option has no effect when using the prometheus exporter monitor directly since there is no built-in filtering, only when embedding it in other monitors. **Default** is `false`. |
 
-
 ## Metrics
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/scheduler/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/kubernetes/scheduler/metadata.yaml"></div>
 
 ### Notes
 
@@ -72,16 +75,11 @@ The following metrics are available for this integration:
 
 ### Non-default metrics (version 4.7.0+)
 
-To emit metrics that are not _default_, you can add those metrics in the
-generic monitor-level `extraMetrics` config option.  Metrics that are derived
-from specific configuration options that do not appear in the above list of
-metrics do not need to be added to `extraMetrics`.
+To emit metrics that are not _default_, you can add those metrics in the generic monitor-level `extraMetrics` config option.  Metrics that are derived from specific configuration options that do not appear in the above list of metrics do not need to be added to `extraMetrics`.
 
-To see a list of metrics that will be emitted you can run `agent-status
-monitors` after configuring this monitor in a running agent instance.
+To see a list of metrics that will be emitted you can run `agent-status monitors` after configuring this monitor in a running agent instance.
 
-
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
