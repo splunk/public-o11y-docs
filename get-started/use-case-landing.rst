@@ -1,4 +1,4 @@
-.. _use-case-landing:
+.. _scenario-landing:
 
 ******************************************************************************************************
 Splunk Observability Cloud scenarios
