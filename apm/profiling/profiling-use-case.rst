@@ -1,8 +1,7 @@
 .. _profiling-use-case:
 
-**********************************************************
-Use case: Find performance issues using AlwaysOn Profiling
-**********************************************************
+Scenario: Sasha finds performance issues using AlwaysOn Profiling
+*******************************************************************
 
 .. meta:: 
    :description: Learn how you can use AlwaysOn Profiling in Splunk APM to identify performance issues in the code of your applications.
@@ -98,5 +97,5 @@ Learn more
 
 - For more information on AlwaysOn Profiling and how to start using it, see :ref:`profiling-intro`.
 - For more information on the profiling flame graph, see :ref:`flamegraph-howto`.
-- For more Splunk APM use cases, see :ref:`apm-use-cases-intro`.
+- For more Splunk APM scenarios, see :ref:`apm-use-cases-intro`.
 - For more information on monitoring hosts, see :ref:`infrastructure-hosts`.

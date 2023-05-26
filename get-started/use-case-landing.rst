@@ -57,15 +57,15 @@ This is the collection of use cases available for Splunk Observability Cloud.
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`custom-metricset`  
   * - :ref:`APM <apm-use-cases-intro>`
-    - :ref:`Monitor service performance using endpoint performance <apm-use-case-endpoint-performance>` 
+    - :ref:`apm-use-case-endpoint-performance` 
   * - :ref:`APM database query performance <db-query-performance>`
-    - :ref:`Identify slow database queries using Database Query Performance <db-perf-use-case>` 
+    - :ref:`db-perf-use-case` 
   * - :ref:`APM database query performance <db-query-performance>`
-    - :ref:`Investigate Redis performance issues using Database Query Performance <redis-use-case>`
+    - :ref:`redis-use-case`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>`
-    - :ref:`Find performance issues using AlwaysOn Profiling <profiling-use-case>`
+    - :ref:`profiling-use-case`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
-    - :ref:`Analyze memory usage using AlwaysOn Profiling <memory-profiling-use-case>`
+    - :ref:`memory-profiling-use-case`
   * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
     - :ref:`ii-use-case-business-hours`
   * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
