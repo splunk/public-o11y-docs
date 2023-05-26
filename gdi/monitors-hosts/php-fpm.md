@@ -4,15 +4,21 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd PHP-FastCGI Process Manager FPM monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/php-fpm` monitor type for the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `collectd/php-fpm` monitor type to monitor PHP-FastCGI Process Manager (FPM) using the pool status URL.
 
-Use this integration to monitor PHP-FastCGI Process Manager (FPM) using the pool status URL.
+This integration is only available on Kubernetes and Linux.
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
+## Benefits
+
+```{include} /_includes/benefits.md
 ```
 
-## Requirements
+## Installation
+
+```{include} /_includes/collector-installation-linux.md
+```
+
+### Install PHP
 
 To configure the PHP-FPM service itself to expose status metrics, follow these steps:
 
@@ -29,23 +35,16 @@ To configure the PHP-FPM service itself to expose status metrics, follow these s
    ```
 3. Restart both the web server and PHP-FPM.
 
-Make sure that the URL you provide to reach the FPM status page through your web server ends in `?json`. This returns the 
-metrics as `json`, which this plugin requires.
-
-### Benefits
-
-```{include} /_includes/benefits.md
-```
-
-## Installation
-
-```{include} /_includes/collector-installation-linux.md
-```
+Make sure that the URL you provide to reach the FPM status page through your web server ends in `?json`. This returns the metrics as `json`, which this plugin requires.
 
 ## Configuration
 
 ```{include} /_includes/configuration.md
 ```
+
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -54,7 +53,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a metrics pipeline. To do this, add the receiver to the service > pipelines > metrics > receivers section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -65,7 +64,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for the collectd/php-fpm receiver:
+The following table shows the configuration options for `collectd/php-fpm`:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -76,51 +75,18 @@ The following table shows the configuration options for the collectd/php-fpm rec
 | `url` | no | `string` | URL or Go template that to be populated with the `host`, `port`, and `path` values. |
 | `name` | no | `string` | The `plugin_instance` dimension. It can take any value. |
 
-
-## Configuration examples
-
-The following example shows how to configure the host and port for the monitor:
-
-```
-monitors:
- - type: collectd/php-fpm
-   host: localhost
-   port: 80
-```
-
-If the FPM status page is exposed on an endpoint other than `/status`, use the `path` config option as in the following example:
-
-```
-monitors:
- - type: collectd/php-fpm
-   host: localhost
-   port: 80
-   path: "/status"
-```
-
-You can also define the entire URL yourself using the `url` config option. In that case, the `useHTTPS` setting is ignored.
-
-```
-monitors:
- - type: collectd/php-fpm
-   host: localhost
-   port: 80
-   useHTTPS: true # will be ignored
-   url: "http://{{.host}}:{{.port}}/fpm-status?json"
-```
-
 ## Metrics
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/php/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/php/metadata.yaml"></div>
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

@@ -4,15 +4,11 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd Uptime monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/uptime` monitor type for the Smart Agent Receiver.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `collectd/uptime` monitor type to send a single metric of the total number of seconds the host has been up, using the collectd uptime plugin.
 
-Use this integration to send a single metric of the total number of seconds the host has been up, using the collectd uptime plugin.
+This integration is only available on Kubernetes and Linux.
 
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -27,6 +23,10 @@ This monitor is not available on Windows as collectd plugins are only supported 
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/collectd/uptime:
@@ -34,7 +34,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a metrics pipeline. To do this, add the receiver to the service > pipelines > metrics > receivers section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -47,14 +47,14 @@ service:
 
 The following metrics are available for this integration.
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/uptime/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/uptime/metadata.yaml"></div>
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
