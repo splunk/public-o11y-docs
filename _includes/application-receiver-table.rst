@@ -94,16 +94,6 @@
      -
      -
 
-   * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Kafka producer <collectd-kafka-producer>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd PHP FPM <collectd-php-fpm>`
      - :strong:`X`
      -
@@ -204,31 +194,6 @@
      -
      -
 
-   * - :ref:`Gitaly and Gitaly Cluster <gitlab-gitaly>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Runner <gitlab-runner>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Sidekiq <gitlab-sidekiq>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Unicorn <gitlab-unicorn>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Workhorse <gitlab-workhorse>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Hadoop <hadoop>`
      - :strong:`X`
      -
@@ -310,6 +275,16 @@
      -
 
    * - :ref:`JMX <jmx>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka consumer <kafka-consumer>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka producer <kafka-producer>`
      - :strong:`X`
      -
      -

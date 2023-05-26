@@ -64,6 +64,12 @@ Follow these steps to instrument your application with the CDN:
 
    .. code-block:: html
 
+      /*
+
+      IMPORTANT: Replace the <version> placeholder in the src URL with a
+      version from https://github.com/signalfx/splunk-otel-js-web/releases
+
+      */
       <script src="https://cdn.signalfx.com/o11y-gdi-rum/<version>/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
          SplunkRum.init({

@@ -18,8 +18,6 @@ Configure application receivers for hosts and servers
    monitors-hosts/chrony
    monitors-hosts/collectd-plugin
    monitors-hosts/collectd-df 
-   collectd/collectd-kafka-consumer
-   collectd/collectd-kafka-producer
    collectd/collectd-php-fpm
    collectd/collectd-uptime
    monitors-hosts/coredns
@@ -29,18 +27,20 @@ Configure application receivers for hosts and servers
    monitors-hosts/disk
    monitors-hosts/docker
    monitors-hosts/elasticsearch
-   elasticsearch-query/elasticsearch-query
+   monitors-hosts/elasticsearch-query
    monitors-hosts/filesystems
    monitors-hosts/haproxy
-   health-checker/health-checker
-   host-metadata/host-metadata
+   monitors-hosts/health-checker
+   monitors-hosts/host-metadata
    opentelemetry/components/host-metrics-receiver
-   http/http
-   processes/processes
-   processlist/processlist
-   load/load
-   interface/interface
-   jenkins/jenkins
+   monitors-hosts/host-processes
+   monitors-hosts/host-processlist
+   monitors-hosts/host-processload
+   monitors-hosts/http
+   monitors-hosts/interface
+   monitors-hosts/jenkins
+   monitors-hosts/kafka-consumer
+   monitors-hosts/kafka-producer
    windows/windows-iis
    nginx/nginx
    procstat/procstat
@@ -62,8 +62,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`collectd-plugin`
 * :ref:`cpufreq`
 * :ref:`collectd-df`
-* :ref:`collectd-kafka-consumer`
-* :ref:`collectd-kafka-producer`
 * :ref:`collectd-php-fpm`
 * :ref:`collectd-uptime`
 * :ref:`coredns`
@@ -78,12 +76,14 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`health-checker`
 * :ref:`host-metadata`
 * :ref:`host-metrics-receiver`
-* :ref:`http`
 * :ref:`processes`
 * :ref:`processlist`
 * :ref:`load`
+* :ref:`http`
 * :ref:`interface`
 * :ref:`jenkins`
+* :ref:`kafka-consumer`
+* :ref:`kafka-producer`
 * :ref:`windows-iis`
 * :ref:`nginx`
 * :ref:`procstat`

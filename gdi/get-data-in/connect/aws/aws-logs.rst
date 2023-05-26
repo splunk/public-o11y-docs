@@ -101,9 +101,9 @@ To capture logs from unsupported services using the API, follow these steps:
 .. code-block:: none
   
   curl https://app.<realm>.signalfx.com/v2/integration/<integrationId> \
-    -H PUT \
-    -H 'x-sf-token: <user API access token>' \
-    -H 'content-type: application/json' \
+    -X PUT \
+    -X 'x-sf-token: <user API access token>' \
+    -X 'content-type: application/json' \
     --data-raw '<updated integration JSON here>'
 
 

@@ -152,7 +152,7 @@ Sample annotations include:
 5. Check out the results at Splunk Observability APM
 ------------------------------------------------------------
 
-Allow the Operator to do the work. The Operator intercepts and alters the Kuberenetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
+Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
 
 Learn more
 ===========================================================================

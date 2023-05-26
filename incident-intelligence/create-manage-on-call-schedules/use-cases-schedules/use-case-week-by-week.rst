@@ -1,12 +1,12 @@
 .. _ii-use-case-week-by-week:
 
-Use case: Create weekly coverage using the week-by-week shift type
+Use case: Create weekly coverage using the Week-by-week shift type
 ************************************************************************
 
 .. meta::
    :description: Schedule use case for creating a weekly rotation in Incident Intelligence.
 
-Skyler, the site reliability engineering (SRE) manager for Buttercup Industries, needs to create an on-call schedule for SREs with weekly 24x7 coverage for the payment service Monday through Sunday.
+Skyler, the site reliability engineering (SRE) manager for Buttercup Games, needs to create an on-call schedule for SREs with weekly 24x7 coverage for the payment service Monday through Sunday.
 
 Skyler takes the following steps to configure a schedule that meets these coverage needs:
 
@@ -16,8 +16,8 @@ Skyler takes the following steps to configure a schedule that meets these covera
       <ol>
             <li><a href="#ii-create-schedule">Skyler creates a schedule for the payment service</a>
             <li><a href="#ii-create-shift">Skyler creates a week-by-week shift for Monday through Sunday</a></li>
-            <li><a href="#ii-add-incident-workflow">Skyler adds the schedule to the incident workflow in the incident policy for the payment service</a></li>
-            <li><a href="#ii-enable-incident-policy">Skyler enables the payment service</a></li>
+            <li><a href="#ii-add-incident-workflow">Skyler adds the schedule to the incident workflow</a></li>
+            <li><a href="#ii-enable-incident-policy">Skyler enables the incident policy for the payment service</a></li>
       </ol>
    </embed>
 
@@ -27,7 +27,7 @@ Skyler takes the following steps to configure a schedule that meets these covera
       <h2 id="ii-create-schedule">Skyler creates a schedule for the payment service</h2>
    </embed>
 
-Skyler creates a new schedule for the payment service and names it accordingly. Skyler adds a payment teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later.
+Skyler creates a new schedule for the payment service and names it accordingly: **Payment service**. Skyler adds a **Payment** teams tag to make the schedule easier to find. The teams tag also sorts the list of responders so they're easier to find and select when Skyler adds them to a shift later. The following image shows the new schedule Skyler creates with the teams tag. 
 
 .. image:: /_images/incident-intelligence/use-cases/Week-by-week-create-payment-schedule.png
       :width: 50%
@@ -39,27 +39,27 @@ Skyler creates a new schedule for the payment service and names it accordingly. 
       <h2 id="ii-create-shift">Skyler creates a week-by-week shift for weekly coverage</h2>
    </embed>
 
-Skyler creates a weekly shift in the schedule for the payment service. Using the week-by-week shift type Skyler creates the weekly coverage they need. Week-by-week shifts are designed to span over one week and repeat every week. This option is best if you want to create a long-term shift that spans the course of two to seven days, with responders rotating on a less frequent basis. 
+Skyler creates a weekly shift in the schedule for the payment service. Using the :guilabel:`Week-by-week` shift type Skyler creates the weekly coverage they need. Week-by-week shifts are designed to span over one week and repeat every week and are ideal for creating a long-term shift that spans the course of two to seven days, with responders rotating on a less frequent basis. 
 
-Skyler selects a shift handoff of one, which configures the shift to assign the same responder as on call for the entire week, Monday through Sunday. Skyler then adds the SREs as responders. 
+Skyler selects a shift handoff of **1**, which configures the shift to assign the same responder as on call for the entire week, Monday through Sunday. Skyler then adds the SREs as responders. The weekly shift that Skyler creates is shown in the following image.
 
 .. image:: /_images/incident-intelligence/use-cases/Week-by-week-shift.png
       :width: 50%
       :alt: Weekly shift in payment schedule.
 
-Using the schedule preview, Skyler verifies that they configured the weekly shift correctly. Alex is on call Monday, Wednesday, and Friday for 24 hours and then the next responder takes over.
+Using the :guilabel:`Schedule Preview`, Skyler verifies that they configured the weekly shift correctly. As shown in the following image, Alex is on call Monday, through Sunday for 24 hours, and then the next responder takes over.
 
 .. image:: /_images/incident-intelligence/use-cases/Week-by-week-preview.png
       :width: 99%
-      :alt: Schedule preview for weekly shift.
+      :alt: Schedule Preview for weekly shift.
 
 .. raw:: html
 
    <embed>
-      <h2 id="ii-add-incident-workflow">Skyler adds the payment schedule to the incident workflow in the incident policy for the payment service</h2>
+      <h2 id="ii-add-incident-workflow">Skyler adds the payment schedule to the incident workflow</h2>
    </embed>
 
-Skyler adds the payment schedule as the first step in the incident workflow for the incident policy for the payment service. 
+Skyler adds the payment schedule as the first step of the :guilabel:`Incident workflow` for the payment service incident policy. The incident workflow that Skyler creates is shown in the following image.
 
 .. image:: /_images/incident-intelligence/use-cases/Week-by-week-incident-policy.png
       :width: 99%
@@ -68,10 +68,10 @@ Skyler adds the payment schedule as the first step in the incident workflow for 
 .. raw:: html
 
    <embed>
-      <h2 id="ii-enable-incident-policy">Skyler enables the payment service</h2>
+      <h2 id="ii-enable-incident-policy">Skyler enables the incident policy for the payment service</h2>
    </embed>
 
-With the schedule configured and added to the incident policy, Skyler then enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
+With the schedule configured and added to the incident policy, Skyler enables the incident policy so that alerts begin flowing and triggering incidents that notify the responders in the newly-configured schedule.
 
 
 .. raw:: html
