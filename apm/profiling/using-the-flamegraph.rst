@@ -53,7 +53,7 @@ The width of each bar is an important clue to the performance of your code. The 
    * - Memory
      - How much memory is allocated by a function relative to other stack traces
 
-You can group stack frames and turn them into the root frame by clicking the tile button that appears after expanding a stack frame. Click the button again to restore the view. You can also click the :guilabel:`Total` frame at any time to go back. The following animation shows how to group and ungroup stack frames:
+You can group stack frames and turn them into the root frame by selecting the tile button that appears after expanding a stack frame. Select the button again to restore the view. You can also select the :guilabel:`Total` frame at any time to go back. The following animation shows how to group and ungroup stack frames:
 
 .. image:: /_images/apm/profiling/group-frames.gif
    :alt: Grouping and ungrouping stack frames.
@@ -73,7 +73,7 @@ Frame table
 
 In the AlwaysOn Profiling table, :guilabel:`Count` shows how many times a line appeared in stack traces, while :guilabel:`Self time` expresses the time spent executing the function, minus the time spent calling other functions. A high self time value can also indicate performance issues. In some cases it might mean the thread is idle and doesn't consume resources.
 
-When you click a frame, an information panel appears with the amount of call stacks where the code is present. Click :guilabel:`Show thread info` to see which threads contributed call stacks. The following image shows the frame information panel with a list of threads:
+When you select a frame, an information panel appears with the amount of call stacks where the code is present. Select :guilabel:`Show thread info` to see which threads contributed call stacks. The following image shows the frame information panel with a list of threads:
 
 .. image:: /_images/apm/profiling/profiling-thread-info.png
    :alt: Information panel on a highlighted thread.

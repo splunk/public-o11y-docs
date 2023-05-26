@@ -140,7 +140,7 @@ If you edited a :ref:`plot name <plot-name>` or specified :ref:`display units <p
 ..
   ref broken for now bc page that includes the label is also in the process of being migrated. resolve once both pages are merged to trangl-POR-7413-migrate-custom-content.
 
-As you hover over dimensions on the :strong:`Data Table` tab, an :strong:`Actions menu` icon displays. Menu options let you add a filter to the chart's :strong:`Overrides` bar based on the value of the dimension. For more information, see :ref:`filter-from-data-table` and :ref:`navigate-with-data-links`.
+As you hover over dimensions on the :strong:`Data Table` tab, an :strong:`Actions menu` (|more|) icon displays. Menu options let you add a filter to the chart's :strong:`Overrides` bar based on the value of the dimension. For more information, see :ref:`filter-from-data-table` and :ref:`navigate-with-data-links`.
 
 
 View the Events tab

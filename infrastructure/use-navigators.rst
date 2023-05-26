@@ -162,7 +162,7 @@ For example, if you select :guilabel:`CPU Utilization`, colors range from green 
 
 - Black squares indicate instances considered "dead" by Infrastructure Monitoring because they do not emit values for a specified period of time.
 
-  You can specify settings related to these non-emitting instances by selecting :guilabel:`Navigator Settings` from the Actions menu. When the instances begin emitting values again, the squares are recolored accordingly.
+  You can specify settings related to these non-emitting instances by selecting :guilabel:`Navigator Settings` from the Actions menu (|more|). When the instances begin emitting values again, the squares are recolored accordingly.
 
 
 .. _group-by:

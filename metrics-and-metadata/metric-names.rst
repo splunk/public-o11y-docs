@@ -128,7 +128,7 @@ Dimension names have the following requirements:
 
 * UTF-8 string, maximum length of 128 characters (512 bytes).
 * Dimension values cab have a maximum length of 256 characters.
-* Must start with an uppercase or lowercase letter. The rest of the name can contain letters, numbers, underscores (_) and hyphens (-).
+* Must start with an uppercase or lowercase letter. The rest of the name can contain letters, numbers, underscores (_) and hyphens (-), and periods (.).
 * Must not start with the underscore character (_).
 * Must not start with the prefix :code:`sf_`, except for dimensions defined by Observability Cloud such as :code:`sf_hires`.
 * Must not start with the prefix :code:`aws_`, :code:`gcp_`, or :code:`azure_`.

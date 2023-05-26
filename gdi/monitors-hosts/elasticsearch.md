@@ -1,6 +1,6 @@
 (elasticsearch)=
 
-# Elasticsearch
+# Elasticsearch stats
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the ElasticSearch monitor. See benefits, install, configuration, and metrics">
 
@@ -176,7 +176,7 @@ monitors:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/elasticsearch/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/elasticsearch/stats/metadata.yaml"></div>
 
 ### Notes
 

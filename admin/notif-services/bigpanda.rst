@@ -13,11 +13,11 @@ To send Observability Cloud alert notifications to BigPanda, complete the follow
 
 * :ref:`bigpanda1`
 
-  You must be a BigPanda administrator to perform this task.
+  You must be a BigPanda administrator to complete this task.
 
 * :ref:`bigpanda2`
 
-  You must be an Observability Cloud administrator to perform this task.
+  You must be an Observability Cloud administrator to complete this task.
 
 * :ref:`bigpanda3`
 
@@ -27,16 +27,16 @@ To send Observability Cloud alert notifications to BigPanda, complete the follow
 Step 1: Create an Observability Cloud integration in BigPanda
 =================================================================================
 
-You must be a BigPanda administrator to perform this task.
+You must be a BigPanda administrator to complete this task.
 
 To create an Observability Cloud integration in BigPanda:
 
 #. Log in to BigPanda.
-#. Access the Integrations page and click :strong:`New Integration`.
-#. Hover over the :strong:`ALERTS REST API` tile and click :strong:`Integrate`.
-#. Enter a descriptive name for the integration and click :strong:`Generate App Key`.
+#. Access the Integrations page and select :strong:`New Integration`.
+#. Hover over the :strong:`ALERTS REST API` tile and select :strong:`Integrate`.
+#. Enter a descriptive name for the integration and select :strong:`Generate App Key`.
 #. The app key displays. Copy the app key for use in :ref:`bigpanda2`.
-#. Click :strong:`ALERTS REST API`. Copy the bearer token for use in :ref:`bigpanda2`.
+#. Select :strong:`ALERTS REST API`. Copy the bearer token for use in :ref:`bigpanda2`.
 
 
 .. _bigpanda2:
@@ -44,21 +44,28 @@ To create an Observability Cloud integration in BigPanda:
 Step 2: Create a BigPanda integration in Observability Cloud
 =================================================================================
 
-You must be an Observability Cloud administrator to perform this task.
+You must be an Observability Cloud administrator to complete this task.
 
 To create a BigPanda integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`BigPanda`, and select it.
-#. Click :strong:`New Integration` to display the configuration options.
+#. Open the :new-page:`BigPanda guided setup <https://login.signalfx.com/#/integrations/bigpanda?search_pattern=BigPanda&category=all>`. Optionally, you can navigate to the guided setup on your own:
+
+   #. In the left navigation menu, select :menuselection:`Data Management`.
+
+   #. Select :guilabel:`Add Integration`.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`BigPanda`, and select it.
+
+   #. Select :strong:`New Integration` to display the configuration options.
+
 #. By default, the name of the integration is :strong:`BigPanda`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`App Key` field, enter the app key you copied from BigPanda in :ref:`bigpanda1`.
 #. In the :strong:`Token` field, enter the token you copied from BigPanda in :ref:`bigpanda1`.
 #. :strong:`Save`.
-#. If Observability Cloud is able to validate the BigPanda app key and token, a :strong:`Validated!` success message displays. If you get an error, make sure that the app key and token values you entered match the values displayed in BigPanda in :ref:`bigpanda1`.
+#. If Splunk Observability Cloud can validate the BigPanda app key and token, a :strong:`Validated!` success message displays. If you get an error, make sure that the app key and token values you entered match the values displayed in BigPanda in :ref:`bigpanda1`.
 
 
 .. _bigpanda3:
@@ -75,13 +82,13 @@ To add a BigPanda integration as a detector alert recipient in Observability Clo
 
     For more information about working with detectors, see :ref:`create-detectors` and :ref:`subscribe`.
 
-#. In the :strong:`Alert recipients` step, click :strong:`Add Recipient`.
+#. In the :strong:`Alert recipients` step, select :strong:`Add Recipient`.
 
 #. Select :strong:`BigPanda` and then select the name of the BigPanda integration you want to use to send alert notifications. This is the integration name you created in :ref:`bigpanda2`.
 
 #. Activate and save the detector.
 
-Observability Cloud will send an alert notification to BigPanda when an alert is triggered by the detector and when the alert clears.
+Splunk Observability Cloud sends an alert notification to BigPanda when the detector triggers an alert and when the alert clears.
 
 In addition to sending a subject, description, and other information to BigPanda, the integration maps certain pieces of Observability Cloud detector information to corresponding BigPanda properties as described in the following table.
 
@@ -97,7 +104,7 @@ In addition to sending a subject, description, and other information to BigPanda
    * - Alert severity is Major, Minor, Warning, or Informational
      - status: Warning
 
-   * - Alert is cleared or manually resolved, or detector is stopped
+   * - Alert clears or manually resolved, or detector stops
      - status: OK
 
    * - Detector rule name
@@ -109,7 +116,7 @@ In addition to sending a subject, description, and other information to BigPanda
    * - Metric has a dimension named ``host``
      - host: Value of the ``host`` dimension
 
-   * - Metric has any other dimension(s)
+   * - Metric has any other dimension
      - Custom properties, each named ``sfx_<dimension-name>``: Value of the dimension.
 
 If there are any name collisions between Observability Cloud dimensions and BigPanda ``status`` or ``check`` properties, Observability Cloud creates a new custom property in BigPanda. For example, if there is an Observability Cloud dimension named ``status``, Observability Cloud creates a custom property named ``sfx_status`` and stores the value of the ``status`` dimension there.

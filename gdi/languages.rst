@@ -14,8 +14,8 @@ Configure application receivers for languages
    monitors-languages/asp-dot-net
    monitors-languages/expvar
    monitors-languages/genericjmx
-   java-monitor/java-monitor
-   jmx/jmx
+   monitors-languages/java-monitor
+   monitors-languages/jmx
    monitors-languages/microsoft-dotnet
 
 These application receivers gather metrics from their associated language-related applications and the hosts the applications are running on.

@@ -34,7 +34,7 @@ Because Sasha has instrumented the game using the Splunk Java agent with AlwaysO
 Explore slow spans and their stack traces
 ======================================================
 
-Eager to understand what might be causing the high load, Sasha opens Splunk APM, selects the Birdlympics environment, and clicks :guilabel:`Traces`. He filters the available traces so that the minimum duration is one second. Almost all results include the ``stats/races/fastest`` operation:
+Eager to understand what might be causing the high load, Sasha opens Splunk APM, selects the Birdlympics environment, and selects :guilabel:`Traces`. He filters the available traces so that the minimum duration is one second. Almost all results include the ``stats/races/fastest`` operation:
 
 ..  image:: /_images/apm/profiling/traces.png
     :alt: The list of traces from the Birdlympics application, filtered to only show those with a duration of 1 second or higher.
@@ -54,7 +54,7 @@ Sasha identifies some classes that connect to the database. The :guilabel:`Span 
 Browse the aggregated data using the flame graph
 ======================================================
 
-The stack trace puts Sasha on the right track, but more evidence would help to confirm what needs to be optimized. From the span view, he clicks :guilabel:`View in AlwaysOn Profiler`. Sasha filters the view so that the flame graph highlights only the application code, and he proceeds to scroll down to analyze the stacks:
+The stack trace puts Sasha on the right track, but more evidence would help to confirm what needs to be optimized. From the span view, he selects :guilabel:`View in AlwaysOn Profiler`. Sasha filters the view so that the flame graph highlights only the application code, and he proceeds to scroll down to analyze the stacks:
 
 ..  image:: /_images/apm/profiling/filter-narrow-down.gif
     :alt: Filtering the flame graph results and zooming in.
