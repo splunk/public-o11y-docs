@@ -42,7 +42,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/kafka-producer
    windows/windows-iis
    nginx/nginx
-   monitors-hosts/collectd-php-fpm
+   monitors-hosts/php-fpm
    procstat/procstat
    solr/solr
    supervisor/supervisor
