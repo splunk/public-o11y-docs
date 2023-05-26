@@ -235,7 +235,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Scenarios <get-started/use-case-landing>
+   Scenarios <get-started/scenario-landing>
 
 .. toctree::
    :maxdepth:   3
