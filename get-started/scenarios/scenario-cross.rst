@@ -12,8 +12,8 @@ Splunk Observability Cloud global scenarios
     :maxdepth: 3
     :hidden:
 
-    End-to-end scenario <use-case>
-    Collector scenario <use-case-collector>
+    End-to-end scenario <scenario>
+    Collector scenario <scenario-collector>
 
 Learn more about the Splunk Observability Cloud platform with the following cross-product scenarios:
 
