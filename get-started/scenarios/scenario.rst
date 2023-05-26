@@ -1,4 +1,4 @@
-.. _get-started-use-case:
+.. _get-started-scenario:
 
 ******************************************************************************************************
 Scenario: Kai troubleshoots an issue from the browser to the back end using Splunk Observability Cloud

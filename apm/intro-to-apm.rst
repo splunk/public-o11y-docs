@@ -25,7 +25,7 @@ If you have already instrumented your applications but are not seeing your data 
 
 For information about Splunk APM use cases, see :ref:`apm-use-cases-intro`.
 
-To see an example of using Splunk Observability Cloud components together, see :ref:`get-started-use-case`.
+To see an example of using Splunk Observability Cloud components together, see :ref:`get-started-scenario`.
 
 .. _wcidw-apm:
 

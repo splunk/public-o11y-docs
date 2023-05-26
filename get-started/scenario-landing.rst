@@ -11,7 +11,7 @@ Splunk Observability Cloud scenarios
     :maxdepth: 3
     :hidden:
 
-    use-cases/use-case-cross
+    use-cases/scenario-cross
 
 This is the collection of scenarios available for Splunk Observability Cloud. 
 
@@ -25,7 +25,7 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`Splunk Observability Cloud <get-started-o11y>`    
     - :ref:`scenario-security`
   * - :ref:`OpenTelemetry <otel-intro>`
-    - :ref:`otel-collector-use-case`
+    - :ref:`otel-collector-scenario`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`auto-instrumentation-java-operator`     
   * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`

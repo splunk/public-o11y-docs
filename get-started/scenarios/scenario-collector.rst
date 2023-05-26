@@ -1,4 +1,4 @@
-.. _otel-collector-use-case:
+.. _otel-collector-scenario:
 
 *****************************************************************************************************
 Scenario: Kai monitors infrastructure and apps in a cloud environment using the Splunk OTel Collector
