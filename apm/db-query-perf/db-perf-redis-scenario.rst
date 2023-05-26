@@ -1,4 +1,4 @@
-.. _redis-use-case:
+.. _redis-scenario:
 
 Scenario: Skyler investigates Redis performance issues using Database Query Performance
 *****************************************************************************************

@@ -1,4 +1,4 @@
-.. _profiling-use-case-landingpage:
+.. _profiling-scenario-landingpage:
 
 ************************************************************************************
 Scenarios for monitoring applications and services using Splunk AlwaysOn Profiling 
@@ -12,8 +12,8 @@ The following scenarios feature examples from Buttercup Games, a fictitious gami
 .. toctree::
    :hidden:
 
-   profiling-use-case
-   memory-profiling-use-case
+   profiling-scenario
+   memory-profiling-scenario
 
-* :ref:`profiling-use-case`
-* :ref:`memory-profiling-use-case`
+* :ref:`profiling-scenario`
+* :ref:`memory-profiling-scenario`

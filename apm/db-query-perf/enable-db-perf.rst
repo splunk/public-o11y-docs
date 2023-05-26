@@ -44,7 +44,7 @@ Learn more
 See the following links for more information about Database Query Performance: 
 
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.
-* For a use case focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-use-case`. 
-* For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
+* For a use case focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-scenario`. 
+* For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-scenario`.
 * To troubleshoot issues with Database Query Performance, see :ref:`db-perf-troubleshooting`. 
 * For reference material about Database Query Performance, see :ref:`db-perf-reference`.

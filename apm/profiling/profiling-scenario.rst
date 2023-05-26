@@ -1,4 +1,4 @@
-.. _profiling-use-case:
+.. _profiling-scenario:
 
 Scenario: Sasha finds performance issues using AlwaysOn Profiling
 *******************************************************************
@@ -90,7 +90,7 @@ Summary
 
 By using a combination of Splunk Infrastructure Monitoring, Splunk APM, and AlwaysOn Profiling, Sasha managed to quickly identify and fix two major performance issues in the Birdlympics game, allowing the marketing campaign to continue while avoiding the need to scale up resources.
 
-See how Sasha uses AlwaysOn Profiling to identify memory issues in :ref:`memory-profiling-use-case`.
+See how Sasha uses AlwaysOn Profiling to identify memory issues in :ref:`memory-profiling-scenario`.
 
 Learn more
 --------------------

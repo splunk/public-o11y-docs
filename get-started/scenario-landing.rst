@@ -59,13 +59,13 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`apm-scenario-endpoint-performance` 
   * - :ref:`APM database query performance <db-query-performance>`
-    - :ref:`db-perf-use-case` 
+    - :ref:`db-perf-scenario` 
   * - :ref:`APM database query performance <db-query-performance>`
-    - :ref:`redis-use-case`
+    - :ref:`redis-scenario`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>`
     - :ref:`profiling-use-case`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
-    - :ref:`memory-profiling-use-case`
+    - :ref:`memory-profiling-scenario`
   * - :ref:`Incident Intelligence scheduling <ii-use-cases-schedules>`
     - :ref:`ii-use-case-business-hours`
   * - :ref:`Incident Intelligence scheduling <ii-use-cases-schedules>`

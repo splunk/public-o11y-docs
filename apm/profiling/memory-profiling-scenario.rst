@@ -1,4 +1,4 @@
-.. _memory-profiling-use-case:
+.. _memory-profiling-scenario:
 
 Scenario: Sasha analyzes memory usage using AlwaysOn Profiling
 ****************************************************************
@@ -6,7 +6,7 @@ Scenario: Sasha analyzes memory usage using AlwaysOn Profiling
 .. meta:: 
    :description: Learn how you can use AlwaysOn Profiling in Splunk APM to analyze memory usage in your applications, and pin down the causes of memory leaks and other issues.
 
-Sasha, the lead developer at Buttercup Games, is working on a new release of Birdlympics. Thanks to AlwaysOn Profiling, Sasha already managed to optimize the code and eliminate CPU consumption issues. See :ref:`profiling-use-case`.
+Sasha, the lead developer at Buttercup Games, is working on a new release of Birdlympics. Thanks to AlwaysOn Profiling, Sasha already managed to optimize the code and eliminate CPU consumption issues. See :ref:`profiling-scenario`.
 
 Before launching a new version of the game, Sasha decides to also analyze memory usage, which has proven problematic after they introduced new levels. The site reliability engineers on the team have complained about odd increases in memory consumption across the infrastructure.
 

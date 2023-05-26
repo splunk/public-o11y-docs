@@ -1,4 +1,4 @@
-.. _db-perf-use-case:
+.. _db-perf-scenario:
 
 Scenario: Jax identifies slow database queries using Database Query Performance
 *********************************************************************************

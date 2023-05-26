@@ -40,7 +40,7 @@ Site reliability engineers, service owners, engineering executives, and performa
 - :ref:`troubleshoot-business-workflows`
 - :ref:`specific-trace`
 - :ref:`apm-scenario-trace-analyzer`
-- :ref:`profiling-use-case`
+- :ref:`profiling-scenario`
 
 .. raw:: html
 
