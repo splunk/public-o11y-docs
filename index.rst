@@ -749,7 +749,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   admin/use-case-org-security
+   admin/scenario-org-security
 
 .. toctree::
    :hidden:
