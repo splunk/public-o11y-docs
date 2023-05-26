@@ -50,7 +50,7 @@ The following example shows you how to configure a pipeline in the ``agent-confi
        token: "${SPLUNK_ACCESS_TOKEN}"
        endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v1/log"
      logging/info:
-       loglevel: info
+       verbosity: basic
 
    service:
      pipelines:
