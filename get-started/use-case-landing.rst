@@ -1,11 +1,11 @@
 .. _use-case-landing:
 
 ******************************************************************************************************
-Splunk Observability Cloud use cases
+Splunk Observability Cloud scenarios
 ******************************************************************************************************
 
 .. meta::
-  :description: Collection of use cases available for Splunk Observability Cloud.
+  :description: Collection of scenarios available for Splunk Observability Cloud.
 
 .. toctree::
     :maxdepth: 3
@@ -13,7 +13,7 @@ Splunk Observability Cloud use cases
 
     use-cases/use-case-cross
 
-This is the collection of use cases available for Splunk Observability Cloud. 
+This is the collection of scenarios available for Splunk Observability Cloud. 
 
 .. list-table::
   :header-rows: 1
@@ -21,7 +21,7 @@ This is the collection of use cases available for Splunk Observability Cloud.
   :widths: 25, 75
 
   * - :strong:`Category`
-    - :strong:`Use case`
+    - :strong:`Scenario`
   * - :ref:`Splunk Observability Cloud <get-started-o11y>`    
     - :ref:`use-case-security`
   * - :ref:`OpenTelemetry <otel-intro>`
@@ -66,11 +66,11 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`profiling-use-case`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
     - :ref:`memory-profiling-use-case`
-  * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
+  * - :ref:`ii-use-cases-schedules`
     - :ref:`ii-use-case-business-hours`
-  * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
+  * - :ref:`ii-use-cases-schedules`
     - :ref:`ii-use-case-week-by-week`
-  * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
+  * - :ref:`ii-use-cases-schedules`
     - :ref:`ii-use-case-day-by-day`
   * - Infrastructure Monitoring
     - :ref:`troubleshoot-k8s-nav-use-case`
