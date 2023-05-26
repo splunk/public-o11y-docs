@@ -1,5 +1,5 @@
 
-.. _use-case-security:
+.. _scenario-security:
 
 *********************************************************************************************************
 Scenario: Wei maintains a secure organization with many teams and users using Splunk Observability Cloud

@@ -1,4 +1,4 @@
-.. _use-case-landing:
+.. _scenario-landing:
 
 ******************************************************************************************************
 Splunk Observability Cloud scenarios
@@ -23,7 +23,7 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :strong:`Category`
     - :strong:`Scenario`
   * - :ref:`Splunk Observability Cloud <get-started-o11y>`    
-    - :ref:`use-case-security`
+    - :ref:`scenario-security`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`otel-collector-use-case`
   * - :ref:`OpenTelemetry <otel-intro>`
