@@ -11,7 +11,8 @@ permissions:
 
 jobs:
   repo-sync:
-    name: Repo Sync
+    name: Synchronize repositories
+    if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
