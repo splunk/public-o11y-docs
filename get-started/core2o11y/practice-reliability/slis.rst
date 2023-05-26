@@ -71,7 +71,7 @@ Splunk RUM shows SLIs and SLOs from the perspective of what your users experienc
     :width: 100%
     :alt: This image shows a RUM dashboard displaying a count of requests and errors by URL name, by HTTP method, and by HTTP status code. 
     
-To learn more about what you can do with RUM, see :ref:`get-started-rum`. The :ref:`scenario-landingpage` has multiple examples of how you can use RUM. 
+To learn more about what you can do with RUM, see :ref:`get-started-rum`. The :ref:`use-case-landingpage` has multiple examples of how you can use RUM. 
 
 
 Splunk Synthetic Monitoring
