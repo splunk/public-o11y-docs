@@ -1,7 +1,7 @@
-.. _troubleshoot-business-workflows:accelerates
+.. _troubleshoot-business-workflows:
 
 Scenario: Deepu accelerates troubleshooting using Business Workflows on Tag Spotlight
-********************************************************************************
+***************************************************************************************
 
 .. meta::
     :description: This Splunk APM scenario describes how to use APM Tag Spotlight of Business Workflows to accelerate troubleshooting.
