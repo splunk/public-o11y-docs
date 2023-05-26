@@ -66,7 +66,7 @@ Kai has created a new AutoDetect detector that will alert them whenever the numb
 Summary
 =====================
 
-In this scenario , Kai set up and subscribed to an AutoDetect detector that reported on system limits for Buttercup Games. Kai also learned how to find, disable, and customize the AutoDetect detector.
+In this scenario, Kai set up and subscribed to an AutoDetect detector that reported on system limits for Buttercup Games. Kai also learned how to find, disable, and customize the AutoDetect detector.
 
 Learn more
 =========================================

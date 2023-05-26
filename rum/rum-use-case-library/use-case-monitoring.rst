@@ -84,7 +84,7 @@ In Tag Spotlight, Kai found that something is causing the loading speed of the w
 Summary
 ==============
 
-In this scenario , Kai identified problems on the Buttercup Industries website performance by doing the following:
+In this scenario, Kai identified problems on the Buttercup Industries website performance by doing the following:
 
 * Monitoring the Web Vitals in the Application Summary Dashboard and identifying that LCP was really slow. 
 
