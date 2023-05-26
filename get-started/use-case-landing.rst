@@ -74,16 +74,16 @@ This is the collection of use cases available for Splunk Observability Cloud.
     - :ref:`ii-use-case-day-by-day`
   * - Infrastructure Monitoring
     - :ref:`Troubleshoot server failure using the Kubernetes navigator <troubleshoot-k8s-nav-use-case>`
-  * - :ref:`Infrastructure Monitoring Network Explorer <network-explorer-use-cases>`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
     - :ref:`find-network-error`
-  * - :ref:`Infrastructure Monitoring Network Explorer <network-explorer-use-cases>`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
     - :ref:`cross-zone-traffic-cost`
-  * - :ref:`Infrastructure Monitoring Network Explorer <network-explorer-use-cases>`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
     - :ref:`examine-service-dependencies`
   * - IT Service Intelligence
-    - :new-page:`Scenario\: Group related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/4.16.0/EA/UseCaseGrpAlerts>`
+    - :new-page:`Scenario\: Group related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`
   * - IT Service Intelligence
-    - :new-page:`Scenario: Monitor business service degradation and identify the root cause <https://docs.splunk.com/Documentation/ITSI/4.17.0/SI/SIUseCase>`
+    - :new-page:`Scenario: Monitor business service degradation and identify the root cause <https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`
   * - :ref:`RUM <use-case-landingpage>`
     - :ref:`use-case-monitoring`
   * - :ref:`RUM <use-case-landingpage>`

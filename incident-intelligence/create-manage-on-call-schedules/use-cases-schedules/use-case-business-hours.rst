@@ -1,7 +1,7 @@
 .. _ii-use-case-business-hours:
 
 Scenario: Skyler creates business-hours and nights-and-weekend rotations for the web application service
-***************************************************************************************************
+**********************************************************************************************************
 
 .. meta::
    :description: Schedule scenario for creating business-hours and nights-and-weekends rotations in Incident Intelligence.
