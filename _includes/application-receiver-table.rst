@@ -94,11 +94,6 @@
      -
      -
 
-   * - :ref:`Collectd PHP FPM <collectd-php-fpm>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd uptime <collectd-uptime>`
      - :strong:`X`
      -
@@ -452,6 +447,11 @@
      - :strong:`X`
      -
      -  
+
+   * - :ref:`PHP FPM <collectd-php-fpm>`
+     - :strong:`X`
+     -
+     -
 
    * - :ref:`PostgreSQL <postgresql>`
      - :strong:`X`

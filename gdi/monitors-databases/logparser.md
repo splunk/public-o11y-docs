@@ -4,9 +4,9 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the telegraf/logparser plugin monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `telegraf/logparser` monitor type to tail log files.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/logparser` monitor type for the Smart Agent Receiver. This monitor type is based on the Telegraf logparser plugin. This monitor type tails log files. All metrics emitted from this monitor type have the plugin dimension set to `telegraf-logparser`.
+This integration is based on the Telegraf logparser plugin, and all emitted metrics have the plugin dimension set to `telegraf-logparser`.
 
 ## Benefits
 
@@ -22,6 +22,10 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides 
 
 ```{include} /_includes/configuration.md
 ```
+
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```yaml
 receivers:
@@ -84,7 +88,7 @@ The following table shows the configuration options for this monitor type:
 
 The Splunk Distribution of OpenTelemetry Collector does not do any built-in filtering of metrics coming out of this monitor type.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
