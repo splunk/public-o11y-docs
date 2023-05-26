@@ -66,11 +66,11 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`profiling-use-case`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
     - :ref:`memory-profiling-use-case`
-  * - :ref:`ii-use-cases-schedules`
+  * - :ref:`Incident Intelligence scheduling <ii-use-cases-schedules>`
     - :ref:`ii-use-case-business-hours`
-  * - :ref:`ii-use-cases-schedules`
+  * - :ref:`Incident Intelligence scheduling <ii-use-cases-schedules>`
     - :ref:`ii-use-case-week-by-week`
-  * - :ref:`ii-use-cases-schedules`
+  * - :ref:`Incident Intelligence scheduling <ii-use-cases-schedules>`
     - :ref:`ii-use-case-day-by-day`
   * - Infrastructure Monitoring
     - :ref:`troubleshoot-k8s-nav-use-case`
