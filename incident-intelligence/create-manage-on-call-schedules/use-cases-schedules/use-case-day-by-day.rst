@@ -1,10 +1,10 @@
 .. _ii-use-case-day-by-day:
 
-Use case: Create every-other-day coverage using the Day-by-day shift type
-***************************************************************************
+Scenario: Skyler creates every-other-day coverage using the Day-by-day shift type
+***********************************************************************************
 
 .. meta::
-   :description: Schedule use case for every-other-day coverage in Incident Intelligence.
+   :description: Schedule scenario for every-other-day coverage in Incident Intelligence.
 
 Skyler, the site reliability engineering (SRE) manager for Buttercup Games, needs to create an on-call schedule for the checkout service SREs. To cover the checkout service Monday through Sunday and have the SREs on call every other day, Skyler wants to create two rotations:
 
@@ -114,4 +114,4 @@ Skyler created the every-other-day coverage they need by creating a single sched
 
 * For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
 * For steps to create an incident policy, including steps for incident workflows, see :ref:`ii-create-configure-incident-policies`.
-* For a use case with a multi-shift schedule and primary and secondary coverage, see :ref:`ii-use-case-business-hours`.
+* For a scenario with a multi-shift schedule and primary and secondary coverage, see :ref:`ii-use-case-business-hours`.

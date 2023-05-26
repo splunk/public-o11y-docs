@@ -1,10 +1,10 @@
 .. _ii-use-case-business-hours:
 
-Use case: Create business-hours and nights-and-weekend rotations for the web application service
-***************************************************************************************************
+Scenario: Skyler creates business-hours and nights-and-weekend rotations for the web application service
+**********************************************************************************************************
 
 .. meta::
-   :description: Schedule use case for creating business-hours and nights-and-weekends rotations in Incident Intelligence.
+   :description: Schedule scenario for creating business-hours and nights-and-weekends rotations in Incident Intelligence.
 
 Skyler, the site reliability engineering (SRE) manager for Buttercup Games, needs to create an on-call schedule for the web application SREs with the following coverage needs:
 

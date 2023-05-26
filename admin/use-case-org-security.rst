@@ -2,16 +2,16 @@
 .. _use-case-security:
 
 *********************************************************************************************************
-Use case: Maintain a secure organization with many teams and users using Splunk Observability Cloud
+Scenario: Wei maintains a secure organization with many teams and users using Splunk Observability Cloud
 *********************************************************************************************************
 
 .. meta::
-   :description: Use case: Maintain a secure organization with many teams and users using Splunk Observability Cloud.
+   :description: Scenario: Wei maintains a secure organization with many teams and users using Splunk Observability Cloud.
 
 
 Buttercup Games, a fictitious game company, recently refactored its e-commerce site to go cloud native. The site uses microservices for the application architecture and containers for the underlying infrastructure.
 
-In this use case, you learn how Wei, a site reliability engineering (SRE) manager, performs the following tasks using Splunk Observability Cloud to keep their organization secure and minimize unintentional changes.
+In this scenario, you learn how Wei, a site reliability engineering (SRE) manager, performs the following tasks using Splunk Observability Cloud to keep their organization secure and minimize unintentional changes.
 
 Enhance team security with access restrictions and tokens
 ====================================================================================

@@ -1,10 +1,10 @@
 .. _historical-data:
 
-Use case: Analyze historical data to optimize system performance using the built-in dashboard
-*************************************************************************************************
+Scenario: Skyler analyzes historical data to optimize system performance using the built-in dashboard
+********************************************************************************************************
 
 .. meta::
-    :description: This Splunk APM use case describes how to use historical data to optimize system function.
+    :description: This Splunk APM scenario describes how to use historical data to optimize system function.
 
 Skyler, a performance engineer at Buttercup Games, wants to understand and analyze the end-to-end performance of microservices to optimize the system. 
 

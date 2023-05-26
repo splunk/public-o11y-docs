@@ -1,10 +1,10 @@
 .. _monitor-business-workflows:
 
-Use case: Monitor Business Workflows to measure business KPIs
+Scenario: Wei monitors Business Workflows to measure business KPIs
 **********************************************************************
 
 .. meta::
-    :description: This Splunk APM use case describes how to monitor Business Workflows using the dashboard.
+    :description: This Splunk APM scenario describes how to monitor Business Workflows using the dashboard.
 
 Wei, the director of site reliability engineering at Buttercup Games, wants to monitor Business Workflows to make sure their error rates are in the normal range. 
 

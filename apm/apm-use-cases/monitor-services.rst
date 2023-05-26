@@ -1,10 +1,10 @@
 .. _monitor-services:
 
-Use case: Monitor service performance using a built-in dashboard
-**********************************************************************
+Scenario: Deepu monitors service performance using a built-in dashboard
+************************************************************************
 
 .. meta::
-    :description: This Splunk APM use case describes how to monitor service performance using the APM dashboard.
+    :description: This Splunk APM scenario describes how to monitor service performance using the APM dashboard.
 
 Buttercup Games launches a Black Friday sales event. Deepu, the payment service owner, expects higher traffic on the website that might impact the payment service. In addition to setting Splunk APM detectors to alert for the atypical error rate and latency, Deepu uses the Splunk APM Service dashboard for monitoring. 
 

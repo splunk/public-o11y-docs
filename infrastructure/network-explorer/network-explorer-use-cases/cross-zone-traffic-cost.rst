@@ -2,13 +2,13 @@
 
 
 *************************************************************************************************
-Use case: Identify sources of high network transfer costs
+Scenario: Skyler identifies sources of high network transfer costs
 *************************************************************************************************
 
 .. meta::
-    :description: Cross zone traffic use case
+    :description: Cross zone traffic scenario
 
-The following use cases feature examples from Buttercup Games, a fictitious e-commerce company.
+The following scenario features examples from Buttercup Games, a fictitious e-commerce company.
 
 Skyler, a senior site reliability engineer (SRE) at Buttercup Games, gets a charge from the VP of Engineering to reduce the company's infrastructure costs. Over the past 3 months, infrastructure costs have been growing as a percentage of revenue. 
 

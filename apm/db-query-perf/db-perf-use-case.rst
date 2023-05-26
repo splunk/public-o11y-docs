@@ -1,13 +1,10 @@
 .. _db-perf-use-case:
 
-**************************************************************************
-Use case: Identify slow database queries using Database Query Performance
-**************************************************************************
-
-.. Metadata updated: 1/23/23
+Scenario: Jax identifies slow database queries using Database Query Performance
+*********************************************************************************
 
 .. meta::
-   :description: This Splunk APM use case describes a workflow that uses Database Query Performance to examine service latency and the performance of database queries.
+   :description: This Splunk APM scenario describes a workflow that uses Database Query Performance to examine service latency and the performance of database queries.
 
 Jax, a site reliability engineer, is in charge of identifying the root cause of service latency issues in their system. In this section, follow their workflow using Database Query Performance to examine the relationship between service latency and the performance of database queries in their system.
 
@@ -108,7 +105,7 @@ Jax notices that the span containing the database call is much longer than all o
 
 Armed with this knowledge, Jax contacts the DBA who supports this database and provides the exact text of the query that's causing problems. Jax asks them to investigate the source of this latency and optimize the database call to prevent further issues with service latency.
 
-To continue to investigate the wider impact of this latency issue, Jax could use Tag Spotlight to determine which database span tags and values are associated with the highest latency, and see which Business Workflows are affected by this issue. For an example use case of troubleshooting using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. 
+To continue to investigate the wider impact of this latency issue, Jax could use Tag Spotlight to determine which database span tags and values are associated with the highest latency, and see which Business Workflows are affected by this issue. For an example scenario for troubleshooting using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. 
 
 Learn more
 ============
