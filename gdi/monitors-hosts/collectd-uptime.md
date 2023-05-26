@@ -1,9 +1,8 @@
 (collectd-uptime)=
 
 # Collectd uptime
-<meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd Uptime monitor. See benefits, install, configuration, and metrics">
 
-## Description
+<meta name="Description" content="Use this Splunk Observability Cloud integration for the Collectd Uptime monitor. See benefits, install, configuration, and metrics">
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `collectd/uptime` monitor type for the Smart Agent Receiver.
 
