@@ -1,11 +1,10 @@
 (kubernetes-events)=
 
 # Kubernetes events
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Kubernetes events monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides the `kubernetes-events` monitor type. This monitor type listens for Kubernetes events by calling the Kubernetes API running on manager nodes, and sends Kubernetes events into Splunk Observability Cloud as Infrastructure Monitoring events through the OTel pipeline using the [Splunk Observability Cloud Smart Agent Receiver](https://github.com/signalfx/splunk-otel-collector/tree/main/internal/receiver/smartagentreceiver). 
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `kubernetes-events` monitor type to listen for Kubernetes events. The integration calls the Kubernetes API running on manager nodes, and sends Kubernetes events into Splunk Observability Cloud as Infrastructure Monitoring events through the OpenTelemetry pipeline.
 
 After it starts, the Kubernetes events monitor type sends all of the events that Kubernetes has that are still persisted, and any new events as they come in. The various agents decide which instance will lead and sends event. If ``alwaysClusterReporter`` is set to ``true``, every node emits the same data, and there is no additional querying of the manager node. 
 
@@ -61,10 +60,12 @@ service:
 
 ## Configuration
 
-### 1. Activate the monitor
-
 ```{include} /_includes/configuration.md
 ```
+
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -73,9 +74,7 @@ receivers:
    ... # Additional config
 ```
 
-### 2. Include the monitor in a pipeline
-
-Next, include the monitor type in an events pipeline in your configuration file. 
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 services:
@@ -84,9 +83,7 @@ services:
       - smartagent/kubernetes-events
 ```
 
-### 3. Select which events to send
-
-Configure which events to send. You can see the types of events happening in your cluster with the following command:
+Lastly, configure which events to send. You can see the types of events happening in your cluster with the following command:
 
 ```
 kubectl get events -o yaml --all-namespaces
@@ -99,14 +96,13 @@ From the output, combine **Reason** (Started, Created, Scheduled) and **Kind** (
 - Events are placed in the `whitelistedEvents` configuration option as a list of events you want to send. 
 - Event names will match the reason name.
 
-## Configuration settings
+### Configuration settings
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
 | `kubernetesAPI` | no | `object (see below)` | Configuration of the Kubernetes API client. |
 | `whitelistedEvents` | no | `list of objects (see below)` | A list of event types to send events for.  Only events matching these items will be sent. |
 | `alwaysClusterReporter` | no | `bool` | Whether to always send events from this agent instance or to do leader election to only send from one agent instance. **Default** is `false`. |
-
 
 The **nested** `kubernetesAPI` config object has the following fields:
 
@@ -138,7 +134,7 @@ receivers:
          involvedObjectKind: ReplicaSet
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

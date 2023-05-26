@@ -1,6 +1,6 @@
 (interface)=
 
-# Interface traffic
+# Interface traffic (deprecated)
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the interface monitor. See benefits, install, configuration, and metrics">
 
