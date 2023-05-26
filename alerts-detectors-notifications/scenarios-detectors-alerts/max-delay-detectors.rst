@@ -1,4 +1,4 @@
-.. _max-delay-detectors-use-case:
+.. _max-delay-detectors-scenario:
 
 ************************************************************************************
 Scenario: Kai sets a Max Delay for detectors to account for sudden changes in delay

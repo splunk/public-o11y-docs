@@ -28,13 +28,13 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`otel-collector-scenario`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`auto-instrumentation-java-operator`     
-  * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`
     - :ref:`monitor-server-latency`
-  * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`    
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`    
     - :ref:`monitor-autodetect`
-  * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`    
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`    
     - :ref:`find-detectors`
-  * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`     
+  * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`     
     - :ref:`troubleshoot-noisy-detectors`
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`service-map` 

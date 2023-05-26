@@ -31,7 +31,7 @@ Select any alert to see details and links to Observability Cloud components that
    :width: 100%
    :alt: This screenshot shows the detail view of an individual critical alert in Observability Cloud.
 
-See :ref:`use-cases-alerts-detectors` for examples of how you can use alerts to notify teams about increased server latency, high CPU usage, approaching system limits, and other conditions that negatively impact user experience.
+See :ref:`scenarios-alerts-detectors` for examples of how you can use alerts to notify teams about increased server latency, high CPU usage, approaching system limits, and other conditions that negatively impact user experience.
 
 Dashboards
 ===================================================================================

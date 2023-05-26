@@ -360,7 +360,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Alerts and detectors use case library TOGGLE <alerts-detectors-notifications/use-cases-detectors-alerts/use-cases-intro>
+   Alerts and detectors use case library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
 
 .. toctree::
    :maxdepth:   3

@@ -1,4 +1,4 @@
-.. _min-delay-detectors-use-case:
+.. _min-delay-detectors-scenario:
 
 ***********************************************************************
 Scenario: Kai sets a Min Delay for detectors to account for sparse data

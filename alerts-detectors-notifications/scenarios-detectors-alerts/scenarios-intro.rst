@@ -1,4 +1,4 @@
-.. _use-cases-alerts-detectors:
+.. _scenarios-alerts-detectors:
 
 ******************************************************************************************
 Scenarios for finding and resolving infrastructure problems using alerts and detectors
@@ -27,6 +27,6 @@ In the following scenarios, you learn how Kai, a site reliability engineer, uses
 - :ref:`monitor-autodetect`
 - :ref:`find-detectors`
 - :ref:`troubleshoot-noisy-detectors`
-- :ref:`min-delay-detectors-use-case`
-- :ref:`max-delay-detectors-use-case`
+- :ref:`min-delay-detectors-scenario`
+- :ref:`max-delay-detectors-scenario`
 
