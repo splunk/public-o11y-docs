@@ -83,7 +83,7 @@ Collect traces and spans to monitor your distributed applications with Splunk AP
 
 For more information, see :ref:`wcidw-apm`
 
-For information about how APM can be used to address real-life use cases, see :ref:`apm-use-cases-intro`.
+For information about how APM can be used to address real-life use cases, see :ref:`apm-scenarios-intro`.
 
 
 .. _welcome-rum:

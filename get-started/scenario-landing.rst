@@ -36,28 +36,28 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`find-detectors`
   * - :ref:`Alerts and detectors <scenarios-alerts-detectors>`     
     - :ref:`troubleshoot-noisy-detectors`
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`service-map` 
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`services-impact-business-workflows`
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`troubleshoot-tag-spotlight`
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`troubleshoot-business-workflows`
-  * - :ref:`APM <apm-use-cases-intro>`
-    - :ref:`apm-use-case-trace-analyzer`
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
+    - :ref:`apm-scenario-trace-analyzer`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`monitor-services`
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`configure-business-workflows`
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`monitor-business-workflows`
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`historical-data`
-  * - :ref:`APM <apm-use-cases-intro>`
+  * - :ref:`APM <apm-scenarios-intro>`
     - :ref:`custom-metricset`  
-  * - :ref:`APM <apm-use-cases-intro>`
-    - :ref:`apm-use-case-endpoint-performance` 
+  * - :ref:`APM <apm-scenarios-intro>`
+    - :ref:`apm-scenario-endpoint-performance` 
   * - :ref:`APM database query performance <db-query-performance>`
     - :ref:`db-perf-use-case` 
   * - :ref:`APM database query performance <db-query-performance>`

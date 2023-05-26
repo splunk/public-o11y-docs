@@ -1,4 +1,4 @@
-.. _apm-use-case-endpoint-performance:
+.. _apm-scenario-endpoint-performance:
 
 *******************************************************************************************************
 Scenario: Alex monitors service performance using endpoint performance
@@ -91,4 +91,4 @@ Learn more
 
 * For details about Tag Spotlight, see :ref:`apm-tag-spotlight`.
 * For a list of APM key concepts, see :ref:`apm-key-concepts`.
-* For more Splunk APM scenarios, see :ref:`apm-use-cases-intro`.
+* For more Splunk APM scenarios, see :ref:`apm-scenarios-intro`.

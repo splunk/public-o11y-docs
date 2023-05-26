@@ -23,7 +23,7 @@ To start using APM, see :ref:`Set up Splunk APM <apm>`.
 
 If you have already instrumented your applications but are not seeing your data coming into APM as you expect, see :ref:`Troubleshoot your instrumentation <instr-troubleshooting>`.
 
-For information about Splunk APM use cases, see :ref:`apm-use-cases-intro`.
+For information about Splunk APM use cases, see :ref:`apm-scenarios-intro`.
 
 To see an example of using Splunk Observability Cloud components together, see :ref:`get-started-scenario`.
 

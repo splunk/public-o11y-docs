@@ -1,4 +1,4 @@
-.. _apm-use-case-trace-analyzer:
+.. _apm-scenario-trace-analyzer:
 
 Scenario: Alex troubleshoots an issue to find the root cause using Trace Analyzer
 ************************************************************************************
@@ -66,4 +66,4 @@ Learn more
 
 - For more information on Trace Analyzer, see :ref:`trace-analyzer`.
 - For a list of APM key concepts, see :ref:`apm-key-concepts`.
-- For more Splunk APM scenarios, see :ref:`apm-use-cases-intro`.
+- For more Splunk APM scenarios, see :ref:`apm-scenarios-intro`.

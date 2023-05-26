@@ -444,7 +444,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Scenarios for troubleshooting errors and monitoring application performance using Splunk APM TOGGLE <apm/apm-use-cases/apm-use-cases-intro>
+   Scenarios for troubleshooting errors and monitoring application performance using Splunk APM TOGGLE <apm/apm-scenarios/apm-scenarios-intro>
 
 .. toctree::
    :maxdepth:   3

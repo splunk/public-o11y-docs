@@ -1,4 +1,4 @@
-.. _apm-use-cases-intro:
+.. _apm-scenarios-intro:
 
 *******************************************************************************************************
 Scenarios for troubleshooting errors and monitoring application performance using Splunk APM
@@ -36,10 +36,10 @@ Site reliability engineers, service owners, engineering executives, and performa
 - :ref:`service-map`
 - :ref:`services-impact-business-workflows`
 - :ref:`troubleshoot-tag-spotlight`
-- :ref:`apm-use-case-endpoint-performance`
+- :ref:`apm-scenario-endpoint-performance`
 - :ref:`troubleshoot-business-workflows`
 - :ref:`specific-trace`
-- :ref:`apm-use-case-trace-analyzer`
+- :ref:`apm-scenario-trace-analyzer`
 - :ref:`profiling-use-case`
 
 .. raw:: html

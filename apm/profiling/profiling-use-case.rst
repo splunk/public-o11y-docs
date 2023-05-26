@@ -97,5 +97,5 @@ Learn more
 
 - For more information on AlwaysOn Profiling and how to start using it, see :ref:`profiling-intro`.
 - For more information on the profiling flame graph, see :ref:`flamegraph-howto`.
-- For more Splunk APM scenarios, see :ref:`apm-use-cases-intro`.
+- For more Splunk APM scenarios, see :ref:`apm-scenarios-intro`.
 - For more information on monitoring hosts, see :ref:`infrastructure-hosts`.
