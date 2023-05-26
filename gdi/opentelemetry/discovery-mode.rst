@@ -14,7 +14,7 @@ Discover and configure metrics sources automatically
 Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
 a configuration based on the results. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, the Collector generates configuration you can modify and use.
 
-The advantage of using discovery mode is that you don't need to manually configure the OpenTelemetry Collector for the supported metric sources. This is helpful in environments when you deploy and activate host services dynamically, for example when scaling your infrastructure based on existing demand.
+The main advantage of using discovery mode is that you don't need to manually configure the OpenTelemetry Collector for the supported metric sources. This is helpful in environments when you deploy and activate host services dynamically, for example when scaling your infrastructure based on existing demand.
 
 .. note:: Discovery mode is available starting from version 0.72.0 and higher of the Splunk Distribution of the OpenTelemetry Collector.
 
@@ -57,29 +57,30 @@ To discover any active and supported metric sources, run the following command o
 
     bin/otelcol --discovery --dry-run
 
-The ``--dry-run`` option ensures that a configuration isn't applied to the Collector at runtime. The resulting sample configuration appears in the console as YAML. For example:
+The ``--dry-run`` option ensures that the resulting configuration isn't applied to the Collector at runtime. The sample configuration appears in the console as YAML instead. For example:
 
 .. code-block:: bash
 
-   Discovering for next 10s...
-   Discovery complete.
-   
-   # YAML configuration snippet follows
+   $ Discovering for next 10s...
+   Partially discovered "smartagent/postgresql" using "docker_observer" endpoint "5c9c80ba4319395c26255b6374f048ca973d3618fdd4b92a9ed601c7dddbff6a:5432": Please ensure your user credentials are correctly specified with `--set splunk.discovery.receivers.smartagent/postgresql.config.params::username="<username>"` and `--set splunk.discovery.receivers.smartagent/postgresql.config.params::password="<password>"` or `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_password="<password>"` environment variables. (evaluated "{\"error\":\"failed to determine total_time column name: pq: password authentication failed for user \\\"splunk.discovery.default\\\"\",\"host\":\"172.17.0.2\",\"kind\":\"receiver\",\"message\":\"could not monitor postgresql server: failed to determine total_time column name: pq: password authentication failed for user \\\"splunk.discovery.default\\\"\",\"monitorType\":\"postgresql\",\"port\":\"5432\"}")
 
-If discovery mode identifies issues, the Collector shows status messages for full and partial failures. Status messages include possible solutions that you can try.
+When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode couldn't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials.
 
-If you want to apply the configuration directly to the Collector, remove the ``--dry-run`` option.
+To fix most of the issues identified by discovery mode, add or edit the configuration settings suggested in the status messages. You can define the required settings in the following ways:
+
+- Use the ``--set`` option to specify settings to be used by discovery mode at runtime.
+- Set the environment variable for the setting.
+
+In both cases, discovery mode suggests which paramenters and environment variables you've to use to complete the missing configuration settings.
 
 .. note:: By default, the duration of the discovery process is 10 seconds, which you can increase by setting the ``SPLUNK_DISCOVERY_DURATION`` environment variable.
 
 Customize discovery settings
 ==========================================
 
-By default, discovery mode reads the built-in configuration provided by the Collector executable.
+By default, discovery mode reads the built-in configuration provided by the Collector executable. You can provide your own configuration to modify settings or adjust the existing configuration in case of a partial discovery status.
 
-You can provide your own discovery configuration to modify settings or adjust the existing configuration in case of a partial discovery status.
-
-To create custom configurations, follow these steps:
+To create custom discovery configurations, follow these steps:
 
 #. Navigate to the ``config.d`` folder in ``/etc/otel/collector/config.d`` on Linux.
 #. Create a ``<name>.discovery.yaml`` file and place it inside a subdirectory of ``config.d``, for example ``observers`` or ``receivers`` where ``<name>`` is the name of the component you want to use.
