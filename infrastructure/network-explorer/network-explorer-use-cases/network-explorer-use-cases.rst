@@ -3,7 +3,7 @@
 .. _network-explorer-use-cases:
 
 *******************************************************************************************************
-Scenarios: Troubleshoot network errors and optimize network performance using Network Explorer
+Scenarios for troubleshooting network errors and optimizing network performance using Network Explorer
 *******************************************************************************************************
 
 .. meta::

@@ -1,7 +1,7 @@
 .. _apm-use-cases-intro:
 
 *******************************************************************************************************
-Scenarios: Troubleshoot errors and monitor application performance using Splunk APM
+Scenarios for troubleshooting errors and monitoring application performance using Splunk APM
 *******************************************************************************************************
 
 .. meta::

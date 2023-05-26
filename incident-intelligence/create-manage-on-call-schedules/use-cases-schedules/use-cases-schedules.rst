@@ -1,6 +1,6 @@
 .. _ii-use-cases-schedules:
 
-Scenarios: Schedules in Incident Intelligence
+Scenarios for notifying the correct responder using schedules in Incident Intelligence
 *********************************************************************************************
 
 .. meta::

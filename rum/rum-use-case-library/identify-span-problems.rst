@@ -1,19 +1,19 @@
 .. _rum-identify-span-problems:
 
 *****************************************************************
-Identify errors in browser spans 
+Scecnario: Kai identifies errors in browser spans 
 *****************************************************************
 
 .. meta::
   :description: Identify problems in your spans
 
 
-The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company.
+The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
-About this use case 
+About this scenario
 ================================
 
-Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Browser to monitor errors. In this use case, you can learn about the types of errors Kai looks for in their data at Buttercup Industries. 
+Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Browser to monitor errors. In this scenario, you can learn about the types of errors Kai looks for in their data at Buttercup Industries. 
 
 Errors in Splunk RUM  
 ========================================
@@ -118,7 +118,7 @@ This shows an example span for the fictitious "my-app" with a 404 error.
 Summary
 =================================
 
-This use case walked through the definitions of error types in Splunk RUM for Browser. To learn more about how you can optimize your experience with Splunk Observability Cloud, see:  
+This scenario walked through the definitions of error types in Splunk RUM for Browser. To learn more about how you can optimize your experience with Splunk Observability Cloud, see:  
 
 .. list-table::
    :header-rows: 1

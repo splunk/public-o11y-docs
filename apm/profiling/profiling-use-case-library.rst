@@ -1,8 +1,8 @@
 .. _profiling-use-case-landingpage:
 
-******************************************
-Splunk AlwaysOn Profiling scenario library
-******************************************
+************************************************************************************
+Scenarios for monitoring applications and services using Splunk AlwaysOn Profiling 
+************************************************************************************
 
 .. meta:: 
    :description: Sample scenarios for AlwaysOn Profiling for Splunk APM.

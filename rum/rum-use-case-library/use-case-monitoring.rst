@@ -1,13 +1,13 @@
 .. _use-case-monitoring:
 
-***********************************************************************
-Identify performance bottlenecks with Splunk RUM for Browser
-***********************************************************************
+******************************************************************************
+Scenario: Kai identifies performance bottlenecks with Splunk RUM for Browser
+******************************************************************************
 
-The following use case features Buttercup Industries, a fictitious e-commerce company.
+The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
 
-About this use case 
+About this scenario
 ================================
 
 Kai is a site reliability engineer at Buttercup Industries e-commerce company. One of Kai’s main concerns is monitoring the performance of the Buttercup Industries website. When sites are sluggish, users get frustrated and are more likely to abandon a slow site in favor of a faster competitor. In this example, Kai uses Splunk RUM for Browser and Splunk Observability Cloud to identify performance bottlenecks and monitor Web Vitals so that they can troubleshoot customer facing issues on the Buttercup Industries website. 
@@ -84,9 +84,9 @@ In Tag Spotlight, Kai found that something is causing the loading speed of the w
 Summary
 ==============
 
-In this use case, Kai identified problems on the Buttercup Industries website performance by doing the following:
+In this scenario , Kai identified problems on the Buttercup Industries website performance by doing the following:
 
-* Monitoring the Web Vitals in the Application Summary Dashboard and identifying that that LCP was really slow. 
+* Monitoring the Web Vitals in the Application Summary Dashboard and identifying that LCP was really slow. 
 
 * Investigated the data in Tag Spotlight and discovered there was a loading problem. 
 
