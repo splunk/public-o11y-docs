@@ -11,7 +11,7 @@ Splunk Observability Cloud use cases
     :maxdepth: 3
     :hidden:
 
-    Global use cases <use-cases/use-case-cross>
+    use-cases/use-case-cross
 
 This is the collection of use cases available for Splunk Observability Cloud. 
 
