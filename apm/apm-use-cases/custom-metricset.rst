@@ -1,11 +1,11 @@
 
 .. _custom-metricset:
 
-Use case: Monitor detector service latency for a group of customers
-*********************************************************************
+Scenario: Kai monitors detector service latency for a group of customers
+**************************************************************************
 
 .. meta::
-    :description: This Splunk APM use case describes how to monitor for service latency.
+    :description: This Splunk APM scenario describes how to monitor for service latency.
 
 Kai, a site reliability engineer at the fictitious Buttercup Games, wants to monitor a latency issue affecting a critical checkout workflow for the cart service and ``/getcart`` endpoint for a specific set of customers who most frequently have problems with the service. 
 

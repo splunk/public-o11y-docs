@@ -1,11 +1,11 @@
 .. _specific-trace:
 
 ************************************************************************************
-Use case: Troubleshoot an edge case by searching for a specific trace
+Scenario: Kai troubleshoots an edge case by searching for a specific trace
 ************************************************************************************
 
 .. meta::
-    :description: This Splunk APM use case describes how to filter for specific trace in APM Trace View for troubleshooting.
+    :description: This Splunk APM scenario describes how to filter for specific trace in APM Trace View for troubleshooting.
 
 Kai, the site reliability engineer at Buttercup Games, receives a ticket from a customer who reports they are getting an "Invalid request" error when redeeming a coupon on the Buttercup Games website. 
 

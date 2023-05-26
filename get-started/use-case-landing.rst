@@ -1,19 +1,19 @@
 .. _use-case-landing:
 
 ******************************************************************************************************
-Splunk Observability Cloud use cases
+Splunk Observability Cloud scenarios
 ******************************************************************************************************
 
 .. meta::
-  :description: Collection of use cases available for Splunk Observability Cloud.
+  :description: Collection of scenarios available for Splunk Observability Cloud.
 
 .. toctree::
     :maxdepth: 3
     :hidden:
 
-    Global use cases <use-cases/use-case-cross>
+    use-cases/use-case-cross
 
-This is the collection of use cases available for Splunk Observability Cloud. 
+This is the collection of scenarios available for Splunk Observability Cloud. 
 
 .. list-table::
   :header-rows: 1
@@ -21,11 +21,11 @@ This is the collection of use cases available for Splunk Observability Cloud.
   :widths: 25, 75
 
   * - :strong:`Category`
-    - :strong:`Use case`
+    - :strong:`Scenario`
   * - :ref:`Splunk Observability Cloud <get-started-o11y>`    
-    - :ref:`Maintain a secure organization with many teams and users using Splunk Observability Cloud <use-case-security>`
+    - :ref:`use-case-security`
   * - :ref:`OpenTelemetry <otel-intro>`
-    - :ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-use-case>`
+    - :ref:`otel-collector-use-case`
   * - :ref:`OpenTelemetry <otel-intro>`
     - :ref:`auto-instrumentation-java-operator`     
   * - :ref:`Alerts and detectors <use-cases-alerts-detectors>`
@@ -57,25 +57,33 @@ This is the collection of use cases available for Splunk Observability Cloud.
   * - :ref:`APM <apm-use-cases-intro>`
     - :ref:`custom-metricset`  
   * - :ref:`APM <apm-use-cases-intro>`
-    - :ref:`Monitor service performance using endpoint performance <apm-use-case-endpoint-performance>` 
+    - :ref:`apm-use-case-endpoint-performance` 
   * - :ref:`APM database query performance <db-query-performance>`
-    - :ref:`Identify slow database queries using Database Query Performance <db-perf-use-case>` 
+    - :ref:`db-perf-use-case` 
   * - :ref:`APM database query performance <db-query-performance>`
-    - :ref:`Investigate Redis performance issues using Database Query Performance <redis-use-case>`
+    - :ref:`redis-use-case`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>`
-    - :ref:`Find performance issues using AlwaysOn Profiling <profiling-use-case>`
+    - :ref:`profiling-use-case`
   * - :ref:`APM Profiling <profiling-use-case-landingpage>` 
-    - :ref:`Analyze memory usage using AlwaysOn Profiling <memory-profiling-use-case>`
-  * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
+    - :ref:`memory-profiling-use-case`
+  * - :ref:`Incident Intelligence scheduling <ii-use-cases-schedules>`
     - :ref:`ii-use-case-business-hours`
-  * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
+  * - :ref:`Incident Intelligence scheduling <ii-use-cases-schedules>`
     - :ref:`ii-use-case-week-by-week`
-  * - :ref:`Incident Intelligence scheduling use cases <ii-use-cases-schedules>`
+  * - :ref:`Incident Intelligence scheduling <ii-use-cases-schedules>`
     - :ref:`ii-use-case-day-by-day`
   * - Infrastructure Monitoring
-    - :ref:`Troubleshoot server failure using the Kubernetes navigator <troubleshoot-k8s-nav-use-case>`
+    - :ref:`troubleshoot-k8s-nav-use-case`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
+    - :ref:`find-network-error`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
+    - :ref:`cross-zone-traffic-cost`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
+    - :ref:`examine-service-dependencies`
   * - IT Service Intelligence
-    - :new-page:`Use case: Group related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/4.16.0/EA/UseCaseGrpAlerts>`
+    - :new-page:`Scenario\: Group related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`
+  * - IT Service Intelligence
+    - :new-page:`Scenario: Monitor business service degradation and identify the root cause <https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`
   * - :ref:`RUM <use-case-landingpage>`
     - :ref:`use-case-monitoring`
   * - :ref:`RUM <use-case-landingpage>`
@@ -91,4 +99,4 @@ This is the collection of use cases available for Splunk Observability Cloud.
   * - :ref:`Synthetic Monitoring <synth-landing>`     
     - :ref:`uptime-test-use-case`
   * - :ref:`Log Observer <logs-intro-logconnect>`
-    - :ref:`Troubleshoot workflow failures with Log Observer <logs-LOconnect-usecase>`
+    - :ref:`logs-LOconnect-usecase`

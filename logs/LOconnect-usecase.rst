@@ -1,12 +1,12 @@
 .. _logs-LOconnect-usecase:
 
 ************************************************************************************************************************
-Use case: Troubleshoot workflow failures with Log Observer
+Scenario: Aisha troubleshoots workflow failures with Log Observer
 ************************************************************************************************************************
 
 
 .. meta::
-  :description: Troubleshoot problems in a workflow using Log Observer where Log Observer accesses Splunk platform logs through Log Observer Connect.
+  :description: Aisha troubleshoots problems in a workflow using Log Observer where Log Observer accesses Splunk platform logs through Log Observer Connect.
 
 Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They analyze logs in Splunk Cloud Platform. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure. They purchased Splunk Observability Cloud as their observability solution. Buttercup Games analyzes their Splunk Cloud Platform logs in Log Observer, a point-and-click Splunk Observability Cloud tool, which they set up through Log Observer Connect.
 

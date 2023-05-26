@@ -1,17 +1,17 @@
 .. _rum-mobile-usecase:
 
 
-**************************************************************************
-Find the root cause of a user reported error in Splunk RUM for Mobile  
-**************************************************************************
+*************************************************************************************
+Scenario: Kai finds the root cause of a user reported error in Splunk RUM for Mobile  
+*************************************************************************************
 
 
-The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company.
+The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
-About this use case 
+About this scenario
 ================================
 
-Buttercup Industries recently launched a mobile application. Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Mobile to monitor releases, find root causes of user reported issues, and measure important metrics. In this use case, you can learn about how Kai leverages Splunk RUM for Mobile to monitor and improve the experience of the Buttercup Mobile app. 
+Buttercup Industries recently launched a mobile application. Kai, a site reliability engineer at Buttercup Industries, uses Splunk RUM for Mobile to monitor releases, find root causes of user reported issues, and measure important metrics. In this scenario, you can learn about how Kai leverages Splunk RUM for Mobile to monitor and improve the experience of the Buttercup Mobile app. 
 
 
 Find the root cause of a user reported error 
@@ -72,7 +72,7 @@ Kai follows these steps to find a root cause of an error:
 Summary 
 =========
 
-In this use case, Kai searched for a specific session using filters and reviewed a collection of sessions in Tag Spotlight and User sessions.
+In this scenario, Kai searched for a specific session using filters and reviewed a collection of sessions in Tag Spotlight and User sessions.
 
 To learn more about how you can optimize your experience with Splunk Observability Cloud, see:  
 

@@ -1,17 +1,17 @@
 .. _get-started-use-case:
 
 ******************************************************************************************************
-Use case: Troubleshoot an issue from the browser to the back end using Splunk Observability Cloud
+Scenario: Kai troubleshoots an issue from the browser to the back end using Splunk Observability Cloud
 ******************************************************************************************************
 
 .. meta::
-   :description: This use case documentation describes how a site reliability engineer (SRE) can use Splunk Observability Cloud products and features to troubleshoot a site issue starting with the end user's browser-based experience all the way to microservices on the backend.
+   :description: This scenario describes how a site reliability engineer (SRE) can use Splunk Observability Cloud products and features to troubleshoot a site issue starting with the end user's browser-based experience all the way to microservices on the backend.
 
 Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure.
 
 Buttercup Games site reliability engineers (SREs) and service owners work together to monitor and maintain the site to be sure that people have a great experience when they visit. One of the many reasons they decided to take a cloud-native approach is because it facilitates observability. They chose Splunk Observability Cloud as their observability solution.
 
-This use case describes how Kai, an SRE, and Deepu, a service owner, perform the following tasks using Splunk Observability Cloud to troubleshoot and identify the root cause of a recent Buttercup Games site incident:
+This scenario describes how Kai, an SRE, and Deepu, a service owner, perform the following tasks using Splunk Observability Cloud to troubleshoot and identify the root cause of a recent Buttercup Games site incident:
 
 #. :ref:`receive-alerts-xpuc`
 
@@ -29,7 +29,7 @@ This use case describes how Kai, an SRE, and Deepu, a service owner, perform the
 
 #. :ref:`take-preventative-action-xpuc`
 
-For a video version of this use case, watch :new-page:`the Splunk Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
+For a video version of this scenario, watch :new-page:`the Splunk Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`.
 
 
 .. _receive-alerts-xpuc:
@@ -171,7 +171,7 @@ Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log
 
 2. In the error message, Kai sees what they think is a clear indication of the error. The API token starts with "test". It seems that a team pushed v350.10 live with a test token that doesn't work in production.
 
-    Just to double-check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
+    To check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message.
 
 3. Next, Kai changes the :strong:`Group by method` from :strong:`severity` to :strong:`version`.
 
