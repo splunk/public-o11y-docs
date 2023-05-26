@@ -55,7 +55,7 @@ service:
 
 There are no metrics available for this integration.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
