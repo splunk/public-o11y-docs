@@ -32,7 +32,7 @@ To configure the React Native RUM agent, pass the settings as arguments when ini
       options.environment = @"<environment-name>";
       [SplunkRum initializeWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>" options: options];
 
-.. _React Native-rum-settings:
+.. _react-rum-settings:
 
 General settings
 ======================================================
@@ -50,13 +50,13 @@ Use the following settings to configure the React Native RUM agent:
    * - :code:`rumAuth`
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
    * - :code:`globalAttributes`
-     - Sets additional attributes added to all spans. Attributes are defined as an array of comma-separated key-value pairs. For example: ``["key1":"value1","key2":3]``. See :ref:`React Native-rum-globalattributes`.
+     - Sets additional attributes added to all spans. Attributes are defined as an array of comma-separated key-value pairs. For example: ``["key1":"value1","key2":3]``. See :ref:`react-rum-globalattributes`.
    * - :code:`environment`
      - Environment for all the spans produced by the application. For example, ``dev``, ``test``, or ``prod``.
    * - :code:`ignoreURLs`
      - Regular expression pattern that matches URLs you want to ignore when reporting HTTP activity.
    * - :code:`spanFilter`
-     - Closure of type ``((SpanData) -> SpanData?)?`` to modify or ignore spans. See :ref:`React Native-rum-span-filtering`.
+     - Closure of type ``((SpanData) -> SpanData?)?`` to modify or ignore spans. See :ref:`react-rum-span-filtering`.
    * - :code:`sessionSamplingRatio`
      - Percentage of sessions to sample. Expressed as a proportion in the range ``0.0`` to ``1.0``. The default value is ``1.0``.
    * - :code:`allowInsecureBeacon`
@@ -66,7 +66,7 @@ Use the following settings to configure the React Native RUM agent:
    * - :code:`spanDiskCacheMaxSize`
      - Threshold, in megabytes, from which spans start to be dropped from the disk cache. The oldest spans are dropped first. Only applicable when disk caching is activated. The default value is ``25`` megabytes.
    * - :code:`slowRenderingDetectionEnabled`
-     - Activates the slow rendering detection feature. The default value is ``false``. See :ref:`React Native-slow-rendering-data`.
+     - Activates the slow rendering detection feature. The default value is ``false``. See :ref:`react-slow-rendering-data`.
    * - :code:`slowFrameDetectionThresholdMs`
      - Optional setting that tags as slow all frames that took more than the specified time, in milliseconds. The default value is ``16.7`` milliseconds.
    * - :code:`frozenFrameDetectionThresholdMs`
@@ -74,7 +74,7 @@ Use the following settings to configure the React Native RUM agent:
    * - :code:`debug`
      - Activates debug logging. The default value is ``false``.
 
-.. _React Native-rum-instrumentation-settings:
+.. _react-rum-instrumentation-settings:
 
 Instrumentation settings
 ==============================================
