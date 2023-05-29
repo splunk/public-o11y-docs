@@ -63,7 +63,7 @@ Follow these steps to import and initialize the React Native RUM package.
 
 2. Wrap your entire App component using the library:
 
-   .. code:: javascript
+   .. code::
 
       import { OtelWrapper, startNavigationTracking } from '@splunk/otel-react-native';
       import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
@@ -103,7 +103,7 @@ Follow these steps to import and initialize the React Native RUM package.
 
 4. (Optional) To instrument React Navigation, use the following example:
 
-   .. code:: javascript
+   .. code::
 
       import { startNavigationTracking } from '@splunk/otel-react-native';
 
