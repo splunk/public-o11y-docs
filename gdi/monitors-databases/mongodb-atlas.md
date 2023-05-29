@@ -5,53 +5,16 @@
 <meta name="description" content="Use this Splunk Observability Cloud integration for the MongoDB Atlas monitor. See benefits, install, configuration, and metrics">
 
 ```{note}
-This monitor is deprecated in favor of the `mongodbatlas` receiver. See {ref}`MongoDB Atlas Receiver <mongodb-atlas-receiver>` for more information.
+This monitor is deprecated in favor of the Otel native component `mongodbatlas` receiver. See {ref}`MongoDB Atlas Receiver <mongodb-atlas-receiver>` for more information.
 ```
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the MongoDB Atlas monitor type to provide MongoDB as an on-demand fully managed service. Atlas exposes MongoDB cluster monitoring and logging data through its [monitoring and logs](https://docs.atlas.mongodb.com/reference/api/monitoring-and-logs/) REST API endpoints. These Atlas monitoring API resources are grouped into measurements for MongoDB processes, host disks, and MongoDB databases.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `mongodb-atlas` monitor type for the Smart Agent Receiver.
-
-MongoDB Atlas provides MongoDB as an on-demand fully managed service. Atlas exposes MongoDB cluster monitoring and logging data through its [monitoring and logs](https://docs.atlas.mongodb.com/reference/api/monitoring-and-logs/) REST API endpoints. These Atlas monitoring API resources are grouped into measurements for MongoDB processes, host disks, and MongoDB databases.
-
-This monitor type repeatedly scrapes MongoDB monitoring data from Atlas at the configured time interval. It scrapes the process and disk measurements into metric groups called mongodb and hardware. The original measurement names are included in the metric descriptions.
+This integration repeatedly scrapes MongoDB monitoring data from Atlas at the configured time interval. It scrapes the process and disk measurements into metric groups called mongodb and hardware. The original measurement names are included in the metric descriptions.
 
 A set of data points are fetched at the configured granularity and period for each measurement. Metric values are set to the latest non-empty data point value in the set. The finest granularity supported by Atlas is 1 minute. The configured period for the monitor type needs to be wider than the interval at which Atlas provides values for measurements, otherwise some of the sets of fetched data points will contain only empty values. The default configured period is 20 minutes, which works across all measurements and gives a reasonable response payload size.
 
-## Benefits
-
-```{include} /_includes/benefits.md
-```
-
-## Installation
-
-```{include} /_includes/collector-installation.md
-```
-
-## Configuration
-
-```{include} /_includes/configuration.md
-```
-
-To activate this monitor type in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
-
-```
-receivers:
-  smartagent/mongodb-atlas:
-    type: mongodb-atlas
-    ...  # Additional config
-```
-
-To complete the activation, you must also include the ``smartagent/mongodb-atlas`` in a ``metrics`` pipeline. To do this, add the receiver item to the ``service/pipelines/metrics/receivers`` section of your configuration file. For example:
-
-```yaml
-service:
-  pipelines:
-    metrics:
-      receivers: [smartagent/mongodb-atlas]
-```
-
-### Configuration settings
+## Configuration settings
 
 The following table shows the configuration options for the `mongodb-atlas` monitor type:
 
@@ -71,12 +34,17 @@ The following metrics are available for this integration:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/mongodb-atlas/metrics.yaml"></div>
 
+### New
+
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/mongodb/atlas/metadata.yaml"></div>
+
+
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

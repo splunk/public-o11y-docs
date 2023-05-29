@@ -25,7 +25,7 @@ Configure application receivers for databases
    monitors-databases/logstash
    monitors-databases/microsoft-sql-server
    monitors-databases/mongodb
-   mongodb-atlas/mongodb-atlas
+   monitors-databases/mongodb-atlas
    opentelemetry/components/mongodb-atlas-receiver
    mysql/mysql
    opentelemetry/components/oracledb-receiver
