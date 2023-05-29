@@ -1,7 +1,7 @@
 .. _rum-mobile-react:
 
 **************************************************************
-Instrument iOS applications for Splunk RUM
+Instrument React Native applications for Splunk RUM
 **************************************************************
 
 .. meta::
@@ -13,7 +13,7 @@ Instrument iOS applications for Splunk RUM
    Install the React Native RUM agent <install-rum-react>
    Configure the instrumentation <configure-rum-react-instrumentation>
    Manually instrument applications <manual-rum-react-instrumentation>
-   iOS RUM data model <rum-react-data-model>
+   React Native RUM data model <rum-react-data-model>
 
 Instrument your React Native applications to get Real User Monitoring (RUM) data into Splunk Observability Cloud. With Splunk RUM for Mobile, you can gain insight about the performance and health of your mobile apps.
 

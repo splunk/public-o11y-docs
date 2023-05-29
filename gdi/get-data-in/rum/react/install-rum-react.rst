@@ -7,9 +7,9 @@ Install the React Native RUM agent for Splunk RUM
 .. meta::
    :description: Instrument your React Native applications for Splunk Observability Cloud real user monitoring / RUM using the React Native RUM agent from the Splunk OpenTelemetry Instrumentation for React Native.
 
-You can instrument your React Native applications for Splunk RUM using the React Native RUM agent from the Splunk OpenTelemetry Instrumentation for React Native.
+You can instrument your React Native and Expo applications for Splunk RUM using the React Native RUM agent from the Splunk OpenTelemetry Instrumentation for React Native.
 
-To instrument your React Native application and get data into Splunk RUM, follow the instructions on this page.
+To instrument your React Native or Expo application and get data into Splunk RUM, follow the instructions on this page.
 
 .. note:: Splunk APM is not required to instrument Splunk RUM for React Native. 
 
@@ -18,7 +18,12 @@ To instrument your React Native application and get data into Splunk RUM, follow
 Check compatibility and requirements 
 ===============================================
 
-Splunk RUM for Mobile supports React Native 11 and higher, including iPadOS 13 and higher.
+Splunk RUM for Mobile supports React Native 0.67 and higher. 
+
+The library is also compatible with the following frameworks and libraries:
+
+- Expo framework
+- React Navigation 5 and 6
 
 .. _rum-react-install:
 
@@ -46,105 +51,92 @@ Import and initialize the React Native RUM package
 
 Follow these steps to import and initialize the React Native RUM package.
 
-1. In Xcode, select :strong:`File` > :strong:`Add Packages...` or :strong:`File` > :strong:`Swift Packages` > :strong:`Add Package Dependency` and enter the following URL in the search bar:
+1. Install the React Native RUM library using npm or yarn:
 
-   ``https://github.com/signalfx/splunk-otel-react``
+   .. code:: bash
 
-2. Click :guilabel:`Add Package` to install the package.
+      # npm
+      npm install @splunk/otel-react-native
 
-3. Initialize the React Native RUM agent with your configuration parameters:
+      # yarn
+      yarn add @splunk/otel-react-native
 
-   .. tabs::
+2. Wrap your entire App component using the library:
 
-      .. code-tab:: swift Swift
+   .. code:: jsx
 
-         import SplunkOtel
-         //..
-         SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-               rumAuth: "<rum-token>",
-               options: SplunkRumOptions(environment:"<environment-name>"))
+      import { OtelWrapper, startNavigationTracking } from '@splunk/otel-react-native';
+      import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
 
-      .. code-tab:: objective-c Objective-C
+      //...
 
-         @import SplunkOtel;
+      export default function App() {
+      const navigationRef = useNavigationContainerRef();
+      return (
+         <OtelWrapper configuration={RumConfig}>
+            <NavigationContainer ref={navigationRef}>
+            <Stack.Navigator>
+               <Stack.Screen name="Home" component={Home} />
+               <Stack.Screen name="Details" component={Details} />
+            </Stack.Navigator>
+            </NavigationContainer>
+         </OtelWrapper>
+         );
+      }
 
-         //...
-         SplunkRumOptions *options = [[SplunkRumOptions alloc] init];
-         options.environment = @"<environment-name>";
-         [SplunkRum initializeWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>" options: options];
+3. Edit the initialization parameters to set the Observability Cloud realm, RUM access token, and basic attributes:
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   .. code:: jsx
 
-         1. Open the left navigation menu in Observability Cloud.
-         2. Select :menuselection:`Settings`.
-         3. Select your username. 
+      const RumConfig: ReactNativeConfiguration = {
+         realm: '<realm>',
+         rumAccessToken: '<rum-access-token>',
+         applicationName: '<your-app-name>',
+         environment: '<your-environment>',
+         debug: true,
+         /*
+           URLs that partially match any regex in ignoreUrls aren't traced.
+           URLs that are exact matches of strings in ignoreUrls aren't traced.
+         */
+         ignoreUrls: ['http://sampleurl.org'],
+      }
 
-      The realm name appears in the :guilabel:`Organizations` section.
+4. (Optional) To instrument React Navigation, use the following example:
 
-   * To generate a RUM access token, see :ref:`rum-access-token`.
+   .. code:: jsx
 
-   .. note:: If your application uses CocoaPods, import the React Native RUM package into your main app. If you import the package into your Pods project, the dependency might disappear when you recreate the project.
+      import { startNavigationTracking } from '@splunk/otel-react-native';
 
-4. Deploy the changes to your application.
+      export default function App() {
+         const navigationRef = useNavigationContainerRef();
+         return (
+            <NavigationContainer
+               ref={navigationRef}
+               onReady={() => {
+               startNavigationTracking(navigationRef);
+               }}
+            >
+               <Stack.Navigator>
+               // ...
+               </Stack.Navigator>
+            </NavigationContainer>
+         );
+      }
 
-.. _rum-react-crash-reporting:
+Alternative initialization method
+----------------------------------------
 
-Activate crash reporting
--------------------------------------
+As an alternative to wrapping the App component, you can initialize the React Native RUM library as early in your app lifecycle as possible. For example:
 
-The Splunk React Native Crash Reporting module adds crash reporting to the React Native RUM agent using PLCrashReporter.
+.. code:: jsx
 
-.. caution:: Before activating crash reporting in the React Native RUM agent, deactivate any other crash reporting package or library in your application. Existing crash reporting functionality might produce unexpected results, including build failures.
+   import { SplunkRum } from '@splunk/otel-react-native';
 
-To activate crash reporting in the React Native RUM agent, follow these steps:
-
-1. In Xcode, select :strong:`File` > :strong:`Add Packages...` or :strong:`File` > :strong:`Swift Packages` > :strong:`Add Package Dependency` and enter the following URL in the search bar:
-
-   ``https://github.com/signalfx/splunk-otel-react-crashreporting``
-
-2. Click :guilabel:`Add Package` to install the package.
-
-3. Initialize the crash reporting module with your configuration parameters:
-
-   .. tabs::
-
-      .. code-tab:: swift Swift
-         :emphasize-lines: 2,7,8
-
-         import SplunkOtel
-         import SplunkOtelCrashReporting
-         //..
-         SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-                           rumAuth: "<rum-token>",
-                           options: SplunkRumOptions(environment:"<environment-name>"))
-         // Initialize crash reporting module after the React Native agent
-         SplunkRumCrashReporting.start()
-
-      .. code-tab:: objective-c Objective-C
-         :emphasize-lines: 2,7,8
-
-         @import SplunkOtel;
-         @import SplunkOtelCrashReporting;
-         //...
-         SplunkRumOptions *options = [[SplunkRumOptions alloc] init];
-         options.environment = @"<environment-name>";
-         [SplunkRum initializeWithBeaconUrl: @"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>" options: nil];
-         // Initialize crash reporting module after the React Native agent
-         [SplunkRumCrashReporting start]
-
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
-
-         1. Open the left navigation menu in Observability Cloud.
-         2. Select :menuselection:`Settings`.
-         3. Select your username. 
-
-      The realm name appears in the :guilabel:`Organizations` section.
-      
-   * To generate a RUM access token, see :ref:`rum-access-token`.
-
-4. Deploy the changes to your application.
-
-.. note:: Symbolication is not supported.
+   const Rum = SplunkRum.init({
+      realm: '<realm>',
+      applicationName: '<name-of-app>',
+      rumAccessToken: '<access-token>',
+   });
 
 .. _integrate-react-apm-traces:
 
@@ -157,31 +149,6 @@ By default, the Splunk Distributions of OpenTelemetry already send the ``Server-
 
 The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM. 
 
-
-.. _react-webview-instrumentation:
-
-Instrument React Native WebViews using the Browser RUM agent
-====================================================================
-
-You can use Mobile RUM instrumentation and Browser RUM instrumentation simultaneously to see RUM data combined in one stream. You can do this by sharing the ``splunk.rumSessionId`` between both instrumentations.
-
-The following Swift snippet shows how to integrate React Native RUM with Splunk Browser RUM:
-
-.. code-block:: swift
-
-   import WebKit
-   import SplunkOtel
-
-   ...
-      /* 
-   Make sure that the WebView instance only loads pages under 
-   your control and instrumented with Splunk Browser RUM. The 
-   integrateWithBrowserRum() method can expose the splunk.rumSessionId
-   of your user to every site/page loaded in the WebView instance.
-   */
-      let webview: WKWebView = ...
-      SplunkRum.integrateWithBrowserRum(webview)
-
 Change attributes before they're collected
 ====================================================================
 
@@ -190,4 +157,4 @@ To remove or change attributes in your spans, such as personally identifiable in
 How to contribute
 =========================================================
 
-The Splunk OpenTelemetry Instrumentation for React Native is open-source software. You can contribute to its improvement by creating pull requests in GitHub. To learn more, see the :new-page:`contributing guidelines <https://github.com/signalfx/splunk-otel-react/blob/main/CONTRIBUTING.md>` in GitHub.
+The Splunk OpenTelemetry Instrumentation for React Native is open-source software. You can contribute to its improvement by creating pull requests in GitHub. To learn more, see the :new-page:`contributing guidelines <https://github.com/signalfx/splunk-otel-react-native/blob/main/CONTRIBUTING.md>` in GitHub.

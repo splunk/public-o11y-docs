@@ -9,28 +9,22 @@ Configure the Splunk React Native RUM instrumentation
 
 You can configure the React Native RUM agent from the Splunk OpenTelemetry Instrumentation for React Native to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 
-To configure the React Native RUM agent, pass the settings as arguments when initializating the ``SplunkRum`` module. The following example shows how to configure the RUM token, beacon URL, and environment name:
+To configure the React Native RUM agent, add the key-value pairs to a ``ReactNativeConfiguration`` object. For example:
 
-.. tabs::
+.. code:: jsx
 
-   .. code-tab:: swift
-      :emphasize-lines: 3,4,5
-
-      import SplunkOtel
-      //..
-      SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-            rumAuth: "<rum-token>",
-            options: SplunkRumOptions(environment:"<environment-name>"))
-
-   .. code-tab:: objective-c
-      :emphasize-lines: 4,5,6
-
-      @import SplunkOtel;
-
-      //Create an options object to store the settings
-      SplunkRumOptions *options = [[SplunkRumOptions alloc] init];
-      options.environment = @"<environment-name>";
-      [SplunkRum initializeWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>" options: options];
+   const RumConfig: ReactNativeConfiguration = {
+      realm: '<realm>',
+      rumAccessToken: '<rum-access-token>',
+      applicationName: '<your-app-name>',
+      environment: '<your-environment>',
+      debug: true,
+      /**
+         * URLs that partially match any regex in ignoreUrls aren't traced.
+         * URLs that are exact matches of strings in ignoreUrls aren't traced.
+      */
+      ignoreUrls: ['http://sampleurl.org'],
+   }
 
 .. _react-rum-settings:
 
@@ -45,51 +39,15 @@ Use the following settings to configure the React Native RUM agent:
 
    * - Option
      - Description
-   * - :code:`beaconUrl`
+   * - :code:`beaconEndpoint`
      - Ingest URL to which the agent sends collected telemetry. The URL must contain your realm in Splunk Observability Cloud. For example, ``https://rum-ingest.us0.signalfx.com/v1/rum`` is the ingest URL for the ``us0`` realm.
-   * - :code:`rumAuth`
+   * - :code:`rumAccessToken`
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
    * - :code:`globalAttributes`
      - Sets additional attributes added to all spans. Attributes are defined as an array of comma-separated key-value pairs. For example: ``["key1":"value1","key2":3]``. See :ref:`react-rum-globalattributes`.
    * - :code:`environment`
      - Environment for all the spans produced by the application. For example, ``dev``, ``test``, or ``prod``.
-   * - :code:`ignoreURLs`
+   * - :code:`ignoreUrls`
      - Regular expression pattern that matches URLs you want to ignore when reporting HTTP activity.
-   * - :code:`spanFilter`
-     - Closure of type ``((SpanData) -> SpanData?)?`` to modify or ignore spans. See :ref:`react-rum-span-filtering`.
-   * - :code:`sessionSamplingRatio`
-     - Percentage of sessions to sample. Expressed as a proportion in the range ``0.0`` to ``1.0``. The default value is ``1.0``.
-   * - :code:`allowInsecureBeacon`
-     - If set to ``true``, this setting allows beacon URLs that use the HTTP protocol. The default value is ``false``.
-   * - :code:`enableDiskCache`
-     - Activates caching of exported spans. All spans are written to local storage and deleted after a successful export. The default value is ``false``.
-   * - :code:`spanDiskCacheMaxSize`
-     - Threshold, in megabytes, from which spans start to be dropped from the disk cache. The oldest spans are dropped first. Only applicable when disk caching is activated. The default value is ``25`` megabytes.
-   * - :code:`slowRenderingDetectionEnabled`
-     - Activates the slow rendering detection feature. The default value is ``false``. See :ref:`react-slow-rendering-data`.
-   * - :code:`slowFrameDetectionThresholdMs`
-     - Optional setting that tags as slow all frames that took more than the specified time, in milliseconds. The default value is ``16.7`` milliseconds.
-   * - :code:`frozenFrameDetectionThresholdMs`
-     - Optional setting that tags as frozen all frames that took more than the specified time, in milliseconds. The default value is ``700`` milliseconds.
    * - :code:`debug`
      - Activates debug logging. The default value is ``false``.
-
-.. _react-rum-instrumentation-settings:
-
-Instrumentation settings
-==============================================
-
-Use the following settings to activate or deactivate the collection of specific data:
-
-.. list-table:: 
-   :header-rows: 1
-   :widths: 20 80
-
-   * - Option
-     - Description
-   * - :code:`showVCInstrumentation`
-     - Activates the creation of spans for ``ViewController Show`` events. The default value is ``true``.
-   * - :code:`screenNameSpans`
-     - Activates the creation of spans for changes to the screen name. The default value is ``true``.
-   * - :code:`networkInstrumentation`
-     - Activates the creation of spans for network activities. The default value is ``true``.
