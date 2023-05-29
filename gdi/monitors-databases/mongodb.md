@@ -22,7 +22,7 @@ This integration is only available on Kubernetes and Linux.
 
 This integration requires MongoDB 2.6 or higher.
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
