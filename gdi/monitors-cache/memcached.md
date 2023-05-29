@@ -10,6 +10,8 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 * Net input/output bytes
 * Number of items cached
 
+This integration is only available on Kubernetes and Linux.
+
 ## Benefits
 
 ```{include} /_includes/benefits.md
@@ -17,7 +19,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
