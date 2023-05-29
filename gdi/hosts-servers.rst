@@ -40,7 +40,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/jenkins
    monitors-hosts/kafka-consumer
    monitors-hosts/kafka-producer
-   windows/windows-iis
+   monitors-hosts/microsoft-windows-iis
    nginx/nginx
    monitors-hosts/php-fpm
    procstat/procstat
