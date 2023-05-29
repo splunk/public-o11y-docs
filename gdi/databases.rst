@@ -23,7 +23,7 @@ Configure application receivers for databases
    monitors-databases/hadoopjmx
    monitors-databases/logparser
    monitors-databases/logstash
-   microsoft-sql-server/microsoft-sql-server
+   monitors-databases/microsoft-sql-server
    mongodb/mongodb
    mongodb-atlas/mongodb-atlas
    opentelemetry/components/mongodb-atlas-receiver
