@@ -11,7 +11,7 @@ Configure application receivers for caches and memory
    :maxdepth: 4
    :hidden:
 
-   memcached/memcached
+   monitors-cache/memcached
    memory/memory
    opcache/opcache
 
