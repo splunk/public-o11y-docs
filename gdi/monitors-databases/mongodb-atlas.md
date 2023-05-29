@@ -1,6 +1,6 @@
 (mongodb-atlas)=
 
-# MongoDB Atlas cluster
+# MongoDB Atlas (deprecated)
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the MongoDB Atlas monitor. See benefits, install, configuration, and metrics">
 
@@ -31,10 +31,6 @@ The following table shows the configuration options for the `mongodb-atlas` moni
 ## Metrics
 
 The following metrics are available for this integration:
-
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/mongodb-atlas/metrics.yaml"></div>
-
-### New
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/mongodb/atlas/metadata.yaml"></div>
 
