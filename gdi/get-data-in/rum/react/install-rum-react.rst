@@ -101,7 +101,7 @@ Follow these steps to import and initialize the React Native RUM package.
          ignoreUrls: ['http://sampleurl.org'],
       }
 
-4. (Optional) To instrument React Navigation, use the following example:
+4. (Optional) To instrument React Navigation, instrument Navigator as in the following example:
 
    .. code::
 
