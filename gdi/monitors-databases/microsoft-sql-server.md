@@ -6,6 +6,11 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Microsoft SQL Server monitor type to send metrics from Microsoft SQL Server instances. 
 
+## Benefits
+
+```{include} /_includes/benefits.md
+```
+
 ## Installation
 
 ```{include} /_includes/collector-installation-linux.md
@@ -90,7 +95,7 @@ The following table shows the configuration options for the Microsoft SQL Server
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/internal/signalfx-agent/pkg/monitors/telegraf/monitors/mssqlserver/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/telegraf/monitors/mssqlserver/metadata.yaml"></div>
 
 ### Notes
 
