@@ -11,7 +11,7 @@ You can configure the React Native RUM agent from the Splunk OpenTelemetry Instr
 
 To configure the React Native RUM agent, add the key-value pairs to a ``ReactNativeConfiguration`` object. For example:
 
-.. code:: jsx
+.. code:: javascript
 
    const RumConfig: ReactNativeConfiguration = {
       realm: '<realm>',

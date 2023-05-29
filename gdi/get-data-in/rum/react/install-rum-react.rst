@@ -63,7 +63,7 @@ Follow these steps to import and initialize the React Native RUM package.
 
 2. Wrap your entire App component using the library:
 
-   .. code:: jsx
+   .. code:: javascript
 
       import { OtelWrapper, startNavigationTracking } from '@splunk/otel-react-native';
       import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
@@ -86,7 +86,7 @@ Follow these steps to import and initialize the React Native RUM package.
 
 3. Edit the initialization parameters to set the Observability Cloud realm, RUM access token, and basic attributes:
 
-   .. code:: jsx
+   .. code:: javascript
 
       const RumConfig: ReactNativeConfiguration = {
          realm: '<realm>',
@@ -103,7 +103,7 @@ Follow these steps to import and initialize the React Native RUM package.
 
 4. (Optional) To instrument React Navigation, use the following example:
 
-   .. code:: jsx
+   .. code:: javascript
 
       import { startNavigationTracking } from '@splunk/otel-react-native';
 
@@ -128,7 +128,7 @@ Alternative initialization method
 
 As an alternative to wrapping the App component, you can initialize the React Native RUM library as early in your app lifecycle as possible. For example:
 
-.. code:: jsx
+.. code:: javascript
 
    import { SplunkRum } from '@splunk/otel-react-native';
 
