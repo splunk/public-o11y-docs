@@ -14,8 +14,8 @@ Configure application receivers for networks
    monitors-network/aws-appmesh
    monitors-network/dns
    monitors-network/logstash-tcp
-   net-io/net-io
-   ntp/ntp
+   monitors-network/net-io
+   monitors-network/ntp
    protocols/protocols
    snmp/snmp
    statsd/statsd
