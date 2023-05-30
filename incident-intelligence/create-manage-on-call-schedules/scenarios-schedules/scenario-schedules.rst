@@ -1,4 +1,4 @@
-.. _ii-use-cases-schedules:
+.. _ii-scenario-schedules:
 
 Scenarios for notifying the correct responder using schedules in Incident Intelligence
 *********************************************************************************************
@@ -11,11 +11,11 @@ The following scenarios feature examples from Buttercup Games, a fictitious e-co
 .. toctree::
    :hidden:
 
-   use-case-business-hours
-   use-case-day-by-day
-   use-case-week-by-week
+   scenario-business-hours
+   scenario-day-by-day
+   scenario-week-by-week
 
-* :ref:`ii-use-case-business-hours`
-* :ref:`ii-use-case-day-by-day`
-* :ref:`ii-use-case-week-by-week`
+* :ref:`ii-scenario-business-hours`
+* :ref:`ii-scenario-day-by-day`
+* :ref:`ii-scenario-week-by-week`
 

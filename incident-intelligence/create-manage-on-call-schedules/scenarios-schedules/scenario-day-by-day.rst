@@ -1,4 +1,4 @@
-.. _ii-use-case-day-by-day:
+.. _ii-scenario-day-by-day:
 
 Scenario: Skyler creates every-other-day coverage using the Day-by-day shift type
 ***********************************************************************************
