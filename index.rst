@@ -568,7 +568,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Splunk RUM use case library TOGGLE <rum/rum-use-case-library/use-case-landingpage>
+   Splunk RUM use case library TOGGLE <rum/rum-scenario-library/scenario-landingpage>
 
 .. toctree::
    :maxdepth:   3
