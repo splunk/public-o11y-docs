@@ -423,7 +423,12 @@
      -
      - :strong:`X`
 
-   * - :ref:`NTP Receiver <ntp>`
+   * - :ref:`NTPQ <telegraf-ntpq>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`NTP server <ntp>`
      - :strong:`X`
      -
      -
@@ -544,11 +549,6 @@
      -
 
    * - :ref:`systemd <collectd-systemd>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Telegraf NTPQ <telegraf-ntpq>`
      - :strong:`X`
      -
      -
