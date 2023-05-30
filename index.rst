@@ -235,7 +235,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use cases <get-started/use-case-landing>
+   Scenarios <get-started/use-case-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -444,7 +444,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use cases: Troubleshoot errors and monitor application performance TOGGLE <apm/apm-use-cases/apm-use-cases-intro>
+   Scenarios for troubleshooting errors and monitoring application performance using Splunk APM TOGGLE <apm/apm-use-cases/apm-use-cases-intro>
 
 .. toctree::
    :maxdepth:   3
@@ -749,7 +749,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
+   admin/use-case-org-security
 
 .. toctree::
    :hidden:
@@ -771,7 +771,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Manage roles, users, teams TOGGLE <admin/teams/intro-roles-users-teams>
+   Manage roles, users, teams TOGGLE <admin/user-mgmt/intro-roles-users-teams>
 
 .. toctree::
    :hidden:

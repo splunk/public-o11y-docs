@@ -4,15 +4,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Kong monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `kong` monitor type with the SignalFx Smart Agent receiver. This monitor requires version 0.11.2+ of Kong and version 0.0.1+ of kong-plugin-signalfx.
-
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
-
-The Kong integration provides service traffic metrics using `kong-plugin-signalfx`, which emits metrics for configurable request and response lifecycle groups, including:
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `kong` monitor type to provide service traffic metrics using `kong-plugin-signalfx`, which emits metrics for configurable request and response lifecycle groups, including:
 
 * Counters for response counts
 * Counters for cumulative response and request sizes
@@ -31,16 +23,21 @@ In addition, the integration provides system-wide connection statistics, includi
 * Gauges for active connections and their various states
 * A gauge for database connectivity
 
-This integration is only supported for Kong Gateway Community Edition (CE). 
+This integration is only available on Kubernetes and Linux, and requires version 0.11.2 or higher of Kong and version 0.0.1 or higher of `kong-plugin-signalfx`. This integration is only supported for Kong Gateway Community Edition (CE). 
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
 
 ## Installation
 
-This monitor is available in the Smart Agent Receiver, which is part of the {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>`. You need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to activate this integration.
+```{include} /_includes/collector-installation-linux.md
+```
+
+### Kong installation
+
+Bedsides the Collector, you also need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to activate this integration.
 
 Follow these steps to deploy the integration:
 
@@ -69,27 +66,12 @@ Follow these steps to deploy the integration:
 
 ## Configuration
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your configuration:
-
-```yaml
-receivers:
-  smartagent/kong:
-    type: collectd/kong
-    ...  # Additional config
+```{include} /_includes/configuration.md
 ```
 
-To complete the monitor activation, you must also include the `smartagent/kong` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+### Example
 
-```
-service:
-  pipelines:
-    metrics:
-      receivers: [smartagent/kong]
-```
-
-### Configuration settings
-
-The following is a sample configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```yaml
 receivers:
@@ -102,7 +84,19 @@ receivers:
       report: true
     - metric: connections_accepted
       report: false
+    ...  # Additional config  
 ```
+
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+
+```
+service:
+  pipelines:
+    metrics:
+      receivers: [smartagent/kong]
+```
+
+### Filter example
 
 The following is a sample configuration with custom `/signalfx` route and filter lists:
 
@@ -156,16 +150,16 @@ curl -X PATCH -d "config.aggregate_by_http_method=false" http://localhost:8001/p
 
 ## Metrics
 
-These metrics are available for this integration.
+These metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/collectd/kong/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/collectd/kong/metadata.yaml"></div>
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

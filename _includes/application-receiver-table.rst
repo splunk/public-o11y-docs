@@ -94,21 +94,6 @@
      -
      -
 
-   * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Kafka producer <collectd-kafka-producer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd PHP FPM <collectd-php-fpm>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd uptime <collectd-uptime>`
      - :strong:`X`
      -
@@ -289,6 +274,16 @@
      -
      -
 
+   * - :ref:`Kafka consumer <kafka-consumer>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka producer <kafka-producer>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Kong Gateway <kong>`
      - :strong:`X`
      -
@@ -452,6 +447,11 @@
      - :strong:`X`
      -
      -  
+
+   * - :ref:`PHP FPM <collectd-php-fpm>`
+     - :strong:`X`
+     -
+     -
 
    * - :ref:`PostgreSQL <postgresql>`
      - :strong:`X`

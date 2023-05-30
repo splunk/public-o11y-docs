@@ -11,7 +11,7 @@ Configure application receivers for cloud platforms
    :maxdepth: 4
 
    monitors-cloud/heroku
-   kong/kong
+   monitors-cloud/kong
    openstack/openstack
 
 These application receivers gather metrics from their associated cloud platform-related applications and the hosts the applications are running on.

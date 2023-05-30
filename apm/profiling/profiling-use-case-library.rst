@@ -1,13 +1,13 @@
 .. _profiling-use-case-landingpage:
 
-******************************************
-Splunk AlwaysOn Profiling use case library
-******************************************
+************************************************************************************
+Scenarios for monitoring applications and services using Splunk AlwaysOn Profiling 
+************************************************************************************
 
 .. meta:: 
-   :description: Sample use cases of AlwaysOn Profiling for Splunk APM.
+   :description: Sample scenarios for AlwaysOn Profiling for Splunk APM.
 
-The following use cases feature examples from Buttercup Games, a fictitious gaming company. Each use case features Sasha, a lead developer at the Buttercup Games, shares the stories of how they use Splunk APM, AlwaysOn Profiling, and Splunk Observability Cloud to monitor and take action on their applications and services. 
+The following scenarios feature examples from Buttercup Games, a fictitious gaming company. Each scenario features Sasha, a lead developer at the Buttercup Games, shares the stories of how they use Splunk APM, AlwaysOn Profiling, and Splunk Observability Cloud to monitor and take action on their applications and services. 
 
 .. toctree::
    :hidden:

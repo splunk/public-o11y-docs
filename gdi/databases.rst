@@ -21,9 +21,9 @@ Configure application receivers for databases
    monitors-databases/exec-input
    monitors-databases/hadoop
    monitors-databases/hadoopjmx
-   logparser/telegraf-logparser
-   logstash/logstash
-   microsoft-sql-server/microsoft-sql-server
+   monitors-databases/logparser
+   monitors-databases/logstash
+   monitors-databases/microsoft-sql-server
    mongodb/mongodb
    mongodb-atlas/mongodb-atlas
    opentelemetry/components/mongodb-atlas-receiver

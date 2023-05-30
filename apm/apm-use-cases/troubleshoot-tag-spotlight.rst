@@ -1,11 +1,10 @@
 .. _troubleshoot-tag-spotlight:
 
-******************************************************************
-Use case: Find the root cause of an error using Tag Spotlight
-******************************************************************
+Scenario: Deepu finds the root cause of an error using Tag Spotlight
+*********************************************************************
 
 .. meta::
-    :description: This Splunk APM use case describes how to use APM Tag Spotlight to find root cause errors.
+    :description: This Splunk APM scenario describes how to use APM Tag Spotlight to find root cause errors.
 
 Deepu receives a notification from Kai, the site reliability engineer. The notification says that the high root cause error rate with the ``/PaymentService/Charge`` endpoint is preventing customers from shopping on the Buttercup Games website. The notification also includes a link to the endpoint on the Splunk APM service map. 
 

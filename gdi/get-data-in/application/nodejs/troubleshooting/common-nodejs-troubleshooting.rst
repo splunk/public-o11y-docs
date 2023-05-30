@@ -173,7 +173,7 @@ The following snippet contains a sample ``profiling`` pipeline:
         token: "${SFX_TOKEN}"
         endpoint: "https://ingest.${SFX_REALM}.signalfx.com/v1/log"
      logging/info:
-        loglevel: info
+        verbosity: info
 
    processors:
      batch:

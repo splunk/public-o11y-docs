@@ -1,6 +1,6 @@
 (java-monitor)=
 
-# Java metrics receiver
+# Java metrics 
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Java monitor. See benefits, install, configuration, and metrics">
 
@@ -49,7 +49,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for the java-monitor receiver:
+The following table shows the configuration options for the `java-monitor`:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |

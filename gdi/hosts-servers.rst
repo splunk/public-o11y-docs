@@ -18,10 +18,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/chrony
    monitors-hosts/collectd-plugin
    monitors-hosts/collectd-df 
-   collectd/collectd-kafka-consumer
-   collectd/collectd-kafka-producer
-   collectd/collectd-php-fpm
-   collectd/collectd-uptime
+   monitors-hosts/collectd-uptime      
    monitors-hosts/coredns
    monitors-hosts/couchbase
    monitors-hosts/cpu
@@ -41,8 +38,11 @@ Configure application receivers for hosts and servers
    monitors-hosts/http
    monitors-hosts/interface
    monitors-hosts/jenkins
-   windows/windows-iis
+   monitors-hosts/kafka-consumer
+   monitors-hosts/kafka-producer
+   monitors-hosts/microsoft-windows-iis
    nginx/nginx
+   monitors-hosts/php-fpm
    procstat/procstat
    solr/solr
    supervisor/supervisor
@@ -60,15 +60,12 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`zookeeper`
 * :ref:`chrony`
 * :ref:`collectd-plugin`
-* :ref:`cpufreq`
 * :ref:`collectd-df`
-* :ref:`collectd-kafka-consumer`
-* :ref:`collectd-kafka-producer`
-* :ref:`collectd-php-fpm`
-* :ref:`collectd-uptime`
+* :ref:`collectd-uptime`  
 * :ref:`coredns`
 * :ref:`couchbase`
 * :ref:`cpu`
+* :ref:`cpufreq` 
 * :ref:`disk`
 * :ref:`docker`
 * :ref:`elasticsearch`
@@ -84,8 +81,11 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`http`
 * :ref:`interface`
 * :ref:`jenkins`
+* :ref:`kafka-consumer`
+* :ref:`kafka-producer`
 * :ref:`windows-iis`
 * :ref:`nginx`
+* :ref:`collectd-php-fpm` 
 * :ref:`procstat`
 * :ref:`solr`
 * :ref:`supervisor`

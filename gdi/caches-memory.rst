@@ -11,8 +11,8 @@ Configure application receivers for caches and memory
    :maxdepth: 4
    :hidden:
 
-   memcached/memcached
-   memory/memory
+   monitors-cache/memcached
+   monitors-cache/memory
    opcache/opcache
 
 These application receivers gather metrics from their associated cache- and memory-related applications and the hosts the applications are running on.

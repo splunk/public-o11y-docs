@@ -1,10 +1,10 @@
 .. _troubleshoot-business-workflows:
 
-Use case: Accelerate troubleshooting using Business Workflows on Tag Spotlight
-********************************************************************************
+Scenario: Deepu accelerates troubleshooting using Business Workflows on Tag Spotlight
+***************************************************************************************
 
 .. meta::
-    :description: This Splunk APM use case describes how to use APM Tag Spotlight of Business Workflows to accelerate troubleshooting.
+    :description: This Splunk APM scenario describes how to use APM Tag Spotlight of Business Workflows to accelerate troubleshooting.
 
 Deepu, the payment service owner at Buttercup Games, wants to understand how errors in the payment service impact business KPIs. 
 
