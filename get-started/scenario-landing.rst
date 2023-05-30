@@ -74,11 +74,11 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`ii-scenario-day-by-day`
   * - Infrastructure Monitoring
     - :ref:`troubleshoot-k8s-nav-use-case`
-  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
     - :ref:`find-network-error`
-  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
     - :ref:`cross-zone-traffic-cost`
-  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-use-cases>`
+  * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
     - :ref:`examine-service-dependencies`
   * - IT Service Intelligence
     - :new-page:`Scenario\: Group related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`
