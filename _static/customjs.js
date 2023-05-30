@@ -339,50 +339,6 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    try {
-        //Menu build for navigation
-        $('.sphinxsidebarwrapper a').each(function () {
-
-            let hash = "nav-" + $(this).text().replaceAll(' ', '-').replaceAll(',', '');
-            let url = $(this).attr('href');
-
-            if (url.charAt(0) != '#' || url == "#") {
-                $(this).attr('id', hash);
-                let finalUrl = (url == "#") ? "#" + hash : (url + "#" + hash);
-                $(this).attr('href', finalUrl);
-            }
-
-            $("div.relations").hide();
-
-        });
-
-        //Adjust left nav
-        // $('.sphinxsidebar').animate({
-        //     scrollTop: ($(location.hash).offset().top - 100)
-        // }, 0.1);
-
-        var getCurrOrigin = $(location).attr('origin');
-        var getCurrPathName = $(location).attr('pathname');
-        var newurllocation = getCurrOrigin + getCurrPathName;
-        console.log('newCurrLocation:' + newurllocation);
-        var getCurrentLocation = $("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top;
-
-        if (getCurrentLocation < 700) {
-            console.log("Step2.1");
-            $('.sphinxsidebar').animate({
-                scrollTop: ($("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top - 200)
-            }, 0.1);
-        } else {
-            console.log("Step2.2");
-            $('.sphinxsidebar').animate({
-                scrollTop: ($("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top - 200)
-            }, 0.1);
-        }
-
-    } catch (err) {
-        console.log(err);
-    }
-
 
     //Card system dynamic url generation
     $('.card, .cardlong').click(function () {
