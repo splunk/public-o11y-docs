@@ -1,17 +1,14 @@
 (ntp)=
 
 # NTP Receiver
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the NTP server monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `ntp` monitor type for the Smart Agent Receiver.
-
-Use the NTP receiver to retrieve clock offset from an NTP server. The receiver enforces a minimum interval of 30 minutes.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `ntp` monitor type to retrieve clock offset from an NTP server. The minimum interval is 30 minutes.
 
 This receiver is available on Kubernetes, Linux, and Windows.
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -26,9 +23,9 @@ This receiver is available on Kubernetes, Linux, and Windows.
 ```{include} /_includes/configuration.md
 ```
 
-### Configuration example
+### Example
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```yaml
 receivers:
@@ -37,7 +34,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the receiver activation, you must also include the receiver in a `metrics` pipeline. To do this, add the receiver to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -57,7 +54,6 @@ The following table shows the configuration options for the ntp receiver:
 | `version` | No | `integer` | NTP protocol version. Default is `4`. |
 | `timeout` | No | `int64` | Timeout in seconds for the request. Default is `5s`. |
 
-
 ## Metrics
 
 The following metrics are available for this integration:
@@ -69,7 +65,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
