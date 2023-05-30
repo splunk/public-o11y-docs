@@ -1,4 +1,4 @@
-.. _logs-LOconnect-usecase:
+.. _logs-LOconnect-scenario:
 
 ************************************************************************************************************************
 Scenario: Aisha troubleshoots workflow failures with Log Observer

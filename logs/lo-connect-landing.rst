@@ -15,7 +15,7 @@ Splunk Log Observer Connect
     scp
     set-up-logconnect
     LOconnect-troubleshoot
-    LOconnect-usecase
+    LOconnect-scenario
     timeline
     queries
     raw-logs-display
@@ -38,7 +38,7 @@ Splunk Log Observer Connect
 
 - :ref:`logs-LOconnect-troubleshoot`
 
-- :ref:`logs-LOconnect-usecase`
+- :ref:`logs-LOconnect-scenario`
 
 - :ref:`logs-timeline`
 

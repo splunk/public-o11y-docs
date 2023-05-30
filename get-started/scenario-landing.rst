@@ -99,4 +99,4 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`Synthetic Monitoring <synth-landing>`     
     - :ref:`uptime-test-scenario`
   * - :ref:`Log Observer <logs-intro-logconnect>`
-    - :ref:`logs-LOconnect-usecase`
+    - :ref:`logs-LOconnect-scenario`
