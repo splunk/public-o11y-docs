@@ -114,4 +114,4 @@ Skyler created the every-other-day coverage they need by creating a single sched
 
 * For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-call-schedules`.
 * For steps to create an incident policy, including steps for incident workflows, see :ref:`ii-create-configure-incident-policies`.
-* For a scenario with a multi-shift schedule and primary and secondary coverage, see :ref:`ii-use-case-business-hours`.
+* For a scenario with a multi-shift schedule and primary and secondary coverage, see :ref:`ii-scenario-business-hours`.
