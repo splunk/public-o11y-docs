@@ -41,6 +41,6 @@ $(document).ready(function() {
 
   if (window.location.hash) {
     scrollToTarget(window.location.hash);
-    scrollToMenu();
+    //scrollToMenu();
   }
 });
