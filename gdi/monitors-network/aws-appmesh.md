@@ -46,10 +46,6 @@ service:
       receivers: [smartagent/appmesh]
 ```
 
-See the examples directory in the Splunk Distribution of OpenTelemetry Collector GitHub repo at 
-<a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">https://githubcom/signalfx/splunk-otel-collector/tree/main/examples</a>
-for specific use cases that show how the Collector can integrate and complement existing environments.
-
 ### AWS AppMesh Envoy Proxy
 
 To configure the AWS AppMesh Envoy Proxy, add the following lines to your configuration of the Envoy StatsD sink on AppMesh:
@@ -86,7 +82,7 @@ The following table shows the configuration options for this monitor:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/appmesh/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/appmesh/metadata.yaml"></div>
 
 ### Notes
 

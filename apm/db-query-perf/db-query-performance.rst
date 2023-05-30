@@ -13,8 +13,8 @@ Monitor Database Query Performance
    :hidden:
 
    enable-db-perf
-   db-perf-use-case
-   db-perf-redis-use-case
+   db-perf-scenario
+   db-perf-redis-scenario
    db-perf-troubleshooting
    db-perf-reference
    db-perf-nosql
@@ -104,7 +104,7 @@ Database Query Performance is available by default, so all you need to do is ena
 See the following links for more information about Database Query Performance: 
 
 * To enable Database Query Performance, see :ref:`enable-db-perf`. 
-* For a use case focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-use-case`. 
-* For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-use-case`.
+* For a use case focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-scenario`. 
+* For a use case focusing on Redis and NoSQL troubleshooting, see :ref:`redis-scenario`.
 * To troubleshoot issues with Database Query Performance, see :ref:`db-perf-troubleshooting`. 
 * For reference material about Database Query Performance, see :ref:`db-perf-reference`.

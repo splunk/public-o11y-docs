@@ -11,7 +11,7 @@ This topic covers five high-level steps you can follow to get started with Splun
 
 For an introduction to Observability Cloud products, see :ref:`welcome`.
 
-For information about how these products can be used together to address real-life use cases, see :ref:`get-started-use-case`.
+For information about how these products can be used together to address real-life use cases, see :ref:`get-started-scenario`.
 
 Follow these steps to set up and make the most of Observability Cloud:
 

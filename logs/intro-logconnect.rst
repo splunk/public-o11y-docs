@@ -58,7 +58,7 @@ The following table lists features available to customers who have integrated Sp
 
    * - See the metrics, traces, and infrastructure related to a specific log.
      - Related Content
-     - :ref:`get-started-use-case`
+     - :ref:`get-started-scenario`
 
    * - Save and share Log Observer queries.
      - Saved Queries

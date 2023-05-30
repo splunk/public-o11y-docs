@@ -10,7 +10,7 @@ Introduction to AlwaysOn Profiling for Splunk APM
 .. toctree::
    :hidden:
 
-   profiling-use-case-library
+   profiling-scenario-library
    get-data-in-profiling
    using-the-flamegraph
    profiling-memory-metrics
@@ -46,7 +46,7 @@ Here are some of the typical issues that AlwaysOn Profiling can identify:
 - File system bottlenecks
 - Slow calls to external services
 
-For sample use cases, see :ref:`profiling-use-case-landingpage`.
+For sample use cases, see :ref:`profiling-scenario-landingpage`.
 
 .. raw:: html
 
@@ -54,7 +54,7 @@ For sample use cases, see :ref:`profiling-use-case-landingpage`.
     <h2>Memory profiling</h2>
   </embed>
 
-Memory profiling adds memory allocation data to stack traces and exposes memory metrics, so that you can discover leaks and unusual consumption patterns in your instrumented services and applications. See :ref:`memory-profiling-use-case`.
+Memory profiling adds memory allocation data to stack traces and exposes memory metrics, so that you can discover leaks and unusual consumption patterns in your instrumented services and applications. See :ref:`memory-profiling-scenario`.
 
 After you get profiling data into Observability Cloud, you can visualize the memory allocation behavior of each component using the flame graph. See :ref:`flamegraph-howto`.
 

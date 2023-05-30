@@ -20,7 +20,7 @@ Observability Cloud teams and alerting
 ===================================================================================
 A primary means of organizing collaboration on observability and reliability across teams is by setting up Observability Cloud teams. Teams serve as a secure way to organize users by functional area. Teams also let you control access and permissions to all objects, dashboards, and queries in Observability Cloud. Observability Cloud offers enterprise-grade management with token and access control. See:ref:`admin-tokens`. 
 
-After you organize users into teams by functional area, you can connect users in a particular area to detectors and dashboard groups that they are most interested in. See :ref:`admin-manage-teams` to learn more about how you can use Observability Cloud teams to facilitate collaboration within and across functional teams. Organize your Observability Cloud teams structure to reduce toil by configuring detectors to notify only the most relevant teams. For an example of increasing security while reducing toil, see :ref:`use-case-security`.
+After you organize users into teams by functional area, you can connect users in a particular area to detectors and dashboard groups that they are most interested in. See :ref:`admin-manage-teams` to learn more about how you can use Observability Cloud teams to facilitate collaboration within and across functional teams. Organize your Observability Cloud teams structure to reduce toil by configuring detectors to notify only the most relevant teams. For an example of increasing security while reducing toil, see :ref:`scenario-security`.
 
 Splunk APM 
 ===================================================================================
