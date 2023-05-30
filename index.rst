@@ -645,7 +645,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3 
   
-   Synthetics use case library TOGGLE <synthetics/synth-use-cases/synth-landing>
+   Synthetics use case library TOGGLE <synthetics/synth-scenarios/synth-landing>
 
 .. toctree::
    :maxdepth:   3
