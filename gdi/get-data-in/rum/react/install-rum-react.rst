@@ -61,7 +61,7 @@ Follow these steps to import and initialize the React Native RUM package.
       # yarn
       yarn add @splunk/otel-react-native
 
-2. Wrap your entire App component using the library:
+2. Wrap your entire App component using the ``OtelWrapper`` component:
 
    .. code::
 
@@ -92,16 +92,10 @@ Follow these steps to import and initialize the React Native RUM package.
          realm: '<realm>',
          rumAccessToken: '<rum-access-token>',
          applicationName: '<your-app-name>',
-         environment: '<your-environment>',
-         debug: true,
-         /*
-           URLs that partially match any regex in ignoreUrls aren't traced.
-           URLs that are exact matches of strings in ignoreUrls aren't traced.
-         */
-         ignoreUrls: ['http://sampleurl.org'],
+         environment: '<your-environment>'
       }
 
-4. (Optional) To instrument React Navigation, instrument Navigator as in the following example:
+4. (Optional) To instrument React Navigation, adapt your code as in the following example:
 
    .. code::
 
@@ -113,7 +107,7 @@ Follow these steps to import and initialize the React Native RUM package.
             <NavigationContainer
                ref={navigationRef}
                onReady={() => {
-               startNavigationTracking(navigationRef);
+                  startNavigationTracking(navigationRef);
                }}
             >
                <Stack.Navigator>
