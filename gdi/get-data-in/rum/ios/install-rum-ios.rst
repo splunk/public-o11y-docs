@@ -155,7 +155,7 @@ If you want to import the iOS RUM Agent as a framework into your project, follow
 
 1. Check the build settings
 
-Clone the ``splunk-otel-ios`` repository and open the ``SplunkRumWorkspace.xcworkspace`` file in Xcode. 
+Clone the :new-page:`splunk-otel-ios <https://github.com/signalfx/splunk-otel-ios>` repository and open the SplunkRumWorkspace.xcworkspace file in Xcode. 
 
 Navigate to the :guilabel:`Build Settings` tab on the ``SplunkOtel`` target and make sure the following settings are present:
 
@@ -188,7 +188,7 @@ Run the following command to create the XCFramework:
 
 4. Import the XCFramework into your project
 
-Open your project in Xcode and drag the ``SplunkOtel.xcframework`` file into the project navigator. This automatically imports the framework.
+Open your project in Xcode and drag the SplunkOtel.xcframework file into the project navigator. This automatically imports the framework.
 
 .. _integrate-ios-apm-traces:
 
