@@ -15,7 +15,7 @@ Configure application receivers for networks
    monitors-network/dns
    monitors-network/logstash-tcp
    monitors-network/net-io
-   monitors-network/protocols
+   monitors-network/network-protocols
    monitors-network/ntp
    snmp/snmp
    statsd/statsd
