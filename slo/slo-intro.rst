@@ -26,7 +26,7 @@ The following table defines key concepts in service level monitoring.
 
  .. list-table::
     :header-rows: 1
-    :widths: 40 60
+    :widths: 20 40 40
 
     * - :strong:`Concept`
       - :strong:`Definition`
