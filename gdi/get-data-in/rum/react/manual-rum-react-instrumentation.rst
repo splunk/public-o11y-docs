@@ -7,7 +7,7 @@ Manually instrument React Native applications
 .. meta::
    :description: Manually instrument React Native applications for Splunk Observability Cloud real user monitoring / RUM using the React Native RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
-You can manually instrument React Native applications for Splunk RUM using the React Native RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
+You can manually instrument React Native applications for Splunk RUM to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
 .. _react-rum-span-filtering:
 

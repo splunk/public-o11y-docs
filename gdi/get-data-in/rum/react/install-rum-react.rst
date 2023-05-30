@@ -5,9 +5,9 @@ Install the React Native RUM agent for Splunk RUM
 **************************************************************
 
 .. meta::
-   :description: Instrument your React Native applications for Splunk Observability Cloud real user monitoring / RUM using the React Native RUM agent from the Splunk OpenTelemetry Instrumentation for React Native.
+   :description: Instrument your React Native applications for Splunk Observability Cloud real user monitoring / RUM using the React Native RUM agent from the Splunk Distribution of OpenTelemetry for React Native.
 
-You can instrument your React Native and Expo applications for Splunk RUM using the React Native RUM agent from the Splunk OpenTelemetry Instrumentation for React Native.
+You can instrument your React Native and Expo applications using the Splunk Distribution of OpenTelemetry for React Native. 
 
 To instrument your React Native or Expo application and get data into Splunk RUM, follow the instructions on this page.
 
@@ -157,4 +157,4 @@ To remove or change attributes in your spans, such as personally identifiable in
 How to contribute
 =========================================================
 
-The Splunk OpenTelemetry Instrumentation for React Native is open-source software. You can contribute to its improvement by creating pull requests in GitHub. To learn more, see the :new-page:`contributing guidelines <https://github.com/signalfx/splunk-otel-react-native/blob/main/CONTRIBUTING.md>` in GitHub.
+The Splunk Distribution of OpenTelemetry for React Native is open-source software. You can contribute to its improvement by creating pull requests in GitHub. To learn more, see the :new-page:`contributing guidelines <https://github.com/signalfx/splunk-otel-react-native/blob/main/CONTRIBUTING.md>` in GitHub.

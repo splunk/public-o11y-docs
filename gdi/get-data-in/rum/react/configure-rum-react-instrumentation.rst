@@ -7,7 +7,7 @@ Configure the Splunk React Native RUM instrumentation
 .. meta::
    :description: Configure the Splunk Observability Cloud real user monitoring / RUM instrumentation for your React Native applications.
 
-You can configure the React Native RUM agent from the Splunk OpenTelemetry Instrumentation for React Native to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
+You can configure the Splunk Distribution of OpenTelemetry for React Native to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 
 To configure the React Native RUM agent, add the key-value pairs to a ``ReactNativeConfiguration`` object. For example:
 
