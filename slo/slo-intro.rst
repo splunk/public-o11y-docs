@@ -20,7 +20,7 @@ While you have always been able to use the data in Splunk Observability Cloud to
 What is service level monitoring?
 =============================================
 
-Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service in order to calculate the health and performance of a deployed software or service and compare it against the service level agreement (SLA).
+Service level monitoring is the process of measuring, tracking, and analyzing a variety of service level indicators (SLIs) associated with a given service in order to calculate the health of a deployed software or service and compare it against the service level agreement (SLA).
 
 The following table defines key concepts in service level monitoring.
 
@@ -42,11 +42,11 @@ The following table defines key concepts in service level monitoring.
         * Time window-based performance SLI: Count of minutely windows where p95 < 100ms
 
     * - Service level objective (SLO)
-      - An SLO defines a target for an SLI and a compliance period over which that target should be met. An SLO contains 3 elements: an SLI, a target, and a compliance period. Compliance periods can be calendar, such as monthly, or rolling, such as past 30 days.
-      - * Request-based availability SLI over a calendar period: Our service should respond successfully to 95% of requests in a month
+      - An SLO defines a target for an SLI and a compliance period over which that target must be met. An SLO contains 3 elements: an SLI, a target, and a compliance period. Compliance periods can be calendar, such as monthly, or rolling, such as past 30 days.
+      - * Request-based availability SLI over a calendar period: Our service must respond successfully to 95% of requests in a month
         * Request-based performance SLI over a rolling period: Our service must respond to 99% of requests in < 100 ms over a 7-day period
-        * Time window-based availability SLI over a rolling period: Our service should respond successfully to 97% of requests 99.9% of the time in a 30-day period
-        * Time window-based performance SLI over a calendar period: Our service p95 should be < 100ms 99% of the time in a month
+        * Time window-based availability SLI over a rolling period: Our service must respond successfully to 97% of requests 99.9% of the time in a 30-day period
+        * Time window-based performance SLI over a calendar period: Our service p95 must be < 100ms 99% of the time in a month
 
     * - Service level agreement (SLA)
       - An SLA is a contractual agreement that indicates service levels your users can expect from your organization. If an SLA is not met, there can be financial consequences.
