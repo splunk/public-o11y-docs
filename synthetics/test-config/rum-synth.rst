@@ -52,7 +52,7 @@ Web vitals are a great way of measuring if your tests are actually capturing the
 
 Example
 ------------------
-The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-use-case`. The SRE team wants to determine the health of the API test by run location. The data centers for Buttercup Games are in Johannesburg and the web vitals for the local tests reflect optimal performance. 
+The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-scenario`. The SRE team wants to determine the health of the API test by run location. The data centers for Buttercup Games are in Johannesburg and the web vitals for the local tests reflect optimal performance. 
 
 Using the RUM integration, the SRE team can compared web vitals by global results and found that the LCP really lagged. 
 
