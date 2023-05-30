@@ -29,7 +29,7 @@ The following diagram provides a high-level view of how each Observability Cloud
   :width: 100%
   :alt: This screenshot shows how Observability Cloud products serve the different layers and processes in an organization's environment.
 
-For information about how these products can be used together to address real-life use cases, see :ref:`get-started-use-case`.
+For information about how these products can be used together to address real-life use cases, see :ref:`get-started-scenario`.
 
 To get started with Observability Cloud, see :ref:`get-started-o11y`.
 
@@ -83,7 +83,7 @@ Collect traces and spans to monitor your distributed applications with Splunk AP
 
 For more information, see :ref:`wcidw-apm`
 
-For information about how APM can be used to address real-life use cases, see :ref:`apm-use-cases-intro`.
+For information about how APM can be used to address real-life use cases, see :ref:`apm-scenarios-intro`.
 
 
 .. _welcome-rum:
