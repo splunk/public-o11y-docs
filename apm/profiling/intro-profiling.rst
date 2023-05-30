@@ -46,7 +46,7 @@ Here are some of the typical issues that AlwaysOn Profiling can identify:
 - File system bottlenecks
 - Slow calls to external services
 
-For sample use cases, see :ref:`profiling-use-case-landingpage`.
+For sample use cases, see :ref:`profiling-scenario-landingpage`.
 
 .. raw:: html
 
