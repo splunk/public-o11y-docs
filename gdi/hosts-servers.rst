@@ -42,7 +42,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/kafka-producer
    monitors-hosts/microsoft-windows-iis
    monitors-hosts/nginx
-   monitors-hosts/telegraf-ntpq   
+   monitors-hosts/ntpq   
    monitors-hosts/php-fpm
    procstat/procstat
    solr/solr
