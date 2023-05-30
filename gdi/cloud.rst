@@ -12,7 +12,7 @@ Configure application receivers for cloud platforms
 
    monitors-cloud/heroku
    monitors-cloud/kong
-   openstack/openstack
+   monitors-cloud/openstack
 
 These application receivers gather metrics from their associated cloud platform-related applications and the hosts the applications are running on.
 

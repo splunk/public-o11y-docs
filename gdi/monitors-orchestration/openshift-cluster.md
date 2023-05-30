@@ -4,15 +4,11 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the OpenShift cluster monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the Smart Agent Receiver to provide the `openshift-cluster` monitor.
-
-Use this integration to collect cluster-level metrics from the Kubernetes API server, which includes all metrics from the [kubernetes-cluster monitor](https://docs.splunk.com/Observability/gdi/kubernetes-cluster/kubernetes-cluster.html#nav-Kubernetes-cluster) with additional OpenShift-specific metrics. You only need to use the `openshift-cluster` monitor for OpenShift deployments, as it incorporates the `kubernetes-cluster` monitor automatically.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `openshift-cluster` monitor type to collect cluster-level metrics from the Kubernetes API server, which includes all metrics from the [kubernetes-cluster monitor](https://docs.splunk.com/Observability/gdi/kubernetes-cluster/kubernetes-cluster.html#nav-Kubernetes-cluster) with additional OpenShift-specific metrics. You only need to use the `openshift-cluster` monitor for OpenShift deployments, as it incorporates the `kubernetes-cluster` monitor automatically.
 
 This monitor is available on Kubernetes, Linux, and Windows.
 
-### Behaviour
+## Behaviour
 
 Since the agent is generally running in multiple places in a Kubernetes cluster, and since it is generally more convenient to share the same configuration across all agent instances, this monitor by default makes use of a leader election process to ensure that it is the only agent sending metrics in a cluster.
 
@@ -78,14 +74,14 @@ The **nested** `kubernetesAPI` configuration object has the following fields:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/kubernetes/cluster/metadata.yaml"></div>
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
