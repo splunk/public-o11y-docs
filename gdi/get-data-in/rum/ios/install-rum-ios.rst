@@ -146,6 +146,50 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
 
 .. note:: Symbolication is not supported.
 
+.. _xcframeork-ios-rum:
+
+Build an XCFramework
+=================================
+
+If you want to import the iOS RUM Agent as a framework into your project, follow these steps:
+
+1. Check the build settings
+
+Clone the ``splunk-otel-ios`` repository and open the ``SplunkRumWorkspace.xcworkspace`` file in Xcode. 
+
+Navigate to the :guilabel:`Build Settings` tab on the ``SplunkOtel`` target and make sure the following settings are present:
+
+- :strong:`Skip Install`: No
+- :strong:`Build Libraries for Distribution`: Yes
+
+2. Create a new archives directory
+
+Open a terminal and navigate to the directory where the SplunkRum.xcodeproj file is located, for example ``SplunkRumWorkspace/SplunkRum``. 
+
+Run the following command to create a new archives directory containing the ``SplunkRum-iOS.xcarchive`` file:
+
+.. code-block:: bash
+
+   xcodebuild archive -project SplunkRum.xcodeproj -scheme SplunkOtel -destination "generic/platform=iOS" -archivePath "archives/SplunkRum-iOS"
+
+Repeat the process for the simulator platform:
+
+.. code-block:: bash
+
+   xcodebuild archive -project SplunkRum.xcodeproj -scheme SplunkOtel -destination "generic/platform=iOS Simulator" -archivePath "archives/SplunkRum-iOS_Simulator"
+
+3. Create the new XCFramework
+
+Run the following command to create the XCFramework:
+
+.. code-block:: bash
+
+   xcodebuild -create-xcframework -archive archives/SplunkRum-iOS.xcarchive -framework SplunkOtel.framework -archive archives/SplunkRum-iOS_Simulator.xcarchive -framework SplunkOtel.framework -output xcframeworks/SplunkOtel.xcframework
+
+4. Import the XCFramework into your project
+
+Open your project in Xcode and drag the ``SplunkOtel.xcframework`` file into the project navigator. This automatically imports the framework.
+
 .. _integrate-ios-apm-traces:
 
 Link RUM with Splunk APM
@@ -156,7 +200,6 @@ Splunk RUM uses server timing to calculate the response time between the front e
 By default, the Splunk Distributions of OpenTelemetry already send the ``Server-Timing`` header. The header links spans from the browser with back-end spans and traces.
 
 The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM. 
-
 
 .. _ios-webview-instrumentation:
 
