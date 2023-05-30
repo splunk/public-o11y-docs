@@ -1,4 +1,4 @@
-.. _troubleshoot-k8s-nav-use-case:
+.. _troubleshoot-k8s-nav-scenario:
 
 *****************************************************************************
 Scenario: Kai troubleshoots a server failure using the Kubernetes navigator

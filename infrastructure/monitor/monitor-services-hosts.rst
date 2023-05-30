@@ -17,7 +17,7 @@ Monitor services and hosts in Splunk Infrastructure Monitoring
     k8s-nav
     k8s
     hosts
-    use-case-k8s-nav
+    scenario-k8s-nav
     
     
 
