@@ -84,14 +84,14 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :new-page:`Scenario\: Group related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`
   * - IT Service Intelligence
     - :new-page:`Scenario: Monitor business service degradation and identify the root cause <https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`
-  * - :ref:`RUM <use-case-landingpage>`
-    - :ref:`use-case-monitoring`
-  * - :ref:`RUM <use-case-landingpage>`
+  * - :ref:`RUM <scenario-landingpage>`
+    - :ref:`scenario-monitoring`
+  * - :ref:`RUM <scenario-landingpage>`
     - :ref:`spa-custom-event`
-  * - :ref:`RUM <use-case-landingpage>` 
+  * - :ref:`RUM <scenario-landingpage>` 
     - :ref:`rum-identify-span-problems`
-  * - :ref:`RUM <use-case-landingpage>` 
-    - :ref:`rum-mobile-usecase`
+  * - :ref:`RUM <scenario-landingpage>` 
+    - :ref:`rum-mobile-scenario`
   * - :ref:`Synthetic Monitoring <synth-landing>` 
     - :ref:`browser-test-use-case`
   * - :ref:`Synthetic Monitoring <synth-landing>`     

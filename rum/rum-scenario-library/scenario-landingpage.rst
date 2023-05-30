@@ -1,4 +1,4 @@
-.. _use-case-landingpage:
+.. _scenario-landingpage:
 
 *********************************************************************
 Scenarios for monitoring applications and services using Splunk RUM
@@ -9,13 +9,13 @@ The following scenarios feature examples from Buttercup Industries, a fictitious
 .. toctree::
    :hidden:
 
-   use-case-monitoring
+   scenario-monitoring
    spa-custom-event
    identify-span-problems
-   rum-mobile-usecase
+   rum-mobile-scenario
 
 * :ref:`use-case-monitoring`
 * :ref:`spa-custom-event`
 * :ref:`rum-identify-span-problems`
-* :ref:`rum-mobile-usecase`
+* :ref:`rum-mobile-scenario`
 * :ref:`rum-built-in-dashboards`

@@ -1,4 +1,4 @@
-.. _use-case-monitoring:
+.. _scenario-monitoring:
 
 ******************************************************************************
 Scenario: Kai identifies performance bottlenecks with Splunk RUM for Browser
