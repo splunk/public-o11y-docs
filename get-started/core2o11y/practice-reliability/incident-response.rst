@@ -31,7 +31,7 @@ Select any alert to see details and links to Observability Cloud components that
    :width: 100%
    :alt: This screenshot shows the detail view of an individual critical alert in Observability Cloud.
 
-See :ref:`use-cases-alerts-detectors` for examples of how you can use alerts to notify teams about increased server latency, high CPU usage, approaching system limits, and other conditions that negatively impact user experience.
+See :ref:`scenarios-alerts-detectors` for examples of how you can use alerts to notify teams about increased server latency, high CPU usage, approaching system limits, and other conditions that negatively impact user experience.
 
 Dashboards
 ===================================================================================
@@ -47,7 +47,7 @@ To see your dashboards, log in to Splunk Observability Cloud and select :strong:
 
 Splunk APM
 ===================================================================================
-APM collects traces and spans to monitor your distributed applications. You can investigate the root cause of an error with the service map or find the root cause of an error using Tag Spotlight. To learn how, see :ref:`service-map` and :ref:`troubleshoot-tag-spotlight`. For more examples of APM troubleshooting use cases, see :ref:`apm-use-cases-intro`. 
+APM collects traces and spans to monitor your distributed applications. You can investigate the root cause of an error with the service map or find the root cause of an error using Tag Spotlight. To learn how, see :ref:`service-map` and :ref:`troubleshoot-tag-spotlight`. For more examples of APM troubleshooting use cases, see :ref:`apm-scenarios-intro`. 
 
 For a walkthrough of the APM UI and guidance on drilling down to the root cause of an incident, see the :new-page:`APM troubleshooting scenario <https://bossofopsando11y.com/apm/troubleshooting.html>`.
 
@@ -109,7 +109,7 @@ RUM monitors the user experience in your application UI by analyzing user sessio
 
 You can look for front-end and back-end errors, as well as see resource errors and resource response times. See :ref:`rum-identify-span-problems` to walk through a use case that shows you how to find JavaScript errors, back-end errors, and long resource response times.
 
-RUM is particularly helpful when investigating the root cause of an error reported by a user. See :ref:`rum-mobile-usecase` to learn more. 
+RUM is particularly helpful when investigating the root cause of an error reported by a user. See :ref:`rum-mobile-scenario` to learn more. 
 
 
 

@@ -200,7 +200,7 @@ Trace Analyzer
 
 In Trace Analyzer, use Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
 
-To learn more, see :ref:`apm-use-case-trace-analyzer` for a dedicated use case leveraging trace search. 
+To learn more, see :ref:`apm-scenario-trace-analyzer` for a dedicated use case leveraging trace search. 
 
 
 .. _trace-view-concept:

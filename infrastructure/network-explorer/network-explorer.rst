@@ -12,7 +12,7 @@ Network Explorer in Splunk Infrastructure Monitoring
     network-explorer-setup
     network-explorer-network-map
     network-explorer-metrics
-    network-explorer-use-cases/network-explorer-use-cases
+    network-explorer-scenarios/network-explorer-scenarios
     network-explorer-troubleshoot
 
 
@@ -22,7 +22,7 @@ Use the following links to navigate the documentation set for Network Explorer i
     * :ref:`network-explorer-setup`
     * :ref:`network-explorer-network-map`
     * :ref:`network-explorer-metrics`
-    * :ref:`network-explorer-use-cases`
+    * :ref:`network-explorer-scenarios`
     * :ref:`network-explorer-troubleshoot`
 
 
