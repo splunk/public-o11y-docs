@@ -6,8 +6,8 @@
   * - :strong:`Permission`
     - :strong:`Admin`
     - :strong:`Power user`
-    - :strong:`Read-only`
-    - :strong:`Subscription usage`
+    - :strong:`Usage`
+    - :strong:`Read_only`
 
 
   * - :strong:`View metrics pipeline management metric summary (no ruleset)`

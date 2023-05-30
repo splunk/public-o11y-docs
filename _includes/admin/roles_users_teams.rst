@@ -6,8 +6,8 @@
   * - :strong:`Capability`
     - :strong:`Admin`
     - :strong:`Power user`
-    - :strong:`Read-only`
-    - :strong:`Subscription usage`
+    - :strong:`Usage`
+    - :strong:`Read_only`
 
   * - :strong:`Create team`
     - Yes
@@ -30,16 +30,17 @@
   * - :strong:`Edit team name and description`
     - Yes
     - Yes
+    - No
     - * Yes, when enhanced team security is disabled
       * No, when enhanced team security is enabled
-    - No
+
 
   * - :strong:`Join team`
     - Yes
     - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
-    - Not applicable: A Team Member is already on a team and doesn't need to join.
     - * Yes, when enhanced team security is disabled
       * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
+    - Not applicable: A Team Member is already on a team and doesn't need to join.
 
   * - :strong:`Add member`
     - Yes
@@ -56,11 +57,11 @@
   * - :strong:`Edit notification policy`
     - Yes
     - Yes
-    - Yes
     - No
+    - Yes
   
   * - :strong:`Edit notification policy`
     - Yes
     - Yes
-    - Yes
     - No
+    - Yes

@@ -6,8 +6,8 @@
   * - :strong:`Capability`
     - :strong:`Admin`
     - :strong:`Power user`
-    - :strong:`Read-only`
-    - :strong:`Subscription usage`
+    - :strong:`Usage`
+    - :strong:`Read_only`
 
 
   * - :strong:`View Settings`
@@ -44,8 +44,8 @@
   * - :strong:`View org subscription usage`
     - Yes
     - No
-    - No
     - Yes
+    - No
 
 
   * - :strong:`View users`
