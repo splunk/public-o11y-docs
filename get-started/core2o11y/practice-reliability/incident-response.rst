@@ -109,7 +109,7 @@ RUM monitors the user experience in your application UI by analyzing user sessio
 
 You can look for front-end and back-end errors, as well as see resource errors and resource response times. See :ref:`rum-identify-span-problems` to walk through a use case that shows you how to find JavaScript errors, back-end errors, and long resource response times.
 
-RUM is particularly helpful when investigating the root cause of an error reported by a user. See :ref:`rum-mobile-usecase` to learn more. 
+RUM is particularly helpful when investigating the root cause of an error reported by a user. See :ref:`rum-mobile-scenario` to learn more. 
 
 
 

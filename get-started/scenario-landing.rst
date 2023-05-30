@@ -73,7 +73,7 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`Incident Intelligence scheduling <ii-scenarios-schedules>`
     - :ref:`ii-scenario-day-by-day`
   * - Infrastructure Monitoring
-    - :ref:`troubleshoot-k8s-nav-use-case`
+    - :ref:`troubleshoot-k8s-nav-scenario`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
     - :ref:`find-network-error`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`

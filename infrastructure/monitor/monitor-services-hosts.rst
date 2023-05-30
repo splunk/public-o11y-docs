@@ -40,7 +40,7 @@ See the following pages for more information about using :ref:`navigators <use-n
 
 * Use cases for navigators
 
-  - :ref:`troubleshoot-k8s-nav-use-case`
+  - :ref:`troubleshoot-k8s-nav-scenario`
 
 Splunk Observability Cloud also provides metrics and other data :ref:`for the following host and application monitors <monitor-data-sources>`.
 
