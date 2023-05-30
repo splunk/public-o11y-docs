@@ -1,6 +1,6 @@
 (ntp)=
 
-# NTP Receiver
+# NTP server
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the NTP server monitor. See benefits, install, configuration, and metrics">
 

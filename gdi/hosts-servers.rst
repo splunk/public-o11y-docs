@@ -41,7 +41,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/kafka-consumer
    monitors-hosts/kafka-producer
    monitors-hosts/microsoft-windows-iis
-   nginx/nginx
+   monitors-hosts/nginx
    monitors-hosts/php-fpm
    procstat/procstat
    solr/solr
