@@ -448,7 +448,7 @@
      -
      -
 
-   * - :ref:`Oracle Database <oracledb>`
+   * - :ref:`Oracle Database receiver <oracledb>`
      - :strong:`X`
      -
      -  

@@ -13,7 +13,7 @@ Configure application receivers for caches and memory
 
    monitors-cache/memcached
    monitors-cache/memory
-   opcache/opcache
+   monitors-cache/opcache
 
 These application receivers gather metrics from their associated cache- and memory-related applications and the hosts the applications are running on.
 

@@ -6,7 +6,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `nginx` monitor type to  to retrieve metrics and logs from an NGINX instance.
 
-This integration is available on Linux and Windows.`
+This integration is available on Linux and Windows.
 
 ## Benefits
 
