@@ -80,10 +80,10 @@ This is the collection of scenarios available for Splunk Observability Cloud.
     - :ref:`cross-zone-traffic-cost`
   * - :ref:`Infrastructure Monitoring\: Network Explorer <network-explorer-scenarios>`
     - :ref:`examine-service-dependencies`
-  * - IT Service Intelligence
-    - :new-page:`Scenario\: Group related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`
-  * - IT Service Intelligence
-    - :new-page:`Scenario: Monitor business service degradation and identify the root cause <https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`
+  * - :new-page:`IT Service Intelligence <https://docs.splunk.com/Documentation/ITSI>`
+    - :new-page:`Scenario\: Lauren groups related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`
+  * - :new-page:`IT Service Intelligence <https://docs.splunk.com/Documentation/ITSI>`
+    - :new-page:`Scenario\: Kai monitors business service degradation and identifies the root cause <https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`
   * - :ref:`RUM <scenario-landingpage>`
     - :ref:`scenario-monitoring`
   * - :ref:`RUM <scenario-landingpage>`

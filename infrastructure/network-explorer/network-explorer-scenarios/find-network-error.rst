@@ -3,7 +3,7 @@
 
 
 *******************************************************************
-Scenario: Identify network problems affecting services
+Scenario: Kai identifies network problems affecting services
 *******************************************************************
 
 .. meta::
