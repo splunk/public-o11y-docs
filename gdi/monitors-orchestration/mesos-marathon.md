@@ -1,17 +1,11 @@
 (marathon)=
 # Mesos Marathon
+
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Marathon monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the Mesos Marathon monitor type to monitor a Mesos Marathon instance using the [Marathon Python plugin](https://github.com/signalfx/signalfx-agent/blob/main/docs/monitors/collectd-marathon.md).
 
-The Splunk Distribution of OpenTelemetry Collector provides this integration as the Mesos Marathon monitor type by using the Smart Agent Receiver.
-
-Use this integration to monitor a Mesos Marathon instance using the [Marathon Python plugin](https://github.com/signalfx/signalfx-agent/blob/main/docs/monitors/collectd-marathon.md).
-
-```{note}
-This monitor is not available on Windows as collectd plugins are only supported in Linux and Kubernetes. 
-```
-
+This integration is only available on Kubernetes and Linux.
 
 ## Benefits
 
@@ -28,6 +22,10 @@ This monitor is not available on Windows as collectd plugins are only supported 
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/marathon:
@@ -35,7 +33,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a metrics pipeline. To do this, add the receiver to the `service > pipelines > metrics > receivers` section of your configuration file.
+Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
 ```
 service:
@@ -43,9 +41,6 @@ service:
     metrics:
       receivers: [smartagent/marathon]
 ```
-
-See <a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">configuration examples</a> for specific use cases that show how the Splunk Distribution of OpenTelemetry Collector can integrate and complement existing environments.
-
 
 ### Configuration settings
 
@@ -61,30 +56,6 @@ The following table shows the configuration options for the Mesos Marathon monit
 | `scheme` | no | `string` | Set to either `http` or `https`. (**default:** `http`) |
 | `dcosAuthURL` | no | `string` | The dcos authentication URL that the plugin uses to get authentication tokens from. Set scheme to "https" if operating DC/OS in strict mode and dcosAuthURL to "https://leader.mesos/acs/api/v1/auth/login" (which is the default DNS entry provided by DC/OS) |
 
-
-
-The following is a sample YAML configuration:
-
-```yaml
-monitors:
-  - type: collectd/marathon
-    host: 127.0.0.1
-    port: 8080
-    scheme: http
-```
-
-The following is a sample YAML configuration for DC/OS:
-
-```yaml
-monitors:
-  - type: collectd/marathon
-    host: 127.0.0.1
-    port: 8080
-    scheme: https
-    dcosAuthURL: https://leader.mesos/acs/api/v1/auth/login
-```
-
-
 ## Metrics
 
 The following metrics are available for this integration:
@@ -97,7 +68,7 @@ The following metrics are available for this integration:
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

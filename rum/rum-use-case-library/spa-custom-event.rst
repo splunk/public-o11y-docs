@@ -2,12 +2,12 @@
 
 
 ******************************************************************************
-Create custom events and monitor a single page application
+Scenario: Kai creates custom events and monitor a single page application
 ******************************************************************************
 
-The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company.
+The following scenario features Buttercup Industries, a fictitious e-commerce company.
 
-About this use case 
+About this scenario
 ================================
 
 Buttercup Industries recently started a blog to share customer success stories and engage with their user base. The engineers at Buttercup Industries created the blog as a single-page application (SPA). Kai, a site reliability engineer at Buttercup Industries, monitors the blog with RUM to learn more about route changes, route durations, and back-end calls. Kai also leverages custom events in RUM to monitor how users engage with content on the blog.  
@@ -21,7 +21,7 @@ To monitor an SPA in Splunk RUM:
 
 1. Kai instruments the blog and names the application ``ButtercupBlog``. See, :ref:`browser-rum-spas` for the steps they take to instrument an SPA with Splunk RUM. 
 
-2. Kai opens RUM. From the left navigation panel, they select :strong:`RUM` and :strong:`Browser` as the source and :strong:`ButtercupBlog` as the Application. 
+2. Kai opens RUM. From the navigation panel, they select :strong:`RUM` and :strong:`Browser` as the source and :strong:`ButtercupBlog` as the Application. 
 
     In the Application Summary Dashboard Kai sees key metrics about the health of their application, like:
 
@@ -63,7 +63,7 @@ To create a custom event in Splunk RUM:
 Summary 
 =========
 
-In this use case, Kai:
+In this scenario, Kai:
 
 * Instrumented an SPA with Splunk RUM by following these steps: :ref:`browser-rum-spas`.
 

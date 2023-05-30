@@ -1,8 +1,7 @@
 .. _memory-profiling-use-case:
 
-**********************************************************
-Use case: Analyze memory usage using AlwaysOn Profiling
-**********************************************************
+Scenario: Sasha analyzes memory usage using AlwaysOn Profiling
+****************************************************************
 
 .. meta:: 
    :description: Learn how you can use AlwaysOn Profiling in Splunk APM to analyze memory usage in your applications, and pin down the causes of memory leaks and other issues.
@@ -56,5 +55,5 @@ Learn more
 
 - For more information on AlwaysOn Profiling and how to start using it, see :ref:`profiling-intro`.
 - For more information on the profiling flame graph, see :ref:`flamegraph-howto`.
-- For more Splunk APM use cases, see :ref:`apm-use-cases-intro`.
+- For more Splunk APM scenarios, see :ref:`apm-use-cases-intro`.
 - For more information on dashboards, see :ref:`dashboard-create-customize`.

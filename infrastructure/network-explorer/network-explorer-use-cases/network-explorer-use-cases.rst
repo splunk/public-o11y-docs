@@ -3,11 +3,11 @@
 .. _network-explorer-use-cases:
 
 *******************************************************************************************************
-Use cases: Troubleshoot network errors and optimize network performance using Network Explorer
+Scenarios for troubleshooting network errors and optimizing network performance using Network Explorer
 *******************************************************************************************************
 
 .. meta::
-    :description: Get started with Network Explorer use cases and the fictitious company context in the use cases
+    :description: Get started with Network Explorer scenarios and the fictitious company context in the scenarios
 
 .. toctree::
     :hidden:

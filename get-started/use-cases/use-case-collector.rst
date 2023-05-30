@@ -1,7 +1,7 @@
 .. _otel-collector-use-case:
 
 *****************************************************************************************************
-Use case: Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector
+Scenario: Kai monitors infrastructure and apps in a cloud environment using the Splunk OTel Collector
 *****************************************************************************************************
 
 .. meta:: 

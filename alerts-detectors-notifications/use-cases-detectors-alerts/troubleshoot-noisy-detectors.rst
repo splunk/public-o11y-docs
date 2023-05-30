@@ -1,13 +1,13 @@
 .. _troubleshoot-noisy-detectors:
 
 ************************************************************
-Use case: Fix a detector that misfires alerts
+Scenario: Kai fixes a detector that misfires alerts
 ************************************************************
 
 
 
 .. meta::
-    :description: This Splunk alerts and detectors use case describes how to troubleshoot detectors and maintain accurate data.
+    :description: This Splunk alerts and detectors scenario describes how to troubleshoot detectors and maintain accurate data.
 
 Kai, a site reliability engineer at Buttercup Games, is creating a new detector and wants to receive an alert whenever their server latency is higher than 260 milliseconds. Kai considers latency lower than 260 milliseconds as healthy for their service, so they want to get alerts when latency exceeds that threshold. 
 
@@ -123,7 +123,7 @@ Kai sees a preview detector with the new alert setting applied:
 Summary
 ==========================
 
-In this use case, Kai filtered out unwanted alerts by changing the alert settings.
+In this scenario, Kai filtered out unwanted alerts by changing the alert settings.
 
 Kai also explored three options for fixing a detector that did not fire alerts when expected:
 
@@ -134,4 +134,4 @@ Kai also explored three options for fixing a detector that did not fire alerts w
 Learn more
 ==========================
 
-To learn more about troubleshooting detectors, visit :ref:`troubleshoot-detectors`.
+To learn more about troubleshooting detectors, see :ref:`troubleshoot-detectors`.

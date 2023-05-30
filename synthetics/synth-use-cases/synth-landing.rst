@@ -1,12 +1,12 @@
 .. _synth-landing:
 
-***********************************
-Synthetics use case library
-***********************************
+*********************************************************************************************************
+Scenarios for monitoring applications and services using Splunk Synthetics
+*********************************************************************************************************
 
 .. meta::
     
-    :description: Learn about use cases for Splunk Synthetic Monitoring.
+    :description: Learn about scenarios for Splunk Synthetic Monitoring.
 
 .. toctree::
 
@@ -14,14 +14,14 @@ Synthetics use case library
     api-test-use-case
     uptime-test-use-case
 
-The following use cases feature examples from Buttercup Industries, a fictitious e-commerce company. Kai, a site reliability engineer at the Buttercup e-commerce company, shares the stories of how they use Splunk Synthetics and Splunk Observability Cloud to monitor and take action on their applications and services. 
+The following scenarios feature examples from Buttercup Industries, a fictitious e-commerce company. Kai, a site reliability engineer at the Buttercup e-commerce company, shares the stories of how they use Splunk Synthetics and Splunk Observability Cloud to monitor and take action on their applications and services. 
 
 .. list-table::
    :header-rows: 1
    :widths: 20 80
 
    * - :strong:`Test type`
-     - :strong:`Use case`
+     - :strong:`Scenario`
 
    * - Browser test 
      - :ref:`browser-test-use-case`

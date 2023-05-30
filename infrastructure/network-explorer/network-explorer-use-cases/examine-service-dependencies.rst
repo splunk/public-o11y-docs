@@ -4,14 +4,14 @@
 
 
 *************************************************************************************************
-Use case: Examine upstream and downstream dependencies for a service update
+Scenario: Kai examines upstream and downstream dependencies for a service update
 *************************************************************************************************
 
 .. meta::
-    :description: Examine service dependencies use case
+    :description: Examine service dependencies scenario
 
 
-The following use case features examples from Buttercup Games, a fictitious e-commerce company.
+The following scenario features examples from Buttercup Games, a fictitious e-commerce company.
 
 Kai, a site reliability engineer (SRE) at Buttercup Games, is responsible for rolling out an update to the ``checkoutservice`` application service in their Kubernetes environment. They want to make sure they know all the upstream and downstream dependencies of ``checkoutservice`` so they can notify the dependent teams.
 
