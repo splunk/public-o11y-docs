@@ -93,10 +93,10 @@ This is the collection of scenarios available for Splunk Observability Cloud.
   * - :ref:`RUM <scenario-landingpage>` 
     - :ref:`rum-mobile-scenario`
   * - :ref:`Synthetic Monitoring <synth-landing>` 
-    - :ref:`browser-test-use-case`
+    - :ref:`browser-test-scenario`
   * - :ref:`Synthetic Monitoring <synth-landing>`     
-    - :ref:`api-test-use-case`
+    - :ref:`api-test-scenario`
   * - :ref:`Synthetic Monitoring <synth-landing>`     
-    - :ref:`uptime-test-use-case`
+    - :ref:`uptime-test-scenario`
   * - :ref:`Log Observer <logs-intro-logconnect>`
     - :ref:`logs-LOconnect-usecase`

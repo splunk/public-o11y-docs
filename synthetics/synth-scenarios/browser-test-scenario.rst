@@ -1,4 +1,4 @@
-.. _browser-test-use-case:
+.. _browser-test-scenario:
 
 *********************************************
 Scenario: Kai monitors a multi-step workflow 

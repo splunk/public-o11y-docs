@@ -1,4 +1,4 @@
-.. _uptime-test-use-case:
+.. _uptime-test-scenario:
 
 ************************************************************************************
 Monitor the performance of a user-facing application 

@@ -1,4 +1,4 @@
-.. _api-test-use-case:
+.. _api-test-scenario:
 
 ****************************************************************
 Scenario: Kai monitors API performance for a critical workflow
