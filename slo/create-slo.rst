@@ -49,7 +49,7 @@ Follow these steps to create an SLO.
 
        .. list-table::
         :header-rows: 1
-        :widths: 30 40 30
+        :widths: 40 60
 
         * - :strong:`Field name`
           - :strong:`Description`
