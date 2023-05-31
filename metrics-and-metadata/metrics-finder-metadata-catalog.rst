@@ -20,34 +20,30 @@ In the Metric Finder, search using whatever information you know. For example, y
 * value of a dimension or property associated with the metric
 * integration that the metric sends data from
 * property of the environment it's reporting from
-* exact values into the search field. For example, search a host name to find out what data the host reported. 
+* exact values into the search field. For example, search a host name to find out what data the host reported.
+
+Search syntax 
+----------------
+Enter in a dot (.) in the search bar to see a list of possible completions for the prefix you’ve already searched. 
+
+Enter in the name of a dimension or property followed by (:), to see a list of possible values for that key in your data.
 
 You can also find metrics while you build a dashboard or edit a chart. To learn more see :ref:`use-metrics-sidebar`.
 
-Each search result is the name of a metric. Search results are URL-addressable; you can link to a set of search results using the URL for that search.
 
 .. note:: The Metric Finder does not support any special search syntax. Any non alphanumeric characters in search terms aren't included in matches (though these characters are included in filter values). Advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms are not supported.
 
 
 
+Understand search results 
+------------------------------------
+
+Each search result is the name of a metric. Search results are URL-addressable; you can link to a set of search results using the URL for that search. For exmaple, a plaintext search for ``docker cpu prod`` returns the top 100 metrics that contained ``docker``, ``cpu``, or ``prod`` in their name or metadata. Splunk Observability Cloud highlights the metric name, or metadata, to show what search terms it matches. 
 
 
-For example, a plaintext search for ``docker cpu prod`` will return the top 100 metrics that contained ``docker``, ``cpu``, or ``prod`` in their name or metadata. The metric name or metadata will be highlighted to show which search term it matches. The following illustration shows the matches in one search result.
+Select Metrics then Metrics Finder on the navigation bar, the Metric Finder opens with a searchable list of categories, drawn from your Infrastructure Monitoring integrations and custom categories, if configured. Custom categories help you quickly find metrics related to commonly used dimensions in your organization.
 
-
-When you're typing in the search field, you can type in a dot (.) to see a list of possible completions for the prefix you’ve already typed. Keep typing to refine the list of suggested components. Select a suggested component, or highlight one with the arrow keys and press TAB or Enter to select it.
-
-
-You can also type in the name of a dimension or property followed by (:), to see a list of possible values for that key in your data. Keep typing to refine the list of suggestions, then choose one to add it as a filter.
-
-
-
-
-Select Metrics then Metrics Finder on the navigation bar, the Metric Finder opens with a browsable list of categories, drawn from your Infrastructure Monitoring integrations and custom categories, if configured. Custom categories help you quickly find metrics related to commonly used dimensions in your organization.
-
-If your administrators have not created any custom categories, the custom categories section will not be visible.
-
-If there are no custom categories, Infrastructure Monitoring administrators will see an option to add them. See :ref:`managing-custom-categories`.
+If your administrators haven't created any custom categories, the custom categories section isn't visible. Infrastructure Monitoring administrators can add them. See :ref:`managing-custom-categories`.
 
 When you select a custom category value or integration, a key-value pair is added as a search filter, and a metric search is run.
 
