@@ -11,6 +11,7 @@ Search the Metric Finder and Metadata catalog
 Search the Metric Finder to find, view, and edit metrics and metadata in your applications. 
 
 .. _metric-finder:
+
 Search for metrics in the Metric Finder  
 ==============================================
 In the Metric Finder, search using whatever information you know. For example, you can search by: 
@@ -30,15 +31,21 @@ Enter in the name of a dimension or property followed by (:), to see a list of p
 
 You can also find metrics while you build a dashboard or edit a chart. To learn more see :ref:`use-metrics-sidebar`.
 
+You can refine a search by typing more search terms or by adding filters. You can add filters by selecting facets in the left sidebar, or matching metadata in any of the search results.
 
-.. note:: The Metric Finder does not support any special search syntax. Any non alphanumeric characters in search terms aren't included in matches (though these characters are included in filter values). Advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms are not supported.
+You can include wildcards in your filters. For example, ``host:test-*`` filters the results to only those with a value of ``host`` beginning with ``test-``.
+
+You can use (!) (NOT) in your filters to exclude results. For example, ``!env:qa`` filters the results to exclude any metrics with a value of ``env`` equal to ``qa``.
+
+
+.. note:: The Metric Finder does not support advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms are not supported.
 
 
 
 Understand search results 
 ------------------------------------
 
-Each search result is the name of a metric. Search results are URL-addressable; you can link to a set of search results using the URL for that search. For exmaple, a plaintext search for ``docker cpu prod`` returns the top 100 metrics that contained ``docker``, ``cpu``, or ``prod`` in their name or metadata. Splunk Observability Cloud highlights the metric name, or metadata, to show what search terms it matches. 
+Each search result is the name of a metric. Search results are URL-addressable; you can link to a set of search results using the URL for that search. For example, a plaintext search for ``docker cpu prod`` returns the top 100 metrics that contained ``docker``, ``cpu``, or ``prod`` in their name or metadata. Splunk Observability Cloud highlights the metric name, or metadata, to show what search terms it matches. 
 
 
 Select Metrics then Metrics Finder on the navigation bar, the Metric Finder opens with a searchable list of categories, drawn from your Infrastructure Monitoring integrations and custom categories, if configured. Custom categories help you quickly find metrics related to commonly used dimensions in your organization.
@@ -54,66 +61,19 @@ If there are more than a few values for a custom category, you can select :guila
 Add metric descriptions
 -----------------------------
 
-Descriptions can help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. If a metric has a description, it is displayed next to the metric in the search results.
+Descriptions help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. 
 
 If a metric has a description, you can find it underneath the metric title. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions (for example, from one of our integrations), this provided description is always shown and is not editable.
 
-Descriptions are limited to 1,024 characters. Although the descriptions are included in the search result, the text of metric descriptions is not analyzed by the search.
-
-
-.. _metric-tooltip:
-
-View metric tooltips
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The maximum length of a metric description is 1,024 characters. Although the descriptions are included in the search result, the text of metric descriptions is not analyzed by the search.
 
 If you hover over a metric name, a tooltip opens that provides information about the metric. Information you can view in the metric tooltip includes the metric name, description, type, the time it was created, and the number of time series that it reports (filtered by any filters that have been applied to your search query).
-
-
-.. _searching-metrics:
-
-Search metrics
-------------------------------------------------------------
-
-You can search for metrics using any information you know about what you’re looking for. This could include the name of the metric, the name of a dimension that’s reported along with it, or the value of a dimension or property that is associated with the metric, in any combination. Select :guilabel:`Search metrics` or hit Enter to run a search. Each search result is the name of a metric. Search results are URL-addressable; you can link to a set of search results using the URL for that search.
-
-
-.. note:: The Metric Finder does not support any special search syntax. Any non-alphanumeric characters in search terms are not included in matches (though these characters can be included in filter values). Advanced search operations like combining search terms with boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms are not supported.
-
-
-
-On the Metrics page, type search terms into the search field:
-
-- Search whatever you know: part of a metric name, the integration that sends it, or a property of the environment it's reporting from.
-
-- Search for metadata (dimensions, properties, and tags) relevant to your target metric.
-
-- Paste exact values into the search field. For example, search a hostname to find out what's reporting from the host.
-
-For example, a plaintext search for ``docker cpu prod`` will return the top 100 metrics that contained ``docker``, ``cpu``, or ``prod`` in their name or metadata. The metric name or metadata will be highlighted to show which search term it matches. The following illustration shows the matches in one search result.
-
-
-When you're typing in the search field, you can type in a dot (.) to see a list of possible completions for the prefix you’ve already typed. Keep typing to refine the list of suggested components. Select a suggested component, or highlight one with the arrow keys and press TAB or Enter to select it.
-
-
-You can also type in the name of a dimension or property followed by (:), to see a list of possible values for that key in your data. Keep typing to refine the list of suggestions, then choose one to add it as a filter.
-
-
-.. _refining-your-search:
-
-Refine your search
-------------------------------------------------------------
-
-You can refine a search by typing more search terms or by adding filters. You can add filters by selecting facets in the left sidebar, or matching metadata in any of the search results.
-
-You can include wildcards in your filters. For example, ``host:test-*`` filters the results to only those with a value of ``host`` beginning with ``test-``.
-
-You can use (!) (NOT) in your filters to exclude results. For example, ``!env:qa`` filters the results to exclude any metrics with a value of ``env`` equal to ``qa``.
 
 
 .. _filter-or-exclude-sidebar:
 
 Use the filter or exclude sidebar
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------
 
 The left sidebar surfaces relevant metadata from the search results as facets to help refine your search. If your organization has configured custom categories, any that appear in the search results will be surfaced at the top of the left sidebar above other facets. Any value found in the sidebar can be added to the search field as a filter or exluded from the search, and the results will be refreshed.
 
