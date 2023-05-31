@@ -23,7 +23,7 @@ To get data into Splunk AlwaysOn Profiling, you need the following:
 
 If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
-.. note:: Log Observer is not required. See :ref:`disable-log-observer-profiling` for more information.
+.. note:: Log Observer is not required. See :ref:`exclude-log-data` for more information.
 
 .. _profiling-setup:
 
