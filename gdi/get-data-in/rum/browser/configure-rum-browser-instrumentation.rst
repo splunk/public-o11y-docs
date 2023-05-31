@@ -23,7 +23,7 @@ To configure the Browser RUM agent, edit the object passed to the ``SplunkRum.in
          {
             beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum'
             rumAccessToken: 'ABC123...789',
-            app: 'my-awesome-app',
+            applicationName: 'my-awesome-app',
             version: '1.0.1'
             // Any additional settings
          });
@@ -49,7 +49,7 @@ Use the following settings to configure the Browser RUM agent:
    * - ``rumAccessToken``
      - String (required)
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
-   * - ``app``
+   * - ``applicationName``
      - String
      - Name of the application. The default value is ``unknown-browser-app``.
    * - ``version``
@@ -96,7 +96,7 @@ To activate or deactivate specific Browser RUM instrumentations, compose and pas
       {
          beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
          rumAccessToken: 'ABC123…789',
-         app: 'my-awesome-app',
+         applicationName: 'my-awesome-app',
          instrumentations:
          {
             interactions:
@@ -186,7 +186,7 @@ The following example shows how to restrict sampling to logged in users:
          SplunkRum.init({
             beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
             rumAccessToken: '<your_rum_token>',
-            app: '<application-name>',
+            applicationName: '<application-name>',
             tracer: {
                sampler: shouldTrace ? new AlwaysOnSampler() : new SplunkRum.AlwaysOffSampler(),
             },
@@ -203,7 +203,7 @@ The following example shows how to restrict sampling to logged in users:
       SplunkOtelWeb.init({
          beaconEndpoint: 'https://rum-ingest..signalfx.com/v1/rum',
          rumAccessToken: '<your_rum_token>', 
-         app: '<application-name>', 
+         applicationName: '<application-name>', 
          tracer: { 
             sampler: userShouldBeTraced() ? new SplunkRum.AlwaysOnSampler() : new SplunkRum.AlwaysOffSampler(),
          },
@@ -273,7 +273,7 @@ The following example shows how to collect RUM data from half of the sessions:
         SplunkRum.init({
           beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
           rumAccessToken: '<your_rum_token>',
-          app: '<application-name>',
+          applicationName: '<application-name>',
           tracer: {
             sampler: new SplunkRum.SessionBasedSampler({
             ratio: 0.5
@@ -290,7 +290,7 @@ The following example shows how to collect RUM data from half of the sessions:
       SplunkOtelWeb.init({ 
         beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
         rumAccessToken: '<your_rum_token>', 
-        app: '<application-name>',
+        applicationName: '<application-name>',
         tracer: {
             sampler: new SessionBasedSampler({
               ratio: 0.5 

@@ -43,7 +43,7 @@ To instrument a Next.js SPA using the Browser RUM agent, follow these steps:
       SplunkRum.init({
          beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
          rumAccessToken: '<your_rum_token>',
-         app: '<your_application_name>',
+         applicationName: '<your_application_name>',
          version: '<your_app_version>',
          environment: '<your_environment_name>'
       });
@@ -127,7 +127,7 @@ To instrument a Gatsby SPA using the Browser RUM agent, follow these steps:
       SplunkRum.init({
          beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
          rumAccessToken: '<your_rum_token>',
-         app: '<your_application_name>',
+         applicationName: '<your_application_name>',
          version: '<your_app_version>',
          environment: '<your_environment_name>'
       });
@@ -151,7 +151,7 @@ To instrument a Nuxt.js v2 SPA using the Browser RUM agent, follow these steps:
       SplunkRum.init({
          beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
          rumAccessToken: '<your_rum_token>',
-         app: '<your_application_name>',
+         applicationName: '<your_application_name>',
          version: '<your_app_version>',
          environment: '<your_environment_name>'
       });
@@ -189,7 +189,7 @@ To instrument an Angular Universal SPA using the Browser RUM agent, follow these
       SplunkRum.init({
          beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
          rumAccessToken: '<your_rum_token>',
-         app: '<your_application_name>',
+         applicationName: '<your_application_name>',
          version: '<your_app_version>',
          environment: '<your_environment_name>'
       });
