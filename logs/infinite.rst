@@ -51,7 +51,7 @@ Prerequisites
 ================================================================================
 To create new infinite logging S3 connections, You must have an administrator role in Splunk Observability Cloud. If you have a power user role, you can send data to S3 buckets using an existing infinite logging S3 connection, but you cannot create new S3 connections. See AWS documentation for permissions required to create S3 buckets in the AWS Management Console. 
 
-If you have a read-only or subscription usage role, you cannot create new S3 connections or use existing connections to send data to S3 buckets.
+If you have a read_only or usage role, you cannot create new S3 connections or use existing connections to send data to S3 buckets.
 
 Create an infinite logging rule
 ================================================================================
