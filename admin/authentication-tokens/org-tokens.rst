@@ -83,6 +83,7 @@ To change the token visibility, follow these steps:
   * :menuselection:`Only Admins can Read`: Only admin users can view or read the new token. The token isn't visible to other users.
   * :menuselection:`Admins and Select Users or Teams can Read`: Admin users and users or teams you select can view or read the new token. The token isn't visible to anyone else.
   * :menuselection:`Everyone can Read`: Every user and team in the organization can view and read the token.
+
 #. To add permissions, select the left arrow below :guilabel:`Access Token Permissions`.
 #. If you selected :guilabel:`Admins and Select Users or Teams can Read`, select the users or teams to whom you want to give access:
 
@@ -100,6 +101,7 @@ To change the token visibility, follow these steps:
         This message means that all users are able to join the team and then view or read the access token.
 
   #. To remove a team or user, select the delete icon (:strong:`X`) next to the team or username.
+
 #. To update the token, select :guilabel:`Update`.
 
 
