@@ -73,7 +73,7 @@ Follow these steps to instrument your application with the CDN:
       <script src="https://cdn.signalfx.com/o11y-gdi-rum/<version>/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+            beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
             rumAuth: '<your_rum_token>',
             app: '<your_app_name>',
             version: '<your_app_version>',
@@ -119,7 +119,7 @@ Follow these steps to instrument your application using a self-hosted script:
       <script src="http://example.domain/path/splunk-otel-web.js"></script>
       <script>
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+            beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
             rumAuth: '<your_rum_token>',
             app: '<your_app_name>',
             version: '<your_app_version>',
@@ -155,7 +155,7 @@ Follow these steps to instrument and configure Splunk RUM using npm:
 
       import SplunkOtelWeb from '@splunk/otel-web';
       SplunkOtelWeb.init({
-         beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+         beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
          rumAuth: '<your_rum_token>',
          app: '<your_application_name>',
          version: '<your_app_version>',
@@ -210,7 +210,7 @@ To avoid collecting ``error.message`` responses, deactivate the errors instrumen
    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
    <script>
       SplunkRum.init({
-         beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+         beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
          rumAuth: '<your_rum_token>',
          app: '<your_app_name>',
          version: '<your_app_version>',
@@ -256,7 +256,7 @@ If your application uses Content Security Policy (CSP) to mitigate potential imp
 
 - When using the CDN version of the agent, allow the ``script-src cdn.signalfx.com`` URL.
 - When self-hosting or using the npm package, configure your site accordingly.
-- Add the host from the ``beaconUrl`` property to the ``connect-src`` property. For example: ``connect-src app.us1.signalfx.com``.
+- Add the host from the ``beaconEndpoint`` property to the ``connect-src`` property. For example: ``connect-src app.us1.signalfx.com``.
 
 How to contribute
 =========================================================

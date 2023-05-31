@@ -116,7 +116,7 @@ Add identification metadata during initialization
    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
    <script>
    SplunkRum.init({
-      beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+      beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
       rumAuth: '<RUM access token>',
       app: '<application-name>',
       globalAttributes: {

@@ -21,7 +21,7 @@ To configure the Browser RUM agent, edit the object passed to the ``SplunkRum.in
    <script>
          SplunkRum.init(
          {
-            beaconUrl: 'https://rum-ingest.us0.signalfx.com/v1/rum'
+            beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum'
             rumAuth: 'ABC123...789',
             app: 'my-awesome-app',
             version: '1.0.1'
@@ -43,7 +43,7 @@ Use the following settings to configure the Browser RUM agent:
    * - Property
      - Type
      - Description
-   * - ``beaconUrl``
+   * - ``beaconEndpoint``
      - String (required)
      - Ingest URL to which the agent sends collected telemetry. The URL must contain your realm in Splunk Observability Cloud. For example, ``https://rum-ingest.us0.signalfx.com/v1/rum`` is the ingest URL for the ``us0`` realm.
    * - ``rumAuth``
@@ -94,7 +94,7 @@ To activate or deactivate specific Browser RUM instrumentations, compose and pas
 
    SplunkRum.init(
       {
-         beaconUrl: 'https://rum-ingest.us0.signalfx.com/v1/rum',
+         beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
          rumAuth: 'ABC123…789',
          app: 'my-awesome-app',
          instrumentations:
@@ -184,7 +184,7 @@ The following example shows how to restrict sampling to logged in users:
          var shouldTrace = isUserLoggedIn();
 
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+            beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
             rumAuth: '<your_rum_token>',
             app: '<application-name>',
             tracer: {
@@ -201,7 +201,7 @@ The following example shows how to restrict sampling to logged in users:
       import SplunkOtelWeb from '@splunk/otel-web';
 
       SplunkOtelWeb.init({
-         beaconUrl: 'https://rum-ingest..signalfx.com/v1/rum',
+         beaconEndpoint: 'https://rum-ingest..signalfx.com/v1/rum',
          rumAuth: '<your_rum_token>', 
          app: '<application-name>', 
          tracer: { 
@@ -271,7 +271,7 @@ The following example shows how to collect RUM data from half of the sessions:
       <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
         SplunkRum.init({
-          beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+          beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
           rumAuth: '<your_rum_token>',
           app: '<application-name>',
           tracer: {
@@ -288,7 +288,7 @@ The following example shows how to collect RUM data from half of the sessions:
       import SplunkOtelWeb, {SessionBasedSampler} from '@splunk/otel-web';
 
       SplunkOtelWeb.init({ 
-        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+        beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
         rumAuth: '<your_rum_token>', 
         app: '<application-name>',
         tracer: {
