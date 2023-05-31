@@ -16,7 +16,6 @@
     - Yes
     - Yes
 
-
   * - :strong:`View Organization overview`
     - Yes
     - No
@@ -35,18 +34,11 @@
     - No
     - No
 
-  * - :strong:`View org access tokens`
-    - Yes
-    - No
-    - No
-    - No
-
   * - :strong:`View org subscription usage`
     - Yes
     - No
     - Yes
     - No
-
 
   * - :strong:`View users`
     - Yes
