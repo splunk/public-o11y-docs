@@ -9,27 +9,13 @@
     - :strong:`Usage`
     - :strong:`Read_only`
 
-
-  * - :strong:`View Settings`
+  * - :strong:`View General Settings`
     - Yes
     - Yes
     - Yes
     - Yes
 
-
-  * - :strong:`View Organization overview`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`View org access token`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`Create, activate, edit, or deactivate an org access token`
+  * - :strong:`View Organization Overview`
     - Yes
     - No
     - No
@@ -41,35 +27,77 @@
     - No
     - No
 
+  * - :strong:`Create, activate, edit, or deactivate an org access token`
+    - Yes
+    - No
+    - No
+    - No
+
   * - :strong:`View org subscription usage`
     - Yes
     - No
     - Yes
     - No
 
-
-  * - :strong:`View users`
+  * - :strong:`View Users`
     - Yes
     - Yes
     - Yes
     - Yes
 
-  * - :strong:`View Incident Managent`
+  * - :strong:`Invite, edit, or remove users`
     - Yes
     - No
     - No
     - No
 
-  * - :strong:`View Global Data Links`
+  * - :strong:`View Teams`
+    - Yes
+    - Yes
+    - Yes
+    - Yes
+
+  * - :strong:`Create team`
     - Yes
     - No
     - No
     - No
 
-  * - :strong:`Create, delete, or clone Global Data Links`
+  * - :strong:`Delete team`
+    - Yes
+    - No
+    - No
+    - No
+
+  * - :strong:`Edit team name and description`
+    - Yes
+    - Yes
+    - No
+    - * Yes, when enhanced team security is disabled
+      * No, when enhanced team security is enabled
+
+  * - :strong:`Join team`
+    - Yes
+    - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
+    - * Yes, when enhanced team security is disabled
+      * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
+    - Not applicable: A Team Member is already on a team and doesn't need to join.
+
+  * - :strong:`Add member`
     - Yes
     - Yes
     - No
     - No
 
+  * - :strong:`Remove member`
+    - Yes
+    - Yes
+    - No
+    - No
+
+  * - :strong:`Edit notification policy`
+    - Yes
+    - Yes
+    - No
+    - Yes
 
