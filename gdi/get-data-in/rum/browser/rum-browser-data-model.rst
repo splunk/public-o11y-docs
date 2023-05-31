@@ -135,7 +135,7 @@ By default, the Browser RUM agent adds the following tags to all spans:
    * - Name
      - Type
      - Description
-   * - ``applicationName``
+   * - ``app``
      - String
      - Application name, as set in the configuration.
    * - ``component``
