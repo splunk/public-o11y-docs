@@ -13,7 +13,7 @@ If you have instrumented an application but are not seeing profiling data in Spl
 - :ref:`profiling-ui-not-visible`
 - :ref:`profiler-language-specific-troubleshooting`
 
-.. note:: AlwaysOn Profiling requires the Splunk Distribution of OpenTelemetry Collector version 0.34 or higher.
+.. note:: AlwaysOn Profiling requires the Splunk Distribution of OpenTelemetry Collector version 0.44 or higher.
 
 .. _profiler-no-data-issue:
 
