@@ -1,39 +1,47 @@
 .. _metrics-finder-and-metadata-catalog:
 
 *****************************************************************
-Use the Metric Finder and Metadata Catalog
+Search the Metric Finder and Metadata catalog 
 *****************************************************************
 
 .. meta::
     :description: How to use the Metric Finder and Metadata Catalog to find, view, and edit information about metrics metadata in Splunk Observability Cloud.
 
-Splunk Observability Cloud's :ref:`Metric Finder <metric-finder>` and :ref:`Metadata Catalog <metadata-catalog>` make it quick and easy to find, view, and edit the metrics and metadata you monitor, across infrastructure and over diverse applications and sources. 
 
-For more information about metrics, see :ref:`metrics-landing`.
-
-In Observability Cloud you can also access the following features:
-
-- Use dashboards to see groupings of charts and visualizations of metrics. To learn more, see :ref:`dashboards`.
-- Use navigators to see a data-driven visualization of resources in your environment that are visible to Infrastructure Monitoring. To learn more, see :ref:`use-navigators-imm`.
-- Use global search to search all available data.
+Search the Metric Finder to find, view, and edit metrics and metadata in your applications. 
 
 .. _metric-finder:
+Search for metrics in the Metric Finder  
+==============================================
+In the Metric Finder, search using whatever information you know. For example, you can search by: 
 
-Use the Metric Finder
-=================================================================
-
-To open the Metric Finder, hover over :guilabel:`Metrics` on the navigation bar then select Metric Finder.
+* name of the metric, or part of the name
+* metadata like dimensions, properties, and tags that are relevant to your target metric
+* value of a dimension or property associated with the metric
+* integration that the metric sends data from
+* property of the environment it's reporting from
+* exact values into the search field. For example, search a host name to find out what data the host reported. 
 
 You can also find metrics while you build a dashboard or edit a chart. To learn more see :ref:`use-metrics-sidebar`.
 
-To learn more about searching for metrics by name, or by related attributes like dimensions, see :ref:`searching-metrics`.
+Each search result is the name of a metric. Search results are URL-addressable; you can link to a set of search results using the URL for that search.
 
-To learn about how to browse for metrics, see :ref:`browsing-metrics`.
+.. note:: The Metric Finder does not support any special search syntax. Any non alphanumeric characters in search terms aren't included in matches (though these characters are included in filter values). Advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms are not supported.
 
-.. _browsing-metrics:
 
-Browse for metrics
-------------------------------------------------------------
+
+
+
+For example, a plaintext search for ``docker cpu prod`` will return the top 100 metrics that contained ``docker``, ``cpu``, or ``prod`` in their name or metadata. The metric name or metadata will be highlighted to show which search term it matches. The following illustration shows the matches in one search result.
+
+
+When you're typing in the search field, you can type in a dot (.) to see a list of possible completions for the prefix you’ve already typed. Keep typing to refine the list of suggested components. Select a suggested component, or highlight one with the arrow keys and press TAB or Enter to select it.
+
+
+You can also type in the name of a dimension or property followed by (:), to see a list of possible values for that key in your data. Keep typing to refine the list of suggestions, then choose one to add it as a filter.
+
+
+
 
 Select Metrics then Metrics Finder on the navigation bar, the Metric Finder opens with a browsable list of categories, drawn from your Infrastructure Monitoring integrations and custom categories, if configured. Custom categories help you quickly find metrics related to commonly used dimensions in your organization.
 
@@ -48,7 +56,7 @@ If there are more than a few values for a custom category, you can select :guila
 .. _metric-descriptions:
 
 Add metric descriptions
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------
 
 Descriptions can help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. If a metric has a description, it is displayed next to the metric in the search results.
 
@@ -224,3 +232,27 @@ Use the Metadata Catalog to find, view, and edit information about the :ref:`met
     For more information on naming custom properties and tags, see :ref:`Guidance for metric and dimension names <metric-dimension-names>`.
 
         
+
+
+Resources
+===========
+For more information, see: 
+
+
+.. list-table::
+   :header-rows: 1
+   :width: 100
+   :widths: 20 80
+
+   * - :strong:`Content`
+     - :strong:`Resource`
+
+   * - Metrics
+     - :ref:`metrics-landing`.
+
+
+
+
+- Use dashboards to see groupings of charts and visualizations of metrics. To learn more, see :ref:`dashboards`.
+- Use navigators to see a data-driven visualization of resources in your environment that are visible to Infrastructure Monitoring. To learn more, see :ref:`use-navigators-imm`.
+- Use global search to search all available data.
