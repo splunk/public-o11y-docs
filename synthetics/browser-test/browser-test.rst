@@ -75,7 +75,7 @@ See the following topics to learn more about the results, diagnostics, and metri
 
 * :ref:`browser-test-results`
 * :ref:`browser-metrics`
-* :ref:`browser-test-use-case`
+* :ref:`browser-test-scenario`
 
 
 

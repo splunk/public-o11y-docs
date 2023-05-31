@@ -104,4 +104,4 @@ Learn more
 
 See the following links for more information on Trace Analyzer: 
 
-* :ref:`apm-use-case-trace-analyzer`
+* :ref:`apm-scenario-trace-analyzer`
