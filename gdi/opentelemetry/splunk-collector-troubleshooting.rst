@@ -19,7 +19,7 @@ Collector or td-agent service isn't working
 
 If either the Collector or td-agent services are not installed and configured, check these things to fix the issue:
 
-* Check that the OS is supported. See :ref:`otel-requirements` and :new-page:`Operating System <https://opentelemetry.io/docs/reference/specification/resource/semantic_conventions/os/>` for more information
+* Check that the OS is supported. See :ref:`otel-requirements` and :new-page:`OpenTelemetry's Operating System <https://opentelemetry.io/docs/reference/specification/resource/semantic_conventions/os/>` for more information
 * Check that systemd is installed (if using Linux), as explained in :ref:`otel-install-linux`
 * Check that your platform is not running in a containerized environment
 * Check the installation logs for more details
