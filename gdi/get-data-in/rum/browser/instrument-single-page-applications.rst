@@ -41,14 +41,14 @@ To instrument a Next.js SPA using the Browser RUM agent, follow these steps:
       import SplunkRum from '@splunk/otel-web';
       
       SplunkRum.init({
-         beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+         realm: '<realm>',
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
          environment: '<your_environment_name>'
       });
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 3. Add the following code to the ``next.config.js`` file:
@@ -125,14 +125,14 @@ To instrument a Gatsby SPA using the Browser RUM agent, follow these steps:
       import SplunkRum from '@splunk/otel-web';
       
       SplunkRum.init({
-         beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+         realm: '<realm>',
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
          environment: '<your_environment_name>'
       });
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 Nuxt.js v2 and v3
@@ -149,14 +149,14 @@ To instrument a Nuxt.js v2 SPA using the Browser RUM agent, follow these steps:
       import SplunkRum from '@splunk/otel-web';
       
       SplunkRum.init({
-         beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+         realm: '<realm>',
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
          environment: '<your_environment_name>'
       });
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
    .. note:: The ``.client.js`` suffix in the file name instructs Nuxt to load the plugin only in the client side.
@@ -187,7 +187,7 @@ To instrument an Angular Universal SPA using the Browser RUM agent, follow these
       import SplunkRum from '@splunk/otel-web';
       
       SplunkRum.init({
-         beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
+         realm: '<realm>',
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
