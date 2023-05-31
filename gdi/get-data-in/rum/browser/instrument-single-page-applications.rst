@@ -45,7 +45,7 @@ To instrument a Next.js SPA using the Browser RUM agent, follow these steps:
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
-         environment: '<your_environment_name>'
+         deploymentEnvironment: '<your_environment_name>'
       });
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
@@ -129,7 +129,7 @@ To instrument a Gatsby SPA using the Browser RUM agent, follow these steps:
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
-         environment: '<your_environment_name>'
+         deploymentEnvironment: '<your_environment_name>'
       });
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
@@ -153,7 +153,7 @@ To instrument a Nuxt.js v2 SPA using the Browser RUM agent, follow these steps:
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
-         environment: '<your_environment_name>'
+         deploymentEnvironment: '<your_environment_name>'
       });
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
@@ -191,7 +191,7 @@ To instrument an Angular Universal SPA using the Browser RUM agent, follow these
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
-         environment: '<your_environment_name>'
+         deploymentEnvironment: '<your_environment_name>'
       });
 
 3. Edit the ``src/main.ts`` file to import the ``splunk-rum`` file you've created:

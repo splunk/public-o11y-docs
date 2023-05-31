@@ -77,7 +77,7 @@ Follow these steps to instrument your application with the CDN:
             rumAccessToken: '<your_rum_token>',
             applicationName: '<your_app_name>',
             version: '<your_app_version>',
-            environment: '<your_environment_name>'
+            deploymentEnvironment: '<your_environment_name>'
          });
       </script>
 
@@ -123,7 +123,7 @@ Follow these steps to instrument your application using a self-hosted script:
             rumAccessToken: '<your_rum_token>',
             applicationName: '<your_app_name>',
             version: '<your_app_version>',
-            environment: '<your_environment_name>'
+            deploymentEnvironment: '<your_environment_name>'
          });
       </script>
 
@@ -159,7 +159,7 @@ Follow these steps to instrument and configure Splunk RUM using npm:
          rumAccessToken: '<your_rum_token>',
          applicationName: '<your_application_name>',
          version: '<your_app_version>',
-         environment: '<your_environment_name>'
+         deploymentEnvironment: '<your_environment_name>'
       });
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 

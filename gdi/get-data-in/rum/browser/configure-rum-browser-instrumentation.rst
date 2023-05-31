@@ -58,7 +58,7 @@ Use the following settings to configure the Browser RUM agent:
    * - ``version``
      - String
      - Version of the application for all spans. For example, "1.0.1" or "20220820".
-   * - ``environment``
+   * - ``deploymentEnvironment``
      - String
      - Environment for all the spans produced by the application. For example, ``dev``, ``test``, or ``prod``.
    * - ``globalAttributes``
