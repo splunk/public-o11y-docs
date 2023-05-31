@@ -23,6 +23,11 @@ Logs pipeline rules execute in the following order:
 
  Log Observer indexes your logs data only after executing all pipeline management rules. When you metricize then archive a set of logs, metricized logs count against your ingest capacity but not against your indexing capacity. Like any other metric, a metric derived from log metricization rules counts toward your metrics quota per your contract. For more information, see :ref:`logs-pipeline-sequence`.
 
+Prerequisites
+================================================================================
+To create log metricization rules, you must have an administrator or power user role in Splunk Observability Cloud.
+
+
 Create log metricization rules
 =============================================================================
 There are two ways to create log metricization rules:

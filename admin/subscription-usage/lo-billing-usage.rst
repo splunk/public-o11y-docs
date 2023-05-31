@@ -11,6 +11,12 @@ Monitor Log Observer subscription usage
 
 Use the Log Observer subscription usage page to view charts that track your organization's Log Observer usage against its entitlements. You have to be an administrator to view the Subscription Usage page for your organization. 
 
+Prerequisites
+================================================================================
+To view Log Observer subscription usage, you must have an administrator, power user, or subscription usage role in Splunk Observability Cloud.
+
+View Log Observer subscription usage
+================================================================================
 To view your organization's Log Observer subscription usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`Log Observer` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
 
 What Log Observer tracks 
