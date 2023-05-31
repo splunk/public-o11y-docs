@@ -1,22 +1,22 @@
 /* Layout File -- Start */
-$(window).scroll(function () {
-    var scrollDistance = $(window).scrollTop();
-    // Assign active class to nav links while scolling
-    $('.bodywrapper .section a.headerlink').each(function (i) {
-        //console.log("$(this).position().top: " + $(this).position().top);
-        if ($(this).position().top <= scrollDistance) {
-            //console.log("aaaa");
-            $('.TOCL2 a.active').removeClass('active');
-            $('.TOCL2 a').eq(i).addClass('active');
-        }
-    });
-}).scroll();
+// $(window).scroll(function () {
+//     var scrollDistance = $(window).scrollTop();
+//     // Assign active class to nav links while scolling
+//     $('.bodywrapper .section a.headerlink').each(function (i) {
+//         //console.log("$(this).position().top: " + $(this).position().top);
+//         if ($(this).position().top <= scrollDistance) {
+//             //console.log("aaaa");
+//             $('.TOCL2 a.active').removeClass('active');
+//             $('.TOCL2 a').eq(i).addClass('active');
+//         }
+//     });
+// }).scroll();
 
 $(document).ready(function () {
 
 
     if ($('meta[name=viewport]').length > 0) {
-        console.log("A");
+        // console.log("A");
     } else {
         $("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
     }
@@ -40,17 +40,17 @@ $(document).ready(function () {
     var h2textNew = $("div.bodywrapper h2:first").text();
     h2textNew = h2textNew.slice(0, -3);
     h2textNew = h2textNew.trim();
-    console.log("AB: " + h2textNew);
+    // console.log("AB: " + h2textNew);
 
     var firstval = $("#mainTOC li.current").find("li.toctree-l3:first").text();
-    console.log("B: " + firstval);
+    // console.log("B: " + firstval);
 
     if ($("#mainTOC li.toctree-l2.current").find('ul.current').find('li.toctree-l3').length >= 1 && h2textNew == firstval) {
-        console.log('zz');
+        // console.log('zz');
         $("#mainTOC li.toctree-l2.current").find('ul.current').find('li.toctree-l3').show();
 
     } else if ($("#mainTOC li.toctree-l2.current").find('ul').find('li.toctree-l3').length >= 1 && h2textNew == firstval) {
-        console.log('ss');
+        // console.log('ss');
 
         $("#mainTOC li.toctree-l2.current").find('ul').find('li.toctree-l3').hide()
     }
@@ -158,7 +158,7 @@ $(document).ready(function () {
 
         //var achorHtml = $(this).html()
         var anchorText = $(this).text();
-        console.log("TEXT:" + anchorText);
+        //console.log("TEXT:" + anchorText);
         var arrowSpan = "<span class='gg-chevron-down' style='transform: scale(var(--ggs,0.7));'></span>";
         if (anchorText.includes("TOGGLE")) {
             //console.log("test:" + a);
@@ -174,8 +174,8 @@ $(document).ready(function () {
 
     $("#mainTOC ul.current li.current").each(function () {
         $(this).find('span.gg-chevron-down').removeClass(function (i, class_name) {
-            console.log("class:" + class_name);
-            console.log("check span:" + $(this).parent().is('li.current'));
+            //console.log("class:" + class_name);
+            //console.log("check span:" + $(this).parent().is('li.current'));
             if (class_name == 'gg-chevron-down' && $(this).parent().is('li.current')) {
                 $(this).removeClass("gg-chevron-down").addClass('gg-chevron-up');
             }
@@ -402,7 +402,7 @@ $(document).ready(function () {
             }
 
         });
-        console.log(liTOC);
+        //console.log(liTOC);
         $('#rightSideTOC').append(liTOC);
         $(".githubeditlink").html($(".olly_git_hub_link").html());
     } else {

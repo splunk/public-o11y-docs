@@ -1,46 +1,24 @@
 $(document).ready(function() {
   $('.new-page').attr('target', '_blank');
 
-  $('.sphinxsidebarwrapper a').each(function() {
-    let hash = "nav-" + $(this).text().replaceAll(' ', '-').replaceAll(',', '');
-    let url = $(this).attr('href');
-
-    if (url.charAt(0) != '#' || url == "#") {
-      $(this).attr('id', hash);
-      let finalUrl = (url == "#") ? "#" + hash : (url + "#" + hash);
-      $(this).attr('href', finalUrl);
-    }
-
-    $("div.relations").hide();
-
-  });
-
-  let scrollToTarget = function(targetID) {
+  let scrollToTarget = function(targetID, diff = 100) {
     let target = $(targetID);
+    window.location.hash = targetID;
     if (target.length) {
       let targetTop = target.offset().top;
-      $('html, body').scrollTop(targetTop - 100);
+      // console.log(targetTop + "-> target top");
+      $('html, body').scrollTop(targetTop - diff);
     }
   }
 
-  let scrollToMenu = function(){
-    setTimeout(function() {
-      let getCurrentLocation = $("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top;
-      if (getCurrentLocation < 700) {
-        $('.sphinxsidebar').scrollTop($("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top - 200);
-      } else {
-        $('.sphinxsidebar').scrollTop($("#mainTOC .sphinxsidebar .sphinxsidebarwrapper a.current").position().top - 200);
-      }
-    }, 1000);
-  }
-
-  $('#rightSideTOC a[href^="#"]').on('click', function(event) {
-    event.preventDefault();
+  $('body').on('click', '#rightSideTOC a[href^="#"], .headerlink',function(e) {
+    e.preventDefault();
     scrollToTarget(this.getAttribute('href'));
   });
 
   if (window.location.hash) {
-    scrollToTarget(window.location.hash);
+    // console.log("first load");
+    scrollToTarget(window.location.hash, 100);
     //scrollToMenu();
   }
 });
