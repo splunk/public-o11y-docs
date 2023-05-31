@@ -9,29 +9,6 @@ Manually instrument React Native applications
 
 You can manually instrument React Native applications for Splunk RUM to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
-.. _react-rum-span-filtering:
-
-Filter spans
-======================================
-
-You can modify or drop spans using the ``spanFilter`` function. For example, you can drop or redact spans that contain personally identifiable information (PII).
-
-The following example shows how to remove a span:
-
-.. code-block:: swift
-
-   options.spanFilter = { spanData in
-      var spanData = spanData
-      if spanData.name == "DropThis" {
-         return nil // Spans with the name "DropThis" are not be sent
-      }
-      var atts = spanData.attributes
-      atts["http.url"] = .string("redacted") // Change values for all URLs
-      return spanData.settingAttributes(atts)
-   }
-
-.. note:: Span filtering is supported only in Swift.
-
 .. _react-rum-globalattributes:
 
 Manage global attributes
@@ -41,39 +18,12 @@ Global attributes are key-value pairs added to all reported data. Global attribu
 
 The following example shows how to define global attributes in your code:
 
-.. code-block:: swift
+.. code-block:: typescript
 
-   // You can set the globalAttributes option to the map at initialization
-   import SplunkOtel
-   //..
-   SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-         rumAuth: "<rum-token>",
-         options: SplunkRumOptions(environment:"<environment-name>"))
-         options.globalAttributes = ["key1": "value1", "key2": 7]
+   SplunkRum.setGlobalAttributes({
+      'enduser.id': 'Test User',
+   });
 
-   // You can also call the ``setGlobalAttributes`` function 
-   // anywhere in your code using the same map
-   SplunkRum.setGlobalAttributes(["key1": "value1", "key2": 7])
-   
-   // To remove a global attribute, pass the key name to removeGlobalAttribute
-   SplunkRum.removeGlobalAttribute("key2")
-
-.. _react-rum-change-screen-names:
-
-Manually change screen names
-======================================
-
-By default, the React Native RUM agent collects the name set in the :code:`ViewController`. You can customize the screen names for your application by using the ``setScreenName`` function. The custom name persists until your next call to :code:`setScreenName`.
-
-The following example shows how to customize the name of an account settings screen:
-
-.. code-block:: Swift
-
-   SplunkRum.setScreenName("AccountSettingsTab")
-
-When calling the :code:`setScreenName` function, automatic screen name instrumentation is deactivated to avoid overwriting custom names.
-
-.. note:: Use ``setScreenName`` in all the views of your application to avoid inconsistent names in your data.
 
 .. _react-rum-identify-users:
 
@@ -89,23 +39,29 @@ The following examples show how to add identification metadata as global attribu
 Add identification metadata during initialization
 --------------------------------------------------
 
-.. code-block:: swift
+.. code-block::
    :emphasize-lines: 5
 
-   import SplunkOtel
-   //..
-   SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-         rumAuth: "<rum-token>",
-         options.globalAttributes = ["enduser.id": "user-id-123456"]
+   const RumConfig: ReactNativeConfiguration = {
+      realm: '<realm>',
+      rumAccessToken: '<rum-access-token>',
+      applicationName: '<your-app-name>',
+      environment: '<your-environment>',
+      globalAttributes: {
+         enduser.id: 'user-id-123456',
+         enduser.role: 'premium'
+      },
+   }
 
 Add identification metadata after initialization
 --------------------------------------------------
 
-.. code-block:: swift
+.. code-block::
 
-   SplunkRum.setGlobalAttributes(["enduser.id": "user-id-123456"])
-   SplunkRum.setGlobalAttributes(["enduser.id": "128762"]);
-   SplunkRum.setGlobalAttributes(["enduser.role': "premium"]);
+   SplunkRum.setGlobalAttributes({
+      'enduser.id': 'user-id-123456',
+      'enduser.role': 'premium'
+   });
 
 .. _react-rum-tracing-api:
 
@@ -135,13 +91,23 @@ Configure error reporting
 
 You can report handled errors, exceptions, and messages using the ``reportError`` function.
 
-The following example shows how to report the :code:`example_error`:
+The following example shows how to report a custom error:
 
-.. code-block:: Swift
+.. code-block::
 
-   SplunkRum.reportError(example_error)
+   reportError: (err: any, isFatal?: boolean)
 
-``reportError`` overloads are available for ``String``, ``Error``, and ``NSException``.
+.. _react-rum-set-location:
+
+Update location data
+======================================
+
+The RUM library includes a method for setting latitude ang longitde as global attributes. For example:
+
+.. code-block::
+
+   updateLocation: (latitude: number, longitude: number)
+
 
 .. _react-server-trace-context:
 
