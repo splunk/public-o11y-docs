@@ -63,7 +63,8 @@ How does Splunk APM handle gRPC status codes?
 
 To determine if a gRPC span counts towards the error rate for a service, Splunk APM looks at the combination of ``error=true`` and the ``http.status_code`` as described in the previous section. So, gRPC calls are only seen as errors if the client-side instrumentation sets ``error=true``. For example, the Go gRPC instrumentation complies with the OpenTelemetry specification which indicates that all non OK gRPC client-received status codes mark the span as an error. Specifically, the server returns an error status for the following gRPC status codes: ``UNKNOWN``, ``UNIMPLEMENTED``, ``DEADLINE_EXCEEDED``, ``INTERNAL``, ``UNAVAILABLE``, ``DATA_LOSS``.
 
-See the OpenTelemetry specification for information on the handling of gRPC status codes :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/rpc.md#grpc-status`. See the Go gRPC instrumentation :new-page:`https://github.com/open-telemetry/opentelemetry-go-contrib/blob/75d0c13f6129330f3b5b060791aa8cefdc553849/instrumentation/google.golang.org/grpc/otelgrpc/interceptor.go#L506-L527` for more information.
+* See the OpenTelemetry specification for information on the handling of gRPC status codes :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/rpc.md#grpc-status`. 
+* See the Go gRPC instrumentation :new-page:`https://github.com/open-telemetry/opentelemetry-go-contrib/blob/75d0c13f6129330f3b5b060791aa8cefdc553849/instrumentation/google.golang.org/grpc/otelgrpc/interceptor.go#L506-L527` for more information.
 
 .. _metricset-errors:
 
