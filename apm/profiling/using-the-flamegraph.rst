@@ -61,7 +61,7 @@ You can group stack frames and turn them into the root frame by selecting the ti
 CPU and memory
 -------------------------------------------------
 
-You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory` at any time. Memory data only appears if you've enabled memory profiling. See :ref:`profiling-setup-enable-profiler`.
+You can switch the view of the AlwaysOn Profiling flame graph between :guilabel:`CPU` and :guilabel:`Memory` at any time. Memory data only appears if you've activated memory profiling. See :ref:`profiling-setup-enable-profiler`.
 
 The following image shows the memory profiling flame graph for a Java application:
 

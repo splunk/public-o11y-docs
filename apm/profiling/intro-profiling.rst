@@ -30,7 +30,7 @@ After you get profiling data into Observability Cloud, you can explore stack tra
 
 Here are some of the things you can do with AlwaysOn Profiling for Splunk APM:
 
-- Perform continuous profiling of your applications. The profiler is always on once you enable it.
+- Perform continuous profiling of your applications. The profiler is always on once you activate it.
 - Collect code performance context and link it to trace data.
 - Explore memory usage and garbage collection of your application.
 - Analyze code bottlenecks that impact service performance.
@@ -66,6 +66,6 @@ Memory profiling also exposes memory metrics for your application, which you can
     <h2>Get AlwaysOn Profiling data into Splunk APM</h2>
   </embed>
 
-To get started, instrument your application or service for Splunk APM and enable AlwaysOn Profiling.
+To get started, instrument your application or service for Splunk APM and activate AlwaysOn Profiling.
 
 See :ref:`get-data-in-profiling` for instructions.

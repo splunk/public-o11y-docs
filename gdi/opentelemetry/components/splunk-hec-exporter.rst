@@ -209,7 +209,7 @@ To turn off log collection for Observability Cloud while preserving AlwaysOn Pro
 Turn off log data export
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you need to turn off log data export to Observability Cloud, for example because you're using Log Observer Connect, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
+If you need to turn off log data export to Observability Cloud, for example because you're using Log Observer Connect or because you don't have Log Observer in your organization, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
 .. code-block:: yaml
    :emphasize-lines: 6

@@ -46,11 +46,12 @@ Follow these steps to automatically instrument your application using the Python
 
 #. Check that you meet the requirements. See :ref:`python-otel-requirements`.
 
-#. Install the ``splunk-opentelemetry[all]`` package:
+#. Install the ``splunk-opentelemetry[all]`` package and the OTLP exporter:
 
    .. code-block:: bash
 
       pip3 install splunk-opentelemetry[all]
+      pip install opentelemetry-exporter-otlp-proto-grpc
 
    If you're using a requirements.txt or pyproject.toml file, add ``splunk-opentelemetry[all]`` to it.
 
