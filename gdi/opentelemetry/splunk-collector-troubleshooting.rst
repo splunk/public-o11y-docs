@@ -19,10 +19,10 @@ Collector or td-agent service isn't working
 
 If either the Collector or td-agent services are not installed and configured, check these things to fix the issue:
 
-* Check that the OS is supported. See :new-page:`Operating System <https://opentelemetry.io/docs/reference/specification/resource/semantic_conventions/os/>` for more information.
-* Check that systemd is installed (if using Linux).
-* Check that your platform is not running in a containerized environment.
-* Check the installation logs for more details.
+* Check that the OS is supported. See :ref:`otel-requirements` and :new-page:`Operating System <https://opentelemetry.io/docs/reference/specification/resource/semantic_conventions/os/>` for more information
+* Check that systemd is installed (if using Linux), as explained in :ref:`otel-install-linux`
+* Check that your platform is not running in a containerized environment
+* Check the installation logs for more details
 
 Collector exits or restarts
 -----------------------------------------
@@ -31,8 +31,8 @@ The collector might exit or restart for the following reasons:
 
 * Memory pressure due to a missing or misconfigured ``memory_limiter`` processor
 * Improperly sized for load
-* Improperly configured. For example, a queue size configured higher than available memory.
-* Infrastructure resource limits. For example, Kubernetes.
+* Improperly configured. For example, a queue size configured higher than available memory
+* Infrastructure resource limits. For example, Kubernetes
 
 Restart the Splunk Distribution of OpenTelemetry Collector and check the configuration.
 
@@ -63,7 +63,7 @@ The collector might not receive data for the following reasons:
 
 * Network configuration issues
 * Receiver configuration issues
-* The receiver is defined in the receivers section, but not activated in any pipelines.
+* The receiver is defined in the receivers section, but not activated in any pipelines
 * The client configuration is incorrect
 
 Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/troubleshooting.md#zpages>` in the OpenTelemetry project GitHub repositories for more information. Note that Splunk only provides best-effort support for the upstream OpenTelemetry Collector. 
@@ -81,7 +81,7 @@ Collector can't export data
 
 The collector might be unable to export data for the following reasons:
 
-* Network configuration issues, such as firewall, DNS, or proxy support.
+* Network configuration issues, such as firewall, DNS, or proxy support
 * Incorrect exporter configuration
 * Incorrect credentials
 * The destination is unavailable
