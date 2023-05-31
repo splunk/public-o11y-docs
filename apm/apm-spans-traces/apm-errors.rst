@@ -61,7 +61,7 @@ The following table provides an overview of how HTTP status codes are treated in
 How does Splunk APM handle gRPC status codes?
 ===============================================
 
-Splunk APM looks a combination of ``error=true`` on a span and the ``http.status_code`` as described in the previous section. So, gRPC calls are only seen as errors if the client-side instrumentation sets ``error=true``. For example, the Go gRPC instrumentation complies with the OpenTelemetry specification which indicates that all non-OK gRPC client-received status codes mark the span as an error. Specifically, the server returns an error status for the following gRPC status codes: ``UNKNOWN``, ``UNIMPLEMENTED``, ``DEADLINE_EXCEEDED``, ``INTERNAL``, ``UNAVAILABLE``, ``DATA_LOSS``.
+To determine if a gRPC span counts towards the error rate for a service, Splunk APM looks at the combination of ``error=true`` and the ``http.status_code`` as described in the previous section. So, gRPC calls are only seen as errors if the client-side instrumentation sets ``error=true``. For example, the Go gRPC instrumentation complies with the OpenTelemetry specification which indicates that all non OK gRPC client-received status codes mark the span as an error. Specifically, the server returns an error status for the following gRPC status codes: ``UNKNOWN``, ``UNIMPLEMENTED``, ``DEADLINE_EXCEEDED``, ``INTERNAL``, ``UNAVAILABLE``, ``DATA_LOSS``.
 
 .. _metricset-errors:
 
