@@ -74,7 +74,7 @@ Follow these steps to instrument your application with the CDN:
       <script>
          SplunkRum.init({
             beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-            rumAuth: '<your_rum_token>',
+            rumAccessToken: '<your_rum_token>',
             app: '<your_app_name>',
             version: '<your_app_version>',
             environment: '<your_environment_name>'
@@ -120,7 +120,7 @@ Follow these steps to instrument your application using a self-hosted script:
       <script>
          SplunkRum.init({
             beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-            rumAuth: '<your_rum_token>',
+            rumAccessToken: '<your_rum_token>',
             app: '<your_app_name>',
             version: '<your_app_version>',
             environment: '<your_environment_name>'
@@ -156,7 +156,7 @@ Follow these steps to instrument and configure Splunk RUM using npm:
       import SplunkOtelWeb from '@splunk/otel-web';
       SplunkOtelWeb.init({
          beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-         rumAuth: '<your_rum_token>',
+         rumAccessToken: '<your_rum_token>',
          app: '<your_application_name>',
          version: '<your_app_version>',
          environment: '<your_environment_name>'
@@ -211,7 +211,7 @@ To avoid collecting ``error.message`` responses, deactivate the errors instrumen
    <script>
       SplunkRum.init({
          beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-         rumAuth: '<your_rum_token>',
+         rumAccessToken: '<your_rum_token>',
          app: '<your_app_name>',
          version: '<your_app_version>',
          instrumentations: { errors: false }

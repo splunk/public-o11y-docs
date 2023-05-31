@@ -117,7 +117,7 @@ Add identification metadata during initialization
    <script>
    SplunkRum.init({
       beaconEndpoint: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-      rumAuth: '<RUM access token>',
+      rumAccessToken: '<RUM access token>',
       app: '<application-name>',
       globalAttributes: {
          // The following data is already available
