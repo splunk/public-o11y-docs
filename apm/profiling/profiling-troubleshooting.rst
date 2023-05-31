@@ -63,12 +63,12 @@ AlwaysOn Profiling requires the Splunk HTTP Event Collector (HEC) exporter to se
 
 .. note:: AlwaysOn Profiling requires the Splunk Distribution of OpenTelemetry Collector version 0.34 or higher.
 
-Check that you've enabled AlwaysOn Profiling
+Check that you've activated AlwaysOn Profiling
 -------------------------------------------------
 
-Depending on the programming language, you can enable AlwaysOn Profiling by setting a system property, a function argument, or an environment variable. System properties and function arguments always take precedence. If the profiler is not enabled, Observability Cloud can't receive profiling data.
+Depending on the programming language, you can activate AlwaysOn Profiling by setting a system property, a function argument, or an environment variable. System properties and function arguments always take precedence. If the profiler is not enabled, Observability Cloud can't receive profiling data.
 
-To solve this issue, check that you've enabled the profiler. See :ref:`profiling-setup-enable-profiler`.
+To solve this issue, check that you've activated the profiler. See :ref:`profiling-setup-enable-profiler`.
 
 .. _no-call-stacks:
 
@@ -86,9 +86,9 @@ AlwaysOn Profiling is not accessible in Observability Cloud
 
 If you're sending profiling data to Observability Cloud but can't see AlwaysOn Profiling in Splunk APM, your organization might be lacking the profiler entitlement.
 
-AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, AlwaysOn Profiling might be disabled depending on the contract.
+AlwaysOn Profiling is activated for all host-based subscriptions. For TAPM-based subscriptions, AlwaysOn Profiling might be deactivated depending on the contract.
 
-To solve this issue, reach out to Splunk Support to request they enable the AlwaysOn Profiling feature.
+To solve this issue, reach out to Splunk Support to request they activate the AlwaysOn Profiling feature.
 
 .. _profiler-language-specific-troubleshooting:
 
@@ -101,7 +101,7 @@ Some profiler issues might be specific to the APM instrumentation. See the follo
 - :ref:`nodejs-profiler-issues`
 - :ref:`dotnet-profiler-issues`
 
-Disable profiling log data for specific hosts
+Deactivate profiling log data for specific hosts
 ==============================================================
 
 If you don't need AlwaysOn Profiling data for a specific host or container, see :ref:`unwanted_profiling_logs`.
