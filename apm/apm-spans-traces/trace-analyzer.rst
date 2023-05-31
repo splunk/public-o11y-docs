@@ -90,9 +90,9 @@ The following table presents what each APM tool is best suited for:
 Trace Analyzer trace limits
 ==================================
 
-Trace Analyzer can search a maximum of six hours of data. 
+Trace Analyzer can search a maximum of 6 hours of data. 
 
-Within the Trace Analyzer interface, there are three different display limits. The Trace Analyzer chart (1) and the Group Metrics (2) tab display up to six hours of traces. The list of traces displayed on the Traces tab (3) has a limit of 1,000 traces. For the Traces tab, Trace Analyzer searches for traces at the end of the time window you select. When 1,000 traces are matched or the six-hour search window is reached, the list stops populating.
+Within the Trace Analyzer interface, there are three different display limits. The Trace Analyzer chart (1) and the Group Metrics (2) tab display up to 6 hours of traces. The list of traces displayed on the Traces tab (3) has a limit of 1,000 traces. For the Traces tab, Trace Analyzer searches for traces at the end of the time window you select. When 1,000 traces are matched or the six-hour search window is reached, the list stops populating.
 
 ..  image:: /_images/apm/trace-analyzer/TraceAnalyzerLimit.png
     :width: 95%

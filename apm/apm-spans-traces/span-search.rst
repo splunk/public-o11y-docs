@@ -5,8 +5,6 @@
 View and search for spans within a trace
 ******************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to search within a trace to highlight or filter visible spans based on tag values or error status.
 
@@ -36,7 +34,7 @@ For example, the animation shows a search for spans with ``service = checkout se
 Show spans in context
 -----------------------
 
-When searching for a span, select the :guilabel:`Matches Only` toggle to show only spans matching your filter criteria. Then, once you've found a span or spans you're interested in, turn the :guilabel:`Matches Only` toggle back off to show the spans in context. 
+When searching for a span, select the :guilabel:`Matches Only` switch to show only spans matching your filter criteria. Then, once you've found a span or spans you're interested in, turn the :guilabel:`Matches Only` switch back off to show the spans in context. 
 
 This way, span search helps you narrow down the spans of a large trace to find the exact span you're interested in, while still retaining visibility of that span's before-and-after context and dependencies.
 
@@ -51,7 +49,7 @@ When viewing spans in the trace waterfall, note the following:
 Explore logs for each span
 ------------------------------
 
-When Related Content is enabled, you can jump to related logs for each trace and its spans. The following image shows the related logs in Log Observer for a specific trace.
+When Related Content is turned on, you can jump to related logs for each trace and its spans. The following image shows the related logs in Log Observer for a specific trace.
 
 .. image:: /_images/apm/terms-concepts/log-trace-related.png
   :width: 100%
