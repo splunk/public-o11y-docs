@@ -26,7 +26,8 @@ General settings
 Data configuration
 ==================
 
-.. include:: /_includes/admin/roles_users_teams.rst
+.. include:: /_includes/admin/roles_data_configuration.rst
+
 
 Help and support
 ==================
@@ -39,6 +40,7 @@ Metrics pipeline management
 ===============================================================================
 
 .. include:: /_includes/admin/roles_mpm.rst
+
 
 Log Observer
 ==================

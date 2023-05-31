@@ -1,5 +1,3 @@
-
-
 .. list-table::
   :widths: 20,20,20,20,20
 
@@ -9,7 +7,8 @@
     - :strong:`Usage`
     - :strong:`Read_only`
 
-  .. Check the following 
+.. 
+  Check the following 
 
   * - :strong:`Show Chat`
     - Yes
@@ -17,7 +16,8 @@
     - No
     - No
 
-  .. Check the following 
+.. 
+  Check the following 
 
   * - :strong:`Training`
     - Yes

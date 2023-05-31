@@ -1,5 +1,3 @@
-
-
 .. list-table::
   :widths: 20,20,20,20,20
 
@@ -33,7 +31,7 @@
     - Yes
     - Yes
 
-  .. Check the following  
+.. Check the following  
 
   * - :strong:`Create APM MetricSets`
     - Yes
@@ -47,7 +45,8 @@
     - Yes
     - Yes
 
-  .. Check the following 
+.. 
+  Check the following 
 
   * - :strong:`Create, edit, or remove Business Workflow rules`
     - Yes
@@ -55,7 +54,8 @@
     - No
     - No
 
-  .. Check the following 
+.. 
+  Check the following 
 
   * - :strong:`Test Business Workflow rules`
     - Yes
@@ -75,7 +75,8 @@
     - Yes
     - Yes
 
-  .. Check the following 
+.. 
+  Check the following 
 
   * - :strong:`View Logs Pipeline Management`
     - Yes
@@ -83,7 +84,8 @@
     - No
     - No
 
-  .. Check the following 
+.. 
+  Check the following 
 
   * - :strong:`View Logs Field Aliasing`
     - Yes
@@ -97,7 +99,8 @@
     - Yes
     - Yes
 
-  .. Check the following 
+.. 
+  Check the following 
 
   * - :strong:`View Log Observer Connect`
     - Yes
@@ -105,7 +108,8 @@
     - No
     - No
 
-  .. Check the following 
+.. 
+  Check the following 
 
   * - :strong:`RUM URL Grouping` |br| See :ref:`rum-rbac`
     - Yes
