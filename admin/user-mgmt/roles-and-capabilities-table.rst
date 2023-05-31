@@ -28,6 +28,11 @@ Data configuration
 
 .. include:: /_includes/admin/roles_users_teams.rst
 
+Help and support
+==================
+
+.. include:: /_includes/admin/roles_help_support.rst
+
 .. _metrics-pipeline-rbac:
 
 Metrics pipeline management
