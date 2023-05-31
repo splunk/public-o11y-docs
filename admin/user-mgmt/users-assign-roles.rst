@@ -77,36 +77,6 @@ To edit roles for multiple users at the same time, follow these steps:
 #. Confirm your selection.
 
 
-Assign roles to Splunk Enterprise and Splunk Cloud Platform users
-============================================================================
-
-Splunk Enterprise and Splunk Cloud Platform users are automatically added with equivalent roles in Observability Cloud.
-
-The following table shows the equivalence between Splunk Enterprise Cloud (EC) and Splunk Observability Cloud roles.
-
-.. list-table::
-   :header-rows: 1
-   :widths: 50 50
-   :width: 100%
-
-   * - :strong:`Enteprise or Cloud`
-     - :strong:`Observability Cloud`
-
-   * - Admin
-     - Admin
-
-   * - Sc_admin
-     - Admin
-
-   * - Power
-     - Power
-
-   * - Can_delete
-     - Power
-
-   * - User
-     - Read-only
-
 
 Edit user roles using the API
 ===============================
