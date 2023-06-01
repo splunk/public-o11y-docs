@@ -17,7 +17,7 @@ Instrument React Native applications for Splunk RUM
 
 Instrument your React Native applications to get Real User Monitoring (RUM) data into Splunk Observability Cloud. With Splunk RUM for Mobile, you can gain insight about the performance and health of your mobile apps.
 
-.. caution:: This distribution is currently in beta. Don't use it in production environments without prior testing. Some features might not be supported or might have constrained capabilities.
+.. caution:: This distribution is currently in beta. Don't use it in production environments without extensive prior testing. Some features might not be supported or might have constrained capabilities.
 
 .. raw:: html
 

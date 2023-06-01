@@ -11,7 +11,7 @@ You can instrument your React Native and Expo applications using the Splunk Dist
 
 To instrument your React Native or Expo application and get data into Splunk RUM, follow the instructions on this page.
 
-.. caution:: This distribution is currently in beta. Don't use it in production environments without prior testing. Some features might not be supported or might have constrained capabilities.
+.. caution:: This distribution is currently in beta. Don't use it in production environments without extensive prior testing. Some features might not be supported or might have constrained capabilities.
 
 .. _react-rum-requirements:
 
