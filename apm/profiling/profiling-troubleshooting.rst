@@ -34,7 +34,7 @@ To solve this, check that you've instrumented your application and that the appl
 Check the OpenTelemetry Collector configuration
 -------------------------------------------------
 
-If the Splunk Distribution of OpenTelemetry Collector isn't configured to send logs to Observability Cloud using the Splunk HTTP Event Collector (HEC) exporter, it drops profiling data. 
+AlwaysOn Profiling requires the Splunk HTTP Event Collector (HEC) exporter to send profiling data to Splunk Observability Cloud. If the Splunk HEC exporter isn't configured, the Collector drops profiling data.
 
 To solve this issue, edit the configuration file for the Splunk Distribution of OpenTelemetry Collector and make sure that a profiling pipeline exists with an OTLP gRPC receiver and a Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
 
@@ -61,7 +61,7 @@ The following example shows you how to configure a pipeline in the ``agent-confi
          processors: [memory_limiter, batch]
          exporters: [logging/info, splunk_hec]
 
-AlwaysOn Profiling requires the Splunk HTTP Event Collector (HEC) exporter to send profiling data to Splunk Observability Cloud. The exporter is configured automatically for the Splunk OTel Collector version 0.44.0 and higher. If you're using a version of the Collector lower than 0.44.0, you might have to edit the configuration manually.
+The exporter is configured automatically for the Splunk OTel Collector version 0.44.0 and higher. If you're using a version of the Collector lower than 0.44.0, you might have to edit the configuration manually.
 
 Check that you've activated AlwaysOn Profiling
 -------------------------------------------------
