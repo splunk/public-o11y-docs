@@ -25,7 +25,7 @@ In the Metric Finder, search using whatever information you know. For example, y
 
 Search guidance and syntax 
 --------------------------------
-Refine a search by entering more search terms or by adding filters. You can add filters by selecting in the left menu, or matching metadata in any of the search results. The following table outlines guidance for search syntax.The Metric Finder doesn't support advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms aren't supported.
+Refine a search by entering more search terms or by adding filters. You can add filters by selecting in the left menu, or matching metadata in any of the search results. The following table outlines guidance for search syntax. The Metric Finder doesn't support advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms aren't supported.
 
 
 .. list-table::
@@ -74,15 +74,9 @@ If you hover over a metric name a tooltip opens that provides information about 
 Use the filter or exclude sidebar
 --------------------------------------
 
-The left sidebar surfaces relevant metadata from the search results as facets to help refine your search. If your organization has configured custom categories, any that appear in the search results will be surfaced at the top of the left sidebar above other facets. Any value found in the sidebar can be added to the search field as a filter or exluded from the search, and the results will be refreshed.
+The :guilabel:`Filter or exclude`surfaces relevant metadata from the search results. Custom categories appear at the top of the list. For more, see :ref:`managing-custom-categories`. If you don't see the value that you're looking for in the longer list, enter the value in the search field to return more relevant search results.
 
-If there are more than a few values for a facet, you can select :guilabel:`Show more` to see the first 100 results. If you don't see the value that you're looking for in the longer list, you can type it in the search field to return more relevant search results.
-
-Hovering anywhere over a value in the left sidebar highlights the row and displays the :guilabel:`Filter` and :guilabel:`Exclude Button`. Select a value, or the :guilabel:`Filter`, to add it to your search as a filter. To exclude a value from your search results, select the :guilabel:`Exclude Button`.
-
-When filters are excluded from a search, they are indicated by an exclamation point (!) at the beginning to distinguish them from regular search terms. Select :guilabel:`Search metrics` or hit Enter to run a search.
-
-Properties and dimensions of a metric are shown directly with each search result. This is the same list that is shown in the Related Properties panel of the Metadata Catalog for a given metric.
+Hovering anywhere over a value in the left sidebar highlights the row and displays the :guilabel:`Filter` and :guilabel:`Exclude Button`. Select a value, or the :guilabel:`Filter`, to add it to your search as a filter. To exclude a value from your search results, select the :guilabel:`Exclude Button`.Exclamation point (!) at the beginning of a filter indicate an excluded term. 
 
 .. _matching-metadata:
 
@@ -96,9 +90,9 @@ When a search term that you typed also matches metric metadata (such as a dimens
 Increase search results
 ------------------------------------------------------------
 
-If your search didn't match any metrics, change the query or remove a filter. Shorter search terms (like ``util``) are likely to match more results than longer terms (like ``utilization``). If you don't see any results using a long search term, try shortening it to a prefix or separating it into a few smaller terms. For example, break ``NumRequests`` into ``num requests``.
+If your search didn't match any metrics, change the query or remove a filter. Shorter search terms like ``util`` are likely to match more results than longer terms like ``utilization``. If you don't see any results using a long search term, try shortening it to a prefix or separating it into a few smaller terms. For example, break ``NumRequests`` into ``num requests``.
 
-You can also uncheck :guilabel:`Active metrics only` to include inactive metrics that are no longer actively sending data to Infrastructure Monitoring in your search. (By default, the Metric Finder will only look for metrics that are actively sending data.) If this control is unchecked, the time series count shown when you hover over a metric name will include matching inactive time series as well as active time series.
+You can also uncheck :guilabel:`Active metrics only` to include inactive metrics that are no longer actively sending data to Infrastructure Monitoring in your search. By default, the Metric Finder looks for metrics that actively send data. If you uncheck this control, the time series count shown when you hover over a metric name include matching inactive time series as well as active time series.
 
 
 .. _open-chart-from-metric:
@@ -124,7 +118,7 @@ If there are more than a few values for a custom category, you can select :guila
 
 Use custom categories to browse for metrics using features that are unique to your organization’s data, like custom tags or properties. If you use custom metrics, you can set up custom categories to surface key dimensions from your data to help your user get started. Administrators can add custom categories.
 
-To display dimensions and properties as custom categories on the Metrics page, select :guilabel:`Add custom categories`. Select :guilabel:`Save and close` when you finish adding categories.The custom categories you added are now available for use on the Metrics page. Selecting :guilabel:`Edit` lets you add, delete, or update existing custom categories.
+To display dimensions and properties as custom categories on the Metrics page, select :guilabel:`Add custom categories`. Select :guilabel:`Save and close` when you finish adding categories. The custom categories you added are available for use on the Metrics page. Selecting :guilabel:`Edit` lets you add, delete, or update existing custom categories.
 
 
 .. _search-edit-metadata:
