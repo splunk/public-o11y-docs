@@ -10,17 +10,17 @@ Performance reference for Splunk OTel Java agent
 <General statement: Need of observability, cost and gain balance, acceptable impact levels, design consideration, language specific, end results depends on environment and monitored service behavior profile>
 
 Minimum requirements for production deployments the Java agent
-===============================================================
+=================================================================
 
 Minimum hardware and software requirements for a production grade deployment of the Java agent.
 
 Hardware specifications to scale deployments of the Java agent
-===============================================================
+=================================================================
 
 Hardware specifications to scale the deployment of the various components of the Java agent. This can be a graduated list for the different scaling levels such as small, mid-range and large deployments.
 
 Guidelines to optimize performance of the Java agent
-===========================================================
+=================================================================
 
 These are best practices.
 
@@ -29,14 +29,14 @@ These are best practices.
 Suggestions for storage, hardware, data ingestion, and configuration to optimize performance. For example, settings that can be tweaked or disabled according to the situation, features that can be disabled, etc.
 
 Constraints impacting the performance of the Java agent
-===========================================================
+=================================================================
 
 <General constraints as an include>
 
 Information on the potential challenges that might decrease the performance of the Java agent, such as span volume, application features, etc.
 
 Troubleshooting performance issues when deploying the Java agent
-==================================================================
+=================================================================
 
 If you run into unusual performance overhead issues when instrumenting services using the Splunk OpenTelemetry Java agent, collect the following information:
 
@@ -50,6 +50,6 @@ After you've collected the information, you can do the following:
 - To get professional help with optimizing your Splunk software investment, see Splunk Services.
 
 How to get support
-==============================================================
+=================================================================
 
 .. include:: /_includes/troubleshooting-components.rst
