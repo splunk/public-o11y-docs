@@ -34,6 +34,8 @@ For instance, if you're using the :ref:`splunk-hec-exporter`, the following appl
 * Single log event maximum size: 5 MiB 
 * Log event batch maximum size (compressed): 2 MiB
 
+.. note:: Check the default values, recommendations and limitations for each of the individual components in your configuration. For standard configurations, using default values is the best practice. 
+
 Agent mode
 ------------------------------------------------------------
 
