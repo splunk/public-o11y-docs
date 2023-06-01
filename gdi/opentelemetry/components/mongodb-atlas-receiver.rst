@@ -7,7 +7,7 @@ MongoDB Atlas receiver
 .. meta::
       :description: The MongoDB Atlas receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from MongoDB Atlas through its monitoring API.
 
-The MongoDB Atlas receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from MongoDB Atlas through its monitoring API. The supported pipeline type is ``metrics``. See :ref:`otel-data-processing` for more information.
+The MongoDB Atlas receiver allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from MongoDB Atlas through its monitoring API. The supported pipeline types are ``metrics`` and ``logs``. See :ref:`otel-data-processing` for more information.
 
 Database metrics are dimensionalized by project and database attributes, for example, ``project_name`` and
 ``database_name``.
@@ -47,14 +47,28 @@ configuration file, as shown in the following example:
        # You can obtain the private key from the API Keys tab of the MongoDB Atlas Project Access Manager. 
        # This value is required.
 
-To complete the configuration, include the receiver in the ``metrics`` pipeline of the ``service`` section of your
-configuration file. For example:
+The following example shows how to collect logs:
+
+.. code:: yaml
+
+   receivers:
+       mongodbatlas:
+        logs:
+          enabled: true
+          projects: 
+            - name: "Your MongoDB project"
+              collect_audit_logs: true
+              collect_host_logs: true
+
+To complete the configuration, include the receiver in the ``metrics`` or ``logs`` pipelines of the ``service`` section of your configuration file. For example:
 
 .. code:: yaml
 
    service:
      pipelines:
        metrics:
+         receivers: [mongodbatlas]
+      logs:
          receivers: [mongodbatlas]
 
 Settings
