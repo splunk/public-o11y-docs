@@ -31,7 +31,8 @@
     - Yes
     - Yes
 
-.. Check the following  
+..
+  Check the following  
 
   * - :strong:`Create APM MetricSets`
     - Yes
