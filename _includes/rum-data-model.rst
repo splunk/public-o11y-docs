@@ -12,5 +12,5 @@ The Splunk RUM data model represents the following logical entities, following O
    * - Interaction
      - Reflects the action the user conducts within the user interface. Common interaction types include mouse clicks, taps on a touch screen, and keyboard events.
    * - User
-     - By default, Splunk RUM doesn't collect identity data. Mapping a trace to a specific user requires manual instrumentation. Users can be represented by their username, email addresses, or using a synthetic identifier. Synthetic representation is useful in situations where PII regulations do not allow users to be identified. For more information on how to add identity data, see :ref:`browser-rum-identify-users`.
+     - By default, Splunk RUM doesn't collect identity data. Mapping a trace to a specific user requires manual instrumentation. Users can be represented by their username, email addresses, or using a synthetic identifier. Synthetic representation is useful in situations where PII regulations do not allow users to be identified.
 
