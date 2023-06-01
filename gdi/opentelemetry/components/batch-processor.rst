@@ -53,7 +53,7 @@ Starting from version 0.78 of the OpenTelemetry Collector, you can batch telemet
 
 To use metadata as batching criteria, add the ``include_metadata: true`` setting to your receivers's configuration, so that the batch processor can use the available metadata keys.
 
-.. note:: Batching by metadata can increase memory consumption, as each metadata combination triggers the allocation of a new background task in the Collector. The maximum number of distinct combinations is defined using the ``metadata_cardinality_limit`` setting, which defaults to ``1000``.
+.. caution:: Batching by metadata can increase memory consumption, as each metadata combination triggers the allocation of a new background task in the Collector. The maximum number of distinct combinations is defined using the ``metadata_cardinality_limit`` setting, which defaults to ``1000``.
 
 Settings
 ======================
