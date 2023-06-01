@@ -48,7 +48,7 @@ receivers:
 
 Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
 
-```
+```testwrong
 service:
   pipelines:
     metrics:
