@@ -239,4 +239,8 @@ To get a detailed breakdown of the metric time series (MTS) you've created and u
 System limits and throttling
 ====================================================================
 
-ADD INFO HERE
+Your Observability Cloud products have system limits to make sure the service is performing adequately. System limits are determined by subscruption. If you exceed those limits, the platform starts to throttle data ingest. 
+
+.. note:: Throttling starts after you've exceeded your system limits. All data sent within your limits is ingested.
+
+To learn more, see :ref:`per-product-limits`.
