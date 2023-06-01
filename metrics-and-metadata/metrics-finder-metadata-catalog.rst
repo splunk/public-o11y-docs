@@ -23,38 +23,35 @@ In the Metric Finder, search using whatever information you know. For example, y
 * property of the environment it's reporting from
 * exact values into the search field. For example, search a host name to find out what data the host reported.
 
-Search syntax 
-----------------
-Enter in a dot (.) in the search bar to see a list of possible completions for the prefix you’ve already searched. 
-
-Enter in the name of a dimension or property followed by (:), to see a list of possible values for that key in your data.
-
-You can also find metrics while you build a dashboard or edit a chart. To learn more see :ref:`use-metrics-sidebar`.
-
-You can refine a search by typing more search terms or by adding filters. You can add filters by selecting facets in the left sidebar, or matching metadata in any of the search results.
-
-You can include wildcards in your filters. For example, ``host:test-*`` filters the results to only those with a value of ``host`` beginning with ``test-``.
-
-You can use (!) (NOT) in your filters to exclude results. For example, ``!env:qa`` filters the results to exclude any metrics with a value of ``env`` equal to ``qa``.
+Search guidance and syntax 
+--------------------------------
+Refine a search by entering more search terms or by adding filters. You can add filters by selecting in the left menu, or matching metadata in any of the search results. The following table outlines guidance for search syntax.The Metric Finder doesn't support advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms aren't supported.
 
 
-.. note:: The Metric Finder does not support advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms are not supported.
+.. list-table::
+   :header-rows: 1
+   :width: 100
+   :widths: 20 80
+
+   * - :strong:`Syntax`
+     - :strong:`Notes`
+
+   * - :strong:`.`
+     - Enter in a dot (.) in the search bar to see a list of possible completions for the prefix you’ve already searched.
+   * - :strong:`:`
+     - Enter in the name of a dimension or property followed by (:), to see a list of possible values for that key in your data.
+   * - :strong:`*` 
+     - Option to include wildcards in your filters. For example, ``host:test-*`` filters the results to only those with a value of ``host`` beginning with ``test-``.
+   * - :strong:`!`
+     - Use (!) (NOT) in your filters to exclude results. For example, ``!env:qa`` filters the results to exclude any metrics with a value of ``env`` equal to ``qa``.
 
 
 
-Understand search results 
-------------------------------------
+Search results 
+===============
 
 Each search result is the name of a metric. Search results are URL-addressable; you can link to a set of search results using the URL for that search. For example, a plaintext search for ``docker cpu prod`` returns the top 100 metrics that contained ``docker``, ``cpu``, or ``prod`` in their name or metadata. Splunk Observability Cloud highlights the metric name, or metadata, to show what search terms it matches. 
 
-
-Select Metrics then Metrics Finder on the navigation bar, the Metric Finder opens with a searchable list of categories, drawn from your Infrastructure Monitoring integrations and custom categories, if configured. Custom categories help you quickly find metrics related to commonly used dimensions in your organization.
-
-If your administrators haven't created any custom categories, the custom categories section isn't visible. Infrastructure Monitoring administrators can add them. See :ref:`managing-custom-categories`.
-
-When you select a custom category value or integration, a key-value pair is added as a search filter, and a metric search is run.
-
-If there are more than a few values for a custom category, you can select :guilabel:`Show more` to see the first 100 results. If you don’t see the value that you’re looking for in the longer list, you can enter it in the search field to return more relevant search results.
 
 .. _metric-descriptions:
 
@@ -63,7 +60,7 @@ Add metric descriptions
 
 Descriptions help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. 
 
-If a metric has a description, you can find it underneath the metric title. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions (for example, from one of our integrations), this provided description is always shown and is not editable.
+If a metric has a description, you can find it underneath the metric title. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions (for example, from one of the integrations), this provided description is always shown and is not editable.
 
 The maximum length of a metric description is 1,024 characters. Although the descriptions are included in the search result, the text of metric descriptions is not analyzed by the search.
 
@@ -88,7 +85,7 @@ Properties and dimensions of a metric are shown directly with each search result
 .. _matching-metadata:
 
 Match metadata
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------------
 
 When a search term that you typed also matches metric metadata (such as a dimension name or a property value), that match will be shown under the metric name with a grey outline. Select the match, or the (+) icon, to add it to your search as a filter. To exclude the metadata from your search results, select the (-) icon.
 
@@ -116,6 +113,13 @@ To return to search results from the new chart, select either the :guilabel:`Clo
 
 Manage custom categories
 ------------------------------------------------------------
+
+
+Custom categories help you quickly find metrics related to commonly used dimensions in your organization. If your administrators haven't created any custom categories, the custom categories section isn't visible. Infrastructure Monitoring administrators can add them. See :ref:`managing-custom-categories`.
+
+When you select a custom category value or integration, a key-value pair is added as a search filter, and a metric search is run.
+
+If there are more than a few values for a custom category, you can select :guilabel:`Show more` to see the first 100 results. If you don’t see the value that you’re looking for in the longer list, you can enter it in the search field to return more relevant search results.
 
 Use custom categories to browse for metrics using features that are unique to your organization’s data, like custom tags or properties. If you use custom metrics, you can set up custom categories to surface key dimensions from your data to help your users get started. Custom categories are defined for the entire organization. Only Infrastructure Monitoring users with admin privileges will see a button to :guilabel:`Add custom categories`.
 
