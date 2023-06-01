@@ -63,30 +63,13 @@ Follow these steps to import and initialize the React Native RUM package.
       # yarn
       yarn add @splunk/otel-react-native
 
-2. Wrap your entire App component using the ``OtelWrapper`` component:
+   For iOS, also install the pod:
 
-   .. code::
+   .. code:: bash
 
-      import { OtelWrapper, startNavigationTracking } from '@splunk/otel-react-native';
-      import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
+      (cd ios && pod install)
 
-      //...
-
-      export default function App() {
-      const navigationRef = useNavigationContainerRef();
-      return (
-         <OtelWrapper configuration={RumConfig}>
-            <NavigationContainer ref={navigationRef}>
-            <Stack.Navigator>
-               <Stack.Screen name="Home" component={Home} />
-               <Stack.Screen name="Details" component={Details} />
-            </Stack.Navigator>
-            </NavigationContainer>
-         </OtelWrapper>
-         );
-      }
-
-3. Edit the initialization parameters to set the Observability Cloud realm, RUM access token, and basic attributes:
+2. Edit the initialization parameters to set the Observability Cloud realm, RUM access token, and basic attributes:
 
    .. code:: javascript
 
@@ -96,6 +79,23 @@ Follow these steps to import and initialize the React Native RUM package.
          applicationName: '<your-app-name>',
          environment: '<your-environment>'
       }
+
+3. Wrap your entire App component using the ``OtelWrapper`` component:
+
+   .. code::
+
+      import { OtelWrapper, startNavigationTracking } from '@splunk/otel-react-native';
+      import type { ReactNativeConfiguration } from '@splunk/otel-react-native';
+
+      const AppWithOtelWrapper = () => (
+      <OtelWrapper configuration={RumConfig}>
+         <App />
+      </OtelWrapper>
+      );
+
+      export default AppWithOtelWrapper;
+
+   Alternatively, you can initialize the library early in your code. See :ref:`react-alternative-init`.
 
 4. (Optional) To instrument React Navigation, adapt your code as in the following example:
 
@@ -118,6 +118,10 @@ Follow these steps to import and initialize the React Native RUM package.
             </NavigationContainer>
          );
       }
+
+   For more information, see :new-page:`React Navigation <https://github.com/react-navigation/react-navigation>` on GitHub.
+
+.. _react-alternative-init:
 
 Alternative initialization method
 ----------------------------------------
