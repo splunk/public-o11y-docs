@@ -19,7 +19,7 @@ Prerequisites
 To get data into Splunk AlwaysOn Profiling, you need the following:
 
 - Splunk APM activated for your Observability Cloud organization.
-- Splunk Distribution of OpenTelemetry Collector version 0.44.0 or higher. See :ref:`otel-intro`.
+- Splunk Distribution of OpenTelemetry Collector version 0.44.0 or higher running on the host. See :ref:`otel-intro`.
 
 If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
@@ -88,6 +88,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
          java -javaagent:./splunk-otel-javaagent.jar \
          -Dsplunk.profiler.enabled=true \
          -Dsplunk.profiler.memory.enabled=true \
+         -Dotel.logs.exporter=otlp \
          -Dotel.exporter.otlp.endpoint=http(s)://collector:4317 \
          -Dsplunk.metrics.endpoint=http(s)://collector:9943
          -jar <your_application>.jar
