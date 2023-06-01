@@ -233,3 +233,10 @@ On demand reports
 ===========================
 
 To get a detailed breakdown of the metric time series (MTS) you've created and use, you can request a usage report for a specific time interval by contacting your tech support member or your account team. Learn more at :ref:`metrics-usage-report`.
+
+.. _imm-throttling:
+
+System limits and throttling
+====================================================================
+
+ADD INFO HERE
