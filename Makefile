@@ -68,4 +68,4 @@ test:
 	@echo
 	@echo "Testing the docs..."
 	@echo
-	@sphinx-build -b html $(TESTOPTS) $(BUILDDIR)/html
+	@sphinx-build -b dummy $(TESTOPTS) $(BUILDDIR)/html
