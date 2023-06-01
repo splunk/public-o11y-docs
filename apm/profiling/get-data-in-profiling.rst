@@ -25,6 +25,29 @@ If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`pro
 
 .. note:: Log Observer is not required. See :ref:`exclude-log-data` for more information.
 
+.. _profiling-setup-helm:
+
+Helm chart deployments
+---------------------------------------------------------------
+
+If you're deploying the Splunk Distribution of OpenTelemetry Collector using Helm, make sure to pass the following value when installing the chart:
+
+.. code-block:: bash
+
+   --set splunkObservability.profilingEnabled='true' 
+
+You can also edit the parameter in the ``values.yaml`` file itself. For example:
+
+.. code-block:: yaml
+
+   # This option just enables the shared pipeline for logs and profiling data.
+   # There is no active collection of profiling data.
+   # Instrumentation libraries must be configured to send it to the collector.
+   # If you don't use AlwaysOn Profiling for Splunk APM, you can disable it.
+   profilingEnabled: false
+
+.. note:: Setting ``profileEnabled`` to ``true`` creates the logs pipeline required by AlwaysOn Profiling, but doesn't install the APM instrumentation. See :ref:`profiling-setup-step-instrument`.
+
 .. _profiling-setup:
 
 Get profiling data in
@@ -88,7 +111,6 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
          java -javaagent:./splunk-otel-javaagent.jar \
          -Dsplunk.profiler.enabled=true \
          -Dsplunk.profiler.memory.enabled=true \
-         -Dotel.logs.exporter=otlp \
          -Dotel.exporter.otlp.endpoint=http(s)://collector:4317 \
          -Dsplunk.metrics.endpoint=http(s)://collector:9943
          -jar <your_application>.jar
