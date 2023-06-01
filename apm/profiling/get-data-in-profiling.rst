@@ -46,6 +46,12 @@ You can also edit the parameter in the ``values.yaml`` file itself. For example:
    # If you don't use AlwaysOn Profiling for Splunk APM, you can disable it.
    profilingEnabled: false
 
+If you don't have Log Observer and are using a version of the Collector lower than 0.78.0, make sure to turn off logs collection:
+
+.. code-block:: yaml
+
+   logsEnabled: false
+
 .. note:: Setting ``profileEnabled`` to ``true`` creates the logs pipeline required by AlwaysOn Profiling, but doesn't install the APM instrumentation. See :ref:`profiling-setup-step-instrument`.
 
 .. _profiling-setup:
