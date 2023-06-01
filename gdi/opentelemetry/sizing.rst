@@ -27,9 +27,9 @@ The following is recommended:
 Load limits 
 ------------------------------------------------------------
 
-While the Collector itself doesn't have explicit limits, certain :ref:`OTel components <components>` do. 
+While the Collector itself doesn't have explicit limits, certain :ref:`OTel components <otel-components>` do. 
 
-For instance, if you're using the :ref:`splunk-hec-exporter`, the following apply: 
+For instance, if you're using the :ref:`splunk-hec-exporter`, the following (among other) apply: 
 
 * Single log event maximum size: 5 MiB 
 * Log event batch maximum size (compressed): 2 MiB
