@@ -50,7 +50,7 @@ Follow these steps to automatically instrument your application using the Python
 
    .. code-block:: bash
 
-      pip3 install splunk-opentelemetry[all]
+      pip install splunk-opentelemetry[all]
       pip install opentelemetry-exporter-otlp-proto-grpc
 
    If you're using a requirements.txt or pyproject.toml file, add ``splunk-opentelemetry[all]`` to it.
