@@ -58,13 +58,15 @@ Each search result is the name of a metric. Search results are URL-addressable; 
 Add metric descriptions
 -----------------------------
 
-Descriptions help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. 
+Descriptions help users understand what metrics are measuring, especially when the names of metrics are jargon or difficult to recognize. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions like integrations, this provided description is always shown and isn't editable. The maximum length of a metric description is 1,024 characters. 
 
-If a metric has a description, you can find it underneath the metric title. To add a metric description select :guilabel:`Add description`, or select :guilabel:`Edit description` to edit the custom description. Some metrics have built-in descriptions (for example, from one of the integrations), this provided description is always shown and is not editable.
+If you hover over a metric name a tooltip opens that provides information about the metric:
 
-The maximum length of a metric description is 1,024 characters. Although the descriptions are included in the search result, the text of metric descriptions is not analyzed by the search.
+* metric name
+* description and type
+* time of creation
+* number of time series 
 
-If you hover over a metric name, a tooltip opens that provides information about the metric. Information you can view in the metric tooltip includes the metric name, description, type, the time it was created, and the number of time series that it reports (filtered by any filters that have been applied to your search query).
 
 
 .. _filter-or-exclude-sidebar:
@@ -87,14 +89,14 @@ Properties and dimensions of a metric are shown directly with each search result
 Match metadata
 ------------------------------------------------------------
 
-When a search term that you typed also matches metric metadata (such as a dimension name or a property value), that match will be shown under the metric name with a grey outline. Select the match, or the (+) icon, to add it to your search as a filter. To exclude the metadata from your search results, select the (-) icon.
+When a search term that you typed also matches metric metadata (such as a dimension name or a property value), that match is shown under the metric name with a grey outline. Select the match, or the (+) icon, to add it to your search as a filter. To exclude the metadata from your search results, select the (-) icon.
 
 .. _finding-more-results:
 
 Increase search results
 ------------------------------------------------------------
 
-If your search did not match any metrics, change the query or remove a filter. Shorter search terms (like ``util``) are likely to match more results than longer terms (like ``utilization``). If you don't see any results using a long search term, try shortening it to a prefix or separating it into a few smaller terms. For example, break ``NumRequests`` into ``num requests``.
+If your search didn't match any metrics, change the query or remove a filter. Shorter search terms (like ``util``) are likely to match more results than longer terms (like ``utilization``). If you don't see any results using a long search term, try shortening it to a prefix or separating it into a few smaller terms. For example, break ``NumRequests`` into ``num requests``.
 
 You can also uncheck :guilabel:`Active metrics only` to include inactive metrics that are no longer actively sending data to Infrastructure Monitoring in your search. (By default, the Metric Finder will only look for metrics that are actively sending data.) If this control is unchecked, the time series count shown when you hover over a metric name will include matching inactive time series as well as active time series.
 
@@ -114,23 +116,17 @@ To return to search results from the new chart, select either the :guilabel:`Clo
 Manage custom categories
 ------------------------------------------------------------
 
-
 Custom categories help you quickly find metrics related to commonly used dimensions in your organization. If your administrators haven't created any custom categories, the custom categories section isn't visible. Infrastructure Monitoring administrators can add them. See :ref:`managing-custom-categories`.
 
 When you select a custom category value or integration, a key-value pair is added as a search filter, and a metric search is run.
 
 If there are more than a few values for a custom category, you can select :guilabel:`Show more` to see the first 100 results. If you don’t see the value that you’re looking for in the longer list, you can enter it in the search field to return more relevant search results.
 
-Use custom categories to browse for metrics using features that are unique to your organization’s data, like custom tags or properties. If you use custom metrics, you can set up custom categories to surface key dimensions from your data to help your users get started. Custom categories are defined for the entire organization. Only Infrastructure Monitoring users with admin privileges will see a button to :guilabel:`Add custom categories`.
+Use custom categories to browse for metrics using features that are unique to your organization’s data, like custom tags or properties. If you use custom metrics, you can set up custom categories to surface key dimensions from your data to help your user get started. Administrators can add custom categories.
+
+To display dimensions and properties as custom categories on the Metrics page, select :guilabel:`Add custom categories`. Select :guilabel:`Save and close` when you finish adding categories.The custom categories you added are now available for use on the Metrics page. Selecting :guilabel:`Edit` lets you add, delete, or update existing custom categories.
 
 
-To select dimensions or properties to be displayed as custom categories on the Metrics page, select :guilabel:`Add custom categories`. The number of categories for each organization is limited. Once the limit has been reached, the "+" button will be disabled. Select :guilabel:`Save and close` when you have finished adding categories.
-
-
-
-The custom categories you added are now available for use on the Metrics page. Selecting :guilabel:`Edit` lets you add, delete, or update existing custom categories. Non-administrators do not see the option to edit custom categories.
-
-.. _metadata-catalog:
 .. _search-edit-metadata:
 
 Use the Metadata Catalog to search and edit metadata
