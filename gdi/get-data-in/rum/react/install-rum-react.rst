@@ -11,7 +11,7 @@ You can instrument your React Native and Expo applications using the Splunk Dist
 
 To instrument your React Native or Expo application and get data into Splunk RUM, follow the instructions on this page.
 
-.. note:: Splunk APM is not required to instrument Splunk RUM for React Native. 
+.. caution:: This distribution is currently in beta. Don't use it in production environments without prior testing. Some features might not be supported or might have constrained capabilities.
 
 .. _react-rum-requirements:
 
@@ -24,6 +24,8 @@ The library is also compatible with the following frameworks and libraries:
 
 - Expo framework
 - React Navigation 5 and 6
+
+.. note:: Splunk APM is not required to instrument Splunk RUM for React Native. 
 
 .. _rum-react-install:
 
@@ -142,11 +144,6 @@ Splunk RUM uses server timing to calculate the response time between the front e
 By default, the Splunk Distributions of OpenTelemetry already send the ``Server-Timing`` header. The header links spans from the browser with back-end spans and traces.
 
 The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM. 
-
-Change attributes before they're collected
-====================================================================
-
-To remove or change attributes in your spans, such as personally identifiable information (PII), see :ref:`react-rum-span-filtering`.
 
 How to contribute
 =========================================================
