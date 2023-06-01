@@ -24,13 +24,15 @@ The following is recommended:
 * If the Collector handles both trace and metrics data, consider both types of data when planning your deployment. For example, 7.5K spans per second plus 10K data points per second requires 1 CPU core.
 * The Collector does not persist data to disk so no disk space is required.
 
-Load sizing limits 
+Load limits 
 ------------------------------------------------------------
 
-There's no explicit sizing limits, although the following are recommended when using components such as the :ref:`splunk-hec-receiver`: 
+While the Collector itself doesn't have explicit limits, certain :ref:`OTel components <components>` do. 
 
-* Single log event maximum size: 5 MB 
-* Log event batch maximum size (compressed): 2 MB
+For instance, if you're using the :ref:`splunk-hec-exporter`, the following apply: 
+
+* Single log event maximum size: 5 MiB 
+* Log event batch maximum size (compressed): 2 MiB
 
 Agent mode
 ------------------------------------------------------------
