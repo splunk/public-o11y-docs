@@ -69,16 +69,18 @@ The following example shows a Splunk HEC receiver configured with all available 
 Authorize HTTP requests
 -----------------------------
 
-You can use extensions to modify how the handles HTTP server requests: 
+Use the following extensions to modify how the receiver handles HTTP server requests: 
 
 * https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/basicauthextension
 * https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/bearertokenauthextension
 * https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oidcauthextension
 * https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oauth2clientauthextension
 
-You can also implement your own auth extension to fulfill your requirements using the package (see https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth) and https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth.
+MORE DETAILS ON EACH?
 
-Configure ``HTTPServerSettings`` and the auth settings in the receiver to enable this behavior:
+Alternatively, you can also implement your own auth extension to fulfill your requirements using the package (see https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth) and https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth.
+
+Configure ``HTTPServerSettings`` and the auth settings in the receiver to enable this behavior ????:
 
 * https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/splunkhecreceiver/config.go#L21
 * https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/confighttp/confighttp.go#L55
