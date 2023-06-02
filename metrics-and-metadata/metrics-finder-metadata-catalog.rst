@@ -25,7 +25,7 @@ In the Metric Finder, search using whatever information you know. For example, y
 
 Search guidance and syntax 
 --------------------------------
-Refine a search by entering more search terms or by adding filters. You can add filters by selecting in the left menu, or matching metadata in any of the search results. The following table outlines guidance for search syntax. The Metric Finder doesn't support advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms aren't supported.
+Refine a search by entering more search terms or by adding filters. You can add filters by selecting in the main menu, or matching metadata in any of the search results. The following table outlines guidance for search syntax. The Metric Finder doesn't support advanced search operations like combining search terms with Boolean operators, wildcard matching in plain text search terms, or exact matches on multiple search terms aren't supported.
 
 
 .. list-table::
@@ -126,67 +126,55 @@ To display dimensions and properties as custom categories on the Metrics page, s
 Search the Metadata Catalog 
 =================================================================
 
-Use the Metadata Catalog to find, view, and edit information about the :ref:`metadata <metrics-dimensions-mts>` in your system, such as dimensions, properties, and tags. In the Metadata Catalog, the search bar automatically expands a menu with a matching list of results. The listed values are comprised of metrics, properties, and tags. Both dimensions and custom properties are marked as :strong:`property`. 
+Use the Metadata Catalog to find, view, and edit information about the :ref:`metadata <metrics-dimensions-mts>` in your system, such as dimensions, properties, and tags. In the Metadata Catalog, the search bar automatically expands a menu with a matching list of results. The list contains metrics, properties, and tags. Both dimensions and custom properties are marked as :strong:`property`. 
 
-.. caution:: You can't add or edit a new dimension to any object after data ingest in Splunk Observability Cloud. To learn more, see :ref:`metadata-best-practices`.  
+.. note:: You can't add or edit a new dimension to any object after data ingest in Splunk Observability Cloud. To learn more, see :ref:`metadata-best-practices`.  
 
 Follow these steps to search for metadata and edit metadata in the Metadata Catalog: 
 
-#. Go to :menuselection:`Settings > Metric Metadata`.
+#. Go to :menuselection:`Settings, Metric Metadata`.
 #. Enter your search criteria in the :guilabel:`Search bar`. You can search for metrics, dimensions, custom properties, and tags.
-    
-    * To search for a metric, enter the metric name you want to find. For example, enter ``cpu.utilization``. Observability Cloud displays a chart for the metric, the metric type, and a list of properties (dimensions and custom properties) associated with the metric. 
 
-    * To search for a dimension or a custom property, do one of the following:
+Splunk Observability Cloud displays a chart for the metric, the metric type, and a list of dimensions and custom properties associated with the metric. To search for a metric, enter the metric name you want to find. The following image shows an example output for the metric ``cpu.utilization``.
 
-            * Enter a dimension or custom property key. For example, enter ``host.name``. Observability Cloud displays a list of associated metrics and a list of possible values for the key.
-            * Enter the complete dimension or custom property key-value pair. For example, enter ``host.name:appsvr01``. Observability Cloud displays all the metrics, metadata, and data links associated with the key-value pair.
+.. image:: /_images/images-metrics/metadata-catalog-metric-view.png
+   :width: 75%
+   :alt: This screenshot shows a chart and associated metadata for the metric ``cpu.utilization``.
+
+
+Search for a dimension or custom property  
+------------------------------------------------------------------
+
+To search for a dimension or a custom property, do one of the following:
+
+    * Enter a dimension or custom property key. For example, enter ``host.name``. Observability Cloud displays a list of associated metrics and a list of possible values for the key.
+
+    * Enter the complete dimension or custom property key-value pair. For example, enter ``host.name:appsvr01``. Observability Cloud displays all the metrics, metadata, and data links associated with the key-value pair.
 
     * To search for a tag, enter the tag you want to search for. For example, enter ``kubernetes_service_redis-cart``. Observability Cloud displays a list of metrics and properties (dimensions and custom properties) assigned with the tag.
         
+Add or edit metadata
+------------------------------------------------------------------------------------
+The following table outlines navigation paths for adding and editing metadata. You can also view and edit a chart when searching for a metric using the Metadata Catalog. For more information on naming custom properties and tags, see :ref:`Guidance for metric and dimension names <metric-dimension-names>`.
 
-#. Add or edit metadata. You can add or edit the following metadata:
-
-    * For a metric:
-        
-        * Metric type: To edit metric type, select :guilabel:`Edit` next to the :strong:`Metric Type`.
-        
-        .. note:: While chart isn't metadata for a metric, you can also view and edit a chart when searching for a metric using the Metadata Catalog. To edit the chart associated with a metric, select :guilabel:`View In Chart` and make changes to the chart.
-        
-    * For a dimension or custom property:
-
-        * Custom property: To add or edit a new custom property, select :guilabel:`Edit` or :guilabel:`Add new property...` in the :strong:`Properties` section.
-        * Tag: To add or edit a new tag, select :guilabel:`Edit` or :guilabel:`Add new tag...` in the :strong:`Tags` section.
-        * Data links: To add a new data link, select :guilabel:`New Link` in the :strong:`Data Links` section.
-
-    * For a tag:
-        
-        * Custom property: To add or edit a new custom property to a tag, select :guilabel:`Edit` or :guilabel:`Add new property...` in the :strong:`Properties` section.
-
-    For more information on naming custom properties and tags, see :ref:`Guidance for metric and dimension names <metric-dimension-names>`.
-
-  
-
-
-Resources
-===========
-For more information, see: 
-
-
+ 
 .. list-table::
    :header-rows: 1
    :width: 100
    :widths: 20 80
 
-   * - :strong:`Content`
-     - :strong:`Resource`
+   * - :strong:`Edit action`
+     - :strong:`Path`
+   * - Metric type
+     - Select :strong:`Edit` then :strong:`Metric Type`.
+   * - Custom property
+     - Select :guilabel:`Edit` or :guilabel:`Add new property...` in the :strong:`Properties` section.
+   * - Tag 
+     - Select :guilabel:`Edit` or :guilabel:`Add new tag...` in the :strong:`Tags` section.
+   * - Data links
+     - Select :guilabel:`New Link` in the :strong:`Data Links` section.
+   * - Chart associated with a metric
+     - Select :guilabel:`View In Chart`.   
 
-   * - Metrics
-     - :ref:`metrics-landing`.
 
 
-
-
-- Use dashboards to see groupings of charts and visualizations of metrics. To learn more, see :ref:`dashboards`.
-- Use navigators to see a data-driven visualization of resources in your environment that are visible to Infrastructure Monitoring. To learn more, see :ref:`use-navigators-imm`.
-- Use global search to search all available data.
