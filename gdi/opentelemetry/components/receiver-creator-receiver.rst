@@ -69,8 +69,6 @@ To activate the receiver creator receiver, add the desired extensions to the ``e
 
 You can nest and configure any supported receiver inside the ``receivers`` section of a ``receiver_creator`` configuration. Which receiver you can nest depends on the type of infrastructure the receiver creator is watching through the extensions defined in ``watch_observers``.
 
-.. caution:: When using receiver creator in multiple pipelines with different telemetry types, the Collector might crash if one of the receivers doesn't support a pipeline type. Make sure the instantiated receivers can support the pipeline type.
-
 Rules expressions
 ------------------------------------
 
