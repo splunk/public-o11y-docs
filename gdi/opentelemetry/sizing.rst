@@ -24,18 +24,6 @@ The following is recommended:
 * If the Collector handles both trace and metrics data, consider both types of data when planning your deployment. For example, 7.5K spans per second plus 10K data points per second requires 1 CPU core.
 * The Collector does not persist data to disk so no disk space is required.
 
-Load limits 
-------------------------------------------------------------
-
-While the Collector itself doesn't have explicit limits, certain :ref:`OTel components <otel-components>` do. 
-
-For instance, if you're using the :ref:`splunk-hec-exporter`, the following (among other) apply: 
-
-* Single log event maximum size: 5 MiB 
-* Log event batch maximum size (compressed): 2 MiB
-
-.. note:: Check the default values, recommendations and limitations for each of the individual components in your configuration. For standard configurations, using default values is the best practice. 
-
 Agent mode
 ------------------------------------------------------------
 
@@ -53,6 +41,18 @@ You can deploy multiple Collectors behind a round-robin load balancer for higher
 
 * Install a cluster of Collectors with at least N+1 redundancy, which means a load balancer and a minimum of two Collector instances should be configured initially.
 * Define a round-robin DNS name.
+
+Component limitations
+------------------------------------------------------------
+
+While the Collector itself doesn't have explicit limits, certain :ref:`OTel components <otel-components>` do. 
+
+For instance, if you're using the :ref:`splunk-hec-exporter`, the following (among other) apply: 
+
+* Single log event maximum size: 5 MiB 
+* Log event batch maximum size (compressed): 2 MiB
+
+.. note:: Check the default values, recommendations and limitations for each of the individual components in your configuration. For standard configurations, using default values is the best practice. 
 
 Scaling recommendations
 ===========================
