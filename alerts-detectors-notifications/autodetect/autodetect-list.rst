@@ -484,6 +484,42 @@ The following table shows customizable arguments for this detector. To learn how
      - None
    
 
+.. _autodetect-oracle:
+
+Oracle
+---------------------------------------------------
+Oracle database - Session utilization expected to reach limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Description: Alerts when Oracle session utilization is above its designated threshold. 
+- Signalflow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/oracle.flow#L5>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Algorithm type
+     - Default value
+   
+   * - Session utilization
+     - Static
+     - ``fire_threshold >= 90%``
+
+   * - metric: oracle.session.usage
+     - Static
+     - ``fire_lasting = 80% of 5m``
+
+   * - oracle.session.limit
+     - Static 
+     - ``clear_threshold < 90%``
+
+   * - 
+     - 
+     - ``clear_lasting = 80% of 5m``     
+
+
 .. _autodetect-redis:
 
 Redis
