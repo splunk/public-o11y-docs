@@ -78,7 +78,8 @@ You can use extensions to modify how the handles HTTP server requests:
 
 You can also implement your own auth extension to fulfill your requirements using the package (see https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth) and https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth.
 
-Configure `HTTPServerSettings` and the auth settings in the receiver to enable this behavior:
+Configure ``HTTPServerSettings`` and the auth settings in the receiver to enable this behavior:
+
 * https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/splunkhecreceiver/config.go#L21
 * https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/confighttp/confighttp.go#L55
 
