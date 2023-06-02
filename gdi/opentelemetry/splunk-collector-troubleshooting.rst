@@ -46,6 +46,8 @@ In this case, the ``NO_WINDOWS_SERVICE=1`` environment variable must be set to f
 Collector is experiencing data issues
 ============================================
 
+You can monitor internal Collector metrics tracking parameters such as data loss or CPU resources in Observability Cloud's default dashboards at :guilabel:`Dashboards > OpenTelemetry Collector > OpenTelemetry Collector`. To learn more about these metrics, see :new-page:`Monitoring <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/monitoring.md>` in the OpenTelemetry GitHub repo.
+
 The Collector might experience the issues described in this section.
 
 Collector is dropping data
