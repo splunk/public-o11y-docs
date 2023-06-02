@@ -66,6 +66,23 @@ The following example shows a Splunk HEC receiver configured with all available 
        cert_file: /test.crt
        key_file: /test.key
 
+Authorize HTTP requests
+-----------------------------
+
+You can use extensions to modify how the handles HTTP server requests: 
+
+* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/basicauthextension
+* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/bearertokenauthextension
+* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oidcauthextension
+* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oauth2clientauthextension
+
+You can also implement your own auth extension to fulfill your requirements using the package https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth and relying on https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth.
+
+The receiver gets this ability through its config extending HTTPServerSettings:
+https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/splunkhecreceiver/config.go#L21
+
+HTTPServerSettings itself brings the auth settings under the auth key here: https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/confighttp/confighttp.go#L55
+
 Settings
 ======================
 
