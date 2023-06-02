@@ -13,7 +13,7 @@ Splunk Observability Cloud and the Splunk platform
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
    Collaborate on observability <practice-reliability/collaboration>
-   Get data into Splunk Observability Cloud <get-data-in/get-data-in>
+   Get data into Splunk Observability Cloud <gdi/get-data-in/get-data-in>
    
 
 
