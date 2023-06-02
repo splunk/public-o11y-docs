@@ -236,11 +236,9 @@ To get a detailed breakdown of the metric time series (MTS) you've created and u
 
 .. _imm-throttling:
 
-System limits and throttling
+System limits and data throttling
 ====================================================================
 
-Observability Cloud products, including Infrastructure Monitoring, have system limits to protect the service's performance, stability, and reliability. If you exceed those limits, the platform starts to throttle the data you send in. 
+Observability Cloud products, including Infrastructure Monitoring, have system limits to protect the service's performance. If you exceed those limits, the platform starts to throttle the data you send in. 
 
-.. note:: Throttling starts after you've exceeded your system limits. All data sent within your limits is ingested.
-
-System limits are determined by your subscription. To learn more, see :ref:`per-product-limits`.
+To learn more, see :ref:`per-product-limits`. 
