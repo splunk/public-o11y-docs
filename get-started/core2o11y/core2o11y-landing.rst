@@ -40,7 +40,7 @@ Select each of the following categories to learn how you can maintain reliabilit
 * :ref:`Collaborate on observability within and across teams <practice-reliability-collaboration>`
 
 
-Then see :ref:`setup-o11y-setup-o11y` to get started.
+Then see :ref:`get-started-get-data-in` to set up each component of Splunk Observability Cloud.
 
 
 
