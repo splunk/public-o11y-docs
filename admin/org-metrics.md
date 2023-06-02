@@ -103,7 +103,7 @@ These metrics track limits that Infrastructure Monitoring enforces for your orga
 
 If you exceed your system limits, Obervability Cloud might throttle the data you send in. 
 
-While org metrics tagged with `limit` indicate you've hit a ceiling (a maximum number of "items" in your system, such as `sf.org.numLimitedMetricTimeSeriesCreateCallsByCategoryType`), metrics with `throttled` (for example, `sf.org.numThrottledMetricTimeSeriesCreateCalls`) show that you’ve hit a rate/timeUnit, and therefore you can only send in so many datapoints per minute, .  
+While org metrics tagged with `limit` or `limited` indicate you've hit a ceiling (a maximum number of "items" in your system), metrics with `throttled` (for example, `sf.org.numThrottledMetricTimeSeriesCreateCalls`) show that you’ve hit a rate/timeUnit, and therefore you can only send in so many datapoints per minute, .  
 
 See more in [System limits and data throttling](https://docs.splunk.com/Observability/references/per-product-limits.html).
 
