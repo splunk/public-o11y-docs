@@ -181,10 +181,10 @@ The following example shows how to backfill spans that are missing an attribute:
        - key: operation
          action: delete
 
-More examples and use cases
+More examples and scenarios
 ------------------------------
 
-See also the following use cases: 
+See also the following scenarios: 
 
 * :ref:`configure-remove`
 * :ref:`collector-remove-data`  

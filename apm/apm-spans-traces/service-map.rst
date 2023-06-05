@@ -4,8 +4,6 @@
 View dependencies among your services in the service map
 ************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about the service map displays for your services in Splunk APM. 
 
@@ -13,7 +11,7 @@ The service map, located in Splunk APM :guilabel:`Explore` view, displays the de
 
 You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
 
-For a detailed use case involving the service map, see :ref:`service-map`. 
+For a detailed scenario involving the service map, see :ref:`service-map`. 
 
 The following screenshot shows an example service map: 
 
@@ -39,7 +37,7 @@ Using the service map, you can do the following:
 * Use the :guilabel:`Breakdown` selector to break the service's activity down by any indexed span tag. See :ref:`service-map-breakdowns` to learn more.
 * Select any chart in this view to show example traces that match the parameters of the chart.  
 
-You can also use the service map as a starting point for monitoring or troubleshooting use cases:
+You can also use the service map as a starting point for monitoring or troubleshooting scenarios:
 
 * To get real-time monitoring insights on the service, select :guilabel:`View Dashboard` in the side panel to view the built-in service dashboard. See :ref:`apm-dashboards` to learn more.
 * To do more extensive troubleshooting, select the :guilabel:`Tag Spotlight` tab in the side panel to open Tag Spotlight. See :ref:`apm-tag-spotlight` to learn more.

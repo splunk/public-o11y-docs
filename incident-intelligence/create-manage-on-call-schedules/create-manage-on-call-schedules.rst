@@ -10,7 +10,7 @@ Create and manage on-call schedules
 .. toctree::
    :hidden:
 
-   Use cases: Schedules in Incident Intelligence TOGGLE <scenarios-schedules/scenarios-schedules>
+   Scenarios: Schedules in Incident Intelligence TOGGLE <scenarios-schedules/scenarios-schedules>
    create-on-call-schedule
    sync-on-call-schedule
    whos-on-call

@@ -79,5 +79,5 @@ See the following links for more information about Database Query Performance:
 
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.
 * To enable Database Query Performance, see :ref:`enable-db-perf`. 
-* For a detailed use case using Database Query Performance, see :ref:`db-perf-scenario`. 
+* For a detailed scenario using Database Query Performance, see :ref:`db-perf-scenario`. 
 * For reference material about Database Query Performance, see :ref:`db-perf-reference`.
