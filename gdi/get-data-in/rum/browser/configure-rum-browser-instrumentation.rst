@@ -75,7 +75,7 @@ Use the following settings to configure the Browser RUM agent:
      - Activates the asynchronous context manager. The default value is ``true``. See :ref:`browser-rum-async-traces`.
    * - ``exporter.onAttributesSerializing``
      - ``(a: SpanAttributes, s?: Span) => SpanAttributes``
-     - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample use case is :ref:`rum-browser-redact-pii`. 
+     - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample scenario is :ref:`rum-browser-redact-pii`. 
    * - ``tracer``
      - Object
      - Tracing configuration passed to ``WebTracerProvider``. You can use it to configure sampling. See :ref:`browser-rum-sampling-configuration`.
