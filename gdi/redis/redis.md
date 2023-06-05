@@ -157,7 +157,7 @@ The following metrics are available for this integration:
 
 You can troubleshoot Redis command performance issues using Database Query Performance in Splunk APM.
 
-* For a sample use case, see {ref}`redis-scenario`.
+* For a sample scenario, see {ref}`redis-scenario`.
 * For more information on Database Query Performance support for Redis, see {ref}`redis-db-query-performance`.
 
 ## Get help

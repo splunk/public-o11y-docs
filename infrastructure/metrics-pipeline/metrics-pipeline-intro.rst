@@ -108,10 +108,10 @@ Example
 
 Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for ``http.server.duration``. 
 
-Use case for metrics pipeline management
+Scenario for metrics pipeline management
 ==================================================
 
-See the following use case for metrics pipeline management:
+See the following scenario for metrics pipeline management:
 
 * :ref:`aggregate-drop-use-case`
 
