@@ -66,35 +66,34 @@ Follow these steps to create an SLO.
 
 #. Define your SLO and how to measure it
 
-  .. list-table::
-    :header-rows: 1
-    :widths: 20 80
+    .. list-table::
+      :header-rows: 1
+      :widths: 20 80
 
-    * - :strong:`Field name`
-      - :strong:`Description`
-    * - Target (%)
-      - Enter the target you want to set for this SLO. 
-    * - Compliance window
-      - Select a compliance window for this SLO from the dropdown menu.
-    * - Rollup
-      - * Select :guilabel:`Entire compliance window` if you want to measure the SLO target for the whole period of the compliance window.
-        * Select :guilabel:`Per minute windows` if you want to measure the SLO target for each minute in the defined compliance window.
-
+      * - :strong:`Field name`
+        - :strong:`Description`
+      * - Target (%)
+        - Enter the target you want to set for this SLO. 
+      * - Compliance window
+        - Select a compliance window for this SLO from the dropdown menu.
+      * - Rollup
+        - * Select :guilabel:`Entire compliance window` if you want to measure the SLO target for the whole period of the compliance window.
+          * Select :guilabel:`Per minute windows` if you want to measure the SLO target for each minute in the defined compliance window.
 
 #. Set up alerting for your SLO. You can subscribe to get notifications for the following alerts:
 
-  .. list-table::
-    :header-rows: 1
-    :widths: 20 80
+    .. list-table::
+      :header-rows: 1
+      :widths: 20 80
 
-    * - :strong:`Field name`
-      - :strong:`Description`
-    * - Breach event
-      - Alerts when the service level indicator (SLI) doesn't meet the target over the specified compliance window. 
-    * - Failure budget
-      - Alerts when the remaining failure budget is less than 10% of the estimated failure budget for the compliance window.
-    * - Burn rate
-      - Alerts when the burn rate exceeds 1.0, which means if the current burn rate is sustained over any future compliance window, the service will be out of SLO for that period.
+      * - :strong:`Field name`
+        - :strong:`Description`
+      * - Breach event
+        - Alerts when the service level indicator (SLI) doesn't meet the target over the specified compliance window. 
+      * - Failure budget
+        - Alerts when the remaining failure budget is less than 10% of the estimated failure budget for the compliance window.
+      * - Burn rate
+        - Alerts when the burn rate exceeds 1.0, which means if the current burn rate is sustained over any future compliance window, the service will be out of SLO for that period.
 
 #. Select :guilabel:`Create` to create the SLO.
 
