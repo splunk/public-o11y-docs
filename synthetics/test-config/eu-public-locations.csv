@@ -1,4 +1,5 @@
-eu0,Provider,aws-af-south-1,AWS - Cape Town,ZA,Africa,"13.244.81.159, 13.246.205.127, 13.246.75.156"
+Realm,Provider,Location ID,Display Name,World Region,Country,IP Addresses
+eu0,Amazon,aws-af-south-1,AWS - Cape Town,ZA,Africa,"13.244.81.159, 13.246.205.127, 13.246.75.156"
 eu0,Amazon,aws-af-south-1-los-1,AWS LZ - Lagos,NG,Africa,96.0.40.123
 eu0,Amazon,aws-ap-east-1,AWS - Hong Kong,HK,Asia Pacific,"18.163.241.56, 18.163.51.129, 18.167.186.98"
 eu0,Amazon,aws-ap-northeast-1,AWS - Tokyo,JP,Asia Pacific,"18.178.94.193, 18.179.121.213, 52.194.122.25"
