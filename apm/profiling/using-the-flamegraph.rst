@@ -99,4 +99,4 @@ The structure of each flame graph depends on the amount of profiling data and on
 
 When you're examining a frame, the flame graph shows the flow of the code from that point onwards by stacking other frames underneath. Any unusual pattern in the calls originated by the frame can imply issues in your application's code or opportunities for optimization.
 
-For sample use cases featuring the flame graph, see :ref:`profiling-scenario-landingpage`.
+For sample scenarios featuring the flame graph, see :ref:`profiling-scenario-landingpage`.
