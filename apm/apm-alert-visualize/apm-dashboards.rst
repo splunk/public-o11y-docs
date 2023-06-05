@@ -24,7 +24,7 @@ APM dashboards present request, error, and duration (RED) metrics based on :ref:
 To view host and Kubernetes metrics in your dashboards, you need to have a Splunk Distribution of OpenTelemetry Collector instance installed on your hosts and clusters. See :ref:`deploy-connector` to learn how. 
 
 .. note::
-  See :ref:`monitor-services` for a use case involving built-in dashboards in Splunk APM. 
+  See :ref:`monitor-services` for a scenario involving built-in dashboards in Splunk APM. 
 
 You can customize built-in dashboards to present the information you’re most interested in, or build your own from scratch. To learn more, see :ref:`apm-custom-dashboards`.
  
@@ -57,7 +57,7 @@ Use dashboards to troubleshoot issues in APM
 =============================================
 You can navigate from within a dashboard directly to the relevant troubleshooting view with all the relevant data populated. In a dashboard, select the more menu (|more|) within a chart and select :guilabel:`Troubleshoot from the Time Window` to open the troubleshooting view (which includes the service map). The dashboard’s filters are preserved so that you can continue troubleshooting issues in context. 
 
-See :ref:`service-map` for a sample use case of the troubleshooting view in Splunk APM. 
+See :ref:`service-map` for a sample scenario of the troubleshooting view in Splunk APM. 
 
 .. note:: Dashboards are powered by Monitoring MetricSets, which are based on service endpoints. For this reason, dashboards only display data when the selected service has at least one instrumented endpoint. 
 

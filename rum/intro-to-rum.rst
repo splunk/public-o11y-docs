@@ -35,7 +35,7 @@ What can I do with Splunk RUM?
    * - :strong:`Do this`
      - :strong:`Link to documentation`
    * - Learn how to identify errors and other problems like long resource response times in your browser spans.
-     - :ref:`Use case: Investigate errors in your browser spans <rum-identify-span-problems>`
+     - :ref:`Scenario: Investigate errors in your browser spans <rum-identify-span-problems>`
    * - Create custom events to capture meaningful metrics about customer journeys and user behavior on your site.
      - :ref:`Create custom events  <rum-custom-event>`
    * - Experiment with the demo applications for Splunk RUM for Mobile

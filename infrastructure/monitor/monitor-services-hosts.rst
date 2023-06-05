@@ -38,7 +38,7 @@ See the following pages for more information about using :ref:`navigators <use-n
   
   - :ref:`infrastructure-hosts`
 
-* Use cases for navigators
+* Scenarios for navigators
 
   - :ref:`troubleshoot-k8s-nav-scenario`
 
