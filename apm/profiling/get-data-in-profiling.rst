@@ -166,7 +166,7 @@ Check that Observability Cloud is receiving profiling data
 After you set up and activate AlwaysOn Profiling, check that profiling data is coming in:
 
 1. Log in to Splunk Observability Cloud. 
-2. In the left navigation menu, select :menuselection:`APM`.
+2. In the navigation menu, select :menuselection:`APM`.
 3. In Splunk APM, select :guilabel:`AlwaysOn Profiling`.
 4. Select a service, and switch from the CPU view to the Memory view. 
 5. If your service runs in multiple instances, select the instance that you're interested in by selecting the host, container and process ID.
