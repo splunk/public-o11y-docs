@@ -78,7 +78,7 @@ Use the following extensions to modify how the receiver handles HTTP server requ
 
 MORE DETAILS ON EACH?
 
-Alternatively, you can also implement your own auth extension to fulfill your requirements using the package (see https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth) and https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth.
+For advanced users, you can implement your own authentication extension to fulfill your requirements using the [open-telemetry auth Go package](https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth) and the [configauth Go package](https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth).
 
 Configure ``HTTPServerSettings`` and the auth settings in the receiver to enable this behavior ????:
 
