@@ -246,6 +246,8 @@ Use the ``correlation`` setting to control the syncing of service and environmen
 * ``cleanup_interval`` (default = 1 minute): How frequently to purge duplicate requests.
 * ``sync_attributes`` (default = {``"k8s.pod.uid": "k8s.pod.uid", "container.id": "container.id"}``): Map containing key of the attribute to read from spans to sync to dimensions specified as the value.
 
+See more options in the Settings section.
+
 Settings
 ======================
 
