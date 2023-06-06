@@ -71,10 +71,10 @@ Authorize HTTP requests
 
 Use the following extensions to modify how the receiver handles HTTP server requests: 
 
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/basicauthextension
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/bearertokenauthextension
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oidcauthextension
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oauth2clientauthextension
+* [Basic authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/basicauthextension)
+* [Bearer Token authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/bearertokenauthextension)
+* [OIDC Authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oidcauthextension)
+* [OAuth 2 client](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oauth2clientauthextension)
 
 MORE DETAILS ON EACH?
 
