@@ -45,7 +45,7 @@ You can deploy multiple Collectors behind a round-robin load balancer for higher
 Component limitations
 ------------------------------------------------------------
 
-While the Collector itself doesn't have explicit limits, certain :ref:`OTel components <otel-components>` do. 
+While the Collector itself doesn't define limits, some :ref:`OTel components <otel-components>` do. 
 
 For instance, if you're using the :ref:`splunk-hec-exporter`, the following default limits (among other) apply: 
 
