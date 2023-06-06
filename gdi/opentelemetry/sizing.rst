@@ -47,12 +47,12 @@ Component limitations
 
 While the Collector itself doesn't have explicit limits, certain :ref:`OTel components <otel-components>` do. 
 
-For instance, if you're using the :ref:`splunk-hec-exporter`, the following (among other) apply: 
+For instance, if you're using the :ref:`splunk-hec-exporter`, the following default limits (among other) apply: 
 
 * Single log event maximum size: 5 MiB 
 * Log event batch maximum size (compressed): 2 MiB
 
-.. note:: Check the default values, recommendations and limitations for each of the individual components in your configuration. For standard configurations, using default values is the best practice. 
+.. note:: Check the default values, recommendations and limitations for each of the individual components in your Collector's configuration. Although limits can be configured, for standard working environments using default values is the best practice. 
 
 Scaling recommendations
 ===========================
