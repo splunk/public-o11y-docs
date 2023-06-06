@@ -82,8 +82,6 @@ For advanced users, you can implement your own authentication extension to fulfi
 
 Configure ``HTTPServerSettings`` and the auth settings in the receiver to enable this behavior ????:
 
-* https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/receiver/splunkhecreceiver/config.go#L21
-* https://github.com/open-telemetry/opentelemetry-collector/blob/main/config/confighttp/confighttp.go#L55
 
 Settings
 ======================
