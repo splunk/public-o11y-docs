@@ -16,12 +16,12 @@ Search for metrics in the Metric Finder
 ==============================================
 In the Metric Finder, search using whatever information you know. For example, you can search by: 
 
-* name of the metric, or part of the name
-* metadata like dimensions, properties, and tags that are relevant to your target metric
-* value of a dimension or property associated with the metric
-* integration that the metric sends data from
-* property of the environment it's reporting from
-* exact values into the search field. For example, search a host name to find out what data the host reported.
+* Name of the metric, or part of the name.
+* Metadata like dimensions, properties, and tags that are relevant to your target metric.
+* Value of a dimension or property associated with the metric.
+* Integration that the metric sends data from.
+* Property of the environment it's reporting from.
+* Exact values into the search field. For example, search a host name to find out what data the host reported.
 
 Search guidance and syntax 
 --------------------------------
@@ -62,10 +62,10 @@ Descriptions help users understand what metrics are measuring, especially when t
 
 If you hover over a metric name a tooltip opens that provides information about the metric:
 
-* metric name
-* description and type
-* time of creation
-* number of time series 
+* Metric name
+* Description and type
+* Time of creation
+* Number of time series 
 
 
 
