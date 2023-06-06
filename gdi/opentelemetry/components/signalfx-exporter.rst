@@ -240,8 +240,8 @@ You have the following configuration options. Either ``realm`` or ``api_url`` ar
 * ``api_url`` (default = https://api.{realm}.signalfx.com/): Destination to which correlation updates are sent. If a value is explicitly set, the value of realm will not be used in determining api_url. The explicit value will be used instead.
 * ``correlation``. It contains options controlling the syncing of service and environment properties onto dimensions.
 * ``endpoint`` (required, default = api_url or https://api.{realm}.signalfx.com/): The base URL for API requests, such as https://api.us0.signalfx.com.
-  * ``timeout`` (default = 5s): Timeout for every attempt to send data to the backend.
-stale_service_timeout (default = 5 minutes): How long to wait after a span's service name is last seen before uncorrelating it.
+  * ``timeout`` (default = 5s): Timeout for every attempt to send data to the backend. 
+  * ``stale_service_timeout`` (default = 5 minutes): How long to wait after a span's service name is last seen before uncorrelating it.
   * ``max_requests`` (default = 20): Max HTTP requests to be made in parallel.
   * ``max_buffered`` (default = 10,000): Max number of correlation updates that can be buffered before updates are dropped.
   * ``max_retries`` (default = 2): Max number of retries that will be made for failed correlation updates.
