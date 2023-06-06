@@ -42,6 +42,18 @@ You can deploy multiple Collectors behind a round-robin load balancer for higher
 * Install a cluster of Collectors with at least N+1 redundancy, which means a load balancer and a minimum of two Collector instances should be configured initially.
 * Define a round-robin DNS name.
 
+Component limitations
+------------------------------------------------------------
+
+While the Collector itself doesn't define limits, some :ref:`OTel components <otel-components>` do. 
+
+For instance, if you're using the :ref:`splunk-hec-exporter`, the following default limits (among other) apply: 
+
+* Single log event maximum size: 5 MiB 
+* Log event batch maximum size (compressed): 2 MiB
+
+.. note:: Check the default values, recommendations and limitations for each of the individual components in your Collector's configuration. Although limits can be configured, use default values for standard working environments.
+
 Scaling recommendations
 ===========================
 
