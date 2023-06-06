@@ -233,3 +233,12 @@ On demand reports
 ===========================
 
 To get a detailed breakdown of the metric time series (MTS) you've created and use, you can request a usage report for a specific time interval by contacting your tech support member or your account team. Learn more at :ref:`metrics-usage-report`.
+
+.. _imm-throttling:
+
+System limits and data throttling
+====================================================================
+
+Observability Cloud products, including Infrastructure Monitoring, have system limits to protect the service's performance. If you exceed those limits, the platform starts to throttle the data you send in. 
+
+To learn more, see :ref:`per-product-limits`. 
