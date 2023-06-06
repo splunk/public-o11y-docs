@@ -16,15 +16,15 @@ The following table provides a full list of locations, available in Splunk Synth
 US1
 ============
 .. csv-table:: 
-   :file: public-locations.csv
-   :widths: 10, 10, 10, 10, 10, 10, 20 
+   :file: us1-public-locations.csv
+   :widths: 10, 10, 10, 10, 10, 20 
    :header-rows: 1
 
 EU0
 ============
 .. csv-table:: 
    :file: eu-public-locations.csv
-   :widths: 10, 10, 10, 10, 10, 10, 20 
+   :widths: 10, 10, 10, 10, 10, 20 
    :header-rows: 1
 
 
