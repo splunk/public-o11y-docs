@@ -69,7 +69,7 @@ The following example shows a Splunk HEC receiver configured with all available 
 Authorize HTTP requests
 -----------------------------
 
-Use the following extensions to modify how the receiver handles HTTP server requests: 
+The following extensions can be declared in the collector service and pipelines to extend the behavior of the receiver to add client extension.
 
 * [Basic authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/basicauthextension)
 * [Bearer Token authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/bearertokenauthextension)
