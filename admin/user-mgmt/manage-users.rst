@@ -17,6 +17,7 @@ Users with administrative access for an organization can run the following actio
 * :ref:`Add users to the organization <add-users-organization>`
 * :ref:`Remove users from the organization <remove-users-organization>`
 * :ref:`Grant and revoke administrative access <manage_admin-access>`
+* :ref:`users-assign-roles`
 
 Any user can run the following actions:
 
@@ -28,7 +29,6 @@ Only the current user can run the following actions:
 
 * :ref:`change_time_zone_color_accessibility`
 * :ref:`api-access-token`
-
 
 .. _add-users-organization:
 

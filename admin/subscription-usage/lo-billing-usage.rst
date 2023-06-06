@@ -1,17 +1,23 @@
 .. _lo-billing-usage:
 
 *********************************************************************
-Monitor Log Observer subscription usage
+Monitor Log Observer usage
 *********************************************************************
 
 .. meta::
-   :description: How Log Observer calculates subscription usage information so you can monitor your organization.
+   :description: How Log Observer calculates usage information so you can monitor your organization.
 
 .. note:: The following information describes aspects of your usage and consumption. For more detailed billing-related queries, contact your Splunk Account Team.
 
-Use the Log Observer subscription usage page to view charts that track your organization's Log Observer usage against its entitlements. You have to be an administrator to view the Subscription Usage page for your organization. 
+Use the Log Observer usage page to view charts that track your organization's Log Observer usage against its entitlements. You have to be an administrator to view the usage page for your organization. 
 
-To view your organization's Log Observer subscription usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`Log Observer` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
+Prerequisites
+================================================================================
+To view Log Observer usage, you must have an administrator, power user, or Read_only role in Splunk Observability Cloud.
+
+View Log Observer usage
+================================================================================
+To view your organization's Log Observer usage, go to :guilabel:`Settings > Subscription Usage` and select the :guilabel:`Log Observer` tab. Depending on your org subscription model, this might be :guilabel:`Settings > Billing and Usage`.
 
 What Log Observer tracks 
 ====================================
