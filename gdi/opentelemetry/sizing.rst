@@ -52,7 +52,7 @@ For instance, if you're using the :ref:`splunk-hec-exporter`, the following defa
 * Single log event maximum size: 5 MiB 
 * Log event batch maximum size (compressed): 2 MiB
 
-.. note:: Check the default values, recommendations and limitations for each of the individual components in your Collector's configuration. Although limits can be configured, for standard working environments using default values is the best practice. 
+.. note:: Check the default values, recommendations and limitations for each of the individual components in your Collector's configuration. Although limits can be configured, use default values for standard working environments.
 
 Scaling recommendations
 ===========================
