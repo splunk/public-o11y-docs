@@ -17,21 +17,33 @@ Splunk Observability Cloud roles and capabilities
 
 Splunk Observability Clouds lets you restrict access to certain features to specific groups of users using role-based access control. You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are available to roles. For example, capabilities determine whether someone with a particular role has capabilities to create detectors or dashboards. 
 
-General Settings page
-==============================
+Settings
+===========================
+
+General settings
+----------------------------
 
 .. include:: /_includes/admin/roles_navigation.rst
 
 
-Users and teams
-==================
+Data configuration
+----------------------------
 
-.. include:: /_includes/admin/roles_users_teams.rst
+.. include:: /_includes/admin/roles_data_configuration.rst
+
+
+Help and support
+----------------------------
+
+.. include:: /_includes/admin/roles_help_support.rst
+
+.. _metrics-pipeline-rbac:
 
 Metrics pipeline management
 ===============================================================================
 
 .. include:: /_includes/admin/roles_mpm.rst
+
 
 Log Observer and Log Observer Connect
 ===============================================================================
@@ -50,6 +62,8 @@ Splunk Synthetic Monitoring roles and capabilities
 
 .. include:: /_includes/admin/synth-roles-caps.rst
 
+
+.. _rum-rbac:
 
 Splunk Real User Monitoring roles and capabilities
 ==================================================
