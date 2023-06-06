@@ -69,19 +69,14 @@ The following example shows a Splunk HEC receiver configured with all available 
 Authorize HTTP requests
 -----------------------------
 
-The following extensions can be declared in the collector service and pipelines to extend the behavior of the receiver to add client extension.
+To allow the receiver to work with client extensions, add the following in the Collector service and pipeline configuration: 
 
 * [Basic authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/basicauthextension)
 * [Bearer Token authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/bearertokenauthextension)
 * [OIDC Authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oidcauthextension)
 * [OAuth 2 client](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oauth2clientauthextension)
 
-MORE DETAILS ON EACH?
-
 For advanced users, you can implement your own authentication extension to fulfill your requirements using the [open-telemetry auth Go package](https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth) and the [configauth Go package](https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth).
-
-Configure ``HTTPServerSettings`` and the auth settings in the receiver to enable this behavior ????:
-
 
 Settings
 ======================
