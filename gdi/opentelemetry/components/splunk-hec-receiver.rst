@@ -71,12 +71,12 @@ Authorize HTTP requests
 
 To allow the receiver to work with client extensions, add the following in the Collector service and pipeline configuration: 
 
-* [Basic authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/basicauthextension)
-* [Bearer Token authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/bearertokenauthextension)
-* [OIDC Authentication](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oidcauthextension)
-* [OAuth 2 client](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oauth2clientauthextension)
+* :new-page:`Basic authentication <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/basicauthextension>`
+* :new-page:`Bearer Token authentication <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/bearertokenauthextension>`
+* :new-page:`OIDC Authentication <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oidcauthextension>`
+* :new-page:`OAuth 2 client <https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/extension/oauth2clientauthextension>`
 
-For advanced users, you can implement your own authentication extension to fulfill your requirements using the [open-telemetry auth Go package](https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth) and the [configauth Go package](https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth).
+For advanced users, you can implement your own authentication extension to fulfill your requirements using the :new-page:`open-telemetry auth Go package <https://github.com/open-telemetry/opentelemetry-collector/tree/main/extension/auth>` and the :new-page:`configauth Go package <https://github.com/open-telemetry/opentelemetry-collector/tree/main/config/configauth>`.
 
 Settings
 ======================
