@@ -229,22 +229,22 @@ Metrics excluded by default by the SignalFx exporter are listed in the default_m
 Filter metrics using environments
 ---------------------------------------
 
-The Signalfx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in SignalFx, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment. 
+The Signalfx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment. 
 
-.. note:: You need to send traces using ``sapmexporter`` to see them in SignalFx.
+.. note:: You need to send traces using ``sapmexporter`` to see them in Observability Cloud.
 
 Use the ``correlation`` setting to control the syncing of service and environment properties onto dimensions. It has the following options:
 
-* ``endpoint`` (required, default = api_url or https://api.{realm}.signalfx.com/): The base URL for API requests, such as https://api.us0.signalfx.com.
-* ``timeout`` (default = 5s): Timeout for every attempt to send data to the backend. 
-* ``stale_service_timeout`` (default = 5 minutes): How long to wait after a span's service name is last seen before uncorrelating it.
-* ``max_requests`` (default = 20): Max HTTP requests to be made in parallel.
-* ``max_buffered`` (default = 10,000): Max number of correlation updates that can be buffered before updates are dropped.
-* ``max_retries`` (default = 2): Max number of retries that will be made for failed correlation updates.
-* ``log_updates`` (default = false): Whether or not to log correlation updates to dimensions (at DEBUG level).
-* ``retry_delay`` (default = 30 seconds): How long to wait between retries.
-* ``cleanup_interval`` (default = 1 minute): How frequently to purge duplicate requests.
-* ``sync_attributes`` (default = {``"k8s.pod.uid": "k8s.pod.uid", "container.id": "container.id"}``): Map containing key of the attribute to read from spans to sync to dimensions specified as the value.
+* ``endpoint``: :strong:`Required`. The base URL for API requests, such as https://api.us0.signalfx.com. Defaults to api_url or https://api.{realm}.signalfx.com/.
+* ``timeout``: Timeout for every attempt to send data to the backend. 5 seconds by default.
+* ``stale_service_timeout``: How long to wait after a span's service name is last seen before uncorrelating it. 5 minutes by default.
+* ``max_requests``: Maximum HTTP requests to be made in parallel. 20 by default.
+* ``max_buffered``: Maximum number of correlation updates that can be buffered before updates are dropped. 10,000 by default.
+* ``max_retries``: Maximum number of retries that will be made for failed correlation updates. 2 by default.
+* ``log_updates``: Whether or not to log correlation updates to dimensions, at DEBUG level. ``false`` by default.
+* ``retry_delay``: How long to wait between retries. 30 by default. 
+* ``cleanup_interval``: How frequently to purge duplicate requests. 1 minute by default.
+* ``sync_attributes`` : Map containing key of the attribute to read from spans to sync to dimensions specified as the value. Defaults to ``{"k8s.pod.uid": "k8s.pod.uid", "container.id": "container.id"}``.
 
 See more options in the Settings section.
 
