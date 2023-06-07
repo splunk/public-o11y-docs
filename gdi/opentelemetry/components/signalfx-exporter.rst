@@ -231,7 +231,7 @@ Filter metrics using environments
 
 The SignalFx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment. 
 
-.. note:: You need to send traces using ``sapmexporter`` to see them in Observability Cloud.
+.. note:: You need to send traces using :ref:`splunk-apm-exporter` to see them in Observability Cloud.
 
 Use the ``correlation`` setting to control the syncing of service and environment properties onto dimensions. It has the following options:
 
@@ -242,7 +242,7 @@ Use the ``correlation`` setting to control the syncing of service and environmen
 * ``max_buffered``: Maximum number of correlation updates that can be buffered before updates are dropped. 10,000 by default.
 * ``max_retries``: Maximum number of retries that will be made for failed correlation updates. 2 by default.
 * ``log_updates``: Whether or not to log correlation updates to dimensions, at DEBUG level. ``false`` by default.
-* ``retry_delay``: How long to wait between retries. 30 by default. 
+* ``retry_delay``: How long to wait between retries. 30 seconds by default. 
 * ``cleanup_interval``: How frequently to purge duplicate requests. 1 minute by default.
 * ``sync_attributes`` : Map containing key of the attribute to read from spans to sync to dimensions specified as the value. Defaults to ``{"k8s.pod.uid": "k8s.pod.uid", "container.id": "container.id"}``.
 
