@@ -229,7 +229,7 @@ Metrics excluded by default by the SignalFx exporter are listed in the default_m
 Filter metrics using environments
 ---------------------------------------
 
-The Signalfx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment. 
+The SignalFx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment. 
 
 .. note:: You need to send traces using ``sapmexporter`` to see them in Observability Cloud.
 
