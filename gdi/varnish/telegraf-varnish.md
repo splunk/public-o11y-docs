@@ -51,7 +51,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the monitor activation, you must also include the `smartagent/varnish` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+To complete the monitor activation, you must also include the `smartagent/varnish` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service.pipelines.metrics.receivers` section of your configuration file. For example:
 
 ```yaml
 service:

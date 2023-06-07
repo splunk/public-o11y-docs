@@ -95,7 +95,7 @@ The Smart Agent supports logging to ``stdout/stderr``, which is generally redire
 Windows
 ------------
 
-On Windows, the Smart Agent logs to the console when executed directly in a shell. If the Smart Agent is configured as a Windows service, log events are logged to the Windows Event Log. Select **Start > Administrative Tools > Event Viewer** to read logs. Select **Windows Logs > Application** to see logged events from the Smart Agent service.
+On Windows, the Smart Agent logs to the console when executed directly in a shell. If the Smart Agent is configured as a Windows service, log events are logged to the Windows Event Log. Select **Start** and then **Event Viewer** inside **Administrative Tools** to read logs. Select **Windows Logs** and then **Application** to see logged events from the Smart Agent service.
 
 Activate proxy support in the Smart Agent
 ===========================================

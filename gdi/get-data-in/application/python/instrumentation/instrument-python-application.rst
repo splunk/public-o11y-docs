@@ -119,7 +119,7 @@ Follow these steps to automatically instrument your application using the Python
 
    - :ref:`django-instrumentation`
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-python-troubleshooting`.
+If no data appears in APM, see :ref:`common-python-troubleshooting`.
 
 .. _configure-python-instrumentation:
 

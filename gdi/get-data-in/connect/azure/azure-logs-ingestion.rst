@@ -65,7 +65,9 @@ Configure diagnostic settings to send logs
 
 After you've created the event hub, follow these steps to activate diagnostic settings:
 
-#. In Azure, select the resource and go to :guilabel:`Monitoring > Diagnostic settings`.
+#. In Azure, select the resource.
+
+#. Select :guilabel:`Monitoring`, then :guilabel:` Diagnostic settings`.
 
 #. Create a new setting or edit an existing setting.
 

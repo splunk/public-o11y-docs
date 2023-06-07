@@ -145,7 +145,7 @@ If you have any doubts, check AWS documentation.
 
 After creating an AWS IAM policy, you need to assign that policy to a particular role by performing the following steps in the Amazon Web Services console:
 
-#. Go to :strong:`Roles > Create Role` and select :strong:`Another AWS account` as the type of trusted entity.
+#. Go to :strong:`Roles`, then :strong:`Create Role` and select :strong:`Another AWS account` as the type of trusted entity.
 #. Copy and paste the Account ID displayed in guided setup into the :strong:`Account ID` field.
 #. Select :strong:`Require external ID`. Copy and paste the External ID displayed in the guided setup into the :strong:`External ID` field.
 #. Continue with :strong:`Next: Permissions`. Under :strong:`Policy name`, select the policy you made in the previous step.
