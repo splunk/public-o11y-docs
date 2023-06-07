@@ -9,7 +9,7 @@ Pivotal Cloud Foundry
 
 Use Pivotal Cloud Foundry (PCF) to deploy the Collector.
 
-There's three deployment options:
+There are three deployment options:
 
 * :ref:`otel-pcf-bosch`: The Collector is deployed to the PCF environment as a standalone deployment.
 
