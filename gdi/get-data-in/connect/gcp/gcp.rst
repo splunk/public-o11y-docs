@@ -114,7 +114,7 @@ To configure your GCP service, follow these steps:
 
 #. In a new window or tab, go to the Google Cloud Platform website, and log into your GCP account.
 #. Open the GCP web console, and select a project you want to monitor.
-#. From the sidebar, select :menuselection:`IAM & admin`, then :menuselectiuon:`Service Accounts`.
+#. From the sidebar, select :menuselection:`IAM & admin`, then :menuselection:`Service Accounts`.
 #. Go to :guilabel:`Create Service Account` at the top of the screen, and complete the following fields:
 
    .. list-table::
