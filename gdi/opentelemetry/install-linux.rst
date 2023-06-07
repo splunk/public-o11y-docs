@@ -5,7 +5,7 @@ Install the Collector for Linux with the installer script
 ***************************************************************
 
 .. meta::
-      :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux.
+      :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux using the script or deployment tools.
 
 The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. 
 
