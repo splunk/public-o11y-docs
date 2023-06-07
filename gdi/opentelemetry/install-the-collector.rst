@@ -14,7 +14,8 @@ Install and deploy the Collector
 
     Deployment modes <deployment-modes.rst>
     Kubernetes <install-k8s.rst>
-    Linux <install-linux.rst>
+    Linux (script) <install-linux.rst>
+    Linux (manual) <install-linux-manual.rst>    
     Windows (script) <install-windows.rst>
     Windows (manual) <install-windows-manual.rst>
     deployments/otel-deployments.rst
