@@ -1,4 +1,5 @@
 .. _linux-manual:
+.. _otel-install-linux-manual:
 
 **************************************************
 Install the Collector for Linux manually

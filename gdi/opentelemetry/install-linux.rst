@@ -168,7 +168,6 @@ If the td-agent package is upgraded after initial installation, you might need t
 
 If you already installed Fluentd on a host, install the Splunk OTel Collector without Fluentd using the ``--without-fluentd`` option. For more information, see :ref:`otel-configuration`. 
 
-
 .. _configure-auto-instrumentation:
 
 Configure automatic instrumentation for Java
