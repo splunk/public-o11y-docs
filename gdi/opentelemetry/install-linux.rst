@@ -7,23 +7,13 @@ Install the Collector for Linux with the installer script
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux.
 
-.. toctree::
-   :maxdepth: 4
-   :titlesonly:
-   :hidden:
-
-   /gdi/pivotalcloudfoundry/pivotal-cloud-foundry.rst
-   /gdi/opentelemetry/deployments/deployments-linux-ansible.rst
-   /gdi/opentelemetry/deployments/deployments-linux-puppet.rst
-
 The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. 
 
 Install the package using one of these methods:
 
 * :ref:`Use the installer script <linux-scripts>`
 * :ref:`Use deployment and configuration management tools <linux-deployments>`
-
-See also how to :ref:`Install the Collector for Linux manually <linux-manual>`.
+* :ref:`Install the Collector for Linux manually <linux-manual>`.
 
 .. _linux-scripts:
 
@@ -187,8 +177,8 @@ You can also automatically instrument your Java applications along with the Coll
 
 .. _linux-deployments:
 
-Deployments
-====================
+Install the Collector using deployment tools
+====================================================
 
 Splunk offers the configuration management options described in this section.
 
@@ -262,10 +252,12 @@ Salt
 ---------------
 Splunk provides a Salt formula to install and configure the Collector. See :ref:`deployments-salt` for the instructions.
 
-
 Next steps
 ==================================
-Once you have installed the package, you can perform these actions:
 
-* :new-page:`Get started using Log Observer <https://quickdraw.splunk.com/redirect/?product=Observability&location=log.observer.setup&version=current>`.
-* :ref:`apm`.
+After you've installed the package, you can perform these actions:
+
+* :ref:`Configure the Collector <otel-configuration>`.
+* Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to track the health of your infrastructure.
+* Use :ref:`APM <get-started-apm>` to monitor the performance of applications.
+* Use :ref:`Log Observer Connect <logs-intro-logconnect>` to analyze log events and troubleshoot issues with your services.

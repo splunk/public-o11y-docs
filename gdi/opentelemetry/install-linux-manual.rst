@@ -7,96 +7,11 @@ Install the Collector for Linux manually
 .. meta::
       :description: Describes how to install the Splunk Distribution of OpenTelemetry Collector for Linux manually.
 
-The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. 
+The Splunk Distribution of OpenTelemetry Collector for Linux is a package that provides integrated collection and forwarding for all data types. To install the package manually, read this doc.
 
-Install the package using one of these methods:
+.. note:: You can also install the package using :ref:`the installer script <linux-scripts>` or :ref:`deployment and configuration management tools <linux-deployments>`.
 
-* :ref:`Use the installer script <linux-scripts>`
-* :ref:`Use deployment and configuration management tools <linux-deployments>`
-
-.. _linux-deployments:
-
-Deployments
-====================
-
-Splunk offers the configuration management options described in this section.
-
-.. _linux-amazon-ecs-ec2:
-
-Amazon ECS EC2
---------------------------------
-
-.. note::
-
-   Available for Prometheus only.
-
-Splunk provides a task definition to deploy the Splunk Distribution of OpenTelemetry Collector to ECS EC2. The task definition is a text file, in JSON format, that describes one or more containers that form your application. See :ref:`deployments-ecs-ec2` for the installation instructions.
-
-.. _linux-amazon-fargate:
-
-Amazon Fargate
----------------------------
-.. note::
-
-   Available for Prometheus only. Not yet available for Amazon EKS.
-
-Splunk provides a guided setup to deploy the Splunk Distribution of OpenTelemetry Collector on Amazon Fargate as a sidecar (additional container) to Amazon ECS tasks. See :ref:`deployments-fargate` for the installation instructions.
-
-.. _linux-ansible:
-
-Ansible
--------------------
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Linux machines and send that data to Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
-
-.. _linux-chef:
-
-Chef 
-----------------
-Splunk provides a cookbook to install the Collector using Chef. See :ref:`deployments-chef` for the installation instructions.
-
-.. _linux-heroku:
-
-Heroku
---------------------
-The Splunk Distribution of OpenTelemetry Collector for Heroku is a buildpack for the Collector. The buildpack installs and runs the Collector on a Dyno to receive, process, and export metric and trace data for Splunk Observability Cloud. See :new-page:`Heroku <https://docs.splunk.com/Observability/gdi/heroku/heroku.html>` for the steps to install the buildpack.
-
-.. _linux-nomad:
-
-Nomad 
------------------
-Use Nomad to to deploy the Collector. See :ref:`deployments-nomad` for the installation instructions.
-
-.. _linux-pcf:
-
-Pivotal Cloud Foundry
--------------------------------
-
-You can use one of these three options to deploy the Collector with Pivotal Cloud Foundry (PCF):
-
-* Collector standalone deployment.
-* Collector as a sidecar to your app. 
-* Tanzu Tile.
-
-See more in :ref:`deployments-pivotal-cloudfoundry`.
-
-.. _linux-puppet:
-
-Puppet
--------------------------------
-Splunk provides a Puppet module to install and configure the package. A module is a collection of resources, classes, files, definition, and templates. See :ref:`deployment-linux-puppet` for the instructions to download and customize the module.
-
-.. _linux-salt:
-
-Salt
----------------
-Splunk provides a Salt formula to install and configure the Collector. See :ref:`deployments-salt` for the instructions.
-
-.. _linux-manual:
-
-Install the Collector manually
-===================================
-
-Splunk offers the manual configuration options described in this section:
+Splunk offers the following manual configuration options:
 
 * :ref:`linux-docker`
 * :ref:`linux-packages`
@@ -106,7 +21,7 @@ Splunk offers the manual configuration options described in this section:
 .. _linux-manual-permissions:
 
 Permissions
-----------------
+===================================
 
 You need at least these capabilities to allow the Collector to run without root permissions, regardless of the user:
 
@@ -134,7 +49,7 @@ To set custom permissions after the Collector has been installed, use:
 .. _linux-docker:
 
 Docker
-----------------
+===================================
 
 The Linux docker image of the Splunk Distribution of OpenTelemetry Collector contains a multiarch manifest that specifies the images for AMD64, ARM64, and ppc64le architectures. Docker uses this manifest to download the correct image for the target platform.
 
@@ -165,7 +80,7 @@ Run the following command to run an interactive bash shell on the container and 
 See :new-page:`docker-compose.yml <https://github.com/signalfx/splunk-otel-collector/blob/main/examples/docker-compose/docker-compose.yml>` in GitHub to download a ``docker-compose`` example.
 
 Create a custom Docker configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 You can provide a custom configuration file instead of the default configuration file. Use the environment variable ``SPLUNK_CONFIG`` or the ``--config`` command line argument to provide the path to this file.
 
@@ -232,7 +147,7 @@ Use the following configuration to collect and log CPU metrics. The ``cat`` comm
 .. _linux-packages:
 
 Debian or RPM packages
--------------------------------
+===================================
 
 All Intel, AMD, and ARM systemd-based operating systems are supported, including CentOS, Debian, Oracle, Red Hat, and Ubuntu. Manually installing an integration is useful for containerized environments, or if you want to use other common deployment options.
 
@@ -301,13 +216,14 @@ Do the following to install the package using a Debian or RPM package:
 .. _linux-binary-file:
 
 Binary file
------------------------
+===================================
+
 Download pre-built binaries (``otelcol_linux_amd64`` or ``otelcol_linux_arm64``) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
 
 .. _linux-tar:
 
 Tar file
------------------------
+===================================
 
 The tar.gz archive of the distribution is also available. It contains the default agent and gateway configuration files, which include the environment variables. 
 
@@ -322,16 +238,19 @@ To use the tar file:
 #. On ``amd64`` systems, go into the unarchived ``agent-bundle`` directory and run ``bin/patch-interpreter $(pwd)``. This ensures that the binaries in the bundle have the right loader set on them, since your host's loader might not be compatible.
 
 Working on non-default locations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------------------
 
 If you're running the Collector from a non-default location, the Smart Agent receiver and agent configuration file require that you set two environment variables currently used in the Smart Agent extension:
 
 * ``SPLUNK_BUNDLE_DIR``: The path to the Smart Agent bundle. For example, ``/usr/lib/splunk-otel-collector/agent-bundle``.
 * ``SPLUNK_COLLECTD_DIR``: The path to the ``collectd`` config directory for the Smart Agent. For example, ``/usr/lib/splunk-otel-collector/agent-bundle/run/collectd``. 
 
-More options
+Next steps
 ==================================
-Once you have installed the package, you can perform these actions:
 
-* :new-page:`Get started using Log Observer <https://quickdraw.splunk.com/redirect/?product=Observability&location=log.observer.setup&version=current>`.
-* :ref:`apm`.
+After you've installed the Collector, you can perform these actions:
+
+* :ref:`Configure the Collector <otel-configuration>`.
+* Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to track the health of your infrastructure.
+* Use :ref:`APM <get-started-apm>` to monitor the performance of applications.
+* Use :ref:`Log Observer Connect <logs-intro-logconnect>` to analyze log events and troubleshoot issues with your services.
