@@ -33,7 +33,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the receiver activation, you must also include the receiver in both a `metrics` pipeline and a `traces` pipeline. To do this, add the receiver to the `service` > `pipelines` > `metrics` (or `traces`) > `receivers` section of your configuration file. 
+To complete the receiver activation, you must also include the receiver in both a `metrics` pipeline and a `traces` pipeline. To do this, add the receiver to the `service.pipelines.metrics.receivers` or the `service.pipelines.traces.receivers` section of your configuration file. 
 
 For example:
 

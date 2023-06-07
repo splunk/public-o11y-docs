@@ -97,7 +97,7 @@ Use pre-configured repos
 By default, apt/yum/zypper repo definition files are created to download the package and Fluentd deb/rpm packages from
 :new-page:`https://splunk.jfrog.io/splunk <https://splunk.jfrog.io/splunk>` and :new-page:`https://packages.treasuredata.com <https://packages.treasuredata.com>`, respectively.
 
-To skip these steps and use pre-configured repos on the target system that provide the ``splunk-otel-collector`` and ``td-agent`` deb/rpm packages, specify the ``--skip-collector-repo`` and/or ``--skip-fluentd-repo`` options. For example:
+To skip these steps and use pre-configured repos on the target system that provide the ``splunk-otel-collector`` and ``td-agent`` deb/rpm packages, specify the ``--skip-collector-repo`` or ``--skip-fluentd-repo`` options. For example:
 
 .. code-block:: bash
 

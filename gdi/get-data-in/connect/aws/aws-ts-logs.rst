@@ -28,7 +28,7 @@ If you created the integration recently, it might take some time for the logs to
 
 If you still don't see any logs after 15 minutes, check the IAM policy you've used to set up the AWS connection. We recommend using the :ref:`provided IAM policy <aws-iam-policy>`. If you still don't see the logs, please contact :ref:`our support <support>`.
 
-You can activate debug mode on the log forwarding lambda function: Add ``LOG_LEVEL=DEBUG`` in the :guilabel:`Configuration > Environment variables` section. If you see log forwarding calls fail due to a 503 HTTP error, you might be exceeding logs limit. To fix this, contact :ref:`our support <support>`.
+You can activate debug mode on the log forwarding lambda function: Add ``LOG_LEVEL=DEBUG`` in the :guilabel:`Environment variables` section under :guilabel:`Configuration`. If you see log forwarding calls fail due to a 503 HTTP error, you might be exceeding logs limit. To fix this, contact :ref:`our support <support>`.
 
 CloudFront access logs are not being collected
 ================================================================

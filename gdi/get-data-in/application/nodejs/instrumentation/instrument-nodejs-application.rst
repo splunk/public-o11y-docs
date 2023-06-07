@@ -100,7 +100,7 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
 
       node -r @splunk/otel/instrument <your-app.js>
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-nodejs-troubleshooting`.
+If no data appears in APM, see :ref:`common-nodejs-troubleshooting`.
 
 .. note:: To instrument applications that use Webpack, see :ref:`nodejs-webpack-issues`.
 

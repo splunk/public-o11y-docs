@@ -24,11 +24,11 @@ If you're experiencing issues streaming metrics, check the following:
 
 * CloudFormation parameter values:
   
-  * ``SplunkIngestUrl`` needs to be set to the value shown in the :strong:`Profile > Organizations > Real-time Data Ingest Endpoint`. For example, https://ingest.signalfx.com.
+  * Set ``SplunkIngestUrl`` to the value shown in the :guilabel:`Real-time Data Ingest Endpoint` section under :strong:`Organizations` in your profile. For example, https://ingest.signalfx.com.
   
-    Note: do NOT include the :strong:`/v1/cloudwatch_metric_stream` endpoint path in ``SplunkIngestUrl``.
+    Note: Don't include the :strong:`/v1/cloudwatch_metric_stream` endpoint path in ``SplunkIngestUrl``.
 
-  * ``SplunkAccessToken`` needs to be a valid organization access token with ``INGEST`` authorization scope. You can find access tokens in the :strong:`Settings > Access Tokens` page in the Observability Cloud UI.
+  * ``SplunkAccessToken`` needs to be a valid organization access token with ``INGEST`` authorization scope. You can find access tokens in the :strong:`Access Tokens` page in the Observability Cloud settings.
 
 * In the AWS Kinesis Streams console, validate that metrics are being delivered to the Kinesis Stream created by the CloudFormation template.
 

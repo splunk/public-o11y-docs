@@ -96,9 +96,11 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
 1. In the AWS Lambda console, open the function that you are instrumenting.
 
-2. Navigate to :guilabel:`Configuration` > :guilabel:`Environment variables`, then click :guilabel:`Edit`.
+2. Navigate to :guilabel:`Configuration`, then :guilabel:`Environment variables`.
 
-3. Add each of the following environment variables by clicking :guilabel:`Add environment variable`:
+3. Select :guilabel:`Edit`.
+
+4. Add each of the following environment variables by clicking :guilabel:`Add environment variable`:
 
    .. list-table::
       :header-rows: 1
@@ -161,7 +163,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
       * - (Optional) ``OTEL_RESOURCE_ATTRIBUTES``
         - Define the name of the deployment environment of your function by setting this environment variable to ``deployment.environment=<name-of-your-environment>``.
 
-4. Click :guilabel:`Save` and check that the environment variables appear in the table.
+5. Click :guilabel:`Save` and check that the environment variables appear in the table.
 
 To configure the mode of metric ingest, see :ref:`metrics-configuration-lambda`.
 
