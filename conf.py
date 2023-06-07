@@ -28,6 +28,10 @@ extensions = [
     'olly_on_git_hub'
 ]
 
+html_context = {
+    'search': 'search.html'
+}
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
