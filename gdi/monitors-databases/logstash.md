@@ -27,7 +27,7 @@ To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, 
      type: logstash
        ...  # Additional config
 ```
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:

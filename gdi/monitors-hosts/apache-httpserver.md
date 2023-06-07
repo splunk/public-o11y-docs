@@ -57,7 +57,7 @@ Additional configuration options include host or port, as shown below. If `mod_s
     url: "http://{{.Host}}:{{.Port}}/server-status?auto"
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:

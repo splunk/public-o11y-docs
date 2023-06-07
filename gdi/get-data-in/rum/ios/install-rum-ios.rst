@@ -46,11 +46,11 @@ Import and initialize the iOS RUM package
 
 Follow these steps to import and initialize the iOS RUM package.
 
-1. In Xcode, select :strong:`File` > :strong:`Add Packages...` or :strong:`File` > :strong:`Swift Packages` > :strong:`Add Package Dependency` and enter the following URL in the search bar:
+1. In Xcode, select :strong:`File`, then :strong:`Add Packages...` or :strong:`File`, :strong:`Swift Packages`, then :strong:`Add Package Dependency`, and enter the following URL in the search bar:
 
    ``https://github.com/signalfx/splunk-otel-ios``
 
-2. Click :guilabel:`Add Package` to install the package.
+2. Select :guilabel:`Add Package` to install the package.
 
 3. Initialize the iOS RUM agent with your configuration parameters:
 
@@ -98,11 +98,11 @@ The Splunk iOS Crash Reporting module adds crash reporting to the iOS RUM agent 
 
 To activate crash reporting in the iOS RUM agent, follow these steps:
 
-1. In Xcode, select :strong:`File` > :strong:`Add Packages...` or :strong:`File` > :strong:`Swift Packages` > :strong:`Add Package Dependency` and enter the following URL in the search bar:
+1. In Xcode, select :strong:`File`, then :strong:`Add Packages...` or :strong:`File`, :strong:`Swift Packages`, then :strong:`Add Package Dependency`, and enter the following URL in the search bar:
 
    ``https://github.com/signalfx/splunk-otel-ios-crashreporting``
 
-2. Click :guilabel:`Add Package` to install the package.
+2. Select :guilabel:`Add Package` to install the package.
 
 3. Initialize the crash reporting module with your configuration parameters:
 

@@ -105,7 +105,7 @@ receivers:
     ... # Additional config
 ```
 
-Next, add the services you want to monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the services you want to monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 receivers:
