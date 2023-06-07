@@ -100,7 +100,7 @@ On Windows, the Smart Agent logs to the console when executed directly in a shel
 Activate proxy support in the Smart Agent
 ===========================================
 
-To use an HTTP or HTTPS proxy, set the environment variable ``HTTP_PROXY`` and/or ``HTTPS_PROXY`` in the container configuration to proxy either protocol. The SignalFx ingest and API servers both use HTTPS. If the ``NO_PROXY`` environment variable exists, the Smart Agent automatically appends the local services to the environment variable to not use the proxy.
+To use an HTTP or HTTPS proxy, set the environment variable ``HTTP_PROXY`` or ``HTTPS_PROXY`` in the container configuration to proxy either protocol. The SignalFx ingest and API servers both use HTTPS. If the ``NO_PROXY`` environment variable exists, the Smart Agent automatically appends the local services to the environment variable to not use the proxy.
 
 If the Smart Agent is running as a local service on the host, refer to the host documentation for information on passing environment variables to the Smart Agent service to activate proxy support when the service is started. For example, if the host services are managed by systemd, create the /etc/systemd/system/signalfx-agent.service.d/myproxy.conf file and add the following to the file:
 
