@@ -13,7 +13,7 @@ Install the package using one of these methods:
 
 * :ref:`Use the installer script <linux-scripts>`
 * :ref:`Use deployment and configuration management tools <linux-deployments>`
-* :ref:`Install the Collector for Linux manually <linux-manual>`.
+* :ref:`Install the Collector for Linux manually <linux-manual>`
 
 .. _linux-scripts:
 

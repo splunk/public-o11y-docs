@@ -9,7 +9,7 @@ Pivotal Cloud Foundry
 
 Use Pivotal Cloud Foundry (PCF) to deploy the Collector.
 
-You have three deployment options:
+There's three deployment options:
 
 * :ref:`otel-pcf-bosch`: The Collector is deployed to the PCF environment as a standalone deployment.
 
@@ -47,28 +47,28 @@ Use the :new-page:`release script <https://github.com/signalfx/splunk-otel-colle
 
 The script uses the variables described in the following table: 
 
-   .. list-table:: Variables
-      :widths: 25 25 50
-      :header-rows: 1
+.. list-table:: Variables
+   :widths: 25 25 50
+   :header-rows: 1
 
-      * - Variable
-        - Description
-        - Default
-      * - ``OTEL_VERSION``
-        - The version of the Collector to deploy as a part of this release.
-        - ``latest``. The valid version must be higher than version 0.48.0.
-      * - ``SMART_AGENT_VERSION``
-        - The version of the SignalFx Smart Agent to download. This is a dependency of the Collector SignalFx receiver.
-        - ``latest``
-      * - ``BOSH_RELEASE_VERSION``
-        - The version of the BOSH release being created.
-        - ``false (0)``, if not specified. Any release except the first release should have a pre-set value.
-      * - ``IS_DEV_RELEASE``
-        - Boolean (int). If this variable is set, this script creates the release locally. If this variable is set to ``true``, the script can be used in development.
-        - ``false (0)``
-      * - ``UPLOAD_RELEASE``
-        - Boolean (int). If this variable is set to ``true``, the script uploads the release to the BOSH Director, which is primarily used for the GitHub workflow for testing.
-        - ``true (1)``
+   *  - Variable
+      - Description
+      - Default
+   *  - ``OTEL_VERSION``
+      - The version of the Collector to deploy as a part of this release.
+      - ``latest``. The valid version must be higher than version 0.48.0.
+   *  - ``SMART_AGENT_VERSION``
+      - The version of the SignalFx Smart Agent to download. This is a dependency of the Collector SignalFx receiver.
+      - ``latest``
+   *  - ``BOSH_RELEASE_VERSION``
+      - The version of the BOSH release being created.
+      - ``false (0)``, if not specified. Any release except the first release should have a pre-set value.
+   *  - ``IS_DEV_RELEASE``
+      - Boolean (int). If this variable is set, this script creates the release locally. If this variable is set to ``true``, the script can be used in development.
+      - ``false (0)``
+   *  - ``UPLOAD_RELEASE``
+      - Boolean (int). If this variable is set to ``true``, the script uploads the release to the BOSH Director, which is primarily used for the GitHub workflow for testing.
+      - ``true (1)``
 
 See :new-page:`configuration examples <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/bosh/example>`.
 
@@ -196,8 +196,8 @@ Learn more
 
 See the following GitHub repos and files:
 
-* The Collector's :new-page:`BOSH release repo <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/bosh>`.
-* The Collector's :new-page:`development guide for PCF BOSH <https://github.com/signalfx/splunk-otel-collector/blob/main/deployments/cloudfoundry/bosh/DEVELOPMENT.md>`.
+* The Collector's :new-page:`BOSH release repo <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/bosh>`
+* The Collector's :new-page:`development guide for PCF BOSH <https://github.com/signalfx/splunk-otel-collector/blob/main/deployments/cloudfoundry/bosh/DEVELOPMENT.md>`
 
 .. _otel-pcf-buildpack:
 
@@ -230,8 +230,8 @@ Learn more
 
 See the following GitHub repos and files:
 
-* :new-page:`Configuration options <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/buildpack#configuration>`.
-* :new-page:`Troubleshooting <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/buildpack#troubleshooting>`.
+* :new-page:`Configuration options <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/buildpack#configuration>`
+* :new-page:`Troubleshooting <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/buildpack#troubleshooting>`
 
 .. _otel-pcf-tile:
 
@@ -266,4 +266,4 @@ Learn more
 
 See the following GitHub repos and files:
 
-* The Collector's :new-page:`Tanzu Tile GitHub repo <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/tile>`.
+* The Collector's :new-page:`Tanzu Tile GitHub repo <https://github.com/signalfx/splunk-otel-collector/tree/main/deployments/cloudfoundry/tile>`
