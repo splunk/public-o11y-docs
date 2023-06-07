@@ -13,6 +13,8 @@ To learn about the different metric types, see :ref:`metric-types`.
 
 .. _enable-otel-metrics:
 
+🚧 **Status**: `Experimental <https://github.com/signalfx/splunk-otel-java/blob/main/docs/metrics.md#metrics-and-attributes/>`_ - exported metric data and configuration properties may change.
+
 Activate metrics collection
 ====================================================
 
