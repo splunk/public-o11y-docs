@@ -181,7 +181,7 @@ To infer a generic service from a client span, Splunk APM does the following:
 
 #. Verify that the ``span.kind`` of the referring span is equal to ``CLIENT``.
 #. Look for the service name in the ``peer.service`` tag
-#. If the ``peer.service`` tag exists, infer the service name from it. If the ``peer.service`` tag does not exist, the span is not considered related to a generic inferred service.
+#. If the ``peer.service`` tag exists, infer the service name from it. If the ``peer.service`` tag doesn't exist, the span isn't considered to be related to a generic inferred service.
  
 **Note on AWS services:** To identify AWS services, the span must contain ``http.url``. Splunk APM applies heuristics on this tag's value to determine the AWS Service type from the URL.
 
@@ -194,7 +194,7 @@ When Splunk APM infers a publisher/subscriber queue, it means an instrumented se
 
 The ``kind`` of the referring span is equal to ``producer`` or ``client``.
 
-To identify an inferred pub/sub, the span must contain ``messaging.destination``. This tag's value is used to specify the name of the topic or channel that messages are being sent to.
+To identify an inferred pub/sub, the span must contain either ``messaging.destination`` (in libraries that support OpenTelemetry semantic conventions v1.16.0 or lower) or ``messaging.destination.name`` (in libraries that support OpenTelemetry semantic conventions v1.17.0 or higher). This tag's value is used to specify the name of the topic or channel that messages are sent to.
 
 
 .. _db-inf-logic:
@@ -213,8 +213,8 @@ To identify a database, the ``kind`` of the referring span must be equal to ``cl
 
 To determine the ``name`` of an inferred database, Splunk APM applies this logic in the following order: 
 
-#. If the ``db.system`` tag exists, its value is used to specify the type of database being queried, e.g. ``mysql``, ``redis``, etc. If only this tag is present, its value is also used as the ``service.name`` for the inferred database.
-#. If the ``db.name`` tag exists, its value is concatenated with ``db.system`` to form the name of the inferred service: ``db.system:db.name`` (e.g. ``mysql:sql_db_1``).
+#. If the ``db.system`` tag exists, its value is used to specify the type of database being queried, for example, ``mysql``, ``redis``, and son on. If only this tag is present, its value is also used as the ``service.name`` for the inferred database.
+#. If the ``db.name`` tag exists, its value is concatenated with ``db.system`` to form the name of the inferred service: ``db.system:db.name`` (for example, ``mysql:sql_db_1``).
 #. If the ``db.connection_string`` tag is present and its value conforms to a known format such as Java database connectivity (JDBC), Splunk APM extracts the database name portion of the url and concatenates it with the value of ``db.system`` to form the database name, such as ``mysql:dbname``. If the value of ``db.connection_string`` does not conform to a known format or the database portion cannot be extracted and ``db.name`` also does not exist, Splunk APM uses the raw value of ``db.connection_string`` as the database name. If ``db.system`` also exists, the two values are concatenated. 
 
 Splunk APM also provides additional analytics for supported SQL databases. See :ref:`db-query-performance` to learn more.
