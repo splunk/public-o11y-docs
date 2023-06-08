@@ -19,7 +19,7 @@ The list of available memory metrics depends on the programming language. See :r
 Java Runtime Metrics dashboard
 ================================
 
-You can access a pre-configured dashboard for :ref:`JVM metrics <jvm-metrics>` to check memory usage. There are two ways to access the Java Runtime Metrics dashboard.
+You can access a configured dashboard for :ref:`JVM metrics <jvm-metrics>` to check memory usage. There are two ways to access the Java Runtime Metrics dashboard.
 
 From the dashboards
 ---------------------
@@ -37,7 +37,7 @@ From Splunk APM
 NodeJS Runtime Metrics dashboard
 ================================
 
-You can access a pre-configured dashboard for :ref:`NodeJS runtime metrics <nodejs-otel-runtime-metrics>` to check memory usage. There are two ways to access the NodeJS Runtime Metrics dashboard.
+You can access a configured dashboard for :ref:`NodeJS runtime metrics <nodejs-otel-runtime-metrics>` to check memory usage. There are two ways to access the NodeJS Runtime Metrics dashboard.
 
 From the dashboards
 ---------------------
@@ -55,7 +55,7 @@ From Splunk APM
 .NET Runtime Metrics dashboard
 ================================
 
-You can access a pre-configured dashboard for :ref:`.NET runtime metrics <dotnet-runtime-metrics>` to check memory usage. There are two ways to access the NodeJS Runtime Metrics dashboard.
+You can access a configured dashboard for :ref:`.NET runtime metrics <dotnet-runtime-metrics>` to check memory usage. There are two ways to access the NodeJS Runtime Metrics dashboard.
 
 From the dashboards
 ---------------------

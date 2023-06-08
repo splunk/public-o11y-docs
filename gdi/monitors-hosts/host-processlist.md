@@ -34,7 +34,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file. For example, to configure the `logs` pipeline using the required `signalfx` exporter:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file. The following example shows how to configure the `logs` pipeline using the required `signalfx` exporter:
 
 ```yaml
 service:
