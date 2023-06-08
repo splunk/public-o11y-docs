@@ -29,7 +29,7 @@ Follow these steps to turn on Database Query Performance and begin indexing data
 1. From the APM landing page, select :guilabel:`APM Configuration` and select :guilabel:`APM MetricSets`. The APM MetricSets page opens. 
 
     .. image:: /_images/apm/db-query-perf/apm-configuration.png
-         :width: 50%
+         :width: 35%
          :alt: Screenshot of the APM Configuration menu on the APM landing page.
 
 2. In the Database Query Performance section, check that the :guilabel:`Status` is Active. If it is, skip to the next step. If it's not, select :guilabel:`Resume Indexing` to initiate cardinality analysis, and then wait for the cardinality analysis to run in the Pending MetricSet section at the top of the table. 
