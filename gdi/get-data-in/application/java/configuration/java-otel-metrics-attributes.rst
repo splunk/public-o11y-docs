@@ -18,8 +18,6 @@ Activate metrics collection
 
 To collect Java application and Java Virtual Machine metrics, see :ref:`enable_automatic_metric_collection`.
 
-.. note:: Application metrics collection is an experimental feature subject to future changes.
-
 .. _java-otel-metrics:
 
 Application metrics
