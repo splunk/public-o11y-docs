@@ -4,8 +4,6 @@
 Monitor Database Query Performance
 ************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use Database Query Performance to monitor the impact of your database queries on service availability directly in Splunk APM. 
 
