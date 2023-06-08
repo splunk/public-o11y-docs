@@ -4,8 +4,6 @@
 Troubleshoot Database Query Performance
 ************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to troubleshoot Database Query Performance issues.
 
@@ -61,12 +59,12 @@ You can also use the Related Content tiles to pivot to Infrastructure Monitoring
 
 .. _disable-db-normalization:
 
-Disable database query normalization
+Turn off database query normalization
 -----------------------------------------------------------
 
 By default, Splunk APM instrumentation sanitizes database queries to remove or mask sensible data, such as secrets or personal identifiable information (PII).
 
-If you want to disable database query normalization, follow these steps:
+If you want to turn off database query normalization, follow these steps:
 
 - Java: Set the ``otel.instrumentation.common.db-statement-sanitizer.enabled`` property to ``false``. 
 - Ruby: Set the ``db_statement`` setting to ``:include``.

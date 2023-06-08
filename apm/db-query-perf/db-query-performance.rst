@@ -56,7 +56,7 @@ Normalized queries have all dynamic elements replaced by the ``?`` character. Th
     <h2>What you can do with Database Query Performance</h2>
   </embed>
 
-Although Database Query Performance doesn't replace end-to-end database monitoring tools targeted at database administrators (DBAs), it can help you quickly determine whether a service availability issue is related to a particular database query, so you can alert the right admin. 
+Although Database Query Performance doesn't replace end-to-end database monitoring tools targeted at database administrators (DBAs), it can help you quickly determine whether a service availability issue is related to a particular database query, so you can alert the correct admin. 
 
 You can use insights from Database Query Performance to address the following scenarios related to monitoring service availability, optimizing service performance, and monitoring database queries themselves: 
 
