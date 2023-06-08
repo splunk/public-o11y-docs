@@ -113,28 +113,9 @@ Follow these steps to instrument your application using the Go instrumentation:
 
 #. (Optional) To link APM and RUM data, activate the HTTP instrumentation. See :ref:`server-trace-information-go`.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-go-troubleshooting`.
+If no data appears in APM, see :ref:`common-go-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your Go application or service manually. See :ref:`go-manual-instrumentation`.
-
-.. _enable_automatic_metric_collection_golang:
-
-Activate metrics collection
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. caution:: The OpenTelemetry Go Metrics API is a release candidate. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
-
-To activate automatic runtime metric collection, you need to set the ``OTLP_METRICS_EXPORTER`` environment variable.
-
-.. tabs::
-
-   .. code-tab:: bash Linux
-
-      export OTLP_METRICS_EXPORTER=otlp
-
-   .. code-tab:: shell Windows PowerShell
-
-      $env:OTLP_METRICS_EXPORTER=otlp
 
 .. _kubernetes_go:
 

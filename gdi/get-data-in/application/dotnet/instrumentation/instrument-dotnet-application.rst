@@ -117,7 +117,7 @@ Follow these steps to automatically instrument your application:
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-troubleshooting`.  
+If no data appears in APM, see :ref:`common-dotnet-troubleshooting`.  
 
 If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-manual-instrumentation`.
 
@@ -228,11 +228,11 @@ To instrument an application or service in Azure App Service, follow these steps
 
 #. Select your application in App Service.
 
-#. Go to :guilabel:`Development Tools > Extensions`.
+#. Go to :guilabel:`Development Tools`, then :guilabel:` Extensions`.
 
 #. Find and install the :strong:`SignalFx .NET Tracing` extension.
 
-#. Go to :guilabel:`Settings > Configuration`.
+#. Go to :guilabel:`Settings`, then :guilabel:` Configuration`.
 
 #. Select :strong:`New application setting` to add the following settings:
 

@@ -94,21 +94,6 @@
      -
      -
 
-   * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Kafka producer <collectd-kafka-producer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd PHP FPM <collectd-php-fpm>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd uptime <collectd-uptime>`
      - :strong:`X`
      -
@@ -289,6 +274,16 @@
      -
      -
 
+   * - :ref:`Kafka consumer <kafka-consumer>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka producer <kafka-producer>`
+     - :strong:`X`
+     -
+     -
+
    * - :ref:`Kong Gateway <kong>`
      - :strong:`X`
      -
@@ -428,7 +423,12 @@
      -
      - :strong:`X`
 
-   * - :ref:`NTP Receiver <ntp>`
+   * - :ref:`NTPQ <telegraf-ntpq>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`NTP server <ntp>`
      - :strong:`X`
      -
      -
@@ -448,10 +448,15 @@
      -
      -
 
-   * - :ref:`Oracle Database <oracledb>`
+   * - :ref:`Oracle Database receiver <oracledb>`
      - :strong:`X`
      -
      -  
+
+   * - :ref:`PHP FPM <collectd-php-fpm>`
+     - :strong:`X`
+     -
+     -
 
    * - :ref:`PostgreSQL <postgresql>`
      - :strong:`X`
@@ -544,11 +549,6 @@
      -
 
    * - :ref:`systemd <collectd-systemd>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Telegraf NTPQ <telegraf-ntpq>`
      - :strong:`X`
      -
      -

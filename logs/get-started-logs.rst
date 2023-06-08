@@ -78,7 +78,7 @@ The following table lists features available to customers with a Log Observer en
 
    * - See the metrics, traces, and infrastructure related to a specific log.
      - Related Content
-     - :ref:`get-started-use-case`
+     - :ref:`get-started-scenario`
 
 
 =========================================

@@ -277,4 +277,8 @@ div.body {
         color: black !important;
     }
 
+    .caption-text{
+        display: inline-grid;
+        max-width: 95%;
+    }
     /* From layout file --- END */

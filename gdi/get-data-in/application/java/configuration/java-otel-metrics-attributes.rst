@@ -7,9 +7,9 @@ Metrics and attributes collected by the Splunk OTel Java agent
 .. meta:: 
   :description: The Splunk Distribution of OpenTelemetry Java collects the following application metrics data and WebEngine attributes. You can also collect custom metrics through Micrometer.
 
-The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects.
+The agent of the Splunk Distribution of OpenTelemetry Java collects the following application metrics data and attributes in addition to all that the upstream OpenTelemetry agent collects. To learn about the different metric types, see :ref:`metric-types`.
 
-To learn about the different metric types, see :ref:`metric-types`.
+.. caution:: This feature is experimental, and exported metric data and configuration properties might change. See more in :new-page:`GitHub <https://github.com/signalfx/splunk-otel-java/blob/main/docs/metrics.md#metrics-and-attributes/>`.
 
 .. _enable-otel-metrics:
 
@@ -17,8 +17,6 @@ Activate metrics collection
 ====================================================
 
 To collect Java application and Java Virtual Machine metrics, see :ref:`enable_automatic_metric_collection`.
-
-.. note:: Application metrics collection is an experimental feature subject to future changes.
 
 .. _java-otel-metrics:
 

@@ -105,7 +105,7 @@ Follow these steps to automatically instrument your application using the Java a
 
    .. note:: If your application runs on a supported Java server, see :ref:`java-servers-instructions`.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-java-troubleshooting`.
+If no data appears in APM, see :ref:`common-java-troubleshooting`.
 
 If you need to add custom attributes to spans or want to manually generate spans, instrument your Java application or service manually. See :ref:`java-manual-instrumentation`.
 

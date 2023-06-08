@@ -14,7 +14,7 @@ Splunk Observability Cloud and the Splunk platform
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
    Collaborate on observability <practice-reliability/collaboration>
-   Set up Observability Cloud <setup-o11y/setup-o11y>
+   
 
 
 With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can monitor your system and measure its current state based on the data it generates in the form of logs, metrics, traces, and user sessions. In other words, you can perform observability to ensure reliability.
@@ -45,7 +45,7 @@ Select each of the following categories to learn how you can maintain reliabilit
 * :ref:`Collaborate on observability within and across teams <practice-reliability-collaboration>`
 
 
-Then see :ref:`setup-o11y-setup-o11y` to get started.
+Then see :ref:`get-started-get-data-in` to set up each component of Splunk Observability Cloud.
 
 
 

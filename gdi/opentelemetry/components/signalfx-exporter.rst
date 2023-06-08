@@ -224,6 +224,30 @@ Metrics excluded by default by the SignalFx exporter are listed in the default_m
      # matches k8s.volume.inodes, k8s.volume.inodes and k8s.volume.inodes.used
      - /^k8s\.volume\.inodes(\.free|\.used)*$/
 
+.. _filter-metrics-environment:
+
+Filter metrics using service or environment
+--------------------------------------------------------------
+
+The SignalFx exporter correlates the traces it receives to metrics. When the exporter detects a new service or environment, it associates the source (for example, a host or a pod) to that service or environment in Splunk Observability Cloud, and identifies them using ``sf_service`` and ``sf_environment``. You can then filter those metrics based on the trace service and environment. 
+
+.. note:: You need to send traces using :ref:`splunk-apm-exporter` to see them in Splunk Observability Cloud.
+
+Use the ``correlation`` setting to control the syncing of service and environment properties onto dimensions. It has the following options:
+
+* ``endpoint``: :strong:`Required`. The base URL for API requests, such as https://api.us0.signalfx.com. Defaults to api_url or https://api.{realm}.signalfx.com/.
+* ``timeout``: Timeout for every attempt to send data to the backend. 5 seconds by default.
+* ``stale_service_timeout``: How long to wait after a span's service name is last seen before uncorrelating it. 5 minutes by default.
+* ``max_requests``: Maximum HTTP requests to be made in parallel. 20 by default.
+* ``max_buffered``: Maximum number of correlation updates that can be buffered before updates are dropped. 10,000 by default.
+* ``max_retries``: Maximum number of retries that will be made for failed correlation updates. 2 by default.
+* ``log_updates``: Whether or not to log correlation updates to dimensions, at DEBUG level. ``false`` by default.
+* ``retry_delay``: How long to wait between retries. 30 seconds by default. 
+* ``cleanup_interval``: How frequently to purge duplicate requests. 1 minute by default.
+* ``sync_attributes`` : Map containing key of the attribute to read from spans to sync to dimensions specified as the value. Defaults to ``{"k8s.pod.uid": "k8s.pod.uid", "container.id": "container.id"}``.
+
+See more options in the Settings section.
+
 Settings
 ======================
 

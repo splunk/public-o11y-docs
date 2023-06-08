@@ -31,7 +31,7 @@ You can create custom MMS at the service level and the endpoint (span) level. Wh
 
 When you create an MMS with a custom dimension, you can use this custom dimension to create charts, dashboards, and alerts by leveraging the Infrastructure Monitoring platform. 
 
-To learn more about a specific use case for custom MMS: :ref:`custom-metricset`.
+To learn more about a specific scenario for custom MMS: :ref:`custom-metricset`.
 
 How to generate a Monitoring MetricSet with a custom dimension 
 ====================================================================
