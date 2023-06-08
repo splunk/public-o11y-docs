@@ -1,4 +1,4 @@
-.. _enable-db-perf:
+.. _turn-on-db-perf:
 
 ************************************************************************
 Turn on Database Query Performance
