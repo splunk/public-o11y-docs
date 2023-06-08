@@ -32,7 +32,7 @@ The following configuration options are available for this integration:
 | `host` | **yes** | `string` |  |
 | `port` | **yes** | `integer` |  |
 | `collectTarget` | **yes** | `string` | Define what the module block will monitor: `NODE` for a Couchbase node, or `BUCKET` for a Couchbase bucket. |
-| `collectBucket` | no | `string` | If `collectTarget` is "BUCKET", `collectBucket` specifies the name of the bucket that this will monitor. |
+| `collectBucket` | no | `string` | If `collectTarget` is `BUCKET`, `collectBucket` specifies the name of the bucket that this will monitor. |
 | `clusterName` | no | `string` | Name of this Couchbase cluster. Defaults to `default`.|
 | `collectMode` | no | `string` | Change to `detailed` to collect all available metrics from Couchbase stats API. Defaults to `default`, collecting a curated set that works well with SignalFx. |
 | `username` | no | `string` | Username to authenticate with |
