@@ -4,15 +4,13 @@
 Monitor Database Query Performance
 ************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to use Database Query Performance to monitor the impact of your database queries on service availability directly in Splunk APM. 
 
 .. toctree::
    :hidden:
 
-   enable-db-perf
+   turn-on-db-perf
    db-perf-scenario
    db-perf-redis-scenario
    db-perf-troubleshooting
@@ -58,7 +56,7 @@ Normalized queries have all dynamic elements replaced by the ``?`` character. Th
     <h2>What you can do with Database Query Performance</h2>
   </embed>
 
-Although Database Query Performance doesn't replace end-to-end database monitoring tools targeted at database administrators (DBAs), it can help you quickly determine whether a service availability issue is related to a particular database query, so you can alert the right admin. 
+Although Database Query Performance doesn't replace end-to-end database monitoring tools targeted at database administrators (DBAs), it can help you quickly determine whether a service availability issue is related to a particular database query, so you can alert the correct admin. 
 
 You can use insights from Database Query Performance to address the following scenarios related to monitoring service availability, optimizing service performance, and monitoring database queries themselves: 
 
@@ -93,7 +91,7 @@ You can also use Database Query Performance to identify possible opportunities t
     <h2>Enable Database Query Performance in Splunk APM</h2>
   </embed>
 
-Database Query Performance is available by default, so all you need to do is enable the feature so that APM automatically begins indexing database-related span tags. See :ref:`enable-db-perf` to get started monitoring database performance in APM. 
+Database Query Performance is available by default, so all you need to do is turn on the feature so that APM automatically begins indexing database-related span tags. See :ref:`turn-on-db-perf` to get started monitoring database performance in APM. 
 
 .. raw:: html
 
@@ -103,7 +101,7 @@ Database Query Performance is available by default, so all you need to do is ena
 
 See the following links for more information about Database Query Performance: 
 
-* To enable Database Query Performance, see :ref:`enable-db-perf`. 
+* To turn on Database Query Performance, see :ref:`turn-on-db-perf`. 
 * For a scenario focusing on MySQL and SQL troubleshooting, see :ref:`db-perf-scenario`. 
 * For a scenario focusing on Redis and NoSQL troubleshooting, see :ref:`redis-scenario`.
 * To troubleshoot issues with Database Query Performance, see :ref:`db-perf-troubleshooting`. 
