@@ -8,7 +8,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 You can use the following utility helpers in the Groovy script within the `util` variable, which is set in the script's context:
 
-- `util.queryJMX(String objectName)`: This helper queries the pre-configured JMX application for the given `objectName`, which can include wildcards. In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object. You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
+- `util.queryJMX(String objectName)`: This helper queries the configured JMX application for the given `objectName`, which can include wildcards. In any case, the return value will be a `List` of zero or more `GroovyMBean` objects, which are a convenience wrapper that Groovy provides to make accessing attributes on the MBean simple. See http://groovy-lang.org/jmx.html for more information about the `GroovyMBean` object. You can use the Groovy `.first()` method on the returned list to access the first MBean is you are only expecting one.
 
 - `util.makeGauge(String name, double val, Map<String, String> dimensions)`:
 	A convenience function to create a SignalFx gauge data point. This creates a `DataPoint` instance that can be fed to `output.sendDatapoint[s]`. This does not send the data point, only creates it.

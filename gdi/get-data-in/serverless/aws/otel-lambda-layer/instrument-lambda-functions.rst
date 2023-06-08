@@ -100,7 +100,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
 3. Select :guilabel:`Edit`.
 
-4. Add each of the following environment variables by clicking :guilabel:`Add environment variable`:
+4. Add each of the following environment variables by selecting :guilabel:`Add environment variable`:
 
    .. list-table::
       :header-rows: 1
