@@ -113,9 +113,9 @@ In some Windows-based SQL Server instances, TCP/IP has been deactivated by defau
 
 1. Verify agent configurations are correct.
 
-2. In your SQL Server instance, activate TCP/IP. To do this, select **Start**, **Administrative Tools**, then **Computer Management**.
+2. In your SQL Server instance, activate TCP/IP. To do this, select **Start**, then **Administrative Tools**, then **Computer Management**.
 
-3. In the `Computer Management` sidebar, select **Services and Applications**, **SQL Server Configuration Manager**, then **SQL Server Network Configuration**.
+3. In the `Computer Management` sidebar, select **Services and Applications**, then **SQL Server Configuration Manager**, then **SQL Server Network Configuration**.
 
 4. Select **Protocols for `<YOUR SQL SERVER NAME>`**.
 

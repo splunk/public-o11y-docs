@@ -17,7 +17,7 @@ Verify your metrics collection method
 You can use either Splunk Observability Cloud or your AWS CloudWatch console to confirm whether your metrics are collected by polling or by CloudWatch metric streams:
 
 - In Observability Cloud: Use the :ref:`Plot Editor <specify-signal>` for Splunk Infrastructure Monitoring to select the org metric ``sf.org.num.awsServiceCallCount`` and filter by the ``method`` property using check boxes to select the following values: ``putMetricStream``, ``getMetricData``, ``getMetricStream``.
-- In the AWS CloudWatch console: At :guilabel:`All`, :guilabel:`Usage`, :guilabel:`By AWS resource`, :guilabel:`CallCount`, open the ``CallCount`` metric and use check boxes to select the CloudWatch service resources (values)  ``putMetricStream``, ``getMetricData``, ``getMetricStream``.
+- In the AWS CloudWatch console, go to :guilabel:`All`, then :guilabel:`Usage`. Select :guilabel:`By AWS resource`, then :guilabel:`CallCount`, open the ``CallCount`` metric and select the following CloudWatch service resources values  ``putMetricStream``, ``getMetricData``, ``getMetricStream``.
 
 Explore your AWS inventory and data
 ============================================

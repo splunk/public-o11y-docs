@@ -85,7 +85,7 @@ Add the path to the JVM agent to the settings using the asadmin command-line too
 You can also add the ``-javaagent`` argument from the Glassfish or Payara Admin Console:
 
 1. Open the GlassFish Admin Console at ``http://localhost:4848``.
-2. Go to :menuselection:`Configurations`, then :menuselection:`server-config`
+2. Go to :menuselection:`Configurations`, then :menuselection:`server-config`.
 3. Select :menuselection:`JVM Settings`.
 4. Select :menuselection:`JVM Options`, then :menuselection:`Add JVM Option`.
 5. In the blank field, enter the path to the splunk-otel-javaagent.jar file:
