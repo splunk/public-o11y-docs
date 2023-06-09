@@ -488,7 +488,7 @@ The following table shows customizable arguments for this detector. To learn how
 
 Oracle
 ---------------------------------------------------
-Oracle database - Session utilization expected to reach limit
+Oracle - Session utilization expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Description: Alerts when Oracle session utilization is above its designated threshold. 
 - Signalflow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/oracle.flow#L5>` repository on GitHub.
@@ -500,25 +500,28 @@ The following table shows customizable arguments for this detector. To learn how
    :widths: 33 33 33
 
    * - Argument
-     - Algorithm type
+     - Description
      - Default value
    
-   * - Session utilization
-     - Static
+   * - fire_threshold
+     - Trigger threshold for CPU usage percentage
      - ``fire_threshold >= 90%``
 
-   * - metric: oracle.session.usage
-     - Static
+   * - fire_lasting
+     - Trigger sensitivity for when to alert
      - ``fire_lasting = 80% of 5m``
 
-   * - oracle.session.limit
-     - Static 
+   * - clear_threshold
+     - Threshold percentage to clear alerts for CPU usage
      - ``clear_threshold < 90%``
 
-   * - 
-     - 
+   * - clear_lasting
+     - Sensitivity in minutes for when to clear alerts
      - ``clear_lasting = 80% of 5m``     
 
+   * - filter
+     - Dimensions you want to add to the scope of the detector
+     - None  
 
 .. _autodetect-redis:
 
@@ -545,11 +548,11 @@ The following table shows customizable arguments for this detector. To learn how
      - ``90``
 
    * - Sensitivity
-     - Sensitivity for alerting 
+     - Sensitivity for alerting
      - ``80% of 10m``
 
    * - Clear threshold
-     - Threshold to clear alerts for CPU usage percentage 
+     - Threshold to clear alerts for CPU usage percentage
      - ``80``
 
    * - Clear sensitivity
