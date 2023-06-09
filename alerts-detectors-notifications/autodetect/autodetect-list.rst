@@ -503,24 +503,24 @@ The following table shows customizable arguments for this detector. To learn how
      - Description
      - Default value
    
-   * - fire_threshold
-     - Trigger threshold for CPU usage percentage
-     - ``fire_threshold >= 90%``
+   * - Trigger threshold
+     - Sets threshold ``fire_threshold`` for CPU usage percentage
+     - ``90%``
 
-   * - fire_lasting
-     - Trigger sensitivity for when to alert
-     - ``fire_lasting = 80% of 5m``
+   * - Trigger sensitivity
+     - Sensitivity for alerting
+     - ``80% of 5m``
 
-   * - clear_threshold
-     - Clear threshold for when to clear alerts for CPU usage percentage
-     - ``clear_threshold < 90%``
+   * - Clear threshold
+     - Sets value for when to clear alerts for CPU usage percentage
+     - ``90%``
 
-   * - clear_lasting
-     - Clear sensitivity in minutes for when to clear alerts
-     - ``clear_lasting = 80% of 5m``     
+   * - Clear sensitivity
+     - Sensitivity for clearing alerts
+     - ``80% of 5m``     
 
    * - filter
-     - Dimensions you want to add to the scope of the detector
+     - Dimensions you want to add to the scope of the detector, if any
      - None  
 
 .. _autodetect-redis:
