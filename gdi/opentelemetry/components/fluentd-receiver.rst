@@ -13,7 +13,7 @@ The receiver accepts data formatted as Fluent Forward events through a TCP conne
 
 .. note:: Fluentd is bundled in the Splunk Distribution of OpenTelemetry Collector.
 
-.. caution:: If you don't have a Log Observer entitlement, make sure to turn off Fluent Forward when installing the Collector using the ``--without-fluentd`` option. 
+.. caution:: If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to skip the installation of Fluentd when installing the Collector.
 
 Get started
 ======================
