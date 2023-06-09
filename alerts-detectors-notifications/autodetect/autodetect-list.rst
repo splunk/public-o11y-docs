@@ -512,11 +512,11 @@ The following table shows customizable arguments for this detector. To learn how
      - ``fire_lasting = 80% of 5m``
 
    * - clear_threshold
-     - Threshold percentage to clear alerts for CPU usage
+     - Clear threshold for when to clear alerts for CPU usage percentage
      - ``clear_threshold < 90%``
 
    * - clear_lasting
-     - Sensitivity in minutes for when to clear alerts
+     - Clear sensitivity in minutes for when to clear alerts
      - ``clear_lasting = 80% of 5m``     
 
    * - filter
