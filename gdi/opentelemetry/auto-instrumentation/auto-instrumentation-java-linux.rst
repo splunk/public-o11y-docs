@@ -39,6 +39,8 @@ You can install the ``splunk-otel-auto-instrumentation`` package in the followin
          curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
          sudo sh /tmp/splunk-otel-collector.sh --with-instrumentation --realm <SPLUNK_REALM> -- <SPLUNK_ACCESS_TOKEN>
 
+      .. note:: If you don't have a Log Observer entitlement, make sure to turn off Fluentd using ``--without-fluentd``. 
+
       To automatically define the optional ``deployment.environment`` resource attribute at installation time, run the installer script with the ``--deployment-environment <env>`` option. Replace ``<env>`` with the desired attribute value, for example, ``prod``, as shown in the following example:
 
       .. code-block:: bash
