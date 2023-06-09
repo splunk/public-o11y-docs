@@ -74,7 +74,7 @@ If you hover over a metric name a tooltip opens that provides information about 
 Use the filter or exclude sidebar
 --------------------------------------
 
-The :guilabel:`Filter or exclude`surfaces relevant metadata from the search results. Custom categories appear at the top of the list. For more, see :ref:`managing-custom-categories`. If you don't see the value that you're looking for in the longer list, enter the value in the search field to return more relevant search results.
+The :guilabel:`Filter or exclude` surfaces relevant metadata from the search results. Custom categories appear at the top of the list. For more, see :ref:`managing-custom-categories`. If you don't see the value that you're looking for in the longer list, enter the value in the search field to return more relevant search results.
 
 Hovering anywhere over a value in the left sidebar highlights the row and displays the :guilabel:`Filter` and :guilabel:`Exclude Button`. Select a value, or the :guilabel:`Filter`, to add it to your search as a filter. To exclude a value from your search results, select the :guilabel:`Exclude Button`.Exclamation point (!) at the beginning of a filter indicate an excluded term. 
 
