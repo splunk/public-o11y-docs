@@ -48,7 +48,7 @@ To install the package using the installer script, follow these steps:
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB -- SPLUNK_ACCESS_TOKEN
 
-.. note:: If you don't have a Log Observer entitlement, make sure to turn off Fluentd using the ``--without-fluentd`` option. 
+.. note:: If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to skip the installation of Fluentd when installing the Collector.
 
 Run additional script options
 -------------------------------------------
@@ -104,7 +104,7 @@ Configure Fluentd
 ---------------------------------------
 
 .. note::
-   If you don't need to collect logs, run the installer script with the ``--without-fluentd`` option to skip installation of Fluentd and the plugins and dependencies described in this section.
+   If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to skip the installation of Fluentd when installing the Collector.
 
 By default, the Fluentd service is installed and configured to forward log events with the ``@SPLUNK`` label to the package, which then sends these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
