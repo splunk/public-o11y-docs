@@ -11,7 +11,7 @@ The Fluent Forward receiver allows the Splunk Distribution of OpenTelemetry Coll
 
 The receiver accepts data formatted as Fluent Forward events through a TCP connection. All three Fluent event types, message, forward, and packed forward, are supported, including compressed packed forward.
 
-.. note:: If you don't have a Log Observer entitlement, use the ``--without-fluentd`` option to turn off Fluent Forward when installing the Collector.
+.. note:: If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to not install Fluentd when installing the Collector.
 
 Get started
 ======================
