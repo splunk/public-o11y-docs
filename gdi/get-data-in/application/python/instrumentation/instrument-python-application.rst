@@ -52,7 +52,7 @@ Follow these steps to automatically instrument your application using the Python
 
       pip install "splunk-opentelemetry[all]"
 
-   If you're using a requirements.txt or pyproject.toml file, add ``splunk-opentelemetry[all]`` to it.
+   If you're using a ``requirements.txt`` or ``pyproject.toml`` file, add ``splunk-opentelemetry[all]`` to it.
 
 #. Run the bootstrap script to install instrumentation for every supported package in your environment:
 
