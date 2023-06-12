@@ -360,7 +360,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Alerts and detectors use case library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
+   Alerts and detectors scenario library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
 
 .. toctree::
    :maxdepth:   3
@@ -568,7 +568,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Splunk RUM use case library TOGGLE <rum/rum-scenario-library/scenario-landingpage>
+   Splunk RUM scenario library TOGGLE <rum/rum-scenario-library/scenario-landingpage>
 
 .. toctree::
    :maxdepth:   3
@@ -645,7 +645,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3 
   
-   Synthetics use case library TOGGLE <synthetics/synth-scenarios/synth-landing>
+   Synthetics scenario library TOGGLE <synthetics/synth-scenarios/synth-landing>
 
 .. toctree::
    :maxdepth:   3

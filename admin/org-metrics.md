@@ -98,6 +98,15 @@ These metrics track limits that Infrastructure Monitoring enforces for your orga
 
 * `sf.org.limit.metricTimeSeriesCreatedPerMinute` (gauge): Maximum rate at which you can create new MTS in your organization, measured in MTS per minute. If you exceed this rate, Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS. To monitor the number of metrics you've created overall, use the metric `sf.org.numMetricTimeSeriesCreated`.
 
+(org-metrics-throttling)=
+### Metrics that track data throttling
+
+If you exceed your system limits, Obervability Cloud might throttle the data you send in. 
+
+While org metrics whose name contains `limit` or `limited` indicate you've hit a ceiling (a maximum number of "items" in your system), metrics with `throttled` (for example, `sf.org.numThrottledMetricTimeSeriesCreateCalls`) show that you’ve hit a rate/timeUnit, and therefore you can only send in so many datapoints per minute.  
+
+See more in [System limits and data throttling](https://docs.splunk.com/Observability/references/per-product-limits.html).
+
 ### Authentication error metrics 
 
 Editing a role and removing a user's permissions to cloud services might generate authentication errors from your cloud service provider. When this happens, Observability Cloud integrations won't work properly, and won't be able to collect data and metadata from your services.
@@ -122,8 +131,7 @@ Some metrics report a `gross` value and a `num` value. Compare the `gross` and `
 
 * A `num` metric reports the total number of data points the system receives after it completes any throttling or filtering.
 
-
-## Metric details
+## List of organization metrics
 
 Use the {ref}`Metric Finder <metrics-finder-and-metadata-catalog>` to find all org metrics.
 
@@ -131,7 +139,7 @@ These are the main organization metrics provided by Observability Cloud:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/signalfx-org-metrics/metrics.yaml"></div>
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

@@ -128,7 +128,7 @@ A service is a small, flexible, and autonomous unit of software that connects to
 
 service map
 -------------
-A visualization of your instrumented and inferred services and their relationships. The service map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-service-map` to learn more about using the service map in APM, or see :ref:`service-map` for a dedicated use case. 
+A visualization of your instrumented and inferred services and their relationships. The service map is dynamically generated based on your selections in the time range, environment, workflow, service, and tag filters. See :ref:`apm-service-map` to learn more about using the service map in APM, or see :ref:`service-map` for a dedicated scenario. 
 
 
 Traces and spans
@@ -151,7 +151,7 @@ Using Business Workflows, you can correlate a set of related traces that track a
 To learn more, see:
 
 * :ref:`apm-workflows` for an overview of Business workflows
-* :ref:`configure-business-workflows` for a use case involving Business Workflows
+* :ref:`configure-business-workflows` for a scenario involving Business Workflows
 
 .. _indexed-tag-concept:
 
@@ -185,7 +185,7 @@ The Tag Spotlight view in Splunk APM offers a top-down view of your services bas
 To learn more, see:
 
 * :ref:`apm-tag-spotlight-overview` for an orientation to Tag Spotlight
-* :ref:`troubleshoot-tag-spotlight` for a specific use case leveraging Tag Spotlight. 
+* :ref:`troubleshoot-tag-spotlight` for a specific scenario leveraging Tag Spotlight. 
 
 .. _trace-concept:
 
@@ -200,7 +200,7 @@ Trace Analyzer
 
 In Trace Analyzer, use Splunk APM's full-fidelity tracing by searching through all of your traces to find the precise source of a particular issue. 
 
-To learn more, see :ref:`apm-scenario-trace-analyzer` for a dedicated use case leveraging trace search. 
+To learn more, see :ref:`apm-scenario-trace-analyzer` for a dedicated scenario leveraging trace search. 
 
 
 .. _trace-view-concept:

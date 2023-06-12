@@ -180,7 +180,7 @@ The following snippet contains a sample ``profiling`` pipeline:
 
    service:
      pipelines:
-        profiling:
+        logs/profiling:
            receivers: [otlp]
            processors: [batch]
            exporters: [logging/info, splunk_hec]

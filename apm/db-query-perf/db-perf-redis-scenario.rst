@@ -3,7 +3,6 @@
 Scenario: Skyler investigates Redis performance issues using Database Query Performance
 *****************************************************************************************
 
-
 .. meta::
    :description: This Splunk APM scenario describes how to troubleshoot latency reported by customers in a new advertisement service, which uses a Redis database.
 
@@ -32,7 +31,7 @@ This might mean that one or more commands are causing the latency issues. To fur
 Jump to the service in Splunk APM
 ==============================================
 
-The service map of Splunk APM appears. Skyler is able to immediately select the Redis database and see at a glance which commands are the slowest. The latency and request & errors charts provide a view of the performance trend. 
+The service map of Splunk APM appears. Skyler immediately selects the Redis database and see at a glance which commands are the slowest. The latency and request and errors charts provide a view of the performance trend. 
 
 .. image:: /_images/apm/redis/apm-service-map-redis.png
    :width: 90%
@@ -51,20 +50,20 @@ After opening Database Query Performance from the service map, Skyler sees the l
    :width: 90%
    :alt: Animation of Redis commands in Database Query Performance.
 
-Skyler knows that commands operating on many elements, like SORT, LREM, and SUNION can be slow. They identify a command with a problematic latency, and click on the latency chart to load example traces.
+Skyler knows that commands operating on many elements, like SORT, LREM, and SUNION can be slow. They identify a command with a problematic latency, and selects the latency chart to load example traces.
 
 .. image:: /_images/apm/redis/span-detail-redis.png
    :width: 90%
    :alt: Sample traces for a Redis command, as loaded from Database Query Performance.
 
-Skyler click on the example trace to find out more about the latency of that particular span.
+Skyler selects the example trace to find out more about the latency of that particular span.
 
 .. _use-case-dig-into-spans:
 
 Dig into spans and related commands
 ==============================================
 
-From the trace view, Skyler is able to select the Redis span and verify which database statements compose the command. The performance summary points at the database spans being the main source of overhead.
+From the trace view, Skyler selects the Redis span and verifies which database statements compose the command. The performance summary points at the database spans being the main source of overhead.
 
 .. image:: /_images/apm/redis/redis-commands-span.png
    :width: 90%
@@ -77,7 +76,7 @@ Learn more
 See the following links for more information about Database Query Performance: 
 
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.
-* To enable Database Query Performance, see :ref:`enable-db-perf`. 
+* To turn on Database Query Performance, see :ref:`turn-on-db-perf`. 
 * To learn more about Related Content, see :ref:`get-started-relatedcontent`.
 * To troubleshoot issues with Database Query Performance, see :ref:`db-perf-troubleshooting`. 
 * For reference material about Database Query Performance, see :ref:`db-perf-reference`.

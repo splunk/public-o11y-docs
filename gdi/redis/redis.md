@@ -58,7 +58,7 @@ receivers:
     ...  # Additional config
 ```
 
-To complete the monitor activation, you must also include the `smartagent/redis` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service` > `pipelines` > `metrics` > `receivers` section of your configuration file. For example:
+To complete the monitor activation, you must also include the `smartagent/redis` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service.pipelines.metrics.receivers` section of your configuration file. For example:
 
 ```yaml
 service:
@@ -157,7 +157,7 @@ The following metrics are available for this integration:
 
 You can troubleshoot Redis command performance issues using Database Query Performance in Splunk APM.
 
-* For a sample use case, see {ref}`redis-scenario`.
+* For a sample scenario, see {ref}`redis-scenario`.
 * For more information on Database Query Performance support for Redis, see {ref}`redis-db-query-performance`.
 
 ## Get help

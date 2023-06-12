@@ -14,7 +14,8 @@ Install and deploy the Collector
 
     Deployment modes <deployment-modes.rst>
     Kubernetes <install-k8s.rst>
-    Linux <install-linux.rst>
+    Linux (script) <install-linux.rst>
+    Linux (manual) <install-linux-manual.rst>    
     Windows (script) <install-windows.rst>
     Windows (manual) <install-windows-manual.rst>
     deployments/otel-deployments.rst
@@ -51,9 +52,9 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 The Splunk Distribution of OpenTelemetry Collector is supported on Kubernetes, Linux, and Windows. Deploy one of the following packages to gather data for Infrastructure Monitoring, APM, and Log Observer:
 
-* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`.
-* Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux <otel-install-linux>`.
-* Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`.
+* Splunk Distribution of OpenTelemetry Collector for Kubernetes or ``splunk-otel-collector-chart``. See :ref:`Install on Kubernetes <otel-install-k8s>`. You can also install the Kubernetes Operator for Auto Instrumentation, as explained in :ref:`Install the Collector with the Kubernetes Operator for Auto Instrumentation <auto-instrumentation-operator>`.
+* Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux (script) <otel-install-linux>` or :ref:`Install on Linux (manual) <otel-install-linux-manual>`.
+* Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows (script) <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`.
 
 See also :ref:`other deployment tools and options <otel_deployments>`.
 

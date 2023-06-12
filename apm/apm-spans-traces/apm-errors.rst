@@ -4,7 +4,7 @@
 Analyze error spans in Splunk APM
 ***********************************
 
-.. Metadata updated: 1/23/23
+
 
 .. meta::
   :description: Learn about types of errors in Splunk APM. 
@@ -129,7 +129,7 @@ However, depending on your application’s logic, a ``4xx`` status code might ac
 
 .. _alert-401s:
 
-Example use case: Alert on the rate of ``401`` errors for a service
+Example scenario: Alert on the rate of ``401`` errors for a service
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For example, if Kai wanted to alert on the rate of ``401`` errors returned by a given service, they would do the following:

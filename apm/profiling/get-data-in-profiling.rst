@@ -9,8 +9,6 @@ Get AlwaysOn Profiling data into Splunk APM
 
 Follow these instructions to get profiling data into Splunk APM using AlwaysOn Profiling.
 
-.. note:: AlwaysOn Profiling is activated for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
-
 .. _profiling-requirements:
 
 Prerequisites
@@ -19,11 +17,42 @@ Prerequisites
 To get data into Splunk AlwaysOn Profiling, you need the following:
 
 - Splunk APM activated for your Observability Cloud organization.
-- Splunk Distribution of OpenTelemetry Collector version 0.44.0 or higher. See :ref:`otel-intro`.
+- Splunk Distribution of OpenTelemetry Collector version 0.44.0 or higher running on the host. See :ref:`otel-intro`.
+
+AlwaysOn Profiling is activated for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
 
 If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
 .. note:: Log Observer is not required. See :ref:`exclude-log-data` for more information.
+
+.. _profiling-setup-helm:
+
+Helm chart deployments
+---------------------------------------------------------------
+
+If you're deploying the Splunk Distribution of OpenTelemetry Collector using Helm, make sure to pass the following value when installing the chart:
+
+.. code-block:: bash
+
+   --set splunkObservability.profilingEnabled='true' 
+
+You can also edit the parameter in the ``values.yaml`` file itself. For example:
+
+.. code-block:: yaml
+
+   # This option just enables the shared pipeline for logs and profiling data.
+   # There is no active collection of profiling data.
+   # Instrumentation libraries must be configured to send it to the collector.
+   # If you don't use AlwaysOn Profiling for Splunk APM, you can disable it.
+   profilingEnabled: false
+
+If you don't have a Log Observer entitlement and are using a version of the Collector lower than 0.78.0, make sure to turn off logs collection:
+
+.. code-block:: yaml
+
+   logsEnabled: false
+
+.. note:: Setting ``profileEnabled`` to ``true`` creates the logs pipeline required by AlwaysOn Profiling, but doesn't install the APM instrumentation. To install the instrumentation, see :ref:`profiling-setup`.
 
 .. _profiling-setup:
 
@@ -137,7 +166,7 @@ Check that Observability Cloud is receiving profiling data
 After you set up and activate AlwaysOn Profiling, check that profiling data is coming in:
 
 1. Log in to Splunk Observability Cloud. 
-2. In the left navigation menu, select :menuselection:`APM`.
+2. In the navigation menu, select :menuselection:`APM`.
 3. In Splunk APM, select :guilabel:`AlwaysOn Profiling`.
 4. Select a service, and switch from the CPU view to the Memory view. 
 5. If your service runs in multiple instances, select the instance that you're interested in by selecting the host, container and process ID.

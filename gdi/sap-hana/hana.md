@@ -46,7 +46,7 @@ receivers:
     password: s3cr3t
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a `metrics` pipeline. To do this, add the receiver to the `service > pipelines > metrics > receivers` section of your configuration file. For example:
+To complete the integration, include the Smart Agent receiver using this monitor in a `metrics` pipeline. To do this, add the receiver to the `service.pipelines.metrics.receivers` section of your configuration file. For example:
 
 ```yaml
 service:

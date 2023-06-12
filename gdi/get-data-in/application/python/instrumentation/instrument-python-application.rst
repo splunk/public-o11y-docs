@@ -46,12 +46,11 @@ Follow these steps to automatically instrument your application using the Python
 
 #. Check that you meet the requirements. See :ref:`python-otel-requirements`.
 
-#. Install the ``splunk-opentelemetry[all]`` package and the OTLP exporter:
+#. Install the ``splunk-opentelemetry[all]`` package:
 
    .. code-block:: bash
 
-      pip3 install splunk-opentelemetry[all]
-      pip install opentelemetry-exporter-otlp-proto-grpc
+      pip install "splunk-opentelemetry[all]"
 
    If you're using a requirements.txt or pyproject.toml file, add ``splunk-opentelemetry[all]`` to it.
 
@@ -119,7 +118,7 @@ Follow these steps to automatically instrument your application using the Python
 
    - :ref:`django-instrumentation`
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-python-troubleshooting`.
+If no data appears in APM, see :ref:`common-python-troubleshooting`.
 
 .. _configure-python-instrumentation:
 
