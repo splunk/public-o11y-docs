@@ -9,6 +9,8 @@ Collector deployment modes
 
 The Collector provides a single binary and two deployment modes: :ref:`agent mode <collector-agent-mode>`, and :ref:`gateway mode <collector-gateway-mode>`.
 
+By default, the Collector is installed in agent mode. To configure it as gateway, see the specific instructions depending on your deployment environment at :ref:`otel-install-platform`.
+
 .. _collector-agent-mode:
 
 Agent mode
