@@ -22,6 +22,7 @@ extensions = [
     'toggle',
     'newpage',
     'github',
+    'optimizer',
     'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub'

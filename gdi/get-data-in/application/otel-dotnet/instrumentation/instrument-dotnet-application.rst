@@ -97,7 +97,7 @@ Windows
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
+If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans and metrics, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
@@ -113,7 +113,7 @@ Linux
    .. code-block:: shell
 
       # Replace <version> with the desired version
-      curl -sSfL https://raw.githubusercontent.com/signalfx/splunk-otel-dotnet/<version>/splunk-otel-dotnet-install.sh -O
+      curl -sSfL https://github.com/signalfx/splunk-otel-dotnet/releases/download/<version>/splunk-otel-dotnet-install.sh -O
       # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
 
@@ -134,7 +134,7 @@ Linux
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
+If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 

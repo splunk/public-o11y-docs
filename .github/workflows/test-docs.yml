@@ -22,6 +22,7 @@ on:
 
 jobs:
   test:
+    if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

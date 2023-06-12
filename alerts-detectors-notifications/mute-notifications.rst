@@ -27,7 +27,7 @@ How muting works
 
 Alert notifications are muted according to :ref:`muting rules <rule-configure>`, which include a schedule that sets the muting period. During the muting period, notifications that match the rule aren't sent to :ref:`subscribers <manage-notifications>`. The only exception are clear notifications for alerts that were active before the muting period started.
 
-After the muting period ends, Observability Cloud re-starts sending to subscribers notifications for alerts that are still active, or for alerts triggered within the last 90 days of the muting period. To disable sending alert notifications after the muting period has ended, edit the :ref:`muting rule configuration <rule-configure>`.
+After the muting period ends, Observability Cloud restarts sending to subscribers notifications for alerts that are still active, or for alerts triggered within the last 90 days of the muting period. To turn off sending alert notifications after the muting period has ended, edit the :ref:`muting rule configuration <rule-configure>`.
 
 .. note:: Muting rules only affect notifications: When a muting rule is active, alerts and events that are muted by the rule are still generated.
 
@@ -123,14 +123,16 @@ You can also view information about active and scheduled muting rules from diffe
 
 -  On the :guilabel:`Muting Rules` tab, you can view a list of all active and scheduled muting rules.
 
--  On the :guilabel:`Detectors` and the :guilabel:`Active Alerts` tabs, running or scheduled muting rules are indicated by red labels next to the muted item.
+-  On the :guilabel:`Detectors` and the :guilabel:`Active Alerts` tabs, running or scheduled muting rules are indicated by  :guilabel:`NOTIFICATIONS MUTED` labels next to the muted detector. You can select the label to view muting rules for the associated detector.
+
+.. note:: If you select :guilabel:`NOTIFICATIONS MUTED` and the :strong:`Muting Rules` tab displays an empty page, then the muting rule was created based on properties instead of created for a detector.
 
 .. _muted-notifications:
 
 Muted notifications
 -------------------------------------------------------------------
 
-If a notification was muted, an indicator is displayed wherever the event would have sent the notification, such as on the :guilabel:`Active Alerts` tab or in an event feed.
+If a notification was muted, an indicator is displayed wherever the event might send the notification, such as on the :guilabel:`Active Alerts` tab or in an event feed.
 
 To see events related to past muting rules, you can use the :ref:`Events sidebar <events-sidebar>` or the :ref:`Event overlay<dashboard-event-overlay>`. Events are generated when the rule becomes active (notifications stop) and when the rule becomes inactive (notifications resume). 
 

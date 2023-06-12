@@ -21,7 +21,7 @@ The following image shows the requests and errors of an example ``frontend`` ser
 To learn how to index span tags to generate Troubleshooting MetricSets, see :ref:`apm-index-span-tags`. For a general overview of MetricSets in APM, see :ref:`apm-metricsets`. 
 
 .. note:: 
-   For an example use case of troubleshooting using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. For an interactive walkthrough of Tag Spotlight, see :new-page:`APM Tag Spotlight Scenario <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-tag-spotlight-walkthrough&version=current>`. 
+   For an example scenario of troubleshooting using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. For an interactive walkthrough of Tag Spotlight, see :new-page:`APM Tag Spotlight Scenario <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-tag-spotlight-walkthrough&version=current>`. 
 
 
 View service performance by indexed span tags with Tag Spotlight
@@ -55,7 +55,7 @@ There are a number of ways to drill down into indexed span tags for a selected s
 
 - Control what appears in the RED metrics chart by showing or hiding metrics in the chart's legend. For example, you can click the eye icon beside :guilabel:`Requests` to view only errors. When the slider is set to :guilabel:`Latency`, click the eye icon to hide the p50 latency metric and compare only p90 and p99 values. 
 
-Use case: Find the root cause of an incident with Tag Spotlight
+Scenario: Find the root cause of an incident with Tag Spotlight
 ================================================================
 
-To view a detailed use case example of using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. 
+To view a detailed example of using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. 

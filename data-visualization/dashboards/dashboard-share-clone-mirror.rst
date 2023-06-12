@@ -107,7 +107,7 @@ Dashboard mirroring allows the same dashboard to be added to multiple dashboard 
 Why mirror dashboards?
 -------------------------------------------------------------
 
-Common use cases for dashboard mirrors:
+Common scenarios for dashboard mirrors:
 
 - You create standard dashboards for use by teams throughout your organization. You want all teams to see any changes to the charts in the dashboard, and you want members of each team to be able to set dashboard variable and filter customizations relevant to their requirements. Each team has a dashboard group linked to their team, so you add a mirror of the dashboard to each of these dashboard groups.
 
@@ -117,7 +117,7 @@ Common use cases for dashboard mirrors:
 Dashboard mirror example
 --------------------------------------------------------------
 
-The following example provides a common use case of dashboard mirroring:
+The following example provides a common scenario of dashboard mirroring:
 
 In this example, there is a non-mirrored dashboard named CPU Utilization in dashboard group Project‑1. The dashboard is filtered on ``AWS availability zone us‑east‑1a``. The Project-2 dashboard group needs the same dashboard but filtered on ``AWS availability zone us‑east‑1b``.
 

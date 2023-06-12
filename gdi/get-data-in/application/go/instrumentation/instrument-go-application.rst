@@ -113,7 +113,7 @@ Follow these steps to instrument your application using the Go instrumentation:
 
 #. (Optional) To link APM and RUM data, activate the HTTP instrumentation. See :ref:`server-trace-information-go`.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-go-troubleshooting`.
+If no data appears in APM, see :ref:`common-go-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your Go application or service manually. See :ref:`go-manual-instrumentation`.
 

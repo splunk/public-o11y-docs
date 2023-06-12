@@ -45,7 +45,7 @@ On **Kubernetes**, the target environment is the deployment or pod where you act
 
 In both cases you must restart the applications to start instrumentation.
 
-.. note:: You can also use the Kubernetes Operator for Auto Instrumentation. See an example in :ref:`Use case: Deploy the OpenTelemetry Operator and Java auto-instrumentation <auto-instrumentation-java-operator>`.
+.. note:: You can also use the Kubernetes Operator for Auto Instrumentation. See an example in :ref:`Scenario: Deploy the OpenTelemetry Operator and Java auto-instrumentation <auto-instrumentation-java-operator>`.
 
 .. raw:: html
 

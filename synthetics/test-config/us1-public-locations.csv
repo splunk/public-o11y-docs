@@ -1,0 +1,59 @@
+Realm,Provider,Location ID,Display Name,World Region,IP Addresses
+US1,Amazon,aws-af-south-1,AWS - Cape Town,Africa," 13.245.124.240 ,  13.245.204.138 ,  13.246.113.149 "
+US1,Amazon,aws-ap-east-1,AWS - Hong Kong,Asia Pacific," 18.166.112.231 ,  43.198.5.123 ,  18.166.219.194 "
+US1,Amazon,aws-ap-northeast-1,AWS - Tokyo,Asia Pacific," 18.176.81.242 ,  35.76.96.145 ,  3.113.130.19 "
+US1,Amazon,aws-ap-northeast-2,AWS - Seoul ,Asia Pacific," 3.34.218.25 ,  3.39.93.238 ,  3.39.197.189 "
+US1,Amazon,aws-ap-northeast-3,AWS - Osaka,Asia Pacific," 13.208.114.54 ,  15.152.29.179 ,  15.152.59.199 "
+US1,Amazon,aws-ap-south-1,AWS - Mumbai,Asia Pacific," 15.206.216.145 ,  65.2.77.113 ,  13.127.81.235 "
+US1,Amazon,aws-ap-southeast-1,AWS - Singapore,Asia Pacific," 13.215.196.143 ,  3.0.30.103 ,  52.221.51.110 "
+US1,Amazon,aws-ap-southeast-2,AWS - Sydney,Asia Pacific," 54.79.222.190 ,  13.239.150.53 ,  54.206.229.190 "
+US1,Amazon,aws-ap-southeast-3,AWS- Jakarta,Asia Pacific," 108.136.192.225 ,  108.137.52.213 ,  108.136.123.104 "
+US1,Amazon,aws-ca-central-1,AWS - Montreal,North America," 35.183.153.6 ,  3.98.180.207 ,  3.97.103.254 "
+US1,Amazon,aws-eu-central-1,AWS - Frankfurt,Europe," 18.157.205.104 ,  3.72.219.165 ,  3.68.31.164 "
+US1,Amazon,aws-eu-south-1,AWS - Milan,Europe," 15.161.24.185 ,  15.161.79.192 ,  18.102.21.68 "
+US1,Amazon,aws-eu-west-1,AWS - Dublin ,Europe," 108.128.130.29 ,   54.217.129.65 ,   34.249.244.176 "
+US1,Amazon,aws-eu-west-3,AWS - Paris,Europe," 35.180.95.130 ,  13.38.247.168 ,  13.38.193.6 "
+US1,Amazon,aws-sa-east-1,AWS - São Paulo,South America," 54.94.69.254 ,   54.207.143.53 ,   18.230.44.177 "
+US1,Amazon,aws-us-east-1,AWS - N. Virginia ,North America," 52.203.47.95 ,  50.16.10.197 ,  44.205.74.85 "
+US1,Amazon,aws-us-east-2,AWS - Ohio,North America," 3.13.48.21 ,  3.140.148.104 ,  3.128.241.169 "
+US1,Amazon,aws-us-west-1,AWS - N. California ,North America," 50.18.151.21 ,  184.72.20.44 "
+US1,Amazon,aws-us-west-2,AWS - Oregon,North America," 54.218.70.232 ,  35.160.171.206 ,  52.41.64.36 "
+us1,Amazon,aws-eu-north-1,AWS - Stockholm,Europe,"13.50.21.141, 16.16.42.157, 16.16.49.89"
+us1,Amazon,aws-eu-north-1-cph-1,AWS LZ - Copenhagen,Europe,96.0.25.223
+us1,Amazon,aws-eu-north-1-hel-1,AWS LZ - Helsinki,Europe,15.220.168.101
+us1,Amazon,aws-eu-south-2,AWS - Spain,Europe,"18.100.181.192, 18.100.24.123, 18.100.28.251"
+us1,Amazon,aws-eu-west-2,AWS - London,Europe,"13.41.119.52, 18.134.195.219, 3.11.110.54"
+us1,Amazon,aws-me-central-1,AWS - UAE,Middle East,"3.28.249.80, 3.28.254.236, 3.29.39.63"
+us1,Amazon,aws-me-south-1,AWS - Bahrain,Middle East,"15.184.209.252, 157.241.16.254, 157.241.37.226"
+us1,Amazon,aws-me-south-1-mct-1,AWS LZ - Muscat,Middle East,15.220.161.245
+us1,Amazon,aws-us-east-1-atl-1,AWS LZ - Atlanta,North America,15.181.81.138
+us1,Amazon,aws-us-east-1-bos-1,AWS LZ - Boston,North America,68.66.113.168
+us1,Amazon,aws-us-east-1-bue-1,AWS LZ - Buenos Aires,South America,15.220.120.67
+us1,Amazon,aws-us-east-1-chi-1,AWS LZ - Chicago,North America,15.181.176.230
+us1,Amazon,aws-us-east-1-dfw-1,AWS LZ - Dallas,North America,15.181.193.190
+us1,Amazon,aws-us-east-1-iah-1,AWS LZ - Houston,North America,72.41.10.199
+us1,Amazon,aws-us-east-1-lim-1,AWS LZ - Lima,South America,96.0.17.24
+us1,Amazon,aws-us-east-1-mci-1,AWS LZ - Kansas City,North America,15.181.98.250
+us1,Amazon,aws-us-east-1-mia-1,AWS LZ - Miami,North America,64.187.133.130
+us1,Amazon,aws-us-east-1-msp-1,AWS LZ - Minneapolis,North America,15.181.48.32
+us1,Amazon,aws-us-east-1-nyc-1,AWS LZ - New York City,North America,15.181.163.179
+us1,Amazon,aws-us-east-1-phl-1,AWS LZ - Philadelphia,North America,15.181.144.116
+us1,Amazon,aws-us-east-1-qro-1,AWS LZ - Querétaro,North America,15.220.184.134
+us1,Amazon,aws-us-east-1-scl-1,AWS LZ - Santiago,South America,96.0.49.151
+us1,Amazon,aws-us-west-2-den-1,AWS LZ - Denver,North America,15.181.17.130
+us1,Amazon,aws-us-west-2-las-1,AWS LZ - Las Vegas,North America,15.220.16.208
+us1,Amazon,aws-us-west-2-lax-1,AWS LZ - Los Angeles,North America,"15.254.14.25, 70.224.203.146"
+us1,Amazon,aws-us-west-2-pdx-1,AWS LZ - Portland,North America,15.220.0.139
+us1,Amazon,aws-us-west-2-phx-1,AWS LZ - Phoenix,North America,15.181.128.212
+us1,Amazon,aws-us-west-2-sea-1,AWS LZ - Seattle,North America,15.181.0.64
+us1,Amazon,aws-ap-northeast-1-tpe-1,AWS LZ - Taipei,Asia Pacific,15.220.82.215
+us1,Amazon,aws-af-south-1-los-1,AWS LZ - Lagos,Africa,96.0.40.189
+us1 ,Amazon,aws-ap-south-1-ccu-1,AWS LZ - Kolkata,Asia Pacific,96.0.64.164
+us1 ,Amazon,aws-ap-south-1-del-1,AWS LZ- Delhi,Asia Pacific,15.220.136.136
+us1 ,Amazon, aws-ap-south-2,AWS - Hyderabad,Asia Pacific,"18.60.113.150, 18.60.147.136, 18.60.197.127"
+us1 ,Amazon,aws-ap-southeast-1-bkk-1,AWS LZ - Bangkok,Asia Pacific,15.220.241.161
+us1,Amazon,aws-ap-southeast-2-per-1 ,AWS LZ - Perth,Asia Pacific,96.0.1.95
+us1,Amazon,aws-ap-southeast-4,AWS - Melbourne,Asia Pacific,"16.50.0.153, 16.50.138.189, 16.50.8.21"
+us1,Amazon,aws-eu-central-1-ham-1,AWS LZ - Hamburg,Europe,15.220.153.189
+us1,Amazon,aws-eu-central-1-waw-1,AWS LZ - Warsaw,Europe,15.220.66.52
+us1,Amazon,aws-eu-central-2 CH,AWS - Zurich,Europe,"16.62.173.118, 16.62.205.158, 16.62.72.133"

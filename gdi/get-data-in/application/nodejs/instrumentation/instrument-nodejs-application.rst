@@ -100,7 +100,7 @@ To instrument your Node.js application with the Splunk Distribution of OpenTelem
 
       node -r @splunk/otel/instrument <your-app.js>
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-nodejs-troubleshooting`.
+If no data appears in APM, see :ref:`common-nodejs-troubleshooting`.
 
 .. note:: To instrument applications that use Webpack, see :ref:`nodejs-webpack-issues`.
 
@@ -208,6 +208,8 @@ To add custom or third-party instrumentations that implement the OpenTelemetry J
          ],
       },
    });
+   
+For a list of supported instrumentations, see :new-page:`https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations <https://github.com/open-telemetry/opentelemetry-js-contrib/tree/main/metapackages/auto-instrumentations-node#supported-instrumentations>` on GitHub.
 
 .. note:: For an example of entry point script, see the :new-page:`sample tracer.js file <https://github.com/signalfx/splunk-otel-js/blob/main/examples/express/tracer.js>` on GitHub.
 

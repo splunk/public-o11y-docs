@@ -18,8 +18,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/chrony
    monitors-hosts/collectd-plugin
    monitors-hosts/collectd-df 
-   collectd/collectd-php-fpm
-   collectd/collectd-uptime
+   monitors-hosts/collectd-uptime      
    monitors-hosts/coredns
    monitors-hosts/couchbase
    monitors-hosts/cpu
@@ -41,13 +40,14 @@ Configure application receivers for hosts and servers
    monitors-hosts/jenkins
    monitors-hosts/kafka-consumer
    monitors-hosts/kafka-producer
-   windows/windows-iis
-   nginx/nginx
+   monitors-hosts/microsoft-windows-iis
+   monitors-hosts/nginx
+   monitors-hosts/ntpq   
+   monitors-hosts/php-fpm
    procstat/procstat
    solr/solr
    supervisor/supervisor
    systemd/collectd-systemd
-   ntpq/telegraf-ntpq
    varnish/telegraf-varnish
    win-services/telegraf-win-services
    vsphere/vsphere
@@ -60,13 +60,12 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`zookeeper`
 * :ref:`chrony`
 * :ref:`collectd-plugin`
-* :ref:`cpufreq`
 * :ref:`collectd-df`
-* :ref:`collectd-php-fpm`
-* :ref:`collectd-uptime`
+* :ref:`collectd-uptime`  
 * :ref:`coredns`
 * :ref:`couchbase`
 * :ref:`cpu`
+* :ref:`cpufreq` 
 * :ref:`disk`
 * :ref:`docker`
 * :ref:`elasticsearch`
@@ -86,11 +85,12 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`kafka-producer`
 * :ref:`windows-iis`
 * :ref:`nginx`
+* :ref:`telegraf-ntpq` 
+* :ref:`collectd-php-fpm` 
 * :ref:`procstat`
 * :ref:`solr`
 * :ref:`supervisor`
 * :ref:`collectd-systemd`
-* :ref:`telegraf-ntpq`
 * :ref:`telegraf-varnish`
 * :ref:`telegraf-win-services`
 * :ref:`vsphere`

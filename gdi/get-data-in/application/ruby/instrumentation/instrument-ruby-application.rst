@@ -98,7 +98,7 @@ Follow these steps to automatically instrument your application using the Ruby a
 
          $env:OTEL_RESOURCE_ATTRIBUTES='deployment.environment=<envtype>,service.version=<version>'
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-ruby-troubleshooting`.
+If no data appears in APM, see :ref:`common-ruby-troubleshooting`.
 
 If you want to manually install and activate instrumentation libraries, see :ref:`ruby-manual-instrumentation`.
 
