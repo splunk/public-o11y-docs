@@ -27,6 +27,7 @@ Check compatibility and requirements
 
 See :ref:`ios-rum-requirements` for a complete list of compatible versions and requirements.
 
+
 .. _multiple-ios-tools:
 
 Make sure you're not using multiple tools
@@ -44,7 +45,7 @@ Activating debug logging can help you troubleshoot iOS instrumentation issues.
 
 To activate logging, add the ``debug(enabled: true)`` method to ``SplunkRumBuilder``. For example:
 
-.. code-tab:: swift Swift
+.. code-block:: swift Swift
    :emphasize-lines: 5
 
    import SplunkOtel
