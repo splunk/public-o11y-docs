@@ -156,6 +156,23 @@
         font-weight: bold !important;
         font-size: 13px !important;
     }
+
+    .sui-result__value{
+        font-size: 15px !important;
+    }
+
+    .documentwrapper{
+        margin-left:10% !important;
+        max-width: 80% !important;
+    }
+
+    #mainTOC{
+        display:none !important;
+    }
+
+    #sticky-right-nav{
+        display: none !important;
+    }
 </style>
 {% endblock %}
 
@@ -171,7 +188,9 @@
         <div class="bodywrapper">
             {%- endif %}
             <div class="body" role="main">
-                {% include "breadcrumbs.html" %}
+                <div role="navigation" aria-label="breadcrumbs navigation" data-swiftype-index="false">
+                    <a href="index.html">Docs</a> » Search
+                </div>
                 {% block body %}
                 <section class="search-section clearfix" id="abc">
                     <div class="container">
