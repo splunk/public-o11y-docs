@@ -18,7 +18,7 @@ The following table shows you aspects of your Observability Cloud organization t
 
 .. list-table::
    :header-rows: 1
-   :widths: 40, 30, 30
+   :widths: 35, 25, 25, 15
 
    * - :strong:`Do this`
      - :strong:`UI location`
