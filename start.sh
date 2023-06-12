@@ -13,7 +13,7 @@ echo ""
 branchname=$(git branch --show-current)
 
 echo "docker-compose down"
-docker-compose --ansi=never down
+docker compose --ansi=never down
 
 echo "Remove old files"
 rm -f _build/.DS_Store
@@ -23,10 +23,10 @@ rmdir _build/html
 rmdir _build
 
 echo "docker-compose build"
-docker-compose --ansi=never build
+docker compose --ansi=never build
 
 echo "docker-compose up"
-docker-compose --ansi=never up -d
+docker compose --ansi=never up -d
 
 printf "\rDocker container built.              "
 sleep .5
