@@ -129,6 +129,17 @@ The following example shows how to use the OTel Swift API to report on a functio
       span.end() // You can also use defer for this
    }
 
+This other example shows how to record an event with no duration, that is, which happens in an instant:
+
+.. code-block:: swift
+
+   let dictionary: NSDictionary = [
+                     "attribute1": "hello",
+                     "attribute2": "world!",
+                     "attribute3": 3
+   ]
+   SplunkRum.reportEvent(name: "testEvent", attributes: dictionary)
+
 .. _ios-rum-error-reporting:
 
 Configure error reporting
