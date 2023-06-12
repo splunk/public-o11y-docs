@@ -20,6 +20,9 @@ Check compatibility and requirements
 
 Splunk RUM for Mobile supports iOS 11 and higher, including iPadOS 13 and higher.
 
+Apple Silicon is supported.
+
+
 .. _rum-ios-install:
 
 Instrument your iOS application for Splunk RUM
