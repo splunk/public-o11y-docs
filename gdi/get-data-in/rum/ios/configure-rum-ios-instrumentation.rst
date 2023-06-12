@@ -9,9 +9,9 @@ Configure the Splunk iOS RUM instrumentation
 
 You can configure the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 
-To configure the iOS RUM agent, pass the settings as methods when initializating the ``SplunkRum`` module. The beacon URL and the RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
+To configure the iOS RUM agent, pass the settings as methods when initializating the ``SplunkRum`` module. The Observability Cloud realm and RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
 
-The following example shows how to configure the RUM token, beacon URL, environment name, and other settings:
+The following example shows how to configure the RUM token, realm, environment name, and other settings:
 
 .. tabs::
 
@@ -19,7 +19,7 @@ The following example shows how to configure the RUM token, beacon URL, environm
 
       import SplunkOtel
       //..
-      SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+      SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
         // Call functions to configure additional options
         .allowInsecureBeacon(enabled: true)
         .debug(enabled: true)
@@ -59,10 +59,12 @@ Use the following settings to configure the iOS RUM agent:
 
    * - Option
      - Description
-   * - :code:`beaconUrl`
-     - Ingest URL to which the agent sends collected telemetry. The URL must contain your realm in Splunk Observability Cloud. For example, ``https://rum-ingest.us0.signalfx.com/v1/rum`` is the ingest URL for the ``us0`` realm.
+   * - :code:`realm`
+     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
    * - :code:`rumAuth`
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
+   * - :code:`beaconUrl`
+     - Ingest URL to which the agent sends collected telemetry. The URL must contain your realm in Splunk Observability Cloud. For example, ``https://rum-ingest.us0.signalfx.com/v1/rum`` is the ingest URL for the ``us0`` realm. When defined, it overrides the value in ``realm``.
    * - :code:`globalAttributes`
      - Sets additional attributes added to all spans. Attributes are defined as an array of comma-separated key-value pairs. For example: ``["key1":"value1","key2":3]``. See :ref:`ios-rum-globalattributes`.
    * - :code:`environment`

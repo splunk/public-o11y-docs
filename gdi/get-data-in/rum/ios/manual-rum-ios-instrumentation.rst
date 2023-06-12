@@ -47,7 +47,7 @@ The following example shows how to define global attributes in your code:
 
    import SplunkOtel
    //..
-   SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+   SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
    // You can set the globalAttributes option to the map at initialization
       .deploymentEnvironment(environment: "<environment>")
       .build()
@@ -95,7 +95,7 @@ Add identification metadata during initialization
 
    import SplunkOtel
    //..
-   SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+   SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
       .globalAttributes(globalAttributes: ["enduser.id": "user-id-123456"])
       .build()
 

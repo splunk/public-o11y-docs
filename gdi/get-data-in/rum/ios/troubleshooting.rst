@@ -50,7 +50,7 @@ To activate logging, add the ``debug(enabled: true)`` method to ``SplunkRumBuild
 
    import SplunkOtel
    //..
-   SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+   SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
    // Call functions to configure additional options
       .debug(enabled: true)
       .build()
@@ -65,9 +65,9 @@ iOS metrics don't appear in Splunk RUM
 If you can't find telemetry for your iOS app in Splunk RUM, try the following:
 
 * Activate debug logging to search for simulator debug logs. See :ref:`activate-ios-debug-logging`.
-* Make sure that the values of ``rumAuth`` and ``beaconUrl`` are defined and correct.
+* Make sure that the values of ``rumAuth`` and ``realm`` are defined and correct.
    * The RUM token must be active and part of the org you are trying to send data to.
-   * The realm in your beacon URL must be the same as your organization's realm.
+   * The realm must be the same as your organization's realm.
 
 To find the realm name of your account, follow these steps: 
 
@@ -76,6 +76,8 @@ To find the realm name of your account, follow these steps:
 3. Select your username. 
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+If you've defined a custom ``beaconUrl``, make sure the value is correct.
 
 .. _ios-no-http-requests:
 
