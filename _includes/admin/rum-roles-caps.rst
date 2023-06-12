@@ -12,13 +12,6 @@
     - Yes
     - Yes
     - Yes
-    
-  * - :strong:`View RUM homepage`
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-
 
   * - :strong:`Create detector`
     - Yes
@@ -56,31 +49,13 @@
     - Yes
     - Yes
   
-  * - :strong:`Create URL grouping rule`
+  * - :strong:`Create, delete, or deactivate URL grouping rule`
     - Yes
     - Yes
     - No
     - No
 
-  * - :strong:`Delete URL grouping rule`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Deactivate  URL grouping rule`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Edit URL grouping rule`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Filter URL grouping rules`
+  * - :strong:`Edit or filter URL grouping rule`
     - Yes
     - Yes
     - No

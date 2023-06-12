@@ -7,13 +7,7 @@
     - :strong:`Usage`
     - :strong:`Read_only`
 
-  * - :strong:`Create test`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Update test`
+  * - :strong:`Create, delete, or update test`
     - Yes
     - Yes
     - No
@@ -25,13 +19,8 @@
     - Yes
     - Yes
   
-  * - :strong:`Delete test`
-    - Yes
-    - Yes
-    - No
-    - No
   
-  * - :strong:`Create private location`
+  * - :strong:`Create or delete private location`
     - Yes
     - No
     - No
@@ -43,26 +32,7 @@
     - Yes
     - Yes
 
-
-  * - :strong:`Delete private location`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`Create private location token`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`Read private location token`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`Delete private location token`
+  * - :strong:`Create, read, or delete private location token`
     - Yes
     - No
     - No
