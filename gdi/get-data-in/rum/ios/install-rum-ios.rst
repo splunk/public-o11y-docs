@@ -18,9 +18,17 @@ To instrument your iOS application and get data into Splunk RUM, follow the inst
 Check compatibility and requirements 
 ===============================================
 
-Splunk RUM for Mobile supports iOS 11 and higher, including iPadOS 13 and higher.
+Splunk RUM for Mobile supports the following versions:
+
+* iOS 11 and higher
+* iPadOS 13 and higher
 
 Apple Silicon is supported.
+
+Compatibility with CocoaPods
+--------------------------------------------
+
+The Splunk RUM repository contains a CocoaPod. If you wish to use the Swift Package Manager (SPM) distribution, check any potential overlap in dependencies. For example if you use a pod that has a dependency that is also a dependency in Splunk RUM, this might cause symbol collision. See :ref:`ios-naming-collisions`.
 
 
 .. _rum-ios-install:
@@ -42,6 +50,8 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 
 5. Click the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
 
+
+
 .. _rum-ios-initialize:
 
 Import and initialize the iOS RUM package
@@ -54,6 +64,8 @@ Follow these steps to import and initialize the iOS RUM package.
    ``https://github.com/signalfx/splunk-otel-ios``
 
 2. Select :guilabel:`Add Package` to install the package.
+
+   .. note:: Add the SPM package to the app's project, not to the Pods project in your workspace.
 
 3. Initialize the iOS RUM agent with your configuration parameters:
 

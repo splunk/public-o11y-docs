@@ -16,7 +16,24 @@ Steps for troubleshooting iOS OpenTelemetry issues
 
 The following steps can help you troubleshoot iOS RUM agent issues:
 
+#. :ref:`ios-check-requirements`
+#. :ref:`multiple-ios-tools`
 #. :ref:`activate-ios-debug-logging`
+
+.. _ios-check-requirements:
+
+Check compatibility and requirements
+------------------------------------------------------
+
+See :ref:`ios-rum-requirements` for a complete list of compatible versions and requirements.
+
+.. _multiple-ios-tools:
+
+Make sure you're not using multiple tools
+------------------------------------------------------
+
+Some development and observability tools include functionality similar to Splunk RUM. Using multiple tools for the same purpose, for example crash reporting, might result in undefined behavior. Use only one tool for each purpose.
+
 
 .. _activate-ios-debug-logging:
 
@@ -25,80 +42,88 @@ Activate debug logging
 
 Activating debug logging can help you troubleshoot iOS instrumentation issues. 
 
-To activate logging, add the ``enableDebug()`` method to ``SplunkRum.builder()``. For example:
+To activate logging, add the ``debug(enabled: true)`` method to ``SplunkRumBuilder``. For example:
 
-.. code-block:: java
+.. code-tab:: swift Swift
+   :emphasize-lines: 5
 
-   SplunkRum.builder() 
-      .setApplicationName("<name_of_app>")
-      .setRealm("<realm>"")
-      .setRumAccessToken("<rumAccessToken>")
-      .enableDebug()
-      .build(this);
-   }
+   import SplunkOtel
+   //..
+   SplunkRumBuilder(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum", rumAuth: "<rum-token>")
+   // Call functions to configure additional options
+      .debug(enabled: true)
+      .build()
 
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
-### What should I do to integrate on Apple Silicon?
+.. _ios-no-metrics:
 
-Apple Silicon is currently supported and should work as expected using the main instructions for getting started.
+iOS metrics don't appear in Splunk RUM
+============================================
 
-### What should I do if there are naming collisions?
+If you can't find telemetry for your iOS app in Splunk RUM, try the following:
 
-If you own the code that has a collision, you can try to add the module that you want to use the symbol from. For example, if you declare a type also declared in SplunkOtel and want to use it somewhere where you import SplunkOtel, you can prefix it's use with the module your symbol comes from (ex: `MyModule.MyConflictingType`).
+* Activate debug logging to search for simulator debug logs. See :ref:`activate-ios-debug-logging`.
+* Make sure that the values of ``rumAuth`` and ``beaconUrl`` are defined and correct.
+   * The RUM token must be active and part of the org you are trying to send data to.
+   * The realm in your beacon URL must be the same as your organization's realm.
 
-### Why can’t I see see any metrics / data in the RUM UI?
+To find the realm name of your account, follow these steps: 
 
-- Look for simulator debug logs (by setting `debug` to `true` in SplunkRumOptions).
-- Ensure that the `rumAuth` and `beaconUrl` are correctly set up.
-    - The token must be active and part of the org you are trying to send data to.
-    - The beaconUrl/realm must be the same as the Observability RUM interface you are logging into.
+1. Open the navigation menu in Observability Cloud.
+2. Select :menuselection:`Settings`.
+3. Select your username. 
 
-### Why am I not seeing HTTP requests in the RUM UI?
+The realm name appears in the :guilabel:`Organizations` section.
 
-Splunk RUM for iOS supports libraries  based on Apple's URLSession, which includes other libraries like AFNetworking and AlamoFire, but not Apple's deprecated API called NSURLConnection.
+.. _ios-no-http-requests:
 
-Consider setting up `ignoreUrls` if you already have another telemetry library or SDK set up
+HTTP requests don't appear in Splunk RUM
+=============================================
 
-Splunk RUM on iOS uses moethod swizzling like many other tools (Firebase Performance Monitoring, for example). Having two tools setup to capture network calls might cause issues and undefined behavior.
+If HTTP requests don't appear in Splunk RUM, try the following:
 
-### Why are my crashes not showing up in the RUM UI?
+* Check which library you're using. Splunk RUM doesn't support the deprecated Apple NSURLConnection API. Splunk RUM for iOS supports libraries based on Apple URLSession, which includes other libraries like AFNetworking and AlamoFire.
+* Use the ``ignoreUrls`` setting if you already have another telemetry library or SDK configured. See :ref:`ios-rum-settings`.
+* Consider using Splunk RUM only for capturing network calls. More than one library or tool capturing network calls might cause issues and undefined behavior.
 
-First, make sure Splunk Otel Crash Reporting is the only crash reporter you have enabled. For example, if you also have Crashlytics running, make sure you disable it and try again.
+.. _ios-no-crash-reports:
 
-Second, make sure you are opening the app after a crash so the report is sent.
+Crashes don't appear in Splunk RUM
+============================================
 
-### Will this work side by side with other tools?
+If crash information doesn't appear in Splunk RUM, try the following:
 
-Some other tools include similar functionality to Splunk RUM. In these cases, it can result in undefined behavior as they both attempt to leverage similar techniques in order to track and produce user usage data. It is best to use one tool for these purposes.
+* Make sure that the crash reporting feature of Splunk RUM is the only active crash reporter. For example, if you're also using Crashlytics, deactivate it and try again.
+* Make sure that you're opening the application after a crash, so that the RUM library can send the report.
 
-For example, Firebase Performance Monitoring also performs some method swizzling for event tracking. Depending on the order agents are setup, behaviors could change. It is best to use one tool as using various tools leads to undefined behavior.
+.. _ios-naming-collisions:
 
-Using multiple crash reporting libraries can also cause issues. Splunk RUM Crash Reporting uses PLCrashReporter, and might other 3rd party libraries you are using.
+Avoid naming collisions
+=========================================
 
-Crash reporting on iOS is an optional feature; please don't turn it on unless a crash reporter is not present already.
+If your code causes a naming collision, add the module that contains the symbol you want to use. For example, if you declare a type that SplunkOtel also declares, you can add its module name as a prefix.
 
-### What should I do if Xcode fails to resolve package dependencies?
+.. code-block:: Swift
 
-If you use any of the [dependencies](../dependencies.txt) that Splunk RUM uses you will need to see if the versions can be resolved to their versioning rules.
+   import SplunkOtel
+   //..
+   var a = MyModule.MyConflictingType()
 
-Sometimes though, Xcode might fail to fetch a particular dependency and then present a dialog that it failed to resolve. If you see no potential versioning rule issue, it is best to just try adding the package again. Perhaps after closing and reopening Xcode.
+.. _ios-xcode-deps:
 
-### Can I use this along side Cocoapods?
+Xcode can't resolve package dependencies
+================================================
 
-Yes! Please check our available distributions for a newly added Cocoapod. If you wish to use the SPM distribution, you may, but will need to be aware that any potential overlap in dependencies will not be able to be resolved by Xcode or Cocoapods.
+If you use any of the dependencies that Splunk RUM already uses, check whether their versions can be resolved to their versioning rules. See the :new-page:`dependencies.txt file <https://github.com/signalfx/splunk-otel-ios/blob/main/dependencies.txt>` in the GitHub repository.
 
-For example if you use a Cocoapod that has a dependency that is also a dependency in Splunk RUM, you will likely get symbol collision.
+Xcode might inform you that a dependency failed to resolve. If you don't see any versioning rule issue, close and reopen Xcode and try adding the package again.
 
-It is also important that you add the SPM package to the app's project and not the Pods project in your workspace.
+.. _ios-sqlite-errors:
 
-### I need an XCFramework. Is that available?
+Avoid SQLite redefinition errors
+=============================================
 
-Although we do not currently distribute an XCFramework, we do have instructions on how to create one [here](<link to docs>).
-
-
-### I am getting Sqlite redefinition errors. What should I do?
-
-If you are using another tool that uses sqlite like WCDB, then you might have to look at removing the `use_frameworks!` line in your Podfile if you are using Cocoapods. Other users have been unblocked with this change.
+If you're using another tool that uses SQLite, like WCDB, try removing the ``use_frameworks!`` line in your Podfile.
 
 .. include:: /_includes/troubleshooting-steps.rst
