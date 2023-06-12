@@ -755,7 +755,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :hidden:
    :maxdepth:   3
 
-   About SSO integrations for Splunk Observability Cloud TOGGLE <admin/SSO/sso-about>
+   SSO integrations for Splunk Observability Cloud TOGGLE <admin/SSO/sso-about>
 
 .. toctree::
    :maxdepth:   3
@@ -771,7 +771,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Manage roles, users, teams TOGGLE <admin/user-mgmt/intro-roles-users-teams>
+   User management TOGGLE <admin/user-mgmt/intro-roles-users-teams>
 
 .. toctree::
    :hidden:

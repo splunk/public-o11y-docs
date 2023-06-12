@@ -59,44 +59,13 @@
     - No
     - No
 
-  * - :strong:`Delete a detector`
+  * - :strong:`Delete, edit, mute, or clone a detector`
     - Yes
     - Yes
     - No
     - No
 
-  * - :strong:`Edit a detector`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Mute a detector`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Clone a detector`
-    - Yes
-    - Yes
-    - No
-    - No
-
-
-  * - :strong:`Disable an AutoDetect detector`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Clone an AutoDetect detector`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Update an AutoDetect detector`
+  * - :strong:`Disable, clone, or update an AutoDetect detector`
     - Yes
     - Yes
     - No
@@ -108,13 +77,7 @@
     - Yes
     - Yes
 
-  * - :strong:`Create muting rules for a detector`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Delete a muting rule for a detector`
+  * - :strong:`Create or delete muting rules for a detector`
     - Yes
     - Yes
     - No

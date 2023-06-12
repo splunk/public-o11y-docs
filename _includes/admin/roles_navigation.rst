@@ -57,13 +57,7 @@
     - Yes
     - Yes
 
-  * - :strong:`Create team`
-    - Yes
-    - No
-    - No
-    - No
-
-  * - :strong:`Delete team`
+  * - :strong:`Create or delete team`
     - Yes
     - No
     - No
@@ -83,13 +77,7 @@
       * No, when enhanced team security is enabled. A user must be added by an Admin or Team Manager
     - Not applicable: A Team Member is already on a team and doesn't need to join.
 
-  * - :strong:`Add member`
-    - Yes
-    - Yes
-    - No
-    - No
-
-  * - :strong:`Remove member`
+  * - :strong:`Add or remove team member`
     - Yes
     - Yes
     - No
