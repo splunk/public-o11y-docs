@@ -11,10 +11,12 @@ Configure a PingOne SSO integration
 
 The PingOne SSO integration allows you to log into Observability Cloud using PingOne.
 
-Before you begin configuring the OneLogin SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Prerequisite
+======================
 
-.. note:: To use this procedure, you must be an administrator of your PingOne
-   organization and your Observability Cloud organization.
+Before you begin configuring the OneLogin SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+To complete this steps, you must be an administrator of your PingOne organization and your Observability Cloud organization.
+
 
 To set up your PingOne SSO integration, follow these steps:
 
@@ -41,7 +43,7 @@ In PingOne, do the following:
    #. In the search field, enter :guilabel:`SignalFx`. Select the :guilabel:`SignalFx` application.
    #. If the :guilabel:`Setup` is active, select it. A setup screen appears.
 
-      If the :guilabel:`Setup` button is inactive, and you see the tooltip "You need to setup a connection first", then you might need to connect to an Identity Repository. To connect to an Identity Repository:
+      If the :guilabel:`Setup` button is active, and you see the tooltip "You need to setup a connection first", then you might need to connect to an Identity Repository. To connect to an Identity Repository:
          #. At the top of the PingOne page, select :guilabel:`Setup`.
          #. Select :guilabel:`Connect to an Identity Repository`.
          #. Select the Identity Repository you want to use, select :guilabel:`Next` twice, then select :guilabel:`Finished`.

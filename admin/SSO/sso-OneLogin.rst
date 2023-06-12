@@ -11,9 +11,13 @@ Configure a OneLogin SSO integration
 
 The OneLogin SSO integration lets your users log in to Observability Cloud using OneLogin.
 
-Before you begin configuring the OneLogin SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+Prerequisite
+======================
 
-.. note:: To use this procedure, you must be an administrator of your OneLogin organization and your Observability Cloud organization.
+To complete the tasks in this topic, you must the admin role in Splunk Observability Cloud.
+Before you begin configuring the OneLogin SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+To complete this procedure, you must be an administrator of your OneLogin organization and your Observability Cloud organization.
+
 
 Open a browser tab or window for Observability Cloud, and another for OneLogin.
 
@@ -21,9 +25,9 @@ In OneLogin, do the following:
    #. Select :menuselection:`Security` :strong:`>` :menuselection:`Certificates` :strong:`>` :menuselection:`New`.
    #. Configure the certificate according to your organization security policy.
    #. Make sure to pick :guilabel:`SHA256` or better for the algorithm in the :guilabel:`Signature` field.
-   #. Copy the value of the :guilabel:`X.509 certificate` text box and and save it in a text editor so you can use it in the next steps.
+   #. Copy the value of the :guilabel:`X.509 certificate` text box and save it in a text editor so you can use it in the next steps.
    #. Add Observability Cloud by selecting :menuselection:`Apps` :strong:`>` :menuselection:`Add Apps` :strong:`>` :guilabel:`SignalFx`.
-   #. In the dialog box, make any changes you want, then click :guilabel:`Save`.
+   #. In the dialog box, make any changes you want, then select :guilabel:`Save`.
    #. Select :guilabel:`SSO` to open the SSO configuration page.
    #. Select :guilabel:`SHA-256` in the :guilabel:`SAML Signature Algorithm` box.
    #. Copy the value of the :guilabel:`Issuer URL` text box and save it in a text editor so you can use it in the next steps.

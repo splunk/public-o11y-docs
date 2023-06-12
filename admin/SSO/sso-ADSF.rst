@@ -11,14 +11,6 @@ Configure an ADFS SSO integration
 
 The Microsoft Active Directory Federation Services (ADFS) SSO integration lets your users log in to Observability Cloud using your Microsoft ADFS portal.
 
-Before you begin configuring the Microsoft Active Directory Federation Services (ADFS) integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
-
-This integration is only available for Microsoft Active Directory with ADFS. In addition, you need to have the following fields in your ADFS configuration:
-
-- First Name
-- Last Name
-- Email
-
 The procedure for configuring ADFS with Observability Cloud has these sections:
 
 * :ref:`notify-splunk-support`
@@ -27,6 +19,21 @@ The procedure for configuring ADFS with Observability Cloud has these sections:
 * :ref:`obtain-adfs-cert`
 * :ref:`obtain-adfs-metadata`
 * :ref:`upload-adfs-cert-metadata-im`
+
+
+Prerequisite
+======================
+
+Before you begin configuring the Microsoft Active Directory Federation Services (ADFS) integration, ensure you have completed the steps in :ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
+
+To complete the tasks in this topic, you must the admin role in Splunk Observability Cloud.
+
+This integration is only available for Microsoft Active Directory with ADFS. In addition, you need to have the following fields in your ADFS configuration:
+
+- First Name
+- Last Name
+- Email
+
 
 .. _notify-splunk-support:
 
@@ -76,6 +83,9 @@ Add Observability Cloud as a relying party in ADFS:
 
 #. In separate browser tab or window, log in to the ADFS server and open the ADFS management console.
 #. In the console, right-click on :guilabel:`Relying Party Trusts`, select
+   :menuselection:`Add Relying Party Trust`, then select :guilabel:`Start`.
+#. Select :menuselection:`Claims aware`, then select :guilabel:`Next`.
+#. Select :menuselection:`Enter data about the relying party manually`, then select :guilabel:`Next`.
    :menuselection:`Add Relying Party Trust`, then select :guilabel:`Start`.
 #. Select :menuselection:`Claims aware`, then select :guilabel:`Next`.
 #. Select :menuselection:`Enter data about the relying party manually`, then select :guilabel:`Next`.
@@ -137,11 +147,11 @@ Add Observability Cloud as a relying party in ADFS:
 #. On the page that appears, select :guilabel:`Relying Party Trusts` and right-click on :guilabel:`Splunk Observability Cloud`.
 #. From the :guilabel:`Claim rule policy` list, select :menuselection:`Edit Claim Issuance Policy...`.
 #. Select :guilabel:`Add Rule...`.
-#. Select :menuselection:`Send LDAP Attributes as Claims`, and then select :guilabel:`Next`.
-#. Enter a name for the claim rule, such as "LDAP", then from the :guilabel:`Attribute store` list,
+#. Select :menuselection:`Send LDAP Attributes as Claims`, and then click :guilabel:`Next`.
+#. Enter a name for the claim rule, such as "LDAP", then from the :guilabel:`Attribute store` drop-down list,
    select :guilabel:`Active Directory`.
 #. In the :guilabel:`Mapping of LDAP attributes to outgoing claim types` pane,
-   use the drop-down lists to set the mappings between the
+   use the lists to set the mappings between the
    :guilabel:`LDAP Attribute` and :guilabel:`Outgoing Claim Type` columns:
 
       * :guilabel:`E-Mail-Addresses` (email address LDAP attribute): :guilabel:`User.email`
@@ -158,7 +168,7 @@ Add Observability Cloud as a relying party in ADFS:
    #. From the :guilabel:`Incoming claim type` drop-down list, select :guilabel:`User.email`.
    #. From the :guilabel:`Outgoing claim type` drop-down list, select :guilabel:`Name ID`.
    #. Regardless of the types you choose, from the :guilabel:`Outgoing name ID format` drop-down list, select :guilabel:`Persistent Identifier`.
-   #. Select :guilabel:`Finish`.
+   #. Click :guilabel:`Finish`.
 
 .. _obtain-adfs-cert:
 
@@ -169,9 +179,9 @@ Obtain an ADFS certificate to install to Observability Cloud:
 
 #. In the ADFS management console, select :guilabel:`Service`, then select :guilabel:`Certificates`.
 #. From the :guilabel:`Token-signing` list, right-click the certificate, then select :menuselection:`View Certificate`.
-#. Select :guilabel:`Detail`, then select :guilabel:`Copy to file`. The certificate export wizard appears.
-#. Select :menuselection:`Next`, then select :menuselection:`DER encoded binary X.509`.
-#. Enter certificate.cer, then select :guilabel:`Finish`.
+#. Select :guilabel:`Detail`, then click :guilabel:`Copy to file`. The certificate export wizard appears.
+#. Click :menuselection:`Next`, then select :menuselection:`DER encoded binary X.509`.
+#. Enter certificate.cer, then click :guilabel:`Finish`.
 #. Convert the certificate from a .cer format to a .pem format, using the ``openssl`` tool:
 
    ``openssl x509 -inform der -in certificate.cer -out certificate.pem``
