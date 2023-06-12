@@ -45,7 +45,7 @@ Activating debug logging can help you troubleshoot iOS instrumentation issues.
 
 To activate logging, add the ``debug(enabled: true)`` method to ``SplunkRumBuilder``. For example:
 
-.. code-block:: swift Swift
+.. code-block:: swift
    :emphasize-lines: 5
 
    import SplunkOtel
