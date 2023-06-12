@@ -12,7 +12,7 @@ The first step toward full-stack observability using Splunk Observability Cloud 
 - :ref:`Splunk Infrastructure Monitoring <infrastructure-infrastructure>`
 - :ref:`Splunk Application Performance Monitoring (APM) <get-started-apm>`
 - :ref:`Splunk Real User Monitoring (RUM) <rum-gdi>`
-- :ref:`Splunk Log Observer <get-started-logs>`
+- :ref:`Splunk Log Observer <get-started-logs>` and :ref:`Log Observer Connect <logs-intro-logconnect>`
 
 Here's a high-level overview of your options for getting data from each layer of your stack into the Observability Cloud product best suited to provide insights about your data. This diagram also provides a recommended sequence of steps. Splunk highly recommends that you perform steps 1-8 to get the most out of Observability Cloud.
 
@@ -103,8 +103,8 @@ If you are using cloud services for your infrastructure, the first step is to in
 
 This integration can send:
 
-- Metrics and metadata; such as tags, labels and properties; to Infrastructure Monitoring
-- Logs to Log Observer (AWS and GCP)
+- Metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring
+- Logs to Log Observer or Log Observer Connect (AWS and GCP)
 
 After you've integrated with your cloud services, you can access your data in the following locations:
 
@@ -146,28 +146,19 @@ Steps
 
    - :ref:`Connect to GCP using the guided setup in Splunk Observability Cloud <get-started-gcp>`
    - :new-page:`Connect to GCP using the Splunk Observability Cloud API <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview>`
-   - :new-page:`Connect to GCP using Terraform <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/gcp_integration>`
+   - :ref:`Connect to GCP using Terraform <terraform-config>`
 
 - To integrate with Microsoft Azure services, use the method that best suits your environment:
 
    - :ref:`Connect to Azure using the guided setup in Splunk Observability Cloud <get-started-azure>`
    - :new-page:`Connect to Azure using the Splunk Observability Cloud API <https://dev.splunk.com/observability/docs/integrations/msazure_integration_overview>`
-   - :new-page:`Connect to Azure using Terraform <https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs/resources/azure_integration>`
+   - :ref:`Connect to Azure using Terraform <terraform-config>`
 
-For example, you might want to use the guided setup if you are setting up just a few integrations, such as five or less. However, if you are setting up many integrations, such as for different accounts and regions, use the API or Terraform. Note that if you need all of the latest integration features, you might want to use the API because support might not yet be available using Terraform.
-
-
-Troubleshooting
--------------------------------------
-
-For help with an Amazon Web Services integration, see :ref:`aws-troubleshooting`.
-
-For help with other questions, contact :ref:`support`.
-
+For example, you might want to use the guided setup if you are setting up just a few integrations. However, if you are setting up many integrations, such as for different accounts and regions, use the API or Terraform. Note that if you need all of the latest integration features, you might want to use the API because support might not yet be available using Terraform.
 
 .. _gdi-2:
 
-2. Configure servers and clusters to send metrics and logs
+2. Install the OpenTelemetry Collector to send server and cluster data
 =============================================================================================================
 
 Install the Splunk Distribution of OpenTelemetry Collector on any servers (hosts) or in any clusters you are using as a part of your infrastructure. For example, this might mean installing the Splunk Distribution of OpenTelemetry Collector on servers running in your data center or on a virtual machine running in the cloud.
@@ -180,7 +171,7 @@ The Splunk Distribution of OpenTelemetry Collector:
 
 - Prepares your environment to receive logs and traces from applications instrumented in step :ref:`gdi-4`
 
-After you've installed the Splunk Distribution of OpenTelemetry Collector and configured your servers and clusters, you can access your data in the following locations:
+After you've installed the Collector and configured your servers and clusters, you can access your data in the following locations:
 
 - View metrics in Infrastructure Monitoring navigators
 
@@ -231,7 +222,7 @@ For help with other questions, contact :ref:`support`.
 
 .. _gdi-3:
 
-3. Configure third-party server applications to send metrics, logs, and traces
+1. Configure third-party server applications to send metrics, logs, and traces
 =========================================================================================================================
 
 After you've completed step :ref:`gdi-2`, in which you installed the Splunk Distribution of OpenTelemetry Collector on your servers (hosts) or in your clusters, you can now configure the Splunk Distribution of OpenTelemetry Collector receivers for :ref:`any of these third-party applications <monitor-data-sources>` running on your servers or in your clusters.
@@ -242,7 +233,7 @@ This integration can send:
 
 - Metrics to Infrastructure Monitoring
 
-- Logs to Log Observer
+- Logs to Log Observer or Log Observer Connect
 
 - Traces to APM (SignalFx Forwarder only)
 
@@ -514,13 +505,6 @@ Steps
 
 For information about using the Observability Cloud API to send custom data, see :ref:`rest-api-ingest`.
 
-
-Troubleshooting
--------------------------------------------------
-
-For help with using the Observability Cloud API to send custom data, contact :ref:`support`.
-
-
 Next steps
 =================
 
@@ -538,3 +522,8 @@ Once you have your desired full stack of data coming into Observability Cloud, c
    - :ref:`get-started-infrastructure`
    - :ref:`get-started-logs`
    - :ref:`get-started-rum`
+
+Support
+=================
+
+If you need assistance setting up or using Splunk Observability Cloud, check the Troubleshooting docs for each feature, or contact :ref:`support`.
