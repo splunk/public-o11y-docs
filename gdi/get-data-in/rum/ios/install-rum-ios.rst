@@ -51,7 +51,6 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 5. Click the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
 
 
-
 .. _rum-ios-initialize:
 
 Import and initialize the iOS RUM package
