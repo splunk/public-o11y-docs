@@ -36,6 +36,7 @@ Configure application receivers for databases
 
 These application receivers gather metrics from their associated database-related applications and the hosts the applications are running on.
 
+* :ref:`apache-couchdb`
 * :ref:`kafka`
 * :ref:`spark`
 * :ref:`cassandra`
