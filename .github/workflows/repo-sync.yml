@@ -10,7 +10,7 @@ permissions:
   pull-requests: write
 
 jobs:
- repo-sync:
+  repo-sync:
     name: Synchronize repositories
     if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
     runs-on: ubuntu-latest
@@ -23,13 +23,11 @@ jobs:
         source_branch: main
         destination_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
         github_token: ${{ secrets.MY_TOKEN }}
-    - name: Create pull request
-      uses: gr2m/create-or-update-pull-request-action@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+    - uses: repo-sync/pull-request@v2
+      name: Create pull request
       with:
-        title: "Pulling ${{ github.ref }} into main"
-        body: "This PR synchronizes the public and private docs repo."
-        branch: "main"
-        labels: sync
-        update-pull-request-title-and-body: false        
+        source_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
+        destination_branch: main
+        pr_title: "Pulling ${{ github.ref }} into main"
+        pr_label: "sync"
+        github_token: ${{ secrets.MY_TOKEN }}
