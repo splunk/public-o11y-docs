@@ -10,7 +10,7 @@ permissions:
   pull-requests: write
 
 env:
-  GH_TOKEN: ${{ secrets.MY_TOKEN }}
+  GH_TOKEN: ${{ secrets.UPDATE_KEY }}
 
 jobs:
  repo-sync:
