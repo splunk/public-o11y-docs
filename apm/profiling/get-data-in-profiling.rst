@@ -17,11 +17,9 @@ Prerequisites
 To get data into Splunk AlwaysOn Profiling, you need the following:
 
 - Splunk APM activated for your Observability Cloud organization.
-- Splunk Distribution of OpenTelemetry Collector version 0.44.0 or higher running on the host. See :ref:`otel-intro`.
+- Splunk Distribution of OpenTelemetry Collector version 0.44.0 or higher running on the host. See :ref:`otel-intro`. If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
 AlwaysOn Profiling is activated for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
-
-If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
 .. note:: Log Observer is not required. See :ref:`exclude-log-data` for more information.
 
@@ -149,7 +147,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
    .. group-tab:: .NET
 
-      AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
+      AlwaysOn Profiling requires .NET 6.0 or higher.
 
       - Activate the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
       - Activate Memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.

@@ -16,10 +16,10 @@ Ensure you are using supported .NET versions
 
 The SignalFx Instrumentation for .NET supports the following .NET versions:
 
-- .NET Core 3.1, .NET 5.0 and higher on Windows and Linux
-- .NET Framework 4.6.1 and higher on Windows
+- .NET Core 3.1, .NET 5.0 and higher on both Windows and Linux
+- .NET Framework 4.6.1 and higher on Windows only
 
-.. note:: AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
+AlwaysOn Profiling requires .NET 6.0 or higher.
 
 .. _supported-dotnet-libraries:
 
