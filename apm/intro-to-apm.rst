@@ -50,9 +50,13 @@ The following table provides an overview of what you can do with Splunk APM:
     - Service map
     - :ref:`Explore the service map <apm-service-map>`
 
-  * - Get a top-down view of your services that provides the request and error rate or latency by each of your indexed span tags in Tag Spotlight. For instance, you can see at a glance how your services are performing by ``endpoint``, ``environment``, or ``span.kind``. You can filter this view by environments, services, Business Workflows, or span tags for a finer-grained look.
+  * - Get a top-down view of your services that provides the request and error rate or latency by each of your indexed span tags in Tag Spotlight. For instance, you can see at a glance how your services are performing by ``endpoint``, ``environment``, or ``span.kind`` in Tag Spotlight. Filter this view by environments, services, Business Workflows, or span tags for a finer-grained look.
     - Tag Spotlight
     - :ref:`apm-tag-spotlight`
+
+  * - Monitor endpoints in your services using Endpoint Performance. Using the filter, sort, and compare functionality within Endpoint Performance, you can quickly isolate endpoints with increased requests, errors, or duration that impact your services’ performance.
+    - Endpoint performance
+    - :ref:`apm-scenario-endpoint-performance`
 
   * - Index additional span tags to break down and analyze application performance along any dimension, so that you can customize views like Tag Spotlight to your particular needs.
     - Span tags
@@ -73,6 +77,11 @@ The following table provides an overview of what you can do with Splunk APM:
   * - Correlate traces that make up end-to-end transactions in your system to monitor the workflows you care about most
     - Business Workflows
     - :ref:`apm-workflows`
+
+  * - Monitor the impact of your database queries on service availability to identify long-running, unoptimized, or heavy queries and mitigate issues they might be causing.
+    - Database Query Performance
+    - * :ref:`redis-scenario`
+      * :ref:`db-perf-scenario`
 
   * - Jump between components of Splunk Observability Cloud by selecting related data
     - Related Content
