@@ -88,7 +88,7 @@ Send metrics to Splunk Cloud Platform or Splunk Enterprise
 
 You can use the Collector to send metrics to Splunk Cloud Platform or Splunk Enterprise.  
 
-For example, if you're sending Prometheus metrics with a configuration such as: 
+For example, if you're scraping Prometheus metrics with a configuration such as: 
 
 .. code-block:: yaml
 
