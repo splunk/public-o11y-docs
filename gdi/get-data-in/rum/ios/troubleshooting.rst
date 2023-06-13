@@ -127,6 +127,6 @@ Xcode might inform you that a dependency failed to resolve. If you don't see any
 Avoid SQLite redefinition errors
 =============================================
 
-If you're using another tool that uses SQLite, like WCDB, try removing the ``use_frameworks!`` line in your Podfile.
+If you're using another tool that uses SQLite, like WCDB, try replacing the ``use_frameworks!`` line in your Podfile with ``use_modular_headers!``.
 
 .. include:: /_includes/troubleshooting-steps.rst
