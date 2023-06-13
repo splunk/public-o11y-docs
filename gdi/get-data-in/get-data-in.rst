@@ -48,7 +48,7 @@ You can also get data into Observability Cloud using the :ref:`Splunk Distributi
       -  n/a
       -  Yes
 
-   *  -  :ref:`2. Configure servers and clusters <gdi-2>`
+   *  -  :ref:`2. Install the OpenTelemetry Collector and configure servers and clusters <gdi-2>`
       -  :strong:`Recommended`
       -  :strong:`Recommended`
       -  n/a
@@ -60,7 +60,7 @@ You can also get data into Observability Cloud using the :ref:`Splunk Distributi
       -  n/a
       -  Yes
 
-   *  -  :ref:`4. Instrument homegrown apps <gdi-4>`
+   *  -  :ref:`4. Instrument apps and back-end services <gdi-4>`
       -  Optional
       -  :strong:`Recommended`
       -  n/a
@@ -72,7 +72,7 @@ You can also get data into Observability Cloud using the :ref:`Splunk Distributi
       -  n/a
       -  No
 
-   *  -  :ref:`6. Configure homegrown apps and serverless functions to send custom data <gdi-6>`
+   *  -  :ref:`6. Configure apps and serverless functions to send custom data <gdi-6>`
       -  n/a
       -  n/a
       -  :strong:`Recommended`
