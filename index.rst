@@ -228,6 +228,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
    get-started/welcome
 
 .. toctree::
+   :maxdepth: 3
+
+   Service description <get-started/service-description>
+
+.. toctree::
    :maxdepth:   3
 
    Get started <get-started/o11y>
