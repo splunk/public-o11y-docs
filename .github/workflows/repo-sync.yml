@@ -9,9 +9,6 @@ permissions:
   contents: write
   pull-requests: write
 
-env:
-  GH_TOKEN: ${{ secrets.UPDATE_KEY }}
-
 jobs:
  repo-sync:
     name: Synchronize repositories
@@ -27,8 +24,12 @@ jobs:
         destination_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
         github_token: ${{ secrets.MY_TOKEN }}
     - name: Create pull request
-      run: |
-        gh pr edit -B main || gh pr create -l "sync" -B main --title "Pulling ${{ github.ref }} into main" -H ${{ secrets.INTERMEDIATE_BRANCH }} -b "This PR synchronizes the public and private docs repo."
-
-        
-        
+      uses: gr2m/create-or-update-pull-request-action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+      with:
+        title: "Pulling ${{ github.ref }} into main"
+        body: "This PR synchronizes the public and private docs repo."
+        branch: "main"
+        labels: sync
+        update-pull-request-title-and-body: false        
