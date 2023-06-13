@@ -9,8 +9,11 @@ permissions:
   contents: write
   pull-requests: write
 
+env:
+  GH_TOKEN: ${{ secrets.MY_TOKEN }}
+
 jobs:
-  repo-sync:
+ repo-sync:
     name: Synchronize repositories
     if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
     runs-on: ubuntu-latest
