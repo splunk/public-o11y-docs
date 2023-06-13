@@ -21,16 +21,14 @@ Here's a high-level overview of your options for getting data from each layer of
 
 .. source in Figma: https://www.figma.com/file/0tm4yT04K6MlwM7dMA62ad/Docs-Graphic
 
-For standard environments and workflows, perform all the steps described below to get the most out of Observability Cloud. However, depending on your observability goals and environment, you can choose to perform only a subset of the steps. For example, this might be the case if you don't use every Observability Cloud product, or if you don't want to collect data from every eligible data source.
+For standard environments and workflows, perform all the steps described below to get the most out of Observability Cloud. However, depending on your observability goals and environment, you can choose to perform only a subset of the steps. For example, if you don't use every Observability Cloud product, or if you don't want to collect data from every eligible data source.
 
 .. _gdi-per-product:
 
 Per product integration recommendations
 ============================================
 
-If you are not yet implementing full-stack observability as described in the diagram above, and are using only one or a few products, see the table to learn which steps are recommended, optional, or not applicable (n/a) based on which environment you want to use. 
-
-You can also get data into Observability Cloud using the :ref:`Splunk Distribution of OpenTelemetry collector <otel-intro>`.
+If you're not yet implementing full-stack observability as described in the diagram above, and are using only one or a few products, see the table to learn which steps are recommended, optional, or not applicable (n/a) based on your use case. 
 
 .. list-table::
    :header-rows: 1
@@ -48,7 +46,7 @@ You can also get data into Observability Cloud using the :ref:`Splunk Distributi
       -  n/a
       -  Yes
 
-   *  -  :ref:`2. Install the OpenTelemetry Collector and configure servers and clusters <gdi-2>`
+   *  -  :ref:`2. Install the OpenTelemetry Collector for servers and clusters <gdi-2>`
       -  :strong:`Recommended`
       -  :strong:`Recommended`
       -  n/a
@@ -95,12 +93,7 @@ You can also get data into Observability Cloud using the :ref:`Splunk Distributi
 1. Integrate with cloud services to send metrics and logs
 ===================================================================================
 
-If you are using cloud services for your infrastructure, the first step is to integrate these services with Observability Cloud.
-
-Cloud integrations can send:
-
-- Metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring
-- Logs to Log Observer or Log Observer Connect (AWS and GCP)
+If you're using cloud services for your infrastructure, the first step is to integrate these services with Observability Cloud. Cloud integrations can send metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring.
 
 After you've integrated with your cloud services, you can access your data in the following locations:
 
@@ -123,11 +116,6 @@ After you've integrated with your cloud services, you can access your data in th
    - :new-page:`AWS official documentation <https://docs.aws.amazon.com/index.html#general_resourcess>`
    - :ref:`GCP metrics <gcp-metrics>`
    - :ref:`Azure metrics <azure-metrics>`
-
-- Query logs in :ref:`Log Observer <logs-timeline>`, if you chose to ingest logs
-
-- To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
-
 
 Steps
 --------------------------------------------------------------
@@ -154,18 +142,14 @@ For example, you might want to use the guided setup if you are setting up just a
 
 .. _gdi-2:
 
-1. Install the OpenTelemetry Collector to send server and cluster data
+2. Install the OpenTelemetry Collector to send server and cluster data
 =============================================================================================================
 
-Install the Splunk Distribution of OpenTelemetry Collector on any hosts or clusters you're using as a part of your infrastructure, such as servers running in your data center or on a virtual machine running in the cloud.
+Install the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` on any hosts or clusters you're using as a part of your infrastructure, such as servers running in your data center or on a virtual machine running in the cloud to: 
 
-The Splunk Distribution of OpenTelemetry Collector:
-
-- Can send metrics to Infrastructure Monitoring
-
-- Can send logs to Log Observer
-
-- Prepares your environment to receive logs and traces from applications instrumented in step :ref:`gdi-4`
+- Send metrics to Infrastructure Monitoring
+- Send logs to Log Observer
+- Set up your environment to receive logs and traces from applications instrumented in step :ref:`gdi-4`
 
 After you've installed the Collector and configured your servers and clusters, you can access your data in the following locations:
 
@@ -185,7 +169,6 @@ After you've installed the Collector and configured your servers and clusters, y
 - Search for metrics :ref:`using Metric Finder <metric-finder>`
 
 - Query logs in :ref:`Log Observer <logs-timeline>`, if you chose to ingest logs
-
 
 Steps
 -------------------------------------------------------------------
@@ -209,16 +192,10 @@ One of the benefits of using the Splunk Distribution of OpenTelemetry Collector 
 
 .. _gdi-3:
 
-1. Configure third-party server applications to send metrics, logs, and traces
+3. Configure third-party server applications to send metrics, logs, and traces
 =========================================================================================================================
 
 After you've completed step :ref:`gdi-2` and installed the Splunk Distribution of OpenTelemetry Collector on your servers (hosts) or in your clusters, configure the Collector's :ref:`native receivers <collector-components-receivers>` or :ref:`any of these third-party applications <monitor-data-sources>`, such as Apache, Cassandra, Hadoop, Kafka, and NGINX, to monitor your systems.
-
-The Collector ingests, manages and sends:
-
-- Metrics to Infrastructure Monitoring
-- Logs to Log Observer or Log Observer Connect
-- Traces to APM 
 
 After you've configured the Collector's pipelines for your desired server applications, access your data in the following locations:
 
@@ -241,17 +218,13 @@ After you've configured the Collector's pipelines for your desired server applic
 
 .. _gdi-4:
 
-1. Instrument homegrown applications to send traces, logs, and metrics
+4. Instrument back-end services and applications to send traces, logs, and metrics
 ========================================================================================
 
-You can choose to instrument your homegrown applications that you've developed in-house to send data to Observability Cloud.
-
-This integration can send:
+You can choose to instrument applications that you've developed in-house to send data to Observability Cloud:
 
 - Traces to APM
-
 - Logs (events) to Log Observer
-
 - Metrics to Infrastructure Monitoring (Java only)
 
 After you've instrumented your application, you can access your data in the following locations:
@@ -287,11 +260,11 @@ See the instrumentation documentation for your application language:
 
 - :ref:`Instrument PHP applications <get-started-php>`
 
-One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Observability Cloud, is much easier to implement. For more information, see :ref:`get-started-relatedcontent`.
+.. note:: If you use the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud, you can benefit from Related Content, a feature that activates users to seamlessly move between key views in Observability Cloud. For more information, see :ref:`get-started-relatedcontent`.
 
 .. _gdi-5:
 
-1. Instrument serverless functions to send traces and metrics
+5. Instrument serverless functions to send traces and metrics
 ==========================================================================================================
 
 You can choose to instrument your serverless functions.
@@ -301,7 +274,6 @@ You can choose to instrument your serverless functions.
 This integration can send:
 
 - Traces to APM
-
 - Metrics to Infrastructure Monitoring
 
 After you've instrumented your serverless functions, you can access your data in the following locations:
@@ -329,53 +301,37 @@ To instrument your AWS Lambda serverless functions, see :ref:`instrument-serverl
 
 .. _gdi-6:
 
-1. Instrument user interfaces to send user sessions
+6. Instrument user interfaces to send user sessions
 ========================================================================================
 
-You can choose to instrument browser and mobile user interfaces to monitor front-end application user experiences.
-
-This integration sends user sessions to RUM.
-
-After you've instrumented your user interfaces, you can use RUM to start reviewing key metrics and vitals, as well as investigate errors in your spans:
+You can instrument browser and mobile user interfaces to monitor front-end application user experiences, sending your user sessions to RUM to review key metrics and vitals, as well as investigate errors in your spans:
 
 .. image:: /_images/gdi/rum-landing.png
    :width: 100%
    :alt: This screenshot shows an example of the Splunk RUM landing page
 
-
 Steps
 -------------------------------------------------
 
 - To instrument web browsers to send user session data, see :ref:`browser-rum-gdi`.
-
 - To instrument an iOS application to send user session data, see :ref:`rum-mobile-ios`.
-
 - To instrument an Android application to send user session data, see :ref:`rum-mobile-android`.
-
 
 .. _gdi-7:
 
-1. Configure homegrown applications and serverless functions to send custom data
+7. Configure applications and serverless functions to send custom data
 ========================================================================================
 
-Now that you have built-in data from your full stack flowing into Observability Cloud, assess whether there are custom data points you need to bring in. You can configure applications to send custom metrics and instrument serverless functions to send custom traces.
+Now that you have built-in data from your full stack flowing into Observability Cloud, assess whether there are custom data points you need to bring in. 
 
 For many teams, some of the most meaningful data is custom data because you can define these data points to focus on what is most important to you in your specific environment.
 
 For example, if you run an e-commerce site, you might configure your application to send a custom metric about the number of orders placed. You can then create a detector to receive an alert when the number of orders drops significantly. You might also configure your application to send a custom metric about how long payment processing takes. You can then create a detector to issue alerts when the processing time exceeds a threshold.
 
-This integration can send:
-
-- Custom metrics to Infrastructure Monitoring
-
-- Custom traces to APM
-
-After you've configured your homegrown applications and instrumented your serverless functions to send custom metrics and traces, you can access your data in the following locations:
+You can configure applications to send custom metrics and instrument serverless functions to send custom traces. Access your custom data in the following locations:
 
 - View traces on the APM landing page to :ref:`assess the health of your applications <apm-landing-page>`
-
 - View traces in the APM Explorer view to :ref:`assess dependencies among your applications <apm-service-map>`
-
 - Search for metrics :ref:`using Metric Finder <metric-finder>`
 
    .. image:: /_images/gdi/metric-finder.png
@@ -383,7 +339,7 @@ After you've configured your homegrown applications and instrumented your server
       :alt: This screenshot shows metric search results in the Metric Finder
 
 
-Configuration steps for homegrown applications
+Configuration steps for back-end applications
 -------------------------------------------------------------------------
 
 Use the library for your application language:
@@ -407,10 +363,9 @@ Instrument serverless functions
 
 To instrument your AWS Lambda serverless functions, see :ref:`instrument-serverless-functions`.
 
-
 .. _gdi-8:
 
-1. Use the Observability Cloud API to send custom data
+8. Use the Observability Cloud API to send custom data
 ========================================================================================
 
 Now that you have built-in data from your full stack flowing into Observability Cloud, assess whether there are custom data points you need to bring in. You can use the Observability Cloud API to bring in custom data.
@@ -418,7 +373,6 @@ Now that you have built-in data from your full stack flowing into Observability 
 You might want to use the API if you want to integrate with:
 
 - A third-party tool that provides an API/webhook integration only.
-
 - An application written in a language we don't provide a library for.
 
 This API integration can send all types of data to Observability Cloud. While you can use the API to send logs to Log Observer, we recommend using other integration types to do so. For details about which integrations can send logs to Log Observer, see :ref:`gdi-per-product`.
@@ -426,11 +380,8 @@ This API integration can send all types of data to Observability Cloud. While yo
 After you've configured your integration to send custom data, you can access your data in the following locations:
 
 - View traces on the APM landing page to :ref:`assess the health of your applications <apm-landing-page>`.
-
 - View traces in the APM Explorer view to :ref:`assess dependencies among your applications <apm-service-map>`.
-
 - Search for metrics at the :ref:`Metric Finder <metric-finder>`, or use the :ref:`metrics pipeline management tool <metrics-pipeline-intro>`.
-
 - Query logs :ref:`using Log Observer <logs-timeline>`, if you chose to ingest logs.
 
 Steps
