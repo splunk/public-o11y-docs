@@ -28,4 +28,7 @@ jobs:
         github_token: ${{ secrets.MY_TOKEN }}
     - name: Create pull request
       run: |
-        gh pr create -l "sync" -B main --title "Pulling ${{ github.ref }} into main" -H ${{ secrets.INTERMEDIATE_BRANCH }} -b "This PR synchronizes the public and private docs repo."
+        gh pr edit -l "sync" -B main --title "Pulling ${{ github.ref }} into main" -b "This PR synchronizes the public and private docs repo." || gh pr create -l "sync" -B main --title "Pulling ${{ github.ref }} into main" -H ${{ secrets.INTERMEDIATE_BRANCH }} -b "This PR synchronizes the public and private docs repo."
+
+        
+        
