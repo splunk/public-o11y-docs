@@ -23,7 +23,7 @@ Prerequisites
 
 Ensure the following configuration in your Splunk Enterprise instance:
 
-* Token authentication is active. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
+* Token authentication is active on the service account. See :new-page:`Securing Splunk Enterprise: Enable or disable token authentication <https://docs.splunk.com/Documentation/Splunk/latest/Security/EnableTokenAuth>` to learn how.
 
 * Allow these IPs:
 
