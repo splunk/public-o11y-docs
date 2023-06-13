@@ -23,13 +23,6 @@ jobs:
         source_branch: main
         destination_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
         github_token: ${{ secrets.MY_TOKEN }}
-    - uses: repo-sync/pull-request@v2
-      name: Create pull request
-      with:
-        source_branch: ${{ secrets.INTERMEDIATE_BRANCH }}
-        destination_branch: main
-        pr_title: "Pulling ${{ github.ref }} into main"
-        pr_reviewer: "puribe-splunk,jmalin-splunk"                         # Comma-separated list (no spaces)
-        pr_assignee: "puribe-splunk,jmalin-splunk"
-        pr_label: "sync"
-        github_token: ${{ secrets.MY_TOKEN }}
+    - name: Create pull request
+      run: |
+        gh pr create -l "sync" -B main -title "Pulling ${{ github.ref }} into main" -H ${{ secrets.INTERMEDIATE_BRANCH }}
