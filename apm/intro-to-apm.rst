@@ -36,7 +36,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - :strong:`With this tool`
     - :strong:`Link to documentation`
 
-  * -  Start to gain insights from your data in minutes using default landing page and service dashboards.
+  * -  Start to gain insights from your data in minutes using the default landing page and service dashboards.
     - Landing page
     - :ref:`Understand the landing page <apm-landing-page>`
 
@@ -44,33 +44,9 @@ The following table provides an overview of what you can do with Splunk APM:
     - Service map
     - :ref:`Explore the service map <apm-service-map>`
 
-  * - Get a top-down view of your services that provides the request and error rate or latency by each of your indexed span tags in Tag Spotlight. For instance, you can see at a glance how your services are performing by ``endpoint``, ``environment``, or ``span.kind`` in Tag Spotlight. Filter this view by environments, services, Business Workflows, or span tags for a finer-grained look.
-    - Tag Spotlight
-    - :ref:`apm-tag-spotlight`
-
   * - Monitor endpoints in your services using Endpoint Performance. Using the filter, sort, and compare functionality within Endpoint Performance, you can quickly isolate endpoints with increased requests, errors, or duration that impact your services’ performance.
     - Endpoint performance
     - :ref:`apm-scenario-endpoint-performance`
-
-  * - Index additional span tags to break down and analyze application performance along any dimension, so that you can customize views like Tag Spotlight to your particular needs.
-    - Span tags
-    - :ref:`apm-add-context-trace-span`
-
-  * - Use built-in dashboards to assess service, endpoint, and Business Workflow system health at a glance.
-    - Built-in dashboards
-    - :ref:`built-in-dashboards`
-
-  * - Search all traces from all of your systems, with no sampling, so you can be confident the specific trace you need to resolve an edge cases is retained.
-    - Trace Analyzer
-    - :ref:`apm-traces-spans`
-
-  * - Use detectors to alert with custom alert, request, and duration (RED) metrics to monitor error rate and latency across all of your services.
-    - Detectors and alerts
-    - :ref:`Detectors and alerts<apm-alerts>`
-
-  * - Correlate traces that make up end-to-end transactions in your system to monitor the workflows you care about most
-    - Business Workflows
-    - :ref:`apm-workflows`
 
   * - Monitor the impact of your database queries on service availability to identify long-running, unoptimized, or heavy queries and mitigate issues they might be causing.
     - Database Query Performance
@@ -80,6 +56,30 @@ The following table provides an overview of what you can do with Splunk APM:
   * - Get visibility into code-level performance using AlwaysOn Profiling, a feature of Splunk APM. AlwaysOn Profiling takes CPU snapshots from runtime environments to contextualize spans and traces produced by instrumented applications.
     - AlwaysOn Profiling
     - :ref:`profiling-scenario-landingpage`
+
+  * - Use detectors to alert with custom alert, request, and duration (RED) metrics to monitor error rate and latency across all of your services.
+    - Detectors and alerts
+    - :ref:`Detectors and alerts<apm-alerts>`
+
+  * - View the request and error rate or latency of your services by each of your indexed span tags in Tag Spotlight. For instance, you can see at a glance how your services are performing by ``endpoint``, ``environment``, or ``span.kind`` in Tag Spotlight. Filter this view by environments, services, Business Workflows, or span tags for a finer-grained look.
+    - Tag Spotlight
+    - :ref:`apm-tag-spotlight`
+
+  * - Index additional span tags to break down and analyze application performance along any dimension, so that you can customize views like Tag Spotlight to your particular needs.
+    - Span tags
+    - :ref:`apm-add-context-trace-span`
+
+  * - Use built-in dashboards to assess service, endpoint, and system health at a glance.
+    - Built-in dashboards
+    - :ref:`built-in-dashboards`
+
+  * - Search all traces from all of your systems, with no sampling, so you can be confident the specific trace you need to resolve an edge case is retained.
+    - Trace Analyzer
+    - :ref:`trace-analyzer`
+
+  * - Correlate traces that make up end-to-end transactions in your system to monitor the workflows you care about most
+    - Business Workflows
+    - :ref:`apm-workflows`
 
   * - Jump between components of Splunk Observability Cloud by selecting related data
     - Related Content
