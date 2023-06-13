@@ -83,6 +83,10 @@ The following table provides an overview of what you can do with Splunk APM:
     - * :ref:`redis-scenario`
       * :ref:`db-perf-scenario`
 
+  * - Get visibility into code-level performance using AlwaysOn Profiling, a feature of Splunk APM. AlwaysOn Profiling takes CPU snapshots from runtime environments to contextualize spans and traces produced by instrumented applications.
+    - AlwaysOn Profiling
+    - :ref:`profiling-scenario-landingpage`
+
   * - Jump between components of Splunk Observability Cloud by selecting related data
     - Related Content
     - :ref:`get-started-relatedcontent`
