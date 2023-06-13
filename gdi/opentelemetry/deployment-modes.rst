@@ -7,9 +7,7 @@ Collector deployment modes
 .. meta::
       :description: The Splunk Distribution of OpenTelemetry Collector provides a single binary and two deployment methods. Both deployment methods can be configured using a default configuration.
 
-The Collector provides a single binary and two deployment modes: :ref:`agent mode <collector-agent-mode>`, and :ref:`gateway mode <collector-gateway-mode>`.
-
-By default, the Collector is installed in agent mode. To configure it as gateway, see the specific instructions depending on your deployment environment at :ref:`otel-install-platform`.
+The Collector has two deployment modes: :ref:`agent mode <collector-agent-mode>`, and :ref:`gateway mode <collector-gateway-mode>`.
 
 .. _collector-agent-mode:
 
@@ -66,12 +64,21 @@ The following image shows the architecture for the gateway mode:
 .. image:: /_images/gdi/splunk-otel-collector-recommended-gateway-arch.png
    :alt: This image shows the architecture for the advanced mode.    
 
-.. _collector-agent-to-gateway:
+.. _collector-current-mode:
 
-Send data from agent to gateway
+What mode is my Collector deployed as? How can I change it?
 ======================================================================
 
-When running as an agent, you can also manually configure the Splunk Distribution of OpenTelemetry Collector to send data to a Splunk Distribution of OpenTelemetry Collector gateway instance or cluster. This requires changing the pipeline exporters in the agent to point to the gateway.
+If you install the Collector using the :ref:`provided scripts <otel-install-platform>`, the Collector is deployed in the mode specified in your configuration file. The path to the configuration yaml is set in the env variable ``SPLUNK_CONFIG``. For Windows and Linux installers, the :ref:`default configuration yaml sets the Collector as an agent <otel-configuration-ootb>`. 
+
+To change the deployment mode, modify ``SPLUNK_CONFIG`` to use the gateway configuration instead. See :ref:`collector-gateway-mode` for details on the gateway mode yaml.
+
+.. _collector-agent-to-gateway:
+
+Send data from an agent Collector to a gateway Collector
+======================================================================
+
+When running as an agent, you can also manually configure the Collector to send data to a Splunk Distribution of OpenTelemetry Collector gateway instance or cluster. This requires changing the pipeline exporters in the agent to point to the gateway.
 
 To configure the Collector to send data to the another Collector in gateway mode, see these configurations:
 
