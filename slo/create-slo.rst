@@ -22,9 +22,9 @@ Follow these steps to create an SLO.
 
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Service Level Objectives (SLOs)`.
 #. Select :guilabel:`Create SLO`.
-#. Choose a service or metric indicating system health for the SLO:
+#. Choose a service or metric indicating system health for the SLO.
 
-    #. If you want to create an SLO for a service, enter the following fields
+    #. If you want to create an SLO for a service, enter the following fields:
 
        .. list-table::
         :header-rows: 1
@@ -45,7 +45,7 @@ Follow these steps to create an SLO.
         * - Filters
           - ... 
             
-    #. If you want to create an SLO for a metric, enter the following fields
+    #. If you want to create an SLO for a metric, enter the following fields:
 
        .. list-table::
         :header-rows: 1
