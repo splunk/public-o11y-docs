@@ -1,16 +1,10 @@
 .. _get-started-apm:
 
-************************************************************************
 Introduction to Splunk APM
 ************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
   :description: Get started monitoring applications with Splunk APM in Splunk Observability Cloud.
-
-What is Splunk APM?
-=========================================
 
 Collect :ref:`traces and spans<apm-traces-spans>` to monitor your distributed applications with Splunk Application Performance Monitoring (APM). A trace is a collection of actions, or spans, that occur to complete a transaction. Splunk APM collects and analyzes every span and trace from each of the services that you have connected to Splunk Observability Cloud to give you full-fidelity access to all of your application data.
 
