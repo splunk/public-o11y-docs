@@ -107,7 +107,7 @@ For example, if you're scraping Prometheus metrics with a configuration such as:
             static_configs:
               - targets: ['<container_name>:<container_port>']
 
-You need to configure the ``splunk_hec`` exporter as explained below:
+You need to configure the ``splunk_hec`` exporter as shown below:
 
 .. code-block:: yaml
 
@@ -123,13 +123,8 @@ You need to configure the ``splunk_hec`` exporter as explained below:
           sourcetype: "jvm_metrics"
           # Splunk index, optional name of the Splunk index targeted.
           index: "metrics"
-          # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
-          max_connections: 20
-          # Whether to disable gzip compression over HTTP. Defaults to false.
-          disable_compression: false
-          # HTTP timeout when sending data. Defaults to 10s.
-          timeout: 10s
 
+Note that to be able to ingest metrics through Splunk HEC you need to declare your index as a metric index. To learn more about our metric index technology, see :new-page:`Get started with metrics <https://docs.splunk.com/Documentation/SplunkCloud/latest/Metrics/GetStarted>` in Splunk docs.
 
 .. _send_logs_to_splunk:
 
