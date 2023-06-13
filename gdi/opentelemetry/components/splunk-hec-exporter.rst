@@ -9,9 +9,12 @@ Splunk HEC exporter
 
 The Splunk HTTP Event Collector (HEC) exporter allows the OpenTelemetry Collector to send traces, logs, and metrics to Splunk HEC endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-The main purpose of the Splunk HEC exporter is to send logs to Log Observer, Splunk Cloud Platform, or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Observability Cloud. See :ref:`lo-connect-landing` for more information.
-
 .. note:: For information about the HEC receiver, see :ref:`splunk-hec-receiver`.
+
+The main purpose of the Splunk HEC exporter is to send logs and metrics to Splunk Cloud Platform or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Observability Cloud. See :ref:`lo-connect-landing` for more 
+information.
+
+.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
 
 Get started
 ======================
@@ -77,6 +80,56 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 #. Select your username. 
 
 The realm name appears in the :guilabel:`Organizations` section.
+
+.. _send_metrics_to_splunk:
+
+Send metrics to Splunk Cloud Platform or Splunk Enterprise
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can use the Collector to send metrics to Splunk Cloud Platform or Splunk Enterprise.  
+
+For example, if you're sending Prometheus metrics with a configuration such as: 
+
+.. code-block:: yaml
+
+  pipelines:
+    metrics:
+        receivers: [prometheus]
+        processors: [batch]
+        exporters: [splunk_hec/metrics]
+
+  receivers:
+    prometheus:
+      config:
+        scrape_configs:
+          - job_name: 'otel-collector'
+            scrape_interval: 5s
+            static_configs:
+              - targets: ['<container_name>:<container_port>']
+
+You need to configure the ``splunk_hec`` exporter as explained below:
+
+.. code-block:: yaml
+
+  exporters:
+      splunk_hec/metrics:
+          # Splunk HTTP Event Collector token.
+          token: "00000000-0000-0000-0000-0000000000000"
+          # URL to a Splunk instance to send data to.
+          endpoint: "https://splunk:8088/services/collector"
+          # Optional Splunk source: https://docs.splunk.com/Splexicon:Source
+          source: "app"
+          # Optional Splunk source type: https://docs.splunk.com/Splexicon:Sourcetype
+          sourcetype: "jvm_metrics"
+          # Splunk index, optional name of the Splunk index targeted.
+          index: "metrics"
+          # Maximum HTTP connections to use simultaneously when sending data. Defaults to 100.
+          max_connections: 20
+          # Whether to disable gzip compression over HTTP. Defaults to false.
+          disable_compression: false
+          # HTTP timeout when sending data. Defaults to 10s.
+          timeout: 10s
+
 
 .. _send_logs_to_splunk:
 
