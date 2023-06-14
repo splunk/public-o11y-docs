@@ -71,7 +71,7 @@ To install the iOS RUM library using the Swift Package Manager (SPM) follow thes
 
 2. Select :guilabel:`Add Package` to install the package.
 
-.. note:: Add the SPM package to the app's project, not to the Pods project in your workspace.
+.. note:: If you are also using CocoaPods, add the SPM package to the app's project, not to the Pods project in your workspace.
 
 CocoaPods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
