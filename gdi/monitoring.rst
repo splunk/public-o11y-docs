@@ -17,7 +17,7 @@ Configure application exporters and receivers for monitoring
    monitors-monitoring/jaeger-grpc
    monitors-monitoring/nagios
    monitors-monitoring/prometheus-exporter
-   prometheus-go/prometheus-go
+   monitors-monitoring/prometheus-go
    prometheus-nginx-ingress/prometheus-nginx-ingress
    prometheus-nginx-vts/prometheus-nginx-vts
    prometheus-node/prometheus-node
