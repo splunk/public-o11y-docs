@@ -36,7 +36,7 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Log in to Splunk Observability Cloud.
 
-#. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+#. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
   
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
