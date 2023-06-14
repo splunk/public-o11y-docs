@@ -19,22 +19,6 @@ The Splunk Distribution of OpenTelemetry .NET supports the following .NET versio
 - .NET 6.0 and higher
 - .NET Framework 4.6.2 and higher
 
-Support for legacy .NET versions
----------------------------------------------------------------
-
-Limited support is available for the following legacy versions of .NET:
-
-- Instrumentation for traces and metrics:
-
-   - .NET Core 3.1
-   - .NET 5.x
-   - .NET Framework 4.6.1
-
-- AlwaysOn Profiling:
-
-   - CPU Profiling: .NET Core 3.1 and .NET 5.x
-   - Memory Profiling: .NET Core 5.x
-
 .. _supported-dotnet-otel-libraries:
 
 Supported libraries
