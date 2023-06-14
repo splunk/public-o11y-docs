@@ -18,7 +18,7 @@ To generate a template that instruments your Lambda function using the Splunk Op
 
 #. Open the :new-page:`AWS Lambda guided setup <https://login.signalfx.com/#/gdi/scripted/awslambda/step-1?category=product-apm&gdiState=%7B"integrationId":"awslambda"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+   #. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
    #. In the integration filter menu, select :guilabel:`All`.
 
