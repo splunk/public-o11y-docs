@@ -106,4 +106,4 @@ Typically, there are two planned maintenance windows per month for a Splunk Clou
 
 Changing identity providers
 ------------------------------------------------------------------------------------------
-If you no longer want to use Splunk Cloud Platform as your identity provider for SSO when signing in to Splunk Observability Cloud, set up a third party IdP for Splunk Observability Cloud login before you deactivate your Splunk Cloud Platform instance. Deactivating Splunk Cloud Platform only after setting up a new third party ensures that your Splunk Observability Cloud users do not lose access.
+If you no longer want to use Splunk Cloud Platform as your identity provider for SSO when signing in to Splunk Observability Cloud, set up a third party IdP for Splunk Observability Cloud login before you deactivate your Splunk Cloud Platform instance. Deactivating Splunk Cloud Platform only after setting up a new third party IdP ensures that your Splunk Observability Cloud users do not lose access.
