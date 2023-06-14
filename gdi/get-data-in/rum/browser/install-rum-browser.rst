@@ -44,7 +44,7 @@ Select one of the following methods to instrument your web application:
 :strong:`Tip:` To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup. To access the Browser Instrumentation guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. In the navigation menu, select :menuselection:`Data Management`. 
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`By Use Case`.
 #. Select the :guilabel:`Monitor user experience` use case.
@@ -85,7 +85,7 @@ Follow these steps to instrument your application with the CDN:
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
@@ -164,7 +164,7 @@ Follow these steps to instrument and configure Splunk RUM using npm:
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 

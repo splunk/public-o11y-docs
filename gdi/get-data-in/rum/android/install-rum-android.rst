@@ -151,7 +151,7 @@ Follow these steps to install the Android RUM agent using Maven Central:
 
    * The value passed to ``.realm()`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 

@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Observability Cloud.
 #. Open the :new-page:`.NET guided setup <https://login.signalfx.com/#/gdi/scripted/dotnet-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"dotnet-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -246,7 +246,7 @@ To instrument an application or service in Azure App Service, follow these steps
       * - ``SIGNALFX_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SIGNALFX_REALM``
-        - ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
       * - ``SIGNALFX_SERVICE_NAME``
         - The name of your service or application.
       * - ``SIGNALFX_ENV``
@@ -273,7 +273,7 @@ When instrumenting an Azure WebJob in App Service, add the following settings. R
       * - ``SIGNALFX_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SIGNALFX_REALM``
-        - ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
       * - ``SIGNALFX_SERVICE_NAME``
         - The name of your service or application.
       * - ``SIGNALFX_ENV``
@@ -373,7 +373,7 @@ To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

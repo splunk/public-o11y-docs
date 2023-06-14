@@ -31,7 +31,7 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 
 1. Log in to Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
 3. In the integration filter menu, select :guilabel:`By Use Case`.
 
@@ -75,7 +75,7 @@ Follow these steps to import and initialize the iOS RUM package.
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
@@ -134,7 +134,7 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
