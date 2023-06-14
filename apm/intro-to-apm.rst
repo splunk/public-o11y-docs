@@ -73,7 +73,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - Trace Analyzer
     - :ref:`trace-analyzer`
 
-  * - Correlate traces that make up end-to-end transactions in your system to monitor the workflows you care about most
+  * - Correlate traces that make up end-to-end transactions in your system to monitor the workflows you care about most.
     - Business Workflows
     - :ref:`apm-workflows`
 
@@ -81,7 +81,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - Built-in dashboards
     - :ref:`built-in-dashboards`
 
-  * - Jump between components of Splunk Observability Cloud by selecting related data
+  * - Transition between components of Splunk Observability Cloud by selecting related data.
     - Related Content
     - :ref:`get-started-relatedcontent`
 
