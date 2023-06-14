@@ -86,6 +86,8 @@ To install the iOS RUM library using CocoaPods follow these steps.
 
 4. After installation, make sure to open the .xcworkspace file instead of the .xcodeproj file.
 
+.. note:: Import the iOS RUM package into your main app. If you import the package into your Pods project, the dependency might disappear when you recreate the project.
+
 .. _rum-ios-initialize:
 
 Initialize the iOS RUM package
@@ -123,8 +125,6 @@ Follow these steps to initialize the iOS RUM package.
       The realm name appears in the :guilabel:`Organizations` section.
 
    * To generate a RUM access token, see :ref:`rum-access-token`.
-
-   .. note:: If your application uses CocoaPods, import the iOS RUM package into your main app. If you import the package into your Pods project, the dependency might disappear when you recreate the project.
 
 2. Deploy the changes to your application.
 
