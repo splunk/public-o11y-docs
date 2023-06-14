@@ -29,7 +29,7 @@ Configure application receivers for databases
    opentelemetry/components/mongodb-atlas-receiver
    monitors-databases/mysql
    opentelemetry/components/oracledb-receiver
-   postgresql/postgresql
+   monitors-databases/postgresql
    redis/redis
    sap-hana/hana
    sql/sql

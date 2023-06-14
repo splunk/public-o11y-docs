@@ -1,17 +1,14 @@
 (prometheus-go)=
 
 # Prometheus Go
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Prometheus Go monitor. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-go` monitor type for the Smart Agent Receiver.
-
-This monitor wraps the {ref}`prometheus-exporter` to scrape Prometheus Go collector and Prometheus process collector metrics for Splunk Observability Cloud.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `prometheus-go` monitor type to wrap the {ref}`prometheus-exporter` to scrape Prometheus Go collector and Prometheus process collector metrics for Splunk Observability Cloud.
 
 This monitor is available on Linux and Windows.
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -26,6 +23,10 @@ This monitor is available on Linux and Windows.
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```
 receivers:
   smartagent/prometheus-go:
@@ -35,7 +36,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the receiver activation, you must also include the receiver in a `metrics` pipeline. To do this, add the receiver to the `service.pipelines.metrics.receivers` section of your configuration file. For example:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
@@ -69,7 +70,7 @@ The following table shows the configuration options for the `prometheus-go` moni
 
 The following metrics are available for this integration.
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/prometheus/go/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/prometheus/go/metadata.yaml"></div>
 
 ### Notes
 
@@ -78,15 +79,11 @@ The following metrics are available for this integration.
 
 ### Non-default metrics (version 4.7.0+)
 
-To emit metrics that are not default, you can add those metrics in the
-generic receiver-level `extraMetrics` config option. You don't need to add to
-`extraMetrics` any metric derived from configuration options that don't appear
- in the list of metrics.
+To emit metrics that are not default, you can add those metrics in the generic receiver-level `extraMetrics` config option. You don't need to add to `extraMetrics` any metric derived from configuration options that don't appear in the list of metrics.
 
-To see a list of metrics that will be emitted you can run `agent-status
-monitors` after configuring the receiver in a running agent instance.
+To see a list of metrics that will be emitted you can run `agent-status monitors` after configuring the receiver in a running agent instance.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
