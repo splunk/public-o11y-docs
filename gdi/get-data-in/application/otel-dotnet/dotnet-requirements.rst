@@ -19,7 +19,7 @@ The Splunk Distribution of OpenTelemetry .NET supports the following .NET versio
 - .NET 6.0 and higher
 - .NET Framework 4.6.2 and higher
 
-Support for legacy .NET version
+Support for legacy .NET versions
 ---------------------------------------------------------------
 
 Limited support is available for the following legacy versions of .NET:

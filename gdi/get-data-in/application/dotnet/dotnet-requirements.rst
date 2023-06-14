@@ -25,7 +25,7 @@ The SignalFx Instrumentation for .NET supports the following .NET versions:
 
    - .NET 6.0 and higher.
 
-Support for legacy .NET version
+Support for legacy .NET versions
 ---------------------------------------------------------------
 
 Limited support is available for the following legacy versions of .NET:
