@@ -126,7 +126,7 @@ Follow these steps to import and initialize the React Native RUM package.
 Additional step for apps using React Native 0.66 and lower
 --------------------------------------------------------------------------------
 
-To instrument applications running on React Native versions lower than 0.67, edit your metro.config.js file to let OpenTelemetry override required fields. For example:
+To instrument applications running on React Native versions lower than 0.67, edit your `metro.config.js` file to force Metro to use browser specific packages. For example:
 
 .. code-block:: javascript
 
