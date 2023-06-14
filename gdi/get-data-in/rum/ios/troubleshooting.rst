@@ -14,7 +14,7 @@ When you instrument an iOS application using the Splunk OpenTelemetry Instrument
 Steps for troubleshooting iOS OpenTelemetry issues
 =======================================================
 
-The following steps can help you troubleshoot iOS RUM agent issues:
+The following steps can help you troubleshoot iOS RUM library issues:
 
 #. :ref:`ios-check-requirements`
 #. :ref:`multiple-ios-tools`

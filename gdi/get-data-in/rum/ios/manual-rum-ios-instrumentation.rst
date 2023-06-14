@@ -5,9 +5,9 @@ Manually instrument iOS applications
 *******************************************************************************
 
 .. meta::
-   :description: Manually instrument iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
+   :description: Manually instrument iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM library to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
-You can manually instrument iOS applications for Splunk RUM using the iOS RUM agent to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
+You can manually instrument iOS applications for Splunk RUM using the iOS RUM library to collect additional telemetry, sanitize Personal Identifiable Information (PII), add global attributes, and more.
 
 .. _ios-rum-span-filtering:
 
@@ -64,7 +64,7 @@ The following example shows how to define global attributes in your code:
 Manually change screen names
 ======================================
 
-By default, the iOS RUM agent collects the name set in the :code:`ViewController`. You can customize the screen names for your application by using the ``setScreenName`` function. The custom name persists until your next call to :code:`setScreenName`.
+By default, the iOS RUM library collects the name set in the :code:`ViewController`. You can customize the screen names for your application by using the ``setScreenName`` function. The custom name persists until your next call to :code:`setScreenName`.
 
 The following example shows how to customize the name of an account settings screen:
 
@@ -81,7 +81,7 @@ When calling the :code:`setScreenName` function, automatic screen name instrumen
 Add user metadata using global attributes
 =============================================
 
-By default, the iOS RUM agent doesn't automatically link traces to users of your site. However, you might need to collect user metadata to filter or debug traces.
+By default, the iOS RUM library doesn't automatically link traces to users of your site. However, you might need to collect user metadata to filter or debug traces.
 
 You can identify users by adding global attributes from the OpenTelemetry specification, such as ``enduser.id`` and ``enduser.role``, to your spans.
 
@@ -160,7 +160,7 @@ The following example shows how to report the :code:`example_error`:
 Add server trace context from Splunk APM
 ==========================================
 
-The iOS RUM agent collects server trace context using back-end data provided by APM instrumentation through the ``Server-Timing`` header. In some cases, you might want to generate the header manually.
+The iOS RUM library collects server trace context using back-end data provided by APM instrumentation through the ``Server-Timing`` header. In some cases, you might want to generate the header manually.
 
 To create the ``Server-Timing`` header manually, provide a ``Server-Timing`` header with the name ``traceparent``, where the ``desc`` field holds the version, the trace ID, the parent ID, and the trace flag. 
 

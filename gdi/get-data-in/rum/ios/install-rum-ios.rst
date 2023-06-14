@@ -1,15 +1,13 @@
 .. _ios-rum-install:
 
 **************************************************************
-Install the iOS RUM agent for Splunk RUM
+Install the iOS RUM library for Splunk RUM
 **************************************************************
 
 .. meta::
-   :description: Instrument your iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS.
+   :description: Instrument your iOS applications for Splunk Observability Cloud real user monitoring / RUM using the iOS RUM library from the Splunk OpenTelemetry Instrumentation for iOS.
 
-You can instrument your iOS applications for Splunk RUM using the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS.
-
-To instrument your iOS application and get data into Splunk RUM, follow the instructions on this page.
+To instrument your iOS application using the iOS RUM library and get data into Splunk RUM, follow the instructions on this page. You can install the library using Swift Package Manager, CocoaPods, or by building an XCFramework.
 
 .. note:: Splunk APM is not required to instrument Splunk RUM for iOS. 
 
@@ -25,15 +23,9 @@ Splunk RUM for Mobile supports the following versions:
 
 Apple Silicon is supported.
 
-Compatibility with CocoaPods
---------------------------------------------
-
-The Splunk RUM repository contains a CocoaPod. If you wish to use the Swift Package Manager (SPM) distribution, check any potential overlap in dependencies. For example if you use a pod that has a dependency that is also a dependency in Splunk RUM, this might cause symbol collision. See :ref:`ios-naming-collisions`.
-
-
 .. _rum-ios-install:
 
-Instrument your iOS application for Splunk RUM
+Generate customized instructions using the guided setup
 ====================================================================
 
 Before you instrument and configure Splunk RUM for your iOS application, understand which data RUM collects about your application and determine the scope of what you want to monitor. See :ref:`rum-data-collected`.
@@ -42,21 +34,36 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 
 1. Log in to Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
 3. In the integration filter menu, select :guilabel:`By Use Case`.
 
 4. Select the :guilabel:`Monitor user experience` use case.
 
-5. Click the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
+5. Select the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
 
+.. _rum-ios-install-manually:
 
-.. _rum-ios-initialize:
+Install the iOS RUM library manually
+==================================================================
 
-Import and initialize the iOS RUM package
+To install the iOS RUM library manually, follow these steps:
+
+- :ref:`ios-rum-add-package`
+- :ref:`rum-ios-initialize`
+- :ref:`rum-ios-crash-reporting`
+
+.. _ios-rum-add-package:
+
+Add the package in Xcode
 ---------------------------------------------------------
 
-Follow these steps to import and initialize the iOS RUM package.
+To add the iOS RUM package to your project, follow the steps for your package manager. To build an XCFramework, see :ref:`xcframeork-ios-rum`.
+
+Swift Package Manager (SPM)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To install the iOS RUM library using the Swift Package Manager (SPM) follow these steps.
 
 1. In Xcode, select :strong:`File`, then :strong:`Add Packages...` or :strong:`File`, then :strong:`Swift Packages`, then :strong:`Add Package Dependency`, and enter the following URL in the search bar:
 
@@ -64,9 +71,29 @@ Follow these steps to import and initialize the iOS RUM package.
 
 2. Select :guilabel:`Add Package` to install the package.
 
-   .. note:: Add the SPM package to the app's project, not to the Pods project in your workspace.
+.. note:: Add the SPM package to the app's project, not to the Pods project in your workspace.
 
-3. Initialize the iOS RUM agent with your configuration parameters:
+CocoaPods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To install the iOS RUM library using CocoaPods follow these steps.
+
+1. Make sure your project is using CocoaPods.
+
+2.Add ``pod 'SplunkOtel`` to your Podfile.
+
+3. Run ``pod install --repo-update`` in the directory where the Podfile is located.
+
+4. After installation, make sure to open the .xcworkspace file instead of the .xcodeproj file.
+
+.. _rum-ios-initialize:
+
+Initialize the iOS RUM package
+----------------------------------------------------------
+
+Follow these steps to initialize the iOS RUM package.
+
+1. Initialize the iOS RUM library with your configuration parameters:
 
    .. tabs::
 
@@ -89,7 +116,7 @@ Follow these steps to import and initialize the iOS RUM package.
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
@@ -99,18 +126,18 @@ Follow these steps to import and initialize the iOS RUM package.
 
    .. note:: If your application uses CocoaPods, import the iOS RUM package into your main app. If you import the package into your Pods project, the dependency might disappear when you recreate the project.
 
-4. Deploy the changes to your application.
+2. Deploy the changes to your application.
 
 .. _rum-ios-crash-reporting:
 
 Activate crash reporting
 -------------------------------------
 
-The Splunk iOS Crash Reporting module adds crash reporting to the iOS RUM agent using PLCrashReporter.
+The Splunk iOS Crash Reporting module adds crash reporting to the iOS RUM library using PLCrashReporter.
 
-.. caution:: Before activating crash reporting in the iOS RUM agent, deactivate any other crash reporting package or library in your application. Existing crash reporting functionality might produce unexpected results, including build failures.
+.. caution:: Before activating crash reporting in the iOS RUM library, deactivate any other crash reporting package or library in your application. Existing crash reporting functionality might produce unexpected results, including build failures.
 
-To activate crash reporting in the iOS RUM agent, follow these steps:
+To activate crash reporting in the iOS RUM library, follow these steps:
 
 1. In Xcode, select :strong:`File`, then :strong:`Add Packages...` or :strong:`File`, then :strong:`Swift Packages`, then :strong:`Add Package Dependency`, and enter the following URL in the search bar:
 
@@ -148,7 +175,7 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
@@ -217,7 +244,7 @@ The APM environment variable for controlling the ``Server-Timing`` header  is ``
 
 .. _ios-webview-instrumentation:
 
-Instrument iOS WebViews using the Browser RUM agent
+Instrument iOS WebViews using the Browser RUM library
 ====================================================================
 
 You can use Mobile RUM instrumentation and Browser RUM instrumentation simultaneously to see RUM data combined in one stream. You can do this by sharing the ``splunk.rumSessionId`` between both instrumentations.

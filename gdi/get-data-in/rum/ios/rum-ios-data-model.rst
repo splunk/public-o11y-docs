@@ -7,7 +7,7 @@ iOS RUM data model
 .. meta::
    :description: Understand which RUM data you collect from iOS applications when using Splunk Real User Monitoring (RUM).
 
-The iOS RUM agent includes a package that collects the following types of data about your iOS application.
+The iOS RUM library includes a package that collects the following types of data about your iOS application.
 
 Common data types
 ==============================================
@@ -135,7 +135,7 @@ The following table describes each value of ``SpanKind``:
 Default attributes
 ===================
 
-By default, the iOS RUM agent adds the following attributes to all spans:
+By default, the iOS RUM library adds the following attributes to all spans:
 
 .. list-table:: 
    :widths: 20 10 70
@@ -164,7 +164,7 @@ By default, the iOS RUM agent adds the following attributes to all spans:
 Resource attributes
 ==============================================
 
-By default, the iOS RUM agent adds the following resource attributes to all spans:
+By default, the iOS RUM library adds the following resource attributes to all spans:
 
 .. list-table:: 
    :widths: 20 10 70
@@ -196,12 +196,12 @@ By default, the iOS RUM agent adds the following resource attributes to all span
 Instrumentation attributes
 ==============================================
 
-The iOS RUM agent collects the following data using its instrumentations. To activate or deactivate specific instrumentations, see :ref:`ios-rum-instrumentation-settings`.
+The iOS RUM library collects the following data using its instrumentations. To activate or deactivate specific instrumentations, see :ref:`ios-rum-instrumentation-settings`.
 
 Crash reporting
 ----------------------------------------------------
 
-The iOS RUM agent adds the following crash reporting attributes to spans that represent uncaught exceptions:
+The iOS RUM library adds the following crash reporting attributes to spans that represent uncaught exceptions:
 
 .. list-table:: 
    :widths: 20 10 70
@@ -285,7 +285,7 @@ Slow rendering detection spans have the following attribute:
 HTTP clients
 ------------------------------------
 
-The iOS RUM agent includes instrumentation for the NSURLConnection clients. To activate the instrumentation, see :ref:`ios-rum-instrumentation-settings`.
+The iOS RUM library includes instrumentation for the NSURLConnection clients. To activate the instrumentation, see :ref:`ios-rum-instrumentation-settings`.
 
 The HTTP client instrumentation collects the following OpenTelemetry HTTP attributes:
 

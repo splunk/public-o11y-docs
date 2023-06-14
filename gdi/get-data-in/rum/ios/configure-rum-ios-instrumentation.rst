@@ -7,9 +7,9 @@ Configure the Splunk iOS RUM instrumentation
 .. meta::
    :description: Configure the Splunk Observability Cloud real user monitoring / RUM instrumentation for your iOS applications.
 
-You can configure the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
+You can configure the iOS RUM library from the Splunk OpenTelemetry Instrumentation for iOS to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 
-To configure the iOS RUM agent, pass the settings as methods when initializating the ``SplunkRum`` module. The Observability Cloud realm and RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
+To configure the iOS RUM library, pass the settings as methods when initializating the ``SplunkRum`` module. The Observability Cloud realm and RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
 
 The following example shows how to configure the RUM token, realm, environment name, and other settings:
 
@@ -51,7 +51,7 @@ The following example shows how to configure the RUM token, realm, environment n
 General settings
 ======================================================
 
-Use the following settings to configure the iOS RUM agent:
+Use the following settings to configure the iOS RUM library:
 
 .. list-table:: 
    :header-rows: 1
