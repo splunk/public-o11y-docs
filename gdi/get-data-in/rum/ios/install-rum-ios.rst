@@ -55,10 +55,10 @@ To install the iOS RUM library manually, follow these steps:
 
 .. _ios-rum-add-package:
 
-Add the package in Xcode
+Add the dependency in Xcode
 ---------------------------------------------------------
 
-To add the iOS RUM package to your project, follow the steps for your package manager. To build an XCFramework, see :ref:`xcframeork-ios-rum`.
+To add the iOS RUM package to your project, follow the steps for your dependency manager. To build an XCFramework, see :ref:`xcframeork-ios-rum`.
 
 Swift Package Manager (SPM)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -86,7 +86,6 @@ To install the iOS RUM library using CocoaPods follow these steps:
 
 4. After installing the pod, make sure to open the .xcworkspace file instead of the .xcodeproj file.
 
-.. note:: Import the iOS RUM package into your main app. If you import the package into your Pods project, the dependency might disappear when you recreate the project.
 
 .. _rum-ios-initialize:
 
@@ -131,13 +130,23 @@ Follow these steps to initialize the iOS RUM package.
 .. _rum-ios-crash-reporting:
 
 Activate crash reporting
--------------------------------------
+==============================================
 
 The Splunk iOS Crash Reporting module adds crash reporting to the iOS RUM library using PLCrashReporter.
 
 .. caution:: Before activating crash reporting in the iOS RUM library, deactivate any other crash reporting package or library in your application. Existing crash reporting functionality might produce unexpected results, including build failures.
 
-To activate crash reporting in the iOS RUM library, follow these steps:
+To activate crash reporting in the iOS RUM library, follow these steps.
+
+Add the dependency
+------------------------------------------------
+
+To add the iOS Crash Reporting package to your project, follow the steps for your package manager.
+
+Swift Package Manager (SPM)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To install the iOS RUM library using the Swift Package Manager (SPM) follow these steps:
 
 1. In Xcode, select :strong:`File`, then :strong:`Add Packages...` or :strong:`File`, then :strong:`Swift Packages`, then :strong:`Add Package Dependency`, and enter the following URL in the search bar:
 
@@ -145,45 +154,59 @@ To activate crash reporting in the iOS RUM library, follow these steps:
 
 2. Select :guilabel:`Add Package` to install the package.
 
-3. Initialize the crash reporting module with your configuration parameters:
+CocoaPods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   .. tabs::
+To install the iOS Crash Reporting package using CocoaPods follow these steps:
 
-      .. code-tab:: swift Swift
+1. Make sure your project is using CocoaPods.
 
-         import SplunkOtel
-         import SplunkOtelCrashReporting
+2. Add ``pod 'SplunkOtelCrashReporting`` to your Podfile.
 
-         import SplunkOtel
-         //..
-         SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
-            .deploymentEnvironment(environment: "<environment>")
-            .build()
-         // Initialize crash reporting module after the iOS agent
-         SplunkRumCrashReporting.start()
+3. Run ``pod install --repo-update`` in the directory where the Podfile is located.
 
-      .. code-tab:: objective-c Objective-C
+4. After installing the pod, make sure to open the .xcworkspace file instead of the .xcodeproj file.
 
-         @import SplunkOtel;
-         @import SplunkOtelCrashReporting;
-         //...
-         SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithRealm:@"<realm>"  rumAuth: @"<rum-token>"]];
-         [builder deploymentEnvironmentWithEnvironment:@"<environment-name>"];
-         [builder build];
-         // Initialize crash reporting module after the iOS agent
-         [SplunkRumCrashReporting start]
+Initialize Crash Reporting
+---------------------------------------------------
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+Initialize the crash reporting module with your configuration parameters:
 
-         1. Open the navigation menu in Observability Cloud.
-         2. Select :menuselection:`Settings`.
-         3. Select your username. 
+.. tabs::
 
-      The realm name appears in the :guilabel:`Organizations` section.
-      
-   * To generate a RUM access token, see :ref:`rum-access-token`.
+   .. code-tab:: swift Swift
 
-4. Deploy the changes to your application.
+      import SplunkOtel
+      import SplunkOtelCrashReporting
+
+      import SplunkOtel
+      //..
+      SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
+         .deploymentEnvironment(environment: "<environment>")
+         .build()
+      // Initialize crash reporting module after the iOS agent
+      SplunkRumCrashReporting.start()
+
+   .. code-tab:: objective-c Objective-C
+
+      @import SplunkOtel;
+      @import SplunkOtelCrashReporting;
+      //...
+      SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithRealm:@"<realm>"  rumAuth: @"<rum-token>"]];
+      [builder deploymentEnvironmentWithEnvironment:@"<environment-name>"];
+      [builder build];
+      // Initialize crash reporting module after the iOS agent
+      [SplunkRumCrashReporting start]
+
+* ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+
+      1. Open the navigation menu in Observability Cloud.
+      2. Select :menuselection:`Settings`.
+      3. Select your username. 
+
+   The realm name appears in the :guilabel:`Organizations` section.
+   
+* To generate a RUM access token, see :ref:`rum-access-token`.
 
 .. note:: Symbolication is not supported.
 
