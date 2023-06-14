@@ -246,7 +246,7 @@ You can exclude or include logs using resource attributes or OTTL conditions. Fo
 Filter Kubernetes elements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can exclude or include Kubernetes elements (such as containers, pods, nodes, namespaces, or clusters) with the following configuration:
+You can exclude or include Kubernetes elements, such as containers, pods, nodes, namespaces, or clusters, with the following configuration:
 
 .. code-block:: yaml 
 
