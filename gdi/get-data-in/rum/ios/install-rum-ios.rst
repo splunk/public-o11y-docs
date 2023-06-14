@@ -63,7 +63,7 @@ To add the iOS RUM package to your project, follow the steps for your package ma
 Swift Package Manager (SPM)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To install the iOS RUM library using the Swift Package Manager (SPM) follow these steps.
+To install the iOS RUM library using the Swift Package Manager (SPM) follow these steps:
 
 1. In Xcode, select :strong:`File`, then :strong:`Add Packages...` or :strong:`File`, then :strong:`Swift Packages`, then :strong:`Add Package Dependency`, and enter the following URL in the search bar:
 
@@ -76,11 +76,11 @@ To install the iOS RUM library using the Swift Package Manager (SPM) follow thes
 CocoaPods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To install the iOS RUM library using CocoaPods follow these steps.
+To install the iOS RUM library using CocoaPods follow these steps:
 
 1. Make sure your project is using CocoaPods.
 
-2.Add ``pod 'SplunkOtel`` to your Podfile.
+2. Add ``pod 'SplunkOtel`` to your Podfile.
 
 3. Run ``pod install --repo-update`` in the directory where the Podfile is located.
 
