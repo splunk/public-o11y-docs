@@ -44,7 +44,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/nginx
    monitors-hosts/ntpq   
    monitors-hosts/php-fpm
-   procstat/procstat
+   monitors-hosts/procstat
    solr/solr
    supervisor/supervisor
    systemd/collectd-systemd
