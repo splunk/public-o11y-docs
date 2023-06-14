@@ -16,7 +16,7 @@ Configure application exporters and receivers for monitoring
    Istio <get-data-in/application/istio/istio>
    monitors-monitoring/jaeger-grpc
    monitors-monitoring/nagios
-   prometheus-exporter/prometheus-exporter
+   monitors-monitoring/prometheus-exporter
    prometheus-go/prometheus-go
    prometheus-nginx-ingress/prometheus-nginx-ingress
    prometheus-nginx-vts/prometheus-nginx-vts
