@@ -116,7 +116,7 @@ For most AWS regions, you need the following to authenticate:
 * An :ref:`AWS IAM role <aws-iam-role>`. 
 * An external ID from Observability Cloud. An external ID is a random string used to establish a trust relationship between Observability Cloud and your AWS account. It's automatically generated for you when you create a new AWS integration in Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
   
-For the :strong:`GovCloud or China regions`, select the option to authenticate using a secure token, which combines an access key ID and a secret access key.
+For the :strong:`GovCloud or China regions`, select the option to authenticate using a secure token, which combines an access key ID and a secret access key. When prompted for an access key practice, select :guilabel:`Third-party service`.
 
 .. _aws-iam-policy:
 
@@ -130,7 +130,6 @@ The AWS IAM policy is a JSON object to which Observability Cloud refers for perm
 
 #. Log into your Amazon Web Services account and look for the :guilabel:`Identity and Access Management` service.
 #. Create a new policy. In the :strong:`JSON` tab, replace the placeholder JSON with the pertinent AWS IAM policy JSON. Guided setup provides this policy in the :guilabel:`Prepare AWS Account` step. See also some :ref:`policy examples <aws-api-create-policy-role>`.
-#. When prompted for an access key practice, select :guilabel:`Third-party service`.
 #. Follow the instructions to complete the process and create the policy.
 
 .. :note:: The default AWS IAM policy supports metrics and log collection. To learn how to add support for CloudWatch Metric Streams, see :ref:`aws-wizard-metricstreams`.
