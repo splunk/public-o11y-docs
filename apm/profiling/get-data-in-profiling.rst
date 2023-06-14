@@ -149,6 +149,11 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       AlwaysOn Profiling requires .NET 6.0 or higher.
 
+      Limited support is available for the following legacy versions of .NET:
+
+         - CPU Profiling: .NET Core 3.1 and .NET 5.x
+         - Memory Profiling: .NET Core 5.x
+
       - Activate the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
       - Activate Memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
       - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
