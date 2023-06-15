@@ -76,7 +76,7 @@ The following example shows all available settings:
 
 In the endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
