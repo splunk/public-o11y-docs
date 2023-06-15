@@ -29,7 +29,7 @@ Resolution logic
 
 A detector auto resolves if it can't evaluate the ``when()`` statement for the time interval you specified for ``auto_resolve_after``  mechanism. Auto-resolve can happen in the following cases:
  
-* When a metric time series (MTS) lapses into inactivity, it stops reporting, and triggers an auto-resolve countdown clock that stops if reporting resumes within your specified time interval. Resumed reporting frees the countdown clock to re-trigger if reporting stops again. If reporting does not resume within the interval you've specified, then the involved MTS is considered no longer relevant, and the alert for it is auto-cleared.
+* When a metric time series (MTS) lapses into inactivity, it stops reporting and triggers an auto-resolve countdown clock. If reporting resumes within your specified time interval, the countdown clock is freed to re-trigger in case reporting stops again. If reporting does not resume within the interval you've specified, then the involved MTS is considered no longer relevant, and the alert for it is auto-cleared.
 
 * When an MTS has been reporting data without interruption for the specified time interval but doesn't send enough data points for the ``when()`` statement to be evaluated, the alert auto-clears. For example, you have the following condition for auto-clearing your alerts:
   
