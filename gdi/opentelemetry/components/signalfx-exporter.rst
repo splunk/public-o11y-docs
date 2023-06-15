@@ -7,6 +7,8 @@ SignalFx exporter
 .. meta::
       :description: The SignalFx exporter allows the OpenTelemetry Collector to send traces, logs, and metrics to SignalFx endpoints. Read on to learn how to configure the component.
 
+.. caution:: The SignalFx exporter creates and excludes metrics by default. Read on to understand which metrics are created, which ones are filtered out, and learn how to modify it.
+
 The SignalFx exporter allows the OpenTelemetry Collector to send metrics and events to SignalFx endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 .. note:: For information on the receiver, see :ref:`signalfx-receiver`.
@@ -247,6 +249,74 @@ Use the ``correlation`` setting to control the syncing of service and environmen
 * ``sync_attributes`` : Map containing key of the attribute to read from spans to sync to dimensions specified as the value. Defaults to ``{"k8s.pod.uid": "k8s.pod.uid", "container.id": "container.id"}``.
 
 See more options in the Settings section.
+
+.. _exclusion-rules:
+
+Translation rules and metric transformations
+========================================================
+
+Use the ``translation_rules`` config field to transform metrics, or produce custom metrics by copying, calculating, or aggregating other metric values without requiring an additional processor. 
+
+Translation rules currently allow the following actions:
+
+* ``aggregate_metric``: Aggregates a metric through removal of specified dimensions.
+* ``calculate_new_metric``: Creates a new metric via operating on two consistuent ones.
+* ``convert_values``: Convert float values to int or int to float for specified metric names.
+* ``copy_metrics``: Creates a new metric as a copy of another.
+* ``delta_metric``: Creates a new delta metric for a specified non-delta one.
+* ``divide_int``: Scales a metric's integer value by a given factor.
+* ``drop_dimensions``: Drops dimensions for specified metrics, or globally.
+* ``drop_metrics``: Drops all metrics with a given name.
+* ``multiply_float``: Scales a metric's float value by a given float factor.
+* ``multiply_int``: Scales a metric's int value by a given int factor.
+* ``rename_dimension_keys``: Renames dimensions for specified metrics, or globally.
+* ``rename_metrics``: Replaces a given metric name with specified one.
+* ``split_metric``: Splits a given metric into multiple new ones for a specified dimension.
+
+Default translation rules and generated metrics
+----------------------------------------------------------
+
+The SignalFx exporter uses the translation rules defined in :new-page:`translation/constants.go <https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/exporter/signalfxexporter/internal/translation/constants.go>` by default. The default rules create metrics which are reported directly to Infrastructure Monitoring. If you want to change any of their attributes or values, you need to either modify the translation rules or their constituent host metrics.
+
+By default, the SignalFx exporter creates the following aggregated metrics from the :ref:`host-metrics-receiver`:
+
+* ``cpu.idle``
+* ``cpu.interrupt``
+* ``cpu.nice``
+* ``cpu.num_processors``
+* ``cpu.softirq``
+* ``cpu.steal``
+* ``cpu.system``
+* ``cpu.user``
+* ``cpu.utilization``
+* ``cpu.utilization_per_core``
+* ``cpu.wait``
+* ``disk.summary_utilization``
+* ``disk.utilization``
+* ``disk_ops.pending``
+* ``disk_ops.total``
+* ``memory.total``
+* ``memory.utilization``
+* ``network.total``
+* ``process.cpu_time_seconds``
+* ``system.disk.io.total``
+* ``system.disk.operations.total``
+* ``system.network.io.total``
+* ``system.network.packets.total``
+* ``vmpage_io.memory.in``
+* ``vmpage_io.memory.out``
+* ``vmpage_io.swap.in``
+* ``vmpage_io.swap.out``
+
+In addition to the aggregated metrics, the default rules make available the following "per core" custom hostmetrics. The CPU number is assigned to the dimension ``cpu``:
+
+* ``cpu.interrupt``
+* ``cpu.nice``
+* ``cpu.softirq``
+* ``cpu.steal``
+* ``cpu.system``
+* ``cpu.user``
+* ``cpu.wait``
 
 Settings
 ======================
