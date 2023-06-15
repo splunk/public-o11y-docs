@@ -2,7 +2,9 @@
 
 # View organization metrics for Splunk Observability Cloud
 
-Splunk Observability Cloud provides the following metrics to measure your organization's usage of the platform:
+Splunk Observability Cloud provides the specific metrics so you can measure your organization's usage of the platform.
+
+Org metrics include:
 
 * **Ingest metrics**: Measure the data you're sending to Infrastructure Monitoring, such as the number of data points you've sent.
 
@@ -12,7 +14,7 @@ Splunk Observability Cloud provides the following metrics to measure your organi
 
 * **Resource metrics**: Measure your use of resources that you can specify limits for, such as the number of custom metric time series (MTS) you've created.
 
-You're not charged for these metrics, and they don't count against any limits.
+You're not charged for these metrics, and they don't count against any {ref}`system limits <per-product-limits>`.
 
 (access-org-metrics)=
 
@@ -74,9 +76,10 @@ The metric `sf.org.numDetectorsAborted` monitors the number of detectors that In
 
 To learn more, see {ref}`Add context to metrics using events <events-intro>`.
 
+(org-metrics-track-limits)=
 ### Metrics that track system limits
 
-These metrics track limits that Infrastructure Monitoring enforces for your organization:
+These metrics track limits that Infrastructure Monitoring enforces for your organization. If you exceed these limits, your data might be dropped:
 
 * `sf.org.limit.activeTimeSeries` (gauge): Maximum number of active MTS, within a moving window of the past 25 hours, that your organization can have. If you exceed this limit, Infrastructure Monitoring stops accepting data points for new MTS, but continues to accept data points for existing MTS. To monitor your usage against the limit, use the metric `sf.org.numActiveTimeSeries`.
 
@@ -101,13 +104,25 @@ These metrics track limits that Infrastructure Monitoring enforces for your orga
 (org-metrics-throttling)=
 ### Metrics that track data throttling
 
-If you exceed your system limits, Obervability Cloud might throttle the data you send in. 
+As explained in the section above, certain system limits act as a "ceiling", or a maximum number of elements allowed in Obsevability Cloud. But the platform also limits ingestion pace. If you exceed your rate limits, Obervability Cloud might throttle (or slow down) the data you send in. 
 
-While org metrics whose name contains `limit` or `limited` indicate you've hit a ceiling (a maximum number of "items" in your system), metrics with `throttled` (for example, `sf.org.numThrottledMetricTimeSeriesCreateCalls`) show that you’ve hit a rate/timeUnit, and therefore you can only send in so many datapoints per minute.  
+While org metrics whose name contains `limit` or `limited` indicate you've hit an amount limit, metrics with `throttled` (for example, `sf.org.numThrottledMetricTimeSeriesCreateCalls`) show that you’ve hit a rate/timeUnit, and therefore you won't be able to send in more datapoints per minute.  
 
-See more in [System limits and data throttling](https://docs.splunk.com/Observability/references/per-product-limits.html).
+See more in {ref}`Per product system limits <per-product-limits>`.
 
-### Authentication error metrics 
+### Compare `gross` and `num` metric values
+
+Some metrics report a `gross` value and a `num` value. Compare the `gross` and `num` values of a metric to verify if the system has limited or filtered out data. 
+
+* A `gross` metric reports the total number of data points the system receives before any throttling or filtering kicks in.
+
+* A `num` metric reports the total number of data points the system receives after it completes any throttling or filtering.
+
+  * Data is limited or throttled if you exceed your system limits, as explained in {ref}`Metrics that track system limits <org-metrics-track-limits>`.
+
+  * Data can be automatically filtered out by certain components, such as the {ref}`SignalFx exporter <signalfx-exporter>`.
+
+### Cloud authentication error metrics 
 
 Editing a role and removing a user's permissions to cloud services might generate authentication errors from your cloud service provider. When this happens, Observability Cloud integrations won't work properly, and won't be able to collect data and metadata from your services.
 
@@ -123,19 +138,11 @@ If you're getting any of these errors, you need to fix your roles or tokens so O
 
 You can use these errors in {ref}`dashboards <dashboards>` to detect whether you're experiencing this issues. 
 
-### Compare `gross` and `num` metric values
-
-Some metrics report a `gross` value and a `num` value. Compare the `gross` and `num` values of a metric to learn about how the system limits or filters data for whatever the metric represents.
-
-* A `gross` metric reports the total number of data points the system receives before any throttling or filtering kicks in.
-
-* A `num` metric reports the total number of data points the system receives after it completes any throttling or filtering.
-
 ## List of organization metrics
 
-Use the {ref}`Metric Finder <metrics-finder-and-metadata-catalog>` to find all org metrics.
+Use the {ref}`Metric Finder <metrics-finder-and-metadata-catalog>` to find your org metrics.
 
-These are the main organization metrics provided by Observability Cloud:
+Observability Cloud provides the following organization metrics:
 
 <div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/signalfx-org-metrics/metrics.yaml"></div>
 
