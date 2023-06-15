@@ -9,38 +9,147 @@ Splunk Observability Cloud service description
 .. meta::
     :description: Features, capabilities, limitations, and constraints of Splunk Observability Cloud, as well as our responsibilities as Software as a Service provider.
 
+Welcome to the Splunk Observability Cloud Platform service description. This document describes the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and our responsibilities to you as a Software as a Service provider. This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following section. If you have questions after reading any of this material, contact your Splunk sales representative.
+
+
 Overview of Splunk Observability Cloud
-======================================================
+===========================================================
+
+Splunk Observability Cloud is a modern SaaS solution for infrastructure monitoring, custom metrics, APM (Application Performance Monitoring), RUM (Real User Monitoring), synthetic monitoring, always-on profiling, and incident intelligence. It also offers a direct integration with Splunk Cloud Platform logs through LogObserver Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
+
+Splunk Observability Cloud allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can choose from over 100 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
+
+Your subscription to the Splunk Observability Cloud service can be host-based or usage-based. By exception, you might be on an ingest-based subscription that is sized for data volume ingested. For more information, see Subscription types. Unless otherwise noted, Splunk manages and updates the Splunk Observability Cloud service uniformly, so all customers of Splunk Observability Cloud receive the most current features and functionality.
+
+For additional information, see:
+
+- :ref:`welcome`
+- :ref:`core2o11y-landing`
 
 Service term and policies
-======================================================
+===========================================================
+
+Existing:
+
+Splunk General Terms:
+https://www.splunk.com/GeneralTerms
+
+Splunk Data Security and Privacy: https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy.html
+
+Splunk Support:
+https://www.splunk.com/en_us/customer-success/support-programs.html
+
+Splunk Observability Cloud - Service Level Schedule:
+https://www.splunk.com/en_us/legal/observability-service-level-schedule.html
+
+Splunk Observability Cloud - Security Addendum:
+https://www.splunk.com/en_us/legal/observability-service-level-schedule.html
+
+https://www.splunk.com/en_us/legal/splunk-specific-terms.html?301=/specificterms 
 
 Levels of support / maturity
-======================================================
+===========================================================
+
+Splunk SaaS Products Delivery Model https://docs.google.com/document/d/177WkEL62aU7ECQJ676rC9wKwtrs5xEwR56ZcUEBhUhA/edit
+
+https://splunk.atlassian.net/wiki/spaces/PROD/pages/1078211402186/How+to+deprecate+something+in+an+Observability+product
+
+https://docs.splunk.com/Documentation/Splunk/latest/ReleaseNotes/Deprecatedfeatures#What_does_.22deprecated.22_mean.3F 
 
 Data ingestion and retention
-======================================================
+===========================================================
+
+ https://docs.splunk.com/Observability/references/data-retention.html#nav-Data-retention 
+
+https://docs.splunk.com/Observability/admin/subscription-usage/subscription-usage-overview.html#nav-Monitor-subscription-usage-and-billing 
 
 Subscription types, expansions, renewals, and terminations
 ===========================================================
 
+https://www.splunk.com/en_us/products/pricing/faqs/observability.html 
+
+https://www.splunk.com/en_us/products/pricing/observability.html
+
+https://docs.splunk.com/Observability/admin/subscription-usage/apm-billing-usage-index.html 
+
+CONFIDENTIAL?
+ 
+https://docs.google.com/presentation/d/1H7ssnLS2sQucbR8lnMpEKa6ruMboNgVfrKb3PeXMrSw/edit#slide=id.ge1fc02906c_2_430 
+
+https://docs.google.com/document/d/1b4Pl1_s18htVMlAKjDbwzX3kEICzntJay0yR5Ksjk_E/edit?pli=1#heading=h.ugk4ysx393bk 
+
 Available regions
-======================================================
+===========================================================
+
+https://splunk.atlassian.net/wiki/spaces/INFRA/pages/1078267045897/SignalFx+Realms 
+
+P&T RAC - Regional Availability & Compliance Dashboard (powered by the RDMP JIRA project): https://products-telemetry.splunkcloud.com/en-US/app/fieldpm_field/regional_availability__compliance_roadmap__ga
+
 
 Compliance and certifications
-======================================================
+===========================================================
+
+We currently have Compliance certs available here in this RAC dashboard (click the compliance tab): https://products-telemetry.splunkcloud.com/en-US/app/fieldpm_field/regional_availability__compliance_roadmap__ga
+
+Unknown / couldn’t find
+
+SOC2 / HIPAA
+
 
 Security
-======================================================
+===========================================================
+
+https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html 
+
+https://docs.splunk.com/Observability/admin/SSO/sso-about.html#nav-About-SSO-integrations-for-Splunk-Observability-Cloud 
+
+https://docs.splunk.com/Observability/admin/authentication-tokens/tokens.html#nav-Create-and-manage-authentication-tokens
+
+https://docs.splunk.com/Observability/admin/allow-services.html#nav-Allow-Splunk-Observability-Cloud-services-in-your-network
+
 
 Service level agreements
-======================================================
+===========================================================
+
+https://www.splunk.com/en_us/legal/observability-service-level-schedule.html 
+
+https://docs.splunk.com/Observability/references/per-product-limits.html#nav-Per-product-system-limits 
+
+https://docs.splunk.com/Observability/admin/org-metrics.html#nav-View-organization-metrics
+
+
 
 Supported versions
-======================================================
+===========================================================
+
+Existing:
+
+https://docs.splunk.com/Observability/references/supported-browsers.html#nav-Supported-browsers
+
+Missing:
+
+Unified GDI/o11y requirements and compatibility https://signalfuse.atlassian.net/browse/DOCS-5109 
 
 Technical support
-======================================================
+===========================================================
+
+https://www.splunk.com/en_us/customer-success/support-programs.html?301=/en_us/support-and-services/support-programs.html 
+
+https://docs.splunk.com/Documentation/SplunkCloud/9.0.2209/Service/SplunkCloudservice#Maintenance 
+
+https://docs.splunk.com/Observability/get-started/support.html#nav-Support 
+
+
 
 Users and authentication
-======================================================
+===========================================================
+
+Existing:
+
+https://docs.splunk.com/Observability/admin/admin.html#nav-Set-up-and-administer-Splunk-Observability-Cloud
+
+https://docs.splunk.com/Observability/admin/users/manage-users.html#nav-Create-and-manage-users
+
+https://docs.splunk.com/Observability/admin/teams/manage-teams.html#nav-Create-and-manage-teams
+
+RBAC
