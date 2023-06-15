@@ -48,33 +48,24 @@ To access the Organization Overview page, follow these steps:
 
 This section provides tips that can help you interpret and work with usage metrics.
 
-(metrics-by-token)=
+### Data limiting, data throttling, and data filtering
 
-### Metrics for values by token
+Data is limited or throttled if you exceed your entitlements or system limits, as explained in {ref}`Metrics that track system limits <org-metrics-track-limits>` and {ref}`Metrics that track system limits <org-metrics-throttling>`.
 
-In some cases, Infrastructure Monitoring has two similar metrics:
+Data is also filtered out of the platform, and can be tracked with {ref}`certain org metric values <org-metrics-gross-num>`:  
 
-* One metric, such as `sf.org.numAddDatapointCalls`, represents the total across your entire organization.
+* Data can be automatically filtered out by certain components, such as the {ref}`SignalFx exporter <signalfx-exporter>`. 
+  
+* Invalid data is also filtered once it reaches the platform. For example, data points without a metric name or value are invalid and will be dropped. Same with spans without a trace or span id.  
 
-* The similar metric, `sf.org.numAddDatapointCallsByToken`, represents the total for each unique access token you use.
+(org-metrics-gross-num)=
+### Compare `gross` and `num` metric values
 
-The sum of all the by token metric values for a measurement might be less than the total value metric value. For example, the sum, of all `sf.org.numAddDatapointCallsByToken` values might be less than the value of `sf.org.numAddDatapointCalls`. The sums differ because Infrastructure Monitoring doesn't use a token to retrieve data from cloud services you've integrated. Infrastructure Monitoring counts the data point calls for the integrated services, but it doesn't have a way to count the calls for any specific token.
+Some metrics report a `gross` value and a `num` value. Compare the `gross` and `num` values of a metric to verify if the system has limited or filtered out data. 
 
-This difference in values applies to AWS CloudWatch, GCP StackDriver, and AppDynamics.
+* A `gross` metric reports the total number of data points the system receives before any throttling or filtering kicks in.
 
-### Metrics with values for each metric type
-
-Some metrics have a value for each metric type (counter, cumulative counter, or gauge), so you have three MTS per metric. Each MTS has a dimension named `category` with a value of `COUNTER`, `CUMULATIVE_COUNTER`, or `GAUGE`. Because you can have multiple MTS for these metrics, you need to use the `sum()` SignalFlow function to see the total value.
-
-For example, you might receive three MTS for `sf.org.numMetricTimeSeriesCreated`, one for the number of MTS that are counters, another for the number of MTS that are cumulative counters, and a third for the number of MTS that are gauges.
-
-Also, you can filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
-
-### A metric that counts stopped detectors
-
-The metric `sf.org.numDetectorsAborted` monitors the number of detectors that Infrastructure Monitoring stopped because the detector reached a resource limit. In most cases, the detector exceeds the limit of 250K MTS. This condition also generates the event `sf.org.abortedDetectors`, which records details including the detector ID, the reason it stopped, and the value or limit of MTS or data points, whichever caused the detector to stop.
-
-To learn more, see {ref}`Add context to metrics using events <events-intro>`.
+* A `num` metric reports the total number of data points the system receives after it completes any throttling or filtering.
 
 (org-metrics-track-limits)=
 ### Metrics that track system limits
@@ -108,21 +99,34 @@ As explained in the previous section, certain system limits act as a "ceiling", 
 
 While org metrics whose name contains `limit` or `limited` indicate you've hit an amount limit, metrics with `throttled` (for example, `sf.org.numThrottledMetricTimeSeriesCreateCalls`) show that you’ve hit a rate/time limit, and therefore you won't be able to send in more data points per minute.  
 
-See more in {ref}`Per product system limits <per-product-limits>`.
+See more in {ref}`Per product system limits <per-product-limits>`.  
 
-### Compare `gross` and `num` metric values
+(metrics-by-token)=
+### Metrics for values by token
 
-Some metrics report a `gross` value and a `num` value. Compare the `gross` and `num` values of a metric to verify if the system has limited or filtered out data. 
+In some cases, Infrastructure Monitoring has two similar metrics:
 
-* A `gross` metric reports the total number of data points the system receives before any throttling or filtering kicks in.
+* One metric, such as `sf.org.numAddDatapointCalls`, represents the total across your entire organization.
 
-* A `num` metric reports the total number of data points the system receives after it completes any throttling or filtering.
+* The similar metric, `sf.org.numAddDatapointCallsByToken`, represents the total for each unique access token you use.
 
-  * Data is limited or throttled if you exceed your system limits, as explained in {ref}`Metrics that track system limits <org-metrics-track-limits>`.
+The sum of all the by token metric values for a measurement might be less than the total value metric value. For example, the sum, of all `sf.org.numAddDatapointCallsByToken` values might be less than the value of `sf.org.numAddDatapointCalls`. The sums differ because Infrastructure Monitoring doesn't use a token to retrieve data from cloud services you've integrated. Infrastructure Monitoring counts the data point calls for the integrated services, but it doesn't have a way to count the calls for any specific token.
 
-  * Data can be automatically filtered out by certain components, such as the {ref}`SignalFx exporter <signalfx-exporter>`. 
-  
-  * Invalid data is also filtered. For example, data points without a metric name or value are invalid and will be dropped. Same with spans without a trace or span id.  
+This difference in values applies to AWS CloudWatch, GCP StackDriver, and AppDynamics.
+
+### Metrics with values for each metric type
+
+Some metrics have a value for each metric type (counter, cumulative counter, or gauge), so you have three MTS per metric. Each MTS has a dimension named `category` with a value of `COUNTER`, `CUMULATIVE_COUNTER`, or `GAUGE`. Because you can have multiple MTS for these metrics, you need to use the `sum()` SignalFlow function to see the total value.
+
+For example, you might receive three MTS for `sf.org.numMetricTimeSeriesCreated`, one for the number of MTS that are counters, another for the number of MTS that are cumulative counters, and a third for the number of MTS that are gauges.
+
+Also, you can filter by a single value of `category`, such as `GAUGE`, to see only the metrics of that type.
+
+### A metric that counts stopped detectors
+
+The metric `sf.org.numDetectorsAborted` monitors the number of detectors that Infrastructure Monitoring stopped because the detector reached a resource limit. In most cases, the detector exceeds the limit of 250K MTS. This condition also generates the event `sf.org.abortedDetectors`, which records details including the detector ID, the reason it stopped, and the value or limit of MTS or data points, whichever caused the detector to stop.
+
+To learn more, see {ref}`Add context to metrics using events <events-intro>`.
 
 ### Cloud authentication error metrics 
 
