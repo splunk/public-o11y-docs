@@ -255,7 +255,7 @@ See more options in the Settings section.
 Translation rules and metric transformations
 ========================================================
 
-Use the ``translation_rules`` config field to transform metrics, or produce custom metrics by copying, calculating, or aggregating other metric values without requiring an additional processor. 
+Use the ``translation_rules`` field to transform metrics or produce custom metrics by copying, calculating, or aggregating other metric values without requiring an additional processor. 
 
 Translation rules currently allow the following actions:
 
