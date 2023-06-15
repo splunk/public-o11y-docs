@@ -120,7 +120,9 @@ Some metrics report a `gross` value and a `num` value. Compare the `gross` and `
 
   * Data is limited or throttled if you exceed your system limits, as explained in {ref}`Metrics that track system limits <org-metrics-track-limits>`.
 
-  * Data can be automatically filtered out by certain components, such as the {ref}`SignalFx exporter <signalfx-exporter>`.
+  * Data can be automatically filtered out by certain components, such as the {ref}`SignalFx exporter <signalfx-exporter>`. 
+  
+  * Invalid data is also filtered. For example, data points without a metric name or value are invalid and will be dropped. Same with spans without a trace or span id.  
 
 ### Cloud authentication error metrics 
 
