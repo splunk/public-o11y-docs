@@ -222,7 +222,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. ----- This comment separates the landing page from the TOC -----
 
 .. toctree::
-   :caption: GET STARTED
+   :caption: Get Started
    :maxdepth:   2
 
    get-started/welcome
@@ -240,15 +240,16 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform TOGGLE <get-started/core2o11y/core2o11y-landing>
-
-.. toctree::
-   :maxdepth:   3
-
    Support <get-started/support>
 
 .. toctree::
-   :caption: DATA MANAGEMENT
+   :caption: Get Started
+   :maxdepth:   3
+
+   Splunk Observability Cloud and the Splunk platform TOGGLE <get-started/core2o11y/core2o11y-landing>
+
+.. toctree::
+   :caption: Get your data in
    :maxdepth:   3
 
    gdi/get-data-in/get-data-in
@@ -305,7 +306,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    SignalFx Smart Agent (Deprecated) TOGGLE <gdi/smart-agent/smart-agent-intro>
 
 .. toctree::
-   :caption: UNDERSTAND AND ANALYZE YOUR DATA
+   :caption: Understand and analyze your data
    :maxdepth:   3
 
    metrics-and-metadata/data-model
@@ -326,7 +327,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    SignalFlow and analytics TOGGLE <analytics/signalflow-analytics-intro>
 
 .. toctree::
-   :caption: DASHBOARDS AND CHARTS
+   :caption: Dashboards and charts
    :maxdepth:   3
 
    Dashboards TOGGLE <data-visualization/dashboards/dashboards>
@@ -352,7 +353,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :caption: ALERTS AND DETECTORS
+   :caption: Alerts and detectors
    :maxdepth:   3
 
    Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
@@ -431,7 +432,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
 .. toctree::
-   :caption: APM
+   :caption: Application Performance Monitoring
    :maxdepth:   3
 
    apm/intro-to-apm
@@ -487,7 +488,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Use Data Links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
 
 .. toctree::
-   :caption: INFRASTRUCTURE
+   :caption: Infrastructure
    :maxdepth:   3
 
    Introduction <infrastructure/intro-to-infrastructure>
@@ -544,7 +545,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :caption: LOG OBSERVER
+   :caption: Log Observer
    :maxdepth:   3
 
    Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
@@ -555,7 +556,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Splunk Log Observer TOGGLE <logs/log-observer-landing>
 
 .. toctree::
-   :caption: RUM
+   :caption: Real User Monitoring
    :maxdepth:   3
 
    rum/intro-to-rum
@@ -632,7 +633,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    rum/rum-third-party-software
 
 .. toctree::
-   :caption: SYNTHETICS
+   :caption: Synthetics
    :maxdepth:   3
 
    synthetics/intro-synthetics
@@ -673,7 +674,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Configure your tests TOGGLE <synthetics/test-config/test-config>
 
 .. toctree::
-   :caption: INCIDENT INTELLIGENCE
+   :caption: Incident Intelligence
    :maxdepth:   3
 
    Introduction to Splunk Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
@@ -719,7 +720,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Manage notifications from Incident Intelligence TOGGLE <incident-intelligence/manage-notifications/manage-notifications.rst>
 
 .. toctree::
-   :caption: MOBILE
+   :caption: Mobile
    :maxdepth:   3
 
    mobile/intro-to-mobile
@@ -741,7 +742,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 
 .. toctree::
-   :caption: ADMINISTER OBSERVABILITY CLOUD
+   :caption: Administer Observability Cloud
    :maxdepth:   3
 
    admin/admin
@@ -796,7 +797,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
 
 .. toctree::
-   :caption: SETTINGS AND REFERENCE
+   :caption: Reference
    :maxdepth:   3
 
    Password and contact information <references/personal-info>
