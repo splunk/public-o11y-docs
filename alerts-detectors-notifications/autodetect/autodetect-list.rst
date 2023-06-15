@@ -491,7 +491,7 @@ Oracle
 Oracle - Session utilization expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Description: Alerts when Oracle session utilization is above its designated threshold. 
-- Signalflow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/oracle.flow#L5>` repository on GitHub.
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/oracle.flow#L5>` repository on GitHub.
 
 The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
 
@@ -522,6 +522,38 @@ The following table shows customizable arguments for this detector. To learn how
    * - filter
      - Dimensions you want to add to the scope of the detector, if any
      - None  
+
+
+Oracle - Sudden change in hard parses count
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Description: Alerts when the number of hard parses suddenly increases. 
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/oracle.flow#L137>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger deviation
+     - Expressed in standard deviations from baseline
+     - ``4.5``
+
+   * - Evaluation window
+     - The time range being monitored
+     - ``20m``
+
+   * - Historical window
+     - The time range used to define the recent trend
+     - ``3h`` 
+
+   * - filter
+     - Dimensions you want to add to the scope of the detector, if any
+     - None
 
 .. _autodetect-redis:
 
