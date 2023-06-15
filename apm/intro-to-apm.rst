@@ -36,10 +36,6 @@ The following table provides an overview of what you can do with Splunk APM:
     - :strong:`With this tool`
     - :strong:`Link to documentation`
 
-  * -  Start to gain insights from your data in minutes using the default landing page and service dashboards.
-    - Landing page
-    - :ref:`Understand the landing page <apm-landing-page>`
-
   * - View all of your services and their dependency relationships in the service map.
     - Service map
     - :ref:`Explore the service map <apm-service-map>`
@@ -80,11 +76,3 @@ The following table provides an overview of what you can do with Splunk APM:
   * - Use built-in dashboards to assess service, endpoint, and system health at a glance.
     - Built-in dashboards
     - :ref:`built-in-dashboards`
-
-  * - Transition between components of Splunk Observability Cloud by selecting related data.
-    - Related Content
-    - :ref:`get-started-relatedcontent`
-
-  * - Dynamically link Splunk APM properties to relevant resources
-    - Global data links
-    - :ref:`apm-data-links`
