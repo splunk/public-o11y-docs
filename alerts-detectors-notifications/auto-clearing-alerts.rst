@@ -27,10 +27,20 @@ To turn on Auto-clear alerts when :ref:`creating or editing a detector <create-d
 Resolution logic
 ==================
 
-When a metric time series (MTS) lapses into inactivity, it stops reporting, and triggers an auto-resolve countdown clock that stops if reporting resumes within your specified period. Reporting that resumes frees the countdown clock to re-trigger if reporting stops again.
+A detector auto resolves if it can't evaluate the ``when()`` statement for the time interval you specified for ``auto_resolve_after``  mechanism. Auto-resolve can happen in the following cases:
+ 
+* When a metric time series (MTS) lapses into inactivity, it stops reporting, and triggers an auto-resolve countdown clock that stops if reporting resumes within your specified time interval. Resumed reporting frees the countdown clock to re-trigger if reporting stops again. If reporting does not resume within the interval you've specified, then the involved MTS is considered no longer relevant, and the alert for it is auto-cleared.
 
-If reporting does not resume within the interval you've specified, then the involved MTS is considered no longer relevant, and the alert for it is auto-cleared according to the parameters of the ``auto_resolve_after`` mechanism.
+* When an MTS has been reporting data without interruption for the specified time interval but doesn't send enough data points for the ``when()`` statement to be evaluated, the alert auto-clears. For example, you have the following condition for auto-clearing your alerts:
+  
+  .. code-block::
+      
+      detect(when(A > threshold(99), lasting='1h', at_least=0.8), off=when(A < threshold(1), lasting='30m', at_least=0.9), auto_resolve_after='1h')
+
+  In this case, if the MTS sends less than 80% of the data points from the past hour, then the alert auto-clears even if the MTS has been active.
 
 Auto-clear alert settings do not affect detectors created before they are applied, but you can edit an existing detector to configure it for auto-clearing.
 
 When an alert has been auto-cleared rather than resolved manually, it is listed as :guilabel:`Auto-Cleared` rather than :guilabel:`Cleared`.
+
+
