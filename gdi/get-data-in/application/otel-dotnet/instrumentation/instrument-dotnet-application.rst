@@ -21,7 +21,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Observability Cloud.
 #. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
@@ -227,7 +227,7 @@ To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

@@ -100,7 +100,7 @@ From Splunk Observability Cloud, connect to Azure by following these steps:
 
   #. Open the :new-page:`Microsoft Azure guided setup <https://login.signalfx.com/#/integrations/azure>`. Optionally, you can navigate to the guided setup on your own:
 
-    #. In the left navigation menu, select :menuselection:`Data Management`, and select :guilabel:`Add Integration` to open the Integrate Your Data page.
+    #. In the navigation menu, select :menuselection:`Data Management`, and select :guilabel:`Add Integration` to open the Integrate Your Data page.
 
     #. In the integration filter menu, go to :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
 

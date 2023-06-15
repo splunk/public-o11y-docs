@@ -26,7 +26,7 @@ Use the guided setup to deploy the Collector as a sidecar to ECS tasks.  Choose 
 To access the guided setup for AWS integration, perform the following steps:
 
 #. Log in to Splunk Observability Cloud.
-#. On the left navigation menu, select :guilabel:`Data Management`.
+#. On the navigation menu, select :guilabel:`Data Management`.
 #. On the Integrate Your Data page, select the tile for :guilabel:`Amazon Fargate`.
 #. Follow the steps provided in the guided setup.
 

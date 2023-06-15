@@ -1,4 +1,4 @@
-# Splunk Observability Cloud documentation
+# Splunk Observability Cloud Documentation
 
 This repository contains the code and documentation for https://docs.splunk.com/Observability
 

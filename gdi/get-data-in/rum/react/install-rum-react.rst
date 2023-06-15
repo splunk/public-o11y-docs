@@ -7,7 +7,7 @@ Install the React Native RUM agent for Splunk RUM
 .. meta::
    :description: Instrument your React Native applications for Splunk Observability Cloud real user monitoring / RUM using the React Native RUM agent from the Splunk Distribution of OpenTelemetry for React Native.
 
-You can instrument your React Native and Expo applications using the Splunk Distribution of OpenTelemetry for React Native. 
+You can instrument your React Native and Expo applications using the Splunk Distribution of OpenTelemetry for React Native. Splunk APM is not required to instrument Splunk RUM for React Native.
 
 To instrument your React Native or Expo application and get data into Splunk RUM, follow the instructions on this page.
 
@@ -18,14 +18,14 @@ To instrument your React Native or Expo application and get data into Splunk RUM
 Check compatibility and requirements 
 ===============================================
 
-Splunk RUM for Mobile supports React Native 0.67 and higher. 
+Splunk RUM for Mobile supports React Native 0.68 and higher. 
 
 The library is also compatible with the following frameworks and libraries:
 
 - Expo framework
 - React Navigation 5 and 6
 
-.. note:: Splunk APM is not required to instrument Splunk RUM for React Native. 
+.. note::  To instrument applications using React Native 0.67 and lower, see :ref:`rn-lower-versions`.
 
 .. _rum-react-install:
 
@@ -38,13 +38,13 @@ Before you instrument and configure Splunk RUM for your React Native application
 
 1. Log in to Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
 3. In the integration filter menu, select :guilabel:`By Use Case`.
 
 4. Select the :guilabel:`Monitor user experience` use case.
 
-5. Click the :guilabel:`React Native Instrumentation` tile to open the React Native Instrumentation guided setup.
+5. Select the :guilabel:`React Native Instrumentation` tile to open the React Native Instrumentation guided setup.
 
 .. _rum-react-initialize:
 
@@ -120,6 +120,50 @@ Follow these steps to import and initialize the React Native RUM package.
       }
 
    For more information, see :new-page:`React Navigation <https://github.com/react-navigation/react-navigation>` on GitHub.
+
+.. _rn-lower-versions:
+
+Additional step for apps using React Native 0.67 and lower
+--------------------------------------------------------------------------------
+
+To instrument applications running on React Native version 0.67 and lower, edit your metro.config.js file to force Metro to use browser specific packages. For example:
+
+.. code-block:: javascript
+
+   const defaultResolver = require('metro-resolver');
+   module.exports = {
+   resolver: {
+      resolveRequest: (context, realModuleName, platform, moduleName) => {
+         const resolved = defaultResolver.resolve(
+         {
+            ...context,
+            resolveRequest: null,
+         },
+         moduleName,
+         platform,
+         );
+         if (
+         resolved.type === 'sourceFile' &&
+         resolved.filePath.includes('@opentelemetry')
+         ) {
+         resolved.filePath = resolved.filePath.replace(
+            'platform\\node',
+            'platform\\browser',
+         );
+         return resolved;
+         }
+         return resolved;
+      },
+   },
+   transformer: {
+      getTransformOptions: async () => ({
+         transform: {
+         experimentalImportSupport: false,
+         inlineRequires: true,
+         },
+      }),
+   },
+   };
 
 .. _react-alternative-init:
 
