@@ -104,7 +104,7 @@ These metrics track limits that Infrastructure Monitoring enforces for your orga
 (org-metrics-throttling)=
 ### Metrics that track data throttling
 
-As explained in the section above, certain system limits act as a "ceiling", or a maximum number of elements allowed in Obsevability Cloud. But the platform also limits ingestion pace. If you exceed your rate limits, Obervability Cloud might throttle (or slow down) the data you send in. 
+As explained in the previous section, certain system limits act as a "ceiling", or a maximum number of elements allowed in Observability Cloud. But the platform also limits ingestion pace. If you exceed your rate limits, Observability Cloud might throttle, or slow down, the data you send in. 
 
 While org metrics whose name contains `limit` or `limited` indicate you've hit an amount limit, metrics with `throttled` (for example, `sf.org.numThrottledMetricTimeSeriesCreateCalls`) show that you’ve hit a rate/timeUnit, and therefore you won't be able to send in more datapoints per minute.  
 
