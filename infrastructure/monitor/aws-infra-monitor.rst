@@ -229,7 +229,7 @@ Infrastructure Monitoring adds the prefix ``aws_tag_`` to the names of tags impo
 
 You can also choose specific metrics to include or exclude. For example, consider the following conditions.
 
-.. image:: /_images/infrastructure/aws-metric-tag.png
+.. image:: /_images/infrastructure/aws-metric-tag2.png
    :width: 55%
 
 Infrastructure Monitoring only includes metricA and metricB, and only for resources specified by the tags:
@@ -240,7 +240,7 @@ Infrastructure Monitoring only includes metricA and metricB, and only for resour
 
 Infrastructure Monitoring supports wildcards in filters. For example, if you want to import data for a resource that has specific tags, regardless of the tag values, specify this filter:
 
-.. image:: /_images/infrastructure/aws-metric-tag-wildcard.png
+.. image:: /_images/infrastructure/aws-metric-tag-wildcard2.png
    :width: 55%
 
 In this example, metricA and metricB are included for resources that have the ``env`` tag set to any value. No other metrics are included.
