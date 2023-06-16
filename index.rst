@@ -250,7 +250,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Contribute to the docs <get-started/contribute>
+   Contribute to the documentation <get-started/contribute>
 
 .. toctree::
    :caption: DATA MANAGEMENT

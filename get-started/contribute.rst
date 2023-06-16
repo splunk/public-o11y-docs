@@ -11,7 +11,9 @@ You can update the Splunk Observability Cloud documentation by adding examples, 
 
 .. raw:: html
 
+   <div class="videoWrapper">
    <iframe width="560" height="315" src="https://www.youtube.com/embed/tsvWJwcv_BQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   </div>
 
 .. note:: If you're unsure about a change or have a different question about the docs, use the :guilabel:`Feedback` button at the bottom of every page to send questions or comments to the Observability Cloud documentation team.
 
