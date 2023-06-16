@@ -16,30 +16,30 @@ Agent mode
 
 In agent mode, the Collector runs with the application or on the same host as the application, and sends data directly to Splunk Observability Cloud. 
 
-Use agent mode when you want to do these things:
+Use the agent mode when you want to do these things:
 
 * Configure instrumentation. Agent mode offloads responsibilities from the application including batching, queuing, and retrying.
 * Collect host and application metrics, as well as host and application metadata enrichment for metrics, spans, and logs.
 
-If deployed in standalone mode, the Splunk Distribution of OpenTelemetry Collector is the only component deployed and configured. The following image shows the architecture for the standalone mode:
-
-.. image:: /_images/gdi/splunk-otel-collector-standalone-arch.png 
-   :alt: This image shows the architecture for the standalone mode.   
-
-Agent mode deployed with helm or installer script
+Standalone agent mode 
 --------------------------------------------------------------------
 
-The default configuration for :ref:`Helm chart <otel-install-k8s>`, :ref:`Linux installer script <otel-install-linux>`, or :ref:`Windows installer script <otel-install-windows>` deployments has the following components:
+If deployed as a standalone agent, the Splunk Distribution of OpenTelemetry Collector is the only component deployed and configured. 
 
-* Splunk Distribution of OpenTelemetry Collector
-* Fluentd
+The following image shows the architecture for the standalone mode:
 
-The deployment looks as follows:
+.. image:: /_images/gdi/splunk-otel-collector-standalone-arch.png 
+   :alt: This image shows the architecture for the standalone agent mode.   
+
+Agent mode deployed with the installer script or Helm chart
+--------------------------------------------------------------------
+
+The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector with Fluentd.
+
+The architecure looks as follows:
 
 .. image:: /_images/gdi/splunk-otel-collector-recommended-arch.png
    :alt: This image shows the architecture for Helm chart and installer script deployments. 
-
-See :ref:`the default configuration for the Collector <otel-configuration-ootb>`.   
 
 .. _collector-gateway-mode:
 
@@ -69,16 +69,18 @@ The following image shows the architecture for the gateway mode:
 What mode is my Collector deployed as? How can I change it?
 ======================================================================
 
-If you install the Collector using the :ref:`provided scripts <otel-install-platform>`, the Collector is deployed in the mode specified in your configuration file. The path to the configuration yaml is set in the env variable ``SPLUNK_CONFIG``. For Windows and Linux installers, the :ref:`default configuration yaml sets the Collector as an agent <otel-configuration-ootb>`. 
+If you install the Collector using the :ref:`provided scripts <otel-install-platform>`, the Collector is deployed in the mode specified in your configuration file. The path to the configuration yaml is set in the env variable ``SPLUNK_CONFIG``. 
 
-To change the deployment mode, modify ``SPLUNK_CONFIG`` to use the gateway configuration instead. See :ref:`collector-gateway-mode` for details on the gateway mode yaml.
+For Windows and Linux installers, the :ref:`default configuration yaml sets the Collector as an agent <otel-configuration-ootb>`. To change the deployment mode, modify ``SPLUNK_CONFIG`` to use the gateway configuration instead. See :ref:`collector-gateway-mode` for details on the gateway mode yaml.
+
+For Kubernetes, check the config mappings in your Helm chart. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml, and how to override it.
 
 .. _collector-agent-to-gateway:
 
 Send data from an agent Collector to a gateway Collector
 ======================================================================
 
-When running as an agent, you can also manually configure the Collector to send data to a Splunk Distribution of OpenTelemetry Collector gateway instance or cluster. This requires changing the pipeline exporters in the agent to point to the gateway.
+When running as an agent, you can also manually configure the Collector to send data to a Splunk Distribution of OpenTelemetry Collector gateway instance or cluster. This requires changing the :ref:`pipeline exporters <otel-data-processing>` in the agent to point to the gateway.
 
 To configure the Collector to send data to the another Collector in gateway mode, see these configurations:
 
@@ -163,7 +165,7 @@ Change the following sections of the :new-page:`Gateway mode configuration file 
 * Make sure that the Collector in gateway mode can listen to requests on ports 6060 and 9943.
 * Update the ``SPLUNK_GATEWAY_URL`` environment variable to ``https://api.${SPLUNK_REALM}.signalfx.com``.
 
-The following example shows how to configure the Collector in gateway mode when receiving data from an agent:
+To set the Collector in gateway mode to receiving data from an agent, use the following configuration:
 
 .. code-block:: yaml
 
@@ -216,7 +218,10 @@ The following example shows how to configure the Collector in gateway mode when 
             exporters: [signalfx/internal]
       # More pipelines
 
-If you want to use the ``signalfx`` exporter for metrics on both agent and gateway, deactivate the aggregation at the Gateway. To do so, set the ``translation_rules`` and ``exclude_metrics`` to empty lists as in the following example.
+Send metrics with the SignalFx exporter
+--------------------------------------------
+
+If you want to use the :ref:`signalfx-exporter` for metrics on both agent and gateway, deactivate the aggregation at the Gateway. To do so, set the ``translation_rules`` and ``exclude_metrics`` to empty lists as in the following example.
 
 .. note:: If you want to collect host metrics from the Gateway, use a different ``signalfx exporter`` with translation rules intact. For example, add the ``hostmetrics`` to the metrics/internal pipeline.
 
