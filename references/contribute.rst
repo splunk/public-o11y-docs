@@ -24,7 +24,7 @@ To update the Observability Cloud documentation you need a GitHub account.
 
 You can use an existing GitHub account or create one for free in the GitHub website.
 
-Use the Edit this page link
+Edit this page link
 ==============================
 
 On every page of the Observability Cloud documentation you can find an :guilabel:`Edit this page` link. Select the link to load the source of the document in a GitHub preview and start editing.
@@ -40,4 +40,4 @@ Within 72 hours, the Observability Cloud documentation team reviews your pull re
 Contribution guidelines
 ==============================
 
-You can learn more about how to build and test the docs locally, as well as our review criteria, in the :new-page:`CONTRIBUTING.md <https://github.com/splunk/public-o11y-docs/blob/main/CONTRIBUTING.md>` file.
+You can learn more about how to build and test the docs locally, as well as review criteria, in the :new-page:`CONTRIBUTING.md <https://github.com/splunk/public-o11y-docs/blob/main/CONTRIBUTING.md>` file.
