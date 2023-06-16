@@ -12,7 +12,6 @@ You can configure the logging module of Python standard library to include traci
 To include trace metadata in application logs, follow these steps:
 
 - :ref:`python-include-trace-data`
-- :ref:`explore-log-observer-python`
 - (Optional) :ref:`disable-trace-log-python`
 
 .. _python-include-trace-data:
