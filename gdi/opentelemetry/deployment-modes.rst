@@ -69,9 +69,22 @@ The following image shows the architecture for the gateway mode:
 What mode is my Collector deployed as? How can I change it?
 ======================================================================
 
-If you install the Collector using the :ref:`provided scripts <otel-install-platform>`, the Collector is deployed in the mode specified in your configuration file. The path to the configuration yaml is set in the env variable ``SPLUNK_CONFIG``. 
+If you install the Collector using the :ref:`provided scripts <otel-install-platform>`, the Collector is deployed in the mode specified in your configuration file. 
 
-For Windows and Linux installers, the :ref:`default configuration yaml sets the Collector as an agent <otel-configuration-ootb>`. To change the deployment mode, modify ``SPLUNK_CONFIG`` to use the gateway configuration instead. See :ref:`collector-gateway-mode` for details on the gateway mode yaml.
+Linux and Windows
+----------------------------------
+
+For Windows and Linux installers, the default configuration yaml sets the Collector as an agent.
+
+The path to the configuration yaml is set in the env variable ``SPLUNK_CONFIG`` and is, by default:
+
+* Linux: ``/etc/otel/collector/<gateway or agent>_config.yaml``
+* Windows: ``C:\ProgramData\Splunk\OpenTelemetry Collector\<gateway or agent>_config.yaml``
+
+To change the deployment mode, modify ``SPLUNK_CONFIG`` for the path to the gateway configuration yaml file instead. See :ref:`collector-gateway-mode` for details on the gateway mode yaml.
+
+Kubernetes
+----------------------------------
 
 For Kubernetes, check the config mappings in your Helm chart. See :ref:`otel-kubernetes-config-advanced` for information on how to access your configuration yaml, and how to override it.
 
