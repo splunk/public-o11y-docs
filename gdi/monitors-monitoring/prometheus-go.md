@@ -6,7 +6,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `prometheus-go` monitor type to wrap the {ref}`prometheus-exporter` to scrape Prometheus Go collector and Prometheus process collector metrics for Splunk Observability Cloud.
 
-This monitor is available on Linux and Windows.
+This integration is available on Linux and Windows.
 
 ## Benefits
 

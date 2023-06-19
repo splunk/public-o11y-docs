@@ -1,24 +1,23 @@
 (prometheus-nginx-ingress)=
 
 # Prometheus NGINX Ingress
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Prometheus NGINX Ingress monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `prometheus-nginx-ingress` monitor type to wrap the {ref}`prometheus-exporter` to collect Ingress NGINX metrics for Splunk Observability Cloud. 
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-nginx-ingress` monitor type for the Smart Agent Receiver.
+This integration relies on the Prometheus metric implementation that replaces VTS. If you use NGINX 0.15 or lower, use the {ref}`Prometheus NGINX VTS <prometheus-nginx-vts>` integration.
 
-This monitor wraps the {ref}`prometheus-exporter` to collect Ingress NGINX metrics for Splunk Observability Cloud, and relies on the Prometheus metric implementation that replaces VTS. If you use NGINX 0.15 or lower, use the {ref}`Prometheus NGINX VTS <prometheus-nginx-vts>` monitor.
+This integration is available on Linux and Windows.
 
-This receiver is available on Linux and Windows.
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
@@ -26,9 +25,9 @@ This receiver is available on Linux and Windows.
 ```{include} /_includes/configuration.md
 ```
 
-### Splunk Distribution of OpenTelemetry Collector
+### Example
 
-To activate this monitor in the Splunk Distribution of OpenTelemetry Collector, add the following to your agent configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```yaml 
 receivers:
@@ -37,7 +36,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the receiver activation, you must also include the receiver in a `metrics` pipeline. To do this, add the receiver to the `service.pipelines.metrics.receivers` section of your configuration file. For example:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -49,17 +48,6 @@ service:
 ### Ingress NGINX configuration
 
 Activate the `controller.stats.enabled=true` and `controller.metrics.enabled=true` flags in the NGINX Ingress Controller chart.
-
-### Agent configuration
-
-Use the following configuration for service discovery:
-
-```yaml
-monitors:
-- type: prometheus/nginx-ingress
-  discoveryRule: container_image =~ "nginx-ingress-controller" && port == 10254
-  port: 10254
-```
 
 ### Configuration settings
 
@@ -86,14 +74,14 @@ The following table shows the configuration options for the `prometheus-nginx-in
 
 The following metrics are available for this integration.
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/prometheus/nginxingress/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/prometheus/nginxingress/metadata.yaml"></div>
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
