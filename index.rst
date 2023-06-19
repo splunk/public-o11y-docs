@@ -841,7 +841,8 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Third-party software credits <admin/references/third-party-credits>
+   Third-party software credits </references/third-party-credits>
+   
 .. toctree::
    :maxdepth:   3
 
