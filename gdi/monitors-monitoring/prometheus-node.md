@@ -1,6 +1,6 @@
 (prometheus-node)=
 
-# Prometheus Node Exporter
+# Prometheus Node 
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Prometheus Node Exporter monitor. See benefits, install, configuration, and metrics">
 
