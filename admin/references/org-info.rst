@@ -1,4 +1,4 @@
-.. _sso-about:
+.. _org-info:
 
 *********************************************************************
 Org reference information
@@ -13,7 +13,6 @@ Org reference information
    api-access-token
    app-preferences
    data-retention
-   org-info
    organizations
    per-product-limits
    supported-browsers
@@ -28,8 +27,8 @@ Org reference information
    * - :strong:`For info about`
      - :strong:`Documentation`
 
-   * - :guilabel:`blah
-     - :guilabel:`blah
+   * - :guilabel:`blah``
+     - :guilabel:`blah``
   
    * - :guilabel:`Integration-specific Entity ID`` (EPAMIDfalsg)
      - :guilabel:`Identifier (Entity ID)` (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
