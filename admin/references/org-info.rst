@@ -14,6 +14,7 @@ Org reference information
    app-preferences
    data-retention
    organizations
+   personal-info
    per-product-limits
    supported-browsers
    teams
