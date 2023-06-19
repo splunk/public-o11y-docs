@@ -795,44 +795,10 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
 
-   Password and contact information <admin/references/personal-info>
-
 .. toctree::
    :maxdepth:   3
 
-   Organizations <admin/references/organizations>
-
-.. toctree::
-   :maxdepth:   3
-
-   Teams <admin/references/teams>
-
-.. toctree::
-   :maxdepth:   3
-
-   Time zone and color accessibility settings <admin/references/app-preferences>
-
-.. toctree::
-   :maxdepth:   3
-
-   API access token <admin/references/api-access-token>
-
-.. toctree::
-   :maxdepth:   3
-
-   Supported browsers <admin/references/supported-browsers>
-
-
-
-.. toctree::
-   :maxdepth:   3
-
-   Data retention <admin/references/data-retention>
-
-.. toctree::
-   :maxdepth:   3
-
-   Per product system limits <admin/references/per-product-limits>
+   Org reference info TOGGLE <admin/references/org-info>
 
 .. toctree::
    :caption: Reference
@@ -842,7 +808,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Third-party software credits </references/third-party-credits>
-   
+
 .. toctree::
    :maxdepth:   3
 
