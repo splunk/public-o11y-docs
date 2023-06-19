@@ -253,61 +253,64 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
   agent:
     config:
       processors:
-        # exclude exporting metrics for a certain containers named X and Y
+        # Exclude specific metrics from containers named 'containerXName' or 'containerYName'
         filter/exclude_metrics_from_container:
           metrics:
             exclude:
               match_type: regexp
               resource_attributes:
-                - Key: k8s.container.name
-                  Value: '^(containerXName|containerYName)$'
-                  # - Key: container.image.name
-                  #   Value: '^(imageNameX)$'
-                  # - Key: container.image.tag
-                  #   Value: '^(imageTagX)$'
-        # exclude exporting logs for pods named X
+                - key: k8s.container.name
+                  value: '^(containerXName|containerYName)$'
+        # Exclude logs from pods named 'podNameX'
         filter/exclude_logs_from_pod:
           logs:
             exclude:
               match_type: regexp
               resource_attributes:
-                - Key: k8s.pod.name
-                  Value: '^(podNameX)$'
-        # exclude exporting traces for nodes named X
-        filter/exclude_traces_from_node:
-          traces:
-            match_type: regexp
-            resource_attributes:
-              - Key: k8s.node.name
-                Value: '^(nodeNameX)$'
-        # exclude exporting metrics, logs, and traces from a namespace named X
+                - key: k8s.pod.name
+                  value: '^(podNameX)$'
+        # Exclude logs from nodes named 'nodeNameX'
+        filter/exclude_logs_from_node:
+          logs:
+            exclude:
+              match_type: regexp
+              resource_attributes:
+                - key: k8s.node.name
+                  value: '^(nodeNameX)$'
+        # Exclude spans from traces for services housed in containers named 'containerXName' or 'containerYName'
+        filter/exclude_spans_from_traces_from_container:
+          spans:
+            exclude:
+              match_type: regexp
+              attributes:
+                - key: k8s.container.name
+                  value: '^(containerXName|containerYName)$'
+        # Exclude all telemetry data (metrics, logs, traces) from a namespace named 'namespaceX'
         filter/exclude_all_telemetry_data_from_namespace:
           logs:
             exclude:
               match_type: regexp
               resource_attributes:
-                - Key: k8s.namespace.name
-                  Value: '^(namespaceX)$'
+                - key: k8s.namespace.name
+                  value: '^(namespaceX)$'
           metrics:
             exclude:
               match_type: regexp
               resource_attributes:
-                - Key: k8s.namespace.name
-                  Value: '^(namespaceX)$'
+                - key: k8s.namespace.name
+                  value: '^(namespaceX)$'
           traces:
-            exclude:
-              match_type: regexp
-              resource_attributes:
-                - Key: k8s.namespace.name
-                  Value: '^(namespaceX)$'
-        # exclude exporting metrics from a cluster named X
+            span:
+              - 'attributes["k8s.namespace.name"] != "namespaceX"'
+        # Exclude metrics from a cluster named 'clusterX'
         filter/exclude_metrics_from_cluster:
           metrics:
             exclude:
               match_type: regexp
               resource_attributes:
-                - Key: k8s.cluster.name
-                  Value: '^(clusterNameX)$'
+                - key: k8s.cluster.name
+                  value: '^(clusterX)$'
+      # Define the data processing pipelines for logs, metrics, and traces
       service:
         pipelines:
           logs:
@@ -320,45 +323,7 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
               - resource
               - resource/logs
               - filter/exclude_logs_from_pod
-              - filter/exclude_all_telemetry_data_from_namespace
-          metrics:
-            processors:
-              - memory_limiter
-              - batch
-              - resourcedetection
-              - resource
-              - filter/exclude_metrics_from_container
-              - filter/exclude_all_telemetry_data_from_namespace
-          traces:
-            processors:
-              - memory_limiter
-              - k8sattributes
-              - batch
-              - resourcedetection
-              - resource
-              - filter/exclude_traces_from_node
-              - filter/exclude_all_telemetry_data_from_namespace
-
-  clusterReceiver:
-    config:
-      processors:
-        # exclude exporting metrics for a certain containers named X and Y
-        filter/exclude_metrics_from_container:
-          metrics:
-            exclude:
-              match_type: regexp
-              resource_attributes:
-                - Key: k8s.container.name
-                  Value: '^(containerXName|containerYName)$'
-      service:
-        pipelines:
-          metrics:
-            processors:
-              - memory_limiter
-              - batch
-              - resource
-              - resource/k8s_cluster
-              - filter/exclude_metrics_from_container
+              - filter/exclude_logs_from_node
 
 .. _ottl-syntax:
 
