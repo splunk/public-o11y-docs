@@ -19,7 +19,7 @@ Configure application exporters and receivers for monitoring
    monitors-monitoring/prometheus-exporter
    monitors-monitoring/prometheus-go
    monitors-monitoring/prometheus-nginx-ingress
-   prometheus-nginx-vts/prometheus-nginx-vts
+   monitors-monitoring/prometheus-nginx-vts
    prometheus-node/prometheus-node
    velero/prometheus-velero
    opentelemetry/components/prometheus-receiver
