@@ -243,7 +243,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Support <get-started/support>
 
 .. toctree::
-   :caption: Get Started
+   :caption: Splunk Platform users
    :maxdepth:   3
 
    Splunk Observability Cloud and the Splunk platform TOGGLE <get-started/core2o11y/core2o11y-landing>
@@ -808,7 +808,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Third-party software credits </references/third-party-credits>
-
+   
 .. toctree::
    :maxdepth:   3
 
