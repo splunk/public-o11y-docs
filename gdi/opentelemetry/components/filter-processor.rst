@@ -319,6 +319,7 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
 After setting up the processors, configure the pipelines:
 
 .. code-block:: yaml 
+  
       # Define the data processing pipelines for logs, metrics, and traces
       service:
         pipelines:
