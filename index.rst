@@ -795,53 +795,53 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
 
+   Password and contact information <admin/references/personal-info>
+
+.. toctree::
+   :maxdepth:   3
+
+   Organizations <admin/references/organizations>
+
+.. toctree::
+   :maxdepth:   3
+
+   Teams <admin/references/teams>
+
+.. toctree::
+   :maxdepth:   3
+
+   Time zone and color accessibility settings <admin/references/app-preferences>
+
+.. toctree::
+   :maxdepth:   3
+
+   API access token <admin/references/api-access-token>
+
+.. toctree::
+   :maxdepth:   3
+
+   Supported browsers <admin/references/supported-browsers>
+
+
+
+.. toctree::
+   :maxdepth:   3
+
+   Data retention <admin/references/data-retention>
+
+.. toctree::
+   :maxdepth:   3
+
+   Per product system limits <admin/references/per-product-limits>
 
 .. toctree::
    :caption: Reference
    :maxdepth:   3
 
-   Password and contact information <references/personal-info>
-
 .. toctree::
    :maxdepth:   3
 
-   Organizations <references/organizations>
-
-.. toctree::
-   :maxdepth:   3
-
-   Teams <references/teams>
-
-.. toctree::
-   :maxdepth:   3
-
-   Time zone and color accessibility settings <references/app-preferences>
-
-.. toctree::
-   :maxdepth:   3
-
-   API access token <references/api-access-token>
-
-.. toctree::
-   :maxdepth:   3
-
-   Supported browsers <references/supported-browsers>
-
-.. toctree::
-   :maxdepth:   3
-
-   Third-party software credits <references/third-party-credits>
-
-.. toctree::
-   :maxdepth:   3
-
-   Data retention <references/data-retention>
-
-.. toctree::
-   :maxdepth:   3
-
-   Per product system limits <references/per-product-limits>
-
+   Third-party software credits <admin/references/third-party-credits>
 .. toctree::
    :maxdepth:   3
 
