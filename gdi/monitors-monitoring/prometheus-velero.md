@@ -6,7 +6,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `prometheus/velero` monitor type to gets metrics from Velero. 
 
-This monitor is available on Kubernetes, Linux, and Windows.
+This integration is available on Kubernetes, Linux, and Windows.
 
 ## Benefits
 
