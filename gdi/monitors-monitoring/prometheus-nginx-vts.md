@@ -1,30 +1,33 @@
 (prometheus-nginx-vts)=
 
 # Prometheus NGINX VTS
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the Prometheus NGINX VTS exporter monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `prometheus-nginx-vts` monitor type to wrap the {ref}`prometheus-exporter` to collect Prometheus NGINX VTS exporter metrics for Splunk Observability Cloud.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `prometheus-nginx-vts` monitor type for the Smart Agent Receiver.
+If you use NGINX 0.16 or higher, use the {ref}`Prometheus NGINX VTS <prometheus-nginx-ingress>` integration.
 
-This monitor wraps the {ref}`prometheus-exporter` to collect Prometheus NGINX VTS exporter metrics for Splunk Observability Cloud.
+This integration is available on Linux and Windows.
 
-This receiver is available on Linux and Windows.
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
 
 ```{include} /_includes/configuration.md
 ```
+
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```yaml
 receivers:
@@ -33,7 +36,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the receiver activation, you must also include the receiver in a `metrics` pipeline. To do this, add the receiver to the `service.pipelines.metrics.receivers` section of your configuration file. For example:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -67,14 +70,14 @@ The following table shows the configuration options for the `prometheus-nginx-vt
 
 The following metrics are available for this integration.
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/prometheus/nginxvts/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/prometheus/nginxvts/metadata.yaml"></div>
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

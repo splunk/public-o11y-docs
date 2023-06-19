@@ -121,7 +121,7 @@ You can also use these additional :ref:`configuration sources <otel-other-config
 
   * Environment variable (Alpha)
   * etcd (Alpha)
-  * Include (Alpha)
+  * Include config source (Beta)
   * Vault (Alpha)
   * Zookeeper (Alpha)
 
