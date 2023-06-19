@@ -40,7 +40,7 @@ Next, add the monitor to the `service.pipelines.metrics.receivers` section of yo
 service:
   pipelines:
     metrics:
-      receivers: [smartagent/collectd/protocols]
+      receivers: [smartagent/protocols]
 ```
 
 ## Metrics

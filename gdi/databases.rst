@@ -30,7 +30,7 @@ Configure application receivers for databases
    monitors-databases/mysql
    opentelemetry/components/oracledb-receiver
    monitors-databases/postgresql
-   redis/redis
+   monitors-databases/redis
    sap-hana/hana
    sql/sql
 
