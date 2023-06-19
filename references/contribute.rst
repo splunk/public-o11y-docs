@@ -35,7 +35,7 @@ On every page of the Observability Cloud documentation you can find an :guilabel
 
 After you've completed your edit, GitHub prompts you to open a pull request and fill out the description of the changes using a template. 
 
-Within 72 hours, the Observability Cloud documentation team reviews your pull request and might ask you to make some edits. If the changes are approved, the pull requests is approved and merged.
+Within three days, the Observability Cloud documentation team reviews your pull request and might ask you to make some edits. If the changes are approved, the pull requests is approved and merged.
 
 Contribution guidelines
 ==============================
