@@ -261,6 +261,7 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
               resource_attributes:
                 - key: k8s.container.name
                   value: '^(containerXName|containerYName)$'
+        
         # Exclude logs from pods named 'podNameX'
         filter/exclude_logs_from_pod:
           logs:
@@ -269,6 +270,7 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
               resource_attributes:
                 - key: k8s.pod.name
                   value: '^(podNameX)$'
+        
         # Exclude logs from nodes named 'nodeNameX'
         filter/exclude_logs_from_node:
           logs:
@@ -277,6 +279,7 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
               resource_attributes:
                 - key: k8s.node.name
                   value: '^(nodeNameX)$'
+        
         # Exclude spans from traces for services housed in containers named 'containerXName' or 'containerYName'
         filter/exclude_spans_from_traces_from_container:
           spans:
@@ -285,6 +288,7 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
               attributes:
                 - key: k8s.container.name
                   value: '^(containerXName|containerYName)$'
+        
         # Exclude all telemetry data (metrics, logs, traces) from a namespace named 'namespaceX'
         filter/exclude_all_telemetry_data_from_namespace:
           logs:
@@ -302,6 +306,7 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
           traces:
             span:
               - 'attributes["k8s.namespace.name"] != "namespaceX"'
+        
         # Exclude metrics from a cluster named 'clusterX'
         filter/exclude_metrics_from_cluster:
           metrics:
@@ -310,6 +315,10 @@ You can exclude or include Kubernetes elements, such as containers, pods, nodes,
               resource_attributes:
                 - key: k8s.cluster.name
                   value: '^(clusterX)$'
+
+After setting up the processors, configure the pipelines:
+
+.. code-block:: yaml 
       # Define the data processing pipelines for logs, metrics, and traces
       service:
         pipelines:
