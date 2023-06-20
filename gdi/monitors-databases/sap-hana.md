@@ -4,15 +4,11 @@
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the SAP HANA monitor. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `hana` monitor type to get metrics from an SAP Hana database.
 
-The [Splunk Distribution of OpenTelemetry Collector](https://docs.splunk.com/Observability/gdi/opentelemetry/opentelemetry.html#nav-Install-and-configure-Splunk-Distribution-of-OpenTelemetry-Collector) provides this integration as the `hana` monitor type for the Smart Agent Receiver.
+This integration is available on Kubernetes, Linux, and Windows.
 
-Use this integration to get metrics from an SAP Hana database.
-
-This monitor is available on Kubernetes, Linux, and Windows.
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -27,6 +23,10 @@ This monitor is available on Kubernetes, Linux, and Windows.
 ```{include} /_includes/configuration.md
 ```
 
+### Example
+
+To activate this integration, add the following to your Collector configuration:
+
 ```yaml
 receivers:
   smartagent/hana: 
@@ -34,7 +34,7 @@ receivers:
     ... # Additional config
 ```
 
-The following example shows additional configuration options:
+See additional configuration options:
 
 ```yaml
 receivers:
@@ -46,7 +46,7 @@ receivers:
     password: s3cr3t
 ```
 
-To complete the integration, include the Smart Agent receiver using this monitor in a `metrics` pipeline. To do this, add the receiver to the `service.pipelines.metrics.receivers` section of your configuration file. For example:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -57,7 +57,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -65,19 +65,18 @@ The following table shows the configuration options for this monitor:
 | `insecureSkipVerify` | no | `bool` | Controls whether a client verifies the server's certificate chain and host name. The default value is `false`. |
 | `rootCAFiles` | no | `list of strings` | Path to root certificate(s) (optional) |
 
-
 ## Metrics
 
 These are the metrics and dimensions available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/hana/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/hana/metadata.yaml"></div>
 
 ### Notes
 
 ```{include} /_includes/metric-defs.md
 ```
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```
