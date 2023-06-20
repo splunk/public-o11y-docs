@@ -6,7 +6,7 @@
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `hana` monitor type to get metrics from an SAP Hana database.
 
-This monitor is available on Kubernetes, Linux, and Windows.
+This integration is available on Kubernetes, Linux, and Windows.
 
 ## Benefits
 
@@ -57,7 +57,7 @@ service:
 
 ### Configuration settings
 
-The following table shows the configuration options for this monitor:
+The following table shows the configuration options for this integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
