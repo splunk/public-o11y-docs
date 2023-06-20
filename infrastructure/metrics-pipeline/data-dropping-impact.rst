@@ -15,7 +15,6 @@ Impact and benefits of dropping data
 
 |hr|
 
-
 When you create or update rules for your metric ingest, you can drop unaggregated raw data to discard metric time series (MTS) you don't want to ingest or monitor in Splunk Observability Cloud. You can also drop a metric without adding an aggregation rule. To learn more, see :ref:`data-dropping`.
 
 .. note:: You must be an Admin to drop data.
@@ -46,3 +45,46 @@ To prevent charts and detectors from showing no data, you can follow these steps
 
 Use data dropping to reduce billing costs  
 ======================================================
+
+By reducing cardinality you can also reduce your billing. Try dropping any of the following dimensions:
+
+.. list-table::
+    :header-rows: 1
+    :widths: 20 80
+
+    *   - Source
+        - Dimensions to drop
+
+    *   - Any agent  
+        - ``host``, ``host.name``, ``container.id``, ``container_id``, ``metric_source``, ``plugin``, ``redis.version`` , ``state`` , ``url``
+
+    *   - AWS 
+        - ``AWSUniqueId``, ``InstanceId``, ``namespace``
+
+    *   - Azure 
+        - ``azure_resource_id``, ``resource_type``, ``monitored_resource``
+
+    *   - GCP 
+        - ``gcp_id``, ``service``
+
+    *   - VMware 
+        - ``vcenter``
+
+    *   - Heroku 
+        - ``dyno_id``
+
+    *   - NPM 
+        - ``sf_product``
+
+
+Further considerations
+------------------------------------------------------------
+
+Keep in mind that dropping any of those billing-related dimensions can also affect product experience, since these dimensions are commonly used for dashboards: 
+
+* If dashboard import qualifiers are modified, then dashboards may not be imported at all. 
+* If dashboard analytics are impacted, charts may not report correctly or at all.
+
+Dropping dimensions specific to a resource type and used in dashboard and detector analytics will likely only impact that resource's charts and dashboards. 
+
+Removing any of the base dimensions (generally a subset of those explicitly listed above as related to billing) might affect property synchonization. For instance, if you drop ``AWSUniqueId``, metrics will no longer be associated to the cloud resource properties identified with ``aws_*``, including service-specific attributes and resource group tags.
