@@ -17,7 +17,7 @@ Configure application receivers for networks
    monitors-network/net-io
    monitors-network/network-protocols
    monitors-network/ntp
-   snmp/snmp
+   monitors-network/snmp
    statsd/statsd
    traefik/traefik
 
