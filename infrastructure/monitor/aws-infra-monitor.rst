@@ -366,7 +366,27 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 Costs for AWS monitoring
 ===========================================================
 
-Observability Cloud retrieves metrics with two methods:
+Splunk Observability Cloud costs 
+-------------------------------------------------------------------
+
+Your subscription plan determines how you'll be charged for sending AWS metrics to Observability Cloud. See more in :ref:`monitor-imm-billing-usage`.
+
+* In MTS-based subscription plans, all metrics are custom, and you're therefore charged for them.
+* In host-based subscription plans, most AWS metrics are categorized as bundled, and are part of your plan. 
+
+Bundled metrics include all metrics from :ref:`supported namespaces <aws-integrations>` as well as metrics from the following services:
+  * CWAgent
+  * Glue
+  * MediaLive 
+  * System/Linux 
+  * WAF 
+
+For a complete list of Observability Cloud metrics, see :ref:`metric-categories`.
+
+AWS costs 
+-------------------------------------------------------------------
+
+Observability Cloud retrieves AWS metrics with two methods:
 
 #. Streaming data with Metric Streams. 
 #. Polling CloudWatch APIs:
@@ -376,8 +396,8 @@ Observability Cloud retrieves metrics with two methods:
 
 Learn more at :ref:`Evaluate your data ingest needs and costs <prep-for-aws-integration>`.
 
-Cost considerations 
--------------------------------------------------------------------
+AWS pricing 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 AWS :strong:`pricing is based on the amount of requested metrics`, not the number of requests. Therefore the cost of obtaining Cloudwatch metrics for a service is based on three factors: frequency of pulling data, number of metrics for a given service, and number of cloud resources.
 
@@ -385,8 +405,8 @@ Generally speaking, Metric Streams costs the same as polling if the integration 
 
 However, when using Metric Stream you can't control costs, while you can configure the polling frequency of the APIs. See :ref:`how to limit the metrics to collect, the resources, or the collection frequently <specify-data-metadata>`. 
 
-Example using polling APIs
--------------------------------------------------------------------
+Example: Cost scenarios using polling APIs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Let's imagine a user with the following configuration: 
 
@@ -430,5 +450,3 @@ Next, you retrieve the data using the ``GetMetricData`` API at a cost of USD 0.0
    *  - The user wants to retrieve ONLY 4 metrics for a 1,000 queues (because they're the production instances) every 10 minutes
       - 1440 (number of minutes in a day)/10 (pull interval) *  4 (number of metrics) * 1000 (number of SQS resources) = 576k
       - USD 5.76 
-
-
