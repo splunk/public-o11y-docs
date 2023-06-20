@@ -2,7 +2,7 @@
 .. _data-dropping-impact:
 
 *********************************************************************
-Data dropping impacts
+Impact and benefits of dropping data 
 *********************************************************************
 
 .. meta::
@@ -16,12 +16,12 @@ Data dropping impacts
 |hr|
 
 
-When you create or update rules for your metric, you can drop unaggregated raw data to discard metric time series (MTS) you don't want to ingest or monitor in Splunk Observability Cloud. You can also drop a metric without adding an aggregation rule. To learn more, see :ref:`data-dropping`.
+When you create or update rules for your metric ingest, you can drop unaggregated raw data to discard metric time series (MTS) you don't want to ingest or monitor in Splunk Observability Cloud. You can also drop a metric without adding an aggregation rule. To learn more, see :ref:`data-dropping`.
 
-.. note:: You must be an admin to drop data.
+.. note:: You must be an Admin to drop data.
 
-Impacts of dropping data
-=================================
+Considerations when dropping data
+======================================
 
 Before you decide to drop unaggregated raw data for your metric, consider the following impacts:
 
@@ -32,7 +32,7 @@ Before you decide to drop unaggregated raw data for your metric, consider the fo
 - If you drop data for metrics associated with built-in charts and AutoDetect detectors, these charts and detectors will be empty and not function correctly. Avoid dropping data for metrics used in built-in charts and AutoDetect detectors. For a list of AutoDetect detectors, see :ref:`autodetect-list`.
 
 Avoid empty charts and detectors when dropping data
-======================================================
+------------------------------------------------------------
 
 To prevent charts and detectors from showing no data, you can follow these steps when creating new rules:
 
@@ -41,3 +41,8 @@ To prevent charts and detectors from showing no data, you can follow these steps
 #. Save your new rules.
 #. Replace the metric in all associated charts and detectors with the new aggregated metrics.
 #. Drop unaggregated raw data for your metric once you have updated associated charts and detectors.
+
+.. _data-dropping-billing:
+
+Use data dropping to reduce billing costs  
+======================================================
