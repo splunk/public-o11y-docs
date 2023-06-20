@@ -19,16 +19,16 @@ Remove sensitive data using the Splunk Distribution of OpenTelemetry Collector
 
 The first line of defense for sensitive information is to use the Splunk autoinstrumentation, which never captures sensitive information.
 
-If sensitive data has been sent to Splunk Observability Cloud during manual instrumentation, you can remove it pre-ingest with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. See :ref:`configure-remove` for more information, and read the use case below.  
+If sensitive data has been sent to Splunk Observability Cloud during manual instrumentation, you can remove it pre-ingest with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. See :ref:`configure-remove` for more information, and read the following scenario.  
 
 .. note:: A note about dropping spans   
 
     Concealing specific values in spans is the best way to hide sensitive information in spans. It's not possible to drop entire spans from your OpenTelemetry pipeline, and attempting to do so is not recommended, as excluding spans risks creating traces with missing spans. See :ref:`apm-missing-spans` for more information.
 
-Use case: Delete, redact, or hash tags from spans in the Splunk Distribution of OpenTelemetry Collector
+Scenario: Delete, redact, or hash tags from spans in the Splunk Distribution of OpenTelemetry Collector
 -------------------------------------------------------------------------------------------------------------
 
-Moira, a performance engineer, is looking at trace data and realizes that manual instrumentation is emitting sensitive data from the ``checkoutService`` by mistake. While the instrumentation is being updated to prevent this leak, they need to hide the values of all span tags with the potential to contain sensitive customer information. Using the ``attributes`` processor, they can delete, redact, or hash sensitive information. 
+Moira, a performance engineer, is looking at trace data and realizes that manual instrumentation is emitting sensitive data from the ``checkoutService`` by mistake. While Moira is updating the instrumentation to prevent this leak, they need to hide the values of all span tags with the potential to contain sensitive customer information. Using the ``attributes`` processor, they can delete, redact, or hash sensitive information. 
 
 The following is an example of a processor that Moira can add to their Splunk Distribution of OpenTelemetry Collector configuration file. In this example, they delete the keys and values of the ``user.password`` attribute from the spans associated with ``checkoutService`` because they know this value is not relevant for debugging application performance.
 
@@ -79,7 +79,7 @@ Use visibility filter APIs to block data in Splunk APM
 
 To handle cases in which data is unintentionally sent to Splunk APM and hasn't been removed in the data ingestion pipeline, users with administrator access can use an API to set visibility filters that block specific span tags in Splunk APM. This hides the information from everywhere in Splunk APM, as well as in API responses. The hidden information is not purged from Splunk APM until it expires after the 8-day default retention period. 
 
-The following are three examples of scenarios in which you might want to block this kind of information. Note that these APIs are configurable so that you can protect the span tags that might have leaked data without compromising the overall visibility of your services.
+The following are 3 examples of scenarios in which you might want to block this kind of information. Note that these APIs are configurable so that you can protect the span tags that might have leaked data without compromising the overall visibility of your services.
 
 .. note:: See :new-page:`APM Visibility Filter API <https://quickdraw.splunk.com/redirect/?product=Observability&location=visibility-filter-dev-guide&version=current>` in the developer documentation for detailed guidance on using these APIs. 
 
@@ -88,7 +88,7 @@ Block a specific span tag for a specific service
 
 If you know that a specific span tag for a service might contain sensitive information, you can hide that span tag and its values everywhere in the Splunk APM UI.
 
-For instance, imagine that Moira has manually instrumented a checkout service in Splunk APM and forgot to block the tags that use the span tags ``user.email`` and ``credit.card.number`` in their instrumentation of the service. The following example API call would block just those 2 span tags from all the ``readCartDetails`` operation in ``checkoutService``.
+For instance, imagine that Moira has manually instrumented a checkout service in Splunk APM and forgot to block the tags that use the span tags ``user.email`` and ``credit.card.number`` in their instrumentation of the service. The following example API call blocks 2 span tags from all the ``readCartDetails`` operation in ``checkoutService``.
 
 .. include:: /_includes/realm-note.rst
 
@@ -195,4 +195,4 @@ The following screenshot shows normalized database queries in Database Query Per
 
 As the ``db.statement`` attribute for SQL databases and the ``db.operation`` attribute for NoSQL databases might still contain sensitive information after normalization, use visibility filters to hide that information in Splunk APM. See :ref:`apm-visibility-filters` for more information.
 
-.. note:: To disable database query normalization, see :ref:`disable-db-normalization`. 
+.. note:: To turn off database query normalization, see :ref:`disable-db-normalization`. 
