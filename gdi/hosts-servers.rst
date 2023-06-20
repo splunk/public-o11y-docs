@@ -45,7 +45,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/ntpq   
    monitors-hosts/php-fpm
    monitors-hosts/procstat
-   solr/solr
+   monitors-hosts/solr
    supervisor/supervisor
    systemd/collectd-systemd
    varnish/telegraf-varnish
