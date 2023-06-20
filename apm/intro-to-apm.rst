@@ -53,6 +53,10 @@ The following table provides an overview of what you can do with Splunk APM:
     - AlwaysOn Profiling
     - :ref:`profiling-scenario-landingpage`
 
+  * - 
+    - Runtime metrics
+    - :ref:``
+
   * - Use detectors to alert with custom alert, request, and duration (RED) metrics to monitor error rate and latency across all of your services.
     - Detectors and alerts
     - :ref:`Detectors and alerts<apm-alerts>`
