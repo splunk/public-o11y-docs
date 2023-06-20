@@ -32,7 +32,7 @@ Configure application receivers for databases
    monitors-databases/postgresql
    monitors-databases/redis
    monitors-databases/sap-hana
-   sql/sql
+   monitors-databases/sql
 
 These application receivers gather metrics from their associated database-related applications and the hosts the applications are running on.
 
