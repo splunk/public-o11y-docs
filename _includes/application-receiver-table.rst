@@ -513,7 +513,7 @@
      -
      - :strong:`X`
   
-   * - :ref:`SAP HANA <hana>`
+   * - :ref:`SAP HANA <sap-hana>`
      - :strong:`X`
      -
      -
