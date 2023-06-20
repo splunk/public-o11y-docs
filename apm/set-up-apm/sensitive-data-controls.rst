@@ -4,8 +4,6 @@
 Use controls for sensitive data in Splunk APM
 ************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about possible controls for sensitive data in Splunk APM. 
 
@@ -90,7 +88,7 @@ Block a specific span tag for a specific service
 
 If you know that a specific span tag for a service might contain sensitive information, you can hide that span tag and its values everywhere in the Splunk APM UI.
 
-For instance, imagine that Moira has manually instrumented a checkout service in Splunk APM and forgot to block the tags that use the span tags ``user.email`` and ``credit.card.number`` in their instrumentation of the service. The following example API call would block just those two span tags from all operations (“*”) in ``checkoutService``.
+For instance, imagine that Moira has manually instrumented a checkout service in Splunk APM and forgot to block the tags that use the span tags ``user.email`` and ``credit.card.number`` in their instrumentation of the service. The following example API call would block just those 2 span tags from all the ``readCartDetails`` operation in ``checkoutService``.
 
 .. include:: /_includes/realm-note.rst
 
@@ -110,7 +108,7 @@ JSON payload:
         "matcher": {
         
             "sf_service": "checkoutService",
-            "sf_operation": "*"
+            "sf_operation": "readCartDetails"
         },
         "hiddenTags": ["user.email", "credit.card.number"]
     }
@@ -143,7 +141,7 @@ JSON payload:
         "matcher": {
 
             "sf_service": "loginService",
-            "sf_operation": "*"			
+            "sf_operation": "readCartDetails"		
         },
         "visibleTags": ["sf_environment", "sf_service", "sf_endpoint", "sf_operation", "sf_httpMethod", "sf_kind", "sf_workflow", "sf_failure_root_cause_service", "sf_error"]
     }
@@ -175,7 +173,7 @@ JSON payload:
         "matcher": {
 
             "sf_service": "checkoutService",
-            "sf_operation": "readCartDetails",
+            "sf_operation": "readCartDetails"
         },
         "visibleTags": ["sf_environment", "sf_service", "sf_endpoint", "sf_operation", "sf_httpMethod", "sf_kind", "sf_workflow", "sf_failure_root_cause_service", "sf_error"],
     }
