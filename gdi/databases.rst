@@ -31,8 +31,8 @@ Configure application receivers for databases
    opentelemetry/components/oracledb-receiver
    monitors-databases/postgresql
    monitors-databases/redis
-   sap-hana/hana
-   sql/sql
+   monitors-databases/sap-hana
+   monitors-databases/sql
 
 These application receivers gather metrics from their associated database-related applications and the hosts the applications are running on.
 
