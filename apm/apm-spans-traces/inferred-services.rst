@@ -197,7 +197,7 @@ When Splunk APM infers a publisher/subscriber queue, it means an instrumented se
 
     #. If both ``messaging.system`` and ``messaging.destination.name`` exist, the inferred service name = <Value of ``messaging.system`` tag>:<Value of ``messaging.destination.name`` tag>.
     #. If ``messaging.system`` is null, the inferred service name = <Value of ``messaging.destination.name`` tag>.
-    #. #. If ``messaging.destination.name`` is null, the inferred service name = <Value of ``messaging.system`` tag>.
+    #. If ``messaging.destination.name`` is null, the inferred service name = <Value of ``messaging.system`` tag>.
 
 
 
