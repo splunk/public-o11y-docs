@@ -488,6 +488,43 @@ The following table shows customizable arguments for this detector. To learn how
 
 Oracle
 ---------------------------------------------------
+Oracle - Process utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Description: Alerts when Oracle process utilization is above its designated threshold. 
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/oracle.flow#L50>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Specifies trigger threshold in % for the process utilization
+     - ``90%``
+
+   * - Trigger sensitivity
+     - Sensitivity for alerting associated with the threshold
+     - ``80% of 5m``
+
+   * - Clear threshold
+     - Specifies clear threshold in % for the process utilization
+     - ``< 90%``
+
+   * - Clear sensitivity
+     - Specifies clear sensitivity associated with clear threshold
+     - ``80% of 5m``     
+
+   * - filter
+     - Dimensions you want to add to the scope of the detector, if any
+     - None  
+
+
+
 Oracle - Session utilization expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Description: Alerts when Oracle session utilization is above its designated threshold. 
