@@ -18,14 +18,14 @@ Configure application exporters and receivers for monitoring
    monitors-monitoring/nagios
    monitors-monitoring/prometheus-exporter
    monitors-monitoring/prometheus-go
-   prometheus-nginx-ingress/prometheus-nginx-ingress
-   prometheus-nginx-vts/prometheus-nginx-vts
-   prometheus-node/prometheus-node
+   monitors-monitoring/prometheus-nginx-ingress
+   monitors-monitoring/prometheus-nginx-vts
+   monitors-monitoring/prometheus-node
    opentelemetry/components/prometheus-receiver
-   signalfx-forwarder/signalfx-forwarder
+   monitors-monitoring/prometheus-velero
+   monitors-monitoring/signalfx-forwarder
    opentelemetry/components/splunk-apm-exporter
-   velero/prometheus-velero
-   windows/telegraf-win_perf_counters
+   monitors-monitoring/win_perf_counters
 
 These application receivers gather metrics from their associated monitoring applications and the hosts the applications are running on.
 
