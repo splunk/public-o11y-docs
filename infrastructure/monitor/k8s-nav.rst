@@ -153,7 +153,7 @@ The Analyzer uses AI-driven insights to examine patterns that nodes, pods, or co
 -  nodes experiencing high CPU
 -  nodes experiencing high memory
 
-The Analyzer displays overrepresented metrics properties for known conditions, such as pods in pending status, pods in failed status, and so on. You can use properties that are highly correlated with these conditions to filter the cluster map. You can explore data about each of those elements in the Info tab, allowing you to identify the underlying patterns noticeable on the filtered map that might be correlated with Kubernetes issues (for example, all failed pods only being in certain types of clusters) and provides suggested paths to follow for troubleshooting such issues.
+The Analyzer displays overrepresented metrics properties for known conditions, such as pods in pending status, pods in failed status, and so on. You can use properties that are highly correlated with these conditions to filter the cluster map. You can explore data about each of those elements in the navigator using context-sensitive dashboards. This enables you to identify the underlying patterns noticeable on the filtered map that might be correlated with Kubernetes issues. For example, if all failed pods are in certain types of clusters, Analyzer provides suggested paths to follow for troubleshooting such issues.
 
 Next steps
 =====================
