@@ -28,7 +28,7 @@ To create custom spans and traces, follow these steps:
 
       tracer := otel.Tracer("ExampleService")
 
-3. To create a span with a tracer, you’ll also need a handle on a ``context.Context`` instance. These will typically come from things like a request object and may already contain a parent span from an instrumentation library. You can also optionally set the tags:
+3. To create a span with a tracer, you’ll also need a handle on a ``context.Context`` instance e.g. from the request object or from the function parameter. You can also optionally set the tags:
 
    .. code:: go
 
