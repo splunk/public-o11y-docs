@@ -23,7 +23,7 @@ If sensitive data has been sent to Splunk Observability Cloud during manual inst
 
 .. note:: A note about dropping spans   
 
-    Concealing specific values in spans is the best way to hide sensitive information in spans. It's not possible to drop entire spans from your OpenTelemetry pipeline, and attempting to do so is not recommended, as excluding spans risks creating traces with missing spans. See :ref:`apm-missing-spans` for more information.
+    Concealing specific values in spans is the best approach to hide sensitive information in spans. It's not possible to drop entire spans from your OpenTelemetry pipeline.
 
 Scenario: Delete, redact, or hash tags from spans in the Splunk Distribution of OpenTelemetry Collector
 -------------------------------------------------------------------------------------------------------------
