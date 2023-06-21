@@ -11,8 +11,8 @@ Authentication and Security
    :hidden:
 
    scenario-org-security
-   Authentication tokens TOGGLE <admin/authentication-tokens/tokens>
-   Single Sign On TOGGLE <admin/sso/sso-about>
+   Authentication tokens TOGGLE <authentication-tokens/tokens>
+   Single Sign On TOGGLE <SSO/sso-about>
 
 
 
