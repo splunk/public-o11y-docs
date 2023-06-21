@@ -25,7 +25,7 @@ Configure application exporters and receivers for monitoring
    monitors-monitoring/prometheus-velero
    monitors-monitoring/signalfx-forwarder
    opentelemetry/components/splunk-apm-exporter
-   windows/telegraf-win_perf_counters
+   monitors-monitoring/win_perf_counters
 
 These application receivers gather metrics from their associated monitoring applications and the hosts the applications are running on.
 
