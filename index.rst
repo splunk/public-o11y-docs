@@ -752,18 +752,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Authentication and Security TOGGLE <admin/authentication/authentication-intro>
 
-
-.. toctree::
-   :maxdepth:   3
-
-   Create and manage authentication tokens TOGGLE <admin/authentication-tokens/tokens>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/allow-services
-
 .. toctree::
    :maxdepth:   3
 

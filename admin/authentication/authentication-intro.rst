@@ -13,6 +13,7 @@ Authentication and Security
    scenario-org-security
    Authentication tokens TOGGLE <authentication-tokens/tokens>
    Single Sign On TOGGLE <SSO/sso-about>
+   allow-services
 
 
 
