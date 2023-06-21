@@ -11,11 +11,11 @@ Authentication and Security
    :hidden:
 
    scenario-org-security
-   tokens
-   org-tokens
-   api-access-tokens
-   manage-usage
-   sso/sso-about
+   <authentication-tokens/tokens>
+   <authentication-tokens/org-tokens>
+   <authentication-tokens/api-access-tokens>
+   <authentication-tokens/manage-usage>
+   <sso/sso-about>
 
 
 

@@ -750,7 +750,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   TOGGLE <admin/authentication/authentication-intro>
+   Authentication and Security TOGGLE <admin/authentication/authentication-intro>
 
 
 .. toctree::
