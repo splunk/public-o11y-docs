@@ -22,13 +22,13 @@ To create custom spans and traces, follow these steps:
 
       import "go.opentelemetry.io/otel"
 
-2. Spans are created by tracers. Therefore, you need to create one:
+2. Create a tracer for your spans:
 
    .. code:: go
 
       tracer := otel.Tracer("ExampleService")
 
-3. To create a span with a tracer, you’ll also need a handle on a ``context.Context`` instance e.g. from the request object or from the function parameter. You can also optionally set the tags:
+3. To create a span, you need a handle on a ``context.Context`` instance. You can also set the tags. For example:
 
    .. code:: go
 
@@ -38,8 +38,7 @@ To create custom spans and traces, follow these steps:
          // your logic for "hello" span
       }()
 
-Check [OpenTelemetry Traces API docs](https://pkg.go.dev/go.opentelemetry.io/otel/trace) for further information.
-
+See the :new-page:`OpenTelemetry Traces API documentation <https://pkg.go.dev/go.opentelemetry.io/otel/trace>` for additional information.
 
 .. _custom-metrics-go:
 
@@ -54,29 +53,29 @@ To create custom metrics, follow these steps:
 
       import "go.opentelemetry.io/otel"
 
-2. Instruments are created by meters. Therefore, you need to create one:
+2. Create a meter:
 
    .. code:: go
 
       meter := otel.Meter("ExampleService")
 
-3. Create an instrument which are used for making measurments:
+3. Create an instrument to take measurements:
 
    .. code:: go
 
-      counter, err := meter.Int64Counter(
+	   counter, err := meter.Int64Counter(
       	"business.requests.count",
-      	metric.WithUnit("{request}"),
-      	metric.WithDescription("The numer of business requests."),
-      )
-      if err != nil {
-      	// handle error (e.g. log it)
-      }
+	   	metric.WithUnit("{request}"),
+	   	metric.WithDescription("The numer of business requests."),
+	   )
+	   if err != nil {
+	   	// handle error (e.g. log it)
+	   }
 
-4. Make the measurment:
+4. Perform the measurements:
 
    .. code:: go
 
       counter.Add(ctx, 1);
 
-Check [OpenTelemetry Metrics API docs](https://pkg.go.dev/go.opentelemetry.io/otel/metric) for further information.
+See the :new-page:`OpenTelemetry Metrics API docs <https://pkg.go.dev/go.opentelemetry.io/otel/metric>` for additional information.
