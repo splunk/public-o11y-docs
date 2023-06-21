@@ -10,8 +10,8 @@ Manage users and teams
 .. toctree::
    :hidden:
 
-   manage-teams
-   manage-users
+   Manage teams TOGGLE <teams/manage-teams>
+   Manage users TOGGLE <users/manage-users>
 
 
 

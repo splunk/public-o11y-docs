@@ -11,11 +11,8 @@ Authentication and Security
    :hidden:
 
    scenario-org-security
-   <admin/authentication-tokens/tokens>
-   <admin/authentication-tokens/org-tokens>
-   <admin/authentication-tokens/api-access-tokens>
-   <admin/authentication-tokens/manage-usage>
-   <admin/sso/sso-about>
+   Authentication tokens TOGGLE <admin/authentication-tokens/tokens>
+   Single Sign On TOGGLE <admin/sso/sso-about>
 
 
 
