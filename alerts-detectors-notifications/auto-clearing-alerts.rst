@@ -37,7 +37,7 @@ A detector auto resolves if it can't evaluate the condition specified for the ti
       
       detect(when(A > threshold(99), lasting='1h', at_least=0.8), lasting='30m', at_least=0.9), auto_resolve_after='1h')
 
-  In this example, if the MTS does not send a data point for at least 80% of the detector time windows, active alerts will auto-clear because the condition can't evaluated for the time interval provided in ``auto_resolve_after``.
+  In this example, if the MTS does not send a data point for at least 80% of the detector time windows, active alerts will auto-clear because the condition can't be evaluated for the time interval provided in ``auto_resolve_after``.
 
 * When the requirements to fire and clear alerts are both true or are both false, the alert will auto-clear.
 
