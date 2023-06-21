@@ -14,10 +14,12 @@ Monitor Kubernetes
 
 You can monitor Kubernetes metrics with Splunk Observability Cloud. Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. To learn more, see :ref:`otel-intro`.
 
-Prerequisite
+Prerequisites
 ================
 
-Before you can start monitoring any Kubernetes resources, :ref:`get-started-k8s`, and log in with your administrator credentials.
+Before you start monitoring any Kubernetes resources, do the following:
+* :ref:`get-started-k8s`.
+* Log in with your administrator credentials.
 
 
 .. _use-k8s-nav:
