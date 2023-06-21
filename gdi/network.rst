@@ -18,8 +18,8 @@ Configure application receivers for networks
    monitors-network/network-protocols
    monitors-network/ntp
    monitors-network/snmp
-   statsd/statsd
-   traefik/traefik
+   monitors-network/statsd
+   monitors-network/traefik
 
 These application receivers gather metrics from their associated network-related applications and the hosts the applications are running on.
 
