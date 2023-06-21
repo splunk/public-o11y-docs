@@ -48,9 +48,9 @@ Configure application receivers for hosts and servers
    monitors-hosts/solr
    monitors-hosts/supervisor
    monitors-hosts/systemd
-   varnish/telegraf-varnish
-   win-services/telegraf-win-services
-   vsphere/vsphere
+   monitors-hosts/varnish
+   monitors-hosts/vsphere
+   monitors-hosts/win-services
 
 These application receivers gather metrics from their associated host- and server-related applications and the hosts the applications are running on.
 
@@ -92,6 +92,6 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`supervisor`
 * :ref:`collectd-systemd`
 * :ref:`telegraf-varnish`
-* :ref:`telegraf-win-services`
 * :ref:`vsphere`
+* :ref:`telegraf-win-services`
 
