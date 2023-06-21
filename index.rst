@@ -767,12 +767,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Create and manage users <admin/users/manage-users>
-
-.. toctree::
-   :maxdepth:   3
-
-   Create and manage teams TOGGLE <admin/teams/manage-teams>
+   User and team management TOGGLE <admin/user-management/user-management-intro>
 
 .. toctree::
    :hidden:

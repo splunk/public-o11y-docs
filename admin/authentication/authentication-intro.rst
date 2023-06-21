@@ -11,11 +11,11 @@ Authentication and Security
    :hidden:
 
    scenario-org-security
-   <authentication-tokens/tokens>
-   <authentication-tokens/org-tokens>
-   <authentication-tokens/api-access-tokens>
-   <authentication-tokens/manage-usage>
-   <sso/sso-about>
+   <admin/authentication-tokens/tokens>
+   <admin/authentication-tokens/org-tokens>
+   <admin/authentication-tokens/api-access-tokens>
+   <admin/authentication-tokens/manage-usage>
+   <admin/sso/sso-about>
 
 
 
@@ -24,5 +24,3 @@ One of the first steps in getting started with Observability Cloud is setting up
 To set up your organization, create and carry out a plan for addressing the tasks described in this topic. Many of these tasks require administrator access, and you might need to perform some administrative tasks on a regular basis after your initial setup.
 
 
-Authentication
-==============================================================
