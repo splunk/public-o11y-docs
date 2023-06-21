@@ -50,7 +50,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/systemd
    monitors-hosts/varnish
    monitors-hosts/vsphere
-   win-services/telegraf-win-services
+   monitors-hosts/win-services
 
 These application receivers gather metrics from their associated host- and server-related applications and the hosts the applications are running on.
 
