@@ -750,13 +750,8 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   admin/scenario-org-security
+   TOGGLE <admin/authentication/authentication-intro>
 
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   About SSO integrations for Splunk Observability Cloud TOGGLE <admin/SSO/sso-about>
 
 .. toctree::
    :maxdepth:   3

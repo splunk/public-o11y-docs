@@ -10,11 +10,13 @@ Authentication and Security
 .. toctree::
    :hidden:
 
+   scenario-org-security
    tokens
    org-tokens
    api-access-tokens
    manage-usage
-   sso-about
+   sso/sso-about
+
 
 
 One of the first steps in getting started with Observability Cloud is setting up your organization. In Observability Cloud, an organization, or account, is the highest-level security grouping. For example, other organizations and their users can't access the data in your organization.
