@@ -64,14 +64,14 @@ To create custom metrics, follow these steps:
 
    .. code:: go
 
-	   counter, err := meter.Int64Counter(
+      counter, err := meter.Int64Counter(
       	"business.requests.count",
-	   	metric.WithUnit("{request}"),
-	   	metric.WithDescription("The numer of business requests."),
-	   )
-	   if err != nil {
-	   	// handle error (e.g. log it)
-	   }
+      	metric.WithUnit("{request}"),
+      	metric.WithDescription("The numer of business requests."),
+      )
+      if err != nil {
+      	// handle error (e.g. log it)
+      }
 
 4. Make the measurment:
 
