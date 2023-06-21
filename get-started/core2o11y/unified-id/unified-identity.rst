@@ -10,6 +10,7 @@ Unified Identity: Splunk Cloud Platform and Splunk Observability Cloud
 .. meta::
    :description: This page describes and links to setup pages for each component of Observability Cloud.
 
+Splunk Cloud Platform and Splunk Observability Cloud have Unified Identity.
 
 What is Unified Identity?
 ==========================================================================================
