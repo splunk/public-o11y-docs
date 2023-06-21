@@ -27,7 +27,7 @@ To turn on Auto-clear alerts when :ref:`creating or editing a detector <create-d
 Resolution logic
 ==================
 
-A detector auto resolves if it can't evaluate the condition specified for the time interval of the ``auto_resolve_after`` mechanism. The following cases can prevent a detector from successfully evaluating the condition:
+A detector auto resolves if it can't evaluate the condition specified for the time interval of the ``auto_resolve_after`` parameter. The following cases can prevent a detector from successfully evaluating the condition:
  
 * When a metric time series (MTS) lapses into inactivity, it stops reporting and triggers an auto-resolve countdown clock. If reporting resumes within your specified time interval, the countdown clock is freed to re-trigger in case reporting stops again. If reporting does not resume within the interval you've specified, then the involved MTS is considered no longer relevant, and the alert for it is auto-cleared.
 
@@ -35,9 +35,9 @@ A detector auto resolves if it can't evaluate the condition specified for the ti
   
   .. code-block::
       
-      detect(when(A > threshold(99), lasting='1h', at_least=0.8), off=when(A < threshold(1), lasting='30m', at_least=0.9), auto_resolve_after='1h')
+      detect(when(A > threshold(99), lasting='1h', at_least=0.8), lasting='30m', at_least=0.9), auto_resolve_after='1h')
 
-  In this case, if the MTS sends less than 80% of the data points from the past hour, then the alert auto-clears even if the MTS has been active.
+  In this example, if the MTS does not send a data point for at least 80% of the detector time windows, active alerts will auto-clear because the condition can't evaluated for the time interval provided in ``auto_resolve_after``.
 
 * When the requirements to fire and clear alerts are both true or are both false, the alert will auto-clear.
 
