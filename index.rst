@@ -778,12 +778,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Org reference info TOGGLE <admin/references/org-info>
 
-.. toctree::
-   :caption: Reference
-   :maxdepth:   3
 
 .. toctree::
+   :caption: Reference and Legal
    :maxdepth:   3
+
 
    Third-party software credits </references/third-party-credits>
    
