@@ -138,8 +138,6 @@ Apart from monitoring your Kubernetes infrastructure, you can also track service
 Analyzer
 +++++++++++++++++++++++++++
 
-:strong:`Available in the Enterprise Edition.`
-
 The Analyzer accessed through the K8s analyzer tab helps you troubleshoot Kubernetes problems at scale by highlighting Kubernetes objects that are in a bad state, such as nodes that are not ready. Then, the Analyzer produces theories about what those objects might have in common, such as that all of the objects are running the same workload or all objects are located in the same AWS region. Click on a finding in the Analyzer panel to filter the map.
 
 The Analyzer panel displays suggested filters for the elements selected in the :ref:`cluster map <k8s-nav-map>`. Click links in the Analyzer panel to add filters to the cluster map and explore conditions across your entire Kubernetes environment.
