@@ -64,7 +64,7 @@ The integration automatically maps Splunk Cloud Platform roles to the following 
      - power
 
    * - user
-     - read_only
+     - power
 
    * - N/A
      - usage
