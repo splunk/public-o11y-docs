@@ -87,7 +87,7 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 1. Select :strong:`Sign in with Splunk Cloud`.
 
-2. Provide your Splunk Cloud Platform credentials.
+2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice.
 
 3. The user then receives an e-mail to verify their identity. 
    When the user verifies their identity in the e-mail, the user is authenticated in Splunk Observability Cloud and can access all Splunk Cloud Platform data that their Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
