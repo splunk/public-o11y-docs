@@ -101,7 +101,7 @@ The following table shows the configuration options for the MongoDB Atlas:
 Metrics
 =================
 
-The following table shows the legacy metrics that are available for this integration. See :ref:`legacy-otel-mappings` for the Splunk Distribution of OpenTelemetry Collector equivalents. You can query OpenTelemetry metrics using the legacy names.
+The following table shows the legacy metrics that are queryable in Splunk Observability Cloud for this integration. See :ref:`legacy-otel-mappings` for the originating OpenTelemetry semantic value of each metric as reported by the receiver component.
 
 .. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
 
