@@ -22,7 +22,7 @@ After you identify services with poor response time, you can drill down in the
 log records for the service to understand the problems in more detail.
 
 Aggregate log records
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
 
 To perform an aggregation, follow these steps:
 
