@@ -12,7 +12,7 @@ The following sections describe available settings for configuring the Splunk Di
 Change the default configuration file
 ==========================================
 
-The Collector comes with a default configuration in the \ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml file. This configuration can be modified as needed. Possible configuration options can be found in the receivers, processors, exporters, and extensions folders of the following GitHub repositories:
+The Collector comes with a default configuration in the ``\ProgramData\Splunk\OpenTelemetry Collector\agent_config.yaml`` file. This configuration can be modified as needed. Possible configuration options can be found in the receivers, processors, exporters, and extensions folders of the following GitHub repositories:
 
 * :new-page:`OpenTelemetry Collector <https://github.com/open-telemetry/opentelemetry-collector>`
 * :new-page:`OpenTelemetry Collector Contrib <https://github.com/open-telemetry/opentelemetry-collector-contrib>`
