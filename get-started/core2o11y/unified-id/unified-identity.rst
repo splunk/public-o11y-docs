@@ -89,10 +89,9 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice.
 
-3. The user then receives an e-mail to verify their identity. 
-   When the user verifies their identity in the e-mail, the user is authenticated in Splunk Observability Cloud and can access all Splunk Cloud Platform data that their Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
+3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
 
-After the first login, a user does not need to provide their Splunk Cloud Platform credentials again. On subsequent logins, if a user is already logged in to Splunk Cloud Platform, they select :strong:`Sign in with Splunk Cloud` and are automatically signed in to Splunk Observability Cloud.
+After the first login, you do not need to provide your Splunk Cloud Platform credentials again. On subsequent logins, if you are already logged in to Splunk Cloud Platform, select :strong:`Sign in with Splunk Cloud` and you are automatically signed in to Splunk Observability Cloud.
 
 
 Working in Splunk Observability Cloud after the integration
@@ -103,7 +102,7 @@ Point-and-click log analysis
 ------------------------------------------------------------------------------------------
 One important advantage of the integration is that users can now query their Splunk Cloud Platform logs in Log Observer’s no-code UI. Users can create advanced queries without knowing SPL with Log Observer’s filters and aggregations. See :ref:`logs-queries` for more information.
 
-Related content
+Related Content
 ------------------------------------------------------------------------------------------
 Another significant benefit of the integration is that you can access any data related to your Splunk Cloud Platform logs that resides in other Splunk Observability Cloud applications, such as Infrastructure Monitoring, APM, RUM, and Synthetics. While exploring your data in any of the Splunk Observability Cloud applications, the Related Content bar always populates with links to other Splunk Observability Cloud applications that have related data. Access related metrics, traces, or infrastructure components when you observe your Splunk Cloud Platform logs in Splunk Observability Cloud.
 
