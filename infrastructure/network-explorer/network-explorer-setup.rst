@@ -15,7 +15,7 @@ You can install and configure Network Explorer as part of the Splunk Distributio
 Prerequisites
 ==============================
 
-To use Network Explorer, you must meet the following requirements.
+To use Network Explorer with Kubernetes, you must meet the following requirements.
 
  .. list-table::
     :header-rows: 1
@@ -32,6 +32,24 @@ To use Network Explorer, you must meet the following requirements.
 
     * - Kubernetes version
       - Network Explorer is supported on all active releases of Kubernetes. For more information, see :new-page:`Releases <https://kubernetes.io/releases/>` in the Kubernetes documentation. 
+
+To use Network Explorer with OpenShift, you must meet the following requirements.
+
+ .. list-table::
+    :header-rows: 1
+    :widths: 30 70
+
+    * - :strong:`Prerequisite`
+      - :strong:`Description`
+        
+    * - Environment
+      - An on-premises OpenShift cluster or an OpenShift Rosa cluster version 4.12.18 or 4.12.13
+      
+    * - Admin role
+      - You must be an admin in Splunk Observability Cloud to install Network Explorer on OpenShift
+
+    * - Infrastructure Monitoring ingestion token
+      - 
 
 Network Explorer components
 =================================
@@ -70,7 +88,7 @@ Network Explorer consists of the following components:
 
 .. _install-network-explorer:
 
-Install Network Explorer
+Install Network Explorer for Kubernetes
 =======================================================================================
 
 For the Splunk Distribution of OpenTelemetry Collector to work with Network Explorer, you must install it in Gateway mode, and perform the following steps:
@@ -235,6 +253,14 @@ In the following example, CPU is set to :strong:`500m`, and memory is set to :st
       helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,networkExplorer.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
 
 
+.. _install-network-explorer:
+
+Install Network Explorer for OpenShift
+=======================================================================================
+
+
+
+
 .. _resize-installation:
 
 Resize your Network Explorer installation
@@ -276,14 +302,14 @@ The following example uses 4 shards per reducer stage.
 
 Estimate reducer CPU and memory usage
 +++++++++++++++++++++++++++++++++++++++
-To estimate the CPU and memory usage the reducer may require from a node, you can use these simple formulas:
+To estimate the CPU and memory usage the reducer might require from a node, you can use these simple formulas:
 
 ::
 
     Memory in Mebibytes (Mi) = 4 * Number of nodes in your cluster + 60
     Fractional CPU in milliCPU (m) = Number of nodes in your cluster + 30
 
-This gives you an appromixate expected usage. Multiply the final numbers by a factor of 1.5 or 2 to give headroom for growth and spikes in usage.
+This gives you an approximate expected usage. Multiply the final numbers by a factor of 1.5 or 2 to give headroom for growth and spikes in usage.
 
 
 .. _customize-network-explorer-metrics:
