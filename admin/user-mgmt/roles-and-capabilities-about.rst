@@ -28,10 +28,22 @@ Pre-defined roles
 
 Splunk Observability Cloud comes with the following roles predefined:
 
-* admin: This role has the most capabilities assigned to it. An admin user has full privileges across Splunk Observability Cloud.
-* power: This role can access all components in Splunk Observability Cloud, access a subset of settings, and create, delete, and update charts, dashboards and detectors. This is the default role assigned to users.
-* usage: This role allows a user to view the subscription usage page without being an admin. This role also has read_only privileges.
-* read-only: This role can access all pages and objects that a power user can, but cannot create, edit, or delete objects. They have limited access to the Settings pages.
+.. list-table::
+  :header-rows: 1
+  :widths: 30, 70
+
+  * - :strong:`Role`
+    - :strong:`Description`
+  * - admin
+    - This role has the most capabilities assigned to it. An admin user has full privileges across Splunk Observability Cloud.
+  * - power 
+    - This role can access all components in Splunk Observability Cloud, access a subset of settings, and create, delete, and update charts, dashboards and detectors. This is the default role assigned to users.
+  * - usage
+    - This role allows a user to view the subscription usage page without being an admin. This role also has read_only privileges.
+  * - read_only
+    - This role can access all pages and objects that a power user can, but cannot create, edit, or delete objects. They have limited access to the Settings pages.
+
+
 
 Splunk Observability Cloud tokens also honor the role-based access control framework. Since tokens can now be assigned to roles, APIs inherit capabilities from their token. For example, an API using a token which is created with read-only role will inherent read-only permissions. This can be used take system backups with a reduced risk of introducing changes.
 
@@ -57,7 +69,7 @@ You can assign multiple roles to individual users. The user receives a combinati
 
 .. list-table::
   :header-rows: 1
-  :widths: 50, 50
+  :widths: 30, 70
 
   * - :strong:`Role`
     - :strong:`Capabilities`
@@ -71,5 +83,5 @@ You can assign multiple roles to individual users. The user receives a combinati
     - An admin user has full privileges across Splunk Observability Cloud.
   * - subscription usage and power user
     - All the capabilities of a power user, plus the ability to view the Subscription useage pages for the org.
-  * - read-only and subscription usage
+  * - read_only and subscription usage
     - All the capabilities of a read-only user, plus the ability to view the Subscription useage pages for the org.
