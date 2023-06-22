@@ -7,7 +7,17 @@ Send custom metrics to Splunk Observability Cloud
 .. meta::
    :description: You can send custom metrics to Splunk Observability Cloud, for example to instrument a service that isn't supported yet.
 
-You can send custom metrics to Splunk Observability Cloud, for example to instrument a service that isn't supported yet. To send custom metrics, follow these instructions.
+You can send custom infrastructure and application metrics to Splunk Observability Cloud, for example to instrument a service that isn't supported yet. To send custom metrics, follow these instructions.
+
+Infrastructure or service metrics
+========================================
+
+Application metrics
+========================================
+
+custom-metrics-go
+java-otel-custom-metrics
+custom-metrics-otel-dotnet
 
 Add a receiver for custom metrics
 ========================================

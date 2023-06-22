@@ -5,9 +5,9 @@ Custom Go instrumentation for Splunk Observability Cloud
 **********************************************************************
 
 .. meta:: 
-   :description: Write custom instrumentation for your Go application when you need to add custom attributes to spans or want to manually generate spans.
+   :description: Write custom instrumentation for your Go application when you need to add custom attributes to spans or want to manually generate spans and metrics.
 
-Instrumenting applications using the Splunk Distribution of OpenTelemetry Go and instrumentation libraries covers most needs. Writing custom instrumentation for your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans or metrics.
+Instrumenting applications using the Splunk Distribution of OpenTelemetry Go and instrumentation libraries covers most needs. Writing custom instrumentation for your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans and metrics.
 
 .. _custom-traces-go:
 
