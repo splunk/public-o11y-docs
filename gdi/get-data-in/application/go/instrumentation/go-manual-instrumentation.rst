@@ -45,6 +45,8 @@ See the :new-page:`OpenTelemetry Traces API documentation <https://pkg.go.dev/go
 Create custom metrics
 ===============================
 
+You can create custom metrics of type counter (sum with delta aggregation temporality), cumulative counter (sum), and gauge.
+
 To create custom metrics, follow these steps:
 
 1. Import the OpenTelemetry API:
