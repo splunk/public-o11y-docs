@@ -9,20 +9,19 @@ Send custom metrics to Splunk Observability Cloud
 
 You can send custom infrastructure and application metrics to Splunk Observability Cloud, for example to instrument a service that isn't supported yet. To send custom metrics, follow these instructions.
 
-Infrastructure or service metrics
+.. _custom-infra-metrics:
+
+Send custom infrastructure or service metrics
 ========================================
 
-Application metrics
-========================================
+Splunk Observability Cloud can ingest custom infrastructure or service metrics through existing OpenTelemetry components from OpenTelemetry contrib or through custom components that adhere to OpenTelemetry semantic conventions. For a list of supported metric types, see :ref:`metric-types`.
 
-custom-metrics-go
-java-otel-custom-metrics
-custom-metrics-otel-dotnet
+To send custom application metrics to Observability Cloud, follow these steps.
 
 Add a receiver for custom metrics
-========================================
+------------------------------------------
 
-To send custom metrics through the Splunk Distribution of the OpenTelemetry Collector, define a receiver in your Collector configuration that is ready to accept the data.
+To send custom metrics through the Splunk Distribution of the OpenTelemetry Collector, define a receiver in your Collector configuration that is ready to accept the data. See :ref:`otel-components` for a list of available receivers.
 
 The following example shows a custom Prometheus receiver that scrapes a live endpoint on port 8889 every 10 seconds:
 
@@ -48,9 +47,9 @@ Make sure that the new receiver is the ``metrics`` pipeline of the configuration
 See :ref:`prometheus-receiver` for more information.
 
 Add the required dependencies
-======================================
+--------------------------------------------------
 
-To send custom metrics from the code of your application, or from a script that queries a service at regular intervals, add the required dependencies, including OpenTelemetry packages. 
+To send custom infrastructure or service metrics from the code of your application, or from a script that queries a service at regular intervals, add the required dependencies, including OpenTelemetry packages. 
 
 The following example shows dependencies for a Python script that send metrics every time it's run by ``cron``:
 
@@ -95,3 +94,30 @@ Send custom metrics without the Collector
 -------------------------------------------
 
 To send metrics bypassing the Collector, use the Ingest REST API endpoints. See :new-page:`Send Metrics and Events <https://dev.splunk.com/observability/reference/api/ingest_data/latest#endpoint-send-otlp-metrics>`.
+
+.. _custom-app-metrics:
+
+Send custom application metrics
+========================================
+
+Splunk Observability Cloud can ingest custom application metrics created following OpenTelemetry semantic conventions and upstream OpenTelemetry API and SDK. For a list of supported metric types, see :ref:`metric-types`.
+
+To send custom application metrics to Observability Cloud, follow these steps:
+
+1. Install the APM instrumentation for your application's language. See :ref:`get-started-application`.
+
+2. Activate the metric exporter of the instrumentation:
+
+   - :ref:`Java <enable_automatic_metric_collection>`
+   - :ref:`Node.js <metrics-configuration-nodejs>`
+   - .NET metric collection is on by default. 
+   - Go metric collection is on by default. 
+   
+   If you've activated AlwaysOn Profiling, metric collection is turned on by default for all languages that support profiling.
+
+3. Follow the instructions for each language:
+
+   - :ref:`Java <java-otel-custom-metrics>`
+   - :ref:`Node.js <nodejs-otel-custom-metrics>`
+   - :ref:`.NET (OpenTelemetry) <custom-metrics-otel-dotnet>`
+   - :ref:`Go <custom-metrics-go>`
