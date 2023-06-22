@@ -263,6 +263,34 @@ Azure
 Azure - CPU utilization expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- Description: Alerts when Azure CPU utilization of the elastic pool is above its designated threshold. 
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/azure/elasticpools.flow#L48>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Specifies trigger threshold in % for CPU utilization
+     - ``80%``
+
+   * - Trigger sensitivity
+     - Sensitivity for alerting associated with the trigger threshold
+     - ``80% of 10m``
+
+   * - Clear threshold
+     - Specifies clear threshold in % for the CPU utilization
+     - ``80%``
+
+   * - Clear sensitivity
+     - Specifies clear sensitivity associated with clear threshold
+     - ``80% of 10m``     
 
 
 Azure - eDTU utilization expected to reach the limit
