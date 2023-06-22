@@ -8,7 +8,7 @@ A private mirror exists where the Splunk technical writers edit documentation fo
 
 Docs contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for our contribution guidelines.
 
-## Requirements
+## Requirements 
 
 The documentation is built from [reStructuredText](https://docutils.sourceforge.io/rst.html) and Markdown files using [Sphinx](https://www.sphinx-doc.org/en/master/).
 
