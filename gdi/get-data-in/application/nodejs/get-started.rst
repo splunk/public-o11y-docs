@@ -14,6 +14,7 @@ Instrument Node.js applications for Splunk Observability Cloud
    Instrument a Node.js application <instrumentation/instrument-nodejs-application>
    Connect trace data with logs <instrumentation/connect-traces-logs>
    Runtime and custom metrics <configuration/nodejs-otel-metrics>
+   Manual instrumentation <instrumentation/manual-instrumentation>
    Configure the Node.js agent <configuration/advanced-nodejs-otel-configuration>
    Troubleshoot the Node.js agent <troubleshooting/common-nodejs-troubleshooting>
    About Splunk OTel JS <splunk-nodejs-otel-distribution>
