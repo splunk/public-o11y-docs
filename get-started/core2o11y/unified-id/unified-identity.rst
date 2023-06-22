@@ -10,13 +10,13 @@ Unified Identity: Splunk Cloud Platform and Splunk Observability Cloud
 .. meta::
    :description: This page describes and links to setup pages for each component of Observability Cloud.
 
-Splunk Cloud Platform and Splunk Observability Cloud have Unified Identity.
+Splunk Cloud Platform offers Unified Identity with Splunk Observability Cloud.
 
 What is Unified Identity?
 ==========================================================================================
 When Splunk Cloud Platform customers purchase Splunk Observability Cloud, users can access both platforms using a single identity. Users can log into Splunk Observability Cloud with SSO using their Splunk Cloud Platform credentials.
 
-When you integrate your Splunk Cloud Platform and Splunk Observability Cloud instances and activate Unified Identity, administrators can set up all users in a central location, Splunk Cloud Platform. Splunk Cloud Platform admins control user and data access permissions for both platforms separately in respective products. For more information, see :ref:`admin-manage-users`. To learn about user roles and permissions in Splunk Cloud Platform, see :new-page:`About configuring role-based user access <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2209/Security/Aboutusersandroles>`. The integration extends permissions to access data indexed in Splunk Cloud Platform to Splunk Observability Cloud applications with no administrative overhead. See :ref:`unified-id-user-provisioning` for more information.
+When you integrate your Splunk Cloud Platform and Splunk Observability Cloud instances and activate Unified Identity, administrators can set up all users in a central location, Splunk Cloud Platform. Splunk Cloud Platform admins control user and data access permissions for both platforms separately in respective products. For more information, see :ref:`admin-manage-users`. To learn about user roles and permissions in Splunk Cloud Platform, see :ref:`About configuring role-based user access <https://docs.splunk.com/Documentation/SplunkCloud/9.0.2209/Security/Aboutusersandroles>`. The integration extends permissions to access data indexed in Splunk Cloud Platform to Splunk Observability Cloud applications with no administrative overhead. See :ref:`unified-id-user-provisioning` for more information.
 
 
 Who can access Single Sign On (SSO) and the benefits of Unified Identity?
@@ -40,7 +40,7 @@ Organizations that complete the integration of Splunk Cloud Platform and Splunk 
 
 How to set up the Unified Identity
 ==========================================================================================
-Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud must inform their Splunk sales representative that they want to purchase Splunk Observability Cloud or start a trial. The sales representative initiates a Splunk Observability Cloud trial that is already integrated with their Splunk Cloud Platform instance. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :ref:`Enable or disable token authentication<https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>`` to learn how.
+Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud must inform their Splunk sales representative that they want to purchase Splunk Observability Cloud or start a trial. The sales representative initiates a Splunk Observability Cloud trial that is already integrated with their Splunk Cloud Platform instance. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :ref:`Enable or disable token authentication <https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>`` to learn how.
 
 Only one Splunk Cloud Platform instance can be paired with one Splunk Observability Cloud instance at a time. The integration is a 1:1 mapping of one ad-hoc Splunk Cloud Search Head Unit with one Splunk Observability Cloud instance. Customers with multiple Splunk Observability Cloud organizations must choose one to pair with the chosen Splunk Cloud Platform instance.
 
@@ -67,7 +67,7 @@ The integration automatically maps Splunk Cloud Platform roles to the following 
      - read_only
 
    * - N/A
-     - subscription_usage
+     - usage
 
 
 The mapping process is defined by the system, and a user cannot change it at provisioning time or after. 
@@ -92,7 +92,7 @@ Follow these steps at first login to Splunk Observability Cloud:
 3. The user then receives an e-mail to verify their identity. 
    When the user verifies their identity in the e-mail, the user is authenticated in Splunk Observability Cloud and can access all Splunk Cloud Platform data that their Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
 
-After the first login, a user does not need to provide their Splunk Cloud Platform credentials again. On subsequent logins, when the user selects :strong:`Sign in with Splunk Cloud`, they are automatically signed in to Splunk Observability Cloud.
+After the first login, a user does not need to provide their Splunk Cloud Platform credentials again. On subsequent logins, if a user is already logged in to Splunk Cloud Platform, they select :strong:`Sign in with Splunk Cloud` and are automatically signed in to Splunk Observability Cloud.
 
 
 Working in Splunk Observability Cloud after the integration
