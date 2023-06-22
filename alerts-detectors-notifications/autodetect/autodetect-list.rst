@@ -327,7 +327,7 @@ The following table shows customizable arguments for this detector. To learn how
 
    * - filter
      - Specifies dimensional scope of the detector
-     - ``None`     
+     - ``None``     
 
 
 Azure - Storage utilization expected to reach the limit
@@ -364,7 +364,7 @@ The following table shows customizable arguments for this detector. To learn how
 
    * - filter
      - Specifies dimensional scope of the detector
-     - ``None`     
+     - ``None``     
 
 
 .. _autodetect-kafka:
