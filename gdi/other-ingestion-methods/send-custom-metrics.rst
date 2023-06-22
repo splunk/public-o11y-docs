@@ -12,7 +12,7 @@ You can send custom infrastructure and application metrics to Splunk Observabili
 .. _custom-infra-metrics:
 
 Send custom infrastructure or service metrics
-========================================
+==============================================
 
 Splunk Observability Cloud can ingest custom infrastructure or service metrics through existing OpenTelemetry components from OpenTelemetry contrib or through custom components that adhere to OpenTelemetry semantic conventions. For a list of supported metric types, see :ref:`metric-types`.
 
