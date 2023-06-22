@@ -115,7 +115,14 @@ To send custom application metrics to Observability Cloud, follow these steps:
    
    If you've activated AlwaysOn Profiling, metric collection is turned on by default for all languages that support profiling.
 
-3. Follow the instructions for each language:
+3. Make sure that the metric you want to create isn't already collected using a built-in metric:
+
+   - :ref:`java-otel-metrics-attributes`
+   - :ref:`nodejs-otel-metrics`
+   - :ref:`dotnet-otel-metrics-attributes`
+   - :ref:`go-otel-metrics`
+
+4. Follow the instructions for each language:
 
    - :ref:`Java <java-otel-custom-metrics>`
    - :ref:`Node.js <nodejs-otel-custom-metrics>`
