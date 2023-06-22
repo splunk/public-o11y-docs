@@ -253,7 +253,7 @@ In the following example, CPU is set to :strong:`500m`, and memory is set to :st
       helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,networkExplorer.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
 
 
-.. _install-network-explorer:
+.. _install-network-explorer-openshift:
 
 Install Network Explorer for OpenShift
 =======================================================================================
