@@ -12,19 +12,20 @@ Monitor Kubernetes
 .. note:: The following topic describes the new Kubernetes navigator. See :ref:`infrastructure-k8s` for documentation on the classic Kubernetes navigator.
 
 
-You can monitor Kubernetes metrics with Splunk Observability Cloud. Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. To learn more, see :ref:`otel-intro`.
+You can monitor Kubernetes metrics with Splunk Observability Cloud. Splunk Observability Cloud uses the Splunk Distribution of OpenTelemetry Collector for Kubernetes to provide robust infrastructure monitoring capabilities. To learn more, see :ref:`otel-intro`.
 
 Prerequisites
 ================
 
 Before you start monitoring any Kubernetes resources, do the following:
+
 * :ref:`get-started-k8s`.
 * Log in with your administrator credentials.
 
 
 .. _use-k8s-nav:
 
-Use the Kubernetes navigators
+Kubernetes navigators
 ===============================
 
 .. note:: The following sections show you components specific to the Kubernetes navigators. For information on components shared by all navigators, see :ref:`use-navigators-imm`.
