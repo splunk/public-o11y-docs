@@ -254,6 +254,27 @@ The following table shows customizable arguments for this detector. To learn how
      - None
 
 
+
+.. _autodetect-azure:
+
+Azure
+------------
+
+Azure - CPU utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+Azure - eDTU utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+Azure - Storage utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
 .. _autodetect-kafka:
 
 Kafka
