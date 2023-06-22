@@ -40,7 +40,7 @@ Organizations that complete the integration of Splunk Cloud Platform and Splunk 
 
 How to set up the Unified Identity
 ==========================================================================================
-Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud must inform their Splunk sales representative that they want to purchase Splunk Observability Cloud or start a trial. The sales representative initiates a Splunk Observability Cloud trial that is already integrated with their Splunk Cloud Platform instance.
+Splunk Cloud Platform customers who want to purchase Splunk Observability Cloud must inform their Splunk sales representative that they want to purchase Splunk Observability Cloud or start a trial. The sales representative initiates a Splunk Observability Cloud trial that is already integrated with their Splunk Cloud Platform instance. Turn on token authentication to allow Splunk Observability Cloud to view your Splunk Cloud Platform logs. See :ref:`Enable or disable token authentication<https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>`` to learn how.
 
 Only one Splunk Cloud Platform instance can be paired with one Splunk Observability Cloud instance at a time. The integration is a 1:1 mapping of one ad-hoc Splunk Cloud Search Head Unit with one Splunk Observability Cloud instance. Customers with multiple Splunk Observability Cloud organizations must choose one to pair with the chosen Splunk Cloud Platform instance.
 
@@ -81,7 +81,18 @@ Once users are set up, Splunk Cloud Platform admins and Splunk Observability Clo
 
 What to expect at first login
 ==========================================================================================
-The first time a user tries to log in to Splunk Observability Cloud after the integration, they are directed to their Splunk Cloud Platform login page where they must provide their Splunk Cloud Platform credentials. The user then receives an e-mail to verify their identity. When the user verifies their identity in the e-mail, the user is authenticated in Splunk Observability Cloud and can access all Splunk Cloud Platform data that their Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
+The first time a user tries to log in to Splunk Observability Cloud after the integration, they are directed to their Splunk Cloud Platform login page. 
+
+Follow these steps at first login to Splunk Observability Cloud:
+
+1. Select :strong:`Sign in with Splunk Cloud`.
+
+2. Provide your Splunk Cloud Platform credentials.
+
+3. The user then receives an e-mail to verify their identity. 
+   When the user verifies their identity in the e-mail, the user is authenticated in Splunk Observability Cloud and can access all Splunk Cloud Platform data that their Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
+
+After the first login, a user does not need to provide their Splunk Cloud Platform credentials again. On subsequent logins, when the user selects :strong:`Sign in with Splunk Cloud`, they are automatically signed in to Splunk Observability Cloud.
 
 
 Working in Splunk Observability Cloud after the integration
