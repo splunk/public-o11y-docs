@@ -27,7 +27,7 @@ Read through this document before submitting any pull request.
    computer, add the key to your OpenSSH authentication agent, and add the public key file to your GitHub account. The GitHub docs
    describe how to perform these tasks.
 
-## Decide the type of edit
+## Decide the type of edit 
 
 You can do quick edits, for example to fix typos, or more complex edits involving several files.
 
