@@ -118,7 +118,7 @@ Block all custom tags from a particular service
 
 If you know that a specific service might be the source of leaked information, you can hide the sensitive metadata of the service in Splunk APM. In this case, you can specify ``visibleTags`` from the service to hide all data from the service except for a specified set of well-known or automatically-instrumented ``visibleTags``, so that metrics for the service continue to appear. 
 
-For example, consider a new service, ``loginService``, which appears in Moira's Splunk APM instance. This service isn't compliant with the latest customer protection regulations, and starts leaking customer information. Moira doesn't know which tags are likely to contain customer information, but they know the list of tags that they need to check, which include ``sf_environment``, ``sf_service``, and ``sf_endpoint``. Moira knows these tags aren't associated with sensitive information. 
+For example, consider a new service, ``checkoutService``, which appears in Moira's Splunk APM instance. This service isn't compliant with the latest customer protection regulations, and starts leaking customer information. Moira doesn't know which tags are likely to contain customer information, but they know the list of tags that they need to check, which include ``sf_environment``, ``sf_service``, and ``sf_endpoint``. Moira knows these tags aren't associated with sensitive information. 
 
 To prevent sensitive information from appearing in Splunk APM, Moira can use the following API call to block all spans from the service, except for those they require.
 
@@ -137,7 +137,7 @@ JSON payload:
         "startTime": "2021-04-03T15:00:00.073876Z",
         "matcher": {
 
-            "sf_service": "loginService",
+            "sf_service": "checkoutService",
             "sf_operation": "readCartDetails"		
         },
         "visibleTags": ["sf_environment", "sf_service", "sf_endpoint", "sf_operation", "sf_httpMethod", "sf_kind", "sf_workflow", "sf_failure_root_cause_service", "sf_error"]
