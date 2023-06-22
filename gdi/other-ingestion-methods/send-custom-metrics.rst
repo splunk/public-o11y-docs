@@ -76,8 +76,8 @@ The requirements.txt file for the example contains the following:
    opentelemetry-proto==1.12.0
    opentelemetry-exporter-otlp-proto-grpc==1.12.0
 
-Send custom metrics
-======================================
+Send custom metrics to the Collector
+----------------------------------------
 
 Configure your code to create counters, gauges, and other metric data types and send them using the OTLP metric exporter. This Python example shows how to define an exporter, reader, and provider for OpenTelemetry:
 
@@ -89,9 +89,6 @@ Configure your code to create counters, gauges, and other metric data types and 
    set_meter_provider(provider)
 
 See the example.py file in GitHub for a full example: :new-page:`https://github.com/open-telemetry/opentelemetry-python/blob/main/docs/examples/metrics/instruments/example.py`.
-
-Send custom metrics without the Collector
--------------------------------------------
 
 To send metrics bypassing the Collector, use the Ingest REST API endpoints. See :new-page:`Send Metrics and Events <https://dev.splunk.com/observability/reference/api/ingest_data/latest#endpoint-send-otlp-metrics>`.
 
@@ -122,7 +119,7 @@ To send custom application metrics to Observability Cloud, follow these steps:
    - :ref:`dotnet-otel-metrics-attributes`
    - :ref:`go-otel-metrics`
 
-4. Follow the instructions for each language:
+4. Create custom metrics following the instructions for each language:
 
    - :ref:`Java <java-otel-custom-metrics>`
    - :ref:`Node.js <nodejs-otel-custom-metrics>`
