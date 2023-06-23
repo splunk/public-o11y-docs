@@ -15,5 +15,3 @@ The following Java Virtual Machines (JVMs) are compatible:
 - Oracle OpenJDK
 - Red Hat OpenJDK
 - SAP SapMachine
-
-.. note:: Splunk Observability Cloud officially supports Java and Groovy as JVM languages. You can instrument applications written in other JVM languages, but the quality of the telemetry data is not guaranteed.
