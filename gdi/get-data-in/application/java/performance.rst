@@ -56,6 +56,7 @@ Troubleshooting performance issues when deploying the Java agent
 We welcome users of the Splunk Distribution of OpenTelemetry Java Instrumentation to repeat these experiments and to conduct comparable tests with their own services.
 
 Step 1. Prepare test environment
+
 Where this should be tested - in customer system 
 What services to select - representative service from your environment
 What should the environment look like - close to production environment
