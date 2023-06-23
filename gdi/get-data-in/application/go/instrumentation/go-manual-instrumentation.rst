@@ -91,82 +91,67 @@ The following table shows the equivalences between OpenTelemetry instrument type
 
 .. list-table:: 
    :header-rows: 1
-   :widths: 60 40
+   :widths: 20 20 60
    :width: 100%
 
    * - OpenTelemetry Go
      - Observability Cloud
+     - Comments
 
    * - ``Int64Counter``
      - Cumulative counter
-
-   * - ``Int64Histogram_bucket``
+     -
+   * - ``Int64Histogram``
      - Cumulative counter
+     - Histogram types generate three separate metrics in Observability Cloud:
 
-   * - ``Int64Histogram_count``
-     - Cumulative counter
+         * ``_count`` (Cumulative counter), which represents the item count.
+         * ``_sum`` (Cumulative counter), which represents the sum of all values.
+         * ``_bucket`` (Cumulative counter), which assigns a data point to the bucket.
+         * ``_min`` 
+         * ``_max``
 
-   * - ``Int64Histogram_max``
-     - Gauge
-
-   * - ``Int64Histogram_min``
-     - Gauge
-
-   * - ``Int64Histogram_sum``
-     - Cumulative counter
+       Buckets have a dimension ``le`` which is set to the highest value of the items counted in the bucket.
 
    * - ``Int64ObservableCounter``
      - Cumulative counter
-
+     -
    * - ``Int64ObservableGauge``
      - Gauge
-
+     -
    * - ``Int64ObservableUpDownCounter``
      - Gauge
-
+     -
    * - ``Int64UpDownCounter``
      - Gauge
-
+     -
    * - ``Float64Counter``
      - Cumulative counter
-
-   * - ``Float64Histogram_bucket``
+     -
+   * - ``Float64Histogram``
      - Cumulative counter
+     - Histogram types generate three separate metrics in Observability Cloud:
 
-   * - ``Float64Histogram_count``
-     - Cumulative counter
+         * ``_count`` (Cumulative counter), which represents the item count.
+         * ``_sum`` (Cumulative counter), which represents the sum of all values.
+         * ``_bucket`` (Cumulative counter), which assigns a data point to the bucket.
+         * ``_min`` 
+         * ``_max``
 
-   * - ``Float64Histogram_max``
-     - Gauge
-
-   * - ``Float64Histogram_min``
-     - Gauge
-
-   * - ``Float64Histogram_sum``
-     - Cumulative counter
+       Buckets have a dimension ``le`` which is set to the highest value of the items counted in the bucket.
 
    * - ``Float64ObservableCounter``
      - Cumulative counter
-
+     -
    * - ``Float64ObservableGauge``
      - Gauge
-   
+     -   
    * - ``Float64ObservableUpDownCounter``
      - Gauge
-
+     -
    * - ``Float64UpDownCounter``
      - Gauge
-
-Histogram types generate three separate metrics in Observability Cloud:
-
-- ``_count`` (Cumulative counter), which represents the item count.
-- ``_sum`` (Cumulative counter), which represents the sum of all values.
-- ``_bucket`` (Cumulative counter), which assigns a data point to the bucket.
-- ``_min`` 
-- ``_max
-
-Buckets have a dimension ``le`` which is set to the highest value of the items counted in the bucket.
-
+     -
 
 
 
