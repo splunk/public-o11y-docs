@@ -162,6 +162,8 @@ Histogram types generate three separate metrics in Observability Cloud:
 - ``_count`` (Cumulative counter), which represents the item count.
 - ``_sum`` (Cumulative counter), which represents the sum of all values.
 - ``_bucket`` (Cumulative counter), which assigns a data point to the bucket.
+- ``_min`` 
+- ``_max
 
 Buckets have a dimension ``le`` which is set to the highest value of the items counted in the bucket.
 
