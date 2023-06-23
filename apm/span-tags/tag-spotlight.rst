@@ -21,7 +21,7 @@ The following image shows the requests and errors of an example ``frontend`` ser
 To learn how to index span tags to generate Troubleshooting MetricSets, see :ref:`apm-index-span-tags`. For a general overview of MetricSets in APM, see :ref:`apm-metricsets`. 
 
 .. note:: 
-   For an example use case of troubleshooting using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. For an interactive walkthrough of Tag Spotlight, see :new-page:`APM Tag Spotlight Scenario <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-tag-spotlight-walkthrough&version=current>`. 
+   For an example scenario of troubleshooting using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. For an interactive walkthrough of Tag Spotlight, see :new-page:`APM Tag Spotlight Scenario <https://quickdraw.splunk.com/redirect/?product=Observability&location=apm-tag-spotlight-walkthrough&version=current>`. 
 
 
 View service performance by indexed span tags with Tag Spotlight
@@ -31,9 +31,9 @@ Access Tag Spotlight from the :strong:`Tag Spotlight` tab of the APM landing pag
 
 Follow these steps to navigate to Tag Spotlight for a specific service:
 
-   #. From the Splunk Observability Cloud landing page, click :guilabel:`APM`.
-   #. In the list of services on the APM landing page, select a service you want to drill into. Clicking on the service opens the Troubleshooting tab for that service.
-   #. Scroll to the :strong:`Tag Spotlight` card in the sidebar to view a preview of top tags with errors and high latency. Click the card to open Tag Spotlight.
+   #. From the Splunk Observability Cloud landing page, select :guilabel:`APM`.
+   #. In the list of services on the APM landing page, select a service you want to drill into. Selecting the service opens the Troubleshooting tab for that service.
+   #. Scroll to the :strong:`Tag Spotlight` card in the sidebar to view a preview of top tags with errors and high latency. Select the card to open Tag Spotlight.
    #. View the distribution of all indexed span tags. The RED metrics time-series chart displays requests, errors, root cause errors, or latency for the specified time range. 
    #. Adjust the time range to view more or less data in the RED metrics chart. The default time range is for the last 15 minutes, and the data resolution is 10 seconds.
 
@@ -55,7 +55,7 @@ There are a number of ways to drill down into indexed span tags for a selected s
 
 - Control what appears in the RED metrics chart by showing or hiding metrics in the chart's legend. For example, you can click the eye icon beside :guilabel:`Requests` to view only errors. When the slider is set to :guilabel:`Latency`, click the eye icon to hide the p50 latency metric and compare only p90 and p99 values. 
 
-Use case: Find the root cause of an incident with Tag Spotlight
+Scenario: Find the root cause of an incident with Tag Spotlight
 ================================================================
 
-To view a detailed use case example of using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. 
+To view a detailed example of using Tag Spotlight, see :ref:`troubleshoot-tag-spotlight`. 

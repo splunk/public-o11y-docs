@@ -13,7 +13,7 @@ If your needs are not covered by Splunk distributions of OpenTelemetry, you can 
    :maxdepth: 3
 
    upstream-collector
-   rest-APIs-for-datapoints
+   Send data using REST APIs <rest-APIs-for-datapoints>
    send-custom-metrics
    grpc-data-ingest
    set-host-name-attribute-override
@@ -33,10 +33,10 @@ You can use the OpenTelemetry Collector Contrib instead of the Splunk Distributi
 .. raw:: html
 
   <embed>
-    <h2>Send data using the REST API</h2>
+    <h2>Send data using the REST APIs</h2>
   </embed>
 
-Observability Cloud supports an extensive REST API that lets you send data points and events. This is useful when you need to bypass the Collector. See an example in :ref:`rest-api-ingest`.
+Observability Cloud supports an extensive set of REST APIs that lets you send data points and events. This is useful when you need to bypass the Collector. See an example in :ref:`rest-api-ingest`.
 
 .. raw:: html
 

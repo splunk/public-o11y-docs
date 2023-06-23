@@ -94,21 +94,6 @@
      -
      -
 
-   * - :ref:`Collectd Kafka consumer <collectd-kafka-consumer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd Kafka producer <collectd-kafka-producer>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Collectd PHP FPM <collectd-php-fpm>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Collectd uptime <collectd-uptime>`
      - :strong:`X`
      -
@@ -204,31 +189,6 @@
      -
      -
 
-   * - :ref:`Gitaly and Gitaly Cluster <gitlab-gitaly>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Runner <gitlab-runner>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Sidekiq <gitlab-sidekiq>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Unicorn <gitlab-unicorn>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`GitLab Workhorse <gitlab-workhorse>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Hadoop <hadoop>`
      - :strong:`X`
      -
@@ -310,6 +270,16 @@
      -
 
    * - :ref:`JMX <jmx>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka consumer <kafka-consumer>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Kafka producer <kafka-producer>`
      - :strong:`X`
      -
      -
@@ -453,7 +423,12 @@
      -
      - :strong:`X`
 
-   * - :ref:`NTP Receiver <ntp>`
+   * - :ref:`NTPQ <telegraf-ntpq>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`NTP server <ntp>`
      - :strong:`X`
      -
      -
@@ -473,10 +448,15 @@
      -
      -
 
-   * - :ref:`Oracle Database <oracledb>`
+   * - :ref:`Oracle Database receiver <oracledb>`
      - :strong:`X`
      -
      -  
+
+   * - :ref:`PHP FPM <collectd-php-fpm>`
+     - :strong:`X`
+     -
+     -
 
    * - :ref:`PostgreSQL <postgresql>`
      - :strong:`X`
@@ -573,22 +553,12 @@
      -
      -
 
-   * - :ref:`Telegraf NTPQ <telegraf-ntpq>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Telegraf Varnish <telegraf-varnish>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Telegraf Windows services <telegraf-win-services>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Traefik <traefik>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Varnish <telegraf-varnish>`
      - :strong:`X`
      -
      -
@@ -599,6 +569,11 @@
      -
 
    * - :ref:`Windows Performance Counters <telegraf-win-perf-counters>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Windows services <telegraf-win-services>`
      - :strong:`X`
      -
      -

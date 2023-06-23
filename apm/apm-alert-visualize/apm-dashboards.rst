@@ -24,7 +24,7 @@ APM dashboards present request, error, and duration (RED) metrics based on :ref:
 To view host and Kubernetes metrics in your dashboards, you need to have a Splunk Distribution of OpenTelemetry Collector instance installed on your hosts and clusters. See :ref:`deploy-connector` to learn how. 
 
 .. note::
-  See :ref:`monitor-services` for a use case involving built-in dashboards in Splunk APM. 
+  See :ref:`monitor-services` for a scenario involving built-in dashboards in Splunk APM. 
 
 You can customize built-in dashboards to present the information you’re most interested in, or build your own from scratch. To learn more, see :ref:`apm-custom-dashboards`.
  
@@ -57,7 +57,7 @@ Use dashboards to troubleshoot issues in APM
 =============================================
 You can navigate from within a dashboard directly to the relevant troubleshooting view with all the relevant data populated. In a dashboard, select the more menu (|more|) within a chart and select :guilabel:`Troubleshoot from the Time Window` to open the troubleshooting view (which includes the service map). The dashboard’s filters are preserved so that you can continue troubleshooting issues in context. 
 
-See :ref:`service-map` for a sample use case of the troubleshooting view in Splunk APM. 
+See :ref:`service-map` for a sample scenario of the troubleshooting view in Splunk APM. 
 
 .. note:: Dashboards are powered by Monitoring MetricSets, which are based on service endpoints. For this reason, dashboards only display data when the selected service has at least one instrumented endpoint. 
 
@@ -68,7 +68,7 @@ Customize APM dashboards
 
 You can customize your dashboard by setting filters, chart type, and chart resolution on a pre-built dashboard. 
 
-Edit a specific chart by clicking its more menu (|more|) and selecting :guilabel:`Open`. This opens a detailed chart editor you can use to adjust chart type, axis labels, formulas, and more. Once you edit a chart or dashboard, select the more menu (|more|) and select :guilabel:`Save As` from the dropdown to save your customizations for future reference.  
+Edit a specific chart by selecting its more menu (|more|) and selecting :guilabel:`Open`. This opens a detailed chart editor you can use to adjust chart type, axis labels, formulas, and more. Once you edit a chart or dashboard, select the more menu (|more|) and select :guilabel:`Save As` from the dropdown to save your customizations for future reference.  
 
 You can also create a new dashboard from scratch. See :ref:`create-dashboard` to learn more. See :ref:`dashboard-group` to learn how you can share your custom dashboards in groups. 
 
@@ -86,7 +86,7 @@ Create a detector from a dashboard
 
 To create a detector from a dashboard, select the bell icon within a specific chart in the dashboard and select :guilabel:`New Detector From Chart`. 
 
-If you don't have write permissions on the dashboard you’re viewing, a Detector Linking pop-up informs you the detector is not linked directly to the dashboard. You can select :guilabel:`Ok` to proceed, or save a copy of the dashboard to gain write permissions so that you can create a linked detector based on your new dashboard. To learn more about linking detectors, see :ref:`linking-detectors`. 
+If you don't have write permissions on the dashboard you're viewing, a Detector Linking pop-up informs you the detector is not linked directly to the dashboard. You can select :guilabel:`Ok` to proceed, or save a copy of the dashboard to gain write permissions so that you can create a linked detector based on your new dashboard. To learn more about linking detectors, see :ref:`linking-detectors`. 
 
 In the New Detector window, enter a name for your detector and select :guilabel:`Create Alert Rule`. The Alert Rule guided setup opens. Follow the steps in the guided setup to configure your detector, or see :ref:`create-detectors` for more information. 
 

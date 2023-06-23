@@ -76,4 +76,4 @@ Explore all you can do with Splunk Infrastructure Monitoring:
 
 For a set of interactive walkthroughs of Splunk Infrastructure Monitoring, see :new-page:`Splunk Infrastructure Monitoring scenarios <https://bossofopsando11y.com/imt/>`.
 
-For an overview of an end-to-end experience, read :ref:`get-started-use-case`.
+For an overview of an end-to-end experience, see :ref:`get-started-scenario`.

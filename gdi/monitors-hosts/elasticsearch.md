@@ -1,6 +1,6 @@
 (elasticsearch)=
 
-# Elasticsearch
+# Elasticsearch stats
 
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the ElasticSearch monitor. See benefits, install, configuration, and metrics">
 
@@ -43,7 +43,7 @@ monitors:
   port: 9200
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -176,7 +176,7 @@ monitors:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/elasticsearch/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/elasticsearch/stats/metadata.yaml"></div>
 
 ### Notes
 

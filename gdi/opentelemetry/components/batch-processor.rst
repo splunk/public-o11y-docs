@@ -35,6 +35,26 @@ The following example shows how to configure the batch processor to send batches
        send_batch_size: 5000
        timeout: 15s
 
+Batching by metadata
+--------------------------------
+
+Starting from version 0.78 of the OpenTelemetry Collector, you can batch telemetry based on metadata. For example:
+
+.. code-block:: yaml
+
+   processors:
+     batch:
+       # batch data by tenant-id
+       metadata_keys:
+       - tenant_id
+       
+       # limit to 10 batcher processes before raising errors
+       metadata_cardinality_limit: 10
+
+To use metadata as batching criteria, add the ``include_metadata: true`` setting to your receivers's configuration, so that the batch processor can use the available metadata keys.
+
+.. caution:: Batching by metadata can increase memory consumption, as each metadata combination triggers the allocation of a new background task in the Collector. The maximum number of distinct combinations is defined using the ``metadata_cardinality_limit`` setting, which defaults to ``1000``.
+
 Settings
 ======================
 

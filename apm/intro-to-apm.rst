@@ -23,9 +23,9 @@ To start using APM, see :ref:`Set up Splunk APM <apm>`.
 
 If you have already instrumented your applications but are not seeing your data coming into APM as you expect, see :ref:`Troubleshoot your instrumentation <instr-troubleshooting>`.
 
-For information about Splunk APM use cases, see :ref:`apm-use-cases-intro`.
+For information about Splunk APM scenarios, see :ref:`apm-scenarios-intro`.
 
-To see an example of using Splunk Observability Cloud components together, see :ref:`get-started-use-case`.
+To see an example of using Splunk Observability Cloud components together, see :ref:`get-started-scenario`.
 
 .. _wcidw-apm:
 
@@ -74,7 +74,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - Business Workflows
     - :ref:`apm-workflows`
 
-  * - Jump between components of Splunk Observability Cloud by clicking related data
+  * - Jump between components of Splunk Observability Cloud by selecting related data
     - Related Content
     - :ref:`get-started-relatedcontent`
 

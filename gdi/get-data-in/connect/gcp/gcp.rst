@@ -114,7 +114,7 @@ To configure your GCP service, follow these steps:
 
 #. In a new window or tab, go to the Google Cloud Platform website, and log into your GCP account.
 #. Open the GCP web console, and select a project you want to monitor.
-#. From the sidebar, select :menuselection:`IAM & admin > Service Accounts`.
+#. From the sidebar, select :menuselection:`IAM & admin`, then :menuselection:`Service Accounts`.
 #. Go to :guilabel:`Create Service Account` at the top of the screen, and complete the following fields:
 
    .. list-table::
@@ -165,7 +165,7 @@ By default, all available services are monitored, and any new services added lat
 #. Log in to Splunk Observability Cloud. 
 #. Open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
+   #. In the navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
 
    #. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
 

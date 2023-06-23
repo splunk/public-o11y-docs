@@ -18,10 +18,7 @@ Configure application receivers for hosts and servers
    monitors-hosts/chrony
    monitors-hosts/collectd-plugin
    monitors-hosts/collectd-df 
-   collectd/collectd-kafka-consumer
-   collectd/collectd-kafka-producer
-   collectd/collectd-php-fpm
-   collectd/collectd-uptime
+   monitors-hosts/collectd-uptime      
    monitors-hosts/coredns
    monitors-hosts/couchbase
    monitors-hosts/cpu
@@ -29,28 +26,31 @@ Configure application receivers for hosts and servers
    monitors-hosts/disk
    monitors-hosts/docker
    monitors-hosts/elasticsearch
-   elasticsearch-query/elasticsearch-query
+   monitors-hosts/elasticsearch-query
    monitors-hosts/filesystems
    monitors-hosts/haproxy
-   health-checker/health-checker
-   host-metadata/host-metadata
+   monitors-hosts/health-checker
+   monitors-hosts/host-metadata
    opentelemetry/components/host-metrics-receiver
-   http/http
-   processes/processes
-   processlist/processlist
-   load/load
-   interface/interface
-   jenkins/jenkins
-   windows/windows-iis
-   nginx/nginx
-   procstat/procstat
-   solr/solr
-   supervisor/supervisor
-   systemd/collectd-systemd
-   ntpq/telegraf-ntpq
-   varnish/telegraf-varnish
-   win-services/telegraf-win-services
-   vsphere/vsphere
+   monitors-hosts/host-processes
+   monitors-hosts/host-processlist
+   monitors-hosts/host-processload
+   monitors-hosts/http
+   monitors-hosts/interface
+   monitors-hosts/jenkins
+   monitors-hosts/kafka-consumer
+   monitors-hosts/kafka-producer
+   monitors-hosts/microsoft-windows-iis
+   monitors-hosts/nginx
+   monitors-hosts/ntpq   
+   monitors-hosts/php-fpm
+   monitors-hosts/procstat
+   monitors-hosts/solr
+   monitors-hosts/supervisor
+   monitors-hosts/systemd
+   monitors-hosts/varnish
+   monitors-hosts/vsphere
+   monitors-hosts/win-services
 
 These application receivers gather metrics from their associated host- and server-related applications and the hosts the applications are running on.
 
@@ -60,15 +60,12 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`zookeeper`
 * :ref:`chrony`
 * :ref:`collectd-plugin`
-* :ref:`cpufreq`
 * :ref:`collectd-df`
-* :ref:`collectd-kafka-consumer`
-* :ref:`collectd-kafka-producer`
-* :ref:`collectd-php-fpm`
-* :ref:`collectd-uptime`
+* :ref:`collectd-uptime`  
 * :ref:`coredns`
 * :ref:`couchbase`
 * :ref:`cpu`
+* :ref:`cpufreq` 
 * :ref:`disk`
 * :ref:`docker`
 * :ref:`elasticsearch`
@@ -78,20 +75,23 @@ These application receivers gather metrics from their associated host- and serve
 * :ref:`health-checker`
 * :ref:`host-metadata`
 * :ref:`host-metrics-receiver`
-* :ref:`http`
 * :ref:`processes`
 * :ref:`processlist`
 * :ref:`load`
+* :ref:`http`
 * :ref:`interface`
 * :ref:`jenkins`
+* :ref:`kafka-consumer`
+* :ref:`kafka-producer`
 * :ref:`windows-iis`
 * :ref:`nginx`
+* :ref:`telegraf-ntpq` 
+* :ref:`collectd-php-fpm` 
 * :ref:`procstat`
 * :ref:`solr`
 * :ref:`supervisor`
 * :ref:`collectd-systemd`
-* :ref:`telegraf-ntpq`
 * :ref:`telegraf-varnish`
-* :ref:`telegraf-win-services`
 * :ref:`vsphere`
+* :ref:`telegraf-win-services`
 

@@ -22,10 +22,15 @@ extensions = [
     'toggle',
     'newpage',
     'github',
+    'optimizer',
     'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub'
 ]
+
+html_context = {
+    'search': 'search.html'
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -43,7 +48,7 @@ version = ''
 release = ''
 language = 'en'
 
-exclude_patterns = ['_build', 'venv/lib/*/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'CONTRIBUTING.md', '.github/pull_request_template.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst']
+exclude_patterns = ['_build', 'venv/lib/*/site-packages', '**/site-packages', 'Thumbs.db', '.DS_Store','z_cheat-sheets', 'README.md', 'CONTRIBUTING.md', '.github/pull_request_template.md', 'gdi/couchdb/couchdb.md', 'apm/find-root-cause.rst']
 
 # THEME CONFIGURATION
 #######################

@@ -36,19 +36,19 @@ In Observability Cloud, do the following:
    #. Copy the value next to :guilabel:`Integration ID` so you can use it in a later step.
 
 In PingOne, do the following:
-   #. Click  :guilabel:`Applications`. A list of your installed applications appears.
-   #. Click :guilabel:`Add Application`, and then select :menuselection:`Search Application Catalog`.
-   #. In the search field, enter :guilabel:`SignalFx`. Click the :guilabel:`SignalFx` application.
-   #. If the :guilabel:`Setup` is active, click it. A setup screen appears.
+   #. Select  :guilabel:`Applications`. A list of your installed applications appears.
+   #. Select :guilabel:`Add Application`, and then select :menuselection:`Search Application Catalog`.
+   #. In the search field, enter :guilabel:`SignalFx`. Select the :guilabel:`SignalFx` application.
+   #. If the :guilabel:`Setup` is active, select it. A setup screen appears.
 
-      If the :guilabel:`Setup` button is disabled, and you see the tooltip "You need to setup a connection first," then you might need to connect to an Identity Repository. To connect to an Identity Repository:
-         #. At the top of the PingOne page, click :guilabel:`Setup`.
-         #. Click :guilabel:`Connect to an Identity Repository`.
-         #. Select the Identity Repository you want to use, click :guilabel:`Next` twice, then click :guilabel:`Finished`.
+      If the :guilabel:`Setup` button is inactive, and you see the tooltip "You need to setup a connection first", then you might need to connect to an Identity Repository. To connect to an Identity Repository:
+         #. At the top of the PingOne page, select :guilabel:`Setup`.
+         #. Select :guilabel:`Connect to an Identity Repository`.
+         #. Select the Identity Repository you want to use, select :guilabel:`Next` twice, then select :guilabel:`Finished`.
 
-   #. Click :guilabel:`SignalFx`, then click :guilabel:`Setup`.
+   #. Select :guilabel:`SignalFx`, then select :guilabel:`Setup`.
    #. Optional: Copy the configuration parameters to keep as a reference.
-   #. Click :guilabel:`Continue to Next Step`.
+   #. Select :guilabel:`Continue to Next Step`.
 
 Still in PingOne, continue the configuration:
    #. In the :guilabel:`ACS URL` field, a URL similar to ``https://api.signalfx.com/v1/saml/acs/<INTEGRATION_ID>`` appears.
@@ -70,11 +70,11 @@ In PingOne, select :guilabel:`Continue to Next Step`. The :guilabel:`Attribute M
    #. Select other attributes as needed.
 
 Select :guilabel:`Continue to Next Step`. The Group Access screen appears.
-   #. Select the users who should have access to Observability Cloud. Click :guilabel:`Continue to Next Step`. The customization screen appears.
-   #. Configure the :guilabel:`SignalFx` application, then click :guilabel:`Continue to Next Step`. The review screen appears.
+   #. Select the users who should have access to Observability Cloud. Select :guilabel:`Continue to Next Step`. The customization screen appears.
+   #. Configure the :guilabel:`SignalFx` application, then select :guilabel:`Continue to Next Step`. The review screen appears.
    #. In the review screen that appears, do the following:
-       #. Locate the :guilabel:`Certificate` field, then click :guilabel:`Download` to download the pingone-signing.crt file to your computer.
-       #. Locate the :guilabel:`SAML Metadata` field, and then click the :guilabel:`Download` link to download the saml2-metadata-idp.xml file to your computer.
+       #. Locate the :guilabel:`Certificate` field, then select :guilabel:`Download` to download the pingone-signing.crt file to your computer.
+       #. Locate the :guilabel:`SAML Metadata` field, and then select the :guilabel:`Download` link to download the saml2-metadata-idp.xml file to your computer.
        #. :guilabel:`Finish`. The PingOne Applications list appears. In the list, :guilabel:`SignalFx` appears as an active application.
 
 In Observability Cloud, do the following:

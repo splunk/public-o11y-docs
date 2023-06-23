@@ -11,7 +11,7 @@ This topic covers five high-level steps you can follow to get started with Splun
 
 For an introduction to Observability Cloud products, see :ref:`welcome`.
 
-For information about how these products can be used together to address real-life use cases, see :ref:`get-started-use-case`.
+For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
 
 Follow these steps to set up and make the most of Observability Cloud:
 
@@ -54,7 +54,7 @@ Once you have data coming into Observability Cloud, it's time to do some explori
 
 - Use :ref:`RUM <get-started-rum>` to analyze the performance of web and mobile applications and keep track of how users are interacting with your front-end services, including page load times and responsiveness.
 
-- Use :ref:`Log Observer <get-started-logs>` to pinpoint interesting log events and troubleshoot issues with your infrastructure and cloud services.
+- Use :ref:`Log Observer <get-started-logs>` or :ref:`Log Observer Connect <logs-intro-logconnect>` to pinpoint interesting log events and troubleshoot issues with your infrastructure and cloud services.
 
 - As described in step :ref:`get-started-gdi`, if you turned on :ref:`get-started-relatedcontent` when setting up your data integrations, you can click options in the Related Content bar to seamlessly navigate between APM, Log Observer, and Infrastructure Monitoring with your selected filters and context automatically applied to each view.
 

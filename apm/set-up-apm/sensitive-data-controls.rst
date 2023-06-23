@@ -21,13 +21,13 @@ Remove sensitive data using the Splunk Distribution of OpenTelemetry Collector
 
 The first line of defense for sensitive information is to use the Splunk autoinstrumentation, which never captures sensitive information.
 
-If sensitive data has been sent to Splunk Observability Cloud during manual instrumentation, you can remove it pre-ingest with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. See :ref:`configure-remove` for more information, and read the use case below.  
+If sensitive data has been sent to Splunk Observability Cloud during manual instrumentation, you can remove it pre-ingest with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. See :ref:`configure-remove` for more information, and read the scenario below.  
 
 .. note:: A note about dropping spans   
 
     Concealing specific values in spans is the best way to hide sensitive information in spans. It's not possible to drop entire spans from your OpenTelemetry pipeline, and attempting to do so is not recommended, as excluding spans risks creating traces with missing spans. See :ref:`apm-missing-spans` for more information.
 
-Use case: Delete, redact, or hash tags from spans in the Splunk Distribution of OpenTelemetry Collector
+Scenario: Delete, redact, or hash tags from spans in the Splunk Distribution of OpenTelemetry Collector
 -------------------------------------------------------------------------------------------------------------
 
 Moira, a performance engineer, is looking at trace data and realizes that manual instrumentation is emitting sensitive data from the ``checkoutService`` by mistake. While the instrumentation is being updated to prevent this leak, they need to hide the values of all span tags with the potential to contain sensitive customer information. Using the ``attributes`` processor, they can delete, redact, or hash sensitive information. 

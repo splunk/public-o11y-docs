@@ -110,42 +110,6 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 #. Check that the OTLP gRPC receiver is activated in the OTel Collector and plugged into the traces pipeline.
 #. Check that the OTel Collector points to the following address: ``http://<host>:4317``. Verify that your URL is correct.
 
-Channel pipeline error
--------------------------------------------------------------------
-
-If you're seeing the following error in your logs, it might mean that the Java agent is trying to send trace data to the Splunk ingest API endpoint, which is not yet supported by OTLP:
-
-.. code-block:: bash
-
-   [grpc-default-executor-1] ERROR io.opentelemetry.exporter.otlp.trace.OtlpGrpcSpanExporter - Failed to export spans. Server is UNAVAILABLE. Make sure your collector is running and reachable from this network. Full error message:UNAVAILABLE: io exception
-   Channel Pipeline: [SslHandler#0, ProtocolNegotiators$ClientTlsHandler#0, WriteBufferingAndExceptionHandler#0, DefaultChannelPipeline$TailContext#0]
-
-To solve this issue, use the Jaeger exporter instead. See :ref:`trace-exporters-settings-java`.
-
-Jaeger can't export spans
-------------------------------------------------------
-
-The following warnings in your logs mean that the Java agent can't send trace data to the OTel Collector, the Smart Agent (now deprecated), or Splunk Cloud Platform using the Jaeger exporter:
-
-.. code-block:: bash
-
-   [BatchSpanProcessor_WorkerThread-1] WARN io.opentelemetry.exporter.jaeger.thrift.JaegerThriftSpanExporter - Failed to export spans
-   io.jaegertracing.internal.exceptions.SenderException: Could not send 8 spans
-      at io.jaegertracing.thrift.internal.senders.HttpSender.send(HttpSender.java:69)
-      ...
-   Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:9080
-      at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
-      ...
-   Caused by: java.net.ConnectException: Connection refused (Connection refused)
-      ...
-
-To troubleshoot the lack of connectivity between Jaeger and Splunk Observability Cloud, try the following steps:
-
-1. Make sure that ``otel.exporter.jaeger.endpoint`` points to an OpenTelemetry Collector or Smart Agent instance, or to the Splunk Ingest URL. See :new-page:`Send data measurements <https://dev.splunk.com/observability/docs/apibasics/send_data_basics#Send-data-measurements>` in the Splunk Developer documentation.
-2. Check that the OpenTelemetry Collector or Smart Agent instance is configured and running.
-3. Check that the Jaeger Thrift HTTP receiver is activated and plugged into the traces pipeline. See :ref:`otel-exposed-endpoints`.
-4. Check that the endpoint is correct. The OpenTelemetry Collector or Smart Agent use different ports and paths by default. For the Jaeger receiver, the OTel Collector uses ``http://<host>:14268/api/traces``, while the Smart Agent uses ``http://<host>:9080/v1/trace``.
-
 401 error when sending spans
 --------------------------------------------------------
 
@@ -265,14 +229,14 @@ The following snippet contains a sample ``profiling`` pipeline:
         token: "${SFX_TOKEN}"
         endpoint: "https://ingest.${SFX_REALM}.signalfx.com/v1/log"
      logging/info:
-        loglevel: info
+        verbosity: normal
 
    processors:
      batch:
 
    service:
      pipelines:
-        profiling:
+        logs/profiling:
            receivers: [otlp]
            processors: [batch]
            exporters: [logging/info, splunk_hec]

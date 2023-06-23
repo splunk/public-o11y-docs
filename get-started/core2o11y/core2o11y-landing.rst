@@ -10,19 +10,24 @@ Splunk Observability Cloud and the Splunk platform
 .. toctree::
    :hidden:
 
+   Unified Identity <unified-id/unified-identity>
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
    Collaborate on observability <practice-reliability/collaboration>
-   Set up Observability Cloud <setup-o11y/setup-o11y>
+   
 
 
-With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can dig deeper into those search results:
+With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), you can manually perform tasks to maintain or increase the reliability of your systems through Splunk searches and log analysis. With Splunk Observability Cloud, on the other hand, you can monitor your system and measure its current state based on the data it generates in the form of logs, metrics, traces, and user sessions. In other words, you can perform observability to ensure reliability.
+
+Splunk Observability Cloud lets you to do the following:
 
 - Correlate logs with metrics and traces to locate, isolate, and resolve problems in your applications or infrastructure quickly.
 
 - Use hundreds of prepackaged integrations to start monitoring your entire deployment immediately.
 
 - Improve mean time to resolution using prepackaged and custom alerts and detectors.
+
+When you integrate Splunk Observability Cloud with your Splunk Cloud Platform instance, you can enjoy the benefits of Unified Identity, including Single Sign On (SSO) and shared access and permissions. To learn more, see :ref:`unified-id-unified-identity`.
 
 Use Observability Cloud to solve common system reliability problems. For example, do you have a wide variety of platforms, databases, and cloud services that you must monitor in multiple interfaces? Observability Cloud has hundreds of prepackaged integrations that give you a predefined view with a single pane of glass for hybrid coverage.
 
@@ -40,7 +45,7 @@ Select each of the following categories to learn how you can maintain reliabilit
 * :ref:`Collaborate on observability within and across teams <practice-reliability-collaboration>`
 
 
-Then see :ref:`setup-o11y-setup-o11y` to get started.
+Then see :ref:`get-started-get-data-in` to set up each component of Splunk Observability Cloud.
 
 
 

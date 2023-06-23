@@ -17,7 +17,7 @@ Monitor services and hosts in Splunk Infrastructure Monitoring
     k8s-nav
     k8s
     hosts
-    use-case-k8s-nav
+    scenario-k8s-nav
     
     
 
@@ -38,9 +38,9 @@ See the following pages for more information about using :ref:`navigators <use-n
   
   - :ref:`infrastructure-hosts`
 
-* Use cases for navigators
+* Scenarios for navigators
 
-  - :ref:`troubleshoot-k8s-nav-use-case`
+  - :ref:`troubleshoot-k8s-nav-scenario`
 
 Splunk Observability Cloud also provides metrics and other data :ref:`for the following host and application monitors <monitor-data-sources>`.
 

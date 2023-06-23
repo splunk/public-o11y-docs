@@ -105,4 +105,4 @@ You can make an assertion on two values. Add two parameters along with the compa
 
 Example
 ==================
-For an example, see :ref:`uptime-test-use-case`.
+For an example, see :ref:`uptime-test-scenario`.
