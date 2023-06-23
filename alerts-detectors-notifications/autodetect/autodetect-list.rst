@@ -292,7 +292,7 @@ The following table shows customizable arguments for this detector. To learn how
      - Specifies clear sensitivity associated with clear threshold
      - ``80% of 10m`` 
 
-   * - filter
+   * - Filter
      - Specifies dimensional scope of the detector
      - ``None``     
 
@@ -321,7 +321,7 @@ The following table shows customizable arguments for this detector. To learn how
      - Specifies sensitivity associated with the trigger threshold
      - ``80% of 10m``
 
-   * - Clear threshold (%)
+   * - Clear threshold
      - Specifies clear threshold in % for the eDTU utilization
      - ``80%``
 
@@ -329,7 +329,7 @@ The following table shows customizable arguments for this detector. To learn how
      - Specifies sensitivity associated with the clear threshold
      - ``80% of 10m``     
 
-   * - filter
+   * - Filter
      - Specifies dimensional scope of the detector
      - ``None``     
 
@@ -358,7 +358,7 @@ The following table shows customizable arguments for this detector. To learn how
      - Specifies sensitivity associated with the trigger threshold
      - ``80% of 10m``
 
-   * - Clear threshold (%)
+   * - Clear threshold
      - Specifies clear threshold in % for the storage utilization
      - ``80%``
 
