@@ -84,7 +84,7 @@ See the :new-page:`OpenTelemetry Metrics API docs <https://pkg.go.dev/go.opentel
 
 .. _custom-metrics-go-reference:
 
-Metric types for OpenTelemetry Go
+OpenTelemetry Go instrument types
 ----------------------------------------
 
 The following table shows the equivalences between OpenTelemetry instrument types and Observability Cloud metric types.

@@ -9,7 +9,7 @@ Metrics and attributes collected by the Splunk Distribution of OTel Go
 
 The Splunk Distribution of OpenTelemetry Go collects runtime and custom metrics. To learn about the different metric types, see :ref:`metric-types`. 
 
-For custom metrics instrumentation, see :ref:`custom-metrics-go`.
+For custom metrics instrumentation and instrument types, see :ref:`custom-metrics-go`.
 
 .. _golang-otel-runtime-metrics:
 
