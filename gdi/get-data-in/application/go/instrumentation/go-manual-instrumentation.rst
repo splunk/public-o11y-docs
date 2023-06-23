@@ -159,7 +159,7 @@ The following table shows the equivalences between OpenTelemetry instrument type
 
 Histogram types generate three separate metrics in Observability Cloud:
 
-- ``_count``, which represents the item count.
+- ``_count`` (Cumulative counter), which represents the item count.
 - ``_sum`` (Cumulative counter), which represents the sum of all values.
 - ``_bucket`` (Cumulative counter), which assigns a data point to the bucket.
 
