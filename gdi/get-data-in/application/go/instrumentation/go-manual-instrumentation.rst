@@ -164,8 +164,6 @@ Histogram types generate three separate metrics in Observability Cloud:
 - ``_bucket``, which assigns a data point to the bucket.
 
 Buckets have a dimension ``le`` which is set to the highest value of the items counted in the bucket.
-      
-
 
 
 
