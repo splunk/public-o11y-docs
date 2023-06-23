@@ -25,26 +25,7 @@ For custom metrics support, you must use MicroMeter 1.5 and higher. See :ref:`ja
 Ensure you are using supported Java and JVM versions
 ==============================================================
 
-The agent of the Splunk Distribution of OpenTelemetry Java supports the following Java versions:
-
-- Java 8 starting from 8u40 (8u262 for AlwaysOn Profiling)
-- Java 11
-- Java 17 and higher LTS versions
-
-The following Java Virtual Machines (JVMs) are supported:
-
-- AdoptOpenJDK
-- Amazon Corretto
-- Azul Zulu
-- BellSoft Liberica JDK
-- Eclipse Adoptium/Temurin
-- IBM J9 (AlwaysOn Profiling is not supported)
-- Microsoft OpenJDK
-- Oracle OpenJDK
-- Red Hat OpenJDK
-- SAP SapMachine
-
-.. note:: Splunk Observability Cloud officially supports Java and Groovy as JVM languages. You can instrument applications written in other JVM languages, but the quality of the telemetry data is not guaranteed.
+.. include:: /_includes/gdi/java-requirements.rst
 
 .. _java-otel-connector-requirement:
 
