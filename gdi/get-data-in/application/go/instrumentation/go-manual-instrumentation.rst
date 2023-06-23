@@ -97,67 +97,74 @@ The following table shows the equivalences between OpenTelemetry instrument type
    * - OpenTelemetry Go
      - Observability Cloud
 
-   * - ``otel.go.Int64Counter``
-     - Cumulative counter (Delta rollup)
+   * - ``Int64Counter``
+     - Cumulative counter
 
-   * - ``otel.go.Int64Histogram_bucket``
-     - Cumulative counter (Delta rollup)
+   * - ``Int64Histogram_bucket``
+     - Cumulative counter
 
-   * - ``otel.go.Int64Histogram_count``
-     - Cumulative counter (Delta rollup)
+   * - ``Int64Histogram_count``
+     - Cumulative counter
 
-   * - ``otel.go.Int64Histogram_max``
+   * - ``Int64Histogram_max``
      - Gauge
 
-   * - ``otel.go.Int64Histogram_min``
+   * - ``Int64Histogram_min``
      - Gauge
 
-   * - ``otel.go.Int64Histogram_sum``
-     - Cumulative counter (Delta rollup)
+   * - ``Int64Histogram_sum``
+     - Cumulative counter
 
-   * - ``otel.go.Int64ObservableCounter``
-     - Cumulative counter (Delta rollup)
+   * - ``Int64ObservableCounter``
+     - Cumulative counter
 
-   * - ``otel.go.Int64ObservableGauge``
+   * - ``Int64ObservableGauge``
      - Gauge
 
-   * - ``otel.go.Int64ObservableUpDownCounter``
+   * - ``Int64ObservableUpDownCounter``
      - Gauge
 
-   * - ``otel.go.Int64UpDownCounter``
+   * - ``Int64UpDownCounter``
      - Gauge
 
-   * - ``otel.go.Float64Counter``
-     - Cumulative counter (Delta rollup)
+   * - ``Float64Counter``
+     - Cumulative counter
 
-   * - ``otel.go.Float64Histogram_bucket``
-     - Cumulative counter (Delta rollup)
+   * - ``Float64Histogram_bucket``
+     - Cumulative counter
 
-   * - ``otel.go.Float64Histogram_count``
-     - Cumulative counter (Delta rollup)
+   * - ``Float64Histogram_count``
+     - Cumulative counter
 
-   * - ``otel.go.Float64Histogram_max``
+   * - ``Float64Histogram_max``
      - Gauge
 
-   * - ``otel.go.Float64Histogram_min``
+   * - ``Float64Histogram_min``
      - Gauge
 
-   * - ``otel.go.Float64Histogram_sum``
-     - Cumulative counter (Delta rollup)
+   * - ``Float64Histogram_sum``
+     - Cumulative counter
 
-   * - ``otel.go.Float64ObservableCounter``
-     - Cumulative counter (Delta rollup)
+   * - ``Float64ObservableCounter``
+     - Cumulative counter
 
-   * - ``otel.go.Float64ObservableGauge``
+   * - ``Float64ObservableGauge``
      - Gauge
    
-   * - ``otel.go.Float64ObservableUpDownCounter``
+   * - ``Float64ObservableUpDownCounter``
      - Gauge
 
-   * - ``otel.go.Float64UpDownCounter``
+   * - ``Float64UpDownCounter``
      - Gauge
 
+Histogram types generate three separate metrics in Observability Cloud:
 
+- ``_count``, which represents the item count.
+- ``_sum``, which represents the sum of all values.
+- ``_bucket``, which assigns a data point to the bucket.
+
+Buckets have a dimension ``le`` which is set to the highest value of the items counted in the bucket.
+      
 
 
 
