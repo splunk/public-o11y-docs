@@ -107,8 +107,8 @@ The following table shows the equivalences between OpenTelemetry instrument type
          * ``_sum`` (Cumulative counter), which represents the sum of all values.
          * ``_bucket`` (Cumulative counter), which assigns a data point to the bucket.
          * ``_min`` (Gauge), which indicates the minumum value.
-         * ``_max``(Gauge), which indicates the maximum value.
-
+         * ``_max`` (Gauge), which indicates the maximum value.
+       
        Buckets have a dimension ``le`` which is set to the highest value of the items counted in the bucket.
 
    * - ``Int64ObservableCounter``
@@ -133,8 +133,8 @@ The following table shows the equivalences between OpenTelemetry instrument type
          * ``_sum`` (Cumulative counter), which represents the sum of all values in the histogram.
          * ``_bucket`` (Cumulative counter), which assigns a data point to the bucket.
          * ``_min`` (Gauge), which indicates the minumum value.
-         * ``_max``(Gauge), which indicates the maximum value.
-
+         * ``_max`` (Gauge), which indicates the maximum value.
+       
        Buckets have a dimension ``le`` which is set to the highest value of the items counted in the bucket.
 
    * - ``Float64ObservableCounter``
