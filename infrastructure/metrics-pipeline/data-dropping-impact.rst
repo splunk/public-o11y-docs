@@ -46,7 +46,9 @@ To prevent charts and detectors from showing no data, you can follow these steps
 Use data dropping to reduce billing costs  
 ======================================================
 
-By reducing cardinality you can also reduce your billing. Try dropping any of the following dimensions:
+You can reduce billing by dropping the dimensions in the table. 
+
+However, for host-based subscriptions, dropping these dimensions might affect how MTS are counted. For example, aggregations which drop countable dimensions will be counted as ``custom`` instead of other categories. This could lead to overcounting and potentially throttling of those MTS if the count exceeds the plan limits.
 
 .. list-table::
     :header-rows: 1
@@ -77,7 +79,7 @@ By reducing cardinality you can also reduce your billing. Try dropping any of th
         - ``sf_product``
 
 
-Further considerations
+Further impacts: Product experience and property sync
 ------------------------------------------------------------
 
 Keep in mind that dropping any of those billing-related dimensions can also affect product experience, since these dimensions are commonly used for dashboards: 
