@@ -290,7 +290,11 @@ The following table shows customizable arguments for this detector. To learn how
 
    * - Clear sensitivity
      - Specifies clear sensitivity associated with clear threshold
-     - ``80% of 10m``     
+     - ``80% of 10m`` 
+
+   * - filter
+     - Specifies dimensional scope of the detector
+     - ``None``     
 
 
 Azure - eDTU utilization expected to reach the limit
