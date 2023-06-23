@@ -81,3 +81,87 @@ To create custom metrics, follow these steps:
       counter.Add(ctx, 1);
 
 See the :new-page:`OpenTelemetry Metrics API docs <https://pkg.go.dev/go.opentelemetry.io/otel/metric>` for additional information.
+
+.. _custom-metrics-go-reference:
+
+Metric types for OpenTelemetry Go
+----------------------------------------
+
+The following table shows the equivalences between OpenTelemetry instrument types and Observability Cloud metric types.
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 60 40
+   :width: 100%
+
+   * - OpenTelemetry Go
+     - Observability Cloud
+
+   * - ``otel.go.Int64Counter``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Int64Histogram_bucket``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Int64Histogram_count``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Int64Histogram_max``
+     - Gauge
+
+   * - ``otel.go.Int64Histogram_min``
+     - Gauge
+
+   * - ``otel.go.Int64Histogram_sum``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Int64ObservableCounter``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Int64ObservableGauge``
+     - Gauge
+
+   * - ``otel.go.Int64ObservableUpDownCounter``
+     - Gauge
+
+   * - ``otel.go.Int64UpDownCounter``
+     - Gauge
+
+   * - ``otel.go.Float64Counter``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Float64Histogram_bucket``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Float64Histogram_count``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Float64Histogram_max``
+     - Gauge
+
+   * - ``otel.go.Float64Histogram_min``
+     - Gauge
+
+   * - ``otel.go.Float64Histogram_sum``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Float64ObservableCounter``
+     - Cumulative counter (Delta rollup)
+
+   * - ``otel.go.Float64ObservableGauge``
+     - Gauge
+   
+   * - ``otel.go.Float64ObservableUpDownCounter``
+     - Gauge
+
+   * - ``otel.go.Float64UpDownCounter``
+     - Gauge
+
+
+
+
+
+
+
+
+
