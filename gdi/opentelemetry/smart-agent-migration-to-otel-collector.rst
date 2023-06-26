@@ -71,6 +71,10 @@ Observability Cloud also has a mapping service that defines equivalencies betwee
 .. raw:: html
 
    <embed>
+      <h2>Track your Smart Agent instances<a name="track-smartagent" class="headerlink" href="#track-smartagent" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+   <embed>
       <h2>Track your Smart Agent instances</h2>
    </embed>
 
