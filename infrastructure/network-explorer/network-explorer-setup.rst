@@ -203,7 +203,7 @@ Example: Install Network Explorer for OpenShift
 
 Follow these steps to install Network Explorer for OpenShift:
 
-#. Run the following script to modify the SELinux Super Privileged Container policy to allow additional access to ``spc_t`` domain processes: 
+#. Run the following script to modify the SELinux Super Privileged Container policy to allow additional access to ``spc_t`` domain processes. 
 
     .. code-block:: bash
 
@@ -223,7 +223,7 @@ Follow these steps to install Network Explorer for OpenShift:
       semodule_package -o "${tmp_dir}/spc_bpf_allow.pp" -m "${tmp_dir}/spc_bpf_allow.mod"
       semodule -i "${tmp_dir}/spc_bpf_allow.pp"
 
-#. Run the following commands to deploy the Helm chart
+#. Run the following commands to deploy the Helm chart.
     
     .. code-block:: bash
       
