@@ -83,7 +83,7 @@ By default, discovery mode reads the built-in configuration provided by the Coll
 To create custom discovery configurations, follow these steps:
 
 #. Navigate to the ``config.d`` folder in ``/etc/otel/collector/config.d`` on Linux.
-#. Create a ``<name>.discovery.yaml`` file and place it inside a subdirectory of ``config.d``, for example ``observers`` or ``receivers`` where ``<name>`` is the name of the component you want to use.
+#. Create a ``<name>.discovery.yaml`` file and place it inside a subdirectory of ``config.d``, for example ``extensions`` or ``receivers`` where ``<name>`` is the name of the component you want to use.
 #. Edit the ``<name>.discovery.yaml`` files to add the desired configuration. For example, if you're adding a receiver, discovery mode loads the content inside the ``receivers`` object of the Collector configuration.
 
 Custom configurations consist of the fields you want to override in the default configuration. For example:
