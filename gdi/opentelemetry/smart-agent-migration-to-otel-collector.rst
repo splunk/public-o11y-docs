@@ -74,4 +74,7 @@ Observability Cloud also has a mapping service that defines equivalencies betwee
       <h2>Track your Smart Agent instances</h2>
    </embed>
 
-Use the ``sfxagent.hostmetadata`` metric to track the amount of Smart Agent instances installed in your environment.   
+The ``sfxagent.hostmetadata`` metric tracks the amount of Smart Agent instances installed in your environment. 
+
+Find it using the :ref:`Metric Finder <metric-finder>`, and monitor it using :ref:`dashboards <dashboards>`.
+
