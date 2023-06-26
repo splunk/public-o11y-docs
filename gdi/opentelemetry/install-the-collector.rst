@@ -102,7 +102,7 @@ The service section of the Collector contains two subsections: extensions and pi
   * - Extension
     - Provide capabilities that can be added to the Collector, but which do not require direct access to telemetry data and are not part of pipelines.
   * - Pipeline
-    - Pipelines can be traces, metrics, or logs. Pipelines consist of a set of receivers, processors, and exporters. Each receiver, processor, and exporter must be defined in the configuration outside of the service section to be included in a pipeline.
+    - :ref:`Pipelines <otel-data-processing>` can be traces, metrics, or logs. They consist of a set of receivers, processors, and exporters, and define the path of the ingested data element. Each receiver, processor, and exporter must be defined in the configuration outside of the service section to be included in a pipeline.
 
 Here's an example configuration:
 
