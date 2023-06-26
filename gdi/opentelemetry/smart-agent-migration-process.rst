@@ -12,13 +12,13 @@ Migration process from the Smart Agent to the Splunk Distribution of the OpenTel
 
 Do the following steps to migrate from the Smart Agent to the Collector:
 
-* :ref:`deploy-the-collector-non-prod-env`
-* :ref:`validate-deployment-of-collector` 
-* :ref:`locate-sa-config-file`
-* :ref:`use-translatefx` 
-* :ref:`estimate-sizing` 
-* :ref:`deploy-non-prod-updated-config` 
-* :ref:`deploy-to-prod-updated-config` 
+#. :ref:`Deploy the Collector in a non-production environment <deploy-the-collector-non-prod-env>`
+#. :ref:`Validate the deployment of the Collector <validate-deployment-of-collector>` 
+#. :ref:`Locate your existing Smart Agent configuration file <locate-sa-config-file>`
+#. :ref:`Translate the Smart Agent configuration file using translatesfx <use-translatefx>` 
+#. :ref:`Estimate resource utilization (sizing) for the production environment <estimate-sizing>` 
+#. :ref:`Deploy the Collector to the non-production environment using the updated configuration file <deploy-non-prod-updated-config>` 
+#. :ref:`Deploy the Collector to a production host using the updated configuration file <deploy-to-prod-updated-config>` 
 
 .. _deploy-the-collector-non-prod-env:
 
