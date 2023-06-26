@@ -42,14 +42,12 @@ To use Network Explorer with OpenShift, you must meet the following requirements
     * - :strong:`Prerequisite`
       - :strong:`Description`
         
-    * - Environment
+    * - OpenShift version
       - An on-premises OpenShift cluster or an OpenShift Rosa cluster version 4.12.18 or 4.12.13
       
     * - Admin role
       - You must be an admin in Splunk Observability Cloud to install Network Explorer on OpenShift
 
-    * - Infrastructure Monitoring ingestion token
-      - 
 
 Network Explorer components
 =================================
@@ -88,7 +86,7 @@ Network Explorer consists of the following components:
 
 .. _install-network-explorer:
 
-Install Network Explorer for Kubernetes
+Install Network Explorer
 =======================================================================================
 
 For the Splunk Distribution of OpenTelemetry Collector to work with Network Explorer, you must install it in Gateway mode, and perform the following steps:
@@ -129,8 +127,8 @@ The following table shows required parameters for this installation:
          - Set this to ``1`` since Network Explorer doesn't support communication to multiple gateway replicas.
 
 
-Example
---------------------------
+Example: Install Network Explorer for Kubernetes
+----------------------------------------------------------
 
 In this example, the reducer, the kernel collector, and the Kubernetes collector are configured. The cloud collector isn't enabled.
 
@@ -199,6 +197,78 @@ Follow these steps to install Network Explorer using the Helm chart method:
 
 For additional Splunk Distribution of OpenTelemetry Collector configuration, see :ref:`otel-install-k8s`.     
 
+
+Example: Install Network Explorer for OpenShift
+----------------------------------------------------------
+
+Follow these steps to install Network Explorer for OpenShift:
+
+#. Run the following script to modify the SELinux Super Privileged Container policy to allow additional access to ``spc_t`` domain processes: 
+
+    .. code-block:: bash
+
+      tmp_dir=$(mktemp -d -t EBPF_NET-XXXXX)
+
+      cat > "${tmp_dir}/spc_bpf_allow.te" <<END
+      module spc_bpf_allow 1.0;
+      require {
+          type spc_t;
+          class bpf {map_create map_read map_write prog_load prog_run};
+      }
+      #============= spc_t ==============
+
+      allow spc_t self:bpf { map_create map_read map_write prog_load prog_run };
+      END
+      checkmodule -M -m -o "${tmp_dir}/spc_bpf_allow.mod" "${tmp_dir}/spc_bpf_allow.te"
+      semodule_package -o "${tmp_dir}/spc_bpf_allow.pp" -m "${tmp_dir}/spc_bpf_allow.mod"
+      semodule -i "${tmp_dir}/spc_bpf_allow.pp"
+
+#. Run the following commands to deploy the Helm chart
+    
+    .. code-block:: bash
+      
+      helm repo add splunk-otel-collector-chart https://signalfx.github.io/splunk-otel-collector-chart
+
+#. Run the following command to update the Helm chart.
+
+    .. code-block:: bash
+
+        helm repo update
+
+#. Run the following command to install the Splunk Distribution of OpenTelemetry Collector. Replace the parameters with their appropriate values.
+
+    .. code-block:: bash
+
+        helm --namespace=<NAMESPACE> install my-splunk-otel-collector \
+        --set="splunkObservability.realm=<REALM>" \
+        --set="splunkObservability.accessToken=<ACCESS_TOKEN>" \
+        --set="distribution=openshift" \
+        --set="clusterName=<CLUSTER_NAME>" \
+        --set="networkExplorer.enabled=true" \
+        --set="agent.enabled=true" \
+        --set="clusterReceiver.enabled=true" \
+        --set="gateway.replicaCount=1" \
+        --set="networkExplorer.podSecurityPolicy.enabled=false" \
+        --set="networkExplorer.rbac.create=true" \
+        --set="networkExplorer.k8sCollector.serviceAccount.create=true" \
+        --set="networkExplorer.kernelCollector.serviceAccount.create=true" \
+        --set="networkExplorer.kernelCollector.image.tag=4.18.0-372.51.1.el8_6.x86_64" \
+        --set="networkExplorer.kernelCollector.image.repository=quay.io/splunko11ytest/network-explorer-debug" \
+        --set="networkExplorer.kernelCollector.image.name=kernel-collector-openshift" \
+        splunk-otel-collector-chart/splunk-otel-collector
+
+#. ??
+
+    .. code-block:: bash
+
+        oc adm policy add-scc-to-user privileged -z my-splunk-otel-collector-kernel-collector -n <NAMESPACE>
+
+#. ??
+
+    .. code-block:: bash
+
+        oc adm policy add-scc-to-user anyuid -z my-splunk-otel-collector-k8s-collector -n <NAMESPACE>
+
 .. _resize-otel-installation:
 
 Change the resource footprint of Splunk Distribution of OpenTelemetry Collector
@@ -251,15 +321,6 @@ In the following example, CPU is set to :strong:`500m`, and memory is set to :st
     .. code-tab:: bash Pass arguments during installation
 
       helm --namespace=<NAMESPACE> install my-splunk-otel-collector --set="splunkObservability.realm=<REALM>,splunkObservability.accessToken=<ACCESS_TOKEN>,clusterName=<CLUSTER_NAME>,agent.enabled=false,clusterReceiver.enabled=false,networkExplorer.enabled=true,gateway.replicaCount=1,gateway.resources.limits.cpu=500m,gateway.resources.limits.memory=1Gi" splunk-otel-collector-chart/splunk-otel-collector
-
-
-.. _install-network-explorer-openshift:
-
-Install Network Explorer for OpenShift
-=======================================================================================
-
-
-
 
 .. _resize-installation:
 
