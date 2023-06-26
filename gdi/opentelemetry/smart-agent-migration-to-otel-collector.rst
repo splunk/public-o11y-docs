@@ -54,7 +54,7 @@ While the Smart Agent is deprecated, Smart Agent :ref:`monitors <monitor-data-so
 
 The Smart Agent metric monitors allow real-time insights into how your target services and applications are performing. These metric gathering utilities have an equivalent counterpart in the Collector.   
 
-The `smartagent` receiver is a :ref:`component of the Collector <otel-components>` that allows the embedding of existing Smart Agent monitors in your Collector metric pipelines. 
+The :ref:`smartagent-receiver` is a :ref:`component of the Collector <otel-components>` that allows the embedding of existing Smart Agent monitors in your Collector metric pipelines. 
 
 Learn :ref:`how to use Smart Agent monitors in the Collector <migration-monitors>`. 
 
@@ -67,3 +67,14 @@ Learn :ref:`how to use Smart Agent monitors in the Collector <migration-monitors
 Observability Cloud provides a :ref:`translation tool <otel-translation-tool>` to help you adapt your Smart Agent YAML configuration file to a YAML that you can use with the Collector. 
 
 Observability Cloud also has a mapping service that defines equivalencies between legacy Smart Agent metric naming and semantic conventions to the OpenTelemetry names and formats for metrics and metric metadata. See :ref:`Metric mapping service <legacy-otel-mappings>` for more information. 
+
+.. raw:: html
+
+   <embed>
+      <h2>Track your Smart Agent instances<a name="track-smartagent" class="headerlink" href="#track-smartagent" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+The ``sfxagent.hostmetadata`` metric tracks the amount of Smart Agent instances installed in your environment. 
+
+Find it using the :ref:`Metric Finder <metric-finder>`, and monitor it using :ref:`dashboards <dashboards>`.
+
