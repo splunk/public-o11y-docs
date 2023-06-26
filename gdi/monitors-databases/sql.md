@@ -145,8 +145,8 @@ receivers:
     port: 5432
     dbDriver: postgres
     params:
-      user: "admin"
-      password: "s3cr3t"
+      user: "${env:SQL_USERNAME}"
+      password: "${env:SQL_PASSWORD}"
     # The `host` and `port` values shown in this example (also provided through autodiscovery) are interpolated
     # to the connection string as appropriate for the database driver.
     # Also, the values from the `params` configuration option above can be
