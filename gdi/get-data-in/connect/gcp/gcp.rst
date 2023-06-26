@@ -63,9 +63,6 @@ The following table specifies the permissions required for GCP integrations.
    *  - ``monitoring.timeSeries.list``
       - Yes
 
-   *  - ``serviceusage.services.use``
-      - Yes, if you want to activate the use of a quota from the project where metrics are stored
-
    *  - ``compute.instances.list``
       - Yes, if the Compute Engine service is activated
 
