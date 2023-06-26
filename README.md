@@ -1,4 +1,4 @@
-# Splunk Observability Cloud documentation
+# Splunk Observability Cloud Documentation
 
 This repository contains the code and documentation for https://docs.splunk.com/Observability
 
@@ -6,7 +6,7 @@ A private mirror exists where the Splunk technical writers edit documentation fo
 
 ## Contribute to the documentation
 
-Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for our contribution guidelines.
+Docs contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for our contribution guidelines.
 
 ## Requirements
 

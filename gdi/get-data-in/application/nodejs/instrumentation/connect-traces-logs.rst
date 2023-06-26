@@ -42,10 +42,3 @@ The format of each log message depends on the library. The following is a sample
 .. code-block::
 
    {"level":30,"time":1979374615686,"pid":728570,"hostname":"my_host","trace_id":"f8e261432221096329baf5e62090d856","span_id":"3235afe76b55fe51","trace_flags":"01","url":"/lkasd","msg":"request handler"}
-
-.. _explore-log-observer-nodejs: 
-
-Explore application logs in Log Observer
-==================================================
-
-You can send Node.js application logs to Observability Cloud in the same way you send any other type of log data. To learn more about logs in Observability Cloud, see :ref:`logs-logs`.

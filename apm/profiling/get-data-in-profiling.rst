@@ -7,6 +7,8 @@ Get AlwaysOn Profiling data into Splunk APM
 .. meta:: 
    :description: Follow these instructions to get profiling data into Splunk APM using AlwaysOn Profiling.
 
+Follow these instructions to get profiling data into Splunk APM using AlwaysOn Profiling.
+
 .. _profiling-requirements:
 
 Prerequisites
@@ -14,12 +16,41 @@ Prerequisites
 
 To get data into Splunk AlwaysOn Profiling, you need the following:
 
-- Splunk APM enabled for your Observability Cloud organization.
-- The Splunk Distribution of OpenTelemetry Collector version 0.44.0 or higher. See :ref:`otel-intro`.
+- Splunk APM activated for your Observability Cloud organization.
+- Splunk Distribution of OpenTelemetry Collector version 0.44.0 or higher running on the host. See :ref:`otel-intro`. If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
 
-If the version of your Splunk OTel Collector is lower than 0.44.0, see :ref:`profiling-pipeline-setup`.
+AlwaysOn Profiling is activated for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
 
-.. note:: AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, check with your Splunk support representative.
+.. note:: Log Observer is not required. See :ref:`exclude-log-data` for more information.
+
+.. _profiling-setup-helm:
+
+Helm chart deployments
+---------------------------------------------------------------
+
+If you're deploying the Splunk Distribution of OpenTelemetry Collector using Helm, make sure to pass the following value when installing the chart:
+
+.. code-block:: bash
+
+   --set splunkObservability.profilingEnabled='true' 
+
+You can also edit the parameter in the ``values.yaml`` file itself. For example:
+
+.. code-block:: yaml
+
+   # This option just enables the shared pipeline for logs and profiling data.
+   # There is no active collection of profiling data.
+   # Instrumentation libraries must be configured to send it to the collector.
+   # If you don't use AlwaysOn Profiling for Splunk APM, you can disable it.
+   profilingEnabled: false
+
+If you don't have a Log Observer entitlement and are using a version of the Collector lower than 0.78.0, make sure to turn off logs collection:
+
+.. code-block:: yaml
+
+   logsEnabled: false
+
+.. note:: Setting ``profileEnabled`` to ``true`` creates the logs pipeline required by AlwaysOn Profiling, but doesn't install the APM instrumentation. To install the instrumentation, see :ref:`profiling-setup`.
 
 .. _profiling-setup:
 
@@ -60,23 +91,23 @@ AlwaysOn Profiling requires APM tracing data to correlate stack traces to your a
 
 .. _profiling-setup-enable-profiler:
 
-Enable AlwaysOn Profiling
+Activate AlwaysOn Profiling
 ---------------------------------------------------------------
 
-After you've instrumented your service for Observability Cloud and checked that APM data is getting into Splunk APM, enable AlwaysOn Profiling.
+After you've instrumented your service for Observability Cloud and checked that APM data is getting into Splunk APM, activate AlwaysOn Profiling.
 
-To enable AlwaysOn Profiling, follow the steps for the appropriate programming language: 
+To activate AlwaysOn Profiling, follow the steps for the appropriate programming language: 
 
 .. tabs::
 
    .. group-tab:: Java
 
-      - To use CPU profiling, enable the ``splunk.profiler.enabled`` system property, or set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
-      - Enable Memory profiling by setting the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``. To enable memory profiling, the ``splunk.profiler.enabled`` property must be set to ``true``.
+      - To use CPU profiling, activate the ``splunk.profiler.enabled`` system property, or set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+      - Activate Memory profiling by setting the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``. To activate memory profiling, the ``splunk.profiler.enabled`` property must be set to ``true``.
       - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
       - Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your Collector config, you need to pass the custom port to the JVM.
       
-      The following example shows how to enable the profiler using the system property:
+      The following example shows how to activate the profiler using the system property:
 
       .. code-block:: bash
          :emphasize-lines: 2,3,4,5
@@ -94,21 +125,25 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: Node.js
 
+      :strong:`Requirements`
+
       AlwaysOn Profiling requires Node 16 and higher.
 
-      - Enable the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
-      - Enable Memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+      :strong:`Instrumentation`
+
+      - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
+      - Activate Memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
       - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``  or to the Splunk Distribution of OpenTelemetry Collector.
 
-      The following example shows how to enable the profiler from your application's code:
+      The following example shows how to activate the profiler from your application's code:
 
       .. code-block:: javascript
 
          start({
             serviceName: '<service-name>',
             endpoint: 'collectorhost:port',
-            profiling: {                       // Enables CPU profiling
-               memoryProfilingEnabled: true,   // Enables Memory profiling
+            profiling: {                       // Activates CPU profiling
+               memoryProfilingEnabled: true,   // Activates Memory profiling
             }
          });
 
@@ -116,10 +151,19 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 
    .. group-tab:: .NET
 
-      AlwaysOn Profiling requires NET Core 3.1 or .NET 5.0 and higher. Memory profiling requires .NET 5.0 and higher.
+      :strong:`Requirements`
 
-      - Enable the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
-      - Enable Memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
+      AlwaysOn Profiling requires .NET 6.0 or higher.
+
+      Limited support is available for the following legacy versions of .NET:
+
+         - CPU Profiling: .NET Core 3.1 and .NET 5.x
+         - Memory Profiling: .NET Core 5.x
+
+      :strong:`Instrumentation`
+
+      - Activate the profiler by setting the ``SIGNALFX_PROFILER_ENABLED`` environment variable to ``true`` for your .NET process.
+      - Activate Memory profiling by setting the ``SIGNALFX_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
       - Make sure that the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
       - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4318/v1/logs`` or to the Splunk Distribution of OpenTelemetry Collector.
 
@@ -130,11 +174,11 @@ To enable AlwaysOn Profiling, follow the steps for the appropriate programming l
 Check that Observability Cloud is receiving profiling data
 ---------------------------------------------------------------
 
-After you set up and enable AlwaysOn Profiling, check that profiling data is coming in:
+After you set up and activate AlwaysOn Profiling, check that profiling data is coming in:
 
 1. Log in to Splunk Observability Cloud. 
-2. In the left navigation menu, select :menuselection:`APM`.
+2. In the navigation menu, select :menuselection:`APM`.
 3. In Splunk APM, select :guilabel:`AlwaysOn Profiling`.
 4. Select a service, and switch from the CPU view to the Memory view. 
 5. If your service runs in multiple instances, select the instance that you're interested in by selecting the host, container and process ID.
-6. If you've enabled Memory profiling, explore memory metrics. See :ref:`profiling-memory-metrics`.
+6. If you've activated Memory profiling, explore memory metrics. See :ref:`profiling-memory-metrics`.

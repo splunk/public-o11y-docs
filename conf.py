@@ -22,10 +22,15 @@ extensions = [
     'toggle',
     'newpage',
     'github',
+    'optimizer',
     'myst_parser',
     'sphinx_tabs.tabs',
     'olly_on_git_hub'
 ]
+
+html_context = {
+    'search': 'search.html'
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

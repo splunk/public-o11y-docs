@@ -42,7 +42,7 @@ Built-in dashboards in Splunk APM are automatically populated with SLIs for all 
 
 To see a dashboard for a service, select the service on the service map, then select :strong:`View Dashboard`. 
 
-See :ref:`dashboards` for a list of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and create a detector so that you can alert on a dashboard or chart in the future. For a use case on managing SLOs using APM, see :ref:`custom-metricset`.
+See :ref:`dashboards` for a list of dashboards and how you can create, customize, import, export, clone, and share them. See :ref:`apm-dashboards` to learn how to track performance, troubleshoot from the dashboard, and create a detector so that you can alert on a dashboard or chart in the future. For a scenario on managing SLOs using APM, see :ref:`custom-metricset`.
 
 Observability Cloud Alerts and detectors
 ===================================================================================
@@ -71,14 +71,14 @@ Splunk RUM shows SLIs and SLOs from the perspective of what your users experienc
     :width: 100%
     :alt: This image shows a RUM dashboard displaying a count of requests and errors by URL name, by HTTP method, and by HTTP status code. 
     
-To learn more about what you can do with RUM, see :ref:`get-started-rum`. The :ref:`use-case-landingpage` has multiple examples of how you can use RUM. 
+To learn more about what you can do with RUM, see :ref:`get-started-rum`. :ref:`scenario-landingpage` has multiple examples of how you can use RUM. 
 
 
 Splunk Synthetic Monitoring
 ===================================================================================
-Test your SLOs before users do with Splunk Synthetic Monitoring. When you proactively monitor the performance of your web application, you can remediate problems before they impact your users. Technical and business teams use Synthetic Monitoring to create detailed tests that monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle.  See :ref:`intro-synthetics` to learn what you can do with Synthetics Monitoring. 
+Test your SLOs before users do with Splunk Synthetic Monitoring. When you proactively monitor the performance of your web application, you can remediate problems before they impact your users. Technical and business teams use Synthetic Monitoring to create detailed tests that monitor the speed and reliability of websites, web apps, and resources over time, at any stage in the development cycle. See :ref:`intro-synthetics` to learn what you can do with Synthetics Monitoring. 
 
-To learn more about when to use Synthetic Monitoring in a use case, see :ref:`uptime-test-use-case`. 
+To learn more about when to use Synthetic Monitoring in a scenario, see :ref:`uptime-test-scenario`. 
 
 Alerting on synthetic testing makes Synthetic Monitoring actionable for your development and dev ops teams. Set up browser tests and uptime tests to monitor your site or application at the frequency you prefer. Each test captures a set of metrics each time it runs. To set up alerts that notify you when tests fail, see :ref:`synth-alerts`. 
 

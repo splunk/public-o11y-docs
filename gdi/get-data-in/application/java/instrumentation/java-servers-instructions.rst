@@ -85,13 +85,14 @@ Add the path to the JVM agent to the settings using the asadmin command-line too
 You can also add the ``-javaagent`` argument from the Glassfish or Payara Admin Console:
 
 1. Open the GlassFish Admin Console at ``http://localhost:4848``.
-2. Go to :menuselection:`Configurations > server-config > JVM Settings`.
-3. Select :menuselection:`JVM Options` and click :menuselection:`Add JVM Option`.
-4. In the blank field, enter the path to the splunk-otel-javaagent.jar file:
+2. Go to :menuselection:`Configurations`, then :menuselection:`server-config`.
+3. Select :menuselection:`JVM Settings`.
+4. Select :menuselection:`JVM Options`, then :menuselection:`Add JVM Option`.
+5. In the blank field, enter the path to the splunk-otel-javaagent.jar file:
 
    ``-javaagent:/path/to/splunk-otel-javaagent.jar``
 
-5. Click :strong:`Save` and restart the server.
+6. Select :strong:`Save` and restart the server.
 
 .. note:: Make sure that the domain.xml file in your domain directory contains a ``<jmv-options>`` entry for the agent.
 
@@ -168,9 +169,10 @@ WebSphere Traditional
 
 Open the WebSphere Admin Console and follow these steps:
 
-#. Navigate to :guilabel:`Servers > Server type > WebSphere application servers`.
+#. Navigate to :guilabel:`Servers`, then :guilabel:` Server type`.
+#. Select :guilabel:`WebSphere application servers`.
 #. Select the desired server.
-#. Navigate to :guilabel:`Java and Process Management > Process Definition`.
+#. Navigate to :guilabel:`Java and Process Management`, then :guilabel:` Process Definition`.
 #. Select :guilabel:`Java Virtual Machine`.
 #. In the :guilabel:`Generic JVM arguments` field, enter the path to Splunk Java agent:
 
@@ -178,4 +180,4 @@ Open the WebSphere Admin Console and follow these steps:
    
       -javaagent:/path/to/splunk-otel-javaagent.jar
 
-#. Click :guilabel:`OK`. When asked, save the master configuration and restart the server.
+#. Select :guilabel:`OK`. When asked, save the main configuration and restart the server.

@@ -154,6 +154,6 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
 
 Example
 ==================
-For an example, see  :ref:`browser-test-use-case`.
+For an example, see  :ref:`browser-test-scenario`.
 
 

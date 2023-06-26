@@ -21,8 +21,8 @@ Configure application receivers for orchestration
    monitors-orchestration/kubernetes-proxy
    monitors-orchestration/kubernetes-scheduler
    opentelemetry/components/kubelet-stats-receiver
-   marathon/marathon
-   openshift-cluster/openshift-cluster
+   monitors-orchestration/mesos-marathon
+   monitors-orchestration/openshift-cluster
 
 These application receivers gather metrics from their associated orchestration-related applications and the hosts the applications are running on.
 

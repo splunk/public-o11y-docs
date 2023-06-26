@@ -10,7 +10,7 @@ Create and manage on-call schedules
 .. toctree::
    :hidden:
 
-   Use cases: Schedules in Incident Intelligence TOGGLE <use-cases-schedules/use-cases-schedules>
+   Scenarios: Schedules in Incident Intelligence TOGGLE <scenarios-schedules/scenarios-schedules>
    create-on-call-schedule
    sync-on-call-schedule
    whos-on-call
@@ -19,7 +19,7 @@ Create and manage on-call schedules
 Use the following topics to learn how to create and manage schedules, see who's on call, and reassign shifts:
 
 * :ref:`ii-create-on-call-schedule`
-* :ref:`ii-use-cases-schedules`
+* :ref:`ii-scenarios-schedules`
 * :ref:`ii-sync-on-call-schedule`
 * :ref:`ii-whos-on-call`
 * :ref:`reassign-shift`

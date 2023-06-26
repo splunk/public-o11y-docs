@@ -77,15 +77,15 @@ Once integrated with your Amazon Web Services account, Splunk Observability Clou
 
 .. _aws-ts-namespace-metrics:
 
-Metrics and/or tags for a particular namespace are not displayed
+Metrics and tags for a particular namespace are not displayed
 ==================================================================================
 
-Metrics and/or tags for a particular namespace are not displayed as expected.
+Metrics and tags for a particular namespace are not displayed as expected.
 
 Causes
 ^^^^^^^^
 
-If you use the AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` and/or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
+If you use the AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
 might impact the AWS IAM policy you're using to connect to Observability Cloud. 
 
 If you modified the default IAM policy while setting up an integration between Observability Cloud and AWS, then your IAM policy does not list namespaces that were removed as not needed for the original integration, and as a result Observability Cloud ignores metrics for those namespaces.
