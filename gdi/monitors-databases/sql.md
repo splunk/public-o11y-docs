@@ -138,21 +138,22 @@ Consider the following `customers` database table:
 Use the following monitor configuration to generate metrics about active users and customer counts by country:
 
 ```yaml
-monitors:
-  - type: sql
+receivers:
+  smartagent/sql:
+    type: sql
     host: localhost
     port: 5432
     dbDriver: postgres
     params:
-      user: admin
-      password: s3cr3t
+      user: "admin"
+      password: "s3cr3t"
     # The `host` and `port` values shown in this example (also provided through autodiscovery) are interpolated
     # to the connection string as appropriate for the database driver.
     # Also, the values from the `params` configuration option above can be
     # interpolated.
-    connectionString: 'host={{.host}} port={{.port}} dbname=main user={{.user}} password={{.password}} sslmode=disable'
+    connectionString: "{{host={{.host}} port={{.port}} dbname=main user={{.user}} password={{.password}} sslmode=disable}}"
     queries:
-      - query: 'SELECT COUNT(*) as count, country, status FROM customers GROUP BY country, status;'
+      {'SELECT COUNT(*) as count, country, status FROM customers GROUP BY country, status;}
         metrics:
           - metricName: "customers"
             valueColumn: "count"
