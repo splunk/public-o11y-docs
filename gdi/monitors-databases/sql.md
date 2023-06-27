@@ -95,7 +95,7 @@ This is the list of the drivers currently supported:
 
 ### Parameterized connection string
 
-The monitor treats the value of `connectionString` as a Golang template with a context consisting of the variables `host` and `port` and all the parameters from the `params` option. To add a variable to the template, use the Golang `{{.varname}}` template syntax.
+The integration treats the value of `connectionString` as a Golang template with a context consisting of the variables `host` and `port` and all the parameters from the `params` option. To add a variable to the template, use the Golang `{{.varname}}` template syntax.
 
 ### Collect Snowflake performance and usage metrics
 
@@ -151,9 +151,9 @@ receivers:
     # to the connection string as appropriate for the database driver.
     # Also, the values from the `params` configuration option above can be
     # interpolated.
-    connectionString: "{{host={{.host}} port={{.port}} dbname=main user={{.user}} password={{.password}} sslmode=disable}}"
+    connectionString: 'host={{.host}} port={{.port}} dbname=main user={{.user}} password={{.password}} sslmode=disable'
     queries:
-      {'SELECT COUNT(*) as count, country, status FROM customers GROUP BY country, status;}
+      - query: 'SELECT COUNT(*) as count, country, status FROM customers GROUP BY country, status;'
         metrics:
           - metricName: "customers"
             valueColumn: "count"
@@ -175,8 +175,7 @@ Both the `GAUGE` and `CUMULATIVE` functions have the following signature:
  * `value`: Must be a numeric value.
 
 Each of the columns in the row maps to a variable in the context of the expression with the same name.
-For example, if you have a column called `name` in your SQL query result, you can use a variable called `name` in the expression.
-In your expression, surround string values with single quotes (`''`).
+For example, if you have a column called `name` in your SQL query result, you can use a variable called `name` in the expression. In your expression, surround string values with single quotes (`''`).
 
 ## Metrics
 
