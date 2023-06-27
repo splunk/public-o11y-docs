@@ -12,7 +12,6 @@ Org reference information
 
    data-retention
    organizations
-   personal-info
    per-product-limits
    supported-browsers
 
