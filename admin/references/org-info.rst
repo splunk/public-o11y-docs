@@ -10,14 +10,12 @@ Org reference information
 .. toctree::
    :hidden:
 
-   api-access-token
-   app-preferences
    data-retention
    organizations
    personal-info
    per-product-limits
    supported-browsers
-   teams
+
 
 
 
