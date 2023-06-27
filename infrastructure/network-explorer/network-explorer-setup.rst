@@ -203,7 +203,7 @@ Example: Install Network Explorer for OpenShift
 
 Follow these steps to install Network Explorer for OpenShift:
 
-#. Run the following script to modify the SELinux Super Privileged Container policy to allow additional access to ``spc_t`` domain processes. 
+#. Each node of an OpenShift cluster runs on Red Hat Enterprise Linux CoreOS, which has SELinux enabled by default. To install the Network Explorer kernel collector, you have to configure Super Privileged Container (SPC) for SELinux. Run the following script to modify the SELinux SPC policy to allow additional access to ``spc_t`` domain processes. 
 
     .. code-block:: bash
 
