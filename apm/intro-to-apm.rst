@@ -49,11 +49,11 @@ The following table provides an overview of what you can do with Splunk APM:
     - * :ref:`redis-scenario`
       * :ref:`db-perf-scenario`
 
-  * - Get visibility into code-level performance using AlwaysOn Profiling, a feature of Splunk APM. AlwaysOn Profiling takes CPU snapshots from runtime environments to contextualize spans and traces produced by instrumented applications.
+  * - Get visibility into code-level performance using AlwaysOn Profiling, a feature of Splunk APM. AlwaysOn Profiling takes CPU and memory snapshots from runtime environments to contextualize spans and traces produced by instrumented applications.
     - AlwaysOn Profiling
     - :ref:`profiling-scenario-landingpage`
 
-  * - Use detectors to alert with custom error and duration metrics to monitor error rate and latency across all of your services.
+  * - Use autodetect to alert on sudden changes in your request, error and duration (RED) metrics to stay on top of your services' performance. Use custom detectors to alert with custom error and duration metrics.
     - Detectors and alerts
     - :ref:`Detectors and alerts<apm-alerts>`
 
@@ -65,7 +65,7 @@ The following table provides an overview of what you can do with Splunk APM:
     - Tag Spotlight
     - :ref:`apm-tag-spotlight`
 
-  * - Search all traces from all of your systems, with no sampling, to resolve an edge cases.
+  * - Use Trace Analyzer to detect patterns across billions of transactions to identify problems across any combinations of tags, services, and users in your environment.
     - Trace Analyzer
     - :ref:`trace-analyzer`
 
