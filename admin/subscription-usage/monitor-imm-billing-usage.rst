@@ -232,8 +232,10 @@ A significant difference about this report is how you can use the No. |nbsp| Cus
 
 .. _on-demand-report-host:
 
-On demand reports
-===========================
+On demand MTS usage reports
+===============================
+
+You can track and control metric creation and cardinality using :ref:`Metrics Pipeline Management <metrics-pipeline>`.
 
 To get a detailed breakdown of the metric time series (MTS) you've created and use, you can request a usage report for a specific time interval by contacting your tech support member or your account team. Learn more at :ref:`metrics-usage-report`.
 
