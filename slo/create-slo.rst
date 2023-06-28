@@ -34,7 +34,7 @@ Follow these steps to create an SLO.
           - :strong:`Description`
         * - Metric type
           - Select :guilabel:`Service & endpoint` from the dropdown menu
-        * - Service:endpoint
+        * - Service\:\endpoint
           - * Search for the service you want to create an SLO for
             * (Optional) Add an endpoint for the selected service
         * - Indicator type
