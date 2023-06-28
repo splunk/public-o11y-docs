@@ -36,6 +36,13 @@ Follow these steps to set up a Browser test:
 
 .. include:: /_includes/synthetics/configure-test.rst
 
+Import JSON file generated from Google Chrome recorder
+============================================================
+
+
+.. Note:: Viewport is automatically set, so if you have a step to set the viewport, this step won’t appear in the test configuration. 
+
+
 
 View your Browser test
 ====================================
@@ -62,6 +69,7 @@ If you change the name of your test or the name of a synthetic transaction, it m
 
 
 
+
 .. _browser-adv-setting:
 
 Advanced settings for Browser tests 
@@ -75,6 +83,8 @@ There are many reasons why you might want to configure advanced settings for you
 * Testing out a CDN. For example, you might want to load the HTML page in the browser, but rewrite the hosts for some or all requests to a new host.
 * Filtering out requests from analytics on the back end by sending a specific header in the requests.
 * Running a test on a pre-production site that has a self-signed certificate.
+
+
 
 
 
