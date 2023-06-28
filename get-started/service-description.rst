@@ -42,14 +42,68 @@ The following links access important terms and policies documents that pertain t
 - :new-page:`Splunk Observability Cloud - Security Addendum <https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html>`
 - :new-page:`Specific Terms for Splunk Offerings <https://www.splunk.com/en_us/legal/splunk-specific-terms.html>`
 
-Levels of support / maturity
+
+Preview programs
 ===========================================================
 
-Splunk SaaS Products Delivery Model https://docs.google.com/document/d/177WkEL62aU7ECQJ676rC9wKwtrs5xEwR56ZcUEBhUhA/edit
+Features of Splunk Observability Cloud can be released as Private or Public Previews before reaching General Availability. Each type of release has different support levels and guarantees.
 
-https://splunk.atlassian.net/wiki/spaces/PROD/pages/1078211402186/How+to+deprecate+something+in+an+Observability+product
+- :strong:`Private Preview`: Splunk may release features and products in a Private Preview with limited availability in a test or production environment to capture feedback from customers. Private Previews are limited in scope to a selected set of customers. Private Previews in a production environment are subject to Compliance and Security entrance criteria requirements, CCF compliance will be required at a minimum. Splunk does not offer general support SLA terms.
 
-https://docs.splunk.com/Documentation/Splunk/latest/ReleaseNotes/Deprecatedfeatures#What_does_.22deprecated.22_mean.3F 
+- :strong:`Public Preview`: A product or feature is ready for use in customer environments upon opt-in and is subject to Splunk Pre-Release Agreement. Splunk may update, change or remove features at Preview without prior notice and will make a best effort to notify customers of any such changes. Preview features are provided without any guarantees, and no formal support assertions or SLA commitments are provided through the Support team. See :new-page:`Splunk Pre-Release Agreement <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>` for more information.
+
+- :strong:`General Availability`: A products or feature is open to all customers, subject to available regions and compliance tiers, ready for production use, and covered by Splunk's Service-Level Agreements. The products or features at General Availability are considered stable, are fully documented, and are supported through Splunk support channels. Important updates or changes are communicated with prior notice. See :new-page:`Splunk Observability Cloud - Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` for more information.
+
+The following table summarizes the main differences between each type of release:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+   :width: 100%
+
+   * - 
+     - :strong:`Private Preview`
+     - :strong:`Public Preview`
+     - :strong:`General Availability`
+
+    * - :strong:`Availability`
+      - Selected customers
+      - Opt-in for all customers
+      - Available to all customers
+
+    * - :strong:`Maturity`
+      - Alpha
+      - Beta
+      - Stable
+
+    * - :strong:`Use in production`
+      - No
+      - Yes
+      - Yes
+
+    * - :strong:`Support`
+      - No formal support or SLA terms
+      - No formal support or SLA terms
+      - Full Splunk support
+
+    * - :strong:`Documentation`
+      - No
+      - Optional
+      - Complete
+
+    * - :strong:`SLAs`
+      - No
+      - No
+      - SLAs published
+
+    * - :strong:`Release Notes`
+      - No
+      - Optional
+      - Comprehensive
+
+.. note:: 
+    The levels of support described in this section do not apply to open source agents and instrumentations.
+
 
 Data ingestion and retention
 ===========================================================
