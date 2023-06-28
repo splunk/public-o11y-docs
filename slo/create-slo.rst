@@ -39,7 +39,6 @@ Follow these steps to create an SLO.
             * (Optional) Add an endpoint for the selected service
         * - Indicator type
           - * Select :guilabel:`Request response` ...
-            * Select :guilabel:`Request latency` ...
         * - Environment
           - Check the boxes for the environments where you want to apply this SLO
         * - Filters
@@ -76,9 +75,6 @@ Follow these steps to create an SLO.
         - Enter the target you want to set for this SLO. 
       * - Compliance window
         - Select a compliance window for this SLO from the dropdown menu.
-      * - Rollup
-        - * Select :guilabel:`Entire compliance window` if you want to measure the SLO target for the whole period of the compliance window.
-          * Select :guilabel:`Per minute windows` if you want to measure the SLO target for each minute in the defined compliance window.
 
 #. Set up alerting for your SLO. You can subscribe to get notifications for the following alerts:
 
