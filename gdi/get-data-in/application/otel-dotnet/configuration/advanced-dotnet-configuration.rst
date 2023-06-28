@@ -72,7 +72,7 @@ The following settings are common to most instrumentation scenarios:
    * - ``OTEL_DOTNET_AUTO_RULE_ENGINE_ENABLED``
      - Activates RuleEngine. The default values is ``true``. RuleEngine increases the stability of the instrumentation by validating assemblies for unsupported scenarios.
    * - ``OTEL_DOTNET_AUTO_FAIL_FAST_ENABLED``
-     - Enable to let the process fail when automatic instrumentation can't be executed. This setting is for debugging purposes: don't use it in production environments. The default value is ``false``. Can't be set using the web.config or app.config files.
+     - Activate to let the process fail when automatic instrumentation can't be executed. This setting is for debugging purposes, don't use it in production environments. The default value is ``false``. Can't be set using the web.config or app.config files.
 
 .. _dotnet-otel-exporter-settings:
 
