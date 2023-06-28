@@ -97,6 +97,22 @@ This is the list of the drivers currently supported:
 
 The integration treats the value of `connectionString` as a Golang template with a context consisting of the variables `host` and `port` and all the parameters from the `params` option. To add a variable to the template, use the Golang `{{.varname}}` template syntax.
 
+See the following example:
+
+```yaml
+smartagent/sql:
+  type: sql
+  host: localhost
+  port: 1433
+  dbDriver: sqlserver
+  connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=123456;'
+  queries: 
+    - query: 'SELECT COUNT(*) as count FROM Sales.Orders'
+      metrics:
+        - metricName: "orders"
+          valueColumn: "count"
+```
+
 ### Collect Snowflake performance and usage metrics
 
 To configure the agents to collect Snowflake performance and usage metrics, do the following:

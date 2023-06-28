@@ -39,7 +39,7 @@ For detailed information on `cpu` and `memory` cgroup metrics, see the Red Hat g
 
 To activate this integration, add the following to your Collector configuration:
 
-```
+```yaml
 receivers:
   smartagent/cgroups: 
     type: cgroups
@@ -48,11 +48,25 @@ receivers:
 
 Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
-```
+```yaml
 service:
   pipelines:
     metrics:
       receivers: [smartagent/cgroups]
+```
+
+### Filtering
+
+You can limit the cgroups for which metrics are generated with the `cgroups` config option to the receiver.
+
+For example, the following will only monitor Docker-generated cgroups:
+
+```yaml
+receivers:
+  smartagent/cgroups: 
+    type: cgroups
+    cgroups:
+      "/docker/*"
 ```
 ### Configuration settings
 
