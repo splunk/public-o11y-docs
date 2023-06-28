@@ -47,6 +47,36 @@ service:
       receivers: [smartagent/snmp]
 ```
 
+### Advanced configuration example
+
+The following is a sample Smart Agent monitor configuration:
+
+```yaml
+receivers:
+  smartagent/snmp:
+    type: telegraf/snmp
+    agents: "127.0.0.1:161"
+    version: 2
+    community: "public"
+    fields:
+        name: "uptime"
+        oid: ".1.3.6.1.2.1.1.3.0"
+```
+
+The following is a sample Smart Agent monitor configuration using a discovery rule:
+
+```yaml
+receivers:
+  smartagent/snmp:
+    type: telegraf/snmp
+    discoveryRule: container_name =~ "snmp" && port == 161
+    version: 2
+    community: "public"
+      fields:
+        name: "uptime"
+        oid: ".1.3.6.1.2.1.1.3.0"
+```
+
 ### Configuration settings
 
 The following table shows the configuration options for the SNMP agent monitor:

@@ -31,6 +31,8 @@ To activate this integration, add the following to your Collector configuration:
 receivers:
   smartagent/velero:
     type: prometheus/velero
+    discoveryRule: container_image =~ "velero" && port == 8085
+    port: 8085    
     ...  # Additional config
 ```
 
