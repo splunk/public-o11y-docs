@@ -1,12 +1,10 @@
 (telegraf-win-perf-counters)=
-# Windows performance counters
+
+# Windows Performance Counters
+
 <meta name="description" content="Use this Splunk Observability Cloud integration for the Telegraf win_perf_counters monitor for Windows. See benefits, install, configuration, and metrics">
 
-## Description
-
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `telegraf/win_perf_counters` monitor type for the Smart Agent Receiver.
-
-Use this monitor to receive metrics from Windows performance counters.
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `telegraf/win_perf_counters` monitor type to receive metrics from Windows performance counters.
 
 This monitor is available on Windows.
 
@@ -14,7 +12,7 @@ This monitor is available on Windows.
 For information on the OpenTelemetry receiver based on the Windows Performance Counters input plugin, see {ref}`Windows Performance Counters receiver <windowsperfcounters-receiver>`.
 ```
 
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
@@ -29,9 +27,9 @@ For information on the OpenTelemetry receiver based on the Windows Performance C
 ```{include} /_includes/configuration.md
 ```
 
-### Splunk Distribution of OpenTelemetry Collector
+### Example
 
-To activate this monitor in the OpenTelemetry Collector, add the following to your agent configuration:
+To activate this integration, add the following to your Collector configuration:
 
 ```yaml
 receivers:
@@ -60,7 +58,7 @@ receivers:
       measurement: "win_cpu"
 ```
 
-To complete the monitor activation, you must also include the `smartagent/telegraf/win_perf_counters` receiver item in a `metrics` pipeline. To do this, add the receiver item to the `service.pipelines.metrics.receivers` section of your configuration file. For example:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```yaml
 service:
@@ -97,7 +95,7 @@ The nested `objects` configuration object has the following fields:
 
 The Splunk Distribution of OpenTelemetry Collector doesn't filter metrics for this receiver.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

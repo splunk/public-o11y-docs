@@ -1,30 +1,31 @@
 (signalfx-forwarder)=
 
 # SignalFx Forwarder
+
 <meta name="Description" content="Use this Splunk Observability Cloud integration for the SignalFX forwarder receiver. See benefits, install, configuration, and metrics">
 
-## Description
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `signalfx-forwarder` monitor type to run an HTTP server that listens for data points and trace spans, and forward them to Splunk Observability Cloud. This integration supports the latest formats for data points and spans that the Splunk ingest API endpoint supports.
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` provides this integration as the `signalfx-forwarder` monitor type for the Smart Agent Receiver.
+This integration is available on Linux and Windows.
 
-The SignalFx Forwarder receiver runs an HTTP server that listens for data points and trace spans and forwards them to Splunk Observability Cloud. The receiver supports the latest formats for data points and spans that the Splunk ingest API endpoint supports.
-
-This receiver is available on Linux and Windows.
-
-### Benefits
+## Benefits
 
 ```{include} /_includes/benefits.md
 ```
 
 ## Installation
 
-```{include} /_includes/collector-installation.md
+```{include} /_includes/collector-installation-linux.md
 ```
 
 ## Configuration
 
 ```{include} /_includes/configuration.md
 ```
+
+### Example
+
+To activate this integration, add the following to your Collector configuration:
 
 ```
 receivers:
@@ -33,9 +34,7 @@ receivers:
     ... # Additional config
 ```
 
-To complete the receiver activation, you must also include the receiver in both a `metrics` pipeline and a `traces` pipeline. To do this, add the receiver to the `service.pipelines.metrics.receivers` or the `service.pipelines.traces.receivers` section of your configuration file. 
-
-For example:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
@@ -46,11 +45,11 @@ service:
       receivers: [smartagent/signalfx-forwarder]
 ```
 
-Notice that the `defaultSpanTagsFromEndpoint` and `extraSpanTagsFromEndpoint` config options are not compatible with the `signalfx-forwarder` receiver.
+Note that the `defaultSpanTagsFromEndpoint` and `extraSpanTagsFromEndpoint` config options are not compatible with the `signalfx-forwarder` receiver.
 
 ### Configuration settings
 
-The following table shows the configuration options for the signalfx-forwarder receiver:
+The following table shows the configuration options for the `signalfx-forwarder` integration:
 
 | Option | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -62,7 +61,7 @@ The following table shows the configuration options for the signalfx-forwarder r
 
 There are no metrics available for this integration.
 
-## Get help
+## Troubleshooting
 
 ```{include} /_includes/troubleshooting.md
 ```

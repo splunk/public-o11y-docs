@@ -254,6 +254,123 @@ The following table shows customizable arguments for this detector. To learn how
      - None
 
 
+
+.. _autodetect-azure:
+
+Azure
+------------
+
+Azure - CPU utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when Azure CPU utilization of the elastic pool is above its designated threshold. 
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/azure/elasticpools.flow#L48>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Specifies trigger threshold in % for CPU utilization
+     - ``80%``
+
+   * - Trigger sensitivity
+     - Sensitivity for alerting associated with the trigger threshold
+     - ``80% of 10m``
+
+   * - Clear threshold
+     - Specifies clear threshold in % for the CPU utilization
+     - ``80%``
+
+   * - Clear sensitivity
+     - Specifies clear sensitivity associated with clear threshold
+     - ``80% of 10m`` 
+
+   * - Filter
+     - Specifies dimensional scope of the detector
+     - ``None``     
+
+
+Azure - eDTU utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Alerts when eDTU (elastic Data Transaction Unit) utilization is above its designated threshold. 
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/azure/elasticpools.flow#L4>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Specifies trigger threshold in % for the eDTU utilization
+     - ``80%``
+
+   * - Trigger sensitivity
+     - Specifies sensitivity associated with the trigger threshold
+     - ``80% of 10m``
+
+   * - Clear threshold
+     - Specifies clear threshold in % for the eDTU utilization
+     - ``80%``
+
+   * - Clear sensitivity
+     - Specifies sensitivity associated with the clear threshold
+     - ``80% of 10m``     
+
+   * - Filter
+     - Specifies dimensional scope of the detector
+     - ``None``     
+
+
+Azure - Storage utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Description: Detects when storage utilization of elastic pool is above its desginated threshold. 
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/azure/elasticpools.flow#L93>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Specifies trigger threshold in % for the storage utilization
+     - ``80%``
+
+   * - Trigger sensitivity
+     - Specifies sensitivity associated with the trigger threshold
+     - ``80% of 10m``
+
+   * - Clear threshold
+     - Specifies clear threshold in % for the storage utilization
+     - ``80%``
+
+   * - Clear sensitivity
+     - Specifies sensitivity associated with the clear threshold
+     - ``80% of 10m``     
+
+   * - filter
+     - Specifies dimensional scope of the detector
+     - ``None``     
+
+
 .. _autodetect-kafka:
 
 Kafka
@@ -488,6 +605,43 @@ The following table shows customizable arguments for this detector. To learn how
 
 Oracle
 ---------------------------------------------------
+Oracle - Process utilization expected to reach the limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Description: Alerts when Oracle process utilization is above its designated threshold. 
+- SignalFlow function: See the function in the :new-page:`SignalFlow library <https://github.com/signalfx/signalflow-library/blob/master/library/signalfx/detectors/autodetect/infra/db/oracle.flow#L50>` repository on GitHub.
+
+The following table shows customizable arguments for this detector. To learn how to use and customize AutoDetect detectors, see :ref:`autodetect`.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33
+
+   * - Argument
+     - Description
+     - Default value
+   
+   * - Trigger threshold
+     - Specifies trigger threshold in % for the process utilization
+     - ``90%``
+
+   * - Trigger sensitivity
+     - Sensitivity for alerting associated with the threshold
+     - ``80% of 5m``
+
+   * - Clear threshold
+     - Specifies clear threshold in % for the process utilization
+     - ``< 90%``
+
+   * - Clear sensitivity
+     - Specifies clear sensitivity associated with clear threshold
+     - ``80% of 5m``     
+
+   * - filter
+     - Dimensions you want to add to the scope of the detector, if any
+     - None  
+
+
+
 Oracle - Session utilization expected to reach the limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Description: Alerts when Oracle session utilization is above its designated threshold. 

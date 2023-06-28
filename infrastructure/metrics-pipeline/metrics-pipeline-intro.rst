@@ -35,7 +35,6 @@ Even though ``http.server.duration`` only has 2 dimensions, metric cardinality i
 
 To learn more about MTS, see :ref:`metric-time-series`. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
-
 How does metrics pipeline management work?
 ========================================================
 
@@ -63,7 +62,6 @@ How is this different from post-ingestion aggregation at query time?
 When you configure charts or detectors, you can aggregate your data using analytic functions, such as ``sum``, and then group your data by specific dimensions, such as ``sum by region``. This is post-ingest aggregation at query time. You need to store all your data in Observability Cloud if you want to do this, which is cost-prohibitive.
 
 With metrics pipeline management, you can aggregate your data as you are ingesting them into Observability Cloud and choose to retain only aggregated metrics.
-
 
 Example
 ++++++++
@@ -93,15 +91,14 @@ The aggregated metric removes the ``container_id`` dimension and retains ``endpo
 .. _data-dropping:
 
 Data dropping rules
---------------------
+------------------------
 
-When you have a new aggregated metric, you might no longer have any use case for the original unaggregated data. You can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want to monitor, so you can save storage space and reduce cardinality.
+When you have a new aggregated metric, you might no longer have any use case for the original unaggregated data. You can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want to monitor, so you can save storage space, reduce cardinality, and :ref:`lower your bills <data-dropping-billing>`.
 
 .. note::
     - You must be an admin to drop data.
     - You can only drop new incoming data. Existing data can't be dropped.
     - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
-
 
 Example
 ++++++++

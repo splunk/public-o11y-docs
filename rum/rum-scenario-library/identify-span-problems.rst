@@ -1,7 +1,7 @@
 .. _rum-identify-span-problems:
 
 *****************************************************************
-Scecnario: Kai identifies errors in browser spans 
+Scenario: Kai identifies errors in browser spans 
 *****************************************************************
 
 .. meta::
