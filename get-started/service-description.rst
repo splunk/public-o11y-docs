@@ -21,7 +21,7 @@ Splunk Observability Cloud is a modern SaaS solution for infrastructure monitori
 
 Splunk Observability Cloud allows you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from over 100 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
 
-Your subscription to the Splunk Observability Cloud service can be host-based or usage-based. By exception, you might be on an ingest-based subscription that is sized for data volume ingested. For more information, see Subscription types. Unless otherwise noted, Splunk manages and updates the Splunk Observability Cloud service uniformly, so all customers of Splunk Observability Cloud receive the most current features and functionality.
+Your subscription to the Splunk Observability Cloud service can be host-based or usage-based depending on the product. By exception, you might be on an ingest-based subscription that is sized for data volume ingested. For more information, see Subscription types. Unless otherwise noted, Splunk manages and updates the Splunk Observability Cloud service uniformly, so all customers of Splunk Observability Cloud receive the most current features and functionality.
 
 For additional information, see:
 
@@ -40,7 +40,7 @@ The following links access important terms and policies documents that pertain t
 - :new-page:`Splunk Support <https://www.splunk.com/en_us/customer-success/support-programs.html>`
 - :new-page:`Splunk Data Security and Privacy <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy.html>`
 - :new-page:`Splunk Observability Cloud - Security Addendum <https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html>`
-- :new-page:`Specific Terms for Splunk Offerings <https://www.splunk.com/en_us/legal/splunk-specific-terms.html>`
+- :new-page:`Specific Terms for Splunk Observability Cloud <https://www.splunk.com/en_us/legal/splunk-specific-terms.html#splunk-observability-cloud>`
 
 
 Preview programs
@@ -58,7 +58,7 @@ The following table summarizes the main differences between each type of release
 
 .. list-table::
    :header-rows: 1
-   :widths: 33 33 33
+   :widths: 25 25 25 25  
    :width: 100%
 
    * - 
@@ -108,9 +108,15 @@ The following table summarizes the main differences between each type of release
 Data ingestion and retention
 ===========================================================
 
- https://docs.splunk.com/Observability/references/data-retention.html#nav-Data-retention 
+You can monitor subscription usage for each product depending on the type of subscription. See :ref:`` for more information.
+
+When you send data to Splunk Observability Cloud, it is ingested and stored during a period of time that varies depending on the product and type of contract. See :ref:`data-o11y` for more information.
 
 https://docs.splunk.com/Observability/admin/subscription-usage/subscription-usage-overview.html#nav-Monitor-subscription-usage-and-billing 
+
+
+
+
 
 Subscription types, expansions, renewals, and terminations
 ===========================================================
