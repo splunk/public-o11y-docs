@@ -13,7 +13,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 This integration is only available on Kubernetes and Linux. 
 
 ```{note}
-The Jenkins monitor requires Jenkins version 1.580.3 or higher and the [Jenkins Metrics plugin](https://plugins.jenkins.io/metrics/).
+The Jenkins integration requires Jenkins version 1.580.3 or higher and the [Jenkins Metrics plugin](https://plugins.jenkins.io/metrics/).
 ```
 
 ## Benefits
@@ -35,7 +35,7 @@ The Jenkins monitor requires Jenkins version 1.580.3 or higher and the [Jenkins 
 
 To activate this integration, add the following to your Collector configuration:
 
-```
+```yaml
 receivers:
   smartagent/jenkins:
     type: collectd/jenkins
@@ -44,11 +44,50 @@ receivers:
 
 Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
-```
+```yaml
 service:
   pipelines:
     metrics:
       receivers: [smartagent/jenkins]
+```
+
+### Sample YAML configurations
+
+See the following sample YAML configurations:
+
+```yaml
+receivers:
+  smartagent/jenkins:
+    type: collectd/jenkins
+    host: 127.0.0.1
+    port: 8080
+    metricsKey: reallylongmetricskey
+```
+
+Sample YAML configuration with specific enhanced metrics included:
+
+```yaml
+receivers:
+  smartagent/jenkins:
+    type: collectd/jenkins
+    host: 127.0.0.1
+    port: 8080
+    metricsKey: reallylongmetricskey
+    includeMetrics:
+    - "vm.daemon.count"
+    - "vm.terminated.count"
+```
+
+Sample YAML configuration with all enhanced metrics included:
+
+```yaml
+receivers:
+  smartagent/jenkins:
+    type: collectd/jenkins
+    host: 127.0.0.1
+    port: 8080
+    metricsKey: reallylongmetricskey
+    enhancedMetrics: true
 ```
 
 ### Configuration settings
