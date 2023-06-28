@@ -8,19 +8,40 @@
     - :strong:`Subscription usage`
 
 
-  * -  Create, edit, and delete the following APM components. Functionality in the API is similarly restricted by capability.
-        - Span tags
-        - MetricSets
-        - Business Workflows
+  * - Create, edit, and delete MetricSets. Functionality in the API is similarly restricted.
     - Yes
     - No
     - No
     - No
 
-  * - Configure options for traces and spans. 
+  * - View MetricSets. Functionality in the API is similarly restricted.
+    - Yes
+    - Yes
+    - Yes
+    - No
+
+  * - Create, edit, and delete Business Workflows. Functionality in the API is similarly restricted.
     - Yes
     - No
     - No
+    - No
+
+  * - View Business Workflows. Functionality in the API is similarly restricted.
+    - Yes
+    - Yes
+    - Yes
+    - No
+
+  * - Configure extended trace retention settings. 
+    - Yes
+    - No
+    - No
+    - No
+
+  * - View extended trace retention settings. 
+    - Yes
+    - Yes
+    - Yes
     - No
 
   * - The following functionality in the APM API.
@@ -39,16 +60,7 @@
     - No
     - No
     - No
-
-  * - View the following APM-related pages in the Observability Cloud Settings. Functionality in the API is similarly restricted by capability.
-       - APM MetricSets
-       - Business Workflow
-       - Extended Trace Retention
-    - Yes
-    - Yes
-    - No
-    - No
-
+  
   * - The GET method on the APM Visibility Filters resource in the APM API, see :ref:`sensitive-data-controls` for more information.
     - Yes
     - Yes
