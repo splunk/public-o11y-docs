@@ -24,26 +24,14 @@ Connect to AWS and send data to Splunk Observability Cloud
 
 Splunk Observability Cloud offers you several methods to connect and monitor Amazon Web Services (AWS), from a guided UI wizard to an extense API. 
 
-Read on to learn how to prepare your integration with AWS, data ingest options, and available connection methods.
-
-.. raw:: html
-
-  <embed>
-    <h2>1. Prepare your integration with AWS</h2>
-  </embed>
-
 Before you start, see :ref:`aws-prereqs`, and check the :ref:`list of AWS integrations available in Splunk Observability Cloud <aws-integrations>`. 
 
-Regardless of the connection option you choose, you can configure your system more efficiently if you decide beforehand what data types and sources you want. To determine the best connection method and configuration settings, consider the following:
-
-- Which :ref:`AWS regions <aws-regions>` do you need to work with.
-- :ref:`How Observablity Cloud will ingest your AWS data <aws-ingest-options>.``
--  If you want to collect logs in addition to metrics, include logs while configuring the API or when given that option while performing a guided setup.
+Read on to learn about data ingest options and available connection methods.
 
 .. raw:: html
 
   <embed>
-    <h2>2. How to ingest AWS data in Observability Cloud</h2>
+    <h2>How to ingest AWS data in Observability Cloud</h2>
   </embed>
 
 You have two ways to send AWS data to Observability Cloud:
@@ -58,7 +46,7 @@ You have two ways to send AWS data to Observability Cloud:
 .. raw:: html
 
   <embed>
-    <h3>Poll data from AWS using CloudWatch APIs<a name="aws-api-polling" class="headerlink" href="#aws-api-polling" title="Permalink to this headline">¶</a></h3>
+    <h3>Poll data from AWS using CloudWatch APIs</h3>
   </embed>
 
 You can poll data from AWS at specified intervals using CloudWatch APIs. Due to the CloudWatch metrics instability, for certain namespaces some metrics might be delayed a few minutes. See more in :ref:`Configure API polling <aws-configure-api-polling>`.
@@ -68,7 +56,7 @@ You can poll data from AWS at specified intervals using CloudWatch APIs. Due to 
 .. raw:: html
 
   <embed>
-    <h4>High data volume warning<a name="aws-data-limits" class="headerlink" href="#aws-data-limits" title="Permalink to this headline">¶</a></h3>
+    <h4>High data volume warning</h4>
   </embed>
 
 After you create an AWS integration, if more than 100,000 metrics are retrieved from CloudWatch, Observability Cloud automatically deactivates the integration and sends you a warning email.  
@@ -82,7 +70,7 @@ You can deactivate this check by setting the ``enableCheckLargeVolume`` field in
 .. raw:: html
 
   <embed>
-    <h4>Tag filtering<a name="tag-filtering-aws" class="headerlink" href="#tag-filtering-aws" title="Permalink to this headline">¶</a></h3>
+    <h4>Tag filtering</h4>
   </embed>
 
 If you filter data based on tags, your costs for Amazon CloudWatch and Splunk Infrastructure Monitoring might decrease.
@@ -94,7 +82,7 @@ Be careful when choosing tag names: Splunk Observability Cloud only allows alpha
 .. raw:: html
 
   <embed>
-    <h3>Use Metric Streams to forward data to Observability Cloud<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
+    <h3>Use Metric Streams to forward data to Observability Cloud</h3>
   </embed>
 
 Rather than polling for data, Metric Streams continually stream Amazon CloudWatch metrics to Observability Cloud. You can activate this option in the UI wizard, or through the API.
@@ -106,7 +94,7 @@ Although they're more efficient than API polling, consider the constraints below
 .. raw:: html
 
   <embed>
-    <h3>Data collection interval and costs<a name="collection-interval-aws" class="headerlink" href="#collection-interval-aws" title="Permalink to this headline">¶</a></h3>
+    <h2>Data collection interval and costs</h2>
   </embed>
 
 In most cases, metrics are reported every minute. However, some services use a different cadence: For example, selected S3 metrics are reported on a daily basis. Check AWS documentation to verify how often your services' metrics are reported.
@@ -120,7 +108,7 @@ Learn more at :ref:`Amazon CloudWatch usage costs <aws-costs>`.
 .. raw:: html
 
   <embed>
-    <h2>3. Connect with AWS<a name="connection-options-aws" class="headerlink" href="#connection-options-aws" title="Permalink to this headline">¶</a></h2>
+    <h2>Connect with AWS</h2>
   </embed>
 
 You can connect Observability Cloud to AWS in several ways. By default, Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account. To limit the amount of data to import, see :ref:`specify-data-metadata`.
@@ -155,7 +143,7 @@ If you can't connect AWS to Observability Cloud, see :ref:`Troubleshoot your AWS
 .. raw:: html
 
   <embed>
-    <h2>4. Next steps<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
+    <h2>Next steps</h2>
   </embed>
 
 * See :ref:`Leverage data from integration with AWS <aws-post-install>` for an overview of what you can do after you connect Observability Cloud to AWS.
