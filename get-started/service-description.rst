@@ -56,7 +56,7 @@ The following table summarizes the main differences between each type of release
 
 .. list-table::
    :header-rows: 1
-   :widths: 25 25 25 25  
+   :widths: 33 33 33
    :width: 100%
 
    * - 
@@ -175,23 +175,63 @@ For additional information, see:
 - :new-page:`Observability Cloud Pricing FAQ <https://www.splunk.com/en_us/products/pricing/faqs/observability.html>`
 - :new-page:`Splunk Success Plans <https://www.splunk.com/en_us/customer-success/success-plans.html>` on Splunk.com
 
+.. _sd-regions:
 
-Available regions
+Available regions or realms
 ===========================================================
 
-https://splunk.atlassian.net/wiki/spaces/INFRA/pages/1078267045897/SignalFx+Realms 
+Splunk Observability Cloud is available in the following global regions. Each Cloud provider region is mapped to an Observability Cloud realm, which determines access URLs and endpoints.
 
-P&T RAC - Regional Availability & Compliance Dashboard (powered by the RDMP JIRA project): https://products-telemetry.splunkcloud.com/en-US/app/fieldpm_field/regional_availability__compliance_roadmap__ga
+.. list-table::
+   :header-rows: 1
+   :widths: 33 33 33  
+   :width: 100%
 
+   * - :strong:`Observability Cloud realm`
+     - :strong:`Cloud provider and region`
+     - :strong:`Product Availability`
+
+    * - us0
+      - AWS (us-east-1)
+      - Synthetics not currently available
+
+    * - us1
+      - AWS (us-west-2)
+      - All products available
+
+    * - us2
+      - GCP (us-west-1)
+      - Synthetics not currently available
+
+    * - eu0
+      - AWS (eu-west-1)
+      - Available to all customers
+
+    * - jp0
+      - AWS (ap-northeast-1)
+      - RUM and Synthetics not currently available
+
+    * - au0
+      - AWS (ap-southeast-2)
+      - Synthetics not currently available
+
+For additional information, see:
+
+- :ref:`Note about realms<about-realms>`
+- :new-page:` <https://www.splunk.com/en_us/observability/observability-for-google-cloud-environments.html>`
 
 Compliance and certifications
 ===========================================================
 
-We currently have Compliance certs available here in this RAC dashboard (click the compliance tab): https://products-telemetry.splunkcloud.com/en-US/app/fieldpm_field/regional_availability__compliance_roadmap__ga
+Splunk has attained a number of compliance attestations and certifications from industry-leading auditors as part of our commitment to adhere to industry standards worldwide and part of our efforts to safeguard customer data. The following compliance attestations/certifications are available:
 
-Unknown / couldn’t find
+- :strong:`SOC 2 Type II`: Splunk Observability Cloud has an annual SOC 2 Type 2 audit report issued. The SOC 2 audit assesses an organization's security, availability, process integrity, and confidentiality processes to provide assurance about the systems that a company uses to protect customers' data. If you require the SOC 2 Type 2 attestation to review, contact your Splunk sales representative to request it.
 
-SOC2 / HIPAA
+- :strong:`Health Insurance Portability and Accountability Act (HIPAA)`: Splunk Observability Cloud is compliant with the HIPAA Security Rule and HITECH Breach Notification Requirements. These regulations establish a standard for the security of any entity that accesses, processes, transmits, or stores electronic protected health information (ePHI).
+
+For information regarding the availability of service components between the AWS and Google Cloud regions, see :ref:`sd-regions`.
+
+
 
 
 Security
