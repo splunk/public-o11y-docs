@@ -4,9 +4,12 @@ For more information, see our Contribution guidelines.
 //-->
 
 **Requirements**
-- [ ] The content follows Splunk guidelines for style and formatting.
-- [ ] There are no CLI errors when building the docs locally.
+
+- [ ] Content follows Splunk guidelines for style and formatting.
 - [ ] You are contributing original content.
 
 **Describe the change**
-Enter a description of the change, why it's good for the docs, and so on.
+
+Enter a description of the changes, why they're good for the Observability Cloud documentation, and so on.
+
+If this contribution is time sensitive, tell us when you'd like this PR to be merged.

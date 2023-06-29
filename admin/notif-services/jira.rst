@@ -12,7 +12,7 @@ create a new issue when a detector alert condition is met and add a comment to t
 
 To send Observability Cloud alert notifications to Jira, follow these configuration steps:
 
-.. note:: You must be an Observability Cloud administrator to perform these steps.
+.. note:: You must be an Observability Cloud administrator to complete these steps.
 
 * :ref:`jira1`
 * :ref:`jira2`
@@ -36,19 +36,27 @@ The alert notification that this integration sends to Jira can automatically set
 
 * Summary
 
-If the Jira project you want to create issues in requires additional field values, you'll receive an error when you save 
+If the Jira project you want to create issues in requires additional field values, you receive an error when you save 
 the integration.
 
-.. note:: You must be an Observability Cloud administrator to perform these tasks.
+.. note:: You must be an Observability Cloud administrator to complete these tasks.
 
 To create a Jira integration in Observability Cloud, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :menuselection:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`Jira`, and select it.
-#. Select :guilabel:`New Integration` to display the configuration options.
+#. Open the :new-page:`Jira guided setup <https://login.signalfx.com/#/integrations/jira>`. Optionally, you can navigate to the guided setup on your own: 
+
+    #. In the left navigation menu, select :menuselection:`Data Management`.
+
+    #. Select :guilabel:`Add Integration`.
+
+    #. In the integration filter menu, select :menuselection:`All`.
+
+   
+    #. In the :guilabel:`Search` field, search for :guilabel:`Jira`, and select it.
+    
+    #. Select :guilabel:`New Integration` to display the configuration options.
+
 #. By default, the name of the integration is :strong:`JIRA`. Give your integration a unique and descriptive name. For 
    information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`JIRA Base URL` field, enter the Jira server base URL. For example, enter a value that looks something 
@@ -60,7 +68,7 @@ To create a Jira integration in Observability Cloud, follow these steps:
    password.
 
    The user you associate with this integration must have Jira permissions to create issues, add comments, and browse
-   projects. This user will be the reporter on the Jira issues created by using this integration.
+   projects. This user is the reporter on the Jira issues created by using this integration.
 
 #. In :guilabel:`Select Project`, select the project you want the alert notifications to create issues in, and select
    :guilabel:`Apply`.
@@ -98,15 +106,15 @@ To add a Jira integration as a detector alert recipient in Observability Cloud:
 
    For more information about working with detectors, see :ref:`create-detectors` and :ref:`subscribe`.
 
-#. In the :strong:`Alert recipients` step, click :strong:`Add Recipient`.
+#. In the :strong:`Alert recipients` step, select :strong:`Add Recipient`.
 
 #. Select :strong:`Jira` and then select the name of the Jira integration you want to use to send alert notifications. 
    This is the integration name you created in :ref:`jira1`.
 
 #. If you set an assignee on the Jira integration, the assignee name displays. To overwrite the assignee or a blank 
-   assignee set on the integration, click the assignee and enter a new assignee name.
+   assignee set on the integration, select the assignee and enter a new assignee name.
 
 #. Activate and save the detector.
 
-Observability Cloud will send an alert notification that will create a Jira issue whenever the detector rule condition is 
-met. It will also add a comment to that issue when the alert condition clears.
+Splunk Observability Cloud sends an alert notification that creates a Jira issue whenever the detector rule condition is 
+met. It also adds a comment to that issue when the alert condition clears.

@@ -13,11 +13,11 @@ To send Observability Cloud alert notifications to PagerDuty, complete the follo
 
 * :ref:`pagerduty1`
 
-  You must be a PagerDuty administrator to perform this task.
+  You must be a PagerDuty administrator to complete this task.
 
 * :ref:`pagerduty2`
 
-  You must be an Observability Cloud administrator to perform this task.
+  You must be an Observability Cloud administrator to complete this task.
 
 * :ref:`pagerduty3`
 
@@ -42,15 +42,22 @@ You must be an Observability Cloud administrator to perform this task.
 To create a PagerDuty integration in Observability Cloud:
 
 #. Log in to Splunk Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`.
-#. Select :guilabel:`Add Integration`.
-#. In the integration filter menu, select :guilabel:`All`.
-#. In the :guilabel:`Search` field, search for :guilabel:`PagerDuty`, and select it.
-#. Click :strong:`New Integration` to display the configuration options.
+#. Open the :new-page:`PagerDuty guided setup <https://login.signalfx.com/#/integrations/integrations/pagerduty>`. Optionally, you can navigate to the guided setup on your own: 
+
+   #. In the left navigation menu, select :menuselection:`Data Management`.
+
+   #. Select :guilabel:`Add Integration`.
+
+   #. In the integration filter menu, select :guilabel:`All`.
+
+   #. In the :guilabel:`Search` field, search for :guilabel:`PagerDuty`, and select it.
+
+   #. Select :strong:`New Integration` to display the configuration options.
+
 #. By default, the name of the integration is :strong:`PagerDuty`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page-ref:`About naming your integrations <naming-note>`.
 #. In the :strong:`API Key` field, enter the integration key you copied from PagerDuty in  :ref:`pagerduty1`.
 #. :strong:`Save`.
-#. If Observability Cloud is able to validate the PagerDuty API key, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the API key you entered match the value displayed in PagerDuty in :ref:`pagerduty1`.
+#. If Splunk Observability Cloud can validate the PagerDuty API key, a :strong:`Validated!` success message displays. If an error displays instead, make sure that the API key you entered match the value displayed in PagerDuty in :ref:`pagerduty1`.
 
 
 .. _pagerduty3:
@@ -67,10 +74,10 @@ To add a PagerDuty integration as a detector alert recipient in Observability Cl
 
     For more information about working with detectors, see :ref:`create-detectors` and :ref:`subscribe`.
 
-#. In the :strong:`Alert recipients` step, click :strong:`Add Recipient`.
+#. In the :strong:`Alert recipients` step, select :strong:`Add Recipient`.
 
 #. Select :strong:`PagerDuty` and then select the name of the PagerDuty integration you want to use to send alert notifications. This is the integration name you created in :ref:`pagerduty2`.
 
 #. Activate and save the detector.
 
-Observability Cloud will send an alert notification to PagerDuty to create an incident when an alert is triggered by the detector. It will also send an alert notification to clear the incident when the alert clears.
+Splunk Observability Cloud sendw an alert notification to PagerDuty to create an incident when a detector triggers an alert. It also sends an alert notification to clear the incident when the alert clears.

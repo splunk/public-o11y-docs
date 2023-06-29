@@ -5,7 +5,7 @@ Create and customize dashboards
 ********************************************************************************
 
 .. meta::
-   :description: Learn how to create and customize a dashboard.
+   :description: Visualize metrics and create customized filters and variables to explore data in real time with dashboards in Splunk Observability Cloud. 
 
 You can quickly visualize the metrics you monitor using Splunk Observability Cloud dashboards. This topic
 explains how to create and customize these dashboards, as well as how to customize mirrored dashboards. 
@@ -67,7 +67,7 @@ To rename a dashboard or change the dashboard's description, follow these steps:
 #. From the :guilabel:`More Actions` menu, select :menuselection:`Rename`. The Dashboard Info tab appears.
 
    .. image:: /_images/images-dashboard/dashboard_rename.png
-      :alt: Rename menu item on the dashboard More Actions menu
+      :alt: Rename menu item on the dashboard More Actions menu (|more|)
 
 #. Make any desired changes, then select :guilabel:`Save and close`.
 

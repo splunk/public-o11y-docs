@@ -95,12 +95,12 @@ The Smart Agent supports logging to ``stdout/stderr``, which is generally redire
 Windows
 ------------
 
-On Windows, the Smart Agent logs to the console when executed directly in a shell. If the Smart Agent is configured as a Windows service, log events are logged to the Windows Event Log. Select **Start > Administrative Tools > Event Viewer** to read logs. Select **Windows Logs > Application** to see logged events from the Smart Agent service.
+On Windows, the Smart Agent logs to the console when executed directly in a shell. If the Smart Agent is configured as a Windows service, log events are logged to the Windows Event Log. To read logs, select **Start**. Next, select **Administrative Tools**, then **Event Viewer**.
 
 Activate proxy support in the Smart Agent
 ===========================================
 
-To use an HTTP or HTTPS proxy, set the environment variable ``HTTP_PROXY`` and/or ``HTTPS_PROXY`` in the container configuration to proxy either protocol. The SignalFx ingest and API servers both use HTTPS. If the ``NO_PROXY`` environment variable exists, the Smart Agent automatically appends the local services to the environment variable to not use the proxy.
+To use an HTTP or HTTPS proxy, set the environment variable ``HTTP_PROXY`` or ``HTTPS_PROXY`` in the container configuration to proxy either protocol. The SignalFx ingest and API servers both use HTTPS. If the ``NO_PROXY`` environment variable exists, the Smart Agent automatically appends the local services to the environment variable to not use the proxy.
 
 If the Smart Agent is running as a local service on the host, refer to the host documentation for information on passing environment variables to the Smart Agent service to activate proxy support when the service is started. For example, if the host services are managed by systemd, create the /etc/systemd/system/signalfx-agent.service.d/myproxy.conf file and add the following to the file:
 

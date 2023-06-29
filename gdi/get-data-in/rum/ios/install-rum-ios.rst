@@ -31,7 +31,7 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 
 1. Log in to Observability Cloud.
 
-2. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
 3. In the integration filter menu, select :guilabel:`By Use Case`.
 
@@ -46,11 +46,11 @@ Import and initialize the iOS RUM package
 
 Follow these steps to import and initialize the iOS RUM package.
 
-1. In Xcode, select :strong:`File` > :strong:`Add Packages...` or :strong:`File` > :strong:`Swift Packages` > :strong:`Add Package Dependency` and enter the following URL in the search bar:
+1. In Xcode, select :strong:`File`, then :strong:`Add Packages...` or :strong:`File`, then :strong:`Swift Packages`, then :strong:`Add Package Dependency`, and enter the following URL in the search bar:
 
    ``https://github.com/signalfx/splunk-otel-ios``
 
-2. Click :guilabel:`Add Package` to install the package.
+2. Select :guilabel:`Add Package` to install the package.
 
 3. Initialize the iOS RUM agent with your configuration parameters:
 
@@ -75,7 +75,7 @@ Follow these steps to import and initialize the iOS RUM package.
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
@@ -98,11 +98,11 @@ The Splunk iOS Crash Reporting module adds crash reporting to the iOS RUM agent 
 
 To activate crash reporting in the iOS RUM agent, follow these steps:
 
-1. In Xcode, select :strong:`File` > :strong:`Add Packages...` or :strong:`File` > :strong:`Swift Packages` > :strong:`Add Package Dependency` and enter the following URL in the search bar:
+1. In Xcode, select :strong:`File`, then :strong:`Add Packages...` or :strong:`File`, then :strong:`Swift Packages`, then :strong:`Add Package Dependency`, and enter the following URL in the search bar:
 
    ``https://github.com/signalfx/splunk-otel-ios-crashreporting``
 
-2. Click :guilabel:`Add Package` to install the package.
+2. Select :guilabel:`Add Package` to install the package.
 
 3. Initialize the crash reporting module with your configuration parameters:
 
@@ -134,7 +134,7 @@ To activate crash reporting in the iOS RUM agent, follow these steps:
 
    * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 

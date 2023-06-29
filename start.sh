@@ -10,8 +10,10 @@ echo "*                                                                    *"
 echo "**********************************************************************"
 echo ""
 
-echo "docker-compose down"
-docker-compose --ansi=never down
+branchname=$(git branch --show-current)
+
+echo "docker compose down"
+docker compose --ansi=never down
 
 echo "Remove old files"
 rm -f _build/.DS_Store
@@ -20,11 +22,11 @@ rm -rf _build/*
 rmdir _build/html
 rmdir _build
 
-echo "docker-compose build"
-docker-compose --ansi=never build
+echo "docker compose build"
+docker compose --ansi=never build
 
-echo "docker-compose up"
-docker-compose --ansi=never up -d
+echo "docker compose up"
+docker compose --ansi=never up -d
 
 printf "\rDocker container built.              "
 sleep .5
@@ -46,4 +48,9 @@ echo "To run git commands while using"
 echo "the testing container, open a separate terminal window or tab."
 echo ""
 
-docker exec -it sphinx bash
+echo ""
+printf 'BRANCH: %s\n' "$branchname"
+echo ""
+
+docker exec -it -e BRANCH=$branchname sphinx bash
+

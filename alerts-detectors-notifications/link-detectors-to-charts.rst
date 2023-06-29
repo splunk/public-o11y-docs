@@ -44,7 +44,7 @@ If you don't see a related detector that you want to link, select :menuselection
 
 .. _via-link-button:
 
-.. note:: Clicking the :menuselection:`Link detector` button in the Chart Builder has identical functionality to selecting :ref:`Choose detector to link <via-choose-detector-to-link>`.
+.. note:: Selecting the :guilabel:`Link detector` button in the Chart Builder has identical functionality to selecting :ref:`Choose detector to link <via-choose-detector-to-link>`.
 
 .. _unlink-linked-detector:
 

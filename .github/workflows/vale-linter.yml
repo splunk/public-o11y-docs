@@ -1,0 +1,45 @@
+name: "Lint the docs for style issues"
+
+on:
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
+# pull_request:
+#    types: [ labeled ]
+ workflow_dispatch:
+        
+jobs:
+  lint:
+    # if: ${{ github.event.label.name == 'vale' }}
+    if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
+    runs-on: macos-latest
+    name: Lint changed files
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Download lastest Splunk style
+        run: |
+          wget https://github.com/splunk/vale-splunk-style-guide/archive/main.zip -O latest.zip
+          unzip latest.zip -d .
+      - name: Get all changed docs
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: |
+            **/*.rst
+            **/*.md
+      - name: Install Vale
+        run: |
+          brew update
+          brew install vale
+          pip3 install rst2html
+      - name: Lint all changed docs
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_and_modified_files }}; do
+            echo "Linting $file..."
+            vale $file --config linter.ini
+          done

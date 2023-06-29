@@ -266,6 +266,5 @@ Next steps
 ==================================
 After installing the package, you can:
 
-* :new-page:`Get started using Log Observer <https://quickdraw.splunk.com/redirect/?product=Observability&location=log.observer.setup&version=current>`
 * :ref:`otel-kubernetes-config`
 * :ref:`apm`

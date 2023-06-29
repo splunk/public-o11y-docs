@@ -208,7 +208,7 @@ To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

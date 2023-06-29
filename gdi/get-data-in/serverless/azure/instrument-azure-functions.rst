@@ -28,7 +28,7 @@ Set the required environment variables in your function's settings:
 
 #. Select your function in Function App.
 
-#. Go to :guilabel:`Settings > Configuration`.
+#. Go to :guilabel:`Settings`, then :guilabel:` Configuration`.
 
 #. Select :strong:`New application setting` to add the following settings:
 
@@ -42,7 +42,7 @@ Set the required environment variables in your function's settings:
       * - ``SPLUNK_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SPLUNK_REALM``
-        - Your Observability Cloud realm, for example ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - Your Observability Cloud realm, for example ``us0``. To find the realm name of your account, open the navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
 
 #. Add any other settings you might need.
 

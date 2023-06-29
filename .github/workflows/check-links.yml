@@ -1,0 +1,32 @@
+name: "Check external links"
+
+on:
+#  push: 
+#    branches: [ main ]
+#  pull_request:
+#    types:
+#      - opened
+#      - synchronize
+#      - reopened
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+
+jobs:
+  test:
+    if: ${{ github.repository == 'splunk/public-o11y-docs' || github.repository == 'splunk/private-o11y-docs' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check links with linkcheck
+        uses: filiph/linkcheck@2.0.23
+

@@ -169,15 +169,15 @@ For example:
       "Effect": "Allow",
       "Action": [
         "cloudwatch:GetMetricStream",       
-        "cloudwatch:ListMetrics"
+        "cloudwatch:ListMetrics",
         "cloudwatch:ListMetricStreams",
         "cloudwatch:PutMetricStream",
         "cloudwatch:DeleteMetricStream",
         "cloudwatch:StartMetricStreams",
-        "cloudwatch:StopMetricStreams"
+        "cloudwatch:StopMetricStreams",
         "ec2:DescribeRegions",
         "organizations:DescribeOrganization",
-        "tag:GetResources",
+        "tag:GetResources"
       ],
       "Resource": "*"
     },
@@ -453,6 +453,18 @@ This creates:
 - The IAM role that allows Kinesis Firehose to write the S3 bucket.
 
 See :new-page:`Create an AWS integration using an external ID and ARN <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/#Create-an-AWS-integration-using-an-external-ID-and-ARN>` in the Splunk developer documentation for syntax examples.
+
+Deactivate Metric Streams
+------------------------------------------------------
+
+To deactivate Metric Streams, follow these steps:
+
+#. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
+#. Set the ``metricStreamsSyncState`` field to ``CANCELLING``.
+#. Wait for Observability Cloud to clean up. This can take up to 15 minutes. 
+
+  * If Observability Cloud sets ``metricStreamsSyncState`` to ``DISABLED``, Metric Streams has been deactivated sucessfully.
+  * If Observability Cloud sets ``metricStreamsSyncState`` to ``CANCELLATION_FAILED``, try again, or refer to :ref:`aws-ts-metric-streams`.
 
 .. _metricstreams_cloudformation:
 

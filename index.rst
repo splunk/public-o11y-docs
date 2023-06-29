@@ -235,7 +235,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use cases <get-started/use-case-landing>
+   Scenarios <get-started/scenario-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -360,7 +360,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Alerts and detectors use case library TOGGLE <alerts-detectors-notifications/use-cases-detectors-alerts/use-cases-intro>
+   Alerts and detectors scenario library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
 
 .. toctree::
    :maxdepth:   3
@@ -444,7 +444,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use cases: Troubleshoot errors and monitor application performance TOGGLE <apm/apm-use-cases/apm-use-cases-intro>
+   Scenarios for troubleshooting errors and monitoring application performance using Splunk APM TOGGLE <apm/apm-scenarios/apm-scenarios-intro>
 
 .. toctree::
    :maxdepth:   3
@@ -544,11 +544,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :maxdepth:   3
-
-   System limits <infrastructure/sys-limits>
-
-.. toctree::
    :caption: LOG OBSERVER
    :maxdepth:   3
 
@@ -573,7 +568,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Splunk RUM use case library TOGGLE <rum/rum-use-case-library/use-case-landingpage>
+   Splunk RUM scenario library TOGGLE <rum/rum-scenario-library/scenario-landingpage>
 
 .. toctree::
    :maxdepth:   3
@@ -630,10 +625,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/sample-app
-.. toctree:: 
-   :maxdepth:    3
-
-   rum/rum-limits
 
 .. toctree::
    :maxdepth:   3
@@ -654,7 +645,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3 
   
-   Synthetics use case library TOGGLE <synthetics/synth-use-cases/synth-landing>
+   Synthetics scenario library TOGGLE <synthetics/synth-scenarios/synth-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -758,7 +749,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
+   admin/scenario-org-security
 
 .. toctree::
    :hidden:
@@ -801,7 +792,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>
+   Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::
@@ -848,9 +839,14 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Per product limits <references/per-product-limits>
+   Per product system limits <references/per-product-limits>
 
 .. toctree::
    :maxdepth:   3
 
    Glossary <references/glossary>
+
+.. toctree::
+   :maxdepth:   3
+
+   Contribute to the documentation <references/contribute>

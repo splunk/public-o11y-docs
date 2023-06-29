@@ -78,7 +78,7 @@ You can specify content in the :new-page:`template stanza <https://www.nomadproj
        ingest_url: https://ingest.${SPLUNK_REALM}.signalfx.com
        sync_host_metadata: true
      logging:
-       logLevel: debug
+       verbosity: detailed
    service:
      extensions:
      - health_check

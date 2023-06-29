@@ -5,6 +5,9 @@
 Share, clone, and mirror dashboards in Splunk Observability Cloud
 *****************************************************************
 
+.. meta::
+   :description: Share a dashboard link or URL, or create a copy of your dashboard. Use a dashboard mirror to add the same dashboard to multiple dashboard groups and monitor real-time updates.
+
 Splunk Observability Cloud dashboards are groupings of charts and visualizations of metrics that make it quick and easy to find the metrics you monitor. Learn how to share, clone and mirror dashboards to suit your specific needs.
 
 See the following sections for more information on how to:
@@ -104,7 +107,7 @@ Dashboard mirroring allows the same dashboard to be added to multiple dashboard 
 Why mirror dashboards?
 -------------------------------------------------------------
 
-Common use cases for dashboard mirrors:
+Common scenarios for dashboard mirrors:
 
 - You create standard dashboards for use by teams throughout your organization. You want all teams to see any changes to the charts in the dashboard, and you want members of each team to be able to set dashboard variable and filter customizations relevant to their requirements. Each team has a dashboard group linked to their team, so you add a mirror of the dashboard to each of these dashboard groups.
 
@@ -114,7 +117,7 @@ Common use cases for dashboard mirrors:
 Dashboard mirror example
 --------------------------------------------------------------
 
-The following example provides a common use case of dashboard mirroring:
+The following example provides a common scenario of dashboard mirroring:
 
 In this example, there is a non-mirrored dashboard named CPU Utilization in dashboard group Project‑1. The dashboard is filtered on ``AWS availability zone us‑east‑1a``. The Project-2 dashboard group needs the same dashboard but filtered on ``AWS availability zone us‑east‑1b``.
 
@@ -135,7 +138,7 @@ Any Splunk Observability Cloud user can create a mirror of any custom or user da
 .. note:: If you are working with a dashboard you control, make sure to set appropriate write permissions on the dashboard, to prevent inadvertent edits by other users who might be viewing a mirror of the dashboard.
 
 
-To create a mirror, select :guilabel:`Add a mirror` from the dashboard actions menu.
+To create a mirror, select :guilabel:`Add a mirror` from the dashboard actions menu (|more|).
 
 
 When you create a mirror, you have a number of ways to customize how the mirror will be displayed in the target dashboard group. You can also add dashboard mirrors to the same group as the current dashboard. This is useful if you want to have quick access to the same set of charts but with different filters or dashboard variable settings.
@@ -151,7 +154,7 @@ Change the dashboard name and description
 
 Specify a name for the mirror in the target group. The default name suggested when creating a new dashboard mirror is the name of the original dashboard, which might be different from the displayed name of the dashboard you are currently mirroring if that dashboard itself is a mirror.
 
-Specify a new description for the mirror in the target group. As with the name, the default will come from the dashboard. A dashboard or mirror’s description is visible when you select :guilabel:`Dashboard Info` from the Actions menu.
+Specify a new description for the mirror in the target group. As with the name, the default will come from the dashboard. A dashboard or mirror’s description is visible when you select :guilabel:`Dashboard Info` from the Actions menu (|more|).
 
 Customize dashboard filters and variables
 -------------------------------------------------

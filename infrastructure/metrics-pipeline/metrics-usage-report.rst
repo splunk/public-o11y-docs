@@ -14,8 +14,8 @@ To get a detailed breakdown of your metric time series (MTS) creation and usage,
 
 You can use the detailed metrics usage report to optimize your usage of custom metrics. 
 
-    * If you are on a usage-based pricing plan, all your metrics are considered custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance.
-    * If you are on a host-based pricing plan with high utilization of custom metrics, you can use the report to lower your custom metrics usage.
+    * If you are on a usage-based pricing plan, all your metrics are considered custom metrics. By using the report to find and clean high cardinality metrics, you can better control your costs and query performance. 
+    * If you are on a host-based pricing plan with high utilization of custom metrics, you can use the report to lower your custom metrics usage. Learn more about this subscription plan in :ref:`monitor-imm-billing-usage`.
 
 Format of the report
 ==============================
@@ -28,6 +28,7 @@ Metric identifiers
 .. list-table:: 
    :header-rows: 1
    :widths: 20 80
+   :width: 100%
 
    * - :strong:`Column`
      - :strong:`Description`
@@ -35,90 +36,20 @@ Metric identifiers
    * - Metric name
      - The name of the metric
    
-   * - Category type
-     - The category of the metric, in the format of a number. 
+   * - Category type 
+     - The category of the metric, in the format of a number. It only applies to host-based subscription plans. In DPM subscription plans, all metrics are considered custom.
 
+See the following table for more information on metric category types. For more information, see :ref:`metrics-category`.
 
-See the following table for more information on metric category types.
+.. include:: /_includes/metric-categories.rst
 
-.. list-table:: 
-   :header-rows: 1
-   :widths: 20 80
-
-   * - :strong:`Category type`
-     - :strong:`Description`
-
-   * - 0
-     - | No information about the category type of the metric.
-       | Note: Category type information for metrics is only available after 03/16/2023. Any metrics created before that date has category type ``0``. 
-   
-   * - 1
-     - Host
-
-   * - 2
-     - Container
-
-   * - 3
-     - Custom
-
-   * - 4
-     - Hi-resolution
-
-   * - 5
-     - Internal
-
-   * - 6
-     - Tracing metrics
-
-   * - 7
-     - Bundled
-
-   * - 8
-     - APM hosts
-
-   * - 9
-     - APM container   
-
-   * - 10
-     - APM identity   
-
-   * - 11
-     - APM bundled metrics  
-
-   * - 12
-     - APM Troubleshooting MetricSets
-
-   * - 13
-     - APM Monitoring MetricSets
-
-   * - 14
-     - Infrastructure Monitoring function
-
-   * - 15
-     - APM function
-
-   * - 16
-     - RUM Troubleshooting MetricSets
-
-   * - 17
-     - RUM Monitoring MetricSets
-
-   * - 18
-     - Network Explorer metrics
-
-   * - 19
-     - Runtime metrics
-
-   * - 20
-     - Synthetics metrics
-
-    
 Usage statistics
 --------------------------------
 
 .. list-table:: 
    :header-rows: 1
    :widths: 20 80
+   :width: 100%
 
    * - :strong:`Column`
      - :strong:`Description`
@@ -136,6 +67,7 @@ MTS creation statistics
 .. list-table:: 
    :header-rows: 1
    :widths: 20 80
+   :width: 100%
 
    * - :strong:`Column`
      - :strong:`Description`

@@ -4,8 +4,6 @@
 View dependencies among your services in the service map
 ************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn about the service map displays for your services in Splunk APM. 
 
@@ -13,7 +11,7 @@ The service map, located in Splunk APM :guilabel:`Explore` view, displays the de
 
 You can use the service map to identify dependencies, performance bottlenecks, and error propagation. 
 
-For a detailed use case involving the service map, see :ref:`service-map`. 
+For a detailed scenario involving the service map, see :ref:`service-map`. 
 
 The following screenshot shows an example service map: 
 
@@ -39,7 +37,7 @@ Using the service map, you can do the following:
 * Use the :guilabel:`Breakdown` selector to break the service's activity down by any indexed span tag. See :ref:`service-map-breakdowns` to learn more.
 * Select any chart in this view to show example traces that match the parameters of the chart.  
 
-You can also use the service map as a starting point for monitoring or troubleshooting use cases:
+You can also use the service map as a starting point for monitoring or troubleshooting scenarios:
 
 * To get real-time monitoring insights on the service, select :guilabel:`View Dashboard` in the side panel to view the built-in service dashboard. See :ref:`apm-dashboards` to learn more.
 * To do more extensive troubleshooting, select the :guilabel:`Tag Spotlight` tab in the side panel to open Tag Spotlight. See :ref:`apm-tag-spotlight` to learn more.
@@ -65,7 +63,7 @@ The following screenshot shows the same service map with an additional breakdown
 To perform a breakdown in the service map:
 
 #. Select a service you're interested in. 
-#. In the right-hand service tab, click :guilabel:`Breakdown` and choose an option from the drop-down menu. This breaks down your view of the service by the feature you choose. For example, select :guilabel:`Endpoint > Latency (P90)` to break the service node down into its endpoints, ranked from highest to lowest by 90th percentile latency. If there are more than 5 breakdown values, the breakdown shows the top 5 and groups the remainder into a node labeled :guilabel:`<other>`.
+#. In the right-hand service tab, select :guilabel:`Breakdown` and choose an option from the drop-down menu. This breaks down your view of the service by the feature you choose. For example, select :guilabel:`Endpoint > Latency (P90)` to break the service node down into its endpoints, ranked from highest to lowest by 90th percentile latency. If there are more than 5 breakdown values, the breakdown shows the top 5 and groups the remainder into a node labeled :guilabel:`<other>`.
 #. (Optional) Select a node within the breakdown to further break down the visualization by another feature. 
 
 Share your view of the service map
