@@ -70,7 +70,7 @@ test:
 	@echo
 	@sphinx-build -b dummy $(TESTOPTS) $(BUILDDIR)/html
 
-.PHONY: links
+.PHONY: linkcheck
 linkcheck:
 	@echo
 	@echo "*****************************************************"
