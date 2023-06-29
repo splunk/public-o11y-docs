@@ -75,6 +75,13 @@ In the following example, the ``Sum``, ``Mean``, ``Maximum``, and ``Minimum`` fu
 
 For more information about calendar window transformations, see :new-page:`Calendar window transformations <https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>`.
 
+.. _dashboard-window:
+
+Dashboard window transformations
+------------------------------------------
+
+
+
 Resolution considerations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
