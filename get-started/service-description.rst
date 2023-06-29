@@ -17,11 +17,9 @@ This document also notes your responsibilities as a subscriber to the service. B
 Overview of Splunk Observability Cloud
 ===========================================================
 
-Splunk Observability Cloud is a modern SaaS solution for infrastructure monitoring, custom metrics, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, always-on profiling, and incident intelligence. Observability Cloud also provides a direct integration with Splunk Cloud Platform logs through LogObserver Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
+Splunk Observability Cloud is a modern SaaS solution for infrastructure monitoring, custom metrics, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, always-on profiling, and incident intelligence. Observability Cloud also provides a direct integration with Splunk Cloud Platform logs through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
 
 Splunk Observability Cloud allows you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from over 100 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
-
-Your subscription to the Splunk Observability Cloud service can be host-based or usage-based depending on the product. By exception, you might be on an ingest-based subscription that is sized for data volume ingested. For more information, see Subscription types. Unless otherwise noted, Splunk manages and updates the Splunk Observability Cloud service uniformly, so all customers of Splunk Observability Cloud receive the most current features and functionality.
 
 For additional information, see:
 
@@ -46,7 +44,7 @@ The following links access important terms and policies documents that pertain t
 Preview programs
 ===========================================================
 
-Features of Splunk Observability Cloud can be released as Private or Public Previews before reaching General Availability. Each type of release has different support levels and guarantees.
+Features of Splunk Observability Cloud can be released as Private or Public Previews before reaching General Availability. Each type of release has different support levels and guarantees. Unless otherwise noted, Splunk manages and updates the Splunk Observability Cloud service uniformly, so all customers of Splunk Observability Cloud receive the most current features and functionality.
 
 - :strong:`Private Preview`: Splunk may release features and products in a Private Preview with limited availability in a test or production environment to capture feedback from customers. Private Previews are limited in scope to a selected set of customers. Private Previews in a production environment are subject to Compliance and Security entrance criteria requirements, CCF compliance will be required at a minimum. Splunk does not offer general support SLA terms.
 
@@ -108,30 +106,75 @@ The following table summarizes the main differences between each type of release
 Data ingestion and retention
 ===========================================================
 
-You can monitor subscription usage for each product depending on the type of subscription. See :ref:`` for more information.
+Splunk Observability Cloud provides software and APIs that allows you to ingest data from your on-premises infrastructure, applications, user interfaces, cloud services, servers, network devices, and more. Splunk Observability Cloud provides guided setups that help you install and configure OpenTelemetry instrumentation. See :ref:`get-started-get-data-in` for more information.
+
+You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information.
+
+Splunk OpenTelemetry Collector
+-----------------------------------------------------------
+
+The Splunk Distribution of OpenTelemetry Collector is an open-source software agent capable of collecting metrics and logs from a wide variety of hosts, containers, and services. Setup, configuration, transformation, and sending data from the Collector to your Splunk Observability Cloud account is your responsibility. This means you are responsible for installing, configuring, and managing your Collector instances, including maintaining version compatibility and installing, configuring, and managing Collector components. See :ref:`otel-intro` for more information.
+
+APM and RUM OpenTelemetry instrumentation
+-----------------------------------------------------------
+
+The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and librarios is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` for more information.
+
+Ingest API endpoints
+-------------------------------------------------------------
+
+You can use the REST API to send telemetry directly to Splunk Observability Cloud. This might be useful when you can't use the Splunk OpenTelemetry Collector or when you've specific networking or security requirements. See :ref:`rest-api-ingest` for more information. If your organization has stringent networking security policies that apply to sending data to third parties, see :ref:`allow-services`.
+
+Data retention
+-------------------------------------------------------------
 
 When you send data to Splunk Observability Cloud, it is ingested and stored during a period of time that varies depending on the product and type of contract. See :ref:`data-o11y` for more information.
-
-https://docs.splunk.com/Observability/admin/subscription-usage/subscription-usage-overview.html#nav-Monitor-subscription-usage-and-billing 
-
-
-
 
 
 Subscription types, expansions, renewals, and terminations
 ===========================================================
 
-https://www.splunk.com/en_us/products/pricing/faqs/observability.html 
+Your subscription to Splunk Observability Cloud is volume-based, with two different types depending on the product or feature: host-based or usage-based. Both types include either Standard or Premium Support and Success plans.
 
-https://www.splunk.com/en_us/products/pricing/observability.html
+Host-based subscriptions
+------------------------------------------------------------
 
-https://docs.splunk.com/Observability/admin/subscription-usage/apm-billing-usage-index.html 
+Host-based subscriptions base billing on the total number of unique hosts reporting data to Splunk Observability Cloud on an hourly basis, then calculate the average of those hourly measurements across each billing month. The calculation is done for each host, container, custom metric, and high resolution metric. A host is a physical, non-virtualized environment, or a virtual instance in virtualized or public cloud environment, that reports metric data to Splunk Observability Cloud. You can increase the amount of hosts or containers per host if needed.
 
-CONFIDENTIAL?
- 
-https://docs.google.com/presentation/d/1H7ssnLS2sQucbR8lnMpEKa6ruMboNgVfrKb3PeXMrSw/edit#slide=id.ge1fc02906c_2_430 
+Usage-based subscription
+---------------------------------------------
 
-https://docs.google.com/document/d/1b4Pl1_s18htVMlAKjDbwzX3kEICzntJay0yR5Ksjk_E/edit?pli=1#heading=h.ugk4ysx393bk 
+Usage-based pricing is suited for monitoring serverless environments or cloud services that don't provide a view of underlying hosts. Usage is calculated depending on the product or feature. For example, Splunk Infrastructure Monitoring usage-based pricing relies on metric time series (MTS), whereas Splunk Real User Monitoring calculates usage from the number of web sessions. For more information on subscription usage and monitoring in Observability Cloud, see :ref:`subscription-overview`.
+
+Overages
+----------------------------------------------
+
+Observability Cloud monthly charges are based on average usage during the month. Overages are incurred only if the average monthly usage is higher than your allocation and automatic invoicing for overages isn't active. You can get daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts to check remaining purchased capacity. See :ref:`subscription-overview` for more information.
+
+.. note:: 
+   All editions of Splunk Observability Cloud include Log Observer Connect, which let you to analyze logs you've ingested to Splunk Cloud Platform at no additional costs. See :ref:`lo-connect-landing` for more information.
+
+Subscription updates, renewals, and terminations
+---------------------------------------------------
+
+You can update or expand your Splunk Observability Cloud subscription anytime during the term of the subscription to meet your business needs. For example, you can:
+
+- Increase host-based or usage-based capacity.
+- Add products and features to your subscription.
+- Upgrade the type of Success and Support level.
+- Upgrade to Enterprise with Service Bureau features.
+
+Observability Cloud informs about the need for renewal through a banner that appears 15 days prior to the subscription expiration date. For more information on subscription renewals, contact your Splunk sales representative.
+
+After the 15 days grace period, if your Splunk Observability Cloud subscription expires and no temporary extension is submitted on your behalf by your Splunk sales representative, the subscription enters suspended mode for another 30 days. After the 30 days suspension, the account is decommissioned and the account is terminated.
+
+For additional information, see:
+
+- :new-page:`Splunk Observability <https://www.splunk.com/en_us/products/observability.html>` on Splunk.com
+- :new-page:`Splunk Observability Cloud Pricing <https://www.splunk.com/en_us/products/pricing/observability.html>` on Splunk.com
+- :new-page:`Observability Cloud Pricing FAQ <https://www.splunk.com/en_us/products/pricing/faqs/observability.html>`
+- :new-page:`Splunk Success Plans <https://www.splunk.com/en_us/customer-success/success-plans.html>` on Splunk.com
+
 
 Available regions
 ===========================================================
