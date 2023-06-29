@@ -24,17 +24,15 @@ Connect to AWS and send data to Splunk Observability Cloud
 
 Splunk Observability Cloud offers you several methods to connect and monitor Amazon Web Services (AWS), from a guided UI wizard to an extense API. To decide which option better suits your needs, follow these steps:
 
-1. Check :ref:`<prep-for-aws-integration>`.
+1. Check :ref:`prep-for-aws-integration`.
 2. Learn about :ref:`Observability Cloud's options to ingest AWS data <aws-ingest-options>`. 
 3. Choose :ref:`how to connect with AWS <aws-connection-options>`: Guided setup, API, or Terraform.
 4. :ref:`Next steps <after-aws-integration>`.
 
-.. _prep-for-aws-integration:
-
 .. raw:: html
 
   <embed>
-    <h2>1. Prepare your integration with AWS<a name="prep-for-aws-integration" class="headerlink" href="#prep-for-aws-integration" title="Permalink to this headline">¶</a></h2>
+    <h2>1. Prepare your integration with AWS<a class="headerlink" href="#prep-for-aws-integration">¶</a></h2>
   </embed>
 
 Before you start, see :ref:`aws-prereqs`, and check the :ref:`list of AWS integrations available in Splunk Observability Cloud <aws-integrations>`. 
