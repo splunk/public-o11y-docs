@@ -7,14 +7,13 @@ Connect to AWS using the guided setup in Splunk Observability Cloud
 .. meta::
   :description: Use guided setup to connect Splunk Observability Cloud to AWS through CloudWatch.
 
-If you have administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use guided setup to do the following:
+If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use guided setup to connect AWS to Observability Cloud and configure metrics and logs collection.
 
-- Connect AWS to Observability Cloud.
-- Configure metrics and logs collection.
+Notes:
 
-If you want to activate Metric Streams, :ref:`read the specific instructions <aws-wizard-metricstreams>`.
-
-For other ways to connect Observability Cloud to AWS, see :ref:`Connect to AWS and send data to Observability Cloud <get-started-aws>`.
+* Check the :ref:`aws-prereqs`.
+* If you want to activate Metric Streams, :ref:`read the specific instructions <aws-wizard-metricstreams>`.
+* For other ways to connect Observability Cloud to AWS, see :ref:`Connect to AWS and send data to Observability Cloud <get-started-aws>`.
 
 .. _aws-wizard:
 
