@@ -33,6 +33,8 @@ To activate this integration, add the following to your Collector configuration:
 receivers:
   smartagent/prometheus-nginx-ingress:
     type: prometheus/nginx-ingress
+    discoveryRule: container_image =~ "nginx-ingress-controller" && port == 10254
+    port: 10254    
     ... # Additional config
 ```
 
