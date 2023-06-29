@@ -9,11 +9,7 @@ Connect to AWS using the guided setup in Splunk Observability Cloud
 
 If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
 
-Notes:
-
-* Check :ref:`prep-for-aws-integration`.
-* Learn about :ref:`Observability Cloud's options to ingest AWS data <aws-ingest-options>`. 
-* For other ways to connect Observability Cloud to AWS, see :ref:`Connect to AWS and send data to Observability Cloud <get-started-aws>`.
+Check :ref:`get-started-aws` for prerequisites, information on ingest methods, and other ways to connect Observability Cloud to AWS.
 
 .. _aws-wizard:
 
