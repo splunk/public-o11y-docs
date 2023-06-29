@@ -90,10 +90,8 @@ Follow these steps at first login to Splunk Observability Cloud:
 
   a. Remove the verification code from the text box.
   b. Re-enter the verification code you received in the confirmation email.
-  c. If you still see the Internal Server Error, select :strong:`Restart verification process`, then check for a second confirmation email, retrieve the new verification code, and enter it in the text box. 
-  If you continue to see the Internal Server Error, file a ticket with Splunk Support.
-  d. Check your role in Splunk Observability Cloud. 
-  If you should have an admin role inherited from Splunk Cloud Platform but you see a power role in Splunk Observability Cloud instead, open a support ticket with your Splunk Cloud Platform admin to request admin status in Splunk Observability Cloud.
+  c. If you still see the Internal Server Error, select :strong:`Restart verification process`, then check for a second confirmation    email, retrieve the new verification code, and enter it in the text box. If you continue to see the Internal Server Error, file a ticket with Splunk Support.
+  d. Check your role in Splunk Observability Cloud. If you should have an admin role inherited from Splunk Cloud Platform but you see a power role in Splunk Observability Cloud instead, open a support ticket with your Splunk Cloud Platform admin to request admin status in Splunk Observability Cloud.
 
 After the first login, you do not need to provide your Splunk Cloud Platform credentials again. On subsequent logins, if you are already logged in to Splunk Cloud Platform, select :strong:`Sign in with Splunk Cloud` and you are automatically signed in to Splunk Observability Cloud.
 
