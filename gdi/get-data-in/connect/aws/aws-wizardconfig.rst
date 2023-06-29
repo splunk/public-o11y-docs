@@ -44,7 +44,7 @@ Choose the following connection options:
   * Metadata.
   * Cost and usage metrics.
   * Logs.
-  * Ingestion method: Polling or streaming. Learn more at :ref:`aws-ingest-options`.
+  * Ingestion method: Polling or streaming. Learn more at :ref:`get-started-aws`.
 
 Polling rate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

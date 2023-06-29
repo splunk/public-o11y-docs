@@ -22,19 +22,14 @@ Connect to AWS and send data to Splunk Observability Cloud
   Troubleshoot logs <aws-ts-logs>
   GetMetricStatistics API deprecation notice <aws-api-notice>
 
-Splunk Observability Cloud offers you several methods to connect and monitor Amazon Web Services (AWS), from a guided UI wizard to an extense API. To decide which option better suits your needs, follow these steps:
+Splunk Observability Cloud offers you several methods to connect and monitor Amazon Web Services (AWS), from a guided UI wizard to an extense API. 
 
-1. Check :ref:`prep-for-aws-integration`.
-2. Learn about :ref:`Observability Cloud's options to ingest AWS data <aws-ingest-options>`. 
-3. Choose :ref:`how to connect with AWS <aws-connection-options>`: Guided setup, API, or Terraform.
-4. :ref:`Next steps <after-aws-integration>`.
-
-.. _prep-for-aws-integration:
+Read on to learn how to prepare your integration with AWS, data ingest options, and available connection methods.
 
 .. raw:: html
 
   <embed>
-    <h2>1. Prepare your integration with AWS<a name="prep-for-aws-integration" class="headerlink" href="#prep-for-aws-integration" title="Permalink to this headline">¶</a></h2>
+    <h2>1. Prepare your integration with AWS</h2>
   </embed>
 
 Before you start, see :ref:`aws-prereqs`, and check the :ref:`list of AWS integrations available in Splunk Observability Cloud <aws-integrations>`. 
@@ -45,12 +40,10 @@ Regardless of the connection option you choose, you can configure your system mo
 - :ref:`How Observablity Cloud will ingest your AWS data <aws-ingest-options>.``
 -  If you want to collect logs in addition to metrics, include logs while configuring the API or when given that option while performing a guided setup.
 
-.. _aws-ingest-options:
-
 .. raw:: html
 
   <embed>
-    <h2>2. How to ingest AWS data in Observability Cloud<a name="aws-ingest-options" class="headerlink" href="#aws-ingest-options" title="Permalink to this headline">¶</a></h2>
+    <h2>2. How to ingest AWS data in Observability Cloud</h2>
   </embed>
 
 You have two ways to send AWS data to Observability Cloud:
