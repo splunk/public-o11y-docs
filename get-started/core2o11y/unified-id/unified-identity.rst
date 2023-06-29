@@ -86,7 +86,14 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice.
 
-3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications.
+3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications. If you see the following Internal Server Error, take the following steps:
+
+  a. Remove the verification code from the text box.
+  b. Re-enter the verification code you received in the confirmation email.
+  c. If you still see the Internal Server Error, select :strong:`Restart verification process`, then check for a second confirmation email, retrieve the new verification code, and enter it in the text box. 
+  If you continue to see the Internal Server Error, file a ticket with Splunk Support.
+  d. Check your role in Splunk Observability Cloud. 
+  If you should have an admin role inherited from Splunk Cloud Platform but you see a power role in Splunk Observability Cloud instead, open a support ticket with your Splunk Cloud Platform admin to request admin status in Splunk Observability Cloud.
 
 After the first login, you do not need to provide your Splunk Cloud Platform credentials again. On subsequent logins, if you are already logged in to Splunk Cloud Platform, select :strong:`Sign in with Splunk Cloud` and you are automatically signed in to Splunk Observability Cloud.
 
