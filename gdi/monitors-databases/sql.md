@@ -95,7 +95,23 @@ This is the list of the drivers currently supported:
 
 ### Parameterized connection string
 
-The monitor treats the value of `connectionString` as a Golang template with a context consisting of the variables `host` and `port` and all the parameters from the `params` option. To add a variable to the template, use the Golang `{{.varname}}` template syntax.
+The integration treats the value of `connectionString` as a Golang template with a context consisting of the variables `host` and `port` and all the parameters from the `params` option. To add a variable to the template, use the Golang `{{.varname}}` template syntax.
+
+See the following example:
+
+```yaml
+smartagent/sql:
+  type: sql
+  host: localhost
+  port: 1433
+  dbDriver: sqlserver
+  connectionString: 'Server=127.0.0.1;Database=WideWorldImporters;User Id=sa;Password=123456;'
+  queries: 
+    - query: 'SELECT COUNT(*) as count FROM Sales.Orders'
+      metrics:
+        - metricName: "orders"
+          valueColumn: "count"
+```
 
 ### Collect Snowflake performance and usage metrics
 
@@ -138,14 +154,15 @@ Consider the following `customers` database table:
 Use the following monitor configuration to generate metrics about active users and customer counts by country:
 
 ```yaml
-monitors:
-  - type: sql
+receivers:
+  smartagent/sql:
+    type: sql
     host: localhost
     port: 5432
     dbDriver: postgres
     params:
-      user: admin
-      password: s3cr3t
+      user: "${env:SQL_USERNAME}"
+      password: "${env:SQL_PASSWORD}"
     # The `host` and `port` values shown in this example (also provided through autodiscovery) are interpolated
     # to the connection string as appropriate for the database driver.
     # Also, the values from the `params` configuration option above can be
@@ -174,8 +191,7 @@ Both the `GAUGE` and `CUMULATIVE` functions have the following signature:
  * `value`: Must be a numeric value.
 
 Each of the columns in the row maps to a variable in the context of the expression with the same name.
-For example, if you have a column called `name` in your SQL query result, you can use a variable called `name` in the expression.
-In your expression, surround string values with single quotes (`''`).
+For example, if you have a column called `name` in your SQL query result, you can use a variable called `name` in the expression. In your expression, surround string values with single quotes (`''`).
 
 ## Metrics
 
