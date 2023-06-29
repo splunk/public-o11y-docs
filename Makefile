@@ -69,3 +69,17 @@ test:
 	@echo "Testing the docs..."
 	@echo
 	@sphinx-build -b dummy $(TESTOPTS) $(BUILDDIR)/html
+
+.PHONY: links
+linkcheck:
+	@echo
+	@echo "*****************************************************"
+	@echo "       Testing Splunk Observability Docs build       "
+	@echo "*****************************************************"
+	@echo
+	@echo "Testing the docs..."
+	@echo
+	@sphinx-build -b linkcheck $(TESTOPTS) $(BUILDDIR)/linkcheck
+	@echo
+	@echo "Link check complete; look for any errors in the above output " \
+	      "or in $(BUILDDIR)/linkcheck/output.txt."
