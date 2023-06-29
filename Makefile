@@ -74,10 +74,10 @@ test:
 linkcheck:
 	@echo
 	@echo "*****************************************************"
-	@echo "       Testing Splunk Observability Docs build       "
+	@echo "       Checking Splunk Observability Docs links      "
 	@echo "*****************************************************"
 	@echo
-	@echo "Testing the docs..."
+	@echo "Checking links..."
 	@echo
 	@sphinx-build -b linkcheck $(TESTOPTS) $(BUILDDIR)/linkcheck
 	@echo
