@@ -13,6 +13,7 @@ Splunk Observability Cloud and the Splunk platform
    Measure and alert on your SLIs <practice-reliability/slis>
    Respond to incidents <practice-reliability/incident-response>
    Collaborate on observability <practice-reliability/collaboration>
+   Unified Identity: Splunk Cloud Platform and Splunk Observability Cloud <unified-id-unified-identity>
    
 
 
