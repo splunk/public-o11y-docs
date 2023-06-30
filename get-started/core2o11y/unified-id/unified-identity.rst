@@ -88,6 +88,10 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications. If you see the following Internal Server Error, take the following steps:
 
+  .. image:: /_images/get-started/core2o11y-InternalServerError.png
+    :width: 100%
+    :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
+
     a. Remove the verification code from the text box.
 
     b. Re-enter the verification code you received in the confirmation email.
