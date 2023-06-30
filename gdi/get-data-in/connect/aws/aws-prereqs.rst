@@ -35,7 +35,7 @@ Create an AWS IAM policy
 
 Observability Cloud refers to an IAM policy to collect data from every supported AWS service. 
 
-To create a new AWS IAM policy, follow these steps. 
+To create a new AWS IAM policy, follow these steps:
 
 #. Log into your Amazon Web Services account and look for the :guilabel:`Identity and Access Management (IAM)` service.
 #. Create a new policy. In the :strong:`JSON` tab, replace the placeholder JSON with the pertinent AWS IAM policy JSON. Guided setup provides this policy in the :guilabel:`Prepare AWS Account` step. See also some :ref:`policy examples <aws-api-create-policy-role>`.
