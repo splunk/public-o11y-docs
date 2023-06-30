@@ -71,19 +71,19 @@ The following table uses Azure Active Directory as an example and shows the corr
      - :strong:`Azure Active Directory field name`
 
    * - :guilabel:`Integration ID` (EPAMIDfalsg)
-     - :guilabel:`Reply URL` (Assertion Consumer Service URL) (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
+     - :guilabel:`Reply URL` (Assertion Consumer Service URL) (https://your_realm/v1/saml/acsEPAMIDfalsg)
   
    * - :guilabel:`Integration-specific Entity ID`` (EPAMIDfalsg)
-     - :guilabel:`Identifier (Entity ID)` (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
+     - :guilabel:`Identifier (Entity ID)` (https://your_realm/v1/saml/acsEPAMIDfalsg)
 
    * - :guilabel:`Certificate (Base64)`  (upload file to replace)
      - :guilabel:`Certificate (Base64)` (download file)`
   
    * - :guilabel:`Integration ID` (EPAMIDfalsg)
-     - :guilabel:`Reply URL (Assertion Consumer Service URL)` (https://<your_realm>/v1/saml/acsEPAMIDfalsg)
+     - :guilabel:`Reply URL (Assertion Consumer Service URL)` (https://your_realm/v1/saml/acsEPAMIDfalsg)
    
-   * - :guilabel:`Azure AD Identifier` (https://<domain>/081aaa5f-fsec-m01c-03dfalke45n)
-     - :guilabel:`Azure AD Identifier`  (https://<domain>/081aaa5f-fsec-m01c-03dfalke45n)
+   * - :guilabel:`Azure AD Identifier` (https://domain.com/081aaa5f-fsec-m01c-03dfalke45n)
+     - :guilabel:`Azure AD Identifier`  (https://domain.com/081aaa5f-fsec-m01c-03dfalke45n)
      
    * - For user attributes and claims, :code:`FullName` or :code:`User.FirstName` and :code:`User.LastName` are required, in addition to :code:`PersonImmutableID` and :code:`User.email`
      - :guilabel:`User.FirstName`  (user.givenname), :guilabel:`LastName` (user.surname), PersonImmutableID (user.userprincipal name), :guilabel:`FullName` (user.displayname), :guilabel:`email` (user.othermail)
