@@ -11,18 +11,16 @@ AWS authentication and supported regions
 To connect your AWS services to Spulnk Observability Cloud you need: 
 
 - Administrator privileges in Observability Cloud and your AWS accounts. 
-- :ref:`AWS authentication rights <aws-authentication>`. You can authenticate either with an :strong:`External Id (recommended)` or using a security token.
+- :ref:`AWS authentication rights <aws-authentication>`. You can authenticate either with an :ref:`External Id (recommended) <aws-authentication>` or using a :ref:`security token <aws-authentication-token>`.
 
 .. _aws-authentication:
 
 Authenticate in AWS using an External Id (recommended)
 ============================================================
 
-For most AWS regions, use :guilabel:`External ID` to authenticate.
-
 In AWS you manage access by creating policies and attaching them to IAM identities or AWS resources. A policy is a JSON object that associates an identity or resource with access permissions. When a user (in this case, your account in Observability Cloud) makes a request, AWS evaluates the associated policy and determines whether the request is allowed or denied. 
 
-With this method, you need the following to authenticate:
+For most AWS regions, use :guilabel:`External ID` to authenticate. Follow these steps: 
 
 * An :strong:`External ID` for Observability Cloud. An external ID is a random string used to establish a trust relationship between Observability Cloud and your AWS account. It's automatically generated for you when you create a new AWS integration in Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
 * An :ref:`Identity and Access Management (IAM) policy <aws-iam-policy>`. 
@@ -67,9 +65,9 @@ If you have any doubts, check AWS documentation.
 Authenticate in AWS using a security token
 ============================================
 
-For the :strong:`GovCloud or China regions`, select the option to authenticate using a secure token, which combines an access key ID and a secret access key. 
+For the :strong:`GovCloud or China regions`, select the option to authenticate using a secure token, which combines an Access key ID and Secret access key you'll create in your AWS Console.
 
-When prompted for an access key practice, select :guilabel:`Third-party service`.
+.. :note:: When you're creating the new permission and are prompted for an access key practice, select :guilabel:`Third-party service`.
 
 .. _aws-regions:
 
