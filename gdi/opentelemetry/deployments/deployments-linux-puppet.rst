@@ -17,7 +17,7 @@ Currently, we support the following Linux distributions and versions:
 - SUSE: 12, 15 (Note: Only applicable for Collector versions v0.34.0 or higher. Log collection with Fluentd not currently supported.)
 - Ubuntu: 16.04, 18.04, 20.04, 22.04
 
-On Linux systems, the :new-page:`puppetlabs/stdlib module <https://forge.puppet.com/puppetlabs/stdlib >` is required. 
+On Linux systems, the :new-page:`puppetlabs/stdlib module <https://forge.puppet.com/modules/puppetlabs/stdlib/readme>` is required. 
 
 .. note::
     
