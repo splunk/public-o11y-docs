@@ -10,7 +10,7 @@ Connect to AWS and send data to Splunk Observability Cloud
 .. toctree::
   :hidden:
 
-  AWS prerequisites and supported regions <aws-prereqs>
+  AWS authentication and supported regions <aws-prereqs>
   Connect to AWS with the UI guided setup <aws-wizardconfig>
   Connect to AWS with the API <aws-apiconfig>
   Connect to AWS with Terraform <aws-terraformconfig>

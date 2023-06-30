@@ -2,7 +2,7 @@
 .. _aws-integration-prereqs:
 
 ************************************************************
-AWS integration prerequisites and supported regions 
+AWS authentication and supported regions 
 ************************************************************
 
 .. meta::
