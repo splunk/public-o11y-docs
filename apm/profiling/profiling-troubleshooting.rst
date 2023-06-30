@@ -36,7 +36,7 @@ Check the OpenTelemetry Collector configuration
 
 AlwaysOn Profiling requires the Splunk HTTP Event Collector (HEC) exporter to send profiling data to Splunk Observability Cloud. If the Splunk HEC exporter isn't configured, the Collector drops profiling data.
 
-To solve this issue, edit the configuration file for the Splunk Distribution of OpenTelemetry Collector and make sure that a profiling pipeline exists with an OTLP gRPC receiver and a Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
+To solve this issue, edit the configuration file of the Collector and make sure that a profiling pipeline exists with an OTLP gRPC receiver and a Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
 
 The following example shows you how to configure a pipeline in the ``agent-config.yaml`` file. Set the ``SPLUNK_ACCESS_TOKEN`` environment variable to a valid access token. See :ref:`admin-org-tokens`.
 
@@ -48,18 +48,20 @@ The following example shows you how to configure a pipeline in the ``agent-confi
          grpc:
 
    exporters:
-     splunk_hec:
-       token: "${SPLUNK_ACCESS_TOKEN}"
-       endpoint: "https://ingest.${SPLUNK_REALM}.signalfx.com/v1/log"
-     logging/info:
-       verbosity: normal
+    # Profiling
+    splunk_hec/profiling:
+      token: "${SPLUNK_ACCESS_TOKEN}"
+      endpoint: "${SPLUNK_INGEST_URL}/v1/log"
+      source: "otel"
+      sourcetype: "otel"
+      log_data_enabled: false
 
    service:
      pipelines:
        logs/profiling:
          receivers: [otlp]
          processors: [memory_limiter, batch]
-         exporters: [logging/info, splunk_hec]
+         exporters: [logging/info, splunk_hec, splunk_hec/profiling]
 
 The exporter is configured automatically for the Splunk OTel Collector version 0.44.0 and higher. If you're using a version of the Collector lower than 0.44.0, you might have to edit the configuration manually.
 
@@ -69,6 +71,11 @@ Check that you've activated AlwaysOn Profiling
 Depending on the programming language, you can activate AlwaysOn Profiling by setting a system property, a function argument, or an environment variable. System properties and function arguments always take precedence. If the profiler is not activated, Observability Cloud can't receive profiling data.
 
 To solve this issue, check that you've activated the profiler. See :ref:`profiling-setup-enable-profiler`.
+
+Check the Helm chart configuration
+------------------------------------------------
+
+If you've deployed the Collector in a Kubernetes environment, make sure that the ``splunkObservability.profilingEnabled=true`` is present. See :ref:`profiling-setup-helm` for more information.
 
 .. _no-call-stacks:
 
