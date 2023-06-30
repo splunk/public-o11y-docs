@@ -11,6 +11,10 @@ You can instrument the front end of your web applications for Splunk RUM using t
 
 To instrument your browser application and get data into Splunk RUM, follow the instructions on this page.
 
+
+
+
+
 .. _rum-browser-requirements:
 
 Check compatibility and requirements
@@ -28,6 +32,11 @@ All your pages, assets, and requests must be securely loaded over the HTTPS prot
 
 .. note:: Splunk APM is not required to instrument Splunk RUM for Browser. 
 
+Decide which version to run in your environment
+=======================================================
+Latest updates automatically whenever Splunk RUM releases a new version. In pre-production, use latest to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle.  
+
+
 .. _rum-browser-install:
 
 Instrument your web application for Splunk RUM
@@ -41,7 +50,9 @@ Select one of the following methods to instrument your web application:
 * :ref:`rum-browser-install-self-hosted`
 * :ref:`rum-browser-install-npm`
 
-:strong:`Tip:` To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup. To access the Browser Instrumentation guided setup, follow these steps:
+.. Note:: To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup.
+   
+To access the Browser Instrumentation guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
 #. In the navigation menu, select :menuselection:`Data Management`. 
