@@ -25,7 +25,7 @@ To access the guided setup for AWS integration, perform the following steps:
   - Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
   - On the Integrate Your Data page, select the tile for :strong:`Amazon Web Services`.
 
-#. Follow the steps provided in the guided setup:
+Next, follow the steps provided in the guided setup:
 
   - :ref:`aws-wizard-define`.
   - :ref:`aws-wizard-prepare`.
@@ -41,6 +41,7 @@ Choose the following connection options:
 * The region AWS from which AWS manages your resources. See :ref:`aws-regions` for more informaion.
 * Authentication method. Learn more at :ref:`aws-authentication`.
 * Data ingest options such as:
+
   * Metadata.
   * Cost and usage metrics.
   * Logs.
@@ -83,8 +84,9 @@ Establish the connection
 Finally, proceed with the last steps:
 
 * Complete your authentication configuration as prompted.
-* Select your data sources:
-  * Regions.
+* Select your data sources: 
+  
+  * AWS Regions 
   * Built-in and custom services. 
 
 .. note:: Select :guilabel:`All built-in services` to import all data from built-in CloudWatch namespaces and ensure that built-in dashboards display automatically.
