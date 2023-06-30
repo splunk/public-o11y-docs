@@ -67,7 +67,7 @@ Authenticate in AWS using a security token
 
 For the :strong:`GovCloud or China regions`, select the option to authenticate using a secure token, which combines an Access key ID and Secret access key you'll create in your AWS Console.
 
-.. :note:: When you're creating the new permission and are prompted for an access key practice, select :guilabel:`Third-party service`.
+.. :note:: When you're creating the new permission for your user and are prompted for an access key practice, select :guilabel:`Third-party service`.
 
 .. _aws-regions:
 
