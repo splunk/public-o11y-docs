@@ -180,27 +180,27 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
    :widths: 33 33 33  
    :width: 100%
 
-   * - :strong:`Observability Cloud realm`
+    * - :strong:`Observability Cloud realm`
      - :strong:`Cloud provider and region`
      - :strong:`Product Availability`
     * - us0
-      - AWS (us-east-1)
-      - Synthetics not currently available
+     - AWS (us-east-1)
+     - Synthetics not currently available
     * - us1
-      - AWS (us-west-2)
+     - AWS (us-west-2)
       - All products available
     * - us2
-      - GCP (us-west-1)
-      - Synthetics not currently available
+    - GCP (us-west-1)
+    - Synthetics not currently available
     * - eu0
-      - AWS (eu-west-1)
-      - Available to all customers
+    - AWS (eu-west-1)
+    - Available to all customers
     * - jp0
-      - AWS (ap-northeast-1)
-      - RUM and Synthetics not currently available
+    - AWS (ap-northeast-1)
+    - RUM and Synthetics not currently available
     * - au0
-      - AWS (ap-southeast-2)
-      - Synthetics not currently available
+    - AWS (ap-southeast-2)
+    - Synthetics not currently available
 
 For additional information, see:
 
