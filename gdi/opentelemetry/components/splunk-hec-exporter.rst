@@ -9,10 +9,9 @@ Splunk HEC exporter
 
 The Splunk HTTP Event Collector (HEC) exporter allows the OpenTelemetry Collector to send traces, logs, and metrics to Splunk HEC endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-.. note:: For information about the HEC receiver, see :ref:`splunk-hec-receiver`.
+The main purpose of the Splunk HEC exporter is to send logs and metrics to Splunk Cloud Platform or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Observability Cloud. See :ref:`lo-connect-landing` for more information.
 
-The main purpose of the Splunk HEC exporter is to send logs and metrics to Splunk Cloud Platform or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Observability Cloud. See :ref:`lo-connect-landing` for more 
-information.
+For information about the HEC receiver, see :ref:`splunk-hec-receiver`.
 
 .. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
 
@@ -20,6 +19,8 @@ Get started
 ======================
 
 By default, the Splunk Distribution of OpenTelemetry Collector includes the Splunk HEC exporter in the ``logs`` pipeline when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
+
+Starting from version 0.81 of the Splunk Distribution of OpenTelemetry Collector, the default configuration includes an exporter for AlwaysOn Profiling data that is separate from the standard logs exporter. See :ref:`exclude-log-data`.
 
 .. note:: To send Splunk HEC data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
 
@@ -53,7 +54,7 @@ The following example shows a Splunk HEC exporter instance configured for a logs
          - resourcedetection
          exporters: [splunk_hec]
 
-The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HEC token and choosing a HEC endpoint depends on the target. The following table shows endpoints and instructions for each back end.
+The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HEC token and choosing a HEC endpoint depends on the target. The following table shows endpoints and instructions for each back end. Use the ``source`` and ``sourcetype`` fields options when sending logs to Splunk Cloud Platform or Splunk Enterprise.
 
 .. list-table::
    :header-rows: 1
@@ -80,51 +81,6 @@ In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for exam
 #. Select your username. 
 
 The realm name appears in the :guilabel:`Organizations` section.
-
-.. _send_metrics_to_splunk:
-
-Send metrics to Splunk Cloud Platform or Splunk Enterprise
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-You can use the Collector to send metrics to Splunk Cloud Platform or Splunk Enterprise.  
-
-For example, if you're scraping Prometheus metrics with a configuration such as: 
-
-.. code-block:: yaml
-
-  pipelines:
-    metrics:
-        receivers: [prometheus]
-        processors: [batch]
-        exporters: [splunk_hec/metrics]
-
-  receivers:
-    prometheus:
-      config:
-        scrape_configs:
-          - job_name: 'otel-collector'
-            scrape_interval: 5s
-            static_configs:
-              - targets: ['<container_name>:<container_port>']
-
-You need to configure the ``splunk_hec`` exporter as shown below:
-
-.. code-block:: yaml
-
-  exporters:
-      splunk_hec/metrics:
-          # Splunk HTTP Event Collector token.
-          token: "00000000-0000-0000-0000-0000000000000"
-          # URL to a Splunk instance to send data to.
-          endpoint: "https://splunk:8088/services/collector"
-          # Optional Splunk source: https://docs.splunk.com/Splexicon:Source
-          source: "app"
-          # Optional Splunk source type: https://docs.splunk.com/Splexicon:Sourcetype
-          sourcetype: "jvm_metrics"
-          # Splunk index, optional name of the Splunk index targeted.
-          index: "metrics"
-
-Note that to be able to ingest metrics through Splunk HEC you need to declare your index as a metric index. To learn more about our metric index technology, see :new-page:`Get started with metrics <https://docs.splunk.com/Documentation/SplunkCloud/latest/Metrics/GetStarted>` in Splunk docs.
 
 .. _send_logs_to_splunk:
 
@@ -225,15 +181,20 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
 
 .. _no_profiling_data:
 
-Turn off profiling data
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. _exclude-log-data:
+
+Turn off logs or profiling data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note:: Starting from version 0.81 of the Splunk Distribution of OpenTelemetry Collector, logs and profiling pipelines are split. In that case, you can remove or comment them out according to your needs.
+
 
 If you don't need AlwaysOn Profiling data for a specific host or container. set the ``profiling_data_enabled`` option to ``false`` in the ``splunk_hec`` exporter settings of the Collector configuration file. For example:
 
 .. code-block:: yaml
    :emphasize-lines: 6
 
-   splunk_hec/noprofiling:
+   splunk_hec:
      token: "${SPLUNK_HEC_TOKEN}"
      endpoint: "${SPLUNK_HEC_URL}"
      source: "otel"
@@ -245,17 +206,12 @@ To turn off log collection for Observability Cloud while preserving AlwaysOn Pro
 .. code-block:: yaml
    :emphasize-lines: 6
 
-   splunk_hec:
+   splunk_hec/profiling:
      token: "${SPLUNK_HEC_TOKEN}"
      endpoint: "${SPLUNK_HEC_URL}"
      source: "otel"
      sourcetype: "otel"
      log_data_enabled: false
-
-.. _exclude-log-data:
-
-Turn off log data export
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you need to turn off log data export to Observability Cloud, for example because you're using Log Observer Connect or because you don't have Log Observer in your organization, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
@@ -269,9 +225,9 @@ If you need to turn off log data export to Observability Cloud, for example beca
      sourcetype: "otel"
      log_data_enabled: false
 
-To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
-
 .. note:: The ``log_data_enabled`` setting is available in the Splunk Distribution of OpenTelemetry Collector version 0.49.0 and higher.
+
+To use a custom configuration for EC2, see :ref:`ecs-ec2-custom-config`. To use a custom configuration for Fargate, see :ref:`fargate-custom-config`.
 
 If you've deployed the Collector in Kubernetes using the Helm chart, change the following setting in the ``splunkObservability`` section of your custom chart or values.yaml file:
 
@@ -280,6 +236,51 @@ If you've deployed the Collector in Kubernetes using the Helm chart, change the 
    splunkObservability:
      # Other settings
      logsEnabled: false
+
+.. _send_metrics_to_splunk:
+
+Send metrics to Splunk Cloud Platform or Splunk Enterprise
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can use the Collector to send metrics to Splunk Cloud Platform or Splunk Enterprise.  
+
+For example, if you're scraping Prometheus metrics with a configuration such as: 
+
+.. code-block:: yaml
+
+  pipelines:
+    metrics:
+        receivers: [prometheus]
+        processors: [batch]
+        exporters: [splunk_hec/metrics]
+
+  receivers:
+    prometheus:
+      config:
+        scrape_configs:
+          - job_name: 'otel-collector'
+            scrape_interval: 5s
+            static_configs:
+              - targets: ['<container_name>:<container_port>']
+
+You need to configure the ``splunk_hec`` exporter as shown in the following example:
+
+.. code-block:: yaml
+
+  exporters:
+      splunk_hec/metrics:
+          # Splunk HTTP Event Collector token.
+          token: "00000000-0000-0000-0000-0000000000000"
+          # URL to a Splunk instance to send data to.
+          endpoint: "https://splunk:8088/services/collector"
+          # Optional Splunk source: https://docs.splunk.com/Splexicon:Source
+          source: "app"
+          # Optional Splunk source type: https://docs.splunk.com/Splexicon:Sourcetype
+          sourcetype: "jvm_metrics"
+          # Splunk index, optional name of the Splunk index targeted.
+          index: "metrics"
+
+Note that to be able to ingest metrics through Splunk HEC you need to declare your index as a metric index. To learn more about our metric index technology, see :new-page:`Get started with metrics <https://docs.splunk.com/Documentation/SplunkCloud/latest/Metrics/GetStarted>` in Splunk docs.
 
 Settings
 ======================
