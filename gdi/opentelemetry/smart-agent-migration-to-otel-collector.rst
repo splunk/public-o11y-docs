@@ -18,8 +18,9 @@ Migrate from SignalFx Smart Agent to the Splunk Distribution of OpenTelemetry Co
    smart-agent-migration-monitors.rst
    legacy-otel-mappings.rst
 
-.. note::
-   The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Open Telemetry Collector are not deprecated. For details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
+.. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
+
+  Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Distribution of OpenTelemetry Collector are available and supported.
 
 The Splunk Distribution of the :new-page:`OpenTelemetry Collector <https://opentelemetry.io/docs/concepts/data-collection/>` provides a unified way to receive, process, and export metrics, traces, and logs to Splunk Observability Cloud. Current SignalFx Smart Agent (deprecated) users can easily transition to the Collector without losing any functionality. 
 

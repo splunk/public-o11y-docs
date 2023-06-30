@@ -135,7 +135,7 @@ You can set two Infrastructure Monitoring rate-related limits:
 
 #. Event search limit: The rate at which you search for events.
 
-   * The token limit applies to the :new-page:`GET /v1/event <https://dev.splunk.com/observability/reference/api/retrieve_events/latest#endpoint-retrieve-custom-events-using-query>`
+   * The token limit applies to the :new-page:`GET /v1/event <https://dev.splunk.com/observability/reference/api/retrieve_events_v1/latest>`
      event search request.
 
    * Use a value between 1 and 30. If you don't select a limit, Infrastructure Monitoring
