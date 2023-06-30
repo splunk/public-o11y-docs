@@ -63,34 +63,34 @@ The following table summarizes the main differences between each type of release
      - :strong:`Private Preview`
      - :strong:`Public Preview`
      - :strong:`General Availability`
-    * - :strong:`Availability`
-      - Selected customers
-      - Opt-in for all customers
-      - Available to all customers
-    * - :strong:`Maturity`
-      - Alpha
-      - Beta
-      - Stable
-    * - :strong:`Use in production`
-      - No
-      - Yes
-      - Yes
-    * - :strong:`Support`
-      - No formal support or SLA terms
-      - No formal support or SLA terms
-      - Full Splunk support
-    * - :strong:`Documentation`
-      - No
-      - Optional
-      - Complete
-    * - :strong:`SLAs`
-      - No
-      - No
-      - SLAs published
-    * - :strong:`Release Notes`
-      - No
-      - Optional
-      - Comprehensive
+   * - :strong:`Availability`
+     - Selected customers
+     - Opt-in for all customers
+     - Available to all customers
+   * - :strong:`Maturity`
+     - Alpha
+     - Beta
+     - Stable
+   * - :strong:`Use in production`
+     - No
+     - Yes
+     - Yes
+   * - :strong:`Support`
+     - No formal support or SLA terms
+     - No formal support or SLA terms
+     - Full Splunk support
+   * - :strong:`Documentation`
+     - No
+     - Optional
+     - Complete
+   * - :strong:`SLAs`
+     - No
+     - No
+     - SLAs published
+   * - :strong:`Release Notes`
+     - No
+     - Optional
+     - Comprehensive
 
 .. note:: 
     The levels of support described in this section do not apply to open source agents and instrumentations.
@@ -180,27 +180,27 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
    :widths: 33 33 33  
    :width: 100%
 
-    * - :strong:`Observability Cloud realm`
+   * - :strong:`Observability Cloud realm`
      - :strong:`Cloud provider and region`
      - :strong:`Product Availability`
-    * - us0
+   * - us0
      - AWS (us-east-1)
      - Synthetics not currently available
-    * - us1
+   * - us1
      - AWS (us-west-2)
-      - All products available
-    * - us2
-    - GCP (us-west-1)
-    - Synthetics not currently available
-    * - eu0
-    - AWS (eu-west-1)
-    - Available to all customers
-    * - jp0
-    - AWS (ap-northeast-1)
-    - RUM and Synthetics not currently available
-    * - au0
-    - AWS (ap-southeast-2)
-    - Synthetics not currently available
+     - All products available
+   * - us2
+     - GCP (us-west-1)
+     - Synthetics not currently available
+   * - eu0
+     - AWS (eu-west-1)
+     - Available to all customers
+   * - jp0
+     - AWS (ap-northeast-1)
+     - RUM and Synthetics not currently available
+   * - au0
+     - AWS (ap-southeast-2)
+     - Synthetics not currently available
 
 For additional information, see:
 
