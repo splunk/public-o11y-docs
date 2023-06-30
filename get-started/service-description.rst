@@ -13,6 +13,7 @@ Welcome to the Splunk Observability Cloud Platform service description. This doc
 
 This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following sections. If you have questions after reading any of this material, contact your Splunk sales representative.
 
+.. _sd-overview:
 
 Overview of Splunk Observability Cloud
 ===========================================================
@@ -27,6 +28,7 @@ For additional information, see:
 - :ref:`get-started-glossary`
 - :new-page:`Splunk Observability <https://www.splunk.com/en_us/products/observability.html>` on Splunk.com
 
+.. _sd-terms-policies:
 
 Service term and policies
 ===========================================================
@@ -40,6 +42,7 @@ The following links access important terms and policies documents that pertain t
 - :new-page:`Splunk Observability Cloud - Security Addendum <https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html>`
 - :new-page:`Specific Terms for Splunk Observability Cloud <https://www.splunk.com/en_us/legal/splunk-specific-terms.html#splunk-observability-cloud>`
 
+.. _sd-previews:
 
 Preview programs
 ===========================================================
@@ -95,6 +98,7 @@ The following table summarizes the main differences between each type of release
 .. note:: 
     The levels of support described in this section do not apply to open source agents and instrumentations.
 
+.. _sd-data:
 
 Data ingestion and retention
 ===========================================================
@@ -123,6 +127,7 @@ Data retention
 
 When you send data to Splunk Observability Cloud, it is ingested and stored during a period of time that varies depending on the product and type of contract. See :ref:`data-o11y` for more information.
 
+.. _sd-subscriptions:
 
 Subscription types, expansions, renewals, and terminations
 ===========================================================
@@ -207,6 +212,8 @@ For additional information, see:
 - :ref:`Note about realms<about-realms>`
 - :new-page:` <https://www.splunk.com/en_us/observability/observability-for-google-cloud-environments.html>`
 
+.. _sd-compliance:
+
 Compliance and certifications
 ===========================================================
 
@@ -218,8 +225,7 @@ Splunk has attained a number of compliance attestations and certifications from 
 
 For information regarding the availability of service components between the AWS and Google Cloud regions, see :ref:`sd-regions`.
 
-
-
+.. _sd-security:
 
 Security
 ===========================================================
@@ -232,6 +238,7 @@ https://docs.splunk.com/Observability/admin/authentication-tokens/tokens.html#na
 
 https://docs.splunk.com/Observability/admin/allow-services.html#nav-Allow-Splunk-Observability-Cloud-services-in-your-network
 
+.. _sd-slas:
 
 Service level agreements
 ===========================================================
@@ -242,7 +249,7 @@ https://docs.splunk.com/Observability/references/per-product-limits.html#nav-Per
 
 https://docs.splunk.com/Observability/admin/org-metrics.html#nav-View-organization-metrics
 
-
+.. _sd-compatibility:
 
 Supported versions
 ===========================================================
@@ -255,6 +262,8 @@ Missing:
 
 Unified GDI/o11y requirements and compatibility https://signalfuse.atlassian.net/browse/DOCS-5109 
 
+.. _sd-support:
+
 Technical support
 ===========================================================
 
@@ -264,7 +273,7 @@ https://docs.splunk.com/Documentation/SplunkCloud/9.0.2209/Service/SplunkCloudse
 
 https://docs.splunk.com/Observability/get-started/support.html#nav-Support 
 
-
+.. _sd-auth:
 
 Users and authentication
 ===========================================================
