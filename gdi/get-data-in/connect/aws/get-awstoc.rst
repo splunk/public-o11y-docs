@@ -48,7 +48,7 @@ You have two ways to send AWS data to Observability Cloud:
 .. raw:: html
 
   <embed>
-    <h3>Poll data from AWS using CloudWatch APIs</h3>
+    <h3>Poll data from AWS using CloudWatch APIs<a name="aws-api-polling" class="headerlink" href="#aws-api-polling" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 You can poll data from AWS at specified intervals using CloudWatch APIs. Due to the CloudWatch metrics instability, for certain namespaces some metrics might be delayed a few minutes. See more in :ref:`Configure API polling <aws-configure-api-polling>`.
@@ -84,7 +84,7 @@ Be careful when choosing tag names: Splunk Observability Cloud only allows alpha
 .. raw:: html
 
   <embed>
-    <h3>Use Metric Streams to forward data to Observability Cloud</h3>
+    <h3>Use Metric Streams to forward data to Observability Cloud<a name="aws-metricstreams" class="headerlink" href="#aws-metricstreams" title="Permalink to this headline">¶</a></h3>
   </embed>
 
 Rather than polling for data, Metric Streams continually stream Amazon CloudWatch metrics to Observability Cloud. You can activate this option in the UI wizard, or through the API.
