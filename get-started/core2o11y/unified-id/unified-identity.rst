@@ -86,11 +86,11 @@ Follow these steps at first login to Splunk Observability Cloud:
 
 2. Provide your Splunk Cloud Platform credentials. If your Splunk Cloud Platform user has an associated email, the :strong:`Email` field autopopulates. If your Splunk Cloud Platform user does not have an associated email, you must enter your email address twice.
 
-3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications. If you see the following Internal Server Error, take the following steps:
+3. You then receive an e-mail to verify your identity. Verify your identity in the e-mail to be authenticated in Splunk Observability Cloud. After authentication, you can access all Splunk Cloud Platform data that your Splunk Cloud Platform role has permissions to access in Splunk Observability Cloud applications. If you see the Internal Server Error, take the steps that follow.
 
   .. image:: /_images/get-started/core2o11y-InternalServerError.png
     :width: 100%
-    :alt: This animated GIF shows hover and click actions on a chart to display metric time series, a data table, and full chart data.
+    :alt: This screenshot shows the Internal Server Error message.
 
     a. Remove the verification code from the text box.
 
