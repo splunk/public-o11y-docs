@@ -28,10 +28,12 @@ Before you start, see :ref:`aws-prereqs`, and check the :ref:`list of AWS integr
 
 Read on to learn about data ingest options and available connection methods.
 
+.. _aws-ingest:
+
 .. raw:: html
 
   <embed>
-    <h2>How to ingest AWS data in Observability Cloud</h2>
+    <h2>How to ingest AWS data in Observability Cloud<a name="aws-ingest" class="headerlink" href="#aws-ingest" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 You have two ways to send AWS data to Observability Cloud:
@@ -94,7 +96,7 @@ Although they're more efficient than API polling, consider the constraints below
 .. raw:: html
 
   <embed>
-    <h2>Data collection interval and costs</h2>
+    <h2>Data collection interval and costs<a name="collection-interval-aws" class="headerlink" href="#collection-interval-aws" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 In most cases, metrics are reported every minute. However, some services use a different cadence: For example, selected S3 metrics are reported on a daily basis. Check AWS documentation to verify how often your services' metrics are reported.
@@ -108,7 +110,7 @@ Learn more at :ref:`Amazon CloudWatch usage costs <aws-costs>`.
 .. raw:: html
 
   <embed>
-    <h2>Connect with AWS</h2>
+    <h2>Connect with AWS<a name="aws-connection-options" class="headerlink" href="#aws-connection-options" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 You can connect Observability Cloud to AWS in several ways. By default, Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account. To limit the amount of data to import, see :ref:`specify-data-metadata`.
@@ -143,7 +145,7 @@ If you can't connect AWS to Observability Cloud, see :ref:`Troubleshoot your AWS
 .. raw:: html
 
   <embed>
-    <h2>Next steps</h2>
+    <h2>Next steps<a name="after-aws-integration" class="headerlink" href="#after-aws-integration" title="Permalink to this headline">¶</a></h2>
   </embed>
 
 * See :ref:`Leverage data from integration with AWS <aws-post-install>` for an overview of what you can do after you connect Observability Cloud to AWS.
