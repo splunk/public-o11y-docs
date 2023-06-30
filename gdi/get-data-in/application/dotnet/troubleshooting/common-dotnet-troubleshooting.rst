@@ -154,25 +154,24 @@ The following snippet contains a sample ``profiling`` pipeline:
 
    receivers:
      otlp:
-        protocols:
-           grpc:
+       protocols:
+         grpc:
 
    exporters:
-     splunk_hec:
-        token: "${SFX_TOKEN}"
-        endpoint: "https://ingest.${SFX_REALM}.signalfx.com/v1/log"
-     logging/info:
-        verbosity: normal
-
-   processors:
-     batch:
+    # Profiling
+    splunk_hec/profiling:
+      token: "${SPLUNK_ACCESS_TOKEN}"
+      endpoint: "${SPLUNK_INGEST_URL}/v1/log"
+      source: "otel"
+      sourcetype: "otel"
+      log_data_enabled: false
 
    service:
      pipelines:
-        logs/profiling:
-           receivers: [otlp]
-           processors: [batch]
-           exporters: [logging/info, splunk_hec]
+       logs/profiling:
+         receivers: [otlp]
+         processors: [memory_limiter, batch]
+         exporters: [logging/info, splunk_hec, splunk_hec/profiling]
 
 Loss of profiling data or gaps in profiling data
 -------------------------------------------------------------
