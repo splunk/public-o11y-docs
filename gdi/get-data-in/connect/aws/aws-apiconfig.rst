@@ -238,12 +238,10 @@ These are these permissions to allow Observability Cloud to collect AWS tags and
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
 - ``"kinesis:DescribeStream"``
-- ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
-- ``"kinesis:ListStreams"``
 - ``"kinesis:ListTagsForStream"``
-- ``"kinesis:ListTagsForStream"``
+- ``"kinesisanalytics:ListTagsForResource"``
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
