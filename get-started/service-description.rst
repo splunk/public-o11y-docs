@@ -152,6 +152,8 @@ Observability Cloud monthly charges are based on average usage during the month.
 .. note:: 
    All editions of Splunk Observability Cloud include Log Observer Connect, which let you to analyze logs you've ingested to Splunk Cloud Platform at no additional costs. See :ref:`lo-connect-landing` for more information.
 
+.. _sd-subscription:
+
 Subscription updates, renewals, and terminations
 ---------------------------------------------------
 
@@ -230,48 +232,92 @@ For information regarding the availability of service components between the AWS
 Security
 ===========================================================
 
-https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html 
+The security and privacy of your data is key to you and your organization, and Splunk makes this a top priority. Splunk Observability Cloud is designed and delivered using key security controls described in the following sections.
 
-https://docs.splunk.com/Observability/admin/SSO/sso-about.html#nav-About-SSO-integrations-for-Splunk-Observability-Cloud 
+Data encryption
+-----------------------------------------------------------
 
-https://docs.splunk.com/Observability/admin/authentication-tokens/tokens.html#nav-Create-and-manage-authentication-tokens
+All data in transit to and from Splunk Observability Cloud is TLS 1.2+ encrypted. Observability Cloud uses AES 256-bit encryption by default. Encryption key management processes are in place to help ensure the secure generation, storage, distribution and destruction of encryption keys.
 
-https://docs.splunk.com/Observability/admin/allow-services.html#nav-Allow-Splunk-Observability-Cloud-services-in-your-network
+Data handling
+-----------------------------------------------------------
+
+Your data is stored securely in an Observability Cloud realm that corresponds to a cloud service provider's region. See :ref:`sd-regions` for more information on regions and realms. 
+
+Splunk retains Customer Content stored in its cloud computing services for at least thirty days after the expiration or termination of the subscription. See :ref:`sd-subscription` for more information.
+
+For information on data retention, see :ref:`sd-data`.
+
+Isolation of data and service
+------------------------------------------------------------
+
+Your data is logically isolated from other customers' data, so your performance and data integrity cannot be affected by other customers who are using Splunk Observability Cloud.
+
+Security controls and compliance
+------------------------------------------------------
+
+Splunk has attained a number of compliance attestations and certifications from industry-leading auditors. See :ref:`sd-compliance` for information on compliance certifications.
+
+Realm security
+------------------------------------------------------------
+
+Every realm in Splunk Observability Cloud runs in a secured environment on a stable operating system and in a network that is hardened to industry standards. Your deployment is regularly scanned for threats.
+
+User authentication and access
+------------------------------------------------------
+
+You can configure authentication using Single-sign on (SSO) integrations implementing SAML 2.0, such as Ping, Okta, or AzureAD. See :ref:`sso-about` for more information.
+
+To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities. See :ref:`roles-and-capabilities` for more information.
+
+For additional information, see:
+
+- :new-page:`Splunk Data Privacy & Security <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy.html>`
+- :new-page:`Splunk Observability Cloud Security Addendum <https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html>`
 
 .. _sd-slas:
 
 Service level agreements
 ===========================================================
 
-https://www.splunk.com/en_us/legal/observability-service-level-schedule.html 
+The :new-page:`Splunk Observability Cloud Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` document describes the uptime SLA and exclusions. You may claim service credits in the event of SLA failures, as set forth in our current SLA schedule.
 
-https://docs.splunk.com/Observability/references/per-product-limits.html#nav-Per-product-system-limits 
+Per product system limits
+-------------------------------------------
 
-https://docs.splunk.com/Observability/admin/org-metrics.html#nav-View-organization-metrics
+Splunk Observability Cloud service limits are described in :ref:`per-product-limits`. Service limits may vary based on your Observability Cloud subscription. Some limits depend on a combination of configuration, system load, performance, and available resources. Unless noted, the service limit is identical for all regions. Contact Splunk if your requirements are different or exceed what is recommended in :ref:`per-product-limits`.
+
+Status page
+-------------------------------------------
+
+You can check the current status of Splunk Observability Cloud realms through the :new-page:`https://status.signalfx.com <https://status.signalfx.com>` status page. Each status page lets you subscribe to updates.
+
 
 .. _sd-compatibility:
 
 Supported versions
 ===========================================================
 
-Existing:
+Splunk Observability Cloud works as expected when using the latest and next-to-latest official releases of the following browsers:
 
-https://docs.splunk.com/Observability/references/supported-browsers.html#nav-Supported-browsers
+- Chrome
+- Safari
 
-Missing:
+See :ref:`supported-browsers` for more information.
 
-Unified GDI/o11y requirements and compatibility https://signalfuse.atlassian.net/browse/DOCS-5109 
 
 .. _sd-support:
 
 Technical support
 ===========================================================
 
-https://www.splunk.com/en_us/customer-success/support-programs.html?301=/en_us/support-and-services/support-programs.html 
+All Splunk Observability Cloud subscriptions include either Standard Success Plan or Premium Success Plan. For more information regarding Splunk Cloud Platform support terms and program options, see :new-page:`https://www.splunk.com/en_us/support-and-services/support-programs.html <https://www.splunk.com/en_us/support-and-services/support-programs.html>`. You should also note the following:
 
-https://docs.splunk.com/Documentation/SplunkCloud/9.0.2209/Service/SplunkCloudservice#Maintenance 
+- Splunk Observability Cloud is compatible with multiple options to ingest your data, so it is your responsibility to ensure the correct data collection method is configured for your data sources.
+- To use multifactor authentication for your Splunk Observability Cloud user accounts, you must use a SAML 2.0 identity provider that supports multifactor authentication. It is your responsibility to ensure your Splunk Observability Cloud user accounts are properly configured for multifactor authentication.
 
-https://docs.splunk.com/Observability/get-started/support.html#nav-Support 
+For additional information, see :ref:`support`.
+
 
 .. _sd-auth:
 
