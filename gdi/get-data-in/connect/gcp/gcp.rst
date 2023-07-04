@@ -215,6 +215,16 @@ You can also integrate GCP with Splunk Observability Cloud using the GCP API. Se
 
 To connect using Terraform, see :ref:`terraform-config`.
 
+.. raw:: html
+
+   <embed>
+      <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h3>
+   </embed>
+
+To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
+
+The Collector offers a higher degree of customization than the GCP integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.     
+
 .. _next-gcp-steps:
 
 .. raw:: html
