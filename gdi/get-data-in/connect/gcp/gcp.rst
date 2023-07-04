@@ -10,8 +10,8 @@ Connect to Google Cloud Platform
 .. toctree::
    :hidden:
 
-   gcp-metrics
-   gcp-logs   
+   GCP metrics <gcp-metrics>
+   GCP logs <gcp-logs>   
 
 With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 

@@ -10,8 +10,8 @@ Connect to Azure and send data to Splunk Observability Cloud
 .. toctree::
   :hidden:
 
-  azure-metrics
-  azure-logs-ingestion
+  Azure metrics <azure-metrics>
+  Azure logs <azure-logs-ingestion>
 
 Splunk Observability Cloud provides an integration with Microsoft Azure, lets you travel through Azure entities, and includes built-in dashboards to help you monitor Azure services. 
 
@@ -21,7 +21,7 @@ After you connect your Azure account to Observability Cloud, you can do the foll
 
 - Import Azure metrics, traces, and metadata. 
 - :ref:`Send logs <ingest-azure-log-data>` to the Log Observer.
-- Use Observability Cloud tools to monitor your Azure services, such as :ref:`navigators <use-navigators-imm>` and dashboards :ref:`azure-dashboards`.
+- Use Observability Cloud tools to monitor your Azure services, such as :ref:`navigators <use-navigators-imm>` and :ref:`dashboards <azure-dashboards>`.
 - Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _azure-integration-prereqs:
