@@ -194,7 +194,7 @@ Your GCP integration is now complete.
 .. raw:: html
 
    <embed>
-      <h2>Alternatives to connect to GCP<a name="connect-gcp-other" class="headerlink" href="#connect-gcp-other" title="Permalink to this headline">¶</a></h3>
+      <h2>Alternatives to connect to GCP<a name="connect-gcp-other" class="headerlink" href="#connect-gcp-other" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 .. _gcp-api:
@@ -202,7 +202,7 @@ Your GCP integration is now complete.
 .. raw:: html
 
    <embed>
-      <h3>Integrate GCP using the API <a name="gcp-api" class="headerlink" href="#gcp-api" title="Permalink to this headline">¶</a></h2>
+      <h3>Integrate GCP using the API <a name="gcp-api" class="headerlink" href="#gcp-api" title="Permalink to this headline">¶</a></h3>
    </embed>
 
 You can also integrate GCP with Splunk Observability Cloud using the GCP API. See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` in our developer portal for details.
@@ -218,7 +218,7 @@ To connect using Terraform, see :ref:`terraform-config`.
 .. raw:: html
 
    <embed>
-      <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h3>
+      <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
