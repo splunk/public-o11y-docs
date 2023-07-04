@@ -13,9 +13,9 @@ Connect to Google Cloud Platform
    gcp-metrics
    gcp-logs   
 
-With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place using the navigator in Stackdriver-powered mode and built-in dashboards. For the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`. 
+With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 
-To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
+For the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`. 
 
 .. _gcp-prerequisites:
 

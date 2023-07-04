@@ -18,7 +18,8 @@ Splunk Observability Cloud provides an integration with Microsoft Azure, lets yo
 After you connect your Azure account to Observability Cloud, you can do the following:
 
 - Import Azure metrics, traces, and metadata. 
-- Use Observability Cloud tools to monitor your Azure services.
+- :ref:`Send logs <ingest-azure-log-data>` to the Log Observer.
+- Use Observability Cloud tools to monitor your Azure services, such as :ref:`navigators <use-navigators-imm>` and dashboards :ref:`azure-dashboards`.
 - Filter Azure monitoring results using tags or dimensions such as ``region`` and ``host name``. When tagging, Splunk Observability Cloud only allows alphanumeric characters, and the underscore and minus symbols. Unsupported characters include ``.``, ``:``, ``/``, ``=``, ``+``, ``@``, and spaces, which are replaced by the underscore character. 
 
 .. _azure-integration-prereqs:
@@ -156,11 +157,7 @@ To connect using Terraform, see :ref:`terraform-config`.
     <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
   </embed>
 
-If you installed Azure while going through the quick start guide, continue by installing the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/resources.html>`.
-
-The Azure integration provides an Azure mode for the :new-page:`navigator <https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators>`, and includes :new-page:`default dashboards <https://docs.splunk.com/Observability/infrastructure/navigators/azure.html#use-default-dashboards-to-monitor-azure-services>` to help you monitor Microsoft Azure services.
-
-You can also connect to Azure and the subscriptions and services running on it by using the Splunk Distribution of OpenTelemetry Collector. To learn more, see :ref:`otel-intro`.
+To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
 
 The Collector offers a higher degree of customization than the Azure integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.  
 
