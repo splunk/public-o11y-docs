@@ -15,7 +15,7 @@ Connect to Google Cloud Platform
 
 With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 
-For the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`. 
+For the list of the GCP services available in Observability Cloud, see the list of :ref:`supported integrations <gcp-integrations>`. 
 
 .. _gcp-prerequisites:
 
@@ -25,11 +25,10 @@ For the list of the GCP services available in Observability Cloud, see :ref:`our
       <h2>Prerequisites<a name="gcp-prerequisites" class="headerlink" href="#gcp-prerequisites" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
+The following pre-requisites apply:
 
-.. note:: 
-
-   Observability Cloud supports all GCP regions. 
+* You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
+* Observability Cloud supports all GCP regions. 
 
 .. raw:: html
 
