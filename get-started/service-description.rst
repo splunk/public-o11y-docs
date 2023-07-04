@@ -9,7 +9,7 @@ Splunk Observability Cloud service description
 .. meta::
     :description: Features, capabilities, limitations, and constraints of Splunk Observability Cloud, as well as Splunk's responsibilities as Software as a Service provider.
 
-Welcome to the Splunk Observability Cloud Platform service description. This document describes the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and our responsibilities to you as a Software as a Service provider. 
+Welcome to the Splunk Observability Cloud Platform service description. This document describes the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and the responsibilities of Splunk to you as a Software as a Service provider. 
 
 This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following sections. If you have questions after reading any of this material, contact your Splunk sales representative.
 
@@ -18,9 +18,9 @@ This document also notes your responsibilities as a subscriber to the service. B
 Overview of Splunk Observability Cloud
 ===========================================================
 
-Splunk Observability Cloud is a modern SaaS solution for infrastructure monitoring, custom metrics, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, always-on profiling, and incident intelligence. Observability Cloud also provides a direct integration with Splunk Cloud Platform logs through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
+Splunk Observability Cloud is a SaaS solution for infrastructure monitoring, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, always-on profiling, and incident intelligence. Observability Cloud also provides a direct integration with Splunk Cloud Platform logs through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
 
-Splunk Observability Cloud allows you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from over 100 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
+Splunk Observability Cloud allows you to quickly respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
 
 For additional information, see:
 
@@ -47,13 +47,13 @@ The following links access important terms and policies documents that pertain t
 Preview programs
 ===========================================================
 
-Features of Splunk Observability Cloud can be released as Private or Public Previews before reaching General Availability. Each type of release has different support levels and guarantees. Unless otherwise noted, Splunk manages and updates the Splunk Observability Cloud service uniformly, so all customers of Splunk Observability Cloud receive the most current features and functionality.
+Features of Splunk Observability Cloud can be released as Private or Public Previews before reaching General Availability. Each type of release has different support levels and guarantees. Unless otherwise noted, Splunk manages and updates the Splunk Observability Cloud service uniformly, so all customers of Splunk Observability Cloud receive the most current features and functionality at the same time.
 
 - :strong:`Private Preview`: Splunk may release features and products in a Private Preview with limited availability in a test or production environment to capture feedback from customers. Private Previews are limited in scope to a selected set of customers. Private Previews in a production environment are subject to Compliance and Security entrance criteria requirements, CCF compliance will be required at a minimum. Splunk does not offer general support SLA terms.
 
 - :strong:`Public Preview`: A product or feature is ready for use in customer environments upon opt-in and is subject to Splunk Pre-Release Agreement. Splunk may update, change or remove features at Preview without prior notice and will make a best effort to notify customers of any such changes. Preview features are provided without any guarantees, and no formal support assertions or SLA commitments are provided through the Support team. See :new-page:`Splunk Pre-Release Agreement <https://www.splunk.com/en_us/legal/pre-release-agreement-for-hosted-services.html>` for more information.
 
-- :strong:`General Availability`: A products or feature is open to all customers, subject to available regions and compliance tiers, ready for production use, and covered by Splunk's Service-Level Agreements. The products or features at General Availability are considered stable, are fully documented, and are supported through Splunk support channels. Important updates or changes are communicated with prior notice. See :new-page:`Splunk Observability Cloud - Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` for more information.
+- :strong:`General Availability`: A product or feature is open to all customers, subject to available regions and compliance tiers, ready for production use, and covered by Splunk Service-Level Agreements. The products or features at General Availability are considered stable, are fully documented, and are supported through Splunk support channels. Important updates or changes are communicated with prior notice. See :new-page:`Splunk Observability Cloud - Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` for more information.
 
 The following table summarizes the main differences between each type of release:
 
@@ -96,7 +96,7 @@ The following table summarizes the main differences between each type of release
      - Comprehensive
 
 .. note:: 
-    The levels of support described in this section do not apply to open source agents and instrumentations.
+    The levels of support described in this section do not apply to open source agents and instrumentations, like the Splunk distributions of OpenTelemetry.
 
 .. _sd-data:
 
@@ -105,12 +105,24 @@ Data ingestion and retention
 
 Splunk Observability Cloud provides software and APIs that allows you to ingest data from your on-premises infrastructure, applications, user interfaces, cloud services, servers, network devices, and more. Splunk Observability Cloud provides guided setups that help you install and configure OpenTelemetry instrumentation. See :ref:`get-started-get-data-in` for more information.
 
-You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information.
+You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information. 
+
+For more information on SLAs and system limits, see :ref:`sd-slas`.
+
+.. note:: 
+   All editions of Splunk Observability Cloud include Log Observer Connect, which let you to analyze logs you've ingested to Splunk Cloud Platform at no additional costs. See :ref:`lo-connect-landing` for more information.
 
 Splunk OpenTelemetry Collector
 -----------------------------------------------------------
 
 The Splunk Distribution of OpenTelemetry Collector is an open-source software agent capable of collecting metrics and logs from a wide variety of hosts, containers, and services. Setup, configuration, transformation, and sending data from the Collector to your Splunk Observability Cloud account is your responsibility. This means you are responsible for installing, configuring, and managing your Collector instances, including maintaining version compatibility and installing, configuring, and managing Collector components. See :ref:`otel-intro` for more information.
+
+Integration with cloud service providers
+------------------------------------------------------------
+
+You can configure Splunk Observability Cloud to connect to services in AWS, Azure, and Google Cloud Platform to retrieve metrics and logs. See :ref:`get-started-connect` for more information. 
+
+Splunk instrumentation can help you instrument serverless applications to bring traces and application metrics to Splunk Observability Cloud. See :ref:`instrument-serverless-functions` 
 
 APM and RUM OpenTelemetry instrumentation
 -----------------------------------------------------------
@@ -127,6 +139,7 @@ Data retention
 
 When you send data to Splunk Observability Cloud, it is ingested and stored during a period of time that varies depending on the product and type of contract. See :ref:`data-o11y` for more information.
 
+
 .. _sd-subscriptions:
 
 Subscription types, expansions, renewals, and terminations
@@ -137,7 +150,7 @@ Your subscription to Splunk Observability Cloud is volume-based, with two differ
 Host-based subscriptions
 ------------------------------------------------------------
 
-Host-based subscriptions base billing on the total number of unique hosts reporting data to Splunk Observability Cloud on an hourly basis, then calculate the average of those hourly measurements across each billing month. The calculation is done for each host, container, custom metric, and high resolution metric. A host is a physical, non-virtualized environment, or a virtual instance in virtualized or public cloud environment, that reports metric data to Splunk Observability Cloud. You can increase the amount of hosts or containers per host if needed.
+Host-based subscriptions base billing on the total number of unique hosts reporting data to Splunk Observability Cloud on an hourly basis, then calculate the average of those hourly measurements across each billing month. The calculation is done for each host, container, custom metric, and high resolution metric. A host is a physical, non-virtualized environment, or a virtual instance in a virtualized or public cloud environment, that reports metric data to Splunk Observability Cloud. You can increase the amount of hosts or containers per host if needed.
 
 Usage-based subscription
 ---------------------------------------------
@@ -149,8 +162,6 @@ Overages
 
 Observability Cloud monthly charges are based on average usage during the month. Overages are incurred only if the average monthly usage is higher than your allocation and automatic invoicing for overages isn't active. You can get daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts to check remaining purchased capacity. See :ref:`subscription-overview` for more information.
 
-.. note:: 
-   All editions of Splunk Observability Cloud include Log Observer Connect, which let you to analyze logs you've ingested to Splunk Cloud Platform at no additional costs. See :ref:`lo-connect-landing` for more information.
 
 .. _sd-subscription:
 
@@ -212,7 +223,7 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
 For additional information, see:
 
 - :ref:`Note about realms<about-realms>`
-- :new-page:` <https://www.splunk.com/en_us/observability/observability-for-google-cloud-environments.html>`
+- :new-page:`Observability for Google Cloud Environments <https://www.splunk.com/en_us/observability/observability-for-google-cloud-environments.html>`
 
 .. _sd-compliance:
 
@@ -280,7 +291,7 @@ For additional information, see:
 Service level agreements
 ===========================================================
 
-The :new-page:`Splunk Observability Cloud Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` document describes the uptime SLA and exclusions. You may claim service credits in the event of SLA failures, as set forth in our current SLA schedule.
+The :new-page:`Splunk Observability Cloud Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` document describes the uptime SLA and exclusions. You may claim service credits in the event of SLA failures, as set forth in the current Splunk SLA schedule.
 
 Per product system limits
 -------------------------------------------
