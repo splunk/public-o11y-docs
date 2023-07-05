@@ -110,7 +110,7 @@ You can monitor subscription usage for each product depending on the type of sub
 For more information on SLAs and system limits, see :ref:`sd-slas`.
 
 .. note:: 
-   All editions of Splunk Observability Cloud include Log Observer Connect, which let you to analyze logs you've ingested to Splunk Cloud Platform at no additional costs. See :ref:`lo-connect-landing` for more information.
+   All editions of Splunk Observability Cloud include Log Observer Connect, which let you analyze logs you've ingested to Splunk Cloud Platform at no additional costs. See :ref:`lo-connect-landing` for more information.
 
 Splunk OpenTelemetry Collector
 -----------------------------------------------------------
