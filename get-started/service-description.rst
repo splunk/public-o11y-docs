@@ -124,7 +124,7 @@ You can configure Splunk Observability Cloud to connect to services in AWS, Azur
 
 Splunk instrumentation can help you instrument serverless applications to bring traces and application metrics to Splunk Observability Cloud. See :ref:`instrument-serverless-functions` 
 
-APM and RUM OpenTelemetry instrumentation
+Splunk distributions of OpenTelemetry instrumentation
 -----------------------------------------------------------
 
 The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and librarios is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` for more information.
@@ -272,7 +272,7 @@ Splunk has attained a number of compliance attestations and certifications from 
 Realm security
 ------------------------------------------------------------
 
-Every realm in Splunk Observability Cloud runs in a secured environment on a stable operating system and in a network that is hardened to industry standards. Your deployment is regularly scanned for threats.
+Every realm in Splunk Observability Cloud runs in a secured environment on a stable operating system and in a network that is hardened to industry standards. Realms are regularly scanned for threats.
 
 User authentication and access
 ------------------------------------------------------
@@ -322,7 +322,7 @@ See :ref:`supported-browsers` for more information.
 Technical support
 ===========================================================
 
-All Splunk Observability Cloud subscriptions include either Standard Success Plan or Premium Success Plan. For more information regarding Splunk Cloud Platform support terms and program options, see :new-page:`https://www.splunk.com/en_us/support-and-services/support-programs.html <https://www.splunk.com/en_us/support-and-services/support-programs.html>`. You should also note the following:
+Splunk Observability Cloud subscriptions include either Standard Success Plan or Premium Success Plan. For more information regarding Splunk Cloud Platform support terms and program options, see :new-page:`Splunk Support Programs <https://www.splunk.com/en_us/support-and-services/support-programs.html>`. You should also note the following:
 
 - Splunk Observability Cloud is compatible with multiple options to ingest your data, so it is your responsibility to ensure the correct data collection method is configured for your data sources.
 - To use multifactor authentication for your Splunk Observability Cloud user accounts, you must use a SAML 2.0 identity provider that supports multifactor authentication. It is your responsibility to ensure your Splunk Observability Cloud user accounts are properly configured for multifactor authentication.
