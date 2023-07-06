@@ -25,6 +25,7 @@ extensions = [
     'optimizer',
     'myst_parser',
     'sphinx_tabs.tabs',
+    'sphinxcontrib.mermaid',
     'olly_on_git_hub'
 ]
 
