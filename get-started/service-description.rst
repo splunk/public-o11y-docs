@@ -18,7 +18,7 @@ This document also notes your responsibilities as a subscriber to the service. B
 Overview of Splunk Observability Cloud
 ===========================================================
 
-Splunk Observability Cloud is a SaaS solution for infrastructure monitoring, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, always-on profiling, and incident intelligence. Observability Cloud also provides a direct integration with Splunk Cloud Platform logs through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
+Splunk Observability Cloud is a SaaS solution for infrastructure monitoring, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, always-on profiling, and incident intelligence. Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
 
 Splunk Observability Cloud allows you to quickly respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
 
@@ -103,7 +103,7 @@ The following table summarizes the main differences between each type of release
 Data ingestion and retention
 ===========================================================
 
-Splunk Observability Cloud provides software and APIs that allows you to ingest data from your on-premises infrastructure, applications, user interfaces, cloud services, servers, network devices, and more. Splunk Observability Cloud provides guided setups that help you install and configure OpenTelemetry instrumentation. See :ref:`get-started-get-data-in` for more information.
+Splunk Observability Cloud provides software and APIs that allow you to ingest data from your on-premises infrastructure, applications, user interfaces, cloud services, servers, network devices, and more. Splunk Observability Cloud provides guided setups that help you install and configure OpenTelemetry instrumentation. See :ref:`get-started-get-data-in` for more information.
 
 You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information. 
 
@@ -127,7 +127,7 @@ Splunk instrumentation can help you instrument serverless applications to bring 
 Splunk distributions of OpenTelemetry instrumentation
 -----------------------------------------------------------
 
-The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and librarios is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` for more information.
+The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and libraries is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` for more information.
 
 Ingest API endpoints
 -------------------------------------------------------------
@@ -137,7 +137,7 @@ You can use the REST API to send telemetry directly to Splunk Observability Clou
 Data retention
 -------------------------------------------------------------
 
-When you send data to Splunk Observability Cloud, it is ingested and stored during a period of time that varies depending on the product and type of contract. See :ref:`data-o11y` for more information.
+When you send data to Splunk Observability Cloud, it is ingested and stored for a period of time that varies depending on the product and type of contract. See :ref:`data-o11y` for more information.
 
 
 .. _sd-subscriptions:
@@ -160,7 +160,7 @@ Usage-based pricing is suited for monitoring serverless environments or cloud se
 Overages
 ----------------------------------------------
 
-Observability Cloud monthly charges are based on average usage during the month. Overages are incurred only if the average monthly usage is higher than your allocation and automatic invoicing for overages isn't active. You can get daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts to check remaining purchased capacity. See :ref:`subscription-overview` for more information.
+Observability Cloud monthly charges are based on average usage during the month. For Splunk APM, the 50% of the peak of all the per minute measurements of the billing month is also taken into account. Overages are incurred only if the average monthly usage is higher than your allocation and automatic invoicing for overages isn't active. You can get daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts to check remaining purchased capacity. See :ref:`subscription-overview` for more information.
 
 
 .. _sd-subscription:
@@ -177,7 +177,7 @@ You can update or expand your Splunk Observability Cloud subscription anytime du
 
 Observability Cloud informs about the need for renewal through a banner that appears 15 days prior to the subscription expiration date. For more information on subscription renewals, contact your Splunk sales representative.
 
-After the 15 days grace period, if your Splunk Observability Cloud subscription expires and no temporary extension is submitted on your behalf by your Splunk sales representative, the subscription enters suspended mode for another 30 days. After the 30 days suspension, the account is decommissioned and the account is terminated.
+After the 15 days grace period, if your Splunk Observability Cloud subscription expires and no temporary extension is submitted on your behalf by your Splunk sales representative, the subscription enters suspended mode for another 30 days. After the 30 days suspension, the account is terminated and the data stored on the account is deleted.
 
 For additional information, see:
 
@@ -237,6 +237,10 @@ Splunk has attained a number of compliance attestations and certifications from 
 - :strong:`Health Insurance Portability and Accountability Act (HIPAA)`: Splunk Observability Cloud is compliant with the HIPAA Security Rule and HITECH Breach Notification Requirements. These regulations establish a standard for the security of any entity that accesses, processes, transmits, or stores electronic protected health information (ePHI).
 
 For information regarding the availability of service components between the AWS and Google Cloud regions, see :ref:`sd-regions`.
+
+For additional information, see:
+
+- :new-page:`Compliance at Splunk <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy/compliance-at-splunk.html>`
 
 .. _sd-security:
 
@@ -306,7 +310,7 @@ You can check the current status of Splunk Observability Cloud realms through th
 
 .. _sd-compatibility:
 
-Supported versions
+Supported browsers
 ===========================================================
 
 Splunk Observability Cloud works as expected when using the latest and next-to-latest official releases of the following browsers:
