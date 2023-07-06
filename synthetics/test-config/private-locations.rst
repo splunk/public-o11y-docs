@@ -50,7 +50,6 @@ Requirements
         * ``*.signalfx.com`` 
         * ``*.amazonaws.com``
         * ``quay.io/signalfx``
-
   * - Operating system   
     -  Linux, Windows1, or OSX1
 
@@ -85,6 +84,54 @@ Each private location has a corresponding private location ID. With this ID, you
 Manage your tokens
 --------------------
 It is your responsibility to update and manage your tokens. For added security, create a secret environment variable for your token in Docker. Consider creating a second token to provide coverage before your first token expires.
+
+
+Working with Docker 
+======================================
+Here is some guidance for working with Docker. 
+
+Limit logging in Docker 
+------------------------------------
+
+Follow these steps to limit logging:
+
+#. Create a file ``/etc/docker/daemon.json`` in .... 
+#. In the file, add 
+
+.. code:: yaml
+
+    {
+      "log-driver": "local",
+      "log-opts": {
+        "max-size": "10m",
+        "max-file": "3"
+      }
+    }
+
+#. Restart your docker service: ``sudo systemctl docker.service restart``.
+
+
+Deactivate network shaping for your private runner 
+------------------------------------------------------
+Launch your Docker container with the following environment variable: ``-e "DISABLE_NETWORK_SHAPING=true"``
+
+
+Adding certificates in Synthetics
+------------------------------------------------------
+Splunk Synthetic Monitoring supports injecting custom root CA certs for any tests running from your private locations. Client keys and certificates aren't supported at this time. 
+
+#. Create a folder called ``certs`` on your host machine and place the CA Certificate (in CRT format) in the folder.
+
+#. Add the certs folder as a volume to the container ``(-v ./certs:/usr/local/share/ca-certificates/my_certs/)``.
+
+#. Modify the command you use when launching the container to update the CA Certificate cache before starting the agent binary ``(bash -c "sudo update-ca-certificates && bundle exec bin/start_runner)``.
+
+
+For example, here is what a command might look like after you modify it to fit your environment:  
+
+``docker run --privileged --cap-add NET_ADMIN -e "DISABLE_NETWORK_SHAPING=true" -e "RUNNER_TOKEN=<insert-token>" --volume=`pwd`/certs:/usr/local/share/ca-certificates/my_certs/ quay.io/signalfx/splunk-synthetics-runner:latest bash -c "sudo update-ca-certificates && bundle exec bin/start_runner"``
+
+
 
 
 
