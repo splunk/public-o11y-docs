@@ -133,7 +133,7 @@ The following settings control trace exporters and their endpoints:
      - Argument to ``start()``
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - ``traces.tracesExporter``
+     - ``tracing.spanExporterFactory``
      - Comma-separated list of trace exporters to use. The default value is ``otlp``. To output to the console, set the variable to ``console``.
    * - ``OTEL_METRICS_EXPORTER``
      - ``metrics.metricReaderFactory`` 

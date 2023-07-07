@@ -46,7 +46,7 @@ Make sure that the URL you provide to reach the FPM status page through your web
 
 To activate this integration, add the following to your Collector configuration:
 
-```
+```yaml
 receivers:
   smartagent/ collectd/php-fpm:
     type: collectd/php-fpm
@@ -55,11 +55,26 @@ receivers:
 
 Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
-```
+```yaml
 service:
   pipelines:
     metrics:
       receivers: [smartagent/collectd/php-fpm]
+```
+
+### Advanced configuration example
+
+See the following config options:
+
+```yaml
+receivers:
+  smartagent/ collectd/php-fpm:
+    type: collectd/php-fpm
+    host: localhost
+    port: 80
+    useHTTPS: true # will be ignored
+    url: "http://{{.host}}:{{.port}}/fpm-status?json"    
+    ... # Additional config
 ```
 
 ### Configuration settings
