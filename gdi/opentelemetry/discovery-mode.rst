@@ -12,7 +12,7 @@ Discover and configure metrics sources automatically
       :description: Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
 
 Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
-a configuration based on the results. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, the Collector generates configuration you can modify and use.
+a configuration based on the results. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
 
 The main advantage of using discovery mode is that you don't need to manually update the OpenTelemetry Collector configuration for supported metric sources. This is helpful in environments when you deploy and activate host services dynamically or when adding a new supported target database to your infrastructure.
 
