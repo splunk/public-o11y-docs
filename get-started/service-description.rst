@@ -9,24 +9,13 @@ Splunk Observability Cloud service description
 .. meta::
     :description: Features, capabilities, limitations, and constraints of Splunk Observability Cloud, as well as Splunk's responsibilities as Software as a Service provider.
 
-Welcome to the Splunk Observability Cloud Platform service description. This document describes the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and the responsibilities of Splunk to you as a Software as a Service provider. 
+Welcome to the Splunk Observability Cloud Platform service description. 
 
-This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following sections. If you have questions after reading any of this material, contact your Splunk sales representative.
+Splunk Observability Cloud is a SaaS solution for infrastructure monitoring, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, and incident intelligence. Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud Platform through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
 
-.. _sd-overview:
+Splunk Observability Cloud allows you to respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
 
-Overview of Splunk Observability Cloud
-===========================================================
-
-Splunk Observability Cloud is a SaaS solution for infrastructure monitoring, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, and incident intelligence. Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
-
-Splunk Observability Cloud allows you to quickly respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
-
-For additional information, see:
-
-- :ref:`get-started-get-data-in`
-- :ref:`get-started-glossary`
-- :new-page:`Splunk Observability <https://www.splunk.com/en_us/products/observability.html>` on Splunk.com
+This document describes the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and the responsibilities of Splunk to you as a Software as a Service provider. This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following sections. If you have questions after reading any of this material, contact your Splunk sales representative.
 
 .. _sd-terms-policies:
 
