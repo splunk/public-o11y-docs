@@ -121,7 +121,7 @@ Specify custom discovery properties at runtime
 
 Use the ``--discovery-properties=<filepath.yaml>`` argument to load discovery mode properties that you don't want to share with other Collectors. If you specify discovery properties using this argument, properties contained in ``config.d/properties.discovery.yaml`` are ignored.
 
-.. _configd_file:
+.. _configd-file:
 
 Define properties through a configuration file
 ------------------------------------------------
