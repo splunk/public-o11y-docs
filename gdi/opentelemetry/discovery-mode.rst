@@ -85,20 +85,13 @@ To fix most of the issues identified by discovery mode, add or edit the configur
 
    .. code-block:: yaml
 
-      # --set form will take priority to mapped values
-      splunk.discovery.receivers.prometheus_simple.config.labels::my_label: my_label_value
-      splunk.discovery.receivers.prometheus_simple.enabled: true
-
-      # mapped property form
       splunk.discovery:
-      extensions:
-         docker_observer:
-            enabled: false
+        receivers:
+           smartagent/postgresql:
             config:
-            endpoint: tcp://localhost:54321
-      receivers:
-         prometheus_simple:
-            enabled: false # will be overwritten by above --set form (discovery is attempted for the receiver)
+              params:
+                username: "${PG_USERNAME_ENVVAR}"
+                password: "${PG_PASSWORD_ENVVAR}"
 
 - Set the environment variable for the setting. Each discovery property has an equivalent environment variable form using ``_x<hex pair>_`` encoded delimiters for non-word characters ``[^a-zA-Z0-9_]``:
 
