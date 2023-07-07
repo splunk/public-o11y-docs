@@ -58,7 +58,7 @@ Deploy one of the following packages to gather data for Infrastructure Monitorin
 * Splunk Distribution of OpenTelemetry Collector for Linux or ``splunk-otel-collector``. See :ref:`Install on Linux (script) <otel-install-linux>` or :ref:`Install on Linux (manual) <otel-install-linux-manual>`.
 * Splunk Distribution of OpenTelemetry Collector for Windows or ``splunk-otel-collector``. See :ref:`Install on Windows (script) <otel-install-windows>` or :ref:`Install on Windows (manual) <otel-install-windows-manual>`.
 
-See also :ref:`Other deployment tools and options <otel_deployments>`.
+See also :ref:`other deployment tools and options <otel_deployments>`.
 
 .. raw:: html
 
