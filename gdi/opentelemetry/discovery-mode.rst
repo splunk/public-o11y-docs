@@ -27,7 +27,7 @@ For any receiver that successfully retrieves metrics, the Collector translates t
 
 At the same, the Collector adds the configuration to the ``metrics`` pipeline at runtime, unless you run the Collector using ``--dry-run``, in which case it outputs the configuration to the terminal.
 
-For any receiver that can establish a connection with a service, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry.
+For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry.
 
 
 Supported host services and applications
