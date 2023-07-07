@@ -47,7 +47,7 @@ Discovery mode supports the following host services and applications:
      - Smart Agent with collectd/mysql monitor type. See :ref:`mysql`.
 
    * - PostgreSQL
-     - :ref:`postgresql-receiver`
+     - Smart Agent with postgresql monitor type. See :ref:`postgresql`.
 
    * - NGINX
      - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
@@ -63,10 +63,17 @@ To discover any active and supported metric sources, run the following command o
 
 The ``--dry-run`` option ensures that the resulting configuration isn't applied to the Collector at runtime. The sample configuration appears in the console as YAML instead. For example:
 
-.. code-block:: bash
+.. code-block:: text
 
    $ Discovering for next 10s...
-   Partially discovered "smartagent/postgresql" using "docker_observer" endpoint "5c9c80ba4319395c26255b6374f048ca973d3618fdd4b92a9ed601c7dddbff6a:5432": Please ensure your user credentials are correctly specified with `--set splunk.discovery.receivers.smartagent/postgresql.config.params::username="<username>"` and `--set splunk.discovery.receivers.smartagent/postgresql.config.params::password="<password>"` or `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="<username>"` and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_password="<password>"` environment variables. (evaluated "{\"error\":\"failed to determine total_time column name: pq: password authentication failed for user \\\"splunk.discovery.default\\\"\",\"host\":\"172.17.0.2\",\"kind\":\"receiver\",\"message\":\"could not monitor postgresql server: failed to determine total_time column name: pq: password authentication failed for user \\\"splunk.discovery.default\\\"\",\"monitorType\":\"postgresql\",\"port\":\"5432\"}")
+   Partially discovered "smartagent/postgresql" using "docker_observer"
+   endpoint "5c9c80ba4319395c26255b6374f048ca973d3618fdd4b92a9ed601c7dddbff6a:5432":
+   Please ensure your user credentials are correctly specified with 
+   `--set splunk.discovery.receivers.smartagent/postgresql.config.params::username="<username>"`
+   and `--set splunk.discovery.receivers.smartagent/postgresql.config.params::password="<password>"`
+   or `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="<username>"`
+   and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_password="<password>"`
+   environment variables.
 
 When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials.
 
@@ -81,18 +88,6 @@ To fix most of the issues identified by discovery mode, add or edit the configur
 
       --set splunk.discovery.receivers.smartagent/postgresql.config.params::username="${PG_USERNAME_ENVVAR}"
 
-- Define the properties in the ``config.d/properties.discovery.yaml`` file. For example:
-
-   .. code-block:: yaml
-
-      splunk.discovery:
-        receivers:
-           smartagent/postgresql:
-            config:
-              params:
-                username: "${PG_USERNAME_ENVVAR}"
-                password: "${PG_PASSWORD_ENVVAR}"
-
 - Set the environment variable for the setting. Each discovery property has an equivalent environment variable form using ``_x<hex pair>_`` encoded delimiters for non-word characters ``[^a-zA-Z0-9_]``:
 
    For example:
@@ -101,9 +96,11 @@ To fix most of the issues identified by discovery mode, add or edit the configur
 
          export SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="${PG_USERNAME_ENVVAR}"
 
+- Define the properties in the ``config.d/properties.discovery.yaml`` file. See :ref:`configd-file`.
+
 When issues are detected, discovery mode suggests which parameters and environment variables you've to use to complete the missing configuration settings.
 
-.. note:: By default, the duration of the discovery process is 10 seconds, which you can increase by setting the ``SPLUNK_DISCOVERY_DURATION`` environment variable.
+.. note:: By default, the duration of the discovery process is 10 seconds, which you can increase by setting the ``SPLUNK_DISCOVERY_DURATION`` environment variable. For example: ``export SPLUNK_DISCOVERY_DURATION = 20s``.
 
 Customize discovery settings
 ==========================================
@@ -123,6 +120,24 @@ Specify custom discovery properties at runtime
 -----------------------------------------------------
 
 Use the ``--discovery-properties=<filepath.yaml>`` argument to load discovery mode properties that you don't want to share with other Collectors. If you specify discovery properties using this argument, properties contained in ``config.d/properties.discovery.yaml`` are ignored.
+
+.. _configd_file:
+
+Define properties through a configuration file
+------------------------------------------------
+
+You can override or add properties using the ``etc/otel/collector/config.d/properties.discovery.yaml`` file. For example:
+
+   .. code-block:: yaml
+
+      splunk.discovery:
+        receivers:
+           smartagent/postgresql:
+            config:
+              params:
+                username: "${PG_USERNAME_ENVVAR}"
+                password: "${PG_PASSWORD_ENVVAR}"
+
 
 Create custom configurations
 ---------------------------------------------
@@ -152,6 +167,8 @@ Custom configurations consist of the fields you want to override in the default 
                <discovery receiver metric status entries>
             statements:
                <discovery receiver statement status entries>
+
+See the :new-page:`Discovery receiver README file <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/receiver/discoveryreceiver/README.md>` for more information.
 
 To turn on custom configurations, use the ``--configd`` argument. To source only ``config.d`` content and deactivate any other custom or default configuration, set ``--config`` to ``/dev/null``. For example:
 
