@@ -103,7 +103,7 @@ copybutton_line_continuation_character = "\\"
 linkcheck_anchors = False
 linkcheck_workers = 3
 linkcheck_exclude_documents = [r'_.*', r'\.github', r'myst_parser', r'tests']
-linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*\<.*',r'https://api.*',r'https://rum-ingest.*',r'https://proxy.*',r'https://example.*', r'https://domain.com.*', r'.*domain/path.*', r'.*signalfx.com.*', r'.*your_realm.*']
+linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*\<.*',r'https://api.*',r'https://rum-ingest.*',r'https://proxy.*',r'https://example.*', r'https://domain.com.*', r'.*domain/path.*', r'.*signalfx.com.*', r'.*your_realm.*', r'.*your_doman.*']
 
 # ROLES AND MACROS
 #######################
