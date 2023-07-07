@@ -251,11 +251,6 @@ Splunk retains Customer Content stored in its cloud computing services for at le
 
 For information on data retention, see :ref:`sd-data`.
 
-Isolation of data and service
-------------------------------------------------------------
-
-Your data is logically isolated from other customers' data, so your performance and data integrity cannot be affected by other customers who are using Splunk Observability Cloud.
-
 Security controls and compliance
 ------------------------------------------------------
 
