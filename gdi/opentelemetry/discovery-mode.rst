@@ -23,7 +23,7 @@ How discovery mode works
 
 When you run the Collector in discovery mode, it tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions.
 
-For any receiver that successfully retrieves metrics, the Collector translates the discovery configuration to a receiver creator instance with the known working rules. See :ref:`receiver-creator-receiver` for more information.
+For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. Any target-specific configuration values that are required, for example authentication information, can be established by discovery properties to tune the discovery process.
 
 At the same, the Collector adds the configuration to the ``metrics`` pipeline at runtime, unless you run the Collector using ``--dry-run``, in which case it outputs the configuration to the terminal.
 
