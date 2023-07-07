@@ -27,7 +27,7 @@ Perform the following steps:
 
    #. Select :guilabel:`ServiceNow Incident Intelligence`.
 
-#. By default, the name of the integration is :guilabel:`ServiceNow`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :new-page:`About naming your integrations <naming-note>`.
+#. By default, the name of the integration is :guilabel:`ServiceNow`. Give your integration a unique and descriptive name. For information about the downstream use of this name, see :ref:`About naming your integrations <naming-note>`.
 #. Enter the :guilabel:`ServiceNow URL` for the instance.
 #. In the :strong:`Username or Client` field, enter the user ID from ServiceNow or the Oauth client ID.
 #. In the :strong:`Password or Client` field, enter the password from ServiceNow or the Oauth client secret.
