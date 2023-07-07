@@ -50,7 +50,7 @@ Discovery mode supports the following host services and applications:
      - :ref:`postgresql-receiver`
 
    * - NGINX
-     - Smart Agent with MySQL monitor type. See :ref:`nginx`.
+     - Smart Agent with collectd/nginx monitor type. See :ref:`nginx`.
 
 Discover active metric sources
 =========================================
