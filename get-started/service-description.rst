@@ -11,9 +11,9 @@ Splunk Observability Cloud service description
 
 Welcome to the Splunk Observability Cloud Platform service description. 
 
-Splunk Observability Cloud is a SaaS solution for infrastructure monitoring, APM (application performance monitoring), RUM (real user monitoring), synthetic monitoring, and incident intelligence. Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud Platform through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
+Splunk Observability Cloud is a SaaS solution for infrastructure monitoring (IMM), application performance monitoring (APM), real user monitoring (RUM), synthetic monitoring, and incident intelligence. Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud Platform through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
 
-Splunk Observability Cloud allows you to respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
+Splunk Observability Cloud allows you to respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your environment, Observability Cloud transforms it into actionable insights in the form of dashboards, visualizations, alerts, and more.
 
 This document describes the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and the responsibilities of Splunk to you as a Software as a Service provider. This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following sections. If you have questions after reading any of this material, contact your Splunk sales representative.
 
@@ -25,11 +25,11 @@ Service term and policies
 The following links access important terms and policies documents that pertain to the Splunk Observability Cloud service. Be sure to read these documents to have a clear understanding of the service. If you have any questions, contact your Splunk sales representative.
 
 - :new-page:`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`
+- :new-page:`Specific Terms for Splunk Observability Cloud <https://www.splunk.com/en_us/legal/splunk-specific-terms.html#splunk-observability-cloud>`
 - :new-page:`Splunk Observability Cloud - Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>`
 - :new-page:`Splunk Support <https://www.splunk.com/en_us/customer-success/support-programs.html>`
 - :new-page:`Splunk Data Security and Privacy <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy.html>`
 - :new-page:`Splunk Observability Cloud - Security Addendum <https://www.splunk.com/en_us/legal/splunk-observability-security-addendum.html>`
-- :new-page:`Specific Terms for Splunk Observability Cloud <https://www.splunk.com/en_us/legal/splunk-specific-terms.html#splunk-observability-cloud>`
 
 .. _sd-previews:
 
@@ -94,10 +94,6 @@ Data ingestion and retention
 
 Splunk Observability Cloud provides software and APIs that allow you to ingest data from your on-premises infrastructure, applications, user interfaces, cloud services, servers, network devices, and more. Splunk Observability Cloud provides guided setups that help you install and configure OpenTelemetry instrumentation. See :ref:`get-started-get-data-in` for more information.
 
-You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information. 
-
-For more information on SLAs and system limits, see :ref:`sd-slas`.
-
 .. note:: 
    All editions of Splunk Observability Cloud include Log Observer Connect, which let you analyze logs you've ingested to Splunk Cloud Platform at no additional costs. See :ref:`lo-connect-landing` for more information.
 
@@ -128,13 +124,17 @@ Data retention
 
 When you send data to Splunk Observability Cloud, it is ingested and stored for a period of time that varies depending on the product and type of contract. See :ref:`data-o11y` for more information.
 
+You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information. 
+
+For more information on SLAs and system limits, see :ref:`sd-slas`.
+
 
 .. _sd-subscriptions:
 
 Subscription types, expansions, renewals, and terminations
 ===========================================================
 
-Your subscription to Splunk Observability Cloud is volume-based, with two different types depending on the product or feature: host-based or usage-based. Both types include either Standard or Premium Support and Success plans.
+Your subscription to Splunk Observability Cloud depends on the Splunk product: host-based or usage-based for Splunk IM and APM, or web sessions for Splunk RUM or synthetics check for Splunk Synthetics. 
 
 Host-based subscriptions
 ------------------------------------------------------------
@@ -149,7 +149,7 @@ Usage-based pricing is suited for monitoring serverless environments or cloud se
 Overages
 ----------------------------------------------
 
-Observability Cloud monthly charges are based on average usage during the month. For Splunk APM, the 50% of the peak of all the per minute measurements of the billing month is also taken into account. Overages are incurred only if the average monthly usage is higher than your allocation and automatic invoicing for overages isn't active. You can get daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts to check remaining purchased capacity. See :ref:`subscription-overview` for more information.
+Observability Cloud usage is based on usage measured over a month. Overages are incurred if the monthly usage is higher than your paid subscription. Splunk Observability provides transparent usage data with granular daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts or setup tokens to manage your usage. See :ref:`subscription-overview` for more information.
 
 
 .. _sd-subscription:
@@ -161,8 +161,7 @@ You can update or expand your Splunk Observability Cloud subscription anytime du
 
 - Increase host-based or usage-based capacity.
 - Add products and features to your subscription.
-- Upgrade the type of Success and Support level.
-- Upgrade to Enterprise with Service Bureau features.
+- Upgrade to enterprise edition licensing with Service Bureau features.
 
 Observability Cloud informs about the need for renewal through a banner that appears 15 days prior to the subscription expiration date. For more information on subscription renewals, contact your Splunk sales representative.
 
@@ -315,7 +314,7 @@ See :ref:`supported-browsers` for more information.
 Technical support
 ===========================================================
 
-Splunk Observability Cloud subscriptions include either Standard Success Plan or Premium Success Plan. For more information regarding Splunk Cloud Platform support terms and program options, see :new-page:`Splunk Support Programs <https://www.splunk.com/en_us/support-and-services/support-programs.html>`. You should also note the following:
+Splunk Observability Cloud subscriptions include technical support. For more information regarding support terms and program options, see :new-page:`Splunk Support Programs <https://www.splunk.com/en_us/support-and-services/support-programs.html>`. Also note the following:
 
 - Splunk Observability Cloud is compatible with multiple options to ingest your data, so it is your responsibility to ensure the correct data collection method is configured for your data sources.
 - To use multifactor authentication for your Splunk Observability Cloud user accounts, you must use a SAML 2.0 identity provider that supports multifactor authentication. It is your responsibility to ensure your Splunk Observability Cloud user accounts are properly configured for multifactor authentication.
