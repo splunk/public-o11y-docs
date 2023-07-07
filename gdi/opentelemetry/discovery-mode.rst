@@ -29,6 +29,7 @@ At the same, the Collector adds the configuration to the ``metrics`` pipeline at
 
 For any receiver that can establish a connection with a service, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry.
 
+
 Supported host services and applications
 =========================================
 
@@ -48,6 +49,9 @@ Discovery mode supports the following host services and applications:
    * - PostgreSQL
      - :ref:`postgresql-receiver`
 
+   * - NGINX
+     - Smart Agent with MySQL monitor type. See :ref:`nginx`.
+
 Discover active metric sources
 =========================================
 
@@ -66,12 +70,45 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
 
 When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials.
 
+Configure or fix discovery properties
+==================================================
+
 To fix most of the issues identified by discovery mode, add or edit the configuration settings suggested in the status messages. You can define the required settings in the following ways:
 
-- Use the ``--set`` option to specify settings to be used by discovery mode at runtime.
-- Set the environment variable for the setting.
+- Use the ``--set`` option to specify settings to be used by discovery mode at runtime. For example:
 
-In both cases, discovery mode suggests which paramenters and environment variables you've to use to complete the missing configuration settings.
+   .. code-block:: bash
+
+      --set splunk.discovery.receivers.smartagent/postgresql.config.params::username="<username>"
+
+- Define the properties in the ``config.d/properties.discovery.yaml`` file. For example:
+
+   .. code-block:: yaml
+
+      # --set form will take priority to mapped values
+      splunk.discovery.receivers.prometheus_simple.config.labels::my_label: my_label_value
+      splunk.discovery.receivers.prometheus_simple.enabled: true
+
+      # mapped property form
+      splunk.discovery:
+      extensions:
+         docker_observer:
+            enabled: false
+            config:
+            endpoint: tcp://localhost:54321
+      receivers:
+         prometheus_simple:
+            enabled: false # will be overwritten by above --set form (discovery is attempted for the receiver)
+
+- Set the environment variable for the setting. Each discovery property has an equivalent environment variable form using ``_x<hex pair>_`` encoded delimiters for non-word characters ``[^a-zA-Z0-9_]``:
+
+   For example:
+
+      .. code-block:: bash
+
+         export SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="<username>"
+
+When issues are detected, discovery mode suggests which parameters and environment variables you've to use to complete the missing configuration settings.
 
 .. note:: By default, the duration of the discovery process is 10 seconds, which you can increase by setting the ``SPLUNK_DISCOVERY_DURATION`` environment variable.
 
@@ -79,6 +116,23 @@ Customize discovery settings
 ==========================================
 
 By default, discovery mode reads the built-in configuration provided by the Collector executable. You can provide your own configuration to modify settings or adjust the existing configuration in case of a partial discovery status.
+
+The priority order for discovery configuration values from lowest to highest is:
+
+- Default ``bundle.d`` component configuration files
+- ``config.d/<receivers or extensions>/*.discovery.yaml`` component configuration files
+- ``config.d/properties.discovery.yaml`` properties file content in mapped form
+- ``config.d/properties.discovery.yaml`` properties file content using ``--set`` form
+- ``SPLUNK_DISCOVERY_<xyz>`` property environment variables available to the Collector process
+- ``--set splunk.discovery.<xyz>`` property command line options
+
+Specify custom discovery properties at runtime
+-----------------------------------------------------
+
+Use the ``--discovery-properties=<filepath.yaml>`` argument to load discovery mode properties that you don't want to share with other Collectors. If you specify discovery properties using this argument, properties contained in ``config.d/properties.discovery.yaml`` are ignored.
+
+Create custom configurations
+---------------------------------------------
 
 To create custom discovery configurations, follow these steps:
 
@@ -90,28 +144,39 @@ Custom configurations consist of the fields you want to override in the default 
 
 .. code-block:: yaml
 
-    smartagent/postgresql:
-      rule:
-        # Only overrides this field with port 9871
-        docker_observer: type == "container" and port == 9871
+    # <some-receiver-type-with-optional-name.discovery.yaml>
+      <receiver_type>(/<receiver_name>):
+         enabled: <true | false> # true by default
+         rule:
+            <observer_type>(/<observer_name>): <receiver creator rule for this observer>
+         config:
+            default:
+               <default embedded receiver config>
+            <observer_type>(/<observer_name>):
+               <observer-specific config items, merged with `default`>
+         status:
+            metrics:
+               <discovery receiver metric status entries>
+            statements:
+               <discovery receiver statement status entries>
 
-If you prefer to override settings from the console, use the ``--set`` option when running the Collector. This is useful in environments like Kubernetes. For example:
+To turn on custom configurations, use the ``--configd`` argument. To source only ``config.d`` content and deactivate any other custom or default configuration, set ``--config`` to ``/dev/null``. For example:
 
 .. code-block:: bash
 
-    otelcol --config /dev/null --discovery \
-    --set splunk.discovery.receivers.extensions.docker_observer.config.endpoint="tcp://0.0.0.0:543"
+   bin/otelcol --config /dev/null --configd --dry-run
 
 Use the ``--dry-run`` option to check the resulting discovery configuration before using it with the Collector.
 
 Define a custom configuration directory
-------------------------------------------------
+-----------------------------------------------------
 
 To define a custom directory for discovery settings, use the ``--config-dir`` option as in the example:
 
 .. code-block:: text
 
     otelcol --discovery --config-dir <custom_path>
+
 
 Troubleshooting
 ======================
