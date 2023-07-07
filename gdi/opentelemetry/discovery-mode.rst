@@ -79,7 +79,7 @@ To fix most of the issues identified by discovery mode, add or edit the configur
 
    .. code-block:: bash
 
-      --set splunk.discovery.receivers.smartagent/postgresql.config.params::username="<username>"
+      --set splunk.discovery.receivers.smartagent/postgresql.config.params::username="${PG_USERNAME_ENVVAR}"
 
 - Define the properties in the ``config.d/properties.discovery.yaml`` file. For example:
 
