@@ -82,9 +82,12 @@ Use variables to fill in fields, provide URLs, and enter other information durin
   </embed>
 
 
-Specify locations for your tests to simulate traffic from a range of checkpoints around the world, or use Private locations to test sites from within a private network.
+Specify locations for your tests to simulate traffic from a range of checkpoints around the world, or use private locations to test sites from within a private network.
 
-See :ref:`public-locations` for a list of available public locations. 
+For more, see: 
+
+* :ref:`public-locations` 
+* :ref:`private-locations`
 
 .. * See :ref:`private-locations` to set up private locations. 
 
@@ -120,3 +123,18 @@ The current status of a test is updated every time you load the :guilabel:`Test 
 
 
 
+.. raw:: html
+
+  <embed>
+    <h2>Test naming conventions</h2>
+  </embed>
+
+Choosing informative names for your tests and alerts helps organize content. Here are some guidelines: 
+
+* Add a category as a prefix to your test name like group, application, brand, or team names so that you can simplify searches. For example, these two Browser tests start with [ButtercupGames]. 
+
+* Add a description about the purpose of the test like the workflow, process, performance, or data source.
+
+.. image:: /_images/synthetics/ButtercupGames-naming-convention.png
+      :width: 99%
+      :alt: This image shows two Browser tests with the prefix [ButtercupGames].
