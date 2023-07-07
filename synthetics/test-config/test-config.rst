@@ -149,7 +149,7 @@ Choosing informative names for your tests and alerts helps organize content. Her
 
 Follow these guidelines to troubleshoot a broken test. 
 
-#.  Make a copy of the test so that you can check various solutions before fixing the original test. 
+#. (Optional) Make a copy of the test so that you can check various solutions before fixing the original test. 
 #. Open the test page and see when the test started to fail. Consider the following questions:
 
     * When did the check fail? Is there a pattern among other failed runs?
@@ -160,4 +160,4 @@ Follow these guidelines to troubleshoot a broken test.
 #. Open the run results view of a failed test, find the step that is failing and go to the link. 
 #. Open inspect element and duplicate the step and repeat the steps in your test until you find the broken step. 
 #. Verify that there is one instance only of the selector you want to use in your test. If the selector appears more than once your test might break again in the future. Unique selectors provide optimal test performance. 
-
+#. Update your tests with your findings. 
