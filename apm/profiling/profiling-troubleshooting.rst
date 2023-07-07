@@ -52,8 +52,6 @@ The following example shows you how to configure a pipeline in the ``agent-confi
     splunk_hec/profiling:
       token: "${SPLUNK_ACCESS_TOKEN}"
       endpoint: "${SPLUNK_INGEST_URL}/v1/log"
-      source: "otel"
-      sourcetype: "otel"
       log_data_enabled: false
 
    service:

@@ -82,7 +82,9 @@ By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysO
 Exclude log data in the Collector
 ==================================================================================
 
-By default, the Splunk Distribution of the OpenTelemetry Collector collects and send logs to Observability Cloud through a ``logs`` pipeline that uses the Splunk HEC exporter. See :ref:`exclude-log-data` for more information.
+Depending on its configuration, the Splunk Distribution of the OpenTelemetry Collector might collect and send logs to Observability Cloud through a ``logs`` pipeline that uses the Splunk HEC exporter. 
+
+To turn off logs colletion, see :ref:`exclude-log-data` for more information.
 
 
 Send logs from the Collector to Splunk Cloud Platform or Enterprise
