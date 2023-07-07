@@ -99,6 +99,12 @@ copybutton_prompt_is_regexp = True
 copybutton_copy_empty_lines = False
 copybutton_line_continuation_character = "\\"
 
+graphviz_output_format = 'svg'
+
+# disable automatically included mermaid.js from sphinxcontrib-mermaid to load it before require.js
+nbsphinx_requirejs_path = ''
+mermaid_version=""
+
 # ROLES AND MACROS
 #######################
 
