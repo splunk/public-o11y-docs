@@ -136,11 +136,11 @@ Performance timing metrics capture information about how long it takes resources
 
    * - First CPU idle
      - ``synthetics.first_cpu_idle.time.ms``
-     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See :new-page:`What Interactivity Metrics Does Rigor Offer? <https://help.rigor.com/hc/en-us/articles/360011039573>` to learn more about how this metric is calculated. 
+     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor knowledge base to learn more about how this metric is calculated. 
 
    * - Time to interactive
      - ``synthetics.tti.time.ms``
-     - Time until the page is first expected to be usable and will respond to user input quickly. See :new-page:`What Interactivity Metrics Does Rigor Offer? <https://help.rigor.com/hc/en-us/articles/360011039573>` to learn more about how this metric is calculated. 
+     - Time until the page is first expected to be usable and will respond to user input quickly. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor knowledge base to learn more about how this metric is calculated. 
      
    * - Onload time
      - ``synthetics.onload.time.ms``
