@@ -131,7 +131,7 @@ The current status of a test is updated every time you load the :guilabel:`Test 
 
 Choosing informative names for your tests and alerts helps organize content. Here are some guidelines: 
 
-* Add a category as a prefix to your test name like group, application, brand, or team names so that you can simplify searches. For example, these two Browser tests start with [ButtercupGames]. 
+* Add a category as a prefix to your test name like group, application, brand, or team names so that you can simplify searches. For example, these two Browser tests start with ``[ButtercupGames]``. 
 
 * Add a description about the purpose of the test like the workflow, process, performance, or data source.
 
