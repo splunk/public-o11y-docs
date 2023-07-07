@@ -26,7 +26,9 @@ Available host and application monitors
 
 You can configure an application receiver to gather metrics from its associated application and the host the application is running on. Receiver functionality is also provided in the form of SignalFx Smart Agent monitors. 
 
-.. note:: The SignalFx Smart Agent is deprecated and will reach end of support on June 30th, 2023. Note that this only affects the agent; monitors bundled in the :ref:`Smart Agent receiver <smartagent-receiver>` of the Splunk Open Telemetry Collector are not deprecated. For more details, see the :new-page:`Deprecation Notice <https://github.com/signalfx/signalfx-agent/blob/main/docs/smartagent-deprecation-notice.md>`.
+.. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
+
+  Note that this only affects the agent; Smart Agent receivers bundled in the Splunk Distribution of OpenTelemetry Collector are available and supported.
 
 To find a receiver for your application, see the alphabetical listing of receivers on this page, or use the menu to browse for receivers by application category. To see native OpenTelemetry receivers, refer to :ref:`otel-components`. Configuration options for both the Splunk Distribution of OpenTelemetry Collector receivers and Smart Agent monitors is available.
 
