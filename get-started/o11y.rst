@@ -9,17 +9,35 @@ Get started with Splunk Observability Cloud
 
 This topic covers five high-level steps you can follow to get started with Splunk Observability Cloud and its products, which include Splunk Infrastructure Monitoring, Splunk Application Performance Monitoring (APM), Splunk Real User Monitoring (RUM), or Splunk Log Observer.
 
-For an introduction to Observability Cloud products, see :ref:`welcome`.
+For an introduction to Splunk Observability Cloud products, see :ref:`welcome`.
 
 For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
 
-Follow these steps to set up and make the most of Observability Cloud:
+Follow these steps to set up and make the most of Splunk Observability Cloud:
 
-.. source in figma: https://www.figma.com/file/ngM8GWA5GqzW0hAhToM58v/get-started-5-steps?node-id=5%3A5
+.. list-table::
+   :header-rows: 1
+   :widths: 40, 60
 
-.. image:: /_images/get-started/get-started-5-steps.png
-    :width: 80%
-    :alt: This diagrams provides a high-level view of the 5 steps to getting started with Observability Cloud.
+   * - :strong:`Configuration stages`
+     - :strong:`Task overview`
+
+   * - Create a plan and set up your organization with:
+     - Single sign-on, Access tokens, Admins and users, Teams, Notification service integrations (Jira, PagerDuty, and more)
+
+   * - Get data in from your: 
+     - Cloud services, Servers, Server applications, Clusters, Applications, Serverless functions, User interfaces
+
+   * - Explore and analyze your data usering: 
+     - Infrastructure monitoring, Real User Monitoring, Log Observer, Application Performance Monitoring, Related Content
+
+   * - SSet up alerts and customize your user experience
+     - Detectors and alerts, Custom dashboards, Span tags, Business workflows, Logs pipeline, Custom data
+
+   * - Create Global Data Links from dashboards and alerts to:
+     - Splunk Observability Cloud dashboards, Splunk Cloud Platform, Splunk Enterprise, Custom URLs, Kibana logs
+
+
 
 
 .. _get-started-plan:
