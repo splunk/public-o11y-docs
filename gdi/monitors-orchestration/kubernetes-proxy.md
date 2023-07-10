@@ -58,7 +58,7 @@ receivers:
       metric_source: kubernetes-proxy
 ```
 
-The OpenTelemetry Collector has a Kubernetes observer (`k8sobserver`) that can be implemented as an extension to discover networked endpoints, such as a Kubernetes pod. Using this observer assumes that the OpenTelemetry Collector is deployed in Host monitoring mode (Agent) mode, where it is running on each individual node or host instance.
+The OpenTelemetry Collector has a Kubernetes observer (`k8sobserver`) that can be implemented as an extension to discover networked endpoints, such as a Kubernetes pod. Using this observer assumes that the OpenTelemetry Collector is deployed in Host monitoring (Agent) mode, where it is running on each individual node or host instance.
 
 To use the observer, you must create a receiver creator instance with an associated rule. For example:
 

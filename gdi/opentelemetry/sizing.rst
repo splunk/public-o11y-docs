@@ -24,7 +24,7 @@ The following is recommended:
 * If the Collector handles both trace and metrics data, consider both types of data when planning your deployment. For example, 7.5K spans per second plus 10K data points per second requires 1 CPU core.
 * The Collector does not persist data to disk so no disk space is required.
 
-Host monitoring mode
+Host monitoring (Agent) mode
 ------------------------------------------------------------
 
 For :ref:`Host monitoring mode <collector-agent-mode>`, allocate resources as needed. 
@@ -32,7 +32,7 @@ For :ref:`Host monitoring mode <collector-agent-mode>`, allocate resources as ne
 * Typically, only a single agent runs per application or host, so properly sizing the agent is important. 
 * Consider deploying multiple independent agents for a given application or host depending on the use case. For example, a privileged agent can be deployed alongside an unprivileged agent.
 
-Data forwarding mode
+Data forwarding (Gateway) mode
 ------------------------------------------------------------
 
 For :ref:`Data forwarding mode <collector-gateway-mode>`, allocate at least one CPU core per Collector. Each Collector runs independently, so scale increases linearly with the number of Collectors you deploy.

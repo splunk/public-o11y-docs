@@ -42,7 +42,7 @@ The following table compares the Splunk Distribution of OpenTelemetry Collector 
     - No
 
   * - Configured for Observability Cloud
-    - Yes, for agent and Data forwarding modes
+    - Yes, for Host monitoring (Agent) and Data forwarding (Gateway) modes
     - No
 
   * - Zero config automatic instrumentation

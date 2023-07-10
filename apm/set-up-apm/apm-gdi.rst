@@ -42,7 +42,7 @@ If you are just setting up Splunk APM and want to use the Splunk Distribution of
 Deploy the Splunk Distribution of OpenTelemetry Collector on your hosts
 --------------------------------------------------------------------------------------------------
 
-To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTelemetry Collector on the hosts in which your applications are running. Splunk Observability Cloud offers OpenTelemetry Collector distributions for Kubernetes, Linux, and Windows. These distributions integrate the collection of data from hosts and Data forwarding mode to Observability Cloud.
+To send traces to Splunk APM, first deploy the Splunk Distribution of OpenTelemetry Collector on the hosts in which your applications are running. Splunk Observability Cloud offers OpenTelemetry Collector distributions for Kubernetes, Linux, and Windows. These distributions integrate the collection of data from hosts and data forwarding to Observability Cloud.
 
 .. note:: Benefits of the Splunk Distribution of OpenTelemetry Collector 
 

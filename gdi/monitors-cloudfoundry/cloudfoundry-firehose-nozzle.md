@@ -8,7 +8,7 @@ The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the 
 
 This integration is available on Linux. 
 
-This integration uses the new RLP Data forwarding model that was introduced in Pivotal Cloud Foundry (PCF) 2.4, so it doesn't work with older releases.
+This integration uses the new RLP Gateway model that was introduced in Pivotal Cloud Foundry (PCF) 2.4, so it doesn't work with older releases.
 
 ## Benefits 
 
