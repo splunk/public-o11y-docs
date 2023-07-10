@@ -81,7 +81,7 @@ Run the following command to run an interactive bash shell on the container and 
 See :new-page:`docker-compose.yml <https://github.com/signalfx/splunk-otel-collector/blob/main/examples/docker-compose/docker-compose.yml>` in GitHub to download a ``docker-compose`` example.
 
 .. note:: 
-   Ensure that ..roles:: monospace `ReadonlyRootFileSystem` is set to ..roles:: monospace `true` as the collector needs to write to the container file system on startup.
+   Ensure that ``ReadonlyRootFileSystem`` is set to ``true`` as the collector needs to write to the container file system on startup.
 
 
 
