@@ -22,19 +22,19 @@ Follow these steps to set up and make the most of Splunk Observability Cloud:
    * - :strong:`Configuration stages`
      - :strong:`Task overview`
 
-   * - 1. Create a plan and set up your organization with:
+   * - 1. :ref:`get-started-plan`:
      - Single sign-on, Access tokens, Admins and users, Teams, Notification service integrations (Jira, PagerDuty, and more)
 
-   * - 2. Get data in from your: 
+   * - 2. :ref:`get-started-gdi`: 
      - Cloud services, Servers, Server applications, Clusters, Applications, Serverless functions, User interfaces
 
-   * - 3. Explore and analyze your data usering: 
+   * - 3. :ref:`get-started-explore`: 
      - Infrastructure monitoring, Real User Monitoring, Log Observer, Application Performance Monitoring, Related Content
 
-   * - 4. Set up alerts and customize your user experience
+   * - 4. :ref:`get-started-customize`:
      - Detectors and alerts, Custom dashboards, Span tags, Business workflows, Logs pipeline, Custom data
 
-   * - 5. Create Global Data Links from dashboards and alerts to:
+   * - 5. :ref:`get-started-datalinks`:
      - Splunk Observability Cloud dashboards, Splunk Cloud Platform, Splunk Enterprise, Custom URLs, Kibana logs
 
 
