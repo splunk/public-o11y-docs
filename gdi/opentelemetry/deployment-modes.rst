@@ -7,21 +7,21 @@ Collector deployment modes
 .. meta::
       :description: The Splunk Distribution of OpenTelemetry Collector provides a single binary and two deployment methods. Both deployment methods can be configured using a default configuration.
 
-The Collector has two deployment modes: :ref:`Host monitoring <collector-agent-mode>`, and :ref:`Data forwarding mode <collector-gateway-mode>`.
+The Collector has two deployment modes: :ref:`Host monitoring mode <collector-agent-mode>`, and :ref:`Data forwarding mode <collector-gateway-mode>`.
 
 .. _collector-agent-mode:
 
-Host monitoring (Agent) mode  
+Host monitoring mode (Agent) mode  
 ======================================================================
 
-In Host monitoring, the Collector runs with the application or on the same host as the application, and sends data directly to Splunk Observability Cloud. 
+In Host monitoring mode, the Collector runs with the application or on the same host as the application, and sends data directly to Splunk Observability Cloud. 
 
-Use the Host monitoring when you want to do these things:
+Use the Host monitoring mode when you want to do these things:
 
-* Configure instrumentation. Host monitoring offloads responsibilities from the application including batching, queuing, and retrying.
+* Configure instrumentation. Host monitoring mode offloads responsibilities from the application including batching, queuing, and retrying.
 * Collect host and application metrics, as well as host and application metadata enrichment for metrics, spans, and logs.
 
-Standalone Host monitoring mode 
+Standalone Host monitoring mode mode 
 --------------------------------------------------------------------
 
 If deployed as a standalone agent, the Splunk Distribution of OpenTelemetry Collector is the only component deployed and configured. 
@@ -29,9 +29,9 @@ If deployed as a standalone agent, the Splunk Distribution of OpenTelemetry Coll
 The following image shows the architecture for the standalone mode:
 
 .. image:: /_images/gdi/splunk-otel-collector-standalone-arch.png 
-   :alt: This image shows the architecture for the standalone Host monitoring.   
+   :alt: This image shows the architecture for the standalone Host monitoring mode.   
 
-Host monitoring mode deployed with the installer script or Helm chart
+Host monitoring mode mode deployed with the installer script or Helm chart
 --------------------------------------------------------------------
 
 The default configurations for the :ref:`Linux installer script <otel-install-linux>`, :ref:`Windows installer script <otel-install-windows>`, and for certain :ref:`Helm charts <otel-install-k8s>` deploy the Collector with Fluentd.
@@ -100,7 +100,7 @@ To configure the Collector to send data to the another Collector in Data forward
 Agent configuration
 ----------------------------------
 
-Change the following sections of the :new-page:`Host monitoring configuration file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>`:
+Change the following sections of the :new-page:`Host monitoring mode configuration file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>`:
 
 * Update the ``SPLUNK_GATEWAY_URL`` environment variable to the URL of the gateway.
 * Update the ``SPLUNK_API_URL`` environment variable to the URL of the gateway, specifying the ingress port, which is ``6060`` by default.
@@ -111,7 +111,7 @@ To activate trace correlation, use the ``signalfx`` exporter in the traces pipel
 
 .. note:: If you are using the ``otlp`` exporter for metrics, the ``hostmetrics`` aggregation takes place in the gateway.
 
-The following example shows how to configure the Collector in Host monitoring when sending data to a gateway:
+The following example shows how to configure the Collector in Host monitoring mode when sending data to a gateway:
 
 .. code-block:: yaml
 

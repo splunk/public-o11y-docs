@@ -117,7 +117,7 @@ The following table shows required parameters for this installation:
          - Set this to ``true`` to enable Network Explorer.
        * - ``agent.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``agent.enabled`` as is.
-           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in Host monitoring on each Kubernetes node.
+           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in Host monitoring mode on each Kubernetes node.
            * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and want to collect telemetry from both Network Explorer and the individual OpenTelemetry Collector agents, set this to ``true``.
        * - ``clusterReceiver.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``clusterReceiver.enabled`` as is.

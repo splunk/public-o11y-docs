@@ -18,7 +18,7 @@ Requirements
 To send telemetry from Istio to Observability Cloud you need the following:
 
 - Istio 1.8 and higher
-- Splunk OpenTelemetry Collector for Kubernetes in Host monitoring mode. See :ref:`otel-install-k8s`.
+- Splunk OpenTelemetry Collector for Kubernetes in Host monitoring mode mode. See :ref:`otel-install-k8s`.
 - Splunk APM instrumentation with B3 context propagation. To set B3 as the context propagator, set the ``OTEL_PROPAGATORS`` environment variable to ``b3``.
 
 OpenCensus and W3C trace context are not supported because Istio does not support them.
@@ -26,7 +26,7 @@ OpenCensus and W3C trace context are not supported because Istio does not suppor
 Install and configure the Splunk OpenTelemetry Collector
 =============================================================
 
-Deploy the Splunk OpenTelemetry Collector for Kubernetes in Host monitoring mode. The required Collector components depend on product entitlements and the data you want to collect. See :ref:`otel-install-k8s`.
+Deploy the Splunk OpenTelemetry Collector for Kubernetes in Host monitoring mode mode. The required Collector components depend on product entitlements and the data you want to collect. See :ref:`otel-install-k8s`.
 
 In the Helm chart for the Collector, set the ``autodetect.istio`` parameter to ``true`` by passing ``--set autodetect.istio=true`` to the ``helm install`` or ``helm upgrade`` commands.
 

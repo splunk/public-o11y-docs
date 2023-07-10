@@ -127,9 +127,9 @@ You can use the Kubernetes attributes processor in Collectors deployed either as
 Agent configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In Host monitoring, the processor detects IP addresses of pods sending spans, metrics, or logs to the agent and uses this information to extract metadata from pods.
+In Host monitoring mode, the processor detects IP addresses of pods sending spans, metrics, or logs to the agent and uses this information to extract metadata from pods.
 
-When running the Collector in Host monitoring, apply a discovery filter so that only pods from the same host the Collector is running on are discovered. Using a discovery filter also optimizes resource consumption on large clusters.
+When running the Collector in Host monitoring mode, apply a discovery filter so that only pods from the same host the Collector is running on are discovered. Using a discovery filter also optimizes resource consumption on large clusters.
 
 To automatically filter pods by the node the processors is running on, configure the Downward API to inject the node name as an environment variable. For example:
 
@@ -157,7 +157,7 @@ Gateway configuration
 
 The processor can't resolve the IP address of the pods that emit telemetry data when running in Data forwarding mode. To receive the correct IP addresses in a Collector gateway, configure the agents to forward addresses.
 
-To forward IP addresses to gateways, configure the Collectors in Host monitoring to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
+To forward IP addresses to gateways, configure the Collectors in Host monitoring mode to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
 
 .. code-block:: yaml
 
