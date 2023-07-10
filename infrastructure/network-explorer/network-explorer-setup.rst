@@ -330,112 +330,112 @@ Install the eBPF collector for non-Kubernetes systems
 
 Follow these steps to install the eBPF collector for non-Kubernetes systems: 
 
-#. Download the eBPF packages from the :new-page-ref:`GitHub releases page <https://github.com/open-telemetry/opentelemetry-ebpf/releases>`.
+#. Download the eBPF packages from the :new-page:`GitHub releases page <https://github.com/open-telemetry/opentelemetry-ebpf/releases>`.
 #. Run the following command to install the packages using Linux packaging system.
   
-  .. tabs::
+    .. tabs::
 
-    .. code-tab:: bash rpm 
- 
-      rpm -i opentelemetry-ebpf-reducer-0.10.0-1.x86_64.rpm
+      .. code-tab:: bash rpm 
+  
+        rpm -i opentelemetry-ebpf-reducer-0.10.0-1.x86_64.rpm
 
-    .. code-tab:: bash dpkg
+      .. code-tab:: bash dpkg
 
-      dpkg -i opentelemetry-ebpf-reducer-0.10.0-1.x86_64.deb
+        dpkg -i opentelemetry-ebpf-reducer-0.10.0-1.x86_64.deb
 
 #. Edit the /etc/opentelemetry-ebpf/reducer.yaml file to configure the reducer.
 
-  * If you use Splunk Distribution of OpenTelemetry Collector, edit the file according to the following table:
+    * If you use Splunk Distribution of OpenTelemetry Collector, edit the file according to the following table:
 
-      .. list-table::
-       :header-rows: 1
-       :widths: 50 50
+        .. list-table::
+        :header-rows: 1
+        :widths: 50 50
 
-       * - :strong:`Parameter`
-         - :strong:`Value`
-       * - ``enable_otlp_grpc_metrics``
-         - ``true``
-       * - ``otlp_grpc_metrics_address``
-         - Host name or IP address of the OTLP gRPC receiver
-       * - ``disable_prometheus_metrics``
-         - ``true``    
+        * - :strong:`Parameter`
+          - :strong:`Value`
+        * - ``enable_otlp_grpc_metrics``
+          - ``true``
+        * - ``otlp_grpc_metrics_address``
+          - Host name or IP address of the OTLP gRPC receiver
+        * - ``disable_prometheus_metrics``
+          - ``true``    
 
-  * If you scrape with Prometheus, edit the file according to the following table:
+    * If you scrape with Prometheus, edit the file according to the following table:
 
-      .. list-table::
-       :header-rows: 1
-       :widths: 50 50
+        .. list-table::
+        :header-rows: 1
+        :widths: 50 50
 
-       * - :strong:`Parameter`
-         - :strong:`Value`
-       * - ``prom_bind``
-         - IP address and port number on which Prometheus will scrape
-       * - ``disable_prometheus_metrics``
-         - ``false``    
+        * - :strong:`Parameter`
+          - :strong:`Value`
+        * - ``prom_bind``
+          - IP address and port number on which Prometheus will scrape
+        * - ``disable_prometheus_metrics``
+          - ``false``    
 
-  * If you use the cloud collector, set ``enable_aws_enrichment`` to ``true``.
+    * If you use the cloud collector, set ``enable_aws_enrichment`` to ``true``.
 
 #. Run the following command to start or restart the reducer to apply the changes.
 
-  .. tabs::
+    .. tabs::
 
-    .. code-tab:: bash Start command 
- 
-      systemctl start reducer
+      .. code-tab:: bash Start command 
+  
+        systemctl start reducer
 
-    .. code-tab:: bash Restart command
+      .. code-tab:: bash Restart command
 
-      systemctl restart reducer
+        systemctl restart reducer
 
 #. Edit the /etc/opentelemetry-ebpf/kernel-collector.yaml file to configure the kernel collector. Set the values according to the following table.
 
-  .. list-table::
-    :header-rows: 1
-    :widths: 50 50
+    .. list-table::
+      :header-rows: 1
+      :widths: 50 50
 
-    * - :strong:`Parameter`
-      - :strong:`Value`
-    * - Intake host
-      - IP address or hostname where the reducer is running
-    * - Intake port 
-      - Same value as ``telemetry_port`` in the reducer.yaml file
+      * - :strong:`Parameter`
+        - :strong:`Value`
+      * - Intake host
+        - IP address or hostname where the reducer is running
+      * - Intake port 
+        - Same value as ``telemetry_port`` in the reducer.yaml file
 
 #. Run the following command to start or restart the kernel collector to apply the changes.
 
-  .. tabs::
+    .. tabs::
 
-    .. code-tab:: bash Start command 
- 
-      systemctl start kernel-collector
+      .. code-tab:: bash Start command 
+  
+        systemctl start kernel-collector
 
-    .. code-tab:: bash Restart command
+      .. code-tab:: bash Restart command
 
-      systemctl restart kernel-collector
+        systemctl restart kernel-collector
 
 #. Edit the /etc/opentelemetry-ebpf/cloud-collector.yaml file to configure the kernel collector. Set the values according to the following table.
 
-  .. list-table::
-    :header-rows: 1
-    :widths: 50 50
+    .. list-table::
+      :header-rows: 1
+      :widths: 50 50
 
-    * - :strong:`Parameter`
-      - :strong:`Value`
-    * - Intake host
-      - IP address or hostname where the reducer is running
-    * - Intake port 
-      - Same value as ``telemetry_port`` in the reducer.yaml file
+      * - :strong:`Parameter`
+        - :strong:`Value`
+      * - Intake host
+        - IP address or hostname where the reducer is running
+      * - Intake port 
+        - Same value as ``telemetry_port`` in the reducer.yaml file
 
 #. Run the following command to start or restart the cloud collector to apply the changes.
 
-  .. tabs::
+    .. tabs::
 
-    .. code-tab:: bash Start command 
- 
-      systemctl start cloud-collector
+      .. code-tab:: bash Start command 
+  
+        systemctl start cloud-collector
 
-    .. code-tab:: bash Restart command
+      .. code-tab:: bash Restart command
 
-      systemctl restart cloud-collector
+        systemctl restart cloud-collector
 
 .. _resize-installation:
 
