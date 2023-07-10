@@ -18,7 +18,7 @@ In host monitoring (agent) mode, the Collector runs with the application or on t
 
 Use the host monitoring (agent) mode when you want to do these things:
 
-* Configure instrumentation. host monitoring (agent) mode offloads responsibilities from the application including batching, queuing, and retrying.
+* Configure instrumentation. Host monitoring (agent) mode offloads responsibilities from the application including batching, queuing, and retrying.
 * Collect host and application metrics, as well as host and application metadata enrichment for metrics, spans, and logs.
 
 Standalone host monitoring (agent) mode 
@@ -100,7 +100,7 @@ To configure the Collector to send data to the another Collector in data forward
 Agent configuration
 ----------------------------------
 
-Change the following sections of the :new-page:`Host monitoring (agent) mode configuration file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>`:
+Change the following sections of the :new-page:`host monitoring (agent) mode configuration file <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>`:
 
 * Update the ``SPLUNK_GATEWAY_URL`` environment variable to the URL of the gateway.
 * Update the ``SPLUNK_API_URL`` environment variable to the URL of the gateway, specifying the ingress port, which is ``6060`` by default.
