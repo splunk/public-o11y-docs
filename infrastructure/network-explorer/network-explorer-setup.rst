@@ -348,30 +348,30 @@ Follow these steps to install the eBPF collector for non-Kubernetes systems:
     * If you use Splunk Distribution of OpenTelemetry Collector, edit the file according to the following table:
 
         .. list-table::
-        :header-rows: 1
-        :widths: 50 50
+          :header-rows: 1
+          :widths: 50 50
 
-        * - :strong:`Parameter`
-          - :strong:`Value`
-        * - ``enable_otlp_grpc_metrics``
-          - ``true``
-        * - ``otlp_grpc_metrics_address``
-          - Host name or IP address of the OTLP gRPC receiver
-        * - ``disable_prometheus_metrics``
-          - ``true``    
+          * - :strong:`Parameter`
+            - :strong:`Value`
+          * - ``enable_otlp_grpc_metrics``
+            - ``true``
+          * - ``otlp_grpc_metrics_address``
+            - Host name or IP address of the OTLP gRPC receiver
+          * - ``disable_prometheus_metrics``
+            - ``true``    
 
     * If you scrape with Prometheus, edit the file according to the following table:
 
         .. list-table::
-        :header-rows: 1
-        :widths: 50 50
+          :header-rows: 1
+          :widths: 50 50
 
-        * - :strong:`Parameter`
-          - :strong:`Value`
-        * - ``prom_bind``
-          - IP address and port number on which Prometheus will scrape
-        * - ``disable_prometheus_metrics``
-          - ``false``    
+          * - :strong:`Parameter`
+            - :strong:`Value`
+          * - ``prom_bind``
+            - IP address and port number on which Prometheus will scrape
+          * - ``disable_prometheus_metrics``
+            - ``false``    
 
     * If you use the cloud collector, set ``enable_aws_enrichment`` to ``true``.
 
