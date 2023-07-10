@@ -28,7 +28,7 @@ Ensure that you give the proxy the ability to resolve the network names and make
 Use the Splunk Distribution of OpenTelemetry Collector
 =======================================================================
 
-Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in gateway mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector, which serves as your local store-and-forward service for telemetry.
+Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in Data forwarding mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector, which serves as your local store-and-forward service for telemetry.
 
 Ensure that you give the Splunk Distribution of OpenTelemetry Collector the ability to resolve the network names and make outbound HTTPS network connections to the URLs listed in :ref:`allow-urls` or the domains listed in :ref:`allow-domains`. Verify also the list of :ref:`exposed ports and endpoints <otel-exposed-endpoints>`.
 
@@ -103,7 +103,7 @@ Restart the Collector after adding these environment variables to your configura
 Replace the SignalFx Gateway with the Splunk Distribution of OpenTelemetry Collector
 =====================================================================================================
 
-If you are using the SignalFx Gateway, replace it with the Splunk Distribution of OpenTelemetry Collector running in :new-page:`gateway mode <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>`.
+If you are using the SignalFx Gateway, replace it with the Splunk Distribution of OpenTelemetry Collector running in :new-page:`Data forwarding mode <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>`.
 
 .. _allow-urls:
 
