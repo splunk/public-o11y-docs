@@ -9,9 +9,9 @@ SignalFx exporter
 
 .. caution:: The SignalFx exporter creates and excludes metrics by default. Read on to understand which metrics are created, which ones are filtered out, and learn how to modify this behavior.
 
-The SignalFx exporter allows the OpenTelemetry Collector to send metrics and events to SignalFx endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The SignalFx exporter is a native OTel component that allows the OpenTelemetry Collector to send metrics and events to SignalFx endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-.. note:: For information on the receiver, see :ref:`signalfx-receiver`.
+.. note:: While the SignalFx Smart Agent has reached End of Support, OTel native components such as the Smart Agent receiver, the SignalFx receiver, and the SignalFx exporter are available and supported. For information on the receivers, see :ref:`smartagent-receiver`: and :ref:`signalfx-receiver`.
 
 Get started
 ======================
