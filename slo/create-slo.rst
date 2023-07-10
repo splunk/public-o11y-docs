@@ -37,8 +37,6 @@ Follow these steps to create an SLO.
         * - Service\:\endpoint
           - * Search for the service you want to create an SLO for
             * (Optional) Add an endpoint for the selected service
-        * - Indicator type
-          - * Select :guilabel:`Request response` ...
         * - Environment
           - Check the boxes for the environments where you want to apply this SLO
         * - Filters
@@ -54,14 +52,15 @@ Follow these steps to create an SLO.
           - :strong:`Description`
         * - Metric type
           - Select :guilabel:`Custom metrics` from the dropdown menu
+        * - Service name
+          - ...
         * - Numerator metric
           - Search for the metric you want to use as the numerator metric
         * - Denominator metric
           - Search for the metric you want to use as the denominator metric
         * - SLO name 
           - Enter a name for your SLO
-        * - Service name
-          - ...
+
 
 #. Define your SLO and how to measure it
 
