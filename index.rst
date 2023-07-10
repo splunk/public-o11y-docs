@@ -246,17 +246,17 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :caption: Observability Cloud and the Splunk platform
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform <get-started/core2o11y/core2o11y-landing>
+   Splunk Observability Cloud and the Splunk platform <splunkplatform/splunkplatform-landing>
 
 .. toctree::
    :maxdepth:   3
 
-   Unified Identity <unified-id/unified-identity>
+   Unified Identity <splunkplatform/unified-id/unified-identity>
 
 .. toctree::
    :maxdepth:   3
 
-   Measure and alert on your SLIs <practice-reliability/slis>
+   Measure and alert on your SLIs <splunkplatform/practice-reliability/slis>
 
 .. toctree::
    :maxdepth:   3
