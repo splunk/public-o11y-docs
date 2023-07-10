@@ -23,7 +23,7 @@ For a list of monitor data sources, see :ref:`monitor-data-sources`.
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Smart Agent receiver with the ``signalfx-forwarder`` and ``processlist`` monitors when deploying in Host monitoring mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Smart Agent receiver with the ``signalfx-forwarder`` and ``processlist`` monitors when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
 For each Smart Agent monitor you want to add to the Collector, add a Smart Agent receiver. After you've configured a Smart Agent monitor in the Collector, each Smart Agent receiver behaves like the corresponding Smart Agent monitor. 
 

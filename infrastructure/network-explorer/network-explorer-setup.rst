@@ -89,7 +89,7 @@ Network Explorer consists of the following components:
 Install Network Explorer
 =======================================================================================
 
-For the Splunk Distribution of OpenTelemetry Collector to work with Network Explorer, you must install it in Data forwarding mode, and perform the following steps:
+For the Splunk Distribution of OpenTelemetry Collector to work with Network Explorer, you must install it in data forwarding (gateway) mode, and perform the following steps:
 
 - Enable OTLP gRPC reception by configuring an OTLP gRPC metric receiver on the Gateway.
 - Enable SignalFx export by configuring a SignalFx exporter on the Gateway with the valid realm and access token.
@@ -117,7 +117,7 @@ The following table shows required parameters for this installation:
          - Set this to ``true`` to enable Network Explorer.
        * - ``agent.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``agent.enabled`` as is.
-           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in Host monitoring mode on each Kubernetes node.
+           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in host monitoring (agent) mode on each Kubernetes node.
            * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and want to collect telemetry from both Network Explorer and the individual OpenTelemetry Collector agents, set this to ``true``.
        * - ``clusterReceiver.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``clusterReceiver.enabled`` as is.
