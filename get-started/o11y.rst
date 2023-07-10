@@ -17,7 +17,7 @@ Follow these steps to set up and make the most of Splunk Observability Cloud:
 
 .. list-table::
    :header-rows: 1
-   :widths: 40, 60
+   :widths: 60, 40
 
    * - :strong:`Configuration stages`
      - :strong:`Task overview`
