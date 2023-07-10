@@ -16,7 +16,7 @@ The SignalFx exporter is a native OTel component that allows the OpenTelemetry C
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx exporter in the ``traces``, ``metrics``, and ``logs/signalfx`` pipelines when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx exporter in the ``traces``, ``metrics``, and ``logs/signalfx`` pipelines when deploying in Host monitoring. See :ref:`otel-deployment-mode` for more information.
 
 Sample configurations
 ----------------------

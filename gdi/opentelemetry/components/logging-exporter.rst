@@ -15,7 +15,7 @@ Use the logging exporter to diagnose and troubleshoot issues with telemetry rece
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the logging exporter with verbosity set to ``detailed`` when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the logging exporter with verbosity set to ``detailed`` when deploying in Host monitoring. See :ref:`otel-deployment-mode` for more information.
 
 .. code:: yaml
 

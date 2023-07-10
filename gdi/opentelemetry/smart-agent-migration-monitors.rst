@@ -51,7 +51,7 @@ If you don't specify any exporters in this array field, the receiver attempts to
 Smart Agent extension
 ==================================
 
-The Smart Agent extension offers collectd and Python extensions. Extensions are available primarily for tasks that do not involve processing data. Examples of extensions include health monitoring, service discovery, and data forwarding. Extensions are optional.
+The Smart Agent extension offers collectd and Python extensions. Extensions are available primarily for tasks that do not involve processing data. Examples of extensions include health monitoring, service discovery, and Data forwarding mode. Extensions are optional.
 
 See :new-page:`SignalFx Smart Agent Extension <https://github.com/signalfx/splunk-otel-collector/blob/main/pkg/extension/smartagentextension/README.md>` in GitHub to copy the configuration YAML file.
 

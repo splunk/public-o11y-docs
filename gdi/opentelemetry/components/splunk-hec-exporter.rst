@@ -19,7 +19,7 @@ information.
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Splunk HEC exporter in the ``logs`` pipeline when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Splunk HEC exporter in the ``logs`` pipeline when deploying in Host monitoring. See :ref:`otel-deployment-mode` for more information.
 
 .. note:: To send Splunk HEC data through a proxy, configure proxy settings as environment variables. See :ref:`configure-proxy-collector` for more information.
 

@@ -197,7 +197,7 @@ All spans produced by the Browser RUM agent are annotated with performance timin
 
 .. _browser-rum-data-sending:
 
-Data forwarding limits
+Data forwarding mode limits
 ===============================================
 
 The Browser RUM agent has the following built-in limits:

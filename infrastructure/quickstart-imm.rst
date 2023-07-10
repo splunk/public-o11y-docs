@@ -133,7 +133,7 @@ To get platform infrastructure data into Splunk Observability Cloud:
 
             * Select :strong:`Agent` if you want to run the Splunk Distribution of OpenTelemetry Collector with the application or on the same host as the application you want to instrument and monitor. This is the most common scenario.
 
-            * Select :strong:`Gateway` if you want to run the Splunk Distribution of OpenTelemetry Collector as a standalone service in a container or as a separate deployment. Typically, gateway mode is deployed per cluster, data center, or region.
+            * Select :strong:`Gateway` if you want to run the Splunk Distribution of OpenTelemetry Collector as a standalone service in a container or as a separate deployment. Typically, Data forwarding mode is deployed per cluster, data center, or region.
 
             * For more details, see :ref:`otel-deployment-mode`.
   
@@ -141,7 +141,7 @@ To get platform infrastructure data into Splunk Observability Cloud:
           - * Kubernetes
             * Linux
             * Windows Server
-          - This field applies only if you have purchased Splunk Log Observer and are running the Splunk Distribution of OpenTelemetry Collector in agent mode.
+          - This field applies only if you have purchased Splunk Log Observer and are running the Splunk Distribution of OpenTelemetry Collector in Host monitoring.
 
             By default, Splunk Observability Cloud free trials do not include Splunk Log Observer. If you want to try out Splunk Log Observer, you can :new-page:`register for a free trial <https://www.splunk.com/en_us/form/log-observer-early-access-program.html>`.
 
@@ -181,13 +181,13 @@ To get platform infrastructure data into Splunk Observability Cloud:
 
         * - :strong:`Add Gateway`
           - Kubernetes
-          - When you install the Splunk Distribution of OpenTelemetry Collector for Kubernetes, it will automatically and always run in agent mode.
+          - When you install the Splunk Distribution of OpenTelemetry Collector for Kubernetes, it will automatically and always run in Host monitoring.
 
-            * Select :strong:`Yes` to deploy a gateway service, in addition to running the Splunk Distribution of OpenTelemetry Collector in agent mode. With this configuration, collectors running in agent mode can send data to the gateway and the gateway sends data to Splunk Observability Cloud. For more information on when to use gateway mode, see :ref:`collector-gateway-mode`. Agents installed with this gateway (using the same Helm chart) are automatically configured to send data to this gateway.
+            * Select :strong:`Yes` to deploy a gateway service, in addition to running the Splunk Distribution of OpenTelemetry Collector in Host monitoring. With this configuration, collectors running in Host monitoring can send data to the gateway and the gateway sends data to Splunk Observability Cloud. For more information on when to use Data forwarding mode, see :ref:`collector-gateway-mode`. Agents installed with this gateway (using the same Helm chart) are automatically configured to send data to this gateway.
 
-              If you have any other Splunk Distribution of OpenTelemetry Collectors running in agent mode in other clusters, you can manually configure them to point to this gateway.
+              If you have any other Splunk Distribution of OpenTelemetry Collectors running in Host monitoring in other clusters, you can manually configure them to point to this gateway.
 
-            * Select :strong:`No` if you don't want to deploy a gateway service. For example, if you have an existing gateway running in your Kubernetes implementation, you don't need to deploy another. This option installs the Splunk Distribution of OpenTelemetry Collector running in agent mode. If you have an existing gateway running, you can manually configure the Splunk Distribution of OpenTelemetry Collector installed by this task to point to that gateway.
+            * Select :strong:`No` if you don't want to deploy a gateway service. For example, if you have an existing gateway running in your Kubernetes implementation, you don't need to deploy another. This option installs the Splunk Distribution of OpenTelemetry Collector running in Host monitoring. If you have an existing gateway running, you can manually configure the Splunk Distribution of OpenTelemetry Collector installed by this task to point to that gateway.
 
             For more installation details, see :new-page-ref:`otel-install-k8s`.
 
