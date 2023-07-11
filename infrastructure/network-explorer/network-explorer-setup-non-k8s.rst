@@ -9,6 +9,9 @@ Set up Network Explorer on non-Kubernetes systems
 
 To use Network Explorer on non-Kubernetes system, you must install the eBPF collector using a Linux packaging system, RPM Package Manager or Debian.
 
+Install the eBPF collector
+==============================
+
 Follow these steps to install and configure the eBPF collector on non-Kubernetes systems: 
 
 #. Download the eBPF packages from the :new-page:`GitHub releases page <https://github.com/open-telemetry/opentelemetry-ebpf/releases>`.
@@ -127,3 +130,26 @@ Follow these steps to install and configure the eBPF collector on non-Kubernetes
       .. code-tab:: bash Restart command
 
         systemctl restart cloud-collector
+
+Next steps
+====================================
+
+Once you set up Network Explorer, you can start monitoring network telemetry metrics coming into your Splunk Infrastructure Monitoring platform using one or more of the following options:
+
+- Built-in Network Explorer navigators. To see the Network Explorer navigators, follow these steps:
+
+  #. From the Splunk Observability Cloud home page, select :strong:`Infrastructure` on the left navigator.
+  #. Select :strong:`Network Explorer`.
+
+      .. image:: /_images/images-network-explorer/network-explorer-navigators.png
+        :alt: Network Explorer navigator tiles on the Infrastructure landing page.
+        :width: 80%
+
+  #. Select the card for the Network Explorer navigator you want to view.
+
+  For more information, see :ref:`use-navigators-imm`.
+
+- Service map. For more information, see :ref:`network-explorer-network-map`.
+- Alerts and detectors. For more information, see :ref:`get-started-detectoralert`.
+
+For more information on metrics available to collect with Network Explorer, see :ref:`network-explorer-metrics`.
