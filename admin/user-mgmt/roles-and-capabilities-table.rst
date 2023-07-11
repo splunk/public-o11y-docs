@@ -49,6 +49,12 @@ Splunk Real User Monitoring roles and capabilities
 ==================================================
 .. include:: /_includes/admin/rum-roles-caps.rst
 
+.. apm-rbac:
+
+Splunk Application Performance Monitoring roles and capabilities
+==================================================================
+.. include:: /_includes/admin/apm-roles.rst
+
 Settings
 ===========================
 
