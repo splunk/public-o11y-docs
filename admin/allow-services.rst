@@ -77,7 +77,7 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
       sudo systemctl daemon-reload
       sudo systemctl restart splunk-otel-collector
 
-   .. code-tab:: text Windows
+   .. code-tab:: shell Windows
 
       # Set proxy settings for Collector communications
 
