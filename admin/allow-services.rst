@@ -77,14 +77,14 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
       sudo systemctl daemon-reload
       sudo systemctl restart splunk-otel-collector
 
-   .. code-tab:: powershell Windows
+   .. code-tab:: text Windows
 
       # Set proxy settings for Collector communications
 
       [Environment]::SetEnvironmentVariable(“http_proxy”,”http://<proxy.address:port>”,”Machine”)
       [Environment]::SetEnvironmentVariable("https_proxy","http://<proxy.address:port>","Machine")
       [Environment]::SetEnvironmentVariable("no_proxy","<address>","Machine")
-      netsh winhttp set proxy "${ProxyIP}:$ProxyPort"
+      netsh winhttp set proxy "http://<proxy.address:port>"
 
       # Set proxy settings to download Collector files
 
