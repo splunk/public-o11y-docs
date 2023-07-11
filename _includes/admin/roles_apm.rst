@@ -4,35 +4,29 @@
   * - :strong:`Capability`
     - :strong:`Admin`
     - :strong:`Power user`
-    - :strong:`Read-only`
-    - :strong:`Subscription usage`
+    - :strong:`Read_only`
+    - :strong:`Usage`
 
 
-  * - Create, edit, and delete MetricSets. Functionality in the API is similarly restricted.
-    - Yes
-    - No
-    - No
-    - No
-
-  * - View MetricSets. Functionality in the API is similarly restricted.
+    * - View MetricSets. 
     - Yes
     - Yes
     - Yes
     - No
-
-  * - Create, edit, and delete Business Workflows. Functionality in the API is similarly restricted.
+  
+  * - Create, edit, and delete MetricSets.
     - Yes
     - No
     - No
     - No
 
-  * - View Business Workflows. Functionality in the API is similarly restricted.
+  * - View Business Workflows.
     - Yes
     - Yes
     - Yes
     - No
 
-  * - Configure extended trace retention settings. 
+  * - Create, edit, and delete Business Workflows.
     - Yes
     - No
     - No
@@ -44,22 +38,32 @@
     - Yes
     - No
 
-  * - The following functionality in the APM API:
-       - The APM Reporting resource
-       - The PUT, POST, and DELETE methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
+  * - Configure extended trace retention settings. 
     - Yes
     - No
     - No
     - No
 
-  * - The GET method for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
+  * - The APM traces resource in the APM API.
+    - Yes
+    - Yes
+    - Yes
+    - No
+
+  * - The APM Service Topology resource in the APM API.
+    - Yes
+    - Yes
+    - Yes
+    - No
+
+  * - The GET method on the APM Visibility Filters resource in the APM API. See :ref:`sensitive-data-controls` for more information.
+    - Yes
+    - Yes
+    - Yes
+    - No
+
+  * - The PUT, POST, and DELETE methods for the APM Visibility Filters resource in the APM API. See :ref:`sensitive-data-controls` for more information.
     - Yes
     - No
     - No
-    - No
-  
-  * - The GET method on the APM Visibility Filters resource in the APM API, see :ref:`sensitive-data-controls` for more information.
-    - Yes
-    - Yes
-    - Yes
     - No
