@@ -25,19 +25,11 @@ Remove sensitive data using the Splunk Distribution of OpenTelemetry Collector
 
 The first line of defense for sensitive information is to use the Splunk autoinstrumentation, which never captures sensitive information.
 
-<<<<<<< HEAD
-If sensitive data has been sent to Splunk Observability Cloud during manual instrumentation, you can remove it pre-ingest with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. See :ref:`configure-remove` for more information, and see the following use case.  
-
-.. note:: A note about dropping spans   
-
-    Concealing specific values in spans is the best way to hide sensitive information in spans. It's not possible to drop entire spans from your OpenTelemetry pipeline, as excluding spans risks creating traces with missing spans. See :ref:`apm-missing-spans` for more information.
-=======
 If sensitive data has been sent to Splunk Observability Cloud during manual instrumentation, you can remove it pre-ingest with the :ref:`Splunk Distribution of the OpenTelemetry Collector <otel-intro>`. See :ref:`configure-remove` for more information, and read the following scenario.  
 
 .. note:: A note about dropping spans   
 
     Concealing specific values in spans is the best approach to hide sensitive information in spans. It's not possible to drop entire spans from your OpenTelemetry pipeline.
->>>>>>> origin/mfoulds-docs4670-RBACroles
 
 Scenario: Delete, redact, or hash tags from spans in the Splunk Distribution of OpenTelemetry Collector
 -------------------------------------------------------------------------------------------------------------
@@ -102,13 +94,7 @@ Block a specific span tag for a specific service
 
 If you know that a specific span tag for a service might contain sensitive information, you can hide that span tag and its values everywhere in the Splunk APM UI.
 
-<<<<<<< HEAD
-For instance, imagine that Moira has manually instrumented a checkout service in Splunk APM and forgot to block the tags that use the span tags ``user.email`` and ``credit.card.number`` in their instrumentation of the service. The following example API call blocks those two span tags from all operations (“*”) in ``checkoutService``.
-
-.. include:: /_includes/realm-note.rst
-=======
 For instance, imagine that Moira has manually instrumented a checkout service in Splunk APM and forgot to block the tags that use the span tags ``user.email`` and ``credit.card.number`` in their instrumentation of the service. The following example API call blocks 2 span tags from all the ``readCartDetails`` operation in ``checkoutService``.
->>>>>>> origin/mfoulds-docs4670-RBACroles
 
 Request: 
 ::
