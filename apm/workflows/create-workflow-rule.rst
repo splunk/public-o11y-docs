@@ -72,7 +72,7 @@ In systems where many traces have the same initiating operations, for example be
 Rule behavior and limits
 ========================
 
-To reduce the likelihood of partial rule changes generating unexpected results, changes to rules are accumulated throughout a single computing session and applied all together when you select :strong:`Apply Changes`. Change encompasses all of the following:
+To reduce the likelihood of partial rule changes generating unexpected results, changes to rules accumulate throughout a single computing session and applied all together when you select :strong:`Apply Changes`. Change encompasses all of the following:
 
 - Creating rules
 
@@ -80,11 +80,11 @@ To reduce the likelihood of partial rule changes generating unexpected results, 
 
 - Deleting or disabling rules
 
-The Business Workflow configuration UI displays rules numbered in continuous sequence 1 to ``n``, regardless of whether those rules are enabled or disabled. Because each trace belongs to only one workflow rule, priority matters. When multiple rules apply to the same trace, that trace is matched to the highest priority rule. Rule creation and configuration is governed by the following properties:
+The Business Workflow configuration UI displays rules numbered in continuous sequence 1 to ``n``, regardless of whether those rules are active or not. Because each trace belongs to only one workflow rule, priority matters. When multiple rules can apply to the same trace, that trace is matched to the highest priority rule. Rule creation and configuration is governed by the following properties:
 
 - The limit on the number of rules you can have is 99.
 
-- You can enable or disable a rule using its switch without affecting the content of the rule.
+- You can turn a rule on or off using its toggle switch without affecting the content of the rule.
 
 - Using the directional arrows in the UI to move a rule up or down in the list changes the rule priority relative to other rules. Rules at the beginning of the list have higher priority than rules at the end of the list.
 

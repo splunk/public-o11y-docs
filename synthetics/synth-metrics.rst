@@ -79,10 +79,10 @@ Performance metrics capture information about how long it takes resources on the
      - Time until the page and all of its subresources are ready
 
    * - First CPU idle
-     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See :new-page:`What Interactivity Metrics Does Rigor Offer? <https://help.rigor.com/hc/en-us/articles/360011039573>` to learn more about how this metric is calculated. 
+     - Time until the page is minimally interactive and will respond to user input in a reasonable amount of time. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor documentation to learn more about how this metric is calculated. 
 
    * - Time to interactive
-     - Time until the page is first expected to be usable and will respond to user input quickly. See :new-page:`What Interactivity Metrics Does Rigor Offer? <https://help.rigor.com/hc/en-us/articles/360011039573>` to learn more about how this metric is calculated. 
+     - Time until the page is first expected to be usable and will respond to user input quickly. See "What Interactivity Metrics Does Rigor Offer?" in the Rigor documentation to learn more about how this metric is calculated. 
      
    * - Onload time
      - Time until the page has loaded. This corresponds to the browser load event.

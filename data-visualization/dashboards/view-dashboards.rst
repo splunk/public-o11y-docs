@@ -5,10 +5,9 @@ View dashboards in Splunk Observability Cloud
 ************************************************
 
 .. meta::
-      :description: Dashboards are groupings of charts and visualizations of metrics. Observability Cloud has three types of dashboards and dashboard groups: built-in, custom, and user. Built-in dashboard groups are provided by Observability Cloud to give you immediate visibility into the technologies and services being used in your environment. You can also build custom and user dashboard groups to create content specific to your organization's requirements.
+      :description: View and rearrange dashboards and dashboard groups, understand data points on charts, and troubleshoot, download, or take actions on your charts in Splunk Observability Cloud. 
 
 This document describes how to view dashboards and dashboard groups, as well as how to adjust your view once you are in a dashboard group or dashboard. It also covers how to create a list of your favorite dashboards for easy access.
-
 
 .. _viewing-dashboards:
 
@@ -141,7 +140,7 @@ If you edited a :ref:`plot name <plot-name>` or specified :ref:`display units <p
 ..
   ref broken for now bc page that includes the label is also in the process of being migrated. resolve once both pages are merged to trangl-POR-7413-migrate-custom-content.
 
-As you hover over dimensions on the :strong:`Data Table` tab, an :strong:`Actions menu` icon displays. Menu options let you add a filter to the chart's :strong:`Overrides` bar based on the value of the dimension. For more information, see :ref:`filter-from-data-table` and :ref:`navigate-with-data-links`.
+As you hover over dimensions on the :strong:`Data Table` tab, an :strong:`Actions menu` (|more|) icon displays. Menu options let you add a filter to the chart's :strong:`Overrides` bar based on the value of the dimension. For more information, see :ref:`filter-from-data-table` and :ref:`navigate-with-data-links`.
 
 
 View the Events tab

@@ -190,7 +190,7 @@ You can also set the following optional parameters:
 Settings
 ======================
 
-The following table shows the configuration options for the MongoDB Atlas:
+The following table shows the configuration options for the Kubelet stats receiver:
 
 .. raw:: html
 
@@ -200,6 +200,8 @@ Metrics
 ======================
 
 The following metrics, resource attributes, and attributes are available.
+
+.. note:: The SignalFx exporter excludes some available metrics by default. Learn more about default metric filters in :ref:`list-excluded-metrics`.
 
 .. raw:: html
 

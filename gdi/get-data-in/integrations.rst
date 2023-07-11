@@ -1089,7 +1089,7 @@ Instrument your applications to send metrics and traces to Observability Cloud.
      - :strong:`X`
      -
 
-   * - :ref:`Microsoft .NET <dotnet>`
+   * - :ref:`Microsoft .NET <microsoft-dotnet>`
      -
      - :strong:`X`
      -
@@ -1168,7 +1168,7 @@ Community integrations
 For information about these integrations:
 
 #. Log in to Splunk Observability Cloud
-#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. In the navigation menu, select :menuselection:`Data Management`. 
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for the name of the community integration.

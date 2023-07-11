@@ -31,12 +31,12 @@ You can use the Create Detector guided setup to fine-tune settings such as trigg
 Prerequisite
 ============================================
 
-To create alerts for specific conditions in a Business Workflow you must have at least one Business Workflow rule. 
+- At least one Business Workflow rule has been configured by a Splunk APM administrator in your Splunk Observability Cloud account.
+- You're using the enterprise-level product offering.
 
 Create a Business Workflow alert
 =================================
-
-You can use the same Create Detector guided setup to set up either service alerts or Business Workflow alerts, depending on the type of signal that you want to monitor.
+You can use the same Create Detector guided setup to set up either service alerts or Business Workflow alerts, depending on the type of signal that you choose to monitor.
  
 To create a Business Workflow alert, do the following:
 

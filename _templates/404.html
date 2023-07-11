@@ -1,0 +1,266 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %}
+
+<!-- Google Search Console 2/1/18 -->
+
+<meta name="google-site-verification" content="7xRL6H9xjnHYrs6GifZI9OKNUz0JCYVYNTRrkl_y5ro" />
+
+<!-- Google Webmaster Console 7/2/18 -->
+
+<meta name="google-site-verification" content="l0O8pc86XMAkFYJ9j6L4t7Fny44AfdQqKms5AahSLKs" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<!-- Google Analytics -->
+
+<!-- OneTrust Cookies Consent Notice start for docs.splunk.com -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="8ce8262c-a59d-4265-a12b-e2462f788bf4" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for docs.splunk.com -->
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TPV7TP');</script>
+  
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPV7TP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  
+
+<!-- Hotjar Tracking Code for https://docs.splunk.com/observability/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2659668,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<script>
+  if(window.location.toString().includes("docs.signalfx")){
+    window.location.href = "https://docs.splunk.com/Observability/";
+  }
+</script>
+{% endblock %}
+
+{%- block content %}
+  <div class="">
+  {% include "banner.html" %}
+  </div>
+  {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+    <div class="document">
+  {%- block document %}
+      <div class="documentwrapper">
+      {%- if render_sidebar %}
+        <div class="bodywrapper">
+      {%- endif %}
+          <div class="body" role="main">
+            {% include "breadcrumbs.html" %}
+            <h1>Page not found</h1>
+
+            <br /><br />
+
+            We couldn't find the page you requested. It might have been deleted or moved. 
+
+            <br /><br />
+
+            Use the navigation menu or the search box to find the content you're looking for.
+
+            <br /><br />
+
+            {% include "page-nav.html" %}
+          </div>
+      {%- if render_sidebar %}
+        </div>
+      {%- endif %}
+      <div id="feedbackModal">
+        <!-- feedback form content -->
+      <div class="signalfxmodal-content">
+      <h2 style="font-size:21px;font-family: 'Open Sans'; font-weight: bold;">Was this topic useful?</h2>
+          <p>
+                                  Was this documentation topic helpful?
+                                  <select id="signalfx_splunk_feedback_yesno" onchange="help_decission(this.value);">
+                                    <option value="">Please select</option>
+                                    <option	value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                  </select>
+                                </p>
+
+                                <p id="signalfx_splunk_feedback_no_reason" style="display:none">
+                                  Please specify the reason
+                                  <select id="signalfx_splunk_feedback_no_reasonlist">
+                                    <option value="">Please select</option>
+                                    <option	value="didnt_answer">The topic did not answer my question(s)</option>
+                                    <option value="found_error">I found an error</option>
+                                    <option value="didnt_like">I did not like the topic organization</option>
+                                    <option value="other">Other</option>
+                                  </select>
+                                </p>
+                                <p>
+                                  <label for="signalfx_splunk_feedback_email">Enter your email address, and someone from the documentation team will respond to you:</label>
+                                                            </p>  <p>	<input  name="signalfx_splunk_feedback_email" id="signalfx_splunk_feedback_email" type="text" maxlength="255" size="30" value="" required/>
+                                </p>
+                                <p>
+                                                            <label for="signalfx_splunk_feedback_comment">Please provide your comments here. Ask a question or make a suggestion.</label>
+                                </p>
+
+                                <textarea name="signalfx_splunk_feedback_comment" placeholder='' class="form-control signalfx-feedback-comment" id="signalfx_splunk_feedback_comment" rows="5" maxlength="1000" required></textarea>
+                                <div id="commenttxt" style="font-size: 9px;color: grey;">Comment should have minimum 5 characters and maximum of 1000 characters.</div>
+                                <br>
+                                <div id="captcha_element"></div>
+                                <p></p><p class="button-set-submit">
+                                <a style="float:right;" class="fbbtn" type="button" id="signalfx_splunk_feedback_submit" name="signalfx_submit" onclick="submit_feedback()">Submit</a>
+                                </p>
+        </div>
+        <p id="splunk_oly_helpful_completed" class="well">    
+          <em>Feedback submitted, thanks!</em>
+        </p>
+        </div>
+      </div>
+      <div id="sticky-right-nav">
+        <div class="right-nav" style="margin-top: 0px; position: fixed; display: inline-block; padding-left: 10px; padding-right: 10px; overflow: scroll;word-break: break-word; height: calc(100% - 100px); margin-bottom: 200px">
+
+          <ul id="rightSideTOC" class="list-unstyled" style="margin-bottom: 150px;">
+
+          </ul>
+        </div>
+      </div>
+{%- endblock %}
+ <div id="mainTOC">
+  {%- block sidebar2 %}{{ sidebar() }}{% endblock %}
+</div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo" style="font-size:11px;">   
+      <div class="footerinner" style="width: 72%;">  
+      <a href="https://www.splunk.com/en_us/legal/privacy/privacy-policy.html" target="_blank">Privacy</a> | 
+      <a href="https://www.splunk.com/en_us/legal/terms/terms-of-use.html" target="_blank">Terms</a> | 
+      <a href="https://www.splunk.com/en_us/legal/export-controls.html" target="_blank">Export Control</a> | 
+      <span style="color:black">&copy; 2005 - 2023 Splunk Inc. All rights reserved.</span>
+      <div class="newfootertxt" style="color:black">Splunk, Splunk>, Turn Data Into Doing, and Data-to-Everything are trademarks or registered trademarks of Splunk Inc. in the United States and other countries. All other brand names, product names, or trademarks belong to their respective owners.</div>
+      </div>
+      <div style="width: 28%;">
+        <a href="#feedbackModal" class="feedbackbtn">Feedback</a>
+      </div>
+      
+        <script type="text/javascript">
+          var onloadCallback = function() {
+            grecaptcha.render('captcha_element', {
+              'sitekey' : '6LeDbQgTAAAAAPBwuGnm-MajO6ODpcctENWBFfbN',
+            });
+          };
+        </script>
+                                <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+        </script>
+        <script>
+        function help_decission(value){
+         if(value=='No'){
+            document.getElementById("signalfx_splunk_feedback_no_reason").style.display = "block";
+         }else{
+            document.getElementById("signalfx_splunk_feedback_no_reason").style.display = "none";
+         }
+        }
+        function validateform(fyesorno,reanson,email,comment,token){
+
+            if(fyesorno==''){alert('Please specify whether the topic was helpful.');return false;}
+            if(fyesorno=='No' && reanson==''){alert('Please specify the reason for topic not helpful.');return false;}
+            // if(email==''){alert('Please provide email address.');return false;}
+            // var emailRegex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/gm;
+            // if(email!='' && !(emailRegex.test(email))){
+            //   alert('Please input a valid email address.');return false
+            // }
+
+            if(comment=='' || comment.length<5 || comment.length>1000){alert('Comment should have minimum 5 characters and maximum of 1000 characters.');return false}
+
+            if(token==''){
+                alert('Please select Captcha.');
+                return false;
+            }
+              return true;
+        }
+        function submit_feedback(){
+          var url = window.location.href;
+          url = url.replace("#feedbackModal","");
+          var urlsplit = url.split("?");
+          url = urlsplit[0].substr(0,200);
+          url = url.trim();
+
+          var fyne = document.getElementById("signalfx_splunk_feedback_yesno");
+          var fyne_value = fyne.options[fyne.selectedIndex].value;
+          fryne_value = '';
+          if(fyne_value=='No'){
+          var fryne = document.getElementById("signalfx_splunk_feedback_no_reasonlist");
+          var fryne_value = fryne.options[fryne.selectedIndex].value;
+          }
+          var fe_value = document.getElementById("signalfx_splunk_feedback_email").value;
+
+          var fce_value = document.getElementById("signalfx_splunk_feedback_comment").value;
+          var token = grecaptcha.getResponse();
+          var validate = validateform(fyne_value,fryne_value,fe_value,fce_value,token);
+
+          if(validate){
+            $('#signalfx_splunk_feedback_submit').addClass('ajaxcallon');
+            $('#signalfx_splunk_feedback_submit_cancel').addClass('ajaxcallon');
+            $('#signalfx_splunk_feedback_submit').html('Processing...');
+
+                var feedbackApiUrl =  'https://docs.splunk.com/api/userutility/addfeedback';
+
+                var uname = fe_value.split("@");
+                var urlSubject = url.replace("https://docs.splunk.com/","");
+                urlSubject = urlSubject.replace("https://docs.signalfx.com/","");
+                $.post( {url:feedbackApiUrl,
+                data:JSON.stringify({ url: url, username:uname[0], subject:'Feedback from Splunk Observability Documentation: ' + urlSubject,email:fe_value,isuseful:fyne_value,reason:fryne_value,comment:fce_value,token:token})
+               })
+               .done(function( data ) {
+                var data = JSON.parse(data);
+                //alert(data.message);
+                $('.signalfxmodal-content').hide();
+                $('#splunk_oly_helpful_completed').show();
+                //$('.signalfxmodal').hide();
+                $('#signalfx_splunk_feedback_submit').removeClass('ajaxcallon');
+                $('#signalfx_splunk_feedback_submit_cancel').removeClass('ajaxcallon');
+                $('#signalfx_splunk_feedback_submit').html('Submit');
+                $('#signalfx_splunk_feedback_email').val("");
+                $('#signalfx_splunk_feedback_comment').val("");
+
+                $("#signalfx_splunk_feedback_yesno").prop("selectedIndex", 0).change();
+                $("#signalfx_splunk_feedback_no_reason").prop("selectedIndex", 0).change();
+                $("#signalfx_splunk_feedback_no_reason").hide();
+                console.log(data);
+               }).fail(function() {
+                  $('.signalfxmodal-content').show();
+                  $('#splunk_oly_helpful_completed').hide();
+                  alert( "Something went wrong please try after sometime!" );
+                  //$('.signalfxmodal').hide();
+                  $('#signalfx_splunk_feedback_submit').removeClass('ajaxcallon');
+                  $('#signalfx_splunk_feedback_submit_cancel').removeClass('ajaxcallon');
+                  $('#signalfx_splunk_feedback_submit').html('Submit');
+                  $('#signalfx_splunk_feedback_email').val("");
+                  $('#signalfx_splunk_feedback_comment').val("");
+
+                  $("#signalfx_splunk_feedback_yesno").prop("selectedIndex", 0).change();
+                  $("#signalfx_splunk_feedback_no_reason").prop("selectedIndex", 0).change();
+                  $("#signalfx_splunk_feedback_no_reason").hide();
+                });
+
+          }
+
+        }
+       </script>
+
+<!-- <a href="#feedbackModal" class="feedbackbtn">Feedback</a> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+{%- endblock %}
+
+{% block footer %}{% endblock footer %}

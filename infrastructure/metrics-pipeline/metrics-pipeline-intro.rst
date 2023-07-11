@@ -33,8 +33,7 @@ For example, you send in data for a metric ``http.server.duration``.
 
 Even though ``http.server.duration`` only has 2 dimensions, metric cardinality is already 9 since each dimension has multiple possible values.
 
-To learn more about MTS, see :ref:`metric-time-series`.
-
+To learn more about MTS, see :ref:`metric-time-series`. To learn more about the data model for Splunk Observability Cloud, see :ref:`data-model`.
 
 How does metrics pipeline management work?
 ========================================================
@@ -55,15 +54,14 @@ Data you send from your services to Observability Cloud can have high cardinalit
 
 By selecting specific dimensions to keep, you can aggregate your data points into a new metric with fewer dimensions, creating a specific view of dimensions that are important. You can then obtain a more simplified and concentrated view of your data when you don’t need to view metrics across all dimensions.
 
-When you choose specific dimensions, metrics pipeline management generates a new metric that is rolled up based on your selected dimensions. By default, aggregation rules roll up the data points into the new metric using ``sum``, ``min``, ``max``, ``count``, ``delta``, ``avg``, and ``latest`` functions. The new aggregated metric can be queried in the same way as any other metrics in Observability Cloud.
+When you choose specific dimensions, metrics pipeline management generates a new metric and rolls it up based on your selected dimensions. By default, aggregation rules roll up the data points into the new metric using ``sum``, ``min``, ``max``, ``count``, ``delta``, ``avg``, and ``latest`` functions. You can use this new metric in the same way as any other metrics in Observability Cloud.
 
 How is this different from post-ingestion aggregation at query time?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-When you configure charts or detectors, you can aggregate your data using analytic functions, such as ``sum``, and then group your data by specific dimensions, such as ``sum by region``. This is post-ingest aggregation at query time. You need to store all your data in Observability Cloud if you want to do this, which is cost-prohibitive.
+When you configure charts or detectors, you can aggregate your data using analytic functions, such as ``sum``, and then group your data by specific dimensions, such as ``sum by region``. This is post-ingest aggregation at query time. You need to store all your data in Observability Cloud if you want to do this, which significantly increases your costs.
 
 With metrics pipeline management, you can aggregate your data as you are ingesting them into Observability Cloud and choose to retain only aggregated metrics.
-
 
 Example
 ++++++++
@@ -81,7 +79,7 @@ Aggregate using one dimension
 
 You are only interested in the source region of your data, so you create an aggregation rule that groups your data by the ``region`` dimension.
 
-The aggregated metric removes all other dimensions and retains only the ``region`` dimension based on your rule. There are only 20 different values for ``region``, so only 20 MTS are ingested.
+The aggregated metric removes all other dimensions and retains only the ``region`` dimension based on your rule. There are only 20 different values for ``region``, so the system only ingests 20 MTS.
 
 Aggregate using multiple dimensions
 ****************************************
@@ -93,25 +91,24 @@ The aggregated metric removes the ``container_id`` dimension and retains ``endpo
 .. _data-dropping:
 
 Data dropping rules
---------------------
+------------------------
 
-When you have a new aggregated metric, you might no longer have any use case for the original unaggregated data. You can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want to monitor, so you can save storage space and reduce cardinality.
+When you have a new aggregated metric, you might no longer have any use case for the original unaggregated data. You can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want to monitor, so you can save storage space, reduce cardinality, and :ref:`lower your bills <data-dropping-billing>`.
 
 .. note::
     - You must be an admin to drop data.
-    - You can only drop new incoming data. Existing data can't be dropped.
+    - You can drop new incoming data, but you can't drop existing.
     - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
-
 
 Example
 ++++++++
 
 Once you have new aggregated metrics created by aggregation rules, you can drop the raw unaggregated data for ``http.server.duration``. 
 
-Use case for metrics pipeline management
+Scenario for metrics pipeline management
 ==================================================
 
-See the following use case for metrics pipeline management:
+See the following scenario for metrics pipeline management:
 
 * :ref:`aggregate-drop-use-case`
 

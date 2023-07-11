@@ -35,7 +35,7 @@ Steps
 
 6. Select :strong:`Create` to save your changes and create the rule.
 
-7. View the list of rules to confirm that the rule you created is enabled. If it is not, use the switch next to the rule name to enable the rule.
+7. View the list of rules to confirm that the rule you just created is turned on. If it is not, use the toggle next to the rule name to turn on the rule.
 
 8. To evaluate a trace against the rule set and generate a name for the workflow, copy and paste a trace ID into the Rule Tester field. 
 

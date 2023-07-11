@@ -22,7 +22,7 @@ Web vitals are made up of these metrics that measure user experience.
      - Measures loading performance by capturing the render time of the largest image or text block visible within the viewport.
    * - Cumulative layout shift (CLS)
      -  Measures visual stability by capturing the sum of all individual layout shift scores for every unexpected layout shift that occurs during the entire lifespan of the page. A layout shift occurs any time a visible element changes its position from one rendered frame to the next. Fewer shifts are better for page stability.
-   * - First input delay(FID)
+   * - First input delay (FID)
      - Measures the time from when a user first interacts with a web page to the time when the browser is able to respond to that interaction
    * - Total blocking time (TBT)
      - TBT is collected from a synthetic test, while FID is collected from real user data and they both may be considered equivalent to each other since they measure the same metric: time taken by the page to become interactive and responsiveness to the user.
@@ -52,7 +52,7 @@ Web vitals are a great way of measuring if your tests are actually capturing the
 
 Example
 ------------------
-The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-use-case`. The SRE team wants to determine the health of the API test by run location. The data centers for Buttercup Games are in Johannesburg and the web vitals for the local tests reflect optimal performance. 
+The site reliability engineering (SRE) team at the fictitious Buttercup Games company sets up tests to monitor the checkout workflow for their online store using an API test. For steps on how they setup their API test, see :ref:`api-test-scenario`. The SRE team wants to determine the health of the API test by run location. The data centers for Buttercup Games are in Johannesburg and the web vitals for the local tests reflect optimal performance. 
 
 Using the RUM integration, the SRE team can compared web vitals by global results and found that the LCP really lagged. 
 
@@ -73,5 +73,5 @@ See also
 To learn more about:
 
 * Web Vitals, see :new-page:`https://web.dev/vitals/` in the Google developer documentation
-* What kind of use cases you can solve with Splunk RUM, see :ref:`use-case-landingpage`
+* What kind of use cases you can solve with Splunk RUM, see :ref:`scenario-landingpage`
 * Tag spotlight, see :ref:`error-aggregates`

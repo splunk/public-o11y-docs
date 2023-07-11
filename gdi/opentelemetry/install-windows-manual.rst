@@ -23,7 +23,7 @@ All installation methods offer default configurations using environment variable
 
 - ``${SPLUNK_ACCESS_TOKEN}``: The Splunk access token to authenticate requests.
 - ``${SPLUNK_API_URL}``: The Splunk API URL. For example, ``https://api.us0.signalfx.com``.
-- ``${SPLUNK_HEC_TOKEN}``: The Splunk HEC authentication token.
+- ``${SPLUNK_HEC_TOKEN}``: The Splunk HTTP Event Collector (HEC) authentication token.
 - ``${SPLUNK_HEC_URL}``: The Splunk HEC endpoint URL. For example, ``https://ingest.us0.signalfx.com/v1/log``.
 - ``${SPLUNK_INGEST_URL}``: The Splunk ingest URL. For example, ``https://ingest.us0.signalfx.com``.
 - ``${SPLUNK_TRACE_URL}``: The Splunk trace endpoint URL. For example, ``https://ingest.us0.signalfx.com/v2/trace``.
@@ -36,7 +36,7 @@ If you need to use a proxy, set one of the following environment variables accor
 
 - ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
 - ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy.
+- ``NO_PROXY``: If a proxy is defined, sets addresses that don't use the proxy.
 
 Restart the Collector after adding these environment variables to your configuration.
 
@@ -44,8 +44,8 @@ Restart the Collector after adding these environment variables to your configura
 
 .. _windows-installer:
 
-Windows Installer (MSI)
-===============================
+Windows installer file (MSI) installation
+===============================================================================
 
 To install the package using Windows Installer, download the Windows MSI package (64-bit only) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
 
@@ -62,7 +62,7 @@ Next, proceed with the GUI, or follow the instructions to install using a Powers
 Install using the GUI
 ---------------------------------
 
-Double click the downloaded package and follow the instructions in the wizard.
+Run the downloaded package and follow the instructions in the guided setup.
 
 .. _windows-powershell:
 
@@ -85,7 +85,7 @@ Follow these steps:
 
     Start-Service splunk-otel-collector
 
-Learn more about about advanced configuration options (including Service Logging) using PowerShell in our :new-page:`GitHub repos <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/windows-manual.md>`.
+Learn more about advanced configuration options (including Service Logging) using PowerShell in the Splunk Distribution of OpenTelemetry Collector :new-page:`Windows manual <https://github.com/signalfx/splunk-otel-collector/blob/main/docs/getting-started/windows-manual.md>`.
 
 .. _windows-manual-fluentd:
 
@@ -152,6 +152,42 @@ Run the following command to deploy the latest Docker image:
 	    -p 8888:8888 -p 9080:9080 -p 9411:9411 -p 9943:9943 `
 	    --name=otelcol quay.io/signalfx/splunk-otel-collector-windows:latest
 
+.. _windows-binary:
+
+Install using the binary file
+===============================
+
+To install the Collector using the binary file, follow these steps:
+
+#. Download the binary for your architecture from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+#. If you're not using an existing or custom config file, download the :new-page:`default config file <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector>`` for the Collector. See more at :ref:`otel-configuration-ootb`.
+
+#. Run the binary from the command line:
+
+.. code-block:: PowerShell
+
+  # see available command-line options
+  PS> & '<download dir>\otelcol_windows_amd64.exe' --help
+  Usage of otelcol:
+      --config string          Locations to the config file(s), note that only a single location can be set per flag entry e.g. --config=/path/to/first --config=path/to/second. (default "[]")
+      --feature-gates string   Comma-delimited list of feature gate identifiers. Prefix with '-' to disable the feature. '+' or no prefix will enable the feature. (default "[]")
+      --no-convert-config      Do not translate old configurations to the new format automatically. By default, old configurations are translated to the new format for backward compatibility.
+      --set string             Set arbitrary component config property. The component has to be defined in the config file and the flag has a higher precedence. Array config properties are overridden and maps are joined. Example --set=processors.batch.timeout=2s (default "[]")
+      -v, --version                Version of the collector.
+
+  # set the SPLUNK_REALM and SPLUNK_ACCESS_TOKEN env vars required in our default config files
+  PS> $env:SPLUNK_REALM = "<realm>"
+  PS> $env:SPLUNK_ACCESS_TOKEN = "<token>"
+
+  # start the collector
+  PS> & '<download dir>\otelcol_windows_amd64.exe' --config=<path to config file>
+
+  # alternatively, use the SPLUNK_CONFIG env var instead of the --config command-line option
+  PS> $env:SPLUNK_CONFIG = "<path to config file>"
+  PS> & '<download dir>\otelcol_windows_amd64.exe'
+
+  # type Ctrl-c to stop the collector
 
 .. _windows-manual-custom:
 

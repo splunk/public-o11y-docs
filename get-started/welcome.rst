@@ -17,7 +17,7 @@ Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting
 
 Choose from :ref:`over 100 supported open standards-based integrations <supported-data-sources>` with common data sources to get data from your on-premise and cloud infrastructure, applications and services, and user interfaces into Observability Cloud.
 
-When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more.
+When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
 
 Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward.
 
@@ -29,7 +29,7 @@ The following diagram provides a high-level view of how each Observability Cloud
   :width: 100%
   :alt: This screenshot shows how Observability Cloud products serve the different layers and processes in an organization's environment.
 
-For information about how these products can be used together to address real-life use cases, see :ref:`get-started-use-case`.
+For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`.
 
 To get started with Observability Cloud, see :ref:`get-started-o11y`.
 
@@ -83,7 +83,7 @@ Collect traces and spans to monitor your distributed applications with Splunk AP
 
 For more information, see :ref:`wcidw-apm`
 
-For information about how APM can be used to address real-life use cases, see :ref:`apm-use-cases-intro`.
+For information about how APM can be used to address real-life scenarios, see :ref:`apm-scenarios-intro`.
 
 
 .. _welcome-rum:
@@ -113,7 +113,7 @@ Splunk Log Observer
 
 Troubleshoot your application and infrastructure behavior using high-context logs in Splunk Observability Cloud. With Splunk Log Observer, you can perform codeless queries on logs to detect the source of problems in your systems. You can also extract fields from logs in Log Observer to set up log processing rules and transform your data as it arrives.
 
-For more information, see :ref:`LogObserverFeatures`
+For more information, see :ref:`LogObserverFeatures`.
 
 
 .. _welcome-oncall:
@@ -142,7 +142,7 @@ Splunk Observability Cloud for Mobile
 
 Splunk Observability Cloud for Mobile is an iOS and Android companion mobile app to Splunk Observability Cloud. You can use Splunk Observability Cloud for Mobile to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
 
-For more information, see :ref:`wcidw-mobile`
+For more information, see :ref:`wcidw-mobile`.
 
 Splunk IT Essentials Work and Splunk IT Service Intelligence 
 ===================================================================

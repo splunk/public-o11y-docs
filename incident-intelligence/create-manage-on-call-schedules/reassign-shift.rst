@@ -91,7 +91,7 @@ See also
 ============
 
 * :ref:`ii-create-manage-on-call-schedules`
-* :ref:`ii-schedule-scenarios`
+* :ref:`ii-scenarios-schedules`
 * :ref:`ii-whos-on-call`
 
 

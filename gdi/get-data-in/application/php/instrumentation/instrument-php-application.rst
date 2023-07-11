@@ -19,7 +19,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Observability Cloud.
 #. Open the :new-page:`PHP guided setup <https://login.signalfx.com/#/gdi/scripted/php-tracing/step-1?category=product-apm&gdiState=%7B"integrationId":"php-tracing"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -110,7 +110,7 @@ Deploy the PHP instrumentation in Docker
 
 You can deploy the PHP instrumentation using Docker. Follow these steps to get started:
 
-#. Create a startup shell script in a location Docker can access. The script can have any name, for example ``setup.sh``.
+#. Create a startup shell script in a location Docker can access. The script can have any name, for example setup.sh.
 
 #. Edit the startup shell script to export the environment variables described in :ref:`install-php-instrumentation`.
 
@@ -194,7 +194,7 @@ To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

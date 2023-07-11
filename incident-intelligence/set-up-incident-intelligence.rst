@@ -11,7 +11,7 @@ To route incidents to the necessary teams and people, you need to first generate
 Prerequisite
 ===============================================================
 
-- You must be an Observability Cloud administrator to configure and set up Incident Intelligence.
+You must be an Observability Cloud administrator to configure and set up Incident Intelligence.
 
 Get started
 ================

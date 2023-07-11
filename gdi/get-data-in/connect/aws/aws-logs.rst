@@ -7,14 +7,14 @@ Collect logs from your AWS services
 .. meta::
   :description: Collect logs from your AWS services in Splunk Observability Cloud.
 
+.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
+
 When setting up an AWS connection, you can choose to import logs from a Cloudwatch log group or an S3 bucket. 
 
 To set up log collection, follow these steps:
 
 1. Open the link to a :ref:`CloudFormation template <aws-cloudformation>`. 
-
 2. Adjust the settings. 
-
 3. Deploy the template to create ``splunk-aws-logs-collector``, an AWS Lambda function used to transform log entries, enrich them with metadata, and send them to Splunk Observability Cloud.
 
 .. note::
@@ -101,9 +101,9 @@ To capture logs from unsupported services using the API, follow these steps:
 .. code-block:: none
   
   curl https://app.<realm>.signalfx.com/v2/integration/<integrationId> \
-    -H PUT \
-    -H 'x-sf-token: <user API access token>' \
-    -H 'content-type: application/json' \
+    -X PUT \
+    -X 'x-sf-token: <user API access token>' \
+    -X 'content-type: application/json' \
     --data-raw '<updated integration JSON here>'
 
 

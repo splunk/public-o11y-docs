@@ -17,6 +17,8 @@ For each page checked in a Browser test, Splunk Synthetic Monitoring captures an
    If the site or application you are monitoring uses allow lists or block lists for visitors or an analytics tool to measure traffic, check that it's configured to accommodate traffic from Splunk Synthetic Monitoring. See :ref:`synth-configure-app` for instructions. 
 
 
+
+
 Set up a Browser test
 =========================
 
@@ -27,6 +29,10 @@ Follow these steps to set up a Browser test:
 #. In the :guilabel:`Name` field, enter a name for your test. 
 #. In the :guilabel:`Go to URL` field, enter the URL for the page you want to test, including ``http`` or ``https``.
 #. To add steps and synthetic transactions to your Browser test, select :guilabel:`Edit steps or synthetic transactions`. See :ref:`add-transactions` to learn more. 
+#. As you build your test, you can use :guilabel:`Try now` to check that the configuration of your test is valid. Run results aren't stored. For more, see :ref:`try-now`. 
+#. (Optional) Add a wait time before a step executes. See, :ref:`browser-wait-times`.
+#. Save your test. 
+
 
 .. include:: /_includes/synthetics/configure-test.rst
 
@@ -123,8 +129,31 @@ When activated, this feature is used to enforce the validation of expired, inval
 
 
 
+Wait times 
+---------------------
+Optimize your test coverage by adding custom wait times to capture longer page loads and improve the accuracy of run results. Applications with long load times can cause a Browser test to fail. If you know that there are certain steps in a workflow that take longer than 10 seconds, add a custom wait time to your Browser test. 
+
+* Wait times are available with Browser tests only. 
+* The maximum cumulative wait time for each test is 200 seconds. 
+
+Follow these steps to configure custom wait times for your Browser tests: 
+
+#. In Splunk Synthetic Monitoring, select :strong:`Edit` on the Browser test to open the configuration panel.
+#. Select :strong:`New step > Wait`, from the step type drop down.
+#. Add a name and the wait time in ms.
+#. When you finish instrumenting your test, save the workflow: :strong:`Return to test > Save`.
+
+The following image shows how to configure a test to go to a URL, wait for 10 seconds, then log in. 
+
+.. image:: /_images/synthetics/wait-times-example.png
+   :alt: This image shows a browser test with three steps: go to url, wait 20 seconds, then log in. 
+
+
+.. _browser-wait-times:
+
+
 Example
 ==================
-For an example, see  :ref:`browser-test-use-case`.
+For an example, see  :ref:`browser-test-scenario`.
 
 

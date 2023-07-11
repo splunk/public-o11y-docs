@@ -30,7 +30,7 @@ The following table describes common types of inferred services:
           * :ref:`rpc-inf-logic`
           * :ref:`generic-inf-logic`
 
-       | If your system interacts with a large number of HTTP services, inferring HTTP services might increase Troubleshooting MetricSets cardinality. You might turn off inferring HTTP services in your org to prevent excessive cardinality. See  :ref:`infer-http-services` to manage inferred HTTP services.     
+       | If your system interacts with a large number of HTTP services, inferring HTTP services might increase the cardinality of your Troubleshooting MetricSets (TMS). If so, you might turn off inferring HTTP services in your org to prevent excessive cardinality. See  :ref:`infer-http-services` to manage inferred HTTP services.     
        
    * - | Publisher/subscriber queues (pub/sub)
 
@@ -181,7 +181,7 @@ To infer a generic service from a client span, Splunk APM does the following:
 
 #. Verify that the ``span.kind`` of the referring span is equal to ``CLIENT``.
 #. Look for the service name in the ``peer.service`` tag
-#. If the ``peer.service`` tag exists, infer the service name from it. If the ``peer.service`` tag does not exist, the span is not considered related to a generic inferred service.
+#. If the ``peer.service`` tag exists, infer the service name from it. If the ``peer.service`` tag doesn't exist, the span isn't considered to be related to a generic inferred service.
  
 **Note on AWS services:** To identify AWS services, the span must contain ``http.url``. Splunk APM applies heuristics on this tag's value to determine the AWS Service type from the URL.
 
@@ -190,11 +190,17 @@ To infer a generic service from a client span, Splunk APM does the following:
 Inferred publisher/subscriber (pub/sub) queues
 ------------------------------------------------------
 
-When Splunk APM infers a publisher/subscriber queue, it means an instrumented service is interacting with an uninstrumented pub/sub.
+When Splunk APM infers a publisher/subscriber queue, it means an instrumented service is interacting with an uninstrumented pub/sub. To identify an inferred pub/sub, Splunk APM does the following:
 
-The ``kind`` of the referring span is equal to ``producer`` or ``client``.
+#. Verify that the ``span.kind`` of the referring span is equal to ``PRODUCER`` or ``CLIENT``.
+#. Verify that the span contains either ``messaging.destination`` (in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower) or ``messaging.destination.name`` (in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher). This tag's value is used to specify the name of the topic or channel that messages are sent to.
 
-To identify an inferred pub/sub, the span must contain ``messaging.destination``. This tag's value is used to specify the name of the topic or channel that messages are being sent to.
+    #. If both ``messaging.system`` and ``messaging.destination.name`` exist, the inferred service name = <Value of ``messaging.system`` tag>:<Value of ``messaging.destination.name`` tag>.
+    #. If ``messaging.system`` is null, the inferred service name = <Value of ``messaging.destination.name`` tag>.
+    #. If ``messaging.destination.name`` is null, the inferred service name = <Value of ``messaging.system`` tag>.
+
+
+
 
 
 .. _db-inf-logic:

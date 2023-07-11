@@ -95,7 +95,7 @@ The Splunk Distribution of OpenTelemetry Go can instrument the following librari
 Ensure you are using supported Go versions
 ==============================================================
 
-The Splunk Distribution of OpenTelemetry Go is compatible with Go 1.17 and higher.
+The Splunk Distribution of OpenTelemetry Go is compatible with Go 1.19 and higher.
 
 .. _go-otel-connector-requirement:
 

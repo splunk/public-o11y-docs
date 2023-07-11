@@ -100,8 +100,8 @@ If multiple detectors insert the same attribute name, only the first detector is
 
 When using multiple detectors, follow this order:
 
-* AWS: ``gke``, ``gce``
-* GCP: ``lambda``, ``elastic_beanstalk``, ``eks``, ``ecs``, ``ec2``
+* AWS: ``lambda``, ``elastic_beanstalk``, ``eks``, ``ecs``, ``ec2``
+* GCP: ``gke``, ``gce``
 
 .. _resourcedetection-processor-metadata:
 

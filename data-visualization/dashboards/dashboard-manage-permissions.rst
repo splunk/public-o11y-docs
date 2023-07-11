@@ -5,7 +5,7 @@ Specify who can see and edit your dashboard groups and dashboards
 ********************************************************************************
 
 .. meta::
-   :description: Learn how to manage access permissions for dashboard groups and dashboards
+   :description: Learn how to view, grant, and revoke access permissions for dashboard groups in Splunk Observability Cloud, and manage read and write permissions. 
 
 |hr|
 :strong:`Available in Enterprise Edition`

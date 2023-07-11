@@ -15,27 +15,27 @@ The mapping service is a transition tool that defines equivalencies between lega
 - It applies to metrics and metric time series (MTS), dimensions, and properties. 
 - Mapping logic treats any of the names for a metric or property as referring to that same metric or property in OpenTelemetry, without tracking versions.
 
-For example, if you track CPU utilization for your Kubernetes pod, your analytics can use the ``kubernetes.container_cpu_limit`` value. In that case, the mapping service updates your existing queries to include both legacy semantics and new semantics (such as ``k8s.container.cpu_limit``) joined by an OR clause. The Mapping Service creates equivalencies between your Smart Agent and OTel metric names.
+For example, if you track CPU utilization for your Kubernetes pod, your analytics can use the ``kubernetes.container_cpu_limit`` value. In that case, the mapping service updates your existing queries to include both legacy semantics and new semantics (such as ``k8s.container.cpu_limit``) joined by an OR clause. 
 
 ### Navigate your data
 
 Whether you're using the Smart Agent or the Collector, your original dashboards and detectors function the same way. 
 
 - Infrastructure Navigator views use the mapping service to show both old collection data and new collection data.
-- After you've migrated to the Collector, read <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a>, to learn you how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
+- After you've migrated to the Collector, read <a href="https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html" target="_blank">Use the Metric Finder and Metadata Catalog</a> to learn how to use the Metric Finder and Metadata Catalog to find, view, and edit information about the metadata in your system.
 
 ## Obtain the transition mapping report
 
-If you decide as a Splunk admin to turn off the mapping service, you can still generate and download a **Mapping and OTel Transition Impact Report** specific to migration for your cloud computing environment.
-
-The mapping impact report explains how the transition from Smart Agent to OpenTelemetry affects some of the variables and saved filters in the following dashboards, charts, and detectors.
+The **Mapping and OTel Transition Impact Report** explains how the transition from Smart Agent to OpenTelemetry affects some of the variables and saved filters in the following dashboards, charts, and detectors.
 
 The mapping impact report also tells you where to find whatever subset of your content calls functions with Smart Agent names, so that you can update that content either by hand or programmatically to complete your transition to open telemetry.
+
+### Access the transition report
 
 To access the migration transition impact report, follow these steps:
 
 1. Log in to Splunk Observability Cloud.
-2. In the left navigation menu, select **Settings > Billing and Usage**.
+2. In the navigation menu, select **Settings** and then select **Billing and Usage**.
 3. Click the **View detailed usage reports** link.
 4. Select the **OpenTelemetry Migration** tab.
 5. Click **Download** to open the report as a comma-separated values file.
@@ -51,8 +51,6 @@ The report is specific to your computing environment. It flags the following ite
 
 The mapping impact report also shows which OpenTelemetry metrics and dimensions work well as replacements for specific Smart Agent metrics and dimensions, with the important exception of wildcards not supported by OpenTelemetry.
 
-You can view and save the mapping impact report even if you opt out of mapping.
-
 ### Interpret the mapping impact report
 
 The Mapping and OTel Transition Impact Report summarizes the scope of component name change associated with your migration to open telemetry. It assesses your data set to list the tokens currently used as metric, dimension, property or tag names, and highlights migration rules that could generate conflict between old and new equivalence groups.
@@ -65,9 +63,9 @@ The mapping transition impact report assesses migration effects across three cat
 - Team responsibilities
 - Migration mitigation steps you should take
 
-#### Avoiding unexpected results
+#### Avoid unexpected results
 
-Because Mapping Service only renames existing MTS when filtering or grouping requires renaming to conform to OpenTelemetry Collector conventions, correlation across different datasets yields unexpected results when a mapped MTS is correlated with an unmapped MTS. This can happen, for example, when an MTS attempts to correlate with a time-shifted or transformed version of itself.
+Because the mapping service only renames existing MTS when filtering or grouping requires renaming to conform to OpenTelemetry Collector conventions, correlation across different datasets yields unexpected results when a mapped MTS is correlated with an unmapped MTS. This can happen, for example, when an MTS attempts to correlate with a time-shifted or transformed version of itself.
 
 If you have charts and detectors built from formulas whose terms use different agents, you won't get the alerts you expect.
 

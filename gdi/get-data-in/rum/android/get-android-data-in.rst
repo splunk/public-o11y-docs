@@ -14,6 +14,7 @@ Instrument Android applications for Splunk RUM
    Configure the instrumentation <configure-rum-android-instrumentation>
    Manually instrument applications <manual-rum-android-instrumentation>
    Android RUM data model <rum-android-data-model>
+   Troubleshooting <troubleshooting>
 
 Instrument your Android applications to get Real User Monitoring (RUM) data into Splunk Observability Cloud. With Splunk RUM for Mobile, you can gain insight about the performance and health of your mobile apps.
 
@@ -29,7 +30,7 @@ To generate all the basic installation commands for your environment and applica
 
 #. Open the :new-page:`Android Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/android/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"android"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 
@@ -50,3 +51,4 @@ For detailed installation instructions and requirements, see :ref:`android-rum-i
 * Learn about the Splunk Android RUM data model. See :ref:`rum-android-data`.
 * :ref:`configure-android-instrumentation`.
 * :ref:`manual-android-instrumentation`.
+* :ref:`common-android-troubleshooting`.

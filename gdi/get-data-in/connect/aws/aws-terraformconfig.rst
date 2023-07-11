@@ -27,7 +27,7 @@ See the requirements for each cloud services provider:
 * :ref:`Azure prerequisites <azure-integration-prereqs>`
 * :ref:`GCP prerequisites <gcp-prerequisites>`
 
-.. note:: To use CloudWatch Metric Streams or retrieve logs from AWS services, you need to deploy additional resources on your AWS account using one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk. Also, review your :ref:`AIM policy <review-aws-iam-policy>` to ensure all the required actions are available to Splunk Observability Cloud.
+.. note:: To use CloudWatch Metric Streams or retrieve logs from AWS services, you need to deploy additional resources on your AWS account using one of the :ref:`CloudFormation templates <aws-cloudformation>` provided by Splunk. Also, review your :ref:`IAM policy <review-aws-iam-policy>` to ensure all the required actions are available to Splunk Observability Cloud.
 
 .. _terraform-aws-tokens:
 .. _terraform-tokens:
@@ -62,7 +62,7 @@ To configure a connection through Terraform, perform the following steps:
 
 1. Go to :new-page:`Terraform's Registry <https://registry.terraform.io/>` and look for ``signalfx`` in the search box. You'll find ``splunk-terraform``'s ``signalFx`` provider site with docs, the available resources, and the compatible data sources. 
 
-2. Copy the ``Use provider`` code to add ``SignalFx`` in the ``required_providers`` block of ``main.tf`` in your configuration file. It looks similar to:
+2. Copy the ``Use provider`` code to add ``SignalFx`` in the ``required_providers`` block of main.tf in your configuration file. It looks similar to:
 
     .. code-block:: none
 

@@ -235,7 +235,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use cases <get-started/use-case-landing>
+   Scenarios <get-started/scenario-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -313,7 +313,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Metrics and events TOGGLE <metrics-and-metadata/metrics-landing>
+   Metrics, metadata and events TOGGLE <metrics-and-metadata/metrics-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   Data tools TOGGLE <metrics-and-metadata/data-tools-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -347,16 +352,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :maxdepth:   3
-
-   Related Content <data-visualization/relatedcontent>
-
-.. toctree::
-   :maxdepth:   3
-
-   Enable Related Content <data-visualization/enablerelatedcontent>
-
-.. toctree::
    :caption: ALERTS AND DETECTORS
    :maxdepth:   3
 
@@ -365,17 +360,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Alerts and detectors use case library TOGGLE <alerts-detectors-notifications/use-cases-detectors-alerts/use-cases-intro>
+   Alerts and detectors scenario library TOGGLE <alerts-detectors-notifications/scenarios-detectors-alerts/scenarios-intro>
 
 .. toctree::
    :maxdepth:   3
 
-   AutoDetect in Splunk Observability Cloud <alerts-detectors-notifications/autodetect>
-
-.. toctree::
-   :maxdepth:   3
-
-   List of available AutoDetect detectors <alerts-detectors-notifications/autodetect-list>
+   Use and customize AutoDetect alerts and detectors TOGGLE <alerts-detectors-notifications/autodetect/autodetect>
 
 .. toctree::
    :maxdepth:   3
@@ -400,11 +390,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Detector options <alerts-detectors-notifications/detector-options>
-
-.. toctree::
-   :maxdepth:   3
-
    Preview detector alerts <alerts-detectors-notifications/preview-detector-alerts>
 
 .. toctree::
@@ -420,22 +405,30 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:  3
 
-   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
-
-.. toctree::
-   :maxdepth:   3
-
    Mute alert notifications <alerts-detectors-notifications/mute-notifications>
 
 .. toctree::
    :maxdepth:   3
 
-   Auto-clearing alerts <alerts-detectors-notifications/auto-clearing-alerts>
+   Auto-clear alerts <alerts-detectors-notifications/auto-clearing-alerts>
 
 .. toctree::
    :maxdepth:   3
 
    Troubleshoot detectors <alerts-detectors-notifications/troubleshoot-detectors>
+
+.. toctree::
+   :maxdepth:   3
+
+   Detector options <alerts-detectors-notifications/detector-options>
+
+.. toctree::
+   :maxdepth:   3
+
+   Built-in alert conditions TOGGLE <alerts-detectors-notifications/alert-condition-reference/index>
+
+.. toctree::
+   :maxdepth:   3
 
 .. toctree::
    :caption: APM
@@ -451,7 +444,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use cases: Troubleshoot errors and monitor application performance TOGGLE <apm/apm-use-cases/apm-use-cases-intro>
+   Scenarios for troubleshooting errors and monitoring application performance using Splunk APM TOGGLE <apm/apm-scenarios/apm-scenarios-intro>
 
 .. toctree::
    :maxdepth:   3
@@ -551,11 +544,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :maxdepth:   3
-
-   System limits <infrastructure/sys-limits>
-
-.. toctree::
    :caption: LOG OBSERVER
    :maxdepth:   3
 
@@ -580,17 +568,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Splunk RUM use case library TOGGLE <rum/rum-use-case-library/use-case-landingpage>
+   Splunk RUM scenario library TOGGLE <rum/rum-scenario-library/scenario-landingpage>
 
 .. toctree::
    :maxdepth:   3
 
    Set up Splunk RUM <rum/set-up-rum>
 
-.. toctree::
-   :maxdepth:   3
-
-   rum/rum-use-case-library/use-case-landingpage
 
 .. toctree::
    :maxdepth:   3
@@ -641,10 +625,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    rum/sample-app
-.. toctree:: 
-   :maxdepth:    3
-
-   rum/rum-limits
 
 .. toctree::
    :maxdepth:   3
@@ -665,7 +645,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3 
   
-   Synthetics use case library TOGGLE <synthetics/synth-use-cases/synth-landing>
+   Synthetics scenario library TOGGLE <synthetics/synth-scenarios/synth-landing>
 
 .. toctree::
    :maxdepth:   3
@@ -769,13 +749,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Use case: Maintain a secure organization with many teams and users <admin/use-case-org-security>
+   admin/scenario-org-security
 
 .. toctree::
    :hidden:
    :maxdepth:   3
 
-   About SSO integrations for Splunk Observability Cloud TOGGLE <admin/SSO/sso-about>
+   SSO integrations for Splunk Observability Cloud TOGGLE <admin/SSO/sso-about>
 
 .. toctree::
    :maxdepth:   3
@@ -791,7 +771,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Manage roles, users, teams TOGGLE <admin/teams/intro-roles-users-teams>
+   User management TOGGLE <admin/user-mgmt/intro-roles-users-teams>
 
 .. toctree::
    :hidden:
@@ -800,21 +780,14 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
 
 .. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Link metadata to related resources using global data links <admin/link-metadata-to-content>
-
-.. toctree::
    :maxdepth:   3
 
    View organization metrics <admin/org-metrics>
 
 .. toctree::
-   :hidden:
    :maxdepth:   3
 
-   Monitor subscription usage TOGGLE <admin/subscription-usage/subscription-usage-overview>
+   Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
 
 
 .. toctree::
@@ -861,9 +834,14 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Per product limits <references/per-product-limits>
+   Per product system limits <references/per-product-limits>
 
 .. toctree::
    :maxdepth:   3
 
    Glossary <references/glossary>
+
+.. toctree::
+   :maxdepth:   3
+
+   Contribute to the documentation <references/contribute>

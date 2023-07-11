@@ -21,9 +21,9 @@ To configure the Browser RUM agent, edit the object passed to the ``SplunkRum.in
    <script>
          SplunkRum.init(
          {
-            beaconUrl: 'https://rum-ingest.us0.signalfx.com/v1/rum'
-            rumAuth: 'ABC123...789',
-            app: 'my-awesome-app',
+            beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum'
+            rumAccessToken: 'ABC123...789',
+            applicationName: 'my-awesome-app',
             version: '1.0.1'
             // Any additional settings
          });
@@ -43,19 +43,22 @@ Use the following settings to configure the Browser RUM agent:
    * - Property
      - Type
      - Description
-   * - ``beaconUrl``
-     - String (required)
-     - Ingest URL to which the agent sends collected telemetry. The URL must contain your realm in Splunk Observability Cloud. For example, ``https://rum-ingest.us0.signalfx.com/v1/rum`` is the ingest URL for the ``us0`` realm.
-   * - ``rumAuth``
+   * - ``realm``
+     - String
+     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+   * - ``rumAccessToken``
      - String (required)
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
-   * - ``app``
+   * - ``beaconEndpoint``
+     - String (required if ``realm`` isn't set)
+     - Ingest URL to which the agent sends collected telemetry. When ``realm`` is set, the URL is in the form ``https://rum-ingest.<realm>.signalfx.com/v1/rum``. When you set an endpoint manually, this overrides the value of ``realm``.
+   * - ``applicationName``
      - String
      - Name of the application. The default value is ``unknown-browser-app``.
    * - ``version``
      - String
      - Version of the application for all spans. For example, "1.0.1" or "20220820".
-   * - ``environment``
+   * - ``deploymentEnvironment``
      - String
      - Environment for all the spans produced by the application. For example, ``dev``, ``test``, or ``prod``.
    * - ``globalAttributes``
@@ -72,10 +75,10 @@ Use the following settings to configure the Browser RUM agent:
      - Domain used for session tracking. For example, if you have sites on both ``foo.example.com`` and ``bar.example.com``, setting ``cookieDomain`` to ``example.com`` allows both sites to use the same session identifier. See :ref:`browser-rum-cookies` for more information.
    * - ``context.async``
      - Boolean
-     - Activates the asynchronous context manager. The default value is ``false``. See :ref:`browser-rum-async-traces`.
+     - Activates the asynchronous context manager. The default value is ``true``. See :ref:`browser-rum-async-traces`.
    * - ``exporter.onAttributesSerializing``
      - ``(a: SpanAttributes, s?: Span) => SpanAttributes``
-     - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample use case is :ref:`rum-browser-redact-pii`. 
+     - Provides a callback for modifying span attributes before they're exported. The default value is ``(attrs) => attrs``. A sample scenario is :ref:`rum-browser-redact-pii`. 
    * - ``tracer``
      - Object
      - Tracing configuration passed to ``WebTracerProvider``. You can use it to configure sampling. See :ref:`browser-rum-sampling-configuration`.
@@ -94,9 +97,9 @@ To activate or deactivate specific Browser RUM instrumentations, compose and pas
 
    SplunkRum.init(
       {
-         beaconUrl: 'https://rum-ingest.us0.signalfx.com/v1/rum',
-         rumAuth: 'ABC123…789',
-         app: 'my-awesome-app',
+         beaconEndpoint: 'https://rum-ingest.us0.signalfx.com/v1/rum',
+         rumAccessToken: 'ABC123…789',
+         applicationName: 'my-awesome-app',
          instrumentations:
          {
             interactions:
@@ -184,9 +187,9 @@ The following example shows how to restrict sampling to logged in users:
          var shouldTrace = isUserLoggedIn();
 
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-            rumAuth: '<your_rum_token>',
-            app: '<application-name>',
+            realm: '<realm>',
+            rumAccessToken: '<your_rum_token>',
+            applicationName: '<application-name>',
             tracer: {
                sampler: shouldTrace ? new AlwaysOnSampler() : new SplunkRum.AlwaysOffSampler(),
             },
@@ -201,9 +204,9 @@ The following example shows how to restrict sampling to logged in users:
       import SplunkOtelWeb from '@splunk/otel-web';
 
       SplunkOtelWeb.init({
-         beaconUrl: 'https://rum-ingest..signalfx.com/v1/rum',
-         rumAuth: '<your_rum_token>', 
-         app: '<application-name>', 
+         beaconEndpoint: 'https://rum-ingest..signalfx.com/v1/rum',
+         rumAccessToken: '<your_rum_token>', 
+         applicationName: '<application-name>', 
          tracer: { 
             sampler: userShouldBeTraced() ? new SplunkRum.AlwaysOnSampler() : new SplunkRum.AlwaysOffSampler(),
          },
@@ -271,9 +274,9 @@ The following example shows how to collect RUM data from half of the sessions:
       <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
         SplunkRum.init({
-          beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-          rumAuth: '<your_rum_token>',
-          app: '<application-name>',
+          realm: '<realm>',
+          rumAccessToken: '<your_rum_token>',
+          applicationName: '<application-name>',
           tracer: {
             sampler: new SplunkRum.SessionBasedSampler({
             ratio: 0.5
@@ -288,9 +291,9 @@ The following example shows how to collect RUM data from half of the sessions:
       import SplunkOtelWeb, {SessionBasedSampler} from '@splunk/otel-web';
 
       SplunkOtelWeb.init({ 
-        beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-        rumAuth: '<your_rum_token>', 
-        app: '<application-name>',
+        realm: '<realm>',
+        rumAccessToken: '<your_rum_token>', 
+        applicationName: '<application-name>',
         tracer: {
             sampler: new SessionBasedSampler({
               ratio: 0.5 
@@ -314,7 +317,7 @@ Traces that happen asynchronously, such as user interactions that result in a pr
 -  ``MessagePort``
 -  Hash-based routers
 
-To activate asynchronous traces, set the ``context.async`` property to ``true``.
+Asynchronous trace linking is activated by default. In case of compatibility issues you can disable it by setting the ``context.async`` property to ``false``.
 
 The context manager allows Splunk RUM to link requests executed when a component is first rendered to the user interaction that caused the application to add the component to the page. ``XMLHttpRequest`` events and Fetch API events through promise methods are patched to preserve the parent context, so subsequent requests link to their parents.
 
@@ -323,7 +326,7 @@ Limitations
 
 The following limitations apply when using asynchronous tracing:
 
-- ``async/await`` functions aren't supported. You can connect them using Babel as in the following example:
+- ``async/await`` functions aren't supported. Down-compile the code using Babel and targeting older browsers.
 
    .. code-block:: javascript
 

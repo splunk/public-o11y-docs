@@ -116,7 +116,6 @@ Permissions for the CloudWatch API
 Besides the :ref:`required permissions <aws-iam-policy-required>`, include these permissions to allow Observability Cloud to collect AWS metrics using the CloudWatch API:
 
 * ``cloudwatch:GetMetricData``
-* ``cloudwatch:GetMetricStatistics``
 * ``cloudwatch:ListMetrics``
 
 For example:
@@ -130,7 +129,6 @@ For example:
         "Effect": "Allow",
         "Action": [
           "cloudwatch:GetMetricData",
-          "cloudwatch:GetMetricStatistics",
           "cloudwatch:ListMetrics",
           "ec2:DescribeRegions",
           "organizations:DescribeOrganization",
@@ -171,15 +169,15 @@ For example:
       "Effect": "Allow",
       "Action": [
         "cloudwatch:GetMetricStream",       
-        "cloudwatch:ListMetrics"
+        "cloudwatch:ListMetrics",
         "cloudwatch:ListMetricStreams",
         "cloudwatch:PutMetricStream",
         "cloudwatch:DeleteMetricStream",
         "cloudwatch:StartMetricStreams",
-        "cloudwatch:StopMetricStreams"
+        "cloudwatch:StopMetricStreams",
         "ec2:DescribeRegions",
         "organizations:DescribeOrganization",
-        "tag:GetResources",
+        "tag:GetResources"
       ],
       "Resource": "*"
     },
@@ -240,12 +238,12 @@ These are these permissions to allow Observability Cloud to collect AWS tags and
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
 - ``"kinesis:DescribeStream"``
-- ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
-- ``"kinesis:ListStreams"``
 - ``"kinesis:ListTagsForStream"``
-- ``"kinesis:ListTagsForStream"``
+- ``“kinesisanalytics:DescribeApplication”``
+- ``“kinesisanalytics:ListApplications”``
+- ``"kinesisanalytics:ListTagsForResource"``
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
@@ -283,7 +281,6 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "cloudfront:ListDistributions",
           "cloudfront:ListTagsForResource",
           "cloudwatch:GetMetricData",
-          "cloudwatch:GetMetricStatistics",
           "cloudwatch:ListMetrics",
           "directconnect:DescribeConnections",
           "dynamodb:DescribeTable",
@@ -320,8 +317,9 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "kinesis:ListShards",
           "kinesis:ListStreams",
           "kinesis:ListTagsForStream",
-          "kinesisanalytics:ListApplications",
           "kinesisanalytics:DescribeApplication",
+          "kinesisanalytics:ListApplications",
+          "kinesisanalytics:ListTagsForResource",
           "lambda:GetAlias",
           "lambda:ListFunctions",
           "lambda:ListTags",
@@ -422,11 +420,11 @@ If you're retrieving AWS metrics polling CloudWatch APIs, keep in mind the follo
 
   - First, the list of metrics is retrieved with the ``ListMetrics`` API every 15 minutes. 
   
-  - Next, data points are retrieved with either the ``GetMetricData`` or ``GetMetricStatistics`` :ref:`(deprecated) <aws-api-notice>` APIs.  
+  - Next, data points are retrieved with the ``GetMetricData`` API. Note that the ``GetMetricStatistics`` API is deprecated, see more in :ref:`aws-api-notice`.  
   
     - Use ``pollRate`` to configure the polling interval for metrics. 
     - Use ``metadataPollRate`` to configure the polling interval for metadata. 
-    - See :new-page:`how to configure the APIs in the developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>` for more information.
+    - See :new-page:`how to configure the APIs developer portal <https://dev.splunk.com/observability/reference/api/integrations/latest#endpoint-retrieve-integrations-query>` for more information.
 
 .. _activate-cw-metricstreams:
 
@@ -441,7 +439,7 @@ To activate CloudWatch Metric Streams as an alternative to traditional API polli
 #. Set the ``enabled`` field to ``true``.
 #. Submit a PUT request to the ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` endpoint to save your updated settings.
 
-.. note:: When you edit an AWS integration through the user interface for Splunk Observability Cloud, the integration ID shows in your browser address bar as an alphanumeric string in quotation marks (") after a colon (:) at the end of the URL.
+.. caution:: CloudWatch Metric Streams doesn't support filtering based on resource tags.   
 
 Next, to complete the activation of Metric Streams:
 
@@ -456,6 +454,18 @@ This creates:
 - The IAM role that allows Kinesis Firehose to write the S3 bucket.
 
 See :new-page:`Create an AWS integration using an external ID and ARN <https://dev.splunk.com/observability/docs/integrations/aws_integration_overview/#Create-an-AWS-integration-using-an-external-ID-and-ARN>` in the Splunk developer documentation for syntax examples.
+
+Deactivate Metric Streams
+------------------------------------------------------
+
+To deactivate Metric Streams, follow these steps:
+
+#. Submit a GET request to ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` to retrieve your current settings. Make sure to substitute your own realm and integration ID in the URL.
+#. Set the ``metricStreamsSyncState`` field to ``CANCELLING``.
+#. Wait for Observability Cloud to clean up. This can take up to 15 minutes. 
+
+  * If Observability Cloud sets ``metricStreamsSyncState`` to ``DISABLED``, Metric Streams has been deactivated sucessfully.
+  * If Observability Cloud sets ``metricStreamsSyncState`` to ``CANCELLATION_FAILED``, try again, or refer to :ref:`aws-ts-metric-streams`.
 
 .. _metricstreams_cloudformation:
 
@@ -488,3 +498,5 @@ Next steps
 =================
 
 After you connect Splunk Observability Cloud with AWS, you'll be able to track a series of metrics and analyze your AWS data in real time. See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.
+
+.. note:: When you edit an AWS integration through the user interface for Splunk Observability Cloud, the integration ID shows in your browser address bar as an alphanumeric string in quotation marks (") after a colon (:) at the end of the URL.

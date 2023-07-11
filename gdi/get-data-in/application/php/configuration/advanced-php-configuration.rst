@@ -57,3 +57,19 @@ To trace the CLI SAPI functionality, you have to activate it manually using the 
    php myTracedCliScript.php
 
 .. caution:: This SAPI is deactivated by default to avoid undesired tracing of system activity.
+
+.. _server-trace-information-php:
+
+Server trace information
+==============================================
+
+To connect Real User Monitoring (RUM) requests from mobile and web applications with server trace data, trace response headers are activated by default. The instrumentation adds the following response headers to HTTP responses:
+
+.. code-block::
+
+   Access-Control-Expose-Headers: Server-Timing 
+   Server-Timing: traceparent;desc="00-<serverTraceId>-<serverSpanId>-01"
+
+The ``Server-Timing`` header contains the ``traceId`` and ``spanId`` parameters in ``traceparent`` format. For more information, see the Server-Timing and traceparent documentation on the W3C website.
+
+.. note:: If you need to deactivate trace response headers, set ``SIGNALFX_TRACE_RESPONSE_HEADER_ENABLED`` to ``false`` or set the ``signalfx.trace.response_header_enabled`` option in your INI file to ``false``.
