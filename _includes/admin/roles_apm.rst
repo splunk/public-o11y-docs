@@ -7,8 +7,7 @@
     - :strong:`Read_only`
     - :strong:`Usage`
 
-
-    * - View MetricSets. 
+  * - View MetricSets. 
     - Yes
     - Yes
     - Yes
