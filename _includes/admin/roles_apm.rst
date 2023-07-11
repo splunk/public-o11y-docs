@@ -44,12 +44,9 @@
     - Yes
     - No
 
-  * - The following functionality in the APM API.
+  * - The following functionality in the APM API:
        - The APM Reporting resource
-       - The following methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
-         - PUT
-         - POST
-         - DELETE
+       - The PUT, POST, and DELETE methods for the APM Visibility Filters resource. See :ref:`sensitive-data-controls` for more information.
     - Yes
     - No
     - No
