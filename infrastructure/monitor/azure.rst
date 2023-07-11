@@ -7,10 +7,11 @@ Monitor Azure
 .. meta::
   :description: Learn how to monitor Microsoft Azure infrastructure resources with Splunk Observability Cloud.
 
-.. note::
-  Before you can start monitoring any Microsoft Azure resources, :ref:`get-started-azure`, and log in with your administrator credentials.
+Splunk Observability Cloud can automatically import metrics and metadata from your Microsoft Azure services powered by Azure Monitor. 
 
-Splunk Observability Cloud can automatically import metrics and metadata from your Microsoft Azure services powered by Azure Monitor. For a list of supported Azure services in Observability Cloud, refer to :ref:`supported-azure-services`. See :new-page:`https://docs.microsoft.com/en-us/azure/azure-monitor/overview <https://docs.microsoft.com/en-us/azure/azure-monitor/overview>` on the Microsoft site for more information.
+* For a list of supported Azure services in Observability Cloud, refer to :ref:`supported-azure-services`. 
+* Before you can start monitoring any Microsoft Azure resources, :ref:`get-started-azure`.
+* See :new-page:`https://docs.microsoft.com/en-us/azure/azure-monitor/overview <https://docs.microsoft.com/en-us/azure/azure-monitor/overview>` on the Microsoft site for more information.
 
 You can also export and monitor data from sources running in your Azure environment, as described in the following table.
 
@@ -82,12 +83,12 @@ Follow these steps to analyze problem Azure services from the Infrastructure pag
 Use default dashboards and built-in content to monitor Azure services
 =========================================================================================
 
-Observability Cloud provides default dashboards and built-in content for supported Azure services. 
+Observability Cloud provides default dashboards and built-in content for selected Azure services. 
 
 Default dashboards
 -------------------------------------------------------------------
 
-To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`. Services include:
+To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`. Supported services include:
 
 * Azure App service
 * Azure batch
@@ -106,7 +107,7 @@ To see all the pre-built dashboards for data collected in your organization, sel
 Explore built-in navigators
 -------------------------------------------------------------------
 
-To see all of the out-of-the-box navigators provided for data collected in your organization, go to the Infrastructure page. Services include: 
+To see all of the out-of-the-box navigators provided for data collected in your organization, go to the Infrastructure page. Supported services include: 
 
 * App services
 * Azure functions
