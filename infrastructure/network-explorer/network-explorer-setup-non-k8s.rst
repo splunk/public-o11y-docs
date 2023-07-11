@@ -7,7 +7,7 @@ Set up Network Explorer on non-Kubernetes systems
 .. meta::
     :description: Install and configure Network Explorer on non-Kubernetes systems
 
-To use Network Explorer on non-Kubernetes system, you must install the Extended Berkeley Packet Filter (eBPF) collector using the appropriate package system, RPM Package Manager (RPM) or dpkg.
+To use Network Explorer on non-Kubernetes systems, you must install the Extended Berkeley Packet Filter (eBPF) collector using the appropriate packaging system, RPM Package Manager (RPM) or dpkg.
 
 Install the eBPF collector
 ==============================
