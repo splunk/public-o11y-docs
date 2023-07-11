@@ -7,7 +7,7 @@ Set up Network Explorer on non-Kubernetes systems
 .. meta::
     :description: Install and configure Network Explorer on non-Kubernetes systems
 
-To use Network Explorer on non-Kubernetes system, you must install the eBPF collector using a Linux packaging system, RPM Package Manager or Debian.
+To use Network Explorer on non-Kubernetes system, you must install the eBPF collector using the appropriate package manager, RPM Package Manager (RPM) or dpkg.
 
 Install the eBPF collector
 ==============================
@@ -25,7 +25,7 @@ Follow these steps to install and configure the eBPF collector on non-Kubernetes
         rpm -i opentelemetry-ebpf-kernel-collector-<VERSION>.rpm
         rpm -i opentelemetry-ebpf-cloud-collector-<VERSION>.rpm
 
-      .. code-tab:: bash Debian
+      .. code-tab:: bash dpkg
 
         dpkg -i opentelemetry-ebpf-reducer-<VERSION>.deb
         dpkg -i opentelemetry-ebpf-kernel-collector-<VERSION>.deb
