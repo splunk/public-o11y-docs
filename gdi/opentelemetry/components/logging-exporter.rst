@@ -82,8 +82,8 @@ The following example shows a logging exporter with detailed verbosity, which is
    exporters:
      logging:
        verbosity: detailed
-       sampling_initial: 5
-       sampling_thereafter: 200
+       sampling_initial: "5"
+       sampling_thereafter: "200"
 
 Settings
 ======================
