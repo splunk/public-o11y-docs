@@ -59,7 +59,7 @@
     - Yes
     - Yes
     - Yes
-    - No
+    - Yes
 
   * - The PUT, POST, and DELETE methods for the APM Visibility Filters resource in the APM API. See :ref:`sensitive-data-controls` for more information.
     - Yes
