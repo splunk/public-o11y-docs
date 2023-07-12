@@ -1,5 +1,5 @@
 .. list-table::
-  :widths: 60,10,10,10,10
+  :widths: 20,20,20,20,20
 
   * - :strong:`Capability`
     - :strong:`Admin`
@@ -7,61 +7,61 @@
     - :strong:`Read_only`
     - :strong:`Usage`
 
-  * - View MetricSets. 
+  * - :strong:`View MetricSets`
     - Yes
     - Yes
     - Yes
     - No
   
-  * - Create, edit, and delete MetricSets.
+  * - :strong:`Create, edit, and delete MetricSets`
     - Yes
     - No
     - No
     - No
 
-  * - View Business Workflows.
+  * - :strong:`View Business Workflows`
     - Yes
     - Yes
     - Yes
     - No
 
-  * - Create, edit, and delete Business Workflows.
+  * - :strong:`Create, edit, and delete Business Workflows`
     - Yes
     - No
     - No
     - No
 
-  * - View extended trace retention settings. 
+  * - :strong:`View extended trace retention settings`
     - Yes
     - Yes
     - Yes
     - No
 
-  * - Configure extended trace retention settings. 
+  * - :strong:`Configure extended trace retention settings`
     - Yes
     - No
     - No
     - No
 
-  * - The APM traces resource in the APM API.
+  * - :strong:`The APM traces resource in the API`
     - Yes
     - Yes
     - Yes
     - No
 
-  * - The APM Service Topology resource in the APM API.
+  * - :strong:`The APM Service Topology resource in the API`
     - Yes
     - Yes
     - Yes
     - No
 
-  * - The GET method on the APM Visibility Filters resource in the APM API. See :ref:`sensitive-data-controls` for more information.
+  * - :strong:`The GET method on the APM Visibility Filters resource in the API. See :ref:`sensitive-data-controls` for more information.`
     - Yes
     - Yes
     - Yes
     - Yes
 
-  * - The PUT, POST, and DELETE methods for the APM Visibility Filters resource in the APM API. See :ref:`sensitive-data-controls` for more information.
+  * - :strong:`The PUT, POST, and DELETE methods for the APM Visibility Filters resource in the APM API. See :ref:`sensitive-data-controls` for more information.`
     - Yes
     - No
     - No
