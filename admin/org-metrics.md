@@ -144,6 +144,12 @@ If you're getting any of these errors, you need to fix your roles or tokens so O
 
 You can use these errors in {ref}`dashboards <dashboards>` to detect whether you're experiencing this issues. 
 
+### Child org metrics
+
+If a parent org has associated child organizations, child org metrics are also added to Observability Cloud. They represent the same values as the equivalent parent org metric, and you can identify them with the `child` prefix.
+
+For example, `sf.org.child.numCustomMetrics` represents the number of custom metrics Observability Cloud monitors for the child org, the same way `sf.org.numCustomMetrics` is the number of custom metrics monitored for the parent org.
+
 ## List of organization metrics
 
 Use the {ref}`Metric Finder <metrics-finder-and-metadata-catalog>` to find your org metrics.
