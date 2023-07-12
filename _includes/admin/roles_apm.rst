@@ -55,13 +55,13 @@
     - Yes
     - No
 
-  * - :strong:`The GET method on the APM Visibility Filters resource in the API. See :ref:`sensitive-data-controls` for more information.`
+  * - :strong:`The GET method on the APM Visibility Filters resource in the API`
     - Yes
     - Yes
     - Yes
     - Yes
 
-  * - :strong:`The PUT, POST, and DELETE methods for the APM Visibility Filters resource in the APM API. See :ref:`sensitive-data-controls` for more information.`
+  * - :strong:`The PUT, POST, and DELETE methods for the APM Visibility Filters resource in the API` 
     - Yes
     - No
     - No
