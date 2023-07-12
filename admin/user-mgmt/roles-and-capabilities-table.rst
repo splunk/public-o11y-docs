@@ -53,7 +53,7 @@ Splunk Real User Monitoring roles and capabilities
 
 Splunk Application Performance Monitoring roles and capabilities
 ==================================================================
-.. include:: /_includes/admin/apm-roles.rst
+.. include:: /_includes/admin/roles_apm.rst
 
 Settings
 ===========================
