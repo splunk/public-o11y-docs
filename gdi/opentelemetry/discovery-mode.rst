@@ -21,13 +21,11 @@ The main advantage of using discovery mode is that you don't need to manually up
 How discovery mode works
 ==========================================
 
-When you run the Collector in discovery mode, it tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions.
+When you run the Collector in discovery mode, it tests built-in configurations for supported metric receivers against endpoints discovered on your platform by observer extensions. This happens before starting the Collector service.
 
-For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. Any target-specific configuration values that are required, for example authentication information, can be established by discovery properties to tune the discovery process.
+For any dynamically instantiated receiver that retrieves metrics matching the success criteria, the Collector translates the discovery configuration to a receiver creator instance with the known working rules, as well as the required observer extension. See :ref:`receiver-creator-receiver` for more information. At the same time, the Collector adds the configuration to the ``metrics`` pipeline at runtime.
 
-At the same time, the Collector adds the configuration to the ``metrics`` pipeline at runtime, unless you run the Collector using ``--dry-run``, in which case it outputs the configuration to the terminal.
-
-For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry.
+For any receiver that can establish a connection with a service, but not receive the expected metrics, discovery mode suggests which properties to set, or what extensions or settings to configure on the service to successfully retrieve telemetry. You can define any target-specific configuration values that are required, for example authentication information, using discovery properties to tune the discovery process. 
 
 
 Supported host services and applications
@@ -80,6 +78,7 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
 When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials.
 
 .. note:: The installation script of the Collector supports the ``--discovery`` option. When turning on discovery mode through the installation script, the resulting configuration is applied directly to the ``metrics`` pipeline.
+
 
 Configure or fix discovery properties
 ==================================================
