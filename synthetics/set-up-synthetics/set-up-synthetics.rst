@@ -44,7 +44,6 @@ Learn more about Browser tests
 * See :ref:`browser-test-results` to learn about the visualizations that Browser tests capture.
 * See :ref:`browser-metrics` for a complete list of Browser test metrics.  
 
-
 .. _synthetics-link-to-apm:
 
 (Optional) Link Synthetic spans to APM spans
