@@ -75,7 +75,7 @@ You can manually generate logs. By default, Fluentd monitors journald and /var/l
 Unwanted profiling logs appearing in Observability Cloud
 ==================================================================================
 
-By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data through a separate ``logs`` pipeline that uses the Splunk HEC exporter. See :ref:`no_profiling_data` for more information.
+By default, the Splunk Distribution of the OpenTelemetry Collector sends AlwaysOn Profiling data using the Splunk HEC exporter. See :ref:`no_profiling_data` for more information.
 
 .. _disable_log_collection:
 
