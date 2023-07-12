@@ -236,7 +236,7 @@ The following snippet contains a sample ``profiling`` pipeline:
        logs/profiling:
          receivers: [otlp]
          processors: [memory_limiter, batch]
-         exporters: [logging/info, splunk_hec, splunk_hec/profiling]
+         exporters: [splunk_hec, splunk_hec/profiling]
 
 .. _disable-java-agent-logs:
 

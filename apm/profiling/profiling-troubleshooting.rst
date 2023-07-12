@@ -59,7 +59,7 @@ The following example shows you how to configure a pipeline in the ``agent-confi
        logs/profiling:
          receivers: [otlp]
          processors: [memory_limiter, batch]
-         exporters: [logging/info, splunk_hec, splunk_hec/profiling]
+         exporters: [splunk_hec, splunk_hec/profiling]
 
 The exporter is configured automatically for the Splunk OTel Collector version 0.44.0 and higher. If you're using a version of the Collector lower than 0.44.0, you might have to edit the configuration manually.
 
