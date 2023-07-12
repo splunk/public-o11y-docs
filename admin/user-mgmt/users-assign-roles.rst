@@ -21,7 +21,6 @@ To see the roles assigned to users in your organization, follow these steps:
 #. From the left navigation menu, select :menuselection:`Settings > Users`.
 #. The roles for all users are in the :guilabel:`Roles` column of the table.
 
-To filter the list of users by their role, select the roles in the role filter menu.
 
 
 Assign roles when inviting new users
@@ -70,7 +69,7 @@ Edit roles for multiple users
 To edit roles for multiple users at the same time, follow these steps:
 
 #. From the left navigation menu, select :menuselection:`Settings > Users`.
-#. Find users or filter by role.
+#. Find users using the search bar.
 #. Select the users you want to edit.
 #. Select ``-`` or ``+`` in the :guilabel:`Roles` bar at the bottom of the table to remove or add roles.
 #. In the dialog box, select the roles you want to remove or add, depending on your previous choice.
