@@ -136,3 +136,31 @@ On demand reports
 
 To get a detailed breakdown of the MTS you've created and use, you can request a usage report for a specific time interval by contacting your tech support member or your account team. Learn more at :ref:`metrics-usage-report`.
 
+.. _dpm-exceed-limits:
+
+Exceeding your system limits
+=============================================================================
+
+When your DPM rate exceeds your subscription for a sustained period of time, Observability Cloud automatically restricts the data to process and store into the datapoints associated with existing MTS.
+
+How do I exceed my subscription limits?
+-------------------------------------------------------------------
+
+This pricing model is based on the rate at which you send datapoints to Splunk Observability Cloud, measured in datapoints per minute (DPM). For example, if you are measuring CPU utilization for a host once every 10 seconds, then that one host/metric combination will account for a rate of 6 DPM.
+
+If your environment grows significantly after your initial sizing, then your DPM rate will grow as well. For example, if your subscription is sized for a 1,000 host environment but grows to 1,300 hosts, then your DPM rate will grow in proportion (all things being equal). Alternatively, if you send more metrics from the same set of sources, or if you send metric values more frequently, then DPM can also grow.
+
+What is the user-visible impact when an account is limited?
+-------------------------------------------------------------------
+
+Splunk Observability Cloud organizes the received datapoints into metric time series (MTS). An individual MTS is defined by the unique combination of a metric name and a set of dimensions, and is created and tracked in the Observability Cloud system as part of a datapoint.
+
+If your account is being limited, datapoints (metric values) for an existing MTS will continue to be processed and stored, and can be used in charts and detectors. However, datapoints for new MTS will not be processed and stored, and charts and detectors that would be expected to include those datapoints will not do so.
+
+I exceeded my system limits. What can I do?
+-------------------------------------------------------------------
+
+If you exceed your system limits, you have two options: 
+
+* Reduce your DPM.
+* Change to a pricing plan that is based on the number of hosts or metrics to monitor (Recommended). See more in :ref:`monitor-imm-billing-usage`.
