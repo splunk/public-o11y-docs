@@ -63,7 +63,7 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
       # Add proxy configuration to the service-proxy.conf
       # file in /etc/systemd/system/splunk-otel-collector.service.d/
 
-      sudo touch /etc/systemd/system/splunk-otel-collector.service.d/service-proxy.conf
+      sudo mkdir -p /etc/systemd/system/splunk-otel-collector.service.d/
 
       cat <<EOF | sudo tee -a /etc/systemd/system/splunk-otel-collector.service.d/service-proxy.conf
       [Service]
