@@ -11,6 +11,10 @@ You can instrument the front end of your web applications for Splunk RUM using t
 
 To instrument your browser application and get data into Splunk RUM, follow the instructions on this page.
 
+
+
+
+
 .. _rum-browser-requirements:
 
 Check compatibility and requirements
@@ -28,6 +32,11 @@ All your pages, assets, and requests must be securely loaded over the HTTPS prot
 
 .. note:: Splunk APM is not required to instrument Splunk RUM for Browser. 
 
+Decide which version to run in your environment
+=======================================================
+Latest updates automatically whenever Splunk RUM releases a new version. In pre-production, use latest to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle.  
+
+
 .. _rum-browser-install:
 
 Instrument your web application for Splunk RUM
@@ -41,10 +50,12 @@ Select one of the following methods to instrument your web application:
 * :ref:`rum-browser-install-self-hosted`
 * :ref:`rum-browser-install-npm`
 
-:strong:`Tip:` To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup. To access the Browser Instrumentation guided setup, follow these steps:
+.. Note:: To generate all the installation commands for your environment and application, use the Browser Instrumentation guided setup.
+   
+To access the Browser Instrumentation guided setup, follow these steps:
 
 #. Log in to Observability Cloud.
-#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. In the navigation menu, select :menuselection:`Data Management`. 
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`By Use Case`.
 #. Select the :guilabel:`Monitor user experience` use case.
@@ -73,19 +84,19 @@ Follow these steps to instrument your application with the CDN:
       <script src="https://cdn.signalfx.com/o11y-gdi-rum/<version>/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-            rumAuth: '<your_rum_token>',
-            app: '<your_app_name>',
+            realm: '<realm>',
+            rumAccessToken: '<your_rum_token>',
+            applicationName: '<your_app_name>',
             version: '<your_app_version>',
-            environment: '<your_environment_name>'
+            deploymentEnvironment: '<your_environment_name>'
          });
       </script>
 
    * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
@@ -119,15 +130,15 @@ Follow these steps to instrument your application using a self-hosted script:
       <script src="http://example.domain/path/splunk-otel-web.js"></script>
       <script>
          SplunkRum.init({
-            beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-            rumAuth: '<your_rum_token>',
-            app: '<your_app_name>',
+            realm: '<realm>',
+            rumAccessToken: '<your_rum_token>',
+            applicationName: '<your_app_name>',
             version: '<your_app_version>',
-            environment: '<your_environment_name>'
+            deploymentEnvironment: '<your_environment_name>'
          });
       </script>
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 #. Add the snippet to the head section of every page you want to monitor in your application.
@@ -155,16 +166,16 @@ Follow these steps to instrument and configure Splunk RUM using npm:
 
       import SplunkOtelWeb from '@splunk/otel-web';
       SplunkOtelWeb.init({
-         beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-         rumAuth: '<your_rum_token>',
-         app: '<your_application_name>',
+         realm: '<realm>',
+         rumAccessToken: '<your_rum_token>',
+         applicationName: '<your_application_name>',
          version: '<your_app_version>',
-         environment: '<your_environment_name>'
+         deploymentEnvironment: '<your_environment_name>'
       });
 
-   * In the beacon URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
@@ -210,9 +221,9 @@ To avoid collecting ``error.message`` responses, deactivate the errors instrumen
    <script src="https://cdn.signalfx.com/o11y-gdi-rum/latest/splunk-otel-web.js" crossorigin="anonymous"></script>
    <script>
       SplunkRum.init({
-         beaconUrl: 'https://rum-ingest.<realm>.signalfx.com/v1/rum',
-         rumAuth: '<your_rum_token>',
-         app: '<your_app_name>',
+         realm: '<realm>',
+         rumAccessToken: '<your_rum_token>',
+         applicationName: '<your_app_name>',
          version: '<your_app_version>',
          instrumentations: { errors: false }
       });
@@ -256,7 +267,7 @@ If your application uses Content Security Policy (CSP) to mitigate potential imp
 
 - When using the CDN version of the agent, allow the ``script-src cdn.signalfx.com`` URL.
 - When self-hosting or using the npm package, configure your site accordingly.
-- Add the host from the ``beaconUrl`` property to the ``connect-src`` property. For example: ``connect-src app.us1.signalfx.com``.
+- Add the host from the ``beaconEndpoint`` property to the ``connect-src`` property. For example: ``connect-src app.us1.signalfx.com``.
 
 How to contribute
 =========================================================

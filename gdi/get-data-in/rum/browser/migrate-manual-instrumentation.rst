@@ -44,8 +44,8 @@ You can store this kind of information using OpenTelemetry attributes, which are
 .. code-block:: javascript
 
    SplunkRum.init( {
-      beaconUrl: '...',
-      rumAuth: '...',
+      beaconEndpoint: '...',
+      rumAccessToken: '...',
       globalAttributes: {
          'account.type': goldStatus,
          'app.release': getReleaseNumber(),

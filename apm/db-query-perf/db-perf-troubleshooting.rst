@@ -4,8 +4,6 @@
 Troubleshoot Database Query Performance
 ************************************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to troubleshoot Database Query Performance issues.
 
@@ -18,10 +16,10 @@ Follow the steps in the following sections to troubleshoot Database Query Perfor
 
 .. _dbq-not-enabled:
 
-Database Query Performance is not enabled
+Database Query Performance is not turned on
 ------------------------------------------------
 
-If you open Database Query Performance and notice the feature is not enabled, go to MetricSets Configuration and check if indexing for Database Query Performance tags is ``ACTIVE``. If it's not, see :ref:`enable-db-perf` for instructions to enable indexing for Database Query Performance tags. 
+If you open Database Query Performance and notice the feature is not turned on, go to MetricSets Configuration and check if indexing for Database Query Performance tags is ``ACTIVE``. If it's not, see :ref:`turn-on-db-perf` for instructions to turn on indexing for Database Query Performance tags. 
 
 .. _no-dbs-avail: 
 
@@ -36,12 +34,12 @@ If you open Database Query Performance and notice there are no supported databas
 
 .. _tms-limits-exceeded:
 
-New query data not processed because cardinality limits have been exceeded
+New query data not processed because cardinality limits are exceeded
 ------------------------------------------------------------------------------------
 
 Enabling Database Query Performance turns on indexing for a set of 5 database-related span tags. These tags count toward cardinality limits for indexing span tags. 
 
-When the limit is exceeded across all indexed tags in your account, Splunk APM temporarily pauses indexing all Database Query Performance tags to allow for transient spikes in cardinality and manage billing in your account.  After 15 minutes, Splunk APM attempts to restart indexing Database Query Performance tags automatically. 
+When the limit is exceeded across all indexed tags in your account, Splunk APM temporarily pauses indexing all Database Query Performance tags to allow for transient spikes in cardinality and manage billing in your account. After 15 minutes, Splunk APM attempts to restart indexing Database Query Performance tags automatically. 
 
 If you're having persistent cardinality issues, try turning off indexing for other high-cardinality span tags to free up cardinality for Database Query Performance. See :ref:`apm-limits-metricsets` to learn more about managing cardinality. 
 
@@ -61,12 +59,12 @@ You can also use the Related Content tiles to pivot to Infrastructure Monitoring
 
 .. _disable-db-normalization:
 
-Disable database query normalization
+Turn off database query normalization
 -----------------------------------------------------------
 
 By default, Splunk APM instrumentation sanitizes database queries to remove or mask sensible data, such as secrets or personal identifiable information (PII).
 
-If you want to disable database query normalization, follow these steps:
+If you want to turn off database query normalization, follow these steps:
 
 - Java: Set the ``otel.instrumentation.common.db-statement-sanitizer.enabled`` property to ``false``. 
 - Ruby: Set the ``db_statement`` setting to ``:include``.
@@ -78,6 +76,6 @@ Learn more
 See the following links for more information about Database Query Performance: 
 
 * For an overview of Database Query Performance, see :ref:`db-query-performance`.
-* To enable Database Query Performance, see :ref:`enable-db-perf`. 
+* To turn on Database Query Performance, see :ref:`turn-on-db-perf`. 
 * For a detailed scenario using Database Query Performance, see :ref:`db-perf-scenario`. 
 * For reference material about Database Query Performance, see :ref:`db-perf-reference`.

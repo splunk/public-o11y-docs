@@ -21,7 +21,7 @@ To generate all the basic installation commands for your environment and applica
 #. Log in to Observability Cloud.
 #. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
@@ -86,8 +86,6 @@ Windows
          # Set up your Windows Service instrumentation
          Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>"
 
-   .. note:: To instrument ASP.NET (.NET Framework) apps, see :ref:`otel-dotnet-aspnet-framework`.
-
 #. Set the environment and service version resource attributes:
 
    .. code-block:: powershell
@@ -97,7 +95,7 @@ Windows
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
+If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans and metrics, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
@@ -134,36 +132,9 @@ Linux
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
+If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
-
-.. _otel-dotnet-aspnet-framework:
-
-Additional steps for ASP.NET (.NET Framework)
----------------------------------------------
-
-To complete the instrumentation process for ASP.NET applications for IIS running on .NET Framework, add the ``TelemetryHttpModule`` module to your application's web.config file. For example:
-
-.. code-block:: xml
-
-   <system.web>
-      <httpModules>
-         <add name="TelemetryHttpModule" type="OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule, OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule" />
-      </httpModules>
-   </system.web>
-
-You can also set the ASP.NET HTTP module in the applicationHost.config file. The following example shows how to set the module for all ASP.NET applications running in Integrated Pipeline mode:
-
-.. code-block:: xml
-
-   <location path="" overrideMode="Allow">
-      <system.webServer>
-         <modules>
-         <add name="TelemetryHttpModule" type="OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule, OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule" preCondition="managedHandler" />
-         </modules>
-      </system.webServer>
-   </location>   
 
 .. _configure-otel-dotnet:
 
@@ -227,7 +198,7 @@ To obtain an access token, see :ref:`admin-api-access-tokens`.
 
 In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

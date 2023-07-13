@@ -29,13 +29,14 @@ Configure application receivers for databases
    opentelemetry/components/mongodb-atlas-receiver
    monitors-databases/mysql
    opentelemetry/components/oracledb-receiver
-   postgresql/postgresql
-   redis/redis
-   sap-hana/hana
-   sql/sql
+   monitors-databases/postgresql
+   monitors-databases/redis
+   monitors-databases/sap-hana
+   monitors-databases/sql
 
 These application receivers gather metrics from their associated database-related applications and the hosts the applications are running on.
 
+* :ref:`apache-couchdb`
 * :ref:`kafka`
 * :ref:`spark`
 * :ref:`cassandra`

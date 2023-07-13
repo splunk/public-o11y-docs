@@ -37,7 +37,7 @@ Do the following to customize the command:
 
 - Replace ``<environment_name>`` with the label for the target environment.
 - Replace ``<access_token>`` with a valid Observability Cloud access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
-- Replace ``<realm>`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+- Replace ``<realm>`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, open the navigation menu in Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
 
 .. _configure-the-package-dotnet:
 
