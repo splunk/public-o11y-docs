@@ -147,7 +147,7 @@ Add Observability Cloud as a relying party in ADFS:
 #. On the page that appears, select :guilabel:`Relying Party Trusts` and right-click on :guilabel:`Splunk Observability Cloud`.
 #. From the :guilabel:`Claim rule policy` list, select :menuselection:`Edit Claim Issuance Policy...`.
 #. Select :guilabel:`Add Rule...`.
-#. Select :menuselection:`Send LDAP Attributes as Claims`, and then click :guilabel:`Next`.
+#. Select :menuselection:`Send LDAP Attributes as Claims`, and then select :guilabel:`Next`.
 #. Enter a name for the claim rule, such as "LDAP", then from the :guilabel:`Attribute store` drop-down list,
    select :guilabel:`Active Directory`.
 #. In the :guilabel:`Mapping of LDAP attributes to outgoing claim types` pane,
