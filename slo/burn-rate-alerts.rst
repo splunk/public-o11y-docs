@@ -20,13 +20,13 @@ How multiwindow, multi-burn-rate alerts work
 .. role:: raw-latex(raw)
     :format: latex html
 
-.. raw:: html
+    .. raw:: html
 
-    <script type="text/javascript" src="http://localhost/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="http://localhost/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-.. raw:: latex html
-    
-    burn rate = \\frac{SLO compliance window (in hours) * percentage of error budget consumed}{long window (in hours) * 100%}
+    .. raw:: latex html
+        
+        burn rate = \\frac{SLO compliance window (in hours) * percentage of error budget consumed}{long window (in hours) * 100%}
 
 
 
