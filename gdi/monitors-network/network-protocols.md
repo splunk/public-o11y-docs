@@ -34,13 +34,13 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
   pipelines:
     metrics:
-      receivers: [smartagent/collectd/protocols]
+      receivers: [smartagent/protocols]
 ```
 
 ## Metrics

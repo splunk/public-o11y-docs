@@ -1,7 +1,7 @@
 .. _otel-other-configuration-sources:
 
 ******************************************************************
-Other configuration sources (Alpha)
+Other configuration sources (Alpha/Beta)
 ******************************************************************
 
 .. meta::
@@ -11,13 +11,15 @@ In addition to the Collector packages and Fluentd, the following components can 
 
 * :ref:`Environment variable (Alpha) <env-variable-config-source>`
 * :ref:`etcd2 (Alpha) <etcd2-config-source>`
-* :ref:`Include (Alpha) <include-config-source>`
+* :ref:`Include config source (Beta) <include-config-source>`
 * :ref:`Vault (Alpha) <vault-config-source>`
 * :ref:`Zookeeper (Alpha) <zookeeper-config-source>`
 
 .. note::
 
-   Alpha refers to configurations that might not be stable and might be limited in their capabilities. While in the alpha stage, breaking changes might be introduced in a new release. These configurations can change without notice.
+   :strong:`Alpha` and :strong:`Beta` refer to configurations that might not be stable and might be limited in their capabilities. These configurations can change without notice.   
+   
+   While in the alpha stage, breaking changes might be introduced in a new release. 
 
 .. _env-variable-config-source:
 
@@ -33,10 +35,10 @@ Use the etcd2 configuration source to retrieve data from etcd2 and inject it int
 
 .. _include-config-source:
 
-Include (Alpha)
-=====================
+Include config source (Beta)
+================================
 
-Use the include configuration source to inject :new-page:`Go templates <https://pkg.go.dev/text/template>` or plain files into the configuration. The configuration source can be used to insert scalar data or complete YAML sections. See :new-page:`Include Config Source (Alpha) <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource>` in GitHub to copy the configuration YAML file.
+Use the include configuration source to inject :new-page:`Go templates <https://pkg.go.dev/text/template>` or plain files into the configuration. The configuration source can be used to insert scalar data or complete YAML sections. See :new-page:`Include Config Source (Beta) <https://github.com/signalfx/splunk-otel-collector/tree/main/internal/configsource/includeconfigsource>` in GitHub to copy the configuration YAML file.
 
 .. _vault-config-source:
 

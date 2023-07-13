@@ -11,7 +11,7 @@ Introduction to alerts and detectors in Splunk Observability Cloud
 
 Splunk Observability Cloud uses :strong:`detectors`, :strong:`events`, :strong:`alerts`, and :strong:`notifications` to keep you informed when certain criteria are met.
 
-Sample use cases of alerts and detectors
+Sample scenarios of alerts and detectors
 ==========================================
 
 - You want a message sent to a Slack channel or to an email address for the Ops team when CPU Utilization has reached the 95th percentile.

@@ -74,7 +74,7 @@ Metrics can have associated metadata such as dimensions, custom properties, or t
 
 To add or edit dimensions: 
 
-* :ref:`metadata-catalog`.
+* :ref:`metrics-finder-and-metadata-catalog`.
 * Use the API. See how in :new-page:`our developer portal <https://dev.splunk.com/observability/reference/api/metrics_metadata/latest#endpoint-update-dimension-metadata>`.
 
 .. _data-points:

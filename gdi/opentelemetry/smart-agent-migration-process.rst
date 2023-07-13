@@ -12,13 +12,13 @@ Migration process from the Smart Agent to the Splunk Distribution of the OpenTel
 
 Do the following steps to migrate from the Smart Agent to the Collector:
 
-* :ref:`deploy-the-collector-non-prod-env`
-* :ref:`validate-deployment-of-collector` 
-* :ref:`locate-sa-config-file`
-* :ref:`use-translatefx` 
-* :ref:`estimate-sizing` 
-* :ref:`deploy-non-prod-updated-config` 
-* :ref:`deploy-to-prod-updated-config` 
+#. :ref:`Deploy the Collector in a non-production environment <deploy-the-collector-non-prod-env>`
+#. :ref:`Validate the deployment of the Collector <validate-deployment-of-collector>` 
+#. :ref:`Locate your existing Smart Agent configuration file <locate-sa-config-file>`
+#. :ref:`Translate the Smart Agent configuration file using translatesfx <use-translatefx>` 
+#. :ref:`Estimate resource utilization (sizing) for the production environment <estimate-sizing>` 
+#. :ref:`Deploy the Collector to the non-production environment using the updated configuration file <deploy-non-prod-updated-config>` 
+#. :ref:`Deploy the Collector to a production host using the updated configuration file <deploy-to-prod-updated-config>` 
 
 .. _deploy-the-collector-non-prod-env:
 
@@ -27,11 +27,11 @@ Do the following steps to migrate from the Smart Agent to the Collector:
 
 Deploy the Collector in a non-production environment, for example, a development host or VM or a Kubernetes cluster in staging. The environment needs to be a copy or identical to your production environment.
 
-Navigate to your instance of Observability Cloud and select :menuselection:`Data Management` in the left navigation bar. Choose the platform you would like to deploy the Collector to.
+Navigate to your instance of Observability Cloud and select :menuselection:`Data Management` in the navigation bar. Choose the platform you would like to deploy the Collector to.
 
 .. image:: /_images/gdi/3886-choose-your-platform.png
    :width: 99%
-   :alt: Select Data Management in the left navigation bar.
+   :alt: Select Data Management in the navigation bar.
 
 Follow the guided setup for your platform to deploy the Collector.
 
@@ -53,11 +53,11 @@ Start with looking at the built-in dashboard for the Collector where you can vis
 - Process metrics such as memory and CPU usage
 - Dropped, failure and success metrics for telemetry processing (metrics, spans, logs)
 
-Select :menuselection:`Dashboards` in the left navigation bar.
+Select :menuselection:`Dashboards` in the navigation bar.
 
 .. image:: /_images/gdi/3886-select-dashboards.png
    :width: 99%
-   :alt: Select Dashboards in the left navigation bar.
+   :alt: Select Dashboards in the navigation bar.
 
 Search for OpenTelemetry Collector to access the built-in dashboard group.
 
@@ -98,11 +98,11 @@ For containerized environments, you can expose this port on a public interface i
 Validate using the Metric Finder
 ---------------------------------------------
 
-Use the Metric Finder to ensure that metrics are coming in from a specific integration. Select :menuselection:`Metric Finder` in the left navigation bar.
+Use the Metric Finder to ensure that metrics are coming in from a specific integration. Select :menuselection:`Metric Finder` in the navigation bar.
 
 .. image:: /_images/gdi/3886-metric-finder.png
    :width: 99%
-   :alt: Select Metric Finder in the left navigation bar.
+   :alt: Select Metric Finder in the navigation bar.
 
 Find the integration as part of the list present. For example, if you deployed the Collector on the Kubernetes platform, scroll to the Containers category and select :menuselection:`Kubernetes`. Search results from all metrics being pulled in by default from the Kubernetes integration and the associated metadata that can be filtered or excluded are shown.
 

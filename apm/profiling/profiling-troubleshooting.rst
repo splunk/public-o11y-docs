@@ -13,6 +13,8 @@ If you have instrumented an application but are not seeing profiling data in Spl
 - :ref:`profiling-ui-not-visible`
 - :ref:`profiler-language-specific-troubleshooting`
 
+.. note:: AlwaysOn Profiling requires the Splunk Distribution of OpenTelemetry Collector version 0.44 or higher.
+
 .. _profiler-no-data-issue:
 
 No profiling data in Splunk Observability Cloud
@@ -32,7 +34,7 @@ To solve this, check that you've instrumented your application and that the appl
 Check the OpenTelemetry Collector configuration
 -------------------------------------------------
 
-If the Splunk Distribution of OpenTelemetry Collector isn't configured to send logs to Observability Cloud using the Splunk HEC exporter, it drops profiling data. 
+AlwaysOn Profiling requires the Splunk HTTP Event Collector (HEC) exporter to send profiling data to Splunk Observability Cloud. If the Splunk HEC exporter isn't configured, the Collector drops profiling data.
 
 To solve this issue, edit the configuration file for the Splunk Distribution of OpenTelemetry Collector and make sure that a profiling pipeline exists with an OTLP gRPC receiver and a Splunk HEC exporter. See :ref:`splunk-hec-exporter` for more information.
 
@@ -59,16 +61,14 @@ The following example shows you how to configure a pipeline in the ``agent-confi
          processors: [memory_limiter, batch]
          exporters: [logging/info, splunk_hec]
 
-AlwaysOn Profiling requires the Splunk HTTP Event Collector (HEC) exporter to send profiling data to Splunk Observability Cloud. The exporter is configured automatically for the Splunk OTel Collector version 0.44.0 and higher. If you're using a version of the Collector lower than 0.44.0, you might have to edit the configuration manually.
+The exporter is configured automatically for the Splunk OTel Collector version 0.44.0 and higher. If you're using a version of the Collector lower than 0.44.0, you might have to edit the configuration manually.
 
-.. note:: AlwaysOn Profiling requires the Splunk Distribution of OpenTelemetry Collector version 0.34 or higher.
-
-Check that you've enabled AlwaysOn Profiling
+Check that you've activated AlwaysOn Profiling
 -------------------------------------------------
 
-Depending on the programming language, you can enable AlwaysOn Profiling by setting a system property, a function argument, or an environment variable. System properties and function arguments always take precedence. If the profiler is not enabled, Observability Cloud can't receive profiling data.
+Depending on the programming language, you can activate AlwaysOn Profiling by setting a system property, a function argument, or an environment variable. System properties and function arguments always take precedence. If the profiler is not activated, Observability Cloud can't receive profiling data.
 
-To solve this issue, check that you've enabled the profiler. See :ref:`profiling-setup-enable-profiler`.
+To solve this issue, check that you've activated the profiler. See :ref:`profiling-setup-enable-profiler`.
 
 .. _no-call-stacks:
 
@@ -86,9 +86,9 @@ AlwaysOn Profiling is not accessible in Observability Cloud
 
 If you're sending profiling data to Observability Cloud but can't see AlwaysOn Profiling in Splunk APM, your organization might be lacking the profiler entitlement.
 
-AlwaysOn Profiling is enabled for all host-based subscriptions. For TAPM-based subscriptions, AlwaysOn Profiling might be disabled depending on the contract.
+AlwaysOn Profiling is activated for all host-based subscriptions. For TAPM-based subscriptions, AlwaysOn Profiling might be deactivated depending on the contract.
 
-To solve this issue, reach out to Splunk Support to request they enable the AlwaysOn Profiling feature.
+To solve this issue, reach out to Splunk Support to request they activate the AlwaysOn Profiling feature.
 
 .. _profiler-language-specific-troubleshooting:
 
@@ -101,7 +101,7 @@ Some profiler issues might be specific to the APM instrumentation. See the follo
 - :ref:`nodejs-profiler-issues`
 - :ref:`dotnet-profiler-issues`
 
-Disable profiling log data for specific hosts
+Deactivate profiling log data for specific hosts
 ==============================================================
 
 If you don't need AlwaysOn Profiling data for a specific host or container, see :ref:`unwanted_profiling_logs`.

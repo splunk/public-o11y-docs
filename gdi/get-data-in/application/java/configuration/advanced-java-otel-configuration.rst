@@ -110,15 +110,11 @@ The following settings control trace exporters and their endpoints:
    * - Environment variable
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - Trace exporter to use. You can set multiple comma-separated values. For example, ``otlp,console_span``. The default value is ``otlp``. To select the Jaeger exporter, use ``jaeger-thrift-splunk``. |br| |br| System property: ``otel.traces.exporter``
+     - Trace exporter to use. You can set multiple comma-separated values. |br| |br| System property: ``otel.traces.exporter``
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
      - OTLP gRPC endpoint. The default value is ``http://localhost:4317``. |br| |br| System property: ``otel.exporter.otlp.endpoint``
-   * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
-     - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``. |br| |br| System property: ``otel.exporter.jaeger.endpoint``
 
-The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent (now deprecated), use the Jaeger exporter. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
-
-.. caution:: Support for the `jaeger-thrift-splunk` exporter will be removed after December 17th, 2022.
+The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
 
 .. _trace-sampling-settings-java:
 

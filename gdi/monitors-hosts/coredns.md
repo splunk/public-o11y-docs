@@ -27,22 +27,34 @@ The default port for these metrics are exposed on port 9153, at the `/metrics` p
 
 To activate this integration, add the following to your Collector configuration:
 
-```
+```yaml
 receivers:
   smartagent/coredns:
     type: coredns
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
-```
+```yaml
 service:
   pipelines:
     metrics:
       receivers: [smartagent/coredns]
 ```
 
+### Configure a Kubernetes environment
+
+Here is an example configuration for a Kubernetes environment:
+
+```yaml
+receivers:
+  smartagent/coredns:
+    type: coredns
+    discoveryRule: kubernetes_pod_name =~ "coredns" && port == 9153
+    extraDimensions:
+      metric_source: "k8s-coredns"
+```
 ### Configuration options
 
 The following table shows the configuration options for this monitor:
