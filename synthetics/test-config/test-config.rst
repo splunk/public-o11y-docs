@@ -17,7 +17,7 @@ Configure your tests
    private-locations
    rum-synth
    try-now
-   example-tests
+   test-examples
 
 
 To simulate diverse types of traffic to your site or application, use a range of configuration options to customize each of your tests.
