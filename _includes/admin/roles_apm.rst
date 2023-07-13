@@ -43,7 +43,7 @@
     - No
     - No
 
-  * - :strong:`The APM traces resource in the API`
+  * - :strong:`The APM Traces resource in the API`
     - Yes
     - Yes
     - Yes
