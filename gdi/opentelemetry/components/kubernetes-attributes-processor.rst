@@ -9,7 +9,7 @@ Kubernetes attributes processor
 
 The Kubernetes attributes processor is an OpenTelemetry Collector component that manages resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-.. caution:: Don't remove the Kubernetes attributes processor from your configuration. Default attributes extracted by the processor, such as ``k8s.pod.name``, are required to accurately count hosts for the accurate billing in Splunk Observability Cloud.
+.. caution:: Don't remove the Kubernetes attributes processor from your configuration. Default attributes extracted by the processor, such as ``k8s.pod.name``, are required to count hosts for the accurate billing in Splunk Observability Cloud.
 
 Get started
 ======================
