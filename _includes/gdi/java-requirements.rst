@@ -1,10 +1,9 @@
-The agent of the Splunk Distribution of OpenTelemetry Java supports the following Java versions:
+The agent of the Splunk Distribution of OpenTelemetry Java is compatible with the following Java versions:
 
 - Java 8 starting from 8u40 (8u262 for AlwaysOn Profiling)
-- Java 11
-- Java 17 and higher LTS versions
+- Java 11 and higher LTS versions
 
-The following Java Virtual Machines (JVMs) are supported:
+The following Java Virtual Machines (JVMs) are compatible:
 
 - AdoptOpenJDK
 - Amazon Corretto
@@ -16,5 +15,3 @@ The following Java Virtual Machines (JVMs) are supported:
 - Oracle OpenJDK
 - Red Hat OpenJDK
 - SAP SapMachine
-
-.. note:: Splunk Observability Cloud officially supports Java and Groovy as JVM languages. You can instrument applications written in other JVM languages, but the quality of the telemetry data is not guaranteed.
