@@ -243,10 +243,30 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Support <get-started/support>
 
 .. toctree::
-   :caption: Splunk Platform users
+   :caption: Splunk platform users
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform TOGGLE <get-started/core2o11y/core2o11y-landing>
+   Splunk Observability Cloud and the Splunk platform <splunkplatform/splunkplatform-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   Unified Identity <splunkplatform/unified-id/unified-identity>
+
+.. toctree::
+   :maxdepth:   3
+
+   Measure and alert on your SLIs <splunkplatform/practice-reliability/slis>
+
+.. toctree::
+   :maxdepth:   3
+
+   Respond to incidents <splunkplatform/practice-reliability/incident-response>
+
+.. toctree::
+   :maxdepth:   3
+
+   Collaborate on observability <splunkplatform/practice-reliability/collaboration>
 
 .. toctree::
    :caption: Get your data in
