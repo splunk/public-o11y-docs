@@ -152,7 +152,7 @@ html, body {
 /* For subsection headings */
 
 div.sphinxsidebar p.caption {
-    font-size: 140%;
+    font-size: 113%;
 }
 
 
@@ -233,7 +233,7 @@ li.toctree-l1 {
 /* 
 border-bottom: 1px solid #eee;
  */
-padding-bottom: 1 px; /*changed from 10 brs */
+padding-bottom: 1px; /*changed from 10 brs */
 }
 
 div.sphinxsidebar h3 {
@@ -245,7 +245,7 @@ margin:30px 0 20px;
 /* For subsection headings */
 
 div.sphinxsidebar p.caption {
-    font-size: 140%;
+    font-size: 113%;
 }
 
 
@@ -822,7 +822,7 @@ border:none;
 }
 
 div.sphinxsidebar p {
-  margin:24px 0 5px;
+  margin:17px 0 5px;
 }
 
 #welcome {

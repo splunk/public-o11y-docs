@@ -261,7 +261,7 @@ You can choose whether the variable condition is applied to all plots on all cha
    ..    - hide metrics that send the specified property but don't meet the variable setting.
    ..    - hide metrics that don't send the specified property at all.
 
-   A common use case for this setting is when you want to focus on only data that meets the variable condition, so you want to hide all other data.
+   A common scenario for this setting is when you want to focus on only data that meets the variable condition, so you want to hide all other data.
    
    .. note::
       Because you hide data, your dashboard might have a number of blank charts.
@@ -288,7 +288,7 @@ You can choose whether the variable condition is applied to all plots on all cha
    ..    - display all other metrics, including metrics that don't send the specified property at all.
 
 
-   A common use case this setting is when you have, for instance, two charts, each with a plot that shows the mean of a metric that has the ``aws_availability_zone`` property. You want one chart to always show the mean aggregated across all zones, while in the other chart, you want to be able to use a dashboard variable to drill down to a single zone. In the latter chart, you add a filter for ``aws_availability_zone:*`` (or an OR filter that contains multiple zone values). When the dashboard variable is applied, the filter in that plot is "replaced" by the specified availability zone, so the chart displays values only for that zone. However, because no filter is applied to the plot in the first chart, the mean across all zones is still displayed.
+   A common scenario this setting is when you have, for instance, two charts, each with a plot that shows the mean of a metric that has the ``aws_availability_zone`` property. You want one chart to always show the mean aggregated across all zones, while in the other chart, you want to be able to use a dashboard variable to drill down to a single zone. In the latter chart, you add a filter for ``aws_availability_zone:*`` (or an OR filter that contains multiple zone values). When the dashboard variable is applied, the filter in that plot is "replaced" by the specified availability zone, so the chart displays values only for that zone. However, because no filter is applied to the plot in the first chart, the mean across all zones is still displayed.
 
 When you return to the dashboard and hover over the dashboard variable field, you either see a tooltip telling you the variable applies to all charts, or you see a different message along with some charts being highlighted on the dashboard. In the latter case, the dashboard variable is being applied to those charts because at least one plot in the chart has a filter matching the dashboard variable property.
 

@@ -8,6 +8,8 @@ Send Azure logs to Splunk Log Observer
 .. meta::
    :description: Learn how to send logs from your Azure services to Splunk Observability Cloud and Splunk Log Observer using Azure Event Hub.
 
+.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
+
 You can send logs from Azure to Splunk Log Observer by deploying a function that prepares and sends log data to the Splunk HTTP Event Collector (HEC) endpoint. To get started, follow these instructions.
 
 Prerequisites
@@ -65,7 +67,9 @@ Configure diagnostic settings to send logs
 
 After you've created the event hub, follow these steps to activate diagnostic settings:
 
-#. In Azure, select the resource and go to :guilabel:`Monitoring > Diagnostic settings`.
+#. In Azure, select the resource.
+
+#. Select :guilabel:`Monitoring`, then :guilabel:` Diagnostic settings`.
 
 #. Create a new setting or edit an existing setting.
 

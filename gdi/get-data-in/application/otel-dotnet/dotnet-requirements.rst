@@ -16,8 +16,8 @@ Ensure you are using supported .NET versions
 
 The Splunk Distribution of OpenTelemetry .NET supports the following .NET versions:
 
-- .NET 6.0 and higher on Windows and Linux
-- .NET Framework 4.6.2 and higher on Windows
+- .NET 6.0 and higher
+- .NET Framework 4.6.2 and higher
 
 .. _supported-dotnet-otel-libraries:
 
@@ -48,11 +48,11 @@ Traces instrumentations
    * - Elastic.Clients.Elasticsearch
      - 8.0.0 and higher
      - ``ELASTICSEARCH``
-   * - Microsoft.EntityFrameworkCore  |br| (Not supported on .NET Framework)
+   * - Microsoft.EntityFrameworkCore |br| (Not supported on .NET Framework)
      - 6.0.12 and higher
      - ``ENTITYFRAMEWORKCORE``
-   * - GraphQL
-     - 2.3.0 to 3.0.0
+   * - GraphQL |br| (Not supported on .NET Framework)
+     - 7.5.0 and higher
      - ``GRAPHQL``
    * - Grpc.Net.Client
      - 2.43.0 to 3.0.0
@@ -66,8 +66,11 @@ Traces instrumentations
    * - MongoDB.Driver.Core |br| (Not supported on .NET Framework)
      - 2.13.3 to 3.0.0
      - ``MONGODB``
+   * - MySqlConnector
+     - 2.0.0 and higher
+     - ``MYSQLCONNECTOR``  
    * - MySql.Data |br| (Not supported on .NET Framework)
-     - 6.10.7 and higher
+     - 6.10.7 to 8.0.32
      - ``MYSQLDATA``
    * - Npgsql
      - 6.0.0 and higher
@@ -84,9 +87,9 @@ Traces instrumentations
    * - StackExchange.Redis |br| (Not supported on .NET Framework)
      - 2.0.405 to 3.0.0
      - ``STACKEXCHANGEREDIS``
-   * - System.ServiceModel |br| (No support for server side on .NET)
+   * - System.ServiceModel |br| (Not supported on .NET Framework)
      - 4.7.0 and higher |br| of ``System.ServiceModel.Primitives``
-     - ``WCF``
+     - ``WCFCLIENT`` for client side instrumentation and |br| ``WCFSERVICE`` for service side instrumentation
 
 
 Metrics instrumentations

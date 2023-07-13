@@ -18,7 +18,7 @@ To generate a template that instruments your Lambda function using the Splunk Op
 
 #. Open the :new-page:`AWS Lambda guided setup <https://login.signalfx.com/#/gdi/scripted/awslambda/step-1?category=product-apm&gdiState=%7B"integrationId":"awslambda"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+   #. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
    #. In the integration filter menu, select :guilabel:`All`.
 
@@ -48,7 +48,7 @@ The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lam
 
 - Java 8 and 11
 - Python 3.8 and 3.9
-- Node.js 10, 12, and 14
+- Node.js 14 and higher
 - Ruby 2.7
 - Go 1.18
 
@@ -96,9 +96,11 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
 
 1. In the AWS Lambda console, open the function that you are instrumenting.
 
-2. Navigate to :guilabel:`Configuration` > :guilabel:`Environment variables`, then click :guilabel:`Edit`.
+2. Navigate to :guilabel:`Configuration`, then :guilabel:`Environment variables`.
 
-3. Add each of the following environment variables by clicking :guilabel:`Add environment variable`:
+3. Select :guilabel:`Edit`.
+
+4. Add each of the following environment variables by selecting :guilabel:`Add environment variable`:
 
    .. list-table::
       :header-rows: 1
@@ -161,7 +163,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
       * - (Optional) ``OTEL_RESOURCE_ATTRIBUTES``
         - Define the name of the deployment environment of your function by setting this environment variable to ``deployment.environment=<name-of-your-environment>``.
 
-4. Click :guilabel:`Save` and check that the environment variables appear in the table.
+5. Click :guilabel:`Save` and check that the environment variables appear in the table.
 
 To configure the mode of metric ingest, see :ref:`metrics-configuration-lambda`.
 

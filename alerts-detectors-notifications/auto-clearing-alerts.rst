@@ -27,10 +27,22 @@ To turn on Auto-clear alerts when :ref:`creating or editing a detector <create-d
 Resolution logic
 ==================
 
-When a metric time series (MTS) lapses into inactivity, it stops reporting, and triggers an auto-resolve countdown clock that stops if reporting resumes within your specified period. Reporting that resumes frees the countdown clock to re-trigger if reporting stops again.
+A detector auto resolves if it can't evaluate the condition specified for the time interval of the ``auto_resolve_after`` parameter. The following cases can prevent a detector from successfully evaluating the condition:
+ 
+* When a metric time series (MTS) lapses into inactivity, it stops reporting and triggers an auto-resolve countdown clock. If reporting resumes within your specified time interval, the countdown clock is freed to re-trigger in case reporting stops again. If reporting does not resume within the interval you've specified, then the involved MTS is considered no longer relevant, and the alert for it is auto-cleared.
 
-If reporting does not resume within the interval you've specified, then the involved MTS is considered no longer relevant, and the alert for it is auto-cleared according to the parameters of the ``auto_resolve_after`` mechanism.
+* When there are too many null data points for the detector to successfully evaluate the condition for the specified time interval, the alert will auto-clear. This can happen because the MTS is aperiodic or sparse. It can also happen when there is a mismatch between the detector resolution and the MTS resolution. For example, you have the following condition for auto-clearing your alerts:
+  
+  .. code-block::
+      
+      detect(when(A > threshold(99), lasting='1h', at_least=0.8), lasting='30m', at_least=0.9), auto_resolve_after='1h')
+
+  In this example, if the MTS does not send a data point for at least 80% of the detector time windows, active alerts will auto-clear because the condition can't be evaluated for the time interval provided in ``auto_resolve_after``.
+
+* When the requirements to fire and clear alerts are both true or are both false, the alert will auto-clear.
 
 Auto-clear alert settings do not affect detectors created before they are applied, but you can edit an existing detector to configure it for auto-clearing.
 
 When an alert has been auto-cleared rather than resolved manually, it is listed as :guilabel:`Auto-Cleared` rather than :guilabel:`Cleared`.
+
+
