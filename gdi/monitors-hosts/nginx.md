@@ -70,7 +70,7 @@ After you've set up the Collector, follow these steps to configure the Nginx web
    ```
    server {
      location /nginx_status {
-       stab_status on;
+       stub_status on;
        access_log off;
        allow 127.0.0.1; # The source IP address of OpenTelemetry Collector.
        deny all;

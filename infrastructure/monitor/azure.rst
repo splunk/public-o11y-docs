@@ -7,10 +7,11 @@ Monitor Azure
 .. meta::
   :description: Learn how to monitor Microsoft Azure infrastructure resources with Splunk Observability Cloud.
 
-.. note::
-  Before you can start monitoring any Microsoft Azure resources, :ref:`get-started-azure`, and log in with your administrator credentials.
+Splunk Observability Cloud can automatically import metrics and metadata from your Microsoft Azure services powered by Azure Monitor. 
 
-Splunk Observability Cloud can automatically import metrics and metadata about your services from Microsoft Azure. Observability Cloud provides infrastructure monitoring capabilities powered by Azure Monitor. See :new-page:`https://docs.microsoft.com/en-us/azure/azure-monitor/overview <https://docs.microsoft.com/en-us/azure/azure-monitor/overview>` on the Microsoft site for more information.
+* For a list of supported Azure services in Observability Cloud, refer to :ref:`supported-azure-services`. 
+* Before you can start monitoring any Microsoft Azure resources, :ref:`get-started-azure`.
+* See :new-page:`https://docs.microsoft.com/en-us/azure/azure-monitor/overview <https://docs.microsoft.com/en-us/azure/azure-monitor/overview>` on the Microsoft site for more information.
 
 You can also export and monitor data from sources running in your Azure environment, as described in the following table.
 
@@ -40,11 +41,13 @@ You can also export and monitor data from sources running in your Azure environm
 Monitor Azure services and identify problems
 =======================================================
 
-View the health of Azure services at a glance from the Infrastructure page. This page provides a key metric for each service. You can also drill down into specific instances of an Azure service. For example, view key metrics for the Virtual Machines service, and filter for a specific ID to analyze a particular virtual machine instance.
+View the health of Azure supported services at a glance from the Infrastructure page. See more details on available content at :ref:`azure-dashboards`. 
+
+You can also drill down into specific instances of an Azure service. For example, view key metrics for the Virtual Machines service, and filter for a specific ID to analyze a particular virtual machine instance.
 
 Follow these steps to analyze problem Azure services from the Infrastructure page:
 
-1. Select :strong:`Navigation menu > Infrastructure` and view the :strong:`Microsoft Azure` category.
+1. Select :strong:`Infrastructure > Microsoft Azure`.
 2. Select the specific service you want to analyze. For example, select :strong:`Virtual Machines` to view metrics of a virtual machine. If you see “No Data Found,” you need to first configure an integration.
 3. Compare instances of the service along the following metrics with the :strong:`Color by` drop-down list. In the heat map, colors represent the health of instances based on the metrics you select. For example, a heat map that shows green and red, uses green to denote healthy and red to denote unhealthy instances. If your heat map has multiple colors, then the lighter gradient represents less activity, and the darker gradient represents more activity. 
 
@@ -77,25 +80,57 @@ Follow these steps to analyze problem Azure services from the Infrastructure pag
 
 .. _azure-dashboards: 
 
-Use default dashboards to monitor Azure services
-================================================================
+Use default dashboards and built-in content to monitor Azure services
+=========================================================================================
 
-Observability Cloud provides default dashboards for supported Azure services. Default dashboards are available in dashboard groups based on the Azure service a dashboard represents data for.
+Observability Cloud provides default dashboards and built-in content for selected Azure services. 
 
-To find default dashboards for Azure services, select :strong:`Navigation menu > Dashboards` and search for the Azure service you want to view dashboards for.
-
-Explore built-in content
+Default dashboards
 -------------------------------------------------------------------
 
-Observability Cloud collects data from many cloud services. To see all of the navigators provided for data collected in your organization, go to the Infrastructure page. To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`.
+To see all the pre-built dashboards for data collected in your organization, select :strong:`Dashboards > Built-in`. Supported services include:
 
-.. note::
+* Azure App service
+* Azure batch
+* Azure Event Hubs
+* Azure Functions
+* Azure Kubernetes service
+* Azure Logic Apps
+* Azure redis caches
+* Azure SignalR hubs
+* Azure SQL databases
+* Azure SQL server elastic pools
+* Azure Storage
+* Azure Virtual Machines
+* Azure VM Scale Sets
 
-  Azure Virtual Machines instances are powered by their respective public cloud service as well as the Splunk Distribution of OpenTelemetry Collector. You need both for all the charts to display data in the built-in dashboards.
+Explore built-in navigators
+-------------------------------------------------------------------
 
-  - If you have only the public cloud service and the Smart Agent configured, some charts in the built-in dashboards for Azure Virtual Machines instances display no data.
-  - If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for Azure Virtual Machines instances display no data.
-  - If you have only Smart Agent configured, Azure Virtual Machines instance navigator isn't available.
+To see all of the out-of-the-box navigators provided for data collected in your organization, go to the Infrastructure page. Supported services include: 
+
+* App services
+* Azure functions
+* Batch accounts
+* Elastic pools
+* Event hubs
+* Logic apps
+* Redis cache
+* SQL database
+* Storage
+* Virtual machines
+* Dashboards
+
+Content from Azure Virtual Machines
+-------------------------------------------------------------------
+
+Azure Virtual Machines instances are powered by their respective public cloud service as well as the Splunk Distribution of OpenTelemetry Collector. You need both for all the charts to display data in the built-in dashboards.
+
+- If you have only the public cloud service and the Smart Agent configured, some charts in the built-in dashboards for Azure Virtual Machines instances display no data.
+- If you have only the public cloud service configured, you can see all the cards representing the services where data come from, but some charts in the built-in dashboards for Azure Virtual Machines instances display no data.
+- If you have only Smart Agent configured, Azure Virtual Machines instance navigator isn't available.
+
+.. note:: The SignalFx Smart Agent has reached End of Support. To use the Collector, see :ref:`migrate-from-sa-to-otel`.
 
 .. _azure-id-metadata: 
 
@@ -116,8 +151,7 @@ Be careful when choosing tag names: Splunk Observability Cloud only allows alpha
 The azure_resource_id dimension
 --------------------------------------------------------------------------------
 
-The Azure integration adds the ``azure_resource_id`` dimension to metrics received from Azure.
-The dimension value is derived from Azure's ``resource_id`` for the resource and has the following syntax:
+The Azure integration adds the ``azure_resource_id`` dimension to metrics received from Azure. This value is derived from Azure's ``resource_id`` for the resource, and has the following syntax:
 
 ``<subscription_id>/<resource_group_name>/<resource_provider_namespace>/<resource_name>``
 
@@ -130,8 +164,7 @@ the installation automatically adds the ``azure_resource_id``.
 Azure integration generic dimensions
 --------------------------------------------------------------------------------
 
-The metric time series (MTS) associated with Azure metrics have the following generic dimensions.
-These dimensions are common to all services.
+The metric time series (MTS) associated with Azure metrics have the following generic dimensions, common to all services:
 
 .. list-table::
    :header-rows: 1
@@ -631,67 +664,3 @@ For virtual machines in scale sets, Observability Cloud syncs the following prop
      -   ``azure_sku``
      -   SKU of the instance. For example, ``com.microsoft.azure.management.compute.Sku@151e5d8d``
 
-..
-  Supported Azure services
-  ========================
-
-  You can monitor these Azure services in Observability Cloud:
-
-  .. hlist::
-    :columns: 2
-
-    - API Management
-    - App Service
-    - Application Gateway
-    - Automation
-    - Azure Analysis Services
-    - Azure Cosmos DB
-    - Azure DDoS Protection
-    - Azure DNS
-    - Azure Data Explorer
-    - Azure Database for MySQL
-    - Azure Database for PostgreSQL
-    - Azure Firewall
-    - Azure Front Door
-    - Azure Kubernetes Service
-    - Azure Location Based Services
-    - Azure Machine Learning
-    - Azure Maps
-    - Batch
-    - Cognitive Services
-    - Container Instances
-    - Container Registry
-    - Content Delivery Network (CDN)
-    - Customer Insights
-    - Data Factory
-    - Data Lake Analytics
-    - Data Lake Store
-    - Event Grid (Event Subscriptions)
-    - Event Grid (Extension Topics)
-    - Event Grid (System Topics)
-    - Event Grid (Topics)
-    - Event Grid (domains)
-    - Event Hubs
-    - ExpressRoute
-    - HDInsight
-    - Iot Hub
-    - Key Vault
-    - Load Balancer
-    - Logic apps
-    - Network Interfaces
-    - Notification Hubs
-    - Power BI
-    - Redis Cache
-    - Relays
-    - SQL Database
-    - SQL Elastic Pools
-    - SQL Servers
-    - Search Services
-    - Service Bus
-    - Storage
-    - Stream Analytics
-    - Traffic Manager
-    - VPN Gateway
-    - Virtual Machine Scale Sets
-    - Virtual Machines
-    - Virtual Machines (Classic)

@@ -238,12 +238,12 @@ These are these permissions to allow Observability Cloud to collect AWS tags and
 - ``"es:DescribeElasticsearchDomain"``
 - ``"es:ListDomainNames"``
 - ``"kinesis:DescribeStream"``
-- ``"kinesis:DescribeStream"``
 - ``"kinesis:ListShards"``
 - ``"kinesis:ListStreams"``
-- ``"kinesis:ListStreams"``
 - ``"kinesis:ListTagsForStream"``
-- ``"kinesis:ListTagsForStream"``
+- ``“kinesisanalytics:DescribeApplication”``
+- ``“kinesisanalytics:ListApplications”``
+- ``"kinesisanalytics:ListTagsForResource"``
 - ``"lambda:GetAlias"``
 - ``"lambda:ListFunctions"``
 - ``"lambda:ListTags"``
@@ -317,8 +317,9 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "kinesis:ListShards",
           "kinesis:ListStreams",
           "kinesis:ListTagsForStream",
-          "kinesisanalytics:ListApplications",
           "kinesisanalytics:DescribeApplication",
+          "kinesisanalytics:ListApplications",
+          "kinesisanalytics:ListTagsForResource",
           "lambda:GetAlias",
           "lambda:ListFunctions",
           "lambda:ListTags",

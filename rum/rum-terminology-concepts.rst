@@ -126,7 +126,7 @@ A browser trace is a collection of spans that specifically represents activity o
 Back-end trace
 -----------------
 
-Back-end traces are collections of back-end spans. Backend spans are calls that microservices make to each other, such as an account service making a request to a database.
+Back-end traces are collections of back-end spans. Backend-spans are calls that microservices make to each other, such as an account service making a request to a database.
 
 
 .. _example-session:
