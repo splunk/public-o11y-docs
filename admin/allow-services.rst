@@ -137,11 +137,6 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
               splunk_otel_collector_no_proxy): 127.0.0.1
 
 
-Replace the SignalFx Gateway with the Splunk Distribution of OpenTelemetry Collector
-=====================================================================================================
-
-If you are using the SignalFx Gateway, replace it with the Splunk Distribution of OpenTelemetry Collector running in :new-page:`gateway mode <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>`.
-
 .. _allow-urls:
 
 URLs to allow in your network

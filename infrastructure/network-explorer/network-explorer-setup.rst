@@ -8,7 +8,9 @@ Set up Network Explorer
 *******************************************************
 
 .. meta::
-    :description: Install and configure Network Explorer
+    :description: Install and configure Network Explorer on Kubernetes systems
+
+.. note:: The following topic only applies to Kubernetes systems. If you want to set up Network Explorer on other systems, see :ref:`network-explorer-setup-non-k8s`.
 
 You can install and configure Network Explorer as part of the Splunk Distribution of OpenTelemetry Collector Helm chart.
 
@@ -25,7 +27,7 @@ To use Network Explorer with Kubernetes, you must meet the following requirement
       - :strong:`Description`
         
     * - Environment
-      - Network Explorer is only supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
+      - Network Explorer is supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
       
     * - Operating system
       - RedHat Linux versions 7.6 or higher, Ubuntu versions 16.04 or higher, Debian Stretch+, Amazon Linux 2, Google COS
