@@ -67,7 +67,7 @@ Follow these steps to create an SLO.
       * - Error budget
         - Alerts when the remaining error budget is less than 10% of the estimated error budget for the compliance window.
       * - Burn rate
-        - Alerts when the rate of consumption of your SLO error budget exceeds your specified threshold for a period of time. Splunk Observability Cloud implements multiwindow, multi-burn-rate alerts. To learn more, see :ref:`burn-rate-alerts`.
+        - Alerts when the rate of consumption of your SLO error budget exceeds your specified threshold for a period of time. To learn more, see :ref:`burn-rate-alerts`.
 
 #. Name your SLO. Splunk Observability Cloud automatically generates a name for your SLO. You can change this auto-generated name, as long as the SLO name is unique.
 
