@@ -5,41 +5,59 @@ Performance reference for Splunk OTel Java agent
 ***************************************************
 
 .. meta::
-   :description:
+   :description: Minimum requirements of the Splunk OTel Java agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
 
-Observability instrumentation might add performance overhead and change the behavior of the system you monitor. The more sophisticated and thorough instrumentation is, the more visible its impact can be.
+The Splunk OTel Java agent instruments your application by running inside the same Java Virtual Machine (JVM). Like any other software agent, the Java agent requires system resources like CPU, memory, and network bandwidth. The use of resources by the agent is called performance or agent overhead. The Splunk OTel Java agent has minimal impact on system performance when instrumenting JVM applications, although the final overhead depends on multiple factors.
 
-The Splunk OTel Java agent instruments your application by running inside the same Java Virtual Machine (JVM). Like any other software, the agent requires system resources like CPU, memory, and network bandwidth. This use of resources by the agent is called overhead or agent overhead.
+Some factors that might increase agent overhead are environmental, such as the physical machine architecture, CPU frequency, amount and speed of memory, system temperature, and resource contention. Other factors include virtualization and containerization, the operating system and its libraries, the JVM version and vendor, JVM settings, the algorithmic design of the software being monitored, and sofware dependencies.
 
-Many factors affect performance overhead, including JVM configuration, transaction volume, deployment architecture, and hardware. The Splunk OpenTelemetry Java agent has minimal impact on system performance when instrumenting Java Virtual Machine (JVM) applications.
+Due to the complexity of modern software and the broad diversity in deployment scenarios, it is impossible to come up with a single overhead estimate. To find out the overhead of any instrumentation agent in a given deployment, you have to conduct experiments and collect measurements directly. Therefore, all statements about performance in this document must be treated as general information and guidelines which are subject to evaluation in a specific system.
 
-The following sections describe the minimum requirements of the Splunk OTel Java agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
+The following sections describe the minimum requirements of the Splunk OTel Java agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent. 
+
 
 Minimum requirements for production deployments the Java agent
 =================================================================
 
 .. include:: /_includes/gdi/java-requirements.rst
 
-Guidelines to optimize performance of the Java agent
+Guidelines to reduce Java agent overhead
 =================================================================
 
-These are best practices.
+The following best practices and techniques might help in reducing the overhead caused by the Java agent
 
-<General guidelines as an include>
+Configure trace sampling
+-----------------------------------------------------------------
 
-Suggestions for storage, hardware, data ingestion, and configuration to optimize performance. For example, settings that can be tweaked or disabled according to the situation, features that can be disabled, etc. TASK: e.g. turn off instrumentations, use samplers; we might already have some in our docs, ask Fabri (add links if there are any). 
+The volume of spans processed by the instrumentation might impact overhead. You can configure trace sampling to adjust the span volume and thus reduce resource usage. See :ref:`trace-sampling-settings-java` for more information on sampling settings.
 
-INT:Describe best practices and recommendations. Start with high level “obvious” recommendations and move to specific Java instrumentation options 
+Turn off specific instrumentations
+-----------------------------------------------------------------
+
+Consider turning off instrumentations that you don't need or are producing too many spans to further reduce overhead and span volume. To turn off an instrumentation, use ``-Dotel.instrumentation.<name>.enabled=false`` or the ``OTEL_INSTRUMENTATION_<NAME>_ENABLED`` environment variable, where ``<name>`` is the name of the instrumentation.
+
+For example, the following option turns off the JDBC instrumentation: ``-Dotel.instrumentation.jdbc.enabled=false``
+
+Allocate more memory for the application
+----------------------------------------------------------------
+
+Incresing the maximum heap size of the JVM using the ``--Xmx<size>`` option might help in alleviating overhead issues, as instrumentations can generate a large number of short-lived objects in memory.
+
+Use manual instrumentation sparingly
+
+
+Use manual instrumentation carefully/sparingly – you probably don’t need a @WithSpan on every method
+@WithSpan(debug = true) ? for debug-only spans? Could be a nice idea; perhaps some debug condition instead
+Open APM and check if your traces contain spans from instrumentation libraries that you don’t really care about; you could disable these instrumentations to reduce the overhead a tiny bit. (Trace analyzer?)
+
 
 Constraints impacting the performance of the Java agent
 =================================================================
 
-<General constraints as an include>
-
 INT: Describe how particular instrumentation features impact Java instrumentation overhead 
 Tracing - tracing methods that do very little can have considerable overhead as tracing can be more expensive than the method execution
 Metrics - using high cardinality tags can cause high memory usage
-Logging 
+Logging  – might be expensive if you log a lot (even TRACE-level logs)
 
 INT: Describe which features have significant impact (keep to supported features)
 Profiling - parsing JFR recordings requires heap space, memory profiler uses jdk.ObjectAllocationInNewTLAB and jdk.ObjectAllocationOutsideTLAB events that can have significant overhead when produced in high volume, see https://bugs.openjdk.org/browse/JDK-8257602
@@ -47,13 +65,29 @@ RUM - adds Server-Timing and Access-Control-Expose-Headers to the response which
 Other 
 
 INT: Describe how enabling additional instrumentations impacts the overhead. I.e more features- more overhead 
+Noisy instrumentations, e.g. JDBC and other database clients (Redis)
+
 
 INT: Add warning about experimental features and unknown potential impact on performance 
+
 
 Troubleshooting performance issues when deploying the Java agent
 =================================================================
 
 We welcome users of the Splunk Distribution of OpenTelemetry Java Instrumentation to repeat these experiments and to conduct comparable tests with their own services.
+
+We welcome users of the Splunk Distribution of OpenTelemetry Java Instrumentation to repeat these experiments and to conduct comparable tests with their own services.
+Some extra things that we thought of:
+See if you’re CPU bound or memory bound
+If your application is approaching memory limits, consider giving it more memory
+If your application is using all the CPU, you might want to scale it horizontally
+If these two things don’t really help you, try removing some of the features of the javaagent:
+Try disabling metrics (link/reference the config property)
+Try disabling memory profiling (link/reference the config property)
+Try disabling profiling altogether (link/reference the config property)
+Try enabling a sampler that will sample out some/most of the spans (link/reference the config property)
+Try disabling the instrumentations that produce the most telemetry (in our experience, the database client instrumentations like JDBC or Redis) (link/reference the config property)
+
 
 Step 1. Prepare test environment
 
