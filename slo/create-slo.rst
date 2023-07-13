@@ -22,44 +22,23 @@ Follow these steps to create an SLO.
 
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Service Level Objectives (SLOs)`.
 #. Select :guilabel:`Create SLO`.
-#. Choose a service or metric indicating system health for the SLO.
+#. Choose the service indicating system health for the SLO.
 
-    #. If you want to create an SLO for a service, enter the following fields:
+    .. list-table::
+      :header-rows: 1
+      :widths: 40 60
 
-       .. list-table::
-        :header-rows: 1
-        :widths: 40 60
-
-        * - :strong:`Field name`
-          - :strong:`Description`
-        * - Metric type
-          - Select :guilabel:`Service & endpoint` from the dropdown menu
-        * - Service\:\endpoint
-          - * Search for the service you want to create an SLO for
-            * (Optional) Add an endpoint for the selected service
-        * - Environment
-          - Check the boxes for the environments where you want to apply this SLO
-        * - Filters
-          - ... 
-            
-    #. If you want to create an SLO for a metric, enter the following fields:
-
-       .. list-table::
-        :header-rows: 1
-        :widths: 40 60
-
-        * - :strong:`Field name`
-          - :strong:`Description`
-        * - Metric type
-          - Select :guilabel:`Custom metrics` from the dropdown menu
-        * - Service name
-          - ...
-        * - Numerator metric
-          - Search for the metric you want to use as the numerator metric
-        * - Denominator metric
-          - Search for the metric you want to use as the denominator metric
-        * - SLO name 
-          - Enter a name for your SLO
+      * - :strong:`Field name`
+        - :strong:`Description`
+      * - Metric type
+        - Select :guilabel:`Service & endpoint` from the dropdown menu
+      * - Service\:\endpoint
+        - * Search for the service you want to create an SLO for
+          * (Optional) Add an endpoint for the selected service
+      * - Environment
+        - Check the boxes for the environments where you want to apply this SLO
+      * - Filters
+        - Additional dimension names and values you want to apply this SLO to
 
 
 #. Define your SLO and how to measure it
@@ -88,7 +67,9 @@ Follow these steps to create an SLO.
       * - Failure budget
         - Alerts when the remaining failure budget is less than 10% of the estimated failure budget for the compliance window.
       * - Burn rate
-        - Alerts when the burn rate exceeds 1.0, which means if the current burn rate is sustained over any future compliance window, the service will be out of SLO for that period.
+        - ... 
+
+#. Name your SLO. Splunk Observability Cloud automatically generates a name for your SLO. You can change this auto-generated name, as long as the SLO name is unique.
 
 #. Select :guilabel:`Create` to create the SLO.
 
