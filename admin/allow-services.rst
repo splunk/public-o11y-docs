@@ -56,9 +56,11 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
 
       # Add proxy settings to the environment for the installer script
 
-      sudo sed -i "$ a http_proxy=http://<proxy.address:port>" /etc/environment
-      sudo sed -i "$ a https_proxy=http://<proxy.address:port>" /etc/environment
-      sudo sed -i "$ a no_proxy=<address>" /etc/environment
+      cat <<EOF | sudo tee -a /etc/environment
+      NO_PROXY=<address,anotheraddress>
+      HTTP_PROXY=http://<proxy.address:port>
+      HTTPS_PROXY=http://<proxy.address:port>
+      EOF
 
       # Add proxy configuration to the service-proxy.conf
       # file in /etc/systemd/system/splunk-otel-collector.service.d/
