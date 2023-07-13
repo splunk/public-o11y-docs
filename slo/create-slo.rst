@@ -64,10 +64,10 @@ Follow these steps to create an SLO.
         - :strong:`Description`
       * - Breach event
         - Alerts when the service level indicator (SLI) doesn't meet the target over the specified compliance window. 
-      * - Failure budget
-        - Alerts when the remaining failure budget is less than 10% of the estimated failure budget for the compliance window.
+      * - Error budget
+        - Alerts when the remaining error budget is less than 10% of the estimated error budget for the compliance window.
       * - Burn rate
-        - ... 
+        - Alerts when the rate of consumption of your SLO error budget exceeds your specified threshold for a period of time. Splunk Observability Cloud implements multiwindow, multi-burn-rate alerts. To learn more, see :ref:`burn-rate-alerts`.
 
 #. Name your SLO. Splunk Observability Cloud automatically generates a name for your SLO. You can change this auto-generated name, as long as the SLO name is unique.
 
