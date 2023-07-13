@@ -166,8 +166,6 @@ Charts, detectors, and SignalFlow limits
    * - :ref:`maximum-number-of-signalflow-jobs-per-connection`
      - 300
 
-
-
 .. _data-ingestion-limits:
 
 Data ingestion limits
@@ -243,7 +241,7 @@ Subscription limits
      - Multiples of entitlement
 
    * - :ref:`bundled-mts-limit`
-     - 500,000
+     - Determined by your subscription
 
    * - :ref:`container-burstoverage-limit`
      - Multiples of entitlement
@@ -828,9 +826,8 @@ High resolution custom metrics burst/overage limit
 Bundled MTS limit
 --------------------------------------------------------------------------------------
 
-   * :strong:`Default limit value`: 500,000
-   * :strong:`Notes`: This limit applies to host-based contracts only. It is the total number of bundled MTS a customer can have, apart from the standard host-based or container-based MTS. For example, this limit applies to MTS for Amazon Simple Queue Service (SQS) queues.
-   * :strong:`Customer impact`: The system rejects MTS creations that exceed the limit, and no error message appears.
+   * :strong:`Default limit value`: Determined by your subscription
+   * :strong:`Notes`: This limit is scaled to subscription, and is no longer a pricing measure.
 
 .. _imts-limit:
 
