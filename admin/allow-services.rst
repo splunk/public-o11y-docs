@@ -100,11 +100,6 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
 
 Restart the Collector after adding these environment variables to your configuration. 
 
-Replace the SignalFx Gateway with the Splunk Distribution of OpenTelemetry Collector
-=====================================================================================================
-
-If you are using the SignalFx Gateway, replace it with the Splunk Distribution of OpenTelemetry Collector running in :new-page:`gateway mode <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>`.
-
 .. _allow-urls:
 
 URLs to allow in your network

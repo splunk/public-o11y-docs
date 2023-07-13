@@ -80,7 +80,7 @@ To change the token visibility, follow these steps:
 
         You might see the following message in the middle of the dialog:
 
-        You are currently giving permissions to a team with Restrict Access deactivated. This means any user can join this team and is  able to access this Access Token.
+        You are currently giving permissions to a team with Restrict Access deactivated. This means any user can join this team and is able to access this Access Token.
 
         This message means that all users are able to join the team and then view or read the access token.
 
@@ -92,7 +92,7 @@ To change the token visibility, follow these steps:
 Edit the API roles for a token
 ---------------------------------------
 
-To change the API roles for a token, follow these steps:
+To change the API roles for an API token, follow these steps:
 
 #. Open the actions menu (|more| icon) next to the token you want to edit, then select :guilabel:`Edit Token`.
 #. Select the :guilabel:`API Roles` field to see the list of available roles.
