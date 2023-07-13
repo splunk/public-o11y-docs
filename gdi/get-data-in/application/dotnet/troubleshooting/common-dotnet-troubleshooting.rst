@@ -164,6 +164,12 @@ The following snippet contains a sample ``profiling`` pipeline:
        endpoint: "${SPLUNK_INGEST_URL}/v1/log"
        log_data_enabled: false
 
+   processors:
+     batch:
+     memory_limiter:
+       check_interval: 2s
+       limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
+
    service:
      pipelines:
        logs/profiling:

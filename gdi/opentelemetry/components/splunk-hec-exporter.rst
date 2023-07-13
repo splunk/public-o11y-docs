@@ -159,6 +159,12 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
        sourcetype: "otel"
        log_data_enabled: false
 
+   processors:
+     batch:
+     memory_limiter:
+       check_interval: 2s
+       limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
+
    # Other settings
 
    service:
@@ -170,7 +176,6 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
          processors:
          - memory_limiter
          - batch
-         - resourcedetection
          exporters: [splunk_hec/platform]
         # Logs pipeline for AlwaysOn Profiling
        logs/profiling:
@@ -178,7 +183,6 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
          processors:
          - memory_limiter
          - batch
-         - resourcedetection
          exporters: [splunk_hec/profiling]
 
 .. _no_profiling_data:

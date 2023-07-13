@@ -48,11 +48,17 @@ The following example shows you how to configure a pipeline in the ``agent-confi
          grpc:
 
    exporters:
-    # Profiling
-    splunk_hec/profiling:
-      token: "${SPLUNK_ACCESS_TOKEN}"
-      endpoint: "${SPLUNK_INGEST_URL}/v1/log"
-      log_data_enabled: false
+     # Profiling
+     splunk_hec/profiling:
+       token: "${SPLUNK_ACCESS_TOKEN}"
+       endpoint: "${SPLUNK_INGEST_URL}/v1/log"
+       log_data_enabled: false
+
+   processors:
+     batch:
+     memory_limiter:
+       check_interval: 2s
+       limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
 
    service:
      pipelines:
