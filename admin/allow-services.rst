@@ -62,6 +62,8 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
       HTTPS_PROXY=http://<proxy.address:port>
       EOF
 
+      # You might need to restart your shell session at this point.
+
       # Add proxy configuration to the service-proxy.conf
       # file in /etc/systemd/system/splunk-otel-collector.service.d/
 
