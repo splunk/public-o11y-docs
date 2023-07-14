@@ -40,6 +40,8 @@ How multiwindow, multi-burn-rate alerts work
 
     a = \frac{a}{b}
 
+:raw-latex:`\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\)`
+
 
 
 
