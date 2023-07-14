@@ -9,11 +9,11 @@ Splunk Observability Cloud service description
 .. meta::
     :description: Features, capabilities, limitations, and constraints of Splunk Observability Cloud, as well as Splunk's responsibilities as Software as a Service provider.
 
-Welcome to the Splunk Observability Cloud Platform service description. 
+Welcome to the Splunk Observability Cloud service description. 
 
-Splunk Observability Cloud is a SaaS solution for infrastructure monitoring (IMM), application performance monitoring (APM), real user monitoring (RUM), synthetic monitoring, and incident intelligence. Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud Platform through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
+Splunk Observability Cloud is a SaaS solution for infrastructure monitoring (IMM), application performance monitoring (APM), real user monitoring (RUM), synthetics monitoring, and incident intelligence. Splunk Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud Platform through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Splunk Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
 
-Splunk Observability Cloud allows you to respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Observability Cloud. When you send data from each layer of your environment, Observability Cloud transforms it into actionable insights in the form of dashboards, visualizations, alerts, and more.
+Splunk Observability Cloud allows you to respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Splunk Observability Cloud. When you send data from each layer of your environment, Splunk Observability Cloud transforms it into actionable insights in the form of dashboards, visualizations, alerts, and more.
 
 This document describes the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and the responsibilities of Splunk to you as a Software as a Service provider. This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following sections. If you have questions after reading any of this material, contact your Splunk sales representative.
 
@@ -100,7 +100,11 @@ Splunk Observability Cloud provides software and APIs that allow you to ingest d
 Splunk OpenTelemetry Collector
 -----------------------------------------------------------
 
-The Splunk Distribution of OpenTelemetry Collector is an open-source software agent capable of collecting metrics and logs from a wide variety of hosts, containers, and services. Setup, configuration, transformation, and sending data from the Collector to your Splunk Observability Cloud account is your responsibility. This means you are responsible for installing, configuring, and managing your Collector instances, including maintaining version compatibility and installing, configuring, and managing Collector components. See :ref:`otel-intro` for more information.
+The Splunk Distribution of OpenTelemetry Collector is an open-source software agent capable of collecting traces, metrics, and logs from a wide variety of hosts, containers, and services. You are responsible for installing, configuring, transforming, sending data, and managing your Collector instances, including maintaining version compatibility and installing, configuring, and managing Collector components. See :ref:`otel-intro` for more information.
+
+Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
+Splunk only provides best-effort support for the upstream OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
+
 
 Integration with cloud service providers
 ------------------------------------------------------------
@@ -114,10 +118,14 @@ Splunk distributions of OpenTelemetry instrumentation
 
 The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and libraries is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` for more information.
 
+Splunk officially supports the Splunk distributions of OpenTelemetry instrumentation, including manual instrumentation. Splunk only provides best-effort support for the upstream OpenTelemetry SDKs.
+
+
 Ingest API endpoints
 -------------------------------------------------------------
 
-You can use the REST API to send telemetry directly to Splunk Observability Cloud. This might be useful when you can't use the Splunk OpenTelemetry Collector or when you've specific networking or security requirements. See :ref:`rest-api-ingest` for more information. If your organization has stringent networking security policies that apply to sending data to third parties, see :ref:`allow-services`.
+You can use the REST API to send telemetry directly to Splunk Observability Cloud. This might be useful when you can't use the Splunk Distribution of OpenTelemetry Collector or when you've specific networking or security requirements. See :ref:`rest-api-ingest` for more information. If your organization has stringent networking security policies that apply to sending data to third parties, see :ref:`allow-services`.
+
 
 Data retention
 -------------------------------------------------------------
@@ -126,15 +134,13 @@ When you send data to Splunk Observability Cloud, it is ingested and stored for 
 
 You can monitor subscription usage for each product depending on the type of subscription. See :ref:`subscription-overview` for more information. 
 
-For more information on SLAs and system limits, see :ref:`sd-slas`.
-
 
 .. _sd-subscriptions:
 
 Subscription types, expansions, renewals, and terminations
 ===========================================================
 
-Your subscription to Splunk Observability Cloud depends on the Splunk product: host-based or usage-based for Splunk IM and APM, or web sessions for Splunk RUM or synthetics check for Splunk Synthetics. 
+Your subscription to Splunk Observability Cloud depends on the Splunk product: host-based or usage-based for Splunk IMM and Splunk APM, or web sessions for Splunk RUM or synthetics check for Splunk Synthetic Monitoring. 
 
 Host-based subscriptions
 ------------------------------------------------------------
@@ -144,12 +150,12 @@ Host-based subscriptions base billing on the total number of unique hosts report
 Usage-based subscription
 ---------------------------------------------
 
-Usage-based pricing is suited for monitoring serverless environments or cloud services that don't provide a view of underlying hosts. Usage is calculated depending on the product or feature. For example, Splunk Infrastructure Monitoring usage-based pricing relies on metric time series (MTS), whereas Splunk Real User Monitoring calculates usage from the number of web sessions. For more information on subscription usage and monitoring in Observability Cloud, see :ref:`subscription-overview`.
+Usage-based pricing is suited for monitoring serverless environments or cloud services that don't provide a view of underlying hosts. Usage is calculated depending on the product or feature. For example, Splunk Infrastructure Monitoring usage-based pricing relies on metric time series (MTS), whereas Splunk Real User Monitoring calculates usage from the number of web sessions. For more information on subscription usage and monitoring in Splunk Observability Cloud, see :ref:`subscription-overview`.
 
 Overages
 ----------------------------------------------
 
-Observability Cloud usage is based on usage measured over a month. Overages are incurred if the monthly usage is higher than your paid subscription. Splunk Observability provides transparent usage data with granular daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts or setup tokens to manage your usage. See :ref:`subscription-overview` for more information.
+Splunk Observability Cloud usage is based on usage measured over a month. Overages are incurred if the monthly usage is higher than your paid subscription. Splunk Observability Cloud provides transparent usage data with granular daily detailed reports on all monitored hosts, containers, and metrics. You can also turn on alerts or setup tokens to manage your usage. See :ref:`subscription-overview` for more information.
 
 
 .. _sd-subscription:
@@ -172,7 +178,9 @@ For additional information, see:
 - :new-page:`Splunk Observability <https://www.splunk.com/en_us/products/observability.html>` on Splunk.com
 - :new-page:`Splunk Observability Cloud Pricing <https://www.splunk.com/en_us/products/pricing/observability.html>` on Splunk.com
 - :new-page:`Observability Cloud Pricing FAQ <https://www.splunk.com/en_us/products/pricing/faqs/observability.html>`
+- :new-page:`Observability Cloud Usage, Subscription Limits Enforcement, and Entitlements <https://www.splunk.com/en_us/legal/usage-subscription-limits-enforcement-and-entitlements.html>`
 - :new-page:`Splunk Success Plans <https://www.splunk.com/en_us/customer-success/success-plans.html>` on Splunk.com
+- :new-page:`Splunk Offerings Purchase Capacity and Limitations <https://www.splunk.com/en_us/legal/licensed-capacity.html>`
 
 .. _sd-regions:
 
@@ -191,22 +199,22 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
      - :strong:`Product Availability`
    * - us0
      - AWS (us-east-1)
-     - Synthetics not currently available
+     - Synthetic Monitoring not currently available
    * - us1
      - AWS (us-west-2)
      - All products available
    * - us2
      - GCP (us-west-1)
-     - Synthetics not currently available
+     - Synthetic Monitoring not currently available
    * - eu0
      - AWS (eu-west-1)
      - Available to all customers
    * - jp0
      - AWS (ap-northeast-1)
-     - RUM and Synthetics not currently available
+     - RUM and Synthetic Monitoring not currently available
    * - au0
      - AWS (ap-southeast-2)
-     - Synthetics not currently available
+     - Synthetic Monitoring not currently available
 
 For additional information, see:
 
@@ -240,12 +248,12 @@ The security and privacy of your data is key to you and your organization, and S
 Data encryption
 -----------------------------------------------------------
 
-All data in transit to and from Splunk Observability Cloud is TLS 1.2+ encrypted. Observability Cloud uses AES 256-bit encryption by default. Encryption key management processes are in place to help ensure the secure generation, storage, distribution and destruction of encryption keys.
+All data in transit to and from Splunk Observability Cloud is TLS 1.2+ encrypted. Splunk Observability Cloud uses AES 256-bit encryption by default. Encryption key management processes are in place to help ensure the secure generation, storage, distribution and destruction of encryption keys.
 
 Data handling
 -----------------------------------------------------------
 
-Your data is stored securely in an Observability Cloud realm that corresponds to a cloud service provider's region. See :ref:`sd-regions` for more information on regions and realms. 
+Your data is stored securely in a Splunk Observability Cloud realm that corresponds to a cloud service provider's region. See :ref:`sd-regions` for more information on regions and realms. 
 
 Splunk retains Customer Content stored in its cloud computing services for at least thirty days after the expiration or termination of the subscription. See :ref:`sd-subscription` for more information.
 
@@ -280,10 +288,6 @@ Service level agreements
 
 The :new-page:`Splunk Observability Cloud Service Level Schedule <https://www.splunk.com/en_us/legal/observability-service-level-schedule.html>` document describes the uptime SLA and exclusions. You may claim service credits in the event of SLA failures, as set forth in the current Splunk SLA schedule.
 
-Per product system limits
--------------------------------------------
-
-Splunk Observability Cloud service limits are described in :ref:`per-product-limits`. Service limits may vary based on your Observability Cloud subscription. Some limits depend on a combination of configuration, system load, performance, and available resources. Unless noted, the service limit is identical for all regions. Contact Splunk if your requirements are different or exceed what is recommended in :ref:`per-product-limits`.
 
 Status page
 -------------------------------------------
@@ -304,6 +308,16 @@ Splunk Observability Cloud works as expected when using the latest and next-to-l
 See :ref:`supported-browsers` for more information.
 
 
+.. _sd-limits:
+
+System limits per product
+===========================================================
+
+Splunk Observability Cloud service limits are described in :ref:`per-product-limits`. Service limits may vary based on your Observability Cloud subscription. Some limits depend on a combination of configuration, system load, performance, and available resources. Unless noted, the service limit is identical for all regions. 
+
+Contact Splunk if your requirements are different or exceed what is recommended in :ref:`per-product-limits`.
+
+
 .. _sd-support:
 
 Technical support
@@ -322,9 +336,9 @@ For additional information, see :ref:`support`.
 Users and authentication
 ===========================================================
 
-You are responsible for creating and administering your users' accounts, the roles and capabilities assigned to them, the authentication method, and global password policies. To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities, access to indexes, and resource use limits. You can assign roles using Observability Cloud in the browser or through the REST API. See :ref:`users-assign-roles`.
+You are responsible for creating and administering your users' accounts, the roles and capabilities assigned to them, the authentication method, and global password policies. To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities, access to indexes, and resource use limits. You can assign roles using Splunk Observability Cloud in the browser or through the REST API. See :ref:`users-assign-roles`.
 
-Roles give Splunk Observability Cloud users access to features and permission to perform tasks and searches. Each user account is assigned one or more roles. Each role contains a set of capabilities. Splunk Observability Cloud provides the admin role, which has the capabilities required to administer Splunk Observability Cloud. Splunk Observability Cloud does not support direct access to infrastructure, so you do not have command-line access to Observability Cloud. Any supported task that requires command-line access is performed by Splunk on your behalf. See :ref:`roles-and-capabilities`.
+Roles give Splunk Observability Cloud users access to features and permission to perform tasks and searches. Each user account is assigned one or more roles. Each role contains a set of capabilities. Splunk Observability Cloud provides the admin role, which has the capabilities required to administer Splunk Observability Cloud. Splunk Observability Cloud does not support direct access to infrastructure, so you do not have command-line access to Splunk Observability Cloud. Any supported task that requires command-line access is performed by Splunk on your behalf. See :ref:`roles-and-capabilities`.
 
 You can configure Splunk Observability Cloud to use SAML authentication for single sign-on (SSO). To use multifactor authentication, you must use a SAML 2.0 identity provider that supports multifactor authentication. Only SHA-256 signatures in the SAML message between your IdP and Splunk Observability Cloud are supported. You are responsible for the SAML configuration of your IdP including the use of SHA-256 signatures. See :ref:`sso-about`.
 
