@@ -82,7 +82,7 @@ The following example shows how detect resources, environment variables, and sel
        timeout: 2s
        override: false
        ec2:
-       # List of attributes to collect
+       # List of attributes to collect or ignore
         resource_attributes:
           host.name:
             enabled: false
@@ -126,7 +126,7 @@ The following example shows how to use all sources available to the ``system`` d
        system:
          # Default is "dns" and "os"
          hostname_sources: ["lookup", "cname", "dns", "os"]
-         # Invalid names are ignored
+         # Attributes to collect or ignore. Invalid names are ignored
          resource_attributes:
            host.name:
              enabled: true
