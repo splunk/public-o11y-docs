@@ -100,7 +100,7 @@ To fix most of the issues identified by discovery mode, add or edit the configur
 
       .. code-block:: bash
 
-         export SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username="${PG_USERNAME_ENVVAR}"
+         export SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_username='${PG_USERNAME_ENVVAR}'
 
 - Define the properties in the ``config.d/properties.discovery.yaml`` file. See :ref:`configd-file`.
 
