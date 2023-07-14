@@ -17,6 +17,10 @@ Splunk Observability Cloud implements multiwindow, multi-burn-rate alerting to l
 How multiwindow, multi-burn-rate alerts work
 ===================================================
 
+:math:`\\frac{ \sum_{t=0}^{N}f(t,k) }{N}`
+
+:math:`\\frac{ \sum_{t=0}^{N}f(t,k) }{N}`
+
 .. role:: raw-latex(raw)
     :format: latex html
 
