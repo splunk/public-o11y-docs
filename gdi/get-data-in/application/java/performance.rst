@@ -18,7 +18,7 @@ The following sections describe the minimum requirements of the Splunk OTel Java
 
 .. _java-overhead-requirements:
 
-Minimum requirements for production deployments the Java agent
+Minimum requirements for production deployments
 =================================================================
 
 .. include:: /_includes/gdi/java-requirements.rst
@@ -26,7 +26,7 @@ Minimum requirements for production deployments the Java agent
 
 .. _java-overhead-guidelines:
 
-Guidelines to reduce Java agent overhead
+Guidelines to reduce agent overhead
 =================================================================
 
 The following best practices and techniques might help in reducing the overhead caused by the Java agent
@@ -77,7 +77,7 @@ Some features of the Java agent, like AlwaysOn Profiling, increase resource cons
 
 .. _java-overhead-troubleshooting:
 
-Troubleshooting performance overhead when deploying the Java agent
+Troubleshooting performance overhead issues
 ====================================================================
 
 When troubleshooting performance overhead issues, do the following:
