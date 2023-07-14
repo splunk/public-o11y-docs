@@ -21,20 +21,7 @@ Error budget measures the difference between actual and desired performance. For
 
 .. math::
 
-    \text{Error budget} = 100% - \text{SLO target}
-
-
-.. role:: raw-latex(raw)
-    :format: latex html
-
-.. raw:: html
-
-    <script type="text/javascript" src="http://localhost/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-.. raw:: latex html
-
-    \text{Error budget} = 100% - \text{SLO target}
+    \text{Error budget} = \text{100%} - \text{SLO target}
 
 
 
@@ -46,30 +33,12 @@ Burn rate alerting in Splunk Observability Cloud uses a long window and a short 
 
 When you set up burn rate alerting for your SLO, select a long window and calculate the short window as 1/12 of the long window, as suggested by Google.
 
-You can use the following formula to estimate your burn rate threshold.
+You can use the following formula to estimate your burn rate threshold:
 
 
 .. math::
     
-    \text{Burn rate} = \[\frac{\text{SLO compliance window (in hours) * percentage of error budget consumed}}{\text{long window (in hours) * 100%}}\]
-
-
-.. role:: raw-latex(raw)
-    :format: latex html
-
-.. raw:: html
-
-    <script type="text/javascript" src="http://localhost/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-.. raw:: latex html
-
-
-    \[ \frac{SLO compliance window (in hours) * percentage of error budget consumed}{long window (in hours) * 100%} \]
-
-.. raw:: latex html
-
-    \text{Burn rate} = \[\frac{\text{SLO compliance window (in hours) * percentage of error budget consumed}}{\text{long window (in hours) * 100%}}\]
-
+    \text{Burn rate} = \frac{\text{SLO compliance window (in hours) * percentage of error budget consumed}}{\text{long window (in hours) * 100%}}
 
 
 
