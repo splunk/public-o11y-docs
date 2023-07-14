@@ -77,65 +77,25 @@ Some features of the Java agent, like AlwaysOn Profiling, increase resource cons
 
 .. _java-overhead-troubleshooting:
 
-Troubleshooting performance issues when deploying the Java agent
-=================================================================
+Troubleshooting performance overhead when deploying the Java agent
+====================================================================
 
+When troubleshooting performance overhead issues, do the following:
 
-Some extra things that we thought of:
-See if you’re CPU bound or memory bound
-If your application is approaching memory limits, consider giving it more memory
-If your application is using all the CPU, you might want to scale it horizontally
-If these two things don’t really help you, try removing some of the features of the javaagent:
-Try disabling metrics (link/reference the config property)
-Try disabling memory profiling (link/reference the config property)
-Try disabling profiling altogether (link/reference the config property)
-Try enabling a sampler that will sample out some/most of the spans (link/reference the config property)
-Try disabling the instrumentations that produce the most telemetry (in our experience, the database client instrumentations like JDBC or Redis) (link/reference the config property)
+- Check minimum requirements. See :ref:`java-overhead-requirements`.
+- Use the latest compatible version of the Java agent.
+- Use the latest compatible version of your JVM.
 
-We welcome users of the Splunk Distribution of OpenTelemetry Java Instrumentation to repeat these experiments and to conduct comparable tests with their own services.
+Consider taking the following actions to decrease overhead:
 
-Step 1. Prepare test environment
+- If your application is approaching memory limits, consider giving it more memory.
+- If your application is using all the CPU, you might want to scale it horizontally.
+- Try turning off or tune CPU or memory profiling. See :ref:`profiling-configuration-java`.
+- Try turning off or tune metrics. See :ref:`metrics-configuration-java`.
+- Tune trace sampling settings to reduce span volume. See :ref:`trace-sampling-settings-java`.
+- Turn off specific instrumentations. See :ref:`turn-off-java-instrumentations`.
+- Review manual instrumentation for unnecessary span generation.
 
-Where this should be tested - in customer system 
-What services to select - representative service from your environment
-What should the environment look like - close to production environment
-Something similar to: https://docs.splunk.com/Observability/gdi/get-data-in/application/java/performance.html#software-configuration 
-Given the complexity in conducting such experiments in cloud-based environments, we offer up the following guidance:
-To the extent that it is possible, isolate the application under test from other services. This helps to reduce interference and keeps the test results more consistent and easier to reason about.
-Turn off or remove all unnecessary system services on the application host.
-Use a warm-up phase prior to starting measurements. The JVM is a highly dynamic machine that performs a large number of optimizations via just-in-time compilation (JIT). The warm-up phase helps the application to finish most of its class loading and gives the JIT compiler time to perform the majority of optimizations. During the warm-up phase, the test runner should provide a standard/typical workload to the application.
-During the tests, ensure that the application is not resource constrained. It should have enough memory, CPU, and network available to handle the test workload.
-Be sure to run a large number of requests and to repeat the test pass many times. This helps to ensure a representative data sample.
-Include error scenarios in your test data. The error rate should be similar to a normal workload, typically in a rate of 2% to 10%.
-Keep in mind that your results are likely to differ. Every stack, every application, and every environment will have different operational characteristics and thus different overhead measurement results.
-
-What to measure 
-Different users may care about different aspects of overhead. Most users are primarily concerned with service latency, but others with computationally intense workloads may care more about CPU overhead. Many users are concerned with memory consumption and its impact on garbage collection characteristics (which can impact CPU and increase latency). Some users deploy frequently (often due to elastic/spiky workloads) and they care about startup time.
-We distill these down into these categories of measurement:
-Startup time
-CPU
-average (user)
-peak (user)
-average (machine)
-GC pause time
-Memory
-max heap used
-total allocated
-Service latency
-single REST call (avg, p95)
-test script (avg, p95)
-throughput (requests per second)
-Network
-read throughput (avg)
-write throughput (avg)
-These metrics are captured and aggregated across all test executions, and the results are compared between run configurations.
-What load should be generated 
-Run your typical performance test load for the service 
-
-Step 2. Measure baseline - no instrumentation
-Step 3. Measure instrumentation baseline (default features) 
-Step 4. Measure target instrumentation config 
-Step 5. Automate and repeat 
 
 How to get support
 =================================================================
