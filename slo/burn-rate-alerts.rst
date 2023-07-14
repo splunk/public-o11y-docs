@@ -27,10 +27,18 @@ How multiwindow, multi-burn-rate alerts work
 .. raw:: latex html
     
     burn rate = \\frac{SLO compliance window (in hours) * percentage of error budget consumed}{long window (in hours) * 100%}
+
+.. raw:: latex html
     
     burn rate = \frac{SLO compliance window (in hours) * percentage of error budget consumed}{long window (in hours) * 100%}
 
+.. raw:: latex html
+     
+    a = \\frac{a}{b}
 
+.. raw:: latex html
+
+    a = \frac{a}{b}
 
 
 
