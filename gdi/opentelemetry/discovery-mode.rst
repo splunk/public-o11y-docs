@@ -12,7 +12,9 @@ Discover and configure metrics sources automatically
       :description: Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and collect metrics automatically.
 
 Use the discovery mode of the Splunk Distribution of OpenTelemetry Collector to detect metric sources and create
-a configuration based on the results. Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
+a configuration based on the results.
+
+Discovery mode can detect several types of metric sources on the host, such as databases and servers. With this information, the Collector generates configuration you can modify and adopt, or incorporate into your exiting configuration automatically by default.
 
 The main advantage of using discovery mode is that you don't need to manually update the OpenTelemetry Collector configuration for supported metric sources. This is helpful in environments when you deploy and activate host services dynamically or when adding a new supported target database to your infrastructure.
 
@@ -75,10 +77,11 @@ The ``--dry-run`` option ensures that the resulting configuration isn't applied 
    and `SPLUNK_DISCOVERY_RECEIVERS_smartagent_x2f_postgresql_CONFIG_params_x3a__x3a_password="<password>"`
    environment variables.
 
-When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials.
+When discovery mode can't access a discovered service to extract metric data, it provides instructions and the original log error message. In the example, discovery mode can't authenticate to the discovered PostgreSQL server due to missing or incorrect credentials, which you can provide through custom discovery properties. See :ref:`custom-discovery-props`.
 
 .. note:: The installation script of the Collector supports the ``--discovery`` option. When turning on discovery mode through the installation script, the resulting configuration is applied directly to the ``metrics`` pipeline.
 
+.. _custom-discovery-props:
 
 Configure or fix discovery properties
 ==================================================
@@ -119,17 +122,12 @@ The priority order for discovery configuration values from lowest to highest is:
 - ``SPLUNK_DISCOVERY_<xyz>`` property environment variables available to the Collector process
 - ``--set splunk.discovery.<xyz>`` property command line options
 
-Specify custom discovery properties at runtime
------------------------------------------------------
-
-Use the ``--discovery-properties=<filepath.yaml>`` argument to load discovery mode properties that you don't want to share with other Collectors. If you specify discovery properties using this argument, properties contained in ``config.d/properties.discovery.yaml`` are ignored.
-
 .. _configd-file:
 
-Define properties through a configuration file
+Define properties through the properties file
 ------------------------------------------------
 
-You can override or add properties using the ``etc/otel/collector/config.d/properties.discovery.yaml`` file. For example:
+You can override or add properties by creating the ``etc/otel/collector/config.d/properties.discovery.yaml`` file. Each mapped property in the file overrides existing discovery settings. For example:
 
    .. code-block:: yaml
 
@@ -140,6 +138,8 @@ You can override or add properties using the ``etc/otel/collector/config.d/prope
               params:
                 username: "${PG_USERNAME_ENVVAR}"
                 password: "${PG_PASSWORD_ENVVAR}"
+
+You can use the ``--discovery-properties=<filepath.yaml>`` argument to load discovery mode properties that you don't want to share with other Collectors. If you specify discovery properties using this argument, properties contained in ``config.d/properties.discovery.yaml`` are ignored.
 
 
 Create custom configurations
@@ -171,15 +171,9 @@ Custom configurations consist of the fields you want to override in the default 
             statements:
                <discovery receiver statement status entries>
 
-See the :new-page:`Discovery receiver README file <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/receiver/discoveryreceiver/README.md>` for more information.
-
-To turn on custom configurations, use the ``--configd`` argument. To source only ``config.d`` content and deactivate any other custom or default configuration, set ``--config`` to ``/dev/null``. For example:
-
-.. code-block:: bash
-
-   bin/otelcol --config /dev/null --configd --dry-run
-
 Use the ``--dry-run`` option to check the resulting discovery configuration before using it with the Collector.
+
+See the :new-page:`Discovery receiver README file <https://github.com/signalfx/splunk-otel-collector/blob/main/internal/receiver/discoveryreceiver/README.md>` for more information.
 
 Define a custom configuration directory
 -----------------------------------------------------
