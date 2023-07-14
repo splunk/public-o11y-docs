@@ -34,10 +34,32 @@ To detect more types of resources, you can configure additional processors and a
 
 .. caution:: Don't remove the ``resourcedetection`` or the ``resourcedetection/internal`` processors from the configuration. Removing the processor might prevent Splunk Observability Cloud from collecting infrastructure metadata.
 
-Basic configuration
+Main configuration
 ---------------------------------------------------
 
+The resource attributes processors accepts a list of detectors in ``detectors``. You can specify which resource attributes are collected or ignored for each detector, as well as whether existing attributes must be overridden. See :ref:`resourcedetection-processor-metadata` for a list of detectors.
 
+The following example shows the main configuration settings of the resource attributes processor:
+
+.. code-block:: yaml
+
+   resourcedetection:
+     # List of detectors
+     detectors: [system, ec2]
+     # Whether to override existing attributes. Default is true
+     override: true
+     system:
+       resource_attributes:
+         host.name:
+           enabled: true
+         host.id:
+           enabled: false
+     ec2:
+       resource_attributes:
+         host.name:
+           enabled: false
+         host.id:
+           enabled: true
 
 .. note:: Starting from version 0.81 of the Collector, the ``attributes`` setting is deprecated. To migrate from ``attributes`` to ``resource_attributes``, see :ref:`migration-from-attributes-to-resource-attributes`.
 
