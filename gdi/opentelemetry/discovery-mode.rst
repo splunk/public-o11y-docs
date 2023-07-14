@@ -115,7 +115,7 @@ By default, discovery mode reads the built-in configuration provided by the Coll
 
 The priority order for discovery configuration values from lowest to highest is:
 
-- Default ``bundle.d`` component configuration files (built into the collector executable)
+- Default ``bundle.d`` component configuration files, built into the Collector executable
 - ``config.d/<receivers or extensions>/*.discovery.yaml`` component configuration files
 - ``config.d/properties.discovery.yaml`` properties file content in mapped form
 - ``config.d/properties.discovery.yaml`` properties file content using ``--set`` form
