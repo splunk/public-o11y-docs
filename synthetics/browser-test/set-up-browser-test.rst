@@ -152,6 +152,21 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
 .. _browser-wait-times:
 
 
+
+Collect interactive metrics
+---------------------------------
+Interactive metrics are: 
+
+* First CPU idle: Time until the page is minimally interactive and responds to user input.
+* Time to interactive: 
+* Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See https://web.dev/performance-scoring/ in the Google developer documentation to learn more about Lighthouse scoring.
+
+
+
+
+.. _collect-interactive-metrics:
+
+
 Example
 ==================
 For an example, see  :ref:`browser-test-scenario`.
