@@ -37,7 +37,7 @@ To detect more types of resources, you can configure additional processors and a
 Main configuration
 ---------------------------------------------------
 
-The resource attributes processors accepts a list of detectors in ``detectors``. You can specify which resource attributes are collected or ignored for each detector, as well as whether existing attributes must be overridden. See :ref:`resourcedetection-processor-metadata` for a list of detectors.
+The resource attributes processor accepts a list of detectors in ``detectors``. You can specify which resource attributes are collected or ignored for each detector, as well as whether existing attributes must be overridden. See :ref:`resourcedetection-processor-metadata` for a list of detectors.
 
 The following example shows the main configuration settings of the resource attributes processor:
 
