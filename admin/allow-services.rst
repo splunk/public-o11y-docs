@@ -28,7 +28,7 @@ Ensure that you give the proxy the ability to resolve the network names and make
 Use the Splunk Distribution of OpenTelemetry Collector
 =======================================================================
 
-Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in gateway mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector, which serves as your local store-and-forward service for telemetry.
+Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in data forwarding (gateway) mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector, which serves as your local store-and-forward service for telemetry.
 
 Ensure that you give the Splunk Distribution of OpenTelemetry Collector the ability to resolve the network names and make outbound HTTPS network connections to the URLs listed in :ref:`allow-urls` or the domains listed in :ref:`allow-domains`. Verify also the list of :ref:`exposed ports and endpoints <otel-exposed-endpoints>`.
 
@@ -135,6 +135,8 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
               # Set the ip or hosts that don't use proxy settings. Only used if splunk_otel_collector_proxy_http
               # or splunk_otel_collector_proxy_https is defined. Default is localhost,127.0.0.1,::1)
               splunk_otel_collector_no_proxy): 127.0.0.1
+
+Restart the Collector after adding these environment variables to your configuration. 
 
 
 .. _allow-urls:
