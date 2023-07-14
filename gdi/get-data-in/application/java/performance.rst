@@ -16,10 +16,15 @@ Due to the complexity of modern software and the broad diversity in deployment s
 The following sections describe the minimum requirements of the Splunk OTel Java agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent. 
 
 
+.. _java-overhead-requirements:
+
 Minimum requirements for production deployments the Java agent
 =================================================================
 
 .. include:: /_includes/gdi/java-requirements.rst
+
+
+.. _java-overhead-guidelines:
 
 Guidelines to reduce Java agent overhead
 =================================================================
@@ -29,7 +34,9 @@ The following best practices and techniques might help in reducing the overhead 
 Configure trace sampling
 -----------------------------------------------------------------
 
-The volume of spans processed by the instrumentation might impact overhead. You can configure trace sampling to adjust the span volume and thus reduce resource usage. See :ref:`trace-sampling-settings-java` for more information on sampling settings.
+The volume of spans processed by the instrumentation might impact overhead. You can configure trace sampling to adjust the span volume and reduce resource usage. See :ref:`trace-sampling-settings-java` for more information on sampling settings.
+
+.. _turn-off-java-instrumentations:
 
 Turn off specific instrumentations
 -----------------------------------------------------------------
@@ -38,45 +45,42 @@ Consider turning off instrumentations that you don't need or are producing too m
 
 For example, the following option turns off the JDBC instrumentation: ``-Dotel.instrumentation.jdbc.enabled=false``
 
+.. note:: Use Trace Analyzer in Splunk APM to explore the spans from your application and identify instrumentations you don't need. See :ref:`trace-search-concept` for more information.
+
 Allocate more memory for the application
 ----------------------------------------------------------------
 
 Incresing the maximum heap size of the JVM using the ``--Xmx<size>`` option might help in alleviating overhead issues, as instrumentations can generate a large number of short-lived objects in memory.
 
-Use manual instrumentation sparingly
+Reduce manual instrumentation to a minimum
+----------------------------------------------------------------
+
+Manual instrumentation might introduce inefficiencies that increase agent overhead. For example, using ``@WithSpan`` on every method results in a high span volume, which in turn increases noise in the data and consumes more system resources.
+
+Provide more resources to the Collector
+----------------------------------------------------------------
+
+If the instrumented application is on the same host as the Splunk Distribution of OpenTelemetry Collector, consider providing sufficient resources to the Collector and change its configuration settings. See :ref:`otel-sizing`.
 
 
-Use manual instrumentation carefully/sparingly – you probably don’t need a @WithSpan on every method
-@WithSpan(debug = true) ? for debug-only spans? Could be a nice idea; perhaps some debug condition instead
-Open APM and check if your traces contain spans from instrumentation libraries that you don’t really care about; you could disable these instrumentations to reduce the overhead a tiny bit. (Trace analyzer?)
-
+.. _java-overhead-constraints:
 
 Constraints impacting the performance of the Java agent
 =================================================================
 
-INT: Describe how particular instrumentation features impact Java instrumentation overhead 
-Tracing - tracing methods that do very little can have considerable overhead as tracing can be more expensive than the method execution
-Metrics - using high cardinality tags can cause high memory usage
-Logging  – might be expensive if you log a lot (even TRACE-level logs)
+In general, the more telemetry you collect from your application, the bigger is the impact on overhead. For example, tracing methods that aren't relevant to your application can still produce considerable overhead, as tracing such methods is computationally more expensive than executing the method itself. Similarly, high cardinality tags in metrics might increase memory usage. Debug logging, if turned on, also increase write operations to disk and memory usage.
 
-INT: Describe which features have significant impact (keep to supported features)
-Profiling - parsing JFR recordings requires heap space, memory profiler uses jdk.ObjectAllocationInNewTLAB and jdk.ObjectAllocationOutsideTLAB events that can have significant overhead when produced in high volume, see https://bugs.openjdk.org/browse/JDK-8257602
-RUM - adds Server-Timing and Access-Control-Expose-Headers to the response which does not have much overhead
-Other 
+Some features of the Java agent, like AlwaysOn Profiling, increase resource consumption, as JFR recordings require heap space and memory profiling relies on TLAB events that might increase overhead significantly when produced in high numbers. Some instrumentations, for example JDBC or Redis, produce high span volumes that increase overhead. For more information on how to turn off unnecessary instrumentations, see :ref:`turn-off-java-instrumentations`.
 
-INT: Describe how enabling additional instrumentations impacts the overhead. I.e more features- more overhead 
-Noisy instrumentations, e.g. JDBC and other database clients (Redis)
+.. note:: Experimental features of the Java agent might increase overhead due to the experimental focus on functionality over performance. Stable features are safer in terms of overhead.
 
 
-INT: Add warning about experimental features and unknown potential impact on performance 
-
+.. _java-overhead-troubleshooting:
 
 Troubleshooting performance issues when deploying the Java agent
 =================================================================
 
-We welcome users of the Splunk Distribution of OpenTelemetry Java Instrumentation to repeat these experiments and to conduct comparable tests with their own services.
 
-We welcome users of the Splunk Distribution of OpenTelemetry Java Instrumentation to repeat these experiments and to conduct comparable tests with their own services.
 Some extra things that we thought of:
 See if you’re CPU bound or memory bound
 If your application is approaching memory limits, consider giving it more memory
@@ -88,6 +92,7 @@ Try disabling profiling altogether (link/reference the config property)
 Try enabling a sampler that will sample out some/most of the spans (link/reference the config property)
 Try disabling the instrumentations that produce the most telemetry (in our experience, the database client instrumentations like JDBC or Redis) (link/reference the config property)
 
+We welcome users of the Splunk Distribution of OpenTelemetry Java Instrumentation to repeat these experiments and to conduct comparable tests with their own services.
 
 Step 1. Prepare test environment
 
