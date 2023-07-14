@@ -62,19 +62,18 @@ After you choose which type of test you want to use, follow these steps to set u
    * - Uptime 
      - 
         * :ref:`set-up-uptime-test`
-        * :ref:`uptime-test-results` to learn about the visualizations that Uptime tests capture.
-        * :ref:`uptime-metrics` for a complete list of Uptime test metrics.  
-   * - Browser 
+        * :ref:`uptime-test-results` 
+        * :ref:`uptime-metrics` 
      -  
-        * :ref:`set-up-browser-test` for instructions 
-        * :ref:`browser-test-results` to learn about the visualizations that Browser tests capture.
-        * :ref:`browser-metrics` for a complete list of Browser test metrics.  
+        * :ref:`set-up-browser-test` 
+        * :ref:`browser-test-results`
+        * :ref:`browser-metrics`
 
    * - API
      - 
         * :ref:`api-test`
-        * :ref:`api-test-results` to learn about the visualizations that Uptime tests capture.
-        * :ref:`api-test-metrics` for a complete list of Uptime test metrics.  
+        * :ref:`api-test-results`
+        * :ref:`api-test-metrics`
 
 
 
