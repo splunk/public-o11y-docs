@@ -92,7 +92,7 @@ To fix most of the issues identified by discovery mode, add or edit the configur
 
    .. code-block:: bash
 
-      --set splunk.discovery.receivers.smartagent/postgresql.config.params::username="${PG_USERNAME_ENVVAR}"
+      --set splunk.discovery.receivers.smartagent/postgresql.config.params::username='${PG_USERNAME_ENVVAR}'
 
 - Set the environment variable for the setting. Each discovery property has an equivalent environment variable form using ``_x<hex pair>_`` encoded delimiters for non-word characters ``[^a-zA-Z0-9_]``:
 
