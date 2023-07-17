@@ -217,8 +217,6 @@ User authentication and access
 
 You can configure authentication using Single-sign on (SSO) integrations implementing SAML 2.0, such as Ping, Okta, or AzureAD. See :ref:`sso-about` for more information.
 
-To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities. See :ref:`roles-and-capabilities` for more information.
-
 For additional information, see:
 
 - :new-page:`Splunk Data Privacy & Security <https://www.splunk.com/en_us/about-splunk/splunk-data-security-and-privacy.html>`
