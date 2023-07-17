@@ -13,7 +13,7 @@ If you use an SSO login service other than the ones listed in :ref:`sso-label`, 
 
 Before you begin configuring the generic SAML SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
-If you already have a SAML SSO integration for your organization, follow the steps in:ref:`saml-install` to install it in Observability Cloud.
+If you already have a SAML SSO integration for your organization, follow the steps in :ref:`saml-install` to install it in Observability Cloud.
 
 .. _saml-creators:
 
