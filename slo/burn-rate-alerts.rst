@@ -24,24 +24,55 @@ Error budget measures the difference between actual and desired performance. For
     \text{Error budget} = \text{100%} - \text{SLO target}
 
 
-
-
 How multiwindow, multi-burn-rate alerts work
 ===================================================
 
-Burn rate alerting in Splunk Observability Cloud uses a long window and a short window to check how fast the service consumes the error budget as an alert is triggered against your specified burn rate threshold.
+Burn rate alerting in Splunk Observability Cloud uses a long window and a short window to check how fast the service consumes the error budget as an alert is triggered against the burn rate threshold.
 
-When you set up burn rate alerting for your SLO, select a long window and calculate the short window as 1/12 of the long window, as suggested by Google.
-
-You can use the following formula to estimate your burn rate threshold:
-
+Splunk Observability Cloud uses the following formula to calculate burn rate thresholds for the alerting mechanism:
 
 .. math::
     
-    \text{Burn rate} = \frac{\text{SLO compliance window (in hours) * percentage of error budget consumed}}{\text{long window (in hours) * 100%}}
+    \text{Burn rate} = \frac{\text{SLO compliance window (in hours) * Error budget consumed}}{\text{Long window (in hours) * 100%}}
 
+The following tables show the burn rate threshold estimates for different long and short windows. Short windows are 1/12 of the long windows, as suggested by Google.
 
+Burn rate for a 99.9% SLO with a 30-day compliance window
+------------------------------------------------------------------
 
+    .. list-table::
+      :header-rows: 1
+      :widths: 20 20 20 20
 
+      * - :strong:`Long window`
+        - :strong:`Short window`
+        - :strong:`Error budget consumed`
+        - :strong:`Burn rate`   
+      * - 1 hour
+        - 5 minutes
+        - 2%
+        - 14.4
+      * - 6 hours
+        - 30 minutes
+        - 5%
+        - 6
 
+Burn rate for a 99.9% SLO with a 7-day compliance window
+-------------------------------------------------------------------
 
+    .. list-table::
+      :header-rows: 1
+      :widths: 20 20 20 20
+
+      * - :strong:`Long window`
+        - :strong:`Short window`
+        - :strong:`Error budget consumed`
+        - :strong:`Burn rate`   
+      * - 1 hour
+        - 5 minutes
+        - 10%
+        - 16.8
+      * - 6 hours
+        - 30 minutes
+        - 20%
+        - 5.6
