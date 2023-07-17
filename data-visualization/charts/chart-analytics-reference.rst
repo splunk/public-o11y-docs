@@ -115,7 +115,7 @@ Use the following parameters with :strong:`EWMA` and :strong:`Double EWMA`.
 
 - :strong:`Forecast` (duration, applies only to :strong:`Double EWMA`)
 
-  How far into the future to forecast (for example 1h, 4m, etc.). Calculated by adding an appropriate multiple of the trend term to the level term. The default value (0) smooths the series. 
+  How far into the future to forecast (for example 1h, 4m, and so on). Calculated by adding an appropriate multiple of the trend term to the level term. The default value (0) smooths the series. 
   
   For example, if the forecast parameter is set to 10m, the output time series estimates the value of the input time series 10 minutes from now. This can be used to predict when a resource is likely to be exhausted, or as a way of getting alerts earlier. Forecasting also eliminates some false alarms in the scenario where the values are problematic but the trend is benign (decreasing back to healthy).
 
@@ -215,7 +215,7 @@ You can choose to either aggregate or transform the values of :strong:`Mean`.
 
   |br|
 
-  The :strong:`Mean` function also supports transformation over a calendar window (day, week, month, etc.) instead of a moving window. For more information, see :ref:`calendar-window`.
+  The :strong:`Mean` function also supports transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _mean-plus-stddev:
 
@@ -257,7 +257,7 @@ Returns either the smallest (:strong:`Minimum`) or the largest (:strong:`Maximum
 
 |br|
 
-  The Minimum and Maximum functions also support transformation over a calendar window (day, week, month, etc.) instead of a moving window. For more information, see :ref:`calendar-window`.
+  The :strong:`Minimum` and :strong:`Maximum` functions also support transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _percentile:
 
@@ -275,6 +275,8 @@ Calculates the specified percentile of values in data points collected either fr
 - :strong:`Percentile:Transformation`
 
   For each input time series, outputs a corresponding time series expressing, for each time period, the configured percentile (between 1 and 100, inclusive) of the input time series over a configurable time window leading up to that period. The default percentile value is 95, and the default time window is one hour.
+
+The :strong:`Percentile` function also supports transformation over a dashboard window instead of a moving window. For more information, see :ref:`dashboard-window`.
 
 .. _power:
 
@@ -356,7 +358,7 @@ Adds up all the values in data points collected either from multiple time series
 
 |br|
 
-The :strong:`Sum` function also supports transformation over a calendar window (day, week, month, etc.) instead of a moving window. For more information, see :ref:`calendar-window`.
+The :strong:`Sum` function also supports transformation over a calendar window (day, week, month, and so) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _timeshift:
 

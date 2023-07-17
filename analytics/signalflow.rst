@@ -80,6 +80,13 @@ For more information about calendar window transformations, see :new-page:`Calen
 Dashboard window transformations
 ------------------------------------------
 
+In the following example, the ``Sum``, ``Mean``, ``Maximum`` , ``Minimum`` and ``Percentile`` functions let you set a dashboard window time for a transformation. 
+
+.. image:: /_images/get-started/moving-and-cal.png
+    :width: 99%
+    :alt: This image shows a dashboard window transformation chart.
+
+For more information about calendar window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>`.    
 
 
 Resolution considerations
