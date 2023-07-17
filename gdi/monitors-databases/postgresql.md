@@ -1,11 +1,11 @@
 (postgresql)=
 
-# PostgreSQL (deprecated)
+# PostgreSQL
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the PostgreSQL monitor. See benefits, install, configuration, and metrics">
 
 ```{note}
-This monitor is deprecated in favor of the Otel native component `postgresql` receiver. See {ref}`postgresql-receiver` for more information.
+You can replace this monitor with the OTel native component `postgresql` receiver. See {ref}`postgresql-receiver` for more information.
 ```
 
 The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the  `postgresql` monitor type to pull metrics from all PostgreSQL databases from a specific Postgres server instance using SQL queries.
