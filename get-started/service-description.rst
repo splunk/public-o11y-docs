@@ -13,7 +13,7 @@ Welcome to the Splunk Observability Cloud service description.
 
 Splunk Observability Cloud is a SaaS solution for infrastructure monitoring (IMM), application performance monitoring (APM), real user monitoring (RUM), synthetics monitoring, and incident intelligence. Splunk Observability Cloud also provides a direct integration with logs ingested in Splunk Cloud Platform through Log Observer Connect. Through full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real time and at any scale, Splunk Observability Cloud helps you keep your services reliable, deliver great customer experiences, and innovate faster.
 
-Splunk Observability Cloud allows you to respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Splunk Observability Cloud. When you send data from each layer of your environment, Splunk Observability Cloud transforms it into actionable insights in the form of dashboards, visualizations, alerts, and more.
+Splunk Observability Cloud allows you to respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward. You can select from more than 200 supported open standards-based integrations with common data sources to get data from your on-premises and cloud infrastructure, applications and services, and user interfaces into Splunk Observability Cloud. When you send data from each layer of your environment, Splunk Observability Cloud transforms it into actionable insights in the form of dashboards, visualizations, alerts, and more. 
 
 This document describes the features, capabilities, limitations, and constraints of the Splunk Observability Cloud service and the responsibilities of Splunk to you as a Software as a Service provider. This document also notes your responsibilities as a subscriber to the service. Be sure to read the complete service description and the service terms and policies documents listed in the following sections. If you have questions after reading any of this material, contact your Splunk sales representative.
 
@@ -39,15 +39,14 @@ Data ingestion and retention
 Splunk Observability Cloud provides software and APIs that allow you to ingest data from your on-premises infrastructure, applications, user interfaces, cloud services, servers, network devices, and more. Splunk Observability Cloud provides guided setups that help you install and configure OpenTelemetry instrumentation. See :ref:`get-started-get-data-in` for more information.
 
 .. note:: 
-   All editions of Splunk Observability Cloud include Log Observer Connect, which let you analyze logs you've ingested to Splunk Cloud Platform at no additional costs. See :ref:`lo-connect-landing` for more information.
+   All editions of Splunk Observability Cloud include Log Observer Connect, which let you analyze logs you've ingested to Splunk Cloud Platform at no additional cost. See :ref:`lo-connect-landing` for more information.
 
 Splunk OpenTelemetry Collector
 -----------------------------------------------------------
 
 The Splunk Distribution of OpenTelemetry Collector is an open-source software agent capable of collecting traces, metrics, and logs from a wide variety of hosts, containers, and services. You are responsible for installing, configuring, transforming, sending data, and managing your Collector instances, including maintaining version compatibility and installing, configuring, and managing Collector components. See :ref:`otel-intro` for more information.
 
-Splunk officially supports the Splunk Distribution of OpenTelemetry Collector. 
-Splunk only provides best-effort support for the upstream OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
+Splunk provides support for the Splunk Distribution of OpenTelemetry Collector. See :ref:`using-upstream-otel` for more information.
 
 
 Integration with cloud service providers
@@ -62,7 +61,7 @@ Splunk distributions of OpenTelemetry instrumentation
 
 The Splunk distributions of OpenTelemetry instrumentation are open-source software agents and libraries that can instrument back-end applications and front-end experiences for Splunk APM and Splunk RUM. Setup, configuration, transformation, and sending data from the instrumentation agents and libraries is your responsibility, including maintaining version compatibility and installing, configuring, and managing automatic and manual instrumentations. See :ref:`get-started-application` and :ref:`rum-gdi` for more information.
 
-Splunk officially supports the Splunk distributions of OpenTelemetry instrumentation, including manual instrumentation. Splunk only provides best-effort support for the upstream OpenTelemetry SDKs.
+Splunk officially supports the Splunk distributions of OpenTelemetry instrumentation, including manual instrumentation.
 
 
 Ingest API endpoints
@@ -107,7 +106,7 @@ Splunk Observability Cloud usage is based on usage measured over a month. Overag
 Subscription updates, renewals, and terminations
 ---------------------------------------------------
 
-You can update or expand your Splunk Observability Cloud subscription anytime during the term of the subscription to meet your business needs. For example, you can:
+You can update or expand your Splunk Observability Cloud subscription any time during the term of the subscription to meet your business needs. For example, you can:
 
 - Increase host-based or usage-based capacity.
 - Add products and features to your subscription.
@@ -140,7 +139,7 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
 
    * - :strong:`Observability Cloud realm`
      - :strong:`Cloud provider and region`
-     - :strong:`Product Availability`
+     - :strong:`Service Availability`
    * - us0
      - AWS (us-east-1)
      - Synthetic Monitoring not currently available
@@ -280,11 +279,7 @@ For additional information, see :ref:`support`.
 Users and authentication
 ===========================================================
 
-You are responsible for creating and administering your users' accounts, the roles and capabilities assigned to them, the authentication method, and global password policies. To control what your Splunk Observability Cloud users can do, you assign them roles that have a defined set of specific capabilities, access to indexes, and resource use limits. You can assign roles using Splunk Observability Cloud in the browser or through the REST API. See :ref:`users-assign-roles`.
-
-Roles give Splunk Observability Cloud users access to features and permission to perform tasks and searches. Each user account is assigned one or more roles. Each role contains a set of capabilities. Splunk Observability Cloud provides the admin role, which has the capabilities required to administer Splunk Observability Cloud. Splunk Observability Cloud does not support direct access to infrastructure, so you do not have command-line access to Splunk Observability Cloud. Any supported task that requires command-line access is performed by Splunk on your behalf. See :ref:`roles-and-capabilities`.
-
-You can configure Splunk Observability Cloud to use SAML authentication for single sign-on (SSO). To use multifactor authentication, you must use a SAML 2.0 identity provider that supports multifactor authentication. Only SHA-256 signatures in the SAML message between your IdP and Splunk Observability Cloud are supported. You are responsible for the SAML configuration of your IdP including the use of SHA-256 signatures. See :ref:`sso-about`.
+You are responsible for creating and administering your users' accounts, the authentication method, and global password policies. You can configure Splunk Observability Cloud to use SAML authentication for single sign-on (SSO). To use multifactor authentication, you must use a SAML 2.0 identity provider that supports multifactor authentication. Only SHA-256 signatures in the SAML message between your IdP and Splunk Observability Cloud are supported. You are responsible for the SAML configuration of your IdP including the use of SHA-256 signatures. See :ref:`sso-about`.
 
 Unified identity
 ----------------------------------------------------
