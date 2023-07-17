@@ -158,7 +158,7 @@ Collect interactive metrics
 Interactive metrics are: 
 
 * First CPU idle: Time until the page is minimally interactive and responds to user input.
-* Time to interactive: 
+* Time to interactive:  Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects will increase this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
 * Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See https://web.dev/performance-scoring/ in the Google developer documentation to learn more about Lighthouse scoring.
 
 
