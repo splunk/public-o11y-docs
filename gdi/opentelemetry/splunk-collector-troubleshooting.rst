@@ -94,10 +94,10 @@ Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-te
 
 .. _collector-gateway-metrics-issue:
 
-Metrics and metadata not available in Gateway mode
-============================================================
+Metrics and metadata not available in data forwarding (gateway) mode
+=============================================================================
 
-If you don't see metrics and metadata after manually deploying the Collector in Gateway mode, the agent configuration might be lacking pipelines that use the SignalFx exporter. Follow these steps to review the configuration:
+If you don't see metrics and metadata after manually deploying the Collector in data forwarding (gateway) mode, the agent configuration might be lacking pipelines that use the SignalFx exporter. Follow these steps to review the configuration:
 
 #. Make sure that your Gateway can listen to requests on ports 6060 and 9943.
 

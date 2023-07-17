@@ -63,7 +63,7 @@ The following table describes the variables that can be configured for this role
    * - ``splunk_otel_collector_version``
      - The version of the package to install, for example, ``0.25.0``. The default value is ``latest``.
    * - ``splunk_otel_collector_config``
-     - The configuration file, created in YAML. This variable can be set to ``%ProgramData%\Splunk\OpenTelemetry Collector\gateway_config.yaml`` to install the package in Gateway mode. The default location is ``%ProgramData%\Splunk\OpenTelemetry Collector\agent_config.yaml``.
+     - The configuration file, created in YAML. This variable can be set to ``%ProgramData%\Splunk\OpenTelemetry Collector\gateway_config.yaml`` to install the package in data forwarding (gateway) mode. The default location is ``%ProgramData%\Splunk\OpenTelemetry Collector\agent_config.yaml``.
    * - ``splunk_config_override``
      - The custom configuration that is merged into the default configuration.
    * - ``splunk_config_override_list_merge``
