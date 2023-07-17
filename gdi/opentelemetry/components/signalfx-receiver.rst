@@ -16,7 +16,7 @@ For more information on the SignalFx proto format, see :new-page:`Send Traces, M
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx receiver in the ``metrics`` and ``logs/signalfx`` pipelines when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the SignalFx receiver in the ``metrics`` and ``logs/signalfx`` pipelines when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
 .. caution:: Don't remove the ``signalfx`` receiver from the default configuration. If you need to change its settings, use the existing receiver or create a separate receiver configuration.
 
