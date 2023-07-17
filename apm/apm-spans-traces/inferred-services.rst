@@ -192,16 +192,12 @@ Inferred publisher/subscriber (pub/sub) queues
 
 When Splunk APM infers a publisher/subscriber queue, it means an instrumented service is interacting with an uninstrumented pub/sub. To identify an inferred pub/sub, Splunk APM does the following:
 
-#. Verify that the ``span.kind`` of the referring span is equal to ``PRODUCER`` or ``CLIENT``.
-#. Verify that the span contains either ``messaging.destination`` (in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower) or ``messaging.destination.name`` (in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher). This tag's value is used to specify the name of the topic or channel that messages are sent to.
+#. Verifies that the ``span.kind`` of the referring span is equal to ``PRODUCER`` or ``CLIENT``.
+#. Verifies that the span contains either ``messaging.destination`` (in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower) or ``messaging.destination.name`` (in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher). The value of these tags is used to specify the name of the topic or channel that messages are sent to.
 
-    #. If both ``messaging.system`` and ``messaging.destination.name`` exist, the inferred service name = <Value of ``messaging.system`` tag>:<Value of ``messaging.destination.name`` tag>.
-    #. If ``messaging.system`` is null, the inferred service name = <Value of ``messaging.destination.name`` tag>.
-    #. If ``messaging.destination.name`` is null, the inferred service name = <Value of ``messaging.system`` tag>.
-
-
-
-
+    #. If both ``messaging.system`` and ``messaging.destination.name`` exist, the inferred service name is equal to <Value of ``messaging.system`` tag>:<Value of ``messaging.destination.name`` tag>.
+    #. If ``messaging.system`` is null, the inferred service name is equal to <Value of ``messaging.destination.name`` tag>.
+    #. If ``messaging.destination.name`` is null, the inferred service name is equal to <Value of ``messaging.system`` tag>.
 
 .. _db-inf-logic:
 

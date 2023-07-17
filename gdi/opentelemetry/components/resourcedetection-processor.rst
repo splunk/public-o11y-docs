@@ -28,14 +28,44 @@ You can use metadata collected by the resource detection processor to expand or 
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the resource detection processor in all the predefined pipelines when deploying in agent mode. When deploying the Collector in gateway mode, the resource detection processor collects internal metrics. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the resource detection processor in all the predefined pipelines when deploying in host monitoring (agent) mode. When deploying the Collector in data forwarding (gateway) mode, the resource detection processor collects internal metrics. See :ref:`otel-deployment-mode` for more information.
 
 To detect more types of resources, you can configure additional processors and add them to existing or new pipelines, as shown in the following sample configurations.
 
 .. caution:: Don't remove the ``resourcedetection`` or the ``resourcedetection/internal`` processors from the configuration. Removing the processor might prevent Splunk Observability Cloud from collecting infrastructure metadata.
 
+Main configuration
+---------------------------------------------------
+
+The resource attributes processor accepts a list of detectors in ``detectors``. You can specify which resource attributes are collected or ignored for each detector, as well as whether existing attributes must be overridden. See :ref:`resourcedetection-processor-metadata` for a list of detectors.
+
+The following example shows the main configuration settings of the resource attributes processor:
+
+.. code-block:: yaml
+
+   resourcedetection:
+     # List of detectors
+     detectors: [system, ec2]
+     # Whether to override existing attributes. Default is true
+     override: true
+     system:
+       resource_attributes:
+         host.name:
+           enabled: true
+         host.id:
+           enabled: false
+     ec2:
+       resource_attributes:
+         host.name:
+           enabled: false
+         host.id:
+           enabled: true
+
+.. note:: Starting from version 0.81 of the Collector, the ``attributes`` setting is deprecated. To migrate from ``attributes`` to ``resource_attributes``, see :ref:`migration-from-attributes-to-resource-attributes`.
+
+
 Sample configurations
-----------------------
+---------------------------------------------------
 
 The following sample configurations show how to detect resources from different targets.
 
@@ -52,6 +82,12 @@ The following example shows how detect resources, environment variables, and sel
        timeout: 2s
        override: false
        ec2:
+       # List of attributes to collect or ignore
+        resource_attributes:
+          host.name:
+            enabled: false
+          host.id:
+            enabled: true
        # Regex patterns for tag keys you want to add as resource attributes
          tags:
            - ^tag1$
@@ -80,7 +116,7 @@ The following example shows how to collect resource attributes from OpenShift an
 Collect system metadata using all available sources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following example shows how to use all sources available to the ``system`` detector to determine the host name. The ``attributes`` field tells the processor to only append the selected attributes.
+The following example shows how to use all sources available to the ``system`` detector to determine the host name. The ``resource_attributes`` field tells the processor to only include the selected attributes.
 
 .. code-block:: yaml
 
@@ -90,8 +126,45 @@ The following example shows how to use all sources available to the ``system`` d
        system:
          # Default is "dns" and "os"
          hostname_sources: ["lookup", "cname", "dns", "os"]
-       # Invalid names are ignored  
-       attributes: ["string", "anotherstring"]
+         # Attributes to collect or ignore. Invalid names are ignored
+         resource_attributes:
+           host.name:
+             enabled: true
+           host.id:
+             enabled: true
+
+.. _migration-from-attributes-to-resource-attributes:
+
+Migration from attributes to resource_attributes
+---------------------------------------------------
+
+Starting from version 0.81 of the Collector, the resource detection processor deprecates the ``attributes`` option and replaces it with ``resource_attributes``, which is specific to each detector.
+
+To migrate, move the attributes inside of ``attributes`` to the relevant ``resource_attributes`` lists of each detector. For example, consider the following configuration:
+
+.. code-block:: yaml
+
+   resourcedetection:
+     detectors: [system]
+     # Deprecated in version 0.81
+     attributes: ['host.name', 'host.id']
+
+You can replace the previous configuration with the following:
+
+.. code-block:: yaml
+
+   resourcedetection:
+     detectors: [system]
+     system:
+       resource_attributes:
+         host.name:
+           enabled: true
+         host.id:
+           enabled: true
+         os.type:
+           enabled: false
+
+.. _resourceattributes-ordering-considerations:
 
 Ordering considerations
 ------------------------------------

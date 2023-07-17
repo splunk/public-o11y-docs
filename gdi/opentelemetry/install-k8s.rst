@@ -189,7 +189,7 @@ Determine which manifest you want to use
 
 Download the necessary manifest files from :new-page:`the examples repository <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples>`. Refer to the ``README`` files for more details on each example.
 
-Determine which :ref:`otel-deployment-mode` you want to use, agent or gateway. By default, agent mode is configured to send data directly to Splunk SaaS endpoints. Agent mode can be reconfigured to send to a gateway.
+Determine which :ref:`otel-deployment-mode` you want to use, agent or gateway. By default, host monitoring (agent) mode is configured to send data directly to Splunk SaaS endpoints. Host monitoring (agent) mode can be reconfigured to send to a gateway.
 
 Update the manifest
 ------------------------------------------------
@@ -206,13 +206,13 @@ Apply the manifest
 
 After you've updated them, apply the manifests using ``kubectl``, as shown in the following examples.
 
-For agent mode, download the :new-page:`agent-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/default/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
+For host monitoring (agent) mode, download the :new-page:`agent-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/default/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
 
 .. code-block:: bash
 
    kubectl apply -f <agent-manifest-directory> --recursive
 
-For gateway mode, download the :new-page:`gateway-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/collector-gateway-only/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
+For data forwarding (gateway) mode, download the :new-page:`gateway-only manifest directory on GitHub <https://github.com/signalfx/splunk-otel-collector-chart/tree/main/examples/collector-gateway-only/rendered_manifests>` for pre-rendered Kubernetes resource manifests that can be applied using the ``kubectl apply`` command after being updated with your token, realm information, and cluster name:
 
 .. code-block:: bash
 
