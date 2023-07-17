@@ -139,7 +139,7 @@ The following example shows how all the configuration options you can pass to ``
 
    start_tracing(
       service_name='my-python-service',
-      span_exporter_factories=[OTLPSpanExporter]
+      span_exporter_factories=[OTLPSpanExporter],
       access_token='',
       max_attr_length=1200,
       trace_response_header_enabled=True,

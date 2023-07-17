@@ -28,16 +28,21 @@ Ensure that you give the proxy the ability to resolve the network names and make
 Use the Splunk Distribution of OpenTelemetry Collector
 =======================================================================
 
-Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in gateway mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector, which serves as your local store-and-forward service for telemetry.
+Use the :new-page:`Splunk Distribution of OpenTelemetry Collector <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>` in data forwarding (gateway) mode. You can forward metrics locally to the Splunk Distribution of OpenTelemetry Collector, which serves as your local store-and-forward service for telemetry.
 
 Ensure that you give the Splunk Distribution of OpenTelemetry Collector the ability to resolve the network names and make outbound HTTPS network connections to the URLs listed in :ref:`allow-urls` or the domains listed in :ref:`allow-domains`. Verify also the list of :ref:`exposed ports and endpoints <otel-exposed-endpoints>`.
 
 .. _configure-proxy-collector:
 
-Configure proxy settings
-----------------------------------
+Configure proxy settings for the Collector
+----------------------------------------------
 
-If you need to use a proxy, set one of the following environment variables according to your needs:
+You might have to configure proxy settings for two separate actions:
+
+- Download the Collector files, either through the installer script or manually.
+- Allow the Collector to send telemetry through the inline or transparent proxy.
+
+To configure proxy settings, set one of the following environment variables according to your needs and following the best practices for your environment and platform:
 
 - ``HTTP_PROXY``: The HTTP proxy address
 - ``HTTPS_PROXY``: The HTTPS proxy address
@@ -47,36 +52,69 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
 
 .. tabs::
 
-   .. code-tab:: powershell Windows
+   .. code-tab:: bash Linux (Systemd)
 
-      $Env:HTTP_PROXY = "proxy.address:<port>"
-      $Env:HTTPS_PROXY = "proxy.address:<port>"
+      # Add proxy settings to the environment for the installer script
 
-   .. code-tab:: bash Linux
+      cat <<EOF | sudo tee -a /etc/environment
+      NO_PROXY=<address,anotheraddress>
+      HTTP_PROXY=http://<proxy.address:port>
+      HTTPS_PROXY=http://<proxy.address:port>
+      EOF
 
-      export HTTPS_PROXY = "proxy.address:<port>"
-      export HTTPS_PROXY = "proxy.address:<port>"
+      # You might need to restart your shell session at this point.
+
+      # Add proxy configuration to the service-proxy.conf
+      # file in /etc/systemd/system/splunk-otel-collector.service.d/
+
+      sudo mkdir -p /etc/systemd/system/splunk-otel-collector.service.d/
+
+      cat <<EOF | sudo tee -a /etc/systemd/system/splunk-otel-collector.service.d/service-proxy.conf
+      [Service]
+      Environment="NO_PROXY=<address,anotheraddress>"
+      Environment="HTTP_PROXY=http://<proxy.address:port>"
+      Environment="HTTPS_PROXY=http://<proxy.address:port>"
+      EOF
+
+      # Reload systemd and splunk-otel-collector service afterwards
+
+      sudo systemctl daemon-reload
+      sudo systemctl restart splunk-otel-collector
+
+   .. code-tab:: shell Windows
+
+      # Set proxy settings for Collector communications
+
+      [Environment]::SetEnvironmentVariable(“http_proxy”,”http://<proxy.address:port>”,”Machine”)
+      [Environment]::SetEnvironmentVariable("https_proxy","http://<proxy.address:port>","Machine")
+      [Environment]::SetEnvironmentVariable("no_proxy","<address>","Machine")
+      netsh winhttp set proxy "http://<proxy.address:port>"
+
+      # Set proxy settings to download Collector files
+
+      Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' -name ProxyServer -Value "http://<proxy.address:port>"
+      Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' -name ProxyEnable -Value 1
 
    .. code-tab:: yaml Docker compose
 
       services:
          otelcol:
             environment:
-               - HTTP_PROXY='proxy.address:<port>'
-               - HTTPS_PROXY='proxy.address:<port>'
+               - HTTP_PROXY='<proxy.address:port>'
+               - HTTPS_PROXY='<proxy.address:port>'
 
    .. code-tab:: bash Docker run
 
-      -e HTTP_PROXY=proxy.address:<port>
-      -e HTTPS_PROXY=proxy.address:<port>
+      -e HTTP_PROXY=<proxy.address:port>
+      -e HTTPS_PROXY=<proxy.address:port>
 
    .. code-tab:: yaml Kubernetes
 
       env:
          - name: HTTP_PROXY
-           value: 'proxy.address:<port>'
+           value: '<proxy.address:port>'
          - name: HTTPS_PROXY
-           value: 'proxy.address:<port>'
+           value: '<proxy.address:port>'
 
    .. code-tab:: yaml Ansible
 
@@ -100,10 +138,6 @@ The following examples show how to set the ``HTTP_PROXY`` and ``HTTPS_PROXY`` en
 
 Restart the Collector after adding these environment variables to your configuration. 
 
-Replace the SignalFx Gateway with the Splunk Distribution of OpenTelemetry Collector
-=====================================================================================================
-
-If you are using the SignalFx Gateway, replace it with the Splunk Distribution of OpenTelemetry Collector running in :new-page:`gateway mode <https://docs.splunk.com/Observability/gdi/opentelemetry/deployment-modes.html>`.
 
 .. _allow-urls:
 
