@@ -12,7 +12,7 @@ Measure and track your service health metrics with service level objectives (SLO
 .. meta::
     :description: Learn how to create a service level objective (SLO) in Splunk Observability Cloud.
 
-For each service or metric indicating system health you are monitoring in Splunk Observability Cloud, you can define an SLO and how to measure it.
+For each service indicating system health you are monitoring in Splunk Observability Cloud, you can define an SLO and how to measure it.
 
 
 Create an SLO
@@ -41,7 +41,7 @@ Follow these steps to create an SLO.
         - Additional dimension names and values you want to apply this SLO to
 
 
-#. Define your SLO and how to measure it
+#. Define your SLO and how to measure it.
 
     .. list-table::
       :header-rows: 1
@@ -54,7 +54,7 @@ Follow these steps to create an SLO.
       * - Compliance window
         - Select a compliance window for this SLO from the dropdown menu.
 
-#. Set up alerting for your SLO. You can subscribe to get notifications for the following alerts:
+#. Set up alerting for your SLO. You can subscribe to get notifications for the following alerts.
 
     .. list-table::
       :header-rows: 1
@@ -67,7 +67,7 @@ Follow these steps to create an SLO.
       * - Error budget
         - Alerts when the remaining error budget is less than 10% of the estimated error budget for the compliance window.
       * - Burn rate
-        - Alerts when the rate of consumption of your SLO error budget exceeds your specified threshold for a period of time. To learn more, see :ref:`burn-rate-alerts`.
+        - Alerts when the rate of consumption of your SLO error budget exceeds a healthy threshold for the specified compliance window. To learn more, see :ref:`burn-rate-alerts`.
 
 #. Splunk Observability Cloud automatically generates a name for your SLO. You can change this auto-generated name, as long as the SLO name is unique.
 
