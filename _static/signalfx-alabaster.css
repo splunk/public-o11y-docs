@@ -478,25 +478,34 @@ img.screenshot {
     box-shadow: 2px 2px 4px #eee;
 }
 
+/* what does this do? I changed the color to see what this does but I don't see any red in tue table*/
+
 table.docutils {
-    border: 1px solid #888;
+    border: 1px solid #eb0d0d;
     -moz-box-shadow: 2px 2px 4px #eee;
     -webkit-box-shadow: 2px 2px 4px #eee;
     box-shadow: 2px 2px 4px #eee;
+    margin-left: 28px;
     /*word-break: break-word;*/
     /*margin-bottom: 20px;*/
 }
 
+/* this seems to control the color and thickness of the line */
+
 /* Added line height for consistency --brs */
 
 table.docutils td, table.docutils th {
-    border: 1px solid #888;
+    border: 5px solid #0be5a7;
     padding: 0.25em 0.7em;
-    line-height:1.7em ;
+    line-height: 1.7em ;
+    text-align: left; 
+    border-top-style: dotted;
+    border-top: thick green;
+
 }
 
 table.field-list, table.footnote {
-    border: none;
+    border: 10px solid #2a0e0e;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -508,6 +517,7 @@ table.footnote {
     border: 1px solid #EEE;
     background: #FDFDFD;
     font-size: 0.9em;
+    
 }
 
 table.footnote + table.footnote {
