@@ -69,7 +69,7 @@ Follow these steps to create an SLO.
       * - Burn rate
         - Alerts when the rate of consumption of your SLO error budget exceeds your specified threshold for a period of time. To learn more, see :ref:`burn-rate-alerts`.
 
-#. Name your SLO. Splunk Observability Cloud automatically generates a name for your SLO. You can change this auto-generated name, as long as the SLO name is unique.
+#. Splunk Observability Cloud automatically generates a name for your SLO. You can change this auto-generated name, as long as the SLO name is unique.
 
 #. Select :guilabel:`Create` to create the SLO.
 
