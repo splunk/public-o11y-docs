@@ -75,19 +75,6 @@ In the following example, the ``Sum``, ``Mean``, ``Maximum``, and ``Minimum`` fu
 
 For more information about calendar window transformations, see :new-page:`Calendar window transformations <https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>`.
 
-.. _dashboard-window:
-
-Dashboard window transformations
-------------------------------------------
-
-In the following example, the ``Sum``, ``Mean``, ``Maximum`` , ``Minimum`` and ``Percentile`` functions let you set a dashboard window time for a transformation. 
-
-.. image:: /_images/get-started/moving-and-cal.png
-    :width: 99%
-    :alt: This image shows a dashboard window transformation chart.
-
-For more information about calendar window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>`.    
-
 
 Resolution considerations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -142,13 +129,26 @@ The value at the start of each cycle represents the final value for the previous
 .. _cal-window-timeshift:
 
 Timeshift for calendar windows
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The timeshift function shifts the data points for each MTS in the input stream, offsetting them by a specified time period. A typical use case for using timeshift is to compare the average value seen for a metric over a period of time with the average seen over the previous period. For more information on the SignalFlow function, see :new-page:`timeshift() <https://dev.splunk.com/observability/docs/signalflow/methods/timeshift_stream_method>`.
 
 Timeshift is available only when partial values are hidden. If you enable timeshift when using calendar windows, the value from the end of a previous cycle will be shown at the end of every calendar cycle. For example, if your cycle length is Month and you timeshift by one cycle, the data point at April 30 will represent the value from March 31, the data point at May 31 will represent the value from April 30, and so on.
 
 .. note:: The timeshift feature in charts is aware of cycles having variable lengths, such as how March has more days than February, and shifts correctly to the end of a previous interval. By contrast, the standalone timeshift analytics function performs a fixed width shift, such as 30 days. For more information, see :ref:`use-timeshift-function-to-understand-trends`.
+
+.. _dashboard-window:
+
+Dashboard window transformations
+------------------------------------------
+
+In the following example, the ``Sum``, ``Mean``, ``Maximum`` , ``Minimum`` and ``Percentile`` functions let you set a dashboard window time for a transformation. 
+
+.. image:: /_images/get-started/moving-and-cal.png
+    :width: 99%
+    :alt: This image shows a dashboard window transformation chart.
+
+For more information about calendar window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Dashboard-window-transformations>`.
 
 .. _other-functions:
 
