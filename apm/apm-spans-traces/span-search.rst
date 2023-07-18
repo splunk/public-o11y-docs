@@ -50,7 +50,7 @@ Explore logs for each span
 When Related Content is turned on, you can jump to related logs for each trace and its spans. The following image shows the related logs in Log Observer for a specific trace.
 
 .. image:: /_images/apm/spans-traces/log-trace-related.png
-  :width: 100%
+  :width: 75%
   :alt: Related logs tile in the trace view.
 
 See :ref:`get-started-enablerelatedcontent` for more information.
