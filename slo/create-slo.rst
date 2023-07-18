@@ -32,11 +32,11 @@ Follow these steps to create an SLO.
         - :strong:`Description`
       * - Metric type
         - Select :guilabel:`Service & endpoint` from the dropdown menu
+      * - Environment
+        - Open the dropdpwn menu and check the boxes for the environments where you want to apply this SLO
       * - Service\:\endpoint
         - * Search for the service you want to create an SLO for
           * (Optional) Add an endpoint for the selected service
-      * - Environment
-        - Check the boxes for the environments where you want to apply this SLO
       * - Filters
         - Additional dimension names and values you want to apply this SLO to
 
