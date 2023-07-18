@@ -79,8 +79,6 @@ After you choose which type of test you want to use, follow these steps to set u
        * :ref:`api-test-metrics`
 
 
-
-
 .. _synthetics-link-to-apm:
 
 (Optional) Link Synthetic spans to APM spans
