@@ -12,7 +12,7 @@ Burn rate is a unitless measurement of how quickly a service consumes the error 
 
 For example, for a compliance window of 30 days, a constant burn rate of 1 means your error budget is used up in exactly 30 days, a constant burn rate of 2 means the error budget is used up in 15 days, and so on.
 
-Splunk Observability Cloud implements multiwindow, multi-burn-rate alerting to let you know when the rate of consumption of your service level objective (SLO) error budget exceeds your specified threshold for the compliance window.
+Splunk Observability Cloud implements multiwindow, multi-burn-rate alerting to let you know when the rate of consumption of your service level objective (SLO) error budget exceeds a healthy burn rate threshold for the length of your specified compliance window.
 
 Error budget calculation
 =================================
