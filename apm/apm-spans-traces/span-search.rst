@@ -10,7 +10,7 @@ View and filter for spans within a trace
 
 In the trace waterfall, you can filter visible spans based on tag values or error status, as the following animation demonstrates: 
 
-.. image:: /_images/apm/terms-concepts/span-search.gif
+.. image:: /_images/apm/spans-traces/span-filter.gif
   :width: 100%
   :alt: This animation shows a span filter in which the user filters for Service = checkoutservice, and then further refines the filter to error=true. The user also demonstrates that using the Matches switch shows only the spans that match your filter.
 
