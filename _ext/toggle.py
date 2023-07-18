@@ -4,7 +4,7 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 
 
-class ToggleDirective():
+class ToggleDirective(Directive):
     """
     This module implements the ``toggle`` directive.
 
