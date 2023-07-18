@@ -4,8 +4,6 @@
 Explore your traces using Trace Search
 ***************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how to explore your traces using Trace Search.
 
@@ -18,7 +16,12 @@ Use these steps to navigate to :guilabel:`Trace Search`:
    
    .. note:: Select :guilabel:`Switch to Trace Analyzer` to use the new Trace Analyzer to search traces and identify patterns in the full-fidelity trace data without prior knowledge of which tags are relevant. Trace Analyzer is available to all Splunk Observability Cloud users that use Splunk APM. See :ref:`trace-analyzer` for more info.
 
-#. Use the filter bar at the top of the list to narrow the list by environment, workflow, service(s), and tag(s). If you select multiple items in a filter, they are treated with an AND boolean operator. For example, if you select multiple services in the service filter, only traces containing spans from ALL of the selected services appear in the results. 
+#. (Optional) Use the filter bar at the top of the list to narrow the list of traces. If you select multiple items in a filter, they are treated with an AND Boolean operator. For example, if you select multiple services in the service filter, only traces containing spans from ALL of the selected services appear in the results. The following filter options are available: 
+    * Time range
+    * Environment
+    * Workflow
+    * Services
+    * Select :guilabel:`Add Filters`` to filter by tags, either indexed or unindexed. 
 #. (Optional) Select a minimum or maximum trace duration and toggle the :guilabel:`Errors Only` switch to include only traces containing errors in your search. 
 #. (Optional) Select the header of the :guilabel:`Start time` or :guilabel:`Duration` column to sort your traces by that field. 
 
