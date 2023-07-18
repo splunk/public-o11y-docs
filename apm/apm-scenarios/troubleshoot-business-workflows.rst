@@ -54,7 +54,7 @@ Because APM supports infinite cardinality, Deepu adds the :strong:`frontend:/car
 Deepu opens an example trace
 ==============================
 
-Because Splunk APM stores all traces without sampling, Deepu clicks the peak of errors on the chart to see example traces of those tag combinations at that timestamp. Deepu finds that the requests from :strong:`checkoutservice` to :strong:`paymentservice` are failing. 
+Because Splunk APM stores all traces without sampling, Deepu selects the peak of errors on the chart to see example traces of those tag combinations at that timestamp. Deepu finds that the requests from :strong:`checkoutservice` to :strong:`paymentservice` are failing. 
 
 ..  image:: /_images/apm/apm-use-cases/WorkflowUseCase_Exemplars.png
     :width: 99%
