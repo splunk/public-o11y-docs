@@ -47,7 +47,7 @@ Because APM supports infinite cardinality, Deepu adds the :strong:`frontend:/car
 
 ..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-02-add-filters.gif 
     :width: 99%
-    :alt: This screenshot shows the Tag Spotlight view of the frontend:/cart/checkout workflow filtered by Version and Kind.
+    :alt: This animated gif shows the steps to add filters for frontend:/cart/checkout workflow filtered by Version and Kind in Tag Spotlight.
 
 .. _troubleshoot-workflows-trace:
 
