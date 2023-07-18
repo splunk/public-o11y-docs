@@ -47,7 +47,7 @@ Burn rate for a 99.9% SLO with a 30-day compliance window
       * - :strong:`Long window`
         - :strong:`Short window`
         - :strong:`Error budget consumed`
-        - :strong:`Burn rate`   
+        - :strong:`Burn rate threshold`   
       * - 1 hour
         - 5 minutes
         - 2%
@@ -67,7 +67,7 @@ Burn rate for a 99.9% SLO with a 7-day compliance window
       * - :strong:`Long window`
         - :strong:`Short window`
         - :strong:`Error budget consumed`
-        - :strong:`Burn rate`   
+        - :strong:`Burn rate threshold`   
       * - 1 hour
         - 5 minutes
         - 10%
