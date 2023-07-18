@@ -46,7 +46,7 @@ Collector config output
 
 .. code-block::      
       
-   -  receivers:
+   receivers:
       smartagent/cpu:
          type: cpu
       smartagent/load:
@@ -57,15 +57,15 @@ Collector config output
          signalfx:
             access_token: ${SFX_ACCESS_TOKEN}
             realm: us1
-      service:
-         pipelines:
-            metrics:
-               receivers:
-               - smartagent/cpu
-               - smartagent/load
-               - smartagent/memory
-               exporters:
-               - signalfx   
+   service:
+     pipelines:
+       metrics:
+         receivers:
+           - smartagent/cpu
+           - smartagent/load
+           - smartagent/memory
+         exporters:
+           - signalfx
 
 .. note::
 
