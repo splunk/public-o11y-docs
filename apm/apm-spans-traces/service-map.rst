@@ -50,13 +50,13 @@ Perform breakdowns in the service map
 
 The following screenshot shows an example service map in which the ``paymentservice`` node is broken down by endpoint, showing that errors with the payment service are occurring in the ``/Charge`` endpoint. 
 
-..  image:: /_images/apm/spans-traces/service-map-02.png
+..  image:: /_images/apm/spans-traces/service-map-02-breakdown.png
     :width: 95%
     :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` node is broken down by endpoint, showing that errors with that service are arising in the ``/Charge`` endpoint.
 
 The following screenshot shows the same service map with an additional breakdown on the ``checkoutservice`` by endpoint. This shows that the errors occurring in the ``/Charge`` endpoint of the ``paymentservice`` originate in the ``/placeOrder`` endpoint of the ``checkoutservice``. 
 
-..  image:: /_images/apm/spans-traces/service-map-03.png
+..  image:: /_images/apm/spans-traces/service-map-03-breakdown.png
     :width: 95%
     :alt: This screenshot shows an example of the service map in Splunk APM Explore view. The ``paymentservice`` and ``checkoutservice`` nodes are broken down by endpoint.
 
