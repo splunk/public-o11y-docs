@@ -51,8 +51,8 @@ The following table defines key concepts in service level monitoring.
       - Our service can respond to 1% of requests in >100 ms over a 7 day period
 
     * - Burn rate 
-      - A unitless measure of how quickly the compliance period’s error budge is being consumed. Burn rate makes the SLO and error budget actionable, showing service owners when a current incident is serious enough to page an on-call responder.
-      - Burn rate of 1 means that at the current level, the error budge will be consumed within the compliance period but the SLO target will not be missed.
+      - A unitless measurement of how quickly a service consumes the error budget during the compliance window of the SLO. Burn rate makes the SLO and error budget actionable, showing service owners when a current incident is serious enough to page an on-call responder.
+      - For an SLO with a 30-day compliance window, a constant burn rate of 1 means your error budget is used up in exactly 30 days.
 
     
 
