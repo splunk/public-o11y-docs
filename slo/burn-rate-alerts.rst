@@ -8,7 +8,10 @@
 Burn rate alerts
 *****************************************************************************************
 
-Burn rate is a unitless measurement of how quickly a service consumes the error budget during the compliance window of the service level objective (SLO.
+.. meta::
+    :description: How burn rate alerting works in Splunk Observability Cloud SLO.
+
+Burn rate is a unitless measurement of how quickly a service consumes the error budget during the compliance window of the service level objective (SLO).
 
 For example, for a compliance window of 30 days, a constant burn rate of 1 means your error budget is used up in exactly 30 days, a constant burn rate of 2 means the error budget is used up in 15 days, and so on.
 
