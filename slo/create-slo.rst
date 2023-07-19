@@ -12,7 +12,7 @@ Measure and track your service health metrics with service level objectives (SLO
 .. meta::
     :description: Learn how to create a service level objective (SLO) in Splunk Observability Cloud.
 
-For each service indicating system health you are monitoring in Splunk Observability Cloud, you can define an SLO and how to measure it.
+For each service that you use to indicate system health in Splunk Observability Cloud, you can define an SLO and how to measure it.
 
 
 Create an SLO
@@ -22,7 +22,7 @@ Follow these steps to create an SLO.
 
 #. From the landing page of Splunk Observability Cloud, go to :strong:`Service Level Objectives (SLOs)`.
 #. Select :guilabel:`Create SLO`.
-#. Choose the service indicating system health for the SLO.
+#. Choose the service you want to use as the system health indicator for your SLO.
 
     .. list-table::
       :header-rows: 1
