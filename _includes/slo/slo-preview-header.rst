@@ -8,4 +8,3 @@
         * :ref:`create-slo`
         * :ref:`burn-rate-alerts`
         * :ref:`view-slo`
-        * :ref:`slo-alerting-scenario`

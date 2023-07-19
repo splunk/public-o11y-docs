@@ -17,5 +17,4 @@ Use the following links to navigate the documentation set for the preview of SLO
     * :ref:`create-slo`
     * :ref:`burn-rate-alerts`
     * :ref:`view-slo`
-    * :ref:`slo-alerting-scenario`
 
