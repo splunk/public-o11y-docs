@@ -9,18 +9,18 @@ Install the iOS RUM library for Splunk RUM
 
 To instrument your iOS application using the iOS RUM library and get data into Splunk RUM, follow the instructions on this page. You can install the library using Swift Package Manager, CocoaPods, or by building an XCFramework.
 
-.. note:: Splunk APM is not required to instrument Splunk RUM for iOS. 
+.. note:: Splunk APM is not required to instrument Splunk RUM for iOS.
 
 
 Decide which version to run in your environment
 =======================================================
-Latest updates automatically whenever Splunk RUM releases a new version. In pre-production, use latest to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle.  
 
+Latest updates automatically whenever Splunk RUM releases a new version. In pre-production, use latest to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle.
 
 
 .. _ios-rum-requirements:
 
-Check compatibility and requirements 
+Check compatibility and requirements
 ===============================================
 
 Splunk RUM for Mobile supports the following versions:
@@ -49,6 +49,7 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 
 5. Select the :guilabel:`iOS Instrumentation` tile to open the iOS Instrumentation guided setup.
 
+
 .. _rum-ios-install-manually:
 
 Install the iOS RUM library manually
@@ -67,7 +68,8 @@ Add the dependency in Xcode
 
 To add the iOS RUM package to your project, follow the steps for your dependency manager. To build an XCFramework, see :ref:`xcframeork-ios-rum`.
 
-Swift Package Manager (SPM)
+
+Swift package manager (SPM)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To install the iOS RUM library using the Swift Package Manager (SPM) follow these steps:
@@ -112,6 +114,7 @@ Follow these steps to initialize the iOS RUM package.
          SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
          // Call functions to configure additional options
             .deploymentEnvironment(environment: "<environment>")
+            .setApplicationName(appName: "<your_app_name>")
             .build()
 
       .. code-tab:: objective-c Objective-C
@@ -120,13 +123,14 @@ Follow these steps to initialize the iOS RUM package.
 
          SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithRealm:@"<realm>"  rumAuth: @"<rum-token>"]];
          [builder deploymentEnvironmentWithEnvironment:@"<environment-name>"];
+         [builder setApplicationNameWithAppName:@"<your_app_name>"];
          [builder build];
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
          1. Open the navigation menu in Observability Cloud.
          2. Select :menuselection:`Settings`.
-         3. Select your username. 
+         3. Select your username.
 
       The realm name appears in the :guilabel:`Organizations` section.
 
@@ -150,7 +154,8 @@ Add the dependency
 
 To add the iOS Crash Reporting package to your project, follow the steps for your package manager.
 
-Swift Package Manager (SPM)
+
+Swift package manager (SPM)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To install the iOS RUM library using the Swift Package Manager (SPM) follow these steps:
@@ -190,6 +195,7 @@ Initialize the crash reporting module with your configuration parameters:
       //..
       SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
          .deploymentEnvironment(environment: "<environment>")
+         .setApplicationName(appName: "<your_app_name>")
          .build()
       // Initialize crash reporting module after the iOS agent
       SplunkRumCrashReporting.start()
@@ -201,18 +207,19 @@ Initialize the crash reporting module with your configuration parameters:
       //...
       SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithRealm:@"<realm>"  rumAuth: @"<rum-token>"]];
       [builder deploymentEnvironmentWithEnvironment:@"<environment-name>"];
+      [builder setApplicationNameWithAppName:@"<your_app_name>"];
       [builder build];
       // Initialize crash reporting module after the iOS agent
       [SplunkRumCrashReporting start]
 
-* ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+* ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
       1. Open the navigation menu in Observability Cloud.
       2. Select :menuselection:`Settings`.
       3. Select your username. 
 
    The realm name appears in the :guilabel:`Organizations` section.
-   
+
 * To generate a RUM access token, see :ref:`rum-access-token`.
 
 .. note:: Symbolication is not supported.
@@ -226,7 +233,7 @@ If you want to import the iOS RUM Agent as a framework into your project, follow
 
 1. Check the build settings
 
-Clone the :new-page:`splunk-otel-ios <https://github.com/signalfx/splunk-otel-ios>` repository and open the SplunkRumWorkspace.xcworkspace file in Xcode. 
+Clone the :new-page:`splunk-otel-ios <https://github.com/signalfx/splunk-otel-ios>` repository and open the SplunkRumWorkspace.xcworkspace file in Xcode.
 
 Navigate to the :guilabel:`Build Settings` tab on the ``SplunkOtel`` target and make sure the following settings are present:
 
@@ -235,7 +242,7 @@ Navigate to the :guilabel:`Build Settings` tab on the ``SplunkOtel`` target and 
 
 2. Create a new archives directory
 
-Open a terminal and navigate to the directory where the SplunkRum.xcodeproj file is located, for example ``SplunkRumWorkspace/SplunkRum``. 
+Open a terminal and navigate to the directory where the SplunkRum.xcodeproj file is located, for example ``SplunkRumWorkspace/SplunkRum``.
 
 Run the following command to create a new archives directory containing the ``SplunkRum-iOS.xcarchive`` file:
 
@@ -270,7 +277,7 @@ Splunk RUM uses server timing to calculate the response time between the front e
 
 By default, the Splunk Distributions of OpenTelemetry already send the ``Server-Timing`` header. The header links spans from the browser with back-end spans and traces.
 
-The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM. 
+The APM environment variable for controlling the ``Server-Timing`` header  is ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``. Set ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED=true`` to link to Splunk APM.
 
 .. _ios-webview-instrumentation:
 
@@ -288,8 +295,8 @@ The following Swift snippet shows how to integrate iOS RUM with Splunk Browser R
 
    ...
       /* 
-   Make sure that the WebView instance only loads pages under 
-   your control and instrumented with Splunk Browser RUM. The 
+   Make sure that the WebView instance only loads pages under
+   your control and instrumented with Splunk Browser RUM. The
    integrateWithBrowserRum() method can expose the splunk.rumSessionId
    of your user to every site/page loaded in the WebView instance.
    */

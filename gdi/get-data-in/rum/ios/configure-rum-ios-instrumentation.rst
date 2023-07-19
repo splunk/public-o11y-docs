@@ -34,7 +34,7 @@ The following example shows how to configure the RUM token, realm, environment n
 
       @import SplunkOtel;
       //...
-      
+
       SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum"  rumAuth: @"<rum-token>"]];
       [builder allowInsecureBeaconWithEnabled:true];
       [builder globalAttributesWithGlobalAttributes:[NSDictionary dictionary]];
@@ -53,7 +53,7 @@ General settings
 
 Use the following settings to configure the iOS RUM library:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 20 80
 
@@ -69,6 +69,8 @@ Use the following settings to configure the iOS RUM library:
      - Sets additional attributes added to all spans. Attributes are defined as an array of comma-separated key-value pairs. For example: ``["key1":"value1","key2":3]``. See :ref:`ios-rum-globalattributes`.
    * - :code:`environment`
      - Environment for all the spans produced by the application. For example, ``dev``, ``test``, or ``prod``.
+   * - :code:`appName`
+     - Sets the application name. If not set, the bundle name is used instead. Default value is nil.
    * - :code:`ignoreURLs`
      - Regular expression pattern that matches URLs you want to ignore when reporting HTTP activity.
    * - :code:`spanFilter`
@@ -97,7 +99,7 @@ Instrumentation settings
 
 Use the following settings to activate or deactivate the collection of specific data:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 20 80
 
