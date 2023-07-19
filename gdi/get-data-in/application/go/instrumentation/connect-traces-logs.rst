@@ -7,7 +7,7 @@ Connect Go trace data with logs for Splunk Observability Cloud
 .. meta:: 
    :description: You can configure logging libraries to include tracing attributes provided automatically by Splunk OTel Go instrumentation. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
 
-You can configure logging libraries to include tracing attributes provided automatically by Splunk OTel Go instrumentation. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
+You can configure logging libraries to include tracing attributes provided automatically by Splunk OTel Go instrumentation. Use the trace metadata to correlate traces with log events and explore logs in Splunk.
 
 The following steps describe how to extract trace metadata and configure logging libraries to include the data as log fields.
 

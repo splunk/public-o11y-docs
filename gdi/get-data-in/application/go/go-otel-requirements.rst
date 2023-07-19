@@ -41,6 +41,8 @@ The Splunk Distribution of OpenTelemetry Go can instrument the following librari
      - :new-page:`otelmemcache <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/bradfitz/gomemcache/memcache/otelmemcache>`
    * - github.com/confluentinc/confluent-kafka-go/kafka
      - :new-page:`splunkkafka <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/confluentinc/confluent-kafka-go/kafka/splunkkafka>`
+   * - github.com/confluentinc/confluent-kafka-go/v2/kafka
+     - :new-page:`splunkkafka <https://pkg.go.dev/github.com/signalfx/splunk-otel-go/instrumentation/github.com/confluentinc/confluent-kafka-go/v2/kafka/splunkkafka>`
    * - github.com/emicklei/go-restful
      - :new-page:`otelrestful <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful>`
    * - github.com/gin-gonic/gin

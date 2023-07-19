@@ -23,10 +23,11 @@ Use the guided setup to deploy the Collector as a sidecar to ECS tasks.  Choose 
 - **File:** Specify the file to use for the Collector configuration. See :ref:`ecs-observer-config-fargate`.
 - **AWS Parameter Store:** Specify the AWS Parameter Store key or ARN to use for the Collector configuration. See :ref:`ecs-observer-config-fargate`.
 
-To access the guided setup for AWS integration, perform the following steps:
+Open the :new-page:`Amazon Fargate guided setup <https://login.signalfx.com/#/gdi/scripted/fargate/step-1?category=all&gdiState=%7B%22integrationId%22:%22fargate%22%7D>`. Optionally, you can navigate to the guided setup on your own:
 
 #. Log in to Splunk Observability Cloud.
 #. On the navigation menu, select :guilabel:`Data Management`.
+#. Select :guilabel:`Add Integration`.
 #. On the Integrate Your Data page, select the tile for :guilabel:`Amazon Fargate`.
 #. Follow the steps provided in the guided setup.
 
@@ -210,3 +211,5 @@ Do not configure the ECS ``resourcedetection`` processor for the standalone task
 AWS Graviton2
 -------------------------
 AWS Graviton2 is supported with the default Fargate configuration. The Collector Docker image can run on both AMD64 and ARM64 architectures.
+
+

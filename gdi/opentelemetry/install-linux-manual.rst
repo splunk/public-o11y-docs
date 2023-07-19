@@ -80,6 +80,11 @@ Run the following command to run an interactive bash shell on the container and 
 
 See :new-page:`docker-compose.yml <https://github.com/signalfx/splunk-otel-collector/blob/main/examples/docker-compose/docker-compose.yml>` in GitHub to download a ``docker-compose`` example.
 
+.. note:: 
+   Ensure that ``ReadonlyRootFileSystem`` is set to ``true`` as the collector needs to write to the container file system on startup.
+
+
+
 Create a custom Docker configuration
 --------------------------------------------------------------
 
@@ -219,7 +224,32 @@ Do the following to install the package using a Debian or RPM package:
 Binary file
 ===================================
 
-Download pre-built binaries (``otelcol_linux_amd64`` or ``otelcol_linux_arm64``) from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+To install the Collector using the binary file, follow these steps:
+
+#. Download the binary for your architecture from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+#. If you're not using an existing or custom config file, download the :new-page:`default config file <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector>`` for the Collector. See more at :ref:`otel-configuration-ootb`.
+
+#. Run the binary from the command line:
+
+.. code-block:: bash
+
+   # see available command-line options
+   $ <download dir>/otelcol_<platform>_<arch> --help
+   Usage of otelcol:
+      --config string          Locations to the config file(s), note that only a single location can be set per flag entry e.g. --config=/path/to/first --config=path/to/second. (default "[]")
+      --feature-gates string   Comma-delimited list of feature gate identifiers. Prefix with '-' to disable the feature. '+' or no prefix will enable the feature. (default "[]")
+      --no-convert-config      Do not translate old configurations to the new format automatically. By default, old configurations are translated to the new format for backward compatibility.
+      --set string             Set arbitrary component config property. The component has to be defined in the config file and the flag has a higher precedence. Array config properties are overridden and maps are joined. Example --set=processors.batch.timeout=2s (default "[]")
+      -v, --version                Version of the collector.
+
+   # start the collector with the SPLUNK_REALM and SPLUNK_ACCESS_TOKEN env vars required in our default config files
+   $ SPLUNK_REALM=<realm> SPLUNK_ACCESS_TOKEN=<token> <download dir>/otelcol_<platform>_<arch> --config=<path to config file>
+
+   # alternatively, use the SPLUNK_CONFIG env var instead of the --config command-line option
+   $ SPLUNK_CONFIG=<path to config file> SPLUNK_REALM=<realm> SPLUNK_ACCESS_TOKEN=<token> <download dir>/otelcol_<platform>_<arch>
+
+   # type Ctrl-c to stop the collector
 
 .. _linux-tar:
 

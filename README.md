@@ -6,7 +6,7 @@ A private mirror exists where the Splunk technical writers edit documentation fo
 
 ## Contribute to the documentation
 
-Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for our contribution guidelines.
+Docs contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution guidelines.
 
 ## Requirements
 
@@ -31,3 +31,5 @@ This Splunk repository is subject to the Splunk Websites Terms and Conditions of
 and the [LICENSE](LICENSE) specific to this repository.
 
 You can contribute new documentation and edits to the existing documentation.
+
+###
