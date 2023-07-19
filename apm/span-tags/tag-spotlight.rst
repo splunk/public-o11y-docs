@@ -13,7 +13,7 @@ For every service, Tag Spotlight provides request, error, and duration (RED) met
 
 The following image shows the requests and errors of an example ``frontend`` service broken down by the values of indexed span tags. The graph is powered by Troubleshooting MetricSets. 
 
-   .. image:: /_images/apm/span-tags/tag-spotlight-frontend.png
+   .. image:: /_images/apm/span-tags/tag-spotlight-01.png  
       :alt: This image shows the requests and errors of an example frontend service broken down by indexed span tag.
 
 To learn how to index span tags to generate Troubleshooting MetricSets, see :ref:`apm-index-span-tags`. For a general overview of MetricSets in APM, see :ref:`apm-metricsets`. 
