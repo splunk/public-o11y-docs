@@ -142,13 +142,17 @@ Timeshift is available only when partial values are hidden. If you enable timesh
 Dashboard window transformations
 ------------------------------------------
 
-In the following example, the ``Sum``, ``Mean``, ``Maximum`` , ``Minimum`` and ``Percentile`` functions let you set a dashboard window time for a transformation. 
+In the following example, both charts in the same dashboard show the total number of hosts for load balancers in different regions. Based on data in the past hour, there are 2124 hosts in the Tokyo region and 1772 hosts in the Paris region.
 
-.. image:: /_images/get-started/moving-and-cal.png
+.. image:: /_images/get-started/dashboard-window-transform.png
     :width: 99%
-    :alt: This image shows a dashboard window transformation chart.
+    :alt: This image shows a dashboard window transformation in chart.
 
-For more information about calendar window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Dashboard-window-transformations>`.
+The difference between the two charts is that the :strong:`listChartDemo` chart isn't configured with dashboard window transformation, while the :strong:`listChartDashboardWindow` chart is.
+
+When you adjust the :guilabel:`Time` picker for the dashboard, only the chart on the :strong:`listChartDashboardWindow` chart will update its values according to the selected time range. For example, if you select a time range of ``-12h``, the chart will display data from the past 12 hours.
+
+.. For more information about dashboard window transformations, see :new-page:`Dashboard window transformations <https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-transformations>`.
 
 .. _other-functions:
 
