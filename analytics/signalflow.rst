@@ -144,7 +144,7 @@ Dashboard window transformations
 
 In the following example, both charts in the same dashboard show the total number of hosts for load balancers in different regions. Based on data in the past hour, there are 2124 hosts in the Tokyo region and 1772 hosts in the Paris region.
 
-.. image:: /_images/get-started/dashboard-window-transform.png
+.. image:: /_images/get-started/dashboard-window-transformation.png
     :width: 99%
     :alt: This image shows a dashboard window transformation in chart.
 
