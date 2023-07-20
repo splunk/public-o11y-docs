@@ -11,7 +11,7 @@ You can configure the iOS RUM library from the Splunk OpenTelemetry Instrumentat
 
 To configure the iOS RUM library, pass the settings as methods when initializating the ``SplunkRum`` module. The Observability Cloud realm and RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
 
-The following example shows how to configure the RUM token, realm, environment name, and other settings:
+The following example shows how to configure the RUM token, realm, environment name, app name, and other settings:
 
 .. tabs::
 
@@ -25,6 +25,7 @@ The following example shows how to configure the RUM token, realm, environment n
         .debug(enabled: true)
         .globalAttributes(globalAttributes: ["strKey": "strVal", "intKey": 7, "doubleKey": 1.5, "boolKey": true])
         .deploymentEnvironment(environment: "env")
+        .setApplicationName("<your_app_name>")
         .ignoreURLs(ignoreURLs: try! NSRegularExpression(pattern: ".*ignore_this.*"))
         .screenNameSpans(enabled: true)
         // The build method always come last
@@ -40,6 +41,7 @@ The following example shows how to configure the RUM token, realm, environment n
       [builder globalAttributesWithGlobalAttributes:[NSDictionary dictionary]];
       [builder debugWithEnabled:true];
       [builder deploymentEnvironmentWithEnvironment:@"environment-name"];
+      [builder setApplicationName:@"<your_app_name>"];
       NSError* error = nil;
       [builder ignoreURLsWithIgnoreURLs: [NSRegularExpression regularExpressionWithPattern: @".*ignore_this.*" options: 0 error: &error]];
       [builder screenNameSpansWithEnabled:true];
@@ -70,7 +72,7 @@ Use the following settings to configure the iOS RUM library:
    * - :code:`environment`
      - Environment for all the spans produced by the application. For example, ``dev``, ``test``, or ``prod``.
    * - :code:`appName`
-     - Sets the application name. If not set, the bundle name is used instead. Default value is nil.
+     - Sets the application name. If not set, the library uses the bundle name instead. Default value is nil.
    * - :code:`ignoreURLs`
      - Regular expression pattern that matches URLs you want to ignore when reporting HTTP activity.
    * - :code:`spanFilter`

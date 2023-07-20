@@ -28,7 +28,7 @@ Splunk RUM for Mobile supports the following versions:
 * iOS 11 and higher
 * iPadOS 13 and higher
 
-Apple Silicon is supported.
+Splunk RUM supports Apple Silicon.
 
 .. _rum-ios-install:
 
@@ -114,7 +114,7 @@ Follow these steps to initialize the iOS RUM package.
          SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
          // Call functions to configure additional options
             .deploymentEnvironment(environment: "<environment>")
-            .setApplicationName(appName: "<your_app_name>")
+            .setApplicationName("<your_app_name>")
             .build()
 
       .. code-tab:: objective-c Objective-C
@@ -123,7 +123,7 @@ Follow these steps to initialize the iOS RUM package.
 
          SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithRealm:@"<realm>"  rumAuth: @"<rum-token>"]];
          [builder deploymentEnvironmentWithEnvironment:@"<environment-name>"];
-         [builder setApplicationNameWithAppName:@"<your_app_name>"];
+         [builder setApplicationName:@"<your_app_name>"];
          [builder build];
 
    * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
@@ -195,7 +195,7 @@ Initialize the crash reporting module with your configuration parameters:
       //..
       SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
          .deploymentEnvironment(environment: "<environment>")
-         .setApplicationName(appName: "<your_app_name>")
+         .setApplicationName("<your_app_name>")
          .build()
       // Initialize crash reporting module after the iOS agent
       SplunkRumCrashReporting.start()
@@ -207,7 +207,7 @@ Initialize the crash reporting module with your configuration parameters:
       //...
       SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithRealm:@"<realm>"  rumAuth: @"<rum-token>"]];
       [builder deploymentEnvironmentWithEnvironment:@"<environment-name>"];
-      [builder setApplicationNameWithAppName:@"<your_app_name>"];
+      [builder setApplicationName:@"<your_app_name>"];
       [builder build];
       // Initialize crash reporting module after the iOS agent
       [SplunkRumCrashReporting start]
@@ -294,7 +294,7 @@ The following Swift snippet shows how to integrate iOS RUM with Splunk Browser R
    import SplunkOtel
 
    ...
-      /* 
+      /*
    Make sure that the WebView instance only loads pages under
    your control and instrumented with Splunk Browser RUM. The
    integrateWithBrowserRum() method can expose the splunk.rumSessionId

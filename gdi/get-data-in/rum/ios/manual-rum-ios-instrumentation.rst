@@ -50,12 +50,13 @@ The following example shows how to define global attributes in your code:
    SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
    // You can set the globalAttributes option to the map at initialization
       .deploymentEnvironment(environment: "<environment>")
+      .setApplicationName("<your_app_name>")
       .build()
 
-   // You can also call the ``setGlobalAttributes`` function 
+   // You can also call the ``setGlobalAttributes`` function
    // anywhere in your code using the same map
    SplunkRum.setGlobalAttributes([])
-   
+
    // To remove a global attribute, pass the key name to removeGlobalAttribute
    SplunkRum.removeGlobalAttribute("key2")
 
