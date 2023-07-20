@@ -33,6 +33,6 @@ Delete an SLO
 
 #. On the :strong:`Service Level Objectives (SLOs)` page, select the more icon (|more|) next to the SLO you want to edit.
 #. In the actions menu, select :menuselection:`Delete`.
-#. Select :guilabel:`Delete` to confirm.
+#. Select :guilabel:`Delete` on the dialog box to confirm.
 
 .. note:: You can't recover a deleted SLO.
