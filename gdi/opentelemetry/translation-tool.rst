@@ -53,9 +53,9 @@ Collector config output
          type: load
       smartagent/memory:
          type: memory
-      exporters:
-         signalfx:
-            access_token: ${SFX_ACCESS_TOKEN}
+   exporters:
+      signalfx:
+         access_token: ${SFX_ACCESS_TOKEN}
             realm: us1
    service:
      pipelines:
