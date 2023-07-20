@@ -44,7 +44,7 @@ The following table defines key concepts in service level monitoring.
 
     * - Service level agreement (SLA)
       - An SLA is a contractual agreement that indicates service levels your users can expect from your organization. If an SLA is not met, there can be financial consequences.
-      - 
+      - An customer service SLA indicates that 90% of support requests received on a normal support day must have a response within 6 hours.
     
     * - Error budget
       - A measurement of how your SLI performs relative to your SLO over a period of time. Error budget measures the difference between actual and desired performance. It determines how unreliable your service might be during this period and serves as a signal when you need to take corrective action.
