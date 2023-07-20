@@ -55,9 +55,10 @@ The following table defines key concepts in service level monitoring.
       - For an SLO with a 30-day compliance window, a constant burn rate of 1 means your error budget is used up in exactly 30 days.
 
     
+Create your first SLO
+==========================================
 
-
-
+To start using SLO, see :ref:`create-slo`.
 
 
 
