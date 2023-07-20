@@ -119,6 +119,8 @@ Follow these steps to automatically instrument your application using the Python
 
    - :ref:`django-instrumentation`
 
+Application metrics are collected by default. See :ref:`python-otel-metrics` for more information.
+
 If no data appears in APM, see :ref:`common-python-troubleshooting`.
 
 .. _configure-python-instrumentation:

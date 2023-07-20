@@ -74,7 +74,7 @@ The following settings control trace exporters and their endpoints:
    * - Environment variable
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - Trace exporter to use. You can set multiple comma-separated values (for example, ``otlp,console``). The default value is ``otlp``. To select the Jaeger exporter, use ``jaeger-thrift-splunk``.
+     - Trace exporter to use. You can set multiple comma-separated values (for example, ``otlp,console``). The default value is ``otlp``.
    * - ``OTEL_METRICS_EXPORTER``
      - The metrics exporter to use. The default value is ``otlp``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates metric exports.
    * - ``OTEL_METRIC_EXPORT_INTERVAL``
@@ -85,8 +85,6 @@ The following settings control trace exporters and their endpoints:
      - The OTLP endpoint. The default value is ``http://localhost:4317``.
    * - ``OTEL_EXPORTER_OTLP_METRICS_ENDPOINT``
      - The OTLP endpoint. The default value is ``http://localhost:4317``.
-   * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
-     - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``.
 
 To send data directly to Splunk Observability Cloud bypassing the Collector, see :ref:`export-directly-to-olly-cloud-python`.
 
