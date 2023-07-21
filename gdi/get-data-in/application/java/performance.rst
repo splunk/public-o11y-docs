@@ -97,6 +97,66 @@ Consider taking the following actions to decrease overhead:
 - Review manual instrumentation for unnecessary span generation.
 
 
+.. _java-overhead-measure-diy:
+
+Guidelines for measuring performance overhead
+=================================================================
+
+Measuring overhead in your own environment and deployments provides accurate data about the impact of instrumentation on the performance of your application or service. The following guidelines describe the general steps for collecting and comparing reliable performance overhead measurements.
+
+1. Decide what you want to measure
+-----------------------------------------------------------------
+
+Different users of your application or service might notice different aspects of agent overhead. For example, while end users might notice degradation in service latency, power users with heavy workloads pay more attention to CPU overhead. On the other hand, users who deploy frequently, for example due to elastic workloads, care more about startup time.
+
+Reduce your measurements to factors that are sure to impact the user experience of your application, so as not to produce datasets that contain irrelevant information. Some examples of measurements include the following:
+
+- CPU usage: user average, user peak, and machine average
+- Memory: maximum heap used and total allocated
+- Garbage collection pause time
+- Startup time in milliseconds
+- Service latency: average and percentile 95 (p95)
+- Network read and write average throughput
+
+2. Prepare a suitable test environment
+-----------------------------------------------------------------
+
+By measuring overhead in a controlled test environment you can better control and identify the factors affecting performance. When preparing a test environment, pay attention to the following:
+
+1. Make sure that the configuration of the test environment resembles production.
+2. Isolate the application under test from other services that might interfere.
+3. Turn off or remove all unnecessary system services on the application host.
+4. Ensure that the application has enough system resources to handle the test workload.
+
+3. Create a battery of realistic tests
+-----------------------------------------------------------------
+
+Design the tests that you run against the test environment to resemble typical workloads as much as possible. For example, if some REST API endpoints of your service are susceptible to high request volumes, create a test that simulates heavy network traffic.
+
+For Java applications, use a warmup phase prior to starting measurements. The JVM is a highly dynamic machine that performs a large number of optimizations through just-in-time compilation (JIT). The warmup phase helps the application to finish most of its class loading and gives the JIT compiler time to run the majority of optimizations.
+
+Make sure to run a large number of requests and to repeat the test pass many times. This helps to ensure a representative data sample. Include error scenarios in your test data. Simulate an error rate similar to that of a normal workload, typically between 2% to 10%.
+
+4. Collect comparable measurements
+-----------------------------------------------------------------
+
+To identify which factors might be affecting performance and causing overhead, collect measurements in the same environment after modifying a single factor or condition.
+
+For example, you can take produce three different sets of measruments where the only difference is the presence and settings of the instrumentation:
+
+- Condition A: No instrumentation or baseline
+- Condition B: Instrumentation without AlwaysOn Profiling
+- Condition C: Instrumentation with AlwaysOn Profiling
+
+5. Analyze the overhead data
+------------------------------------------------------------------
+
+After collecting data from multiple passes, you can compare averages using simple statistical tests to check for significant differences, or plot results in a chart.
+
+Consider that different stacks, applications, and environments might result in different operational characteristics and different overhead measurement results.
+
+
+
 How to get support
 =================================================================
 
