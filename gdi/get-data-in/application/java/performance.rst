@@ -13,7 +13,7 @@ Some factors that might increase agent overhead are environmental, such as the p
 
 Due to the complexity of modern software and the broad diversity in deployment scenarios, it is impossible to come up with a single overhead estimate. To find out the overhead of any instrumentation agent in a given deployment, you have to conduct experiments and collect measurements directly. Therefore, all statements about performance in this document must be treated as general information and guidelines which are subject to evaluation in a specific system.
 
-The following sections describe the minimum requirements of the Splunk OTel Java agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent. 
+The following sections describe the minimum requirements of the Splunk OTel Java agent, as well as potential constraints impacting performance, and guidelines to optimize and troubleshoot the performance of the agent.
 
 
 .. _java-overhead-requirements:
@@ -29,7 +29,7 @@ Minimum requirements for production deployments
 Guidelines to reduce agent overhead
 =================================================================
 
-The following best practices and techniques might help in reducing the overhead caused by the Java agent
+The following best practices and techniques might help in reducing the overhead caused by the Java agent.
 
 Configure trace sampling
 -----------------------------------------------------------------
@@ -57,10 +57,10 @@ Reduce manual instrumentation to a minimum
 
 Manual instrumentation might introduce inefficiencies that increase agent overhead. For example, using ``@WithSpan`` on every method results in a high span volume, which in turn increases noise in the data and consumes more system resources.
 
-Provide more resources to the Collector
+Provision adequate resources
 ----------------------------------------------------------------
 
-If the instrumented application is on the same host as the Splunk Distribution of OpenTelemetry Collector, consider providing sufficient resources to the Collector and change its configuration settings. See :ref:`otel-sizing`.
+Make sure to provision enough resources for your instrumentation and for the Collector. The amount of resources such as memory or disk depend on your application architecture and needs. For example, a common setup is to run the instrumented application on the same host as the Splunk Distribution of OpenTelemetry Collector. In that case, consider providing sufficient resources to the Collector and change its configuration settings. See :ref:`otel-sizing`. 
 
 
 .. _java-overhead-constraints:
