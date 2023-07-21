@@ -100,6 +100,17 @@ The following examples show how to create a custom event for browser, Android, a
                span.end() // You can also use defer for this
          }
 
+      This example shows how to record an event with no duration:
+
+      .. code-block:: swift
+
+         let dictionary: NSDictionary = [
+                           "attribute1": "hello",
+                           "attribute2": "world!",
+                           "attribute3": 3
+         ]
+         SplunkRum.reportEvent(name: "testEvent", attributes: dictionary)
+
 Advanced configurations
 ========================
 

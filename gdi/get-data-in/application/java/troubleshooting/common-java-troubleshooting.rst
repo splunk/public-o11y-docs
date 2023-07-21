@@ -221,25 +221,28 @@ The following snippet contains a sample ``profiling`` pipeline:
 
    receivers:
      otlp:
-        protocols:
-           grpc:
+       protocols:
+         grpc:
 
    exporters:
-     splunk_hec:
-        token: "${SFX_TOKEN}"
-        endpoint: "https://ingest.${SFX_REALM}.signalfx.com/v1/log"
-     logging/info:
-        verbosity: normal
+     # Profiling
+     splunk_hec/profiling:
+       token: "${SPLUNK_ACCESS_TOKEN}"
+       endpoint: "${SPLUNK_INGEST_URL}/v1/log"
+       log_data_enabled: false
 
    processors:
      batch:
+     memory_limiter:
+       check_interval: 2s
+       limit_mib: ${SPLUNK_MEMORY_LIMIT_MIB}
 
    service:
      pipelines:
-        logs/profiling:
-           receivers: [otlp]
-           processors: [batch]
-           exporters: [logging/info, splunk_hec]
+       logs/profiling:
+         receivers: [otlp]
+         processors: [memory_limiter, batch]
+         exporters: [splunk_hec, splunk_hec/profiling]
 
 .. _disable-java-agent-logs:
 

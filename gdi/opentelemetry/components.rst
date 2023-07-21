@@ -83,6 +83,9 @@ The Splunk Distribution of OpenTelemetry Collector includes and supports the fol
    * - :ref:`databricks_receiver` (``databricks``)
      - Uses the Databricks API to generate metrics about the operation of a Databricks instance.
      - Metrics
+   * - ``discovery``
+     - Wraps the receiver creator to facilitate the discovery of metric collection targets. See :ref:`discovery_mode`.
+     - Logs
    * - ``filelog``
      - Tails and parses logs from files.
      - Logs

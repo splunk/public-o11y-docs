@@ -10,10 +10,11 @@ Instrument iOS applications for Splunk RUM
 .. toctree::
    :hidden:
 
-   Install the iOS RUM agent <install-rum-ios>
+   Install the iOS RUM library <install-rum-ios>
    Configure the instrumentation <configure-rum-ios-instrumentation>
    Manually instrument applications <manual-rum-ios-instrumentation>
    iOS RUM data model <rum-ios-data-model>
+   Troubleshooting <troubleshooting>
 
 Instrument your iOS applications to get Real User Monitoring (RUM) data into Splunk Observability Cloud. With Splunk RUM for Mobile, you can gain insight about the performance and health of your mobile apps.
 
