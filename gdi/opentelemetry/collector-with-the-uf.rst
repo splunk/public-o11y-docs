@@ -40,7 +40,7 @@ To collect data with the Collector and the UF:
 
     * Configure the Collector in :new-page:`Agent <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/agent_config.yaml>` or :new-page:`Gateway <https://github.com/signalfx/splunk-otel-collector/blob/main/cmd/otelcol/config/collector/gateway_config.yaml>` mode.
 
-    * Configure the :new-page:`UF <https://docs.splunk.com/Documentation/Forwarder/8.2.2/Forwarder/Configuretheuniversalforwarder>`.
+    * Configure the :new-page:`UF <https://docs.splunk.com/Documentation/Forwarder/latest/Forwarder/Configuretheuniversalforwarder>`.
 
 #. Run the following command to skip installation of Fluentd and the plugins and dependencies for the Collector:
 
