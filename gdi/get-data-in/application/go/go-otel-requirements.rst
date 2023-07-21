@@ -33,8 +33,6 @@ The Splunk Distribution of OpenTelemetry Go can instrument the following librari
      - :new-page:`httptrace <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace>`
    * - runtime
      - :new-page:`runtime <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/runtime/>`
-   * - github.com/astaxie/beego
-     - :new-page:`otelbeego <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/astaxie/beego/otelbeego>`
    * - github.com/aws/aws-sdk-go-v2
      - :new-page:`otelaws <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-sdk-go-v2/otelaws>`
    * - github.com/bradfitz/gomemcache
