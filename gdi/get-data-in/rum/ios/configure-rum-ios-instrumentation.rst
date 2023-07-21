@@ -7,52 +7,72 @@ Configure the Splunk iOS RUM instrumentation
 .. meta::
    :description: Configure the Splunk Observability Cloud real user monitoring / RUM instrumentation for your iOS applications.
 
-You can configure the iOS RUM agent from the Splunk OpenTelemetry Instrumentation for iOS to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
+You can configure the iOS RUM library from the Splunk OpenTelemetry Instrumentation for iOS to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 
-To configure the iOS RUM agent, pass the settings as arguments when initializating the ``SplunkRum`` module. The following example shows how to configure the RUM token, beacon URL, and environment name:
+To configure the iOS RUM library, pass the settings as methods when initializating the ``SplunkRum`` module. The Observability Cloud realm and RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
+
+The following example shows how to configure the RUM token, realm, environment name, app name, and other settings:
 
 .. tabs::
 
    .. code-tab:: swift
-      :emphasize-lines: 3,4,5
 
       import SplunkOtel
       //..
-      SplunkRum.initialize(beaconUrl: "https://rum-ingest.<realm>.signalfx.com/v1/rum",
-            rumAuth: "<rum-token>",
-            options: SplunkRumOptions(environment:"<environment-name>"))
+      SplunkRumBuilder(realm: "<realm>", rumAuth: "<rum-token>")
+        // Call functions to configure additional options
+        .allowInsecureBeacon(enabled: true)
+        .debug(enabled: true)
+        .globalAttributes(globalAttributes: ["strKey": "strVal", "intKey": 7, "doubleKey": 1.5, "boolKey": true])
+        .deploymentEnvironment(environment: "env")
+        .setApplicationName("<your_app_name>")
+        .ignoreURLs(ignoreURLs: try! NSRegularExpression(pattern: ".*ignore_this.*"))
+        .screenNameSpans(enabled: true)
+        // The build method always come last
+        .build()
 
    .. code-tab:: objective-c
-      :emphasize-lines: 4,5,6
 
       @import SplunkOtel;
+      //...
 
-      //Create an options object to store the settings
-      SplunkRumOptions *options = [[SplunkRumOptions alloc] init];
-      options.environment = @"<environment-name>";
-      [SplunkRum initializeWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum" rumAuth: @"<rum-token>" options: options];
+      SplunkRumBuilder *builder = [[SplunkRumBuilder alloc] initWithBeaconUrl:@"https://rum-ingest.<realm>.signalfx.com/v1/rum"  rumAuth: @"<rum-token>"]];
+      [builder allowInsecureBeaconWithEnabled:true];
+      [builder globalAttributesWithGlobalAttributes:[NSDictionary dictionary]];
+      [builder debugWithEnabled:true];
+      [builder deploymentEnvironmentWithEnvironment:@"environment-name"];
+      [builder setApplicationName:@"<your_app_name>"];
+      NSError* error = nil;
+      [builder ignoreURLsWithIgnoreURLs: [NSRegularExpression regularExpressionWithPattern: @".*ignore_this.*" options: 0 error: &error]];
+      [builder screenNameSpansWithEnabled:true];
+      // The build method always come last
+      [builder build];
 
 .. _ios-rum-settings:
 
 General settings
 ======================================================
 
-Use the following settings to configure the iOS RUM agent:
+Use the following settings to configure the iOS RUM library:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 20 80
 
    * - Option
      - Description
-   * - :code:`beaconUrl`
-     - Ingest URL to which the agent sends collected telemetry. The URL must contain your realm in Splunk Observability Cloud. For example, ``https://rum-ingest.us0.signalfx.com/v1/rum`` is the ingest URL for the ``us0`` realm.
+   * - :code:`realm`
+     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
    * - :code:`rumAuth`
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
+   * - :code:`beaconUrl`
+     - Ingest URL to which the agent sends collected telemetry. The URL must contain your realm in Splunk Observability Cloud. For example, ``https://rum-ingest.us0.signalfx.com/v1/rum`` is the ingest URL for the ``us0`` realm. When defined, it overrides the value in ``realm``.
    * - :code:`globalAttributes`
      - Sets additional attributes added to all spans. Attributes are defined as an array of comma-separated key-value pairs. For example: ``["key1":"value1","key2":3]``. See :ref:`ios-rum-globalattributes`.
    * - :code:`environment`
      - Environment for all the spans produced by the application. For example, ``dev``, ``test``, or ``prod``.
+   * - :code:`appName`
+     - Sets the application name. If not set, the library uses the bundle name instead. Default value is nil.
    * - :code:`ignoreURLs`
      - Regular expression pattern that matches URLs you want to ignore when reporting HTTP activity.
    * - :code:`spanFilter`
@@ -81,7 +101,7 @@ Instrumentation settings
 
 Use the following settings to activate or deactivate the collection of specific data:
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 20 80
 
