@@ -60,7 +60,7 @@ Manual instrumentation might introduce inefficiencies that increase agent overhe
 Provision adequate resources
 ----------------------------------------------------------------
 
-Make sure to provision enough resources for your instrumentation and for the Collector. The amount of resources such as memory or disk depend on your application architecture and needs. For example, a common setup is to run the instrumented application on the same host as the Splunk Distribution of OpenTelemetry Collector. In that case, consider providing sufficient resources to the Collector and change its configuration settings. See :ref:`otel-sizing`. 
+Make sure to provision enough resources for your instrumentation and for the Collector. The amount of resources such as memory or disk depend on your application architecture and needs. For example, a common setup is to run the instrumented application on the same host as the Splunk Distribution of OpenTelemetry Collector. In that case, consider rightsizing the resources for the Collector and optimize its settings. See :ref:`otel-sizing`.
 
 
 .. _java-overhead-constraints:
