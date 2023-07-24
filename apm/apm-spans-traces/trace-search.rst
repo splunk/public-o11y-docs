@@ -29,7 +29,7 @@ While Splunk APM runs the search, a time chart provides visual feedback on the t
 
 The following animated gif demonstrates how to select a time range in the chart: 
 
-.. image:: /_images/apm/spans-traces/trace-search.gif
+.. image:: /_images/apm/spans-traces/trace-search-time-selection.gif
    :alt: This animated gif shows a user making a selection within the interactive trace search chart. 
 
 .. note:: The :guilabel:`Timestamp` column displays the time zone set in your profile. By default, the time zone is automatically detected from your browser. If you want to change to a different time zone to match the experience of a teammate in another time zone, navigate to :guilabel:`Account Settings` and make a selection in the :guilabel:`Time Zone` field. 
