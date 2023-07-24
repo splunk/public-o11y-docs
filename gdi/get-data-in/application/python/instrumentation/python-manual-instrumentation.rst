@@ -4,8 +4,8 @@
 Manually instrument Python applications for Splunk Observability Cloud
 **********************************************************************
 
-.. meta:: 
-   :description: Manually instrument your Python application when you need to add custom attributes to spans or want to manually generate spans. Keep reading to learn how to manually instrument your Python application for Splunk Observability Cloud. 
+.. meta::
+   :description: Manually instrument your Python application when you need to add custom attributes to spans or want to manually generate spans. Keep reading to learn how to manually instrument your Python application for Splunk Observability Cloud.
 
 Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Python covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
 
@@ -55,48 +55,94 @@ For more examples, see the Manual instrumentation docs at https://opentelemetry.
 Create custom metrics
 ===============================
 
-To create custom metrics, follow these steps:
+The Splunk Distribution of OpenTelemetry Python supports the following instrumentations:
 
-1. Import the OpenTelemetry API:
+- Counter (synchronous)
+- Counter (asynchronous)
+- Gauge (asynchronous)
+- UpDownCounter (synchronous)
+- UpDownCounter (asynchronous)
 
-   .. code:: python
+To create custom metrics, follow the steps depending on the type of metric instrumentation.
 
-      from opentelemetry import metrics
-      from opentelemetry.sdk.metrics import MeterProvider
-      from opentelemetry.sdk.metrics.export import (
-         ConsoleMetricExporter,
-         PeriodicExportingMetricReader,
-      )
+.. tabs::
 
-2. Create a meter provider:
+   .. tab:: Synchronous instruments
 
-   .. code:: python
+      Synchronous instruments, like counters, are invoked inline with business logic. An example of synchronous instrument is a counter for the number of bytes sent to a server. They support context propagation.
 
-      meter := otel.Meter("ExampleService")
+      1. Import the OpenTelemetry API:
 
-3. Create an instrument to take measurements:
+         .. code:: python
 
-   .. code:: python
+            from opentelemetry import metrics
+            from opentelemetry.sdk.metrics import MeterProvider
+            from opentelemetry.sdk.metrics.export import (
+               ConsoleMetricExporter,
+               PeriodicExportingMetricReader,
+            )
 
-      metric_reader = PeriodicExportingMetricReader(ConsoleMetricExporter())
-      provider = MeterProvider(metric_readers=[metric_reader])
+      2. Create a meter provider:
 
-      metrics.set_meter_provider(provider)
-      meter = metrics.get_meter("my.meter.name")
+         .. code:: python
 
-4. Perform the measurements. The following example shows how to create a synchronous instrument:
+            meter := otel.Meter("ExampleService")
 
-   .. code:: python
+      3. Create an instrument to take measurements:
 
-      peanut_counter = meter.create_counter(
-         "peanut.counter", unit="1", description="Counts the number of consumed peanuts"
-      )
+         .. code:: python
 
-      def do_stuff(work_item):
-         peanut_counter.add(1, {"work.type": work_item.work_type})
-         print("Collecting peanuts...")
+            metric_reader = PeriodicExportingMetricReader(ConsoleMetricExporter())
+            provider = MeterProvider(metric_readers=[metric_reader])
 
+            metrics.set_meter_provider(provider)
+            meter = metrics.get_meter("my.meter.name")
 
+      4. Perform the measurements:
+
+         .. code:: python
+
+            peanut_counter = meter.create_counter(
+               "peanut.counter", unit="1", description="Counts the number of consumed peanuts"
+            )
+
+            def do_stuff(work_item):
+               peanut_counter.add(1, {"work.type": work_item.work_type})
+               print("Collecting peanuts...")
+
+   .. tab:: Asynchronous instruments
+
+      Asynchronous instruments, like asynchronous gauges, provide callback functions that you run on demand. An example of asynchronous instrument is a humidity sensor that is polled every minute for new data. They don't support context propagation.
+
+      1. Import the OpenTelemetry API:
+
+         .. code:: python
+
+            from typing import Iterable
+            from opentelemetry.metrics import CallbackOptions, Observation
+
+      2. Write a callback to request data:
+
+         .. code:: python
+
+            def get_temp_data(options: CallbackOptions) -> Iterable[Temperature]:
+            r = requests.get(
+               "http://weather/data/city", timeout=options.timeout_millis / 10**3
+            )
+            for metadata in r.json():
+               yield Temperature(
+                     metadata["temperature"], {"city.name": metadata["temperature"]}
+               )
+
+      3. Create an instrument to take asynchronous measurements:
+
+         .. code:: python
+
+            meter.create_observable_gauge(
+               "city.temperature",
+               callbacks=[get_temp_data],
+               description="Mean temperature of the city",
+            )
 
 For more examples, see the Manual instrumentation docs at https://opentelemetry.io/docs/instrumentation/python/manual/.
 
