@@ -9,7 +9,7 @@ Metrics and attributes collected by the Splunk Distribution of OTel Python
 
 The Splunk Distribution of OpenTelemetry Python collects runtime and custom metrics. To learn about the different metric types, see :ref:`metric-types`.
 
-For custom metrics instrumentation and instrument types, see :ref:`custom-metrics-python`.
+For examples of custom metrics instrumentation and instrument types, see :ref:`custom-metrics-python`.
 
 .. _python-otel-runtime-metrics:
 
