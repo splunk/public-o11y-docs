@@ -47,7 +47,7 @@ There are a number of ways to drill down into indexed span tags for a selected s
 
 - Hover over the RED metrics chart to view a summary of metrics for the specified time. The resolution of data for the RED metrics chart is 10 seconds. 
 
-- Select within the RED metrics chart to load representative traces for the time you clicked on.
+- Select within the RED metrics chart to load representative traces for the time you selected.
 
 - Select a span tag card header to add the top 5 span tag values in the card to the RED metrics chart.
 
