@@ -27,7 +27,7 @@ Instrument your React Native applications to get Real User Monitoring (RUM) data
 
 To generate all the basic installation commands for your environment and application, use the React Native guided setup. To access the React Native guided setup, follow these steps:
 
-1. Log in to Observability Cloud.
+1. Log in to Splunk Observability Cloud.
 
 2. Open the :new-page:`React Native guided setup <https://login.signalfx.com/#/gdi/scripted/react-native/>`. Optionally, you can navigate to the guided setup on your own:
    

@@ -15,7 +15,7 @@ Istio 1.8 and higher has native support for observability. You can configure you
 Requirements
 ==============================
 
-To send telemetry from Istio to Observability Cloud you need the following:
+To send telemetry from Istio to Splunk Observability Cloud you need the following:
 
 - Istio 1.8 and higher
 - Splunk OpenTelemetry Collector for Kubernetes in host monitoring (agent) mode. See :ref:`otel-install-k8s`.

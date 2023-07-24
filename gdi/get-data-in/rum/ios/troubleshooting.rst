@@ -7,7 +7,7 @@ Troubleshoot iOS instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented iOS application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument an iOS application using the Splunk OpenTelemetry Instrumentation for iOS and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument an iOS application using the Splunk OpenTelemetry Instrumentation for iOS and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-ios-troubleshooting:
 
@@ -71,7 +71,7 @@ If you can't find telemetry for your iOS app in Splunk RUM, try the following:
 
 To find the realm name of your account, follow these steps: 
 
-1. Open the navigation menu in Observability Cloud.
+1. Open the navigation menu in Splunk Observability Cloud.
 2. Select :menuselection:`Settings`.
 3. Select your username. 
 

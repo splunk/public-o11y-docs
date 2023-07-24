@@ -7,7 +7,7 @@ Troubleshoot Python instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented Python application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a Python application using the Splunk Distribution of OpenTelemetry Python and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a Python application using the Splunk Distribution of OpenTelemetry Python and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-python-troubleshooting:
 
@@ -91,7 +91,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 Channel pipeline error
 -------------------------------------------------------------------
 
-If you're seeing the following error in your logs, it might mean that the Python agent is trying to send trace data to the Observability Cloud ingest endpoint, which is not yet supported by OTLP:
+If you're seeing the following error in your logs, it might mean that the Python agent is trying to send trace data to the Splunk Observability Cloud ingest endpoint, which is not yet supported by OTLP:
 
 .. code-block:: bash
 
@@ -115,7 +115,7 @@ To troubleshoot the lack of connectivity between Jaeger and Splunk Observability
 401 error when sending spans
 --------------------------------------------------------
 
-If you send traces directly to Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
+If you send traces directly to Splunk Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
 
 - The value is null.
 - The value is not a well-formed token.

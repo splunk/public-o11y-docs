@@ -9,7 +9,7 @@ Configure the Splunk iOS RUM instrumentation
 
 You can configure the iOS RUM library from the Splunk OpenTelemetry Instrumentation for iOS to add custom attributes, adapt the instrumentation to your environment and application, customize sampling, and more.
 
-To configure the iOS RUM library, pass the settings as methods when initializating the ``SplunkRum`` module. The Observability Cloud realm and RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
+To configure the iOS RUM library, pass the settings as methods when initializating the ``SplunkRum`` module. The Splunk Observability Cloud realm and RUM token are passed as arguments to the ``SplunkRumBuilder`` function.
 
 The following example shows how to configure the RUM token, realm, environment name, app name, and other settings:
 
@@ -62,7 +62,7 @@ Use the following settings to configure the iOS RUM library:
    * - Option
      - Description
    * - :code:`realm`
-     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
+     - The name of your organization's realm, for example, ``us0``. To find the realm name of your account, open the left navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section.
    * - :code:`rumAuth`
      - RUM token that authorizes the agent to send telemetry data to Splunk Observability Cloud. To generate a RUM access token, see :ref:`rum-access-token`.
    * - :code:`beaconUrl`

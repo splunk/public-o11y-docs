@@ -58,21 +58,21 @@ service:
 
 The following table shows the configuration options for the Redis integration:
 
-| Option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `host`            | Yes      | `string`        |         |
-| `port`            | Yes      | `integer`                     |       |
-| `pythonBinary`    | No           | `string`    | Path to the Python binary. If you don't provide a path, the monitor uses its built-in runtime. The string can include arguments to the binary. |
-| `name`            | No           | `string`      | Name for the Redis instance. The maximum length is 64 characters. The default value is "{host}:{port}".                                       |
-| `auth`            | No      | `string`        | Authentication      |
-| `sendListLengths` | No       | `list of objects (see below)` | List of keys that you want to monitor for length. To learn more, see the section **Monitor the length of Redis lists**.                |
-| `verbose`         | No        | `bool`     | Flag that controls verbose logging for the plugin. If `true`, verbose logging is activated. The default value is`false`.                 |
+| Option            | Required | Type                          | Description                                                                                                                                    |
+| ----------------- | -------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `host`            | Yes      | `string`                      |                                                                                                                                                |
+| `port`            | Yes      | `integer`                     |                                                                                                                                                |
+| `pythonBinary`    | No       | `string`                      | Path to the Python binary. If you don't provide a path, the monitor uses its built-in runtime. The string can include arguments to the binary. |
+| `name`            | No       | `string`                      | Name for the Redis instance. The maximum length is 64 characters. The default value is "{host}:{port}".                                        |
+| `auth`            | No       | `string`                      | Authentication                                                                                                                                 |
+| `sendListLengths` | No       | `list of objects (see below)` | List of keys that you want to monitor for length. To learn more, see the section **Monitor the length of Redis lists**.                        |
+| `verbose`         | No       | `bool`                        | Flag that controls verbose logging for the plugin. If `true`, verbose logging is activated. The default value is`false`.                       |
 
 The following table shows you the configuration options for the `sendListLengths` configuration object:
 
-| Option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `databaseIndex` | Yes      | `integer` | The database index     |
+| Option          | Required | Type      | Description                                                                                                                                                                                                                                    |
+| --------------- | -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `databaseIndex` | Yes      | `integer` | The database index                                                                                                                                                                                                                             |
 | `keyPattern`    | Yes      | `string`  | A string or pattern to use for selecting keys. A string selects a single key. A pattern that uses `*` as a `glob` style wildcard processes all keys that match the pattern. Surround a pattern with single quotes ('), for example `'mylist*'` |
 
 ## Monitor the length of Redis lists
@@ -87,7 +87,7 @@ You can specify `$key_name` as a glob-style pattern. The only supported wildcard
 
 To ensure that the `*` is interpreted correctly, surround the pattern with double quotes (`""`). When a nonlist key matches the pattern, the Redis monitor writes an error to the agent logs.
 
-In Observability Cloud, `gauge.key_llen` is the metric name for Redis list key lengths. Observability Cloud creates a separate MTS for each Redis list.
+in Splunk Observability Cloud, `gauge.key_llen` is the metric name for Redis list key lengths. Splunk Observability Cloud creates a separate MTS for each Redis list.
 
 **Notes**:
 
