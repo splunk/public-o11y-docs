@@ -57,7 +57,7 @@ depending on the installation method:
 Installer script
 ==========================
 
-The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of OpenTelemetry Collector for Windows and Fluentd (using the td-agent).
+The installer script is available for Windows 64-bit environments, and deploys and configures the Splunk Distribution of OpenTelemetry Collector for Windows and Fluentd (using the td-agent, disabled by default).
 
 To install the package using the installer script, follow these steps:
 
@@ -99,7 +99,13 @@ To configure proxy settings to install and run the OpenTelemetry Collector, see 
 Configure fluentd for log collection
 -------------------------------------------
 
-By default, the installation configures the fluentd service to forward log events with the ``@SPLUNK`` label and
+If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``with_fluentd = 1`` option to also install Fluentd when installing the Collector. For example:
+
+.. code-block:: PowerShell
+
+  & {Set-ExecutionPolicy Bypass -Scope Process -Force; $script = ((New-Object System.Net.WebClient).DownloadString('https://dl.signalfx.com/splunk-otel-collector.ps1')); $params = @{access_token = "SPLUNK_ACCESS_TOKEN"; realm = "SPLUNK_REALM"; with_fluentd = 1}; Invoke-Command -ScriptBlock ([scriptblock]::Create(". {$script} $(&{$args} @params)"))}
+
+When enabled, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then
 send these events to the HEC ingest endpoint determined by the ``realm = "<SPLUNK_REALM>"`` option.
 For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
