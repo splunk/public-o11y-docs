@@ -137,7 +137,7 @@ To use AlwaysOn Profiling, upgrade your .NET version to .NET Core 3.1 or .NET 5.
 None of the .NET Framework versions is supported.
 
 AlwaysOn Profiling data and logs don't appear in Splunk Observability Cloud
---------------------------------------------------------------------
+------------------------------------------------------------------------------
 
 Collector configuration issues might prevent AlwaysOn Profiling data and logs from appearing in Splunk Observability Cloud.
 

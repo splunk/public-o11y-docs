@@ -38,7 +38,7 @@ Required tokens
 You might need these Splunk tokens to configure Terraform:
 
 Splunk Observability Cloud user API access token (mandatory)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To obtain your :ref:`user API access token <admin-api-access-tokens>`: 
 

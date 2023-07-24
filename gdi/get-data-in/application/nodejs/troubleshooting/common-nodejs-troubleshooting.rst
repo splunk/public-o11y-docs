@@ -148,7 +148,7 @@ Unsupported Node version
 To use AlwaysOn Profiling, upgrade to Node version 16 or higher.
 
 AlwaysOn Profiling data and logs don't appear in Splunk Observability Cloud
---------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Collector configuration issues might prevent AlwaysOn Profiling data and logs from appearing in Splunk Observability Cloud.
 

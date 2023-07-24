@@ -205,7 +205,7 @@ To fix this, deactivate JSM or add the following block to the JSM policy file:
    };
 
 AlwaysOn Profiling data and logs don't appear in Splunk Observability Cloud
---------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 Collector configuration issues might prevent AlwaysOn Profiling data and logs from appearing in Splunk Observability Cloud.
 

@@ -80,7 +80,7 @@ Windows
          # Set up IIS instrumentation
          # IIS is restarted as a result
          Register-OpenTelemetryForIIS
-      
+
       .. code-tab:: shell Windows service
 
          # Set up your Windows Service instrumentation
@@ -158,17 +158,17 @@ To install the .NET automatic instrumentation on Windows hosts that are offline,
 #. Import the PowerShell script manually by running the following command:
 
    .. code-block:: powershell
-   
+
       # Make sure the Download path is correct
 
       Import-Module C:\Users\Administrator\Downloads\Splunk.OTel.DotNet.psm1
-   
+
    When prompted, enter ``R`` for ``Run Once``.
 
 #. Run the install command:
 
    .. code-block:: powershell
-   
+
       # Make sure the Download path is correct
 
       Install-OpenTelemetryCore -LocalPath "C:\Users\Administrator\Downloads\splunk-opentelemetry-dotnet-windows.zip"
@@ -176,7 +176,7 @@ To install the .NET automatic instrumentation on Windows hosts that are offline,
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
 Send data directly to Splunk Observability Cloud
----------------------------------------------
+---------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
@@ -196,7 +196,7 @@ To bypass the OTel Collector and send data directly to Splunk Observability Clou
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
 #. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
