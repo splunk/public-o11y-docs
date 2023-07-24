@@ -481,7 +481,7 @@ img.screenshot {
 /* what does this do? I changed the color to see what this does but I don't see any red in tue table*/
 
 table.docutils {
-    border: 3px solid #eb0d0d;
+    /*border: 2px solid navy; */
     -moz-box-shadow: 2px 2px 4px #eee;
     -webkit-box-shadow: 2px 2px 4px #eee;
     box-shadow: 2px 2px 4px #eee;
@@ -493,26 +493,26 @@ table.docutils {
 
 /* this seems to control the color and thickness of the line */
 
-/* Added line height for consistency --brs */
 
 table.docutils td, table.docutils th {
-    border: 2px solid #0be5a7;
+    border-top: 2px solid rgba(43, 43, 137, 0.546);
     padding: 0.25em 0.7em;
     line-height: 1.7em ;
     text-align: left; 
+    vertical-align: top;
 }
     tr:nth-child(even) {background-color: #f2f2f2;
 }
 
 table.field-list, table.footnote {
-    border: 10px solid #2a0e0e;
+    /*border: 1px solid #2a0e0e; */
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
 table.footnote {
-    margin: 15px 0;
+    margin: 1px 0;
     width: 100%;
     border: 1px solid #EEE;
     background: #FDFDFD;
