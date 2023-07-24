@@ -26,7 +26,7 @@ Instrument your iOS applications to get Real User Monitoring (RUM) data into Spl
 
 To generate all the basic installation commands for your environment and application, use the iOS Instrumentation guided setup. To access the iOS Instrumentation guided setup, follow these steps:
 
-1. Log in to Observability Cloud.
+1. Log in to Splunk Observability Cloud.
 
 2. Open the :new-page:`iOS Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/ios/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"ios"%7D>`. Optionally, you can navigate to the guided setup on your own:
    

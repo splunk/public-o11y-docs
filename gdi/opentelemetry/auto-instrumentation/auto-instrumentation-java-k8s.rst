@@ -149,7 +149,7 @@ See :ref:`advanced-java-otel-configuration` for the full list of supported envir
 Troubleshooting
 =======================
 
-If you activate auto instrumentation and you do not see any telemetry data in Observability Cloud APM, try the following steps:
+If you activate auto instrumentation and you do not see any telemetry data in Splunk Observability Cloud APM, try the following steps:
 
 - Check the Collector operator logs. Look for the pods in the ``splunk-otel-operator-system`` namespace, and then examine their logs:
 

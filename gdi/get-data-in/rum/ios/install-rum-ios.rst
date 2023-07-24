@@ -39,7 +39,7 @@ Before you instrument and configure Splunk RUM for your iOS application, underst
 
 :strong:`Tip:` To generate all the basic installation commands for your environment and application, use the iOS Instrumentation guided setup. To access the iOS Instrumentation guided setup, follow these steps:
 
-1. Log in to Observability Cloud.
+1. Log in to Splunk Observability Cloud.
 
 2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
@@ -126,9 +126,9 @@ Follow these steps to initialize the iOS RUM package.
          [builder setApplicationName:@"<your_app_name>"];
          [builder build];
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
-         1. Open the navigation menu in Observability Cloud.
+         1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username.
 
@@ -212,9 +212,9 @@ Initialize the crash reporting module with your configuration parameters:
       // Initialize crash reporting module after the iOS agent
       [SplunkRumCrashReporting start]
 
-* ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
+* ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
-      1. Open the navigation menu in Observability Cloud.
+      1. Open the navigation menu in Splunk Observability Cloud.
       2. Select :menuselection:`Settings`.
       3. Select your username. 
 

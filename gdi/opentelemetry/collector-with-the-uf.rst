@@ -11,9 +11,9 @@ Use the Splunk Universal Forwarder with the Collector
 Splunk Enterprise Cloud and Splunk Observability Cloud currently use different data collection agents:
 
 - Enterprise Cloud uses the :new-page:`Splunk Universal Forwarder (UF) <https://docs.splunk.com/Documentation/Forwarder>` to capture logs and some metrics, which are also stored as logs.
-- Observability Cloud uses OpenTelemetry to capture traces, metrics, and logs. Logs are currently captured through bundled Fluentd.
+- Splunk Observability Cloud uses OpenTelemetry to capture traces, metrics, and logs. Logs are currently captured through bundled Fluentd.
 
-You can manage your data ingestion manually by deploying the Splunk Distribution of OpenTelemetry Collector alongside the UF on each virtual machine (VM).This solution is applicable for VM environments for operating systems that are currently supported by both Observability Cloud and Enterprise and Cloud, running in common environments such as AWS EC2, GCE, Azure VMs, and VMWare.
+You can manage your data ingestion manually by deploying the Splunk Distribution of OpenTelemetry Collector alongside the UF on each virtual machine (VM).This solution is applicable for VM environments for operating systems that are currently supported by both Splunk Observability Cloud and Enterprise and Cloud, running in common environments such as AWS EC2, GCE, Azure VMs, and VMWare.
 
 .. note::
 
@@ -27,8 +27,8 @@ Benefits
 
 The benefits of using the Universal Forwarder with the Collector are:
 
-- You can use Observability Cloud alongside Enterprise or Enterprise Cloud without capturing and submitting any duplicate telemetry data.
-- When used with :ref:`Splunk Log Observer Connect <logs-intro-logconnect>`, you can take advantage of effectively all Observability Cloud logging functionality, including :ref:`Related Content <get-started-relatedcontent>`.
+- You can use Splunk Observability Cloud alongside Enterprise or Enterprise Cloud without capturing and submitting any duplicate telemetry data.
+- When used with :ref:`Splunk Log Observer Connect <logs-intro-logconnect>`, you can take advantage of effectively all Splunk Observability Cloud logging functionality, including :ref:`Related Content <get-started-relatedcontent>`.
 - You do not have to update existing UF deployments.
 
 Collect data with the Collector and Universal Forwarder
@@ -49,7 +49,7 @@ To collect data with the Collector and the UF:
       curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
       sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM -- SPLUNK_ACCESS_TOKEN --without-fluentd
 
-#. Ensure that the UF captures the fully qualified domain name (FQDN) of the host, which is used to identify hosts in Observability Cloud. The UF can already capture this, and its behavior is consistent with the Collector. To capture the FQDN:
+#. Ensure that the UF captures the fully qualified domain name (FQDN) of the host, which is used to identify hosts in Splunk Observability Cloud. The UF can already capture this, and its behavior is consistent with the Collector. To capture the FQDN:
 
    * From the ``$SPLUNK_HOME/etc/system/local/`` directory, open server.conf and verify that the following :new-page:`stanza <https://docs.splunk.com/Documentation/Splunk/latest/Admin/Serverconf#OVERVIEW>` is present:
    

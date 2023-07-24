@@ -152,7 +152,7 @@ Splunk offers the configuration management options described in this section.
 
 Ansible
 --------------------------
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
+Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
 
 .. _windows-chef:
 

@@ -18,7 +18,7 @@ Generate customized instructions using the guided setup
 
 To generate all the basic installation commands for your environment and application, use the .NET OpenTelemetry guided setup. To access the .NET OpenTelemetry guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
    #. In the navigation menu, select :menuselection:`Data Management`. 
@@ -175,12 +175,12 @@ To install the .NET automatic instrumentation on Windows hosts that are offline,
 
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
-Send data directly to Observability Cloud
+Send data directly to Splunk Observability Cloud
 ---------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-To bypass the OTel Collector and send data directly to Observability Cloud, set the following environment variables:
+To bypass the OTel Collector and send data directly to Splunk Observability Cloud, set the following environment variables:
 
 .. tabs::
 
@@ -196,9 +196,9 @@ To bypass the OTel Collector and send data directly to Observability Cloud, set 
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
