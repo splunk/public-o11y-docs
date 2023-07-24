@@ -34,27 +34,27 @@ Deepu reviews the errors by workflow
 
 Deepu reviews the errors by workflow and notices that the requests for the :strong:`frontend:/cart/checkout` workflow return a majority of root-cause errors. 
 
-..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-01.png
+..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-01-workflow.png 
     :width: 99%
     :alt: This screenshot shows the Tag Spotlight view of the payment service, which shows that the frontend:/cart/checkout workflow has the most errors
 
 .. _troubleshoot-workflows-filter:
 
-Deepu filters Tag Spotlight to find the subset to the traces where most errors occur
+Deepu filters Tag Spotlight to find the subset of traces where most errors occur
 =======================================================================================
 
-Because APM supports infinite cardinality, Deepu selects the :strong:`frontend:/cart/checkout` workflow and applies filters to show only data from traces. Deepu filters :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to view the tags to examine the subset of traces where the most errors occur:
+Because APM supports infinite cardinality, Deepu adds the :strong:`frontend:/cart/checkout` workflow the filter and applies additional filters for :strong:`version` to ``v350.10`` and :strong:`Kind` to ``SERVER`` to examine the subset of traces where the most errors occur:
 
-..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-02.png
+..  image:: /_images/apm/apm-use-cases/troubleshoot-business-workflows-02-add-filters.gif 
     :width: 99%
-    :alt: This screenshot shows the Tag Spotlight view of the frontend:/cart/checkout workflow filtered by Version and Kind.
+    :alt: This animated gif shows the steps to add filters for frontend:/cart/checkout workflow filtered by Version and Kind in Tag Spotlight.
 
 .. _troubleshoot-workflows-trace:
 
 Deepu opens an example trace
 ==============================
 
-Because Splunk APM stores all traces without sampling, Deepu clicks the peak of errors on the chart to see example traces of those tag combinations at that timestamp. Deepu finds that the requests from :strong:`checkoutservice` to :strong:`paymentservice` are failing. 
+Because Splunk APM stores all traces without sampling, Deepu selects the peak of errors on the chart to see example traces of those tag combinations at that timestamp. Deepu finds that the requests from :strong:`checkoutservice` to :strong:`paymentservice` are failing. 
 
 ..  image:: /_images/apm/apm-use-cases/WorkflowUseCase_Exemplars.png
     :width: 99%
