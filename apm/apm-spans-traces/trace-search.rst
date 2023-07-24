@@ -21,7 +21,7 @@ Use these steps to navigate to :guilabel:`Trace Search`:
     * Environment
     * Workflow
     * Services
-    * Custom filters
+    * Tags
 #. (Optional) Select a minimum or maximum trace duration and toggle the :guilabel:`Errors Only` switch to include only traces containing errors in your search. 
 #. (Optional) Select the header of the :guilabel:`Start time` or :guilabel:`Duration` column to sort your traces by that field. 
 
