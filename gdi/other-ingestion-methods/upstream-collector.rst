@@ -95,7 +95,7 @@ To send data to Splunk Observability Cloud you can use the Collector from the Op
 .. _gdi-upstream-collector:
 
 Sample configuration for Splunk Observability Cloud
-==================================================
+======================================================
 
 The following example shows how to configure the upstream Collector to send metrics and traces to Splunk Observability Cloud:
 
