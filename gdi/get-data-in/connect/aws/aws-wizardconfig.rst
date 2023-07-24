@@ -9,7 +9,7 @@ Connect to AWS using the guided setup in Splunk Observability Cloud
 
 If you have Administrator privileges for Splunk Observability Cloud and your Amazon Web Services (AWS) account, you can use the UI guided setup to create an integration to connect to AWS, and configure metrics and logs collection.
 
-Check :ref:`get-started-aws` for prerequisites, information on ingest methods, and other ways to connect Observability Cloud to AWS.
+Check :ref:`get-started-aws` for prerequisites, information on ingest methods, and other ways to connect Splunk Observability Cloud to AWS.
 
 .. _aws-wizard:
 
@@ -72,7 +72,7 @@ Prepare your AWS account
 
 In this step, switch to your AWS Console to prepare for authentication.
 
-On this screen Observability Cloud gives you the AWS IAM policy JSON snippet, your Observability Cloud account ID and your External ID, which you'll need to define your authenticaton policies in the console.
+On this screen, Splunk Observability Cloud gives you the AWS IAM policy JSON snippet, your Splunk Observability Cloud account ID and your External ID, which you'll need to define your authenticaton policies in the console.
 
 See more details in :ref:`aws-authentication`.
 
@@ -111,7 +111,7 @@ By default, Splunk Observability Cloud will bring in data from all supported AWS
   - :ref:`AWS regions <aws-regions>` to fetch data from
   - AWS services to fetch data from
 
-- In the :strong:`Data Management` menu in Observability Cloud, edit any integration to limit data import.
+- In the :strong:`Data Management` menu in Splunk Observability Cloud, edit any integration to limit data import.
 
   .. image:: /_images/gdi/aws-edit-data-limit.png
     :width: 55%
@@ -126,7 +126,7 @@ Select a :ref:`CloudFormation template <aws-cloudformation>` to collect logs or 
 Next steps
 ================
 
-After you connect Splunk Observability Cloud with AWS, you can use Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
+After you connect Splunk Observability Cloud with AWS, you can use Splunk Observability Cloud to track a series of metrics and analyze your AWS data in real time. 
 
 - See the AWS official documentation for a list of the available AWS resources.
 - See :ref:`how to leverage data from integration with AWS <aws-post-install>` for more information.

@@ -90,7 +90,7 @@ You have two options to update your instrumentation entry point:
 
   node -r @splunk/otel/instrument <your-app.js>
 
-.. note:: To export traces directly to Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
+.. note:: To export traces directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-nodejs`.
 
 .. _migrate-settings-nodejs-agent:
 

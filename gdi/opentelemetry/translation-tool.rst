@@ -8,7 +8,7 @@ Configuration translation rules and tool
 .. meta::
       :description: Use this tool to convert a SignalFX Smart Agent YAML configuration file into the Splunk Distribution of OpenTelemetry Collector YAML configuration file.
 
-``translatesfx`` is a command-line tool provided by Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector.  
+``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector.  
 
 .. caution::
 

@@ -408,7 +408,7 @@ App start monitoring produces spans with the name ``AppStart`` and the following
 Location data
 =============
 
-If you choose to set the latitude and longitude for location data by using the Splunk RUM for iOS APIs, Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
+If you choose to set the latitude and longitude for location data by using the Splunk RUM for iOS APIs, Splunk Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
 
 .. list-table::
    :widths: 20 10 70
