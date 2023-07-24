@@ -200,7 +200,7 @@ Splunk provides a guided setup to deploy the Splunk Distribution of OpenTelemetr
 
 Ansible
 -------------------
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Linux machines and send that data to Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
+Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Linux machines and send that data to Splunk Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
 
 .. _linux-chef:
 

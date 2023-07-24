@@ -36,7 +36,7 @@ Before you instrument and configure Splunk RUM for your React Native application
 
 :strong:`Tip:` To generate all the basic installation commands for your environment and application, use the React Native Instrumentation guided setup. To access the React Native Instrumentation guided setup, follow these steps:
 
-1. Log in to Observability Cloud.
+1. Log in to Splunk Observability Cloud.
 
 2. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
@@ -69,7 +69,7 @@ Follow these steps to import and initialize the React Native RUM package.
 
       (cd ios && pod install)
 
-2. Edit the initialization parameters to set the Observability Cloud realm, RUM access token, and basic attributes:
+2. Edit the initialization parameters to set the Splunk Observability Cloud realm, RUM access token, and basic attributes:
 
    .. code:: javascript
 

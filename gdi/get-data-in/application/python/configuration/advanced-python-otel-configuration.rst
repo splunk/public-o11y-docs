@@ -24,7 +24,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - Environment variable
      - Description
    * - ``SPLUNK_ACCESS_TOKEN``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
+     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-python`. The default value is ``true``.
    * - ``OTEL_METRICS_ENABLED``

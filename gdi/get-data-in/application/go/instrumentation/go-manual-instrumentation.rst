@@ -87,7 +87,7 @@ See the :new-page:`OpenTelemetry Metrics API docs <https://pkg.go.dev/go.opentel
 OpenTelemetry Go instrument types
 ----------------------------------------
 
-The following table shows the equivalences between OpenTelemetry instrument types and Observability Cloud metric types.
+The following table shows the equivalences between OpenTelemetry instrument types and Splunk Observability Cloud metric types.
 
 .. list-table:: 
    :header-rows: 1
@@ -95,13 +95,13 @@ The following table shows the equivalences between OpenTelemetry instrument type
    :width: 100%
 
    * - OpenTelemetry Go
-     - Observability Cloud
+     - Splunk Observability Cloud
 
    * - ``Int64Counter``
      - Cumulative counter
 
    * - ``Int64Histogram``
-     - Histogram types generate three separate metrics in Observability Cloud:
+     - Histogram types generate three separate metrics in Splunk Observability Cloud:
 
          * ``_count`` (Cumulative counter), which represents the item count.
          * ``_sum`` (Cumulative counter), which represents the sum of all values.
@@ -127,7 +127,7 @@ The following table shows the equivalences between OpenTelemetry instrument type
      - Cumulative counter
 
    * - ``Float64Histogram``
-     - Histogram types generate the following separate metrics in Observability Cloud:
+     - Histogram types generate the following separate metrics in Splunk Observability Cloud:
 
          * ``_count`` (Cumulative counter), which represents the total count of data points.
          * ``_sum`` (Cumulative counter), which represents the sum of all values in the histogram.

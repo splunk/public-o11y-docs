@@ -22,7 +22,7 @@ This integration is available for Kubernetes and Linux.
 
 ### Verify the installation
 
-To verify the installation, send statsd metrics locally with `netcat` as follows, then verify in Observability Cloud that the metric arrived:
+To verify the installation, send statsd metrics locally with `netcat` as follows, then verify in Splunk Observability Cloud that the metric arrived:
 
 ```
 $ echo "statsd.test:1|g" | nc -w 1 -u 127.0.0.1 8125
@@ -59,19 +59,19 @@ service:
 
 The following table shows the configuration options for the `statsd` monitor:
 
-| Option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `listenAddress` | No | `string` | The host or address on which to bind the UDP listener that accepts statsd datagrams. The default value is `localhost`. |
-| `listenPort` | No | `integer` | The port on which to listen for statsd messages. The default value is `8125`. |
-| `metricPrefix` | No | `string` | A prefix in metric names that needs to be removed before metric name conversion. |
-| `converters` | No | `list of objects (see below)` | A list converters to convert statsd metric names into SignalFx metric names and dimensions. |
+| Option          | Required | Type                          | Description                                                                                                            |
+| --------------- | -------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `listenAddress` | No       | `string`                      | The host or address on which to bind the UDP listener that accepts statsd datagrams. The default value is `localhost`. |
+| `listenPort`    | No       | `integer`                     | The port on which to listen for statsd messages. The default value is `8125`.                                          |
+| `metricPrefix`  | No       | `string`                      | A prefix in metric names that needs to be removed before metric name conversion.                                       |
+| `converters`    | No       | `list of objects (see below)` | A list converters to convert statsd metric names into SignalFx metric names and dimensions.                            |
 
 The nested `converters` configuration object has the following fields:
 
-| Option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `pattern` | No | `string` | A pattern to match against statsd metric names. |
-| `metricName` | No | `string` | A format to compose a metric name to report to Splunk Observability Cloud. |
+| Option       | Required | Type     | Description                                                                |
+| ------------ | -------- | -------- | -------------------------------------------------------------------------- |
+| `pattern`    | No       | `string` | A pattern to match against statsd metric names.                            |
+| `metricName` | No       | `string` | A format to compose a metric name to report to Splunk Observability Cloud. |
 
 The Smart Agent and Collector don't do any built-in filtering of metrics that come out of this monitor.
 

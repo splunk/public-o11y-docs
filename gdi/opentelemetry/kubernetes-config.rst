@@ -66,7 +66,7 @@ For example:
 Configure the deployment environment
 ===========================================
 
-If applicable, use the ``environment`` parameter to specify an additional ``deployment.environment`` attribute to be added to all telemetry data. This attribute helps Observability Cloud users investigate data coming from different sources separately. Example values include ``development``, ``staging``, and ``production``.
+If applicable, use the ``environment`` parameter to specify an additional ``deployment.environment`` attribute to be added to all telemetry data. This attribute helps Splunk Observability Cloud users investigate data coming from different sources separately. Example values include ``development``, ``staging``, and ``production``.
 
 .. code-block:: yaml
 
@@ -148,7 +148,7 @@ For example, use the following configuration to activate automatic detection of 
 Deactivate particular types of telemetry
 ============================================
 
-By default, OpenTelemetry sends only metrics and traces to Observability Cloud and sends only logs to Splunk Platform. You can activate or deactivate any kind of telemetry data collection for a specific destination. For example, with the following configuration, the Collector sends all collected telemetry data to Observability Cloud and Splunk Platform, assuming you've properly configured them.
+By default, OpenTelemetry sends only metrics and traces to Splunk Observability Cloud and sends only logs to Splunk Platform. You can activate or deactivate any kind of telemetry data collection for a specific destination. For example, with the following configuration, the Collector sends all collected telemetry data to Splunk Observability Cloud and Splunk Platform, assuming you've properly configured them.
 
 .. code-block:: yaml
 

@@ -33,8 +33,6 @@ The Splunk Distribution of OpenTelemetry Go can instrument the following librari
      - :new-page:`httptrace <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace>`
    * - runtime
      - :new-page:`runtime <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/runtime/>`
-   * - github.com/astaxie/beego
-     - :new-page:`otelbeego <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/astaxie/beego/otelbeego>`
    * - github.com/aws/aws-sdk-go-v2
      - :new-page:`otelaws <https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-sdk-go-v2/otelaws>`
    * - github.com/bradfitz/gomemcache
@@ -106,7 +104,7 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
 
 The Splunk Distribution of OpenTelemetry Go exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs.
 
-To send application traces and spans to Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
+To send application traces and spans to Splunk Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
 
 - Splunk OTel Collector for Linux. See :ref:`otel-install-linux`.
 - Splunk OTel Collector for Windows. See :ref:`otel-install-windows`.
