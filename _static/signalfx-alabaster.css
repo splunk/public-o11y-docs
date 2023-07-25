@@ -490,7 +490,7 @@ table.docutils {
     -moz-box-shadow: 2px 2px 4px #eee;
     -webkit-box-shadow: 2px 2px 4px #eee;
     box-shadow: 2px 2px 4px #eee;
-    margin-left: 28px;
+    margin-left: 15px;
     /*word-break: break-word;*/
     /*margin-bottom: 20px;*/
 }
@@ -509,6 +509,10 @@ table.docutils td, table.docutils th {
     vertical-align: top;
 
 }
+    
+    thead {  
+        background-color: #999;
+        color: white;}
 
     tr:nth-child(even) {background-color: #f2f2f2;  
 }
