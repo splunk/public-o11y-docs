@@ -245,7 +245,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Contribute to the documentation <references/contribute>
+   Contribute to our documentation <references/contribute>
 
 .. toctree::
    :maxdepth:   3
