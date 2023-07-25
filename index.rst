@@ -240,6 +240,11 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   Contribute to the documentation <references/contribute>
+   
+.. toctree::
+   :maxdepth:   3
+
    Support <get-started/support>
 
 .. toctree::
@@ -811,7 +816,3 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Glossary <references/glossary>
 
-.. toctree::
-   :maxdepth:   3
-
-   Contribute to the documentation <references/contribute>
