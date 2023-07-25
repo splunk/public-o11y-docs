@@ -19,11 +19,6 @@ Introduction to Splunk Observability Cloud for Mobile
 Splunk Observability Cloud for Mobile is an iOS and Android companion mobile app to Splunk Observability Cloud. You can use Splunk Observability Cloud for Mobile to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards.
 
 
-
-========================================================
-Get started with Splunk Observability Cloud for Mobile
-========================================================
-
 For instructions on how to get started with Splunk Observability Cloud for Mobile, see :ref:`Download Splunk Observability Cloud for Mobile <download-mobile>`.
 
 .. raw:: html
