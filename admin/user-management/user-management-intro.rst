@@ -15,6 +15,7 @@ Manage users and teams
   
 
 
+Admininstrators can manage user access for their organization and create teams to coordinate teamwork. Perform the following tasks to set up your teams and provide team members with resources that can help streamline their teamwork.
 
 .. list-table::
    :header-rows: 1

@@ -15,7 +15,7 @@ Create and manage teams in Splunk Observability Cloud
    Manage team notifications <team-notifications>
    Link detectors and dashboards to teams <associate-team>
 
-Use Splunk Observability Cloud teams to coordinate teamwork. Perform the following tasks to set up your teams and provide team members with resources that can help streamline their teamwork:
+Use Splunk Observability Cloud teams to coordinate teamwork. Perform the following tasks to set up your teams and provide team members with resources that can help streamline their teamwork.
 
 .. raw:: html
 
