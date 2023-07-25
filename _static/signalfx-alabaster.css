@@ -456,9 +456,13 @@ pre, tt, code {
     display: block;
 }
 
+/* what is the difference between img and img.screenshot? */
+
 img {
     margin-bottom: 20px !important;
 }
+
+/* this is inline so we want to keep that as is with the margin directive there */ 
 
 .inline-image {
     margin-bottom: 0px !important;
@@ -472,16 +476,17 @@ tt.descname, code.descname {
     padding-right: 0.08em;
 }
 
+/* what is the difference between img. and img.screenshot? */
+
 img.screenshot {
     -moz-box-shadow: 2px 2px 4px #eee;
     -webkit-box-shadow: 2px 2px 4px #eee;
     box-shadow: 2px 2px 4px #eee;
+    margin-bottom: 15px !important;
 }
 
-/* what does this do? I changed the color to see what this does but I don't see any red in tue table*/
 
 table.docutils {
-    /*border: 2px solid navy; */
     -moz-box-shadow: 2px 2px 4px #eee;
     -webkit-box-shadow: 2px 2px 4px #eee;
     box-shadow: 2px 2px 4px #eee;
@@ -495,14 +500,19 @@ table.docutils {
 
 
 table.docutils td, table.docutils th {
-    border-top: 2px solid rgba(43, 43, 137, 0.546);
+    border-style: 2px solid rgba(43, 43, 137, 0.546);
+    border-bottom-style: none; 
+    border-top-style: none;
     padding: 0.25em 0.7em;
     line-height: 1.7em ;
     text-align: left; 
     vertical-align: top;
+
 }
-    tr:nth-child(even) {background-color: #f2f2f2;
+
+    tr:nth-child(even) {background-color: #f2f2f2;  
 }
+
 
 table.field-list, table.footnote {
     /*border: 1px solid #2a0e0e; */
