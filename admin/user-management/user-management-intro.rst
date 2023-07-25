@@ -22,7 +22,7 @@ Manage users and teams
    * - How do I?
      - Documentation
    * - Create or delete users, request admin access, or look up when a user logged in.
-     - :ref:`admin-manage-users1`
+     - :ref:`admin-manage-users`
    * - Create and manage teams.
      - :ref:`admin-manage-teams`
    * - Manage team landing pages.
