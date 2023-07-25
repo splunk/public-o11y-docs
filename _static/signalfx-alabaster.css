@@ -510,7 +510,8 @@ table.docutils td, table.docutils th {
     
     thead {  
         background-color: #999;
-        color: white;}
+        color: white;
+    }
 
     tr:nth-child(even) {background-color: #f2f2f2;  
 }
