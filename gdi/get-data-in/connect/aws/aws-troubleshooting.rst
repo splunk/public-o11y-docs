@@ -86,9 +86,9 @@ Causes
 ^^^^^^^^
 
 If you use the AWS Organizations' :new-page:`Service control policies <https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html>` or :new-page:`Permission boundaries for IAM entities <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html>`, they 
-might impact the AWS IAM policy you're using to connect to Observability Cloud. 
+might impact the AWS IAM policy you're using to connect to Splunk Observability Cloud. 
 
-If you modified the default IAM policy while setting up an integration between Observability Cloud and AWS, then your IAM policy does not list namespaces that were removed as not needed for the original integration, and as a result Observability Cloud ignores metrics for those namespaces.
+If you modified the default IAM policy while setting up an integration between Splunk Observability Cloud and AWS, then your IAM policy does not list namespaces that were removed as not needed for the original integration, and as a result, Splunk Observability Cloud ignores metrics for those namespaces.
 
 Solution
 ^^^^^^^^^

@@ -10,7 +10,7 @@ AWS authentication and supported regions
 
 To connect your AWS services to Spulnk Observability Cloud you need: 
 
-- Administrator privileges in Observability Cloud and your AWS accounts. 
+- Administrator privileges in Splunk Observability Cloud and your AWS accounts. 
 - :ref:`AWS authentication rights <aws-authentication>`. You can authenticate either with an :ref:`External Id (recommended) <aws-authentication>` or using a :ref:`security token <aws-authentication-token>`.
 
 .. _aws-authentication:
@@ -18,11 +18,11 @@ To connect your AWS services to Spulnk Observability Cloud you need:
 Authenticate in AWS using an External Id (recommended)
 ============================================================
 
-In AWS you manage access by creating policies and attaching them to IAM identities or AWS resources. A policy is a JSON object that associates an identity or resource with access permissions. When a user (in this case, your account in Observability Cloud) makes a request, AWS evaluates the associated policy and determines whether the request is allowed or denied. 
+In AWS you manage access by creating policies and attaching them to IAM identities or AWS resources. A policy is a JSON object that associates an identity or resource with access permissions. When a user (in this case, your account in Splunk Observability Cloud) makes a request, AWS evaluates the associated policy and determines whether the request is allowed or denied. 
 
 For most AWS regions, use :guilabel:`External ID` to authenticate. Follow these steps: 
 
-* An :strong:`External ID` for Observability Cloud. An external ID is a random string used to establish a trust relationship between Observability Cloud and your AWS account. It's automatically generated for you when you create a new AWS integration in Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
+* An :strong:`External ID` for Splunk Observability Cloud. An external ID is a random string used to establish a trust relationship between Splunk Observability Cloud and your AWS account. It's automatically generated for you when you create a new AWS integration in Splunk Observability Cloud. See :new-page:`How to use an external ID when granting access to your AWS resources to a third party <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html>` in AWS documentation.
 * An :ref:`Identity and Access Management (IAM) policy <aws-iam-policy>`. 
 * An :ref:`AWS IAM role <aws-iam-role>`. 
 
@@ -31,7 +31,7 @@ For most AWS regions, use :guilabel:`External ID` to authenticate. Follow these 
 Create an AWS IAM policy
 -------------------------------------------
 
-Observability Cloud refers to an IAM policy to collect data from every supported AWS service. 
+Splunk Observability Cloud refers to an IAM policy to collect data from every supported AWS service. 
 
 To create a new AWS IAM policy, follow these steps:
 
@@ -77,9 +77,9 @@ Supported AWS regions
 If you want to activate a specific optional region, you need to do it before adding it to the integration. Make sure you've activated the optional regions you'll need in your AWS console first. Regular regions are activated in AWS by default.
 
   * If you're using the :ref:`UI guided setup <aws-wizardconfig>` to create the integration, you'll be prompted to select which AWS regions you work with. 
-  * If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Observability Cloud activates all regular regions. If you add the ``ec2:DescribeRegions`` permission to your AWS policy, optional regions you've activated on your AWS account are activated in Observability Cloud as well. 
+  * If you're :ref:`using the API <get-configapi>` and supply an empty list in an API call, Splunk Observability Cloud activates all regular regions. If you add the ``ec2:DescribeRegions`` permission to your AWS policy, optional regions you've activated on your AWS account are activated in Splunk Observability Cloud as well. 
 
-Observability Cloud supports the following AWS regions:
+Splunk Observability Cloud supports the following AWS regions:
 
 Regular
 -------------------------------------------
