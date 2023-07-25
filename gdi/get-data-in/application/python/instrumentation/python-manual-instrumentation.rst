@@ -16,7 +16,27 @@ Create custom traces
 
 To create custom spans and traces, follow these steps:
 
-1. Import the OpenTelemetry API:
+1. If you can't use the ``splunk-py-trace`` command, import and configure ``start_tracing``:
+   .. code:: python
+
+      from splunk_otel.tracing import start_tracing
+
+      start_tracing()
+
+      # Also accepts optional settings. For example:
+      #
+      # start_tracing(
+      #   service_name='<my-python-service>',
+      #   span_exporter_factories=[OTLPSpanExporter]
+      #   access_token='<access_token>',
+      #   max_attr_length=12000,
+      #   trace_response_header_enabled=True,
+      #   resource_attributes={
+      #    'service.version': '<your_version>',
+      #    'deployment.environment': '<your_environment>',
+      #  })
+
+   As an alternative, you can also import the OpenTelemetry API:
 
    .. code:: python
 
@@ -112,7 +132,7 @@ To create custom metrics, follow the steps depending on the type of metric instr
 
    .. tab:: Asynchronous instruments
 
-      Asynchronous instruments, like asynchronous gauges, provide callback functions that you run on demand. An example of asynchronous instrument is a humidity sensor that is polled every minute for new data. They don't support context propagation.
+      Asynchronous instruments, like asynchronous gauges, provide callback functions that the OTel SDK runs in the background. An example of asynchronous instrument is a humidity sensor that is polled every minute for new data. They don't support context propagation.
 
       1. Import the OpenTelemetry API:
 
@@ -126,9 +146,9 @@ To create custom metrics, follow the steps depending on the type of metric instr
          .. code:: python
 
             def get_temp_data(options: CallbackOptions) -> Iterable[Temperature]:
-            r = requests.get(
-               "http://weather/data/city", timeout=options.timeout_millis / 10**3
-            )
+               r = requests.get(
+                  "http://weather/data/city", timeout=options.timeout_millis / 10**3
+               )
             for metadata in r.json():
                yield Temperature(
                      metadata["temperature"], {"city.name": metadata["temperature"]}
