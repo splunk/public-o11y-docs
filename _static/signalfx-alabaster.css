@@ -496,8 +496,6 @@ table.docutils {
 }
 
 
-/* this seems to control the color and thickness of the line */
-
 
 table.docutils td, table.docutils th {
     border-style: 2px solid rgba(43, 43, 137, 0.546);
