@@ -240,8 +240,13 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
+   About Mobile TOGGLE <get-started/intro-to-mobile>
+
+.. toctree::
+   :maxdepth:   3
+
    Contribute to the documentation <references/contribute>
-   
+
 .. toctree::
    :maxdepth:   3
 
@@ -743,27 +748,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Manage notifications from Incident Intelligence TOGGLE <incident-intelligence/manage-notifications/manage-notifications.rst>
-
-.. toctree::
-   :caption: Mobile
-   :maxdepth:   3
-
-   mobile/intro-to-mobile
-
-.. toctree::
-   :maxdepth:   3
-
-   Download the app <mobile/download-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   View dashboards and alerts <mobile/use-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   mobile/notification-preferences-mobile
 
 
 .. toctree::
