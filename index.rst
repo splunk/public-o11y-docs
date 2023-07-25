@@ -279,6 +279,44 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Collaborate on observability <splunkplatform/practice-reliability/collaboration>
 
 .. toctree::
+   :caption: Administer Observability Cloud
+   :maxdepth:   3
+
+   admin/admin
+
+.. toctree::
+   :maxdepth:   3
+
+   Authentication and Security TOGGLE <admin/authentication/authentication-intro>
+
+.. toctree::
+   :maxdepth:   3
+
+   User and team management TOGGLE <admin/user-management/user-management-intro>
+
+.. toctree::
+   :hidden:
+   :maxdepth:   3
+
+   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
+
+.. toctree::
+   :maxdepth:   3
+
+   View organization metrics <admin/org-metrics>
+
+.. toctree::
+   :maxdepth:   3
+
+   Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
+
+.. toctree::
+   :maxdepth:   3
+
+   Org reference info TOGGLE <admin/references/org-info>
+
+
+.. toctree::
    :caption: Get your data in
    :maxdepth:   3
 
@@ -748,44 +786,6 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Manage notifications from Incident Intelligence TOGGLE <incident-intelligence/manage-notifications/manage-notifications.rst>
-
-
-.. toctree::
-   :caption: Administer Observability Cloud
-   :maxdepth:   3
-
-   admin/admin
-
-.. toctree::
-   :maxdepth:   3
-
-   Authentication and Security TOGGLE <admin/authentication/authentication-intro>
-
-.. toctree::
-   :maxdepth:   3
-
-   User and team management TOGGLE <admin/user-management/user-management-intro>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
-
-.. toctree::
-   :maxdepth:   3
-
-   View organization metrics <admin/org-metrics>
-
-.. toctree::
-   :maxdepth:   3
-
-   Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
-
-.. toctree::
-   :maxdepth:   3
-
-   Org reference info TOGGLE <admin/references/org-info>
 
 
 .. toctree::
