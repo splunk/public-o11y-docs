@@ -31,6 +31,8 @@ See also other configuration options:
 * :ref:`otel-tags`
 * :ref:`configure-remove`
 
+.. note:: Splunk Observability Cloud also offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
+
 .. _otel-config-options:
 
 .. raw:: html

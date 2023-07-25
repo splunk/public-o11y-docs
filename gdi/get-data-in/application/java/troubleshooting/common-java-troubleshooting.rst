@@ -7,7 +7,7 @@ Troubleshoot Java instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented Java application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a Java application using the Splunk Distribution of OpenTelemetry Java and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a Java application using the Splunk Distribution of OpenTelemetry Java and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-java-troubleshooting:
 
@@ -113,7 +113,7 @@ To troubleshoot the lack of connectivity between the OTLP exporter and the OTel 
 401 error when sending spans
 --------------------------------------------------------
 
-If you send traces directly to Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
+If you send traces directly to Splunk Observability Cloud and receive a 401 error code, the authentication token specified in ``SPLUNK_ACCESS_TOKEN`` is invalid. The following are possible reasons:
 
 - The value is null.
 - The value is not a well-formed token.
@@ -204,8 +204,8 @@ To fix this, deactivate JSM or add the following block to the JSM policy file:
       permission java.security.AllPermission;
    };
 
-AlwaysOn Profiling data and logs don't appear in Observability Cloud
---------------------------------------------------------------------
+AlwaysOn Profiling data and logs don't appear in Splunk Observability Cloud
+----------------------------------------------------------------------------
 
 Collector configuration issues might prevent AlwaysOn Profiling data and logs from appearing in Splunk Observability Cloud.
 

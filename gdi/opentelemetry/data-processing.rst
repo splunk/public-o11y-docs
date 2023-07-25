@@ -9,7 +9,7 @@ Process your data with pipelines
 
 A pipeline defines the path the ingested data follows in the Collector, starting from reception, then further processing or modification, and finally when data exits the Collector through exporters. 
 
-Pipelines operate on three data types: logs, traces, and metrics. To learn more about data in Observability Cloud, see :ref:`data-model`.
+Pipelines operate on three data types: logs, traces, and metrics. To learn more about data in Splunk Observability Cloud, see :ref:`data-model`.
 
 Define the pipeline
 =========================================
@@ -113,7 +113,7 @@ Fields are name/value pairs added to log records. Each record contains two kinds
 Next steps: See and manage the data you ingested
 ==================================================================================
 
-After you've ingested and processed your data using the Collector, you can see the final, exported version in Observability Cloud. 
+After you've ingested and processed your data using the Collector, you can see the final, exported version in Splunk Observability Cloud. 
 
 See and manage logs
 ---------------------------------------
@@ -125,7 +125,7 @@ To see and manage your logs, use :ref:`lo-connect-landing`.
 See and manage metrics
 ---------------------------------------
 
-Observability Cloud offers several tools to track and manage your metrics:
+Splunk Observability Cloud offers several tools to track and manage your metrics:
 
 * :ref:`metrics-finder-and-metadata-catalog`.
 * See :ref:`metrics-pipeline` to manage metrics. 

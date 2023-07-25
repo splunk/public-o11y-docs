@@ -27,7 +27,7 @@ Do the following steps to migrate from the Smart Agent to the Collector:
 
 Deploy the Collector in a non-production environment, for example, a development host or VM or a Kubernetes cluster in staging. The environment needs to be a copy or identical to your production environment.
 
-Navigate to your instance of Observability Cloud and select :menuselection:`Data Management` in the navigation bar. Choose the platform you would like to deploy the Collector to.
+Navigate to your instance of Splunk Observability Cloud and select :menuselection:`Data Management` in the navigation bar. Choose the platform you would like to deploy the Collector to.
 
 .. image:: /_images/gdi/3886-choose-your-platform.png
    :width: 99%
@@ -244,7 +244,7 @@ The following is an example YAML configuration file with default values where ap
 4. Translate the Smart Agent configuration file using translatesfx
 =====================================================================================
 
-``translatesfx`` is a command-line tool provided by Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. To learn how to use it, see :ref:`Configuration translation tool <otel-translation-tool>`.
+``translatesfx`` is a command-line tool provided by Splunk Observability Cloud that helps you translate your existing Smart Agent YAML configuration file into a configuration that can be used by the Collector. To learn how to use it, see :ref:`Configuration translation tool <otel-translation-tool>`.
 
 .. _estimate-sizing:
 
@@ -268,7 +268,7 @@ Note that this addition to your Smart Agent configuration file is only necessary
 
 After the configuration file is updated, restart the Smart Agent.
 
-You can then use the ``sfxagent.datapoints_sent`` and ``sfxagent.trace_spans_sent`` metrics to estimate the number of data points and spans being sent to Observability Cloud respectively. You can plot them on a dashboard and filter based on dimensions to ascertain the total per cluster or host.
+You can then use the ``sfxagent.datapoints_sent`` and ``sfxagent.trace_spans_sent`` metrics to estimate the number of data points and spans being sent to Splunk Observability Cloud respectively. You can plot them on a dashboard and filter based on dimensions to ascertain the total per cluster or host.
 
 .. note::
    The sizing recommendation for logs also accounts for td-agent (Fluentd) that is bundled with the Collector.
@@ -334,7 +334,7 @@ After the Collector is restarted successfully, :ref:`validate the deployment <va
 7. Deploy the Collector to a production host using the updated configuration file
 =============================================================================================
 
-After successfully deploying the Collector to a non-production environment and verifying that data is getting into Observability Cloud as expected, as a first step, stop and uninstall the Smart Agent from a single production host or VM to begin the migration. Follow the commands below for each respective environment:
+After successfully deploying the Collector to a non-production environment and verifying that data is getting into Splunk Observability Cloud as expected, as a first step, stop and uninstall the Smart Agent from a single production host or VM to begin the migration. Follow the commands below for each respective environment:
 
 On Linux:
 

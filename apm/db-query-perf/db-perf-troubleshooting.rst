@@ -28,8 +28,8 @@ No supported databases available
 
 If you open Database Query Performance and notice there are no supported databases available, check the following:
 
-- Ensure you have one or more of the types of SQL databases listed in :ref:`supported-dbs` in your system.
-- Try adjusting the Environment, Workflow, Service, or Tag filters in the filter bar to bring databases into view.
+- Ensure you have 1 or more of the types of SQL databases listed in :ref:`supported-dbs` in your system.
+- Filter by environment, workflow, service or tags bring databases into view.
 - Ensure you are using the most recent instrumentation library version to make sure the database-related span tags are being ingested. If necessary, upgrade the instrumentation library you're using. 
 
 .. _tms-limits-exceeded:

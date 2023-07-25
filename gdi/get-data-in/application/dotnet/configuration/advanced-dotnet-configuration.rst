@@ -86,7 +86,7 @@ The following settings control trace exporters and their endpoints:
    * - Setting
      - Description
    * - ``SIGNALFX_ACCESS_TOKEN``
-     - Splunk Observability Cloud access token for your organization. The token activates sending traces directly to the Observability Cloud ingest endpoint. To obtain an access token, see :ref:`admin-api-access-tokens`.
+     - Splunk Observability Cloud access token for your organization. The token activates sending traces directly to the Splunk Observability Cloud ingest endpoint. To obtain an access token, see :ref:`admin-api-access-tokens`.
    * - ``SIGNALFX_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, metrics are sent to ``https://ingest.<realm>.signalfx.com/v2/datapoint`` and traces are sent to ``https://ingest.<realm>.signalfx.com/v2/trace``.
    * - ``SIGNALFX_ENDPOINT_URL``
