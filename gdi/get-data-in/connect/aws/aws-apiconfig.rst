@@ -277,7 +277,6 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
         "Action": [
           "apigateway:GET",
           "autoscaling:DescribeAutoScalingGroups",
-          "cassandra:Select",
           "cloudformation:ListResources",
           "cloudformation:GetResource",
           "cloudfront:GetDistributionConfig",
