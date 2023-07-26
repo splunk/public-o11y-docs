@@ -73,28 +73,27 @@ If you can't find telemetry for your web app in Splunk RUM, try the following:
 * Make sure that the values of ``rumAccessToken`` and ``realm`` are defined and correct.
    * The RUM token must be active and part of the org you are trying to send data to.
    * The realm must be the same as your organization's realm.
+* Make sure you're initializing the agent synchronously and as early as possible. See :ref:`loading-initializing_browser-rum`.
+* If your app is a single-page application (SPA), see :ref:`browser-rum-spas`.
 
 To find the realm name of your account, follow these steps:
 
 1. Open the navigation menu in Splunk Observability Cloud.
 2. Select :menuselection:`Settings`.
-3. Select your username. 
+3. Select your username.
 
 The realm name appears in the :guilabel:`Organizations` section.
 
 If you've defined a custom ``beaconEndpoint``, make sure the value is correct.
 
-.. _browser-site-crash:
 
-Instrumented web application has issues
-============================================
+.. _browser-ie:
 
-If your web app is malfunctioning after instrumenting it, try the following:
+Browser RUM agent doesn't work on Internet Explorer
+==================================================================
 
-* Remove the instrumentation and run the app to check if the errors disappear.
-   * If the errors persist, there might be a different issue in your application
-   * If the errors disappear, try a different version of the browser RUM agent. Don't use ``latest`` without testing it in preproduction first.
-* Activate debug logging to search for simulator debug logs. See :ref:`activate-browser-debug-logging`.
+The Browser RUM supports Internet Explorer 11 through the ``splunk-otel-web-legacy.js`` version of the agent. Make sure to use that version if you need to collect data from Internet Explorer.
+
 
 
 .. include:: /_includes/troubleshooting-steps.rst

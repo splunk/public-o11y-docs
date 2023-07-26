@@ -31,7 +31,7 @@ All your pages, assets, and requests must be securely loaded over the HTTPS prot
 Decide which version to run in your environment
 =======================================================
 
-Latest updates automatically whenever Splunk RUM releases a new version. In preproduction, use ``latest`` to try out the most recent version of Splunk RUM. 
+Latest updates automatically whenever Splunk RUM releases a new version. In preproduction, use ``latest`` to try out the most recent version of Splunk RUM.
 
 In production environments, use the pinned version which was previously tested in preproduction and update the production version on a monthly cycle.
 
@@ -74,12 +74,12 @@ Follow these steps to instrument your application with the CDN:
 
    .. code-block:: html
 
-      /*
+      <!--//
 
       IMPORTANT: Replace the <version> placeholder in the src URL with a
       version from https://github.com/signalfx/splunk-otel-js-web/releases
 
-      */
+      //-->
       <script src="https://cdn.signalfx.com/o11y-gdi-rum/<version>/splunk-otel-web.js" crossorigin="anonymous"></script>
       <script>
          SplunkRum.init({
