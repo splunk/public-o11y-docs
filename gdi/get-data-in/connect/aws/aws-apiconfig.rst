@@ -203,6 +203,7 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 
 - ``"apigateway:GET"``
 - ``"autoscaling:DescribeAutoScalingGroups"``
+- ``"cassandra:Select"``
 - ``"cloudformation:ListResources"``
 - ``"cloudformation:GetResource"``
 - ``"cloudfront:GetDistributionConfig"``
@@ -275,6 +276,7 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
         "Action": [
           "apigateway:GET",
           "autoscaling:DescribeAutoScalingGroups",
+          "cassandra:Select",
           "cloudformation:ListResources",
           "cloudformation:GetResource",
           "cloudfront:GetDistributionConfig",
