@@ -7,21 +7,21 @@ Get data into Splunk Observability Cloud
 .. meta::
    :description: This topic walks you through recommended steps for getting data from each layer of your stack into Splunk Observability Cloud to get meaningful insights about your infrastructure, applications, and real user experiences.
 
-Use Splunk Observability Cloud to achieve full-stack observability of all your data sources, including your infrastructure, applications, and user interfaces. The Observability Cloud suite includes the following products:
+Use Splunk Observability Cloud to achieve full-stack observability of all your data sources, including your infrastructure, applications, and user interfaces. Splunk Observability Cloud includes the following products:
 
 - :ref:`Splunk Infrastructure Monitoring <infrastructure-infrastructure>`
 - :ref:`Splunk Application Performance Monitoring (APM) <get-started-apm>`
 - :ref:`Splunk Real User Monitoring (RUM) <rum-gdi>`
 - :ref:`Splunk Log Observer <get-started-logs>` and :ref:`Log Observer Connect <logs-intro-logconnect>`
 
-Here's a high-level overview of your options for getting data from each layer of your stack into the Observability Cloud product best suited to provide insights about your system. 
+Here's a high-level overview of your options for getting data from each layer of your stack into the Splunk Observability Cloud product best suited to provide insights about your system. 
 
 .. image:: /_images/gdi/GDI_sequence.png
    :width: 80%   
 
 .. source in Figma: https://www.figma.com/file/0tm4yT04K6MlwM7dMA62ad/Docs-Graphic
 
-For standard environments and workflows, perform all the steps described below to get the most out of Observability Cloud. However, depending on your observability goals and environment, you can choose to perform only a subset of the steps. For example, if you don't use every Observability Cloud product, or if you don't want to collect data from every eligible data source.
+For standard environments and workflows, perform all the steps described below to get the most out of Splunk Observability Cloud. However, depending on your observability goals and environment, you can choose to perform only a subset of the steps. For example, if you don't use every Splunk Observability Cloud product, or if you don't want to collect data from every eligible data source.
 
 .. _gdi-per-product:
 
@@ -93,7 +93,7 @@ If you're not yet implementing full-stack observability as described in the diag
 1. Integrate with cloud services to send metrics and logs
 ===================================================================================
 
-If you're using cloud services for your infrastructure, the first step is to integrate these services with Observability Cloud. Cloud integrations can send metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring.
+If you're using cloud services for your infrastructure, the first step is to integrate these services with Splunk Observability Cloud. Cloud integrations can send metrics and metadata (such as tags, labels and other properties) to Infrastructure Monitoring.
 
 After you've integrated with your cloud services, you can access your data in the following locations:
 
@@ -188,7 +188,7 @@ Steps
    - :ref:`Use a wizard to install in a Kubernetes cluster <get-started-k8s>`
    - :ref:`Manually install in a Kubernetes cluster <otel-install-k8s>`
 
-One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Observability Cloud, is easier to implement. For more information, see :ref:`get-started-relatedcontent`.
+One of the benefits of using the Splunk Distribution of OpenTelemetry Collector to send your data to Splunk Observability Cloud is that Related Content, a feature that activates users to seamlessly move between key views in Splunk Observability Cloud, is easier to implement. For more information, see :ref:`get-started-relatedcontent`.
 
 .. _gdi-3:
 
@@ -221,7 +221,7 @@ After you've configured the Collector's pipelines for your desired server applic
 4. Instrument back-end services and applications to send traces, logs, and metrics
 ========================================================================================
 
-You can choose to instrument applications that you've developed in-house to send data to Observability Cloud:
+You can choose to instrument applications that you've developed in-house to send data to Splunk Observability Cloud:
 
 - Traces to APM
 - Logs (events) to Log Observer
@@ -260,7 +260,7 @@ See the instrumentation documentation for your application language:
 
 - :ref:`Instrument PHP applications <get-started-php>`
 
-.. note:: If you use the Splunk Distribution of OpenTelemetry Collector to send your data to Observability Cloud, you can benefit from Related Content, a feature that activates users to seamlessly move between key views in Observability Cloud. For more information, see :ref:`get-started-relatedcontent`.
+.. note:: If you use the Splunk Distribution of OpenTelemetry Collector to send your data to Splunk Observability Cloud, you can benefit from Related Content, a feature that activates users to seamlessly move between key views in Splunk Observability Cloud. For more information, see :ref:`get-started-relatedcontent`.
 
 .. _gdi-5:
 
@@ -322,7 +322,7 @@ Steps
 7. Configure applications and serverless functions to send custom data
 ========================================================================================
 
-Now that you have built-in data from your full stack flowing into Observability Cloud, assess whether there are custom data points you need to bring in. 
+Now that you have built-in data from your full stack flowing into Splunk Observability Cloud, assess whether there are custom data points you need to bring in. 
 
 For many teams, some of the most meaningful data is custom data because you can define these data points to focus on what is most important to you in your specific environment.
 
@@ -365,17 +365,17 @@ To instrument your AWS Lambda serverless functions, see :ref:`instrument-serverl
 
 .. _gdi-8:
 
-8. Use the Observability Cloud API to send custom data
+8. Use the Splunk Observability Cloud API to send custom data
 ========================================================================================
 
-Now that you have built-in data from your full stack flowing into Observability Cloud, assess whether there are custom data points you need to bring in. You can use the Observability Cloud API to bring in custom data.
+Now that you have built-in data from your full stack flowing into Splunk Observability Cloud, assess whether there are custom data points you need to bring in. You can use the Splunk Observability Cloud API to bring in custom data.
 
 You might want to use the API if you want to integrate with:
 
 - A third-party tool that provides an API/webhook integration only.
 - An application written in a language we don't provide a library for.
 
-This API integration can send all types of data to Observability Cloud. While you can use the API to send logs to Log Observer, we recommend using other integration types to do so. For details about which integrations can send logs to Log Observer, see :ref:`gdi-per-product`.
+This API integration can send all types of data to Splunk Observability Cloud. While you can use the API to send logs to Log Observer, we recommend using other integration types to do so. For details about which integrations can send logs to Log Observer, see :ref:`gdi-per-product`.
 
 After you've configured your integration to send custom data, you can access your data in the following locations:
 
@@ -387,22 +387,22 @@ After you've configured your integration to send custom data, you can access you
 Steps
 --------------------------------------------------------------------
 
-For information about using the Observability Cloud API to send custom data, see :ref:`rest-api-ingest`.
+For information about using the Splunk Observability Cloud API to send custom data, see :ref:`rest-api-ingest`.
 
 
 Next: Leverage the full benefits of Splunk Observability Cloud
 =============================================================================
 
-Now that you have your desired full stack of data coming into Observability Cloud, consider exploring the following features that can help you monitor, visualize, and coordinate team work around your data:
+Now that you have your desired full stack of data coming into Splunk Observability Cloud, consider exploring the following features that can help you monitor, visualize, and coordinate team work around your data:
 
 - :ref:`Create detectors <create-detectors>` to receive alerts about conditions in your data that are important you.
 - :ref:`Create charts <create-charts>` to visualize your data.
 - :ref:`Use Related Content <get-started-relatedcontent>` to jump between components of Splunk Observability Cloud by clicking related data.
 - :ref:`Create and customize dashboards <dashboard-create-customize>` to organize and share your charts.
 - :ref:`admin-manage-teams` to coordinate team work around your data.
-- Check system critical metrics, access real-time alerts, and view mobile-friendly dashboards on the go using the :ref:`Observability Cloud mobile app <intro-to-mobile>`.
+- Check system critical metrics, access real-time alerts, and view mobile-friendly dashboards on the go using the :ref:`Splunk Observability Cloud mobile app <intro-to-mobile>`.
 - Learn more about :ref:`the Splunk Observability Cloud data model <data-model>`.
-- Learn more about each product in the Observability Cloud suite:
+- Learn more about each product in the Splunk Observability Cloud suite:
    - :ref:`get-started-apm`
    - :ref:`get-started-infrastructure`
    - :ref:`get-started-logs`

@@ -84,7 +84,7 @@ Run the following commands to deploy the Helm chart:
 
 #. Determine your destination. 
 
-   For Observability Cloud: 
+   For Splunk Observability Cloud: 
 
    .. code-block:: bash
 
@@ -260,7 +260,7 @@ Splunk Distribution for the Kubernetes Operator (Alpha)
 
    This project is Alpha. Do not use in production.
 
-The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator is the Observability Cloud implementation of a Kubernetes Operator, and it helps deploy and manage the Splunk Distribution of OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
+The Splunk Distribution of OpenTelemetry Collector for Kubernetes Operator is the Splunk Observability Cloud implementation of a Kubernetes Operator, and it helps deploy and manage the Splunk Distribution of OpenTelemetry Collector for Kubernetes. See the :new-page:`README file <https://github.com/signalfx/splunk-otel-collector-operator>` in GitHub for installation instructions.
 
 Next steps
 ==================================

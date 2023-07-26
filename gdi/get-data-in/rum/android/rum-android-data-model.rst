@@ -439,7 +439,7 @@ App start monitoring produces spans with the name ``AppStart`` and the following
 Location data  
 =============
 
-If you choose to set the latitude and longitude for location data by using the Splunk RUM for Android APIs, Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
+If you choose to set the latitude and longitude for location data by using the Splunk RUM for Android APIs, Splunk Observability Cloud uses the information to map the geographical location of the user, such as country, city, and so on.
 
 .. note::
    Splunk Observability Cloud calculates geographical metadata from the latitude and longitude, and drops the latitude and longitude after processing the data. 

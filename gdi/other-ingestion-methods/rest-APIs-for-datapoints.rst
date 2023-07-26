@@ -1,7 +1,7 @@
 .. _rest-api-ingest:
 
 ****************************************************************************
-Send metrics, traces, and events using Observability Cloud REST APIs  
+Send metrics, traces, and events using Splunk Observability Cloud REST APIs  
 ****************************************************************************
 
 .. meta::
@@ -36,7 +36,7 @@ Send custom metrics using the API
 
 To send custom metrics, replace ``<ORG_TOKEN>`` with an org token for your organization in the code block provided as an example. 
 
-In Observability Cloud UI, an org token is called an access token. To learn how to obtain an org token, see :ref:`admin-org-tokens`. 
+in Splunk Observability Cloud UI, an org token is called an access token. To learn how to obtain an org token, see :ref:`admin-org-tokens`. 
 
 When you send a request, use the endpoint specific to your realm. Replace ``<REALM>`` with the name of your realm, which you can find on your profile page in the user interface. To learn more, see :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
 

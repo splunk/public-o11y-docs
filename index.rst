@@ -222,7 +222,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. ----- This comment separates the landing page from the TOC -----
 
 .. toctree::
-   :caption: GET STARTED
+   :caption: Get Started
    :maxdepth:   2
 
    get-started/welcome
@@ -245,7 +245,12 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. toctree::
    :maxdepth:   3
 
-   Splunk Observability Cloud and the Splunk platform TOGGLE <get-started/core2o11y/core2o11y-landing>
+   About Mobile TOGGLE <get-started/intro-to-mobile>
+
+.. toctree::
+   :maxdepth:   3
+
+   Contribute to our documentation <get-started/contribute>
 
 .. toctree::
    :maxdepth:   3
@@ -253,7 +258,71 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Support <get-started/support>
 
 .. toctree::
-   :caption: DATA MANAGEMENT
+   :caption: Splunk platform users
+   :maxdepth:   3
+
+   Splunk Observability Cloud and the Splunk platform <splunkplatform/splunkplatform-landing>
+
+.. toctree::
+   :maxdepth:   3
+
+   Unified Identity <splunkplatform/unified-id/unified-identity>
+
+.. toctree::
+   :maxdepth:   3
+
+   Measure and alert on your SLIs <splunkplatform/practice-reliability/slis>
+
+.. toctree::
+   :maxdepth:   3
+
+   Respond to incidents <splunkplatform/practice-reliability/incident-response>
+
+.. toctree::
+   :maxdepth:   3
+
+   Collaborate on observability <splunkplatform/practice-reliability/collaboration>
+
+.. toctree::
+   :caption: Administer Observability Cloud
+   :maxdepth:   3
+
+   admin/admin
+
+.. toctree::
+   :maxdepth:   3
+
+   Authentication and Security TOGGLE <admin/authentication/authentication-intro>
+
+.. toctree::
+   :maxdepth:   3
+
+   User and team management TOGGLE <admin/user-management/user-management-intro>
+
+.. toctree::
+   :hidden:
+   :maxdepth:   3
+
+   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
+
+.. toctree::
+   :maxdepth:   3
+
+   View organization metrics <admin/org-metrics>
+
+.. toctree::
+   :maxdepth:   3
+
+   Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
+
+.. toctree::
+   :maxdepth:   3
+
+   Org reference info TOGGLE <admin/references/org-info>
+
+
+.. toctree::
+   :caption: Get your data in
    :maxdepth:   3
 
    gdi/get-data-in/get-data-in
@@ -310,7 +379,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    SignalFx Smart Agent (Deprecated) TOGGLE <gdi/smart-agent/smart-agent-intro>
 
 .. toctree::
-   :caption: UNDERSTAND AND ANALYZE YOUR DATA
+   :caption: Understand and analyze your data
    :maxdepth:   3
 
    metrics-and-metadata/data-model
@@ -331,7 +400,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    SignalFlow and analytics TOGGLE <analytics/signalflow-analytics-intro>
 
 .. toctree::
-   :caption: DASHBOARDS AND CHARTS
+   :caption: Dashboards and charts
    :maxdepth:   3
 
    Dashboards TOGGLE <data-visualization/dashboards/dashboards>
@@ -357,7 +426,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Read and write permissions <data-visualization/permissions>
 
 .. toctree::
-   :caption: ALERTS AND DETECTORS
+   :caption: Alerts and detectors
    :maxdepth:   3
 
    Introduction to alerts and detectors <alerts-detectors-notifications/alerts-detectors-notifications>
@@ -436,7 +505,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
 .. toctree::
-   :caption: APM
+   :caption: Application Performance Monitoring
    :maxdepth:   3
 
    apm/intro-to-apm
@@ -492,7 +561,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Use Data Links to connect APM properties to relevant resources TOGGLE <apm/apm-data-links/data-links-landing>
 
 .. toctree::
-   :caption: INFRASTRUCTURE
+   :caption: Infrastructure
    :maxdepth:   3
 
    Introduction <infrastructure/intro-to-infrastructure>
@@ -549,7 +618,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Resolution and data retention (DPM) <infrastructure/dpm-retention>
 
 .. toctree::
-   :caption: LOG OBSERVER
+   :caption: Log Observer
    :maxdepth:   3
 
    Splunk Log Observer Connect TOGGLE <logs/lo-connect-landing> 
@@ -560,7 +629,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Splunk Log Observer TOGGLE <logs/log-observer-landing>
 
 .. toctree::
-   :caption: RUM
+   :caption: Real User Monitoring
    :maxdepth:   3
 
    rum/intro-to-rum
@@ -637,7 +706,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    rum/rum-third-party-software
 
 .. toctree::
-   :caption: SYNTHETICS
+   :caption: Synthetics
    :maxdepth:   3
 
    synthetics/intro-synthetics
@@ -678,7 +747,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Configure your tests TOGGLE <synthetics/test-config/test-config>
 
 .. toctree::
-   :caption: INCIDENT INTELLIGENCE
+   :caption: Incident Intelligence
    :maxdepth:   3
 
    Introduction to Splunk Incident Intelligence <incident-intelligence/intro-to-incident-intelligence>
@@ -723,135 +792,16 @@ View a list of all supported integrations :ref:`supported-data-sources`
 
    Manage notifications from Incident Intelligence TOGGLE <incident-intelligence/manage-notifications/manage-notifications.rst>
 
-.. toctree::
-   :caption: MOBILE
-   :maxdepth:   3
-
-   mobile/intro-to-mobile
 
 .. toctree::
+   :caption: Reference and Legal
    :maxdepth:   3
 
-   Download the app <mobile/download-mobile>
 
-.. toctree::
-   :maxdepth:   3
-
-   View dashboards and alerts <mobile/use-mobile>
-
-.. toctree::
-   :maxdepth:   3
-
-   mobile/notification-preferences-mobile
-
-
-.. toctree::
-   :caption: ADMINISTER OBSERVABILITY CLOUD
-   :maxdepth:   3
-
-   admin/admin
-
-.. toctree::
-   :maxdepth:   3
-
-   admin/scenario-org-security
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   About SSO integrations for Splunk Observability Cloud TOGGLE <admin/SSO/sso-about>
-
-.. toctree::
-   :maxdepth:   3
-
-   Create and manage authentication tokens TOGGLE <admin/authentication-tokens/tokens>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   admin/allow-services
-
-.. toctree::
-   :maxdepth:   3
-
-   Create and manage users <admin/users/manage-users>
-
-.. toctree::
-   :maxdepth:   3
-
-   Create and manage teams TOGGLE <admin/teams/manage-teams>
-
-.. toctree::
-   :hidden:
-   :maxdepth:   3
-
-   Send alert notifications to third-party services TOGGLE <admin/notif-services/admin-notifs-index>
-
-.. toctree::
-   :maxdepth:   3
-
-   View organization metrics <admin/org-metrics>
-
-.. toctree::
-   :maxdepth:   3
-
-   Monitor subscription usage and billing TOGGLE <admin/subscription-usage/subscription-usage-overview>
-
-
-.. toctree::
-   :caption: SETTINGS AND REFERENCE
-   :maxdepth:   3
-
-   Password and contact information <references/personal-info>
-
-.. toctree::
-   :maxdepth:   3
-
-   Organizations <references/organizations>
-
-.. toctree::
-   :maxdepth:   3
-
-   Teams <references/teams>
-
-.. toctree::
-   :maxdepth:   3
-
-   Time zone and color accessibility settings <references/app-preferences>
-
-.. toctree::
-   :maxdepth:   3
-
-   API access token <references/api-access-token>
-
-.. toctree::
-   :maxdepth:   3
-
-   Supported browsers <references/supported-browsers>
-
-.. toctree::
-   :maxdepth:   3
-
-   Third-party software credits <references/third-party-credits>
-
-.. toctree::
-   :maxdepth:   3
-
-   Data retention <references/data-retention>
-
-.. toctree::
-   :maxdepth:   3
-
-   Per product system limits <references/per-product-limits>
-
+   Third-party software credits </references/third-party-credits>
+   
 .. toctree::
    :maxdepth:   3
 
    Glossary <references/glossary>
 
-.. toctree::
-   :maxdepth:   3
-
-   Contribute to the documentation <references/contribute>

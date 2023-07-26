@@ -9,9 +9,9 @@ Splunk HEC exporter
 
 The Splunk HTTP Event Collector (HEC) exporter allows the OpenTelemetry Collector to send traces, logs, and metrics to Splunk HEC endpoints. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-The main purpose of the Splunk HEC exporter is to send logs and metrics to Splunk Cloud Platform or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Observability Cloud. See :ref:`lo-connect-landing` for more information.
+The main purpose of the Splunk HEC exporter is to send logs and metrics to Splunk Cloud Platform or Splunk Enterprise. Log Observer Connect is now used to pull the Splunk Cloud Platform and Splunk Enterprise indexes into Splunk Observability Cloud. See :ref:`lo-connect-landing` for more information.
 
-The exporter also sends AlwaysOn Profiling data to Observability Cloud. For more information, see :ref:`get-data-in-profiling`.
+The exporter also sends AlwaysOn Profiling data to Splunk Observability Cloud. For more information, see :ref:`get-data-in-profiling`.
 
 For information about the HEC receiver, see :ref:`splunk-hec-receiver`.
 
@@ -74,11 +74,11 @@ The Splunk HEC exporter requires a Splunk HEC token and endpoint. Obtaining a HE
      - See :new-page:`Create an Event Collector token on Splunk Enterprise <https://docs.splunk.com/Documentation/Splunk/latest/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Enterprise>`
    * - Splunk Observability Cloud
      - See :ref:`admin-org-tokens`.
-     - ``https://ingest.<realm>.signalfx.com/v1/log``, where ``<realm>`` is the Observability Cloud realm, for example ``us0``.
+     - ``https://ingest.<realm>.signalfx.com/v1/log``, where ``<realm>`` is the Splunk Observability Cloud realm, for example ``us0``.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-#. Open the navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 
@@ -115,7 +115,7 @@ If you're using the Collector for log collection and need to send data to Splunk
          tls:
            insecure_skip_verify: true
 
-You can split log data between Splunk Cloud Platform or Enterprise and Observability Cloud to preserve AlwaysOn Profiling data while sending logs to Splunk. See :ref:`profiling-pipeline-setup` for more information.
+You can split log data between Splunk Cloud Platform or Enterprise and Splunk Observability Cloud to preserve AlwaysOn Profiling data while sending logs to Splunk. See :ref:`profiling-pipeline-setup` for more information.
 
 To split the log pipelines, configure two separate ``splunk_hec`` entries in the ``receiver`` and ``exporters`` sections of the Collector configuration file. Then, add both to the ``logs`` pipeline. For example:
 
@@ -151,7 +151,7 @@ To split the log pipelines, configure two separate ``splunk_hec`` entries in the
        timeout: 10s
        tls:
          insecure_skip_verify: true
-      # Export profiling data to Observability Cloud
+      # Export profiling data to Splunk Observability Cloud
      splunk_hec/profiling:
        token: "<splunk_o11y_token>"
        endpoint: "https://ingest.<realm>.signalfx.com/v1/log"
@@ -207,7 +207,7 @@ If you don't need AlwaysOn Profiling data for a specific host or container. set 
      sourcetype: "otel"
      profiling_data_enabled: false
 
-To turn off log collection for Observability Cloud while preserving AlwaysOn Profiling data for APM, set the ``log_data_enabled`` option to ``false``. See :ref:`disable_log_collection` for more information.
+To turn off log collection for Splunk Observability Cloud while preserving AlwaysOn Profiling data for APM, set the ``log_data_enabled`` option to ``false``. See :ref:`disable_log_collection` for more information.
 
 .. code-block:: yaml
    :emphasize-lines: 6
@@ -219,7 +219,7 @@ To turn off log collection for Observability Cloud while preserving AlwaysOn Pro
      sourcetype: "otel"
      log_data_enabled: false
 
-If you need to turn off log data export to Observability Cloud, for example because you're using Log Observer Connect or because you don't have Log Observer in your organization, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
+If you need to turn off log data export to Splunk Observability Cloud, for example because you're using Log Observer Connect or because you don't have Log Observer in your organization, set ``log_data_enabled`` to ``false`` in the ``splunk_hec`` exporter of your Collector configuration file:
 
 .. code-block:: yaml
    :emphasize-lines: 6

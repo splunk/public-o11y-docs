@@ -22,16 +22,16 @@ The agent has three main components:
 
 * Monitors that collect metrics, events, and dimension properties from the host and applications. For a list of supported monitors and their configurations, see :new-page:`monitor configuration <https://github.com/signalfx/signalfx-agent/blob/main/docs/monitor-config.md>`.
 
-* The writer that sends the metrics, events, and dimension updates collected by monitors to Splunk Observability Cloud. The writer collects metrics emitted by configured monitors and sends them to Observability Cloud on a regular basis. You can configure :new-page:`writer settings <https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md#writer>` in the configuration schema.
+* The writer that sends the metrics, events, and dimension updates collected by monitors to Splunk Observability Cloud. The writer collects metrics emitted by configured monitors and sends them to Splunk Observability Cloud on a regular basis. You can configure :new-page:`writer settings <https://github.com/signalfx/signalfx-agent/blob/main/docs/config-schema.md#writer>` in the configuration schema.
 
 Use cases
 ===================================
 
 The Smart Agent gathers metrics using monitors, including Python-based plugins such as Mongo, Redis, and Docker. See :ref:`supported-data-sources` for a list of data source integrations.
 
-Use the Smart Agent to integrate with cloud services, including Amazon Web Services, Microsoft Azure, Google Cloud Platform, and Kubernetes environments. See :ref:`get-started-connect`. Next, log in to Observability Cloud to view the incoming metrics in :ref:`dashboards` and :ref:`data-visualization-charts`.
+Use the Smart Agent to integrate with cloud services, including Amazon Web Services, Microsoft Azure, Google Cloud Platform, and Kubernetes environments. See :ref:`get-started-connect`. Next, log in to Splunk Observability Cloud to view the incoming metrics in :ref:`dashboards` and :ref:`data-visualization-charts`.
 
-Check out the health of your network and nodes using navigators. Some features of Observability Cloud such as :ref:`related content <get-started-relatedcontent>` do not work with the Smart Agent. To learn more, see :ref:`use-navigators-imm`.
+Check out the health of your network and nodes using navigators. Some features of Splunk Observability Cloud such as :ref:`related content <get-started-relatedcontent>` do not work with the Smart Agent. To learn more, see :ref:`use-navigators-imm`.
 
 The Smart Agent also supports receiving and sending trace data. See :ref:`apm-download-traces`.
 
