@@ -20,7 +20,7 @@ To configure a team notification policy, follow these steps:
 
 #. Log in to Splunk Observability Cloud.
 
-#. In the left navigation menu, select :menuselection:`Settings > Teams`.
+#. In the left navigation menu, select :menuselection:`Settings` then :menuselection:`Teams`.
 
 #. A table of current teams appears in the main panel. Select the team for which you want to manage notifications.
 
