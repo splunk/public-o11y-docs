@@ -18,7 +18,7 @@ To generate a template that instruments your Lambda function using the Splunk Op
 
 #. Open the :new-page:`AWS Lambda guided setup <https://login.signalfx.com/#/gdi/scripted/awslambda/step-1?category=product-apm&gdiState=%7B"integrationId":"awslambda"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+   #. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
    #. In the integration filter menu, select :guilabel:`All`.
 
@@ -48,7 +48,7 @@ The Splunk OpenTelemetry Lambda Layer supports the following runtimes in AWS Lam
 
 - Java 8 and 11
 - Python 3.8 and 3.9
-- Node.js 10, 12, and 14
+- Node.js 14 and higher
 - Ruby 2.7
 - Go 1.18
 
@@ -111,7 +111,7 @@ Follow these steps to add the required configuration for the Splunk OpenTelemetr
         - Description
 
       * - ``SPLUNK_REALM``
-        - To find the realm of your Splunk Observability Cloud account, open the navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - To find the realm of your Splunk Observability Cloud account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
 
       * - ``SPLUNK_ACCESS_TOKEN``
         - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. See :ref:`Authentication token <admin-tokens>`. To send data to a Splunk OTel Collector in EC2, see :ref:`ec2-otel-collector-serverless`.

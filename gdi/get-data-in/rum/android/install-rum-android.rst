@@ -15,6 +15,13 @@ To instrument your Android application and get data into Splunk RUM, follow the 
 
 .. _android-rum-requirements:
 
+
+
+Decide which version to run in your environment
+=======================================================
+Latest updates automatically whenever Splunk RUM releases a new version. In pre-production, use latest to try out the most recent version of Splunk RUM. In production environments, use the pinned version which was previously tested in pre-production and update the production version on a monthly cycle.  
+
+
 Check compatibility and requirements 
 ===============================================
 
@@ -149,9 +156,9 @@ Follow these steps to install the Android RUM agent using Maven Central:
          }
       }
 
-   * The value passed to ``.realm()`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * The value passed to ``.realm()`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the left navigation menu in Observability Cloud.
+         1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 

@@ -9,7 +9,7 @@ Instrument Azure functions for Splunk Observability Cloud
 
 By instrumenting .NET Azure functions you can send spans to Splunk Observability Cloud every time your functions run. You can instrument both isolated worker process and in-process functions.
 
-To instrument your .NET Azure function with OpenTelemetry to send telemetry to Observability Cloud, follow these high-level steps:
+To instrument your .NET Azure function with OpenTelemetry to send telemetry to Splunk Observability Cloud, follow these high-level steps:
 
 - :ref:`azure-functions-step-1`
 - :ref:`azure-functions-step-2`
@@ -42,7 +42,7 @@ Set the required environment variables in your function's settings:
       * - ``SPLUNK_ACCESS_TOKEN``
         - Your Splunk access token. To obtain an access token, see :ref:`admin-api-access-tokens`.
       * - ``SPLUNK_REALM``
-        - Your Observability Cloud realm, for example ``us0``. To find the realm name of your account, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
+        - Your Splunk Observability Cloud realm, for example ``us0``. To find the realm name of your account, open the navigation menu in Splunk Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` section.
 
 #. Add any other settings you might need.
 
@@ -102,14 +102,14 @@ Add startup initialization in the Program.cs file:
    TracerProvider? traceProvider = null;
    
    // Get environment variables from function configuration
-   // You need a valid Observability Cloud access token and realm
+   // You need a valid Splunk Observability Cloud access token and realm
    var serviceName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") ?? "Unknown";
    var accessToken = Environment.GetEnvironmentVariable("SPLUNK_ACCESS_TOKEN")?.Trim();
    var realm = Environment.GetEnvironmentVariable("SPLUNK_REALM")?.Trim();
    if (realm != null && accessToken != null)
    {
       var exportOpts = new OpenTelemetry.Exporter.OtlpExporterOptions();
-   // Ingest endpoint for traces, defined using the Observability Cloud realm
+   // Ingest endpoint for traces, defined using the Splunk Observability Cloud realm
       exportOpts.Endpoint = new Uri("https://ingest." + realm + ".signalfx.com/v2/trace/otlp");
       exportOpts.Protocol = OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf;
       exportOpts.Headers = "X-SF-TOKEN=" + accessToken;
@@ -178,7 +178,7 @@ Define a startup function and decorate the assembly with it. The startup functio
          public override void Configure(IFunctionsHostBuilder builder)
          {
          // Get environment variables from function configuration
-         // You need a valid Observability Cloud access token and realm
+         // You need a valid Splunk Observability Cloud access token and realm
                var serviceName = Environment.GetEnvironmentVariable("WEBSITE_SITE_NAME") ?? "Unknown";
                var accessToken = Environment.GetEnvironmentVariable("SPLUNK_ACCESS_TOKEN")?.Trim();
                var realm = Environment.GetEnvironmentVariable("SPLUNK_REALM")?.Trim();
@@ -187,7 +187,7 @@ Define a startup function and decorate the assembly with it. The startup functio
                   return;
                }
                var exportOpts = new OpenTelemetry.Exporter.OtlpExporterOptions();
-         // Ingest endpoint for traces, defined using the Observability Cloud realm
+         // Ingest endpoint for traces, defined using the Splunk Observability Cloud realm
                exportOpts.Endpoint = new Uri("https://ingest." + realm + ".signalfx.com/v2/trace/otlp");
                exportOpts.Protocol = OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf;
                exportOpts.Headers = "X-SF-TOKEN=" + accessToken;

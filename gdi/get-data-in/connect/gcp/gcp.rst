@@ -10,12 +10,12 @@ Connect to Google Cloud Platform
 .. toctree::
    :hidden:
 
-   gcp-metrics
-   gcp-logs   
+   GCP metrics <gcp-metrics>
+   GCP logs <gcp-logs>   
 
-With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place using the navigator in Stackdriver-powered mode and built-in dashboards. For the list of the GCP services available in Observability Cloud, see :ref:`our supported integrations <gcp-integrations>`. 
+With a Google Cloud Platform (GCP) integration in Splunk Observability Cloud, you can track your Google Cloud Monitoring metrics and monitor your GCP services in one place. To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
 
-To configure a GCP integration with Splunk Infrastructure Monitoring, check the prerequisites and follow the instructions on this document. You can also :ref:`use the API <gcp-api>` to connect to GCP. 
+For the list of the GCP services available in Splunk Observability Cloud, see the list of :ref:`supported integrations <gcp-integrations>`. 
 
 .. _gcp-prerequisites:
 
@@ -25,11 +25,10 @@ To configure a GCP integration with Splunk Infrastructure Monitoring, check the 
       <h2>Prerequisites<a name="gcp-prerequisites" class="headerlink" href="#gcp-prerequisites" title="Permalink to this headline">¶</a></h2>
    </embed>
 
-You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
+The following pre-requisites apply:
 
-.. note:: 
-
-   Observability Cloud supports all GCP regions. 
+* You must be an administrator of your Splunk Observability Cloud organization to create a GCP connection.
+* Splunk Observability Cloud supports all GCP regions. 
 
 .. raw:: html
 
@@ -62,9 +61,6 @@ The following table specifies the permissions required for GCP integrations.
 
    *  - ``monitoring.timeSeries.list``
       - Yes
-
-   *  - ``serviceusage.services.use``
-      - Yes, if you want to activate the use of a quota from the project where metrics are stored
 
    *  - ``compute.instances.list``
       - Yes, if the Compute Engine service is activated
@@ -165,7 +161,7 @@ By default, all available services are monitored, and any new services added lat
 #. Log in to Splunk Observability Cloud. 
 #. Open the :new-page:`Google Cloud Platform guided setup <https://login.signalfx.com/#/integrations/gcp>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
+   #. In the navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
 
    #. In the integration filter menu, select :guilabel:`By Use Case`, and select the :guilabel:`Monitor Infrastructure` use case.
 
@@ -197,7 +193,7 @@ Your GCP integration is now complete.
 .. raw:: html
 
    <embed>
-      <h2>Alternatives to connect to GCP<a name="connect-gcp-other" class="headerlink" href="#connect-gcp-other" title="Permalink to this headline">¶</a></h3>
+      <h2>Alternatives to connect to GCP<a name="connect-gcp-other" class="headerlink" href="#connect-gcp-other" title="Permalink to this headline">¶</a></h2>
    </embed>
 
 .. _gcp-api:
@@ -205,7 +201,7 @@ Your GCP integration is now complete.
 .. raw:: html
 
    <embed>
-      <h3>Integrate GCP using the API <a name="gcp-api" class="headerlink" href="#gcp-api" title="Permalink to this headline">¶</a></h2>
+      <h3>Integrate GCP using the API <a name="gcp-api" class="headerlink" href="#gcp-api" title="Permalink to this headline">¶</a></h3>
    </embed>
 
 You can also integrate GCP with Splunk Observability Cloud using the GCP API. See :new-page:`Integrate Google Cloud Platform Monitoring with Splunk Observability Cloud <https://dev.splunk.com/observability/docs/integrations/gcp_integration_overview#Specifying-custom-metric-type-domains>` in our developer portal for details.
@@ -218,6 +214,16 @@ You can also integrate GCP with Splunk Observability Cloud using the GCP API. Se
 
 To connect using Terraform, see :ref:`terraform-config`.
 
+.. raw:: html
+
+   <embed>
+      <h2>Install the Splunk Distribution of OpenTelemetry Collector<a name="install-splunk-otel-collector" class="headerlink" href="#install-splunk-otel-collector" title="Permalink to this headline">¶</a></h2>
+   </embed>
+
+To take advantage of the full benefits of the Splunk Observability Cloud platform, install the :ref:`OpenTelemetry Collector <otel-intro>`. 
+
+The Collector offers a higher degree of customization than the GCP integration, and you might prefer it if you want to see metrics at a resolution lower than one minute, or when you need fine-grained control over the filtering of what metrics are sent.     
+
 .. _next-gcp-steps:
 
 .. raw:: html
@@ -229,6 +235,6 @@ To connect using Terraform, see :ref:`terraform-config`.
 To validate your setup, examine the details of your GCP integration as displayed in the list at the end of the setup page.
 
 * For details about the metrics provided by an GCP integration, see :ref:`gcp-metrics`.
-* To send logs from Azure to Observability Cloud, follow the instructions in :ref:`gcp-logs`.
-* Learn about Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
-* To learn more about Observability Cloud's data model, refer to :ref:`data-model`.
+* To send logs from Azure to Splunk Observability Cloud, follow the instructions in :ref:`gcp-logs`.
+* Learn about Splunk Observability Cloud's :ref:`GCP Infrastructure Monitoring options <infrastructure-gcp>`. 
+* To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`.

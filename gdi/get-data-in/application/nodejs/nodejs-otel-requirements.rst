@@ -27,7 +27,7 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
 
 The Splunk Distribution of OpenTelemetry JS exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs, including profiling data.
 
-To send application traces and spans to Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
+To send application traces and spans to Splunk Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
 
 - Splunk Distribution of the OpenTelemetry Collector for Linux. See :ref:`otel-install-linux`.
 - Splunk Distribution of the OpenTelemetry Collector for Windows. See :ref:`otel-install-windows`.

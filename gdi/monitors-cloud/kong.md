@@ -37,7 +37,7 @@ This integration is only available on Kubernetes and Linux, and requires version
 
 ### Kong installation
 
-Bedsides the Collector, you also need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to activate this integration.
+In addition to the Collector, you also need both the `kong-plugin-signalfx` Kong plugin and the `kong` SignalFx monitor to activate this integration.
 
 Follow these steps to deploy the integration:
 

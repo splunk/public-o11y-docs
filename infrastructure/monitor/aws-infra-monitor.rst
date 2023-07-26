@@ -220,8 +220,8 @@ To create these specifications, follow these steps:
 #. To limit the data Infrastructure Monitoring imports from EC2, select data filters from the list.
 #. To select the filters you want from the following options:
 
-   * Use :guilabel:`Import only` if you want a filter that only imports data.
-   * Use :guilabel:`Don't import` if you want a filter that only excludes data.
+   * Use :guilabel:`Import some` if you want a filter that only imports data.
+   * Use :guilabel:`Exclude some` if you want a filter that only excludes data.
 
 #. To use AWS tags to limit the data Infrastructure Monitoring imports, filter by tag. For this example, specify a filter that excludes data from resources that have the AWS tag ``version:canary``.
 
@@ -229,7 +229,7 @@ Infrastructure Monitoring adds the prefix ``aws_tag_`` to the names of tags impo
 
 You can also choose specific metrics to include or exclude. For example, consider the following conditions.
 
-.. image:: /_images/infrastructure/aws-metric-tag.png
+.. image:: /_images/infrastructure/aws-metric-tag2.png
    :width: 55%
 
 Infrastructure Monitoring only includes metricA and metricB, and only for resources specified by the tags:
@@ -240,14 +240,12 @@ Infrastructure Monitoring only includes metricA and metricB, and only for resour
 
 Infrastructure Monitoring supports wildcards in filters. For example, if you want to import data for a resource that has specific tags, regardless of the tag values, specify this filter:
 
-.. image:: /_images/infrastructure/aws-metric-tag-wildcard.png
+.. image:: /_images/infrastructure/aws-metric-tag-wildcard2.png
    :width: 55%
 
 In this example, metricA and metricB are included for resources that have the ``env`` tag set to any value. No other metrics are included.
 
-You can use the :guilabel:`Actions` menu next to a namespace name to copy or paste filters from one namespace to another, clear the filters for the namespace, or remove the namespace from the list of namespaces to include. When you remove a namespace, Infrastructure Monitoring no longer includes metrics from that namespace.
-
-When you finish specifying the namespaces, metrics, and tags to include or exclude, click :guilabel:`Save`.
+When you remove a namespace, Infrastructure Monitoring no longer includes metrics from that namespace.
 
 .. _api-filters:
 
@@ -306,7 +304,7 @@ Visit the :strong:`Infrastructure page` to monitor the health of the AWS service
 
 Follow these steps to find and troubleshoot AWS services from the Infrastructure page:
 
-#. Select :menuselection:`Navigation menu > Infrastructure`, then click :guilabel:`Amazon AWS` category.
+#. Select :menuselection:`Navigation menu > Infrastructure`, then click :guilabel:`Amazon Web Services` category.
 
 #. Select the specific service you want to analyze. For example, click :guilabel:`EBS` to view information about your storage volumes. If you see the message :guilabel:`No Data Found`, you first need to configure the integration for the service.
 
@@ -315,7 +313,7 @@ Follow these steps to find and troubleshoot AWS services from the Infrastructure
 
    If the heat map only uses green and red, then green indicates a healthy instance and red indicates a problem.
 
-   To apply visually-accessible color palettes to heat maps, select :menuselection:`<USER-ID> > Account Settings`,
+   To apply visually-accessible color palettes to heat maps, select :menuselection:`<USER-ID> > App Preferences`,
    then select your desired color accessibility from the :guilabel:`Color Accessibility` menu.
 
 #. Investigate correlations between instances and their health by grouping the instances based on a dimension, custom property, or tag. To group instances, select the metadata name from the :guilabel:`Group by` drop-down list.
@@ -368,7 +366,27 @@ Amazon EC2 instances are powered by their respective public cloud service as wel
 Costs for AWS monitoring
 ===========================================================
 
-Observability Cloud retrieves metrics with two methods:
+Splunk Observability Cloud costs 
+-------------------------------------------------------------------
+
+Your subscription plan determines how you'll be charged for sending AWS metrics to Observability Cloud. See more in :ref:`monitor-imm-billing-usage`.
+
+* In MTS-based subscription plans, all metrics are custom, and you're therefore charged for them.
+* In host-based subscription plans, most AWS metrics are categorized as bundled, and are part of your plan. 
+
+Bundled metrics include all metrics from :ref:`supported namespaces <aws-integrations>` as well as metrics from the following services:
+  * CWAgent
+  * Glue
+  * MediaLive 
+  * System/Linux 
+  * WAF 
+
+For a complete list of Observability Cloud metrics, see :ref:`metric-categories`.
+
+AWS costs 
+-------------------------------------------------------------------
+
+Observability Cloud retrieves AWS metrics with two methods:
 
 #. Streaming data with Metric Streams. 
 #. Polling CloudWatch APIs:
@@ -376,10 +394,10 @@ Observability Cloud retrieves metrics with two methods:
    - First, the list of metrics is retrieved with ``ListMetrics``. 
    - Next, data points are fetched with ``GetMetricData``. Note that the ``GetMetricStatistics`` API is deprecated, see more in :ref:`aws-api-notice`.  
 
-Learn more at :ref:`Evaluate your data ingest needs and costs <prep-for-aws-integration>`.
+Learn more at :ref:`get-started-aws`.
 
-Cost considerations 
--------------------------------------------------------------------
+AWS pricing 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 AWS :strong:`pricing is based on the amount of requested metrics`, not the number of requests. Therefore the cost of obtaining Cloudwatch metrics for a service is based on three factors: frequency of pulling data, number of metrics for a given service, and number of cloud resources.
 
@@ -387,8 +405,8 @@ Generally speaking, Metric Streams costs the same as polling if the integration 
 
 However, when using Metric Stream you can't control costs, while you can configure the polling frequency of the APIs. See :ref:`how to limit the metrics to collect, the resources, or the collection frequently <specify-data-metadata>`. 
 
-Example using polling APIs
--------------------------------------------------------------------
+Example: Cost scenarios using polling APIs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Let's imagine a user with the following configuration: 
 
@@ -432,5 +450,3 @@ Next, you retrieve the data using the ``GetMetricData`` API at a cost of USD 0.0
    *  - The user wants to retrieve ONLY 4 metrics for a 1,000 queues (because they're the production instances) every 10 minutes
       - 1440 (number of minutes in a day)/10 (pull interval) *  4 (number of metrics) * 1000 (number of SQS resources) = 576k
       - USD 5.76 
-
-

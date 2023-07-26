@@ -31,7 +31,7 @@ See also other configuration options:
 * :ref:`otel-tags`
 * :ref:`configure-remove`
 
-.. note:: Observability Cloud also offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
+.. note:: Splunk Observability Cloud also offers several options for no-hassle, zero-config Auto Instrumentation. Learn more at :ref:`Splunk OpenTelemetry Zero Configuration Auto Instrumentation <zero-config>`.
 
 .. _otel-config-options:
 
@@ -70,6 +70,8 @@ To define multiple config files simultaneously use:
   </embed>
 
 Use the Fluentd receiver to collect logs. Common sources such as filelog, journald, and Windows Event Viewer are included in the installation. See :ref:`fluentd-receiver` for more information.
+
+.. note:: If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to skip the installation of Fluentd when installing the Collector. 
 
 .. raw:: html
 
@@ -121,7 +123,7 @@ You can also use these additional :ref:`configuration sources <otel-other-config
 
   * Environment variable (Alpha)
   * etcd (Alpha)
-  * Include (Alpha)
+  * Include config source (Beta)
   * Vault (Alpha)
   * Zookeeper (Alpha)
 

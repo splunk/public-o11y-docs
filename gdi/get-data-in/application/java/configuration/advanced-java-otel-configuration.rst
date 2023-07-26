@@ -58,7 +58,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SPLUNK_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector. |br| |br| System property: ``splunk.realm``
    * - ``SPLUNK_ACCESS_TOKEN``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`. |br| |br| System property: ``splunk.access.token``
+     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`. |br| |br| System property: ``splunk.access.token``
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-java`. The default value is ``true``. |br| |br| System property: ``splunk.trace-response-header.enabled``
    * - ``SPLUNK_METRICS_FORCE_FULL_COMMANDLINE``
@@ -110,15 +110,11 @@ The following settings control trace exporters and their endpoints:
    * - Environment variable
      - Description
    * - ``OTEL_TRACES_EXPORTER``
-     - Trace exporter to use. You can set multiple comma-separated values. For example, ``otlp,console_span``. The default value is ``otlp``. To select the Jaeger exporter, use ``jaeger-thrift-splunk``. |br| |br| System property: ``otel.traces.exporter``
+     - Trace exporter to use. You can set multiple comma-separated values. |br| |br| System property: ``otel.traces.exporter``
    * - ``OTEL_EXPORTER_OTLP_ENDPOINT``
      - OTLP gRPC endpoint. The default value is ``http://localhost:4317``. |br| |br| System property: ``otel.exporter.otlp.endpoint``
-   * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
-     - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``. |br| |br| System property: ``otel.exporter.jaeger.endpoint``
 
-The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent (now deprecated), use the Jaeger exporter. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
-
-.. caution:: Support for the `jaeger-thrift-splunk` exporter will be removed after December 17th, 2022.
+The Splunk Distribution of OpenTelemetry Java uses the OTLP gRPC span exporter by default. To send data directly to Splunk Observability Cloud, see :ref:`export-directly-to-olly-cloud-java`.
 
 .. _trace-sampling-settings-java:
 

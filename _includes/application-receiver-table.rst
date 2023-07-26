@@ -553,17 +553,12 @@
      -
      -
 
-   * - :ref:`Telegraf Varnish <telegraf-varnish>`
-     - :strong:`X`
-     -
-     -
-
-   * - :ref:`Telegraf Windows services <telegraf-win-services>`
-     - :strong:`X`
-     -
-     -
-
    * - :ref:`Traefik <traefik>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Varnish <telegraf-varnish>`
      - :strong:`X`
      -
      -
@@ -574,6 +569,11 @@
      -
 
    * - :ref:`Windows Performance Counters <telegraf-win-perf-counters>`
+     - :strong:`X`
+     -
+     -
+
+   * - :ref:`Windows services <telegraf-win-services>`
      - :strong:`X`
      -
      -

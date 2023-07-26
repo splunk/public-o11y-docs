@@ -57,7 +57,7 @@ livehtml:
 	@echo
 	@echo "Starting the live server..."
 	@echo
-	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --host 0.0.0.0 --port 8888
+	@sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) --host 0.0.0.0 --port 8888 --ignore /docs/_static/main.min.css  --ignore /docs/_static/main.min.js
 
 .PHONY: test
 test: 
@@ -69,3 +69,17 @@ test:
 	@echo "Testing the docs..."
 	@echo
 	@sphinx-build -b dummy $(TESTOPTS) $(BUILDDIR)/html
+
+.PHONY: linkcheck
+linkcheck:
+	@echo
+	@echo "*****************************************************"
+	@echo "       Checking Splunk Observability Docs links      "
+	@echo "*****************************************************"
+	@echo
+	@echo "Checking links..."
+	@echo
+	@sphinx-build -b linkcheck $(TESTOPTS) $(BUILDDIR)/linkcheck
+	@echo
+	@echo "Link check complete; look for any errors in the above output " \
+	      "or in $(BUILDDIR)/linkcheck/output.txt."

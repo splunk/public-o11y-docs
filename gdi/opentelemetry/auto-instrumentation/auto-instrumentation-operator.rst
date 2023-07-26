@@ -158,5 +158,5 @@ Learn more
 ===========================================================================
 
 * See :ref:`auto-instrumentation-java-operator`.
-* To learn more about how Auto Instrumentation works in Observability Cloud, see :new-page:`more detailed documentation in GH <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
+* To learn more about how Auto Instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GH <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
 * Refer to :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.

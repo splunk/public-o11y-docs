@@ -32,15 +32,8 @@ All installation methods offer default configurations using environment variable
 Configure proxy settings
 ----------------------------------
 
-If you need to use a proxy, set one of the following environment variables according to your needs:
+To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.
 
-- ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
-- ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
-- ``NO_PROXY``: If a proxy is defined, sets addresses that don't use the proxy.
-
-Restart the Collector after adding these environment variables to your configuration.
-
-.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
 
 .. _windows-installer:
 
@@ -152,6 +145,42 @@ Run the following command to deploy the latest Docker image:
 	    -p 8888:8888 -p 9080:9080 -p 9411:9411 -p 9943:9943 `
 	    --name=otelcol quay.io/signalfx/splunk-otel-collector-windows:latest
 
+.. _windows-binary:
+
+Install using the binary file
+===============================
+
+To install the Collector using the binary file, follow these steps:
+
+#. Download the binary for your architecture from :new-page:`GitHub releases <https://github.com/signalfx/splunk-otel-collector/releases>`.
+
+#. If you're not using an existing or custom config file, download the :new-page:`default config file <https://github.com/signalfx/splunk-otel-collector/tree/main/cmd/otelcol/config/collector>`` for the Collector. See more at :ref:`otel-configuration-ootb`.
+
+#. Run the binary from the command line:
+
+.. code-block:: PowerShell
+
+  # see available command-line options
+  PS> & '<download dir>\otelcol_windows_amd64.exe' --help
+  Usage of otelcol:
+      --config string          Locations to the config file(s), note that only a single location can be set per flag entry e.g. --config=/path/to/first --config=path/to/second. (default "[]")
+      --feature-gates string   Comma-delimited list of feature gate identifiers. Prefix with '-' to disable the feature. '+' or no prefix will enable the feature. (default "[]")
+      --no-convert-config      Do not translate old configurations to the new format automatically. By default, old configurations are translated to the new format for backward compatibility.
+      --set string             Set arbitrary component config property. The component has to be defined in the config file and the flag has a higher precedence. Array config properties are overridden and maps are joined. Example --set=processors.batch.timeout=2s (default "[]")
+      -v, --version                Version of the collector.
+
+  # set the SPLUNK_REALM and SPLUNK_ACCESS_TOKEN env vars required in our default config files
+  PS> $env:SPLUNK_REALM = "<realm>"
+  PS> $env:SPLUNK_ACCESS_TOKEN = "<token>"
+
+  # start the collector
+  PS> & '<download dir>\otelcol_windows_amd64.exe' --config=<path to config file>
+
+  # alternatively, use the SPLUNK_CONFIG env var instead of the --config command-line option
+  PS> $env:SPLUNK_CONFIG = "<path to config file>"
+  PS> & '<download dir>\otelcol_windows_amd64.exe'
+
+  # type Ctrl-c to stop the collector
 
 .. _windows-manual-custom:
 

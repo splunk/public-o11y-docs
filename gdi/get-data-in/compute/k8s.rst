@@ -29,7 +29,7 @@ To start a Kubernetes integration, follow these steps:
 
 #. Open the :new-page:`Kubernetes guided setup <https://login.signalfx.com/#/gdi/scripted/kubernetes/step-1?gdiState=%7B"integrationId":"kubernetes"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
+   #. In the navigation menu, select :menuselection:`Data Management` to open the Integrate Your Data page.
 
    #. Select :guilabel:`Kubernetes`.
 
@@ -47,7 +47,7 @@ This includes :ref:`how to configure the destination for the Collector <collecto
 Check access tokens
 ----------------------------------
 
-Access tokens are organization-level tokens that, by default, are valid for one year. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You must use an org token to authenticate emitters that send data points to Observability Cloud. You can use an org token in long-running scripts that call the API. For more information, see :ref:`admin-org-tokens`.
+Access tokens are organization-level tokens that, by default, are valid for one year. For access tokens created prior to February 28, 2022, the expiration date remains 5 years from the creation date. You must use an org token to authenticate emitters that send data points to Splunk Observability Cloud. You can use an org token in long-running scripts that call the API. For more information, see :ref:`admin-org-tokens`.
 
 Next steps
 =================

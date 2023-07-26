@@ -30,10 +30,10 @@ Instrument your browser-based web applications to get Real User Monitoring (RUM)
 
 To generate all the basic installation commands for your environment and application, use the Browser Instrumentation guided setup. To access the Browser Instrumentation guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`Browser Instrumentation guided setup <https://login.signalfx.com/#/gdi/scripted/browser/step-1?category=use-case-user-experience&gdiState=%7B"integrationId":"browser"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
    
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
    

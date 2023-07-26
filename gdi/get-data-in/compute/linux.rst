@@ -28,7 +28,7 @@ Splunk Observability Cloud offers a guided setup to install the Collector:
 
 #. Open the :new-page:`Linux guided setup <https://login.signalfx.com/#/gdi/scripted/otel-connector-linux/step-1?category=all&gdiState=%7B"integrationId":"otel-connector-linux"%7D>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
+   #. In the navigation menu, select :menuselection:`Data Management`, then select :guilabel:`+ Add Integration` to open the :strong:`Integrate Your Data` page.
 
    #. In the integration filter menu, select :guilabel:`All`.
 

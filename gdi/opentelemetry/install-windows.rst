@@ -91,15 +91,8 @@ Read more about Collector sizing in :ref:`otel-sizing`.
 Configure proxy settings
 ----------------------------------
 
-If you need to use a proxy, set one of the following environment variables according to your needs:
+To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.
 
-- ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
-- ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
-- ``NO_PROXY``: If you use a proxy, sets addresses that don't use the proxy.
-
-Restart the Collector after adding these environment variables to your configuration.
-
-.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
 
 .. _fluentd-manual-config-windows:
 
@@ -159,7 +152,7 @@ Splunk offers the configuration management options described in this section.
 
 Ansible
 --------------------------
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
+Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Windows machines and send that data to Splunk Observability Cloud. See :ref:`deployment-windows-ansible` for the instructions to download and customize the role.
 
 .. _windows-chef:
 

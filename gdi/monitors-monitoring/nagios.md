@@ -13,7 +13,7 @@ This integration is similar to the [telegraf/exec monitor configured with dataFo
 
 This integration adds more context to the status check state by using [events](https://docs.splunk.com/Observability/alerts-detectors-notifications/view-data-events.html#events-intro). In addition to the `state` metric, it also sends an event that includes the output and the error caught from the command execution.
 
-Using this integration should make troubleshooting more efficient and let you remain in Observability Cloud without connecting to your Linux or Windows machine in case of an abnormal state to understand what is happening. Using this integration also lets you create a dashboard that is familiar to Nagios users.
+Using this integration should make troubleshooting more efficient and let you remain in Splunk Observability Cloud without connecting to your Linux or Windows machine in case of an abnormal state to understand what is happening. Using this integration also lets you create a dashboard that is familiar to Nagios users.
 
 ```{note}
 The last sent event is cached into memory and compared to new events to avoid repeatedly sending the same event for each collection interval. Restarting the OTel Collector erases its cache, so the  most recently sent event is sent again upon restart. If your check always “normally” produces a different output for each run, for example, the uptime check, you can use the `FilterStdOut: true` parameter to ignore it in comparison.
@@ -68,13 +68,13 @@ service:
 
 The following table shows the configuration options for this monitor:
 
-| Option | Required | Type | Description |
-| --- | --- | --- | --- |
-| `command` | **yes** | `string` | The command to exec with any arguments like: `"LC_ALL=\"en_US.utf8\" /usr/lib/nagios/plugins/check_ntp_time -H pool.ntp.typhon.net -w 0.5 -c 1"` |
-| `service` | **yes** | `string` | Corresponds to the nagios `service` column and allows to aggregate all instances of the same service (when calling the same check script with different arguments) |
-| `timeout` | no | `integer` | The max execution time allowed in seconds before sending SIGKILL (**default:** `9`) |
-| `ignoreStdOut` | no | `bool` | If `false` and change is detected on `stdout` compared to the last event it will send a new one (**default:** `false`) |
-| `ignoreStdErr` | no | `bool` | If `false` and change is detected on `stderr` compared to the last event it will send a new one (**default:** `false`) |
+| Option         | Required | Type      | Description                                                                                                                                                        |
+| -------------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `command`      | **yes**  | `string`  | The command to exec with any arguments like: `"LC_ALL=\"en_US.utf8\" /usr/lib/nagios/plugins/check_ntp_time -H pool.ntp.typhon.net -w 0.5 -c 1"`                   |
+| `service`      | **yes**  | `string`  | Corresponds to the nagios `service` column and allows to aggregate all instances of the same service (when calling the same check script with different arguments) |
+| `timeout`      | no       | `integer` | The max execution time allowed in seconds before sending SIGKILL (**default:** `9`)                                                                                |
+| `ignoreStdOut` | no       | `bool`    | If `false` and change is detected on `stdout` compared to the last event it will send a new one (**default:** `false`)                                             |
+| `ignoreStdErr` | no       | `bool`    | If `false` and change is detected on `stderr` compared to the last event it will send a new one (**default:** `false`)                                             |
 
 ## Metrics
 

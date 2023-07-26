@@ -7,7 +7,7 @@ Troubleshoot .NET instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented .NET application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a .NET application using the Splunk Distribution of OpenTelemetry .NET and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a .NET application using the Splunk Distribution of OpenTelemetry .NET and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. caution:: This is a beta distribution. Use it for evaluation purposes only. Don't use it in production environments. Some features might have restrictions, limited stability, or might change in next versions. Limited support is provided on best-effort basis.
 
@@ -54,7 +54,7 @@ You can activate debug logging to obtain more information about the issue:
 
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
-Traces don't appear in Observability Cloud
+Traces don't appear in Splunk Observability Cloud
 ==================================================================
 
 If traces from your instrumented application or service are not available in Splunk Observability Cloud, verify the OpenTelemetry Collector configuration:

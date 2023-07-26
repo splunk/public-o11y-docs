@@ -4,12 +4,10 @@
 Analyze the performance of inferred services
 ************************************************
 
-.. Metadata updated: 1/23/23
-
 .. meta::
    :description: Learn how Splunk APM can infer the presence of the remote service or inferred service.
 
-In certain cases, a remote service might not have tracing enabled, either because it is not instrumented yet, or because instrumentation is not possible. Splunk APM can infer the presence of the remote service, or inferred service, if the span calling the remote service has the necessary information. 
+In certain cases, a remote service might not have tracing turned on, either because it is not instrumented yet, or because instrumentation is not possible. Splunk APM can infer the presence of the remote service, or inferred service, if the span calling the remote service has the necessary information. 
 
 Splunk APM adds an inferred span to the relevant trace to represent an operation occurring in an inferred service. For further details on how Splunk APM infers services, see :ref:`how-apm-infers-services`.
 
@@ -32,7 +30,7 @@ The following table describes common types of inferred services:
           * :ref:`rpc-inf-logic`
           * :ref:`generic-inf-logic`
 
-       | If your system interacts with a large number of HTTP services, inferring HTTP services might increase Troubleshooting MetricSets cardinality. You might disable inferring HTTP services in your org to prevent excessive cardinality. See  :ref:`infer-http-services` to manage inferred HTTP services.     
+       | If your system interacts with a large number of HTTP services, inferring HTTP services might increase the cardinality of your Troubleshooting MetricSets (TMS). If so, you might turn off inferring HTTP services in your org to prevent excessive cardinality. See  :ref:`infer-http-services` to manage inferred HTTP services.     
        
    * - | Publisher/subscriber queues (pub/sub)
 
@@ -157,7 +155,7 @@ To assign a service name for an inferred HTTP service, Splunk APM does the follo
 
 4. If any of these tags are found, infer the service name from the first appearing tag. If none of these tags are found, the span is not considered related to an inferred HTTP service.
 
-.. note:: To reduce noise in the service map and managing cardinality, Splunk APM excludes services without a host name or that use their IP address as host name. If you need to enable IP addresses, contact your sales representative.
+.. note:: To reduce noise in the service map and managing cardinality, Splunk APM excludes services without a host name or that use their IP address as host name. If you need to turn on IP addresses, contact your sales representative.
 
 .. _rpc-inf-logic:
 
@@ -183,7 +181,7 @@ To infer a generic service from a client span, Splunk APM does the following:
 
 #. Verify that the ``span.kind`` of the referring span is equal to ``CLIENT``.
 #. Look for the service name in the ``peer.service`` tag
-#. If the ``peer.service`` tag exists, infer the service name from it. If the ``peer.service`` tag does not exist, the span is not considered related to a generic inferred service.
+#. If the ``peer.service`` tag exists, infer the service name from it. If the ``peer.service`` tag doesn't exist, the span isn't considered to be related to a generic inferred service.
  
 **Note on AWS services:** To identify AWS services, the span must contain ``http.url``. Splunk APM applies heuristics on this tag's value to determine the AWS Service type from the URL.
 
@@ -192,12 +190,14 @@ To infer a generic service from a client span, Splunk APM does the following:
 Inferred publisher/subscriber (pub/sub) queues
 ------------------------------------------------------
 
-When Splunk APM infers a publisher/subscriber queue, it means an instrumented service is interacting with an uninstrumented pub/sub.
+When Splunk APM infers a publisher/subscriber queue, it means an instrumented service is interacting with an uninstrumented pub/sub. To identify an inferred pub/sub, Splunk APM does the following:
 
-The ``kind`` of the referring span is equal to ``producer`` or ``client``.
+#. Verifies that the ``span.kind`` of the referring span is equal to ``PRODUCER`` or ``CLIENT``.
+#. Verifies that the span contains either ``messaging.destination`` (in libraries that support OpenTelemetry semantic conventions version 1.16.0 or lower) or ``messaging.destination.name`` (in libraries that support OpenTelemetry semantic conventions version 1.17.0 or higher). The value of these tags is used to specify the name of the topic or channel that messages are sent to.
 
-To identify an inferred pub/sub, the span must contain ``messaging.destination``. This tag's value is used to specify the name of the topic or channel that messages are being sent to.
-
+    #. If both ``messaging.system`` and ``messaging.destination.name`` exist, the inferred service name is equal to <Value of ``messaging.system`` tag>:<Value of ``messaging.destination.name`` tag>.
+    #. If ``messaging.system`` is null, the inferred service name is equal to <Value of ``messaging.destination.name`` tag>.
+    #. If ``messaging.destination.name`` is null, the inferred service name is equal to <Value of ``messaging.system`` tag>.
 
 .. _db-inf-logic:
 
@@ -215,8 +215,8 @@ To identify a database, the ``kind`` of the referring span must be equal to ``cl
 
 To determine the ``name`` of an inferred database, Splunk APM applies this logic in the following order: 
 
-#. If the ``db.system`` tag exists, its value is used to specify the type of database being queried, e.g. ``mysql``, ``redis``, etc. If only this tag is present, its value is also used as the ``service.name`` for the inferred database.
-#. If the ``db.name`` tag exists, its value is concatenated with ``db.system`` to form the name of the inferred service: ``db.system:db.name`` (e.g. ``mysql:sql_db_1``).
+#. If the ``db.system`` tag exists, its value is used to specify the type of database being queried, for example, ``mysql``, ``redis``, and so on. If only this tag is present, its value is also used as the ``service.name`` for the inferred database.
+#. If the ``db.name`` tag exists, its value is concatenated with ``db.system`` to form the name of the inferred service: ``db.system:db.name`` (for example, ``mysql:sql_db_1``).
 #. If the ``db.connection_string`` tag is present and its value conforms to a known format such as Java database connectivity (JDBC), Splunk APM extracts the database name portion of the url and concatenates it with the value of ``db.system`` to form the database name, such as ``mysql:dbname``. If the value of ``db.connection_string`` does not conform to a known format or the database portion cannot be extracted and ``db.name`` also does not exist, Splunk APM uses the raw value of ``db.connection_string`` as the database name. If ``db.system`` also exists, the two values are concatenated. 
 
 Splunk APM also provides additional analytics for supported SQL databases. See :ref:`db-query-performance` to learn more.

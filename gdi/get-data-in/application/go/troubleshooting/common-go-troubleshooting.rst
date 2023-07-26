@@ -7,7 +7,7 @@ Troubleshoot Go instrumentation for Splunk Observability Cloud
 .. meta::
    :description: If your instrumented Go application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
-When you instrument a Go application using the Splunk Distribution of OpenTelemetry Go and you don't see your data in Observability Cloud, follow these troubleshooting steps.
+When you instrument a Go application using the Splunk Distribution of OpenTelemetry Go and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-go-troubleshooting:
 
