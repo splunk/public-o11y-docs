@@ -156,7 +156,7 @@ You can track the degree of OpenTelemetry enablement in your AWS integrations by
   :width: 100%
   :alt: Amount of AWS entities with the Collector installed.
 
-Select the :guilabel:`OpenTelemetry enabled` button to see whether the Collector's installed in each entity of your AWS instances.
+Select the :guilabel:`OpenTelemetry Enabled` button to see whether the Collector is installed on each AWS EC2 instance helping identify the instances that still need to be instrumented. For instances that are successfully instrumented, you can see version of the Collector deployed as well.
 
 .. _after-aws-integration:
 
