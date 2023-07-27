@@ -13,7 +13,7 @@ Welcome
 .. rst-class:: newparawithicon
 
 :icon-cloud-upload:`.` :strong:`Get your data in`
-The first step toward observability is getting relevant data into Observability Cloud. View :ref:`all supported integrations <supported-data-sources>`.
+The first step toward observability is getting relevant data into Splunk Observability Cloud. View :ref:`all supported integrations <supported-data-sources>`.
 
 .. rst-class:: newcard
 
@@ -49,7 +49,7 @@ Instrument to collect traces and logs :ref:`instrument-serverless-functions`
 .. rst-class:: newparawithicon
 
 :icon-display:`.` :strong:`Explore and monitor your environment`
-After you have data coming into Observability Cloud, you can do some exploring.
+After you have data coming into Splunk Observability Cloud, you can do some exploring.
 
 .. rst-class:: newcard
 
@@ -79,7 +79,7 @@ Proactively monitor the performance of web resources :ref:`welcome-synthmon`
 .. rst-class:: newcard
 
 :strong:`All products`
-Learn more about all Observability Cloud products :ref:`welcome`
+Learn more about all Splunk Observability Cloud products :ref:`welcome`
 
 .. role:: icon-wrench
 .. rst-class:: newparawithicon
@@ -121,7 +121,7 @@ Provide convenient access to relevant resources :ref:`link-metadata-to-content`
 .. rst-class:: newparawithicon
 
 :icon-cogs:`.` :strong:`Administer your account`
-As an Observability Cloud administrator, use these tools to give your users a secure and relevant user experience.
+As a Splunk Observability Cloud administrator, use these tools to give your users a secure and relevant user experience.
 
 .. rst-class:: newcard
 
@@ -157,7 +157,7 @@ Monitor subscription usage for Infrastructure Monitoring :ref:`subscription-over
 .. rst-class:: newparawithicon
 
 :icon-cloud-upload:`.` :strong:`Popular integrations`
-Access documentation for some of the most popular integrations used to get data into Observability Cloud.
+Access documentation for some of the most popular integrations used to get data into Splunk Observability Cloud.
 
 .. rst-class:: newcard
 
@@ -222,7 +222,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
 .. ----- This comment separates the landing page from the TOC -----
 
 .. toctree::
-   :caption: Get Started
+   :caption: Get started
    :maxdepth:   2
 
    get-started/welcome
@@ -279,7 +279,7 @@ View a list of all supported integrations :ref:`supported-data-sources`
    Collaborate on observability <splunkplatform/practice-reliability/collaboration>
 
 .. toctree::
-   :caption: Administer Observability Cloud
+   :caption: Administer Splunk Observability Cloud
    :maxdepth:   3
 
    admin/admin
