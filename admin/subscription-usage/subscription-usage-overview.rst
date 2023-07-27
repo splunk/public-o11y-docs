@@ -42,6 +42,7 @@ Splunk Observability Cloud admins can monitor billing usage for the following:
 -  :ref:`Monitor Splunk Infrastructure Monitoring subscription usage (DPM plans only) <dpm-usage>`
 -  :ref:`Monitor Log Observer subscription usage <lo-billing-usage>`
 -  :ref:`Monitor RUM subscription usage <rum-subscription-usage>` 
+-  :ref:`Monitor parent-child subscription usage <parent-child-orgs>`
 
 .. _system-limits:
 
