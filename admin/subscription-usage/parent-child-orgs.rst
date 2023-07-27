@@ -37,7 +37,7 @@ To view the available usage reports:
 
 1. Log in to the parent org in Splunk Observability Cloud.
 
-2. In the navigation menu, select :guilabel:`Settings`, then :guilabel:` Subscription Usage`.
+2. In the navigation menu, select :guilabel:`Settings`, then :guilabel:`Subscription Usage`.
    
 3. In the filter, select each child org along with the parent organization. This creates a report showing subscription usage for each org individually.
    
