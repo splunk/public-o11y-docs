@@ -12,6 +12,7 @@ Configure application receivers for databases
    :hidden:
 
    monitors-databases/apache-couchdb
+   monitors-databases/apache-kafka
    monitors-databases/apache-spark
    monitors-databases/cassandra
    monitors-databases/consul
@@ -36,6 +37,7 @@ Configure application receivers for databases
 These application receivers gather metrics from their associated database-related applications and the hosts the applications are running on.
 
 * :ref:`apache-couchdb`
+* :ref:`kafka`
 * :ref:`spark`
 * :ref:`cassandra`
 * :ref:`consul`
