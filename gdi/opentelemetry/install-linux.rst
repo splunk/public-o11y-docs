@@ -31,7 +31,7 @@ The following Linux distributions and versions are supported:
 The installer script deploys and configures these elements:
 
 * The Splunk Distribution of OpenTelemetry Collector for Linux
-* Fluentd, using the td-agent (disabled by default). See :ref:`fluentd-receiver` for more information
+* Fluentd, using the td-agent. Turned off by default. See :ref:`fluentd-receiver` for more information
 
 To install the package using the installer script, follow these steps:
 
@@ -95,14 +95,14 @@ To skip these steps and use configured repos on the target system that provide t
 Configure Fluentd
 ---------------------------------------
 
-To install Fluentd for log collection (disabled by default), run the installer script with the ``--with-fluentd`` option. For example:
+Fluentd is turned off by default. To install Fluentd for log collection, run the installer script with the ``--with-fluentd`` option. For example:
 
 .. code-block:: bash
 
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
    sudo sh /tmp/splunk-otel-collector.sh --with-fluentd --realm SPLUNK_REALM -- SPLUNK_ACCESS_TOKEN
 
-When enabled, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then sends these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
+When turned on, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then sends these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
 The following Fluentd plugins are also installed:
 
