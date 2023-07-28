@@ -120,7 +120,7 @@ You can update or expand your Splunk Observability Cloud subscription any time d
 
 Observability Cloud informs about the need for renewal through a banner that appears 15 days prior to the subscription expiration date. For more information on subscription renewals, contact your Splunk sales representative.
 
-After the 15 days grace period, if your Splunk Observability Cloud subscription expires and no temporary extension is submitted on your behalf by your Splunk sales representative, the subscription enters suspended mode for another 30 days. After the 30 days suspension, the account is terminated and the data stored on the account is deleted.
+On expiration date, a 15-day grace period starts. During the grace period, users see a banner when logging in reminding them of the expiration. After the grace period, the subscription enters suspended mode, which lasts 30 days and during which users can't log in. After the 30-day suspension, the account is terminated and the data stored on the account is deleted.
 
 For additional information, see:
 
@@ -143,7 +143,7 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
    :widths: 25 25 25 25
    :width: 100%
 
-   * - :strong:`Service component`
+   * - 
      - :strong:`AWS regions`
      - :strong:`Google Cloud regions`
      - :strong:`Splunk Observability Cloud realm`
@@ -155,6 +155,21 @@ Splunk Observability Cloud is available in the following global regions. Each Cl
      - us0, us1, us2
        eu0
        au0, jp0
+
+Available components per region or realm
+----------------------------------------------------------
+
+The following components are available for each global region. Each Cloud provider region is mapped to an Observability Cloud realm, which determines access URLs and endpoints.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 25 25
+   :width: 100%
+
+   * - :strong:`Service component`
+     - :strong:`AWS regions`
+     - :strong:`Google Cloud regions`
+     - :strong:`Splunk Observability Cloud realm`
    * - Application Performance Monitoring (APM)
      - US: Oregon (us-west-2), Virginia (us-east-1)
        Europe: Dublin (eu-west-1)
@@ -200,7 +215,9 @@ Splunk has attained a number of compliance attestations and certifications from 
 
 - :strong:`SOC 2 Type II`: Splunk Observability Cloud has an annual SOC 2 Type 2 audit report issued. The SOC 2 audit assesses an organization's security, availability, process integrity, and confidentiality processes to provide assurance about the systems that a company uses to protect customers' data. If you require the SOC 2 Type 2 attestation to review, contact your Splunk sales representative to request it.
 
-- :strong:`Health Insurance Portability and Accountability Act (HIPAA)`: Splunk Observability Cloud is compliant with the HIPAA Security Rule and HITECH Breach Notification Requirements. These regulations establish a standard for the security of any entity that accesses, processes, transmits, or stores electronic protected health information (ePHI).
+- :strong:`Health Insurance Portability and Accountability Act (HIPAA)`: Splunk Observability Cloud enables covered entities and their business associates to comply with U.S. Health Insurance Portability and Accountability Act of (1996) and the HIPAA Security Rule and HITECH Breach Notification Requirements. These regulations establish a standard for the security of any entity that accesses, processes, transmits, or stores electronic protected health information (ePHI).
+
+- :strong:`Cloud Security Alliance (CSA) Security, Trust, & Assurance Registry (STAR)`: Splunk Observability Cloud participates in the voluntary CSA STAR Level 1 Self Assessment to document compliance with CSA- published best practices. We submit our security and privacy self-assessments using the :new-page:`Cloud Controls Matrix <https://cloudsecurityalliance.org/research/cloud-controls-matrix/>` and :new-page:`GDPR Code of Conduct <https://cloudsecurityalliance.org/privacy/gdpr/code-of-conduct/>` based on the CSA Consensus Assessment Initiative Questionnaire (CAIQ).
 
 For information regarding the availability of service components between the AWS and Google Cloud regions, see :ref:`sd-regions`.
 
@@ -223,7 +240,7 @@ All data in transit to and from Splunk Observability Cloud is TLS 1.2+ encrypted
 Data handling
 -----------------------------------------------------------
 
-Your data is stored securely in a Splunk Observability Cloud realm that corresponds to a cloud service provider's region. See :ref:`sd-regions` for more information on regions and realms. 
+Your data is stored securely in a Splunk Observability Cloud realm that corresponds to a cloud service provider's region. See :ref:`sd-regions` for more information on regions and realms.
 
 Splunk retains Customer Content stored in its cloud computing services for at least thirty days after the expiration or termination of the subscription. See :ref:`sd-subscription` for more information.
 
@@ -237,7 +254,7 @@ Splunk has attained a number of compliance attestations and certifications from 
 Realm security
 ------------------------------------------------------------
 
-Every realm in Splunk Observability Cloud runs in a secured environment on a stable operating system and in a network that is hardened to industry standards. Realms are regularly scanned for threats.
+Every realm in Splunk Observability Cloud runs in a secured environment on a stable operating system and in a network that is hardened to industry standards. Realms are scanned for threats on a regular basis.
 
 User authentication and access
 ------------------------------------------------------
@@ -281,7 +298,7 @@ See :ref:`supported-browsers` for more information.
 System limits per product
 ===========================================================
 
-Splunk Observability Cloud service limits are described in :ref:`per-product-limits`. Service limits may vary based on your Observability Cloud subscription. Some limits depend on a combination of configuration, system load, performance, and available resources. Unless noted, the service limit is identical for all regions. 
+Splunk Observability Cloud service limits are described in :ref:`per-product-limits`. Service limits may vary based on your Observability Cloud subscription. Some limits depend on a combination of configuration, system load, performance, and available resources. Unless noted, the service limit is identical for all regions.
 
 Contact Splunk if your requirements are different or exceed what is recommended in :ref:`per-product-limits`.
 
