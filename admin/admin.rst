@@ -32,7 +32,7 @@ The following table shows you aspects of your Observability Cloud organization t
 
    * - Invite administrators to help with the setup process
      - :guilabel:`Settings > Users`
-     - For information, see :ref:`manage-users`.
+     - For information, see :ref:`admin-manage-users`.
      - admin
 
    * - Create access tokens to authenticate API calls and data ingestion
@@ -47,7 +47,7 @@ The following table shows you aspects of your Observability Cloud organization t
 
    * - Invite users
      - :guilabel:`Settings > Users`
-     - For information, see :ref:`manage-users`.
+     - For information, see :ref:`admin-manage-users`.
      - admin
 
    * - Integrate with notification services to facilitate team workflows and communication channels
