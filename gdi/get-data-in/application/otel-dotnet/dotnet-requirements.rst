@@ -55,7 +55,7 @@ Traces instrumentations
      - 7.5.0 and higher
      - ``GRAPHQL``
    * - Grpc.Net.Client
-     - 2.43.0 to 3.0.0
+     - 2.52.0 to 3.0.0
      - ``GRPCNETCLIENT``
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
      - See :ref:`dotnet-otel-versions`
