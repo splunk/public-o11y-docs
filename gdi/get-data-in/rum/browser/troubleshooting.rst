@@ -43,7 +43,7 @@ Activate debug logging
 
 Activating debug logging can help you troubleshoot browser RUM instrumentation issues.
 
-To activate logging, add the ``debug: true)`` setting to ``SplunkRum.init``. For example:
+To activate logging, add the ``debug: true`` setting to ``SplunkRum.init``. For example:
 
 .. code-block:: html
    :emphasize-lines: 9
