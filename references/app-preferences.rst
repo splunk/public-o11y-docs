@@ -23,8 +23,8 @@ To view or change your time zone or color accessibility settings, follow these s
 #. Select your user name at the top of the :strong:`Settings` menu.
 #. On the :strong:`App Preferences` tab, you can see or update your time zone or color accessibility selection:
 
-   * To view or update your time zone, use the :guilabel:`Time Zone` list.
-   * To optimize your color settings for accessibility, use the :guilabel:`Color Accessibility` list.
+   #. To view or update your time zone, use the :guilabel:`Time Zone` list.
+   #. To optimize your color settings for accessibility, use the :guilabel:`Color Accessibility` list.
 
       * To optimize your color settings for types of red-green color deficiency (deuteranopia or protanopia), select :guilabel:`Red and Green`.
       * To optimize your color settings for yellow-blue color deficiency (tritanopia),select :guilabel:`Yellow and Blue`.

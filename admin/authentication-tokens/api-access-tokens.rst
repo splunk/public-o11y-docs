@@ -15,8 +15,6 @@ Keep in mind you might also need the following access tokens:
 - To authenticate API requests that send data to Splunk Observability Cloud, you must use an :ref:`organization access token<admin-org-tokens>`, not a user API access token.
 
 
-.. _api-access-token:
-
 Retrieve you user API access token (session token)
 =========================================================
 

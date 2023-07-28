@@ -9,7 +9,7 @@ About the Splunk Distribution of OpenTelemetry Python
 
 The Splunk Distribution of OpenTelemetry Python is a wrapper for the OpenTelemetry Instrumentation for Python, an open source Python agent that dynamically patches supported libraries to capture telemetry data.
 
-With the agent you can automatically instrument any application written in Python 3.7 and higher. See :ref:`python-otel-requirements`.
+With the agent you can automatically instrument any application written in Python 3.7 and higher. See :ref:`python-otel-requirements`. To instrument Python 2 applications, use the :new-page:`SignalFx Tracing Library for Python <https://github.com/signalfx/signalfx-python-tracing>`.
 
 Features of the Splunk Distribution of OpenTelemetry Python
 ==============================================================
