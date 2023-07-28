@@ -264,7 +264,7 @@ $(document).ready(function () {
           client.onreadystatechange = function () {
 
             const status = client.status;
-            if (status === 0 || (status >= 200 && status < 400)) {
+            if (status >= 200 && status < 400) {
               const result = jsyaml.load(client.responseText, 'utf8');
               if (result != null && !cache[result.name]) {
 
@@ -300,7 +300,7 @@ $(document).ready(function () {
           client.onreadystatechange = function () {
 
             const status = client.status;
-            if (status === 0 || (status >= 200 && status < 400)) {
+            if (status >= 200 && status < 400) {
               const result = jsyaml.load(client.responseText, 'utf8');
               if (result != null && !cache[result.type]) {
 
