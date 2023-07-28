@@ -1,4 +1,4 @@
-.. _admin-manage-teams:
+.. _admin-manage-team-membership:
 
 ***************************************************
 Manage teams in Splunk Observability Cloud
@@ -7,47 +7,7 @@ Manage teams in Splunk Observability Cloud
 .. meta::
    :description: Learn how to how to manage teams and team membership.
 
-Use Splunk Observability Cloud teams to coordinate teamwork. Managing teams in Splunk Observability Cloud means creating and deleting teams, as well as managing membership and team security.
-
-Organize users with teams
-========================================
-
-As a Splunk Observability Cloud administrator, use teams to organize users by functional area, then you can connect users in a particular area to the detectors and dashboard groups that they're most interested in. For example, here are examples of some teams based on functional areas:
-
-  * Security: Teams who monitor hardware and software security
-  * Hardware operations: Teams who add, replace, or fix computer hardware
-  * DevOps: Teams responsible for maintaining system uptime
-  * Infrastructure IT: Teams who manage user access to systems
-
-In these areas, each team might monitor specific metrics related to their functional area, or they might monitor a general set of metrics for the specific systems they manage, or both.
-
-For example, your security team might focus on metrics that indicate login failures, because these failures indicate attempts to break into systems. You might also have several DevOps teams, each of which monitors CPU temperature and network response time metrics for the systems they manage.
-
-
-Link teams to relevant Observability Cloud features and content
-====================================================================
-
-You can link teams to relevant dashboard groups and detectors, giving them focused access to the information they use the most.
-
-To learn more about linking teams to dashboard groups and detectors, see :ref:`admin-team-notifications`.
-
-.. raw:: html
-
-  <embed>
-    <h3>Set up team landing pages to provide a handy location for team resources</h3>
-  </embed> 
-
-A team landing page provides a customizable text area that you can use to provide useful information for the team. The team landing page also provides access to any dashboard groups and detectors that you linked to the team.
-
-To learn more about team landing pages, see :ref:`admin-configure-page`.
-
-
-Create team notifications
-=======================================
-
-Define team notifications to help ensure that your team receives the alerts it needs to stay informed.
-
-To learn more about team notifications, see :ref:`admin-team-notifications`.
+Managing teams in Splunk Observability Cloud means creating and deleting teams, as well as managing membership and team security.
 
 
 .. _admin-create-team:
@@ -186,7 +146,7 @@ To view which teams a user belongs to, follow these steps:
 
 .. _admin-team-controls:
 
-Enable enhanced team security
+Turn on enhanced team security
 ============================================================================
 
 |hr|
@@ -210,7 +170,90 @@ To turn on the enhanced team security setting, follow these steps:
 #. Select the :guilabel:`Restrict Access` check box.
 
 
+.. _about-team-roles:
+
 Team roles and permissions
 ============================================================================
 
-Some team roles and permissions change based on whether enhanced team security is turned on. For example, when you turn on enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users. For information about enhanced team security and team roles, see :ref:`about-team-roles`.
+This table presents the available team roles and their permissions. Some team roles and permissions change based on whether enhanced team security is turned on. For example, when you turn on enhanced team security, the Team Manager role is available, and Observability Cloud administrators or Team Managers must add users.
+
+To learn more about enabling enhanced team security, see :ref:`admin-team-controls`.
+
+.. list-table::
+  :widths: 20,20,20,20,20
+
+  * - :strong:`Permission`
+    - :strong:`Admin`
+    - :strong:`Team Manager` (Available with enhanced team security turned on)
+    - :strong:`Team Member`
+    - :strong:`User`
+
+  * - :strong:`Create team`
+    - Yes
+    - No
+    - No
+    - No
+
+  * - :strong:`Delete team`
+    - Yes
+    - No
+    - No
+    - No
+
+  * - :strong:`View team landing page`
+    - Yes
+    - Yes
+    - Yes
+    - Yes
+
+  * - :strong:`Edit team name and description`
+    - Yes
+    - Yes
+    - * Yes, when enhanced team security is turned off
+      * No, when enhanced team security is turned on
+    - No
+
+  * - :strong:`Join team`
+    - Yes
+    - Not applicable: A Team Manager doesn't join a team. Only an existing Team Member can be assigned this role.
+    - Not applicable: A Team Member is already on a team and doesn't need to join.
+    - * Yes, when enhanced team security is turned off
+      * No, when enhanced team security is turned on. A user must be added by an Admin or Team Manager
+
+  * - :strong:`Add member`
+    - Yes
+    - Yes
+    - No
+    - No
+
+  * - :strong:`Assign Team Manager role to Team Member`
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
+      * Yes, when enhanced team security is turned on
+    - Yes
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
+      * No, when enhanced team security is turned on
+    - * Not applicable, when enhanced team security is turned off. The Team Manager role isn't available when enhanced team security is turned off
+      * No, when enhanced team security is turned on
+
+  * - :strong:`Remove member`
+    - Yes
+    - Yes
+    - No
+    - No
+
+  * - :strong:`Edit notification policy`
+    - Yes
+    - Yes
+    - Yes
+    - No
+
+  * - :strong:`Leave team`
+    - * Yes, if on a team
+      * Not applicable, if not on a team
+    - Yes
+    - Yes
+    - Not applicable: A user must be on a team to leave a team
+
+Permission to link a detector to a team is based on the detector's permissions. For example, if the user has write permission for a detector, they can link it to a team. To learn more, see :ref:`detector-manage-permissions`.
+
+Permission to link a dashboard group to a team is based on the dashboard group's permissions. For example, if the user has write permission for a dashboard group, they can link it to a team. To learn more, see :ref:`dashboard-manage-permissions`.
