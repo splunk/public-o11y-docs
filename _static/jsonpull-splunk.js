@@ -296,16 +296,23 @@ $(document).ready(function () {
 
           let client = new XMLHttpRequest();
           client.open('GET', url);
+
           client.onreadystatechange = function () {
 
-            const result = jsyaml.load(client.responseText, 'utf8');
-            if (result != null && !cache[result.type]) {
+            const status = client.status;
+            if (status === 0 || (status >= 200 && status < 400)) {
+              const result = jsyaml.load(client.responseText, 'utf8');
+              if (result != null && !cache[result.type]) {
 
-              metricsYamlObject.append(traverseFields(metricsYamlObject, result));
-              cache[result.type] = true;
+                metricsYamlObject.append(traverseFields(metricsYamlObject, result));
+                cache[result.type] = true;
 
+              }
+            } else {
+              metricsYamlObject.append('<div class="admonition caution"><p class="admonition-title">Error</p><p><strong>The <a href="' + url + '">source settings file</a> is not available. Refresh the page or send us a <a href="#feedbackModal">feedback</a>.</strong></p></div>');
+              client.abort();
+              return;
             }
-
           }
           client.send();
 
@@ -328,10 +335,17 @@ $(document).ready(function () {
           client.open('GET', url);
           client.onreadystatechange = function () {
 
-            const result = jsyaml.load(client.responseText, 'utf8');
-            //console.log(result);
-            loadYamls(result);
+            const status = client.status;
+            if (status === 0 || (status >= 200 && status < 400)) {
+              const result = jsyaml.load(client.responseText, 'utf8');
+              //console.log(result);
+              loadYamls(result);
 
+            } else {
+              metricsYamlObject.append('<div class="admonition caution"><p class="admonition-title">Error</p><p><strong>The <a href="' + url + '">source metrics file</a> is not available. Refresh the page or send us a <a href="#feedbackModal">feedback</a>.</strong></p></div>');
+              client.abort();
+              return;
+            }
           }
           client.send();
 
