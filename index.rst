@@ -136,7 +136,7 @@ Authenticate and track API use :ref:`admin-org-tokens`
 .. rst-class:: newcard
 
 :strong:`Users`
-Invite users and set access levels :ref:`manage-users`
+Invite users and set access levels :ref:`admin-manage-users`
 
 .. rst-class:: newcard
 
@@ -799,4 +799,3 @@ View a list of all supported integrations :ref:`supported-data-sources`
    :maxdepth:   3
 
    Glossary <references/glossary>
-

@@ -18,11 +18,10 @@ Monitor and manage subscription usage and billing
    Infrastructure subscription usage (DPM plans) <dpm-usage>
    Logs subscription usage <lo-billing-usage>
    RUM subscription usage <rum-subscription-usage>
-   View parent-child subscription usage <parent-child-orgs>
 
-View Splunk Observability Cloud subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
+View Splunk Observability subscription usage data to monitor your organization's usage against its subscription plan and entitlements. 
 
-You must be an Splunk Observability Cloud administrator to view the Subscription Usage page for your organization. Go to :guilabel:`Settings` then :guilabel:`Subscription Usage`.
+You must be an Observability Cloud administrator to view the Subscription Usage page for your organization. Go to :guilabel:`Settings > Subscription Usage` or :guilabel:`Settings > Billing and Usage`, depending on your subscription model.
 
 .. _usage-source:
 
@@ -32,7 +31,7 @@ You must be an Splunk Observability Cloud administrator to view the Subscription
       <h2>Usage and billing by source</h2>
    </embed>
 
-Splunk Observability Cloud admins can monitor billing usage for the following:
+Observability Cloud admins can monitor billing usage for the following:
 
 -  :ref:`Monitor Splunk APM subscription usage <apm-billing-usage-index>`
 -  :ref:`Analyze Splunk APM subscription usage data for your subscription plan <analyze-apm-billing-usage>`
@@ -42,7 +41,6 @@ Splunk Observability Cloud admins can monitor billing usage for the following:
 -  :ref:`Monitor Splunk Infrastructure Monitoring subscription usage (DPM plans only) <dpm-usage>`
 -  :ref:`Monitor Log Observer subscription usage <lo-billing-usage>`
 -  :ref:`Monitor RUM subscription usage <rum-subscription-usage>` 
--  :ref:`Monitor parent-child subscription usage <parent-child-orgs>`
 
 .. _system-limits:
 
@@ -52,7 +50,7 @@ Splunk Observability Cloud admins can monitor billing usage for the following:
       <h2>System limits</h2>
    </embed>
 
-Splunk Observability Cloud has system limits that help ensure good performance, stability, and reliability. Exceeding these limits might degrade your experience. 
+Observability Cloud has system limits that help ensure good performance, stability, and reliability. Exceeding these limits might degrade your experience. 
 
 If you exceed your ingestion limits you might incurr in overcost. To help avoid overage fees, :ref:`create a detector <create-detectors>` to proactively monitor for potential overages and receive alerts when you are nearing a subscription limit.
 
