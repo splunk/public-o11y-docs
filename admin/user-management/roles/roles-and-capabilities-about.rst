@@ -14,6 +14,11 @@ About roles-based access control and capabilities
 
 |hr|
 
+.. toctree::
+   :hidden:
+
+   Matrix of roles and capabilities <roles-and-capabilities-table>
+   Assign roles to users <_users-assign-roles>
 
 
 Splunk Observability Clouds lets you restrict access to certain features to specific groups of users using role-based access control (RBAC). You assign roles to users. A role contains a set of capabilities. These capabilities define what actions are available to roles. For example, capabilities determine whether someone with a particular role has capabilities to create detectors or dashboards. For details about each role and the associated capabilities, see :ref:`roles-and-capabilities-table`. 
