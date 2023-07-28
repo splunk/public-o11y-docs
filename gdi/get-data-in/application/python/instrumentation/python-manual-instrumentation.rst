@@ -36,7 +36,7 @@ To create custom spans and traces, follow these steps:
       #    'deployment.environment': '<your_environment>',
       #  })
 
-   As an alternative, you can also import the OpenTelemetry API:
+   As an alternative, you can also import the OpenTelemetry SDK:
 
    .. code:: python
 
