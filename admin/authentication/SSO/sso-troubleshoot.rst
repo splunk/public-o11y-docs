@@ -13,7 +13,7 @@ If you experience configuration issues, check these common misconfigurations.
 
   * Confirm that :guilabel:`Entity ID` and :guilabel:`ACS URL`, also called :guilabel:`Reply URL` point to the correct realm.
   * Check whether :guilabel:`Integration-specific Entity ID`, if used, and :guilabel:`ACS URL` contain the correct Integration ID.
-  * See whether :guilabel:`Entity ID`, also called :guilabel:`Metadata URL` or :guilabel:`SAML audience`, is the same in the IdP and Splunk Observability Cloud.  The :guilabel:`Entity ID` can contain the integration ID or not. Whether it is included is controlled by a check box on the integration setup page. Make sure that the same Entity ID is configured in the IdP.
+  * See whether :guilabel:`Entity ID`, also called :guilabel:`Metadata URL` or :guilabel:`SAML audience`, is the same in the IdP and Splunk Observability Cloud.  The :guilabel:`Entity ID` can contain the integration ID or not. Whether it is included is controlled by a checkbox in the Splunk Observability Cloud integration setup page. Make sure that the same Entity ID is configured in the IdP.
   * Check that claims are configured correctly. Claims are case sensitive. :code:`Email` doesn't work, so you must use :code:`User.email`.
 
 

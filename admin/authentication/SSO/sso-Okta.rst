@@ -10,10 +10,6 @@ Configure an Okta SSO integration
 
 The Okta SSO integration lets you log into Observability Cloud using Okta.
 
-Prerequisite
-======================
-
-To complete the tasks in this topic, you must the admin role in Splunk Observability Cloud.
 Before you begin to configure the Okta SSO integration, ensure you have completed the steps in :new-page-ref:`sso-label`, including the section :ref:`Name an SSO integration<naming-note-sso>` to learn about naming your integrations.
 
 .. caution:: To follow this procedure, you must be an administrator of your Okta organization and an administrator of your Observability Cloud organization.
