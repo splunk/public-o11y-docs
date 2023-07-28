@@ -328,7 +328,7 @@ $(document).ready(function () {
         let url = $(this).attr('url');
         let metricsYamlObject = $(this);
         let category = $(this).attr('category');
-
+        console.log(metricsYamlObject);
         try {
 
           var client = new XMLHttpRequest();
@@ -336,19 +336,19 @@ $(document).ready(function () {
           client.onreadystatechange = function () {
 
             const status = client.status;
-            if (status === 0 || (status >= 200 && status < 400)) {
+            console.log("Status is " + status);
+            if (status >= 200 && status < 400) {
+              console.log("Success!");
               const result = jsyaml.load(client.responseText, 'utf8');
-              //console.log(result);
               loadYamls(result);
-
             } else {
-              metricsYamlObject.append('<div class="admonition caution"><p class="admonition-title">Error</p><p><strong>The <a href="' + url + '">source metrics file</a> is not available. Refresh the page or send us a <a href="#feedbackModal">feedback</a>.</strong></p></div>');
+              console.log("Failure!");
+              metricsYamlObject.html('<div class="admonition caution"><p class="admonition-title">Error</p><p><strong>The <a href="' + url + '">source metrics file</a> is not available. Refresh the page or send us a <a href="#feedbackModal">feedback</a>.</strong></p></div>');
               client.abort();
               return;
             }
           }
           client.send();
-
 
         } catch (e) {
           console.log(e);
