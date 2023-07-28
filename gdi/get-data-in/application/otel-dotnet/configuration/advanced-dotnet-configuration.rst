@@ -56,7 +56,7 @@ The following settings are common to most instrumentation scenarios:
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Activated by default. Adds server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-dotnet-otel`. The default value is ``true``.
    * - ``OTEL_DOTNET_AUTO_EXCLUDE_PROCESSES``
-     - Names of the executable files that the profiler cannot instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Notice that applications launched via `dotnet MyApp.dll` have process
+     - Names of the executable files that you don't want the profiler to instrument. Supports multiple semicolon-separated values, for example: ``ReservedProcess.exe;powershell.exe``. Notice that applications launched using `dotnet MyApp.dll` have process
 name ``dotnet`` or ```dotnet.exe``. Can't be set using the web.config or app.config files.
    * - ``OTEL_DOTNET_AUTO_TRACES_ENABLED``
      - Traces are collected by default. To deactivate trace collection, set the environment variable to ``false``. Data from custom or manual instrumentation is not affected.
