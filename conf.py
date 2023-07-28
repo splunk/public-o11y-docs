@@ -25,7 +25,8 @@ extensions = [
     'optimizer',
     'myst_parser',
     'sphinx_tabs.tabs',
-    'olly_on_git_hub'
+    'olly_on_git_hub',
+    'sphinxcontrib.images'
 ]
 
 html_context = {
