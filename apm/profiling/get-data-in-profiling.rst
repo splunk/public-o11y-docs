@@ -104,7 +104,16 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       - To use CPU profiling, activate the ``splunk.profiler.enabled`` system property, or set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Activate Memory profiling by setting the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``. To activate memory profiling, the ``splunk.profiler.enabled`` property must be set to ``true``.
-      - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4317``.
+      - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://$(K8S_NODE_IP):4317`` where ``K8S_NODE_IP`` is fetched from the Kubernetes downstream  API by setting this on the application pod:
+        
+        .. code-block:: yaml
+
+           env:  
+             - name: K8S_NODE_IP
+               valueFrom:
+                 fieldRef:
+                   apiVersion: v1
+                   fieldPath: status.hostIP
       - Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your Collector config, you need to pass the custom port to the JVM.
       
       The following example shows how to activate the profiler using the system property:
