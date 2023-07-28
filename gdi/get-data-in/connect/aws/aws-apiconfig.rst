@@ -263,6 +263,8 @@ These are these permissions to allow Splunk Observability Cloud to collect AWS t
 - ``"tag:GetResources"``
 - ``"workspaces:DescribeWorkspaces"``
 
+.. note:: Cassandra permissions are declared as a separate object. See the example below.
+
 Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Action`` array of the :ref:`AWS IAM policy JSON <review-aws-iam-policy>`. For example:
 
 .. code-block:: json
@@ -349,6 +351,20 @@ Add the ``"<service>:<permission>"`` pair relevant to each service in the ``Acti
           "workspaces:DescribeWorkspaces"
         ],
         "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "cassandra:Select"
+        ],
+        "Resource": [
+          "arn:aws:cassandra:*:*:/keyspace/system/table/local",
+          "arn:aws:cassandra:*:*:/keyspace/system/table/peers",
+          "arn:aws:cassandra:*:*:/keyspace/system_schema/*",
+          "arn:aws:cassandra:*:*:/keyspace/system_schema_mcs/table/tags",
+          "arn:aws:cassandra:*:*:/keyspace/system_schema_mcs/table/tables",
+          "arn:aws:cassandra:*:*:/keyspace/system_schema_mcs/table/columns"
+        ]
       }
     ]
   }
