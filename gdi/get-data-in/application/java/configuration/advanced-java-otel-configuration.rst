@@ -146,6 +146,18 @@ The following settings control trace sampling:
 
        If you don't set arguments when using the ``rules`` sampler, the instrumentation defaults to the ``parentbased_always_on`` sampler. |br| |br| System property: ``otel.traces.sampler.arg``
 
+Example of trace sampling
+-------------------------------------------------------
+
+The following example shows how to use the ``rules`` traces sampler to exclude the ``/healthcheck`` endpoint from monitoring:
+
+.. code-block:: bash
+
+   export OTEL_TRACES_SAMPLER=rules
+   export OTEL_TRACES_SAMPLER_ARG=drop=/healthcheck;fallback=parentbased_always_on
+
+All requests to downstream services that happen as a consequence of calling an excluded endpoint are also excluded.
+
 .. _trace-propagation-configuration-java:
 
 Propagators configuration
