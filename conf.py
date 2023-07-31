@@ -109,7 +109,7 @@ linkcheck_ignore = [r'https://ingest.*',r'https://app.*',r'https://login.*',r'.*
 # Image settings
 
 images_config = {
-    'override_image_directive': true
+    'override_image_directive': True
 }
 
 # ROLES AND MACROS
