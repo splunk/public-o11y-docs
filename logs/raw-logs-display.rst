@@ -34,9 +34,3 @@ These features help you browse the logs table:
   #. On the Table Settings popup, select the fields you want to display. You can search for particular fields in the Search box. When finished, click :guilabel:`Apply Changes`. Each field you selected is now a column in the table. 
 
   #. You can customize the logs table display by adjusting the column width or dragging and dropping columns to a new order.
-
-
-.. |Settings| image:: /_images/logs/log-observer-raw-log-gear-icon.png
-               :width: 20
-               :alt: Settings icon
-               :align: center
