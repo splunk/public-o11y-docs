@@ -42,7 +42,7 @@ Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with
 Ingest traces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to be properly ingest trace telemetry data, the attribute ``deployment.environment`` must be on board the exported traces. There are two ways to set this attribute:
+In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
 
 * Use the `values.yaml` optional environment configuration.
 * Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
