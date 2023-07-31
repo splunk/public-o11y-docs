@@ -21,7 +21,7 @@ Each Observability Cloud product has a maximum number of MTS you can create per 
 .. raw:: html
 
   <embed>
-    <h2>MTS limits per product</h2>
+    <h2>MTS limits per product</h2> Need a link here for sharing with customers
   </embed>  
 
 The following table shows MTS creation limits for each Observability Cloud product:
@@ -60,7 +60,7 @@ The following table shows MTS creation limits for each Observability Cloud produ
 .. raw:: html
 
   <embed>
-    <h2>Set up limit alerting</h2>
+    <h2>Set up limit alerting</h2> Need a link here to share with customers
   </embed>
 
 You can set up metric limits alerting to manage your resource usage on a per product basis. Related metrics include:
@@ -101,7 +101,7 @@ See more in :ref:`org-metrics`.
 .. raw:: html
 
   <embed>
-    <h2>System limits and data throttling</h2>
+    <h2>System limits and data throttling</h2> Need a link here to share with customers
   </embed>
 
 Observability Cloud products have system limits to protect the service's performance, stability, and reliability. If you exceed those limits, the platform might start to throttle the data you send in, and slow down ingest. 
