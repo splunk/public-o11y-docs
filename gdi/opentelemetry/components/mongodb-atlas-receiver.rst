@@ -78,7 +78,7 @@ The following table shows the configuration options for the MongoDB Atlas:
 
 .. raw:: html
 
-   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/mongodbadddtlas.yaml"></div>
+   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/mongodbatlas.yaml"></div>
 
 Metrics
 =====================
@@ -87,7 +87,7 @@ The following metrics, resource attributes, and attributes are available.
 
 .. raw:: html
 
-   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mongodbatlasreceivedddr.yaml"></div>
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/mongodbatlasreceiver.yaml"></div>
 
 .. include:: /_includes/activate-deactivate-native-metrics.rst
 

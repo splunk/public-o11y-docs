@@ -70,7 +70,7 @@ The following table shows the configuration options for this integration:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/docddker/metrics.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/integrations/main/docker/metrics.yaml"></div>
 
 ### Notes
 
