@@ -9,10 +9,12 @@ Uninstall the Collector
 
 Use the platform-specific information provided in this topic if you need to uninstall the Collector.
 
+.. _otel-kubernetes-uninstall:
+
 Uninstall on Kubernetes
 ==========================
 
-Run the ``helm uninstall`` command to uninstall the Collector. For example, to uninstall ``my-splunk-otel-collector``, run this command:
+Run the ``helm uninstall`` command to uninstall the Collector for Kubernetes. For example, to uninstall ``my-splunk-otel-collector``, run this command:
 
 .. code-block:: bash
 
@@ -23,7 +25,6 @@ Running this command does the following things:
 * Removes all Kubernetes components associated with the chart
 * Deletes the release
 * Removes the release history
-
 
 .. _otel-linux-uninstall-otel-and-tdagent:
 
@@ -223,7 +224,38 @@ While you can verify the uninstall of the Collector and Fluentd packages by watc
 
   The expected result is ``Unit td-agent.service could not be found.``
 
+.. _otel-windows-uninstall:
 
 Uninstall on Windows
 =======================
+
+.. _otel-windows-uninstall-panel:
+
+Uninstall using the Windows Control Panel
+--------------------------------------------------------------------------------------------
+
 If installed with the installer script, the Collector and td-agent (Fluentd) can be uninstalled from **Programs and Features** in the Windows Control Panel. The configuration files might persist in ``\ProgramData\Splunk\OpenTelemetry Collector`` and ``\opt\td-agent`` after uninstall.
+
+.. _otel-windows-uninstall-powershell:
+
+Uninstall using PowerShell
+--------------------------------------------------------------------------------------------
+
+You can also uninstall the Collector for Windows using PowerShell:
+
+.. code-block:: PowerShell
+
+   # list installed programs to see if the Splunk OpenTelemetry Collector is installed
+   Get-WmiObject -Class Win32_Product | Select-Object -Property Name 
+
+   # if it exists, select the Collector 
+   $MyProgram = Get-WmiObject -Class Win32_Product | Where-Object{$_.Name -eq "Splunk OpenTelemetry Collector"}  
+   
+   # complete uninstall 
+   run $MyProgram.uninstall()
+
+Alternatively, try the following command:  
+
+.. code-block:: PowerShell
+
+   return (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $:.DisplayName -eq "Splunk OpenTelemetry Collector" })
