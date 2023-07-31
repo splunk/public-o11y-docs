@@ -46,7 +46,7 @@ In this case, the ``NO_WINDOWS_SERVICE=1`` environment variable must be set to f
 Collector is experiencing data issues
 ============================================
 
-You can monitor internal Collector metrics tracking parameters such as data loss or CPU resources in Observability Cloud's default dashboards at :guilabel:`Dashboards > OpenTelemetry Collector > OpenTelemetry Collector`. To learn more about these metrics, see :new-page:`Monitoring <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/monitoring.md>` in the OpenTelemetry GitHub repo.
+You can monitor internal Collector metrics tracking parameters such as data loss or CPU resources in Splunk Observability Cloud's default dashboards at :guilabel:`Dashboards > OpenTelemetry Collector > OpenTelemetry Collector`. To learn more about these metrics, see :new-page:`Monitoring <https://github.com/open-telemetry/opentelemetry-collector/blob/main/docs/monitoring.md>` in the OpenTelemetry GitHub repo.
 
 The Collector might experience the issues described in this section.
 
@@ -94,10 +94,10 @@ Check the logs and :new-page:`Troubleshooting zPages <https://github.com/open-te
 
 .. _collector-gateway-metrics-issue:
 
-Metrics and metadata not available in Gateway mode
-============================================================
+Metrics and metadata not available in data forwarding (gateway) mode
+=============================================================================
 
-If you don't see metrics and metadata after manually deploying the Collector in Gateway mode, the agent configuration might be lacking pipelines that use the SignalFx exporter. Follow these steps to review the configuration:
+If you don't see metrics and metadata after manually deploying the Collector in data forwarding (gateway) mode, the agent configuration might be lacking pipelines that use the SignalFx exporter. Follow these steps to review the configuration:
 
 #. Make sure that your Gateway can listen to requests on ports 6060 and 9943.
 

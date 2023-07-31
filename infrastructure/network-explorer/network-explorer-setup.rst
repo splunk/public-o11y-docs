@@ -8,7 +8,9 @@ Set up Network Explorer
 *******************************************************
 
 .. meta::
-    :description: Install and configure Network Explorer
+    :description: Install and configure Network Explorer on Kubernetes systems
+
+.. note:: The following topic only applies to Kubernetes systems. If you want to set up Network Explorer on other systems, see :ref:`network-explorer-setup-non-k8s`.
 
 You can install and configure Network Explorer as part of the Splunk Distribution of OpenTelemetry Collector Helm chart.
 
@@ -25,7 +27,7 @@ To use Network Explorer with Kubernetes, you must meet the following requirement
       - :strong:`Description`
         
     * - Environment
-      - Network Explorer is only supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
+      - Network Explorer is supported in Kubernetes-based environments on Linux hosts. Use Helm-based management.
       
     * - Operating system
       - RedHat Linux versions 7.6 or higher, Ubuntu versions 16.04 or higher, Debian Stretch+, Amazon Linux 2, Google COS
@@ -89,7 +91,7 @@ Network Explorer consists of the following components:
 Install Network Explorer
 =======================================================================================
 
-For the Splunk Distribution of OpenTelemetry Collector to work with Network Explorer, you must install it in Gateway mode, and perform the following steps:
+For the Splunk Distribution of OpenTelemetry Collector to work with Network Explorer, you must install it in data forwarding (gateway) mode, and perform the following steps:
 
 - Enable OTLP gRPC reception by configuring an OTLP gRPC metric receiver on the Gateway.
 - Enable SignalFx export by configuring a SignalFx exporter on the Gateway with the valid realm and access token.
@@ -117,7 +119,7 @@ The following table shows required parameters for this installation:
          - Set this to ``true`` to enable Network Explorer.
        * - ``agent.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``agent.enabled`` as is.
-           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in Agent mode on each Kubernetes node.
+           * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and only want to collect telemetry from Network Explorer, set this to ``false`` to disable installing the Splunk Distribution of OpenTelemetry Collector in host monitoring (agent) mode on each Kubernetes node.
            * If you are installing a new instance of the Splunk Distribution of OpenTelemetry Collector and want to collect telemetry from both Network Explorer and the individual OpenTelemetry Collector agents, set this to ``true``.
        * - ``clusterReceiver.enabled``
          - * If you are adding Network Explorer to an existing Splunk Distribution of OpenTelemetry Collector configuration, leave ``clusterReceiver.enabled`` as is.

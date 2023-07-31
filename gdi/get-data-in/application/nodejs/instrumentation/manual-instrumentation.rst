@@ -5,7 +5,7 @@ Manually instrument Node applications for Splunk Observability Cloud
 ********************************************************************
 
 .. meta:: 
-   :description: Manually instrument your Node application when you need to add custom attributes to spans or want to manually generate spans and metrics. Keep reading to learn how to manually instrument your Node application for Observability Cloud. 
+   :description: Manually instrument your Node application when you need to add custom attributes to spans or want to manually generate spans and metrics. Keep reading to learn how to manually instrument your Node application for Splunk Observability Cloud. 
 
 Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Node covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
 
@@ -18,7 +18,7 @@ For instructions on how to manually instrument Java applications, see the Manual
 Custom metrics
 =====================================
 
-To send custom application metrics to Observability Cloud, add ``@opentelemetry/api-metrics`` to your dependencies:
+To send custom application metrics to Splunk Observability Cloud, add ``@opentelemetry/api-metrics`` to your dependencies:
 
 .. code-block:: javascript
 

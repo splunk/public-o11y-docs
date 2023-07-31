@@ -9,7 +9,7 @@ Kubernetes attributes processor
 
 The Kubernetes attributes processor is an OpenTelemetry Collector component that manages resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
-.. caution:: Don't remove the Kubernetes attributes processor from your configuration. Default attributes extracted by the processor, such as ``k8s.pod.name``, are required by Splunk Observability Cloud.
+.. caution:: Don't remove the Kubernetes attributes processor from your configuration. Default attributes extracted by the processor, such as ``k8s.pod.name``, are required for Splunk Observability Cloud capabilities, such as Kuberbetes navigator, Related Content, and accurate subscription usage.
 
 Get started
 ======================
@@ -127,9 +127,9 @@ You can use the Kubernetes attributes processor in Collectors deployed either as
 Agent configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In agent mode, the processor detects IP addresses of pods sending spans, metrics, or logs to the agent and uses this information to extract metadata from pods.
+In host monitoring (agent) mode, the processor detects IP addresses of pods sending spans, metrics, or logs to the agent and uses this information to extract metadata from pods.
 
-When running the Collector in agent mode, apply a discovery filter so that only pods from the same host the Collector is running on are discovered. Using a discovery filter also optimizes resource consumption on large clusters.
+When running the Collector in host monitoring (agent) mode, apply a discovery filter so that only pods from the same host the Collector is running on are discovered. Using a discovery filter also optimizes resource consumption on large clusters.
 
 To automatically filter pods by the node the processors is running on, configure the Downward API to inject the node name as an environment variable. For example:
 
@@ -155,9 +155,9 @@ Then, set the ``filter.node_from_env_var`` field to the name of the environment 
 Gateway configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The processor can't resolve the IP address of the pods that emit telemetry data when running in gateway mode. To receive the correct IP addresses in a Collector gateway, configure the agents to forward addresses.
+The processor can't resolve the IP address of the pods that emit telemetry data when running in data forwarding (gateway) mode. To receive the correct IP addresses in a Collector gateway, configure the agents to forward addresses.
 
-To forward IP addresses to gateways, configure the Collectors in agent mode to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
+To forward IP addresses to gateways, configure the Collectors in host monitoring (agent) mode to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
 
 .. code-block:: yaml
 
@@ -200,7 +200,7 @@ You can change this list by adding a ``metadata`` section. For example:
          - k8s.node.name
          - k8s.pod.start_time
 
-.. caution:: Make sure that default attributes such as ``k8s.pod.name`` are always extracted, as they're required by Splunk Observability Cloud.
+.. caution:: Make sure that default attributes, such as ``k8s.pod.name``, are always extracted, as they're required for Splunk Observability Cloud capabilities, such as Kuberbetes navigator, Related Content, and accurate subscription usage.
 
 The following container level attributes require additional attributes to identify a container in a pod:
 
@@ -313,6 +313,17 @@ The following table shows the configuration options for the Kubernetes attribute
 .. raw:: html
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/k8sattributes.yaml"></div>
+
+Metrics
+=====================
+
+The following metrics, resource attributes, and attributes are available.
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/k8sattributesprocessor.yaml"></div>
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
 
 Known limitations
 =======================

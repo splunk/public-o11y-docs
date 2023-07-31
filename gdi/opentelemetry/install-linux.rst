@@ -74,15 +74,7 @@ To configure memory allocation, change the ``--memory`` parameter. By default, t
 Configure proxy settings
 ----------------------------------
 
-If you need to use a proxy, set one of the following environment variables according to your needs:
-
-- ``HTTP_PROXY``: Address of the proxy for HTTP request. Port is optional.
-- ``HTTPS_PROXY``: Address of the proxy for HTTPS request. Port is optional.
-- ``NO_PROXY``: If a proxy is defined, sets addressess that don't use the proxy.
-
-Restart the Collector after adding these environment variables to your configuration.
-
-.. note:: For more information on proxy settings, see :ref:`configure-proxy-collector`.
+To configure proxy settings to install and run the OpenTelemetry Collector, see :ref:`configure-proxy-collector`.
 
 Use configured repos 
 --------------------------------
@@ -208,7 +200,7 @@ Splunk provides a guided setup to deploy the Splunk Distribution of OpenTelemetr
 
 Ansible
 -------------------
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Linux machines and send that data to Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
+Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Linux machines and send that data to Splunk Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
 
 .. _linux-chef:
 

@@ -13,14 +13,14 @@ Ingest Google Cloud Platform log data
 
 .. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
 
-To send GCP logging data to Splunk Observability Cloud's Log Observer, create a Pub/Sub subscription and use the :new-page:`Pub/Sub to Splunk Dataflow template <https://cloud.google.com/dataflow/docs/guides/templates/provided-streaming#cloudpubsubtosplunk>` to create a Dataflow job. The Dataflow job takes messages from the Pub/Sub subscription, converts payloads into Splunk HTTP Event Collector (HEC) event format, and forwards them to Observability Cloud, where the whole event (JSON payload and its information) is ingested.    
+To send GCP logging data to Splunk Observability Cloud's Log Observer, create a Pub/Sub subscription and use the :new-page:`Pub/Sub to Splunk Dataflow template <https://cloud.google.com/dataflow/docs/guides/templates/provided-streaming#cloudpubsubtosplunk>` to create a Dataflow job. The Dataflow job takes messages from the Pub/Sub subscription, converts payloads into Splunk HTTP Event Collector (HEC) event format, and forwards them to Splunk Observability Cloud, where the whole event (JSON payload and its information) is ingested.    
 
 Splunk Observability Cloud only supports push-based GCP log export. To learn more, see :new-page:`Scenarios for exporting Cloud Logging data: Splunk <https://cloud.google.com/architecture/exporting-stackdriver-logging-for-splunk>`. 
 
 Ingest logs from GCP
 =================================================
 
-To send GCP logs to Observability Cloud:
+To send GCP logs to Splunk Observability Cloud:
 
 #. Use the example ``gcloud`` command provided in :new-page:`Option A: Stream logs using Pub/Sub to Splunk Dataflow <https://cloud.google.com/architecture/exporting-stackdriver-logging-for-splunk#deploy_splunk_dataflow_template>`.
 

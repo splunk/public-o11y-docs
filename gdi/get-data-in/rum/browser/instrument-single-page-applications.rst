@@ -48,7 +48,7 @@ To instrument a Next.js SPA using the Browser RUM agent, follow these steps:
          deploymentEnvironment: '<your_environment_name>'
       });
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 3. Add the following code to the ``next.config.js`` file:
@@ -132,7 +132,7 @@ To instrument a Gatsby SPA using the Browser RUM agent, follow these steps:
          deploymentEnvironment: '<your_environment_name>'
       });
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 Nuxt.js v2 and v3
@@ -156,7 +156,7 @@ To instrument a Nuxt.js v2 SPA using the Browser RUM agent, follow these steps:
          deploymentEnvironment: '<your_environment_name>'
       });
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
    .. note:: The ``.client.js`` suffix in the file name instructs Nuxt to load the plugin only in the client side.

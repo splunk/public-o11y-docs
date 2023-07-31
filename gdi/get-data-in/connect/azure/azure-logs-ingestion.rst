@@ -17,7 +17,7 @@ Prerequisites
 
 To send logs from Azure to Splunk Observability Cloud, you need the following:
 
-- Access to Log Observer in Observability Cloud. See :ref:`logs-logs`.
+- Access to Log Observer in Splunk Observability Cloud. See :ref:`logs-logs`.
 - An ingest token in your organization. See :ref:`admin-org-tokens`.
 - An Event Hub namespace in Azure to use for logs forwarding. See Event Hub in the Azure documentation.
 
@@ -100,9 +100,9 @@ In the :guilabel:`Function App Settings` section, enter the following details:
    * - Event Hub Namespace
      - The namespace that contains the event hub you've created.
    * - Splunk HEC Endpoint
-     - ``https://ingest.<realm>.signalfx.com/v1/log`` where ``<realm>`` is your Observability Cloud realm. See :ref:`splunk-hec-exporter` for more information.
+     - ``https://ingest.<realm>.signalfx.com/v1/log`` where ``<realm>`` is your Splunk Observability Cloud realm. See :ref:`splunk-hec-exporter` for more information.
    * - Splunk HEC Token
-     - Your Observability Cloud ingest token. See :ref:`admin-org-tokens`.
+     - Your Splunk Observability Cloud ingest token. See :ref:`admin-org-tokens`.
 
 .. include:: /_includes/realm-note.rst
 

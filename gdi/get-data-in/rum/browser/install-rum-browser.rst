@@ -54,7 +54,7 @@ Select one of the following methods to instrument your web application:
    
 To access the Browser Instrumentation guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. In the navigation menu, select :menuselection:`Data Management`. 
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`By Use Case`.
@@ -94,9 +94,9 @@ Follow these steps to instrument your application with the CDN:
 
    * In the URL of the script, replace ``<version>`` with a version from the :new-page:`Releases page in GitHub <https://github.com/signalfx/splunk-otel-js-web/releases>`.
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the navigation menu in Observability Cloud.
+         1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
@@ -138,7 +138,7 @@ Follow these steps to instrument your application using a self-hosted script:
          });
       </script>
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. See :new-page:`Realms in endpoints <https://dev.splunk.com/observability/docs/realms_in_endpoints>`.
    * To generate a RUM access token, see :ref:`rum-access-token`.
 
 #. Add the snippet to the head section of every page you want to monitor in your application.
@@ -173,9 +173,9 @@ Follow these steps to instrument and configure Splunk RUM using npm:
          deploymentEnvironment: '<your_environment_name>'
       });
 
-   * ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+   * ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
 
-         1. Open the navigation menu in Observability Cloud.
+         1. Open the navigation menu in Splunk Observability Cloud.
          2. Select :menuselection:`Settings`.
          3. Select your username. 
 
