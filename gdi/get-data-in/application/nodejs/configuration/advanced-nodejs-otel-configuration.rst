@@ -106,7 +106,7 @@ The following settings control which instrumentations are activated:
 
 For example, to turn off all default instrumentations and only turn on the ``bunyan`` instrumentation, set the following environment variables:
 
-.. code-bloc:: shell
+.. code-block:: shell
 
    export OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED=true
    export OTEL_INSTRUMENTATION_bunyan_ENABLED=true
