@@ -258,4 +258,4 @@ Alternatively, try the following command:
 
 .. code-block:: PowerShell
 
-   return (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $:.DisplayName -eq "Splunk OpenTelemetry Collector" })
+   return (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $_.DisplayName -eq "Splunk OpenTelemetry Collector" })
