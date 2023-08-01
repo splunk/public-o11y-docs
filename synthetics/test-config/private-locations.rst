@@ -114,7 +114,7 @@ Follow these steps to limit logging:
 
 Deactivate network shaping for your private runner 
 ------------------------------------------------------
-Launch your Docker container with the following environment variable: ``-e "DISABLE_NETWORK_SHAPING=true"``
+Launch your Docker container with the following environment variable: ``-e "DISABLE_NETWORK_SHAPING=true"``.
 
 
 Adding certificates in Synthetics
