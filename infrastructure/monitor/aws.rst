@@ -23,6 +23,7 @@ To monitor AWS resources:
 3. Refer to the AWS official documentation for a list of the available AWS metrics and other data, or check :ref:`the metadata Observablity Cloud provides <aws-infra-metadata>`.
 
 .. _aws-data:
+.. _aws-namespaces:
 
 .. raw:: html
 
@@ -34,15 +35,13 @@ See the AWS official documentation for a list of the available AWS metrics and o
 
 By default, Observability Cloud brings in data from all :ref:`supported AWS services <aws-integrations>` associated with your account, with :ref:`certain limitations <aws-data-limits>`. To manage the amount of data to import, see :ref:`specify-data-metadata`.
 
-.. _aws-namespaces:
-
 .. raw:: html
 
    <embed>
       <h3>AWS namespaces</h3>
    </embed>
 
-Infrastructure Monitoring imports AWS namespace metadata using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter.
+Observability Cloud imports AWS namespace metadata using the dimension ``namespace``. For most AWS services, the namespace name has the form ``"AWS/<NAME_OF_SERVICE>"``, such as "AWS/EC2" or "AWS/ELB". To select a metric time series (MTS) for an AWS metric when the metric has the same name for more than one service, such as ``CPUUtilization``, use the ``namespace`` dimension as a filter.
 
 To control the amount of data you import, specify the namespaces you want to import as well as the data you want to import or exclude from each namespace. For more information, see :ref:`specify-data-metadata`.
 
@@ -54,7 +53,7 @@ To control the amount of data you import, specify the namespaces you want to imp
       <h3>Uniquely identifying AWS instances</h3>
    </embed>
 
-The AWS instance ID is not a unique identifier. To uniquely identify an AWS instance, you need to concatenate the ``instanceId``, ``region``, and ``accountID`` dimension values, separated by underscores "\_", as in ```instanceId_region_accountID``
+The AWS instance ID is not a unique identifier. To uniquely identify an AWS instance, you need to concatenate the ``instanceId``, ``region``, and ``accountID`` dimension values, separated by underscores "\_", as in ``instanceId_region_accountID``.
 
 To construct the identifier manually, first get the specified values for each of your instances. For example, you can
 use the following ``cURL`` command:
@@ -109,7 +108,7 @@ You can also use the Splunk Distribution of OpenTelemetry Collector to import AW
 
 You can only use the Collector when you have direct control over the applications installed on an AWS instance, such as AWS Elastic Compute Cloud (EC2). Some other AWS services require you to use Infrastructure Monitoring AWS integration and AWS CloudWatch. As a result, you might need to use both the AWS integration and OTel.
 
-To learn how to install OTel, see :ref:`opentelemetry-resources`.
+To learn how to install the Collector, see :ref:`opentelemetry-resources`.
 
 .. raw:: html
 
