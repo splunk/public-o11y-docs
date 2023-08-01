@@ -254,8 +254,10 @@ You can also uninstall the Collector for Windows using PowerShell:
    # complete uninstall 
    $MyProgram.uninstall()
 
-Alternatively, try the following command:  
+Alternatively, try the following commands:  
 
 .. code-block:: PowerShell
 
    return (Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\uninstall\* | Where { $_.DisplayName -eq "Splunk OpenTelemetry Collector" })
+   
+   $MyProgram.uninstall()
