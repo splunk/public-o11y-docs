@@ -158,6 +158,7 @@ Follow these guidelines to troubleshoot a broken test.
     * Was the failure tied to a specific location or across all locations? 
 
 #. Open the run results view of a failed test, find the step that is failing and go to the link. 
-#. Open inspect element and duplicate the step and repeat the steps in your test until you find the broken step. 
+#. Open inspect element. 
+#. Duplicate the step and repeat the steps in your test until you find the broken step. 
 #. Verify that there is one instance only of the selector you want to use in your test. If the selector appears more than once your test might break again in the future. Unique selectors provide optimal test performance. 
 #. Update your tests with your findings. 

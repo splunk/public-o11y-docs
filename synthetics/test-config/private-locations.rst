@@ -119,7 +119,7 @@ Launch your Docker container with the following environment variable: ``-e "DISA
 
 Adding certificates in Synthetics
 ------------------------------------------------------
-Splunk Synthetic Monitoring supports injecting custom root CA certs for any tests running from your private locations. Client keys and certificates aren't supported at this time. 
+Splunk Synthetic Monitoring supports injecting custom root CA certificates for any tests running from your private locations. Client keys and certificates aren't supported at this time. 
 
 #. Create a folder called ``certs`` on your host machine and place the CA Certificate (in CRT format) in the folder.
 
