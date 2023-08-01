@@ -228,11 +228,11 @@ To instrument an application or service in Azure App Service, follow these steps
 
 #. Select your application in App Service.
 
-#. Go to :guilabel:`Development Tools`, then :guilabel:` Extensions`.
+#. Go to :guilabel:`Development Tools`, then :guilabel:`Extensions`.
 
 #. Find and install the :strong:`SignalFx .NET Tracing` extension.
 
-#. Go to :guilabel:`Settings`, then :guilabel:` Configuration`.
+#. Go to :guilabel:`Settings`, then :guilabel:`Configuration`.
 
 #. Select :strong:`New application setting` to add the following settings:
 
