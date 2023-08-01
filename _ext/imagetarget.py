@@ -17,7 +17,7 @@ from docutils.nodes import fully_normalize_name, whitespace_normalize_name
 from docutils.parsers.rst.roles import set_classes
 
 
-class ImageTarget(Directive):
+class imagetarget(Directive):
 
     align_h_values = ('left', 'center', 'right')
     align_v_values = ('top', 'middle', 'bottom')
@@ -27,7 +27,7 @@ class ImageTarget(Directive):
         # This is not callable as self.align.  We cannot make it a
         # staticmethod because we're saving an unbound method in
         # option_spec below.
-        return directives.choice(argument, ImageTarget.align_values)
+        return directives.choice(argument, imagetarget.align_values)
 
     required_arguments = 1
     optional_arguments = 0
