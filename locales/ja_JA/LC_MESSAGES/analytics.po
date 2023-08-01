@@ -1,0 +1,690 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023 Splunk, Inc
+# This file is distributed under the same license as the Splunk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Splunk \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-01 01:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja_JA\n"
+"Language-Team: ja_JA <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:-1
+msgid ""
+"Splunk infrastructure monitoring analytics overview, rollup policies, "
+"signalflow instructions, and analytics aggregations and transformations"
+msgstr ""
+
+#: ../../<rst_prolog>:18
+msgid "Take shift"
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:5
+msgid "Splunk Infrastructure Monitoring analytics"
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:10
+msgid ""
+"Conceptually, a SignalFlow program consists of a several computational "
+"blocks, each of which accepts some input, performs some computation (for "
+"example, sum, mean, max, and so on) and generates some output. The blocks"
+" are connected in a directed graph so that the output of one unit flows "
+"as input to other units, resulting in a cascading series of computations "
+"that calculates the desired results."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:12
+msgid ""
+"In practice, individual SignalFlow programs are the computational "
+"backbone for charts in Infrastructure Monitoring, and are visualized in "
+"the Infrastructure Monitoring application as an interlinked set of "
+"analytics pipelines."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:14
+msgid ""
+"The initial input into a SignalFlow program is typically a set of one or "
+"more time series."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:19
+msgid "Rollup policies"
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:21
+msgid ""
+"Each set of time series in a plot line has a common metric type, whether "
+"a gauge, counter or cumulative counter. The metric type determines the "
+"default visualization :new-page-ref:`rollups <rollups>` that is applied "
+"to the time series data. The defaults in each case are chosen to ensure "
+"that values displayed are accurate and stable across different chart "
+"resolutions."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:23
+msgid ""
+"Take as an example a gauge that is reporting every 30 seconds. In a chart"
+" with a time range of 5 minutes, each reported value can be shown on the "
+"chart, as there is typically enough screen real estate to show the data "
+"at its native resolution, i.e. 10 data points sent in during a 5‑minute "
+"period. If the time range is changed to 1 week, however, Infrastructure "
+"Monitoring automatically switches to a coarser chart resolution to match."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:25
+msgid ""
+"In this case, Infrastructure Monitoring uses the :strong:`Average` rollup"
+" to calculate the average value of the gauge, over each time interval at "
+"the coarser chart resolution. With one week's worth of data, each visible"
+" data point is the average of the values sent during the chosen interval."
+" Infrastructure Monitoring then plots those average values, instead of, "
+"say, a sampled value. In general, this provides a more accurate "
+"representation of the data, but it also has the side effect of averaging "
+"out peaks and valleys, which may not be desirable, depending on the "
+"actual metric."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:29
+msgid ""
+"If you prefer to see sampled values, you can select the :strong:`Latest` "
+"rollup, or if you prefer to see the peaks and valleys, you can select the"
+" :strong:`Max` or :strong:`Min` rollups, respectively."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:31
+msgid ""
+"For a counter or cumulative counter, the chosen rollup affects not only "
+"the accuracy, but more generally how the chart behaves as you change the "
+"time range. For example, you have a counter, sent as a high-resolution "
+"metric, that tells you how many responses a server handled per 1‑second "
+"interval. If you use a rollup of :strong:`Rate/sec` rather than the "
+"default :strong:`Sum` rollup, then in a chart with a time range small "
+"enough to show the time series at its native resolution, values are "
+"reported as follows:"
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:33
+msgid ""
+"For a counter, each reported :strong:`Rate/sec` value is shown normalized"
+" by the interval, for example, number of responses during each 1‑second "
+"interval, divided by 1 (for data coming in every second), number of "
+"responses during each 5‑second interval, divided by 5 (for data coming in"
+" every 5 seconds) etc."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:35
+msgid ""
+"For a cumulative counter, the default rollup is :strong:`Delta`, so each "
+"reported :strong:`Rate/sec` value is the delta from the last data point "
+"normalized by the interval, divided by 1 (for data coming in every "
+"second), divided by 5 (for data coming in every 5 seconds), etc."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:37
+msgid ""
+"If you then change the time range, such that each data point to plot "
+"represents, say, a 4‑minute interval, then values are reported as "
+"follows:"
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:39
+msgid ""
+"For a counter, each data point is the sum of all the responses during "
+"that 4‑minute interval, divided by 240 (the number of seconds in that "
+"interval)."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:41
+msgid ""
+"For a cumulative counter, each data point is the sum of delta rollups "
+"over the interval (delta rollups are the differences between successive "
+"data points), divided by 240 (the number of seconds in the interval)."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:43
+msgid ""
+"In all likelihood, this has an impact similar to the :strong:`Average` "
+"rollup for a gauge: it provides an accurate representation of the data, "
+"and one whose visualization is aligned with how you typically use line or"
+" area charts."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:45
+msgid ""
+"In contrast, if you choose a different rollup, such as :strong:`Sum`, "
+"then the behavior of the chart changes with different chart resolutions. "
+"In a chart with a time range small enough to show the time series at its "
+"native resolution, each reported value is same as in the rate per second "
+"case, as the sum rollup occurs over a 1‑second interval. In a chart with "
+"a four-minute interval, however, the values shown are the sum of all "
+"values during the 240 seconds. This is likely to generate a value that is"
+" significantly higher than the normalized rate per second rollup, and "
+"depending on the nature of your metric, it may be what you are looking "
+"for."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:47
+msgid ""
+"To learn more about the interaction of rollups, resolutions, and "
+"analytics, see :new-page-ref:`data-resolution-rollups-charts`."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:52
+msgid "How SignalFlow handles metadata"
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:54
+msgid ""
+"SignalFlow computations often involve both data and corresponding "
+"metadata - dimensions, properties, or tags. For example, when a mean is "
+"computed across CPU utilization metrics received from server instances "
+"spread out across multiple regions or availability zones, you can group "
+"them by the regions or availability zones, so that you can discern "
+"whether one is running hotter than the next at the aggregate level."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:56
+msgid ""
+"To ensure that calculations throughout a SignalFlow program are able to "
+"make use of this metadata, time series data is ingested into a SignalFlow"
+" computation with its corresponding metadata. Subsequent computations on "
+"data include corresponding computations on metadata so that the result "
+"includes both data and metadata components, enabling further downstream "
+"processing and re-aggregations, as necessary."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:58
+msgid ""
+"Computations that output a single summary result from a collection of "
+"time series, such as a sum or mean, use only the metadata that shares the"
+" same name and values across the collection. In contrast, computations "
+"that select values from a collection, such as maximum, minimum, etc. "
+"simply use the corresponding metadata of the selected values as is."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:60
+msgid ""
+"To learn more about SignalFlow computations, see :new-page-ref:`get-"
+"started-signalflow`."
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:65
+msgid "Aggregations and transformations"
+msgstr ""
+
+#: ../../analytics/infrastructure-monitoring-analytics.rst:67
+msgid ""
+"An analytic computation is a mathematical function that is applied to a "
+"collection of data points. For example, a mean is computed over a "
+"collection of data points by dividing the sum of the collection by the "
+"number of data points in the collection. In the context of time series "
+"calculations, an analytic computation is applied either as an aggregation"
+" or a transformation. For more information, see :new-page-ref"
+":`aggregations-transformations`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:5
+msgid "Analyze incoming data using SignalFlow"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:7
+msgid ""
+"Using SignalFlow in the Splunk Observability Cloud UI, you can improve "
+"your charts and detectors analytics."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:12
+msgid "Run SignalFlow programs from the UI"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:14
+msgid ""
+"You can add SignalFlow programs from the Observability Cloud user "
+"interface to stream processed data to detectors and charts."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:16
+msgid ""
+"To edit SignalFlow programs when editing detectors, see :ref:`create-"
+"detectors`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:17
+msgid "To use SignalFlow functions when editing charts, see :ref:`analytics-ref`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:19
+msgid ""
+"You can also add SignalFlow programs using the SignalFlow API. See :new-"
+"page:`Using the SignalFlow API "
+"<https://dev.splunk.com/observability/docs/signalflow/#Using-the-"
+"SignalFlow-API>`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:24
+msgid "Process stream objects"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:26
+msgid ""
+"SignalFlow programs handle stream objects, which produce timestamped "
+"value organized along dimensions. Raw metric time series data is streamed"
+" to analytics jobs, and the queries and computations specified through "
+"SignalFlow produce new streams. For example, statistics computed across a"
+" population or over time."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:28
+#, python-format
+msgid ""
+"Streams are local to a particular analytics query or computation, and "
+"several distinct jobs may query for the same underlying metric time "
+"series data. Detectors evaluate conditions involving one or more streams,"
+" typically comparisons between streams over a period of time. For "
+"example, the condition for a detector could be \"disk utilization is "
+"greater than 80% for 90% of 10 minutes,\" or, \"average database latency "
+"is above 5 seconds and the number of database calls is at least 20% of "
+"the one day average.\""
+msgstr ""
+
+#: ../../analytics/signalflow.rst:30
+msgid ""
+"For more information about stream objects, see :new-page:`Streams as "
+"variables <https://dev.splunk.com/observability/docs/signalflow/#Streams-"
+"as-variables>`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:33
+msgid "Create custom analytics"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:35
+msgid ""
+"If you want to create custom charts and detector analytics, see :new-"
+"page:`Analyze Data Using SignalFlow "
+"<https://dev.splunk.com/observability/docs/signalflow/>` in the Splunk "
+"Observability Cloud Developer Guide."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:37
+msgid ""
+"You can also run SignalFlow programs directly. For more information, see "
+"the :new-page:`SignalFlow API "
+"<https://dev.splunk.com/observability/docs/signalflow#SignalFlow-API/>` "
+"topic in the Splunk Observability Cloud Developer Guide."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:42
+msgid "Aggregate and transform data"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:44
+msgid ""
+"Most built-in :ref:`analytical functions <analytics-ref>` can perform "
+"computations on time series in charts and detectors in two ways: "
+"aggregations and transformations."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:46
+msgid ""
+"Aggregations operate across all of the data points at a single instance "
+"in time, for example the mean CPU utilization across a group of five "
+"servers at time t, t+1, t+2, and so on. The output of an aggregation is a"
+" single :term:`metric time series <Metric time series>` (MTS), where each"
+" data point represents the aggregation of all the data points over a "
+"specific period of time. For more information, see :new-"
+"page:`Aggregations "
+"<https://dev.splunk.com/observability/docs/signalflow/#Aggregations>`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:48
+msgid ""
+"An additional option, Group By, is available for aggregations. If a "
+"group-by field is specified, MTS sharing values for properties named in "
+"the group-by criterion are aggregated together. For example, you can "
+"compute the average CPU load grouped by AWS instance type; add the Mean "
+"function as an aggregation, and set AWS instance type as the group-by "
+"criterion. The output will show one MTS per AWS instance type."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:50
+msgid ""
+"Transformations operate in parallel on each MTS over a window of time and"
+" yield one output time series for each input time series. For example, "
+"the average CPU utilization for five servers over a rolling window of one"
+" day will display five MTS; each output value will be the moving average "
+"for that MTS over the previous 24 hours. For more information, see :new-"
+"page:`Transformations "
+"<https://dev.splunk.com/observability/docs/signalflow/#Transformations>`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:52
+msgid ""
+"To learn more about th two types of transformations available, moving "
+"window and calendar window, are discussed in the following section. For "
+"examples of how to use transformation analytics in charts, see :ref"
+":`gain-insights-through-chart-analytics`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:55
+msgid "Moving window transformations"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:57
+msgid ""
+"In the following example of a moving window transformation chart, each "
+"line represents the Mean CPU utilization across four servers. The grey "
+"line represents the mean value for each data point over the preceding "
+"minute. The magenta line represents the mean value for each data point "
+"over the preceding hour rolling window."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:-1
+msgid ""
+"This image shows a rolling window transformation chart. Two CPU "
+"utilization functions appear in the chart."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:63
+msgid ""
+"For more information about rolling window transformations, see :new-"
+"page:`Rolling window transformations "
+"<https://dev.splunk.com/observability/docs/signalflow/#Rolling-window-"
+"transformations>`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:68
+msgid "Calendar window transformations"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:70
+msgid ""
+"In the following example, the ``Sum``, ``Mean``, ``Maximum``, and "
+"``Minimum`` functions let you set a calendar window for a transformation."
+" In the chart, the magenta line shows the sum of all transactions over a "
+"moving window of one week. The green line shows the sum of the "
+"transactions over a calendar week, including partial values calculated "
+"throughout the week. Values increase over a week, then reset at the "
+"beginning of the following week."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:-1
+msgid "This image shows a calendar window transformation chart."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:76
+msgid ""
+"For more information about calendar window transformations, see :new-"
+"page:`Calendar window transformations "
+"<https://dev.splunk.com/observability/docs/signalflow/#Calendar-window-"
+"transformations>`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:79
+msgid "Resolution considerations"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:81
+msgid ""
+"When you add a function with a calendar window to a plot, and the current"
+" time window is narrower than the cycle length that you specified on the "
+"function, the chart resizes to a default time of at least one cycle. At "
+"the same time, any dashboard override for time range is removed. A "
+"message is shown to inform you of this optimization; if you don't accept "
+"the optimization, you may need to modify the time range manually to see "
+"the data you expect."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:83
+msgid ""
+"For a chart to show a value at the end of every calendar cycle, the cycle"
+" length must be a multiple of the resolution. For more information, see "
+":ref:`resolution <get-started-retention>`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:85
+msgid ""
+"For some combinations of time range and chart display resolution, it may "
+"not be possible to use a resolution that guarantees a chart shows values "
+"perfectly aligned with cycle boundaries. For example, if a resolution of "
+"one day results in more data points than can be shown on a chart, you may"
+" have to use a resolution of two days. This means that plotted values "
+"can't line up with the end of a month that has 29 or 31 days, because "
+"neither value is a multiple of the two-day resolution. Such a situation "
+"is indicated by the resolution pill on a chart turning orange and showing"
+" a message in a tooltip. You can solve this issue by changing the display"
+" resolution or viewing a narrower time range."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:87
+msgid ""
+"When using calendar time windows with transformations, the chart cannot "
+"have a resolution finer than one hour."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:90
+msgid "Cycle length and start"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:92
+msgid "Cycle length options include hour, day, week, month, and quarter."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:94
+msgid ""
+"For most cycle length options, you can specify a starting point. For "
+"example, for a cycle length of a quarter, you can specify that the first "
+"quarter starts in February instead of the default of January. The one "
+"exception is an hourly cycle length. Hourly cycles always start at the "
+"top of the hour (minute zero)."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:101
+msgid "Calendar time zone"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:103
+msgid ""
+"For calendar windows, you must specify a calendar time zone. The calendar"
+" time zone is a per-chart (or per-detector) setting that is independent "
+"of the visualization timezone that is set in your user profile. The time "
+"zone you set for a calendar window determines the exact beginning and end"
+" of your chosen calendar window cycles."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:105
+msgid ""
+"For example, January in America/Los Angeles starts at a different time "
+"relative to January in Asia/Tokyo. If Observability Cloud receives a data"
+" point with a timestamp near midnight UTC time on December 31, the "
+"calendar time zone determines whether that data point counts towards the "
+"calculation for December or the calculation for January."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:107
+msgid ""
+"All calendar window functions in a chart share the same calendar time "
+"zone. The first time you add a calendar window function on any plot in a "
+"chart, the visualization timezone from your profile is suggested as the "
+"value to use for the calendar timezone."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:112
+msgid "Hide partial values"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:114
+msgid ""
+"The :guilabel:`Hide partial values` setting lets you optimize the output "
+"of a calendar window function, based on whether you are interested only "
+"in the final values calculated at the ends of cycles, as well as partial "
+"values calculated during a cycle. For example, if you have a cycle length"
+" of one day, hiding partial values means that you will only see one value"
+" for each day; you won't see how values change during the course of the "
+"day."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:116
+msgid ""
+"Deselecting this option has no effect when the cycle length is one hour, "
+"because a chart using calendar windows cannot have a resolution finer "
+"than one hour."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:118
+msgid ""
+"In the following example, hiding partial values (magenta bars) provides a"
+" better overview of how values compare on a day-to-day basis. Not hiding "
+"partial values (green lines) shows how the mean changes over the course "
+"of each day."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:-1
+msgid "This image shows a chart with hidden partial values."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:124
+msgid ""
+"The value at the start of each cycle represents the final value for the "
+"previous cycle. The magenta column at 12:00 AM February 15 represents the"
+" mean of the values seen over February 14. The column at 12:00 AM "
+"February 16 represents the mean of the values for February 15, and so on."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:126
+msgid ""
+"Single value charts can be useful for visualizing calculations such as "
+"the maximum latency reported in the current day so far. To properly "
+"display these numbers, deselect :guilabel:`Hide partial values`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:131
+msgid "Timeshift for calendar windows"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:133
+msgid ""
+"The timeshift function shifts the data points for each MTS in the input "
+"stream, offsetting them by a specified time period. A typical use case "
+"for using timeshift is to compare the average value seen for a metric "
+"over a period of time with the average seen over the previous period. For"
+" more information on the SignalFlow function, see :new-page:`timeshift() "
+"<https://dev.splunk.com/observability/docs/signalflow/methods/timeshift_stream_method>`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:135
+msgid ""
+"Timeshift is available only when partial values are hidden. If you enable"
+" timeshift when using calendar windows, the value from the end of a "
+"previous cycle will be shown at the end of every calendar cycle. For "
+"example, if your cycle length is Month and you timeshift by one cycle, "
+"the data point at April 30 will represent the value from March 31, the "
+"data point at May 31 will represent the value from April 30, and so on."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:137
+msgid ""
+"The timeshift feature in charts is aware of cycles having variable "
+"lengths, such as how March has more days than February, and shifts "
+"correctly to the end of a previous interval. By contrast, the standalone "
+"timeshift analytics function performs a fixed width shift, such as 30 "
+"days. For more information, see :ref:`use-timeshift-function-to-"
+"understand-trends`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:142
+msgid "Other functions"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:144
+msgid ""
+"In addition to functions that provide aggregations and transformations, "
+"SignalFlow provides functions such as ``Count``, which counts the number "
+"of MTS that have values; ``Top`` and ``Bottom``, which show the highest "
+"or lowest N number of values; and ``Exclude``, which provides the ability"
+" to filter time series by value, rather than by source."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:146
+msgid ""
+"As with other analytical functions, these functions can be used in "
+"concert with others to produce more sophisticated computations. For "
+"example, ``Exclude`` can be used with ``Sum`` to achieve a result akin to"
+" the ``sumif()`` function found in popular spreadsheet applications."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:148
+msgid "For a detailed explanation of each function, see :ref:`analytics-ref`."
+msgstr ""
+
+#: ../../analytics/signalflow.rst:153
+msgid "Expressions"
+msgstr ""
+
+#: ../../analytics/signalflow.rst:155
+msgid ""
+"SignalFlow lets you create expressions that refer to preceding "
+"computations as variables. For example, you can calculate a ratio of HTTP"
+" response codes received that are 2xx to those that are 4xx or 5xx."
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:-1
+msgid "Intro page for SignalFlow and Splunk Infrastructure Monitoring analytics"
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:5
+msgid "SignalFlow and analytics"
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:18
+msgid ""
+":new-page:`SignalFlow "
+"<https://dev.splunk.com/observability/docs/signalflow/>` is the analytics"
+" engine at the heart of Splunk Observability Cloud. It runs computation "
+"that allow you to analyze incoming data and write custom chart and "
+"detector analytics."
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:20
+msgid ""
+"You can use the following SignalFlow components to create custom "
+"analytics for your data:"
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:22
+msgid ""
+"SignalFlow programming language: A Python-like language that you use to "
+"write SignalFlow programs."
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:23
+msgid ""
+"SignalFlow library: Functions and methods you can call from a SignalFlow "
+"program."
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:24
+msgid ""
+"SignalFlow computation engine: The engine that runs your SignalFlow "
+"programs in the background and streams results."
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:26
+msgid "To learn how to use SignalFlow, see :ref:`get-started-signalflow`."
+msgstr ""
+
+#: ../../analytics/signalflow-analytics-intro.rst:28
+msgid ""
+"For more information on Splunk Infrastructure Monitoring analytics, see "
+":ref:`infrastructure-monitoring-analytics`."
+msgstr ""
+

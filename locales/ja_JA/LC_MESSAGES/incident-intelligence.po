@@ -1,0 +1,4236 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023 Splunk, Inc
+# This file is distributed under the same license as the Splunk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Splunk \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-01 01:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja_JA\n"
+"Language-Team: ja_JA <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:-1
+msgid ""
+"Steps to create and configure incident policies to organize incidents for"
+" Incident Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../<rst_prolog>:18
+msgid "Take shift"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:5
+msgid "Create and configure incident policies"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:10
+msgid ""
+"Use incident policies to organize incidents depending on the impacted "
+"environmental component, for example, your web application service or "
+"checkout service. Begin by creating an incident policy. Then, route "
+"alerts to the incident policy. Next, identify which alerts create an "
+"incident and how alerts are grouped into incidents. Finally, create "
+"incident workflows with escalating steps to determine who is notified to "
+"respond when a new incident triggers."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:15
+msgid "Create an incident policy"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:17
+#: ../../incident-intelligence/create-configure-incident-policies.rst:30
+#: ../../incident-intelligence/create-configure-incident-policies.rst:45
+#: ../../incident-intelligence/create-configure-incident-policies.rst:68
+#: ../../incident-intelligence/create-configure-incident-policies.rst:93
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:16
+msgid "In Incident Intelligence, select :guilabel:`Incident Management`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:18
+msgid "Select :guilabel:`Incident policies` > :guilabel:`Create incident policy`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:19
+msgid "Give your incident policy a unique name and a description."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:20
+msgid "Select :guilabel:`Create incident policy`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:22
+msgid ""
+"After you create your incident policy, you can configure which alerts are"
+" routed to your incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:26
+msgid "Delete an incident policy"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:28
+msgid ""
+"If you want to stop using an existing incident policy, you can either "
+"modify or delete the policy and create a new one. When you delete an "
+"incident policy, new alerts that were previously routed to the incident "
+"policy are no longer grouped to new or existing incidents. The deleted "
+"incident policy is no longer listed when creating manual incidents."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:31
+msgid "In the Incident Policies list, locate the policy you want to delete."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:32
+msgid "Select the :guilabel:`Action` menu (|more|)."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:33
+msgid "Select :guilabel:`Delete`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:39
+msgid "Configure the alerts routed to your incident policy"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:41
+msgid ""
+"Use alert routing to associate alerts with an incident policy. If an "
+"alert matches your alert filter conditions, it is routed to the incident "
+"policy. To set up your alert routing for the incident policy, follow "
+"these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:43
+msgid ""
+"The rank order of your incident policy also determines where alerts are "
+"routed. Alerts are only routed to one incident policy even if they match "
+"multiple policies. The incident policy that alerts are routed to is based"
+" on your policy's alert routing conditions and incident policy rank "
+"order. See :ref:`ii-rank-incident-policies`"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:46
+msgid ""
+"Select :guilabel:`Incident policies` and then the incident policy you "
+"want to add alert routing conditions to."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:47
+msgid ""
+"Select the :guilabel:`Alert Routing` tab to see the list of alerts that "
+"are currently routed to the incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:51
+msgid ""
+"To filter the alerts routed to the incident policy based on the data in "
+"the alerts, select :guilabel:`Add Filters`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:49
+msgid ""
+"Select a filter field. For example, use :guilabel:`source` to route "
+"alerts based on a detector name. Key names are case sensitive and require"
+" an exact match."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:50
+msgid ""
+"Select the :guilabel:`=` (equal to) or :guilabel:`!=` (not equal to) "
+"operator."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:51
+msgid ""
+"Select a filter value. Key values are case sensitive and require an exact"
+" match."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:52
+msgid "Select :guilabel:`Enter` to save your condition."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:53
+msgid ""
+"Repeat these steps for any additional alert routing conditions that you "
+"want to set up. By default, multiple conditions are joined by an ``OR`` "
+"operator. To switch an ``OR`` operator to ``AND``, select the ``OR`` "
+"operator and select ``AND``."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:54
+msgid ""
+"Review the list of alerts that are currently routed to the incident "
+"policy to confirm your filter conditions are correct."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:55
+msgid ""
+"Select :guilabel:`Save alert routing` when you finish setting up your "
+"alert routing conditions."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:57
+msgid ""
+"After you configure which alerts are routed to your incident policy, "
+"configure how alerts are grouped into incidents."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:62
+msgid "Configure how alerts are grouped"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:64
+msgid ""
+"Use alert grouping to manage how alerts are grouped into incidents and "
+"which alerts trigger a new incident. Alert grouping is specific to each "
+"incident policy and you can customize it to create the workflow that "
+"works for you."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:66
+msgid "To configure alert grouping, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:69
+msgid ""
+"Select :guilabel:`Incident policies` and then the incident policy you "
+"want to add alert grouping conditions to. Each incident policy can have "
+"one alert grouping configuration."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:70
+msgid "Select the :guilabel:`Alert grouping` tab."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:71
+msgid ""
+"Under :guilabel:`Alert metadata grouping (optional)`, select metadata "
+"fields you want to group by. The fields you are using in your alert "
+"routing conditions are available to select. However any custom field that"
+" is common in the alert routing metadata can be entered as a custom "
+"value. If you want add a field that is not displayed, enter the field "
+"name and select it from the dropdown to add it as a selected metadata "
+"field. Any custom field that is common in the alert routing metadata can "
+"be entered as a ``group by`` field."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:72
+msgid ""
+"In the :guilabel:`Incident breaking conditions` section, define the "
+"conditions that cause an incident to stop accumulating new alerts. When "
+"any one of the conditions you set in this section are met any subsequent "
+"alerts will trigger a new incident instead of being added to the existing"
+" incident."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:74
+msgid ""
+"To break the existing incident if there has been a pause in alerts that "
+"lasts for the time duration you specify, select the pause duration from "
+"the :guilabel:`Select time value` drop down. Note: If you choose a time "
+"duration that is too short, you might encounter the situation where every"
+" alert triggers a new incident.  This is not generally desirable if the "
+"alerts are coming in within a short time span."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:76
+msgid ""
+"To break the existing incident when an alert with specific values are "
+"included, select :guilabel:`Add Filters` and choose the key-value pair "
+"which will prevent new alerts coming to the existing incident."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:78
+msgid ""
+"To break the existing incident after a specific amount of time has passed"
+" for the current alert, select that time duration in the "
+":guilabel:`Select time value` dropdown."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:80
+msgid ""
+"To break the existing incident after a specific number of alerts has been"
+" received in an incident, enter that value in the :guilabel:`The number "
+"of alerts in an incident reaches` field."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:82
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:41
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:18
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:29
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:15
+msgid "Select :guilabel:`Save`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:84
+msgid ""
+"After you manage which alerts create an incident and how alerts are "
+"grouped into incidents, configure incident workflows for your incident "
+"policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:89
+msgid "Configure incident workflows for your incident policy"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:91
+msgid ""
+"Use incident workflows to determine who is notified when a new incident "
+"is triggered. To create an automatic incident workflow, add escalating "
+"steps to notify responders of the incident. To add an incident workflow, "
+"follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:94
+msgid ""
+"Select :guilabel:`Incident policies` and then the incident policy where "
+"you want to create an incident workflow."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:95
+msgid "Select the :guilabel:`Incident workflows` tab."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:96
+msgid ""
+"To add responders, select :guilabel:`+ Add responders` under "
+":guilabel:`Immediately`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:97
+msgid ""
+"In the :guilabel:`Configure invite` window, add responders by name or by "
+"schedule. If you don't have an on-call schedule, see :ref:`ii-create-"
+"manage-on-call-schedules`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:103
+msgid ":strong:`Add responder option`"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:104
+msgid ":strong:`Steps`"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:106
+msgid "Add responders by name"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:107
+msgid ""
+"Enter user names in the :guilabel:`Search people` field and select the "
+"user when they appear."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:109
+msgid "Add responders by schedule"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:110
+msgid ""
+"Enter a schedule name in the :guilabel:`Search schedules` field and "
+"select the schedule when it appears. Adding a schedule to a workflow step"
+" notifies the user that is on call when that workflow step is triggered."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:112
+msgid ""
+"Repeat these steps until you have all the responders you want to invite "
+"to incidents for this step in the workflow."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:113
+msgid "Select :guilabel:`Add responders`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:114
+msgid ""
+"Select :guilabel:`Add New Step` to add additional escalating steps with "
+"additional responders to your incident workflow."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:115
+msgid ""
+"Select an elapsed time period in the list next to :guilabel:`If "
+"unacknowledged after`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:116
+msgid "Select :guilabel:`+ Add responders` to add responders."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:117
+msgid ""
+"Repeat these steps until you have a complete incident workflow for the "
+"incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:122
+msgid "Rank your incident policies to ensure alerts are appropriately routed"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:124
+msgid ""
+"If you have more than one incident policy, organize them in the order of "
+"their importance (top to bottom) to your infrastructure. Alerts are only "
+"routed to one incident policy even if they match multiple policies. The "
+"incident policy that alerts are routed to is based on your policy's alert"
+" routing conditions and incident policy rank order. To rank your incident"
+" policies, go to :guilabel:`Incident Management` > :guilabel:`Incident "
+"policies` > :guilabel:`Incident policy ranking`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:129
+msgid "Mute notifications using incident policy maintenance"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:131
+msgid ""
+"Use incident policy maintenance to mute notifications while you are "
+"making changes to the incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:133
+msgid ""
+"To put your incident policy in maintenance, select the "
+":guilabel:`Actions` menu on the incident policy you want to put in "
+"maintenance and select :guilabel:`Maintenance`. The incident policy "
+"status shows as :guilabel:`Maintenance`."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:135
+msgid ""
+"All incidents associated with the incident policy that are triggered "
+"while the incident policy is in maintenance are created in a muted state."
+" A muted incident does not notify responders. Muted incidents don't show "
+"in your incident list by default. To see your muted incidents, select the"
+" :guilabel:`Incidents` tab in Incident Intelligence and add a ``Status = "
+"Muted`` filter. Muted incidents are read-only and you can't acknowledge, "
+"resolve, or dismiss them."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:138
+msgid "Take an incident policy out of maintenance"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:140
+msgid ""
+"To take an incident policy out of maintenance and resume triggering "
+"incidents, select the :guilabel:`Actions` menu on the incident policy you"
+" want to take out of maintenance and select :guilabel:`Enable`. The "
+"incident policy status shows as :guilabel:`Enabled`. This resumes "
+"triggering incidents associated with the incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:143
+msgid "Next step"
+msgstr ""
+
+#: ../../incident-intelligence/create-configure-incident-policies.rst:145
+msgid ""
+"If you are setting up Incident Intelligence for the first time, next you "
+"need to create an on-call schedule. See :ref:`ii-create-manage-on-call-"
+"schedules`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:10
+msgid "Scenarios: Schedules in Incident Intelligence TOGGLE"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:-1
+msgid ""
+"Topics to create and manage schedules, see who's on call, and reassign "
+"shifts in Incident Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:4
+msgid "Create and manage on-call schedules"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:19
+msgid ""
+"Use the following topics to learn how to create and manage schedules, see"
+" who's on call, and reassign shifts:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:21
+msgid ":ref:`ii-create-on-call-schedule`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:22
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:94
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:50
+msgid ":ref:`ii-scenarios-schedules`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:23
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:23
+msgid ":ref:`ii-sync-on-call-schedule`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:24
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:95
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:51
+msgid ":ref:`ii-whos-on-call`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-manage-on-call-schedules.rst:25
+msgid ":ref:`reassign-shift`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:-1
+msgid ""
+"Steps to create on-call schedules for Incident Intelligence in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:4
+msgid "Create an on-call schedule"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:9
+msgid ""
+"When an incident occurs, it is important to contact a responder who "
+"understands that part of the system architecture to fix the problem. You "
+"can accomplish this through scheduling. An on-call schedule consists of a"
+" rotating group of responders that are assigned shifts for incident "
+"response. Use an on-call schedule as a step in your incident workflows."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:11
+msgid ""
+"Follow these steps to create a schedule. See :ref:`ii-scenarios-"
+"schedules` for specific schedule scenarios."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:16
+msgid ""
+"After you save your shifts, review the schedule details in the "
+":guilabel:`Schedule Preview` to confirm that you've configured your "
+"schedule shifts as intended. The schedule preview includes schedule info "
+"for up to one year. Select :guilabel:`Next Month` and :guilabel:`Previous"
+" Month` to navigate the schedule preview. Select :guilabel:`Back to all "
+"schedules` when you are finished adding shifts to your on-call schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:18
+msgid ""
+"Now that you've created an on-call schedule, add it to the incident "
+"workflow for your web application incident policy. See :ref:`ii-"
+"configure-incident-workflows`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/create-on-call-schedule.rst:20
+msgid ""
+"You can edit the schedule if you need to make broader changes than a "
+"single shift reassignment. After saving changes to the shift schedule, a "
+"dialog displays to inform you of any shifts that might be impacted by "
+"your changes. The list displays the potentially impacted users and shifts"
+" over the next 90 days so you can adjust shift assignments as needed."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:-1
+msgid ""
+"Steps to reassign a full on-call shift or parts of a shift in Incident "
+"Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:4
+msgid "Reassign a full or partial shift in Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:9
+msgid ""
+"You can reassign full or partial on-call shifts to other team members if "
+"you are unable to be on call. Alternatively, you can take a current or "
+"future shift from someone. This is helpful if the current on-call "
+"responder is unable to reassign the shift themselves, for example during "
+"an emergency."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:11
+msgid ""
+"There are two ways to reassign shifts, depending on what page you are "
+"viewing in Incident Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:13
+msgid ""
+"From the main Incident Intelligence page, select :guilabel:`On-call "
+"Schedule`. In the side-pane that opens, select :guilabel:`Reassign "
+"Shift`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:14
+msgid ""
+"From the Incident Management page, select the :guilabel:`On-call "
+"schedules > Reassignments` tab, then :guilabel:`Reassign shift`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:16
+msgid "When reassigning shifts, keep in mind:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:18
+msgid ""
+"You must reassign coverage for the entire time period that the original "
+"shift owner is unavailable. That is, you cannot leave part of any shift "
+"unassigned."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:20
+msgid ""
+"If you are reassigning a shift to multiple people, the reassigned times "
+"cannot overlap."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:22
+msgid "You cannot reassign a shift to someone who is also unavailable."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:24
+msgid ""
+"In the :guilabel:`Reassign Shift` dialog, the initial timeframe you "
+"select is the time range that the individual is unavailable. The shifts "
+"that display are those assigned during that time range."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:31
+msgid "Reassign a full or partial shift"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:33
+msgid ""
+"If you are unable to complete a current or upcoming shift, you can "
+"reassign all or part of that shift to one or more team members. You can "
+"reassign coverage in 1 hour increments if needed, for example if you have"
+" an appointment. You can reassign one of your own shifts or reassign "
+"someone else's shift for them."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:36
+msgid "To reassign a shift, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:38
+msgid "Do one of the following:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:40
+msgid ""
+"On the main Incident Intelligence page, select :guilabel:`On-call "
+"Schedule`. In the side-pane that opens, select :guilabel:`Reassign "
+"Shift`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:42
+msgid ""
+"On the Incident Management page, select the :guilabel:`On-call schedules "
+"> Reassignments` tab, then :guilabel:`Reassign shift`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:44
+msgid ""
+"On the :guilabel:`Reassign Shifts` window, select the time range you are "
+"unavailable, including the dates and times. This does not need to match "
+"shift start and end times. This is the time that the person is "
+"unavailable."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:45
+msgid ""
+"(Conditional) If required, enter the name of the shift owner. The default"
+" is set to the current user. If you are reassigning shifts on behalf of "
+"another team member, enter their name in the :guilabel:`Reassign from` "
+"field."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:46
+msgid ""
+"Select :guilabel:`Search for schedules` to find the shift to reassign. "
+"Any shifts impacted by the time frame you selected are displayed. This "
+"includes shifts from another schedule, if the same user is assigned to "
+"more than one schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:47
+msgid ""
+"In :guilabel:`Reassign to`, enter the name of the team member who will "
+"take the shift or partial shift."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:48
+msgid ""
+"(Conditional) If you need to reassign multiple team members to one or "
+"more shifts, select :guilabel:`Add Responder` and select another "
+":guilabel:`Time range` and team member who will take over that shift."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:49
+msgid "Save your changes."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:51
+msgid ""
+"In the updated schedule, the shift or partial shift that was reassigned "
+"is now assigned to the new team member."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:56
+msgid "Take a full or partial shift"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:58
+msgid ""
+"Similar to reassigning a shift, you can take a shift from another team "
+"member."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:60
+msgid "To take a full or partial shift from someone, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:62
+msgid ""
+"On the main Incident Intelligence page, select :guilabel:`On-call "
+"Schedule`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:63
+msgid ""
+"Select the name of the on-call team whose schedule you want to modify. "
+"The current on-call schedule displays."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:64
+msgid ""
+"Select the :guilabel:`Take shift` icon (|takeshift|). The Take on-call "
+"shift dialog displays."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:65
+msgid "You have two options:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:67
+msgid ""
+"To take the entire remaining shift, select the button for :guilabel:`Take"
+" remaining duration of this on-call shift`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:69
+msgid ""
+"To take a few hours of the shift beginning immediately, ensure the radio "
+"button is not selected and select the number of hours you want to take "
+"from the :guilabel:`Take __ hour(s) of this on-call shift`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:71
+msgid "Select :guilabel:`Take shift`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:73
+msgid "The on-call schedule updates to reflect the shift reassignment selected."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:77
+msgid "View a list of reassigned shifts"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:79
+msgid "To view a list of all shift reassignments, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:81
+msgid ""
+"Log in to Splunk Observability Cloud and navigate to "
+":menuselection:`Settings > Incident Management`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:82
+msgid "Select the :guilabel:`On-call schedules` tab."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:83
+msgid "In the On-call schedules section, select :guilabel:`Reassignments`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:84
+msgid ""
+"You can review the list of reassigned shifts, listed by the original "
+"shift owner. You can edit the shift assignment by selecting the action "
+"menu (|more|)."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:91
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:47
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:21
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:92
+#: ../../incident-intelligence/manage-notifications/prevent-spam.rst:12
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:18
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:42
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:32
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:18
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:37
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:36
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:29
+msgid "See also"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/reassign-shift.rst:93
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:49
+msgid ":ref:`ii-create-manage-on-call-schedules`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid ""
+"Schedule scenario for creating business-hours and nights-and-weekends "
+"rotations in Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:4
+msgid ""
+"Scenario: Skyler creates business-hours and nights-and-weekend rotations "
+"for the web application service"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:9
+msgid ""
+"Skyler, the site reliability engineering (SRE) manager for Buttercup "
+"Games, needs to create an on-call schedule for the web application SREs "
+"with the following coverage needs:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:11
+msgid ""
+"Skyler needs coverage for the web application service for business hours "
+"Monday through Friday of each week, with one responder on the team being "
+"on call for a whole week."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:12
+msgid ""
+"Skyler also needs coverage for the web application service for nights and"
+" weekends. Night coverage is 5 PM to 8 AM Monday through Friday. Weekend "
+"coverage is one responder who is on call from Friday at 5 PM to Monday at"
+" 8 AM."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:13
+msgid ""
+"Finally, Skyler needs one responder on call 24x7 as secondary coverage "
+"for one week Monday through Sunday."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:15
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:14
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:11
+msgid ""
+"Skyler takes the following steps to configure a schedule that meets these"
+" coverage needs:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:35
+msgid ""
+"Skyler creates a new schedule for primary coverage for the web "
+"application service and names it accordingly: **Web application service -"
+" primary**."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:36
+msgid ""
+"Skyler adds a **WebApp** teams tag to make the schedule easier to find. "
+"The teams tag also sorts the list of responders so they're easier to find"
+" and select when Skyler adds them to a shift later. The following image "
+"shows the new schedule Skyler creates with the teams tag."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Create a primary schedule for the web application."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:48
+msgid ""
+"Skyler creates a business-hours shift in the primary schedule for the web"
+" application. Using the day-by-day shift type, Skyler creates the nightly"
+" gap in coverage for the business-hours shift. Skyler selects a shift "
+"handoff of **5** and adds the SREs as responders as shown in the "
+"following image."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Business-hours shift in web service primary schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:55
+msgid ""
+"Using the :guilabel:`Schedule Preview`, Skyler verifies that the "
+"business-hours shift is configured correctly. As shown in the following "
+"image, Alex is on call Monday through Friday from 8 AM to 5 PM for one "
+"week, and then Deepu, the next responder, takes over."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Schedule Preview for business-hours."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:67
+msgid ""
+"Next, Skyler creates a weeknights shift in the primary schedule for the "
+"web application. Using the :guilabel:`Day-by-day` shift type, Skyler "
+"creates the daily gap in coverage they need for the business-hours shift."
+" There are only four weeknights to cover because Fridays are covered by "
+"the weekends shift, so Skyler selects a shift handoff of 4. Finally, "
+"Skyler adds the SREs as responders, as shown in the following image."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Weeknights shift in web service primary schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:73
+msgid ""
+"Using the :guilabel:`Schedule Preview`, shown in the following image, "
+"Skyler notices that because of the way the responders are ordered in the "
+"shifts, some responders have a weeknights shift that immediately follows "
+"their business-hours shift. The order of shifts that Skyler sees is shown"
+" in the following image."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Schedule Preview with back-to-back responder shifts."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:79
+msgid ""
+"Skyler reorders the responders so that the responders have a week off "
+"between their business-hours shift and their weeknights shift. Skyler "
+"then uses the :guilabel:`Schedule Preview`, shown in the following image,"
+" to confirm that the responders are ordered appropriately."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Schedule Preview with reordered responders."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:91
+msgid ""
+"Finally, Skyler creates a weekends shift in the primary schedule for the "
+"web application service. For the weekends shift, Skyler uses the "
+":guilabel:`Week-by-week` shift type, as there is no gap in coverage, and "
+"selects **1** for the shift handoff. The following image shows the "
+"weekends shift within the primary schedule for the web application "
+"service."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Weekends shift in web service primary schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:97
+msgid ""
+"Skyler wants the responder for the weeknights shift to be the same as the"
+" responder for the subsequent weekends shift. Skyler uses the "
+":guilabel:`Schedule Preview`, shown in the following image, to confirm "
+"that the responders are in the correct order."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Weekends shift Schedule Preview."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:109
+msgid ""
+"Skyler creates a new schedule for secondary coverage for the web "
+"application service and names it accordingly: **Web application service -"
+" secondary**. Skyler adds the **WebApp** teams tag again to make the "
+"schedule easier to find. The teams tag also sorts the list of responders "
+"so they’re easier to find and select when Skyler adds them to a shift "
+"later. The following image shows the new schedule Skyler creates with the"
+" teams tag."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "Create a secondary schedule for the web application."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:121
+msgid ""
+"Skyler creates a 24x7 shift in the secondary schedule for the web "
+"application. Using the :guilabel:`Week-by-week` shift type, Skyler "
+"creates 24x7 as secondary coverage for one week, Monday through Sunday. "
+"Skyler selects a shift handoff of **1** and adds the SREs as responders."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid "24x7 shift in web service secondary schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:133
+msgid ""
+"Skyler adds the primary and secondary schedules as the first and second "
+"steps in the :guilabel:`Incident workflow` for the incident policy for "
+"the web application service. The incident workflow that Skyler creates is"
+" shown in the following image:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:-1
+msgid ""
+"Add schedules as first and second steps in the incident workflow within "
+"the web application service incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:145
+msgid ""
+"With the schedules configured and added to the incident policy, Skyler "
+"enables the incident policy so that alerts begin flowing and triggering "
+"incidents that notify the responders in the newly-configured schedules."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:153
+msgid ""
+"Skyler created the coverage they need by creating the following schedules"
+" and shifts:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:156
+msgid "A primary schedule for the web application service with two shifts:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:156
+msgid "A day-by-day shift for business-hours coverage"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:157
+msgid "A day-by-day shift for weeknights coverage"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:159
+msgid "A secondary schedule for the web application service with one shift:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:159
+msgid "A week-by-week shift for weekends coverage"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:161
+msgid ""
+"Skyler added the schedules as the first and second steps in the incident "
+"workflow in the incident policy for the web application service. Skyler "
+"then enabled the policy so that alerts begin flowing and triggering "
+"incidents that notify the responders in the newly-configured schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:169
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:115
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:91
+msgid ""
+"For steps to set up an on-call schedule, see :ref:`ii-create-manage-on-"
+"call-schedules`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-business-hours.rst:170
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:116
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:92
+msgid ""
+"For steps to create an incident policy, including steps for incident "
+"workflows, see :ref:`ii-create-configure-incident-policies`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:-1
+msgid "Schedule scenario for every-other-day coverage in Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:4
+msgid ""
+"Scenario: Skyler creates every-other-day coverage using the Day-by-day "
+"shift type"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:9
+msgid ""
+"Skyler, the site reliability engineering (SRE) manager for Buttercup "
+"Games, needs to create an on-call schedule for the checkout service SREs."
+" To cover the checkout service Monday through Sunday and have the SREs on"
+" call every other day, Skyler wants to create two rotations:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:11
+msgid "Rotation 1: Monday, Wednesday, and Friday 24x7"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:12
+msgid "Rotation 2: Tuesday, Thursday, Saturday, and Sunday 24x7"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:34
+msgid ""
+"Skyler creates a new schedule for the checkout service and names it "
+"accordingly: **Checkout service**. Skyler adds a **Checkout** teams tag "
+"to make the schedule easier to find. The teams tag also sorts the list of"
+" responders so they're easier to find and select when Skyler adds them to"
+" a shift later. The following image shows the new schedule Skyler creates"
+" with the teams tag."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:-1
+msgid "Create a schedule for the checkout service."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:46
+msgid ""
+"Skyler creates a shift named **M,W,F** in the schedule for the checkout "
+"service."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:47
+msgid ""
+"Using the :guilabel:`Day-by-day` shift type, Skyler creates the every-"
+"other-day coverage they need. Day-by-day shifts are designed to span 24 "
+"hours or fewer on select days of the week and are ideal for short-term "
+"shifts that are staggered on specific days of the week, with responders "
+"rotating on a more frequent basis."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:48
+msgid ""
+"Skyler selects a shift handoff of **3**, which configures the shift to "
+"assign the same responder as on call for Monday, Wednesday, and Friday. "
+"Skyler then adds the SREs as responders. The following image shows the "
+"T,R,S,U shift within the schedule for the checkout service."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:-1
+msgid "M,W,F shift in checkout schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:54
+msgid ""
+"Using the :guilabel:`Schedule Preview`, Skyler verifies that they "
+"configured the **M,W,F** shift correctly. As shown in the following "
+"image, Alex is on call Monday, Wednesday, and Friday for 24 hours, and "
+"then the next responder takes over."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:-1
+msgid "Schedule Preview for M,W,F shift."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:66
+msgid ""
+"Skyler creates a shift named, T,R,S,U in the schedule for the checkout "
+"service."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:67
+msgid ""
+"Using the :guilabel:`Day-by-day` shift type, Skyler creates the every-"
+"other-day coverage they need. Day-by-day shifts are designed to span 24 "
+"hours or fewer on select days of the week and are ideal for creating "
+"short-term shifts that are staggered on specific days of the week, with "
+"responders rotating on a more frequent basis."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:68
+msgid ""
+"Skyler selects a shift handoff of **4**, which configures the shift to "
+"assign the same responder as on call for Tuesday, Thursday, Saturday, and"
+" Sunday. Skyler then adds the SREs as responders."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:-1
+msgid "T,R,S,U shift in checkout schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:74
+msgid ""
+"Using the :guilabel:`Schedule Preview`, Skyler verifies that they "
+"configured the **T,R,S,U** shift correctly. As shown in the following "
+"image, Alex is on call Tuesday, Thursday, Saturday, and Sunday for 24 "
+"hours, and then the next responder takes over."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:-1
+msgid "Schedule Preview for T,R,S,U shift."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:86
+msgid ""
+"Skyler adds the checkout schedule as the first step of the "
+":guilabel:`Incident workflow` for the checkout service incident policy. "
+"The incident workflow that Skyler creates is shown in the following "
+"image."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:-1
+msgid ""
+"Add schedule as first step in the incident workflow within the checkout "
+"service incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:98
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:74
+msgid ""
+"With the schedule configured and added to the incident policy, Skyler "
+"enables the incident policy so that alerts begin flowing and triggering "
+"incidents that notify the responders in the newly-configured schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:107
+msgid ""
+"Skyler created the every-other-day coverage they need by creating a "
+"single schedule for the checkout service with two day-by-day shifts: one "
+"shift for Monday, Wednesday, and Friday coverage and a second shift for "
+"Tuesday, Thursday, Saturday, and Sunday coverage. Skyler added the "
+"schedule to the incident workflow in the incident policy for the checkout"
+" service. Skyler then enabled the policy so that alerts begin flowing and"
+" triggering incidents that notify the responders in the newly-configured "
+"schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-day-by-day.rst:117
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:93
+msgid ""
+"For a scenario with a multi-shift schedule and primary and secondary "
+"coverage, see :ref:`ii-scenario-business-hours`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:-1
+msgid "Schedule scenario for creating a weekly rotation in Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:4
+msgid "Scenario: Skyler creates weekly coverage using the Week-by-week shift type"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:9
+msgid ""
+"Skyler, the site reliability engineering (SRE) manager for Buttercup "
+"Games, needs to create an on-call schedule for SREs with weekly 24x7 "
+"coverage for the payment service Monday through Sunday."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:30
+msgid ""
+"Skyler creates a new schedule for the payment service and names it "
+"accordingly: **Payment service**. Skyler adds a **Payment** teams tag to "
+"make the schedule easier to find. The teams tag also sorts the list of "
+"responders so they're easier to find and select when Skyler adds them to "
+"a shift later. The following image shows the new schedule Skyler creates "
+"with the teams tag."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:-1
+msgid "Create a schedule for the payment service."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:42
+msgid ""
+"Skyler creates a weekly shift in the schedule for the payment service. "
+"Using the :guilabel:`Week-by-week` shift type Skyler creates the weekly "
+"coverage they need. Week-by-week shifts are designed to span over one "
+"week and repeat every week and are ideal for creating a long-term shift "
+"that spans the course of two to seven days, with responders rotating on a"
+" less frequent basis."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:44
+msgid ""
+"Skyler selects a shift handoff of **1**, which configures the shift to "
+"assign the same responder as on call for the entire week, Monday through "
+"Sunday. Skyler then adds the SREs as responders. The weekly shift that "
+"Skyler creates is shown in the following image."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:-1
+msgid "Weekly shift in payment schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:50
+msgid ""
+"Using the :guilabel:`Schedule Preview`, Skyler verifies that they "
+"configured the weekly shift correctly. As shown in the following image, "
+"Alex is on call Monday, through Sunday for 24 hours, and then the next "
+"responder takes over."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:-1
+msgid "Schedule Preview for weekly shift."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:62
+msgid ""
+"Skyler adds the payment schedule as the first step of the "
+":guilabel:`Incident workflow` for the payment service incident policy. "
+"The incident workflow that Skyler creates is shown in the following "
+"image."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:-1
+msgid ""
+"Add schedule as first step in the incident workflow within the payment "
+"service incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenario-week-by-week.rst:83
+msgid ""
+"Skyler created the weekly Monday through Sunday coverage they need by "
+"creating a single schedule for the payment service with a week-by-week "
+"shift. Skyler added the schedule to the incident workflow in the incident"
+" policy for the payment service. Skyler then enabled the policy so that "
+"alerts begin flowing and triggering incidents that notify the responders "
+"in the newly-configured schedule."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:-1
+msgid "Schedule scenarios for Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:4
+msgid ""
+"Scenarios for notifying the correct responder using schedules in Incident"
+" Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:9
+msgid ""
+"The following scenarios feature examples from Buttercup Games, a "
+"fictitious e-commerce company. Each scenario shares a story of how "
+"Buttercup Games uses on-call schedules in Splunk Incident Intelligence to"
+" notify the correct responder to take action on their applications and "
+"services when incidents are triggered."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:18
+msgid ":ref:`ii-scenario-business-hours`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:19
+msgid ":ref:`ii-scenario-day-by-day`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/scenarios-schedules/scenarios-schedules.rst:20
+msgid ":ref:`ii-scenario-week-by-week`"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:-1
+msgid ""
+"Steps to access your personal on-call calendar and sync it to third-party"
+" calendar apps."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:4
+msgid "Check your on-call schedule and sync it to your personal calendar"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:9
+msgid ""
+"You can check your on-call schedule in Incident Intelligence and sync it "
+"to your preferred calendar app."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:14
+msgid "Access your on-call schedule"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:16
+msgid "To access your on-call schedule follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:18
+msgid ""
+"On the :guilabel:`Incidents` or :guilabel:`Alerts` tab in Incident "
+"Intelligence, select :guilabel:`You are currently on call` if you are on "
+"call or :guilabel:`On-call schedules` if you are not on call."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:19
+msgid "Select :guilabel:`Sync to calendar`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:20
+msgid "Copy the link."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:22
+msgid ""
+"You can paste this link into a browser to download the calendar. If you "
+"want to sync your on-call schedule to your personal calendar, follow the "
+"steps for your calendar app."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:27
+msgid "Sync your on-call schedule to your Google Calendar"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:29
+msgid ""
+"For steps to sync your on-call schedule to your Google Calendar, search "
+"the web for \"Google Calendar Use a link to add a public calendar\" and "
+"follow the steps provided."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:34
+msgid "Sync your on-call schedule to your Microsoft Outlook Calendar"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:36
+msgid ""
+"For steps to sync your on-call schedule to your Microsoft Outlook "
+"Calendar, search the web for \"Microsoft Outlook Subscribe to a "
+"calendar\" and follow the steps provided."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:41
+msgid "Sync your on-call schedule to Calendar for iOS"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/sync-on-call-schedule.rst:43
+msgid ""
+"For steps to sync an on-call schedule to your Calendar for iOS, search "
+"the web for \"Calendar for iOS Set up multiple calendars\" and follow the"
+" steps provided."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:-1
+msgid ""
+"Steps to check who's on-call schedule for Incident Intelligence in Splunk"
+" Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:4
+msgid "Check who's currently on call"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:9
+msgid ""
+"You can view who's on call from the :guilabel:`Incidents` and "
+":guilabel:`Alerts` tabs in Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:11
+msgid ""
+"If you are on call, :guilabel:`You are currently on call` displays on the"
+" :guilabel:`Incidents` and :guilabel:`Alerts` tabs. To view on-call "
+"schedule details, select :guilabel:`You are currently on call`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:12
+msgid ""
+"If you are not on call, :guilabel:`On-call schedules` displays on the "
+":guilabel:`Incidents` and :guilabel:`Alerts` tabs. To view on-call "
+"schedule details, select :guilabel:`On-call schedules`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:14
+msgid ""
+"You can also view who's on call in :guilabel:`Incident Management`. To do"
+" so, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:17
+msgid "Select :guilabel:`On-call schedules`."
+msgstr ""
+
+#: ../../incident-intelligence/create-manage-on-call-schedules/whos-on-call.rst:18
+msgid "Select the schedule for which you want to view who’s on call."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:4
+msgid "Splunk Incident Intelligence overview"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:6
+msgid ""
+"Welcome to Incident Intelligence. Use this high-level overview to better "
+"understand the end-to-end journey of an incident. These icons are used in"
+" the overview graphics to symbolize key terms and processes in Incident "
+"Intelligence and Splunk Observability Cloud:"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:-1
+msgid "Incident Intelligence key terms and icons."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:14
+msgid "Typical alert generation creates alert noise"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:16
+msgid ""
+"Detectors within Splunk Observability Cloud monitor your systems. As an "
+"Observability Cloud user, you can configure detectors at varying "
+"thresholds to generate alerts when something unusual happens, such as a "
+"bug or issue. When a detector meets a specified threshold, it generates "
+"alerts. A single detector can generate multiple alerts, particularly when"
+" several issues occur at once, or when an issue persists over time and "
+"causes further problems downstream. The end result is a countless number "
+"of generated alerts."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:18
+msgid ""
+"The following diagram shows generated alerts and the downstream noise "
+"they create:"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:-1
+msgid "Alert generation creates alert noise."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:27
+msgid ""
+"Incident policies route and group alerts into incidents that trigger "
+"workflows"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:29
+msgid ""
+"You can determine which alert signals are the most important to the "
+"performance of your infrastructure and use alerts to intelligently "
+"trigger incidents that you want responders to investigate. First, create "
+"alert routing and grouping conditions using alert metadata to filter "
+"alerts into incidents. This process reduces alert noise and allows "
+"responders to map an issue back to the system or service where it "
+"occurred. Second, create an incident workflow that automatically runs "
+"time-based hierarchical steps when an incident is triggered. All incident"
+" workflows must include a notification to a person, such as a responder "
+"in an on-call schedule. If a responder doesn't acknowledge an incident "
+"when they are on call, the incident is escalated to the next step in the "
+"workflow. This entire process is called an incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:31
+msgid ""
+"The following workflow shows the end-to-end incident policy process, "
+"starting with an alert, moving into routing and grouping, and ending with"
+" a notification to the on-call responder:"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:-1
+msgid ""
+"Incident policies route and group alerts into incidents that trigger "
+"workflows."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:39
+msgid ""
+"Responders are notified when a triggered incident workflow routes to an "
+"on-call schedule"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:41
+msgid ""
+"On-call scheduling ensures the correct person is notified at the right "
+"time to resolve system issues as soon as they occur. An on-call schedule "
+"contains a group of responders who understand a specific part of the "
+"system architecture. Responders rotate through their schedule every day, "
+"week, or month based on how their schedule is set up by a team manager or"
+" admin. On-call schedules are included as a step in an incident workflow."
+" When an incident is triggered, the first step in the workflow routes to "
+"a schedule, and the responder who is on call for that schedule is paged."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:43
+msgid ""
+"The following diagram shows how on-call schedules and incident workflows "
+"work together to ensure the correct responder is notified of an incident:"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:-1
+msgid ""
+"On-call schedules, triggered in incident workflows, notify the "
+"appropriate responder."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:51
+msgid "End-to-end incident response process"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:53
+msgid ""
+"This simplified end-to-end incident response flow demonstrates the value "
+"of Incident Intelligence. An issue appears in the system that is noticed "
+"by detectors monitoring that system or service. The detectors fire, "
+"causing a spike in generated alerts. Those alerts are mapped to an "
+"incident policy and the influx of activity triggers an incident. The "
+"workflow for that incident policy connects to an on-call schedule and a "
+"responder is paged. The responder acknowledges the incident and begins "
+"investigating the root cause by looking at the alerts grouped under that "
+"incident. They resolve the incident and verify their solution. Alerts "
+"decrease and the system returns to normal."
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:55
+msgid "The following diagram shows this entire incident response process:"
+msgstr ""
+
+#: ../../incident-intelligence/incident-intelligence-overview.rst:-1
+msgid "End-to-end incident response process."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:-1
+msgid ""
+"Overview of alert ingestion methods for Incident Intelligence in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:4
+msgid "Ingest alerts in Splunk Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:19
+msgid ""
+"The following options are available for ingesting alerts in Incident "
+"Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:29
+msgid ""
+"After alerts are ingested, you can view them on the :guilabel:`Alerts` "
+"tab of Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:43
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:72
+msgid ":strong:`Alert source`"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:44
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:73
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:93
+msgid ":strong:`Documentation`"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:46
+msgid "Splunk APM"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:47
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:50
+msgid "See :ref:`create-detectors`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:49
+msgid "Splunk Infrastructure Monitoring"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:52
+msgid "Splunk RUM"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:53
+msgid "See :ref:`rum-detectors`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:55
+msgid "Splunk Synthetic Monitoring"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:57
+msgid "To create a detector for an API test, see :ref:`api-detector`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:58
+msgid "To create a detector for a browser test, see :ref:`detector-browser-test`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:59
+msgid "To create a detector for an uptime test, see :ref:`uptime-detector`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:75
+msgid "Splunk Enterprise"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:76
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:79
+msgid "See :ref:`ii-ingest-splunk-itsi-alerts`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:78
+msgid "Splunk Cloud Platform"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:92
+msgid ":strong:`Ingest endpoint`"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:95
+msgid "Amazon CloudWatch"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:96
+msgid "See :ref:`ii-ingest-cloudwatch-alerts`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:98
+msgid "Azure Monitor"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:99
+msgid "See :ref:`ii-ingest-azure-alerts`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:101
+msgid "Prometheus"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:102
+msgid "See :ref:`ii-ingest-prometheus-alerts`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:104
+msgid "Generic REST alerts"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:105
+msgid "See :ref:`ii-ingest-rest`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-alerts.rst:117
+msgid ""
+"If you are setting up Incident Intelligence for the first time, next you "
+"need to create and configure an incident policy. See :ref:`ii-create-"
+"configure-incident-policies`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:-1
+msgid ""
+"Detailed overview of Azure Monitor alert ingestion endpoint for Incident "
+"Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:4
+msgid "Ingest Azure Monitor alerts"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:9
+msgid ""
+"You can use Incident Intelligence ingest endpoints to ingest alerts from "
+"various third-party sources. In Incident Intelligence you can then create"
+" on-call schedules and incident workflows to route third-party incidents "
+"to responders. Use the Azure Monitor endpoint to forward Azure Monitor "
+"alerts to Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:12
+msgid "Azure Monitor ingest endpoint"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:14
+msgid ""
+"To send Azure Monitor alerts to the ingest endpoint, make a POST call to "
+"the endpoint."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:20
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:29
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:20
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:20
+msgid "For steps to obtain your realm see :ref:`organizations`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:23
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:32
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:23
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:23
+msgid "Request header"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:30
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:39
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:30
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:30
+msgid "Header"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:31
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:34
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:37
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:51
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:55
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:59
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:63
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:67
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:40
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:44
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:47
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:62
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:67
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:72
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:76
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:81
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:31
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:34
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:37
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:52
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:56
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:60
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:64
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:68
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:76
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:80
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:31
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:34
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:37
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:51
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:55
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:59
+msgid "Required"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:32
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:53
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:41
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:64
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:32
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:54
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:32
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:53
+msgid "Description"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:33
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:43
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:33
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:33
+msgid "X-SF-Token"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:35
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:45
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:35
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:35
+msgid ""
+"Authentication token. See :ref:`api-access-token`. Ensure that the token "
+"has :guilabel:`INGEST` listed under :guilabel:`Authorization Scopes`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:36
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:46
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:36
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:36
+msgid "Content-Type"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:38
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:48
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:38
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:38
+msgid "application/json"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:41
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:42
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:41
+msgid "Alert fields"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:43
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:54
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:44
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:43
+msgid ""
+"The following fields are transformed as part of the common information "
+"model. All other included fields are included properties object in the "
+"transformed alert."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:50
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:61
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:51
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:50
+msgid "Field"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:52
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:63
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:53
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:52
+msgid "Type"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:54
+msgid "alertRule"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:56
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:60
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:64
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:68
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:68
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:73
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:77
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:82
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:87
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:57
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:61
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:65
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:77
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:81
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:56
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:60
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:64
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:72
+msgid "String"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:57
+msgid "The alert rule name"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:58
+msgid "monitoringService"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:61
+msgid "The monitoring service for the alert"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:62
+msgid "severity"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:65
+msgid "The alert severity"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:66
+msgid "firedDateTime"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:69
+msgid ""
+"Alert fired date and time. Send date and time in the Azure format (ISO "
+"8601). It is transformed to the epoch long format for the ``triggeredAt``"
+" field in the common event model"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:72
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:101
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:85
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:77
+msgid "JSON payload"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:74
+msgid ""
+"Refer to the following example JSON payload for the Azure Monitor "
+"endpoint."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:76
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:105
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:89
+msgid "Example JSON payload:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-azure.rst:129
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:147
+msgid ""
+"Using this endpoint, your alert is ingested and transformed into the "
+"common event model for alerts in Incident Intelligence. This is an "
+"example of the transformed alert data that is saved as an alert in "
+"Incident Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:-1
+msgid ""
+"Detailed overview of AWS Cloudwatch alert ingestion endpoint for Incident"
+" Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:4
+msgid "Ingest Amazon CloudWatch alarms"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:9
+msgid ""
+"You can use Incident Intelligence ingest endpoints to ingest alerts from "
+"various third-party sources. In Incident Intelligence you can then create"
+" on-call schedules and incident workflows to route third-party incidents "
+"to responders. Use the AWS CloudWatch endpoint to forward AWS CloudWatch "
+"alarms to Incident Intelligence, which ingests them as alerts. You can "
+"send AWS CloudWatch alarms directly to the ingest endpoint or use AWS "
+"CloudWatch Simple Notification Service (SNS)."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:12
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:12
+msgid "Prerequisite"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:14
+msgid ""
+"You must set up CloudWatch to send alarms to a queue in SNS. This is a "
+"prerequisite for alert ingestion through the endpoint and SNS."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:18
+msgid "Send AWS CloudWatch alarms directly to the ingest endpoint"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:20
+msgid ""
+"To send AWS CloudWatch alarms directly to the ingest endpoint, make a "
+"POST call to the endpoint."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:23
+msgid "AWS CloudWatch ingest endpoint"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:52
+msgid "Alarm fields"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:66
+msgid "id"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:69
+msgid "Alarm ID"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:71
+msgid "detail-type"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:74
+msgid "Alarm title"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:75
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:70
+msgid "source"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:78
+msgid "The alarm source"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:80
+msgid "time"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:83
+msgid ""
+"Date-time string. Send date-time in the AWS Cloudwatch format (ISO 8601)."
+" It is transformed to the epoch long format for the ``triggeredAt`` field"
+" in the common event model"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:85
+msgid "region"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:88
+msgid "AWS region"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:90
+msgid "resources"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:92
+msgid "Array"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:93
+msgid ""
+"Alarm resources you want to include with the alert in Incident "
+"Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:95
+msgid "detail"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:97
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:69
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:73
+msgid "Object"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:98
+msgid "Alarm details you want to include with the alert in Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:103
+msgid ""
+"Send AWS Cloudwatch alarms to the AWS Cloudwatch endpoint. Refer to the "
+"following example JSON payload for the AWS Cloudwatch endpoint."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:127
+msgid ""
+"Using this endpoint, your alarm is ingested and transformed into the "
+"common event model for alerts in Incident Intelligence. This is an "
+"example of the transformed alert data that saved as an alert in Incident "
+"Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:160
+msgid "Send alarms to Incident Intelligence using the AWS CloudWatch SNS"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-cloudwatch.rst:162
+msgid ""
+"You can also send alarms to Incident Intelligence using AWS CloudWatch "
+"SNS. To do so, you need your CloudWatch ingest endpoint and the JSON "
+"payload. See the Amazon documentation for more information: :new-"
+"page:`https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/US_SetupSNS.html`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:-1
+msgid ""
+"Detailed overview of Prometheus alert ingestion endpoint for Incident "
+"Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:4
+msgid "Ingest Prometheus alerts"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:9
+msgid ""
+"You can use Incident Intelligence ingest endpoints to ingest alerts from "
+"various third-party sources. In Incident Intelligence you can then create"
+" on-call schedules and incident workflows to route third-party incidents "
+"to responders. You can send Prometheus alerts directly to the ingest "
+"endpoint using the Prometheus alertmanager webhook config. For more "
+"information, see :new-"
+"page:`https://prometheus.io/docs/alerting/latest/configuration/#webhook_config`"
+" in the Prometheus documentation."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:12
+msgid "Prometheus ingest endpoint"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:14
+msgid ""
+"To send Prometheus alerts to the ingest endpoint, make a POST call to the"
+" endpoint."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:55
+msgid "status"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:58
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:78
+msgid "The alert status"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:59
+msgid "receiver"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:62
+msgid "The alert receiver"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:63
+msgid "externalURL"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:66
+msgid "The external URL to the alert"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:67
+msgid "commonAnnotations"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:70
+msgid "Alert annotations"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:71
+msgid "commonLabels"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:72
+msgid "Require"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:74
+msgid "Alert labels"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:75
+msgid "alerts.status"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:79
+msgid "alerts.startsAt"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:82
+msgid ""
+"Alert start date and time. Send date and time in the Prometheus format "
+"(ISO 8601). It is transformed to the epoch long format for the "
+"``triggeredAt`` field in the common event model"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-prometheus.rst:87
+msgid ""
+"Use the Prometheus alertmanager webhook config to send Prometheus alerts "
+"to the Prometheus endpoint. Refer to the following example JSON payload "
+"for the Prometheus endpoint."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:-1
+msgid ""
+"Detailed overview of ingest endpoint for generic REST alerts for Incident"
+" Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:4
+msgid "Ingest generic REST alerts"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:9
+msgid ""
+"You can use Incident Intelligence ingest endpoints to ingest alerts from "
+"various third-party sources. In Incident Intelligence you can then create"
+" on-call schedules and incident workflows to route third-party incidents "
+"to responders. Use the generic REST ingest endpoint to forward third-"
+"party alerts to Incident Intelligence for which there is not a specific "
+"ingest endpoint available."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:12
+msgid "REST ingest endpoint"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:14
+msgid ""
+"To send REST alerts to the ingest endpoint, make a POST call to the "
+"endpoint for your realm."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:54
+msgid "severity or message_type for Splunk On-call alerts"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:57
+msgid ""
+"The criticality of the alert. Supported values are ``info``, ``normal``, "
+"``warning``, ``minor``, ``major``, and ``critical``"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:58
+msgid "title or entity_display_name for Splunk On-call alerts"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:61
+msgid "Name of the alert"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:62
+msgid "description or state_message for Splunk On-call alerts"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:65
+msgid "Verbose message"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:66
+msgid "timestamp"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:68
+msgid "Integer"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:69
+msgid "Date-time. Send date-time in epoch format"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:73
+msgid "The alert source"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:79
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:92
+msgid ""
+"Refer to the following example JSON payload for the generic third-party "
+"alert to the REST endpoint."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:81
+msgid "Example JSON payload for generic third-party alert:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:94
+msgid "Example JSON payload for Splunk On-call alert:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:106
+msgid ""
+"Using this endpoint, your alert is ingested and transformed into the "
+"common event model for alerts in Incident Intelligence. These are "
+"examples of the transformed alert data that is saved as an alert in "
+"Incident Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:108
+msgid "Example transformed alert data for a generic third-party alert:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-rest.rst:129
+msgid "Example transformed alert data for a Splunk On-call alert:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:4
+msgid "Ingest alerts from Splunk Enterprise and Splunk Cloud Platform"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:6
+msgid ""
+"You can ingest alerts into Incident Intelligence from Splunk Enterprise "
+"and Splunk Cloud Platform using Splunk Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:8
+msgid ""
+"Before you can ingest alerts from Splunk Enterprise and Splunk Cloud "
+"Platform, you must configure Incident Intelligence in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:13
+msgid "Download and configure the Splunk Incident Intelligence app"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:15
+msgid ""
+"Download and install the Splunk Incident Intelligence app from :new-"
+"page:`Splunkbase <https://splunkbase.splunk.com/app/6721>`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:19
+msgid "Open the app and select :guilabel:`Setup Org and Token`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:17
+msgid ""
+"Enter the :guilabel:`Realm`, :guilabel:`Org Id`, and :guilabel:`SFX "
+"Token`. For steps to obtain this information, see :ref:`organizations`. "
+"When obtaining your access token, select the default token or a token "
+"with INGEST and API scopes, in the list of tokens."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:18
+msgid ""
+"Select :guilabel:`Send Test Alert`. This is only a status code "
+"verification that ensures there is a valid response to the ingest "
+"endpoint. There is no test alert in Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:19
+msgid ""
+"You can repeat these steps to create multiple entries for additional "
+"realms or organizations."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:21
+msgid "Now you are ready to start sending alerts to Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:25
+msgid "Ingest Splunk Enterprise alerts using saved searches"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:27
+msgid ""
+"Create or save existing alerts to ingest from Splunk Enterprise into "
+"Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:29
+msgid "In Splunk Enterprise create and run a search."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:30
+msgid "Select :guilabel:`Save As > Alert`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:31
+msgid "Enter a title and description."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:32
+msgid ""
+"Under :guilabel:`Alert type`, select :guilabel:`Scheduled` and indicate "
+"how often you want the alert to run."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:33
+msgid ""
+"Under :guilabel:`Trigger Conditions`, create the conditions for when you "
+"want to send the alert."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:34
+msgid ""
+"Under :guilabel:`Trigger Actions`, select :guilabel:`Add Actions > "
+"Incident Intelligence`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:39
+msgid "Under :guilabel:`Incident Intelligence`, select the following settings:"
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:36
+msgid "Select the :guilabel:`Severity` for the alert."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:37
+msgid "Enter an :guilabel:`Alert Title`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:38
+msgid ""
+"Enter an :guilabel:`Alert description`. The description can include "
+"tokens that insert text based on the results of the search. For more "
+"information, see :new-page:`Pass search result values to alert action "
+"tokens "
+"<https://docs.splunk.com/Documentation/Splunk/7.1.3/AdvancedDev/ModAlertsLog#Pass_search_result_values_to_alert_action_tokens>`"
+" in the Splunk Enterprise `Developing Views and Apps for Splunk Web` "
+"manual."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:39
+msgid ""
+"(Optional) Select a :guilabel:`Realm`, :guilabel:`Org Id`, and "
+":guilabel:`SFX Token` if you want to use something other than the default"
+" configured realm, org ID, and SFX token. These lists populate with the "
+"entries added in the configuration step. See :ref:`ii-configure-app`."
+msgstr ""
+
+#: ../../incident-intelligence/ingest-alerts/ingest-splunk-alerts.rst:40
+msgid ""
+"(Optional) Select an incident policy in the :guilabel:`Service Name` "
+"field."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:-1
+msgid ""
+"Intro to Incident Intelligence for collaborative diagnosis and issue "
+"remediation in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:5
+msgid "Introduction to Splunk Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:10
+msgid ""
+"Use Incident Intelligence to collaboratively diagnose and remediate "
+"issues across your environment. Incident Intelligence lets site "
+"reliability engineers (SREs) in IT and DevOps resolve outages with alert "
+"correlation, incident response, and on-call routing."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:13
+msgid "How Incident Intelligence works"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:15
+msgid ""
+"Incident Intelligence ingests, routes, and groups alerts to create "
+"incidents. Alerts are routed and grouped based on rules that you "
+"configure. If an alert or set of alerts meets the criteria for a critical"
+" incident, an incident is automatically triggered and escalated to the "
+"corresponding responder based on the incident workflow and on-call "
+"schedules you configure. See :ref:`ii-incident-intelligence-overview` "
+"high-level overview of the end-to-end journey of an incident in Incident "
+"Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:18
+msgid "How Incident Intelligence fits into Splunk Observability Cloud"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:20
+msgid ""
+"Splunk Observability Cloud provides a unified experience for collecting "
+"and monitoring metrics, logs, and traces from common data sources. "
+"Incident Intelligence is integrated into Observability Cloud to provide "
+"alert analytics and on-call management in one place. With Incident "
+"Intelligence, you can reduce alert noise, automate actions, and "
+"accelerate incident response."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:22
+msgid "For more information about Observability Cloud, see :ref:`welcome`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:27
+msgid "Get started with Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:29
+msgid ""
+"For step-by-step instructions on how to set up Incident Intelligence, see"
+" :ref:`ii-set-up-incident-intelligence`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:32
+msgid "What can I do with Incident Intelligence?"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:34
+msgid ""
+"Follow the links in the table to complete the tasks that are relevant to "
+"you."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:40
+msgid ":strong:`Do this`"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:41
+msgid ":strong:`With this tool`"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:42
+msgid ":strong:`Link to documentation`"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:44
+msgid ""
+"Ingest alerts from Observability Cloud, Splunk Enterprise, Splunk Cloud "
+"Platform, IT Service Intelligence (ITSI) or third parties."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:45
+msgid "Alert ingestion"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:46
+msgid "See :ref:`ii-ingest-alerts`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:48
+msgid ""
+"Create incident policies to automatically organize incidents depending on"
+" the impacted service."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:49
+msgid "Incident policies"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:50
+msgid "See :ref:`ii-create-configure-incident-policies`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:52
+msgid "Route alerts to associate them with an incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:53
+#: ../../incident-intelligence/key-concepts.rst:27
+msgid "Alert routing"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:54
+msgid "See :ref:`ii-configure-alert-routing`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:56
+msgid ""
+"Manage which alerts create an incident and how alerts are grouped into "
+"incidents. Use alert severity to determine if an incident is created and "
+"group alerts by time period."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:57
+#: ../../incident-intelligence/key-concepts.rst:24
+msgid "Alert grouping"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:58
+msgid "See :ref:`ii-configure-alert-grouping`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:60
+msgid ""
+"Create incident workflows with a series of escalating steps to determine "
+"who is notified to respond when a new incident is triggered."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:61
+msgid "Incident workflows"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:62
+msgid "See :ref:`ii-configure-incident-workflows`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:64
+msgid ""
+"Create on-call schedules and shifts to use as a step in your incident "
+"workflows."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:65
+msgid "On-call schedules and shifts"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:66
+msgid "See :ref:`ii-create-manage-on-call-schedules`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:68
+msgid ""
+"Use incident management tools to respond to incidents as they are "
+"triggered."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:69
+msgid "Incident response"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:70
+msgid "See :ref:`ii-respond-manage-incidents`."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:75
+msgid "How to provide feedback or get help"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:76
+msgid ""
+"Use the following forms to share feedback or ask questions about Incident"
+" Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:78
+msgid ""
+"To share feedback about Incident Intelligence, see :new-page:`Incident "
+"Intelligence Ideas "
+"<https://quickdraw.splunk.com/redirect/?product=Observability&location=beta.ideas&version=beta>`"
+" in Splunk Ideas."
+msgstr ""
+
+#: ../../incident-intelligence/intro-to-incident-intelligence.rst:79
+msgid ""
+"Ask questions about Incident Intelligence, see :new-page:`Ask Questions, "
+"Get Help with Splunk Incident Intelligence "
+"<https://quickdraw.splunk.com/redirect/?product=Observability&location=beta.questions&version=beta>`"
+" in Splunk Community."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:-1
+msgid ""
+"Review important concepts for successful use of Incident Intelligence in "
+"Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:4
+msgid "Key concepts in Splunk Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:9
+msgid ""
+"Here are some important concepts you need to know to successfully use "
+"Splunk Incident Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:15
+msgid ":strong:`Concept`"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:16
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:16
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:16
+msgid ":strong:`Description`"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:18
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:21
+msgid "Acknowledged"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:19
+msgid ""
+"Incident responders select this status to indicate that they are aware of"
+" the incident. The status lifecycle for incidents is triggered, then "
+"acknowledged, and then resolved. Acknowledging an incident prevents the "
+"escalation to the next step in an incident workflow."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:21
+msgid "Alert"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:22
+msgid "An alert is an event that meets a defined threshold or criteria."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:25
+msgid ""
+"Use alert grouping to automate incident trigger conditions and group "
+"alerts. Alert grouping conditions are set up at the incident-policy level"
+" to let you customize the grouping rules for each incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:28
+msgid ""
+"Alert routing associates alerts with an incident policy. If an alert "
+"matches your configured alert routing conditions, it is routed to the "
+"incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:30
+msgid "Detector"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:31
+msgid ""
+"Use a detector to specify the events for which you want to create an "
+"alert that is ingested into Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:33
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:24
+msgid "Dismissed"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:34
+msgid ""
+"An incident status that incident responders can set to indicate that the "
+"incident is dismissed. The status lifecycle for incidents is triggered, "
+"then acknowledged, and then resolved. Setting an incident status to "
+"dismissed prevents the escalation to the next step in an incident "
+"workflow. When you dismiss an incident, it is considered invalid and "
+"closed; you will no longer be able to make updates to the incident."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:36
+msgid "Incident Management"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:37
+msgid ""
+"The entire configuration process for an incident policy in Incident "
+"Intelligence. This is where you create an incident policy and configure "
+"alert routing, alert grouping, and incident workflows for incidents "
+"associated with an incident policy."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:39
+msgid "Incident"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:40
+msgid ""
+"An unplanned interruption to a service or reduction in the quality of a "
+"service that needs to be resolved. Each incident is made up of alerts "
+"that are ingested into Incident Intelligence. You can also create "
+"incidents manually. Manual incidents don't have ingested alerts."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:42
+msgid "Incident action"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:43
+msgid ""
+"Any status-changing event taken by a user or the system on an incident. "
+"Incident responders can acknowledge, resolve, or dismiss an incident. "
+"These actions update the incident status to reflect the most recent "
+"action."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:45
+msgid "Incident alerting"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:46
+msgid ""
+"The primary mechanism of Incident Intelligence. It is the process by "
+"which alerts and events are ingested at scale and grouped to create "
+"incidents. As alerts and events are ingested into Incident Intelligence, "
+"they pass through a series of data transformations, such as alert routing"
+" and alert grouping."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:48
+msgid "Incident policy"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:49
+msgid ""
+"Incident policies let you organize incidents depending on the impacted "
+"component in your environment. Incident policies include alert-routing "
+"and alert-grouping rules and an incident workflow."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:51
+msgid "Incident status"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:52
+msgid ""
+"Where an incident is in its lifecycle. The status of an incident changes "
+"based on alert grouping conditions, as well as actions from a user. "
+"Throughout the lifecycle of an incident, the incident status can go from "
+"triggered, to acknowledged, to resolved or dismissed."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:54
+msgid "Incident workflow"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:55
+msgid ""
+"A configurable series of escalation steps that run in response to a "
+"triggered incident. Incident workflows determine who is notified of an "
+"incident and the time interval for notifications. You can also use "
+"incident workflows to manage how incidents are routed, add automation "
+"steps, and route to an on-call schedule."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:57
+msgid "Maintenance"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:58
+msgid ""
+"An incident policy status that mutes all associated incidents. Use "
+"incident policy maintenance for planned outages."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:60
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:30
+msgid "Mean time to acknowledge (MTTA)"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:61
+msgid ""
+"The average time it takes from when an incident is triggered to when the "
+"incident is acknowledged."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:63
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:33
+msgid "Mean time to resolve (MTTR)"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:64
+msgid ""
+"The average time it takes from when an incident is triggered to when the "
+"incident is resolved."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:66
+msgid "Muted"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:67
+msgid ""
+"An incident status that is set when the associated incident policy is put"
+" into maintenance."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:69
+msgid "Notification preference"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:70
+msgid ""
+"A user-level preference that specifies how the user wants to be notified "
+"of incidents when they are on call. Notification methods include email, "
+"mobile push, SMS, and voice."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:72
+msgid "On-call schedules"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:73
+msgid ""
+"An on-call schedule consists of one or more shifts, with members who "
+"rotate through a shift. Use an on-call schedule as a step in your "
+"incident policies' incident workflows."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:75
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:27
+msgid "Resolved"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:76
+msgid ""
+"An incident status that incident responders set to indicate that the "
+"incident is resolved. The status lifecycle for incidents is triggered, "
+"then acknowledged, and then resolved. Resolving an incident status "
+"prevents the escalation to the next step in an incident workflow."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:78
+msgid "Incident policy-based routing"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:79
+msgid ""
+"Incident Intelligence relies on an incident policy-based routing scheme. "
+"Incident policy-based routing automatically organizes and routes "
+"incidents depending on the service that it’s impacting. Rather than "
+"routing to a combination of teams and policies, the incident policy an "
+"incident is associated with determines who is notified of the incident."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:81
+msgid "Snoozed"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:82
+msgid "An incident status that is set when responders snooze the incident."
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:84
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:18
+msgid "Triggered"
+msgstr ""
+
+#: ../../incident-intelligence/key-concepts.rst:85
+msgid ""
+"The initial stage of an incident is triggered. Incidents are triggered "
+"based on the alert grouping conditions you configured for the incident "
+"policy."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:-1
+msgid "Review example notifications: email, voice, SMS, and mobile push."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:4
+msgid "Example notifications: Email, mobile push, SMS, and voice"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:9
+msgid ""
+"Each notification method provides a different level of detail about the "
+"triggered incident. See the following example info each notification "
+"method."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:12
+msgid "Email notification"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:14
+msgid ""
+"When you select email notification, you will receive an email with this "
+"content:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:-1
+msgid "Incident Intelligence email notification example content"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:20
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:29
+msgid ""
+"You can select the incident link to go to the incident details where you "
+"can review details and acknowledge, dismiss, or resolve the incident."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:23
+msgid "SMS notification"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:25
+msgid ""
+"When you select SMS notification, you will receive an SMS message with "
+"this content:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:27
+msgid ""
+"INC-[NUMBER] [SEVERITY] Incident title: [Link to incident in Splunk "
+"Observability Cloud]."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:32
+msgid "Mobile push notification"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:34
+msgid ""
+"When you select mobile push notification, you will receive an push "
+"notification with this content:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:36
+msgid ""
+":strong:`INC-[NUMBER] Incident title` [SEVERITY] for policy [incident "
+"policy name]: Rule \"[rule name]\" in detector \"[detector name]\" "
+"triggered at [date-time triggered]"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:39
+msgid ""
+"You can select the notification to go to the incident details where you "
+"can review details and acknowledge, dismiss, or resolve the incident."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:42
+msgid "Voice notification"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/example-notifications.rst:44
+msgid ""
+"When you select voice notification, you will receive a phone call that "
+"with this recorded phone message: \"You are being paged by Splunk "
+"Incident Intelligence. You are an assigned responder for a triggered "
+"incident. Log in to Splunk Incident Intelligence to view the incident "
+"details and acknowledge.\""
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/manage-notifications.rst:-1
+msgid ""
+"Overview of notification management in Incident Intelligence in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/manage-notifications.rst:4
+msgid "Manage notifications from Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/manage-notifications.rst:9
+msgid ""
+"Use the following topics to learn about managing your notifications in "
+"Incident Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/manage-notifications.rst:20
+#: ../../incident-intelligence/manage-notifications/prevent-spam.rst:14
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:20
+msgid ":ref:`ii-notification-preferences`"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/manage-notifications.rst:21
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:94
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:21
+msgid ":ref:`ii-prevent-spam`"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/manage-notifications.rst:22
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:95
+#: ../../incident-intelligence/manage-notifications/prevent-spam.rst:15
+msgid ":ref:`ii-sending-phone-numbers`"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/manage-notifications.rst:23
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:96
+#: ../../incident-intelligence/manage-notifications/prevent-spam.rst:16
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:22
+msgid ":ref:`ii-example-notifications`"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:-1
+msgid ""
+"Steps to set your notification preferences for Incident Intelligence in "
+"Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:4
+msgid "Set your on-call notification preferences"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:9
+msgid ""
+"When you are on call, triggered incidents notify you by email by default."
+" You can also choose to receive notifications through SMS, mobile push, "
+"or voice. To set your on-call notification preferences, follow these "
+"steps:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:11
+msgid ""
+"In Splunk Observability Cloud, select :guilabel:`Settings` > "
+":guilabel:`Users` in the main menu."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:12
+msgid "Search for your user name and select it when it appears."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:13
+msgid "Go to :guilabel:`Notification Preferences`."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:14
+msgid ""
+"Under :guilabel:`Intelligence notifications` > :guilabel:`Receive "
+"notifications by`, select the notification methods you want to be "
+"notified by. :guilabel:`Email` is selected by default. If you want to "
+"uncheck :guilabel:`Email`, select another notification method first, then"
+" uncheck :guilabel:`Email`."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:18
+msgid ""
+"Next, review your :guilabel:`Contact method details` to confirm they are "
+"correct. Go to the :guilabel:`Personal Information` tab to update your "
+"contact details."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:16
+msgid ""
+"For SMS notifications, if you haven't already verified your phone number,"
+" select :guilabel:`Verify` to verify your phone to receive notifications "
+"over SMS. This sends a code to your phone that you have to enter to "
+"verify your phone. You need to verify your phone every time you update "
+"your phone number under :guilabel:`Personal Details`. If you choose to "
+"receive notifications through SMS notifications, the sending phone number"
+" is dependent on the device's country location."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:17
+msgid ""
+"For push notifications, check the :guilabel:`Logged-in devices for push` "
+"to verify that you are logged in to Splunk Observability Cloud for Mobile"
+" on the devices where you want to receive push notifications. See :ref"
+":`intro-to-mobile`."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:18
+msgid ""
+"(Optional) Use the :guilabel:`Test` option for each contact method to "
+"test that you receive each notification."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:20
+msgid "You are now ready to be notified of triggered incidents."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:23
+msgid "Receive notifications on your mobile phone"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:25
+msgid ""
+"There are a number of different settings on the Android platform that "
+"affect the delivery of Splunk Incident Intelligence notifications to your"
+" device. Here are the things you can do to minimize your risk of missing "
+"a notification from Splunk Observability Cloud for Mobile:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:27
+msgid ""
+"Use a diverse set of notification types in your personal notification "
+"preferences (voice, SMS, push) to avoid a single point of failure."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:28
+msgid ""
+"Test your configuration in various modes for example, do not disturb, "
+"vibrate only, using a manual incident before you go on call."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:29
+msgid ""
+"If using Do Not Disturb, set  Splunk Observability Cloud for Mobile "
+"contact to a favorite and allow Favorites to bypass Do Not Disturb (DND)."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:31
+msgid "See the following sections for operating system-specific information."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:34
+msgid "Notification delivery on iOS"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:36
+msgid ""
+"To ensure you receive notifications from Incident Intelligence, follow "
+"these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:38
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:68
+msgid "Open Splunk Observability Cloud for Mobile app on your phone."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:39
+msgid "Select :guilabel:`Settings`"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:40
+msgid ""
+"Enable :guilabel:`Incident Notifications are Critical Alerts` to ensure "
+"incident notifications are not muted by the system."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:41
+msgid ""
+"When prompted, confirm that the Splunk Observability Cloud for Mobile app"
+" can send push notifications."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:46
+msgid ""
+"Review the options for notifications, sounds, badges, and banners are "
+"turned on to ensure you do not miss incident notifications if your phone "
+"is locked or set to Do Not Disturb."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:87
+msgid ""
+"In the Triggered Incidents section, manage your notification settings to "
+"ensure you receive incident notifications while not receiving dual "
+"notifications from the app and your mobile device settings."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:49
+msgid "Notification delivery on Android"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:51
+msgid ""
+"Splunk Observability Cloud for Mobile supports Android devices running "
+"Android 8 or newer."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:53
+msgid ""
+"Using custom Read Only Memory (ROMs) (or those provided by the device "
+"manufacturer) can alter the settings and functionality described herein. "
+"If your device utilizes a custom or manufacturer-furnished ROM, see the "
+"owner's manual or other applicable literature provided by the ROM "
+"developer."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:55
+msgid ""
+"There are a number of different settings on the Android platform that "
+"affect the delivery of Splunk Incident Intelligence notifications to your"
+" device. Due to the critical nature of Splunk Incident Intelligence "
+"notifications, it is important that you correctly configure your settings"
+" on your mobile phone and test those notifications before you go on call."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:57
+msgid ""
+"Add Splunk Incident Intelligence to your phone contacts from the bottom "
+"of the Setting page in the app, then under Notifications."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:58
+msgid ""
+"If you are planning on using Do Not Disturb mode, favorite the Splunk "
+"Incident Intelligence contact and ensure that in your mobile phone "
+"settings, Splunk Incident Intelligence is one of the contacts allowed to "
+"override Do Not Disturb mode."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:62
+msgid "Set up volume override on Android"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:64
+msgid ""
+"Depending on the version of Android you are using, it might be possible "
+"to set the sound and volume levels for notifications in two places for "
+"Splunk Observability Cloud for Mobile: in the general settings on your "
+"Android device and within Splunk Observability Cloud for Mobile."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:66
+msgid "To set the volume override follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:69
+msgid "Select :guilabel:`Settings`, then go to the :guilabel:`Notifications` tab."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:70
+msgid "Select :guilabel:`Incident Notifications`."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:78
+msgid "In the :guilabel:`Triggered Incidents` section:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:72
+msgid "Change the Notification Sound to your preference."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:78
+msgid ""
+"Ensure you turn on the option to Override System Notification Volume. "
+"This ensures that the notification sound plays at maximum volume."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:74
+msgid "Select :guilabel:`Manage Channel Settings` and do the following:"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:75
+msgid "Ensure :guilabel:`Show notifications` is turned on."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:76
+msgid ""
+"(Optional) To avoid double sounds or ringtones being issued by the Splunk"
+" Observability Cloud for Mobile app and your Android system settings, "
+"expand the :guilabel:`Advanced settings` and change the Sound setting to "
+"None."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:81
+msgid "Android system settings to check"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:83
+msgid ""
+"Check your Android system settings to ensure you receive notification "
+"from the Splunk Observability Cloud for Mobile app. How to do this might "
+"vary depending on the version of Android you are using. See your Android "
+"documentation for specific instructions."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/notification-preferences.rst:85
+msgid ""
+"Ensure that your Do Not Disturb (DND) settings are set to allow "
+"notifications, including calls or notifications, from the Splunk "
+"Observability Cloud for Mobile app to override any DND settings."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/prevent-spam.rst:-1
+msgid ""
+"Steps to prevent your Incident Intelligence SMS or voice notifications "
+"from being labeled as spam."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/prevent-spam.rst:4
+msgid "Prevent SMS and voice notifications from going to spam"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/prevent-spam.rst:9
+msgid ""
+"Some carriers might label SMS or voice notifications as spam. To prevent "
+"your notifications from being labeled as spam, add the sending phone "
+"number to your phone's contact list."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:-1
+msgid ""
+"Sending phone numbers for voice and SMS notifications from Incident "
+"Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:4
+msgid "Sending phone numbers for voice and SMS"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:9
+msgid ""
+"The following phone numbers are used for sending SMS or voice "
+"notifications."
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:11
+msgid "425-475-3701 (primary SMS and voice number)"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:12
+msgid "425-541-7327"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:13
+msgid "720-707-2540"
+msgstr ""
+
+#: ../../incident-intelligence/manage-notifications/sending-phone-numbers.rst:15
+msgid ""
+"For SMS notifications, if the target phone number doesn't allow SMS from "
+"foreign numbers or there is a high likelihood that an SMS would be "
+"filtered, the sending number is automatically changed to a local number."
+msgstr ""
+
+#: ../../incident-intelligence/placeholder.rst:6
+msgid "Incident Intelligence topic placeholder"
+msgstr ""
+
+#: ../../incident-intelligence/placeholder.rst:8
+msgid ""
+"Greetings! This is a placeholder topic. You have landed here because "
+"documentation doesn't yet exist for the new feature/functionality in the "
+"app where you selected to learn more."
+msgstr ""
+
+#: ../../incident-intelligence/placeholder.rst:10
+msgid ""
+"Rest assured, landing here means your tech writer is aware of the need "
+"for this documentation. If you wish to review in-progress content, reach "
+"out in the :new-page:`#incident-intelligence-docs "
+"<https://splunk.slack.com/archives/C03M9QFDX4H>` channel and your "
+"friendly tech writer will provide you with available draft content."
+msgstr ""
+
+#: ../../incident-intelligence/placeholder.rst:12
+msgid "Thank you for testing doc links!"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:-1
+msgid ""
+"Steps to add tools and resources to an incident in Incident Intelligence "
+"in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:4
+msgid "Add collaboration tools and resources to an incident"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:9
+msgid ""
+"Use resources and collaboration tools to give responders quick access to "
+"any resources they might need when working the incident. Collaboration "
+"tools ensure that incident responders know where to go to collaborate "
+"with other responders to resolve an incident, such as a Slack channel or "
+"a conference bridge. Resources might include a runbook or other helpful "
+"resources."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:14
+msgid "Add resources to an incident"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:16
+msgid "To add a resource to an incident, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:18
+msgid "In Incident Intelligence, select the :guilabel:`Incidents` tab."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:19
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:34
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:12
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:26
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:12
+msgid "Select the incident from the incident list."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:20
+msgid "Select :guilabel:`Add Resource`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:21
+msgid "Enter a :guilabel:`Title` for the resource."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:22
+msgid "Enter a :guilabel:`URL` for the resource."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:23
+msgid "(Optional) Enter notes about the resource."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:24
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:39
+msgid "Select :guilabel:`Add`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:29
+msgid "Add collaboration tools to an incident"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:31
+msgid "To add a collaboration tool to an incident, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:33
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:11
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:25
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:11
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:11
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:22
+msgid "In Incident Intelligence, go to the :guilabel:`Incidents` tab."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:35
+msgid "Select :guilabel:`Add Collaboration Tool`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:36
+msgid "Enter a :guilabel:`Title` for the collaboration tool."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:37
+msgid "Enter a :guilabel:`URL` for the collaboration tool."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:38
+msgid "(Optional) Enter notes about the collaboration tool."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:44
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:34
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:20
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:39
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:42
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:31
+msgid ":ref:`ii-respond-to-incident`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:45
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:35
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:21
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:40
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:43
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:38
+msgid ":ref:`ii-snooze-incident`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:46
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:22
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:41
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:44
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:39
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:32
+msgid ":ref:`ii-add-responders-roles`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:47
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:37
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:43
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:47
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:41
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:34
+msgid ":ref:`ii-edit-incident`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:48
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:38
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:24
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:44
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:48
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:42
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:35
+msgid ":ref:`ii-muted-incidents`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-incident-tools-resources.rst:49
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:39
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:25
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:49
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:43
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:36
+msgid ":ref:`ii-mtta-mttr`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:-1
+msgid ""
+"Steps to add responders and assign roles within an incident in Incident "
+"Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:4
+msgid "Add responders and assign roles"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:9
+msgid ""
+"If your incident policies have an incident workflow, responders are "
+"automatically added to incidents. To add or remove incident responders, "
+"follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:13
+msgid "Select :guilabel:`Add Responders`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:15
+msgid ""
+"You can add responders by selecting a schedule and you can add a specific"
+" responder by name."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:15
+msgid ""
+"To add a responder by schedule, select a schedule from the :guilabel:`By "
+"schedule` list. When you select a schedule, the responder in the schedule"
+" who is currently on call is notified."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:16
+msgid ""
+"To add a responder by name, enter user names in the :guilabel:`By name` "
+"field and select the desired user when they appear. You can add multiple "
+"responders by name."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:17
+msgid ""
+"If you need to remove a responder, hover over the responder you want to "
+"remove, select the menu, and then select :guilabel:`Remove`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:21
+msgid "Add and assign responder roles"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:23
+msgid "To add responder roles to incident responders, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:27
+msgid ""
+"Hover over the responder you want to add a role to and select the menu, "
+"and then select :guilabel:`Edit Role`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:28
+msgid ""
+"Select the roles you want to assign to the responder. The list of roles "
+"shows default roles (:guilabel:`Incident Commander`, "
+":guilabel:`Communications Owner`, :guilabel:`Task Manager`, "
+":guilabel:`Customer Liaison`) and any previously created custom roles. To"
+" add a new custom role, enter the custom role name you want to use and "
+"select enter."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/add-responders-roles.rst:36
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:23
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:42
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:45
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:40
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:33
+msgid ":ref:`ii-add-incident-tools-resources`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:-1
+msgid ""
+"Steps to edit an incident in Incident Intelligence in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:4
+msgid "Edit an incident"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:9
+msgid ""
+"Incidents automatically inherit the title and description of the first "
+"alert that triggers the incident. To edit the incident title, "
+"description, or severity, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:13
+msgid "Select the pencil icon."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/edit-incident.rst:14
+msgid "Edit the title, description, or severity."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:-1
+msgid ""
+"Review available incident response statistics for tracking your "
+"organization's performance for Incident Intelligence in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:4
+msgid ""
+"Review mean time to acknowledge and respond and other incident response "
+"stats"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:9
+msgid ""
+"On the :guilabel:`Incidents` and :guilabel:`Alerts` tabs in Incident "
+"Intelligence, use the following incident statistics to track your "
+"organization's incident response performance."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:15
+msgid ":strong:`Statistic`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:18
+msgid "Triggered incidents"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:19
+msgid ""
+"The current number of incidents with the triggered status for your "
+"organization."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:21
+msgid "Acknowledged incidents"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:22
+msgid ""
+"The current number of incidents with the acknowledged status for your "
+"organization."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:24
+msgid "Resolved incidents"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:25
+msgid ""
+"The current number of incidents with the resolved status for your "
+"organization."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:27
+msgid "Dismissed incidents"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:28
+msgid ""
+"The current number of incidents with the dismissed status for your "
+"organization."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:31
+msgid ""
+"The average amount of time in minutes taken to acknowledge an incident "
+"for your organization."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/mtta-mttr.rst:34
+msgid ""
+"The average amount of time in minutes taken to resolve an incident for "
+"your organization."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/muted-incidents.rst:-1
+msgid ""
+"Understand muted incidents in Incident Intelligence in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/muted-incidents.rst:4
+msgid "What is a muted incident?"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/muted-incidents.rst:9
+msgid ""
+"Incidents are triggered in a muted state when an incident policy is in "
+"maintenance. See :ref:`ii-incident-policy-maintenance`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/muted-incidents.rst:11
+msgid ""
+"Muted incidents don't show in your incident list by default. To see your "
+"muted incidents, select the :guilabel:`Incidents` tab in Incident "
+"Intelligence and add a ``Status = Muted`` filter. No responders are "
+"notified when a muted incident is triggered. Muted incidents are read-"
+"only and can't be acknowledged, resolved, or dismissed."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:-1
+msgid ""
+"Overview of steps to respond and manage incidents in Incident "
+"Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:4
+msgid "Respond to and manage incidents"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:9
+msgid ""
+"Incidents are automatically triggered after you configure your incident "
+"policies to route and group alerts and add an incident workflow to your "
+"incident policy. Go to the :guilabel:`Incidents` tab in Incident "
+"Intelligence to view incidents as they are triggered."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:17
+msgid ""
+"You can search for incidents by ID or title. Searching by ID supports "
+"partial matching. Searching by title requires whole-word matching."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:25
+msgid ""
+"You can manually create an incident using the :guilabel:`Create incident`"
+" button on the :guilabel:`Incidents` tab. Manually created incidents "
+"trigger the incident workflow for the incident policy you select."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:27
+msgid "Use the following topics to learn about incident management and response:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-manage-incidents.rst:46
+msgid ":ref:`snow-integration`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:-1
+msgid ""
+"Incident status overview and steps to respond to an incident in Incident "
+"Intelligence in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:4
+msgid "Respond to an incident: Acknowledge, resolve, or dismiss an incident"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:9
+msgid ""
+"Incidents begin in the triggered status. The default status lifecycle for"
+" incidents is triggered, and then acknowledged, and then resolved."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:15
+msgid ":strong:`Incident status`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:19
+msgid ""
+"Triggered incidents are considered active and open. Triggered incidents "
+"notify responders as defined by the steps in the associated incident "
+"policy's incident workflow."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:22
+msgid ""
+"Acknowledged incidents are considered valid and under investigation. "
+"Setting an incident status to acknowledged prevents further "
+"notifications."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:25
+msgid ""
+"Dismissed incidents are considered invalid and closed; you will no longer"
+" be able to make updates to dismissed incidents. Setting an incident "
+"status to :guilabel:`Dismissed` prevents further notifications."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:28
+msgid ""
+"Resolved incidents are considered investigated and closed. Setting an "
+"incident status to resolved prevents further notifications."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:30
+msgid ""
+"To acknowledge, dismiss, or resolve an incident, select the "
+":guilabel:`Incidents` tab in Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:32
+msgid ""
+"You can acknowledge an incident from the list of incidents or, "
+"alternatively, you can go into the detail of each incident and "
+"acknowledge it there."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/respond-to-incident.rst:33
+msgid ""
+"From either location, you also have the option to resolve or dismiss the "
+"incident."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:-1
+msgid ""
+"Steps to snooze an incident in Incident Intelligence in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:4
+msgid "Snooze an incident"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:9
+msgid ""
+"You can snooze an incident to silence paging on unactionable or less-"
+"urgent incidents for a specified period of time. At the end of the "
+"specified time, the incident workflow with which the incident is "
+"associated is triggered again, starting with the first step. To snooze an"
+" incident, follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:12
+msgid "Locate the incident and select the :guilabel:`Actions` menu."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:13
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:15
+msgid "Select :guilabel:`Snooze`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:14
+msgid ""
+"Next to :guilabel:`Snooze until`, select the date and time when you want "
+"to re-trigger the incident workflow."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:18
+msgid "Unsnooze an incident"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:20
+msgid ""
+"If you need to unsnooze an incident before the specified period of time, "
+"follow these steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:23
+msgid "Locate the incident."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:24
+msgid "Select :guilabel:`Resume`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snooze-incident.rst:26
+msgid ""
+"When a snoozed incident resumes, the incident workflow is triggered "
+"again, starting with the first step."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:4
+msgid "Create ServiceNow tickets within Splunk Incident Intelligence incidents"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:6
+msgid ""
+"You can create ServiceNow tickets within Incident Intelligence incidents."
+" With this integration, Splunk Incident Intelligence aggregates your "
+"alerts, notifies the on-call responders, while all incident and customer "
+"details remain in ServiceNow."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:8
+msgid ""
+"This lets you create and close ServiceNow tickets from within Incident "
+"Intelligence. Updates to the ServiceNow ticket must be performed in "
+"ServiceNow."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:13
+msgid "Configure ServiceNow for Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:15
+msgid "Allow Incident Intelligence to create ServiceNow tickets."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:17
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:46
+msgid "Perform the following steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:19
+msgid "Log into Splunk Observability Cloud,"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:20
+msgid ""
+"Open the :new-page:`ServiceNOW for Incident Intelligence setup page "
+"<https://login.signalfx.com/#/integrations/incidentIntelligenceServiceNow>`."
+" Optionally, you can navigate to the setup on your own:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:22
+msgid "Select :guilabel:`Data Management`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:24
+msgid "Select :guilabel:`Add Integration`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:26
+msgid ""
+"In the drop-down, select :guilabel:`Product` and search for Incident "
+"Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:28
+msgid "Select :guilabel:`ServiceNow Incident Intelligence`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:30
+msgid ""
+"By default, the name of the integration is :guilabel:`ServiceNow`. Give "
+"your integration a unique and descriptive name. For information about the"
+" downstream use of this name, see :ref:`About naming your integrations "
+"<naming-note>`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:31
+msgid "Enter the :guilabel:`ServiceNow URL` for the instance."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:32
+msgid ""
+"In the :strong:`Username or Client` field, enter the user ID from "
+"ServiceNow or the Oauth client ID."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:33
+msgid ""
+"In the :strong:`Password or Client` field, enter the password from "
+"ServiceNow or the Oauth client secret."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:34
+msgid ""
+"In the :strong:`Provide the timezone` field, enter the time zone name for"
+" the ServiceNOW integration."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:35
+msgid ""
+"In the :strong:`Observability Integration Token` field, enter the API "
+"Access token for your Incident Intelligence org. This must be an org "
+"level API access token."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:36
+msgid "Select :guilabel:`Save`"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:38
+msgid ""
+"You are now ready to configure ServiceNow as part of the incident policy "
+"workflows in Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:42
+msgid ""
+"Connect ServiceNow to Splunk Incident Intelligence incident policy "
+"workflows"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:44
+msgid ""
+"When you have configured the ServiceNow integration with Observability "
+"Cloud, you can configure Splunk Incident Intelligence and ServiceNow in "
+"one or more incident policies. This eliminates the need for individual "
+"responders to manually run the configuration steps in each incident. Any "
+"incident created under the incident policy automatically has the "
+"ServiceNow ticket configuration populated."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:48
+msgid "In Splunk Incident Intelligence, select :guilabel:`Incident Management`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:49
+msgid "On the :guilabel:`Incident Policies` tab, select an incident."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:50
+msgid ""
+"Select the :guilabel:`Incident Workflows` tab to configure an action for "
+"the policy."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:51
+msgid "Select :guilabel:`Add action`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:52
+msgid ""
+"On the :guilabel:`Add new action` dialog, in the :guilabel:`Integration` "
+"field, select Create ServiceNOW ticket."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:53
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:83
+msgid "Complete the following fields:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:55
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:85
+msgid ""
+":guilabel:`Integration Instance`: Select the ServiceNow instance to work "
+"with. For example, you might have a production and a test instance."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:57
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:87
+msgid ":guilabel:`ServiceNow table`: the default is incident."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:59
+msgid ""
+":guilabel:`ServiceNow Fields`: Enter the JSON that contains the "
+"ServiceNow field values to use. For example, if you have an incident "
+"policy for WebUI incidents, you can create a field that says WebUI "
+"incident, so the responder doesn't have to fill that in."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:61
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:91
+msgid ""
+"(Optional) :guilabel:`Close Incident Mapping JSON`: Enter the JSON to map"
+" the fields users are prompted to provide when closing an incident."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:63
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:93
+msgid ""
+"(Optional) :guilabel:`Resolve Incident Mapping JSON`: Enter the JSON to "
+"map the fields users are prompted to provide when closing an incident."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:65
+msgid ""
+"Once you configure this, any incident created using that incident policy "
+"displays the related ServiceNow ticket information in the "
+":guilabel:`Resources` section of the incident details."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:-1
+msgid ""
+"On the Incident details page, the ServiceNow ticket link displays in the "
+"Resources section."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:74
+msgid ""
+"Manually connect Splunk Incident Intelligence to ServiceNow in a specific"
+" incident"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:76
+msgid ""
+"If you do not configure ServiceNow as part of incident workflows, "
+"responders can still connect an incident to ServiceNow manually. This "
+"requires them to know the configuration values required."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:78
+msgid ""
+"If you are reviewing or working on a specific incident in Splunk Incident"
+" Intelligence, you can manually connect the incident to ServiceNow by "
+"performing the following steps:"
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:80
+msgid ""
+"On the :guilabel:`Incidents` tab in Splunk Incident Intelligence, select "
+"an incident."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:81
+msgid "In the :guilabel:`Resources` section, select :guilabel:`Add Resource`."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:82
+msgid ""
+"On the :guilabel:`Add resource` dialog, in the :guilabel:`Integration` "
+"field, select Create ServiceNOW ticket."
+msgstr ""
+
+#: ../../incident-intelligence/respond-manage-incidents/snow-integration.rst:89
+msgid ""
+":guilabel:`ServiceNow Fields`: Enter the JSON that contains the "
+"ServiceNow field values to use."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:-1
+msgid ""
+"Steps to configure your incident management in Incident Intelligence in "
+"Splunk Observability Cloud."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:4
+msgid "Set up Splunk Incident Intelligence"
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:9
+msgid ""
+"To route incidents to the necessary teams and people, you need to first "
+"generate alerts. Next, you'll complete your incident response "
+"configuration which includes creating and configuring incident policies "
+"and creating on-call schedules. After you configure your incident "
+"policies and schedules, users can begin responding to incidents."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:14
+msgid ""
+"You must be an Observability Cloud administrator to configure and set up "
+"Incident Intelligence."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:17
+msgid "Get started"
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:19
+msgid "Complete these tasks to get started with Incident Intelligence:"
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:21
+msgid "Ingest alerts in Incident Intelligence. See :ref:`ii-ingest-alerts`."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:22
+msgid ""
+"Create incident policies to organize your alerts and incidents based on "
+"the impacted environmental component, for example, your web application "
+"service or checkout service. See :ref:`ii-create-configure-incident-"
+"policies`."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:23
+msgid ""
+"Configure the alert routing within the incident policy to associate "
+"alerts with an incident policy. See :ref:`ii-configure-alert-routing`."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:24
+msgid ""
+"Configure alert grouping within the incident policy to manage which "
+"alerts create an incident and how alerts are grouped into incidents. See "
+":ref:`ii-configure-alert-grouping`."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:25
+msgid ""
+"Configure the incident workflow within the incident policy to determine "
+"who is notified when a new incident is triggered. See :ref:`ii-configure-"
+"incident-workflows`."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:26
+msgid ""
+"Create an on-call schedule and add them as a step in your incident "
+"workflows. See :ref:`ii-create-manage-on-call-schedules`."
+msgstr ""
+
+#: ../../incident-intelligence/set-up-incident-intelligence.rst:28
+msgid ""
+"This completes the setup for Incident Intelligence. You are ready to "
+"begin responding to incidents. See :ref:`ii-respond-manage-incidents`."
+msgstr ""
+
