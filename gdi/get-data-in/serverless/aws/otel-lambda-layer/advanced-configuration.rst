@@ -72,7 +72,7 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
      - The endpoint for the Jaeger exporter. When you set a value for the ``SPLUNK_REALM`` environment variable, the default endpoint is in the form ``https://ingest.<realm>.signalfx.com/v2/trace``.
 
-.. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to a Collector run in the Lambda layer which sends the data to Observability Cloud ingest endpoints.
+.. note:: Setting the exporter and the endpoint URL isn't required in most cases. By default, the layer sends telemetry directly to a Collector run in the Lambda layer which sends the data to Splunk Observability Cloud ingest endpoints.
 
 .. _trace-propagation-configuration-lambda:
 

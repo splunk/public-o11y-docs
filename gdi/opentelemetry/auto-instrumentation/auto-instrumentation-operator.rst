@@ -28,8 +28,6 @@ To use the Operator for Auto Instrumentation, follow these steps:
 
 #. Deploy the Helm chart with the required components, including the Operator, to your Kubernetes cluster. 
 
-#. Deploy the specifications of the Auto Instrumentation libraries to be used. 
-
 #. Verify the deployed resources are working correctly. 
 
 #. Apply annotations at the pod or namespace level for the Operator to know which pods to apply auto-instrumentation to.   
@@ -44,7 +42,7 @@ Deploy the :ref:`Collector for Kubernetes with the Helm chart <helm-chart>` with
 Ingest traces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In order to be properly ingest trace telemetry data, the attribute ``deployment.environment`` must be on board the exported traces. There are two ways to set this attribute:
+In order to be properly ingest trace telemetry data, the attribute ``environment`` must be on board the exported traces. There are two ways to set this attribute:
 
 * Use the `values.yaml` optional environment configuration.
 * Use the Instrumentation spec with the environment variable ``OTEL_RESOURCE_ATTRIBUTES``.
@@ -65,41 +63,7 @@ The Operator requires certain TLS cerificates to work. If a certification manage
    # If cert-manager is already deployed.
    helm install splunk-otel-collector -f ./my_values.yaml --set operator.enabled=true,environment=dev -n monitoring helm-charts/splunk-otel-collector
 
-1. Deploy Auto Instrumentation
-------------------------------------------------------------
-
-Deploy an opentelemetry.io Instrumentation object with specifications on how to configure the instrumentation libraries to use for instrumentation. It must be available to the target pod for auto-instrumentation to function. 
-
-For example:
-
-.. code-block:: yaml
-
-   # instrumentation.yaml
-   apiVersion: opentelemetry.io/v1alpha1
-   kind: Instrumentation
-   metadata:
-      name: splunk-instrumentation
-   spec:
-      exporter:
-         endpoint: http://$(SPLUNK_OTEL_AGENT):4317
-      propagators:
-         - tracecontext
-         - baggage
-         - b3
-      env:
-         - name: SPLUNK_OTEL_AGENT
-           valueFrom:
-            fieldRef:
-               apiVersion: v1
-               fieldPath: status.hostIP
-
-   # Install
-   kubectl apply -f instrumentation.yaml -n {target_application_namespace}
-
-   # Check the current deployed values
-   kubectl get otelinst -o yaml -n {target_application_namespace}
-
-3. Verify all the OpenTelemetry resources are deployed successfully
+2. Verify all the OpenTelemetry resources are deployed successfully
 ---------------------------------------------------------------------------
 
 Resources include the Collector, the Operator, webhook, an instrumentation.
@@ -127,7 +91,7 @@ Run the following to verify the resources are deployed correctly:
    # NAME                          AGE   ENDPOINT
    # splunk-instrumentation        3m   http://$(SPLUNK_OTEL_AGENT):4317
 
-4. Set annotations to instrument applications
+3. Set annotations to instrument applications
 ------------------------------------------------------------
 
 You can add an ``instrumentation.opentelemetry.io/inject-{instrumentation_library}`` annotation to the following:
@@ -149,7 +113,7 @@ Sample annotations include:
 * ``instrumentation.opentelemetry.io/inject-nodejs: "true"``
 * ``instrumentation.opentelemetry.io/inject-python: "true"``
 
-5. Check out the results at Splunk Observability APM
+4. Check out the results at Splunk Observability APM
 ------------------------------------------------------------
 
 Allow the Operator to do the work. The Operator intercepts and alters the Kubernetes API requests to create and update annotated pods, the internal pod application containers are instrumented, and trace and metrics data populates the :ref:`APM dashboard <apm-dashboards>`. 
@@ -158,5 +122,5 @@ Learn more
 ===========================================================================
 
 * See :ref:`auto-instrumentation-java-operator`.
-* To learn more about how Auto Instrumentation works in Observability Cloud, see :new-page:`more detailed documentation in GH <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
+* To learn more about how Auto Instrumentation works in Splunk Observability Cloud, see :new-page:`more detailed documentation in GH <https://github.com/signalfx/splunk-otel-collector-chart/blob/main/docs/auto-instrumentation-install.md#how-does-auto-instrumentation-work>`.
 * Refer to :new-page:`the operator pattern in the Kubernetes documentation <https://kubernetes.io/docs/concepts/extend-kubernetes/operator/>` for more information.

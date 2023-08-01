@@ -32,6 +32,6 @@ To find a receiver for your application, see the alphabetical listing of receive
 
 If available, using native components instead of Smart Agent application receivers is the best practice. To see native OpenTelemetry receivers, refer to :ref:`otel-components`. 
 
-For Smart Agent application receivers and monitors, you can use the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` with the :ref:`Smart Agent receiver <smartagent-receiver>`, a native OTel component, to send data to Observability Cloud.
+For Smart Agent application receivers and monitors, you can use the :ref:`Splunk Distribution of OpenTelemetry Collector <otel-intro>` with the :ref:`Smart Agent receiver <smartagent-receiver>`, a native OTel component, to send data to Splunk Observability Cloud.
 
 .. include:: /_includes/application-receiver-table.rst

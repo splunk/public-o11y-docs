@@ -214,7 +214,7 @@ Collection and retention of geographical data
 
 The browser agent sends the IP addresses of all beacon connections to Splunk Observability Cloud, which uses them to map the geographical location of the user, such as country, city, and so on.
 
-.. note:: Observability Cloud calculates only geographical metadata from the IPs, and drops IP addresses within 6 hours.
+.. note:: Splunk Observability Cloud calculates only geographical metadata from the IPs, and drops IP addresses within 6 hours.
 
 Instrumentation-specific data
 ==============================================

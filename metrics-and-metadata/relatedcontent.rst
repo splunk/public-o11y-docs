@@ -99,7 +99,7 @@ The following table describes when and where in Observability Cloud you can see 
    * - Database instance
      - Related Database Query Performance, related APM services
 
-   * - Cloud compute instance (AWS EC2, GCP GCE, Azure VM)
+   * - Host or Cloud compute instance (AWS EC2, GCP GCE, Azure VM)
      - Related APM services, log lines for the specific instance
 
    * - Kubernetes cluster, node, pod, container
@@ -109,7 +109,7 @@ The following table describes when and where in Observability Cloud you can see 
      - Related APM service in that pod or container, log lines for that pod or container
 
    * - Specific log line
-     - Related APM service, trace, Kubernetes node/pod/container, compute instance (AWS EC2, GCP GCE, Azure VM)
+     - Related APM service, trace, Kubernetes node/pod/container, Host or compute instance (AWS EC2, GCP GCE, Azure VM)
 
    * - Specific trace ID
      - Related log line
