@@ -226,8 +226,7 @@ Instrument an application in Azure App Service
 
 To instrument an application or service in Azure App Service, follow these steps:
 
-#. Find and install the :strong:`SignalFx .NET Tracing` extension in your application. See :new-page:`Adding Extensions to Web Apps in Azure App Service
- <https://microsoft.github.io/AzureTipsAndTricks/blog/tip21.html>` in the Azure documentation for more information.
+#. Find and install the :strong:`SignalFx .NET Tracing` extension in your application. See :new-page:`Adding Extensions to Web Apps in Azure App Service <https://microsoft.github.io/AzureTipsAndTricks/blog/tip21.html>` in the Azure documentation for more information.
 
 #. Add the following application settings. See :new-page:`Configure Apps <https://learn.microsoft.com/en-us/azure/app-service/configure-common>` in the Azure documentation for more information.
 
