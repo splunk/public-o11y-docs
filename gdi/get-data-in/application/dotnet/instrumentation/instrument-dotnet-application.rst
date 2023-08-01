@@ -226,15 +226,10 @@ Instrument an application in Azure App Service
 
 To instrument an application or service in Azure App Service, follow these steps:
 
-#. Select your application in App Service.
+#. Find and install the :strong:`SignalFx .NET Tracing` extension in your application. See :new-page:`Adding Extensions to Web Apps in Azure App Service
+ <https://microsoft.github.io/AzureTipsAndTricks/blog/tip21.html>` in the Azure documentation for more information.
 
-#. Go to :guilabel:`Development Tools`, then :guilabel:`Extensions`.
-
-#. Find and install the :strong:`SignalFx .NET Tracing` extension.
-
-#. Go to :guilabel:`Settings`, then :guilabel:`Configuration`.
-
-#. Select :strong:`New application setting` to add the following settings:
+#. Add the following application settings. See :new-page:`Configure Apps <https://learn.microsoft.com/en-us/azure/app-service/configure-common>` in the Azure documentation for more information.
 
    .. list-table::
       :header-rows: 1
@@ -252,7 +247,7 @@ To instrument an application or service in Azure App Service, follow these steps
       * - ``SIGNALFX_ENV``
         - The name of your environment where you're instrumenting the application.
 
-#. Restart the application in App Service.
+#. Restart the application.
 
 .. note:: To reduce latency and benefit from OTel Collector features, set the endpoint URL to a Collector instance running in Azure VM over an Azure VNet.
 
