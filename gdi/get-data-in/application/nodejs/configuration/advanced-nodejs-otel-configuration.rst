@@ -102,7 +102,7 @@ The following settings control which instrumentations are activated:
      - Whether to activate all the embedded instrumentations. The default value is ``true``. When you set this setting to ``false``, use ``OTEL_INSTRUMENTATION_<NAME>_ENABLED=true`` to selectively turn on instrumentations.
    * - ``OTEL_INSTRUMENTATION_<NAME>_ENABLED``
      -
-     - When set to ``true``, this setting activates a specific instrumentation, as defined by replacing ``<NAME>`` with the name of the instrumentation. The name isn't case sensitive. For a complete list of available instrumentations, see :ref:`nodes-requirements`.
+     - When set to ``true``, this setting activates a specific instrumentation, as defined by replacing ``<NAME>`` with the name of the instrumentation. The name isn't case sensitive. For a complete list of available instrumentations, see :ref:`Requirements <nodes-requirements>`.
 
 For example, to turn off all default instrumentations and only turn on the ``bunyan`` instrumentation, set the following environment variables:
 

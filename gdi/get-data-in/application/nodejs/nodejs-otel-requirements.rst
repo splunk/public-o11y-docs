@@ -20,6 +20,7 @@ The Splunk Distribution of OpenTelemetry JS instruments the following libraries 
 
 .. list-table::
    :header-rows: 1
+   :width: 100%
 
    - 
 
@@ -27,147 +28,147 @@ The Splunk Distribution of OpenTelemetry JS instruments the following libraries 
       - Environment variable name
    - 
 
-      - `@opentelemetry/instrumentation-amqplib <https://www.npmjs.com/package/@opentelemetry/instrumentation-amqplib>`__
+      - :new-page:`@opentelemetry/instrumentation-amqplib <https://www.npmjs.com/package/@opentelemetry/instrumentation-amqplib>`
       - amqplib
    - 
 
-      - `@opentelemetry/instrumentation-aws-sdk <https://www.npmjs.com/package/@opentelemetry/instrumentation-aws-sdk>`__
+      - :new-page:`@opentelemetry/instrumentation-aws-sdk <https://www.npmjs.com/package/@opentelemetry/instrumentation-aws-sdk>`
       - aws_sdk
    - 
 
-      - `@opentelemetry/instrumentation-bunyan <https://www.npmjs.com/package/@opentelemetry/instrumentation-bunyan>`__
+      - :new-page:`@opentelemetry/instrumentation-bunyan <https://www.npmjs.com/package/@opentelemetry/instrumentation-bunyan>`
       - bunyan
    - 
 
-      - `@opentelemetry/instrumentation-cassandra-driver <https://www.npmjs.com/package/@opentelemetry/instrumentation-cassandra-driver>`__
+      - :new-page:`@opentelemetry/instrumentation-cassandra-driver <https://www.npmjs.com/package/@opentelemetry/instrumentation-cassandra-driver>`
       - cassandra_driver
    - 
 
-      - `@opentelemetry/instrumentation-connect <https://www.npmjs.com/package/@opentelemetry/instrumentation-connect>`__
+      - :new-page:`@opentelemetry/instrumentation-connect <https://www.npmjs.com/package/@opentelemetry/instrumentation-connect>`
       - connect
    - 
 
-      - `@opentelemetry/instrumentation-dataloader <https://www.npmjs.com/package/@opentelemetry/instrumentation-dataloader>`__
+      - :new-page:`@opentelemetry/instrumentation-dataloader <https://www.npmjs.com/package/@opentelemetry/instrumentation-dataloader>`
       - dataloader
    - 
 
-      - `@opentelemetry/instrumentation-dns <https://www.npmjs.com/package/@opentelemetry/instrumentation-dns>`__
+      - :new-page:`@opentelemetry/instrumentation-dns <https://www.npmjs.com/package/@opentelemetry/instrumentation-dns>`
       - dns
    - 
 
-      - `@opentelemetry/instrumentation-express <https://www.npmjs.com/package/@opentelemetry/instrumentation-express>`__
+      - :new-page:`@opentelemetry/instrumentation-express <https://www.npmjs.com/package/@opentelemetry/instrumentation-express>`
       - express
    - 
 
-      - `@opentelemetry/instrumentation-fastify <https://www.npmjs.com/package/@opentelemetry/instrumentation-fastify>`__
+      - :new-page:`@opentelemetry/instrumentation-fastify <https://www.npmjs.com/package/@opentelemetry/instrumentation-fastify>`
       - fastify
    - 
 
-      - `@opentelemetry/instrumentation-generic-pool <https://www.npmjs.com/package/@opentelemetry/instrumentation-generic-pool>`__
+      - :new-page:`@opentelemetry/instrumentation-generic-pool <https://www.npmjs.com/package/@opentelemetry/instrumentation-generic-pool>`
       - generic_pool
    - 
 
-      - `@opentelemetry/instrumentation-graphql <https://www.npmjs.com/package/@opentelemetry/instrumentation-graphql>`__
+      - :new-page:`@opentelemetry/instrumentation-graphql <https://www.npmjs.com/package/@opentelemetry/instrumentation-graphql>`
       - graphql
    - 
 
-      - `@opentelemetry/instrumentation-grpc <https://www.npmjs.com/package/@opentelemetry/instrumentation-grpc>`__
+      - :new-page:`@opentelemetry/instrumentation-grpc <https://www.npmjs.com/package/@opentelemetry/instrumentation-grpc>`
       - grpc
    - 
 
-      - `@opentelemetry/instrumentation-hapi <https://www.npmjs.com/package/@opentelemetry/instrumentation-hapi>`__
+      - :new-page:`@opentelemetry/instrumentation-hapi <https://www.npmjs.com/package/@opentelemetry/instrumentation-hapi>`
       - hapi
    - 
 
-      - `@opentelemetry/instrumentation-http <https://www.npmjs.com/package/@opentelemetry/instrumentation-http>`__
+      - :new-page:`@opentelemetry/instrumentation-http <https://www.npmjs.com/package/@opentelemetry/instrumentation-http>`
       - http
    - 
 
-      - `@opentelemetry/instrumentation-ioredis <https://www.npmjs.com/package/@opentelemetry/instrumentation-ioredis>`__
+      - :new-page:`@opentelemetry/instrumentation-ioredis <https://www.npmjs.com/package/@opentelemetry/instrumentation-ioredis>`
       - ioredis
    - 
 
-      - `@opentelemetry/instrumentation-knex <https://www.npmjs.com/package/@opentelemetry/instrumentation-knex>`__
+      - :new-page:`@opentelemetry/instrumentation-knex <https://www.npmjs.com/package/@opentelemetry/instrumentation-knex>`
       - knex
    - 
 
-      - `@opentelemetry/instrumentation-koa <https://www.npmjs.com/package/@opentelemetry/instrumentation-koa>`__
+      - :new-page:`@opentelemetry/instrumentation-koa <https://www.npmjs.com/package/@opentelemetry/instrumentation-koa>`
       - koa
    - 
 
-      - `@opentelemetry/instrumentation-memcached <https://www.npmjs.com/package/@opentelemetry/instrumentation-memcached>`__
+      - :new-page:`@opentelemetry/instrumentation-memcached <https://www.npmjs.com/package/@opentelemetry/instrumentation-memcached>`
       - memcached
    - 
 
-      - `@opentelemetry/instrumentation-mongodb <https://www.npmjs.com/package/@opentelemetry/instrumentation-mongodb>`__
+      - :new-page:`@opentelemetry/instrumentation-mongodb <https://www.npmjs.com/package/@opentelemetry/instrumentation-mongodb>`
       - mongodb
    - 
 
-      - `@opentelemetry/instrumentation-mongoose <https://www.npmjs.com/package/@opentelemetry/instrumentation-mongoose>`__
+      - :new-page:`@opentelemetry/instrumentation-mongoose <https://www.npmjs.com/package/@opentelemetry/instrumentation-mongoose>`
       - mongoose
    - 
 
-      - `@opentelemetry/instrumentation-mysql <https://www.npmjs.com/package/@opentelemetry/instrumentation-mysql>`__
+      - :new-page:`@opentelemetry/instrumentation-mysql <https://www.npmjs.com/package/@opentelemetry/instrumentation-mysql>`
       - mysql
    - 
 
-      - `@opentelemetry/instrumentation-mysql2 <https://www.npmjs.com/package/@opentelemetry/instrumentation-mysql2>`__
+      - :new-page:`@opentelemetry/instrumentation-mysql2 <https://www.npmjs.com/package/@opentelemetry/instrumentation-mysql2>`
       - mysql2
    - 
 
-      - `@opentelemetry/instrumentation-nestjs-core <https://www.npmjs.com/package/@opentelemetry/instrumentation-nestjs-core>`__
+      - :new-page:`@opentelemetry/instrumentation-nestjs-core <https://www.npmjs.com/package/@opentelemetry/instrumentation-nestjs-core>`
       - nestjs_core
    - 
 
-      - `@opentelemetry/instrumentation-net <https://www.npmjs.com/package/@opentelemetry/instrumentation-net>`__
+      - :new-page:`@opentelemetry/instrumentation-net <https://www.npmjs.com/package/@opentelemetry/instrumentation-net>`
       - net
    - 
 
-      - `@opentelemetry/instrumentation-pg <https://www.npmjs.com/package/@opentelemetry/instrumentation-pg>`__
+      - :new-page:`@opentelemetry/instrumentation-pg <https://www.npmjs.com/package/@opentelemetry/instrumentation-pg>`
       - pg
    - 
 
-      - `@opentelemetry/instrumentation-pino <https://www.npmjs.com/package/@opentelemetry/instrumentation-pino>`__
+      - :new-page:`@opentelemetry/instrumentation-pino <https://www.npmjs.com/package/@opentelemetry/instrumentation-pino>`
       - pino
    - 
 
-      - `@opentelemetry/instrumentation-redis <https://www.npmjs.com/package/@opentelemetry/instrumentation-redis>`__
+      - :new-page:`@opentelemetry/instrumentation-redis <https://www.npmjs.com/package/@opentelemetry/instrumentation-redis>`
       - redis
    - 
 
-      - `@opentelemetry/instrumentation-redis-4 <https://www.npmjs.com/package/@opentelemetry/instrumentation-redis-4>`__
+      - :new-page:`@opentelemetry/instrumentation-redis-4 <https://www.npmjs.com/package/@opentelemetry/instrumentation-redis-4>`
       - redis_4
    - 
 
-      - `@opentelemetry/instrumentation-restify <https://www.npmjs.com/package/@opentelemetry/instrumentation-restify>`__
+      - :new-page:`@opentelemetry/instrumentation-restify <https://www.npmjs.com/package/@opentelemetry/instrumentation-restify>`
       - restify
    - 
 
-      - `@opentelemetry/instrumentation-router <https://www.npmjs.com/package/@opentelemetry/instrumentation-router>`__
+      - :new-page:`@opentelemetry/instrumentation-router <https://www.npmjs.com/package/@opentelemetry/instrumentation-router>`
       - router
    - 
 
-      - `@opentelemetry/instrumentation-tedious <https://www.npmjs.com/package/@opentelemetry/instrumentation-tedious>`__
+      - :new-page:`@opentelemetry/instrumentation-tedious <https://www.npmjs.com/package/@opentelemetry/instrumentation-tedious>`
       - tedious
    - 
 
-      - `@opentelemetry/instrumentation-winston <https://www.npmjs.com/package/@opentelemetry/instrumentation-winston>`__
+      - :new-page:`@opentelemetry/instrumentation-winston <https://www.npmjs.com/package/@opentelemetry/instrumentation-winston>`
       - winston
    - 
 
-      - `elasticsearch <https://github.com/signalfx/splunk-otel-js/tree/main/src/instrumentations/external/elasticsearch>`__
+      - :new-page:`elasticsearch <https://github.com/signalfx/splunk-otel-js/tree/main/src/instrumentations/external/elasticsearch>`
       - elasticsearch
    - 
 
-      - `kafkajs <https://github.com/signalfx/splunk-otel-js/tree/main/src/instrumentations/external/kafkajs>`__
+      - :new-page:`kafkajs <https://github.com/signalfx/splunk-otel-js/tree/main/src/instrumentations/external/kafkajs>`
       - kafkajs
    - 
 
-      - `sequelize <https://github.com/signalfx/splunk-otel-js/tree/main/src/instrumentations/external/sequelize>`__
+      - :new-page:`sequelize <https://github.com/signalfx/splunk-otel-js/tree/main/src/instrumentations/external/sequelize>`
       - sequelize
    - 
 
-      - `typeorm <https://github.com/signalfx/splunk-otel-js/tree/main/src/instrumentations/external/typeorm>`__
+      - :new-page:`typeorm <https://github.com/signalfx/splunk-otel-js/tree/main/src/instrumentations/external/typeorm>`
       - typeorm
 
 
