@@ -36,7 +36,7 @@ The following table outlines which test might work for the scenario you want to 
         * multiple step journeys like login and checkout. 
         * A / B testing. How does adding or removing a specific third party affect performance.
         * Set performance benchmarks and understand long term trends.
-        * Compare performance with industry standards like Google search rankings and web vitals. 
+        * Compare performance with industry standards like Google search and web vitals. 
         * Use a HAR file to run tests in local developer environments or sites behind a firewall.
         * Upload a HAR file, which contains full response bodies, so that Splunk Synthetic Monitoring can audit the content.
 

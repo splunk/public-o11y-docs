@@ -49,7 +49,7 @@ When you set up a test, you can choose the viewport size from a list of common d
     <h3>Network connection</h3>
   </embed>
 
-You can run Browser, Uptime, or API tests to simulate network connections of various latencies, including Mobile LTE, Mobile 3G, DSL, and cable internet. Testing your site from a variety of connection types lets you monitor the experience of users in a variety of settings. 
+You can run Browser, Uptime, or API tests to simulate network connections of various latencies, including Mobile LTE, Mobile 3G, DSL, Mobile 5G, and cable internet. Testing your site from a variety of connection types lets you monitor the experience of users in a variety of settings. 
 
 .. raw:: html
 
