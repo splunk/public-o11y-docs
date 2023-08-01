@@ -1,0 +1,645 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023 Splunk, Inc
+# This file is distributed under the same license as the Splunk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Splunk \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-01 01:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja_JA\n"
+"Language-Team: ja_JA <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../index.rst:224 ../../index.rst:230
+msgid "Get started"
+msgstr ""
+
+#: ../../index.rst:235
+msgid "Scenarios"
+msgstr ""
+
+#: ../../index.rst:240
+msgid "About Mobile TOGGLE"
+msgstr ""
+
+#: ../../index.rst:245
+msgid "Contribute to our documentation"
+msgstr ""
+
+#: ../../index.rst:250
+msgid "Support"
+msgstr ""
+
+#: ../../index.rst:255
+msgid "Splunk Observability Cloud and the Splunk platform"
+msgstr ""
+
+#: ../../index.rst:255
+msgid "Splunk platform users"
+msgstr ""
+
+#: ../../index.rst:261
+msgid "Unified Identity"
+msgstr ""
+
+#: ../../index.rst:266
+msgid "Measure and alert on your SLIs"
+msgstr ""
+
+#: ../../index.rst:271
+msgid "Respond to incidents"
+msgstr ""
+
+#: ../../index.rst:276
+msgid "Collaborate on observability"
+msgstr ""
+
+#: ../../index.rst:281
+msgid "Administer Splunk Observability Cloud"
+msgstr ""
+
+#: ../../index.rst:287
+msgid "Authentication and Security TOGGLE"
+msgstr ""
+
+#: ../../index.rst:292
+msgid "User and team management TOGGLE"
+msgstr ""
+
+#: ../../index.rst:297
+msgid "Send alert notifications to third-party services TOGGLE"
+msgstr ""
+
+#: ../../index.rst:303
+msgid "View organization metrics"
+msgstr ""
+
+#: ../../index.rst:308
+msgid "Monitor subscription usage and billing TOGGLE"
+msgstr ""
+
+#: ../../index.rst:313
+msgid "Org reference info TOGGLE"
+msgstr ""
+
+#: ../../index.rst:319
+msgid "Get your data in"
+msgstr ""
+
+#: ../../index.rst:330
+msgid "Connect to your cloud service provider TOGGLE"
+msgstr ""
+
+#: ../../index.rst:335
+msgid "Collect infrastructure metrics and logs TOGGLE"
+msgstr ""
+
+#: ../../index.rst:340
+msgid "Instrument back-end services TOGGLE"
+msgstr ""
+
+#: ../../index.rst:346
+msgid "Instrument serverless functions TOGGLE"
+msgstr ""
+
+#: ../../index.rst:351
+msgid "Instrument front-end applications TOGGLE"
+msgstr ""
+
+#: ../../index.rst:356
+msgid "Available host and application monitors TOGGLE"
+msgstr ""
+
+#: ../../index.rst:361
+msgid "Splunk Distribution of OpenTelemetry Collector TOGGLE"
+msgstr ""
+
+#: ../../index.rst:371
+msgid "SignalFx Smart Agent (Deprecated) TOGGLE"
+msgstr ""
+
+#: ../../index.rst:376
+msgid "Understand and analyze your data"
+msgstr ""
+
+#: ../../index.rst:382
+msgid "Metrics, metadata and events TOGGLE"
+msgstr ""
+
+#: ../../index.rst:387
+msgid "Data tools TOGGLE"
+msgstr ""
+
+#: ../../index.rst:392
+msgid "SignalFlow and analytics TOGGLE"
+msgstr ""
+
+#: ../../index.rst:397
+msgid "Dashboards TOGGLE"
+msgstr ""
+
+#: ../../index.rst:397
+msgid "Dashboards and charts"
+msgstr ""
+
+#: ../../index.rst:403
+msgid "Charts TOGGLE"
+msgstr ""
+
+#: ../../index.rst:408
+msgid "Navigate with data links"
+msgstr ""
+
+#: ../../index.rst:413
+msgid "Override default time range"
+msgstr ""
+
+#: ../../index.rst:418
+msgid "Read and write permissions"
+msgstr ""
+
+#: ../../index.rst:423
+msgid "Introduction to alerts and detectors"
+msgstr ""
+
+#: ../../index.rst:423
+msgid "Alerts and detectors"
+msgstr ""
+
+#: ../../index.rst:429
+msgid "Alerts and detectors scenario library TOGGLE"
+msgstr ""
+
+#: ../../index.rst:434
+msgid "Use and customize AutoDetect alerts and detectors TOGGLE"
+msgstr ""
+
+#: ../../index.rst:439
+msgid "Create detectors to trigger alerts"
+msgstr ""
+
+#: ../../index.rst:449
+msgid "Link detectors to charts"
+msgstr ""
+
+#: ../../index.rst:454
+msgid "Manage notification subscribers"
+msgstr ""
+
+#: ../../index.rst:459
+msgid "Preview detector alerts"
+msgstr ""
+
+#: ../../index.rst:464
+msgid "View alerts"
+msgstr ""
+
+#: ../../index.rst:469
+msgid "View detectors"
+msgstr ""
+
+#: ../../index.rst:474
+msgid "Mute alert notifications"
+msgstr ""
+
+#: ../../index.rst:479
+msgid "Auto-clear alerts"
+msgstr ""
+
+#: ../../index.rst:484
+msgid "Troubleshoot detectors"
+msgstr ""
+
+#: ../../index.rst:489
+msgid "Detector options"
+msgstr ""
+
+#: ../../index.rst:494
+msgid "Built-in alert conditions TOGGLE"
+msgstr ""
+
+#: ../../index.rst:502
+msgid "Application Performance Monitoring"
+msgstr ""
+
+#: ../../index.rst:513
+msgid ""
+"Scenarios for troubleshooting errors and monitoring application "
+"performance using Splunk APM TOGGLE"
+msgstr ""
+
+#: ../../index.rst:518
+msgid "Set up Splunk APM TOGGLE"
+msgstr ""
+
+#: ../../index.rst:523
+msgid "Manage services, spans, and traces in Splunk APM TOGGLE"
+msgstr ""
+
+#: ../../index.rst:528
+msgid "Analyze services with span tags and MetricSets TOGGLE"
+msgstr ""
+
+#: ../../index.rst:533
+msgid "Correlate traces to track Business Workflows TOGGLE"
+msgstr ""
+
+#: ../../index.rst:538
+msgid "Visualize and alert on your application in Splunk APM TOGGLE"
+msgstr ""
+
+#: ../../index.rst:543
+msgid "AlwaysOn Profiling TOGGLE"
+msgstr ""
+
+#: ../../index.rst:548
+msgid "Monitor Database Query Performance TOGGLE"
+msgstr ""
+
+#: ../../index.rst:553
+msgid "Use Data Links to connect APM properties to relevant resources TOGGLE"
+msgstr ""
+
+#: ../../index.rst:558
+msgid "Introduction"
+msgstr ""
+
+#: ../../index.rst:558
+msgid "Infrastructure"
+msgstr ""
+
+#: ../../index.rst:564
+msgid "Key concepts"
+msgstr ""
+
+#: ../../index.rst:569
+msgid "Quick start tutorial"
+msgstr ""
+
+#: ../../index.rst:580
+msgid "Monitor services and hosts"
+msgstr ""
+
+#: ../../index.rst:585
+msgid "Use navigators"
+msgstr ""
+
+#: ../../index.rst:590
+msgid "Metrics pipeline management TOGGLE"
+msgstr ""
+
+#: ../../index.rst:595
+msgid "Network Explorer TOGGLE"
+msgstr ""
+
+#: ../../index.rst:600
+msgid "Virtual metrics"
+msgstr ""
+
+#: ../../index.rst:605
+msgid "Resolution and data retention"
+msgstr ""
+
+#: ../../index.rst:610
+msgid "Resolution and data retention (DPM)"
+msgstr ""
+
+#: ../../index.rst:615
+msgid "Splunk Log Observer Connect TOGGLE"
+msgstr ""
+
+#: ../../index.rst:615
+msgid "Log Observer"
+msgstr ""
+
+#: ../../index.rst:621
+msgid "Splunk Log Observer TOGGLE"
+msgstr ""
+
+#: ../../index.rst:626
+msgid "Real User Monitoring"
+msgstr ""
+
+#: ../../index.rst:637
+msgid "Splunk RUM scenario library TOGGLE"
+msgstr ""
+
+#: ../../index.rst:642
+msgid "Set up Splunk RUM"
+msgstr ""
+
+#: ../../index.rst:683
+msgid "Splunk RUM dashboards TOGGLE"
+msgstr ""
+
+#: ../../index.rst:703
+msgid "Synthetics"
+msgstr ""
+
+#: ../../index.rst:714
+msgid "Synthetics scenario library TOGGLE"
+msgstr ""
+
+#: ../../index.rst:724
+msgid "Use a browser test to test a webpage TOGGLE"
+msgstr ""
+
+#: ../../index.rst:729
+msgid "Use an Uptime Test to test port or HTTP uptime TOGGLE"
+msgstr ""
+
+#: ../../index.rst:734
+msgid "Use an API Test to test an endpoint TOGGLE"
+msgstr ""
+
+#: ../../index.rst:739
+msgid "Configure your tests TOGGLE"
+msgstr ""
+
+#: ../../index.rst:744
+msgid "Introduction to Splunk Incident Intelligence"
+msgstr ""
+
+#: ../../index.rst:744
+msgid "Incident Intelligence"
+msgstr ""
+
+#: ../../index.rst:760
+msgid "Set up Incident Intelligence"
+msgstr ""
+
+#: ../../index.rst:765
+msgid "Ingest alerts in Incident Intelligence TOGGLE"
+msgstr ""
+
+#: ../../index.rst:775
+msgid "Create and manage on-call schedules TOGGLE"
+msgstr ""
+
+#: ../../index.rst:780
+msgid "Respond to and manage incidents TOGGLE"
+msgstr ""
+
+#: ../../index.rst:785
+msgid "Manage notifications from Incident Intelligence TOGGLE"
+msgstr ""
+
+#: ../../index.rst:791
+msgid "Third-party software credits"
+msgstr ""
+
+#: ../../index.rst:791
+msgid "Reference and Legal"
+msgstr ""
+
+#: ../../index.rst:798
+msgid "Glossary"
+msgstr ""
+
+#: ../../<rst_prolog>:18
+msgid "Take shift"
+msgstr ""
+
+#: ../../index.rst:-1 ../../index.rst:5
+msgid "Welcome"
+msgstr ""
+
+#: ../../index.rst:15
+msgid ""
+":icon-cloud-upload:`.` :strong:`Get your data in` The first step toward "
+"observability is getting relevant data into Splunk Observability Cloud. "
+"View :ref:`all supported integrations <supported-data-sources>`."
+msgstr ""
+
+#: ../../index.rst:20
+msgid ""
+":strong:`Get data in` Learn how to get data in from each layer in your "
+"stack :ref:`get-started-get-data-in`"
+msgstr ""
+
+#: ../../index.rst:25
+msgid ""
+":strong:`OpenTelemetry` Install the Splunk Distribution of the "
+"OpenTelemetry Collector :ref:`otel-intro`"
+msgstr ""
+
+#: ../../index.rst:30
+msgid ""
+":strong:`Cloud providers` Integrate to collect service metrics and logs "
+":ref:`get-started-connect`"
+msgstr ""
+
+#: ../../index.rst:35
+msgid ""
+":strong:`Back-end apps and services` Instrument to collect traces and "
+"logs :ref:`get-started-application`"
+msgstr ""
+
+#: ../../index.rst:40
+msgid ""
+":strong:`Front-end app user experiences` Instrument to collect user "
+"sessions :ref:`rum-gdi`"
+msgstr ""
+
+#: ../../index.rst:45
+msgid ""
+":strong:`Serverless functions` Instrument to collect traces and logs :ref"
+":`instrument-serverless-functions`"
+msgstr ""
+
+#: ../../index.rst:51
+msgid ""
+":icon-display:`.` :strong:`Explore and monitor your environment` After "
+"you have data coming into Splunk Observability Cloud, you can do some "
+"exploring."
+msgstr ""
+
+#: ../../index.rst:56
+msgid ""
+":strong:`Infrastructure Monitoring` Monitor server and cluster metrics "
+":ref:`wcidw-imm`"
+msgstr ""
+
+#: ../../index.rst:61
+msgid ""
+":strong:`Application Performance Monitoring` Monitor back-end app and "
+"service traces :ref:`wcidw-apm`"
+msgstr ""
+
+#: ../../index.rst:66
+msgid ""
+":strong:`Real User Monitoring` Monitor data about front-end app user "
+"experiences :ref:`wcidw-rum`"
+msgstr ""
+
+#: ../../index.rst:71
+msgid ""
+":strong:`Log Observer Connect` Query logs to identify root causes :ref"
+":`logs-intro-logconnect`"
+msgstr ""
+
+#: ../../index.rst:76
+msgid ""
+":strong:`Synthetic Monitoring` Proactively monitor the performance of web"
+" resources :ref:`welcome-synthmon`"
+msgstr ""
+
+#: ../../index.rst:81
+msgid ""
+":strong:`All products` Learn more about all Splunk Observability Cloud "
+"products :ref:`welcome`"
+msgstr ""
+
+#: ../../index.rst:87
+msgid ""
+":icon-wrench:`.` :strong:`Set up alerts and customize your account` "
+"Prepare for issues that might arise by setting up alerts, custom "
+"dashboards, and other advanced features."
+msgstr ""
+
+#: ../../index.rst:92
+msgid ""
+":strong:`Detectors and alerts` Receive alerts about conditions you care "
+"about :ref:`create-detectors`"
+msgstr ""
+
+#: ../../index.rst:97
+msgid ""
+":strong:`Dashboards and charts` Get actionable insights about the systems"
+" you monitor :ref:`dashboards`"
+msgstr ""
+
+#: ../../index.rst:102
+msgid ""
+":strong:`Span tags` Use span tags to add useful metadata to traces :ref"
+":`apm-add-context-trace-span`"
+msgstr ""
+
+#: ../../index.rst:107
+msgid ""
+":strong:`Logs pipeline` Add value to your raw logs by customizing your "
+"pipeline :ref:`logs-pipeline`"
+msgstr ""
+
+#: ../../index.rst:112
+msgid ""
+":strong:`Related Content` Enable users to seamlessly move across product "
+"views :ref:`get-started-relatedcontent`"
+msgstr ""
+
+#: ../../index.rst:117
+msgid ""
+":strong:`Global Data Links` Provide convenient access to relevant "
+"resources :ref:`link-metadata-to-content`"
+msgstr ""
+
+#: ../../index.rst:123
+msgid ""
+":icon-cogs:`.` :strong:`Administer your account` As a Splunk "
+"Observability Cloud administrator, use these tools to give your users a "
+"secure and relevant user experience."
+msgstr ""
+
+#: ../../index.rst:128
+msgid ""
+":strong:`Get started` Learn how to set up and administer your "
+"organization :ref:`admin-admin`"
+msgstr ""
+
+#: ../../index.rst:133
+msgid ""
+":strong:`Access tokens` Authenticate and track API use :ref:`admin-org-"
+"tokens`"
+msgstr ""
+
+#: ../../index.rst:138
+msgid ""
+":strong:`Users` Invite users and set access levels :ref:`admin-manage-"
+"users`"
+msgstr ""
+
+#: ../../index.rst:143
+msgid ""
+":strong:`Teams` Create teams to help coordinate teamwork :ref:`admin-"
+"manage-teams`"
+msgstr ""
+
+#: ../../index.rst:148
+msgid ""
+":strong:`Single sign-on` Set up an integration to an SSO provider :ref"
+":`sso-label`"
+msgstr ""
+
+#: ../../index.rst:153
+msgid ""
+":strong:`Subscription usage` Monitor subscription usage for "
+"Infrastructure Monitoring :ref:`subscription-overview`"
+msgstr ""
+
+#: ../../index.rst:159
+msgid ""
+":icon-cloud-upload:`.` :strong:`Popular integrations` Access "
+"documentation for some of the most popular integrations used to get data "
+"into Splunk Observability Cloud."
+msgstr ""
+
+#: ../../index.rst:164
+msgid ":strong:`Linux` Collect metrics and logs :ref:`get-started-linux`"
+msgstr ""
+
+#: ../../index.rst:169
+msgid ":strong:`Kubernetes` Collect metrics and logs :ref:`get-started-k8s`"
+msgstr ""
+
+#: ../../index.rst:174
+msgid ":strong:`Windows` Collect metrics and logs :ref:`get-started-windows`"
+msgstr ""
+
+#: ../../index.rst:179
+msgid ""
+":strong:`Amazon Web Services` Collect metrics and logs :ref:`get-started-"
+"aws`"
+msgstr ""
+
+#: ../../index.rst:184
+msgid ":strong:`Azure` Collect metrics :ref:`get-started-azure`"
+msgstr ""
+
+#: ../../index.rst:189
+msgid ":strong:`Browser` Collect user sessions :ref:`browser-rum-gdi`"
+msgstr ""
+
+#: ../../index.rst:194
+msgid ":strong:`.NET` Collect traces :ref:`get-started-dotnet`"
+msgstr ""
+
+#: ../../index.rst:199
+msgid ":strong:`Java` Collect traces :ref:`get-started-java`"
+msgstr ""
+
+#: ../../index.rst:204
+msgid ":strong:`Ruby` Collect traces :ref:`get-started-ruby`"
+msgstr ""
+
+#: ../../index.rst:209
+msgid ":strong:`Node.js` Collect traces :ref:`get-started-nodejs`"
+msgstr ""
+
+#: ../../index.rst:214
+msgid ":strong:`PHP` Collect traces :ref:`get-started-php`"
+msgstr ""
+
+#: ../../index.rst:219
+msgid ""
+":strong:`All supported integrations` View a list of all supported "
+"integrations :ref:`supported-data-sources`"
+msgstr ""
+

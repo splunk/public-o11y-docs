@@ -1,0 +1,1185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023 Splunk, Inc
+# This file is distributed under the same license as the Splunk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Splunk \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-01 01:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja_JA\n"
+"Language-Team: ja_JA <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:-1
+msgid ""
+"This page provides an overview of how Observability Cloud helps team "
+"members collaborate with each other and other teams by sharing "
+"dashboards, queries, business workflows, and through alerting."
+msgstr ""
+
+#: ../../<rst_prolog>:18
+msgid "Take shift"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:5
+msgid "Collaborate on observability within and across teams"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:11
+msgid ""
+"You can scale your system's observability through collaboration. Site "
+"Reliability Engineers (SREs), developers, operations, and other teams can"
+" efficiently collaborate in Splunk Observability Cloud by sharing "
+"dashboards, queries, and detectors, which you can configure to send "
+"notifications to the appropriate teams or users. By using Observability "
+"Cloud's tools for collaborating, your teams can exponentially expand "
+"their reach and scale the reliability of your systems quickly."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:14
+msgid "Observability Cloud dashboards"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:15
+msgid ""
+"The most common way of collaborating within and among teams in "
+"Observability Cloud is by sharing dashboards. See :ref:`dashboards "
+"<dashboards>`. Well-designed dashboards can provide useful and actionable"
+" insight into your system at a glance."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:17
+msgid ""
+"Allow a group of people in your organization to access a set of "
+"dashboards by creating a dashboard group. See :ref:`dashboard-group`. You"
+" can see, grant, or revoke permissions to a dashboard group. To learn "
+"how, see :ref:`dashboard-manage-permissions`. You can also share "
+"individual dashboards. See :ref:`dashboard-share-clone-mirror` for more "
+"information."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:20
+msgid "Observability Cloud teams and alerting"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:21
+msgid ""
+"A primary means of organizing collaboration on observability and "
+"reliability across teams is by setting up Observability Cloud teams. "
+"Teams serve as a secure way to organize users by functional area. Teams "
+"also let you control access and permissions to all objects, dashboards, "
+"and queries in Observability Cloud. Observability Cloud offers "
+"enterprise-grade management with token and access control. See:ref"
+":`admin-tokens`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:23
+msgid ""
+"After you organize users into teams by functional area, you can connect "
+"users in a particular area to detectors and dashboard groups that they "
+"are most interested in. See :ref:`admin-manage-teams` to learn more about"
+" how you can use Observability Cloud teams to facilitate collaboration "
+"within and across functional teams. Organize your Observability Cloud "
+"teams structure to reduce toil by configuring detectors to notify only "
+"the most relevant teams. For an example of increasing security while "
+"reducing toil, see :ref:`scenario-security`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:26
+#: ../../splunkplatform/practice-reliability/incident-response.rst:49
+#: ../../splunkplatform/practice-reliability/slis.rst:27
+msgid "Splunk APM"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:27
+msgid ""
+"You can facilitate collaboration across product, strategy, and sales "
+"teams with Splunk APM. When you configure Business Workflow rules, APM "
+"tracks business key performance indicators (KPIs) as well as service "
+"level indicators (SLIs). See :ref:`apm-create-workflow-rule` for more "
+"information. See :ref:`monitor-business-workflows` for an example of how "
+"to use APM to track business KPIs and collaborate across departments."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:29
+msgid ""
+"To learn how to set up APM to correlate with business KPIs, see :ref"
+":`apm-workflows`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:32
+#: ../../splunkplatform/practice-reliability/incident-response.rst:79
+msgid "Splunk Log Observer Connect"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:33
+msgid ""
+"You can save and share Log Observer Connect queries across observability "
+"teams when you create a valuable query that might be useful for other "
+"team members or other teams. To learn more, see :ref:`logs-save-share`. "
+"See :ref:`logs-queries` to learn the different ways you can query logs "
+"without a query language in Log Observer Connect."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:36
+msgid "Splunk Real User Monitoring (RUM)"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:37
+msgid ""
+"When you set up detectors to monitor RUM browser data, iOS RUM data, or "
+"manually instrumented Android applications, you can alert directly on RUM"
+" data. See :ref:`rum-alerts` for more information. Use Observability "
+"Cloud teams to send notifications to relevant teams. See :ref:`admin-"
+"team-notifications` to learn how to send and edit notifications."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/collaboration.rst:39
+msgid ""
+"To learn more about the kind of RUM data you can collect and alert on, "
+"see :ref:`get-started-rum`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:-1
+msgid ""
+"This page provides an overview of the many ways you can drill down to "
+"root cause problems and decrease MTTR using the components of "
+"Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:5
+msgid "Respond to incidents"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:10
+msgid ""
+"You can drill down to find the root cause of incidents using several "
+"tools available in Splunk Observability Cloud. In the following sections,"
+" see how each component of Observability Cloud is an effective incident "
+"response tool."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:13
+msgid "Alerts and detectors"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:14
+msgid ""
+"Use Observability Cloud alerts, detectors, events, and notifications to "
+"inform you when certain criteria are met. Alerts and detectors are often "
+"your first awareness that an incident has occurred. Observability Cloud "
+"has AutoDetect, or built-in alerts and detectors for supported "
+"integrations. See :ref:`AutoDetect <autodetect>` for more information."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:16
+msgid ""
+"Additionally, your team can create detectors to alert on performance and "
+"thresholds that matter most to you. For example, you can use alerts and "
+"detectors to notify your teams when your systems are nearing a limit you "
+"set in an SLO, such as approaching a server latency that is too high. For"
+" information on alerts, detectors, thresholds, and how they interact, see"
+" :ref:`get-started-detectoralert`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:18
+msgid ""
+"When you proactively use alerts and detectors to stay informed on changes"
+" in your systems, you can decrease the number of incidents your users "
+"experience and reduce toil for your teams in the future by updating your "
+"systems when events surpass a static or dynamic threshold that you set."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:20
+msgid ""
+"You can see all alerts, including AutoDetect alerts and custom alerts, on"
+" the Alerts homepage in Observability Cloud. To go to your organization's"
+" Alerts homepage, log in to Splunk Observability Cloud, then select "
+":strong:`Alerts` in the left navigation menu. The following screenshot "
+"shows your Alerts homepage."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:22
+#: ../../splunkplatform/practice-reliability/incident-response.rst:58
+msgid "This screenshot shows a sample Alerts homepage in Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:26
+msgid ""
+"AutoDetect enables Observability Cloud's automatic detectors for "
+"supported integrations. You can subscribe to notifications for all "
+"integrations after you connect your systems and send in data for "
+"supported integrations. See :ref:`autodetect` to learn more. See also "
+":ref:`autodetect-list`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:28
+msgid ""
+"Select any alert to see details and links to Observability Cloud "
+"components that you can use to troubleshoot the error. The following "
+"critical alert shows a high API error rate. The :strong:`Explore Further`"
+" section on the right panel shows a link that takes you to APM where you "
+"can troubleshoot the issue."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:30
+msgid ""
+"This screenshot shows the detail view of an individual critical alert in "
+"Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:34
+msgid ""
+"See :ref:`scenarios-alerts-detectors` for examples of how you can use "
+"alerts to notify teams about increased server latency, high CPU usage, "
+"approaching system limits, and other conditions that negatively impact "
+"user experience."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:37
+msgid "Dashboards"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:38
+msgid ""
+"Observability Cloud components all contribute to the data analytics in "
+"Observability Cloud dashboards. You can see charts and dashboards in APM,"
+" Infrastructure Monitoring, and RUM. You can also go to the homepage for "
+"all Observability Cloud dashboards to see dashboards and charts created "
+"in each component, including log views or logs data displayed in a chart."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:40
+msgid ""
+"Observability Cloud has built-in dashboards, custom dashboards, user "
+"dashboards, and dashboard groups. See :ref:`dashboard-basics` for more "
+"information. See also :ref:`built-in dashboards <built-in-dashboards>` to"
+" learn more about built-in dashboards. Dashboards contain important "
+"information that can provide useful and actionable insight into your "
+"system at a glance. You can create custom dashboards and charts that help"
+" you monitor your SLOs, or simple dashboards that contain only a few "
+"charts that drill down into the data that you want to see. The following "
+"example shows a dashboard for an organization with dozens of built-in "
+"dashboards reporting on their many supported integrations. When users "
+"select a dashboard, they see all charts saved to this dashboard and can "
+"quickly drill down on a chart showing interesting trends or unexpected "
+"variation."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:42
+msgid "This screenshot shows a sample dashboard homepage in Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:46
+msgid ""
+"To see your dashboards, log in to Splunk Observability Cloud and select "
+":strong:`Dashboards` in the left navigation menu."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:50
+msgid ""
+"APM collects traces and spans to monitor your distributed applications. "
+"You can investigate the root cause of an error with the service map or "
+"find the root cause of an error using Tag Spotlight. To learn how, see "
+":ref:`service-map` and :ref:`troubleshoot-tag-spotlight`. For more "
+"examples of APM troubleshooting scenarios, see :ref:`apm-scenarios-"
+"intro`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:52
+msgid ""
+"For a walkthrough of the APM UI and guidance on drilling down to the root"
+" cause of an incident, see the :new-page:`APM troubleshooting scenario "
+"<https://bossofopsando11y.com/apm/troubleshooting.html>`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:55
+msgid "Database Query Performance"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:56
+msgid ""
+"Slow database queries can be another culprit of wider service "
+"availability issues. Respond to incidents faster by assessing whether "
+"database query time is contributing to availability or latency incidents."
+" See :ref:`db-query-performance` to see how your databases are "
+"performing. The following image shows one organization's Database Query "
+"Performance dashboard."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:62
+msgid ""
+"You can check the performance of your database queries in Splunk APM. Log"
+" in to Observability Cloud, select :strong:`APM` in the left navigation "
+"menu, then select :strong:`DB Query Performance` on the right panel."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:65
+#: ../../splunkplatform/practice-reliability/slis.rst:53
+msgid "Splunk Infrastructure Monitoring"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:66
+msgid ""
+"Infrastructure Monitoring is an industry-leading custom metrics platform "
+"for real-time monitoring across infrastructure, application, and business"
+" metrics. See :ref:`use-navigators-imm` to explore different layers of "
+"your deployments, including your public cloud services, containers, and "
+"hosts."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:68
+msgid ""
+"The Infrastructure Monitoring heat map shows the CPU, memory, disk, and "
+"network metrics of each host, container, and public cloud service in a "
+"real-time streaming fashion. You can sort by CPU utilization or select "
+":strong:`Find Outliers` on the heat map to see which of your resources "
+"might be spiking in CPU usage, causing your users to experience slow load"
+" or save times."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:70
+msgid ""
+"The following GIF shows an incident responder selecting a critical alert "
+"in Infrastructure Monitoring. The responder discovers that host CPU "
+"utilization is outside of expected norms set by an Observability Cloud "
+"admin. Teams responding to an incident can use this information to "
+"remediate the problem with the host or rebalance resources and prevent "
+"users from experiencing higher than expected latency."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:72
+msgid ""
+"This animated GIF shows a user clicking into Infrastructure Monitoring "
+"host on heat map, then going to an alert to find an outlier in CPU "
+"utilization."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:76
+msgid ""
+"See :ref:`monitor-services-hosts` to learn more about using "
+"Infrastructure Monitoring navigators to monitor public clouds, "
+"containers, or hosts."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:80
+msgid ""
+"Use Log Observer Connect to drill down to the root cause of incidents in "
+"the lowest mean time to resolution. While Splunk core platform users "
+"already have access to a powerful logging tool, Log Observer Connect "
+"provides an intuitive, codeless, in-app search tool that anyone can use "
+"without knowing a query language. Additionally, Log Observer Connect does"
+" not require importing logs into Observability Cloud. Logs remain "
+"securely in your Splunk Cloud Platform or Splunk Enterprise instance, "
+"while you can observe them from Observability Cloud and correlate your "
+"Splunk platform logs with metrics, traces, and user experience to drill "
+"down to root cause problems faster."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:82
+msgid ""
+"With Log Observer Connect, you can aggregate logs to group by interesting"
+" fields. You can also filter logs by field, view individual log details, "
+"and create field aliases to drill down to the root cause of an incident. "
+"To learn more, see the following pages:"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:84
+msgid ":ref:`logs-aggregations`"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:86
+msgid ":ref:`logs-keyword`"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:88
+msgid ":ref:`logs-individual-log`"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:90
+msgid ":ref:`logs-alias`"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:92
+msgid ""
+"To view related content, select correlated infrastructure resources, "
+"metrics, or traces in the :strong:`Related Content` bar. See :ref:`get-"
+"started-relatedcontent` to learn more. Seeing your logs data correlated "
+"with metrics and traces in Observability Cloud helps your team to locate "
+"and resolve problems faster."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:94
+msgid ""
+"The following GIF shows an incident responder selecting an error log in "
+"Log Observer Connect, then selecting related content to see a problematic"
+" host. This takes the user to the service map in Infrastructure "
+"Monitoring where the problematic  host is automatically selected. The "
+"service map panel shows service requests and errors, as well as service "
+"and dependency latency for the selected host."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:96
+msgid ""
+"This animated GIF shows user selecting an error log then selecting "
+"related content to see the problematic host on the service map."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:100
+msgid ""
+"See :ref:`logs-queries` to learn all of the ways Log Observer Connect "
+"queries can drill down to root causes of incidents."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:103
+#: ../../splunkplatform/practice-reliability/slis.rst:67
+msgid "Real User Monitoring (RUM)"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:104
+msgid ""
+"RUM monitors the user experience in your application UI by analyzing user"
+" sessions. In RUM, you can monitor and drill down on front-end JavaScript"
+" errors and network errors."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:106
+msgid ""
+"This png shows a Real User Monitoring dashboard displaying JavaScript "
+"errors."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:110
+msgid ""
+"You can look for front-end and back-end errors, as well as see resource "
+"errors and resource response times. See :ref:`rum-identify-span-problems`"
+" to walk through a scenario that shows you how to find JavaScript errors,"
+" back-end errors, and long resource response times."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/incident-response.rst:112
+msgid ""
+"RUM is particularly helpful when investigating the root cause of an error"
+" reported by a user. See :ref:`rum-mobile-scenario` to learn more."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:-1
+msgid "SLIs, SLOs, and SLAs in Observability Cloud"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:5
+msgid "Measure and alert on your SLIs"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:10
+msgid ""
+"Splunk Observability Cloud provides prepackaged solutions for monitoring "
+"your service level indicators (SLIs). You can also define your own SLIs "
+"with custom detectors and alert on the data most important to your teams."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:13
+msgid "SLIs, SLOs, and SLAs"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:14
+msgid ""
+"SLIs are important because they help you meet your SLAs with customers. "
+"SLIs are the metrics used to measure your system’s availability. Service "
+"level objectives (SLOs) are what you determine is the appropriate level "
+"of availability, as measured by your SLIs. Service level agreements "
+"(SLAs) are the promise you make to your customers about how much of the "
+"time you will meet your SLOs and what you will do if you do not meet "
+"them."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:16
+msgid ""
+"The following example shows an SLI of system availability with an "
+"appropriate SLO and SLA for your customers:"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:18
+msgid ""
+"SLI: The percentage of the time your system is available, where you "
+"define availability as a transaction taking less than a half second to "
+"complete."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:20
+#, python-format
+msgid "SLO: Your system aims to be available 99.99% of the time."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:22
+#, python-format
+msgid ""
+"SLA: If your system is not available 99.99% of the time during a month, "
+"you give the customer a rebate."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:24
+msgid ""
+"To meet your SLAs, you must set and manage SLOs based on accurate data, "
+"as measured by your SLIs. Observability Cloud immediately monitors and "
+"analyzes your SLIs, takes the guesswork out of determining error budgets,"
+" and helps you set reasonable SLOs so that you meet your SLAs. The "
+"following sections detail the components in Observability Cloud that you "
+"can use to measure and alert on your SLIs."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:28
+msgid ""
+"You can monitor your SLIs in Splunk APM. Splunk APM automatically "
+"generates a service map displaying all of your instrumented and inferred "
+"services, the dependencies among them, and SLIs for each when you select "
+"a service. See :ref:`apm-service-map`. The service map shows SLIs for "
+"your services, including error rate, root error rate, and latency of your"
+" services. The panel to the right of the service map also shows services "
+"by error rate, top error sources, and services by latency. For example, "
+"you can track whether the SLI for your 90th percentile service latency "
+"for each service is less than 5 seconds. On the following service map, "
+"you can see in the :strong:`Services By Latency (P90)` chart on the right"
+" that all services have a P90 of less than 1 minute. You can also track "
+"error rates on the service map in the :strong:`Services by Error Rate` "
+"chart."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:-1
+msgid "This screenshot shows an APM service map."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:34
+msgid ""
+"You can alert on a service by creating a detector. See :ref:`create-"
+"detectors` to learn how. You can also rely on built-in alert conditions "
+"and link detectors to charts. See :ref:`built-in alert conditions "
+"<condition-reference>` and :ref:`link detectors to charts <linking-"
+"detectors>`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:37
+msgid ""
+"Built-in dashboards in Splunk APM are automatically populated with SLIs "
+"for all integrated services. See :ref:`built-in-dashboards` for more "
+"information. The following sample APM dashboard shows multiple SLIs: "
+"request rate, request latency, request latency distribution, and error "
+"rate"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:39
+#: ../../splunkplatform/practice-reliability/slis.rst:58
+msgid ""
+"This animated GIF shows hover and click actions on a chart to display "
+"metric time series, a data table, and full chart data."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:43
+msgid ""
+"To see a dashboard for a service, select the service on the service map, "
+"then select :strong:`View Dashboard`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:45
+msgid ""
+"See :ref:`dashboards` for a list of dashboards and how you can create, "
+"customize, import, export, clone, and share them. See :ref:`apm-"
+"dashboards` to learn how to track performance, troubleshoot from the "
+"dashboard, and create a detector so that you can alert on a dashboard or "
+"chart in the future. For a scenario on managing SLOs using APM, see :ref"
+":`custom-metricset`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:48
+msgid "Observability Cloud Alerts and detectors"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:49
+msgid ""
+"AutoDetect is a set of read-only alerts and detectors that Observability "
+"Cloud automatically creates when you configure supported integrations. As"
+" described in the previous section, you can also set up custom detectors "
+"to define your own SLIs and alert on any data that matters to you. See "
+":ref:`autodetect` for more information."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:54
+msgid ""
+"Infrastructure Monitoring is a custom metrics platform for real-time "
+"monitoring across infrastructure, applications, and business metrics. It "
+"collects health and performance data from servers, virtual machines, "
+"containers, databases, public cloud services, container orchestration, "
+"and serverless and other back-end components in your deployment. With "
+"over 200 integrations and dashboards, you can monitor your entire "
+"infrastructure on a single screen and significantly speed your cloud "
+"migration journey."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:56
+msgid ""
+"Monitor your SLIs in prepackaged navigators, such as the following "
+"navigator chart that shows latency over the last minute for AWS ELB "
+"instances:"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:62
+msgid ""
+"In addition to prepackaged navigators, you can set up alerts and "
+"detectors on any custom Infrastructure Monitoring data that matters to "
+"you. See :ref:`get-started-detectoralert`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:64
+msgid ""
+"Virtual metrics in Splunk Infrastructure Monitoring help you measure SLIs"
+" by automatically gathering, aggregating, and defining metrics. Virtual "
+"metrics remove the complexity of choosing the most appropriate metric "
+"source among various available options. See :ref:`infrastructure-virtual-"
+"metrics`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:68
+msgid ""
+"Splunk RUM shows SLIs and SLOs from the perspective of what your users "
+"experience in the UI. In the following example, a RUM dashboard in the "
+"Tag Spotlight view starts with a chart displaying the total count of "
+"network requests and errors over a 15-minute period. The following charts"
+" display the count of requests and errors by URL name, HTTP method, and "
+"HTTP status code."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:70
+msgid ""
+"This image shows a RUM dashboard displaying a count of requests and "
+"errors by URL name, by HTTP method, and by HTTP status code."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:74
+msgid ""
+"To learn more about what you can do with RUM, see :ref:`get-started-rum`."
+" :ref:`scenario-landingpage` has multiple examples of how you can use "
+"RUM."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:78
+msgid "Splunk Synthetic Monitoring"
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:79
+msgid ""
+"Test your SLOs before users do with Splunk Synthetic Monitoring. When you"
+" proactively monitor the performance of your web application, you can "
+"remediate problems before they impact your users. Technical and business "
+"teams use Synthetic Monitoring to create detailed tests that monitor the "
+"speed and reliability of websites, web apps, and resources over time, at "
+"any stage in the development cycle. See :ref:`intro-synthetics` to learn "
+"what you can do with Synthetics Monitoring."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:81
+msgid ""
+"To learn more about when to use Synthetic Monitoring in a scenario, see "
+":ref:`uptime-test-scenario`."
+msgstr ""
+
+#: ../../splunkplatform/practice-reliability/slis.rst:83
+msgid ""
+"Alerting on synthetic testing makes Synthetic Monitoring actionable for "
+"your development and dev ops teams. Set up browser tests and uptime tests"
+" to monitor your site or application at the frequency you prefer. Each "
+"test captures a set of metrics each time it runs. To set up alerts that "
+"notify you when tests fail, see :ref:`synth-alerts`."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:-1
+msgid ""
+"This page provides an overview of how reliability engineers can maintain "
+"reliability with Observability Cloud components."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:5
+msgid "Splunk Observability Cloud and the Splunk platform"
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:11
+msgid ""
+"With the Splunk platform (Splunk Cloud Platform or Splunk Enterprise), "
+"you can manually perform tasks to maintain or increase the reliability of"
+" your systems through Splunk searches and log analysis. With Splunk "
+"Observability Cloud, on the other hand, you can monitor your system and "
+"measure its current state based on the data it generates in the form of "
+"logs, metrics, traces, and user sessions. In other words, you can perform"
+" observability to ensure reliability."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:13
+msgid "Splunk Observability Cloud lets you to do the following:"
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:15
+msgid ""
+"Correlate logs with metrics and traces to locate, isolate, and resolve "
+"problems in your applications or infrastructure quickly."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:17
+msgid ""
+"Use hundreds of prepackaged integrations to start monitoring your entire "
+"deployment immediately."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:19
+msgid ""
+"Improve mean time to resolution using prepackaged and custom alerts and "
+"detectors."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:21
+msgid ""
+"When you integrate Splunk Observability Cloud with your Splunk Cloud "
+"Platform instance, you can enjoy the benefits of Unified Identity, "
+"including Single Sign On (SSO) and shared access and permissions. To "
+"learn more, see :ref:`unified-id-unified-identity`."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:23
+msgid ""
+"Use Observability Cloud to solve common system reliability problems. For "
+"example, do you have a wide variety of platforms, databases, and cloud "
+"services that you must monitor in multiple interfaces? Observability "
+"Cloud has hundreds of prepackaged integrations that give you a predefined"
+" view with a single pane of glass for hybrid coverage."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:25
+msgid ""
+"Are you moving into the cloud and Kubernetes environments, requiring your"
+" teams to react to a magnitude of changes very quickly? The cloud-native "
+"data and analytics scale in Observability Cloud is built for Kubernetes "
+"and cloud environments."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:28
+#, python-format
+msgid ""
+"Five core principles underpin system reliability: availability, "
+"performance, monitoring, incident response, and preparation. See the "
+"Splunk Blogs post :new-page:`What is site reliability engineering? "
+"<https://www.splunk.com/en_us/data-insider/what-is-site-reliability-"
+"engineering.html#:~:text=Site%20reliability%20engineering%20(SRE)%20is,production%20systems%20and%20solve%20problems.>`"
+" for more information. But you don't have to be a Site Reliability "
+"Engineer (SRE) to maintain system reliability with Observability Cloud. "
+"Reliability involves measuring your system through its telemetry, "
+"alerting you on outages and failures of your infrastructure, and guiding "
+"you with dashboards to inform your journey to isolating and resolving "
+"problems."
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:30
+msgid ""
+"Select each of the following categories to learn how you can maintain "
+"reliability with Observability Cloud:"
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:32
+msgid ":ref:`Measure and alert on your SLIs <practice-reliability-slis>`"
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:34
+msgid ":ref:`Respond to incidents <practice-reliability-incident-response>`"
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:36
+msgid ""
+":ref:`Collaborate on observability within and across teams <practice-"
+"reliability-collaboration>`"
+msgstr ""
+
+#: ../../splunkplatform/splunkplatform-landing.rst:39
+msgid ""
+"Then see :ref:`get-started-get-data-in` to set up each component of "
+"Splunk Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:-1
+msgid ""
+"This page describes and links to setup pages for each component of "
+"Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:5
+msgid "Unified Identity: Splunk Cloud Platform and Splunk Observability Cloud"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:10
+msgid ""
+"Splunk Cloud Platform offers Unified Identity with Splunk Observability "
+"Cloud."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:13
+msgid "What is Unified Identity?"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:14
+msgid ""
+"When Splunk Cloud Platform customers purchase Splunk Observability Cloud,"
+" users can access both platforms using a single identity. Users can log "
+"into Splunk Observability Cloud with SSO using their Splunk Cloud "
+"Platform credentials."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:16
+msgid ""
+"When you integrate your Splunk Cloud Platform and Splunk Observability "
+"Cloud instances and activate Unified Identity, administrators can set up "
+"all users in a central location, Splunk Cloud Platform. Splunk Cloud "
+"Platform admins control user and data access permissions for both "
+"platforms separately in respective products. For more information, see "
+":ref:`admin-manage-users`. To learn about user roles and permissions in "
+"Splunk Cloud Platform, see :new-page:`About configuring role-based user "
+"access "
+"<https://docs.splunk.com/Documentation/SplunkCloud/9.0.2209/Security/Aboutusersandroles>`."
+" The integration extends permissions to access data indexed in Splunk "
+"Cloud Platform to Splunk Observability Cloud applications with no "
+"administrative overhead. See :ref:`unified-id-user-provisioning` for more"
+" information."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:20
+msgid "Who can access Single Sign On (SSO) and the benefits of Unified Identity?"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:21
+msgid ""
+"Currently, Splunk Cloud Platform customers who purchase Splunk "
+"Observability Cloud can access Unified Identity between Splunk Cloud "
+"Platform and Splunk Observability Cloud. Users must be on Splunk Cloud "
+"Platform version 9.x and higher. The AWS region for your Splunk Cloud "
+"Platform instance must be the same as your Splunk Observability Cloud "
+"instance realm."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:26
+msgid "What are the benefits of Unified Identity?"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:27
+msgid ""
+"Organizations that complete the integration of Splunk Cloud Platform and "
+"Splunk Observability Cloud experience the following benefits:"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:29
+msgid ""
+"End users can access Splunk Observability Cloud with Single Sign On (SSO)"
+" using Splunk Cloud Platform as the Identity Provider (IdP)."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:31
+msgid ""
+"Splunk Cloud Platform administrators can extend SAML settings for SSO "
+"configured in Splunk Cloud Platform to Splunk Observability Cloud "
+"applications."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:33
+msgid ""
+"When using any Splunk Observability Cloud application, a user can access "
+"all data in Splunk Cloud Platform indexes that the user’s role in Splunk "
+"Cloud Platform has permissions to access."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:35
+msgid ""
+"Users can navigate data and dashboards between Splunk Cloud Platform and "
+"Splunk Observability Cloud seamlessly after logging in with Splunk Cloud "
+"Platform SSO once."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:39
+msgid "How to set up the Unified Identity"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:40
+msgid ""
+"Splunk Cloud Platform customers who want to purchase Splunk Observability"
+" Cloud must inform their Splunk sales representative that they want to "
+"purchase Splunk Observability Cloud or start a trial. The sales "
+"representative initiates a Splunk Observability Cloud trial that is "
+"already integrated with their Splunk Cloud Platform instance. Turn on "
+"token authentication to allow Splunk Observability Cloud to view your "
+"Splunk Cloud Platform logs. See :new-page:`Enable or disable token "
+"authentication "
+"<https://docs.splunk.com/Documentation/SplunkCloud/latest/Security/EnableTokenAuth>``"
+" to learn how."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:42
+msgid ""
+"Only one Splunk Cloud Platform instance can be paired with one Splunk "
+"Observability Cloud instance at a time. The integration is a 1:1 mapping "
+"of one ad-hoc Splunk Cloud Search Head Unit with one Splunk Observability"
+" Cloud instance. Customers with multiple Splunk Observability Cloud "
+"organizations must choose one to pair with the chosen Splunk Cloud "
+"Platform instance."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:47
+msgid "User provisioning"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:48
+msgid ""
+"The integration automatically maps Splunk Cloud Platform roles to the "
+"following Splunk Observability Cloud roles:"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:54
+msgid ":strong:`Role in Splunk Cloud Platform`"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:55
+msgid ":strong:`Role in Splunk Observability Cloud`"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:57
+#: ../../splunkplatform/unified-id/unified-identity.rst:58
+msgid "admin"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:60
+msgid "power, can_delete"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:61
+#: ../../splunkplatform/unified-id/unified-identity.rst:64
+msgid "power"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:63
+msgid "user"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:66
+msgid "N/A"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:67
+msgid "usage"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:70
+msgid ""
+"The mapping process is defined by the system, and a user cannot change it"
+" at provisioning time or after."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:72
+msgid ""
+"To add a new user to Splunk Observability Cloud after the integration is "
+"complete, a Splunk Cloud Platform administrator must create a new local "
+"account in Splunk Cloud Platform or provision a new user with a third "
+"party IdP (if Splunk Cloud Platform is not used as IdP). A new user is "
+"added to Splunk Cloud Platform after they log in for the first time. At "
+"that point, the user can log in to Splunk Observability Cloud with their "
+"Splunk Cloud Platform permissions."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:74
+msgid ""
+"You can use a third party identity provider other than Splunk Cloud "
+"Platform, but you will lose the benefits of the integrated experience. "
+"See :ref:`unified-identity-benefits`."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:76
+msgid ""
+"Once users are set up, Splunk Cloud Platform admins and Splunk "
+"Observability Cloud admins must manage roles independently. After initial"
+" setup, role updates in either product platform do not impact a user’s "
+"role in the other platform. However, a user’s permissions to specific "
+"indexes in Splunk Cloud Platform are always controlled by a user’s role "
+"and permissions in Splunk Cloud Platform."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:80
+msgid "What to expect at first login"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:81
+msgid ""
+"The first time a user tries to log in to Splunk Observability Cloud after"
+" the integration, they are directed to their Splunk Cloud Platform login "
+"page."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:83
+msgid "Follow these steps at first login to Splunk Observability Cloud:"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:85
+msgid "Select :strong:`Sign in with Splunk Cloud`."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:87
+msgid ""
+"Provide your Splunk Cloud Platform credentials. If your Splunk Cloud "
+"Platform user has an associated email, the :strong:`Email` field "
+"autopopulates. If your Splunk Cloud Platform user does not have an "
+"associated email, you must enter your email address twice."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:89
+msgid ""
+"You then receive an e-mail to verify your identity. Verify your identity "
+"in the e-mail to be authenticated in Splunk Observability Cloud. After "
+"authentication, you can access all Splunk Cloud Platform data that your "
+"Splunk Cloud Platform role has permissions to access in Splunk "
+"Observability Cloud applications. If you see an Internal Server Error, "
+"follow these steps."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:91
+msgid "Remove the verification code from the text box."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:93
+msgid "Re-enter the verification code you received in the confirmation email."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:95
+msgid ""
+"If you still see the Internal Server Error, select :strong:`Restart "
+"verification process`, then check for a second confirmation    email, "
+"retrieve the new verification code, and enter it in the text box. If you "
+"continue to see the Internal Server Error, file a ticket with Splunk "
+"Support."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:97
+msgid ""
+"Check your role in Splunk Observability Cloud. If you should have an "
+"admin role inherited from Splunk Cloud Platform but you see a power role "
+"in Splunk Observability Cloud instead, open a support ticket with your "
+"Splunk Cloud Platform admin to request admin status in Splunk "
+"Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:100
+msgid ""
+"After the first login, you do not need to provide your Splunk Cloud "
+"Platform credentials again. On subsequent logins, if you are already "
+"logged in to Splunk Cloud Platform, select :strong:`Sign in with Splunk "
+"Cloud` and you are automatically signed in to Splunk Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:104
+msgid "Working in Splunk Observability Cloud after the integration"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:105
+msgid ""
+"In addition to logging in with SSO, users and admins experience other "
+"differences after the integration is complete."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:108
+msgid "Point-and-click log analysis"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:109
+msgid ""
+"One important advantage of the integration is that users can now query "
+"their Splunk Cloud Platform logs in Log Observer’s no-code UI. Users can "
+"create advanced queries without knowing SPL with Log Observer’s filters "
+"and aggregations. See :ref:`logs-queries` for more information."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:112
+msgid "Related Content"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:113
+msgid ""
+"Another significant benefit of the integration is that you can access any"
+" data related to your Splunk Cloud Platform logs that resides in other "
+"Splunk Observability Cloud applications, such as Infrastructure "
+"Monitoring, APM, RUM, and Synthetics. While exploring your data in any of"
+" the Splunk Observability Cloud applications, the Related Content bar "
+"always populates with links to other Splunk Observability Cloud "
+"applications that have related data. Access related metrics, traces, or "
+"infrastructure components when you observe your Splunk Cloud Platform "
+"logs in Splunk Observability Cloud."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:116
+msgid "Unified user session"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:117
+msgid ""
+"You can navigate seamlessly back and forth between Splunk Cloud Platform "
+"and any Splunk Observability Cloud application (Infrastructure "
+"Monitoring, APM, Log Observer, RUM, and Synthetics) to see all data that "
+"your Splunk Cloud Platform role has permissions to see. Users need to log"
+" in only once to gain access to Splunk Cloud Platform and Splunk "
+"Observability Cloud. You don’t need additional login to move from one "
+"platform to the other when exploring data."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:120
+msgid "Splunk Cloud Platform maintenance windows"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:121
+msgid ""
+"During a Splunk Cloud Platform maintenance window, users cannot log in to"
+" Splunk Observability Cloud with Splunk Cloud Platform for SSO. Login can"
+" be impacted from 2 to 5 minutes during Splunk Cloud Platform maintenance"
+" windows. Users can log into Splunk Observability Cloud again as soon as "
+"the maintenance window is completed."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:123
+msgid ""
+"During a maintenance window, Splunk Cloud Platform displays a banner "
+"indicating the start and end time of the window. If a user is already "
+"logged in to Splunk Observability Cloud at the start of a maintenance "
+"window, the user is not impacted directly. However, access to Splunk "
+"Cloud Platform logs in Log Observer are unavailable during the "
+"maintenance window. You can continue working in Splunk Observability "
+"Cloud."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:125
+msgid ""
+"Typically, there are two planned maintenance windows per month for a "
+"Splunk Cloud Platform instance. Customers can determine the scheduling of"
+" maintenance windows and usually set them up to occur during the "
+"customer’s downtime. Talk to your Splunk Cloud Platform administrator "
+"about the planned maintenance windows."
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:128
+msgid "Changing identity providers"
+msgstr ""
+
+#: ../../splunkplatform/unified-id/unified-identity.rst:129
+msgid ""
+"If you no longer want to use Splunk Cloud Platform as your identity "
+"provider for SSO when signing in to Splunk Observability Cloud, set up a "
+"third party IdP for Splunk Observability Cloud login before you "
+"deactivate your Splunk Cloud Platform instance. Deactivating Splunk Cloud"
+" Platform only after setting up a new third party IdP ensures that your "
+"Splunk Observability Cloud users do not lose access."
+msgstr ""
+
