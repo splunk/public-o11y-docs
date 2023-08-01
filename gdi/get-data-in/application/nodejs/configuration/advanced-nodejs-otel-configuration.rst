@@ -102,7 +102,16 @@ The following settings control which instrumentations are activated:
      - Whether to activate all the embedded instrumentations. The default value is ``true``. When you set this setting to ``false``, use ``OTEL_INSTRUMENTATION_<NAME>_ENABLED=true`` to selectively turn on instrumentations.
    * - ``OTEL_INSTRUMENTATION_<NAME>_ENABLED``
      -
-     - When set to ``true``, this setting activates a specific instrumentation, as defined by replacing ``<NAME>`` with the name of the instrumentation. The name isn't case sensitive. For a complete list of available instrumentations, see :ref:`nodejs-instrumentations`.
+     - When set to ``true``, this setting activates a specific instrumentation, as defined by replacing ``<NAME>`` with the name of the instrumentation. The name isn't case sensitive. For a complete list of available instrumentations, see :ref:`nodes-requirements`.
+
+For example, to turn off all default instrumentations and only turn on the ``bunyan`` instrumentation, set the following environment variables:
+
+.. code-bloc:: shell
+
+   export OTEL_INSTRUMENTATION_COMMON_DEFAULT_ENABLED=true
+   export OTEL_INSTRUMENTATION_bunyan_ENABLED=true
+
+The previous settings only apply to instrumentations loaded by the Splunk Distribution of OpenTelemetry JS by default. When using the programmatic API to supply a list of user-specified instrumentations, they have no effect.
 
 
 .. _trace-configuration-nodejs:
