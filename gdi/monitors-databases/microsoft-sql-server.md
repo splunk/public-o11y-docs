@@ -47,7 +47,7 @@ To activate this integration, add the following to your Collector configuration:
 ```
 receivers:
   smartagent/sqlserver:
-    type: telegraf/sqlserver
+    type: telegraf/sqserver
     ...  # Additional config
 ```
 
@@ -57,7 +57,7 @@ Next, add the monitor to the `service.pipelines.metrics.receivers` section of yo
 service:
   pipelines:
     metrics:
-      receivers: [smartagent/telegraf/sqlserver]
+      receivers: [smartagent/sqlserver]
 ```
 
 ### Example: Microsoft SQL Server receiver
@@ -67,7 +67,7 @@ The following is an example of a Microsoft SQL Server receiver configuration:
 ```yaml
 receivers:
   smartagent/sqlserver:
-     type: telegraf/sqlserver
+     type: telegraf/sqserver
      host: <host_name>
      port: 1433
      userID: <user_id>
