@@ -5,16 +5,16 @@ Troubleshoot browser instrumentation for Splunk Observability Cloud
 ********************************************************************
 
 .. meta::
-   :description: If your instrumented your web application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
+   :description: If your instrumented web application is not sending data to Splunk Observability Cloud, or data is missing, follow these steps to identify and resolve the issue.
 
 When you instrument a browser or web application using the Browser RUM agent and you don't see your data in Splunk Observability Cloud, follow these troubleshooting steps.
 
 .. _basic-browser-troubleshooting:
 
-General steps for troubleshooting browser RUM instrumentation
+General steps for troubleshooting Browser RUM instrumentation
 ==============================================================
 
-The following steps can help you troubleshoot browser RUM agent issues:
+The following steps can help you troubleshoot Browser RUM agent issues:
 
 #. :ref:`browser-check-requirements`
 #. :ref:`multiple-browser-tools`
@@ -27,7 +27,7 @@ Check compatibility and requirements
 
 See :ref:`rum-browser-requirements` for a complete list of compatible versions and requirements.
 
-The Browser RUM supports Internet Explorer 11 through the ``splunk-otel-web-legacy.js`` version of the agent. Make sure to use that version if you need to collect data from Internet Explorer.
+Browser RUM supports Internet Explorer 11 through the ``splunk-otel-web-legacy.js`` version of the agent. Make sure to use that version if you need to collect data from Internet Explorer.
 
 
 .. _multiple-browser-tools:
