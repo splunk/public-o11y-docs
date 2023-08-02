@@ -212,7 +212,11 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
    * - ``SPLUNK_PROFILER_CALL_STACK_INTERVAL``
      - Frequency with which call stacks are sampled, in milliseconds. The default value is 10000 milliseconds. |br| |br| System property: ``splunk.profiler.call.stack.interval``
    * - ``SPLUNK_PROFILER_MEMORY_ENABLED``
-     - Activates memory profiling with all the options. Activating memory profiling overrides the value of ``splunk.metrics.enabled``. The default value is ``false``. Requires ``splunk.profiler.enabled`` to be set to ``true``. To activate or deactivate specific memory profiling options, set their values explicitly. |br| |br| System property: ``splunk.profiler.memory.enabled``
+     - Activates memory profiling with all the options. To activate or deactivate specific memory profiling options, set their values explicitly. 
+       * The default value is ``false``. 
+       * Requires ``splunk.profiler.enabled`` to be set to ``true``.  
+       * Activating memory profiling sets the value of ``splunk.metrics.enabled`` to ``true``.
+       |br| |br| System property: ``splunk.profiler.memory.enabled``
    * - ``SPLUNK_PROFILER_MEMORY_EVENT_RATE``
      - Rate limit for memory profiling data, expressed as stack traces per unit of time. You can define duration in the form ``<number>/<unit>``, where the unit can be ``s`` or ``m``. The default value is ``150/s``, or 150 stack traces per second. Consider increasing this value when collecting memory profiling data from complex, multithreaded workloads, like application servers. |br| |br| System property: ``splunk.profiler.memory.event.rate``
    * - ``SPLUNK_PROFILER_TLAB_ENABLED``
