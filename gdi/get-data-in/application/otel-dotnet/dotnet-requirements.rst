@@ -45,6 +45,9 @@ Traces instrumentations
    * - ASP.NET Core
      - See :ref:`dotnet-otel-versions`
      - ``ASPNETCORE``
+   * - Azure SDK
+     - ``Azure.`` prefixed packages, released after October 1, 2021.
+     - ``AZURE``
    * - Elastic.Clients.Elasticsearch
      - 8.0.0 and higher
      - ``ELASTICSEARCH``
