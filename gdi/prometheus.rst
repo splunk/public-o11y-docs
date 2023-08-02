@@ -1,4 +1,4 @@
-.. _monitoring:
+.. _prometheus:
 
 ********************************************************************************
 Configure application exporters and receivers for monitoring
@@ -6,7 +6,7 @@ Configure application exporters and receivers for monitoring
 
 .. meta::
    :description: Landing for application receivers for monitoring applications in Splunk Observability Cloud.
-
+   
 .. toctree::
    :maxdepth: 4
    :hidden:
