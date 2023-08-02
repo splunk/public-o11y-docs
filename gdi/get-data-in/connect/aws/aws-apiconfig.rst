@@ -455,7 +455,7 @@ To activate CloudWatch Metric Streams as an alternative to traditional API polli
 #. Set the ``enabled`` field to ``true``.
 #. Submit a PUT request to the ``https://api.<realm>.signalfx.com/v2/integration/<integration-id>`` endpoint to save your updated settings.
 
-.. caution:: CloudWatch Metric Streams doesn't support filtering based on resource tags.   
+.. caution:: CloudWatch Metric Streams supports filtering by namespace and metric name but doesn't support filtering based on resource tags.   
 
 Next, to complete the activation of Metric Streams:
 
