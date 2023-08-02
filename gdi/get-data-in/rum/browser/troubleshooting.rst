@@ -27,6 +27,8 @@ Check compatibility and requirements
 
 See :ref:`rum-browser-requirements` for a complete list of compatible versions and requirements.
 
+The Browser RUM supports Internet Explorer 11 through the ``splunk-otel-web-legacy.js`` version of the agent. Make sure to use that version if you need to collect data from Internet Explorer.
+
 
 .. _multiple-browser-tools:
 
@@ -64,17 +66,33 @@ To activate logging, add the ``debug: true`` setting to ``SplunkRum.init``. For 
 
 .. _browser-no-metrics:
 
-Web app metrics don't appear in Splunk RUM
+Web app data don't appear in Splunk RUM
 ============================================
 
-If you can't find telemetry for your web app in Splunk RUM, try the following:
+If you can't find telemetry for your web app in Splunk RUM, try the following.
 
+Check for errors using developer tools
+----------------------------------------------
+
+Use your browser's developer tools to check for Browser RUM errors:
+
+* Check the console for configuration errors. Errors are prefixed with ``SplunkRum:`` in the console.
+* Check the :guilabel:`Network` tab in your browser's developer tools to confirm that the agent is sending data:
+   * Make sure there are requests sent to ``rum-ingest.<realm>.signalfx.com``.
+   * If the requests have a status of ``429``, you might have surpassed the session quota. See :ref:`rum-limits`.
+   * Make sure the request isn't blocked by browser extensions or specific settings.
 * Activate debug logging to search for simulator debug logs. See :ref:`activate-browser-debug-logging`.
+
+
+Check your RUM configuration settings
+--------------------------------------------------
+
+Check the value of the main configuration settings:
+
+* If you've defined a custom ``beaconEndpoint``, make sure the value is correct.
 * Make sure that the values of ``rumAccessToken`` and ``realm`` are defined and correct.
    * The RUM token must be active and part of the org you are trying to send data to.
    * The realm must be the same as your organization's realm.
-* Make sure you're initializing the agent synchronously and as early as possible. See :ref:`loading-initializing_browser-rum`.
-* If your app is a single-page application (SPA), see :ref:`browser-rum-spas`.
 
 To find the realm name of your account, follow these steps:
 
@@ -84,16 +102,39 @@ To find the realm name of your account, follow these steps:
 
 The realm name appears in the :guilabel:`Organizations` section.
 
-If you've defined a custom ``beaconEndpoint``, make sure the value is correct.
+
+Check how you're initializing RUM
+-----------------------------------------------
+
+Make sure you're initializing Browser RUM correctly:
+
+* Make sure you're initializing the agent synchronously and as early as possible. See :ref:`loading-initializing_browser-rum`.
+* If your app is a single-page application (SPA), see :ref:`browser-rum-spas`.
 
 
-.. _browser-ie:
+.. _browser-rum-break-site:
 
-Browser RUM agent doesn't work on Internet Explorer
-==================================================================
+Browser RUM is causing issues in my site
+================================================================
 
-The Browser RUM supports Internet Explorer 11 through the ``splunk-otel-web-legacy.js`` version of the agent. Make sure to use that version if you need to collect data from Internet Explorer.
+If you think Browser RUM might be causing issues in your website or breaking existing behavior or design, check the following:
 
+* Confirm the site works as expected after removing or deactivating Browser RUM in the same environment where you're experiencing issues.
+* Try activating Browser RUM with all instrumentations turned off. See :ref:`browser-rum-instrumentation-settings` for more information. For example:
 
+   .. code-block:: typescript
+
+      instrumentations: {
+        // Comment out lines one by one to turn on each item
+        // and test which instrumentation is causing issues.
+        document: false,
+        errors: false,
+        fetch: false,
+        interactions: false,
+        longtask: false,
+        postload: false,
+        webvitals: false,
+        xhr: false,
+      }
 
 .. include:: /_includes/troubleshooting-steps.rst
