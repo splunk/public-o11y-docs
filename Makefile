@@ -50,20 +50,20 @@ html:
 
 .PHONY: html-ja
 html-ja:
-    @echo "Building the MINIFY Files for Japanese documentation..."
-    @echo
-    pip3 install cssmin
-    pip3 install jsmin
-    python3 _ext/assetminify.py
-    @echo
-    @echo "*****************************************************"
-    @echo "        Building Japanese Splunk Observability Docs"
-    @echo "*****************************************************"
-    @echo
-    @echo "Building the Japanese HTML files from source..."
-    $(SPHINXBUILD) -b html -D language=ja_JA . $(BUILDDIR)/html/ja_JA
-    @echo
-    @echo "Build finished. The Japanese HTML pages are in $(BUILDDIR)/html/ja_JA."
+	@echo "Building the MINIFY Files for Japanese documentation..."
+	@echo
+	pip3 install cssmin
+	pip3 install jsmin
+	python3 _ext/assetminify.py
+	@echo
+	@echo "*****************************************************"
+	@echo "        Building Japanese Splunk Observability Docs"
+	@echo "*****************************************************"
+	@echo
+	@echo "Building the Japanese HTML files from source..."
+	$(SPHINXBUILD) -b html -D language=ja_JA . $(BUILDDIR)/html/ja_JA
+	@echo
+	@echo "Build finished. The Japanese HTML pages are in $(BUILDDIR)/html/ja_JA."
 
 .PHONY: livehtml
 livehtml:
