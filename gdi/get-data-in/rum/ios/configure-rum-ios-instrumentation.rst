@@ -99,8 +99,8 @@ Use the following settings to configure the behavior of iOS RUM instrumentation:
      - Activates caching of exported spans. All spans are written to local storage and deleted after a successful export. The default value is ``false``.
    * - :code:`spanDiskCacheMaxSize`
      - Threshold, in megabytes, from which spans start to be dropped from the disk cache. The oldest spans are dropped first. Only applicable when disk caching is activated. The default value is ``25`` megabytes.
-   * - :code:`spanScheduleDelay`
-     - Delay time, in seconds, between batch span sampling. The default value is ``5`` seconds.
+   * - :code:`bspScheduleDelay`
+     - Sets the maximum interval between two consecutive span exports. The default value is 5 seconds.
    * - :code:`slowRenderingDetectionEnabled`
      - Activates the slow rendering detection feature. The default value is ``true``. See :ref:`ios-slow-rendering-data`.
    * - :code:`slowFrameDetectionThresholdMs`
