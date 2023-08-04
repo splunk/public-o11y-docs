@@ -1,0 +1,1326 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023 Splunk, Inc
+# This file is distributed under the same license as the Splunk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Splunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-01 01:26+0000\n"
+"PO-Revision-Date: 2023-08-01 17:22+0100\n"
+"Last-Translator: \n"
+"Language-Team: ja_JA <LL@li.org>\n"
+"Language: ja_JA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#: ../../<rst_prolog>:18
+msgid "Take shift"
+msgstr "テイク・シフト"
+
+#: ../../_includes/activate-deactivate-native-metrics.rst:2
+msgid "Activate or deactivate specific metrics"
+msgstr "特定のメトリクスをアクティブまたは非アクティブにする"
+
+#: ../../_includes/activate-deactivate-native-metrics.rst:4
+msgid "You can activate or deactivate specific metrics by setting the ``enabled`` field in the ``metrics`` section for each metric. For example:"
+msgstr "各メトリクスの``metrics`` セクションの``enabled`` フィールドを設定することで、特定のメトリクスをアクティブまたは非アクティブにできます。例えば、こうだ："
+
+#: ../../_includes/activate-deactivate-native-metrics.rst:16
+msgid "The following is an example of host metrics receiver configuration with activated metrics:"
+msgstr "以下は、アクティブ化されたメトリクスを持つホスト・メトリクス・レシーバの構成例です："
+
+#: ../../_includes/activate-deactivate-native-metrics.rst:28
+msgid "Deactivated metrics aren't sent to Splunk Observability Cloud."
+msgstr "無効化されたメトリクスは Splunk Observability Cloud に送信されません。"
+
+#: ../../_includes/application-receiver-table.rst:7
+msgid ":strong:`Data source`"
+msgstr ":strong:`データソース`"
+
+#: ../../_includes/application-receiver-table.rst:8
+msgid ":strong:`Provides metrics`"
+msgstr ":strong:`メトリクスの提供`"
+
+#: ../../_includes/application-receiver-table.rst:9
+msgid ":strong:`Provides traces`"
+msgstr ":strong:`痕跡を提供`"
+
+#: ../../_includes/application-receiver-table.rst:10
+msgid ":strong:`Provides logs`"
+msgstr ":strong:`ログの提供`"
+
+#: ../../_includes/application-receiver-table.rst:12
+msgid ":ref:`Amazon ECS Task Metadata <amazon-ecs-metadata>`"
+msgstr ":ref:`Amazon ECS Task Metadata <amazon-ecs-metadata>`"
+
+#: ../../_includes/application-receiver-table.rst:13 ../../_includes/application-receiver-table.rst:18 ../../_includes/application-receiver-table.rst:23 ../../_includes/application-receiver-table.rst:28 ../../_includes/application-receiver-table.rst:30 ../../_includes/application-receiver-table.rst:33
+#: ../../_includes/application-receiver-table.rst:38 ../../_includes/application-receiver-table.rst:43 ../../_includes/application-receiver-table.rst:48 ../../_includes/application-receiver-table.rst:53 ../../_includes/application-receiver-table.rst:58 ../../_includes/application-receiver-table.rst:63
+#: ../../_includes/application-receiver-table.rst:68 ../../_includes/application-receiver-table.rst:70 ../../_includes/application-receiver-table.rst:73 ../../_includes/application-receiver-table.rst:78 ../../_includes/application-receiver-table.rst:83 ../../_includes/application-receiver-table.rst:88
+#: ../../_includes/application-receiver-table.rst:93 ../../_includes/application-receiver-table.rst:98 ../../_includes/application-receiver-table.rst:103 ../../_includes/application-receiver-table.rst:108 ../../_includes/application-receiver-table.rst:113 ../../_includes/application-receiver-table.rst:118
+#: ../../_includes/application-receiver-table.rst:123 ../../_includes/application-receiver-table.rst:128 ../../_includes/application-receiver-table.rst:133 ../../_includes/application-receiver-table.rst:138 ../../_includes/application-receiver-table.rst:143 ../../_includes/application-receiver-table.rst:148
+#: ../../_includes/application-receiver-table.rst:150 ../../_includes/application-receiver-table.rst:153 ../../_includes/application-receiver-table.rst:158 ../../_includes/application-receiver-table.rst:163 ../../_includes/application-receiver-table.rst:165 ../../_includes/application-receiver-table.rst:168
+#: ../../_includes/application-receiver-table.rst:170 ../../_includes/application-receiver-table.rst:173 ../../_includes/application-receiver-table.rst:178 ../../_includes/application-receiver-table.rst:183 ../../_includes/application-receiver-table.rst:188 ../../_includes/application-receiver-table.rst:193
+#: ../../_includes/application-receiver-table.rst:198 ../../_includes/application-receiver-table.rst:203 ../../_includes/application-receiver-table.rst:208 ../../_includes/application-receiver-table.rst:213 ../../_includes/application-receiver-table.rst:218 ../../_includes/application-receiver-table.rst:223
+#: ../../_includes/application-receiver-table.rst:228 ../../_includes/application-receiver-table.rst:235 ../../_includes/application-receiver-table.rst:238 ../../_includes/application-receiver-table.rst:243 ../../_includes/application-receiver-table.rst:248 ../../_includes/application-receiver-table.rst:249
+#: ../../_includes/application-receiver-table.rst:250 ../../_includes/application-receiver-table.rst:253 ../../_includes/application-receiver-table.rst:254 ../../_includes/application-receiver-table.rst:255 ../../_includes/application-receiver-table.rst:258 ../../_includes/application-receiver-table.rst:263
+#: ../../_includes/application-receiver-table.rst:268 ../../_includes/application-receiver-table.rst:273 ../../_includes/application-receiver-table.rst:278 ../../_includes/application-receiver-table.rst:283 ../../_includes/application-receiver-table.rst:288 ../../_includes/application-receiver-table.rst:293
+#: ../../_includes/application-receiver-table.rst:295 ../../_includes/application-receiver-table.rst:298 ../../_includes/application-receiver-table.rst:300 ../../_includes/application-receiver-table.rst:303 ../../_includes/application-receiver-table.rst:305 ../../_includes/application-receiver-table.rst:308
+#: ../../_includes/application-receiver-table.rst:313 ../../_includes/application-receiver-table.rst:315 ../../_includes/application-receiver-table.rst:318 ../../_includes/application-receiver-table.rst:323 ../../_includes/application-receiver-table.rst:325 ../../_includes/application-receiver-table.rst:328
+#: ../../_includes/application-receiver-table.rst:330 ../../_includes/application-receiver-table.rst:333 ../../_includes/application-receiver-table.rst:340 ../../_includes/application-receiver-table.rst:343 ../../_includes/application-receiver-table.rst:348 ../../_includes/application-receiver-table.rst:353
+#: ../../_includes/application-receiver-table.rst:355 ../../_includes/application-receiver-table.rst:358 ../../_includes/application-receiver-table.rst:362 ../../_includes/application-receiver-table.rst:367 ../../_includes/application-receiver-table.rst:372 ../../_includes/application-receiver-table.rst:377
+#: ../../_includes/application-receiver-table.rst:382 ../../_includes/application-receiver-table.rst:387 ../../_includes/application-receiver-table.rst:392 ../../_includes/application-receiver-table.rst:397 ../../_includes/application-receiver-table.rst:402 ../../_includes/application-receiver-table.rst:404
+#: ../../_includes/application-receiver-table.rst:407 ../../_includes/application-receiver-table.rst:412 ../../_includes/application-receiver-table.rst:417 ../../_includes/application-receiver-table.rst:422 ../../_includes/application-receiver-table.rst:424 ../../_includes/application-receiver-table.rst:427
+#: ../../_includes/application-receiver-table.rst:432 ../../_includes/application-receiver-table.rst:437 ../../_includes/application-receiver-table.rst:442 ../../_includes/application-receiver-table.rst:447 ../../_includes/application-receiver-table.rst:452 ../../_includes/application-receiver-table.rst:457
+#: ../../_includes/application-receiver-table.rst:462 ../../_includes/application-receiver-table.rst:464 ../../_includes/application-receiver-table.rst:467 ../../_includes/application-receiver-table.rst:472 ../../_includes/application-receiver-table.rst:477 ../../_includes/application-receiver-table.rst:482
+#: ../../_includes/application-receiver-table.rst:487 ../../_includes/application-receiver-table.rst:492 ../../_includes/application-receiver-table.rst:497 ../../_includes/application-receiver-table.rst:502 ../../_includes/application-receiver-table.rst:507 ../../_includes/application-receiver-table.rst:509
+#: ../../_includes/application-receiver-table.rst:512 ../../_includes/application-receiver-table.rst:514 ../../_includes/application-receiver-table.rst:517 ../../_includes/application-receiver-table.rst:522 ../../_includes/application-receiver-table.rst:523 ../../_includes/application-receiver-table.rst:527
+#: ../../_includes/application-receiver-table.rst:532 ../../_includes/application-receiver-table.rst:537 ../../_includes/application-receiver-table.rst:542 ../../_includes/application-receiver-table.rst:547 ../../_includes/application-receiver-table.rst:552 ../../_includes/application-receiver-table.rst:557
+#: ../../_includes/application-receiver-table.rst:562 ../../_includes/application-receiver-table.rst:567 ../../_includes/application-receiver-table.rst:572 ../../_includes/application-receiver-table.rst:577
+msgid ":strong:`X`"
+msgstr ":strong:`X`"
+
+#: ../../_includes/application-receiver-table.rst:17
+msgid ":ref:`Apache ActiveMQ <activemq>`"
+msgstr ":ref:`Apache ActiveMQ <activemq>`"
+
+#: ../../_includes/application-receiver-table.rst:22
+msgid ":ref:`Apache CouchDB <apache-couchdb>`"
+msgstr ":ref:`Apache CouchDB <apache-couchdb>`"
+
+#: ../../_includes/application-receiver-table.rst:27
+msgid ":ref:`Apache HTTP Server <apache-httpserver>`"
+msgstr ":ref:`Apache HTTP Server <apache-httpserver>`"
+
+#: ../../_includes/application-receiver-table.rst:32
+msgid ":ref:`Apache Kafka <kafka>`"
+msgstr ":ref:`Apache Kafka <kafka>`"
+
+#: ../../_includes/application-receiver-table.rst:37
+msgid ":ref:`Apache Spark <spark>`"
+msgstr ":ref:`Apache Spark <spark>`"
+
+#: ../../_includes/application-receiver-table.rst:42
+msgid ":ref:`Apache Tomcat <apache-tomcat>`"
+msgstr ":ref:`Apache Tomcat <apache-tomcat>`"
+
+#: ../../_includes/application-receiver-table.rst:47
+msgid ":ref:`Apache Zookeeper <zookeeper>`"
+msgstr ":ref:`Apache Zookeeper <zookeeper>`"
+
+#: ../../_includes/application-receiver-table.rst:52
+msgid ":ref:`ASP.NET <asp-dot-net>`"
+msgstr ":ref:`ASP.NET <asp-dot-net>`"
+
+#: ../../_includes/application-receiver-table.rst:57
+msgid ":ref:`AWS AppMesh Envoy Proxy <appmesh>`"
+msgstr ":ref:`AWS AppMesh Envoy Proxy <appmesh>`"
+
+#: ../../_includes/application-receiver-table.rst:62
+msgid ":ref:`cAdvisor <cadvisor>`"
+msgstr ":ref:`cAdvisor <cadvisor>`"
+
+#: ../../_includes/application-receiver-table.rst:67
+msgid ":ref:`Cassandra <cassandra>`"
+msgstr ":ref:`Cassandra <cassandra>`"
+
+#: ../../_includes/application-receiver-table.rst:72
+msgid ":ref:`cgroups <cgroups>`"
+msgstr ":ref:`cgroups <cgroups>`"
+
+#: ../../_includes/application-receiver-table.rst:77
+msgid ":ref:`Chrony NTP <chrony>`"
+msgstr ":ref:`Chrony NTP <chrony>`"
+
+#: ../../_includes/application-receiver-table.rst:82
+msgid ":ref:`Cloud Foundry Loggregator Firehose <cloudfoundry-firehose-nozzle>`"
+msgstr ":ref:`Cloud Foundry Loggregator Firehose <cloudfoundry-firehose-nozzle>`"
+
+#: ../../_includes/application-receiver-table.rst:87
+msgid ":ref:`Collectd plugin <collectd-plugin>`"
+msgstr ":ref:`Collectd plugin <collectd-plugin>`"
+
+#: ../../_includes/application-receiver-table.rst:92
+msgid ":ref:`Collectd df plugin <collectd-df>`"
+msgstr ":ref:`Collectd df plugin <collectd-df>`"
+
+#: ../../_includes/application-receiver-table.rst:97
+msgid ":ref:`Collectd uptime <collectd-uptime>`"
+msgstr ":ref:`Collectd uptime <collectd-uptime>`"
+
+#: ../../_includes/application-receiver-table.rst:102
+msgid ":ref:`Consul datastore <consul>`"
+msgstr ":ref:`Consul datastore <consul>`"
+
+#: ../../_includes/application-receiver-table.rst:107
+msgid ":ref:`Conviva Real-Time/Live video play <conviva>`"
+msgstr ":ref:`Conviva Real-Time/Live video play <conviva>`"
+
+#: ../../_includes/application-receiver-table.rst:112
+msgid ":ref:`CoreDNS <coredns>`"
+msgstr ":ref:`CoreDNS <coredns>`"
+
+#: ../../_includes/application-receiver-table.rst:117
+msgid ":ref:`Couchbase server <couchbase>`"
+msgstr ":ref:`Couchbase server <couchbase>`"
+
+#: ../../_includes/application-receiver-table.rst:122
+msgid ":ref:`CPU <cpu>`"
+msgstr ":ref:`CPU <cpu>`"
+
+#: ../../_includes/application-receiver-table.rst:127
+msgid ":ref:`CPUFreq <cpufreq>`"
+msgstr ":ref:`CPUFreq <cpufreq>`"
+
+#: ../../_includes/application-receiver-table.rst:132
+msgid ":ref:`Databricks Receiver <databricks_receiver>`"
+msgstr ":ref:`Databricks Receiver <databricks_receiver>`"
+
+#: ../../_includes/application-receiver-table.rst:137
+msgid ":ref:`Disk and partition <disk>`"
+msgstr ":ref:`Disk and partition <disk>`"
+
+#: ../../_includes/application-receiver-table.rst:142
+msgid ":ref:`DNS Query Input <dns>`"
+msgstr ":ref:`DNS Query Input <dns>`"
+
+#: ../../_includes/application-receiver-table.rst:147
+msgid ":ref:`Docker Containers <docker>`"
+msgstr ":ref:`Docker Containers <docker>`"
+
+#: ../../_includes/application-receiver-table.rst:152
+msgid ":ref:`Elasticsearch <elasticsearch>`"
+msgstr ":ref:`Elasticsearch <elasticsearch>`"
+
+#: ../../_includes/application-receiver-table.rst:157
+msgid ":ref:`Elasticsearch query <elasticsearch-query>`"
+msgstr ":ref:`Elasticsearch query <elasticsearch-query>`"
+
+#: ../../_includes/application-receiver-table.rst:162
+msgid ":ref:`etcd server <etcd>`"
+msgstr ":ref:`etcd server <etcd>`"
+
+#: ../../_includes/application-receiver-table.rst:167
+msgid ":ref:`Exec Input <exec-input>`"
+msgstr ":ref:`Exec Input <exec-input>`"
+
+#: ../../_includes/application-receiver-table.rst:172
+msgid ":ref:`Expvar (Go) <expvar>`"
+msgstr ":ref:`Expvar (Go) <expvar>`"
+
+#: ../../_includes/application-receiver-table.rst:177
+msgid ":ref:`Free disk space (filesystems) <filesystems>`"
+msgstr ":ref:`Free disk space (filesystems) <filesystems>`"
+
+#: ../../_includes/application-receiver-table.rst:182
+msgid ":ref:`GenericJMX <genericjmx>`"
+msgstr ":ref:`GenericJMX <genericjmx>`"
+
+#: ../../_includes/application-receiver-table.rst:187
+msgid ":ref:`GitLab <gitlab>`"
+msgstr ":ref:`GitLab <gitlab>`"
+
+#: ../../_includes/application-receiver-table.rst:192
+msgid ":ref:`Hadoop <hadoop>`"
+msgstr ":ref:`Hadoop <hadoop>`"
+
+#: ../../_includes/application-receiver-table.rst:197
+msgid ":ref:`Hadoop JMX <hadoopjmx>`"
+msgstr ":ref:`Hadoop JMX <hadoopjmx>`"
+
+#: ../../_includes/application-receiver-table.rst:202
+msgid ":ref:`HAProxy <haproxy>`"
+msgstr ":ref:`HAProxy <haproxy>`"
+
+#: ../../_includes/application-receiver-table.rst:207
+msgid ":ref:`Health Checker <health-checker>`"
+msgstr ":ref:`Health Checker <health-checker>`"
+
+#: ../../_includes/application-receiver-table.rst:212
+msgid ":ref:`Heroku <heroku>`"
+msgstr ":ref:`Heroku <heroku>`"
+
+#: ../../_includes/application-receiver-table.rst:217
+msgid ":ref:`Host metadata properties <host-metadata>`"
+msgstr ":ref:`Host metadata properties <host-metadata>`"
+
+#: ../../_includes/application-receiver-table.rst:222
+msgid ":ref:`Host metrics receiver <host-metrics-receiver>`"
+msgstr ":ref:`Host metrics receiver <host-metrics-receiver>`"
+
+#: ../../_includes/application-receiver-table.rst:227
+msgid ":ref:`Host process <processes>`"
+msgstr ":ref:`Host process <processes>`"
+
+#: ../../_includes/application-receiver-table.rst:232
+msgid ":ref:`Host process list <processlist>`"
+msgstr ":ref:`Host process list <processlist>`"
+
+#: ../../_includes/application-receiver-table.rst:237
+msgid ":ref:`Host process load <load>`"
+msgstr ":ref:`Host process load <load>`"
+
+#: ../../_includes/application-receiver-table.rst:242
+msgid ":ref:`HTTP <http>`"
+msgstr ":ref:`HTTP <http>`"
+
+#: ../../_includes/application-receiver-table.rst:247
+msgid ":ref:`Interface traffic <interface>`"
+msgstr ":ref:`Interface traffic <interface>`"
+
+#: ../../_includes/application-receiver-table.rst:252
+msgid ":ref:`Istio <get-started-istio>`"
+msgstr ":ref:`Istio <get-started-istio>`"
+
+#: ../../_includes/application-receiver-table.rst:257
+msgid ":ref:`Jaeger gRPC <jaeger-grpc>`"
+msgstr ":ref:`Jaeger gRPC <jaeger-grpc>`"
+
+#: ../../_includes/application-receiver-table.rst:262
+msgid ":ref:`Java metrics receiver <java-monitor>`"
+msgstr ":ref:`Java metrics receiver <java-monitor>`"
+
+#: ../../_includes/application-receiver-table.rst:267
+msgid ":ref:`Jenkins <jenkins>`"
+msgstr ":ref:`Jenkins <jenkins>`"
+
+#: ../../_includes/application-receiver-table.rst:272
+msgid ":ref:`JMX <jmx>`"
+msgstr ":ref:`JMX <jmx>`"
+
+#: ../../_includes/application-receiver-table.rst:277
+msgid ":ref:`Kafka consumer <kafka-consumer>`"
+msgstr ":ref:`Kafka consumer <kafka-consumer>`"
+
+#: ../../_includes/application-receiver-table.rst:282
+msgid ":ref:`Kafka producer <kafka-producer>`"
+msgstr ":ref:`Kafka producer <kafka-producer>`"
+
+#: ../../_includes/application-receiver-table.rst:287
+msgid ":ref:`Kong Gateway <kong>`"
+msgstr ":ref:`Kong Gateway <kong>`"
+
+#: ../../_includes/application-receiver-table.rst:292
+msgid ":ref:`Kubernetes API server <kubernetes-apiserver>`"
+msgstr ":ref:`Kubernetes API server <kubernetes-apiserver>`"
+
+#: ../../_includes/application-receiver-table.rst:297
+msgid ":ref:`Kubernetes cluster <kubernetes-cluster>`"
+msgstr ":ref:`Kubernetes cluster <kubernetes-cluster>`"
+
+#: ../../_includes/application-receiver-table.rst:302
+msgid ":ref:`Kubernetes Cluster Receiver <kubernetes-cluster-receiver>`"
+msgstr ":ref:`Kubernetes Cluster Receiver <kubernetes-cluster-receiver>`"
+
+#: ../../_includes/application-receiver-table.rst:307
+msgid ":ref:`Kubernetes controller manager <kube-controller-manager>`"
+msgstr ":ref:`Kubernetes controller manager <kube-controller-manager>`"
+
+#: ../../_includes/application-receiver-table.rst:312
+msgid ":ref:`Kubernetes events <kubernetes-events>`"
+msgstr ":ref:`Kubernetes events <kubernetes-events>`"
+
+#: ../../_includes/application-receiver-table.rst:317
+msgid ":ref:`Kubernetes network stats <kubelet-stats>`"
+msgstr ":ref:`Kubernetes network stats <kubelet-stats>`"
+
+#: ../../_includes/application-receiver-table.rst:322
+msgid ":ref:`Kubernetes proxy <kubernetes-proxy>`"
+msgstr ":ref:`Kubernetes proxy <kubernetes-proxy>`"
+
+#: ../../_includes/application-receiver-table.rst:327
+msgid ":ref:`Kubernetes scheduler <kubernetes-scheduler>`"
+msgstr ":ref:`Kubernetes scheduler <kubernetes-scheduler>`"
+
+#: ../../_includes/application-receiver-table.rst:332
+msgid ":ref:`Kubelet Stats Receiver <kubelet-stats-receiver>`"
+msgstr ":ref:`Kubelet Stats Receiver <kubelet-stats-receiver>`"
+
+#: ../../_includes/application-receiver-table.rst:337
+msgid ":ref:`Logparser<telegraf-logparser>`"
+msgstr ":ref:`Logparser<telegraf-logparser>`"
+
+#: ../../_includes/application-receiver-table.rst:342
+msgid ":ref:`Logstash<logstash>`"
+msgstr ":ref:`Logstash<logstash>`"
+
+#: ../../_includes/application-receiver-table.rst:347
+msgid ":ref:`Logstash TCP <logstash-tcp>`"
+msgstr ":ref:`Logstash TCP <logstash-tcp>`"
+
+#: ../../_includes/application-receiver-table.rst:352
+msgid ":ref:`Memcached <memcached>`"
+msgstr ":ref:`Memcached <memcached>`"
+
+#: ../../_includes/application-receiver-table.rst:357
+msgid ":ref:`Memory usage <memory>`"
+msgstr ":ref:`Memory usage <memory>`"
+
+#: ../../_includes/application-receiver-table.rst:361
+msgid ":ref:`Mesos Marathon <marathon>`"
+msgstr ":ref:`Mesos Marathon <marathon>`"
+
+#: ../../_includes/application-receiver-table.rst:366
+msgid ":ref:`Microsoft .NET <microsoft-dotnet>`"
+msgstr ":ref:`Microsoft .NET <microsoft-dotnet>`"
+
+#: ../../_includes/application-receiver-table.rst:371
+msgid ":ref:`Microsoft .NET runtime <get-started-dotnet>`"
+msgstr ":ref:`Microsoft .NET runtime <get-started-dotnet>`"
+
+#: ../../_includes/application-receiver-table.rst:376
+msgid ":ref:`Microsoft SQL Server <microsoft-sql-server>`"
+msgstr ":ref:`Microsoft SQL Server <microsoft-sql-server>`"
+
+#: ../../_includes/application-receiver-table.rst:381
+msgid ":ref:`Microsoft Windows IIS <windows-iis>`"
+msgstr ":ref:`Microsoft Windows IIS <windows-iis>`"
+
+#: ../../_includes/application-receiver-table.rst:386
+msgid ":ref:`MongoDB <mongodb>`"
+msgstr ":ref:`MongoDB <mongodb>`"
+
+#: ../../_includes/application-receiver-table.rst:391
+msgid ":ref:`MongoDB Atlas cluster <mongodb-atlas>`"
+msgstr ":ref:`MongoDB Atlas cluster <mongodb-atlas>`"
+
+#: ../../_includes/application-receiver-table.rst:396
+msgid ":ref:`MongoDB Atlas receiver <mongodb-atlas-receiver>`"
+msgstr ":ref:`MongoDB Atlas receiver <mongodb-atlas-receiver>`"
+
+#: ../../_includes/application-receiver-table.rst:401
+msgid ":ref:`MySQL <mysql>`"
+msgstr ":ref:`MySQL <mysql>`"
+
+#: ../../_includes/application-receiver-table.rst:406
+msgid ":ref:`Nagios <nagios>`"
+msgstr ":ref:`Nagios <nagios>`"
+
+#: ../../_includes/application-receiver-table.rst:411
+msgid ":ref:`Network interface I/O <net-io>`"
+msgstr ":ref:`Network interface I/O <net-io>`"
+
+#: ../../_includes/application-receiver-table.rst:416
+msgid ":ref:`Network protocols <protocols>`"
+msgstr ":ref:`Network protocols <protocols>`"
+
+#: ../../_includes/application-receiver-table.rst:421
+msgid ":ref:`NGINX <nginx>`"
+msgstr ":ref:`NGINX <nginx>`"
+
+#: ../../_includes/application-receiver-table.rst:426
+msgid ":ref:`NTPQ <telegraf-ntpq>`"
+msgstr ":ref:`NTPQ <telegraf-ntpq>`"
+
+#: ../../_includes/application-receiver-table.rst:431
+msgid ":ref:`NTP server <ntp>`"
+msgstr ":ref:`NTP server <ntp>`"
+
+#: ../../_includes/application-receiver-table.rst:436
+msgid ":ref:`OPcache <opcache>`"
+msgstr ":ref:`OPcache <opcache>`"
+
+#: ../../_includes/application-receiver-table.rst:441
+msgid ":ref:`OpenShift Cluster <openshift-cluster>`"
+msgstr ":ref:`OpenShift Cluster <openshift-cluster>`"
+
+#: ../../_includes/application-receiver-table.rst:446
+msgid ":ref:`OpenStack <openstack>`"
+msgstr ":ref:`OpenStack <openstack>`"
+
+#: ../../_includes/application-receiver-table.rst:451
+msgid ":ref:`Oracle Database receiver <oracledb>`"
+msgstr ":ref:`Oracle Database receiver <oracledb>`"
+
+#: ../../_includes/application-receiver-table.rst:456
+msgid ":ref:`PHP FPM <collectd-php-fpm>`"
+msgstr ":ref:`PHP FPM <collectd-php-fpm>`"
+
+#: ../../_includes/application-receiver-table.rst:461
+msgid ":ref:`PostgreSQL <postgresql>`"
+msgstr ":ref:`PostgreSQL <postgresql>`"
+
+#: ../../_includes/application-receiver-table.rst:466
+msgid ":ref:`procstat <procstat>`"
+msgstr ":ref:`procstat <procstat>`"
+
+#: ../../_includes/application-receiver-table.rst:471
+msgid ":ref:`Prometheus exporter <prometheus-exporter>`"
+msgstr ":ref:`Prometheus exporter <prometheus-exporter>`"
+
+#: ../../_includes/application-receiver-table.rst:476
+msgid ":ref:`Prometheus Go <prometheus-go>`"
+msgstr ":ref:`Prometheus Go <prometheus-go>`"
+
+#: ../../_includes/application-receiver-table.rst:481
+msgid ":ref:`Prometheus NGINX Ingress <prometheus-nginx-ingress>`"
+msgstr ":ref:`Prometheus NGINX Ingress <prometheus-nginx-ingress>`"
+
+#: ../../_includes/application-receiver-table.rst:486
+msgid ":ref:`Prometheus NGINX VTS <prometheus-nginx-vts>`"
+msgstr ":ref:`Prometheus NGINX VTS <prometheus-nginx-vts>`"
+
+#: ../../_includes/application-receiver-table.rst:491
+msgid ":ref:`Prometheus Node exporter <prometheus-node>`"
+msgstr ":ref:`Prometheus Node exporter <prometheus-node>`"
+
+#: ../../_includes/application-receiver-table.rst:496
+msgid ":ref:`Prometheus receiver <prometheus-receiver>`"
+msgstr ":ref:`Prometheus receiver <prometheus-receiver>`"
+
+#: ../../_includes/application-receiver-table.rst:501
+msgid ":ref:`Prometheus Velero <prometheus-velero>`"
+msgstr ":ref:`Prometheus Velero <prometheus-velero>`"
+
+#: ../../_includes/application-receiver-table.rst:506
+msgid ":ref:`RabbitMQ <rabbitmq>`"
+msgstr ":ref:`RabbitMQ <rabbitmq>`"
+
+#: ../../_includes/application-receiver-table.rst:511
+msgid ":ref:`Redis <redis>`"
+msgstr ":ref:`Redis <redis>`"
+
+#: ../../_includes/application-receiver-table.rst:516
+msgid ":ref:`SAP HANA <hana>`"
+msgstr ":ref:`SAP HANA <hana>`"
+
+#: ../../_includes/application-receiver-table.rst:521
+msgid ":ref:`SignalFx Forwarder <signalfx-forwarder>`"
+msgstr ":ref:`SignalFx Forwarder <signalfx-forwarder>`"
+
+#: ../../_includes/application-receiver-table.rst:526
+msgid ":ref:`SNMP agent <snmp>`"
+msgstr ":ref:`SNMP agent <snmp>`"
+
+#: ../../_includes/application-receiver-table.rst:531
+msgid ":ref:`SolrCloud <solr>`"
+msgstr ":ref:`SolrCloud <solr>`"
+
+#: ../../_includes/application-receiver-table.rst:536
+msgid ":ref:`SQL <sql>`"
+msgstr ":ref:`SQL <sql>`"
+
+#: ../../_includes/application-receiver-table.rst:541
+msgid ":ref:`Statsd <statsd>`"
+msgstr ":ref:`Statsd <statsd>`"
+
+#: ../../_includes/application-receiver-table.rst:546
+msgid ":ref:`Supervisor <supervisor>`"
+msgstr ":ref:`Supervisor <supervisor>`"
+
+#: ../../_includes/application-receiver-table.rst:551
+msgid ":ref:`systemd <collectd-systemd>`"
+msgstr ":ref:`systemd <collectd-systemd>`"
+
+#: ../../_includes/application-receiver-table.rst:556
+msgid ":ref:`Traefik <traefik>`"
+msgstr ":ref:`Traefik <traefik>`"
+
+#: ../../_includes/application-receiver-table.rst:561
+msgid ":ref:`Varnish <telegraf-varnish>`"
+msgstr ":ref:`Varnish <telegraf-varnish>`"
+
+#: ../../_includes/application-receiver-table.rst:566
+msgid ":ref:`VMware vSphere <vsphere>`"
+msgstr ":ref:`VMware vSphere <vsphere>`"
+
+#: ../../_includes/application-receiver-table.rst:571
+msgid ":ref:`Windows Performance Counters <telegraf-win-perf-counters>`"
+msgstr ":ref:`Windows Performance Counters <telegraf-win-perf-counters>`"
+
+#: ../../_includes/application-receiver-table.rst:576
+msgid ":ref:`Windows services <telegraf-win-services>`"
+msgstr ":ref:`Windows services <telegraf-win-services>`"
+
+#: ../../_includes/benefits.md:1
+msgid "After you configure the integration, you can access these features:"
+msgstr "統合を設定すると、これらの機能にアクセスできるようになります："
+
+#: ../../_includes/benefits.md:3
+msgid "View metrics. You can create your own custom dashboards, and most monitors provide built-in dashboards as well. For information about dashboards, see [View dashboards in Observability Cloud](https://docs.splunk.com/Observability/data-visualization/dashboards/view-dashboards.html#nav-View-dashboards)."
+msgstr ""
+"メトリックスを見る独自のカスタム・ダッシュボードを作成することもできるし、ほとんどのモニターはビルトイン・ダッシュボードも提供している。ダッシュボードについては、[Observability Cloud](https://docs.splunk.com/Observability/data-visualization/dashboards/view-dashboards.html#nav-View-dashboards) の View dashboards を参照し"
+"てください。"
+
+#: ../../_includes/benefits-events.md:4 ../../_includes/benefits.md:4
+msgid ""
+"View a data-driven visualization of the physical servers, virtual machines, AWS instances, and other resources in your environment that are visible to Infrastructure Monitoring. For information about navigators, see [Splunk Infrastructure Monitoring navigators](https://docs.splunk.com/Observability/infrastructure/"
+"navigators/navigators.html#nav-Splunk-Infrastructure-Monitoring-navigators)."
+msgstr ""
+"物理サーバー、仮想マシン、AWSインスタンス、およびInfrastructure Monitoringに表示される環境内のその他のリソースを、データに基づいて視覚化します。ナビゲータについては、[Splunk Infrastructure Monitoring navigators](https://docs.splunk.com/Observability/infrastructure/navigators/navigators.html#nav-Splunk-Infrastructure-"
+"Monitoring-navigators) を参照してください。"
+
+#: ../../_includes/benefits.md:5
+msgid "Access the Metric Finder and search for metrics sent by the monitor. For information, see [Use the Metric Finder](https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html#use-the-metric-finder)."
+msgstr "メトリック・ファインダーにアクセスして、モニターから送信されたメトリックを検索します。詳しくは、[メトリックファインダーの使用](https://docs.splunk.com/Observability/metrics-and-metadata/metrics-finder-metadata-catalog.html#use-the-metric-finder) をご覧ください。"
+
+#: ../../_includes/benefits-events.md:1
+msgid "Configure the integration to access these features:"
+msgstr "これらの機能にアクセスできるように統合を設定する："
+
+#: ../../_includes/benefits-events.md:3
+msgid "View events. You can create your own custom dashboards, and most monitors provide built-in dashboards as well. For information about dashboards, see [View dashboards in Observability Cloud](https://docs.splunk.com/Observability/data-visualization/dashboards/view-dashboards.html#nav-View-dashboards)."
+msgstr ""
+"イベントを見る独自のカスタム・ダッシュボードを作成することもできるし、ほとんどのモニターはビルトイン・ダッシュボードも提供している。ダッシュボードについては、[Observability Cloud](https://docs.splunk.com/Observability/data-visualization/dashboards/view-dashboards.html#nav-View-dashboards) の View dashboards を参照してく"
+"ださい。"
+
+#: ../../_includes/bind_address_error_msg.md:1
+msgid "**You’re getting a “bind: address already in use” error message**"
+msgstr "**bind:アドレスはすでに使用中です。"
+
+#: ../../_includes/bind_address_error_msg.md:3
+msgid "If you see an error message such as “bind: address already in use”, another resource is already using the port that the current configuration requires. This resource could be another application, or a tracing tool such as Jaeger or Zipkin."
+msgstr "bind: address already in use \"のようなエラーメッセージが表示された場合は、現在のコンフィギュレーションが要求しているポートを、別のリソースがすでに使用しています。このリソースは、他のアプリケーションであったり、JaegerやZipkinのようなトレースツールであったりする。"
+
+#: ../../_includes/bind_address_error_msg.md:5
+msgid "You can modify the configuration to use another port. You can modify any of these endpoints or ports:"
+msgstr "別のポートを使用するように設定を変更することができます。これらのエンドポイントやポートを変更することができる："
+
+#: ../../_includes/bind_address_error_msg.md:7
+msgid "Receiver endpoint"
+msgstr "レシーバー・エンドポイント"
+
+#: ../../_includes/bind_address_error_msg.md:8
+msgid "Extensions endpoint"
+msgstr "エクステンション・エンドポイント"
+
+#: ../../_includes/bind_address_error_msg.md:9
+msgid "Metrics address (if port 8888)"
+msgstr "メトリクスアドレス（ポート8888の場合）"
+
+#: ../../_includes/bind_address_error_msg.md:11
+msgid "If you see this error message on Kubernetes and you’re using Helm charts, modify the configuration by updating the chart values for both configuration and exposed ports."
+msgstr "Kubernetesでこのエラーメッセージが表示され、Helmチャートを使用している場合は、コンフィギュレーションと公開ポートの両方のチャート値を更新してコンフィギュレーションを修正してください。"
+
+#: ../../_includes/chart-mts-count.rst:8
+msgid "Maximum number of metric time series processed in a signal"
+msgstr "信号内で処理されるメトリック時系列の最大数"
+
+#: ../../_includes/chart-mts-count.rst:10
+msgid ""
+"To maximize responsiveness when processing incoming metric data, Splunk Observability Cloud limits the number of :term:`metric time series` (MTS) processed in a signal (single plot line) on a chart or detector. If the total number of time series for the metric specified in your signal exceeds this limit, Observability "
+"Cloud displays an orange border around the MTS number. This border notifies you that the processed data reflects only a subset of the time series in the data."
+msgstr ""
+"受信したメトリックデータを処理する際の応答性を最大化するために、Splunk Observability Cloud は、チャートまたは検出器上のシグナル (単一のプロットライン) で処理されるメトリック時系列` (MTS) の:term:`の数を制限します。シグナルで指定したメトリックの時系列の合計数がこの制限を超えると、Observability CloudはMTS番号の周囲にオレ"
+"ンジ色の境界線を表示します。この境界線は、処理されたデータがデータ中の時系列の一部のみを反映していることを知らせる。"
+
+#: ../../_includes/chart-mts-count.rst:14
+msgid "To ensure that your charts and detectors are processing all the time series in the data, apply as many filters as necessary to make the MTS number less than the maximum. You’ll know you’ve succeeded when the orange outline around the MTS number and the message at the top of the chart or detector no longer appear."
+msgstr "チャートとディテクターがデータ内のすべての時系列を処理していることを確認するには、MTSの数値が最大値より小さくなるように、必要な数のフィルターを適用します。MTS番号の周囲にオレンジ色の輪郭が表示され、チャートまたは検出器の上部にメッセージが表示されなくなれば、成功です。"
+
+#: ../../_includes/chart-mts-count.rst:17
+msgid ""
+"For example, suppose you want to display the sum of available disk capacity per availability zone. You might use ``df.complex.free`` as your signal, then apply the Sum analytics function, grouped by availability zone. If you have a large number of disks, the number of MTS returned by this signal might exceed the limit. "
+"To reduce the number of MTS, use filters and multiple plots instead of the group-by option in the Sum analytics function."
+msgstr ""
+"例えば、アベイラビリティ・ゾーンごとに利用可能なディスク容量の合計を表示したいとする。``df.complex.free`` をシグナルとして使用し、アベイラビリティゾーンごとにグループ化したSum分析機能を適用することもできる。ディスクの数が多い場合、この信号が返すMTSの数が制限を超える可能性がある。MTSの数を減らすには、Sum分析機能でgroup-"
+"byオプションの代わりにフィルターと複数のプロットを使用します。"
+
+#: ../../_includes/chart-mts-count.rst:21
+msgid "To use filters and multiple plots instead of the group-by option, follow these steps:"
+msgstr "group-byオプションの代わりにフィルターと複数のプロットを使用するには、以下の手順に従う："
+
+#: ../../_includes/chart-mts-count.rst:23
+msgid "Apply a filter for the plot that selects a single availability zone, then use the Sum analytic function without the group-by option."
+msgstr "単一のアベイラビリティ・ゾーンを選択するフィルタをプロットに適用し、Sum分析関数をgroup-byオプションなしで使用する。"
+
+#: ../../_includes/chart-mts-count.rst:24
+msgid "At the end of the plot row, select :guilabel:`Configure plot` to open :guilabel:`Visualization Options`, then select a color from :guilabel:`Plot Color`."
+msgstr "プロット行の最後に、:guilabel:`Configure plot` を選択して、:guilabel:`Visualization Options` を開き、:guilabel:`Plot Color` から色を選択します。"
+
+#: ../../_includes/chart-mts-count.rst:25
+msgid "Clone the plot. To do this, open the :guilabel:`plot actions` menu at the end of the plot row in the :guilabel:`Plot Editor`, then select :menuselection:`Clone`."
+msgstr "プロットをクローンする。これを行うには、:guilabel:`Plot Editor` のプロット行の最後にある:guilabel:`plot actions` メニューを開き、:menuselection:`Clone` を選択します。"
+
+#: ../../_includes/chart-mts-count.rst:27
+msgid "In the cloned plot, change the availability zone filter to select another availability zone, and change the :guilabel:`Plot Color` to give the cloned plot a color that's different from the original plot."
+msgstr "クローンされたプロットで、アベイラビリティゾーンフィルタを変更して別のアベイラビリティゾーンを選択し、:guilabel:`Plot Color` 、クローンされたプロットに元のプロットとは異なる色を与えます。"
+
+#: ../../_includes/chart-mts-count.rst:29
+msgid "Continue to clone plots, change the availability zone filter, and change the plot color until you have one plot for each availability zone."
+msgstr "各利用可能ゾーンに1つのプロットができるまで、プロットのクローン、利用可能ゾーンフィルターの変更、プロットの色の変更を続ける。"
+
+#: ../../_includes/chart-mts-count.rst:31
+msgid "The result is one chart with a separate plot line for each availability zone. Each plot line has a distinct color."
+msgstr "その結果、各アベイラビリティ・ゾーンに別々のプロット線が引かれた1つのチャートが出来上がる。それぞれのプロットラインには明確な色がある。"
+
+#: ../../_includes/chart-mts-count.rst:33
+msgid "For more information on filtering, see :ref:`filter-signal`."
+msgstr "フィルタリングの詳細については、:ref:`filter-signal` を参照のこと。"
+
+#: ../../_includes/collector-installation-linux-only.md:1 ../../_includes/collector-installation-linux.md:1 ../../_includes/collector-installation-windows.md:1 ../../_includes/collector-installation.md:1
+msgid "Follow these steps to deploy this integration:"
+msgstr "この統合を導入するには、以下の手順に従ってください："
+
+#: ../../_includes/collector-installation-linux-only.md:3 ../../_includes/collector-installation-linux.md:3 ../../_includes/collector-installation.md:3
+msgid "Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:"
+msgstr "OpenTelemetry Collector の Splunk ディストリビューションをホストまたはコンテナプラットフォームにデプロイします："
+
+#: ../../_includes/collector-installation-linux.md:4 ../../_includes/collector-installation.md:4
+msgid "{ref}`Install on Kubernetes <otel-install-k8s>`"
+msgstr "{参考}`Kubernetesへのインストール <otel-install-k8s>`"
+
+#: ../../_includes/collector-installation-linux-only.md:4 ../../_includes/collector-installation-linux.md:5 ../../_includes/collector-installation.md:5
+msgid "{ref}`Install on Linux <otel-install-linux>`"
+msgstr "{参考}`Linuxへのインストール <otel-install-linux>`"
+
+#: ../../_includes/collector-installation-windows.md:4 ../../_includes/collector-installation.md:6
+msgid "{ref}`Install on Windows <otel-install-windows>`"
+msgstr "{参考}`Windowsへのインストール <otel-install-windows>`"
+
+#: ../../_includes/collector-installation-linux-only.md:5 ../../_includes/collector-installation-linux.md:6 ../../_includes/collector-installation-windows.md:5 ../../_includes/collector-installation.md:7
+msgid "Configure the monitor, as described in the Configuration section."
+msgstr "設定のセクションで説明するように、モニターを設定する。"
+
+#: ../../_includes/collector-installation-linux-only.md:6 ../../_includes/collector-installation-linux.md:7 ../../_includes/collector-installation-windows.md:6 ../../_includes/collector-installation.md:8
+msgid "Restart the Splunk Distribution of OpenTelemetry Collector."
+msgstr "OpenTelemetry Collector の Splunk ディストリビューションを再起動する。"
+
+#: ../../_includes/collector-installation-windows.md:3
+msgid "Deploy the Splunk Distribution of OpenTelemetry Collector to your host:"
+msgstr "OpenTelemetry Collector の Splunk ディストリビューションをホストにデプロイします："
+
+#: ../../_includes/configuration.md:1
+msgid "To use this integration of a Smart Agent monitor with the Collector:"
+msgstr "スマートエージェントモニタとコレクタの統合を使用するには、以下の手順に従います："
+
+#: ../../_includes/configuration.md:3
+msgid "Include the Smart Agent receiver in your configuration file."
+msgstr "スマートエージェントレシーバーを設定ファイルに含めます。"
+
+#: ../../_includes/configuration.md:4
+msgid "Add the monitor type to the Collector configuration, both in the receiver and pipelines sections."
+msgstr "レシーバセクションおよびパイプラインセクションの両方で、Collector 構成にモニタタイプを追加します。"
+
+#: ../../_includes/configuration.md:6
+msgid "Read more on how to [Use Smart Agent monitors with the Collector](https://docs.splunk.com/Observability/gdi/opentelemetry/smart-agent-migration-monitors.html)."
+msgstr "[コレクターでスマートエージェントモニタを使用する方法については、](https://docs.splunk.com/Observability/gdi/opentelemetry/smart-agent-migration-monitors.html) を参照してください。"
+
+#: ../../_includes/configuration.md:7
+msgid "See how to set up the [Smart Agent receiver](https://docs.splunk.com/observability/gdi/opentelemetry/components/smartagent-receiver.html)."
+msgstr "[Smart Agent受信機の設定方法](https://docs.splunk.com/observability/gdi/opentelemetry/components/smartagent-receiver.html) を参照してください。"
+
+#: ../../_includes/configuration.md:8
+msgid "Learn about config options in [Collector default configuration](https://docs.splunk.com/Observability/gdi/opentelemetry/configure-the-collector-ootb.html#nav-Collector-default-configuration)."
+msgstr "設定オプションについては、[Collector デフォルト設定](https://docs.splunk.com/Observability/gdi/opentelemetry/configure-the-collector-ootb.html#nav-Collector-default-configuration) を参照してください。"
+
+#: ../../_includes/event-sending-functionality.md:1
+msgid ""
+"This monitor includes event-sending functionality to let you post your own custom events to Observability Cloud. For example, you can send your own custom event when you deploy a new version of your software or update other parts of your infrastructure. You can then view these events in the Observability Cloud user "
+"interface (UI)."
+msgstr ""
+"このモニターには、独自のカスタム・イベントをObservability Cloudに投稿できるイベント送信機能が含まれています。例えば、ソフトウェアの新バージョンをデプロイしたり、インフラストラクチャの他の部分を更新したときに、独自のカスタムイベントを送信することができます。その後、Observability Cloudのユーザー・インターフェース（UI）で"
+"これらのイベントを表示できます。"
+
+#: ../../_includes/event-sending-functionality.md:3
+msgid "Make monitors with event-sending functionality members of a logs pipeline that uses a SignalFx exporter to make the event submission requests. Use a Resource Detection processor to ensure that host identity and other useful information is made available as event dimensions."
+msgstr "イベント送信機能を持つモニターを、SignalFx エクスポーターを使用してイベント送信要求を行うログパイプラインのメンバーにする。リソース検出プロセッサを使用して、ホストのIDやその他の有用な情報がイベントディメンジョンとして利用できるようにする。"
+
+#: ../../_includes/event-sending-functionality.md:5
+msgid "For example:"
+msgstr "例えば、こうだ："
+
+#: ../../_includes/gdi/java-requirements.rst:1
+msgid "The agent of the Splunk Distribution of OpenTelemetry Java is compatible with the following Java versions:"
+msgstr "OpenTelemetry Java の Splunk ディストリビューションのエージェントは、以下の Java バージョンと互換性があります："
+
+#: ../../_includes/gdi/java-requirements.rst:3
+msgid "Java 8 starting from 8u40 (8u262 for AlwaysOn Profiling)"
+msgstr "8u40 以降の Java 8（AlwaysOn プロファイリングの場合は 8u262）"
+
+#: ../../_includes/gdi/java-requirements.rst:4
+msgid "Java 11 and higher LTS versions"
+msgstr "Java 11およびそれ以降のLTSバージョン"
+
+#: ../../_includes/gdi/java-requirements.rst:6
+msgid "The following Java Virtual Machines (JVMs) are compatible:"
+msgstr "以下のJava仮想マシン（JVM）に対応しています："
+
+#: ../../_includes/gdi/java-requirements.rst:8
+msgid "AdoptOpenJDK"
+msgstr "AdoptOpenJDK"
+
+#: ../../_includes/gdi/java-requirements.rst:9
+msgid "Amazon Corretto"
+msgstr "Amazon Corretto"
+
+#: ../../_includes/gdi/java-requirements.rst:10
+msgid "Azul Zulu"
+msgstr "Azul Zulu"
+
+#: ../../_includes/gdi/java-requirements.rst:11
+msgid "BellSoft Liberica JDK"
+msgstr "BellSoft Liberica JDK"
+
+#: ../../_includes/gdi/java-requirements.rst:12
+msgid "Eclipse Adoptium/Temurin"
+msgstr "エクリプス・アドプティウム／テムリン"
+
+#: ../../_includes/gdi/java-requirements.rst:13
+msgid "IBM J9 (AlwaysOn Profiling is not supported)"
+msgstr "IBM J9 (AlwaysOn プロファイリングはサポートされていません)"
+
+#: ../../_includes/gdi/java-requirements.rst:14
+msgid "Microsoft OpenJDK"
+msgstr "Microsoft OpenJDK"
+
+#: ../../_includes/gdi/java-requirements.rst:15
+msgid "Oracle OpenJDK"
+msgstr "オラクルOpenJDK"
+
+#: ../../_includes/gdi/java-requirements.rst:16
+msgid "Red Hat OpenJDK"
+msgstr "Red Hat OpenJDK"
+
+#: ../../_includes/gdi/java-requirements.rst:17
+msgid "SAP SapMachine"
+msgstr "SAP SapMachine"
+
+#: ../../_includes/gdi/next-steps.rst:2
+msgid "Next steps"
+msgstr "次のステップ"
+
+#: ../../_includes/gdi/next-steps.rst:4
+msgid "After activating automatic instrumentation, :ref:`verify-apm-data`."
+msgstr "自動計装を作動させた後、:ref:`verify-apm-data` 。"
+
+#: ../../_includes/gdi/zero-conf-reqs.rst:1
+msgid "Automatic instrumentation is only available for applications using supported Java libraries. See :ref:`supported-java-libraries`. If your application isn't supported, manually instrument your service to generate trace data. See :ref:`java-manual-instrumentation` ."
+msgstr "自動インストルメンテーションは、サポートされているJavaライブラリを使用しているアプリケーションでのみ利用可能です。:ref:`supported-java-libraries` を参照。アプリケーションがサポートされていない場合は、手動でサービスを計測してトレースデータを生成する。:ref:`java-manual-instrumentation` を参照。"
+
+#: ../../_includes/gdi/zero-conf-reqs.rst:3
+msgid ":ref:`java-requirements`."
+msgstr ":ref:`java-requirements`."
+
+#: ../../_includes/gdi/zero-conf-reqs.rst:5
+msgid "Your Splunk Observability Cloud realm and access token."
+msgstr "Splunk Observability Cloud レルムとアクセストークン。"
+
+#: ../../_includes/gdi/zero-conf-reqs.rst:7
+msgid "To get an access token, see :ref:`admin-api-access-tokens`."
+msgstr "アクセストークンを取得するには、:ref:`admin-api-access-tokens` を参照してください。"
+
+#: ../../_includes/gdi/zero-conf-reqs.rst:9
+msgid "To find the realm name of your account, open the navigation menu in Splunk Observability Cloud. Select :menuselection:`Settings`, and then select your username. The realm name appears in the :guilabel:`Organizations` section."
+msgstr "アカウントのレルム名を見つけるには、Splunk Observability Cloud のナビゲーションメニューを開きます。:menuselection:`Settings` を選択し、ユーザー名を選択します。レルム名は:guilabel:`Organizations` セクションに表示される。"
+
+#: ../../_includes/gdi/zero-config-preview-header.rst:1
+msgid "Preview: Splunk Zero Config Auto Instrumentation"
+msgstr "プレビューSplunk Zero Config 自動計測"
+
+#: ../../_includes/gdi/zero-config-preview-header.rst:3
+msgid ""
+"Preview features described in this document are provided by Splunk to you \"as is\" without any warranties, maintenance and support, or service-level commitments. Splunk makes this preview feature available in its sole discretion and may discontinue it at any time. Use of preview features is subject to the :new-page:"
+"`Splunk General Terms <https://www.splunk.com/en_us/legal/splunk-general-terms.html>`."
+msgstr ""
+"本ドキュメントに記載されているプレビュー機能は、保証、メンテナンス、サポート、サービスレベルのコミットメントを伴わずに、Splunk からお客様に「現状のまま」提供されます。Splunk はこのプレビュー機能を独自の判断で利用可能にし、いつでも中止することができます。プレビュー機能の使用には、:new-page:`Splunk 一般規約<https://www."
+"splunk.com/en_us/legal/splunk-general-terms.html>` が適用されます。"
+
+#: ../../_includes/metric-categories.rst:6
+msgid ":strong:`Category type`"
+msgstr ":strong:`カテゴリー`"
+
+#: ../../_includes/metric-categories.rst:7
+msgid ":strong:`Description`"
+msgstr ":strong:`説明`"
+
+#: ../../_includes/metric-categories.rst:9
+msgid "0"
+msgstr "0"
+
+#: ../../_includes/metric-categories.rst:13
+msgid "1"
+msgstr "1"
+
+#: ../../_includes/metric-categories.rst:14
+msgid "Host"
+msgstr "ホスト"
+
+#: ../../_includes/metric-categories.rst:16
+msgid "2"
+msgstr "2"
+
+#: ../../_includes/metric-categories.rst:17
+msgid "Container"
+msgstr "コンテナ"
+
+#: ../../_includes/metric-categories.rst:19
+msgid "3"
+msgstr "3"
+
+#: ../../_includes/metric-categories.rst:23
+msgid "4"
+msgstr "4"
+
+#: ../../_includes/metric-categories.rst:24
+msgid "Hi-resolution"
+msgstr "ハイレゾ"
+
+#: ../../_includes/metric-categories.rst:26
+msgid "5"
+msgstr "5"
+
+#: ../../_includes/metric-categories.rst:27
+msgid "Internal"
+msgstr "内部"
+
+#: ../../_includes/metric-categories.rst:29
+msgid "6"
+msgstr "6"
+
+#: ../../_includes/metric-categories.rst:30
+msgid "Tracing metrics"
+msgstr "メトリクスのトレース"
+
+#: ../../_includes/metric-categories.rst:32
+msgid "7"
+msgstr "7"
+
+#: ../../_includes/metric-categories.rst:36
+msgid "8"
+msgstr "8"
+
+#: ../../_includes/metric-categories.rst:37
+msgid "APM hosts"
+msgstr "APMホスト"
+
+#: ../../_includes/metric-categories.rst:39
+msgid "9"
+msgstr "9"
+
+#: ../../_includes/metric-categories.rst:40
+msgid "APM container"
+msgstr "APMコンテナ"
+
+#: ../../_includes/metric-categories.rst:42
+msgid "10"
+msgstr "10"
+
+#: ../../_includes/metric-categories.rst:43
+msgid "APM identity"
+msgstr "APMアイデンティティ"
+
+#: ../../_includes/metric-categories.rst:45
+msgid "11"
+msgstr "11"
+
+#: ../../_includes/metric-categories.rst:46
+msgid "APM bundled metrics"
+msgstr "APMバンドル・メトリクス"
+
+#: ../../_includes/metric-categories.rst:48
+msgid "12"
+msgstr "12"
+
+#: ../../_includes/metric-categories.rst:49
+msgid "APM Troubleshooting MetricSets"
+msgstr "APMのトラブルシューティング メトリックセット"
+
+#: ../../_includes/metric-categories.rst:51
+msgid "13"
+msgstr "13"
+
+#: ../../_includes/metric-categories.rst:52
+msgid "APM Monitoring MetricSets"
+msgstr "APM監視メトリックセット"
+
+#: ../../_includes/metric-categories.rst:54
+msgid "14"
+msgstr "14"
+
+#: ../../_includes/metric-categories.rst:55
+msgid "Infrastructure Monitoring function"
+msgstr "インフラ監視機能"
+
+#: ../../_includes/metric-categories.rst:57
+msgid "15"
+msgstr "15"
+
+#: ../../_includes/metric-categories.rst:58
+msgid "APM function"
+msgstr "APM機能"
+
+#: ../../_includes/metric-categories.rst:60
+msgid "16"
+msgstr "16"
+
+#: ../../_includes/metric-categories.rst:61
+msgid "RUM Troubleshooting MetricSets"
+msgstr "RUM メトリックセットのトラブルシューティング"
+
+#: ../../_includes/metric-categories.rst:63
+msgid "17"
+msgstr "17"
+
+#: ../../_includes/metric-categories.rst:64
+msgid "RUM Monitoring MetricSets"
+msgstr "RUMモニタリング・メトリックセット"
+
+#: ../../_includes/metric-categories.rst:66
+msgid "18"
+msgstr "18"
+
+#: ../../_includes/metric-categories.rst:67
+msgid "Network Explorer metrics"
+msgstr "ネットワーク・エクスプローラーの測定基準"
+
+#: ../../_includes/metric-categories.rst:69
+msgid "19"
+msgstr "19"
+
+#: ../../_includes/metric-categories.rst:70
+msgid "Runtime metrics"
+msgstr "ランタイム・メトリクス"
+
+#: ../../_includes/metric-categories.rst:72
+msgid "20"
+msgstr "20"
+
+#: ../../_includes/metric-categories.rst:73
+msgid "Synthetics metrics"
+msgstr "合成樹脂の測定基準"
+
+#: ../../_includes/metric-categories.rst:75
+msgid "In MTS-based subscription plans, all metrics are categorized as custom metrics and billed accordingly."
+msgstr "MTSベースのサブスクリプション・プランでは、すべてのメトリクスがカスタム・メトリクスに分類され、それに応じて課金されます。"
+
+#: ../../_includes/metric-defs.md:1
+msgid "Learn more about the available [metric types](https://docs.splunk.com/Observability/metrics-and-metadata/metric-types.html#nav-Metric-types) in Observability Cloud."
+msgstr "Observability Cloudで利用可能な[メトリックタイプ](https://docs.splunk.com/Observability/metrics-and-metadata/metric-types.html#nav-Metric-types) 。"
+
+#: ../../_includes/metric-defs.md:2
+msgid ""
+"In host-based subscription plans, default metrics are those metrics included in host-based subscriptions in Observability Cloud, such as host, container, or bundled metrics. Custom metrics are not provided by default and might be subject to charges. See more about [metric categories](https://docs.splunk.com/"
+"Observability/metrics-and-metadata/metric-categories.html#nav-Metric-categories)."
+msgstr ""
+"ホスト・ベースのサブスクリプション・プランでは、デフォルトのメトリクスは、ホスト、コンテナ、バンドル・メトリクスなど、Observability Cloudのホスト・ベースのサブスクリプションに含まれるメトリクスです。カスタム・メトリクスはデフォルトでは提供されず、有償となる場合があります。[メートル カテゴリー](https://docs.splunk.com/"
+"Observability/metrics-and-metadata/metric-categories.html#nav-Metric-categories) についてもっと見る。"
+
+#: ../../_includes/metric-defs.md:3
+msgid "In MTS-based subscription plans, all metrics are custom."
+msgstr "MTSベースのサブスクリプションプランでは、すべてのメトリクスがカスタムです。"
+
+#: ../../_includes/metric-defs.md:4
+msgid "To add additional metrics, see how to configure `extraMetrics` [using the Collector](https://docs.splunk.com/Observability/gdi/opentelemetry/components/smartagent-receiver.html#add-additional-metrics)."
+msgstr "追加のメトリクスを追加するには、コレクター](https://docs.splunk.com/Observability/gdi/opentelemetry/components/smartagent-receiver.html#add-additional-metrics) を使用して`extraMetrics` [を構成する方法を参照してください。"
+
+#: ../../_includes/missing_pipeline_configuration.md:1
+msgid "**You're getting a “2021-10-19T20:18:40.556Z info builder/receivers_builder.go:112 Ignoring receiver as it is not used by any pipeline {\"kind\": \"receiver\", \"name\": \"<receiver>\" error message**"
+msgstr "**2021-10-19T20:18:40.556Z info builder/receivers_builder.go:112 Ignoring receiver as it is not used by any pipeline {\"kind\": \"receiver\", \"name\": \"<receiver>\" error message**」というエラーメッセージが表示されます。"
+
+#: ../../_includes/missing_pipeline_configuration.md:3
+msgid "This error occurs when a component (receiver, processor, or exporter) has been configured, but is not used in a receiver pipeline. For example, the following error message tells you that the `smartagent/http` receiver is configured, but that it is not used by any pipeline:"
+msgstr "このエラーは、コンポーネント（レシーバー、プロセッサー、エクスポーター）が設定されているにもかかわらず、レシーバー パイプラインで使用されていない場合に発生します。たとえば、次のエラーメッセージは、`smartagent/http` レシーバーは設定されているが、どのパイプラインでも使用されていないことを伝えている："
+
+#: ../../_includes/missing_pipeline_configuration.md:8
+msgid ""
+"Once configured, all components must be enabled by using pipelines in the service section. The service section is used to configure what components are enabled based on the configuration found in the components sections of your configuration file. If a component is configured, but not defined within the service "
+"section, then it is not enabled."
+msgstr ""
+"一度設定したら、サービスセクションのパイプラインを使用して、すべてのコンポーネントを有効にする必要があります。サービスセクションは、コンフィギュレーションファイルのコンポーネントセクションにあるコンフィギュレーションに基づいて、どのコンポーネントを有効にするかを設定するために使用されます。コンポーネントが設定されている"
+"が、サービスセクション内で定義されていない場合、そのコンポーネントは有効にならない。"
+
+#: ../../_includes/missing_pipeline_configuration.md:10
+msgid "Here is a sample configuration:"
+msgstr "以下に設定例を示す："
+
+#: ../../_includes/missing_pipeline_configuration.md:23
+msgid "See [How the OpenTelemetry Collector uses pipelines to process data](https://docs.splunk.com/observability/gdi/opentelemetry/data-processing.html#common-processing-scenarios) for more information."
+msgstr "詳細は[How OpenTelemetry Collector uses pipelines to process data](https://docs.splunk.com/observability/gdi/opentelemetry/data-processing.html#common-processing-scenarios) を参照。"
+
+#: ../../_includes/out_of_memory_error.md:1
+msgid "**The Splunk Distribution of OpenTelemetry Collector is out of memory**"
+msgstr "**OpenTelemetry Collector の Splunk ディストリビューションがメモリ不足です。"
+
+#: ../../_includes/out_of_memory_error.md:3
+msgid "If you receive high memory usage or out of memory warnings, do the following before opening a support case:"
+msgstr "メモリ使用量が多い、またはメモリ不足の警告が表示される場合は、サポート・ケースを開く前に次のことを行ってください："
+
+#: ../../_includes/out_of_memory_error.md:5
+msgid "Verify that you have installed the latest version of the [Splunk Distribution of OpenTelemetry Collector for Kubernetes](https://github.com/signalfx/splunk-otel-collector-chart/releases)."
+msgstr "最新バージョンの[Splunk Distribution of OpenTelemetry Collector for Kubernetes](https://github.com/signalfx/splunk-otel-collector-chart/releases) がインストールされていることを確認してください。"
+
+#: ../../_includes/out_of_memory_error.md:6
+msgid "Add or change the `memory_limiter` processor in your configuration file. For example:"
+msgstr "設定ファイルに`memory_limiter` プロセッサーを追加または変更する。例えば、こうだ："
+
+#: ../../_includes/out_of_memory_error.md:24
+msgid ""
+"Try to reproduce the error and collect a heap dump close to the point where the memory kill occurs: a. Add the `pprof` extension to the component configuration that is failing. Make sure you enable this extension in a pipeline in the services section.  b. Capture the output of the following commands against the "
+"problematic pod:"
+msgstr "エラーを再現し、メモリキルが発生したポイントの近くでヒープダンプを収集してみる。`pprof` 拡張を、失敗しているコンポーネント構成に追加する。サービスセクションのパイプラインでこの拡張機能を有効にしていることを確認する。問題のあるポッドに対する以下のコマンドの出力をキャプチャする："
+
+#: ../../_includes/out_of_memory_error.md:32
+msgid "For example, if you discover that the pod lasts 5 minutes before it gets killed:"
+msgstr "例えば、ポッドが死ぬまで5分間持つことがわかったとする："
+
+#: ../../_includes/out_of_memory_error.md:34
+msgid "Bounce the pod and collect the first set of data right after the startup."
+msgstr "ポッドをバウンスさせ、始動直後に最初のデータセットを収集する。"
+
+#: ../../_includes/out_of_memory_error.md:35
+msgid "Wait 3 minutes and collect another set of data (make sure to label the data accordingly)."
+msgstr "3分待ち、別のデータを収集する（データには必ずラベルを貼る）。"
+
+#: ../../_includes/out_of_memory_error.md:36
+msgid "Collect another set of data right before the crash (if possible)."
+msgstr "可能であれば）クラッシュの直前に別のデータを収集する。"
+
+#: ../../_includes/out_of_memory_error.md:38
+msgid "How long does it take for the pod to be killed due to memory limit? Check the logs at the time of the issue to see if there are any obvious repeating errors."
+msgstr "メモリ制限のためにポッドが強制終了されるまでの時間は？問題が発生した時点のログをチェックし、明らかな繰り返しエラーがないかどうかを確認する。"
+
+#: ../../_includes/out_of_memory_error.md:40
+msgid "Gather additional [support information](https://docs.splunk.com/Observability/gdi/opentelemetry/support-checklist.html#nav-Gather-information-to-open-a-support-request), including your end-to-end architecture information."
+msgstr "エンド・ツー・エンド・アーキテクチャ情報を含む、追加の[サポート情報](https://docs.splunk.com/Observability/gdi/opentelemetry/support-checklist.html#nav-Gather-information-to-open-a-support-request) を収集する。"
+
+#: ../../_includes/realm-note.rst:1
+msgid "Note about realms"
+msgstr "レルムについて"
+
+#: ../../_includes/realm-note.rst:3
+msgid ""
+"A realm is a self-contained deployment of Splunk Observability Cloud in which your organization is hosted. Different realms have different API endpoints. For example, the endpoint for sending data in the ``us1`` realm is ``https://ingest.us1.signalfx.com``, while the endpoint for sending data in the ``eu0`` realm is "
+"``https://ingest.eu0.signalfx.com``."
+msgstr ""
+"レルムとは、組織がホストされている Splunk Observability Cloud の自己完結型の展開のことです。異なるレルムには異なるAPIエンドポイントがある。例えば、``us1`` レルムにおけるデータ送信のエンドポイントは``https://ingest.us1.signalfx.com`` であり、``eu0`` レルムにおけるデータ送信のエンドポイントは``https://ingest.eu0.signalfx."
+"com`` である。"
+
+#: ../../_includes/realm-note.rst:6
+msgid ""
+"When you see a placeholder realm name in the documentation, such as ``<YOUR_REALM>``, replace it with your actual realm name. To find your realm name, open the left navigation menu in Observability Cloud, select :menuselection:`Settings`, and select your username. The realm name appears in the :guilabel:`Organizations` "
+"section. If you don't include the realm name when specifying an endpoint, Observability Cloud defaults to the ``us0`` realm."
+msgstr ""
+"``<YOUR_REALM>`` のようなプレースホルダのレルム名がドキュメントに記載されている場合は、それを実際のレルム名に置き換えてください。レルム名を見つけるには、Observability Cloudの左ナビゲーションメニューを開き、:menuselection:`Settings` を選択し、ユーザー名を選択します。レルム名は:guilabel:`Organizations` セクションに表示さ"
+"れる。エンドポイントを指定する際にレルム名を含めなかった場合、Observability Cloudのデフォルトは``us0`` レルムになります。"
+
+#: ../../_includes/rum-data-model.rst:1
+msgid "The Splunk RUM data model represents the following logical entities, following OpenTelemetry conventions:"
+msgstr "Splunk RUM データモデルは、OpenTelemetry の規約に従って、以下の論理エンティティを表します："
+
+#: ../../_includes/rum-data-model.rst:6
+msgid "Trace"
+msgstr "トレース"
+
+#: ../../_includes/rum-data-model.rst:7
+msgid ""
+"A set of events triggered as a result of a single logical operation, distributed across various components of an application. Traces contain events that cross process, network, and security boundaries. A RUM trace can, for example, initiate when someone taps on a button to start an action on a website. If you use RUM "
+"and APM together, traces represent calls made between the downstream services that handle the requests initiated by the user action."
+msgstr ""
+"アプリケーションのさまざまなコンポーネントに分散された、単一の論理操作の結果としてトリガーされる一連のイベント。トレースには、プロセス、ネットワーク、セキュリティの境界を越えるイベントが含まれる。RUMトレースは、例えば、誰かがウェブサイト上でアクションを開始するためにボタンをタップしたときに開始することができます。RUMと"
+"APMを一緒に使用する場合、トレースは、ユーザーアクションによって開始されたリクエストを処理するダウンストリームサービス間のコールを表します。"
+
+#: ../../_includes/rum-data-model.rst:8
+msgid "Span"
+msgstr "スパン"
+
+#: ../../_includes/rum-data-model.rst:9
+msgid ""
+"An operation within a transaction. A single span includes the logical name, the start and end timestamp of the operation, and the events and attributes linked to the captured data. A span might have a reference to its parent span and zero or more causally-related spans. Spans have universal attributes and custom "
+"attributes."
+msgstr "トランザクション内の操作。一つのスパンには、論理名、操作の開始と終了のタイムスタンプ、キャプチャされたデータにリンクされたイベントと属性が含まれる。スパンは、その親スパンへの参照と、0個以上の因果関係のあるスパンを持つかもしれない。スパンにはユニバーサル属性とカスタム属性があります。"
+
+#: ../../_includes/rum-data-model.rst:10
+msgid "Session"
+msgstr "セッション"
+
+#: ../../_includes/rum-data-model.rst:11
+msgid "A collection of traces that correspond to the actions a single user takes when interacting with an application over a period of time. By default, a session lasts until 15 minutes passed from the last event captured in the session. The maximum session duration is 4 hours."
+msgstr "一人のユーザーがある期間にわたってアプリケーションを操作したときにとったアクションに対応するトレースの集まり。デフォルトでは、セッションは、そのセッションで最後にキャプチャされたイベントから15分経過するまで続く。最大セッション時間は4時間。"
+
+#: ../../_includes/rum-data-model.rst:12
+msgid "Interaction"
+msgstr "交流"
+
+#: ../../_includes/rum-data-model.rst:13
+msgid "Reflects the action the user conducts within the user interface. Common interaction types include mouse clicks, taps on a touch screen, and keyboard events."
+msgstr "ユーザーがユーザーインターフェイス内で行うアクションを反映します。一般的なインタラクションの種類には、マウスクリック、タッチスクリーンのタップ、キーボードイベントなどがある。"
+
+#: ../../_includes/rum-data-model.rst:14
+msgid "User"
+msgstr "ユーザー"
+
+#: ../../_includes/rum-data-model.rst:15
+msgid ""
+"By default, Splunk RUM doesn't collect identity data. Mapping a trace to a specific user requires manual instrumentation. Users can be represented by their username, email addresses, or using a synthetic identifier. Synthetic representation is useful in situations where PII regulations do not allow users to be "
+"identified."
+msgstr "デフォルトでは、Splunk RUM は ID データを収集しません。トレースを特定のユーザーにマッピングするには、手作業による計測が必要である。ユーザは、ユーザ名、電子メールアドレス、または合成識別子で表すことができます。合成的な表現は、PIIの規制によりユーザーを特定できない状況で有用である。"
+
+#: ../../_includes/synthetics/configure-test.rst:2
+msgid "Customize your test details"
+msgstr "テストの詳細をカスタマイズする"
+
+#: ../../_includes/synthetics/configure-test.rst:4
+msgid "Use these steps to customize your test configuration and finish creating your test:"
+msgstr "以下の手順を使用して、テスト構成をカスタマイズし、テストの作成を完了します："
+
+#: ../../_includes/synthetics/configure-test.rst:6
+msgid "In the :guilabel:`Locations` field, enter the locations from which you want to test the URL. You can select one or multiple locations."
+msgstr ":guilabel:`Locations` フィールドに、URLをテストする場所を入力します。1ヶ所でも複数ヶ所でも選択可能。"
+
+#: ../../_includes/synthetics/configure-test.rst:7
+msgid "In the :guilabel:`Device Type` field, use the list to select the device from which you'd like to conduct the test."
+msgstr ":guilabel:`Device Type` フィールドで、テストを実施するデバイスをリストから選択します。"
+
+#: ../../_includes/synthetics/configure-test.rst:8
+msgid "In the :guilabel:`Frequency` field, select your desired test frequency from the list."
+msgstr ":guilabel:`Frequency` フィールドで、リストから希望のテスト周波数を選択する。"
+
+#: ../../_includes/synthetics/configure-test.rst:9
+msgid "(Optional) Use the :guilabel:`Round Robin` selector to switch between options: enabling Round Robin means your test cycles through your selected locations one at a time, while disabling Round Robin runs the test from all selected locations concurrently at your selected frequency."
+msgstr "(オプション):guilabel:`Round Robin` セレクタを使用して、オプションを切り替えます。Round Robin を有効にすると、選択したロケーショ ンでテストが一度に循環し、Round Robin を無効にすると、選択した周波数で選択したすべてのロケーショ ンからテストが同時に実行されます。"
+
+#: ../../_includes/synthetics/configure-test.rst:10
+msgid "If you want to receive alerts from this test, select :guilabel:`+ Create detector` to set up a detector on the test. Use the dialog box to customize your detector."
+msgstr "この検査からアラートを受信したい場合は、:guilabel:`+ Create detector` を選択して、検査に検出器を設定します。ダイアログボックスを使用して、検出器をカスタマイズします。"
+
+#: ../../_includes/synthetics/configure-test.rst:11
+msgid "Select :guilabel:`Submit`. This redirects you to the Test History page for your new test. If you've just created the test, allow at least one test frequency interval for your test to begin collecting synthetic data."
+msgstr ":guilabel:`Submit` を選択する。これにより、新しいテストのテスト履歴ページにリダイレクトされます。テストを作成したばかりの場合は、テストが合成データの収集を開始するまで、少なくとも1回のテスト頻度間隔を空けてください。"
+
+#: ../../_includes/synthetics/configure-test.rst:12
+msgid "(Optional) Select :guilabel:`Edit test` or the three-dot :guilabel:`Actions` menu in the row for your test to edit, pause, duplicate, or delete this test."
+msgstr "(オプション）テストの行で、:guilabel:`Edit test（テストの編集）` 、または三点鎖線の:guilabel:`Actions（アクション）` メニューを選択して、このテストを編集、一時停止、複製、または削除します。"
+
+#: ../../_includes/synthetics/configure-test.rst:15
+msgid "See also"
+msgstr "こちらも参照"
+
+#: ../../_includes/synthetics/configure-test.rst:17
+msgid "See :ref:`public-locations` to learn more about the locations from which you can run your test."
+msgstr "テストを実行できる場所については、:ref:`public-locations` を参照してください。"
+
+#: ../../_includes/synthetics/configure-test.rst:18
+msgid "See :ref:`synth-alerts` to learn more about detector options."
+msgstr "検出器のオプションについては、:ref:`synth-alerts` をご覧ください。"
+
+#: ../../_includes/tag-decision-support.rst:1
+msgid "Deciding where to add a span tag"
+msgstr "spanタグを追加する場所の決定"
+
+#: ../../_includes/tag-decision-support.rst:3
+msgid "When you add span tags to spans via application instrumentation, you have the most control at the per-application level. The tradeoff is that it can be more time-consuming to add an attribute via instrumentation for each of your applications."
+msgstr "アプリケーション・インスツルメンテーションによってスパンにスパン・タグを追加する場合、アプリケーション単位で最もコントロールしやすくなります。トレードオフは、アプリケーションごとにインスツルメンテーションで属性を追加するのは時間がかかるということだ。"
+
+#: ../../_includes/tag-decision-support.rst:5
+msgid ""
+"Adding span tags in a downstream OpenTelemetry Collector can save time, at the cost of granularity. If a tag is applicable to 100% of the data received by the OpenTelemetry Collector in which you are adding it, adding the tag in your OpenTelemetry Collector config file is fastest. But if you need to apply logic to "
+"differentiate the spans that receive a tag via the OpenTelemetry Collector, it is likely faster to add the tags at the application level via instrumentation."
+msgstr ""
+"ダウンストリームのOpenTelemetry Collectorでspanタグを追加することで、粒度を犠牲にして時間を節約することができる。タグを追加する OpenTelemetry Collector が受信するデータの 100% にタグが適用できる場合、OpenTelemetry Collector の設定ファイルにタグを追加するのが最も速いです。しかし、OpenTelemetry Collector 経由でタグを受信"
+"したスパンを区別するためにロジックを適用する必要がある場合は、インスツルメンテーションによってアプリケーションレベルでタグを追加する方が早いでしょう。"
+
+#: ../../_includes/tag-decision-support.rst:7
+msgid ""
+"For instance, if multiple applications exist on the same host in a K8s deployment, but in different environments (for instance, ``production``, ``development``, and ``staging``), setting the ``deployment.environment`` tag using the instrumentation library allows you to differentiate environments among spans from the "
+"same host."
+msgstr ""
+"例えば、K8sのデプロイメントにおいて、複数のアプリケーションが同じホスト上に存在するが、異なる環境にある場合（例えば、``production`` 、``development`` 、``staging`` ）、インスツルメンテーションライブラリを使用して``deployment.environment`` タグを設定することで、同じホストからのスパン間で環境を区別することができます。"
+
+#: ../../_includes/troubleshooting.md:3
+msgid "If you are not able to see your data in Splunk Observability Cloud, try these tips:"
+msgstr "Splunk Observability Cloud でデータが表示されない場合は、以下のヒントをお試しください："
+
+#: ../../_includes/troubleshooting.md:5
+msgid "Submit a case in the [Splunk Support Portal](https://splunkcommunities.force.com/customers/home/home.jsp)"
+msgstr "[Splunk サポートポータルでケースを送信する](https://splunkcommunities.force.com/customers/home/home.jsp)"
+
+#: ../../_includes/troubleshooting-components.rst:4 ../../_includes/troubleshooting.md:6 ../../_includes/troubleshooting.md:9
+msgid "Available to Splunk Observability Cloud customers"
+msgstr "Splunk Observability Cloudをご利用のお客様"
+
+#: ../../_includes/troubleshooting.md:8
+msgid "Call [Splunk Customer Support](https://www.splunk.com/en_us/about-splunk/contact-us.html#customer-support)"
+msgstr "電話[Splunk カスタマーサポート](https://www.splunk.com/en_us/about-splunk/contact-us.html#customer-support)"
+
+#: ../../_includes/troubleshooting.md:11
+msgid "Ask a question and get answers through community support at [Splunk Answers](https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx)"
+msgstr "[Splunk Answers のコミュニティサポートで質問し、回答を得る。](https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx)"
+
+#: ../../_includes/troubleshooting.md:12 ../../_includes/troubleshooting.md:15
+msgid "Available to Splunk Observability Cloud customers and free trial users"
+msgstr "Splunk Observability Cloudの顧客および無料トライアルユーザーが利用可能"
+
+#: ../../_includes/troubleshooting.md:14
+msgid "Join the Splunk [#observability](https://splunk-usergroups.slack.com/archives/C01AK4CCWR4) user group Slack channel to communicate with customers, partners, and Splunk employees worldwide"
+msgstr "Splunk[#observability](https://splunk-usergroups.slack.com/archives/C01AK4CCWR4) ユーザーグループの Slack チャンネルに参加して、世界中の顧客、パートナー、Splunk 社員とのコミュニケーションを図りましょう。"
+
+#: ../../_includes/troubleshooting.md:16
+msgid "To learn how to join, see [Get Started with Splunk Community - Chat groups](https://docs.splunk.com/Documentation/Community/current/community/Chat)"
+msgstr "参加方法については、[Splunk コミュニティを始める - チャットグループを参照してください。](https://docs.splunk.com/Documentation/Community/current/community/Chat)"
+
+#: ../../_includes/troubleshooting.md:18
+msgid "To learn about even more support options, see [Splunk Customer Success](https://www.splunk.com/en_us/customer-success.html)."
+msgstr "その他のサポートオプションについては、[Splunk Customer Success](https://www.splunk.com/en_us/customer-success.html) をご覧ください。"
+
+#: ../../_includes/troubleshooting-components.rst:1
+msgid "If you are a Splunk Observability Cloud customer and are not able to see your data in Splunk Observability Cloud, you can get help in the following ways."
+msgstr "Splunk Observability Cloudをご利用のお客様で、Splunk Observability Cloudでデータを確認できない場合は、以下の方法でサポートを受けることができます。"
+
+#: ../../_includes/troubleshooting-components.rst:6
+msgid "Submit a case in the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`."
+msgstr ":new-page:`Splunk サポートポータル<https://splunkcommunities.force.com/customers/home/home.jsp>` でケースを送信します。"
+
+#: ../../_includes/troubleshooting-components.rst:8
+msgid "Call :new-page:`Splunk Customer Support <https://www.splunk.com/en_us/about-splunk/contact-us.html>`."
+msgstr "電話:new-page:`Splunk カスタマーサポート<https://www.splunk.com/en_us/about-splunk/contact-us.html>`."
+
+#: ../../_includes/troubleshooting-components.rst:11
+msgid "Available to customers and free trial users"
+msgstr "顧客および無料トライアルユーザーが利用可能"
+
+#: ../../_includes/troubleshooting-components.rst:13
+msgid "Ask a question and get answers through community support at :new-page:`Splunk Answers <https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx>`."
+msgstr "コミュニティサポート:new-page:`Splunk Answers<https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx>` で質問し、回答を得ることができます。"
+
+#: ../../_includes/troubleshooting-components.rst:15
+msgid ""
+"Join the Splunk :new-page:`#observability <https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` user group Slack channel to communicate with customers, partners, and Splunk employees worldwide. To join, see :new-page:`Chat groups <https://docs.splunk.com/Documentation/Community/current/community/Chat>` in the "
+"*Get Started with Splunk Community* manual."
+msgstr ""
+"Splunk:new-page:`#observability<https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` ユーザーグループの Slack チャンネルに参加して、世界中の顧客、パートナー、Splunk 社員とのコミュニケーションを図りましょう。参加するには、*Get Started with Splunk Community* マニュアルの:new-page:`Chat groups<https://docs.splunk."
+"com/Documentation/Community/current/community/Chat>` を参照してください。"
+
+#: ../../_includes/troubleshooting-components.rst:17
+msgid "To learn about even more support options, see :new-page:`Splunk Customer Success <https://www.splunk.com/en_us/customer-success.html>`."
+msgstr "その他のサポートオプションについては、:new-page:`Splunk Customer Success<https://www.splunk.com/en_us/customer-success.html>` をご覧ください。"
+
+#: ../../_includes/troubleshooting-steps.rst:2
+msgid "Report an issue"
+msgstr "問題を報告する"
+
+#: ../../_includes/troubleshooting-steps.rst:4
+msgid "Before you create an issue or open a support request, try gathering the following information:"
+msgstr "issueを作成したり、サポートリクエストを開く前に、以下の情報を集めてみてください："
+
+#: ../../_includes/troubleshooting-steps.rst:6
+msgid "What happened and the impact of the issue."
+msgstr "何が起こったのか、そしてその影響は？"
+
+#: ../../_includes/troubleshooting-steps.rst:7
+msgid "All the steps you've followed until the issue appeared."
+msgstr "問題が発生するまでのすべての手順。"
+
+#: ../../_includes/troubleshooting-steps.rst:8
+msgid "What was the expected outcome."
+msgstr "期待された結果は？"
+
+#: ../../_includes/troubleshooting-steps.rst:9
+msgid "Your attempts to solve the issue, including workarounds."
+msgstr "回避策を含む、問題を解決するための試み。"
+
+#: ../../_includes/troubleshooting-steps.rst:10
+msgid "The operating system, runtime or compiler version, libraries, frameworks, and application servers of your environment, including your instrumentation settings."
+msgstr "あなたの環境のオペレーティングシステム、ランタイムまたはコンパイラのバージョン、ライブラリ、フレームワーク、アプリケーションサーバー（インスツルメンテーション設定を含む）。"
+
+#: ../../_includes/troubleshooting-steps.rst:11
+msgid "Debug logs and other logs that might help troubleshoot the issue."
+msgstr "問題のトラブルシューティングに役立つ可能性のあるデバッグ・ログおよびその他のログ。"
+
+#: ../../_includes/troubleshooting-steps.rst:13
+msgid "To get help, see :ref:`support`."
+msgstr "詳しくは:ref:`support` をご覧ください。"
