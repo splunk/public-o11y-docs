@@ -88,6 +88,7 @@ The following table shows the configuration options for the `vsphere` monitor:
 | `tlsCACertPath` | No | `string` | Path to the CA certificate file. |
 | `tlsClientCertificatePath` | No | `string` | Path to the client certificate. Both `tlsClientKeyPath` and `tlsClientCertificatePath` must be present. The files must contain PEM encoded data. |
 | `tlsClientKeyPath` | No | `string` | Path to the keyfile. |
+| `vmHostDimension` | No | `string` | The host dimension value set for monitored VMs. The options are `ip` (default value, the VM IP if available), `hostname` (the VM Hostname if available) , and `disable` (the vsphere monitor does not set the host dimension on the VM metrics).|
 
 To report metrics for a vSphere deployment, this monitor logs into a vCenter Server and retrieves data about the deployment and real time performance data on a regular interval. When the monitor first runs, it logs in to the vCenter Server and traverses the inventory, gathering and caching all of the hosts and virtual machines and their available metrics.
 
