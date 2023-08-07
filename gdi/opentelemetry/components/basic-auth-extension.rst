@@ -131,15 +131,6 @@ You can either authenticate servers or clients with the extension. If you config
 
 * To configure the extension as a client authenticator, set ``client_auth``.
 
-Metrics
-======================
-
-The following metrics, resource attributes, and attributes are available.
-
-.. raw:: html
-
-  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/basicauthextension.yaml"></div>
-
 Troubleshooting
 ======================
 
