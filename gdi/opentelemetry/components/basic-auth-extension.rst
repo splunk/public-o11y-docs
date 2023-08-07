@@ -122,26 +122,6 @@ The following table shows the configuration options for the ``basicauth`` extens
 
   <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/extension/basicauth.yaml"></div>
 
-
-MANUAL TABLE HERE
-
-
-.. list-table::
-  :widths: 10 90
-  :width: 100%
-  :header-rows: 1
-
-  * - Name
-    - Description   
-  * - ``htpasswd.file`` 
-    - The path to the htpasswd file.
-  * - ``htpasswd.inline`` 
-    - The htpasswd file inline content.
-  * - ``client_auth.username`` 
-    - Username to use for client authentication.
-  * - ``client_auth.password`` 
-    - Password to use for client authentication.
-
 Authenticate servers or clients
 --------------------------------------------
 
