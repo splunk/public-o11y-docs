@@ -183,12 +183,12 @@ Run the instrumented application
 Use the script in the output folder of the build to open the application with automatic instrumentation activated.
 
 - On Windows, use ``splunk-launch.cmd <application_executable>``.
-- On *nix, use ``splunk-launch.sh <application_executable>``.
+- On Linux, use ``splunk-launch.sh <application_executable>``.
 
 If you open the application using the ``dotnet`` CLI, add ``dotnet`` after the script.
 
 - On Windows, use ``splunk-launch.cmd dotnet <application>``.
-- On *nix, use ``splunk-launch.sh dotnet <application>``.
+- On Linux, use ``splunk-launch.sh dotnet <application>``.
 
 The script passes all the command-line parameters you provide to the application.
 
