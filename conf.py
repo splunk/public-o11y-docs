@@ -14,12 +14,8 @@ sys.path.insert(0, os.path.join(os.path.abspath('.'), '_ext'))
 from assetminify import final_conf_includes
 
 extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
     'sphinx_copybutton',
     'notfound.extension',
-    'toggle',
     'newpage',
     'github',
     'optimizer',

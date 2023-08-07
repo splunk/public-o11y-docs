@@ -41,7 +41,7 @@ You have two ways to send AWS data to Splunk Observability Cloud:
 * Through :ref:`API polling <aws-api-polling>` at specified intervals. 
 * Using :ref:`CloudWatch Metric Streams <aws-metricstreams>`. 
 
-.. caution:: CloudWatch Metric Streams doesn't support filtering based on resource tags. 
+.. caution:: CloudWatch Metric Streams supports filtering by namespace and metric name but doesn't support filtering based on resource tags.
 
 .. _aws-api-polling:
 

@@ -49,7 +49,7 @@ When you set up a test, you can choose the viewport size from a list of common d
     <h3>Network connection</h3>
   </embed>
 
-You can run Browser, Uptime, or API tests to simulate network connections of various latencies, including Mobile LTE, Mobile 3G, DSL, and cable internet. Testing your site from a variety of connection types lets you monitor the experience of users in a variety of settings. 
+You can run Browser, Uptime, or API tests to simulate network connections of various latencies, including Mobile LTE, Mobile 3G, DSL, Mobile 5G, and cable internet. Testing your site from a variety of connection types lets you monitor the experience of users in a variety of settings. 
 
 .. raw:: html
 
@@ -82,9 +82,12 @@ Use variables to fill in fields, provide URLs, and enter other information durin
   </embed>
 
 
-Specify locations for your tests to simulate traffic from a range of checkpoints around the world, or use Private locations to test sites from within a private network.
+Specify locations for your tests to simulate traffic from a range of checkpoints around the world, or use private locations to test sites from within a private network.
 
-See :ref:`public-locations` for a list of available public locations. 
+For more, see: 
+
+* :ref:`public-locations` 
+* :ref:`private-locations`
 
 .. * See :ref:`private-locations` to set up private locations. 
 
@@ -120,3 +123,42 @@ The current status of a test is updated every time you load the :guilabel:`Test 
 
 
 
+.. raw:: html
+
+  <embed>
+    <h2>Test naming conventions</h2>
+  </embed>
+
+Choosing informative names for your tests and alerts helps organize content. Here are some guidelines: 
+
+* Add a category as a prefix to your test name like group, application, brand, or team names so that you can simplify searches. For example, these two Browser tests start with ``[ButtercupGames]``. 
+
+* Add a description about the purpose of the test like the workflow, process, performance, or data source.
+
+.. image:: /_images/synthetics/ButtercupGames-naming-convention.png
+      :width: 99%
+      :alt: This image shows two Browser tests with the prefix [ButtercupGames].
+
+
+.. raw:: html
+
+  <embed>
+    <h2>Troubleshoot broken tests </h2>
+  </embed>
+
+
+Follow these guidelines to troubleshoot a broken test. 
+
+#. (Optional) Make a copy of the test so that you can check various solutions before fixing the original test. 
+#. Open the test page and see when the test started to fail. Consider the following questions:
+
+    * When did the check fail? Is there a pattern among other failed runs?
+    * Does the check fail consistently on the same step, or intermittently?
+    * Is this the first time the check has failed on this step? Did you make a recent change to the test?
+    * Was the failure tied to a specific location or across all locations? 
+
+#. Open the run results view of a failed test, find the step that is failing and go to the link. 
+#. Open inspect element. 
+#. Duplicate the step and repeat the steps in your test until you find the broken step. 
+#. Verify that there is one instance only of the selector you want to use in your test. If the selector appears more than once your test might break again in the future. Unique selectors provide optimal test performance. 
+#. Update your tests with your findings. 

@@ -1,0 +1,1795 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023 Splunk, Inc
+# This file is distributed under the same license as the Splunk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Splunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-01 01:26+0000\n"
+"PO-Revision-Date: 2023-08-01 17:35+0100\n"
+"Last-Translator: \n"
+"Language-Team: ja_JA <LL@li.org>\n"
+"Language: ja_JA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#: ../../get-started/contribute.rst:-1
+msgid "Anyone can update the the Splunk Observability Cloud documentation by adding examples, documenting new settings, or fixing issues. Read on to learn how to edit the documentation."
+msgstr "例の追加、新しい設定の文書化、問題の修正など、誰でも Splunk Observability Cloud ドキュメントを更新することができます。ドキュメントの編集方法については、こちらをお読みください。"
+
+#: ../../<rst_prolog>:18
+msgid "Take shift"
+msgstr "テイク・シフト"
+
+#: ../../get-started/contribute.rst:5
+msgid "Contribute to Splunk Observability Cloud documentation"
+msgstr "Splunk Observability Cloud ドキュメントへの貢献"
+
+#: ../../get-started/contribute.rst:10
+msgid "You can update the Splunk Observability Cloud documentation to fix typos or other issues, add examples, or document new settings. You can also submit deeper changes, such as conceptual explanations, diagrams, and even entire new topics that can benefit all users."
+msgstr "Splunk Observability Cloud ドキュメントを更新して、誤字やその他の問題を修正したり、例を追加したり、新しい設定を文書化したりすることができます。また、概念的な説明、図表、さらにはすべてのユーザーに役立つ新しいトピック全体など、より深い変更を提出することもできます。"
+
+#: ../../get-started/contribute.rst:18
+msgid "If you're unsure about a change or have a different question about the docs, use the feedback form at the bottom of every page to send questions or comments to the Observability Cloud documentation team."
+msgstr "変更について不明な点がある場合、またはドキュメントについて別の質問がある場合は、各ページの下部にあるフィードバック・フォームを使用して、Observability Cloudドキュメント・チームに質問やコメントを送信してください。"
+
+#: ../../get-started/contribute.rst:21
+msgid "Prerequisites"
+msgstr "前提条件"
+
+#: ../../get-started/contribute.rst:23
+msgid "To update the Observability Cloud documentation you need a GitHub account."
+msgstr "Observability Cloudのドキュメントを更新するには、GitHubアカウントが必要です。"
+
+#: ../../get-started/contribute.rst:25
+msgid "You can use an existing GitHub account or create one for free in the GitHub website."
+msgstr "既存のGitHubアカウントを使用するか、GitHubウェブサイトで無料で作成することができます。"
+
+#: ../../get-started/contribute.rst:28
+msgid "Edit this page link"
+msgstr "このページのリンクを編集する"
+
+#: ../../get-started/contribute.rst:30
+msgid "On every page of the Observability Cloud documentation you can find an :guilabel:`Edit this page` link. Select the link to load the source of the document in a GitHub preview and start editing."
+msgstr "Observability Cloudドキュメントの各ページには、:guilabel:`Edit this page` リンクがあります。リンクを選択すると、GitHubプレビューでドキュメントのソースが読み込まれ、編集が開始されます。"
+
+#: ../../get-started/contribute.rst:-1
+msgid "Location of the Edit this page link"
+msgstr "このページを編集する」リンクの場所"
+
+#: ../../get-started/contribute.rst:36
+msgid "After you've completed your edit, GitHub prompts you to open a pull request and fill out the description of the changes using a template."
+msgstr "編集が完了すると、GitHub はプルリクエストを開き、テンプレートを使って変更内容を記入するよう促します。"
+
+#: ../../get-started/contribute.rst:38
+msgid "Within three days, the Observability Cloud documentation team reviews your pull request and might ask you to make some edits. If the changes are approved, the pull requests is approved and merged."
+msgstr "3日以内に、Observability Cloudドキュメンテーションチームがあなたのプルリクエストをレビューし、いくつかの編集をお願いすることがあります。変更が承認されれば、プルリクエストは承認され、マージされる。"
+
+#: ../../get-started/contribute.rst:41
+msgid "Contribution guidelines"
+msgstr "寄付のガイドライン"
+
+#: ../../get-started/contribute.rst:43
+msgid "You can learn more about how to build and test the docs locally, as well as review criteria, in the :new-page:`CONTRIBUTING.md <https://github.com/splunk/public-o11y-docs/blob/main/CONTRIBUTING.md>` file."
+msgstr ":new-page:`CONTRIBUTING.md<https://github.com/splunk/public-o11y-docs/blob/main/CONTRIBUTING.md>` ファイルで、ローカルでドキュメントをビルドしてテストする方法やレビュー基準について詳しく知ることができます。"
+
+#: ../../get-started/download-mobile.rst:-1
+msgid "See requirements, download Splunk Observability Cloud for Mobile on iOS and Android, and authenticate."
+msgstr "要件を確認し、iOS および Android のモバイル版 Splunk Observability Cloud をダウンロードして認証してください。"
+
+#: ../../get-started/download-mobile.rst:5
+msgid "Download Splunk Observability Cloud for Mobile"
+msgstr "モバイル版Splunk Observability Cloudをダウンロード"
+
+#: ../../get-started/download-mobile.rst:10
+msgid "You can download Splunk Observability Cloud for Mobile from the Apple App Store or the Google Play store."
+msgstr "モバイル版 Splunk Observability Cloud は、Apple App Store または Google Play ストアからダウンロードできます。"
+
+#: ../../get-started/download-mobile.rst:14
+msgid "Requirements"
+msgstr "必要条件"
+
+#: ../../get-started/download-mobile.rst:16
+msgid "To use Splunk Observability Cloud for Mobile you must be a Splunk Observability Cloud user."
+msgstr "Splunk Observability Cloud for Mobile を使用するには、Splunk Observability Cloud ユーザーである必要があります。"
+
+#: ../../get-started/download-mobile.rst:18
+msgid "See the following tables for the minimum hardware and software requirements for Splunk Observability Mobile."
+msgstr "Splunk Observability Mobile の最小ハードウェア要件と最小ソフトウェア要件については、以下の表を参照してください。"
+
+#: ../../get-started/download-mobile.rst:22
+msgid "iOS requirements"
+msgstr "iOSの要件"
+
+#: ../../get-started/download-mobile.rst:27 ../../get-started/download-mobile.rst:44
+msgid ":strong:`Component`"
+msgstr ":strong:`コンポーネント`"
+
+#: ../../get-started/download-mobile.rst:28 ../../get-started/download-mobile.rst:45
+msgid ":strong:`Minimum requirement`"
+msgstr ":strong:`最低条件`"
+
+#: ../../get-started/download-mobile.rst:30
+msgid "iOS version"
+msgstr "iOS版"
+
+#: ../../get-started/download-mobile.rst:31
+msgid "iOS 13 or later"
+msgstr "iOS 13以降"
+
+#: ../../get-started/download-mobile.rst:34 ../../get-started/download-mobile.rst:51
+msgid "Hardware"
+msgstr "ハードウェア"
+
+#: ../../get-started/download-mobile.rst:35
+msgid "iPhone 6s, 6s Plus, or later"
+msgstr "iPhone 6s、6s Plus、またはそれ以降"
+
+#: ../../get-started/download-mobile.rst:39
+msgid "Android requirements"
+msgstr "アンドロイドの要件"
+
+#: ../../get-started/download-mobile.rst:47
+msgid "Android version"
+msgstr "アンドロイド版"
+
+#: ../../get-started/download-mobile.rst:48
+msgid "Android 7 or later"
+msgstr "アンドロイド7以降"
+
+#: ../../get-started/download-mobile.rst:52
+msgid "Any Android phone or tablet device"
+msgstr "すべてのAndroid携帯電話またはタブレット端末"
+
+#: ../../get-started/download-mobile.rst:55
+msgid "Other devices might work with Splunk Observability Cloud for Mobile on iOS and Android but have not been certified as compatible by Splunk."
+msgstr "その他のデバイスは、iOS および Android の Splunk Observability Cloud for Mobile で動作する可能性がありますが、Splunk によって互換性が認定されていません。"
+
+#: ../../get-started/download-mobile.rst:59
+msgid "Download Splunk Observability for Mobile from the App Store"
+msgstr "モバイル版 Splunk Observability を App Store からダウンロードする"
+
+#: ../../get-started/download-mobile.rst:61
+msgid "On your mobile device, launch the App Store."
+msgstr "モバイルデバイスでApp Storeを起動します。"
+
+#: ../../get-started/download-mobile.rst:62 ../../get-started/download-mobile.rst:73
+msgid "Enter :strong:`“Splunk Observability Cloud”` in the search bar."
+msgstr "検索バーに:strong:`\"Splunk Observability Cloud\"` と入力してください。"
+
+#: ../../get-started/download-mobile.rst:63 ../../get-started/download-mobile.rst:74
+msgid "Tap the Splunk Observability Cloud Mobile app."
+msgstr "Splunk Observability Cloud Mobile アプリをタップします。"
+
+#: ../../get-started/download-mobile.rst:64
+msgid "Tap :strong:`Get`."
+msgstr ":strong:`Get` をタップする。"
+
+#: ../../get-started/download-mobile.rst:65
+msgid "Confirm the download with your Apple ID to install Splunk Observability Cloud for Mobile on your device."
+msgstr "お使いのデバイスにSplunk Observability Cloud for Mobileをインストールするには、Apple IDでダウンロードを確認します。"
+
+#: ../../get-started/download-mobile.rst:70
+msgid "Download Splunk Observability for Mobile from the Google Play store"
+msgstr "モバイル版 Splunk Observability を Google Play ストアからダウンロードする"
+
+#: ../../get-started/download-mobile.rst:72
+msgid "On your mobile device, launch the Google Play store."
+msgstr "モバイル端末でGoogle Playストアを起動します。"
+
+#: ../../get-started/download-mobile.rst:75
+msgid "Download Splunk Observability Cloud for Mobile."
+msgstr "モバイル向けSplunk Observability Cloudをダウンロードする。"
+
+#: ../../get-started/download-mobile.rst:77
+msgid "Due to Chinese network restrictions, you can't access the Splunk Observability Cloud for Mobile app from the iOS App Store or the Google PlayStore if you are in mainland China and have a device that is on a Chinese network carrier."
+msgstr "中国のネットワーク制限により、中国本土にお住まいで、中国のネットワークキャリアのデバイスをお使いの場合、iOS App Store または Google PlayStore から Splunk Observability Cloud for Mobile アプリにアクセスできません。"
+
+#: ../../get-started/download-mobile.rst:81
+msgid "User Authentication in Splunk Observability for Mobile"
+msgstr "モバイル版 Splunk Observability におけるユーザー認証"
+
+#: ../../get-started/download-mobile.rst:83
+msgid "After you download Splunk Observability Cloud for Mobile, you have a variety of authentication methods to choose from in order to access your Splunk Observability Cloud instances."
+msgstr "Splunk Observability Cloud for Mobile をダウンロードした後、Splunk Observability Cloud インスタンスにアクセスするために、さまざまな認証方法から選択できます。"
+
+#: ../../get-started/download-mobile.rst:85
+msgid "Launch Splunk Observability Cloud on your mobile device."
+msgstr "モバイルデバイスで Splunk Observability Cloud を起動します。"
+
+#: ../../get-started/download-mobile.rst:86
+msgid "Select your realm or enter a custom URL."
+msgstr "レルムを選択するか、カスタムURLを入力してください。"
+
+#: ../../get-started/download-mobile.rst:88
+msgid "When your Observability Cloud admin set up Single Sign On (SSO), they created a custom URL for your organization. The URL must be a subdomain of signalfx.com. An example of a custom URL is https://your_org.signalfx.com. The :strong:`Enter Custom URL` field is prepopulated with ``signalfx.com``. Enter the unique portion of your organization's custom URL before ``signalfx.com``."
+msgstr "Observabilityクラウドの管理者は、シングルサインオン（SSO）を設定するときに、組織のカスタムURLを作成します。URLはsignalfx.comのサブドメインでなければなりません。カスタムURLの例はhttps://your_org.signalfx.com。:strong:`Enter Custom URL` フィールドには、あらかじめ``signalfx.com`` が入力されている。``signalfx.com`` の前に、組織のカスタムURLのユニークな部分を入力してください。"
+
+#: ../../get-started/download-mobile.rst:90
+msgid "Choose from :strong:`User Credentials`, :strong:`Google`, or :strong:`SSO`."
+msgstr ":strong:`User Credentials` 、:strong:`Google` 、:strong:`SSO` から選択してください。"
+
+#: ../../get-started/intro-to-mobile.rst:11
+msgid " Download the app"
+msgstr " アプリをダウンロード"
+
+#: ../../get-started/intro-to-mobile.rst:11
+msgid " View dashboards and alerts"
+msgstr " ダッシュボードとアラートの表示"
+
+#: ../../get-started/intro-to-mobile.rst:11
+msgid " Set your notification preferences"
+msgstr " 通知設定の設定"
+
+#: ../../get-started/intro-to-mobile.rst:-1
+msgid "Get started using Splunk Observability Cloud for Mobile. See features and benefits."
+msgstr "Splunk Observability Cloud for Mobile の使用を開始しましょう。特長とメリットをご覧ください。"
+
+#: ../../get-started/intro-to-mobile.rst:5
+msgid "Introduction to Splunk Observability Cloud for Mobile"
+msgstr "モバイル向けSplunk Observability Cloudの紹介"
+
+#: ../../get-started/intro-to-mobile.rst:19 ../../get-started/welcome.rst:143
+msgid "Splunk Observability Cloud for Mobile is an iOS and Android companion mobile app to Splunk Observability Cloud. You can use Splunk Observability Cloud for Mobile to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards."
+msgstr "Splunk Observability Cloud for Mobile は、Splunk Observability Cloud の iOS および Android コンパニオンモバイルアプリです。Splunk Observability Cloud for Mobile を使用すると、外出先から Splunk Observability Cloud でシステムの重要なメトリクスを確認したり、視覚化されたリアルタイムアラートにアクセスしたり、モバイルフレンドリーなダッシュボードを表示したりできます。"
+
+#: ../../get-started/intro-to-mobile.rst:22
+msgid "For instructions on how to get started with Splunk Observability Cloud for Mobile, see :ref:`Download Splunk Observability Cloud for Mobile <download-mobile>`."
+msgstr "Splunk Observability Cloud for Mobile の開始方法については、:ref:`Download Splunk Observability Cloud for Mobile <download-mobile>` を参照してください。"
+
+#: ../../get-started/intro-to-mobile.rst:30
+msgid "Using Splunk Observability Cloud for mobile, you can do the following:"
+msgstr "Splunk Observability Cloud for mobile を使用すると、次のことができます："
+
+#: ../../get-started/intro-to-mobile.rst:32
+msgid "View, filter, and search for dashboards and alerts from your Splunk Observability Cloud instance."
+msgstr "Splunk Observability Cloud インスタンスからダッシュボードやアラートを表示、フィルタリング、検索できます。"
+
+#: ../../get-started/intro-to-mobile.rst:33
+msgid "Gain context on active alerts such as triggering conditions and detector details."
+msgstr "トリガー条件や検出器の詳細など、アクティブなアラートのコンテキストを取得します。"
+
+#: ../../get-started/intro-to-mobile.rst:34
+msgid "Conduct high-level investigation before switching to Splunk Observability Cloud or other relevant tools."
+msgstr "Splunk Observability Cloud やその他の関連ツールに切り替える前に、ハイレベルな調査を実施する。"
+
+#: ../../get-started/intro-to-mobile.rst:35
+msgid "View, acknowledge, dismiss, resolve, and snooze incidents from Incident Intelligence on the :guilabel:`Incidents` tab. You can also add responders to an incident."
+msgstr ":guilabel:`インシデント` タブで、インシデントインテリジェンスからインシデントの表示、承認、却下、解決、スヌーズを行います。インシデントに応答者を追加することもできます。"
+
+#: ../../get-started/intro-to-mobile.rst:36
+msgid "View your on-call schedule on the :guilabel:`Settings` tab."
+msgstr ":guilabel:`設定` タブでオンコールスケジュールを表示します。"
+
+#: ../../get-started/intro-to-mobile.rst:37
+msgid "If you've configured your on-call notification preference to send push notifications, you will receive push notification on any device where you're logged in to Splunk Observability Cloud for Mobile."
+msgstr "プッシュ通知を送信するようにオンコール通知の環境設定を行った場合、Splunk Observability Cloud for Mobile にログインしているすべてのデバイスでプッシュ通知を受信できます。"
+
+#: ../../get-started/notification-preferences-mobile.rst:-1
+msgid "Set your on-call notification preferences for Splunk Observability Cloud for Mobile."
+msgstr "Splunk Observability Cloud for Mobile のオンコール通知設定を設定します。"
+
+#: ../../get-started/notification-preferences-mobile.rst:5
+msgid "Set your on-call notification preferences"
+msgstr "オンコール通知の設定"
+
+#: ../../get-started/notification-preferences-mobile.rst:10
+msgid "If you are receiving on-call notifications via mobile push or SMS and want to change these notification methods, you can set your on-call notification preferences in Splunk Observability Cloud. See :ref:`ii-notification-preferences`. You can customize all other notification settings, including sound, volume, vibrate, etc., using your device OS."
+msgstr "モバイルプッシュまたは SMS で通話中通知を受信しており、これらの通知方法を変更したい場合は、Splunk Observability Cloud で通話中通知の環境設定を行うことができます。:ref:`ii-notification-preferences` を参照。サウンド、音量、バイブレーションなど、その他のすべての通知設定は、お使いのデバイスのOSを使ってカスタマイズできます。"
+
+#: ../../get-started/o11y.rst:-1
+msgid "Learn how to get started with Splunk Observability Cloud in five steps."
+msgstr "Splunk Observability Cloud を 5 つのステップで始める方法をご紹介します。"
+
+#: ../../get-started/o11y.rst:5
+msgid "Get started with Splunk Observability Cloud"
+msgstr "Splunk Observability Cloud を使い始める"
+
+#: ../../get-started/o11y.rst:10
+msgid "This topic covers five high-level steps you can follow to get started with Splunk Observability Cloud and its products, which include Splunk Infrastructure Monitoring, Splunk Application Performance Monitoring (APM), Splunk Real User Monitoring (RUM), and Splunk Log Observer."
+msgstr "このトピックでは、Splunk Observability Cloud とその製品 (Splunk Infrastructure Monitoring、Splunk Application Performance Monitoring (APM)、Splunk Real User Monitoring (RUM)、Splunk Log Observer) を使い始めるための 5 つのハイレベルな手順について説明します。"
+
+#: ../../get-started/o11y.rst:12
+msgid "For an introduction to Splunk Observability Cloud products, see :ref:`welcome`."
+msgstr "Splunk Observability Cloud 製品の紹介については、:ref:`welcome` を参照してください。"
+
+#: ../../get-started/o11y.rst:14 ../../get-started/welcome.rst:32
+msgid "For information about how these products can be used together to address real-life scenarios, see :ref:`get-started-scenario`."
+msgstr "実際のシナリオに対応するためにこれらの製品をどのように併用できるかについては、:ref:`get-started-scenario` を参照。"
+
+#: ../../get-started/o11y.rst:16
+msgid "Follow these steps to set up and make the most of Splunk Observability Cloud:"
+msgstr "以下の手順に従って、Splunk Observability Cloud をセットアップし、最大限に活用してください："
+
+#: ../../get-started/o11y.rst:22
+msgid ":strong:`Configuration stages`"
+msgstr ":strong:`構成段階`"
+
+#: ../../get-started/o11y.rst:23
+msgid ":strong:`Task overview`"
+msgstr ":strong:`タスクの概要`"
+
+#: ../../get-started/o11y.rst:25
+msgid ":ref:`get-started-plan` with:"
+msgstr ":ref:`get-started-plan` と："
+
+#: ../../get-started/o11y.rst:26
+msgid "Single sign-on, Access tokens, Admins and users, Teams, Notification service integrations (Jira, PagerDuty, and more)"
+msgstr "シングルサインオン、アクセストークン、管理者とユーザー、チーム、通知サービス統合（Jira、PagerDutyなど）"
+
+#: ../../get-started/o11y.rst:28
+msgid ":ref:`get-started-gdi` from your:"
+msgstr ":ref:`get-started-gdi` あなたから："
+
+#: ../../get-started/o11y.rst:29
+msgid "Cloud services, Servers, Server applications, Clusters, Applications, Serverless functions, User interfaces"
+msgstr "クラウドサービス、サーバー、サーバーアプリケーション、クラスター、アプリケーション、サーバーレス機能、ユーザーインターフェース"
+
+#: ../../get-started/o11y.rst:31
+msgid ":ref:`get-started-explore` using:"
+msgstr ":ref:`get-started-explore` を使っている："
+
+#: ../../get-started/o11y.rst:32
+msgid "Infrastructure Monitoring, Real User Monitoring, Log Observer, Application Performance Monitoring, Related Content"
+msgstr "インフラ監視, リアルユーザー監視, ログ監視, アプリケーションパフォーマンス監視, 関連コンテンツ"
+
+#: ../../get-started/o11y.rst:34
+msgid ":ref:`get-started-customize`:"
+msgstr ":ref:`get-started-customize`:"
+
+#: ../../get-started/o11y.rst:35
+msgid "Detectors and alerts, Custom dashboards, Span tags, Business workflows, Logs pipeline, Custom data"
+msgstr "検出器とアラート、カスタムダッシュボード、スパンタグ、ビジネスワークフロー、ログパイプライン、カスタムデータ"
+
+#: ../../get-started/o11y.rst:37
+msgid ":ref:`get-started-datalinks` from dashboards and alerts to:"
+msgstr ":ref:`get-started-datalinks` ダッシュボードやアラートから"
+
+#: ../../get-started/o11y.rst:38
+msgid "Splunk Observability Cloud dashboards, Splunk Cloud Platform, Splunk Enterprise, Custom URLs, Kibana logs"
+msgstr "Splunk Observability Cloud ダッシュボード、Splunk Cloud Platform、Splunk Enterprise、カスタム URL、Kibana ログ"
+
+#: ../../get-started/o11y.rst:47
+msgid "1. Create a plan and set up your organization"
+msgstr "1.計画を立て、組織を立ち上げる"
+
+#: ../../get-started/o11y.rst:49
+msgid "Before you start, create a plan for how you want to set up your Splunk Observability Cloud organization. For information about how to plan for and set up your Observability Cloud organization, see :ref:`admin-admin`."
+msgstr "開始する前に、Splunk Observability Cloud の組織をどのようにセットアップするか、計画を作成してください。Observabilityクラウド組織の計画と設定方法については、:ref:`admin-admin` を参照してください。"
+
+#: ../../get-started/o11y.rst:55
+msgid "2. Get data into Splunk Observability Cloud"
+msgstr "2.Splunk Observability Cloud にデータを取り込む"
+
+#: ../../get-started/o11y.rst:57
+msgid "Gather all the data from your environment in Splunk Observability Cloud to achieve full-stack observability. For information about how to get data in, see :ref:`get-started-get-data-in`."
+msgstr "環境からすべてのデータを Splunk Observability Cloud に収集し、フルスタックの観測可能性を実現します。データの取り込み方については、:ref:`get-started-get-data-in` を参照のこと。"
+
+#: ../../get-started/o11y.rst:59
+msgid "As a part of getting data in, make sure to consider bringing in data in a way that allows :ref:`get-started-relatedcontent`, a feature that automatically correlates data between different views within Splunk Observability Cloud. When turned on, the Related Content bar displays automatically when a you select a relevant element and lets you take a data-driven investigative approach."
+msgstr "データを取り込む際には、Splunk Observability Cloud 内の異なるビュー間でデータを自動的に相関させる機能である:ref:`get-started-relatedcontent` を利用できるような方法でデータを取り込むことを検討してください。関連コンテンツバーをオンにすると、関連する要素を選択したときに関連コンテンツバーが自動的に表示され、データに基づいた調査アプローチが可能になります。"
+
+#: ../../get-started/o11y.rst:61
+msgid "To learn more about Splunk Observability Cloud's data model, refer to :ref:`data-model`."
+msgstr "Splunk Observability Cloud のデータモデルの詳細については、:ref:`data-model` を参照してください。"
+
+#: ../../get-started/o11y.rst:66
+msgid "3. Explore and analyze your data"
+msgstr "3.データの探索と分析"
+
+#: ../../get-started/o11y.rst:68
+msgid "Once you have data coming into Splunk Observability Cloud, it's time to do some exploring. For example, you can:"
+msgstr "Splunk Observability Cloud にデータが入ったら、いよいよ探索です。例えば、こんなことができる："
+
+#: ../../get-started/o11y.rst:70
+msgid "Use :ref:`Infrastructure Monitoring <get-started-infrastructure>` to analyze the performance of cloud services, hosts, and containers, or view the health of your infrastructure at a glance, and view outlier conditions in your hybrid infrastructure."
+msgstr ":ref:`Infrastructure Monitoring <get-started-infrastructure>` を使用して、クラウド・サービス、ホスト、コンテナのパフォーマンスを分析したり、インフラストラクチャの健全性を一目で確認したり、ハイブリッド・インフラストラクチャの異常値を表示したりできます。"
+
+#: ../../get-started/o11y.rst:72
+msgid "Use :ref:`APM <get-started-apm>` to analyze the performance of applications down to the microservice level, investigate latencies in your application requests, and monitor inbound and outbound dependencies for each service."
+msgstr ":ref:`APM <get-started-apm>` を使用して、アプリケーションのパフォーマンスをマイクロサービス・レベルまで分析し、アプリケーション・リクエストの待ち時間を調査し、各サービスのインバウンドおよびアウトバウンドの依存関係を監視します。"
+
+#: ../../get-started/o11y.rst:74
+msgid "Use :ref:`RUM <get-started-rum>` to analyze the performance of web and mobile applications and keep track of how users are interacting with your front-end services, including page load times and responsiveness."
+msgstr ":ref:`RUM <get-started-rum>` を使用して、ウェブおよびモバイルアプリケーションのパフォーマンスを分析し、ページのロード時間や応答性など、ユーザーがフロントエンドサービスとどのようにやり取りしているかを追跡します。"
+
+#: ../../get-started/o11y.rst:76
+msgid "Use :ref:`Log Observer <get-started-logs>` or :ref:`Log Observer Connect <logs-intro-logconnect>` to pinpoint interesting log events and troubleshoot issues with your infrastructure and cloud services."
+msgstr ":ref:`Log Observer <get-started-logs>` または:ref:`Log Observer Connect <logs-intro-logconnect>` を使用して、興味深いログイベントをピンポイントで特定し、インフラストラクチャやクラウドサービスの問題をトラブルシューティングします。"
+
+#: ../../get-started/o11y.rst:78
+msgid "As described in step :ref:`get-started-gdi`, if you turned on :ref:`get-started-relatedcontent` when setting up your data integrations, you can select options in the Related Content bar to seamlessly navigate between APM, Log Observer, and Infrastructure Monitoring with your selected filters and context automatically applied to each view."
+msgstr "ステップ:ref:`get-started-gdi` で説明したように、データ統合の設定時に:ref:`get-started-relatedcontent` をオンにした場合、関連コンテンツバーでオプションを選択して、選択したフィルタとコンテキストが各ビューに自動的に適用された状態で、APM、ログオブザーバ、インフラストラクチャ監視の間をシームレスにナビゲートすることができます。"
+
+#: ../../get-started/o11y.rst:80
+msgid "Use the :ref:`mobile app <intro-to-mobile>` to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards."
+msgstr ":ref:`mobile app <intro-to-mobile>` を使用すると、外出先から Splunk Observability Cloud のシステム重要メトリクスを確認したり、視覚化されたリアルタイムアラートにアクセスしたり、モバイルフレンドリーなダッシュボードを表示したりできます。"
+
+#: ../../get-started/o11y.rst:86
+msgid "4. Set up alerts and customize your experience"
+msgstr "4.アラートの設定と体験のカスタマイズ"
+
+#: ../../get-started/o11y.rst:88
+msgid "Now that you've explored and familiarized yourself with the data you have coming into Splunk Observability Cloud, set up detectors to issue alerts about your data and customize your Splunk Observability Cloud experience."
+msgstr "Splunk Observability Cloud に取り込むデータについて調べ、理解したところで、データに関するアラートを発行する検出器を設定し、Splunk Observability Cloud 体験をカスタマイズします。"
+
+#: ../../get-started/o11y.rst:90
+msgid "Set up :ref:`detectors <create-detectors>` to send alerts when your incoming data contains conditions you want to know about."
+msgstr ":ref:`detectors <create-detectors>` を設定し、受信データに知りたい条件が含まれている場合にアラートを送信します。"
+
+#: ../../get-started/o11y.rst:92
+msgid "In addition to exploring your data using Infrastructure Monitoring navigators and built-in :ref:`dashboards <dashboard-create-customize>`, you can also create new dashboards and customize existing ones."
+msgstr "Infrastructure Monitoring ナビゲータとビルトイン:ref:`dashboards <dashboard-create-customize>` を使用してデータを探索するだけでなく、新しいダッシュボードを作成したり、既存のダッシュボードをカスタマイズすることもできます。"
+
+#: ../../get-started/o11y.rst:94
+msgid "In addition to the built-in data you already have coming into Splunk Observability Cloud, you can also bring in custom data. For more information, see :ref:`Configure and instrument applications to send custom data <gdi-7>` and :ref:`Use the Observability Cloud API to send custom data <gdi-8>`."
+msgstr "Splunk Observability Cloud には、すでに組み込まれているデータに加えて、カスタムデータを取り込むこともできます。詳しくは:ref:`Configure and instrument applications to send custom data <gdi-7>` と:ref:`Use the Observability Cloud API to send custom data <gdi-8>` を参照のこと。"
+
+#: ../../get-started/o11y.rst:96
+msgid "Customize your APM experience by setting up business workflows and creating span tags that add metadata to traces sent to APM. For more information, see :ref:`apm-workflows` and :ref:`apm-add-context-trace-span`."
+msgstr "ビジネス・ワークフローを設定し、APMに送信されるトレースにメタデータを追加するスパン・タグを作成することで、APMエクスペリエンスをカスタマイズできます。詳しくは:ref:`apm-workflows` と:ref:`apm-add-context-trace-span` を参照のこと。"
+
+#: ../../get-started/o11y.rst:98
+msgid "Customize your :ref:`logs pipeline <logs-pipeline>` to add value to your raw logs."
+msgstr ":ref:`logs pipeline <logs-pipeline>` をカスタマイズして、生ログに付加価値を。"
+
+#: ../../get-started/o11y.rst:104
+msgid "5. Create global data links"
+msgstr "5.グローバルデータリンクの作成"
+
+#: ../../get-started/o11y.rst:106
+msgid "Now that you've customized your Splunk Observability Cloud experience, create global data links to further enrich the user experience."
+msgstr "Splunk Observability Cloud のエクスペリエンスをカスタマイズしたら、グローバルデータリンクを作成してユーザーエクスペリエンスをさらに豊かにしましょう。"
+
+#: ../../get-started/o11y.rst:108
+msgid "Global data links provide convenient access to related resources, such as Splunk Observability Cloud dashboards, Splunk Cloud Platform and Splunk Enterprise, custom URLs, and Kibana logs in the context of the following locations in Splunk Observability Cloud:"
+msgstr "グローバルデータリンクは、Splunk Observability Cloud のダッシュボード、Splunk Cloud Platform、Splunk Enterprise、カスタム URL、Kibana ログなどの関連リソースに、Splunk Observability Cloud の以下の場所のコンテキストで便利にアクセスできます："
+
+#: ../../get-started/o11y.rst:110
+msgid "Dashboards"
+msgstr "ダッシュボード"
+
+#: ../../get-started/o11y.rst:111
+msgid "Alerts"
+msgstr "アラート"
+
+#: ../../get-started/o11y.rst:112
+msgid "APM"
+msgstr "APM"
+
+#: ../../get-started/o11y.rst:113
+msgid "Infrastructure Monitoring navigators"
+msgstr "インフラ監視ナビゲーター"
+
+#: ../../get-started/o11y.rst:115
+msgid "For more information, see :ref:`link-metadata-to-content`."
+msgstr "詳細は:ref:`link-metadata-to-content` を参照。"
+
+#: ../../get-started/scenario-landing.rst:-1
+msgid "Collection of scenarios available for Splunk Observability Cloud."
+msgstr "Splunk Observability Cloud で利用可能なシナリオ集。"
+
+#: ../../get-started/scenario-landing.rst:5
+msgid "Splunk Observability Cloud scenarios"
+msgstr "Splunk Observability Cloud のシナリオ"
+
+#: ../../get-started/scenario-landing.rst:16
+msgid "This is the collection of scenarios available for Splunk Observability Cloud."
+msgstr "Splunk Observability Cloud で利用可能なシナリオのコレクションです。"
+
+#: ../../get-started/scenario-landing.rst:23
+msgid ":strong:`Category`"
+msgstr ":strong:`カテゴリー`"
+
+#: ../../get-started/scenario-landing.rst:24
+msgid ":strong:`Scenario`"
+msgstr ":strong:`シナリオ`"
+
+#: ../../get-started/scenario-landing.rst:25
+msgid ":ref:`Splunk Observability Cloud <get-started-o11y>`"
+msgstr ":ref:`Splunk Observability Cloud <get-started-o11y>`"
+
+#: ../../get-started/scenario-landing.rst:26
+msgid ":ref:`scenario-security`"
+msgstr ":ref:`scenario-security`"
+
+#: ../../get-started/scenario-landing.rst:27 ../../get-started/scenario-landing.rst:29
+msgid ":ref:`OpenTelemetry <otel-intro>`"
+msgstr ":ref:`OpenTelemetry <otel-intro>`"
+
+#: ../../get-started/scenario-landing.rst:28
+msgid ":ref:`otel-collector-scenario`"
+msgstr ":ref:`otel-collector-scenario`"
+
+#: ../../get-started/scenario-landing.rst:30
+msgid ":ref:`auto-instrumentation-java-operator`"
+msgstr ":ref:`auto-instrumentation-java-operator`"
+
+#: ../../get-started/scenario-landing.rst:31 ../../get-started/scenario-landing.rst:33 ../../get-started/scenario-landing.rst:35 ../../get-started/scenario-landing.rst:37
+msgid ":ref:`Alerts and detectors <scenarios-alerts-detectors>`"
+msgstr ":ref:`Alerts and detectors <scenarios-alerts-detectors>`"
+
+#: ../../get-started/scenario-landing.rst:32
+msgid ":ref:`monitor-server-latency`"
+msgstr ":ref:`monitor-server-latency`"
+
+#: ../../get-started/scenario-landing.rst:34
+msgid ":ref:`monitor-autodetect`"
+msgstr ":ref:`monitor-autodetect`"
+
+#: ../../get-started/scenario-landing.rst:36
+msgid ":ref:`find-detectors`"
+msgstr ":ref:`find-detectors`"
+
+#: ../../get-started/scenario-landing.rst:38
+msgid ":ref:`troubleshoot-noisy-detectors`"
+msgstr ":ref:`troubleshoot-noisy-detectors`"
+
+#: ../../get-started/scenario-landing.rst:39 ../../get-started/scenario-landing.rst:41 ../../get-started/scenario-landing.rst:43 ../../get-started/scenario-landing.rst:45 ../../get-started/scenario-landing.rst:47 ../../get-started/scenario-landing.rst:49 ../../get-started/scenario-landing.rst:51 ../../get-started/scenario-landing.rst:53 ../../get-started/scenario-landing.rst:55 ../../get-started/scenario-landing.rst:57 ../../get-started/scenario-landing.rst:59
+msgid ":ref:`APM <apm-scenarios-intro>`"
+msgstr ":ref:`APM <apm-scenarios-intro>`"
+
+#: ../../get-started/scenario-landing.rst:40
+msgid ":ref:`service-map`"
+msgstr ":ref:`service-map`"
+
+#: ../../get-started/scenario-landing.rst:42
+msgid ":ref:`services-impact-business-workflows`"
+msgstr ":ref:`services-impact-business-workflows`"
+
+#: ../../get-started/scenario-landing.rst:44
+msgid ":ref:`troubleshoot-tag-spotlight`"
+msgstr ":ref:`troubleshoot-tag-spotlight`"
+
+#: ../../get-started/scenario-landing.rst:46
+msgid ":ref:`troubleshoot-business-workflows`"
+msgstr ":ref:`troubleshoot-business-workflows`"
+
+#: ../../get-started/scenario-landing.rst:48
+msgid ":ref:`apm-scenario-trace-analyzer`"
+msgstr ":ref:`apm-scenario-trace-analyzer`"
+
+#: ../../get-started/scenario-landing.rst:50
+msgid ":ref:`monitor-services`"
+msgstr ":ref:`monitor-services`"
+
+#: ../../get-started/scenario-landing.rst:52
+msgid ":ref:`configure-business-workflows`"
+msgstr ":ref:`configure-business-workflows`"
+
+#: ../../get-started/scenario-landing.rst:54
+msgid ":ref:`monitor-business-workflows`"
+msgstr ":ref:`monitor-business-workflows`"
+
+#: ../../get-started/scenario-landing.rst:56
+msgid ":ref:`historical-data`"
+msgstr ":ref:`historical-data`"
+
+#: ../../get-started/scenario-landing.rst:58
+msgid ":ref:`custom-metricset`"
+msgstr ":ref:`custom-metricset`"
+
+#: ../../get-started/scenario-landing.rst:60
+msgid ":ref:`apm-scenario-endpoint-performance`"
+msgstr ":ref:`apm-scenario-endpoint-performance`"
+
+#: ../../get-started/scenario-landing.rst:61 ../../get-started/scenario-landing.rst:63
+msgid ":ref:`APM database query performance <db-query-performance>`"
+msgstr ":ref:`APM database query performance <db-query-performance>`"
+
+#: ../../get-started/scenario-landing.rst:62
+msgid ":ref:`db-perf-scenario`"
+msgstr ":ref:`db-perf-scenario`"
+
+#: ../../get-started/scenario-landing.rst:64
+msgid ":ref:`redis-scenario`"
+msgstr ":ref:`redis-scenario`"
+
+#: ../../get-started/scenario-landing.rst:65 ../../get-started/scenario-landing.rst:67
+msgid ":ref:`APM Profiling <profiling-scenario-landingpage>`"
+msgstr ":ref:`APM Profiling <profiling-scenario-landingpage>`"
+
+#: ../../get-started/scenario-landing.rst:66
+msgid ":ref:`profiling-scenario`"
+msgstr ":ref:`profiling-scenario`"
+
+#: ../../get-started/scenario-landing.rst:68
+msgid ":ref:`memory-profiling-scenario`"
+msgstr ":ref:`memory-profiling-scenario`"
+
+#: ../../get-started/scenario-landing.rst:69 ../../get-started/scenario-landing.rst:71 ../../get-started/scenario-landing.rst:73
+msgid ":ref:`Incident Intelligence scheduling <ii-scenarios-schedules>`"
+msgstr ":ref:`Incident Intelligence scheduling <ii-scenarios-schedules>`"
+
+#: ../../get-started/scenario-landing.rst:70
+msgid ":ref:`ii-scenario-business-hours`"
+msgstr ":ref:`ii-scenario-business-hours`"
+
+#: ../../get-started/scenario-landing.rst:72
+msgid ":ref:`ii-scenario-week-by-week`"
+msgstr ":ref:`ii-scenario-week-by-week`"
+
+#: ../../get-started/scenario-landing.rst:74
+msgid ":ref:`ii-scenario-day-by-day`"
+msgstr ":ref:`ii-scenario-day-by-day`"
+
+#: ../../get-started/scenario-landing.rst:75
+msgid "Infrastructure Monitoring"
+msgstr "インフラ監視"
+
+#: ../../get-started/scenario-landing.rst:76
+msgid ":ref:`troubleshoot-k8s-nav-scenario`"
+msgstr ":ref:`troubleshoot-k8s-nav-scenario`"
+
+#: ../../get-started/scenario-landing.rst:77 ../../get-started/scenario-landing.rst:79 ../../get-started/scenario-landing.rst:81
+msgid ":ref:`Infrastructure Monitoring\\: Network Explorer <network-explorer-scenarios>`"
+msgstr ":ref:`Infrastructure Monitoring\\: Network Explorer <network-explorer-scenarios>`"
+
+#: ../../get-started/scenario-landing.rst:78
+msgid ":ref:`find-network-error`"
+msgstr ":ref:`find-network-error`"
+
+#: ../../get-started/scenario-landing.rst:80
+msgid ":ref:`cross-zone-traffic-cost`"
+msgstr ":ref:`cross-zone-traffic-cost`"
+
+#: ../../get-started/scenario-landing.rst:82
+msgid ":ref:`examine-service-dependencies`"
+msgstr ":ref:`examine-service-dependencies`"
+
+#: ../../get-started/scenario-landing.rst:83 ../../get-started/scenario-landing.rst:85
+msgid ":new-page:`IT Service Intelligence <https://docs.splunk.com/Documentation/ITSI>`"
+msgstr ":new-page:`ITサービスインテリジェンス <https://docs.splunk.com/Documentation/ITSI>`"
+
+#: ../../get-started/scenario-landing.rst:84
+msgid ":new-page:`Scenario\\: Lauren groups related alerts with ITSI <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`"
+msgstr ":new-page:`シナリオローレンは、ITSIと関連するアラートをグループ <https://docs.splunk.com/Documentation/ITSI/latest/EA/UseCaseGrpAlerts>`"
+
+#: ../../get-started/scenario-landing.rst:86
+msgid ":new-page:`Scenario\\: Kai monitors business service degradation and identifies the root cause <https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`"
+msgstr ":new-page:`シナリオKaiはビジネスサービスの劣化を監視し、根本原因を特定します。 <https://docs.splunk.com/Documentation/ITSI/latest/SI/SIUseCase>`"
+
+#: ../../get-started/scenario-landing.rst:87 ../../get-started/scenario-landing.rst:89 ../../get-started/scenario-landing.rst:91 ../../get-started/scenario-landing.rst:93
+msgid ":ref:`RUM <scenario-landingpage>`"
+msgstr ":ref:`RUM <scenario-landingpage>`"
+
+#: ../../get-started/scenario-landing.rst:88
+msgid ":ref:`scenario-monitoring`"
+msgstr ":ref:`scenario-monitoring`"
+
+#: ../../get-started/scenario-landing.rst:90
+msgid ":ref:`spa-custom-event`"
+msgstr ":ref:`spa-custom-event`"
+
+#: ../../get-started/scenario-landing.rst:92
+msgid ":ref:`rum-identify-span-problems`"
+msgstr ":ref:`rum-identify-span-problems`"
+
+#: ../../get-started/scenario-landing.rst:94
+msgid ":ref:`rum-mobile-scenario`"
+msgstr ":ref:`rum-mobile-scenario`"
+
+#: ../../get-started/scenario-landing.rst:95 ../../get-started/scenario-landing.rst:97 ../../get-started/scenario-landing.rst:99
+msgid ":ref:`Synthetic Monitoring <synth-landing>`"
+msgstr ":ref:`Synthetic Monitoring <synth-landing>`"
+
+#: ../../get-started/scenario-landing.rst:96
+msgid ":ref:`browser-test-scenario`"
+msgstr ":ref:`browser-test-scenario`"
+
+#: ../../get-started/scenario-landing.rst:98
+msgid ":ref:`api-test-scenario`"
+msgstr ":ref:`api-test-scenario`"
+
+#: ../../get-started/scenario-landing.rst:100
+msgid ":ref:`uptime-test-scenario`"
+msgstr ":ref:`uptime-test-scenario`"
+
+#: ../../get-started/scenario-landing.rst:101
+msgid ":ref:`Log Observer <logs-intro-logconnect>`"
+msgstr ":ref:`Log Observer <logs-intro-logconnect>`"
+
+#: ../../get-started/scenario-landing.rst:102
+msgid ":ref:`logs-LOconnect-scenario`"
+msgstr ":ref:`logs-LOconnect-scenario`"
+
+#: ../../get-started/scenarios/scenario.rst:-1
+msgid "This scenario describes how a site reliability engineer (SRE) can use Splunk Observability Cloud products and features to troubleshoot a site issue starting with the end user's browser-based experience all the way to microservices on the backend."
+msgstr "このシナリオでは、サイトの信頼性エンジニア (SRE) が Splunk Observability Cloud の製品と機能を使用して、エンドユーザーのブラウザベースのエクスペリエンスからバックエンドのマイクロサービスに至るまで、サイトの問題をトラブルシューティングする方法を説明します。"
+
+#: ../../get-started/scenarios/scenario.rst:5
+msgid "Scenario: Kai troubleshoots an issue from the browser to the back end using Splunk Observability Cloud"
+msgstr "シナリオカイ氏は、Splunk Observability Cloud を使用して、ブラウザからバックエンドまでの問題をトラブルシューティングします。"
+
+#: ../../get-started/scenarios/scenario.rst:10
+msgid "Buttercup Games, a fictitious company, runs an e-commerce site to sell its products. They recently refactored their site to use a cloud-native approach with a microservices architecture and Kubernetes for the infrastructure."
+msgstr "バターカップ・ゲームズは架空の会社で、自社製品を販売するためにeコマースサイトを運営している。彼らは最近、マイクロサービス・アーキテクチャとKubernetesをインフラに採用したクラウドネイティブなアプローチでサイトをリファクタリングした。"
+
+#: ../../get-started/scenarios/scenario.rst:12
+msgid "Buttercup Games site reliability engineers (SREs) and service owners work together to monitor and maintain the site to be sure that people have a great experience when they visit. One of the many reasons they decided to take a cloud-native approach is because it facilitates observability. They chose Splunk Observability Cloud as their observability solution."
+msgstr "BUTTERCUP GAMESのサイト信頼性エンジニア（SRE）とサービスオーナーが協力し、サイトを訪れた人々が素晴らしい体験をできるよう、監視と保守を行っています。彼らがクラウドネイティブのアプローチを取ると決めた多くの理由のひとつは、観測が容易になるからだ。彼らはSplunk Observability Cloudを観測ソリューションとして選択した。"
+
+#: ../../get-started/scenarios/scenario.rst:14
+msgid "This scenario describes how Kai, an SRE, and Deepu, a service owner, perform the following tasks using Splunk Observability Cloud to troubleshoot and identify the root cause of a recent Buttercup Games site incident:"
+msgstr "このシナリオでは、SRE の Kai とサービスオーナーの Deepu が、Splunk Observability Cloud を使用して以下のタスクを実行し、最近発生した Buttercup Games サイトのインシデントのトラブルシューティングと根本原因を特定する方法を説明します："
+
+#: ../../get-started/scenarios/scenario.rst:16
+msgid ":ref:`receive-alerts-xpuc`"
+msgstr ":ref:`receive-alerts-xpuc`"
+
+#: ../../get-started/scenarios/scenario.rst:18
+msgid ":ref:`assess-user-impact-xpuc` using Splunk Real User Monitoring (RUM)"
+msgstr ":ref:`assess-user-impact-xpuc` Splunk リアルユーザー監視 (RUM) を使用する"
+
+#: ../../get-started/scenarios/scenario.rst:20
+msgid ":ref:`investigate-root-cause-xpuc` using Splunk Application Performance Monitoring (APM)"
+msgstr ":ref:`investigate-root-cause-xpuc` Splunk アプリケーションパフォーマンス監視 (APM) を使用する"
+
+#: ../../get-started/scenarios/scenario.rst:22
+msgid ":ref:`check-infra-health-xpuc` using Splunk Infrastructure Monitoring"
+msgstr ":ref:`check-infra-health-xpuc` Splunk インフラストラクチャ監視を使用する"
+
+#: ../../get-started/scenarios/scenario.rst:24
+msgid ":ref:`look-for-patterns-xpuc` in Splunk APM"
+msgstr ":ref:`look-for-patterns-xpuc` in Splunk APM"
+
+#: ../../get-started/scenarios/scenario.rst:26
+msgid ":ref:`review-logs-xpuc` using Splunk Log Observer"
+msgstr ":ref:`review-logs-xpuc` Splunk Log Observer を使用する"
+
+#: ../../get-started/scenarios/scenario.rst:28
+msgid ":ref:`monitor-a-fix-xpuc` using Splunk Log Observer"
+msgstr ":ref:`monitor-a-fix-xpuc` Splunk Log Observer を使用する"
+
+#: ../../get-started/scenarios/scenario.rst:30
+msgid ":ref:`take-preventative-action-xpuc`"
+msgstr ":ref:`take-preventative-action-xpuc`"
+
+#: ../../get-started/scenarios/scenario.rst:32
+msgid "For a video version of this scenario, watch :new-page:`the Splunk Observability Cloud Demo <https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>`."
+msgstr "このシナリオのビデオバージョンは、:new-page:`Splunk Observability Cloud Demo<https://www.splunk.com/en_us/resources/videos/watch-splunks-observability-cloud-demo.html>` をご覧ください。"
+
+#: ../../get-started/scenarios/scenario.rst:38
+msgid "Receive alerts about outlier behavior"
+msgstr "異常値に関するアラートを受け取る"
+
+#: ../../get-started/scenarios/scenario.rst:40
+msgid "Kai, the SRE on call, receives an alert showing that the number of purchases on the Buttercup Games site has dropped significantly in the past hour and the checkout completion rate is too low. Kai trusts that these are true outlier behaviors because the alert rule their team set up in Splunk Observability Cloud takes into account the time and day of week as a dynamic baseline, rather than using a static threshold."
+msgstr "待機中のSREであるカイは、Buttercup Gamesサイトでの購入数が過去1時間で大幅に減少し、チェックアウト完了率が低すぎるというアラートを受け取った。カイ氏は、Splunk Observability Cloud でチームが設定したアラートルールが、静的なしきい値を使用するのではなく、動的なベースラインとして時刻と曜日を考慮しているため、これらが真の異常値行動であると信頼している。"
+
+#: ../../get-started/scenarios/scenario.rst:42
+msgid "Kai logs in to Splunk Observability Cloud on their laptop to investigate."
+msgstr "カイはラップトップで Splunk Observability Cloud にログインして調査する。"
+
+#: ../../get-started/scenarios/scenario.rst:48
+msgid "Assess user impact"
+msgstr "ユーザーへの影響を評価する"
+
+#: ../../get-started/scenarios/scenario.rst:50
+msgid "The first thing Kai wants to know about the alert they received is: What's the user impact?"
+msgstr "カイが受信したアラートについてまず知りたいのは、「ユーザーへの影響は？"
+
+#: ../../get-started/scenarios/scenario.rst:52
+msgid "Kai opens Splunk Real User Monitoring (RUM) to look for clues about the issue based on the site's browser-based performance. They notice two issues that might be related to the drop in purchases and the low checkout completion rate:"
+msgstr "カイは Splunk Real User Monitoring (RUM) を開き、サイトのブラウザベースのパフォーマンスから問題の手がかりを探します。彼らは、購入数の減少とチェックアウト完了率の低さに関連していると思われる2つの問題に気づいた："
+
+#: ../../get-started/scenarios/scenario.rst:54
+msgid "A spike in the number of front-end errors"
+msgstr "フロントエンド・エラーの急増"
+
+#: ../../get-started/scenarios/scenario.rst
+msgid "This screenshot shows the FE (frontend) Errors module in Splunk Real User Monitoring. The module shows the error rate for the last 15 minutes. The error rate is 74 errors per second."
+msgstr "このスクリーンショットは、Splunk Real User Monitoring の FE (フロントエンド) Errors モジュールを示しています。モジュールは過去15分間のエラー率を表示する。エラー率は毎秒74エラー。"
+
+#: ../../get-started/scenarios/scenario.rst:60
+msgid "High back-end endpoint latency"
+msgstr "高いバックエンドエンドポイントのレイテンシー"
+
+#: ../../get-started/scenarios/scenario.rst
+msgid "This screenshot shows the Endpoint Latency module in Splunk Real User Monitoring. The module shows a latency of 8 seconds for the /cart/checkout endpoint."
+msgstr "このスクリーンショットは、Splunk Real User Monitoring の Endpoint Latency モジュールを示しています。このモジュールは、/cart/checkoutエンドポイントに対して8秒の待ち時間を示している。"
+
+#: ../../get-started/scenarios/scenario.rst:66
+msgid "Kai isn't sure if the two issues are related or whether they are the cause of the problems on the site. They decide to dig into the high latency of the :strong:`/cart/checkout` endpoint because the page load time and largest contentful paint for :strong:`cart/checkout` are also high."
+msgstr "この2つの問題が関連しているのか、それともサイトの問題の原因なのか、カイにはわからない。彼らは、:strong:`/cart/checkout` のエンドポイントの高いレイテンシを調査することにした。なぜなら、:strong:`cart/checkout` のページロード時間と最大のコンテントフルペイントも高いからである。"
+
+#: ../../get-started/scenarios/scenario.rst:68
+msgid "Kai selects the :strong:`/cart/checkout` endpoint link and sees multiple errors in the Tag Spotlight view in Splunk RUM. The errors don't seem to be related to any one tag in particular, so they select the :strong:`User sessions` tab to look at user sessions."
+msgstr "Kai が:strong:`/cart/checkout` のエンドポイントリンクを選択すると、Splunk RUM の Tag Spotlight ビューに複数のエラーが表示される。エラーは特にどのタグにも関連していないようなので、:strong:`User sessions` タブを選択し、ユーザーセッションを調べる。"
+
+#: ../../get-started/scenarios/scenario.rst:70
+msgid "Kai sees one session that seems to be taking longer than the others. They select it to see the full trace, from the front end through to the back end, where they can see that it is taking longer to complete than normal. Based on this example data, Kai understands that the latency isn't a front end problem and that they need to follow the trace through to the back end."
+msgstr "カイは、他のセッションより時間がかかっているように見えるセッションを1つ見ている。それを選択すると、フロントエンドからバックエンドまでの完全なトレースが表示され、通常よりも完了までに時間がかかっていることがわかる。この例のデータをもとに、カイはレイテンシがフロントエンドの問題ではなく、バックエンドまでトレースをたどる必要があることを理解する。"
+
+#: ../../get-started/scenarios/scenario.rst:72
+msgid "This screenshot shows the Session Details page in Splunk RUM displaying the session timeline from the front end through to the back end, where the /cart/checkout endpoint is taking longer than expected to complete."
+msgstr "このスクリーンショットは Splunk RUM のセッション詳細ページで、フロントエンドからバックエンドまでのセッションタイムラインを表示しています。"
+
+#: ../../get-started/scenarios/scenario.rst:76
+msgid "Kai selects the :strong:`APM` link to get a performance summary, as well as access to the session's trace and workflow details."
+msgstr "カイは、:strong:`APM` リンクを選択し、パフォーマンス・サマリーを取得するとともに、セッションのトレースとワークフローの詳細にアクセスする。"
+
+#: ../../get-started/scenarios/scenario.rst:78
+msgid "This screenshot shows the Performance Summary menu in Splunk RUM displaying a link to the frontend:/cart/checkout workflow, as well as performance and trace details."
+msgstr "このスクリーンショットは、Splunk RUM のパフォーマンスサマリメニューに、パフォーマンスとトレースの詳細だけでなく、frontend:/cart/checkout ワークフローへのリンクが表示されていることを示しています。"
+
+#: ../../get-started/scenarios/scenario.rst:82
+msgid "Kai decides to take a look at the end-to-end transaction workflow."
+msgstr "カイはエンド・ツー・エンドのトランザクションのワークフローを見てみることにした。"
+
+#: ../../get-started/scenarios/scenario.rst:88
+msgid "Investigate the root cause of a business workflow error"
+msgstr "ビジネスワークフローエラーの根本原因を調査する"
+
+#: ../../get-started/scenarios/scenario.rst:90
+msgid "In Splunk RUM, Kai selects the :strong:`frontend:/cart/checkout` business workflow link to display its service map in Splunk Application Performance Monitoring (APM). A business workflow is a group of logically related traces, such as a group of traces that reflect an end-to-end transaction in your system."
+msgstr "Splunk RUM で、Kai は:strong:`frontend:/cart/checkout` ビジネスワークフローリンクを選択し、Splunk Application Performance Monitoring (APM) にそのサービスマップを表示する。ビジネス・ワークフローは、論理的に関連するトレースのグループであり、例えば、システム内のエンド・ツー・エンドのトランザクションを反映するトレースのグループなどである。"
+
+#: ../../get-started/scenarios/scenario.rst:92
+msgid "The service map shows Kai the dependency interactions among  the full set of services backing the :strong:`/cart/checkout` action that they're troubleshooting, including the propagation of errors from one service to another."
+msgstr "サービスマップは、あるサービスから別のサービスへのエラーの伝搬を含め、彼らがトラブルシューティングしている:strong:`/cart/checkout` アクションをバックアップするサービスのフルセット間の依存関係の相互作用をカイに示す。"
+
+#: ../../get-started/scenarios/scenario.rst:94
+msgid "In particular, Kai sees that the :strong:`paymentservice` is having issues. Splunk APM has identified the issues as root cause errors, meaning that the :strong:`paymentservice` has the highest number of downstream errors that are contributing to a degraded experience for the workflow."
+msgstr "特にカイは、:strong:`ペイメントサービス` が問題を抱えていることを知る。Splunk APM は問題を根本原因エラーとして特定した。つまり、:strong:`paymentservice` は、ワークフローのエクスペリエンス低下の原因となっている下流エラーの数が最も多い。"
+
+#: ../../get-started/scenarios/scenario.rst:92
+msgid "This screenshot shows a service map in Splunk APM displaying the paymentservice as the source of root errors."
+msgstr "このスクリーンショットは、Splunk APM のサービスマップに、ルートエラーの発生源として paymentservice が表示されていることを示している。"
+
+#: ../../get-started/scenarios/scenario.rst:100
+msgid "Kai selects the :strong:`paymentservice`. In addition to displaying more details about the service's errors and latency, Splunk Observability Cloud surfaces Related Content tiles that provide access to relevant data in other areas of the application."
+msgstr "カイは:strong:`ペイメントサービス` を選択する。Splunk Observability Cloud は、サービスのエラーや待ち時間の詳細を表示するだけでなく、アプリケーションの他の領域にある関連データへのアクセスを提供する関連コンテンツタイルを表示します。"
+
+#: ../../get-started/scenarios/scenario.rst:102
+msgid "For example, Kai can look at the health of the Kubernetes cluster where the :strong:`paymentservice` is running or examine logs being issued by the :strong:`paymentservice`."
+msgstr "例えば、Kaiは:strong:`paymentservice` が稼働しているKubernetesクラスタの健全性を調べたり、:strong:`paymentservice` が発行しているログを調べたりすることができる。"
+
+#: ../../get-started/scenarios/scenario.rst:102
+msgid "This screenshot shows a service map in Splunk APM providing access to two Related Content tiles: K8s clusters for paymentservice and Logs for paymentservice."
+msgstr "このスクリーンショットは、Splunk APM のサービスマップを示し、2 つの関連コンテンツタイルへのアクセスを提供している：paymentservice の K8s クラスタと paymentservice のログ。"
+
+#: ../../get-started/scenarios/scenario.rst:108
+msgid "Kai decides to take a look at the Kubernetes cluster to see if the errors are based on an infrastructure issue."
+msgstr "カイはKubernetesクラスターを見て、エラーの原因がインフラの問題かどうかを確認することにした。"
+
+#: ../../get-started/scenarios/scenario.rst:115
+msgid "Check on infrastructure health"
+msgstr "インフラの健全性チェック"
+
+#: ../../get-started/scenarios/scenario.rst:117
+msgid "Kai selects the :strong:`K8s cluster(s) for paymentservice` Related Content tile in Splunk APM to display the Kubernetes navigator in Splunk Infrastructure Monitoring, where their view is automatically narrowed down to the :strong:`paymentservice` to preserve the context they were just looking at in Splunk APM."
+msgstr "Kai は、Splunk APM で:strong:`K8s cluster(s for paymentservice)` Related Content タイルを選択し、Splunk Infrastructure Monitoring で Kubernetes ナビゲータを表示する。ここで、Splunk APM で見ていたコンテキストを保持するため、:strong:`paymentservice` にビューが自動的に絞り込まれる。"
+
+#: ../../get-started/scenarios/scenario.rst:119
+msgid "They select the :strong:`paymentservice` pod in the cluster map to dive deeper into the data."
+msgstr "クラスター・マップの:strong:`paymentservice` podを選択し、データを深く掘り下げる。"
+
+#: ../../get-started/scenarios/scenario.rst:121
+msgid "This screenshot shows a Kubernetes pod menu in Splunk Infrastructure Monitoring displaying details about the pod, including its name and status."
+msgstr "このスクリーンショットは、Splunk Infrastructure Monitoring の Kubernetes ポッドメニューで、ポッド名やステータスなど、ポッドに関する詳細が表示されています。"
+
+#: ../../get-started/scenarios/scenario.rst:125
+msgid "Kai sees that the pod looks stable with no errors or events."
+msgstr "カイはポッドがエラーもイベントもなく安定していることを確認する。"
+
+#: ../../get-started/scenarios/scenario.rst:127
+msgid "This screenshot shows the Kubernetes Pod Detail tab in Splunk Infrastructure Monitoring displaying metrics that indicate the pod is stable."
+msgstr "このスクリーンショットは、Splunk Infrastructure Monitoring の Kubernetes Pod Detail タブに、Pod が安定していることを示すメトリクスが表示されていることを示しています。"
+
+#: ../../get-started/scenarios/scenario.rst:131
+msgid "Now that Kai can rule out the Kubernetes infrastructure as the source of the issue, they decide to return to their investigation in Splunk APM. Kai selects the :strong:`paymentservice in map` Related Content tile in their current view of Splunk Infrastructure Monitoring."
+msgstr "Kai は問題の原因として Kubernetes インフラストラクチャを除外できたので、Splunk APM での調査に戻ることにした。Kai は、Splunk Infrastructure Monitoring の現在のビューのマップ` Related Content タイルで:strong:`paymentservice を選択する。"
+
+#: ../../get-started/scenarios/scenario.rst:138
+msgid "Look for patterns in application errors"
+msgstr "アプリケーションエラーのパターンを探す"
+
+#: ../../get-started/scenarios/scenario.rst:140
+msgid "In Splunk APM, Kai selects :strong:`Tag Spotlight`` to look for correlations in tag values for the errors they're seeing."
+msgstr "Splunk APM で、Kai は:strong:`Tag Spotlight`` を選択し、目にしているエラーのタグ値の相関関係を調べている。"
+
+#: ../../get-started/scenarios/scenario.rst:142
+msgid "For example, when Kai looks at the :strong:`tenant.level` module, they see that errors are occurring for all levels, so the root cause is likely not tenant-specific."
+msgstr "例えば、カイ氏が:strong:`tenant.level` モジュールを見ると、すべてのレベルでエラーが発生している。"
+
+#: ../../get-started/scenarios/scenario.rst:142
+msgid "This screenshot shows the tenant.level module in Splunk APM displaying errors evenly spread across gold, silver, and bronze tenant levels."
+msgstr "このスクリーンショットは、Splunk APM の tenant.level モジュールが、ゴールド、シルバー、ブロンズのテナントレベルに均等に分散したエラーを表示していることを示しています。"
+
+#: ../../get-started/scenarios/scenario.rst:148
+msgid "However, when Kai looks at the :strong:`version module`, they see an interesting pattern: errors are happening on version :strong:`v350.10` only and not on the lower :strong:`v350.9` version."
+msgstr "しかし、カイ氏が:strong:`のバージョン・モジュール` を見ると、興味深いパターンがある。エラーはバージョン:strong:`v350.10` でのみ発生しており、下位バージョン:strong:`v350.9` では発生していない。"
+
+#: ../../get-started/scenarios/scenario.rst:150
+msgid "This screenshot shows the version module in Splunk APM displaying errors for version 350.10 only and no errors for version 350.9."
+msgstr "このスクリーンショットは、Splunk APM のバージョンモジュールがバージョン 350.10 のみにエラーを表示し、バージョン 350.9 にはエラーを表示しないことを示しています。"
+
+#: ../../get-started/scenarios/scenario.rst:155
+msgid "This seems like a strong lead, so Kai decides to dig into the log details. They select the :strong:`Logs for paymentservice` Related Content tile."
+msgstr "これは有力な手がかりになりそうなので、カイはログの詳細を調べることにした。:strong:`Logs for paymentservice` Related Content タイルを選択する。"
+
+#: ../../get-started/scenarios/scenario.rst:162
+msgid "Examine error logs for meaningful messages and patterns"
+msgstr "エラーログから意味のあるメッセージやパターンを探す"
+
+#: ../../get-started/scenarios/scenario.rst:164
+msgid "Now, in Splunk Log Observer, Kai's view is automatically narrowed to display log data coming in for the :strong:`paymentservice` only."
+msgstr "現在、Splunk Log Observer では、Kai のビューは自動的に絞り込まれ、:strong:`paymentservice` に入力されたログデータのみが表示されます。"
+
+#: ../../get-started/scenarios/scenario.rst:166
+msgid "Kai sees some error logs, so they select one to see more details in a structured view. As Kai looks at the log details, they see this error message: \"Failed payment processing through ButtercupPayments: Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)\"."
+msgstr "カイはいくつかのエラー・ログを見て、構造化されたビューで詳細を見るために1つを選択する。カイがログの詳細を見ると、次のようなエラーメッセージが表示される：Invalid API Token (test-20e26e90-356b-432e-a2c6-956fc03f5609)\"。"
+
+#: ../../get-started/scenarios/scenario.rst:168
+msgid "This screenshot shows the details of an error log in Splunk Log Observer, including the error severity and an error message."
+msgstr "このスクリーンショットは、エラーの深刻度とエラーメッセージを含む、Splunk Log Observer のエラーログの詳細を示しています。"
+
+#: ../../get-started/scenarios/scenario.rst:172
+msgid "In the error message, Kai sees what they think is a clear indication of the error. The API token starts with \"test\". It seems that a team pushed v350.10 live with a test token that doesn't work in production."
+msgstr "エラーメッセージの中で、カイはエラーの明確な兆候と思われるものを見ている。APIトークンは \"test \"で始まる。あるチームがv350.10を本番環境では動作しないテストトークンでプッシュしたようだ。"
+
+#: ../../get-started/scenarios/scenario.rst:174
+msgid "To check their hypothesis, Kai selects the error message and selects :strong:`Add to filter` to show only the logs that contain this error message."
+msgstr "彼らの仮説をチェックするために、カイはエラーメッセージを選択し、` 、このエラーメッセージを含むログのみを表示するようにフィルタリングするために、:strong:`「追加」を選択する。"
+
+#: ../../get-started/scenarios/scenario.rst:176
+msgid "Next, Kai changes the :strong:`Group by method` from :strong:`severity` to :strong:`version`."
+msgstr "次に、カイは:strong:`メソッドによるグループ` を:strong:`重大度` から:strong:`バージョン` に変更する。"
+
+#: ../../get-started/scenarios/scenario.rst:178
+msgid "Now, Kai can see that all of the logs that contain this test API token error are on version :strong:`v350.10` and none are on version v350.9."
+msgstr "さて、カイはこのテストAPIトークン・エラーを含むログのすべてがバージョン:strong:`v350.10` であり、バージョンv350.9では1つもないことを見ることができる。"
+
+#: ../../get-started/scenarios/scenario.rst:178
+msgid "This screenshot shows the Log Observer page with events filtered down by the error message and grouped by a version of version 350.10. All of the logs that display are error logs."
+msgstr "このスクリーンショットは、エラーメッセージでフィルタリングされ、バージョン350.10でグループ化されたイベントを含むLog Observerページを示しています。表示されるログはすべてエラーログである。"
+
+#: ../../get-started/scenarios/scenario.rst:184
+msgid "To be sure, Kai selects the eye icon for the message filter value to temporarily exclude the filter. Now there are logs that show up for version v350.9 too, but they don't include the error message."
+msgstr "念のため、カイはメッセージフィルター値の目のアイコンを選択し、一時的にフィルターを除外する。バージョンv350.9のログもあるが、エラーメッセージは含まれていない。"
+
+#: ../../get-started/scenarios/scenario.rst:186
+msgid "This exploration convinces Kai that the test API token in v350.10 is the most likely source of the issue. Kai notifies Deepu, the :strong:`paymentservice` owner about their findings."
+msgstr "この調査により、カイ氏はv350.10のテストAPIトークンが問題の原因である可能性が高いと確信した。カイは、:strong:`ペイメントサービス` のオーナーであるディープに、彼らの発見を知らせる。"
+
+#: ../../get-started/scenarios/scenario.rst:193
+msgid "Monitor a fix"
+msgstr "修正を監視する"
+
+#: ../../get-started/scenarios/scenario.rst:195
+msgid "Based on Kai's findings, Deepu, the :strong:`paymentservice` owner, looks at the error logs in Splunk Log Observer. They agree with Kai's assessment that the test API token is the likely cause of the problem."
+msgstr "Kai の発見に基づいて、:strong:`paymentservice` のオーナーである Deepu は Splunk Log Observer でエラーログを見る。彼らは、テストAPIトークンが問題の原因である可能性が高いというカイの評価に同意している。"
+
+#: ../../get-started/scenarios/scenario.rst:197
+msgid "Deepu decides to implement a temporary fix by reverting back to version v350.9 to try to bring the Buttercup Games site back into a known good state, while the team works on a fix to v350.10."
+msgstr "Deepuは、チームがv350.10への修正に取り組んでいる間、Buttercup Gamesのサイトを既知の良好な状態に戻すことを試みるために、バージョンをv350.9に戻して一時的な修正を実施することを決定した。"
+
+#: ../../get-started/scenarios/scenario.rst:199
+msgid "As one way to see if reverting to version v350.9 fixes the issue, Deepu opens the time picker in the upper left corner of Splunk Log Observer and selects :strong:`Live Tail`. Live Tail provides Deepu with a real-time streaming view of a sample of incoming logs."
+msgstr "バージョン v350.9 に戻すことで問題が解決するかどうかを確認する 1 つの方法として、Deepu は Splunk Log Observer の左上隅にあるタイムピッカーを開き、:strong:`Live Tail` を選択します。Live Tailは、Deepuに受信ログのサンプルをリアルタイムでストリーミング表示します。"
+
+#: ../../get-started/scenarios/scenario.rst:201
+msgid "This animated GIF shows Deepu opening the time picker of Splunk Log Observer and selecting Live Tail. Once Deepu selects Live Tail, the error logs with the failed payment messages are cleared and no new logs with the with error message are received."
+msgstr "このアニメーション GIF は、Deepu が Splunk Log Observer のタイムピッカーを開き、Live Tail を選択しているところです。DeepuがLive Tailを選択すると、支払いに失敗したメッセージのあるエラーログは消去され、エラーメッセージのある新しいログは受信されません。"
+
+#: ../../get-started/scenarios/scenario.rst:205
+msgid "Deepu watches the Live Tail view and sure enough, the failed payment messages have stopped appearing in :strong:`paymentservice` logs. Reassured that the Buttercup Games site is back in a stable state, Deepu moves on to helping their team fix v350.10."
+msgstr "DeepuがLive Tailビューを見ると、確かに、:strong:`paymentservice` のログに支払い失敗のメッセージが表示されなくなっている。Buttercup Gamesのサイトが安定した状態に戻ったことに安心したDeepuは、彼らのチームがv350.10を修正するのを手伝うことに移った。"
+
+#: ../../get-started/scenarios/scenario.rst:212
+msgid "Take preventative action and create metrics from logs to power dashboards and alerts"
+msgstr "予防措置を講じ、ログからダッシュボードやアラート用のメトリクスを作成します。"
+
+#: ../../get-started/scenarios/scenario.rst:214
+msgid "Now that Kai knows that this particular issue can cause a problem on the Buttercup Games site, they decide to do some preventative work for their SRE team. Kai takes the query they created in Splunk Log Observer and saves it as a metric."
+msgstr "カイ氏は、この特定の問題がバターカップ・ゲームズ・サイトで問題を引き起こす可能性があることを知っているため、SREチームのために予防策を講じることにした。Kai は Splunk Log Observer で作成したクエリをメトリクスとして保存します。"
+
+#: ../../get-started/scenarios/scenario.rst:-1
+msgid "This screenshot shows the Save as Metric option in the More menu in Log Observer."
+msgstr "このスクリーンショットは、Log ObserverのMoreメニューのSave as Metricオプションを示しています。"
+
+#: ../../get-started/scenarios/scenario.rst:220
+msgid "Doing this defines log metricization rules that create a log-derived metric that shows aggregate counts. Kai's team can embed this log-derived metric in charts, dashboards, and alerts that can help them identify this issue faster if it comes up again in the future."
+msgstr "これを行うことで、集計カウントを示すログ由来のメトリックを作成するログのメトリック化ルールが定義される。甲斐氏のチームは、このログに由来する指標をチャート、ダッシュボード、アラートに埋め込むことができ、将来この問題が再び発生した場合に、より早く特定することができる。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:104 ../../get-started/scenarios/scenario.rst:224
+msgid "Summary"
+msgstr "概要"
+
+#: ../../get-started/scenarios/scenario.rst:226
+msgid ""
+"Kai was able to respond to and resolve front-end issues with the Buttercup Games website that were preventing users from completing their purchases. Kai used RUM to begin troubleshooting the errors, isolating spikes in front-end errors and back-end latency as possible causes. Digging into the :strong:`/cart/checkout` endpoint, Kai used the Tag Spotlight view in RUM to investigate the full trace. Based on this, Kai realized the latency wasn't a front-end issue. Next, Kai viewed a performance summary and the end-to-end transaction workflow in APM. Looking at the service "
+"map, Kai noted that Splunk APM identified the :strong:`paymentservice` as the root cause of the errors. After ruling out Kubernetes issues, Kai used Tag Spotlight to look for correlations in tag values for the errors. Kai noticed that the errors were only happening on a specific version and decided to look into the log details. Using Log Observer, Kai looked at the log details and noticed that the error messages for the API token started with \"test\"."
+msgstr ""
+"カイは、ユーザーが購入を完了するのを妨げていたButtercup Gamesのウェブサイトのフロントエンドの問題に対応し、解決することができました。カイ氏はRUMを使用してエラーのトラブルシューティングを開始し、フロントエンドのエラーの急増とバックエンドの待ち時間が原因である可能性を切り分けた。:strong:`/cart/checkout` のエンドポイントを掘り下げ、カイはRUMのTag Spotlightビューを使って全トレースを調査した。これを踏まえて、カイはレイテンシーがフロントエンドの問題ではないことに気づいた。次に、カイはAPMのパフォーマンス・サマリーとエンド・ツー・エンドのトランザクションのワークフローを見た。"
+"サービスマップを見て、カイ氏は Splunk APM がエラーの根本原因として:strong:`paymentservice` を特定したことを指摘した。Kubernetesの問題を除外した後、KaiはTag Spotlightを使ってエラーのタグ値の相関関係を探した。カイは、エラーが特定のバージョンでのみ起きていることに気づき、ログの詳細を調べることにした。Log Observerを使って、カイはログの詳細を見て、APIトークンのエラーメッセージが \"test \"で始まっていることに気づいた。"
+
+#: ../../get-started/scenarios/scenario.rst:228
+msgid "Consulting with Deepu, the :strong:`paymentservice` owner, they agreed that the test API token was the likely cause of the problem. After implementing a fix, Deepu used Log Observer Long Tail reports to monitor a real-time streaming view of the incoming logs. Deepu confirmed that the payment errors were no longer occurring. As a final step, Kai saved the Splunk Log Observer query as a metric in order to alert the team and help resolve similar issues faster in the future."
+msgstr ":strong:`paymentservice` のオーナーであるDeepuに相談したところ、テストAPIトークンが問題の原因である可能性が高いということで意見が一致した。修正を実施した後、DeepuはLog Observer Long Tailレポートを使用して、受信ログのリアルタイムストリーミングビューを監視しました。ディープーは、支払いミスがなくなったことを確認した。最終段階として、カイ氏は Splunk Log Observer クエリをメトリックとして保存し、チームに警告を発し、今後同様の問題を迅速に解決できるようにした。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:109 ../../get-started/scenarios/scenario.rst:231
+msgid "Learn more"
+msgstr "さらに詳しく"
+
+#: ../../get-started/scenarios/scenario.rst:233
+msgid "For details about creating metrics from logs and displaying them in a chart, see :ref:`logs-metricization`."
+msgstr "ログからメトリクスを作成し、それをチャートに表示する方法の詳細については、:ref:`logs-metricization` を参照してください。"
+
+#: ../../get-started/scenarios/scenario.rst:235
+msgid "For details about creating detectors to issue alerts based on charts or metrics, see :ref:`create-detectors`."
+msgstr "チャートまたはメトリクスに基づいてアラートを発行する検出器の作成の詳細については、:ref:`create-detectors` を参照してください。"
+
+#: ../../get-started/scenarios/scenario.rst:237
+msgid "For details about setting up detectors and alerts, see :ref:`get-started-detectoralert`."
+msgstr "検出器とアラートの設定については、:ref:`get-started-detectoralert` を参照してください。"
+
+#: ../../get-started/scenarios/scenario.rst:239
+msgid "For details about integrating alerts with notification services, like Splunk On-Call, PagerDuty, and Jira, see :ref:`admin-notifs-index`."
+msgstr "Splunk On-Call、PagerDuty、Jira などの通知サービスとアラートの統合の詳細については、:ref:`admin-notifs-index` を参照してください。"
+
+#: ../../get-started/scenarios/scenario.rst:241
+msgid "For details about using Splunk RUM to identify and troubleshoot frontend errors, see :ref:`rum-identify-span-problems`."
+msgstr "Splunk RUM を使用してフロントエンドのエラーを特定し、トラブルシューティングする方法の詳細については、:ref:`rum-identify-span-problems` を参照してください。"
+
+#: ../../get-started/scenarios/scenario.rst:243
+msgid "For details about business workflows, see :ref:`apm-workflows`."
+msgstr "ビジネス・ワークフローの詳細については、:ref:`apm-workflows` を参照。"
+
+#: ../../get-started/scenarios/scenario.rst:245
+msgid "For details about using Related Content, see :ref:`get-started-relatedcontent`."
+msgstr "関連コンテンツの使用については、:ref:`get-started-relatedcontent` を参照してください。"
+
+#: ../../get-started/scenarios/scenario.rst:247
+msgid "For details about using the Kubernetes navigator and other navigators, see :ref:`use-navigators-imm`."
+msgstr "Kubernetesナビゲータやその他のナビゲータの使用方法の詳細については、:ref:`use-navigators-imm` を参照してください。"
+
+#: ../../get-started/scenarios/scenario.rst:249
+msgid "For details about using Tag Spotlight, see :ref:`apm-tag-spotlight`."
+msgstr "タグ・スポットライトの使用方法については、:ref:`apm-tag-spotlight` を参照してください。"
+
+#: ../../get-started/scenarios/scenario.rst:251
+msgid "For details about using Splunk Log Observer Live Tail view, see :ref:`logs-live-tail`."
+msgstr "Splunk Log Observer Live Tail ビューの使用方法の詳細については、:ref:`logs-live-tail` を参照してください。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Learn how you can use the Splunk OTel Collector to get data in from your cloud infrastructure and services."
+msgstr "Splunk OTel Collector を使用して、クラウドインフラとサービスからデータを取得する方法をご紹介します。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:5
+msgid "Scenario: Kai monitors infrastructure and apps in a cloud environment using the Splunk OTel Collector"
+msgstr "シナリオKai 氏は、Splunk OTel Collector を使用して、クラウド環境のインフラストラクチャとアプリを監視しています。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:10
+msgid "Kai is the lead site reliability engineer in a large fintech company, PonyBank. Their task is to monitor their AWS infrastructure, which consists of several hundred containers running Java applications on Amazon Elastic Kubernetes Service (EKS). Kai also wants to instrument tens of Linux and Windows Elastic Compute Cloud (EC2) instances managed by IT. Kai's primary goal is to extract reliability and performance metrics and logs from each asset, as well as instrumenting the Java application to monitor its performance using Splunk APM."
+msgstr "カイは大手フィンテック企業ポニーバンクのリードサイトリライアビリティエンジニアである。彼らのタスクは、Amazon Elastic Kubernetes Service（EKS）上でJavaアプリケーションを実行する数百のコンテナで構成されるAWSインフラストラクチャを監視することだ。カイ氏はまた、IT部門が管理する数十台のLinuxとWindowsのElastic Compute Cloud（EC2）インスタンスを計測したいと考えている。Kai 氏の主な目標は、各資産から信頼性とパフォーマンスのメトリクスとログを抽出し、Splunk APM を使用して Java アプリケーションのパフォーマンスを監視するためにインスツルメンテーションを行うことです。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:12
+msgid "PonyBank uses Splunk Observability Cloud, which brings data in through the open-source Splunk Distribution of the OpenTelemetry Collector, an agent that can collect and export data from multiple sources. The Collector can also forward logs and traces to enable full software observability."
+msgstr "PonyBank は Splunk Observability Cloud を使用しており、複数のソースからデータを収集しエクスポートできるエージェントである OpenTelemetry Collector のオープンソース Splunk ディストリビューションを通じてデータを取り込んでいる。コレクターは、ログとトレースを転送して、ソフトウェアの完全な監視を可能にすることもできる。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:14
+msgid "To instrument their infrastructure using the Collector, Kai takes the following steps:"
+msgstr "Collectorを使用してインフラストラクチャを計測するために、Kaiは以下のステップを踏む："
+
+#: ../../get-started/scenarios/scenario-collector.rst:16
+msgid ":ref:`set-up-eks-monitoring`"
+msgstr ":ref:`set-up-eks-monitoring`"
+
+#: ../../get-started/scenarios/scenario-collector.rst:17
+msgid ":ref:`instrument-ec2-instances`"
+msgstr ":ref:`instrument-ec2-instances`"
+
+#: ../../get-started/scenarios/scenario-collector.rst:18
+msgid ":ref:`instrument-java-svc`"
+msgstr ":ref:`instrument-java-svc`"
+
+#: ../../get-started/scenarios/scenario-collector.rst:19
+msgid ":ref:`related-content-use-case`"
+msgstr ":ref:`related-content-use-case`"
+
+#: ../../get-started/scenarios/scenario-collector.rst:24
+msgid "Enable EKS monitoring using custom Helm charts"
+msgstr "カスタムHelmチャートを使用したEKSモニタリングの有効化"
+
+#: ../../get-started/scenarios/scenario-collector.rst:26
+msgid "Since their migration to the cloud, the PonyBank application has been running in EKS. Kai starts by setting up the cloud integration from Observability Cloud using the guided setup, which they access from the home page. Guided setups allow to select the relevant ingest token, and generate installation commands and configuration snippets from the selected options, which Kai can use to quickly deploy instrumentation."
+msgstr "クラウドへの移行以来、ポニーバンクのアプリケーションはEKSで稼働している。カイ氏は、ホームページからアクセスできるガイド付きセットアップを使用して、Observability Cloudからクラウド統合を設定することから始める。ガイド付きセットアップでは、関連するインジェストトークンを選択し、選択したオプションからインストールコマンドと設定スニペットを生成することができます。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Guided setup for Kubernetes in Data Management"
+msgstr "データ管理におけるKubernetesのガイド付きセットアップ"
+
+#: ../../get-started/scenarios/scenario-collector.rst:31
+msgid "As the cluster contains hundreds of containers in a virtual private cloud (VPC) with no direct access to the cloud, Kai uses the guided setup to add a cluster of Splunk OTel Collector instances in data forwarding (gateway) mode, so that they can receive and forward data while preserving the safety of the original configuration. In the next step, the guided setup provides customized commands for Helm."
+msgstr "クラウドに直接アクセスできない仮想プライベートクラウド (VPC) 内に数百のコンテナがあるため、Kai 氏はガイドされたセットアップを使用して、データ転送 (ゲートウェイ) モードで Splunk OTel Collector インスタンスのクラスタを追加し、元の構成の安全性を維持しながらデータの受信と転送ができるようにした。次のステップでは、Helm用にカスタマイズされたコマンドを提供する。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:33
+msgid "At the end of the guided setup, Kai enters the Kubernetes map of Infrastructure Monitoring and sees the cluster status. They select the nodes on the Kubernetes map, which appear as colored cubes in a grid, to learn more about the status of each element, including workloads and system metrics."
+msgstr "ガイド付きのセットアップが終わると、Kai氏はInfrastructure MonitoringのKubernetesマップに入り、クラスタのステータスを確認する。Kubernetesマップ上のノードを選択し、ワークロードやシステムメトリクスなど、各要素のステータスを知ることができる。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Cluster view of the Kubernetes infrastructure in Infrastructure Monitoring"
+msgstr "Infrastructure MonitoringにおけるKubernetesインフラのクラスタビュー"
+
+#: ../../get-started/scenarios/scenario-collector.rst:41
+msgid "Use the Collector to instrument all EC2 instances"
+msgstr "Collectorを使用して、すべてのEC2インスタンスを計測する。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:43
+msgid "For the hosts managed by IT as Elastic Compute Cloud (EC2) instances, Kai decides to deploy the Splunk OTel Collector using the existing Puppet setup at PonyBank. They open the guided setup for Linux monitoring in Observability Cloud and select the Puppet tab. After filling out the required information, Kai only has to follow two steps:"
+msgstr "IT 部門が Elastic Compute Cloud (EC2) インスタンスとして管理するホストについて、Kai 氏は PonyBank の既存の Puppet セットアップを使用して Splunk OTel Collector をデプロイすることにした。彼らは、Observability CloudでLinuxモニタリングのためのガイド付きセットアップを開き、Puppetタブを選択する。必要事項を記入した後、カイは2つのステップを踏むだけでいい："
+
+#: ../../get-started/scenarios/scenario-collector.rst:45
+msgid "Install the Splunk OTel Collector module from Puppet Forge."
+msgstr "Puppet Forge から Splunk OTel Collector モジュールをインストールします。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:46
+msgid "Include a new class in the manifest file:"
+msgstr "マニフェスト・ファイルに新しいクラスを含めます："
+
+#: ../../get-started/scenarios/scenario-collector.rst:57
+msgid "Kai also uses the Linux guided setup for the few stray EC2 instances in the organization that are not managed through Puppet, following the steps from the Installer script tab. The customized installer script command downloads and runs the collector with the desired configuration."
+msgstr "カイ氏はまた、Puppetで管理されていない組織内の数少ない野良EC2インスタンスに対しても、インストーラ・スクリプト・タブの手順に従ってLinuxガイド付きセットアップを使用している。カスタマイズされたインストーラスクリプトコマンドは、必要な構成でコレ クタをダウンロードして実行します。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:59
+msgid "Now, Kai can see data from each host is flowing into Infrastructure Monitoring. For each host, Kai can see metadata, system metrics, and processes, among other data points."
+msgstr "これで、カイ氏は各ホストからのデータがインフラストラクチャ・モニタリングに流れ込んでいることを確認できる。各ホストについて、カイ氏はメタデータ、システム・メトリクス、プロセスなどのデータを見ることができる。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Dashboard with host metrics in Infrastructure Monitoring"
+msgstr "インフラストラクチャ・モニタリングのホスト・メトリクスによるダッシュボード"
+
+#: ../../get-started/scenarios/scenario-collector.rst:64
+msgid "At the same time, Kai can also see logs coming from each host and node in Splunk Log Observer:"
+msgstr "同時に、Kai は Splunk Log Observer で各ホストとノードからのログを確認することもできます："
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Log Observer showing host logs"
+msgstr "ホストのログを表示するログオブザーバー"
+
+#: ../../get-started/scenarios/scenario-collector.rst:72
+msgid "Instrument the Java service for Splunk APM"
+msgstr "Splunk APM 用の Java サービスをインストルメント化する"
+
+#: ../../get-started/scenarios/scenario-collector.rst:74
+msgid "Kai's final goal is to instrument the corporate Java service of PonyBank for Splunk APM, so that the team can analyze spans and traces in Observability Cloud, as well as use AlwaysOn Profiling to quickly identify inefficient code that's using too much CPU or memory."
+msgstr "Kai 氏の最終目標は、PonyBank の法人向け Java サービスを Splunk APM で計測し、Observability Cloud でスパンとトレースを分析し、AlwaysOn プロファイリングを使って CPU やメモリを使いすぎている非効率なコードを迅速に特定できるようにすることだ。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:76
+msgid "To do that, Kai selects the Java guided setup, which contains all the required instructions for enabling the Splunk Java agent after the Collector is deployed. Kai defines an environment and service name, which are essential to enable the Related Content feature between APM and Infrastructure Monitoring."
+msgstr "このセットアップには、Collector のデプロイ後に Splunk Java エージェントを有効にするために必要な手順がすべて含まれています。Kaiは、APMとInfrastructure Monitoringの間でRelated Content機能を有効にするために不可欠な環境名とサービス名を定義する。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:78
+msgid "After selecting all the features and options they need, Kai obtains a YAML snippet they can add to the current Kubernetes configuration, as well as a customized runtime command."
+msgstr "必要な機能とオプションをすべて選択すると、Kaiは現在のKubernetesコンフィギュレーションに追加できるYAMLスニペットと、カスタマイズされたランタイムコマンドを取得する。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Guided setup for the Java tracing instrumentation"
+msgstr "Javaトレース・インスツルメンテーションのガイド付きセットアップ"
+
+#: ../../get-started/scenarios/scenario-collector.rst:83
+msgid "For the EC2 instances that also contain Java services, Kai uses the same guided setup, running the customized commands in the console. Instrumenting the application takes a few seconds."
+msgstr "Javaサービスを含むEC2インスタンスについても、カイ氏はコンソールでカスタマイズされたコマンドを実行し、同じガイド付きセットアップを使用する。アプリケーションのインストゥルメントには数秒かかる。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Console output of the Java agent install"
+msgstr "Javaエージェントインストールのコンソール出力"
+
+#: ../../get-started/scenarios/scenario-collector.rst:91
+msgid "Explore links between telemetry using Related Content"
+msgstr "関連コンテンツを使った遠隔測定間のリンクを探る"
+
+#: ../../get-started/scenarios/scenario-collector.rst:93
+msgid "Thanks to the Related Content feature, when Kai selects the node running the checkout service of the application, the service appears as a link to Splunk APM in the related content bar."
+msgstr "関連コンテンツ機能のおかげで、Kai がアプリケーションのチェックアウトサービスを実行しているノードを選択すると、関連コンテンツバーに Splunk APM へのリンクとしてサービスが表示されます。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Infrastructure Monitoring showing the Related Content bar"
+msgstr "関連コンテンツバーを表示するインフラモニタリング"
+
+#: ../../get-started/scenarios/scenario-collector.rst:98
+msgid "The same happens when Kai opens Splunk APM and selects the checkout service in the service map, shown in the following image. The EKS cluster for checkoutservice appears in the Related Content bar following the map. Observability Cloud suggests both links thanks to the APM and Infrastructure mapping that Observability Cloud performs using OpenTelemetry attributes and data."
+msgstr "Kai 氏が Splunk APM を開き、サービスマップでチェックアウトサービスを選択すると同じことが起こる。checkoutserviceのEKSクラスタは、マップに続いて関連コンテンツバーに表示されます。Observability Cloudは、OpenTelemetryの属性とデータを使ってAPMとインフラのマッピングを行うことで、両方のリンクを提案する。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:-1
+msgid "Application Monitoring showing the Related Content bar"
+msgstr "関連コンテンツバーを表示するアプリケーションモニタリング"
+
+#: ../../get-started/scenarios/scenario-collector.rst:106
+msgid "Kai used Splunk OTel Collector to instrument PonyBank's entire cloud infrastructure, quickly obtaining configuration files and commands for each environment and situation. Through the Java instrumentation for APM, they also retrieved traces from the Java services running on the EKS clusters with related content available to access."
+msgstr "Kai 氏は Splunk OTel Collector を使用して PonyBank のクラウドインフラ全体を計測し、各環境と状況に応じた設定ファイルとコマンドを迅速に取得した。また、APM用のJavaインスツルメンテーションを通じて、EKSクラスタ上で実行されているJavaサービスのトレースを取得し、関連するコンテンツにアクセスできるようにした。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:111
+msgid "Learn about sending data to Observability Cloud in :ref:`get-started-get-data-in`."
+msgstr ":ref:`get-started-get-data-in` 、Observability Cloudへのデータ送信について学ぶ。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:112
+msgid "To collect infrastructure metrics and logs from multiple platforms, see :ref:`otel-intro`."
+msgstr "複数のプラットフォームからインフラストラクチャ・メトリクスとログを収集するには、:ref:`otel-intro` を参照してください。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:113
+msgid "To instrument Java services for Splunk APM, see :ref:`get-started-java`."
+msgstr "Splunk APM で Java サービスを計測するには、:ref:`get-started-java` を参照してください。"
+
+#: ../../get-started/scenarios/scenario-collector.rst:114
+msgid "For more information on Related Content in Observability Cloud, see :ref:`get-started-enablerelatedcontent`."
+msgstr "Observability Cloudの関連コンテンツについては、:ref:`get-started-enablerelatedcontent` を参照。"
+
+#: ../../get-started/scenarios/scenario-cross.rst:11
+msgid "End-to-end scenario"
+msgstr "エンド・ツー・エンドのシナリオ"
+
+#: ../../get-started/scenarios/scenario-cross.rst:11
+msgid "Collector scenario"
+msgstr "コレクター・シナリオ"
+
+#: ../../get-started/scenarios/scenario-cross.rst:-1
+msgid "Global scenarios for Splunk Observability Cloud."
+msgstr "Splunk Observability Cloud のグローバルシナリオ。"
+
+#: ../../get-started/scenarios/scenario-cross.rst:5
+msgid "Splunk Observability Cloud global scenarios"
+msgstr "Splunk Observability Cloud グローバルシナリオ"
+
+#: ../../get-started/scenarios/scenario-cross.rst:18
+msgid "Learn more about the Splunk Observability Cloud platform with the following cross-product scenarios:"
+msgstr "以下の製品横断シナリオで Splunk Observability Cloud プラットフォームの詳細をご覧ください："
+
+#: ../../get-started/scenarios/scenario-cross.rst:20
+msgid ":ref:`Troubleshoot an issue from the browser to the back end using Splunk Observability Cloud <get-started-scenario>`"
+msgstr ":ref:`Troubleshoot an issue from the browser to the back end using Splunk Observability Cloud <get-started-scenario>`"
+
+#: ../../get-started/scenarios/scenario-cross.rst:21
+msgid ":ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-scenario>`"
+msgstr ":ref:`Monitor infrastructure and apps in a cloud environment using the Splunk OTel Collector <otel-collector-scenario>`"
+
+#: ../../get-started/support.rst:-1
+msgid "Splunk Observability Cloud provides customers and free trial users with multiple ways to get help with our product. Use the method that best meets your need."
+msgstr "Splunk Observability Cloud では、お客様および無料トライアルユーザーの皆様に、製品に関するヘルプを得るための複数の方法を提供しています。あなたのニーズに最も適した方法を使用してください。"
+
+#: ../../get-started/support.rst:5
+msgid "Splunk Observability Cloud support"
+msgstr "Splunk Observability Cloud のサポート"
+
+#: ../../get-started/support.rst:10
+msgid "Splunk Observability Cloud provides multiple ways to get help with the product. Use the method that best meets your need:"
+msgstr "Splunk Observability Cloud には、製品に関するヘルプを得るための複数の方法が用意されています。あなたのニーズに最も適した方法を使用してください："
+
+#: ../../get-started/support.rst:14
+msgid "Submit a case in the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`"
+msgstr ":new-page:`Splunk サポートポータルでケースを送信する <https://splunkcommunities.force.com/customers/home/home.jsp>`"
+
+#: ../../get-started/support.rst:13 ../../get-started/support.rst:17
+msgid "Available to Splunk Observability Cloud customers"
+msgstr "Splunk Observability Cloudをご利用のお客様"
+
+#: ../../get-started/support.rst:14
+msgid "For more information, see :ref:`support-portal`."
+msgstr "詳細は:ref:`support-portal` を参照。"
+
+#: ../../get-started/support.rst:18
+msgid "Call :new-page:`Splunk Customer Support <https://www.splunk.com/en_us/about-splunk/contact-us.html#customer-support>`"
+msgstr "電話:new-page:`Splunk カスタマーサポート <https://www.splunk.com/en_us/about-splunk/contact-us.html#customer-support>`"
+
+#: ../../get-started/support.rst:18
+msgid "Free trial users can call Splunk Customer Support for help with password resets only"
+msgstr "無料トライアルユーザーは、Splunkカスタマーサポートでパスワードのリセットに関するヘルプを受けることができます。"
+
+#: ../../get-started/support.rst:21
+msgid "Ask a question and get answers through a community support forum at :new-page:`Splunk Answers <https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx>`"
+msgstr ":new-page:`Splunk Answers のコミュニティサポートフォーラムで質問し、回答を得る。 <https://community.splunk.com/t5/Splunk-Observability-Cloud/bd-p/it-signalfx>`"
+
+#: ../../get-started/support.rst:21 ../../get-started/support.rst:24
+msgid "Available to Splunk Observability Cloud customers and free trial users"
+msgstr "Splunk Observability Cloudの顧客および無料トライアルユーザーが利用可能"
+
+#: ../../get-started/support.rst:25
+msgid "Join the Splunk :new-page:`#observability <https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` user group Slack channel to communicate with customers, partners, and Splunk employees worldwide"
+msgstr "Splunk:new-page:`#observability<https://splunk-usergroups.slack.com/archives/C01AK4CCWR4>` ユーザーグループの Slack チャンネルに参加して、世界中の顧客、パートナー、Splunk 社員とのコミュニケーションを図りましょう。"
+
+#: ../../get-started/support.rst:25
+msgid "To learn how to join, see :new-page:`Get Started with Splunk Community - Chat groups <https://docs.splunk.com/Documentation/Community/current/community/Chat>`"
+msgstr "参加方法については、:new-page:`Splunk コミュニティを始める - チャットグループを参照してください。 <https://docs.splunk.com/Documentation/Community/current/community/Chat>`"
+
+#: ../../get-started/support.rst:27
+msgid "To learn about even more support options, see :new-page:`Splunk Customer Success <https://www.splunk.com/en_us/customer-success.html>`."
+msgstr "その他のサポートオプションについては、:new-page:`Splunk Customer Success<https://www.splunk.com/en_us/customer-success.html>` をご覧ください。"
+
+#: ../../get-started/support.rst:33
+msgid "Use the Splunk Support Portal"
+msgstr "Splunk サポートポータルを使用する"
+
+#: ../../get-started/support.rst:35
+msgid "On March 17, 2022, the Splunk Observability Cloud (SignalFx) Support site joined the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`, where you can create new cases, update your open cases, and search the knowledge base. You'll continue to receive the same world-class support from your Splunk Observability Cloud support engineers."
+msgstr "2022年3月17日、Splunk Observability Cloud (SignalFx) サポートサイトは、:new-page:`Splunk Support Portal<https://splunkcommunities.force.com/customers/home/home.jsp>` に加わりました。ここでは、新しいケースの作成、オープンケースの更新、ナレッジベースの検索が可能です。Splunk Observability Cloud サポートエンジニアによるワールドクラスのサポートを引き続きご利用いただけます。"
+
+#: ../../get-started/support.rst:37
+msgid "If you have an existing Splunk Observability Cloud (SignalFx) Support site account, here are some notable changes to the support process using the new Splunk Support Portal:"
+msgstr "既存の Splunk Observability Cloud (SignalFx) サポートサイトアカウントをお持ちの場合、新しい Splunk サポートポータルを使用したサポートプロセスの注目すべき変更点があります："
+
+#: ../../get-started/support.rst:39
+msgid "All of your open cases have been migrated to the Splunk Support Portal."
+msgstr "すべてのオープンケースが Splunk サポートポータルに移行されました。"
+
+#: ../../get-started/support.rst:41
+msgid "You can no longer create new cases by emailing ``observability-support@splunk.com`` or ``signalfx-support@splunk.com``."
+msgstr "``observability-support@splunk.com`` または``signalfx-support@splunk.com`` にメールしても、新しいケースを作成することはできなくなりました。"
+
+#: ../../get-started/support.rst:43
+msgid "You can't use your existing Splunk Observability Cloud (SignalFx) Support site credentials to log in to the Splunk Support Portal. This also means that any single sign-on functionality that you used to log in to the Splunk Observability Cloud (SignalFx) Support site doesn't work to log you in to the Splunk Support Portal."
+msgstr "既存の Splunk Observability Cloud (SignalFx) サポートサイトの認証情報を使用して Splunk サポートポータルにログインすることはできません。これは、Splunk Observability Cloud (SignalFx) サポートサイトにログインするために使用したシングルサインオン機能が、Splunk サポートポータルにログインするために機能しないことも意味します。"
+
+#: ../../get-started/support.rst:45
+msgid "For example, if you select the :guilabel:`Splunk Support Portal` link on the Splunk Observability Cloud application home page or navigate to :menuselection:`Settings > Support` in the application, you aren't automatically logged in to the Splunk Support Portal."
+msgstr "たとえば、Splunk Observability Cloud アプリケーションのホームページで:guilabel:`Splunk サポートポータル` リンクを選択するか、アプリケーションで:menuselection:`設定 > サポート` に移動しても、Splunk サポートポータルに自動的にログインされません。"
+
+#: ../../get-started/support.rst:47
+msgid "To log in to the Splunk Support Portal, you must :ref:`create a Splunk account <create-splunk-account>`, if you don't already have one. You use your Splunk account credentials to log in to the Splunk Support Portal."
+msgstr "Splunk サポートポータルにログインするには、:ref:`create a Splunk account <create-splunk-account>` が必要です。Splunk サポートポータルにログインするには、Splunk アカウントの認証情報を使用します。"
+
+#: ../../get-started/support.rst:49
+msgid "Not sure if you have a Splunk account or can't remember your password or username? Use the :guilabel:`Forgot your password or username?` functionality on the :new-page:`Splunk Account Login page <https://login.splunk.com/>`."
+msgstr "Splunk アカウントをお持ちかどうかわからない場合、またはパスワードやユーザー名を覚えていない場合は、こちらをご覧ください。:guilabel:`パスワードまたはユーザー名をお忘れですか?:new-page:`Splunk アカウントログインページ<https://login.splunk.com/>` の` 機能を使用してください。"
+
+#: ../../get-started/support.rst:55
+msgid "Create a Splunk account"
+msgstr "Splunk アカウントを作成する"
+
+#: ../../get-started/support.rst:57
+msgid "Go to the :new-page:`Create Your Account page <https://www.splunk.com/page/sign_up>` and complete the form to register for a Splunk account. Make sure to sign up using your business email address."
+msgstr ":new-page:`Create Your Account ページ<https://www.splunk.com/page/sign_up>` にアクセスし、フォームに入力して Splunk アカウントを登録します。必ずビジネス用のEメールアドレスでご登録ください。"
+
+#: ../../get-started/support.rst:59
+msgid "Check your email for a message from Splunk asking you to verify your email address. You must click the link in the email to verify your email address within 7 days or your account creation request expires. If you don't see the email in your inbox, make sure to check your spam folder."
+msgstr "メールアドレスを確認するようSplunkからメッセージが届いていないか確認してください。7日以内にメールに記載されているリンクをクリックしてメールアドレスを確認しないと、アカウント作成リクエストは失効します。受信トレイにメールが届かない場合は、迷惑メールフォルダを確認してください。"
+
+#: ../../get-started/support.rst:61
+msgid "Select the verification link in the email to access a page where you can log in to your Splunk account."
+msgstr "メールに記載されている認証リンクを選択すると、Splunk アカウントにログインできるページにアクセスできます。"
+
+#: ../../get-started/support.rst:63
+msgid "After you've logged in to your Splunk account, you can access the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`. You can manually navigate to the Splunk Support Portal by selecting :guilabel:`Support > Support Portal` on :new-page:`splunk.com <https://www.splunk.com/>`."
+msgstr "Splunk アカウントにログイン後、:new-page:`Splunk サポートポータル<https://splunkcommunities.force.com/customers/home/home.jsp>` にアクセスできます。手動で Splunk サポートポータルに移動するには、:guilabel:`サポート > サポートポータル` :new-page:` splunk.com<https://www.splunk.com/>` を選択します。"
+
+#: ../../get-started/support.rst:65
+msgid "It can take up to 24 hours after creating your Splunk account for your Splunk Support Portal experience to reflect the correct entitlements for the products and permissions you have access to. A Splunk Support Portal administrator sets the entitlements for you."
+msgstr "Splunk サポートポータルのエクスペリエンスに、アクセス可能な製品および権限に関する正しい権限が反映されるには、Splunk アカウントの作成後、最大で 24 時間かかります。Splunk サポートポータルの管理者があなたの代わりに権限を設定します。"
+
+#: ../../get-started/support.rst:67
+msgid "To learn more about entitlements, see \"Entitlements\" in :new-page:`Working with Support <https://www.splunk.com/pdfs/support/working-with-support.pdf>`."
+msgstr "エンタイトルメントについて詳しくは、:new-page:`Working with Support<https://www.splunk.com/pdfs/support/working-with-support.pdf>` の「エンタイトルメント」をご覧ください。"
+
+#: ../../get-started/support.rst:69
+msgid "To check on the status of your entitlements:"
+msgstr "資格の状況を確認する："
+
+#: ../../get-started/support.rst:71
+msgid "Access the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`."
+msgstr ":new-page:`Splunk サポートポータル<https://splunkcommunities.force.com/customers/home/home.jsp>` にアクセスしてください。"
+
+#: ../../get-started/support.rst:73
+msgid "In the navigation menu, select :guilabel:`My Entitlements`."
+msgstr "ナビゲーション・メニューで、:guilabel:`My Entitlements` を選択する。"
+
+#: ../../get-started/support.rst:75
+msgid "After your Splunk Support Portal entitlements have been set, you can submit and update cases for your products."
+msgstr "Splunk サポートポータルの権限が設定されると、製品に関するケースの提出や更新が可能になります。"
+
+#: ../../get-started/support.rst:81
+msgid "Submit a Splunk Support Portal case"
+msgstr "Splunk サポートポータルケースを送信する"
+
+#: ../../get-started/support.rst:83
+msgid "Access the :new-page:`Splunk Support Portal <https://splunkcommunities.force.com/customers/home/home.jsp>`. You can also access the Splunk Support Portal from the Splunk Observability Cloud application home page or by navigating to :menuselection:`Settings > Support` in the application."
+msgstr ":new-page:`Splunk サポートポータル<https://splunkcommunities.force.com/customers/home/home.jsp>` にアクセスしてください。Splunk Observability Cloud アプリケーションのホームページから、またはアプリケーションの:menuselection:`設定 > サポート` に移動して、Splunk サポートポータルにアクセスすることもできます。"
+
+#: ../../get-started/support.rst:85
+msgid "For detailed instructions about how to submit a case using the Splunk Support Portal, see \"Submitting a Case via The Portal\" in :new-page:`Working with Support <https://www.splunk.com/pdfs/support/working-with-support.pdf>`."
+msgstr "Splunk サポートポータルを使用してケースを送信する方法の詳細については、:new-page:`Working with Support<https://www.splunk.com/pdfs/support/working-with-support.pdf>` の「ポータルを使用してケースを送信する」を参照してください。"
+
+#: ../../get-started/use-mobile.rst:-1
+msgid "Learn how to view, search, and share your alerts and dashboards from Splunk Observability Cloud for Mobile."
+msgstr "Splunk Observability Cloud for Mobile からアラートやダッシュボードを表示、検索、共有する方法をご紹介します。"
+
+#: ../../get-started/use-mobile.rst:5
+msgid "View dashboards and alerts using Splunk Observability Cloud for Mobile"
+msgstr "Splunk Observability Cloud for Mobile を使用してダッシュボードとアラートを表示する"
+
+#: ../../get-started/use-mobile.rst:10
+msgid "You can use Splunk Observability Cloud for Mobile to check system critical metrics in Splunk Observability Cloud on the go, access real-time alerts with visualizations, and view mobile-friendly dashboards."
+msgstr "Splunk Observability Cloud for Mobile を使用すると、外出先から Splunk Observability Cloud でシステムの重要なメトリクスを確認したり、視覚化されたリアルタイムアラートにアクセスしたり、モバイルフレンドリーなダッシュボードを表示したりできます。"
+
+#: ../../get-started/use-mobile.rst:14
+msgid "View dashboards using Splunk Observability Cloud for Mobile"
+msgstr "Splunk Observability Cloud for Mobile を使用してダッシュボードを表示する"
+
+#: ../../get-started/use-mobile.rst:16
+msgid "You can use the dashboards tab to do the following things:"
+msgstr "ダッシュボード・タブでは以下のことができます："
+
+#: ../../get-started/use-mobile.rst:18
+msgid "View and interact with dashboards from your Observability Cloud organization."
+msgstr "Observability Cloud組織からダッシュボードを表示し、操作できます。"
+
+#: ../../get-started/use-mobile.rst:19
+msgid "View and interact with a wide variety of charts and visualization."
+msgstr "様々なチャートやビジュアライゼーションを表示し、操作することができます。"
+
+#: ../../get-started/use-mobile.rst:20
+msgid "Search and save Dashboards."
+msgstr "ダッシュボードの検索と保存"
+
+#: ../../get-started/use-mobile.rst:21
+msgid "Share dashboards with other Observability Cloud users."
+msgstr "他のObservability Cloudユーザーとダッシュボードを共有します。"
+
+#: ../../get-started/use-mobile.rst:25
+msgid "View and search dashboards"
+msgstr "ダッシュボードの表示と検索"
+
+#: ../../get-started/use-mobile.rst:27
+msgid "You can view dashboards in Splunk Observability Cloud for Mobile by navigating between the dashboard categories or by searching for them. You can access any dashboard that you have permission to view in Splunk Observability Cloud."
+msgstr "Splunk Observability Cloud for Mobile のダッシュボードは、ダッシュボードのカテゴリ間を移動するか、検索することで表示できます。Splunk Observability Cloud で表示権限を持っているダッシュボードにアクセスできます。"
+
+#: ../../get-started/use-mobile.rst:29
+msgid "In Splunk Observability for Mobile, go to the :strong:`Dashboards` tab."
+msgstr "Splunk Observability for Mobile の:strong:`ダッシュボード` タブに移動します。"
+
+#: ../../get-started/use-mobile.rst:30
+msgid "Choose one of the following options:"
+msgstr "以下のオプションのいずれかを選択してください："
+
+#: ../../get-started/use-mobile.rst:32
+msgid "Select a dashboard category: :strong:`My Dashboards`, :strong:`Custom`, or :strong:`Built In`."
+msgstr "ダッシュボードのカテゴリーを選択します：:strong:`My Dashboards`,:strong:`Custom`, or:strong:`Built In`."
+
+#: ../../get-started/use-mobile.rst:33
+msgid "Select the :strong:`search` icon to search for dashboards by name."
+msgstr ":strong:`検索` アイコンを選択すると、ダッシュボードを名前で検索できます。"
+
+#: ../../get-started/use-mobile.rst:35
+msgid "Tap a dashboard to view it."
+msgstr "ダッシュボードをタップすると表示されます。"
+
+#: ../../get-started/use-mobile.rst:37
+msgid "For more information on dashboard types, see :ref:`dashboard-basics`"
+msgstr "ダッシュボード・タイプの詳細については、以下を参照のこと。 :ref:`dashboard-basics`"
+
+#: ../../get-started/use-mobile.rst:39
+msgid "The following dashboard information is available within a dashboard on Splunk Observability Cloud for Mobile:"
+msgstr "以下のダッシュボード情報は、Splunk Observability Cloud for Mobile のダッシュボード内で利用できます："
+
+#: ../../get-started/use-mobile.rst:41
+msgid "Preset overrides and filters."
+msgstr "プリセットのオーバーライドとフィルター。"
+
+#: ../../get-started/use-mobile.rst:42
+msgid "Dashboard description."
+msgstr "ダッシュボードの説明"
+
+#: ../../get-started/use-mobile.rst:43
+msgid "Charts and visualizations."
+msgstr "チャートとビジュアライゼーション。"
+
+#: ../../get-started/use-mobile.rst:47
+msgid "Filter dashboards"
+msgstr "フィルター・ダッシュボード"
+
+#: ../../get-started/use-mobile.rst:48
+msgid "You can apply additional filters to a dashboard to view the information relevant to your needs."
+msgstr "ダッシュボードに追加のフィルタを適用して、ニーズに関連する情報を表示することができます。"
+
+#: ../../get-started/use-mobile.rst:50
+msgid "To filter a dashboard, navigate to the :strong:`Filter +` section of the dashboard where the preset overrides and filters are listed."
+msgstr "ダッシュボードにフィルタをかけるには、ダッシュボードの:strong:`Filter +` セクションに移動し、プリセットのオーバーライドとフィルタを表示します。"
+
+#: ../../get-started/use-mobile.rst:51
+msgid "Tap :strong:`Filter +` to add additional filters."
+msgstr ":strong:`フィルタ +` をタップして、フィルタを追加します。"
+
+#: ../../get-started/use-mobile.rst:52
+msgid "Tap any existing filters listed to adjust filter settings."
+msgstr "表示されている既存のフィルターをタップして、フィルター設定を調整します。"
+
+#: ../../get-started/use-mobile.rst:55
+msgid "Share dashboards"
+msgstr "ダッシュボードを共有する"
+
+#: ../../get-started/use-mobile.rst:56
+msgid "You can share dashboards with other Splunk Observability Cloud users. When sharing a dashboard, the recipient must be a Splunk Observability Cloud user and have permission to view the dashboard."
+msgstr "他の Splunk Observability Cloud ユーザーとダッシュボードを共有できます。ダッシュボードを共有する場合、受信者は Splunk Observability Cloud ユーザーであり、ダッシュボードを表示する権限を持っている必要があります。"
+
+#: ../../get-started/use-mobile.rst:58
+msgid "Select the dashboard you want to share."
+msgstr "共有したいダッシュボードを選択します。"
+
+#: ../../get-started/use-mobile.rst:59 ../../get-started/use-mobile.rst:87
+msgid "Tap the :strong:`share` icon in the top right corner and select your preferred sharing method."
+msgstr "右上の:strong:`共有` アイコンをタップし、お好みの共有方法を選択します。"
+
+#: ../../get-started/use-mobile.rst:63
+msgid "View alerts using Splunk Observability for Mobile"
+msgstr "Splunk Observability for Mobile を使用してアラートを表示する"
+
+#: ../../get-started/use-mobile.rst:65
+msgid "You can use the alerts tab to do the following things:"
+msgstr "アラート・タブでは以下のことができます："
+
+#: ../../get-started/use-mobile.rst:67
+msgid "View past and active alerts."
+msgstr "過去のアラートとアクティブなアラートを表示します。"
+
+#: ../../get-started/use-mobile.rst:68
+msgid "View detailed visualizations that contain alert data about what happened at the time of the alert."
+msgstr "アラート発生時に何が起こったかについてのアラートデータを含む詳細なビジュアライゼーションを表示します。"
+
+#: ../../get-started/use-mobile.rst:69
+msgid "Share alerts with other Observability Cloud users."
+msgstr "他のObservability Cloudユーザーとアラートを共有します。"
+
+#: ../../get-started/use-mobile.rst:73
+msgid "View alerts"
+msgstr "アラートを表示"
+
+#: ../../get-started/use-mobile.rst:74
+msgid "In Splunk Observability Cloud for Mobile, go to the :strong:`Alerts` tab."
+msgstr "Splunk Observability Cloud for Mobile で、:strong:`Alerts` タブに移動します。"
+
+#: ../../get-started/use-mobile.rst:75
+msgid "Filter alerts based on severity: :strong:`Critical`, :strong:`Major`, :strong:`Minor`, :strong:`Warning`, and :strong:`Info`."
+msgstr "重大度に基づいてアラートをフィルタリングする：:strong:`Critical`,:strong:`Major`,:strong:`Minor`,:strong:`Warning`, and:strong:`Info`."
+
+#: ../../get-started/use-mobile.rst:77
+msgid "Select :strong:`Severity` to set your severity preferences."
+msgstr ":strong:`重大度` を選択し、重大度の設定を行います。"
+
+#: ../../get-started/use-mobile.rst:78
+msgid "Tap :strong:`Apply` to update your severity preferences."
+msgstr ":strong:`Apply` をタップして、厳しさの設定を更新します。"
+
+#: ../../get-started/use-mobile.rst:80
+msgid "Tap an alert to view alert details."
+msgstr "アラートの詳細を表示するには、アラートをタップします。"
+
+#: ../../get-started/use-mobile.rst:83
+msgid "Share alerts"
+msgstr "共有アラート"
+
+#: ../../get-started/use-mobile.rst:84
+msgid "You can share an alert with other Splunk Observability Cloud users."
+msgstr "他の Splunk Observability Cloud ユーザーとアラートを共有できます。"
+
+#: ../../get-started/use-mobile.rst:86
+msgid "Select the alert you want to share."
+msgstr "共有したいアラートを選択します。"
+
+#: ../../get-started/welcome.rst:-1
+msgid "This page provides an overview of the products and features provided by Splunk Observability Cloud"
+msgstr "このページでは、Splunk Observability Cloud が提供する製品と機能の概要を説明します。"
+
+#: ../../get-started/welcome.rst:5
+msgid "Welcome to Splunk Observability Cloud"
+msgstr "Splunk Observability Cloud へようこそ"
+
+#: ../../get-started/welcome.rst:10
+msgid "Splunk Observability Cloud provides full-fidelity monitoring and troubleshooting across infrastructure, applications, and user interfaces, in real-time and at any scale, to help you:"
+msgstr "Splunk Observability Cloud は、インフラストラクチャ、アプリケーション、ユーザーインターフェイスにわたって、フルフィデリティのモニタリングとトラブルシューティングをリアルタイムかつあらゆる規模で提供し、お客様を支援します："
+
+#: ../../get-started/welcome.rst:12
+msgid "Keep your services reliable"
+msgstr "サービスの信頼性を維持する"
+
+#: ../../get-started/welcome.rst:14
+msgid "Deliver great customer experiences"
+msgstr "優れた顧客体験を提供する"
+
+#: ../../get-started/welcome.rst:16
+msgid "Innovate faster"
+msgstr "より速く革新する"
+
+#: ../../get-started/welcome.rst:18
+msgid "Choose from :ref:`over 100 supported open standards-based integrations <supported-data-sources>` with common data sources to get data from your on-premise and cloud infrastructure, applications and services, and user interfaces into Observability Cloud."
+msgstr "一般的なデータソース（:ref:`over 100 supported open standards-based integrations <supported-data-sources>` ）から選択し、オンプレミスおよびクラウドのインフラストラクチャ、アプリケーション、サービス、ユーザーインターフェースからObservability Cloudにデータを取り込みます。"
+
+#: ../../get-started/welcome.rst:20
+msgid "When you send data from each layer of your full-stack environment to Observability Cloud, it transforms raw metrics, traces, and logs into actionable insights in the form of dashboards, visualizations, alerts, and more. To learn more about Observability Cloud's data model, refer to :ref:`data-model`."
+msgstr "フルスタック環境の各レイヤーからObservability Cloudにデータを送信すると、生のメトリクス、トレース、およびログが、ダッシュボード、視覚化、アラートなどの形で実用的な洞察に変換されます。Observability Cloudのデータモデルの詳細については、:ref:`data-model` を参照してください。"
+
+#: ../../get-started/welcome.rst:22
+msgid "Splunk Observability Cloud's suite of products and features allow you to quickly and intelligently respond to outages and identify root causes, while also giving you the data-driven guidance you need to optimize performance and productivity going forward."
+msgstr "Splunk Observability Cloud の一連の製品と機能により、障害に迅速かつインテリジェントに対応し、根本原因を特定することができます。また、今後のパフォーマンスと生産性を最適化するために必要なデータに基づくガイダンスも提供します。"
+
+#: ../../get-started/welcome.rst:24
+msgid "The following diagram provides a high-level view of how each Observability Cloud product plays its part to provide you with full-stack observability:"
+msgstr "次の図は、Observability Cloudの各製品が、フルスタックの観測可能性を提供するためにどのような役割を果たすかをハイレベルで示したものです："
+
+#: ../../get-started/welcome.rst:-1
+msgid "This screenshot shows how Observability Cloud products serve the different layers and processes in an organization's environment."
+msgstr "このスクリーンショットは、Observabilityクラウド製品が組織環境のさまざまなレイヤーとプロセスにどのように対応しているかを示しています。"
+
+#: ../../get-started/welcome.rst:34
+msgid "To get started with Observability Cloud, see :ref:`get-started-o11y`."
+msgstr "Observability Cloudを使い始めるには、:ref:`get-started-o11y` を参照してください。"
+
+#: ../../get-started/welcome.rst:36
+msgid "For information about Observability Cloud packaging and pricing, see :new-page:`Pricing - Observability <https://www.splunk.com/en_us/products/pricing/observability.html>`."
+msgstr "Observability Cloud のパッケージングと価格については、:new-page:`価格 - Observability<https://www.splunk.com/en_us/products/pricing/observability.html>` をご参照ください。"
+
+#: ../../get-started/welcome.rst:38
+msgid "Start learning about how the following Observability Cloud products work to provide you with unified, end-to-end observability of your environment:"
+msgstr "以下のObservabilityクラウド製品がどのように機能し、統合されたエンドツーエンドの観測可能な環境を提供するかを学び始めましょう："
+
+#: ../../get-started/welcome.rst:40
+msgid ":ref:`welcome-imm`"
+msgstr ":ref:`welcome-imm`"
+
+#: ../../get-started/welcome.rst:42
+msgid ":ref:`welcome-apm` (APM)"
+msgstr ":ref:`welcome-apm` (APM)"
+
+#: ../../get-started/welcome.rst:44
+msgid ":ref:`welcome-rum` (RUM)"
+msgstr ":ref:`welcome-rum` (RUM)"
+
+#: ../../get-started/welcome.rst:46
+msgid ":ref:`welcome-synthmon`"
+msgstr ":ref:`welcome-synthmon`"
+
+#: ../../get-started/welcome.rst:48
+msgid ":ref:`welcome-logobs`"
+msgstr ":ref:`welcome-logobs`"
+
+#: ../../get-started/welcome.rst:50
+msgid ":ref:`welcome-oncall`"
+msgstr ":ref:`welcome-oncall`"
+
+#: ../../get-started/welcome.rst:52
+msgid ":ref:`welcome-incident-intelligence`"
+msgstr ":ref:`welcome-incident-intelligence`"
+
+#: ../../get-started/welcome.rst:54
+msgid ":ref:`welcome-mobile`"
+msgstr ":ref:`welcome-mobile`"
+
+#: ../../get-started/welcome.rst:60
+msgid "Get data in using supported integrations to hundreds of common data sources"
+msgstr "何百もの一般的なデータソースとの統合をサポートし、データを取得します。"
+
+#: ../../get-started/welcome.rst:62
+msgid "The first step toward full-stack observability is getting data from your environment into Observability Cloud. Get data in using any of our over 100 supported integrations to common data sources."
+msgstr "フルスタック・オブザーバビリティへの第一歩は、環境からObservability Cloudにデータを取り込むことです。一般的なデータソースへの100以上の統合をサポートしています。"
+
+#: ../../get-started/welcome.rst:64
+msgid "For more information about getting data into Observability Cloud, see :ref:`get-started-get-data-in`."
+msgstr "Observability Cloudへのデータ取り込みの詳細については、:ref:`get-started-get-data-in` を参照。"
+
+#: ../../get-started/welcome.rst:70
+msgid "Splunk Infrastructure Monitoring"
+msgstr "Splunk インフラストラクチャ監視"
+
+#: ../../get-started/welcome.rst:72
+msgid "Gain insights into and perform powerful, capable analytics on your infrastructure and resources across hybrid and multi-cloud environments with Splunk Infrastructure Monitoring. Infrastructure Monitoring offers support for a broad range of integrations for collecting all kinds of data, from system metrics for infrastructure components to custom data from your applications."
+msgstr "Splunk Infrastructure Monitoring を使用して、ハイブリッド環境およびマルチクラウド環境全体のインフラストラクチャとリソースを洞察し、強力で有能な分析を実行できます。インフラストラクチャ・モニタリングは、インフラストラクチャ・コンポーネントのシステム・メトリクスからアプリケーションからのカスタム・データまで、あらゆる種類のデータを収集するための幅広い統合をサポートしています。"
+
+#: ../../get-started/welcome.rst:74
+msgid "For more information, see :ref:`wcidw-imm`"
+msgstr "詳しくは :ref:`wcidw-imm`"
+
+#: ../../get-started/welcome.rst:80
+msgid "Splunk Application Performance Monitoring"
+msgstr "Splunk アプリケーションパフォーマンス監視"
+
+#: ../../get-started/welcome.rst:82
+msgid "Collect traces and spans to monitor your distributed applications with Splunk APM. A trace is a collection of actions, or spans, that occur to complete a transaction. Splunk APM collects and analyzes every span and trace from each of the services that you have connected to Splunk Observability Cloud to give you full-fidelity access to all of your application data."
+msgstr "Splunk APM を使用してトレースとスパンを収集し、分散アプリケーションを監視します。トレースとは、トランザクションを完了するために発生するアクション（スパン）の集まりである。Splunk APM は、Splunk Observability Cloud に接続した各サービスからすべてのスパンとトレースを収集・分析し、すべてのアプリケーションデータに忠実にアクセスできるようにします。"
+
+#: ../../get-started/welcome.rst:84
+msgid "For more information, see :ref:`wcidw-apm`"
+msgstr "詳しくは :ref:`wcidw-apm`"
+
+#: ../../get-started/welcome.rst:86
+msgid "For information about how APM can be used to address real-life scenarios, see :ref:`apm-scenarios-intro`."
+msgstr "APMが現実のシナリオにどのように対処できるかについては、:ref:`apm-scenarios-intro` を参照のこと。"
+
+#: ../../get-started/welcome.rst:92
+msgid "Splunk Real User Monitoring"
+msgstr "Splunk リアルユーザー監視"
+
+#: ../../get-started/welcome.rst:94
+msgid "Splunk Real User Monitoring provides insights about the performance and health of the front-end user experience of your application. Splunk RUM collects performance metrics, web vitals, errors, and other forms of data to allow you to detect and troubleshoot problems in your application, measure the health of your application, and assess the performance of your user experience."
+msgstr "Splunk Real User Monitoring は、アプリケーションのフロントエンドユーザーエクスペリエンスのパフォーマンスと健全性に関する洞察を提供します。Splunk RUM は、パフォーマンスメトリクス、Web バイタル、エラー、その他の形式のデータを収集し、アプリケーションの問題の検出とトラブルシューティング、アプリケーションの健全性の測定、ユーザーエクスペリエンスのパフォーマンス評価を可能にします。"
+
+#: ../../get-started/welcome.rst:96
+msgid "For more information, see :ref:`get-started-rum`."
+msgstr "詳細は:ref:`get-started-rum` を参照。"
+
+#: ../../get-started/welcome.rst:102
+msgid "Splunk Synthetic Monitoring"
+msgstr "Splunk 合成モニタリング"
+
+#: ../../get-started/welcome.rst:104
+msgid "Splunk Synthetics Monitoring is a platform to synthetically measure performance of your web-based properties. It offers features that provide insights that allow you to optimize uptime and performance of APIs, service endpoints, and end user experiences and prevent web performance issues."
+msgstr "Splunk Synthetics Monitoring は、Web ベースのプロパティのパフォーマンスを総合的に測定するためのプラットフォームです。API、サービス・エンドポイント、エンド・ユーザー・エクスペリエンスのアップタイムとパフォーマンスを最適化し、Webパフォーマンスの問題を防止するためのインサイトを提供する機能を備えています。"
+
+#: ../../get-started/welcome.rst:106
+msgid "For more information, see the :ref:`intro-synthetics`."
+msgstr "詳しくは、:ref:`intro-synthetics` をご覧ください。"
+
+#: ../../get-started/welcome.rst:112
+msgid "Splunk Log Observer"
+msgstr "Splunk ログオブザーバー"
+
+#: ../../get-started/welcome.rst:114
+msgid "Troubleshoot your application and infrastructure behavior using high-context logs in Splunk Observability Cloud. With Splunk Log Observer, you can perform codeless queries on logs to detect the source of problems in your systems. You can also extract fields from logs in Log Observer to set up log processing rules and transform your data as it arrives."
+msgstr "Splunk Observability Cloud のハイコンテキストログを使用して、アプリケーションとインフラストラクチャの動作をトラブルシューティングします。Splunk Log Observer を使用すると、ログに対してコードレスでクエリを実行し、システム内の問題の原因を検出できます。また、Log Observerでログからフィールドを抽出して、ログ処理ルールを設定し、届いたデータを変換することもできます。"
+
+#: ../../get-started/welcome.rst:116
+msgid "For more information, see :ref:`LogObserverFeatures`."
+msgstr "詳細は:ref:`LogObserverFeatures` を参照。"
+
+#: ../../get-started/welcome.rst:122
+msgid "Splunk On-Call"
+msgstr "Splunk オンコール"
+
+#: ../../get-started/welcome.rst:124
+msgid "Splunk On-Call incident response software aligns log management, monitoring, chat tools, and more, for a single-pane of glass into system health. Splunk On-Call automates delivery of alerts to get the right alert, to the right person, at the right time."
+msgstr "インシデント対応ソフトウェア Splunk On-Call は、ログ管理、モニタリング、チャットツールなどを連携させ、システムの健全性を一枚のガラスで把握できるようにします。Splunk On-Call はアラートの配信を自動化し、適切なアラートを適切な担当者に適切なタイミングで届けます。"
+
+#: ../../get-started/welcome.rst:126
+msgid "For more information, see the :new-page:`Splunk On-Call documentation <https://help.victorops.com/>`."
+msgstr "詳細については、:new-page:`Splunk On-Call ドキュメント<https://help.victorops.com/>` を参照してください。"
+
+#: ../../get-started/welcome.rst:131
+msgid "Splunk Incident Intelligence"
+msgstr "Splunk インシデントインテリジェンス"
+
+#: ../../get-started/welcome.rst:133
+msgid "Splunk Incident Intelligence incident response software lets site reliability engineers (SREs) in IT and DevOps resolve outages with alert correlation, incident response, and on-call routing."
+msgstr "Splunk Incident Intelligence インシデント対応ソフトウェアにより、IT 部門や DevOps 部門のサイト信頼性エンジニア (SRE) は、アラート相関、インシデント対応、オンコールルーティングによって障害を解決できます。"
+
+#: ../../get-started/welcome.rst:135
+msgid "For more information, see the :ref:`ii-get-started-incident-intelligence`."
+msgstr "詳しくは、:ref:`ii-get-started-incident-intelligence` をご覧ください。"
+
+#: ../../get-started/welcome.rst:141
+msgid "Splunk Observability Cloud for Mobile"
+msgstr "モバイル向けSplunk Observability Cloud"
+
+#: ../../get-started/welcome.rst:145
+msgid "For more information, see :ref:`intro-to-mobile`."
+msgstr "詳細は:ref:`intro-to-mobile` を参照。"
+
+#: ../../get-started/welcome.rst:148
+msgid "Splunk IT Essentials Work and Splunk IT Service Intelligence"
+msgstr "Splunk IT Essentials Work および Splunk IT Service Intelligence"
+
+#: ../../get-started/welcome.rst:150
+msgid "Splunk IT Essentials Work (ITE Work) is a free application that helps you get started with monitoring and analyzing your IT infrastructure."
+msgstr "Splunk IT Essentials Work (ITE Work) は、IT インフラストラクチャの監視と分析を始めるのに役立つ無料のアプリケーションです。"
+
+#: ../../get-started/welcome.rst:152
+msgid "Splunk IT Service Intelligence (ITSI) is a premium IT operations solution that provides actionable insight into the performance and behavior of your IT services. You can also ingest events from across your IT landscape and from other monitoring silos to provide a unified operational console of all your events and service-impacting issues."
+msgstr "Splunk IT Service Intelligence (ITSI) は、IT サービスのパフォーマンスと動作に関する実用的な洞察を提供するプレミアム IT オペレーションソリューションです。また、ITランドスケープ全体や他のモニタリング・サイロからイベントを取り込み、すべてのイベントとサービスに影響を与える問題の統合運用コンソールを提供することができます。"
+
+#: ../../get-started/welcome.rst:154
+msgid "For more information about these applications, see the :new-page:`IT operations product overview <https://docs.splunk.com/Documentation/ITOps/current/Overview/Overview>`."
+msgstr "これらのアプリケーションの詳細については、:new-page:`ITオペレーション製品概要<https://docs.splunk.com/Documentation/ITOps/current/Overview/Overview>` をご覧ください。"
+
+#: ../../get-started/welcome.rst:157
+msgid "Splunk App for Content Packs"
+msgstr "コンテンツパック用 Splunk アプリ"
+
+#: ../../get-started/welcome.rst:159
+msgid "Quickly set up your IT Service Intelligence (ITSI) or IT Essentials Work (ITE Work) environment using prepackaged content such as KPI base searches, service templates, saved glass tables, and other knowledge objects."
+msgstr "KPIベース検索、サービステンプレート、保存されたガラステーブル、その他のナレッジオブジェクトなどのパッケージコンテンツを使用して、ITサービスインテリジェンス（ITSI）またはIT Essentials Work（ITE Work）環境をすばやくセットアップできます。"
+
+#: ../../get-started/welcome.rst:161
+msgid "For more information, see the :new-page:`Overview of the Splunk App for Content Packs <https://docs.splunk.com/Documentation/ContentPackApp/latest/Overview/Overview>`."
+msgstr "詳細については、:new-page:`Overview of Splunk App for Content Packs<https://docs.splunk.com/Documentation/ContentPackApp/latest/Overview/Overview>` を参照してください。"
