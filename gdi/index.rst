@@ -23,7 +23,7 @@ Available host and application monitors
   Monitoring TOGGLE <monitoring>
   Networks TOGGLE <network>
   Orchestration TOGGLE <orchestration>
-  Prometheus TOOGLE <prometheus>
+  Prometheus TOGGLE <prometheus>
 
 .. note:: The SignalFx Smart Agent has reached End of Support. While the agent can capture and export telemetry to Splunk Observability Cloud, Splunk no longer provides any support, feature updates, security, or bug fixes. Such requests are not bound by any SLAs.
 

@@ -13,7 +13,6 @@ Configure application exporters and receivers for monitoring
 
    monitors-prometheus/prometheus-generic
 
-
 You can use the OpenTelementry native :ref:`prometheus-receiver` to gather metrics from any service that can export their existing metrics as Prometheus metrics, such as EXAMPLES HERE.
 
 See a complete list of third-party applications compatible with Prometheus in :new-page:`Prometheus' official documentation <https://prometheus.io/docs/instrumenting/exporters/>`.
