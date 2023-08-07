@@ -155,20 +155,17 @@ The following image shows how to configure a test to go to a URL, wait for 10 se
 
 Collect interactive metrics
 ---------------------------------
-Interactive metrics are: 
+These are the type of interactive metrics Splunk Synthetic Monitoring collects: 
 
 * First CPU idle: Time until the page is minimally interactive and responds to user input.
 * Time to interactive: Time from the start of the first request until receiving the first byte of the first non-redirect request. ``3xx`` redirects will increase this time. This metric is available for HTTP Uptime tests, but not Port Uptime tests.
-* Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See https://web.dev/performance-scoring/ in the Google developer documentation to learn more about Lighthouse scoring.
-
-
-
+* Lighthouse score: A weighted aggregation of several Browser test metric values calculated using v6 of the Lighthouse scoring algorithm. See:new-page:`https://web.dev/vitals/` in the Google developer documentation to learn more about Lighthouse scoring.
 
 .. _collect-interactive-metrics:
 
 
 Example
 ==================
-For an example, see  :ref:`browser-test-scenario`.
+For an example, see :ref:`browser-test-scenario`.
 
 
