@@ -23,7 +23,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - Environment variable
      - Description
    * - ``SIGNALFX_SERVICE_NAME``
-     - Service name in Observability Cloud. The default value is ``unnamed-php-service``.
+     - Service name in Splunk Observability Cloud. The default value is ``unnamed-php-service``.
    * - ``SIGNALFX_ENDPOINT_URL``
      - Endpoint URL. The default value is ``http://localhost:9080/v1/trace``.
    * - ``SIGNALFX_TRACING_ENABLED``
@@ -41,7 +41,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - ``SIGNALFX_CAPTURE_REQUEST_HEADERS``
      - Comma-separated list of incoming request headers to turn into spans. For example, ``User-Agent`` is captured as ``http.request.headers.user_agent``.
    * - ``SIGNALFX_ACCESS_TOKEN``
-     - Splunk authentication token that lets the library send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`export-directly-to-olly-cloud-php` for more information.
+     - Splunk authentication token that lets the library send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`export-directly-to-olly-cloud-php` for more information.
 
 .. _tracing-cli-sessions:
 

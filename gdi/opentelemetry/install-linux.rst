@@ -31,7 +31,7 @@ The following Linux distributions and versions are supported:
 The installer script deploys and configures these elements:
 
 * The Splunk Distribution of OpenTelemetry Collector for Linux
-* Fluentd, using the td-agent. See :ref:`fluentd-receiver` for more information
+* Fluentd, using the td-agent. Turned off by default. See :ref:`fluentd-receiver` for more information
 
 To install the package using the installer script, follow these steps:
 
@@ -48,7 +48,7 @@ To install the package using the installer script, follow these steps:
    curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh;
    sudo sh /tmp/splunk-otel-collector.sh --realm SPLUNK_REALM --memory SPLUNK_MEMORY_TOTAL_MIB -- SPLUNK_ACCESS_TOKEN
 
-.. note:: If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to skip the installation of Fluentd when installing the Collector.
+.. note:: If you have a Log Observer entitlement or wish to collect logs for the target host with Fluentd, use the ``--with-fluentd`` option to also install Fluentd when installing the Collector.
 
 Run additional script options
 -------------------------------------------
@@ -95,10 +95,14 @@ To skip these steps and use configured repos on the target system that provide t
 Configure Fluentd
 ---------------------------------------
 
-.. note::
-   If you don't have a Log Observer entitlement or don't wish to collect logs for the target host, use the ``--without-fluentd`` option to skip the installation of Fluentd when installing the Collector.
+Fluentd is turned off by default. To install Fluentd for log collection, run the installer script with the ``--with-fluentd`` option. For example:
 
-By default, the Fluentd service is installed and configured to forward log events with the ``@SPLUNK`` label to the package, which then sends these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
+.. code-block:: bash
+
+   curl -sSL https://dl.signalfx.com/splunk-otel-collector.sh > /tmp/splunk-otel-collector.sh && \
+   sudo sh /tmp/splunk-otel-collector.sh --with-fluentd --realm SPLUNK_REALM -- SPLUNK_ACCESS_TOKEN
+
+When turned on, the Fluentd service is configured by default to collect and forward log events with the ``@SPLUNK`` label to the Collector, which then sends these events to the HEC ingest endpoint determined by the ``--realm <SPLUNK_REALM>`` option. For example, ``https://ingest.<SPLUNK_REALM>.signalfx.com/v1/log``.
 
 The following Fluentd plugins are also installed:
 
@@ -123,8 +127,8 @@ RPM-based systems:
 
 You can specify the following parameters to configure the package to send log events to a custom Splunk HTTP Event Collector (HEC) endpoint URL:
 
-* ``hec-url = "<URL>"``
-* ``hec-token = "<TOKEN>"``
+* ``--hec-url <URL>``
+* ``--hec-token <TOKEN>``
 
 HEC lets you send data and application events to a Splunk deployment over the HTTP and Secure HTTP (HTTPS) protocols. See :new-page:`Set up and use HTTP Event Collector in Splunk Web <https://docs.splunk.com/Documentation/Splunk/8.2.1/Data/UsetheHTTPEventCollector>.`
 
@@ -200,7 +204,7 @@ Splunk provides a guided setup to deploy the Splunk Distribution of OpenTelemetr
 
 Ansible
 -------------------
-Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Linux machines and send that data to Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
+Splunk provides an Ansible role that installs the package configured to collect data (metrics, traces, and logs) from Linux machines and send that data to Splunk Observability Cloud. See :ref:`deployment-linux-ansible` for the instructions to download and customize the role.
 
 .. _linux-chef:
 

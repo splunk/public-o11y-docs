@@ -16,7 +16,7 @@ Send custom infrastructure or service metrics
 
 Splunk Observability Cloud can ingest custom infrastructure or service metrics through existing OpenTelemetry components from OpenTelemetry contrib or through custom components that adhere to OpenTelemetry semantic conventions. For a list of supported metric types, see :ref:`metric-types`.
 
-To send custom application metrics to Observability Cloud, follow these steps.
+To send custom application metrics to Splunk Observability Cloud, follow these steps.
 
 Add a receiver for custom metrics
 ------------------------------------------
@@ -99,7 +99,7 @@ Send custom application metrics
 
 Splunk Observability Cloud can ingest custom application metrics created following OpenTelemetry semantic conventions and upstream OpenTelemetry API and SDK. For a list of supported metric types, see :ref:`metric-types`.
 
-To send custom application metrics to Observability Cloud, follow these steps:
+To send custom application metrics to Splunk Observability Cloud, follow these steps:
 
 1. Install the APM instrumentation for your application's language. See :ref:`get-started-application`.
 

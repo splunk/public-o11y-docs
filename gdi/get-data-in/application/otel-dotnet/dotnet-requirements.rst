@@ -45,6 +45,9 @@ Traces instrumentations
    * - ASP.NET Core
      - See :ref:`dotnet-otel-versions`
      - ``ASPNETCORE``
+   * - Azure SDK |br| (Not supported on .NET Framework)
+     - ``Azure.`` prefixed packages, released after October 1, 2021
+     - ``AZURE``
    * - Elastic.Clients.Elasticsearch
      - 8.0.0 and higher
      - ``ELASTICSEARCH``
@@ -55,7 +58,7 @@ Traces instrumentations
      - 7.5.0 and higher
      - ``GRAPHQL``
    * - Grpc.Net.Client
-     - 2.43.0 to 3.0.0
+     - 2.52.0 to 3.0.0
      - ``GRPCNETCLIENT``
    * - System.Net.Http.HttpClient and |br| System.Net.HttpWebRequest
      - See :ref:`dotnet-otel-versions`
@@ -144,7 +147,7 @@ Install and configure the Splunk Distribution of OpenTelemetry Collector
 
 The Splunk Distribution of OpenTelemetry .NET exports application traces and spans to the Splunk Distribution of OpenTelemetry Collector, which also collects system metric data and logs, including profiling data.
 
-To send application traces and spans to Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
+To send application traces and spans to Splunk Observability Cloud, install the Splunk Distribution of OpenTelemetry Collector for your platform. The following distributions are available:
 
 - Splunk OTel Collector for Linux. See :ref:`otel-install-linux`.
 - Splunk OTel Collector for Windows. See :ref:`otel-install-windows`.
