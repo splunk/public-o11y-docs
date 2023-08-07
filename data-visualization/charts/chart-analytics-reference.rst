@@ -358,7 +358,7 @@ Adds up all the values in data points collected either from multiple time series
 
 |br|
 
-The :strong:`Sum` function also supports transformation over a calendar window (day, week, month, and so) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
+The :strong:`Sum` function also supports transformation over a calendar window (day, week, month, and so on) and a dashboard window instead of a moving window. For more information, see :ref:`calendar-window` and :ref:`dashboard-window`.
 
 .. _timeshift:
 
