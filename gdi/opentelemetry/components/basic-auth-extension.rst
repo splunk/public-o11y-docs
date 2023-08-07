@@ -123,6 +123,9 @@ The following table shows the configuration options for the ``basicauth`` extens
    <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/extension/basicauth.yaml"></div>
 
 
+MANUAL TABLE HERE
+
+
 .. list-table::
   :widths: 10 90
   :width: 100%
@@ -147,6 +150,15 @@ You can either authenticate servers or clients with the extension. If you config
 * To configure the extension as a server authenticator, set either ``htpasswd.file`` or ``htpasswd.inline``. If you configure both, ``htpasswd.inline`` credentials takes precedence.
 
 * To configure the extension as a client authenticator, set ``client_auth``.
+
+Metrics
+======================
+
+The following metrics, resource attributes, and attributes are available.
+
+.. raw:: html
+
+  <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/basicauthextension.yaml"></div>
 
 Troubleshooting
 ======================
