@@ -27,6 +27,7 @@ def pushassets():
    asset_includes('toggle-sections.js',"yes")
    asset_includes('toggle-sections.css',"yes")
    asset_includes('customjs.js',"yes")
+   asset_includes('mermaid.js', "no")
    asset_includes('yaml-splunk.js',"no")
    asset_includes('showdown.min.js',"no")
    return final_conf_includes
