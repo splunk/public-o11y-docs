@@ -174,6 +174,31 @@ You can modify the configuration to use another port. You can modify any of thes
 * Receiver endpoint
 * Extensions endpoint
 * Metrics address (if port 8888)
+If you encounter a conflict with port 8888, you will need to make adjustments in the following two areas. The example below illustrates how to change to port 8889.
+
+1. Add telemetry configuration under the service section:
+
+.. code-block:: yaml
+
+      service:
+        telemetry:
+          metrics:
+            address: ":8889"
+
+
+2. Update the port for receivers.prometheus/internal from 8888 to 8889:
+
+.. code-block:: yaml
+
+      receivers:
+        prometheus/internal:
+          config:
+            scrape_configs:
+            - job_name: 'otel-collector'
+              scrape_interval: 10s
+              static_configs:
+              - targets: ['0.0.0.0:8889']
+
 
 If you see this error message on Kubernetes and you're using Helm charts, modify the configuration by updating the chart values for both configuration and exposed ports.
 
