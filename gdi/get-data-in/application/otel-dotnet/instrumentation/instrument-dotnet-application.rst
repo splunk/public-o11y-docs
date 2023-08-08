@@ -175,7 +175,7 @@ You can also set the ``SkippedInstrumentation`` property from the terminal. Esca
 
    dotnet build -p:SkippedInstrumentations=StackExchange.Redis%3BMongoDB.Driver.Core
 
-To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID)to build the application using ``dotnet build`` or ``dotnet publish``. Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
+To distribute the appropriate native runtime components with your .NET application, specify a Runtime Identifier (RID) to build the application using ``dotnet build`` or ``dotnet publish``. Both self-contained and framework-dependent applications are compatible with automatic instrumentation. See :new-page:`.NET application publishing overview <https://learn.microsoft.com/en-us/dotnet/core/deploying/>` in the .NET documentation for more information.
 
 Run the instrumented application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
