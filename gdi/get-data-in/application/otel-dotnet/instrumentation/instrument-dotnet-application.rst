@@ -185,7 +185,7 @@ Use the script in the output folder of the build to open the application with au
 - On Windows, use ``splunk-launch.cmd <application_executable>``.
 - On Linux, use ``splunk-launch.sh <application_executable>``.
 
-If you open the application using the ``dotnet`` CLI, add ``dotnet`` after the script.
+If you run the application using the ``dotnet`` CLI, add ``dotnet`` after the script.
 
 - On Windows, use ``splunk-launch.cmd dotnet <application>``.
 - On Linux, use ``splunk-launch.sh dotnet <application>``.
