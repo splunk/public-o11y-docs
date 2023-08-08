@@ -43,7 +43,7 @@ function OptanonWrapper() { }
   }
 </script>
 <script defer onload="renderSplunkSearchBarComponent()"
-        src="https://d221cp5lqk6y64.cloudfront.net/1.1.26/searchBar.js"
+        src="https://d221cp5lqk6y64.cloudfront.net/1.1.30/searchBar.js"
         type="text/javascript">
 </script>
 <script>
@@ -58,7 +58,16 @@ function OptanonWrapper() { }
             searchBarRedirectUrl: 'https://docs.splunk.com/Observability/search.html',
             analyticsConfig: {
                 applicationName: 'docs-o11y'
-            }
+            },
+            initialFilters: [
+                {
+                    "name": "source_name_s",
+                    "value": [
+                        "Docs_Observability"
+                    ],
+                    "type": "any"
+                }
+            ]
         };
     };
 
