@@ -13,8 +13,8 @@ Components
     :hidden:
 
     components/attributes-processor
-    components/batch-processor
     components/basic-auth-extension
+    components/batch-processor
     components/databricks-receiver
     components/filter-processor
     components/fluentd-receiver
