@@ -216,7 +216,7 @@ The following settings control the AlwaysOn Profiling feature for the Java agent
         * The default value is ``false``. 
         * Requires ``splunk.profiler.enabled`` to be set to ``true``.  
         * Activating memory profiling sets the value of ``splunk.metrics.enabled`` to ``true``.
-       |br| |br| System property: ``splunk.profiler.memory.enabled``
+       |br| System property: ``splunk.profiler.memory.enabled``
    * - ``SPLUNK_PROFILER_MEMORY_EVENT_RATE``
      - Rate limit for memory profiling data, expressed as stack traces per unit of time. You can define duration in the form ``<number>/<unit>``, where the unit can be ``s`` or ``m``. The default value is ``150/s``, or 150 stack traces per second. Consider increasing this value when collecting memory profiling data from complex, multithreaded workloads, like application servers. |br| |br| System property: ``splunk.profiler.memory.event.rate``
    * - ``SPLUNK_PROFILER_TLAB_ENABLED``
@@ -245,7 +245,8 @@ The following settings control metrics collection for the Java agent:
    * - ``SPLUNK_METRICS_ENABLED``
      - Activates exporting metrics. See :ref:`java-otel-metrics-attributes` for more information.
         - Default is ``false``.
-        - If you activate memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is set to ``true``. |br| |br| System property: ``splunk.metrics.enabled``
+        - If you activate memory profiling using the ``splunk.profiler.memory.enabled`` property, the value of ``splunk.metrics.enabled`` is set to ``true``. 
+       |br| |br| System property: ``splunk.metrics.enabled``
    * - ``SPLUNK_METRICS_ENDPOINT``
      - The OTel collector metrics endpoint. Default is ``http://localhost:9943``. |br| |br| System property: ``splunk.metrics.endpoint``
    * - ``SPLUNK_METRICS_EXPORT_INTERVAL``
