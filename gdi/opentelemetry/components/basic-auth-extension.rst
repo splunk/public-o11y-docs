@@ -1,7 +1,7 @@
 .. _basic-auth-extension:
 
 ****************************
-Basic auth extension
+Basicauth extension
 ****************************
 
 .. meta::
@@ -9,12 +9,12 @@ Basic auth extension
 
 The ``basicauth`` extension implements both ``configauth.ServerAuthenticator`` and ``configauth.ClientAuthenticator`` to authenticate clients and servers using basic authentication. The authenticator type has to be set to ``basicauth``. 
 
-When used to authenticate servers, if the authentication is successful, ``client.Info.Auth`` will expose the following attributes:
+When used to authenticate servers, if the authentication is successful, ``client.Info.Auth`` exposes the following attributes:
 
 * ``username``: The username of the authenticated user.
 * ``raw``: Raw base64 encoded credentials.
 
-.. caution:: You can either authenticate servers or clients with the extension. If you configure both options, the extension will throw an error. See more in :ref:`basic-auth-extension-settings`.
+.. caution:: You can either authenticate servers or clients with the extension. If you configure both options, the extension throws an error. See more in :ref:`basic-auth-extension-settings`.
 
 Get started
 ======================
@@ -81,7 +81,7 @@ configuration file. For example:
 Configuration example: Simple Prometheus receiver
 ---------------------------------------------------
 
-The following example illustrates how to configure the ``basicauth`` extension for the :ref:`simple-prometheus-receiver`.
+The following example illustrates how to configure the ``basicauth`` extension for the :ref:`simple-prometheus-receiver`:
 
 .. code:: yaml
 
@@ -125,7 +125,7 @@ The following table shows the configuration options for the ``basicauth`` extens
 Authenticate servers or clients
 --------------------------------------------
 
-You can either authenticate servers or clients with the extension. If you configure both options, the extension will throw an error.
+You can either authenticate servers or clients with the extension. If you configure both options, the extension throws an error.
 
 * To configure the extension as a server authenticator, set either ``htpasswd.file`` or ``htpasswd.inline``. If you configure both, ``htpasswd.inline`` credentials takes precedence.
 
