@@ -180,7 +180,7 @@ To distribute the appropriate native runtime components with your .NET applicati
 Run the instrumented application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use the script in the output folder of the build to open the application with automatic instrumentation activated.
+Use the script in the output folder of the build to run the application with automatic instrumentation activated.
 
 - On Windows, use ``splunk-launch.cmd <application_executable>``.
 - On Linux, use ``splunk-launch.sh <application_executable>``.
