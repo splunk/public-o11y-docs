@@ -5,7 +5,7 @@ Manually instrument Python applications for Splunk Observability Cloud
 **********************************************************************
 
 .. meta:: 
-   :description: Manually instrument your Python application when you need to add custom attributes to spans or want to manually generate spans. Keep reading to learn how to manually instrument your Python application for Observability Cloud. 
+   :description: Manually instrument your Python application when you need to add custom attributes to spans or want to manually generate spans. Keep reading to learn how to manually instrument your Python application for Splunk Observability Cloud. 
 
 Instrumenting applications automatically using the agent of the Splunk Distribution of OpenTelemetry Python covers most needs. Manually instrumenting your application is only necessary when, for example, you need to add custom attributes to spans or need to manually generate spans.
 

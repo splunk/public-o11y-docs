@@ -42,4 +42,4 @@ Follow these steps to add requests to your API test:
 
 Example
 ==================
-For an example, see  :ref:`api-test-use-case`.
+For an example, see  :ref:`api-test-scenario`.

@@ -26,7 +26,7 @@ Linux
 The following Linux distributions and versions:
 
 * Amazon Linux: 2
-* CentOS, Red Hat, Oracle: 7, 8
+* CentOS, Red Hat, Oracle: 7, 8, 9
 * Debian: 9, 10, 11
 * SUSE: 12, 15 (Note: Only for Collector versions 0.34.0 or higher. Log collection with Fluentd not currently supported.)
 * Ubuntu: 18.04, 20.04, 22.04
@@ -44,15 +44,15 @@ Getting started
 
 Download the Chef cookbook from the :new-page:`Chef Supermarket <https://supermarket.chef.io/cookbooks/splunk_otel_collector>`, which is the site for community cookbooks. 
 
-To install the Collector and Fluentd, include the ``splunk_otel_collector::default`` recipe in the ``run_list``, and set the attributes on the node's ``run_state``. The following is an example configuration that shows how to configure the required ``splunk_access_token`` attribute and some optional attributes:
+To install the Collector, include the ``splunk_otel_collector::default`` recipe in the ``run_list``, and set the attributes on the node's ``run_state``. The following is an example configuration that shows how to configure the required ``splunk_access_token`` attribute and some optional attributes:
 
 .. code-block:: yaml
 
     {
-    "splunk-otel-collector": {
-        "splunk_access_token": "<SPLUNK_ACCESS_TOKEN>",
-        "splunk_realm": "<SPLUNK_REALM>",
-    }
+        "splunk-otel-collector": {
+            "splunk_access_token": "<SPLUNK_ACCESS_TOKEN>",
+            "splunk_realm": "<SPLUNK_REALM>",
+        }
     }
 
 Attributes for Linux
@@ -114,7 +114,7 @@ For Linux, the cookbook accepts the attributes described in the following table:
      - ``release``
    * - ``with_fluentd``
      - Whether to install or manage Fluentd and dependencies for log collection. On Linux, the dependencies include ``capng_c`` for activating Linux capabilities, ``fluent-plugin-systemd`` for systemd journal log collection, and the required libraries and development tools.
-     - ``true``
+     - ``false``
    * - ``fluentd_version``
      -  Version of the td-agent (Fluentd) package to install 
      -  ``3.7.1`` for Debian stretch and ``4.3.1`` for all other Linux distros 

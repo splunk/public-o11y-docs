@@ -12,9 +12,11 @@ Configure application receivers for messaging
    :hidden:
 
    monitors-messaging/apache-activemq
-   rabbitmq/rabbitmq
+   monitors-messaging/apache-kafka
+   monitors-messaging/rabbitmq
 
 These application receivers gather metrics from their associated messaging-related applications and the hosts the applications are running on.
 
 * :ref:`activemq`
+* :ref:`kafka`
 * :ref:`rabbitmq`

@@ -111,6 +111,6 @@ Learn more
 
 See also the following documents:
 
-* :ref:`otel-collector-use-case`
+* :ref:`otel-collector-scenario`
 * :ref:`otel-install-platform` 
 * :ref:`Troubleshooting <otel-troubleshooting>`

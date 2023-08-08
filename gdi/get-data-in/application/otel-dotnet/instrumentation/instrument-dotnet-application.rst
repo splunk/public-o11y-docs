@@ -18,10 +18,10 @@ Generate customized instructions using the guided setup
 
 To generate all the basic installation commands for your environment and application, use the .NET OpenTelemetry guided setup. To access the .NET OpenTelemetry guided setup, follow these steps:
 
-#. Log in to Observability Cloud.
+#. Log in to Splunk Observability Cloud.
 #. Open the :new-page:`.NET OpenTelemetry guided setup <https://login.signalfx.com/#/gdi/scripted/otel-dotnet-tracing/>`. Optionally, you can navigate to the guided setup on your own:
 
-   #. In the left navigation menu, select :menuselection:`Data Management`. 
+   #. In the navigation menu, select :menuselection:`Data Management`. 
    #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
    #. In the integration filter menu, select :guilabel:`By Product`.
    #. Select the :guilabel:`APM` product.
@@ -80,13 +80,11 @@ Windows
          # Set up IIS instrumentation
          # IIS is restarted as a result
          Register-OpenTelemetryForIIS
-      
+
       .. code-tab:: shell Windows service
 
          # Set up your Windows Service instrumentation
          Register-OpenTelemetryForWindowsService -WindowsServiceName "<your-windows-service-name>"
-
-   .. note:: To instrument ASP.NET (.NET Framework) apps, see :ref:`otel-dotnet-aspnet-framework`.
 
 #. Set the environment and service version resource attributes:
 
@@ -97,7 +95,7 @@ Windows
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
+If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans and metrics, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
 
@@ -113,7 +111,7 @@ Linux
    .. code-block:: shell
 
       # Replace <version> with the desired version
-      curl -sSfL https://raw.githubusercontent.com/signalfx/splunk-otel-dotnet/<version>/splunk-otel-dotnet-install.sh -O
+      curl -sSfL https://github.com/signalfx/splunk-otel-dotnet/releases/download/<version>/splunk-otel-dotnet-install.sh -O
       # Install the distribution
       sh ./splunk-otel-dotnet-install.sh
 
@@ -134,36 +132,9 @@ Linux
 
 #. Run your application.
 
-If no data appears in :strong:`Observability > APM`, see :ref:`common-dotnet-otel-troubleshooting`.
+If no data appears in APM, see :ref:`common-dotnet-otel-troubleshooting`.
 
 .. note:: If you need to add custom attributes to spans or want to manually generate spans, instrument your .NET application or service manually. See :ref:`dotnet-otel-manual-instrumentation`.
-
-.. _otel-dotnet-aspnet-framework:
-
-Additional steps for ASP.NET (.NET Framework)
----------------------------------------------
-
-To complete the instrumentation process for ASP.NET applications for IIS running on .NET Framework, add the ``TelemetryHttpModule`` module to your application's web.config file. For example:
-
-.. code-block:: xml
-
-   <system.web>
-      <httpModules>
-         <add name="TelemetryHttpModule" type="OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule, OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule" />
-      </httpModules>
-   </system.web>
-
-You can also set the ASP.NET HTTP module in the applicationHost.config file. The following example shows how to set the module for all ASP.NET applications running in Integrated Pipeline mode:
-
-.. code-block:: xml
-
-   <location path="" overrideMode="Allow">
-      <system.webServer>
-         <modules>
-         <add name="TelemetryHttpModule" type="OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule, OpenTelemetry.Instrumentation.AspNet.TelemetryHttpModule" preCondition="managedHandler" />
-         </modules>
-      </system.webServer>
-   </location>   
 
 .. _configure-otel-dotnet:
 
@@ -187,29 +158,29 @@ To install the .NET automatic instrumentation on Windows hosts that are offline,
 #. Import the PowerShell script manually by running the following command:
 
    .. code-block:: powershell
-   
+
       # Make sure the Download path is correct
 
       Import-Module C:\Users\Administrator\Downloads\Splunk.OTel.DotNet.psm1
-   
+
    When prompted, enter ``R`` for ``Run Once``.
 
 #. Run the install command:
 
    .. code-block:: powershell
-   
+
       # Make sure the Download path is correct
 
       Install-OpenTelemetryCore -LocalPath "C:\Users\Administrator\Downloads\splunk-opentelemetry-dotnet-windows.zip"
 
 .. _export-directly-to-olly-cloud-dotnet-otel:
 
-Send data directly to Observability Cloud
----------------------------------------------
+Send data directly to Splunk Observability Cloud
+---------------------------------------------------
 
 By default, all telemetry is sent to the local instance of the Splunk Distribution of OpenTelemetry Collector.
 
-To bypass the OTel Collector and send data directly to Observability Cloud, set the following environment variables:
+To bypass the OTel Collector and send data directly to Splunk Observability Cloud, set the following environment variables:
 
 .. tabs::
 
@@ -225,9 +196,9 @@ To bypass the OTel Collector and send data directly to Observability Cloud, set 
 
 To obtain an access token, see :ref:`admin-api-access-tokens`.
 
-In the ingest endpoint URL, ``realm`` is the Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps: 
+In the ingest endpoint URL, ``realm`` is the Splunk Observability Cloud realm, for example, ``us0``. To find the realm name of your account, follow these steps:
 
-#. Open the left navigation menu in Observability Cloud.
+#. Open the navigation menu in Splunk Observability Cloud.
 #. Select :menuselection:`Settings`.
 #. Select your username. 
 

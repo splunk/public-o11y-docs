@@ -7,7 +7,7 @@ Connect Java trace data with logs for Splunk Observability Cloud
 .. meta:: 
    :description: You can configure Java logging libraries to include tracing attributes provided automatically by the Splunk OTel Java agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
 
-You can configure Java logging libraries to include tracing attributes provided automatically by the Splunk OTel Java agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
+You can configure Java logging libraries to include tracing attributes provided automatically by the Splunk OTel Java agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk.
 
 .. _java-traces-logs-requirements:
 
@@ -125,10 +125,3 @@ If you're instrumenting a serverless service or application, use environment var
       <pattern>
          service: ${OTEL_SERVICE_NAME}, env: ${OTEL_ENV_NAME}: %m%n
       </pattern>
-
-.. _explore-log-observer-java:
-
-Explore application logs in Log Observer
-==================================================
-
-You can send Java application logs to Splunk Observability Cloud in the same way you send any other type of log data. To learn more about logs in Observability Cloud, see :ref:`logs-logs`.

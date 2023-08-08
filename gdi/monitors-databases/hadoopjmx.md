@@ -52,20 +52,68 @@ export YARN_RESOURCEMANAGER_OPTS="-Dcom.sun.management.jmxremote.ssl=false -Dcom
 
 To activate this integration, add the following to your Collector configuration:
 
-```
+```yaml
 receivers:
-  smartagent/ collectd/hadoopjmx:
+  smartagent/collectd/hadoopjmx:
     type: collectd/hadoopjmx
     ... # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
-```
+```yaml
 service:
   pipelines:
     metrics:
       monitors: [smartagent/collectd/hadoopjmx]
+```
+
+### Sample configuration for nodeTypes
+
+The following sample configurations show how to configure the monitor for different nodeTypes.
+
+**Name Node:**
+
+```yaml
+receivers:
+  smartagent/collectd/hadoopjmx:
+    type: collectd/hadoopjmx
+    host: 127.0.0.1
+    port: 5677
+    nodeType: nameNode
+```
+
+**Resource Manager:**
+
+```yaml
+receivers:
+  smartagent/collectd/hadoopjmx:
+    type: collectd/hadoopjmx
+    host: 127.0.0.1
+    port: 5680
+    nodeType: resourceManager
+```
+
+**Node Manager:**
+
+```yaml
+receivers:
+  smartagent/collectd/hadoopjmx:
+    type: collectd/hadoopjmx
+    host: 127.0.0.1
+    port: 8002
+    nodeType: nodeManager
+```
+
+**Data Node:**
+
+```yaml
+receivers:
+  smartagent/collectd/hadoopjmx:
+    type: collectd/hadoopjmx
+    host: 127.0.0.1
+    port: 5679
+    nodeType: dataNode
 ```
 
 ### Configuration options

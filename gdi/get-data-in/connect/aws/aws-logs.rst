@@ -7,14 +7,14 @@ Collect logs from your AWS services
 .. meta::
   :description: Collect logs from your AWS services in Splunk Observability Cloud.
 
+.. caution:: Splunk Log Observer is no longer available for new users. You can continue to use Log Observer if you already have an entitlement.
+
 When setting up an AWS connection, you can choose to import logs from a Cloudwatch log group or an S3 bucket. 
 
 To set up log collection, follow these steps:
 
 1. Open the link to a :ref:`CloudFormation template <aws-cloudformation>`. 
-
 2. Adjust the settings. 
-
 3. Deploy the template to create ``splunk-aws-logs-collector``, an AWS Lambda function used to transform log entries, enrich them with metadata, and send them to Splunk Observability Cloud.
 
 .. note::
@@ -26,14 +26,14 @@ How does log collection work?
 
 The Splunk Observability Cloud back end runs a periodic job which goes through CloudWatch log groups and services in your account. This job adds the appropriate subscriptions and notifications to trigger the ``splunk-aws-logs-collector`` function. 
 
-Splunk Observability Cloud adds subscription filters to log groups for the selected services in the integration, or for all of the supported services when none is selected. For instance, if you select ``AWS/Lambda`` in the integration, Observability Cloud will add subscription filters to ``/aws/lambda/*`` log groups only. Splunk Observability Cloud doesn't capture logs from all CloudWatch log groups.
+Splunk Observability Cloud adds subscription filters to log groups for the selected services in the integration, or for all of the supported services when none is selected. For instance, if you select ``AWS/Lambda`` in the integration, Splunk Observability Cloud will add subscription filters to ``/aws/lambda/*`` log groups only. Splunk Observability Cloud doesn't capture logs from all CloudWatch log groups.
 
 Managing subscriptions
 -----------------------------------
 
 Subscriptions are managed every 5 minutes, which is not configurable at the moment. If you decide to turn off the integration or a particular service, the job will attempt to remove those subscriptions.
   
-If a new log group is created for a service in the integration, Observability Cloud will add a subscription filter to this newly created log group. Afterwards, whenever new log events are added to the log group, AWS triggers ``splunk-aws-logs-collector`` lambda automatically in near real time. 
+If a new log group is created for a service in the integration, Splunk Observability Cloud will add a subscription filter to this newly created log group. Afterwards, whenever new log events are added to the log group, AWS triggers ``splunk-aws-logs-collector`` lambda automatically in near real time. 
 
 Which services can you collect logs from?
 ============================================
@@ -101,9 +101,9 @@ To capture logs from unsupported services using the API, follow these steps:
 .. code-block:: none
   
   curl https://app.<realm>.signalfx.com/v2/integration/<integrationId> \
-    -H PUT \
-    -H 'x-sf-token: <user API access token>' \
-    -H 'content-type: application/json' \
+    -X PUT \
+    -X 'x-sf-token: <user API access token>' \
+    -X 'content-type: application/json' \
     --data-raw '<updated integration JSON here>'
 
 
@@ -112,7 +112,7 @@ To capture logs from unsupported services using the API, follow these steps:
 Collect logs manually with subscription filters
 -----------------------------------------------------------
 
-Instead of sending all logs to Observability Cloud, you can forward logs only from selected CloudWatch log groups by adding a subscription filter. To add a filter, follow these steps:
+Instead of sending all logs to Splunk Observability Cloud, you can forward logs only from selected CloudWatch log groups by adding a subscription filter. To add a filter, follow these steps:
 
 #. Install the ``splunk-aws-logs-collector`` lambda using the :ref:`CloudFormation template <aws-cloudformation>`. Don't select ``CloudWatch Logs`` as a data type to ingest in the AWS integration.  
 

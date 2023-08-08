@@ -7,37 +7,31 @@ Kubernetes attributes processor
 .. meta::
       :description: Use the Kubernetes attributes processor to update, add, or delete resource attributes. Read on to learn how to configure the component.
 
-The Kubernetes attributes processor is an OpenTelemetry Collector component that sets resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The Kubernetes attributes processor is an OpenTelemetry Collector component that manages resource attributes using Kubernetes metadata. The processor automatically discovers resources, extracts metadata from them, and adds the metadata to relevant spans, metrics and logs as resource attributes. The supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+
+.. caution:: Don't remove the Kubernetes attributes processor from your configuration. Default attributes extracted by the processor, such as ``k8s.pod.name``, are required for Splunk Observability Cloud capabilities, such as Kuberbetes navigator, Related Content, and accurate subscription usage.
 
 Get started
 ======================
 
-Follow these steps to configure and activate the component:
+The Helm chart for the Splunk Distribution of OpenTelemetry Collector already includes the Kubernetes attributes processor, which is activated by default for all deployment modes. See :ref:`helm-chart`.
 
-#. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
-   
-   - :ref:`otel-install-linux`
-   - :ref:`otel-install-windows`
-   - :ref:`otel-install-k8s`
+To manually configure the Kubernetes attributes processor, follow these steps:
 
-#. Configure the Kubernetes attributes processor as described in the following sections:
-   
-   #. :ref:`configure-rbac-k8sattributes`
-   #. :ref:`configure-filter-k8sattributes`
-   #. :ref:`configure-extracted-metadata-k8sattributes`
-   #. :ref:`configure-association-lists-k8sattributes`
-   #. :ref:`configure-labels-k8sattributes`
-
-#. Restart the Collector.
+#. :ref:`configure-rbac-k8sattributes`
+#. :ref:`configure-filter-k8sattributes`
+#. :ref:`configure-extracted-metadata-k8sattributes`
+#. :ref:`configure-association-lists-k8sattributes`
+#. :ref:`configure-labels-k8sattributes`
 
 .. _configure-rbac-k8sattributes:
 
 Configure role-based access control
 --------------------------------------
 
-The Kubernetes attributes processor requires ``get``, ``watch`` and ``list`` permissions on both pod and namespace resources for all namespaces and pods included in the configured filters. 
+The Kubernetes attributes processor requires ``get``, ``watch`` and ``list`` permissions on both ``pods`` and ``namespaces`` resources for all namespaces and pods included in the configured filters. 
 
-The following example of a ClusterRole shows how to give a ServiceAccount the necessary permissions for all pods and namespaces in the cluster. Replace ``<col_namespace>`` with the namespace where the Collector is deployed:
+The following example shows how to give a ServiceAccount the necessary permissions for all pods and namespaces in a cluster. Replace ``<col_namespace>`` with the namespace where you've deployed the Collector:
 
 .. code-block:: yaml
 
@@ -46,7 +40,9 @@ The following example of a ClusterRole shows how to give a ServiceAccount the ne
    metadata:
       name: collector
       namespace: <col_namespace>
+
    ---
+
    apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRole
    metadata:
@@ -55,7 +51,9 @@ The following example of a ClusterRole shows how to give a ServiceAccount the ne
       - apiGroups: [""]
       resources: ["pods", "namespaces"]
       verbs: ["get", "watch", "list"]
+   
    ---
+   
    apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRoleBinding
    metadata:
@@ -71,9 +69,6 @@ The following example of a ClusterRole shows how to give a ServiceAccount the ne
 
 Sample configuration
 ---------------------------
-
-To activate the Kubernetes attributes processor, add ``resource`` to the ``processors`` section of your
-configuration file. 
 
 The following example contains a list of extracted metadata, Kubernetes annotations and labels, and an association list:
 
@@ -132,9 +127,9 @@ You can use the Kubernetes attributes processor in Collectors deployed either as
 Agent configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In agent mode, the processor detects IP addresses of pods sending spans, metrics, or logs to the agent and uses this information to extract metadata from pods.
+In host monitoring (agent) mode, the processor detects IP addresses of pods sending spans, metrics, or logs to the agent and uses this information to extract metadata from pods.
 
-When running the Collector in agent mode, apply a discovery filter so that only pods from the same host the Collector is running on are discovered. Using a discovery filter also optimizes resource consumption on large clusters.
+When running the Collector in host monitoring (agent) mode, apply a discovery filter so that only pods from the same host the Collector is running on are discovered. Using a discovery filter also optimizes resource consumption on large clusters.
 
 To automatically filter pods by the node the processors is running on, configure the Downward API to inject the node name as an environment variable. For example:
 
@@ -160,9 +155,9 @@ Then, set the ``filter.node_from_env_var`` field to the name of the environment 
 Gateway configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The processor can't resolve the IP address of the pods that emit telemetry data when running in gateway mode. To receive the correct IP addresses in a Collector gateway, configure the agents to forward addresses.
+The processor can't resolve the IP address of the pods that emit telemetry data when running in data forwarding (gateway) mode. To receive the correct IP addresses in a Collector gateway, configure the agents to forward addresses.
 
-To forward IP addresses to gateways, configure the Collectors in agent mode to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
+To forward IP addresses to gateways, configure the Collectors in host monitoring (agent) mode to run in passthrough mode. This ensures that agents detect IP addresses and pass them as an attribute attached to all telemetry resources.
 
 .. code-block:: yaml
 
@@ -204,6 +199,8 @@ You can change this list by adding a ``metadata`` section. For example:
          - k8s.namespace.name
          - k8s.node.name
          - k8s.pod.start_time
+
+.. caution:: Make sure that default attributes, such as ``k8s.pod.name``, are always extracted, as they're required for Splunk Observability Cloud capabilities, such as Kuberbetes navigator, Related Content, and accurate subscription usage.
 
 The following container level attributes require additional attributes to identify a container in a pod:
 
@@ -317,6 +314,17 @@ The following table shows the configuration options for the Kubernetes attribute
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/processor/k8sattributes.yaml"></div>
 
+Metrics
+=====================
+
+The following metrics, resource attributes, and attributes are available.
+
+.. raw:: html
+
+   <div class="metrics-component" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/metric-metadata/k8sattributesprocessor.yaml"></div>
+
+.. include:: /_includes/activate-deactivate-native-metrics.rst
+
 Known limitations
 =======================
 
@@ -330,7 +338,7 @@ The processor can't identify pods running in the host network mode. Enriching te
 Sidecar
 ------------------------------
 
-The processor can't detect containers from the same pods when running as a sidecar. Instead, use the Kubernetes Downward API to inkect environment variables into the pods and use their values as tags.
+The processor can't detect containers from the same pods when running as a sidecar. Instead, use the Kubernetes Downward API to inject environment variables into the pods and use their values as tags.
 
 Troubleshooting
 ======================

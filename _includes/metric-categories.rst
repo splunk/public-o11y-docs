@@ -31,7 +31,7 @@
 
    * - 7
      - | Bundled 
-       | Additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers.
+       | In host-based subscription plans, additional metrics sent through Infrastructure Monitoring public cloud integrations that are not attributed to specific hosts or containers.
 
    * - 8
      - APM hosts
@@ -72,4 +72,4 @@
    * - 20
      - Synthetics metrics
 
-.. note:: In DPM subscription plans all metrics are categorized as custom. 
+.. note:: In MTS-based subscription plans, all metrics are categorized as custom metrics and billed accordingly.

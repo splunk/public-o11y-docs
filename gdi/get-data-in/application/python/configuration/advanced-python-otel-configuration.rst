@@ -24,7 +24,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - Environment variable
      - Description
    * - ``SPLUNK_ACCESS_TOKEN``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
+     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
      - Activates the addition of server trace information to HTTP response headers. For more information, see :ref:`server-trace-information-python`. The default value is ``true``.
 
@@ -78,7 +78,7 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_EXPORTER_JAEGER_ENDPOINT``
      - The Jaeger endpoint. The default value is ``http://localhost:9080/v1/trace``.
 
-The Splunk Distribution of OpenTelemetry Python uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent (now deprecated), or if you want to send traces directly to the Observability Cloud ingest endpoint, use the Jaeger exporter.
+The Splunk Distribution of OpenTelemetry Python uses the OTLP gRPC span exporter by default. If you're still using the Smart Agent (now deprecated), or if you want to send traces directly to the Splunk Observability Cloud ingest endpoint, use the Jaeger exporter.
 
 .. _trace-propagation-configuration-python:
 
@@ -139,7 +139,7 @@ The following example shows how all the configuration options you can pass to ``
 
    start_tracing(
       service_name='my-python-service',
-      span_exporter_factories=[OTLPSpanExporter]
+      span_exporter_factories=[OTLPSpanExporter],
       access_token='',
       max_attr_length=1200,
       trace_response_header_enabled=True,

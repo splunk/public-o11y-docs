@@ -18,7 +18,7 @@ Amazon Web Services
 To learn about AWS and Splunk Observability Cloud, read the following: 
 
 * :ref:`get-started-aws`
-* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata Observability Cloud provides <aws-infra-metadata>`
+* Refer to the AWS official documentation for a list of the available AWS metrics and other data, or read about :ref:`the metadata Splunk Observability Cloud provides <aws-infra-metadata>`
 * :ref:`aws-logs`
 * :ref:`infrastructure-aws`
 
@@ -1061,7 +1061,7 @@ Install the Splunk Distribution of OpenTelemetry Collector on your infrastructur
 APM instrumentation
 --------------------------------------------
 
-Instrument your applications to send metrics and traces to Observability Cloud.
+Instrument your applications to send metrics and traces to Splunk Observability Cloud.
 
 .. list-table::
    :header-rows: 1
@@ -1168,7 +1168,7 @@ Community integrations
 For information about these integrations:
 
 #. Log in to Splunk Observability Cloud
-#. In the left navigation menu, select :menuselection:`Data Management`. 
+#. In the navigation menu, select :menuselection:`Data Management`. 
 #. Select :guilabel:`Add Integration` to open the :guilabel:`Integrate Your Data` page.
 #. In the integration filter menu, select :guilabel:`All`.
 #. In the :guilabel:`Search` field, search for the name of the community integration.
@@ -1178,7 +1178,7 @@ For information about these integrations:
 Notification services
 --------------------------------------------
 
-These integrations let you send Observability Cloud alert notifications to the following third-party notification services:
+These integrations let you send Splunk Observability Cloud alert notifications to the following third-party notification services:
 
 - Amazon EventBridge
 - BigPanda
@@ -1198,7 +1198,7 @@ For more information about integrating with notification services, see :ref:`adm
 Login services
 --------------------------------------------
 
-These login service integrations allow your users to single sign-on (SSO) to Observability Cloud using a third-party identity provider (IdP) that uses SAML SSO or a custom URL that you specify.
+These login service integrations allow your users to single sign-on (SSO) to Splunk Observability Cloud using a third-party identity provider (IdP) that uses SAML SSO or a custom URL that you specify.
 
 - Active Directory FS
 - Azure Active Directory
@@ -1215,7 +1215,7 @@ For more information about configuring an SSO integration, see :ref:`sso-label`.
 Data link destinations
 --------------------------------------------
 
-Data links let you link metadata to the following destinations outside of Observability Cloud:
+Data links let you link metadata to the following destinations outside of Splunk Observability Cloud:
 
 - Splunk Cloud Platform
 - Splunk Enterprise

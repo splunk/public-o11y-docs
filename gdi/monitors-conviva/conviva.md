@@ -37,7 +37,7 @@ receivers:
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
@@ -72,7 +72,7 @@ The **nested** `metricConfigs` configuration object has the following fields:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/conviva/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/conviva/metadata.yaml"></div>
 
 ### Notes
 

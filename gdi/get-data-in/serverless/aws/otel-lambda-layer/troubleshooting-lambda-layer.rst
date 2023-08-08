@@ -12,7 +12,7 @@ If your instrumented AWS Lambda function is not sending data to Splunk Observabi
 No data appears in Splunk Observability Cloud
 ==================================================
 
-If no data from your instrumented AWS Lambda function appears in Observability Cloud, try the following steps:
+If no data from your instrumented AWS Lambda function appears in Splunk Observability Cloud, try the following steps:
 
 1. Check the CloudWatch metrics of your AWS Lambda Function. Make sure the Lambda function is responding to invocations. You can also check for errors.
 
@@ -27,7 +27,7 @@ If no data from your instrumented AWS Lambda function appears in Observability C
 No data points or metrics in Splunk Observability Cloud
 =========================================================
 
-If no metric data from your instrumented AWS Lambda function appears in Observability Cloud, try the following steps:
+If no metric data from your instrumented AWS Lambda function appears in Splunk Observability Cloud, try the following steps:
 
 1. Check the CloudWatch metrics of your AWS Lambda Function. Make sure the Lambda function is responding to invocations. You can also check for errors.
 
@@ -75,7 +75,7 @@ Some of the wrappers included in the Splunk OpenTelemetry Lambda Layer load inst
 Activate debug logging
 ==================================================
 
-If trace data for your function still doesn't appear in Observability Cloud, activate logging to collect debugging information:
+If trace data for your function still doesn't appear in Splunk Observability Cloud, activate logging to collect debugging information:
 
 #. Set the ``OTEL_LAMBDA_LOG_LEVEL`` environment variable to ``DEBUG`` for your instrumented function.
 #. Check AWS CloudWatch for spans.

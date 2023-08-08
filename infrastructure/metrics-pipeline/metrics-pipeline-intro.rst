@@ -172,16 +172,17 @@ Avoid avoid these aggregation issues by using the following options:
 
 Data dropping rules
 ===============================================================================
+------------------------
 
 When you have a new aggregated metric, you might no longer have any use case for the original unaggregated data. You
 can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want
 to monitor, so you can save storage space and reduce cardinality.
+When you have a new aggregated metric, you might no longer have any use case for the original unaggregated data. You can also drop a metric without adding an aggregation rule. Data dropping rules let you discard any data you don't want to monitor, so you can save storage space, reduce cardinality, and :ref:`lower your bills <data-dropping-billing>`.
 
 .. note::
     - You must be an admin to drop data.
     - You can drop new incoming data, but you can't drop data that Observability Cloud has already ingested.
     - You can't recover dropped data. Before you drop data, see :ref:`data-dropping-impact`.
-
 
 Example
 --------------------------------------------------------------------------------

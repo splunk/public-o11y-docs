@@ -36,7 +36,8 @@ receivers:
     type: appmesh
       ... # Additional config
 ```
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
 ```
 service:
@@ -44,10 +45,6 @@ service:
     metrics:
       receivers: [smartagent/appmesh]
 ```
-
-See the examples directory in the Splunk Distribution of OpenTelemetry Collector GitHub repo at 
-<a href="https://github.com/signalfx/splunk-otel-collector/tree/main/examples" target="_blank">https://githubcom/signalfx/splunk-otel-collector/tree/main/examples</a>
-for specific use cases that show how the Collector can integrate and complement existing environments.
 
 ### AWS AppMesh Envoy Proxy
 
@@ -71,7 +68,7 @@ with the value of the `metricPrefix` configuration field described in the follow
 causes the monitor to remove this specified prefix. If you don't specify a value for the `prefix` field, it
 defaults to `envoy`.
 
-To learn more, see the [Envoy API reference](https://www.envoyproxy.io/docs/envoy/latest/api-v2/config/metrics/v2/stats.proto#envoy-api-msg-config-metrics-v2-statsdsink).
+To learn more, see the [Envoy API reference](https://www.envoyproxy.io/docs/envoy/latest/api/api).
 
 The following table shows the configuration options for this monitor:
 
@@ -85,7 +82,7 @@ The following table shows the configuration options for this monitor:
 
 The following metrics are available for this integration:
 
-<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/signalfx-agent/main/pkg/monitors/appmesh/metadata.yaml"></div>
+<div class="metrics-yaml" url="https://raw.githubusercontent.com/signalfx/splunk-otel-collector/main/internal/signalfx-agent/pkg/monitors/appmesh/metadata.yaml"></div>
 
 ### Notes
 

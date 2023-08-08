@@ -9,458 +9,91 @@
     </button>
 
     <div class="navbar-collapse collapse" id="navbarsExample03" >
-      <div id="searchbox"  role="search">
-        <div class="searchformwrapper">
-        <div id="searchbox" class="d-flex search" >
-          <!-- Keep name=q line to prevent scrolling issue -->
-          
-          <input class="form-control st-default-search-input" id="searchQuery" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" style="width: 100% !important;">
-          <input class="btn" id="searchbtn" type="button" value="{{ _('GO') }}" style="color:#3E4349;background-color:#DDDDDD;" />
-          
-        </div>
-        </div>
+      <div id="searchbox">
+        <div class="searchbox-spacer"></div>
       </div>
       <style>
-.st-default-search-input{
-  display: inline-block;
-  background: #fff 8px 8px no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6%2BR8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG11AABzoAAA%2FN0AAINkAABw6AAA7GgAADA%2BAAAQkOTsmeoAAAESSURBVHjajNCxS9VRGMbxz71E4OwgoXPQxVEpXCI47%2BZqGP0LCoJO7UVD3QZzb3SwcHB7F3Uw3Zpd%2FAPCcJKG7Dj4u%2FK7Pwp94HDg5Xyf5z1Pr9YKImKANTzFXxzjU2ae6qhXaxURr%2FAFl9hHDy%2FwEK8z89sYVEp5gh84wMvMvGiSJ%2FEV85jNzLMR1McqfmN5BEBmnmMJFSvtpH7jdJiZv7q7Z%2BZPfMdcF6rN%2FT%2F1m2LGBkd4HhFT3dcRMY2FpskxaLNpayciHrWAGeziD7b%2BVfkithuTk8bkGa4wgWFmbrSTZOYeBvjc%2BucQj%2FEe6xHx4Taq1nrnKaW8K6XUUsrHWuvNevdRRLzFGwzvDbXAB9cDAHvhedDruuxSAAAAAElFTkSuQmCC);
-}
-        /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 68px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0px;
-    border: 1px solid #888;
-    width: 640px;
-    height: 85%;
-}
+        .sui-search-box{
+          height:36px !important;
+        }
 
-@media screen and (min-width: 280px) and  (max-width: 768px) {
-    /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 0px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+        .sui-search-box__text-input{
+          border-radius: 20px 0 0 20px !important;
+        }
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0px;
-    border: 1px solid #888;
-    width: 100%;
-    height: 100%;
-}
-.page_navigation{
-    padding: 5px; 
-}
+        .sui-search-button__label{
+          display:none;
+        }
 
-.searchSummary {
-  margin-left: 20px;
-  margin-top: -18px;
-}
+        #sui-search-box__input-wrapper svg{
+          display:none;
+        }
 
-.new-modal-header {
-    background: #F9FAFB;
-    margin-left: 0px;
-    padding: 0px;
-    border-bottom: 1px solid #8B9BAD;
-    width: 100%;
-    height: 45px;
-    border-radius: 5px 5px 0px 0px; 
-}
+        .css-q4ps3z .sui-search-box__submit:disabled svg{
+          fill: #212529 !important;
+        }
 
-#modal-search-text-form {
-  display: inline-block;
-  width: 80%;
-  /* border: none; */
-  
-}
+        .css-q4ps3z .sui-search-box__submit{
+          max-height: 36px !important;
+          width: 65px !important;
+          margin-left: 0 !important;
+          border-radius: 0 20px 20px 0 !important;
+          background: #41AAD8;
+        }
 
-.modal-search-text-form:focus {
-    height: 50px;
-    border-bottom: 2px solid #33AAFF; 
-}
+        .searchbox-spacer{
+          width:100%;
+          padding-left:250px;
+        }
+        #mobileSideBar {
+          display: none;
+        }
 
-}
+        #mainTopNavBar {
+          display: block;
+        }
 
-/* The Close Button */
-/* .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: -18x;
-    margin-right: 12px;
-} */
+        #mobiletopnavbar {
+          display: none;
+        }
 
-span.st-ui-close-button {
-    display: block;
-    position: absolute;
-    top: 16px;
-    right: 14px;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    background: no-repeat 0 0 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGRTdGMTE3NDA3MjA2ODExODNEMUZBQzQ0QjA0QzNBNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0NUVFODNCMEJGOUUxMUU0OUM4NjgxM0FCRENCNTgwOCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0NUVFODNBRkJGOUUxMUU0OUM4NjgxM0FCRENCNTgwOCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjM5ODAzQkIxNjIwNjgxMTgzRDFGQUM0NEIwNEMzQTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkU3RjExNzQwNzIwNjgxMTgzRDFGQUM0NEIwNEMzQTYiLz4gPC9yZGY6RGVzY3JpcHRpb24%2BIDwvcmRmOlJERj4gPC94OnhtcG1ldGE%2BIDw%2FeHBhY2tldCBlbmQ9InIiPz5OK5iuAAACzUlEQVR42syWS04bQRCGe1CEhC3YgsGWs0suYQtYRHYOkV1yCeyNlwiJOyQR3MAOSJgFHCLZJbwijVcg24sgpfM3%2BtuqVHoe9mRBSZ9m1FOP7uqp7orMv1IF78AbUOfYD3AKPoIbr2itNUXstURgD8TgADTBBmlyLKZO5CcgiMAeiMEBaIIN0uRYTJ3I28ngR%2BAcVEyyVLiSY2ejgh%2BBc1BRE5O4b6fg2E%2FCS4fBl022OJ2hsxGOOwy%2BnBLc43SGtHlyuAVGYFMEKQUCl1QmnE0VTrbACGyKIKVA4JLKhLOpLsHJB%2FAZ3NF5GXwDbRGwBb7ym5OftHn%2FH%2BzNBdhVq3XGD3w643vl0MkOuMQqLsCuWm0bPPDZAvd8lzo74NKwLOqBlPtJhIIbVsctnNyAeiDlfhKh4IbVcbtk8ok1xSTVPmsL2sxCS%2Bls59yCNrPQUjrbfgt64FA4dj%2FKtUq7e78SP5GhTQ9OHIfCcRlcq7S79yt%2B82POpuePzpE6gEJlWE4owypLqpJRhuVQGcqDaDjHQXQGuuogGs5xEJ2B7qJH8UnBo%2FgkdBT7SXR44eyDBlgnDY7F1Em6jDq8cPZBA6yTBsdi6swmHwVWWeN1%2Bha85Nh30Aef%2BDOmXce57Z28SKhZxyP4xbFHjv3OWfML2ft%2BYCqcaKY5%2BoGpTZZpVj9gc5L0E%2BaVYD9g50T3A%2FPKX%2F2ATvskEHAS2A7fD%2Bi0TwIBJ4HtmPUDK%2BJfcIFegYEY%2BwJe85uXFdEPFLF%2Fuoz0al3JrPE5EO9az19GWvpgjc%2BBeNcy6wdsyiSSglvRD9iUSSQFt1n9QCTu8WiBHiC3fWgLXNpXuXKficEcW%2BDSvsqV%2B0wMkragp5yOeUX31XbU%2BE3q%2Bn5AyphXdF9tR43fpMz6gTxlOE4ow2rOMhyHyrDIQdQteBB1n9VRLPuBrMsoqx%2FIuoyeVz%2FwR4ABAB2CYX%2BJadC6AAAAAElFTkSuQmCC);
-    opacity: 0.55;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-/* .close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-} */
+        #topnavbar {
+          display: none;
+        }
 
-.st-ui-close-button:hover, .st-ui-close-button:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer; 
-    opacity: 2.0;
-}
+        @media screen and (min-width: 280px) and  (max-width: 1024px) {
+          #mobileSideBar {
+            height: 100vh;
+            overflow-y: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: block;
+          }
 
-.searchSummary {
-  margin-left: 20px;
-  
-}
+          #mainTOC {
+            display: none;
+          }
 
-.btn {
-  padding: 0px 10px;
-  border-radius: 0px 50px 50px 0px;
+          #mainTopNavBar {
+            display: none;
+          }
 
-}
+          #mobiletopnavbar {
+            display: block;
+            text-align: center;
+          }
 
-.numericButton
-{
-    background-color: #FFFFFF;
-    color: #666666;
-    border: 1px solid #C9C9C9;
-    display: inline-block;
-    height: 15px;
-    line-height: 14px;
-    min-width: 14px !important;
-    padding: 4px;
-    text-align: center;
-    text-decoration: none;
-}
-.currentPageButton
-{
-    background-color: #686868;
-    color: #fff !important;
-    border: 1px solid #C9C9C9;
-    display: inline-block;
-    height: 22px;
-    line-height: 14px;
-    min-width: 14px !important;
-    padding: 4px;
-    text-align: center;
-    text-decoration: none;
-}
-.nextbutton {
-    background-color: #FFFFFF;
-    border: 1px solid #C9C9C9;
-    color: #666666 !important;
-    display: inline-block;
-    height: 15px;
-    line-height: 14px;
-    padding: 4px;
-    text-align: center;
-    text-decoration: none;
-    width: 55px;
-}
-.page_navigation{
-    padding: 0px;
-    width: 50%;
-    float: right;
-    font-size: 12px;
-    font-weight: bold;
-    color: #8B9BAD;
-    text-align: right;
-}
-
-ul.search {
-    list-style-type: none;
-}
-
-
-ul.search li {
-    padding: 0px 0 10px 0px;
-    background-image: none !important;
-    background-repeat: none !important;
-    background-position: none !important;
-}
-
-
-.new-modal-header {
-  background: #F9FAFB;
-    margin-left: 0px;
-    padding: 0px;
-    border-bottom: 1px solid #8B9BAD;
-    width: 100%px;
-    height: 44px;
-    border-radius: 5px 5px 0px 0px;
-}
-
-.new-modal-footer {
-  background: #F9FAFB;
-    margin: auto;
-    padding: 14px;
-    border-top: 1px solid #8B9BAD;
-    width: 100%;
-    height: 44px;
-    border-radius: 5px 5px 0px 0px;
-    
-}
-
-.search-result-count {
-    width: 50%;
-    float: right;
-    color: #8B9BAD;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: left;
-}
-
-.search-title-link {
-  color: #0B599D !important;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-/* li.search-li:before {
-    right: 10px;
-    top: 22%;
-    margin-top: -3px;
-    width: 6px;
-    height: 6px;
-    border-style: solid;
-    border-width: 1px 1px 0 0;
-    border-color: #C5D1DE;
-    -webkit-transform: rotate(
-45deg
-);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(
-45deg
-);
-   
-    position: absolute;
-    content: "";
-}
-
-li.search-li:after {
-    display: table;
-    content: "";
-    width: 0;
-    height: 0;
-    clear: both;
-} */
-.search-context {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-
-.search-li:hover,
-.search-li:focus {
-    opacity: 0.7;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-search-text-form:focus {
-    height: 50px;
-    border-bottom: 2px solid #33AAFF;
-}
-
-/* .search-text-header input[type="text"] {
-    padding: 0 120px 0 6px;
-    width: 100%;
-    height: 48px;
-    background: transparent;
-    border: 0;
-    outline: none;
-    color: #F9FAFB;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 19px;
-    -webkit-border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    border-radius: 5px 5px 0 0;
-    font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
-} */
-
-#modal-search-text-form {
-  display: inline-block;
-  width: 80%;
-  /* border: none; */
-  
-}
-
-.search-text-header {
-    display: inline-block;
-    width: 98%;
-    height: 28px;
-    padding: 7px 11px 7px 28px;
-    border: none;
-    border: none;
-    font-weight: 400;
-    background: #F9FAFB;
-    color: #888;
-    font-size: 14px;
-    line-height: 16px;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    background: #fff 10px 16px no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6%2BR8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG11AABzoAAA%2FN0AAINkAABw6AAA7GgAADA%2BAAAQkOTsmeoAAAESSURBVHjajNCxS9VRGMbxz71E4OwgoXPQxVEpXCI47%2BZqGP0LCoJO7UVD3QZzb3SwcHB7F3Uw3Zpd%2FAPCcJKG7Dj4u%2FK7Pwp94HDg5Xyf5z1Pr9YKImKANTzFXxzjU2ae6qhXaxURr%2FAFl9hHDy%2FwEK8z89sYVEp5gh84wMvMvGiSJ%2FEV85jNzLMR1McqfmN5BEBmnmMJFSvtpH7jdJiZv7q7Z%2BZPfMdcF6rN%2FT%2F1m2LGBkd4HhFT3dcRMY2FpskxaLNpayciHrWAGeziD7b%2BVfkithuTk8bkGa4wgWFmbrSTZOYeBvjc%2BucQj%2FEe6xHx4Taq1nrnKaW8K6XUUsrHWuvNevdRRLzFGwzvDbXAB9cDAHvhedDruuxSAAAAAElFTkSuQmCC);
-    -moz-background-clip: padding-box;
-    background-clip: padding-box;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
-    outline: none;
-
-}
-
-
-#mobileSideBar {
-  display: none;
-}
-
-#mainTopNavBar {
-  display: block;
-}
-
-#mobiletopnavbar {
-  display: none;
-}
-
-#topnavbar {
-  display: none;
-}
-
-@media screen and (min-width: 280px) and  (max-width: 1024px) {
-  #mobileSideBar {
-  height: 100vh;
-  overflow-y: auto;
-  border-radius: 10px;
-  margin-top: 10px;
-  display: block;
-}
-
-#mainTOC {
-  display: none;
-}
-
-#mainTopNavBar {
-  display: none;
-}
-
-#mobiletopnavbar {
-  display: block;
-  text-align: center;
-}
-
-}
+        }
       </style>
 
-      <!-- Modal Popup Start-->
-      <!-- The Modal -->
-          <div id="myModal" class="modal">
-            
-            <!-- Modal content -->
-            <div class="modal-content">
-
-              <div class="new-modal-header">
-                <div id="modal-search-text-form">
-                  <input type="text" class="search-text-header" name="modal-search-text" id="modal-search-text" value="" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="search this site">
-                </div>
-                <span class="close st-ui-close-button"></span
-              ></div>
-              
-              <div id="search-progress"></div>
-                <div id="search-results" style="overflow-y:scroll; height:85%">
-              
-                </div>
-              <div class="new-modal-footer" id="paging">
-                <input type='hidden' id='current_page' />
-                <input type='hidden' id='show_per_page' />
-                <div class="page_navigation"></div>
-                <div class="search-result-count"></div>
-              </div>
-              
-            </div>
-
-          </div>
-      <!-- Modal popup Ends-->
-
-      <!--Creates the popup body-->
-
-<!--Content shown when popup is not displayed-->
-<!-- <script type="text/javascript">
-   $(".close").on("click", function() {
-        $(".popup-overlay, .popup-content").removeClass("active");
-    });
-</script> -->
-
-      <script type="text/javascript">
-        $("#searchbox").show(0);
-        var modal = document.getElementById("signalfxModalID");
-   $(document).on('click', '.feedbackbtn', function() {
-    $('.signalfxmodal').show();
-  });
-$(document).on('click', '#signalfx_splunk_feedback_submit_cancel', function() {
-  $('.signalfxmodal').hide();
-  $('#signalfx_splunk_feedback_email').val("");
-  $('#signalfx_splunk_feedback_comment').val("");
-  $("#signalfx_splunk_feedback_send_copy_of_email").prop("checked", false);
-  $("#signalfx_splunk_feedback_yesno").prop("selectedIndex", 0).change();
-  $("#signalfx_splunk_feedback_no_reason").prop("selectedIndex", 0).change();
-  $("#signalfx_splunk_feedback_no_reason").hide();
-  
-});
-      </script>
-      <!-- Swiftype -->
-      
       <div id="mainTopNavBar">
       <ul class="navbar-nav mb-2 mb-sm-0" style="margin-left: auto !important;">
         <li class="nav-item">
           <a href="https://dev.splunk.com/observability/" class="nav-link newnavbar active" aria-current="page" target="_blank" style="margin-top:10px;">API docs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link newnavbar" href="https://www.splunk.com/blog" target="_blank">Blog</a>
+          <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/blog/devops.html" target="_blank">Blog</a>
         </li>
         <li class="nav-item">
           <a class="nav-link newnavbar" href="https://www.splunk.com/en_us/training/course-catalog.html?sort=Newest&filters=filterGroup4SplunkObservabilityCloud%2CfilterGroup4SplunkSyntheticMonitoring%2CfilterGroup4SplunkInfrastructureMonitoring%2CfilterGroup4SplunkITSI%2CfilterGroup4SplunkAPM%2CfilterGroup4SplunkOnCall%2CfilterGroup4SplunkRUM%2CfilterGroup4SplunkLogObserver%2CfilterGroup4SplunkInsights" target="_blank">Training</a>

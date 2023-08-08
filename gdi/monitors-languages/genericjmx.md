@@ -4,7 +4,7 @@
 
 <meta name="description" content="Use this Splunk Observability Cloud integration for the GenericJMX monitor. See benefits, install, configuration, and metrics">
 
-The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `genericjmx` monitor to expose metrics on Java Management Extensions (JMX), a generic framework to provide and query management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used and threads. For a more flexible alternative, use [the JMX monitor](jmx).
+The {ref}`Splunk Distribution of OpenTelemetry Collector <otel-intro>` uses the {ref}`Smart Agent receiver <smartagent-receiver>` with the `genericjmx` monitor to expose metrics on Java Management Extensions (JMX), a generic framework to provide and query management information. The interface is used by the Java Virtual Machine (JVM) to provide information about the memory used and threads. For a more flexible alternative, use [the JMX monitor](https://docs.splunk.com/Observability/gdi/jmx/jmx.html).
 
 This integration is only available on Kubernetes and Linux.
 
@@ -27,20 +27,40 @@ This integration is only available on Kubernetes and Linux.
 
 To activate this integration, add the following to your Collector configuration:
 
-```
+```yaml
 receivers:
   smartagent/genericjmx:
     type: collectd/genericjmx
     ...  # Additional config
 ```
 
-Next, add the monitor to the `service > pipelines > metrics > receivers` section of your configuration file:
+Next, add the monitor to the `service.pipelines.metrics.receivers` section of your configuration file:
 
-```
+```yaml
 service:
   pipelines:
     metrics:
       receivers: [smartagent/genericjmx]
+```
+
+### Advanced configuration example
+
+See the following example:
+
+```yaml
+receivers:
+  smartagent/genericjmx:
+    type: collectd/genericjmx
+    host: my-java-app
+    port: 7099
+    mBeanDefinitions:
+      threading:
+        objectName: java.lang:type=Threading
+        values:
+          type: gauge
+          table: false
+          instancePrefix: jvm.threads.count
+          attribute: ThreadCount
 ```
 
 ### Configuration settings

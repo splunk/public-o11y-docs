@@ -35,7 +35,7 @@ The mapping impact report also tells you where to find whatever subset of your c
 To access the migration transition impact report, follow these steps:
 
 1. Log in to Splunk Observability Cloud.
-2. In the left navigation menu, select **Settings > Billing and Usage**.
+2. In the navigation menu, select **Settings** and then select **Billing and Usage**.
 3. Click the **View detailed usage reports** link.
 4. Select the **OpenTelemetry Migration** tab.
 5. Click **Download** to open the report as a comma-separated values file.

@@ -51,7 +51,7 @@ The following settings are specific to the Splunk Distribution of OpenTelemetry 
    * - Environment variable
      - Description
    * - ``SPLUNK_ACCESS_TOKEN``
-     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
+     - A Splunk authentication token that lets exporters send data directly to Splunk Observability Cloud. Unset by default. Not required unless you need to send data to the Splunk Observability Cloud ingest endpoint. See :ref:`admin-tokens`.
    * - ``SPLUNK_REALM``
      - The name of your organization's realm, for example, ``us0``. When you set the realm, telemetry is sent directly to the ingest endpoint of Splunk Observability Cloud, bypassing the Splunk Distribution of OpenTelemetry Collector.
    * - ``SPLUNK_TRACE_RESPONSE_HEADER_ENABLED``
@@ -103,7 +103,7 @@ The following settings control trace exporters and their endpoints:
    * - ``OTEL_TRACES_EXPORTER``
      - The traces exporter to use. The default value is ``otlp``. Acceptable values are ``otlp`` and ``none``. Setting ``none`` deactivates trace exports.
    * - ``OTEL_METRICS_EXPORTER``
-     - Comma-separated list of metrics exporter to use. The default value is ``none``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates metric exports.
+     - The metrics exporter to use. The default value is ``otlp``. Accepted values are ``otlp`` and ``none``. Setting ``none`` deactivates metric exports.
    * - ``OTEL_METRIC_EXPORT_INTERVAL``
      - Interval, in milliseconds, between the start of two export attempts. The default value is ``60000``.
    * - ``OTEL_METRIC_EXPORT_TIMEOUT``

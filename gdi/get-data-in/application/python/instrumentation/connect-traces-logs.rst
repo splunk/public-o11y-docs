@@ -7,12 +7,11 @@ Connect Python trace data with logs for Splunk Observability Cloud
 .. meta:: 
    :description: You can configure the logging module of the Python standard library to include tracing attributes provided automatically by Splunk OTel Python agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
 
-You can configure the logging module of Python standard library to include tracing attributes provided automatically by the Splunk OTel Python agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk Observability Cloud.
+You can configure the logging module of Python standard library to include tracing attributes provided automatically by the Splunk OTel Python agent. Use the trace metadata to correlate traces with log events and explore logs in Splunk.
 
 To include trace metadata in application logs, follow these steps:
 
 - :ref:`python-include-trace-data`
-- :ref:`explore-log-observer-python`
 - (Optional) :ref:`disable-trace-log-python`
 
 .. _python-include-trace-data:
@@ -43,13 +42,6 @@ Alternatively, you can pass new values to the ``LoggingInstrumentor`` as argumen
 
 - ``LoggingInstrumentor(logging_format='%(msg)s [span_id=%(span_id)s]')``
 - ``LoggingInstrumentor(log_level=logging.DEBUG)``
-
-.. _explore-log-observer-python: 
-
-Explore application logs in Log Observer
-==================================================
-
-You can send Python application logs to Observability Cloud in the same way you send any other type of log data. To learn more about logs in Observability Cloud, see :ref:`logs-logs`.
 
 .. _disable-trace-log-python: 
 

@@ -7,7 +7,7 @@ Smart Agent receiver
 .. meta::
       :description: The Smart Agent receiver lets you use Smart Agent monitors in the Splunk Distribution of OpenTelemetry Collector.
 
-The Smart Agent receiver lets you use Smart Agent monitors through the Splunk Distribution of OpenTelemetry Collector. Supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
+The Smart Agent receiver is a native OTel component that lets you use Smart Agent monitors through the Splunk Distribution of OpenTelemetry Collector. Supported pipeline types are ``traces``, ``metrics``, and ``logs``. See :ref:`otel-data-processing` for more information.
 
 The Smart Agent receiver is fully supported only on amd64 linux platforms. Support for ARM64 is experimental starting from the Splunk Distribution of OpenTelemetry Collector version 0.73 and higher. For a list of supported monitors, see :ref:`collector-architecture`.
 
@@ -23,7 +23,7 @@ For a list of monitor data sources, see :ref:`monitor-data-sources`.
 Get started
 ======================
 
-By default, the Splunk Distribution of OpenTelemetry Collector includes the Smart Agent receiver with the ``signalfx-forwarder`` and ``processlist`` monitors when deploying in agent mode. See :ref:`otel-deployment-mode` for more information.
+By default, the Splunk Distribution of OpenTelemetry Collector includes the Smart Agent receiver with the ``signalfx-forwarder`` and ``processlist`` monitors when deploying in host monitoring (agent) mode. See :ref:`otel-deployment-mode` for more information.
 
 For each Smart Agent monitor you want to add to the Collector, add a Smart Agent receiver. After you've configured a Smart Agent monitor in the Collector, each Smart Agent receiver behaves like the corresponding Smart Agent monitor. 
 
