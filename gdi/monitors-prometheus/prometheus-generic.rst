@@ -16,23 +16,25 @@ By default, the Splunk Distribution of OpenTelemetry Collector includes the Prom
 
 You can use the Prometheus receiver to connect any service that can export their existing data as Prometheus metrics. See a complete list of third-party applications compatible with Prometheus in :new-page:`Prometheus' official documentation <https://prometheus.io/docs/instrumenting/exporters/>`.
 
-Configure the Prometheus receiver to scrape metrics from a third-party app
-==================================================================================
+Configure the Prometheus receiver to scrape metrics from a third-party app: Apache Flink 
+============================================================================================
 
 Let's take, as an example, :new-page:`Apache Flink <https://github.com/apache/flink>`, which processes data streams at a large scale and analyzes your app's processed data real-time.
 
 To scrape Flink's data as Prometheus metrics with the Collector:
 
-1. Configure Flink to expose data as Prometheus metrics. See :new-page:`Apache's official documentation to learn how <https://nightlies.apache.org/flink/flink-docs-release-1.13/docs/deployment/metric_reporters/#prometheus>`.
-2. Edit the configuration file to enable the Prometheus endpoint to expose metrics on port ``9249``.
-3. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
+1. Configure Flink to expose data as Prometheus metrics. 
+
+   Flink uses port ``9249`` by default. If necessary, edit the configuration file to enable the Prometheus endpoint to expose metrics there. See :new-page:`Apache's official documentation to learn how <https://nightlies.apache.org/flink/flink-docs-release-1.13/docs/deployment/metric_reporters/#prometheus>`.
+
+2. Deploy the Splunk Distribution of OpenTelemetry Collector to your host or container platform:
 
    - :ref:`otel-install-linux`
    - :ref:`otel-install-windows`
    - :ref:`otel-install-k8s`
 
-4. Configure the :ref:`prometheus-receiver` as described in the next section.
-5. Restart the Collector.
+3. Configure the :ref:`prometheus-receiver` as described in the next section.
+4. Restart the Collector.
 
 Sample configurations
 ----------------------
@@ -65,6 +67,17 @@ The following table shows the configuration options for the Prometheus receiver:
 
    <div class="metrics-standard" category="included" url="https://raw.githubusercontent.com/splunk/collector-config-tools/main/cfg-metadata/receiver/prometheus.yaml"></div>
 
+Next steps
+======================
+
+You can now see your Apache Flink metrics in Observability Cloud, and benefit from all the available features:
+
+* Use the :ref:`Metric Finder <metrics-finder-and-metadata-catalog>` to find, view, and edit Flink metrics.
+* Create :ref:`custom dashboards <dashboard-create-customize>` to visualize metrics.
+
+.. image:: /_images/gdi/gdi-prometheus-flink.png 
+   :width: 80%
+   :alt: This image shows Apache Flink data in Observability Cloud.   
 
 Troubleshooting
 ======================
