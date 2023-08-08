@@ -5,7 +5,7 @@ Integrate with apps compatible with Prometheus
 *************************************************************
 
 .. meta::
-      :description: Use the Prometheus receiver to retrieve metrics in the Prometheus format from any compatible service. 
+      :description: Use the Prometheus receiver to retrieve metrics in Prometheus format from any compatible service. 
 
 The :ref:`prometheus-receiver` allows the Splunk Distribution of OpenTelemetry Collector to collect metrics from any source exposing telemetry in Prometheus format. 
 
