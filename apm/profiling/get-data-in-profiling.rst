@@ -207,6 +207,7 @@ If you need to set up AlwaysOn Profiling with a collector in data forwarding (ga
       #. An OTLP gRPC receiver
       #. An OTLP exporter pointed at the collector in data forwarding (gateway) mode :strong:`(3)`
       #. A logs pipeline that connects the receiver and the exporter, for example:
+
          .. code-block:: javascript
 
             #exporters: [splunk_hec, splunk_hec/profiling]
