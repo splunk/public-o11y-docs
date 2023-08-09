@@ -155,5 +155,5 @@ By default, Splunk APM counts server-side spans with ``5xx`` status codes as err
 
 For example, a ``503: service too busy`` error in a server-side span counts as an error by default. If the service you're monitoring is the front end of a public website, users encountering a 503 error aren't able to use the website, resulting in lost user interactions or lost revenue. In this case, a 503 is a true error.
 
-Depending on your application's logic, however, you might not consider ``5xx`` codes to be meaningful errors. For example, if your service is a batch processor, a ``503`` can be a normal flow control mechanism,Ç triggering clients to retry their requests later. To override the default that counts ``503`` status codes as errors, you can modify your instrumentation to set ``span.status`` to ``OK`` in the spans where a ``503`` error is not a concern. 
+Depending on your application's logic, however, you might not consider ``5xx`` codes to be meaningful errors. For example, if your service is a batch processor, a ``503`` can be a normal flow control mechanism, triggering clients to retry their requests later. To override the default that counts ``503`` status codes as errors, you can modify your instrumentation to set ``span.status`` to ``OK`` in the spans where a ``503`` error is not a concern. 
 
