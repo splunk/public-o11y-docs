@@ -148,7 +148,7 @@ You can deploy the Splunk Distribution of OpenTelemetry .NET instrumentation aut
 Use the NuGet package in the following scenarios:
 
 1. You control the application build but not the machine or container where the application is running.
-2. You're instrumenting a self-contained application.
+2. You're instrumenting a self-contained application. See :new-page:`Publish self-contained <https://learn.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained>` in the .NET documentation.
 3. You want to facilitate developer experimentation with automatic instrumentation through NuGet packages.
 4. You need to solve version conflicts between the dependencies used by the application and the automatic instrumentation.
 
