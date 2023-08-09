@@ -104,16 +104,18 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       - To use CPU profiling, activate the ``splunk.profiler.enabled`` system property, or set the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Activate Memory profiling by setting the ``splunk.profiler.memory.enabled`` system property or the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``. To activate memory profiling, the ``splunk.profiler.enabled`` property must be set to ``true``.
-      - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://$(K8S_NODE_IP):4317`` where ``K8S_NODE_IP`` is fetched from the Kubernetes downstream  API by setting this on the application pod:
+      - Check OTLP the endpoint in the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+         -  For non-Kubernetes deployments, the OTLP endpoint has to point to ``http://localhost:4317``.
+         -  For Kubernetes deployments, the OTLP endpoint has to point to ``http://$(K8S_NODE_IP):4317`` where ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting this on the application pod:
         
-        .. code-block:: yaml
+            .. code-block:: yaml
 
-           env:  
-             - name: K8S_NODE_IP
-               valueFrom:
-                 fieldRef:
-                   apiVersion: v1
-                   fieldPath: status.hostIP
+               env:  
+               - name: K8S_NODE_IP
+                 valueFrom:
+                   fieldRef:
+                     apiVersion: v1
+                     fieldPath: status.hostIP
       - Port 9943 is the default port for the SignalFx receiver in the collector distribution. If you change this port in your Collector config, you need to pass the custom port to the JVM.
       
       The following example shows how to activate the profiler using the system property:
@@ -142,7 +144,7 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Activate Memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
-      - Check OTLP endpoint as specified in the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+      - Check OTLP the endpoint in the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
          -  For non-Kubernetes deployments, the OTLP endpoint has to point to ``http://localhost:4317``.
          -  For Kubernetes deployments, the OTLP endpoint has to point to ``http://$(K8S_NODE_IP):4317`` where ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting this on the application pod:
         
@@ -188,6 +190,34 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
       - Check that the ``SIGNALFX_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://localhost:4318/v1/logs`` or to the Splunk Distribution of OpenTelemetry Collector.
 
       For more configuration options, including setting a separate endpoint for profiling data, see :ref:`profiling-configuration-dotnet`.
+
+.. _profiling-gateway-setup:
+
+Activate AlwaysOn Profiling in a gateway set up
+--------------------------------------------------
+
+If you need to set up AlwaysOn Profiling with a collector as a gateway similar to the following, follow these steps to set this up. 
+
+:strong:`Example gateway setup`
+
+(1) Instrumentation Agent to  (2) Collector in host monitoring (agent) mode to (3) Collector in data forwarding (gateway) mode to (4) Splunk Observability Cloud
+
+#. Point the instrumentation agent to collector's OTLP gRPC receiver. This should be the same host and port as the collector in host monitoring (agent) mode (2) is running on.
+#. The collector in host monitoring (agent) mode (2) configuration:
+      #. An OTLP gRPC receiver
+      #. An OTLP exporter pointed at the collector in data forwarding (gateway) mode (3)
+      #. A logs pipeline that connects the receiver and the exporter, for example:
+         .. code-block:: javascript
+
+            #exporters: [splunk_hec, splunk_hec/profiling]
+            # Use instead when sending to gateway
+            exporters: [otlp]
+            
+#. The collector in data forwarding (gateway) mode (3) default configuration: 
+      #. An OTLP gRPC receiver
+      #. A splunk_hec exporter
+      #. A logs pipeline that connects the receiver and the exporter
+
 
 .. _profiling-check-data-coming-in:
 
