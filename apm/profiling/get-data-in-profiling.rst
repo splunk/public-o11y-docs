@@ -200,20 +200,20 @@ If you need to set up AlwaysOn Profiling with a collector as a gateway similar t
 
 :strong:`Example gateway setup`
 
-(1) Instrumentation Agent to  (2) Collector in host monitoring (agent) mode to (3) Collector in data forwarding (gateway) mode to (4) Splunk Observability Cloud
+:strong:`(\1)` Instrumentation Agent to  :strong:`(2)` Collector in host monitoring (agent) mode to :strong:`(3)` Collector in data forwarding (gateway) mode to :strong:`(4)` Splunk Observability Cloud
 
-#. Point the instrumentation agent to collector's OTLP gRPC receiver. This should be the same host and port as the collector in host monitoring (agent) mode (2) is running on.
-#. The collector in host monitoring (agent) mode (2) configuration:
+#. Point the instrumentation agent to the OTLP gRPC receiver for the collector in host monitoring (agent) mode :strong:`(2)`. This should be the same host and port that the collector in host monitoring (agent) mode :strong:`(2)` is running on.
+#. The collector in host monitoring (agent) mode :strong:`(2)` configuration:
       #. An OTLP gRPC receiver
-      #. An OTLP exporter pointed at the collector in data forwarding (gateway) mode (3)
+      #. An OTLP exporter pointed at the collector in data forwarding (gateway) mode :strong:`(3)`
       #. A logs pipeline that connects the receiver and the exporter, for example:
          .. code-block:: javascript
 
             #exporters: [splunk_hec, splunk_hec/profiling]
             # Use instead when sending to gateway
             exporters: [otlp]
-            
-#. The collector in data forwarding (gateway) mode (3) default configuration: 
+
+#. The collector in data forwarding (gateway) mode :strong:`(3)` default configuration: 
       #. An OTLP gRPC receiver
       #. A splunk_hec exporter
       #. A logs pipeline that connects the receiver and the exporter
