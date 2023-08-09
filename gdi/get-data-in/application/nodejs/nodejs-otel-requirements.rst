@@ -176,6 +176,8 @@ For a complete list, see :new-page:`the plugins folder <https://github.com/open-
 
 .. note:: If you're using a Node.js version lower than 14, use the :new-page:`SignalFx Tracing Library for Node.js <https://github.com/signalfx/signalfx-nodejs-tracing>`.
 
+.. note:: For front-end applications built with JavaScript libraries such as React, use Splunk Real User Monitoring (RUM) for Browser instead. See :ref:`get-browser-data-in`
+
 .. _nodejs-otel-connector-requirement:
 
 Install and configure the Splunk Distribution of OpenTelemetry Collector
