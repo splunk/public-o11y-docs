@@ -63,7 +63,8 @@ Follow these steps to create an SLO.
       * - :strong:`Field name`
         - :strong:`Description`
       * - Breach event
-        - Alerts when the service level indicator (SLI) doesn't meet the target over the specified compliance window. 
+        - | Alerts when the service level indicator (SLI) doesn't meet the target over the specified compliance window. 
+          | :strong:`Note:` Breach event alerting is selected by default and always runs in the background.
       * - Error budget
         - Alerts when the remaining error budget is less than 10% of the estimated error budget for the compliance window.
       * - Burn rate

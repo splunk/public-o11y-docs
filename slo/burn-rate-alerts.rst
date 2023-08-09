@@ -36,7 +36,7 @@ Splunk Observability Cloud uses the following formula to calculate burn rate thr
 
 .. math::
     
-    \text{Burn rate} = \frac{\text{SLO compliance window (in hours) * Error budget consumed}}{\text{Long window (in hours) * 100%}}
+    \text{Burn rate threshold} = \frac{\text{SLO compliance window (in hours) * Error budget consumed}}{\text{Long window (in hours) * 100%}}
 
 The following tables show the burn rate threshold estimates for different long and short windows. Short windows are 1/12 of the long windows, as suggested by Google. To learn more, see :new-page:`Alerting on SLOs <https://sre.google/workbook/alerting-on-slos/>` on Google's Site Reliability Workbook.
 
