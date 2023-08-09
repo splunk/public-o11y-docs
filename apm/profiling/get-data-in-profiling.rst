@@ -142,16 +142,18 @@ To activate AlwaysOn Profiling, follow the steps for the appropriate programming
 
       - Activate the profiler by setting the ``SPLUNK_PROFILER_ENABLED`` environment variable to ``true``.
       - Activate Memory profiling by setting the ``SPLUNK_PROFILER_MEMORY_ENABLED`` environment variable to ``true``.
-      - Make sure that the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable points to ``http://$(K8S_NODE_IP):4317`` where ``K8S_NODE_IP`` is fetched from the Kubernetes downstream  API by setting this on the application pod:
+      - Check OTLP endpoint as specified in the ``splunk.profiler.logs-endpoint`` system property or the ``SPLUNK_PROFILER_LOGS_ENDPOINT`` environment variable:
+         -  For non-Kubernetes deployments, the OTLP endpoint has to point to ``http://localhost:4317``.
+         -  For Kubernetes deployments, the OTLP endpoint has to point to ``http://$(K8S_NODE_IP):4317`` where ``K8S_NODE_IP`` is fetched from the Kubernetes downstream API by setting this on the application pod:
         
-        .. code-block:: yaml
+            .. code-block:: yaml
 
-           env:  
-             - name: K8S_NODE_IP
-               valueFrom:
-                 fieldRef:
-                   apiVersion: v1
-                   fieldPath: status.hostIP
+               env:  
+               - name: K8S_NODE_IP
+                 valueFrom:
+                   fieldRef:
+                     apiVersion: v1
+                     fieldPath: status.hostIP
 
       The following example shows how to activate the profiler from your application's code:
 
