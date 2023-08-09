@@ -52,6 +52,8 @@ You can activate debug logging to obtain more information about the issue:
 
 You can change the default location by updating the ``SIGNALFX_TRACE_LOG_DIRECTORY`` environment variable. See :ref:`dotnet-debug-logging-settings` for more information and settings.
 
+If you've enabled debug logging and restarted the application, but you don't find any logs in the locations mentioned above, verify that other APM agents are not running or installed on the host as these will prevent the SignalFx Instrumentation for .NET from instrumenting the application. 
+
 .. note:: Activate debug logging only when needed. Debug mode requires more resources.
 
 Traces don't appear in Splunk Observability Cloud
