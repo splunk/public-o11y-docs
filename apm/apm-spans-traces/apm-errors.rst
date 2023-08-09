@@ -27,9 +27,11 @@ Each :term:`span` in Splunk APM captures a single operation. Splunk APM consider
 A span is considered an error span when any of the following conditions are met: 
 
 * The span's ``span.status``, set through OpenTelemetry instrumentation, is ``Error``. See the OpenTelemetry :new-page:`Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` to learn more about the ``span.status``. 
-* The span's ``error`` tag is set to a truthy value, which is any value other than ``False`` or ``0``. 
-* The value of the span’s ``http.status_code`` tag is set to a ``5xx`` error code. See :ref:`apm-http-status` to learn more.
- 
+  
+   * See :ref:`apm-http-status` to learn which ``http.status_code`` tag values set ``span.status`` to ``error`` in the Splunk Distribution of the OpenTelemetry Collector.
+   * See :ref:`apm-grpc-status` to learn which ``rpc.grpc.status_code`` tag values set ``span.status`` to ``error`` in the Splunk Distribution of the OpenTelemetry Collector.
+* The ``error`` tag for the span is set to a truthy value, which is any value other than ``False`` or ``0``. 
+
 Error counting in Splunk APM is based on the OpenTelemetry specification. See :new-page:`OpenTelemetry's Tracing API specification <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/api.md#set-status>` on GitHub to learn more about the OpenTelemetry standard.
 
 .. _apm-http-status:
@@ -37,7 +39,7 @@ Error counting in Splunk APM is based on the OpenTelemetry specification. See :n
 How does Splunk APM handle HTTP status codes?
 ===============================================
 
-The following table provides an overview of how HTTP status codes are treated in Splunk APM, in accordance with OpenTelemetry semantic conventions. To learn more, see the :new-page:`OpenTelemetry semantic conventions for HTTP spans <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/http.md#status>` on GitHub.
+The following table provides an overview of how HTTP status codes are treated in Splunk Distribution of the OpenTelemetry Collector, in accordance with OpenTelemetry semantic conventions. To learn more, see the :new-page:`OpenTelemetry semantic conventions for HTTP spans <https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/http.md#status>` on GitHub.
 
 .. list-table::
    :header-rows: 1
@@ -61,10 +63,17 @@ The following table provides an overview of how HTTP status codes are treated in
 How does Splunk APM handle gRPC status codes?
 ===============================================
 
-To determine if a gRPC span counts towards the error rate for a service, Splunk APM looks at the ``span.status`` as set by OpenTelemetry specification. Specfically, the following logic is applied:
+To determine if a gRPC span counts towards the error rate for a service, the Splunk Distribution of the OpenTelemetry Collector looks at the ``span.status`` as set by OpenTelemetry specification. Specfically, the following logic is applied:
 
-* For  ``span.kind = CLIENT``, all non-OK, client-received gRPC status codes set ``span.status`` to ``Error``.
-* For  ``span.kind = SERVER``, the following gRPC status codes set ``span.status`` to ``Error``: ``UNKNOWN``, ``UNIMPLEMENTED``, ``DEADLINE_EXCEEDED``, ``INTERNAL``, ``UNAVAILABLE``, ``DATA_LOSS``.
+* For client-side spans (``span.kind = CLIENT``), all non-OK, client-received status codes (``rpc.grpc.status_codes``) set ``span.status`` to ``Error``.
+* For server-side spans (``span.kind = SERVER``), the following gRPC status codes (``rpc.grpc.status_codes``) set ``span.status`` to ``Error``: 
+
+   * ``UNKNOWN``
+   * ``UNIMPLEMENTED``
+   * ``DEADLINE_EXCEEDED``
+   * ``INTERNAL``
+   * ``UNAVAILABLE``
+   * ``DATA_LOSS``
 
 See the OpenTelemetry specification for information on the handling of gRPC status codes :new-page:`https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/rpc.md#grpc-status`. 
 
