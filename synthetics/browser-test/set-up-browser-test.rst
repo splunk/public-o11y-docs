@@ -36,11 +36,44 @@ Follow these steps to set up a Browser test:
 
 .. include:: /_includes/synthetics/configure-test.rst
 
-Import JSON file generated from Google Chrome recorder
+Import a JSON file generated from Google Chrome recorder
 ============================================================
 
+For complex user flows that involve many steps, such as 30 to 50 steps, using a recording simplifies the test creation process by automatically importing the steps rather than adding each individual interaction you want to track. Upload a Google Chrome Recorder to import steps for a browser test. For steps on how to make a Google Chrome recording, see :new-page:`Record, replay, and measure user flows <https://developer.chrome.com/docs/devtools/recorder/>` in the Chrome Developer user guide in Google documentation. 
 
 .. Note:: Viewport is automatically set, so if you have a step to set the viewport, this step won’t appear in the test configuration. 
+
+
+words
+--------------
+
+Follow these steps to import a JSON file from Google Chrome Recorder to your browser test. 
+
+:strong:`Prerequisites`
+
+* In Google Chrome Recorder select either CSS, or XPATH for Selector type to record.
+
+* Chrome script importer supports navigation in one tab only. Your navigation can’t span multiple tabs at the same time. 
+
+
+:strong:`Steps`
+
+#. In Splunk Synthetic Monitoring, Select Edit on the browser test to open the test configuration panel.
+#. Select Import.
+#. Upload the JSON generated from Google Chrome recorder. 
+#. If a step is not supported, you need to edit or delete the step. 
+#. Save your changes.  
+
+
+Troublehsoot unsupported steps
+------------------------------------------
+If your recording contains unsupported steps, you need to reformat the step to fit one of the following types of step that Splunk Synthetic Monitoring supports for Chrome Puppeteer: 
+
+* Click 
+* Change 
+* Navigate 
+* Wait for element 
+
 
 
 
